@@ -25,6 +25,6 @@ My/our goals are:
 - Probably spring... EJB may be optional service layer implementation, but with spring it may run with any suitable container
 - OSGi. Currently modular system is self-made, so it's not ideal
 - REST services, and probably few more kind of connectors. We should provide easy integration for thirdparties as mobile clients, or even new web UI
-- .... eh, enough for now
+- Lot of work with developer workbench....
 
 let's see, how it's possible
