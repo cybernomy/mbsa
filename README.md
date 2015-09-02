@@ -24,6 +24,7 @@ My/our goals are:
 - Translate the documentation. I plan to support both russian and english versions
 - Probably spring... EJB may be optional service layer implementation, but with spring it may run with any suitable container
 - OSGi. Currently modular system is self-made, so it's not ideal
+- REST services, and probably few more kind of connectors. We should provide easy integration for thirdparties as mobile clients, or even new web UI
 - .... eh, enough for now
 
 let's see, how it's possible
