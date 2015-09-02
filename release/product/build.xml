@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!-- $Id: build.xml,v 1.44 2008/10/01 13:52:42 safonov Exp $ -->
+<project name="MERP4x (JavaEE 5 Suite) Release" default="all">
+
+  <taskdef name="izpack" classpath="${izpack.compiler}" classname="com.izforge.izpack.ant.IzPackTask"/>
+
+  <target name="prepare.commercial">
+    
+    <property file="build.properties"/>
+    
+    <property name="release.name" value="${ver.curr.major}.${ver.curr.minor}.${ver.curr.release}"/>
+    <property name="appserver.dir" value="appserver"/>
+    <property name="inst" value="inst.xml"/>
+    
+    <condition property="need.override.metainf" value="true">
+      <istrue value="${build.develop}"/>
+    </condition>
+    <condition property="need.override.metainf" value="false">
+      <isfalse value="${build.develop}"/>
+    </condition>
+    
+    <mkdir dir="temp"/>
+    <mkdir dir="common/output"/>
+
+    <!-- Create "version" file -->
+    <propertyfile file="temp/current.properties" comment="Current build properties">
+      <entry key="ver.fmt.major" type="int" pattern="0" value="${ver.curr.major}"/>
+      <entry key="ver.fmt.minor" type="int" pattern="00" value="${ver.curr.minor}"/>
+      <entry key="ver.fmt.release" type="int" pattern="000" value="${ver.curr.release}"/>
+    </propertyfile>
+    <property file="temp/current.properties"/>
+    <echo message="${ver.fmt.major}.${ver.fmt.minor}.${ver.fmt.release}" file="common/output/version"/>
+    
+    <!-- Unzip JBoss -->
+    <unzip src="${jboss.zip}" dest="common/output/${appserver.dir}">
+      <patternset>
+        <exclude name="**/server/all/**"/>
+        <exclude name="**/server/default/**"/>
+        <exclude name="**/server/minimal/**"/>
+        <exclude name="**/server/standard/**"/>
+      </patternset>
+    </unzip>
+
+    <!-- Developer Workbench -->
+    <antcall target="prepare.commercial.workbench" />
+
+    <!-- Move JBoss configurable files -->
+    <copy todir="common/output/${appserver.dir}/server/merp" overwrite="true" >
+      <fileset dir="../j2ee/jboss/server">
+        <exclude name="**/CVS/" />
+      </fileset>
+    </copy>
+    <copy todir="common/output/${appserver.dir}/bin" overwrite="true" >
+      <fileset dir="../j2ee/jboss/bin">
+        <exclude name="**/CVS/" />
+      </fileset>
+    </copy>
+
+    <!-- Copy JARs -->
+    <copy todir="common/output/${appserver.dir}/server/merp/deploy">
+      <fileset dir="../../build/output/ejb"/>
+      <fileset dir="../../build/output/ui"/>
+      <fileset dir="../../build/output/service"/>
+      <fileset dir="../../build/output/web"/>
+    </copy>
+    <copy todir="common/output/${appserver.dir}/server/merp/lib">
+      <fileset dir="../../build/output/lib" >
+        <exclude name="mgframework-aux-gpl.jar"/>
+      </fileset>
+    </copy>
+    <copy file="../../thirdparty/firebird/lib/jaybird.rar" todir="common/output/${appserver.dir}/server/merp/deploy" />
+    <copy file="../../thirdparty/hibernate/lib/hibernate3.jar" todir="common/output/${appserver.dir}/server/merp/lib" overwrite="true" />
+    <copy file="../../thirdparty/dozer/lib/dozer-3.2.1.jar" todir="common/output/${appserver.dir}/server/merp/lib" />
+    <copy file="../../thirdparty/sun-jcr/lib/jcr-1.0.jar" todir="common/output/${appserver.dir}/server/merp/lib" />
+    <copy file="../../thirdparty/apache-lang/lib/commons-lang-2.1.jar" todir="common/output/${appserver.dir}/server/merp/lib" />
+    <copy file="../../thirdparty/apache-beanutils/lib/commons-beanutils.jar" todir="common/output/${appserver.dir}/server/merp/lib" />
+    <copy file="../../thirdparty/messadmin/lib/MessAdmin-Core.jar" todir="common/output/${appserver.dir}/server/merp/lib" />
+    
+    <!-- Copy BIRT platform -->
+    <unzip src="${birt.runtime.platform}" dest="common/output/${appserver.dir}/server/merp/mbirt-platform" />
+    <copy todir="common/output/${appserver.dir}/server/merp/mbirt-platform">
+      <fileset dir="../../build/output/mbirt-platform" />
+    </copy>
+    <copy file="../birt/config.ini" todir="common/output/${appserver.dir}/server/merp/mbirt-platform/configuration" overwrite="true" />
+
+    <!-- Copy appserver console -->
+    <mkdir dir="common/output/tools/console"/>
+    <mkdir dir="common/output/tools/console/logs"/>
+    <copy file="../../tools/console/output/appserverconsole.jar" todir="common/output/tools/console"/>
+    <copy file="../../tools/console/src/resources/jndi.properties" todir="common/output/tools/console"/>
+    <copy file="../../tools/console/src/resources/log4j.properties" todir="common/output/tools/console"/>
+	
+    <!-- Copy DBMS installers -->
+    <mkdir dir="common/firebird"/>
+    <copy todir="common/firebird">
+      <fileset dir="${firebird.installer}"/>
+    </copy>
+    <mkdir dir="common/output/udf/windows"/>
+    <copy file="${dir.additionalfile}/udf/Itd.dll" todir="common/output/udf/windows" failonerror="false"/>
+    <copy file="${dir.additionalfile}/udf/mcommon_udf.dll" todir="common/output/udf/windows" failonerror="false"/>
+    <copy file="${dir.additionalfile}/udf/Millennium.dll" todir="common/output/udf/windows" failonerror="false"/>
+    <mkdir dir="common/output/udf/linux"/>
+    <copy file="${dir.additionalfile}/udf/ITD.linux" tofile="common/output/udf/linux/ITD" failonerror="false"/>
+    <copy file="${dir.additionalfile}/udf/libmcommon_udf.so" tofile="common/output/udf/linux/libmcommon_udf.so" failonerror="false"/>
+    <copy file="${dir.additionalfile}/udf/Millennium.dll.linux" tofile="common/output/udf/linux/Millennium.dll" failonerror="false"/>
+    <copy file="${dir.additionalfile}/udf/libmcommon_udf.so" tofile="common/output/udf/linux/libmcommon_udf-amd64.so" failonerror="false"/>
+    <copy file="${dir.additionalfile}/udf/Millennium.dll.linux" tofile="common/output/udf/linux/Millennium.dll.linux-amd64" failonerror="false"/>
+
+    <!-- Copy database scripts -->
+    <mkdir dir="common/db/scripts"/>
+    <copy todir="common/db/scripts" preservelastmodified="true">
+      <fileset dir="../../db/scripts" />
+    </copy>
+
+    <!-- Prepare databases -->
+    <antcall target="prepare.database" />
+    
+    <!-- Copy legal -->
+    <copy todir="common/output/legal" failonerror="false" >
+      <fileset dir="../../legal"/>
+    </copy>
+
+    <!-- Copy docs -->
+    <copy todir="common/output/doc" failonerror="false" >
+      <fileset dir="../../docs/output"/>
+    </copy>
+    <!-- russian support only -->
+    <copy todir="common/output/${appserver.dir}/server/merp/deploy/mbsahelp.war/helpsets/ru" failonerror="false" >
+      <fileset dir="../../docs/output/contexthelp/ru/javahelp"/>
+    </copy>
+    <copy file="../../docs/docbook/contexthelp/mbsahelpconfig.xml" todir="common/output/${appserver.dir}/server/merp/deploy/mbsahelp.war/helpsets" failonerror="false" />
+
+    <!-- Perform XSLT -->
+    <copy file="config_pattern.xml" tofile="temp/config.xml" overwrite="true"/>
+      <replace file="temp/config.xml" token="release_name" value="${release.name}"/>
+      <replace file="temp/config.xml" token="mdevstudio_name" value="${mdevstudio.name}.zip"/>
+    <xslt style="inst.xsl" in="temp/config.xml" out="temp/${inst}"/>
+    
+    <mkdir dir="output"/>
+
+  </target>
+
+  <target name="prepare.database">
+    <!-- prepare firebird database -->
+    <antcall target="prepare.database.firebird" />
+  </target>
+
+  <target name="prepare.database.firebird">
+    <!-- Copy database -->
+    <copy file="${dir.database}/MERP4.FDB" tofile="common/db/MERP4.FDB" overwrite="true"/>
+    <!-- run database convertation -->
+    <property name="database.tmpdir" value="${basedir}/temp"/>
+    <property name="database.url" value="${basedir}/common/db/MERP4.FDB"/>
+
+    <antcall target="convert.database">
+      <param name="database.name" value="firebird"/>
+      <param name="database.system.path" value="${database.firebird.path}"/>
+      <param name="database.jdbcdriverclass" value="org.firebirdsql.jdbc.FBDriver"/>
+      <param name="database.url" value="localhost:${database.url}"/>
+      <param name="database.username" value="${database.firebird.username}"/>
+      <param name="database.password" value="${database.firebird.password}"/>
+      <param name="database.characterset" value="WIN1251"/>
+      <param name="database.scriptpath" value="${basedir}/common/db/scripts/updatesql"/>
+      <param name="database.scriptlogdir" value="${database.tmpdir}"/>
+      <param name="database.tmpdir" value="${database.tmpdir}"/>
+    </antcall>
+    <!-- deploy baseline -->
+    <antcall target="delpoy.baseline" >
+      <param name="database.jdbcdriverclass" value="org.firebirdsql.jdbc.FBDriver"/>
+      <param name="database.url" value="jdbc:firebirdsql://localhost:3050/${database.url}"/>
+      <param name="database.username" value="${database.firebird.username}"/>
+      <param name="database.password" value="${database.firebird.password}"/>
+    </antcall>
+    <!-- backup database -->
+    <property name="logfile" value="${database.tmpdir}/backup_fb_db.log"/>
+    <delete file="${logfile}"/>
+    <echo message="start database backup"/>
+    <exec executable="${database.firebird.path}/gbak" failonerror="true" >
+      <arg line="-b -v -t -y ${logfile} -user ${database.firebird.username} -password ${database.firebird.password} ${database.url} ${basedir}/common/db/MERP4.FBK"/>
+    </exec>
+  </target>
+
+  <target name="delpoy.baseline" if="build.baseline" >
+    <ant antfile="build.xml" dir="../../../baseline4x" target="deploy" >
+      <property name="url" value="${database.url}"/>
+      <property name="driver" value="${database.jdbcdriverclass}"/>
+      <property name="user" value="${database.firebird.username}"/>
+      <property name="password" value="${database.firebird.password}"/>
+    </ant>
+    <ant antfile="build.xml" dir="../../../baselinereport4x" target="deploy" >
+      <property name="url" value="${database.url}"/>
+      <property name="driver" value="${database.jdbcdriverclass}"/>
+      <property name="user" value="${database.firebird.username}"/>
+      <property name="password" value="${database.firebird.password}"/>
+    </ant>
+  </target>
+
+  <target name="convert.database" if="convert.database.firebird">
+    <ant antfile="build.xml" dir="../../tools/dbconverter" target="convert.database" >
+      <property name="database.name" value="${database.name}"/>
+      <property name="database.system.path" value="${database.system.path}"/>
+      <property name="database.jdbcdriverclass" value="${database.jdbcdriverclass}"/>
+      <property name="database.url" value="${database.url}"/>
+      <property name="database.username" value="${database.username}"/>
+      <property name="database.password" value="${database.password}"/>
+      <property name="database.characterset" value="${database.characterset}"/>
+      <property name="database.scriptpath" value="${database.scriptpath}"/>
+      <property name="database.scriptlogdir" value="${database.scriptlogdir}"/>
+      <property name="database.tmpdir" value="${database.tmpdir}"/>
+    </ant>
+  </target>
+
+  <target name="clean">
+    <delete dir="temp"/>
+    <delete dir="common/output"/>
+  </target>
+
+  <target name="prepare.commercial.workbench">
+    <!-- Windows developer workbench -->
+    <antcall target="prepare.commercial.platform.workbench">
+      <param name="mdevstudio.dist" value="${mdevstudio.arch.win}"/>
+      <param name="platform" value="windows"/>
+    </antcall>
+  </target>
+
+  <target name="prepare.community.workbench">
+    <!-- Windows developer workbench -->
+    <antcall target="prepare.community.platform.workbench">
+      <param name="platform" value="windows"/>
+    </antcall>
+  </target>
+
+  <target name="prepare.commercial.platform.workbench">
+    <!-- Unzip Developer Workbench -->
+    <unzip src="${mdevstudio.dist}" dest="${platform}/${mdevstudio.name}"/>
+    <!-- Workbench Plugins -->
+    <copy todir="${platform}/${mdevstudio.name}/plugins">
+      <fileset dir="../../workbench/plugins"/>
+    </copy>
+    <!-- Workbench configs -->
+    <copy todir="${platform}/${mdevstudio.name}" overwrite="true">
+      <fileset dir="../eclipse">
+        <exclude name="**/CVS/" />
+      </fileset>
+    </copy>
+    <!-- Pack Developer Workbench --> 
+    <zip destfile="${platform}/${mdevstudio.name}.zip" basedir="${platform}/${mdevstudio.name}" />
+  </target>
+
+  <target name="prepare.community.platform.workbench">
+    <!-- remove oracle datawarehouse from developer workbench -->
+    <delete file="${platform}/${mdevstudio.name}/plugins/com.mg.jet.birt.report.data.oda.ejbql_1.0.0/datawarehouse/mdatawarehouse-orcl.jar" />
+    <zip destfile="${platform}/${mdevstudio.name}-community.zip" basedir="${platform}/${mdevstudio.name}" />
+  </target>
+
+  <target name="installer.commercial">
+    <!-- Launch install-maker -->
+    <izpack input="${basedir}/temp/${inst}" 
+            output="${basedir}/output/${public.product.installer.name}-${release.name}.jar"
+            installerType="standard" 
+            baseDir="${basedir}/"/>
+  </target>
+
+  <target name="release.commercial" depends="prepare.commercial,installer.commercial">
+  </target>
+
+  <target name="prepare.community" depends="prepare.commercial">
+    <!-- remove migrate script -->
+    <delete dir="common/db/scripts"/>
+    <mkdir dir="common/db/scripts"/>
+    <!-- Developer Workbench -->
+    <antcall target="prepare.community.workbench" />
+    <!-- remove documentation -->
+    <delete dir="common/output/doc/ru"/>    
+    <!-- copy GPL framework -->
+    <copy file="../../build/output/lib/mgframework-aux-gpl.jar" tofile="common/output/${appserver.dir}/server/merp/lib/mgframework-aux.jar" overwrite="true" failonerror="false" />
+    <!-- copy GPL license -->
+    <copy file="common/license_gpl.htm" tofile="common/license.htm" overwrite="true" />
+  </target>
+
+  <target name="installer.community">    
+    <!-- Launch install-maker -->
+    <izpack input="${basedir}/temp/${inst}" 
+            output="${basedir}/output/${public.product.installer.name}-community-${release.name}.jar"
+            installerType="standard" 
+            baseDir="${basedir}/"/>
+  </target>
+
+  <target name="release.community" depends="prepare.community,installer.community">
+  </target>
+
+  <target name="all" depends="clean,prepare.commercial,installer.commercial,prepare.community,installer.community">
+  </target>
+
+</project>

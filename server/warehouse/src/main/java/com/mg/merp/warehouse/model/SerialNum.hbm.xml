@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.warehouse.model.SerialNum" table="WH_SERIAL_NUM">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="int">
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">WH_SERIAL_NUM_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Batch" class="com.mg.merp.warehouse.model.StockBatch">
+      <column name="BATCH_ID" not-null="false" />
+    </many-to-one>
+    <property name="SerialNum" type="java.lang.String">
+      <column name="SERIAL_NUM" length="50" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="InComeDocSpecId" type="java.lang.Integer">
+      <column name="INCOME_DOCSPEC_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="OutComeDocSpecId" type="java.lang.Integer">
+      <column name="OUTCOME_DOCSPEC_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

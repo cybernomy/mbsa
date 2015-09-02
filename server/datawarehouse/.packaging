@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+<archive destination="output/lib" exploded="false" name="mdatawarehouse-ib.har" used="true">
+<folder excludes="**/*.oracle.* **/test/* GeneralHbmSettings.hbm.xml hibernate.cfg.xml" includes="" location="output/classes" name="classes" prefix="" project="" projectLocation="output/classes" used="true"/>
+<folder excludes="" includes="" location="src/META-INF/interbase" name="interbase" prefix="META-INF" project="" projectLocation="src/META-INF/interbase" used="true"/>
+</archive>
+<archive destination="output/lib" exploded="false" name="mdatawarehouse-orcl.har" used="true">
+<folder excludes="**/*.interbase.* **/test/* GeneralHbmSettings.hbm.xml hibernate.cfg.xml" includes="" location="output/classes" name="classes" prefix="" project="" projectLocation="output/classes" used="true"/>
+<folder excludes="" includes="" location="src/META-INF/oracle" name="oracle" prefix="META-INF" project="" projectLocation="src/META-INF/oracle" used="true"/>
+</archive>
+<archive destination="output/lib" exploded="false" name="mdw-security-ib.har" used="false">
+<folder excludes="" includes="" location="src/META-INF/interbase" name="interbase" prefix="META-INF" project="" projectLocation="src/META-INF/interbase" used="true"/>
+<folder excludes="**/SystemConfig*" includes="" location="output/classes/com/mg/merp/core" name="core" prefix="com/mg/merp/core" project="" projectLocation="output/classes/com/mg/merp/core" used="true"/>
+<folder excludes="" includes="" location="output/classes/com/mg/merp/security" name="security" prefix="com/mg/merp/security" project="" projectLocation="output/classes/com/mg/merp/security" used="true"/>
+<folder excludes="" includes="" location="output/classes/com/mg/merp/algorithmengine" name="algorithmengine" prefix="com/mg/merp/algorithmengine" project="" projectLocation="output/classes/com/mg/merp/algorithmengine" used="true"/>
+</archive>
+</configurations>

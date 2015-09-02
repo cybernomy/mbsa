@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+<archive name="appserverconsole.jar" destination="output" used="true" exploded="false">
+<folder prefix="" includes="" excludes="" project="" projectLocation="output/classes" name="classes" location="output/classes" used="true"/>
+</archive>
+</configurations>

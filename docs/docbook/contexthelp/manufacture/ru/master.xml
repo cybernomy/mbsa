@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_001manuf SYSTEM "modules/001manufacture.xml">
+<!ENTITY chap_002manuf SYSTEM "modules/002manufacture.xml">
+<!ENTITY chap_003manuf SYSTEM "modules/003manufacture.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere">
+<!ENTITY mref "Справочники производства">
+<!ENTITY manuf "Планирование и управление производством">
+<!ENTITY cont_centr "Центр управления">
+<!ENTITY liab "Обязательства">
+<!ENTITY contr "Контракты">
+
+]>
+<book lang="ru">
+  <bookinfo>
+      <title>Управление производством в системе &merp; 
+      Руководство пользователя.</title>
+      <releaseinfo>4.0.6</releaseinfo>
+      <copyright>
+	<year>1998</year>
+	<year>2008</year>
+	<holder>ООО &quot;Бизнестехнология&quot;</holder>
+      </copyright>    
+  </bookinfo>
+  
+  <toc/>
+  
+  <preface id="target" revision="1">
+      <title>Целевая аудитория </title>
+      <para>Данное руководство предназначено для пользователей, работающих  
+	с модулем &quot;&manuf;&quot; системы &merp;.</para>
+  </preface>
+    
+&chap_001manuf;
+&chap_002manuf;
+&chap_003manuf;
+&chap_copyright;
+
+</book>

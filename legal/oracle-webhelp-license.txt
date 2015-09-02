@@ -1,0 +1,99 @@
+                        ORACLE PROGRAM LICENSE TERMS
+
+THIS IS A LEGAL AGREEMENT ("AGREEMENT") BETWEEN YOU, THE END USER
+("LICENSEE") AND ORACLE CORPORATION ("ORACLE").  BY CLICKING "I AGREE"
+BELOW AND/OR LOADING THE ORACLE HELP FOR JAVA PROGRAM ("PROGRAM") MEANS
+LICENSEE ACCEPTS THESE TERMS AND CONDITIONS.  IF LICENSEE DOES NOT ACCEPT
+THESE TERMS, LICENSEE SHOULD CLICK "I DISAGREE" BELOW AND LICENSEE SHALL
+HAVE NO LICENSE TO USE THE PROGRAM.
+
+
+1. License.  Oracle grants to Licensee a personal, non-exclusive,
+non-transferable license to use the Program only: (i) to provide an online
+help system for Licensee’s use with Licensee’s applications, and in accord
+with the terms set forth in this Agreement, and (ii) to distribute the
+Program as part of Licensee’s own products, provided that the Program is
+only used as an online help system with Licensee’s applications.
+
+Licensee shall not:
+
+a) transfer, sell, assign or otherwise convey the license for the Program
+to another party without Oracle’s prior written consent;
+
+b) cause or permit reverse engineering, disassembly, or decompilation of
+the Program;
+
+c) disclose results of any benchmark tests of any Program to any third
+party without Oracle’s prior written approval; or
+
+d) use or distribute any individual component of the Program for any other
+purpose except as set forth in the preceding paragraph.
+
+
+The Program is the proprietary product of Oracle or its licensors and is
+protected by copyright and other intellectual property laws.  Licensee
+acquires only the right to use and distribute the Program and does not
+acquire any rights, express or implied, in the Program other than those
+specified in this Agreement.  Oracle, or its licensors, shall at all times
+retain all rights, title, interest, including intellectual property rights,
+in the Program.
+
+Failure to comply with the above restrictions may result in termination of
+this license and will not limit Oracle from pursuing other remedies
+available to it, including injunctive relief.
+
+
+2. No Warranty.  Oracle does not warrant that: (a) the Program will
+meet Licensee’s requirements, (b) the Program will operate in combinations
+Licensee may select for use, or (c) operations of the Program will be
+uninterrupted or error-free.  The Program is provided "as is" without
+warranty of any kind, and Oracle expressly disclaims all express or implied
+warranties, including but not limited to implied warranties of
+merchantability or fitness for a particular purpose.
+
+
+3. Limitation of Liability.  ORACLE SHALL NOT BE LIABLE FOR ANY
+DAMAGES WHATSOEVER, INCLUDING DIRECT, INDIRECT, INCIDENTAL, SPECIAL, OR
+CONSEQUENTIAL DAMAGES, OR DAMAGES FOR LOSS OF PROFITS, REVENUE, DATA OR
+DATA USE, INCURRED BY LICENSEE OR ANY THIRD PARTY, WHETHER IN ACTION IN
+CONTRACT OR TORT, EVEN IF ORACLE HAS BEEN ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES.
+
+
+4. Governing Law and Jurisdiction.  This Agreement, and all matters
+arising out of or relating to this Agreement, shall be governed by the laws
+of the State of California. Any legal action or proceeding relating to this
+Agreement shall be instituted in a state or federal court in San Francisco
+or San Mateo County, California. Oracle and Licensee agree to submit to the
+exclusive jurisdiction of, and agree that venue is proper in, these courts
+in any such legal action or proceeding.
+
+
+5. Severability.  If any provision of this Agreement is held to be
+invalid or unenforceable, the remaining provisions of this Agreement will
+remain in full force.
+
+
+6. Export Administration. Licensee agrees to comply fully with all
+relevant export laws and regulations of the United States ("Export Laws")
+to assure that the Program is (1) exported, directly or indirectly, in
+violation of Export Laws; or (2) are intended to be used for any purposes
+prohibited by the Export Laws, including, without limitation, nuclear,
+chemical, or biological weapons proliferation.
+
+
+7. Entire Agreement. This Agreement constitutes the entire Agreement
+between Licensee and Oracle with reference to this transaction and shall
+supersede any other prior or contemporaneous agreements or representations,
+written or oral, concerning the subject matter of this Agreement.  Any
+additions or modifications must be made in a subsequent, written agreement
+signed by both parties.
+
+
+YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT, UNDERSTAND IT AND AGREE
+TO BE BOUND BY ITS TERMS AND CONDITIONS.  IF YOU AGREE, PLEASE CLICK THE
+"AGREE" BUTTON BELOW.  IF YOU DO NOT, PRESS THE "DISAGREE" BUTTON AND YOU
+WILL HAVE NO LICENSE TO USE THE PROGRAM.
+
+
+Java is a registered trademark of Sun Microsystems, Inc.

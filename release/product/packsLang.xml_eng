@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<langpack>
+
+    <str id="appserver.package" txt="Application Server"/>
+    <str id="appserver.package.description" txt="Millennium BSA Application Server"/>
+    <str id="console.package" txt="Application Server Console"/>
+    <str id="console.package.description" txt="Millennium BSA Application Server Console"/>
+    <str id="db.package" txt="Database"/>
+    <str id="db.package.description" txt="Standard database. Will be installed in appserver/server/merp/data/firebird"/>
+    <str id="docs.package" txt="Documentation"/>
+    <str id="docs.package.description" txt="Millennium BSA administrator documentation"/>
+    <str id="fb.package" txt="Firebird DBMS"/>
+    <str id="fb.package.description" txt="Distributive of Firebird DBMS and UDFs"/>
+    <str id="devs.package" txt="Developer workbench"/>
+    <str id="devs.package.description" txt="Millennium Developer Workbench"/>
+</langpack>

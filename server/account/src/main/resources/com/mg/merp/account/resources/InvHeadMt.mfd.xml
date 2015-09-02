@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: InvHeadMt.mfd.xml,v 1.6 2008/03/31 12:50:08 alikaev Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.InvHeadMt" title="resource://com.mg.merp.account.resources.formelements#InvHead.FormMt.Title" helpTopic="account#invcard_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag"  alignment="expand_expand" tabTitle="resource://com.mg.merp.account.resources.formelements#InvHead.Main" >
+		 	<jfd:field id="GroupNum" /> 
+		 	<jfd:field id="CardNum" /> 
+		 	<jfd:field id="InvLocation" /> 
+		 	<jfd:field id="ObjNum" /> 
+			<jfd:field id="Contractor" /> 
+		 	<jfd:field id="Catalog" /> 
+		 	<jfd:field id="InvName" />
+			<jfd:container id="actInFields" layout="jfd:box" label="resource://com.mg.merp.account.resources.formelements#InvHead.ActIn">
+			 	<jfd:field id="IncomeDate" showLabel="false"/>  
+			 	<jfd:field id="IncomeDocNum" showLabel="false" alignment="expand_expand"/> 				
+			</jfd:container>
+			<jfd:container id="actInExloitFields" layout="jfd:box" label="resource://com.mg.merp.account.resources.formelements#InvHead.ActInExloit">
+			 	<jfd:field id="InOperDate" showLabel="false"/>  
+			 	<jfd:field id="InOperDocNum" showLabel="false" alignment="expand_expand"/> 				
+			</jfd:container>	
+			<jfd:container id="actOutExloitFields" layout="jfd:box"  label="resource://com.mg.merp.account.resources.formelements#InvHead.ActOutExloit">
+			 	<jfd:field id="OutOperDate" showLabel="false"/>  
+			 	<jfd:field id="OutOperDocNum" showLabel="false" alignment="expand_expand"/> 				
+			</jfd:container>									 	
+			<jfd:maintenanceTable id="inventory" scroll="true" longField="true" alignment="expand_top" fieldGroup="resource://com.mg.merp.account.resources.formelements#InvHead.Inventory" >		 
+			</jfd:maintenanceTable>		
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />			
+		</jfd:container>	
+		<jfd:container id="extraFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.account.resources.formelements#InvHead.Extra" >
+		 	<jfd:field id="Manufacturer" />  
+		 	<jfd:field id="Model" />  
+		 	<jfd:field id="SerialNum" /> 		 	
+		 	<jfd:field id="PasspNum" /> 			 	
+		 	<jfd:field id="ProductDate" /> 	
+ 		 	<jfd:field id="Okof" /> 			 			 			 	
+ 			<jfd:maintenanceTable id="metal" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" label="resource://com.mg.merp.account.resources.formelements#InvHead.Metal">
+			</jfd:maintenanceTable>	
+	 	 	<jfd:field id="Comment" /> 				
+		</jfd:container>		
+		<jfd:maintenanceTable id="production" autoResize="subsequent_columns" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.account.resources.formelements#InvHead.Production">
+		</jfd:maintenanceTable>	
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

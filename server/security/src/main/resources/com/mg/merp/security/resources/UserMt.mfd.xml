@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: UserMt.mfd.xml,v 1.5 2007/02/24 14:26:28 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.security.support.ui.UserMt" title="resource://com.mg.merp.security.resources.formelements#User.FormMt.Title" helpTopic="security#users_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+
+		<jfd:field id="Name" />
+		<!-- jfd:field id="Passw" /-->
+		<jfd:field id="FullName" />
+		<!-- jfd:field id="SmartCardOnly" />
+		<jfd:field id="UseRemoteProfile" /-->
+		<jfd:field id="Email" />
+		<jfd:field id="Mobile" />
+		<jfd:field id="Pager" />
+		<jfd:table id="groups" scroll="true" autoResize="subsequent_columns" label="resource://com.mg.merp.security.resources.formelements#User.FormMt.Roles" >
+ 			<jfd:popupMenu>
+ 				<jfd:menuItem id="addRole" text="resource://com.mg.merp.security.resources.formelements#User.FormMt.AddRole" actionListener="AddRole" />
+ 				<jfd:menuItem id="removeRole" text="resource://com.mg.merp.security.resources.formelements#User.FormMt.RemoveRole" actionListener="RemoveRole" />
+ 			</jfd:popupMenu>
+		</jfd:table>
+		<!-- jfd:button id="Permission" text="resource://com.mg.merp.security.resources.dataitemlabels#User.Button.Permission"/-->
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																				
+	</jfd:container>
+	
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

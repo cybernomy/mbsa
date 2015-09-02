@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.reference.model.IdentDocKind" table="REF_IDENT_DOC_KIND">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="int">
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">REF_IDENT_DOC_KIND_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <property name="KCode" type="java.lang.String">
+      <column name="KCODE" length="20" not-null="true" sql-type="CHAR" />
+    </property>
+    <property name="KName" type="java.lang.String">
+      <column name="KNAME" length="80" not-null="true" sql-type="VARCHAR" />
+    </property>
+    <property name="LSeriesLength" type="java.lang.Integer">
+      <column name="LSERIES_LENGTH" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="RSeriesLength" type="java.lang.Integer">
+      <column name="RSERIES_LENGTH" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="SeriesDivider" type="java.lang.String">
+      <column name="SERIES_DIVIDER" length="5" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="NumberLength" type="java.lang.Integer">
+      <column name="NUMBER_LENGTH" not-null="false" sql-type="INTEGER" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

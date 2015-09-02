@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "file:../common.xml">
+]>
+  	
+<project default="all" name="Millennium Workbench Core UI">
+ 
+ &common;
+	
+ <path id="project.class.path">
+ 	<path refid="thirdparty.path"/>
+    <pathelement path="../com.mg.merp.wb.core/output/classes"/>
+    <pathelement path="../../server/core/output/classes"/>
+    <pathelement path="../../server/framework/output/classes"/>
+  </path>
+
+  <target name="package" depends="compile">
+    <copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}">  
+    	<fileset dir="output/classes"/>
+  	</copy>
+    <copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}/icons">  
+    	<fileset dir="../../server/framework/output/resources/com/mg/framework/resources" includes="*.png"/>
+  	</copy>
+  	<copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}/com/mg/merp/wb/core/ui"
+  	  file="${src.folder}/com/mg/merp/wb/core/ui/messages.properties"/>
+  	<antcall target="cmn.package"/>
+  </target>
+	
+  <target name="all" depends="clean,compile,package,output" />	
+	
+</project>

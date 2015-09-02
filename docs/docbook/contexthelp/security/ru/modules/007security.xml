@@ -1,0 +1,20 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_007security SYSTEM "modules/007security.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY secur "Управление правами пользователей ">
+<!ENTITY cont_centr "Центр управления">
+]> -->
+<chapter id="007security">
+  <title>Журнал аудита</title>
+     
+    <para>Вход в &quot;Журнал аудита&quot; осуществляется через главное меню:
+     <menuchoice><guimenu>&cont_centr;</guimenu><guisubmenu>Администрирование</guisubmenu>
+    <guimenuitem>Журнал аудита</guimenuitem></menuchoice>.</para>
+    
+    <para>Подробнее о настройке аудита и просмотре журнала читайте в руководстве 
+    администратора в главе &quot;Настройка. Аудит&quot;. </para>
+    
+  </chapter>

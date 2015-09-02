@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: index.xml,v 1.2 2007/09/27 11:53:37 konyashkina Exp $ -->
+
+<index version="1.0">
+
+  <indexitem text="Основные сведения">
+    <indexentry text="Содержание контракта" target="conthead_html" />
+    <indexentry text="Контрагенты" target="contractors_html" />
+    <indexentry text="Суммы" target="summ_html" />
+    <indexentry text="Предмет контракта" target="object_html" /> 
+    <indexentry text="Изменения контракта" target="changes_html" /> 
+    <indexentry text="Условия отбора" target="contractrest_html" />
+    <indexentry text="Виды и категории контрактов" target="category_html" />
+  </indexitem>
+
+  <indexitem text="Этапы и пункты">
+    <indexentry text="Этапы" target="phase_html" />
+    <indexentry text="Пункты планируемые" target="planitem_html" />
+    <indexentry text="Пункты фактические" target="factitem_html" />
+    <indexentry text="Спецификации пунктов" target="spec_html" /> 
+  </indexitem> 
+  
+</index>

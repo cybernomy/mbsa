@@ -1,0 +1,5 @@
+# Exception messages for the Oda Hibernate Driver
+
+Common.CONNECTION_HAS_NOT_OPEN=Соединение закрыто
+DataTypes.TYPE_NAME_INVALID=Неверное имя типа
+Statement.SOURCE_DATA_ERROR=Неверный тип данных

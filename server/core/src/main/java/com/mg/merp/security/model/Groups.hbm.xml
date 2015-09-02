@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.security.model.Groups" table="SEC_GROUPS">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="int">
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">SEC_GROUPS_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <property name="Name" type="java.lang.String">
+      <column name="NAME" length="80" not-null="true" sql-type="VARCHAR" />
+    </property>
+    <set name="SecModulesAccess" inverse="true">
+      <key on-delete="cascade">
+        <column name="GROUP_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.security.model.ModuleAccess" />
+    </set>
+    <set name="SecLinkUsersGroups" inverse="true">
+      <key on-delete="cascade">
+        <column name="GROUP_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.security.model.LinkUsersGroups" />
+    </set>
+  </class>
+</hibernate-mapping>

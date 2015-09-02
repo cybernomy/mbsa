@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: AnlLevel3DstMacros.xml,v 1.1 2006/11/02 05:38:55 leonova Exp $ -->
+
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="AnlLevel3DstBox" layout="jfd:box" orientation="hor" sameLine="true" alignment="expand_expand">
+	<jfd:textField id="anlLevel3DstName" readOnly="true" showLabel="false" alignment="expand_expand"/>
+	<jfd:button id="сlearAnlLevel3DstButton" icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ClearAnlLevel3Dst" alignment="right_expand" />
+	<jfd:button id="сhooseanlLevel3DstButton" text="..." minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseAnlLevel3Dst" alignment="right_expand" />
+</jfd:container>										
+

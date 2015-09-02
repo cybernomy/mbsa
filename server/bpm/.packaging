@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+<archive destination="output/lib" exploded="false" name="020mbpm-ui.jar" used="true">
+<folder excludes="" includes="" location="output/classes/com/mg/merp/bpm/support/ui" name="ui" prefix="com/mg/merp/bpm/support/ui" project="" projectLocation="output/classes/com/mg/merp/bpm/support/ui" used="true"/>
+<folder excludes="" includes="" location="src/main/resources" name="resources" prefix="" project="" projectLocation="src/main/resources" used="true"/>
+</archive>
+<archive destination="output/lib" exploded="false" name="mbpm.sar" used="true">
+<folder excludes="" includes="" location="output/classes/com/mg/merp/bpm/support/jboss" name="jboss" prefix="com/mg/merp/bpm/support/jboss" project="" projectLocation="output/classes/com/mg/merp/bpm/support/jboss" used="true"/>
+<file location="output/classes/com/mg/merp/bpm/BPMManager.class" name="BPMManager.class" prefix="com/mg/merp/bpm" project="" projectLocation="output/classes/com/mg/merp/bpm/BPMManager.class" used="true"/>
+<file location="output/classes/com/mg/merp/bpm/support/BPMManagerServiceImpl.class" name="BPMManagerServiceImpl.class" prefix="com/mg/merp/bpm/support" project="" projectLocation="output/classes/com/mg/merp/bpm/support/BPMManagerServiceImpl.class" used="true"/>
+<file location="output/classes/com/mg/merp/bpm/support/BPMManagerLocator.class" name="BPMManagerLocator.class" prefix="com/mg/merp/bpm/support" project="" projectLocation="output/classes/com/mg/merp/bpm/support/BPMManagerLocator.class" used="true"/>
+<file location="output/lib/jbpm-jpdl.jar" name="jbpm-jpdl.jar" prefix="" project="" projectLocation="output/lib/jbpm-jpdl.jar" used="true"/>
+<file location="src/META-INF/jboss-service.xml" name="jboss-service.xml" prefix="META-INF" project="" projectLocation="src/META-INF/jboss-service.xml" used="true"/>
+<file location="src/META-INF/jbpm.cfg.xml" name="jbpm.cfg.xml" prefix="META-INF" project="" projectLocation="src/META-INF/jbpm.cfg.xml" used="true"/>
+</archive>
+<archive destination="output/lib" exploded="false" name="020mbpm-ejb.jar" used="true">
+<folder excludes="" includes="**/*ServiceLocal.class" location="output/classes/com/mg/merp/bpm" name="bpm" prefix="com/mg/merp/bpm" project="" projectLocation="output/classes/com/mg/merp/bpm" used="true"/>
+<folder excludes="" includes="**/*ServiceBean.class" location="output/classes/com/mg/merp/bpm/support" name="support" prefix="com/mg/merp/bpm/support" project="" projectLocation="output/classes/com/mg/merp/bpm/support" used="true"/>
+<file location="output/classes/com/mg/merp/bpm/support/DefaultAssignmentHandler.class" name="DefaultAssignmentHandler.class" prefix="com/mg/merp/bpm/support" project="" projectLocation="output/classes/com/mg/merp/bpm/support/DefaultAssignmentHandler.class" used="true"/>
+<folder excludes="**/ui/**" includes="" location="output/classes/com/mg/merp/bpm/generic" name="generic" prefix="com/mg/merp/bpm/generic" project="" projectLocation="output/classes/com/mg/merp/bpm/generic" used="true"/>
+<file location="output/classes/com/mg/merp/bpm/support/Messages.class" name="Messages.class" prefix="com/mg/merp/bpm/support" project="" projectLocation="output/classes/com/mg/merp/bpm/support/Messages.class" used="true"/>
+</archive>
+</configurations>

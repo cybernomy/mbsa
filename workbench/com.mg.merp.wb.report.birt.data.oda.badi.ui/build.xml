@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "file:../common.xml">
+]>
+
+<project default="all" name="Millennium Workbench ODA Driver UI">
+
+  &common;
+	
+  <path id="project.class.path">
+  	<path refid="thirdparty.path"/>
+    <pathelement path="../../server/report/output/classes"/>
+  	<pathelement path="../com.mg.merp.wb.core/output/classes"/>
+    <pathelement path="../com.mg.merp.wb.core.ui/output/classes"/>
+  </path>
+
+  <target name="package" depends="compile">
+    <copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}">  
+    	<fileset dir="output/classes"/>
+  	</copy>
+  	<copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}/com/mg/merp/wb/report/birt/data/oda/badi/ui"
+  	  	  file="${src.folder}/com/mg/merp/wb/report/birt/data/oda/badi/ui/messages.properties"/>
+  	<antcall target="cmn.package"/>
+  </target>
+
+  <target name="all" depends="clean,compile,package,output" />	
+	
+</project>

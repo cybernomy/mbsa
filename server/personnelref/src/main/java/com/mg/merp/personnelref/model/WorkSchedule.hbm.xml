@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.personnelref.model.WorkSchedule" table="PREF_WORK_SCHEDULE">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">PREF_WORK_SCHEDULE_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="LeaveSchedule" class="com.mg.merp.personnelref.model.WorkSchedule">
+      <column name="LEAVE_SCHEDULE_ID" not-null="false" />
+    </many-to-one>
+    <property name="SCode" type="java.lang.String">
+      <column name="SCODE" length="20" not-null="true" sql-type="CHAR" />
+    </property>
+    <property name="SName" type="java.lang.String">
+      <column name="SNAME" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="BeginDate" type="java.util.Date">
+      <column name="BEGINDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="EndDate" type="java.util.Date">
+      <column name="ENDDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <set name="SetOfPrefWorkTimeNorm" inverse="true">
+      <key on-delete="cascade">
+        <column name="WORK_SCHEDULE_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.WorkTimeNorm" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

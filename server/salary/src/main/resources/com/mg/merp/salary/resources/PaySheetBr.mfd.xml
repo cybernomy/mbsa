@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: PaySheetBr.mfd.xml,v 1.6 2006/12/17 12:42:40 konyashkina Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.salary.support.ui.PaySheetBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.salary.resources.formelements#PaySheet.FormBr.Title" helpTopic="salary#paysheet_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+
+	<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
+		<jfd:popupMenu>
+			<jfd:separator />
+			<jfd:menuItem id="showSpecPaySheetItem" text="resource://com.mg.merp.salary.resources.formelements#PayRoll.ShowSpecPaySheet" actionListener="ShowSpecPaySheet" />
+		</jfd:popupMenu>		
+	</jfd:maintenanceTable>
+
+	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+
+</jfd:form>

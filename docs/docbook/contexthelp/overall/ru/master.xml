@@ -1,0 +1,95 @@
+﻿<?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_001overall SYSTEM "modules/001overall.xml">
+<!ENTITY chap_002overall SYSTEM "modules/002overall.xml">
+<!ENTITY chap_003overall SYSTEM "modules/003overall.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere">
+<!ENTITY cont_centr "Центр управления">
+<!ENTITY overall "Учёт спецодежды и инвентаря">
+]>
+
+<book lang="ru">
+  <bookinfo>
+      <title>&overall; в системе &merp;. 
+      Руководство пользователя </title>
+      <releaseinfo>4.0.6</releaseinfo>
+      <copyright>
+	<year>1998</year>
+	<year>2008</year>
+	<holder>ООО &quot;Бизнестехнология&quot;</holder>
+      </copyright>    
+  </bookinfo>
+  
+  <toc/>
+  
+<preface id="begin">
+  <title>Введение</title>
+  
+	<para>Данное руководство предназначено для пользователей, работающих  
+	с модулем &quot;&overall;&quot; системы &merp;. </para>
+	
+	<para>Модуль &quot;&overall;&quot; предназначен для управления выдачей инвентаря 
+	сотрудникам Вашего предприятия. Под инвентарём может пониматься:  </para>
+	
+	<itemizedlist> 
+        	<listitem>Спецодежда</listitem>
+		<listitem>Форменная одежда</listitem>
+		<listitem>Индивидуальные средства защиты</listitem>
+		<listitem>Инструменты</listitem>
+		<listitem>Оргтехника и мебель</listitem>
+		<listitem>Прочие ТМЦ </listitem>
+	</itemizedlist>	
+
+	<para>Жизненный цикл инвентаря выглядит следующим образом: </para> 
+  
+	<itemizedlist>
+		<listitem>выдача </listitem>
+		<listitem>ввод в эксплуатацию  </listitem>
+		<listitem>вывод из эксплуатации  </listitem>
+	</itemizedlist>	
+	
+	<para>Возможны следующие варианты вывода из эксплуатации: </para> 
+  
+	<itemizedlist>
+		<listitem>возвращено </listitem>
+		<listitem>утеряно </listitem>
+		<listitem>списано </listitem>
+	</itemizedlist>	
+	
+	<para>Историю выдачи инвентаря можно изменять как вручную (из лицевой карточки 
+	сотрудника), так и автоматически, этапами документооборота. </para> 
+	
+	<para>Предусмотрены следующие этапы документооборота: </para> 
+
+	<itemizedlist>
+		<listitem>&quot;Отработать в ЛКС выдачу по норме&quot; </listitem>
+		<listitem>&quot;Отработать в ЛКС ввод в эксплуатацию&quot; </listitem>
+		<listitem>&quot;Отработать в ЛКС вывод из эксплуатации&quot;</listitem>
+	</itemizedlist>
+
+	<para>Для того чтобы при отработке этих этапов изменялось состояние лицевой карточки 
+	сотрудника, документы необходимо создавать не вручную, а из раздела 
+	&quot;Лицевые карточки сотрудников&quot;. </para>
+	
+	<para>Выдача инвентаря производится по установленным нормам выдачи. При создании 
+	документа на выдачу нужно выбрать, какую норму использовать: по профессии или по 
+	должности. </para> 
+ 
+
+	<para>Вход в раздел   осуществляется через главное меню системы: 
+	<menuchoice><guimenu>&cont_centr;</guimenu>
+      	  <guisubmenu> </guisubmenu>
+	  <guimenuitem> </guimenuitem>
+	  </menuchoice>.</para>
+   
+  </preface>
+  
+  &chap_001overall;
+  &chap_002overall;
+  &chap_003overall;
+  &chap_copyright;
+
+</book>

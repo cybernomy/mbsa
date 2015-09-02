@@ -1,0 +1,31 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_context SYSTEM "modules/context.xml">
+<!ENTITY dp "Документооборот">
+<!ENTITY cont_centr "Центр управления">
+]> -->
+<chapter id="context">
+  <title>Контекстное меню</title>
+    
+    <para>Контекстное меню содержит список <emphasis>всех</emphasis> возможных 
+    действий, которые вы можете совершить с элементом системы (папкой, списком
+    или записью). Это меню вызвается нажатием правой кнопки мыши .</para>
+    
+  <!--  или нажатием 
+    сочетания клавиш <keycombo><keycap>Shift</keycap><keycap>F10</keycap></keycombo>
+    
+     <para>Жирным шрифтом в контекстном меню выделено действие <emphasis>по умолчанию</emphasis>,
+     которое совершается при двойном щелчке левой кнопки мыши.</para>
+     
+   <para>Справа от названий действий в контекстном меню приводятся &quot;горячие 
+   клавиши&quot;. Это значит, что то же действие с активным элементом системы
+   (папкой, списком, записью) можно выполнить, используя клавиатуру. 
+   Например, для действия <guibutton>Просмотреть</guibutton> назначено сочетание
+   &quot;горячих клавиш&quot; <keycombo><keycap>Ctrl</keycap><keycap>F2</keycap></keycombo>.
+   Нажмите клавишу <keycombo><keycap>Ctrl</keycap></keycombo> и, не отпуская её, 
+   нажмите клавишу <keycombo><keycap>F2</keycap></keycombo> - вы сможете 
+   просмотреть активную запись.</para>  -->
+
+  </chapter>

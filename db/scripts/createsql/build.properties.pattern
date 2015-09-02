@@ -1,0 +1,29 @@
+interbase.jdbc.driver.name=interbase.interclient.Driver
+interbase.jdbc.driver.classpath=[path to interclient.jar]
+interbase.sqlruner=[path to isql.exe]
+
+oracle.jdbc.driver.name=oracle.jdbc.driver.OracleDriver
+oracle.jdbc.driver.classpath=[path to classes12.jar]
+oracle.sqlruner=[path to sqlplus.exe]
+
+interbase.jdbc.dbms.url=jdbc:interbase://[database host]/[server database path]
+interbase.jdbc.dbms.username=SYSDBA
+interbase.jdbc.dbms.password=[SYSDBA password]
+interbase.jdbc.dbms.charset=Cp1251
+
+oracle.jdbc.dbms.url=jdbc:oracle:oci:@[oracle tns name]
+oracle.jdbc.dbms.username=[oracle user name]
+oracle.jdbc.dbms.password=[oracle user password]
+oracle.jdbc.dbms.charset=Cp1251
+
+create.interbase.db=yes or no
+create.interbase.db.metadata=yes or no
+create.interbase.db.systemdata=yes or no
+
+create.oracle.db=yes or no
+create.oracle.db.metadata=yes or no
+create.oracle.db.systemdata=yes or no
+
+src.encoding=Cp1251
+
+dbms.data.language=ru_RU

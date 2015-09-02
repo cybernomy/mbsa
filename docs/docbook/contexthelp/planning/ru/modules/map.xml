@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: map.xml,v 1.1 2006/12/15 08:28:51 konyashkina Exp $ -->
+
+<map version="1.0">
+  <mapID target="forecastver_html" url="001plan.html#001plan_01" />
+  <mapID target="invforecast_html" url="001plan.html#001plan_02" />
+  <mapID target="genericitem_html" url="002plan.html#002plan_01" />
+  <mapID target="itemfamily_html" url="002plan.html#002plan_02" />
+  <mapID target="prodprof_html" url="005plan.html" />
+  <mapID target="catalogwh_html" url="006plan.html" />
+  <mapID target="mps_html" url="007plan.html" />
+  <mapID target="mpsline_html" url="007plan.html#007plan_01" />
+  <mapID target="perenos_html" url="007plan.html#007plan_02" />
+  <mapID target="firmorder_html" url="008plan.html" /> 
+  <mapID target="mrpvers_html" url="009plan.html" /> 
+  <mapID target="mrpproc_html" url="009plan.html#009plan_01" /> 
+  <mapID target="mrprecom_html" url="009plan.html#009plan_02" /> 
+  <mapID target="mrpreport_html" url="009plan.html#009plan_03" /> 
+  <mapID target="rccphead_html" url="010plan.html#010plan_01" /> 
+  <mapID target="rccpdetail_html" url="010plan.html#010plan_02" /> 
+</map>

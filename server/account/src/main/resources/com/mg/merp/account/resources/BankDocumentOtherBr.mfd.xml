@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: BankDocumentOtherBr.mfd.xml,v 1.8 2008/12/24 13:40:02 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.account.support.ui.BankDocumentOtherBr" title="resource://com.mg.merp.account.resources.formelements#BankDocumentOther.FormBr.Title" helpTopic="account#bankdocoth_html" >
+
+	<jfd:include name="com/mg/merp/document/resources/DefaultDocBrowseHeaderMacros.xml" />
+
+	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true" >
+		</jfd:maintenanceTree>
+		<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
+			<jfd:include name="com/mg/merp/document/resources/DefaultDocMaintenanceTablePopupMenuMacros.xml" />			
+		</jfd:maintenanceTable>
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+
+</jfd:form>

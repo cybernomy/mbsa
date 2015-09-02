@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "file:../common.xml">
+]>
+
+<project default="all" name="Millennium Workbench Core">
+
+  &common;
+
+  <path id="project.class.path">
+ 	  <path refid="thirdparty.path"/>
+ 	  <pathelement path="../../thirdparty/jboss/lib/jbossall-client.jar"/>
+  	  <pathelement path="../../server/core/output/classes"/>
+  	  <pathelement path="../../server/framework/output/classes"/>
+  </path>
+	
+  <target name="package" depends="compile">
+    <copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}">  
+    	<fileset dir="">
+			  <include name="plugin*.*"/>
+    		<include name="META-INF/MANIFEST.MF"/>
+    	</fileset>
+    	<fileset dir="output/classes"/>
+  	</copy>
+  	<copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}" file="src/main/resources/splash.bmp" flatten="true" />
+  	
+  	<antcall target="cmn.package"/>
+  </target>
+	
+  <target name="all" depends="clean,compile,package,output" />	
+	
+</project>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: CalcListBr.mfd.xml,v 1.5 2007/07/09 08:35:35 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.salary.support.ui.CalcListBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.salary.resources.formelements#CalcList.FormBr.Title" helpTopic="salary#payroll_html">
+
+	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+
+	<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+		<jfd:popupMenu>
+			<jfd:separator/>
+			<jfd:menuItem id="calculate" text="resource://com.mg.merp.salary.resources.formelements#CalcListBr.Calculate" actionListener="Calculate" keyStroke="F3" />
+			<jfd:menuItem id="clearAndCalculate" text="resource://com.mg.merp.salary.resources.formelements#CalcListBr.ClearAndCalculate" actionListener="ClearAndCalculate" keyStroke="control F3" />
+			<jfd:menuItem id="setCalculatedAndClosed" text="resource://com.mg.merp.salary.resources.formelements#CalcListBr.SetCalculatedAndClosed" actionListener="SetCalculatedAndClosed" />
+			<jfd:menuItem id="unSetCalculatedAndClosed" text="resource://com.mg.merp.salary.resources.formelements#CalcListBr.UnSetCalculatedAndClosed" actionListener="UnSetCalculatedAndClosed" />
+		</jfd:popupMenu>		
+	</jfd:maintenanceTable>
+
+	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+
+</jfd:form>

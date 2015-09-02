@@ -1,0 +1,45 @@
+﻿<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY chap_retail SYSTEM "modules/retail.xml">
+<!ENTITY chap_retail_head SYSTEM "modules/001retail.xml">
+<!ENTITY chap_additional SYSTEM "modules/002retail.xml">
+]> -->
+<chapter id="contractors">
+  <title>Контрагенты</title>
+ 
+  <screenshot>
+      <mediaobject><imageobject><imagedata fileref="images/retaildoc3.gif"/></imageobject></mediaobject>
+  </screenshot> 
+    
+    <para><guibutton>Поставщик</guibutton>. Указывается код организации, 
+    которая осуществляет поставку товара. Заполняется с использованием 
+    справочника &quot;Партнёры&quot;.  </para>
+    
+    <para><guibutton>Через кого</guibutton>. Указывается код сотрудника Вашей 
+    организации для указания ответственного лица, отвечающего за доставку 
+    товарно-материальных ценностей по данному документу. Заполняется с 
+    использованием справочника &quot;Сотрудники&quot;.</para>
+    
+    <para><guibutton>Ответственный</guibutton>. Указывается код сотрудника Вашей
+    организации, ответственного за отпуск товара. Заполняется с использованием 
+    справочника &quot;Сотрудники&quot;.  </para>
+    
+    <para><guibutton>Склад-источник</guibutton>. Указывается склад, с которого осуществляется отгрузка товара.
+    <guibutton>МОЛ</guibutton>. Материально-ответственное лицо. При подстановке склада
+    в документ в поле &quot;МОЛ&quot; будет подставляться сотрудник из соответствующего
+    подразделения, у которого установлен признак &quot;МОЛ по умолчанию&quot; и с наибольшим 
+    идентификатором. Если в подразделении нет ни одного сотрудника с признаком &quot;МОЛ по умолчанию&quot;, 
+    то автоматическая подстановка МОЛ не производится и Вы можете выбрать материально-ответственное
+    лицо из справочника &quot;Сотрудники&quot;. </para>
+    
+    <para><guibutton>Грузоотправитель</guibutton>. Код грузоотправителя. Проставляется
+    с использованием справочника &quot;Партнёры&quot;.  </para>
+    
+    <para><guibutton>Грузополучатель</guibutton>. Код грузополучателя. Проставляется 
+    с использованием справочника &quot;Партнёры&quot;. </para>
+  
+</chapter>

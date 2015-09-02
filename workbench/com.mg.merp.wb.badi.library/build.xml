@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "file:../common.xml">
+]>
+
+<project default="all" name="Millennium Workbench Business Add-in Library">
+  &common;	
+
+  <path id="project.class.path">
+  	<path refid="thirdparty.path"/>
+  	<pathelement path="../com.mg.merp.wb.core/output/classes"/>
+  	<pathelement path="../com.mg.merp.wb.core.ui/output/classes"/>
+  </path>
+
+  <target name="lib.init">
+    <property name="third.path" value="../../thirdparty"/>
+  </target>
+	
+  <target name="package" depends="lib.init, compile">
+    <copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}">  
+    	<fileset dir="../../build/output/workbench" includes="lib/** src/**"/>
+  	</copy>
+
+  	<!-- Third part libs -->
+    <copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}/thirdpart">  
+    	<fileset file="${third.path}/hibernate/lib/hibernate3.jar"/>
+    	<fileset file="${third.path}/jboss/lib/jboss-jmx.jar"/>
+    	<fileset file="${third.path}/jboss/lib/jboss-system.jar"/>
+    	<fileset file="${third.path}/dom4j/lib/dom4j.jar"/>
+    	<fileset file="${third.path}/jboss/lib/jboss-j2ee.jar"/>
+    	<fileset file="${third.path}/jboss/lib/jboss-annotations-ejb3.jar"/>		
+    	<fileset file="${third.path}/sun-ejb/lib/jboss-ejb3x.jar"/>
+    	<fileset file="${third.path}/apache-lang/lib/commons-lang-2.1.jar"/>
+    	<fileset file="${third.path}/quartz/lib/quartz.jar"/>
+    </copy>
+
+  	<antcall target="cmn.package.classes"/>
+  </target>
+
+  <target name="all" depends="clean,compile,package,output" />	
+	
+</project>

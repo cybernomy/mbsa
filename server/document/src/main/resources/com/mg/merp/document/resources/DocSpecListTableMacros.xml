@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: DocSpecListTableMacros.xml,v 1.3 2009/02/12 08:24:20 safonov Exp $ -->
+
+<jfd:maintenanceTable xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="spec" scroll="true" alignment="expand_top">
+	<jfd:popupMenu>
+		<jfd:menuItem id="showStockSituation" text="resource://com.mg.merp.reference.resources.formelements#Warehouse.ShowStockSituation" actionListener="ShowStockSituation" keyStroke="F3"/>
+	</jfd:popupMenu>
+</jfd:maintenanceTable>	 	

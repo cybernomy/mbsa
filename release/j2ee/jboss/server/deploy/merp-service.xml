@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE server>
+
+<!-- ===================================================================== -->
+<!--                                                                       -->
+<!--  JBoss Millennium BSA Configuration                                   -->
+<!--                                                                       -->
+<!-- ===================================================================== -->
+<!-- $Id: merp-service.xml,v 1.16 2008/12/08 07:36:54 safonov Exp $   -->
+
+<server>
+
+  <classpath codebase="lib" archives="mgframework.jar"/>
+
+  <!-- ==================================================================== -->
+  <!-- Millennium BSA service                                               -->
+  <!-- ==================================================================== -->
+
+  <mbean code="com.mg.framework.service.jboss.MERPJBossService"
+         name="jboss:service=MERP">
+    <attribute name="MERPLocation">${jboss.server.home.dir}${/}mg-custom</attribute>
+  </mbean>
+
+  <mbean code="com.mg.framework.service.jboss.ApplicationServerService"
+         name="merp:service=ApplicationServerService">
+    <attribute name="DatabaseName">firebird</attribute>
+    <attribute name="DatabaseConfiguration">
+      <configuration>
+        <!-- set path to find rdbms utilities -->
+        <!-- property name="database.systempath" value="path"/ -->
+        <property name="database.jdbcdriverclass" value="org.firebirdsql.jdbc.FBDriver"/>
+        <!-- for Firebird or Interbase -->
+        <property name="database.url" value="localhost:${jboss.server.data.dir}${/}firebird${/}MERP4.FDB"/>
+        <!-- for Oracle -->
+        <!-- property name="database.SID" value="ORCL"/ -->
+        <property name="database.scriptpath" value="${jboss.server.home.dir}${/}mg-custom${/}db${/}scripts${/}updatesql"/>
+        <property name="database.username" value="SYSDBA"/>
+        <property name="database.password" value="masterkey"/>
+        <property name="database.characterset" value="WIN1251"/>
+      </configuration>
+    </attribute>
+    <attribute name="PersistentManagerImpl">com.mg.framework.service.PersistentManagerHibernateImpl</attribute>
+  </mbean>
+
+  <mbean code="com.mg.framework.service.jboss.ApplicationDictionaryService"
+         name="merp:service=ApplicationDictionaryService">
+  </mbean>
+  
+  <mbean code="com.mg.framework.service.jboss.MetadataCacheService"
+         name="merp:service=MetadataCacheService">
+  </mbean>
+
+  <mbean code="com.mg.framework.service.jboss.LicenseControllerService"
+         name="merp:service=LicenseControllerService">
+    <depends>merp:service=LicenseManagerDetector</depends>
+    
+    <!-- License manager URI -->
+    <attribute name="LicenseManagerURI">socket://localhost:10312</attribute>
+  </mbean>
+
+  <!-- The license manager detector -->
+  <mbean code="org.jboss.remoting.detection.multicast.MulticastDetector"
+    name="merp:service=LicenseManagerDetector">
+    <!-- The address to bind to for the network interface. -->
+    <!-- <attribute name="BindAddress">${jboss.bind.address}</attribute> -->
+    <!-- The IP that is used to broadcast detection messages on via multicast. -->
+    <!-- To be more specific, will be the ip of the multicast group the detector will join. -->
+    <!-- This attribute is ignored if the Address has already been set when started. -->
+    <!-- Default is 224.1.9.1. -->
+    <attribute name="DefaultIP">225.1.9.2</attribute>
+    <!-- Multicast group port that the detector will join on.  Default is 2410 -->
+    <attribute name="Port">11312</attribute>
+    <!-- The IP of the multicast group that the detector will join. -->
+    <!-- The default will be that of the DefaultIP if not explicitly set. -->
+    <!-- attribute name="Address">225.1.9.3</attribute -->
+    <attribute name="DefaultTimeDelay">10000</attribute>
+    <attribute name="HeartbeatTimeDelay">5000</attribute>
+  </mbean>
+
+  <mbean code="com.mg.framework.service.jboss.UserActionInterceptorManagerService"
+         name="merp:service=UserActionInterceptorManagerService">
+  </mbean>
+  
+  <mbean code="com.mg.framework.service.jboss.EntityInterceptorManagerService"
+         name="merp:service=EntityInterceptorManagerService">
+  </mbean>
+
+  <mbean code="com.mg.framework.service.jboss.SQLExceptionTranslatorManagerService"
+         name="merp:service=SQLExceptionTranslatorManagerService">
+  </mbean>
+
+  <mbean code="com.mg.framework.service.jboss.DefaultSQLExceptionTranslatorService"
+         name="merp:service=DefaultSQLExceptionTranslatorService">
+    <depends>merp:service=SQLExceptionTranslatorManagerService</depends>
+  </mbean>
+
+  <mbean code="com.mg.framework.service.jboss.LockManagerService"
+         name="merp:service=LockManagerService">
+    <attribute name="ConfigFile">${jboss.server.home.dir}${/}mg-custom${/}conf${/}lock-manager-config.xml</attribute>
+  </mbean>
+
+  <mbean code="com.mg.framework.service.jboss.EntityTransformerService"
+         name="merp:service=EntityTransformerService">
+  </mbean>
+
+  <mbean code="com.mg.framework.service.jboss.DatabaseAuditService"
+         name="merp:service=DatabaseAuditService">
+    <depends>merp.har:service=MERPDataWarehouse</depends>
+    <attribute name="AuditActivated">true</attribute>
+  </mbean>
+
+  <mbean code="com.mg.framework.service.jboss.DataBusinessServiceInterceptorManagerService"
+         name="merp:service=DataBusinessServiceInterceptorManagerService">
+  </mbean>
+
+</server>

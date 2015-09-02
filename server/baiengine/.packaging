@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+<archive destination="output/lib" exploded="false" name="010mbaiengine-ejb.jar" used="true">
+<folder excludes="" includes="" location="output/classes" name="classes" prefix="" project="" projectLocation="output/classes" used="true"/>
+</archive>
+</configurations>

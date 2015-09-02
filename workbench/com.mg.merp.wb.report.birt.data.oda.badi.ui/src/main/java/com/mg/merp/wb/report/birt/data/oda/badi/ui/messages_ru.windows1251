@@ -1,0 +1,28 @@
+# wizard dialog messages
+wizard.title.selectMerpBadi=Выберите данные MBSA
+wizard.title.defineColumnMapping=Введите имя столбца
+
+#table mapping page messages
+merpBadi.messages.columnMapping=Разметка полей таблицы
+
+#column mapping page messages
+menu.menuItem.removeAll=Удалить всё
+menu.menuItem.remove=Удалить
+ColumnMappingDialog.prompt.new="Новое значение..."
+
+dataset.editor.columnName=Имя
+dataset.editor.datatype=Тип
+dataset.editor.algorithmcode=Код бизнес-расширения
+
+dataset.new=Новый набор данных
+error.columnMapping.sameColumnName=Поле [{0}] уже существует. Используйте другое имя.
+
+#data types for column mapping
+datatypes.dateTime=Временная метка
+datatypes.decimal=Число с плавающей точкой
+datatypes.float=Целое двойной точности
+datatypes.integer=Целое
+datatypes.string=Строка
+datatypes.date=Дата
+datatypes.time=Время
+datatypes.boolean=Логический

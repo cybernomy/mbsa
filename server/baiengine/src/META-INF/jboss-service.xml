@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: jboss-service.xml,v 1.4 2007/11/15 09:29:27 safonov Exp $ -->
+
+<server>
+    <mbean code="com.mg.merp.baiengine.support.jboss.BusinessAddinEngineService" name="merp:baiengine=BusinessAddinEngineService">
+        <depends>jboss:service=MERP</depends>
+        <depends>merp.har:service=MERPDataWarehouse</depends>
+    </mbean>
+
+    <mbean code="com.mg.merp.baiengine.support.jboss.BusinessAddinWorkbenchService" name="merp:baiengine=BusinessAddinWorkbenchService">
+       <depends>merp:baiengine=BusinessAddinEngineService</depends>
+    </mbean>
+
+    <mbean code="com.mg.merp.baiengine.support.jboss.CustomActionManagerService" name="merp:service=CustomActionManagerService">
+       <depends>merp:baiengine=BusinessAddinEngineService</depends>
+    </mbean>
+</server>

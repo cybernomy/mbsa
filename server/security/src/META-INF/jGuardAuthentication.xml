@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE configuration SYSTEM "jGuardAuthentication_1.00.dtd">
+<configuration>
+	<authentication>
+		<!-- 'local' or 'jvm' -->
+		<scope>local</scope>
+		<!-- boolean option('true' or 'false'), to activate the authorization debug mode -->
+		<debug>true</debug>
+		<includeOldConfig>false</includeOldConfig>
+		<!-- java.security.auth.login.config -->
+		<includeConfigFromJavaParam>false</includeConfigFromJavaParam>
+		<includePolicyFromJavaParam>false</includePolicyFromJavaParam>
+		<salt>umayizhceasas</salt>
+		<digestAlgorithm>SHA-256</digestAlgorithm>
+		<authenticationManager>net.sf.jguard.ext.authentication.manager.JdbcAuthenticationManager</authenticationManager>
+		<authenticationManagerOptions>
+			<option>
+				<name>authenticationDatabaseFileLocation</name>
+				<value>META-INF/authentication.interbase.properties</value>
+			</option>
+			<option>
+				<name>JNDI</name>
+				<value>java:/MERPBackboneDS</value>
+			</option>
+		</authenticationManagerOptions>
+		<loginModules>
+			<!-- specify which loginModules are used for authentication. -->
+			<loginModule>
+				<name>net.sf.jguard.ext.authentication.loginmodules.JdbcLoginModule</name>
+				<!-- flag :'REQUIRED','OPTIONAL','REQUISITE' or 'SUFFICIENT' -->
+				<flag>REQUIRED</flag>
+				<loginModuleOptions>
+					<option>
+						<name>debug</name>
+						<value>false</value>
+					</option>
+				</loginModuleOptions>
+			</loginModule>
+		</loginModules>
+	</authentication>
+</configuration>

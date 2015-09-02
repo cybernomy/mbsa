@@ -1,0 +1,13 @@
+<!-- $Id: build-community.xml,v 1.1 2008/02/26 07:33:51 safonov Exp $ -->
+
+<project name="Base Configuration" default="all.doc" basedir=".">
+
+    <property name="docbook.name" value="baseconfig" />
+
+    <import file="../../docbook-support/support.xml" />
+
+    <target name="all.doc" >
+      <!-- stub for community project -->
+    </target>
+        
+</project>

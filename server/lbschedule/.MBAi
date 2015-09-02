@@ -1,0 +1,3 @@
+#MBSA library content
+#Fri Nov 24 16:40:51 GET 2006
+BadiLibraryInclude=mpaymentcontrol,mgframework,mcore,mdocumentcore,mbaiengine,msecurity,mreport,mreference,mpaymentalloc,

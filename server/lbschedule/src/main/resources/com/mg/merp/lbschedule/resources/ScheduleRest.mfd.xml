@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: ScheduleRest.mfd.xml,v 1.3 2007/04/21 11:49:33 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.lbschedule.support.ui.ScheduleRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.lbschedule.resources.formelements#Cond.Schedule" helpTopic="liability#gio_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+		<jfd:container id="Document" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.Document" >
+			<jfd:field id="docType" showLabel="false" alignment="left_expand"/>
+			<jfd:field id="docNumber" showLabel="false" alignment="expand_expand"/>			
+			<jfd:field id="docDate" showLabel="false" alignment="right_expand"/>				
+		</jfd:container>
+		<jfd:field id="headStatus" />
+		<jfd:field id="comments" />	
+		<jfd:field id="itemKindCode" />
+		<jfd:field id="itemStatus" sameLine="true" />
+		<jfd:field id="itemCurrency" />
+		<jfd:field id="itemComments" />		
+		<jfd:field id="itemDateFrom" />
+		<jfd:field id="itemDateTill" sameLine="true" />
+		<jfd:field id="sumFrom" />
+		<jfd:field id="sumTill" sameLine="true" />
+		<jfd:field id="factSumFrom" />
+ 		<jfd:field id="factSumTill" sameLine="true"/>
+ 		<jfd:field id="fromCode" /> 
+		<jfd:field id="resourceFromCode" sameLine="true"/>
+ 		<jfd:field id="toCode" /> 
+		<jfd:field id="resourceToCode" sameLine="true"/>		
+ 		<jfd:field id="catalogCode" text="resource://com.mg.merp.lbschedule.resources.formelements#ItemSpec.FormMt.CatalogPosition" /> 	
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 			
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+
+</jfd:form>

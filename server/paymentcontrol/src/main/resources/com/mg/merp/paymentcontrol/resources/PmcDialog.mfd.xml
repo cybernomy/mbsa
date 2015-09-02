@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!-- ===================================================================== -->
+ <!--  Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.					-->
+ <!--  All rights reserved													-->
+ <!-- 																		-->
+ <!--  This program is the proprietary and confidential information			-->
+ <!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
+ <!--  as authorized in a license agreement authorizing and					-->
+ <!--  controlling such use and disclosure									-->
+ <!--																		-->
+ <!--  Millennium Business Suite Anywhere System.							-->
+ <!-- ===================================================================== -->
+
+<!-- $Id: PmcDialog.mfd.xml,v 1.5 2007/09/10 08:09:34 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.paymentcontrol.support.ui.PmcDialog" title="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.Title" width="640" height="500">
+	
+	<jfd:container id="centralBox" layout="jfd:box"  columns="1" alignment="expand_expand">
+	<jfd:border style="bevel" type="raised" />
+		<jfd:container id="commonFields" layout="jfd:box" columns="6" >
+			<jfd:field id="dateAct" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.Date" /> 
+			<jfd:button id="refreshButton" alignment="expand_expand" sameLine="true" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.RefreshButton" actionListener="RefreshByDate" /> 
+			<jfd:button id="executeButton" alignment="expand_expand" sameLine="true" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.ExecuteButton" actionListener="ExecuteLiability" /> 
+			<jfd:button id="transferButton" alignment="expand_expand" sameLine="true" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.TransferButton" actionListener="TransferResources" /> 
+			<jfd:button id="createButton" alignment="expand_expand" sameLine="true" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.CreateButton" actionListener="CreateDocuments" /> 
+		</jfd:container>
+		<jfd:container id="split2" layout="jfd:split" orientation="ver" alignment="expand_expand">	
+			<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+				<jfd:maintenanceTree id="resourceTree" scroll="true" alignment="expand_expand" >
+				</jfd:maintenanceTree>
+				<jfd:container id="resourceFields" layout="jfd:box" columns="1" alignment="expand_top">
+					<jfd:container id="resourceBalanceFields" layout="jfd:box" columns="3" alignment="expand_top">
+						<jfd:numberField id="resourceBalanceSum" readOnly="true" alignment="expand_expand" label="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.ResourceBalanceSum" /> 
+						<jfd:field id="isShowResourceBalanceSum" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.IsShowResourceBalanceSum" actionListener="RefreshByResourceBalanceSum" /> 
+					</jfd:container>
+					<jfd:maintenanceTable id="resourceTable" scroll="true" alignment="expand_expand" >
+					</jfd:maintenanceTable>
+				</jfd:container>
+			</jfd:container>
+			<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+				<jfd:container id="liabilityFields" layout="jfd:box" columns="1" alignment="expand_expand" tabTitle="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.LiabilityTab">
+					<jfd:container id="liabilitySumFields" layout="jfd:box" columns="3" alignment="expand_top">
+						<jfd:numberField id="executedSum" readOnly="true" alignment="expand_expand" label="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.ExecutedSum" /> 
+						<jfd:field id="isShowExecutedSum" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.IsShowExecutedSum" actionListener="RefreshByExecutedSum" /> 
+					</jfd:container>
+					<jfd:maintenanceTable id="liabilityTable" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.LiabilityTab" >
+						<jfd:popupMenu>
+							<jfd:separator />
+							<jfd:menuItem id="executeLiabilityItem" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.ExecuteButton" actionListener="ExecuteLiability" />
+							<jfd:separator />			
+							<jfd:menu id="patterns" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Liability.Patterns">
+								<jfd:menuItem id="showLiabilityModelItem" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Liability.ShowLiabilityModel" actionListener="ShowLiabilityModel" />
+								<jfd:menuItem id="insertLiabilityModelItem" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Liability.InsertLiabilityModel" actionListener="InsertModel" keyStroke="control INSERT" />
+							</jfd:menu>
+						</jfd:popupMenu>	
+					</jfd:maintenanceTable>
+				</jfd:container>
+				<jfd:container id="executionFields" layout="jfd:box" columns="1" alignment="expand_expand" tabTitle="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.ExecutionTab" >
+					<jfd:field id="isExecutionByLiability" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.ExecutionByLiability" actionListener="RefreshByLiability"/> 
+					<jfd:maintenanceTable id="executionTable" scroll="true" alignment="expand_expand" >
+						<jfd:popupMenu>
+							<jfd:separator />
+							<jfd:menuItem id="approve" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.Approve" actionListener="Approve" />
+							<jfd:menuItem id="disApprove" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.DisApprove" actionListener="DisApprove" />
+							<jfd:separator />
+							<jfd:menuItem id="showCreatedDocument" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.ShowCreatedDocument" actionListener="ShowCreatedDocument" />
+							<jfd:menuItem id="deleteCreatedDocument" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcDialog.DeleteCreatedDocument" actionListener="DeleteCreatedDocument" />
+						</jfd:popupMenu>	
+					</jfd:maintenanceTable>
+				</jfd:container>
+			</jfd:container>
+		</jfd:container>
+	</jfd:container>
+	
+</jfd:form>

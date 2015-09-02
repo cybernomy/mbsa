@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/mgframework"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/mbaiengine"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/mcore"/>
+	<classpathentry kind="con" path="org.jboss.ide.eclipse.jdt.ejb3.wizards.core.classpath.EJB3_CONTAINER/M40RPT"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/jboss/lib/jbossall-client.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/jboss/lib/jboss-system.jar"/>
+	<classpathentry kind="output" path="output/classes"/>
+</classpath>

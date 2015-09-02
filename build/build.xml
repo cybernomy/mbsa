@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: build.xml,v 1.14 2008/03/04 14:19:08 safonov Exp $ -->
+
+<project default="all" name="MBSA/Build">
+
+  <property file="build.properties"/>
+
+  <!--target name="init"-->
+  <property name="dir.project" location=".." />
+  <property name="dir.server" location="${dir.project}/server" />
+  <property name="dir.tools" location="${dir.project}/tools" />
+  <property name="dir.workbench" location="${dir.project}/workbench" />
+  <property name="dir.common" location="${dir.project}/common" />
+  <!--/target-->
+
+  <target name="init">
+    <mkdir dir="output/lib" />
+    <mkdir dir="output/ejb" />
+    <mkdir dir="output/ui" />
+    <mkdir dir="output/web" />
+    <mkdir dir="output/service" />
+    <mkdir dir="output/interface" />
+    <mkdir dir="output/baiworkbench" />
+    <mkdir dir="output/common" />
+    <mkdir dir="output/classpath" />
+    <mkdir dir="output/workbench/wb" />
+  </target>
+
+  <target name="common">
+    <ant dir="${dir.common}" />
+  </target>
+
+  <target name="ejb.server">
+    <ant dir="${dir.server}" />
+  </target>
+
+  <target name="tools">
+    <ant dir="${dir.tools}" />
+  </target>
+
+  <target name="workbench">
+    <ant dir="${dir.workbench}" />
+  </target>
+
+  <target name="all" depends="init,common,ejb.server,tools,workbench" />
+
+</project>

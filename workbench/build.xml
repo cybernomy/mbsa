@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="all" name="Millennium workbench">
+  <property file="../../build/build.properties"/>
+  
+  <target name="modules">
+  	<ant dir="${basedir}/com.mg.merp.wb.shared.classpath" target="${action}"/>
+    <ant dir="${basedir}/com.mg.merp.wb.core" target="${action}"/>
+  	<ant dir="${basedir}/com.mg.merp.wb.core.ui" target="${action}"/>
+  	<ant dir="${basedir}/com.mg.merp.wb.bai" target="${action}"/>
+		<ant dir="${basedir}/com.mg.merp.wb.entitymapper" target="${action}"/>
+  	<ant dir="${basedir}/com.mg.merp.wb.report.deployer" target="${action}"/>  	
+  	<ant dir="${basedir}/com.mg.merp.wb.report.birt.data.oda.badi.ui" target="${action}"/>
+  	<ant dir="${basedir}/com.mg.merp.wb.badi.library" target="${action}"/>
+  	<ant dir="${basedir}/com.mg.jet.birt.report.data.oda.ejbql" target="${action}"/>
+  	<ant dir="${basedir}/com.mg.jet.birt.report.data.oda.ejbql.ui" target="${action}"/>
+  </target>
+
+  <target name="compile" >
+    <antcall target="modules">
+      <param name="action" value="compile"/>
+    </antcall>
+  </target>
+
+  <target name="package" >
+    <antcall target="modules">
+      <param name="action" value="package"/>
+    </antcall>
+  </target>
+	
+  <target name="output">
+  	<mkdir dir="plugins"/>
+	<antcall target="modules">
+	  <param name="action" value="output"/>
+	</antcall>
+  </target>	
+
+  <target name="all">
+  	<mkdir dir="plugins" />
+    <antcall target="modules">
+      <param name="action" value="all"/>
+    </antcall>
+  </target>
+
+</project>

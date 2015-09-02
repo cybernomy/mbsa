@@ -1,0 +1,20 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_contract014 SYSTEM "modules/contract014.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere">
+<!ENTITY contr "Контракты">
+]> -->
+<chapter id="contract014">
+  <title>Условия отбора</title>
+    
+    <para> Найти нужный контракт в системе &merp; можно, используя Условия отбора.</para>
+    
+    <para>Окно Условий отбора можно вызвать, как и в любом другом разделе системы &merp;,  через 
+    пункт контекстного меню  &quot;Условия отбора&quot;. </para>
+    
+  <!-- кнопку на панели инструментов, через , или нажатием клавиши 
+    <keycombo><keycap>F6</keycap></keycombo>. -->
+
+</chapter>

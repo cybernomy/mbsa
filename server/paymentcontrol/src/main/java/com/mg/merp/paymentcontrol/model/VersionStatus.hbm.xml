@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <typedef name="com.mg.merp.paymentcontrol.model.VersionStatusKind" class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.paymentcontrol.model.VersionStatusKind</param>
+  </typedef>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.paymentcontrol.model.VersionStatus" table="PMC_VERSTATUS">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">PMC_VERSTATUS_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Creator" class="com.mg.merp.security.model.SecUser">
+      <column name="CREATOR_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Version" class="com.mg.merp.paymentcontrol.model.Version">
+      <column name="VERSION_ID" not-null="false" />
+    </many-to-one>
+    <property name="Kind" type="com.mg.merp.paymentcontrol.model.VersionStatusKind">
+      <column name="KIND" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="DateTill" type="java.util.Date">
+      <column name="DATETILL" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="DateFrom" type="java.util.Date">
+      <column name="DATEFROM" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="CreateDate" type="java.util.Date">
+      <column name="CREATEDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <set name="Liabilities" inverse="true">
+      <key on-delete="cascade">
+        <column name="VERSTATUS_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.paymentcontrol.model.Liability" />
+    </set>
+    <set name="Executions" inverse="true">
+      <key on-delete="cascade">
+        <column name="VERSTATUS_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.paymentcontrol.model.Execution" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

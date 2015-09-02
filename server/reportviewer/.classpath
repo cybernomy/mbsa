@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/mgframework"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/birt/lib/coreapi.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/birt/lib/engineapi.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/birt/lib/viewservlets.jar" sourcepath="/ECLIPSE_HOME/plugins/org.eclipse.birt.report.runtime.source_2.3.0.v20080516-7g890ELRXmproz-xIDPOJ1/src/org.eclipse.birt.report.viewer_2.3.0.v20080606/viewerservletssrc.zip"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/apache-axis/lib/axis.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/birt/lib/org.eclipse.birt.report.data.adapter_2.3.0.v20080606.jar" sourcepath="/ECLIPSE_HOME/plugins/org.eclipse.birt.report.runtime.source_2.3.0.v20080516-7g890ELRXmproz-xIDPOJ1/src/org.eclipse.birt.report.data.adapter_2.3.0.v20080606/src.zip"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/birt/lib/org.eclipse.birt.data_2.3.0.v20080606.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/mozilla-rhino/lib/js.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/birt/lib/org.eclipse.birt.report.engine.dataextraction_2.3.0.v20080611.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/birt/lib/modelapi.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/apache-codec/lib/commons-codec.jar"/>
+	<classpathentry kind="output" path="output/classes"/>
+</classpath>

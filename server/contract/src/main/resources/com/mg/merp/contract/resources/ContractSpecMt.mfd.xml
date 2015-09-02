@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: ContractSpecMt.mfd.xml,v 1.5 2008/03/14 15:44:30 konyashkina Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.contract.support.ui.ContractSpecMt" title="resource://com.mg.merp.contract.resources.formelements#Contract.Item.Tab.Spec.Title" helpTopic="contract#spec_html">
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
+  		<jfd:border style="bevel" type="raised" />
+  		<jfd:field id="Catalog" />	
+  		<jfd:field id="Catalog.Measure1" enabled="false" sameLine="true" />	
+ 		<jfd:field id="PriceListHead" />
+ 		<jfd:field id="PriceType" sameLine="true" />	 			
+ 		<jfd:field id="Quantity"/>
+ 		<jfd:field id="Price" />
+ 		<jfd:field id="Summa" sameLine="true" />	 
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 							 							 			 		
+	</jfd:container>			
+ 	
+ 	<jfd:include name="com/mg/merp/contract/resources/ContractSpecMtFooterMacros.xml" />
+ 
+</jfd:form>

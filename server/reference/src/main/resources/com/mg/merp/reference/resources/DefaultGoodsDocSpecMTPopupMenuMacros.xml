@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: DefaultGoodsDocSpecMTPopupMenuMacros.xml,v 1.1 2007/04/05 12:27:53 poroxnenko Exp $ -->
+<jfd:maintenanceTable xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="spec" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#SpecFields">
+	<jfd:popupMenu>
+		<jfd:separator />
+		<jfd:menuItem id="showStockSituationItem" text="resource://com.mg.merp.reference.resources.formelements#Warehouse.ShowStockSituation" actionListener="ShowStockSituation" />
+	</jfd:popupMenu>	
+</jfd:maintenanceTable>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- $Id: build.xml,v 1.25 2008/08/12 09:34:12 safonov Exp $ -->
+
+<project default="all" name="Millennium server side">
+  <property file="../build/build.properties"/>
+  
+  <target name="modules">
+    <ant dir="${basedir}/baiengine" target="${action}" />
+    <ant dir="${basedir}/scheduler" target="${action}" />
+    <ant dir="${basedir}/reference" target="${action}" />
+    <ant dir="${basedir}/report" target="${action}" />
+    <ant dir="${basedir}/reportviewer" target="${action}" />
+    <ant dir="${basedir}/documentcore" target="${action}" />
+    <ant dir="${basedir}/docflow" target="${action}" />
+    <ant dir="${basedir}/document" target="${action}" />
+    <ant dir="${basedir}/exchange" target="${action}" />
+    <ant dir="${basedir}/security" target="${action}" />
+    <ant dir="${basedir}/bpm" target="${action}" />
+    <ant dir="${basedir}/contract" target="${action}" />
+    <ant dir="${basedir}/discount" target="${action}" />
+    <ant dir="${basedir}/warehouse" target="${action}" />
+    <ant dir="${basedir}/retail" target="${action}" />
+    <ant dir="${basedir}/qualitycontrol" target="${action}" />
+    <ant dir="${basedir}/mfreference" target="${action}" />
+    <ant dir="${basedir}/manufacture" target="${action}" />
+    <ant dir="${basedir}/paymentalloc" target="${action}" />
+    <ant dir="${basedir}/account" target="${action}" />
+    <ant dir="${basedir}/factura" target="${action}" />
+    <ant dir="${basedir}/paymentcontrol" target="${action}" />
+    <ant dir="${basedir}/lbschedule" target="${action}" />
+    <ant dir="${basedir}/hr" target="${action}" />
+    <ant dir="${basedir}/personnelref" target="${action}" />
+    <ant dir="${basedir}/overall" target="${action}" />
+    <ant dir="${basedir}/finance" target="${action}" />
+    <ant dir="${basedir}/planning" target="${action}" />
+    <ant dir="${basedir}/table" target="${action}" />
+    <ant dir="${basedir}/salary" target="${action}" />
+    <ant dir="${basedir}/settlement" target="${action}" />
+    <ant dir="${basedir}/crm" target="${action}" />
+    <ant dir="${basedir}/workbench" target="${action}" />
+  </target>
+
+  <target name="framework">
+    <ant dir="${basedir}/framework" target="${action}" />
+    <ant dir="${basedir}/core" target="${action}" />
+  </target>
+
+  <target name="datawarehouse">
+    <ant dir="${basedir}/datawarehouse" target="${action}" />
+  </target>
+
+  <target name="mbsawebapp">
+    <ant dir="${basedir}/mbsawebapp" target="${action}" />
+    <ant dir="${basedir}/mbsahelpsystem" target="${action}" />
+  </target>
+
+  <target name="ejbdoclet" >
+    <!-- antcall target="modules">
+      <param name="action" value="ejbdoclet"/>
+    </antcall -->
+  </target>
+
+  <target name="compile" >
+    <antcall target="framework">
+      <param name="action" value="compile"/>
+    </antcall>
+    <antcall target="datawarehouse">
+      <param name="action" value="compile"/>
+    </antcall>
+    <antcall target="modules">
+      <param name="action" value="compile"/>
+    </antcall>
+  </target>
+
+  <target name="package" >
+    <antcall target="modules">
+      <param name="action" value="package"/>
+    </antcall>
+    <antcall target="framework">
+      <param name="action" value="package"/>
+    </antcall>
+    <antcall target="datawarehouse">
+      <param name="action" value="package"/>
+    </antcall>
+  </target>
+
+  <target name="deploy" >
+    <antcall target="modules">
+      <param name="action" value="deploy"/>
+    </antcall>
+    <antcall target="framework">
+      <param name="action" value="deploy"/>
+    </antcall>
+    <antcall target="datawarehouse">
+      <param name="action" value="deploy"/>
+    </antcall>
+  </target>
+
+
+  <target name="docs" if="build.docs">
+    <property name="src.prefix" value="/src/main/java" />
+    <property name="title" value="MBSA System v.${ver.curr.major}.${ver.curr.minor}.${ver.curr.release} API Specification" />
+
+    <path id="javadoc.class.path">
+      <fileset dir="../thirdparty">
+        <include name="**/*.jar"/>
+      </fileset>
+    </path>
+
+    <path id="javadoc.source.path">
+      <pathelement location="framework${src.prefix}"/>
+      <pathelement location="core${src.prefix}"/>
+      <pathelement location="baiengine${src.prefix}"/>
+      <pathelement location="report${src.prefix}"/>
+      <pathelement location="documentcore${src.prefix}"/>
+      <pathelement location="docflow${src.prefix}"/>
+      <pathelement location="document${src.prefix}"/>
+      <pathelement location="exchange${src.prefix}"/>
+      <pathelement location="security${src.prefix}"/>
+      <pathelement location="scheduler${src.prefix}"/>
+      <pathelement location="workbench${src.prefix}"/>
+      <pathelement location="../workbench/com.mg.merp.wb.shared.classpath${src.prefix}"/>
+      <pathelement location="../workbench/com.mg.merp.wb.core${src.prefix}"/>
+      <pathelement location="../workbench/com.mg.merp.wb.core.ui${src.prefix}"/>
+      <pathelement location="../workbench/com.mg.merp.wb.badi.library${src.prefix}"/>    	
+      <pathelement location="../workbench/com.mg.merp.wb.report.deployer${src.prefix}"/>
+      <pathelement location="../workbench/com.mg.merp.wb.bai${src.prefix}"/>
+      <pathelement location="../workbench/com.mg.merp.wb.entitymapper${src.prefix}"/>
+      <pathelement location="../workbench/com.mg.merp.wb.report.birt.data.oda.badi.ui${src.prefix}"/>
+      <!-- pathelement location="reference${src.prefix}"/>
+      <pathelement location="contract${src.prefix}"/>
+      <pathelement location="discount${src.prefix}"/>
+      <pathelement location="retail${src.prefix}"/>
+      <pathelement location="factura${src.prefix}"/>
+      <pathelement location="warehouse${src.prefix}"/>
+      <pathelement location="qualitycontrol${src.prefix}"/>
+      <pathelement location="mfreference${src.prefix}"/>
+      <pathelement location="manufacture${src.prefix}"/>
+      <pathelement location="paymentalloc${src.prefix}"/>
+      <pathelement location="paymentcontrol${src.prefix}"/>
+      <pathelement location="lbschedule${src.prefix}"/>
+      <pathelement location="account${src.prefix}"/>
+      <pathelement location="hr${src.prefix}"/>
+      <pathelement location="personnelref${src.prefix}"/>
+      <pathelement location="overall${src.prefix}"/>
+      <pathelement location="finance${src.prefix}"/>
+      <pathelement location="planning${src.prefix}"/>
+      <pathelement location="salary${src.prefix}"/>
+      <pathelement location="crm${src.prefix}"/>
+      <pathelement location="table${src.prefix}"/-->
+    </path>
+
+    <javadoc classpathref="javadoc.class.path" access="protected" author="true"
+      destdir="../docs/output/api" packagenames="*" nodeprecated="false" nodeprecatedlist="false"
+      noindex="false" nonavbar="false" notree="false" source="1.5"
+      maxmemory="128m"
+      sourcepathref="javadoc.source.path" splitindex="false" use="false" version="true"
+      windowtitle="${title}">
+      <docTitle>${title}</docTitle>
+      <bottom><![CDATA[<i>Copyright &#169; 1998 - 2008 BusinessTechnology, Ltd. All Rights Reserved.</i>]]></bottom>
+    </javadoc>
+  </target>
+
+  <target name="all">
+    <antcall target="framework">
+      <param name="action" value="all"/>
+    </antcall>
+    <antcall target="mbsawebapp">
+      <param name="action" value="all"/>
+    </antcall>
+    <!-- antcall target="datawarehouse">
+      <param name="action" value="all"/>
+    </antcall -->
+    <antcall target="modules">
+      <param name="action" value="all"/>
+    </antcall>
+    <antcall target="docs" />
+  </target>
+
+</project>

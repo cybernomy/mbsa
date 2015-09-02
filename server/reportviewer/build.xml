@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: build.xml,v 1.2 2008/10/23 11:08:52 safonov Exp $ -->
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "../../build/etc/module.xml">
+]>
+
+<project default="all" name="Report viewer module">
+
+  <property file="../../build/build.properties"/>
+
+  &module;
+
+  <path id="project.class.path">
+    <path refid="module.class.path"/>
+  </path>
+
+  &common;
+
+  <target name="init" depends="mg.ejbmodule.init, mg.module.encode" >
+    <property name="webmodule.filename" value="mreportviewer.war"/>
+  </target>
+
+  <target name="compile" depends="init">
+    <antcall target="mg.javac">
+      <param name="javac-src" value="src/main/java"/>
+      <param name="javac-includes" value="**/*.java"/>
+      <param name="classdir" value="output/classes"/>
+    </antcall> 
+  </target>
+
+  <target name="resources" depends="init">
+  	<antcall target="mg.module.resources" />
+  </target>
+
+  <target name="package" depends="init">
+	<antcall target="mg.module.manifest" >
+		<param name="module.filename" value="${webmodule.filename}"/>
+	</antcall>
+  	<mkdir dir="output/lib/${webmodule.filename}"/>
+  	<antcall target="prepare.birtruntime" />
+  	<copy todir="output/lib/${webmodule.filename}" overwrite="true" >
+  		<fileset dir="src/main/resources/mreportviewer.war" />
+  	</copy>
+  	
+  	<copy todir="output/lib/viewservlets.jar/org/eclipse/birt/report" overwrite="true" >
+  		<fileset dir="output/classes/org/eclipse/birt/report">
+  			<include name="**/*.class"/>
+		</fileset>
+  	</copy>
+  	<copy todir="output/lib/viewservlets.jar/org/eclipse/birt/report/resource" file="src/main/resources/org/eclipse/birt/report/resource/Messages_ru.properties" />
+  	<mkdir dir="output/lib/${webmodule.filename}/WEB-INF/lib"/>
+  	<jar basedir="output/lib/viewservlets.jar" destfile="output/lib/${webmodule.filename}/WEB-INF/lib/viewservlets.jar" update="false" />
+  	
+  	<copy todir="output/lib/${webmodule.filename}/WEB-INF/classes/com/mg/merp/report" >
+  		<fileset dir="output/classes/com/mg/merp/report">
+  			<include name="**/*.class"/>
+		</fileset>
+  	</copy>
+  	
+  	<copy file="${webmodule.filename}.MANIFEST.MF" tofile="output/lib/${webmodule.filename}/META-INF/MANIFEST.MF" />
+  </target>
+
+  <target name="prepare.birtruntime" if="birt.runtime.web">
+  	<unzip src="${birt.runtime.web}" dest="output/lib/${webmodule.filename}"/>
+  	<unjar dest="output/lib/viewservlets.jar" src="output/lib/${webmodule.filename}/WEB-INF/lib/viewservlets.jar" />
+  </target>
+
+  <target name="deploy" depends="init,package">
+  </target>
+
+  <target name="output" depends="init">
+  	<copy todir="../../build/output/web/${webmodule.filename}" overwrite="true" >
+  		<fileset dir="output/lib/${webmodule.filename}" />
+  	</copy>
+  </target>
+
+  <target name="clean">
+    <antcall target="mg.ejbmodule.clean"/>
+  </target>
+
+  <target name="all" depends="clean,compile,resources,package,output" />
+
+</project>

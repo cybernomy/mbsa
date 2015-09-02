@@ -1,0 +1,11 @@
+# $Id: dataitemlabels_ru.windows1251,v 1.13 2008/03/25 14:03:20 alikaev Exp $
+
+CurrentCalcPeriodIsNotSet=Текущий расчетный период не установлен!
+ChooseRootFolder=Выберите родительскую папку!
+
+CalcPeriodEndDateAfterBeginDate=Дата начала действия не может быть позже даты окончания действия!
+CalcPeriodIsCross=Расчетные периоды не могут пересекаться!
+
+ParentAnaliticsInvalid=Неверно задана аналитика верхнего уровня!
+AnaliticsLevelInvalid=Уровень аналитики может принимать значение от %1$d до %2$d!
+NotChooseStafflistBySearchedCalcPeriod=Не задано штатное расписание на этот расчётный период!

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp-versions>
+
+	<resource>
+		<pattern>
+			<name>merp-applet-client.jar</name>
+			<version-id>4.0.6.0</version-id>
+		</pattern>
+		<file>merp-applet-client.jar</file>
+	</resource>
+
+	<resource>
+		<pattern>
+			<name>ulc-all5-client.jar</name>
+			<version-id>2008.2</version-id>
+		</pattern>
+		<file>ulc-all5-client.jar</file>
+	</resource>
+
+	<resource>
+		<pattern>
+			<name>merp-ulccomponent-client.jar</name>
+			<version-id>4.0.6.0</version-id>
+		</pattern>
+		<file>merp-ulccomponent-client.jar</file>
+	</resource>
+
+	<resource>
+		<pattern>
+			<name>jgraph.jar</name>
+			<version-id>5.0.0</version-id>
+		</pattern>
+		<file>jgraph.jar</file>
+	</resource>
+
+	<resource>
+		<pattern>
+			<name>substance-lite-feel.jar</name>
+			<version-id>5.0</version-id>
+		</pattern>
+		<file>substance-lite-feel.jar</file>
+	</resource>
+
+	<resource>
+		<pattern>
+			<name>looks.jar</name>
+			<version-id>2.1.4</version-id>
+		</pattern>
+		<file>looks.jar</file>
+	</resource>
+
+</jnlp-versions>

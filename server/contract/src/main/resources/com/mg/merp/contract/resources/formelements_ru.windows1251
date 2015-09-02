@@ -1,0 +1,109 @@
+# $Id: formelements_ru.windows1251,v 1.15 2008/03/14 13:26:50 konyashkina Exp $
+
+Contract.FormBr.Title=Контракты
+Contract.FormMt.Title=Контракт
+
+ContractType.FormBr.Title=Виды договоров
+ContractType.FormMt.Title=Вид договора
+
+ContractCategory.FormBr.Title=Категории договоров
+ContractCategory.FormMt.Title=Категория договора
+
+Contract.Tab.Total.Title=Содержание
+Contract.Tab.Contr.Title=Контрагенты
+Contract.Tab.Summa.Title=Суммы
+Contract.Tab.ShipperConsignee.Title=Грузоотправитель/грузополучатель
+Contract.Tab.Comment.Title=Предмет контракта
+Contract.Tab.Phases.Title=Этапы
+Contract.Tab.Items.Title=Пункты
+Contract.Tab.ModifyDocument.Title=Изменения контракта
+Contract.Phase.FormMt.Title=Этап контракта
+Contract.ModifyDocument.FormMt.Title=Изменение контракта
+Cond.Contract=Условия отбора контрактов
+
+Contract.Contr.ContrFrom.Title=Контрагент
+Contract.Contr.ContrTo.Title=Наша организация
+Contract.Contr.Partner.Title=Партнер
+Contract.Contr.Responsible.Title=Ответственный
+Contract.Shipper.Title=Грузоотправитель
+Contract.Consignee.Title=Грузополучатель
+Contract.Contr.PartnerShipper.Title=Контрагент
+
+Contract.Summa=Сумма
+Contract.Modif.Document=Документ
+
+Contract.Phase.Tab.Total.Title=Содержание
+Contract.Phase.Tab.Summa.Title=Суммы
+Contract.Phase.Tab.ShipperConsignee.Title=Грузоотправитель/грузополучатель
+Contract.Phase.Tab.ItemsOfPlan.Title=Пункты плана
+Contract.Phase.Tab.Comment.Title=Примечание
+
+Contract.Tab.ItemFact.Title=Фактические
+Contract.Tab.ItemPlan.Title=Планируемые
+Contract.ItemFact.FormMt.Title=Фактический пункт
+Contract.ItemPlan.FormMt.Title=Планируемый пункт
+Contract.Item.Tab.Total.Title=Содержание
+Contract.Item.Tab.Spec.Title=Спецификация
+Contract.Item.Document.Title=Документ
+
+Contract.Phase.Items.Tab.Shipped.Title=Платежи контрагенту
+Contract.Phase.Items.Tab.ReceiveGood.Title=ТМЦ и услуги от контрагента
+Contract.Phase.Items.Tab.Receive.Title=Платежи от контрагента
+Contract.Phase.Items.Tab.ShippedGood.Title=ТМЦ и услуги контрагенту
+
+Contract.Shipped=Сумма платежей контрагенту
+Contract.Receive=Сумма платежей от контрагента
+Contract.ShippedGood=Сумма ТМЦ и услуг контрагенту
+Contract.ReceiveGood=Сумма ТМЦ и услуг от контрагента
+
+Cond.Document.Modify=Документ на изменение
+Cond.AllContract=Вид контракта
+
+ContractConfig.FormMt.Title=Конфигурация модуля "Контракты"
+ContractConfig.FormMt.CurrencyFields=Валюта
+ContractConfig.FormMt.BaseCurrency=Базовая валюта
+ContractConfig.FormMt.NatCurrency=Национальная валюта
+ContractConfig.FormMt.CurrencyPrec=Точность денежных величин, знаков после запятой
+
+CreatePhaseFactItemDlg.Title=Создание фактического пункта
+CreatePhaseFactItemDlg.ContractGroup=Контракт
+CreatePhaseFactItemDlg.ContractNumber=Номер
+CreatePhaseFactItemDlg.ContractDate=Дата
+CreatePhaseFactItemDlg.ChooseContract=Выбрать
+CreatePhaseFactItemDlg.ItemKind=Вид пункта
+CreatePhaseFactItemDlg.OptionsGroup=Опции
+CreatePhaseFactItemDlg.CreateSpec=Создавать спецификации
+
+Contract.Phase.MakeAvoid=Аннулировать
+Contract.Phase.ShowAvoid=Аннулированные
+Contract.Phase.AutoDistribution=Распределить
+Contract.Phase.AvoidDistribution=Аннулировать распределение
+Contract.Phase.ManualDistribution=Распределить вручную
+Contract.Phase.ShowDocument=Показать документ
+
+AvoidPhaseDlg.Title=Аннулированные этапы
+AvoidPhaseDlg.CancelAvoid=Отменить аннулирование
+
+ManualDistributionDlg.Title=Распределение фактической суммы
+ManualDistributionDlg.DistributionSum=Сумма для распределения
+ManualDistributionDlg.PerformDistribution=Распределить
+ManualDistributionDlg.CancelDistribution=Отменить распределение
+
+Contract.CalcButton=Расcчитать
+Contract.CalcKind=Расчет суммы
+Contract.CurSum=Сумма
+Contract.PlanRest=Остаток по плану
+Contract.FactRest=Остаток фактически
+
+ModifyDocument.Original.Show=Показать оригинал
+ModifyDocument.Original.Download=Загрузить оригинал как...
+ModifyDocument.Original.Upload=Сохранить оригинал...
+ModifyDocument.Original.Remove=Удалить оригинал
+
+Contractor=Контрагент
+Responsible=Ответственный
+Company=Наша организация
+BankDays=Количество банковских дней
+
+Contract.PhaseFactItem.Adjust=Рассчитать фактическую сумму
+Contract.PhasePlanItem.Adjust=Рассчитать планируемую сумму

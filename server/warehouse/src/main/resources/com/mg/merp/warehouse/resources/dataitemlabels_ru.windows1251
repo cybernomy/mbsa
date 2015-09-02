@@ -1,0 +1,220 @@
+# $Id: dataitemlabels_ru.windows1251,v 1.21 2008/06/06 05:55:15 sharapov Exp $
+
+Id=Идентификатор
+Code=Код
+Name=Наименование
+Mol=МОЛ
+
+BillHead.SummaCurWithDiscount=Сумма со скидками в валюте
+BillHead.SummaNatWithDiscount=Сумма со скидками в НДЕ
+
+AcceptanceQuan=<html>Количество <br>в основной ЕИ</html>
+AcceptancePackingQuan=Упаковок
+Spec.AcceptanceSum=Сумма
+
+AcceptanceTerm=Срок акцепта
+AcceptanceDate=Дата окончания акцепта
+AcceptanceSum=Сумма акцепта
+AddExpenses=Сумма дополнительных расходов
+
+Bank=Банк
+BaseDocType=Тип документа основания
+BaseDocNumber=Номер документа основания
+BaseDocDate=Дата документа основания
+BinLocation.Zone=Зона
+BinLocation.Type=Тип
+Button.Assign=Применить с/н
+
+Chairman=Председатель комиссии
+CalcTaxKind=Вид начисления налогов
+Catalog=Товар: код/наименование
+CatalogId=Позиция каталога
+ContractType=Тип контракта
+ContractNumber=Номер контракта
+ContractDate=Дата контракта
+ContractorFrom=От кого
+ContractorTo=Кому
+Consignee=Грузополучатель
+Consumer=Потребитель
+Comment=Дополнения
+CurCode=Код валюты
+CurCource=Курс валюты
+
+DateKind.None=
+DateKind.Hour=час
+DateKind.Day=день
+DateKind.Month=месяц
+DateKind.Year=год
+
+Discount=Скидка/наценка, %
+DiscountFolder=Группа
+DiscountOnDoc=С/Н на документ, %
+DiscountOnLine=С/Н по строкам, %
+
+Description=Описание
+DocType=Тип документа
+DocNumber=Номер документа
+DocDate=Дата документа
+DocDiscount=С/Н на документ, %
+
+EndDate=На дату
+
+InvActSpec.RealQuan=<html>Фактическое количество <br>в основной ЕИ</html>
+InvActSpec.RealQuan2=<html>Фактическое количество <br>в дополнительной ЕИ</html>
+
+InvActHead.SummaNat=Сумма по складу
+InvActHead.SummaCur=Сумма по складу в валюте
+InvActSpec.RealSumma=Фактическая сумма
+InvActHead.RealSumCur=Фактически в валюте
+InvActHead.RealSumNat=Фактическая сумма
+InventoryActHead.ExsessSummaNat=Сумма излишков
+InventoryActHead.ExsessSummaCur=Сумма излишков в валюте
+InventoryActHead.ShortageSummaNat=Сумма недостачи
+InventoryActHead.ShortageSummaCur=Сумма недостачи в валюте
+
+InfiniteVolume=Не ограничен
+MaximumVolume=Максимальный
+InfiniteWeight=Не ограничен
+MaximumWeight=Максимальный
+InfiniteQuan=Не ограничено
+MaximumQuan=Максимальное
+
+MaxQuantity=Максимальное количество
+Measure=ЕИ
+MeasureId=ЕИ
+MolSrc=МОЛ получателя
+MolDest=МОЛ поставщика
+
+OrderHead.Status=Статус
+OrderStatus.Planned=Запланировано
+OrderStatus.Ordered=Заказано
+OrderStatus.Completed=Выполнено
+OrderHead.Consumer=Потребитель
+OrderHead.FixedInput=Поступления зафиксированы
+OrderHead.CreditTerm=Количество дней просрочки выполнения заказа
+OrderHead.DueDate=Дата выполнения
+OrderHead.Penalty=% штрафа
+OrderHead.DueDateQuan=Срок выполнения заказа, количество единиц
+OrderHead.DueDateKind=Срок выполнения заказа, единица измерения
+
+OrderSpec.RequiredDate=Дата требования
+OrderSpec.PromisedDate=Дата поставки
+OrderSpec.VendItemCode=Код товара у покупателя
+OrderSpec.Warehouse=Склад
+OrderSpec.QtyShipped=Отгружено со склада
+OrderSpec.QtyPicked=Создана накладная
+OrderSpec.QtyReturned=Возвращено покупателем
+OrderSpec.QtyOutstand=Планируется отгрузить
+OrderSpec.CloseForPlan=Недоступно для планирования
+OrderSpec.Status=Статус
+OrderSpec.Cost=Себестоимость
+
+PaymentTerm=Срок оплаты
+PaymentDate=Дата оплаты
+PaymentSum=Сумма оплаты
+PlanPaymentDate=Плановая дата оплаты
+PlanPaymentDateDoc=Плановая дата оплаты по документу
+PriceWithDiscount=Цена со С/Н
+
+Responsible=Ответственный
+
+Shipper=Грузоотправитель
+StockDest=Склад поставщика
+StockKind.FormBr.Title=Вид складского запаса
+StockKind.FormMt.Title=Вид складского запаса
+StockPolicy=Политика списания
+StockSrc=Склад получателя
+
+StockCard.Catalog=Товар: код/наименование
+CardNumber=Номер
+StockCard.SupplyNorm=Норма запаса
+StockCard.Quantity=Количество
+StockCard.Reserve=Зарезервировано
+StockCard.PlanIn=Планируемый приход
+StockCard.PlanOut=Планируемый расход
+
+NumberLot=Номер партии
+VendorLot=Номер партии поставщика
+CreateDate=Дата создания
+BeginQuan=Начальное количество партии
+BeginQuan2=Начальное количество партии в дополнительной ЕИ
+EndQuan=Конечное количество партии
+EndQuan2=Конечное количество партии в дополнительной ЕИ
+StockBatch.PriceNat=Цена
+StockBatch.PriceCur=Цена в валюте
+StockBatch.Currency=Код валюты
+StockBatch.DocType=Тип
+StockBatch.DocNumber=Номер 
+StockBatch.DocDate=Дата
+StockBatch.Contractor=Контрагент
+StockBatch.Owner=Правообладатель
+StockBatch.Certificate=Сертификат
+StockBatch.BestBefore=Дата/время годности
+StockBatch.Comment=Комментарий
+
+STPolicy.Fifo=ФИФО
+STPolicy.Lifo=ЛИФО
+STPolicy.Batch=Партионный учёт
+SummaCur=Сумма в валюте
+SummaNat=Сумма
+SummaWithDiscount=Сумма с наценкой/скидкой
+
+ToPayDocNumber=К пл-расч. документу №
+ToPayDocDate=от
+
+Warehouse=Склад
+Warehouse.UseBinLocat=Использовать секции хранения
+Warehouse.BinSizing=Использовать размеры секций хранения 
+War.Contractor=Подразделение
+War.AlgReposit=<html>BAi формирования<br>цены прихода</html>
+Warehouse.CalcFact=Фактическое количество
+Warehouse.CalcPlanIn=Планируемый приход
+Warehouse.CalcPlanOut=Планируемый расход
+Warehouse.CalcReserve=Зарезервировано
+WareDocSpec.Cost=Себестоимость
+
+Contractor=Контрагент
+Warehouse=Склад
+BinLocationType=Тип секции
+WarehouseZone=Зона хранения
+StockKind=Вид запаса
+BinLocation=Секция хранения
+StockBatch=Партия
+WarehouseType=Тип склада
+
+PartnerFromBankReq=Банк поставщика
+PartnerToBankReq=Банк покупателя
+
+WareCard.From=с
+WareCard.To=по
+
+StockBatchHistory.Quantity1=Количество в основной ЕИ
+StockBatchHistory.Quantity2=Количество в дополнительной ЕИ
+StockBatchHistory.ProcessDate=Дата отработки
+StockBatchHistory.DateTime=Дата/время
+
+BinLocationType.Description=Описание
+
+Warehouse.SerialNum.SerialNumber=Серийный номер
+Warehouse.BinLocationDetail.Quantity=Количество
+
+Warehouse.InvoiceHead=Накладная
+
+InventoryParams.StockInvKind.OnePriceKind=Одна строка ТМЦ по одной цене прихода
+InventoryParams.StockInvKind.AgregatePriceKind=Одна строка ТМЦ по всем ценам прихода
+InventoryParams.MolInvKind.OnePriceKind=Одна строка ТМЦ по каждому МОЛ
+InventoryParams.MolInvKind.AgregatePriceKind=Одна строка ТМЦ по всем МОЛ
+InventoryParams.StockInvKind=Правила формирования строк по партиям с учетом цены прихода
+InventoryParams.MolInvKind=Правила формирования строк по партиям с учетом МОЛ
+
+Warehouse.WarehouseTransactionDay=Операционный день
+Warehouse.WarehouseTransactionDay.Stock=Склад
+Warehouse.WarehouseTransactionDay.ClosedDay=Закрытый день
+Warehouse.WarehouseTransactionDay.UserStockClosed=Кто закрыл
+Warehouse.WarehouseTransactionDay.OperationDate=Закрыто
+
+Warehouse.CheckTransactionDay=Учитывать операционные дни
+Warehouse.WarehouseTransactionClosed=Cклад закрыт для фактического движения
+Warehouse.ClosedDateTill=Закрыт по число
+Warehouse.UserStockClosed=Кто закрыл
+Warehouse.OperationDate=Закрыто

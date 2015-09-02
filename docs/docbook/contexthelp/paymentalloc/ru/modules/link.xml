@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: link.xml,v 1.1 2006/12/03 13:24:11 konyashkina Exp $ -->
+
+<link version="1.0">
+  
+  <linkitem topic="docgroup_links">
+     <linkentry target="docgroup_html" text="Группы документов" />
+  </linkitem>
+  
+  <linkitem topic="pml_links">
+     <linkentry target="pml_html" text="Журнал платежей" />
+     <linkentry target="patterns_html" text="Образцы записей" />
+     <linkentry target="docs_html" text="Документы, связанные с платежом" />
+     <linkentry target="cond_html" text="Условия отбора" />
+ </linkitem>
+
+</link>
+	

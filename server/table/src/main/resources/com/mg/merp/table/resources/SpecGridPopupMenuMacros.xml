@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: SpecGridPopupMenuMacros.xml,v 1.1 2008/08/12 14:40:45 sharapov Exp $ -->
+
+<jfd:popupMenu xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
+	<jfd:menuItem id="setHours" text="resource://com.mg.merp.table.resources.formelements#SetHours" actionListener="SetHours" keyStroke="F2" />
+	<jfd:menuItem id="chooseDayliTimeKind" text="resource://com.mg.merp.table.resources.formelements#ChooseDayliTimeKind" actionListener="ChooseDayliTimeKind" keyStroke="F3" />
+</jfd:popupMenu>

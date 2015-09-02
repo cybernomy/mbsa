@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/mgframework"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/jboss/lib/jboss-jmx.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/jboss/lib/jboss-system.jar" sourcepath="/JBOSS_AS_SRC/system"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/jbpm/lib/jbpm-jpdl.jar" sourcepath="/JBPM_SRC"/>
+	<classpathentry kind="con" path="org.jboss.ide.eclipse.jdt.ejb3.wizards.core.classpath.EJB3_CONTAINER/JBoss release (local)"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/mcore"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/msecurity"/>
+	<classpathentry kind="output" path="output/classes"/>
+</classpath>

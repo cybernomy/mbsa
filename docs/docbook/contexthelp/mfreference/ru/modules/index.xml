@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: index.xml,v 1.1 2006/12/03 12:45:57 konyashkina Exp $ -->
+
+<index version="1.0">
+
+  <indexitem text="Состав изделия">
+     <indexentry text="Состав изделия" target="bom_html" />
+     <indexentry text="Версия" target="bom_html" />
+     <indexentry text="Операции" target="bomroute_html" />
+     <indexentry text="Контрольная точка" target="bomroute_html" />
+     <indexentry text="Материалы операции" target="bommaterial_html" />
+     <indexentry text="Применяемость материала" target="bommaterial_html" />
+     <indexentry text="Метод измерения расхода материала" target="bommaterial_html" />
+     <indexentry text="Оборудование операции" target="bommachine_html" />
+     <indexentry text="Рабочая сила операции" target="bomlabor_html" />
+     <indexentry text="Расшифровка стоимости" target="costdetail_html" />
+   </indexitem>
+   
+    <indexitem text="Рабочие центры">
+     <indexentry text="Рабочий центр" target="workcentr_html" />
+     <indexentry text="Планирование по РЦ" target="wcplan_html" />
+     <indexentry text="Стоимость по РЦ" target="wccost_html" />
+     <indexentry text="Нормы стоимости по РЦ" target="wccostnorm_html" />
+   </indexitem>
+   
+   <indexitem text="Справочники производства">
+     <indexentry text="Логистические маршруты" target="route_html" />
+     <indexentry text="Производственные линии" target="cell_html" />
+     <indexentry text="Рабочий центр, являющийся узким местом" target="cell_html" />
+     <indexentry text="Коэффициент приведения календарей" target="cell_html" />
+     <indexentry text="Класс рабочей силы" target="labclass_html" />
+     <indexentry text="Метод измерения расхода рабочей силы" target="labclass_html" />
+     <indexentry text="Накладные расходы на рабочую силу" target="labclass_html" />
+     <indexentry text="Бригады" target="crew_html" />
+     <indexentry text="Категории затрат" target="costcateg_html" />
+     <indexentry text="Группы ресурсов" target="resourgroup_html" />
+     <indexentry text="Семейства ресурсов" target="resourfamily_html" />
+     <indexentry text="Уровни планирования" target="planlevel_html" />
+  </indexitem>
+  
+    <indexitem text="Календари">
+     <indexentry text="Дневной календарь" target="daycalend_html" />
+     <indexentry text="Сменный календарь" target="daytime_html" />
+     <indexentry text="Недельный календарь" target="weekcalend_html" />
+     <indexentry text="Изменения недельного календаря" target="weekchange_html" />
+  </indexitem>
+  
+</index>

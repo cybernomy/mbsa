@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.    	          				 -->
+<!-- ======================================================================= -->
+
+<!-- $Id: OperDocAttributeMacros.xml,v 1.2 2008/03/06 07:00:22 alikaev Exp $ -->
+
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="confirmDocument" layout="jfd:box" longField="true" label="resource://com.mg.merp.finance.resources.formelements#Fin.Oper.DoctAttribute" >
+	<jfd:field id="ConfirmDocType" showLabel="false" alignment="left_expand"/>
+	<jfd:field id="ConfirmDocNumber" showLabel="false" alignment="expand_expand"/>			
+	<jfd:field id="ConfirmDocDate" showLabel="false" alignment="right_expand"/>				
+	<jfd:button id="ViewConfirmDocument" alignment="right_expand" icon="com/mg/framework/resources/viewbuttonicon.png" toolTip="resource://com.mg.merp.finance.resources.formelements#DocEcon.ConfirmDoc.ToolTip" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ViewConfirmDocument" />
+</jfd:container>	

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: build.xml,v 1.13 2008/10/02 07:23:58 safonov Exp $ -->
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "../../build/etc/module.xml">
+]>
+
+<project default="all" name="Business Add-in engine module">
+
+  <property file="../../build/build.properties"/>
+
+  &module;
+
+  <path id="project.class.path">
+    <path refid="module.class.path"/>
+  </path>
+
+  &common;
+
+  <target name="init" depends="mg.ejbmodule.init, mg.module.encode">
+    <property name="module.filename" value="010mbaiengine-ejb.jar"/>
+    <property name="ui.module.filename" value="010mbaiengine-ui.jar"/>
+    <property name="service.filename" value="mbaiengine.sar"/>
+    <property name="bai.module.filename" value="mbaiengine-bai.jar"/>
+    <property name="module.name" value="baiengine"/>
+	<property name="wb.module.filename" value="mbaiengine-wb.jar"/>
+  	
+  	<property name="badi.lib.dpnds" value="mgframework, mcore"/>
+  	<property name="wb.incl.src" value="**/*.java"/>	
+  </target>
+
+  <target name="compile" depends="init">
+    <antcall target="mg.javac">
+      <param name="javac-src" value="src/main/java"/>
+      <param name="javac-includes" value="**/*.java"/>
+      <param name="classdir" value="output/classes"/>
+    </antcall> 
+  </target>
+
+  <target name="resources" depends="init">
+  	<antcall target="mg.module.resources" />
+  </target>
+
+  <target name="package" depends="init">
+    <antcall target="mg.module.manifest" >
+      <param name="module.filename" value="${service.filename}"/>
+    </antcall>
+    <antcall target="mg.module.manifest" >
+      <param name="module.filename" value="${bai.module.filename}"/>
+    </antcall>
+    <antcall target="mg.ejbmodule.package">
+		<param name="module.filename" value="${module.filename}"/>
+   		<param name="includes" value="**/*ServiceLocal.class **/support/*ServiceBean.class"/>
+    </antcall> 
+	<jar destfile="output/lib/${service.filename}" manifest="${service.filename}.MANIFEST.MF">
+		<zipfileset dir="output/classes">
+			<include name="**/jboss/*.class"/>
+			<include name="**/BAiImplementationInstantiationException.class"/>
+			<include name="**/BAiNotFoundException.class"/>
+			<include name="**/BusinessAddin.class"/>
+			<include name="**/BusinessAddinEngine.class"/>
+			<include name="**/BusinessAddinEvent.class"/>
+			<include name="**/BusinessAddinException.class"/>
+			<include name="**/BusinessAddinListener.class"/>
+			<include name="**/BusinessAddinWorkbench.class"/>
+			<include name="**/UnsupportedBAiEngineException.class"/>
+			<include name="**/BusinessAddinEngineImpl*.class"/>
+			<include name="**/BusinessAddinWorkbenchImpl*.class"/>
+			<include name="**/CustomActionDescriptorImpl*.class"/>
+			<include name="**/CustomActionManagerImpl*.class"/>
+		</zipfileset>
+		<zipfileset dir="src/META-INF" prefix="META-INF" includes="jboss-service.xml"/>
+  	</jar>
+  	
+  	<antcall target="mg.module.manifest" >
+  		<param name="module.filename" value="${wb.module.filename}"/>
+  	</antcall>
+	<jar destfile="output/lib/${wb.module.filename}" manifest="${wb.module.filename}.MANIFEST.MF">
+    	<zipfileset dir="output/classes/com/mg/merp/${module.name}" prefix="com/mg/merp/${module.name}">
+    		<include name="**/model/Repository.class"/>
+    		<include name="**/model/EngineType.class"/>
+		</zipfileset>
+	</jar>
+  	
+    <antcall target="mg.uimodule.package">
+       <param name="module.filename" value="${ui.module.filename}"/>
+       <param name="package" value="com/mg/merp/${module.name}"/>
+    </antcall>
+    <jar destfile="output/lib/${bai.module.filename}" manifest="${bai.module.filename}.MANIFEST.MF">
+      <zipfileset dir="output/classes/com/mg/merp/${module.name}" prefix="com/mg/merp/${module.name}">
+        <include name="BusinessAddin.class"/>
+      </zipfileset>
+      <zipfileset dir="output/classes/com/mg/merp/${module.name}/generic" prefix="com/mg/merp/${module.name}/generic"/>
+    </jar>
+	<antcall target="mg.wbmodule.package">
+		<param name="module.filename" value="m${module.name}"/>
+		<param name="wb.incl.src" value="${wb.incl.src}"/>
+		<param name="badi.lib.version" value="1.0"/>
+		<param name="badi.lib.dpnds" value="${badi.lib.dpnds}"/>	
+  	</antcall>
+  </target>
+
+  <target name="deploy" depends="init,package">
+    <antcall target="mg.ejbmodule.deploy">
+       <param name="module.filename" value="${module.filename}"/>
+    </antcall> 
+  </target>
+
+  <target name="output" depends="init">
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${module.filename}"/>
+       <param name="output.dest" value="ejb"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${service.filename}"/>
+       <param name="output.dest" value="service"/>
+    </antcall>
+  	<copy file="output/lib/${service.filename}" tofile="../../build/output/classpath/mbaiengine.jar"/>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${ui.module.filename}"/>
+       <param name="output.dest" value="ui"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${bai.module.filename}"/>
+       <param name="output.dest" value="baiworkbench/lib"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="m${module.name}.jar"/>
+       <param name="output.dest" value="workbench/lib"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="m${module.name}-src.jar"/>
+       <param name="output.dest" value="workbench/src"/>
+    </antcall>
+  	<antcall target="mg.module.output">
+  		<param name="module.filename" value="${wb.module.filename}"/>
+  	    <param name="output.dest" value="workbench/wb"/>
+  	</antcall>
+  	<antcall target="mg.model.output" />
+  </target>
+
+  <target name="clean">
+    <antcall target="mg.ejbmodule.clean"/>
+  </target>
+
+  <target name="all" depends="clean,compile,resources,package,output" />
+
+</project>

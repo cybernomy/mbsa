@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.personnelref.model.WorkTimeNorm" table="PREF_WORKTIME_NORM">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">PREF_WORKTIME_NORM_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CalcPeriod" class="com.mg.merp.personnelref.model.CalcPeriod">
+      <column name="CALC_PERIOD_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="WorkSchedule" class="com.mg.merp.personnelref.model.WorkSchedule">
+      <column name="WORK_SCHEDULE_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="WorkDaysAlg" class="com.mg.merp.baiengine.model.Repository">
+      <column name="WORKDAYS_ALG_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="WorkHoursAlg" class="com.mg.merp.baiengine.model.Repository">
+      <column name="WORKHOURS_ALG_ID" not-null="false" />
+    </many-to-one>
+    <property name="WorkDaysNumber" type="java.lang.Integer">
+      <column name="WORKDAYS_NUMBER" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="WorkHoursNumber" type="java.lang.Integer">
+      <column name="WORKHOURS_NUMBER" not-null="false" sql-type="INTEGER" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

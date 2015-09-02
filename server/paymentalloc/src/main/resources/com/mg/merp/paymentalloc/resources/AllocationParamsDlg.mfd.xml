@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ===================================================================== -->
+ <!--  Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.					-->
+ <!--  All rights reserved													-->
+ <!-- 																		-->
+ <!--  This program is the proprietary and confidential information			-->
+ <!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
+ <!--  as authorized in a license agreement authorizing and					-->
+ <!--  controlling such use and disclosure									-->
+ <!--																		-->
+ <!--  Millennium Business Suite Anywhere System.							-->
+ <!-- ===================================================================== -->
+
+ <!-- $Id: AllocationParamsDlg.mfd.xml,v 1.1 2007/05/31 14:15:30 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.paymentalloc.support.ui.AllocationParamsDlg" title="resource://com.mg.merp.paymentalloc.resources.formelements#AllocationParamsDlg.Title" width="200" height="200" >
+	
+	<jfd:container id="mainBox" layout="jfd:box"  columns="1" alignment="expand_expand">
+		<jfd:border style="bevel" type="raised" />
+		<jfd:field id="allocationSum" text="resource://com.mg.merp.paymentalloc.resources.formelements#AllocationParamsDlg.AllocationSum" alignment="expand_expand" />
+		<jfd:button id="computeQty" text="resource://com.mg.merp.paymentalloc.resources.formelements#AllocationParamsDlg.ComputeQty" alignment="expand_expand" actionListener="ComputeQty" />
+		<jfd:field id="allocationQty" text="resource://com.mg.merp.paymentalloc.resources.formelements#AllocationParamsDlg.AllocationQty" alignment="expand_expand" />
+		<jfd:button id="computeSum" text="resource://com.mg.merp.paymentalloc.resources.formelements#AllocationParamsDlg.ComputeSum" alignment="expand_expand" actionListener="ComputeSum" />
+	</jfd:container>
+	
+	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+	
+</jfd:form>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: DefaultDocWithSpecMaintenanceTablePopupMenuMacros.xml,v 1.11 2008/12/24 14:15:51 safonov Exp $ -->
+
+<jfd:popupMenu xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
+	<jfd:separator />
+	<jfd:menuItem id="editSpecification" text="resource://com.mg.merp.document.resources.formelements#Document.EditSpecification" icon="com/mg/merp/document/resources/editdocpecificationicon.png" keyStroke="shift F2" actionListener="EditSpecification" />
+	<jfd:separator />
+	<jfd:include name="com/mg/merp/document/resources/CommonDocMaintenanceTablePopupMenuItemsMacros.xml" />
+	<jfd:menuItem id="viewDocumentLineList" text="resource://com.mg.merp.document.resources.formelements#DocumentLineList.View" actionListener="ViewDocumentLineList" toggle="checkBox" keyStroke="control S"/>
+	
+</jfd:popupMenu>

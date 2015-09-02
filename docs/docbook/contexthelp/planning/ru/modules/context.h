@@ -1,0 +1,15 @@
+#define	IDH_forecvers	1000
+#define	IDH_invforec 	1010
+#define	IDH_genericitem	1020
+#define	IDH_itemfamily	1030
+#define	IDH_planlevel	1040
+#define	IDH_prprofile	1050
+#define	IDH_catalogware	1060
+#define	IDH_mps		1070
+#define	IDH_mpstotals	1080
+#define	IDH_firmorder	1090
+#define	IDH_mrpversion	1100
+#define	IDH_mrprecom	1110
+#define	IDH_mrptotals	1120
+#define	IDH_rccpheader	1130
+#define	IDH_resload	1140

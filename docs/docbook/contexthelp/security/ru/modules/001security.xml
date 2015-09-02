@@ -1,0 +1,100 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_001security SYSTEM "modules/001security.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere System">
+<!ENTITY secur "Управление правами пользователей ">
+<!ENTITY cont_centr "Центр управления">
+]> -->
+<chapter id="001security">
+  <title>Пользователи</title>
+    
+     <para>Вход в справочник &quot;Пользователи&quot; осуществляется через главное меню: 
+     <menuchoice><guimenu>&cont_centr;</guimenu><guisubmenu>Администрирование</guisubmenu>
+     <guimenuitem>Пользователи</guimenuitem></menuchoice>.</para>
+	
+  <screenshot>
+    <mediaobject><imageobject><imagedata fileref="images/user_add.gif"/></imageobject></mediaobject>
+  </screenshot>
+  
+     <para>Для добавления новой записи в справочник &quot;Пользователи&quot; используйте пункт контекстного 
+     меню &quot;Создать пользователя&quot;. </para>
+	 
+    <para><guibutton>Имя</guibutton>. Имя, под которым пользователь может входить в систему. 
+    <!--  Имя пользователя может быть написано только латинскими буквами и 
+    не должно содержать пробелов. --> 
+    (Имя <literal>SYSTEM</literal> зарезервировано для системного ресурса). </para>
+    
+    <para><guibutton>Пароль</guibutton>. Пароль пользователя.</para>    
+    <para><guibutton>Подтверждение пароля</guibutton>. Пароль пользователя.</para>
+    <para>Изменить пароль через форму поддержки пользователя невозможно, для изменения пароля 
+    необходимо использовать пункт контекстного меню &quot;Смена пароля&quot;. </para>    
+    
+    <para>Кроме этого,  можно записать другую информацию о пользователе.</para>   
+    
+    <screenshot>
+    <mediaobject><imageobject><imagedata fileref="images/user_param.gif"/></imageobject></mediaobject>
+    </screenshot>    
+    
+     <para><guibutton>Описание</guibutton>. Краткое текстовое описание пользователя.</para>
+    
+ <!--   <para><guibutton>Подключение только с помощью СМАРТ карты</guibutton>. При активизации
+    этого признака пользователь сможет подключиться к системе &merp;, только
+    используя СМАРТ-карту.</para> --> 
+    
+  <!--  <para><guibutton>Использовать удалённый профайл</guibutton>. При активизации этого 
+    признака все настройки пользовательского интерфейса будут сохраняться в базе данных. 
+    Если даже пользователь подключается к системе с разных компьютеров, то его 
+    настройки сохраняются. </para> --> 
+    
+  <!--  <para>Данный признак становится актуальным только после переподключения клиента 
+    к серверу приложения (меню <menuchoice><guimenu>Файл</guimenu>
+    <guimenuitem>Завершить работу</guimenuitem>/<guimenuitem>Начать работу</guimenuitem>
+    </menuchoice>.</para> -->
+    
+ <!--   <para>Функция &quot;Перенос локального профайла&quot; доступна через главное меню 
+    <menuchoice><guimenu>Администрирование</guimenu><guisubmenu>Функции</guisubmenu>
+    <guimenuitem>Перенос локального профайла</guimenuitem></menuchoice>. Данная
+    функция позволяет полностью перенести все настройки пользователя в базу данных. 
+    (См. таблицы <literal>SEC_USER_PROFILE</literal> и <literal>SEC_USER_PROFILE_ITEM</literal>)</para> --> 
+    
+    <para><guibutton>Электронная почта</guibutton>. Адрес электронной почты данного пользователя. 
+    Эта информация может использоваться в модуле &quot;Потоки работ&quot; для автоматической 
+    отправки сообщений. </para>
+    
+    <para><guibutton>Мобильный</guibutton>. Номер мобильного телефона данного пользователя.  </para>
+    
+    <para><guibutton>Пейджер</guibutton>. Номер пейджера данного пользователя.  </para>
+    
+    <para> <emphasis>Права пользователя</emphasis> </para>
+    
+    <para>Права на выполнение различных действий в системе устанавливаются для 
+     <link linkend="002security">Групп пользователей</link>, 
+    следовательно, нужно определить принадлежность пользователя к одной или нескольким Группам.  </para>
+    
+    <para>Чтобы включить пользователя в одну из групп, установите курсор в поле 
+    <guibutton>Членство в группах</guibutton> и вызовите контекстное меню и выберите пункт 
+    <guibutton>Добавить роль</guibutton>. 
+    <!--     (или нажмите клавишу <keycombo><keycap>Ins</keycap></keycombo> -->     
+    На экране появится список групп, выберите нужную группу (установите на неё курсор) и нажмите кнопку 
+    &quot;Выбрать&quot;.      <!-- нажмите клавишу <keycombo><keycap>Enter</keycap></keycombo> (или щёлкните 
+    два раза левой клавишей мыши). --> </para>
+     
+    <para>Чтобы удалить пользователя из группы, установите курсор в поле <guibutton>Членство в группах</guibutton>
+    на той группе, из которой Вы хотите исключить пользователя и или вызовите контекстное меню и выберите
+    пункт <guibutton>Удалить роль</guibutton>. </para>
+      
+    <para>Вы также можете редактировать состав групп непосредственно из раздела &quot;Группы пользователей&quot;. </para>
+       
+ <!--   <para><guibutton>Действующие права</guibutton>. Нажав на эту кнопку, можно 
+    просмотреть, какие права имеет данный пользователь на тот или иной бизнес-компонент.  </para> -->
+	
+  <!--  <screenshot>
+    <mediaobject><imageobject><imagedata fileref="images/actually_rights.gif"/></imageobject></mediaobject>
+  </screenshot> -->
+    
+   <!--   <para>Если строка отмечена флагом, значит пользователь имеет права совершать
+    данное действие по отношению к указанному бизнес-компоненту.  </para> -->
+    
+  </chapter>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: build.xml,v 1.3 2008/10/31 06:39:57 safonov Exp $ -->
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "file:../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "file:../../build/etc/module.xml">
+]>
+
+<project default="all" name="MBSA web help module">
+
+  <property file="../../build/build.properties"/>
+
+  &module;
+
+  <path id="project.class.path">
+    <path refid="module.class.path"/>
+  </path>
+
+  &common;
+
+  <target name="init" depends="mg.ejbmodule.init" >
+    <property name="service.filename" value="mhelpsystem.sar"/>
+    <property name="webmodule.filename" value="mbsahelp.war"/>
+  </target>
+
+  <target name="compile" depends="init">
+    <antcall target="mg.javac">
+      <param name="javac-src" value="src/main/java"/>
+      <param name="javac-includes" value="**/*.java"/>
+      <param name="classdir" value="output/classes"/>
+    </antcall> 
+  </target>
+
+  <target name="resources" depends="init">
+  </target>
+
+  <target name="package" depends="init,compile,resources">
+	<antcall target="mg.module.manifest" >
+		<param name="module.filename" value="${service.filename}"/>
+	</antcall>
+	<antcall target="mg.module.manifest" >
+		<param name="module.filename" value="${webmodule.filename}"/>
+	</antcall>
+	<jar destfile="output/lib/${service.filename}" manifest="${service.filename}.MANIFEST.MF">
+		<zipfileset dir="output/classes/com/mg/merp/help/support" prefix="com/mg/merp/help/support" >
+			<include name="HelpSystemImpl.class"/>
+		</zipfileset>
+		<zipfileset dir="output/classes/com/mg/merp/help/support/jboss" prefix="com/mg/merp/help/support/jboss"/>
+		<zipfileset dir="src/META-INF" prefix="META-INF" includes="jboss-service.xml"/>
+  	</jar>
+	<jar destfile="output/lib/${webmodule.filename}" manifest="${webmodule.filename}.MANIFEST.MF">
+		<zipfileset dir="src/main/resources/mbsahelp.war" />
+		<zipfileset dir="../../thirdparty/oracle-helpweb/lib" prefix="WEB-INF/lib" >
+			<include name="commons-el.jar" />
+			<include name="jsp-el-api.jar" />
+			<include name="ohw.jar" />
+			<include name="oracle-el.jar" />
+			<include name="share.jar" />
+			<include name="uix2.jar" />
+			<include name="xmlparserv2.jar" />
+		</zipfileset>
+		<zipfileset dir="output/classes/com/mg/merp/help/viewer" prefix="WEB-INF/classes/com/mg/merp/help/viewer" />
+  	</jar>
+  </target>
+
+  <target name="deploy" depends="init,package">
+  </target>
+
+  <target name="output" depends="init">
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${service.filename}"/>
+       <param name="output.dest" value="service"/>
+    </antcall>
+    <unjar src="output/lib/${webmodule.filename}" dest="../../build/output/web/${webmodule.filename}" overwrite="true" />
+  </target>
+
+  <target name="clean">
+    <antcall target="mg.ejbmodule.clean"/>
+  </target>
+
+  <target name="all" depends="clean,compile,resources,package,output" />
+
+</project>

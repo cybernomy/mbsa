@@ -1,0 +1,100 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_003crm SYSTEM "modules/003crm.xml">
+<!ENTITY merp "Millennium ERP">
+
+]> -->
+<chapter id="003crm">
+  <title>Действия</title>
+ 
+  	<para>Под <emphasis>действиями</emphasis> понимаются любые контакты, происходившие 
+	между компанией пользователя и деловыми партнёрами. Действия бывают планируемые и 
+	фактические (уже происходящие).  </para>
+	
+	<para>Действие может являться &quot;родителем&quot; или &quot;потомком&quot; для других 
+	Действий.  </para>
+	
+	<para>Из раздела &quot;Действия&quot; пользователь может работать с действиями, которые 
+	ему принадлежат. Пользуясь соответствующими пунктами контекстного меню можно принять, 
+	отклонить или перенести действие. </para>
+	
+	<para>Вход в раздел через меню <menuchoice>
+	<guimenu>CRM</guimenu>
+	<guimenuitem>Действия</guimenuitem>
+	</menuchoice>.</para> 
+	
+	 <screenshot><mediaobject><imageobject>
+	 <imagedata fileref="images/add_action.gif"/>
+	 </imageobject></mediaobject></screenshot>
+	 
+	<para><guibutton>Принять</guibutton>. Изменяет состояние действия на &quot;Принято&quot;. </para>
+
+	<para><guibutton>Отклонить</guibutton>. Изменяет состояние действия на &quot;Отклонено&quot;. </para>
+
+	<para><guibutton>Перенести</guibutton>. Система запрашивает у пользователя на сколько минут, 
+	часов, дней, недель или месяцев нужно перенести данное действие. 
+	После этого система изменяет значения полей &quot;Срок фактический: Начало&quot; и &quot;Срок 
+	фактический: Конец&quot; на указанный пользователем промежуток времени. </para>
+
+	<para>Состояние и статус действия пользователь может сменить, открыв действие на изменение 
+	и непосредственно указав новое значение для полей &quot;<guibutton>Состояние</guibutton>&quot; 
+	и &quot;<guibutton>Статус</guibutton>&quot;. </para>
+
+	<para>Послать e-mail. Для выполнения этой функции нужно, чтобы: </para>
+	
+	<orderedlist numeration="arabic">
+		<listitem>в системе &merp; была настроена (сконфигурирована) возможность 
+		отправки электронной почты.  
+		Подробнее об этом читайте в руководстве администратора. </listitem>
+		<listitem>в системе были указаны адреса электронной почты (e-mail) у тех лиц, 
+		которые участвуют в исполнении данного действия. </listitem>
+	</orderedlist>	
+
+	<para><guibutton>Послать задачу</guibutton>. Для выполнения этой функции необходима программа, 
+	поддерживающая задачи, например, MS Outlook(tm). </para>
+	
+	<section id="003crm_01">
+	  <title>Информация</title>
+	  
+		 <screenshot><mediaobject><imageobject>
+		 <imagedata fileref="images/action_info.gif"/>
+		 </imageobject></mediaobject></screenshot>
+	 
+		 <para>На закладке &quot;Информация&quot; в текстовом виде записываются план действия и - 
+		 после выполнения - результат. Можно указать дальнейшие действия, которые выполняются после 
+		 данного действия.  </para>
+		
+	</section>
+	
+	<section id="003crm_02">
+	  <title>Связанные документы</title>
+	  
+		<screenshot><mediaobject><imageobject>
+		 <imagedata fileref="images/action_link.gif"/>
+		 </imageobject></mediaobject></screenshot>
+		 
+	  	<para>На закладке &quot;<emphasis>Связанные документы</emphasis>&quot; формируется 
+		список документов, связанных с данным действием. Сами документы хранятся в справочнике 
+		&quot;Оригиналы документов&quot;. </para>
+	 
+	</section>
+
+	<section id="003crm_03">
+	  <title>Отношение</title>
+	  
+	  	<screenshot><mediaobject><imageobject>
+		 <imagedata fileref="images/action_operation.gif"/>
+		 </imageobject></mediaobject></screenshot>
+		 
+		 <para>На закладке &quot;<emphasis>Отношение</emphasis>&quot; указывается Отношение, 
+		 с которым связано данное действие; а также Контактное лицо. Для заполнения этих 
+		 полей используется информация соответствующих разделов системы. </para>
+		 
+	 	<para>См. также: <link linkend="005crm">Контактные лица</link>, 
+		<link linkend="004crm">Отношения</link> </para>
+	  </section>
+
+</chapter>

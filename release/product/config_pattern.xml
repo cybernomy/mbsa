@@ -1,0 +1,6 @@
+<config>
+  <version>release_name</version>
+  <firebird>firebird_file_name</firebird>
+  <override_metainf>override_metainf_value</override_metainf>
+  <mdevstudio>mdevstudio_name</mdevstudio>
+</config>

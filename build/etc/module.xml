@@ -1,0 +1,209 @@
+<!-- $Id: module.xml,v 1.17 2008/12/24 13:43:27 safonov Exp $ -->
+
+<path id="module.class.path">
+  <fileset dir="../../build/output/lib">
+    <include name="**/*.jar"/>
+  </fileset>
+  <fileset dir="../../build/output/ejb">
+    <include name="**/*.jar"/>
+  </fileset>
+  <fileset dir="../../build/output/classpath">
+    <include name="**/*.jar"/>
+  </fileset>
+  <fileset dir="../../build/output/ui">
+    <include name="**/*.jar"/>
+  </fileset>
+  <pathelement path="../../build/output/service/mdatawarehouse-ib.har"/>
+  <fileset dir="../../thirdparty">
+    <include name="**/*.jar"/>
+  </fileset>
+</path>
+
+<target name="mg.module.version">
+  <buildnumber file="${build.number.file}" />
+</target>
+
+<target name="mg.module.manifestfile">
+  <property file="${build.number.file}" />
+  
+  <tstamp>
+    <format property="TODAY" pattern="yyyyMMddHHmmz" timezone="GMT" offset="0" unit="hour" />
+  </tstamp>
+
+  <manifest file="${module.filename}.MANIFEST.MF">
+    <attribute name="Specification-Title" value="${public.product.title}"/>
+    <attribute name="Specification-Version" value="${ver.curr.major}.${ver.curr.minor}.${ver.curr.release}"/>
+    <attribute name="Specification-Vendor" value="${public.vendor.title} (${public.vendor.web})"/>
+    <attribute name="Implementation-Title" value="${public.product.title}"/>
+    <attribute name="Implementation-Version" value="${ver.curr.major}.${ver.curr.minor}.${ver.curr.release} (build: number=${build.number} date=${TODAY})"/>
+    <attribute name="Implementation-Vendor" value="${public.vendor.title}"/>
+    <attribute name="Implementation-Vendor-Id" value="${public.vendor.web}"/>
+  </manifest>    
+
+</target>
+
+<target name="mg.wbmodule.manifestfile">
+  <property file="${build.number.file}" />
+  
+  <tstamp>
+    <format property="TODAY" pattern="yyyyMMddHHmmz" timezone="GMT" offset="0" unit="hour" />
+  </tstamp>
+
+  <manifest file="${module.filename}.MANIFEST.MF">
+    <attribute name="Specification-Title" value="${public.product.title}"/>
+    <attribute name="Specification-Version" value="${ver.curr.major}.${ver.curr.minor}.${ver.curr.release}"/>
+    <attribute name="Specification-Vendor" value="${public.vendor.title} (${public.vendor.web})"/>
+    <attribute name="Implementation-Title" value="${public.product.title}"/>
+    <attribute name="Implementation-Version" value="${ver.curr.major}.${ver.curr.minor}.${ver.curr.release} (build: number=${build.number} date=${TODAY})"/>
+    <attribute name="Implementation-Vendor" value="${public.vendor.title}"/>
+    <attribute name="Implementation-Vendor-Id" value="${public.vendor.web}"/>
+    <attribute name="BadiLibrary-ManifestVersion" value="1.0"/>
+    <attribute name="BadiLibrary-Version" value="${ver.curr.major}.${ver.curr.minor}.${ver.curr.release}.${build.number}"/>
+    <attribute name="BadiLibrary-Dependencies" value="${badi.lib.dpnds}"/>
+  </manifest>    
+
+</target>
+
+<target name="mg.module.manifest">
+  <property name="build.number.file" value="../../build/build.number/${module.filename}.build.number"/>
+
+  <antcall target="mg.module.version" >
+    <param name="build.number.file" value="${build.number.file}"/>
+  </antcall>
+  <antcall target="mg.module.manifestfile" >
+    <param name="module.filename" value="${module.filename}"/>
+    <param name="build.number.file" value="${build.number.file}"/>
+  </antcall>
+</target>
+
+<target name="mg.wbmodule.manifest">
+  <property name="build.number.file" value="../../build/build.number/${module.filename}.build.number"/>
+
+  <antcall target="mg.module.version" >
+    <param name="build.number.file" value="${build.number.file}"/>
+  </antcall>
+  <antcall target="mg.wbmodule.manifestfile" >
+    <param name="module.filename" value="${module.filename}"/>
+    <param name="build.number.file" value="${build.number.file}"/>
+  </antcall>
+</target>
+
+<target name="mg.ejbmodule.package">
+  <echo message="Packaging for ${ant.project.name}"/>
+  <mkdir dir="src/META-INF"/>
+  <antcall target="mg.module.manifest" >
+    <param name="module.filename" value="${module.filename}"/>
+  </antcall>
+  <jar destfile="output/lib/${module.filename}" manifest="${module.filename}.MANIFEST.MF" update="true" >
+    <zipfileset dir="output/classes" excludes="${excludes}">
+      <exclude name="**/ui/**"/>
+      <exclude name="**/model/**"/>
+    </zipfileset>
+    <zipfileset dir="src/META-INF" prefix="META-INF" excludes="${excludes}">
+      <exclude name="**/*.bak"/>
+      <exclude name="jboss-service.xml"/>
+    </zipfileset>
+  </jar>
+</target>
+
+<target name="mg.ejbmodule.deploy">
+  <echo message="Delpoing for ${ant.project.name}"/>
+  <copy file="output/lib/${module.filename}" todir="${jboss.home}/server/${jboss.conf}/deploy"/>
+</target>
+
+<target name="mg.ejbmodule.init">
+  <mkdir dir="output/classes" />
+  <mkdir dir="output/lib" />
+</target>
+
+<target name="mg.module.output">
+  <copy file="output/lib/${module.filename}" todir="../../build/output/${output.dest}"/>
+</target>
+
+<target name="mg.model.output">
+  <antcall target="mg.model.rdbms.output" >
+    <param name="service.suffix" value="ib"/>
+    <param name="exclude.maps" value="**/*.oracle.*"/>
+  </antcall>
+  <!-- antcall target="mg.model.rdbms.output" >
+    <param name="service.suffix" value="orcl"/>
+    <param name="exclude.maps" value="**/*.interbase.*"/>
+  </antcall-->
+</target>
+
+<target name="mg.model.rdbms.output">
+  <copy todir="../../build/output/service/mdatawarehouse-${service.suffix}.har">
+    <fileset dir="output/classes">
+      <include name="**/model/**" />
+      <exclude name="**/*.xml" />
+    </fileset>
+  </copy>
+  <copy todir="../../build/output/service/mdatawarehouse-${service.suffix}.har">
+    <fileset dir="src/main/java" excludes="${exclude.maps}" >
+      <include name="**/model/**" />
+      <exclude name="**/*.java" />
+    </fileset>
+  </copy>
+  <jar destfile="../../build/output/interface/mdatawarehouse.jar" update="true" >
+    <zipfileset dir="output/classes" includes="**/model/**" excludes="**/*.java **/*.xml" />
+  </jar>
+</target>
+
+<target name="mg.ejbmodule.clean">
+  <delete failonerror="false">
+    <!-- fileset dir="src/java" includes="**/*ServiceLocal.java"/ -->
+    <fileset dir="src/java" includes="**/*ServiceLocalHome.java"/>
+    <fileset dir="src/java" includes="**/*Facade.java"/>
+    <fileset dir="src/java" includes="**/*FacadeHome.java"/>
+    <fileset dir="output/classes" includes="**/*.class"/>
+  </delete>
+  <delete failonerror="false">
+    <fileset dir="output" includes="**/*.jar"/>
+    <fileset dir="output" includes="**/*.sar"/>
+  </delete>
+  <delete file="src/META-INF/ejb-jar.xml"/>
+  <delete file="src/META-INF/jboss.xml"/>
+</target>
+
+<target name="mg.module.encode">
+  <native2ascii encoding="windows-1251" src="" dest="" includes="**/*.windows1251" ext=".properties" />
+</target>
+
+<target name="mg.module.resources">
+  <copy todir="output/resources" preservelastmodified="true">
+    <fileset dir="src/main/resources" excludes="${excludes}">
+      <include name="**/*.properties"/>
+      <include name="**/*.xml"/>
+      <include name="**/*.png"/>
+      <include name="**/*.gif"/>
+    </fileset>
+  </copy>
+</target>
+
+<target name="mg.uimodule.package">
+  <echo message="Packaging for ${ant.project.name}"/>
+  <antcall target="mg.module.manifest" >
+    <param name="module.filename" value="${module.filename}"/>
+  </antcall>
+  <jar destfile="output/lib/${module.filename}" manifest="${module.filename}.MANIFEST.MF" update="true" >
+    <zipfileset dir="output/classes" excludes="${excludes}">
+      <include name="**/ui/**"/>
+    </zipfileset>
+    <zipfileset dir="output/resources" excludes="META-INF/**" />
+  </jar>
+</target>
+
+<target name="mg.wbmodule.package">
+  <echo message="Packaging for ${ant.project.name}"/>
+  <antcall target="mg.wbmodule.manifest" >
+    <param name="module.filename" value="${module.filename}"/>
+  </antcall>
+  <jar destfile="output/lib/${module.filename}.jar" manifest="${module.filename}.MANIFEST.MF" update="true" >
+    <zipfileset dir="output/classes" excludes="${wb.excl.class} **/wb/**"/>
+    <zipfileset dir="output/resources" />
+    <zipfileset dir="src/main/java" includes="**/*.hbm.xml"/>
+  </jar>
+  <jar destfile="output/lib/${module.filename}-src.jar" update="true" >
+    <zipfileset dir="src/main/java" excludes="${wb.excl.src} **/model/*.hbm.xml" includes="${wb.incl.src}" />
+  </jar>
+</target>

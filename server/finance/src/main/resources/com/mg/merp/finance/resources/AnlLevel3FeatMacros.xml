@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: AnlLevel3FeatMacros.xml,v 1.2 2007/09/03 04:51:00 alikaev Exp $ -->
+
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="AnlLevel3FeatBox" layout="jfd:box" orientation="hor" sameLine="true" alignment="expand_expand">
+	<jfd:textField id="anlLevel3FeatName" readOnly="true" showLabel="false" alignment="expand_expand"/>
+	<jfd:button id="сlearAnlLevel3FeatButton" icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ClearAnlLevel3Feat" alignment="right_expand" />
+	<jfd:button id="сhooseanlLevel3FeatButton" text="..." minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseAnlLevel3Feat" alignment="right_expand" />
+</jfd:container>

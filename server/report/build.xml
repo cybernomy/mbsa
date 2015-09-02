@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: build.xml,v 1.42 2008/10/23 11:07:49 safonov Exp $ -->
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "../../build/etc/module.xml">
+]>
+
+<project default="all" name="Report module">
+
+  <property file="build.properties"/>
+  <property file="../../build/build.properties"/>
+  <property file="META-INF/MANIFEST.MF"/>
+
+  &module;
+
+  <path id="project.class.path">
+    <path refid="module.class.path"/>
+  	<pathelement path="../baiengine/output/classes"/>
+  	<pathelement path="../reference/output/classes"/>
+  </path>
+
+  &common;
+
+  	
+  <target name="init" depends="mg.ejbmodule.init, mg.module.encode" >
+    <property name="module.filename" value="030mreport-ejb.jar"/>
+    <property name="wb.module.filename" value="mreport-wb.jar"/>
+  	<property name="ui.module.filename" value="030mreport-ui.jar"/>
+    <property name="module.name" value="report"/>
+  	<property name="include.in.service" value="**/service/ **/RptBIRTDeployerImpl*.class **/RptEngineServiceImpl*.class **/HTMLImageHandler.class **/RptPropertiesImpl*.class **/RptEngineImpl*.class **/RptBAiStarter*.class **/RptMainTransfer.class **/OldReportException.class **/ReportException.class **/Messages.class **/ReportBusinessAddin.class **/parameters/"/>
+  	<property name="plugin.output" value="output/plugin/${plugin.folder.name}_${Bundle-Version}"/>
+  	<property name="badi.lib.dpnds" value="mgframework, mbaiengine"/>
+  	<property name="wb.incl.src" value="**/*.java"/>
+  </target>
+
+  <target name="compile" depends="init">
+    <antcall target="mg.javac">
+      <param name="javac-src" value="src/main/java"/>
+      <param name="javac-includes" value="**/*.java"/>
+      <param name="classdir" value="output/classes"/>
+    </antcall> 
+    <!--antcall target="mg.javac">
+      <param name="javac-src" value="src/patch/java"/>
+      <param name="javac-includes" value="**/*.java"/>
+      <param name="classdir" value="output/classes"/>
+    </antcall--> 
+  </target>
+
+  <target name="resources" depends="init">
+	  <antcall target="mg.module.resources" />
+  </target>
+	
+<target name="package" depends="init, compile">
+    <antcall target="mg.ejbmodule.package">
+		<param name="module.filename" value="${module.filename}"/>
+   		<param name="excludes" value="${include.in.service} **/wb/ **/jboss-service.xml"/>
+    </antcall> 
+    <antcall target="mg.module.manifest" >
+      <param name="module.filename" value="${wb.module.filename}"/>
+    </antcall>
+	<jar destfile="output/lib/${wb.module.filename}" manifest="${wb.module.filename}.MANIFEST.MF">
+	    <zipfileset dir="output/classes/com/mg/merp/${module.name}" prefix="com/mg/merp/${module.name}">
+	      <include name="RptMainTransfer.class"/>
+	      <include name="OldReportException.class"/>
+          <include name="**/service/*.class"/>
+          <include name="**/model/*.class"/>
+	    </zipfileset>
+	</jar>
+  	<antcall target="mg.uimodule.package">
+  	    <param name="module.filename" value="${ui.module.filename}"/>
+  	    <!-- TODO use ${module.name} property -->
+  		<param name="package" value="com/mg/merp/report"/>
+	</antcall> 
+  	<!-- creating BIRT Oda driver plug-in --> 
+  	<copy todir="${plugin.output}">  
+  	    <fileset dir="">
+			<include name="plugin*.*"/>
+ 	    	<include name="META-INF/MANIFEST.MF"/>
+  		</fileset>
+  		<fileset dir="output/classes">
+  			<include name="**/wb/"/>
+  		</fileset>
+  		<!-- fileset file="../framework/output/lib/mgframework.jar"/ -->
+  	</copy>
+	
+	<!-- manifest generation -->
+	<buildnumber file="../../build/build.number/${plugin.folder.name}_${Bundle-Version}.jar.build.number" />
+	
+	<tstamp>
+	  <format property="TODAY" pattern="yyyyMMddHHmmz" timezone="GMT" offset="0" unit="hour" />
+	</tstamp>
+	
+	<manifest file="${plugin.output}/META-INF/MANIFEST.MF" mode="update">
+	    <attribute name="Specification-Title" value="${public.product.title}"/>
+	    <attribute name="Specification-Version" value="${ver.curr.major}.${ver.curr.minor}.${ver.curr.release}"/>
+	    <attribute name="Specification-Vendor" value="${public.vendor.title} (${public.vendor.web})"/>
+	    <attribute name="Implementation-Title" value="${public.product.title}"/>
+	    <attribute name="Implementation-Version" value="${ver.curr.major}.${ver.curr.minor}.${ver.curr.release} (build: number=${build.number} date=${TODAY})"/>
+	    <attribute name="Implementation-Vendor" value="${public.vendor.title}"/>
+	    <attribute name="Implementation-Vendor-Id" value="${public.vendor.web}"/>
+	</manifest> 
+	
+  	<zip destfile="${plugin.output}.jar" basedir="${plugin.output}"/>
+	<delete dir="${plugin.output}"/>
+  	<!-- creating RptEngine service-->
+  	<mkdir dir="output/lib/${reportservice.name}"/>
+  	<copy  todir="output/lib/${reportservice.name}/META-INF" >
+  		<fileset dir="src/META-INF"/>
+	</copy>	
+  	<copy  todir="output/lib/${reportservice.name}" >
+  		<fileset dir="output/classes" includes ="${include.in.service}" excludes="**/wb/"/>
+  	</copy>
+
+    <antcall target="prepare.birtruntime" />
+	
+	<antcall target="mg.wbmodule.package">
+		<param name="module.filename" value="m${module.name}"/>
+		<param name="wb.incl.src" value="${wb.incl.src}"/>
+		<param name="badi.lib.version" value="1.0"/>
+		<param name="badi.lib.dpnds" value="${badi.lib.dpnds}"/>	
+  	</antcall>
+  </target>
+
+  <target name="deploy" depends="init, package">
+    <antcall target="mg.ejbmodule.deploy">
+       <param name="module.filename" value="${module.filename}"/>
+    </antcall> 
+  </target>
+
+  <target name="output" depends="init">
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${module.filename}"/>
+       <param name="output.dest" value="ejb"/>
+    </antcall>
+  	<antcall target="mg.module.output">
+  	   <param name="module.filename" value="${ui.module.filename}"/>
+  	   <param name="output.dest" value="ui"/>
+    </antcall>
+  	<delete dir="../../build/output/service/${reportservice.name}" includeemptydirs="true"/>
+  	<copy todir="../../build/output/service/${reportservice.name}">
+  		<fileset dir="output/lib/${reportservice.name}"/>
+  	</copy>
+  	<copy todir="../../build/output/mbirt-platform/plugins" >
+  		<fileset dir="output/plugin"/>
+    </copy>
+  	<!-- plugin to workbench-->
+  	<copy todir="../../workbench/plugins">
+ 		<fileset dir="output/plugin"/>
+  	</copy>
+  	
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="m${module.name}.jar"/>
+       <param name="output.dest" value="workbench/lib"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="m${module.name}-src.jar"/>
+       <param name="output.dest" value="workbench/src"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${wb.module.filename}"/>
+       <param name="output.dest" value="workbench/wb"/>
+    </antcall>
+  	<antcall target="mg.model.output" />
+  </target>
+
+  <target name="prepare.birtruntime" if="birt.runtime.lib">
+	  <unzip src="${birt.runtime.lib}" dest="output/lib/${reportservice.name}/lib"/>
+  </target>
+
+  <target name="clean">
+    <antcall target="mg.ejbmodule.clean"/>
+  	<delete dir="output/lib" includeemptydirs="true"/>
+  </target>
+
+  <target name="all" depends="clean,compile,resources,package,output" />
+
+</project>

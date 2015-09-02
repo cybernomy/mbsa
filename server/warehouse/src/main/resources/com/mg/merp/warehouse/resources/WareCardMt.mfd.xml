@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: WareCardMt.mfd.xml,v 1.19 2008/05/22 09:30:19 alikaev Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.warehouse.support.ui.WareCardMt" title="resource://com.mg.merp.warehouse.resources.formelements#WareCard.FormMt.Title" helpTopic="warehouse#ksu_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fieldsTab" layout="jfd:tabbed" alignment="expand_expand" >
+		
+		<jfd:container id="commonFields" layout="jfd:box" alignment="expand_top" columns="4" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#Doc.MainTab.Title">		
+			<jfd:field id="Catalog" longField="true" horizontalSpan="3" alignment="expand_top"/>
+			<jfd:field id="Catalog.FullName" showLabel="false" longField="true" readOnly="true" horizontalSpan="4" alignment="expand_top"/>
+			<jfd:field id="Mol" longField="true" horizontalSpan="3" alignment="expand_top"/>
+			<jfd:field id="CardNumber" alignment="expand_top"/>			
+			<jfd:field id="Catalog.Articul" readOnly="true" sameLine="true" alignment="expand_top"/>
+			<jfd:label id="meas1"  alignment="right_top" text="resource://com.mg.merp.warehouse.resources.formelements#WareCard.Meas1" horizontalSpan="2"/>
+			<jfd:label id="meas2" alignment="right_top" text="resource://com.mg.merp.warehouse.resources.formelements#WareCard.Meas2" horizontalSpan="2"/>
+			<jfd:filler id="filler1" type="horizontalGlue"/>
+			<jfd:field id="Catalog.Measure1" alignment="expand_top" showLabel="false" readOnly="true"/>
+			<jfd:field id="Catalog.Measure2" showLabel="false" readOnly="true" sameLine="true" horizontalSpan="2" alignment="expand_top"/>
+			<jfd:field id="SupplyNorm" alignment="expand_top"/>
+			<jfd:field id="SupplyNorm2" showLabel="false" sameLine="true" horizontalSpan="2" alignment="expand_top"/>
+			<jfd:field id="Quantity" alignment="expand_top"/>
+			<jfd:field id="Quantity2" showLabel="false" sameLine="true" horizontalSpan="2" alignment="expand_top"/>			
+			<jfd:field id="Reserve" alignment="expand_top"/>
+			<jfd:field id="Reserve2" showLabel="false" sameLine="true" horizontalSpan="2" alignment="expand_top"/>
+			<jfd:field id="PlanIn" alignment="expand_top"/>
+			<jfd:field id="PlanIn2" showLabel="false" sameLine="true" horizontalSpan="2" alignment="expand_top"/>
+			<jfd:field id="PlanOut" alignment="expand_top"/>
+			<jfd:field id="PlanOut2" showLabel="false" sameLine="true" horizontalSpan="2" alignment="expand_top"/>
+	 	</jfd:container>
+		 
+		<jfd:container id="factMove" layout="jfd:box" alignment="expand_expand" columns="5" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#FactMove.Title" >
+			<jfd:label id="factInFromLabel" alignment="right_top" text="resource://com.mg.merp.warehouse.resources.formelements#WareCard.DateFrom"/>
+			<jfd:dateField id="factInFrom"/>
+			<jfd:label id="factInToLabel" text="resource://com.mg.merp.warehouse.resources.formelements#WareCard.DateTo"/>
+			<jfd:dateField id="factInTill"/>
+			<jfd:button id="factInRefreshButton" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="RefreshFactIn" />
+			<jfd:table id="factMoveIn" scroll="true" alignment="expand_expand" label="resource://com.mg.merp.warehouse.resources.formelements#FactMove.In" horizontalSpan="4">
+				<jfd:popupMenu>
+					<jfd:menuItem id="viewDocumentOnTableFactMoveIn" text="resource://com.mg.merp.warehouse.resources.formelements#BatchDisposal.PopupMenu.ItemShow" actionListener="ViewDocumentOnTableFactMoveIn" />
+				</jfd:popupMenu>
+			</jfd:table>
+			
+			<jfd:label id="factOutFromLabel" alignment="right_top" text="resource://com.mg.merp.warehouse.resources.formelements#WareCard.DateFrom"/>
+			<jfd:dateField id="factOutFrom"/>
+			<jfd:label id="factOutLabel" text="resource://com.mg.merp.warehouse.resources.formelements#WareCard.DateTo"/>
+			<jfd:dateField id="factOutTill"/>
+			<jfd:button id="factOutRefreshButton" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="RefreshFactOut" />
+			<jfd:table id="factMoveOut" scroll="true" alignment="expand_expand" label="resource://com.mg.merp.warehouse.resources.formelements#FactMove.Out" horizontalSpan="4">
+				<jfd:popupMenu>
+					<jfd:menuItem id="viewDocumentOnTableFactMoveOut" text="resource://com.mg.merp.warehouse.resources.formelements#BatchDisposal.PopupMenu.ItemShow" actionListener="ViewDocumentOnTableFactMoveOut" />
+				</jfd:popupMenu>
+			</jfd:table>
+		</jfd:container>		
+		<jfd:container id="planMove" layout="jfd:box" columns="5" alignment="expand_expand" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#PlanMove.Title" >
+			<jfd:label id="planInFromLabel" alignment="right_top" text="resource://com.mg.merp.warehouse.resources.formelements#WareCard.DateFrom"/>
+			<jfd:dateField id="planInFrom"/>
+			<jfd:label id="planInToLabel" text="resource://com.mg.merp.warehouse.resources.formelements#WareCard.DateTo"/>
+			<jfd:dateField id="planInTill"/>
+			<jfd:button id="planInRefreshButton" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="RefreshPlanIn" />
+			<jfd:table id="planMoveIn" scroll="true" alignment="expand_expand" label="resource://com.mg.merp.warehouse.resources.formelements#PlanMove.In" horizontalSpan="4">
+				<jfd:popupMenu>
+					<jfd:menuItem id="viewDocumentOnTablePlanMoveIn" text="resource://com.mg.merp.warehouse.resources.formelements#BatchDisposal.PopupMenu.ItemShow" actionListener="ViewDocumentOnTablePlanMoveIn" />
+				</jfd:popupMenu>
+			</jfd:table>
+
+			<jfd:label id="planOutFromLabel" alignment="right_top" text="resource://com.mg.merp.warehouse.resources.formelements#WareCard.DateFrom"/>			
+			<jfd:dateField id="planOutFrom"/>
+			<jfd:label id="planOutToLabel" text="resource://com.mg.merp.warehouse.resources.formelements#WareCard.DateTo"/>
+			<jfd:dateField id="planOutTill"/>
+			<jfd:button id="planOutRefreshButton" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="RefreshPlanOut" />
+			<jfd:table id="planMoveOut" scroll="true" alignment="expand_expand" label="resource://com.mg.merp.warehouse.resources.formelements#PlanMove.Out" horizontalSpan="4">
+				<jfd:popupMenu>
+					<jfd:menuItem id="viewDocumentOnTablePlanMoveOut" text="resource://com.mg.merp.warehouse.resources.formelements#BatchDisposal.PopupMenu.ItemShow" actionListener="ViewDocumentOnTablePlanMoveOut" />
+				</jfd:popupMenu>
+			</jfd:table>
+		</jfd:container>
+		
+		<jfd:container id="reserveMove" layout="jfd:box" columns="5" alignment="expand_expand" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#Reserve.Fields" >
+			<jfd:label id="reserveFromLabel" text="resource://com.mg.merp.warehouse.resources.formelements#WareCard.DateFrom"/>
+			<jfd:dateField id="reserveFrom"/>
+			<jfd:label id="reserveToLabel" text="resource://com.mg.merp.warehouse.resources.formelements#WareCard.DateTo"/>
+			<jfd:dateField id="reserveTill"/>
+			<jfd:button id="reserveRefreshButton" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="RefreshReserve" />
+			<jfd:table id="reserve" scroll="true" alignment="expand_expand" horizontalSpan="5">
+				<jfd:popupMenu>
+					<jfd:menuItem id="viewDocumentOnTableReserve" text="resource://com.mg.merp.warehouse.resources.formelements#BatchDisposal.PopupMenu.ItemShow" actionListener="ViewDocumentOnTableReserve" />
+				</jfd:popupMenu>
+			</jfd:table>
+		</jfd:container>
+		
+		<jfd:container id="batches" layout="jfd:box" alignment="expand_expand" orientation="ver" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#Batches.Title">		
+			<jfd:maintenanceTable id="warehouseBatch" scroll="true" alignment="expand_expand"/>
+			<jfd:container id="batchesExtends" layout="jfd:tabbed" alignment="expand_expand" >
+				<jfd:maintenanceTable id="batchReceipt" scroll="true" alignment="expand_expand"
+					tabTitle="resource://com.mg.merp.warehouse.resources.formelements#BatchReceipt.Title">
+					<jfd:popupMenu>
+						<jfd:menuItem id="viewDocumentOnTableWarehouseBatch" text="resource://com.mg.merp.warehouse.resources.formelements#BatchDisposal.PopupMenu.ItemShow" actionListener="ViewDocumentOnTableWarehouseBatch" />
+					</jfd:popupMenu>
+				</jfd:maintenanceTable>
+				<jfd:maintenanceTable id="batchDisposal" scroll="true" alignment="expand_expand"
+					tabTitle="resource://com.mg.merp.warehouse.resources.formelements#BatchDisposal.Title">
+					<jfd:popupMenu>
+						<jfd:menuItem id="viewDocument" text="resource://com.mg.merp.warehouse.resources.formelements#BatchDisposal.PopupMenu.ItemShow" actionListener="ViewDocument" />
+					</jfd:popupMenu>
+				</jfd:maintenanceTable>
+				<jfd:table id="serialNumberTable" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#WareCardMt.SerialNumbersTab">
+				</jfd:table>
+				<jfd:table id="binLocationDetailTable" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#WareCardMt.BinLocationDetailsTab">
+				</jfd:table>
+			</jfd:container>	
+		</jfd:container>
+						 	 
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

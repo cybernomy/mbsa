@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: VarianceDocumentHeadMt.mfd.xml,v 1.5 2007/09/21 11:23:11 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.manufacture.support.ui.VarianceDocumentHeadMt" title="resource://com.mg.merp.manufacture.resources.formelements#VarianceDocumentHead.FormMt.Title" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="mainFields" layout="jfd:tabbed" alignment="expand_top" >
+	
+		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Main.Tab.Title" >
+	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			 			 	 	
+			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
+			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
+	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
+			<jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml" />					
+		 	<jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml" /> 
+	 	 	<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />	
+	 	 	<jfd:include name="com/mg/merp/document/resources/PartnerFromToMacros.xml" />		
+			<jfd:field id="Job" />  
+			<jfd:field id="WC" sameLine="true"/>  
+			<jfd:field id="Description" />
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />			
+		</jfd:container>
+
+ 		 <jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Doc.SpecTab.Title" >
+ 		</jfd:maintenanceTable>
+ 	  
+ 	 </jfd:container>
+ 	 
+	<jfd:include name="com/mg/merp/manufacture/resources/DefaultMFDocMaintenanceFooterMacros.xml" />
+</jfd:form>	

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/jboss/lib/jbossall-client.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/jboss/lib/jboss-system.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/mgframework"/>
+	<classpathentry kind="output" path="output/classes"/>
+</classpath>

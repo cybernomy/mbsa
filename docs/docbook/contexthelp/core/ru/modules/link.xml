@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: link.xml,v 1.4 2008/03/05 14:01:29 konyashkina Exp $ -->
+
+<link version="1.4">
+   
+  <linkitem topic="features_html_links"> 
+    <linkentry target="features_html" text="Пользовательские поля" /> 
+  </linkitem> 
+  
+   <linkitem topic="syscompany_html_links"> 
+    <linkentry target="syscompany_html" text="Балансовые единицы" /> 
+  </linkitem> 
+  
+   <linkitem topic="audit_html_links"> 
+    <linkentry target="entity_audit_setup_wizard_html" text="Настройка аудита хранилища данных" />
+    <linkentry target="entity_audit_html" text="Журнал аудита хранилища данных" />
+    <linkentry target="security_audit_html" text="Журнал аудита безопасности" />
+    <linkentry target="system_audit_html" text="Журнал аудита системы" /> 
+  </linkitem> 
+  
+  <linkitem topic="appdict_html_links"> 
+    <linkentry target="applayers_html" text="Уровни приложения" />
+    <linkentry target="bc_html" text="Список бизнес-компонентов" />
+    <linkentry target="sysclassimplementation_html" text="Реализация бизнес-компонентов" />
+    <linkentry target="sysdomain_html" text="Домены системы" />
+    <linkentry target="sysdataitem_html" text="Элементы данных" />
+    <linkentry target="form_html" text="Формы системы" />
+    <linkentry target="window_html" text="Окна системы" />
+  </linkitem>
+  
+</link>

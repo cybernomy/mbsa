@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: EntityAuditForm.mfd.xml,v 1.2 2007/12/14 13:35:53 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.core.support.ui.EntityAuditForm" title="resource://com.mg.merp.core.resources.formelements#EntityAuditForm.Title" orientation="ver" verticalGap="5" helpTopic="core#entity_audit_html" >
+
+	<jfd:toolBar id="toolBar" alignment="expand_top">
+		<jfd:button id="closeButton" text="resource://com.mg.framework.resources.messages#CloseButton" actionListener="Close" />
+		<jfd:button id="refreshButton" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="Refresh" />
+		<jfd:filler id="buttonsFiller" type="horizontalGlue" />
+		<jfd:label id="eventDateFromLabel" text="resource://com.mg.merp.core.resources.formelements#EntityAuditForm.EventFromDate" />
+		<jfd:dateTimeField id="eventDateFrom" />
+		<jfd:label id="eventDateTillLabel" text="resource://com.mg.merp.core.resources.formelements#EntityAuditForm.EventTillDate" />
+		<jfd:dateTimeField id="eventDateTill" />
+		<jfd:label id="userNameLabel" text="resource://com.mg.merp.core.resources.formelements#EntityAuditForm.UserName" />
+		<jfd:textField id="userName" length="31" />
+		<jfd:checkBox id="auditTypeCreate" text="resource://com.mg.merp.core.resources.dataitemlabels#DatabaseAuditType.Create" />
+		<jfd:checkBox id="auditTypeModify" text="resource://com.mg.merp.core.resources.dataitemlabels#DatabaseAuditType.Modify" />
+		<jfd:checkBox id="auditTypeRemove" text="resource://com.mg.merp.core.resources.dataitemlabels#DatabaseAuditType.Remove" />
+	</jfd:toolBar>
+
+	<jfd:container id="split" layout="jfd:split" orientation="ver" alignment="expand_expand">
+		<jfd:table id="entityAudit" scroll="true" autoResize="subsequent_columns" >
+			<jfd:columns>
+				<jfd:column fieldName="UserName" />
+				<jfd:column fieldName="EventDateTime" />
+				<jfd:column fieldName="AuditedEntityName" />
+				<jfd:column fieldName="AuditType" />
+			</jfd:columns>
+		</jfd:table>	
+		<jfd:table id="entityAuditDetail" scroll="true" autoResize="subsequent_columns" >
+			<jfd:columns>
+				<jfd:column fieldName="PropertyName" />
+				<jfd:column fieldName="State" />
+				<jfd:column fieldName="OldState" />
+			</jfd:columns>
+		</jfd:table>	
+	</jfd:container>
+</jfd:form>

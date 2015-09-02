@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <joined-subclass name="com.mg.merp.salary.model.FeeSummarySpec" extends="com.mg.merp.document.model.DocSpec" table="SAL_FEE_SUMMARY_SPEC">
+    <meta attribute="extends">com.mg.merp.document.model.DocSpec</meta>
+    <!-- <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      generator class="sequence">
+        <param name="sequence">SAL_FEE_SUMMARY_SPEC_ID_GEN</param>
+      </generator
+    </id>-->
+    <key>
+      <column name="DOCSPEC_ID" not-null="false" />
+    </key>
+    <many-to-one name="CostsAnl1" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL1_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CostsAnl2" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL2_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CostsAnl3" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL3_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CostsAnl4" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL4_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CostsAnl5" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL5_ID" not-null="false" />
+    </many-to-one>
+  </joined-subclass>
+</hibernate-mapping>

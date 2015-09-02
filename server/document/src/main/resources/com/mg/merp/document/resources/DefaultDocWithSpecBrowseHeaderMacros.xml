@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: DefaultDocWithSpecBrowseHeaderMacros.xml,v 1.1 2008/12/24 14:15:51 safonov Exp $ -->
+
+<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+	<jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton" actionListener="Choose" visible="false" />
+	<jfd:include name="com/mg/framework/resources/StandartMaintenanceTreeToolbarMacros.xml" />
+	<jfd:filler id="toolbarFiller" alignment="expand_top" type="horizontalGlue" />
+	<jfd:include name="com/mg/framework/resources/StandartMaintenanceBrowseToolbarMacros.xml" />
+	<jfd:separator id="documentSeparator" />
+	<jfd:button id="editSpecificationButton" toolTip="resource://com.mg.merp.document.resources.formelements#Document.EditSpecification" icon="com/mg/merp/document/resources/editdocpecificationicon.png" actionListener="EditSpecification" />
+	<jfd:include name="com/mg/merp/document/resources/CommonDocBrowseToolbarItemsMacros.xml" />
+	<jfd:include runtime="com.mg.jet.ui.CustomActionsFormlet" />
+</jfd:toolBar>

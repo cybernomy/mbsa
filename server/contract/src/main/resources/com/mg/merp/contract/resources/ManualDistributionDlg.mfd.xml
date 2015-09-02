@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!-- ===================================================================== -->
+ <!--  Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.					-->
+ <!--  All rights reserved													-->
+ <!-- 																		-->
+ <!--  This program is the proprietary and confidential information			-->
+ <!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
+ <!--  as authorized in a license agreement authorizing and					-->
+ <!--  controlling such use and disclosure									-->
+ <!--																		-->
+ <!--  Millennium Business Suite Anywhere System.							-->
+ <!-- ===================================================================== -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.contract.support.ui.ManualDistributionDlg" title="resource://com.mg.merp.contract.resources.formelements#ManualDistributionDlg.Title" width="800" height="250">
+	
+	<jfd:container id="mainBox" layout="jfd:box"  columns="1" alignment="expand_expand">
+	<jfd:border style="bevel" type="raised" />
+		<jfd:container id="topBox" layout="jfd:box"  columns="4" >
+			<jfd:field id="distributionSum" text="resource://com.mg.merp.contract.resources.formelements#ManualDistributionDlg.DistributionSum" />
+			<jfd:button id="performDistribution"  text="resource://com.mg.merp.contract.resources.formelements#ManualDistributionDlg.PerformDistribution" actionListener="PerformDistribution" />
+			<jfd:button id="cancelDistribution" text="resource://com.mg.merp.contract.resources.formelements#ManualDistributionDlg.CancelDistribution" actionListener="CancelDistribution" />
+		</jfd:container>
+		<jfd:table id="distributionTable" autoResize="subsequent_columns" scroll="true" alignment="expand_expand" >
+		</jfd:table>
+	</jfd:container>
+	
+	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+	
+</jfd:form>

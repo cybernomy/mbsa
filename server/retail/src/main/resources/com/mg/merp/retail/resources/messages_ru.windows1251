@@ -1,0 +1,9 @@
+# $Id$
+
+CustomSelectDisCardOwner=Владелец
+CustomSelectDisCardUser=Пользователь
+CustomSelectPartner=Контрагент
+CustomSelectStatus=Статус
+
+DisCardSelectNumber=Номер
+DisCardSelectOwner=Владелец

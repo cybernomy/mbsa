@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!-- ===================================================================== -->
+ <!--  Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.					-->
+ <!--  All rights reserved													-->
+ <!-- 																		-->
+ <!--  This program is the proprietary and confidential information			-->
+ <!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
+ <!--  as authorized in a license agreement authorizing and					-->
+ <!--  controlling such use and disclosure									-->
+ <!--																		-->
+ <!--  Millennium Business Suite Anywhere System.							-->
+ <!-- ===================================================================== -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.paymentcontrol.support.ui.PmcCreatePeriodsDialog" title="resource://com/mg/merp/paymentcontrol/resources.formelements#Pmc.CreatePeriodsDialog.Title" width="303" height="240">
+
+	<jfd:container id="centralBox" layout="jfd:box" columns="2" alignment="expand_expand" >
+	<jfd:border style="bevel" type="raised" />
+		<jfd:container id="leftBox" layout="jfd:box"  orientation="ver">
+			<jfd:border style="etched" type="raised" title="resource://com/mg/merp/paymentcontrol/resources.formelements#Pmc.CreatePeriodsDialog.LabelInerval" />
+			<jfd:checkBox id="pmcYear" text="resource://com/mg/merp/paymentcontrol/resources.formelements#Pmc.CreatePeriodsDialog.LabelYear" />
+			<jfd:checkBox id="pmcHalfYear" text="resource://com/mg/merp/paymentcontrol/resources.formelements#Pmc.CreatePeriodsDialog.LabelHalfYear" />
+			<jfd:checkBox id="pmcQuarter" text="resource://com/mg/merp/paymentcontrol/resources.formelements#Pmc.CreatePeriodsDialog.LabelQuarter" />
+			<jfd:checkBox id="pmcMonth" text="resource://com/mg/merp/paymentcontrol/resources.formelements#Pmc.CreatePeriodsDialog.LabelMonth" />
+			<jfd:checkBox id="pmcTenDays" text="resource://com/mg/merp/paymentcontrol/resources.formelements#Pmc.CreatePeriodsDialog.LabelTenDays" actionListener="PmcTenDaysChanged" />
+			<jfd:checkBox id="pmcWeek" text="resource://com/mg/merp/paymentcontrol/resources.formelements#Pmc.CreatePeriodsDialog.LabelWeek" actionListener="PmcWeekChanged" />
+			<jfd:checkBox id="pmcDay" enabled="false" text="resource://com/mg/merp/paymentcontrol/resources.formelements#Pmc.CreatePeriodsDialog.LabelDay"/>
+		</jfd:container>
+		<jfd:container id="rightBox" layout="jfd:box" orientation="ver" verticalGap="5" >
+			<jfd:label id="beginDateLabel" text="resource://com/mg/merp/paymentcontrol/resources.formelements#Pmc.CreatePeriodsDialog.LabelBeginDate" />
+			<jfd:dateField id="beginDate"/>
+			<jfd:label id="upLevelQuantityLabel" text="resource://com/mg/merp/paymentcontrol/resources.formelements#Pmc.CreatePeriodsDialog.LabelUpLevelQuantity" />
+			<jfd:integerField id="upLevelQuantity" alignment="expand_expand" />
+		</jfd:container>
+	</jfd:container>
+	
+	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+
+</jfd:form>

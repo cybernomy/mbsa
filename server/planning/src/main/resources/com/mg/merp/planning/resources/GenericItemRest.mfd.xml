@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: GenericItemRest.mfd.xml,v 1.2 2006/12/15 10:38:23 konyashkina Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.planning.support.ui.GenericItemRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.planning.resources.formelements#Cond.GenericItem" helpTopic="planning#genericitem_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+		
+		<jfd:field id="genericItemCode" />
+		<jfd:field id="genericItemName" />
+		<jfd:field id="planningShelfLifeFrom" />
+		<jfd:field id="planningShelfLifeTill" sameLine="true" />
+	 	<jfd:comboBox id="planningItemFlag" selectedIndex="0" label="resource://com.mg.merp.planning.resources.dataitemlabels#GenericItem.PlItemFlag" >
+			<jfd:items>
+				<jfd:item value="" />
+				<jfd:item value="Нет" />
+				<jfd:item value="Да" />
+			</jfd:items>
+		</jfd:comboBox> 
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" /> 		 		
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultRestrictionFooterMacros.xml" />
+
+</jfd:form>

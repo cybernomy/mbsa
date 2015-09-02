@@ -1,0 +1,15 @@
+# $Id: dataitemlabels_ru.windows1251,v 1.4 2008/03/03 13:06:23 safonov Exp $
+
+User=Пользователь
+User.Name=Имя
+User.FullName=Описание
+User.Passw=Пароль
+User.SmartCardOnly=Подключение только с помощью SMART карты
+User.UseRemoteProfile=Использовать удаленный профайл
+User.Email=Электронная почта
+User.Mobile=Мобильный
+User.Pager=Пейджер
+User.Button.Permission=Действующие права
+
+Group=Группа
+Group.Name=Наименование

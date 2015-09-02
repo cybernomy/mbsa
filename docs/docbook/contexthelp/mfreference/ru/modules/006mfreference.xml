@@ -1,0 +1,106 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_006mfref SYSTEM "modules/006mfreference.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY mref "Справочники производства">
+<!ENTITY manuf "Планирование и управление производством">
+]> -->
+<chapter id="006mfref">
+  <title>Рабочая сила </title>
+  
+  <section id="006mfref_01"> 
+  	 <title>Класс рабочей силы</title>
+ 
+  		<para>Класс рабочей силы определяет параметры оплаты труда, накладные расходы на них, метод и 
+		измерения рабочей силы и другие параметры. </para>
+
+		<para>Вход в справочник &quot;Класс рабочей силы&quot; через главное меню 
+		<menuchoice>
+		<guimenu>&manuf;</guimenu>
+		<guisubmenu>&mref;</guisubmenu>
+		<guisubmenu>Производство</guisubmenu>
+		<guimenuitem>Класс рабочей силы</guimenuitem>
+		</menuchoice>.</para>
+		
+		<screenshot><mediaobject><imageobject>
+		<imagedata fileref="images/laborclass.gif"/>
+		</imageobject></mediaobject></screenshot>
+
+		<para><guibutton>Метод измерения расхода РС</guibutton>. </para>
+		
+		<itemizedlist>
+	        <listitem><guibutton>Время на единицу ГП</guibutton>. Рассчитывается количество времени, затраченного 
+			рабочей силой на единицу готовой продукции. </listitem>
+			<listitem><guibutton>Единиц ГП на время</guibutton>. Рассчитывается количество единиц готовой продукции, 
+			изготовленное рабочей силой за определённое время. </listitem>
+			<listitem><guibutton>Фиксированное время на партию</guibutton>. Время, затраченное рабочей силой на 
+			изготовление партии готовой продукции. </listitem>
+		 </itemizedlist>
+	
+		<para><guibutton>Норма на ЕИ времени работы РС</guibutton>. Норма оплаты работы РС за ЕИ времени. 
+		Например, если в этом поле установлено &quot;100&quot;, а &quot;ЕИ времени для оплаты РС&quot; установлено 
+		равным &quot;ЧАС&quot;, то этот класс рабочей силы оплачивается по ставке 100 рублей за час.  </para>
+	
+		<para><guibutton>Код валюты для нормы на ЕИ времени работы РС</guibutton>. Код валюты для нормы на единицу 
+		измерения времени работы данного класса рабочей силы. </para>
+	
+		<para><guibutton>ЕИ времени для оплаты РС</guibutton>. Единица измерения времени рабочей силы.</para>
+
+		<para><guibutton>Метод начисления НР на РС</guibutton>. Метод начисления накладных расходов на рабочую 
+		силу данного класса. </para>
+		
+		<itemizedlist>
+	 		<listitem><guibutton>На единицу времени</guibutton>. Накладные расходы рассчитываются на единицу 
+			времени, потраченного рабочей силой. </listitem>
+			 <listitem><guibutton>На единицу готовой продукции</guibutton>. Накладные расходы рассчитываются 
+			 на единицу продукции, изготовленной данной рабочей силой. </listitem>
+			 <listitem><guibutton>Процент от стоимости работы</guibutton>. Накладные расходы рассчитываются 
+			 в процентном отношении к стоимости работы. </listitem>
+			<listitem><guibutton>Фиксированная стоимость на партию</guibutton>. Накладные расходы составляют 
+			фиксированную сумму на партию изделий. </listitem>
+		 </itemizedlist>
+		 
+		<para><guibutton>Код валюты для нормы на НР на РС</guibutton>. Код валюты для нормы накладных 
+		расходов на рабочую силу.  </para>
+		
+		<para><guibutton>ЕИ времени для ставки НР на РС</guibutton>. Единица измерения времени для ставки 
+		накладных расходов по рабочей силе. </para>
+		
+		<para><guibutton>Категория затрат на РС</guibutton>. Категория затрат, по которой будут рассчитываться 
+		расходы на рабочую силу данного класса. </para>
+		
+		<para><guibutton>Категория затрат НР на РС</guibutton>. Категория затрат, по которой будут рассчитываться 
+		накладные расходы на рабочую силу данного класса. </para>
+		
+		<para><guibutton>Описание</guibutton>. В этом поле можно записать текстовый комментарий. </para>
+	
+		<para>См. также: <link linkend="002mfref_02_03">Рабочая сила операции состава изделия</link>.  </para>
+  </section>
+  
+   <section id="006mfref_02"> 
+  	 <title>Бригады</title>
+	 
+		<para>Если производство ведётся несколькими бригадами, или работа ведётся по сменам, для 
+		разграничения ответственности необходимо заполнить справочник &quot;Бригады&quot;.</para>
+
+		<para>Вход в справочник &quot;Бригады&quot; через главное меню 
+		<menuchoice>
+		<guimenu>&manuf;</guimenu>
+		<guisubmenu>&mref;</guisubmenu>
+		<guisubmenu>Производство</guisubmenu>
+		<guimenuitem>Бригады</guimenuitem>
+		</menuchoice>.</para>
+		
+		<screenshot><mediaobject><imageobject>
+		<imagedata fileref="images/brigad_add.gif"/>
+		</imageobject></mediaobject></screenshot>
+
+		<para><guibutton>Код</guibutton>. Краткое уникальное наименование бригады в рамках системы &merp;. </para>
+
+		<para><guibutton>Наименование</guibutton>. Наименование бригады. </para>
+
+   </section>
+</chapter>

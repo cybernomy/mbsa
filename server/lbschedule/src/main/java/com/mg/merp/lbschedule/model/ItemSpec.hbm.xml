@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.lbschedule.model.ItemSpec" table="LS_ITEMSPEC">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">LS_ITEMSPEC_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="Item" class="com.mg.merp.lbschedule.model.Item">
+      <column name="ITEM_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Catalog" class="com.mg.merp.reference.model.Catalog">
+      <column name="CATALOG_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="DocSpec" class="com.mg.merp.document.model.DocSpec">
+      <column name="DOCSPEC_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Measure2" class="com.mg.merp.reference.model.Measure">
+      <column name="MEASURE2_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Measure1" class="com.mg.merp.reference.model.Measure">
+      <column name="MEASURE1_ID" not-null="false" />
+    </many-to-one>
+    <property name="Price" type="java.math.BigDecimal">
+      <column name="PRICE" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="ClearPrice" type="java.math.BigDecimal">
+      <column name="CLEARPRICE" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="Summa" type="java.math.BigDecimal">
+      <column name="SUMMA" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="ClearSumma" type="java.math.BigDecimal">
+      <column name="CLEARSUMMA" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="Qty1" type="java.math.BigDecimal">
+      <column name="QTY1" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="Qty2" type="java.math.BigDecimal">
+      <column name="QTY2" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <set name="LsItemSpecTaxes" inverse="true">
+      <key on-delete="cascade">
+        <column name="ITEMSPEC_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.lbschedule.model.ItemSpecTax" />
+    </set>
+    <set name="LsItemSpecAlts" inverse="true">
+      <key on-delete="cascade">
+        <column name="ITEMSPEC_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.lbschedule.model.ItemSpecAlt" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

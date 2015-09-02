@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+<!DOCTYPE configuration SYSTEM "jGuardAuthorization_1.00.dtd">
+<configuration>
+    <authorization>
+		<!-- 'local' or 'jvm' -->
+		<scope>local</scope>
+	    <permissionResolutionCaching>false</permissionResolutionCaching>
+		<authorizationManager>net.sf.jguard.ext.authorization.manager.JdbcAuthorizationManager</authorizationManager>
+		<authorizationManagerOptions>
+			<option>
+				<name>JNDI</name>
+				<value>java:/MERPBackboneDS</value>
+			</option>
+	        <option>
+				<name>authorizationDatabaseFileLocation</name>
+				<value>META-INF/authorization.interbase.properties</value>
+			</option>
+    	    <option>
+				<name>debug</name>
+				<value>true</value>
+			</option>
+		</authorizationManagerOptions>
+	</authorization>
+</configuration>

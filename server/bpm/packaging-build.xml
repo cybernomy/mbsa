@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Packaging Generator" default="_packaging_generation_">
+<target name="_packaging_generation_" depends="N65540,N65567,N65632"/>
+<target name="N65540" description="020mbpm-ui.jar">
+<mkdir dir="output/lib"/>
+<jar destfile="output/lib/020mbpm-ui.jar">
+<zipfileset dir="output/classes/com/mg/merp/bpm/support/ui" prefix="com/mg/merp/bpm/support/ui"/>
+<zipfileset dir="src/main/resources"/>
+</jar>
+</target>
+<target name="N65567" description="mbpm.sar">
+<mkdir dir="output/lib"/>
+<jar destfile="output/lib/mbpm.sar">
+<zipfileset dir="output/classes/com/mg/merp/bpm" prefix="com/mg/merp/bpm">
+<include name="BPMManager.class"/>
+</zipfileset>
+<zipfileset dir="output/classes/com/mg/merp/bpm/support" prefix="com/mg/merp/bpm/support">
+<include name="BPMManagerServiceImpl.class"/>
+</zipfileset>
+<zipfileset dir="output/classes/com/mg/merp/bpm/support" prefix="com/mg/merp/bpm/support">
+<include name="BPMManagerLocator.class"/>
+</zipfileset>
+<zipfileset dir="output/lib">
+<include name="jbpm-jpdl.jar"/>
+</zipfileset>
+<zipfileset dir="src/META-INF" prefix="META-INF">
+<include name="jboss-service.xml"/>
+</zipfileset>
+<zipfileset dir="src/META-INF" prefix="META-INF">
+<include name="jbpm.cfg.xml"/>
+</zipfileset>
+<zipfileset dir="output/classes/com/mg/merp/bpm/support/jboss" prefix="com/mg/merp/bpm/support/jboss"/>
+</jar>
+</target>
+<target name="N65632" description="020mbpm-ejb.jar">
+<mkdir dir="output/lib"/>
+<jar destfile="output/lib/020mbpm-ejb.jar">
+<zipfileset dir="output/classes/com/mg/merp/bpm/support" prefix="com/mg/merp/bpm/support">
+<include name="DefaultAssignmentHandler.class"/>
+</zipfileset>
+<zipfileset dir="output/classes/com/mg/merp/bpm/support" prefix="com/mg/merp/bpm/support">
+<include name="Messages.class"/>
+</zipfileset>
+<zipfileset dir="output/classes/com/mg/merp/bpm" prefix="com/mg/merp/bpm" includes="**/*ServiceLocal.class"/>
+<zipfileset dir="output/classes/com/mg/merp/bpm/support" prefix="com/mg/merp/bpm/support" includes="**/*ServiceBean.class"/>
+<zipfileset dir="output/classes/com/mg/merp/bpm/generic" prefix="com/mg/merp/bpm/generic" excludes="**/ui/**"/>
+</jar>
+</target>
+</project>

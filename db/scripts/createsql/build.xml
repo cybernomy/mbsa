@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="all" name="Create empty database">
+
+  <property file="build.properties"/>
+
+  <target name="exec-sql" depends="init">
+    <sql
+      driver="${jdbc.driver.name}"
+      classpath="${jdbc.driver.classpath}"
+      userid="${jdbc.dbms.username}"
+      password="${jdbc.dbms.password}"
+      encoding="${src.encoding}"
+      charSet="${jdbc.dbms.charset}"
+      url="${jdbc.dbms.url}"
+      src="{src.filename}">
+    </sql>
+  </target>
+
+  <target name="exec-interbase-sql">
+    <echo message="${message}" />
+    <sql
+      driver="${interbase.jdbc.driver.name}"
+      classpath="${interbase.jdbc.driver.classpath}"
+      userid="${interbase.jdbc.dbms.username}"
+      password="${interbase.jdbc.dbms.password}"
+      encoding="${src.encoding}"
+      charSet="${interbase.jdbc.dbms.charset}"
+      delimiter="${sql.delimiter}"
+      url="${interbase.jdbc.dbms.url}"
+      src="${src.filename}">
+    </sql>
+  </target>
+
+  <target name="init">
+    <condition property="create-oracle" value="yes">
+      <istrue value="${create.oracle.db}"/>
+    </condition>
+    <condition property="create-interbase" value="yes">
+      <istrue value="${create.interbase.db}"/>
+    </condition>
+    <condition property="create-oracle-metadata" value="yes">
+      <istrue value="${create.oracle.db.metadata}"/>
+    </condition>
+    <condition property="create-interbase-metadata" value="yes">
+      <istrue value="${create.interbase.db.metadata}"/>
+    </condition>
+    <condition property="create-oracle-systemdata" value="yes">
+      <istrue value="${create.oracle.db.systemdata}"/>
+    </condition>
+    <condition property="create-interbase-systemdata" value="yes">
+      <istrue value="${create.interbase.db.systemdata}"/>
+    </condition>
+  </target>
+
+  <target name="db.create">
+    <antcall target="oracle.db.create"/>
+    <antcall target="interbase.db.create"/>
+  </target>
+
+  <target name="oracle.db.create" depends="init" if="create-oracle">
+    <echo message="create oracle database"/>
+  </target>
+
+  <target name="interbase.db.create" depends="init" if="create-interbase">
+    <echo message="create interbase database"/>
+    
+    <antcall target="interbase.db.create.metadata" />
+    <antcall target="interbase.db.create.systemdata" />
+  </target>
+
+  <target name="interbase.db.create.metadata" depends="init" if="create-interbase-metadata">
+    <echo message="create interbase database metadata"/>
+
+    <!-- create udfs, domains, generators, exceptions -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/metadata/10_create_system_objects.sql" />
+      <param name="sql.delimiter" value=";" />
+      <param name="message" value="create udfs, domains, generators, exceptions" />
+    </antcall>
+    <!-- create tables -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/metadata/20_create_tables.sql" />
+      <param name="sql.delimiter" value=";" />
+      <param name="message" value="create tables" />
+    </antcall>
+    <!-- create views -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/metadata/30_create_views.sql" />
+      <param name="sql.delimiter" value=";" />
+      <param name="message" value="create views" />
+    </antcall>
+    <!-- create table checks -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/metadata/40_create_table_checks.sql" />
+      <param name="sql.delimiter" value=";" />
+      <param name="message" value="create table checks" />
+    </antcall>
+    <!-- create table uniques -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/metadata/50_create_table_uniques.sql" />
+      <param name="sql.delimiter" value=";" />
+      <param name="message" value="create table uniques" />
+    </antcall>
+    <!-- create table primary keys -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/metadata/60_create_table_pk.sql" />
+      <param name="sql.delimiter" value=";" />
+      <param name="message" value="create table primary keys" />
+    </antcall>
+    <!-- create table foreign keys -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/metadata/70_create_table_fk.sql" />
+      <param name="sql.delimiter" value=";" />
+      <param name="message" value="create table foreign keys" />
+    </antcall>
+    <!-- create table indices -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/metadata/80_create_table_indices.sql" />
+      <param name="sql.delimiter" value=";" />
+      <param name="message" value="create table indices" />
+    </antcall>
+    <!-- create procedures declares -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/metadata/85_create_declare_procedures.sql" />
+      <param name="sql.delimiter" value="^" />
+      <param name="message" value="create procedures declares" />
+    </antcall>
+    <!-- create procedures -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/metadata/90_create_procedures.sql" />
+      <param name="sql.delimiter" value="^" />
+      <param name="message" value="create procedures" />
+    </antcall>
+    <!-- create triggers -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/metadata/95_create_triggers.sql" />
+      <param name="sql.delimiter" value="^" />
+      <param name="message" value="create triggers" />
+    </antcall>
+  </target>
+
+  <target name="interbase.db.create.systemdata" depends="init" if="create-interbase-systemdata">
+    <echo message="create interbase database system data"/>
+
+    <!-- insert systemconfig, groups, users, profiles -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/systemdata/${dbms.data.language}/10_insert_sys_data.sql" />
+      <param name="sql.delimiter" value=";" />
+      <param name="message" value="insert systemconfig, groups, users, profiles" />
+    </antcall>
+    <!-- insert modules -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/systemdata/${dbms.data.language}/20_insert_sys_module.sql" />
+      <param name="sql.delimiter" value=";" />
+      <param name="message" value="insert modules" />
+    </antcall>
+    <!-- insert classes -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/systemdata/${dbms.data.language}/30_insert_sys_class.sql" />
+      <param name="sql.delimiter" value=";" />
+      <param name="message" value="insert clesses" />
+    </antcall>
+    <!-- insert methods -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/systemdata/${dbms.data.language}/40_insert_sec_method.sql" />
+      <param name="sql.delimiter" value=";" />
+      <param name="message" value="insert methods" />
+    </antcall>
+    <!-- insert document sections -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/systemdata/${dbms.data.language}/50_insert_docsection.sql" />
+      <param name="sql.delimiter" value=";" />
+      <param name="message" value="insert document sections" />
+    </antcall>
+    <!-- insert document process actions -->
+    <antcall target="exec-interbase-sql">
+      <param name="src.filename" value="interbase/systemdata/${dbms.data.language}/60_insert_dp_action.sql" />
+      <param name="sql.delimiter" value=";" />
+      <param name="message" value="insert document process actions" />
+    </antcall>
+  </target>
+
+  <target name="isql.create">
+    <!--sql driver="interbase.interclient.Driver" classpath="C:\Develop\Borland\InterBase\lib\interclient.jar" userid="SYSDBA" password="1" url="" output="outputfile.txt" src="create_type_1.sql"-->
+    <!-- sql driver="org.firebirdsql.jdbc.FBDriver" classpath="C:\Develop\Borland\InterBase\lib\firebirdsql.jar" userid="SYSDBA" password="1" url="e:\STANDART28.IB" output="outputfile.txt" src="create_type_1.sql">
+    </sql-->
+    <exec executable="${interbase.sqlruner}">
+      <arg line="-echo -input create_system_objects_1.sql -output sql.log -m"/>
+    </exec>
+    <exec executable="${interbase.sqlruner}">
+      <arg line="-echo -input create_table_2.sql -output sql.log -m"/>
+    </exec>
+    <exec executable="${interbase.sqlruner}">
+      <arg line="-echo -input create_proc_3.sql -output sql.log -m"/>
+    </exec>
+    <exec executable="${interbase.sqlruner}">
+      <arg line="-echo -input create_trig_4.sql -output sql.log -m"/>
+    </exec>
+  </target>
+
+  <target name="isql.init-data">
+    <exec executable="${interbase.sqlruner}">
+      <arg line="-echo -input insert_sys_data_1.sql -output sql.log -m"/>
+    </exec>
+    <exec executable="${interbase.sqlruner}">
+      <arg line="-echo -input insert_sys_module_2.sql -output sql.log -m"/>
+    </exec>
+    <exec executable="${interbase.sqlruner}">
+      <arg line="-echo -input insert_sys_class_3.sql -output sql.log -m"/>
+    </exec>
+    <exec executable="${interbase.sqlruner}">
+      <arg line="-echo -input insert_sec_method_4.sql -output sql.log -m"/>
+    </exec>
+    <exec executable="${interbase.sqlruner}">
+      <arg line="-echo -input insert_docsection_5.sql -output sql.log -m"/>
+    </exec>
+    <exec executable="${interbase.sqlruner}">
+      <arg line="-echo -input insert_dp_action_6.sql -output sql.log -m"/>
+    </exec>
+  </target>
+
+  <target name="all" depends="db.create" />
+
+</project>

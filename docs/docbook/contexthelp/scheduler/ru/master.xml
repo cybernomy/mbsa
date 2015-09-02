@@ -1,0 +1,40 @@
+﻿<?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_scheduler SYSTEM "modules/scheduler.xml">
+<!ENTITY chap_schtask SYSTEM "modules/schtask.xml">
+<!ENTITY chap_cron SYSTEM "modules/cron.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere">
+<!ENTITY cont_centr "Центр управления">
+<!ENTITY scheduler "Планировщик заданий">
+]>
+<book lang="ru">
+  <bookinfo>
+    <title>&scheduler; в системе &merp; 
+      Руководство пользователя.
+    </title>
+    <releaseinfo>4.0.6</releaseinfo>
+    <copyright>
+	    <year>1998</year>
+	    <year>2008</year>
+	    <holder>ООО &quot;Бизнестехнология&quot;</holder>
+    </copyright>    
+  </bookinfo>
+  
+  <toc/>
+  
+  <preface id="target" revision="1">
+    <title>Целевая аудитория </title>
+    <para>Данное руководство предназначено для администраторов, настраивающих выполнения различных задач с помощью
+      планировщика заданий системы &merp;.
+    </para>
+  </preface>
+    
+  &chap_scheduler;
+  &chap_schtask;
+  &chap_cron;
+  &chap_copyright;
+
+</book>

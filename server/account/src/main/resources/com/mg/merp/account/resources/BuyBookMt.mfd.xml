@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: BuyBookMt.mfd.xml,v 1.5 2007/09/05 08:07:05 alikaev Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.account.resources.formelements#BuyBook.FormMt.Title" helpTopic="account#buybook_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />		
+		<jfd:field id="Approved"/>
+		<jfd:field id="DocNumber" />
+		<jfd:field id="DocDate" sameLine="true"/>		
+		<jfd:field id="DocType" />			
+		<jfd:field id="Provider" />
+		<jfd:field id="OrgUnit" sameLine="true"/>		
+		<jfd:field id="InsertDate"/>
+		<jfd:field id="InDate" sameLine="true"/>
+		<jfd:field id="StockDate"/>
+		<jfd:field id="PayDate" sameLine="true"/>										
+		<jfd:field id="SumWithoutNds3"/>	
+		<jfd:field id="Nds3Sum" sameLine="true"/>			
+		<jfd:field id="SumWithoutNds1"/>	
+		<jfd:field id="Nds1Sum" sameLine="true"/>		
+		<jfd:field id="SumWithoutNds2"/>
+		<jfd:field id="Nds2Sum" sameLine="true"/>
+		<jfd:field id="NspSum"/>
+		<jfd:field id="TotalSum" sameLine="true"/>	
+		<jfd:field id="NotTaxableSum"/>			
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

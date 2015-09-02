@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: toc.xml,v 1.1 2007/06/01 16:53:35 konyashkina Exp $ -->
+
+<toc version="1.0">
+
+   <tocitem text="Бизнес-процессы">
+	<tocitem text="Бизнес-процессы" target="bpm_html" />
+	<tocitem text="Схема процесса" target="bpm_html" />
+   </tocitem>
+   
+   <tocitem text="Экземпляры процессов">
+	<tocitem text="Запустить экземпляр процесса" target="pr_instance_html" />
+	<tocitem text="Удалить экземпляр процесса" target="pr_instance_html" />
+	<tocitem text="Монитор выполнения" target="pr_instance_html" /> 
+   </tocitem>    
+  
+   <tocitem text="Обеспечение и процесс">
+   	<tocitem text="Ресурсы" target="resource_html" />
+	<tocitem text="Назначения" target="task_html" />
+  </tocitem> 
+  
+</toc>

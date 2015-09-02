@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.lbschedule.support.ui.GoodsSelectionForm" orientation="ver" width="500" height="350" >
+
+	<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+		<jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton" actionListener="Choose" />
+		<jfd:button id="closeButton" text="resource://com.mg.framework.resources.messages#CloseButton" actionListener="Close" />
+<!-- 
+		<jfd:button id="showStockSituationButton" text="resource://com.mg.merp.reference.resources.formelements#Warehouse.ShowStockSituation" actionListener="ShowStockSituation" />
+-->		
+	</jfd:toolBar>
+
+	<jfd:table id="goodsTable" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
+<!-- 
+		<jfd:popupMenu>
+			<jfd:menuItem id="showStockSituationItem" text="resource://com.mg.merp.reference.resources.formelements#Warehouse.ShowStockSituation" actionListener="ShowStockSituation" />
+		</jfd:popupMenu>
+-->	
+	</jfd:table>
+
+</jfd:form>

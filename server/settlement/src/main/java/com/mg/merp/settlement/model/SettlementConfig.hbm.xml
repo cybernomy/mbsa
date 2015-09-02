@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.settlement.model.SettlementConfig" table="STL_CONFIG">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="SysClient" type="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </id> 
+    <many-to-one name="Currency" class="com.mg.merp.reference.model.Currency">
+      <column name="BASE_CURRENCY" length="5" not-null="false" />
+    </many-to-one>
+    <many-to-one name="NarCurrency" class="com.mg.merp.reference.model.Currency">
+      <column name="NAT_CURRENCY" length="5" not-null="false" />
+    </many-to-one>
+    <many-to-one name="RefCurrencyRateType" class="com.mg.merp.reference.model.CurrencyRateType">
+      <column name="CUR_RATE_TYPE_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="RefCurrencyRateAuthority" class="com.mg.merp.reference.model.CurrencyRateAuthority">
+      <column name="CUR_RATE_AUTHORITY_ID" not-null="false" />
+    </many-to-one>
+    <property name="CurrencyPrec" type="java.lang.Integer">
+      <column name="CURRENCY_PREC" not-null="false" sql-type="INTEGER" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class>
+</hibernate-mapping>

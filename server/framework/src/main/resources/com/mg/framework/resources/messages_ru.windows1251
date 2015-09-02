@@ -1,0 +1,114 @@
+# Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.
+# All rights reserved
+# 
+# This program is the proprietary and confidential information
+# of BusinessTechnology, Ltd. and may be used and disclosed only
+# as authorized in a license agreement authorizing and
+# controlling such use and disclosure
+#
+# Millennium Business Suite Anywhere System.
+#
+# $Id: messages_ru.windows1251,v 1.32 2008/12/23 09:37:13 safonov Exp $
+
+Copyright=Copyright © 1998 - 2008 BusinessTechnology, Ltd.
+Copyright.Warning=Внимание! Данный программный продукт защищен законами об авторских правах и международными соглашениями. Незаконное воспроизведение или распространение данной программы или ее части влечет гражданскую и уголовную ответственность.
+ApplicationTitle=Millennium Business Suite Anywhere 2007
+
+InternalSoftwareException=Произошло внутреннее программное исключение, пожалуйста, обратитесь к поставщику продукта
+SessionExpired=Пользовательская сессия истекла, пожалуйста, выполните повторный вход в систему
+MessageTitle=Сообщение
+ConnectionFailed=Неудачная попытка подключения
+InvalidUserNameOrPassword=Неверное имя пользователя или пароль
+ReasonException=Причина исключительной ситуации:
+CreateBusinessBeanFailed=Ошибка создания бизнес-компонента: {0}
+BusinessBeanNotFound=Бизнес-компонент не найден
+BusinessBeanImplNotFound=Реализация бизнес-компонента не найдена
+BusinessBeanImplNotDeployed=Реализация бизнес-компонента не развернута на сервере приложения
+BusinessBeanImplNotSupported=Реализация бизнес-компонента не поддерживает интерфейс бизнес компонента: {0}
+SecuritySystem=Система безопасности
+NoPermission=Нарушение прав доступа
+SubsystemAccessDenied=Модуль {0} недоступен для использования
+UnsupportedException=Выполняемая операция не поддерживается
+FileSizeExceededException=Превышен допустимый размер файла
+
+TransientLicensingManager=Отключен менеджер лицензий
+TransientLicensingKey=Лицензионный ключ отключен от менеджера лицензий
+SubsystemLicenseSurcharge=Превышено количество лицензий модуля: {0}
+ServerLicenseSurcharge=Превышено количество серверных лицензий
+LocalLicenseWarning=<html>Невозможно подключение с удаленного компьютера.<br>Сервер приложения поддерживает только локальное подключение и(или)<br> эксплуатируется в демострационном варианте.</html>
+GeneralLicenseError=Общие проблемы лицензирования, обратитесь к администратору системы
+DemostrationLicense=Демонстрационная лицензия
+
+LockFailed=Объект заблокирован
+
+DuplicateWidgetNameError=Интерфейсный элемент \"{0}\" существует
+CreateWidgetError=Невозможно создать интерфейсный элемент \"{0}\"
+FormDescriptorNotFound=Описатель формы \"{0}\" не найден
+FormNotFound=Форма пользовательского интерфейса \"{0}\" не найдена
+DataItemNotFound=Элемент данных \"{0}\" не найден
+DomainNotFound=Домен элемента данных \"{0}\" не найден
+
+OkButton=OK
+CancelButton=Отменить
+YesButton=Да
+NoButton=Нет
+CloseButton=Закрыть
+AddButton=Добавить
+EditButton=Изменить
+ViewButton=Просмотр
+CloneButton=Копировать частично
+DeepCloneButton=Копировать полностью
+EraseButton=Удалить
+RefreshButton=Обновить
+PermissionButton=Доступ
+RestrictionButton=Условия отбора
+SetupTableButton=Настройка списка
+ClearButton=Очистить
+ChooseButton=Выбрать
+DetailOnButton=Подробно >>
+DetailOffButton=<< Подробно
+PrintButton=Печать
+CustomActionMenuText=Функции
+EraseAlertTitle=Удаление
+EraseAlertQuestion=Удалить запись?
+ChooseDateButtonToolTip=Выберите дату ...
+ChooseDateDialogTitle=Выберите дату
+RestrictionForm.IsShowOnEnter=Показывать при входе
+RestrictionForm.IsUseHierarchy=Учитывать папку
+True=Да
+False=Нет
+AlertErrorTitle=Ошибка
+AlertInformationTitle=Информация
+AlertQuestionTitle=Подтверждение
+AlertWarningTitle=Предупреждение
+CloseMaintenanceFormWarning=Сохранить изменения?
+ConfirmationAlertQuestion=Вы уверены?
+
+ValidationError=Контроль данных не выполнен, обнаружены следующие нарушения:
+MandatoryValidator=Необходимо заполнить
+UniqueValidator=Значение атрибута не уникально
+PositiveAttribute=Значение атрибута должно быть больше нуля
+
+DBMSForeignKeyViolation=Попытка нарушения внешнего ключа.<p>Возможные причины:<p>- при удалении: на объект имеются ссылки,<p>- при создании или изменении: ссылка на несуществующий объект
+DBMSPrimaryKeyViolation=Объект с заданными уникальными атрибутами существует
+DBMSLockConflict=Запись заблокирована другим пользователем
+
+FindDialogTitle=Поиск: {0}
+FindDialogWhat=Найти
+FindDialogWholeField=Слово целиком
+FindDialogAnyPartField=Любая часть слова
+FindDialogBeginningField=С начала слова
+FindDialogMatch=Условие вхождения
+FindDialogMatchCase=Учитывать регистр
+FindDialogFirst=<html>Пе<u>р</u>вое</html>
+FindDialogNext=<html><u>С</u>ледующее</html>
+FindDialogPrevious=<html><u>П</u>редыдущее</html>
+FindDialogBack=<html><u>В</u>ернуться</html>
+FindDialogInformationTitle=Результат поиска
+FindDialogQuestionTitle=Продолжение поиска
+FindDialogInformation=Искомое значение \"{0}\" не найдено
+FindDialogQuestionStart=Поиск значения \"{0}\" достиг конца данных. Продолжить поиск с начала?
+FindDialogQuestionEnd=Поиск значения \"{0}\" достиг начала данных. Продолжить поиск с конца?
+
+AdminMessageTitle=Сообщение администратора системы
+AdminMessageBody={1}.\nСообщение отправлено {0,date,medium} {0,time,medium}

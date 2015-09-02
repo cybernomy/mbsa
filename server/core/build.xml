@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: build.xml,v 1.23 2008/10/02 07:20:21 safonov Exp $ -->
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "../../build/etc/module.xml">
+]>
+
+<project default="all" name="MERP core">
+
+  <property file="../../build/build.properties"/>
+
+  &module;
+
+  <path id="project.class.path">
+    <path refid="module.class.path"/>
+  </path>
+
+  &common;
+
+  <target name="init" depends="mg.ejbmodule.init, mg.module.encode">
+    <property name="module.filename" value="005merpcore-ejb.jar"/>
+    <property name="ui.module.filename" value="005merpcore-ui.jar"/>
+    <property name="module.name" value="core"/>
+  	<property name="wb.module.filename" value="merpcore-wb.jar"/>
+  	
+  	<property name="badi.lib.dpnds" value="mgframework"/>
+  	<property name="wb.incl.src" value="**/*.java"/>	
+  	
+  </target>
+
+  <target name="compile" depends="init">
+    <antcall target="mg.javac">
+      <param name="javac-src" value="src/main/java"/>
+      <param name="javac-includes" value="**/*.java"/>
+      <param name="classdir" value="output/classes"/>
+    </antcall> 
+  </target>
+
+  <target name="resources" depends="init">
+  	<antcall target="mg.module.resources" />
+  	
+    <copy todir="output/resources">
+      <fileset dir="src/main/resources">
+      	<include name="**/*.png"/>
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="package" depends="init">
+    <antcall target="mg.ejbmodule.package">
+      <param name="module.filename" value="${module.filename}"/>
+    </antcall>
+    <antcall target="mg.uimodule.package">
+       <param name="module.filename" value="${ui.module.filename}"/>
+       <param name="package" value="com/mg/merp/${module.name}"/>
+    </antcall>  
+	<antcall target="mg.wbmodule.package">
+		<param name="module.filename" value="m${module.name}"/>
+		<param name="wb.incl.src" value="${wb.incl.src}"/>
+		<param name="badi.lib.version" value="1.0"/>
+		<param name="badi.lib.dpnds" value="${badi.lib.dpnds}"/>	
+  	</antcall>
+  	
+  	<antcall target="mg.module.manifest" >
+  		<param name="module.filename" value="${wb.module.filename}"/>
+  	</antcall>
+	<jar destfile="output/lib/${wb.module.filename}" manifest="${wb.module.filename}.MANIFEST.MF">
+    	<zipfileset dir="output/classes/com/mg/merp" prefix="com/mg/merp">
+    		<include name="**/model/Folder.class"/>
+    		<include name="**/model/SysClient.class"/>
+    		<include name="**/security/model/*.class"/>
+    		<include name="**/model/EntityTransformerMapping.class"/>
+		</zipfileset>
+	</jar>
+  </target>
+
+  <target name="deploy" depends="init,package">
+    <antcall target="mg.ejbmodule.deploy">
+       <param name="module.filename" value="${module.filename}"/>
+    </antcall> 
+  </target>
+
+  <target name="output" depends="init">
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${module.filename}"/>
+       <param name="output.dest" value="ejb"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${ui.module.filename}"/>
+       <param name="output.dest" value="ui"/>
+    </antcall>
+  	<antcall target="mg.model.output" />
+  	<copy file="src/META-INF/interbase/hibernate-service.xml" todir="../../build/output/service/mdatawarehouse-ib.har/META-INF" />
+  	<!-- copy file="src/META-INF/oracle/hibernate-service.xml" todir="../../build/output/service/mdatawarehouse-orcl.har/META-INF" /-->
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="m${module.name}.jar"/>
+       <param name="output.dest" value="workbench/lib"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="m${module.name}-src.jar"/>
+       <param name="output.dest" value="workbench/src"/>
+    </antcall>
+  	<antcall target="mg.module.output">
+  		<param name="module.filename" value="${wb.module.filename}"/>
+		<param name="output.dest" value="workbench/wb"/>
+  	</antcall>
+  </target>
+
+  <target name="clean">
+    <antcall target="mg.ejbmodule.clean"/>
+  </target>
+
+  <target name="all" depends="clean,compile,resources,package,output" />
+
+</project>

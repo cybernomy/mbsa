@@ -1,0 +1,82 @@
+﻿<?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_groups SYSTEM "modules/groups.xml">
+<!ENTITY chap_settings SYSTEM "modules/settings.xml">
+<!ENTITY chap_pml SYSTEM "modules/pml.xml">
+<!ENTITY chap_uo SYSTEM "modules/uo.xml">
+<!ENTITY chap_patterns SYSTEM "modules/patterns.xml">
+<!ENTITY chap_docs SYSTEM "modules/docs.xml">
+<!ENTITY chap_etap SYSTEM "modules/etap.xml">
+<!ENTITY chap_book SYSTEM "modules/book.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere">
+<!ENTITY payment "Журнал платежей">
+<!ENTITY cont_centr "Центр управления">
+<!ENTITY cash "Денежные средства">
+<!ENTITY acc "Бухгалтерский учёт">
+]>
+
+<book lang="ru">
+  <bookinfo>
+      <title>&payment; в системе &merp;. 
+      Руководство пользователя </title>
+      <releaseinfo>4.0.6</releaseinfo>
+      <copyright>
+	<year>1998</year>
+	<year>2008</year>
+	<holder>ООО &quot;Бизнестехнология&quot;</holder>
+      </copyright>    
+  </bookinfo>
+  
+  <toc/>
+  
+<preface id="begin">
+  <title>Введение</title>
+      <para>Данное руководство предназначено для пользователей, работающих  
+	с модулем &quot;&payment;&quot; системы &merp;. </para>
+	
+   <para>&pml; - обобщающий регистр, в котором накапливается информация
+   обо всех платежах, отражённых в системе &merp;.</para> 
+
+   <para>Модуль &quot;&payment;&quot; решает следующие задачи:</para>
+ <itemizedlist> 
+        <listitem><para>регистрация всех входящих и исходящих платежей в одном реестре; </para>	</listitem>
+	<listitem><para>осуществление связи товарных и других документов с платежами; </para></listitem>
+	<listitem><para>получение сведений о факте оплаты по заранее определённому типу документов, 
+	у которых требуется знать состояние оплаты; </para></listitem>
+	<listitem><para>автоматическое формирование &quot;Книги покупок&quot; и &quot;Книги продаж&quot; 
+	бухгалтерского учёта при условии отработки счетов-фактур в журнале платежей. </para></listitem>
+   </itemizedlist>
+
+<para>Модуль &quot;&payment;&quot; может применяться как совместно с модулем 
+бухгалтерского учёта, так и отдельно от него.</para>
+
+<para>Для функционирования модуля необходимо заполнить справочник &quot;Группы документов&quot;, 
+для автоматического формирования книг покупок и продаж необходимо указать соответствующие 
+параметры формирования в конфигурации бухгалтерского учёта. </para>
+
+<para>Вход в раздел &quot;&payment;&quot; осуществляется через главное меню системы: 
+<menuchoice><guimenu>&cont_centr;</guimenu>
+        <guisubmenu>&cash;</guisubmenu>
+        <guimenuitem>&payment;</guimenuitem>
+	</menuchoice>.</para>
+
+<para>Сведения в &payment; могут поступать из различных документов, 
+зарегистрированных в системе. Для отработки документов предусмотрены
+специальные этапы документооборота.</para>
+   
+  </preface>
+  
+  &chap_groups;
+  &chap_settings;
+  &chap_pml;
+  &chap_uo;
+  &chap_patterns;
+  &chap_docs;
+  &chap_etap;
+  &chap_book;
+  &chap_copyright;
+
+</book>

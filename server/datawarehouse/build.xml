@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: build.xml,v 1.4 2006/09/27 13:42:05 safonov Exp $ -->
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "file:../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "file:../../build/etc/module.xml">
+]>
+
+<project default="all" name="Data warehouse">
+
+  <property file="../../build/build.properties"/>
+
+  &module;
+
+  <path id="project.class.path">
+    <path refid="module.class.path"/>
+  </path>
+
+  &common;
+
+  <target name="init" >
+    <property name="ib.module.filename" value="mdatawarehouse-ib.har"/>
+    <property name="oracle.module.filename" value="mdatawarehouse-orcl.har"/>
+    <property name="module.name" value="datawarehouse"/>
+    <property name="intf.module.filename" value="mdatawarehouse-intf.jar"/>
+    <property name="intf.src.module.filename" value="mdatawarehouse-intf-src.jar"/>
+    
+    <mkdir dir="output/classes" />
+    <mkdir dir="output/lib" />
+  </target>
+
+  <target name="compile" depends="init">
+    <antcall target="mg.javac">
+      <param name="javac-src" value="src/main/java"/>
+      <param name="javac-includes" value="**/*.java"/>
+      <param name="classdir" value="output/classes"/>
+    </antcall> 
+  </target>
+
+  <target name="package" depends="init,compile">
+    <jar destfile="output/lib/${ib.module.filename}">
+      <zipfileset dir="output/classes" excludes="**/*.xml" />
+      <zipfileset dir="src/main/java" excludes="**/*.java **/*.oracle.*" />
+      <zipfileset dir="src/META-INF/interbase" prefix="META-INF" />
+    </jar>
+    <jar destfile="output/lib/${oracle.module.filename}">
+      <zipfileset dir="output/classes" excludes="**/*.xml" />
+      <zipfileset dir="src/main/java" excludes="**/*.java **/*.interbase.*" />
+      <zipfileset dir="src/META-INF/oracle" prefix="META-INF" />
+    </jar>
+    <jar destfile="output/lib/${intf.module.filename}">
+      <zipfileset dir="output/classes">
+        <include name="**/*.class"/>
+      </zipfileset>
+    </jar>
+    <jar destfile="output/lib/${intf.src.module.filename}">
+      <zipfileset dir="src/main/java" excludes="**/test/*">
+        <include name="**/*.java"/>
+      </zipfileset>
+    </jar>
+  </target>
+
+  <target name="deploy" depends="init,package">
+    <antcall target="mg.ejbmodule.deploy">
+       <param name="module.filename" value="${ib.module.filename}"/>
+    </antcall> 
+  </target>
+
+  <target name="output" depends="init">
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${ib.module.filename}"/>
+       <param name="output.dest" value="ejb"/>
+    </antcall>
+    <!-- antcall target="mg.module.output">
+       <param name="module.filename" value="${oracle.module.filename}"/>
+       <param name="output.dest" value="ejb"/>
+    </antcall-->
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${intf.module.filename}"/>
+       <param name="output.dest" value="interface"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${intf.src.module.filename}"/>
+       <param name="output.dest" value="interface"/>
+    </antcall>
+  </target>
+
+  <target name="clean">
+    <delete failonerror="false">
+      <fileset dir="output/classes" includes="**/*.class"/>
+      <fileset dir="output" includes="**/*.jar **/*.har"/>
+    </delete>
+  </target>
+
+  <target name="all" depends="clean,compile,package,output" />
+
+</project>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: AmCodeBr.mfd.xml,v 1.4 2006/11/30 11:52:46 konyashkina Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.account.support.ui.AmCodeBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.account.resources.formelements#AmCode.FormBr.Title" helpTopic="account#amrate_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMDBrowseHeaderMacros.xml" />
+
+	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+		<jfd:maintenanceTable id="master" scroll="true" >
+		</jfd:maintenanceTable>
+		<jfd:maintenanceTable id="detail" scroll="true" >
+		</jfd:maintenanceTable>
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMDBrowseFooterMacros.xml" />
+</jfd:form>

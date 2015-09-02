@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+<archive destination="output/lib" exploded="false" name="mgframework.jar" used="true">
+<folder excludes="" includes="" location="output/classes" name="classes" prefix="" project="" projectLocation="output/classes" used="true"/>
+<folder excludes="" includes="" location="output/resources" name="resources" prefix="" project="" projectLocation="output/resources" used="true"/>
+</archive>
+<archive destination="output/lib" exploded="false" name="mgframework-public-src.jar" used="true">
+<folder excludes="" includes="**/api/**/*.java **/generic/**/*.java" location="src/java" name="java" prefix="" project="" projectLocation="src/java" used="true"/>
+</archive>
+</configurations>

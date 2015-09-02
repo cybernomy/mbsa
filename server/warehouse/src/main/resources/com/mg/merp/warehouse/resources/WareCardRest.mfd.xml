@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $$Id: WareCardRest.mfd.xml,v 1.3 2007/04/03 05:57:22 poroxnenko Exp $$ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver"
+	verticalGap="5"
+	controller="com.mg.merp.warehouse.support.ui.WareCardRest"
+	title="resource://com.mg.merp.warehouse.resources.formelements#WareCard.Rest.Title"
+	helpTopic="warehouse#ksu_html">
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+		<jfd:border style="bevel" type="raised" />
+
+		<!-- jfd:field id="Catalog" longField="true" />
+			<jfd:field id="Mol" longField="true" /-->
+
+		<jfd:container id="CardNumberFields" layout="jfd:box"
+			label="resource://com.mg.merp.warehouse.resources.formelements#WareCard.Rest.DocNumber">
+			<jfd:field id="CardNumberFrom" />
+			<jfd:field id="CardNumberTo" />
+		</jfd:container>
+		<jfd:field id="PluCode" sameLine="true"/>
+		
+		<jfd:field id="Code" />
+		<jfd:field id="BarCode" sameLine="true"/>
+		
+		<jfd:field id="Name" />
+		<jfd:field id="Mol" readOnly="false"/>
+		
+		<jfd:container id="SupplyNormFields" layout="jfd:box"
+			label="resource://com.mg.merp.warehouse.resources.formelements#WareCard.Rest.SupplyNorm">
+			<jfd:field id="SupplyNormFrom" />
+			<jfd:field id="SupplyNormTo" />
+		</jfd:container>
+		
+		<jfd:container id="ReserveFields" layout="jfd:box"
+			label="resource://com.mg.merp.warehouse.resources.formelements#WareCard.Rest.Reserve">
+			<jfd:field id="ReserveFrom" />
+			<jfd:field id="ReserveTo" />
+		</jfd:container>
+		
+		<jfd:container id="QuantityFields" layout="jfd:box"
+			label="resource://com.mg.merp.warehouse.resources.formelements#WareCard.Rest.Quantity">
+			<jfd:field id="QuantityFrom" />
+			<jfd:field id="QuantityTo" />
+		</jfd:container>
+		
+		<jfd:container id="PlanInFields" layout="jfd:box"
+			label="resource://com.mg.merp.warehouse.resources.formelements#WareCard.Rest.PlanIn">
+			<jfd:field id="PlanInFrom" />
+			<jfd:field id="PlanInTo" />
+		</jfd:container>
+		
+		<jfd:container id="PlanOutFields" layout="jfd:box"
+			label="resource://com.mg.merp.warehouse.resources.formelements#WareCard.Rest.PlanOut">
+			<jfd:field id="PlanOutFrom" />
+			<jfd:field id="PlanOutTo" />
+		</jfd:container>
+		<jfd:include
+			name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
+
+	</jfd:container>
+	<jfd:include
+		name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+
+</jfd:form>

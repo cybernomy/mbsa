@@ -1,0 +1,77 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY merp "Millennium ERP">
+<!ENTITY tbl "Табельный учёт">
+]>  -->
+<chapter id="patternhead">
+  <title>Шаблоны графиков</title>
+    
+    <para>Вход в справочник &quot;Шаблоны графиков&quot; через главное меню 
+    <menuchoice>
+    <guimenu>Центр управления</guimenu>
+    <guisubmenu>Управление персоналом</guisubmenu>
+    <guimenuitem>Шаблоны графиков</guimenuitem>
+    </menuchoice>.
+    </para>
+    
+    <para>Шаблоны используются для заполнения Графиков работ в табельном учёте.</para>
+    
+    <para>На закладке <emphasis>&quot;Сведения&quot;</emphasis> содержится следующая информация: </para>
+    
+     <figure>
+      <title>Добавление шаблона графика</title>
+      <mediaobject><imageobject><imagedata fileref="images/patternhead.gif"/></imageobject></mediaobject>
+    </figure>
+    
+    <para><guibutton>Код</guibutton>. Краткое уникальное наименование данного шаблона
+    для использования в системе &merp;.</para>
+    
+    <para><guibutton>Наименование</guibutton>. Наименование данного шаблона.</para>
+    
+    <para><guibutton>Длительность в днях</guibutton>. Недельный тип по умолчанию 
+    подразумевает длительность в 7 дней, а для сменного длительность устанавливается
+    в зависимости от продолжительности сменного цикла.</para>
+    
+    <para><guibutton>Тип шаблона</guibutton>. Предусмотрено два типа шаблонов:</para>
+    
+    <itemizedlist>
+  <listitem><para><emphasis>&quot;Недельный&quot;.</emphasis> Недельный шаблон рассчитан на 7 дней. 
+  При заполнении графика по недельному шаблону осуществляется автоматическая привязка к началу недели
+  (первый день шаблона привязывается к понедельнику).</para></listitem>
+  <listitem><para><emphasis>&quot;Сменный&quot;.</emphasis> Длительность сменного шаблона 
+  устанавливается пользователем. При заполнении графика можно задать смещение шаблона относительно
+  начала периода.</para></listitem>
+  </itemizedlist>
+
+    <para>На закладке &quot;Шаблон&quot; появляется сетка, число столбцов в которой равно 
+    значению поля  <guibutton>&quot;Длительность в днях&quot;</guibutton> (для недельного шаблона - 7); 
+    а число строк - количеству типов времени с учётом по часам.</para>
+    
+    <para><link linkend="grid">Заполнить шаблон можно с помощью клавиатуры или пунктов 
+    контекстного меню.</link></para>
+    
+    <para>Вот пример недельного шаблона:</para>
+    
+    <figure>
+      <title>Недельный шаблон</title>
+      <mediaobject><imageobject><imagedata fileref="images/patternspec.gif"/></imageobject></mediaobject>
+    </figure>
+    
+    <para>Этот шаблон рассчитан на 7 дней, в нём два типа времени - 
+    &quot;рабочее&quot; и &quot;сверхурочные&quot;. Первые пять дней - рабочие, 
+    продолжительностью 8 часов. Шестой и седьмой дни - выходные.</para>
+    <para>Вот пример сменного шаблона с длительностью в 4 дня:</para>
+    
+     <figure>
+      <title>Сменный шаблон</title>
+      <mediaobject><imageobject><imagedata fileref="images/shift.gif"/></imageobject></mediaobject>
+    </figure>
+    
+    <para>В этом шаблоне первый день - рабочий (он длится 24&nbsp;часа), 
+    а последующие три дня - выходные.</para>
+
+    <para>См. также: <link linkend="schedulehead">Графики работ в табельном учёте</link></para>
+  
+</chapter>

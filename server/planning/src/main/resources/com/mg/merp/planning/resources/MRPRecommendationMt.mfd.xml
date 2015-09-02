@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: MRPRecommendationMt.mfd.xml,v 1.5 2007/07/30 10:36:07 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.planning.resources.formelements#MRPRecommmend.FormMt.Title" helpTopic="planning#mrprecom_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+
+	 	<jfd:field id="MrpVersionControl" />
+	 	<jfd:field id="Catalog" readOnly="true" />
+	 	<jfd:field id="Measure" readOnly="true" />
+	 	<jfd:field id="Warehouse" />
+	 	<jfd:field id="SourceWarehouse" />
+	 	<jfd:field id="Vendor" />
+	 	<jfd:field id="PpReference" />
+	 	<jfd:field id="RequiredDate" />
+	 	<jfd:field id="MrpQuantity" />	
+	 	<jfd:field id="OrderQty" />
+	 	<jfd:field id="PurchaseLeadTime" />
+	 	<jfd:field id="OrderDate" />
+	 	<jfd:field id="MrpRescheduleFlag" readOnly="true" />
+	 	<jfd:field id="MrpSource" readOnly="true" />
+	 	<jfd:field id="MrpArrearsFlag" />
+	 	<jfd:field id="MrpOrdered" readOnly="true" />
+	 	<jfd:field id="FirmPlanSuggestedOrder" />
+	 	<jfd:field id="PurchaseOrTransfer" editorType="comboBox" />
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

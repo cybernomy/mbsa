@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!--  Millennium Business Suite Anywhere System.                             -->
+<!-- ======================================================================= -->
+
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.settlement.support.ui.ContractorCardRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.Title" >
+
+	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+		<jfd:field id="code" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.Code" fieldGroup="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.PartnerGroup" />
+	 	<jfd:field id="name" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.Name" sameLine="true" />
+
+		<jfd:field id="totalIncomeFrom" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.From" fieldGroup="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.TotalIncomeGroup" />
+		<jfd:field id="totalIncomeTo" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.To" sameLine="true" />
+		
+		<jfd:field id="totalExpensesFrom" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.From" fieldGroup="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.TotalExpensesGroup" />
+		<jfd:field id="totalExpensesTo" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.To" sameLine="true" />
+		
+		<jfd:field id="debitorInDebSumFrom" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.From" fieldGroup="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.DebitorInDebSumGroup" />
+		<jfd:field id="debitorInDebSumTo" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.To" sameLine="true" />
+		
+		<jfd:field id="creditorInDebSumFrom" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.From" fieldGroup="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.CreditorInDebSumGroup" />
+		<jfd:field id="creditorInDebSumTo" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.To" sameLine="true" />
+		
+		<jfd:field id="debitorInDebLimitFrom" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.From" fieldGroup="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.DebitorInDebLimitGroup" />
+		<jfd:field id="debitorInDebLimitTo" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.To" sameLine="true" />
+
+		<jfd:field id="creditorInDebLimitFrom" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.From" fieldGroup="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.CreditorInDebLimitGroup" />
+		<jfd:field id="creditorInDebLimitTo" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.To" sameLine="true" />
+		
+		<jfd:field id="planIncomeFrom" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.From" fieldGroup="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.PlanIncomeGroup" />
+		<jfd:field id="planIncomeTo" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.To" sameLine="true" />
+		
+		<jfd:field id="planExpensesFrom" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.From" fieldGroup="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.PlanExpensesGroup" />
+		<jfd:field id="planExpensesTo" text="resource://com.mg.merp.settlement.resources.formelements#ContractorCardRest.To" sameLine="true" />
+		
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
+		
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+
+</jfd:form>

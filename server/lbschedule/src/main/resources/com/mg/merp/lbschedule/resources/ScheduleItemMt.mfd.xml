@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: ScheduleItemMt.mfd.xml,v 1.6 2007/04/17 12:52:51 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.lbschedule.support.ui.ScheduleItemMt" title="resource://com.mg.merp.lbschedule.resources.formelements#Item.FormMt.Title" helpTopic="liability#items_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >	
+		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.lbschedule.resources.formelements#Item.Total.Tab" >
+ 			<jfd:integerField id="Num" label="resource://com.mg.merp.lbschedule.resources.formelements#Item.Num" />
+			<jfd:field id="ItemKind" />				
+			<jfd:field id="Status"/>						
+			<jfd:field id="Comments" />		
+	 		<jfd:field id="FromSource" actionListener="FromSourceChanged" />
+			<jfd:field id="ResourceFrom"  sameLine="true"/>			
+			<jfd:field id="From" />	
+			<jfd:field id="ToSource" actionListener="ToSourceChanged" />						
+			<jfd:field id="ResourceTo"  sameLine="true"/>
+			<jfd:field id="To" />
+			<jfd:field id="HasSpec" actionListener="HasSpecChanged" />	
+			<jfd:field id="SpecSource" editorType="comboBox" actionListener="SpecSourceChanged" />									
+	 		<jfd:field id="PriceListHead" />
+			<jfd:field id="PriceType" sameLine="true"/> 
+		</jfd:container>		
+		<jfd:container id="termFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.lbschedule.resources.formelements#Item.Term.Tab" helpTopic="liability#summ_html" >
+			<jfd:field id="IsAbsDate" />
+			<jfd:field id="DateRelItem" />		
+			<jfd:field id="IsDateRelDoc" sameLine="true"/>
+			<jfd:field id="IsDateRelEnd" />	
+			<jfd:field id="DateOffSet" />						
+			<jfd:field id="DateOffSetKind" showLabel="false" sameLine="true"/>							
+			<jfd:field id="ResultDate" />		
+			<jfd:button id="CalcDate" sameLine="true" text="resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Button.CalcDate" actionListener="CalculateDates" /> 				
+			<jfd:field id="ResultDateEnd" />	
+			<jfd:field id="CurCode" />	
+			<jfd:field id="CurRateType" />					
+			<jfd:field id="CurRateAuthority" />				
+			<jfd:field id="IsAbsSum" />	
+			<jfd:field id="SumRelItem" />					
+			<jfd:field id="IsSumRelDoc" sameLine="true"/>
+			<jfd:field id="Perc"  />						
+			<jfd:field id="IsRelFact" sameLine="true"/>						
+			<jfd:field id="ResultSum" />
+			<jfd:button id="CalcSumma" text="resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Button.CalcDate" sameLine="true" actionListener="CalculateSums" /> 									
+			<jfd:field id="FactSum" readOnly="true" />	 
+	 	</jfd:container>
+		<jfd:container id="specFields" layout="jfd:box" alignment="expand_expand" tabTitle="resource://com.mg.merp.lbschedule.resources.formelements#Item.Spec.Tab" >
+			<jfd:table id="specItem" scroll="true" alignment="expand_expand">
+				<jfd:popupMenu>
+					<jfd:menuItem id="addSpec" text="resource://com.mg.merp.lbschedule.resources.formelements#MenuItem.AddSpec" actionListener="AddSpec" />
+					<jfd:menuItem id="editSpec" text="resource://com.mg.merp.lbschedule.resources.formelements#MenuItem.EditSpec" actionListener="EditSpec" />
+					<jfd:menuItem id="removeSpec" text="resource://com.mg.merp.lbschedule.resources.formelements#MenuItem.RemoveSpec" actionListener="RemoveSpec" />
+					<jfd:menuItem id="viewSpec" text="resource://com.mg.merp.lbschedule.resources.formelements#MenuItem.ViewSpec" actionListener="ViewSpec" />
+					<jfd:separator />
+					<jfd:menuItem id="refreshSpec" text="resource://com.mg.merp.lbschedule.resources.formelements#MenuItem.RefreshSpec" actionListener="RefreshSpec" />
+				</jfd:popupMenu>
+			</jfd:table>
+		</jfd:container>		
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

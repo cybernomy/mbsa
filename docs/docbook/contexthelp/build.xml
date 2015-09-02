@@ -1,0 +1,235 @@
+<!-- $Id: build.xml,v 1.23 2008/05/20 13:00:57 safonov Exp $ -->
+<project name="contexthelp" default="all.doc" basedir=".">
+
+	<target name="all.doc" depends="root,scheduler,account,baiengine,bpm,contract,core,crm,discount,docprocess,finance,liability,manufacture,mfreference,overall,paymentalloc,paymentcontrol,personnelref,planning,retail,salary,security,settlement,timeboard,reference,warehouse"/>
+	
+	<target name="root">
+		<ant dir="root"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="root"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+
+	<target name="account">
+		<ant dir="account"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="account"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+	
+	<target name="baiengine">
+		<ant dir="baiengine"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="baiengine"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+	
+	<target name="bpm">
+		<ant dir="bpm"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="bpm"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+	
+	<target name="contract">
+		<ant dir="contract"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="contract"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+	
+	<target name="core">
+		<ant dir="core"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="core"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+
+	<target name="scheduler">
+		<ant dir="scheduler"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="scheduler"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+
+	<target name="crm">
+		<ant dir="crm"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="crm"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+	
+	<target name="discount">
+		<ant dir="discount"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="discount"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+	
+	<target name="docprocess">
+		<ant dir="docprocess"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="docprocess"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+	
+	<target name="finance">
+		<ant dir="finance"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="finance"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+	
+	<target name="liability">
+		<ant dir="liability"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="liability"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+
+	<target name="manufacture">
+		<ant dir="manufacture"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="manufacture"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+
+	<target name="mfreference">
+		<ant dir="mfreference"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="mfreference"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+
+
+	<target name="overall">
+		<ant dir="overall"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="overall"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+	
+	<target name="personnelref">
+		<ant dir="personnelref"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="personnelref"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+
+	<target name="paymentalloc">
+		<ant dir="paymentalloc"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="paymentalloc"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+
+
+	<target name="paymentcontrol">
+		<ant dir="paymentcontrol"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="paymentcontrol"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+	
+	<target name="planning">
+		<ant dir="planning"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="planning"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+
+	<target name="retail">
+		<ant dir="retail"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="retail"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+
+	<target name="salary">
+	 	<ant dir="salary"/>   
+		<antcall target="contexthelp.output">
+		  	<param name="docbook.name" value="salary"/>
+		  	<param name="lang" value="ru"/>
+  	  </antcall>		
+	</target>
+	
+	<target name="security">
+		<ant dir="security"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="security"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+	
+	<target name="settlement">
+		<ant dir="settlement"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="settlement"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+	
+	<target name="timeboard">
+		<ant dir="timeboard"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="timeboard"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+	
+	<target name="reference">
+		<ant dir="reference"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="reference"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+	
+	<target name="warehouse">
+		<ant dir="warehouse"/>
+		<antcall target="contexthelp.output">
+			<param name="docbook.name" value="warehouse"/>
+			<param name="lang" value="ru"/>
+		</antcall>
+	</target>
+
+	<target name="contexthelp.output">
+	    <!-- HTML -->
+	    <mkdir dir="../../output/contexthelp/${lang}/html/${docbook.name}"/>
+	    <copy todir="../../output/contexthelp/${lang}/html/${docbook.name}">
+	      <fileset dir="${docbook.name}/build/${lang}/html"/>
+	    </copy>
+	    <!-- PDF -->
+	    <mkdir dir="../../output/contexthelp/${lang}/pdf"/>
+	    <copy file="${docbook.name}/build/${lang}/pdf/${docbook.name}.pdf" 
+	          todir="../../output/contexthelp/${lang}/pdf" failonerror="false" />
+	    <!-- Application context help -->
+	    <copy todir="../../output/contexthelp/${lang}/javahelp/${docbook.name}" >
+	      <fileset dir="${docbook.name}/build/${lang}/javahelp"/>
+	    </copy>
+	    <!-- HTML Help -->
+	    <!-- mkdir dir="../../output/contexthelp/${lang}/htmlhelp"/>
+	    <copy file="${docbook.name}/build/${lang}/htmlhelp/${docbook.name}.chm" 
+	          todir="../../output/contexthelp/${lang}/htmlhelp"/ -->
+	  </target>  
+</project>

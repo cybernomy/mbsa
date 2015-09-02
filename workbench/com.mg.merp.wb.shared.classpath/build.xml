@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "file:../common.xml">
+]>
+
+<project default="all" name="Millennium Workbench shared libs">
+
+  &common;
+  <property name="include.libs.wb.dir" value="../../build/output/workbench/wb"/>
+  <property name="include.libs.jboss.dir" value="../../thirdparty/jboss/lib"/>
+  <property name="include.libs.jboss" value="jbossall-client.jar javassist.jar"/>
+  <property name="include.libs.hibernate" value="../../thirdparty/hibernate/lib/hibernate3.jar"/>
+  <property name="include.libs.commons.logging" value="../../thirdparty/apache-logging/lib/commons-logging.jar"/>
+
+  <path id="project.class.path">
+ 	<path refid="thirdparty.path"/>
+  </path>
+	
+  <target name="package" depends="compile">
+    <copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}">  
+    	<fileset dir="">
+			<include name="plugin*.*"/>
+    		<include name="META-INF/MANIFEST.MF"/>
+    	</fileset>
+    	<fileset dir="${include.libs.jboss.dir}" includes="${include.libs.jboss}"/>
+    	<fileset file="${include.libs.hibernate}"/>
+    	<fileset file="${include.libs.commons.logging}"/>
+   		<fileset dir="${include.libs.wb.dir}"/>
+  	</copy>
+  	<antcall target="cmn.package.classes"/>
+  </target>
+	
+  <target name="all" depends="clean,compile,package,output" />	
+	
+</project>

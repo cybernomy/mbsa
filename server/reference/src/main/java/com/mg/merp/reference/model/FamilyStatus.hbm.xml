@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.reference.model.FamilyStatus" table="REF_FAMILY_STATUS">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">REF_FAMILY_STATUS_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="NaturalPerson" class="com.mg.merp.reference.model.NaturalPerson">
+      <column name="PERSON_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="FamilyStatusKind" class="com.mg.merp.reference.model.FamilyStatusKind">
+      <column name="STATUSKIND_ID" not-null="true" />
+    </many-to-one>
+    <property name="BeginDate" type="java.util.Date">
+      <column name="BEGINDATE" not-null="true" sql-type="TIMESTAMP" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

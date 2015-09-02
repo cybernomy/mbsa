@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: FinOperModelBr.mfd.xml,v 1.4 2006/11/23 14:51:28 konyashkina Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.finance.support.ui.FinOperModelBr" title="resource://com.mg.merp.finance.resources.formelements#FinOperModel.FormBr.Title" helpTopic="finance#temp_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml" />
+
+	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true" >
+		</jfd:maintenanceTree>
+		<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
+		</jfd:maintenanceTable>
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+
+</jfd:form>

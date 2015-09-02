@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: index.xml,v 1.1 2006/12/01 15:36:05 konyashkina Exp $ -->
+
+<index version="1.0">
+
+  <indexitem text="Заказ-наряды на производство">
+     <indexentry text="Заказ-наряды на производство" target="job_html" />
+     <indexentry text="Планирование" target="planjob_html" />
+     <indexentry text="Операции" target="jobroute_html" />
+     <indexitem text="Ресурсы операции ЗНП">
+  	  <indexentry text="Материалы операции ЗНП" target="jobmaterial_html" />
+	  <indexentry text="Оборудование операции ЗНП" target="jobmachine_html" />
+	   <indexentry text="Рабочая сила операции ЗНП" target="joblabor_html" />
+      </indexitem>
+    <indexentry text="Расшифровка стоимости" target="costdetail_html" />  
+   </indexitem>
+  
+  <indexitem text="Производственные документы">
+    <indexentry text="Акты выпуска продукции" target="outprodhead_html" />
+  <!--  <indexitem text="Документы на списание ресурсов">
+       	<indexentry text="Акт на списание времени, отработанного оборудованием в НЗП" target="" />
+	<indexentry text="Акт на списание времени, отработанного РС в НЗП" target="" />
+	<indexentry text="Акт на списание материалов в НЗП" target="" />
+    </indexitem>  -->
+  <!--   <indexitem text="Документы на списание потерь">
+	<indexentry text="Акт на списание потерь времени, отработанного оборудованием" target="" />
+	<indexentry text="Акт на списание потерь времени, отработанного РС" target="" />
+	<indexentry text="Акт на списание потерь материалов" target="" />
+	<indexentry text="Акт на списание потерь с операции" target="" />
+    </indexitem>  -->
+    <indexentry text="Документы по отклонениям" target="vardochead_html" />
+  </indexitem>
+  
+</index>

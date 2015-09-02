@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+<archive destination="output/lib" exploded="false" name="005merpcore-ejb.jar" used="true">
+<folder excludes="**/ui/** **/client/**" includes="" location="output/classes" name="classes" prefix="" project="" projectLocation="output/classes" used="true"/>
+<file location="src/META-INF/ejb-jar.xml" name="ejb-jar.xml" prefix="META-INF" project="" projectLocation="src/META-INF/ejb-jar.xml" used="true"/>
+<file location="src/META-INF/jboss.xml" name="jboss.xml" prefix="META-INF" project="" projectLocation="src/META-INF/jboss.xml" used="true"/>
+</archive>
+<archive destination="output/lib" exploded="false" name="merp-applet-client.jar" used="true">
+<folder excludes="" includes="" location="output/classes/com/mg/merp/core/client/applet" name="applet" prefix="com/mg/merp/core/client/applet" project="" projectLocation="output/classes/com/mg/merp/core/client/applet" used="true"/>
+</archive>
+<archive destination="output/lib" exploded="false" name="merpcore-web.war" used="true">
+<folder excludes="" includes="*.class" location="output/classes/com/mg/merp/core/support/ui" name="ui" prefix="WEB-INF/classes/com/mg/merp/core/support/ui" project="" projectLocation="output/classes/com/mg/merp/core/support/ui" used="true"/>
+<file location="src/main/resources/WEB-INF/web.xml" name="web.xml" prefix="WEB-INF" project="" projectLocation="src/main/resources/WEB-INF/web.xml" used="true"/>
+<file location="src/main/resources/WEB-INF/jboss-web.xml" name="jboss-web.xml" prefix="WEB-INF" project="" projectLocation="src/main/resources/WEB-INF/jboss-web.xml" used="true"/>
+<file location="src/main/resources/merpcore-web.war/merpclient.jsp" name="merpclient.jsp" prefix="" project="" projectLocation="src/main/resources/merpcore-web.war/merpclient.jsp" used="true"/>
+<file location="output/lib/ulc-base-client.jar" name="ulc-base-client.jar" prefix="lib" project="" projectLocation="output/lib/ulc-base-client.jar" used="true"/>
+<file location="output/lib/ulc-servlet-client.jar" name="ulc-servlet-client.jar" prefix="lib" project="" projectLocation="output/lib/ulc-servlet-client.jar" used="true"/>
+<file location="output/lib/ulc-applet-client.jar" name="ulc-applet-client.jar" prefix="lib" project="" projectLocation="output/lib/ulc-applet-client.jar" used="true"/>
+<file location="src/main/resources/com/mg/merp/core/resources/GlobalMenu.xml" name="GlobalMenu.xml" prefix="WEB-INF/classes/com/mg/merp/core/resources" project="" projectLocation="src/main/resources/com/mg/merp/core/resources/GlobalMenu.xml" used="true"/>
+<file location="output/lib/merp-applet-client.jar" name="merp-applet-client.jar" prefix="lib" project="" projectLocation="output/lib/merp-applet-client.jar" used="true"/>
+<file location="output/lib/substance-lite.jar" name="substance-lite.jar" prefix="lib" project="" projectLocation="output/lib/substance-lite.jar" used="true"/>
+<folder excludes="" includes="" location="output/resources" name="resources" prefix="WEB-INF/classes" project="" projectLocation="output/resources" used="true"/>
+</archive>
+</configurations>

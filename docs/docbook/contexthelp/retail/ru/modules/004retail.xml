@@ -1,0 +1,21 @@
+﻿<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY merp "Millennium ERP">
+]> -->
+<chapter id="features">
+  <title>Дополнительные признаки</title>
+ 
+    <para>На данной закладке есть возможность указать или просмотреть список
+    дополнительных признаков, которые присущи только этому документу.  </para>
+    
+    <para>Если для розничных документов в системе не назначено дополнительных
+    признаков, закладка &quot;Дополнительные признаки&quot; не появится. </para>
+    
+    <para>Вы можете вывести дополнительные признаки отдельным полем в список. 
+    Для этого вызовите функцию &quot;Настройка списка&quot; и отметьте флагом те поля, 
+    которые Вы хотите вывести в список. </para>
+
+</chapter>

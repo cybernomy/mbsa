@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="/mgframework"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/borland-dx/lib/dx.jar"/>
+	<classpathentry kind="con" path="org.jboss.ide.eclipse.jdt.ejb3.wizards.core.classpath.EJB3_CONTAINER/JBoss 4.0.4 (localhost)"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/mcore"/>
+	<classpathentry kind="output" path="output/classes"/>
+</classpath>

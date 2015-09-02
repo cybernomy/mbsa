@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: FinOperMt.mfd.xml,v 1.9 2007/12/03 15:06:09 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.finance.support.ui.FinOperMt" title="resource://com.mg.merp.finance.resources.formelements#FinOper.FormMt.Title" helpTopic="finance#finoper_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.finance.resources.formelements#FinTurnAcc.FormMt.Tab.Total" >		
+		  	<jfd:field id="KeepDate" /> 	
+		  	<jfd:field id="Planned" sameLine="true"/> 
+		  	<jfd:field id="Comment" />		  	
+			<jfd:include name="com/mg/merp/finance/resources/OperContractDocMacros.xml" />		  			  			  	  			  			  			
+		 	<jfd:include name="com/mg/merp/finance/resources/OperBaseDocMacros.xml" />		  			  			  	  			  			  	
+	 		<jfd:include name="com/mg/merp/finance/resources/OperDocAttributeMacros.xml" />		  	
+			<jfd:field id="SumCur" readOnly="true" />
+			<jfd:field id="SumNat" showLabel="false" sameLine="true" readOnly="true" />
+			<jfd:include name="com/mg/merp/finance/resources/CurrencyDocumentMacros.xml" />		  			  	
+			<jfd:field id="From" />		
+			<jfd:field id="To" sameLine="true"/>
+		  	<jfd:field id="Responsible" /> 		
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					  	 
+		</jfd:container>
+		<jfd:container id="specFields" layout="jfd:split" alignment="expand_expand" orientation="ver" tabTitle="resource://com.mg.merp.finance.resources.formelements#FinTurnAcc.FormMt.Tab.Spec" >				
+	  		<jfd:maintenanceTable id="specAccount" scroll="true" alignment="expand_top">
+			</jfd:maintenanceTable>		
+	  		<jfd:maintenanceTable id="specFeature" scroll="true" alignment="expand_expand">
+			</jfd:maintenanceTable>				
+		</jfd:container>	
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

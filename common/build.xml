@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: build.xml,v 1.1 2006/03/27 11:39:58 safonov Exp $ -->
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "file:../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "file:../../build/etc/module.xml">
+]>
+
+<project default="all" name="Common components">
+
+	<property file="../../build/build.properties"/>
+
+	<target name="uicomponent">
+		<ant dir="${basedir}/uicomponent" target="${action}" />
+	</target>
+
+	<target name="all">
+		<antcall target="uicomponent">
+			<param name="action" value="all"/>
+		</antcall>
+	</target>
+
+</project>

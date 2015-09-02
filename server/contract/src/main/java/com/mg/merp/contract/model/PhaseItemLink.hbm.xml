@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.contract.model.PhaseItemLink" table="PHASEITEM_LINK">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">PHASEITEM_LINK_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="PhaseItemPlan" class="com.mg.merp.contract.model.PhasePlanItem">
+      <column name="PLANITEM_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="PhaseItemFact" class="com.mg.merp.contract.model.PhaseFactItem">
+      <column name="FACTITEM_ID" not-null="false" />
+    </many-to-one>
+    <property name="DistSum" type="java.math.BigDecimal">
+      <column name="DISTSUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

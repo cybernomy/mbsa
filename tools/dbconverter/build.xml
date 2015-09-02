@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "../../build/etc/module.xml">
+]>
+
+<project default="all" name="Standalone database converter">
+
+  <property file="../../build/build.properties"/>
+
+  <path id="project.class.path">
+    <fileset dir="../../thirdparty">
+      <include name="**/*.jar"/>
+    </fileset>
+    <fileset dir="../ant/lib">
+      <include name="**/*.jar"/>
+    </fileset>
+    <pathelement path="../../server/framework/output/classes"/>
+  </path>
+
+  <path id="anttask.class.path">
+  	<path refid="project.class.path"/>
+  	<pathelement path="output/classes"/>
+  </path>
+
+  &module;
+	
+  &common;
+
+  <target name="init" >
+  	<property name="module.filename" value="dbconverter.jar"/>
+
+    <mkdir dir="output/classes" />
+    <mkdir dir="output/lib" />
+  </target>
+
+  <target name="compile" depends="init">
+    <antcall target="mg.javac">
+      <param name="javac-src" value="src/main/java"/>
+      <param name="javac-includes" value="**/*.java"/>
+      <param name="classdir" value="output/classes"/>
+    </antcall> 
+  </target>
+
+  <target name="package" depends="init">
+  	<antcall target="mg.module.manifest" >
+      <param name="module.filename" value="${module.filename}"/>
+  	</antcall>
+    <jar destfile="output/lib/${module.filename}" manifest="${module.filename}.MANIFEST.MF" >
+      <zipfileset dir="output/classes"/>
+    </jar>
+  </target>
+
+  <target name="clean">
+    <delete failonerror="false">
+      <fileset dir="output/classes" includes="**/*.class"/>
+      <fileset dir="output/lib" includes="**/*.jar"/>
+    </delete>
+  </target>
+
+  <target name="convert.database" depends="init">
+    <taskdef name="convertDb" classname="com.mg.framework.dbconverter.ant.ConverterTask" classpathref="anttask.class.path"/>
+  	
+  	<echo message="start database convertation"/>
+  	<convertDb
+  		databaseName="${database.name}"
+  		dbmsPath="${database.system.path}"
+  		jdbcDriverClass="${database.jdbcdriverclass}"
+  		dbUrl="${database.url}"
+  		scriptPath="${database.scriptpath}"
+  		scriptLogDir="${database.scriptlogdir}"
+  		tempDir="${database.tmpdir}"
+  		userName="${database.username}"
+  		password="${database.password}"
+  		characterSet="${database.characterset}"
+  	/>
+  </target>
+
+  <target name="all" depends="clean,compile,package" />
+
+</project>

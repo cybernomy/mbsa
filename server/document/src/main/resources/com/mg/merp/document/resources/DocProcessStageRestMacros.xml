@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: DocProcessStageRestMacros.xml,v 1.1 2008/08/15 06:30:03 sharapov Exp $ -->
+
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="docProcessStageRest" layout="jfd:box" columns="3" alignment="expand_expand" longField="true" label="resource://com.mg.merp.document.resources.formelements#DocProcessStageRest.docProcessStage">
+ 		<jfd:field id="docProcessStage" alignment="expand_expand" showLabel="false" searchHelp="com.mg.merp.document.support.ui.DocProcessStageByDocTypeSearchHelp" />
+ 		<jfd:field id="isDpsCompleted" />
+		<jfd:field id="isDpsCompletedPartly" />
+</jfd:container>

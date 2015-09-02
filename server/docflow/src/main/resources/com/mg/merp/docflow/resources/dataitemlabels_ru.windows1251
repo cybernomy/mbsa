@@ -1,0 +1,62 @@
+# Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.
+# All rights reserved
+#
+# This program is the proprietary and confidential information
+# of BusinessTechnology, Ltd. and may be used and disclosed only
+# as authorized in a license agreement authorizing and
+# controlling such use and disclosure
+#
+# Millennium Business Suite Anywhere System.
+
+# $Id: dataitemlabels_ru.windows1251,v 1.10 2007/12/14 08:50:00 safonov Exp $
+
+Name=Наименование
+Code=Код
+
+Partial=Возможно частичная отработка
+PrevComplete=Отрабатывать все из предыдущего этапа
+Dependent=Зависит от предыдущего
+UseCurrentDate=Использовать текущую дату
+ValueOutOfBound=Разрешить превышение значений
+
+Comment=Комментарий
+Priority=Приоритет
+
+StageAction=Этап
+StageAction.Name=Системное наименование
+StageAction.CreateDoc=Создает документ
+
+JoinFlow=Сумматор потока
+ForkFlow=Делитель потока
+
+PrePerformBusinessAddin=<html>Бизнес расширение<br>до выполнения</html>
+PreRollbackBusinessAddin=<html>Бизнес расширение<br>до отката</html>
+PerformBusinessAddin=<html>Бизнес расширение<br>выполнения (BAi)</html>
+RollbackBusinessAddin=<html>Бизнес расширение<br>отката (BAi)</html>
+
+LinkDocSection=Секция документа
+LinkDocType=Тип документа
+LinkDocModelFolder=Папка образца
+LinkDocDestFolder=Папка приемник
+ShowNewDocument=Показывать полученный документ
+LinkDocRollback=Откатывать ДО
+DocProcessInteractiveKind=<html>Интерактивность<br>отката ДО</html>
+InteractiveKind.Standart=Стандартный
+InteractiveKind.Silent=Тихий
+InteractiveKind.Inherited=Применить из текущего ДО
+
+ActionUserGrant=Права на этап
+ActionUserGrant.None=Нет прав
+ActionUserGrant.Execute=Запуск
+ActionUserGrant.Rollback=Откат
+ActionUserGrant.Both=Все права
+
+DocAction.Type=Тип действия
+DocAction.Type.Stage=Этап
+DocAction.Type.Update=Изменение
+DocAction.Type.Delete=Удаление
+
+DocFlowStage.State=Состояние этапа
+DocFlowStage.State.None=Не выполнен
+DocFlowStage.State.Partition=Выполнен частично
+DocFlowStage.State.Complete=Выполнен

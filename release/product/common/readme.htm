@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Millennium Business Suite Anywhere 2007 :: readme</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+<h1>Сервер Millennium Business Suite Anywhere 2007</h1>
+<h2>Предварительные условия</h2>
+<blockquote> 
+  <p> Предполагается, что:</p>
+  <ol>
+    <li>На компьютере сервера приложения установлена платформа Java SDK (JDK) версии не ниже 1.5, переменная 
+      среды <code>JAVA_HOME</code> содержит путь к каталогу JDK.</li>
+    <li>На компьютере используемом в качестве клиента установлена платформа Java (JRE) версии не ниже 1.5 и произведена
+    	интеграция плагинов Java с браузером. Если данное условие не выполнено, то браузер поддерживающий автоматическую
+    	установку плагинов предложит загрузить и установить платформу Java, необходимо следовать инструкциям браузера.</li>
+    <li>На компьютере сервера базы данных установлена СУБД Firebird версии не ниже 2.0</li>
+    <li>Все компоненты сервера Millennium Business Suite Anywhere 2007 установлены. 
+      Далее будем называть каталог установки системы <code>MBSA_HOME</code>.</li>
+    <li>Сервер будет работать с локальной базой данных <code>MBSA_HOME/appserver/server/merp/data/firebird/MERP4.FDB</code></li>
+  </ol>
+</blockquote>
+<h2>Запуск сервера Millennium Business Suite Anywhere 2007</h2>
+<blockquote> 
+  <p>Для запуска сервера приложения необходимо перейти в каталог <code>MBSA_HOME/appserver</code>. Запуск сервера осуществляется с помощью команды <code>StartServer.bat</code>
+  	для платформы Windows или <code>./startserver.sh</code> для платформы Linux.</p>
+  <p>Остановка сервера осуществляется либо с помощью команды <code>StopServer.bat</code> для платформы Windows или <code>./stopserver.bat</code>  для платформы Linux,
+    либо нажатием комбинации клавиш Ctrl+C в окне запущенного сервера.</p>
+  <p>&nbsp;</p>
+</blockquote>
+<h2>Подключение к системе Millennium Business Suite Anywhere 2007</h2>
+<blockquote> 
+  <p>Приложение будет запущено используя JNLP (Java Web Start) и подключено к серверу приложения по адресу $HOST_NAME: <a href="http://$HOST_NAME:8080/mbsaclient/merpclient.jnlp">Стартовать используя JNLP (Java Web Start)</a></p>
+  <p>Приложение будет запущено используя Java аплет и подключено к серверу приложения по адресу $HOST_NAME: <a href="http://$HOST_NAME:8080/mbsaclient/merpclient.jsp" target="_blank">Стартовать используя аплет</a></p>
+  <p>Если на клиентском компьютере установлено JRE 6.0 и выше, то возможно использование приложения с внешним видом от <a href="https://substance.dev.java.net/">substance</a>. Для запуска необходимо
+  	использовать следующие ссылки.</p>
+  <p>Приложение будет запущено используя JNLP (Java Web Start) и подключено к серверу приложения по адресу $HOST_NAME: <a href="http://$HOST_NAME:8080/mbsaclient/merpclientsb.jnlp">Стартовать используя JNLP (Java Web Start) с L&F Substance</a></p>
+  <p>Приложение будет запущено используя Java аплет и подключено к серверу приложения по адресу $HOST_NAME: <a href="http://$HOST_NAME:8080/mbsaclient/merpclientsb.jsp" target="_blank">Стартовать используя аплет с L&F Substance</a></p>
+  <p>При первом запуске приложения необходимо использовать следующие параметры подключения: пользователь admin, пароль admin.</p>
+  <p>&nbsp;</p>
+</blockquote>
+<h2>Контактная информация</h2>
+<blockquote>
+  <p>ООО &quot;Бизнестехнология&quot;<br>
+    телефон: 7 846 270 7027 (Россия, Самара), 7 846 270 7029 (Россия, Самара)<br>
+    <a href="mailto:info@m-g.ru">mailto:info@m-g.ru</a><br>
+    <a href="http://www.m-g.ru">http://www.m-g.ru</a><br>
+  </p>
+</blockquote>
+</body>
+</html>

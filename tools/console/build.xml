@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "file:../../build/etc/common.xml">
+]>
+
+<project default="all" name="Workflow module">
+
+  <property file="../../build/build.properties"/>
+
+  <path id="project.class.path">
+    <fileset dir="../../thirdparty">
+      <include name="**/*.jar"/>
+    </fileset>
+    <pathelement path="../../server/framework/output/classes"/>
+  </path>
+
+  &common;
+
+  <target name="init" >
+    <mkdir dir="output/classes" />
+  </target>
+
+  <target name="compile" depends="init">
+    <antcall target="mg.javac">
+      <param name="javac-src" value="src/java"/>
+      <param name="javac-includes" value="**/*.java"/>
+      <param name="classdir" value="output/classes"/>
+    </antcall> 
+  </target>
+
+  <target name="package" depends="init,compile">
+    <jar destfile="output/appserverconsole.jar">
+      <zipfileset dir="output/classes"/>
+    </jar>
+  </target>
+
+  <target name="clean">
+    <delete failonerror="false">
+      <fileset dir="output/classes" includes="**/*.class"/>
+      <fileset dir="output" includes="**/*.jar"/>
+    </delete>
+  </target>
+
+  <target name="all" depends="clean,compile,package" />
+
+</project>

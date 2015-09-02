@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: PlanningLevelMt.mfd.xml,v 1.5 2007/02/19 12:55:14 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.mfreference.support.ui.PlanningLevelMt" title="resource://com.mg.merp.mfreference.resources.formelements#PlanningLevel.FormMt.Title" helpTopic="mfreference#planlevel_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+ 		<jfd:field id="Description" longField="false"/>   
+ 		<jfd:field id="PlanningLevelNum" />   
+  		<jfd:field id="TimeFence" />  		
+
+		<jfd:maintenanceTable id="planningLevelBucket" scroll="true" autoResize="subsequent_columns"  alignment="expand_expand" label="resource://com.mg.merp.mfreference.resources.formelements#PlanningLevel.Buckets" helpTopic="mfreference#pllevbucket_html" >
+ 	 		<jfd:popupMenu >
+				<jfd:separator />
+				<jfd:menuItem id="generatePlaningLevelBuckets" text="resource://com.mg.merp.mfreference.resources.formelements#PlanningLevel.GeneratePlaningLevelBuckets" actionListener="GeneratePlaningLevelBuckets" />	
+			</jfd:popupMenu >
+ 		</jfd:maintenanceTable>
+ 		
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />	
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

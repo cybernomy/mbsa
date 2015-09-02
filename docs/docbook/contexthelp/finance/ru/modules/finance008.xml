@@ -1,0 +1,62 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_finance008 SYSTEM "modules/finance008.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere System">
+<!ENTITY fin "Финансовое управление">
+]> -->
+<chapter id="temp">
+  <title>Образцы финансовых операций</title>
+
+    <para>Образцы во многом упрощают регистрацию финансовых операций. </para>
+    
+    <para>Создание образца подобно добавлению операции. </para>
+    
+     <screenshot>
+    <mediaobject><imageobject><imagedata fileref="images/sample1.gif"/></imageobject></mediaobject>
+  </screenshot>
+    
+    <para>В поле <guibutton>Наименование</guibutton> обязательно укажите название образца 
+    (в произвольной форме, чтобы Вы могли отличить его от других образцов). </para>
+    
+    <para>В поле <guibutton>Папка-приёмник</guibutton> укажите папку, куда будет
+    помещаться финансовая операция, созданная по этому образцу. Приоритет этого 
+    поля выше, чем поля <guibutton>Папка-приёмник</guibutton> в параметрах этапа документооборота. </para>
+    
+    <para>Если поле <guibutton>План</guibutton> отмечено флагом, то на основании данного образца можно 
+    будет создать только плановую финансовую операцию. </para>
+    
+     <para><guibutton>Источник поля От кого</guibutton>. Если финансовая операция создаётся на основании документа, то можно 
+     указать какое поле документа послужит значением поля &quot;От кого&quot; в создаваемой операции: </para>
+     
+    <itemizedlist> 
+        <listitem><para>От кого (поставщик)</para></listitem>
+	<listitem><para>Кому (покупатель)</para></listitem>
+	<listitem><para>Грузоотправитель</para></listitem>
+	<listitem><para>Грузополучатель</para></listitem>
+	<listitem><para>Склад-источник</para></listitem>
+	<listitem><para>Склад-приёмник</para></listitem>
+	<listitem><para>МОЛ-источник</para></listitem>
+	<listitem><para>МОЛ-приёмник</para></listitem>
+	<listitem><para>Через кого</para></listitem>
+     </itemizedlist>	
+     
+     <para>Кроме этого, можно не указывать <guibutton>Источник поля От кого</guibutton>, а указать в образце финансовой 
+     операции конкретное значение поля <guibutton>От кого</guibutton>. </para>
+     
+     <para>Аналогичная ситуация с полями <guibutton>Источник поля Кому</guibutton> и <guibutton>Кому</guibutton>.</para>
+   
+    <para>В спецификации и в признаке образца добавлено поле <guibutton>Алгоритм расчёта суммы</guibutton>, 
+    где можно задать формулу для расчёта суммы конкретно для этого образца.</para>  
+    
+  <screenshot>
+    <mediaobject><imageobject><imagedata fileref="images/sample.gif"/></imageobject></mediaobject>
+  </screenshot>
+    
+   <!--  <para>Для отработки товарных документов рекомендуем в формуле проводки 
+    использовать функцию <literal>PartSpecSumm</literal>. </para>  -->
+    
+    <para> </para>
+
+  </chapter>

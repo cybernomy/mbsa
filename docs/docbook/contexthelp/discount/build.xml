@@ -1,0 +1,11 @@
+<project name="discount" default="all.doc" basedir=".">
+
+    <property name="docbook.name" value="discount" />
+
+    <import file="../../docbook-support/support.xml" />
+
+    <target name="all.doc" depends="clean">
+        <antcall target="lang.all"><param name="lang" value="ru"/><param name="country" value="RU"/></antcall>
+    </target>
+
+</project>

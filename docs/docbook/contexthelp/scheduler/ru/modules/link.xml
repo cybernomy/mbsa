@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: link.xml,v 1.1 2008/05/06 10:41:48 safonov Exp $ -->
+
+<link version="1.0">
+   
+  <linkitem topic="prepare_links"> 
+    <linkentry target="scheduler_html" text="Планировщик заданий" />
+  </linkitem>
+  
+  <linkitem topic="work_links">
+    <linkentry target="schtask_html" text="Задания планировщика" />
+    <linkentry target="cron_html" text="Cron-формат" />
+  </linkitem> 
+  
+</link>

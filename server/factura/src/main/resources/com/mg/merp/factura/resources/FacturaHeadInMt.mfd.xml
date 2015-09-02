@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: FacturaHeadInMt.mfd.xml,v 1.6 2007/09/20 09:57:25 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.factura.support.ui.FacturaHeadInMt" title="resource://com.mg.merp.factura.resources.formelements#FacturaHeadIn.FormMt.Title" helpTopic="account#facturain_html" >
+								
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="mainFields" layout="jfd:tabbed" alignment="expand_expand" >
+
+ 		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.factura.resources.formelements#Main.Tab.Title" >
+	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			
+			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
+			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
+	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
+			<jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml" />					
+		 	<jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml" /> 
+	 	 	<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />  			
+	 	 	<jfd:include name="com/mg/merp/document/resources/PartnerFromToMacros.xml" />  			
+	 	 	<jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml" />  			
+	 	 	<jfd:include name="com/mg/merp/document/resources/PriceListMacros.xml" />
+			<jfd:field id="CalcTaxesKind" />  			
+	 		<jfd:field id="InDate" /> 
+		 	<jfd:field id="StockDate" /> 
+			<jfd:field id="PayDate" /> 
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										
+		</jfd:container> 			
+	
+	 	<jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.factura.resources.formelements#SpecFields" >
+		</jfd:maintenanceTable>
+		
+		<jfd:container id="facturaInExtraFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.factura.resources.formelements#Extra.Tab.Title" >
+	 		<jfd:include name="com/mg/merp/warehouse/resources/InfoCustomerMacros.mfd.xml" />
+	 		<jfd:include name="com/mg/merp/warehouse/resources/InfoProviderMacros.mfd.xml" />
+			<jfd:field id="Shipper"  />
+			<jfd:field id="Consignee" sameLine="true" />	 
+			<jfd:field id="ToPayDocNumber"/>
+			<jfd:field id="ToPayDocDate" sameLine="true"/>	
+			<jfd:field id="Comment"  />
+			<jfd:field id="Description" />
+		</jfd:container> 		
+	</jfd:container> 
+	
+	<jfd:include name="com/mg/merp/document/resources/DefaultDocMaintenanceFooterMacros.xml" />
+</jfd:form>

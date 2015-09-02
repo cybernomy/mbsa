@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: build-community.xml,v 1.1 2008/02/27 09:52:47 safonov Exp $ -->
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "file:../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "file:../../build/etc/module.xml">
+]>
+
+<project default="all" name="User interface components">
+
+ 	<property file="../../build/build.properties"/>
+
+	&module;
+
+	<path id="project.class.path">
+		<fileset dir="../../thirdparty">
+			<include name="**/*.jar"/>
+		</fileset>
+		<pathelement location="output/classes"/>
+	</path>
+
+	&common;
+
+	<target name="init" >
+	</target>
+
+	<target name="compile" depends="init">
+	</target>
+
+	<target name="resources" depends="init">
+	</target>
+
+	<target name="package" depends="init,compile,resources">
+	</target>
+
+	<target name="clean">
+	</target>
+
+	<target name="output" depends="init">
+	</target>
+
+	<target name="all" depends="clean,compile,resources,package,output">
+	</target>
+
+</project>

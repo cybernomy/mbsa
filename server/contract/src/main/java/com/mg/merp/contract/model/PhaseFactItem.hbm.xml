@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<typedef name="com.mg.merp.contract.model.ItemKind" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.contract.model.ItemKind</param>
+	</typedef>	
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.contract.model.PhaseFactItem" table="PHASEITEMFACT">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">PHASEITEMFACT_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="DocHead" class="com.mg.merp.document.model.DocHead">
+      <column name="DOCHEAD_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Contractor" class="com.mg.merp.reference.model.Contractor">
+      <column name="CONTRACTOR_ID" not-null="false" />
+    </many-to-one>
+    <property name="RegDate" type="java.util.Date">
+      <column name="REGDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <!--
+    <property name="BaseDocType" type="java.lang.String">
+      <column name="DOCTYPE" length="15" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="BaseDocNumber" type="java.lang.String">
+      <column name="DOCNUMBER" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="BaseDocDate" type="java.util.Date">
+      <column name="DOCDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="BaseDocId" type="java.lang.Integer">
+      <column name="DOC_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+     -->
+    <property name="FactSum" type="java.math.BigDecimal">
+      <column name="FACTSUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="DistSum" type="java.math.BigDecimal">
+      <column name="DISTSUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="Kind" type="com.mg.merp.contract.model.ItemKind">
+      <column name="KIND" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <many-to-one name="DocType" class="com.mg.merp.document.model.DocType" property-ref="UpCode">
+      <column name="DOCTYPE" not-null="false" />
+    </many-to-one>
+    <property name="DocNumber" type="java.lang.String">
+      <column name="DOCNUMBER" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="DocDate" type="java.util.Date">
+      <column name="DOCDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <many-to-one name="Document" class="com.mg.merp.document.model.DocHead">
+      <column name="DOC_ID" not-null="false" />
+    </many-to-one>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

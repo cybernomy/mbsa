@@ -1,0 +1,161 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_punkt SYSTEM "modules/contract010.xml">
+<!ENTITY merp "Millennium BSA">
+<!ENTITY contr "Контракты">
+]> -->
+<chapter id="punkt">
+  <title>Пункты</title>
+  
+  <para>Пункты контракта бывают планируемые и фактические.</para>
+  
+  <section id="punkt_01">
+  <title>Планируемые пункты </title>
+    
+    <para>Планируемые пункты составляют <link linkend="stages">Этапы контракта</link> и могут быть добавлены только 
+    из формы какого-либо этапа. Но список планируемых пунктов можно также посмотреть на закладке 
+    &quot;<emphasis>Пункты - Планируемые</emphasis>&quot; в форме самого Контракта.</para>
+    
+    <para>В форме поддержки пункта отражается следующая информация: </para>
+    
+    <figure>
+      <mediaobject><imageobject><imagedata fileref="images/punkt_plan.gif"/></imageobject></mediaobject>
+    </figure>
+    
+    <para><guibutton>Номер</guibutton>. Номер пункта плана.</para>
+    
+    <para><guibutton>Вид</guibutton>. Вид пункта плана определяется направлением товарно-денежных потоков. 
+    Может принимать значения:</para>
+    
+    <itemizedlist>
+        <listitem><para>Сумма платежей контрагенту </para></listitem>
+	<listitem><para>Сумма платежей от контрагента </para></listitem>
+	<listitem><para>Сумма ТМЦ и услуг контрагенту </para></listitem>
+	<listitem><para>Сумма ТМЦ и услуг от контрагента </para></listitem>
+    </itemizedlist>
+    
+    <para><guibutton>Начало действия</guibutton>. Дата начала действия.</para>
+    
+    <para><guibutton>Завершение действия</guibutton>. Дата завершения действия.</para>
+    
+    <para>Все четыре вышеперечисленных поля обязательно нужно заполнить, чтобы добавить новый пункт.</para>
+    
+    <para><guibutton>От кого</guibutton>. Код контрагента, который осуществляет 
+    платёж или поставку товаров и услуг. </para>
+    
+    <para><guibutton>Кому</guibutton>. Код контрагента, в адрес которого осуществляется 
+    платёж или поставка товаров и услуг. </para>
+    
+    <para><guibutton>Планируемая сумма</guibutton>. Сумма, на которую планируется  
+    осуществить платёж или поставку товаров и услуг. Значение этого поля может быть автоматически сформировано 
+    по сумме <link linkend="punkt_spec">спецификаций</link>, либо вручную - пользователем. </para>
+    
+    <para><guibutton>Фактическая сумма</guibutton>. Сумма, на которую осуществлён
+    платёж или поставка ТМЦ и услуг. </para>
+     
+    <para>См. также: <link linkend="punkt_spec">Спецификации для пунктов</link> </para>
+   </section>
+   
+   
+   <section id="punkt_02">
+      <title>Фактические пункты </title>
+    
+    <para>На основании первичных документов в системе отмечается исполнение пунктов Контракта. </para>
+    
+    <para>В документообороте первичных документов возможен этап &quot;<literal>Отработать документ 
+    как факт по договору</literal>&quot;. Для этого в первичном документе должен быть обязательно
+    указан контракт. </para>
+    
+    <para>Список фактически выполненных пунктов контракта находится на закладке 
+    <guibutton>Пункты</guibutton> - <guibutton>Фактические</guibutton>.</para>
+    
+    <figure>
+      <title>Добавление пункта</title>
+      <mediaobject><imageobject><imagedata fileref="images/punkt.gif"/></imageobject></mediaobject>
+    </figure>
+    
+    <para>На закладке &quot;Содержание&quot;: </para>
+    
+    <para><guibutton>Дата регистрации</guibutton>. Дата регистрации пункта плана в системе. </para>
+    
+    <para><guibutton>Вид</guibutton>. Один из 4 видов пунктов плана:</para>
+    <itemizedlist>
+        <listitem><para>Сумма платежей контрагенту </para></listitem>
+	<listitem><para>Сумма платежей от контрагента </para></listitem>
+	<listitem><para>Сумма ТМЦ и услуг контрагенту </para></listitem>
+	<listitem><para>Сумма ТМЦ и услуг от контрагента </para></listitem>
+    </itemizedlist>
+    
+    <para><guibutton>Тип документа</guibutton>. Тип документа, подтверждающего
+    фактическое выполнение пункта.</para>
+    
+    <para><guibutton>Номер документа</guibutton>. Номер документа, подтверждающего
+    фактическое выполнение пункта.</para>
+    
+    <para><guibutton>Дата документа</guibutton>. Дата документа, подтверждающего 
+    фактическое выполнение пункта.</para>
+    
+    <para><guibutton>Контрагент</guibutton>. Партнёр. </para>
+    
+    <para><guibutton>Фактическая сумма</guibutton>. Сумма, на которую фактически выполнен этот пункт. 
+    Значение этого поля может быть автоматически сформировано 
+    по сумме <link linkend="punkt_spec">спецификаций</link>, либо вручную - пользователем. </para>
+    
+    <para><guibutton>Распределённая сумма</guibutton>. Сумма, распределённая по плановым пунктам контракта. </para>
+
+    <para>Для фактических пунктов договора доступны следующие функции: </para>
+    
+    <para><guibutton>Распределить</guibutton>. Автоматически распределить суммы
+    по видам (направлениям) товарно-денежных потоков по пунктам договора 
+    пропорционально стоимости.</para>
+    
+    <para><guibutton>Аннулировать распределение</guibutton>. Аннулировать распределение
+    сумм фактического пункта плана.</para>
+    
+    <para><guibutton>Распределить вручную</guibutton>. Распределить суммы по видам
+    (направлениям) товарно-денежных потоков по пунктам контракта, вручную указывая
+    какой пункт плана на какую сумму надо закрыть. </para>
+    
+    <para><guibutton>Показать документ</guibutton>. Показать документ, 
+    подтверждающий фактическое выполнение пункта плана.</para>
+    
+    <para>См. также: <link linkend="punkt_spec">Спецификации для пунктов</link> </para>
+    
+    <para>См. также: <link linkend="stages">Этапы контракта</link> </para>
+  </section>
+  
+   <section id="punkt_spec">
+      <title>Спецификации для пунктов контракта </title>
+  
+   <para>На закладке &quot;Спецификации&quot; можно указать перечень конкретных товаров (услуг), проходящих по данному 
+   пункту контракта. </para>
+   
+    <figure>
+      <mediaobject><imageobject><imagedata fileref="images/spec.gif"/></imageobject></mediaobject>
+    </figure>
+   
+   <para><guibutton>Товар</guibutton>. Ссылка на позицию справочника &quot;Каталог&quot;.  </para>
+     
+   <para><guibutton>Основная ЕИ</guibutton>. Автоматически подставляется при выборе Товара. </para>
+   
+   <para>Поля <guibutton>Прайс-лист</guibutton> и <guibutton>Тип цены</guibutton> имеют справочное значение, могут 
+   использоваться, например, для фьючерсных контрактов. </para>
+   
+   <para><guibutton>Количество</guibutton>. Количество указанного товара в основной единице имерения. </para>
+   
+   <para><guibutton>Цена</guibutton>. Цена указанного товара за 1 указанную единицу измерения  </para>
+   
+   <para><guibutton>Сумма</guibutton>. Произведение указанных цены и количества  </para>
+    <para>Для фактических пунктов контракта (т.е. уже исполненных) сумма спецификации обычно берется из документа 
+   (накладной, счет-фактуры и т.п.), при помощи специального этапа документооборота. </para>
+    
+    <para>Если вы хотите по цене и количеству товара рассчитать общую сумму спецификации, то указав цену и количество 
+    нажмите кнопку &quot;<guibutton>Рассчитать</guibutton>&quot;. Если хотите рассчитать цену, то удалите значение в поле 
+    &quot;<guibutton>Цена</guibutton>&quot; (клавишей <guibutton>Delete</guibutton>), затем задайте сумму 
+    и нажмите кнопку &quot;<guibutton>Рассчитать</guibutton>&quot;. </para>
+  </section>
+
+</chapter>

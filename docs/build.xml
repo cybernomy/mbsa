@@ -1,0 +1,50 @@
+<!-- $Id: build.xml,v 1.7 2008/02/28 12:01:09 safonov Exp $ -->
+<project name="Documentation" default="all" basedir=".">
+
+  <property file="../build/build.properties"/>
+
+  <target name="build.admin">
+    <ant dir="docbook/admin"/>
+    <antcall target="docbook.output">
+      <param name="docbook.name" value="admin"/>
+      <param name="lang" value="ru"/>
+    </antcall>  
+  </target>
+  
+  <target name="build.baseconfig">
+    <ant dir="docbook/baseconfig"/>
+    <antcall target="docbook.output">
+      <param name="docbook.name" value="baseconfig"/>
+      <param name="lang" value="ru"/>
+    </antcall>  
+  </target>
+	
+  <target name="build.contexthelp">
+    <copy todir="docbook/docbook-support">
+      <fileset dir="docbook-support"/>
+    </copy>
+
+    <ant dir="docbook/contexthelp"/>
+
+    <delete dir="docbook/docbook-support" failonerror="false" />
+  </target>	
+	
+  <target name="docbook.output">
+    <!-- HTML -->
+    <mkdir dir="output/${lang}/html/${docbook.name}"/>
+    <copy todir="output/${lang}/html/${docbook.name}" failonerror="false">
+      <fileset dir="docbook/${docbook.name}/build/${lang}/html"/>
+    </copy>
+    <!-- PDF -->
+    <mkdir dir="output/${lang}/pdf"/>
+    <copy file="docbook/${docbook.name}/build/${lang}/pdf/${docbook.name}.pdf" 
+          todir="output/${lang}/pdf" failonerror="false" />
+    <!-- HTML Help -->
+    <!-- mkdir dir="output/${lang}/htmlhelp"/>
+    <copy file="docbook/${docbook.name}/build/${lang}/htmlhelp/${docbook.name}.chm" 
+          todir="output/${lang}/htmlhelp"/ -->
+  </target>  
+  
+  <target name="all" depends="build.admin,build.baseconfig,build.contexthelp">
+  </target>
+</project>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: build.xml,v 1.11 2006/11/23 19:12:18 poroxnenko Exp $ -->
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "file:../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "file:../../build/etc/module.xml">
+]>
+
+<project default="all" name="PaymentAlloc module">
+
+  <property file="../../build/build.properties"/>
+
+  &module;
+
+  <path id="project.class.path">
+    <path refid="module.class.path"/>
+  </path>
+
+  &common;
+
+  <target name="init" depends="mg.ejbmodule.init, mg.module.encode" >
+    <property name="module.filename" value="100mpaymentalloc-ejb.jar"/>
+    <property name="ui.module.filename" value="100mpaymentalloc-ui.jar"/>
+    <property name="module.name" value="paymentalloc"/>
+  	
+  	<property name="badi.lib.dpnds" value="mgframework, mcore, mdocumentcore, mreference"/>
+  	<property name="wb.incl.src" value="**/*.java"/>
+  </target>
+
+  <target name="compile" depends="init">
+    <antcall target="mg.javac">
+      <param name="javac-src" value="src/main/java"/>
+      <param name="javac-includes" value="**/*.java"/>
+      <param name="classdir" value="output/classes"/>
+    </antcall> 
+  </target>
+
+  <target name="resources" depends="init">
+  	<antcall target="mg.module.resources" />
+  </target>
+
+  <target name="package" depends="init,compile">
+    <antcall target="mg.ejbmodule.package">
+       <param name="module.filename" value="${module.filename}"/>
+    </antcall> 
+    <antcall target="mg.uimodule.package">
+       <param name="module.filename" value="${ui.module.filename}"/>
+       <param name="package" value="com/mg/merp/${module.name}"/>
+    </antcall>  	
+	<antcall target="mg.wbmodule.package">
+		<param name="module.filename" value="m${module.name}"/>
+		<param name="wb.incl.src" value="${wb.incl.src}"/>
+		<param name="badi.lib.version" value="1.0"/>
+		<param name="badi.lib.dpnds" value="${badi.lib.dpnds}"/>	
+  	</antcall>
+  </target>
+
+  <target name="deploy" depends="init,package">
+    <antcall target="mg.ejbmodule.deploy">
+       <param name="module.filename" value="${module.filename}"/>
+    </antcall> 
+  </target>
+
+  <target name="output" depends="init">
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${module.filename}"/>
+       <param name="output.dest" value="ejb"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${ui.module.filename}"/>
+       <param name="output.dest" value="ui"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="m${module.name}.jar"/>
+       <param name="output.dest" value="workbench/lib"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="m${module.name}-src.jar"/>
+       <param name="output.dest" value="workbench/src"/>
+    </antcall>
+  	<antcall target="mg.model.output" />
+  </target>
+
+  <target name="clean">
+    <antcall target="mg.ejbmodule.clean"/>
+  </target>
+
+  <target name="all" depends="clean,compile,resources,package,output" />
+
+</project>

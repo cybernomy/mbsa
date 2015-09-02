@@ -1,0 +1,39 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_globalcoeff SYSTEM "modules/globalcoeff.xml">
+<!ENTITY logis "Логистика">
+<!ENTITY merp "Millennium Business Suite Anywhere System">
+]> -->
+<chapter id="globalcoeff">
+  <title>Коэффициенты каталога</title>
+
+        <para>Вход в раздел &quot;Коэффициенты скидок/наценок&quot; осуществляется через главное меню:
+       <menuchoice>
+        <guimenu>&cont_centr;</guimenu>
+        <guisubmenu>&logis;</guisubmenu>
+	<guisubmenu>Ценообразование</guisubmenu>
+        <guimenuitem>Коэффициенты скидок/наценок</guimenuitem>
+	</menuchoice>
+    </para>
+    
+    <screenshot>
+      <mediaobject><imageobject><imagedata fileref="images/add_coeff.gif"/></imageobject></mediaobject>
+    </screenshot>
+    
+    <para>В системе &merp; могут быть предусмотрены коэффициенты на отдельные товары 
+    или услуги, а также на группы товаров, размещённые в одной папке каталога.  </para>
+    
+    <para><guibutton>Папка каталога</guibutton>. Выберите папку каталога. Коэффициент
+    будет применяться ко всем позициям, входящим в данную папку. </para>
+    
+    <para><guibutton>Позиция каталога</guibutton>. Коэффициент будет действовать только для этой позиции. </para>
+    
+    <para><guibutton>Коэффициент</guibutton>. Значение коэффициента, применяемого
+    к указанной папке или позиции каталога.</para>
+    
+    <para>Глобальные коэффициенты скидок/наценок используются в алгоритмах. Никаких специфических
+    функций для данного объекта в системе не предусмотрено. </para>
+    
+  </chapter>

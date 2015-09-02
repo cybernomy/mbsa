@@ -1,0 +1,104 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_010plan SYSTEM "modules/010planning.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY mref "Справочники производства">
+<!ENTITY manuf "Планирование и управление производством">
+]> -->
+<chapter id="010plan">
+  <title>Загрузка мощностей</title>
+  
+  <section id="010plan_01">
+ 	<title>Укрупнённые планы загрузки производственных мощностей</title>
+  
+  	<para>Укрупнённое планирование загрузки производственных мощностей (УППМ) - 
+	это проверка возможности выполнения производственного плана на имеющихся 
+	или запланированных мощностях.</para>
+	
+	<para>Вход в раздел &quot;Укрупнённые планы загрузки производственных мощностей&quot; 
+	через главное меню 
+	<menuchoice>
+	<guimenu>&manuf;</guimenu>
+	<guimenuitem>Укрупнённые планы загрузки производственных мощностей</guimenuitem>
+	</menuchoice>.</para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/rccpheader.gif"/>
+	</imageobject></mediaobject></screenshot>
+	 
+	<para><guibutton>Производственный план</guibutton>.  <link linkend="007plan">Производственный план</link>, 
+	по которому рассчитывается загрузка мощностей. </para>
+	
+	<para><guibutton>Наименование</guibutton>. Краткое наименование плана загрузки. </para>
+	
+	<para><guibutton>Версия</guibutton>. Номер версии увеличивается после каждой генерации УППМ. </para>
+	
+	<para><guibutton>Дата и время последнего запуска</guibutton>. В этом поле автоматически 
+	появляется дата и время последнего запуска генерации УППМ. </para>
+	
+	<para><guibutton>Недельный календарь</guibutton>. Недельный календарь. </para>
+	
+	<para><guibutton>Генерация УППМ</guibutton>. Запуск механизма расчёта укрупнённого плана загрузки мощностей.  
+	Вызовите контекстное меню и выберите пункт &quot;Генерация УППМ&quot;. При успешном завершении появляется 
+	сообщение: </para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/finish2.gif"/>
+	</imageobject></mediaobject></screenshot>
+	
+	<para>Посмотреть результаты расчёта можно в <link linkend="010plan_02">Графике загрузки мощностей</link>. </para>
+	
+  </section>
+  
+    <section id="010plan_02">
+ 	<title>График загрузки мощностей</title>
+   
+	<para>График загрузки мощностей позволяет просмотреть загрузку производственных мощностей. </para>
+	
+	<para>Вход в раздел &quot;График загрузки мощностей&quot; 
+	через главное меню 
+	<menuchoice>
+	<guimenu>&manuf;</guimenu>
+	<guimenuitem>График загрузки мощностей</guimenuitem>
+	</menuchoice>.</para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/rccpresourceload.gif"/>
+	</imageobject></mediaobject></screenshot>
+		
+	<para>Для формирования графика Вы должны указать: </para>
+	
+	<para><guibutton>УППМ</guibutton>. <link linkend="010plan_01">Укрупнённый план загрузки 
+	производственных мощностей</link>. </para>
+	
+	<para><guibutton>Группа ресурсов</guibutton>. Группа ресурсов, загрузку которой вы хотите посмотреть.  </para>
+	
+	<para><guibutton>Период с... по...</guibutton> Укажите период, на который Вас интересует 
+	загрузка мощностей. </para>
+	
+	<para>Кнопка &quot;<guibutton>Показать диаграмму</guibutton>&quot; </para>
+
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/rccp_graph.gif"/>
+	</imageobject></mediaobject></screenshot>
+	
+	<para>Для расшифровки информации, представленной в диаграмме, щёлкните на горизонтальном  
+	столбце правой кнопкой мыши и в появившемся контекстном меню выберите &quot;<guibutton>подробно</guibutton>&quot;.  
+	Откроется окно &quot;<emphasis>Расширенная информация по загрузке</emphasis>&quot;, где 
+	будут показаны: </para>
+	
+	<itemizedlist>
+        <listitem> загрузка, вызванная строкой производственного плана,  </listitem>
+		<listitem> загрузка, вызванная ручной корректировкой, </listitem>
+		<listitem> загрузка, вызванная запущенными в производство ЗНП, </listitem>
+		<listitem> загрузка от плана сбыта. </listitem> 
+   </itemizedlist>
+ 	
+	<para>См. также: <link linkend="010plan_01">Укрупнённый план загрузки производственных мощностей</link>. </para>
+
+  </section>
+  
+</chapter>

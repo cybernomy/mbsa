@@ -1,0 +1,177 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_ref051 SYSTEM "modules/reference051.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY ref "Прикладные справочники">
+]> -->
+<chapter id="ref051">
+   <title>Элементы адреса</title>
+   
+   	<para>В системе &merp; для заполнения различных адресов (почтовых, 
+	географических) используются справочники элементов адреса:</para>
+	
+	<itemizedlist>
+        	<listitem><link linkend="ref051_01">Страны</link></listitem>
+		<listitem><link linkend="ref051_02">Регионы</link></listitem>
+		<listitem><link linkend="ref051_03">Районы</link></listitem>
+		<listitem><link linkend="ref051_04">Населённые пункты</link></listitem>
+		<listitem><link linkend="ref051_05">Почтовые индексы </link></listitem>
+	</itemizedlist>
+	
+	<para> Так как некоторые из этих справочников используют данные других 
+	(например, для региона указывается страна, а для индекса нужны данные воообще 
+	всех остальных указанных здесь справочников), рекомендуем заполнять их в указанном 
+	порядке - сперва справочник &quot;Страны&quot;, затем &quot;Регионы&quot;... 
+	а справочник &quot;Почтовые индексы&quot; - последним.</para>
+	
+	<para>Элементы адреса используются во многих разделах системы, например, 
+	в справочниках &quot;<link linkend="ref005">Партнёры</link>&quot;, 
+	&quot;<link linkend="ref046">Физические лица</link>&quot; и др.</para>
+	
+   
+   <section id="ref051_01">
+      <title>Страны</title>
+      
+	<para>Вход в справочник осуществляется через главное меню:
+	<menuchoice><guimenu>&ref;</guimenu>
+	<guisubmenu>Элементы адреса</guisubmenu>
+	<guimenuitem>Страны</guimenuitem>
+	</menuchoice>. </para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/country.gif"/>
+	</imageobject></mediaobject></screenshot>
+	
+	<para><guibutton>Код</guibutton>. Краткое уникальное наименование страны для использования в системе 
+	&merp;.</para>
+	
+	<para><guibutton>Наименование</guibutton>. Наименование государства.</para>
+	
+	<para><guibutton>Полное наименование</guibutton>. Полное официальное наименование государства.</para>
+	
+	<para><guibutton>Альфа 2.</guibutton> Буквенный код альфа- 2 по ОКСМ, установленный классификатором
+	для обозначения этой страны.</para>
+	
+	<para><guibutton>Альфа 3</guibutton>. Буквенный код альфа-3 по ОКСМ (сокращение для обозначения 
+	этой страны).</para>
+	
+	<para><guibutton>Международный номер</guibutton>. Установленный классификатором номер для обозначения 
+	этой страны.</para>
+	
+	<para><guibutton>Телефонный код</guibutton>. Телефонный код страны.</para>
+	
+	<para><guibutton>Столица</guibutton>. Столица государства. </para>
+
+   </section>
+   
+   <section id="ref051_02">
+      <title>Регионы</title>
+      
+	<para>Регионами могут считаться такие субъекты, как область, автономный 
+	округ, автономная область, республика, край, город.</para>
+	
+	<para>Вход в справочник осуществляется через главное меню:
+	<menuchoice><guimenu>&ref;</guimenu>
+	<guisubmenu>Элементы адреса</guisubmenu>
+	<guimenuitem>Регионы</guimenuitem>
+	</menuchoice>. </para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/region.gif"/>
+	</imageobject></mediaobject></screenshot>
+	
+	<para><guibutton>Страна</guibutton>. Укажите <link linkend="ref051_01">страну</link>, 
+	в которой находится регион.</para>
+	
+	<para><guibutton>Префикс</guibutton>. Тип региона (область, край, округ и т.п.)</para>
+	
+	<para><guibutton>Регион</guibutton>. Название региона.</para>
+	
+	<para>С помощью условий отбора можно отобрать регионы, относящиеся к одной стране. </para>
+   </section>
+   
+   
+   <section id="ref051_03">
+      <title>Районы</title>
+   
+      	<para>Вход в справочник осуществляется через главное меню:
+	<menuchoice><guimenu>&ref;</guimenu>
+	<guisubmenu>Элементы адреса</guisubmenu>
+	<guimenuitem>Районы</guimenuitem>
+	</menuchoice>. </para>
+	
+	<para><guibutton>Регион</guibutton>. Укажите <link linkend="ref051_02">регион</link>, 
+	в котором находится район.</para>
+	
+	<para><guibutton>Префикс</guibutton>. Тип района (район, уезд, округ и т.п.)</para>
+	
+	<para><guibutton>Район</guibutton>. Название района.</para>
+	
+	<para>С помощью условий отбора можно отобрать районы, относящиеся к одному 
+	региону. </para>
+	
+   </section>
+   
+   
+   <section id="ref051_04">
+      <title>Населённые пункты</title>
+      
+      	<para>Вход в справочник осуществляется через главное меню:
+	<menuchoice><guimenu>&ref;</guimenu>
+	<guisubmenu>Элементы адреса</guisubmenu>
+	<guimenuitem>Населённые пункты</guimenuitem>
+	</menuchoice>. </para>
+	
+	<para><guibutton>Район</guibutton>. Укажите <link linkend="ref051_03">район</link>, 
+	в котором находится населённый пункт.</para>
+	
+	<para><guibutton>Префикс</guibutton>. Тип населённого пункта (село, город, станция, посёлок 
+	городского типа и т.п.)</para>
+	
+	<para><guibutton>Населённый пункт</guibutton>. Название населённого пункта.</para>
+	
+	<para>С помощью условий отбора можно отобрать населённые пункты, относящиеся 
+	к одному району.</para>
+   
+   </section>
+   
+   
+   <section id="ref051_05">
+      <title>Почтовые индексы</title>
+   
+      	<para>В различных справочниках (Партнёры, Физические лица и др.) вы можете 
+	указать почтовый индекс. Каждый индекс связан с другими <link linkend="ref051">элементами 
+	адреса</link>: страной, регионом, районом и населённым пунктом.</para>
+	
+	<para>Вход в справочник осуществляется через главное меню:
+	<menuchoice><guimenu>&ref;</guimenu>
+	<guisubmenu>Элементы адреса</guisubmenu>
+	<guimenuitem>Почтовые индексы</guimenuitem>
+	</menuchoice>. </para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/zipcode.gif"/>
+	</imageobject></mediaobject></screenshot>
+	
+	<para><guibutton>Индекс</guibutton>. Цифровое обозначение индекса (не более 20 знаков).</para>
+	
+	<para><guibutton>Страна</guibutton>. Выбирается из справочника 
+	&quot;<link linkend="ref051_01">Страны</link>&quot;.</para>
+	
+	<para><guibutton>Регион</guibutton>. Выбирается из справочника 
+	&quot;<link linkend="ref051_02">Регионы</link>&quot;.</para>
+	
+	<para><guibutton>Район</guibutton>. Выбирается из справочника 
+	&quot;<link linkend="ref051_03">Районы</link>&quot;.</para>
+	
+	<para><guibutton>Населённый пункт</guibutton>. Выбирается из справочника 
+	&quot;<link linkend="ref051_04">Населённые пункты </link>&quot;.</para>
+	
+	<para>Все поля обязательны к заполнению.</para>
+	
+   </section>
+   
+</chapter>

@@ -1,0 +1,5 @@
+	<filter>
+		<!-- MessAdmin Servlet Filter -->
+		<filter-name>MessAdminFilter</filter-name>
+		<filter-class>clime.messadmin.filter.MessAdminFilter</filter-class>
+	</filter>

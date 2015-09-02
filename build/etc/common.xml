@@ -1,0 +1,100 @@
+<taskdef name="ejbdoclet" classname="xdoclet.modules.ejb.EjbDocletTask" classpathref="project.class.path"/>
+
+<taskdef name="webdoclet" classname="xdoclet.modules.web.WebDocletTask" classpathref="project.class.path"/>
+
+<target name="mg.ejbdoclet" >
+  <echo message="Generating EJBDoclet for ${ant.project.name}"/>
+
+  <property name="generated.java.dir" value="src/main/java" />
+  <property name="java.dir" value="src/main/java" />
+  
+  <tstamp>
+    <format property="TODAY" pattern="d-MM-yy"/>
+  </tstamp>
+
+  <ejbdoclet 
+    destdir="${generated.java.dir}" 
+    excludedtags="@version,@author,@todo" 
+    addedtags="@xdoclet-generated at ${TODAY}"
+    ejbspec="2.1"
+  >
+    <fileset dir="${java.dir}" excludes="${exclude}" >
+      <include name="**/*Bean.java"/>
+      <!-- exclude name="${exclude}"/-->
+    </fileset>
+
+    <packageSubstitution packages="${module.name}.support" substituteWith="${module.name}"/>
+
+    <!-- localinterface />
+    <remoteinterface />
+
+    <homeinterface / -->
+    <localhomeinterface/>
+
+    <deploymentdescriptor destdir="${basedir}/src/META-INF" />
+
+    <jboss version="4.0" destdir="${basedir}/src/META-INF"/>
+  </ejbdoclet>
+  
+  <replace file="${basedir}/src/META-INF/ejb-jar.xml">
+    <replacefilter token="http://java.sun.com/xml/ns/j2ee" value="http://java.sun.com/xml/ns/javaee"/>
+    <replacefilter token="2.1" value="3.0"/>
+    <replacefilter token="ejb-jar_2_1.xsd" value="ejb-jar_3_0.xsd"/>
+  </replace>
+  <!-- replace file="${basedir}/src/META-INF/jboss.xml">
+      <replacetoken><![CDATA[<!DOCTYPE jboss PUBLIC "-//JBoss//DTD JBOSS 4.0//EN" "http://www.jboss.org/j2ee/dtd/jboss_4_0.dtd">]]></replacetoken>
+      <replacevalue><![CDATA[]]></replacevalue>
+  </replace>
+  <replace file="${basedir}/src/META-INF/jboss.xml">
+      <replacetoken><![CDATA[<jboss>]]></replacetoken>
+      <replacevalue><![CDATA[<jboss
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+                            http://www.jboss.org/j2ee/schema/jboss_5_0.xsd"
+        version="3.0">]]></replacevalue>
+  </replace-->
+</target>
+
+<target name="mg.javac">
+  <echo message="Compiling for ${ant.project.name}"/>
+  <javac srcdir="${javac-src}"
+      destdir="${classdir}"
+      debug="${debug}"
+      target="1.5"
+      source="1.5"
+      encoding="windows-1251"
+      classpathref="project.class.path"
+      debuglevel="${debuglevel}"
+      sourcepath="${javac-sourcepath}"
+      includes="${javac-includes}"
+      excludes="${javac-excludes}">
+  </javac>
+</target>
+
+<target name="mg.rmic.idl">
+  <property name="rmic.idlopts" value="-noValueMethods" />
+
+  <rmic classname="${classname}" base="${basedir}" classpathref="project.class.path" idl="yes" idlopts="${rmic.idlopts}" debug="${debug}" />
+</target>
+
+<target name="mg.rmic.iiop">
+  <property name="rmic.iiopopts" value="-nolocalstubs" />
+
+  <rmic classname="${classname}" base="${output}" classpathref="${classpathref}" iiop="yes" iiopopts="${rmic.iiopopts}" debug="${debug}" />
+</target>
+
+<target name="mg.idltojava">
+  <property name="idltojava.include" value="." />
+
+  <idltojava srcdir="${basedir}" destdir="${module}/src/main/java" includepath="${idltojava.include}" includes="{$idlfiles}" />
+</target>
+
+<target name="mg.idltopas">
+  <property name="idltopas.opts" value="-ns -guid -i${mtdorb.home}/idl" />
+
+  <exec executable="${idltopas.compiler}" dir="${basedir}">
+    <arg line="${idltopas.opts}"/>
+    <arg value="${idlfile}"/>
+  </exec>
+</target>

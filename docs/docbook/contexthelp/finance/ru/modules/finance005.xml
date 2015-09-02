@@ -1,0 +1,37 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_finance005 SYSTEM "modules/finance005.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY fin "Финансовое управление">
+]> -->
+<chapter id="finance005">
+  <title>Признаки финансового учёта</title>
+
+    <para>В системе &merp; можно определить отличную от плана счетов 
+    систему аналитики финансового учёта.</para>
+    
+    <para>Если необходимо получить срез информации по деятельности предприятия 
+    в виде отчёта, то в качестве признаков можно использовать статьи отчёта, 
+    с подробной аналитикой до 5 уровней.</para>
+    
+    <para>По признакам можно формировать отчёты и ведомости по остаткам и оборотам. </para>
+  <screenshot>
+    <mediaobject><imageobject><imagedata fileref="images/fin_feature.gif"/></imageobject></mediaobject>
+  </screenshot>
+    
+    <para>Каждому счёту можно задать следующие параметры:  </para>
+    
+    <para><guibutton>Код</guibutton>. Уникальное краткое наименование признака в системе. 
+    Может быть выражено как цифрами, так и словами (до 20 знаков), понятными и удобными 
+    пользователю.  </para>
+    
+    <para><guibutton>Наименование</guibutton>. Полное наименование признака 
+    (до 80 знаков с пробелами). </para>
+    
+    <para><guibutton>Аналитика</guibutton>. Если необходимо детализировать обороты 
+    и остатки, например, по статьям затрат или по объектам учёта, то в Вашем 
+    распоряжении есть возможность задания аналитики до 5 уровней.  </para>
+    
+  </chapter>

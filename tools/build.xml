@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project default="all" name="Millennium tools">
+  <property file="../../build/build.properties"/>
+  
+  <target name="modules">
+    <ant dir="${basedir}/console" target="${action}" />
+    <ant dir="${basedir}/dbconverter" target="${action}" />
+  </target>
+
+  <target name="compile" >
+    <antcall target="framework">
+      <param name="action" value="compile"/>
+    </antcall>
+    <antcall target="modules">
+      <param name="action" value="compile"/>
+    </antcall>
+  </target>
+
+  <target name="package" >
+    <antcall target="modules">
+      <param name="action" value="package"/>
+    </antcall>
+    <antcall target="framework">
+      <param name="action" value="package"/>
+    </antcall>
+  </target>
+
+  <target name="all">
+    <antcall target="modules">
+      <param name="action" value="all"/>
+    </antcall>
+  </target>
+
+</project>

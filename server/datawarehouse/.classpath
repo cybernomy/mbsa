@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry excluding="**/CVS/*" kind="src" path="src/test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="/mgframework"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/asm/lib/asm.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/asm/lib/asm-attrs.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/cglib/lib/cglib-2.1.3.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/apache-collections/lib/commons-collections.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/apache-lang/lib/commons-lang-2.1.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/apache-logging/lib/commons-logging.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/dom4j/lib/dom4j.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/firebird/lib/firebirdsql-full.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/interbase/lib/interclient.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/sun-jta/lib/jta.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/apache-log4j/lib/log4j.jar"/>
+	<classpathentry sourcepath="/HIBERNATE3_SRC" kind="var" path="MERP_THIRDPARTY_LIB/hibernate/lib/hibernate3.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/antlr/lib/antlr.jar"/>
+	<classpathentry kind="output" path="output/classes"/>
+</classpath>

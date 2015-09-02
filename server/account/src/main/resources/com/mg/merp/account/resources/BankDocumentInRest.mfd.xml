@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: BankDocumentInRest.mfd.xml,v 1.5 2008/08/15 12:13:39 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.account.support.ui.BankDocumentInRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.account.resources.formelements#Cond.BankDocumentIn" helpTopic="account#bankdocin_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+		<jfd:field id="docDateFrom" />
+		<jfd:field id="docDateTill" sameLine="true"/>
+		<jfd:field id="docNumber" />
+		<jfd:field id="docType" sameLine="true"/> 
+		<jfd:container id="baseDocument" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.BaseDocAttribute" >
+			<jfd:field id="baseDocType" showLabel="false" alignment="left_expand"/>
+			<jfd:field id="baseDocNumber" showLabel="false" alignment="expand_expand"/>			
+			<jfd:field id="baseDocDate" showLabel="false" alignment="right_expand"/>				
+		</jfd:container>
+		<jfd:container id="contractDocument" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.ContractDocAttribute" >
+			<jfd:field id="contractType" showLabel="false" alignment="left_expand"/>
+			<jfd:field id="contractNumber" showLabel="false" alignment="expand_expand"/>			
+			<jfd:field id="contractDate" showLabel="false" alignment="right_expand"/>				
+		</jfd:container>
+		<jfd:field id="sysCompany" />
+		<jfd:field id="fromCode" />
+		<jfd:field id="payerBank" searchHelp="com.mg.merp.account.support.ui.PayerBankAccountSearchHelp" />
+		<jfd:field id="payerBankAccount" sameLine="true" enabled="false" text="resource://com.mg.merp.account.resources.formelements#Account.BankDocument.BankAccount" />
+		<jfd:field id="toCode" sameLine="true"/>
+		<jfd:field id="recipientBank" searchHelp="com.mg.merp.account.support.ui.RecipientBankAccountSearchHelp" />
+		<jfd:field id="recipientBankAccount" sameLine="true" enabled="false" text="resource://com.mg.merp.account.resources.formelements#Account.BankDocument.BankAccount" />		
+		<jfd:field id="sumNatMin" />
+		<jfd:field id="sumNatMax" sameLine="true"/>					
+		<jfd:field id="sumCurMin" />
+		<jfd:field id="sumCurMax" sameLine="true"/>	
+		<jfd:field id="сurCode"/>
+		<jfd:include name="com/mg/merp/document/resources/DocProcessStageRestMacros.xml" /> 
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 												
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+
+</jfd:form>

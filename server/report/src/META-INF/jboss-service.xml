@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: jboss-service.xml,v 1.6 2008/08/12 11:19:15 safonov Exp $ -->
+
+<server>
+
+	<mbean code="com.mg.merp.report.service.jboss.RptEngineService" name="merp:service=RptEngineService">
+		<depends>merp:baiengine=BusinessAddinEngineService</depends>
+		<attribute name="BIRTLocation">${jboss.server.home.dir}/mbirt-platform</attribute>
+		<attribute name="DefaultOutputFormat">html</attribute>
+		<attribute name="LogLevel">INFO</attribute>
+		<attribute name="HTMLReportViewerApp">mreportviewer</attribute>
+		<attribute name="ReportFolder">report</attribute>
+	</mbean>
+	
+	<mbean code="com.mg.merp.report.service.jboss.RptBIRTDeployerService" name="merp:service=RptBIRTDeployerService"/>
+
+</server>

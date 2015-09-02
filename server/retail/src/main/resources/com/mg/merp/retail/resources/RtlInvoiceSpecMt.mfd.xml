@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: RtlInvoiceSpecMt.mfd.xml,v 1.6 2009/02/05 08:55:13 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.retail.support.ui.RtlInvoiceSpecMt" title="resource://com.mg.merp.retail.resources.formelements#InvoiceSpec.FormMt.Title" helpTopic="retail#rtlspec_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+  		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Main" >
+			<jfd:field id="Catalog" longField="true"/>	
+			<jfd:include name="com/mg/merp/document/resources/DocSpecQuantityMacros.xml" /> 				
+	 	 	<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />	
+			<jfd:field id="Price1" />
+			<jfd:field id="Discount" />
+			<jfd:field id="DocDiscount" sameLine="true" enabled="false"/>	
+			<jfd:field id="PriceWithDiscount" />	
+			<jfd:field id="Price" sameLine="true"/>
+	 	 	<jfd:include name="com/mg/merp/document/resources/DocSpecSummaInMacros.xml" />
+			<jfd:field id="ProductionDate" />		
+			<jfd:field id="BestBefore" sameLine="true"/>
+			<jfd:include name="com/mg/merp/document/resources/ShelfLifeMacros.xml" />
+			<jfd:field id="CountryOfOrigin" />
+			<jfd:field id="CustomsDeclaration" sameLine="true" />				
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />	
+		</jfd:container>			
+ 		<jfd:container id="extraFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Extra" >
+			<jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml" /> 				
+			<jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml" /> 				 					 		
+			<jfd:field id="Contractor" />	
+			<jfd:field id="Comment" />	 
+		</jfd:container>			
+		<jfd:include name="com/mg/merp/document/resources/DocSpecTaxGroupMacros.xml" /> 				 					 		 				 					 								
+		<jfd:include name="com/mg/merp/document/resources/DocSpecPackingMacros.xml" /> 		 
+	 	<jfd:include name="com/mg/merp/document/resources/DocSpecSerialNumMacros.xml" />  		 	 	 
+	</jfd:container>
+	<jfd:include name="com/mg/merp/document/resources/DefaultDocSpecMaintenanceFooterMacros.xml" />	
+
+</jfd:form>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: FeeRefParamSearchForm.mfd.xml,v 1.1 2007/07/09 08:35:35 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.salary.support.ui.FeeRefParamSearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.salary.resources.formelements#FeeRefParamSearchForm.Title" width="600" height="250">
+
+	<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+		<jfd:button id="сhooseButton" text="resource://com.mg.merp.salary.resources.formelements#Choose" actionListener="Choose" />
+	</jfd:toolBar>
+	
+	<jfd:table id="table" alignment="expand_expand" scroll="true">
+	</jfd:table>
+
+</jfd:form>

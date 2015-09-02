@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: build-community.xml,v 1.2 2008/02/26 09:02:20 safonov Exp $ -->
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "file:../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "file:../../build/etc/module.xml">
+]>
+
+<project default="all" name="MBSA web client module">
+
+  <property file="../../build/build.properties"/>
+
+  &module;
+
+  <path id="project.class.path">
+    <path refid="module.class.path"/>
+  </path>
+
+  &common;
+
+  <target name="init" depends="mg.ejbmodule.init">
+    <property name="webmodule.filename" value="mbsaclient.war"/>
+  </target>
+
+  <target name="webdoclet" depends="init" >
+  </target>
+
+  <target name="compile" depends="init,webdoclet">
+  </target>
+
+  <target name="resources" depends="init">
+  </target>
+
+  <target name="package" depends="init,compile,resources">
+    <copy file="../../thirdparty/mg/mbsaclient/lib/${webmodule.filename}" tofile="output/lib/${webmodule.filename}" />
+  </target>
+
+  <target name="deploy" depends="init,package">
+    <antcall target="mg.ejbmodule.deploy">
+       <param name="module.filename" value="${webmodule.filename}"/>
+    </antcall>
+  </target>
+
+  <target name="output" depends="init">
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${webmodule.filename}"/>
+       <param name="output.dest" value="web"/>
+    </antcall>
+  </target>
+
+  <target name="clean">
+  </target>
+
+  <target name="all" depends="clean,webdoclet,compile,resources,package,output" />
+
+</project>

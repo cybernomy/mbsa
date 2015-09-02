@@ -1,0 +1,39 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_009security SYSTEM "modules/009security.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere System">
+<!ENTITY secur "Управление правами пользователей ">
+<!ENTITY cont_centr "Центр управления">
+]> -->
+<chapter id="009security">
+  <title>Права на папки</title>
+    
+    <para>В системе &merp; в структурированных списках возможно разграничение
+    доступа групп пользователей по папкам. </para>
+    
+    <para>Чтобы определить право доступа к папке, нужно установить курсор на этой
+    папке и нажать клавишу <keycombo><keycap>F7</keycap></keycombo>
+    (или вызвать контекстное меню и выбрать пункт <guibutton>Доступ</guibutton>). </para>
+    
+    <para>В появившемся окне видно, какие группы пользователей имеют доступ
+    к данной папке, а какие - не имеют доступа.  </para>
+    
+     <screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/access2folder.gif"/>
+      </imageobject></mediaobject></screenshot>
+    
+    <para>С помощью кнопок-стрелок переместите в правую часть группы, которым
+    разрешается доступ к папке, и оставьте в левой части группы, которые не должны
+    иметь доступа к папке.</para>
+    
+ <!--   <para><guibutton>Изменять для вложенных папок</guibutton>. Если это поле отмечено
+    флагом, то для вложенных папок могут быть установлены другие параметры доступа. </para>  -->
+    
+    <para>Даже если в условиях отбора будет снят флаг &quot;Учитывать папку&quot;,
+    пользователь не сможет увидеть записи из той папки, к которой не имеет доступа. </para>
+    
+    <para>См. также <link linkend="004security">Права на модули</link>. </para>
+ 
+  </chapter>

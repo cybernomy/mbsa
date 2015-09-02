@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="com.mg.merp.wb.views"
+            class="com.mg.merp.wb.bai.ui.BAiView"
+            icon="resources/bai.gif"
+            id="com.mg.merp.wb.bai.ui.BAiView"
+            name="%BAiView.name"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.mg.merp.wb.bai.ui.editor.BAiEditorForm"
+            icon="resources/bai.gif"
+            id="com.mg.merp.wb.bai.BAiEditor"
+            name="BAiEditor"/>
+   </extension>
+
+</plugin>

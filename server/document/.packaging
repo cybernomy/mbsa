@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurations>
+<archive name="mdocument-ejb.jar" destination="output" used="true" exploded="false">
+<folder prefix="" includes="" excludes="" project="" projectLocation="output/classes" name="classes" location="output/classes" used="true"/>
+<file prefix="META-INF" project="" projectLocation="src/META-INF/ejb-jar.xml" name="ejb-jar.xml" location="src/META-INF/ejb-jar.xml" used="true"/>
+<file prefix="META-INF" project="" projectLocation="src/META-INF/jboss.xml" name="jboss.xml" location="src/META-INF/jboss.xml" used="true"/>
+</archive>
+<archive name="mdocument.jar" destination="output" used="true" exploded="false">
+<folder prefix="com/mg/merp/document/generic" includes="" excludes="" project="" projectLocation="output/classes/com/mg/merp/document/generic" name="generic" location="output/classes/com/mg/merp/document/generic" used="true"/>
+<file prefix="com/mg/merp/document" project="" projectLocation="output/classes/com/mg/merp/document/Document.class" name="Document.class" location="output/classes/com/mg/merp/document/Document.class" used="true"/>
+<file prefix="com/mg/merp/document" project="" projectLocation="output/classes/com/mg/merp/document/GoodsDocument.class" name="GoodsDocument.class" location="output/classes/com/mg/merp/document/GoodsDocument.class" used="true"/>
+<file prefix="com/mg/merp/document" project="" projectLocation="output/classes/com/mg/merp/document/GoodsDocumentSpecification.class" name="GoodsDocumentSpecification.class" location="output/classes/com/mg/merp/document/GoodsDocumentSpecification.class" used="true"/>
+<file prefix="com/mg/merp/document" project="" projectLocation="output/classes/com/mg/merp/document/SpecCreateInfo.class" name="SpecCreateInfo.class" location="output/classes/com/mg/merp/document/SpecCreateInfo.class" used="true"/>
+</archive>
+</configurations>

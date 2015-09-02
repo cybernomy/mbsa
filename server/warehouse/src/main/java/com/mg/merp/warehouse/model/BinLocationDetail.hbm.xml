@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.warehouse.model.BinLocationDetail" table="WH_BIN_LOCATION_DETAIL">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="int">
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">WH_BIN_LOCATION_DETAIL_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="BinLocation" class="com.mg.merp.warehouse.model.BinLocation">
+      <column name="BIN_LOCATION_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="StockBatch" class="com.mg.merp.warehouse.model.StockBatch">
+      <column name="STOCKBATCH_ID" not-null="false" />
+    </many-to-one>
+    <property name="Quantity" type="java.math.BigDecimal">
+      <column name="QUANTITY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="DocSpecId" type="java.lang.Integer">
+      <column name="DOCSPEC_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="Kind" type="short">
+      <column name="KIND" not-null="true" sql-type="SMALLINT" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

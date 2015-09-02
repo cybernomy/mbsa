@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: AdvanceRepSpecMt.mfd.xml,v 1.8 2008/03/12 11:23:48 alikaev Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.AdvanceRepSpecMt" title="resource://com.mg.merp.account.resources.formelements#AdvanceRepSpec.FormMt.Title" helpTopic="account#advspec_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Main" >	
+			<jfd:field id="Num" />
+			<jfd:field id="ExpenseDocDate" />
+			<jfd:field id="ExpenseDocNumber" sameLine="true"/>
+			<jfd:field id="ExpenseDocName" />							
+			<jfd:field id="Catalog" />
+			<jfd:include name="com/mg/merp/document/resources/DocSpecQuantityMacros.xml" /> 			
+	 	 	<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />				
+			<jfd:field id="ExpenseSum" />
+			<jfd:field id="Summa1" text="resource://com.mg.merp.account.resources.dataitemlabels#Adv.ExpenseSumLabel" sameLine="true"/>			
+			<jfd:container  id="accDebetFields" layout="jfd:box" columns="1" label="resource://com.mg.merp.account.resources.formelements#AccDebet">
+				<jfd:field id="AccPlan" showLabel="false" />
+				<jfd:field id="Anl1" showLabel="false" />
+				<jfd:field id="Anl2" showLabel="false"/>
+			 	<jfd:field id="Anl3" showLabel="false" />
+				<jfd:field id="Anl4" showLabel="false" />
+				<jfd:field id="Anl5" showLabel="false" />								
+			</jfd:container>
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																							
+		</jfd:container>
+ 		<jfd:container id="extraFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Extra" >
+			<jfd:field id="Contractor" />	
+			<jfd:field id="Comment" />	
+		</jfd:container>
+		<jfd:include name="com/mg/merp/document/resources/DocSpecTaxGroupMacros.xml" /> 				 					 		 				 					 								
+		<jfd:include name="com/mg/merp/document/resources/DocSpecPackingMacros.xml" /> 		 
+	 	<jfd:include name="com/mg/merp/document/resources/DocSpecSerialNumMacros.xml" />  		 	 	 	
+	</jfd:container>
+	
+	<jfd:include name="com/mg/merp/document/resources/DefaultDocSpecMaintenanceFooterMacros.xml" />			
+</jfd:form>

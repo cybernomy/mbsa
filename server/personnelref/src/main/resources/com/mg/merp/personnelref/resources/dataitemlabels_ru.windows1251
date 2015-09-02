@@ -1,0 +1,310 @@
+# $Id: dataitemlabels_ru.windows1251,v 1.13 2008/03/25 14:03:20 alikaev Exp $
+
+Id=Идентификатор
+Name=Наименование
+Code=Код
+Priority=Приоритет
+Okin=Код по ОКИН
+Okso=Код по ОКСО
+Msko=Код по МСКО
+BeginDate=Дата начала действия
+
+TarSc.FirstClassAlg=Алгоритм расчёта ставки 1-го разряда
+
+ScaleNumber=Порядковый номер шкалы
+PercentNumber=Порядковый номер 
+
+RisPerc.ServiceFrom=Стаж от
+RisPerc.ServiceTo=Стаж до
+RiseValue=Процент
+
+Pers.EdDegree=Степень образования
+Pers.TableNum=Табельный номер
+LabourContrNum=Номер
+LabourContrDate=Дата
+Pers.InsuredClass=Категория плательщиков страховых взносов
+
+PersGroupType.Name=Наименование
+
+LangKnowledge.Name=Наименование
+LangKnowledge.Okin=Код по ОКИН
+
+PrefPosition.Name=Наименование должности
+
+PrefJob.Name=Наименование профессии
+PrefJob.Okpdtr=Код по ОКПДТР
+
+ForeignLang.Name=Наименование
+ForeignLang.Okin=Код по ОКИН
+
+WorkCondition.Ccode=Код
+WorkCondition.Cname=Наименование
+
+MilitaryValid.Code=Код
+MilitaryValid.Name=Наименование
+
+MilitRankKind.Code=Код
+MilitRankKind.Name=Наименование
+
+ReserCategory.Name=Наименование
+
+ServicePFCode.Code=Код
+ServicePFCode.Descr=Описание
+
+PosFillKind.KCode=Код
+PosFillKind.Prior=Приоритет
+
+StaffList.LName=Наименование
+
+ServiceKind.KName=Наименование
+ServiceKind.KCode=Код
+
+InsurClass.InsPerc=Процент взносов застрахованного лица
+InsurClass.EmplPerc=Процент взносов работодателя
+
+StaffCategory.CCode=Код
+StaffCategory.CName=Наименование
+StaffCateg.Priority=Приоритет
+
+PCKISK.PfCodeKind=Наименование
+PCKISK.Ratio=Коэффициент для расчёта стажа
+
+DeducKind.Class=Категория вычетов
+DeducKind.MinSalNum=Число минимальных зарплат
+DeducKind.FixedSum=Фиксированная сумма
+DeducKind.BeginDate=Дата начала действия
+DeducKind.MaxIncome=Максимальный доход
+
+DeducClass.None=Нет
+DeducClass.Oneself=На себя
+DeducClass.Children=На детей
+DeducClass.Dependant=На иждивенцев
+
+Abbr.Level=Уровень
+Abbr.Abridge=Сокращение
+
+PersGroup.FldName=Наименование
+PersGroup.GroupType=Тип группы
+
+WorkSchdl.BeginDate=Дата начала действия на предприятии
+WorkSchdl.EndDate=Дата окончания действия
+WorkSchdl.Leave=График для расчёта отпуска
+
+CostsAnl.AnlLevel=Уровень
+CostsAnl.Parent=Аналитика верхнего уровня
+
+CalcPer.BeginDate=Дата начала периода
+CalcPer.EndDate=Дата окончания периода
+CalcPer.StaffList=Штатное расписание
+
+ServiceKind.BegServ=Алгоритм расчета даты начала стажа
+ServiceKind.EndServ=Алгоритм расчета даты окончания стажа
+ServiceKind.LServ=Алгоритм расчета продолжительности стажа (в годах)
+
+Personnel=Сотрудник
+Personnel.Person=Фамилия Имя Отчество
+Personnel.Stature=Рост
+Personnel.Measure=ЕИ
+Personnel.PensNum=Номер карточки пенсионного страхования
+
+TarifSc.TarifScType=Тип тарифной сетки
+TariffingScaleType.Monthly=Оклад помесячно
+TariffingScaleType.ScaleDay=Ставка за день
+TariffingScaleType.ScaleHour=Ставка за час
+TariffingScaleType.VolumeWork=За объем работ
+
+TarifSc.ClassNumber=Номер разряда
+TarifSc.Factor=Коэффициент
+TarifSc.Rate=Ставка
+
+WorkTimeNorm.WDNum=Количество дней
+WorkTimeNorm.WHNum=Количество часов
+WorkTimeNorm.WDAlg=Алгоритм расчета
+CalcPeriod=Расчетный период
+Personnel.PServKind=Вид стажа
+Personnel.Ratio=Коэффициент
+Personnel.IsGoingOn=Стаж продолжается
+Personnel.BeginDate=Дата начала
+Personnel.EndDate=Дата окончания
+Personnel.LenServ=Продолжительность
+Personnel.Comment=Примечание
+Service.Button.Calc=Вычислить
+
+Personnel.Job=Профессия
+Personnel.IsBasic=Основная
+
+Personnel.InstName=Наименование образовательного учреджения
+Personnel.DiplQual=Квалификация по диплому, удостоверению
+Personnel.DiplNumr=Серия и номер диплома
+Personnel.DiplDate=Дата выдачи
+Personnel.GradYear=Год окончания
+Personnel.Spec=Направление или специальность по диплому
+Personnel.PrefIsAE=Тип образования
+Personnel.AddEduc=Тип дополнительного образования
+PrefIsAdditionalEducation.Base=Основное
+PrefIsAdditionalEducation.Grad=Послевузовское
+
+Personnel.FLang=Иностранный язык
+Personnel.LangKn=Степень знания
+Personnel.ContrName=Наименование документа
+Personnel.OrigDoc=Оригинал документа
+Personnel.RetDate=Дата
+Personnel.RetReason=Причина увольнения
+
+Personnel.TrDate=Дата
+Personnel.StaffList=Подразделение
+Personnel.Position=Должность
+Personnel.Salary=Оклад
+Personnel.SalRaise=Надбавка
+Personnel.MilReserv=Категория запаса
+Personnel.MilRank=Воинское звание
+Personnel.MilRKind=Состав(профиль)
+Personnel.MilSpec=Код военно-учетной специальности
+Personnel.MilValid=Категория годности
+Personnel.MilCommis=Наименование военного коммисариата
+Personnel.MilReg=Состоит на воинском учете (номер команды, партии)
+Personnel.MilRegSp=Состоит на специальном воинском учете
+Personnel.MilIsTak=Отметка о снятии сучета
+MilitaryRegTakenOff.NotOff=Не снят
+MilitaryRegTakenOff.OffAge=Снят с воинского учета по возрасту
+MilitaryRegTakenOff.OffHealth=Снят с воинского учета по состоянию здоровья
+Personnel.AttDate=Дата
+Personnel.Resolut=Решение комиссии
+Record.Name=Наименование записи
+Personnel.Descrip=Описание
+Personnel.Original=Оригинал документа
+Personnel.ResDoc=Протокол
+Personnel.Benefit=Наименование льготы
+Personnel.BenReason=Основание
+Personnel.Holiday=Вид отпуска
+Personnel.Holiday=Количество дней отпуска
+Personnel.WBegDate=Начало периода работы
+Personnel.WEndDate=Окончание периода работы
+Personnel.FullAdd=Полный адрес
+
+FamilyDed.FamilyMem=Член семьи
+FamilyDed.DedKind=Вид вычета
+FamilyDed.Ratio=Коэффициент вычета
+FamilyDed.BeginDate=Дата начала действия
+FamilyDed.EndDate=Дата окончания действия
+Personnel.RewardN=Наименование награды
+Personnel.StBegDate=Дата начала обучения
+Personnel.StEndDate=Дата окончания обучения
+Personnel.SkillRais=Вид повышения квалификации
+Personnel.InstName=Наименование образовательного учреждения
+Personnel.InstAddr=Адрес образовательного учреждения
+
+Personnel.TrBegDate=Дата начала переподготовки
+Personnel.TrEndDate=Дата окончания переподготовки
+Vocat.Spec=Специальность
+
+Position.CostsAnl=Аналитика
+Position.Position=Должность
+Position.UniqueId=Уникальный код должности
+Position.BeginDate=Дата начала действия
+Position.EndDate=Дата окончания действия
+Position.WorkS=График работы
+Position.RateNumber=Количество ставок
+Position.Holiday=Количество дней отпуска
+Position.StaffCateg=Категория персонала
+Position.TaxCalc=Схема расчета налогов
+Position.WorkCond=Условия труда
+
+Tariffing.BeginDate=Дата начала действия
+Tariffing.EndDate=Дата окончания действия
+Tariffing.Category=Категория тарификации должности
+Tariffing.TariffScaleCode=Тарифная сетка
+Tariffing.RateOfSal=Оклад
+Tariffing.TarClass=Разряд
+Tariffing.UseRef=Использовать справочник надбавок
+Tariffing.MinSalary=Количество минимальных окладов
+Tariffing.RiseValue=Значение надбавки
+Tariffing.Rise=Надбавка
+Tariffing.RiseScale=Шкала надбавок
+Tariffing.CostsAnl=Аналитика состава затрат
+
+StaffListUnit.Code=Код
+StaffListUnit.Name=Наименование
+StaffListUnit.WSch=График работы
+StaffListUnit.TaxC=Схема расчета налогов
+StaffListUnit.Comm=Комментарий
+TariffingCat.Type=Тип категории тарификации
+TarifCategType.Rate=Оклад
+TarifCategType.Tariff=Ставка по тарифной сетке
+TarifCategType.Rise=Процент надбавки
+TarifCategType.Min=Количество минимальных окладов
+
+Код стажа для ПФ
+CodeInService.Comm=Примечание
+Personnel.House=Дом
+Personnel.Block=Корпус
+Personnel.Flat=Квартира
+Personnel.KladrCode=Код классификатора
+
+Фамилия
+Имя
+Отчество
+Код степени родства
+Дата рождения
+
+Abbreviation=
+AdditionalEducationKind=Тип дополнительного образования
+EducationDegree=
+ForeignLanguage=Иностранный язык
+InsuredClass=Категория плательщиков страховых взносов
+LanguageKnowledge=
+LeaveKind=Вид отпуска
+MilitaryRankKind=Состав(профиль)
+MilitaryRank=Воинское звание
+MilitaryValidity=Категория годности
+PrefJob=Профессия
+PrefPosition=Должность
+ReserveCategory=Категория запаса
+Rise=Надбавка
+TariffingCategory=Категория тарификации должности
+StaffList=Штатное расписание
+DeductionKind=Вид вычета
+PositionFillKind=Вид исполнения должности
+PersonnelRef.StaffListPosition=Уникальный код должности ШР
+StaffCategory=Категория персонала
+
+TaxCalcKind=Схема расчета налогов
+WorkCondition=Условия труда
+WorkSchedule=График работы
+ServiceKind=Вид стажа
+ServicePfCode=Код стажа для ПФ
+
+Address.Type=Тип
+Address.Region=Регион
+Address.District=Район
+Address.Country=Страна
+Address.Street=Улица
+Address.Index=Индекс
+
+Cond.BeginDate=Период с
+Cond.EndDate=по
+
+Cond.Personnel.TableNumberFrom=Диапазон табельных номеров с
+Cond.Personnel.TableNumberTill=по
+
+PersonnelRef.Tariffing.TariffScaleCode=Тарифная сетка
+
+Personnelref.CostsAnl1=Аналитика состава затрат 1
+Personnelref.CostsAnl2=Аналитика состава затрат 2
+Personnelref.CostsAnl3=Аналитика состава затрат 3
+Personnelref.CostsAnl4=Аналитика состава затрат 4
+Personnelref.CostsAnl5=Аналитика состава затрат 5
+
+Street.Type=Сокращение
+PersonnelRef.Street.Code=Классификационный код
+PersonnelRef.Street.PostIndex=Почтовый индекс
+PersonnelRef.Street.GninMb=Код налогового органа
+PersonnelRef.Street.OcaTd=Код СОАТО
+
+PersonnelRef.Kladr.Name=Наименование
+PersonnelRef.Kladr.Type=Тип
+PersonnelRef.Kladr.Code=Классификационный код
+PersonnelRef.Kladr.PostIndex=Почтовый индекс
+PersonnelRef.Kladr.GnInMb=Код налогового органа
+PersonnelRef.Kladr.Ocatd=Код СОАТО
+PersonnelRef.Kladr.SysCod=Системный код

@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.reference.model.PriceListHead" table="PRICELISTHEAD">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">PRICELISTHEAD_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="CurrencyRateAuthority" class="com.mg.merp.reference.model.CurrencyRateAuthority">
+      <column name="CURRATEAUTHORITY_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="BasePriceType" class="com.mg.merp.reference.model.PriceType">
+      <column name="BASEPRICETYPE" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Contractor" class="com.mg.merp.reference.model.Contractor">
+      <column name="CONTRACTOR_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CurrencyRateType" class="com.mg.merp.reference.model.CurrencyRateType">
+      <column name="CURRATETYPE_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Currency" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
+      <column name="CURRENCY_CODE" length="5" not-null="false" />
+    </many-to-one>
+    <property name="PrName" type="java.lang.String">
+      <column name="PRNAME" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="CreateDate" type="java.util.Date">
+      <column name="CREATEDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="IsCurrent" type="boolean">
+      <column name="ISCURRENT" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="InsertSign" type="java.lang.Boolean">
+      <column name="INSERTSIGN" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="PricePrecision" type="java.lang.Integer">
+      <column name="PRICE_PRECISION" not-null="false" sql-type="INTEGER" />
+    </property>
+    <set name="PriceTypeLinks" inverse="true">
+      <key on-delete="cascade">
+        <column name="PRICELIST_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.reference.model.PriceListPriceTypeLink" />
+    </set>
+    <set name="UserRights" inverse="true">
+      <key on-delete="cascade">
+        <column name="REC_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.reference.model.PriceListHeadRights" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

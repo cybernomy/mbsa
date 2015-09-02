@@ -1,0 +1,46 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_014dp SYSTEM "modules/014dp.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY dp "Документооборот">
+<!ENTITY cont_centr "Центр управления">
+]> -->
+<chapter id="014dp">
+  <title>Свойства дизайнера</title>
+    
+    <para>Дизайнер - это встроеннный редактор графического представления 
+    документооборота. Чтобы вызвать окно свойств дизайнера, убедитесь что нет 
+    выделенных объектов (нажмите клавишу <keycombo><keycap>Esc</keycap></keycombo>), 
+    нажмите кнопку &quot;Свойства&quot; или клавишу <keycombo><keycap>Enter</keycap></keycombo>. </para>
+    
+    <para>Примечание: если выделенные объекты есть, будет вызвано не окно &quot;<emphasis>Свойства 
+    дизайнера</emphasis>&quot;, а окно &quot;<emphasis>Свойства объекта</emphasis>&quot;. </para>
+
+  <screenshot> 
+    <mediaobject><imageobject><imagedata fileref="images/designer_kind.gif"/></imageobject></mediaobject>
+  </screenshot>
+    
+    <para>Вы можете настраивать следующие свойства дизайнера:</para>
+    
+    <para><guibutton>Выравнивание по сетке</guibutton>. Если этот пункт отмечен 
+    флагом, при перемещении объекта происходит его привязка к направляющей сетке.</para>
+    
+    <para><guibutton>Показывать сетку</guibutton>. Если этот пункт отмечен флагом, 
+    отображаются точки направляющей сетки.</para>
+    
+    <para><guibutton>Размер сетки</guibutton>. По умолчанию размер ячейки направляющей 
+    сетки минимальный и составляет 8 пикселов. Вы можете увеличить его по своему желанию. 
+    Максимальное значение - 100 пикселов.</para>
+    
+    <para>Для удобства редактирования можно изменить цвет фона, маркера (выделения), 
+    сетки. Для этого щёлкните левой кнопкой мыши на соответствующий прямоугольник 
+    справа. Появится системная палитра цветов. Выберите желаемый цвет и нажмите 
+    кнопку <guibutton>OK</guibutton>.</para>
+    
+    <para>Настройки свойств дизайнера не сохраняются вместе с картой.</para>
+    
+    <para>См. также: <link linkend="015dp">Свойства объекта</link>. </para>
+    
+  </chapter>

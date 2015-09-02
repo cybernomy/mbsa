@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: ResourceMt.mfd.xml,v 1.2 2007/06/01 17:04:32 konyashkina Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.bpm.support.ui.ResourceMt" title="resource://com.mg.merp.bpm.resources.formelements#Resource.FormMt.Title" helpTopic="bpm#resource_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+		<jfd:field id="Name" />
+		<jfd:field id="Key" />
+		<jfd:field id="User" />
+	 	<jfd:table id="linksTable" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" label="resource://com.mg.merp.bpm.resources.formelements#Resource.FormMt.Link" >
+	 		<jfd:popupMenu>
+	 			<jfd:menuItem id="addMember" text="resource://com.mg.merp.bpm.resources.formelements#Resource.FormMt.AddMember" actionListener="AddMember" />
+	 			<jfd:menuItem id="removeMember" text="resource://com.mg.merp.bpm.resources.formelements#Resource.FormMt.RemoveMember" actionListener="RemoveMember" />
+	 		</jfd:popupMenu>
+		</jfd:table>
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

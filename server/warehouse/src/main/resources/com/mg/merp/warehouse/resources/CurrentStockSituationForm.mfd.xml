@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: CurrentStockSituationForm.mfd.xml,v 1.2 2007/08/14 14:31:10 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.warehouse.support.ui.CurrentStockSituationForm" 
+	orientation="ver" verticalGap="5" title="resource://com.mg.merp.warehouse.resources.formelements#CurrentStockSituationForm.Title">
+
+	<jfd:container id="stockSituation" layout="jfd:tabbed" alignment="expand_expand">
+		<jfd:table id="stockSituation1" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" 
+			tabTitle="resource://com.mg.merp.warehouse.resources.formelements#CurrentStockSituationForm.Title.TabBase">
+			<jfd:popupMenu>
+				<jfd:menuItem id="refreshSituation1" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="RefreshSituation" keyStroke="F5" />
+			</jfd:popupMenu>		
+		</jfd:table>
+		<jfd:table id="stockSituation2" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" 
+			tabTitle="resource://com.mg.merp.warehouse.resources.formelements#CurrentStockSituationForm.Title.TabAdd">
+			<jfd:popupMenu>
+				<jfd:menuItem id="refreshSituation2" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="RefreshSituation" keyStroke="F5" />
+			</jfd:popupMenu>		
+		</jfd:table>
+	</jfd:container>
+
+
+</jfd:form>

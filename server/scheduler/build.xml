@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: build.xml,v 1.2 2008/04/25 11:29:34 safonov Exp $ -->
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "../../build/etc/module.xml">
+]>
+
+<project default="all" name="Scheduler module">
+
+  <property file="../../build/build.properties"/>
+
+  &module;
+
+  <path id="project.class.path">
+    <path refid="module.class.path"/>
+  </path>
+
+  &common;
+
+  <target name="init" depends="mg.ejbmodule.init, mg.module.encode" >
+    <property name="module.filename" value="020mscheduler-ejb.jar"/>
+    <property name="ui.module.filename" value="020mscheduler-ui.jar"/>
+  	<property name="service.filename" value="mscheduler.sar"/>
+    <property name="module.name" value="scheduler"/>
+  	
+  	<property name="badi.lib.dpnds" value="mgframework, mcore, mbaiengine"/>
+  	<property name="wb.incl.src" value="**/*.java"/>
+  </target>
+
+  <target name="compile" depends="init">
+    <antcall target="mg.javac">
+      <param name="javac-src" value="src/main/java"/>
+      <param name="javac-includes" value="**/*.java"/>
+      <param name="classdir" value="output/classes"/>
+    </antcall> 
+  </target>
+
+  <target name="resources" depends="init">
+  	<antcall target="mg.module.resources" />
+  </target>
+
+  <target name="package" depends="init">
+    <antcall target="mg.module.manifest" >
+      <param name="module.filename" value="${service.filename}"/>
+    </antcall>
+    <antcall target="mg.ejbmodule.package">
+       <param name="module.filename" value="${module.filename}"/>
+       <param name="excludes" value="**/jboss/*.class **/BAiJob.class **/SchedulerManagerServiceImpl.class **/TaskInterceptorImpl*"/>
+    </antcall> 
+    <antcall target="mg.uimodule.package">
+       <param name="module.filename" value="${ui.module.filename}"/>
+       <param name="package" value="com/mg/merp/${module.name}"/>
+    </antcall>  	
+	<jar destfile="output/lib/${service.filename}" manifest="${service.filename}.MANIFEST.MF">
+		<zipfileset dir="output/classes">
+			<include name="**/jboss/*.class"/>
+			<include name="**/BAiJob.class"/>
+			<include name="**/SchedulerManagerServiceImpl.class"/>
+			<include name="**/TaskInterceptorImpl*"/>
+		</zipfileset>
+		<zipfileset dir="src/META-INF" prefix="META-INF" includes="jboss-service.xml"/>
+  	</jar>
+
+	<antcall target="mg.wbmodule.package">
+		<param name="module.filename" value="m${module.name}"/>
+		<param name="wb.incl.src" value="${wb.incl.src}"/>
+		<param name="badi.lib.version" value="1.0"/>
+		<param name="badi.lib.dpnds" value="${badi.lib.dpnds}"/>	
+  	</antcall>
+  </target>
+
+  <target name="deploy" depends="init,package">
+    <antcall target="mg.ejbmodule.deploy">
+       <param name="module.filename" value="${module.filename}"/>
+    </antcall> 
+  </target>
+
+  <target name="output" depends="init">
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${module.filename}"/>
+       <param name="output.dest" value="ejb"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${service.filename}"/>
+       <param name="output.dest" value="service"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="${ui.module.filename}"/>
+       <param name="output.dest" value="ui"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="m${module.name}.jar"/>
+       <param name="output.dest" value="workbench/lib"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="m${module.name}-src.jar"/>
+       <param name="output.dest" value="workbench/src"/>
+    </antcall>
+  	<antcall target="mg.model.output" />
+  </target>
+
+  <target name="clean">
+    <antcall target="mg.ejbmodule.clean"/>
+  </target>
+
+  <target name="all" depends="clean,compile,resources,package,output" />
+
+</project>

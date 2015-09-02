@@ -1,0 +1,2747 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: GlobalMenu.xml,v 1.40 2009/02/26 14:13:31 safonov Exp $ -->
+
+
+<!-- OLAP?????????? -->
+<!-- Регионы РФ?????????? -->		
+<!-- Районы?????????? -->		
+<!-- Города?????????? -->		
+<!-- Населенные пункты?????????? -->		
+<!-- Улицы?????????? -->
+<!-- Установить текущий расчетный период??????????????7 -->	
+<!-- Перенос остатков (финучет)??????? -->	
+<!-- Переоценка валютных активов и пассивов??????? -->	
+<!-- Перенос остатков (бухучет)??????? -->
+<!-- Расчет нормативной себестоимости ЗНП???????????? -->	
+<!-- Расчет нормативной себестоимости состава изделия???????????? -->	
+<!-- График загрузки мощностей?????????????????? -->	
+<!-- Обрабатываемые документы???????????????7 -->
+<!-- Все конфигурации???????????????77 -->	
+<!-- Обмен данными (название базы)???????????????77 -->
+<!-- Задания планировщика???????????????7 -->
+
+<menu name="module">
+	<text>
+		<ru_RU>Модуль</ru_RU>
+	</text>
+	<menu name="admin">
+		<text>
+			<ru_RU>Администрирование</ru_RU>
+		</text>		
+		<menu name="applicationDictionary">
+			<text>
+				<ru_RU>Словарь приложения</ru_RU>
+			</text>
+			<menuItem name="sysClass">
+				<text>
+					<ru_RU>Бизнес-компоненты</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/SysClass</param>
+				</action>
+			</menuItem>	
+			<menuItem name="sysClassImplementation">
+				<text>
+					<ru_RU>Реализация бизнес-компонентов</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/core/SysClassImpl</param>
+				</action>
+			</menuItem>	
+			<menuItem name="sysDomain">
+				<text>
+					<ru_RU>Домены системы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/core/SysDomain</param>
+				</action>
+			</menuItem>
+			<menuItem name="sysDataItem">
+				<text>
+					<ru_RU>Элементы данных системы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/core/SysDataItem</param>
+				</action>
+			</menuItem>
+			<menuItem name="sysWindow">
+				<text>
+					<ru_RU>Окна системы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/core/SysWindow</param>
+				</action>
+			</menuItem>
+			<menuItem name="sysForm">
+				<text>
+					<ru_RU>Формы системы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/core/SysForm</param>
+				</action>
+			</menuItem>
+		</menu>
+		<menuItem name="showMonitorUserSessionForm">
+			<text>
+				<ru_RU>Монитор сессий пользователей</ru_RU>
+			</text>
+			<action code="com.mg.merp.core.support.ui.MonitorUserSessionMenuCommand" />
+		</menuItem>
+		<menuItem name="sysCompany">
+			<text>
+				<ru_RU>Балансовые единицы</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/core/SysCompany</param>
+			</action>
+		</menuItem>
+		<menuItem name="userGroup">
+			<text>
+				<ru_RU>Группы пользователей</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/security/UserGroup</param>
+			</action>
+		</menuItem>	
+		<menuItem name="user">
+			<text>
+				<ru_RU>Пользователи</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/security/User</param>
+			</action>
+		</menuItem>			
+		<menu name="allAudit">
+			<text>
+				<ru_RU>Аудит</ru_RU>
+			</text>
+			<menuItem name="databaseAuditSetup">
+				<text>
+					<ru_RU>Настройка аудита хранилища данных</ru_RU>
+				</text>
+				<action code="com.mg.merp.core.support.ui.ShowEntityAuditSetupWizardCommand">
+				</action>
+			</menuItem>
+			<menuItem name="databaseAudit">
+				<text>
+					<ru_RU>Журнал аудита хранилища данных</ru_RU>
+				</text>
+				<action code="com.mg.merp.core.support.ui.ShowEntityAuditCommand">
+				</action>
+			</menuItem>
+			<menuItem name="securityAudit">
+				<text>
+					<ru_RU>Журнал аудита безопасности</ru_RU>
+				</text>
+				<action code="com.mg.merp.core.support.ui.ShowSecurityAuditCommand">
+				</action>
+			</menuItem>
+			<menuItem name="securityAudit">
+				<text>
+					<ru_RU>Журнал аудита системы</ru_RU>
+				</text>
+				<action code="com.mg.merp.core.support.ui.ShowSystemAuditCommand">
+				</action>
+			</menuItem>
+		</menu>
+<!-- Обрабатываемые документы???????????????7 -->				
+		<menu name="scheduler">
+			<text>
+				<ru_RU>Планировщик</ru_RU>
+			</text>
+			<menuItem name="scheduleTask">
+				<text>
+					<ru_RU>Задания планировщика</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/schedule/Task</param>
+				</action>
+			</menuItem>
+		</menu>
+		<menuItem name="customUserAction">
+			<text>
+				<ru_RU>Настраиваемые действия пользователя</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/baiengine/CustomUserAction</param>
+			</action>
+		</menuItem>
+		<menu name="config">
+			<text>
+				<ru_RU>Конфигурация</ru_RU>
+			</text>
+			<menuItem name="ctConfig">
+				<text>
+					<ru_RU>Контракты</ru_RU>
+				</text>
+				<action code="com.mg.merp.contract.support.ui.ContractConfigMenuCommand">
+				</action>
+			</menuItem>		
+			<menuItem name="whConfig">
+				<text>
+					<ru_RU>Склады,снабжение,сбыт</ru_RU>
+				</text>
+				<action code="com.mg.merp.warehouse.support.ui.WarehouseConfigMenuCommand">
+				</action>
+			</menuItem>				
+			<menuItem name="stlConfig">
+				<text>
+					<ru_RU>Расчеты с партнерами</ru_RU>
+				</text>
+				<action code="com.mg.merp.settlement.support.ui.StlConfigMenuCommand">
+				</action>
+			</menuItem>				
+			<menuItem name="pmcConfig">
+				<text>
+					<ru_RU>Платежный календарь</ru_RU>
+				</text>
+				<action code="com.mg.merp.paymentcontrol.support.ui.PmcConfigMenuCommand">
+				</action>
+			</menuItem>		
+			<menuItem name="mfConfig">
+				<text>
+					<ru_RU>Производство</ru_RU>
+				</text>
+				<action code="com.mg.merp.mfreference.support.ui.ManufactureConfigMenuCommand">
+				</action>
+			</menuItem>	
+			<menuItem name="finConfig">
+				<text>
+					<ru_RU>Финансовый учет</ru_RU>
+				</text>
+				<action code="com.mg.merp.finance.support.ui.FinConfigMenuCommand">
+				</action>
+			</menuItem>	
+			<menuItem name="accConfig">
+				<text>
+					<ru_RU>Бухгалтерский учет</ru_RU>
+				</text>
+				<action code="com.mg.merp.account.support.ui.AccConfigMenuCommand">
+				</action>
+			</menuItem>	
+			<menuItem name="personnelConfig">
+				<text>
+					<ru_RU>Управление персоналом</ru_RU>
+				</text>
+				<action code="com.mg.merp.personnelref.support.ui.PersonelConfigMenuCommand">
+				</action>
+			</menuItem>	
+			<menuItem name="tableConfig">
+				<text>
+					<ru_RU>Табельный учет</ru_RU>
+				</text>
+				<action code="com.mg.merp.table.support.ui.TableConfigMenuCommand">
+				</action>
+			</menuItem>		
+			<menuItem name="scheduleConfig">
+				<text>
+					<ru_RU>Графики исполнения обязательств</ru_RU>
+				</text>
+				<action code="com.mg.merp.lbschedule.support.ui.ScheduleConfigMenuCommand">
+				</action>
+			</menuItem>
+			<!-- menuItem name="exchConfig">
+				<text>
+					<ru_RU>Обмен данными</ru_RU>
+				</text>
+				<action code="">
+					<param name="ServiceName"></param>
+				</action>
+			</menuItem -->
+		</menu>	
+		<menu name="service">
+			<text>
+				<ru_RU>Сервисы</ru_RU>
+			</text>
+			<!-- menuItem name="exchSite">
+				<text>
+					<ru_RU>Обмен данными</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/exchange/Site</param>
+				</action>
+			</menuItem -->	
+			<menuItem name="reports">
+				<text>
+					<ru_RU>Отчеты</ru_RU>
+				</text>
+				<action code="com.mg.merp.report.support.ShowReportBrowse" />
+			</menuItem>		
+			<menuItem name="originalDocument">
+				<text>
+					<ru_RU>Оригиналы документов</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/OriginalDocument</param>
+				</action>
+			</menuItem>										
+		</menu>	
+		<menu name="management">
+			<text>
+				<ru_RU>Управление данными</ru_RU>
+			</text>
+			<menuItem name="docType">
+				<text>
+					<ru_RU>Документооборот</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/document/DocType</param>
+				</action>
+			</menuItem>	
+			<menuItem name="constant">
+				<text>
+					<ru_RU>Константы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/baiengine/Constant</param>
+				</action>
+			</menuItem>
+			<menuItem name="feature">
+				<text>
+					<ru_RU>Пользовательские поля</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/core/Feature</param>
+				</action>
+			</menuItem>	
+		</menu>				
+	</menu>
+	<menu name="bpm">
+		<text>
+			<ru_RU>Управление бизнес-процессами</ru_RU>
+		</text>	
+		<menuItem name="bpmTask">
+			<text>
+				<ru_RU>Назначения</ru_RU>
+			</text>
+			<action code="com.mg.merp.bpm.support.ui.ShowTask">
+			</action>
+		</menuItem>		
+		<menuItem name="bpmResource">
+			<text>
+				<ru_RU>Ресурсы</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/bpm/Resource</param>
+			</action>
+		</menuItem>	
+		<menuItem name="bpmProcess">
+			<text>
+				<ru_RU>Бизнес-процессы</ru_RU>
+			</text>
+			<action code="com.mg.merp.bpm.support.ui.ShowProcess">
+			</action>
+		</menuItem>	
+	</menu>	
+	<menu name="logistics">
+		<text>
+			<ru_RU>Логистика</ru_RU>
+		</text>	
+		<menu name="order">
+			<text>
+				<ru_RU>Заказы</ru_RU>
+			</text>
+			<menuItem name="orderSup">
+				<text>
+					<ru_RU>Заказы поставщикам</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/OrderHeadSup</param>
+				</action>
+			</menuItem>	
+			<menuItem name="orderCus">
+				<text>
+					<ru_RU>Заказы покупателей</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/OrderHeadCus</param>
+				</action>
+			</menuItem>	
+			<menuItem name="orderSupPattern">
+				<text>
+					<ru_RU>Образцы заказов поставщикам</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/OrderHeadModelSup</param>
+				</action>
+			</menuItem>	
+			<menuItem name="orderCusPattern">
+				<text>
+					<ru_RU>Образцы заказов покупателей</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/OrderHeadModelCus</param>
+				</action>
+			</menuItem>	
+		</menu>			
+		<menu name="bill">
+			<text>
+				<ru_RU>Счета</ru_RU>
+			</text>
+			<menuItem name="billIn">
+				<text>
+					<ru_RU>Входящие счета</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/BillHeadIn</param>
+				</action>
+			</menuItem>	
+			<menuItem name="billOut">
+				<text>
+					<ru_RU>Исходящие счета</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/BillHeadOut</param>
+				</action>
+			</menuItem>
+			<menuItem name="billInPattern">
+				<text>
+					<ru_RU>Образцы входящих счетов</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/BillHeadModelIn</param>
+				</action>
+			</menuItem>	
+			<menuItem name="billOutPattern">
+				<text>
+					<ru_RU>Образцы исходящих счетов</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/BillHeadModelOut</param>
+				</action>
+			</menuItem>
+		</menu>			
+		<menu name="invoice">
+			<text>
+				<ru_RU>Накладные</ru_RU>
+			</text>
+			<menuItem name="invoiceIn">
+				<text>
+					<ru_RU>Входящие накладные</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/InvoiceHeadIn</param>
+				</action>
+			</menuItem>	
+			<menuItem name="invoiceOut">
+				<text>
+					<ru_RU>Исходящие накладные</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/InvoiceHeadOut</param>
+				</action>
+			</menuItem>
+			<menuItem name="invoiceInPattern">
+				<text>
+					<ru_RU>Образцы входящих накладных</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/InvoiceHeadModelIn</param>
+				</action>
+			</menuItem>	
+			<menuItem name="invoiceOut">
+				<text>
+					<ru_RU>Образцы исходящих накладных</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/InvoiceHeadModelOut</param>
+				</action>
+			</menuItem>
+		</menu>	
+		<menu name="warehouseDocument">
+			<text>
+				<ru_RU>Ордера</ru_RU>
+			</text>
+			<menuItem name="warehouseDocumentIn">
+				<text>
+					<ru_RU>Приходные ордера</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/WarehouseDocumentHeadIn</param>
+				</action>
+			</menuItem>	
+			<menuItem name="warehouseDocumentOut">
+				<text>
+					<ru_RU>Расходные ордера</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/WarehouseDocumentHeadOut</param>
+				</action>
+			</menuItem>
+			<menuItem name="warehouseDocumentInPattern">
+				<text>
+					<ru_RU>Образцы приходных ордеров</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/WarehouseDocumentHeadModelIn</param>
+				</action>
+			</menuItem>	
+			<menuItem name="warehouseDocumentOutPattern">
+				<text>
+					<ru_RU>Образцы расходных ордеров</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/WarehouseDocumentHeadModelOut</param>
+				</action>
+			</menuItem>	
+		</menu>			
+		<menuItem name="rtlInvoice">
+			<text>
+				<ru_RU>Документы на отпуск</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/retail/InvoiceHead</param>
+			</action>
+		</menuItem>
+		<menuItem name="rtlInvoicePattern">
+			<text>
+				<ru_RU>Образцы документов на отпуск</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/retail/InvoiceHeadModel</param>
+			</action>
+		</menuItem>						
+		<menuItem name="separator" />	
+		<menu name="price">
+			<text>
+				<ru_RU>Ценообразование</ru_RU>
+			</text>
+			<menuItem name="priceListHead">
+				<text>
+					<ru_RU>Прайс-листы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/PriceListHead</param>
+				</action>
+			</menuItem>				
+			<menuItem name="priceType">
+				<text>
+					<ru_RU>Типы цен</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/PriceType</param>
+				</action>
+			</menuItem>				
+			<menuItem name="discout">
+				<text>
+					<ru_RU>Скидки/наценки</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/discount/Discount</param>
+				</action>
+			</menuItem>				
+			<menuItem name="discountCard">
+				<text>
+					<ru_RU>Дисконтные карты</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/discount/Card</param>
+				</action>
+			</menuItem>	
+			<menuItem name="discountCoefficient">
+				<text>
+					<ru_RU>Коэффициенты скидок/наценок</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/discount/GlobalCoefficient</param>
+				</action>
+			</menuItem>
+			<menuItem name="promotion">
+				<text>
+					<ru_RU>Рекламные мероприятия</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/discount/Promotion</param>
+				</action>
+			</menuItem>
+			<menuItem name="promotionType">
+				<text>
+					<ru_RU>Типы рекламных мероприятий</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/discount/PromotionType</param>
+				</action>
+			</menuItem>
+		</menu>		
+		<menuItem name="separator" />						
+		<menuItem name="inventoryAct">
+			<text>
+				<ru_RU>Акты инвентаризации</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/warehouse/InventoryActHead</param>
+			</action>
+		</menuItem>	
+		<menuItem name="separator" />			
+		<menuItem name="warehouse">
+			<text>
+				<ru_RU>Склады</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/warehouse/Warehouse</param>
+			</action>
+		</menuItem>			
+		<menu name="model">
+			<text>
+				<ru_RU>Модели складов</ru_RU>
+			</text>
+			<menuItem name="warehousetype">
+				<text>
+					<ru_RU>Тип склада</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/WarehouseType</param>
+				</action>
+			</menuItem>						
+			<menuItem name="warehouseZone">
+				<text>
+					<ru_RU>Зоны хранения</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/WarehouseZone</param>
+				</action>
+			</menuItem>	
+			<menuItem name="binLocationType">
+				<text>
+					<ru_RU>Типы секций хранения</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/warehouse/BinLocationType</param>
+				</action>
+			</menuItem>						
+		</menu>		
+		<menuItem name="separator" />				
+		<menuItem name="lsSchedule">
+			<text>
+				<ru_RU>Графики исполнения обязательств</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/lbschedule/Schedule</param>
+			</action>
+		</menuItem>			
+		<menuItem name="separator" />						
+		<menu name="overall">
+			<text>
+				<ru_RU>Внутренний учет ТМЦ</ru_RU>
+			</text>
+			<menuItem name="ovrNormHead">
+				<text>
+					<ru_RU>Нормы выдачи спецодежды</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/overall/NormHead</param>
+				</action>
+			</menuItem>	
+			<menuItem name="ovrCard">
+				<text>
+					<ru_RU>Лицевые карточки сотрудников</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/overall/Card</param>
+				</action>
+			</menuItem>						
+		</menu>			
+	</menu>	
+	<menu name="payment">
+		<text>
+			<ru_RU>Денежные средства</ru_RU>
+		</text>		
+		<menuItem name="pmcResource">
+			<text>
+				<ru_RU>Средства платежа</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/paymentcontrol/Resource</param>
+			</action>
+		</menuItem>			
+		<menuItem name="pmcPeriod">
+			<text>
+				<ru_RU>Периоды планирования</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/paymentcontrol/Period</param>
+			</action>
+		</menuItem>			
+		<menuItem name="separator" />			
+		<menuItem name="payment">
+			<text>
+				<ru_RU>Журнал платежей</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/paymentalloc/Payment</param>
+			</action>
+		</menuItem>
+		<menuItem name="paymentPattern">
+			<text>
+				<ru_RU>Образцы записей журнала платежей</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/paymentalloc/PaymentModel</param>
+			</action>
+		</menuItem>	
+		<menuItem name="separator" />	
+		<menuItem name="pmcLiability">
+			<text>
+				<ru_RU>Реестр обязательств</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/paymentcontrol/Liability</param>
+			</action>
+		</menuItem>
+		<menuItem name="pmcLiabilityPattern">
+			<text>
+				<ru_RU>Образцы обязательств</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/paymentcontrol/LiabilityModel</param>
+			</action>
+		</menuItem>					
+		<menuItem name="pmcVersion">
+			<text>
+				<ru_RU>Планирование платежей</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/paymentcontrol/Version</param>
+			</action>
+		</menuItem>			
+		<menuItem name="pmcExecution">
+			<text>
+				<ru_RU>Управление платежами</ru_RU>
+			</text>
+			<action code="com.mg.merp.paymentcontrol.support.ui.PmcMenuCommand">
+				<param name="ServiceName"></param>
+			</action>
+		</menuItem>			
+	</menu>	
+	<menu name="contract">
+		<text>
+			<ru_RU>Обязательства</ru_RU>
+		</text>	
+		<menuItem name="contract">
+			<text>
+				<ru_RU>Контракты</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/contract/Contract</param>
+			</action>
+		</menuItem>
+		<menuItem name="contracttype">
+			<text>
+				<ru_RU>Вид договора</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/contract/ContractType</param>
+			</action>
+		</menuItem>
+		<menuItem name="contractcategory">
+			<text>
+				<ru_RU>Категория договора</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/contract/ContractCategory</param>
+			</action>
+		</menuItem>
+		<menuItem name="contractorcard">
+			<text>
+				<ru_RU>Картотека расчетов с партнерами</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/settlement/Company</param>
+			</action>
+		</menuItem>		
+	</menu>		
+	<menu name="crm">
+		<text>
+			<ru_RU>CRM</ru_RU>
+		</text>		
+		<menuItem name="crmOperation">
+			<text>
+				<ru_RU>Действия</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/crm/Operation</param>
+			</action>
+		</menuItem>	
+		<menuItem name="crmRelation">
+			<text>
+				<ru_RU>Отношения</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/crm/Relation</param>
+			</action>
+		</menuItem>			
+		<menuItem name="crmContact">
+			<text>
+				<ru_RU>Контактные лица</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/crm/Contact</param>
+			</action>
+		</menuItem>			
+		<menu name="crmKB">
+			<text>
+				<ru_RU>База знаний</ru_RU>
+			</text>
+			<menuItem name="crmSymptom">
+				<text>
+					<ru_RU>Симптомы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/crm/Symptom</param>
+				</action>
+			</menuItem>				
+			<menuItem name="crmProblem">
+				<text>
+					<ru_RU>Проблемы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/crm/Problem</param>
+				</action>
+			</menuItem>	
+			<menuItem name="crmSolution">
+				<text>
+					<ru_RU>Решения</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/crm/Solution</param>
+				</action>
+			</menuItem>			
+			<menuItem name="separator" />	
+			<menuItem name="crmSoluyionSearch">
+				<text>
+					<ru_RU>Поиск решения</ru_RU>
+				</text>
+				<action code="com.mg.merp.crm.support.ui.SolutionSearchMenuCommand">
+					<param name="ServiceName"></param>
+				</action>
+			</menuItem>									
+		</menu>			
+		<menu name="reference">
+			<text>
+				<ru_RU>Справочники CRM</ru_RU>
+			</text>
+			<menu name="crmBranch">
+				<text>
+					<ru_RU>CRM-партнеры</ru_RU>
+				</text>
+				<menuItem name="crmBranch">
+					<text>
+						<ru_RU>Отрасли</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/Branch</param>
+					</action>
+				</menuItem>					
+				<menuItem name="crmActivitySrhere">
+					<text>
+						<ru_RU>Сферы деятельности</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/ActivitySphere</param>
+					</action>
+				</menuItem>		
+				<menuItem name="crmActivityKind">
+					<text>
+						<ru_RU>Виды деятельности</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/ActivityKind</param>
+					</action>
+				</menuItem>	
+				<menuItem name="crmOwnershipForm">
+					<text>
+						<ru_RU>Формы собственности</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/OwnershipForm</param>
+					</action>
+				</menuItem>												
+			</menu>	
+			<menu name="crmPerson">
+				<text>
+					<ru_RU>Контактные лица</ru_RU>
+				</text>
+				<menuItem name="crmPersonRefer">
+					<text>
+						<ru_RU>Обращения</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/PersonTitle</param>
+					</action>
+				</menuItem>	
+				<menuItem name="crmPosition">
+					<text>
+						<ru_RU>Должностии</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/Position</param>
+					</action>
+				</menuItem>									
+			</menu>	
+			<menu name="crmRelation">
+				<text>
+					<ru_RU>Деловые отношения</ru_RU>
+				</text>
+				<menuItem name="crmRelationStatus">
+					<text>
+						<ru_RU>Статусы отношений</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/RelationStatus</param>
+					</action>
+				</menuItem>		
+				<menuItem name="crmMarket">
+					<text>
+						<ru_RU>Рынки</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/Market</param>
+					</action>
+				</menuItem>		
+				<menuItem name="crmDeliveryKind">
+					<text>
+						<ru_RU>Виды доставки</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/DeliveryKind</param>
+					</action>
+				</menuItem>		
+				<menuItem name="crmClientType">
+					<text>
+						<ru_RU>Типы клиента</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/ClientType</param>
+					</action>
+				</menuItem>	
+				<menuItem name="crmClientRank">
+					<text>
+						<ru_RU>Ранги делового отношения</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/ClientRank</param>
+					</action>
+				</menuItem>	
+				<menuItem name="crmPaymentCond">
+					<text>
+						<ru_RU>Условия оплаты</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/PaymentCond</param>
+					</action>
+				</menuItem>																						
+			</menu>				
+			<menu name="crmOperation">
+				<text>
+					<ru_RU>Действия</ru_RU>
+				</text>
+				<menuItem name="crmOperationKind">
+					<text>
+						<ru_RU>Виды действий</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/OperationKind</param>
+					</action>
+				</menuItem>	
+				<menuItem name="crmOperationPriority">
+					<text>
+						<ru_RU>Приоритеты действий</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/OperationPriority</param>
+					</action>
+				</menuItem>	
+				<menuItem name="crmOperationPurpose">
+					<text>
+						<ru_RU>Цели действий</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/OperationPurpose</param>
+					</action>
+				</menuItem>													
+			</menu>	
+			<menu name="CRM_OFFER">
+				<text>
+					<ru_RU>Предложения</ru_RU>
+				</text>
+				<menuItem name="crmOfferStatus">
+					<text>
+						<ru_RU>Статусы предложений</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/OfferStatus</param>
+					</action>
+				</menuItem>	
+				<menuItem name="crmOfferKind">
+					<text>
+						<ru_RU>Виды предложений</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/OfferKind</param>
+					</action>
+				</menuItem>		
+				<menuItem name="crmOfferForecast">
+					<text>
+						<ru_RU>Прогнозы предложений</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/OfferForecast</param>
+					</action>
+				</menuItem>		
+				<menuItem name="crmOfferReason">
+					<text>
+						<ru_RU>Причины заключения и потери предложений</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/OfferReason</param>
+					</action>
+				</menuItem>																		
+			</menu>	
+			<menu name="CRM_KB">
+				<text>
+					<ru_RU>База знаний</ru_RU>
+				</text>
+				<menuItem name="crmProblemType">
+					<text>
+						<ru_RU>Типы проблем</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/ProblemType</param>
+					</action>
+				</menuItem>	
+				<menuItem name="crmSolutionType">
+					<text>
+						<ru_RU>Типы решений</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/crm/SolutionType</param>
+					</action>
+				</menuItem>									
+			</menu>	
+			<menuItem name="CRM_USER">
+				<text>
+					<ru_RU>Пользователи CRM</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/crm/User</param>
+				</action>
+			</menuItem>	
+		</menu>					
+	</menu>	
+	<menu name="manufacture">
+		<text>
+			<ru_RU>Планирование и управление производством</ru_RU>
+		</text>		
+		<menuItem name="mps">
+			<text>
+				<ru_RU>Основные производственные планы</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/planning/MPS</param>
+			</action>
+		</menuItem>	
+		<menuItem name="mrpVersionControl">
+			<text>
+				<ru_RU>Версии ППМ</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/planning/MRPVersionControl</param>
+			</action>
+		</menuItem>	
+		<menuItem name="firmPlannedOrder">
+			<text>
+				<ru_RU>Подтвержденные заказы</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/planning/FirmPlannedOrder</param>
+			</action>
+		</menuItem>			
+		<menuItem name="separator" />	
+		<menuItem name="rccpHeader">
+			<text>
+				<ru_RU>Укрупненные планы загрузки производственных мощностей</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/planning/RCCPHeader</param>
+			</action>
+		</menuItem>					
+<!-- График загрузки мощностей?????????????????? -->	
+		<!-- menuItem name="rccpResourceLoad">
+			<text>
+				<ru_RU>График загрузки мощностей</ru_RU>
+			</text>
+			<action code="">
+				<param name="ServiceName"></param>
+			</action>
+		</menuItem -->
+		<menuItem name="separator" />
+		<menuItem name="job">
+			<text>
+				<ru_RU>Заказ-наряды на производство</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/manufacture/Job</param>
+			</action>
+		</menuItem>			
+		<menuItem name="separator" />
+		<menu name="manufacture">
+			<text>
+				<ru_RU>Производственные документы</ru_RU>
+			</text>
+			<menuItem name="outputProduct">
+				<text>
+					<ru_RU>Акт выпуска продукции</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/OutputProductHead</param>
+				</action>
+			</menuItem>	
+			<menuItem name="separator" />	
+			<menuItem name="inputMaterial">
+				<text>
+					<ru_RU>Акт на списание материалов в НЗП</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/InputMaterialHead</param>
+				</action>
+			</menuItem>		
+			<menuItem name="inputLabor">
+				<text>
+					<ru_RU>Акт на списание времени, отработанного РС в НЗП</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/InputLaborHead</param>
+				</action>
+			</menuItem>				
+			<menuItem name="inputMachine">
+				<text>
+					<ru_RU>Акт на списание времени, отработанного оборудованием в НЗП</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/InputMachineHead</param>
+				</action>
+			</menuItem>				
+			<menuItem name="separator" />	
+			<menuItem name="scrapProduct">
+				<text>
+					<ru_RU>Акт на списание потерь с операции</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/ScrapProductHead</param>
+				</action>
+			</menuItem>						
+			<menuItem name="scrapMaterial">
+				<text>
+					<ru_RU>Акт на списание потерь материалов</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/ScrapMaterialHead</param>
+				</action>
+			</menuItem>					
+			<menuItem name="scrapLabor">
+				<text>
+					<ru_RU>Акт на списание потерь времени, отработанного РС</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/ScrapLaborHead</param>
+				</action>
+			</menuItem>	
+			<menuItem name="scrapMachine">
+				<text>
+					<ru_RU>Акт на списание потерь времени, отработанного оборудованием</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/ScrapMachineHead</param>
+				</action>
+			</menuItem>							
+			<menuItem name="separator" />	
+			<menuItem name="varianceDocument">
+				<text>
+					<ru_RU>Документы по отклонениям</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/VarianceDocumentHead</param>
+				</action>
+			</menuItem>
+			<menuItem name="outputProductPattern">
+				<text>
+					<ru_RU>Образцы актов выпуска готовой продукции</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/OutputProductModel</param>
+				</action>
+			</menuItem>	
+			<menuItem name="inputMaterialPattern">
+				<text>
+					<ru_RU>Образцы актов на списание материалов в НЗП</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/InputMaterialModel</param>
+				</action>
+			</menuItem>
+			<menuItem name="inputLaborPattern">
+				<text>
+					<ru_RU>Образцы актов на списание времени, отработанного РС в НЗП</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/InputLaborModel</param>
+				</action>
+			</menuItem>
+			<menuItem name="inputMachinePattern">
+				<text>
+					<ru_RU>Образцы актов на списание времени, отработанного оборудование в НЗП</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/InputMachineModel</param>
+				</action>
+			</menuItem>								
+			<menuItem name="scrapProductPattern">
+				<text>
+					<ru_RU>Образцы актов на списание потерь с операции</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/ScrapProductModel</param>
+				</action>
+			</menuItem>
+			<menuItem name="scrapMaterialPattern">
+				<text>
+					<ru_RU>Образцы актов на списание потерь материалов</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/ScrapMaterialModel</param>
+				</action>
+			</menuItem>					
+			<menuItem name="scrapLaborPattern">
+				<text>
+					<ru_RU>Образцы актов на списание потерь времени, отработанного РС</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/ScrapLaborModel</param>
+				</action>
+			</menuItem>	
+			<menuItem name="scrapMachinePattern">
+				<text>
+					<ru_RU>Образцы актов на списание потерь времени, отработанного оборудованием</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/ScrapMachineModel</param>
+				</action>
+			</menuItem>
+			<menuItem name="varianceDocumentPattern">
+				<text>
+					<ru_RU>Образцы документов на отклонения</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/manufacture/VarianceDocumentModel</param>
+				</action>
+			</menuItem>					
+		</menu>			
+		<menuItem name="bom">
+			<text>
+				<ru_RU>Состав изделия</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/mfreference/BOM</param>
+			</action>
+		</menuItem>			
+		<menuItem name="separator" />			
+		<menu name="function">
+			<text>
+				<ru_RU>Функции</ru_RU>
+			</text>
+			<menuItem name="bomStandartCost">
+				<text>
+					<ru_RU>Расчет нормативной себестоимости состава изделия</ru_RU>
+				</text>
+				<action code="com.mg.merp.manufacture.support.ui.CalculateBOMStandartCostCommand" />
+			</menuItem>
+			<menuItem name="jobStandartCost">
+				<text>
+					<ru_RU>Расчет нормативной себестоимости ЗНП</ru_RU>
+				</text>
+				<action code="com.mg.merp.manufacture.support.ui.CalculateJobStandartCostCommand" />
+			</menuItem>
+		</menu>			
+		<menu name="reference">
+			<text>
+				<ru_RU>Справочники планирования и производства</ru_RU>
+			</text>
+			<menu name="planning">
+				<text>
+					<ru_RU>Планирование</ru_RU>
+				</text>
+				<menuItem name="genericItem">
+					<text>
+						<ru_RU>Обобщенные товары</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/planning/GenericItem</param>
+					</action>
+				</menuItem>	
+				<menuItem name="itemFamily">
+					<text>
+						<ru_RU>Семейства обобщенных продуктов</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/planning/ItemFamily</param>
+					</action>
+				</menuItem>					
+				<menuItem name="separator" />					
+				<menuItem name="planningLevel">
+					<text>
+						<ru_RU>Уровни планирования</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/mfreference/PlanningLevel</param>
+					</action>
+				</menuItem>					
+				<menuItem name="resourceGroup">
+					<text>
+						<ru_RU>Группы ресурсов</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/mfreference/ResourceGroup</param>
+					</action>
+				</menuItem>	
+				<menuItem name="resourceFamily">
+					<text>
+						<ru_RU>Семейства ресурсов</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/mfreference/ResourceFamily</param>
+					</action>
+				</menuItem>			
+				<menuItem name="productionProfile">
+					<text>
+						<ru_RU>Профили производства</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/planning/ProductionProfile</param>
+					</action>
+				</menuItem>	
+				<menuItem name="separator" />			
+				<menuItem name="forecastVersion">
+					<text>
+						<ru_RU>Версии прогнозов</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/planning/ForecastVersion</param>
+					</action>
+				</menuItem>			
+				<menuItem name="inventoryForecast">
+					<text>
+						<ru_RU>Прогнозы складских запасов</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/planning/InventoryForecast</param>
+					</action>
+				</menuItem>					
+				<menuItem name="separator" />					
+				<menuItem name="catalogWarehouse">
+					<text>
+						<ru_RU>Склады хранения товаров</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/planning/CatalogWarehouse</param>
+					</action>
+				</menuItem>		
+				<menuItem name="separator" />								
+				<menuItem name="route">
+					<text>
+						<ru_RU>Логистические маршруты</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/mfreference/Route</param>
+					</action>
+				</menuItem>											
+			</menu>
+			<menu name="manufacture">
+				<text>
+					<ru_RU>Производство</ru_RU>
+				</text>
+				<menuItem name="workCenter">
+					<text>
+						<ru_RU>Рабочие центры</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/mfreference/WorkCenter</param>
+					</action>
+				</menuItem>					
+				<menuItem name="cell">
+					<text>
+						<ru_RU>Производственные линии</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/mfreference/Cell</param>
+					</action>
+				</menuItem>					
+				<menuItem name="separator" />		
+				<menuItem name="dayCalendar">
+					<text>
+						<ru_RU>Дневной календарь</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/mfreference/DayCalendar</param>
+					</action>
+				</menuItem>					
+				<menuItem name="weekCalendar">
+					<text>
+						<ru_RU>Недельный календарь</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/mfreference/WeekCalendar</param>
+					</action>
+				</menuItem>					
+				<menuItem name="separator" />	
+				<menuItem name="costCategories">
+					<text>
+						<ru_RU>Категории затрат</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/mfreference/CostCategories</param>
+					</action>
+				</menuItem>			
+				<menuItem name="separator" />	
+				<menuItem name="laborClass">
+					<text>
+						<ru_RU>Класс рабочей силы</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/mfreference/LaborClass</param>
+					</action>
+				</menuItem>			
+				<menuItem name="crew">
+					<text>
+						<ru_RU>Бригады</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/mfreference/Crew</param>
+					</action>
+				</menuItem>					
+			</menu>
+			<menu name="qualityControlQUALITYCONTROL">
+				<text>
+					<ru_RU>Управление качеством</ru_RU>
+				</text>
+				<menuItem name="scrapType">
+					<text>
+						<ru_RU>Виды брака</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/qualitycontrol/ScrapType</param>
+					</action>
+				</menuItem>	
+				<menuItem name="SCRAPREASON">
+					<text>
+						<ru_RU>Причины брака</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/qualitycontrol/ScrapReason</param>
+					</action>
+				</menuItem>							
+			</menu>							
+		</menu>			
+	</menu>	
+	<menu name="accounting">
+		<text>
+			<ru_RU>Бухгалтерский учет</ru_RU>
+		</text>		
+		<menu name="bankdocument">
+			<text>
+				<ru_RU>Банковские документы</ru_RU>
+			</text>
+			<menuItem name="bankdocumentIn">
+				<text>
+					<ru_RU>Входящие банковские документы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/BankDocumentIn</param>
+				</action>
+			</menuItem>	
+			<menuItem name="bankdocumentOut">
+				<text>
+					<ru_RU>Исходящие банковские документы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/BankDocumentOut</param>
+				</action>
+			</menuItem>				
+			<menuItem name="bankdocumentOther">
+				<text>
+					<ru_RU>Прочие банковские документы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/BankDocumentOther</param>
+				</action>
+			</menuItem>
+			<menuItem name="bankdocumentInPattern">
+				<text>
+					<ru_RU>Образцы входящих банковских документов</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/BankDocumentModelIn</param>
+				</action>
+			</menuItem>	
+			<menuItem name="bankdocumentOutPattern">
+				<text>
+					<ru_RU>Образцы исходящих банковских документов</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/BankDocumentModelOut</param>
+				</action>
+			</menuItem>
+			<menuItem name="bankdocumentOtherPattern">
+				<text>
+					<ru_RU>Образцы прочих банковских документов</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/BankDocumentModelOther</param>
+				</action>
+			</menuItem>				
+		</menu>
+		<menu name="cashdocument">
+			<text>
+				<ru_RU>Кассовые документы</ru_RU>
+			</text>
+			<menuItem name="cashdocumentIn">
+				<text>
+					<ru_RU>Приходные кассовые ордера</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/CashDocumentIn</param>
+				</action>
+			</menuItem>
+			<menuItem name="cashdocumentOut">
+				<text>
+					<ru_RU>Расходные кассовые ордера</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/CashDocumentOut</param>
+				</action>
+			</menuItem>
+			<menuItem name="cashdocumentInPattern">
+				<text>
+					<ru_RU>Образцы приходных кассовых ордеров</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/CashDocumentModelIn</param>
+				</action>
+			</menuItem>
+			<menuItem name="cashdocumentOutPattern">
+				<text>
+					<ru_RU>Образцы расходных кассовых ордеров</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/CashDocumentModelOut</param>
+				</action>
+			</menuItem>
+		</menu>	
+		<menu name="internalDocument">
+			<text>
+				<ru_RU>Внутренние документы</ru_RU>
+			</text>
+			<menuItem name="internalInvoice">
+				<text>
+					<ru_RU>Внутренние накладные</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/InternalInvoiceHead</param>
+				</action>
+			</menuItem>		
+			<menuItem name="internalAct">
+				<text>
+					<ru_RU>Внутренние акты</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/InternalActHead</param>
+				</action>
+			</menuItem>	
+			<menuItem name="advanceRep">
+				<text>
+					<ru_RU>Авансовые отчеты</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/AdvanceRepHead</param>
+				</action>
+			</menuItem>
+			<menuItem name="internalInvoicePattern">
+				<text>
+					<ru_RU>Образцы внутренних накладных</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/InternalInvoiceHeadModel</param>
+				</action>
+			</menuItem>
+			<menuItem name="internalActPattern">
+				<text>
+					<ru_RU>Образцы внутренних актов</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/InternalActHeadModel</param>
+				</action>
+			</menuItem>	
+			<menuItem name="advanceRepPattern">
+				<text>
+					<ru_RU>Образцы авансовых отчетов</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/AdvanceRepHeadModel</param>
+				</action>
+			</menuItem>		
+		</menu>	
+		<menu name="factura">
+			<text>
+				<ru_RU>Счета-фактуры</ru_RU>
+			</text>
+			<menuItem name="factureIn">
+				<text>
+					<ru_RU>Входящие счета-фактуры</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/factura/FacturaHeadIn</param>
+				</action>
+			</menuItem>	
+			<menuItem name="factureOut">
+				<text>
+					<ru_RU>Исходящие счета-фактуры</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/factura/FacturaHeadOut</param>
+				</action>
+			</menuItem>
+			<menuItem name="factureInPattern">
+				<text>
+					<ru_RU>Образцы входящих счетов-фактур</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/factura/FacturaHeadModelIn</param>
+				</action>
+			</menuItem>			
+			<menuItem name="factureOutPattern">
+				<text>
+					<ru_RU>Образцы исходящих счетов-фактур</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/factura/FacturaHeadModelOut</param>
+				</action>
+			</menuItem>				
+		</menu>
+		<menu name="salaryDocument">
+			<text>
+				<ru_RU>Документы по зарплате</ru_RU>
+			</text>
+			<menuItem name="feeSammary">
+				<text>
+					<ru_RU>Своды н/у по аналитике</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/salary/FeeSummaryHead</param>
+				</action>
+			</menuItem>
+			<menuItem name="feeSammaryPattern">
+				<text>
+					<ru_RU>Образцы сводов н/у по аналитике</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/salary/FeeSummaryModel</param>
+				</action>
+			</menuItem>
+		</menu>		
+		<menuItem name="separator" />		
+		<menuItem name="operation">
+			<text>
+				<ru_RU>Хозяйственные операции</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/account/Operation</param>
+			</action>
+		</menuItem>
+		<menuItem name="operationPattern">
+			<text>
+				<ru_RU>Образцы хозяйственных операций</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/account/OperationModel</param>
+			</action>
+		</menuItem>	
+		<menuItem name="separator" />	
+		<menuItem name="remnAcc">
+			<text>
+				<ru_RU>Остатки и обороты по счетам</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/account/RemnAcc</param>
+			</action>
+		</menuItem>	
+		<menuItem name="remnAnl">
+			<text>
+				<ru_RU>Остатки и обороты по аналитическим счетам</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/account/RemnAnl</param>
+			</action>
+		</menuItem>
+		<menuItem name="remnVal">
+			<text>
+				<ru_RU>Остатки и обороты по товарно-материальным ценностям</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/account/RemnVal</param>
+			</action>
+		</menuItem>
+<!-- 		<menuItem name="turnVal">
+			<text>
+				<ru_RU>Движение товарно-материальных ценностей</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/account/TurnVal</param>
+			</action>
+		</menuItem>	 -->	
+		<menuItem name="remnDbKt">
+			<text>
+				<ru_RU>Ведомость расчетов с контрагентами</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/account/RemnDbKt</param>
+			</action>
+		</menuItem>					
+		<menuItem name="separator" />					
+		<menuItem name="buyBook">
+			<text>
+				<ru_RU>Книга покупок</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/account/BuyBook</param>
+			</action>
+		</menuItem>	
+		<menuItem name="saleBook">
+			<text>
+				<ru_RU>Книга продаж</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/account/SaleBook</param>
+			</action>
+		</menuItem>	
+		<menuItem name="separator" />	
+		<menu name="investments">
+			<text>
+				<ru_RU>Капитальные вложения</ru_RU>
+			</text>
+			<menuItem name="inventory">
+				<text>
+					<ru_RU>Инвентарная картотека</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/InvHead</param>
+				</action>
+			</menuItem>	
+			<menuItem name="separator" />				
+			<menuItem name="amCode">
+				<text>
+					<ru_RU>Шифры и нормы амортизации</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/AmCode</param>
+				</action>
+			</menuItem>	
+			<menuItem name="metal">
+				<text>
+					<ru_RU>Драгоценные металлы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/Metal</param>
+				</action>
+			</menuItem>	
+			<menuItem name="invlocation">
+				<text>
+					<ru_RU>Местонахождение объектов ИК</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/InvLocation</param>
+				</action>
+			</menuItem>
+			<menuItem name="accKind">
+				<text>
+					<ru_RU>Виды учета</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/AccKind</param>
+				</action>
+			</menuItem>			
+		</menu>		
+		<menuItem name="separator" />
+		<menuItem name="balanceForms">
+			<text>
+				<ru_RU>Баланс и отчетные формы</ru_RU>
+			</text>
+			<action code="com.mg.merp.account.support.ui.ShowReportBrowse" />
+		</menuItem>
+		<menuItem name="separator" />
+			<menuItem name="carryForward">
+				<text>
+					<ru_RU>Перенос остатков</ru_RU>
+				</text>
+				<action code="com.mg.merp.account.support.ui.AccCarryForwardMenuCommand">
+					<param name="ServiceName"></param>
+				</action>
+			</menuItem>								
+<!-- Переоценка валютных активов и пассивов??????? -->	
+			<!-- menuItem name="overestimation">
+				<text>
+					<ru_RU>Переоценка валютных активов и пассивов</ru_RU>
+				</text>
+				<action code="">
+					<param name="ServiceName"></param>
+				</action>
+			</menuItem -->
+		<menuItem name="separator" />	
+		<menuItem name="account">
+			<text>
+				<ru_RU>План счетов</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/account/Account</param>
+			</action>
+		</menuItem>						
+		<menuItem name="period">
+			<text>
+				<ru_RU>Периоды бухгалтерского учета</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/account/Period</param>
+			</action>
+		</menuItem>		
+		<menuItem name="separator" />						
+		<menuItem name="permissibleAccounts">
+			<text>
+				<ru_RU>Допустимая корреспонденция счетов</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/account/PermissibleAccounts</param>
+			</action>
+		</menuItem>		
+		<menuItem name="docGroup">
+			<text>
+				<ru_RU>Группы документов</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/paymentalloc/DocGroup</param>
+			</action>
+		</menuItem>	
+	</menu>	
+	<menu name="finance">
+		<text>
+			<ru_RU>Финансовое управление</ru_RU>
+		</text>	
+		<menuItem name="operation">
+			<text>
+				<ru_RU>Финансовые операции</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/finance/Operation</param>
+			</action>
+		</menuItem>
+		<menuItem name="operationPattern">
+			<text>
+				<ru_RU>Образцы финансовых операций</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/finance/OperationModel</param>
+			</action>
+		</menuItem>					
+		<menuItem name="separator" />			
+		<menuItem name="turnAccountFlat">
+			<text>
+				<ru_RU>Остатки и обороты по счетам</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/finance/TurnAccFlat</param>
+			</action>
+		</menuItem>			
+		<menuItem name="turnFeatureFlat">
+			<text>
+				<ru_RU>Остатки и обороты по признакам</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/finance/TurnFeatFlat</param>
+			</action>
+		</menuItem>			
+		<menuItem name="separator" />	
+		<menu name="function">
+			<text>
+				<ru_RU>Функции</ru_RU>
+			</text>
+<!-- Перенос остатков??????? -->	
+			<menuItem name="finCarryForwardBal">
+				<text>
+					<ru_RU>Перенос остатков</ru_RU>
+				</text>
+				<action code="com.mg.merp.finance.support.ui.CarryForwardMenuCommand">
+					<param name="ServiceName"></param>
+				</action>
+			</menuItem>				
+		</menu>
+		<menuItem name="account">
+			<text>
+				<ru_RU>Счета финансового учета</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/finance/Account</param>
+			</action>
+		</menuItem>	
+		<menuItem name="feature">
+			<text>
+				<ru_RU>Признаки финансового учета</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/finance/Feature</param>
+			</action>
+		</menuItem>				
+		<menuItem name="period">
+			<text>
+				<ru_RU>Периоды финансового учета</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/finance/Period</param>
+			</action>
+		</menuItem>						
+		<menuItem name="center">
+			<text>
+				<ru_RU>Центры финансового учета</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/finance/Center</param>
+			</action>
+		</menuItem>						
+	</menu>	
+	<menu name="staff">
+		<text>
+			<ru_RU>Управление персоналом</ru_RU>
+		</text>	
+		<menuItem name="staffListPosition">
+			<text>
+				<ru_RU>Штатное расписание</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/personnelref/StaffListPosition</param>
+			</action>
+		</menuItem>			
+		<menuItem name="separator" />			
+		<menuItem name="personalAccount">
+			<text>
+				<ru_RU>Лицевые счета сотрудников - плоский список</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/salary/PersonalAccount</param>
+			</action>
+		</menuItem>			
+		<menuItem name="staffListPersonalAccount">
+			<text>
+				<ru_RU>Лицевые счета сотрудников</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/salary/StaffListPersonalAccount</param>
+			</action>
+		</menuItem>			
+		<menuItem name="separator" />			
+		<menuItem name="payRoll">
+			<text>
+				<ru_RU>Расчетные ведомости</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/salary/PayRoll</param>
+			</action>
+		</menuItem>			
+		<menuItem name="paySheet">
+			<text>
+				<ru_RU>Платежные ведомости</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/salary/PaySheet</param>
+			</action>
+		</menuItem>		
+		<menuItem name="separator" />			
+		<menuItem name="timeBoardHead">
+			<text>
+				<ru_RU>Табели</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/table/TimeBoardHead</param>
+			</action>
+		</menuItem>	
+		<menuItem name="patternHead">
+			<text>
+				<ru_RU>Шаблоны графиков</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/table/PatternHead</param>
+			</action>
+		</menuItem>			
+		<menuItem name="scheduleHead">
+			<text>
+				<ru_RU>Графики работы в табельном учете</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/table/ScheduleHead</param>
+			</action>
+		</menuItem>
+		<menuItem name="chooseCalcPeriod">
+			<text>
+				<ru_RU>Установить расчетный период</ru_RU>
+			</text>
+			<action code="com.mg.merp.personnelref.support.ui.ChooseCalcPeriodMenuCommand" />
+		</menuItem>						
+		<menuItem name="separator" />			
+		<menu name="function">
+			<text>
+				<ru_RU>Функции</ru_RU>
+			</text>
+<!-- Установить текущий расчетный период??????????????7 -->	
+			<!-- menuItem name="calcPeriod">
+				<text>
+					<ru_RU>Установить текущий расчетный период</ru_RU>
+				</text>
+				<action code="">
+					<param name="ServiceName"></param>
+				</action>
+			</menuItem -->
+		</menu>		
+		<menu name="reference">
+		<text>
+			<ru_RU>Справочники учета персонала</ru_RU>
+		</text>
+			<menu name="personnel">
+				<text>
+					<ru_RU>Учет персонала</ru_RU>
+				</text>
+				<menuItem name="personnel">
+					<text>
+						<ru_RU>Основные записи сотрудников</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/Personnel</param>
+					</action>
+				</menuItem>			
+				<menuItem name="separator" />	
+				<menuItem name="groupType">
+					<text>
+						<ru_RU>Типы групп основных сведений</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/PersonnelGroupType</param>
+					</action>
+				</menuItem>
+				<menuItem name="separator" />				
+				<menuItem name="foriegnLanguage">
+					<text>
+						<ru_RU>Иностранные языки</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/ForeignLanguage</param>
+					</action>
+				</menuItem>	
+				<menuItem name="languageKnoqledge">
+					<text>
+						<ru_RU>Степени знания иностранных языков</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/LanguageKnowledge</param>
+					</action>
+				</menuItem>				
+				<menuItem name="speciality">
+					<text>
+						<ru_RU>Специальности по образованию</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/Speciality</param>
+					</action>
+				</menuItem>				
+				<menuItem name="educationDegree">
+					<text>
+						<ru_RU>Степени образования</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/EducationDegree</param>
+					</action>
+				</menuItem>
+				<menuItem name="additionalEducationKind">
+					<text>
+						<ru_RU>Виды дополнительного образования</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/AdditionalEducationKind</param>
+					</action>
+				</menuItem>				
+				<menuItem name="skillRaisingKind">
+					<text>
+						<ru_RU>Виды повышения квалификации</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/SkillRaisingKind</param>
+					</action>
+				</menuItem>	
+				<menuItem name="separator" />				
+				<menuItem name="leaveKind">
+					<text>
+						<ru_RU>Виды отпусков</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/LeaveKind</param>
+					</action>
+				</menuItem>	
+				<menuItem name="separator" />				
+				<menuItem name="militaryRank">
+					<text>
+						<ru_RU>Воинские звания</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/MilitaryRank</param>
+					</action>
+				</menuItem>				
+				<menuItem name="militaryRankKind">
+					<text>
+						<ru_RU>Составы воинских званий</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/MilitaryRankKind</param>
+					</action>
+				</menuItem>										
+				<menuItem name="militaryValidity">
+					<text>
+						<ru_RU>Категории годности к воинской службе</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/MilitaryValidity</param>
+					</action>
+				</menuItem>												
+				<menuItem name="reserveCategory">
+					<text>
+						<ru_RU>Категории резерва</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/ReserveCategory</param>
+					</action>
+				</menuItem>			
+				<menuItem name="separator" />	
+				<menuItem name="abbreviation">
+					<text>
+						<ru_RU>Сокращенные наименования элементов адреса</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/Abbreviation</param>
+					</action>
+				</menuItem>	
+<!-- Регионы РФ?????????? -->					
+				<!-- menuItem name="region">
+					<text>
+						<ru_RU>Регионы РФ</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/Kladr</param>
+					</action>
+				</menuItem -->	
+<!-- Районы?????????? -->				
+				<!-- menuItem name="district">
+					<text>
+						<ru_RU>Районы</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/Kladr</param>
+					</action>
+				</menuItem -->	
+<!-- Города?????????? -->			
+				<!-- menuItem name="city">
+					<text>
+						<ru_RU>Города</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/Kladr</param>
+					</action>
+				</menuItem -->	
+<!-- Населенные пункты?????????? -->				
+				<!-- menuItem name="area">
+					<text>
+						<ru_RU>Населенные пункты</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/Kladr</param>
+					</action>
+				</menuItem -->	
+<!-- Улицы?????????? -->			
+				<!-- menuItem name="street">
+					<text>
+						<ru_RU>Улицы</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/Kladr</param>
+					</action>
+				</menuItem -->													
+			</menu>		
+			<menu name="staff">
+				<text>
+					<ru_RU>Кадровый учет</ru_RU>
+				</text>
+				<menuItem name="calcPeriod">
+					<text>
+						<ru_RU>Расчетные периоды</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/CalcPeriod</param>
+					</action>
+				</menuItem>					
+				<menuItem name="separator" />					
+				<menuItem name="staffList">
+					<text>
+						<ru_RU>Варианты штатного расписания</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/StaffList</param>
+					</action>
+				</menuItem>	
+				<menuItem name="separator" />	
+<!-- 			<menuItem name="order">
+					<text>
+						<ru_RU>Приказы</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/humanresources/Order</param>
+					</action>
+				</menuItem>									
+				<menuItem name="orderModel">
+					<text>
+						<ru_RU>Образцы приказов</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/humanresources/OrderModel</param>
+					</action>
+				</menuItem>					
+				<menuItem name="ORDERITEMKIND">
+					<text>
+						<ru_RU>Виды пунктов приказов</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/humanresources/OrderItemKind</param>
+					</action>
+				</menuItem>									
+				<menuItem name="separator" />	 -->					
+				<menuItem name="position">
+					<text>
+						<ru_RU>Сводный справочник должностей предприятия</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/Position</param>
+					</action>
+				</menuItem>					
+				<menuItem name="job">
+					<text>
+						<ru_RU>Сводный справочник профессий предприятия</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/Job</param>
+					</action>
+				</menuItem>		
+				<menuItem name="separator" />					
+				<menuItem name="serviceKind">
+					<text>
+						<ru_RU>Виды стажа</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/ServiceKind</param>
+					</action>
+				</menuItem>	
+				<menuItem name="servicePFCode">
+					<text>
+						<ru_RU>Коды стажа для ПФ</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/ServicePFCode</param>
+					</action>
+				</menuItem>					
+				<menuItem name="separator" />					
+				<menuItem name="staffCategory">
+					<text>
+						<ru_RU>Категории персонала</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/StaffCategory</param>
+					</action>
+				</menuItem>									
+				<menuItem name="tariffingCategory">
+					<text>
+						<ru_RU>Категории тарификации должности</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/TariffingCategory</param>
+					</action>
+				</menuItem>	
+				<menuItem name="workCondition">
+					<text>
+						<ru_RU>Условия труда</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/WorkCondition</param>
+					</action>
+				</menuItem>							
+				<menuItem name="positionFillKind">
+					<text>
+						<ru_RU>Виды исполнения должности</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/PositionFillKind</param>
+					</action>
+				</menuItem>							
+				<menuItem name="tariffScale">
+					<text>
+						<ru_RU>Тарифные сетки</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/TariffScale</param>
+					</action>
+				</menuItem>	
+				<menuItem name="rise">
+					<text>
+						<ru_RU>Надбавки</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/Rise</param>
+					</action>
+				</menuItem>								
+			</menu>		
+			<menu name="salary">
+				<text>
+					<ru_RU>Расчет зарплаты</ru_RU>
+				</text>
+				<menuItem name="workSchedule">
+					<text>
+						<ru_RU>Графики работ</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/WorkSchedule</param>
+					</action>
+				</menuItem>	
+				<menuItem name="costsAnl">
+					<text>
+						<ru_RU>Аналитика состава затрат</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/CostsAnl</param>
+					</action>
+				</menuItem>					
+				<menuItem name="separator" />				
+				<menuItem name="calcListSectionRef">
+					<text>
+						<ru_RU>Разделы расчетных листков</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/salary/CalcListSectionRef</param>
+					</action>
+				</menuItem>							
+				<menuItem name="feeRef">
+					<text>
+						<ru_RU>Начисления / удержания</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/salary/FeeRef</param>
+					</action>
+				</menuItem>							
+				<menuItem name="gnsCode">
+					<text>
+						<ru_RU>Коды МНС для видов оплаты</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/salary/GNSCode</param>
+					</action>
+				</menuItem>	
+				<menuItem name="rollKind">
+					<text>
+						<ru_RU>Типы ведомостей</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/salary/RollKind</param>
+					</action>
+				</menuItem>	
+				<menuItem name="deductionKind">
+					<text>
+						<ru_RU>Виды вычетов налогоплательщикам</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/DeductionKind</param>
+					</action>
+				</menuItem>									
+				<menuItem name="insuredClass">
+					<text>
+						<ru_RU>Категории плательщиков страховых взносов</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/InsuredClass</param>
+					</action>
+				</menuItem>	
+				<menuItem name="separator" />					
+				<menuItem name="taxHead">
+					<text>
+						<ru_RU>Налоговые сетки</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/salary/TaxHead</param>
+					</action>
+				</menuItem>	
+				<menuItem name="minSalary">
+					<text>
+						<ru_RU>Размеры минимальных зарплат</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/salary/MinSalary</param>
+					</action>
+				</menuItem>	
+				<menuItem name="incomeKind">
+					<text>
+						<ru_RU>Виды доходов</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/salary/IncomeKind</param>
+					</action>
+				</menuItem>					
+				<menuItem name="discountKind">
+					<text>
+						<ru_RU>Виды скидок и расходов</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/salary/DiscountKind</param>
+					</action>
+				</menuItem>					
+				<menuItem name="taxCalcKind">
+					<text>
+						<ru_RU>Схемы расчета налоговв</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/personnelref/TaxCalcKind</param>
+					</action>
+				</menuItem>									
+			</menu>	
+			<menu name="table">
+				<text>
+					<ru_RU>Табельный учет</ru_RU>
+				</text>		
+				<menuItem name="timeKind">
+					<text>
+						<ru_RU>Типы времени</ru_RU>
+					</text>
+					<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+						<param name="ServiceName">merp/table/TimeKind</param>
+					</action>
+				</menuItem>							
+			</menu>
+		</menu>		
+	</menu>		
+<!-- OLAP?????????? -->
+	<menu name="reference">
+		<text>
+			<ru_RU>Прикладные справочники</ru_RU>
+		</text>			
+		<menu name="currency">
+			<text>
+				<ru_RU>Валюты</ru_RU>
+			</text>
+			<menuItem name="currency">
+				<text>
+					<ru_RU>Курсы валют</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/Currency</param>
+				</action>
+			</menuItem>	
+			<menuItem name="currencyRateAuthority">
+				<text>
+					<ru_RU>Источники курсов валют</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/CurrencyRateAuthority</param>
+				</action>
+			</menuItem>				
+			<menuItem name="currencyRateType">
+				<text>
+					<ru_RU>Типы курсов валют</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/CurrencyRateType</param>
+				</action>
+			</menuItem>						
+		</menu>
+		<menu name="contractor">
+			<text>
+				<ru_RU>Структура предприятия</ru_RU>
+			</text>
+			<menuItem name="orgUnit">
+				<text>
+					<ru_RU>Подразделения</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/OrgUnit</param>
+				</action>
+			</menuItem>				
+			<menuItem name="employees">
+				<text>
+					<ru_RU>Сотрудники</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/Employees</param>
+				</action>
+			</menuItem>				
+		</menu>	
+		<menu name="inventories">
+			<text>
+				<ru_RU>Каталог</ru_RU>
+			</text>
+			<menuItem name="catalog">
+				<text>
+					<ru_RU>Основные записи каталога</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/Catalog</param>
+				</action>
+			</menuItem>	
+			<menuItem name="separator" />				
+			<menuItem name="measure">
+				<text>
+					<ru_RU>Единицы измерения</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/Measure</param>
+				</action>
+			</menuItem>			
+			<menuItem name="measureConversoin">
+				<text>
+					<ru_RU>Преобразования ЕИ</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/MeasureConversion</param>
+				</action>
+			</menuItem>		
+			<menuItem name="separator" />						
+			<menuItem name="tax">
+				<text>
+					<ru_RU>Налоги</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/Tax</param>
+				</action>
+			</menuItem>	
+			<menuItem name="taxGroup">
+				<text>
+					<ru_RU>Группы налогов</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/TaxGroup</param>
+				</action>
+			</menuItem>				
+			<menuItem name="calcTaxesKind">
+				<text>
+					<ru_RU>Виды начисления налогов</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/CalcTaxesKind</param>
+				</action>
+			</menuItem>	
+			<menuItem name="customsDeclaration">
+				<text>
+					<ru_RU>Грузовые таможенные декларации</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/CustomsDeclaration</param>
+				</action>
+			</menuItem>																				
+		</menu>		
+		<menuItem name="partner">
+			<text>
+				<ru_RU>Партнеры</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/reference/Partner</param>
+			</action>
+		</menuItem>				
+		<menuItem name="phoneKind">
+			<text>
+				<ru_RU>Виды телефонных номеров</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/reference/PhoneKind</param>
+			</action>
+		</menuItem>				
+		<menuItem name="separator" />			
+		<menuItem name="bank">
+			<text>
+				<ru_RU>Банки</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/reference/Bank</param>
+			</action>
+		</menuItem>		
+		<menuItem name="bankAccountType">
+			<text>
+				<ru_RU>Типы банковских счетов</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/reference/BankAccountType</param>
+			</action>
+		</menuItem>	
+		<menuItem name="separator" />	
+		<menu name="natperson">
+			<text>
+				<ru_RU>Физические лица</ru_RU>
+			</text>
+			<menuItem name="naturalPerson">
+				<text>
+					<ru_RU>Основные записи физических лиц</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/NaturalPerson</param>
+				</action>
+			</menuItem>	
+			<menuItem name="separator" />	
+			<menuItem name="familyStatusKind">
+				<text>
+					<ru_RU>Типы семейного положения</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/FamilyStatusKind</param>
+				</action>
+			</menuItem>							
+			<menuItem name="familyRelation">
+				<text>
+					<ru_RU>Степени родства</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/FamilyRelation</param>
+				</action>
+			</menuItem>	
+			<menuItem name="identDocKind">
+				<text>
+					<ru_RU>Виды документов</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/IdentDocKind</param>
+				</action>
+			</menuItem>				
+			<menuItem name="nationality">
+				<text>
+					<ru_RU>Национальности</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/Nationality</param>
+				</action>
+			</menuItem>						
+		</menu>		
+		<menuItem name="separator" />			
+		<menu name="address">
+			<text>
+				<ru_RU>Элементы адреса</ru_RU>
+			</text>
+			<menuItem name="countries">
+				<text>
+					<ru_RU>Страны</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/Country</param>
+				</action>
+			</menuItem>				
+			<menuItem name="region">
+				<text>
+					<ru_RU>Регионы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/Region</param>
+				</action>
+			</menuItem>				
+			<menuItem name="district">
+				<text>
+					<ru_RU>Районы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/District</param>
+				</action>
+			</menuItem>	
+			<menuItem name="place">
+				<text>
+					<ru_RU>Населенные пункты</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/Place</param>
+				</action>
+			</menuItem>				
+			<menuItem name="zipCode">
+				<text>
+					<ru_RU>Почтовые индексы</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/ZipCode</param>
+				</action>
+			</menuItem>	
+		</menu>			
+		<menuItem name="separator" />				
+		<menuItem name="holidays">
+			<text>
+				<ru_RU>Праздничные дни</ru_RU>
+			</text>
+			<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+				<param name="ServiceName">merp/reference/Holidays</param>
+			</action>
+		</menuItem>	
+		<menu name="miscRu">
+			<text>
+				<ru_RU>Общероссийские справочники</ru_RU>
+			</text>
+			<menuItem name="okof">
+				<text>
+					<ru_RU>Коды ОКОФ</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/account/Okof</param>
+				</action>
+			</menuItem>	
+			<menuItem name="okdp">
+				<text>
+					<ru_RU>Коды ОКДП</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/Okdp</param>
+				</action>
+			</menuItem>				
+			<menuItem name="okato">
+				<text>
+					<ru_RU>Коды ОКАТО</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/Okato</param>
+				</action>
+			</menuItem>				
+			<menuItem name="okp">
+				<text>
+					<ru_RU>Коды ОКП</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/Okp</param>
+				</action>
+			</menuItem>	
+			<menuItem name="kbk">
+				<text>
+					<ru_RU>Коды КБК</ru_RU>
+				</text>
+				<action code="com.mg.framework.support.ui.ShowComponentBrowse">
+					<param name="ServiceName">merp/reference/Kbk</param>
+				</action>
+			</menuItem>						
+		</menu>	
+	</menu>	
+</menu>

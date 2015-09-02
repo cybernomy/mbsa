@@ -1,0 +1,116 @@
+# $Id: formelements_ru.windows1251,v 1.7 2007/07/30 14:46:58 safonov Exp $
+
+CostDetailFields=Расшифровка стоимости
+ActCostDetailFields=Фактическая себестоимость
+StdCostDetailFields=Нормативная себестоимость
+
+Job.FormBr.Title=Заказ-наряды на производство
+Job.FormMt.Title=Заказ-наряд на производство
+Job.MainTab.Title=Основные сведения
+JobRouteFields=Операции
+JobRoute.FormMt.Title=Операция
+CostDetailLine=Расшифровка стоимости
+Job.PlanTab.Title=Планирование
+JobResources=Ресурсы операции
+JobMaterial=Материалы
+JobMachine=Оборудование
+Job.MethodPlan=Метод планирования
+JobLabor=Рабочая сила
+ParentJob=Родительский ЗНП
+RootJob=Корневой ЗНП
+Job.DefSrcStock=Склад-источник для материалов
+Job.DefDstStock=Склад-приёмник для готовой продукции
+Cond.Job=Условия отбора заказ-нарядов на производство
+Job.CreateBOM=Создание по составу изделия
+Job.Run=Запустить
+Job.Stop=Остановить
+Job.Complete=Завершить
+
+JobRoute.MainFields=Основные сведения
+JobRoute.TimeFields=Временные рамки операции
+JobRoute.MoveTime=Время перемещения между операциями
+JobRoute.StartEndTick=Запланированное время операции в тиках
+JobRoute.SchedOffSetTime=Время смещения между началом предыдущей и началом текущей операции
+JobRoute.Qty=Количество продукции
+
+OutProdDoc.Attribute=Акт выпуска продукции: тип/номер/дата
+
+Doc.MainTab.Title=Содержание
+Main.Tab.Title=Содержание
+Doc.SpecTab.Title=Спецификации
+
+OutputProductHead.FormBr.Title=Акты выпуска продукции
+OutputProductHead.FormMt.Title=Акт выпуска продукции
+OutputProductModel.FormBr.Title=Образцы акта выпуска продукции
+OutputProductModel.FormMt.Title=Образец акта выпуска продукции
+OutputProductSpec.FormMt.Title=Спецификация акта выпуска продукции
+OutputProduct.Contractor=Изготовило
+OutputProduct.Employee=Изготовил
+Cond.OutputProductHead=Условия отбора актов выпуска продукции
+
+InputDoc.Contractor=Использовало
+InputDoc.Employee=Использовал
+InputMaterialHead.FormBr.Title=Акты на списание материалов в НЗП
+InputMaterialHead.FormMt.Title=Акт на списание материалов в НЗП
+InputMaterialModel.FormBr.Title=Образцы акта на списание материалов в НЗП
+InputMaterialModel.FormMt.Title=Образец акта на списание материалов в НЗП
+InputMaterialSpec.FormMt.Title=Спецификация акта на списание материалов в НЗП
+Cond.InputMaterialHead=Условия отбора актов на списание материалов в НЗП
+
+InputMachineHead.FormBr.Title=Акты на списание времени, отработанного оборудованием в НЗП
+InputMachineHead.FormMt.Title=Акт на списание времени, отработанного оборудованием в НЗП
+InputMachineModel.FormBr.Title=Образцы акта на списание времени, отработанного оборудованием в НЗП
+InputMachineModel.FormMt.Title=Образец акта на списание времени, отработанного оборудованием в НЗП
+InputMachineSpec.FormMt.Title=Спецификация акта на списание времени, отработанного оборудованием в НЗП
+Cond.InputMachineHead=Условия отбора актов на списание времени, отработанного оборудованием в НЗП
+
+InputLaborHead.FormBr.Title=Акты на списание времени, отработанного РС в НЗП
+InputLaborHead.FormMt.Title=Акт на списание времени, отработанного РС в НЗП
+InputLaborModel.FormBr.Title=Образцы акта на списание времени, отработанного РС в НЗП
+InputLaborModel.FormMt.Title=Образец акта на списание времени, отработанного РС в НЗП
+InputLaborSpec.FormMt.Title=Спецификация акта на списание времени, отработанного РС в НЗП
+Cond.InputLaborHead=Условия отбора актов на списание времени, отработанного РС в НЗП
+
+ScrapDocHead.Cause=Виновник
+ScrapDocHead.Detect=Обнаружено
+
+ScrapLaborHead.FormBr.Title=Акты на списание потерь времени, отработанного РС
+ScrapLaborHead.FormMt.Title=Акт на списание потерь времени, отработанного РС
+ScrapLaborModel.FormBr.Title=Образцы акта на списание потерь времени, отработанного РС
+ScrapLaborModel.FormMt.Title=Образец акта на списание потерь времени, отработанного РС
+ScrapLaborSpec.FormMt.Title=Спецификация акта на списание потерь времени, отработанного РС
+Cond.ScrapLaborHead=Условия отбора актов на списание потерь времени, отработанного РС
+
+ScrapProductHead.FormBr.Title=Акты на списание потерь с операции
+ScrapProductHead.FormMt.Title=Акт на списание потерь с операции
+ScrapProductModel.FormBr.Title=Образцы акта на списание потерь с операции
+ScrapProductModel.FormMt.Title=Образец акта на списание потерь с операции
+ScrapProductSpec.FormMt.Title=Спецификация акта на списание потерь с операции
+Cond.ScrapProductHead=Условия отбора актов на списание потерь с операции
+
+ScrapMachineHead.FormBr.Title=Акты на списание потерь времени, отработанного оборудованием
+ScrapMachineHead.FormMt.Title=Акт на списание потерь времени, отработанного оборудованием
+ScrapMachineModel.FormBr.Title=Образцы акта на списание потерь времени, отработанного оборудованием
+ScrapMachineModel.FormMt.Title=Образец акта на списание потерь времени, отработанного оборудованием
+ScrapMachineSpec.FormMt.Title=Спецификация акта на списание потерь времени, отработанного оборудованием
+Cond.ScrapMachineHead=Условия отбора актов на списание потерь времени, отработанного оборудованием
+
+ScrapMaterialHead.FormBr.Title=Акты на списание потерь материалов
+ScrapMaterialHead.FormMt.Title=Акт на списание потерь материалов
+ScrapMaterialModel.FormBr.Title=Образцы акта на списание потерь материалов
+ScrapMaterialModel.FormMt.Title=Образец акта на списание потерь материалов
+ScrapMaterialSpec.FormMt.Title=Спецификация акта на списание потерь материалов
+Cond.ScrapMaterialHead=Условия отбора актов на списание потерь материалов
+
+VarianceDocumentHead.FormBr.Title=Документы на отклонения
+VarianceDocumentHead.FormMt.Title=Документ на отклонения
+VarianceDocumentModel.FormBr.Title=Образцы документа на отклонения
+VarianceDocumentModel.FormMt.Title=Образец документа на отклонения
+VarianceDocumentSpec.FormMt.Title=Спецификация документа на отклонения
+Cond.VarianceDocumentHead=Условия отбора документов по отклонениям
+
+Document.OutputProduct=Акт выпуска продукции
+Job.RootJob=Корневой ЗНП: Номер / Дата
+Job.ParentJob=Родительский ЗНП: Номер / Дата
+
+JobRoute.SearchForm.Title=Операции ЗНП

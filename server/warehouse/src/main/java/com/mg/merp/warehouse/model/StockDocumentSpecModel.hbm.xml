@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <joined-subclass name="com.mg.merp.warehouse.model.StockDocumentSpecModel" extends="com.mg.merp.document.model.DocSpecModel" table="STOCKDOCUMENTSPECMODEL">
+    <meta attribute="extends">com.mg.merp.document.model.DocSpecModel</meta>
+    <!--id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">STOCKDOCUMENTSPECMODEL_ID_GEN</param>
+      </generator>
+    </id-->
+    <key>
+      <column name="DOCSPEC_ID" not-null="true" />
+    </key>
+    <property name="Cost" type="java.math.BigDecimal">
+      <column name="COST" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="Discount" type="java.math.BigDecimal">
+      <column name="DISCOUNT" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="PriceWithDiscount" type="java.math.BigDecimal">
+      <column name="PRICE_WITH_DISCOUNT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="SummaWithDiscount" type="java.math.BigDecimal">
+      <column name="SUMMA_WITH_DISCOUNT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="DocDiscount" type="java.math.BigDecimal">
+      <column name="DOC_DISCOUNT" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+  </joined-subclass>
+</hibernate-mapping>

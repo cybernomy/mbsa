@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: CatalogFolderBr.mfd.xml,v 1.4 2006/07/11 11:42:17 leonova Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.reference.support.ui.CatalogFolderBr" title="resource://com.mg.merp.reference.resources.formelements#CatalogFolder.FormBr.Title" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultTreeBrowseHeaderMacros.xml" />
+
+	<jfd:maintenanceTree id="tree" alignment="expand_expand" scroll="true" >
+	</jfd:maintenanceTree>
+
+	<jfd:include name="com/mg/framework/resources/DefaultTreeBrowseFooterMacros.xml" />
+
+</jfd:form>

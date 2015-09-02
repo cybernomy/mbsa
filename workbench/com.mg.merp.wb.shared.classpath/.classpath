@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry exported="true" kind="lib" path="mbaiengine-wb.jar"/>
+	<classpathentry exported="true" kind="lib" path="merpcore-wb.jar"/>
+	<classpathentry exported="true" kind="lib" path="mgframework.jar"/>
+	<classpathentry exported="true" kind="lib" path="commons-logging.jar"/>
+	<classpathentry exported="true" kind="lib" path="hibernate3.jar"/>
+	<classpathentry exported="true" kind="lib" path="javassist.jar"/>
+	<classpathentry exported="true" sourcepath="D:/Develop/jboss-4.0.5.GA-src" kind="lib" path="jbossall-client.jar"/>
+	<classpathentry exported="true" kind="lib" path="mreport-wb.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="output" path="output/classes"/>
+</classpath>

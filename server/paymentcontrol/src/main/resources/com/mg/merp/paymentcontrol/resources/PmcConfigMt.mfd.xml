@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcConfig.FormMt.Title" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+		<jfd:container id="allFields" layout="jfd:defaultMtGridBag" >		
+ 		<jfd:border style="bevel" type="raised" />
+ 			<jfd:field id="Currency" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcConfig.FormMt.Currency" /> 
+ 			<jfd:field id="CurRateType" /> 
+ 			<jfd:field id="CurRateAuthority" /> 
+ 			<jfd:field id="CurrencyPrec" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcConfig.FormMt.CurrencyPrec" /> 
+		</jfd:container>
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

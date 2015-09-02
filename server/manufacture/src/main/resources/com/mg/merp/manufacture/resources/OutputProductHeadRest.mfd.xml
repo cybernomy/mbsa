@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: OutputProductHeadRest.mfd.xml,v 1.3 2008/03/26 10:05:33 alikaev Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.manufacture.support.ui.OutputProductHeadRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.manufacture.resources.formelements#Cond.OutputProductHead" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+        
+		<jfd:field id="docDateFrom" />
+		<jfd:field id="docDateTill" sameLine="true"/>
+		<jfd:field id="docNumber" />
+		<jfd:field id="docType" sameLine="true"/> 
+		<jfd:field id="sysCompany" />
+		<jfd:field id="fromCode" />
+		<jfd:field id="toCode" sameLine="true"/>		
+		<jfd:field id="catalogName" />
+		<jfd:field id="catalogFolder" sameLine="true"/>	
+		<jfd:field id="dstStockCode" />
+		<jfd:field id="dstMolCode" sameLine="true"/>
+		<jfd:field id="contractor" />
+		<jfd:field id="employee" sameLine="true"/>
+		<jfd:field id="Job" />
+		<jfd:field id="oper" sameLine="true"/>
+		<jfd:field id="workCenter" />
+		<jfd:field id="crew" sameLine="true"/>
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+
+</jfd:form>

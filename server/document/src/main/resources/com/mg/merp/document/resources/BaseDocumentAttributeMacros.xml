@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: BaseDocumentAttributeMacros.xml,v 1.4 2007/11/16 14:42:37 sharapov Exp $ -->
+
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="baseDocument" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.BaseDocAttribute" >
+	<jfd:field id="BaseDocType" showLabel="false" alignment="left_expand"/>
+	<jfd:field id="BaseDocNumber" showLabel="false" alignment="expand_expand"/>			
+	<jfd:field id="BaseDocDate" showLabel="false" alignment="right_expand"/>
+	<jfd:button id="ViewBaseDocument" alignment="right_expand" icon="com/mg/framework/resources/viewbuttonicon.png" toolTip="resource://com.mg.merp.document.resources.formelements#ViewBaseDocument.ToolTip" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ViewBaseDocument" />				
+</jfd:container>

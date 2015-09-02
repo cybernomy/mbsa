@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "../common.xml">
+]>
+
+<project default="all" name="Millennium Workbench Business Add-in Library">
+  &common;	
+
+  <path id="project.class.path">
+  	<path refid="thirdparty.path"/>
+  	<!--pathelement path="../com.mg.merp.wb.core/output/classes"/>
+  	<pathelement path="../com.mg.merp.wb.core.ui/output/classes"/-->
+  </path>
+
+  <target name="lib.init">
+    <property name="third.path" value="../../thirdparty"/>
+  </target>
+	
+  <target name="package" depends="lib.init, compile">
+    <!--copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}">  
+    	<fileset dir="../../build/output/workbench" includes="lib/** src/**"/>
+  	</copy-->
+
+  	<!-- Third part libs -->
+    <copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}/lib">  
+    	<fileset file="${third.path}/hibernate/lib/hibernate3.jar"/>
+    	<fileset file="${third.path}/antlr/lib/antlr.jar"/>
+    	<fileset file="${third.path}/asm/lib/asm.jar"/>
+    	<fileset file="${third.path}/asm/lib/asm-attrs.jar"/>
+    	<fileset file="${third.path}/bsh/lib/bsh.jar"/>
+    	<fileset file="${third.path}/cglib/lib/cglib-2.1.3.jar"/>
+    	<fileset file="${third.path}/apache-collections/lib/commons-collections.jar"/>
+    	<fileset file="${third.path}/apache-logging/lib/commons-logging.jar"/>
+    	<fileset file="${third.path}/ehcache/lib/ehcache-1.2.2.jar"/>
+    	<fileset file="${third.path}/sun-ejb/lib/ejb-api.jar"/>
+    	<fileset file="${third.path}/dom4j/lib/dom4j.jar"/>
+    	<fileset file="${third.path}/firebird/lib/jaybird-full-2.1.1.jar"/>
+    	<fileset file="${third.path}/sun-jcr/lib/jcr-1.0.jar"/>
+    	<fileset file="${third.path}/sun-jta/lib/jta.jar"/>
+    	<fileset file="../../build/output/lib/mgframework.jar"/>
+    </copy>
+
+  	<!-- Default hibernate configuration -->
+  	<copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}/hibfiles"
+  	  	  file="hibfiles/mbsa.config.xml"/>
+  	<copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}/hibfiles"
+  	  	  file="hibfiles/mg.filters.hbm.xml"/>
+  	
+  	<mkdir dir="output/plugin/${plugin.folder.name}_${Bundle-Version}/datawarehouse" />
+  	<jar basedir="../../build/output/service/mdatawarehouse-ib.har" destfile="output/plugin/${plugin.folder.name}_${Bundle-Version}/datawarehouse/mdatawarehouse-ib.jar"
+  		excludes="**/*oracle.hbm.xml META-INF/* overview.html" />
+  	<jar basedir="../../build/output/service/mdatawarehouse-ib.har" destfile="output/plugin/${plugin.folder.name}_${Bundle-Version}/datawarehouse/mdatawarehouse-orcl.jar"
+  		excludes="**/*interbase.hbm.xml META-INF/* overview.html" />
+  	<copy file="output/plugin/${plugin.folder.name}_${Bundle-Version}/datawarehouse/mdatawarehouse-ib.jar"
+  		tofile="output/plugin/${plugin.folder.name}_${Bundle-Version}/hibfiles/mdatawarehouse.jar" />
+
+  	<antcall target="cmn.package.classes"/>
+  	
+  	<!-- copy to runtime report engine -->
+    <jar manifest="META-INF/MANIFEST.MF" destfile="../../build/output/mbirt-platform/plugins/${plugin.folder.name}_${Bundle-Version}.jar" >
+  	  <fileset dir="output/plugin/${plugin.folder.name}_${Bundle-Version}" excludes="**/lib/* **/hibfiles/* **/datawarehouse/*" />
+    </jar>
+  </target>
+
+  <target name="all" depends="clean,compile,package,output" />	
+	
+</project>

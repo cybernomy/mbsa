@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: build.xml,v 1.30 2008/03/18 10:38:42 safonov Exp $ -->
+
+<!DOCTYPE project [
+  <!ENTITY common SYSTEM "file:../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "file:../../build/etc/module.xml">
+]>
+
+<project default="all" name="Millennium Group framework">
+
+  <property file="../../build/build.properties"/>
+
+  <path id="project.class.path">
+    <fileset dir="../../thirdparty">
+      <include name="**/*.jar"/>
+    </fileset>
+    <pathelement location="output/classes"/>
+  	<pathelement path="../../common/uicomponent/output/classes"/>
+  </path>
+
+  &common;
+
+  &module;
+
+  <target name="init" depends="mg.module.encode">
+    <property name="module.filename" value="mgframework.jar"/>
+  	<property name="module-aux.filename" value="mgframework-aux.jar"/>
+    <property name="module.name" value="framework"/>
+  	<property name="module.workbench" value="framework-wb"/>
+  	
+  	<property name="badi.lib.dpnds" value=""/>
+  	<property name="wb.excl.class" value="**/ulc/**/*.class **/LicenseServer.class **/LicenseControllerImpl*.class **/LicenseControllerLocator.class **/LicenseControllerService.class **/LicenseControllerServiceMBean.class **/service/*DatabaseConverter*"/>
+  	<property name="wb.incl.src" value="**/*.java"/>
+  	<property name="wb.excl.src" value="**/ulc/**/*.java **/LicenseServer.java **/LicenseControllerImpl.java **/LicenseControllerLocator.java **/LicenseControllerService.java **/LicenseControllerServiceMBean.java **/service/*DatabaseConverter*"/>
+  	
+    <mkdir dir="output/classes" />
+    <mkdir dir="output/lib" />
+  </target>
+
+  <target name="compile" depends="init">
+    <antcall target="mg.javac">
+      <param name="javac-src" value="src/main/java"/>
+      <param name="javac-includes" value="**/*.java"/>
+      <param name="classdir" value="output/classes"/>
+    </antcall> 
+  </target>
+
+  <target name="resources" depends="init">
+    <copy todir="output/resources">
+      <fileset dir="src/main/resources">
+        <include name="**/*.properties"/>
+        <include name="**/*.xml"/>
+      	<include name="**/*.png"/>
+      	<include name="**/*.gif"/>
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="package" depends="init,compile,resources">
+   	<antcall target="mg.wbmodule.package">
+		<param name="module.filename" value="mg${module.name}"/>
+		<param name="wb.incl.src" value="${wb.incl.src}"/>
+   		<param name="wb.excl.class" value="${wb.excl.class}"/>
+		<param name="badi.lib.version" value="1.0"/>
+		<param name="badi.lib.dpnds" value="${badi.lib.dpnds}"/>	
+  	</antcall>
+  	<antcall target="create.package-aux"/>
+  </target>
+
+	<target name="create.package-aux" depends="init,compile,resources">
+		<antcall target="package-aux"/>
+		<antcall target="copy.package-aux"/>
+	</target>
+
+	<target name="package-aux" if="package.auxiliary-lib">
+		<antcall target="mg.module.manifest" >
+			<param name="module.filename" value="${module-aux.filename}"/>
+		</antcall>
+		<jar destfile="output/lib/${module-aux.filename}" manifest="${module-aux.filename}.MANIFEST.MF" update="true">
+			<zipfileset dir="output/classes">
+				<include name="**/ulc/**/*.class"/>
+				<include name="**/LicenseServer.class"/>
+				<include name="**/LicenseControllerImpl*.class"/>
+				<include name="**/LicenseControllerLocator.class"/>
+				<include name="**/LicenseControllerService.class"/>
+				<include name="**/LicenseControllerServiceMBean.class"/>
+				<include name="**/service/*DatabaseConverter*"/>
+			</zipfileset>
+		</jar>
+	</target>
+
+	<target name="copy.package-aux" unless="package.auxiliary-lib">
+		<copy file="../../thirdparty/mg/framework/lib/${module-aux.filename}" tofile="output/lib/${module-aux.filename}" />
+	</target>
+
+  <target name="deploy" depends="init,package">
+    <copy file="output/${module.filename}" todir="${jboss.home}/server/${jboss.conf}/lib"/>
+  </target>
+
+  <target name="output" depends="init">
+    <copy file="output/lib/${module.filename}" todir="../../build/output/lib"/>
+    <copy file="output/lib/${module-aux.filename}" todir="../../build/output/lib"/>
+  	<copy file="output/lib/${module.filename}" todir="../../build/output/workbench/wb"/>
+  	
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="mg${module.name}.jar"/>
+       <param name="output.dest" value="workbench/lib"/>
+    </antcall>
+    <antcall target="mg.module.output">
+       <param name="module.filename" value="mg${module.name}-src.jar"/>
+       <param name="output.dest" value="workbench/src"/>
+    </antcall>
+
+  </target>
+
+  <target name="clean">
+    <delete failonerror="false">
+      <fileset dir="output/classes" includes="**/*.class"/>
+      <fileset dir="output/lib" includes="**/*.jar"/>
+      <fileset dir="output/resources" includes="**/*"/>
+    </delete>
+  </target>
+
+  <target name="all" depends="clean,compile,resources,package,output" />
+
+</project>

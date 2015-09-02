@@ -1,0 +1,41 @@
+# main
+preferences.main.description=Студия разработки MBSA. Основные настройки
+preferences.main.servers.label=Выберите сервер:
+
+preferences.main.hosts.label=Выберите узел:
+preferences.main.ports.label=Выберите порт:
+
+preferences.main.testconnection.label=Тест соединения
+preferences.main.testconnection.button.label=Тест
+preferences.main.testconnection.ok=Соединение установлено
+preferences.main.testconnection.failed=Не удалось подключиться к серверу!
+
+#common
+server.check.message=Проверьте настройки подключения
+server.unknown.error=Неизвестное исключение
+server.operation.message=Ошибка выполнения операции
+
+butt.save=Сохранить
+butt.cancel=Отмена
+
+#editor menu
+menu.add=Добавить%s
+menu.edit=Изменить%s
+menu.delete=Удалить%s
+
+#buttons
+button.cancel=Отменить
+button.save=Сохранить
+button.browse=Выбрать
+button.yes=Да
+button.no=Нет
+
+#editor
+form.edit.page.error.create=Ошибка при создании формы редактирования
+
+#dialogs
+dialogs.error.title=Ошибка
+dialogs.beans.title=Список бизнес-компонентов
+dialog.beans.load.error=Не удалось загрузить список бизнес-компонентов
+dialogs.groups.title=Список групп пользователей
+dialog.groups.load.error=Не удалось загрузить список групп пользователей

@@ -1,0 +1,95 @@
+# $Id: messages_ru.windows1251,v 1.15 2008/08/27 09:45:06 sharapov Exp $
+
+MandatoryValidatorSrcStock=Необходимо заполнить 'Склад'
+ProcessWHTransactError=Ошибка отработки документа по сладу
+NotEnoughDisposalPositions=Недостаточно позиций {0} для списания со склада
+HistoryNotFound=Невозможно откатить документ - не найдена история
+BatchNotAlive=Невозможно откатить документ - было списание с партии
+
+#WarehouseBatchSelectionForm.warehouseBatchesTable
+IdCaption=Идентификатор
+BeginQuan1Caption=Начальное количество в первой ЕИ
+BeginQuan2Caption=Начальное количество во второй ЕИ
+EndQuan1Caption=Остаток в первой ЕИ
+EndQuan2Caption=Остаток во второй ЕИ
+MarkQuan1Caption=Заказано в первой ЕИ
+MarkQuan2Caption=Заказано во второй ЕИ
+ContractorCaption=Контрагент
+PriceNatCaption=Цена в НДЕ
+PriceCurCaption=Цена в валюте
+CurCodeCaption=Код валюты
+DocCaption=Документ прихода
+CreateDateCaption=Дата создания
+BestBeforeCaption=Годен до
+VendorLotCaption=Номер партии поставщика
+NumberLotCaption=Номер партии
+CountryOfOriginCaption=Страна происхождения
+CustomsDeclarationCaption=ГТД
+
+Document.ProcessDateCaption=Дата отработки
+Document.Quan1Caption=Количество в первой ЕИ
+Document.Quan2Caption=Количество во второй ЕИ
+Document.To=Кому
+Document.From=От кого
+Document.TypeHeader=Тип документа
+Document.DateHeader=Дата документа
+Document.NumberHeader=Номер документа
+Document.TypeBaseHeader=Тип документа-основания
+Document.NumberBaseHeader=Номер документа-основания
+Document.DateBaseHeader=Дата документа-основания
+Document.Date=Дата/Время
+
+Batch.Owner=Правообладатель
+Batch.Kind=Вид складского запаса
+
+BinLocation.FormBr.Title=Секции хранения. Склад: {0}
+WareCard.FormBr.Title=Карточки складского учета. Склад: {0}
+
+CurrentStockSituationForm.Title.Warehouse=Склад
+CurrentStockSituationForm.Title.Available=Доступно
+CurrentStockSituationForm.Title.Located=Фактически
+CurrentStockSituationForm.Title.PlanningReceipt=План. приход
+CurrentStockSituationForm.Title.PlanningIssue=План. расход
+CurrentStockSituationForm.Title.Reserved=Зарезервировано
+CurrentStockSituationForm.Title.Total=Итого
+CurrentStockSituationForm.Title=Количество на складах для позиции {0} ({1})
+
+StocInventoryDateMissing=Не указана дата инвентаризации!
+
+VolumeMeasure=ЕИ объёма
+InfiniteVolume=Не ограничен объём
+MaximumVolume=Максимальный объём
+
+WeightMeasure=ЕИ веса
+InfiniteWeight=Не ограничен вес
+MaximumWeight=Максимальный вес
+
+QuanMeasure=ЕИ количества
+InfiniteQuan=Не ограничено количество
+MaximumQuan=Максимальное количество
+
+SrcOrDstStockNotFound=Не указан склад для документа или позиции спецификации. Код: %1s
+
+StockClosed=Фактическое движение по складу %s на %s закрыто!
+StockClosedDateTill=Фактическое движение по складу %s закрыто по %s!
+
+WhTransactionDay.FormBr.Title=Операционные дни склада. Склад: {0}
+SystemAuditMessageOpenTrDay=Операционный день ID:%s, ClosedDateTill:%s, Stock:%s открыт
+SystemAuditMessageCloseTrDay=Операционный день ID:%s, ClosedDateTill:%s, Stock:%s закрыт
+SystemAuditMessageCloseWarehouse=Склад %s закрыт по число %s
+SystemAuditMessageOpenWarehouse=Склад %s открыт
+ChooseCloseDateTill=Закрыть по число
+ReadDate=Введите число
+
+SerialNumber=Серийный номер
+SerialNumberSelected=Выбран
+
+BinLocationProductMissmatch=Невозможно хранить продукт '%s' с другими продуктами в одной секции '%s'
+BinLocationNotFound=Не найдена секция хранения '%s'
+BinLocationCode=Секция хранения
+BinLocationQuantityInSection=Количество в секции
+BinLocationQuantityToPerform=Количество к отработке
+
+CustomsDeclarationNotFound=Для позиции товара ''{0}'' в складской партии №{1} от {2, date, medium} не указан номер ГТД
+CountryOfOriginNotFound=Для позиции товара ''{0}'' в складской партии №{1} от {2, date, medium} не указана страна происхождения
+GoodIsNotDisposed=Для позиции товара ''{0}'' не проведена операция списания по складу

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Millennium Workbench ODA Driver
+Bundle-SymbolicName: com.mg.merp.wb.report.birt.data.oda.badi;singleton:=true
+Bundle-Version: 0.10.0
+Bundle-Vendor: BusinessTechnology, Ltd.
+Bundle-Localization: plugin
+Eclipse-LazyStart: true
+Require-Bundle: org.eclipse.datatools.connectivity.oda,
+ org.eclipse.birt.report.engine,
+ org.eclipse.birt.report.model,
+ org.eclipse.birt.core
+Export-Package: com.mg.merp.wb.report.birt.data.oda.badi,
+ com.mg.merp.wb.report.birt.data.oda.badi.util
+Bundle-ClassPath: .,
+ mgframework.jar

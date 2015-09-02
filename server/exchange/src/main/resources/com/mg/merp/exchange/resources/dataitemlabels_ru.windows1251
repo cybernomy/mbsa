@@ -1,0 +1,13 @@
+# $Id$
+
+Site.Name=Наименование
+Site.Code=Код
+Site.PathIn=Каталог входящих пакетов
+Site.PathOut=Каталог исходящих пакетов
+Site.ExportCmd=Команда экспорта
+Site.ImportCmd=Команда импорта
+Site.PacketIn=Номер входящего пакета
+Site.PacketOut=Номер исходящего пакета
+Site.PacketInTime=Дата/время входящего пакета
+Site.PacketOutTime=Дата/время исходящего пакета
+Site.RequestDone=Разрешить редактирование номеров пакетов

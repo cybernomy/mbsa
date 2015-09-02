@@ -1,0 +1,38 @@
+# $Id: dataitemlabels_ru.windows1251,v 1.5 2007/11/16 11:29:58 safonov Exp $
+
+Code=Код
+BigName=Описание
+
+Repository=Бизнес-расширение
+Repository.EngineType=Тип
+Repository.ImplName=Реализация
+EngineType.JavaEngine=Java класс
+EngineType.BeanShellEngine=BeanShell
+EngineType.PascalEngine=Pascal
+
+Const.ConstData=Тип данных
+ConstantDataType.String=Строка
+ConstantDataType.Integer=Число целое
+ConstantDataType.Float=Число вещественное
+ConstantDataType.Date=Дата
+
+ConstValue.StartDate=Дата начала действия
+ConstValue.Value=Значение
+
+CustomUserAction=Настраиваемое действие пользователя
+CustomUserAction.Code=Код
+CustomUserAction.Description=Описание
+CustomUserAction.Caption=Заголовок пункта
+CustomUserAction.SysClass=Бизнес-компонент
+CustomUserAction.Hint=Подсказка
+CustomUserAction.KeyStroke=Клавишная комбинация
+CustomUserAction.Priority=Приоритет
+CustomUserAction.FromMenu=Доступно из меню
+CustomUserAction.FromToolbar=Доступно из панели инструментов
+CustomUserAction.ForceRefresh=Обновлять после выполнения
+CustomUserAction.SeparatorBefore=Разделитель перед пунктом
+CustomUserAction.SeparatorAfter=Разделитель после пункта
+CustomUserAction.Icon=Пиктограмма
+CustomUserAction.Active=Активное
+
+CustomUserActionPermiss=Права на выполнение настраиваемого действия

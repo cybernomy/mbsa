@@ -1,0 +1,6 @@
+badi.library.descripton=Библиотека бизнес расширений MBSA
+badi.library.wizard.desc=Выберите модули, необходимые для бизнес расширения
+
+wizard.table.column2=Название
+wizard.table.column3=Версия
+wizard.table.column4=Производитель

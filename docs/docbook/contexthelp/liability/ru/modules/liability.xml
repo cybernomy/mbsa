@@ -1,0 +1,45 @@
+﻿<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY merp "Millennium ERP">
+<!ENTITY logis "Логистика">
+<!ENTITY graph "Графики исполнения обязательств">
+<!ENTITY chap_liability SYSTEM "modules/liability.xml">
+]> -->
+<chapter id="liability">
+  <title>&graph;</title>
+
+    <para>График исполнения обязательств - составная часть условий сделки, 
+    отражающая порядок исполнения обязательств с указанием дат, сумм и спецификаций.</para>
+
+    <para>График исполнения обязательств представляет собой отдельный регистр, 
+    в котором сведены все данные по сделке - планируемые обязательства по платежам
+    и отгрузки/поставки товарно-материальных ценностей и/или услуг. Данный регистр
+    предназначен для планирования и контроля за исполнением обязательств по сделке.
+    Особенностью данного регистра является то, что в нём используются как относительные
+    значения показателей (даты и суммы), так и абсолютные значения показателей.</para>
+    
+    Графики можно посмотреть:
+    <itemizedlist> 
+        <listitem><para>из документов, по которым они созданы - с помощью кнопки 
+	&quot;График&quot;</para></listitem>
+	<listitem><para>в разделе &quot;&graph;&quot;</para></listitem>
+   </itemizedlist>
+
+    <para> Вход в раздел &quot;&graph;&quot; осуществляется через главное меню системы: 
+    <menuchoice>
+    <guimenu>Центр управления</guimenu>
+    <guimenuitem>&logis;</guimenuitem>
+    <guimenuitem>&graph;</guimenuitem>
+    </menuchoice>.
+    </para>
+    
+    <para><link linkend="config_lia">Конфигурация модуля</link></para>
+    <para><link linkend="create">Создание графика</link></para>
+    <para><link linkend="edit">Редактирование графика</link></para>
+    <para><link linkend="punkt">Пункты графика</link></para>
+    <para><link linkend="amount">Сроки и суммы</link></para>
+    <para><link linkend="spec">Спецификации пункта</link></para>
+  
+</chapter>

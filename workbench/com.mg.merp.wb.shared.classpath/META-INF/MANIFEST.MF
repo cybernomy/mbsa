@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Millennium Workbench shared libs
+Bundle-SymbolicName: com.mg.merp.wb.shared.classpath
+Bundle-Version: 1.0.0
+Bundle-Activator: com.mg.merp.wb.shared.classpath.Activator
+Bundle-Vendor: BusinessTechnology, Ltd.
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.core.runtime
+Eclipse-LazyStart: true
+Bundle-ClassPath: shcp.jar,
+ commons-logging.jar,
+ hibernate3.jar,
+ javassist.jar,
+ jbossall-client.jar,
+ mreport-wb.jar,
+ mgframework.jar,
+ mbaiengine-wb.jar,
+ merpcore-wb.jar
+Export-Package: com.mg.framework.api,
+ com.mg.framework.api.dataset,
+ com.mg.framework.api.metadata,
+ com.mg.framework.api.orm,
+ com.mg.framework.api.report,
+ com.mg.merp.baiengine.model,
+ com.mg.merp.core.model,
+ com.mg.merp.report,
+ com.mg.merp.report.model,
+ com.mg.merp.report.service,
+ com.mg.merp.security.model,
+ com.mg.merp.wb.shared.classpath,
+ org.jnp.interfaces

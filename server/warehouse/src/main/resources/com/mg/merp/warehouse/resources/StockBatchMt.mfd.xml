@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: StockBatchMt.mfd.xml,v 1.5 2008/08/27 09:45:06 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.warehouse.resources.formelements#StockBatch.FormMt.Title" helpTopic="warehouse#lots_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+		<jfd:field id="CreateDate" />
+		<jfd:field id="NumberLot" />
+		<jfd:field id="VendorLot"/>
+		<jfd:container  id="beginQuanFields" layout="jfd:box" columns="2" longField="true" label="resource://com.mg.merp.warehouse.resources.formelements#StockBatch.BeginQuan" > 
+			<jfd:field id="BeginQuan"  showLabel="false" alignment="expand_expand"/>
+			<jfd:field id="BeginQuan2" showLabel="false" alignment="expand_expand"/>
+		</jfd:container>
+		<jfd:container  id="endQuanFields" layout="jfd:box" columns="2" longField="true" label="resource://com.mg.merp.warehouse.resources.formelements#StockBatch.EndQuan" > 
+			<jfd:field id="EndQuan" showLabel="false" alignment="expand_expand"/>
+			<jfd:field id="EndQuan2" showLabel="false" alignment="expand_expand"/>
+		</jfd:container>			
+		<jfd:container  id="priceFields" layout="jfd:box" longField="true" label="resource://com.mg.merp.warehouse.resources.formelements#StockBatch.PriceQuan" > 
+			<jfd:field id="PriceNat" showLabel="false" alignment="expand_expand"/>
+			<jfd:field id="PriceCur" showLabel="false" alignment="expand_expand"/>
+		</jfd:container>			
+		<jfd:container  id="inputDoc" layout="jfd:box" longField="true" label="resource://com.mg.merp.warehouse.resources.formelements#StockBatch.InputDoc" >
+			<jfd:field id="DocType" showLabel="false" alignment="left_expand"/>
+			<jfd:field id="DocNumber" showLabel="false" alignment="expand_expand"/>			
+			<jfd:field id="DocDate" showLabel="false" alignment="right_expand"/>				
+		</jfd:container>
+	 	<jfd:field id="Contractor" enabled="false"/>	
+		<jfd:field id="Owner" />
+		<jfd:field id="StockKind" sameLine="true"/> 
+		<jfd:field id="Certificate" /> 
+		<jfd:field id="BestBefore" />
+		
+		<jfd:field id="CountryOfOrigin" />
+		<jfd:field id="CustomsDeclaration" sameLine="true" />				
+		
+		<jfd:field id="Comment" />  
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

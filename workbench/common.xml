@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<property file="build.properties"/>
+<property file="../../build/build.properties"/>
+<property file="META-INF/MANIFEST.MF"/>
+
+<property name="classdir" value="output/classes"/>
+<property name="javac-includes" value="**/*.java"/>
+<property name="src.folder" value="src/main/java"/>
+
+<path id="thirdparty.path">
+  <fileset dir="../../thirdparty">
+    <include name="**/*.jar"/>
+  </fileset>
+</path>  
+
+<target name="init" >
+    <mkdir dir="output/classes" />
+    <native2ascii encoding="windows-1251" src="" dest="" ext=".properties" >
+    	<include name="**/*.windows1251"/>
+    </native2ascii>
+    <copy todir="output/classes">  
+    	<fileset dir="${src.folder}" includes="**/*.properties"/>
+  	</copy>
+	<copy todir="output/plugin/${plugin.folder.name}_${Bundle-Version}">  
+    	<fileset dir="">
+			<include name="plugin*.*"/>
+    		<exclude name="*.windows1251"/>
+    		<include name="META-INF/MANIFEST.MF"/>
+    	</fileset>
+  	</copy>
+</target>
+  
+<target name="compile" depends="init">
+  <echo message="Compiling for ${ant.project.name}"/>
+  <javac srcdir="${src.folder}"
+      destdir="${classdir}"
+      debug="${debug}"
+      target="1.5"
+      source="1.5"
+      encoding="windows-1251"
+      classpathref="project.class.path"
+      debuglevel="${debuglevel}"
+      sourcepath="${javac-sourcepath}"
+      includes="${javac-includes}"
+      excludes="${javac-excludes}">
+  </javac>
+</target>
+
+<target name="cmn.package.classes">
+  <antcall target="cmn.module.manifest">
+  	<param name="module.filename" value="${plugin.folder.name}_${Bundle-Version}"/>
+  	<param name="update.manifest.file" value="MANIFEST.MF"/>
+  </antcall>
+  <jar destfile="output/plugin/${plugin.folder.name}_${Bundle-Version}/${jars.compile.order}"
+      	 basedir="output/classes" manifest="MANIFEST.MF"/>  
+  <delete failonerror="false" file="MANIFEST.MF"/>
+</target>
+
+<target name="cmn.package">
+  <antcall target="cmn.module.manifest">
+  	<param name="module.filename" value="${plugin.folder.name}_${Bundle-Version}.jar"/>
+  	<param name="update.manifest.file" value="output/plugin/${plugin.folder.name}_${Bundle-Version}/META-INF/MANIFEST.MF"/>
+  </antcall>
+  <zip destfile="output/plugin/${plugin.folder.name}_${Bundle-Version}.jar"
+  		basedir="output/plugin/${plugin.folder.name}_${Bundle-Version}"/>
+  <delete dir="output/plugin/${plugin.folder.name}_${Bundle-Version}"/>
+</target>
+
+<target name="cmn.package.all">
+  <antcall target="cmn.package.classes"/>	
+  <antcall target="cmn.package"/>
+</target>
+
+<target name="output" depends="package">
+	<!-- перетаскивает архив -->
+	<copy file="output/plugin/${plugin.folder.name}_${Bundle-Version}.jar"
+	  todir="../plugins" failonerror="false"/>
+	<!-- перетаскивает папку -->
+    <copy todir="../plugins/${plugin.folder.name}_${Bundle-Version}" failonerror="false">
+      <fileset dir="output/plugin/${plugin.folder.name}_${Bundle-Version}"/>
+    </copy>
+</target>
+
+<target name="clean">
+    <delete failonerror="false" includeemptydirs="true">
+      <fileset dir="output"/>
+    </delete>
+</target>
+
+<target name="cmn.module.manifest">
+  <property name="build.number.file" value="../../build/build.number/${module.filename}.build.number"/>
+
+  <antcall target="cmn.module.version" >
+    <param name="build.number.file" value="${build.number.file}"/>
+  </antcall>
+  <antcall target="cmn.module.manifestfile" >
+    <param name="module.filename" value="${module.filename}"/>
+    <param name="build.number.file" value="${build.number.file}"/>
+  </antcall>
+</target>
+
+<target name="cmn.module.version">
+  <buildnumber file="${build.number.file}" />
+</target>
+
+<target name="cmn.module.manifestfile">
+  <property file="${build.number.file}" />
+  
+  <tstamp>
+    <format property="TODAY" pattern="yyyyMMddHHmmz" timezone="GMT" offset="0" unit="hour" />
+  </tstamp>
+
+  <manifest file="${update.manifest.file}" mode="update">
+    <attribute name="Specification-Title" value="${public.product.title}"/>
+    <attribute name="Specification-Version" value="${ver.curr.major}.${ver.curr.minor}.${ver.curr.release}"/>
+    <attribute name="Specification-Vendor" value="${public.vendor.title} (${public.vendor.web})"/>
+    <attribute name="Implementation-Title" value="${public.product.title}"/>
+    <attribute name="Implementation-Version" value="${ver.curr.major}.${ver.curr.minor}.${ver.curr.release} (build: number=${build.number} date=${TODAY})"/>
+    <attribute name="Implementation-Vendor" value="${public.vendor.title}"/>
+    <attribute name="Implementation-Vendor-Id" value="${public.vendor.web}"/>
+  </manifest>    
+
+</target>

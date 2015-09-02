@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.crm.support.ui.ProblemRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.crm.resources.formelements#ProblemRest.Title" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
+	<jfd:border style="bevel" type="raised" />
+		<jfd:field id="searchText" text="" fieldGroup="resource://com.mg.merp.crm.resources.formelements#ProblemRest.Search"/>
+		<jfd:field id="isSearchInName" text="resource://com.mg.merp.crm.resources.formelements#ProblemRest.SearchInName" fieldGroup="resource://com.mg.merp.crm.resources.formelements#ProblemRest.SearchIn"/>
+		<jfd:field id="isSearchInKeyWords" text="resource://com.mg.merp.crm.resources.formelements#ProblemRest.SearchInKeyWords" />
+		<jfd:field id="isSearchInInfo" text="resource://com.mg.merp.crm.resources.formelements#ProblemRest.SearchInInfo" />
+		<jfd:field id="isExact" text="resource://com.mg.merp.crm.resources.formelements#ProblemRest.Exact" fieldGroup="resource://com.mg.merp.crm.resources.formelements#ProblemRest.SearchParams"/>
+		<jfd:field id="isCaseSensetive" text="resource://com.mg.merp.crm.resources.formelements#ProblemRest.CaseSensetive"/>
+		<jfd:field id="solution" fieldGroup="resource://com.mg.merp.crm.resources.formelements#ProblemRest.Solution"/>
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />							
+ 	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+
+</jfd:form>

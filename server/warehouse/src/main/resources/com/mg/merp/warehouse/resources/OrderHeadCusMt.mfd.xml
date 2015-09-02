@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: OrderHeadCusMt.mfd.xml,v 1.7 2007/09/20 13:19:29 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.warehouse.support.ui.OrderHeadCusMt" title="resource://com.mg.merp.warehouse.resources.formelements#OrderHeadCus.FormMt.Title" helpTopic="warehouse#orderhdcus_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+	
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+ 		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#Main.Tab.Title" >
+	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			 			 	 	
+			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
+			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
+	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
+			<jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml" />					
+		 	<jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml" /> 
+	 	 	<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />		
+	 	 	<jfd:include name="com/mg/merp/document/resources/PartnerFromToMacros.xml" />		
+	 	 	<jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml" />  				
+	 	 	<jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml" />  			
+			<jfd:field id="Through" />
+			<jfd:field id="CalcTaxesKind" sameLine="true"/>
+	 	 	<jfd:include name="com/mg/merp/document/resources/PriceListMacros.xml" />		
+			<jfd:include name="com/mg/merp/warehouse/resources/DocumentDiscountMacros.xml" />					 							
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 							
+		</jfd:container>
+	 	<jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#SpecFields">
+		</jfd:maintenanceTable>
+		<jfd:container id="orderHeadCusExtraFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#Extra.Tab.Title" >
+			<jfd:field id="Responsible" longField="true"/>
+			<jfd:field id="Status" editorType="comboBox"/> 
+			<jfd:field id="DueDate" sameLine="true"/>  
+		 	<jfd:container id="duePlan" layout="jfd:box" longField="true" label="resource://com.mg.merp.warehouse.resources.formelements#OrderHead.DueDatePlan">
+		 		<jfd:field id="DueDateQuan" showLabel="false" alignment="expand_expand"/> 
+			   	<jfd:field id="DueDateKind" showLabel="false" alignment="expand_expand"/>  
+		 	</jfd:container>
+ 			<jfd:field id="CreditTerm" />
+ 		 	<jfd:field id="Penalty" sameLine="true"/> 
+		 	<jfd:field id="Comment" /> 
+			<jfd:field id="Description" />
+		</jfd:container>			
+	</jfd:container>	
+	<jfd:include name="com/mg/merp/document/resources/DefaultDocMaintenanceFooterMacros.xml" />
+</jfd:form>	
+
+	
