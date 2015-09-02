@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: LiabilityBr.mfd.xml,v 1.7 2007/06/04 05:06:19 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.paymentcontrol.support.ui.LiabilityBr" title="resource://com.mg.merp.paymentcontrol.resources.formelements#Liability.FormBr.Title" helpTopic="paymentcontrol#liability_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml" />
+
+	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+ 		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true">
+		</jfd:maintenanceTree>
+ 		<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+			<jfd:popupMenu>
+				<jfd:separator />			
+				<jfd:menu id="patterns" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Liability.Patterns">
+					<jfd:menuItem id="showLiabilityModelItem" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Liability.ShowLiabilityModel" actionListener="ShowLiabilityModel" />
+					<jfd:menuItem id="insertLiabilityModelItem" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Liability.InsertLiabilityModel" actionListener="InsertModel" keyStroke="control INSERT" />
+				</jfd:menu>
+				<jfd:separator />
+				<jfd:menu id="viewDocs" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Liability.ViewDocs">
+					<jfd:menuItem id="viewDoc" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Liability.ViewDoc" actionListener="ViewDoc" />
+					<jfd:menuItem id="viewBaseDoc" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Liability.ViewBaseDoc" actionListener="ViewBaseDoc" />
+					<jfd:menuItem id="viewContract" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Liability.ViewContract" actionListener="ViewContract" />
+				</jfd:menu>
+			</jfd:popupMenu>	
+		</jfd:maintenanceTable>
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+
+</jfd:form>

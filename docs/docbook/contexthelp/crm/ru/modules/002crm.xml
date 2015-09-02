@@ -1,0 +1,44 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_002crm SYSTEM "modules/002crm.xml">
+<!ENTITY merp "Millennium ERP">
+
+]> -->
+<chapter id="002crm">
+  <title>Пользователи CRM </title>
+ 
+  	<para>В этом справочнике должны быть записаны все пользователи системы &merp;, которые 
+	работают с модулем CRM. Если пользователь системы не зарегистрирован в данном справочнике, 
+	ему будут недоступны некоторые разделы и функции модуля CRM. </para>
+	
+	<para>Вход в раздел через меню <menuchoice>
+	<guimenu>CRM</guimenu>
+	<guisubmenu>Справочники CRM</guisubmenu>
+	<guimenuitem>Пользователи CRM</guimenuitem>
+	</menuchoice>.</para> 
+	
+	 <screenshot><mediaobject><imageobject>
+	 <imagedata fileref="images/add_crm_user.gif"/>
+	 </imageobject></mediaobject></screenshot>
+  
+	<para>Чтобы добавить пользователя CRM, заполните следующие поля:</para>
+	
+	<para><guibutton>Имя</guibutton>. Выберите запись из справочника &quot;Физические лица&quot;, 
+	где в поле &quot;Пользователь системы&quot; указана запись с именем Пользователя системы.  </para>
+	
+	<para><guibutton>Должность</guibutton>. Должность данного пользователя. </para>
+	
+	<para><guibutton>Занят</guibutton>. Атрибут &quot;Занят&quot; означает занятость данного 
+	пользователя в настоящий момент времени. Это поле в текущем релизе CRM не используется. 
+	Планируется, что данное поле будет использовано при интеграции &merp; с Call-Centre. </para>
+	
+	<para><guibutton>Администратор CRM</guibutton>. Поставьте флаг в этом поле, если 
+	данный пользователь является администратором для модуля CRM. Администратор CRM имеет 
+	возможность пользователя CRM менять условия отбора на разделах действий и отношений. 
+	Обычный пользователь - не администратор CRM - чужие записи не видит. </para>  
+	 
+  
+</chapter>

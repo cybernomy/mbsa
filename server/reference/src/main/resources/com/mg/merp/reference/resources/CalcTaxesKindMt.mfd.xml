@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: CalcTaxesKindMt.mfd.xml,v 1.6 2006/11/29 08:36:08 konyashkina Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.reference.support.ui.CalcTaxesKindMt" title="resource://com.mg.merp.reference.resources.formelements#CalcTaxesKind.FormMt.Title" helpTopic="reference#taxkind_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+
+		<jfd:field id="Code" />
+		<jfd:field id="KName"/>		
+	 	<jfd:container id="taxInCalc" layout="jfd:box" orientation="ver" label="resource://com.mg.merp.reference.resources.formelements#Taxes.Title" >							
+	 		<jfd:table id="taxesTable" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" >
+	 			<jfd:popupMenu>
+	 				<jfd:menuItem id="includeTaxItem" text="resource://com.mg.merp.reference.resources.formelements#CalcTaxesKind.IncludeTax" actionListener="IncludeTax" />
+	 				<jfd:menuItem id="excludeTaxItem" text="resource://com.mg.merp.reference.resources.formelements#CalcTaxesKind.ExcludeTax" actionListener="ExcludeTax" />
+	 				<jfd:menuItem id="changeTaxItem" text="resource://com.mg.merp.reference.resources.formelements#CalcTaxesKind.ChangeTax" actionListener="ChangeFeeOrder" />
+	 			</jfd:popupMenu>
+			</jfd:table>
+		</jfd:container>	
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 			 										
+	
+	</jfd:container>
+	
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

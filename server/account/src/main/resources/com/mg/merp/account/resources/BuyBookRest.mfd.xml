@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: BuyBookRest.mfd.xml,v 1.2 2006/11/30 13:46:37 konyashkina Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.account.support.ui.BuyBookRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.account.resources.formelements#Cond.BuyBook" helpTopic="account#buybook_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+
+		<jfd:field id="insertDate1" />
+		<jfd:field id="insertDate2" sameLine="true"/>
+		<jfd:field id="totalSum1" />
+		<jfd:field id="totalSum2" sameLine="true"/>			
+		<jfd:field id="nds1Sum1" />
+		<jfd:field id="nds1Sum2" sameLine="true"/>
+		<jfd:field id="nds2Sum1" />
+		<jfd:field id="nds2Sum2" sameLine="true"/>
+		<jfd:field id="nds3Sum1" />
+		<jfd:field id="nds3Sum2" sameLine="true"/>	
+		<jfd:field id="docDate1" />
+		<jfd:field id="docDate2" sameLine="true"/>
+		<jfd:field id="docNumber" />
+		<jfd:field id="docType" sameLine="true"/>			
+		<jfd:field id="contractorCode" />
+	 	<jfd:comboBox id="approved" selectedIndex="0" label="resource://com.mg.merp.account.resources.formelements#Cond.BuyBook.Approved">
+			<jfd:items>
+				<jfd:item value="" />
+				<jfd:item value="Да" />
+				<jfd:item value="Нет" />
+			</jfd:items>
+		</jfd:comboBox> 
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 												
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+
+</jfd:form>

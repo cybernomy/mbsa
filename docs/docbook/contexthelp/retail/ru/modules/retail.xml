@@ -1,0 +1,52 @@
+﻿<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY merp "Millennium ERP">
+<!ENTITY logis "Логистика">
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_retail_head SYSTEM "modules/001retail.xml">
+<!ENTITY chap_additional SYSTEM "modules/002retail.xml">
+<!ENTITY chap_contractors SYSTEM "modules/003retail.xml">
+<!ENTITY chap_features SYSTEM "modules/004retail.xml">
+<!ENTITY chap_retail_spec SYSTEM "modules/005retail.xml">
+<!ENTITY chap_spec_additon SYSTEM "modules/006retail.xml">
+<!ENTITY chap_tax SYSTEM "modules/007retail.xml">
+<!ENTITY chap_spec_features SYSTEM "modules/008retail.xml">
+]> -->
+<chapter id="retail">
+  <title>Розничная торговля</title>
+ 
+    <para>Модуль &quot;Розничная торговля&quot; предназначен для оформления документов 
+    на отпуск товара в розницу.</para>
+    
+    <para>Конфигурация модуля (Базовая/Национальная валюта, Округление) соответствует 
+    конфигурации модуля &quot;Склады, снабжение, сбыт&quot;. </para>
+    
+    <para> Вход в раздел &quot;Документы на отпуск&quot; осуществляется через главное меню системы: 
+    <menuchoice>
+    <guimenu>Центр управления</guimenu>
+    <guimenuitem>&logis;</guimenuitem>
+    <guimenuitem>Документы на отпуск</guimenuitem>
+    </menuchoice>.
+    </para>
+    
+    <para>Использование образцов позволяет существенно упростить и ускорить заполнение документов, 
+    особенно, если они связаны с выполнением регулярно повторяющихся платежей. 
+    При заполнении банковских документов Вы можете использовать специально подготовленные образцы,
+    которые хранятся в разделе &quot;Образцы документов на отпуск&quot;. 
+    Для обращения к этому разделу нажмите сочетание клавиш 
+    <keycombo><keycap>Ctrl</keycap><keycap>Ins</keycap></keycombo>, 
+    или выберите на панели инструментов кнопку &quot;Вставка с образцом&quot;, 
+    или выберите в контекстном меню пункт &quot;Вставка с образцом&quot;.</para>
+    
+    <para><link linkend="retail_head">Закладка &quot;Содержание&quot;</link></para>
+    <para><link linkend="additional">Закладка &quot;Дополнительно&quot;</link></para>
+    <para><link linkend="contractors">Закладка &quot;Контрагенты&quot;</link></para>
+    <para><link linkend="features">Закладка &quot;Дополнительные признаки&quot;</link></para>
+    <para><link linkend="retail_spec">Спецификации документа</link></para>
+    <para><link linkend="spec_additon">Дополнительные сведения</link></para>
+    <para><link linkend="tax">Налоги</link></para>
+    <para><link linkend="spec_features">Дополнительные признаки</link></para>
+
+</chapter>

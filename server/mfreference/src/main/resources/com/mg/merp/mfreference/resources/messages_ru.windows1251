@@ -1,0 +1,13 @@
+# $Id$
+
+ChoosedMeasure={0} не поддерживается для пересчета единицы измерения в TICK
+InvalidTimeFormat=Неверный формат времени
+
+DayCalendarNotFound=Для недельного календаря {0} на дату {1} не найден дневной календарь
+DayTimeNotFound=Для дневного календаря {0} не найден сменный календарь
+
+ActualityDateTitle=Введите дату актуальности
+ActualityDatePrompt=Дата
+
+InvalidResourceFamilyStructure=Пара групп ресурсов недопустима
+InvalidResourceFamilyPlanningLevel=Для уровня планирования с номером 1 иерархию ресурсов задать нельзя

@@ -1,0 +1,240 @@
+# $Id: formelements_ru.windows1251,v 1.32 2008/08/27 09:45:06 sharapov Exp $
+
+Main.Tab.Title=Основные сведения
+Doc.MainTab.Title=Содержание
+SpecFields=Спецификации
+DocSpec.Price=Цена
+Extra.Tab.Title=Дополнительные сведения
+DiscountFolder=Скидки/наценки
+Doc.AddExpenses=Сумма дополнительных расходов
+PartnerTo=Кому
+PartnerFrom=От кого
+Responsible=Ответственный
+
+BillHeadIn.FormBr.Title=Входящие счета
+BillHeadIn.FormMt.Title=Входящий счет
+Cond.BillHeadIn=Условия отбора входящих счетов
+BillHeadModelIn.FormBr.Title=Образцы входящих счетов
+BillHeadModelIn.FormMt.Title=Образец входящего счета
+BillHeadOut.FormBr.Title=Исходящие счета
+BillHeadOut.FormMt.Title=Исходящий счет
+Cond.BillHeadOut=Условия отбора исходящих счетов
+BillHeadModelOut.FormBr.Title=Образцы исходящих счетов
+BillHeadModelOut.FormMt.Title=Образец исходящего счета
+BillSpecIn.FormMt.Title=Спецификация входящего счета
+BillSpec.AcceptanceSum=Сумма акцептованного товара
+BillSpecOut.FormMt.Title=Спецификация исходящего счета
+
+BinLocation.FormBr.Title=Секции хранения
+BinLocation.FormMt.Title=Секция хранения
+BinLoc.Volume=Ограничения объема
+BinLoc.Weight=Ограничения веса
+BinLoc.Quan=Ограничения количества
+
+BinLocationType.FormBr.Title=Типы секций хранения
+BinLocationType.FormMt.Title=Тип секций хранения
+
+BinTypeCapacityByProduct=Ёмкость по продукции
+
+InvoiceHeadIn.FormBr.Title=Входящие накладные
+InvoiceHeadIn.FormMt.Title=Входящая накладная
+Cond.InvoiceHeadIn=Условия отбора входящих накладных
+InvoiceHeadModelIn.FormBr.Title=Образцы входящих накладных
+InvoiceHeadModelIn.FormMt.Title=Образец входящей накладной
+InvoiceSpecIn.FormMt.Title=Спецификация входящей накладной
+
+InvoiceHeadOut.FormBr.Title=Исходящие накладные
+InvoiceHeadOut.FormMt.Title=Исходящая накладная
+Cond.InvoiceHeadOut=Условия отбора исходящих накладных
+InvoiceHeadModelOut.FormBr.Title=Образцы исходящих накладных
+InvoiceHeadModelOut.FormMt.Title=Образец исходящей накладной
+InvoiceSpecOut.FormMt.Title=Спецификация исходящей накладной
+
+InventoryActHead.FormBr.Title=Акты инвентаризации
+InventoryActHead.FormMt.Title=Акт инвентаризации
+InventoryActHead.Committee=Члены комиссии
+InventoryActHead.Summa=Суммы
+InventoryActSpec.FormMt.Title=Спецификация акта инвентаризации
+Cond.InventoryActHead=Условия отбора актов инвентаризации
+InventoryActHead.Warehouse=Склад
+InventoryActHead.MolWarehouse=Кладовщик
+InventoryActHead.Add=Добавить
+InventoryActHead.Remote=Удалить
+InventoryActHead.Committee.Title=Инвентаризационная комиссия
+InventoryActHeadMt.ExecuteInventory=Провести инвентаризацию
+InventoryActHeadMt.Differences=Расхождения
+
+OrderHead.DueDatePlan=Срок выполнения заказа
+OrderHead.Penalty=Штрафные санкции по неисполнению заказа
+OrderHeadSup.FormBr.Title=Заказы поставщикам
+OrderHeadSup.FormMt.Title=Заказ поставщику
+Cond.OrderHeadSup=Условия отбора заказов поставщикам
+OrderSpecSup.FormMt.Title=Спецификация заказа поставщику
+OrderSpec.Plan.TabTitle=Планирование
+
+OrderHeadModelSup.FormBr.Title=Образцы заказов поставщикам
+OrderHeadModelSup.FormMt.Title=Образец заказа поставщику
+OrderSpecModelSup.FormMt.Title=Спецификация образца заказа поставщику
+
+OrderHeadCus.FormBr.Title=Заказы покупателей
+OrderHeadCus.FormMt.Title=Заказ покупателя
+OrderSpecCus.FormMt.Title=Спецификация заказа покупателя
+Cond.OrderHeadCus=Условия отбора заказов покупателей
+
+OrderHeadModelCus.FormBr.Title=Образцы заказов покупателей
+OrderHeadModelCus.FormMt.Title=Образец заказа покупателя
+OrderSpecModelCus.FormMt.Title=Спецификация образца заказа покупателя
+
+Spec.AcceptanceQuan=Количество акцептованного товара в базовой ЕИ
+StockKind.FormBr.Title=Виды складского запаса
+StockKind.FormMt.Title=Вид складского запаса
+
+FactMove.Title=Фактическое движение
+Batches.Title=Партии
+FactMove.Title=Фактическое движение
+FactMove.In=История приходов
+FactMove.Out=История расходов
+PlanMove.Title=Планируемое движение
+PlanMove.In=Планируемый приход
+PlanMove.Out=Планируемый расход
+Reserve.Title=Резервирование
+Reserve.Fields=Зарезервировано
+
+StockBatch.FormMt.Title=Складская партия
+StockBatch.InputDoc=Документ
+StockBatch.Prices=Цены
+
+WareCard.FormBr.Title=Карточки складского учета
+WareCard.FormMt.Title=Карточка складского учета
+
+WarehouseDocumentOut.FormBr.Title=Расходные ордера
+WarehouseDocumentOut.FormMt.Title=Расходный ордер
+WarehouseDocumentModelOut.FormBr.Title=Образцы расходных ордеров
+WarehouseDocumentModelOut.FormMt.Title=Образец расходного ордера
+WarehouseDocumentSpecOut.FormMt.Title=Спецификация расходного ордера 
+Cond.WarehouseDocumentHeadOut=Условия отбора расходных ордеров
+
+WarehouseDocumentIn.FormBr.Title=Приходные ордера
+WarehouseDocumentIn.FormMt.Title=Приходный ордер
+WarehouseDocumentModelIn.FormBr.Title=Образцы приходных ордеров
+WarehouseDocumentModelIn.FormMt.Title=Образец приходного ордера
+WarehouseDocumentSpecIn.FormMt.Title=Спецификация приходного ордера
+Cond.WarehouseDocumentHeadIn=Условия отбора приходных ордеров
+
+Warehouse.FormBr.Title=Склады
+Warehouse.FormMt.Title=Склад
+
+WarehouseType.FormBr.Title=Типы складов
+WarehouseType.FormMt.Title=Тип склада
+
+Warehouse.ShowBinLocation=Секции хранения
+Warehouse.ShowWarehouseCard=Карточки складского учета
+Warehouse.BatchSelectionDialog.SpecQuan=Количество в спецификации
+Warehouse.BatchSelectionDialog.InMeasure1=В первой ЕИ
+Warehouse.BatchSelectionDialog.InMeasure2=Во второй ЕИ
+Warehouse.BatchSelectionDialog.MarkQuan=Отмечено
+AvailableQuan=Расчет доступного количества на складе
+
+WarehouseZone.FormBr.Title=Зоны хранения
+WarehouseZone.FormMt.Title=Зона хранения
+
+PartnerFromReq=Поставщик
+PartnerToReq=Покупатель
+
+StockBatch.BeginQuan=Начальные количества
+StockBatch.EndQuan=Конечные количества
+StockBatch.PriceQuan=Цены
+Contractor=Контрагент
+InventorySpecAct.RealSumma=Фактическая сумма
+InventorySpecAct.StockSumma=Сумма по данным склада
+
+WarehouseConfig.FormMt.Title=Конфигурация модуля "Склады, снабжение, сбыт"
+WarehouseConfig.FormMt.BaseCurrency=Базовая валюта
+WarehouseConfig.FormMt.NatCurrency=Национальная валюта
+WarehouseConfig.FormMt.CurrencyPrec=Точность денежных величин, знаков после запятой
+WarehouseConfig.FormMt.CurrencyFields=Валюта
+
+WareCard.DateFrom=с
+WareCard.DateTo=по
+WareCard.Meas1=Основная ЕИ
+WareCard.Meas2=Дополнительная ЕИ
+
+WareCard.Rest.Title=Условия отбора КСУ
+WareCard.Rest.DocNumber=Номер документа
+WareCard.Rest.SupplyNorm=Норма запаса
+WareCard.Rest.Reserve=Зарезервировано
+WareCard.Rest.Quantity=Фактическое количество
+WareCard.Rest.PlanIn=Планируемый приход
+WareCard.Rest.PlanOut=Планируемый расход
+WareCard.Rest.Available=Доступное количество
+
+WareCard.Sign=Учитывать количество со знаком минус
+
+CurrentStockSituationForm.Title=Количество на складах
+CurrentStockSituationForm.Title.TabBase=В основной единице измерения
+CurrentStockSituationForm.Title.TabAdd=В дополнительной единице измерения
+
+BatchDisposal.Title=Списание с партии
+BatchDisposal.PopupMenu.ItemShow=Просмотреть документ
+
+WarehouseInventoryParamsDlg.Title=Инвентаризация склада
+WarehouseInventoryParamsDlg.CatalogCodeRange=Диапазон кодов
+WarehouseInventoryParamsDlg.CatalogCodeFrom=Начало
+WarehouseInventoryParamsDlg.CatalogCodeTill=Конец
+WarehouseInventoryParamsDlg.StockInventoryKinds=Правила формирования строк по партиям
+WarehouseInventoryParamsDlg.ByOnePriceKind=Одна строка ТМЦ по одной цене прихода
+WarehouseInventoryParamsDlg.ByAgregatePriceKind=Одна строка ТМЦ по всем ценам прихода
+WarehouseInventoryParamsDlg.ByOneMolKind=Одна строка ТМЦ по каждому МОЛ
+WarehouseInventoryParamsDlg.ByAgregateMolKind=Одна строка ТМЦ по всем МОЛ
+WarehouseInventoryParamsDlg.IsIncludePositionsWithZeroRemn=Включать позиции с нулевым остатком
+WarehouseInventoryParamsDlg.IsDeleteSpecList=Заменить имеющиеся спецификации документа
+InventoryParams.StockInvKind=Правила формирования строк по партиям с учетом цены прихода
+InventoryParams.MolInvKind=Правила формирования строк по партиям с учетом МОЛ
+
+InventoryActSpecMt.Quantity=Количество
+InventoryActSpecMt.Quantity1=<html>Количество на складе <br>в основной ЕИ<html>
+InventoryActSpecMt.Quantity2=в дополнительной ЕИ
+InventoryActSpecMt.DifferenceQuntity1=Расхождение в основной ЕИ
+InventoryActSpecMt.DifferenceQuntity2=в дополнительной ЕИ
+InventoryActSpecMt.ComputeDifferenceQuntities=Рассчитать сумму относительно количества
+InventoryActSpecMt.Summ=Сумма
+InventoryActSpecMt.Difference=Расхождение
+InventoryActSpecMt.ComputeDifferenceSum=Рассчитать количество относительно суммы
+InventoryActSpecMt.ProductionDates=Сроки хранения
+
+WareCardMt.SerialNumbersTab=Серийные номера
+WareCardMt.BinLocationDetailsTab=Секции хранения
+
+WarehouseTransactionDay.FormMt.Title=Операционный день склада
+WarehouseTransactionDay.FormBr.Title=Операционные дни склада
+Warehouse.ShowWarehouseTransactionDay=Операционные дни
+WarehouseTransactionDay.CloseDay=Закрыть день
+WarehouseTransactionDay.OpenDay=Открыть день
+Warehouse.Close=Закрыть склад
+Warehouse.Open=Открыть склад
+BatchReceipt.Title=Поступления
+
+BinLocationSearchForm.Title=Секции хранения
+CatalogCodeAndName=Товар: код/наименование
+NumberLot=Номер партии
+
+SelectSerialNumberDlg.Title=Выберите серийные номера
+SelectSerialNumberDlg.NecessarySerialNumbersQuantity=Количество номеров
+
+InputSerialNumberDlg.Title=Добавление серийных номеров
+InputSerialNumberDlg.SerialNumber=Серийный номер
+InputSerialNumberDlg.SerialNumbersQuantity=Количество номеров
+InputSerialNumberDlg.AddedSerialNumbersQuantity=Введено номеров
+InputSerialNumberDlg.AddSerialNumber=Добавить
+InputSerialNumberDlg.RemoveSerialNumber=Удалить
+
+InputBinLocationDlg.Title=Введите секцию хранения
+InputBinLocationDlg.BinLocation=Секция хранения
+InputBinLocationDlg.Quantity=Количество
+
+SelectBinLocationDlg.Title=Выберите секции хранения
+SelectBinLocationDlg.TotalQuantity=Общее количество
+
+WarehouseBatchSelectionDialog.Title=Выберите партию
+
+CustomsDeclarationNotFoundDlg.Title=ГТД и страна происхождения не найдены

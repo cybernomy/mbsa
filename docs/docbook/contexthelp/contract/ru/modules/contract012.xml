@@ -1,0 +1,46 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_available SYSTEM "modules/contract012.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere">
+<!ENTITY contr "Контракты">
+]> -->
+<chapter id="available">
+  <title>Доступные функции</title>
+  
+  <para>В системе &merp; для контрактов доступны следующие функции: </para>
+  
+  <section>
+
+    <title>Функции общего назначения</title>
+    
+    <itemizedlist> 
+        <listitem><para>Добавить</para></listitem>
+	<listitem><para>Изменить</para></listitem>
+	<listitem><para>Удалить</para></listitem>
+	<listitem><para>Просмотр</para></listitem>
+	<listitem><para>Обновление списка</para></listitem>
+  <!--	<listitem><para>Настройка списка </para></listitem> --> 
+	<listitem><para>Печать</para></listitem>
+  <!--	<listitem><para><emphasis>Копирование. </emphasis> 
+	Вы можете создать договор, аналогичный уже существующему контракту. 
+	При копировании все значения переносятся во вновь создаваемый контракт.
+	Вам необходимо лишь изменить значения некоторых полей и записать 
+	новый контракт в систему.</para></listitem>
+	<listitem><para><emphasis>Копирование заголовка.</emphasis> 
+	В отличие от функции копирования (когда во вновь создаваемый договор 
+	полностью переносятся все значения), при копировании заголовка осуществляется
+	частичный перенос значений. В данном случае не переносится информация 
+	о дополнительных признаках и о спецификациях документа.</para></listitem>  
+	<listitem><para><emphasis>Отработка документа.</emphasis> 
+	С помощью данной функции Вы сможете выполнить доступный этап (или этапы) 
+	документооборота у данного типа контракта. Для контрактов доступны такие 
+	этапы, как &quot;Электронная подпись&quot; и &quot;Настраиваемый этап&quot;. 
+	После прохождения документооборота внести изменения в контракт уже нельзя, 
+	если не выполнить откат документооборота.</para></listitem> --> 
+   </itemizedlist>
+    
+  </section>
+
+</chapter>

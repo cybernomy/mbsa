@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: ContractorResponsibleSearchForm.mfd.xml,v 1.1 2006/10/10 06:10:45 leonova Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.reference.support.ui.ContractorResponsibleSearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.reference.resources.formelements#Partner.ParntEmpl.Title" width="400" height="250" >
+
+	<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+		<jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton" actionListener="Choose" />
+	</jfd:toolBar>
+
+	<jfd:table id="partnerEmplist" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" />
+
+</jfd:form>

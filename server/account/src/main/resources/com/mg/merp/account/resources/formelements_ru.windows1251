@@ -1,0 +1,381 @@
+# $Id: formelements_ru.windows1251,v 1.37 2009/03/11 13:39:50 sharapov Exp $
+
+Main.Tab.Title=Основные сведения
+MainDoc.Tab.Title=Содержание
+MainSpec.Tab.Title=Спецификации
+
+AmCode.FormBr.Title=Шифры амортизации
+AmCode.FormMt.Title=Шифр амортизации
+AmRate.FormMt.Title=Норма амортизации
+
+Period.FormBr.Title=Периоды бухгалтерского учёта
+Period.FormMt.Title=Период бухгалтерского учёта
+
+Metal.FormBr.Title=Драгоценные металлы
+Metal.FormMt.Title=Драгоценный металл
+
+InvLocation.FormBr.Title=Местонахождение объектов
+InvLocation.FormMt.Title=Местонахождение объектов
+
+PermissibleAccounts.FormBr.Title=Допустимая корреспонденция счетов
+PermissibleAccounts.FormMt.Title=Допустимая корреспонденция счетов
+
+Okof.FormBr.Title=Коды ОКОФ
+Okof.FormMt.Title=Код ОКОФ
+
+AccKind.FormBr.Title=Виды учета ОС и НА
+AccKind.FormMt.Title=Вид учета ОС и НА
+AccGroup.Title=Группы учёта ОС и НА
+AccGroup.FormBr.Title=Группа учёта ОС и НА
+
+Account.FormBr.Title=План счетов бухгалтерского учёта
+Account.FormMt.Title=Счет бухгалтерского учета
+Account.Analit.Title=Аналитические счета
+Account.FirstAnalit.Title=1-го порядка
+Account.SecondAnalit.Title=2-го порядка
+Account.ThirdAnalit.Title=3-го порядка
+Account.FourthAnalit.Title=4-го порядка
+Account.FifthAnalit.Title=5-го порядка
+AnlPlan.FormMt.Title=Аналитические счета
+
+SpecMark.FormBr.Title=Особые отметки хозяйственных операций
+SpecMark.FormMt.Title=Особая отметка
+
+RemnDbKt.FormBr.Title=Ведомости расчетов с контрагентами
+RemnDbKt.FormMt.Title=Ведомость расчетов с контрагентами
+
+RemnVal.FormBr.Title=Остатки и обороты по товарно-материальным ценностям
+RemnVal.FormMt.Title=Остатки и обороты по товарно-материальным ценностям
+
+TurnVal.FormBr.Title=Ведомость движения товарно-материальных ценностей
+
+RemnAcc.FormBr.Title=Остатки и обороты по счетам
+RemnAcc.FormMt.Title=Остатки и обороты по счетам
+
+RemnAnl.FormBr.Title=Остатки и обороты по аналитическим счетам
+RemnAnl.FormMt.Title=Остатки и обороты по аналитическим счетам
+
+AdvanceRepHead.FormBr.Title=Авансовые отчеты
+AdvanceRepHead.FormMt.Title=Авансовый отчет
+AdvanceRepSpec.FormMt.Title=Спецификация авансового отчета
+AdvanceRepHead.FormMt.Cash.Title=Денежные средства
+AdvanceRepHeadModel.FormBr.Title=Образцы авансовых отчетов
+AdvanceRepHeadModel.FormMt.Title=Образец авансового отчета
+AdvanceRepHead.ReceivedSrc=Получено (источник, дата, сумма)
+Cond.AdvanceRepHead=Условия отбора авансовых отчетов
+
+
+BankDocumentIn.FormBr.Title=Входящие банковские документы
+BankDocumentIn.FormMt.Title=Входящий банковский документ
+BankDocumentModelIn.FormBr.Title=Образцы входящих банковских документов
+BankDocumentModelIn.FormMt.Title=Образец входящего банковского документа
+Cond.BankDocumentIn=Условия отбора входящих банковских документов
+
+BankDocumentOut.FormBr.Title=Исходящие банковские документы
+BankDocumentOut.FormMt.Title=Исходящий банковский документ
+BankDocumentModelOut.FormBr.Title=Образцы исходящих банковских документов
+BankDocumentModelOut.FormMt.Title=Образец исходящего банковского документа
+Cond.BankDocumentOut=Условия отбора исходящих банковских документов
+
+BankDocumentOther.FormBr.Title=Прочие банковские документы
+BankDocumentOther.FormMt.Title=Прочий банковский документ
+BankDocumentModelOther.FormBr.Title=Образцы прочих банковских документов
+BankDocumentModelOther.FormMt.Title=Образец прочего банковского документа
+Cond.BankDocumentOther=Условия отбора прочих банковских документов
+
+CashDocumentIn.FormBr.Title=Приходные кассовые ордера
+CashDocumentIn.FormMt.Title=Приходный кассовый ордер
+CashDocumentModelIn.FormBr.Title=Образцы приходных кассовых ордеров
+CashDocumentModelIn.FormMt.Title=Образец приходного кассового ордера
+Cond.CashDocumentIn=Условия отбора приходных кассовых документов
+
+CashDocumentOut.FormBr.Title=Расходные кассовые ордера
+CashDocumentOut.FormMt.Title=Расходный кассовый ордер
+CashDocumentModelOut.FormBr.Title=Образцы расходных кассовых ордеров
+CashDocumentModelOut.FormMt.Title=Образец расходного кассового ордера
+Cond.CashDocumentOut=Условия отбора расходных кассовых документов
+
+InternalActHead.FormBr.Title=Внутренние акты
+InternalActHead.FormMt.Title=Внутренний акт
+InternalActSpec.FormMt.Title=Спецификация внутреннего акта
+InternalActHeadModel.FormBr.Title=Образцы внутренних актов
+InternalActHeadModel.FormMt.Title=Образец внутреннего акта
+Cond.InternalActHead=Условия отбора внутренних актов
+
+InternalInvoiceHead.FormBr.Title=Внутренние накладные
+InternalInvoiceHead.FormMt.Title=Внутренняя накладная
+InternalInvoiceSpec.FormMt.Title=Спецификация внутренней накладной
+InternalInvoiceHeadModel.FormBr.Title=Образцы внутренних накладных
+InternalInvoiceHeadModel.FormMt.Title=Образец внутренней накладной
+InternalInvoiceSpecModel.FormMt.Title=Спецификация образца внутренней накладной
+InternalInvoiceSpec.Price=Цена 
+InternalInvoiceSpec.Quantity=Количество
+InternalInvoiceSpec.Summa=Сумма
+Cond.InternalInvoiceHead=Условия отбора внутренних накладных
+
+InvHead.FormBr.Title=Инвентарная картотека
+InvHead.FormMt.Title=Инвентарная карточка
+InvHead.Main=Инвентарный объект
+InvHead.Production=Продукция
+InvHead.Extra=Дополнительные сведения
+InvHead.Metal=Содержание драгоценных металлов
+InvMetal.FormMt.Title=Драгоценный металл
+InvProduction.FormMt.Title=Продукция
+InvHead.Inventory=Данные по различным видам учета
+Inventory.FormMt.Title=Данные по видам учета
+Inventory.AccountDB=Счет/аналитика дебет начисления амортизации
+Inventory.AccountKT=Счет/аналитика кредит начисления амортизации
+
+SaleBook.FormBr.Title=Книга продаж
+SaleBook.FormMt.Title=Книга продаж
+
+BuyBook.FormBr.Title=Книга покупок
+BuyBook.FormMt.Title=Книга покупок
+Document.Title=Документ
+
+EconomicOper.FormBr.Title=Хозяйственные операции
+EconomicOper.FormMt.Title=Хозяйственная операция
+EconomicSpec.FormMt.Title=Проводки хозяйственной операции
+EconomicOperModel.FormBr.Title=Образцы хозяйственных операций
+EconomicOperModel.FormMt.Title=Образец хозяйственных операций
+EconomicSpecModel.FormMt.Title=Образцы проводок
+EconomicOperModel.Total.Tab=Сведения
+EconomicOperModel.Spec.Tab=Проводки
+EconomicOper.ShowEconomicOper=Образцы хозяйственных операций
+Cond.EconomicOper=Условия отбора хозяйственных операций
+
+EconSpecModel.Total.Tab=Главная
+EconSpecModel.Entry.Tab=Условия вхождения
+EconSpecModel.SummaFormula.Tab=Формула для суммы
+EconSpecModel.QtyFormula.Tab=Формула для количества
+EconSpecModel.Catalog=Каталог товаров и услуг
+
+BaseDocEcon.Title=Основание: тип/номер/дата
+DocEcon.Title=Документ: тип/номер/дата
+ContractEcon.Title=Контракт: тип/номер/дата
+
+EconPartnerFrom.Title=От кого
+EconPartnerTo.Title=Кому
+EconomSpec.Title=Проводки
+EconSpec.Debet=Дебет: счет/аналитика
+EconSpec.Kredit=Кредит: счет/аналитика
+EconSpec.Feature=Дополнительные характеристики
+EconSpec.Currency=Валюта
+EconSpec.Summa=Сумма
+EconSpec.Catalog=Товар: код/наименование/количество/ЕИ
+EconSpec.Calc.Button=Рассчитать цену списания
+
+InvHead.ActIn=Акт поступления
+InvHead.ActInExloit=Акт ввода в эксплуатацию
+InvHead.ActOutExloit=Акт выбытия из эксплуатации
+InvHead.Total.Tab=Сведения
+InvHead.Inventory.Tab=Данные расчета
+InvHead.History.Tab=История
+Inventory.Account=Счет/аналитика учета ОС
+
+AdvanceRepHead.Organization=Организания
+AdvanceRepHead.OrgUnit=Структурное подразделение
+AdvanceRepHead.Advance=Подотчетное лицо
+AdvanceRepHead.Previous=Предыдущий аванс
+AdvanceRepHead.Receive=Источники денежных средств 
+AdvanceRepHead.Rest=Остаток/Перерасход
+AdvanceRepHead.Summa=Сумма
+AdvanceRepHead.Acc=Счет/аналитика дебет
+AdvanceRepHead.DocConfirm=Документ, подтверждающий расходы (дата/номер/наименование)
+AdvanceRepHead.DocConfirmRest=<html>Документ:<br>тип, номер, дата</html>
+
+BankIn.Payer=Плательщик
+BankIn.Recipient=Получатель
+
+BankOut.Info=Информация для перечисления налогов и сборов
+
+PermissibleAccounts.Credit=Кредит: Счет/аналитика
+PermissibleAccounts.Debet=Дебет: Счет/аналитика
+
+CashIn.AcceptFrom=Принято от
+CashOut.GiveTo=Выдать
+
+EconomSpecFeature.FormBr.Title=Выберите
+EconomSpecFeature.FormMt.Title=Дополнительная характиристика
+
+AccDebet=Счет/аналитика дебет
+AccKredit=Счет/аналитика кредит
+
+EconSpec.AccBatch=Партия
+Remn.Acc=Счет / аналитика
+RemnDbKt.DocAttribute=Документ
+RemnDbKt.DocBaseAttribute=Основание
+
+Cond.RemnVal.BalanceKind=Состояние сальдо на конец периода
+Cond.BuyBook.Approved=Утверждено
+
+Cond.RemnAcc=Условия отбора позиций
+Cond.BuyBook=Условия отбора книги покупок
+Cond.SaleBook=Условия отбора книги продаж
+
+Acc.Period.MenuItem.OpenPeriod=Открыть период
+Acc.Period.MenuItem.ClosePeriod=Закрыть период
+
+AccCarryForward.Dialog.Title=Перенос остатков
+AccCarryForward.Dialog.AccPeriodFrom=С периода
+AccCarryForward.Dialog.AccPeriodTill=До периода
+AccCarryForward.Dialog.AccLabel=Остатки по счетам
+AccCarryForward.Dialog.AccAnlLabel=Остатки по аналитике счетов
+AccCarryForward.Dialog.AccValLabel=Остатки по ТМЦ
+AccCarryForward.Dialog.AccDbKtLabel=Ведомость дебиторов/кредиторов
+AccCarryForward.Dialog.SelectButton=Выбрать счет
+AccCarryForward.Dialog.SelectAll=Выбрать все
+AccCarryForward.Dialog.PeriodsRange=Диапазон периодов
+
+AccConfig.FormMt.Title=Конфигурация модуля "Бухгалтерский учет"
+AccConfig.FormMt.CurrencyFields.Title=Валюта
+AccConfig.FormMt.BaseCurrency=Базовая валюта
+AccConfig.FormMt.NatCurrency=Национальная валюта
+AccConfig.FormMt.CurrencyPrec=Точность денежных величин, знаков после запятой
+AccConfig.FormMt.BuyBookFields.Title=Параметры формирования книги покупок
+AccConfig.FormMt.SaleBookFields.Title=Параметры формирования книги продаж
+AccConfig.FormMt.Shipment=По отгрузке
+AccConfig.FormMt.Payment=По оплате
+
+EconomicOper.InsertEconomicOperPattern=Вставка с образцом
+
+Account.BankDocument.PayerStatus=Статус плательщика
+Account.BankDocument.PaymentBase=Основание платежа
+Account.BankDocument.PaymentType=Тип платежа
+Account.BankDocument.PaymentPeriod=Период платежа
+Account.BankDocument.TaxPeriodCode=Код периода платежа
+
+
+Value.Empty=
+
+Value.Zero=0
+Value.DoubleZero=00
+Value.One=01
+Value.Two=02
+Value.Three=03
+Value.Four=04
+Value.Five=05
+Value.Six=06
+Value.Seven=07
+Value.Eight=08
+Value.Nine=09
+Value.Ten=10
+Value.Eleven=11
+Value.Twelve=12
+
+Value.TP=ТП
+Value.ZD=ЗД
+Value.BF=БФ
+Value.TR=ТР
+Value.RS=РС
+Value.OT=ОТ
+Value.RT=РТ
+Value.VU=ВУ
+Value.PR=ПР
+Value.AP=АП
+Value.AR=АР
+
+Value.NS=НС
+Value.GP=ГП
+Value.VZ=ВЗ
+Value.AV=АВ
+Value.PE=ПЕ
+Value.PC=ПЦ
+Value.SA=СА
+Value.ASh=АШ
+Value.ISh=ИШ
+
+Value.D1=Д1
+Value.D2=Д2
+Value.D3=Д3
+Value.MS=МС
+Value.KV=КВ
+Value.PL=ПЛ
+Value.GD=ГД
+
+Value.Year2001=2001
+Value.Year2002=2002
+Value.Year2003=2003
+Value.Year2004=2004
+Value.Year2005=2005
+Value.Year2006=2006
+Value.Year2007=2007
+Value.Year2008=2008
+Value.Year2009=2009
+
+CommentField.Title=Назначение платежа
+DescriptionField.Title=Описание
+
+CalculateNdsSumButton.Title=Рассчитать суммы НДС
+CalculateDocSumButton.Title=Рассчитать сумму документа
+
+Account.BankDocument.BankAccount=Номер счета
+Extra.Tab.Title=Дополнительные сведения
+DocEcon.ConfirmDoc.ToolTip=Показать документ
+
+AdvanceRepHeadMt.PrevAdvance=Предыдущий аванс
+AdvanceRepHeadMt.RestKind=Остаток/перерасход
+AdvanceRepHeadMt.Summa=Сумма
+AdvanceRepHeadMt.Expense=Расход
+AdvanceRepHeadMt.Receipt=Получено
+AdvanceRepHeadMt.Balance=Остаток
+AdvanceRepHeadMt.BalanceOrOverRun=да - остаток; нет - перерасход
+AdvanceRepHeadMt.ConfirmDoc.ToolTip=Показать документ-подтверждение или выбрать
+AdvanceRepHeadMt.Button.CalcRecivedSum=Расcчитать последний дебетовый оборот
+AdvanceRepHeadMt.Button.CalcAdv=Расcчитать предыдущий аванс
+AdvanceRepHeadMt.Button.CalcAll=Пересчитать все
+AdvanceRepHeadMt.Acc=<html>Счёт учёта операций <br>с подотчётным лицом</html>
+
+Remn.FormBr.MenuItem.DeleteEmptyString=Удалить пустые строки
+Remn.FormBr.MenuItem.CloseDebet=Закрыть задолжность по контрагенту
+Remn.FormBr.MenuItem.EvaluateOutCost=Пересчитать цены списания
+EconomicOper.CloneStorno=Копирование со сторонированием
+QueryDateRangeDlg.Title=Диапазон дат
+QueryDateRangeDlg.BeginDate=C даты
+QueryDateRangeDlg.EndDate=по дату
+PermissibleAccounts.FormBr.MenuItem.CreateFromEconomicOper=Создать на основе хозяйственных операций
+AmCodeSearchForm.Title=Шифры амортизации
+InvHeadBr.MenuItem.CalcAmortization=Начисление амортизации
+AmRateDlg.Title=Введите дату начисления амортизации
+AmRateDlg.Year=Год
+AmRateDlg.Month=Месяц
+AmortizationBr.Button.Commit=Продолжить
+AmortizationBr.Button.Rollback=Отменить
+InvHeadBr.MenuItem.RevaluateOvervalue=Переоценка
+InvHeadBr.MenuItem.RevaluateOverestimation=Дооценка
+InvHeadBr.MenuItem.Move=Перемещение
+InvHeadBr.MenuItem.Retire=Списание
+InvHeadBr.MenuItem.Freeze=Консервация
+InvHeadBr.MenuItem.MakeRemains=Формирование остатков
+InvHeadBr.MenuItem.Rollback=Отменить последнее действие
+AccRevaluateDlg.RevalDate=Дата учета
+AccRevaluateDlg.Kind=Вводимое значение 
+AccRevaluateDlg.AccPlan=Счет/аналитика
+AccRevaluateDlg.Value=Значение коэффициент/до суммы/на сумму 
+AccInventoryMoveDlg.AccPlan=Счет/аналитика учета ОС
+AccInventoryMoveDlg.AccKt=<html>Счет/аналитика учета <br>начисленной амортизации</html>
+AccInventoryRetireDialog.Account=Счет/аналитика списания ОС
+AccInventoryMakeRemainsDlg.Period=Учетный период
+AccInventoryMakeRemainsDlg.Title=Формирование остатков по данным инвентарных карточек
+Amortization.FormMt.Title=Начисление амортизации
+Amortization.FormMt.Contractor=<html>Материально-<br>ответственное лицо</html>
+Inventory.RefreshButton=Обновить
+Amortization.FormMt.SumFactor=<html>Сумма с учетом <br>попр. коэффициента</html>
+
+MenuItem.ViewTurns=Показывать обороты
+ViewTurns.TurnDb=Обороты по дебету
+ViewTurns.TurnKt=Обороты по кредиту
+ViewTurns.Turn=Обороты
+
+ReportBrowse.Title=Баланс и отчетные формы
+
+EconomicOperRest.Clear=Очистить
+EconomicOperRest.LabelDb=Дебет
+EconomicOperRest.LabelKt=Кредит
+EconomicOperRest.LabelAnlDb=Аналитика по дебету
+EconomicOperRest.LabelAnlKt=Аналитика по кредиту
+EconomicOperRest.Anl1=1-го уровня
+EconomicOperRest.Anl2=2-го уровня
+EconomicOperRest.Anl3=3-го уровня
+EconomicOperRest.Anl4=4-го уровня
+EconomicOperRest.Anl5=5-го уровня

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: link.xml,v 1.2 2006/12/04 12:56:07 konyashkina Exp $ -->
+
+<link version="1.0">
+  
+  <linkitem topic="accref_links">
+     <linkentry target="periods_html" text="Периоды бухгалтерского учёта" />
+     <linkentry target="permacc_html" text="Допустимая корреспонденция счетов" />
+     <linkentry target="metal_html" text="Драгоценные металлы" />
+     <linkentry target="okof_html" text="Коды ОКОФ" />
+     <linkentry target="amrate_html" text="Шифры и нормы амортизации" />
+     <linkentry target="invlocation_html" text="Местонахождение объектов" />
+     <linkentry target="acckind_html" text="Виды учёта ОС и НА" />
+     <linkentry target="accplan_html" text="План счетов" />
+     <linkentry target="anlvedkind_html" text="Вид аналитической ведомости" />
+     <linkentry target="acctype_html" text="Тип счёта" />
+     <linkentry target="anlplan_html" text="Аналитические счета" />
+  </linkitem>
+  
+  <linkitem topic="bankdoc_links">
+    <linkentry target="bankdocout_html" text="Исходящие банковские  документы" />
+    <linkentry target="bankdocout1_html" text="Исходящий банковский документ" />
+    <linkentry target="nalog_html" text="Информация для налогов и сборов" />
+    <linkentry target="bankmodelout_html" text="Образцы исходящих банковских документов" />
+    <linkentry target="bankdocin_html" text="Входящие банковские документы" />
+    <linkentry target="bankdocin1_html" text="Входящий банковский документ" />
+    <linkentry target="bankmodelin_html" text="Образцы входящих банковских документов" />
+    <linkentry target="bankdocoth_html" text="Прочие банковские документы" />
+    <linkentry target="bankdocoth1_html" text="Прочий банковский документ" />
+    <linkentry target="bankmodeloth_html" text="Образцы прочих банковских документов" />
+  </linkitem>
+  
+    <linkitem topic="cashdoc_links">
+       <linkentry target="cashdocin_html" text="Приходные кассовые ордера" />
+       <linkentry target="cashmodelin_html" text="Образцы приходных кассовых ордеров" />
+       <linkentry target="cashdocout_html" text="Расходные кассовые ордера" />
+       <linkentry target="cashmodelout_html" text="Образцы расходных кассовых ордеров" />
+   </linkitem>
+  
+  <linkitem topic="internaldocs_links">
+   	<linkentry target="internalinvoice_html" text="Внутренние накладные" />
+	<linkentry target="intinvspec_html" text="Спецификации внутренних накладных" />
+	<linkentry target="intactmodel_html" text="Образцы внутренних накладных" />
+    </linkitem>
+  
+   <linkitem topic="internalacts_links">
+ 	<linkentry target="internalact_html" text="Внутренние акты" />
+	<linkentry target="intactspec_html" text="Спецификации внутренних актов" />
+        <linkentry target="intactmodel_html" text="Образцы внутренних актов" />
+   </linkitem>
+   
+   <linkitem topic="advrep_links">
+ 	<linkentry target="advrep_html" text="Авансовые отчёты" />
+	<linkentry target="advreport_html" text="Содержание документа" />
+        <linkentry target="advspec_html" text="Спецификации  авансовых отчётов" />
+	<linkentry target="advmodel_html" text="Образцы авансовых отчётов" />
+   </linkitem>
+  
+   <linkitem topic="factura_links">
+       <linkentry target="facturain_html" text="Входящие счета-фактуры" />
+       <linkentry target="facturspecin_html" text="Спецификации входящих счетов-фактур" />
+       <linkentry target="facturmodelin_html" text="Образцы входящих счетов-фактур" />
+       <linkentry target="facturaout_html" text="Исходящие счета-фактуры" />
+       <linkentry target="factursprcout_html" text="Спецификации исходящих счетов-фактур" />
+       <linkentry target="facturmodelout_html" text="Образцы исходящих счетов-фактур" />
+    </linkitem>
+    
+    <linkitem topic="econoper_links">
+    	<linkentry target="econoper_html" text="Хозяйственные операции" />
+	<linkentry target="operation_html" text="Структура хозяйственной операции" />
+	<linkentry target="econospec_html" text="Проводки хозяйственной операции" />
+        <linkentry target="econdop_html" text="Дополнительные характеристики ХО" />
+        <linkentry target="specmark_html" text="Особые отметки ХО" />
+        <linkentry target="econmodel_html" text="Образцы хозяйственных операций" />
+    </linkitem> 
+    
+    <linkitem topic="invcard_links">
+    	<linkentry target="invcard_html" text="Инвентарная карточка" />
+	<linkentry target="invobject_html" text="Инвентарный объект" />
+	<linkentry target="invdata_html" text="Данные по видам учёта" />
+        <linkentry target="invdata2_html" text="Данные расчёта" />
+        <linkentry target="invhist_html" text="История" />
+        <linkentry target="invadd_html" text="Дополнительные сведения" />
+	<linkentry target="production_html" text="Продукция" />
+	<linkentry target="invrest_html" text="Условия отбора инвентарных карточек" />
+    </linkitem> 
+    
+    <linkitem topic="turn_links">
+     	<linkentry target="remnacc_html" text="Остатки и обороты средств по счетам" />
+	<linkentry target="remnacc1_html" text="Строки оборотной ведомости по счетам" />
+	<linkentry target="remnanl_html" text="Остатки и обороты средств по аналитическим счетам" />
+	<linkentry target="remnval_html" text="Остатки и обороты средств по товарно-материальным ценностям" />
+	<linkentry target="remndbkt_html" text="Ведомость расчётов с контрагентами" />
+    </linkitem>
+     
+    <linkitem topic="books_links">
+       <linkentry target="buybook_html" text="Книга покупок" />
+       <linkentry target="salebook_html" text="Книга продаж" />
+    </linkitem>
+
+</link>

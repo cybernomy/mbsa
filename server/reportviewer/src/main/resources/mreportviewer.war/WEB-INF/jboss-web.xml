@@ -1,0 +1,3 @@
+<jboss-web>
+	<depends>merp:service=RptEngineService</depends>
+</jboss-web>

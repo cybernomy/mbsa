@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ===================================================================== -->
+ <!--  Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.					-->
+ <!--  All rights reserved													-->
+ <!-- 																		-->
+ <!--  This program is the proprietary and confidential information			-->
+ <!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
+ <!--  as authorized in a license agreement authorizing and					-->
+ <!--  controlling such use and disclosure									-->
+ <!--																		-->
+ <!--  Millennium Business Suite Anywhere System.							-->
+ <!-- ===================================================================== -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.paymentcontrol.support.ui.TransferDlg" title="resource://com.mg.merp.paymentcontrol.resources.formelements#TransferDlg.Title" width="390" height="440">
+	<jfd:container id="mainBox" layout="jfd:defaultMtLayout" alignment="expand_expand">
+	<jfd:border style="bevel" type="raised" />
+		<jfd:field id="resourceFolderExpense" readOnly="true" fieldGroup="resource://com.mg.merp.paymentcontrol.resources.formelements#TransferDlg.Expense" />
+		<jfd:field id="resourceExpense" readOnly="true" />
+		<jfd:field id="dateExpense" text="resource://com.mg.merp.paymentcontrol.resources.formelements#TransferDlg.Date" />
+		<jfd:field id="sumExpense" text="resource://com.mg.merp.paymentcontrol.resources.formelements#TransferDlg.Sum" />
+		<jfd:field id="expenseCur" readOnly="true" />
+		<jfd:button id="computeSumExpense" text="resource://com.mg.merp.paymentcontrol.resources.formelements#TransferDlg.Compute" actionListener="ComputeSumExpense" />
+		<jfd:field id="liabilityModelExpense" />
+
+		<jfd:field id="resourceFolderIncome" searchHelp="com.mg.merp.paymentcontrol.support.ui.ResourceFolderExSearchHelp" fieldGroup="resource://com.mg.merp.paymentcontrol.resources.formelements#TransferDlg.Income" />
+		<jfd:field id="resourceIncome" searchHelp="com.mg.merp.paymentcontrol.support.ui.PmcResourceExSearchHelp" />
+		<jfd:field id="dateIncome" text="resource://com.mg.merp.paymentcontrol.resources.formelements#TransferDlg.Date" />
+		<jfd:field id="sumIncome" text="resource://com.mg.merp.paymentcontrol.resources.formelements#TransferDlg.Sum" />
+		<jfd:field id="incomeCur" readOnly="true" />
+		<jfd:button id="computeSumIncome" text="resource://com.mg.merp.paymentcontrol.resources.formelements#TransferDlg.Compute" actionListener="ComputeSumIncome" />
+		<jfd:field id="liabilityModelIncome" />
+	</jfd:container>
+	
+	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+</jfd:form>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.personnelref.model.Kladr" table="PREF_KLADR">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">PREF_KLADR_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <property name="KName" type="java.lang.String">
+      <column name="KNAME" length="40" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="KType" type="java.lang.String">
+      <column name="KTYPE" length="10" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="KCode" type="java.lang.String">
+      <column name="KCODE" length="11" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="PostIndex" type="java.lang.String">
+      <column name="POST_INDEX" length="6" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="GnInMb" type="java.lang.String">
+      <column name="GNINMB" length="4" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="Ocatd" type="java.lang.String">
+      <column name="OCATD" length="11" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="SysCod" type="java.lang.String">
+      <column name="SYSCOD" length="10" not-null="false" sql-type="CHAR" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

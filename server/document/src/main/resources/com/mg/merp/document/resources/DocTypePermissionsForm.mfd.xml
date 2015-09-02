@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: DocTypePermissionsForm.mfd.xml,v 1.1 2007/11/20 14:51:06 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.document.support.ui.DocTypePermissionsForm" title="resource://com.mg.merp.document.resources.formelements#DocTypePermissionsForm.Title">
+	<jfd:shuttle id="permissions" alignment="expand_expand" leadingHeader="resource://com.mg.merp.document.resources.formelements#DocTypePermissionsForm.NotPerm" trailingHeader="resource://com.mg.merp.document.resources.formelements#DocTypePermissionsForm.Perm" />
+	<jfd:container id="buttons" layout="jfd:box" alignment="expand_bottom">
+		<jfd:filler id="buttonsFiller" alignment="expand_top" type="horizontalGlue" />
+		<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CloseButton" actionListener="Ok" />
+	</jfd:container>
+</jfd:form>

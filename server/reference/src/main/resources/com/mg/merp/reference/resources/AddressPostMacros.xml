@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: AddressPostMacros.xml,v 1.6 2007/09/05 14:12:33 alikaev Exp $ -->
+
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="zipPostFields" alignment="expand_top" layout="jfd:box" columns="1" tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.Address.Post.Title" >
+	<jfd:container id="zipFields" layout="jfd:box" columns="4" alignment="expand_expand" >
+		<jfd:field id="ZipCode" alignment="expand_expand" searchHelp="com.mg.merp.reference.support.ui.ZipCodeSearchHelp"/>
+		<!--jfd:button id="FindPost" text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.Find"/> 				
+		<jfd:button id="NewPost" sameLine="true" text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.New"/--> 				
+		<jfd:field id="Country" horizontalSpan="3" alignment="expand_expand"/>
+		<jfd:field id="District" horizontalSpan="3" alignment="expand_expand"/>
+		<jfd:field id="Region" horizontalSpan="3" alignment="expand_expand"/>
+		<jfd:field id="Place" horizontalSpan="3" alignment="expand_expand"/>	 
+	</jfd:container>	
+	<jfd:container id="placePostFields" layout="jfd:box"  columns="4" alignment="expand_expand" >
+		<jfd:field id="Street" alignment="expand_top" horizontalSpan="3" />		
+		<jfd:field id="House" />			
+		<jfd:field id="Building" alignment="expand_expand"/>			
+		<jfd:field id="Room" />	
+		<jfd:button id="RefreshPost" alignment="expand_top" horizontalSpan="3" text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.Refresh" actionListener="BuildAddress"/> 				
+	</jfd:container>		
+	<jfd:field id="Address" alignment="expand_expand" readOnly="true"/>		
+</jfd:container>	
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+
+<!-- ======================================================================= -->
+
+<!-- $Id: AccKreditMacros.mfd.xml,v 1.1 2006/06/08 13:06:57 leonova Exp $ -->
+
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="accKreditFields" sameLine="true" layout="jfd:box" columns="1" label="resource://com.mg.merp.account.resources.formelements#AccKredit">
+	<jfd:field id="AccKt" showLabel="false" />
+	<jfd:field id="AnlKt1" showLabel="false" />
+	<jfd:field id="AnlKt2" showLabel="false"/>
+ 	<jfd:field id="AnlKt3" showLabel="false" />
+	<jfd:field id="AnlKt4" showLabel="false" />
+	<jfd:field id="AnlKt5" showLabel="false" />								
+</jfd:container>

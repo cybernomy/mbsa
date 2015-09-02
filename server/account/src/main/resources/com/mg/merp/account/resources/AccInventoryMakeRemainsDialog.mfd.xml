@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: AccInventoryMakeRemainsDialog.mfd.xml,v 1.1 2008/04/29 05:30:03 alikaev Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="10" controller="com.mg.merp.account.support.ui.AccInventoryMakeRemainsDialog" title="resource://com.mg.merp.account.resources.formelements#AccInventoryMakeRemainsDlg.Title" width="400" height="100">
+	<jfd:container id="mainBox" layout="jfd:defaultMtLayout" alignment="expand_expand">
+		<jfd:border style="bevel" type="raised" />
+		<jfd:field id="period" text="resource://com.mg.merp.account.resources.formelements#AccInventoryMakeRemainsDlg.Period"/>
+	</jfd:container>
+	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+	
+</jfd:form>

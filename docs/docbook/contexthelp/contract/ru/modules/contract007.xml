@@ -1,0 +1,25 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_consignee SYSTEM "modules/contract007.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY contr "Контракты">
+]> -->
+<chapter id="consignee">
+  <title>Грузоотправитель/Грузополучатель</title>
+   
+    <para>Для договора определяются грузоотправитель и грузополучатель.</para>
+    
+     <figure>
+      <title>Грузоотправитель/Грузополучатель</title>
+      <mediaobject><imageobject><imagedata fileref="images/cargo.gif"/></imageobject></mediaobject>
+    </figure>
+    
+    <para>Из справочника &quot;Партнёры&quot; проставляются наименования и 
+    банковские реквизиты грузоотправителя и грузополучателя. </para>
+    
+    <para>Грузоотправитель/Грузополучатель могут быть определены отдельно для каждого этапа контракта. </para>
+ 
+</chapter>

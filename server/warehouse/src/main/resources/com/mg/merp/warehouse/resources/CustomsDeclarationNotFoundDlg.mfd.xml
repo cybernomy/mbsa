@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: CustomsDeclarationNotFoundDlg.mfd.xml,v 1.1 2008/08/27 09:45:06 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.warehouse.support.ui.CustomsDeclarationNotFoundDlg" orientation="ver" verticalGap="5" title="resource://com.mg.merp.warehouse.resources.formelements#CustomsDeclarationNotFoundDlg.Title">
+	<jfd:container id="mainBox" layout="jfd:box" columns="1" alignment="expand_expand">
+		<jfd:border style="bevel" type="raised" />
+		<jfd:textAreaField id="message" alignment="expand_expand" />
+	</jfd:container>
+	
+	<jfd:filler id="buttonsFiller" alignment="expand_top" type="horizontalGlue" />
+	<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#OkButton" actionListener="Ok" />
+
+</jfd:form>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="com.mg.merp.wb.views"
+            class="com.mg.merp.wb.entitymapper.ui.EntityMapperView"
+            icon="resources/entmap.gif"
+            id="com.mg.merp.wb.entitymapper.ui.EntityMapperView"
+            name="%EntityMapperView.name"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="com.mg.merp.wb.entitymapper.ui.editor.EntityMapperEditorForm"
+            icon="resources/entmap.gif"
+            id="com.mg.merp.wb.entitymapper.EntityMapperEditor"
+            name="%EntityMapperEditor.name"/>
+   </extension>
+
+</plugin>

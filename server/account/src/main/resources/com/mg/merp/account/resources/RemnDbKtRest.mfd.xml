@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: RemnDbKtRest.mfd.xml,v 1.4 2008/02/21 10:22:39 alikaev Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.account.support.ui.RemnDbKtRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.account.resources.formelements#Cond.RemnAcc" helpTopic="account#remndbkt_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+
+ 		<jfd:field id="periodId1" />
+		<jfd:field id="periodId2" sameLine="true"/> 		  
+	 	<jfd:comboBox id="balanceKind" sameLine="true" selectedIndex="0" label="resource://com.mg.merp.account.resources.formelements#Cond.RemnVal.BalanceKind">
+			<jfd:items>
+				<jfd:item value="Все" />
+				<jfd:item value="Дебетовое" />
+				<jfd:item value="Кредитовое" />
+				<jfd:item value="Нулевое" />
+				<jfd:item value="Ненулевое" />
+			</jfd:items>
+		</jfd:comboBox> 
+<!-- 		<jfd:field id="byDates" />
+		<jfd:field id="date1" />
+		<jfd:field id="date2" sameLine="true"/>   	-->	    
+		<jfd:container id="accPlanFields" layout="jfd:box" columns="1" label="resource://com.mg.merp.account.resources.formelements#Remn.Acc">
+			<jfd:field id="AccPlan" showLabel="false"/>
+			<jfd:field id="anlCode1" showLabel="false"/>
+			<jfd:field id="anlCode2" showLabel="false"/>
+			<jfd:field id="anlCode3" showLabel="false"/>
+			<jfd:field id="anlCode4" showLabel="false"/>						
+			<jfd:field id="anlCode5" showLabel="false"/>		
+		</jfd:container>
+		<jfd:field id="contractorCode" />
+		<jfd:field id="currencyCode" sameLine="true"/>		
+		<jfd:container id="baseDocument" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.BaseDocAttribute" >
+			<jfd:field id="baseDocType" showLabel="false" alignment="left_expand"/>
+			<jfd:field id="baseDocNumber" showLabel="false" alignment="expand_expand"/>			
+			<jfd:field id="baseDocDate" showLabel="false" alignment="right_expand"/>				
+		</jfd:container>
+		<jfd:container id="document" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.Contract" >
+			<jfd:field id="docType" showLabel="false" alignment="left_expand"/>
+			<jfd:field id="docNumber" showLabel="false" alignment="expand_expand"/>			
+			<jfd:field id="docDate" showLabel="false" alignment="right_expand" />				
+		</jfd:container>			
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																								 																			
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultRestrictionFooterMacros.xml" />
+
+</jfd:form>

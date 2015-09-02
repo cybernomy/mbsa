@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: InternalInvoiceHeadMt.mfd.xml,v 1.6 2007/09/20 09:50:20 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.InternalInvoiceHeadMt" title="resource://com.mg.merp.account.resources.formelements#InternalInvoiceHead.FormMt.Title" helpTopic="account#internalinvoice_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top" >
+		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title" >
+  	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			 			 	 	
+			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
+			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
+	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
+			<jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml" />					
+		 	<jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml" /> 
+	 	 	<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />	
+	 	 	<jfd:include name="com/mg/merp/document/resources/PartnerFromToMacros.xml" />		
+	 	 	<jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml" />  				
+	 	 	<jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml" />  			
+ 			<jfd:field id="Through" />
+	 	 	<jfd:include name="com/mg/merp/document/resources/PriceListMacros.xml" />	
+			<jfd:field id="Description" />
+ 			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 									
+ 		</jfd:container>		
+		<jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.account.resources.formelements#MainSpec.Tab.Title">
+		</jfd:maintenanceTable>  
+	</jfd:container>
+	
+	<jfd:include name="com/mg/merp/document/resources/DefaultDocMaintenanceFooterMacros.xml" />
+</jfd:form>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: InventoryActSpecMt.mfd.xml,v 1.10 2009/02/05 10:05:12 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.warehouse.support.ui.InventoryActSpecMt" title="resource://com.mg.merp.warehouse.resources.formelements#InventoryActSpec.FormMt.Title" helpTopic="warehouse#invactspc_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+	  	<jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Main">
+			<jfd:field id="Catalog" longField="true"/>
+			<jfd:field id="Price1" sameLine="true" />	
+			<jfd:field id="Measure1" />
+			<jfd:field id="Measure2" sameLine="true"/>
+			<jfd:field id="CountryOfOrigin" />
+			<jfd:field id="CustomsDeclaration" sameLine="true" />				
+			<jfd:field id="Weight" fieldGroup="resource://com.mg.merp.warehouse.resources.formelements#InventoryActSpecMt.Quantity" />
+			<jfd:field id="Volume" sameLine="true"/>
+			<jfd:field id="Quantity" text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActSpecMt.Quantity1" readOnly="true" />
+			<jfd:field id="Quantity2" text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActSpecMt.Quantity2" sameLine="true" readOnly="true" />
+			<jfd:field id="RealQuantity" />
+			<jfd:field id="RealQuantity2" text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActSpecMt.DifferenceQuntity2" sameLine="true"/>
+			<jfd:field id="differenceQuntity" text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActSpecMt.DifferenceQuntity1" readOnly="true" />
+			<jfd:field id="differenceQuntity2" text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActSpecMt.DifferenceQuntity2" readOnly="true" sameLine="true"/>		
+	 	 	<jfd:button id="computeDifferenceQuntities" text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActSpecMt.ComputeDifferenceQuntities" actionListener="ComputeDifferenceQuntities" />
+			<jfd:field id="Summa1" text="resource://com.mg.merp.warehouse.resources.formelements#InventorySpecAct.StockSumma" fieldGroup="resource://com.mg.merp.warehouse.resources.formelements#InventoryActSpecMt.Summ" />			
+			<jfd:field id="RealSumma" />
+			<jfd:field id="differenceSum" text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActSpecMt.Difference" readOnly="true" />
+			<jfd:button id="computeDifferenceSum" text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActSpecMt.ComputeDifferenceSum" actionListener="ComputeDifferenceSum" />
+	  		<jfd:field id="ProductionDate" fieldGroup="resource://com.mg.merp.warehouse.resources.formelements#InventoryActSpecMt.ProductionDates" />		
+			<jfd:field id="BestBefore" sameLine="true" />
+			<jfd:include name="com/mg/merp/document/resources/ShelfLifeMacros.xml" />
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
+		</jfd:container>						
+ 		<jfd:container id="extraFields" layout="jfd:box" orientation="ver" columns="1" alignment="expand_expand" tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Extra">
+ 			<jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml" />
+			<jfd:field id="Comment" alignment="expand_expand" />	   
+		</jfd:container>
+		<jfd:include name="com/mg/merp/document/resources/DocSpecPackingMacros.xml" /> 		 
+	 	<jfd:include name="com/mg/merp/document/resources/DocSpecSerialNumMacros.xml" />  	 
+	</jfd:container>
+	
+	<jfd:include name="com/mg/merp/document/resources/DefaultDocSpecMaintenanceFooterMacros.xml" />	
+	
+</jfd:form>

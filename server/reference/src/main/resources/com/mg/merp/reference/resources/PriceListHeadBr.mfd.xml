@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: PriceListHeadBr.mfd.xml,v 1.11 2009/02/11 14:40:08 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.reference.support.ui.PriceListHeadBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.reference.resources.formelements#PriceList.FormBr.Title" helpTopic="reference#pricelist_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+
+	<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
+		<jfd:popupMenu>
+			<jfd:separator/>
+			<jfd:menuItem id="showSpecPriceListItem" text="resource://com.mg.merp.reference.resources.formelements#PriceList.ShowSpec" actionListener="ShowSpecPriceList" />
+			<jfd:separator/>
+			<jfd:menuItem id="recalcPrices" text="resource://com.mg.merp.reference.resources.formelements#PriceList.RecalcPrices" actionListener="RecalcPrices" />
+			<jfd:menuItem id="overestimation" text="resource://com.mg.merp.reference.resources.formelements#PriceList.Overestimation" actionListener="Overestimation" />
+			<jfd:separator/>
+			<jfd:menuItem id="setupPriceListPermissions" text="resource://com.mg.merp.reference.resources.formelements#PriceList.SetupPriceListPermissions" actionListener="SetupPriceListPermissions" />
+		</jfd:popupMenu>		
+	</jfd:maintenanceTable>
+
+	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+
+</jfd:form>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+  <query name="Manufacture.CostProcessor.loadBOMTarget">
+    <![CDATA[
+      select b from com.mg.merp.mfreference.model.Bom b, com.mg.merp.planning.model.GenericItem gi
+      where b.Catalog = gi.Catalog and (b.BomType = com.mg.merp.mfreference.model.BomType.CURRENT or b.BomType = com.mg.merp.mfreference.model.BomType.STANDART)
+      order by gi.LowLevelCode desc
+    ]]>
+  </query>
+
+  <query name="Manufacture.CostProcessor.loadJobTarget">
+    <![CDATA[
+      select j from com.mg.merp.manufacture.model.Job j, com.mg.merp.planning.model.GenericItem gi
+      where j.Catalog = gi.Catalog and j.JobStatus = com.mg.merp.manufacture.model.JobStatus.RUNNING
+      order by gi.LowLevelCode desc
+    ]]>
+  </query>
+
+  <query name="Manufacture.JobRouteSearchForm.loadJobRoute">
+    <![CDATA[
+      select jr.Id, jr.OperNum, jr.Description, jr.CompleteFlag, jr.QtyReceived, jr.QtyComplete, jr.QtyScrapped, jr.QtyMoved, jr.ControlPointFlag from com.mg.merp.manufacture.model.JobRoute jr
+      where jr.Job = :job
+      order by jr.OperNum
+    ]]>
+  </query>
+
+  <query name="Manufacture.ManufactureProcessor.loadMaterialTransaction">
+    <![CDATA[
+      select tr, jm.Catalog, jm.Measure from com.mg.merp.manufacture.model.Transaction tr, com.mg.merp.manufacture.model.JobMaterial jm
+      where jm.id = tr.JobRouteResource.Id and tr.Job = :job
+    ]]>
+  </query>
+
+</hibernate-mapping>

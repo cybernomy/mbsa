@@ -1,0 +1,43 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_002pmc SYSTEM "modules/002paymentcontrol.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY pmc "Платёжный календарь">
+]> -->
+<chapter id="002pmc">
+  <title>Конфигурация</title>
+ 
+  	<para>Прежде чем приступить к работе с модулем &quot;&pmc;&quot;, 
+	необходимо определить основные параметры его конфигурации. </para>
+	
+	<para>Настройка модуля &quot;&pmc;&quot; доступна через главное меню 
+	<menuchoice>
+	<guimenu>Администрирование</guimenu>
+	<guisubmenu>Конфигурация</guisubmenu>
+	<guimenuitem>&pmc;</guimenuitem>
+	</menuchoice>.</para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/config_pmc.gif"/>
+	</imageobject></mediaobject></screenshot>
+	
+	<para><guibutton>Валюта:</guibutton></para>
+	
+	<para><guibutton>Национальная валюта</guibutton>. Валюта, которая устанавливается 
+	как национальная для данного модуля. </para>
+	
+	<para><guibutton>Тип курса</guibutton>. Из соответствующего справочника выбирается 
+	тип курса валюты. </para>
+	
+	<para><guibutton>Источник курса</guibutton>. Из соответствующего справочника 
+	выбирается источник курса валюты. </para>
+	
+	<para><guibutton>Точность денежных величин, знаков после запятой</guibutton>. 
+	До какого знака после запятой округляются денежные величины. </para>
+
+	<para> </para>
+  
+</chapter>

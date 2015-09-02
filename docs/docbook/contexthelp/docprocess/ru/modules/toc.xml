@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: toc.xml,v 1.1 2007/04/28 07:08:02 konyashkina Exp $ -->
+
+<toc version="1.0">
+  
+   <tocitem text="Типы документов">
+	<tocitem text="Типы документов" target="doctype_html" />
+	<tocitem text="Параметры типа документа" target="doctypeparam_html" />
+	<tocitem text="Настройка документооборота" target="docprtune_html" />
+	<tocitem text="Добавление этапа" target="add_html" />
+	<tocitem text="Добавление связи" target="addlink_html" />
+	<tocitem text="Права доступа" target="permissions_html" />
+	<tocitem text="Параметры этапа" target="etapparam_html" />
+	<tocitem text="История документооборота" target="history_html" />
+  </tocitem> 
+  
+</toc>

@@ -1,0 +1,19 @@
+# $Id: formelements_ru.windows1251,v 1.4 2009/02/27 13:13:29 sharapov Exp $
+
+BusinessAddinRepositorySearchForm.Title=Репозитарий бизнес расширений системы
+
+Constant.FormBr.Title=Константы
+Constant.FormMt.Title=Константы
+
+ConstantValue.Title=Значения
+ConstantValue.FormMt.Title=Изменение значения константы
+ConstantValue.Value=Значение константы
+
+BusinessAddinRepositorySearchForm.Title=Репозитарий бизнес расширений системы
+
+CustomUserAction.FormBr.Title=Настраиваемые действия пользователя
+CustomUserAction.FormMt.Title=Настраиваемое действие пользователя
+CustomUserAction.FormMt.GrantPermission=Добавить роль
+CustomUserAction.FormMt.RevokePermission=Удалить роль
+CustomUserAction.Permis=Права на выполнение действия
+RepositoryMt.Title=Бизнес расширение

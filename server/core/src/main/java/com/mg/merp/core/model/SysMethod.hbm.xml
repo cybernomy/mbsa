@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.core.model.SysMethod" table="SYS_METHOD">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <!-- generator class="sequence">
+        <param name="sequence">SYS_METHOD_ID_GEN</param>
+      </generator-->
+    </id>
+    <many-to-one name="SysClass" class="com.mg.merp.core.model.SysClass">
+      <column name="CLASS_ID" not-null="false" />
+    </many-to-one>
+    <property name="CorbaName" type="java.lang.String">
+      <column name="CORBA_NAME" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Description" type="java.lang.String">
+      <column name="DESCRIPTION" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <set name="Permissions" inverse="true">
+      <key on-delete="cascade">
+        <column name="METHOD_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.security.model.MethodAccess" />
+    </set>
+  </class>
+</hibernate-mapping>

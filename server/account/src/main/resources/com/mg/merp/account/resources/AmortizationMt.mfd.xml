@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: AmortizationMt.mfd.xml,v 1.1 2008/05/08 09:02:54 alikaev Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.AmortizationMt" title="resource://com.mg.merp.account.resources.formelements#Amortization.FormMt.Title">
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+ 	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_top" >
+		<jfd:border style="bevel" type="raised" />
+	 	<jfd:field id="cardNum" readOnly="true"/> 
+	 	<jfd:field id="groupNum" readOnly="true"/> 			
+	 	<jfd:field id="objNum" readOnly="true" sameLine="true"/> 	
+	 	<jfd:field id="contractor" readOnly="true" text="resource://com.mg.merp.account.resources.formelements#Amortization.FormMt.Contractor"/> 	
+	 	<jfd:field id="catalog" readOnly="true" sameLine="true"/> 		
+	 	<jfd:field id="amCode" readOnly="true"/> 			
+	 	<jfd:field id="AmRate" readOnly="true" sameLine="true"/> 		
+	 	<jfd:field id="EndCost" readOnly="true"/> 			
+	 	<jfd:field id="ExplPeriodY" readOnly="true"/> 			
+	 	<jfd:field id="SumRate" readOnly="true" sameLine="true"/> 	
+	 	<jfd:field id="ExplPeriodM" readOnly="true"/> 	
+	 	<jfd:field id="SumPeriod" readOnly="true" sameLine="true"/> 		
+	 	<jfd:field id="ProductEst" readOnly="true"/> 			
+	 	<jfd:field id="SumProduct" readOnly="true" sameLine="true"/> 
+	 			
+	 	<jfd:field id="ProductFact" readOnly="true"/> 			
+	 	<jfd:field id="SumDeprValue" readOnly="true" sameLine="true"/> 	
+	 	<jfd:field id="DeprValue" readOnly="true"/> 	
+	 	<jfd:field id="sumFactor" readOnly="true" sameLine="true" text="resource://com.mg.merp.account.resources.formelements#Amortization.FormMt.SumFactor"/> 		
+	 	<jfd:field id="Factor" readOnly="true"/> 			
+	 	<jfd:field id="SumAdd" sameLine="true"/> 		
+	 	<jfd:field id="SumTotal" readOnly="true" sameLine="true"/> 		
+	</jfd:container>	
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

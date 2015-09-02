@@ -1,0 +1,29 @@
+# $Id: formelements_ru.windows1251,v 1.3 2006/07/05 10:15:47 leonova Exp $
+
+FacturaHeadIn.FormBr.Title=Входящие счета-фактуры
+FacturaHeadIn.FormMt.Title=Входящий счет-фактура
+FacturaHeadModelIn.FormBr.Title=Образцы входящих счетов-фактур
+FacturaHeadModelIn.FormMt.Title=Образец входящего счета-фактуры
+Cond.FacturaHeadIn=Условия отбора входящих счет-фактур
+
+FacturaHeadOut.FormBr.Title=Исходящие счета-фактуры
+FacturaHeadOut.FormMt.Title=Исходящий счет-фактура
+FacturaHeadModelOut.FormBr.Title=Образцы исходящих счетов-фактур
+FacturaHeadModelOut.FormMt.Title=Образец исходящего счета-фактуры
+Cond.FacturaHeadOut=Условия отбора исходящих счет-фактур
+
+Main.Tab.Title=Содержание
+Extra.Tab.Title=Дополнительные сведения
+SpecFields=Спецификации
+ContractorFrom=От кого
+ContractorTo=Кому
+
+Spec.FormMt.Title=Спецификация счёта-фактуры
+DocSpec.Main=Главная
+
+FacturaInModelExtra.To=Покупатель
+FacturaInModelExtra.From=Поставщик
+FacturaInModelExtra.Shipper=Грузоотправитель
+FacturaInModelExtra.Consignee=Грузополучатель
+FacturaInModelExtra.Comment=Дополнения (условия оплаты по договору (контракту), способ отправления и т.д.)
+FacturaInModelExtra.Document=К пл-расч.документу

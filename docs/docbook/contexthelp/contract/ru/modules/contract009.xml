@@ -1,0 +1,70 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_stages SYSTEM "modules/contract009.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY contr "Контракты">
+]> -->
+<chapter id="stages">
+  <title>Этапы контракта</title>
+  
+    <para>Этапы контракта могут соответствовать календарным периодам 
+    (что актуально для долгосрочных договоров), состоять из пунктов контракта и т.п. </para>
+    
+    <para>Планирование исполнения обязательств осуществляется в разрезе этапов контракта, 
+    причем создание плановых обязательств возможно или непосредственно в контракте или
+    на основании первичных документов, зарегистрированных в системе (заказ, счёт, накладная, акт). </para>
+    
+    <para>Каждый этап контракта имеет номер, дату начала действия и дату конца действия. </para>
+    
+    <para>Для каждого этапа в системе определяются контрагенты, суммы, 
+    грузоотправитель/грузополучатель, пункты плана и могут быть записаны примечания.</para>
+    
+    <para>Пункты плана делятся на 4 вида:</para>
+    
+     <itemizedlist> <!-- объявляем ненумерованный список -->>
+        <listitem><para>Платежи контрагенту </para></listitem>
+	<listitem><para>ТМЦ и услуги контрагенту </para></listitem>
+	<listitem><para>ТМЦ и услуги от контрагента </para></listitem>
+	<listitem><para>Платежи от контрагента </para></listitem>
+   </itemizedlist>
+    
+    <figure>
+      <mediaobject><imageobject><imagedata fileref="images/punkts.gif"/></imageobject></mediaobject>
+    </figure>
+    
+    <para>И для каждого пункта определяются: номер, начало действия, завершение 
+    действия, от кого, кому, планируемая сумма и фактическая сумма.</para>
+    
+    <figure>
+      <mediaobject><imageobject><imagedata fileref="images/punkt_etap.gif"/></imageobject></mediaobject>
+    </figure>
+    
+    <para>Определяются спецификации:</para>
+    
+    <figure>
+      <mediaobject><imageobject><imagedata fileref="images/spec.gif"/></imageobject></mediaobject>
+    </figure>
+    
+    <para>Выбирается ТМЦ или услуга из Каталога , можно указать прайс-лист, 
+    тип цены, цену, количество и сумму. </para>
+    
+   <section>
+   
+   <title>Функции, доступные через контекстное меню:</title>
+   
+    <para><guibutton>Аннулировать</guibutton>. Эта функция аннулирует этап, позволяя не учитывать
+    его при дальнейшем выполнении контракта. В отличие от полного удаления,
+    аннулирование можно отменить.</para>
+    
+    <para><guibutton>Аннулированные</guibutton>. В системе &merp; можно просмотреть 
+    аннулированные этапы и отменить аннулирование (через контекстное меню). </para>
+    
+    <para>См. также: <link linkend="punkt">Пункты контракта</link> </para>
+    
+  </section>
+
+ 
+</chapter>

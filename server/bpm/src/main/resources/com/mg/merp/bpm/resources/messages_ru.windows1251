@@ -1,0 +1,17 @@
+# Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.
+# All rights reserved
+#
+# This program is the proprietary and confidential information
+# of BusinessTechnology, Ltd. and may be used and disclosed only
+# as authorized in a license agreement authorizing and
+# controlling such use and disclosure
+#
+# Millennium Business Suite Anywhere System.
+
+# $Id: messages_ru.windows1251,v 1.2 2007/09/10 15:12:19 alikaev Exp $
+
+ProcessImageTitle=Схема бизнес-процесса: {0} (версия {1})
+ProcessInstancesTitle=Экземпляры бизнес-процесса: {0} (версия {1})
+ProcessLogsTitle=Монитор бизнес-процесса: {0} (версия {1})
+ProcessVersionsTitle=Версии бизнес-процесса: {0}
+ProcessNotFound=Выберите процесс

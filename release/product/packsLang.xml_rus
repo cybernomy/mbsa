@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+
+<langpack>
+
+    <str id="appserver.package" txt="Сервер приложения"/>
+    <str id="appserver.package.description" txt=" Сервер приложения Millennium BSA"/>
+    <str id="console.package" txt="Консоль сервера приложения"/>
+    <str id="console.package.description" txt=" Консоль сервера приложения Millennium BSA"/>
+    <str id="db.package" txt="База данных"/>
+    <str id="db.package.description" txt=" База данных стандартной поставки. Будет установлена в подкаталог appserver/server/merp/data/firebird."/>
+    <str id="docs.package" txt="Документация"/>
+    <str id="docs.package.description" txt=" Документация администратора Millennium BSA"/>
+    <str id="fb.package" txt="СУБД Firebird"/>
+    <str id="fb.package.description" txt=" Дистрибутив СУБД Firebird и файлы UDF"/>
+    <str id="devs.package" txt="Студия разработки"/>
+    <str id="devs.package.description" txt=" Студия разработки приложений Millennium Developer Workbench"/>
+</langpack>

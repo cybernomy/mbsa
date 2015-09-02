@@ -1,0 +1,54 @@
+﻿<?xml version='1.0' encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_core001 SYSTEM "modules/core001.xml">
+<!ENTITY chap_core002 SYSTEM "modules/core002.xml">
+<!ENTITY chap_core003 SYSTEM "modules/core003.xml">
+<!ENTITY chap_core004 SYSTEM "modules/core004.xml">
+<!ENTITY chap_core005 SYSTEM "modules/core005.xml">
+<!ENTITY chap_core006 SYSTEM "modules/core006.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere">
+<!ENTITY cont_centr "Центр управления">
+]>
+<book lang="ru">
+  <bookinfo>
+      <title>Платформа Jet.</title>
+      <releaseinfo>4.0.6</releaseinfo>
+      <copyright>
+	<year>1998</year>
+	<year>2008</year>
+	<holder>ООО &quot;Бизнестехнология&quot;</holder>
+      </copyright>    
+  </bookinfo>
+  
+  <toc/>
+  
+  <preface id="target" revision="1">
+      <title>Целевая аудитория </title>
+      <para>Данное руководство предназначено для администраторов и  разработчиков, работающих с системой &merp;. 
+      В руководстве описаны процессы настройки, требующие хорошего понимания и углублённого знания системы.  </para>
+  </preface>
+    
+&chap_core001;
+&chap_core002;
+&chap_core003;
+&chap_core004;
+&chap_core005;
+&chap_core006;
+&chap_copyright;
+
+</book>

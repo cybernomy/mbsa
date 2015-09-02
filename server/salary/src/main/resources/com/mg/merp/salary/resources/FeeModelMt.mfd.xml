@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: FeeModelMt.mfd.xml,v 1.3 2007/07/09 08:35:35 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.salary.support.ui.FeeModelMt" title="resource://com.mg.merp.salary.resources.formelements#FeeModel.FormMt.Title" helpTopic="salary#feemodparam_html">
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top">
+		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.salary.resources.formelements#MainDoc.Tab.Title"> 			
+ 	 		<jfd:field id="FeeRef" />								 	 					
+	 		<jfd:field id="RollKind" sameLine="true" />								 	 					
+	 		<jfd:field id="PositionFill" />	
+	 		<jfd:field id="UseBasicPosition" sameLine="true" />		 			 		
+	 		<jfd:field id="Summa" />		 		
+	 		<jfd:field id="CalcPeriod" sameLine="true" />
+	 		<jfd:field id="BeginDate" />	
+	 		<jfd:field id="EndDate" sameLine="true" />	
+	 		<jfd:container id="analitFields" layout="jfd:box" orientation="ver" label="resource://com.mg.merp.salary.resources.formelements#FeeRef.Analit">
+				<jfd:field id="CostsAnl1" showLabel="false" alignment="expand_expand" />
+				<jfd:field id="CostsAnl2" showLabel="false" alignment="expand_expand" />
+				<jfd:field id="CostsAnl3" showLabel="false" alignment="expand_expand" />
+				<jfd:field id="CostsAnl4" showLabel="false" alignment="expand_expand" />
+				<jfd:field id="CostsAnl5" showLabel="false" alignment="expand_expand" />																
+			</jfd:container>			
+			<jfd:field id="FeeRef.FeeType" editorType="comboBox" readOnly="true" />	
+			<jfd:field id="FeeRef.CalcAlg" sameLine="true" readOnly="true" />	
+			<jfd:field id="FeeRef.SumSign" editorType="comboBox" readOnly="true" />	
+			<jfd:field id="FeeRef.PeriodiCity" sameLine="true" editorType="comboBox" readOnly="true" />
+			
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
+		</jfd:container>
+		
+		<jfd:maintenanceTable id="param" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.salary.resources.formelements#FeeModelParamBr.Tab.Title">
+		</jfd:maintenanceTable>   
+	</jfd:container>
+	
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+	
+</jfd:form>

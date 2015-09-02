@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: FillByPatternScheduleSpecParamsDlg.mfd.xml,v 1.2 2008/08/13 11:34:00 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"  orientation="ver" verticalGap="5" controller="com.mg.merp.table.support.ui.FillByPatternScheduleSpecParamsDlg" title="resource://com.mg.merp.table.resources.formelements#FillByPatternScheduleSpecParamsDlg.title" width="568" height="108">
+	<jfd:container id="centralBox" layout="jfd:box" columns="4" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised"/>
+		<jfd:field id="pattern" alignment="expand_top" text="resource://com.mg.merp.table.resources.formelements#FillByPatternScheduleSpecParamsDlg.pattern" />
+		<jfd:field id="offset" alignment="expand_top" text="resource://com.mg.merp.table.resources.formelements#FillByPatternScheduleSpecParamsDlg.offset" />
+		<jfd:field id="dateFrom" alignment="expand_top" text="resource://com.mg.merp.table.resources.formelements#FillByPatternScheduleSpecParamsDlg.dateFrom" />
+		<jfd:field id="dateTill" alignment="expand_top" text="resource://com.mg.merp.table.resources.formelements#FillByPatternScheduleSpecParamsDlg.dateTill" />
+	</jfd:container>
+	
+	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+	
+</jfd:form>

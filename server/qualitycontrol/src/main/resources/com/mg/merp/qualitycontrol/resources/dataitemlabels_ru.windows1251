@@ -1,0 +1,7 @@
+# $Id: dataitemlabels_ru.windows1251,v 1.2 2006/06/13 06:52:55 leonova Exp $
+
+Code=Код
+Name=Наименование
+
+ScrapReason=Причина брака
+ScrapType=Вид брака

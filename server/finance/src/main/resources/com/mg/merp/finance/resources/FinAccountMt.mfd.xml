@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: FinAccountMt.mfd.xml,v 1.6 2007/01/16 15:27:00 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.finance.support.ui.FinAccountMt" title="resource://com.mg.merp.finance.resources.formelements#FinAccount.FormMt.Title" helpTopic="finance#finacc_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+		<jfd:field id="Code" />
+		<jfd:field id="AccName" />
+		<jfd:field id="CurrencyCode" />    
+		<jfd:container id="analit" layout="jfd:tabbed" label="resource://com.mg.merp.finance.resources.formelements#FinAccount.Analit" >		
+			<jfd:container id="analitFirstCont" layout="jfd:box" orientation="ver" alignment="expand_expand" tabTitle="resource://com.mg.merp.finance.resources.formelements#FinAccount.AnalitFirst" >		
+				<jfd:field id="Anl1Kind" alignment="expand_top"/>
+				<jfd:field id="Anl1Class" showLabel="false" alignment="expand_top"/>
+		 		<jfd:maintenanceTable id="analitFirst" scroll="true" alignment="expand_expand" autoResize="subsequent_columns">
+				</jfd:maintenanceTable>
+			</jfd:container>
+			<jfd:container id="analitSecondCont" layout="jfd:box" orientation="ver" alignment="expand_expand" tabTitle="resource://com.mg.merp.finance.resources.formelements#FinAccount.AnalitSecond" >		
+				<jfd:field id="Anl2Kind" alignment="expand_top"/>  
+				<jfd:field id="Anl2Class" showLabel="false" alignment="expand_top"/>  
+		 		<jfd:maintenanceTable id="analitSecond" scroll="true" alignment="expand_expand" autoResize="subsequent_columns">
+				</jfd:maintenanceTable>
+			</jfd:container>
+			<jfd:container id="analitThirdCont" layout="jfd:box" orientation="ver" alignment="expand_expand" tabTitle="resource://com.mg.merp.finance.resources.formelements#FinAccount.AnalitThird" >		
+				<jfd:field id="Anl3Kind" alignment="expand_top"/>  
+				<jfd:field id="Anl3Class" showLabel="false" alignment="expand_top"/>  
+		 		<jfd:maintenanceTable id="analitThird" scroll="true" alignment="expand_expand" autoResize="subsequent_columns">
+				</jfd:maintenanceTable>
+			</jfd:container>
+			<jfd:container id="analitFourthCont" layout="jfd:box" orientation="ver" alignment="expand_expand" tabTitle="resource://com.mg.merp.finance.resources.formelements#FinAccount.AnalitFourth" >		
+				<jfd:field id="Anl4Kind" alignment="expand_top"/>  
+				<jfd:field id="Anl4Class" showLabel="false" alignment="expand_top"/>  
+		 		<jfd:maintenanceTable id="analitFourth" scroll="true" alignment="expand_expand" autoResize="subsequent_columns">
+				</jfd:maintenanceTable>
+			</jfd:container>
+			<jfd:container id="analitFifthCont" layout="jfd:box" orientation="ver" alignment="expand_expand" tabTitle="resource://com.mg.merp.finance.resources.formelements#FinAccount.AnalitFifth" >		
+				<jfd:field id="Anl5Kind" alignment="expand_top"/>  
+				<jfd:field id="Anl5Class" showLabel="false" alignment="expand_top"/>  
+		 		<jfd:maintenanceTable id="analitFifth" scroll="true" alignment="expand_expand" autoResize="subsequent_columns">
+				</jfd:maintenanceTable>
+			</jfd:container>												
+		</jfd:container>
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />				
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

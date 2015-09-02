@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: JobMachineMt.mfd.xml,v 1.7 2007/07/30 10:26:38 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.manufacture.support.ui.JobMachineMt" title="resource://com.mg.merp.manufacture.resources.formelements#JobMachine" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_expand" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Job.MainTab.Title" >
+			<jfd:field id="TimeSequence" />
+		 	<jfd:field id="EffOnDate" /> 
+		 	<jfd:field id="EffOffDate" />		 	
+		 	<jfd:field id="RunTicksMch" />
+		 	<jfd:field id="RunTimeMchUm" sameLine="true" showLabel="false"/> 
+			<jfd:field id="MchRate" />
+			<jfd:field id="MchRateCurrency" sameLine="true" showLabel="false"/>
+			<jfd:field id="MchOhRate" />
+			<jfd:field id="MchOhRateCurrency" sameLine="true" showLabel="false"/>
+			<jfd:field id="MchBackflushFlag" />
+			<jfd:field id="MchOhBackflushFlag" />
+			<jfd:field id="MchCostCategory" />
+			<jfd:field id="ResourceGroup" />
+			<jfd:field id="MchOhCostCategory" />
+			<jfd:field id="MchOhAllocationFlag" editorType="comboBox" />
+			<jfd:field id="TimeRateFlag" editorType="comboBox" />
+			<jfd:field id="MchRecoveryFlag" editorType="comboBox" />
+			<jfd:field id="MchNumber" />
+			<jfd:field id="MchOhRatio" /> 
+			<jfd:field id="Comment" /> 
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 										
+		</jfd:container>
+		
+		<jfd:container id="machineJobRouteFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#CostDetailFields" >
+	 		<jfd:table id="stdDetailLine" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#StdCostDetailFields" >
+			</jfd:table> 
+			
+	 		<jfd:table id="actDetailLine" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#ActCostDetailFields" >
+			</jfd:table> 	
+		</jfd:container>
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

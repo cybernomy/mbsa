@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: InfoCustomerMacros.mfd.xml,v 1.2 2007/06/20 12:11:56 sharapov Exp $ -->
+
+<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
+	<jfd:field id="PartnerToBankReq" /> 	
+	<jfd:field id="PartnerToBankReq.Account" sameLine="true" readOnly="true" /> 	
+</jfd:wrap-macros>

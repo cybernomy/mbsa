@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: MRPVersionControlMt.mfd.xml,v 1.4 2006/12/15 10:38:35 konyashkina Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.planning.support.ui.MRPVersionControlMt" title="resource://com.mg.merp.planning.resources.formelements#MRPVersion.FormBr.Title" helpTopic="planning#mrpvers_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.planning.resources.formelements#MRPVersion.Tab.Title.Total" >
+		
+		  	<jfd:field id="Code" /> 	
+		  	<jfd:field id="Description" /> 			  	
+		  	<jfd:field id="DampingDays" /> 			  	
+		  	<jfd:field id="QcReceivingDays" /> 	
+		  	<jfd:field id="RunDate" /> 		  	
+		  	<jfd:field id="MrpStartDate" /> 			  	
+		  	<jfd:field id="MrpEndDate" /> 
+		  	<jfd:field id="LastRunDatetime" /> 
+		  	<jfd:field id="MrpVersion" /> 		  			  	
+		  	<jfd:field id="MrpPfFlag" /> 			  	
+		  	<jfd:field id="MrpQohFlag" /> 			  		  	
+		  	<jfd:field id="MrpFirmPlannedOrdersFlag" /> 		  		
+		  	<jfd:field id="MrpJobFlag" />		  	
+		  	<jfd:field id="MrpSoFlag" />  			  	
+		  	<jfd:field id="MrpSfFlag" />		  	
+		  	<jfd:field id="MrpPoFlag" />
+		  	<jfd:field id="MrpSuggestedOrdersFirmed" />	
+  			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />		  			  			  	
+		</jfd:container>
+ 		<jfd:maintenanceTable id="forecast" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.planning.resources.formelements#MRPVersion.Tab.Title.Forecast" >
+		</jfd:maintenanceTable>
+		
+		<jfd:maintenanceTable id="mps" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.planning.resources.formelements#MRPVersion.Tab.Title.MPS" >
+		</jfd:maintenanceTable>	
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

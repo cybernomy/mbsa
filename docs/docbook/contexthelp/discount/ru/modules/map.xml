@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: map.xml,v 1.2 2007/11/14 13:48:15 konyashkina Exp $ -->
+
+<map version="1.0">
+  <mapID target="discard_html" url="card.html" />
+  <mapID target="carduser_html" url="cardusers.html" />
+  <mapID target="cardhist_html" url="cardhist.html" />
+  <mapID target="discoeff_html" url="coefficient.html" />
+  <mapID target="extradisc_html" url="extradiscount.html" />
+  <mapID target="discount_html" url="discount.html" />
+  <mapID target="globalcoeff_html" url="globalcoeff.html" />
+  <mapID target="promotype_html" url="promotion.html#promotiontype" />
+  <mapID target="promomain_html" url="promotion.html#promotion_main" />
+  <mapID target="promoline_html" url="promotion.html#promotion_line" />
+</map>

@@ -1,0 +1,37 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_004security SYSTEM "modules/004security.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere System">
+<!ENTITY secur "Управление правами пользователей ">
+<!ENTITY cont_centr "Центр управления">
+]> -->
+<chapter id="004security">
+  <title>Права на модули</title>
+   
+    <para>Из списка <link linkend="002security">Групп пользователей</link> с помощью контекстного 
+    меню <guibutton>Права на модули вызывается</guibutton> окно с перечнем модулей 
+    системы &merp;. </para>
+    
+   <screenshot><mediaobject><imageobject>
+   <imagedata fileref="images/modules.gif"/>
+   </imageobject></mediaobject></screenshot>
+    
+    <para>Названия модулей, на которые Вы хотите дать права редактируемой 
+    группе пользователей, переместите в правую часть окна &quot;Доступные модули&quot;. 
+    Затем нажмите кнопку <guibutton>Закрыть</guibutton>. </para>
+    
+    <para><emphasis>Внимание:</emphasis> В связи хранением профайлов 
+    пользователей с локальной машины в базу данных, модуль &quot;<emphasis>Управление 
+    правами пользователей</emphasis>&quot; обязателен для всех групп пользователей. 
+    То есть, чтобы пользователь мог войти в систему, нужно обязательно дать ему 
+    права на модуль &quot;<emphasis>Управление правами пользователей</emphasis>&quot;.
+    Для того, чтобы пользователь группы не редактировал права доступа, достаточно
+    не давать права на бизнес-компоненты модуля &quot;<emphasis>Управление правами 
+    пользователей</emphasis>&quot;. </para>
+    
+    <para>После того, как определены права на модули, необходимо определить 
+    <link linkend="003security">права на бизнес-компоненты</link>. </para>
+    
+  </chapter>

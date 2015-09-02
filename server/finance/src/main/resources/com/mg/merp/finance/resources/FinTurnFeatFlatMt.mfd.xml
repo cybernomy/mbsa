@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: FinTurnFeatFlatMt.mfd.xml,v 1.4 2009/02/16 07:47:27 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.finance.support.ui.FinTurnFeatFlatMt" title="resource://com.mg.merp.finance.resources.formelements#FinTurnFeat.FormMt.Title" helpTopic="finance#finturnfeat_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+
+ 		<jfd:field id="Period" />
+		<jfd:container id="finAccFields" layout="jfd:box" columns="1" label="resource://com.mg.merp.finance.resources.formelements#TurnAcc.Acc">
+			<jfd:field id="Account" alignment="expand_expand" showLabel="false" />
+			<!-- 
+			<jfd:field id="Analytics1" showLabel="false"/>
+			<jfd:field id="Analytics2" showLabel="false"/>
+			<jfd:field id="Analytics3" showLabel="false"/>
+			<jfd:field id="Analytics4" showLabel="false"/>
+			<jfd:field id="Analytics5" showLabel="false"/>
+			 -->
+			<jfd:include name="com/mg/merp/finance/resources/AnlLevel1SrcMacros.xml" />		  			  			  	  			  			  			
+			<jfd:include name="com/mg/merp/finance/resources/AnlLevel2SrcMacros.xml" />		  			  			  	  			  			  			
+			<jfd:include name="com/mg/merp/finance/resources/AnlLevel3SrcMacros.xml" />		  			  			  	  			  			  			
+			<jfd:include name="com/mg/merp/finance/resources/AnlLevel4SrcMacros.xml" />		  			  			  	  			  			  			
+			<jfd:include name="com/mg/merp/finance/resources/AnlLevel5SrcMacros.xml" />		  			  			  	  			  			  			
+		</jfd:container>
+		<jfd:container id="finTeatFields" layout="jfd:box" columns="1" sameLine="true" label="resource://com.mg.merp.finance.resources.formelements#TurnFeat.Acc">
+			<jfd:field id="Feature" alignment="expand_expand" showLabel="false"/>
+			<!-- 
+			<jfd:field id="FeatureAnalytics1" showLabel="false"/>
+			<jfd:field id="FeatureAnalytics2" showLabel="false"/>
+			<jfd:field id="FeatureAnalytics3" showLabel="false"/>
+			<jfd:field id="FeatureAnalytics4" showLabel="false"/>						
+			<jfd:field id="FeatureAnalytics5" showLabel="false"/>
+			 -->
+			<jfd:include name="com/mg/merp/finance/resources/AnlLevel1FeatMacros.xml" />		  			  			  	  			  			  			
+			<jfd:include name="com/mg/merp/finance/resources/AnlLevel2FeatMacros.xml" />		  			  			  	  			  			  			
+			<jfd:include name="com/mg/merp/finance/resources/AnlLevel3FeatMacros.xml" />		  			  			  	  			  			  			
+			<jfd:include name="com/mg/merp/finance/resources/AnlLevel4FeatMacros.xml" />		  			  			  	  			  			  			
+			<jfd:include name="com/mg/merp/finance/resources/AnlLevel5FeatMacros.xml" />		  			  			  	  			  			  			
+		</jfd:container>
+ 		<jfd:field id="RemnBegNat" />		
+ 		<jfd:field id="RemnBegCur" sameLine="true"/>	
+ 		<jfd:field id="IncomeNat" />
+ 		<jfd:field id="IncomeCur" sameLine="true"/>
+ 		<jfd:field id="OutcomeNat" />
+ 		<jfd:field id="OutcomeCur" sameLine="true"/>
+ 		<jfd:field id="RemnEndNat" /> 		 				
+ 		<jfd:field id="RemnEndCur" sameLine="true"/>
+ 		 
+ 		<jfd:field id="RemnBegNatPlan" /> 
+ 		<jfd:field id="RemnBegCurPlan" sameLine="true"/> 
+ 		<jfd:field id="IncomeNatPlan" /> 
+ 		<jfd:field id="IncomeCurPlan" sameLine="true"/> 
+ 		<jfd:field id="OutcomeNatPlan" /> 
+ 		<jfd:field id="OutcomeCurPlan" sameLine="true"/> 
+ 		<jfd:field id="RemnEndNatPlan" /> 
+ 		<jfd:field id="RemnEndCurPlan" sameLine="true"/> 
+ 		
+ 		<jfd:field id="RemnBegNatDiff" />		
+ 		<jfd:field id="RemnBegCurDiff" sameLine="true"/>	
+ 		<jfd:field id="IncomeNatDiff" />
+ 		<jfd:field id="IncomeCurDiff" sameLine="true"/>
+ 		<jfd:field id="OutcomeNatDiff" />
+ 		<jfd:field id="OutcomeCurDiff" sameLine="true"/>
+ 		<jfd:field id="RemnEndNatDiff" /> 		 				
+ 		<jfd:field id="RemnEndCurDiff" sameLine="true"/> 			
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

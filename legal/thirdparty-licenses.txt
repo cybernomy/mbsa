@@ -1,0 +1,61 @@
+Java JDK
+	Sun Java License
+
+ant
+	apache-license-v20
+
+cglib
+	apache-license-v20
+
+dozer
+	apache-license-v20
+
+dom4j
+	dom4j-license
+
+eclipse
+	epl-v10
+
+birt
+	epl-v10
+
+firebird
+	IDPLicense
+	interbase-public-license
+
+jaybird
+	LGPL
+	BSD license
+
+hibernate
+	LGPL
+
+jboss
+	LGPL
+
+jbpm
+	LGPL
+
+icu
+	icu-license
+
+jgoodies
+	jgoodies-license
+
+substance
+	BSD license
+
+jgraph
+	LGPL
+
+jguard
+	LGPL
+
+oracle web help
+	oracle-webhelp-license
+
+proguard
+	GPL with proguard_gpl_exception
+
+izpack
+	apache-license-v20

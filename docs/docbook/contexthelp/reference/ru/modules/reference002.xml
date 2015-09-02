@@ -1,0 +1,18 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_intro SYSTEM "modules/reference002.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY ref "Прикладные справочники">
+]> -->
+<chapter id="intro">
+   <title>Введение</title>
+  
+	<para>Под понятием &quot;справочник&quot; в системе &merp; 
+	понимается любая справочная информация, которая используется при работе с cистемой. 
+	Некоторые справочники для удобства работы вынесены в отдельный пункт главного 
+	меню, остальные - доступны из разделов системы по мере необходимости.</para>
+	
+</chapter>

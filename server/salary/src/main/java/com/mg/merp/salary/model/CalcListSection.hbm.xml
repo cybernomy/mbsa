@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.salary.model.CalcListSection" table="SAL_CALC_LIST_SECTION">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">SAL_CALC_LIST_SECTION_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="CalcList" class="com.mg.merp.salary.model.CalcList">
+      <column name="CALC_LIST_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CalcListSectionRef" class="com.mg.merp.salary.model.CalcListSectionRef">
+      <column name="CALC_LIST_SECTION_REF_ID" not-null="false" />
+    </many-to-one>
+    <property name="TotalSumma" type="java.math.BigDecimal">
+      <column name="TOTAL_SUMMA" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <set name="CalcListFees" inverse="true" lazy="false">
+      <key on-delete="cascade">
+        <column name="CALC_LIST_SECTION_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.salary.model.CalcListFee" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

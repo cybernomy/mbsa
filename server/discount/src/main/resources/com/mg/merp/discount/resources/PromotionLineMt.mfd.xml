@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: PromotionLineMt.mfd.xml,v 1.2 2007/11/14 13:48:58 konyashkina Exp $ -->
+
+<jfd:form  xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.discount.resources.formelements#PromotionLineMt.Title" helpTopic="discount#promoline_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+		
+		<jfd:container id="allFields" layout="jfd:defaultMtLayout" >		
+ 			<jfd:border style="bevel" type="raised" />
+	  		<jfd:field id="PromotionType" />
+	  		<jfd:field id="IsActive" sameLine="true" />
+	  		<jfd:field id="CatalogFolder" /> 
+	  		<jfd:field id="Catalog" sameLine="true" />
+	  		<jfd:field id="Currency" />
+	  		<jfd:field id="Discount" />
+	  		<jfd:field id="Price" sameLine="true" />
+	  		<jfd:field id="IsApplyDiscountGroup" />
+			<jfd:field id="IsApplyDiscountOnDoc" sameLine="true" />
+		</jfd:container>
+		
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

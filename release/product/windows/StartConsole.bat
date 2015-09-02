@@ -1,0 +1,1 @@
+@java -cp appserverconsole.jar;..\lib\jbossall-client.jar;..\lib\log4j.jar;..\lib\getopt.jar;. com.mg.framework.console.RemoteConsole %*

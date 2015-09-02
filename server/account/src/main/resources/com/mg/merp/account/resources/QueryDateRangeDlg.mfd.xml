@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ===================================================================== -->
+ <!--  Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.		   		   -->
+ <!--  All rights reserved						                           -->
+ <!-- 									                                   -->
+ <!--  This program is the proprietary and confidential information	       -->
+ <!--  of BusinessTechnology, Ltd. and may be used and disclosed only	   -->
+ <!--  as authorized in a license agreement authorizing and		           -->
+ <!--  controlling such use and disclosure				                   -->
+ <!--									                                   -->
+ <!--  Millennium Business Suite Anywhere System.			               -->
+ <!-- ==================================================================== -->
+
+ <!-- $Id: QueryDateRangeDlg.mfd.xml,v 1.1 2008/03/27 10:37:07 alikaev Exp $ -->
+ 
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.QueryDateRangeDlg" title="resource://com.mg.merp.account.resources.formelements#QueryDateRangeDlg.Title" width="500" height="120">
+	<jfd:container id="fields" layout="jfd:box"  columns="1" alignment="expand_expand" orientation="hor" verticalGap="5">
+		<jfd:border style="bevel" type="raised" />
+		<jfd:field id="beginDate" text="resource://com.mg.merp.account.resources.formelements#QueryDateRangeDlg.BeginDate"/>
+		<jfd:field id="endDate" text="resource://com.mg.merp.account.resources.formelements#QueryDateRangeDlg.EndDate"/>
+	</jfd:container>
+	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+	
+</jfd:form>
+ 

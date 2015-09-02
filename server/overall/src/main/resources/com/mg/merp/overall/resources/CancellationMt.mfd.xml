@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: CancellationMt.mfd.xml,v 1.1 2008/06/30 04:23:06 alikaev Exp $ -->
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.overall.resources.formelements#Cancellation.FormMt.Title" >
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+	 <jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_expand" >			
+ 		<jfd:border style="bevel" type="raised" />
+		<jfd:container id="document" layout="jfd:box" longField="true" alignment="expand_top" label="resource://com.mg.merp.document.resources.formelements#Document.BaseDocAttribute" >
+			<jfd:field id="DocType" showLabel="false" alignment="left_expand"/>
+			<jfd:field id="DocNumber" showLabel="false" alignment="expand_expand" longField="true"/>			
+			<jfd:field id="DocDate" showLabel="false" alignment="right_expand" />				
+		</jfd:container>		
+ 		<jfd:field id="CancellationDate" />
+ 		<jfd:field id="CurrentCancellationSumma" sameLine="true" /> 			 			
+ 		<jfd:field id="CancellationReason" />		
+	</jfd:container>
+	
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

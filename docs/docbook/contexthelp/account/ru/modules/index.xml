@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: index.xml,v 1.1 2006/11/30 16:35:16 konyashkina Exp $ -->
+
+<index version="1.0">
+
+  <indexitem text="Справочники бухучёта">
+    <indexentry text="Периоды бухгалтерского учёта" target="periods_html" />
+    <indexentry text="Закрыть период" target="periods_html" />
+    <indexentry text="Открыть период" target="periods_html" />  
+    <indexentry text="Допустимая корреспонденция счетов" target="permacc_html" />
+    <indexentry text="Драгоценные металлы" target="metal_html" /> 
+    <indexentry text="Коды ОКОФ" target="okof_html" /> 
+    <indexentry text="Шифры и нормы амортизации" target="amrate_html" /> 
+    <indexentry text="Местонахождение объектов" target="invlocation_html" /> 
+    <indexentry text="Виды учёта ОС и НА" target="acckind_html" /> 
+  </indexitem>
+  
+  <indexitem text="План счетов">
+    <indexentry text="План счетов" target="accplan_html" /> 
+    <indexentry text="Вид аналитической ведомости" target="anlvedkind_html" />
+    <indexentry text="Тип счёта" target="acctype_html" /> 
+    <indexentry text="Аналитические счета" target="anlplan_html" /> 
+  </indexitem>
+  
+  <indexitem text="Исходящие банковские документы">
+    <indexentry text="Исходящие банковские документы" target="bankdocout_html" /> 
+    <indexentry text="Исходящий банковский документ" target="bankdocout1_html" />
+    <indexentry text="Информация для налогов и сборов" target="nalog_html" /> 
+    <indexentry text="Образцы исходящих банковских документов" target="bankmodelout_html" /> 
+  </indexitem>
+  
+  <indexitem text="Входящие банковские документы">
+    <indexentry text="Входящие банковские документы" target="bankdocin_html" /> 
+    <indexentry text="Входящий банковский документ" target="bankdocin1_html" /> 
+    <indexentry text="Образцы входящих банковских документов" target="bankmodelin_html" /> 
+  </indexitem>
+  
+  <indexitem text="Прочие банковские документы">
+    <indexentry text="Прочие банковские документы" target="bankdocoth_html" /> 
+    <indexentry text="Прочий банковский документ" target="bankdocoth1_html" /> 
+    <indexentry text="Образцы прочих банковских документов" target="bankmodeloth_html" /> 
+  </indexitem>
+  
+ <!--  <indexitem text="">
+    <indexentry text="" target="" /> 
+    <indexentry text="" target="" /> 
+    <indexentry text="" target="" /> 
+    <indexentry text="" target="" /> 
+    <indexentry text="" target="" />  
+  </indexitem>
+
+  <indexitem text="">
+    <indexentry text="" target="" />
+    <indexentry text="" target="" /> 
+    <indexentry text="" target="" /> 
+    <indexentry text="" target="" />   
+  </indexitem> -->
+  
+</index>

@@ -1,0 +1,12 @@
+IDH_contract_list=ch02.html
+IDH_contr_matter=ch03.html
+IDH_contr_agents=ch04.html
+IDH_contr_sum=ch05.html
+IDH_contr_ext=ch06.html
+IDH_contr_cargo=ch07.html
+IDH_contr_object=ch08.html
+IDH_contr_etap=ch09.html
+IDH_contr_punkt=ch10.html
+IDH_contr_change=ch11.html
+IDH_contr_choice=ch14.html
+IDH_config=ch13.html

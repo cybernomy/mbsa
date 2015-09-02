@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: TaskBr.mfd.xml,v 1.2 2007/06/01 17:04:32 konyashkina Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.bpm.support.ui.TaskBr" title="resource://com.mg.merp.bpm.resources.formelements#TasksBr.Title" orientation="ver" helpTopic="bpm#task_html" >
+
+	<jfd:toolBar id="toolBar" alignment="expand_top">
+		<jfd:button id="refreshButton" text="resource://com.mg.merp.bpm.resources.formelements#Refresh" actionListener="Refresh" />
+		<jfd:button id="startTaskButton" text="resource://com.mg.merp.bpm.resources.formelements#TasksBr.StartTask" actionListener="StartTask" />
+	</jfd:toolBar>
+
+	<jfd:table id="table" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
+		<jfd:columns>
+			<jfd:column fieldName="Id" title="resource://com.mg.merp.bpm.resources.formelements#Id" />
+			<jfd:column fieldName="Name" title="resource://com.mg.merp.bpm.resources.formelements#Task.Name" />
+			<jfd:column fieldName="Description" title="resource://com.mg.merp.bpm.resources.formelements#Task.Description" />
+			<jfd:column fieldName="Priority" title="resource://com.mg.merp.bpm.resources.formelements#Task.Priority" />
+			<jfd:column fieldName="Create" title="resource://com.mg.merp.bpm.resources.formelements#Task.Create" />
+			<jfd:column fieldName="Start" title="resource://com.mg.merp.bpm.resources.formelements#Task.Start" />
+			<jfd:column fieldName="Suspended" title="resource://com.mg.merp.bpm.resources.formelements#Task.Suspended" />
+		</jfd:columns>
+		<jfd:popupMenu>
+			<jfd:menuItem id="startTask" text="resource://com.mg.merp.bpm.resources.formelements#TasksBr.StartTask" actionListener="StartTask" />
+			<jfd:menuItem id="endTask" text="resource://com.mg.merp.bpm.resources.formelements#TasksBr.EndTask" actionListener="EndTask" />
+		</jfd:popupMenu>
+	</jfd:table>
+
+</jfd:form>

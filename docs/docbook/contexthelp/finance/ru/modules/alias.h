@@ -1,0 +1,12 @@
+IDH_finperiods=ch02.html
+IDH_finacc=ch03.html
+IDH_anfin=ch04.html
+IDH_prfin=ch05.html
+IDH_cenfin=ch06.html
+IDH_finop=ch07.html
+IDH_finobr=ch08.html
+IDH_finobacc=ch10.html
+IDH_finobpr=ch11.html
+IDH_finobcube1=ch12.html
+IDH_finobcube2=ch13.html
+IDH_finperenos=ch14.html

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.account.resources.formelements#AccConfig.FormMt.Title" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+		<jfd:container id="allFields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >		
+   		<jfd:border style="bevel" type="raised" /> 
+ 		  		<jfd:field id="BaseCurrency" fieldGroup="resource://com.mg.merp.account.resources.formelements#AccConfig.FormMt.CurrencyFields.Title" text="resource://com.mg.merp.account.resources.formelements#AccConfig.FormMt.BaseCurrency" /> 
+ 		  		<jfd:field id="NatCurrency" text="resource://com.mg.merp.account.resources.formelements#AccConfig.FormMt.NatCurrency" /> 
+ 		  		<jfd:field id="CurrencyRateType" /> 
+ 		  		<jfd:field id="CurrencyRateAuthority" /> 
+ 		  		<jfd:field id="CurrencyPrec" text="resource://com.mg.merp.account.resources.formelements#AccConfig.FormMt.CurrencyPrec" /> 
+
+ 		  		<jfd:field id="BuyBookDelivDocGroup" fieldGroup="resource://com.mg.merp.account.resources.formelements#AccConfig.FormMt.BuyBookFields.Title" />
+ 		  		<jfd:field id="BuyBookInvoiceDocGroup" />
+
+	 		  	<jfd:field id="SaleBookDelivDocGroup" fieldGroup="resource://com.mg.merp.account.resources.formelements#AccConfig.FormMt.SaleBookFields.Title" /> 
+ 			  	<jfd:field id="SaleBookInvoiceDocGroup" /> 
+ 			  	<jfd:field id="SaleBookAvaninvDocGroup" /> 
+ 		  		<jfd:radioButtonGroup id="SaleBookKind" orientation="hor">
+	 		  		<jfd:items id="SaleBookKinds">
+	 		  			<jfd:item id="Shipment" value="resource://com.mg.merp.account.resources.formelements#AccConfig.FormMt.Shipment" />
+			 		  	<jfd:item id="Payment" value="resource://com.mg.merp.account.resources.formelements#AccConfig.FormMt.Payment" />
+	 		  		</jfd:items>
+	 		  	</jfd:radioButtonGroup>
+		</jfd:container>
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

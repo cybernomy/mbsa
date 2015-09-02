@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: DocSpecSerialNumMacros.xml,v 1.4 2006/08/22 07:08:54 leonova Exp $ -->
+
+<jfd:maintenanceTable xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="serialNum" alignment="expand_expand" autoResize="subsequent_columns" scroll="true" tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Serial">
+</jfd:maintenanceTable>	 	

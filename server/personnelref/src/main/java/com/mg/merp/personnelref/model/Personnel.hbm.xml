@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<typedef name="com.mg.merp.personnelref.model.MilitaryRegTakenOff" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.personnelref.model.MilitaryRegTakenOff</param>
+	</typedef>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.personnelref.model.Personnel" table="PREF_PERSONNEL">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="int">
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">PREF_PERSONNEL_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="RetireOrder" class="com.mg.merp.humanresources.model.Order">
+      <column name="RETIRE_ORDER_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Group" class="com.mg.merp.personnelref.model.PersonnelGroup">
+      <column name="GROUP_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Person" class="com.mg.merp.reference.model.NaturalPerson">
+      <column name="PERSON_ID" not-null="false" unique="true" />
+    </many-to-one>
+    <many-to-one name="InsuredClass" class="com.mg.merp.personnelref.model.InsuredClass">
+      <column name="INSUREDCLASS_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="EducationDegree" class="com.mg.merp.personnelref.model.EducationDegree">
+      <column name="EDUCATION_DEGREE_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="MilReserveCategory" class="com.mg.merp.personnelref.model.ReserveCategory">
+      <column name="MIL_RESERVE_CATEGORY_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="MilRankKind" class="com.mg.merp.personnelref.model.MilitaryRankKind">
+      <column name="MIL_RANK_KIND_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="MilRank" class="com.mg.merp.personnelref.model.MilitaryRank">
+      <column name="MIL_RANK_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="MilValidity" class="com.mg.merp.personnelref.model.MilitaryValidity">
+      <column name="MIL_VALIDITY_ID" not-null="false" />
+    </many-to-one>
+    <property name="ActDate" type="java.util.Date">
+      <column name="ACT_DATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="TableNumber" type="java.lang.String">
+      <column name="TABLE_NUMBER" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="Name1" type="java.lang.String">
+      <column name="NAME1" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Name2" type="java.lang.String">
+      <column name="NAME2" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Name3" type="java.lang.String">
+      <column name="NAME3" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="BornDate" type="java.util.Date">
+      <column name="BORNDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="Sex" type="java.lang.Integer">
+      <column name="SEX" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="Stature" type="java.math.BigDecimal">
+      <column name="STATURE" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <many-to-one name="MeasureUpCode" class="com.mg.merp.reference.model.Measure" property-ref="UpCode">
+      <column name="MEASURE_UPCODE" length="5" not-null="false"/>
+    </many-to-one>
+    <property name="Photo" type="java.io.Serializable">
+      <column name="PHOTO" not-null="false" sql-type="BLOB SUB_TYPE 0" />
+    </property>
+    <property name="PensionNumber" type="java.lang.String">
+      <column name="PENSION_NUMBER" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="Inn" type="java.lang.String">
+      <column name="INN" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="LabourContractNumber" type="java.lang.String">
+      <column name="LABOUR_CONTRACT_NUMBER" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="LabourContractDate" type="java.util.Date">
+      <column name="LABOUR_CONTRACT_DATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="AdditionalInfo" type="java.lang.String">
+      <column name="ADDITIONAL_INFO" length="2048" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="RetireReason" type="java.lang.String">
+      <column name="RETIRE_REASON" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="RetireDate" type="java.util.Date">
+      <column name="RETIRE_DATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="MilSpeciality" type="java.lang.String">
+      <column name="MIL_SPECIALITY" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="MilCommissariat" type="java.lang.String">
+      <column name="MIL_COMMISSARIAT" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="MilRegPartyNumber" type="java.lang.String">
+      <column name="MIL_REG_PARTY_NUMBER" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="MilRegSpecial" type="java.lang.String">
+      <column name="MIL_REG_SPECIAL" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="MilIsTakenOff" type="com.mg.merp.personnelref.model.MilitaryRegTakenOff">
+      <column name="MIL_IS_TAKEN_OFF" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <set name="SetOfPrefPersonnelProfession" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.PersonnelProfession" />
+    </set>
+    <set name="SetOfPrefPersonnelReward" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.PersonnelReward" />
+    </set>
+    <set name="SetOfPrefPersonnelAttestation" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.PersonnelAttestation" />
+    </set>
+    <set name="SetOfPrefFamilyMembers" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.reference.model.FamilyMember" />
+    </set>
+    <set name="SetOfPrefPersonnelLanguage" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false"  />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.PersonnelLanguage" />
+    </set>
+    <set name="SetOfPrefPersonnelRecord" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.PersonnelRecord" />
+    </set>
+    <set name="SetOfPrefPersonnelSocialBenefit" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.PersonnelSocialBenefit" />
+    </set>
+    <set name="SetOfPrefPersonnelSkillRaising" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.PersonnelSkillRaising" />
+    </set>
+    <set name="SetOfPrefPersonnelLabourContract" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.PersonnelLabourContract" />
+    </set>
+    <set name="SetOfPrefPersVocationalTraining" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.PersonnelVocationalTraining" />
+    </set>
+    <set name="SetOfPrefPersonnelTransfer" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.PersonnelTransfer" />
+    </set>
+    <set name="SetOfPrefPersonnelLeave" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.PersonnelLeave" />
+    </set>
+    <set name="SetOfPrefPersonnelService" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.PersonnelService" />
+    </set>
+    <set name="SetOfPrefIdentDoc" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.reference.model.IdentDoc" />
+    </set>
+    <set name="SetOfPrefAddress" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.Address" />
+    </set>
+    <set name="SetOfPrefPersonnelPhone" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.PersonnelPhone" />
+    </set>
+    <set name="SetOfPrefPersonnelEducation" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSONNEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.personnelref.model.PersonnelEducation" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

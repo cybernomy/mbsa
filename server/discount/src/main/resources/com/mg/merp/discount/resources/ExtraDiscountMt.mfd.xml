@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: ExtraDiscountMt.mfd.xml,v 1.5 2007/10/30 14:20:36 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.discount.resources.formelements#ExtraDiscount.FormMt.Title" helpTopic="discount#extradisc_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+		<jfd:field id="Name" />
+		<jfd:field id="DateFrom" />
+		<jfd:field id="DateTill" sameLine="true" />
+		<jfd:field id="IsActive" />
+		<jfd:field id="User" sameLine="true" readOnly="true" />
+		<jfd:field id="Discount" alignment="expand_expand" />
+		<jfd:field id="PlanSale" alignment="expand_expand" />
+		<jfd:field id="FactSale" sameLine="true"/>
+		<jfd:field id="Comments" />		
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 														
+	</jfd:container>
+	
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

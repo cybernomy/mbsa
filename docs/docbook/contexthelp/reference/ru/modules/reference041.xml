@@ -1,0 +1,39 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_ref041 SYSTEM "modules/reference041.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY ref "Прикладные справочники">
+]> -->
+<chapter id="ref041">
+   <title>Праздничные дни</title>
+  
+	<para>В этот справочник записываются нерабочие дни.</para>
+	
+	<para>Вход в справочник &quot;Праздничные дни&quot; осуществляется через 
+	главное меню:   <menuchoice>
+	<guimenu>&ref;</guimenu>
+	<guimenuitem>Праздничные дни</guimenuitem>
+	</menuchoice>.</para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/holidays.gif"/>
+	</imageobject></mediaobject></screenshot>
+
+	<para><guibutton>Полная дата</guibutton>. Дата праздничного дня: число.месяц.год</para>
+	
+	<para><guibutton>Наименование</guibutton>. Название праздника или комментарий к дате.</para>
+	
+	<para>Из года в год некоторые праздники и выходные повторяются. Для того 
+	чтобы скопировать праздничные дни на следующий год, отметьте клавишей 
+	<keycombo><keycap>Пробел</keycap></keycombo> нужные записи. Затем вызовите 
+	контекстное меню и выберите в нём &quot;<guibutton>Скопировать 
+	на следующий год</guibutton>&quot;.</para>
+	
+	<para>Чтобы отобразить праздничные дни только за один год, вызовите Условия отбора, 
+	задайте нужный год и нажмите кнопку  &quot;<guibutton>ОК</guibutton>&quot;. 
+	Будут показаны все праздничные дни только за этот год.</para>
+	
+</chapter>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: PhasePlanItemMt.mfd.xml,v 1.7 2008/03/11 10:18:59 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.contract.support.ui.PhasePlanItemMt" title="resource://com.mg.merp.contract.resources.formelements#Contract.ItemPlan.FormMt.Title" helpTopic="contract#planitem_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Item.Tab.Total.Title" >		
+	 		<jfd:field id="ItemNumber" />
+	 		<jfd:field id="Kind" sameLine="true" />
+	 		<jfd:field id="BeginActionDate" />	 		 	
+	 		<jfd:field id="EndActionDate" sameLine="true"/>
+	 		<jfd:include name="com/mg/merp/document/resources/DocumentMacros.xml" />
+	 		<jfd:field id="From" />	 	
+	 		<jfd:field id="To" sameLine="true"/> 		
+	 		<jfd:field id="FactSum" />	 
+	 		<jfd:field id="PlanSum" sameLine="true"/>		
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 								 			
+		</jfd:container>		
+		<jfd:maintenanceTable id="specPlan" autoResize="subsequent_columns" alignment="expand_expand" scroll="true" tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Item.Tab.Spec.Title" >
+		</jfd:maintenanceTable>				
+	</jfd:container>
+	
+ 	<jfd:include name="com/mg/merp/contract/resources/PhasePlanItemMtFooterMacros.xml" />
+
+</jfd:form>

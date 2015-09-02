@@ -1,0 +1,41 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_discount SYSTEM "modules/discount.xml">
+<!ENTITY merp "Millennium ERP">
+]> -->
+<chapter id="discount">
+  <title>Скидки/Наценки</title>
+
+    <para> В разделе &quot;Скидки/Наценки&quot; Вы можете установить скидки или наценки,
+    которые будут использоваться при регистрации исходящих товарных документов. </para>
+    
+    <para>Вход в раздел &quot;Скидки/Наценки&quot; осуществляется через главное меню:
+       <menuchoice>
+        <guimenu>&cont_centr;</guimenu>
+        <guisubmenu>&logis;</guisubmenu>
+	<guisubmenu>Ценообразование</guisubmenu>
+        <guimenuitem>Скидки/Наценки </guimenuitem>
+	</menuchoice>
+    </para>
+    
+    <screenshot>
+      <mediaobject><imageobject><imagedata fileref="images/discount.gif"/></imageobject></mediaobject>
+    </screenshot>
+    
+    <para>Каждая запись может содержать следующие параметры: </para>
+    
+    <para><guibutton>Наименование</guibutton>. Название скидки или наценки. </para>
+    
+    <para><guibutton>Алгоритм</guibutton>. Вы можете выбрать алгоритм для расчёта 
+    скидки или наценки из раздела &quot;Репозиторий бизнес расширений системы&quot;. </para>
+    
+    <para>Чтобы применить скидки/наценки в конкретном документе, нужно в этом 
+    документе указать &quot;Группу скидок/наценок&quot;, то есть выбрать папку
+    из описываемого справочника. Если в выбранной папке окажется несколько записей,
+    то они будут применены все. </para>
+    
+    <para>Подробнее об алгоритмах расчёта скидок-наценок можно прочитать в руководстве администратора. </para>
+    
+  </chapter>

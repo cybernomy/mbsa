@@ -1,0 +1,32 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_ref055 SYSTEM "modules/reference055.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere System">
+<!ENTITY ref "Прикладные справочники">
+]> -->
+<chapter id="ref055">
+  <title>Виды телефонных номеров</title>
+  
+  	<para>Виды телефонных номеров могут использоваться в модуле CRM или в других модулях системы, по 
+	желанию пользователя.</para>
+	
+	<para>Вход в справочник осуществляется через главное меню: 
+	<menuchoice><guimenu> &ref;</guimenu>
+	<guimenuitem>Виды телефонных номеров</guimenuitem>
+	</menuchoice>. </para>
+	
+	<para>Содержит следующие атрибуты:</para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/phonekind.gif"/>
+	</imageobject></mediaobject></screenshot>
+	  
+	<para><guibutton>Наименование</guibutton>. Наименование вида телефонного номера. Например: 
+	&quot;рабочий&quot;, &quot;личный&quot;, &quot;домашний&quot;, &quot;секретарь&quot; и т.п. </para>
+
+	<para> 	</para>
+
+</chapter>

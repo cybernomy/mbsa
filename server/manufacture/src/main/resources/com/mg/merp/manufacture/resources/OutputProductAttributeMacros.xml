@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: OutputProductAttributeMacros.xml,v 1.1 2006/06/06 07:55:11 leonova Exp $ -->
+
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="outputProduct" layout="jfd:box" longField="true" label="resource://com.mg.merp.manufacture.resources.formelements#Document.OutputProduct" >
+	<jfd:field id="OutputDocHead.DocType" showLabel="false" alignment="left_expand"/>
+	<jfd:field id="OutputDocHead.DocNumber" showLabel="false" alignment="expand_expand"/>			
+	<jfd:field id="OutputDocHead.DocDate" showLabel="false" alignment="right_expand"/>				
+</jfd:container>

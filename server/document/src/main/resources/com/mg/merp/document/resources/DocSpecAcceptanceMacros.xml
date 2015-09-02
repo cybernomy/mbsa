@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: DocSpecAcceptanceMacros.xml,v 1.2 2008/03/05 09:30:15 alikaev Exp $ -->
+
+<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
+	<jfd:field id="AcceptanceSum" fieldGroup="resource://com.mg.merp.document.resources.formelements#AcceptanceMacros.Title"/>
+	<jfd:field id="AcceptanceQuan" />			
+	<jfd:field id="AcceptancePackingQuan" sameLine="true"/>				
+</jfd:wrap-macros>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: ScrapProductHeadRest.mfd.xml,v 1.3 2008/03/26 10:05:33 alikaev Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.manufacture.support.ui.ScrapHeadRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.manufacture.resources.formelements#Cond.ScrapProductHead" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+        
+		<jfd:field id="docDateFrom" />
+		<jfd:field id="docDateTill" sameLine="true"/>
+		<jfd:field id="docNumber" />
+		<jfd:field id="docType" sameLine="true"/> 	
+		<jfd:field id="sysCompany" />
+		<jfd:field id="catalogName" />
+		<jfd:field id="catalogFolder" sameLine="true"/>	
+		<jfd:container id="scrapDetect" layout="jfd:box" columns="2" label="resource://com.mg.merp.manufacture.resources.formelements#ScrapDocHead.Detect">
+			<jfd:field id="detectContractor"/>
+			<jfd:field id="detectEmployee"/>
+			<jfd:field id="detectWorkCenter"/>
+			<jfd:field id="DetectJob"/>
+			<jfd:field id="detectOper"/>
+			<jfd:field id="detectCrew" />  
+		</jfd:container>			
+		<jfd:container id="scrapCause" layout="jfd:box" sameLine="true" columns="2" label="resource://com.mg.merp.manufacture.resources.formelements#ScrapDocHead.Cause">
+			<jfd:field id="causeContractor"/>
+			<jfd:field id="causeEmployee" />
+			<jfd:field id="causeWorkCenter"/>				
+			<jfd:field id="CauseJob"/>
+			<jfd:field id="causeOper" />
+			<jfd:field id="causeCrew"/>  
+		</jfd:container>		
+		<jfd:field id="srcStockCode" />
+		<jfd:field id="srcMolCode" sameLine="true"/>
+		<jfd:field id="scrapReason" />
+		<jfd:field id="scrapType" sameLine="true"/>
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />			
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+
+</jfd:form>

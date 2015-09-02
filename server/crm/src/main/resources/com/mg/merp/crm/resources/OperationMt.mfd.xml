@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: OperationMt.mfd.xml,v 1.8 2008/06/17 11:34:37 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.crm.support.ui.OperationMt" title="resource://com.mg.merp.crm.resources.formelements#Operation.FormMt.Title" helpTopic="crm#oper_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top" >
+		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_expand" tabTitle="resource://com.mg.merp.crm.resources.formelements#Operation.Tab.Total.Title" >
+			<jfd:field id="Code" /> 
+			<jfd:field id="CreateDate" sameLine="true"/> 
+			<jfd:field id="IsPlan" /> 
+			<jfd:field id="Status" /> 			
+			<jfd:field id="State" sameLine="true" /> 
+			<jfd:field id="Kind" /> 
+			<jfd:field id="Priority" /> 							
+			<jfd:field id="Responsible" sameLine="true"/>			
+			<jfd:field id="Purpose" /> 							
+			<jfd:field id="Curator" sameLine="true"/> 
+			<jfd:field id="PlanDateFrom" /> 
+			<jfd:field id="PlanDateTill" sameLine="true"/> 	
+			<jfd:field id="FactDateFrom" /> 
+			<jfd:field id="FactDateTill" sameLine="true"/> 
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />			
+		</jfd:container>	
+		<jfd:container id="infoFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.crm.resources.formelements#Operation.Tab.Info.Title" helpTopic="crm#operinfo_html" >
+			<jfd:field id="OperationPlan" />	
+			<jfd:field id="OperationResult" />			
+			<jfd:field id="OperationNext" />	
+		</jfd:container>	
+		<jfd:maintenanceTable id="original" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.crm.resources.formelements#Operation.Tab.Doc.Title" helpTopic="crm#operlinks_html" >
+			<jfd:popupMenu>
+				<jfd:separator/>
+				<jfd:menuItem id="selectOriginalDocument" text="resource://com.mg.merp.crm.resources.formelements#OperationMt.SelectOriginalDocument" actionListener="SelectOriginalDocumnet" />
+			</jfd:popupMenu>
+		</jfd:maintenanceTable>
+		<jfd:container id="relFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.crm.resources.formelements#Operation.Tab.Rel.Title" >
+			<jfd:field id="Relation" /> 			
+			<jfd:field id="Contact" /> 			
+		</jfd:container>	
+	</jfd:container>
+
+	<jfd:container id="buttonDoc" layout="jfd:box" alignment="expand_top">
+		<jfd:button id="Accepted" alignment="left_top" text="resource://com.mg.merp.crm.resources.dataitemlabels#Operation.Button.Accepted" />
+		<jfd:button id="Denied" alignment="left_top" text="resource://com.mg.merp.crm.resources.dataitemlabels#Operation.Button.Denied" />
+		<jfd:button id="Moved" alignment="left_top" text="resource://com.mg.merp.crm.resources.dataitemlabels#Operationt.Button.Moved" />
+		
+		<jfd:filler id="buttonsFiller" alignment="expand_top" type="horizontalGlue" />
+		<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#OkButton" actionListener="Save" />
+		<jfd:button id="CancelButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CloseButton" actionListener="Cancel" />	
+	</jfd:container> 
+
+</jfd:form>

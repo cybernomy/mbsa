@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: index.xml,v 1.1 2006/12/17 12:40:52 konyashkina Exp $ -->
+
+<index version="1.0">
+
+  <indexitem text="Справочники модуля Зарплата">
+    <indexentry text="Разделы расчётных листков" target="calclistsecref_html" />
+    <indexentry text="Коды МНС для видов оплаты" target="mnscode_html" />
+    <indexentry text="Типы ведомостей" target="rollkind_html" />
+    <indexentry text="Налоговые сетки" target="taxhead_html" />
+    <indexentry text="Размеры минимальных зарплат" target="minsal_html" />  
+    <indexentry text="Виды доходов" target="incomekind_html" />
+    <indexentry text="Виды скидок и расходов" target="diskind_html" />
+  </indexitem>  
+
+  <indexitem text="Начисления и удержания">
+    <indexentry text="Начисления и удержания" target="fee_html" />
+    <indexentry text="Сведения" target="feehead_html" />  
+    <indexentry text="Параметры" target="feeparam_html" />
+    <indexentry text="Используемые тарифы" target="tariffuse_html" />
+    <indexentry text="Вытесняемые начисления/удержания" target="replfee_html" />
+    <indexentry text="Входящие начисления/удержания" target="inclfee_html" /> 
+  </indexitem>  
+  
+  <indexitem text="Лицевые счета сотрудников">
+    <indexentry text="Лицевые счета сотрудников" target="staffacc_html" />
+    <indexentry text="Сведения" target="peracchead_html" />
+    <indexentry text="Образцы н/у в лицевых счетах" target="feemodparam_html" />
+    <indexentry text="Занимаемые должности" target="posfill_html" />
+    <indexentry text="Тарифы" target="tariff_html" />
+    <indexentry text="Лицевые счета сотрудников - плоский список" target="personacc_html" />
+  </indexitem>
+  
+  <indexitem text="Ведомости">
+      <indexentry text="Расчётные ведомости" target="payroll_html" />
+      <indexentry text="Расчётные листки" target="calclist_html" />  
+      <indexentry text="Расчёт листка" target="calc_html" />  
+      <indexentry text="Очистить и рассчитать" target="clear_html" />  
+      <indexentry text="Условия отбора расчётных ведомостей" target="rest_html" />  
+      <indexentry text="Платёжные ведомости" target="paysheet_html" />  
+      <indexentry text="Спецификации (записи)" target="paysheetspec_html" />
+      <indexentry text="Создание РКО" target="careaterko_html" />  
+      <indexentry text="Создание ПКО" target="careatepko_html" />  
+  </indexitem>
+
+  <indexitem text="Документы по зарплате">
+    <indexentry text="Своды начислений/удержаний по аналитике" target="feesumm_html" />   
+    <indexentry text="Спецификации свода н/у по аналитике" target="feesummspec_html" />
+  </indexitem>
+  
+</index>

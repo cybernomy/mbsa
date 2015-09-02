@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: ContractPhaseMt.mfd.xml,v 1.8 2008/10/27 13:50:43 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.contract.support.ui.ContractPhaseMt" title="resource://com.mg.merp.contract.resources.formelements#Contract.Phase.FormMt.Title" helpTopic="contract#phase_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Phase.Tab.Total.Title" >
+			<jfd:field id="PhaseNumber" />			
+			<jfd:field id="BeginActionDate" />	
+			<jfd:field id="EndActionDate" sameLine="true" />
+			<jfd:include name="com/mg/merp/document/resources/DocumentMacros.xml" />								
+			<jfd:field id="Contractor" text="resource://com.mg.merp.contract.resources.dataitemlabels#Contract.ContrFrom" fieldGroup="resource://com.mg.merp.contract.resources.formelements#Contractor" />	
+			<jfd:field id="ContractorResponsible" sameLine="true" text="resource://com.mg.merp.contract.resources.formelements#Responsible" />	
+			<jfd:field id="ContractorBankReq" />
+			<jfd:field id="ContractorBankReq.Account" sameLine="true" enabled="false" alignment="expand_expand"/>												
+			<jfd:field id="ContractorBankDays" alignment="expand_expand" text="resource://com.mg.merp.contract.resources.formelements#BankDays" />				
+			<jfd:field id="ContractorPennyRate" sameLine="true" alignment="expand_expand"/>								
+			
+			<jfd:field id="Company" text="resource://com.mg.merp.contract.resources.dataitemlabels#Contract.To" fieldGroup="resource://com.mg.merp.contract.resources.formelements#Company" />	
+			<jfd:field id="Responsible" sameLine="true" text="resource://com.mg.merp.contract.resources.formelements#Responsible" />	
+			<jfd:field id="BankReq" />
+			<jfd:field id="BankReq.Account" enabled="false" sameLine="true" alignment="expand_expand"/>												
+			<jfd:field id="BankDays" alignment="expand_expand" text="resource://com.mg.merp.contract.resources.formelements#BankDays" />				
+			<jfd:field id="PennyRate" sameLine="true" alignment="expand_expand"/>											
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 							
+		</jfd:container>	
+		<jfd:container id="summaFields" alignment="expand_top" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Phase.Tab.Summa.Title" >
+			<jfd:container id="labelBox" layout="jfd:box" >
+				<jfd:label id="contractLabel" alignment="expand_expand" text="resource://com.mg.merp.contract.resources.dataitemlabels#Contract.Summa.Item" />						
+				<jfd:label id="planLabel" alignment="expand_expand" text="resource://com.mg.merp.contract.resources.dataitemlabels#Contract.Summa.Plan" />		
+				<jfd:label id="factLabel" alignment="expand_expand" text="resource://com.mg.merp.contract.resources.dataitemlabels#Contract.Summa.Fact" />		
+			</jfd:container>		
+			<jfd:container id="shippedBox" layout="jfd:box" label="resource://com.mg.merp.contract.resources.formelements#Contract.Shipped" >
+				<jfd:field id="ShippedPayment" showLabel="false" alignment="expand_expand"/>						
+				<jfd:field id="ItemShippedPayment" readOnly="true" showLabel="false" alignment="expand_expand"/>
+				<jfd:field id="FactShippedPayment" readOnly="true" showLabel="false" alignment="expand_expand"/>							
+			</jfd:container>
+			<jfd:container id="receivedGoodBox" layout="jfd:box" label="resource://com.mg.merp.contract.resources.formelements#Contract.ReceiveGood" >
+				<jfd:field id="ReceivedGood"  showLabel="false" alignment="expand_expand"/>						
+				<jfd:field id="ItemReceivedGood" readOnly="true" showLabel="false" alignment="expand_expand"/>
+				<jfd:field id="FactReceivedGood" readOnly="true" showLabel="false" alignment="expand_expand"/>				
+			</jfd:container>
+			<jfd:container id="receivedBox" layout="jfd:box" label="resource://com.mg.merp.contract.resources.formelements#Contract.Receive" >
+				<jfd:field id="ReceivedPayment" showLabel="false" alignment="expand_expand"/>						
+				<jfd:field id="ItemReceivedPayment" readOnly="true" showLabel="false" alignment="expand_expand"/>
+				<jfd:field id="FactReceivedPayment" readOnly="true" showLabel="false" alignment="expand_expand" />
+			</jfd:container>
+			<jfd:container id="shippedGoodBox" layout="jfd:box" label="resource://com.mg.merp.contract.resources.formelements#Contract.ShippedGood" >
+				<jfd:field id="ShippedGood" showLabel="false" alignment="expand_expand"/>						
+				<jfd:field id="ItemShippedGood" readOnly="true" showLabel="false" alignment="expand_expand"/>
+				<jfd:field id="FactShippedGood" readOnly="true" showLabel="false" alignment="expand_expand"/>		
+			</jfd:container>
+			<jfd:container id="restBox" layout="jfd:box" label="resource://com.mg.merp.contract.resources.formelements#Contract.CalcKind" >
+				<jfd:field id="CalcSumKind" showLabel="false" alignment="expand_expand"/>
+				<jfd:field id="planRest" text="resource://com.mg.merp.contract.resources.formelements#Contract.PlanRest" readOnly="true" alignment="expand_expand"/>
+				<jfd:field id="factRest" text="resource://com.mg.merp.contract.resources.formelements#Contract.FactRest" readOnly="true" alignment="expand_expand"/>
+			</jfd:container>
+			<jfd:container id="sumBox" layout="jfd:box" label="resource://com.mg.merp.contract.resources.formelements#Contract.CurSum" >
+				<jfd:field id="SumCur" showLabel="false" readOnly="true" />
+				<jfd:button id="calcButton" text="resource://com.mg.merp.contract.resources.formelements#Contract.CalcButton" alignment="expand_expand" actionListener="CalculateSum" />
+			</jfd:container>
+		</jfd:container>				
+		<jfd:container id="shipperConsignee" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Phase.Tab.ShipperConsignee.Title" >
+			<jfd:field id="Shipper" />	
+ 			<jfd:field id="ShipperBankReq" />
+ 			<jfd:field id="ShipperBankReq.Account" sameLine="true" alignment="expand_expand"/>
+	 	 	<jfd:field id="Consignee" />	
+	 		<jfd:field id="ConsigneeBankReq" />
+	 		<jfd:field id="ConsigneeBankReq.Account" sameLine="true" alignment="expand_expand"/>
+		</jfd:container>	
+		<jfd:container id="itemOfPaln" layout="jfd:tabbed" alignment="expand_expand" tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Tab.Items.Title" >
+			<jfd:maintenanceTable id="shipped" autoResize="subsequent_columns" alignment="expand_expand" scroll="true" tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Phase.Items.Tab.Shipped.Title" >
+			</jfd:maintenanceTable>			
+			<jfd:maintenanceTable id="receiveGood" autoResize="subsequent_columns" alignment="expand_expand" scroll="true" tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Phase.Items.Tab.ReceiveGood.Title">
+			</jfd:maintenanceTable>			
+			<jfd:maintenanceTable id="receive" autoResize="subsequent_columns" alignment="expand_expand" scroll="true" tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Phase.Items.Tab.Receive.Title">
+			</jfd:maintenanceTable>			
+			<jfd:maintenanceTable id="shippedGood" autoResize="subsequent_columns" alignment="expand_expand" scroll="true" tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Phase.Items.Tab.ShippedGood.Title">
+			</jfd:maintenanceTable>							
+		</jfd:container>	
+		<jfd:container id="comment" layout="jfd:defaultMtLayout" alignment="expand_expand" tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Phase.Tab.Comment.Title" >
+			<jfd:field id="Comments" />	
+			<jfd:field id="Description" />	
+		</jfd:container>
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

@@ -1,0 +1,19 @@
+	<servlet>
+		<description><![CDATA[Servlet that run Java Web Start client of Millennium Business Suite Anywhere system]]></description>
+		<display-name>Millennium Business Suite Anywhere Client Java Web Start</display-name>
+		<servlet-name>MERPClient</servlet-name>
+		<servlet-class>com.ulcjava.container.servlet.server.ServletContainerAdapter</servlet-class>
+		<init-param>
+			<param-name>application-class</param-name>
+			<param-value>com.mg.merp.core.support.ui.ClientJnlp</param-value>
+		</init-param>
+		<init-param>
+			<param-name>server-coder-registry-provider</param-name>
+			<param-value>com.mg.merp.core.support.ui.ServerCoderRegistryProvider</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet>
+		<servlet-name>JnlpDownloadServlet</servlet-name>
+		<servlet-class>com.sun.javaws.servlet.JnlpDownloadServlet</servlet-class>
+	</servlet>

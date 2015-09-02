@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: ScheduleHeadMt.mfd.xml,v 1.5 2008/08/12 14:40:45 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.table.support.ui.ScheduleHeadMt" title="resource://com.mg.merp.table.resources.formelements#ScheduleHead.FormMt.Title" helpTopic="timeboard#shdhead_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="infoBox" layout="jfd:box" orientation="ver" columns="1" alignment="expand_expand" longField="true">
+	<jfd:border style="bevel" type="raised" />
+	 <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_bottom">
+		<jfd:field id="WorkSchedule" />
+		<jfd:field id="DefaultPatternHead" sameLine="true" />			 
+		<jfd:field id="HolidayAccountKind" editorType="comboBox" />
+		<jfd:field id="HolidayWorkTimeKind"  sameLine="true"/>
+		<jfd:field id="PreHolidayReduction"/>				 
+ 	</jfd:container>
+	<jfd:container id="split" layout="jfd:split" orientation="ver" alignment="expand_expand" longField="true">
+		<jfd:container id="calcPeriodBox" layout="jfd:box" orientation="ver" columns="1" alignment="expand_expand">
+			<jfd:label id="calcPeriodLabel" text="resource://com.mg.merp.table.resources.formelements#ScheduleHead.CalcPeriod" />
+			<jfd:maintenanceTable id="calcPeriod" scroll="true" alignment="expand_expand">
+				<jfd:popupMenu>
+					<jfd:separator />
+					<jfd:menuItem id="fillByPattern" text="resource://com.mg.merp.table.resources.formelements#ScheduleHeadMt.fillByPattern" actionListener="FillByPattern" />
+				</jfd:popupMenu>
+			</jfd:maintenanceTable>
+		</jfd:container>						 
+		<jfd:container id="specBox" layout="jfd:box" orientation="ver" columns="1" alignment="expand_expand">
+			<jfd:label id="specLabel" text="resource://com.mg.merp.table.resources.formelements#ScheduleHead.Spec" />
+			<jfd:table id="specTable" sortedModel="false" cellSelectionEnabled="true" scroll="true" alignment="expand_expand">
+				<jfd:include name="com/mg/merp/table/resources/SpecGridPopupMenuMacros.xml" />		
+			</jfd:table>
+		</jfd:container>
+	</jfd:container>
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

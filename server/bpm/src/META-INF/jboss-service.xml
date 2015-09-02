@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: jboss-service.xml,v 1.1 2007/05/28 13:05:48 safonov Exp $ -->
+
+<server>
+
+    <mbean code="com.mg.merp.bpm.support.jboss.BPMManagerService" name="merp:service=BPMManagerServiceService">
+        <depends>jboss:service=MERP</depends>
+        <depends>merp.har:service=MERPDataWarehouse</depends>
+    </mbean>
+
+</server>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<typedef name="com.mg.merp.document.model.DocumentKind" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.document.model.DocumentKind</param>
+	</typedef>
+
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.document.model.DocTypeDocSectionLink" table="DOCTYPE_DOCSECTION_LINK">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="int">
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">DOCTYPE_DOCSECTION_LINK_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="DocSection" class="com.mg.merp.document.model.DocSection">
+      <column name="DOCSECTION_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="DocType" class="com.mg.merp.document.model.DocType">
+      <column name="DOCTYPE_ID" not-null="false" />
+    </many-to-one>
+    <property name="Kind" type="com.mg.merp.document.model.DocumentKind">
+      <column name="KIND" not-null="true" sql-type="SMALLINT" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

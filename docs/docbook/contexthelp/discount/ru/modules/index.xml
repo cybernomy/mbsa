@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: index.xml,v 1.3 2007/11/14 13:48:15 konyashkina Exp $ -->
+
+<index version="1.0">
+
+  <indexitem text="Дисконтные карты">
+    <indexentry text="Номер карты" target="discard_html" />
+    <indexentry text="Базовая скидка" target="discard_html" />
+    <indexentry text="Владелец карты" target="discard_html" />
+    <indexentry text="Лимит товарного кредита" target="discard_html" />
+    <indexentry text="Глубина товарного кредита" target="discard_html" />
+    <indexentry text="Активность карты" target="discard_html" />
+    <indexentry text="Пользователи карты" target="carduser_html" />
+    <indexentry text="История дисконтной карты" target="cardhist_html" />
+    <indexentry text="Новое значение скидки" target="cardhist_html" />
+    <indexentry text="Коэффициенты дисконтной карты" target="discoeff_html" />
+    <indexentry text="Дополнительные скидки" target="extradisc_html" />
+    <indexentry text="Планируемая сумма продаж" target="extradisc_html" />
+    <indexentry text="Планируемая дата завершения продаж" target="extradisc_html" />
+    <indexentry text="Фактическая сумма продаж" target="extradisc_html" />    
+  </indexitem>
+  
+  <indexitem text="Скидки/Наценки">
+    <indexentry text="Алгоритм расчёта скидки или наценки" target="discount_html" />
+  </indexitem>
+  
+  <indexitem text="Общие коэффициенты скидок/наценок">
+   <indexentry text="Коэффициент для папки Каталога" target="globalcoeff_html" />
+   <indexentry text="Коэффициент для позиции Каталога" target="globalcoeff_html" />
+  </indexitem>
+  
+  <indexitem text="Рекламные мероприятия">
+     <indexentry text="Типы рекламных мероприятий" target="promotype_html" />
+     <indexentry text="Рекламные мероприятия" target="promomain_html" />
+     <indexentry text="Позиции рекламных мероприятий" target="promoline_html" />
+  </indexitem>
+  
+
+</index>

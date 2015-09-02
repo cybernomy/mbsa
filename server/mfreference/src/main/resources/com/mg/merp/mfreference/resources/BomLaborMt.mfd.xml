@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: BomLaborMt.mfd.xml,v 1.5 2007/07/30 10:23:51 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.mfreference.support.ui.BomLaborMt" title="resource://com.mg.merp.mfreference.resources.formelements#BomLabor.FormMt.Title" helpTopic="mfreference#bomlabor_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+
+	    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#Main.TotalTitle" >
+ 			<jfd:field id="TimeSequence" />
+	 		<jfd:field id="EffOnDate" />
+			<jfd:field id="EffOffDate" />
+			<jfd:field id="LbrNumber" />
+			<jfd:field id="LbrBackflushFlag" />
+			<jfd:field id="LbrOhBackflushFlag" />
+			<jfd:field id="ResourceGroup" />
+			<jfd:field id="LaborClass" />
+			<jfd:field id="RunTicksLbr" />
+			<jfd:field id="RunTimeLbrUm" />
+			<jfd:field id="Comment" />	
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />									 			
+		</jfd:container>
+
+	   <jfd:table id="costDetailLine" alignment="expand_expand" autoResize="subsequent_columns" scroll="true" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#CostDetailLineTitle" >
+	   </jfd:table>
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

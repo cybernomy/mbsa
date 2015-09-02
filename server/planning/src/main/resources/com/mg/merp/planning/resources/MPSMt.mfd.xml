@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: MPSMt.mfd.xml,v 1.6 2007/07/30 10:36:07 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.planning.resources.formelements#MPS.FormMt.Title" helpTopic="planning#mps_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+
+		<jfd:field id="Code" />
+		<jfd:field id="Description" />
+		<jfd:field id="DemandFenceDate" />
+		<jfd:field id="PlanningDate" sameLine="true" />
+		<jfd:field id="LevelProcessedTo" />
+		<jfd:field id="LastRunDateTime" />
+		<jfd:field id="MpsVersion" sameLine="true" />
+		<jfd:field id="PlanningLevel" />
+		<jfd:field id="InventoryForecast" sameLine="true" />
+		<jfd:field id="ForecastVersion" />
+		<jfd:field id="WeekCal" sameLine="true" />
+		<jfd:field id="Production" />
+		<jfd:field id="ProfileApplied" sameLine="true" />
+		<jfd:field id="PurchasesForecasts" />
+		<jfd:field id="PurchasesLive" sameLine="true" />
+		<jfd:field id="WarehouseTransfers" />
+		<jfd:field id="QtyOnHand" sameLine="true" />
+		<jfd:field id="SalesForecasts"/>
+		<jfd:field id="SalesLive" sameLine="true" />
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
+	</jfd:container>
+	
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

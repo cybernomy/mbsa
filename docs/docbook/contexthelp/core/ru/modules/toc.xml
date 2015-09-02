@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: toc.xml,v 1.4 2008/03/05 14:01:30 konyashkina Exp $ -->
+
+<toc version="1.3">
+  
+   <tocitem text="Пользовательские поля">
+   	<tocitem text="Пользовательские поля" target="features_html" />
+  </tocitem>
+   <tocitem text="Балансовые единицы">
+   	<tocitem text="Балансовые единицы" target="syscompany_html" />
+  </tocitem>
+  
+   <tocitem text="Журналы аудита">
+   	<tocitem text="Настройка аудита хранилища данных" target="entity_audit_setup_wizard_html" />
+	<tocitem text="Журнал аудита хранилища данных" target="entity_audit_html" />
+	<tocitem text="Журнал аудита безопасности" target="security_audit_html" />
+	<tocitem text="Журнал аудита системы" target="system_audit_html" />
+  </tocitem>
+  
+   <tocitem text="Словарь приложения">
+   	<tocitem text="Уровни приложения" target="applayers_html" />
+	<tocitem text="Список бизнес-компонентов" target="bc_html" />
+	<tocitem text="Реализация бизнес-компонентов" target="sysclassimplementation_html" />
+	<tocitem text="Домены системы" target="sysdomain_html" />
+	<tocitem text="Элементы данных" target="sysdataitem_html" />
+	<tocitem text="Формы системы" target="form_html" />
+	<tocitem text="Окна системы" target="window_html" />
+   </tocitem>
+</toc>

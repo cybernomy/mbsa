@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: DocSpecQuantityMacros.xml,v 1.3 2006/06/02 11:06:45 leonova Exp $ -->
+
+<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui" > 
+	<jfd:field id="Quantity" />
+	<jfd:field id="Measure1" sameLine="true"/>
+	<jfd:field id="Quantity2" />	
+	<jfd:field id="Measure2" sameLine="true"/>
+</jfd:wrap-macros>

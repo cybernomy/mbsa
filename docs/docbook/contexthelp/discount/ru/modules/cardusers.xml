@@ -1,0 +1,26 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_cardusers SYSTEM "modules/cardusers.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere System">
+]> -->
+<chapter id="cardusers">
+  <title>Пользователи</title>
+
+    <para>Кроме владельца дисконтной картой могут пользоваться и другие контрагенты
+    (партнёры). Их список содержится в поле &quot;Пользователи&quot; на закладке 
+    &quot;Сведения&quot;. </para>
+    
+     <figure>
+      <title>Добавление пользователя карты</title>
+      <mediaobject><imageobject><imagedata fileref="images/carduser.gif"/></imageobject></mediaobject>
+    </figure>
+    
+    <para>Чтобы добавить нового пользователя, установите курсор в поле &quot;Пользователи&quot; 
+   <!--  и нажмите клавишу <keycombo><keycap>Ins</keycap></keycombo> -->
+     вызовите контекстное меню и выберите пункт &quot;Добавить&quot;. 
+    Обратившись к справочнику &quot;Партнёры&quot; выберите того контрагента, который станет 
+    пользователем данной дисконтной карты. </para>
+    
+  </chapter>

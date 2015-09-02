@@ -1,0 +1,43 @@
+﻿<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY merp "Millennium ERP">
+<!ENTITY logis "Логистика">
+<!ENTITY graph "Графики исполнения обязательств">
+<!ENTITY chap_spec SYSTEM "modules/spec.xml">
+]> -->
+<chapter id="spec">
+    <title>Спецификации пункта графика</title>
+    
+    <para>Пункт графика может содержать спецификацию - нужно отметить флагом поле 
+    <guibutton>Содержит спецификацию</guibutton> внизу на закладке <emphasis>Сведения</emphasis> 
+    и указать источник спецификации - документ, каталог или прайс-лист (в 
+    последнем случае указать прайс-лист и тип цены). Появляется закладка 
+    <emphasis>Спецификация</emphasis>. На эту закладку добавляются записи
+    из спецификации документа (одна, несколько или все).  </para>
+  
+      <screenshot><mediaobject><imageobject>
+      <imagedata fileref="images/spec.gif"/> 
+      </imageobject> </mediaobject> </screenshot>
+      
+   <para>Чтобы добавить спецификацию, нажмите клавишу <keycombo><keycap>Ins</keycap>
+   </keycombo> или вызовите контекстное меню и выберите пункт <guibutton>Добавить</guibutton>.
+   В соответствии с указанными на закладке <emphasis>Сведения</emphasis> параметрами 
+   спецификации, откроется документ, каталог или прайс-лист.
+   Если Вы хотите добавить сразу несколько строк спецификации, выделите их
+   и затем нажмите кнопку <guibutton>Выбрать</guibutton>. </para>
+   
+   <screenshot><mediaobject><imageobject>
+      <imagedata fileref="images/equivalent.gif"/> 
+      </imageobject> </mediaobject> </screenshot>
+   
+     <para>Можно изменить:
+      <itemizedlist>
+        <listitem><para>количество позиций спецификации, </para></listitem>
+	<listitem><para>цену (если спецификация добавлена из каталога или прайс-листа).</para></listitem>
+   </itemizedlist>
+</para>
+   
+
+</chapter>

@@ -1,0 +1,45 @@
+﻿<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_001phref SYSTEM "modules/001phref.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY acc "Бухгалтерский учёт">
+<!ENTITY pers "Управление персоналом">
+<!ENTITY sal "Зарплата">
+<!ENTITY td "Типы документов">
+<!ENTITY ref "Прикладные справочники">
+]> -->
+<chapter id="001phref">
+  <title>Конфигурация модуля &pers;</title>
+  
+ 	<para>Настройка модуля &pers; доступна через главное меню 
+	<menuchoice><!-- Объявляем начало пунктов меню. -->
+        <guimenu>Администрирование</guimenu>
+        <guisubmenu>Конфигурация</guisubmenu>
+        <guimenuitem>&pers;</guimenuitem>
+	</menuchoice>. </para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/config.gif"/> 
+    	</imageobject></mediaobject></screenshot>
+		
+	<para><guibutton>Аналитика состава затрат</guibutton>. Укажите позицию Каталога, 
+	которая будет автоматически добавляться в спецификации при формировании документа 
+	&quot;Свод н/у по аналитике&quot; </para>
+		
+	<para><guibutton>Базовая валюта</guibutton>. Базовая валюта, в которой производятся 
+	вычисления в модуле.</para>
+		
+	<para><guibutton>Национальная валюта</guibutton>. Валюта, которая устанавливается 
+	как национальная.</para>
+	
+	<para><guibutton>Тип курса</guibutton>. Тип курса для пересчёта валют.</para>
+	
+	<para><guibutton>Источник курса</guibutton>. Источник курса для пересчёта валют.</para>
+	
+	<para><guibutton>Точность денежных вычислений</guibutton>. Количество знаков после запятой.</para>
+	
+	<para> </para>
+    
+  </chapter>

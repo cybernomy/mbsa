@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.salary.model.PaySheetSpec" table="SAL_PAY_SHEET_SPEC">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">SAL_PAY_SHEET_SPEC_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="PositionFill" class="com.mg.merp.personnelref.model.PositionFill">
+      <column name="POSITION_FILL_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="PaySheet" class="com.mg.merp.salary.model.PaySheet">
+      <column name="PAY_SHEET_ID" not-null="false" />
+    </many-to-one>
+    <property name="SummaFull" type="java.math.BigDecimal">
+      <column name="SUMMA_FULL" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="SummaPaidOut" type="java.math.BigDecimal">
+      <column name="SUMMA_PAID_OUT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="SummaDeposited" type="java.math.BigDecimal">
+      <column name="SUMMA_DEPOSITED" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="SummaRest" type="java.math.BigDecimal">
+      <column name="SUMMA_REST" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

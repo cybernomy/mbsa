@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: DocSpecPriceOutMacros.xml,v 1.4 2007/09/07 12:19:49 safonov Exp $ -->
+
+<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
+	<jfd:field id="Price1" />
+	<jfd:field id="Discount" />
+	<jfd:field id="DocDiscount" sameLine="true" readOnly="true" />
+	<jfd:field id="PriceWithDiscount" />		
+	<jfd:field id="Price" sameLine="true" readOnly="true" />	
+</jfd:wrap-macros>

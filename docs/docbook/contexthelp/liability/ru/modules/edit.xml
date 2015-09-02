@@ -1,0 +1,30 @@
+﻿<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY merp "Millennium Business Suite Anywhere System">
+<!ENTITY logis "Логистика">
+<!ENTITY graph "Графики исполнения обязательств">
+<!ENTITY chap_create SYSTEM "modules/create.xml">
+<!ENTITY chap_edit SYSTEM "modules/edit.xml">
+]> -->
+<chapter id="edit">
+  <title>Редактирование графика</title>
+    
+    <para> Редактировать графики можно как из документа через кнопку
+     <guibutton>График</guibutton>, так и из раздела &quot;&graph;&quot;. </para>
+ 
+      <screenshot><mediaobject><imageobject>
+      <imagedata fileref="images/add.gif"/> 
+      </imageobject> </mediaobject> </screenshot>
+      
+   <para>При редактировании графика можно изменить его название, состояние, 
+   комментарии и пункты графика. </para>
+   
+    <para>Созданные графики доступны для изменения через меню 
+    <menuchoice> <guimenu>&logis;</guimenu> 
+        <guimenuitem>&graph;</guimenuitem>
+	</menuchoice> (добавить новый график там нельзя). 
+  В этом разделе можно добавлять папки и редактировать графики <!-- перемещать графики из папки в папку  -->. </para>
+
+</chapter>

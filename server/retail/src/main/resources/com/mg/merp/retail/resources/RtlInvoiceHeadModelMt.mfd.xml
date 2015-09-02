@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: RtlInvoiceHeadModelMt.mfd.xml,v 1.6 2007/09/20 14:40:51 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.retail.resources.formelements#InvoiceHeadModel.FormMt.Title" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top" >
+		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.retail.resources.formelements#InvoiceHead.Tab.Title.Total" >
+	 	 	<jfd:include name="com/mg/merp/document/resources/ModelNameMacros.xml" />
+			<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />
+			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
+			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" />			
+	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
+			<jfd:include name="com/mg/merp/document/resources/CurrencyModelMacros.xml" />		
+			<jfd:field id="To"/>
+			<jfd:field id="DiscountCard" />
+			<jfd:field id="BaseDiscount" sameLine="true"/>	
+			<jfd:field id="ExtraDiscount" />
+			<jfd:field id="DiscountOnDoc" sameLine="true"/>
+			<jfd:button id="Assign" text="resource://com.mg.merp.retail.resources.dataitemlabels#Retail.Button.Assign"/> 								
+			<jfd:field id="SumCurDiscount" alignment="expand_expand"/>			
+			<jfd:field id="SumCur" alignment="expand_expand"/>							
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />				
+		</jfd:container>		
+		<jfd:container id="extra" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.retail.resources.formelements#InvoiceHead.Tab.Title.Extra" >
+			<jfd:include name="com/mg/merp/document/resources/PriceListMacros.xml" />	
+			<jfd:field id="CalcTaxesKind"/>			
+			<jfd:field id="DiscountFolder"/>
+			<jfd:field id="ApplyDisKind"/>									
+			<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />				
+			<jfd:field id="PlanPayDate"/>
+			<jfd:field id="PlanShipDate" sameLine="true"/>
+			<jfd:field id="PayDate" />
+			<jfd:field id="PaySum" sameLine="true"/>						
+			<jfd:field id="Description" />
+	 	</jfd:container>
+				
+ 		<jfd:container id="contractor" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.retail.resources.formelements#InvoiceHead.Tab.Title.Contractor" >
+			<jfd:field id="From"/>
+			<jfd:field id="Through" />
+			<jfd:field id="Responsible" sameLine="true"/>	
+			<jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml" />			
+			<jfd:field id="Shipper" />
+			<jfd:field id="Consignee" sameLine="true"/>			
+		</jfd:container>
+	</jfd:container>
+	<jfd:include name="com/mg/merp/document/resources/DefaultDocModelMaintenanceFooterMacros.xml" />
+</jfd:form>

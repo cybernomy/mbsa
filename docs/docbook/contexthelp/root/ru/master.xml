@@ -1,0 +1,51 @@
+﻿<?xml version='1.0' encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY root_introduction SYSTEM "modules/root_introduction.xml">
+<!ENTITY root_forms SYSTEM "modules/root_forms.xml">
+<!ENTITY main_menu SYSTEM "modules/root_main_menu.xml">
+<!ENTITY add_spec SYSTEM "modules/root_add_spec.xml">
+<!ENTITY hotkeys SYSTEM "modules/root_hotkeys.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere">
+<!ENTITY cont_centr "Центр управления">
+]>
+<book lang="ru"> 
+  <bookinfo>
+      <title>Управление работой системы &merp;.</title>
+      <releaseinfo>4.0.6</releaseinfo>
+      <copyright>
+	<year>1998</year>
+	<year>2008</year>
+	<holder>ООО &quot;Бизнестехнология&quot;</holder>
+      </copyright>    
+  </bookinfo>
+  
+  <toc/>
+  
+  <preface id="target" revision="1">
+      <title>Целевая аудитория </title>
+      <para>Данное руководство предназначено для пользователей, работающих с системой &merp;.</para>
+  </preface>
+    
+&root_introduction;
+&root_forms;
+&main_menu;
+&hotkeys;
+&add_spec;
+&chap_copyright;
+
+</book>

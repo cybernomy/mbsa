@@ -1,0 +1,149 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_001plan SYSTEM "modules/001planning.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY mref "Справочники производства">
+<!ENTITY manuf "Планирование и управление производством">
+]> -->
+<chapter id="001plan">
+  <title>Прогнозы</title>
+  
+  <section id="001plan_01">
+  <title>Версии прогнозов</title>
+  
+  	<para>Система &merp; позволяет учитывать прогнозы продаж и закупок в <link linkend="007plan">основных 
+	производственных планах</link> и для <link linkend="009plan">планирования потребности в материалах</link>. 
+	Прогнозы могут составляться как для реальных выпускаемых товаров, так и для планируемых 
+	(<link linkend="002plan_01">обобщённых</link>) позиций. </para>
+ 
+	<para>Вход в справочник &quot;Версии прогнозов&quot; через главное меню 
+	<menuchoice>
+	<guimenu>&manuf;</guimenu>
+	<guisubmenu>&mref;</guisubmenu>
+	<guisubmenu>Планирование</guisubmenu>
+	<guimenuitem>Версии прогнозов</guimenuitem>
+	</menuchoice>.</para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/forecastversion.gif"/>
+	</imageobject></mediaobject></screenshot>
+	
+	<para>В заголовке версии прогноза записывается следующая информация: </para>
+	
+	<para><guibutton>Код</guibutton>. Краткое уникальное наименование для использования в системе &merp;. </para>
+	
+	<para><guibutton>Описание</guibutton>. Краткое описание прогноза. </para>
+	
+	<para>По каждому товару создаётся отдельная строка прогноза, отдельно - на продажу, отдельно - на закупку. </para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/forecast_add.gif"/>
+	</imageobject></mediaobject></screenshot>
+	
+	<para>Прогноз может создаваться либо по <link linkend="002plan_01">обобщённому товару</link>, либо по товару 
+	из Каталога. </para>
+	
+	<para><guibutton>Планируемый товар</guibutton>. Укажите, если прогноз создаётся для обобщённого товара.</para>
+	
+	<para><guibutton>Товар</guibutton>. Укажите, если прогноз создаётся для позиции Каталога. </para>
+	
+	<para><guibutton>Уровень планирования</guibutton>. Уровень планирования, для которого создаётся прогноз.  </para>
+	
+	<para><guibutton>ЕИ</guibutton>. Обязательно укажите единицу измерения для товара. </para>
+	
+	<para><guibutton>Склад</guibutton>. Это поле обязательно к заполнению в случае, если вводится прогноз 
+	по товару (по позиции Каталога, а не по планируемому товару). Это нужно для того, чтобы система знала 
+	на каком именно складе возникает потребность в отгрузке. Так как <link linkend="009plan">ППМ</link> 
+	считает	потребность в материалах не просто на всё предприятие, а для каждого конкретного склада. </para>
+	
+	<para>Если поле &quot;<guibutton>Товар</guibutton>&quot; заполнено, то становится обязательным для 
+	заполнения поле &quot;<guibutton>Склад</guibutton>&quot;. </para>
+	
+	<para><guibutton>Дата прогноза</guibutton>. Дата, на которую делается прогноз, учитывается, если 
+	указан метод прогноза &quot;задаётся на дату&quot; (см. ниже). Значение в это поле автоматически 
+	подставляется при задании смещения периода, но может быть откорректировано вручную. </para>
+	
+	<para><guibutton>Прогнозируемое количество</guibutton>. Количество указанного товара, которое будет 
+	продано	или закуплено (в зависимости от типа прогноза) на указанную дату или период. </para>
+	
+	<para><guibutton>Смещение периода</guibutton>. Если заполнено поле &quot;<guibutton>Планируемый товар</guibutton>&quot;, 
+	нужно указать период уровня планирования. Учитывается, если указан метод прогноза &quot;задаётся на 
+	период&quot; (см. ниже).  </para>
+	
+	<para><guibutton>Старт периода</guibutton>. Значение поля автоматически подставляется при указании смещения 
+	периода. </para>
+	
+	<para><guibutton>Завершение периода</guibutton>. Значение поля автоматически подставляется при 
+	указании смещения периода. </para>
+	
+	<para><guibutton>Тип прогноза</guibutton>. Это может быть прогноз продаж или прогноз закупок. </para>
+	
+	<itemizedlist>
+        <listitem><guibutton>прогноз продаж</guibutton>. Указанный в прогнозе товар планируется продать 
+		в указанном количестве на указанную дату или период.  </listitem>
+		<listitem><guibutton>прогноз закупок</guibutton>. Указанный в прогнозе товар нужно будет 
+		закупить в указанном количестве на указанную дату или период. </listitem>
+	</itemizedlist>
+
+	<para><guibutton>Метод прогноза</guibutton>.  </para>
+	
+	<itemizedlist>
+        <listitem><guibutton>прогнозируемое количество задаётся на период</guibutton>. Прогноз делается на указанный 
+		выше период планирования. </listitem>
+		<listitem><guibutton>прогнозируемое количество задаётся на дату</guibutton>. Прогноз делается на 
+		указанную выше дату. </listitem>
+	</itemizedlist>
+	
+	<para>См. также: <link linkend="007plan">Основные производственные планы</link> 
+	и <link linkend="009plan">Версии ППМ</link> </para>
+	
+	
+   </section>
+   
+   <section id="001plan_02">
+  <title>Прогнозы складских запасов</title>
+  
+	<para>Если планирование делается на достаточно отдалённый период, то можно ввести примерную величину 
+	складских остатков на начало этого периода - прогноз складских запасов. Если планирование осуществляется 
+	от текущей даты, то эти прогнозы не нужны, так как всегда есть информация о реальных складских остатках. </para>
+	
+	<para>Вход в справочник &quot;Прогнозы складских запасов&quot; через главное меню 
+	<menuchoice>
+	<guimenu>&manuf;</guimenu>
+	<guisubmenu>&mref;</guisubmenu>
+	<guisubmenu>Планирование</guisubmenu>
+	<guimenuitem>Прогнозы складских запасов</guimenuitem>
+	</menuchoice>.</para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/invfrcst.gif"/>
+	</imageobject></mediaobject></screenshot>
+	
+	<para><guibutton>Код</guibutton>. Краткое наименование для использования в системе &merp;. </para>
+	
+	<para><guibutton>Описание</guibutton>. Название или краткое описание прогноза. </para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/forecast_line.gif"/>
+	</imageobject></mediaobject></screenshot>
+	
+	<para><guibutton>Обобщённый товар</guibutton>. <link linkend="002plan_01">Обобщённый товар</link>, 
+	планируемый по <link linkend="007plan">ООП</link>. </para>	
+	
+	<para><guibutton>Склад</guibutton>. Склад, для которого будет действителен данный прогноз. </para>	
+	
+	<para><guibutton>ЕИ</guibutton>. Единица измерения <link linkend="002plan_01">обобщённого товара</link>. </para>	
+	
+	<para><guibutton>Дата начала действия</guibutton>. Дата начала прогноза. </para>	
+	
+	<para><guibutton>Дата окончания действия</guibutton>. Дата окончания прогноза. </para>	
+	
+	<para><guibutton>Прогнозируемое доступное количество</guibutton>. Количество указанного 
+	<link linkend="002plan_01">обобщённого товара</link>, которое будет доступно на указанном 
+	складе в указанный период времени, согласно данному прогнозу.  </para>	
+
+  </section>
+</chapter>

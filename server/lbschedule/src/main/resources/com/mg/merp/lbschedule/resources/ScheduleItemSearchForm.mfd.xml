@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.lbschedule.support.ui.ScheduleItemSearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.lbschedule.resources.formelements#ScheduleItemSearchForm.Title" width="600" height="250" >
+
+	<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+		<jfd:button id="сhooseButton" text="resource://com.mg.merp.lbschedule.resources.formelements#DocSpecSearchForm.ChooseButton" actionListener="Choose" />
+	</jfd:toolBar>
+
+	<jfd:table id="scheduleItemsTable" alignment="expand_expand" scroll="true" />
+
+</jfd:form>

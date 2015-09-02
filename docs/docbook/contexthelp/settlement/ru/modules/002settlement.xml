@@ -1,0 +1,52 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_company SYSTEM "modules/002settlement.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY liab "Обязательства">
+<!ENTITY cont_centr "Центр управления">
+<!ENTITY ref "Прикладные справочники">
+]> -->
+<chapter id="company">
+  <title>Центры учёта (подразделения)</title>
+    
+    <para>Вход в &quot;Картотеку расчётов с партнёрами&quot; осуществляется 
+    через главное меню системы:
+    <menuchoice>
+        <guimenu>&cont_centr;</guimenu>
+        <guisubmenu>&liab;</guisubmenu>
+        <guimenuitem>Картотека расчётов с партнёрами</guimenuitem>
+    </menuchoice>
+    В Картотеке расчётов с партнёрами добавить или удалить подразделения нельзя, 
+    это можно сделать только в справочнике &quot;Подразделения&quot;.</para>
+    
+    <screenshot>
+      <mediaobject><imageobject><imagedata fileref="images/subunits.gif"/></imageobject></mediaobject>
+    </screenshot>
+    
+    <para>Вход в справочник &quot;Подразделения&quot; осуществляется через 
+    главное меню системы: 
+      <menuchoice>
+        <guimenu>&cont_centr;</guimenu>
+        <guisubmenu>&ref;</guisubmenu>
+	<guisubmenu>Структура предприятия</guisubmenu>
+        <guimenuitem>Подразделения</guimenuitem>
+    </menuchoice>
+    </para>
+    
+    <para>Центрами учёта расчётов с партнёрами могут быть те подразделения, для 
+    которых в справочнике &quot;Подразделения&quot; указано юридическое лицо. 
+    С одним юридическим лицом может быть связано не более одного подразделения.  </para>
+    
+    <screenshot>
+      <mediaobject><imageobject><imagedata fileref="images/unit.gif"/></imageobject></mediaobject>
+    </screenshot>
+    
+    <para>По Центрам учёта группируются Карточки расчётов с партнёрами. Для того, 
+    чтобы посмотреть Карточки, вызовите контекстное меню и выберите пункт 
+    <!-- сделать ссылку  <link linkend="something">текст</link> -->
+    &quot;Карточки расчётов с партнёрами&quot;.</para>
+
+  </chapter>

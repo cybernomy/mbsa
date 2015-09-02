@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: ScheduleBr.mfd.xml,v 1.5 2007/09/10 13:30:56 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.lbschedule.support.ui.ScheduleBr" title="resource://com.mg.merp.lbschedule.resources.formelements#Schedule.FormBr.Title" helpTopic="liability#gio_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml" />
+
+	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+ 		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true" >
+		</jfd:maintenanceTree>
+ 		<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
+			<jfd:popupMenu>
+				<jfd:separator />
+				<jfd:menuItem id="viewDocument" text="resource://com.mg.merp.lbschedule.resources.formelements#Schedule.ViewDocument" actionListener="ViewDocument" />
+			</jfd:popupMenu>
+		</jfd:maintenanceTable>
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+
+</jfd:form>

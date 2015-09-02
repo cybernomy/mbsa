@@ -1,0 +1,35 @@
+# $Id: dataitemlabels_ru.windows1251,v 1.2 2006/06/06 09:53:04 leonova Exp $
+
+Id=Идентификатор
+DocType=Тип документа
+DocNumber=Номер документа
+DocDate=Дата документа
+BaseDocType=Тип документа основания
+BaseDocNumber=Номер документа основания
+BaseDocDate=Дата документа основания
+CurCode=Код валюты
+CurCource=Курс валюты
+SummaCur=Сумма в валюте
+SummaNat=Сумма
+ContractType=Тип контракта
+ContractNumber=Номер контракта
+ContractDate=Дата контракта
+ContractorFrom=От кого
+ContractorTo=Кому
+Shipper=Грузоотправитель
+Consignee=Грузополучатель
+Comment=Дополнения
+ToPayDocNumber=К пл-расч. документу №
+ToPayDocDate=от
+StockSrc=Склад получателя
+MolSrc=МОЛ получателя
+StockDest=Склад поставщика
+MolDest=МОЛ поставщика
+CalcTaxKind=Вид начисления налогов
+
+InDate=Поступило
+StockDate=Склад
+PayDate=Оплачено
+
+Factura.BankFrom=Банк поставщика
+Factura.BankTo=Банк покупателя

@@ -1,0 +1,61 @@
+# $Id: formelements_ru.windows1251,v 1.11 2008/03/14 13:38:57 konyashkina Exp $
+
+Payment.FormBr.Title=Журнал платежей
+Payment.FormMt.Title=Журнал платежей
+Payment.Summa=Сумма платежа
+Payment.Document=Документ
+Payment.BaseDoc=Документ-основание
+Payment.Contract=Контракт
+Payment.Currency=Валюта
+Payment.ContrFrom=От кого
+Payment.ContrTo=Кому
+Payment.Total.Tab=Содержание
+Payment.Documents.Tab=Документы, связанные с платежом
+Payment.Model=Образцы записей
+Cond.Payment=Условия отбора журнала платежей
+
+DocGroup.FormBr.Title=Группы документов
+DocGroup.FormMt.Title=Группа документов
+DocGroup.TypeDoc=Типы документов
+
+Payment.DocumentsHead.Tab=Заголовки документов
+Payment.DocumentSpec.Tab=Спецификации документов
+Payment.DocumentTax.Tab=Налоги по позиции спецификации
+
+PaymentModel.FormBr.Title=Образцы записей журнала платежей
+PaymentModel.FormMt.Title=Образец записи журнала платежей
+
+DocGroupLink.FormMt.Title=Типы документов
+
+Cond.Payment.Kind=План / факт
+Cond.Payment.AllocKind=Признак распределенности
+
+PaymentallocConfig.FormMt.Title=Конфигурация модуля "Расчеты с партнерами"
+PaymentallocConfig.FormMt.CurrencyFields=Валюта
+PaymentallocConfig.FormMt.BaseCurrency=Базовая валюта
+PaymentallocConfig.FormMt.NatCurrency=Национальная валюта
+PaymentallocConfig.FormMt.CurrencyPrec=Точность денежных величин, знаков после запятой
+
+Choose=Выбрать
+
+Payment.InsertModel=Вставка с образцом
+PmaFolderSearchForm.Title=Выберите папку
+PaymentSearchForm.Title=Выберите запись журнала платежей
+
+IteractiveAllocationDlg.title=Распределение платежа по спецификации документа
+IteractiveAllocationDlg.sumToAllocate=Сумма к распределению
+IteractiveAllocationDlg.allocatedSum=Распределенная сумма
+IteractiveAllocationDlg.allocate=Распределить
+IteractiveAllocationDlg.deAllocate=Отменить распределение
+
+AllocationParamsDlg.Title=Параметры распределения
+AllocationParamsDlg.AllocationSum=Сумма
+AllocationParamsDlg.AllocationQty=Количество
+AllocationParamsDlg.ComputeQty=Рассчитать количество
+AllocationParamsDlg.ComputeSum=Рассчитать сумму
+
+ChooseCurrencyRate=...
+PaymentMt.CurRate=Курс
+PaymentMt.ChooseCurrencyRate=Установить курс
+PaymentMt.Refresh=Обновить
+PaymentMt.ViewDoc=Просмотреть документ

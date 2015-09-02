@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2009 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: Report.mfd.xml,v 1.3 2009/02/26 14:58:57 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.report.support.ui.ReportsBrowse" orientation="ver" verticalGap="5" title="resource://com.mg.merp.report.resources.formelements#ReportBrowse.Title">
+
+	<jfd:toolBar id="toolBar" alignment="expand_top">
+		<jfd:button id="printButton" text="resource://com.mg.framework.resources.messages#PrintButton" actionListener="Print"/>
+		<jfd:button id="refreshButton" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="Refresh" />
+	</jfd:toolBar>
+
+	<jfd:container id="reportsBox" layout="jfd:box" alignment="expand_expand">
+		<jfd:table id="reportsList" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
+			<jfd:popupMenu>
+				<jfd:menuItem id="printItem" text="resource://com.mg.framework.resources.messages#PrintButton" actionListener="Print" keyStroke="control P" />
+				<jfd:menuItem id="refreshItem" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="Refresh" keyStroke="F5" />
+			</jfd:popupMenu>	
+		</jfd:table>
+	
+	</jfd:container>
+
+</jfd:form>

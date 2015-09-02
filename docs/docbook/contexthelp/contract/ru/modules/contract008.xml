@@ -1,0 +1,19 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_object SYSTEM "modules/contract008.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere System">
+<!ENTITY contr "Контракты">
+]> -->
+<chapter id="object">
+  <title>Предмет контракта</title>
+    
+    <para>На этой закладке может быть записан кратко или полностью текст контракта и примечание к нему.</para>
+    
+   <!-- <figure>
+      <mediaobject><imageobject><imagedata fileref="images/object.gif"/></imageobject></mediaobject>
+    </figure> --> 
+  
+</chapter>

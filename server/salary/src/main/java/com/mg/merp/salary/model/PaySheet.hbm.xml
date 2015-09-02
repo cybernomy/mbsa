@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.salary.model.PaySheet" table="SAL_PAY_SHEET">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">SAL_PAY_SHEET_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="Cashier" class="com.mg.merp.reference.model.Contractor">
+      <column name="CASHIER_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Chief" class="com.mg.merp.reference.model.Contractor">
+      <column name="CHIEF_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="DocHead" class="com.mg.merp.document.model.DocHead">
+      <column name="DOCHEAD_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Bookkeeper" class="com.mg.merp.reference.model.Contractor">
+      <column name="BOOKKEEPER_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="PayRoll" class="com.mg.merp.salary.model.PayRoll">
+      <column name="PAY_ROLL_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="InDocHead" class="com.mg.merp.document.model.DocHead">
+      <column name="INDOCHEAD_ID" not-null="false" />
+    </many-to-one>
+    <property name="SNumber" type="java.lang.String">
+      <column name="SNUMBER" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="BeginDate" type="java.util.Date">
+      <column name="BEGINDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="EndDate" type="java.util.Date">
+      <column name="ENDDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="SummaFull" type="java.math.BigDecimal">
+      <column name="SUMMA_FULL" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <set name="SetOfSalPaySheetSpec" inverse="true">
+      <key on-delete="cascade">
+        <column name="PAY_SHEET_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.salary.model.PaySheetSpec" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

@@ -1,0 +1,40 @@
+# $Id: formelements_ru.windows1251,v 1.6 2008/08/12 14:40:45 sharapov Exp $
+
+TimeBoardHead.FormBr.Title=Табели
+TimeBoardHead.FormMt.Title=Заголовок табеля
+TimeBoardSpec.FormBr.Title=Табель
+TimeBoardHead.ShowTable=Открыть табель
+TimeBoardHead.ShowPosition=Открыть список сотрудников
+TimeBoardPosition.FormMt.Title=Список сотрудников
+Cond.TimeBoardHead=Условия отбора табелей
+
+TimeBoardPositionBr.Title=Список сотрудников в табеле
+
+TimeKind.FormBr.Title=Типы времени
+TimeKind.FormMt.Title=Типы времени
+
+PatternHead.FormBr.Title=Шаблоны графиков
+PatternHead.FormMt.Title=Шаблоны графиков
+PatternHead.Total=Сведения
+PatternHead.Pattern=Шаблон
+PatternHead.refreshPatternGrid=Обновить шаблон
+
+ScheduleHead.FormBr.Title=Графики работ в табельном учете
+ScheduleHead.FormMt.Title=Графики работ в табельном учете
+ScheduleHead.CalcPeriod=Расчетные периоды
+ScheduleHead.Spec=Спецификация
+ScheduleHeadMt.fillByPattern=Заполнить по шаблону
+
+TableConfig.FormMt.Title=Конфигурация модуля "Табельный учет"
+
+ChooseButton.Text=Выбрать
+
+ChooseDayliTimeKind=Выбрать тип времени с учетом по дням
+SetHours=Установить количество часов
+TimeKindSearchForm.Title=Типы времени
+
+FillByPatternScheduleSpecParamsDlg.title=Параметры заполнения графика по шаблону
+FillByPatternScheduleSpecParamsDlg.pattern=Шаблон графика
+FillByPatternScheduleSpecParamsDlg.offset=Смещение
+FillByPatternScheduleSpecParamsDlg.dateFrom=Начальная дата
+FillByPatternScheduleSpecParamsDlg.dateTill=Конечная дата

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!--  Millennium Business Suite Anywhere System.                             -->
+<!-- ======================================================================= -->
+
+<!-- $Id: DefaultTreeBrowseHeaderMacros.xml,v 1.5 2008/11/01 09:00:26 safonov Exp $ -->
+
+<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+	<jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton" actionListener="Choose" visible="false" />
+	<jfd:include name="com/mg/framework/resources/StandartMaintenanceTreeToolbarMacros.xml" />
+	<jfd:include runtime="com.mg.jet.ui.CustomActionsFormlet" />
+</jfd:toolBar>

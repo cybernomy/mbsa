@@ -1,0 +1,49 @@
+﻿<?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_001pmc SYSTEM "modules/001paymentcontrol.xml">
+<!ENTITY chap_002pmc SYSTEM "modules/002paymentcontrol.xml">
+<!ENTITY chap_003pmc SYSTEM "modules/003paymentcontrol.xml">
+<!ENTITY chap_004pmc SYSTEM "modules/004paymentcontrol.xml">
+<!ENTITY chap_005pmc SYSTEM "modules/005paymentcontrol.xml">
+<!ENTITY chap_006pmc SYSTEM "modules/006paymentcontrol.xml">
+<!ENTITY chap_007pmc SYSTEM "modules/007paymentcontrol.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere">
+<!ENTITY cont_centr "Центр управления">
+<!ENTITY liab "Обязательства">
+<!ENTITY contr "Контракты">
+<!ENTITY pmc "Платёжный календарь">
+
+]>
+<book lang="ru">
+  <bookinfo>
+      <title> &pmc; в системе &merp; 
+      Руководство пользователя.</title>
+      <releaseinfo>4.0.6</releaseinfo>
+      <copyright>
+	<year>1998</year>
+	<year>2008</year>
+	<holder>ООО &quot;Бизнестехнология&quot;</holder>
+      </copyright>    
+  </bookinfo>
+  
+  <toc/>
+  
+  <preface id="target" revision="1">
+      <title>Целевая аудитория </title>
+      <para>Данное руководство предназначено для пользователей, работающих  
+	с модулем &quot;&pmc;&quot; системы &merp;.</para>
+  </preface>
+    
+&chap_001pmc;
+&chap_002pmc;
+&chap_003pmc;
+&chap_004pmc;
+&chap_005pmc;
+&chap_006pmc;
+&chap_007pmc;
+&chap_copyright;
+
+</book>

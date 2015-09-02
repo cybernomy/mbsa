@@ -1,0 +1,73 @@
+# $Id: dataitemlabels_ru.windows1251,v 1.4 2008/06/30 04:23:06 alikaev Exp $
+
+Name=Наименование
+Norm.Position=Должность
+Norm.Job=Профессия
+Norm.OvrNormBeginDate=Дата начала действия
+Norm.OvrNormEndDate=Дата окончания действия
+
+Spec.CatalogGroupsType=Тип группы позиции КТУ
+CatalogGroupsType.Overall=специальная одежда
+CatalogGroupsType.FromClothes=форменная одежда
+CatalogGroupsType.Protection=индивидуальные средства защита
+CatalogGroupsType.Instrument=инструменты
+CatalogGroupsType.OfficeEquip=оргтехника, мебель
+CatalogGroupsType.Other=прочие ТМЦ
+
+Spec.Name=Наименование позиции спецификации
+Spec.MeasureUpCode=ЕИ
+Spec.Quantity=Количество
+Spec.Shelflife=Срок эксплуатации
+Spec.ShelfLifeMeas=ЕИ срока эксплуатации
+Spec.IsDinch=Подлежит погашению
+Spec.DocName=Каким документом предусмотрено
+Spec.PeriodicNormKind=Периодичность выдачи
+PeriodicNormKind.Periodic=Периодическая
+PeriodicNormKind.Single=Разовая
+Spec.BasicNormKind=Тип выдачи
+BasicNormKind.Basic=Основная
+Spec.DinchFormula=Формула
+BasicNormKind.Extra=Дополнительная
+
+Card.OvrCardNumber=Номер ЛКС
+Card.OrgUnit=Сотрудник
+
+Card.Position=Должность
+Card.Job=Профессия
+Card.ActDateFrom=Дата начала действия ЛКС
+Card.ActDateTo=Дата окончания действия ЛКС
+
+Card.ClothesSize=Размер одежды
+Card.ShoesSize=Размер обуви
+Card.HatSize=Размер головного убора
+Card.GasMaskSize=Размер противогаза
+Card.RespiratorSize=Размер респиратора
+Card.MittensSize=Размер рукавиц
+Card.GlovesSize=Размер перчаток
+
+Card.Quantity=Количество 
+Card.NdeCost=Цена в НДЕ
+Card.NdeSumma=Сумма в НДЕ
+Card.Deterioration=Износ в %
+Card.DepreciableValue=Остаточная стоимость
+Card.CommonSummaForDinch=<html>Общая сумма <br>подлежащая погашению</html>
+Card.DinchedSumma=Погашенная сумма
+Card.RestOfDinchSumma=Остаток суммы к погашению
+Card.ArrearSumma=Сумма задолженности
+Card.CatalogId=Товар: код/наименование
+Card.Returnable=Подлежит возврату
+
+RemoveType=<html>Тип выбытия<br> из эксплуатации</html>
+RemoveType.None=<>
+RemoveType.GivenOut=Выдано
+RemoveType.InExpl=В эксплуатации
+RemoveType.Returned=Возвращено
+RemoveType.Lost=Утеряно
+RemoveType.WrittenOff=Списано
+OvrCardHist.ReadOutDate=Дата ввода в эксплуатацию
+OvrCardHist.GiveDate=Дата выдачи
+OvrCardHist.RemoveDate=Дата выбытия из эксплуатации
+Cancellation.CancellationDate=Дата погашения
+Cancellation.CurrentCancellationSumma=Сумма текущего погашения
+Cancellation.CancellationReason=Причина погашения
+OvrCardHist.PlanRemoveDate=<html>Планируемая дата вывода<br> из эксплуатации</html>

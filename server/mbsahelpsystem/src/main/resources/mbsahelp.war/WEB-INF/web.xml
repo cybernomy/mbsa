@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'windows-1252'?>
+<web-app
+	 xmlns="http://java.sun.com/xml/ns/j2ee"
+	 version="2.4"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+  <display-name>Oracle Help for the Web</display-name>
+  <description>Oracle Help for the Web</description>
+
+  <servlet>
+    <servlet-name>MBSAHelp</servlet-name>
+    <servlet-class>oracle.help.web.OHWController</servlet-class>
+
+    <!-- This init param provides the context-relative path to the config file -->    
+    <init-param>
+      <param-name>ohwConfigFileURL</param-name>
+      <param-value>/helpsets/mbsahelpconfig.xml</param-value>
+    </init-param>
+    
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>MBSAHelp</servlet-name>
+    <url-pattern>/help/*</url-pattern>
+  </servlet-mapping>
+  <mime-mapping>
+    <extension>html</extension>
+    <mime-type>text/html</mime-type>
+  </mime-mapping>
+  <mime-mapping>
+    <extension>txt</extension>
+    <mime-type>text/plain</mime-type>
+  </mime-mapping>
+  <mime-mapping>
+    <extension>css</extension>
+    <mime-type>text/css</mime-type>
+  </mime-mapping>
+
+  <filter>
+    <filter-name>MimeTypeFilter</filter-name>
+    <filter-class>com.mg.merp.help.viewer.MimeTypeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>MimeTypeFilter</filter-name>
+    <servlet-name>MBSAHelp</servlet-name>
+  </filter-mapping>
+
+</web-app>

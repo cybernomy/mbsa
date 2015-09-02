@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: PatternHeadMt.mfd.xml,v 1.5 2008/08/12 14:40:45 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.table.support.ui.PatternHeadMt" title="resource://com.mg.merp.table.resources.formelements#PatternHead.FormMt.Title" helpTopic="timeboard#patternhead_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.table.resources.formelements#PatternHead.Total" >
+		 	<jfd:field id="Name" />
+		 	<jfd:field id="Code" />
+			<jfd:field id="PatternKind" editorType="comboBox" sameLine="true" />
+			<jfd:field id="Duration" />			
+ 			<jfd:button id="refreshPatternGrid" text="resource://com.mg.merp.table.resources.formelements#PatternHead.refreshPatternGrid" actionListener="RefreshPatternGrid" sameLine="true" />
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />		
+		</jfd:container>
+		<jfd:table id="specTable" alignment="expand_expand" sortedModel="false" cellSelectionEnabled="true" scroll="true" tabTitle="resource://com.mg.merp.table.resources.formelements#PatternHead.Pattern">
+			<jfd:include name="com/mg/merp/table/resources/SpecGridPopupMenuMacros.xml" />		
+		</jfd:table>
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

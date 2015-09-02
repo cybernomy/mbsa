@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: CommonDocMaintenanceTablePopupMenuItemsMacros.xml,v 1.2 2008/12/24 14:15:51 safonov Exp $ -->
+
+<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
+	<jfd:menu id="docPattern" text="resource://com.mg.merp.document.resources.formelements#Document.DocumentPattern" >
+		<jfd:menuItem id="showDocumentPattern" text="resource://com.mg.merp.document.resources.formelements#Document.ShowDocumentPattern" icon="com/mg/merp/document/resources/insertdocpatternicon.png" actionListener="ShowDocumentPattern" />
+		<jfd:menuItem id="insertDocumentPattern" text="resource://com.mg.merp.document.resources.formelements#Document.InsertDocumentPattern" actionListener="InsertDocumentPattern" keyStroke="control INSERT" />
+	</jfd:menu>
+	<jfd:menu id="docFlow" text="resource://com.mg.merp.document.resources.formelements#Document.DocFlow" >
+		<jfd:menuItem id="executeDocFlow" text="resource://com.mg.merp.docflow.resources.formelements#ExecuteDocFlow" icon="com/mg/merp/docflow/resources/executedocflowicon.png" actionListener="ExecuteDocFlow" keyStroke="control R" />
+		<jfd:menuItem id="rollbackDocFlow" text="resource://com.mg.merp.docflow.resources.formelements#RollbackDocFlow" icon="com/mg/merp/docflow/resources/rollbackdocflowicon.png" actionListener="RollbackDocFlow" keyStroke="control B" />
+		<jfd:menuItem id="showDocumentHistory" text="resource://com.mg.merp.docflow.resources.formelements#DocFlowHistory" icon="com/mg/merp/docflow/resources/docflowhistoryicon.png" actionListener="DocFlowHistory" keyStroke="control H" />
+	</jfd:menu>
+	<jfd:menu id="docOriginal" text="resource://com.mg.merp.document.resources.formelements#Document.Original" >
+ 		<jfd:menuItem id="showOriginal" text="resource://com.mg.merp.document.resources.formelements#Document.Original.Show" actionListener="ShowOriginal" />
+	 	<jfd:menuItem id="downloadOriginal" text="resource://com.mg.merp.document.resources.formelements#Document.Original.Download" actionListener="DownloadOriginal" />
+ 		<jfd:menuItem id="uploadOriginal" text="resource://com.mg.merp.document.resources.formelements#Document.Original.Upload" actionListener="UploadOriginal" />
+	 	<jfd:menuItem id="removeOriginal" text="resource://com.mg.merp.document.resources.formelements#Document.Original.Remove" actionListener="RemoveOriginal" />
+	</jfd:menu>
+	<jfd:menu id="docLBSchedule" text="resource://com.mg.merp.document.resources.formelements#Document.LBSchedule" >
+ 		<jfd:menuItem id="createLBSchedule" text="resource://com.mg.merp.document.resources.formelements#Document.LBSchedule.Create" actionListener="CreateLBSchedule" />
+	 	<jfd:menuItem id="openLBSchedule" text="resource://com.mg.merp.document.resources.formelements#Document.LBSchedule.Open" actionListener="OpenLBSchedule" />
+ 		<jfd:menuItem id="removeLBSchedule" text="resource://com.mg.merp.document.resources.formelements#Document.LBSchedule.Remove" actionListener="RemoveLBSchedule" />
+	</jfd:menu>
+	<jfd:separator/>
+	<jfd:menu id="linkedDocs" text="resource://com.mg.merp.document.resources.formelements#Document.LinkedDocs" >
+		<jfd:menuItem id="showBaseDocument" text="resource://com.mg.merp.document.resources.formelements#Document.ShowBaseDocument" actionListener="ShowBaseDocument" keyStroke="control O" />
+		<jfd:menuItem id="showContract" text="resource://com.mg.merp.document.resources.formelements#Document.ShowContract" actionListener="ShowContract" keyStroke="control D" />
+	</jfd:menu>
+</jfd:wrap-macros>

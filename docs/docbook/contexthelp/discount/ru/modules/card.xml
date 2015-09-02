@@ -1,0 +1,64 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_card SYSTEM "modules/card.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere System">
+<!ENTITY logis "Логистика">
+]> -->
+<chapter id="card">
+  <title>Дисконтные карты</title>
+    
+    <para>В системе &merp; имеется возможность учёта и использования дисконтных карт.</para>
+    
+    <para>Дисконтные карты указываются, например, в розничных документах (документах на отпуск).</para>
+    
+    <para>Для дисконтной карты нужно установить значение скидки (или наценки). 
+    Это делается на закладке &quot;История&quot;. В каждой карте хранится история 
+    значений, времени их действия и пользователей, установивших эти значения.</para>
+    
+    <para>С помощью коэффициентов по карте предоставляются скидки (или наценки)
+    на отдельные товары или услуги.</para>
+    
+    <para>Одной дисконтной картой могут пользоваться несколько контрагентов,
+    список которых задан в поле &quot;Пользователи&quot;.</para>
+    
+    <para>По карте могут быть предусмотрены дополнительные скидки в зависимости от объёма продаж.</para>
+    
+    <para>Вход в раздел &quot;Дисконтные карты&quot; осуществляется через 
+    главное меню:
+    <menuchoice>
+        <guimenu>&cont_centr;</guimenu>
+        <guisubmenu>&logis;</guisubmenu>
+	<guisubmenu>Ценообразование</guisubmenu>
+        <guimenuitem>Дисконтные карты </guimenuitem>
+	</menuchoice>
+    </para>
+    
+    <para>Информация записывается на нескольких закладках: &quot;Сведения&quot;, 
+    &quot;История&quot;, &quot;Коэффициенты&quot;, &quot;Дополнительные скидки&quot;.</para>
+    
+    <para>На закладке &quot;Сведения&quot; записываются основные параметры карты: </para>
+    
+    <screenshot>
+      <mediaobject><imageobject><imagedata fileref="images/card.gif"/></imageobject></mediaobject>
+    </screenshot>
+    
+    <para><guibutton>Номер карты</guibutton>. Номер дисконтной карты.</para>
+    
+    <para><guibutton>Владелец</guibutton>. Контрагент, которому принадлежит карта.</para>
+    
+    <para><guibutton>Пользователи</guibutton>. Контрагенты (партнёры), которые также имеют право 
+    пользоваться этой дисконтной картой и получать скидки по ней.</para>
+    
+    <para><guibutton>Базовая скидка</guibutton>. Текущее значение скидки (или наценки).</para>
+    
+    <para><guibutton>Лимит товарного кредита</guibutton>. </para>
+    
+    <para><guibutton>Глубина товарного кредита</guibutton>.</para>
+    
+    <para><guibutton>Комментарии</guibutton>. В этом поле можно записать текстовый комментарий.</para>
+    
+    <para><guibutton>Карта активна</guibutton>. Отметка о том, что карта действует.</para>
+        
+</chapter>

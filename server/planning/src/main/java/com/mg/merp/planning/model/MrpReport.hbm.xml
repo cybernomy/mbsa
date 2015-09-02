@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<typedef name="com.mg.merp.planning.model.MRPOrderType" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.planning.model.MRPOrderType</param>
+	</typedef>
+
+	<typedef name="com.mg.merp.planning.model.MRPSource" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.planning.model.MRPSource</param>
+	</typedef>
+
+	<typedef name="com.mg.merp.planning.model.InputOutputFlag" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.planning.model.InputOutputFlag</param>
+	</typedef>
+
+	<typedef name="com.mg.merp.planning.model.RescheduleFlag" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.planning.model.RescheduleFlag</param>
+	</typedef>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.planning.model.MrpReport" table="PP_MRP_REPORT">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">PP_MRP_REPORT_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="MrpVersionControl" class="com.mg.merp.planning.model.MrpVersionControl">
+      <column name="MRP_VERSION_CONTROL_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Warehouse" class="com.mg.merp.warehouse.model.Warehouse">
+      <column name="WAREHOUSE_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Catalog" class="com.mg.merp.reference.model.Catalog">
+      <column name="CATALOG_ID" not-null="false" />
+    </many-to-one>
+    <property name="RequiredDate" type="java.util.Date">
+      <column name="REQUIRED_DATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="MrpOrderType" type="com.mg.merp.planning.model.MRPOrderType">
+      <column name="MRP_ORDER_TYPE" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="PpReference" type="java.lang.String">
+      <column name="PP_REFERENCE" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="QtyAvailable" type="java.math.BigDecimal">
+      <column name="QTY_AVAILABLE" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="MrpQuantity" type="java.math.BigDecimal">
+      <column name="MRP_QUANTITY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="MrpSource" type="com.mg.merp.planning.model.MRPSource">
+      <column name="MRP_SOURCE" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="MrpInputOutputFlag" type="com.mg.merp.planning.model.InputOutputFlag">
+      <column name="MRP_INPUT_OUTPUT_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="FixedInput" type="boolean">
+      <column name="FIXED_INPUT" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="OrderDate" type="java.util.Date">
+      <column name="ORDER_DATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="MrpArrearsFlag" type="boolean">
+      <column name="MRP_ARREARS_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="OriginalDate" type="java.util.Date">
+      <column name="ORIGINAL_DATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="OriginalQuantity" type="java.math.BigDecimal">
+      <column name="ORIGINAL_QUANTITY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="Sequence" type="java.lang.Integer">
+      <column name="SEQUENCE" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="MrpRescheduleFlag" type="com.mg.merp.planning.model.RescheduleFlag">
+      <column name="MRP_RESCHEDULE_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

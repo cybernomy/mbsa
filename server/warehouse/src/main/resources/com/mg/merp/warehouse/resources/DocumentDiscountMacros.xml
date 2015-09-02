@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: DocumentDiscountMacros.xml,v 1.1 2007/09/07 12:30:12 safonov Exp $ -->
+
+<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
+	<jfd:field id="DiscountFolder" />		
+	<jfd:button id="ApplyDiscount" text="resource://com.mg.merp.warehouse.resources.dataitemlabels#Button.Assign" sameLine="true" actionListener="ApplyDiscount" /> 
+	<jfd:field id="DiscountOnDoc" alignment="expand_expand" /> 
+	<jfd:field id="DiscountOnLine" alignment="expand_expand" sameLine="true" readOnly="true" /> 
+</jfd:wrap-macros>

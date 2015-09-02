@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.planning.model.Mps" table="PP_MPS">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">PP_MPS_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="InventoryForecast" class="com.mg.merp.planning.model.InventoryForecast">
+      <column name="INVENTORY_FORECAST_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="PlanningLevel" class="com.mg.merp.mfreference.model.PlanningLevel">
+      <column name="PLANNING_LEVEL_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="ForecastVersion" class="com.mg.merp.planning.model.ForecastVersion">
+      <column name="FORECAST_VERSION_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="WeekCal" class="com.mg.merp.mfreference.model.WeekCalendar">
+      <column name="WEEK_CAL_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <property name="Code" type="java.lang.String">
+      <column name="CODE" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="DemandFenceDate" type="java.util.Date">
+      <column name="DEMAND_FENCE_DATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="Description" type="java.lang.String">
+      <column name="DESCRIPTION" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="PlanningDate" type="java.util.Date">
+      <column name="PLANNING_DATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="LevelProcessedTo" type="java.lang.Short">
+      <column name="PP_LEVEL_PROCESSED_TO" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="Production" type="boolean">
+      <column name="PRODUCTION" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="ProfileApplied" type="boolean">
+      <column name="PROFILE_APPLIED" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="PurchasesForecasts" type="boolean">
+      <column name="PURCHASES_FORECASTS" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="PurchasesLive" type="boolean">
+      <column name="PURCHASES_LIVE" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="QtyOnHand" type="boolean">
+      <column name="QTY_ON_HAND" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="SalesForecasts" type="boolean">
+      <column name="SALES_FORECASTS" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="SalesLive" type="boolean">
+      <column name="SALES_LIVE" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="WarehouseTransfers" type="boolean">
+      <column name="WAREHOUSE_TRANSFERS" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="MpsVersion" type="java.lang.Integer">
+      <column name="MPS_VERSION" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="LastRunDateTime" type="java.util.Date">
+      <column name="LAST_RUN_DATETIME" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

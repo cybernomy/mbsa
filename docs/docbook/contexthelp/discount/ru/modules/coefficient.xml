@@ -1,0 +1,28 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_coefficient SYSTEM "modules/coefficient.xml">
+<!ENTITY merp "Millennium ERP">
+]> -->
+<chapter id="coefficient">
+  <title>Коэффициенты</title>
+    
+    <para>Дисконтной картой могут быть предусмотрены скидки на отдельные товары или
+    услуги, а также для группы товаров, размещённых в одной папке каталога.  </para>
+    
+    <screenshot>
+      <mediaobject><imageobject><imagedata fileref="images/add_coeff.gif"/></imageobject></mediaobject>
+    </screenshot>
+    
+    <para><guibutton>Папка каталога</guibutton>. Выберите папку каталога. При 
+    использовании данной карты коэффициент будет применяться ко всем позициям,
+    входящим в данную папку каталога. </para>
+    
+    <para><guibutton>Позиция каталога</guibutton>. При использовании данной карты
+    коэффициент будет действовать для этой позиции. </para>
+    
+    <para><guibutton>Коэффициент</guibutton>. Значение коэффициента, применяемого
+    к указанной папке или позиции каталога. </para>
+    
+  </chapter>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: BomRouteMt.mfd.xml,v 1.6 2007/07/30 10:23:51 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.mfreference.support.ui.BomRouteMt" title="resource://com.mg.merp.mfreference.resources.formelements#BomRoute.FormMt.Title" helpTopic="mfreference#bomroute_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+
+	    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#Main.TotalTitle" >
+			<jfd:field id="OperNum" />
+			<jfd:field id="Description" />
+			<jfd:field id="EffOnDate" />
+			<jfd:field id="EffOffDate" />
+			<jfd:field id="Efficiency" />
+			<jfd:field id="WorkCenter" />
+			<jfd:field id="ControlPointFlag" />
+			<jfd:field id="Comment" />
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />									 			
+		</jfd:container>
+		<jfd:container id="timeFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#BomRoute.TimeFields" >			
+			<jfd:field id="MoveTicks" />
+			<jfd:field id="MoveTimeUM" />
+			<jfd:field id="RunTicks" />
+			<jfd:field id="RunTimeUM" />
+			<jfd:field id="SchedOffsetTicks" />
+			<jfd:field id="SchedOffSetTimeUM" />
+			<jfd:field id="SetupTicks" />
+			<jfd:field id="SetupTimeUM" />
+			<jfd:field id="SchedTicks" />
+			<jfd:field id="SchedTimeUM" />
+			<jfd:field id="QueueTicks" />
+			<jfd:field id="QueueTimeUM" />			
+		</jfd:container>	
+
+	   <jfd:table id="costDetailLine" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#CostDetailLineTitle">
+	   </jfd:table>		   
+
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

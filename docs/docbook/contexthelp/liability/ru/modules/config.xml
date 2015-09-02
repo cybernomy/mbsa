@@ -1,0 +1,28 @@
+﻿<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY merp "Millennium Business Suite Anywhere System">
+<!ENTITY logis "Логистика">
+<!ENTITY graph "Графики исполнения обязательств">
+<!ENTITY chap_config_lia SYSTEM "modules/liability.xml">
+]> -->
+<chapter id="config_lia">
+  <title>Конфигурация</title>
+    
+    <para>Настройка модуля &graph; доступна через главное меню
+     <menuchoice>
+    <guimenu>Администрирование</guimenu>
+    <guimenuitem>Конфигурация</guimenuitem>
+    <guimenuitem>&graph;</guimenuitem>
+    </menuchoice>.
+    </para>
+    
+      <screenshot><mediaobject><imageobject>
+      <imagedata fileref="images/config.gif"/> 
+      </imageobject> </mediaobject> </screenshot>
+    
+  <para>В конфигурации указывается папка, в которую по умолчанию помещаются все создаваемые графики,
+  если иное не предусмотрено триггером или алгоритмом. </para>
+
+</chapter>

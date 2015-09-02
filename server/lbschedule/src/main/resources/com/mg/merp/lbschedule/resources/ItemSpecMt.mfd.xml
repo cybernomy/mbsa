@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.lbschedule.support.ui.ItemSpecMt" title="resource://com.mg.merp.lbschedule.resources.formelements#ItemSpec.FormMt.Title" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >	
+		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.lbschedule.resources.formelements#ItemSpec.FormMt.Common" >
+			<jfd:field id="Catalog" readOnly="true" text="resource://com.mg.merp.lbschedule.resources.formelements#ItemSpec.FormMt.CatalogPosition" />
+			<jfd:field id="Qty1" />
+			<jfd:field id="Measure1" sameLine="true" />
+			<jfd:field id="Qty2" />
+			<jfd:field id="Measure2" sameLine="true" />
+			<jfd:field id="Price" readOnly="true" />
+			<jfd:field id="ClearPrice" readOnly="true" />
+			<jfd:field id="Summa" readOnly="true" />
+			<jfd:field id="ClearSumma" readOnly="true" />
+			<jfd:button id="computeSum" text="resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Button.CalcDate" sameLine="true" actionListener="ComputeSum"/>
+		</jfd:container>
+		<jfd:container id="altFields" layout="jfd:box" alignment="expand_expand" tabTitle="resource://com.mg.merp.lbschedule.resources.formelements#ItemSpec.FormMt.Alternative" >
+			<jfd:maintenanceTable id="altTable" autoResize="subsequent_columns" scroll="true" alignment="expand_expand">
+			</jfd:maintenanceTable>
+		</jfd:container>
+		<jfd:container id="taxFields" layout="jfd:box" alignment="expand_expand" tabTitle="resource://com.mg.merp.lbschedule.resources.formelements#ItemSpec.FormMt.Tax" >
+			<jfd:table id="taxTable" autoResize="subsequent_columns" scroll="true" alignment="expand_expand">
+				<jfd:popupMenu>
+					<jfd:menuItem id="refreshTaxTable" text="resource://com.mg.merp.lbschedule.resources.formelements#MenuItem.RefreshSpec" actionListener="RefreshTaxTable" />
+				</jfd:popupMenu>
+			</jfd:table>
+		</jfd:container>				
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

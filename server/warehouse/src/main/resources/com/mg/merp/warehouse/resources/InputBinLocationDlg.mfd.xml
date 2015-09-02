@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: InputBinLocationDlg.mfd.xml,v 1.1 2008/05/30 13:12:41 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.warehouse.support.ui.InputBinLocationDlg" orientation="ver" verticalGap="5" title="resource://com.mg.merp.warehouse.resources.formelements#InputBinLocationDlg.Title" width="600" height="110">
+	
+	<jfd:container id="mainBox" layout="jfd:box" columns="2" alignment="expand_expand">
+		<jfd:border style="bevel" type="raised" />
+		<jfd:container id="catalogBox" layout="jfd:box" columns="2" alignment="expand_top" label="resource://com.mg.merp.warehouse.resources.formelements#CatalogCodeAndName">
+			<jfd:field id="catalogCode" readOnly="true" showLabel="false" alignment="left_expand" />
+			<jfd:field id="catalogName" readOnly="true" longField="false" showLabel="false" alignment="expand_expand" />
+		</jfd:container>
+		<jfd:container id="binLocationBox" layout="jfd:box" columns="4" alignment="expand_top" label="resource://com.mg.merp.warehouse.resources.formelements#InputBinLocationDlg.BinLocation">
+			<jfd:field id="binLocation" showLabel="false" alignment="expand_expand" />
+			<jfd:field id="quantity" text="resource://com.mg.merp.warehouse.resources.formelements#InputBinLocationDlg.Quantity" alignment="expand_expand" />
+		</jfd:container>
+	</jfd:container>
+	
+	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+
+</jfd:form>

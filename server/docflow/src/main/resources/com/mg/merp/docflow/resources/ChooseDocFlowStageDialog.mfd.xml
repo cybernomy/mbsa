@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: ChooseDocFlowStageDialog.mfd.xml,v 1.2 2006/08/25 11:28:20 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.docflow.support.ui.ChooseDocFlowStageDialog" orientation="ver" verticalGap="5" title="resource://com.mg.merp.docflow.resources.formelements#ChooseDocFlowStageDialog.Title" width="400" height="250" >
+
+	<jfd:table id="stagesList" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" />
+
+	<jfd:container id="buttons" layout="jfd:box" alignment="expand_top">
+		<jfd:filler id="buttonsFiller" alignment="expand_top"
+			type="horizontalGlue" />
+		<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#OkButton"
+			actionListener="Ok" />
+		<jfd:button id="CancelButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CancelButton"
+			actionListener="Cancel" />
+	</jfd:container>
+
+</jfd:form>

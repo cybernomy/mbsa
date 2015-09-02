@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: MPSLineMt.mfd.xml,v 1.5 2007/07/30 10:36:07 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.planning.resources.formelements#MPSLine.FormMt.Title" helpTopic="planning#mpsline_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+
+ 		<jfd:field id="PlanningItem" readOnly="true" />
+ 		<jfd:field id="PlanningItem.Catalog" readOnly="true" sameLine="true" />
+		<jfd:field id="BucketOffset" />
+		<jfd:field id="BucketOffsetDate" />
+		<jfd:field id="BucketEndDate" sameLine="true" />
+		<jfd:field id="QtyAvailable" />
+		<jfd:field id="SafetyLevelQty" sameLine="true" />
+		<jfd:field id="SalesOrderQty" />
+		<jfd:field id="PurchaseOrderQty" sameLine="true" />
+		<jfd:field id="SalesForecastQty" />
+		<jfd:field id="PurchaseForecastQty" sameLine="true"/>
+		<jfd:field id="SalesQty" />
+		<jfd:field id="PurchaseQty" sameLine="true"/>
+		<jfd:field id="DependantDemand" />
+		<jfd:field id="ProductionQty" sameLine="true"/>
+		<jfd:field id="LiveProductionDemand" />
+		<jfd:field id="MpsOrdered" />
+		<jfd:field id="FirmPlanSuggested" sameLine="true" />
+		<jfd:field id="PlannedQty" />
+		<jfd:field id="AdjustmentQty" sameLine="true" />
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />							
+	</jfd:container>
+	
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

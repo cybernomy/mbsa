@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: toc.xml,v 1.1 2006/12/17 13:25:07 konyashkina Exp $ -->
+
+<toc version="1.0">
+
+   <tocitem text="Нормы выдачи">
+	<tocitem text="Нормы выдачи спецодежды" target="ovrnormhd_html" />
+	<tocitem text="Спецификация" target="ovrnormsp_html" />
+   </tocitem>	
+  
+   <tocitem text="Лицевые карточки сотрудников">
+   	<tocitem text="Лицевые карточки сотрудников" target="ovrcard_html" />
+        <tocitem text="Размеры" target="ovrsize_html" />
+	<tocitem text="История выдачи">
+	    <tocitem text="История выдачи" target="ovrhist_html" />
+	    <tocitem text="Изменения состояния" target="ovrchng_html" />
+	    <tocitem text="История погашений" target="cancellation_html" />
+	</tocitem>   
+	<tocitem text="Создание документа на выдачу">
+	    <tocitem text="Создание документа на выдачу" target="docrel_html" />
+	    <tocitem text="Этап 1" target="doc1_html" />
+	    <tocitem text="Этап 2" target="doc2_html" />
+	</tocitem>  
+	<tocitem text="Документ на списание">
+	    <tocitem text="Документ на списание" target="docend_html" />
+	    <tocitem text="Этап 1" target="end1_html" />
+	    <tocitem text="Этап 2" target="end2_html" />
+	</tocitem>  
+  </tocitem>
+  
+   <tocitem text="Документооборот">
+	<tocitem text="Выдача" target="rel_html" />
+	<tocitem text="Ввод в эксплуатацию" target="expl_html" />
+	<tocitem text="Вывод из эксплуатации" target="explend_html" /> 
+   </tocitem>	
+  
+</toc>

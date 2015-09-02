@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.warehouse.model.StockBatch" table="STOCKBATCH">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">STOCKBATCH_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="StockCard" class="com.mg.merp.warehouse.model.StockCard">
+      <column name="STOCKCARD_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="StockKind" class="com.mg.merp.warehouse.model.StockKind">
+      <column name="STOCK_KIND_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Contractor" class="com.mg.merp.reference.model.Contractor">
+      <column name="CONTRACTOR_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Owner" class="com.mg.merp.reference.model.Contractor">
+      <column name="OWNER_ID" not-null="false" />
+    </many-to-one>
+    <property name="BeginQuan" type="java.math.BigDecimal">
+      <column name="BEGINQUAN" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="EndQuan" type="java.math.BigDecimal">
+      <column name="ENDQUAN" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="PriceNat" type="java.math.BigDecimal">
+      <column name="PRICENAT" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="PriceCur" type="java.math.BigDecimal">
+      <column name="PRICECUR" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="CurrencyCode" type="java.lang.String">
+      <column name="CURRENCY_CODE" length="5" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="DocType" type="java.lang.String">
+      <column name="DOCTYPE" length="15" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="DocNumber" type="java.lang.String">
+      <column name="DOCNUMBER" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="DocDate" type="java.util.Date">
+      <column name="DOCDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="CreateDate" type="java.util.Date">
+      <column name="CREATEDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="BestBefore" type="java.util.Date">
+      <column name="BESTBEFORE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="NumberLot" type="java.lang.String">
+      <column name="NUMBER_LOT" length="50" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="VendorLot" type="java.lang.String">
+      <column name="VENDOR_LOT" length="50" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Certificate" type="java.lang.String">
+      <column name="CERTIFICATE" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Comment" type="java.lang.String">
+      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="BeginQuan2" type="java.math.BigDecimal">
+      <column name="BEGINQUAN2" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="EndQuan2" type="java.math.BigDecimal">
+      <column name="ENDQUAN2" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <many-to-one name="CustomsDeclaration" class="com.mg.merp.reference.model.CustomsDeclaration">
+      <column name="CUSTOMS_DECLARATION_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CountryOfOrigin" class="com.mg.merp.reference.model.Country">
+      <column name="COUNTRY_OF_ORIGIN_ID" not-null="false" />
+    </many-to-one>
+    <set name="SetOfWhSerialNum" inverse="true">
+      <key on-delete="cascade">
+        <column name="BATCH_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.warehouse.model.SerialNum" />
+    </set>
+    <set name="SetOfWhBinLocationDetail" inverse="true">
+      <key on-delete="cascade">
+        <column name="STOCKBATCH_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.warehouse.model.BinLocationDetail" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

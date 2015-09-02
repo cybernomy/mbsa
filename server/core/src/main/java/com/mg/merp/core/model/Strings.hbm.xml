@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.core.model.Strings" table="STRINGS">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <composite-id name="id" class="com.mg.merp.core.model.StringsId">
+      <key-property name="Section" type="java.lang.Integer">
+        <column name="SECTION" not-null="false" sql-type="INTEGER" />
+      </key-property>
+      <key-property name="Val" type="java.lang.Integer">
+        <column name="VAL" not-null="false" sql-type="INTEGER" />
+      </key-property>
+    </composite-id>
+    <property name="Text" type="java.lang.String">
+      <column name="TEXT" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+  </class>
+</hibernate-mapping>

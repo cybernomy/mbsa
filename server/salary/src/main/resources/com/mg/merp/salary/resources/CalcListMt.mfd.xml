@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: CalcListMt.mfd.xml,v 1.6 2007/07/09 08:35:35 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.salary.support.ui.CalcListMt" title="resource://com.mg.merp.salary.resources.formelements#CalcList.FormMt.Title" helpTopic="salary#calclist_html">
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.salary.resources.formelements#CalcList.Total"> 					
+			<jfd:field id="PositionFill.SlPositionUnique.Position.Name" readOnly="true" />
+			<jfd:field id="PositionFill.PersonalAccount.Personnel.Person.Surname" readOnly="true" />
+			<jfd:field id="PositionFill.PersonalAccount.Personnel.Person.Name" readOnly="true" />
+			<jfd:field id="PositionFill.PersonalAccount.Personnel.Person.Patronymic" readOnly="true" />		
+			<jfd:field id="PositionFill.PersonalAccount.Personnel.TableNumber" readOnly="true" />
+			<jfd:button id="Account" text="resource://com.mg.merp.salary.resources.dataitemlabels#CalcList.Button.Account" actionListener="EditPersonalAccount" /> 						
+			<jfd:button id="Personnel" sameLine="true" text="resource://com.mg.merp.salary.resources.dataitemlabels#CalcList.Button.Personnel" actionListener="EditPersonel" /> 								
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />				
+		</jfd:container>
+		
+		<jfd:container id="calcFields" alignment="expand_expand" layout="jfd:box" orientation="ver" tabTitle="resource://com.mg.merp.salary.resources.formelements#CalcList.Calc"> 		
+			<jfd:container id="buttonFields" layout="jfd:box" columns="3" alignment="expand_top">
+				<jfd:button id="OtherList" alignment="expand_expand" text="resource://com.mg.merp.salary.resources.dataitemlabels#CalcList.Button.OtherList" actionListener="ChangeCalcList" />
+				<jfd:button id="Previous" alignment="expand_expand" text="resource://com.mg.merp.salary.resources.dataitemlabels#CalcList.Button.Previous" actionListener="PreviousCalcPeriod" />				
+				<jfd:button id="Next" alignment="expand_expand" text="resource://com.mg.merp.salary.resources.dataitemlabels#CalcList.Button.Next" actionListener="NextCalcPeriod" />						
+			</jfd:container>
+	 		<jfd:container id="split" layout="jfd:split" orientation="ver" alignment="expand_expand">
+	 			<jfd:container id="sectionBox" layout="jfd:box" columns="1" alignment="expand_expand">
+	 				<jfd:maintenanceTable id="section" scroll="true"  alignment="expand_expand" label="resource://com.mg.merp.salary.resources.formelements#CalcList.Section">
+					</jfd:maintenanceTable>	 
+				</jfd:container>
+				<jfd:container id="calcListFeeBox" layout="jfd:box" columns="1" alignment="expand_expand">
+					<jfd:maintenanceTable id="calcListFee" scroll="true" alignment="expand_expand" label="resource://com.mg.merp.salary.resources.formelements#CalcList.Fee">
+					</jfd:maintenanceTable>
+					<jfd:container id="summaFields" layout="jfd:box" orientation="hor" columns="1" alignment="expand_top"> 		
+						<jfd:field id="TotalSumma" readOnly="true" />	
+						<jfd:field id="IsClosed" />
+						<jfd:field id="NeedParams" enabled="false" />
+						<jfd:field id="IsCalculated"  enabled="false" />
+					</jfd:container>
+				</jfd:container>
+			</jfd:container>
+		</jfd:container>
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

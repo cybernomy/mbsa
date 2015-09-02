@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ===================================================================== -->
+ <!--  Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.		   		   -->
+ <!--  All rights reserved						                           -->
+ <!-- 									                                   -->
+ <!--  This program is the proprietary and confidential information	       -->
+ <!--  of BusinessTechnology, Ltd. and may be used and disclosed only	   -->
+ <!--  as authorized in a license agreement authorizing and		           -->
+ <!--  controlling such use and disclosure				                   -->
+ <!--									                                   -->
+ <!--  Millennium Business Suite Anywhere System.			               -->
+ <!-- ==================================================================== -->
+
+ <!-- $Id: AccRevaluateDlg.mfd.xml,v 1.1 2008/04/29 05:30:03 alikaev Exp $ -->
+ 
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="10" controller="com.mg.merp.account.support.ui.AccRevaluateDlg" title="" width="480" height="450">
+	<jfd:container id="fields" layout="jfd:box"  columns="1" alignment="expand_expand" orientation="ver" verticalGap="10">
+		<jfd:border style="bevel" type="raised" />
+		<jfd:field id="revalDate" alignment="expand_top" text="resource://com.mg.merp.account.resources.formelements#AccRevaluateDlg.RevalDate"/>
+		<jfd:container id="values" layout="jfd:box"  alignment="expand_top" orientation="hor" horizontalGap="10" label="resource://com.mg.merp.account.resources.formelements#AccRevaluateDlg.Value">
+			<jfd:field id="kind" alignment="left_expand"/>
+			<jfd:field id="value" alignment="right_expand"/>
+		</jfd:container>
+		<jfd:container id="document" layout="jfd:box" longField="true" alignment="expand_top" label="resource://com.mg.merp.account.resources.formelements#DocEcon.Title" >
+			<jfd:field id="docType" showLabel="false" alignment="left_expand"/>
+			<jfd:field id="docNumber" showLabel="false" alignment="expand_expand" longField="true"/>			
+			<jfd:field id="docDate" showLabel="false" alignment="right_expand" />				
+		</jfd:container>		
+		<jfd:container id="baseDocument" layout="jfd:box" longField="true" alignment="expand_top" label="resource://com.mg.merp.account.resources.formelements#BaseDocEcon.Title" >
+			<jfd:field id="baseDocType" showLabel="false" alignment="left_expand"/>
+			<jfd:field id="baseDocNumber" showLabel="false" alignment="expand_expand" longField="true"/>			
+			<jfd:field id="baseDocDate" showLabel="false" alignment="right_expand"/>				
+		</jfd:container>		
+		<jfd:container id="accFields" layout="jfd:box" columns="1" alignment="center_center" label="resource://com.mg.merp.account.resources.formelements#AccRevaluateDlg.AccPlan">
+		 	<jfd:field id="AccPlan" showLabel="false"/> 
+		 	<jfd:field id="anl1" showLabel="false"/> 
+		 	<jfd:field id="anl2" showLabel="false"/> 
+		 	<jfd:field id="anl3" showLabel="false"/> 
+		 	<jfd:field id="anl4" showLabel="false"/> 
+		 	<jfd:field id="anl5" showLabel="false"/> 		 				 				 				 				 	
+		</jfd:container>		
+	</jfd:container>
+	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+	
+</jfd:form>

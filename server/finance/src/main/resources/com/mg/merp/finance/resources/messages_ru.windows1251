@@ -1,0 +1,47 @@
+# Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.
+# All rights reserved
+#
+# This program is the proprietary and confidential information
+# of BusinessTechnology, Ltd. and may be used and disclosed only
+# as authorized in a license agreement authorizing and
+# controlling such use and disclosure
+#
+# Millennium Business Suite Anywhere System.
+
+# $Id: messages_ru.windows1251,v 1.10 2009/02/16 07:47:27 sharapov Exp $
+
+OperationTitle=%s. От %s. %s. На сумму %.4f %s
+TurnAccountInvalidPeriodRange=Задан неверный диапазон периодов!
+TurnAccountInvalidAccountsList=Не выбран счёт!
+PeriodClosed=Период закрыт
+InvalidPeriod=Период не существует
+TurnAccountSelectedAcounts=Выбрано счетов: %1$d
+FinPeriodIsCross=Неверный диапазон дат
+FinPeriodIsInUse=Невозможно удалить период, в котором имеются операции!
+FeatureNotNull=Необходимо заполнить поле 'Признак'
+ParentNotNull=Необходимо установить курсор на строку со спецификацией,\n а потом добавить признак!
+
+DstAccountAnalitycs1=Аналитика 1-го уровня счета приемника
+DstAccountAnalitycs2=Аналитика 2-го уровня счета приемника
+DstAccountAnalitycs3=Аналитика 3-го уровня счета приемника
+DstAccountAnalitycs4=Аналитика 4-го уровня счета приемника
+DstAccountAnalitycs5=Аналитика 5-го уровня счета приемника
+SrcAccountAnalitycs1=Аналитика 1-го уровня счета источника
+SrcAccountAnalitycs2=Аналитика 2-го уровня счета источника
+SrcAccountAnalitycs3=Аналитика 3-го уровня счета источника
+SrcAccountAnalitycs4=Аналитика 4-го уровня счета источника
+SrcAccountAnalitycs5=Аналитика 5-го уровня счета источника
+Feature=Признак
+FeatureAnalitycs1=Аналитика признака 1-го уровня
+FeatureAnalitycs2=Аналитика признака 2-го уровня
+FeatureAnalitycs3=Аналитика признака 3-го уровня
+FeatureAnalitycs4=Аналитика признака 4-го уровня
+FeatureAnalitycs5=Аналитика признака 5-го уровня
+
+AccountAnalytics1=Аналитика 1-го уровня
+AccountAnalytics2=Аналитика 2-го уровня
+AccountAnalytics3=Аналитика 3-го уровня
+AccountAnalytics4=Аналитика 4-го уровня
+AccountAnalytics5=Аналитика 5-го уровня
+
+EntityNotExists={0} [ID:{1}] не существует

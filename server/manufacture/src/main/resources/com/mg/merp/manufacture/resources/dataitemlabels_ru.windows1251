@@ -1,0 +1,183 @@
+# $Id: dataitemlabels_ru.windows1251,v 1.9 2007/07/30 10:26:38 safonov Exp $
+
+Comment=Примечание
+Description=Описание
+EffOnDate=Дата начала действия
+EffOffDate=Дата окончания действия
+ResourceGroup=Группа ресурсов
+
+JobNumber=Номер
+JobDate=Дата
+JobStatus=Статус
+JobStatus.Created=Новый
+JobStatus.Running=Запущен
+JobStatus.Stopped=Остановлен
+JobStatus.Completed=Завершён
+Job.StartDate=Планируемая дата запуска
+StartJob=Планируемое время запуска в тиках от начала дня
+Job.EndDate=Планируемая дата окончания
+FinishJob=Планируемое время окончания в тиках от начала дня
+Job.Cell=Производственная линия
+Job.Plan.Priority=Приоритет
+Job.MrpEndDate=Конечная дата завершения согласно расчёту MRP
+PriorityFreezeFlag=Признак фиксации приоритета
+Job.MethodPlan=Метод планирования
+SchedDirection=Направление планирования
+SchedDir.Forward=Вперёд
+SchedDir.Backward=Назад
+Job.UseMoveTimes=Учитывать времена перемещений
+Job.UseQueueTimes=Учитывать время в очереди
+UseFiniteCapacity=Планировать в ограниченных мощностях
+Job.DefSrcStock=Склад-источник для материалов 
+Job.DefDstStock=Склад-приёмник для готовой продукции 
+Job.DefSrcMol=МОЛ склада-источника
+Job.DefDstMol=МОЛ склада-приёмника
+Job.Catalog=Товар 
+Job.QtyScrapped=Отбракованное количество
+Job.QtyReleased=Запущенное количество
+Job.QtyComplete=Изготовленное количество
+RollUpDateTime=Время последнего замещения стоимости
+ChangeJobApproved=Разрешать изменять СИ ЗНП
+
+ControlPointFlag=Признак контрольной точки
+OperNum=Номер
+JobRoute.StartDate=Запланированная дата запуска операции
+JobRoute.EndDate=Запланированная дата окончания операции
+EfficiencyFactor=Процент эффективности
+CompleteFlag=Признак завершения операции
+JobRoute.StartTick=Запланированное время начала операции в тиках
+JobRoute.EndTick=Запланированное время окончания операции в тиках
+JobRoute.MoveTimeUm=ЕИ времени перемещения между операциями
+JobRoute.SetupTimeUm=ЕИ постоянной составляющей времени операции
+JobRoute.RunTimeUm=ЕИ переменой составляющей времени операции
+JobRoute.SchedTimeUm=ЕИ времени выполнения операции не зависящее от размера партии
+SchedOffSetTimeUm=ЕИ времени смещения между началом предыдущей и началом текущей операции
+JobRoute.QueueTimeUm=ЕИ запланированного времени ожидания
+JobRoute.MoveTicks=Время перемещения между операциями
+JobRoute.SetupTicks=Постоянная составляющая времени операции
+JobRoute.RunTicks=Переменая составляющая времени операции
+JobRoute.SchedTicks=Независящее от размера партии время выполнения операции
+SchedOffsetTicks=Время смещения между началом предыдущей и началом текущей операции
+JobRoute.QueueTicks=Запланированное время ожидания
+FreezeScheduleFlag=Признак замороженного плана
+JobRoute.QtyComplete=Выпущено годной 
+JobRoute.QtyScrapped=Выпущено забракованной 
+JobRoute.QtyReceived=К выполнению
+JobRoute.QtyMoved=Передано на следующую операцию
+JobRoutRes.TimeSeqn=Номер временного интервала
+
+JobMater.ViewSequenc=Порядковый номер материала
+JobMater.ReporSequen=Порядковый номер материала для печати
+JobMaterial.Revision=Версия СИ
+JobMaterial.Catalog=Товар код наименование
+ResourceGroup=Группа ресурсов
+JobMaterial.MtlQty=Применяемость материала
+MtlBackflushFlag=Признак обратного списания материала
+MtlOhBackflushFlag=Признак обратного списания НР по материалу
+JobMater.MtlOhRate=Норма НР на материал
+JobMaterial.Currency=Валюта нормы НР на материал
+MtlCostCategory=Категория затрат на материал
+JobMaterial.MtlOhCostCategory=Категория затрат НР на материал
+JobMater.MtlOhRatio=Коэффициент НР на материал
+JobMater.ScrapFactor=Коэффициент брака
+BackflushZone=Зона склада для обратного списания
+JobMach.RunTimeMchUm=Время работы оборудования
+MchRateCurCode=Валюта нормы возмещения стоимости
+MchOhRateCurCode=Валюты нормы НР на оборудование
+
+JobMat.QuanRateFlag=Метод измерения расхода материалов
+QuanRateFlag.Time=На один час операции
+QuanRateFlag.Unit=На единицу готовой продукции
+QuanRateFlag.Fixed=Фиксированное количество на партию
+
+MtlOhAllocationFlag=Метод начисления НР на материал
+MtlOhAllocFlag.Unit=На единицу материала
+MtlOhAllocFlag.Cost=Коэффициент от стоимости ресурса
+MtlOhAllocFlag.Fixed=Фиксированная стоимость на партию
+
+MchBackflushFlag=Признак обратного списания возмещения стоимости
+MchOhBackflushFlag=Признак обратного списания НР
+RunTicksMch=Время работы оборудования
+JobMach.RunTimeMchUm=ЕИ времени работы оборудования
+JobMachine.MchRate=Норма возмещения стоимости
+MchOhRateCurCode=Валюта нормы возмещения стоимости
+JobMachine.MchOhRate=Норма НР на оборудование
+MchRateCurCode=Валюта нормы НР на оборудование
+MchCostCategory=Категория затрат на оборудование
+MchOhCostCategory=Категория затрат НР на оборудование
+
+MchOhAllocationFlag=Метод начисления НР
+MchOhAllocationFlag.Time=На 1 час операции
+MchOhAllocationFlag.Unit=На единицу готовой продукции
+MchOhAllocationFlag.Cost=Процент от стоимости работы
+MchOhAllocationFlag.Fixed=Фиксированная стоимость на партию готовой продукции
+
+TimeRateFlag=Метод измерения расхода времени
+TimeRateFlag.Time=Время на единицу готовой продукции
+TimeRateFlag.Rate=Единиц готовой продукции на время
+TimeRateFlag.Fixed=Фиксированное время на партию готовой продукции
+
+MchRecoveryFlag=Метод начисления возмещения стоимости
+MchRecoveryFlag.Time=На один час операции
+MchRecoveryFlag.Unit=На единицу готовой продукции
+MchRecoveryFlag.Fixed=Фиксированная стоимость на партию готовой продукции
+
+RunTicksLbr=Время работы РС
+RunTimeLbrUm=ЕИ времени работы РС
+LbrRate=Норма на один час работы
+LbrRateCurCode=Валюта нормы на один час работы
+LbrOhRate=Норма НР
+LbrOhRateCurCode=Валюта нормы НР
+LbrBackflushFlag=Признак обратного списания стоимости
+LbrOhBackflushFlag=Признак обратного списания НР
+LbrCostCategory=Категория затрат на РС
+LbrOhCostCategory=Категория затрат НР на РС
+LbrNumber=Коэффициент умножения мощности
+LbrOhRatio=Коэффициент НР
+
+LbrOhAllocationFlag=Метод начисления НР
+LbrOhAllocFlag.Time=На единицу времени
+LbrOhAllocFlag.Unit=На единицу готовой продукции
+LbrOhAllocFlag.Cost=Процент от стоимости работы
+LbrOhAllocFlag.Fixed=Фиксированная стоимость на партию ГП
+
+Crew=Бригада
+Job=Заказ-наряд
+Oper=Операция
+WorkCenter=Рабочий центр
+
+MchOhRatio=Коэффициент НР
+MchNumber=Коэффициент умножения мощности
+
+BackFlushFlag=Обратное списание
+InpDocHead.Contr=Подразделение
+InpDocHead.Employee=Сотрудник
+
+ScrapType=Вид потерь
+ScrapReason=Причины потерь
+CauseContractor=Подразделение
+DetectContractor=Подразделение
+Employee=Сотрудник
+
+Job=Заказ-наряд
+
+VarianceType=Тип отклонения
+VarianceType.MaterialCostVariance=Стоимость материала
+VarianceType.MaterialUsageVariance=Количество материала
+VarianceType.LaborRateVariance=Оплата труда РС
+VarianceType.LaborUsageVariance=Время по РС
+VarianceType.MachineRateVariance=Возмещение оборудования
+VarianceType.MachineUsageVariance=Время по оборудованию
+
+Job.RootJob=Корневой ЗНП
+Job.ParentJob=Родительский ЗНП
+JobRoute=Операция
+
+Cond.OutputDocDateFrom=Дата акта выпуска продукции с
+Cond.OutputDocDateTill=по
+Cond.OutputDocType=Тип акта выпуска продукиии
+Cond.OutputDocNumber=Номер акта выпуска продукиии
+Cond.Job.StartDateFrom=Диапазон планируемых дат запуска с
+Cond.Job.StartDateTill=по
+Cond.Job.EndDateFrom=Диапазон планируемых дат окончания с
+Cond.Job.EndDateTill=по

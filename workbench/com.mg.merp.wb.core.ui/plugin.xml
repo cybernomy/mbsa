@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+<extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer class="com.mg.merp.wb.core.ui.preferences.support.PreferenceInitializer"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="com.mg.merp.wb.core.ui.preferences.MainPreferencePage"
+            id="com.mg.merp.wb.core.ui.preferences.Merp"
+            name="%pref.main.label"/>
+      <page
+            category="com.mg.merp.wb.core.ui.preferences.Merp"
+            class="com.mg.merp.wb.core.ui.preferences.SecurityPreferencePage"
+            id="com.mg.merp.wb.core.ui.preferences.Merp.Security"
+            name="%pref.main.security.label"/>
+      <page
+            category="com.mg.merp.wb.core.ui.preferences.Merp"
+            class="com.mg.merp.wb.core.ui.preferences.ReportPreferencePage"
+            id="com.mg.merp.wb.core.ui.preferences.Merp.Report"
+            name="%pref.main.reports.label"/>
+      <page
+            category="com.mg.merp.wb.core.ui.preferences.Merp"
+            class="com.mg.merp.wb.core.ui.preferences.DocflowPreferencePage"
+            id="com.mg.merp.wb.core.ui.preferences.Merp.Docflow"
+            name="%pref.main.docflow.label"/>
+      <page
+            category="com.mg.merp.wb.core.ui.preferences.Merp"
+            class="com.mg.merp.wb.core.ui.preferences.WorkflowPreferencePage"
+            id="com.mg.merp.wb.core.ui.preferences.Merp.Workflow"
+            name="%pref.main.workflow.label"/>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            id="com.mg.merp.wb.views"
+            name="MBSA"/>
+   </extension>
+</plugin>

@@ -1,0 +1,12 @@
+OrgUnitNotFound=Запись журнала платежей не может быть записана, так как ни один из контрагентов "От кого", "Кому" не связан с подразделениями компании.
+PaymentDstFolderInvalid=В образце записи журнала платежей не установлена папка-приемник!
+PaymentCantBeAllocated=Документ не может быть отработан в журнале платежей, так как его тип не определен ни в одной из групп документов!
+PaymentFullAllocated=Платеж для данной группы документов полностью распределен.
+
+InteractiveAllocColumnNameCatCode=Код
+InteractiveAllocColumnNameCatName=Наименование
+InteractiveAllocColumnNameMesure=ЕИ
+InteractiveAllocColumnNameQty=Количество
+InteractiveAllocColumnNameAllocQty=Распределенное количество
+InteractiveAllocColumnNameSum=Сумма
+InteractiveAllocColumnNameAllocSum=Распределенная сумма

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: PriceListPermissionsForm.mfd.xml,v 1.1 2008/05/13 09:57:20 alikaev Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.reference.support.ui.PriceListPermissionsForm" title="resource://com.mg.merp.reference.resources.formelements#PriceListPermissionsForm.Title">
+	<jfd:shuttle id="permissions" alignment="expand_expand" leadingHeader="resource://com.mg.merp.reference.resources.formelements#PriceListPermissionsForm.NotPerm" trailingHeader="resource://com.mg.merp.reference.resources.formelements#PriceListPermissionsForm.Perm" />
+	<jfd:container id="buttons" layout="jfd:box" alignment="expand_bottom">
+		<jfd:filler id="buttonsFiller" alignment="expand_top" type="horizontalGlue" />
+		<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CloseButton" actionListener="Ok" />
+	</jfd:container>
+</jfd:form>

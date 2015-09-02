@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: BankDocumentOutMt.mfd.xml,v 1.10 2007/11/08 14:53:38 sharapov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.BankDocumentOutMt" title="resource://com.mg.merp.account.resources.formelements#BankDocumentOut.FormMt.Title" helpTopic="account#bankdocout1_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top" >
+ 		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title" >
+	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			
+			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
+			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
+	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
+			<jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml" />					
+		 	<!--
+		 	<jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml" />
+		 	 -->
+		 	<jfd:field id="SumCur" readOnly="true" />			
+			<jfd:field id="SumNat" readOnly="true" sameLine="true"/>				
+			<jfd:field id="ClearSumma"/>
+			<jfd:field id="From" searchHelp="com.mg.merp.account.support.ui.FromContractorExSearchHelp" />	
+			<jfd:field id="PayerBankReq" />			
+			<jfd:field id="PayerBankReq.Account" sameLine="true" enabled="false"/>						
+			<jfd:field id="To" searchHelp="com.mg.merp.account.support.ui.ToContractorExSearchHelp" />	
+			<jfd:field id="RecipientBankReq"  />
+			<jfd:field id="RecipientBankReq.Account" sameLine="true" enabled="false"/>							
+			<jfd:field id="Nds1Rate"  />	
+			<jfd:field id="Nds2Rate" sameLine="true"/>	
+			<jfd:field id="Nds1Summa"  />					
+			<jfd:field id="Nds2Summa" sameLine="true"/>						
+			<jfd:field id="SummaWithNds1"  />
+			<jfd:field id="SummaWithNds2" sameLine="true"/>
+			<jfd:button id="CalculateNdsSum" text="resource://com.mg.merp.account.resources.formelements#CalculateNdsSumButton.Title" actionListener="CalculateNdsSum" />
+			<jfd:button id="CalculateDocSum" sameLine="true" text="resource://com.mg.merp.account.resources.formelements#CalculateDocSumButton.Title" actionListener="CalculateDocSum" />	
+			<jfd:field id="PayWay"  />	
+			<jfd:field id="PayTarget" sameLine="true"/>	
+			<jfd:field id="PayType"  />	
+			<jfd:field id="PayTime" sameLine="true"/>	
+			<jfd:field id="PayCode"  />	
+			<jfd:field id="PayTurn" sameLine="true"/>																
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																				
+		</jfd:container> 	
+ 		<jfd:container id="infoFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.account.resources.formelements#BankOut.Info" >		
+			<jfd:comboBox id="PayerStatus" useIndex="false" label="resource://com.mg.merp.account.resources.formelements#Account.BankDocument.PayerStatus">
+				<jfd:items>
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Empty" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.One" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Two" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Three" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Four" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Five" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Six" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Seven" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Eight" />
+				</jfd:items>
+			</jfd:comboBox>
+			<jfd:field id="Kbk" />		
+			<jfd:field id="Okato" />
+			<jfd:comboBox id="PaymentBaseIdx" useIndex="false" label="resource://com.mg.merp.account.resources.formelements#Account.BankDocument.PaymentBase">
+				<jfd:items>
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Empty" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.TP" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.BF" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.TR" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.RS" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.OT" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.RT" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.VU" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.PR" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.AP" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.AR" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Zero" />
+				</jfd:items>
+			</jfd:comboBox>
+			<jfd:container id="PaymentPeriod" layout="jfd:box" columns="3" alignment="expand_expand" label="resource://com.mg.merp.account.resources.formelements#Account.BankDocument.PaymentPeriod">
+				<jfd:comboBox id="TaxPeriodIdx1" useIndex="false" alignment="left_expand" >
+					<jfd:items>
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Empty" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.D1" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.D2" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.D3" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.MS" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.KV" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.PL" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.GD" />
+					</jfd:items>
+				</jfd:comboBox>
+				<jfd:comboBox id="TaxPeriodIdx2" useIndex="false" alignment="expand_expand">
+					<jfd:items>
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Empty" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.DoubleZero" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.One" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Two" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Three" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Four" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Five" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Six" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Seven" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Eight" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Nine" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Ten" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Eleven" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Twelve" />
+					</jfd:items>
+				</jfd:comboBox>
+				<jfd:comboBox id="TaxPeriodIdx3" useIndex="false" alignment="expand_expand">
+					<jfd:items>
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Empty" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Year2001" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Year2002" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Year2003" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Year2004" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Year2005" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Year2006" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Year2007" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Year2008" />
+						<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Year2009" />
+					</jfd:items>
+				</jfd:comboBox>
+			</jfd:container>
+			<jfd:field id="DocNumberIdx" />							
+			<jfd:field id="DocDateIdx" />
+			<jfd:comboBox id="PaymentTypeIdx" useIndex="false" label="resource://com.mg.merp.account.resources.formelements#Account.BankDocument.PaymentType">
+				<jfd:items>
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Empty" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.NS" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.PL" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.GP" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.VZ" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.AV" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.PE" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.PC" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.SA" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.ASh" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.ISh" />
+					<jfd:item value="resource://com.mg.merp.account.resources.formelements#Value.Zero" />
+				</jfd:items>
+			</jfd:comboBox>
+		</jfd:container>
+		<jfd:field id="Comment" alignment="expand_expand" tabTitle="resource://com.mg.merp.account.resources.formelements#CommentField.Title" />
+ 		<jfd:field id="Description" alignment="expand_expand" tabTitle="resource://com.mg.merp.account.resources.formelements#DescriptionField.Title" />
+	</jfd:container> 	
+	
+	<jfd:include name="com/mg/merp/document/resources/DefaultDocMaintenanceFooterMacros.xml" />
+	
+</jfd:form>
+		

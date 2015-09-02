@@ -1,0 +1,137 @@
+# $Id: formelements_ru.windows1251,v 1.16 2008/03/14 13:41:46 konyashkina Exp $
+
+PmcResource.FormBr.Title=Средства платежа
+PmcResource.FormMt.Title=Средство платежа
+PmcResource.Dates.Title=Дата действия
+PmcResource.Total.Tab=Основные сведения
+PmcResource.Param.Tab=Параметры создания документов
+PmcResource.CatalogPosition=Позиция каталога
+
+Cond.PmcResource=Условия отбора средств платежа
+
+Period.FormBr.Title=Периоды планирования
+Period.FormMt.Title=Период планирования
+Period.Date.Title=Дата
+
+LiabilitySearchForm.Title=Реестр обязательств
+Liability.FormBr.Title=Реестр обязательств
+Liability.FormMt.Title=Обязательство
+Liability.PreferencedResource=Предпочтительное средство платежа
+
+Cond.Liability=Условия отбора реестра обязательств
+
+Currency=Валюта
+PartnerFrom=От кого
+PartnerTo=Кому
+Document=Документ: тип/номер/дата
+BaseDocument=Документ-основание: тип/номер/дата
+Contract=Контракт: тип/номер/дата
+
+Liab.Resource=Предпочтительное средство платежа
+
+LiabilityModel.FormBr.Title=Образцы обязательств
+LiabilityModel.FormMt.Title=Образец обязательства
+
+Version.FormBr.Title=Планирование платежей-версии календаря
+Version.FormMt.Title=Планирование платежей-версия календаря
+Version.ShowStatus=Показать статус версии
+Version.SetStatus=Установить статус версии
+Version.ShowPlanPayment=Планирование платежей
+Cond.Version=Условия отбора версий календаря
+
+Execution.FormBr.Title=Оперативное управление платежами
+
+Plan.FormBr.Title=Планирование платежей
+
+VersionStatus.FormBr.Title=Статусы версий
+Cond.Liability.Direction=Направление движения средств
+
+Pmc.Period.MenuItem.CreatePeriod=Создать периоды
+Pmc.CreatePeriodsDialog.Title=Создать периоды
+Pmc.CreatePeriodsDialog.LabelYear=Год
+Pmc.CreatePeriodsDialog.LabelHalfYear=Полугодие
+Pmc.CreatePeriodsDialog.LabelQuarter=Квартал
+Pmc.CreatePeriodsDialog.LabelMonth=Месяц
+Pmc.CreatePeriodsDialog.LabelTenDays=Декада
+Pmc.CreatePeriodsDialog.LabelWeek=Неделя
+Pmc.CreatePeriodsDialog.LabelDay=День
+Pmc.CreatePeriodsDialog.LabelBeginDate=Дата начала формирования
+Pmc.CreatePeriodsDialog.LabelUpLevelQuantity=Количество периодов верхнего уровня
+Pmc.CreatePeriodsDialog.LabelInerval=Интервалы
+
+PmcConfig.FormMt.Title=Конфигурация модуля "Платежный календарь"
+PmcConfig.FormMt.CurrencyFields.Title=Валюта
+PmcConfig.FormMt.Currency=Национальная валюта
+PmcConfig.FormMt.CurrencyPrec=Точность денежных величин, знаков после запятой
+
+PmcDialog.Title=Управление платежами
+PmcDialog.ExecuteButton=Исполнить обязательство
+PmcDialog.TransferButton=Переместить средства
+PmcDialog.CreateButton=Сформировать документы
+PmcDialog.LiabilityTab=Обязательства
+PmcDialog.ExecutionTab=Исполнения
+PmcDialog.Approve=Утвердить
+PmcDialog.DisApprove=Снять утверждение
+PmcDialog.Remove=Удалить
+PmcDialog.ShowCreatedDocument=Показать созданный документ
+PmcDialog.DeleteCreatedDocument=Удалить созданный документ
+PmcDialog.RefreshButton=Обновить
+PmcDialog.Date=Дата
+PmcDialog.ExecutionByLiability=По обязательству
+PmcDialog.IsShowExecutedSum=Показывать исполненную сумму текущего обязательства
+PmcDialog.ExecutedSum=Исполненная сумма
+PmcDialog.IsShowResourceBalanceSum=Показывать остаток текущего средства платежа
+PmcDialog.ResourceBalanceSum=Остаток
+
+PmcPeriodSearchForm.Title=Периоды планирования
+PmcFolderSearchForm.Title=Выберите папку
+PmcFolderSearchForm.ChooseButton=Выбрать
+
+VersionStatusDlg.Title=Статус версии
+VersionStatusDlg.PmcPeriodName=Период
+VersionStatusDlg.DateFrom=с
+VersionStatusDlg.DateTill=по
+VersionStatusDlg.CreateDate=Дата создания
+VersionStatusDlg.Creator=Создатель
+VersionStatusDlg.ChoosePmcPeriod=...
+
+ExecutionMt.Title=Исполнение
+ExecutionMt.SumModuleCur=Сумма в валюте модуля
+ExecutionMt.Status=Статус
+
+ExecutionDlg.Title=Введите параметры
+ExecutionDlg.SumToExecute=Сумма исполнения
+ExecutionDlg.ExecutionDate=Дата исполнения
+ExecutionDlg.DateToExecute=Исполнить
+
+TransferDlg.Title=Внутреннее перемещение средств
+TransferDlg.Expense=Расход
+TransferDlg.Income=Приход
+TransferDlg.Date=Дата
+TransferDlg.Sum=Сумма
+TransferDlg.Compute=Рассчитать
+
+ResourceSearchForm.Title=Средства платежа
+PmcPlaningRest.Title=Условия отбора средств платежа
+PmcPlaningRest.IsExclude=Не включать данное средство платежа
+
+ResourceFolder=Группа
+Resource=Средство платежа
+
+PmcPlaningDlg.Title=Планирование платежей
+PmcPlaningDlg.Horizont=Горизонт
+PmcPlaningDlg.Level=Уровень детализации
+PmcPlaningDlg.Refresh=Обновить
+
+ExecuteLiability=Исполнить обязательство
+TransferResources=Переместить средства
+Restriction=Условия отбора
+
+Liability.Patterns=Образцы обязательств
+Liability.ShowLiabilityModel=Поддержка образцов
+Liability.InsertLiabilityModel=Вставка с образцом
+
+Liability.ViewDocs=Просмотреть документ
+Liability.ViewDoc=Документ
+Liability.ViewBaseDoc=Документ-основание
+Liability.ViewContract=Контракт

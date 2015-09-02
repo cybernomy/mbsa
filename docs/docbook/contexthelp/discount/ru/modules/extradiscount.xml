@@ -1,0 +1,32 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_extradiscount SYSTEM "modules/extradiscount.xml">
+<!ENTITY merp "Millennium ERP">
+]> -->
+<chapter id="extradiscount">
+  <title>Дополнительные скидки</title>
+
+    <para>В дисконтных картах могут быть предусмотрены дополнительные скидки. </para>
+    
+    <screenshot>
+      <mediaobject><imageobject><imagedata fileref="images/extradiscount.gif"/></imageobject></mediaobject>
+    </screenshot>
+    
+    <para><guibutton>Наименование</guibutton>. Название дополнительной скидки. </para>
+    
+    <para><guibutton>Дополнительная скидка</guibutton>. Значение дополнительной скидки. </para>
+    
+    <para><guibutton>Планируемая сумма продаж</guibutton>. Сумма, на которую
+    планируется совершить продажи.  </para>
+    
+    <para><guibutton>Планируемая дата завершения работ</guibutton>. До какого
+    срока действует скидка.</para>
+    
+    <para><guibutton>Фактическая сумма продаж</guibutton>. Сумма фактических продаж. </para>
+    
+    <para><guibutton>Комментарии</guibutton>. В этом поле можно записать любой 
+    текстовый комментарий к дополнительной скидке. </para>
+    
+  </chapter>

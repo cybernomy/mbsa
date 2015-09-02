@@ -1,0 +1,54 @@
+Name=Наименование
+Disc.Alg=Бизнес-расширение (BAi)
+Disc.Formula=Формула
+GlobalCoeff.CatFolder=Папка каталога
+GlobalCoeff.Catalog=Позиция каталога
+GlobalCoeff.Coefficient=Коэффициент
+
+ExtraDisc.Discount=Дополнительная скидка, %
+ExtraDisc.PlanSale=Планируемая сумма продаж
+ExtraDisc.Factsale=Фактическая сумма продаж
+ExtraDisc.PlanDate=Планируемая дата завершения работ
+ExtraDisc.Comments=Комментарии
+Discount.ExtraDisc.DateFrom=Действует с
+Discount.ExtraDisc.DateTill=Действует по
+Discount.ExtraDiscount.IsActive=Действует
+
+CardHist.Discount=Новое значение скидки
+CardHist.TimeStamp=Дата
+CardHist.User=Оператор
+CardHist.Comments=Комментарии
+
+Card.CardNum=Номер карты
+Card.Owner=Владелец
+Discount.Card.Discount=Базовая скидка
+Discount.Card.CredLimit=Лимит товарного кредита
+Discount.Card.CredDepth=Глубина товарного кредита
+Card.IsActive=Карта активна
+Card.Comments=Комментарии
+
+Card.Contractor=Контрагент
+
+Discount.Promotion.Name=Наименование
+Discount.Promotion.Code=Код
+Discount.Promotion.Priority=Приоритет
+Discount.Promotion.Number=Номер
+Discount.Promotion.IsActive=Действует
+Discount.Promotion.Comment=Примечания
+Discount.Promotion.DateFrom=Дата начала
+Discount.Promotion.DateTill=Дата окончания
+Discount.Promotion.DateApprove=Дата утверждения
+
+Discount.PromotionLine.Discount=Процент скидки/наценки
+Discount.PromotionLine.Price=Цена
+Discount.PromotionLine.IsActive=Действует
+
+Discount.PromotionType=Тип
+Discount.PromotionType.Code=Код
+Discount.PromotionType.Name=Наименование
+Discount.PromotionType.Description=Описание
+
+IsApplyDiscountGroup=Применять группу с/н
+IsApplyDiscountOnDoc=Применять с/н на документ
+
+Discount.BAi=Бизнес-расширение расчета

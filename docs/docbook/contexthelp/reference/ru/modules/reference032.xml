@@ -1,0 +1,70 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_ref032 SYSTEM "modules/reference032.xml">
+<!ENTITY merp "Millennium Business Suite Anywhere">
+<!ENTITY ref "Прикладные справочники">
+]> -->
+<chapter id="ref032">
+   <title>Константы</title>
+   
+   	<para>Вход в справочник &quot;Константы&quot; осуществляется через главное 
+	меню системы: 
+	<menuchoice>
+        <guimenu>Администрирование</guimenu>
+        <guisubmenu>Управление данными</guisubmenu>
+        <guimenuitem>Константы</guimenuitem>
+	</menuchoice>.
+	</para>
+	
+   	<para>В системе &merp; можно использовать справочник общесистемных 
+	констант, значения которых задаются пользователем и действуют определённое время.
+	Для каждой записи указываются следующие параметры:</para>
+	
+	<figure><title>Константа</title>
+	<mediaobject><imageobject>
+	<imagedata fileref="images/constant.gif"/>
+	</imageobject></mediaobject>
+	</figure>
+	
+	<para><guibutton>Код.</guibutton> Краткое уникальное наименование константы в системе.</para>
+	
+	<para><guibutton>Тип данных.</guibutton> Тип данных константы может быть:</para>
+	
+	<itemizedlist>
+		<listitem>Строка</listitem>
+		<listitem>Число целое</listitem>
+		<listitem>Число вещественное</listitem>
+		<listitem>Дата</listitem>
+	</itemizedlist>
+
+	<para><guibutton>Описание.</guibutton> Краткое описание константы.</para>
+	
+	<para>Константы имеют список значений с датами вступления в действие:</para>
+	
+	<figure>
+	<title>Значение константы</title>
+	<mediaobject><imageobject>
+	<imagedata fileref="images/const_val.gif"/>
+	</imageobject></mediaobject>
+	</figure>
+	
+	<para><guibutton>Значение</guibutton> должно соответствовать указанному типу 
+	данных константы (строка, число, дата). </para>
+	
+	<para><guibutton>Дата начала действия</guibutton> указывает срок вступления в силу 
+	этого значения.</para>
+	
+	<para>Значение константы перестаёт действовать, когда вступает в действие 
+	следующее значение (с большей датой начала действия).</para>
+	
+	<!-- <para>Для получения значения константы в алгоритме используйте функцию 	
+	<literal>function GetConstant(AConstName: string; ADate: TDateTime): variant;</literal> </para>
+	
+	<example>
+	<programlisting>v := GetConstant('КОНСТАНТА_1', Document('docdate'));</programlisting>
+	</example> -->
+	
+</chapter>

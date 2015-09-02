@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: OvrNormSpecMt.mfd.xml,v 1.5 2006/12/21 07:13:49 leonova Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.overall.support.ui.OvrNormSpecMt" title="resource://com.mg.merp.overall.resources.formelements#OvrNormSpec.FormMt.Title" helpTopic="overall#ovrnormhd_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.overall.resources.formelements#OvrNormSpec.Total.Tab" >			
+			<jfd:field id="OvrNormSpecName" />	
+			<jfd:field id="MeasureUpCode" />		
+			<jfd:field id="CatalogGroupsTypeId" sameLine="true" />	
+			<jfd:container id="shelfLifeFields" layout="jfd:box" label="resource://com.mg.merp.overall.resources.formelements#OvrNormSpec.Term" >
+				<jfd:field id="ShelfLife" showLabel="false" alignment="expand_expand" />
+				<jfd:field id="ShelfLifeMeas" showLabel="false" alignment="expand_expand" />
+			</jfd:container>
+			<jfd:field id="Quantity" />
+ 	  		<jfd:field id="IsDinch" sameLine="true"/>				 
+			<jfd:field id="IsPeriodic" editorType="comboBox"/>	
+			<jfd:field id="IsBasic" editorType="comboBox" sameLine="true"/>			
+			<jfd:field id="DocName" />	
+			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
+		</jfd:container>	
+
+		<jfd:maintenanceTable id="specLink" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.overall.resources.formelements#OvrNormSpec.Catalog.Tab">
+		</jfd:maintenanceTable>						
+				 								
+	</jfd:container>
+	
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

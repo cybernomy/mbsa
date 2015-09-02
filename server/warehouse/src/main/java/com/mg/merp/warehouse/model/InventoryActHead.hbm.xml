@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <joined-subclass name="com.mg.merp.warehouse.model.InventoryActHead" extends="com.mg.merp.document.model.DocHead" table="INVENTORYACTHEAD">
+    <meta attribute="extends">com.mg.merp.document.model.DocHead</meta>
+    <!-- <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      generator class="sequence">
+        <param name="sequence">INVENTORYACTHEAD_ID_GEN</param>
+      </generator
+    </id>-->
+    <key>
+      <column name="DOCHEAD_ID" not-null="true" />
+    </key>
+    <many-to-one name="Contractor" class="com.mg.merp.reference.model.Contractor">
+      <column name="CHAIRMAN" not-null="false" />
+    </many-to-one>
+    <property name="RealSummaNat" type="java.math.BigDecimal">
+      <column name="REALSUMMANAT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="RealSummaCur" type="java.math.BigDecimal">
+      <column name="REALSUMMACUR" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="EndDate" type="java.util.Date">
+      <column name="ENDDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+  </joined-subclass>
+</hibernate-mapping>

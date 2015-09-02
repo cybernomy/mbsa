@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= --> 
+
+<!-- $Id: GroupMt.mfd.xml,v 1.8 2008/11/20 15:01:29 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.security.support.ui.GroupMt" title="resource://com.mg.merp.security.resources.formelements#Group.FormMt.Title" helpTopic="security#groups_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+		<jfd:border style="bevel" type="raised" />
+
+		<jfd:field id="Name" />
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
+ 		<jfd:table id="users" scroll="true" autoResize="subsequent_columns" fieldGroup="resource://com.mg.merp.security.resources.formelements#Group.FormMt.Users" >
+ 			<jfd:popupMenu>
+ 				<jfd:menuItem id="addMember" text="resource://com.mg.merp.security.resources.formelements#Group.FormMt.AddMember" actionListener="AddMember" />
+ 				<jfd:menuItem id="removeMember" text="resource://com.mg.merp.security.resources.formelements#Group.FormMt.RemoveMember" actionListener="RemoveMember" />
+ 			</jfd:popupMenu>
+		</jfd:table>
+			<!-- jfd:container id="permissionBKFields" layout="jfd:defaultMtGridBag" alignment="expand_expand" tabTitle="resource://com.mg.merp.security.resources.formelements#Group.PermissionBK.Tab.Title">				
+			
+			</jfd:container>
+			<jfd:container id="permissionModuleFields" layout="jfd:defaultMtGridBag" alignment="expand_expand" tabTitle="resource://com.mg.merp.security.resources.formelements#Group.PermissionModule.Tab.Title">				
+			
+			</jfd:container>	
+			<jfd:container id="permissionOtherFields" layout="jfd:defaultMtGridBag" alignment="expand_expand" tabTitle="resource://com.mg.merp.security.resources.formelements#Group.PermissionOther.Tab.Title">				
+			
+			</jfd:container-->
+	</jfd:container>	
+		
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

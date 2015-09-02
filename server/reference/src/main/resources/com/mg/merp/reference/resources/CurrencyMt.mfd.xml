@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: CurrencyMt.mfd.xml,v 1.5 2006/11/28 14:47:26 konyashkina Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.reference.resources.formelements#Currency.FormMt.Title" helpTopic="reference#curref_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_top" >
+		<jfd:border style="bevel" type="raised" />
+		<jfd:field id="Code" />
+		<jfd:field id="FullName" />
+		<jfd:field id="Iso" />
+		<jfd:field id="BankCode" />
+		<jfd:field id="Gender" />
+		<jfd:container id="caseFeilds" layout="jfd:box" columns="3" label="resource://com.mg.merp.reference.resources.formelements#Currency.Case.Title" >
+			<jfd:field id="AltName1" />
+			<jfd:field id="AltUnitName1" showLabel="false" />
+			<jfd:field id="AltName2" />
+			<jfd:field id="AltUnitName2" showLabel="false" />
+			<jfd:field id="AltName3" />
+			<jfd:field id="AltUnitName3" showLabel="false" />			
+		</jfd:container>	
+		<jfd:field id="RoundPrice" />		
+		<jfd:field id="RoundSum" />			
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>

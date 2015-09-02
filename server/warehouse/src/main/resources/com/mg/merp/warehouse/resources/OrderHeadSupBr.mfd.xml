@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: OrderHeadSupBr.mfd.xml,v 1.10 2008/12/24 13:25:55 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.warehouse.support.ui.OrderHeadSupBr" title="resource://com.mg.merp.warehouse.resources.formelements#OrderHeadSup.FormBr.Title" helpTopic="warehouse#orderhdsup_html" >
+
+	<jfd:include name="com/mg/merp/document/resources/DefaultDocWithSpecBrowseHeaderMacros.xml" />
+
+	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true" >
+		</jfd:maintenanceTree>
+		<jfd:container id="tables" layout="jfd:split" alignment="expand_expand" orientation="ver">
+			<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >			
+	 			<jfd:include name="com/mg/merp/document/resources/DefaultDocWithSpecMaintenanceTablePopupMenuMacros.xml" />  			
+			</jfd:maintenanceTable>
+			<jfd:include name="com/mg/merp/document/resources/DocSpecListTableMacros.xml" />  			
+		</jfd:container>
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+
+</jfd:form>

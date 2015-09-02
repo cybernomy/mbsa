@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: link.xml,v 1.1 2006/12/29 09:26:11 konyashkina Exp $ -->
+
+<link version="1.0">
+   
+  <linkitem topic="config_links">
+     <linkentry target="hrconfig_html" text="Конфигурация модуля" />
+  </linkitem>
+  
+  <linkitem topic="osnsved_links">
+     <linkentry target="personbr_html" text="Основные сведения о сотрудниках" />
+     <linkentry target="person_html" text="Сведения" />
+     <linkentry target="service_html" text="Стаж" />
+     <linkentry target="address_html" text="Адреса проживания" />
+     <linkentry target="educ_html" text="Образование" />
+     <linkentry target="labcontr_html" text="Трудовой договор" />
+     <linkentry target="transfer_html" text="Приём и переводы на работу" />
+     <linkentry target="voin_html" text="Воинский учёт" />
+     <linkentry target="qualif_html" text="Квалификация" />
+     <linkentry target="reward_html" text="Поощрения и награды" />
+     <linkentry target="leave_html" text="Отпуска" />
+     <linkentry target="socbenef_html" text="Социальные льготы" />
+     <linkentry target="hrrecors_html" text="Личное дело" />
+  </linkitem>
+   
+   <linkitem topic="href_links">
+      <linkentry target="groupetype_html" text="Типы групп основных сведений" />
+      <linkentry target="langknows_html" text="Степени знания иностранных языков" />
+      <linkentry target="foregnlang_html" text="Иностранные языки" />
+      <linkentry target="edudegree_html" text="Степени образования" />
+      <linkentry target="speciality_html" text="Специальности по образованию" />
+      <linkentry target="addedukind_html" text="Виды дополнительного образования" />
+      <linkentry target="skillrise_html" text="Виды повышения квалификации" />
+      <linkentry target="leavekind_html" text="Виды отпусков" />
+      <linkentry target="reservkind_html" text="Категории резерва" />
+      <linkentry target="milrank_html" text="Воинские звания" />
+      <linkentry target="milrankkind_html" text="Составы воинских званий" />
+      <linkentry target="milvalid_html" text="Категории годности к воинской службе" />
+   </linkitem>
+   
+    <linkitem topic="address_links">
+	<linkentry target="abbrev_html" text="Сокращения элементов адреса" />
+	<linkentry target="region_html" text="Регионы РФ" />
+	<linkentry target="distr_html" text="Районы" />
+	<linkentry target="towns_html" text="Города" />  
+        <linkentry target="area_html" text="Населённые пункты" />
+        <linkentry target="streets_html" text="Улицы" />
+   </linkitem>
+   
+   <linkitem topic="stafflist_links">
+      <linkentry target="stflstvar_html" text="Варианты штатного расписания" />
+      <linkentry target="staffunit_html" text="Папки" />
+      <linkentry target="staffpos_html" text="Должности" />
+      <linkentry target="tariff_html" text="Тарифы" />
+      <linkentry target="stafflist_html" text="Штатное расписание" />
+   </linkitem>    
+ 
+    <linkitem topic="hr_links">
+      <linkentry target="jobref_html" text="Профессии" />
+      <linkentry target="positref_html" text="Должности" />
+      <linkentry target="servkind_html" text="Виды стажа" />
+      <linkentry target="servcode_html" text="Коды стажа для ПФ" />
+      <linkentry target="workcond_html" text="Условия труда" />
+      <linkentry target="staffcat_html" text="Категории персонала" />
+      <linkentry target="posfilkind_html" text="Виды исполнения должности" />
+      <linkentry target="tarscale_html" text="Тарифные сетки" />
+      <linkentry target="rise_html" text="Надбавки" />
+      <linkentry target="categ_html" text="Категории тарификации должности" />
+   </linkitem>  
+        
+    <linkitem topic="salary_links">
+      <linkentry target="calcperiod_html" text="Расчётные периоды" />
+      <linkentry target="setperiod_html" text="Установка расчётного периода" /> 
+      <linkentry target="workshedule_html" text="Графики работы" />
+      <linkentry target="costanl_html" text="Аналитика состава затрат" />
+      <linkentry target="deduckind_html" text="Виды вычетов" />
+      <linkentry target="inshurclass_html" text="Категории плательщиков страховых взносов" />
+      <linkentry target="taxcalckind_html" text="Схемы расчёта налогов" />
+   </linkitem>   
+  
+</link>

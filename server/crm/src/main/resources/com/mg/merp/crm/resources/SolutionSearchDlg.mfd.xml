@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!-- ===================================================================== -->
+ <!--  Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.					-->
+ <!--  All rights reserved													-->
+ <!-- 																		-->
+ <!--  This program is the proprietary and confidential information			-->
+ <!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
+ <!--  as authorized in a license agreement authorizing and					-->
+ <!--  controlling such use and disclosure									-->
+ <!--																		-->
+ <!--  Millennium Business Suite Anywhere System.							-->
+ <!-- ===================================================================== -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.crm.support.ui.SolutionSearchDlg" title="resource://com.mg.merp.crm.resources.formelements#SolutionSearchDlg.Title" width="640" height="500">
+	
+	<jfd:container id="centralBox" layout="jfd:box"  columns="1" alignment="expand_expand">
+	<jfd:border style="bevel" type="raised" />
+		<jfd:container id="commonFields" layout="jfd:box" columns="2" >
+			<jfd:button id="searchButton" alignment="expand_expand" text="resource://com.mg.merp.crm.resources.formelements#SolutionSearchDlg.SearchButton" actionListener="Search"/> 
+		</jfd:container>
+		<jfd:container id="symptomSplit" layout="jfd:split" alignment="expand_expand" orientation="ver">
+			<jfd:container id="symptomFields" layout="jfd:box" orientation="ver" alignment="expand_expand" >
+				<jfd:table id="symptomTable" autoResize="subsequent_columns" scroll="true" alignment="expand_expand" label="resource://com.mg.merp.crm.resources.formelements#SolutionSearchDlg.SymptomLabel">
+					<jfd:popupMenu>
+						<jfd:menuItem id="includeSymptom" text="resource://com.mg.merp.crm.resources.formelements#SolutionSearchDlg.IncludeSymptom" actionListener="IncludeSymptom" />
+						<jfd:menuItem id="excludeSymptom" text="resource://com.mg.merp.crm.resources.formelements#SolutionSearchDlg.ExcludeSymptom" actionListener="ExcludeSymptom" />
+						<jfd:separator/>
+						<jfd:menuItem id="searchItem" text="resource://com.mg.merp.crm.resources.formelements#SolutionSearchDlg.SearchButton" actionListener="Search" />
+					</jfd:popupMenu>
+				</jfd:table>
+			</jfd:container>
+			<jfd:container id="problemSplit" layout="jfd:split" alignment="expand_expand" orientation="ver">
+				<jfd:container id="problemFields" layout="jfd:box" orientation="ver" alignment="expand_expand" >
+					<jfd:table id="problemTable" autoResize="subsequent_columns" scroll="true" alignment="expand_expand" label="resource://com.mg.merp.crm.resources.formelements#SolutionSearchDlg.ProblemLabel">
+						<jfd:popupMenu>
+							<jfd:menuItem id="includeProblem" text="resource://com.mg.merp.crm.resources.formelements#SolutionSearchDlg.IncludeProblem" actionListener="IncludeProblem" />
+							<jfd:menuItem id="excludeProblem" text="resource://com.mg.merp.crm.resources.formelements#SolutionSearchDlg.ExcludeProblem" actionListener="ExcludeProblem" />
+							<jfd:separator/>
+							<jfd:menuItem id="viewProblem" text="resource://com.mg.merp.crm.resources.formelements#SolutionSearchDlg.View" actionListener="ViewProblem" />
+							<jfd:menuItem id="editProblem" text="resource://com.mg.merp.crm.resources.formelements#SolutionSearchDlg.Edit" actionListener="EditProblem" />
+						</jfd:popupMenu>
+					</jfd:table>
+				</jfd:container>
+				<jfd:container id="solutionFields" layout="jfd:box" orientation="ver" alignment="expand_expand" >
+					<jfd:table id="solutionTable" autoResize="subsequent_columns" scroll="true" alignment="expand_expand" label="resource://com.mg.merp.crm.resources.formelements#SolutionSearchDlg.SolutionLabel" >
+						<jfd:popupMenu>
+							<jfd:menuItem id="viewSolution" text="resource://com.mg.merp.crm.resources.formelements#SolutionSearchDlg.View" actionListener="ViewSolution" />
+							<jfd:menuItem id="editSolution" text="resource://com.mg.merp.crm.resources.formelements#SolutionSearchDlg.Edit" actionListener="EditSolution" />
+						</jfd:popupMenu>
+					</jfd:table>
+				</jfd:container>
+			</jfd:container>
+		</jfd:container>
+	</jfd:container>
+	
+</jfd:form>

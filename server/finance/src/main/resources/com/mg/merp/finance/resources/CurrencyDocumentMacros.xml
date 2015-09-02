@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium ERP system.                                                  -->
+<!-- ======================================================================= -->
+
+<!-- $Id: CurrencyDocumentMacros.xml,v 1.3 2007/08/17 09:06:44 alikaev Exp $ -->
+
+<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
+ 	<jfd:field id="Currency" />
+	<jfd:container id="CurrencyRateBox" layout="jfd:box" label="resource://com.mg.merp.finance.resources.formelements#CurrencyDocumentMacros.CurrencyRate" orientation="hor" sameLine="true">
+		<jfd:field id="CurRate" showLabel="false" alignment="expand_expand" readOnly="true"/>
+		<jfd:button id="currencyRate" text="..." toolTip="resource://com.mg.merp.finance.resources.formelements#CurrencyRateButton.ToolTip" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseCurrencyRate" alignment="right_expand" />
+	</jfd:container>
+	<jfd:field id="CurRateType" />								
+	<jfd:field id="CurRateAuthority" sameLine="true"/>
+	
+</jfd:wrap-macros>

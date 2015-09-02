@@ -1,0 +1,97 @@
+<!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+<!ENTITY chap_ref052 SYSTEM "modules/reference052.xml">
+<!ENTITY merp "Millennium ERP">
+<!ENTITY ref "Прикладные справочники">
+]> -->
+<chapter id="ref052">
+   <title>Банки и банковские счета</title>
+   
+   <section id="ref052_01">
+      <title>Банки</title>
+      
+	<para>Для удобства заполнения банковских реквизитов в системе &merp;  
+	предусмотрен отдельный справочник банков.</para>
+	
+	<para>Вход в справочник осуществляется через главное меню: 
+ 	<menuchoice>
+	<guimenu>&ref;</guimenu>
+	<guimenuitem>Банки</guimenuitem>
+	</menuchoice>. </para>
+	
+	<screenshot><mediaobject><imageobject>
+	<imagedata fileref="images/bank.gif"/>
+	</imageobject></mediaobject></screenshot>
+	
+	<para><guibutton>БИК</guibutton>. Банковский идентификационный код. Если флагом отмечен признак 
+	(<guibutton>уникальный</guibutton>), то система не даст ввести две записи с одинаковым значением 
+	этого поля. </para>
+	
+	<para><guibutton>SWIFT</guibutton>. Номер в системе межбанковских сообщений S.W.I.F.T.</para>
+	
+	<para><guibutton>IBAN</guibutton>. International Bank Account Number. Международный банковский 
+	номер для членов системы. </para>
+	
+	<para><guibutton>BSC</guibutton>. Bank Sorting Code.</para>
+	
+	<para><guibutton>Наименование банка</guibutton>. Полное наименование банка партнёра. </para>
+		
+	<para><guibutton>Отделение</guibutton>. Наименование отделения банка, если есть.</para>
+		
+	<para><guibutton>Страна</guibutton>. Выбирается из справочника &quot;<link linkend="ref051_01">Страны 
+	мира</link>&quot;.</para>
+
+	<para><guibutton>Тип населённого пункта</guibutton>. Указывается только тип населённого пункта, 
+	где находится банк (город, село и т.п.). Название самого населённого пункта 
+	указывается в следующем поле. </para>
+	
+	<para><guibutton>Населённый пункт</guibutton>. Населённый пункт, в котором находится банк. </para>
+	
+	<para><guibutton>Почтовый индекс</guibutton>. Почтовый индекс этого банка.</para>
+	
+	<para><guibutton>Адрес</guibutton>. Адрес банка (не включая почтовый индекс и населённый пункт).</para>
+	
+	<para><guibutton>Корреспондентский счёт</guibutton>. Корреспондентский счёт. </para>
+	
+	<para><guibutton>Валюта кор. счёта</guibutton>. Валюта корреспондентского счёта. </para>
+	
+	<para><guibutton>Наименование корреспондента</guibutton>. Наименование корреспондента, у которого 
+	находится указанный корреспондентский счёт. </para>
+	
+	<para><guibutton>Адрес корреспондента</guibutton>.</para>
+	
+	<para><guibutton>Телефон</guibutton>. Телефоны банка.</para>
+	
+	<para><guibutton>Факс</guibutton>. Номер факса банка.</para>
+	
+	<para><guibutton>E-mail</guibutton>. Адрес электронной почты банка.</para>
+	
+	<para><guibutton>www</guibutton>. Адрес сайта банка в сети Интернет.</para>
+	
+	<para><guibutton>Примечание</guibutton>. В этом поле можно записать любой текстовый комментарий.</para>
+	
+  </section>
+
+   <section id="ref052_02">
+      <title>Типы банковских счетов</title>
+      
+        <para>Вход в справочник осуществляется через главное меню: 
+ 	<menuchoice>
+	<guimenu>&ref;</guimenu>
+	<guimenuitem>Типы банковских счетов</guimenuitem>
+	</menuchoice>. </para>
+			
+	<para><guibutton>Код</guibutton>. Краткое уникальное наименование типа счёта для использования 
+	в системе &merp;.</para>
+
+	<para><guibutton>Наименование</guibutton>. Наименование типа счёта.</para>
+	
+	<para>См. также: <link linkend="ref052_01">Банки</link>, 
+	<link linkend="ref005_04">Партнёры/Банковские счета</link>
+	</para>
+	
+  </section>
+</chapter>

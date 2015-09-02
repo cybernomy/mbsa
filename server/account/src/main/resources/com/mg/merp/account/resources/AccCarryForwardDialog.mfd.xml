@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!-- ===================================================================== -->
+ <!--  Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.					-->
+ <!--  All rights reserved													-->
+ <!-- 																		-->
+ <!--  This program is the proprietary and confidential information			-->
+ <!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
+ <!--  as authorized in a license agreement authorizing and					-->
+ <!--  controlling such use and disclosure									-->
+ <!--																		-->
+ <!--  Millennium Business Suite Anywhere System.							-->
+ <!-- ===================================================================== -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.AccCarryForwardDialog" title="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.Title" width="375" height="360">
+	<jfd:container id="mainBox" layout="jfd:defaultMtLayout" alignment="expand_expand">
+	<jfd:border style="bevel" type="raised" />
+		<jfd:field id="accPeriodFrom" alignment="expand_expand" fieldGroup="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.PeriodsRange" text="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.AccPeriodFrom" />
+		<jfd:field id="accPeriodTill" alignment="expand_expand" text="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.AccPeriodTill" />
+ 
+		<jfd:label id="selectedAmountLabel" fieldGroup="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.AccLabel" />
+		<jfd:button id="remnAccSelectButton"  text="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.SelectButton" actionListener="ChooseAccounts"/>			
+		<jfd:field id="allAcc" sameLine="true" text="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.SelectAll" actionListener="ChooseAllAccounts"/>
+
+		<jfd:label id="selectedAnlAmountLabel" fieldGroup="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.AccAnlLabel" />
+		<jfd:button id="remnAnlSelectButton"  text="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.SelectButton" alignment="expand_expand" actionListener="ChooseAnlAccounts"/>			
+		<jfd:field id="allAnlAcc" sameLine="true" text="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.SelectAll" actionListener="ChooseAllAnlAccounts" />
+
+		<jfd:label id="selectedValAmountLabel" fieldGroup="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.AccValLabel" />
+		<jfd:button id="remnValSelectButton" text="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.SelectButton" alignment="expand_expand" actionListener="ChooseValAccounts"/>
+		<jfd:field id="allValAcc" sameLine="true" text="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.SelectAll" actionListener="ChooseAllValAccounts" />
+
+		<jfd:label id="selectedDbKtAmountLabel" fieldGroup="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.AccDbKtLabel" />
+		<jfd:button id="remnDbKtSelectButton"  text="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.SelectButton" alignment="expand_expand" actionListener="ChooseDbKtAccounts"/>
+		<jfd:field id="allDbKtAcc" sameLine="true" text="resource://com.mg.merp.account.resources.formelements#AccCarryForward.Dialog.SelectAll" actionListener="ChooseAllDbKtAccounts" />
+	</jfd:container>
+	
+	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+</jfd:form>

@@ -1,0 +1,12 @@
+#define	IDH_contract_list	1000
+#define	IDH_contr_matter	1010
+#define	IDH_contr_agents	1020
+#define	IDH_contr_sum		1030
+#define	IDH_contr_ext		1040
+#define	IDH_contr_cargo		1050
+#define	IDH_contr_object	1060
+#define	IDH_contr_etap		1070
+#define	IDH_contr_punkt		1080
+#define	IDH_contr_change	1090
+#define	IDH_contr_choice	1100
+#define	IDH_config		1110
