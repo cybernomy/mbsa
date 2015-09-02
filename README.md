@@ -8,6 +8,9 @@ It's Java 5, JBoss 4, hibernate 3, BIRT 2, ANT, eclipse of some non-planet versi
 
 Anyway it's still much better by it's functionality, performance, ideology and visual part against lot of existing platforms.
 
+Pls visit http://www.m-g.ru/en to get more information
+or just http://www.m-g.ru/ and translate with chrome(I know you did it with taobao), as russian version more informative.
+
 This project is a try to give a new life for this useful platform.
 
 My/our goals are:
