@@ -6,6 +6,8 @@ This project was born in deep Russian forests, so most developers were the bears
 In two words it's open source ERP/CRM platform based on most advanced java technologies.
 It's Java 5, JBoss 4, hibernate 3, BIRT 2, ANT, eclipse of some non-planet version etc. Yea, most advanced technologies for 2009 :D
 
+Client layer is Canoo ULC - so you have not a stupid web interface with it's delays, weird interface, but regular desctop-like client with a small memory footprint, small traffic etc. It's can be executed via JNLP or browser(java plugin required). But I think we can provide some lite interface version via WEB 3.0 and mobiles
+
 Anyway it's still much better by it's functionality, performance, ideology and visual part against lot of existing platforms.
 
 Pls visit http://www.m-g.ru/en to get more information
