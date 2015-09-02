@@ -14,17 +14,16 @@ or just http://www.m-g.ru/ and translate with chrome(I know you did it with taob
 This project is a try to give a new life for this useful platform.
 
 My/our goals are:
-1.  Mavenization or gradlenization (you know, it's from gradle) and electrification of the whole country
-2.  JDK upgrade to the newest stable, let's say 9
-3.  Check english resources are ok, cos now only russian i18n resources are 100% valid
-4.  I would plan to make Postgresql as default DB, now it's.... it's firebird aaaaahahahhah (well 10 years ago it was cool enough)
-But actually I want it to be DB-agnostic.
-5.  Currently DB versioning works via custom tool, it must be definitely liquibase
-6.  Hiberante models still hbm.xml, I want annotations
-7.  Reimplement some core functionality to allow exectute application at any JEE server. Now it's tightly bundled with old great jboss 4
-8.  Translate the documentation. I plan to support both russian and english versions
-9.  Probably spring... EJB may be optional service layer implementation, but with spring it may run with any suitable container
-10. OSGi. Currently modular system is self-made, so it's not ideal
-11. .... eh, enough for now
+- Mavenization or gradlenization (you know, it's from gradle) and electrification of the whole country
+- JDK upgrade to the newest stable, let's say 9
+- Check english resources are ok, cos now only russian i18n resources are 100% valid
+- I would plan to make Postgresql as default DB, now it's.... it's firebird aaaaahahahhah (well 10 years ago it was cool enough). But actually I want it to be DB-agnostic.
+- Currently DB versioning works via custom tool, it must be definitely liquibase
+- Hiberante models still hbm.xml, I want annotations
+- Reimplement some core functionality to allow exectute application at any JEE server. Now it's tightly bundled with old great jboss 4
+- Translate the documentation. I plan to support both russian and english versions
+- Probably spring... EJB may be optional service layer implementation, but with spring it may run with any suitable container
+- OSGi. Currently modular system is self-made, so it's not ideal
+- .... eh, enough for now
 
 let's see, how it's possible
