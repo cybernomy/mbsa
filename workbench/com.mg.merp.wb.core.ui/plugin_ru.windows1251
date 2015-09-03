@@ -1,6 +1,0 @@
-# preferences
-pref.main.label=MBSA
-pref.main.security.label=Безопасность
-pref.main.reports.label=Генератор отчётов
-pref.main.docflow.label=Документооборот
-pref.main.workflow.label=Поток работ
