@@ -17,7 +17,7 @@ package com.mg.merp.warehouse;
 import java.util.EventListener;
 
 /**
- * Слушатель отработки по складу
+ * РЎР»СѓС€Р°С‚РµР»СЊ РѕС‚СЂР°Р±РѕС‚РєРё РїРѕ СЃРєР»Р°РґСѓ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseTransactionListener.java,v 1.1 2007/02/22 09:44:57 poroxnenko Exp $

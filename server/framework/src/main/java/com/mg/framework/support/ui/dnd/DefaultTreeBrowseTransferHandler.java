@@ -30,7 +30,7 @@ import com.mg.framework.support.ui.widget.MaintenanceTreeController;
 import com.mg.framework.support.ui.widget.tree.EntityTreeNode;
 
 /**
- * Стандартная реализация обработчика операций DnD для форм браузеров папок
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РѕР±СЂР°Р±РѕС‚С‡РёРєР° РѕРїРµСЂР°С†РёР№ DnD РґР»СЏ С„РѕСЂРј Р±СЂР°СѓР·РµСЂРѕРІ РїР°РїРѕРє
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultTreeBrowseTransferHandler.java,v 1.1 2007/08/16 13:59:03 safonov Exp $
@@ -76,10 +76,10 @@ public class DefaultTreeBrowseTransferHandler implements TransferHandler {
 			return false;
 		
 		if (dragData instanceof DnDTreeData) {
-			//переносим папки
+			//РїРµСЂРµРЅРѕСЃРёРј РїР°РїРєРё
 			DnDTreeData treeData = (DnDTreeData) dragData;
 
-			//только в пределах одного браузера обрабатываем перенос
+			//С‚РѕР»СЊРєРѕ РІ РїСЂРµРґРµР»Р°С… РѕРґРЅРѕРіРѕ Р±СЂР°СѓР·РµСЂР° РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј РїРµСЂРµРЅРѕСЃ
 			if (treeData.getTree().getView() != dropData.getTree().getView())
 				return false;
 			

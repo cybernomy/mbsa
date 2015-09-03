@@ -24,7 +24,7 @@ import com.mg.merp.core.model.Folder;
 import com.mg.merp.document.model.DocType;
 
 /**
- * Класс для передачи параметров в метод {@link #revaluate()} сервиса бизнес-компонента "Инвентарная картотека"
+ * РљР»Р°СЃСЃ РґР»СЏ РїРµСЂРµРґР°С‡Рё РїР°СЂР°РјРµС‚СЂРѕРІ РІ РјРµС‚РѕРґ {@link #revaluate()} СЃРµСЂРІРёСЃР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РРЅРІРµРЅС‚Р°СЂРЅР°СЏ РєР°СЂС‚РѕС‚РµРєР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: AccRevaluateParams.java,v 1.1 2008/04/28 10:09:51 alikaev Exp $
@@ -66,42 +66,42 @@ public class AccRevaluateParams implements Serializable {
 	private boolean isOverestimation;
 	
 	/**
-	 * Конструктор
+	 * РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
 	 * @param revalDate
-	 * 			- дата учета
+	 * 			- РґР°С‚Р° СѓС‡РµС‚Р°
 	 * @param folder
-	 * 			- папка приемник для хоз-операции
+	 * 			- РїР°РїРєР° РїСЂРёРµРјРЅРёРє РґР»СЏ С…РѕР·-РѕРїРµСЂР°С†РёРё
 	 * @param kind
-	 * 			- признак: 0 - фактор, 1 - до суммы, 2 - на сумму
+	 * 			- РїСЂРёР·РЅР°Рє: 0 - С„Р°РєС‚РѕСЂ, 1 - РґРѕ СЃСѓРјРјС‹, 2 - РЅР° СЃСѓРјРјСѓ
 	 * @param value
-	 * 			- значение по признаку
+	 * 			- Р·РЅР°С‡РµРЅРёРµ РїРѕ РїСЂРёР·РЅР°РєСѓ
 	 * @param docType
-	 * 			- тип документа
+	 * 			- С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°
 	 * @param docNumber
-	 * 			- номер документа
+	 * 			- РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°
 	 * @param docDate
-	 * 			- дата документа
+	 * 			- РґР°С‚Р° РґРѕРєСѓРјРµРЅС‚Р°
 	 * @param baseDocType
-	 * 			- тип документа-основания
+	 * 			- С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
 	 * @param baseDocNumber
-	 * 			- номер документа-основания
+	 * 			- РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
 	 * @param baseDocDate
-	 * 			- дата документа-основания
+	 * 			- РґР°С‚Р° РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
 	 * @param accPlan
-	 * 			- счет
+	 * 			- СЃС‡РµС‚
 	 * @param anl1
-	 * 			- аналитика 1-го уровня
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 1-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param anl2
-	 * 			- аналитика 2-го уровня
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 2-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param anl3
-	 * 			- аналитика 3-го уровня
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 3-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param anl4
-	 * 			- аналитика 4-го уровня
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 4-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param anl5
-	 * 			- аналитика 5-го уровня
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 5-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param isOverestimation
-	 * 			- <code>false</code> - переоценка, <code>true</code> - дооценка
+	 * 			- <code>false</code> - РїРµСЂРµРѕС†РµРЅРєР°, <code>true</code> - РґРѕРѕС†РµРЅРєР°
 	 */
 	public AccRevaluateParams(Date revalDate, Folder folder, short kind, BigDecimal value,	DocType docType, String docNumber, Date docDate,
 			DocType baseDocType, String baseDocNumber, Date baseDocDate, AccPlan accPlan, AnlPlan anl1, AnlPlan anl2, AnlPlan anl3,
@@ -126,7 +126,7 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * Дата учета
+	 * Р”Р°С‚Р° СѓС‡РµС‚Р°
 	 * 
 	 * @return revalDate
 	 */
@@ -135,14 +135,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param revalDate задаваемое revalDate
+	 * @param revalDate Р·Р°РґР°РІР°РµРјРѕРµ revalDate
 	 */
 	public void setRevalDate(Date revalDate) {
 		this.revalDate = revalDate;
 	}
 
 	/**
-	 * Признак: 0 - фактор, 1 - до суммы, 2 - на сумму
+	 * РџСЂРёР·РЅР°Рє: 0 - С„Р°РєС‚РѕСЂ, 1 - РґРѕ СЃСѓРјРјС‹, 2 - РЅР° СЃСѓРјРјСѓ
 	 * @return kind
 	 */
 	public short getKind() {
@@ -150,14 +150,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param kind задаваемое kind
+	 * @param kind Р·Р°РґР°РІР°РµРјРѕРµ kind
 	 */
 	public void setKind(short kind) {
 		this.kind = kind;
 	}
 
 	/**
-	 * Значение по признаку
+	 * Р—РЅР°С‡РµРЅРёРµ РїРѕ РїСЂРёР·РЅР°РєСѓ
 	 * @return value
 	 */
 	public BigDecimal getValue() {
@@ -165,14 +165,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param value задаваемое value
+	 * @param value Р·Р°РґР°РІР°РµРјРѕРµ value
 	 */
 	public void setValue(BigDecimal value) {
 		this.value = value;
 	}
 
 	/**
-	 * Тип документа
+	 * РўРёРї РґРѕРєСѓРјРµРЅС‚Р°
 	 * @return docType
 	 */
 	public DocType getDocType() {
@@ -180,14 +180,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param docType задаваемое docType
+	 * @param docType Р·Р°РґР°РІР°РµРјРѕРµ docType
 	 */
 	public void setDocType(DocType docType) {
 		this.docType = docType;
 	}
 
 	/**
-	 * Номер документа
+	 * РќРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
 	 * @return docNumber
 	 */
@@ -196,14 +196,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param docNumber задаваемое docNumber
+	 * @param docNumber Р·Р°РґР°РІР°РµРјРѕРµ docNumber
 	 */
 	public void setDocNumber(String docNumber) {
 		this.docNumber = docNumber;
 	}
 
 	/**
-	 * Дата документа
+	 * Р”Р°С‚Р° РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
 	 * @return docDate
 	 */
@@ -212,14 +212,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param docDate задаваемое docDate
+	 * @param docDate Р·Р°РґР°РІР°РµРјРѕРµ docDate
 	 */
 	public void setDocDate(Date docDate) {
 		this.docDate = docDate;
 	}
 
 	/**
-	 * Тип документа-основания
+	 * РўРёРї РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
 	 * 
 	 * @return baseDocType
 	 */
@@ -228,14 +228,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param baseDocType задаваемое baseDocType
+	 * @param baseDocType Р·Р°РґР°РІР°РµРјРѕРµ baseDocType
 	 */
 	public void setBaseDocType(DocType baseDocType) {
 		this.baseDocType = baseDocType;
 	}
 
 	/**
-	 * Номер документа-основания
+	 * РќРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
 	 * 
 	 * @return baseDocNumber
 	 */
@@ -244,14 +244,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param baseDocNumber задаваемое baseDocNumber
+	 * @param baseDocNumber Р·Р°РґР°РІР°РµРјРѕРµ baseDocNumber
 	 */
 	public void setBaseDocNumber(String baseDocNumber) {
 		this.baseDocNumber = baseDocNumber;
 	}
 
 	/**
-	 * Дата документа-основания
+	 * Р”Р°С‚Р° РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
 	 * 
 	 * @return baseDocDate
 	 */
@@ -260,14 +260,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param baseDocDate задаваемое baseDocDate
+	 * @param baseDocDate Р·Р°РґР°РІР°РµРјРѕРµ baseDocDate
 	 */
 	public void setBaseDocDate(Date baseDocDate) {
 		this.baseDocDate = baseDocDate;
 	}
 
 	/**
-	 * Счет
+	 * РЎС‡РµС‚
 	 * @return accPlan
 	 */
 	public AccPlan getAccPlan() {
@@ -275,14 +275,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param accPlan задаваемое accPlan
+	 * @param accPlan Р·Р°РґР°РІР°РµРјРѕРµ accPlan
 	 */
 	public void setAccPlan(AccPlan accPlan) {
 		this.accPlan = accPlan;
 	}
 
 	/**
-	 * Аналитика 1-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° 1-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @return anl1
 	 */
 	public AnlPlan getAnl1() {
@@ -290,14 +290,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param anl1 задаваемое anl1
+	 * @param anl1 Р·Р°РґР°РІР°РµРјРѕРµ anl1
 	 */
 	public void setAnl1(AnlPlan anl1) {
 		this.anl1 = anl1;
 	}
 
 	/**
-	 * Аналитика 2-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° 2-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * 
 	 * @return anl2
 	 */
@@ -306,14 +306,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param anl2 задаваемое anl2
+	 * @param anl2 Р·Р°РґР°РІР°РµРјРѕРµ anl2
 	 */
 	public void setAnl2(AnlPlan anl2) {
 		this.anl2 = anl2;
 	}
 
 	/**
-	 * Аналитика 3-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° 3-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * 
 	 * @return anl3
 	 */
@@ -322,14 +322,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param anl3 задаваемое anl3
+	 * @param anl3 Р·Р°РґР°РІР°РµРјРѕРµ anl3
 	 */
 	public void setAnl3(AnlPlan anl3) {
 		this.anl3 = anl3;
 	}
 
 	/**
-	 * Аналитика 4-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° 4-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * 
 	 * @return anl4
 	 */
@@ -338,14 +338,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param anl4 задаваемое anl4
+	 * @param anl4 Р·Р°РґР°РІР°РµРјРѕРµ anl4
 	 */
 	public void setAnl4(AnlPlan anl4) {
 		this.anl4 = anl4;
 	}
 
 	/**
-	 * Аналитика 5-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° 5-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * 
 	 * @return anl5
 	 */
@@ -354,14 +354,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param anl5 задаваемое anl5
+	 * @param anl5 Р·Р°РґР°РІР°РµРјРѕРµ anl5
 	 */
 	public void setAnl5(AnlPlan anl5) {
 		this.anl5 = anl5;
 	}
 
 	/**
-	 *  <code>false</code> - переоценка, <code>true</code> - дооценка
+	 *  <code>false</code> - РїРµСЂРµРѕС†РµРЅРєР°, <code>true</code> - РґРѕРѕС†РµРЅРєР°
 	 *  
 	 * @return isOverestimation
 	 */
@@ -370,14 +370,14 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param isOverestimation задаваемое isOverestimation
+	 * @param isOverestimation Р·Р°РґР°РІР°РµРјРѕРµ isOverestimation
 	 */
 	public void setOverestimation(boolean isOverestimation) {
 		this.isOverestimation = isOverestimation;
 	}
 
 	/**
-	 * Папка приемник для хоз. операции
+	 * РџР°РїРєР° РїСЂРёРµРјРЅРёРє РґР»СЏ С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * 
 	 * @return folder
 	 */
@@ -386,7 +386,7 @@ public class AccRevaluateParams implements Serializable {
 	}
 
 	/**
-	 * @param folder задаваемое folder
+	 * @param folder Р·Р°РґР°РІР°РµРјРѕРµ folder
 	 */
 	public void setFolder(Folder folder) {
 		this.folder = folder;

@@ -18,38 +18,38 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип группы ресурсов
+ * РўРёРї РіСЂСѓРїРїС‹ СЂРµСЃСѓСЂСЃРѕРІ
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: ResourceGroupType.java,v 1.1 2006/04/13 10:20:42 safonov Exp $
  */
 @DataItemName("MfReference.ResourGroup.ResType")
 public enum ResourceGroupType {
 	/**
-	 * Материалы
+	 * РњР°С‚РµСЂРёР°Р»С‹
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.Materials")
 	MATERIALS,
 	
 	/**
-	 * Оборудование
+	 * РћР±РѕСЂСѓРґРѕРІР°РЅРёРµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.Machine")
 	MACHINE,
 	
 	/**
-	 * Рабочая сила
+	 * Р Р°Р±РѕС‡Р°СЏ СЃРёР»Р°
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.Labor")
 	LABOR,
 	
 	/**
-	 * Рабочий центр
+	 * Р Р°Р±РѕС‡РёР№ С†РµРЅС‚СЂ
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.WorkCenter")
 	WORKCENTER,
 	
 	/**
-	 * Подразделение
+	 * РџРѕРґСЂР°Р·РґРµР»РµРЅРёРµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.OrgUnit")
 	ORGUNIT

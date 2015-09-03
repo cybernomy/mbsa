@@ -26,7 +26,7 @@ public interface BillHeadModelOutServiceLocal
    extends DocumentPattern<BillHeadModel, Integer>
 {
 	/**
-	 * тип папки для образцов исходящих счетов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ РёСЃС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 52;
 }

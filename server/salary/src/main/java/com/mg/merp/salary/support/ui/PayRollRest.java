@@ -19,7 +19,7 @@ import com.mg.merp.personnelref.support.ui.ItemWithDateIntervalRest;
 import com.mg.merp.salary.model.RollKind;
 
 /**
- * Контроллер формы условий отбора расчетных ведомостей
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° СЂР°СЃС‡РµС‚РЅС‹С… РІРµРґРѕРјРѕСЃС‚РµР№
  * 
  * @author leonova
  * @version $Id: PayRollRest.java,v 1.4 2006/08/28 12:42:47 leonova Exp $ 

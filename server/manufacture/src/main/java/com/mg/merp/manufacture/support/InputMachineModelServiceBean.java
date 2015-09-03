@@ -23,7 +23,7 @@ import com.mg.merp.manufacture.InputMachineModelServiceLocal;
 import com.mg.merp.manufacture.model.InputDocumentModel;
 
 /**
- * Бизнес-компонент "Образцы актов на списание времени, отработанного оборудование в НЗП" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµ РІ РќР—Рџ" 
  * 
  * @author leonova
  * @version $Id: InputMachineModelServiceBean.java,v 1.3 2006/09/12 11:08:13 leonova Exp $

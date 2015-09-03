@@ -15,7 +15,7 @@ package com.mg.merp.warehouse;
 
 
 /**
- * Интерфейс стратегий отработки складских этапов ДО
+ * РРЅС‚РµСЂС„РµР№СЃ СЃС‚СЂР°С‚РµРіРёР№ РѕС‚СЂР°Р±РѕС‚РєРё СЃРєР»Р°РґСЃРєРёС… СЌС‚Р°РїРѕРІ Р”Рћ
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -24,9 +24,9 @@ package com.mg.merp.warehouse;
 public interface WarehouseProcessStrategy {
 
 	/**
-	 * обработка складских операций
+	 * РѕР±СЂР°Р±РѕС‚РєР° СЃРєР»Р°РґСЃРєРёС… РѕРїРµСЂР°С†РёР№
 	 * 
-	 * @param docLineData	информация о спецификации
+	 * @param docLineData	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	void process(WarehouseProcessDocumentLineData docLineData);
 	

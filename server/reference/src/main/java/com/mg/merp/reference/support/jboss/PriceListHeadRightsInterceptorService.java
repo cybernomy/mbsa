@@ -25,7 +25,7 @@ import com.mg.framework.service.jboss.EntityInterceptorManagerServiceMBean;
 import com.mg.merp.reference.support.PriceListHeadInterceptorImpl;
 
 /**
- * Реализация сервиса перехватчика для обработки прайс-листов
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: PriceListHeadRightsInterceptorService.java,v 1.1 2008/05/13 09:54:17 alikaev Exp $

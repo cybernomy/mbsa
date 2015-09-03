@@ -27,7 +27,7 @@ import com.mg.merp.core.support.CoreUtils;
 import com.mg.merp.manufacture.InputMaterialHeadServiceLocal;
 
 /**
- * Браузер актов на списание материалов в НЗП
+ * Р‘СЂР°СѓР·РµСЂ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РјР°С‚РµСЂРёР°Р»РѕРІ РІ РќР—Рџ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InputMaterialHeadBr.java,v 1.10 2009/02/10 14:34:19 safonov Exp $

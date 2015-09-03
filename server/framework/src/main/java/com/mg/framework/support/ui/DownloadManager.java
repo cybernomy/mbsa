@@ -50,39 +50,39 @@ public class DownloadManager {
 	}
 
 	/**
-	 * получить экземпляр менеджера загрузок
+	 * РїРѕР»СѓС‡РёС‚СЊ СЌРєР·РµРјРїР»СЏСЂ РјРµРЅРµРґР¶РµСЂР° Р·Р°РіСЂСѓР·РѕРє
 	 * 
-	 * @return	экземпляр
+	 * @return	СЌРєР·РµРјРїР»СЏСЂ
 	 */
 	public static DownloadManager getInstance() {
 		return INSTANCE;
 	}
 
 	/**
-	 * получить web ресурс по идентификатору
+	 * РїРѕР»СѓС‡РёС‚СЊ web СЂРµСЃСѓСЂСЃ РїРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ
 	 * 
-	 * @param id	идентификатор
-	 * @return	web ресурс
+	 * @param id	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ
+	 * @return	web СЂРµСЃСѓСЂСЃ
 	 */
 	public WebResourceProvider get(String id) {
 		return entries.get(id);
 	}
 
 	/**
-	 * добавить web ресурс в менеджер загрузок
+	 * РґРѕР±Р°РІРёС‚СЊ web СЂРµСЃСѓСЂСЃ РІ РјРµРЅРµРґР¶РµСЂ Р·Р°РіСЂСѓР·РѕРє
 	 * 
-	 * @param id	идентификатор
-	 * @param resourceProvider	web ресурс
+	 * @param id	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ
+	 * @param resourceProvider	web СЂРµСЃСѓСЂСЃ
 	 */
 	public void put(String id, WebResourceProvider resourceProvider) {
 		entries.put(id, resourceProvider);
 	}
 
 	/**
-	 * добавить web ресурс в менеджер загрузок
+	 * РґРѕР±Р°РІРёС‚СЊ web СЂРµСЃСѓСЂСЃ РІ РјРµРЅРµРґР¶РµСЂ Р·Р°РіСЂСѓР·РѕРє
 	 * 
-	 * @param resourceProvider	web ресурс
-	 * @return	идентификатор загрузки
+	 * @param resourceProvider	web СЂРµСЃСѓСЂСЃ
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РіСЂСѓР·РєРё
 	 */
 	public String put(WebResourceProvider resourceProvider) {
 		try {
@@ -121,9 +121,9 @@ public class DownloadManager {
 	}
 
 	/**
-	 * показать документ по идентификатору
+	 * РїРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚ РїРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ
 	 * 
-	 * @param id	идентификатор
+	 * @param id	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ
 	 */
 	public void showDocument(String id) {
 //		showDocument(id, null);
@@ -137,10 +137,10 @@ public class DownloadManager {
 //	}
 
 	/**
-	 * сформировать URL для загрузки с помощью сервлета менеджера загрузок
+	 * СЃС„РѕСЂРјРёСЂРѕРІР°С‚СЊ URL РґР»СЏ Р·Р°РіСЂСѓР·РєРё СЃ РїРѕРјРѕС‰СЊСЋ СЃРµСЂРІР»РµС‚Р° РјРµРЅРµРґР¶РµСЂР° Р·Р°РіСЂСѓР·РѕРє
 	 * 
-	 * @param id	идентификатор ресурса для загрузки
-	 * @return	URL загрузки
+	 * @param id	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂРµСЃСѓСЂСЃР° РґР»СЏ Р·Р°РіСЂСѓР·РєРё
+	 * @return	URL Р·Р°РіСЂСѓР·РєРё
 	 */
 	public static String determineUrl(String id) {
 		return new StringBuilder(DOWNLOAD_SERVLET_URL_PATTERN).append("?").append(ID_PARAMETER).append("=").append(id).toString();

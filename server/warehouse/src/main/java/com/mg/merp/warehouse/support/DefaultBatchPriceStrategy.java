@@ -21,7 +21,7 @@ import com.mg.merp.document.model.DocSpec;
 import com.mg.merp.warehouse.BatchPriceStrategy;
 
 /**
- * Стратегия рассчёта цены партии "по-умолчанию"
+ * РЎС‚СЂР°С‚РµРіРёСЏ СЂР°СЃСЃС‡С‘С‚Р° С†РµРЅС‹ РїР°СЂС‚РёРё "РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ"
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -30,8 +30,8 @@ import com.mg.merp.warehouse.BatchPriceStrategy;
 public class DefaultBatchPriceStrategy implements BatchPriceStrategy {
 
 	public BigDecimal doCalculate(DocSpec docSpec) {
-		// не знаю почему, но во второй версии "Цена" из спецификации
-		// закоменчена
+		// РЅРµ Р·РЅР°СЋ РїРѕС‡РµРјСѓ, РЅРѕ РІРѕ РІС‚РѕСЂРѕР№ РІРµСЂСЃРёРё "Р¦РµРЅР°" РёР· СЃРїРµС†РёС„РёРєР°С†РёРё
+		// Р·Р°РєРѕРјРµРЅС‡РµРЅР°
 		BigDecimal quan = docSpec.getQuantity() == null ? BigDecimal.ONE : docSpec.getQuantity();
 		BigDecimal sum = docSpec.getSumma() == null ? BigDecimal.ZERO : docSpec.getSumma();
 		return MathUtils.divide(sum, quan, new RoundContext(6));

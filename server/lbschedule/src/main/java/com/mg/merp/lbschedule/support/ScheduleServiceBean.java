@@ -28,7 +28,7 @@ import com.mg.merp.lbschedule.model.Schedule;
 import com.mg.merp.lbschedule.model.ScheduleDocHeadLink;
 
 /**
- * Реализация бизнес-компонента "Графики исполнения обязательств" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р“СЂР°С„РёРєРё РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -46,9 +46,9 @@ public class ScheduleServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 	
 	/**
-	 * Получить документ на основании которого создан ГИО
-	 * @param scheduleId - идентификатор графика исполнения обязательства
-	 * @return документ на основании которого создан ГИО, или <code>null</code> если не найден
+	 * РџРѕР»СѓС‡РёС‚СЊ РґРѕРєСѓРјРµРЅС‚ РЅР° РѕСЃРЅРѕРІР°РЅРёРё РєРѕС‚РѕСЂРѕРіРѕ СЃРѕР·РґР°РЅ Р“РРћ
+	 * @param scheduleId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°
+	 * @return РґРѕРєСѓРјРµРЅС‚ РЅР° РѕСЃРЅРѕРІР°РЅРёРё РєРѕС‚РѕСЂРѕРіРѕ СЃРѕР·РґР°РЅ Р“РРћ, РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	protected DocHead doGetDocHead(Integer scheduleId) {
 		if(scheduleId == null)

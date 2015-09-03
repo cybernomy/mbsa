@@ -49,7 +49,7 @@ import com.mg.merp.reference.CurrencyRateServiceLocal;
 import com.mg.merp.reference.CurrencyServiceLocal;
 
 /**
- * Реализация сервиса создания документа на основе
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІРµ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: CreateDocumentBasisOfImpl.java,v 1.14 2009/02/27 09:00:15 safonov Exp $ 
@@ -81,9 +81,9 @@ public class CreateDocumentBasisOfImpl<S extends DocHead, D extends DocHead, P e
 			logger.debug("create document basis of id: " + srcDoc.getId());
 		EntityTransformer entityTransformer = EntityTransformerLocator.locate();
 		Map<String, Object> superDoc = new HashMap<String, Object>(); 
-		//представление документа-источника в виде "супердокумента"
+		//РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°-РёСЃС‚РѕС‡РЅРёРєР° РІ РІРёРґРµ "СЃСѓРїРµСЂРґРѕРєСѓРјРµРЅС‚Р°"
 		entityTransformer.map(srcDoc, superDoc);
-		//создание результирующего документа из "супердокумента"
+		//СЃРѕР·РґР°РЅРёРµ СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РµРіРѕ РґРѕРєСѓРјРµРЅС‚Р° РёР· "СЃСѓРїРµСЂРґРѕРєСѓРјРµРЅС‚Р°"
 		D e = entityTransformer.map(superDoc, dstClass);
 		
 		return internalCreate(srcDoc, e, model, date, specList, destFolder, createCallback);
@@ -99,27 +99,27 @@ public class CreateDocumentBasisOfImpl<S extends DocHead, D extends DocHead, P e
 			logger.debug("create document basis of id: " + srcDoc.getId());
 		EntityTransformer entityTransformer = EntityTransformerLocator.locate();
 		Map<String, Object> superDoc = new HashMap<String, Object>(); 
-		//представление документа-источника в виде "супердокумента"
+		//РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°-РёСЃС‚РѕС‡РЅРёРєР° РІ РІРёРґРµ "СЃСѓРїРµСЂРґРѕРєСѓРјРµРЅС‚Р°"
 		entityTransformer.map(srcDoc, superDoc);
-		//создание результирующего документа из "супердокумента"
+		//СЃРѕР·РґР°РЅРёРµ СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РµРіРѕ РґРѕРєСѓРјРµРЅС‚Р° РёР· "СЃСѓРїРµСЂРґРѕРєСѓРјРµРЅС‚Р°"
 		entityTransformer.map(superDoc, dstDoc);
 		
 		internalCreate(srcDoc, dstDoc, model, date, specList, destFolder, createCallback);
 	}
 
 	/**
-	 * Конвертация суммы документа основания в сумму создаваемого документа
+	 * РљРѕРЅРІРµСЂС‚Р°С†РёСЏ СЃСѓРјРјС‹ РґРѕРєСѓРјРµРЅС‚Р° РѕСЃРЅРѕРІР°РЅРёСЏ РІ СЃСѓРјРјСѓ СЃРѕР·РґР°РІР°РµРјРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
 	 * @param srcDoc
-	 * 			Документ-основание
+	 * 			Р”РѕРєСѓРјРµРЅС‚-РѕСЃРЅРѕРІР°РЅРёРµ
 	 * @param dstDoc
-	 * 			Результирующий документ
+	 * 			Р РµР·СѓР»СЊС‚РёСЂСѓСЋС‰РёР№ РґРѕРєСѓРјРµРЅС‚
 	 * @param model
-	 * 			Образец
+	 * 			РћР±СЂР°Р·РµС†
 	 * @param date
-	 * 			Дата создания документа
+	 * 			Р”Р°С‚Р° СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 * @param specList
-	 * 			Список спецификаций результирующего документа
+	 * 			РЎРїРёСЃРѕРє СЃРїРµС†РёС„РёРєР°С†РёР№ СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РµРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	@SuppressWarnings("unchecked")
 	protected void convertDocSum(S srcDoc, D dstDoc, Date date, List<DocumentSpecItem> specList){
@@ -130,7 +130,7 @@ public class CreateDocumentBasisOfImpl<S extends DocHead, D extends DocHead, P e
 		BigDecimal tmpSumCur = BigDecimal.ZERO;
 		RoundContext rc = new RoundContext(config.getCurrencyScale());
 		
-		//докумет-источник не имеет спецификаций
+		//РґРѕРєСѓРјРµС‚-РёСЃС‚РѕС‡РЅРёРє РЅРµ РёРјРµРµС‚ СЃРїРµС†РёС„РёРєР°С†РёР№
 		if (specList == null || specList.size() == 0){
 			tmpSumCur = srcDoc.getSumCur();		
 		} else {
@@ -152,10 +152,10 @@ public class CreateDocumentBasisOfImpl<S extends DocHead, D extends DocHead, P e
 	}
 	
 	/**
-	 * проверка имен атрибутов для изменения в спецификации
+	 * РїСЂРѕРІРµСЂРєР° РёРјРµРЅ Р°С‚СЂРёР±СѓС‚РѕРІ РґР»СЏ РёР·РјРµРЅРµРЅРёСЏ РІ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 * 
-	 * @param attributeName	имя атрибута
-	 * @return	<code>true</code> если атрибут можно менять
+	 * @param attributeName	РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
+	 * @return	<code>true</code> РµСЃР»Рё Р°С‚СЂРёР±СѓС‚ РјРѕР¶РЅРѕ РјРµРЅСЏС‚СЊ
 	 */
 	protected boolean isMutableDocSpecAttribute(String attributeName) {
 		String[] attributeNames = new String[] {"Id", "DocHead", "SysClient", "UNID", "Quantity", "Quantity2", "Price", "Price1", "Summa", "Summa1", "Taxes", "SerialNumbers"};
@@ -167,22 +167,22 @@ public class CreateDocumentBasisOfImpl<S extends DocHead, D extends DocHead, P e
 	}
 	
 	/**
-	 * Копирование спецификаций
+	 * РљРѕРїРёСЂРѕРІР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 * 
 	 * @param srcDoc
-	 * 			Документ-основание
+	 * 			Р”РѕРєСѓРјРµРЅС‚-РѕСЃРЅРѕРІР°РЅРёРµ
 	 * @param dstDoc
-	 * 			Результирующий документ
+	 * 			Р РµР·СѓР»СЊС‚РёСЂСѓСЋС‰РёР№ РґРѕРєСѓРјРµРЅС‚
 	 * @param date
-	 * 			Дата создания документа
+	 * 			Р”Р°С‚Р° СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 * @param specList
-	 * 			Список спецификаций результирующего документа
+	 * 			РЎРїРёСЃРѕРє СЃРїРµС†РёС„РёРєР°С†РёР№ СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РµРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	@SuppressWarnings("unchecked")
 	protected void doCopyDocSpecs(S srcDoc, D dstDoc, Date date, List<DocumentSpecItem> specList, CreateDocumentBasisOfCallback createCallback) {
 		if (specList != null && specList.size() > 0){
 			if (dstDoc.getDocSection().isWithSpec()) {
-				//оба документа со спецификациями
+				//РѕР±Р° РґРѕРєСѓРјРµРЅС‚Р° СЃРѕ СЃРїРµС†РёС„РёРєР°С†РёСЏРјРё
 				GoodsDocumentSpecification dstDocSpecServ = DocumentUtils.getGoodsDocumentSpecificationService(dstDoc.getDocSection());
 				GoodsDocumentSpecification srcDocSpecServ = DocumentUtils.getGoodsDocumentSpecificationService(srcDoc.getDocSection());
 				DocSpec[] newDocSpecs = new DocSpec[specList.size()];
@@ -228,13 +228,13 @@ public class CreateDocumentBasisOfImpl<S extends DocHead, D extends DocHead, P e
 					//clone custom fields
 					CustomFieldsManagerLocator.locate().cloneValues(srcDocSpecServ, srcDocSpec, dstDocSpecServ, dstDocSpec);
 					
-					//выполним дополнительную обработку, если существует
+					//РІС‹РїРѕР»РЅРёРј РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅСѓСЋ РѕР±СЂР°Р±РѕС‚РєСѓ, РµСЃР»Рё СЃСѓС‰РµСЃС‚РІСѓРµС‚
 					if (createCallback != null) {
 						logger.debug("execute document line callback");
 						createCallback.processDocumentSpec(dstDoc, srcDoc, dstDocSpec, srcDocSpec);
 					}
 					
-					dstDocSpec.setBulkOperation(true); //чтобы не изменял заголовок, после добавления всех применим массовую операцию на заголовке
+					dstDocSpec.setBulkOperation(true); //С‡С‚РѕР±С‹ РЅРµ РёР·РјРµРЅСЏР» Р·Р°РіРѕР»РѕРІРѕРє, РїРѕСЃР»Рµ РґРѕР±Р°РІР»РµРЅРёСЏ РІСЃРµС… РїСЂРёРјРµРЅРёРј РјР°СЃСЃРѕРІСѓСЋ РѕРїРµСЂР°С†РёСЋ РЅР° Р·Р°РіРѕР»РѕРІРєРµ
 					dstDocSpecServ.create(dstDocSpec);
 					
 					newDocSpecs[i++] = dstDocSpec;
@@ -243,46 +243,46 @@ public class CreateDocumentBasisOfImpl<S extends DocHead, D extends DocHead, P e
 				for(DocSpec docSpec : newDocSpecs)
 					docSpec.setBulkOperation(false);
 			} else
-				convertDocSum(srcDoc, dstDoc, date, specList); //если создаваемый документ не предусматривает спецификации
-		} else if (!dstDoc.getDocSection().isWithSpec()) //оба документа не предусматривают спецификаций
+				convertDocSum(srcDoc, dstDoc, date, specList); //РµСЃР»Рё СЃРѕР·РґР°РІР°РµРјС‹Р№ РґРѕРєСѓРјРµРЅС‚ РЅРµ РїСЂРµРґСѓСЃРјР°С‚СЂРёРІР°РµС‚ СЃРїРµС†РёС„РёРєР°С†РёРё
+		} else if (!dstDoc.getDocSection().isWithSpec()) //РѕР±Р° РґРѕРєСѓРјРµРЅС‚Р° РЅРµ РїСЂРµРґСѓСЃРјР°С‚СЂРёРІР°СЋС‚ СЃРїРµС†РёС„РёРєР°С†РёР№
 			convertDocSum(srcDoc, dstDoc, date, null);
 	}
 
 	@SuppressWarnings("unchecked")
 	protected D internalCreate(S srcDoc, D dstDoc, P pattern, Date date, List<DocumentSpecItem> specList, Folder destFolder, CreateDocumentBasisOfCallback createCallback) {
-		//полученый документ накрываем данными из модели
+		//РїРѕР»СѓС‡РµРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚ РЅР°РєСЂС‹РІР°РµРј РґР°РЅРЅС‹РјРё РёР· РјРѕРґРµР»Рё
 		CreateDocumentByPatternStrategy createByPatternStrategy = new DefaultCreateDocumentByPatternStrategy(destFolder);
 		dstDoc = (D) createByPatternStrategy.createDocument(dstDoc, pattern);
 				
-		//установка параметров документа-основания
+		//СѓСЃС‚Р°РЅРѕРІРєР° РїР°СЂР°РјРµС‚СЂРѕРІ РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
 		dstDoc.setBaseDocDate(srcDoc.getDocDate());
 		dstDoc.setBaseDocNumber(srcDoc.getDocNumber());
 		dstDoc.setBaseDocType(srcDoc.getDocType());
 		dstDoc.setBaseDocument(srcDoc);
-		//если не передали дату создания документа, то используем из документа источника или образца
+		//РµСЃР»Рё РЅРµ РїРµСЂРµРґР°Р»Рё РґР°С‚Сѓ СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°, С‚Рѕ РёСЃРїРѕР»СЊР·СѓРµРј РёР· РґРѕРєСѓРјРµРЅС‚Р° РёСЃС‚РѕС‡РЅРёРєР° РёР»Рё РѕР±СЂР°Р·С†Р°
 		//https://issues.m-g.ru/bugzilla/show_bug.cgi?id=5020
 		if (date != null)
 			dstDoc.setDocDate(date);
 		
-		//курс валюты
+		//РєСѓСЂСЃ РІР°Р»СЋС‚С‹
 		Configuration cfg = DocumentUtils.getDocumentService(dstDoc.getDocSection()).getConfiguration();
 		CurrencyRateServiceLocal currencyRateService = (CurrencyRateServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CurrencyRateServiceLocal.SERVICE_NAME);
 		try {
-			//пытаемся получить прямой курс для валют
+			//РїС‹С‚Р°РµРјСЃСЏ РїРѕР»СѓС‡РёС‚СЊ РїСЂСЏРјРѕР№ РєСѓСЂСЃ РґР»СЏ РІР°Р»СЋС‚
 			dstDoc.setCurCource(currencyRateService.getCurrencyRate(cfg.getLocalCurrency(), dstDoc.getCurrency(),
 					dstDoc.getCurrencyRateAuthority(), dstDoc.getCurrencyRateType(), dstDoc.getDocDate()));
 		} catch (CurrencyRateNotFoundException e) {
-			//если прямого курса нет, то пытаемся получить обратный курс
+			//РµСЃР»Рё РїСЂСЏРјРѕРіРѕ РєСѓСЂСЃР° РЅРµС‚, С‚Рѕ РїС‹С‚Р°РµРјСЃСЏ РїРѕР»СѓС‡РёС‚СЊ РѕР±СЂР°С‚РЅС‹Р№ РєСѓСЂСЃ
 			dstDoc.setCurCource(currencyRateService.getIndirectCurrencyRate(dstDoc.getCurrency(), cfg.getLocalCurrency(),
 					dstDoc.getCurrencyRateAuthority(), dstDoc.getCurrencyRateType(), dstDoc.getDocDate()));
 		}
 		
-		//сохраняем заголовок
+		//СЃРѕС…СЂР°РЅСЏРµРј Р·Р°РіРѕР»РѕРІРѕРє
 		Document docServ = DocumentUtils.getDocumentService(dstDoc.getDocSection());
 		//clone custom fields
 		doMergeCustomFields(docServ, dstDoc, srcDoc, pattern);
 		
-		//выполним дополнительную обработку, если существует
+		//РІС‹РїРѕР»РЅРёРј РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅСѓСЋ РѕР±СЂР°Р±РѕС‚РєСѓ, РµСЃР»Рё СЃСѓС‰РµСЃС‚РІСѓРµС‚
 		if (createCallback != null) {
 			logger.debug("execute document callback");
 			createCallback.processDocumentHead(dstDoc, srcDoc, pattern);
@@ -296,17 +296,17 @@ public class CreateDocumentBasisOfImpl<S extends DocHead, D extends DocHead, P e
 	}
 	
 	/**
-	 * Выполнить слияние доп.признаков
-	 * @param dstDocService - сервис создаваемого документа
-	 * @param dstDoc - создаваемый документ
-	 * @param srcDoc - документ основание
-	 * @param pattern - образец документа
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ СЃР»РёСЏРЅРёРµ РґРѕРї.РїСЂРёР·РЅР°РєРѕРІ
+	 * @param dstDocService - СЃРµСЂРІРёСЃ СЃРѕР·РґР°РІР°РµРјРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param dstDoc - СЃРѕР·РґР°РІР°РµРјС‹Р№ РґРѕРєСѓРјРµРЅС‚
+	 * @param srcDoc - РґРѕРєСѓРјРµРЅС‚ РѕСЃРЅРѕРІР°РЅРёРµ
+	 * @param pattern - РѕР±СЂР°Р·РµС† РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected void doMergeCustomFields(DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> dstDocService, DocHead dstDoc, DocHead srcDoc, DocHeadModel pattern) {
 		Map<String, Object> srcDocCustomFieldValues = srcDoc.getStorage().getValues();
 		Map<String, Object> patternCustomFieldValues = pattern.getStorage().getValues();
 		EntityCustomFieldsStorage dstDocCustomFieldsStorage = dstDoc.getStorage();
-		// загрузим метаданные доп.признаков, которые присутствуют в создаваемом документе
+		// Р·Р°РіСЂСѓР·РёРј РјРµС‚Р°РґР°РЅРЅС‹Рµ РґРѕРї.РїСЂРёР·РЅР°РєРѕРІ, РєРѕС‚РѕСЂС‹Рµ РїСЂРёСЃСѓС‚СЃС‚РІСѓСЋС‚ РІ СЃРѕР·РґР°РІР°РµРјРѕРј РґРѕРєСѓРјРµРЅС‚Рµ
 		Map<String, Object> dstDocCustomFieldValues = CustomFieldsManagerLocator.locate().loadValues(dstDocService, dstDoc.getId());
 		
 		Set<String> dstDocCustomFieldNames = dstDocCustomFieldValues.keySet();

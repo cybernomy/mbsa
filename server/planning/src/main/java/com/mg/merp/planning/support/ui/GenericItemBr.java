@@ -31,7 +31,7 @@ import com.mg.merp.planning.GenericItemServiceLocal;
 import com.mg.merp.planning.model.GenericItem;
 
 /**
- * Браузер обобщенных товаров
+ * Р‘СЂР°СѓР·РµСЂ РѕР±РѕР±С‰РµРЅРЅС‹С… С‚РѕРІР°СЂРѕРІ
  * 
  * @author leonova
  * @version $Id: GenericItemBr.java,v 1.4 2009/02/06 09:43:11 safonov Exp $ 
@@ -111,7 +111,7 @@ public class GenericItemBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * обработчик расчета кодов нижнего уровня
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЂР°СЃС‡РµС‚Р° РєРѕРґРѕРІ РЅРёР¶РЅРµРіРѕ СѓСЂРѕРІРЅСЏ
 	 * 
 	 * @param event
 	 */

@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.warehouse.model.WarehouseType;
 
 /**
- * Контроллер браузера бизнес-компонента "Тип склада"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РўРёРї СЃРєР»Р°РґР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: WarehouseTypeBr.java,v 1.1 2007/09/17 12:55:25 alikaev Exp $

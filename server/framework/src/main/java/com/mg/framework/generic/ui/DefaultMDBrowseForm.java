@@ -26,7 +26,7 @@ import com.mg.framework.support.ui.widget.MaintenanceTableController;
 import com.mg.framework.support.ui.widget.MaintenanceTableModel;
 
 /**
- * Реализация контроллера формы мастер-деталь
+ * Р РµР°Р»РёР·Р°С†РёСЏ РєРѕРЅС‚СЂРѕР»Р»РµСЂР° С„РѕСЂРјС‹ РјР°СЃС‚РµСЂ-РґРµС‚Р°Р»СЊ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultMDBrowseForm.java,v 1.3 2008/12/23 09:34:18 safonov Exp $
@@ -34,27 +34,27 @@ import com.mg.framework.support.ui.widget.MaintenanceTableModel;
 public class DefaultMDBrowseForm extends AbstractForm implements
 		MaintenanceBrowseForm {
 	/**
-	 * таблица мастера
+	 * С‚Р°Р±Р»РёС†Р° РјР°СЃС‚РµСЂР°
 	 */
 	protected MaintenanceTableController master;
 	/**
-	 * таблица детали
+	 * С‚Р°Р±Р»РёС†Р° РґРµС‚Р°Р»Рё
 	 */
 	protected MaintenanceTableController detail;
 	/**
-	 * атрибуты мастера
+	 * Р°С‚СЂРёР±СѓС‚С‹ РјР°СЃС‚РµСЂР°
 	 */
 	protected AttributeMap masterUIProperties = new LocalDataTransferObject();
 	/**
-	 * атрибуты детали
+	 * Р°С‚СЂРёР±СѓС‚С‹ РґРµС‚Р°Р»Рё
 	 */
 	protected AttributeMap detailUIProperties = new LocalDataTransferObject();
 	/**
-	 * сервис бизнес-компонента мастера
+	 * СЃРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РјР°СЃС‚РµСЂР°
 	 */
 	protected DataBusinessObjectService<PersistentObject, Serializable> masterService;
 	/**
-	 * сервис бизнес-компонента детали
+	 * СЃРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РґРµС‚Р°Р»Рё
 	 */
 	protected DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> detailService;
 
@@ -65,25 +65,25 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 	
 	/**
-	 * создание модели таблицы для браузера мастера, необходимо переопределять в классе наследнике
+	 * СЃРѕР·РґР°РЅРёРµ РјРѕРґРµР»Рё С‚Р°Р±Р»РёС†С‹ РґР»СЏ Р±СЂР°СѓР·РµСЂР° РјР°СЃС‚РµСЂР°, РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРѕРїСЂРµРґРµР»СЏС‚СЊ РІ РєР»Р°СЃСЃРµ РЅР°СЃР»РµРґРЅРёРєРµ
 	 * 
-	 * @return	модель таблицы
+	 * @return	РјРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹
 	 */
 	protected MaintenanceTableModel createMasterModel() {
 		throw new UnsupportedOperationException("Must be override in descendants");
 	}
 
 	/**
-	 * создание модели таблицы для браузера детали, необходимо переопределять в классе наследнике
+	 * СЃРѕР·РґР°РЅРёРµ РјРѕРґРµР»Рё С‚Р°Р±Р»РёС†С‹ РґР»СЏ Р±СЂР°СѓР·РµСЂР° РґРµС‚Р°Р»Рё, РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРѕРїСЂРµРґРµР»СЏС‚СЊ РІ РєР»Р°СЃСЃРµ РЅР°СЃР»РµРґРЅРёРєРµ
 	 * 
-	 * @return	модель таблицы
+	 * @return	РјРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹
 	 */
 	protected MaintenanceTableModel createDetailModel() {
 		throw new UnsupportedOperationException("Must be override in descendants");
 	}
 
 	/**
-	 * загрузка модели таблицы мастера
+	 * Р·Р°РіСЂСѓР·РєР° РјРѕРґРµР»Рё С‚Р°Р±Р»РёС†С‹ РјР°СЃС‚РµСЂР°
 	 *
 	 */
 	protected void loadMasterTableModel() {
@@ -115,7 +115,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик создания сущности
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР·РґР°РЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
 	 * @param event
 	 */
@@ -124,7 +124,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик изменения сущности
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РёР·РјРµРЅРµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
 	 * @param event
 	 */
@@ -133,7 +133,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик удаления сущности
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СѓРґР°Р»РµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
 	 * @param event
 	 */
@@ -142,7 +142,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик просмотра сущности
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
 	 * @param event
 	 */
@@ -151,7 +151,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик копирования сущности
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РєРѕРїРёСЂРѕРІР°РЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
 	 * @param event
 	 */
@@ -160,7 +160,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик копирования сущности с деталями
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РєРѕРїРёСЂРѕРІР°РЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё СЃ РґРµС‚Р°Р»СЏРјРё
 	 * 
 	 * @param event
 	 */
@@ -169,7 +169,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик обновления браузера сущностей
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РѕР±РЅРѕРІР»РµРЅРёСЏ Р±СЂР°СѓР·РµСЂР° СЃСѓС‰РЅРѕСЃС‚РµР№
 	 * 
 	 * @param event
 	 */
@@ -178,7 +178,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик установки условий отбора сущностей мастера
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СѓСЃС‚Р°РЅРѕРІРєРё СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° СЃСѓС‰РЅРѕСЃС‚РµР№ РјР°СЃС‚РµСЂР°
 	 * 
 	 * @param event
 	 */
@@ -187,7 +187,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик запуска генератора отчетов сервиса мастера
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РїСѓСЃРєР° РіРµРЅРµСЂР°С‚РѕСЂР° РѕС‚С‡РµС‚РѕРІ СЃРµСЂРІРёСЃР° РјР°СЃС‚РµСЂР°
 	 * 
 	 * @param event
 	 */
@@ -196,7 +196,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик настройки таблицы мастера
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РЅР°СЃС‚СЂРѕР№РєРё С‚Р°Р±Р»РёС†С‹ РјР°СЃС‚РµСЂР°
 	 * 
 	 * @param event
 	 */
@@ -205,7 +205,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик создания сущности детали
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР·РґР°РЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё РґРµС‚Р°Р»Рё
 	 * 
 	 * @param event
 	 */
@@ -214,7 +214,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик изменения сущности детали
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РёР·РјРµРЅРµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё РґРµС‚Р°Р»Рё
 	 * 
 	 * @param event
 	 */
@@ -223,7 +223,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик удаления сущности детали
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СѓРґР°Р»РµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё РґРµС‚Р°Р»Рё
 	 * 
 	 * @param event
 	 */
@@ -232,7 +232,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик просмотра сущности детали
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° СЃСѓС‰РЅРѕСЃС‚Рё РґРµС‚Р°Р»Рё
 	 * 
 	 * @param event
 	 */
@@ -241,7 +241,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик копирования сущности детали
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РєРѕРїРёСЂРѕРІР°РЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё РґРµС‚Р°Р»Рё
 	 * 
 	 * @param event
 	 */
@@ -250,7 +250,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик копирования сущности детали с деталями
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РєРѕРїРёСЂРѕРІР°РЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё РґРµС‚Р°Р»Рё СЃ РґРµС‚Р°Р»СЏРјРё
 	 * 
 	 * @param event
 	 */
@@ -259,7 +259,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик обновления браузера сущностей деталей
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РѕР±РЅРѕРІР»РµРЅРёСЏ Р±СЂР°СѓР·РµСЂР° СЃСѓС‰РЅРѕСЃС‚РµР№ РґРµС‚Р°Р»РµР№
 	 * 
 	 * @param event
 	 */
@@ -268,7 +268,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик установки условий отбора сущностей деталей
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СѓСЃС‚Р°РЅРѕРІРєРё СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° СЃСѓС‰РЅРѕСЃС‚РµР№ РґРµС‚Р°Р»РµР№
 	 * 
 	 * @param event
 	 */
@@ -277,7 +277,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик запуска генератора отчетов сервиса деталей
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РїСѓСЃРєР° РіРµРЅРµСЂР°С‚РѕСЂР° РѕС‚С‡РµС‚РѕРІ СЃРµСЂРІРёСЃР° РґРµС‚Р°Р»РµР№
 	 * 
 	 * @param event
 	 */
@@ -286,7 +286,7 @@ public class DefaultMDBrowseForm extends AbstractForm implements
 	}
 
 	/**
-	 * обработчик настройки таблицы деталей
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РЅР°СЃС‚СЂРѕР№РєРё С‚Р°Р±Р»РёС†С‹ РґРµС‚Р°Р»РµР№
 	 * 
 	 * @param event
 	 */

@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.FamilyRelation;
 
 /**
- * Браузер типов семейного родства
+ * Р‘СЂР°СѓР·РµСЂ С‚РёРїРѕРІ СЃРµРјРµР№РЅРѕРіРѕ СЂРѕРґСЃС‚РІР°
  * 
  * @author leonova
  * @version $Id: FamilyRelationBr.java,v 1.2 2006/08/11 07:28:20 leonova Exp $ 

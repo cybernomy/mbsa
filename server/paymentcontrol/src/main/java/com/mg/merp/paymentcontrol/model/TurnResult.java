@@ -17,7 +17,7 @@ package com.mg.merp.paymentcontrol.model;
 import java.math.BigDecimal;
 
 /**
- * Модель данных строки оборотки плана
+ * РњРѕРґРµР»СЊ РґР°РЅРЅС‹С… СЃС‚СЂРѕРєРё РѕР±РѕСЂРѕС‚РєРё РїР»Р°РЅР°
  * 
  * @author Artem V. Sharapov
  * @version $Id: TurnResult.java,v 1.1 2007/05/14 05:12:10 sharapov Exp $

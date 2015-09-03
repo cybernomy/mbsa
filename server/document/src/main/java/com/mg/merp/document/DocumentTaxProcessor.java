@@ -23,7 +23,7 @@ import com.mg.framework.api.math.RoundContext;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * Процессор обработки налогов на документах
+ * РџСЂРѕС†РµСЃСЃРѕСЂ РѕР±СЂР°Р±РѕС‚РєРё РЅР°Р»РѕРіРѕРІ РЅР° РґРѕРєСѓРјРµРЅС‚Р°С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentTaxProcessor.java,v 1.2 2007/09/07 12:10:41 safonov Exp $
@@ -32,27 +32,27 @@ import com.mg.merp.document.model.DocSpec;
 public interface DocumentTaxProcessor extends BusinessObjectService {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/document/DocumentTaxProcessor";
 	
 	/**
-	 * расчет налогов для спецификации документа
+	 * СЂР°СЃС‡РµС‚ РЅР°Р»РѕРіРѕРІ РґР»СЏ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param spec			спецификация документа
-	 * @param total			если true то расчет от summa, price (от общих), иначе расчет от summa1, price1 (от сум/цен с включенными налогами)
-	 * @param roundContext	контекст расчета
+	 * @param spec			СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param total			РµСЃР»Рё true С‚Рѕ СЂР°СЃС‡РµС‚ РѕС‚ summa, price (РѕС‚ РѕР±С‰РёС…), РёРЅР°С‡Рµ СЂР°СЃС‡РµС‚ РѕС‚ summa1, price1 (РѕС‚ СЃСѓРј/С†РµРЅ СЃ РІРєР»СЋС‡РµРЅРЅС‹РјРё РЅР°Р»РѕРіР°РјРё)
+	 * @param roundContext	РєРѕРЅС‚РµРєСЃС‚ СЂР°СЃС‡РµС‚Р°
 	 */
 	void calculateDocumentSpecTaxes(DocSpec spec, boolean total, RoundContext roundContext);
 
 	/**
-	 * расчет налогов для спецификации документа по указанной цене и сумме
+	 * СЂР°СЃС‡РµС‚ РЅР°Р»РѕРіРѕРІ РґР»СЏ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р° РїРѕ СѓРєР°Р·Р°РЅРЅРѕР№ С†РµРЅРµ Рё СЃСѓРјРјРµ
 	 * 
-	 * @param spec			спецификация документа
-	 * @param price			цена для расчета
-	 * @param sum			сумма для расчета
-	 * @param total			если true то расчет от summa, price (от общих), иначе расчет от summa1, price1 (от сум/цен с включенными налогами)
-	 * @param roundContext	контекст расчета
+	 * @param spec			СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param price			С†РµРЅР° РґР»СЏ СЂР°СЃС‡РµС‚Р°
+	 * @param sum			СЃСѓРјРјР° РґР»СЏ СЂР°СЃС‡РµС‚Р°
+	 * @param total			РµСЃР»Рё true С‚Рѕ СЂР°СЃС‡РµС‚ РѕС‚ summa, price (РѕС‚ РѕР±С‰РёС…), РёРЅР°С‡Рµ СЂР°СЃС‡РµС‚ РѕС‚ summa1, price1 (РѕС‚ СЃСѓРј/С†РµРЅ СЃ РІРєР»СЋС‡РµРЅРЅС‹РјРё РЅР°Р»РѕРіР°РјРё)
+	 * @param roundContext	РєРѕРЅС‚РµРєСЃС‚ СЂР°СЃС‡РµС‚Р°
 	 */
 	void calculateDocumentSpecTaxes(DocSpec spec, BigDecimal price, BigDecimal sum, boolean total, RoundContext roundContext);
 	

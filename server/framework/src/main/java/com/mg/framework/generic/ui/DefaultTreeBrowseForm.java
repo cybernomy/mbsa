@@ -38,7 +38,7 @@ import com.mg.framework.utils.SecurityUtils;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Стандартная форма для отображения дерева бизнес-компонетов имеющих иерархическую структуру
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ С„РѕСЂРјР° РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РґРµСЂРµРІР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµС‚РѕРІ РёРјРµСЋС‰РёС… РёРµСЂР°СЂС…РёС‡РµСЃРєСѓСЋ СЃС‚СЂСѓРєС‚СѓСЂСѓ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultTreeBrowseForm.java,v 1.9 2009/02/09 14:26:42 safonov Exp $
@@ -46,7 +46,7 @@ import com.mg.framework.utils.ServerUtils;
 public class DefaultTreeBrowseForm extends AbstractSearchForm implements
 		MaintenanceBrowseForm {
 	/**
-	 * наименование дерева
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РґРµСЂРµРІР°
 	 */
 	protected final String TREE_WIDGET = "tree";
 	protected DataBusinessObjectService<PersistentObject, Serializable> folderService;
@@ -81,14 +81,14 @@ public class DefaultTreeBrowseForm extends AbstractSearchForm implements
 	}
 	
 	/**
-	 * загрузка модели иерархической структуры, должен быть переопределен в наследнике
-	 * <p> Например:
+	 * Р·Р°РіСЂСѓР·РєР° РјРѕРґРµР»Рё РёРµСЂР°СЂС…РёС‡РµСЃРєРѕР№ СЃС‚СЂСѓРєС‚СѓСЂС‹, РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ РІ РЅР°СЃР»РµРґРЅРёРєРµ
+	 * <p> РќР°РїСЂРёРјРµСЂ:
 	 * <blockquote><pre>
 	 *   List<CatalogFolder> list = OrmTemplate.getInstance().find(CatalogFolder.class, "from CatalogFolder cf where".concat(DatabaseUtils.generateFlatBrowseWhereEJBQL("cf.Id", 1).concat(" order by cf.Id")));
 	 *   return CatalogFolderTreeNode.createTree(list);
 	 * </pre></blockquote>
 	 * 
-	 * @return	модель иерархической структуры
+	 * @return	РјРѕРґРµР»СЊ РёРµСЂР°СЂС…РёС‡РµСЃРєРѕР№ СЃС‚СЂСѓРєС‚СѓСЂС‹
 	 */
 	protected TreeNode loadFolders() {
 		throw new UnsupportedOperationException("Must be override in descendants");
@@ -110,12 +110,12 @@ public class DefaultTreeBrowseForm extends AbstractSearchForm implements
 			selectFirstNode = tree.locate(BeanUtils.getIdentifierProperty(getTargetEntity())) == null;
 		
 		if (selectFirstNode)
-			//выделим 0й элемент дерева
+			//РІС‹РґРµР»РёРј 0Р№ СЌР»РµРјРµРЅС‚ РґРµСЂРµРІР°
 			((MaintenanceTree) view.getWidget(TREE_WIDGET)).setSelectionRow(0);
 
 		view.getWidget(TREE_WIDGET).requestFocus();
 
-		//права на изменения иерархии бизнес-компонента
+		//РїСЂР°РІР° РЅР° РёР·РјРµРЅРµРЅРёСЏ РёРµСЂР°СЂС…РёРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 		if (SecurityUtils.tryCheckPermission(new BusinessMethodPermission(folderService.getBusinessServiceMetadata().getName(), BusinessMethodPermission.CHANGE_HIERARCHY_METHOD))) {
 			DnDComponent dndTree = (DnDComponent) view.getWidget(TREE_WIDGET);
 			dndTree.setDragEnabled(true);
@@ -141,8 +141,8 @@ public class DefaultTreeBrowseForm extends AbstractSearchForm implements
 	}
 	
 	/**
-	 * настройка прав на элементы иерархии, в стандартной реализации настройка происходит для видов иерархии 0 (общие папки),
-	 * необходимо переопределить если используется другой вид иерархии
+	 * РЅР°СЃС‚СЂРѕР№РєР° РїСЂР°РІ РЅР° СЌР»РµРјРµРЅС‚С‹ РёРµСЂР°СЂС…РёРё, РІ СЃС‚Р°РЅРґР°СЂС‚РЅРѕР№ СЂРµР°Р»РёР·Р°С†РёРё РЅР°СЃС‚СЂРѕР№РєР° РїСЂРѕРёСЃС…РѕРґРёС‚ РґР»СЏ РІРёРґРѕРІ РёРµСЂР°СЂС…РёРё 0 (РѕР±С‰РёРµ РїР°РїРєРё),
+	 * РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРѕРїСЂРµРґРµР»РёС‚СЊ РµСЃР»Рё РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґСЂСѓРіРѕР№ РІРёРґ РёРµСЂР°СЂС…РёРё
 	 */
 	protected void setupFolderPermissions() {
 		if (currentNode != null)
@@ -150,7 +150,7 @@ public class DefaultTreeBrowseForm extends AbstractSearchForm implements
 	}
 
 	/**
-	 * получить слушатель событий от настраиваемых действий пользователя
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№ РѕС‚ РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
 	 * @return
 	 */
@@ -171,9 +171,9 @@ public class DefaultTreeBrowseForm extends AbstractSearchForm implements
 	}
 
 	/**
-	 * обработчик запуска настраиваемых действий пользователя
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РїСѓСЃРєР° РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionExecuteCustomUserAction(WidgetEvent event) {
 		Serializable[] selectedIdentifiers = null;
@@ -185,7 +185,7 @@ public class DefaultTreeBrowseForm extends AbstractSearchForm implements
 	}
 
 	/**
-	 * обработчик создания папки
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР·РґР°РЅРёСЏ РїР°РїРєРё
 	 * 
 	 * @param event
 	 */
@@ -194,7 +194,7 @@ public class DefaultTreeBrowseForm extends AbstractSearchForm implements
 	}
 
 	/**
-	 * обработчик изменения папки
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РёР·РјРµРЅРµРЅРёСЏ РїР°РїРєРё
 	 * 
 	 * @param event
 	 */
@@ -203,7 +203,7 @@ public class DefaultTreeBrowseForm extends AbstractSearchForm implements
 	}
 
 	/**
-	 * обработчик удаления папки
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СѓРґР°Р»РµРЅРёСЏ РїР°РїРєРё
 	 * 
 	 * @param event
 	 */
@@ -212,7 +212,7 @@ public class DefaultTreeBrowseForm extends AbstractSearchForm implements
 	}
 
 	/**
-	 * обработчик просмотра
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР°
 	 * 
 	 * @param event
 	 */
@@ -221,7 +221,7 @@ public class DefaultTreeBrowseForm extends AbstractSearchForm implements
 	}
 
 	/**
-	 * обработчик настройки прав на папки
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РЅР°СЃС‚СЂРѕР№РєРё РїСЂР°РІ РЅР° РїР°РїРєРё
 	 * 
 	 * @param event
 	 */
@@ -230,7 +230,7 @@ public class DefaultTreeBrowseForm extends AbstractSearchForm implements
 	}
 
 	/**
-	 * обработчик обновления папок
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РѕР±РЅРѕРІР»РµРЅРёСЏ РїР°РїРѕРє
 	 * 
 	 * @param event
 	 */

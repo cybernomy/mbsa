@@ -32,7 +32,7 @@ import com.mg.merp.reference.model.NaturalPerson;
 import com.mg.merp.reference.model.NaturalPersonHist;
 
 /**
- * Бизнес-компонент "История изменений сведений физического лица" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РСЃС‚РѕСЂРёСЏ РёР·РјРµРЅРµРЅРёР№ СЃРІРµРґРµРЅРёР№ С„РёР·РёС‡РµСЃРєРѕРіРѕ Р»РёС†Р°" 
  * 
  * @author leonova
  * @version $Id: NaturalPersonHistServiceBean.java,v 1.5 2007/08/30 08:36:41 alikaev Exp $
@@ -72,14 +72,14 @@ public class NaturalPersonHistServiceBean extends AbstractPOJODataBusinessObject
 	protected void onStore(NaturalPersonHist entity) {
 		List<NaturalPersonHist> listNaturalPersonHist = getNaturalPersonHist(entity.getNaturalPerson().getId());
 		if (listNaturalPersonHist.size() > 0){
-			//если изменяемая запись одна или текущее изменение стало актуальным, то передаем текущее изменение
+			//РµСЃР»Рё РёР·РјРµРЅСЏРµРјР°СЏ Р·Р°РїРёСЃСЊ РѕРґРЅР° РёР»Рё С‚РµРєСѓС‰РµРµ РёР·РјРµРЅРµРЅРёРµ СЃС‚Р°Р»Рѕ Р°РєС‚СѓР°Р»СЊРЅС‹Рј, С‚Рѕ РїРµСЂРµРґР°РµРј С‚РµРєСѓС‰РµРµ РёР·РјРµРЅРµРЅРёРµ
 			NaturalPersonHist naturalPersonHistActual = listNaturalPersonHist.get(0);
 			if (listNaturalPersonHist.size() == 1 || entity.getActDate().compareTo(naturalPersonHistActual.getActDate()) == 1)
 				adjustNaturalPerson(entity);
 			if (listNaturalPersonHist.size() > 1){
-				// следущее актуальное значение из истории изменений
+				// СЃР»РµРґСѓС‰РµРµ Р°РєС‚СѓР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РёР· РёСЃС‚РѕСЂРёРё РёР·РјРµРЅРµРЅРёР№
 				NaturalPersonHist naturalPersonHistActualNext = getNaturalPersonHist(entity.getNaturalPerson().getId()).get(1);
-				// если изменяемое значение не стало актуальным передаем второе по актуальности значение
+				// РµСЃР»Рё РёР·РјРµРЅСЏРµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ РЅРµ СЃС‚Р°Р»Рѕ Р°РєС‚СѓР°Р»СЊРЅС‹Рј РїРµСЂРµРґР°РµРј РІС‚РѕСЂРѕРµ РїРѕ Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё Р·РЅР°С‡РµРЅРёРµ
 				if (naturalPersonHistActual.getId().compareTo(entity.getId()) == 0
 						&&  entity.getActDate().compareTo(naturalPersonHistActualNext.getActDate()) == -1)
 					adjustNaturalPerson(naturalPersonHistActualNext);
@@ -102,8 +102,8 @@ public class NaturalPersonHistServiceBean extends AbstractPOJODataBusinessObject
 	}
 
 	/**
-	 * устанавливаем физическому лицу значения из истории изменений, если 
-	 * в ней содержиться актульные по дате значения
+	 * СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј С„РёР·РёС‡РµСЃРєРѕРјСѓ Р»РёС†Сѓ Р·РЅР°С‡РµРЅРёСЏ РёР· РёСЃС‚РѕСЂРёРё РёР·РјРµРЅРµРЅРёР№, РµСЃР»Рё 
+	 * РІ РЅРµР№ СЃРѕРґРµСЂР¶РёС‚СЊСЃСЏ Р°РєС‚СѓР»СЊРЅС‹Рµ РїРѕ РґР°С‚Рµ Р·РЅР°С‡РµРЅРёСЏ
 	 * 
 	 * @param entity
 	 */
@@ -119,10 +119,10 @@ public class NaturalPersonHistServiceBean extends AbstractPOJODataBusinessObject
 	}
 
 	/**
-	 * по идентификатору физического лица возвращает список его историй изменений
+	 * РїРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ С„РёР·РёС‡РµСЃРєРѕРіРѕ Р»РёС†Р° РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє РµРіРѕ РёСЃС‚РѕСЂРёР№ РёР·РјРµРЅРµРЅРёР№
 	 * 
-	 * @param Id идентификатор физического лица
-	 * @return список историй изменений
+	 * @param Id РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„РёР·РёС‡РµСЃРєРѕРіРѕ Р»РёС†Р°
+	 * @return СЃРїРёСЃРѕРє РёСЃС‚РѕСЂРёР№ РёР·РјРµРЅРµРЅРёР№
 	 */
 	private List<NaturalPersonHist> getNaturalPersonHist(int Id) {
 		List<NaturalPersonHist> naturalPersonHist = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(NaturalPersonHist.class)

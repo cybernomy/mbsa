@@ -22,7 +22,7 @@ import com.mg.merp.salary.model.PayRoll;
 import com.mg.merp.salary.model.PaySheet;
 
 /**
- * Сервис бизнес-компонента "Расчетные ведомости"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р Р°СЃС‡РµС‚РЅС‹Рµ РІРµРґРѕРјРѕСЃС‚Рё"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -31,22 +31,22 @@ import com.mg.merp.salary.model.PaySheet;
 public interface PayRollServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PayRoll, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME= "merp/salary/PayRoll"; //$NON-NLS-1$ 
 	
 	/**
-	 * Создать платежную ведомость на основе рассчетной
-	 * @param payRollId - идентификатор рассчетной ведомости
-	 * @return платежная ведомость
+	 * РЎРѕР·РґР°С‚СЊ РїР»Р°С‚РµР¶РЅСѓСЋ РІРµРґРѕРјРѕСЃС‚СЊ РЅР° РѕСЃРЅРѕРІРµ СЂР°СЃСЃС‡РµС‚РЅРѕР№
+	 * @param payRollId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂР°СЃСЃС‡РµС‚РЅРѕР№ РІРµРґРѕРјРѕСЃС‚Рё
+	 * @return РїР»Р°С‚РµР¶РЅР°СЏ РІРµРґРѕРјРѕСЃС‚СЊ
 	 */
 	PaySheet createPaySheet(Integer payRollId);
 
 	/**
-	 * Создать свод начислений/удержаний по аналитике 
-	 * @param payRollIds - список идентификаторов расчетных ведомостей
-	 * @param feeSummaryPattern - образец свода начислений/удержаний по аналитике
-	 * @return свод начислений/удержаний по аналитике
+	 * РЎРѕР·РґР°С‚СЊ СЃРІРѕРґ РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ 
+	 * @param payRollIds - СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ СЂР°СЃС‡РµС‚РЅС‹С… РІРµРґРѕРјРѕСЃС‚РµР№
+	 * @param feeSummaryPattern - РѕР±СЂР°Р·РµС† СЃРІРѕРґР° РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ
+	 * @return СЃРІРѕРґ РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ
 	 */
 	FeeSummaryHead createFeeSummary(Serializable[] payRollIds, DocHeadModel feeSummaryPattern);
 	

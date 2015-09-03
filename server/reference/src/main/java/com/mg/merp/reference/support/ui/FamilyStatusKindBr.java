@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.FamilyStatusKind;
 
 /**
- * Браузер типов семейного положения
+ * Р‘СЂР°СѓР·РµСЂ С‚РёРїРѕРІ СЃРµРјРµР№РЅРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ
  * 
  * @author leonova
  * @version $Id: FamilyStatusKindBr.java,v 1.2 2006/08/11 07:28:20 leonova Exp $ 

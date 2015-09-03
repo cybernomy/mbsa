@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Типы подразделений
+ * РўРёРїС‹ РїРѕРґСЂР°Р·РґРµР»РµРЅРёР№
  * 
  * @author leonova
  * @version $Id: OrgUnitType.java,v 1.1 2006/03/29 13:06:23 safonov Exp $
@@ -26,25 +26,25 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Reference.OrgUnit.OrgUnitType")
 public enum OrgUnitType {
 	/**
-	 * Головное предприятие
+	 * Р“РѕР»РѕРІРЅРѕРµ РїСЂРµРґРїСЂРёСЏС‚РёРµ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#OrgUnit.Type.Organization")
 	ORGANIZATION,
 	
 	/**
-	 * Филиал
+	 * Р¤РёР»РёР°Р»
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#OrgUnit.Type.Branch")
 	BRANCH,
 	
 	/**
-	 * Подразделение
+	 * РџРѕРґСЂР°Р·РґРµР»РµРЅРёРµ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#OrgUnit.Type.OrgUnit")
 	ORGUNIT,
 	
 	/**
-	 * Отдел, служба
+	 * РћС‚РґРµР», СЃР»СѓР¶Р±Р°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#OrgUnit.Type.Department")
 	DEPARTMENT

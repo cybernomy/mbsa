@@ -24,7 +24,7 @@ import com.mg.merp.reference.KbkServiceLocal;
 import com.mg.merp.reference.model.Kbk;
 
 /**
- * Бизнес-компонент "Кодя КБК" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљРѕРґСЏ РљР‘Рљ" 
  * 
  * @author leonova
  * @version $Id: KbkServiceBean.java,v 1.4 2006/10/19 04:43:02 leonova Exp $

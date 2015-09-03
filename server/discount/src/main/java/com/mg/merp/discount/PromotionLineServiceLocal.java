@@ -18,7 +18,7 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.discount.model.PromotionLine;
 
 /**
- * Бизнес-компонент "Позиция рекламного мероприятия"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџРѕР·РёС†РёСЏ СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PromotionLineServiceLocal.java,v 1.1 2007/10/30 13:55:56 sharapov Exp $
@@ -26,7 +26,7 @@ import com.mg.merp.discount.model.PromotionLine;
 public interface PromotionLineServiceLocal extends DataBusinessObjectService<PromotionLine, Integer> {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/discount/PromotionLine"; //$NON-NLS-1$
 

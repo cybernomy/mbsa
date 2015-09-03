@@ -17,7 +17,7 @@ package com.mg.merp.overall;
 import com.mg.merp.overall.model.NormSpec;
 
 /**
- * Бизнес-компонент "Спецификации норм выдачи спецодежды"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёРё РЅРѕСЂРј РІС‹РґР°С‡Рё СЃРїРµС†РѕРґРµР¶РґС‹"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

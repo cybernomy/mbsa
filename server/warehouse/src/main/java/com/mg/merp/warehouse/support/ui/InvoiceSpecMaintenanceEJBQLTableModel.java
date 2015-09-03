@@ -21,7 +21,7 @@ import com.mg.merp.document.model.DocSpec;
 import com.mg.merp.warehouse.model.InvoiceSpec;
 
 /**
- * Вспомогательный класс для отображения формы спецификации накладных
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРµС†РёС„РёРєР°С†РёРё РЅР°РєР»Р°РґРЅС‹С…
  * 
  * @author leonova
  * @version $Id: InvoiceSpecMaintenanceEJBQLTableModel.java,v 1.4 2008/12/25 10:26:25 safonov Exp $ 

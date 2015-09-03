@@ -18,7 +18,7 @@ import java.io.Serializable;
 import java.net.URL;
 
 /**
- * Иконка
+ * РРєРѕРЅРєР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: Icon.java,v 1.1 2008/07/24 15:12:25 safonov Exp $
@@ -29,7 +29,7 @@ public class Icon implements Serializable {
 	private String resourceName = null;
 
 	/**
-	 * создать иконку на основании содержимого
+	 * СЃРѕР·РґР°С‚СЊ РёРєРѕРЅРєСѓ РЅР° РѕСЃРЅРѕРІР°РЅРёРё СЃРѕРґРµСЂР¶РёРјРѕРіРѕ
 	 * 
 	 * @param body
 	 */
@@ -39,9 +39,9 @@ public class Icon implements Serializable {
 	}
 
 	/**
-	 * создать иконку из ресурса
+	 * СЃРѕР·РґР°С‚СЊ РёРєРѕРЅРєСѓ РёР· СЂРµСЃСѓСЂСЃР°
 	 * 
-	 * @param location	ресурс
+	 * @param location	СЂРµСЃСѓСЂСЃ
 	 */
 	public Icon(URL location) {
 		super();
@@ -49,9 +49,9 @@ public class Icon implements Serializable {
 	}
 
 	/**
-	 * создать иконку из ресурса
+	 * СЃРѕР·РґР°С‚СЊ РёРєРѕРЅРєСѓ РёР· СЂРµСЃСѓСЂСЃР°
 	 * 
-	 * @param resourceName	имя ресурса
+	 * @param resourceName	РёРјСЏ СЂРµСЃСѓСЂСЃР°
 	 */
 	public Icon(String resourceName) {
 		super();

@@ -84,7 +84,7 @@ import com.mg.merp.document.model.DocSpec;
 import com.mg.merp.reference.model.MeasureControl;
 
 /**
- * Реализация сервиса менеджера документооборота
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РјРµРЅРµРґР¶РµСЂР° РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowManagerImpl.java,v 1.41 2009/02/25 08:46:10 safonov Exp $
@@ -132,7 +132,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 	private Comparator<DocProcessStage> docProcessStageComparator = new Comparator<DocProcessStage>() {
 
 		public int compare(DocProcessStage o1, DocProcessStage o2) {
-			return o1.getPriority().compareTo(o2.getPriority()); //приоритеты должны быть не null
+			return o1.getPriority().compareTo(o2.getPriority()); //РїСЂРёРѕСЂРёС‚РµС‚С‹ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РЅРµ null
 		}
 		
 	};
@@ -172,13 +172,13 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 	
 	@SuppressWarnings("unchecked")
 	private DocHead loadDocument(Serializable documentId) {
-		//загрузим идентификатор раздела документа, данный объект будет почти всегда в кэше
+		//Р·Р°РіСЂСѓР·РёРј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂР°Р·РґРµР»Р° РґРѕРєСѓРјРµРЅС‚Р°, РґР°РЅРЅС‹Р№ РѕР±СЉРµРєС‚ Р±СѓРґРµС‚ РїРѕС‡С‚Рё РІСЃРµРіРґР° РІ РєСЌС€Рµ
 		List<Integer> list = MiscUtils.convertUncheckedList(Integer.class, getOrmTemplate().findByNamedParam("select dh.DocSection.Id from DocHead dh where dh.Id = :docId", "docId", documentId));
 		if (list.isEmpty())
 			throw new IllegalStateException("DocSection is null in document " + documentId);
 		DocSection docSection = ServerUtils.getPersistentManager().find(DocSection.class, list.get(0));
-		//используем сервис документа для загрузки реального объекта заголовка документа,
-		//исключаем очень сложный запрос который образуется вследствии неявного полиморфизма в мапинге документов
+		//РёСЃРїРѕР»СЊР·СѓРµРј СЃРµСЂРІРёСЃ РґРѕРєСѓРјРµРЅС‚Р° РґР»СЏ Р·Р°РіСЂСѓР·РєРё СЂРµР°Р»СЊРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° Р·Р°РіРѕР»РѕРІРєР° РґРѕРєСѓРјРµРЅС‚Р°,
+		//РёСЃРєР»СЋС‡Р°РµРј РѕС‡РµРЅСЊ СЃР»РѕР¶РЅС‹Р№ Р·Р°РїСЂРѕСЃ РєРѕС‚РѕСЂС‹Р№ РѕР±СЂР°Р·СѓРµС‚СЃСЏ РІСЃР»РµРґСЃС‚РІРёРё РЅРµСЏРІРЅРѕРіРѕ РїРѕР»РёРјРѕСЂС„РёР·РјР° РІ РјР°РїРёРЅРіРµ РґРѕРєСѓРјРµРЅС‚РѕРІ
 		DocHead docHead = (DocHead) DocumentUtils.getDocumentService(docSection).load((Integer) documentId);
 		if (docHead == null)
 			throw new DocumentNotFound();
@@ -189,10 +189,10 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		if (document == null)
 			throw new IllegalStateException("Document is null");
 		PersistentManager pm = ServerUtils.getPersistentManager();
-		//присоединим к текущей сессии с помощью merge, была попытка использовать lock,
-		//но возникли проблемы http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4569, http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4566
-		//т.к. если сущность изменилась и используя lock измененные поля не считаются новым состоянием сущности, что верно
-		//merge сливает состояния, однако конечно по сути происходит обновление сущности документа минуя сервис бизнес-компонента
+		//РїСЂРёСЃРѕРµРґРёРЅРёРј Рє С‚РµРєСѓС‰РµР№ СЃРµСЃСЃРёРё СЃ РїРѕРјРѕС‰СЊСЋ merge, Р±С‹Р»Р° РїРѕРїС‹С‚РєР° РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ lock,
+		//РЅРѕ РІРѕР·РЅРёРєР»Рё РїСЂРѕР±Р»РµРјС‹ http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4569, http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4566
+		//С‚.Рє. РµСЃР»Рё СЃСѓС‰РЅРѕСЃС‚СЊ РёР·РјРµРЅРёР»Р°СЃСЊ Рё РёСЃРїРѕР»СЊР·СѓСЏ lock РёР·РјРµРЅРµРЅРЅС‹Рµ РїРѕР»СЏ РЅРµ СЃС‡РёС‚Р°СЋС‚СЃСЏ РЅРѕРІС‹Рј СЃРѕСЃС‚РѕСЏРЅРёРµРј СЃСѓС‰РЅРѕСЃС‚Рё, С‡С‚Рѕ РІРµСЂРЅРѕ
+		//merge СЃР»РёРІР°РµС‚ СЃРѕСЃС‚РѕСЏРЅРёСЏ, РѕРґРЅР°РєРѕ РєРѕРЅРµС‡РЅРѕ РїРѕ СЃСѓС‚Рё РїСЂРѕРёСЃС…РѕРґРёС‚ РѕР±РЅРѕРІР»РµРЅРёРµ СЃСѓС‰РЅРѕСЃС‚Рё РґРѕРєСѓРјРµРЅС‚Р° РјРёРЅСѓСЏ СЃРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 		if (!pm.contains(document))
 			return pm.merge(document);
 		return document;
@@ -255,8 +255,8 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		if (docAction != null)
 			specStates = loadDocSpecStates(docAction);
 
-		//используем сервис спецификации документа для загрузки реальных объектов спецификаций документа,
-		//исключаем очень сложный запрос который образуется вследствии неявного полиморфизма в мапинге спецификаций документов
+		//РёСЃРїРѕР»СЊР·СѓРµРј СЃРµСЂРІРёСЃ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р° РґР»СЏ Р·Р°РіСЂСѓР·РєРё СЂРµР°Р»СЊРЅС‹С… РѕР±СЉРµРєС‚РѕРІ СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРєСѓРјРµРЅС‚Р°,
+		//РёСЃРєР»СЋС‡Р°РµРј РѕС‡РµРЅСЊ СЃР»РѕР¶РЅС‹Р№ Р·Р°РїСЂРѕСЃ РєРѕС‚РѕСЂС‹Р№ РѕР±СЂР°Р·СѓРµС‚СЃСЏ РІСЃР»РµРґСЃС‚РІРёРё РЅРµСЏРІРЅРѕРіРѕ РїРѕР»РёРјРѕСЂС„РёР·РјР° РІ РјР°РїРёРЅРіРµ СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРєСѓРјРµРЅС‚РѕРІ
 		List<DocSpec> docSpecs = DocumentUtils.getGoodsDocumentSpecificationService(document.getDocSection()).findByCriteria(Restrictions.eq("DocHead", document));
 		for (DocSpec docSpec : docSpecs) {
 			BigDecimal freeQuantity1 = docSpec.getQuantity();
@@ -285,7 +285,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 			
 			if (MathUtils.compareToZero(freeSum) != 0 ||
 					MathUtils.compareToZero(freeQuantity1) != 0 ||
-					//учетно - весовые, надо проверить и вторую ЕИ
+					//СѓС‡РµС‚РЅРѕ - РІРµСЃРѕРІС‹Рµ, РЅР°РґРѕ РїСЂРѕРІРµСЂРёС‚СЊ Рё РІС‚РѕСЂСѓСЋ Р•Р
 					MeasureControl.CATCHWEIGHT.equals(docSpec.getCatalog().getMeasureControl()) && (MathUtils.compareToZero(freeQuantity1) != 0 || MathUtils.compareToZero(freeQuantity2) != 0)) {
 				DocumentSpecItem specItem = new DocumentSpecItem(docSpec, freeQuantity1, freeQuantity2, freeSum, readyQuantity1, readyQuantity2, readySum);
 				result.add(specItem);
@@ -310,14 +310,14 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 	}
 	
 	private void prepareDocFlowMap() {
-		//установим состояние узлов
+		//СѓСЃС‚Р°РЅРѕРІРёРј СЃРѕСЃС‚РѕСЏРЅРёРµ СѓР·Р»РѕРІ
 		for (DocProcessStage docFlowAction : docFlowMap) {
 			for (DocAction docAction : docActions)
 				if (docFlowAction.getId() == docAction.getStage().getId())
 					docFlowAction.setState(docAction.getStageState());
 		}
 		
-		//установим текущий узел
+		//СѓСЃС‚Р°РЅРѕРІРёРј С‚РµРєСѓС‰РёР№ СѓР·РµР»
 		int count = docFlowMap.size();
 		int idx = 0, actionCount = docActions.size() - 1;
 		if (actionCount != -1) {
@@ -382,8 +382,8 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		
 		checkOwner(documentOwner);
 
-		//параметр тихий зависит от наличия сессии и ее интерактивности, если сессия не интерактивна,
-		//то выполнение ДО должно быть тихим
+		//РїР°СЂР°РјРµС‚СЂ С‚РёС…РёР№ Р·Р°РІРёСЃРёС‚ РѕС‚ РЅР°Р»РёС‡РёСЏ СЃРµСЃСЃРёРё Рё РµРµ РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕСЃС‚Рё, РµСЃР»Рё СЃРµСЃСЃРёСЏ РЅРµ РёРЅС‚РµСЂР°РєС‚РёРІРЅР°,
+		//С‚Рѕ РІС‹РїРѕР»РЅРµРЅРёРµ Р”Рћ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ С‚РёС…РёРј
 		isSilent = isSilent || ServerUtils.getCurrentSession() == null || !ServerUtils.getCurrentSession().isInteractive();
 
 		lockDocument();
@@ -434,7 +434,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		if (nextActions.isEmpty())
 			throw new AlreadyCompletedException(document);
 		
-		//если среди выполненных есть этап завершения ДО то выбрасываем ИС
+		//РµСЃР»Рё СЃСЂРµРґРё РІС‹РїРѕР»РЅРµРЅРЅС‹С… РµСЃС‚СЊ СЌС‚Р°Рї Р·Р°РІРµСЂС€РµРЅРёСЏ Р”Рћ С‚Рѕ РІС‹Р±СЂР°СЃС‹РІР°РµРј РРЎ
 		for (DocAction docAction : docActions)
 			if (docAction.getStage().getStage().getId() == DOC_FLOW_END)
 				throw new AlreadyCompletedException(document);
@@ -514,7 +514,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		
 		for (LinkStage linkStage : prevAction.getNextStages()) {
 			DocProcessStage nextStage = linkStage.getNextStage();
-			//если "делитель" OR и есть след. выполненный частично, то добавим его
+			//РµСЃР»Рё "РґРµР»РёС‚РµР»СЊ" OR Рё РµСЃС‚СЊ СЃР»РµРґ. РІС‹РїРѕР»РЅРµРЅРЅС‹Р№ С‡Р°СЃС‚РёС‡РЅРѕ, С‚Рѕ РґРѕР±Р°РІРёРј РµРіРѕ
 			if (hIsC && prevAction.isForkFlow()) {
 				if (partialAndComplete.contains(prevAction.getState()) &&
 						nextStage.isPrevComplete() && StageState.PARTITION.equals(nextStage.getStage())) {
@@ -522,23 +522,23 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 				}
 			}
 			else if (!nextStage.isJoinFlow()) {
-				if (StageState.COMPLETE.equals(prevAction.getState()) && nextStage.isPrevComplete() || //предыдущий пройден полностью
-						partialAndComplete.contains(prevAction.getState()) && !nextStage.isPrevComplete() && //предыдущий пройден полностью или частично
+				if (StageState.COMPLETE.equals(prevAction.getState()) && nextStage.isPrevComplete() || //РїСЂРµРґС‹РґСѓС‰РёР№ РїСЂРѕР№РґРµРЅ РїРѕР»РЅРѕСЃС‚СЊСЋ
+						partialAndComplete.contains(prevAction.getState()) && !nextStage.isPrevComplete() && //РїСЂРµРґС‹РґСѓС‰РёР№ РїСЂРѕР№РґРµРЅ РїРѕР»РЅРѕСЃС‚СЊСЋ РёР»Рё С‡Р°СЃС‚РёС‡РЅРѕ
 						!StageState.COMPLETE.equals(nextStage.getState())) {
 					addFl = addToNextActionsList(nextStage, prevAction);
 				}
 			}
-			//если сумматор "AND"
+			//РµСЃР»Рё СЃСѓРјРјР°С‚РѕСЂ "AND"
 			else if (allPrevIsComplete(nextStage, EnumSet.of(StageState.COMPLETE)) && nextStage.isPrevComplete() ||
 					allPrevIsComplete(nextStage, partialAndComplete) && !nextStage.isPrevComplete()) {
 				addFl = addToNextActionsList(nextStage, prevAction);
 			}
 			
-			//если выполнен то "спускаемся" дальше
+			//РµСЃР»Рё РІС‹РїРѕР»РЅРµРЅ С‚Рѕ "СЃРїСѓСЃРєР°РµРјСЃСЏ" РґР°Р»СЊС€Рµ
 			if (partialAndComplete.contains(nextStage.getState()))
 				bypassDown(nextStage);
 			
-			//если узел "делитель" OR, то в список может попасть только один выполненный частично
+			//РµСЃР»Рё СѓР·РµР» "РґРµР»РёС‚РµР»СЊ" OR, С‚Рѕ РІ СЃРїРёСЃРѕРє РјРѕР¶РµС‚ РїРѕРїР°СЃС‚СЊ С‚РѕР»СЊРєРѕ РѕРґРёРЅ РІС‹РїРѕР»РЅРµРЅРЅС‹Р№ С‡Р°СЃС‚РёС‡РЅРѕ
 			if (prevAction.isForkFlow() && addFl && hIsC)
 				break;
 		}
@@ -546,16 +546,16 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 	
 	private void bypassUp(DocProcessStage nextAction, DocProcessStage fromAction) {
 		for (LinkStage linkStage : nextAction.getPrevStages()) {
-			//пойдем вверх туда, откудо пришли и если узел не "сумматор" AND
+			//РїРѕР№РґРµРј РІРІРµСЂС… С‚СѓРґР°, РѕС‚РєСѓРґРѕ РїСЂРёС€Р»Рё Рё РµСЃР»Рё СѓР·РµР» РЅРµ "СЃСѓРјРјР°С‚РѕСЂ" AND
 			if (!nextAction.isJoinFlow() && partialAndComplete.contains(linkStage.getPrevStage().getState()))
 				bypassUp(linkStage.getPrevStage(), nextAction);
 		}
 		if (StageState.PARTITION.equals(nextAction.getState()))
 			addToNextActionsList(nextAction, null);
-		//пришли из ниоткуда
+		//РїСЂРёС€Р»Рё РёР· РЅРёРѕС‚РєСѓРґР°
 		if (fromAction != null) {
 			for (LinkStage linkStage : nextAction.getNextStages())
-				//пойдем вниз, то только ни туда откуда пришли
+				//РїРѕР№РґРµРј РІРЅРёР·, С‚Рѕ С‚РѕР»СЊРєРѕ РЅРё С‚СѓРґР° РѕС‚РєСѓРґР° РїСЂРёС€Р»Рё
 				if (fromAction.getId() != linkStage.getNextStage().getId())
 					bypassDown(nextAction);
 		}
@@ -566,19 +566,19 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		
 		nextActions.clear();
 		
-		//если текущий этап выполнен частично или не выполнен, то он первый кондидат на выполнение
+		//РµСЃР»Рё С‚РµРєСѓС‰РёР№ СЌС‚Р°Рї РІС‹РїРѕР»РЅРµРЅ С‡Р°СЃС‚РёС‡РЅРѕ РёР»Рё РЅРµ РІС‹РїРѕР»РЅРµРЅ, С‚Рѕ РѕРЅ РїРµСЂРІС‹Р№ РєРѕРЅРґРёРґР°С‚ РЅР° РІС‹РїРѕР»РЅРµРЅРёРµ
 		if (startStage.getState() != StageState.COMPLETE)
 			addToNextActionsList(startStage, null);
 		
-		//начинаем обход "вниз"
+		//РЅР°С‡РёРЅР°РµРј РѕР±С…РѕРґ "РІРЅРёР·"
 		bypassDown(startStage);
-		//начинаем обход "вверх"
+		//РЅР°С‡РёРЅР°РµРј РѕР±С…РѕРґ "РІРІРµСЂС…"
 		bypassUp(startStage, null);
 	}
 	
 	private void prepareStageListForRollback() {
 		nextActions.clear();
-		//откатываем этапы у которых нет следующих выполненных
+		//РѕС‚РєР°С‚С‹РІР°РµРј СЌС‚Р°РїС‹ Сѓ РєРѕС‚РѕСЂС‹С… РЅРµС‚ СЃР»РµРґСѓСЋС‰РёС… РІС‹РїРѕР»РЅРµРЅРЅС‹С…
 		for (DocProcessStage stage : docFlowMap) {
 			if (partialAndComplete.contains(stage.getState()) && !haveIsComplete(stage.getNextStages()) &&
 					stage.getStage().getId() != DOC_FLOW_CREATE_DOC && stage.getStage().getId() != DOC_FLOW_BASED_ON &&
@@ -647,7 +647,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		List<DocumentSpecItem> specList = loadDocSpecListItem(action);
 
 		if (dependensOnStage != null) {
-			//зависим от предыдущего
+			//Р·Р°РІРёСЃРёРј РѕС‚ РїСЂРµРґС‹РґСѓС‰РµРіРѕ
 			List<ReadyDocSpec> readySpecs = loadReadyDocSpec(findDocState(document, dependensOnStage));
 			List<DocumentSpecItem> tmpSpecList = new ArrayList<DocumentSpecItem>();
 			tmpSpecList.addAll(specList);
@@ -677,14 +677,14 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 	
 	private void loadDocumentSum(final Date processDate, final DocProcessStage performedStage, BigDecimal docSum, DocProcessStage dependensOnStage) {
 		if (dependensOnStage != null) {
-			//зависим от предыдущего, возмем минимальное между суммой документа и разницей выполнения
-			//текущего этапа и этапа от которого он зависит
+			//Р·Р°РІРёСЃРёРј РѕС‚ РїСЂРµРґС‹РґСѓС‰РµРіРѕ, РІРѕР·РјРµРј РјРёРЅРёРјР°Р»СЊРЅРѕРµ РјРµР¶РґСѓ СЃСѓРјРјРѕР№ РґРѕРєСѓРјРµРЅС‚Р° Рё СЂР°Р·РЅРёС†РµР№ РІС‹РїРѕР»РЅРµРЅРёСЏ
+			//С‚РµРєСѓС‰РµРіРѕ СЌС‚Р°РїР° Рё СЌС‚Р°РїР° РѕС‚ РєРѕС‚РѕСЂРѕРіРѕ РѕРЅ Р·Р°РІРёСЃРёС‚
 			DocAction action = findDocState(document, performedStage);
 			docSum = docSum.min(getReadyDocumentSumma(findDocState(document, dependensOnStage)).subtract(getReadyDocumentSumma(action)));
 		}
 
 		if (performedStage.isPartial()) {
-			//только для этапов не зависящих от предыдущего, т.к. для зависящих этапов сумма уже расчитана
+			//С‚РѕР»СЊРєРѕ РґР»СЏ СЌС‚Р°РїРѕРІ РЅРµ Р·Р°РІРёСЃСЏС‰РёС… РѕС‚ РїСЂРµРґС‹РґСѓС‰РµРіРѕ, С‚.Рє. РґР»СЏ Р·Р°РІРёСЃСЏС‰РёС… СЌС‚Р°РїРѕРІ СЃСѓРјРјР° СѓР¶Рµ СЂР°СЃС‡РёС‚Р°РЅР°
 			if (dependensOnStage == null) {
 				DocAction action = findDocState(document, performedStage);
 				docSum = docSum.subtract(getReadyDocumentSumma(action));
@@ -725,7 +725,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		if (MathUtils.compareToZero(tmpDocSum) == 0 &&
 				document.getDocSection().isWithSpec()) {
 			for (DocumentSpecItem item : specList) {
-				//#2384 fixed, проверим на равенство, полученные значения могут превышать количества
+				//#2384 fixed, РїСЂРѕРІРµСЂРёРј РЅР° СЂР°РІРµРЅСЃС‚РІРѕ, РїРѕР»СѓС‡РµРЅРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ РјРѕРіСѓС‚ РїСЂРµРІС‹С€Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІР°
 				if (item.isPartition()) {
 					isPartition = true;
 					break;
@@ -774,7 +774,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		return result;
 	}
 	
-	//старт процесса
+	//СЃС‚Р°СЂС‚ РїСЂРѕС†РµСЃСЃР°
 	private void doProcess1(final Date processDate, final boolean performForStage) {
 		//Date processDate = new Date(processDate.getTime());
 		
@@ -787,8 +787,8 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 				throw new InaccesibleStateException(stageForBulk.getCode(), document);
 		}
 		else {
-			//если есть список следующих этапов или следует не непосредственно
-			//то выдадим на  клиенте запрос о выборе следующего этапа
+			//РµСЃР»Рё РµСЃС‚СЊ СЃРїРёСЃРѕРє СЃР»РµРґСѓСЋС‰РёС… СЌС‚Р°РїРѕРІ РёР»Рё СЃР»РµРґСѓРµС‚ РЅРµ РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ
+			//С‚Рѕ РІС‹РґР°РґРёРј РЅР°  РєР»РёРµРЅС‚Рµ Р·Р°РїСЂРѕСЃ Рѕ РІС‹Р±РѕСЂРµ СЃР»РµРґСѓСЋС‰РµРіРѕ СЌС‚Р°РїР°
 			int size = nextActions.size();
 			Collections.sort(nextActions, docProcessStageComparator); //http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4406
 			DocProcessStage aloneStage = size == 1 ? nextActions.get(0) : null;
@@ -806,8 +806,8 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 			}
 			else {
 				DocProcessStage performedStage = nextActions.get(0);
-				//XXX данное условие не позволит выполнить этапы следующие непосредственно, необходима проверка итераций
-				//при массовой отработке не идем по документообороту если не совпадают этапы
+				//XXX РґР°РЅРЅРѕРµ СѓСЃР»РѕРІРёРµ РЅРµ РїРѕР·РІРѕР»РёС‚ РІС‹РїРѕР»РЅРёС‚СЊ СЌС‚Р°РїС‹ СЃР»РµРґСѓСЋС‰РёРµ РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ, РЅРµРѕР±С…РѕРґРёРјР° РїСЂРѕРІРµСЂРєР° РёС‚РµСЂР°С†РёР№
+				//РїСЂРё РјР°СЃСЃРѕРІРѕР№ РѕС‚СЂР°Р±РѕС‚РєРµ РЅРµ РёРґРµРј РїРѕ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Сѓ РµСЃР»Рё РЅРµ СЃРѕРІРїР°РґР°СЋС‚ СЌС‚Р°РїС‹
 				if (isBulkProcess) {
 					assert stageForBulk == null;
 					if (stageForBulk.getId() != performedStage.getId())
@@ -819,7 +819,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		}
 	}
 	
-	//подготовка, запрос списка спицификаций или суммы документа
+	//РїРѕРґРіРѕС‚РѕРІРєР°, Р·Р°РїСЂРѕСЃ СЃРїРёСЃРєР° СЃРїРёС†РёС„РёРєР°С†РёР№ РёР»Рё СЃСѓРјРјС‹ РґРѕРєСѓРјРµРЅС‚Р°
 	private void doProcess2(Date processDate, DocProcessStage performedStage) {
 		BigDecimal docSum = document.getSumCur();
 		if (performedStage.isUseCurrentDate())
@@ -827,18 +827,18 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		
 		DocProcessStage dependensOnStage = getDependensOnStage(performedStage);
 		
-		//спросим дополнительные параметры если необходимо
-		//сумма или список спецификаций документа, если возможна частичная отработка
+		//СЃРїСЂРѕСЃРёРј РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РµСЃР»Рё РЅРµРѕР±С…РѕРґРёРјРѕ
+		//СЃСѓРјРјР° РёР»Рё СЃРїРёСЃРѕРє СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРєСѓРјРµРЅС‚Р°, РµСЃР»Рё РІРѕР·РјРѕР¶РЅР° С‡Р°СЃС‚РёС‡РЅР°СЏ РѕС‚СЂР°Р±РѕС‚РєР°
 		if (document.getDocSection().isWithSpec())
 			loadDocumentSpecList(processDate, performedStage, docSum, dependensOnStage);
 		else
 			loadDocumentSum(processDate, performedStage, docSum, dependensOnStage);
 	}
 	
-	//подготовка, запрос папки
+	//РїРѕРґРіРѕС‚РѕРІРєР°, Р·Р°РїСЂРѕСЃ РїР°РїРєРё
 	private void doProcess3(final DocProcessStage performedStage, final Date processDate, BigDecimal docSum, final List<DocumentSpecItem> specList) {
 		if (specList != null) {
-			//пересчитаем итоговую сумму к отработке на основании отмеченных спецификаций
+			//РїРµСЂРµСЃС‡РёС‚Р°РµРј РёС‚РѕРіРѕРІСѓСЋ СЃСѓРјРјСѓ Рє РѕС‚СЂР°Р±РѕС‚РєРµ РЅР° РѕСЃРЅРѕРІР°РЅРёРё РѕС‚РјРµС‡РµРЅРЅС‹С… СЃРїРµС†РёС„РёРєР°С†РёР№
 			docSum = BigDecimal.ZERO;
 			for (DocumentSpecItem specItem : specList)
 				docSum = docSum.add(specItem.getFreeSum());
@@ -861,7 +861,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 			doProcess4(performedStage, processDate, tmpDocSum, folder, specList);
 	}
 
-	//подготовка, запрос образца
+	//РїРѕРґРіРѕС‚РѕРІРєР°, Р·Р°РїСЂРѕСЃ РѕР±СЂР°Р·С†Р°
 	private void doProcess4(final DocProcessStage performedStage, final Date processDate, final BigDecimal docSum, final Folder folder, final List<DocumentSpecItem> specList) {
 		Integer modelId = performedStage.getLinkDocModel();
 		if (isCreateDocument(performedStage) && modelId == null) {
@@ -879,7 +879,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 			doProcessFinal(performedStage, processDate, docSum, folder, modelId, specList);
 	}
 
-	//завершение процесса выполнения
+	//Р·Р°РІРµСЂС€РµРЅРёРµ РїСЂРѕС†РµСЃСЃР° РІС‹РїРѕР»РЅРµРЅРёСЏ
 	private void doProcessFinal(DocProcessStage performedStage, Date processDate, BigDecimal docSum, Folder folder, Integer modelId, List<DocumentSpecItem> specList) {
 		internalProcess(performedStage, processDate, docSum, folder, modelId, specList);
 	}
@@ -907,8 +907,8 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 			
 		});
 		
-		//в случае проблем отменяем ДО, т.к. невозможно восстановить состояние контекста которое было
-		//до запуска данного этапа
+		//РІ СЃР»СѓС‡Р°Рµ РїСЂРѕР±Р»РµРј РѕС‚РјРµРЅСЏРµРј Р”Рћ, С‚.Рє. РЅРµРІРѕР·РјРѕР¶РЅРѕ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРѕСЃС‚РѕСЏРЅРёРµ РєРѕРЅС‚РµРєСЃС‚Р° РєРѕС‚РѕСЂРѕРµ Р±С‹Р»Рѕ
+		//РґРѕ Р·Р°РїСѓСЃРєР° РґР°РЅРЅРѕРіРѕ СЌС‚Р°РїР°
 		try {
 			docFlowPluginInvoker.execute(createInvokeParams(stage, processDate, docSum, specList));
 		} catch (ApplicationException ae) {
@@ -920,7 +920,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		}
 	}
 
-	//старт отката
+	//СЃС‚Р°СЂС‚ РѕС‚РєР°С‚Р°
 	private void doRollbackProcess1(final Date processDate, final boolean performForStage,
 			final boolean first, final boolean directly) {
 		if (performForStage) {
@@ -947,7 +947,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		}
 	}
 
-	//подготовка отката, запрос действия для отката
+	//РїРѕРґРіРѕС‚РѕРІРєР° РѕС‚РєР°С‚Р°, Р·Р°РїСЂРѕСЃ РґРµР№СЃС‚РІРёСЏ РґР»СЏ РѕС‚РєР°С‚Р°
 	private void doRollbackProcess2(final Date processDate, final DocProcessStage performedStage) {
 		DocAction action = findDocState(document, performedStage);
 		
@@ -955,7 +955,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		final List<DocumentSpecItem> specList = null;
 		
 		if (headStates.size() > 1)
-			//спросим у юзера какую часть откатить если их много
+			//СЃРїСЂРѕСЃРёРј Сѓ СЋР·РµСЂР° РєР°РєСѓСЋ С‡Р°СЃС‚СЊ РѕС‚РєР°С‚РёС‚СЊ РµСЃР»Рё РёС… РјРЅРѕРіРѕ
 			paramsStrategy.chooseDocHeadState(processDate, performedStage, headStates, specList, new ChooseDocumentStateListener() {
 				public void canceled() {
 					cancelDocFlow();
@@ -978,9 +978,9 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 			doRollbackProcessFinal(processDate, performedStage, headStates.get(0), true, specList);
 	}
 	
-	//завершение процесса отката
+	//Р·Р°РІРµСЂС€РµРЅРёРµ РїСЂРѕС†РµСЃСЃР° РѕС‚РєР°С‚Р°
 	private void doRollbackProcessFinal(Date processDate, DocProcessStage performedStage, DocHeadState headState, boolean fullRollback, List<DocumentSpecItem> specList) {
-		//загрузим состояние спецификаций
+		//Р·Р°РіСЂСѓР·РёРј СЃРѕСЃС‚РѕСЏРЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёР№
 		List<DocumentSpecItem> specList1 = new ArrayList<DocumentSpecItem>();
 		List<DocSpecState> specStateList = loadDocSpecStates(headState);
 		for (DocSpecState specState : specStateList) {
@@ -1009,8 +1009,8 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 			
 		});
 		
-		//в случае проблем отменяем ДО, т.к. невозможно восстановить состояние контекста которое было
-		//до запуска данного этапа
+		//РІ СЃР»СѓС‡Р°Рµ РїСЂРѕР±Р»РµРј РѕС‚РјРµРЅСЏРµРј Р”Рћ, С‚.Рє. РЅРµРІРѕР·РјРѕР¶РЅРѕ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРѕСЃС‚РѕСЏРЅРёРµ РєРѕРЅС‚РµРєСЃС‚Р° РєРѕС‚РѕСЂРѕРµ Р±С‹Р»Рѕ
+		//РґРѕ Р·Р°РїСѓСЃРєР° РґР°РЅРЅРѕРіРѕ СЌС‚Р°РїР°
 		try {
 			docFlowPluginInvoker.rollback(createInvokeParams(performedStage, processDate, headState, specList));
 		} catch (ApplicationException ae) {
@@ -1023,8 +1023,8 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 	}
 	
 	private void executionCompleted(DocFlowPluginEvent event) {
-		//производим сброс в хранилище данных, если генерируется ИС то отменяем выполнение ДО, т.к.
-		//невозможно восстановить контекст до состояния которое было до запуска этапа
+		//РїСЂРѕРёР·РІРѕРґРёРј СЃР±СЂРѕСЃ РІ С…СЂР°РЅРёР»РёС‰Рµ РґР°РЅРЅС‹С…, РµСЃР»Рё РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РРЎ С‚Рѕ РѕС‚РјРµРЅСЏРµРј РІС‹РїРѕР»РЅРµРЅРёРµ Р”Рћ, С‚.Рє.
+		//РЅРµРІРѕР·РјРѕР¶РЅРѕ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕРЅС‚РµРєСЃС‚ РґРѕ СЃРѕСЃС‚РѕСЏРЅРёСЏ РєРѕС‚РѕСЂРѕРµ Р±С‹Р»Рѕ РґРѕ Р·Р°РїСѓСЃРєР° СЌС‚Р°РїР°
 		try {
 			ServerUtils.getPersistentManager().flush();
 		} catch (RuntimeException e) {
@@ -1045,22 +1045,22 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		currentStage.setState(currentStageState);
 		
 		if (StageState.PARTITION.equals(oldState)) {
-			//этап уже частично отработан
+			//СЌС‚Р°Рї СѓР¶Рµ С‡Р°СЃС‚РёС‡РЅРѕ РѕС‚СЂР°Р±РѕС‚Р°РЅ
 			updateMark(currentStage, currentStageState, event);
 		}
 		else {
-			//этап отрабатывается с нуля
+			//СЌС‚Р°Рї РѕС‚СЂР°Р±Р°С‚С‹РІР°РµС‚СЃСЏ СЃ РЅСѓР»СЏ
 			insertMark(currentStage, currentStageState, ActionType.STAGE, event);
 		}
 		
-		//проверка "следует непосредственно"
+		//РїСЂРѕРІРµСЂРєР° "СЃР»РµРґСѓРµС‚ РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ"
 		startStage = currentStage;
 		prepareStageListForExecute();
 		boolean isDirectly = false;
 		List<DocProcessStage> notDirectlyStages = new ArrayList<DocProcessStage>();
 		for (DocProcessStage stage : nextActions)
 			if (isDirectly(currentStage, stage)) {
-				isDirectly = true; //признак установим если есть хотя бы один "следует непосредственно"
+				isDirectly = true; //РїСЂРёР·РЅР°Рє СѓСЃС‚Р°РЅРѕРІРёРј РµСЃР»Рё РµСЃС‚СЊ С…РѕС‚СЏ Р±С‹ РѕРґРёРЅ "СЃР»РµРґСѓРµС‚ РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ"
 			}
 			else
 				notDirectlyStages.add(stage);
@@ -1068,12 +1068,12 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		notDirectlyStages.clear();
 		
 		if (isDirectly) {
-			//продолжение ДО для текущего документа
+			//РїСЂРѕРґРѕР»Р¶РµРЅРёРµ Р”Рћ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 			doProcess1(event.getProcessDate(), false);
 		}
 		else {
-			//для текущего документа ДО завершен, проверяем в очереди другие документы,
-			//выполняем для них ДО
+			//РґР»СЏ С‚РµРєСѓС‰РµРіРѕ РґРѕРєСѓРјРµРЅС‚Р° Р”Рћ Р·Р°РІРµСЂС€РµРЅ, РїСЂРѕРІРµСЂСЏРµРј РІ РѕС‡РµСЂРµРґРё РґСЂСѓРіРёРµ РґРѕРєСѓРјРµРЅС‚С‹,
+			//РІС‹РїРѕР»РЅСЏРµРј РґР»СЏ РЅРёС… Р”Рћ
 			completeDocFlow();
 
 			checkDocumentQueue();
@@ -1086,8 +1086,8 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 	}
 	
 	private void rollbackCompleted(DocFlowPluginEvent event) {
-		//производим сброс в хранилище данных, если генерируется ИС то отменяем выполнение ДО, т.к.
-		//невозможно восстановить контекст до состояния которое было до запуска этапа
+		//РїСЂРѕРёР·РІРѕРґРёРј СЃР±СЂРѕСЃ РІ С…СЂР°РЅРёР»РёС‰Рµ РґР°РЅРЅС‹С…, РµСЃР»Рё РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РРЎ С‚Рѕ РѕС‚РјРµРЅСЏРµРј РІС‹РїРѕР»РЅРµРЅРёРµ Р”Рћ, С‚.Рє.
+		//РЅРµРІРѕР·РјРѕР¶РЅРѕ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕРЅС‚РµРєСЃС‚ РґРѕ СЃРѕСЃС‚РѕСЏРЅРёСЏ РєРѕС‚РѕСЂРѕРµ Р±С‹Р»Рѕ РґРѕ Р·Р°РїСѓСЃРєР° СЌС‚Р°РїР°
 		try {
 			ServerUtils.getPersistentManager().flush();
 		} catch (RuntimeException e) {
@@ -1100,9 +1100,9 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		
 		DocAction action = currentHeadState.getDocAction();
 		
-		//изменим списки состояний и этапов
+		//РёР·РјРµРЅРёРј СЃРїРёСЃРєРё СЃРѕСЃС‚РѕСЏРЅРёР№ Рё СЌС‚Р°РїРѕРІ
 		if (currentFullRollback) {
-			//полностью откатили этап
+			//РїРѕР»РЅРѕСЃС‚СЊСЋ РѕС‚РєР°С‚РёР»Рё СЌС‚Р°Рї
 			currentStage.setState(StageState.NONE);
 			
 			docActions.remove(action);
@@ -1111,7 +1111,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 			ServerUtils.getPersistentManager().remove(action);
 		}
 		else {
-			//частично откатили этап
+			//С‡Р°СЃС‚РёС‡РЅРѕ РѕС‚РєР°С‚РёР»Рё СЌС‚Р°Рї
 			currentStage.setState(StageState.PARTITION);
 			action.setStageState(StageState.PARTITION);
 			
@@ -1147,7 +1147,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		
 		DocHeadState headState = insertMarkHead(action, event);
 		
-		//если следующие этапы зависят от данного, то установим их в состояние "выполнен частично"
+		//РµСЃР»Рё СЃР»РµРґСѓСЋС‰РёРµ СЌС‚Р°РїС‹ Р·Р°РІРёСЃСЏС‚ РѕС‚ РґР°РЅРЅРѕРіРѕ, С‚Рѕ СѓСЃС‚Р°РЅРѕРІРёРј РёС… РІ СЃРѕСЃС‚РѕСЏРЅРёРµ "РІС‹РїРѕР»РЅРµРЅ С‡Р°СЃС‚РёС‡РЅРѕ"
 		for (LinkStage link : performedStage.getNextStages()) {
 			if (link.getNextStage().isDependent()) {
 				link.getNextStage().setState(StageState.PARTITION);
@@ -1191,7 +1191,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 			headState.setStateValue(event.getData());
 		}
 		headState.setDateTime(new Date()); //current date
-		headState.setAttribute("User.Id", ServerUtils.getUserProfile().getIdentificator()); //TODO в профайл загрузить entity объект
+		headState.setAttribute("User.Id", ServerUtils.getUserProfile().getIdentificator()); //TODO РІ РїСЂРѕС„Р°Р№Р» Р·Р°РіСЂСѓР·РёС‚СЊ entity РѕР±СЉРµРєС‚
 		
 		ServerUtils.getPersistentManager().persist(headState);
 		
@@ -1236,8 +1236,8 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		try {
 			internalFinalization();
 		} finally {
-			//транзакцию обязательно необходимо перевести в rollback only, т.к. возможно в контексте хранилища
-			//находятся сущности и они не должны быть занесены в систему хранения
+			//С‚СЂР°РЅР·Р°РєС†РёСЋ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРІРµСЃС‚Рё РІ rollback only, С‚.Рє. РІРѕР·РјРѕР¶РЅРѕ РІ РєРѕРЅС‚РµРєСЃС‚Рµ С…СЂР°РЅРёР»РёС‰Р°
+			//РЅР°С…РѕРґСЏС‚СЃСЏ СЃСѓС‰РЅРѕСЃС‚Рё Рё РѕРЅРё РЅРµ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ Р·Р°РЅРµСЃРµРЅС‹ РІ СЃРёСЃС‚РµРјСѓ С…СЂР°РЅРµРЅРёСЏ
 			ServerUtils.setTransactionRollbackOnly();
 			isCanceledDocFlow = true;
 		}
@@ -1259,8 +1259,8 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 
 	@SuppressWarnings("unchecked")
 	private Queue<Integer> getDocumentQueue() {
-		//очередь документов создаем в сессии пользователя, все документы из очереди будут
-		//отрабатываться от имени этого пользователя (выполнившего этап "Создать на основе")
+		//РѕС‡РµСЂРµРґСЊ РґРѕРєСѓРјРµРЅС‚РѕРІ СЃРѕР·РґР°РµРј РІ СЃРµСЃСЃРёРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ, РІСЃРµ РґРѕРєСѓРјРµРЅС‚С‹ РёР· РѕС‡РµСЂРµРґРё Р±СѓРґСѓС‚
+		//РѕС‚СЂР°Р±Р°С‚С‹РІР°С‚СЊСЃСЏ РѕС‚ РёРјРµРЅРё СЌС‚РѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ (РІС‹РїРѕР»РЅРёРІС€РµРіРѕ СЌС‚Р°Рї "РЎРѕР·РґР°С‚СЊ РЅР° РѕСЃРЅРѕРІРµ")
 		Session session = ServerUtils.getCurrentSession();
 		if (session != null) {
 			Queue<Integer> docQueue = (Queue<Integer>) session.getAttribute("MG_DOCFLOW_QUEUE");
@@ -1275,14 +1275,14 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 	
 	private void checkDocumentQueue() {
 		Queue<Integer> docQueue = getDocumentQueue();
-		//запустим ДО для документа из очереди
+		//Р·Р°РїСѓСЃС‚РёРј Р”Рћ РґР»СЏ РґРѕРєСѓРјРµРЅС‚Р° РёР· РѕС‡РµСЂРµРґРё
 		if (docQueue != null && !docQueue.isEmpty())
 			DocFlowHelper.execute(docQueue.poll());
 	}
 	
 	private void addDocumentToDocFlowQueue(DocHead docHead, DocProcessStage stage) {
-		//если у документа созданного на основе после этапа "Создан на основе" есть этап
-		//следующий непосредственно, то добавляем его в очередь
+		//РµСЃР»Рё Сѓ РґРѕРєСѓРјРµРЅС‚Р° СЃРѕР·РґР°РЅРЅРѕРіРѕ РЅР° РѕСЃРЅРѕРІРµ РїРѕСЃР»Рµ СЌС‚Р°РїР° "РЎРѕР·РґР°РЅ РЅР° РѕСЃРЅРѕРІРµ" РµСЃС‚СЊ СЌС‚Р°Рї
+		//СЃР»РµРґСѓСЋС‰РёР№ РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ, С‚Рѕ РґРѕР±Р°РІР»СЏРµРј РµРіРѕ РІ РѕС‡РµСЂРµРґСЊ
 		List<Integer> list = getOrmTemplate().findByNamedQueryAndNamedParam("DocFlow.DocFlowManager.checkDirectlyAfterCreateBasedOn", new String[] {"docProcessStage", "docType"}, new Object[] {stage, document.getDocType()});
 		if (!list.isEmpty()) {
 			Queue<Integer> docQueue = getDocumentQueue();
@@ -1303,10 +1303,10 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 	}
 
 	/**
-	 * получить количество пройденных этапов ДО
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕР№РґРµРЅРЅС‹С… СЌС‚Р°РїРѕРІ Р”Рћ
 	 * 
-	 * @param docHead	документ
-	 * @return	количество пройденных этапов, если 1, то документ был создан или создан на основе, т.е. не проходил ДО
+	 * @param docHead	РґРѕРєСѓРјРµРЅС‚
+	 * @return	РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕР№РґРµРЅРЅС‹С… СЌС‚Р°РїРѕРІ, РµСЃР»Рё 1, С‚Рѕ РґРѕРєСѓРјРµРЅС‚ Р±С‹Р» СЃРѕР·РґР°РЅ РёР»Рё СЃРѕР·РґР°РЅ РЅР° РѕСЃРЅРѕРІРµ, С‚.Рµ. РЅРµ РїСЂРѕС…РѕРґРёР» Р”Рћ
 	 */
 	private int getDocActionCount(DocHead docHead) {
 		List<Integer> count = JdbcTemplate.getInstance().query(COUNT_DOCACTION_SQL,
@@ -1325,11 +1325,11 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		short currentOwner = DocumentUtils.getCurrentDocumentOwner();
 		checkOwner(currentOwner);
 		int count = getDocActionCount(docHead);
-		//если документ создавал пользователь и он прошел документооборот,
-		//то не разрешаем изменять его
+		//РµСЃР»Рё РґРѕРєСѓРјРµРЅС‚ СЃРѕР·РґР°РІР°Р» РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ Рё РѕРЅ РїСЂРѕС€РµР» РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚,
+		//С‚Рѕ РЅРµ СЂР°Р·СЂРµС€Р°РµРј РёР·РјРµРЅСЏС‚СЊ РµРіРѕ
 		//added by OVS, 30.11.2001
-		//если создатель больше или равен текущему запросчику он прошел документооборот,
-		//то не разрешаем изменять его
+		//РµСЃР»Рё СЃРѕР·РґР°С‚РµР»СЊ Р±РѕР»СЊС€Рµ РёР»Рё СЂР°РІРµРЅ С‚РµРєСѓС‰РµРјСѓ Р·Р°РїСЂРѕСЃС‡РёРєСѓ РѕРЅ РїСЂРѕС€РµР» РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚,
+		//С‚Рѕ РЅРµ СЂР°Р·СЂРµС€Р°РµРј РёР·РјРµРЅСЏС‚СЊ РµРіРѕ
 		//This is a total hack!!!
 		if (count > 1 && (currentOwner == 0 || currentOwner <= docHead.getRequester())) {
 			throw new AlreadyCompletedException(docHead);
@@ -1337,20 +1337,20 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 	}
 
 	private void doModifyDocument(DocHead docHead) {
-		//при модификации документа не проверяем ДО, иначе невозможно модифицировать
-		//документ штатными методами сервисов после прохождения ДО, проверку на прохождение ДО
-		//возлагаем на прикладной код, там где это требуется, например при интерактивном
-		//изменении документа пользователем (http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4436)
+		//РїСЂРё РјРѕРґРёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р° РЅРµ РїСЂРѕРІРµСЂСЏРµРј Р”Рћ, РёРЅР°С‡Рµ РЅРµРІРѕР·РјРѕР¶РЅРѕ РјРѕРґРёС„РёС†РёСЂРѕРІР°С‚СЊ
+		//РґРѕРєСѓРјРµРЅС‚ С€С‚Р°С‚РЅС‹РјРё РјРµС‚РѕРґР°РјРё СЃРµСЂРІРёСЃРѕРІ РїРѕСЃР»Рµ РїСЂРѕС…РѕР¶РґРµРЅРёСЏ Р”Рћ, РїСЂРѕРІРµСЂРєСѓ РЅР° РїСЂРѕС…РѕР¶РґРµРЅРёРµ Р”Рћ
+		//РІРѕР·Р»Р°РіР°РµРј РЅР° РїСЂРёРєР»Р°РґРЅРѕР№ РєРѕРґ, С‚Р°Рј РіРґРµ СЌС‚Рѕ С‚СЂРµР±СѓРµС‚СЃСЏ, РЅР°РїСЂРёРјРµСЂ РїСЂРё РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕРј
+		//РёР·РјРµРЅРµРЅРёРё РґРѕРєСѓРјРµРЅС‚Р° РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј (http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4436)
 		//doCheckStatus(docHead);
 		
-		//выполняем проверку прохождения ДО чтобы не выполнялись следующие действия
-		//см. http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4479
-		//т.е. меняем ссылки на этапы создания только у документа не прошедшего ДО,
-		//если же у документа прошедшего ДО будет сменен тип, то последствия вообще
-		//не предсказуемы
+		//РІС‹РїРѕР»РЅСЏРµРј РїСЂРѕРІРµСЂРєСѓ РїСЂРѕС…РѕР¶РґРµРЅРёСЏ Р”Рћ С‡С‚РѕР±С‹ РЅРµ РІС‹РїРѕР»РЅСЏР»РёСЃСЊ СЃР»РµРґСѓСЋС‰РёРµ РґРµР№СЃС‚РІРёСЏ
+		//СЃРј. http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4479
+		//С‚.Рµ. РјРµРЅСЏРµРј СЃСЃС‹Р»РєРё РЅР° СЌС‚Р°РїС‹ СЃРѕР·РґР°РЅРёСЏ С‚РѕР»СЊРєРѕ Сѓ РґРѕРєСѓРјРµРЅС‚Р° РЅРµ РїСЂРѕС€РµРґС€РµРіРѕ Р”Рћ,
+		//РµСЃР»Рё Р¶Рµ Сѓ РґРѕРєСѓРјРµРЅС‚Р° РїСЂРѕС€РµРґС€РµРіРѕ Р”Рћ Р±СѓРґРµС‚ СЃРјРµРЅРµРЅ С‚РёРї, С‚Рѕ РїРѕСЃР»РµРґСЃС‚РІРёСЏ РІРѕРѕР±С‰Рµ
+		//РЅРµ РїСЂРµРґСЃРєР°Р·СѓРµРјС‹
 		if (getDocActionCount(docHead) == 1) {
 			DocProcessStage dpStage = getCreateDocFlowStage(docHead);
-			//при изменении документа могли изменить тип, нужно подправить ссылки на этапы для нового типа
+			//РїСЂРё РёР·РјРµРЅРµРЅРёРё РґРѕРєСѓРјРµРЅС‚Р° РјРѕРіР»Рё РёР·РјРµРЅРёС‚СЊ С‚РёРї, РЅСѓР¶РЅРѕ РїРѕРґРїСЂР°РІРёС‚СЊ СЃСЃС‹Р»РєРё РЅР° СЌС‚Р°РїС‹ РґР»СЏ РЅРѕРІРѕРіРѕ С‚РёРїР°
 			JdbcTemplate.getInstance().update(UPDATE_DOCACTION_STAGE_SQL, new Object[] {dpStage.getId(), docHead.getId()});
 		}
 		insertMark(null, StageState.COMPLETE, ActionType.UPDATE, null);
@@ -1362,8 +1362,8 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 	@Override
 	protected void doPreDestroy() {
 		super.doDestroy();
-		//при разрушении на всякий случай отменим ДО, для предотвращения ситуации
-		//когда не вызван метод завершения или отмены ДО
+		//РїСЂРё СЂР°Р·СЂСѓС€РµРЅРёРё РЅР° РІСЃСЏРєРёР№ СЃР»СѓС‡Р°Р№ РѕС‚РјРµРЅРёРј Р”Рћ, РґР»СЏ РїСЂРµРґРѕС‚РІСЂР°С‰РµРЅРёСЏ СЃРёС‚СѓР°С†РёРё
+		//РєРѕРіРґР° РЅРµ РІС‹Р·РІР°РЅ РјРµС‚РѕРґ Р·Р°РІРµСЂС€РµРЅРёСЏ РёР»Рё РѕС‚РјРµРЅС‹ Р”Рћ
 		if (document != null && !isCompletedDocFlow)
 			cancelDocFlow();
 	}
@@ -1507,7 +1507,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 		try {
 			DocProcessStage stage = getCreateDocFlowStage(document);
 			insertMark(stage, StageState.COMPLETE, ActionType.STAGE, null);
-			//если документ создан на основе, то добавляем его в очередь документов
+			//РµСЃР»Рё РґРѕРєСѓРјРµРЅС‚ СЃРѕР·РґР°РЅ РЅР° РѕСЃРЅРѕРІРµ, С‚Рѕ РґРѕР±Р°РІР»СЏРµРј РµРіРѕ РІ РѕС‡РµСЂРµРґСЊ РґРѕРєСѓРјРµРЅС‚РѕРІ
 			if (stage.getStage().getId() == DOC_FLOW_BASED_ON)
 				addDocumentToDocFlowQueue(docHead, stage);
 		} finally {

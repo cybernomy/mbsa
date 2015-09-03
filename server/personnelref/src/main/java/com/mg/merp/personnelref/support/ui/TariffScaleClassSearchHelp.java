@@ -19,7 +19,7 @@ import com.mg.framework.support.ui.UIProducer;
 import com.mg.framework.support.ui.UIUtils;
 
 /**
- * Поисковик сущностей "Разряд тарифной сетки"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "Р Р°Р·СЂСЏРґ С‚Р°СЂРёС„РЅРѕР№ СЃРµС‚РєРё"
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov

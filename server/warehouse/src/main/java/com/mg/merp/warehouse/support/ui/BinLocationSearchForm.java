@@ -34,7 +34,7 @@ import com.mg.merp.warehouse.model.Warehouse;
 import com.mg.merp.warehouse.support.Messages;
 
 /**
- * Контроллер формы поиска сущностей "Секции хранения"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РЎРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: BinLocationSearchForm.java,v 1.1 2008/05/30 13:03:56 sharapov Exp $
@@ -134,8 +134,8 @@ public class BinLocationSearchForm extends AbstractSearchForm {
 	}
 
 	/**
-	 * Установить склад для отображения секций хранения
-	 * @param warehouse - склад
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРєР»Р°Рґ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ
+	 * @param warehouse - СЃРєР»Р°Рґ
 	 */
 	public void setWarehouse(Warehouse warehouse) {
 		this.warehouse = warehouse;

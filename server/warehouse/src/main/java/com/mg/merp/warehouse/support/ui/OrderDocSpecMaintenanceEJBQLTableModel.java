@@ -21,7 +21,7 @@ import com.mg.merp.document.model.DocSpec;
 import com.mg.merp.warehouse.model.OrderSpec;
 
 /**
- * Вспомогательный класс для отображения формы спецификации образцов заказов
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРµС†РёС„РёРєР°С†РёРё РѕР±СЂР°Р·С†РѕРІ Р·Р°РєР°Р·РѕРІ
  * 
  * @author leonova
  * @version $Id: OrderDocSpecMaintenanceEJBQLTableModel.java,v 1.5 2009/02/05 10:03:53 sharapov Exp $ 

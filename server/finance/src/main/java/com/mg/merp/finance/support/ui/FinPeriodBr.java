@@ -29,7 +29,7 @@ import com.mg.merp.finance.model.FinPeriod;
 
 
 /**
- * Браузер периодов финансовых периодов
+ * Р‘СЂР°СѓР·РµСЂ РїРµСЂРёРѕРґРѕРІ С„РёРЅР°РЅСЃРѕРІС‹С… РїРµСЂРёРѕРґРѕРІ
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -85,7 +85,7 @@ public class FinPeriodBr extends DefaultPlainBrowseForm {
 
 	}
 	/**
-	 * Обработка события контекстного меню: открытие фин. периода
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ: РѕС‚РєСЂС‹С‚РёРµ С„РёРЅ. РїРµСЂРёРѕРґР°
 	 * @param event
 	 */
 	public void onActionOpenFinPeriod(WidgetEvent event) {
@@ -96,7 +96,7 @@ public class FinPeriodBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Обработка события контекстного меню: закрытие фин. периода
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ: Р·Р°РєСЂС‹С‚РёРµ С„РёРЅ. РїРµСЂРёРѕРґР°
 	 * @param event
 	 */
 	public void onActionCloseFinPeriod(WidgetEvent event) {

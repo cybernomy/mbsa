@@ -24,7 +24,7 @@ import com.mg.merp.warehouse.WarehouseProcessorServiceLocal;
 import com.mg.merp.warehouse.WarehouseTransactionListener;
 
 /**
- * Абстрактная реализация фабрик этапов ДО по отработке в складской подсистеме
+ * РђР±СЃС‚СЂР°РєС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРє СЌС‚Р°РїРѕРІ Р”Рћ РїРѕ РѕС‚СЂР°Р±РѕС‚РєРµ РІ СЃРєР»Р°РґСЃРєРѕР№ РїРѕРґСЃРёСЃС‚РµРјРµ
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractWarehouseTransactionDocFlowPluginFactory.java,v 1.1 2008/04/18 15:18:20 safonov Exp $
@@ -67,7 +67,7 @@ public abstract class AbstractWarehouseTransactionDocFlowPluginFactory extends
 			@Override
 			protected String doGetDocActionResultTextRepresentation(
 					DocHeadState docHeadState) {
-				// TODO: спросить консультантов
+				// TODO: СЃРїСЂРѕСЃРёС‚СЊ РєРѕРЅСЃСѓР»СЊС‚Р°РЅС‚РѕРІ
 				return StringUtils.BLANK_STRING;
 			}
 

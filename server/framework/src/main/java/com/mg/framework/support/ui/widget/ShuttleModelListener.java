@@ -20,7 +20,7 @@ import java.util.EventListener;
 import com.mg.framework.api.ui.ShuttleChangeEvent;
 
 /**
- * Слушатель модели элемента "Shuttle"
+ * РЎР»СѓС€Р°С‚РµР»СЊ РјРѕРґРµР»Рё СЌР»РµРјРµРЅС‚Р° "Shuttle"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ShuttleModelListener.java,v 1.1 2006/08/31 08:36:41 safonov Exp $
@@ -28,16 +28,16 @@ import com.mg.framework.api.ui.ShuttleChangeEvent;
 public interface ShuttleModelListener extends EventListener, Serializable {
 
 	/**
-	 * происходит в момент изменения модели списка источника
+	 * РїСЂРѕРёСЃС…РѕРґРёС‚ РІ РјРѕРјРµРЅС‚ РёР·РјРµРЅРµРЅРёСЏ РјРѕРґРµР»Рё СЃРїРёСЃРєР° РёСЃС‚РѕС‡РЅРёРєР°
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	void leadingChanged(ShuttleChangeEvent event);
 	
 	/**
-	 * происходит в момент изменения модели списка приемника
+	 * РїСЂРѕРёСЃС…РѕРґРёС‚ РІ РјРѕРјРµРЅС‚ РёР·РјРµРЅРµРЅРёСЏ РјРѕРґРµР»Рё СЃРїРёСЃРєР° РїСЂРёРµРјРЅРёРєР°
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	void trailingChanged(ShuttleChangeEvent event);
 }

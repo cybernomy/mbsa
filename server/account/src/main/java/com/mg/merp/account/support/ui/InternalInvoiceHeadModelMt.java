@@ -33,7 +33,7 @@ import com.mg.merp.document.model.DocSpecModel;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы поддержи "Образцов внутренних накладных"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶Рё "РћР±СЂР°Р·С†РѕРІ РІРЅСѓС‚СЂРµРЅРЅРёС… РЅР°РєР»Р°РґРЅС‹С…"
  * 
  * @author leonova
  * @version $Id: InternalInvoiceHeadModelMt.java,v 1.7 2008/03/20 13:43:21 alikaev Exp $

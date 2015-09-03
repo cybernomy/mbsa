@@ -18,7 +18,7 @@ import com.mg.merp.lbschedule.ScheduleServiceLocal;
 import com.mg.merp.reference.support.ui.FolderByTypeSearchHelp;
 
 /**
- * Поисковик "Образца папки по-умолчанию для создания графика исполнения обязательств"
+ * РџРѕРёСЃРєРѕРІРёРє "РћР±СЂР°Р·С†Р° РїР°РїРєРё РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ScheduleDefaultFolderSearchHelp.java,v 1.1 2007/01/13 13:19:33 sharapov Exp $

@@ -21,7 +21,7 @@ import com.mg.framework.api.annotations.DataItemName;
 
 
 /**
- * Модель бизнес-компонента "Операционные дни склада"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћРїРµСЂР°С†РёРѕРЅРЅС‹Рµ РґРЅРё СЃРєР»Р°РґР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: WarehouseTransactionDay.java,v 1.1 2007/11/29 08:38:53 alikaev Exp $
@@ -29,27 +29,27 @@ import com.mg.framework.api.annotations.DataItemName;
 @DataItemName("Warehouse.WarehouseTransactionDay")
 public class WarehouseTransactionDay extends com.mg.framework.service.PersistentObjectHibernate implements Serializable {
 	/**
-	 * идентификатор
+	 * РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ
 	 */
 	private int id;
 	
 	/**
-	 * склад
+	 * СЃРєР»Р°Рґ
 	 */
 	private Warehouse stock;
 	
 	/**
-	 * закрытый день
+	 * Р·Р°РєСЂС‹С‚С‹Р№ РґРµРЅСЊ
 	 */
 	private Date closedDay;
 	
 	/**
-	 * кто закрыл
+	 * РєС‚Рѕ Р·Р°РєСЂС‹Р»
 	 */
 	private String userStockClosed;
 	
 	/**
-	 * дата закрытия
+	 * РґР°С‚Р° Р·Р°РєСЂС‹С‚РёСЏ
 	 */
 	private Date operationDate;
 

@@ -36,7 +36,7 @@ import com.mg.framework.support.Messages;
 import com.mg.framework.support.metadata.BusinessServiceMetadataImpl;
 
 /**
- * Утилиты для бизнес-компонентов
+ * РЈС‚РёР»РёС‚С‹ РґР»СЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id$
@@ -44,15 +44,15 @@ import com.mg.framework.support.metadata.BusinessServiceMetadataImpl;
 public class BusinessObjectUtils {
 
 	/**
-	 * перехватчик для обработки прав на выполнение методов бизнес-компонентов
+	 * РїРµСЂРµС…РІР°С‚С‡РёРє РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё РїСЂР°РІ РЅР° РІС‹РїРѕР»РЅРµРЅРёРµ РјРµС‚РѕРґРѕРІ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
 	 * 
-	 * @param ctx			контекст вызова
-	 * @param logger		логгер
-	 * @param metadata		метаданные бизнес-компонента
-	 * @return				результат выполнения метода
+	 * @param ctx			РєРѕРЅС‚РµРєСЃС‚ РІС‹Р·РѕРІР°
+	 * @param logger		Р»РѕРіРіРµСЂ
+	 * @param metadata		РјРµС‚Р°РґР°РЅРЅС‹Рµ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * @return				СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ РјРµС‚РѕРґР°
 	 * 
-	 * @throws com.mg.framework.api.SecurityException в случае нарушения безопасности
-	 * @throws Exception ИС сгенерированная в прикладном методе
+	 * @throws com.mg.framework.api.SecurityException РІ СЃР»СѓС‡Р°Рµ РЅР°СЂСѓС€РµРЅРёСЏ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
+	 * @throws Exception РРЎ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅР°СЏ РІ РїСЂРёРєР»Р°РґРЅРѕРј РјРµС‚РѕРґРµ
 	 */
 	public static Object securityCheckInterceptor(InvocationContext ctx, Logger logger, BusinessServiceMetadata metadata) throws Exception {
 		if (metadata == null) {
@@ -75,17 +75,17 @@ public class BusinessObjectUtils {
 		try {
 			SecurityUtils.checkPermission(new BusinessMethodPermission(metadata.getName(), ctx.getMethod().getName()));
 		} catch (SecurityException e) {
-			//обернем чтобы не возникал откат транзакции в контейнере
+			//РѕР±РµСЂРЅРµРј С‡С‚РѕР±С‹ РЅРµ РІРѕР·РЅРёРєР°Р» РѕС‚РєР°С‚ С‚СЂР°РЅР·Р°РєС†РёРё РІ РєРѕРЅС‚РµР№РЅРµСЂРµ
 			throw new com.mg.framework.api.SecurityException(Messages.getInstance().getMessage(Messages.NO_PERMISSION), e);
 		}
 		return ctx.proceed();
 	}
 	
 	/**
-	 * загрузка метаданных бизнес-компонента
+	 * Р·Р°РіСЂСѓР·РєР° РјРµС‚Р°РґР°РЅРЅС‹С… Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
-	 * @param context	контекст бизнес-компонента
-	 * @return			метаданные или <code>null</code> если метаданные не найдены
+	 * @param context	РєРѕРЅС‚РµРєСЃС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * @return			РјРµС‚Р°РґР°РЅРЅС‹Рµ РёР»Рё <code>null</code> РµСЃР»Рё РјРµС‚Р°РґР°РЅРЅС‹Рµ РЅРµ РЅР°Р№РґРµРЅС‹
 	 */
 	public static BusinessServiceMetadata loadBusinessServiceMetadata(SessionContext context) {
 		DetachedCriteria dc = DetachedCriteria.forEntityName("com.mg.merp.core.model.SysClassImplementation", "sciLayer")
@@ -102,12 +102,12 @@ public class BusinessObjectUtils {
 	}
 	
 	/**
-	 * получить класс объекта сущности для бизнес-компонента
+	 * РїРѕР»СѓС‡РёС‚СЊ РєР»Р°СЃСЃ РѕР±СЉРµРєС‚Р° СЃСѓС‰РЅРѕСЃС‚Рё РґР»СЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
-	 * @param <T>			тип сущности
-	 * @param <ID>			тип первичного ключа
-	 * @param serviceClass	бизнес-компонента
-	 * @return				класс объекта сущности или <code>null</code> если не найден
+	 * @param <T>			С‚РёРї СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @param <ID>			С‚РёРї РїРµСЂРІРёС‡РЅРѕРіРѕ РєР»СЋС‡Р°
+	 * @param serviceClass	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * @return				РєР»Р°СЃСЃ РѕР±СЉРµРєС‚Р° СЃСѓС‰РЅРѕСЃС‚Рё РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	public static <T extends PersistentObject, ID extends Serializable> Class<T> getBusinessServiceEntityClass(DataBusinessObjectService<T, ID> serviceClass) {
 		try {

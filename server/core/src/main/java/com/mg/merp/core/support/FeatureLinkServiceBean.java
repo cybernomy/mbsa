@@ -43,7 +43,7 @@ import com.mg.merp.core.model.FeatureLink;
 import com.mg.merp.core.model.SysClass;
 
 /**
- * Бизнес-компонент "Связи с бизнес-компонентами"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРІСЏР·Рё СЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°РјРё"
  * 
  * @author leonova
  * @version $Id: FeatureLinkServiceBean.java,v 1.11 2008/12/23 09:41:33 safonov Exp $
@@ -125,8 +125,8 @@ public class FeatureLinkServiceBean extends AbstractPOJODataBusinessObjectServic
 	
 	protected Map<String, Object> doLoadValues(int classId, Object entityId) {
 		Map<String, Object> result = new HashMap<String, Object>();
-		//если идентификатор сущности не задан, то будут загружены метаданные доп.признаков 
-		//реализация поддерживает только сущности имеющие Integer в качестве первичного ключа
+		//РµСЃР»Рё РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСѓС‰РЅРѕСЃС‚Рё РЅРµ Р·Р°РґР°РЅ, С‚Рѕ Р±СѓРґСѓС‚ Р·Р°РіСЂСѓР¶РµРЅС‹ РјРµС‚Р°РґР°РЅРЅС‹Рµ РґРѕРї.РїСЂРёР·РЅР°РєРѕРІ 
+		//СЂРµР°Р»РёР·Р°С†РёСЏ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ С‚РѕР»СЊРєРѕ СЃСѓС‰РЅРѕСЃС‚Рё РёРјРµСЋС‰РёРµ Integer РІ РєР°С‡РµСЃС‚РІРµ РїРµСЂРІРёС‡РЅРѕРіРѕ РєР»СЋС‡Р°
 		if (entityId != null && !(entityId instanceof Integer))
 			return result;
 		
@@ -153,7 +153,7 @@ public class FeatureLinkServiceBean extends AbstractPOJODataBusinessObjectServic
 						list = Array.newInstance(Object.class, arraySize);
 					if (isData) {
 						int index = getIndexForArrayField(indexMap, code);
-						//возможно уменьшили размер массива, и сохраненных значений больше чем размер созданного массива
+						//РІРѕР·РјРѕР¶РЅРѕ СѓРјРµРЅСЊС€РёР»Рё СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°, Рё СЃРѕС…СЂР°РЅРµРЅРЅС‹С… Р·РЅР°С‡РµРЅРёР№ Р±РѕР»СЊС€Рµ С‡РµРј СЂР°Р·РјРµСЂ СЃРѕР·РґР°РЅРЅРѕРіРѕ РјР°СЃСЃРёРІР°
 						if (index < arraySize)
 							Array.set(list, index, convertStringToValue(locale, dataKind, beanName, strVal));
 					}
@@ -193,22 +193,22 @@ public class FeatureLinkServiceBean extends AbstractPOJODataBusinessObjectServic
 					createFeatureLink(classId, (Integer) entityId, feature, convertValueToString(locale, feature.getDataType(), Array.get(value, i)));
 			}
 			else if (storedValues.isEmpty()) {
-				//не было доп. признака и нет значения, не создаем
+				//РЅРµ Р±С‹Р»Рѕ РґРѕРї. РїСЂРёР·РЅР°РєР° Рё РЅРµС‚ Р·РЅР°С‡РµРЅРёСЏ, РЅРµ СЃРѕР·РґР°РµРј
 				if (value == null)
 					continue;
 				
 				createFeatureLink(classId, (Integer) entityId, feature, convertValueToString(locale, feature.getDataType(), value));
 			}
 			else {
-				//был доп. признак
-				FeatureLink fLink = storedValues.get(0); //не массив, одно значение
+				//Р±С‹Р» РґРѕРї. РїСЂРёР·РЅР°Рє
+				FeatureLink fLink = storedValues.get(0); //РЅРµ РјР°СЃСЃРёРІ, РѕРґРЅРѕ Р·РЅР°С‡РµРЅРёРµ
 				
-				//если свойство стало не массивом из массива, удалим все кроме 0го, 0ой обрабатывается дальше
+				//РµСЃР»Рё СЃРІРѕР№СЃС‚РІРѕ СЃС‚Р°Р»Рѕ РЅРµ РјР°СЃСЃРёРІРѕРј РёР· РјР°СЃСЃРёРІР°, СѓРґР°Р»РёРј РІСЃРµ РєСЂРѕРјРµ 0РіРѕ, 0РѕР№ РѕР±СЂР°Р±Р°С‚С‹РІР°РµС‚СЃСЏ РґР°Р»СЊС€Рµ
 				for (int i = 1; i < storedValues.size(); i++) {
 					getPersistentManager().remove(storedValues.get(i));
 				}
 				
-				//изменим значение, или удалим если пустое
+				//РёР·РјРµРЅРёРј Р·РЅР°С‡РµРЅРёРµ, РёР»Рё СѓРґР°Р»РёРј РµСЃР»Рё РїСѓСЃС‚РѕРµ
 				if (value != null) {
 					fLink.setVal(convertValueToString(locale, feature.getDataType(), value));
 					getPersistentManager().merge(fLink);

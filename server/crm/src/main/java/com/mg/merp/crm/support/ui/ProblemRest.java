@@ -19,7 +19,7 @@ import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 import com.mg.merp.crm.model.Solution;
 
 /**
- * Контроллер формы условий отбора бизнес-компонента "Проблемы"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРѕР±Р»РµРјС‹"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ProblemRest.java,v 1.1 2007/02/07 07:01:42 sharapov Exp $

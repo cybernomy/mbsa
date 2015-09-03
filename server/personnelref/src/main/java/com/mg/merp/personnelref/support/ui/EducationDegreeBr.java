@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.personnelref.model.EducationDegree;
 
 /**
- * Браузер степеней образования
+ * Р‘СЂР°СѓР·РµСЂ СЃС‚РµРїРµРЅРµР№ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ
  * 
  * @author leonova
  * @version $Id: EducationDegreeBr.java,v 1.1 2006/08/03 11:23:37 leonova Exp $ 

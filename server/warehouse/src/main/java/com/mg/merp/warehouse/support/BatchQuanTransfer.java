@@ -16,7 +16,7 @@ package com.mg.merp.warehouse.support;
 import java.math.BigDecimal;
 
 /**
- * Трансферный класс, содержит количество позиций, подлежащих списанию в двух ЕИ
+ * РўСЂР°РЅСЃС„РµСЂРЅС‹Р№ РєР»Р°СЃСЃ, СЃРѕРґРµСЂР¶РёС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР·РёС†РёР№, РїРѕРґР»РµР¶Р°С‰РёС… СЃРїРёСЃР°РЅРёСЋ РІ РґРІСѓС… Р•Р
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: BatchQuanTransfer.java,v 1.1 2007/02/28 14:52:31 poroxnenko Exp $

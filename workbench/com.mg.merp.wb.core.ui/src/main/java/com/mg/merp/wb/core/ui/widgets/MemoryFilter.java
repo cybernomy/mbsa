@@ -26,7 +26,7 @@ import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.dialogs.PatternFilter;
 
 /**
- * Компонент, используемый в качестве фильтра с памятью в браузерах БК
+ * РљРѕРјРїРѕРЅРµРЅС‚, РёСЃРїРѕР»СЊР·СѓРµРјС‹Р№ РІ РєР°С‡РµСЃС‚РІРµ С„РёР»СЊС‚СЂР° СЃ РїР°РјСЏС‚СЊСЋ РІ Р±СЂР°СѓР·РµСЂР°С… Р‘Рљ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: MemoryFilter.java,v 1.3 2007/07/11 06:05:15 poroxnenko Exp $ 
@@ -38,7 +38,7 @@ public class MemoryFilter extends Composite {
 	private PatternFilter patternFilter = new PatternFilter();;
 	
 	/**
-	 * ID храненения данных фильтра
+	 * ID С…СЂР°РЅРµРЅРµРЅРёСЏ РґР°РЅРЅС‹С… С„РёР»СЊС‚СЂР°
 	 */
 	private String settingID = null;
 	private SelectionListener selectionListener;

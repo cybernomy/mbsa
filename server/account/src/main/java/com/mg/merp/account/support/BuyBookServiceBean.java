@@ -26,7 +26,7 @@ import com.mg.merp.account.BuyBookServiceLocal;
 import com.mg.merp.account.model.BuyBook;
 
 /**
- * Бизнес-компонент "Книга покупок" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљРЅРёРіР° РїРѕРєСѓРїРѕРє" 
  * 
  * @author leonova
  * @version $Id: BuyBookServiceBean.java,v 1.4 2006/08/23 10:28:49 leonova Exp $

@@ -32,7 +32,7 @@ import com.mg.merp.table.model.TimeKind;
 import com.mg.merp.table.support.ui.TimeBoardSpecItem;
 
 /**
- * Класс-помощник для работы с табелем
+ * РљР»Р°СЃСЃ-РїРѕРјРѕС‰РЅРёРє РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ С‚Р°Р±РµР»РµРј
  * 
  * @author Artem V. Sharapov
  * @version $Id: TimeBoardHelper.java,v 1.1 2008/08/12 14:36:17 sharapov Exp $
@@ -40,7 +40,7 @@ import com.mg.merp.table.support.ui.TimeBoardSpecItem;
 public class TimeBoardHelper {
 
 	/**
-	 * Цвет фона зафиксированной колонки грида 
+	 * Р¦РІРµС‚ С„РѕРЅР° Р·Р°С„РёРєСЃРёСЂРѕРІР°РЅРЅРѕР№ РєРѕР»РѕРЅРєРё РіСЂРёРґР° 
 	 */
 	public static final Color FIXED_COLUMN_BACKGROUND_COLOR = Color.LIGHT_GRAY;
 	
@@ -68,10 +68,10 @@ public class TimeBoardHelper {
 	}
 	
 	/**
-	 * Получить список позиций табеля
-	 * @param timeBoardHeadId - идентификатор заголовка табеля
-	 * @param staffListUnitId - идентификатор подразделения в штатном расписании
-	 * @return список позиций табеля
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ С‚Р°Р±РµР»СЏ
+	 * @param timeBoardHeadId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РіРѕР»РѕРІРєР° С‚Р°Р±РµР»СЏ
+	 * @param staffListUnitId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРѕРґСЂР°Р·РґРµР»РµРЅРёСЏ РІ С€С‚Р°С‚РЅРѕРј СЂР°СЃРїРёСЃР°РЅРёРё
+	 * @return СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ С‚Р°Р±РµР»СЏ
 	 */
 	public List<TimeBoardSpecItem> getTimeBoardSpecItems(Integer timeBoardHeadId, Integer staffListUnitId) {
 		 List<TimeBoardSpecItem> resultList = loadTimeBoardSpecItems(timeBoardHeadId, staffListUnitId);
@@ -81,9 +81,9 @@ public class TimeBoardHelper {
 	}
 	
 	/**
-	 * Загрузить спецификацию табельного учета
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ С‚Р°Р±РµР»СЊРЅРѕРіРѕ СѓС‡РµС‚Р°
 	 * @param timeBoardPosition
-	 * @return спецификация табельного учета
+	 * @return СЃРїРµС†РёС„РёРєР°С†РёСЏ С‚Р°Р±РµР»СЊРЅРѕРіРѕ СѓС‡РµС‚Р°
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	private List<TimeBoardSpec> loadTimeBoardSpecs(TimeBoardPosition timeBoardPosition) {
@@ -91,8 +91,8 @@ public class TimeBoardHelper {
 	}
 	
 	/**
-	 * Получить список типов времен
-	 * @return список типов времен
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє С‚РёРїРѕРІ РІСЂРµРјРµРЅ
+	 * @return СЃРїРёСЃРѕРє С‚РёРїРѕРІ РІСЂРµРјРµРЅ
 	 */
 	public List<TimeKind> getTimeKinds() {
 		if(timeKinds == null)
@@ -116,8 +116,8 @@ public class TimeBoardHelper {
 	}
 	
 	/**
-	 * Получть тип рабочего времени из конфигурации модуля
-	 * @return тип рабочего времени или <code>null</code> если не найден
+	 * РџРѕР»СѓС‡С‚СЊ С‚РёРї СЂР°Р±РѕС‡РµРіРѕ РІСЂРµРјРµРЅРё РёР· РєРѕРЅС„РёРіСѓСЂР°С†РёРё РјРѕРґСѓР»СЏ
+	 * @return С‚РёРї СЂР°Р±РѕС‡РµРіРѕ РІСЂРµРјРµРЅРё РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	private TimeKind getWorkTimeKindByTableConfig() {
 		TableConfig tableConfig = ServerUtils.getPersistentManager().find(TableConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());

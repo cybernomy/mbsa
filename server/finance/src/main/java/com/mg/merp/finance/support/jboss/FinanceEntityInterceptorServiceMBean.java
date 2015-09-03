@@ -17,14 +17,14 @@ package com.mg.merp.finance.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис регистрации перхватчиков моделей подсистемы "Финансы"
+ * РЎРµСЂРІРёСЃ СЂРµРіРёСЃС‚СЂР°С†РёРё РїРµСЂС…РІР°С‚С‡РёРєРѕРІ РјРѕРґРµР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "Р¤РёРЅР°РЅСЃС‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: FinanceEntityInterceptorServiceMBean.java,v 1.1 2007/01/16 14:44:05 safonov Exp $
  */
 public interface FinanceEntityInterceptorServiceMBean extends ServiceMBean {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:finance=EntityInterceptorService"; //$NON-NLS-1$
 

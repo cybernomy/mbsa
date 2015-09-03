@@ -21,13 +21,13 @@ import com.mg.framework.api.BusinessObjectService;
 import com.mg.merp.baiengine.generic.AbstractBusinessAddin;
 
 /**
- * Базовый класс BAi выполнения настраиваемого действия. Класс BAi должен
- * реализовывать следующий метод <code>protected String doPerform() throws Exception</code>.
- * В случае успешного выполнения необходимо вызвать {@link #complete(Void)}, если необходимо
- * прервать выполнение действия необходимо вызвать {@link #abort()}.
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ BAi РІС‹РїРѕР»РЅРµРЅРёСЏ РЅР°СЃС‚СЂР°РёРІР°РµРјРѕРіРѕ РґРµР№СЃС‚РІРёСЏ. РљР»Р°СЃСЃ BAi РґРѕР»Р¶РµРЅ
+ * СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёР№ РјРµС‚РѕРґ <code>protected String doPerform() throws Exception</code>.
+ * Р’ СЃР»СѓС‡Р°Рµ СѓСЃРїРµС€РЅРѕРіРѕ РІС‹РїРѕР»РЅРµРЅРёСЏ РЅРµРѕР±С…РѕРґРёРјРѕ РІС‹Р·РІР°С‚СЊ {@link #complete(Void)}, РµСЃР»Рё РЅРµРѕР±С…РѕРґРёРјРѕ
+ * РїСЂРµСЂРІР°С‚СЊ РІС‹РїРѕР»РЅРµРЅРёРµ РґРµР№СЃС‚РІРёСЏ РЅРµРѕР±С…РѕРґРёРјРѕ РІС‹Р·РІР°С‚СЊ {@link #abort()}.
  * 
  * 
- * <p>Пример метода {@link #doPerform()}:
+ * <p>РџСЂРёРјРµСЂ РјРµС‚РѕРґР° {@link #doPerform()}:
  * <pre>
  *  protected void doPerform() throws Exception {
  *  	getLogger().info("Business service: " + getService());
@@ -67,18 +67,18 @@ public abstract class CustomActionBusinessAddin extends AbstractBusinessAddin<Vo
 	}
 
 	/**
-	 * получить бизнес-копмонент для которого выполняется действие
+	 * РїРѕР»СѓС‡РёС‚СЊ Р±РёР·РЅРµСЃ-РєРѕРїРјРѕРЅРµРЅС‚ РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ РґРµР№СЃС‚РІРёРµ
 	 * 
-	 * @return the service	бизнес-копмонент
+	 * @return the service	Р±РёР·РЅРµСЃ-РєРѕРїРјРѕРЅРµРЅС‚
 	 */
 	protected BusinessObjectService getService() {
 		return service;
 	}
 
 	/**
-	 * получить список идентификаторов сущностей отмеченных пользователем
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ СЃСѓС‰РЅРѕСЃС‚РµР№ РѕС‚РјРµС‡РµРЅРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј
 	 * 
-	 * @return the selectedIdentifiers	список идентификаторов
+	 * @return the selectedIdentifiers	СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ
 	 */
 	protected Serializable[] getSelectedIdentifiers() {
 		return selectedIdentifiers;

@@ -17,7 +17,7 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.PersonnelGroup;
 
 /**
- * Бизнес-компонент "Папки анкетных данных сотрудников"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџР°РїРєРё Р°РЅРєРµС‚РЅС‹С… РґР°РЅРЅС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ"
  * 
  * @author leonova
  * @version $Id: PersonnelGroupServiceLocal.java,v 1.2 2007/08/16 14:09:44 safonov Exp $

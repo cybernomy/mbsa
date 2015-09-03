@@ -16,7 +16,7 @@ package com.mg.merp.finance.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * Поисковик бизнес-компонента "Образцы Фин. операций"
+ * РџРѕРёСЃРєРѕРІРёРє Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·С†С‹ Р¤РёРЅ. РѕРїРµСЂР°С†РёР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: FinOperModelSearchHelp.java,v 1.1 2007/02/16 14:33:39 sharapov Exp $

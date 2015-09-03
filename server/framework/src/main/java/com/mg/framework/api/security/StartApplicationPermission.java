@@ -18,7 +18,7 @@ package com.mg.framework.api.security;
 import java.security.Permission;
 
 /**
- * Разрешение на старт приложения
+ * Р Р°Р·СЂРµС€РµРЅРёРµ РЅР° СЃС‚Р°СЂС‚ РїСЂРёР»РѕР¶РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id$

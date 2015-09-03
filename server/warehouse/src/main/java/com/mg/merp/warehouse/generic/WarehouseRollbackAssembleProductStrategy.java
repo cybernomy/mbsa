@@ -22,7 +22,7 @@ import com.mg.merp.warehouse.HistoryNotFoundException;
 import com.mg.merp.warehouse.model.StockBatchHistory;
 
 /**
- * Стратегия отката этапа ДО "Собрать комплект"
+ * РЎС‚СЂР°С‚РµРіРёСЏ РѕС‚РєР°С‚Р° СЌС‚Р°РїР° Р”Рћ "РЎРѕР±СЂР°С‚СЊ РєРѕРјРїР»РµРєС‚"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: WarehouseRollbackAssembleProductStrategy.java,v 1.2 2008/04/18 15:18:20 safonov Exp $
@@ -30,7 +30,7 @@ import com.mg.merp.warehouse.model.StockBatchHistory;
 public class WarehouseRollbackAssembleProductStrategy extends WarehouseRollbackFactStrategy {
 
 	/**
-	 * выпонение отката
+	 * РІС‹РїРѕРЅРµРЅРёРµ РѕС‚РєР°С‚Р°
 	 */
 	public void doRollback(DocumentSpecItem dsi) {
 		if (CatalogType.SET_OF_GOODS == dsi.getDocSpec().getCatalog().getGoodType()) {

@@ -22,7 +22,7 @@ import com.mg.framework.api.orm.PersistentObject;
 import com.mg.framework.service.ApplicationDictionaryLocator;
 
 /**
- * Описание поля EJBQL запроса для создания модели столбцов таблиц
+ * РћРїРёСЃР°РЅРёРµ РїРѕР»СЏ EJBQL Р·Р°РїСЂРѕСЃР° РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РјРѕРґРµР»Рё СЃС‚РѕР»Р±С†РѕРІ С‚Р°Р±Р»РёС†
  * 
  * @author Oleg V. Safonov
  * @version $Id: TableEJBQLFieldDef.java,v 1.4 2008/12/23 09:17:02 safonov Exp $
@@ -37,14 +37,14 @@ public class TableEJBQLFieldDef implements Serializable {
 	private FieldMetadata fieldMetadata;
 
 	/**
-	 * Конструктор, заполняет все поля на основании входных параметров
+	 * РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ, Р·Р°РїРѕР»РЅСЏРµС‚ РІСЃРµ РїРѕР»СЏ РЅР° РѕСЃРЅРѕРІР°РЅРёРё РІС…РѕРґРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ
 	 * 
-	 * @param alias					псевдоним поля, может быть <code>null</code>, тогда в качестве наименования столбца будет использован параметр <code>entityPropertyName</code>
-	 * @param entityClazz			класс сущности
-	 * @param entityPropertyName	наименование свойства отображаемого в данном столбце
-	 * @param fieldName				наименование поля в запросе
-	 * @param joinClause			предложение join для поля
-	 * @param isMandatory			признак обязательного включения в запрос
+	 * @param alias					РїСЃРµРІРґРѕРЅРёРј РїРѕР»СЏ, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>, С‚РѕРіРґР° РІ РєР°С‡РµСЃС‚РІРµ РЅР°РёРјРµРЅРѕРІР°РЅРёСЏ СЃС‚РѕР»Р±С†Р° Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°РЅ РїР°СЂР°РјРµС‚СЂ <code>entityPropertyName</code>
+	 * @param entityClazz			РєР»Р°СЃСЃ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @param entityPropertyName	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРІРѕР№СЃС‚РІР° РѕС‚РѕР±СЂР°Р¶Р°РµРјРѕРіРѕ РІ РґР°РЅРЅРѕРј СЃС‚РѕР»Р±С†Рµ
+	 * @param fieldName				РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїРѕР»СЏ РІ Р·Р°РїСЂРѕСЃРµ
+	 * @param joinClause			РїСЂРµРґР»РѕР¶РµРЅРёРµ join РґР»СЏ РїРѕР»СЏ
+	 * @param isMandatory			РїСЂРёР·РЅР°Рє РѕР±СЏР·Р°С‚РµР»СЊРЅРѕРіРѕ РІРєР»СЋС‡РµРЅРёСЏ РІ Р·Р°РїСЂРѕСЃ
 	 */
 	public TableEJBQLFieldDef(String alias, Class<? extends PersistentObject> entityClazz, String entityPropertyName, String fieldName, String joinClause, boolean isMandatory) {
 		super();
@@ -58,7 +58,7 @@ public class TableEJBQLFieldDef implements Serializable {
 	}
 
 	/**
-	 * Облегченный конструктор
+	 * РћР±Р»РµРіС‡РµРЅРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
 	 * @param alias
 	 * @param entityClazz
@@ -73,7 +73,7 @@ public class TableEJBQLFieldDef implements Serializable {
 	}
 
 	/**
-	 * Облегченный конструктор
+	 * РћР±Р»РµРіС‡РµРЅРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
 	 * @param entityClazz
 	 * @param entityPropertyName
@@ -87,7 +87,7 @@ public class TableEJBQLFieldDef implements Serializable {
 	}
 
 	/**
-	 * Облегченный конструктор
+	 * РћР±Р»РµРіС‡РµРЅРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
 	 * @param entityClazz
 	 * @param entityPropertyName
@@ -102,7 +102,7 @@ public class TableEJBQLFieldDef implements Serializable {
 	}
 
 	/**
-	 * Облегченный конструктор
+	 * РћР±Р»РµРіС‡РµРЅРЅС‹Р№ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
 	 * @param fieldMetadata
 	 */

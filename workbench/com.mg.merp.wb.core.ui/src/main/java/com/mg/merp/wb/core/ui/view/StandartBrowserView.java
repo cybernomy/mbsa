@@ -34,7 +34,7 @@ import com.mg.merp.wb.core.ui.UiPlugin;
 import com.mg.merp.wb.core.ui.widgets.MemoryCombo;
 
 /**
- * Базовый класс для создания браузеров БК.Вид
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ Р±СЂР°СѓР·РµСЂРѕРІ Р‘Рљ.Р’РёРґ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: StandartBrowserView.java,v 1.6 2007/07/11 06:05:09 poroxnenko Exp $
@@ -45,7 +45,7 @@ public abstract class StandartBrowserView<C extends StandartBrowserViewControlle
 	protected Table tblItems = null;
 
 	/**
-	 * Фильтр кодов для получения отчётов от сервера приложений
+	 * Р¤РёР»СЊС‚СЂ РєРѕРґРѕРІ РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РѕС‚С‡С‘С‚РѕРІ РѕС‚ СЃРµСЂРІРµСЂР° РїСЂРёР»РѕР¶РµРЅРёР№
 	 */
 	protected MemoryCombo comboFilter = null;
 
@@ -54,7 +54,7 @@ public abstract class StandartBrowserView<C extends StandartBrowserViewControlle
 	protected Menu menu = null;
 
 	/**
-	 * Контроллер текущего вида
+	 * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С‚РµРєСѓС‰РµРіРѕ РІРёРґР°
 	 */
 	protected C viewController;
 

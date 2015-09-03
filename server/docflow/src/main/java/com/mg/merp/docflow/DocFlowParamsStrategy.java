@@ -23,7 +23,7 @@ import com.mg.merp.docprocess.model.DocProcessStage;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Стратегия выбора параметров выполнения ДО
+ * РЎС‚СЂР°С‚РµРіРёСЏ РІС‹Р±РѕСЂР° РїР°СЂР°РјРµС‚СЂРѕРІ РІС‹РїРѕР»РЅРµРЅРёСЏ Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowParamsStrategy.java,v 1.1 2006/12/12 15:23:33 safonov Exp $
@@ -31,66 +31,66 @@ import com.mg.merp.document.model.DocHead;
 public interface DocFlowParamsStrategy {
 
 	/**
-	 * выбор этапа для отработки
+	 * РІС‹Р±РѕСЂ СЌС‚Р°РїР° РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
 	 * 
-	 * @param docHead		документ
-	 * @param processDate	дата выполнения ДО
-	 * @param stages		этапа доступные для отработки
-	 * @param listener		слушатель события
+	 * @param docHead		РґРѕРєСѓРјРµРЅС‚
+	 * @param processDate	РґР°С‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ Р”Рћ
+	 * @param stages		СЌС‚Р°РїР° РґРѕСЃС‚СѓРїРЅС‹Рµ РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёСЏ
 	 */
 	void chooseNextStage(final DocHead docHead, final Date processDate, final List<DocProcessStage> stages, final ChooseNextStageListener listener);
 	
 	/**
-	 * выбор спецификаций документа для отработки
+	 * РІС‹Р±РѕСЂ СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРєСѓРјРµРЅС‚Р° РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
 	 * 
-	 * @param processDate		дата выполнения ДО
-	 * @param performedStage	отрабатываемый этап 
-	 * @param docSum			сумма документа к отработке
-	 * @param specList			спецификации доступные для отработки
-	 * @param listener			слушатель события
+	 * @param processDate		РґР°С‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ Р”Рћ
+	 * @param performedStage	РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРјС‹Р№ СЌС‚Р°Рї 
+	 * @param docSum			СЃСѓРјРјР° РґРѕРєСѓРјРµРЅС‚Р° Рє РѕС‚СЂР°Р±РѕС‚РєРµ
+	 * @param specList			СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕСЃС‚СѓРїРЅС‹Рµ РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
+	 * @param listener			СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёСЏ
 	 */
 	void inputDocumentSpecList(final Date processDate, final DocProcessStage performedStage, final BigDecimal docSum, final List<DocumentSpecItem> specList, final InputDocumentParamsListener listener);
 
 	/**
-	 * ввод суммы к отработке
+	 * РІРІРѕРґ СЃСѓРјРјС‹ Рє РѕС‚СЂР°Р±РѕС‚РєРµ
 	 * 
-	 * @param processDate		дата выполнения ДО
-	 * @param performedStage	отрабатываемый этап
-	 * @param docSum			сумма документа к отработке
-	 * @param listener			слушатель события
+	 * @param processDate		РґР°С‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ Р”Рћ
+	 * @param performedStage	РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРјС‹Р№ СЌС‚Р°Рї
+	 * @param docSum			СЃСѓРјРјР° РґРѕРєСѓРјРµРЅС‚Р° Рє РѕС‚СЂР°Р±РѕС‚РєРµ
+	 * @param listener			СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёСЏ
 	 */
 	void inputDocumentSum(final Date processDate, final DocProcessStage performedStage, final BigDecimal docSum, final InputDocumentParamsListener listener);
 
 	/**
-	 * выбор папки приемника для создаваемого документа
+	 * РІС‹Р±РѕСЂ РїР°РїРєРё РїСЂРёРµРјРЅРёРєР° РґР»СЏ СЃРѕР·РґР°РІР°РµРјРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param processDate		дата выполнения ДО
-	 * @param performedStage	отрабатываемый этап
-	 * @param docSum			сумма документа к отработке
-	 * @param specList			спецификации к отработке
-	 * @param listener			слушатель события
+	 * @param processDate		РґР°С‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ Р”Рћ
+	 * @param performedStage	РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРјС‹Р№ СЌС‚Р°Рї
+	 * @param docSum			СЃСѓРјРјР° РґРѕРєСѓРјРµРЅС‚Р° Рє РѕС‚СЂР°Р±РѕС‚РєРµ
+	 * @param specList			СЃРїРµС†РёС„РёРєР°С†РёРё Рє РѕС‚СЂР°Р±РѕС‚РєРµ
+	 * @param listener			СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёСЏ
 	 */
 	void chooseDestanationFolder(final Date processDate, final DocProcessStage performedStage, final BigDecimal docSum, final List<DocumentSpecItem> specList, final ChooseFolderListener listener);
 
 	/**
-	 * выбор образца документа на основании которого будет создаваться документ
+	 * РІС‹Р±РѕСЂ РѕР±СЂР°Р·С†Р° РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІР°РЅРёРё РєРѕС‚РѕСЂРѕРіРѕ Р±СѓРґРµС‚ СЃРѕР·РґР°РІР°С‚СЊСЃСЏ РґРѕРєСѓРјРµРЅС‚
 	 * 
-	 * @param processDate		дата выполнения ДО
-	 * @param performedStage	отрабатываемый этап
-	 * @param docSum			сумма документа к отработке
-	 * @param specList			спецификации к отработке
-	 * @param listener			слушатель события
+	 * @param processDate		РґР°С‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ Р”Рћ
+	 * @param performedStage	РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРјС‹Р№ СЌС‚Р°Рї
+	 * @param docSum			СЃСѓРјРјР° РґРѕРєСѓРјРµРЅС‚Р° Рє РѕС‚СЂР°Р±РѕС‚РєРµ
+	 * @param specList			СЃРїРµС†РёС„РёРєР°С†РёРё Рє РѕС‚СЂР°Р±РѕС‚РєРµ
+	 * @param listener			СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёСЏ
 	 */
 	void chooseDocumentPattern(final Date processDate, final DocProcessStage performedStage, final BigDecimal docSum, final List<DocumentSpecItem> specList, final ChooseDocumentPatternListener listener);
 
 	/**
-	 * выбор состояния документа для отката
+	 * РІС‹Р±РѕСЂ СЃРѕСЃС‚РѕСЏРЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РґР»СЏ РѕС‚РєР°С‚Р°
 	 * 
-	 * @param processDate		дата выполнения ДО
-	 * @param performedStage	откатываемый этап
-	 * @param docHeadStates		состояния документа доступные к откату
-	 * @param specList			спецификации доступные к откату
-	 * @param listener			слушатель события
+	 * @param processDate		РґР°С‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ Р”Рћ
+	 * @param performedStage	РѕС‚РєР°С‚С‹РІР°РµРјС‹Р№ СЌС‚Р°Рї
+	 * @param docHeadStates		СЃРѕСЃС‚РѕСЏРЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РґРѕСЃС‚СѓРїРЅС‹Рµ Рє РѕС‚РєР°С‚Сѓ
+	 * @param specList			СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕСЃС‚СѓРїРЅС‹Рµ Рє РѕС‚РєР°С‚Сѓ
+	 * @param listener			СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёСЏ
 	 */
 	void chooseDocHeadState(final Date processDate, final DocProcessStage performedStage, final List<DocHeadState> docHeadStates, final List<DocumentSpecItem> specList, final ChooseDocumentStateListener listener);
 

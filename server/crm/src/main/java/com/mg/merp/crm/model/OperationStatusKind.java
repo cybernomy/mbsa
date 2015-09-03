@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Статусы состояния действия
+ * РЎС‚Р°С‚СѓСЃС‹ СЃРѕСЃС‚РѕСЏРЅРёСЏ РґРµР№СЃС‚РІРёСЏ
  * 
  * @author leonova
  * @version $Id: OperationStatusKind.java,v 1.1 2006/03/30 11:24:41 safonov Exp $
@@ -26,25 +26,25 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName("CRM.Operation.OperationStatusKind")
 public enum OperationStatusKind {
 	/**
-	 * Новое
+	 * РќРѕРІРѕРµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationStatusKind.OpStatusNew")
 	OPSTATUSNEW,
 	
 	/**
-	 * В работе
+	 * Р’ СЂР°Р±РѕС‚Рµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationStatusKind.OpStatusInWork")
 	OPSTATUSINWORK,
 	
 	/**
-	 * Выполнено
+	 * Р’С‹РїРѕР»РЅРµРЅРѕ
 	 */
 	@EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationStatusKind.OpStatusDone")
 	OPSTATUSDONE,
 	
 	/**
-	 * Отменено
+	 * РћС‚РјРµРЅРµРЅРѕ
 	 */
 	@EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationStatusKind.OpStatusCancel")
 	OPSTATUSCANCEL

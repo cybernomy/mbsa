@@ -24,7 +24,7 @@ import com.mg.framework.support.ui.widget.MaintenanceTableModel;
 import com.mg.merp.core.model.SysCompany;
 
 /**
- * Контроллер формы списка "Балансовых единиц"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° "Р‘Р°Р»Р°РЅСЃРѕРІС‹С… РµРґРёРЅРёС†"
  * 
  * @author Oleg V. Safonov
  * @version $Id: SysCompanyBr.java,v 1.1 2007/09/20 15:07:10 safonov Exp $

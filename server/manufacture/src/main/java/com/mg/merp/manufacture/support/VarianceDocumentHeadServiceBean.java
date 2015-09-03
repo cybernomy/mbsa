@@ -26,7 +26,7 @@ import com.mg.merp.manufacture.generic.ManufactureDocumentHeadServiceBean;
 import com.mg.merp.manufacture.model.VarianceDocumentHead;
 
 /**
- * Бизнес-компонент "Докумементы по отклонениям" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”РѕРєСѓРјРµРјРµРЅС‚С‹ РїРѕ РѕС‚РєР»РѕРЅРµРЅРёСЏРј" 
  * 
  * @author leonova
  * @version $Id: VarianceDocumentHeadServiceBean.java,v 1.6 2006/09/20 10:56:37 safonov Exp $

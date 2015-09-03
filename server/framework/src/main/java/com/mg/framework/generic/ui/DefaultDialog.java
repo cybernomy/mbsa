@@ -25,18 +25,18 @@ import com.mg.framework.api.ui.WidgetEvent;
 import com.mg.framework.api.ui.widget.Button;
 
 /**
- * Класс стандартного "диалога", всегда модальный. Для запуска необходимо вызвать метод <code>execute</code>.
+ * РљР»Р°СЃСЃ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ "РґРёР°Р»РѕРіР°", РІСЃРµРіРґР° РјРѕРґР°Р»СЊРЅС‹Р№. Р”Р»СЏ Р·Р°РїСѓСЃРєР° РЅРµРѕР±С…РѕРґРёРјРѕ РІС‹Р·РІР°С‚СЊ РјРµС‚РѕРґ <code>execute</code>.
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultDialog.java,v 1.7 2008/01/10 08:54:43 safonov Exp $
  */
 public class DefaultDialog extends AbstractForm implements DialogForm {
 	/**
-	 * список слушателей на событие "ок"
+	 * СЃРїРёСЃРѕРє СЃР»СѓС€Р°С‚РµР»РµР№ РЅР° СЃРѕР±С‹С‚РёРµ "РѕРє"
 	 */
 	private List<FormActionListener> okActionListener = new ArrayList<FormActionListener>();
 	/**
-	 * список слушателей на событие "отмена"
+	 * СЃРїРёСЃРѕРє СЃР»СѓС€Р°С‚РµР»РµР№ РЅР° СЃРѕР±С‹С‚РёРµ "РѕС‚РјРµРЅР°"
 	 */
 	private List<FormActionListener> cancelActionListener = new ArrayList<FormActionListener>();
 
@@ -54,9 +54,9 @@ public class DefaultDialog extends AbstractForm implements DialogForm {
 	}
 	
 	/**
-	 * обработчик события "ок"
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РѕРє"
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionOk(WidgetEvent event) {
 		fireOkAction(new FormEvent(this));
@@ -64,9 +64,9 @@ public class DefaultDialog extends AbstractForm implements DialogForm {
 	}
 
 	/**
-	 * обработчик события "отмена"
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РѕС‚РјРµРЅР°"
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionCancel(WidgetEvent event) {
 		fireCancelAction(new FormEvent(this));
@@ -116,9 +116,9 @@ public class DefaultDialog extends AbstractForm implements DialogForm {
 	}
 	
 	/**
-	 * отправка события о событии "ок"
+	 * РѕС‚РїСЂР°РІРєР° СЃРѕР±С‹С‚РёСЏ Рѕ СЃРѕР±С‹С‚РёРё "РѕРє"
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void fireOkAction(FormEvent event) throws ApplicationException {
@@ -127,9 +127,9 @@ public class DefaultDialog extends AbstractForm implements DialogForm {
 	}
 
 	/**
-	 * отправка события о событии "отмена"
+	 * РѕС‚РїСЂР°РІРєР° СЃРѕР±С‹С‚РёСЏ Рѕ СЃРѕР±С‹С‚РёРё "РѕС‚РјРµРЅР°"
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void fireCancelAction(FormEvent event) throws ApplicationException {
@@ -141,7 +141,7 @@ public class DefaultDialog extends AbstractForm implements DialogForm {
 	 * @see com.mg.framework.api.ui.DialogForm#execute()
 	 */
 	public void execute() {
-		super.run(true);//диалоги всегда модальные
+		super.run(true);//РґРёР°Р»РѕРіРё РІСЃРµРіРґР° РјРѕРґР°Р»СЊРЅС‹Рµ
 		Button okButton = (Button) view.getWidget(getDefaultButtonName());
 		view.getWindow().setDefaultButton(okButton);
 	}

@@ -37,7 +37,7 @@ import com.mg.merp.table.support.Messages;
 import com.mg.merp.table.support.TimeBoardHelper;
 
 /**
- * Контроллер формы поддержки "Шаблон графика"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РЁР°Р±Р»РѕРЅ РіСЂР°С„РёРєР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PatternHeadMt.java,v 1.1 2008/08/12 14:38:08 sharapov Exp $
@@ -73,9 +73,9 @@ public class PatternHeadMt extends DefaultMaintenanceForm implements MasterModel
 	}
 
 	/**
-	 * Обработчик пункта КМ "Выбрать тип времени с учетом по дням"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "Р’С‹Р±СЂР°С‚СЊ С‚РёРї РІСЂРµРјРµРЅРё СЃ СѓС‡РµС‚РѕРј РїРѕ РґРЅСЏРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseDayliTimeKind(WidgetEvent event) throws Exception {
 		final int[] columns = getSelectedColumns();
@@ -96,8 +96,8 @@ public class PatternHeadMt extends DefaultMaintenanceForm implements MasterModel
 	}
 
 	/**
-	 * Обработчик пункта КМ "Установить кол-во часов"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕР»-РІРѕ С‡Р°СЃРѕРІ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionSetHours(WidgetEvent event) {
 		final int[] columns = getSelectedColumns();
@@ -131,16 +131,16 @@ public class PatternHeadMt extends DefaultMaintenanceForm implements MasterModel
 	}
 
 	/**
-	 * Обработчик кнопки "Обновить шаблон"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РћР±РЅРѕРІРёС‚СЊ С€Р°Р±Р»РѕРЅ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRefreshPatternGrid(WidgetEvent event) {
 		doFillSpecGrid((PatternHead) getEntity());
 	}
 
 	/**
-	 * Обновить шаблон
-	 * @param patternHead - заголовок шаблона
+	 * РћР±РЅРѕРІРёС‚СЊ С€Р°Р±Р»РѕРЅ
+	 * @param patternHead - Р·Р°РіРѕР»РѕРІРѕРє С€Р°Р±Р»РѕРЅР°
 	 */
 	protected void doFillSpecGrid(PatternHead patternHead) {
 		((PatternSpecTableModel) specTable.getModel()).fillGrid(patternHead, patternSpecService.loadSpecs(patternHead), timeBoardHelper.getTimeKinds());

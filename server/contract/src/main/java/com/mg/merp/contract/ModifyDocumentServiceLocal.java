@@ -18,7 +18,7 @@ import com.mg.merp.contract.model.ModifyDocument;
 import com.mg.merp.reference.AttachmentHandler;
 
 /**
- * Сервис бизнес-компонента "Изменения контракта"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РР·РјРµРЅРµРЅРёСЏ РєРѕРЅС‚СЂР°РєС‚Р°"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -27,7 +27,7 @@ import com.mg.merp.reference.AttachmentHandler;
 public interface ModifyDocumentServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ModifyDocument, Integer>, AttachmentHandler {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/contract/ModifyDocument"; //$NON-NLS-1$
 

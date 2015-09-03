@@ -17,7 +17,7 @@ package com.mg.merp.warehouse.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы поддержки спецификации входящих счетов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёРё РІС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: BillSpecInMt.java,v 1.3 2006/08/22 08:12:01 leonova Exp $

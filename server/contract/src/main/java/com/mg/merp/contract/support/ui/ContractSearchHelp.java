@@ -17,7 +17,7 @@ package com.mg.merp.contract.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * Поисковик бизнес-компонента "Контракты"
+ * РџРѕРёСЃРєРѕРІРёРє Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС‚СЂР°РєС‚С‹"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ContractSearchHelp.java,v 1.1 2007/03/07 12:31:28 sharapov Exp $

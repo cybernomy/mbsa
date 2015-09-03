@@ -18,26 +18,26 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип приёмника товара
+ * РўРёРї РїСЂРёС‘РјРЅРёРєР° С‚РѕРІР°СЂР°
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: RouteDestType.java,v 1.2 2007/07/30 10:25:11 safonov Exp $
  */
 @DataItemName("MfReference.RouteDestType")
 public enum RouteDestType {
 	/**
-	 * Продажа
+	 * РџСЂРѕРґР°Р¶Р°
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Sale")
 	SALE,
 	
 	/**
-	 * Производство
+	 * РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Manufacture")
 	MANUFACTURE,
 		
 	/**
-	 * Перемещение
+	 * РџРµСЂРµРјРµС‰РµРЅРёРµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Transfer")
 	TRANSFER

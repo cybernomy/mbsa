@@ -30,7 +30,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.core.model.SysAudit;
 
 /**
- * Контроллер формы аудита системы
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ Р°СѓРґРёС‚Р° СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: SystemAuditForm.java,v 1.1 2007/10/19 06:50:09 safonov Exp $
@@ -80,7 +80,7 @@ public class SystemAuditForm extends AbstractForm {
 	}
 
 	/**
-	 * запуск формы
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹
 	 */
 	public void execute() {
 		eventDateFrom = DateTimeUtils.nowDate();

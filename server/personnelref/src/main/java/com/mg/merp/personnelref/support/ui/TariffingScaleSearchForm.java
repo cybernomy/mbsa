@@ -23,7 +23,7 @@ import com.mg.framework.utils.MiscUtils;
 import com.mg.merp.personnelref.model.TariffScale;
 
 /**
- * Форма поиска бизнес-компонента "Тарифные сетки"
+ * Р¤РѕСЂРјР° РїРѕРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РўР°СЂРёС„РЅС‹Рµ СЃРµС‚РєРё"
  * 
  * @author leonova
  * @version $Id: TariffingScaleSearchForm.java,v 1.3 2009/02/09 12:11:17 safonov Exp $

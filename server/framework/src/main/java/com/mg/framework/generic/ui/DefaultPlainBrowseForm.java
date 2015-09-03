@@ -39,14 +39,14 @@ import com.mg.framework.support.ui.widget.MaintenanceTableModel;
 import com.mg.framework.utils.BeanUtils;
 
 /**
- * Стандартная форма для отображения списков бизнес-компонетов
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ С„РѕСЂРјР° РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃРїРёСЃРєРѕРІ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultPlainBrowseForm.java,v 1.15 2009/02/09 14:29:39 safonov Exp $
  */
 public class DefaultPlainBrowseForm extends AbstractSearchForm implements MaintenanceBrowseForm, MasterModelListener {
 	/**
-	 * наименование таблицы
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С‚Р°Р±Р»РёС†С‹
 	 */
 	protected final String TABLE_WIDGET = "table";
 	private DefaultRestrictionForm restrictionForm = null;
@@ -56,12 +56,12 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	protected CustomActionListener customActionListener = null;
 	
 	/**
-	 * бизнес-компонент
+	 * Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
 	 */
 	protected DataBusinessObjectService<PersistentObject, Serializable> service;
 	
 	/**
-	 * наименование формы фильтра
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С„РѕСЂРјС‹ С„РёР»СЊС‚СЂР°
 	 */
 	protected String restrictionFormName = null;
 
@@ -70,9 +70,9 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 	
 	/**
-	 * создание контроллера таблицы, в базовой реализации создает стандартный контроллер
+	 * СЃРѕР·РґР°РЅРёРµ РєРѕРЅС‚СЂРѕР»Р»РµСЂР° С‚Р°Р±Р»РёС†С‹, РІ Р±Р°Р·РѕРІРѕР№ СЂРµР°Р»РёР·Р°С†РёРё СЃРѕР·РґР°РµС‚ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ РєРѕРЅС‚СЂРѕР»Р»РµСЂ
 	 * 
-	 * @return	контроллер таблицы
+	 * @return	РєРѕРЅС‚СЂРѕР»Р»РµСЂ С‚Р°Р±Р»РёС†С‹
 	 */
 	protected MaintenanceTableController createTableController() {
 		MaintenanceTableController result = new MaintenanceTableController(this.uiProperties);
@@ -81,9 +81,9 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 	
 	/**
-	 * создание формы ограничений, в базовой реализации создает форму по имени {@link #restrictionFormName}
+	 * СЃРѕР·РґР°РЅРёРµ С„РѕСЂРјС‹ РѕРіСЂР°РЅРёС‡РµРЅРёР№, РІ Р±Р°Р·РѕРІРѕР№ СЂРµР°Р»РёР·Р°С†РёРё СЃРѕР·РґР°РµС‚ С„РѕСЂРјСѓ РїРѕ РёРјРµРЅРё {@link #restrictionFormName}
 	 * 
-	 * @return	форма ограничений
+	 * @return	С„РѕСЂРјР° РѕРіСЂР°РЅРёС‡РµРЅРёР№
 	 */
 	protected RestrictionForm getRestrictionForm() {
 		if (restrictionFormName != null && restrictionForm == null) {
@@ -99,17 +99,17 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 	
 	/**
-	 * возвращает список полей по умолчанию отображаемых в браузере, возможно переопределение
-	 * в классе наследнике
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє РїРѕР»РµР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РѕС‚РѕР±СЂР°Р¶Р°РµРјС‹С… РІ Р±СЂР°СѓР·РµСЂРµ, РІРѕР·РјРѕР¶РЅРѕ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ
+	 * РІ РєР»Р°СЃСЃРµ РЅР°СЃР»РµРґРЅРёРєРµ
 	 * 
-	 * @return	список полей
+	 * @return	СЃРїРёСЃРѕРє РїРѕР»РµР№
 	 */
 	protected Set<String> getDefaultFieldsSet() {
 		return new LinkedHashSet<String>();
 	}
 	
 	/**
-	 * возвращает список полей отображаемых в браузере
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє РїРѕР»РµР№ РѕС‚РѕР±СЂР°Р¶Р°РµРјС‹С… РІ Р±СЂР°СѓР·РµСЂРµ
 	 * 
 	 * @return
 	 */
@@ -119,7 +119,7 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 
 	/**
-	 * возвращает текст запроса для получения выборки данного браузера
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ С‚РµРєСЃС‚ Р·Р°РїСЂРѕСЃР° РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РІС‹Р±РѕСЂРєРё РґР°РЅРЅРѕРіРѕ Р±СЂР°СѓР·РµСЂР°
 	 * 
 	 * @return
 	 */
@@ -141,16 +141,16 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 
 	/**
-	 * создание модели таблицы для браузера, необходимо переопределять в классе наследнике
+	 * СЃРѕР·РґР°РЅРёРµ РјРѕРґРµР»Рё С‚Р°Р±Р»РёС†С‹ РґР»СЏ Р±СЂР°СѓР·РµСЂР°, РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРѕРїСЂРµРґРµР»СЏС‚СЊ РІ РєР»Р°СЃСЃРµ РЅР°СЃР»РµРґРЅРёРєРµ
 	 * 
-	 * @return	модель таблицы
+	 * @return	РјРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹
 	 */
 	protected MaintenanceTableModel createModel() {
 		throw new UnsupportedOperationException("Must be override in descendants");
 	}
 	
 	/**
-	 * загрузка модели таблицы
+	 * Р·Р°РіСЂСѓР·РєР° РјРѕРґРµР»Рё С‚Р°Р±Р»РёС†С‹
 	 *
 	 */
 	protected void loadTableModel() {
@@ -164,7 +164,7 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 	
 	/**
-	 * получить слушатель событий от настраиваемых действий пользователя
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№ РѕС‚ РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
 	 * @return
 	 */
@@ -212,8 +212,8 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	 */
 	@Override
 	public void run(boolean modal) {
-		//обходим поведение стандартной формы, показываем форму условий отбора, и только после нее
-		//запускаем форму браузера, переопределяем run т.к. нельзя прерывать стек вызовов метода doOnRun
+		//РѕР±С…РѕРґРёРј РїРѕРІРµРґРµРЅРёРµ СЃС‚Р°РЅРґР°СЂС‚РЅРѕР№ С„РѕСЂРјС‹, РїРѕРєР°Р·С‹РІР°РµРј С„РѕСЂРјСѓ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР°, Рё С‚РѕР»СЊРєРѕ РїРѕСЃР»Рµ РЅРµРµ
+		//Р·Р°РїСѓСЃРєР°РµРј С„РѕСЂРјСѓ Р±СЂР°СѓР·РµСЂР°, РїРµСЂРµРѕРїСЂРµРґРµР»СЏРµРј run С‚.Рє. РЅРµР»СЊР·СЏ РїСЂРµСЂС‹РІР°С‚СЊ СЃС‚РµРє РІС‹Р·РѕРІРѕРІ РјРµС‚РѕРґР° doOnRun
 		modalFlag = modal;
 		RestrictionForm restForm = getRestrictionForm();
 		if (restForm != null && restForm.isShowOnEnter())
@@ -236,9 +236,9 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 
 	/**
-	 * обработчик запуска настраиваемых действий пользователя
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РїСѓСЃРєР° РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionExecuteCustomUserAction(WidgetEvent event) {
 		Serializable[] selectedIdentifiers = null;
@@ -250,7 +250,7 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 
 	/**
-	 * обработчик создания сущности
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР·РґР°РЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
 	 * @param event
 	 */
@@ -259,7 +259,7 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 
 	/**
-	 * обработчик изменения сущности
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РёР·РјРµРЅРµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
 	 * @param event
 	 */
@@ -268,7 +268,7 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 
 	/**
-	 * обработчик удаления сущности
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СѓРґР°Р»РµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
 	 * @param event
 	 */
@@ -277,7 +277,7 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 
 	/**
-	 * обработчик просмотра сущности
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
 	 * @param event
 	 */
@@ -286,7 +286,7 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 
 	/**
-	 * обработчик копирования сущности
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РєРѕРїРёСЂРѕРІР°РЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
 	 * @param event
 	 */
@@ -295,7 +295,7 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 
 	/**
-	 * обработчик копирования сущности с деталями
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РєРѕРїРёСЂРѕРІР°РЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё СЃ РґРµС‚Р°Р»СЏРјРё
 	 * 
 	 * @param event
 	 */
@@ -304,7 +304,7 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 
 	/**
-	 * обработчик обновления браузера сущностей
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РѕР±РЅРѕРІР»РµРЅРёСЏ Р±СЂР°СѓР·РµСЂР° СЃСѓС‰РЅРѕСЃС‚РµР№
 	 * 
 	 * @param event
 	 */
@@ -313,7 +313,7 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 
 	/**
-	 * обработчик установки условий отбора
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СѓСЃС‚Р°РЅРѕРІРєРё СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР°
 	 * 
 	 * @param event
 	 */
@@ -322,7 +322,7 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 
 	/**
-	 * обработчик запуска генератора отчетов
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РїСѓСЃРєР° РіРµРЅРµСЂР°С‚РѕСЂР° РѕС‚С‡РµС‚РѕРІ
 	 * 
 	 * @param event
 	 */
@@ -331,7 +331,7 @@ public class DefaultPlainBrowseForm extends AbstractSearchForm implements Mainte
 	}
 
 	/**
-	 * обработчик настройки таблицы
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РЅР°СЃС‚СЂРѕР№РєРё С‚Р°Р±Р»РёС†С‹
 	 * 
 	 * @param event
 	 */

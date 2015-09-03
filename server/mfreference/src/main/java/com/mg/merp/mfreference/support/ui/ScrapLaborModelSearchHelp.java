@@ -16,7 +16,7 @@ package com.mg.merp.mfreference.support.ui;
 
 
 /**
- * Поисковик "Образцов актов по списанию потерь рабочей силы"
+ * РџРѕРёСЃРєРѕРІРёРє "РћР±СЂР°Р·С†РѕРІ Р°РєС‚РѕРІ РїРѕ СЃРїРёСЃР°РЅРёСЋ РїРѕС‚РµСЂСЊ СЂР°Р±РѕС‡РµР№ СЃРёР»С‹"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ScrapLaborModelSearchHelp.java,v 1.2 2007/01/13 15:44:06 sharapov Exp $
@@ -30,7 +30,7 @@ public class ScrapLaborModelSearchHelp extends ModelSearchHelp {
 	protected short getDocSectionPrimaryKey() {
 		//return ScrapLaborHeadServiceLocal.DOCSECTION;
 		/**
-		 * docsection для актов на списание потерь времени, отработанного РС
+		 * docsection РґР»СЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ Р РЎ
 		 */
 		return 12007;
 	}

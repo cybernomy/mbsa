@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Контекст контроля данных
+ * РљРѕРЅС‚РµРєСЃС‚ РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: ValidationContext.java,v 1.1 2006/08/14 14:07:42 safonov Exp $
@@ -32,7 +32,7 @@ public class ValidationContext {
 	}
 
 	/**
-	 * добавить правило контроля в контекст
+	 * РґРѕР±Р°РІРёС‚СЊ РїСЂР°РІРёР»Рѕ РєРѕРЅС‚СЂРѕР»СЏ РІ РєРѕРЅС‚РµРєСЃС‚
 	 * 
 	 * @param rule
 	 */
@@ -41,9 +41,9 @@ public class ValidationContext {
 	}
 
 	/**
-	 * выполнить контроль всех правил содержащихся в данном контексте
+	 * РІС‹РїРѕР»РЅРёС‚СЊ РєРѕРЅС‚СЂРѕР»СЊ РІСЃРµС… РїСЂР°РІРёР» СЃРѕРґРµСЂР¶Р°С‰РёС…СЃСЏ РІ РґР°РЅРЅРѕРј РєРѕРЅС‚РµРєСЃС‚Рµ
 	 * 
-	 * @throws ValidationException если есть нарушения в контроле данных
+	 * @throws ValidationException РµСЃР»Рё РµСЃС‚СЊ РЅР°СЂСѓС€РµРЅРёСЏ РІ РєРѕРЅС‚СЂРѕР»Рµ РґР°РЅРЅС‹С…
 	 */
 	public void validate() throws ValidationException {
 		for (Rule rule : rules)
@@ -54,7 +54,7 @@ public class ValidationContext {
 	}
 	
 	/**
-	 * получить статус контроля данных
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃС‚Р°С‚СѓСЃ РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…
 	 * 
 	 * @return Returns the status.
 	 */

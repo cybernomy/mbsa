@@ -24,7 +24,7 @@ import com.mg.merp.reference.PhoneKindServiceLocal;
 import com.mg.merp.reference.model.PhoneKind;
 
 /**
- * Бизнес-компонент "Типы телефонных номеров"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ С‚РµР»РµС„РѕРЅРЅС‹С… РЅРѕРјРµСЂРѕРІ"
  * 
  * @author leonova
  * @version $Id: PhoneKindServiceBean.java,v 1.4 2006/10/19 04:21:56 leonova Exp $

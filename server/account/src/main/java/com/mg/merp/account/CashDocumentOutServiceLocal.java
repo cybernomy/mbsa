@@ -25,12 +25,12 @@ public interface CashDocumentOutServiceLocal
    extends com.mg.merp.document.Document<CashDocument, Integer, CashDocumentModelOutServiceLocal>
 {
 	/**
-	 * тип папки для расходных кассовых документов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ СЂР°СЃС…РѕРґРЅС‹С… РєР°СЃСЃРѕРІС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 12;
 	
 	/**
-	 * docsection для расходных кассовых документов
+	 * docsection РґР»СЏ СЂР°СЃС…РѕРґРЅС‹С… РєР°СЃСЃРѕРІС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 */
 	final static short DOCSECTION = 6;
 }

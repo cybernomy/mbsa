@@ -19,7 +19,7 @@ import org.jboss.system.ServiceMBean;
 import com.mg.merp.warehouse.ConfigurationService;
 
 /**
- * Сервис конфигурации модуля "Управление запасами" для контейнера JBoss
+ * РЎРµСЂРІРёСЃ РєРѕРЅС„РёРіСѓСЂР°С†РёРё РјРѕРґСѓР»СЏ "РЈРїСЂР°РІР»РµРЅРёРµ Р·Р°РїР°СЃР°РјРё" РґР»СЏ РєРѕРЅС‚РµР№РЅРµСЂР° JBoss
  * 
  * @author Oleg V. Safonov
  * @version $Id: ConfigurationServiceMBean.java,v 1.1 2006/12/12 15:31:10 safonov Exp $
@@ -27,7 +27,7 @@ import com.mg.merp.warehouse.ConfigurationService;
 public interface ConfigurationServiceMBean extends ConfigurationService,
 		ServiceMBean {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:warehouse=ConfigurationService";
 

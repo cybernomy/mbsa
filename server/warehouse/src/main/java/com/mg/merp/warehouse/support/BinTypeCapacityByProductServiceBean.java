@@ -25,7 +25,7 @@ import com.mg.merp.warehouse.BinTypeCapacityByProductServiceLocal;
 import com.mg.merp.warehouse.model.BinTypeCapacityByProduct;
 
 /**
- * Бизнес-компонент "Емкости по продукции" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р•РјРєРѕСЃС‚Рё РїРѕ РїСЂРѕРґСѓРєС†РёРё" 
  * 
  * @author leonova
  * @version $Id: BinTypeCapacityByProductServiceBean.java,v 1.5 2007/08/13 10:43:42 safonov Exp $

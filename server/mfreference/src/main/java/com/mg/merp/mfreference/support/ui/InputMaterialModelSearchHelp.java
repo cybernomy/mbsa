@@ -16,7 +16,7 @@ package com.mg.merp.mfreference.support.ui;
 
 
 /**
- * Поисковик "Образцов актов по обратному списанию материалов"
+ * РџРѕРёСЃРєРѕРІРёРє "РћР±СЂР°Р·С†РѕРІ Р°РєС‚РѕРІ РїРѕ РѕР±СЂР°С‚РЅРѕРјСѓ СЃРїРёСЃР°РЅРёСЋ РјР°С‚РµСЂРёР°Р»РѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: InputMaterialModelSearchHelp.java,v 1.2 2007/01/13 15:44:06 sharapov Exp $
@@ -30,7 +30,7 @@ public class InputMaterialModelSearchHelp extends ModelSearchHelp {
 	protected short getDocSectionPrimaryKey() {
 		//return InputMaterialHeadServiceLocal.DOCSECTION;
 		/**
-		 * docsection для актов на списание материалов в НЗП
+		 * docsection РґР»СЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РјР°С‚РµСЂРёР°Р»РѕРІ РІ РќР—Рџ
 		 */
 		return 12002;
 	}

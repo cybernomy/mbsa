@@ -21,7 +21,7 @@ import com.mg.merp.manufacture.model.JobStatus;
 import com.mg.merp.manufacture.support.Messages;
 
 /**
- * ИС генерируется если при выполнении обнаружен неверный статус ЗНП
+ * РРЎ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РµСЃР»Рё РїСЂРё РІС‹РїРѕР»РЅРµРЅРёРё РѕР±РЅР°СЂСѓР¶РµРЅ РЅРµРІРµСЂРЅС‹Р№ СЃС‚Р°С‚СѓСЃ Р—РќРџ
  * 
  * @author Oleg V. Safonov
  * @version $Id: InvalidJobStatusException.java,v 1.2 2007/07/30 10:28:17 safonov Exp $

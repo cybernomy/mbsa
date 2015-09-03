@@ -17,7 +17,7 @@ package com.mg.framework.api;
 import java.util.Set;
 
 /**
- * Сервис управления прикладными функциями сервера приложения
+ * РЎРµСЂРІРёСЃ СѓРїСЂР°РІР»РµРЅРёСЏ РїСЂРёРєР»Р°РґРЅС‹РјРё С„СѓРЅРєС†РёСЏРјРё СЃРµСЂРІРµСЂР° РїСЂРёР»РѕР¶РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ApplicationServer.java,v 1.2 2008/12/08 06:05:43 safonov Exp $
@@ -25,44 +25,44 @@ import java.util.Set;
 public interface ApplicationServer {
 
 	/**
-	 * загрузить информацию о сессиях активных пользователей
+	 * Р·Р°РіСЂСѓР·РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ СЃРµСЃСЃРёСЏС… Р°РєС‚РёРІРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
 	 * 
-	 * @return	информация о сессиях
+	 * @return	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ СЃРµСЃСЃРёСЏС…
 	 * @throws Exception
 	 */
 	Set<UserSessionInfo> loadUserSessionInfos() throws Exception;
 
 	/**
-	 * загрузить информацию о сессии
+	 * Р·Р°РіСЂСѓР·РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ СЃРµСЃСЃРёРё
 	 * 
-	 * @param httpSessionId	идентификатор сессии
-	 * @return	информация о сессии
+	 * @param httpSessionId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРµСЃСЃРёРё
+	 * @return	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ СЃРµСЃСЃРёРё
 	 * @throws Exception
 	 */
 	UserSessionInfo loadUserSessionInfo(String httpSessionId) throws Exception;
 
 	/**
-	 * отправить сообщение администратора в текущии сессии
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР° РІ С‚РµРєСѓС‰РёРё СЃРµСЃСЃРёРё
 	 * 
-	 * @param sessionIds	идентификаторы сессий
-	 * @param message	сообщение
+	 * @param sessionIds	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂС‹ СЃРµСЃСЃРёР№
+	 * @param message	СЃРѕРѕР±С‰РµРЅРёРµ
 	 * @throws Exception
 	 */
 	void sendAdminMessage(String[] sessionIds, String message) throws Exception;
 
 	/**
-	 * отправить сообщение администратора в текущии сессии
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР° РІ С‚РµРєСѓС‰РёРё СЃРµСЃСЃРёРё
 	 * 
-	 * @param sessionIds	идентификаторы сессий в виде одной строки, в качестве разделителя используется символ <code>,</code>
-	 * @param message	сообщение
+	 * @param sessionIds	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂС‹ СЃРµСЃСЃРёР№ РІ РІРёРґРµ РѕРґРЅРѕР№ СЃС‚СЂРѕРєРё, РІ РєР°С‡РµСЃС‚РІРµ СЂР°Р·РґРµР»РёС‚РµР»СЏ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ СЃРёРјРІРѕР» <code>,</code>
+	 * @param message	СЃРѕРѕР±С‰РµРЅРёРµ
 	 * @throws Exception
 	 */
 	void sendAdminMessage(String sessionIds, String message) throws Exception;
 
 	/**
-	 * завершить сессии
+	 * Р·Р°РІРµСЂС€РёС‚СЊ СЃРµСЃСЃРёРё
 	 * 
-	 * @param sessionIds	идентификаторы сессий
+	 * @param sessionIds	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂС‹ СЃРµСЃСЃРёР№
 	 * @throws Exception
 	 */
 	void invalidateUserSessions(String[] sessionIds) throws Exception;

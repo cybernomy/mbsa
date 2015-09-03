@@ -17,7 +17,7 @@ package com.mg.merp.paymentcontrol.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * Поисковик бизнес-компонента "Образцы реестра обязательств"
+ * РџРѕРёСЃРєРѕРІРёРє Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·С†С‹ СЂРµРµСЃС‚СЂР° РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: LiabilityModelSearchHelp.java,v 1.1 2007/02/16 14:55:07 sharapov Exp $

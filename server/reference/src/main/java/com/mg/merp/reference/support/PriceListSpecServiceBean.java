@@ -54,7 +54,7 @@ import com.mg.merp.reference.model.PriceListSpecPrice;
 import com.mg.merp.reference.model.PriceListSpecPriceId;
 
 /**
- * Реализация бизнес-компонента "Спецификация прайс-листов"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёСЏ РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -132,7 +132,7 @@ public class PriceListSpecServiceBean extends AbstractPOJODataBusinessObjectServ
 
 		PriceListSpec entityClone = (PriceListSpec) entity.cloneEntity(attributes);
 		if (entityClone != null) {
-			//копируем пользовательские поля
+			//РєРѕРїРёСЂСѓРµРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РїРѕР»СЏ
 			if (entity instanceof EntityCustomFieldsStorageAccessor)
 				CustomFieldsManagerLocator.locate().cloneValues(this, entity, this, entityClone);
 
@@ -149,8 +149,8 @@ public class PriceListSpecServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Создать копию спецификации прайс-листа
-	 * @param entityClone - копия спецификации прайс-листа
+	 * РЎРѕР·РґР°С‚СЊ РєРѕРїРёСЋ СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param entityClone - РєРѕРїРёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	private void createEntityClone(PriceListSpec entityClone) {
 		entityClone.setUnid(DataUtils.generateUUID());
@@ -178,17 +178,17 @@ public class PriceListSpecServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Создать цены позиции спецификации прайс-листа
-	 * @param entity - позиция спецификации
+	 * РЎРѕР·РґР°С‚СЊ С†РµРЅС‹ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param entity - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	private void createSpecPrices(PriceListSpec entity) {
 		storeSpecPrices(getSpecPrices(entity));
 	}
 
 	/**
-	 * Получить список цен позиции спецификации прайс-листа
-	 * @param entity - позиция спецификации
-	 * @return список цен позиции спецификации
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє С†РµРЅ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param entity - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @return СЃРїРёСЃРѕРє С†РµРЅ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	private List<PriceListSpecPrice> getSpecPrices(PriceListSpec entity) {
 		List<PriceListSpecPrice> specPrices = new ArrayList<PriceListSpecPrice>();
@@ -219,9 +219,9 @@ public class PriceListSpecServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Пересчитать диапазон действия(дату "действует до") позиций спецификации прайс-листа
-	 * @param priceListSpec - позиция спецификации
-	 * @param isEdit - признак изменения сущности
+	 * РџРµСЂРµСЃС‡РёС‚Р°С‚СЊ РґРёР°РїР°Р·РѕРЅ РґРµР№СЃС‚РІРёСЏ(РґР°С‚Сѓ "РґРµР№СЃС‚РІСѓРµС‚ РґРѕ") РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param priceListSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param isEdit - РїСЂРёР·РЅР°Рє РёР·РјРµРЅРµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 */
 	private void recalcActRanges(PriceListSpec priceListSpec, boolean isEdit) {
 		List<PriceListSpec> processedPriceListSpecs = new ArrayList<PriceListSpec>();
@@ -242,9 +242,9 @@ public class PriceListSpecServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Вставить позицию спецификации в отсортированный список
-	 * @param priceListSpec - позиция спецификации
-	 * @param priceListSpecs - список позиций спецификации (отсортированный по "дате действия с")
+	 * Р’СЃС‚Р°РІРёС‚СЊ РїРѕР·РёС†РёСЋ СЃРїРµС†РёС„РёРєР°С†РёРё РІ РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ СЃРїРёСЃРѕРє
+	 * @param priceListSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param priceListSpecs - СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё (РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РїРѕ "РґР°С‚Рµ РґРµР№СЃС‚РІРёСЏ СЃ")
 	 */
 	private void insertItemInListSortedByActDate(PriceListSpec priceListSpec, List<PriceListSpec> priceListSpecs) {
 		for(int i = 0; i < priceListSpecs.size(); i++) {
@@ -261,10 +261,10 @@ public class PriceListSpecServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Получить дату "действия до" спецификации прайс-листа
-	 * @param priceListSpecs - список позиций спецификации
-	 * @param currentIndex - текущая позиция в списке
-	 * @return дата "действия до"
+	 * РџРѕР»СѓС‡РёС‚СЊ РґР°С‚Сѓ "РґРµР№СЃС‚РІРёСЏ РґРѕ" СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param priceListSpecs - СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param currentIndex - С‚РµРєСѓС‰Р°СЏ РїРѕР·РёС†РёСЏ РІ СЃРїРёСЃРєРµ
+	 * @return РґР°С‚Р° "РґРµР№СЃС‚РІРёСЏ РґРѕ"
 	 */
 	private Date findActDateTill(List<PriceListSpec> priceListSpecs, int currentIndex) {
 		if(currentIndex == priceListSpecs.size() - 1)
@@ -278,9 +278,9 @@ public class PriceListSpecServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Получить аналогичные позиции спецификации (т.е те у которых совпадают заголовок Прайс-листа и позиция Каталога)
-	 * @param entity - позиция спецификации
-	 * @return список позиций спецификации
+	 * РџРѕР»СѓС‡РёС‚СЊ Р°РЅР°Р»РѕРіРёС‡РЅС‹Рµ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё (С‚.Рµ С‚Рµ Сѓ РєРѕС‚РѕСЂС‹С… СЃРѕРІРїР°РґР°СЋС‚ Р·Р°РіРѕР»РѕРІРѕРє РџСЂР°Р№СЃ-Р»РёСЃС‚Р° Рё РїРѕР·РёС†РёСЏ РљР°С‚Р°Р»РѕРіР°)
+	 * @param entity - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @return СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	private List<PriceListSpec> getFamilyPriceListSpecs(PriceListSpec entity) {
 		Criteria criteria = OrmTemplate.createCriteria(PriceListSpec.class)
@@ -295,10 +295,10 @@ public class PriceListSpecServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Декрементировать дату на количество дней
-	 * @param date - дата
-	 * @param amount - количество дней
-	 * @return дата
+	 * Р”РµРєСЂРµРјРµРЅС‚РёСЂРѕРІР°С‚СЊ РґР°С‚Сѓ РЅР° РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№
+	 * @param date - РґР°С‚Р°
+	 * @param amount - РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№
+	 * @return РґР°С‚Р°
 	 */
 	private java.util.Date decDay(java.util.Date date, int amount) {
 		Calendar calendar = Calendar.getInstance(ServerUtils.getUserLocale());
@@ -351,14 +351,14 @@ public class PriceListSpecServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Добавление спецификаций прайс-листа по кааталожным позициям
+	 * Р”РѕР±Р°РІР»РµРЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёР№ РїСЂР°Р№СЃ-Р»РёСЃС‚Р° РїРѕ РєР°Р°С‚Р°Р»РѕР¶РЅС‹Рј РїРѕР·РёС†РёСЏРј
 	 * 
 	 * @param priceListHeadId
-	 * 				- идентификатор заголовока прайс-листа
+	 * 				- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РіРѕР»РѕРІРѕРєР° РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 * @param priceListFolder
-	 * 				- папка прайс-листа
+	 * 				- РїР°РїРєР° РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 * @param catalogs
-	 * 				- список каталожных позиций
+	 * 				- СЃРїРёСЃРѕРє РєР°С‚Р°Р»РѕР¶РЅС‹С… РїРѕР·РёС†РёР№
 	 */
 	protected void doAddFromCatalog(Integer priceListHeadId, PriceListFolder priceListFolder, List<Catalog> catalogs) {
 		for (Catalog catalog : catalogs) {

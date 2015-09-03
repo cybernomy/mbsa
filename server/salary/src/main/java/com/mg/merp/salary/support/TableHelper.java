@@ -32,7 +32,7 @@ import com.mg.merp.table.model.TimeBoardPosition;
 import com.mg.merp.table.model.TimeBoardSpec;
 
 /**
- * Класс вспомогательных функций работы с графиками работ и табелем
+ * РљР»Р°СЃСЃ РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… С„СѓРЅРєС†РёР№ СЂР°Р±РѕС‚С‹ СЃ РіСЂР°С„РёРєР°РјРё СЂР°Р±РѕС‚ Рё С‚Р°Р±РµР»РµРј
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -46,61 +46,61 @@ public class TableHelper {
 	
 	
 	/**
-	 * Получить количество дней за указанный период, для которых в графике работ есть запись с указанным типом времени
-	 * @param timeKindCode - код типа времени
-	 * @param positionFill - занимаемая должность
-	 * @param beginDate - дата начала периода
-	 * @param endDate - дата окончания периода
-	 * @param staffList - штатное расписание
-	 * @return количество дней за указанный период, для которых в графике работ есть запись с указанным типом времени
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№ Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ, РґР»СЏ РєРѕС‚РѕСЂС‹С… РІ РіСЂР°С„РёРєРµ СЂР°Р±РѕС‚ РµСЃС‚СЊ Р·Р°РїРёСЃСЊ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С‚РёРїРѕРј РІСЂРµРјРµРЅРё
+	 * @param timeKindCode - РєРѕРґ С‚РёРїР° РІСЂРµРјРµРЅРё
+	 * @param positionFill - Р·Р°РЅРёРјР°РµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРµСЂРёРѕРґР°
+	 * @param endDate - РґР°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРёРѕРґР°
+	 * @param staffList - С€С‚Р°С‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅРёРµ
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№ Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ, РґР»СЏ РєРѕС‚РѕСЂС‹С… РІ РіСЂР°С„РёРєРµ СЂР°Р±РѕС‚ РµСЃС‚СЊ Р·Р°РїРёСЃСЊ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С‚РёРїРѕРј РІСЂРµРјРµРЅРё
 	 */
 	public static BigDecimal getDaysFromSchedule(String timeKindCode, PositionFill positionFill, Date beginDate, Date endDate, StaffList staffList) {
 		return getDaysQuantityFromSchedule(timeKindCode, positionFill, beginDate, endDate, staffList);
 	}
 	
 	/**
-	 * Получить количество часов с указанным типом времени из графика работ, за указанный период
-	 * @param timeKindCode - код типа времени
-	 * @param positionFill - занимаемая должность
-	 * @param beginDate - дата начала периода
-	 * @param endDate - дата окончания периода
-	 * @param staffList - штатное расписание
-	 * @return количество часов с указанным типом времени из графика работ, за указанный период. Для типов времени с учетом по дням вернет 0.
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С‚РёРїРѕРј РІСЂРµРјРµРЅРё РёР· РіСЂР°С„РёРєР° СЂР°Р±РѕС‚, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @param timeKindCode - РєРѕРґ С‚РёРїР° РІСЂРµРјРµРЅРё
+	 * @param positionFill - Р·Р°РЅРёРјР°РµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРµСЂРёРѕРґР°
+	 * @param endDate - РґР°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРёРѕРґР°
+	 * @param staffList - С€С‚Р°С‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅРёРµ
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С‚РёРїРѕРј РІСЂРµРјРµРЅРё РёР· РіСЂР°С„РёРєР° СЂР°Р±РѕС‚, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ. Р”Р»СЏ С‚РёРїРѕРІ РІСЂРµРјРµРЅРё СЃ СѓС‡РµС‚РѕРј РїРѕ РґРЅСЏРј РІРµСЂРЅРµС‚ 0.
 	 */
 	public static BigDecimal getHoursFromSchedule(String timeKindCode, PositionFill positionFill, Date beginDate, Date endDate, StaffList staffList) {
 		return getHoursQuantityFromSchedule(timeKindCode, positionFill, beginDate, endDate, staffList);
 	}
 	
 	/**
-	 * Получить количество дней за указанный период, для которых в табеле есть запись с указанным типом времени
-	 * @param timeKindCode - код типа времени
-	 * @param positionFill - занимаемая должность
-	 * @param beginDate - дата начала периода
-	 * @param endDate - дата окончания периода
-	 * @return количество дней за указанный период, для которых в табеле есть запись с указанным типом времени
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№ Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ, РґР»СЏ РєРѕС‚РѕСЂС‹С… РІ С‚Р°Р±РµР»Рµ РµСЃС‚СЊ Р·Р°РїРёСЃСЊ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С‚РёРїРѕРј РІСЂРµРјРµРЅРё
+	 * @param timeKindCode - РєРѕРґ С‚РёРїР° РІСЂРµРјРµРЅРё
+	 * @param positionFill - Р·Р°РЅРёРјР°РµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРµСЂРёРѕРґР°
+	 * @param endDate - РґР°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРёРѕРґР°
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№ Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ, РґР»СЏ РєРѕС‚РѕСЂС‹С… РІ С‚Р°Р±РµР»Рµ РµСЃС‚СЊ Р·Р°РїРёСЃСЊ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С‚РёРїРѕРј РІСЂРµРјРµРЅРё
 	 */
 	public static BigDecimal getDaysFromTimeBoard(String timeKindCode, PositionFill positionFill, Date beginDate, Date endDate) {
 		return getDaysOrHoursFromTimeBoard(true, timeKindCode, positionFill, beginDate, endDate);
 	}
 	
 	/**
-	 * Получить количество часов с указанным типом времени из табеля, за указанный период. Для типов времени с учетом по дням вернет 0.
-	 * @param timeKindCode - код типа времени
-	 * @param positionFill - занимаемая должность
-	 * @param beginDate - дата начала периода
-	 * @param endDate - дата окончания периода
-	 * @return количество часов с указанным типом времени из табеля, за указанный период. Для типов времени с учетом по дням вернет 0.
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С‚РёРїРѕРј РІСЂРµРјРµРЅРё РёР· С‚Р°Р±РµР»СЏ, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ. Р”Р»СЏ С‚РёРїРѕРІ РІСЂРµРјРµРЅРё СЃ СѓС‡РµС‚РѕРј РїРѕ РґРЅСЏРј РІРµСЂРЅРµС‚ 0.
+	 * @param timeKindCode - РєРѕРґ С‚РёРїР° РІСЂРµРјРµРЅРё
+	 * @param positionFill - Р·Р°РЅРёРјР°РµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРµСЂРёРѕРґР°
+	 * @param endDate - РґР°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРёРѕРґР°
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С‚РёРїРѕРј РІСЂРµРјРµРЅРё РёР· С‚Р°Р±РµР»СЏ, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ. Р”Р»СЏ С‚РёРїРѕРІ РІСЂРµРјРµРЅРё СЃ СѓС‡РµС‚РѕРј РїРѕ РґРЅСЏРј РІРµСЂРЅРµС‚ 0.
 	 */
 	public static BigDecimal getHoursFromTimeBoard(String timeKindCode, PositionFill positionFill, Date beginDate, Date endDate) {
 		return getDaysOrHoursFromTimeBoard(false, timeKindCode, positionFill, beginDate, endDate);
 	}
 	
 	/**
-	 * Возвращает true, если для сотрудника задан график работ на указанную дату
-	 * @param positionFill - занимаемая должность
-	 * @param actualDate - фактическая дата
-	 * @param staffList - штатное расписание
-	 * @return true, если для сотрудника задан график работ на указанную дату
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ true, РµСЃР»Рё РґР»СЏ СЃРѕС‚СЂСѓРґРЅРёРєР° Р·Р°РґР°РЅ РіСЂР°С„РёРє СЂР°Р±РѕС‚ РЅР° СѓРєР°Р·Р°РЅРЅСѓСЋ РґР°С‚Сѓ
+	 * @param positionFill - Р·Р°РЅРёРјР°РµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param actualDate - С„Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р°
+	 * @param staffList - С€С‚Р°С‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅРёРµ
+	 * @return true, РµСЃР»Рё РґР»СЏ СЃРѕС‚СЂСѓРґРЅРёРєР° Р·Р°РґР°РЅ РіСЂР°С„РёРє СЂР°Р±РѕС‚ РЅР° СѓРєР°Р·Р°РЅРЅСѓСЋ РґР°С‚Сѓ
 	 */
 	public static boolean isScheduleExists(PositionFill positionFill, Date actualDate, StaffList staffList) {
 		Map<String, Object> queryMap = new HashMap<String, Object>();
@@ -117,10 +117,10 @@ public class TableHelper {
 	}
 	
 	/**
-	 * Возвращает true, если на указанную дату сотрудник есть в табеле
-	 * @param positionFill - занимаемая должность
-	 * @param actualDate - занимаемая должность
-	 * @return true, если на указанную дату сотрудник есть в табеле
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ true, РµСЃР»Рё РЅР° СѓРєР°Р·Р°РЅРЅСѓСЋ РґР°С‚Сѓ СЃРѕС‚СЂСѓРґРЅРёРє РµСЃС‚СЊ РІ С‚Р°Р±РµР»Рµ
+	 * @param positionFill - Р·Р°РЅРёРјР°РµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param actualDate - Р·Р°РЅРёРјР°РµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @return true, РµСЃР»Рё РЅР° СѓРєР°Р·Р°РЅРЅСѓСЋ РґР°С‚Сѓ СЃРѕС‚СЂСѓРґРЅРёРє РµСЃС‚СЊ РІ С‚Р°Р±РµР»Рµ
 	 */
 	public static boolean isTimeBoardExists(PositionFill positionFill, Date actualDate) {
 		Integer timeBoardPositionsCount = OrmTemplate.getInstance().findUniqueByCriteria(OrmTemplate.createCriteria(TimeBoardPosition.class)
@@ -137,13 +137,13 @@ public class TableHelper {
 	}
 		
 	/**
-	 * Получить количество дней с указанным типом времени из графика работ, за указанный период
-	 * @param timeKindCode - код типа времени
-	 * @param positionFill - занимаемая должность
-	 * @param beginDate - дата начала периода
-	 * @param endDate - дата окончания периода
-	 * @param staffList - штатное расписание
-	 * @return количество дней с указанным типом времени из графика работ, за указанный период
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С‚РёРїРѕРј РІСЂРµРјРµРЅРё РёР· РіСЂР°С„РёРєР° СЂР°Р±РѕС‚, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @param timeKindCode - РєРѕРґ С‚РёРїР° РІСЂРµРјРµРЅРё
+	 * @param positionFill - Р·Р°РЅРёРјР°РµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРµСЂРёРѕРґР°
+	 * @param endDate - РґР°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРёРѕРґР°
+	 * @param staffList - С€С‚Р°С‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅРёРµ
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С‚РёРїРѕРј РІСЂРµРјРµРЅРё РёР· РіСЂР°С„РёРєР° СЂР°Р±РѕС‚, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ
 	 */
 	private static BigDecimal getDaysQuantityFromSchedule(String timeKindCode, PositionFill positionFill, Date beginDate, Date endDate, StaffList staffList) {
 		Map<String, Object> queryMap = new HashMap<String, Object>();
@@ -162,13 +162,13 @@ public class TableHelper {
 	}
 	
 	/**
-	 * Получить количество часов с указанным типом времени из графика работ, за указанный период
-	 * @param timeKindCode - код типа времени
-	 * @param positionFill - занимаемая должность
-	 * @param beginDate - дата начала периода
-	 * @param endDate - дата окончания периода
-	 * @param staffList - штатное расписание
-	 * @return количество часов с указанным типом времени из графика работ, за указанный период
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С‚РёРїРѕРј РІСЂРµРјРµРЅРё РёР· РіСЂР°С„РёРєР° СЂР°Р±РѕС‚, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @param timeKindCode - РєРѕРґ С‚РёРїР° РІСЂРµРјРµРЅРё
+	 * @param positionFill - Р·Р°РЅРёРјР°РµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРµСЂРёРѕРґР°
+	 * @param endDate - РґР°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРёРѕРґР°
+	 * @param staffList - С€С‚Р°С‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅРёРµ
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С‚РёРїРѕРј РІСЂРµРјРµРЅРё РёР· РіСЂР°С„РёРєР° СЂР°Р±РѕС‚, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ
 	 */
 	private static BigDecimal getHoursQuantityFromSchedule(String timeKindCode, PositionFill positionFill, Date beginDate, Date endDate, StaffList staffList) {
 		Map<String, Object> queryMap = new HashMap<String, Object>();
@@ -187,13 +187,13 @@ public class TableHelper {
 	}
 	
 	/**
-	 * Получить количество дней/часов за указанный период, для которых в табеле есть запись с указанным типом времени
-	 * @param isDaysInfo - признак отбора количества: true - дней; false - часов
-	 * @param timeKindCode - код типа времени
-	 * @param positionFill - занимаемая должность
-	 * @param beginDate - дата начала периода
-	 * @param endDate - дата окончания периода
-	 * @return количество дней/часов за указанный период, для которых в табеле есть запись с указанным типом времени
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№/С‡Р°СЃРѕРІ Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ, РґР»СЏ РєРѕС‚РѕСЂС‹С… РІ С‚Р°Р±РµР»Рµ РµСЃС‚СЊ Р·Р°РїРёСЃСЊ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С‚РёРїРѕРј РІСЂРµРјРµРЅРё
+	 * @param isDaysInfo - РїСЂРёР·РЅР°Рє РѕС‚Р±РѕСЂР° РєРѕР»РёС‡РµСЃС‚РІР°: true - РґРЅРµР№; false - С‡Р°СЃРѕРІ
+	 * @param timeKindCode - РєРѕРґ С‚РёРїР° РІСЂРµРјРµРЅРё
+	 * @param positionFill - Р·Р°РЅРёРјР°РµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРµСЂРёРѕРґР°
+	 * @param endDate - РґР°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРёРѕРґР°
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№/С‡Р°СЃРѕРІ Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ, РґР»СЏ РєРѕС‚РѕСЂС‹С… РІ С‚Р°Р±РµР»Рµ РµСЃС‚СЊ Р·Р°РїРёСЃСЊ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С‚РёРїРѕРј РІСЂРµРјРµРЅРё
 	 */
 	private static BigDecimal getDaysOrHoursFromTimeBoard(boolean isDaysInfo, String timeKindCode, PositionFill positionFill, Date beginDate, Date endDate) {
 		Criteria criteria = OrmTemplate.createCriteria(TimeBoardSpec.class)

@@ -21,40 +21,40 @@ import com.mg.merp.discount.model.PromotionLine;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * Базовый класс BAi расчета скидок/наценок по рекламным мероприятиям.
- * Класс-расширение должен реализовывать метод <code>protected void doPerform() throws Exception</code>.
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ BAi СЂР°СЃС‡РµС‚Р° СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє РїРѕ СЂРµРєР»Р°РјРЅС‹Рј РјРµСЂРѕРїСЂРёСЏС‚РёСЏРј.
+ * РљР»Р°СЃСЃ-СЂР°СЃС€РёСЂРµРЅРёРµ РґРѕР»Р¶РµРЅ СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ РјРµС‚РѕРґ <code>protected void doPerform() throws Exception</code>.
  * <p>
- * Данный метод должен возвращать результат расчета скидок/наценок 
+ * Р”Р°РЅРЅС‹Р№ РјРµС‚РѕРґ РґРѕР»Р¶РµРЅ РІРѕР·РІСЂР°С‰Р°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ СЂР°СЃС‡РµС‚Р° СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє 
  * @see com.mg.merp.discount.support.PromotionDiscountResult
  * <p>
- * Пример(с использованием пользовательского интерфейса):
- * Если пользователь отвечает "Да", то ему предоставляется скидка/наценка указанная в "позиции рекламного мероприятия" (цена берется из позиц.спецификации)
- * Если пользователь отвечает "Нет", то данное рекламное мероприятие на него НЕ РАСПРОСТРАНЯЕТСЯ ВООБЩЕ
+ * РџСЂРёРјРµСЂ(СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°):
+ * Р•СЃР»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РѕС‚РІРµС‡Р°РµС‚ "Р”Р°", С‚Рѕ РµРјСѓ РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµС‚СЃСЏ СЃРєРёРґРєР°/РЅР°С†РµРЅРєР° СѓРєР°Р·Р°РЅРЅР°СЏ РІ "РїРѕР·РёС†РёРё СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ" (С†РµРЅР° Р±РµСЂРµС‚СЃСЏ РёР· РїРѕР·РёС†.СЃРїРµС†РёС„РёРєР°С†РёРё)
+ * Р•СЃР»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РѕС‚РІРµС‡Р°РµС‚ "РќРµС‚", С‚Рѕ РґР°РЅРЅРѕРµ СЂРµРєР»Р°РјРЅРѕРµ РјРµСЂРѕРїСЂРёСЏС‚РёРµ РЅР° РЅРµРіРѕ РќР• Р РђРЎРџР РћРЎРўР РђРќРЇР•РўРЎРЇ Р’РћРћР‘Р©Р•
  * <pre>
  * 	...
  *  
- * 	private final String STUDENT_QUESTION = "Вы студент?";
- *	private final String YES_BUTTON_TEXT = "Да";
- *	private final String NO_BUTTON_TEXT = "Нет";
+ * 	private final String STUDENT_QUESTION = "Р’С‹ СЃС‚СѓРґРµРЅС‚?";
+ *	private final String YES_BUTTON_TEXT = "Р”Р°";
+ *	private final String NO_BUTTON_TEXT = "РќРµС‚";
  *
  *	private PromotionDiscountResult result = new PromotionDiscountResult();
  *
  *	protected void doPerform() throws Exception {
  *		PromotionLine promotionLine = getPromotionLine();
  *		Promotion promotion = promotionLine.getPromotion();
- *		// проверим запускался ли уже пользовательский диалог
+ *		// РїСЂРѕРІРµСЂРёРј Р·Р°РїСѓСЃРєР°Р»СЃСЏ Р»Рё СѓР¶Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ РґРёР°Р»РѕРі
  *		if(getProcessContext().containsKey(STUDENT_QUESTION))
- *			// если запускался, то результат возьмем из контекста выполненния
+ *			// РµСЃР»Рё Р·Р°РїСѓСЃРєР°Р»СЃСЏ, С‚Рѕ СЂРµР·СѓР»СЊС‚Р°С‚ РІРѕР·СЊРјРµРј РёР· РєРѕРЅС‚РµРєСЃС‚Р° РІС‹РїРѕР»РЅРµРЅРЅРёСЏ
  *			completeOperation((String) getProcessContext().get(STUDENT_QUESTION));
  *		else 
- *			// иначе запустим пользовательский диалог
+ *			// РёРЅР°С‡Рµ Р·Р°РїСѓСЃС‚РёРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ РґРёР°Р»РѕРі
  *			showQuestionDialog(promotion.getName());
  *	}
  *
  *	protected void showQuestionDialog(String promotionName) {
  *		UIUtils.showAlert(Alert.MessageType.QUESTION_MESSAGE, promotionName, STUDENT_QUESTION, YES_BUTTON_TEXT, NO_BUTTON_TEXT, new AlertListener() {
  *			public void alertClosing(String value) {
- *				// разместим результат пользовательского диалога в контексте выполненния
+ *				// СЂР°Р·РјРµСЃС‚РёРј СЂРµР·СѓР»СЊС‚Р°С‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РґРёР°Р»РѕРіР° РІ РєРѕРЅС‚РµРєСЃС‚Рµ РІС‹РїРѕР»РЅРµРЅРЅРёСЏ
  *				getProcessContext().put(STUDENT_QUESTION, value);
  *				completeOperation(value);
  *			}
@@ -63,14 +63,14 @@ import com.mg.merp.document.model.DocSpec;
  *
  *	protected void completeOperation(String dialogResult) {
  *		if (YES_BUTTON_TEXT.equals(dialogResult)) {
- *			// расчиываем значение скидки/наценки (цена из позиции спецификации, %скидки/наценки из позиции рекламного мероприятия)
+ *			// СЂР°СЃС‡РёС‹РІР°РµРј Р·РЅР°С‡РµРЅРёРµ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё (С†РµРЅР° РёР· РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё, %СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё РёР· РїРѕР·РёС†РёРё СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ)
  *			BigDecimal discount = MathUtils.divide(getSpecification().getPrice1().multiply(getPromotionLine().getDiscount()), MathUtils.HUNDRED, new RoundContext(6)); 
  *			result.setDiscount(discount);
  *			result.setIsApplied(true);
  *		}
  *		else
  *			result.setIsApplied(false);
- *		// успешно завершить выполнение BAi и вернуть результат
+ *		// СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РёС‚СЊ РІС‹РїРѕР»РЅРµРЅРёРµ BAi Рё РІРµСЂРЅСѓС‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚
  *		complete(result);
  *	}
  * </pre>
@@ -101,24 +101,24 @@ public abstract class PromotionDiscountBusinessAddin extends AbstractBusinessAdd
 	}
 
 	/**
-	 * Получить позицию спецификации
-	 * @return позиция спецификации
+	 * РџРѕР»СѓС‡РёС‚СЊ РїРѕР·РёС†РёСЋ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @return РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	public DocSpec getSpecification() {
 		return this.specification;
 	}
 
 	/**
-	 * Получить позицию рекламного мероприятия
-	 * @return позиция рекламного мероприятия
+	 * РџРѕР»СѓС‡РёС‚СЊ РїРѕР·РёС†РёСЋ СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ
+	 * @return РїРѕР·РёС†РёСЏ СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ
 	 */
 	public PromotionLine getPromotionLine() {
 		return this.promotionLine;
 	}
 
 	/**
-	 * Получить контекст выполненния
-	 * @return контекст выполненния
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРЅРёСЏ
+	 * @return РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРЅРёСЏ
 	 */
 	public Map<String, Object> getProcessContext() {
 		return this.processContext;

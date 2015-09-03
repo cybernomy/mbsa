@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Вид начисдение налога
+ * Р’РёРґ РЅР°С‡РёСЃРґРµРЅРёРµ РЅР°Р»РѕРіР°
  * 
  * @author leonova
  * @version $Id: CalcTaxesSubject.java,v 1.3 2007/06/20 12:00:47 safonov Exp $
@@ -27,13 +27,13 @@ import com.mg.framework.api.annotations.EnumConstantText;
 public enum CalcTaxesSubject {
 	
 	/**
-	 * цену
+	 * С†РµРЅСѓ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#CalcTaxesSubject.Price")
 	PRICE,
 	
 	/**
-	 * сумму
+	 * СЃСѓРјРјСѓ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#CalcTaxesSubject.Summa")
 	SUMMA

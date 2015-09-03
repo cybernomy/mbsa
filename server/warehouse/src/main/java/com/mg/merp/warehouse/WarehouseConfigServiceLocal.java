@@ -17,7 +17,7 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.WarehouseConfig;
 
 /**
- * Сервис бизнес-компонента "Конфигурация модуля <Склады, снабжение, сбыт>"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РЎРєР»Р°РґС‹, СЃРЅР°Р±Р¶РµРЅРёРµ, СЃР±С‹С‚>"
  * 
  * @author leonova
  * @author Artem V. Sharapov

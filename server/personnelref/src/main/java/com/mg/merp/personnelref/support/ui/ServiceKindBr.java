@@ -26,7 +26,7 @@ import com.mg.framework.support.ui.widget.tree.TreeNode;
 import com.mg.merp.personnelref.model.ServiceKind;
 
 /**
- * Контроллер браузера "Виды стажа"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "Р’РёРґС‹ СЃС‚Р°Р¶Р°"
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov
@@ -64,7 +64,7 @@ public class ServiceKindBr extends DefaultTreeBrowseForm {
 	 */
 	@Override
 	protected void setupFolderPermissions() {
-		// Для исключения данного функционала при нажатии горячей клавиши(F7) неактивного пункта КМ "Доступ"
+		// Р”Р»СЏ РёСЃРєР»СЋС‡РµРЅРёСЏ РґР°РЅРЅРѕРіРѕ С„СѓРЅРєС†РёРѕРЅР°Р»Р° РїСЂРё РЅР°Р¶Р°С‚РёРё РіРѕСЂСЏС‡РµР№ РєР»Р°РІРёС€Рё(F7) РЅРµР°РєС‚РёРІРЅРѕРіРѕ РїСѓРЅРєС‚Р° РљРњ "Р”РѕСЃС‚СѓРї"
 		//if (currentNode != null)
 		//	ServerUtils.getSecuritySystem().setupTreePermission((Integer) currentNode.getPrimaryKey(), 7, "com.mg.merp.personnelref.model.ServiceKind", "ParentId"); //$NON-NLS-1$ //$NON-NLS-2$
 	}

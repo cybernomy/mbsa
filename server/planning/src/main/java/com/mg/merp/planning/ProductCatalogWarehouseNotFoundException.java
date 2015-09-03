@@ -22,7 +22,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.warehouse.model.Warehouse;
 
 /**
- * ИС генерируется если не найден склад хранения продукции
+ * РРЎ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ СЃРєР»Р°Рґ С…СЂР°РЅРµРЅРёСЏ РїСЂРѕРґСѓРєС†РёРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: ProductCatalogWarehouseNotFoundException.java,v 1.1 2007/07/30 10:37:51 safonov Exp $

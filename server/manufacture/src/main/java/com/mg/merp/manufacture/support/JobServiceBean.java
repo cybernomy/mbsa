@@ -61,7 +61,7 @@ import com.mg.merp.mfreference.support.MfUtils;
 
 
 /**
- * Бизнес-компонент "Заказ-наряд на производство" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р—Р°РєР°Р·-РЅР°СЂСЏРґ РЅР° РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕ" 
  * 
  * @author leonova
  * @version $Id: JobServiceBean.java,v 1.10 2008/02/15 07:30:30 alikaev Exp $

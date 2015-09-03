@@ -40,14 +40,14 @@ import com.mg.framework.utils.SecurityUtils;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Стандартная форма для отображения списков бизнес-компонетов имеющих связь с иерархической структурой
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ С„РѕСЂРјР° РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃРїРёСЃРєРѕРІ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµС‚РѕРІ РёРјРµСЋС‰РёС… СЃРІСЏР·СЊ СЃ РёРµСЂР°СЂС…РёС‡РµСЃРєРѕР№ СЃС‚СЂСѓРєС‚СѓСЂРѕР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultHierarchyBrowseForm.java,v 1.11 2009/02/09 14:44:36 safonov Exp $
  */
 public class DefaultHierarchyBrowseForm extends DefaultPlainBrowseForm {
 	/**
-	 * наименование дерева
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РґРµСЂРµРІР°
 	 */
 	protected final String TREE_WIDGET = "tree";
 	protected DataBusinessObjectService<PersistentObject, Serializable> folderService;
@@ -85,36 +85,36 @@ public class DefaultHierarchyBrowseForm extends DefaultPlainBrowseForm {
 	}
 	
 	/**
-	 * загрузка модели иерархической структуры, должен быть переопределен в наследнике
-	 * <p> Например:
+	 * Р·Р°РіСЂСѓР·РєР° РјРѕРґРµР»Рё РёРµСЂР°СЂС…РёС‡РµСЃРєРѕР№ СЃС‚СЂСѓРєС‚СѓСЂС‹, РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ РІ РЅР°СЃР»РµРґРЅРёРєРµ
+	 * <p> РќР°РїСЂРёРјРµСЂ:
 	 * <blockquote><pre>
 	 *   List<CatalogFolder> list = OrmTemplate.getInstance().find(CatalogFolder.class, "from CatalogFolder cf where".concat(DatabaseUtils.generateFlatBrowseWhereEJBQL("cf.Id", 1).concat(" order by cf.Id")));
 	 *   return CatalogFolderTreeNode.createTree(list);
 	 * </pre></blockquote>
 	 * 
-	 * @return	модель иерархической структуры
+	 * @return	РјРѕРґРµР»СЊ РёРµСЂР°СЂС…РёС‡РµСЃРєРѕР№ СЃС‚СЂСѓРєС‚СѓСЂС‹
 	 */
 	protected TreeNode loadFolders() {
 		throw new UnsupportedOperationException("Must be override in descendants");
 	}
 	
 	/**
-	 * Метод устанавливает объект мастер. Необходимо переопределить в
-	 * наследнике.
-	 * <p> Например:
+	 * РњРµС‚РѕРґ СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РѕР±СЉРµРєС‚ РјР°СЃС‚РµСЂ. РќРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРѕРїСЂРµРґРµР»РёС‚СЊ РІ
+	 * РЅР°СЃР»РµРґРЅРёРєРµ.
+	 * <p> РќР°РїСЂРёРјРµСЂ:
 	 * <blockquote><pre>
 	 *   uiProperties.put("Folder", master)
 	 * </pre></blockquote>
 	 * 
-	 * @param master объект сущность мастера
+	 * @param master РѕР±СЉРµРєС‚ СЃСѓС‰РЅРѕСЃС‚СЊ РјР°СЃС‚РµСЂР°
 	 */
 	protected void initializeMaster(PersistentObject master) {
 		
 	}
 
 	/**
-	 * настройка прав на элементы иерархии, в стандартной реализации настройка происходит для видов иерархии 0 (общие папки),
-	 * необходимо переопределить если используется другой вид иерархии
+	 * РЅР°СЃС‚СЂРѕР№РєР° РїСЂР°РІ РЅР° СЌР»РµРјРµРЅС‚С‹ РёРµСЂР°СЂС…РёРё, РІ СЃС‚Р°РЅРґР°СЂС‚РЅРѕР№ СЂРµР°Р»РёР·Р°С†РёРё РЅР°СЃС‚СЂРѕР№РєР° РїСЂРѕРёСЃС…РѕРґРёС‚ РґР»СЏ РІРёРґРѕРІ РёРµСЂР°СЂС…РёРё 0 (РѕР±С‰РёРµ РїР°РїРєРё),
+	 * РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРѕРїСЂРµРґРµР»РёС‚СЊ РµСЃР»Рё РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґСЂСѓРіРѕР№ РІРёРґ РёРµСЂР°СЂС…РёРё
 	 *
 	 */
 	protected void setupFolderPermissions() {
@@ -127,9 +127,9 @@ public class DefaultHierarchyBrowseForm extends DefaultPlainBrowseForm {
 	 */
 	@Override
 	protected void loadTableModel() {
-		//переопределим метод, загрузка модели в таблицу произойдет после установки
-		//на элемент иерархии при инициализации, т.к. таблица является слушателем события 
-		//изменения текущего элемента иерархии
+		//РїРµСЂРµРѕРїСЂРµРґРµР»РёРј РјРµС‚РѕРґ, Р·Р°РіСЂСѓР·РєР° РјРѕРґРµР»Рё РІ С‚Р°Р±Р»РёС†Сѓ РїСЂРѕРёР·РѕР№РґРµС‚ РїРѕСЃР»Рµ СѓСЃС‚Р°РЅРѕРІРєРё
+		//РЅР° СЌР»РµРјРµРЅС‚ РёРµСЂР°СЂС…РёРё РїСЂРё РёРЅРёС†РёР°Р»РёР·Р°С†РёРё, С‚.Рє. С‚Р°Р±Р»РёС†Р° СЏРІР»СЏРµС‚СЃСЏ СЃР»СѓС€Р°С‚РµР»РµРј СЃРѕР±С‹С‚РёСЏ 
+		//РёР·РјРµРЅРµРЅРёСЏ С‚РµРєСѓС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р° РёРµСЂР°СЂС…РёРё
 		
 		//defect #3938 fixed
 		RestrictionForm restForm = getRestrictionForm();
@@ -140,14 +140,14 @@ public class DefaultHierarchyBrowseForm extends DefaultPlainBrowseForm {
 		if (getTargetEntity() != null) {
 				try {
 					Object attrValue = getTargetEntity().getAttribute(getFolderAttributeName());
-					//если сущность, то получим первичный ключ
+					//РµСЃР»Рё СЃСѓС‰РЅРѕСЃС‚СЊ, С‚Рѕ РїРѕР»СѓС‡РёРј РїРµСЂРІРёС‡РЅС‹Р№ РєР»СЋС‡
 					Object folderId = attrValue instanceof PersistentObject ? BeanUtils.getIdentifierProperty(attrValue) : attrValue;
-					//сбросим признак установки на 1ю запись, если найдем по первичному ключу, то
-					//установится в методе locate
+					//СЃР±СЂРѕСЃРёРј РїСЂРёР·РЅР°Рє СѓСЃС‚Р°РЅРѕРІРєРё РЅР° 1СЋ Р·Р°РїРёСЃСЊ, РµСЃР»Рё РЅР°Р№РґРµРј РїРѕ РїРµСЂРІРёС‡РЅРѕРјСѓ РєР»СЋС‡Сѓ, С‚Рѕ
+					//СѓСЃС‚Р°РЅРѕРІРёС‚СЃСЏ РІ РјРµС‚РѕРґРµ locate
 					table.setSelectFirstRow(false);
 					try {
-						//поиск в дереве, после позиционировании будут загружены нужные детали и уже в них
-						//производим поиск
+						//РїРѕРёСЃРє РІ РґРµСЂРµРІРµ, РїРѕСЃР»Рµ РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРё Р±СѓРґСѓС‚ Р·Р°РіСЂСѓР¶РµРЅС‹ РЅСѓР¶РЅС‹Рµ РґРµС‚Р°Р»Рё Рё СѓР¶Рµ РІ РЅРёС…
+						//РїСЂРѕРёР·РІРѕРґРёРј РїРѕРёСЃРє
 						if (tree.locate(folderId) != null) {
 							selectFirstNode = false;
 							if (table.locate(BeanUtils.getIdentifierProperty(getTargetEntity())) == -1)
@@ -161,7 +161,7 @@ public class DefaultHierarchyBrowseForm extends DefaultPlainBrowseForm {
 				}
 		}
 		if (selectFirstNode)
-			//выделим 0й элемент дерева чтобы сработала загрузка деталей дерева
+			//РІС‹РґРµР»РёРј 0Р№ СЌР»РµРјРµРЅС‚ РґРµСЂРµРІР° С‡С‚РѕР±С‹ СЃСЂР°Р±РѕС‚Р°Р»Р° Р·Р°РіСЂСѓР·РєР° РґРµС‚Р°Р»РµР№ РґРµСЂРµРІР°
 			((MaintenanceTree) view.getWidget(TREE_WIDGET)).setSelectionRow(0);
 	}
 
@@ -176,14 +176,14 @@ public class DefaultHierarchyBrowseForm extends DefaultPlainBrowseForm {
 		tree.initController(folderService);
 		super.doOnRun();
 		
-		//права на перенос объектов между папками
+		//РїСЂР°РІР° РЅР° РїРµСЂРµРЅРѕСЃ РѕР±СЉРµРєС‚РѕРІ РјРµР¶РґСѓ РїР°РїРєР°РјРё
 		boolean movePerm = SecurityUtils.tryCheckPermission(new BusinessMethodPermission(service.getBusinessServiceMetadata().getName(), BusinessMethodPermission.MOVE_METHOD));
 		if (movePerm) {
 			DnDComponent dndTable = (DnDComponent) view.getWidget(TABLE_WIDGET);
 			dndTable.setDragEnabled(true);
 			dndTable.setTransferHandler(new DefaultTableTransferHandler());			
 		}
-		//права на изменения иерархии бизнес-компонента
+		//РїСЂР°РІР° РЅР° РёР·РјРµРЅРµРЅРёСЏ РёРµСЂР°СЂС…РёРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 		boolean changeHierarPerm = SecurityUtils.tryCheckPermission(new BusinessMethodPermission(service.getBusinessServiceMetadata().getName(), BusinessMethodPermission.CHANGE_HIERARCHY_METHOD));
 		if (changeHierarPerm || movePerm) {
 			DnDComponent dndTree = (DnDComponent) view.getWidget(TREE_WIDGET);
@@ -201,14 +201,14 @@ public class DefaultHierarchyBrowseForm extends DefaultPlainBrowseForm {
 
 	@Override
 	protected void setupFocus() {
-		//фокус устанавливаем на дерево, поведение аналогичное со 2ой версией
+		//С„РѕРєСѓСЃ СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РЅР° РґРµСЂРµРІРѕ, РїРѕРІРµРґРµРЅРёРµ Р°РЅР°Р»РѕРіРёС‡РЅРѕРµ СЃРѕ 2РѕР№ РІРµСЂСЃРёРµР№
 		view.getWidget(TREE_WIDGET).requestFocus();
 	}
 
 	/**
-	 * получить имя атрибута сущности отвечающего за иерархию в данном браузере, имеет стандартное
-	 * значение <literal>Folder</literal>, требует переопределения если имя атрибута отвечающего
-	 * за иерархию отличается от стандартного
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРјСЏ Р°С‚СЂРёР±СѓС‚Р° СЃСѓС‰РЅРѕСЃС‚Рё РѕС‚РІРµС‡Р°СЋС‰РµРіРѕ Р·Р° РёРµСЂР°СЂС…РёСЋ РІ РґР°РЅРЅРѕРј Р±СЂР°СѓР·РµСЂРµ, РёРјРµРµС‚ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРµ
+	 * Р·РЅР°С‡РµРЅРёРµ <literal>Folder</literal>, С‚СЂРµР±СѓРµС‚ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёСЏ РµСЃР»Рё РёРјСЏ Р°С‚СЂРёР±СѓС‚Р° РѕС‚РІРµС‡Р°СЋС‰РµРіРѕ
+	 * Р·Р° РёРµСЂР°СЂС…РёСЋ РѕС‚Р»РёС‡Р°РµС‚СЃСЏ РѕС‚ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ
 	 * 
 	 * @return
 	 */
@@ -217,7 +217,7 @@ public class DefaultHierarchyBrowseForm extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * обработчик создания папки
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР·РґР°РЅРёСЏ РїР°РїРєРё
 	 * 
 	 * @param event
 	 */
@@ -226,7 +226,7 @@ public class DefaultHierarchyBrowseForm extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * обработчик изменения папки
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РёР·РјРµРЅРµРЅРёСЏ РїР°РїРєРё
 	 * 
 	 * @param event
 	 */
@@ -235,7 +235,7 @@ public class DefaultHierarchyBrowseForm extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * обработчик удаления папки
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СѓРґР°Р»РµРЅРёСЏ РїР°РїРєРё
 	 * 
 	 * @param event
 	 */
@@ -244,7 +244,7 @@ public class DefaultHierarchyBrowseForm extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * обработчик просмотра
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР°
 	 * 
 	 * @param event
 	 */
@@ -253,7 +253,7 @@ public class DefaultHierarchyBrowseForm extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * обработчик настройки прав на папки
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РЅР°СЃС‚СЂРѕР№РєРё РїСЂР°РІ РЅР° РїР°РїРєРё
 	 * 
 	 * @param event
 	 */
@@ -262,7 +262,7 @@ public class DefaultHierarchyBrowseForm extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * обработчик обновления папок
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РѕР±РЅРѕРІР»РµРЅРёСЏ РїР°РїРѕРє
 	 * 
 	 * @param event
 	 */

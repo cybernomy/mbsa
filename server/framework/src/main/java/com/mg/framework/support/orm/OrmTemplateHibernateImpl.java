@@ -21,7 +21,7 @@ import com.mg.framework.api.orm.Criteria;
 import com.mg.framework.api.orm.OrmTemplate;
 
 /**
- * Реализация шаблона выполнения объектных запросов на базе Hibernate
+ * Р РµР°Р»РёР·Р°С†РёСЏ С€Р°Р±Р»РѕРЅР° РІС‹РїРѕР»РЅРµРЅРёСЏ РѕР±СЉРµРєС‚РЅС‹С… Р·Р°РїСЂРѕСЃРѕРІ РЅР° Р±Р°Р·Рµ Hibernate
  * 
  * @author Oleg V. Safonov
  * @version $Id: OrmTemplateHibernateImpl.java,v 1.1 2007/07/27 09:32:54 safonov Exp $

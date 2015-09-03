@@ -17,7 +17,7 @@ package com.mg.merp.baiengine;
 import com.mg.merp.baiengine.support.Messages;
 
 /**
- * Класс ИС указывающий о проблемах создания реализации BAi
+ * РљР»Р°СЃСЃ РРЎ СѓРєР°Р·С‹РІР°СЋС‰РёР№ Рѕ РїСЂРѕР±Р»РµРјР°С… СЃРѕР·РґР°РЅРёСЏ СЂРµР°Р»РёР·Р°С†РёРё BAi
  * 
  * @author Oleg V. Safonov
  * @version $Id: BAiImplementationInstantiationException.java,v 1.2 2008/10/28 13:13:57 safonov Exp $

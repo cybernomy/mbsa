@@ -40,7 +40,7 @@ import com.mg.merp.lbschedule.model.Schedule;
 
 
 /**
- * Контроллер формы поддержки бизнес-компонента "График исполнения обязательств"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р“СЂР°С„РёРє РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -165,8 +165,8 @@ public class ScheduleMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик кнопки "Просмотреть документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	public void onActionViewDocument(WidgetEvent event) {

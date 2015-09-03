@@ -37,7 +37,7 @@ import com.mg.merp.account.model.InvHistory;
 import com.mg.merp.account.model.Inventory;
 
 /**
- * Контроллер формы поддержки инвентарной карточки
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРё
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -113,8 +113,8 @@ public class InventoryMt extends DefaultMaintenanceForm implements MasterModelLi
 	}
 
 	/**
-	 * Обработчик обновления формы 
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РѕР±РЅРѕРІР»РµРЅРёСЏ С„РѕСЂРјС‹ 
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRefresh(WidgetEvent event) {
 		Inventory inventory = (Inventory) getEntity();
@@ -154,10 +154,10 @@ public class InventoryMt extends DefaultMaintenanceForm implements MasterModelLi
 	}
 
 	/**
-	 * Изменение доступа к полям
+	 * РР·РјРµРЅРµРЅРёРµ РґРѕСЃС‚СѓРїР° Рє РїРѕР»СЏРј
 	 * 
 	 * @param isReadOnly
-	 * 				- <code>true</code> - сделать недоступным для изменения, иначе доступным
+	 * 				- <code>true</code> - СЃРґРµР»Р°С‚СЊ РЅРµРґРѕСЃС‚СѓРїРЅС‹Рј РґР»СЏ РёР·РјРµРЅРµРЅРёСЏ, РёРЅР°С‡Рµ РґРѕСЃС‚СѓРїРЅС‹Рј
 	 */
 	private void setReadOnlyField(boolean isReadOnly) {
 		view.getWidget("ExplPeriodY").setReadOnly(!isReadOnly);

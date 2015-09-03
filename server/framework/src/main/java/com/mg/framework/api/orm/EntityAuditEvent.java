@@ -22,7 +22,7 @@ import com.mg.framework.utils.DateTimeUtils;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Событие аудита хранилища данных
+ * РЎРѕР±С‹С‚РёРµ Р°СѓРґРёС‚Р° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityAuditEvent.java,v 1.2 2008/05/29 08:34:09 safonov Exp $

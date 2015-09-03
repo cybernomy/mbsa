@@ -17,7 +17,7 @@ package com.mg.merp.docprocess.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Виды этапов документооборота
+ * Р’РёРґС‹ СЌС‚Р°РїРѕРІ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: StageAction.java,v 1.6 2007/03/14 08:15:54 safonov Exp $

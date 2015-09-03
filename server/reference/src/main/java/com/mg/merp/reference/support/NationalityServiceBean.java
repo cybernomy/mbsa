@@ -24,7 +24,7 @@ import com.mg.merp.reference.NationalityServiceLocal;
 import com.mg.merp.reference.model.Nationality;
 
 /**
- * Бизнес-компонент "Национальности" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РќР°С†РёРѕРЅР°Р»СЊРЅРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @version $Id: NationalityServiceBean.java,v 1.4 2006/10/20 05:38:59 leonova Exp $

@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.core.model.Form;
 
 /**
- * Браузер форм системы
+ * Р‘СЂР°СѓР·РµСЂ С„РѕСЂРј СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: FormBr.java,v 1.1 2008/03/03 13:05:04 safonov Exp $

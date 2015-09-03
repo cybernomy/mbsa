@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PersonnelVocationalTrainingServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelVocationalTraining;
 
 /**
- * Реализация бизнес-компонента "Профессиональная переподготовка" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРѕС„РµСЃСЃРёРѕРЅР°Р»СЊРЅР°СЏ РїРµСЂРµРїРѕРґРіРѕС‚РѕРІРєР°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

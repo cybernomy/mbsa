@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Права пользователя на выполнение и откат документооборота
+ * РџСЂР°РІР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РЅР° РІС‹РїРѕР»РЅРµРЅРёРµ Рё РѕС‚РєР°С‚ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: ActionUserGrant.java,v 1.2 2006/08/25 12:00:47 safonov Exp $
@@ -26,25 +26,25 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName("DocFlow.ActionUserGrant")
 public enum ActionUserGrant {
 	/**
-	 * Нет прав
+	 * РќРµС‚ РїСЂР°РІ
 	 */
 	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#ActionUserGrant.None")
 	NONE,
 	
 	/**
-	 * Выполнение ДО
+	 * Р’С‹РїРѕР»РЅРµРЅРёРµ Р”Рћ
 	 */
 	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#ActionUserGrant.Execute")
 	EXECUTE,
 	
 	/**
-	 * Откат ДО
+	 * РћС‚РєР°С‚ Р”Рћ
 	 */
 	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#ActionUserGrant.Rollback")
 	ROLLBACK,
 	
 	/**
-	 * Выполнение и откат ДО
+	 * Р’С‹РїРѕР»РЅРµРЅРёРµ Рё РѕС‚РєР°С‚ Р”Рћ
 	 */
 	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#ActionUserGrant.Both")
 	BOTH

@@ -23,7 +23,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocType;
 
 /**
- * Сервис бизнес-компонента "Контракты"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС‚СЂР°РєС‚С‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -32,57 +32,57 @@ import com.mg.merp.document.model.DocType;
 public interface ContractServiceLocal extends com.mg.merp.document.Document<Contract, Integer, DocumentPattern> {
 	
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/contract/Contract"; //$NON-NLS-1$
 	
 	/**
-	 * тип папки для контрактов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РєРѕРЅС‚СЂР°РєС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 35;
 
 	/**
-	 * раздел контрактов
+	 * СЂР°Р·РґРµР» РєРѕРЅС‚СЂР°РєС‚РѕРІ
 	 */
 	final static short DOCSECTION = 19;
 
 	/**
-	 * Найти контракт по заданным параметрам
-	 * @param contractType - тип контракта
-	 * @param contractDate - дата контракта
-	 * @param contractNumber - номер контракта
-	 * @return контракт (NULL - если не найден) 
+	 * РќР°Р№С‚Рё РєРѕРЅС‚СЂР°РєС‚ РїРѕ Р·Р°РґР°РЅРЅС‹Рј РїР°СЂР°РјРµС‚СЂР°Рј
+	 * @param contractType - С‚РёРї РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param contractDate - РґР°С‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param contractNumber - РЅРѕРјРµСЂ РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @return РєРѕРЅС‚СЂР°РєС‚ (NULL - РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ) 
 	 */
 	DocHead findByParams(DocType contractType, Date contractDate, String contractNumber);
 	
 	/**
-	 * Получить остаток
-	 * @param shippedPaymentSum - сумма платежей контрагенту
-	 * @param receivedGoodSum - сумма ТМЦ и услуг от контрагента
-	 * @param receivedPaymentSum - сумма платежей от контрагента 
-	 * @param shippedGoodSum - сумма ТМЦ и услуг от контрагенту
-	 * @return остаток
+	 * РџРѕР»СѓС‡РёС‚СЊ РѕСЃС‚Р°С‚РѕРє
+	 * @param shippedPaymentSum - СЃСѓРјРјР° РїР»Р°С‚РµР¶РµР№ РєРѕРЅС‚СЂР°РіРµРЅС‚Сѓ
+	 * @param receivedGoodSum - СЃСѓРјРјР° РўРњР¦ Рё СѓСЃР»СѓРі РѕС‚ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°
+	 * @param receivedPaymentSum - СЃСѓРјРјР° РїР»Р°С‚РµР¶РµР№ РѕС‚ РєРѕРЅС‚СЂР°РіРµРЅС‚Р° 
+	 * @param shippedGoodSum - СЃСѓРјРјР° РўРњР¦ Рё СѓСЃР»СѓРі РѕС‚ РєРѕРЅС‚СЂР°РіРµРЅС‚Сѓ
+	 * @return РѕСЃС‚Р°С‚РѕРє
 	 */
 	BigDecimal calculateRestSum(BigDecimal shippedPaymentSum, BigDecimal receivedGoodSum, BigDecimal receivedPaymentSum, BigDecimal shippedGoodSum);
 	
 	/**
-	 * Получить сумму по контракту (по видам пунктов)
-	 * @param contract - контракт
-	 * @return сумма по контракту
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃСѓРјРјСѓ РїРѕ РєРѕРЅС‚СЂР°РєС‚Сѓ (РїРѕ РІРёРґР°Рј РїСѓРЅРєС‚РѕРІ)
+	 * @param contract - РєРѕРЅС‚СЂР°РєС‚
+	 * @return СЃСѓРјРјР° РїРѕ РєРѕРЅС‚СЂР°РєС‚Сѓ
 	 */
 	BigDecimal[] calculateTotalContractSum(DocHead contract);
 	
 	/**
-	 * Получить сумму по плану (по видам пунктов)
-	 * @param contract - контракт
-	 * @return сумма по плану
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃСѓРјРјСѓ РїРѕ РїР»Р°РЅСѓ (РїРѕ РІРёРґР°Рј РїСѓРЅРєС‚РѕРІ)
+	 * @param contract - РєРѕРЅС‚СЂР°РєС‚
+	 * @return СЃСѓРјРјР° РїРѕ РїР»Р°РЅСѓ
 	 */
 	BigDecimal[] calculateTotalPlanSum(DocHead contract);
 	
 	/**
-	 * Получить сумму по факту (по видам пунктов)
-	 * @param contract - контракт
-	 * @return сумма по факту
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃСѓРјРјСѓ РїРѕ С„Р°РєС‚Сѓ (РїРѕ РІРёРґР°Рј РїСѓРЅРєС‚РѕРІ)
+	 * @param contract - РєРѕРЅС‚СЂР°РєС‚
+	 * @return СЃСѓРјРјР° РїРѕ С„Р°РєС‚Сѓ
 	 */
 	BigDecimal[] calculateTotalFactSum(DocHead contract);
 	

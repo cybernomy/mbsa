@@ -21,7 +21,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.paymentcontrol.model.Liability;
 
 /**
- * Сервис бизнес-компонента "Реестр обязательств"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р РµРµСЃС‚СЂ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -30,63 +30,63 @@ import com.mg.merp.paymentcontrol.model.Liability;
 public interface LiabilityServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Liability, Integer> {
 	
 	/**
-	 * локальное имя сервиса
+	 * Р»РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/paymentcontrol/Liability"; //$NON-NLS-1$
 	
 	/**
-	 * тип папки для реестра обязательств
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ СЂРµРµСЃС‚СЂР° РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ
 	 */
 	final static short FOLDER_PART = 13401;
 
 	/**
-	 * Создание обязательства по образцу
-	 * @param pattern - образец
-	 * @param folder - папка-приемник
-	 * @return обязательство
+	 * РЎРѕР·РґР°РЅРёРµ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР° РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param pattern - РѕР±СЂР°Р·РµС†
+	 * @param folder - РїР°РїРєР°-РїСЂРёРµРјРЅРёРє
+	 * @return РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ
 	 */
 	Liability createByPattern(Liability pattern, Folder folder);
 	
 	/**
-	 * Получить исполненную сумму
-	 * @param liabilityId - идентификатор обязательства
-	 * @param versionId - идентификатор версии планирования
-	 * @return сумма
+	 * РџРѕР»СѓС‡РёС‚СЊ РёСЃРїРѕР»РЅРµРЅРЅСѓСЋ СЃСѓРјРјСѓ
+	 * @param liabilityId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°
+	 * @param versionId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @return СЃСѓРјРјР°
 	 */
 	BigDecimal getExecutedSum(Integer liabilityId, Integer versionId);
 	
 	/**
-	 * Получить неисполненный остаток обязательства
-	 * @param liabilityId - иденификатор обязательства
-	 * @param versionId - иденификатор версии планирования
-	 * @return неисполненный остаток
+	 * РџРѕР»СѓС‡РёС‚СЊ РЅРµРёСЃРїРѕР»РЅРµРЅРЅС‹Р№ РѕСЃС‚Р°С‚РѕРє РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°
+	 * @param liabilityId - РёРґРµРЅРёС„РёРєР°С‚РѕСЂ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°
+	 * @param versionId - РёРґРµРЅРёС„РёРєР°С‚РѕСЂ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @return РЅРµРёСЃРїРѕР»РЅРµРЅРЅС‹Р№ РѕСЃС‚Р°С‚РѕРє
 	 */
 	BigDecimal getRemnSum(Integer liabilityId, Integer versionId);
 	
 	/**
-	 * Получить корневую папку Реестра обязательств
-	 * @return корневая папка Реестра обязательств
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕСЂРЅРµРІСѓСЋ РїР°РїРєСѓ Р РµРµСЃС‚СЂР° РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ
+	 * @return РєРѕСЂРЅРµРІР°СЏ РїР°РїРєР° Р РµРµСЃС‚СЂР° РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ
 	 */
 	Folder getRootFolder();
 		
 	/**
-	 * Найти документ (для просмотра)
-	 * @param liability - обязательство
-	 * @return документ
+	 * РќР°Р№С‚Рё РґРѕРєСѓРјРµРЅС‚ (РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР°)
+	 * @param liability - РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ
+	 * @return РґРѕРєСѓРјРµРЅС‚
 	 */
 	DocHead findDoc(Liability liability);
 	
 	/**
-	 * Найти документ-основание (для просмотра)
-	 * @param liability - обязательство
-	 * @return документ-основание
+	 * РќР°Р№С‚Рё РґРѕРєСѓРјРµРЅС‚-РѕСЃРЅРѕРІР°РЅРёРµ (РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР°)
+	 * @param liability - РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ
+	 * @return РґРѕРєСѓРјРµРЅС‚-РѕСЃРЅРѕРІР°РЅРёРµ
 	 */
 	DocHead findBaseDoc(Liability liability);
 	
 	/**
-	 * Найти контракт (для просмотра)
-	 * @param liability - обязательство
-	 * @return контракт
+	 * РќР°Р№С‚Рё РєРѕРЅС‚СЂР°РєС‚ (РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР°)
+	 * @param liability - РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ
+	 * @return РєРѕРЅС‚СЂР°РєС‚
 	 */
 	DocHead findContract(Liability liability);
 	

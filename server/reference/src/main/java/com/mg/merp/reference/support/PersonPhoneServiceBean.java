@@ -21,7 +21,7 @@ import com.mg.merp.reference.PersonPhoneServiceLocal;
 import com.mg.merp.reference.model.PersonPhone;
 
 /**
- * Бизнес - компонент "Телефоны физических лиц"
+ * Р‘РёР·РЅРµСЃ - РєРѕРјРїРѕРЅРµРЅС‚ "РўРµР»РµС„РѕРЅС‹ С„РёР·РёС‡РµСЃРєРёС… Р»РёС†"
  * 
  * @author leonova
  * @version $Id: PersonPhoneServiceBean.java,v 1.3 2006/08/11 07:31:41 leonova Exp $

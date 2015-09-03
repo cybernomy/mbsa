@@ -48,7 +48,7 @@ import com.mg.merp.core.model.Folder;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Реализация бизнес-компонента "Ведомость начисления амортизации"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РµРґРѕРјРѕСЃС‚СЊ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё"
  * 
  * @author Oleg V. Safonov
  * @author Konstantin S. Alikaev
@@ -83,12 +83,12 @@ public class AmortizationServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 
 	/**
-	 * Создание хоз. операций по партии амортизаций
+	 * РЎРѕР·РґР°РЅРёРµ С…РѕР·. РѕРїРµСЂР°С†РёР№ РїРѕ РїР°СЂС‚РёРё Р°РјРѕСЂС‚РёР·Р°С†РёР№
 	 * 
 	 * @param batch
-	 * 			- служебное поле у амортизации(номер партии)
+	 * 			- СЃР»СѓР¶РµР±РЅРѕРµ РїРѕР»Рµ Сѓ Р°РјРѕСЂС‚РёР·Р°С†РёРё(РЅРѕРјРµСЂ РїР°СЂС‚РёРё)
 	 * @param folder
-	 * 			- папка для создания хоз. операции
+	 * 			- РїР°РїРєР° РґР»СЏ СЃРѕР·РґР°РЅРёСЏ С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 */
 	protected void doCommitAmortization(Integer batch, Folder folder) {
 		OrmTemplate ormTemplate = OrmTemplate.getInstance();
@@ -139,17 +139,17 @@ public class AmortizationServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 
 	/**
-	 * Откат создания хоз. операций по партиям амортизаций
+	 * РћС‚РєР°С‚ СЃРѕР·РґР°РЅРёСЏ С…РѕР·. РѕРїРµСЂР°С†РёР№ РїРѕ РїР°СЂС‚РёСЏРј Р°РјРѕСЂС‚РёР·Р°С†РёР№
 	 * 
 	 * @param batch
-	 * 	    	- служебное поле у амортизации(номер партии)
+	 * 	    	- СЃР»СѓР¶РµР±РЅРѕРµ РїРѕР»Рµ Сѓ Р°РјРѕСЂС‚РёР·Р°С†РёРё(РЅРѕРјРµСЂ РїР°СЂС‚РёРё)
 	 */
 	protected void doRollbackAmortization(Integer batch) {
 		OrmTemplate.getInstance().bulkUpdateByNamedQuery("Account.Amortization.rollbackAmortization", "batch", batch);
 	}
 	
 	/**
-	 * Возвращает бизнес-компонент "Спецификация хоз. операции"
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ С…РѕР·. РѕРїРµСЂР°С†РёРё"
 	 * 
 	 * @return
 	 */
@@ -160,7 +160,7 @@ public class AmortizationServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 	
 	/**
-	 * Возвращает бизнес-компонент "История инвентраной карточки"
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РСЃС‚РѕСЂРёСЏ РёРЅРІРµРЅС‚СЂР°РЅРѕР№ РєР°СЂС‚РѕС‡РєРё"
 	 * 
 	 * @return
 	 */
@@ -171,7 +171,7 @@ public class AmortizationServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 	
 	/**
-	 * Возвращет бизнес-компонент "Хоз. операция"
+	 * Р’РѕР·РІСЂР°С‰РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РҐРѕР·. РѕРїРµСЂР°С†РёСЏ"
 	 *  
 	 * @return
 	 */
@@ -182,16 +182,16 @@ public class AmortizationServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 	
 	/**
-	 * Создание хоз. операции
+	 * РЎРѕР·РґР°РЅРёРµ С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 *  
 	 * @param keepDate
-	 * 				- дата хоз. операции
+	 * 				- РґР°С‚Р° С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * @param from
-	 * 				- контрагент "От кого"
+	 * 				- РєРѕРЅС‚СЂР°РіРµРЅС‚ "РћС‚ РєРѕРіРѕ"
 	 * @param folder
-	 * 				- папка хоз. операции
+	 * 				- РїР°РїРєР° С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * @return
-	 * 				- созданную хоз. операцию
+	 * 				- СЃРѕР·РґР°РЅРЅСѓСЋ С…РѕР·. РѕРїРµСЂР°С†РёСЋ
 	 */
 	protected EconomicOper createEconomicOper(Date keepDate, Contractor from, Folder folder) {
 		EconomicOper economicOper = getOperationService().initialize();
@@ -204,14 +204,14 @@ public class AmortizationServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 	
 	/**
-	 * Создание проводки хоз. операции
+	 * РЎРѕР·РґР°РЅРёРµ РїСЂРѕРІРѕРґРєРё С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * 
 	 * @param eo
-	 * 			- хоз. операция
+	 * 			- С…РѕР·. РѕРїРµСЂР°С†РёСЏ
 	 * @param inventory
-	 * 			- данные по видам учета
+	 * 			- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * @param summaNat
-	 * 			- сумма устанавливаемая в проводке
+	 * 			- СЃСѓРјРјР° СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРјР°СЏ РІ РїСЂРѕРІРѕРґРєРµ
 	 * @return
 	 */
 	protected EconomicSpec createEconomicSpec(EconomicOper eo, Inventory inventory, BigDecimal summaNat) {
@@ -238,14 +238,14 @@ public class AmortizationServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 	
 	/**
-	 * Изменение данных по видам учета
+	 * РР·РјРµРЅРµРЅРёРµ РґР°РЅРЅС‹С… РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * 
 	 * @param inventory
-	 * 				- данные по видам учета
+	 * 				- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * @param sumTotal
-	 * 				- сумма 
+	 * 				- СЃСѓРјРјР° 
 	 * @param amortDate
-	 * 				- дата начисление амортизации
+	 * 				- РґР°С‚Р° РЅР°С‡РёСЃР»РµРЅРёРµ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * @return
 	 */
 	private Inventory adjustInventory(Inventory inventory, BigDecimal sumTotal, Date amortDate) {
@@ -257,20 +257,20 @@ public class AmortizationServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 	
 	/**
-	 * Создание истории действия, произведенных над инвентарной карточкой
+	 * РЎРѕР·РґР°РЅРёРµ РёСЃС‚РѕСЂРёРё РґРµР№СЃС‚РІРёСЏ, РїСЂРѕРёР·РІРµРґРµРЅРЅС‹С… РЅР°Рґ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРѕР№
 	 * 
 	 * @param inventory
-	 * 				- данные по видам учета
+	 * 				- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * @param amortization
-	 * 				- ведомость начисления амортизации
+	 * 				- РІРµРґРѕРјРѕСЃС‚СЊ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * @param eo
-	 * 				- хоз. операция
+	 * 				- С…РѕР·. РѕРїРµСЂР°С†РёСЏ
 	 * @param es
-	 * 				- проводка хоз. операции
+	 * 				- РїСЂРѕРІРѕРґРєР° С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * @param deprVal
-	 * 				- изменение остаточной стоимости, при переоценке - изменение начисленной амортизации
+	 * 				- РёР·РјРµРЅРµРЅРёРµ РѕСЃС‚Р°С‚РѕС‡РЅРѕР№ СЃС‚РѕРёРјРѕСЃС‚Рё, РїСЂРё РїРµСЂРµРѕС†РµРЅРєРµ - РёР·РјРµРЅРµРЅРёРµ РЅР°С‡РёСЃР»РµРЅРЅРѕР№ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * @param actDate
-	 * 				- дата произведенного действия
+	 * 				- РґР°С‚Р° РїСЂРѕРёР·РІРµРґРµРЅРЅРѕРіРѕ РґРµР№СЃС‚РІРёСЏ
 	 */
 	private void createInvHistory(Inventory inventory, Amortization amortization, EconomicOper eo, EconomicSpec es, BigDecimal deprVal, Date actDate) {
 		InvHistory invHistory = getInvHistoryService().initialize();
@@ -285,12 +285,12 @@ public class AmortizationServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 	
 	/**
-	 * По месяцу начисления амортизации в абсолютном исчислении возвращает дату начисления амортизации
+	 * РџРѕ РјРµСЃСЏС†Сѓ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ Р°Р±СЃРѕР»СЋС‚РЅРѕРј РёСЃС‡РёСЃР»РµРЅРёРё РІРѕР·РІСЂР°С‰Р°РµС‚ РґР°С‚Сѓ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * 
 	 * @param months
-	 * 			- месяц начисления амортизации в абсолютном исчислении (год*12 + месяц) 
+	 * 			- РјРµСЃСЏС† РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ Р°Р±СЃРѕР»СЋС‚РЅРѕРј РёСЃС‡РёСЃР»РµРЅРёРё (РіРѕРґ*12 + РјРµСЃСЏС†) 
 	 * @return
-	 * 			- дату начисления амортизации
+	 * 			- РґР°С‚Сѓ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 */
 	private Date getCalcDate(Short months) {
 		int calcYear = months / 12;
@@ -304,12 +304,12 @@ public class AmortizationServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 
 	/**
-	 * По месяцу и году возвращет количество дней в месяце
+	 * РџРѕ РјРµСЃСЏС†Сѓ Рё РіРѕРґСѓ РІРѕР·РІСЂР°С‰РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№ РІ РјРµСЃСЏС†Рµ
 	 * 
 	 * @param month
-	 * 			- номер месяца
+	 * 			- РЅРѕРјРµСЂ РјРµСЃСЏС†Р°
 	 * @param year
-	 * 			- год
+	 * 			- РіРѕРґ
 	 * @return
 	 */
 	private int DaysPerMonth(int month, int year) {
@@ -320,12 +320,12 @@ public class AmortizationServiceBean extends com.mg.framework.generic.AbstractPO
 	private class AmortItems {
 		
 		/**
-		 * месяц начисления амортизации в абсолютном исчислении (год*12 + месяц) 
+		 * РјРµСЃСЏС† РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ Р°Р±СЃРѕР»СЋС‚РЅРѕРј РёСЃС‡РёСЃР»РµРЅРёРё (РіРѕРґ*12 + РјРµСЃСЏС†) 
 		 */
 		private Short iMonth;
 		
 		/**
-		 * материально-ответственное лицо
+		 * РјР°С‚РµСЂРёР°Р»СЊРЅРѕ-РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕРµ Р»РёС†Рѕ
 		 */
 		private Contractor contractor;
 

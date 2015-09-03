@@ -20,7 +20,7 @@ import com.mg.merp.table.model.ScheduleHead;
 import com.mg.merp.table.model.ScheduleSpec;
 
 /**
- * Бизнес-компонент "Спецификация графика работ в табельном учете"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РіСЂР°С„РёРєР° СЂР°Р±РѕС‚ РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -29,14 +29,14 @@ import com.mg.merp.table.model.ScheduleSpec;
 public interface ScheduleSpecServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ScheduleSpec, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/table/ScheduleSpec"; //$NON-NLS-1$
 
 	/**
-	 * Загрузить спецификацию
-	 * @param scheduleHead - заголовок
-	 * @return спецификация
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ
+	 * @param scheduleHead - Р·Р°РіРѕР»РѕРІРѕРє
+	 * @return СЃРїРµС†РёС„РёРєР°С†РёСЏ
 	 */
 	List<ScheduleSpec> loadSpecs(ScheduleHead scheduleHead);
 

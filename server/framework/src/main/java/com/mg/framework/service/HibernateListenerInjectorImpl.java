@@ -52,7 +52,7 @@ import com.mg.framework.support.LocalDataTransferObject;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Реализация "слушателя" событий Hibernate
+ * Р РµР°Р»РёР·Р°С†РёСЏ "СЃР»СѓС€Р°С‚РµР»СЏ" СЃРѕР±С‹С‚РёР№ Hibernate
  * 
  * @author Oleg V. Safonov
  * @version $Id: HibernateListenerInjectorImpl.java,v 1.10 2008/10/09 13:27:41 safonov Exp $
@@ -87,7 +87,7 @@ public class HibernateListenerInjectorImpl implements ListenerInjector {
 			String name = propertyNames[i];
 			
 			Type type = entityPersister.getPropertyType(name);
-			//не обрабатываем сущности и коллекции, т.к. их нельзя менять в перехватчиках
+			//РЅРµ РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј СЃСѓС‰РЅРѕСЃС‚Рё Рё РєРѕР»Р»РµРєС†РёРё, С‚.Рє. РёС… РЅРµР»СЊР·СЏ РјРµРЅСЏС‚СЊ РІ РїРµСЂРµС…РІР°С‚С‡РёРєР°С…
 			if (type.isCollectionType() || type.isEntityType())
 				continue;
 			
@@ -247,7 +247,7 @@ public class HibernateListenerInjectorImpl implements ListenerInjector {
 			HibernateMBean service = (HibernateMBean) MBeanProxyExt.create(HibernateMBean.class, objectName);
 			String dialect = service.getDialect();
 			Class<?> dialectClass = ServerUtils.loadClass(dialect);
-			//установка патча производится только для Firebird и Interbase
+			//СѓСЃС‚Р°РЅРѕРІРєР° РїР°С‚С‡Р° РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ С‚РѕР»СЊРєРѕ РґР»СЏ Firebird Рё Interbase
 			if (org.hibernate.dialect.InterbaseDialect.class.isAssignableFrom(dialectClass)) {
 				File workaround = new File(ServerConfigLocator.locate().getServerHomeDir().getAbsolutePath().concat("/mg-custom/patches/workaround_MBSA-4866.hbm.xml"));
 				configuration.addFile(workaround);

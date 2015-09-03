@@ -24,7 +24,7 @@ import com.mg.merp.crm.BranchServiceLocal;
 import com.mg.merp.crm.model.Branch;
 
 /**
- * Бизнес-компонент "Отрасли" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћС‚СЂР°СЃР»Рё" 
  * 
  * @author leonova
  * @version $Id: BranchServiceBean.java,v 1.4 2006/10/12 05:39:42 leonova Exp $

@@ -21,7 +21,7 @@ import com.mg.framework.generic.ui.DefaultDialog;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Контроллер диалога "Исполнить обязательство"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "РСЃРїРѕР»РЅРёС‚СЊ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ExecutionDlg.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $

@@ -29,7 +29,7 @@ import com.mg.merp.manufacture.model.Job;
 import com.mg.merp.manufacture.model.ScrapDocumentHead;
 
 /**
- * Бизнес-компонент "Спецификация актов на списание потерь с операции 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ СЃ РѕРїРµСЂР°С†РёРё 
  * 
  * @author leonova
  * @version $Id: ScrapProductSpecServiceBean.java,v 1.7 2007/08/16 14:07:08 safonov Exp $
@@ -61,7 +61,7 @@ public class ScrapProductSpecServiceBean extends ManufactureDocumentSpecServiceB
 	 */
 	@PermitAll
 	public void createSpecifications(ScrapDocumentHead docHead) {
-		//проверим права на методо "создать", не имеет смысла создавать дополнительный метод
+		//РїСЂРѕРІРµСЂРёРј РїСЂР°РІР° РЅР° РјРµС‚РѕРґРѕ "СЃРѕР·РґР°С‚СЊ", РЅРµ РёРјРµРµС‚ СЃРјС‹СЃР»Р° СЃРѕР·РґР°РІР°С‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ РјРµС‚РѕРґ
 		SecurityUtils.checkPermission(new BusinessMethodPermission(getBusinessServiceMetadata().getName(), BusinessMethodPermission.CREATE_METHOD));
 		
 		if (docHead.getDetectJob() == null)

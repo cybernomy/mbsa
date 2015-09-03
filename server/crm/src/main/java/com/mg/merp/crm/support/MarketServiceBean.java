@@ -25,7 +25,7 @@ import com.mg.merp.crm.MarketServiceLocal;
 import com.mg.merp.crm.model.Market;
 
 /**
- * Бизнес-компонент "Рынки" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р С‹РЅРєРё" 
  * 
  * @author leonova
  * @version $Id: MarketServiceBean.java,v 1.6 2006/10/13 12:08:10 leonova Exp $

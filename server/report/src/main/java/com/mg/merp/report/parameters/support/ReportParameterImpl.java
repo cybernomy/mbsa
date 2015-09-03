@@ -51,7 +51,7 @@ import com.mg.merp.report.support.RptEngineImpl;
 public class ReportParameterImpl implements ReportParameter {
 	private static Logger logger = ServerUtils.getLogger(ReportParameterImpl.class);
 	/**
-	 * Параметр
+	 * РџР°СЂР°РјРµС‚СЂ
 	 */
 	private IScalarParameterDefn param;
 
@@ -230,7 +230,7 @@ public class ReportParameterImpl implements ReportParameter {
 					String entityName;
 					int valueIdx = entityDesc.indexOf("#");
 					if (valueIdx != -1) {
-						//есть значение
+						//РµСЃС‚СЊ Р·РЅР°С‡РµРЅРёРµ
 						entityName = entityDesc.substring(0, valueIdx);
 						ClassMetadata classMetadata = ((Session) ServerUtils.getPersistentManager().getDelegate()).getSessionFactory().getClassMetadata(entityName);
 						if (classMetadata == null)
@@ -251,7 +251,7 @@ public class ReportParameterImpl implements ReportParameter {
 					if(dataItem != null) {
 						entityPropertyText = dataItem.getEntityPropertyText();
 						entityPropertyTextFormat = dataItem.getEntityTextFormat();
-						// если не установлен, то пытаемся взять из описателя сущности
+						// РµСЃР»Рё РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ, С‚Рѕ РїС‹С‚Р°РµРјСЃСЏ РІР·СЏС‚СЊ РёР· РѕРїРёСЃР°С‚РµР»СЏ СЃСѓС‰РЅРѕСЃС‚Рё
 						if(searchHelpName == null) 
 							searchHelpName = dataItem.getSearchHelpName();
 					}
@@ -267,9 +267,9 @@ public class ReportParameterImpl implements ReportParameter {
 	}
 	
 	/**
-	 * Получить элемент данных по имени сущности
-	 * @param entityName - наименование сущности
-	 * @return элемент данных или <code>null</code> если не найден
+	 * РџРѕР»СѓС‡РёС‚СЊ СЌР»РµРјРµРЅС‚ РґР°РЅРЅС‹С… РїРѕ РёРјРµРЅРё СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @param entityName - РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @return СЌР»РµРјРµРЅС‚ РґР°РЅРЅС‹С… РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	private DataItem getFieldDataItem(String entityName) {
 		ReflectionMetadata reflectionMetadata = null;
@@ -336,8 +336,8 @@ public class ReportParameterImpl implements ReportParameter {
 		if (param.getSelectionListType() == IScalarParameterDefn.SELECTION_LIST_NONE)
 			return new ArrayList<SelectionChoice>();
 		if (cascade()) {
-			//для каскадных параметров готовим значения параметров из его же группы
-			//но которые выше по иерархии
+			//РґР»СЏ РєР°СЃРєР°РґРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ РіРѕС‚РѕРІРёРј Р·РЅР°С‡РµРЅРёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ РёР· РµРіРѕ Р¶Рµ РіСЂСѓРїРїС‹
+			//РЅРѕ РєРѕС‚РѕСЂС‹Рµ РІС‹С€Рµ РїРѕ РёРµСЂР°СЂС…РёРё
 			List<ReportParameter> params = rptEngine.findGroupReportParameters(groupName());
 			int length = params.indexOf(this);
 			Object[] groupKeys = new Object[length];
@@ -407,7 +407,7 @@ public class ReportParameterImpl implements ReportParameter {
 	 * @see com.mg.merp.report.parameters.ReportParameter#indexInGroup()
 	 */
 	public int indexInGroup() {
-		//загрузим параметры из своей группы
+		//Р·Р°РіСЂСѓР·РёРј РїР°СЂР°РјРµС‚СЂС‹ РёР· СЃРІРѕРµР№ РіСЂСѓРїРїС‹
 		List<ReportParameter> groupParams = rptEngine.findGroupReportParameters(groupName());
 		return groupParams.indexOf(this);
 	}

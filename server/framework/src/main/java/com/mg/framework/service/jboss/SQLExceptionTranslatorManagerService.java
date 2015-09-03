@@ -24,7 +24,7 @@ import com.mg.framework.api.jdbc.SQLExceptionTranslatorManager;
 import com.mg.framework.service.SQLExceptionTranslatorManagerImpl;
 
 /**
- * Реализация сервиса менеджера трансляторов SQL ИС в пользовательские исключения
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РјРµРЅРµРґР¶РµСЂР° С‚СЂР°РЅСЃР»СЏС‚РѕСЂРѕРІ SQL РРЎ РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РёСЃРєР»СЋС‡РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: SQLExceptionTranslatorManagerService.java,v 1.1 2006/11/17 14:31:44 safonov Exp $

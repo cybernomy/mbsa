@@ -27,7 +27,7 @@ import com.mg.merp.core.support.CoreUtils;
 import com.mg.merp.manufacture.ScrapMaterialHeadServiceLocal;
 
 /**
- * Контроллер формы списка актов на списание потерь материалов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РјР°С‚РµСЂРёР°Р»РѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: ScrapMaterialHeadBr.java,v 1.10 2009/02/10 14:34:19 safonov Exp $

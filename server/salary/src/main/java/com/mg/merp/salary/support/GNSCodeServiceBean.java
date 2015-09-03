@@ -24,7 +24,7 @@ import com.mg.merp.salary.GNSCodeServiceLocal;
 import com.mg.merp.salary.model.GnsCode;
 
 /**
- * Бизнес-компонент "Коды МНС" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљРѕРґС‹ РњРќРЎ" 
  * 
  * @author leonova
  * @version $Id: GNSCodeServiceBean.java,v 1.3 2006/08/31 11:37:58 leonova Exp $

@@ -21,7 +21,7 @@ import com.mg.framework.service.ApplicationDictionaryLocator;
 import com.mg.framework.utils.SecurityUtils;
 
 /**
- * Обработчик показа монитора сессий для главного меню
+ * РћР±СЂР°Р±РѕС‚С‡РёРє РїРѕРєР°Р·Р° РјРѕРЅРёС‚РѕСЂР° СЃРµСЃСЃРёР№ РґР»СЏ РіР»Р°РІРЅРѕРіРѕ РјРµРЅСЋ
  * 
  * @author Oleg V. Safonov
  * @version $Id: MonitorUserSessionMenuCommand.java,v 1.1 2008/07/14 14:24:27 safonov Exp $

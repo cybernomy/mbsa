@@ -19,7 +19,7 @@ import com.mg.merp.manufacture.ScrapSpecificationServiceLocal;
 import com.mg.merp.manufacture.model.ScrapDocumentHead;
 
 /**
- * Базовая реализация формы поддержки документов на списание потерь
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РґРѕРєСѓРјРµРЅС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ScrapHeadMt.java,v 1.1 2007/08/06 12:45:50 safonov Exp $

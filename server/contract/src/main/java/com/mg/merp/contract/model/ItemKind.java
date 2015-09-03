@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Виды пунктов 
+ * Р’РёРґС‹ РїСѓРЅРєС‚РѕРІ 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -27,25 +27,25 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Contract.Item.ItemKind") //$NON-NLS-1$
 public enum ItemKind {
 	/**
-	 * Сумма платежей контрагенту
+	 * РЎСѓРјРјР° РїР»Р°С‚РµР¶РµР№ РєРѕРЅС‚СЂР°РіРµРЅС‚Сѓ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.contract.resources.dataitemlabels#Contract.Kind.Shipped") //$NON-NLS-1$
 	SHIPPED,
 
 	/**
-	 * Сумма платежей от контрагента
+	 * РЎСѓРјРјР° РїР»Р°С‚РµР¶РµР№ РѕС‚ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.contract.resources.dataitemlabels#Contract.Kind.Receive") //$NON-NLS-1$
 	RECEIVE,
 
 	/**
-	 * Сумма ТМЦ и услуг контрагенту
+	 * РЎСѓРјРјР° РўРњР¦ Рё СѓСЃР»СѓРі РєРѕРЅС‚СЂР°РіРµРЅС‚Сѓ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.contract.resources.dataitemlabels#Contract.Kind.ShippedGood") //$NON-NLS-1$
 	SHIPPEDGOOD,
 
 	/**
-	 * Сумма ТМЦ и услуг от контрагента
+	 * РЎСѓРјРјР° РўРњР¦ Рё СѓСЃР»СѓРі РѕС‚ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.contract.resources.dataitemlabels#Contract.Kind.ReceiveGood") //$NON-NLS-1$
 	RECEIVEGOOD	

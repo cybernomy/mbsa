@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип образования
+ * РўРёРї РѕР±СЂР°Р·РѕРІР°РЅРёСЏ
  * 
  * @author leonova
  * @version $Id: PrefIsAdditionalEducation.java,v 1.1 2006/04/13 10:23:53 safonov Exp $
@@ -26,13 +26,13 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("PersonnelRef.Personnel.PrefIsAdditionalEducation")
 public enum PrefIsAdditionalEducation {
 	/**
-	 * Основное
+	 * РћСЃРЅРѕРІРЅРѕРµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#PrefIsAdditionalEducation.Base")
 	BASE,
 
 	/**
-	 * Послевузовское
+	 * РџРѕСЃР»РµРІСѓР·РѕРІСЃРєРѕРµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#PrefIsAdditionalEducation.Grad")
 	GRAD

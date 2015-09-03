@@ -31,7 +31,7 @@ import com.mg.merp.planning.model.MrpVersionControl;
 import com.mg.merp.planning.support.Messages;
 
 /**
- * Контроллер формы итогов расчета ППМ
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РёС‚РѕРіРѕРІ СЂР°СЃС‡РµС‚Р° РџРџРњ
  * 
  * @author Oleg V. Safonov
  * @author leonova
@@ -116,9 +116,9 @@ public class MRPReportBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Показать форму итогов расчета ППМ
+	 * РџРѕРєР°Р·Р°С‚СЊ С„РѕСЂРјСѓ РёС‚РѕРіРѕРІ СЂР°СЃС‡РµС‚Р° РџРџРњ
 	 * 
-	 * @param mrpId	версия ППМ
+	 * @param mrpId	РІРµСЂСЃРёСЏ РџРџРњ
 	 */
 	public void execute(Serializable mrpId) {
 		this.mrpId = (Integer) mrpId;

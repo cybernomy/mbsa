@@ -22,7 +22,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер формы условий отбора логистических маршрутов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° Р»РѕРіРёСЃС‚РёС‡РµСЃРєРёС… РјР°СЂС€СЂСѓС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: RouteRest.java,v 1.2 2006/09/04 05:51:49 leonova Exp $ 

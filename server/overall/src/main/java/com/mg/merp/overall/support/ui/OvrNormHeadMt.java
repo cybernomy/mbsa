@@ -29,7 +29,7 @@ import com.mg.merp.overall.NormSpecServiceLocal;
 import com.mg.merp.overall.model.CatalogGroupsType;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Лицевые карточки сотрудников" 
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р›РёС†РµРІС‹Рµ РєР°СЂС‚РѕС‡РєРё СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ" 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

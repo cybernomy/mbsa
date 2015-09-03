@@ -17,7 +17,7 @@ package com.mg.merp.mfreference.support.ui;
 import com.mg.merp.warehouse.OrderHeadSupServiceLocal;
 
 /**
- * Поисковик "Образцов актов заказа поставщику"
+ * РџРѕРёСЃРєРѕРІРёРє "РћР±СЂР°Р·С†РѕРІ Р°РєС‚РѕРІ Р·Р°РєР°Р·Р° РїРѕСЃС‚Р°РІС‰РёРєСѓ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: OrderModelSearchHelp.java,v 1.1 2007/01/13 13:23:13 sharapov Exp $

@@ -19,7 +19,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.framework.api.report.RptEngine;
 
 /**
- * Локатор сервиса платформы MBIRT (Millennium BI and Report Tools)
+ * Р›РѕРєР°С‚РѕСЂ СЃРµСЂРІРёСЃР° РїР»Р°С‚С„РѕСЂРјС‹ MBIRT (Millennium BI and Report Tools)
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -29,10 +29,10 @@ public class RptEngineLocator {
     private static volatile RptEngine instance = null;
 
     /**
-     * поиск сервиса платформы MBIRT (Millennium BI and Report Tools)
+     * РїРѕРёСЃРє СЃРµСЂРІРёСЃР° РїР»Р°С‚С„РѕСЂРјС‹ MBIRT (Millennium BI and Report Tools)
      * 
-     * @return	сервис
-     * @throws	ApplicationException	при любых ошибках
+     * @return	СЃРµСЂРІРёСЃ
+     * @throws	ApplicationException	РїСЂРё Р»СЋР±С‹С… РѕС€РёР±РєР°С…
      */
     public static RptEngine locate() throws ApplicationException {
         if (instance == null)

@@ -36,8 +36,8 @@ public class PeriodItemRM implements RowMapper<PeriodItem>
 		{
 			dateto = rs.getDate("dateto");
 		}catch(Exception ex){dateto = null;}
-		//вставлена проверка, т.к. этот RowMapper используется и 
-		//в выборке, возвращающей только dateto
+		//РІСЃС‚Р°РІР»РµРЅР° РїСЂРѕРІРµСЂРєР°, С‚.Рє. СЌС‚РѕС‚ RowMapper РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ Рё 
+		//РІ РІС‹Р±РѕСЂРєРµ, РІРѕР·РІСЂР°С‰Р°СЋС‰РµР№ С‚РѕР»СЊРєРѕ dateto
 		
 		return new PeriodItem(id , rs.getDate("datefrom"), dateto);
 	}

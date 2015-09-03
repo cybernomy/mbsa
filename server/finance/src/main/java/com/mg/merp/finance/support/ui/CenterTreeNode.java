@@ -57,7 +57,7 @@ public class CenterTreeNode extends EntityTreeNode {
 		CenterTreeNode root = null;
 		Map<Integer, CenterTreeNode> nodeMap = new HashMap<Integer, CenterTreeNode>();
 		for (Center folder : folders) {
-			if (folder.getParent() == null || folder.getParent() == 0) { //проверим на 0, т.к. в некоторых базах корневой parent не null
+			if (folder.getParent() == null || folder.getParent() == 0) { //РїСЂРѕРІРµСЂРёРј РЅР° 0, С‚.Рє. РІ РЅРµРєРѕС‚РѕСЂС‹С… Р±Р°Р·Р°С… РєРѕСЂРЅРµРІРѕР№ parent РЅРµ null
 				root = new CenterTreeNode(null, folder);
 				nodeMap.put(folder.getId(), root);
 			}

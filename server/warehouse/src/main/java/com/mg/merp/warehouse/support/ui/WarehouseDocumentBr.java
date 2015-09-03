@@ -18,7 +18,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.document.generic.ui.GoodsDocumentBrowseForm;
 
 /**
- * Контроллер формы списка ордеров
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕСЂРґРµСЂРѕРІ
  * 
  * @author leonova
  * @version $Id: WarehouseDocumentBr.java,v 1.7 2008/02/22 11:08:33 alikaev Exp $ 

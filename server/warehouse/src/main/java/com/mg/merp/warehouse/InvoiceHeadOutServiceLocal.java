@@ -17,7 +17,7 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.InvoiceHead;
 
 /**
- * Бизнес-компонент "Исходящие-накладные"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РСЃС…РѕРґСЏС‰РёРµ-РЅР°РєР»Р°РґРЅС‹Рµ"
  * 
  * @author leonova
  * @version $Id: InvoiceHeadOutServiceLocal.java,v 1.4 2007/09/07 12:23:15 safonov Exp $
@@ -26,12 +26,12 @@ public interface InvoiceHeadOutServiceLocal	extends
 		com.mg.merp.document.GoodsDocument<InvoiceHead, Integer, InvoiceHeadModelOutServiceLocal, InvoiceSpecOutServiceLocal>, DiscountDocument {
 
 	/**
-	 * тип папки для исходящих накладных
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РёСЃС…РѕРґСЏС‰РёС… РЅР°РєР»Р°РґРЅС‹С…
 	 */
 	final static short FOLDER_PART = 46;
 
 	/**
-	 * docsection для исходящих накладных
+	 * docsection РґР»СЏ РёСЃС…РѕРґСЏС‰РёС… РЅР°РєР»Р°РґРЅС‹С…
 	 */
 	final static short DOCSECTION = 24;	
 

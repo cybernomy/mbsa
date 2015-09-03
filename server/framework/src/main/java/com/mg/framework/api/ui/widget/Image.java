@@ -19,7 +19,7 @@ import java.net.URL;
 import com.mg.framework.api.ui.Widget;
 
 /**
- * Элемент "Изображение", предназначен для отображения форматов PNG, JPG
+ * Р­Р»РµРјРµРЅС‚ "РР·РѕР±СЂР°Р¶РµРЅРёРµ", РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјР°С‚РѕРІ PNG, JPG
  * 
  * @author Oleg V. Safonov
  * @version $Id: Image.java,v 1.1 2007/05/28 13:40:21 safonov Exp $
@@ -27,16 +27,16 @@ import com.mg.framework.api.ui.Widget;
 public interface Image extends Widget {
 
 	/**
-	 * установить изображение
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РёР·РѕР±СЂР°Р¶РµРЅРёРµ
 	 * 
-	 * @param data	изображение
+	 * @param data	РёР·РѕР±СЂР°Р¶РµРЅРёРµ
 	 */
 	void setData(byte[] data);
 	
 	/**
-	 * показать изображение из указанного расположения
+	 * РїРѕРєР°Р·Р°С‚СЊ РёР·РѕР±СЂР°Р¶РµРЅРёРµ РёР· СѓРєР°Р·Р°РЅРЅРѕРіРѕ СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ
 	 * 
-	 * @param location	расположение изображения
+	 * @param location	СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РёР·РѕР±СЂР°Р¶РµРЅРёСЏ
 	 */
 	void setLocation(URL location);
 	

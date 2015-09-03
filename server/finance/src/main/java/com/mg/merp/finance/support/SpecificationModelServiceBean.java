@@ -23,7 +23,7 @@ import com.mg.merp.finance.model.OperationModel;
 import com.mg.merp.finance.model.SpecificationModel;
 
 /**
- * Бизнес-компонент "Спецификация образцов финансовых операций" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РѕР±СЂР°Р·С†РѕРІ С„РёРЅР°РЅСЃРѕРІС‹С… РѕРїРµСЂР°С†РёР№" 
  * 
  * @author leonova
  * @version $Id: SpecificationModelServiceBean.java,v 1.4 2007/10/08 14:30:23 safonov Exp $

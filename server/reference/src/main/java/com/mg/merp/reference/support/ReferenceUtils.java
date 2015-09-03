@@ -25,7 +25,7 @@ import com.mg.merp.core.model.Folder;
 import com.mg.merp.reference.support.ui.FolderTreeNode;
 
 /**
- * Утилиты модуля "Справочники"
+ * РЈС‚РёР»РёС‚С‹ РјРѕРґСѓР»СЏ "РЎРїСЂР°РІРѕС‡РЅРёРєРё"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ReferenceUtils.java,v 1.8 2007/11/08 16:34:45 safonov Exp $
@@ -33,11 +33,11 @@ import com.mg.merp.reference.support.ui.FolderTreeNode;
 public class ReferenceUtils {
 	
 	/**
-	 * загрузка иерархической структуры папок, используется для установки модели дерева
-	 * в иерархических браузерах
+	 * Р·Р°РіСЂСѓР·РєР° РёРµСЂР°СЂС…РёС‡РµСЃРєРѕР№ СЃС‚СЂСѓРєС‚СѓСЂС‹ РїР°РїРѕРє, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё РјРѕРґРµР»Рё РґРµСЂРµРІР°
+	 * РІ РёРµСЂР°СЂС…РёС‡РµСЃРєРёС… Р±СЂР°СѓР·РµСЂР°С…
 	 * 
-	 * @param folderType	тип папки
-	 * @return	иерархическая структура
+	 * @param folderType	С‚РёРї РїР°РїРєРё
+	 * @return	РёРµСЂР°СЂС…РёС‡РµСЃРєР°СЏ СЃС‚СЂСѓРєС‚СѓСЂР°
 	 * @deprecated use {@link com.mg.merp.core.support.CoreUtils#loadFolderHierarchy(short)} instead
 	 */
 	@Deprecated

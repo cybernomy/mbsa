@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.Container;
 import com.mg.framework.api.ui.Widget;
 
 /**
- * Элемент "Панель прокрутки"
+ * Р­Р»РµРјРµРЅС‚ "РџР°РЅРµР»СЊ РїСЂРѕРєСЂСѓС‚РєРё"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ScrollPane.java,v 1.2 2006/11/21 15:34:06 safonov Exp $
@@ -26,14 +26,14 @@ import com.mg.framework.api.ui.Widget;
 public interface ScrollPane extends Container {
 
 	/**
-	 * атрибут признак наличия прокрутки, имеет тип <code>Boolean</code>
+	 * Р°С‚СЂРёР±СѓС‚ РїСЂРёР·РЅР°Рє РЅР°Р»РёС‡РёСЏ РїСЂРѕРєСЂСѓС‚РєРё, РёРјРµРµС‚ С‚РёРї <code>Boolean</code>
 	 */
 	final static String SCROLL = "scroll";
 	
 	/**
-	 * установка элемента у которого будет включена прокрутка
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЌР»РµРјРµРЅС‚Р° Сѓ РєРѕС‚РѕСЂРѕРіРѕ Р±СѓРґРµС‚ РІРєР»СЋС‡РµРЅР° РїСЂРѕРєСЂСѓС‚РєР°
 	 * 
-	 * @param viewPortView	элемент
+	 * @param viewPortView	СЌР»РµРјРµРЅС‚
 	 */
 	public void setViewPortView(Widget viewPortView);
 	

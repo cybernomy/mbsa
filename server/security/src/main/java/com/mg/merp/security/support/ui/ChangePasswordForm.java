@@ -22,7 +22,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.security.support.Messages;
 
 /**
- * Форма изменения пароля пользователя
+ * Р¤РѕСЂРјР° РёР·РјРµРЅРµРЅРёСЏ РїР°СЂРѕР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ChangePasswordForm.java,v 1.2 2007/09/15 07:04:24 alikaev Exp $

@@ -24,7 +24,7 @@ import com.mg.merp.discount.model.ExtraDiscount;
 import com.mg.merp.security.model.SecUser;
 
 /**
- * Реализация бизнес-компонента "Дополнительные скидки дисконтной карты" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СЃРєРёРґРєРё РґРёСЃРєРѕРЅС‚РЅРѕР№ РєР°СЂС‚С‹" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -50,8 +50,8 @@ public class ExtraDiscountServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 	
 	/**
-	 * Установить текущего пользователя системы
-	 * @param extraDiscount - доп. скидка 
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ С‚РµРєСѓС‰РµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ СЃРёСЃС‚РµРјС‹
+	 * @param extraDiscount - РґРѕРї. СЃРєРёРґРєР° 
 	 */
 	protected void adjustUser(ExtraDiscount extraDiscount) {
 		extraDiscount.setUser(ServerUtils.getPersistentManager().find(SecUser.class, ServerUtils.getUserProfile().getIdentificator()));		

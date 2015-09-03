@@ -21,8 +21,8 @@ import com.mg.merp.reference.model.PriceListHead;
 import com.mg.merp.reference.model.PriceType;
 
 /**
- * Форма подбора спецификаций для документов, данный интерфейс должны реализовывать контроллеры
- * форм подбора
+ * Р¤РѕСЂРјР° РїРѕРґР±РѕСЂР° СЃРїРµС†РёС„РёРєР°С†РёР№ РґР»СЏ РґРѕРєСѓРјРµРЅС‚РѕРІ, РґР°РЅРЅС‹Р№ РёРЅС‚РµСЂС„РµР№СЃ РґРѕР»Р¶РЅС‹ СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ РєРѕРЅС‚СЂРѕР»Р»РµСЂС‹
+ * С„РѕСЂРј РїРѕРґР±РѕСЂР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: GoodsSelectionForm.java,v 1.1 2008/03/10 15:42:16 safonov Exp $
@@ -30,21 +30,21 @@ import com.mg.merp.reference.model.PriceType;
 public interface GoodsSelectionForm {
 
 	/**
-	 * запустить форму подбора для документа
+	 * Р·Р°РїСѓСЃС‚РёС‚СЊ С„РѕСЂРјСѓ РїРѕРґР±РѕСЂР° РґР»СЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param listener	слушатель формы
-	 * @param docHead	документ
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ С„РѕСЂРјС‹
+	 * @param docHead	РґРѕРєСѓРјРµРЅС‚
 	 */
 	void execute(GoodsSelectionListener listener, DocHead docHead);
 	
 	/**
-	 * запустить форму подбора
+	 * Р·Р°РїСѓСЃС‚РёС‚СЊ С„РѕСЂРјСѓ РїРѕРґР±РѕСЂР°
 	 * 
-	 * @param listener	слушатель
-	 * @param priceList	прайс-лист
-	 * @param priceType	тип цен
-	 * @param actDate	дата актуальности
-	 * @param title		заголовок формы
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
+	 * @param priceList	РїСЂР°Р№СЃ-Р»РёСЃС‚
+	 * @param priceType	С‚РёРї С†РµРЅ
+	 * @param actDate	РґР°С‚Р° Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё
+	 * @param title		Р·Р°РіРѕР»РѕРІРѕРє С„РѕСЂРјС‹
 	 */
 	void execute(GoodsSelectionListener listener, PriceListHead priceList, PriceType priceType, Date actDate, String title);
 	

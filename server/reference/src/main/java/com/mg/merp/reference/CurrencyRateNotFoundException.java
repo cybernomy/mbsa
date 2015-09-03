@@ -23,7 +23,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.reference.support.Messages;
 
 /**
- * ΘΡ κσπρ βΰλώςϋ νε νΰιδεν
+ * ΠΠ΅ ΠΊΡƒΡ€Ρ Π²Π°Π»ΡΡ‚Ρ‹ Π½Πµ Π½Π°ΠΉΠ΄ΠµΠ½
  * 
  * @author Oleg V. Safonov
  * @version $Id: CurrencyRateNotFoundException.java,v 1.2 2007/03/23 12:58:24 safonov Exp $

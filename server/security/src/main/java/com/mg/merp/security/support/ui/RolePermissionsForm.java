@@ -53,7 +53,7 @@ import com.mg.merp.security.model.MethodAccess;
 import com.mg.merp.security.support.Messages;
 
 /**
- * Форма настройки прав на бизнес-компоненты
+ * Р¤РѕСЂРјР° РЅР°СЃС‚СЂРѕР№РєРё РїСЂР°РІ РЅР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚С‹
  *
  * @author Oleg V. Safonov
  * @version $Id: RolePermissionsForm.java,v 1.4 2009/03/17 09:22:32 safonov Exp $
@@ -253,9 +253,9 @@ public class RolePermissionsForm extends AbstractForm {
 	}
 
 	/**
-	 * запуск формы
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹
 	 *
-	 * @param role	роль
+	 * @param role	СЂРѕР»СЊ
 	 */
 	public void execute(Groups role) {
 		this.role = role;
@@ -265,8 +265,8 @@ public class RolePermissionsForm extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик КМ "Права для всех компонентов модуля"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РљРњ "РџСЂР°РІР° РґР»СЏ РІСЃРµС… РєРѕРјРїРѕРЅРµРЅС‚РѕРІ РјРѕРґСѓР»СЏ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionPermissionForSubsystemBusinessObjects(WidgetEvent event) {
 		final PermissionForSubsystemBusinessObjectsDlg setupPermissionDlg = (PermissionForSubsystemBusinessObjectsDlg) ApplicationDictionaryLocator.locate().getWindow(PermissionForSubsystemBusinessObjectsDlg.FORM_NAME);
@@ -293,7 +293,7 @@ public class RolePermissionsForm extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик события "Закрыть форму"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "Р—Р°РєСЂС‹С‚СЊ С„РѕСЂРјСѓ"
 	 *
 	 * @param event
 	 */

@@ -19,7 +19,7 @@ import java.io.IOException;
 import com.mg.framework.generic.ui.MemoryWebResourceProvider;
 
 /**
- * Универсальный web ресурс в памяти
+ * РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Р№ web СЂРµСЃСѓСЂСЃ РІ РїР°РјСЏС‚Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: UniversalMemoryWebResourceProvider.java,v 1.1 2007/03/19 12:07:30 safonov Exp $
@@ -28,10 +28,10 @@ public class UniversalMemoryWebResourceProvider extends
 		MemoryWebResourceProvider {
 
 	/**
-	 * создание ресурса по расширению файла и содержимому
+	 * СЃРѕР·РґР°РЅРёРµ СЂРµСЃСѓСЂСЃР° РїРѕ СЂР°СЃС€РёСЂРµРЅРёСЋ С„Р°Р№Р»Р° Рё СЃРѕРґРµСЂР¶РёРјРѕРјСѓ
 	 * 
-	 * @param fileNameSuffix	расширение файла
-	 * @param bytes	содержимое
+	 * @param fileNameSuffix	СЂР°СЃС€РёСЂРµРЅРёРµ С„Р°Р№Р»Р°
+	 * @param bytes	СЃРѕРґРµСЂР¶РёРјРѕРµ
 	 */
 	public UniversalMemoryWebResourceProvider(String fileNameSuffix, byte[] bytes) {
 		super(fileNameSuffix);

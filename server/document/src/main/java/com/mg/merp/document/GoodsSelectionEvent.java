@@ -17,7 +17,7 @@ package com.mg.merp.document;
 import java.util.EventObject;
 
 /**
- * Событие о выборе номенклатуры
+ * РЎРѕР±С‹С‚РёРµ Рѕ РІС‹Р±РѕСЂРµ РЅРѕРјРµРЅРєР»Р°С‚СѓСЂС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: GoodsSelectionEvent.java,v 1.1 2006/12/02 12:35:32 safonov Exp $
@@ -26,10 +26,10 @@ public class GoodsSelectionEvent extends EventObject {
 	private CreateSpecificationInfo[] specInfo;
 
 	/**
-	 * создать событие
+	 * СЃРѕР·РґР°С‚СЊ СЃРѕР±С‹С‚РёРµ
 	 * 
-	 * @param source	источник
-	 * @param specInfo	информация о подобранной номенклатуре
+	 * @param source	РёСЃС‚РѕС‡РЅРёРє
+	 * @param specInfo	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РїРѕРґРѕР±СЂР°РЅРЅРѕР№ РЅРѕРјРµРЅРєР»Р°С‚СѓСЂРµ
 	 */
 	public GoodsSelectionEvent(Object source, CreateSpecificationInfo[] specInfo) {
 		super(source);
@@ -37,7 +37,7 @@ public class GoodsSelectionEvent extends EventObject {
 	}
 
 	/**
-	 * получить информацию о подобранной номенклатуре
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РїРѕРґРѕР±СЂР°РЅРЅРѕР№ РЅРѕРјРµРЅРєР»Р°С‚СѓСЂРµ
 	 * 
 	 * @return the specInfo
 	 */

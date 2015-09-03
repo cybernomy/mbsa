@@ -20,68 +20,68 @@ import org.hibernate.event.PostUpdateEvent;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис аудита хранилища данных
+ * РЎРµСЂРІРёСЃ Р°СѓРґРёС‚Р° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: DatabaseAuditServiceMBean.java,v 1.2 2007/11/27 14:48:36 safonov Exp $
  */
 public interface DatabaseAuditServiceMBean extends ServiceMBean {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:service=DatabaseAuditService";
 
 	/**
-	 * отправить событие аудита создания
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕР±С‹С‚РёРµ Р°СѓРґРёС‚Р° СЃРѕР·РґР°РЅРёСЏ
 	 * 
-	 * @param createEvent	событие создания
+	 * @param createEvent	СЃРѕР±С‹С‚РёРµ СЃРѕР·РґР°РЅРёСЏ
 	 */
 	void auditCreate(PostInsertEvent createEvent);
 	
 	/**
-	 *  отправить событие аудита изменения
+	 *  РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕР±С‹С‚РёРµ Р°СѓРґРёС‚Р° РёР·РјРµРЅРµРЅРёСЏ
 	 * 
-	 * @param modifyEvent	событие изменения
+	 * @param modifyEvent	СЃРѕР±С‹С‚РёРµ РёР·РјРµРЅРµРЅРёСЏ
 	 */
 	void auditModify(PostUpdateEvent modifyEvent);
 	
 	/**
-	 *  отправить событие аудита удаления
+	 *  РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕР±С‹С‚РёРµ Р°СѓРґРёС‚Р° СѓРґР°Р»РµРЅРёСЏ
 	 * 
-	 * @param removeEvent	событие удаления
+	 * @param removeEvent	СЃРѕР±С‹С‚РёРµ СѓРґР°Р»РµРЅРёСЏ
 	 */
 	void auditRemove(PostDeleteEvent removeEvent);
 	
 	/**
-	 * применить настройки аудита в текущем сеансе сервера приложения
+	 * РїСЂРёРјРµРЅРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё Р°СѓРґРёС‚Р° РІ С‚РµРєСѓС‰РµРј СЃРµР°РЅСЃРµ СЃРµСЂРІРµСЂР° РїСЂРёР»РѕР¶РµРЅРёСЏ
 	 */
 	void applyAuditSetup();
 
 	/**
-	 * признак активации аудита
+	 * РїСЂРёР·РЅР°Рє Р°РєС‚РёРІР°С†РёРё Р°СѓРґРёС‚Р°
 	 * 
-	 * @return	признак
+	 * @return	РїСЂРёР·РЅР°Рє
 	 */
 	Boolean isAuditActivated();
 	
 	/**
-	 * установка признака активации аудита
+	 * СѓСЃС‚Р°РЅРѕРІРєР° РїСЂРёР·РЅР°РєР° Р°РєС‚РёРІР°С†РёРё Р°СѓРґРёС‚Р°
 	 * 
-	 * @param value	значение
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ
 	 */
 	void setAuditActivated(Boolean value);
 	
 	/**
-	 * получить имя приемника сообщений аудита
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРјСЏ РїСЂРёРµРјРЅРёРєР° СЃРѕРѕР±С‰РµРЅРёР№ Р°СѓРґРёС‚Р°
 	 * 
-	 * @return	имя приемника
+	 * @return	РёРјСЏ РїСЂРёРµРјРЅРёРєР°
 	 */
 	public String getJmsDestinationName();
 	
 	/**
-	 * установить имя приемника сообщений аудита
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РёРјСЏ РїСЂРёРµРјРЅРёРєР° СЃРѕРѕР±С‰РµРЅРёР№ Р°СѓРґРёС‚Р°
 	 * 
-	 * @param name	имя приемника
+	 * @param name	РёРјСЏ РїСЂРёРµРјРЅРёРєР°
 	 */
 	public void setJmsDestinationName(String name);
 

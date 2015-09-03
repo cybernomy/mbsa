@@ -32,7 +32,7 @@ import com.mg.merp.personnelref.PFCodeKindInServiceKindServiceLocal;
 import com.mg.merp.personnelref.model.PfCodeKindInServiceKind;
 
 /**
- * Контроллер формы поддержки "Виды стажа"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "Р’РёРґС‹ СЃС‚Р°Р¶Р°"
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: ServiceKindMt.java,v 1.5 2007/07/18 12:12:57 sharapov Exp $

@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.Region;
 
 /**
- * Браузер регионов
+ * Р‘СЂР°СѓР·РµСЂ СЂРµРіРёРѕРЅРѕРІ
  * 
  * @author leonova
  * @version $Id: RegionBr.java,v 1.2 2006/08/11 07:19:27 leonova Exp $ 

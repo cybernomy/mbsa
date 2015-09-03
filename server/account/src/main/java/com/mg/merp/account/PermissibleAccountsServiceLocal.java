@@ -18,7 +18,7 @@ import com.mg.merp.account.model.EconomicSpec;
 import com.mg.merp.account.model.PermissibleAccounts;
 
 /**
- * Бизнес-компонент "Допустимая корреспонденция счетов"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”РѕРїСѓСЃС‚РёРјР°СЏ РєРѕСЂСЂРµСЃРїРѕРЅРґРµРЅС†РёСЏ СЃС‡РµС‚РѕРІ"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -28,18 +28,18 @@ import com.mg.merp.account.model.PermissibleAccounts;
 public interface PermissibleAccountsServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PermissibleAccounts, Integer> {
 
 	/**
-	 * Создание на основе хоз. операций
+	 * РЎРѕР·РґР°РЅРёРµ РЅР° РѕСЃРЅРѕРІРµ С…РѕР·. РѕРїРµСЂР°С†РёР№
 	 * 
 	 * @param beginDate
-	 * 				- с даты
+	 * 				- СЃ РґР°С‚С‹
 	 * @param endDate
-	 * 				- по дату
+	 * 				- РїРѕ РґР°С‚Сѓ
 	 */
    public void createFromEconomicOper(java.util.Date beginDate,java.util.Date endDate);
 
    /**
-    * Выполнить проверку корректности корреспонденции счетов
-    * @param economicSpec - проводка хоз.операции
+    * Р’С‹РїРѕР»РЅРёС‚СЊ РїСЂРѕРІРµСЂРєСѓ РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РєРѕСЂСЂРµСЃРїРѕРЅРґРµРЅС†РёРё СЃС‡РµС‚РѕРІ
+    * @param economicSpec - РїСЂРѕРІРѕРґРєР° С…РѕР·.РѕРїРµСЂР°С†РёРё
     */
    void ckeckPermissibleCorrespondance(EconomicSpec economicSpec);
    

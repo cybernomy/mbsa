@@ -19,14 +19,14 @@ import java.util.Map;
 import com.mg.framework.api.BusinessException;
 
 /**
- * BAi (Business Add-in) бизнес расширений системы
+ * BAi (Business Add-in) Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёР№ СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: BusinessAddin.java,v 1.2 2006/10/12 12:02:05 safonov Exp $
  */
 public interface BusinessAddin<T> {
 	/**
-	 * Регистрация слушателя выполнения BAi
+	 * Р РµРіРёСЃС‚СЂР°С†РёСЏ СЃР»СѓС€Р°С‚РµР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ BAi
 	 * 
 	 * @see BusinessAddinListener
 	 * 
@@ -35,11 +35,11 @@ public interface BusinessAddin<T> {
 	void registerListener(BusinessAddinListener<T> listener);
 	
 	/**
-	 * Запуск выполнения BAi
+	 * Р—Р°РїСѓСЃРє РІС‹РїРѕР»РЅРµРЅРёСЏ BAi
 	 * 
-	 * @param params		набор параметров передаваемых в BAi из точки вызова
-	 * @throws Exception	при возникновении любых не обработанных ИС
-	 * @throws BusinessException при возникновении прикладных ИС, как правило используется для сообщений
+	 * @param params		РЅР°Р±РѕСЂ РїР°СЂР°РјРµС‚СЂРѕРІ РїРµСЂРµРґР°РІР°РµРјС‹С… РІ BAi РёР· С‚РѕС‡РєРё РІС‹Р·РѕРІР°
+	 * @throws Exception	РїСЂРё РІРѕР·РЅРёРєРЅРѕРІРµРЅРёРё Р»СЋР±С‹С… РЅРµ РѕР±СЂР°Р±РѕС‚Р°РЅРЅС‹С… РРЎ
+	 * @throws BusinessException РїСЂРё РІРѕР·РЅРёРєРЅРѕРІРµРЅРёРё РїСЂРёРєР»Р°РґРЅС‹С… РРЎ, РєР°Рє РїСЂР°РІРёР»Рѕ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ СЃРѕРѕР±С‰РµРЅРёР№
 	 */
 	void perform(Map<String, ? extends Object> params) throws Exception, BusinessException;
 }

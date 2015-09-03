@@ -24,7 +24,7 @@ import com.mg.merp.reference.BankAccountServiceLocal;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Базовый класс для SearchHelp банковских счетов
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РґР»СЏ SearchHelp Р±Р°РЅРєРѕРІСЃРєРёС… СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: BankAccountSearchHelp.java,v 1.2 2007/08/17 07:28:25 safonov Exp $
@@ -43,14 +43,14 @@ public abstract class BankAccountSearchHelp extends AbstractSearchHelp {
 	 */
 	@Override
 	protected void doSearch() throws Exception {
-		Contractor сontractor = (Contractor) getImportContextValue(getContractorContextName());
-		//без контрагента невозможен поиск банковских счетов
-		if (сontractor == null)
+		Contractor СЃontractor = (Contractor) getImportContextValue(getContractorContextName());
+		//Р±РµР· РєРѕРЅС‚СЂР°РіРµРЅС‚Р° РЅРµРІРѕР·РјРѕР¶РµРЅ РїРѕРёСЃРє Р±Р°РЅРєРѕРІСЃРєРёС… СЃС‡РµС‚РѕРІ
+		if (СЃontractor == null)
 			return;
 		
 		BankAccountSearchForm form = (BankAccountSearchForm) UIProducer.produceForm("com/mg/merp/reference/resources/BankAccountSearchForm.mfd.xml");
 		form.addSearchHelpListener(this);
-		form.setContractor(сontractor);
+		form.setContractor(СЃontractor);
 		
 		form.run(UIUtils.isModalMode());
 	}

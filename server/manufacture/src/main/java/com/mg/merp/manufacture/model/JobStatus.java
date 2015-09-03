@@ -18,32 +18,32 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Статус ЗНП
+ * РЎС‚Р°С‚СѓСЃ Р—РќРџ
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: JobStatus.java,v 1.2 2007/07/30 10:27:49 safonov Exp $
  */
 @DataItemName("Manufacture.JobStatus")
 public enum JobStatus {
 	/**
-	 * Новый
+	 * РќРѕРІС‹Р№
 	 */
 	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#JobStatus.Created")
 	CREATED,
 	
 	/**
-	 * Запущен
+	 * Р—Р°РїСѓС‰РµРЅ
 	 */
 	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#JobStatus.Running")
 	RUNNING,
 	
 	/**
-	 * Остановлен
+	 * РћСЃС‚Р°РЅРѕРІР»РµРЅ
 	 */
 	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#JobStatus.Stopped")
 	STOPPED,
 	
 	/**
-	 * Завершён
+	 * Р—Р°РІРµСЂС€С‘РЅ
 	 */
 	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#JobStatus.Completed")
 	COMPLETED

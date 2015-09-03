@@ -40,7 +40,7 @@ import com.mg.merp.bpm.model.Resource;
 import com.mg.merp.bpm.model.ResourceGroupLink;
 
 /**
- * Реализация бизнес-компонента "Менеджер бизнес-процессов"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РњРµРЅРµРґР¶РµСЂ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: BusinessProccessManagerServiceBean.java,v 1.1 2008/03/11 08:23:20 sharapov Exp $
@@ -56,8 +56,8 @@ public class BusinessProccessManagerServiceBean extends AbstractPOJOBusinessObje
 	}
 
 	/**
-	 * Загрузить список задач
-	 * @return список задач
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє Р·Р°РґР°С‡
+	 * @return СЃРїРёСЃРѕРє Р·Р°РґР°С‡
 	 */
 	protected List<TaskInstance> doLoadTasks() {
 		List<TaskInstance> taskList;
@@ -67,7 +67,7 @@ public class BusinessProccessManagerServiceBean extends AbstractPOJOBusinessObje
 			List<String> actorIds = tmpl.findByCriteria(OrmTemplate.createCriteria(Resource.class, "r") //$NON-NLS-1$
 					.setProjection(Projections.property("r.Key")) //$NON-NLS-1$
 					.add(Restrictions.eq("r.User.Id", ServerUtils.getUserProfile().getIdentificator()))); //$NON-NLS-1$
-			//если не указан пользователь, берем из связей с группами
+			//РµСЃР»Рё РЅРµ СѓРєР°Р·Р°РЅ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ, Р±РµСЂРµРј РёР· СЃРІСЏР·РµР№ СЃ РіСЂСѓРїРїР°РјРё
 			if (actorIds.size() == 0) {
 				List<String> actorIdsByGroup = tmpl.findByCriteria(OrmTemplate.createCriteria(ResourceGroupLink.class, "l") //$NON-NLS-1$
 						.createAlias("l.Resource", "r") //$NON-NLS-1$ //$NON-NLS-2$
@@ -75,15 +75,15 @@ public class BusinessProccessManagerServiceBean extends AbstractPOJOBusinessObje
 						.add(Restrictions.in("l.Group.Id", (Object[]) ArrayUtils.toObject(ServerUtils.getUserProfile().getGroups())))); //$NON-NLS-1$
 				actorIds.addAll(actorIdsByGroup);
 			}
-			//если так и не нашли ресурс, то ничего не грузим
+			//РµСЃР»Рё С‚Р°Рє Рё РЅРµ РЅР°С€Р»Рё СЂРµСЃСѓСЂСЃ, С‚Рѕ РЅРёС‡РµРіРѕ РЅРµ РіСЂСѓР·РёРј
 			if (actorIds.size() == 0) {
 				taskList = new ArrayList<TaskInstance>();
 			} else {
 				for (int i = 0; i < actorIds.size(); i++)
 					actorIds.set(i, actorIds.get(i).toLowerCase());
-				//загрузим из группового списка taskList = context.getGroupTaskList(actorIds);
+				//Р·Р°РіСЂСѓР·РёРј РёР· РіСЂСѓРїРїРѕРІРѕРіРѕ СЃРїРёСЃРєР° taskList = context.getGroupTaskList(actorIds);
 				taskList = MiscUtils.convertUncheckedList(TaskInstance.class, context.getGroupTaskList(actorIds));
-				//загрузим из индивидуального списка
+				//Р·Р°РіСЂСѓР·РёРј РёР· РёРЅРґРёРІРёРґСѓР°Р»СЊРЅРѕРіРѕ СЃРїРёСЃРєР°
 				for (String actor : actorIds)
 					taskList.addAll(MiscUtils.convertUncheckedList(TaskInstance.class, context.getTaskList(actor)));
 			}
@@ -101,8 +101,8 @@ public class BusinessProccessManagerServiceBean extends AbstractPOJOBusinessObje
 	}
 
 	/**
-	 * Запустить задачу
-	 * @param taskId - идентификатор задачи
+	 * Р—Р°РїСѓСЃС‚РёС‚СЊ Р·Р°РґР°С‡Сѓ
+	 * @param taskId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РґР°С‡Рё
 	 */
 	protected void doStartTask(long taskId) {
 		JbpmContext context = BPMManagerLocator.locate().getCurrentBpmContext();
@@ -122,8 +122,8 @@ public class BusinessProccessManagerServiceBean extends AbstractPOJOBusinessObje
 	}
 
 	/**
-	 * Завершить задачу
-	 * @param taskId - идентификатор задачи
+	 * Р—Р°РІРµСЂС€РёС‚СЊ Р·Р°РґР°С‡Сѓ
+	 * @param taskId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РґР°С‡Рё
 	 */
 	protected void doEndTask(long taskId) {
 		JbpmContext context = BPMManagerLocator.locate().getCurrentBpmContext();
@@ -147,8 +147,8 @@ public class BusinessProccessManagerServiceBean extends AbstractPOJOBusinessObje
 	}
 
 	/**
-	 * Загрузить список бизнес-процессов
-	 * @return список бизнес-процессов
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ
+	 * @return СЃРїРёСЃРѕРє Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ
 	 */
 	protected List<ProcessDefinition> doLoadProcesses() {
 		List<ProcessDefinition> processList;
@@ -169,8 +169,8 @@ public class BusinessProccessManagerServiceBean extends AbstractPOJOBusinessObje
 	}
 
 	/**
-	 * Развернуть бизнес-процесс
-	 * @param inputStream - поток
+	 * Р Р°Р·РІРµСЂРЅСѓС‚СЊ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃ
+	 * @param inputStream - РїРѕС‚РѕРє
 	 */
 	protected void doDeployProcess(InputStream inputStream) {
 		JbpmContext context = BPMManagerLocator.locate().getCurrentBpmContext();
@@ -191,8 +191,8 @@ public class BusinessProccessManagerServiceBean extends AbstractPOJOBusinessObje
 	}
 
 	/**
-	 * Удалить бизнес-процесс
-	 * @param processId - идентификатор бизнес-процесса
+	 * РЈРґР°Р»РёС‚СЊ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃ
+	 * @param processId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃР°
 	 */
 	protected void doDeleteProcess(long processId) {
 		JbpmContext context = BPMManagerLocator.locate().getCurrentBpmContext();
@@ -213,8 +213,8 @@ public class BusinessProccessManagerServiceBean extends AbstractPOJOBusinessObje
 	}
 
 	/**
-	 * Создать экземпляр бизнес-процесса
-	 * @param processId - идентификатор бизнес-процесса
+	 * РЎРѕР·РґР°С‚СЊ СЌРєР·РµРјРїР»СЏСЂ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃР°
+	 * @param processId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃР°
 	 */
 	protected void doCreateProcessInstance(long processId) {
 		JbpmContext context = BPMManagerLocator.locate().getCurrentBpmContext();

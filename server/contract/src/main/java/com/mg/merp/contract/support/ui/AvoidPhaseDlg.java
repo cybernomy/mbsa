@@ -29,7 +29,7 @@ import com.mg.merp.contract.model.Phase;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Контроллер диалога "Аннулированные этапы договора"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "РђРЅРЅСѓР»РёСЂРѕРІР°РЅРЅС‹Рµ СЌС‚Р°РїС‹ РґРѕРіРѕРІРѕСЂР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: AvoidPhaseDlg.java,v 1.2 2007/03/28 13:51:15 sharapov Exp $
@@ -110,11 +110,11 @@ public class AvoidPhaseDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Отменить аннулирование"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РћС‚РјРµРЅРёС‚СЊ Р°РЅРЅСѓР»РёСЂРѕРІР°РЅРёРµ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
-	public void onActionСancelAvoid(WidgetEvent event) throws Exception {
+	public void onActionРЎancelAvoid(WidgetEvent event) throws Exception {
 		if (avoidPhaseSelectedIndex != null) {
 			Phase phaseItem = ServerUtils.getPersistentManager().find(Phase.class, avoidPhaseSelectedIndex);
 			phaseItem.setAvoid(false);
@@ -124,8 +124,8 @@ public class AvoidPhaseDlg extends AbstractForm {
 	}
 
 	/**
-	 * Установить документ
-	 * @param docHead - документ
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РґРѕРєСѓРјРµРЅС‚
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
 	 */
 	public void setDocHead(DocHead docHead) {
 		paramsValue.add(docHead);

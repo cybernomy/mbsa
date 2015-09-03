@@ -22,7 +22,7 @@ import com.mg.merp.manufacture.JobRouteResourceServiceLocal;
 import com.mg.merp.manufacture.model.JobRouteResource;
 
 /**
- * Бизнес-компонент "Ресурсы ЗНП" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р РµСЃСѓСЂСЃС‹ Р—РќРџ" 
  * 
  * @author leonova
  * @version $Id: JobRouteResourceServiceBean.java,v 1.2 2006/09/09 09:36:56 leonova Exp $

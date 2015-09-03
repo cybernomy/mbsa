@@ -39,7 +39,7 @@ import com.mg.merp.finance.model.Specification;
 import com.mg.merp.finance.model.SpecificationModel;
 
 /**
- * Реализация бизнес-компонента "Спецификация финансовых операций" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёСЏ С„РёРЅР°РЅСЃРѕРІС‹С… РѕРїРµСЂР°С†РёР№" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -104,9 +104,9 @@ public class SpecificationServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Создать спецификацию фин. операции по образцу
-	 * @param pattern - образец
-	 * @param finOperation - фин. операция
+	 * РЎРѕР·РґР°С‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ С„РёРЅ. РѕРїРµСЂР°С†РёРё РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param pattern - РѕР±СЂР°Р·РµС†
+	 * @param finOperation - С„РёРЅ. РѕРїРµСЂР°С†РёСЏ
 	 */
 	protected void internalCreateSpecificationByPattern(OperationModel pattern, FinOperation finOperation) {
 		List<SpecificationModel> parentPatternSpecs =  OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(SpecificationModel.class)
@@ -137,7 +137,7 @@ public class SpecificationServiceBean extends AbstractPOJODataBusinessObjectServ
 	private Specification initializeFinSpecByPattern(SpecificationModel patternSpec, FinOperation finOperation, Specification parentSpecification) {
 		Specification specItem = initialize();
 		AttributeMap attributes = patternSpec.getAllAttributes();
-		//удаляем атрибуты образца, которые отсутсвуют в самой спецификации операции
+		//СѓРґР°Р»СЏРµРј Р°С‚СЂРёР±СѓС‚С‹ РѕР±СЂР°Р·С†Р°, РєРѕС‚РѕСЂС‹Рµ РѕС‚СЃСѓС‚СЃРІСѓСЋС‚ РІ СЃР°РјРѕР№ СЃРїРµС†РёС„РёРєР°С†РёРё РѕРїРµСЂР°С†РёРё
 		attributes.remove("Id"); //$NON-NLS-1$
 		attributes.remove("Parent"); //$NON-NLS-1$
 		attributes.remove("Alg"); //$NON-NLS-1$

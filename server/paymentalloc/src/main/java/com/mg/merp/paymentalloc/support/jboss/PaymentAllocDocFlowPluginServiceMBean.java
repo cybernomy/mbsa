@@ -17,7 +17,7 @@ package com.mg.merp.paymentalloc.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис дополнительных модулей подсистемы "Журнал платежей"
+ * РЎРµСЂРІРёСЃ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "Р–СѓСЂРЅР°Р» РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Denis V. Arychkov
  * @version $Id: PaymentAllocDocFlowPluginServiceMBean.java,v 1.1 2007/05/04 06:57:37 arychkov Exp $
@@ -25,7 +25,7 @@ import org.jboss.system.ServiceMBean;
 public interface PaymentAllocDocFlowPluginServiceMBean extends ServiceMBean {
 
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:paymentalloc=DocFlowPluginService"; //$NON-NLS-1$
 

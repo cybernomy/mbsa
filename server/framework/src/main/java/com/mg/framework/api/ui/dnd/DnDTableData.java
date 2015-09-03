@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.dnd;
 import com.mg.framework.api.ui.widget.Table;
 
 /**
- * Данные операции DnD с элементов "таблица"
+ * Р”Р°РЅРЅС‹Рµ РѕРїРµСЂР°С†РёРё DnD СЃ СЌР»РµРјРµРЅС‚РѕРІ "С‚Р°Р±Р»РёС†Р°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: DnDTableData.java,v 1.1 2007/08/16 13:48:06 safonov Exp $
@@ -34,27 +34,27 @@ public class DnDTableData extends DnDData {
 	}
 	
 	/**
-	 * получить отмеченные столбцы
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕС‚РјРµС‡РµРЅРЅС‹Рµ СЃС‚РѕР»Р±С†С‹
 	 * 
-	 * @return	список отмеченных столбцов
+	 * @return	СЃРїРёСЃРѕРє РѕС‚РјРµС‡РµРЅРЅС‹С… СЃС‚РѕР»Р±С†РѕРІ
 	 */
 	public int[] getSelectedColumns() {
 		return selectedColumns;
 	}
 
 	/**
-	 * получить список отмеченных рядов
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РѕС‚РјРµС‡РµРЅРЅС‹С… СЂСЏРґРѕРІ
 	 * 
-	 * @return	отмеченные ряды
+	 * @return	РѕС‚РјРµС‡РµРЅРЅС‹Рµ СЂСЏРґС‹
 	 */
 	public int[] getSelectedRows() {
 		return selectedRows;
 	}
 
 	/**
-	 * элемент таблица
+	 * СЌР»РµРјРµРЅС‚ С‚Р°Р±Р»РёС†Р°
 	 * 
-	 * @return	таблица
+	 * @return	С‚Р°Р±Р»РёС†Р°
 	 */
 	public Table getTable() {
 		return table;

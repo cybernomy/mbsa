@@ -20,7 +20,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocType;
 
 /**
- * Фабрика стратегий формирования номера документов
+ * Р¤Р°Р±СЂРёРєР° СЃС‚СЂР°С‚РµРіРёР№ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РЅРѕРјРµСЂР° РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentNumberStrategyFactory.java,v 1.2 2007/03/23 15:54:32 safonov Exp $
@@ -28,10 +28,10 @@ import com.mg.merp.document.model.DocType;
 public class DocumentNumberStrategyFactory {
 
 	/**
-	 * создание стратегии
+	 * СЃРѕР·РґР°РЅРёРµ СЃС‚СЂР°С‚РµРіРёРё
 	 * 
-	 * @param docHead	сущность документа
-	 * @return	стратегия
+	 * @param docHead	СЃСѓС‰РЅРѕСЃС‚СЊ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	СЃС‚СЂР°С‚РµРіРёСЏ
 	 */
 	public static DocumentNumberStrategy createStrategy(DocHead docHead) {
 		DocType docType = null;

@@ -31,7 +31,7 @@ import sun.net.www.MimeTable;
 import com.mg.framework.api.Logger;
 
 /**
- * Файловые утилиты
+ * Р¤Р°Р№Р»РѕРІС‹Рµ СѓС‚РёР»РёС‚С‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: FileUtils.java,v 1.6 2008/08/12 09:20:09 safonov Exp $
@@ -104,12 +104,12 @@ public class FileUtils {
 	}    
 
 	/**
-	 * чтение текстового файла, используется кодировка файлов по умолчанию для ОС
+	 * С‡С‚РµРЅРёРµ С‚РµРєСЃС‚РѕРІРѕРіРѕ С„Р°Р№Р»Р°, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РєРѕРґРёСЂРѕРІРєР° С„Р°Р№Р»РѕРІ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ РћРЎ
 	 * 
 	 * @see #readTextFile(File)
 	 * 
-	 * @param fullPathFilename	полный путь к файлу
-	 * @return	содержимое
+	 * @param fullPathFilename	РїРѕР»РЅС‹Р№ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ
+	 * @return	СЃРѕРґРµСЂР¶РёРјРѕРµ
 	 * @throws IOException
 	 */
 	public static String readTextFile(String fullPathFilename) throws IOException {
@@ -117,11 +117,11 @@ public class FileUtils {
 	}
 
 	/**
-	 * чтение текстового файла
+	 * С‡С‚РµРЅРёРµ С‚РµРєСЃС‚РѕРІРѕРіРѕ С„Р°Р№Р»Р°
 	 * 
-	 * @param fullPathFilename	полный путь к файлу
-	 * @param charsetName	кодировка, если <code>null</code> то используется по умолчанию для ОС
-	 * @return	содержимое
+	 * @param fullPathFilename	РїРѕР»РЅС‹Р№ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ
+	 * @param charsetName	РєРѕРґРёСЂРѕРІРєР°, РµСЃР»Рё <code>null</code> С‚Рѕ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ РћРЎ
+	 * @return	СЃРѕРґРµСЂР¶РёРјРѕРµ
 	 * @throws IOException
 	 */
 	public static String readTextFile(String fullPathFilename, String charsetName) throws IOException {
@@ -129,10 +129,10 @@ public class FileUtils {
 	}
 
 	/**
-	 * чтение текстового файла, используется кодировка файлов по умолчанию для ОС
+	 * С‡С‚РµРЅРёРµ С‚РµРєСЃС‚РѕРІРѕРіРѕ С„Р°Р№Р»Р°, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РєРѕРґРёСЂРѕРІРєР° С„Р°Р№Р»РѕРІ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ РћРЎ
 	 * 
-	 * @param file	файл
-	 * @return	содержимое
+	 * @param file	С„Р°Р№Р»
+	 * @return	СЃРѕРґРµСЂР¶РёРјРѕРµ
 	 * @throws IOException
 	 */
 	public static String readTextFile(File file) throws IOException {
@@ -140,11 +140,11 @@ public class FileUtils {
 	}
 
 	/**
-	 * чтение текстового файла
+	 * С‡С‚РµРЅРёРµ С‚РµРєСЃС‚РѕРІРѕРіРѕ С„Р°Р№Р»Р°
 	 * 
-	 * @param file	файл
-	 * @param charsetName	кодировка, если <code>null</code> то используется по умолчанию для ОС
-	 * @return	содержимое
+	 * @param file	С„Р°Р№Р»
+	 * @param charsetName	РєРѕРґРёСЂРѕРІРєР°, РµСЃР»Рё <code>null</code> С‚Рѕ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ РћРЎ
+	 * @return	СЃРѕРґРµСЂР¶РёРјРѕРµ
 	 * @throws IOException
 	 */
 	public static String readTextFile(File file, String charsetName) throws IOException {
@@ -166,10 +166,10 @@ public class FileUtils {
 	}
 
 	/**
-	 * запись текстового файла, используется кодировка файлов по умолчанию для ОС
+	 * Р·Р°РїРёСЃСЊ С‚РµРєСЃС‚РѕРІРѕРіРѕ С„Р°Р№Р»Р°, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РєРѕРґРёСЂРѕРІРєР° С„Р°Р№Р»РѕРІ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ РћРЎ
 	 * 
-	 * @param file	файл
-	 * @param body	содержимое
+	 * @param file	С„Р°Р№Р»
+	 * @param body	СЃРѕРґРµСЂР¶РёРјРѕРµ
 	 * @throws IOException
 	 */
 	public static void writeTextFile(File file, String body) throws IOException {
@@ -177,11 +177,11 @@ public class FileUtils {
 	}
 
 	/**
-	 * запись текстового файла
+	 * Р·Р°РїРёСЃСЊ С‚РµРєСЃС‚РѕРІРѕРіРѕ С„Р°Р№Р»Р°
 	 * 
-	 * @param file	файл
-	 * @param body	содержимое
-	 * @param charsetName	кодировка, если <code>null</code> то используется по умолчанию для ОС
+	 * @param file	С„Р°Р№Р»
+	 * @param body	СЃРѕРґРµСЂР¶РёРјРѕРµ
+	 * @param charsetName	РєРѕРґРёСЂРѕРІРєР°, РµСЃР»Рё <code>null</code> С‚Рѕ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ РћРЎ
 	 * @throws IOException
 	 */
 	public static void writeTextFile(File file, String body, String charsetName) throws IOException {
@@ -194,12 +194,12 @@ public class FileUtils {
 	}
 
 	/**
-	 * запись текстового файла, используется кодировка файлов по умолчанию для ОС
+	 * Р·Р°РїРёСЃСЊ С‚РµРєСЃС‚РѕРІРѕРіРѕ С„Р°Р№Р»Р°, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РєРѕРґРёСЂРѕРІРєР° С„Р°Р№Р»РѕРІ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ РћРЎ
 	 * 
 	 * @see #writeTextFile(File, String)
 	 * 
-	 * @param fullPathFilename	полный путь к файлу
-	 * @param body	содержимое
+	 * @param fullPathFilename	РїРѕР»РЅС‹Р№ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ
+	 * @param body	СЃРѕРґРµСЂР¶РёРјРѕРµ
 	 * @throws IOException
 	 */
 	public static void writeTextFile(String fullPathFilename, String body) throws IOException {
@@ -207,11 +207,11 @@ public class FileUtils {
 	}
 
 	/**
-	 * запись текстового файла
+	 * Р·Р°РїРёСЃСЊ С‚РµРєСЃС‚РѕРІРѕРіРѕ С„Р°Р№Р»Р°
 	 * 
-	 * @param fullPathFilename	полный путь к файлу
-	 * @param body	содержимое
-	 * @param charsetName	кодировка, если <code>null</code> то используется по умолчанию для ОС
+	 * @param fullPathFilename	РїРѕР»РЅС‹Р№ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ
+	 * @param body	СЃРѕРґРµСЂР¶РёРјРѕРµ
+	 * @param charsetName	РєРѕРґРёСЂРѕРІРєР°, РµСЃР»Рё <code>null</code> С‚Рѕ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ РћРЎ
 	 * @throws IOException
 	 */
 	public static void writeTextFile(String fullPathFilename, String body, String charsetName) throws IOException {
@@ -219,9 +219,9 @@ public class FileUtils {
 	}
 	
 	/**
-	 * создание временного файла
+	 * СЃРѕР·РґР°РЅРёРµ РІСЂРµРјРµРЅРЅРѕРіРѕ С„Р°Р№Р»Р°
 	 * 
-	 * @return	временный файл
+	 * @return	РІСЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р»
 	 * @throws IOException
 	 */
 	public static File createTempFile() throws IOException {
@@ -229,11 +229,11 @@ public class FileUtils {
 	}
 	
 	/**
-	 * создание временного файла
+	 * СЃРѕР·РґР°РЅРёРµ РІСЂРµРјРµРЅРЅРѕРіРѕ С„Р°Р№Р»Р°
 	 * 
-	 * @param prefix	префикс создаваемого файла, если <code>null</code>, то будет установлен в tmp
-	 * @param suffix	суффикс создаваемого файла, если <code>null</code>, то будет установлен в tmp
-	 * @return	временный файл
+	 * @param prefix	РїСЂРµС„РёРєСЃ СЃРѕР·РґР°РІР°РµРјРѕРіРѕ С„Р°Р№Р»Р°, РµСЃР»Рё <code>null</code>, С‚Рѕ Р±СѓРґРµС‚ СѓСЃС‚Р°РЅРѕРІР»РµРЅ РІ tmp
+	 * @param suffix	СЃСѓС„С„РёРєСЃ СЃРѕР·РґР°РІР°РµРјРѕРіРѕ С„Р°Р№Р»Р°, РµСЃР»Рё <code>null</code>, С‚Рѕ Р±СѓРґРµС‚ СѓСЃС‚Р°РЅРѕРІР»РµРЅ РІ tmp
+	 * @return	РІСЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р»
 	 * @throws IOException
 	 */
 	public static File createTempFile(String prefix, String suffix) throws IOException {
@@ -243,10 +243,10 @@ public class FileUtils {
 	}
 	
 	/**
-	 * извлечь имя файла из полного пути
+	 * РёР·РІР»РµС‡СЊ РёРјСЏ С„Р°Р№Р»Р° РёР· РїРѕР»РЅРѕРіРѕ РїСѓС‚Рё
 	 * 
-	 * @param fullPathFilename	полный путь к файлу
-	 * @return	имя файла
+	 * @param fullPathFilename	РїРѕР»РЅС‹Р№ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ
+	 * @return	РёРјСЏ С„Р°Р№Р»Р°
 	 */
 	public static String extractFileName(String fullPathFilename) {
 		fullPathFilename = fullPathFilename.replace('\\', '/');
@@ -255,10 +255,10 @@ public class FileUtils {
 	}
 
 	/**
-	 * извлечь расширение файла из имени файла
+	 * РёР·РІР»РµС‡СЊ СЂР°СЃС€РёСЂРµРЅРёРµ С„Р°Р№Р»Р° РёР· РёРјРµРЅРё С„Р°Р№Р»Р°
 	 * 
-	 * @param fileName	имя файла
-	 * @return	расширение
+	 * @param fileName	РёРјСЏ С„Р°Р№Р»Р°
+	 * @return	СЂР°СЃС€РёСЂРµРЅРёРµ
 	 */
 	public static String extractFileExtension(String fileName) {
 		int index = fileName.lastIndexOf(".");
@@ -266,10 +266,10 @@ public class FileUtils {
 	}
 
 	/**
-	 * получить mime тип по имени файла
+	 * РїРѕР»СѓС‡РёС‚СЊ mime С‚РёРї РїРѕ РёРјРµРЅРё С„Р°Р№Р»Р°
 	 * 
-	 * @param fileName	имя файа
-	 * @return	mime тип
+	 * @param fileName	РёРјСЏ С„Р°Р№Р°
+	 * @return	mime С‚РёРї
 	 */
 	public static String getMimeTypeByFileName(String fileName) {
 		if (fileName == null)
@@ -280,10 +280,10 @@ public class FileUtils {
 	}
 
 	/**
-	 * получить mime тип по расширению файла
+	 * РїРѕР»СѓС‡РёС‚СЊ mime С‚РёРї РїРѕ СЂР°СЃС€РёСЂРµРЅРёСЋ С„Р°Р№Р»Р°
 	 * 
-	 * @param fileExt	расширение файла
-	 * @return	mime тип
+	 * @param fileExt	СЂР°СЃС€РёСЂРµРЅРёРµ С„Р°Р№Р»Р°
+	 * @return	mime С‚РёРї
 	 */
 	public static String getMimeTypeByFileExt(String fileExt) {
 		if (fileExt == null)

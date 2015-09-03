@@ -19,7 +19,7 @@ import org.jboss.system.ServiceMBean;
 import com.mg.merp.document.LBScheduleManager;
 
 /**
- * Сервис менеджера управления графиками исполнения обязательств
+ * РЎРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° СѓРїСЂР°РІР»РµРЅРёСЏ РіСЂР°С„РёРєР°РјРё РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ
  * 
  * @author Artem V. Sharapov
  * @version $Id: LBScheduleManagerServiceMBean.java,v 1.1 2007/04/21 11:49:33 sharapov Exp $

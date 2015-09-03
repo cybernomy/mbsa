@@ -20,7 +20,7 @@ import java.sql.SQLException;
 import org.hibernate.type.StringType;
 
 /**
- * Строковый тип удаляющий лидирующие и завершающие пробелы
+ * РЎС‚СЂРѕРєРѕРІС‹Р№ С‚РёРї СѓРґР°Р»СЏСЋС‰РёР№ Р»РёРґРёСЂСѓСЋС‰РёРµ Рё Р·Р°РІРµСЂС€Р°СЋС‰РёРµ РїСЂРѕР±РµР»С‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: OmittedWhitespaceStringType.java,v 1.1 2008/10/09 13:21:21 safonov Exp $

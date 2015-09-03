@@ -22,7 +22,7 @@ import com.mg.framework.api.metadata.BuiltInType;
 import com.mg.framework.api.orm.PersistentObject;
 
 /**
- * Тип данных в дополнительных признаках
+ * РўРёРї РґР°РЅРЅС‹С… РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РїСЂРёР·РЅР°РєР°С…
  * 
  * @author leonova
  * @version $Id: DataKind.java,v 1.2 2008/12/23 09:45:55 safonov Exp $
@@ -30,51 +30,51 @@ import com.mg.framework.api.orm.PersistentObject;
 @DataItemName ("Core.Feature.DataType")
 public enum DataKind {
 	/**
-	 * Перечислимый
+	 * РџРµСЂРµС‡РёСЃР»РёРјС‹Р№
 	 */
 	@EnumConstantText ("resource://com.mg.merp.core.resources.dataitemlabels#Feature.DataType.Enum")
 	ENUM,
 	
 	/**
-	 * Строка
+	 * РЎС‚СЂРѕРєР°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.core.resources.dataitemlabels#Feature.DataType.String")
 	STRING,
 	
 	/**
-	 * Число целое
+	 * Р§РёСЃР»Рѕ С†РµР»РѕРµ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.core.resources.dataitemlabels#Feature.DataType.Integer")
 	INTEGER,
 	
 	/**
-	 * Число вещественное
+	 * Р§РёСЃР»Рѕ РІРµС‰РµСЃС‚РІРµРЅРЅРѕРµ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.core.resources.dataitemlabels#Feature.DataType.Double")
 	DOUBLE,
 	
 	/**
-	 * Дата
+	 * Р”Р°С‚Р°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.core.resources.dataitemlabels#Feature.DataType.Data")
 	DATA,
 	
 	/**
-	 * Бизнес-компонент
+	 * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
 	 */
 	@EnumConstantText ("resource://com.mg.merp.core.resources.dataitemlabels#Feature.DataType.Entity")
 	ENTITY,
 	
 	/**
-	 * Логический
+	 * Р›РѕРіРёС‡РµСЃРєРёР№
 	 */
 	@EnumConstantText ("resource://com.mg.merp.core.resources.dataitemlabels#Feature.DataType.Boolean")
 	BOOLEAN;
 
 	/**
-	 * преобразовать во встроенный тип приложения
+	 * РїСЂРµРѕР±СЂР°Р·РѕРІР°С‚СЊ РІРѕ РІСЃС‚СЂРѕРµРЅРЅС‹Р№ С‚РёРї РїСЂРёР»РѕР¶РµРЅРёСЏ
 	 * 
-	 * @return	встроенный тип приложения
+	 * @return	РІСЃС‚СЂРѕРµРЅРЅС‹Р№ С‚РёРї РїСЂРёР»РѕР¶РµРЅРёСЏ
 	 */
 	public BuiltInType toBuiltInType() {
 		switch (this) {
@@ -98,7 +98,7 @@ public enum DataKind {
 	}
 
 	/**
-	 * преобразовать в Java класс
+	 * РїСЂРµРѕР±СЂР°Р·РѕРІР°С‚СЊ РІ Java РєР»Р°СЃСЃ
 	 * 
 	 * @return
 	 */

@@ -19,7 +19,7 @@ import com.mg.merp.finance.model.OperationModel;
 import com.mg.merp.finance.model.Specification;
 
 /**
- * Сервис бизнес-компонента "Спецификации фин. операции" 
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёРё С„РёРЅ. РѕРїРµСЂР°С†РёРё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -28,14 +28,14 @@ import com.mg.merp.finance.model.Specification;
 public interface SpecificationServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Specification, Integer> {
 
 	/**
-	 * Создать спецификацию фин. операции по образцу
-	 * @param pattern - образец
-	 * @param finOperation - фин. операция
+	 * РЎРѕР·РґР°С‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ С„РёРЅ. РѕРїРµСЂР°С†РёРё РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param pattern - РѕР±СЂР°Р·РµС†
+	 * @param finOperation - С„РёРЅ. РѕРїРµСЂР°С†РёСЏ
 	 */
 	void createSpecificationByPattern(OperationModel pattern, FinOperation finOperation);
 
 	/**
-	 * Не реализована
+	 * РќРµ СЂРµР°Р»РёР·РѕРІР°РЅР°
 	 * @param finoperId
 	 * @param curRate
 	 */

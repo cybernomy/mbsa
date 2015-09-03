@@ -24,7 +24,7 @@ import com.mg.merp.warehouse.BinLocationTypeServiceLocal;
 import com.mg.merp.warehouse.model.BinLocationType;
 
 /**
- * Бизнес-компонент "Типы секций хранения" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ" 
  * 
  * @author leonova
  * @version $Id: BinLocationTypeServiceBean.java,v 1.5 2007/07/10 07:49:39 poroxnenko Exp $

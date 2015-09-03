@@ -20,7 +20,7 @@ import com.mg.framework.api.ui.WidgetEvent;
 import com.mg.framework.generic.ui.DefaultDialog;
 
 /**
- * Контроллер диалога "Параметры распределения"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "РџР°СЂР°РјРµС‚СЂС‹ СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: AllocationParamsDlg.java,v 1.1 2007/05/31 14:13:30 sharapov Exp $
@@ -36,8 +36,8 @@ public class AllocationParamsDlg extends DefaultDialog {
 	}
 	
 	/**
-	 * Обработчик кнопки "Рассчитать количество"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃСЃС‡РёС‚Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionComputeQty(WidgetEvent event) {
 		if(allocationSum != null && price != null)
@@ -46,8 +46,8 @@ public class AllocationParamsDlg extends DefaultDialog {
 	}
 
 	/**
-	 * Обработчик кнопки "Рассчитать сумму"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃСЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјСѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionComputeSum(WidgetEvent event) {
 		if(allocationQty != null && price != null)

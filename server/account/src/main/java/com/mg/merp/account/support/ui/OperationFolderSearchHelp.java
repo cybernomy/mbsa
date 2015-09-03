@@ -19,7 +19,7 @@ import com.mg.merp.account.OperationServiceLocal;
 import com.mg.merp.reference.support.ui.FolderByTypeSearchHelp;
 
 /**
- * Механизм поиска папка-приемник хоз. операции
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° РїР°РїРєР°-РїСЂРёРµРјРЅРёРє С…РѕР·. РѕРїРµСЂР°С†РёРё
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: OperationFolderSearchHelp.java,v 1.1 2008/04/29 05:29:04 alikaev Exp $

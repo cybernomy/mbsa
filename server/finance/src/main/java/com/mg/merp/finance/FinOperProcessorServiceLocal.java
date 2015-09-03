@@ -23,7 +23,7 @@ import com.mg.framework.api.BusinessObjectService;
 public interface FinOperProcessorServiceLocal extends BusinessObjectService, FinOperProcessor {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/finance/FinOperProcessor";
 

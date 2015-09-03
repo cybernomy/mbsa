@@ -37,7 +37,7 @@ import com.mg.merp.warehouse.model.Warehouse;
 import com.mg.merp.warehouse.support.Messages;
 
 /**
- * Браузер складов
+ * Р‘СЂР°СѓР·РµСЂ СЃРєР»Р°РґРѕРІ
  * 
  * @author leonova
  * @version $Id: WarehouseBr.java,v 1.10 2008/10/15 11:58:41 safonov Exp $ 
@@ -115,7 +115,7 @@ public class WarehouseBr extends DefaultPlainBrowseForm {
 	}
 	
 	/**
-	 * Обработчик события показать операционные дни склада
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РїРѕРєР°Р·Р°С‚СЊ РѕРїРµСЂР°С†РёРѕРЅРЅС‹Рµ РґРЅРё СЃРєР»Р°РґР°
 	 * @param event
 	 * @throws Exception
 	 */
@@ -136,7 +136,7 @@ public class WarehouseBr extends DefaultPlainBrowseForm {
 	}
 	
 	/**
-	 * Обработчик события "Закрыть склад"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "Р—Р°РєСЂС‹С‚СЊ СЃРєР»Р°Рґ"
 	 * @param event
 	 * @throws Exception
 	 */
@@ -157,7 +157,7 @@ public class WarehouseBr extends DefaultPlainBrowseForm {
 	}
 	
 	/**
-	 * Обработчик события "Открыть склад"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РћС‚РєСЂС‹С‚СЊ СЃРєР»Р°Рґ"
 	 * @param event
 	 * @throws Exception
 	 */

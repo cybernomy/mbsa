@@ -25,7 +25,7 @@ import com.mg.merp.manufacture.generic.ScrapDocumentHeadServiceBean;
 import com.mg.merp.manufacture.model.ScrapDocumentHead;
 
 /**
- * Бизнес-компонент "Акты на списание потерь времени, отработанного РС" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РђРєС‚С‹ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ Р РЎ" 
  * 
  * @author leonova
  * @version $Id: ScrapLaborHeadServiceBean.java,v 1.7 2007/02/06 17:15:40 safonov Exp $

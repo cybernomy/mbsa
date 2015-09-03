@@ -24,7 +24,7 @@ import com.mg.merp.account.model.EconomicOper;
 import com.mg.merp.account.model.EconomicSpec;
 
 /**
- * Контроллер формы поддержки проводки хозяйственной операции
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РїСЂРѕРІРѕРґРєРё С…РѕР·СЏР№СЃС‚РІРµРЅРЅРѕР№ РѕРїРµСЂР°С†РёРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: EconomicSpecMt.java,v 1.2 2009/02/25 15:10:36 safonov Exp $
@@ -32,7 +32,7 @@ import com.mg.merp.account.model.EconomicSpec;
 public class EconomicSpecMt extends DefaultMaintenanceForm {
 
 	/**
-	 * обработчик кнопки "расчитать цены списания"
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "СЂР°СЃС‡РёС‚Р°С‚СЊ С†РµРЅС‹ СЃРїРёСЃР°РЅРёСЏ"
 	 * 
 	 * @param event
 	 */

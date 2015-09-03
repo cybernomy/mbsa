@@ -19,7 +19,7 @@ import com.mg.framework.support.ui.UIProducer;
 import com.mg.framework.support.ui.UIUtils;
 
 /**
- * Базовый класс поиска сущностей "Папки" модуля <Платежный календарь>
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РџР°РїРєРё" РјРѕРґСѓР»СЏ <РџР»Р°С‚РµР¶РЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ>
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmcFolderSearchHelp.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $
@@ -27,8 +27,8 @@ import com.mg.framework.support.ui.UIUtils;
 public abstract class PmcFolderSearchHelp extends AbstractSearchHelp {
 
 	/**
-	 * Получить тип папки
-	 * @return  тип папки
+	 * РџРѕР»СѓС‡РёС‚СЊ С‚РёРї РїР°РїРєРё
+	 * @return  С‚РёРї РїР°РїРєРё
 	 */
 	public abstract short getFolderPart();
 	

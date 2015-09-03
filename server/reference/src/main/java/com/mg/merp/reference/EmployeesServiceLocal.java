@@ -17,14 +17,14 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.Employees;
 
 /**
- * Бизнес-компонент "Сотрудники"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРѕС‚СЂСѓРґРЅРёРєРё"
  * 
  * @author leonova
  * @version $Id: EmployeesServiceLocal.java,v 1.2 2007/08/16 14:14:04 safonov Exp $
  */
 public interface EmployeesServiceLocal extends com.mg.merp.reference.Contractor<Employees> {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/reference/Employees";
 }

@@ -24,7 +24,7 @@ import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Реализация бизнес-компонента "Авансовые отчеты"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РђРІР°РЅСЃРѕРІС‹Рµ РѕС‚С‡РµС‚С‹"
 
  * @author Konstantin S. Alikaev
  * @version $Id: AdvanceRepHeadServiceLocal.java,v 1.4 2008/03/12 14:35:37 alikaev Exp $
@@ -32,48 +32,48 @@ import com.mg.merp.reference.model.Currency;
 public interface AdvanceRepHeadServiceLocal extends com.mg.merp.document.GoodsDocument<AdvanceRepHead, Integer, AdvanceRepHeadModelServiceLocal, AdvanceRepSpecServiceLocal> {
 
 	/**
-	 * тип папки для авансовых отчетов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ Р°РІР°РЅСЃРѕРІС‹С… РѕС‚С‡РµС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 6001;
 
 	/**
-	 * docsection для авансовых отчетов
+	 * docsection РґР»СЏ Р°РІР°РЅСЃРѕРІС‹С… РѕС‚С‡РµС‚РѕРІ
 	 */
 	final static short DOCSECTION = 6001;
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/account/AdvanceRepHead";
 
 	/**
-	 * Расчитать сумму остатка предыдущего аванса
+	 * Р Р°СЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјСѓ РѕСЃС‚Р°С‚РєР° РїСЂРµРґС‹РґСѓС‰РµРіРѕ Р°РІР°РЅСЃР°
 	 * 
 	 * @param accPlan
-	 *				- счет АО			
+	 *				- СЃС‡РµС‚ РђРћ			
 	 * @param contractor
-	 * 				- сотрудник АО
+	 * 				- СЃРѕС‚СЂСѓРґРЅРёРє РђРћ
 	 * @param currency
-	 * 				- валюта документа
+	 * 				- РІР°Р»СЋС‚Р° РґРѕРєСѓРјРµРЅС‚Р°
 	 * @return
-	 * 				- сумму предыдущих авансов
+	 * 				- СЃСѓРјРјСѓ РїСЂРµРґС‹РґСѓС‰РёС… Р°РІР°РЅСЃРѕРІ
 	 * @throws com.mg.framework.api.ApplicationException
 	 */
 	public BigDecimal getPrevAdvanceSum(AccPlan accPlan, Contractor contractor, Currency currency) throws com.mg.framework.api.ApplicationException;
 
 	/**
-	 * Расчитать последний дебитовый оборот
+	 * Р Р°СЃС‡РёС‚Р°С‚СЊ РїРѕСЃР»РµРґРЅРёР№ РґРµР±РёС‚РѕРІС‹Р№ РѕР±РѕСЂРѕС‚
 	 * 
 	 * @param accPlan
-	 *				- счет АО			
+	 *				- СЃС‡РµС‚ РђРћ			
 	 * @param contractor
-	 * 				- сотрудник АО
+	 * 				- СЃРѕС‚СЂСѓРґРЅРёРє РђРћ
 	 * @param currency
-	 * 				- валюта АО
+	 * 				- РІР°Р»СЋС‚Р° РђРћ
 	 * @param curDate
-	 * 				- дата документа АО
+	 * 				- РґР°С‚Р° РґРѕРєСѓРјРµРЅС‚Р° РђРћ
 	 * @return
-	 * 				- сумму последнего дебитового оброта и его дату
+	 * 				- СЃСѓРјРјСѓ РїРѕСЃР»РµРґРЅРµРіРѕ РґРµР±РёС‚РѕРІРѕРіРѕ РѕР±СЂРѕС‚Р° Рё РµРіРѕ РґР°С‚Сѓ
 	 * @throws com.mg.framework.api.ApplicationException
 	 */
 	public AdvanceRepHeadResult getReceivedSum(AccPlan accPlan, Contractor contractor, Currency currency, Date curDate ) throws com.mg.framework.api.ApplicationException;

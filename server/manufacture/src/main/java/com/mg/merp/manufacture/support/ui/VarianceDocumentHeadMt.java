@@ -27,7 +27,7 @@ import com.mg.merp.manufacture.VarianceDocumentSpecServiceLocal;
 import com.mg.merp.manufacture.model.VarianceDocumentSpec;
 
 /**
- * Контроллер формы поддержки документов по отклонениям
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РґРѕРєСѓРјРµРЅС‚РѕРІ РїРѕ РѕС‚РєР»РѕРЅРµРЅРёСЏРј
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov
@@ -90,7 +90,7 @@ public class VarianceDocumentHeadMt extends GoodsDocumentMaintenanceForm {
 	}
 
 	/**
-	 * Выполнить корректировку доступности пунктов КМ списка спецификации
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєСѓ РґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё РїСѓРЅРєС‚РѕРІ РљРњ СЃРїРёСЃРєР° СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	protected void adjustSpecPopupMenu() {
 		Widget specWidget = view.getWidget(SPEC_TABLE_WIDGET);

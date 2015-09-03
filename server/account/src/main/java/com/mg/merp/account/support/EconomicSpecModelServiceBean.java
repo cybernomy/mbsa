@@ -22,7 +22,7 @@ import com.mg.merp.account.EconomicSpecModelServiceLocal;
 import com.mg.merp.account.model.EconomicSpecModel;
 
 /**
- * Бизнес-компонент "Спецификация образцов хозяйственных операций" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РѕР±СЂР°Р·С†РѕРІ С…РѕР·СЏР№СЃС‚РІРµРЅРЅС‹С… РѕРїРµСЂР°С†РёР№" 
  * 
  * @author leonova
  * @version $Id: EconomicSpecModelServiceBean.java,v 1.3 2006/09/13 12:54:44 leonova Exp $

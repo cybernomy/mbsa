@@ -16,7 +16,7 @@ package com.mg.merp.warehouse.support;
 import com.mg.merp.warehouse.generic.AbstractWarehouseTransactionDocFlowPluginFactory;
 
 /**
- * Реализация фабрики реализаций этапа ДО "Отработка по складу"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїР° Р”Рћ "РћС‚СЂР°Р±РѕС‚РєР° РїРѕ СЃРєР»Р°РґСѓ"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseTransactionDocFlowPluginFactory.java,v 1.3 2008/04/18 15:22:11 safonov Exp $

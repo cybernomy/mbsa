@@ -22,7 +22,7 @@ import com.mg.merp.personnelref.AbbreviationServiceLocal;
 import com.mg.merp.personnelref.model.Abbreviation;
 
 /**
- * Бизнес-компонент "Сокращения" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРѕРєСЂР°С‰РµРЅРёСЏ" 
  * 
  * @author leonova
  * @version $Id: AbbreviationServiceBean.java,v 1.3 2006/09/04 13:02:21 leonova Exp $

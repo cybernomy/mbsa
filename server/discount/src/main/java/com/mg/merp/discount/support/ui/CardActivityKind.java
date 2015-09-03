@@ -17,7 +17,7 @@ package com.mg.merp.discount.support.ui;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Активность дисконтной карты
+ * РђРєС‚РёРІРЅРѕСЃС‚СЊ РґРёСЃРєРѕРЅС‚РЅРѕР№ РєР°СЂС‚С‹
  * 
  * @author Artem V. Sharapov
  * @version $Id: CardActivityKind.java,v 1.2 2008/02/13 15:06:32 sharapov Exp $
@@ -25,13 +25,13 @@ import com.mg.framework.api.annotations.EnumConstantText;
 public enum CardActivityKind {
 	
 	/**
-	 * Активна
+	 * РђРєС‚РёРІРЅР°
 	 */
 	@EnumConstantText("resource://com.mg.merp.discount.resources.formelements#ActivityKind.Active") //$NON-NLS-1$
 	ACTIVE,
 	
 	/**
-	 * Неактивна
+	 * РќРµР°РєС‚РёРІРЅР°
 	 */
 	@EnumConstantText("resource://com.mg.merp.discount.resources.formelements#ActivityKind.NotActive") //$NON-NLS-1$
 	NOT_ACTIVE

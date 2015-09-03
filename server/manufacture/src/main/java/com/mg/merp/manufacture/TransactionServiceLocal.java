@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 import com.mg.merp.manufacture.model.Transaction;
 
 /**
- * Бизнес-компонент "Производственные транзакции"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРѕРёР·РІРѕРґСЃС‚РІРµРЅРЅС‹Рµ С‚СЂР°РЅР·Р°РєС†РёРё"
  * 
  * @author Oleg V. Safonov
  * @version $Id: TransactionServiceLocal.java,v 1.2 2007/07/30 10:28:17 safonov Exp $
@@ -28,15 +28,15 @@ public interface TransactionServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<Transaction, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/manufacture/Transaction";
 
 	/**
-	 * загрузить количество списанное по ресурсу
+	 * Р·Р°РіСЂСѓР·РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРїРёСЃР°РЅРЅРѕРµ РїРѕ СЂРµСЃСѓСЂСЃСѓ
 	 * 
-	 * @param resourceId	идентификатор ресурса
-	 * @return	списанное количество
+	 * @param resourceId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂРµСЃСѓСЂСЃР°
+	 * @return	СЃРїРёСЃР°РЅРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ
 	 */
 	BigDecimal getQuantityByResource(int resourceId);
 }

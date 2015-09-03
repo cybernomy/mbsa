@@ -452,15 +452,15 @@ public abstract class FinanceTotals {
 	}
 	
 	/**
-	 * Возвращает код аналитики
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РєРѕРґ Р°РЅР°Р»РёС‚РёРєРё
 	 * @param accountCode
-	 * 				- код счета
+	 * 				- РєРѕРґ СЃС‡РµС‚Р°
 	 * @param anlId
-	 * 				- идентификатор аналитики
+	 * 				- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р°РЅР°Р»РёС‚РёРєРё
 	 * @param anlLevel
-	 * 				- уровень аналитики
+	 * 				- СѓСЂРѕРІРµРЅСЊ Р°РЅР°Р»РёС‚РёРєРё
 	 * @param anlClass
-	 * 				- класс аналитики
+	 * 				- РєР»Р°СЃСЃ Р°РЅР°Р»РёС‚РёРєРё
 	 * @return
 	 */
 	protected String getFieldName(String accountCode, int anlId, int anlLevel, String anlClass) {

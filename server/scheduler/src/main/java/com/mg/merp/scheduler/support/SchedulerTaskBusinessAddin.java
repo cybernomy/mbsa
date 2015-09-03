@@ -24,20 +24,20 @@ import com.mg.merp.baiengine.generic.AbstractBusinessAddin;
 import com.mg.merp.scheduler.model.Task;
 
 /**
- * Базовая реализация бизнес-расширения для создания задач планировщика, класс наследник должен
- * переопределить метод {@link #doPerform()}. В реализации данного расширения не допускается использование
- * пользовательского интерфейса.
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-СЂР°СЃС€РёСЂРµРЅРёСЏ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ Р·Р°РґР°С‡ РїР»Р°РЅРёСЂРѕРІС‰РёРєР°, РєР»Р°СЃСЃ РЅР°СЃР»РµРґРЅРёРє РґРѕР»Р¶РµРЅ
+ * РїРµСЂРµРѕРїСЂРµРґРµР»РёС‚СЊ РјРµС‚РѕРґ {@link #doPerform()}. Р’ СЂРµР°Р»РёР·Р°С†РёРё РґР°РЅРЅРѕРіРѕ СЂР°СЃС€РёСЂРµРЅРёСЏ РЅРµ РґРѕРїСѓСЃРєР°РµС‚СЃСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ
+ * РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°.
  * 
  * @author Oleg V. Safonov
  * @version $Id: SchedulerTaskBusinessAddin.java,v 1.1 2008/04/25 10:57:23 safonov Exp $
  */
 public abstract class SchedulerTaskBusinessAddin extends AbstractBusinessAddin<Void> {
 	/**
-	 * имя параметра "код задачи"
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° "РєРѕРґ Р·Р°РґР°С‡Рё"
 	 */
 	public static final String SCHEDULER_TASK_CODE = "SCHEDULER_TASK_CODE";
 	/**
-	 * имя параметра "контекст выполнения задачи планировщика"
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° "РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РґР°С‡Рё РїР»Р°РЅРёСЂРѕРІС‰РёРєР°"
 	 */
 	public static final String SCHEDULER_JOB_EXECUTION_CONTEXT = "SCHEDULER_JOB_EXECUTION_CONTEXT";
 	private String taskCode;
@@ -54,9 +54,9 @@ public abstract class SchedulerTaskBusinessAddin extends AbstractBusinessAddin<V
 	}
 
 	/**
-	 * получить задачу планировщика запустивщую данное бизнес-расширение
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·Р°РґР°С‡Сѓ РїР»Р°РЅРёСЂРѕРІС‰РёРєР° Р·Р°РїСѓСЃС‚РёРІС‰СѓСЋ РґР°РЅРЅРѕРµ Р±РёР·РЅРµСЃ-СЂР°СЃС€РёСЂРµРЅРёРµ
 	 * 
-	 * @return	задача планировщика
+	 * @return	Р·Р°РґР°С‡Р° РїР»Р°РЅРёСЂРѕРІС‰РёРєР°
 	 */
 	protected Task getSchedulerTask() {
 		if (schedulerTask == null && taskCode != null)
@@ -66,9 +66,9 @@ public abstract class SchedulerTaskBusinessAddin extends AbstractBusinessAddin<V
 	}
 	
 	/**
-	 * получить контекст выполнения задачи
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РґР°С‡Рё
 	 * 
-	 * @return	контекст
+	 * @return	РєРѕРЅС‚РµРєСЃС‚
 	 */
 	protected JobExecutionContext getContext() {
 		return context;

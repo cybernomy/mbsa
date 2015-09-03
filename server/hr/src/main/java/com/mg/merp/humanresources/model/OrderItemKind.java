@@ -17,7 +17,7 @@ package com.mg.merp.humanresources.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Виды пунктов приказов"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РёРґС‹ РїСѓРЅРєС‚РѕРІ РїСЂРёРєР°Р·РѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: OrderItemKind.java,v 1.2 2007/08/27 12:05:53 sharapov Exp $

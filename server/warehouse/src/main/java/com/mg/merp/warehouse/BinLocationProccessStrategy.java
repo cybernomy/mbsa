@@ -20,7 +20,7 @@ import com.mg.merp.warehouse.model.StockBatch;
 import com.mg.merp.warehouse.model.StockBatchHistory;
 
 /**
- * Стратегия обработки/отката размещения товара в секциях хранения
+ * РЎС‚СЂР°С‚РµРіРёСЏ РѕР±СЂР°Р±РѕС‚РєРё/РѕС‚РєР°С‚Р° СЂР°Р·РјРµС‰РµРЅРёСЏ С‚РѕРІР°СЂР° РІ СЃРµРєС†РёСЏС… С…СЂР°РЅРµРЅРёСЏ
  * 
  * @author Artem V. Sharapov
  * @version $Id: BinLocationProccessStrategy.java,v 1.1 2008/05/30 12:39:54 sharapov Exp $
@@ -28,30 +28,30 @@ import com.mg.merp.warehouse.model.StockBatchHistory;
 public interface BinLocationProccessStrategy {
 	
 	/**
-	 * Oбработка секций хранения при приходовании товара на склад
-	 * @param docLineData - данные по спецификации для отработки
-	 * @param stockBatch - партия
-	 * @param processListener - слушатель складского процессора
+	 * OР±СЂР°Р±РѕС‚РєР° СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ РїСЂРё РїСЂРёС…РѕРґРѕРІР°РЅРёРё С‚РѕРІР°СЂР° РЅР° СЃРєР»Р°Рґ
+	 * @param docLineData - РґР°РЅРЅС‹Рµ РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
+	 * @param stockBatch - РїР°СЂС‚РёСЏ
+	 * @param processListener - СЃР»СѓС€Р°С‚РµР»СЊ СЃРєР»Р°РґСЃРєРѕРіРѕ РїСЂРѕС†РµСЃСЃРѕСЂР°
 	 */
 	void proccessOnReceipt(WarehouseProcessDocumentLineData docLineData, StockBatch stockBatch, WarehouseProcessListener processListener);
 	
 	/**
-	 * Обработка секций хранения при списании товара со склада
-	 * @param docLineData - данные по спецификации для отработки
-	 * @param stockBatches - список
-	 * @param processListener - слушатель складского процессора
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ РїСЂРё СЃРїРёСЃР°РЅРёРё С‚РѕРІР°СЂР° СЃРѕ СЃРєР»Р°РґР°
+	 * @param docLineData - РґР°РЅРЅС‹Рµ РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
+	 * @param stockBatches - СЃРїРёСЃРѕРє
+	 * @param processListener - СЃР»СѓС€Р°С‚РµР»СЊ СЃРєР»Р°РґСЃРєРѕРіРѕ РїСЂРѕС†РµСЃСЃРѕСЂР°
 	 */
 	void proccessOnIssue(WarehouseProcessDocumentLineData docLineData, List<StockBatch> stockBatches, WarehouseProcessListener processListener);
 	
 	/**
-	 * Откат обработки секций хранения при приходовании товара на склад
-	 * @param history - история
+	 * РћС‚РєР°С‚ РѕР±СЂР°Р±РѕС‚РєРё СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ РїСЂРё РїСЂРёС…РѕРґРѕРІР°РЅРёРё С‚РѕРІР°СЂР° РЅР° СЃРєР»Р°Рґ
+	 * @param history - РёСЃС‚РѕСЂРёСЏ
 	 */
 	void rollbackOnReceipt(StockBatchHistory history);
 	
 	/**
-	 * Откат обработки секций хранения при списании товара со склада
-	 * @param history - история
+	 * РћС‚РєР°С‚ РѕР±СЂР°Р±РѕС‚РєРё СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ РїСЂРё СЃРїРёСЃР°РЅРёРё С‚РѕРІР°СЂР° СЃРѕ СЃРєР»Р°РґР°
+	 * @param history - РёСЃС‚РѕСЂРёСЏ
 	 */
 	void rollbackOnIssue(StockBatchHistory history);
 

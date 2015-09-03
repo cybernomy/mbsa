@@ -28,7 +28,7 @@ import com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory;
 import com.mg.merp.docprocess.model.DocHeadState;
 
 /**
- * Реализация фабрики реализаций этапа ДО "Бизнес расширение"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїР° Р”Рћ "Р‘РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёРµ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: BAiDocFlowPluginFactory.java,v 1.5 2007/09/27 09:21:55 safonov Exp $

@@ -20,7 +20,7 @@ import javax.ejb.Stateless;
 import com.mg.merp.overall.HistStatusServiceLocal;
 import com.mg.merp.overall.model.HistStatus;
 /**
- * Реализация бизнес-компонента ""
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° ""
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: HistStatusServiceBean.java,v 1.1 2008/06/30 04:19:36 alikaev Exp $

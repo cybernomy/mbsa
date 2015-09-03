@@ -20,7 +20,7 @@ import com.mg.framework.generic.AbstractEntityInterceptor;
 import com.mg.merp.finance.model.FinOperation;
 
 /**
- * Реализация перехватчика для модели финансовой операции
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ РјРѕРґРµР»Рё С„РёРЅР°РЅСЃРѕРІРѕР№ РѕРїРµСЂР°С†РёРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: FinOperEntityInterceptorImpl.java,v 1.2 2007/12/17 09:14:41 safonov Exp $

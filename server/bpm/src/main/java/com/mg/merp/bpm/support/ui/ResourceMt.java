@@ -34,7 +34,7 @@ import com.mg.merp.security.model.Groups;
 import com.mg.merp.security.support.ui.SecGroupSearchHelp;
 
 /**
- * Контроллер формы поддержки ресурсов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЂРµСЃСѓСЂСЃРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ResourceMt.java,v 1.1 2007/05/28 13:05:48 safonov Exp $

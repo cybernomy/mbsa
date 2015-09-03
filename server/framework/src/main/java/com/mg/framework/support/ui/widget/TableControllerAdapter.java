@@ -19,7 +19,7 @@ import java.io.Serializable;
 import com.mg.framework.api.ui.widget.Table;
 
 /**
- * Адаптер таблицы
+ * РђРґР°РїС‚РµСЂ С‚Р°Р±Р»РёС†С‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: TableControllerAdapter.java,v 1.6 2009/02/09 13:43:19 safonov Exp $
@@ -27,30 +27,30 @@ import com.mg.framework.api.ui.widget.Table;
 public interface TableControllerAdapter extends Serializable {
 	
 	/**
-	 * Возвращает модель таблицы
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РјРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹
 	 * 
-	 * @return	модель
+	 * @return	РјРѕРґРµР»СЊ
 	 */
 	TableModel getModel();
 
 	/**
-	 * установка отмеченных рядов
+	 * СѓСЃС‚Р°РЅРѕРІРєР° РѕС‚РјРµС‡РµРЅРЅС‹С… СЂСЏРґРѕРІ
 	 * 
-	 * @param rows отмеченные ряды
+	 * @param rows РѕС‚РјРµС‡РµРЅРЅС‹Рµ СЂСЏРґС‹
 	 */
 	void setSelectedRows(int[] rows);
 	
 	/**
-	 * установка модели колонок
+	 * СѓСЃС‚Р°РЅРѕРІРєР° РјРѕРґРµР»Рё РєРѕР»РѕРЅРѕРє
 	 * 
-	 * @param columns модель колонок
+	 * @param columns РјРѕРґРµР»СЊ РєРѕР»РѕРЅРѕРє
 	 */
 	void setColumns(TableColumnModel[] columns);
 
 	/**
-	 * установка элемента пользовательского интерфейса "Таблица" связанного с данным контроллером
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЌР»РµРјРµРЅС‚Р° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР° "РўР°Р±Р»РёС†Р°" СЃРІСЏР·Р°РЅРЅРѕРіРѕ СЃ РґР°РЅРЅС‹Рј РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРј
 	 * 
-	 * @param table	элемент UI "Таблица"
+	 * @param table	СЌР»РµРјРµРЅС‚ UI "РўР°Р±Р»РёС†Р°"
 	 */
 	void setTable(Table table);
 

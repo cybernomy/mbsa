@@ -23,7 +23,7 @@ import com.mg.merp.factura.FacturaHeadOutServiceLocal;
 import com.mg.merp.factura.FacturaSpecOutServiceLocal;
 
 /**
- * Бизнес-компонент "Спецификация исходящих счет - фактур" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РёСЃС…РѕРґСЏС‰РёС… СЃС‡РµС‚ - С„Р°РєС‚СѓСЂ" 
  * 
  * @author leonova
  * @version $Id: FacturaSpecOutServiceBean.java,v 1.5 2007/02/06 17:01:02 safonov Exp $

@@ -17,7 +17,7 @@ import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 import com.mg.merp.warehouse.model.StockCard;
 
 /**
- * Интерфейс стратегии создания складской партии
+ * РРЅС‚РµСЂС„РµР№СЃ СЃС‚СЂР°С‚РµРіРёРё СЃРѕР·РґР°РЅРёСЏ СЃРєР»Р°РґСЃРєРѕР№ РїР°СЂС‚РёРё
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -26,11 +26,11 @@ import com.mg.merp.warehouse.model.StockCard;
 public interface StockBatchCreateStrategy {
 
 	/**
-	 * Создание складской партии
+	 * РЎРѕР·РґР°РЅРёРµ СЃРєР»Р°РґСЃРєРѕР№ РїР°СЂС‚РёРё
 	 * 
-	 * @param docLineData	данные о спецификации
-	 * @param stockCard КСУ
-	 * @param params параметры этапа документо-оборота
+	 * @param docLineData	РґР°РЅРЅС‹Рµ Рѕ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param stockCard РљРЎРЈ
+	 * @param params РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР° РґРѕРєСѓРјРµРЅС‚Рѕ-РѕР±РѕСЂРѕС‚Р°
 	 */
 	void createStockBatch(WarehouseProcessDocumentLineData docLineData, StockCard stockCard, DocFlowPluginInvokeParams params);
 

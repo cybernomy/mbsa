@@ -17,7 +17,7 @@ package com.mg.merp.reference.support.ui;
 import com.mg.merp.reference.support.ui.UniversalContractorSearchHelp;
 
 /**
- * Поиск контрагента для поля документа, имеющий все три позиции
+ * РџРѕРёСЃРє РєРѕРЅС‚СЂР°РіРµРЅС‚Р° РґР»СЏ РїРѕР»СЏ РґРѕРєСѓРјРµРЅС‚Р°, РёРјРµСЋС‰РёР№ РІСЃРµ С‚СЂРё РїРѕР·РёС†РёРё
  * 
  * @author Anna V. Leonova
  * @version $Id: ContractorSearchHelp.java,v 1.3 2006/12/20 11:53:49 leonova Exp $

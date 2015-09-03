@@ -26,7 +26,7 @@ import com.mg.merp.salary.FeeSummarySpecServiceLocal;
 import com.mg.merp.salary.model.FeeSummarySpec;
 
 /**
- * Контроллер формы поддержки сволов по н/у
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРІРѕР»РѕРІ РїРѕ РЅ/Сѓ
  * 
  * @author leonova
  * @version $Id: FeeSummaryHeadMt.java,v 1.6 2008/12/25 10:21:25 safonov Exp $

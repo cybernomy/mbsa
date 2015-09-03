@@ -17,7 +17,7 @@ package com.mg.merp.manufacture;
 import com.mg.merp.manufacture.model.JobRoute;
 
 /**
- * Бизнес-компонент "Операции ЗНП"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћРїРµСЂР°С†РёРё Р—РќРџ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: JobRouteServiceLocal.java,v 1.4 2007/07/30 10:28:17 safonov Exp $
@@ -26,7 +26,7 @@ public interface JobRouteServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<JobRoute, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/manufacture/JobRoute";
 }

@@ -39,7 +39,7 @@ import com.mg.merp.mfreference.model.BomMaterial;
 import com.mg.merp.mfreference.model.BomRoute;
 
 /**
- * Контроллер формы поддержки состава изделия
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРѕСЃС‚Р°РІР° РёР·РґРµР»РёСЏ
  *
  * @author leonova
  * @version $Id: BOMMt.java,v 1.9 2009/03/06 07:21:44 safonov Exp $

@@ -32,7 +32,7 @@ import com.mg.merp.mfreference.WorkCenterRatesServiceLocal;
 import com.mg.merp.mfreference.model.WorkCenterRates;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Рабочий центр"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р Р°Р±РѕС‡РёР№ С†РµРЅС‚СЂ"
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: WorkCenterMt.java,v 1.5 2008/03/04 11:45:10 alikaev Exp $

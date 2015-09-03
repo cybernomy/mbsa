@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.MilitaryRankServiceLocal;
 import com.mg.merp.personnelref.model.MilitaryRank;
 
 /**
- * Реализация бизнес-компонента "Воинсвие звания" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РѕРёРЅСЃРІРёРµ Р·РІР°РЅРёСЏ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

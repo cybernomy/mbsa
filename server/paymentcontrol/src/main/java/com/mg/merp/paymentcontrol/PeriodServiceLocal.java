@@ -18,7 +18,7 @@ import java.util.List;
 import com.mg.merp.paymentcontrol.model.PmcPeriod;
 
 /**
- * Сервис бизнес-компонента "Периоды планирования"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРµСЂРёРѕРґС‹ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -27,29 +27,29 @@ import com.mg.merp.paymentcontrol.model.PmcPeriod;
 public interface PeriodServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PmcPeriod, Integer> {
 	
 	/**
-	 * локальное имя сервиса
+	 * Р»РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/paymentcontrol/Period"; //$NON-NLS-1$
 
 	/**
-	 * Создать периоды планирования (с заданным интервалом)
-	 * @param isPmcYear - годовой интервал
-	 * @param isPmcHalfYear - полу-годовой интервал
-	 * @param isPmcQuarter - квартальный интервал
-	 * @param isPmcMonth - месячный интервал
-	 * @param isPmcTenDays - интервал декада
-	 * @param isPmcWeek - недельный интервал
-	 * @param isPmcDay - дневной интервал
-	 * @param beginDate - дата начала формирования
-	 * @param upLevelQuantity - количество периодов (верхнего уровня)
-	 * @param Parent - родительский узел
+	 * РЎРѕР·РґР°С‚СЊ РїРµСЂРёРѕРґС‹ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ (СЃ Р·Р°РґР°РЅРЅС‹Рј РёРЅС‚РµСЂРІР°Р»РѕРј)
+	 * @param isPmcYear - РіРѕРґРѕРІРѕР№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcHalfYear - РїРѕР»Сѓ-РіРѕРґРѕРІРѕР№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcQuarter - РєРІР°СЂС‚Р°Р»СЊРЅС‹Р№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcMonth - РјРµСЃСЏС‡РЅС‹Р№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcTenDays - РёРЅС‚РµСЂРІР°Р» РґРµРєР°РґР°
+	 * @param isPmcWeek - РЅРµРґРµР»СЊРЅС‹Р№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcDay - РґРЅРµРІРЅРѕР№ РёРЅС‚РµСЂРІР°Р»
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ
+	 * @param upLevelQuantity - РєРѕР»РёС‡РµСЃС‚РІРѕ РїРµСЂРёРѕРґРѕРІ (РІРµСЂС…РЅРµРіРѕ СѓСЂРѕРІРЅСЏ)
+	 * @param Parent - СЂРѕРґРёС‚РµР»СЊСЃРєРёР№ СѓР·РµР»
 	 */
 	void createPeriods(boolean isPmcYear, boolean isPmcHalfYear, boolean isPmcQuarter, boolean isPmcMonth, boolean isPmcTenDays, boolean isPmcWeek, boolean isPmcDay, java.util.Date beginDate, java.lang.Integer upLevelQuantity, com.mg.merp.paymentcontrol.model.PmcPeriod Parent);
 	
 	/**
-	 * Получить список вложенных периодов планирования (не рекурсивно)
-	 * @param parentPeriod - для периода
-	 * @return список дочерних периодов
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РІР»РѕР¶РµРЅРЅС‹С… РїРµСЂРёРѕРґРѕРІ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ (РЅРµ СЂРµРєСѓСЂСЃРёРІРЅРѕ)
+	 * @param parentPeriod - РґР»СЏ РїРµСЂРёРѕРґР°
+	 * @return СЃРїРёСЃРѕРє РґРѕС‡РµСЂРЅРёС… РїРµСЂРёРѕРґРѕРІ
 	 */
 	List<PmcPeriod> getNestedPeriods(PmcPeriod parentPeriod);
 

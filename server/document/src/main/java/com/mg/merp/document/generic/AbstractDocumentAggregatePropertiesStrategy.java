@@ -17,7 +17,7 @@ package com.mg.merp.document.generic;
 import com.mg.merp.document.DocumentAggregatePropertiesStrategy;
 
 /**
- * Базовая реализация стратегии изменения агрегирующих свойств документа
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё РёР·РјРµРЅРµРЅРёСЏ Р°РіСЂРµРіРёСЂСѓСЋС‰РёС… СЃРІРѕР№СЃС‚РІ РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractDocumentAggregatePropertiesStrategy.java,v 1.1 2007/09/26 09:39:01 safonov Exp $
@@ -26,7 +26,7 @@ public abstract class AbstractDocumentAggregatePropertiesStrategy implements
 		DocumentAggregatePropertiesStrategy {
 
 	/**
-	 * реализация вычисления
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РІС‹С‡РёСЃР»РµРЅРёСЏ
 	 */
 	protected abstract void doCalculate();
 	

@@ -52,7 +52,7 @@ import com.mg.merp.reference.model.PriceListSpecPriceId;
 import com.mg.merp.reference.model.PriceType;
 
 /**
- * Контроллер браузера спецификаций прайс-листов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° СЃРїРµС†РёС„РёРєР°С†РёР№ РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -176,7 +176,7 @@ public class PriceListSpecBr extends DefaultHierarchyBrowseForm implements Maste
 				result.add(new TableEJBQLFieldDef(PriceListSpec.class, "SName", "pls.SName", false)); //$NON-NLS-1$ //$NON-NLS-2$
 				result.add(new TableEJBQLFieldDef(PriceListSpec.class, "Canceled", "pls.Canceled", false)); //$NON-NLS-1$ //$NON-NLS-2$
 				result.add(new TableEJBQLFieldDef(PriceListSpec.class, "ActDate", "pls.ActDate", false)); //$NON-NLS-1$ //$NON-NLS-2$
-				//comment by OVS, свойство не предназначено для UI
+				//comment by OVS, СЃРІРѕР№СЃС‚РІРѕ РЅРµ РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅРѕ РґР»СЏ UI
 				//result.add(new TableEJBQLFieldDef(PriceListSpec.class, "ActDateTill", "pls.ActDateTill", false)); //$NON-NLS-1$ //$NON-NLS-2$
 				result.add(new TableEJBQLFieldDef(PriceListSpec.class, "InternalCode", "pls.InternalCode", false));	//$NON-NLS-1$ //$NON-NLS-2$
 				return DatabaseUtils.embedAddinFieldsDefaultEJBQLFieldDefs(result, service);
@@ -227,8 +227,8 @@ public class PriceListSpecBr extends DefaultHierarchyBrowseForm implements Maste
 	}
 
 	/**
-	 * Обработчик пункта КМ "Пересчитать цены"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџРµСЂРµСЃС‡РёС‚Р°С‚СЊ С†РµРЅС‹"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionCalculatePrice(WidgetEvent event) {
 		PersistentObject[] searchedEntities = getSearchedEntities();
@@ -241,9 +241,9 @@ public class PriceListSpecBr extends DefaultHierarchyBrowseForm implements Maste
 	}
 
 	/**
-	 * Обработчик пункта КМ "Добавить из каталога"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "Р”РѕР±Р°РІРёС‚СЊ РёР· РєР°С‚Р°Р»РѕРіР°"
 	 * 
-	 * @param event - событие
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionAddFromCatalog(WidgetEvent event) {
 		SearchHelp catalogSearchHelp = SearchHelpProcessor.createSearch("com.mg.merp.reference.support.ui.CatalogSearchHelp");
@@ -267,9 +267,9 @@ public class PriceListSpecBr extends DefaultHierarchyBrowseForm implements Maste
 	}
 
 	/**
-	 * Обработчик пункта КМ "Добавить из каталога"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "Р”РѕР±Р°РІРёС‚СЊ РёР· РєР°С‚Р°Р»РѕРіР°"
 	 * 
-	 * @param event - событие
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionAddFromCatalogFolder(WidgetEvent event) {
 		SearchHelp catalogFolderSearchHelp = SearchHelpProcessor.createSearch("com.mg.merp.reference.support.ui.CatalogFolderSearchHelp");

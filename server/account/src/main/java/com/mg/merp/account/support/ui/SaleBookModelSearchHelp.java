@@ -21,7 +21,7 @@ import com.mg.framework.generic.ui.AbstractSearchHelp;
 import com.mg.merp.account.model.SaleBook;
 
 /**
- * Механизм поиска образцов "Книги продаж"
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ "РљРЅРёРіРё РїСЂРѕРґР°Р¶"
  * 
  * @author Artem V. Sharapov
  * @version $Id: SaleBookModelSearchHelp.java,v 1.1 2009/03/16 14:27:22 sharapov Exp $

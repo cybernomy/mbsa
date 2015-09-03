@@ -32,7 +32,7 @@ import com.mg.merp.docflow.support.DocFlowPluginFactoryManagerServiceLocator;
 import com.mg.merp.docprocess.model.DocHeadState;
 
 /**
- * Модель для отображения истории выполнения этапа ДО
+ * РњРѕРґРµР»СЊ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РёСЃС‚РѕСЂРёРё РІС‹РїРѕР»РЅРµРЅРёСЏ СЌС‚Р°РїР° Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocActionHistoryController.java,v 1.4 2008/04/18 08:41:52 safonov Exp $
@@ -44,7 +44,7 @@ public class DocActionHistoryController extends AbstractTableModel {
 	protected List<DocHeadState> statesModel;
 
 	public DocFlowPlugin getDocFlowPlugin(DocHeadState docHeadState) {
-		//если Stage == null то это не этап ДО
+		//РµСЃР»Рё Stage == null С‚Рѕ СЌС‚Рѕ РЅРµ СЌС‚Р°Рї Р”Рћ
 		if (docHeadState.getDocAction().getStage() == null)
 			return null;
 
@@ -60,7 +60,7 @@ public class DocActionHistoryController extends AbstractTableModel {
 			}
 			catch (PluginNotImplementedException e) {
 				logger.debug("Plug-in implementation not found", e);
-				//если нет реализации то ничего не далаем
+				//РµСЃР»Рё РЅРµС‚ СЂРµР°Р»РёР·Р°С†РёРё С‚Рѕ РЅРёС‡РµРіРѕ РЅРµ РґР°Р»Р°РµРј
 			}
 		}
 		return result;

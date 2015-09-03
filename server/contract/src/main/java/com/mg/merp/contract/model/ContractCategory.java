@@ -20,7 +20,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.service.PersistentObjectHibernate;
 
 /**
- * Бизнес-компонент "Категория договора"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљР°С‚РµРіРѕСЂРёСЏ РґРѕРіРѕРІРѕСЂР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ContractCategory.java,v 1.1 2007/09/17 12:15:48 alikaev Exp $

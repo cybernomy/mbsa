@@ -40,7 +40,7 @@ import com.mg.merp.warehouse.support.DefaultBinLocationProccessStrategy;
 import com.mg.merp.warehouse.support.DefaultSerialNumberProccessStrategy;
 
 /**
- * Стратегия отката этапа ДО "Отработка по складу"
+ * РЎС‚СЂР°С‚РµРіРёСЏ РѕС‚РєР°С‚Р° СЌС‚Р°РїР° Р”Рћ "РћС‚СЂР°Р±РѕС‚РєР° РїРѕ СЃРєР»Р°РґСѓ"
  * 
  * @author Valentin A. Poroxnenko
  * @author Artem V. Sharapov
@@ -63,7 +63,7 @@ public class WarehouseRollbackFactStrategy implements WarehouseRollbackStrategy 
 		
 		PersistentManager pm = ServerUtils.getPersistentManager();
 		StockBatchHistory history = pm.find(StockBatchHistory.class, historyId);
-		// отсутствует история, откат невозможен
+		// РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РёСЃС‚РѕСЂРёСЏ, РѕС‚РєР°С‚ РЅРµРІРѕР·РјРѕР¶РµРЅ
 		if (history == null)
 			throw new HistoryNotFoundException();
 		switch (history.getKind()) {
@@ -77,10 +77,10 @@ public class WarehouseRollbackFactStrategy implements WarehouseRollbackStrategy 
 	}
 	
 	/**
-	 * Откат списания
+	 * РћС‚РєР°С‚ СЃРїРёСЃР°РЅРёСЏ
 	 * 
 	 * @param historyList
-	 *            список истории партии
+	 *            СЃРїРёСЃРѕРє РёСЃС‚РѕСЂРёРё РїР°СЂС‚РёРё
 	 */
 	protected void rollbackIssue(StockBatchHistory history) {
 		if (history == null)
@@ -112,10 +112,10 @@ public class WarehouseRollbackFactStrategy implements WarehouseRollbackStrategy 
 	}
 
 	/**
-	 * Откат прихода
+	 * РћС‚РєР°С‚ РїСЂРёС…РѕРґР°
 	 * 
 	 * @param historyList
-	 *            список истории партии
+	 *            СЃРїРёСЃРѕРє РёСЃС‚РѕСЂРёРё РїР°СЂС‚РёРё
 	 */
 	protected void rollbackReceipt(StockBatchHistory history) {
 		if (history == null)
@@ -137,10 +137,10 @@ public class WarehouseRollbackFactStrategy implements WarehouseRollbackStrategy 
 			issueQuan = BigDecimal.ZERO;
 		switch (stockBatch.getBeginQuan().subtract(q1).compareTo(issueQuan)) {
 		case -1:
-			//списаний больше чем останется в партии после отката данной истории
+			//СЃРїРёСЃР°РЅРёР№ Р±РѕР»СЊС€Рµ С‡РµРј РѕСЃС‚Р°РЅРµС‚СЃСЏ РІ РїР°СЂС‚РёРё РїРѕСЃР»Рµ РѕС‚РєР°С‚Р° РґР°РЅРЅРѕР№ РёСЃС‚РѕСЂРёРё
 			throw new BatchNotAliveException();
 		case 0:
-			//это последняя история в партии и на ней нет списаний
+			//СЌС‚Рѕ РїРѕСЃР»РµРґРЅСЏСЏ РёСЃС‚РѕСЂРёСЏ РІ РїР°СЂС‚РёРё Рё РЅР° РЅРµР№ РЅРµС‚ СЃРїРёСЃР°РЅРёР№
 			wbhServ.erase(history);
 			wbServ.erase(stockBatch);
 			stockCard.setQuantity(MathUtils.subtractNullable(stockCard.getQuantity(), q1, Constants.QUANTITY_ROUND_CONTEXT_EXT));
@@ -148,7 +148,7 @@ public class WarehouseRollbackFactStrategy implements WarehouseRollbackStrategy 
 			wcServ.store(stockCard);
 			break;
 		case 1:
-			//у партии есть истории, просто меняем количество
+			//Сѓ РїР°СЂС‚РёРё РµСЃС‚СЊ РёСЃС‚РѕСЂРёРё, РїСЂРѕСЃС‚Рѕ РјРµРЅСЏРµРј РєРѕР»РёС‡РµСЃС‚РІРѕ
 			stockBatch.setBeginQuan(MathUtils.subtractNullable(stockBatch.getBeginQuan(), q1, Constants.QUANTITY_ROUND_CONTEXT_EXT));
 			stockBatch.setBeginQuan2(MathUtils.subtractNullable(stockBatch.getBeginQuan2(), q2, Constants.QUANTITY_ROUND_CONTEXT_EXT));
 			stockBatch.setEndQuan(MathUtils.subtractNullable(stockBatch.getEndQuan(), q1, Constants.QUANTITY_ROUND_CONTEXT_EXT));

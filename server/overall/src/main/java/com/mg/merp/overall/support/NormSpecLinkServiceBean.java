@@ -21,7 +21,7 @@ import com.mg.merp.overall.NormSpecLinkServiceLocal;
 import com.mg.merp.overall.model.NormSpecLink;
 
 /**
- * Реализация бизнес-компонента "Связь спецификаций норм выдачи и КТУ"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРІСЏР·СЊ СЃРїРµС†РёС„РёРєР°С†РёР№ РЅРѕСЂРј РІС‹РґР°С‡Рё Рё РљРўРЈ"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: NormSpecLinkServiceBean.java,v 1.1 2008/06/30 04:19:36 alikaev Exp $

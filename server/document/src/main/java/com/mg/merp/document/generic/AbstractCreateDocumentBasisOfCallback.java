@@ -20,7 +20,7 @@ import com.mg.merp.document.model.DocHeadModel;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * Базовая реализация объекта обратного вызова для перехвата обработки создания документа
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РѕР±СЉРµРєС‚Р° РѕР±СЂР°С‚РЅРѕРіРѕ РІС‹Р·РѕРІР° РґР»СЏ РїРµСЂРµС…РІР°С‚Р° РѕР±СЂР°Р±РѕС‚РєРё СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractCreateDocumentBasisOfCallback.java,v 1.1 2007/09/28 12:04:20 safonov Exp $
@@ -29,22 +29,22 @@ public abstract class AbstractCreateDocumentBasisOfCallback implements
 		CreateDocumentBasisOfCallback {
 
 	/**
-	 * реализация обработки документа
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РѕР±СЂР°Р±РѕС‚РєРё РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param dstDoc	создаваемый документ
-	 * @param srcDoc	документа источник
+	 * @param dstDoc	СЃРѕР·РґР°РІР°РµРјС‹Р№ РґРѕРєСѓРјРµРЅС‚
+	 * @param srcDoc	РґРѕРєСѓРјРµРЅС‚Р° РёСЃС‚РѕС‡РЅРёРє
 	 * @param pattern
 	 */
 	protected abstract void doProcessDocumentHead(DocHead dstDoc, DocHead srcDoc,
 			DocHeadModel pattern);
 	
 	/**
-	 * реализация обработки спецификации документа
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РѕР±СЂР°Р±РѕС‚РєРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param dstDoc	создаваемый документ
-	 * @param srcDoc	документа источник
-	 * @param dstDocSpec	создаваемая спецификация документа
-	 * @param srcDocSpec	спецификация документа источника
+	 * @param dstDoc	СЃРѕР·РґР°РІР°РµРјС‹Р№ РґРѕРєСѓРјРµРЅС‚
+	 * @param srcDoc	РґРѕРєСѓРјРµРЅС‚Р° РёСЃС‚РѕС‡РЅРёРє
+	 * @param dstDocSpec	СЃРѕР·РґР°РІР°РµРјР°СЏ СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param srcDocSpec	СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р° РёСЃС‚РѕС‡РЅРёРєР°
 	 */
 	protected abstract void doProcessDocumentSpec(DocHead dstDoc, DocHead srcDoc,
 			DocSpec dstDocSpec, DocSpec srcDocSpec);

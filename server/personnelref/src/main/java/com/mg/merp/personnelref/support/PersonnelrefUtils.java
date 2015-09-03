@@ -22,7 +22,7 @@ import com.mg.framework.utils.DateTimeUtils;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Утилиты модуля "Справочник персонала"
+ * РЈС‚РёР»РёС‚С‹ РјРѕРґСѓР»СЏ "РЎРїСЂР°РІРѕС‡РЅРёРє РїРµСЂСЃРѕРЅР°Р»Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PersonnelrefUtils.java,v 1.2 2007/08/22 08:24:20 sharapov Exp $
@@ -30,7 +30,7 @@ import com.mg.framework.utils.ServerUtils;
 public class PersonnelrefUtils {
 
 	/**
-	 * Среднее количество дней в году
+	 * РЎСЂРµРґРЅРµРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№ РІ РіРѕРґСѓ
 	 */
 	private final static double AVERAGE_DAYS_IN_YEAR = 365.25;
 	
@@ -39,8 +39,8 @@ public class PersonnelrefUtils {
 
 
 	/**
-	 * Проверить даты начала и окончания интервала на null и заменить null-значение максимальной и минимальной датой соответственно 
-	 * @param entity - проверяемая сущность
+	 * РџСЂРѕРІРµСЂРёС‚СЊ РґР°С‚С‹ РЅР°С‡Р°Р»Р° Рё РѕРєРѕРЅС‡Р°РЅРёСЏ РёРЅС‚РµСЂРІР°Р»Р° РЅР° null Рё Р·Р°РјРµРЅРёС‚СЊ null-Р·РЅР°С‡РµРЅРёРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕР№ Рё РјРёРЅРёРјР°Р»СЊРЅРѕР№ РґР°С‚РѕР№ СЃРѕРѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕ 
+	 * @param entity - РїСЂРѕРІРµСЂСЏРµРјР°СЏ СЃСѓС‰РЅРѕСЃС‚СЊ
 	 */
 	public static void checkDateInterval(PersistentObject entity) {
 		if(entity.hasAttribute(BEGIN_DATE)) {
@@ -57,18 +57,18 @@ public class PersonnelrefUtils {
 	}
 	
 	/**
-	 * Получить максимальную дату из списка дат
-	 * @param dates - список дат
-	 * @return максимальная дата
+	 * РџРѕР»СѓС‡РёС‚СЊ РјР°РєСЃРёРјР°Р»СЊРЅСѓСЋ РґР°С‚Сѓ РёР· СЃРїРёСЃРєР° РґР°С‚
+	 * @param dates - СЃРїРёСЃРѕРє РґР°С‚
+	 * @return РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґР°С‚Р°
 	 */
 	public static Date getMaxDate(Date ... dates) {
 		return getMinOrMaxDate(true, dates);
 	}
 	
 	/**
-	 * Получить минимальную дату из списка дат
-	 * @param dates - список дат
-	 * @return минимальная дата
+	 * РџРѕР»СѓС‡РёС‚СЊ РјРёРЅРёРјР°Р»СЊРЅСѓСЋ РґР°С‚Сѓ РёР· СЃРїРёСЃРєР° РґР°С‚
+	 * @param dates - СЃРїРёСЃРѕРє РґР°С‚
+	 * @return РјРёРЅРёРјР°Р»СЊРЅР°СЏ РґР°С‚Р°
 	 */
 	public static Date getMinDate(Date ... dates) {
 		return getMinOrMaxDate(false, dates);
@@ -98,20 +98,20 @@ public class PersonnelrefUtils {
 	}
 	
 	/**
-	 * Получить разницу (количество дней) между годами
+	 * РџРѕР»СѓС‡РёС‚СЊ СЂР°Р·РЅРёС†Сѓ (РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№) РјРµР¶РґСѓ РіРѕРґР°РјРё
 	 * @param dateTill
 	 * @param dateFrom
-	 * @return разница(количество дней) между годами
+	 * @return СЂР°Р·РЅРёС†Р°(РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№) РјРµР¶РґСѓ РіРѕРґР°РјРё
 	 */
 	public static double getYearSpan(Date dateTill, Date dateFrom) {
 		return DateTimeUtils.getDaysBetween(dateTill, dateFrom) / AVERAGE_DAYS_IN_YEAR;
 	}
 	
 	/**
-	 * Получить количество выходных дней(суббот и воскресений) за период
-	 * @param beginDate - дата начала периода
-	 * @param endDate - дата окончания периода
-	 * @return количество выходных дней(суббот и воскресений) за период
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РІС‹С…РѕРґРЅС‹С… РґРЅРµР№(СЃСѓР±Р±РѕС‚ Рё РІРѕСЃРєСЂРµСЃРµРЅРёР№) Р·Р° РїРµСЂРёРѕРґ
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРµСЂРёРѕРґР°
+	 * @param endDate - РґР°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРёРѕРґР°
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РІС‹С…РѕРґРЅС‹С… РґРЅРµР№(СЃСѓР±Р±РѕС‚ Рё РІРѕСЃРєСЂРµСЃРµРЅРёР№) Р·Р° РїРµСЂРёРѕРґ
 	 */
 	public static int getWeekendCount(Date beginDate, Date endDate) {
 		int weekendCount = 0;
@@ -125,8 +125,8 @@ public class PersonnelrefUtils {
 	}
 
 	/**
-	 * @param date - дата
-	 * @return true - если выходной(суббота, воскресенье); false - если будний день
+	 * @param date - РґР°С‚Р°
+	 * @return true - РµСЃР»Рё РІС‹С…РѕРґРЅРѕР№(СЃСѓР±Р±РѕС‚Р°, РІРѕСЃРєСЂРµСЃРµРЅСЊРµ); false - РµСЃР»Рё Р±СѓРґРЅРёР№ РґРµРЅСЊ
 	 */
 	public static boolean isWeekend(Date date) {
 		Calendar calendar = Calendar.getInstance(ServerUtils.getUserLocale());

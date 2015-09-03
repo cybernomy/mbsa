@@ -20,7 +20,7 @@ import com.mg.merp.warehouse.model.BinLocation;
 import com.mg.merp.warehouse.model.StockBatch;
 
 /**
- * Бизнес-компонент "Cекции хранения на складах"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "CРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ РЅР° СЃРєР»Р°РґР°С…"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -29,24 +29,24 @@ import com.mg.merp.warehouse.model.StockBatch;
 public interface BinLocationServiceLocal extends com.mg.framework.api.DataBusinessObjectService<BinLocation, Integer> {
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/warehouse/BinLocation";
 	
 	/**
-	 * Тип движения: приход
+	 * РўРёРї РґРІРёР¶РµРЅРёСЏ: РїСЂРёС…РѕРґ
 	 */
 	static final short RECEIPT_KIND = 0;
 	
 	/**
-	 * Тип движения: расход
+	 * РўРёРї РґРІРёР¶РµРЅРёСЏ: СЂР°СЃС…РѕРґ
 	 */
 	static final short ISSUE_KIND = 1; 
 	
 	/**
-	 * Получить список секций хранения в партии
-	 * @param stockBatch - партия
-	 * @return список секций хранения в партии
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ РІ РїР°СЂС‚РёРё
+	 * @param stockBatch - РїР°СЂС‚РёСЏ
+	 * @return СЃРїРёСЃРѕРє СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ РІ РїР°СЂС‚РёРё
 	 */
 	List<BinLocationDetailData> getBinLocationDetails(StockBatch stockBatch);
 	

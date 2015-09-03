@@ -24,7 +24,7 @@ import com.mg.framework.api.BusinessObjectService;
 public interface DocumentProcessorServiceLocal extends BusinessObjectService, DocumentProcessor{
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/document/DocumentProcessor";
 

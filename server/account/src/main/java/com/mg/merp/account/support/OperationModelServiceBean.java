@@ -30,7 +30,7 @@ import com.mg.merp.account.model.EconomicOperModel;
 import com.mg.merp.account.model.EconomicSpecModel;
 
 /**
- * Реализация бизнес-компонента "Образцы хозяйственных операций" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·С†С‹ С…РѕР·СЏР№СЃС‚РІРµРЅРЅС‹С… РѕРїРµСЂР°С†РёР№" 
  * 
  * @author leonova
  * @version $Id: OperationModelServiceBean.java,v 1.5 2007/11/08 07:05:47 sharapov Exp $

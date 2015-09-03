@@ -23,7 +23,7 @@ import com.mg.merp.warehouse.InvoiceSpecInServiceLocal;
 import com.mg.merp.warehouse.model.InvoiceSpec;
 
 /**
- * Бизнес-компонент "Спецификация входящих накладных" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РІС…РѕРґСЏС‰РёС… РЅР°РєР»Р°РґРЅС‹С…" 
  * 
  * @author leonova
  * @version $Id: InvoiceSpecInServiceBean.java,v 1.6 2008/12/01 09:37:57 safonov Exp $

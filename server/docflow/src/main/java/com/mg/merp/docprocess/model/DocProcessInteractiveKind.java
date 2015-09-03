@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип интерактивности выполнения ДО
+ * РўРёРї РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕСЃС‚Рё РІС‹РїРѕР»РЅРµРЅРёСЏ Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocProcessInteractiveKind.java,v 1.1 2006/08/25 12:00:47 safonov Exp $
@@ -27,19 +27,19 @@ import com.mg.framework.api.annotations.EnumConstantText;
 public enum DocProcessInteractiveKind {
 	
 	/**
-	 * стандартный, выполняется в зависимости от настроек ДО
+	 * СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№, РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РЅР°СЃС‚СЂРѕРµРє Р”Рћ
 	 */
 	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#InteractiveKind.Standart")
 	STANDART,
 	
 	/**
-	 * тихий, не производит интерактивного взаимодействия с пользователем
+	 * С‚РёС…РёР№, РЅРµ РїСЂРѕРёР·РІРѕРґРёС‚ РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕРіРѕ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј
 	 */
 	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#InteractiveKind.Silent")
 	SILENT,
 	
 	/**
-	 * унаследованный, параметры наследуются из ДО родителя
+	 * СѓРЅР°СЃР»РµРґРѕРІР°РЅРЅС‹Р№, РїР°СЂР°РјРµС‚СЂС‹ РЅР°СЃР»РµРґСѓСЋС‚СЃСЏ РёР· Р”Рћ СЂРѕРґРёС‚РµР»СЏ
 	 */
 	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#InteractiveKind.Inherited")
 	INHERITED

@@ -25,7 +25,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.CatalogFolder;
 
 /**
- * Контроллер папок каталога
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РїР°РїРѕРє РєР°С‚Р°Р»РѕРіР°
  * 
  * @author leonova
  * @version $Id: CatalogFolderBr.java,v 1.5 2007/11/08 16:32:39 safonov Exp $

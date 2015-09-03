@@ -30,7 +30,7 @@ import com.mg.merp.report.generic.ReportBusinessAddin;
 import com.mg.merp.wb.report.birt.data.oda.badi.util.Constants;
 
 /**
- * Реализация интерфейса {@link RptBAiStarter}
+ * Р РµР°Р»РёР·Р°С†РёСЏ РёРЅС‚РµСЂС„РµР№СЃР° {@link RptBAiStarter}
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -40,7 +40,7 @@ public class RptBAiStarterImpl implements RptBAiStarter {
 	private DataSet dataSet;
 	
 	/**
-	 * Класс-слушатель для алгоритмов {@link ReportBusinessAddin}
+	 * РљР»Р°СЃСЃ-СЃР»СѓС€Р°С‚РµР»СЊ РґР»СЏ Р°Р»РіРѕСЂРёС‚РјРѕРІ {@link ReportBusinessAddin}
 	 */
 	class ReportBAiListener implements BusinessAddinListener<DataSet> {
 		
@@ -61,11 +61,11 @@ public class RptBAiStarterImpl implements RptBAiStarter {
 	public void perform(String code, Map<String, Object> params) {
 		TransactionManager tm = ServerUtils.getTransactionManager();
 		try {
-			//если не установлена текущая сессия, то пытаемся установить сессию из контекста
+			//РµСЃР»Рё РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅР° С‚РµРєСѓС‰Р°СЏ СЃРµСЃСЃРёСЏ, С‚Рѕ РїС‹С‚Р°РµРјСЃСЏ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРµСЃСЃРёСЋ РёР· РєРѕРЅС‚РµРєСЃС‚Р°
 			boolean isSessionOwner = ServerUtils.getCurrentSession() == null;
 			if (isSessionOwner)
 				SessionControlImpl.getSingleton().setCurrentSession((Session) params.get(Constants.CURRENT_SESSION_PARAM));
-			//стартуем транзакцию если нет текущей
+			//СЃС‚Р°СЂС‚СѓРµРј С‚СЂР°РЅР·Р°РєС†РёСЋ РµСЃР»Рё РЅРµС‚ С‚РµРєСѓС‰РµР№
 			boolean startTran = tm.getTransaction() == null;
 			if (startTran)
 				tm.begin();
@@ -73,10 +73,10 @@ public class RptBAiStarterImpl implements RptBAiStarter {
 				ReportBAiListener rbl = new ReportBAiListener();
 				BusinessAddinEngineLocator.locate().perform(code, params, rbl);
 			} finally {
-				//сбросим сессию если устанавливали ее из контекста
+				//СЃР±СЂРѕСЃРёРј СЃРµСЃСЃРёСЋ РµСЃР»Рё СѓСЃС‚Р°РЅР°РІР»РёРІР°Р»Рё РµРµ РёР· РєРѕРЅС‚РµРєСЃС‚Р°
 				if (isSessionOwner)
 					SessionControlImpl.getSingleton().setCurrentSession(null);
-				//завершаем транзакцию если стартовали
+				//Р·Р°РІРµСЂС€Р°РµРј С‚СЂР°РЅР·Р°РєС†РёСЋ РµСЃР»Рё СЃС‚Р°СЂС‚РѕРІР°Р»Рё
 				if (startTran)
 					tm.commit();
 			}

@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.personnelref.model.Street;
 
 /**
- * Браузер улиц
+ * Р‘СЂР°СѓР·РµСЂ СѓР»РёС†
  * 
  * @author leonova
  * @version $Id: StreetBr.java,v 1.1 2006/09/06 12:48:51 leonova Exp $ 

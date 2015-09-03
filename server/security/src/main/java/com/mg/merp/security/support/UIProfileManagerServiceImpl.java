@@ -27,7 +27,7 @@ import com.mg.merp.security.model.SecUserProfile;
 import com.mg.merp.security.model.SecUserProfileItem;
 
 /**
- * Реализация менеджера профилей пользовательского интерфейса
+ * Р РµР°Р»РёР·Р°С†РёСЏ РјРµРЅРµРґР¶РµСЂР° РїСЂРѕС„РёР»РµР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: UIProfileManagerServiceImpl.java,v 1.2 2007/03/13 16:49:20 safonov Exp $
@@ -35,11 +35,11 @@ import com.mg.merp.security.model.SecUserProfileItem;
 public class UIProfileManagerServiceImpl implements UIProfileManager {
 	//private static final short DELPHI_UI = 0;
 	/**
-	 * тип профиля для интерфейса на базе ULC
+	 * С‚РёРї РїСЂРѕС„РёР»СЏ РґР»СЏ РёРЅС‚РµСЂС„РµР№СЃР° РЅР° Р±Р°Р·Рµ ULC
 	 */
 	private static final short ULC_UI = 1;
 	/**
-	 * имя атрибута сессии хранящего заголовок профилей данного пользователя
+	 * РёРјСЏ Р°С‚СЂРёР±СѓС‚Р° СЃРµСЃСЃРёРё С…СЂР°РЅСЏС‰РµРіРѕ Р·Р°РіРѕР»РѕРІРѕРє РїСЂРѕС„РёР»РµР№ РґР°РЅРЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 */
 	private static final String UI_PROFILE_ATTR = "MG_UI_PROFILE";
 
@@ -52,36 +52,36 @@ public class UIProfileManagerServiceImpl implements UIProfileManager {
 	
 	private void doStore(UIProfile profile) {
 		try {
-			//в некоторых ситуациях транзакция может стать не активной до закрытия форм, как правило профиль сохраняется именно в этот момент,
-			//т.о. исключаем ИС, однако не будет сохранен профиль, даже если были в нем изменения, это фича
+			//РІ РЅРµРєРѕС‚РѕСЂС‹С… СЃРёС‚СѓР°С†РёСЏС… С‚СЂР°РЅР·Р°РєС†РёСЏ РјРѕР¶РµС‚ СЃС‚Р°С‚СЊ РЅРµ Р°РєС‚РёРІРЅРѕР№ РґРѕ Р·Р°РєСЂС‹С‚РёСЏ С„РѕСЂРј, РєР°Рє РїСЂР°РІРёР»Рѕ РїСЂРѕС„РёР»СЊ СЃРѕС…СЂР°РЅСЏРµС‚СЃСЏ РёРјРµРЅРЅРѕ РІ СЌС‚РѕС‚ РјРѕРјРµРЅС‚,
+			//С‚.Рѕ. РёСЃРєР»СЋС‡Р°РµРј РРЎ, РѕРґРЅР°РєРѕ РЅРµ Р±СѓРґРµС‚ СЃРѕС…СЂР°РЅРµРЅ РїСЂРѕС„РёР»СЊ, РґР°Р¶Рµ РµСЃР»Рё Р±С‹Р»Рё РІ РЅРµРј РёР·РјРµРЅРµРЅРёСЏ, СЌС‚Рѕ С„РёС‡Р°
 			if (ServerUtils.getTransactionManager().getStatus() != Status.STATUS_ACTIVE)
 				return;
 		} catch (SystemException e) {
 			//ignore
 		}
 		SecUserProfileItem item = ((UIProfilePropertiesImpl) profile).getUserProfileItem();
-		//возможно новый элемент, установим связь с UI профилем пользователя
+		//РІРѕР·РјРѕР¶РЅРѕ РЅРѕРІС‹Р№ СЌР»РµРјРµРЅС‚, СѓСЃС‚Р°РЅРѕРІРёРј СЃРІСЏР·СЊ СЃ UI РїСЂРѕС„РёР»РµРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 		if (item.getProfile() == null)
 			item.setProfile(getUserProfile());
-		//сохранем только измененный
+		//СЃРѕС…СЂР°РЅРµРј С‚РѕР»СЊРєРѕ РёР·РјРµРЅРµРЅРЅС‹Р№
 		if (((UIProfilePropertiesImpl) profile).isDirty())
 			ServerUtils.getPersistentManager().merge(item);
 	}
 	
 	/**
-	 * загрузить заголовок профилей
+	 * Р·Р°РіСЂСѓР·РёС‚СЊ Р·Р°РіРѕР»РѕРІРѕРє РїСЂРѕС„РёР»РµР№
 	 * 
-	 * @return	заголовок
+	 * @return	Р·Р°РіРѕР»РѕРІРѕРє
 	 */
 	private SecUserProfile getUserProfile() {
 		SecUserProfile userProfile = (SecUserProfile) ServerUtils.getCurrentSession().getAttribute(UI_PROFILE_ATTR);
-		//если нет в сессии, то грузим
+		//РµСЃР»Рё РЅРµС‚ РІ СЃРµСЃСЃРёРё, С‚Рѕ РіСЂСѓР·РёРј
 		if (userProfile == null) {
 			userProfile = OrmTemplate.getInstance().findUniqueByCriteria(OrmTemplate.createCriteria(SecUserProfile.class, "p")
 					.createAlias("p.User", "u")
 					.add(Restrictions.eq("p.ProfileType", ULC_UI))
 					.add(Restrictions.eq("u.Id", ServerUtils.getUserProfile().getIdentificator())));
-			//не был создан для текущего пользователя
+			//РЅРµ Р±С‹Р» СЃРѕР·РґР°РЅ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 			if (userProfile == null) {
 				userProfile = createUserProfile();
 			}
@@ -91,9 +91,9 @@ public class UIProfileManagerServiceImpl implements UIProfileManager {
 	}
 	
 	/**
-	 * создание заголовка профиля
+	 * СЃРѕР·РґР°РЅРёРµ Р·Р°РіРѕР»РѕРІРєР° РїСЂРѕС„РёР»СЏ
 	 * 
-	 * @return	заголовок
+	 * @return	Р·Р°РіРѕР»РѕРІРѕРє
 	 */
 	private SecUserProfile createUserProfile() {
 		SecUserProfile result = new SecUserProfile();

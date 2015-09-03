@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.WorkConditionServiceLocal;
 import com.mg.merp.personnelref.model.WorkCondition;
 
 /**
- * Бизнес-компонент "Условия труда" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЈСЃР»РѕРІРёСЏ С‚СЂСѓРґР°" 
  * 
  * @author leonova
  * @version $Id: WorkConditionServiceBean.java,v 1.4 2006/09/04 13:02:21 leonova Exp $

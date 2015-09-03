@@ -133,7 +133,7 @@ public class BinLocationBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * показать форму
+	 * РїРѕРєР°Р·Р°С‚СЊ С„РѕСЂРјСѓ
 	 * 
 	 * @param warehouseId
 	 */

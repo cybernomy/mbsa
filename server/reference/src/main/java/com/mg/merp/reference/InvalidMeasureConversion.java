@@ -20,7 +20,7 @@ import com.mg.framework.api.BusinessException;
 import com.mg.merp.reference.support.Messages;
 
 /**
- * ИС преобразования ЕИ, генерируется при возниконовении ошибок преобразования ЕИ
+ * РРЎ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ Р•Р, РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РїСЂРё РІРѕР·РЅРёРєРѕРЅРѕРІРµРЅРёРё РѕС€РёР±РѕРє РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ Р•Р
  * 
  * @author Oleg V. Safonov
  * @version $Id: InvalidMeasureConversion.java,v 1.3 2007/06/20 13:55:07 safonov Exp $

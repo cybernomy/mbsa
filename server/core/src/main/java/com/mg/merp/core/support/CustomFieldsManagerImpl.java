@@ -48,7 +48,7 @@ import com.mg.merp.core.FeatureValServiceLocal;
 import com.mg.merp.core.model.DataKind;
 
 /**
- * Реализация менеджера управления пользовательскими полями
+ * Р РµР°Р»РёР·Р°С†РёСЏ РјРµРЅРµРґР¶РµСЂР° СѓРїСЂР°РІР»РµРЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРјРё РїРѕР»СЏРјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomFieldsManagerImpl.java,v 1.5 2008/12/23 09:43:37 safonov Exp $
@@ -101,10 +101,10 @@ public class CustomFieldsManagerImpl implements CustomFieldsManager {
 	private String generateWidgetId(String code, boolean sameLine, int index) {
 		StringBuilder sb = new StringBuilder(Widget.WIDGET_ID).append("=\"").append(CUSTOM_FIELD_NAME_PREFIX).append(code);
 		if (index != -1)
-			sb.append(CustomFieldsManager.INDEX_DELIMITER).append(index); //добавим индекс для поля типа массив
+			sb.append(CustomFieldsManager.INDEX_DELIMITER).append(index); //РґРѕР±Р°РІРёРј РёРЅРґРµРєСЃ РґР»СЏ РїРѕР»СЏ С‚РёРїР° РјР°СЃСЃРёРІ
 		sb.append("\"").append(StringUtils.BLANK_STRING);
 		if (index != -1)
-			sb.append(BoxPane.ALIGNMENT).append("=\"expand_top\"").append(StringUtils.BLANK_STRING); //поля с типом массив "живут" в box
+			sb.append(BoxPane.ALIGNMENT).append("=\"expand_top\"").append(StringUtils.BLANK_STRING); //РїРѕР»СЏ СЃ С‚РёРїРѕРј РјР°СЃСЃРёРІ "Р¶РёРІСѓС‚" РІ box
 		if (sameLine)
 			generateSameLine(sb);
 		return sb.toString();
@@ -161,7 +161,7 @@ public class CustomFieldsManagerImpl implements CustomFieldsManager {
 					.append(generateLabelForWidget(customFieldsDesc.name, showLabel))
 					.append(ComboBox.USE_INDEX).append("=\"false\"").append(">")
 					.append("<").append(ComboBox.ITEMS).append(">");
-			//заполним возможные значения
+			//Р·Р°РїРѕР»РЅРёРј РІРѕР·РјРѕР¶РЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ
 			for (String item : loadEnumCustomFieldValues(customFieldsDesc.featureId)) {
 				sb.append("<").append(ComboBox.ITEM).append(StringUtils.BLANK_STRING)
 						.append(ComboBox.ITEM_VALUE).append("=\"").append(item).append("\"/>");
@@ -182,17 +182,17 @@ public class CustomFieldsManagerImpl implements CustomFieldsManager {
 		default:
 			throw new IllegalArgumentException("Invalid type");
 		}
-		if (customFieldsDesc.dataKind != DataKind.ENUM) //при этом типе тэг формируется полностью
+		if (customFieldsDesc.dataKind != DataKind.ENUM) //РїСЂРё СЌС‚РѕРј С‚РёРїРµ С‚СЌРі С„РѕСЂРјРёСЂСѓРµС‚СЃСЏ РїРѕР»РЅРѕСЃС‚СЊСЋ
 			sb.append("/>");
 	}
 	
 	private void doCloneStorage(int classSrcId, int classDstId, EntityCustomFieldsStorage storage, PersistentObject entityClone) {
 		if (classSrcId == classDstId) {
-			//классы бизнес-компонентов совпадают, просто установим значения пользовательских полей
+			//РєР»Р°СЃСЃС‹ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ СЃРѕРІРїР°РґР°СЋС‚, РїСЂРѕСЃС‚Рѕ СѓСЃС‚Р°РЅРѕРІРёРј Р·РЅР°С‡РµРЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 			((EntityCustomFieldsStorageAccessor) entityClone).setStorage(storage);
 		} else {
 			Map<String, Object> customFieldValues = new HashMap<String, Object>();
-			//перенесем только те пользовательские поля, которые связаны с двумя классами
+			//РїРµСЂРµРЅРµСЃРµРј С‚РѕР»СЊРєРѕ С‚Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РїРѕР»СЏ, РєРѕС‚РѕСЂС‹Рµ СЃРІСЏР·Р°РЅС‹ СЃ РґРІСѓРјСЏ РєР»Р°СЃСЃР°РјРё
 			List<CustomFieldsDesc> srcCustomFields = loadCustomFieldsDescs(classSrcId);
 			List<CustomFieldsDesc> dstCustomFields = loadCustomFieldsDescs(classDstId);
 			for (CustomFieldsDesc dstCustomField : dstCustomFields) {
@@ -233,7 +233,7 @@ public class CustomFieldsManagerImpl implements CustomFieldsManager {
 		StringBuilder sb = new StringBuilder("<jfd:wrap-macros xmlns:jfd=\"http://xmlns.m-g.ru/jet/ui\">");
 		int widgetCount = 0;
 		for (CustomFieldsDesc desc : descs) {
-			boolean sameLine = ++widgetCount % 2 == 0; //четные оставляем на той же линии
+			boolean sameLine = ++widgetCount % 2 == 0; //С‡РµС‚РЅС‹Рµ РѕСЃС‚Р°РІР»СЏРµРј РЅР° С‚РѕР№ Р¶Рµ Р»РёРЅРёРё
 			if (desc.isArray) {
 				sb.append("<").append(WidgetFactory.BOX_LAYOUT).append(" id=\"").append(desc.code).append("\" ")
 						.append(generateLabelForWidget(desc.name, true))
@@ -241,7 +241,7 @@ public class CustomFieldsManagerImpl implements CustomFieldsManager {
 				if (sameLine)
 					generateSameLine(sb);
 				sb.append(">");
-				int count = desc.arraySize == null ? 1 : desc.arraySize;//впринципе если массив то размер массива должен быть задан
+				int count = desc.arraySize == null ? 1 : desc.arraySize;//РІРїСЂРёРЅС†РёРїРµ РµСЃР»Рё РјР°СЃСЃРёРІ С‚Рѕ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР° РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р·Р°РґР°РЅ
 				for (int i = 0; i < count; i++)
 					generateWidget(sb, desc, false, false, i);
 				sb.append("</").append(WidgetFactory.BOX_LAYOUT).append(">");
@@ -304,10 +304,10 @@ public class CustomFieldsManagerImpl implements CustomFieldsManager {
 		
 		EntityCustomFieldsStorage storage = ((EntityCustomFieldsStorageAccessor) entitySrc).getStorage();
 		if (storage == null)
-			//загрузим пользовательские поля если еще не грузили
+			//Р·Р°РіСЂСѓР·РёРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РїРѕР»СЏ РµСЃР»Рё РµС‰Рµ РЅРµ РіСЂСѓР·РёР»Рё
 			storage = createStorage(serviceSrc, entitySrc.getPrimaryKey());
 		else
-			//сделаем копию хранилища, чтобы не влиять на объект источник
+			//СЃРґРµР»Р°РµРј РєРѕРїРёСЋ С…СЂР°РЅРёР»РёС‰Р°, С‡С‚РѕР±С‹ РЅРµ РІР»РёСЏС‚СЊ РЅР° РѕР±СЉРµРєС‚ РёСЃС‚РѕС‡РЅРёРє
 			storage = new EntityCustomFieldsStorageImpl(new HashMap<String, Object>(storage.getValues()));
 		
 		doCloneStorage(serviceSrc.getBusinessServiceMetadata().getIdentificator(), 

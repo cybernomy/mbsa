@@ -27,7 +27,7 @@ import com.mg.merp.factura.FacturaSpecInServiceLocal;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы поддержки входящих счет - фактур
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РІС…РѕРґСЏС‰РёС… СЃС‡РµС‚ - С„Р°РєС‚СѓСЂ
  * 
  * @author leonova
  * @version $Id: FacturaHeadInMt.java,v 1.8 2008/12/25 10:15:04 safonov Exp $

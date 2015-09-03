@@ -23,7 +23,7 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.merp.paymentcontrol.LiabilityServiceLocal;
 
 /**
- * Поисковик сущностей "Обязательств"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РћР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: LiabilitySearchHelp.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $

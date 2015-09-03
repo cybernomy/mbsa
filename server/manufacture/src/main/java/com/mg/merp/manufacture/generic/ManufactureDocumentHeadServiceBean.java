@@ -23,7 +23,7 @@ import com.mg.merp.document.generic.GoodsDocumentServiceBean;
 import com.mg.merp.mfreference.support.ConfigurationHelper;
 
 /**
- * Базовый класс производственных документов
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РїСЂРѕРёР·РІРѕРґСЃС‚РІРµРЅРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ManufactureDocumentHeadServiceBean.java,v 1.4 2007/03/26 10:48:28 safonov Exp $

@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.warehouse.model.WarehouseZone;
 
 /**
- * Браузер зон хранения
+ * Р‘СЂР°СѓР·РµСЂ Р·РѕРЅ С…СЂР°РЅРµРЅРёСЏ
  * 
  * @author leonova
  * @version $Id: WarehouseZoneBr.java,v 1.1 2006/09/05 03:59:05 leonova Exp $ 

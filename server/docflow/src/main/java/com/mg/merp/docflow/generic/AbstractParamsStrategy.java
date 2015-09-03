@@ -34,7 +34,7 @@ import com.mg.merp.docprocess.model.DocProcessStage;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Абстрактная реализация стратегии выбора параметров ДО
+ * РђР±СЃС‚СЂР°РєС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё РІС‹Р±РѕСЂР° РїР°СЂР°РјРµС‚СЂРѕРІ Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractParamsStrategy.java,v 1.1 2006/12/12 15:23:55 safonov Exp $
@@ -43,7 +43,7 @@ public abstract class AbstractParamsStrategy implements DocFlowParamsStrategy {
 	protected Logger logger = ServerUtils.getLogger(getClass());
 
 	/**
-	 * установка параметров документа к отработке всеми возможными значениями
+	 * СѓСЃС‚Р°РЅРѕРІРєР° РїР°СЂР°РјРµС‚СЂРѕРІ РґРѕРєСѓРјРµРЅС‚Р° Рє РѕС‚СЂР°Р±РѕС‚РєРµ РІСЃРµРјРё РІРѕР·РјРѕР¶РЅС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё
 	 * 
 	 * @param docSum
 	 * @param specList
@@ -52,7 +52,7 @@ public abstract class AbstractParamsStrategy implements DocFlowParamsStrategy {
 	protected void silentPrepareDocumentSpecList(final BigDecimal docSum,
 			final List<DocumentSpecItem> specList,
 			final InputDocumentParamsListener listener) {
-		//проставим значения к отработке всем доступным
+		//РїСЂРѕСЃС‚Р°РІРёРј Р·РЅР°С‡РµРЅРёСЏ Рє РѕС‚СЂР°Р±РѕС‚РєРµ РІСЃРµРј РґРѕСЃС‚СѓРїРЅС‹Рј
 		for (DocumentSpecItem specItem : specList) {
 			specItem.setPerformedQuantity1(specItem.getFreeQuantity1());
 			specItem.setPerformedQuantity2(specItem.getFreeQuantity2());

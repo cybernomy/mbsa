@@ -25,7 +25,7 @@ import com.mg.merp.docflow.DocFlowPluginFactoryManager;
 import com.mg.merp.docflow.PluginNotImplementedException;
 
 /**
- * Реализация менеджера фабрик реализаций этапов ДО
+ * Р РµР°Р»РёР·Р°С†РёСЏ РјРµРЅРµРґР¶РµСЂР° С„Р°Р±СЂРёРє СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїРѕРІ Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowPluginFactoryManagerImpl.java,v 1.2 2007/01/29 14:06:55 safonov Exp $

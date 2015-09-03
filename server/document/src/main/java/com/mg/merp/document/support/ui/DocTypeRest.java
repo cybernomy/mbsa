@@ -19,7 +19,7 @@ import com.mg.framework.generic.ui.DefaultRestrictionForm;
 import com.mg.merp.document.model.DocSection;
 
 /**
- * Контроллер формы условий отбора типов документов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° С‚РёРїРѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: DocTypeRest.java,v 1.2 2006/10/17 12:31:41 leonova Exp $ 

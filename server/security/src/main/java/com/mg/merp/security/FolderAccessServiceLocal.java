@@ -19,7 +19,7 @@ import java.util.List;
 import com.mg.merp.core.model.FolderRights;
 
 /**
- * Бизнес-компонент "Права на папки"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂР°РІР° РЅР° РїР°РїРєРё"
  * 
  * @author leonova
  * @version $Id: FolderAccessServiceLocal.java,v 1.3 2007/02/24 14:16:36 safonov Exp $
@@ -29,27 +29,27 @@ public interface FolderAccessServiceLocal
 {
 
 	/**
-	 * загрузка прав на папки
+	 * Р·Р°РіСЂСѓР·РєР° РїСЂР°РІ РЅР° РїР°РїРєРё
 	 * 
-	 * @param folderPart	вид папок
-	 * @param folderId		идентификатор папки
-	 * @return	список прав
+	 * @param folderPart	РІРёРґ РїР°РїРѕРє
+	 * @param folderId		РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїР°РїРєРё
+	 * @return	СЃРїРёСЃРѕРє РїСЂР°РІ
 	 */
 	List<FolderPermission> loadFolderPermission(int folderPart, int folderId);
 	
 	/**
-	 * предоставить права на папки
+	 * РїСЂРµРґРѕСЃС‚Р°РІРёС‚СЊ РїСЂР°РІР° РЅР° РїР°РїРєРё
 	 * 
-	 * @param perm			права
-	 * @param folderPart	вид папок
-	 * @param folderId		идентификатор папки
+	 * @param perm			РїСЂР°РІР°
+	 * @param folderPart	РІРёРґ РїР°РїРѕРє
+	 * @param folderId		РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїР°РїРєРё
 	 */
 	void grantPermission(FolderPermission perm, int folderPart, int folderId);
 	
 	/**
-	 * отменить права на папки
+	 * РѕС‚РјРµРЅРёС‚СЊ РїСЂР°РІР° РЅР° РїР°РїРєРё
 	 * 
-	 * @param perm	права
+	 * @param perm	РїСЂР°РІР°
 	 */
 	void revokePermission(FolderPermission perm);
 	

@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.OfferReason;
 
 /**
- * Браузер причин заключения и потерь предложений
+ * Р‘СЂР°СѓР·РµСЂ РїСЂРёС‡РёРЅ Р·Р°РєР»СЋС‡РµРЅРёСЏ Рё РїРѕС‚РµСЂСЊ РїСЂРµРґР»РѕР¶РµРЅРёР№
  * 
  * @author leonova
  * @version $Id: OfferReasonBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

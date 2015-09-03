@@ -22,7 +22,7 @@ import com.mg.merp.docprocess.model.DocHeadState;
 import com.mg.merp.warehouse.WarehouseProcessorServiceLocal;
 
 /**
- * Реализация фабрики реализаций этапа ДО "Рассчитать цены в документе на основании данных склада"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїР° Р”Рћ "Р Р°СЃСЃС‡РёС‚Р°С‚СЊ С†РµРЅС‹ РІ РґРѕРєСѓРјРµРЅС‚Рµ РЅР° РѕСЃРЅРѕРІР°РЅРёРё РґР°РЅРЅС‹С… СЃРєР»Р°РґР°"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: CalcPricesByWarehouseDataDocFlowPluginFactory.java,v 1.2 2007/03/29 13:42:10 poroxnenko Exp $
@@ -52,7 +52,7 @@ public class CalcPricesByWarehouseDataDocFlowPluginFactory extends
 			@Override
 			protected String doGetDocActionResultTextRepresentation(
 					DocHeadState docHeadState) {
-				// TODO: спросить консультантов
+				// TODO: СЃРїСЂРѕСЃРёС‚СЊ РєРѕРЅСЃСѓР»СЊС‚Р°РЅС‚РѕРІ
 				return StringUtils.BLANK_STRING;
 			}
 

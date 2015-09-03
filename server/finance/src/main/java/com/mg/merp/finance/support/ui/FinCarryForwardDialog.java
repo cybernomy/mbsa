@@ -26,7 +26,7 @@ import com.mg.merp.finance.model.Account;
 import com.mg.merp.finance.support.Messages;
 
 /**
- * Контроллер диалога "Перенос остатков" финансового учета
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "РџРµСЂРµРЅРѕСЃ РѕСЃС‚Р°С‚РєРѕРІ" С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°
  * @author Artem V. Sharapov
  * @version $Id: FinCarryForwardDialog.java,v 1.1 2006/12/26 13:18:13 sharapov Exp $
  */
@@ -40,8 +40,8 @@ public class FinCarryForwardDialog extends DefaultDialog {
 	
 	/* Methods */
 	/**
-	 * Обработка события нажатия кнопки "Выбрать счета" 
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РЅР°Р¶Р°С‚РёСЏ РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ СЃС‡РµС‚Р°" 
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionChooseAccounts(WidgetEvent event) throws Exception {
@@ -65,7 +65,7 @@ public class FinCarryForwardDialog extends DefaultDialog {
 
 	/* Property Accessors */
 	/**
-	 * @return список выбранных счетов
+	 * @return СЃРїРёСЃРѕРє РІС‹Р±СЂР°РЅРЅС‹С… СЃС‡РµС‚РѕРІ
 	 */
 	public com.mg.merp.finance.model.Account[] getAccounts() {
 		return accounts;

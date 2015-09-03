@@ -19,7 +19,7 @@ import java.util.List;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Спецификация прайс-листов"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёСЏ РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ"
  * 
  * @author hbm2java
  * @author Artem V. Sharapov
@@ -223,7 +223,7 @@ java.io.Serializable {
 	}
 
 	/**
-	 * @return цены спецификации прайс-листа
+	 * @return С†РµРЅС‹ СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	public List<PriceListSpecPrice> getPriceListSpecPrice() {
 		return this.priceListSpecPrice;

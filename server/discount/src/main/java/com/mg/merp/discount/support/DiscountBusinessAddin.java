@@ -21,19 +21,19 @@ import com.mg.merp.discount.model.Discount;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * Базовый класс BAi расчета скидок/наценок.
- * Класс-расширение должен реализовывать метод <code>protected void doPerform() throws Exception</code>.
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ BAi СЂР°СЃС‡РµС‚Р° СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє.
+ * РљР»Р°СЃСЃ-СЂР°СЃС€РёСЂРµРЅРёРµ РґРѕР»Р¶РµРЅ СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ РјРµС‚РѕРґ <code>protected void doPerform() throws Exception</code>.
  * <p>
- * Данный метод должен возвращать результат расчета скидок/наценок 
+ * Р”Р°РЅРЅС‹Р№ РјРµС‚РѕРґ РґРѕР»Р¶РµРЅ РІРѕР·РІСЂР°С‰Р°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ СЂР°СЃС‡РµС‚Р° СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє 
  * @see com.mg.merp.discount.support.DiscountResult
  * <p>
- * Пример(без использования пользовательского интерфейса):
- * Предоставляется скидка 50% (цена из позиц.спецификации)
- * Скидка на документ РАЗРЕШЕНА
+ * РџСЂРёРјРµСЂ(Р±РµР· РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°):
+ * РџСЂРµРґРѕСЃС‚Р°РІР»СЏРµС‚СЃСЏ СЃРєРёРґРєР° 50% (С†РµРЅР° РёР· РїРѕР·РёС†.СЃРїРµС†РёС„РёРєР°С†РёРё)
+ * РЎРєРёРґРєР° РЅР° РґРѕРєСѓРјРµРЅС‚ Р РђР—Р Р•РЁР•РќРђ
  * <pre>
  * 	protected void doPerform() throws Exception {
  *		DiscountResult result = new DiscountResult();
- *		// расчиываем значение скидки (цена из позиции спецификации, скидка 50%)
+ *		// СЂР°СЃС‡РёС‹РІР°РµРј Р·РЅР°С‡РµРЅРёРµ СЃРєРёРґРєРё (С†РµРЅР° РёР· РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё, СЃРєРёРґРєР° 50%)
  *		BigDecimal discount = MathUtils.divide(getSpecification().getPrice1().multiply(new BigDecimal(50).negate()), MathUtils.HUNDRED, new RoundContext(6)); 
  *		result.setDiscount(discount);
  *		result.setIsApplyDiscountOnDoc(true);
@@ -41,29 +41,29 @@ import com.mg.merp.document.model.DocSpec;
  *		complete(result);
  *	}
  * <p>
- * Пример(с использованием пользовательского интерфейса):
- * Если пользователь отвечает "Да", то ему предоставляется скидка 15% (цена из позиц.спецификации)
- * Если пользователь отвечает "Нет", то данная скидка на него НЕ РАСПРОСТРАНЯЕТСЯ ВООБЩЕ
+ * РџСЂРёРјРµСЂ(СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°):
+ * Р•СЃР»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РѕС‚РІРµС‡Р°РµС‚ "Р”Р°", С‚Рѕ РµРјСѓ РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµС‚СЃСЏ СЃРєРёРґРєР° 15% (С†РµРЅР° РёР· РїРѕР·РёС†.СЃРїРµС†РёС„РёРєР°С†РёРё)
+ * Р•СЃР»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РѕС‚РІРµС‡Р°РµС‚ "РќРµС‚", С‚Рѕ РґР°РЅРЅР°СЏ СЃРєРёРґРєР° РЅР° РЅРµРіРѕ РќР• Р РђРЎРџР РћРЎРўР РђРќРЇР•РўРЎРЇ Р’РћРћР‘Р©Р•
  * 
  * ...	
- * private final String PASSPORT_QUESTION = "У вас есть паспорт?";
- * private final String YES_BUTTON_TEXT = "Да";
- * private final String NO_BUTTON_TEXT = "Нет";
+ * private final String PASSPORT_QUESTION = "РЈ РІР°СЃ РµСЃС‚СЊ РїР°СЃРїРѕСЂС‚?";
+ * private final String YES_BUTTON_TEXT = "Р”Р°";
+ * private final String NO_BUTTON_TEXT = "РќРµС‚";
  * private DiscountResult result = new DiscountResult();
  * 
  * protected void doPerform() throws Exception {
- *	// проверим запускался ли уже пользовательский диалог
+ *	// РїСЂРѕРІРµСЂРёРј Р·Р°РїСѓСЃРєР°Р»СЃСЏ Р»Рё СѓР¶Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ РґРёР°Р»РѕРі
  *	if(getProcessContext().containsKey(PASSPORT_QUESTION))
- *		// если запускался, то результат возьмем из контекста выполненния
+ *		// РµСЃР»Рё Р·Р°РїСѓСЃРєР°Р»СЃСЏ, С‚Рѕ СЂРµР·СѓР»СЊС‚Р°С‚ РІРѕР·СЊРјРµРј РёР· РєРѕРЅС‚РµРєСЃС‚Р° РІС‹РїРѕР»РЅРµРЅРЅРёСЏ
  *		completeOperation((String) getProcessContext().get(PASSPORT_QUESTION));
- *	else // иначе запустим пользовательский диалог
+ *	else // РёРЅР°С‡Рµ Р·Р°РїСѓСЃС‚РёРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ РґРёР°Р»РѕРі
  *		showQuestionDialog(StringUtils.EMPTY_STRING);	 
  * }
  * 
  * protected void showQuestionDialog(String promotionName) {
  *	UIUtils.showAlert(Alert.MessageType.QUESTION_MESSAGE, promotionName, PASSPORT_QUESTION, YES_BUTTON_TEXT, NO_BUTTON_TEXT, new AlertListener() {
  *		public void alertClosing(String value) {
- *			// разместим результат пользовательского диалога в контексте выполненния
+ *			// СЂР°Р·РјРµСЃС‚РёРј СЂРµР·СѓР»СЊС‚Р°С‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РґРёР°Р»РѕРіР° РІ РєРѕРЅС‚РµРєСЃС‚Рµ РІС‹РїРѕР»РЅРµРЅРЅРёСЏ
  *			getProcessContext().put(PASSPORT_QUESTION, value);
  *			completeOperation(value);
  *		}
@@ -72,13 +72,13 @@ import com.mg.merp.document.model.DocSpec;
  *	
  * protected void completeOperation(String dialogResult) {
  *	if (YES_BUTTON_TEXT.equals(dialogResult)) {
- *		// расчиываем значение скидки (цена из позиц.спецификации, cкидка 15%)
+ *		// СЂР°СЃС‡РёС‹РІР°РµРј Р·РЅР°С‡РµРЅРёРµ СЃРєРёРґРєРё (С†РµРЅР° РёР· РїРѕР·РёС†.СЃРїРµС†РёС„РёРєР°С†РёРё, cРєРёРґРєР° 15%)
  *		BigDecimal discount = MathUtils.divide(getSpecification().getPrice1().multiply(new BigDecimal(15).negate()), MathUtils.HUNDRED, new RoundContext(6)); 
  *		result.setDiscount(discount);
  *		result.setIsApplied(true);
  *	else 
  *		result.setIsApplied(false);
- *	// успешно завершить выполнение BAi и вернуть результат
+ *	// СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РёС‚СЊ РІС‹РїРѕР»РЅРµРЅРёРµ BAi Рё РІРµСЂРЅСѓС‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚
  *	complete(result);
  * }
  * </pre>
@@ -110,24 +110,24 @@ public abstract class DiscountBusinessAddin extends AbstractBusinessAddin<Discou
 	}
 
 	/**
-	 * Получить спецификацию документа для которой производится расчет скидки/наценки
-	 * @return спецификация документа для которой производится расчет скидки/наценки
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ РґРѕРєСѓРјРµРЅС‚Р° РґР»СЏ РєРѕС‚РѕСЂРѕР№ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ СЂР°СЃС‡РµС‚ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
+	 * @return СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р° РґР»СЏ РєРѕС‚РѕСЂРѕР№ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ СЂР°СЃС‡РµС‚ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
 	 */
 	protected DocSpec getSpecification() {
 		return specification;
 	}
 
 	/**
-	 * Получить скидку/наценку(сущность) 
-	 * @return скидка/наценка(сущность)
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРєРёРґРєСѓ/РЅР°С†РµРЅРєСѓ(СЃСѓС‰РЅРѕСЃС‚СЊ) 
+	 * @return СЃРєРёРґРєР°/РЅР°С†РµРЅРєР°(СЃСѓС‰РЅРѕСЃС‚СЊ)
 	 */
 	public Discount getDiscount() {
 		return this.discount;
 	}
 
 	/**
-	 * Получить контекст выполненния
-	 * @return контекст выполненния
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРЅРёСЏ
+	 * @return РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРЅРёСЏ
 	 */
 	public Map<String, Object> getProcessContext() {
 		return this.processContext;

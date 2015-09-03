@@ -15,7 +15,7 @@
 package com.mg.merp.core;
 
 /**
- * Настройка аудита атрибута сущности
+ * РќР°СЃС‚СЂРѕР№РєР° Р°СѓРґРёС‚Р° Р°С‚СЂРёР±СѓС‚Р° СЃСѓС‰РЅРѕСЃС‚Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: PropertyAuditItem.java,v 1.1 2007/10/19 06:40:17 safonov Exp $

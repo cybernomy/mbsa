@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип группы позиции КТУ
+ * РўРёРї РіСЂСѓРїРїС‹ РїРѕР·РёС†РёРё РљРўРЈ
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -27,37 +27,37 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Overall.Spec.CatalogGroupsType")
 public enum CatalogGroupsType {
 	/**
-	 * специальная одежда
+	 * СЃРїРµС†РёР°Р»СЊРЅР°СЏ РѕРґРµР¶РґР°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.Overall")
 	OVERALL,
 	
 	/**
-	 * форменная одежда
+	 * С„РѕСЂРјРµРЅРЅР°СЏ РѕРґРµР¶РґР°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.FromClothes")
 	FORMCLOTHES,
 	
 	/**
-	 * индивидуальные средства защита
+	 * РёРЅРґРёРІРёРґСѓР°Р»СЊРЅС‹Рµ СЃСЂРµРґСЃС‚РІР° Р·Р°С‰РёС‚Р°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.Protection")
 	PROTECTION,
 	
 	/**
-	 * инструменты
+	 * РёРЅСЃС‚СЂСѓРјРµРЅС‚С‹
 	 */
 	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.Instrument")
 	INSTRUMENT,
 	
 	/**
-	 * оргтехника, мебель
+	 * РѕСЂРіС‚РµС…РЅРёРєР°, РјРµР±РµР»СЊ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.OfficeEquip")
 	OFFICEEQUIP,
 	
 	/**
-	 * прочие ТМЦ
+	 * РїСЂРѕС‡РёРµ РўРњР¦
 	 */
 	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.Other")
 	OTHER	

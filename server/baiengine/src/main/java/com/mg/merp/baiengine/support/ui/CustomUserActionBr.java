@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.baiengine.model.CustomUserAction;
 
 /**
- * Браузер настраиваемых действий пользователя
+ * Р‘СЂР°СѓР·РµСЂ РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  * 
  * @author leonova
  * @version $Id: CustomUserActionBr.java,v 1.1 2007/11/15 09:22:14 safonov Exp $ 

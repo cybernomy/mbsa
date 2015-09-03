@@ -35,7 +35,7 @@ import com.mg.framework.support.ui.widget.MaintenanceTableModel;
 import com.mg.merp.account.OperationServiceLocal;
 
 /**
- * Контроллер иерархического браузера с суббраузером оборотов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РёРµСЂР°СЂС…РёС‡РµСЃРєРѕРіРѕ Р±СЂР°СѓР·РµСЂР° СЃ СЃСѓР±Р±СЂР°СѓР·РµСЂРѕРј РѕР±РѕСЂРѕС‚РѕРІ
  * 
  * @author Artem V. Sharapov
  * @version $Id: AbstractHierarchyBrowseFormWithTurn.java,v 1.2 2009/03/17 08:43:43 sharapov Exp $
@@ -127,28 +127,28 @@ public abstract class AbstractHierarchyBrowseFormWithTurn extends DefaultHierarc
 	}
 	
 	/**
-	 * Получить where-часть текста запроса для выборки оборотов по дебету
-	 * @param paramsName - список имен параметров
-	 * @return where-часть текста запроса для выборки оборотов по дебету
+	 * РџРѕР»СѓС‡РёС‚СЊ where-С‡Р°СЃС‚СЊ С‚РµРєСЃС‚Р° Р·Р°РїСЂРѕСЃР° РґР»СЏ РІС‹Р±РѕСЂРєРё РѕР±РѕСЂРѕС‚РѕРІ РїРѕ РґРµР±РµС‚Сѓ
+	 * @param paramsName - СЃРїРёСЃРѕРє РёРјРµРЅ РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return where-С‡Р°СЃС‚СЊ С‚РµРєСЃС‚Р° Р·Р°РїСЂРѕСЃР° РґР»СЏ РІС‹Р±РѕСЂРєРё РѕР±РѕСЂРѕС‚РѕРІ РїРѕ РґРµР±РµС‚Сѓ
 	 */
 	protected abstract String doGetTurnDbWhereText(List<String> paramsName);
 	
 	/**
-	 * Получить where-часть текста запроса для выборки оборотов по кредиту
-	 * @param paramsName - список имен параметров
-	 * @return where-часть текста запроса для выборки оборотов по кредиту
+	 * РџРѕР»СѓС‡РёС‚СЊ where-С‡Р°СЃС‚СЊ С‚РµРєСЃС‚Р° Р·Р°РїСЂРѕСЃР° РґР»СЏ РІС‹Р±РѕСЂРєРё РѕР±РѕСЂРѕС‚РѕРІ РїРѕ РєСЂРµРґРёС‚Сѓ
+	 * @param paramsName - СЃРїРёСЃРѕРє РёРјРµРЅ РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return where-С‡Р°СЃС‚СЊ С‚РµРєСЃС‚Р° Р·Р°РїСЂРѕСЃР° РґР»СЏ РІС‹Р±РѕСЂРєРё РѕР±РѕСЂРѕС‚РѕРІ РїРѕ РєСЂРµРґРёС‚Сѓ
 	 */
 	protected abstract String doGetTurnKtWhereText(List<String> paramsName);
 	
 	/**
-	 * Получить where-часть текста запроса для выборки оборотов
-	 * @param paramsName - список имен параметров
-	 * @return where-часть текста запроса для выборки оборотов
+	 * РџРѕР»СѓС‡РёС‚СЊ where-С‡Р°СЃС‚СЊ С‚РµРєСЃС‚Р° Р·Р°РїСЂРѕСЃР° РґР»СЏ РІС‹Р±РѕСЂРєРё РѕР±РѕСЂРѕС‚РѕРІ
+	 * @param paramsName - СЃРїРёСЃРѕРє РёРјРµРЅ РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return where-С‡Р°СЃС‚СЊ С‚РµРєСЃС‚Р° Р·Р°РїСЂРѕСЃР° РґР»СЏ РІС‹Р±РѕСЂРєРё РѕР±РѕСЂРѕС‚РѕРІ
 	 */
 	protected abstract String doGetTurnWhereText(List<String> paramsName);
 
 	/**
-	 * Настроить КМ списков оборотов
+	 * РќР°СЃС‚СЂРѕРёС‚СЊ РљРњ СЃРїРёСЃРєРѕРІ РѕР±РѕСЂРѕС‚РѕРІ
 	 */
 	private void adjustPopupMenuOfTurnTables() {
 		doAdjustTurnDbTablePopupMenu(view.getWidget("turnDb").getPopupMenu());
@@ -157,32 +157,32 @@ public abstract class AbstractHierarchyBrowseFormWithTurn extends DefaultHierarc
 	}
 	
 	/**
-	 * Настроить КМ списка оборотов по дебету
-	 * @param popupMenu - КМ списка оборотов по дебету
+	 * РќР°СЃС‚СЂРѕРёС‚СЊ РљРњ СЃРїРёСЃРєР° РѕР±РѕСЂРѕС‚РѕРІ РїРѕ РґРµР±РµС‚Сѓ
+	 * @param popupMenu - РљРњ СЃРїРёСЃРєР° РѕР±РѕСЂРѕС‚РѕРІ РїРѕ РґРµР±РµС‚Сѓ
 	 */
 	protected void doAdjustTurnDbTablePopupMenu(PopupMenu popupMenu) {
 		UIUtils.setVisibleEnabledProperty(popupMenu.getMenuItem(MaintenanceTable.ADD_MENU_ITEM), false);
 	}
 	
 	/**
-	 * Настроить КМ списка оборотов по кредиту
-	 * @param popupMenu - КМ списка оборотов по кредиту
+	 * РќР°СЃС‚СЂРѕРёС‚СЊ РљРњ СЃРїРёСЃРєР° РѕР±РѕСЂРѕС‚РѕРІ РїРѕ РєСЂРµРґРёС‚Сѓ
+	 * @param popupMenu - РљРњ СЃРїРёСЃРєР° РѕР±РѕСЂРѕС‚РѕРІ РїРѕ РєСЂРµРґРёС‚Сѓ
 	 */
 	protected void doAdjustTurnKtTablePopupMenu(PopupMenu popupMenu) {
 		UIUtils.setVisibleEnabledProperty(popupMenu.getMenuItem(MaintenanceTable.ADD_MENU_ITEM), false);
 	}
 	
 	/**
-	 * Настроить КМ списка оборотов
-	 * @param popupMenu - КМ списка оборотов
+	 * РќР°СЃС‚СЂРѕРёС‚СЊ РљРњ СЃРїРёСЃРєР° РѕР±РѕСЂРѕС‚РѕРІ
+	 * @param popupMenu - РљРњ СЃРїРёСЃРєР° РѕР±РѕСЂРѕС‚РѕРІ
 	 */
 	protected void doAdjustTurnTablePopupMenu(PopupMenu popupMenu) {
 		UIUtils.setVisibleEnabledProperty(popupMenu.getMenuItem(MaintenanceTable.ADD_MENU_ITEM), false);
 	}
 	
 	/**
-	 * Установка значения видимости таблицы
-	 * @param isVisible	- <code>true</code> - видна, иначе не видна
+	 * РЈСЃС‚Р°РЅРѕРІРєР° Р·РЅР°С‡РµРЅРёСЏ РІРёРґРёРјРѕСЃС‚Рё С‚Р°Р±Р»РёС†С‹
+	 * @param isVisible	- <code>true</code> - РІРёРґРЅР°, РёРЅР°С‡Рµ РЅРµ РІРёРґРЅР°
 	 */
 	private void setVisibleSpec(boolean isVisible) {
 		Widget widget = view.getWidget(SPEC_TABLE_WIDGET);
@@ -194,8 +194,8 @@ public abstract class AbstractHierarchyBrowseFormWithTurn extends DefaultHierarc
 	}
 	
 	/**
-	 * Обработчик пункта КМ "Показать обороты"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџРѕРєР°Р·Р°С‚СЊ РѕР±РѕСЂРѕС‚С‹"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	protected void onActionViewTurns(WidgetEvent event) {
 		boolean selected = ((CheckBoxMenuItem) event.getWidget()).isSelected();

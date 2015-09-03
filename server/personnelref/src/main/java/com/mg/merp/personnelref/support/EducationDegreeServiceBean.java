@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.EducationDegreeServiceLocal;
 import com.mg.merp.personnelref.model.EducationDegree;
 
 /**
- * Реализация бизнес-компонента "Степени образования" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎС‚РµРїРµРЅРё РѕР±СЂР°Р·РѕРІР°РЅРёСЏ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

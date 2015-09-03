@@ -21,7 +21,7 @@ import com.mg.merp.document.support.ConfigurationImpl;
 import com.mg.merp.warehouse.model.WarehouseConfig;
 
 /**
- * Класс помощник конфигурации модуля "Управление запасами"
+ * РљР»Р°СЃСЃ РїРѕРјРѕС‰РЅРёРє РєРѕРЅС„РёРіСѓСЂР°С†РёРё РјРѕРґСѓР»СЏ "РЈРїСЂР°РІР»РµРЅРёРµ Р·Р°РїР°СЃР°РјРё"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ConfigurationHelper.java,v 1.2 2007/03/26 10:53:35 safonov Exp $
@@ -29,9 +29,9 @@ import com.mg.merp.warehouse.model.WarehouseConfig;
 public class ConfigurationHelper {
 
 	/**
-	 * получить конфигурацию модуля
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ РјРѕРґСѓР»СЏ
 	 * 
-	 * @return	конфигурация
+	 * @return	РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ
 	 */
 	public static WarehouseConfig getConfiguration() {
 		return ServerUtils.getPersistentManager().find(WarehouseConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());

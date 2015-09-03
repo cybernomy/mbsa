@@ -18,7 +18,7 @@ import com.mg.framework.api.EntityTransformer;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Локатор сервиса трансформации сущностей
+ * Р›РѕРєР°С‚РѕСЂ СЃРµСЂРІРёСЃР° С‚СЂР°РЅСЃС„РѕСЂРјР°С†РёРё СЃСѓС‰РЅРѕСЃС‚РµР№
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: EntityTransformerLocator.java,v 1.2 2007/09/21 09:50:49 safonov Exp $

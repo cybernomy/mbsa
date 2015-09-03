@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.WorkTimeNormServiceLocal;
 import com.mg.merp.personnelref.model.WorkTimeNorm;
 
 /**
- * Бизнес-компонент "Нормы рабочего времени" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РќРѕСЂРјС‹ СЂР°Р±РѕС‡РµРіРѕ РІСЂРµРјРµРЅРё" 
  * 
  * @author leonova
  * @version $Id: WorkTimeNormServiceBean.java,v 1.4 2006/09/04 13:02:21 leonova Exp $

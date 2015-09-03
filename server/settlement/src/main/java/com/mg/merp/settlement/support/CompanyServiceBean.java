@@ -22,7 +22,7 @@ import com.mg.merp.reference.model.OrgUnit;
 import com.mg.merp.settlement.CompanyServiceLocal;
 
 /**
- * Реализация бизнес-компонента "Центры учета" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р¦РµРЅС‚СЂС‹ СѓС‡РµС‚Р°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

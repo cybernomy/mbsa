@@ -20,7 +20,7 @@ import com.mg.framework.service.ApplicationDictionaryLocator;
 import com.mg.framework.utils.ReflectionUtils;
 
 /**
- * Абстрактное правило контроля данных в объектах-сущностях
+ * РђР±СЃС‚СЂР°РєС‚РЅРѕРµ РїСЂР°РІРёР»Рѕ РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С… РІ РѕР±СЉРµРєС‚Р°С…-СЃСѓС‰РЅРѕСЃС‚СЏС…
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityBeanRule.java,v 1.2 2006/08/15 15:45:35 safonov Exp $
@@ -30,11 +30,11 @@ public abstract class EntityBeanRule extends AbstractRule {
 	private String propertyName;
 
 	/**
-	 * создает правило
+	 * СЃРѕР·РґР°РµС‚ РїСЂР°РІРёР»Рѕ
 	 * 
-	 * @param message		сообщение
-	 * @param entity		объект-сущность контроля
-	 * @param propertyName	наименование атрибута контроля
+	 * @param message		СЃРѕРѕР±С‰РµРЅРёРµ
+	 * @param entity		РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ РєРѕРЅС‚СЂРѕР»СЏ
+	 * @param propertyName	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ Р°С‚СЂРёР±СѓС‚Р° РєРѕРЅС‚СЂРѕР»СЏ
 	 */
 	public EntityBeanRule(String message, PersistentObject entity, String propertyName) {
 		super(message, entity.getAttribute(propertyName));
@@ -43,12 +43,12 @@ public abstract class EntityBeanRule extends AbstractRule {
 	}
 
 	/**
-	 * создает правило
+	 * СЃРѕР·РґР°РµС‚ РїСЂР°РІРёР»Рѕ
 	 * 
-	 * @param messageSource	источник сообщения
-	 * @param code			код сообщения
-	 * @param entity		объект-сущность контроля
-	 * @param propertyName	наименование атрибута контроля
+	 * @param messageSource	РёСЃС‚РѕС‡РЅРёРє СЃРѕРѕР±С‰РµРЅРёСЏ
+	 * @param code			РєРѕРґ СЃРѕРѕР±С‰РµРЅРёСЏ
+	 * @param entity		РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ РєРѕРЅС‚СЂРѕР»СЏ
+	 * @param propertyName	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ Р°С‚СЂРёР±СѓС‚Р° РєРѕРЅС‚СЂРѕР»СЏ
 	 */
 	public EntityBeanRule(MessageSourceAccessor messageSource, String code, PersistentObject entity, String propertyName) {
 		super(messageSource, code, entity.getAttribute(propertyName));

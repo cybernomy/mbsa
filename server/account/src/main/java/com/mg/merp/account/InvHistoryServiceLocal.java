@@ -17,7 +17,7 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.InvHistory;
 
 /**
- * Бизнес-компонент "История инвентарной карточки"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РСЃС‚РѕСЂРёСЏ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРё"
  *  
  * @author leonova
  * @version $Id: InvHistoryServiceLocal.java,v 1.2 2008/04/28 10:09:51 alikaev Exp $
@@ -25,10 +25,10 @@ import com.mg.merp.account.model.InvHistory;
 public interface InvHistoryServiceLocal extends com.mg.framework.api.DataBusinessObjectService<InvHistory, Integer> {
 
 	/**
-	 * Откат истории инв.объекта
+	 * РћС‚РєР°С‚ РёСЃС‚РѕСЂРёРё РёРЅРІ.РѕР±СЉРµРєС‚Р°
 	 * 
 	 * @param invHistory
-	 * 			- история инвентарной карточки
+	 * 			- РёСЃС‚РѕСЂРёСЏ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРё
 	 */
 	void rollbackInvHistory(InvHistory invHistory);
 	

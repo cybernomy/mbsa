@@ -23,7 +23,7 @@ import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Контроллер формы условий отбора финансовых операций
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° С„РёРЅР°РЅСЃРѕРІС‹С… РѕРїРµСЂР°С†РёР№
  * 
  * @author leonova
  * @version $Id: FinOperRest.java,v 1.6 2006/12/19 06:55:24 leonova Exp $

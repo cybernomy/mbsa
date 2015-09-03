@@ -15,7 +15,7 @@
 package com.mg.merp.warehouse.support.ui;
 
 /**
- * Контроллер формы списка заказов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р·Р°РєР°Р·РѕРІ
  * 
  * @author leonova
  * @version $Id: OrderBr.java,v 1.2 2008/02/22 11:08:33 alikaev Exp $ 

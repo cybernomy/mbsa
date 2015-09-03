@@ -18,7 +18,7 @@ import com.mg.merp.docflow.DocFlowPlugin;
 import com.mg.merp.docflow.DocFlowPluginFactory;
 
 /**
- * Абстрактная реализация фабрики подключаемых модулей машины документооборота для выполнения этапов
+ * РђР±СЃС‚СЂР°РєС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё РїРѕРґРєР»СЋС‡Р°РµРјС‹С… РјРѕРґСѓР»РµР№ РјР°С€РёРЅС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р° РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ СЌС‚Р°РїРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractDocFlowPluginFactory.java,v 1.2 2006/10/21 12:29:15 safonov Exp $
@@ -26,9 +26,9 @@ import com.mg.merp.docflow.DocFlowPluginFactory;
 public abstract class AbstractDocFlowPluginFactory implements DocFlowPluginFactory {
 
 	/**
-	 * реализация создания подключаемого модуля, должен быть переопределен в классах наследниках
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СЃРѕР·РґР°РЅРёСЏ РїРѕРґРєР»СЋС‡Р°РµРјРѕРіРѕ РјРѕРґСѓР»СЏ, РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ РІ РєР»Р°СЃСЃР°С… РЅР°СЃР»РµРґРЅРёРєР°С…
 	 * 
-	 * @return	подключаемый модуль
+	 * @return	РїРѕРґРєР»СЋС‡Р°РµРјС‹Р№ РјРѕРґСѓР»СЊ
 	 */
 	protected abstract DocFlowPlugin doCreatePlugin();
 	

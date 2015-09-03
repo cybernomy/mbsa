@@ -37,7 +37,7 @@ import com.mg.merp.reference.model.CatalogType;
 import com.mg.merp.reference.model.TimePeriodKind;
 
 /**
- * Реализация бизнес-компонента "Каталог" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР°С‚Р°Р»РѕРі" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

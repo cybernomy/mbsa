@@ -22,7 +22,7 @@ import org.eclipse.swt.graphics.Image;
 import com.mg.merp.wb.core.support.CoreUtils;
 
 /**
- * Контроллер формы редактирования отчёта
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РѕС‚С‡С‘С‚Р°
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: RptEditorController.java,v 1.3 2006/12/21 09:15:31 poroxnenko Exp $ 

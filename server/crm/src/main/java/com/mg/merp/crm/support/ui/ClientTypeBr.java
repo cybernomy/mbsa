@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.ClientType;
 
 /**
- * Браузер типов клиентов
+ * Р‘СЂР°СѓР·РµСЂ С‚РёРїРѕРІ РєР»РёРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: ClientTypeBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

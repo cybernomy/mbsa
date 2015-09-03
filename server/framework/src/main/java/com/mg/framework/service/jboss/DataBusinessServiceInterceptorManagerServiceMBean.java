@@ -19,7 +19,7 @@ import org.jboss.system.ServiceMBean;
 import com.mg.framework.api.DataBusinessServiceInterceptorManager;
 
 /**
- * Сервис менеджера перехватчиков действий бизнес-компонентов управляющих данными
+ * РЎРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РґРµР№СЃС‚РІРёР№ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ СѓРїСЂР°РІР»СЏСЋС‰РёС… РґР°РЅРЅС‹РјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: DataBusinessServiceInterceptorManagerServiceMBean.java,v 1.1 2007/12/13 13:07:20 safonov Exp $
@@ -27,7 +27,7 @@ import com.mg.framework.api.DataBusinessServiceInterceptorManager;
 public interface DataBusinessServiceInterceptorManagerServiceMBean extends
 		DataBusinessServiceInterceptorManager, ServiceMBean {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:service=DataBusinessServiceInterceptorManagerService";
 }

@@ -25,7 +25,7 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 import com.mg.merp.warehouse.BillSpecInServiceLocal;
 
 /**
- * Контроллер формы поддержки входящих счетов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РІС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov

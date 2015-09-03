@@ -23,7 +23,7 @@ import com.mg.merp.personnelref.model.TariffScaleClass;
 import com.mg.merp.personnelref.model.Tariffing;
 
 /**
- * Контроллер формы поддержки "Тарифы"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РўР°СЂРёС„С‹"
  * 
  * @author Artem V. Sharapov
  * @version $Id: TariffingMt.java,v 1.1 2007/07/18 11:12:13 sharapov Exp $
@@ -38,8 +38,8 @@ public class TariffingMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик кнопки "Выбрать тарифную сетку"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ С‚Р°СЂРёС„РЅСѓСЋ СЃРµС‚РєСѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionChooseTariffScale(WidgetEvent event) throws Exception {
 		TariffScaleClassSearchHelp searchHelp = (TariffScaleClassSearchHelp) SearchHelpProcessor.createSearch(TARIFF_SCALE_CLASS_SEARCH_HELP_NAME);
@@ -60,8 +60,8 @@ public class TariffingMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик кнопки "Очистить тарифную сетку"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РћС‡РёСЃС‚РёС‚СЊ С‚Р°СЂРёС„РЅСѓСЋ СЃРµС‚РєСѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionClearTariffScale(WidgetEvent event) {
 		((Tariffing) getEntity()).setTariffScaleCode(null);

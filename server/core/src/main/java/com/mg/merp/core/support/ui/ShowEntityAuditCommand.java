@@ -23,7 +23,7 @@ import com.mg.framework.utils.SecurityUtils;
 import com.mg.merp.core.DatabaseAuditServiceLocal;
 
 /**
- * Реализация команды показа аудита хранилища данных
+ * Р РµР°Р»РёР·Р°С†РёСЏ РєРѕРјР°РЅРґС‹ РїРѕРєР°Р·Р° Р°СѓРґРёС‚Р° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: ShowEntityAuditCommand.java,v 1.2 2008/03/03 13:05:04 safonov Exp $

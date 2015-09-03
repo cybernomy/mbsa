@@ -4,7 +4,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Метод начисления накладных расходов на рабочую силу
+ * РњРµС‚РѕРґ РЅР°С‡РёСЃР»РµРЅРёСЏ РЅР°РєР»Р°РґРЅС‹С… СЂР°СЃС…РѕРґРѕРІ РЅР° СЂР°Р±РѕС‡СѓСЋ СЃРёР»Сѓ
  * 
  * @author leonova
  * @version $Id: LaborAllocationType.java,v 1.1 2006/06/21 05:13:37 leonova Exp $
@@ -18,25 +18,25 @@ public enum LaborAllocationType {
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#LaborAllocationType.None")
 	NONE,
 	/**
-	 * На единицу времени
+	 * РќР° РµРґРёРЅРёС†Сѓ РІСЂРµРјРµРЅРё
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#LaborAllocationType.UnitTime")
 	UNITTIME,
 	
 	/**
-	 * На единицу ГП
+	 * РќР° РµРґРёРЅРёС†Сѓ Р“Рџ
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#LaborAllocationType.UnitProduction")
 	UNITPRODUCTION,
 	
 	/**
-	 * Процент от стоимости работ
+	 * РџСЂРѕС†РµРЅС‚ РѕС‚ СЃС‚РѕРёРјРѕСЃС‚Рё СЂР°Р±РѕС‚
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#LaborAllocationType.Percent")
 	PERCENT,
 	
 	/**
-	 * Фиксированная стоимость на партию
+	 * Р¤РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ РЅР° РїР°СЂС‚РёСЋ
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#LaborAllocationType.PriceParty")
 	PRICEPARTY

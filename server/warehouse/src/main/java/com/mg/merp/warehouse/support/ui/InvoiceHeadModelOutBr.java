@@ -28,7 +28,7 @@ import com.mg.merp.reference.support.ReferenceUtils;
 import com.mg.merp.warehouse.InvoiceHeadModelOutServiceLocal;
 
 /**
- * Браузер образцов исходящих накладных
+ * Р‘СЂР°СѓР·РµСЂ РѕР±СЂР°Р·С†РѕРІ РёСЃС…РѕРґСЏС‰РёС… РЅР°РєР»Р°РґРЅС‹С…
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InvoiceHeadModelOutBr.java,v 1.4 2006/09/12 10:59:20 leonova Exp $

@@ -23,7 +23,7 @@ import com.mg.merp.reference.model.Measure;
 import com.mg.merp.reference.model.Okdp;
 
 /**
- * Условия отбора каталога
+ * РЈСЃР»РѕРІРёСЏ РѕС‚Р±РѕСЂР° РєР°С‚Р°Р»РѕРіР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: CatalogRest.java,v 1.7 2008/10/09 06:54:01 safonov Exp $

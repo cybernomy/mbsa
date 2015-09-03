@@ -27,7 +27,7 @@ import com.mg.merp.paymentalloc.model.Payment;
 import com.mg.merp.paymentalloc.model.TransactHead;
 
 /**
- * Модель таблицы "Заголовков, связанных документов"
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ "Р—Р°РіРѕР»РѕРІРєРѕРІ, СЃРІСЏР·Р°РЅРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: TransactHeadTableModel.java,v 1.1 2007/06/05 12:50:57 sharapov Exp $

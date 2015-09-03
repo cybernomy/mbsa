@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.Container;
 import com.mg.framework.api.ui.Widget;
 
 /**
- * Элемент "Панель с вкладками"
+ * Р­Р»РµРјРµРЅС‚ "РџР°РЅРµР»СЊ СЃ РІРєР»Р°РґРєР°РјРё"
  * 
  * @author Oleg V. Safonov
  * @version $Id: TabbedPane.java,v 1.4 2007/11/15 16:39:43 safonov Exp $
@@ -26,8 +26,8 @@ import com.mg.framework.api.ui.Widget;
 public interface TabbedPane extends Container {
 
 	/**
-	 * атрибут размещения закладок, может иметь
-	 * следующие значения:
+	 * Р°С‚СЂРёР±СѓС‚ СЂР°Р·РјРµС‰РµРЅРёСЏ Р·Р°РєР»Р°РґРѕРє, РјРѕР¶РµС‚ РёРјРµС‚СЊ
+	 * СЃР»РµРґСѓСЋС‰РёРµ Р·РЅР°С‡РµРЅРёСЏ:
 	 * </br>top
 	 * </br>left
 	 * </br>bottom
@@ -38,7 +38,7 @@ public interface TabbedPane extends Container {
 	final static String PLACEMENT = "tabPlacement"; //$NON-NLS-1$
 	
 	/**
-	 * атрибут заголовка закладки
+	 * Р°С‚СЂРёР±СѓС‚ Р·Р°РіРѕР»РѕРІРєР° Р·Р°РєР»Р°РґРєРё
 	 */
 	final static String TITLE = "tabTitle"; //$NON-NLS-1$
 	

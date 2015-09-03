@@ -20,7 +20,7 @@ import com.mg.merp.document.generic.ui.DocumentRest;
 import com.mg.merp.reference.model.BankAccount;
 
 /**
- * Базовый класс контроллера формы условий отбора "Банковских документов"
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РєРѕРЅС‚СЂРѕР»Р»РµСЂР° С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° "Р‘Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: BankDocumentRest.java,v 1.1 2007/11/12 06:51:28 sharapov Exp $

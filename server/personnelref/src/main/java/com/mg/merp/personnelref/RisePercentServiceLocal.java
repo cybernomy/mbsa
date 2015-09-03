@@ -17,7 +17,7 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.RisePercent;
 
 /**
- * Бизнес-компонент "Процент надбавки"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРѕС†РµРЅС‚ РЅР°РґР±Р°РІРєРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.personnelref.model.RisePercent;
 public interface RisePercentServiceLocal extends com.mg.framework.api.DataBusinessObjectService<RisePercent, Integer> {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/personnelref/RisePercent"; //$NON-NLS-1$
 

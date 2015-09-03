@@ -32,7 +32,7 @@ import com.mg.merp.reference.model.TaxGroup;
 import com.mg.merp.reference.model.TaxLink;
 
 /**
- * Бизнес-компонент "Группы налогов"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р“СЂСѓРїРїС‹ РЅР°Р»РѕРіРѕРІ"
  * 
  * @author leonova
  * @version $Id: TaxGroupServiceBean.java,v 1.6 2006/09/20 13:12:59 safonov Exp $

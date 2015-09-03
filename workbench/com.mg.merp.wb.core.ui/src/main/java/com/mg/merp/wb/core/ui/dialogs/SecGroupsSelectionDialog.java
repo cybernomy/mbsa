@@ -38,7 +38,7 @@ import com.mg.merp.wb.core.support.connector.WorkbenchService;
 import com.mg.merp.wb.core.ui.UiPlugin;
 
 /**
- * Диалог выбора групп пользователей
+ * Р”РёР°Р»РѕРі РІС‹Р±РѕСЂР° РіСЂСѓРїРї РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: SecGroupsSelectionDialog.java,v 1.2 2007/07/11 05:57:03 poroxnenko Exp $

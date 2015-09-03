@@ -22,7 +22,7 @@ import com.mg.merp.warehouse.model.StockPlanHistoryDirection;
 import com.mg.merp.warehouse.model.StockPlanHistoryKind;
 
 /**
- * Стратегия реализации этапа ДО "Резервирование по складу"
+ * РЎС‚СЂР°С‚РµРіРёСЏ СЂРµР°Р»РёР·Р°С†РёРё СЌС‚Р°РїР° Р”Рћ "Р РµР·РµСЂРІРёСЂРѕРІР°РЅРёРµ РїРѕ СЃРєР»Р°РґСѓ"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseProcessReservStrategy.java,v 1.6 2008/04/18 15:18:20 safonov Exp $

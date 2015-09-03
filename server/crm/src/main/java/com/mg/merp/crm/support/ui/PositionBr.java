@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.Position;
 
 /**
- * Браузер должностей
+ * Р‘СЂР°СѓР·РµСЂ РґРѕР»Р¶РЅРѕСЃС‚РµР№
  * 
  * @author leonova
  * @version $Id: PositionBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

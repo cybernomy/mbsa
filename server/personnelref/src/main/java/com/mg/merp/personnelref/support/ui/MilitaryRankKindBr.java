@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.personnelref.model.MilitaryRankKind;
 
 /**
- * Браузер составов воинских званий
+ * Р‘СЂР°СѓР·РµСЂ СЃРѕСЃС‚Р°РІРѕРІ РІРѕРёРЅСЃРєРёС… Р·РІР°РЅРёР№
  * 
  * @author leonova
  * @version $Id: MilitaryRankKindBr.java,v 1.1 2006/08/03 11:25:05 leonova Exp $ 

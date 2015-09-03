@@ -17,7 +17,7 @@ package com.mg.merp.finance;
 import com.mg.merp.finance.model.Specification;
 
 /**
- * Бизнес-компонент "Спецификация финансовых операций - признаки"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ С„РёРЅР°РЅСЃРѕРІС‹С… РѕРїРµСЂР°С†РёР№ - РїСЂРёР·РЅР°РєРё"
  * 
  * @author leonova
  * @version $Id: SpecFeatureServiceLocal.java,v 1.2 2007/10/08 14:24:15 safonov Exp $
@@ -25,7 +25,7 @@ import com.mg.merp.finance.model.Specification;
 public interface SpecFeatureServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<Specification, Integer> {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/finance/SpecFeatureModel";
 

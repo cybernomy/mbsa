@@ -26,7 +26,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.CustomsDeclaration;
 
 /**
- * Контроллер браузера бизнес-компонента "Грузовые таможенные декларации"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р“СЂСѓР·РѕРІС‹Рµ С‚Р°РјРѕР¶РµРЅРЅС‹Рµ РґРµРєР»Р°СЂР°С†РёРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: CustomsDeclarationBr.java,v 1.2 2008/03/05 09:47:59 alikaev Exp $

@@ -22,7 +22,7 @@ import com.mg.merp.reference.model.OrgUnit;
 import com.mg.merp.warehouse.model.Warehouse;
 
 /**
- * Бизнес-компонент "Склады"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРєР»Р°РґС‹"
  * 
  * @author leonova
  * @version $Id: WarehouseServiceLocal.java,v 1.6 2007/11/29 08:37:13 alikaev Exp $
@@ -31,45 +31,45 @@ public interface WarehouseServiceLocal extends
 		com.mg.framework.api.DataBusinessObjectService<Warehouse, Integer> {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/warehouse/Warehouse";
 
 	/**
-	 * Добавляет запись в таблицу WH_WAREHOUSE, соответствующую подразделению
+	 * Р”РѕР±Р°РІР»СЏРµС‚ Р·Р°РїРёСЃСЊ РІ С‚Р°Р±Р»РёС†Сѓ WH_WAREHOUSE, СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰СѓСЋ РїРѕРґСЂР°Р·РґРµР»РµРЅРёСЋ
 	 * 
 	 * @param orgUnit
-	 *            подразделение
-	 * @return созданный склад
+	 *            РїРѕРґСЂР°Р·РґРµР»РµРЅРёРµ
+	 * @return СЃРѕР·РґР°РЅРЅС‹Р№ СЃРєР»Р°Рґ
 	 */
 	Warehouse addWarehouse(OrgUnit orgUnit);
 
 	/**
-	 * Удаляет запись в таблице WH_WAREHOUSE, соответствующую подразделению с
-	 * идентификатором id
+	 * РЈРґР°Р»СЏРµС‚ Р·Р°РїРёСЃСЊ РІ С‚Р°Р±Р»РёС†Рµ WH_WAREHOUSE, СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰СѓСЋ РїРѕРґСЂР°Р·РґРµР»РµРЅРёСЋ СЃ
+	 * РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРј id
 	 * 
 	 * @param id
-	 *            идентификатор записи
+	 *            РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РїРёСЃРё
 	 */
 	void eraseWarehouse(int id);
 	
 	/**
-	 * Получить МОЛ по умолчанию для склада
-	 * @param warehouse - склад
-	 * @return МОЛ(сотрудник) по умолчанию для склада, или <code>null</code> если не найден
+	 * РџРѕР»СѓС‡РёС‚СЊ РњРћР› РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ СЃРєР»Р°РґР°
+	 * @param warehouse - СЃРєР»Р°Рґ
+	 * @return РњРћР›(СЃРѕС‚СЂСѓРґРЅРёРє) РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ СЃРєР»Р°РґР°, РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	 Employees getWarehouseDefaultMOL(Warehouse warehouse);
 	 
 	 /**
-	  * Открыть склад
-	  * @param warehouseIds - набор складов
+	  * РћС‚РєСЂС‹С‚СЊ СЃРєР»Р°Рґ
+	  * @param warehouseIds - РЅР°Р±РѕСЂ СЃРєР»Р°РґРѕРІ
 	  */
 	 void openWarehouse(Serializable[] warehouseIds);
 	 
 	 /**
-	  * Закрыть склад
-	  * @param warehouseIds - набор складов
-	  * @param closedDateTill - закрыть склад по число
+	  * Р—Р°РєСЂС‹С‚СЊ СЃРєР»Р°Рґ
+	  * @param warehouseIds - РЅР°Р±РѕСЂ СЃРєР»Р°РґРѕРІ
+	  * @param closedDateTill - Р·Р°РєСЂС‹С‚СЊ СЃРєР»Р°Рґ РїРѕ С‡РёСЃР»Рѕ
 	  */
 	 void closeWarehouse(Serializable[] warehouseIds, Date closedDateTill);
 

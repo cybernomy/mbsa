@@ -17,7 +17,7 @@ package com.mg.merp.personnelref.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Образование"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·РѕРІР°РЅРёРµ"
  * 
  * @author hbm2java
  * @author Artem V. Sharapov

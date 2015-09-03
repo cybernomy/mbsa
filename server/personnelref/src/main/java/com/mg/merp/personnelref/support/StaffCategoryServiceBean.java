@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.StaffCategoryServiceLocal;
 import com.mg.merp.personnelref.model.StaffCategory;
 
 /**
- * Бизнес-компонент "Категории персонала" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљР°С‚РµРіРѕСЂРёРё РїРµСЂСЃРѕРЅР°Р»Р°" 
  * 
  * @author leonova
  * @version $Id: StaffCategoryServiceBean.java,v 1.3 2006/09/06 12:49:54 leonova Exp $

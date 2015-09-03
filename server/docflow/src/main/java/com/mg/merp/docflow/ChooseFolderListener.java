@@ -19,7 +19,7 @@ import java.util.EventListener;
 import com.mg.merp.core.model.Folder;
 
 /**
- * Слушатель выбора папки назначения
+ * РЎР»СѓС€Р°С‚РµР»СЊ РІС‹Р±РѕСЂР° РїР°РїРєРё РЅР°Р·РЅР°С‡РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ChooseFolderListener.java,v 1.1 2006/12/12 15:23:33 safonov Exp $
@@ -27,14 +27,14 @@ import com.mg.merp.core.model.Folder;
 public interface ChooseFolderListener extends EventListener {
 
 	/**
-	 * папка выбрана
+	 * РїР°РїРєР° РІС‹Р±СЂР°РЅР°
 	 * 
-	 * @param folder	папка
+	 * @param folder	РїР°РїРєР°
 	 */
 	void performed(Folder folder);
 	
 	/**
-	 * выбор папки отменен
+	 * РІС‹Р±РѕСЂ РїР°РїРєРё РѕС‚РјРµРЅРµРЅ
 	 *
 	 */
 	void canceled();	

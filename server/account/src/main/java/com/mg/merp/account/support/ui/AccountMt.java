@@ -27,7 +27,7 @@ import com.mg.merp.account.AnlPlanServiceLocal;
 import com.mg.merp.account.model.AccPlan;
 
 /**
- * Контроллер формы поддержки плана счетов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РїР»Р°РЅР° СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: AccountMt.java,v 1.7 2009/02/25 15:09:59 safonov Exp $

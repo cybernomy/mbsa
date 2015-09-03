@@ -28,7 +28,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.manufacture.VarianceDocumentHeadServiceLocal;
 
 /**
- * Контроллер формы списка документов по отклонениям
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РґРѕРєСѓРјРµРЅС‚РѕРІ РїРѕ РѕС‚РєР»РѕРЅРµРЅРёСЏРј
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: VarianceDocumentHeadBr.java,v 1.13 2009/02/10 14:34:19 safonov Exp $

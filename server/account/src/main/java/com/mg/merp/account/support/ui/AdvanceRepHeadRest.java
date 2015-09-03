@@ -21,7 +21,7 @@ import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы условий отбора авансовых отчетов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° Р°РІР°РЅСЃРѕРІС‹С… РѕС‚С‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: AdvanceRepHeadRest.java,v 1.4 2006/12/19 12:43:33 leonova Exp $

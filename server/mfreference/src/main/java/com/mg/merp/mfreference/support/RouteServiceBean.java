@@ -26,7 +26,7 @@ import com.mg.merp.mfreference.model.RouteDestType;
 import com.mg.merp.mfreference.model.RouteSrcType;
 
 /**
- * Бизнес-компонент "Логистические маршруты" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р›РѕРіРёСЃС‚РёС‡РµСЃРєРёРµ РјР°СЂС€СЂСѓС‚С‹" 
  * 
  * @author leonova
  * @version $Id: RouteServiceBean.java,v 1.5 2007/08/23 14:37:51 alikaev Exp $

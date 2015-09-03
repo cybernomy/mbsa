@@ -17,7 +17,7 @@ package com.mg.merp.paymentalloc.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Группы документов"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р“СЂСѓРїРїС‹ РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author Artem V. Sharapov 
  * @version $Id: DocGroup.java,v 1.5 2007/07/02 06:31:00 sharapov Exp $

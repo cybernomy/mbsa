@@ -21,7 +21,7 @@ import java.util.Map;
 import org.eclipse.datatools.connectivity.oda.OdaException;
 
 /**
- * Типы данных
+ * РўРёРїС‹ РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @author Valentin A. Poroxnenko
@@ -29,39 +29,39 @@ import org.eclipse.datatools.connectivity.oda.OdaException;
  */
 public final class DataTypes {
 	/**
-	 * целый
+	 * С†РµР»С‹Р№
 	 */
 	public static final int INT = Types.INTEGER;
 	/**
-	 * с двойной точностью
+	 * СЃ РґРІРѕР№РЅРѕР№ С‚РѕС‡РЅРѕСЃС‚СЊСЋ
 	 */
 	public static final int DOUBLE = Types.DOUBLE;
 	/**
-	 * строка
+	 * СЃС‚СЂРѕРєР°
 	 */
 	public static final int STRING = Types.VARCHAR;
 	/**
-	 * дата
+	 * РґР°С‚Р°
 	 */
 	public static final int DATE = Types.DATE;
 	/**
-	 * время
+	 * РІСЂРµРјСЏ
 	 */
 	public static final int TIME = Types.TIME;
 	/**
-	 * временная метка
+	 * РІСЂРµРјРµРЅРЅР°СЏ РјРµС‚РєР°
 	 */
 	public static final int TIMESTAMP = Types.TIMESTAMP;
 	/**
-	 * двоичный объект
+	 * РґРІРѕРёС‡РЅС‹Р№ РѕР±СЉРµРєС‚
 	 */
 	public static final int BLOB = Types.BLOB;
 	/**
-	 * с плавающей точкой
+	 * СЃ РїР»Р°РІР°СЋС‰РµР№ С‚РѕС‡РєРѕР№
 	 */
 	public static final int BIGDECIMAL = Types.NUMERIC;
 	/**
-	 * логический
+	 * Р»РѕРіРёС‡РµСЃРєРёР№
 	 */
 	public static final int BOOLEAN = Types.BOOLEAN;
 	
@@ -91,11 +91,11 @@ public final class DataTypes {
 	}
 
 	/**
-	 * Возвращает целое, соответствующее входному аргументу
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ С†РµР»РѕРµ, СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµРµ РІС…РѕРґРЅРѕРјСѓ Р°СЂРіСѓРјРµРЅС‚Сѓ
 	 * 
 	 * @param typeName
-	 *            имя типа
-	 * @return код типа
+	 *            РёРјСЏ С‚РёРїР°
+	 * @return РєРѕРґ С‚РёРїР°
 	 * @throws OdaException
 	 */
 	public static int getType(String typeName) throws OdaException {
@@ -106,11 +106,11 @@ public final class DataTypes {
 	}
 
 	/**
-	 * Возвращает строку, соответствующую входному аргументу
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃС‚СЂРѕРєСѓ, СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰СѓСЋ РІС…РѕРґРЅРѕРјСѓ Р°СЂРіСѓРјРµРЅС‚Сѓ
 	 * 
 	 * @param type
-	 *            код типа
-	 * @return имя типа
+	 *            РєРѕРґ С‚РёРїР°
+	 * @return РёРјСЏ С‚РёРїР°
 	 * @throws OdaException
 	 */
 	public static String getTypeString(int type) throws OdaException {
@@ -120,10 +120,10 @@ public final class DataTypes {
 	}
 
 	/**
-	 * Проверка валидности имени типа
+	 * РџСЂРѕРІРµСЂРєР° РІР°Р»РёРґРЅРѕСЃС‚Рё РёРјРµРЅРё С‚РёРїР°
 	 * 
 	 * @param typeName
-	 *            имя типа
+	 *            РёРјСЏ С‚РёРїР°
 	 * @return
 	 */
 	public static boolean isValidType(String typeName) {

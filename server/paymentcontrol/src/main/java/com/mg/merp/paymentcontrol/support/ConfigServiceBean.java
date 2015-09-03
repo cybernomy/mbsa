@@ -22,7 +22,7 @@ import com.mg.merp.paymentcontrol.ConfigServiceLocal;
 import com.mg.merp.paymentcontrol.model.PmcConfig;
 
 /**
- * Реализация бизнес-компонента "Конфигурация модуля <Платежный календарь>"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РџР»Р°С‚РµР¶РЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ>"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

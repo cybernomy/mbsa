@@ -26,12 +26,12 @@ public interface InternalInvoiceHeadServiceLocal
 {
 
 	/**
-	 * тип папки для внутренних накладных
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРёС… РЅР°РєР»Р°РґРЅС‹С…
 	 */
 	final static short FOLDER_PART = 19;
 	
 	/**
-	 * docsection для внутренних накладных
+	 * docsection РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРёС… РЅР°РєР»Р°РґРЅС‹С…
 	 */
 	final static short DOCSECTION = 7;
 }

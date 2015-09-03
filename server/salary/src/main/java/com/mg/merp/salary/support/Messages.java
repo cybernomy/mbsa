@@ -17,7 +17,7 @@ package com.mg.merp.salary.support;
 import com.mg.framework.generic.MessageSourceAccessor;
 
 /**
- * Класс пользовательских сообщений
+ * РљР»Р°СЃСЃ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… СЃРѕРѕР±С‰РµРЅРёР№
  * 
  * @author Artem V. Sharapov
  * @version $Id: Messages.java,v 1.3 2007/08/27 06:19:40 sharapov Exp $

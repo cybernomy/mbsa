@@ -15,7 +15,7 @@
 package com.mg.merp.paymentcontrol;
 
 /**
- * Бизнес-компонент "Планирование платежей"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџР»Р°РЅРёСЂРѕРІР°РЅРёРµ РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Oleg V. Safonov
  * @version $Id: PlanServiceLocal.java,v 1.3 2008/01/29 13:31:45 safonov Exp $

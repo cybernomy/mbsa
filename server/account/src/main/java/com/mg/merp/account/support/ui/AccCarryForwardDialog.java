@@ -27,7 +27,7 @@ import com.mg.merp.account.model.AccPlan;
 import com.mg.merp.account.support.Messages;
 
 /**
- * Контроллер диалога "Перенос остатков" бух.учета
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "РџРµСЂРµРЅРѕСЃ РѕСЃС‚Р°С‚РєРѕРІ" Р±СѓС….СѓС‡РµС‚Р°
  * 
  * @author Artem V. Sharapov
  * @version $Id: AccCarryForwardDialog.java,v 1.2 2007/01/18 10:13:16 sharapov Exp $
@@ -60,8 +60,8 @@ public class AccCarryForwardDialog extends DefaultDialog {
 	//	Methods
 
 	/**
-	 * Обработка события выбора счетов
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° СЃС‡РµС‚РѕРІ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionChooseAccounts(WidgetEvent event) throws Exception {
@@ -85,8 +85,8 @@ public class AccCarryForwardDialog extends DefaultDialog {
 	}
 
 	/**
-	 * Обработка события выбора аналитических счетов
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° Р°РЅР°Р»РёС‚РёС‡РµСЃРєРёС… СЃС‡РµС‚РѕРІ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionChooseAnlAccounts(WidgetEvent event) throws Exception {
@@ -110,8 +110,8 @@ public class AccCarryForwardDialog extends DefaultDialog {
 	}
 
 	/**
-	 * Обработка события выбора счетов учета ТМЦ
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° СЃС‡РµС‚РѕРІ СѓС‡РµС‚Р° РўРњР¦
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionChooseValAccounts(WidgetEvent event) throws Exception {
@@ -135,8 +135,8 @@ public class AccCarryForwardDialog extends DefaultDialog {
 	}
 
 	/**
-	 * Обработка события выбора ведомостей дебиторов/кредиторов
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РІРµРґРѕРјРѕСЃС‚РµР№ РґРµР±РёС‚РѕСЂРѕРІ/РєСЂРµРґРёС‚РѕСЂРѕРІ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionChooseDbKtAccounts(WidgetEvent event) throws Exception {
@@ -160,8 +160,8 @@ public class AccCarryForwardDialog extends DefaultDialog {
 	}
 
 	/**
-	 * Обработка события выбора ВСЕХ счетов
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° Р’РЎР•РҐ СЃС‡РµС‚РѕРІ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionChooseAllAccounts(WidgetEvent event) throws Exception {
@@ -169,8 +169,8 @@ public class AccCarryForwardDialog extends DefaultDialog {
 	}
 
 	/**
-	 * Обработка события выбора ВСЕХ аналитических счетов
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° Р’РЎР•РҐ Р°РЅР°Р»РёС‚РёС‡РµСЃРєРёС… СЃС‡РµС‚РѕРІ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionChooseAllAnlAccounts(WidgetEvent event) throws Exception {
@@ -178,8 +178,8 @@ public class AccCarryForwardDialog extends DefaultDialog {
 	}
 
 	/**
-	 * Обработка события выбора ВСЕХ счетов учета ТМЦ
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° Р’РЎР•РҐ СЃС‡РµС‚РѕРІ СѓС‡РµС‚Р° РўРњР¦
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionChooseAllValAccounts(WidgetEvent event) throws Exception {
@@ -187,8 +187,8 @@ public class AccCarryForwardDialog extends DefaultDialog {
 	}
 
 	/**
-	 * Обработка события выбора ВСЕХ ведомостей дебиторов/кредиторов
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° Р’РЎР•РҐ РІРµРґРѕРјРѕСЃС‚РµР№ РґРµР±РёС‚РѕСЂРѕРІ/РєСЂРµРґРёС‚РѕСЂРѕРІ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionChooseAllDbKtAccounts(WidgetEvent event) throws Exception {
@@ -196,9 +196,9 @@ public class AccCarryForwardDialog extends DefaultDialog {
 	}
 
 	/**
-	 * Установить количество выбранных счетов
-	 * @param wigetCheckBoxName - имя CheckBox-элемента 
-	 * @param wigetLabelName - имя Label-элемента
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РІС‹Р±СЂР°РЅРЅС‹С… СЃС‡РµС‚РѕРІ
+	 * @param wigetCheckBoxName - РёРјСЏ CheckBox-СЌР»РµРјРµРЅС‚Р° 
+	 * @param wigetLabelName - РёРјСЏ Label-СЌР»РµРјРµРЅС‚Р°
 	 */
 	private void setSelectedAmount(String wigetCheckBoxName, String wigetLabelName) {
 		if( ((CheckBox) view.getWidget(wigetCheckBoxName)).getEditorValue() == Boolean.valueOf("true") ) //$NON-NLS-1$
@@ -212,9 +212,9 @@ public class AccCarryForwardDialog extends DefaultDialog {
 	}
 
 	/**
-	 * Получить количество выбранных счетов
-	 * @param wigetLabelName - имя Label-элемента
-	 * @return количество выбранных счетов
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РІС‹Р±СЂР°РЅРЅС‹С… СЃС‡РµС‚РѕРІ
+	 * @param wigetLabelName - РёРјСЏ Label-СЌР»РµРјРµРЅС‚Р°
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РІС‹Р±СЂР°РЅРЅС‹С… СЃС‡РµС‚РѕРІ
 	 */
 	private Integer getSelectedAmount(String wigetLabelName) {
 		if(WIGET_SELECTED_ACC == wigetLabelName && accounts != null)
@@ -243,7 +243,7 @@ public class AccCarryForwardDialog extends DefaultDialog {
 	// Getter/Setter Methods
 
 	/**
-	 * @return начальный период переноса остатков
+	 * @return РЅР°С‡Р°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ РїРµСЂРµРЅРѕСЃР° РѕСЃС‚Р°С‚РєРѕРІ
 	 */
 	public com.mg.merp.account.model.Period getAccPeriodFrom() {
 		return accPeriodFrom;
@@ -254,7 +254,7 @@ public class AccCarryForwardDialog extends DefaultDialog {
 	}
 
 	/**
-	 * @return конечный период переноса остатков
+	 * @return РєРѕРЅРµС‡РЅС‹Р№ РїРµСЂРёРѕРґ РїРµСЂРµРЅРѕСЃР° РѕСЃС‚Р°С‚РєРѕРІ
 	 */
 	public com.mg.merp.account.model.Period getAccPeriodTill() {
 		return accPeriodTill;
@@ -265,21 +265,21 @@ public class AccCarryForwardDialog extends DefaultDialog {
 	}
 
 	/**
-	 * @return набор счетов
+	 * @return РЅР°Р±РѕСЂ СЃС‡РµС‚РѕРІ
 	 */
 	public com.mg.merp.account.model.AccPlan[] getAccounts() {
 		return accounts;
 	}
 
 	/**
-	 * @return набор аналитических счетов
+	 * @return РЅР°Р±РѕСЂ Р°РЅР°Р»РёС‚РёС‡РµСЃРєРёС… СЃС‡РµС‚РѕРІ
 	 */
 	public com.mg.merp.account.model.AccPlan[] getAnlAccounts() {
 		return anlAccounts;
 	}
 
 	/**
-	 * @return набор счетов учета ТМЦ
+	 * @return РЅР°Р±РѕСЂ СЃС‡РµС‚РѕРІ СѓС‡РµС‚Р° РўРњР¦
 	 */
 	public com.mg.merp.account.model.AccPlan[] getValAccounts() {
 		return valAccounts;
@@ -293,7 +293,7 @@ public class AccCarryForwardDialog extends DefaultDialog {
 	}
 
 	/**
-	 * @return набор ведомостей дебиторов/кредиторов
+	 * @return РЅР°Р±РѕСЂ РІРµРґРѕРјРѕСЃС‚РµР№ РґРµР±РёС‚РѕСЂРѕРІ/РєСЂРµРґРёС‚РѕСЂРѕРІ
 	 */
 	public com.mg.merp.account.model.AccPlan[] getDbKtAccounts() {
 		return dbKtAccounts;

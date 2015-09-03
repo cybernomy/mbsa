@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.StreetServiceLocal;
 import com.mg.merp.personnelref.model.Street;
 
 /**
- * Бизнес-компонент "Улицы" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЈР»РёС†С‹" 
  * 
  * @author leonova
  * @version $Id: StreetServiceBean.java,v 1.3 2006/09/06 12:49:54 leonova Exp $

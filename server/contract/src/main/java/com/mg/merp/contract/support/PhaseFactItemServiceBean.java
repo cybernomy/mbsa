@@ -55,7 +55,7 @@ import com.mg.merp.reference.model.CurrencyRateAuthority;
 import com.mg.merp.reference.model.CurrencyRateType;
 
 /**
- * Реализация бизнес-компонента "Фактические пункты контракта" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р¤Р°РєС‚РёС‡РµСЃРєРёРµ РїСѓРЅРєС‚С‹ РєРѕРЅС‚СЂР°РєС‚Р°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -64,7 +64,7 @@ import com.mg.merp.reference.model.CurrencyRateType;
 @Stateless(name="merp/contract/PhaseFactItemService") //$NON-NLS-1$
 public class PhaseFactItemServiceBean extends AbstractPOJODataBusinessObjectServiceBean<PhaseFactItem, Integer> implements PhaseFactItemServiceLocal {
 
-	//контекст округления
+	//РєРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ
 	private RoundContext roundContext = null;
 
 
@@ -85,8 +85,8 @@ public class PhaseFactItemServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Рассчитать аттрибуты фактического пункта контракта
-	 * @param phaseFactItem - фактический пункт контракта
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ Р°С‚С‚СЂРёР±СѓС‚С‹ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param phaseFactItem - С„Р°РєС‚РёС‡РµСЃРєРёР№ РїСѓРЅРєС‚ РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	public void doAdjust(PhaseFactItem phaseFactItem) {
 		Integer currencyPrec = ConfigurationHelper.getConfiguration().getCurrencyPrec();
@@ -103,9 +103,9 @@ public class PhaseFactItemServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Получить фактическую сумму для пункта контракта
-	 * @param phaseFactItem - фактический пункт
-	 * @return фактическая сумма для пункта контракта
+	 * РџРѕР»СѓС‡РёС‚СЊ С„Р°РєС‚РёС‡РµСЃРєСѓСЋ СЃСѓРјРјСѓ РґР»СЏ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param phaseFactItem - С„Р°РєС‚РёС‡РµСЃРєРёР№ РїСѓРЅРєС‚
+	 * @return С„Р°РєС‚РёС‡РµСЃРєР°СЏ СЃСѓРјРјР° РґР»СЏ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	protected AgregateSumBySpecificationResult getFactSumBySpecification(PhaseFactItem phaseFactItem) {
 		return OrmTemplate.getInstance().findUniqueByCriteria(OrmTemplate.createCriteria(ContractSpec.class)
@@ -132,8 +132,8 @@ public class PhaseFactItemServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Распределить фактичекую сумму автоматически
-	 * @param phaseFactItem - фактический пункт контракта
+	 * Р Р°СЃРїСЂРµРґРµР»РёС‚СЊ С„Р°РєС‚РёС‡РµРєСѓСЋ СЃСѓРјРјСѓ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё
+	 * @param phaseFactItem - С„Р°РєС‚РёС‡РµСЃРєРёР№ РїСѓРЅРєС‚ РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	private void iternalAutoDistributionFactSum(PhaseFactItem phaseFactItem) {
 		final String QUERY_TEXT = "select pip from PhasePlanItem pip, PhaseFactItem pif, Phase cp where (pip.PlanSum > pip.FactSum) and (pip.ContractPhase.Id = cp.Id) and (cp.DocHead.Id = pif.DocHead.Id) and (pip.Kind = pif.Kind) and (pif.Id = :factId)"; //$NON-NLS-1$
@@ -192,9 +192,9 @@ public class PhaseFactItemServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Распределить фактичекую сумму вручную
-	 * @param data - структура данных для распределения фактичекой суммы
-	 * @param factItemId - идентификатор фактического пункта контракта
+	 * Р Р°СЃРїСЂРµРґРµР»РёС‚СЊ С„Р°РєС‚РёС‡РµРєСѓСЋ СЃСѓРјРјСѓ РІСЂСѓС‡РЅСѓСЋ
+	 * @param data - СЃС‚СЂСѓРєС‚СѓСЂР° РґР°РЅРЅС‹С… РґР»СЏ СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ С„Р°РєС‚РёС‡РµРєРѕР№ СЃСѓРјРјС‹
+	 * @param factItemId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	private void iternalManuaDistributionFactSum(ManualDistributionData[] data, Integer factItemId) {
 		if(data != null && data.length > 0) {
@@ -218,8 +218,8 @@ public class PhaseFactItemServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Аннулировать распределение фактической суммы
-	 * @param factItemId - идентификатор фактического пункта договора
+	 * РђРЅРЅСѓР»РёСЂРѕРІР°С‚СЊ СЂР°СЃРїСЂРµРґРµР»РµРЅРёРµ С„Р°РєС‚РёС‡РµСЃРєРѕР№ СЃСѓРјРјС‹
+	 * @param factItemId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РїСѓРЅРєС‚Р° РґРѕРіРѕРІРѕСЂР°
 	 */
 	private void iternalAvoidDistributionFactSum(Integer factItemId) {
 		final String QUERY_TEXT = "delete from PhaseItemLink pil where pil.PhaseItemFact.Id = :factItemId"; //$NON-NLS-1$
@@ -236,22 +236,22 @@ public class PhaseFactItemServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Создать фактический пункт контракта
-	 * @param factItemData - данные для создания фактического пункта
-	 * @return фактический пункт
+	 * РЎРѕР·РґР°С‚СЊ С„Р°РєС‚РёС‡РµСЃРєРёР№ РїСѓРЅРєС‚ РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param factItemData - РґР°РЅРЅС‹Рµ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РїСѓРЅРєС‚Р°
+	 * @return С„Р°РєС‚РёС‡РµСЃРєРёР№ РїСѓРЅРєС‚
 	 */
 	protected PhaseFactItem internalCreateContractFactItem(FactItemData factItemData) {
-		//берем из настроек конфигурации модуля количество знаков после запятой
+		//Р±РµСЂРµРј РёР· РЅР°СЃС‚СЂРѕРµРє РєРѕРЅС„РёРіСѓСЂР°С†РёРё РјРѕРґСѓР»СЏ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·РЅР°РєРѕРІ РїРѕСЃР»Рµ Р·Р°РїСЏС‚РѕР№
 		Integer currencyPrec = ConfigurationHelper.getConfiguration().getCurrencyPrec();
-		//устанавливаем контекст округления
+		//СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РєРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ
 		this.roundContext = new RoundContext(currencyPrec != 0 ? currencyPrec : 4);
 		DocHead docHead = factItemData.getDocHead();
-		DocHead contractDocHead = factItemData.getContract(); // не может быть NULL!!!!
+		DocHead contractDocHead = factItemData.getContract(); // РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ NULL!!!!
 
-		// если контракт не был проставлен в заголовке документа, то проставим его
+		// РµСЃР»Рё РєРѕРЅС‚СЂР°РєС‚ РЅРµ Р±С‹Р» РїСЂРѕСЃС‚Р°РІР»РµРЅ РІ Р·Р°РіРѕР»РѕРІРєРµ РґРѕРєСѓРјРµРЅС‚Р°, С‚Рѕ РїСЂРѕСЃС‚Р°РІРёРј РµРіРѕ
 		docHead.setContractDate(factItemData.getContractDate());
-		docHead.setContractType(factItemData.getсontractType());
-		docHead.setContractNumber(factItemData.getсontractNumber());
+		docHead.setContractType(factItemData.getСЃontractType());
+		docHead.setContractNumber(factItemData.getСЃontractNumber());
 		docHead.setContract(contractDocHead);
 		ServerUtils.getPersistentManager().merge(docHead);
 
@@ -265,11 +265,11 @@ public class PhaseFactItemServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Инициализировать фактический пункт контракта
-	 * @param docHead - заголовок документа, ссылающийся на контракт
-	 * @param contractDocHead - заголовок контракта
-	 * @param factItemData - данные для инициализации пункта
-	 * @return фактический пункт контракта
+	 * РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ С„Р°РєС‚РёС‡РµСЃРєРёР№ РїСѓРЅРєС‚ РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param docHead - Р·Р°РіРѕР»РѕРІРѕРє РґРѕРєСѓРјРµРЅС‚Р°, СЃСЃС‹Р»Р°СЋС‰РёР№СЃСЏ РЅР° РєРѕРЅС‚СЂР°РєС‚
+	 * @param contractDocHead - Р·Р°РіРѕР»РѕРІРѕРє РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param factItemData - РґР°РЅРЅС‹Рµ РґР»СЏ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё РїСѓРЅРєС‚Р°
+	 * @return С„Р°РєС‚РёС‡РµСЃРєРёР№ РїСѓРЅРєС‚ РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	protected PhaseFactItem initializeContractFactItem(DocHead docHead, DocHead contractDocHead,FactItemData factItemData) {
 		PhaseFactItem contractFactItem = initialize();
@@ -279,7 +279,7 @@ public class PhaseFactItemServiceBean extends AbstractPOJODataBusinessObjectServ
 		contractFactItem.setDocType(docHead.getDocType());
 		contractFactItem.setDocNumber(docHead.getDocNumber());
 		contractFactItem.setDocDate(docHead.getDocDate());
-		//конвертируем сумму в валюту контракта
+		//РєРѕРЅРІРµСЂС‚РёСЂСѓРµРј СЃСѓРјРјСѓ РІ РІР°Р»СЋС‚Сѓ РєРѕРЅС‚СЂР°РєС‚Р°
 		Currency contractCurrency = contractDocHead != null ? contractDocHead.getCurrency() : null;
 		Currency docHeadCurrency = docHead.getCurrency();
 		contractFactItem.setFactSum(getConversionSum(contractCurrency, docHeadCurrency, contractDocHead.getCurrencyRateAuthority(), contractDocHead.getCurrencyRateType(), factItemData.getProcessDate(), factItemData.getPerformedSum(), roundContext));
@@ -294,21 +294,21 @@ public class PhaseFactItemServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Возвращает конвертированную сумму
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРЅСѓСЋ СЃСѓРјРјСѓ
 	 * @param currencyTo
-	 * 				- валюта в которую конвертируем
+	 * 				- РІР°Р»СЋС‚Р° РІ РєРѕС‚РѕСЂСѓСЋ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРј
 	 * @param currencyFrom
-	 * 				- валюта из которой конвертируем
+	 * 				- РІР°Р»СЋС‚Р° РёР· РєРѕС‚РѕСЂРѕР№ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРј
 	 * @param curRateAuthority
-	 * 				- источник курса
+	 * 				- РёСЃС‚РѕС‡РЅРёРє РєСѓСЂСЃР°
 	 * @param curType
-	 * 				- тип курса
+	 * 				- С‚РёРї РєСѓСЂСЃР°
 	 * @param date
-	 * 				- дата 
+	 * 				- РґР°С‚Р° 
 	 * @param summ
-	 * 				- сумма для конвертации
+	 * 				- СЃСѓРјРјР° РґР»СЏ РєРѕРЅРІРµСЂС‚Р°С†РёРё
 	 * @param roundContext
-	 * 				- контекст округления
+	 * 				- РєРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ
 	 * @return
 	 */
 	private BigDecimal getConversionSum(Currency currencyTo, Currency currencyFrom, CurrencyRateAuthority curRateAuthority, CurrencyRateType curType, Date date, BigDecimal summ, RoundContext roundContext) {
@@ -323,10 +323,10 @@ public class PhaseFactItemServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Создать спецификацию для фактического пункта контракта
-	 * @param docHead - заголовок документа, ссылающийся на контракт
-	 * @param contractFactItem - фактический пункт контракта
-	 * @return набор позиций спецификации пункта контракта
+	 * РЎРѕР·РґР°С‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ РґР»СЏ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param docHead - Р·Р°РіРѕР»РѕРІРѕРє РґРѕРєСѓРјРµРЅС‚Р°, СЃСЃС‹Р»Р°СЋС‰РёР№СЃСЏ РЅР° РєРѕРЅС‚СЂР°РєС‚
+	 * @param contractFactItem - С„Р°РєС‚РёС‡РµСЃРєРёР№ РїСѓРЅРєС‚ РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @return РЅР°Р±РѕСЂ РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	protected ContractSpec[] createCotractFactItemSpec(DocHead docHead, PhaseFactItem contractFactItem) {
 		ContractSpec[] contractSpecs = null;
@@ -354,10 +354,10 @@ public class PhaseFactItemServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Инициализировать позицию спецификации фактического пункта контракта
-	 * @param data - данные для инициализации
-	 * @param contractFactItem - фактический пункт контракта
-	 * @return позиция спецификации
+	 * РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ РїРѕР·РёС†РёСЋ СЃРїРµС†РёС„РёРєР°С†РёРё С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param data - РґР°РЅРЅС‹Рµ РґР»СЏ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё
+	 * @param contractFactItem - С„Р°РєС‚РёС‡РµСЃРєРёР№ РїСѓРЅРєС‚ РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @return РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	protected ContractSpec initializeContractFactItemSpec(ContractFactItemSpecData data, PhaseFactItem contractFactItem) {
 		ContractSpecServiceLocal contractSpecService = (ContractSpecServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/contract/ContractSpec"); //$NON-NLS-1$
@@ -367,7 +367,7 @@ public class PhaseFactItemServiceBean extends AbstractPOJODataBusinessObjectServ
 		contractSpec.setCatalog(data.getCatalog());
 		contractSpec.setPriceListHead(null);
 		contractSpec.setQuantity(data.getQuantity());
-		//конвертируем сумму и цену в валюту контракта
+		//РєРѕРЅРІРµСЂС‚РёСЂСѓРµРј СЃСѓРјРјСѓ Рё С†РµРЅСѓ РІ РІР°Р»СЋС‚Сѓ РєРѕРЅС‚СЂР°РєС‚Р°
 		Date processDate = contractFactItem.getRegDate();
 		DocHead contract = contractFactItem.getDocHead();
 		Currency contractCurrency = contract != null ? contract.getCurrency() : null;
@@ -378,8 +378,8 @@ public class PhaseFactItemServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Поместить позиции спецификации в перманентное хранилище
-	 * @param contractSpecs - позиции спецификации фактического пункта контракта
+	 * РџРѕРјРµСЃС‚РёС‚СЊ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РІ РїРµСЂРјР°РЅРµРЅС‚РЅРѕРµ С…СЂР°РЅРёР»РёС‰Рµ
+	 * @param contractSpecs - РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	protected void storeContractSpecItems(ContractSpec[] contractSpecs) {
 		if(contractSpecs != null && contractSpecs.length > 0)

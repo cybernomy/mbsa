@@ -19,7 +19,7 @@ import com.mg.framework.support.ui.UIProducer;
 import com.mg.framework.support.ui.UIUtils;
 
 /**
- * Поисковик сущностей "Сокращенные наименования элемента адреса"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РЎРѕРєСЂР°С‰РµРЅРЅС‹Рµ РЅР°РёРјРµРЅРѕРІР°РЅРёСЏ СЌР»РµРјРµРЅС‚Р° Р°РґСЂРµСЃР°"
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov
@@ -44,7 +44,7 @@ public class AbbreviationSearchHelp extends AbstractSearchHelp {
 	}
 
 	/**
-	 * Установить уровень для поиска (если NULL, то поиск будет осуществлен для всех уровней)
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СѓСЂРѕРІРµРЅСЊ РґР»СЏ РїРѕРёСЃРєР° (РµСЃР»Рё NULL, С‚Рѕ РїРѕРёСЃРє Р±СѓРґРµС‚ РѕСЃСѓС‰РµСЃС‚РІР»РµРЅ РґР»СЏ РІСЃРµС… СѓСЂРѕРІРЅРµР№)
 	 */
 	public void setAbbreviationLevel(Integer abbreviationLevel) {
 		this.abbreviationLevel = abbreviationLevel;

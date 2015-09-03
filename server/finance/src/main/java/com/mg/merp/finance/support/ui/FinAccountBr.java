@@ -34,7 +34,7 @@ import com.mg.merp.finance.AccountServiceLocal;
 import com.mg.merp.finance.model.Account;
 
 /**
- * Контроллер формы списка бизнес-компонента "Счета финансового учета"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎС‡РµС‚Р° С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°"
  * 
  * @author leonova
  * @version $Id: FinAccountBr.java,v 1.5 2008/03/05 07:33:47 alikaev Exp $

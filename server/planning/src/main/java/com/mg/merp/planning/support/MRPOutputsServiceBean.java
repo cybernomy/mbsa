@@ -24,7 +24,7 @@ import com.mg.merp.planning.model.MrpOutputs;
 import com.mg.merp.planning.model.MrpVersionControl;
 
 /**
- * Бизнес-компонент "Потребности товаров для расчета MRP"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџРѕС‚СЂРµР±РЅРѕСЃС‚Рё С‚РѕРІР°СЂРѕРІ РґР»СЏ СЂР°СЃС‡РµС‚Р° MRP"
  * 
  * @author Oleg V. Safonov
  * @version $Id: MRPOutputsServiceBean.java,v 1.3 2007/07/30 10:36:48 safonov Exp $

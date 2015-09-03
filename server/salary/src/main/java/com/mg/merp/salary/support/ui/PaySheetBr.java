@@ -30,7 +30,7 @@ import com.mg.merp.salary.PaySheetSpecServiceLocal;
 import com.mg.merp.salary.model.PaySheet;
 
 /**
- * Контроллер браузера заголовков платежных ведомостей
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р·Р°РіРѕР»РѕРІРєРѕРІ РїР»Р°С‚РµР¶РЅС‹С… РІРµРґРѕРјРѕСЃС‚РµР№
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -126,8 +126,8 @@ public class PaySheetBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Открыть ведомость" (платежную)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РћС‚РєСЂС‹С‚СЊ РІРµРґРѕРјРѕСЃС‚СЊ" (РїР»Р°С‚РµР¶РЅСѓСЋ)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionShowSpecPaySheet(WidgetEvent event) {
 		Serializable[] selectedPrimaryKeys = ((MaintenanceTableModel) table.getModel()).getSelectedPrimaryKeys();

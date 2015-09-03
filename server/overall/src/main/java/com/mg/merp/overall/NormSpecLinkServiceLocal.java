@@ -17,7 +17,7 @@ package com.mg.merp.overall;
 import com.mg.merp.overall.model.NormSpecLink;
 
 /**
- * Бизнес-компонент "Связь спецификаций норм выдачи и КТУ"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРІСЏР·СЊ СЃРїРµС†РёС„РёРєР°С†РёР№ РЅРѕСЂРј РІС‹РґР°С‡Рё Рё РљРўРЈ"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

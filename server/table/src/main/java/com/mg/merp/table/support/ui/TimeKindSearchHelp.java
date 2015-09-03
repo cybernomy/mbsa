@@ -19,7 +19,7 @@ import com.mg.framework.support.ui.UIProducer;
 import com.mg.framework.support.ui.UIUtils;
 
 /**
- * Механизм поиска сущностей "Тип времени"
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РўРёРї РІСЂРµРјРµРЅРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -42,7 +42,7 @@ public class TimeKindSearchHelp extends AbstractSearchHelp {
 	}
 	
 	/**
-	 * Получить признак "Учитывать по дням"
+	 * РџРѕР»СѓС‡РёС‚СЊ РїСЂРёР·РЅР°Рє "РЈС‡РёС‚С‹РІР°С‚СЊ РїРѕ РґРЅСЏРј"
 	 */
 	protected Boolean getIsWholeDay() {
 		return null;

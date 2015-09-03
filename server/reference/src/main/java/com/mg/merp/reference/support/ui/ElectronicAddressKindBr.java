@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.ElectronicAddressKind;
 
 /**
- * Браузер видов электронных адресов
+ * Р‘СЂР°СѓР·РµСЂ РІРёРґРѕРІ СЌР»РµРєС‚СЂРѕРЅРЅС‹С… Р°РґСЂРµСЃРѕРІ
  * 
  * @author leonova
  * @version $Id: ElectronicAddressKindBr.java,v 1.1 2006/09/05 04:09:46 leonova Exp $ 

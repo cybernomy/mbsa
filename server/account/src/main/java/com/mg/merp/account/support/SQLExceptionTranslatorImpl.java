@@ -20,7 +20,7 @@ import com.mg.framework.api.DataAccessException;
 import com.mg.framework.generic.AbstractSQLExceptionTranslator;
 
 /**
- * Транслятор SQL ИС модуля бухгалтерия
+ * РўСЂР°РЅСЃР»СЏС‚РѕСЂ SQL РРЎ РјРѕРґСѓР»СЏ Р±СѓС…РіР°Р»С‚РµСЂРёСЏ
  * 
  * @author Artem V. Sharapov
  * @version $Id: SQLExceptionTranslatorImpl.java,v 1.1 2009/03/04 12:38:14 sharapov Exp $

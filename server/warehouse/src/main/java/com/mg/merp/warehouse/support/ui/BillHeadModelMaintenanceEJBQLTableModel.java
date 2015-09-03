@@ -21,7 +21,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.warehouse.model.BillHeadModel;
 
 /**
- * Вспомогательный класс для отображения формы списка образцов счетов
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: BillHeadModelMaintenanceEJBQLTableModel.java,v 1.1 2006/09/12 11:00:41 leonova Exp $ 

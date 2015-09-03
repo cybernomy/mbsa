@@ -35,7 +35,7 @@ import com.mg.merp.planning.model.MrpVersionMps;
 
 
 /**
- * Контроллер формы поддержки ППМ
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РџРџРњ
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

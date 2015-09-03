@@ -25,7 +25,7 @@ import com.mg.merp.salary.PaySheetSpecServiceLocal;
 import com.mg.merp.salary.model.PaySheetSpec;
 
 /**
- * Бизнес-компонент "Спецификация платежной ведомости" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РїР»Р°С‚РµР¶РЅРѕР№ РІРµРґРѕРјРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @version $Id: PaySheetSpecServiceBean.java,v 1.4 2006/09/13 10:48:29 leonova Exp $

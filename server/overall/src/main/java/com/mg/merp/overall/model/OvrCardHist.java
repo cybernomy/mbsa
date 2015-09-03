@@ -19,7 +19,7 @@ import com.mg.merp.document.model.DocType;
 import com.mg.merp.reference.model.TimePeriodKind;
 
 /**
- * Модель бизнес-компонента "История выдачи спецодежды"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РСЃС‚РѕСЂРёСЏ РІС‹РґР°С‡Рё СЃРїРµС†РѕРґРµР¶РґС‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: OvrCardHist.java,v 1.7 2008/06/30 04:15:16 alikaev Exp $

@@ -22,7 +22,7 @@ import com.mg.framework.generic.ui.AbstractForm;
 import com.mg.framework.support.ui.UIProducer;
 
 /**
- * Обработчик главного меню показа списка бухгалтерских отчетов
+ * РћР±СЂР°Р±РѕС‚С‡РёРє РіР»Р°РІРЅРѕРіРѕ РјРµРЅСЋ РїРѕРєР°Р·Р° СЃРїРёСЃРєР° Р±СѓС…РіР°Р»С‚РµСЂСЃРєРёС… РѕС‚С‡РµС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ShowReportBrowse.java,v 1.1 2009/02/26 14:08:18 safonov Exp $

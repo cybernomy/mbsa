@@ -23,8 +23,8 @@ import com.mg.framework.api.orm.PersistentObject;
 public interface BusinessAddinWorkbench {
 	String SERVICE_NAME = "merp:baiengine=BusinessAddinWorkbenchService";
 
-	//Используем PersistentObject вместо Repository, т.к. сервис живёт 
-	//в mbaiengine.sar и ему не доступны модели из datawarehouse
+	//РСЃРїРѕР»СЊР·СѓРµРј PersistentObject РІРјРµСЃС‚Рѕ Repository, С‚.Рє. СЃРµСЂРІРёСЃ Р¶РёРІС‘С‚ 
+	//РІ mbaiengine.sar Рё РµРјСѓ РЅРµ РґРѕСЃС‚СѓРїРЅС‹ РјРѕРґРµР»Рё РёР· datawarehouse
 	PersistentObject[] getBais(String query) throws Exception;
 
 	PersistentObject editBai(PersistentObject repository) throws Exception;

@@ -24,7 +24,7 @@ import com.mg.merp.manufacture.OutputProductSpecServiceLocal;
 import com.mg.merp.manufacture.model.OutputProductHead;
 
 /**
- * Контроллер формы поддержки Актов выпуска готовой продукции
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РђРєС‚РѕРІ РІС‹РїСѓСЃРєР° РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: OutputProductHeadMt.java,v 1.8 2008/12/25 10:17:46 safonov Exp $

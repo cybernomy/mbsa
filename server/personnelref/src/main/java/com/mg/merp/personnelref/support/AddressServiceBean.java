@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.AddressServiceLocal;
 import com.mg.merp.personnelref.model.Address;
 
 /**
- * Реализация бизнес-компонента "Адрес проживания сотрудников" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РђРґСЂРµСЃ РїСЂРѕР¶РёРІР°РЅРёСЏ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

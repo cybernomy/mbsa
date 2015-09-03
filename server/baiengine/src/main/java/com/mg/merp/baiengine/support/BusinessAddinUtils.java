@@ -25,7 +25,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.baiengine.model.ConstantDataType;
 
 /**
- * Утилиты модуля BusinessAddin
+ * РЈС‚РёР»РёС‚С‹ РјРѕРґСѓР»СЏ BusinessAddin
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: BusinessAddinUtils.java,v 1.2 2009/02/06 07:56:24 safonov Exp $
@@ -34,11 +34,11 @@ public class BusinessAddinUtils {
 	private static Logger logger = ServerUtils.getLogger(BusinessAddinUtils.class);
 
 	/**
-	 * конвертирует строку в объект типа constantDataType 
+	 * РєРѕРЅРІРµСЂС‚РёСЂСѓРµС‚ СЃС‚СЂРѕРєСѓ РІ РѕР±СЉРµРєС‚ С‚РёРїР° constantDataType 
 	 * 
-	 * @param	value строка
-	 * @param	constantDataType тип константы
-	 * @return	объект типа constantDataType или <code>null</code> если <code>value == null</code> или возникла исключительная ситуация при конвертации
+	 * @param	value СЃС‚СЂРѕРєР°
+	 * @param	constantDataType С‚РёРї РєРѕРЅСЃС‚Р°РЅС‚С‹
+	 * @return	РѕР±СЉРµРєС‚ С‚РёРїР° constantDataType РёР»Рё <code>null</code> РµСЃР»Рё <code>value == null</code> РёР»Рё РІРѕР·РЅРёРєР»Р° РёСЃРєР»СЋС‡РёС‚РµР»СЊРЅР°СЏ СЃРёС‚СѓР°С†РёСЏ РїСЂРё РєРѕРЅРІРµСЂС‚Р°С†РёРё
 	 */
 	public static Object convertConstantValue(String value, ConstantDataType constantDataType) {
 		if (value == null) 
@@ -87,11 +87,11 @@ public class BusinessAddinUtils {
 	}
 	
 	/**
-	 * конвертирует объект типа constantDataType в строку
+	 * РєРѕРЅРІРµСЂС‚РёСЂСѓРµС‚ РѕР±СЉРµРєС‚ С‚РёРїР° constantDataType РІ СЃС‚СЂРѕРєСѓ
 	 * 
-	 * @param value				объект типа constantDataType
-	 * @param constantDataType	тип константы
-	 * @return строку или <code>null</code> если <code>value == null</code>
+	 * @param value				РѕР±СЉРµРєС‚ С‚РёРїР° constantDataType
+	 * @param constantDataType	С‚РёРї РєРѕРЅСЃС‚Р°РЅС‚С‹
+	 * @return СЃС‚СЂРѕРєСѓ РёР»Рё <code>null</code> РµСЃР»Рё <code>value == null</code>
 	 */
 	public static String convertConstantValue(Object value, ConstantDataType constantDataType) {
 		if (value == null) 

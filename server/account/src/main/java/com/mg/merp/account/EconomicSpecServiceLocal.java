@@ -17,7 +17,7 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.EconomicSpec;
 
 /**
- * Бизнес-компонент "Спецификация хозяйственных операций"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ С…РѕР·СЏР№СЃС‚РІРµРЅРЅС‹С… РѕРїРµСЂР°С†РёР№"
  * 
  * @author leonova
  * @version $Id: EconomicSpecServiceLocal.java,v 1.2 2008/01/29 13:01:46 safonov Exp $

@@ -21,7 +21,7 @@ import com.mg.merp.table.TimeBoardSpecServiceLocal;
 import com.mg.merp.table.model.TimeBoardSpec;
 
 /**
- * Реализация бизнес-компонента "Спецификация табеля"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёСЏ С‚Р°Р±РµР»СЏ"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

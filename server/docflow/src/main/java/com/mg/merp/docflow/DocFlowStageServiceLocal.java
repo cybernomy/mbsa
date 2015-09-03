@@ -22,7 +22,7 @@ import com.mg.merp.document.model.DocType;
 import com.mg.merp.security.model.Groups;
 
 /**
- * Бизнес-компонент "Этап документооборота"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р­С‚Р°Рї РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowStageServiceLocal.java,v 1.2 2006/10/18 10:23:13 safonov Exp $
@@ -30,33 +30,33 @@ import com.mg.merp.security.model.Groups;
 public interface DocFlowStageServiceLocal extends DataBusinessObjectService<DocProcessStage, Integer> {
 
 	/**
-	 * выдать права на работу с ДО группе пользователей
+	 * РІС‹РґР°С‚СЊ РїСЂР°РІР° РЅР° СЂР°Р±РѕС‚Сѓ СЃ Р”Рћ РіСЂСѓРїРїРµ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
 	 * 
-	 * @param stage		этап ДО
-	 * @param groups	группы пользователей
-	 * @param grant		права на этап ДО
+	 * @param stage		СЌС‚Р°Рї Р”Рћ
+	 * @param groups	РіСЂСѓРїРїС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
+	 * @param grant		РїСЂР°РІР° РЅР° СЌС‚Р°Рї Р”Рћ
 	 */
 	void grantRightsForGroups(DocProcessStage stage, Groups[] groups, ActionUserGrant grant);
 	
 	/**
-	 * удалить права на работу с ДО
+	 * СѓРґР°Р»РёС‚СЊ РїСЂР°РІР° РЅР° СЂР°Р±РѕС‚Сѓ СЃ Р”Рћ
 	 * 
-	 * @param rights	права на этап
+	 * @param rights	РїСЂР°РІР° РЅР° СЌС‚Р°Рї
 	 */
 	void revokeRights(DocProcessStageRights[] rights);
 
 	/**
-	 * изменить существующие права на работу с ДО
+	 * РёР·РјРµРЅРёС‚СЊ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёРµ РїСЂР°РІР° РЅР° СЂР°Р±РѕС‚Сѓ СЃ Р”Рћ
 	 * 
-	 * @param rights	существующие права на этап
-	 * @param grant		новые права
+	 * @param rights	СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёРµ РїСЂР°РІР° РЅР° СЌС‚Р°Рї
+	 * @param grant		РЅРѕРІС‹Рµ РїСЂР°РІР°
 	 */
 	void grantRights(DocProcessStageRights[] rights, ActionUserGrant grant);
 	
 	/**
-	 * инициализировать настройку ДО для типа документа
+	 * РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ РЅР°СЃС‚СЂРѕР№РєСѓ Р”Рћ РґР»СЏ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docType	тип документа
+	 * @param docType	С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	void initializeDocFlow(DocType docType);
 	

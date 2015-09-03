@@ -30,7 +30,7 @@ import com.mg.merp.mfreference.support.MfUtils;
 import com.mg.merp.reference.model.Measure;
 
 /**
- * Утилиты подсистем производства
+ * РЈС‚РёР»РёС‚С‹ РїРѕРґСЃРёСЃС‚РµРј РїСЂРѕРёР·РІРѕРґСЃС‚РІР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: ManufactureUtils.java,v 1.2 2007/08/06 12:44:53 safonov Exp $
@@ -38,10 +38,10 @@ import com.mg.merp.reference.model.Measure;
 public class ManufactureUtils {
 
 	/**
-	 * вычисление времени выполнения операции ЗНП
+	 * РІС‹С‡РёСЃР»РµРЅРёРµ РІСЂРµРјРµРЅРё РІС‹РїРѕР»РЅРµРЅРёСЏ РѕРїРµСЂР°С†РёРё Р—РќРџ
 	 * 
-	 * @param jobMaterial	материал операции
-	 * @return	время выполнения
+	 * @param jobMaterial	РјР°С‚РµСЂРёР°Р» РѕРїРµСЂР°С†РёРё
+	 * @return	РІСЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ
 	 */
 	public static BigDecimal calculateTimeJobOper(JobMaterial jobMaterial) {
 		Measure hour = new Measure();
@@ -71,10 +71,10 @@ public class ManufactureUtils {
 	}
 	
 	/**
-	 * вычисление количества материала в ЗНП
+	 * РІС‹С‡РёСЃР»РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° РјР°С‚РµСЂРёР°Р»Р° РІ Р—РќРџ
 	 * 
-	 * @param jobMaterial	материал
-	 * @return	количество
+	 * @param jobMaterial	РјР°С‚РµСЂРёР°Р»
+	 * @return	РєРѕР»РёС‡РµСЃС‚РІРѕ
 	 */
 	public static BigDecimal calculateJobMaterialQuan(JobMaterial jobMaterial) {
 		boolean calcLotQuan = jobMaterial.getQuantityRateFlag() == QuantityRateFlag.FIXED;
@@ -85,10 +85,10 @@ public class ManufactureUtils {
 	}
 
 	/**
-	 * загрузка РС
+	 * Р·Р°РіСЂСѓР·РєР° Р РЎ
 	 * 
-	 * @param jobRoute операция
-	 * @return	список РС
+	 * @param jobRoute РѕРїРµСЂР°С†РёСЏ
+	 * @return	СЃРїРёСЃРѕРє Р РЎ
 	 */
 	public static List<JobLabor> loadJobRouteLabor(JobRoute jobRoute) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(JobLabor.class)
@@ -96,10 +96,10 @@ public class ManufactureUtils {
 	}
 
 	/**
-	 * загрузка оборудования
+	 * Р·Р°РіСЂСѓР·РєР° РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ
 	 * 
-	 * @param jobRoute	операция
-	 * @return	список оборудования
+	 * @param jobRoute	РѕРїРµСЂР°С†РёСЏ
+	 * @return	СЃРїРёСЃРѕРє РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ
 	 */
 	public static List<JobMachine> loadJobRouteMachine(JobRoute jobRoute) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(JobMachine.class)
@@ -107,10 +107,10 @@ public class ManufactureUtils {
 	}
 
 	/**
-	 * загрузка материалов
+	 * Р·Р°РіСЂСѓР·РєР° РјР°С‚РµСЂРёР°Р»РѕРІ
 	 * 
-	 * @param jobRoute	операция
-	 * @return	список материалов
+	 * @param jobRoute	РѕРїРµСЂР°С†РёСЏ
+	 * @return	СЃРїРёСЃРѕРє РјР°С‚РµСЂРёР°Р»РѕРІ
 	 */
 	public static List<JobMaterial> loadJobRouteMaterial(JobRoute jobRoute) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(JobMaterial.class)

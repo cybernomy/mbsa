@@ -30,14 +30,14 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.contract.model.ContractCategory;
 
 /**
- * SearchForm бизнес-компонента "Категория договора"
+ * SearchForm Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР°С‚РµРіРѕСЂРёСЏ РґРѕРіРѕРІРѕСЂР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ContractCategorySearchForm.java,v 1.1 2007/09/17 12:29:23 alikaev Exp $
  */
 public class ContractCategorySearchForm extends AbstractSearchForm {
 
-	private final String INIT_QUERY_TEXT = "select %s from ContractCategory cс %s "; //$NON-NLS-1$
+	private final String INIT_QUERY_TEXT = "select %s from ContractCategory cСЃ %s "; //$NON-NLS-1$
 	private List<String> paramsName = new ArrayList<String>();
 	private List<Object> paramsValue = new ArrayList<Object>();	
 	private DefaultTableController table;
@@ -60,9 +60,9 @@ public class ContractCategorySearchForm extends AbstractSearchForm {
 			@Override
 			protected Set<TableEJBQLFieldDef> getDefaultFieldDefsSet() {
 				Set<TableEJBQLFieldDef> result = super.getDefaultFieldDefsSet();
-				result.add(new TableEJBQLFieldDef(ContractCategory.class, "Id", "cс.Id", true)); //$NON-NLS-1$ //$NON-NLS-2$
-				result.add(new TableEJBQLFieldDef(ContractCategory.class, "Code", "cс.Code", false)); //$NON-NLS-1$ //$NON-NLS-2$
-				result.add(new TableEJBQLFieldDef(ContractCategory.class, "Name", "cс.Name", false)); //$NON-NLS-1$ //$NON-NLS-2$
+				result.add(new TableEJBQLFieldDef(ContractCategory.class, "Id", "cСЃ.Id", true)); //$NON-NLS-1$ //$NON-NLS-2$
+				result.add(new TableEJBQLFieldDef(ContractCategory.class, "Code", "cСЃ.Code", false)); //$NON-NLS-1$ //$NON-NLS-2$
+				result.add(new TableEJBQLFieldDef(ContractCategory.class, "Name", "cСЃ.Name", false)); //$NON-NLS-1$ //$NON-NLS-2$
 				return DatabaseUtils.embedAddinFieldsDefaultEJBQLFieldDefs(result, null);
 			}
 
@@ -88,9 +88,9 @@ public class ContractCategorySearchForm extends AbstractSearchForm {
 			}
 
 			/**
-			 * формируем sql запрос
+			 * С„РѕСЂРјРёСЂСѓРµРј sql Р·Р°РїСЂРѕСЃ
 			 * 
-			 * @return текст sql запроса
+			 * @return С‚РµРєСЃС‚ sql Р·Р°РїСЂРѕСЃР°
 			 */
 			private String createQueryText() {
 				Set<TableEJBQLFieldDef> fieldDefs = ((DefaultEJBQLTableModel) table.getModel()).getFieldDefsSet();

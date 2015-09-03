@@ -48,7 +48,7 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * реализация адаптера таблицы поддержки
+ * СЂРµР°Р»РёР·Р°С†РёСЏ Р°РґР°РїС‚РµСЂР° С‚Р°Р±Р»РёС†С‹ РїРѕРґРґРµСЂР¶РєРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: MaintenanceTableController.java,v 1.35 2009/02/17 12:33:42 safonov Exp $
@@ -69,7 +69,7 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	private boolean selectFirstRow = true;
 	
 	/**
-	 * конструктор
+	 * РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
 	 * @param cond
 	 * @param uiProperties
@@ -83,9 +83,9 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	}
 
 	/**
-	 * конструктор
+	 * РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
-	 * @param uiProperties	инициализирующие свойства объекта создаваемого через данный адаптер
+	 * @param uiProperties	РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‰РёРµ СЃРІРѕР№СЃС‚РІР° РѕР±СЉРµРєС‚Р° СЃРѕР·РґР°РІР°РµРјРѕРіРѕ С‡РµСЂРµР· РґР°РЅРЅС‹Р№ Р°РґР°РїС‚РµСЂ
 	 */
 	public MaintenanceTableController(AttributeMap uiProperties) {
 		this.cond = null;
@@ -93,7 +93,7 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	}
 
 	/**
-	 * реализация добавления сущности
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РґРѕР±Р°РІР»РµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 *
 	 */
 	protected void doAdd() {
@@ -114,12 +114,12 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	}
 	
 	/**
-	 * реализация изменения сущности
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РёР·РјРµРЅРµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 *
 	 */
 	protected void doEdit() {
 		Serializable[] keys = tableModel.getSelectedPrimaryKeys();
-		//обрабатываем только одну отмеченную запись
+		//РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј С‚РѕР»СЊРєРѕ РѕРґРЅСѓ РѕС‚РјРµС‡РµРЅРЅСѓСЋ Р·Р°РїРёСЃСЊ
 		if (keys.length != 1)
 			return;
 		MaintenanceHelper.edit(service, keys[0], editForm, new MaintenanceFormActionListener() {
@@ -134,12 +134,12 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	}
 	
 	/**
-	 * реализация просмотра сущности
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РїСЂРѕСЃРјРѕС‚СЂР° СЃСѓС‰РЅРѕСЃС‚Рё
 	 *
 	 */
 	protected void doView() {
 		Serializable[] keys = tableModel.getSelectedPrimaryKeys();
-		//обрабатываем только одну отмеченную запись
+		//РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј С‚РѕР»СЊРєРѕ РѕРґРЅСѓ РѕС‚РјРµС‡РµРЅРЅСѓСЋ Р·Р°РїРёСЃСЊ
 		if (keys.length != 1)
 			return;
 		MaintenanceHelper.view(service, keys[0], viewForm, null);
@@ -147,7 +147,7 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	
 	protected void doClone(boolean deepClone) {
 		Serializable[] keys = tableModel.getSelectedPrimaryKeys();
-		//обрабатываем только одну отмеченную запись
+		//РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј С‚РѕР»СЊРєРѕ РѕРґРЅСѓ РѕС‚РјРµС‡РµРЅРЅСѓСЋ Р·Р°РїРёСЃСЊ
 		if (keys.length != 1)
 			return;
 		MaintenanceHelper.clone(service, keys[0], deepClone, editForm,  new MaintenanceFormActionListener() {
@@ -167,12 +167,12 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	}
 	
 	/**
-	 * реализация удаления сущности
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СѓРґР°Р»РµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 *
 	 */
 	protected void doErase() {
 		final Serializable[] keys = tableModel.getSelectedPrimaryKeys();
-		//если нет отмеченных не выводим запрос, bug 4175
+		//РµСЃР»Рё РЅРµС‚ РѕС‚РјРµС‡РµРЅРЅС‹С… РЅРµ РІС‹РІРѕРґРёРј Р·Р°РїСЂРѕСЃ, bug 4175
 		if (keys.length == 0)
 			return;
 		Messages msg = Messages.getInstance();
@@ -190,34 +190,34 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	}
 	
 	/**
-	 * реализация обновления списка сущностей
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРїРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№
 	 *
 	 */
 	protected void doRefresh() {
 		Object pkValue = newPrimaryKey;
-		//если нет нового значения, т.е. не было добавления или копирования, то берем
-		//текушую выделенную запись и впоследствии пытаемся позиционироваться на ней
+		//РµСЃР»Рё РЅРµС‚ РЅРѕРІРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ, С‚.Рµ. РЅРµ Р±С‹Р»Рѕ РґРѕР±Р°РІР»РµРЅРёСЏ РёР»Рё РєРѕРїРёСЂРѕРІР°РЅРёСЏ, С‚Рѕ Р±РµСЂРµРј
+		//С‚РµРєСѓС€СѓСЋ РІС‹РґРµР»РµРЅРЅСѓСЋ Р·Р°РїРёСЃСЊ Рё РІРїРѕСЃР»РµРґСЃС‚РІРёРё РїС‹С‚Р°РµРјСЃСЏ РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°С‚СЊСЃСЏ РЅР° РЅРµР№
 		if (pkValue == null) {
 			Object[] pkValues = tableModel.getSelectedPrimaryKeys();
 			if (pkValues.length > 0)
 				pkValue = pkValues[0];
 		}
 		getModel().load();
-		//если не нашли запись то установим на 1ю
+		//РµСЃР»Рё РЅРµ РЅР°С€Р»Рё Р·Р°РїРёСЃСЊ С‚Рѕ СѓСЃС‚Р°РЅРѕРІРёРј РЅР° 1СЋ
 		if (locate(pkValue) == -1 && selectFirstRow && getModel().getRowCount() > 0)
 			tableWidget.setRowSelectionInterval(0, 0);
 			
 	}
 
 	/**
-	 * реализация установки ограничений
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СѓСЃС‚Р°РЅРѕРІРєРё РѕРіСЂР°РЅРёС‡РµРЅРёР№
 	 *
 	 */
 	protected void doSetRestriction() {
 		if (restrictionForm == null)
 			return;
 		
-		//сменим обработчик формы условий отбора, теперь он должен только обновлять браузер
+		//СЃРјРµРЅРёРј РѕР±СЂР°Р±РѕС‚С‡РёРє С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР°, С‚РµРїРµСЂСЊ РѕРЅ РґРѕР»Р¶РµРЅ С‚РѕР»СЊРєРѕ РѕР±РЅРѕРІР»СЏС‚СЊ Р±СЂР°СѓР·РµСЂ
 		for (FormActionListener listener : restrictionForm.getOkActionListenerList())
 			restrictionForm.removeOkActionListener(listener);
 		restrictionForm.addOkActionListener(new FormActionListener() {
@@ -231,17 +231,17 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	}
 
 	/**
-	 * реализация настройки таблицы
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РЅР°СЃС‚СЂРѕР№РєРё С‚Р°Р±Р»РёС†С‹
 	 */
 	protected void doSetup() {
 		((SetupMaintenanceTableForm) ApplicationDictionaryLocator.locate().getWindow(SetupMaintenanceTableForm.FORM_NAME)).execute(tableModel);
 	}
 
 	/**
-	 * установка формы поддержки сервиса, устанавливается для всех видов
-	 * поддержки (добавление, изменение, просмотр)
+	 * СѓСЃС‚Р°РЅРѕРІРєР° С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРµСЂРІРёСЃР°, СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ РґР»СЏ РІСЃРµС… РІРёРґРѕРІ
+	 * РїРѕРґРґРµСЂР¶РєРё (РґРѕР±Р°РІР»РµРЅРёРµ, РёР·РјРµРЅРµРЅРёРµ, РїСЂРѕСЃРјРѕС‚СЂ)
 	 * 
-	 * @param formName наименование формы
+	 * @param formName РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С„РѕСЂРјС‹
 	 */
 	public void setMaintenanceForm(String formName) {
 		addForm = formName;
@@ -250,27 +250,27 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	}
 	
 	/**
-	 * установка формы поддержки добавления сервиса
+	 * СѓСЃС‚Р°РЅРѕРІРєР° С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РґРѕР±Р°РІР»РµРЅРёСЏ СЃРµСЂРІРёСЃР°
 	 * 
-	 * @param formName наименование формы
+	 * @param formName РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С„РѕСЂРјС‹
 	 */
 	public void setAddForm(String formName) {
 		addForm = formName;
 	}
 	
 	/**
-	 * установка формы поддержки изменения сервиса
+	 * СѓСЃС‚Р°РЅРѕРІРєР° С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РёР·РјРµРЅРµРЅРёСЏ СЃРµСЂРІРёСЃР°
 	 * 
-	 * @param formName наименование формы
+	 * @param formName РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С„РѕСЂРјС‹
 	 */
 	public void setEditForm(String formName) {
 		editForm = formName;
 	}
 	
 	/**
-	 * установка формы поддержки просмотра сервиса
+	 * СѓСЃС‚Р°РЅРѕРІРєР° С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РїСЂРѕСЃРјРѕС‚СЂР° СЃРµСЂРІРёСЃР°
 	 * 
-	 * @param formName наименование формы
+	 * @param formName РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С„РѕСЂРјС‹
 	 */
 	public void setViewForm(String formName) {
 		viewForm = formName;
@@ -281,7 +281,7 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	public void initController(DataBusinessObjectService service) throws ApplicationException {
 		this.service = service;
 //		AttributeMetadata[] attrList = new AttributeMetadata[0];//service.loadMetadata().attr_metadata_list;
-//		//создаем legacy реализацию для метода loadBrowse
+//		//СЃРѕР·РґР°РµРј legacy СЂРµР°Р»РёР·Р°С†РёСЋ РґР»СЏ РјРµС‚РѕРґР° loadBrowse
 //		//this.tableModelLegacy = new LegacyTableModelImpl(service, cond, attrList);
 //		
 //		List<TableColumnModel> columns = new ArrayList<TableColumnModel>();
@@ -295,10 +295,10 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	}
 	
 	/**
-	 * инициализация адаптера
+	 * РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ Р°РґР°РїС‚РµСЂР°
 	 * 
-	 * @param service	бизнес-компонент
-	 * @param model		модель таблицы
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param model		РјРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	public void initController(DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> service, MaintenanceTableModel model) {
@@ -308,10 +308,10 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	}
 
 	/**
-	 * инициализация адаптера
+	 * РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ Р°РґР°РїС‚РµСЂР°
 	 * 
-	 * @param serviceName	имя бизнес-компонента
-	 * @param model			модель таблицы
+	 * @param serviceName	РёРјСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * @param model			РјРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹
 	 */
 	@SuppressWarnings("unchecked")
 	public void initController(String serviceName, MaintenanceTableModel model) {
@@ -379,16 +379,16 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	}
 	
 	/**
-	 * обработать событие смены мастера списка
+	 * РѕР±СЂР°Р±РѕС‚Р°С‚СЊ СЃРѕР±С‹С‚РёРµ СЃРјРµРЅС‹ РјР°СЃС‚РµСЂР° СЃРїРёСЃРєР°
 	 * 
-	 * @param event	событие смены мастера
+	 * @param event	СЃРѕР±С‹С‚РёРµ СЃРјРµРЅС‹ РјР°СЃС‚РµСЂР°
 	 */
 	public void fireMasterChange(ModelChangeEvent event) {
 		tableModel.setCurrentMaster(event.getModelKey());
 		if (cond != null)
 			cond.browseMasterKey = event.getModelKey();
-		//если мастер дерево то проверим установлен ли признак отбора по дереву или установлен плоский браузер
-		//если плоский то не делаем обновление, все записи и так загружены
+		//РµСЃР»Рё РјР°СЃС‚РµСЂ РґРµСЂРµРІРѕ С‚Рѕ РїСЂРѕРІРµСЂРёРј СѓСЃС‚Р°РЅРѕРІР»РµРЅ Р»Рё РїСЂРёР·РЅР°Рє РѕС‚Р±РѕСЂР° РїРѕ РґРµСЂРµРІСѓ РёР»Рё СѓСЃС‚Р°РЅРѕРІР»РµРЅ РїР»РѕСЃРєРёР№ Р±СЂР°СѓР·РµСЂ
+		//РµСЃР»Рё РїР»РѕСЃРєРёР№ С‚Рѕ РЅРµ РґРµР»Р°РµРј РѕР±РЅРѕРІР»РµРЅРёРµ, РІСЃРµ Р·Р°РїРёСЃРё Рё С‚Р°Рє Р·Р°РіСЂСѓР¶РµРЅС‹
 		if (event.getSource() instanceof MaintenanceTreeController) {
 			if (restrictionForm == null || restrictionForm instanceof HierarchyRestrictionSupport && ((HierarchyRestrictionSupport) restrictionForm).isUseHierarchy()) {
 				tableModel.load();//refresh(); prevent fire onRefresh event
@@ -404,37 +404,37 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	}
 	
 	/**
-	 * добавить слушателя на событие установки отмеченой записи, можем применяться
-	 * например для создание связи мастер-деталь, где мастером служит текущая таблица
+	 * РґРѕР±Р°РІРёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЏ РЅР° СЃРѕР±С‹С‚РёРµ СѓСЃС‚Р°РЅРѕРІРєРё РѕС‚РјРµС‡РµРЅРѕР№ Р·Р°РїРёСЃРё, РјРѕР¶РµРј РїСЂРёРјРµРЅСЏС‚СЊСЃСЏ
+	 * РЅР°РїСЂРёРјРµСЂ РґР»СЏ СЃРѕР·РґР°РЅРёРµ СЃРІСЏР·Рё РјР°СЃС‚РµСЂ-РґРµС‚Р°Р»СЊ, РіРґРµ РјР°СЃС‚РµСЂРѕРј СЃР»СѓР¶РёС‚ С‚РµРєСѓС‰Р°СЏ С‚Р°Р±Р»РёС†Р°
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	public void addMasterModelListener(MasterModelListener listener) {
 		this.modelListeners.add(listener);
 	}
 
 	/**
-	 * удаление слушателя на событие установки отмеченой записи
+	 * СѓРґР°Р»РµРЅРёРµ СЃР»СѓС€Р°С‚РµР»СЏ РЅР° СЃРѕР±С‹С‚РёРµ СѓСЃС‚Р°РЅРѕРІРєРё РѕС‚РјРµС‡РµРЅРѕР№ Р·Р°РїРёСЃРё
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	public void removeMasterModelListener(MasterModelListener listener) {
 		this.modelListeners.remove(listener);
 	}
 
 	/**
-	 * получить список слушателей на событие установки отмеченой записи
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє СЃР»СѓС€Р°С‚РµР»РµР№ РЅР° СЃРѕР±С‹С‚РёРµ СѓСЃС‚Р°РЅРѕРІРєРё РѕС‚РјРµС‡РµРЅРѕР№ Р·Р°РїРёСЃРё
 	 * 
-	 * @return	список слушателей
+	 * @return	СЃРїРёСЃРѕРє СЃР»СѓС€Р°С‚РµР»РµР№
 	 */
 	public MasterModelListener[] getMasterModelListeners() {
 		return this.modelListeners.toArray(new MasterModelListener[this.modelListeners.size()]);
 	}
 	
 	/**
-	 * отправить событие установки отмеченой записи
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕР±С‹С‚РёРµ СѓСЃС‚Р°РЅРѕРІРєРё РѕС‚РјРµС‡РµРЅРѕР№ Р·Р°РїРёСЃРё
 	 * 
-	 * @param event	событие установки отмеченой записи
+	 * @param event	СЃРѕР±С‹С‚РёРµ СѓСЃС‚Р°РЅРѕРІРєРё РѕС‚РјРµС‡РµРЅРѕР№ Р·Р°РїРёСЃРё
 	 */
 	public void fireMasterModelChange(ModelChangeEvent event) {
 		for(MasterModelListener listener : modelListeners)
@@ -442,13 +442,13 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	}
 	
 	/**
-	 * установить форму условий отбора
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ С„РѕСЂРјСѓ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР°
 	 * 
-	 * @param restrictionForm	форма условий отбора
+	 * @param restrictionForm	С„РѕСЂРјР° СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР°
 	 */
 	public void setRestrictionForm(RestrictionForm restrictionForm) {
 		this.restrictionForm = restrictionForm;
-		//закроем пункт меню "условия отбора" если в объект не поддерживает условия отбора
+		//Р·Р°РєСЂРѕРµРј РїСѓРЅРєС‚ РјРµРЅСЋ "СѓСЃР»РѕРІРёСЏ РѕС‚Р±РѕСЂР°" РµСЃР»Рё РІ РѕР±СЉРµРєС‚ РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ СѓСЃР»РѕРІРёСЏ РѕС‚Р±РѕСЂР°
 		if (tableWidget != null)
 			UIUtils.setVisibleEnabledProperty(tableWidget.getPopupMenu().getMenuItem(MaintenanceTable.RESTRICTION_MENU_ITEM), restrictionForm != null);
 	}
@@ -520,17 +520,17 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	 */
 	public void setTable(Table table) {
 		this.tableWidget = table;
-		//закроем пункт меню "условия отбора" если в объект не поддерживает условия отбора
+		//Р·Р°РєСЂРѕРµРј РїСѓРЅРєС‚ РјРµРЅСЋ "СѓСЃР»РѕРІРёСЏ РѕС‚Р±РѕСЂР°" РµСЃР»Рё РІ РѕР±СЉРµРєС‚ РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ СѓСЃР»РѕРІРёСЏ РѕС‚Р±РѕСЂР°
 		if (restrictionForm == null)
 			UIUtils.setVisibleEnabledProperty(tableWidget.getPopupMenu().getMenuItem(MaintenanceTable.RESTRICTION_MENU_ITEM), false);
 	}
 
 	/**
-	 * поиск и позиционирование в таблице по значению первичного ключа, если в модели найден ряд
-	 * то производится позиционирование на данный ряд
+	 * РїРѕРёСЃРє Рё РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ РІ С‚Р°Р±Р»РёС†Рµ РїРѕ Р·РЅР°С‡РµРЅРёСЋ РїРµСЂРІРёС‡РЅРѕРіРѕ РєР»СЋС‡Р°, РµСЃР»Рё РІ РјРѕРґРµР»Рё РЅР°Р№РґРµРЅ СЂСЏРґ
+	 * С‚Рѕ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ РЅР° РґР°РЅРЅС‹Р№ СЂСЏРґ
 	 * 
-	 * @param primaryKey	значение первичного ключа, если <code>null</code> то поиск не производится
-	 * @return	порядковый номер найденного кортежа или <code>-1</code> если не найден
+	 * @param primaryKey	Р·РЅР°С‡РµРЅРёРµ РїРµСЂРІРёС‡РЅРѕРіРѕ РєР»СЋС‡Р°, РµСЃР»Рё <code>null</code> С‚Рѕ РїРѕРёСЃРє РЅРµ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ
+	 * @return	РїРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ РЅР°Р№РґРµРЅРЅРѕРіРѕ РєРѕСЂС‚РµР¶Р° РёР»Рё <code>-1</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	public int locate(Object primaryKey) {
 		int result = -1;
@@ -551,11 +551,11 @@ public class MaintenanceTableController implements MaintenanceTableControllerAda
 	}
 
 	/**
-	 * установка признака выделения первого ряда таблицы при получении события смены мастера,
-	 * в некоторых случаях не требуется автоматическое позиционирование (например при запуске
-	 * поискового списка, где позиционирование происходит путем поиска по первичному ключу)
+	 * СѓСЃС‚Р°РЅРѕРІРєР° РїСЂРёР·РЅР°РєР° РІС‹РґРµР»РµРЅРёСЏ РїРµСЂРІРѕРіРѕ СЂСЏРґР° С‚Р°Р±Р»РёС†С‹ РїСЂРё РїРѕР»СѓС‡РµРЅРёРё СЃРѕР±С‹С‚РёСЏ СЃРјРµРЅС‹ РјР°СЃС‚РµСЂР°,
+	 * РІ РЅРµРєРѕС‚РѕСЂС‹С… СЃР»СѓС‡Р°СЏС… РЅРµ С‚СЂРµР±СѓРµС‚СЃСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ (РЅР°РїСЂРёРјРµСЂ РїСЂРё Р·Р°РїСѓСЃРєРµ
+	 * РїРѕРёСЃРєРѕРІРѕРіРѕ СЃРїРёСЃРєР°, РіРґРµ РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ РїСЂРѕРёСЃС…РѕРґРёС‚ РїСѓС‚РµРј РїРѕРёСЃРєР° РїРѕ РїРµСЂРІРёС‡РЅРѕРјСѓ РєР»СЋС‡Сѓ)
 	 * 
-	 * @param selectFirstRow	если <code>true</code> будет производиться выделение первого ряда 
+	 * @param selectFirstRow	РµСЃР»Рё <code>true</code> Р±СѓРґРµС‚ РїСЂРѕРёР·РІРѕРґРёС‚СЊСЃСЏ РІС‹РґРµР»РµРЅРёРµ РїРµСЂРІРѕРіРѕ СЂСЏРґР° 
 	 */
 	public void setSelectFirstRow(boolean selectFirstRow) {
 		this.selectFirstRow = selectFirstRow;

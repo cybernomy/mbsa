@@ -37,7 +37,7 @@ import com.mg.merp.reference.model.SetOfGood;
 
 
 /**
- * Форма поддержки каталога
+ * Р¤РѕСЂРјР° РїРѕРґРґРµСЂР¶РєРё РєР°С‚Р°Р»РѕРіР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: CatalogMt.java,v 1.7 2008/12/29 07:25:38 safonov Exp $

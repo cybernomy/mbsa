@@ -20,7 +20,7 @@ import com.mg.merp.contract.ContractSpecServiceLocal;
 import com.mg.merp.contract.model.ContractSpec;
 
 /**
- * Контроллер формы поддержки "Спецификации контракта"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РЎРїРµС†РёС„РёРєР°С†РёРё РєРѕРЅС‚СЂР°РєС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ContractSpecMt.java,v 1.1 2008/03/11 09:53:15 sharapov Exp $
@@ -32,8 +32,8 @@ public class ContractSpecMt extends DefaultMaintenanceForm {
 	}
 	
 	/**
-	 * Обработчик кнопки "Рассчитать"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃСЃС‡РёС‚Р°С‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionAdjust(WidgetEvent event) {
 		((ContractSpecServiceLocal) getService()).adjust((ContractSpec) getEntity());

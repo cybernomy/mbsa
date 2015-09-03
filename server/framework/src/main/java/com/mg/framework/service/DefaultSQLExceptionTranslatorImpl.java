@@ -21,7 +21,7 @@ import com.mg.framework.generic.AbstractSQLExceptionTranslator;
 import com.mg.framework.support.Messages;
 
 /**
- * Обработчик стандартных SQL ИС
+ * РћР±СЂР°Р±РѕС‚С‡РёРє СЃС‚Р°РЅРґР°СЂС‚РЅС‹С… SQL РРЎ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultSQLExceptionTranslatorImpl.java,v 1.1 2006/11/17 14:28:55 safonov Exp $

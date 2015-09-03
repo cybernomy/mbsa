@@ -36,7 +36,7 @@ import com.mg.merp.contract.model.ContractSpec;
 import com.mg.merp.contract.model.PhasePlanItem;
 
 /**
- * Реализация бизнес-компонента "Пункты плана" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСѓРЅРєС‚С‹ РїР»Р°РЅР°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -72,8 +72,8 @@ public class PhasePlanItemServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Рассчитать аттрибуты пункта плана контракта
-	 * @param phasePlanItem - пункт плана
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ Р°С‚С‚СЂРёР±СѓС‚С‹ РїСѓРЅРєС‚Р° РїР»Р°РЅР° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param phasePlanItem - РїСѓРЅРєС‚ РїР»Р°РЅР°
 	 */
 	protected void doAdjust(PhasePlanItem phasePlanItem) {
 		Integer currencyPrec = ConfigurationHelper.getConfiguration().getCurrencyPrec();
@@ -90,9 +90,9 @@ public class PhasePlanItemServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Получить планируемую сумму для пункта плана
-	 * @param phasePlanItem - пункт плана
-	 * @return планируемая сумма для пункта плана
+	 * РџРѕР»СѓС‡РёС‚СЊ РїР»Р°РЅРёСЂСѓРµРјСѓСЋ СЃСѓРјРјСѓ РґР»СЏ РїСѓРЅРєС‚Р° РїР»Р°РЅР°
+	 * @param phasePlanItem - РїСѓРЅРєС‚ РїР»Р°РЅР°
+	 * @return РїР»Р°РЅРёСЂСѓРµРјР°СЏ СЃСѓРјРјР° РґР»СЏ РїСѓРЅРєС‚Р° РїР»Р°РЅР°
 	 */
 	protected AgregateSumBySpecificationResult getPlanSumBySpecification(PhasePlanItem phasePlanItem) {
 		return OrmTemplate.getInstance().findUniqueByCriteria(OrmTemplate.createCriteria(ContractSpec.class)

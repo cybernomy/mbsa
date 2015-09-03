@@ -17,7 +17,7 @@ package com.mg.merp.paymentcontrol;
 import com.mg.merp.paymentcontrol.model.Liability;
 
 /**
- * Сервис бизнес-компонента "Образцы реестра обязательств"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·С†С‹ СЂРµРµСЃС‚СЂР° РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.paymentcontrol.model.Liability;
 public interface LiabilityModelServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Liability, Integer> {
 	
 	/**
-	 * тип папки для образцов реестра обязательств
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ СЂРµРµСЃС‚СЂР° РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ
 	 */
 	final static short FOLDER_PART = 13402;
 }

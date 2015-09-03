@@ -17,27 +17,27 @@ package com.mg.merp.baiengine;
 import com.mg.merp.baiengine.model.Constant;
 
 /**
- * Бизнес-компонент "Константы"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљРѕРЅСЃС‚Р°РЅС‚С‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ConstantServiceLocal.java,v 1.2 2008/04/09 14:49:16 safonov Exp $
  */
 public interface ConstantServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Constant, Integer> {
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/baiengine/Constant";
 	/**
-	 * тип папки для констант
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РєРѕРЅСЃС‚Р°РЅС‚
 	 */
 	final static short FOLDER_PART = 9510;
 	
 	/**
-	 * Получить актуальное значение константы
+	 * РџРѕР»СѓС‡РёС‚СЊ Р°РєС‚СѓР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РєРѕРЅСЃС‚Р°РЅС‚С‹
 	 * 
-	 * @param code			код константы
-	 * @param actualDate	дата актульности
-	 * @return				значение константы или <code>null</code> если не найдено
+	 * @param code			РєРѕРґ РєРѕРЅСЃС‚Р°РЅС‚С‹
+	 * @param actualDate	РґР°С‚Р° Р°РєС‚СѓР»СЊРЅРѕСЃС‚Рё
+	 * @return				Р·РЅР°С‡РµРЅРёРµ РєРѕРЅСЃС‚Р°РЅС‚С‹ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	Object getActualValue(java.lang.String code, java.util.Date actualDate);
 }

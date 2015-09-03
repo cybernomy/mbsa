@@ -22,7 +22,7 @@ import com.mg.merp.reference.BankAccountTypeServiceLocal;
 import com.mg.merp.reference.model.BankAccountType;
 
 /**
- * Бизнес-компонент "Типы банковских счетов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ Р±Р°РЅРєРѕРІСЃРєРёС… СЃС‡РµС‚РѕРІ" 
  * 
  * @author leonova
  * @version $Id: BankAccountTypeServiceBean.java,v 1.3 2006/08/02 12:13:42 leonova Exp $

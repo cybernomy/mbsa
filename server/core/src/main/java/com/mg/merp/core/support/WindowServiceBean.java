@@ -24,7 +24,7 @@ import com.mg.merp.core.WindowServiceLocal;
 import com.mg.merp.core.model.Window;
 
 /**
- * Реализация бизнес-компонента "Окно системы"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћРєРЅРѕ СЃРёСЃС‚РµРјС‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: WindowServiceBean.java,v 1.1 2008/03/03 12:57:32 safonov Exp $

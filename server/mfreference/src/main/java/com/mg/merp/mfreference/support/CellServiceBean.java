@@ -25,7 +25,7 @@ import com.mg.merp.mfreference.CellServiceLocal;
 import com.mg.merp.mfreference.model.Cell;
 
 /**
- * Бизнес-компонент "Производственные линии" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРѕРёР·РІРѕРґСЃС‚РІРµРЅРЅС‹Рµ Р»РёРЅРёРё" 
  * 
  * @author leonova
  * @version $Id: CellServiceBean.java,v 1.4 2006/10/23 10:12:37 leonova Exp $

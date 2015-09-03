@@ -27,8 +27,8 @@ import com.mg.merp.docflow.DocumentSpecItem;
 import com.mg.merp.docprocess.model.DocHeadState;
 
 /**
- * Абстрактная реализация подключаемого модуля машины документооборота для выполнения этапов.
- * Класс модуля должен реализовывать методы {@link #doExecute()} и {@link #doRoolback()}.
+ * РђР±СЃС‚СЂР°РєС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РїРѕРґРєР»СЋС‡Р°РµРјРѕРіРѕ РјРѕРґСѓР»СЏ РјР°С€РёРЅС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р° РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ СЌС‚Р°РїРѕРІ.
+ * РљР»Р°СЃСЃ РјРѕРґСѓР»СЏ РґРѕР»Р¶РµРЅ СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ РјРµС‚РѕРґС‹ {@link #doExecute()} Рё {@link #doRoolback()}.
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractDocFlowPlugin.java,v 1.3 2008/06/09 11:36:01 safonov Exp $
@@ -39,9 +39,9 @@ public abstract class AbstractDocFlowPlugin implements DocFlowPlugin {
 	private DocFlowPluginInvokeParams params;
 
 	/**
-	 * параметры ДО с которыми запущен данный этап
+	 * РїР°СЂР°РјРµС‚СЂС‹ Р”Рћ СЃ РєРѕС‚РѕСЂС‹РјРё Р·Р°РїСѓС‰РµРЅ РґР°РЅРЅС‹Р№ СЌС‚Р°Рї
 	 * 
-	 * @return	параметры ДО
+	 * @return	РїР°СЂР°РјРµС‚СЂС‹ Р”Рћ
 	 */
 	protected DocFlowPluginInvokeParams getParams() {
 		return params;
@@ -67,17 +67,17 @@ public abstract class AbstractDocFlowPlugin implements DocFlowPlugin {
 	}
 	
 	/**
-	 * отправить сообщение об успешном завершении выполнения (или отката) этапа ДО
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ РѕР± СѓСЃРїРµС€РЅРѕРј Р·Р°РІРµСЂС€РµРЅРёРё РІС‹РїРѕР»РЅРµРЅРёСЏ (РёР»Рё РѕС‚РєР°С‚Р°) СЌС‚Р°РїР° Р”Рћ
 	 *
 	 */
 	protected final void complete() {
-		//отправляем спецификации только для документов со спецификациями
+		//РѕС‚РїСЂР°РІР»СЏРµРј СЃРїРµС†РёС„РёРєР°С†РёРё С‚РѕР»СЊРєРѕ РґР»СЏ РґРѕРєСѓРјРµРЅС‚РѕРІ СЃРѕ СЃРїРµС†РёС„РёРєР°С†РёСЏРјРё
 		List<DocumentSpecItem> specList = params.getDocument().getDocSection().isWithSpec() ? params.getSpecList() : null;
 		firePerformCompleted(new DocFlowPluginEvent(this, params.getProcessDate(), params.getPerformedSum(), params.getData1(), params.getData2(), params.getHeadStateValue(), specList));
 	}
 	
 	/**
-	 * отправить сообщение о прерывании выполнения (или отката) этапа ДО
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ Рѕ РїСЂРµСЂС‹РІР°РЅРёРё РІС‹РїРѕР»РЅРµРЅРёСЏ (РёР»Рё РѕС‚РєР°С‚Р°) СЌС‚Р°РїР° Р”Рћ
 	 *
 	 */
 	protected final void cancel() {
@@ -85,13 +85,13 @@ public abstract class AbstractDocFlowPlugin implements DocFlowPlugin {
 	}
 	
 	/**
-	 * реализация выполнения этапа ДО, должен быть переопределен в классах наследниках.
-	 * <strong>Необходимо обязательно вызвать метод {@link #complete()} или {@link #cancel()}.</strong>
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ СЌС‚Р°РїР° Р”Рћ, РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ РІ РєР»Р°СЃСЃР°С… РЅР°СЃР»РµРґРЅРёРєР°С….
+	 * <strong>РќРµРѕР±С…РѕРґРёРјРѕ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РІС‹Р·РІР°С‚СЊ РјРµС‚РѕРґ {@link #complete()} РёР»Рё {@link #cancel()}.</strong>
 	 * 
-	 * <p>Пример данного метода:
+	 * <p>РџСЂРёРјРµСЂ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР°:
 	 * <pre>
 	 *  protected void doExecute() throws Exception {
-	 *  	if (<все номально>)
+	 *  	if (<РІСЃРµ РЅРѕРјР°Р»СЊРЅРѕ>)
 	 *  		complete();
 	 *   	else
 	 *   		cancel();
@@ -102,13 +102,13 @@ public abstract class AbstractDocFlowPlugin implements DocFlowPlugin {
 	protected abstract void doExecute() throws Exception;
 	
 	/**
-	 * реализация выполнения отката этапа ДО, должен быть переопределен в классах наследниках.
-	 * <strong>Необходимо обязательно вызвать метод {@link #complete()} или {@link #cancel()}.</strong>
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ РѕС‚РєР°С‚Р° СЌС‚Р°РїР° Р”Рћ, РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ РІ РєР»Р°СЃСЃР°С… РЅР°СЃР»РµРґРЅРёРєР°С….
+	 * <strong>РќРµРѕР±С…РѕРґРёРјРѕ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РІС‹Р·РІР°С‚СЊ РјРµС‚РѕРґ {@link #complete()} РёР»Рё {@link #cancel()}.</strong>
 	 * 
-	 * <p>Пример данного метода:
+	 * <p>РџСЂРёРјРµСЂ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР°:
 	 * <pre>
 	 *  protected void doRoolback() throws Exception {
-	 *  	if (<все номально>)
+	 *  	if (<РІСЃРµ РЅРѕРјР°Р»СЊРЅРѕ>)
 	 *  		complete();
 	 *   	else
 	 *   		cancel();
@@ -119,20 +119,20 @@ public abstract class AbstractDocFlowPlugin implements DocFlowPlugin {
 	protected abstract void doRoolback() throws Exception;
 	
 	/**
-	 * реализация текстового представления результата выполнения этапа ДО, используется для отображения
-	 * в истории ДО и т.п.
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ С‚РµРєСЃС‚РѕРІРѕРіРѕ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ СЂРµР·СѓР»СЊС‚Р°С‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ СЌС‚Р°РїР° Р”Рћ, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ
+	 * РІ РёСЃС‚РѕСЂРёРё Р”Рћ Рё С‚.Рї.
 	 * 
-	 * @param docHeadState	состояние этапа ДО
-	 * @return	текстовое представление
+	 * @param docHeadState	СЃРѕСЃС‚РѕСЏРЅРёРµ СЌС‚Р°РїР° Р”Рћ
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 */
 	protected String doGetDocActionResultTextRepresentation(DocHeadState docHeadState) {
 		return null;
 	}
 	
 	/**
-	 * реализация показа результата выполнения этапа ДО в пользовательском интерфейсе
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РїРѕРєР°Р·Р° СЂРµР·СѓР»СЊС‚Р°С‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ СЌС‚Р°РїР° Р”Рћ РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРј РёРЅС‚РµСЂС„РµР№СЃРµ
 	 * 
-	 * @param docHeadState	состояние этапа ДО
+	 * @param docHeadState	СЃРѕСЃС‚РѕСЏРЅРёРµ СЌС‚Р°РїР° Р”Рћ
 	 */
 	protected void doShowDocActionResult(DocHeadState docHeadState) {
 		//empty

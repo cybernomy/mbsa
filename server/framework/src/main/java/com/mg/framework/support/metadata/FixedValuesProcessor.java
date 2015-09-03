@@ -22,7 +22,7 @@ import com.mg.framework.api.metadata.FixedValuesFactory;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Процессор обработки фиксированных значений
+ * РџСЂРѕС†РµСЃСЃРѕСЂ РѕР±СЂР°Р±РѕС‚РєРё С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹С… Р·РЅР°С‡РµРЅРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: FixedValuesProcessor.java,v 1.2 2008/03/03 13:13:18 safonov Exp $
@@ -31,10 +31,10 @@ public class FixedValuesProcessor {
 	private static Logger logger = ServerUtils.getLogger(FixedValuesProcessor.class);
 
 	/**
-	 * создание фиксированных значений
+	 * СЃРѕР·РґР°РЅРёРµ С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹С… Р·РЅР°С‡РµРЅРёР№
 	 * 
-	 * @param name	наименование фабрики фиксированных значений
-	 * @return	фиксированные значения
+	 * @param name	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С„Р°Р±СЂРёРєРё С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹С… Р·РЅР°С‡РµРЅРёР№
+	 * @return	С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ
 	 */
 	public static List<FixedValue<?>> createFixedValues(String name) {
 		if (name == null)

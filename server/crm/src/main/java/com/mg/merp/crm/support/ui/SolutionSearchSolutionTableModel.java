@@ -24,8 +24,8 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.crm.model.Solution;
 
 /**
- * Модель таблицы "Решения"
- * Специализирована для диалога "Поиск решения"
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ "Р РµС€РµРЅРёСЏ"
+ * РЎРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅР° РґР»СЏ РґРёР°Р»РѕРіР° "РџРѕРёСЃРє СЂРµС€РµРЅРёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: SolutionSearchSolutionTableModel.java,v 1.1 2007/05/16 06:21:43 sharapov Exp $
@@ -75,9 +75,9 @@ public class SolutionSearchSolutionTableModel extends DefaultEJBQLTableModel {
 	}
 
 	/**
-	 * Установить параметры модели таблицы
-	 * @param solutionParamsName - список имен параметров
-	 * @param solutionParamsValue - список значений параметров
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РјРѕРґРµР»Рё С‚Р°Р±Р»РёС†С‹
+	 * @param solutionParamsName - СЃРїРёСЃРѕРє РёРјРµРЅ РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @param solutionParamsValue - СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№ РїР°СЂР°РјРµС‚СЂРѕРІ
 	 */
 	public void setTableModelParams(List<String> solutionParamsName, List<Object> solutionParamsValue) {
 		this.solutionParamsName = solutionParamsName;
@@ -85,7 +85,7 @@ public class SolutionSearchSolutionTableModel extends DefaultEJBQLTableModel {
 	}
 	
 	/**
-	 * Очистить содержимое таблицы 
+	 * РћС‡РёСЃС‚РёС‚СЊ СЃРѕРґРµСЂР¶РёРјРѕРµ С‚Р°Р±Р»РёС†С‹ 
 	 */
 	public void resetTable() {
 		rowList.clear();

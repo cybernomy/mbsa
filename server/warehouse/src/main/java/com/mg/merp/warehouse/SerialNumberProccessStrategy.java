@@ -20,7 +20,7 @@ import com.mg.merp.warehouse.model.StockBatch;
 import com.mg.merp.warehouse.model.StockBatchHistory;
 
 /**
- * Стратегия обработки/отката серийных номеров
+ * РЎС‚СЂР°С‚РµРіРёСЏ РѕР±СЂР°Р±РѕС‚РєРё/РѕС‚РєР°С‚Р° СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
  * 
  * @author Artem V. Sharapov
  * @version $Id: SerialNumberProccessStrategy.java,v 1.1 2008/05/30 12:39:54 sharapov Exp $
@@ -28,30 +28,30 @@ import com.mg.merp.warehouse.model.StockBatchHistory;
 public interface SerialNumberProccessStrategy {
 	
 	/**
-	 * Обработка серийных номеров при приходовании товара на склад
-	 * @param docLineData - данные по спецификации для отработки
-	 * @param stockBatch - партия
-	 * @param processListener - слушатель складского процессора
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ РїСЂРё РїСЂРёС…РѕРґРѕРІР°РЅРёРё С‚РѕРІР°СЂР° РЅР° СЃРєР»Р°Рґ
+	 * @param docLineData - РґР°РЅРЅС‹Рµ РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
+	 * @param stockBatch - РїР°СЂС‚РёСЏ
+	 * @param processListener - СЃР»СѓС€Р°С‚РµР»СЊ СЃРєР»Р°РґСЃРєРѕРіРѕ РїСЂРѕС†РµСЃСЃРѕСЂР°
 	 */
 	void proccessOnReceipt(WarehouseProcessDocumentLineData docLineData, StockBatch stockBatch, WarehouseProcessListener processListener);
 			
 	/**
-	 * Обработать серийные номера при списани товара со склада
-	 * @param docLineData - данные по спецификации для отработки
-	 * @param stockBatches - список партий подлежащих списанию
-	 * @param processListener - слушатель складского процессора
+	 * РћР±СЂР°Р±РѕС‚Р°С‚СЊ СЃРµСЂРёР№РЅС‹Рµ РЅРѕРјРµСЂР° РїСЂРё СЃРїРёСЃР°РЅРё С‚РѕРІР°СЂР° СЃРѕ СЃРєР»Р°РґР°
+	 * @param docLineData - РґР°РЅРЅС‹Рµ РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
+	 * @param stockBatches - СЃРїРёСЃРѕРє РїР°СЂС‚РёР№ РїРѕРґР»РµР¶Р°С‰РёС… СЃРїРёСЃР°РЅРёСЋ
+	 * @param processListener - СЃР»СѓС€Р°С‚РµР»СЊ СЃРєР»Р°РґСЃРєРѕРіРѕ РїСЂРѕС†РµСЃСЃРѕСЂР°
 	 */
 	void proccessOnIssue(WarehouseProcessDocumentLineData docLineData, List<StockBatch> stockBatches, WarehouseProcessListener processListener);
 	
 	/**
-	 * Откат обработки серийных номеров при приходовании товара на склад
-	 * @param history - история
+	 * РћС‚РєР°С‚ РѕР±СЂР°Р±РѕС‚РєРё СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ РїСЂРё РїСЂРёС…РѕРґРѕРІР°РЅРёРё С‚РѕРІР°СЂР° РЅР° СЃРєР»Р°Рґ
+	 * @param history - РёСЃС‚РѕСЂРёСЏ
 	 */
 	void rollbackOnReceipt(StockBatchHistory history);
 	
 	/**
-	 * Откат обработки серийных номеров при списании товара со склада
-	 * @param history - история
+	 * РћС‚РєР°С‚ РѕР±СЂР°Р±РѕС‚РєРё СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ РїСЂРё СЃРїРёСЃР°РЅРёРё С‚РѕРІР°СЂР° СЃРѕ СЃРєР»Р°РґР°
+	 * @param history - РёСЃС‚РѕСЂРёСЏ
 	 */
 	void rollbackOnIssue(StockBatchHistory history);
 	

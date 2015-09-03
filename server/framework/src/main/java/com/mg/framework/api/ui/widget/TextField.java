@@ -17,19 +17,19 @@ package com.mg.framework.api.ui.widget;
 import com.mg.framework.api.ui.FieldEditor;
 
 /**
- * Элемент "Редактор текста однострочный"
+ * Р­Р»РµРјРµРЅС‚ "Р РµРґР°РєС‚РѕСЂ С‚РµРєСЃС‚Р° РѕРґРЅРѕСЃС‚СЂРѕС‡РЅС‹Р№"
  * 
  * @author Oleg V. Safonov
  * @version $Id: TextField.java,v 1.2 2006/11/21 15:34:06 safonov Exp $
  */
 public interface TextField extends FieldEditor {
 	/**
-	 * атрибут указывающий длину строки в символах, имеет тип <code>Integer</code>
+	 * Р°С‚СЂРёР±СѓС‚ СѓРєР°Р·С‹РІР°СЋС‰РёР№ РґР»РёРЅСѓ СЃС‚СЂРѕРєРё РІ СЃРёРјРІРѕР»Р°С…, РёРјРµРµС‚ С‚РёРї <code>Integer</code>
 	 */
 	final static String LENGTH = "length";
 	
 	/**
-	 * атрибут признак указывающий на возможность введения символов в нижнем регистре, имеет тип <code>Boolean</code>
+	 * Р°С‚СЂРёР±СѓС‚ РїСЂРёР·РЅР°Рє СѓРєР°Р·С‹РІР°СЋС‰РёР№ РЅР° РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РІРІРµРґРµРЅРёСЏ СЃРёРјРІРѕР»РѕРІ РІ РЅРёР¶РЅРµРј СЂРµРіРёСЃС‚СЂРµ, РёРјРµРµС‚ С‚РёРї <code>Boolean</code>
 	 */
 	final static String IS_LOWERCASE = "lowercase";
 }

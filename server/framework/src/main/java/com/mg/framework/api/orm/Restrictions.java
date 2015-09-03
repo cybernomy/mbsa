@@ -23,7 +23,7 @@ import org.hibernate.criterion.Disjunction;
 import com.mg.framework.support.orm.GenericCriterionImpl;
 
 /**
- * Фабрика создания критериев ограничений
+ * Р¤Р°Р±СЂРёРєР° СЃРѕР·РґР°РЅРёСЏ РєСЂРёС‚РµСЂРёРµРІ РѕРіСЂР°РЅРёС‡РµРЅРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: Restrictions.java,v 1.5 2007/10/17 11:56:09 safonov Exp $

@@ -27,7 +27,7 @@ import com.mg.merp.factura.FacturaSpecOutServiceLocal;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы поддержки исходящих счет - фактур
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РёСЃС…РѕРґСЏС‰РёС… СЃС‡РµС‚ - С„Р°РєС‚СѓСЂ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: FacturaHeadOutMt.java,v 1.8 2008/12/25 10:15:04 safonov Exp $

@@ -77,7 +77,7 @@ import com.mg.merp.reference.model.Currency;
 import com.mg.merp.reference.model.OrgUnit;
 
 /**
- * Реализация процессора модуля "Журнал платежей"
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС†РµСЃСЃРѕСЂР° РјРѕРґСѓР»СЏ "Р–СѓСЂРЅР°Р» РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PaymentallocProcessorServiceBean.java,v 1.7 2007/10/01 13:01:50 sharapov Exp $
@@ -235,11 +235,11 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Инициализировать заголовок связанного документа
-	 * @param payment - запись журнала платежей
-	 * @param docHead - документ
-	 * @param date - дата
-	 * @return заголовок связанного документа
+	 * РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ Р·Р°РіРѕР»РѕРІРѕРє СЃРІСЏР·Р°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param payment - Р·Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
+	 * @param date - РґР°С‚Р°
+	 * @return Р·Р°РіРѕР»РѕРІРѕРє СЃРІСЏР·Р°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected TransactHead initializeTransactHead(Payment payment, DocHead docHead, Date date) {
 		TransactHead transactHead = getTransactHeadService().initialize();
@@ -251,12 +251,12 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Обработать распределение
-	 * @param docSumCur - распределяемая сумма документа
-	 * @param transactHead - заголовок связанного документа
-	 * @param payment - запись журнала платежей
-	 * @param docCurRate - курс
-	 * @param isCurRateDirect - признак направления курса
+	 * РћР±СЂР°Р±РѕС‚Р°С‚СЊ СЂР°СЃРїСЂРµРґРµР»РµРЅРёРµ
+	 * @param docSumCur - СЂР°СЃРїСЂРµРґРµР»СЏРµРјР°СЏ СЃСѓРјРјР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param transactHead - Р·Р°РіРѕР»РѕРІРѕРє СЃРІСЏР·Р°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param payment - Р·Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№
+	 * @param docCurRate - РєСѓСЂСЃ
+	 * @param isCurRateDirect - РїСЂРёР·РЅР°Рє РЅР°РїСЂР°РІР»РµРЅРёСЏ РєСѓСЂСЃР°
 	 */
 	protected void processAllocation(BigDecimal docSumCur, TransactHead transactHead, Payment payment, BigDecimal docCurRate, boolean isCurRateDirect) {
 		BigDecimal sumCur = BigDecimal.ZERO;
@@ -278,10 +278,10 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Обработать позиции спецификации связанного документа
-	 * @param transactHead - заголовок связанного документа
-	 * @param docCurRate - курс
-	 * @param isDocCurRateDirect - признак направления курса
+	 * РћР±СЂР°Р±РѕС‚Р°С‚СЊ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё СЃРІСЏР·Р°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param transactHead - Р·Р°РіРѕР»РѕРІРѕРє СЃРІСЏР·Р°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docCurRate - РєСѓСЂСЃ
+	 * @param isDocCurRateDirect - РїСЂРёР·РЅР°Рє РЅР°РїСЂР°РІР»РµРЅРёСЏ РєСѓСЂСЃР°
 	 */
 	protected void processTransactSpecs(TransactHead transactHead, BigDecimal docCurRate, boolean isDocCurRateDirect) {
 		for(SpecInfo specInfo : specList) {
@@ -303,10 +303,10 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Обновить список позиций спецификации соответсвии с распределением
-	 * @param docSpecs - список позиций спецификации документа
-	 * @param docCurRate - курс
-	 * @param isDocCurRateDirect - признак направления курса
+	 * РћР±РЅРѕРІРёС‚СЊ СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё СЃРѕРѕС‚РІРµС‚СЃРІРёРё СЃ СЂР°СЃРїСЂРµРґРµР»РµРЅРёРµРј
+	 * @param docSpecs - СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docCurRate - РєСѓСЂСЃ
+	 * @param isDocCurRateDirect - РїСЂРёР·РЅР°Рє РЅР°РїСЂР°РІР»РµРЅРёСЏ РєСѓСЂСЃР°
 	 */
 	private void updateDocFlowSpecList(List<DocumentSpecItem> docSpecs, BigDecimal docCurRate, boolean isDocCurRateDirect) {
 		for(int i = 0; i < docSpecs.size(); i++) {
@@ -324,11 +324,11 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Обработать заголовок связанного документа
-	 * @param transactHead - заголовок связанного документа
-	 * @param payment - запись журнала платежей
-	 * @param sumCur - распределённая сумма документа
-	 * @param docSumCur - сумма документа
+	 * РћР±СЂР°Р±РѕС‚Р°С‚СЊ Р·Р°РіРѕР»РѕРІРѕРє СЃРІСЏР·Р°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param transactHead - Р·Р°РіРѕР»РѕРІРѕРє СЃРІСЏР·Р°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param payment - Р·Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№
+	 * @param sumCur - СЂР°СЃРїСЂРµРґРµР»С‘РЅРЅР°СЏ СЃСѓРјРјР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docSumCur - СЃСѓРјРјР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected void processTransactHead(TransactHead transactHead, Payment payment, BigDecimal sumCur, BigDecimal docSumCur) {
 		PersistentObject pmaConfig = getModuleConfiguration();
@@ -360,11 +360,11 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Получить распределённую сумму документа с учетом курса валюты
-	 * @param sumCur - распределённая сумма документа
-	 * @param docCurRate - курс валюты
-	 * @param isCurRateDirect - признак направления курса
-	 * @return распределённая сумма документа с учетом курса валюты
+	 * РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїСЂРµРґРµР»С‘РЅРЅСѓСЋ СЃСѓРјРјСѓ РґРѕРєСѓРјРµРЅС‚Р° СЃ СѓС‡РµС‚РѕРј РєСѓСЂСЃР° РІР°Р»СЋС‚С‹
+	 * @param sumCur - СЂР°СЃРїСЂРµРґРµР»С‘РЅРЅР°СЏ СЃСѓРјРјР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docCurRate - РєСѓСЂСЃ РІР°Р»СЋС‚С‹
+	 * @param isCurRateDirect - РїСЂРёР·РЅР°Рє РЅР°РїСЂР°РІР»РµРЅРёСЏ РєСѓСЂСЃР°
+	 * @return СЂР°СЃРїСЂРµРґРµР»С‘РЅРЅР°СЏ СЃСѓРјРјР° РґРѕРєСѓРјРµРЅС‚Р° СЃ СѓС‡РµС‚РѕРј РєСѓСЂСЃР° РІР°Р»СЋС‚С‹
 	 */
 	private BigDecimal getDocAllocatedSum(BigDecimal sumCur, BigDecimal docCurRate, boolean isCurRateDirect) {
 		BigDecimal allocatedSum = BigDecimal.ZERO;
@@ -386,11 +386,11 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Инициализация списка распределяемых позиций спецификации 
-	 * @param docSpecs - позиций спецификации документа
-	 * @param docCurRate - курс
-	 * @param isDocCurRateDirect - признак направления курса
-	 * @return список распределяемых позиций спецификации
+	 * РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ СЃРїРёСЃРєР° СЂР°СЃРїСЂРµРґРµР»СЏРµРјС‹С… РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё 
+	 * @param docSpecs - РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docCurRate - РєСѓСЂСЃ
+	 * @param isDocCurRateDirect - РїСЂРёР·РЅР°Рє РЅР°РїСЂР°РІР»РµРЅРёСЏ РєСѓСЂСЃР°
+	 * @return СЃРїРёСЃРѕРє СЂР°СЃРїСЂРµРґРµР»СЏРµРјС‹С… РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	protected List<SpecInfo> initializeSpecList(List<DocumentSpecItem> docSpecs, BigDecimal docCurRate, boolean isDocCurRateDirect) {
 		List<SpecInfo> specList = new ArrayList<SpecInfo>();
@@ -417,9 +417,9 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Автоматическое распределение
-	 * @param specList - список позиций спецификации
-	 * @param sumToAllocate - сумма для рапределения
+	 * РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ СЂР°СЃРїСЂРµРґРµР»РµРЅРёРµ
+	 * @param specList - СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param sumToAllocate - СЃСѓРјРјР° РґР»СЏ СЂР°РїСЂРµРґРµР»РµРЅРёСЏ
 	 */
 	private void allocateAutomaticly(List<SpecInfo> specList, BigDecimal sumToAllocate) {
 		RoundContext currencyPrecRoundContext = new RoundContext((Integer) getModuleConfiguration().getAttribute("CurrencyPrec")); //$NON-NLS-1$
@@ -448,14 +448,14 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Интерактивное распределение
-	 * @param allocationList - список позиций спецификации
-	 * @param sumToAllocate - сумма для рапределения
-	 * @param docSumCur - сумма документа
-	 * @param transactHead - связанный документ
-	 * @param payment - запись журнала платежей
-	 * @param docCurRate - курс валюты
-	 * @param isCurRateDirect - признак направления курса
+	 * РРЅС‚РµСЂР°РєС‚РёРІРЅРѕРµ СЂР°СЃРїСЂРµРґРµР»РµРЅРёРµ
+	 * @param allocationList - СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param sumToAllocate - СЃСѓРјРјР° РґР»СЏ СЂР°РїСЂРµРґРµР»РµРЅРёСЏ
+	 * @param docSumCur - СЃСѓРјРјР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param transactHead - СЃРІСЏР·Р°РЅРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚
+	 * @param payment - Р·Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№
+	 * @param docCurRate - РєСѓСЂСЃ РІР°Р»СЋС‚С‹
+	 * @param isCurRateDirect - РїСЂРёР·РЅР°Рє РЅР°РїСЂР°РІР»РµРЅРёСЏ РєСѓСЂСЃР°
 	 */
 	private void allocateManualy(List<SpecInfo> allocationList, BigDecimal sumToAllocate, final BigDecimal docSumCur, final TransactHead transactHead, final Payment payment, final BigDecimal docCurRate, final boolean isCurRateDirect) {
 		final InteractiveAllocationDlg dialog = (InteractiveAllocationDlg) UIProducer.produceForm("com/mg/merp/paymentalloc/resources/InteractiveAllocationDlg.mfd.xml"); //$NON-NLS-1$;
@@ -478,8 +478,8 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Получить распределенную сумму позиций спецификации
-	 * @return распределенная сумма позиций спецификации
+	 * РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїСЂРµРґРµР»РµРЅРЅСѓСЋ СЃСѓРјРјСѓ РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @return СЂР°СЃРїСЂРµРґРµР»РµРЅРЅР°СЏ СЃСѓРјРјР° РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	protected BigDecimal getItemsAllocatedSum() {
 		BigDecimal allocatedSum = BigDecimal.ZERO;
@@ -491,11 +491,11 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Инициализировать распределяемую позицию параметрами позиции спецификации документа
-	 * @param docSpecItem - позиция спецификации документа
-	 * @param docCurRate - курс валюты
-	 * @param curRateDirect - признак направления курса
-	 * @return распределяемая позиция
+	 * РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ СЂР°СЃРїСЂРµРґРµР»СЏРµРјСѓСЋ РїРѕР·РёС†РёСЋ РїР°СЂР°РјРµС‚СЂР°РјРё РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docSpecItem - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docCurRate - РєСѓСЂСЃ РІР°Р»СЋС‚С‹
+	 * @param curRateDirect - РїСЂРёР·РЅР°Рє РЅР°РїСЂР°РІР»РµРЅРёСЏ РєСѓСЂСЃР°
+	 * @return СЂР°СЃРїСЂРµРґРµР»СЏРµРјР°СЏ РїРѕР·РёС†РёСЏ
 	 */
 	protected SpecInfo initializeByDocSpecItem(DocumentSpecItem docSpecItem, BigDecimal docCurRate, boolean curRateDirect) {
 		SpecInfo specInfo = new SpecInfo();
@@ -524,11 +524,11 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Обработка налогов распределяемой позиции спецификации
-	 * @param specInfo - распределённая позиция спецификации
-	 * @param transactSpec - позиция спецификации, связанного документа
-	 * @param docCurRate - курс валюты
-	 * @param curRateDirect - признак направления курса
+	 * РћР±СЂР°Р±РѕС‚РєР° РЅР°Р»РѕРіРѕРІ СЂР°СЃРїСЂРµРґРµР»СЏРµРјРѕР№ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param specInfo - СЂР°СЃРїСЂРµРґРµР»С‘РЅРЅР°СЏ РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param transactSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё, СЃРІСЏР·Р°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docCurRate - РєСѓСЂСЃ РІР°Р»СЋС‚С‹
+	 * @param curRateDirect - РїСЂРёР·РЅР°Рє РЅР°РїСЂР°РІР»РµРЅРёСЏ РєСѓСЂСЃР°
 	 */
 	protected void processTaxes(SpecInfo specInfo, TransactSpec transactSpec, BigDecimal docCurRate, boolean curRateDirect) {
 		RoundContext currencyPrecRoundContext = new RoundContext((Integer) getModuleConfiguration().getAttribute("CurrencyPrec")); //$NON-NLS-1$
@@ -561,11 +561,11 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Получить распределённую сумму платежа для документа
-	 * @param payment - платеж
-	 * @param docGroups - группы документов, к которым принадлежит документ
-	 * @param docHead - документ
-	 * @return распределённая сумм платежа для документа
+	 * РџРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїСЂРµРґРµР»С‘РЅРЅСѓСЋ СЃСѓРјРјСѓ РїР»Р°С‚РµР¶Р° РґР»СЏ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param payment - РїР»Р°С‚РµР¶
+	 * @param docGroups - РіСЂСѓРїРїС‹ РґРѕРєСѓРјРµРЅС‚РѕРІ, Рє РєРѕС‚РѕСЂС‹Рј РїСЂРёРЅР°РґР»РµР¶РёС‚ РґРѕРєСѓРјРµРЅС‚
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
+	 * @return СЂР°СЃРїСЂРµРґРµР»С‘РЅРЅР°СЏ СЃСѓРјРј РїР»Р°С‚РµР¶Р° РґР»СЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected BigDecimal getAllocatedSum(Payment payment, List<DocGroup> docGroups, DocHead docHead) {
 		DetachedCriteria dc = DetachedCriteria.forClass(DocGroupLink.class)
@@ -588,9 +588,9 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Получить список групп документов к которым принадлежит тип документа
-	 * @param docType - тип документа
-	 * @return список групп документов
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РіСЂСѓРїРї РґРѕРєСѓРјРµРЅС‚РѕРІ Рє РєРѕС‚РѕСЂС‹Рј РїСЂРёРЅР°РґР»РµР¶РёС‚ С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docType - С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return СЃРїРёСЃРѕРє РіСЂСѓРїРї РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 */
 	private List<DocGroup> getDocGroups(DocType docType) {
 		Projection projection = Projections.projectionList(Projections.property("DocGroup")); //$NON-NLS-1$
@@ -663,8 +663,8 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Расчитать денежные величины записи журнала платежей
-	 * @param payment - запись журнала платежей
+	 * Р Р°СЃС‡РёС‚Р°С‚СЊ РґРµРЅРµР¶РЅС‹Рµ РІРµР»РёС‡РёРЅС‹ Р·Р°РїРёСЃРё Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№
+	 * @param payment - Р·Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№
 	 */
 	protected void computeSumValues(Payment payment) {
 		PersistentObject pmaConfig = getModuleConfiguration();
@@ -672,7 +672,7 @@ implements PaymentallocProcessorServiceLocal {
 
 		payment.setSumCur(MathUtils.round(docFlowParams.getPerformedSum(), new RoundContext((Integer) pmaConfig.getAttribute("CurrencyPrec")))); //$NON-NLS-1$
 
-		// берем валюту из документа, если она не проставлена в образце
+		// Р±РµСЂРµРј РІР°Р»СЋС‚Сѓ РёР· РґРѕРєСѓРјРµРЅС‚Р°, РµСЃР»Рё РѕРЅР° РЅРµ РїСЂРѕСЃС‚Р°РІР»РµРЅР° РІ РѕР±СЂР°Р·С†Рµ
 		if(payment.getCurCode() == null) {
 			payment.setCurCode(docFlowParams.getDocument().getCurrency());
 			payment.setCurRateAuthority(docFlowParams.getDocument().getCurrencyRateAuthority());
@@ -705,8 +705,8 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Установить подразделения компании для записи журнала платежей
-	 * @param payment - запись журнала платежей
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїРѕРґСЂР°Р·РґРµР»РµРЅРёСЏ РєРѕРјРїР°РЅРёРё РґР»СЏ Р·Р°РїРёСЃРё Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№
+	 * @param payment - Р·Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№
 	 */
 	protected void setAccordingOrgUnit(Payment payment) {
 		payment.setFromUnit(getOrgUnit(payment.getContractorFrom()));
@@ -717,9 +717,9 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Получить подразделение компании, связанное с контрагентом
-	 * @param partner - контрагент
-	 * @return подразделение компании, связанное с контрагентом
+	 * РџРѕР»СѓС‡РёС‚СЊ РїРѕРґСЂР°Р·РґРµР»РµРЅРёРµ РєРѕРјРїР°РЅРёРё, СЃРІСЏР·Р°РЅРЅРѕРµ СЃ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРј
+	 * @param partner - РєРѕРЅС‚СЂР°РіРµРЅС‚
+	 * @return РїРѕРґСЂР°Р·РґРµР»РµРЅРёРµ РєРѕРјРїР°РЅРёРё, СЃРІСЏР·Р°РЅРЅРѕРµ СЃ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРј
 	 */
 	protected Contractor getOrgUnit(Contractor partner) {
 		if(partner != null)
@@ -730,10 +730,10 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Инициализировать запись журнала данными из документа
-	 * @param payment - запись журнала
-	 * @param document - документ
-	 * @return запись журнала платежей
+	 * РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ Р·Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р° РґР°РЅРЅС‹РјРё РёР· РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param payment - Р·Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р°
+	 * @param document - РґРѕРєСѓРјРµРЅС‚
+	 * @return Р·Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№
 	 */
 	protected Payment initializePaymentByDoc(Payment payment, DocHead document) {
 		if(payment != null) {
@@ -755,7 +755,7 @@ implements PaymentallocProcessorServiceLocal {
 			payment.setContractorFrom(document.getFrom());
 			payment.setContractorTo(document.getTo());
 
-			// назначение платежа
+			// РЅР°Р·РЅР°С‡РµРЅРёРµ РїР»Р°С‚РµР¶Р°
 			int docSection = document.getDocSection().getId();
 			if(docSection == BANK_DOCUMENT_IN_DOCSECTION || docSection == BANK_DOCUMENT_OUT_DOCSECTION || docSection == BANK_DOCUMENT_OTHER_DOCSECTION)
 				payment.setAttribute("Description", document.getAttribute("Comment")); //$NON-NLS-1$ //$NON-NLS-2$
@@ -770,14 +770,14 @@ implements PaymentallocProcessorServiceLocal {
 	}
 
 	/**
-	 * Создать запись журнала по образцу
-	 * @param pattern - образец записи журнала
-	 * @param destinationFolder - папка-приемник записи
-	 * @return запись журнала платежей
+	 * РЎРѕР·РґР°С‚СЊ Р·Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р° РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param pattern - РѕР±СЂР°Р·РµС† Р·Р°РїРёСЃРё Р¶СѓСЂРЅР°Р»Р°
+	 * @param destinationFolder - РїР°РїРєР°-РїСЂРёРµРјРЅРёРє Р·Р°РїРёСЃРё
+	 * @return Р·Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№
 	 */
 	protected Payment createPaymentByPattern(Payment pattern, Folder destinationFolder) {
 		Folder dstFolder = null;
-		// если папка-приемник не установлена в образце записи журнала, то берем папку-приемник из параметров ДО
+		// РµСЃР»Рё РїР°РїРєР°-РїСЂРёРµРјРЅРёРє РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅР° РІ РѕР±СЂР°Р·С†Рµ Р·Р°РїРёСЃРё Р¶СѓСЂРЅР°Р»Р°, С‚Рѕ Р±РµСЂРµРј РїР°РїРєСѓ-РїСЂРёРµРјРЅРёРє РёР· РїР°СЂР°РјРµС‚СЂРѕРІ Р”Рћ
 		if(pattern.getDestFolder() != null)
 			dstFolder = pattern.getDestFolder();
 		else 

@@ -24,7 +24,7 @@ import com.mg.merp.paymentalloc.PaymentModelServiceLocal;
 import com.mg.merp.paymentalloc.model.Payment;
 
 /**
- * Реализация бизнес-компонента "Образцы записей журнала платежей" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·С†С‹ Р·Р°РїРёСЃРµР№ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

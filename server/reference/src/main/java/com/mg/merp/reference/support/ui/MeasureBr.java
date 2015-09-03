@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.Measure;
 
 /**
- * Браузер единиц измерений
+ * Р‘СЂР°СѓР·РµСЂ РµРґРёРЅРёС† РёР·РјРµСЂРµРЅРёР№
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

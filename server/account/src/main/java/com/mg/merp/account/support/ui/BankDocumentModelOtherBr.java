@@ -27,7 +27,7 @@ import com.mg.merp.account.BankDocumentModelOtherServiceLocal;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Браузер образцов прочих банковских документов
+ * Р‘СЂР°СѓР·РµСЂ РѕР±СЂР°Р·С†РѕРІ РїСЂРѕС‡РёС… Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: BankDocumentModelOtherBr.java,v 1.4 2006/09/12 11:27:26 leonova Exp $

@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.OwnershipForm;
 
 /**
- * Браузер форм собственности
+ * Р‘СЂР°СѓР·РµСЂ С„РѕСЂРј СЃРѕР±СЃС‚РІРµРЅРЅРѕСЃС‚Рё
  * 
  * @author leonova
  * @version $Id: OwnershipFormBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

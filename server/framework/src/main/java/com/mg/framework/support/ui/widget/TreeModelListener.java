@@ -17,7 +17,7 @@ package com.mg.framework.support.ui.widget;
 import java.util.EventListener;
 
 /**
- * слушатель модели дерева
+ * СЃР»СѓС€Р°С‚РµР»СЊ РјРѕРґРµР»Рё РґРµСЂРµРІР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: TreeModelListener.java,v 1.3 2006/06/26 11:47:21 safonov Exp $
@@ -25,7 +25,7 @@ import java.util.EventListener;
 public interface TreeModelListener extends EventListener {
 	
 	/**
-	 * срабатывает в случае радикального изменения структуры модели дерева
+	 * СЃСЂР°Р±Р°С‚С‹РІР°РµС‚ РІ СЃР»СѓС‡Р°Рµ СЂР°РґРёРєР°Р»СЊРЅРѕРіРѕ РёР·РјРµРЅРµРЅРёСЏ СЃС‚СЂСѓРєС‚СѓСЂС‹ РјРѕРґРµР»Рё РґРµСЂРµРІР°
 	 *
 	 */
 	void treeStructureChanged();

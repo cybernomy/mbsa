@@ -17,7 +17,7 @@ package com.mg.merp.salary.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы спецификации сводов по н/у
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРµС†РёС„РёРєР°С†РёРё СЃРІРѕРґРѕРІ РїРѕ РЅ/Сѓ
  * 
  * @author leonova
  * @version $Id: FeeSummarySpecMt.java,v 1.3 2006/08/22 07:46:01 leonova Exp $

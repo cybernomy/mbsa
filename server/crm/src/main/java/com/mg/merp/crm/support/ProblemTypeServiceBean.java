@@ -24,7 +24,7 @@ import com.mg.merp.crm.ProblemTypeServiceLocal;
 import com.mg.merp.crm.model.ProblemType;
 
 /**
- * Бизнес-компонент "Типы проблем" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ РїСЂРѕР±Р»РµРј" 
  * 
  * @author leonova
  * @version $Id: ProblemTypeServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

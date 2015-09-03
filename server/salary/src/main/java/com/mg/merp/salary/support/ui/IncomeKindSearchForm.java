@@ -27,7 +27,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.salary.model.IncomeKind;
 
 /**
- * Контроллер формы поиска сущностей "Вид дохода"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "Р’РёРґ РґРѕС…РѕРґР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: IncomeKindSearchForm.java,v 1.1 2007/07/18 08:04:40 sharapov Exp $

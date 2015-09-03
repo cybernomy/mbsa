@@ -19,7 +19,7 @@ import com.mg.framework.support.ui.UIProducer;
 import com.mg.framework.support.ui.UIUtils;
 
 /**
- * Базовый класс поиска сущностей "Аналитика состава затрат"
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РђРЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -42,7 +42,7 @@ public abstract class CostsAnlSearchHelp extends AbstractSearchHelp {
 	}
 
 	/**
-	 * Получить уровень аналитики состава затрат
+	 * РџРѕР»СѓС‡РёС‚СЊ СѓСЂРѕРІРµРЅСЊ Р°РЅР°Р»РёС‚РёРєРё СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚
 	 */
 	abstract short getAnaliticsLevel();
 

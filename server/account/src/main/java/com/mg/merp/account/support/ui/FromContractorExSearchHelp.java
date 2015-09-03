@@ -22,7 +22,7 @@ import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.reference.model.Partner;
 
 /**
- * Поисковик контрагента для поля документа "От кого" и установка банковского счета по умолчанию
+ * РџРѕРёСЃРєРѕРІРёРє РєРѕРЅС‚СЂР°РіРµРЅС‚Р° РґР»СЏ РїРѕР»СЏ РґРѕРєСѓРјРµРЅС‚Р° "РћС‚ РєРѕРіРѕ" Рё СѓСЃС‚Р°РЅРѕРІРєР° Р±Р°РЅРєРѕРІСЃРєРѕРіРѕ СЃС‡РµС‚Р° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
  * 
  * @author Artem V. Sharapov
  * @version $Id: FromContractorExSearchHelp.java,v 1.1 2007/11/08 14:52:39 sharapov Exp $

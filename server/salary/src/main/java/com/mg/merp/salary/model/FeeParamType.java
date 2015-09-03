@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип параметра начисления/удержания
+ * РўРёРї РїР°СЂР°РјРµС‚СЂР° РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ
  * 
  * @author leonova
  * @version $Id: FeeParamType.java,v 1.1 2006/03/30 11:31:37 safonov Exp $
@@ -26,19 +26,19 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Salary.FeeParam.FeeParamType")
 public enum FeeParamType {
 	/**
-	 * Число
+	 * Р§РёСЃР»Рѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#FeeParamType.Number")
 	NUMBER,
 	
 	/**
-	 * Дата
+	 * Р”Р°С‚Р°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#FeeParamType.Date")
 	DATE,
 	
 	/**
-	 * Строка
+	 * РЎС‚СЂРѕРєР°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#FeeParamType.String")
 	STRING

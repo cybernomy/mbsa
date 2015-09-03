@@ -24,7 +24,7 @@ import com.mg.merp.salary.TaxRateServiceLocal;
 import com.mg.merp.salary.model.TaxRate;
 
 /**
- * Бизнес-компонент "Ставки налоговых сеток" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎС‚Р°РІРєРё РЅР°Р»РѕРіРѕРІС‹С… СЃРµС‚РѕРє" 
  * 
  * @author leonova
  * @version $Id: TaxRateServiceBean.java,v 1.3 2006/09/13 10:48:29 leonova Exp $

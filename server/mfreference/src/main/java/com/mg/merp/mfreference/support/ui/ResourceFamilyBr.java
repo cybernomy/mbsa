@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.mfreference.model.ResourceFamily;
 
 /**
- * Браурез семейств ресурсов
+ * Р‘СЂР°СѓСЂРµР· СЃРµРјРµР№СЃС‚РІ СЂРµСЃСѓСЂСЃРѕРІ
  * 
  * @author leonova
  * @version $Id: ResourceFamilyBr.java,v 1.1 2006/09/04 05:51:37 leonova Exp $ 

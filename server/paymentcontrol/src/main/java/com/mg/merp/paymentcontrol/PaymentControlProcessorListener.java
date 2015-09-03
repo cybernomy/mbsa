@@ -17,7 +17,7 @@ package com.mg.merp.paymentcontrol;
 import java.util.EventListener;
 
 /**
- * Слушатель процессора модуля "Платежный календарь"
+ * РЎР»СѓС€Р°С‚РµР»СЊ РїСЂРѕС†РµСЃСЃРѕСЂР° РјРѕРґСѓР»СЏ "РџР»Р°С‚РµР¶РЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PaymentControlProcessorListener.java,v 1.1 2007/05/14 04:59:59 sharapov Exp $

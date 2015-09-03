@@ -20,7 +20,7 @@ import com.mg.merp.reference.model.CatalogType;
 import com.mg.merp.reference.model.PriceType;
 
 /**
- * Контроллер формы условий отбора спецификаций прайс-листов 
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° СЃРїРµС†РёС„РёРєР°С†РёР№ РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ 
  * 
  * @author Artem V. Sharapov
  * @author Konstantin S. Alikaev
@@ -38,24 +38,24 @@ public class PriceListSpecRest extends DefaultHierarhyRestrictionForm {
 	private String code = null;
 
 	/*
-	 * Тип позиции 
+	 * РўРёРї РїРѕР·РёС†РёРё 
 	 */
 	private CatalogType goodType = null;
 
 	/*
-	 * Действительно на 
+	 * Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ РЅР° 
 	 */
 	@DataItemName("Reference.Cond.PriceListSpec.DateTill") //$NON-NLS-1$
 	private java.util.Date dateTill= null;
 
 	/*
-	 * Артикул поставщика
+	 * РђСЂС‚РёРєСѓР» РїРѕСЃС‚Р°РІС‰РёРєР°
 	 */
 	@DataItemName("Reference.Cond.PriceListSpec.InternalCode") //$NON-NLS-1$
 	private String internalCode = null;
 
 	/*
-	 * Артикул
+	 * РђСЂС‚РёРєСѓР»
 	 */
 	@DataItemName("Reference.Cond.PriceListSpec.Articul") //$NON-NLS-1$
 	private String articul = null;
@@ -67,13 +67,13 @@ public class PriceListSpecRest extends DefaultHierarhyRestrictionForm {
 	private boolean showInUse = false;
 
 	/**
-	 * Использовать признак "Тип цены"
+	 * РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РїСЂРёР·РЅР°Рє "РўРёРї С†РµРЅС‹"
 	 */
 	@DataItemName("Reference.Cond.PriceListSpec.NotInUsePriceType")	 //$NON-NLS-1$
 	private boolean notInUsePriceType = false;
 
 	/**
-	 * тип цены
+	 * С‚РёРї С†РµРЅС‹
 	 */
 	@DataItemName("Reference.PriceType")	 //$NON-NLS-1$
 	private PriceType priceType = null;
@@ -97,7 +97,7 @@ public class PriceListSpecRest extends DefaultHierarhyRestrictionForm {
 	}
 
 	/**
-	 * @return наименование спецификации(позиции) прайс-листа
+	 * @return РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёРё(РїРѕР·РёС†РёРё) РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	public String getSpecName() {
 		return specName;
@@ -111,35 +111,35 @@ public class PriceListSpecRest extends DefaultHierarhyRestrictionForm {
 	}
 
 	/**
-	 * @return артикул поставщика
+	 * @return Р°СЂС‚РёРєСѓР» РїРѕСЃС‚Р°РІС‰РёРєР°
 	 */
 	public String getInternalCode() {
 		return internalCode;
 	}
 
 	/**
-	 * @return артикул 
+	 * @return Р°СЂС‚РёРєСѓР» 
 	 */
 	public String getArticul() {
 		return articul;
 	}
 
 	/**
-	 * @return наименование в прайс-листе
+	 * @return РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РІ РїСЂР°Р№СЃ-Р»РёСЃС‚Рµ
 	 */
 	public String getSpecFullName() {
 		return specFullName;
 	}
 
 	/**
-	 * @return действительно на 
+	 * @return РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ РЅР° 
 	 */
 	public java.util.Date getDateTill() {
 		return dateTill;
 	}
 
 	/**
-	 * @return тип позиции
+	 * @return С‚РёРї РїРѕР·РёС†РёРё
 	 */
 	public CatalogType getGoodType() {
 		return goodType;
@@ -175,8 +175,8 @@ public class PriceListSpecRest extends DefaultHierarhyRestrictionForm {
 	}
 
 	/**
-	 * Установить идентификатор прайс-листа
-	 * @param priceListHeadId - идентификатор прайс-листа
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param priceListHeadId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	public void setPriceListHeadId(Integer priceListHeadId) {
 		this.priceListHeadId = priceListHeadId;

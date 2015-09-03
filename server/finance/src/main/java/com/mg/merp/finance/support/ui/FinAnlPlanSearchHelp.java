@@ -24,7 +24,7 @@ import com.mg.merp.finance.AnalyticsServiceLocal;
 import com.mg.merp.finance.model.Account;
 
 /**
- * Базовый класс для SearchHelp аналитических счетов финансового учета
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РґР»СЏ SearchHelp Р°РЅР°Р»РёС‚РёС‡РµСЃРєРёС… СЃС‡РµС‚РѕРІ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°
  * 
  * @author leonova
  * @version $Id: FinAnlPlanSearchHelp.java,v 1.1 2006/10/30 13:50:17 leonova Exp $

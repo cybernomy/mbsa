@@ -20,7 +20,7 @@ import com.mg.merp.planning.model.MrpRecommendation;
 import com.mg.merp.planning.model.MrpVersionControl;
 
 /**
- * Бизнес-компонент "Рекомендации ППМ"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р РµРєРѕРјРµРЅРґР°С†РёРё РџРџРњ"
  * 
  * @author Oleg V. Safonov
  * @author leonova
@@ -30,28 +30,28 @@ public interface MRPRecommendationServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<MrpRecommendation, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/planning/MRPRecommendation";
 	
 	/**
-	 * подтверждения рекомендаций
+	 * РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ СЂРµРєРѕРјРµРЅРґР°С†РёР№
 	 * 
-	 * @param recommends	список идентификаторов рекомендаций
+	 * @param recommends	СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ СЂРµРєРѕРјРµРЅРґР°С†РёР№
 	 */
 	void firm(Serializable[] recommends);
 
 	/**
-	 * создание заказов по рекомендациям
+	 * СЃРѕР·РґР°РЅРёРµ Р·Р°РєР°Р·РѕРІ РїРѕ СЂРµРєРѕРјРµРЅРґР°С†РёСЏРј
 	 * 
-	 * @param mrpVersionId	идентификатор версии ППМ
+	 * @param mrpVersionId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІРµСЂСЃРёРё РџРџРњ
 	 */
 	void createOrder(int mrpVersionId);
 
 	/**
-	 * очистить рекомендации товара
+	 * РѕС‡РёСЃС‚РёС‚СЊ СЂРµРєРѕРјРµРЅРґР°С†РёРё С‚РѕРІР°СЂР°
 	 * 
-	 * @param mrpVersion	версия ППМ
+	 * @param mrpVersion	РІРµСЂСЃРёСЏ РџРџРњ
 	 */
 	void clear(MrpVersionControl mrpVersion);
 

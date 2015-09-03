@@ -18,7 +18,7 @@ import com.mg.merp.wb.core.ui.editor.StandartEditorInput;
 import com.mg.merp.wb.entitymapper.Activator;
 
 /**
- * Входные данные для формы редактирования маппинга преобразования классов
+ * Р’С…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ РґР»СЏ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РјР°РїРїРёРЅРіР° РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РєР»Р°СЃСЃРѕРІ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: EntityMapperEditorInput.java,v 1.1 2007/05/07 13:09:12 poroxnenko Exp $

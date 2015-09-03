@@ -17,7 +17,7 @@ package com.mg.merp.document.generic.ui;
 import com.mg.framework.generic.ui.DefaultMaintenanceForm;
 
 /**
- * Базовый класс контроллера формы поддержки образцов документов
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РєРѕРЅС‚СЂРѕР»Р»РµСЂР° С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РѕР±СЂР°Р·С†РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -20,7 +20,7 @@ import com.mg.merp.baiengine.generic.AbstractBusinessAddin;
 import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 
 /**
- * Базовый класс BAi используемых в документообороте
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ BAi РёСЃРїРѕР»СЊР·СѓРµРјС‹С… РІ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Рµ
  * 
  * @author Oleg V. Safonov
  * @version $Id: BaseDocFlowBusinessAddin.java,v 1.1 2007/12/14 08:48:53 safonov Exp $
@@ -31,9 +31,9 @@ public abstract class BaseDocFlowBusinessAddin extends AbstractBusinessAddin<Voi
 	private DocFlowPluginInvokeParams docFlowParams;
 
 	/**
-	 * получить параметры выполнения этапа ДО
+	 * РїРѕР»СѓС‡РёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РІС‹РїРѕР»РЅРµРЅРёСЏ СЌС‚Р°РїР° Р”Рћ
 	 * 
-	 * @return	параметры выполнения ДО
+	 * @return	РїР°СЂР°РјРµС‚СЂС‹ РІС‹РїРѕР»РЅРµРЅРёСЏ Р”Рћ
 	 */
 	protected DocFlowPluginInvokeParams getDocFlowParams() {
 		return docFlowParams;

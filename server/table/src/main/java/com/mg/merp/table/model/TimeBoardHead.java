@@ -17,7 +17,7 @@ package com.mg.merp.table.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Заголовок табеля"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р—Р°РіРѕР»РѕРІРѕРє С‚Р°Р±РµР»СЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: TimeBoardHead.java,v 1.5 2008/08/12 14:11:44 sharapov Exp $

@@ -25,7 +25,7 @@ import com.mg.merp.crm.model.Operation;
 import com.mg.merp.reference.model.OriginalDocument;
 
 /**
- * Реализация бизнес-компонента "Связанные документы" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРІСЏР·Р°РЅРЅС‹Рµ РґРѕРєСѓРјРµРЅС‚С‹" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -43,10 +43,10 @@ public class LinkedDocumentServiceBean extends AbstractPOJODataBusinessObjectSer
 	}
 
 	/**
-	 * Создать связанный документ с оригиналом для действия
-	 * @param operation - действие
-	 * @param originalDocument - оригинал
-	 * @return связанный документ
+	 * РЎРѕР·РґР°С‚СЊ СЃРІСЏР·Р°РЅРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚ СЃ РѕСЂРёРіРёРЅР°Р»РѕРј РґР»СЏ РґРµР№СЃС‚РІРёСЏ
+	 * @param operation - РґРµР№СЃС‚РІРёРµ
+	 * @param originalDocument - РѕСЂРёРіРёРЅР°Р»
+	 * @return СЃРІСЏР·Р°РЅРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚
 	 */
 	protected LinkedDocument doCreateForOperationWithOriginal(Operation operation, OriginalDocument originalDocument) {
 		LinkedDocument linkedDocument = initialize();

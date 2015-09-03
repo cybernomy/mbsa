@@ -18,7 +18,7 @@ import com.mg.framework.api.ReasonException;
 import com.mg.framework.support.Messages;
 
 /**
- * ИС превышения допустимого размера файла для загрузки/выгрузки
+ * РРЎ РїСЂРµРІС‹С€РµРЅРёСЏ РґРѕРїСѓСЃС‚РёРјРѕРіРѕ СЂР°Р·РјРµСЂР° С„Р°Р№Р»Р° РґР»СЏ Р·Р°РіСЂСѓР·РєРё/РІС‹РіСЂСѓР·РєРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: FileSizeExceededException.java,v 1.1 2008/05/29 13:41:01 safonov Exp $

@@ -15,7 +15,7 @@
 package com.mg.framework.api.ui.dnd;
 
 /**
- * Элемент пользователького интерфейса поддерживающий DnD
+ * Р­Р»РµРјРµРЅС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР° РїРѕРґРґРµСЂР¶РёРІР°СЋС‰РёР№ DnD
  * 
  * @author Oleg V. Safonov
  * @version $Id: DnDComponent.java,v 1.1 2007/08/16 13:48:06 safonov Exp $

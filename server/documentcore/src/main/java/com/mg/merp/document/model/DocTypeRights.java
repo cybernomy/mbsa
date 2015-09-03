@@ -16,7 +16,7 @@
 package com.mg.merp.document.model;
 
 /**
- * Модель бизнес-компонента "Права на типы документов"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂР°РІР° РЅР° С‚РёРїС‹ РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author Artem V. Sharapov 
  * @version $Id: DocTypeRights.java,v 1.3 2007/11/20 14:55:23 sharapov Exp $

@@ -20,7 +20,7 @@ import com.mg.merp.reference.model.NaturalPerson;
 import com.mg.merp.reference.model.PersonAddress;
 
 /**
- * Сервис бизнес-компонента "Адреса проживания" 
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РђРґСЂРµСЃР° РїСЂРѕР¶РёРІР°РЅРёСЏ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -29,21 +29,21 @@ import com.mg.merp.reference.model.PersonAddress;
 public interface PersonAddressServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PersonAddress, Integer> {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/reference/PersonAddress"; //$NON-NLS-1$
 	
 	/**
-	 * Получить адрес физ.лица на дату
-	 * @param naturalPerson - физ.лицо
-	 * @param date - дата актуальности адреса
-	 * @return адрес физ.лица
+	 * РџРѕР»СѓС‡РёС‚СЊ Р°РґСЂРµСЃ С„РёР·.Р»РёС†Р° РЅР° РґР°С‚Сѓ
+	 * @param naturalPerson - С„РёР·.Р»РёС†Рѕ
+	 * @param date - РґР°С‚Р° Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё Р°РґСЂРµСЃР°
+	 * @return Р°РґСЂРµСЃ С„РёР·.Р»РёС†Р°
 	 */
 	PersonAddress getActualPersonAdress(NaturalPerson naturalPerson, Date date);
 	
 	/**
-	 * Формирует полный адрес
-	 * @param personAddress адрес проживания физического лица
+	 * Р¤РѕСЂРјРёСЂСѓРµС‚ РїРѕР»РЅС‹Р№ Р°РґСЂРµСЃ
+	 * @param personAddress Р°РґСЂРµСЃ РїСЂРѕР¶РёРІР°РЅРёСЏ С„РёР·РёС‡РµСЃРєРѕРіРѕ Р»РёС†Р°
 	 */
 	void getFullAddress(PersonAddress personAddress); 
 	

@@ -50,7 +50,7 @@ import com.mg.merp.reference.model.Currency;
 import com.mg.merp.reference.support.ui.FolderByTypeSearchHelp;
 
 /**
- * Контроллер формы списка бизнес-компонента "Ведомости расчета с контрагентами"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РµРґРѕРјРѕСЃС‚Рё СЂР°СЃС‡РµС‚Р° СЃ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°РјРё"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -121,13 +121,13 @@ public class RemnDbKtBr extends AbstractPlainBrowseFormWithTurn {
 				paramsValue.add(anlplan.getCode());
 			}
 		}
-		//Контрагент
+		//РљРѕРЅС‚СЂР°РіРµРЅС‚
 		Contractor contractorCode = restForm.getContractorCode();
 		if (contractorCode != null) {
 			whereText.append("and (ra.CONTRACTORCODE = ?)"); //$NON-NLS-1$
 			paramsValue.add(contractorCode.getCode());			
 		} 
-		//Вид сальдо
+		//Р’РёРґ СЃР°Р»СЊРґРѕ
 		switch (restForm.getBalanceKind()) {
 		case 1: whereText.append("and ((ra.REMNENDNATDB - ra.REMNENDNATKT) > 0)"); //$NON-NLS-1$
 		break;
@@ -252,7 +252,7 @@ public class RemnDbKtBr extends AbstractPlainBrowseFormWithTurn {
 	}
 
 	/**
-	 * Вызов сервиса бизнес-компонента "Остатки и обороты по счетам бух. учета"
+	 * Р’С‹Р·РѕРІ СЃРµСЂРІРёСЃР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ СЃС‡РµС‚Р°Рј Р±СѓС…. СѓС‡РµС‚Р°"
 	 * @return
 	 */
 	protected RemnDbKtServiceLocal getRemnAccService() {
@@ -262,7 +262,7 @@ public class RemnDbKtBr extends AbstractPlainBrowseFormWithTurn {
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Удалить пустые строки"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РЈРґР°Р»РёС‚СЊ РїСѓСЃС‚С‹Рµ СЃС‚СЂРѕРєРё"
 	 * 
 	 * @param event
 	 * @throws ApplicationException
@@ -274,7 +274,7 @@ public class RemnDbKtBr extends AbstractPlainBrowseFormWithTurn {
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Закрыть задолжность по контрагенту"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "Р—Р°РєСЂС‹С‚СЊ Р·Р°РґРѕР»Р¶РЅРѕСЃС‚СЊ РїРѕ РєРѕРЅС‚СЂР°РіРµРЅС‚Сѓ"
 	 * 
 	 * @param event
 	 * @throws ApplicationException

@@ -27,7 +27,7 @@ import com.mg.merp.reference.model.BankAccount;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Класс отображения SearchHelp для банковских счетов
+ * РљР»Р°СЃСЃ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ SearchHelp РґР»СЏ Р±Р°РЅРєРѕРІСЃРєРёС… СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: BankAccountSearchForm.java,v 1.2 2009/02/09 16:14:14 safonov Exp $

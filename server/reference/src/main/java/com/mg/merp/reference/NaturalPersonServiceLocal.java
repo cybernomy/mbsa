@@ -17,7 +17,7 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.NaturalPerson;
 
 /**
- * Бизнес-компонент "Физические лица"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р¤РёР·РёС‡РµСЃРєРёРµ Р»РёС†Р°"
  * 
  * @author leonova
  * @version $Id: NaturalPersonServiceLocal.java,v 1.2 2006/08/14 05:10:35 leonova Exp $
@@ -26,7 +26,7 @@ public interface NaturalPersonServiceLocal
    extends com.mg.framework.api.DataBusinessObjectService<NaturalPerson, Integer>
 {
 	/**
-	 * тип папки для физических лиц
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ С„РёР·РёС‡РµСЃРєРёС… Р»РёС†
 	 */
 	final static short FOLDER_PART = 2502;
 

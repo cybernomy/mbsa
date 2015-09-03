@@ -51,8 +51,8 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.reference.support.ui.FolderSearchForm;
 
 /**
- * Реализация стратегии ДО для интерактивной работы с пользователем, использование возможно
- * только для интерактивных пользователей
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё Р”Рћ РґР»СЏ РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕР№ СЂР°Р±РѕС‚С‹ СЃ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј, РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ РІРѕР·РјРѕР¶РЅРѕ
+ * С‚РѕР»СЊРєРѕ РґР»СЏ РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultInteractiveParamsStrategy.java,v 1.5 2009/02/25 08:40:16 safonov Exp $
@@ -61,7 +61,7 @@ public class DefaultInteractiveParamsStrategy extends AbstractParamsStrategy {
 
 	private void checkUIInteractive() {
 		Session session = ServerUtils.getCurrentSession();
-		//данная стратегия требует наличия пользовательского интерфейса
+		//РґР°РЅРЅР°СЏ СЃС‚СЂР°С‚РµРіРёСЏ С‚СЂРµР±СѓРµС‚ РЅР°Р»РёС‡РёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
 		if (session != null && !session.isInteractive())
 			throw new SilentException();
 	}
@@ -119,7 +119,7 @@ public class DefaultInteractiveParamsStrategy extends AbstractParamsStrategy {
 					boolean valueOutOfBound = performedStage.isValueOutOfBound();
 					List<DocumentSpecItem> tmpSpecList = new ArrayList<DocumentSpecItem>();
 					for (DocumentSpecItem specItem : specList) {
-						//в список к отработке попадает только отмеченная спецификация
+						//РІ СЃРїРёСЃРѕРє Рє РѕС‚СЂР°Р±РѕС‚РєРµ РїРѕРїР°РґР°РµС‚ С‚РѕР»СЊРєРѕ РѕС‚РјРµС‡РµРЅРЅР°СЏ СЃРїРµС†РёС„РёРєР°С†РёСЏ
 						if (specItem.getPerformedQuantity1() != null && MathUtils.compareToZero(specItem.getPerformedQuantity1()) != 0 ||
 								specItem.getPerformedQuantity2() != null && MathUtils.compareToZero(specItem.getPerformedQuantity2()) != 0 ||
 								specItem.getPerformedSum() != null && MathUtils.compareToZero(specItem.getPerformedSum()) != 0) {
@@ -132,7 +132,7 @@ public class DefaultInteractiveParamsStrategy extends AbstractParamsStrategy {
 							BigDecimal freeSum = specItem.getPerformedSum();
 							if (freeSum == null)
 								freeSum = BigDecimal.ZERO;
-							//если ограничение включено, то уменьшим выбранную сумму и количество в каждой спецификации
+							//РµСЃР»Рё РѕРіСЂР°РЅРёС‡РµРЅРёРµ РІРєР»СЋС‡РµРЅРѕ, С‚Рѕ СѓРјРµРЅСЊС€РёРј РІС‹Р±СЂР°РЅРЅСѓСЋ СЃСѓРјРјСѓ Рё РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РєР°Р¶РґРѕР№ СЃРїРµС†РёС„РёРєР°С†РёРё
 							if (!valueOutOfBound) {
 								if (freeQuan1.abs().compareTo(specItem.getFreeQuantity1().abs()) == 1)
 									freeQuan1 = specItem.getFreeQuantity1();
@@ -143,7 +143,7 @@ public class DefaultInteractiveParamsStrategy extends AbstractParamsStrategy {
 							}
 							DocumentSpecItem tmpSpecItem = new DocumentSpecItem(specItem.getDocSpec(),
 									freeQuan1, freeQuan2, freeSum, specItem.getReadyQuantity1(), specItem.getReadyQuantity2(), specItem.getReadySum());
-							//проставим значения к отработке
+							//РїСЂРѕСЃС‚Р°РІРёРј Р·РЅР°С‡РµРЅРёСЏ Рє РѕС‚СЂР°Р±РѕС‚РєРµ
 							tmpSpecItem.setPerformedQuantity1(freeQuan1);
 							tmpSpecItem.setPerformedQuantity2(freeQuan2);
 							tmpSpecItem.setPerformedSum(freeSum);
@@ -190,7 +190,7 @@ public class DefaultInteractiveParamsStrategy extends AbstractParamsStrategy {
 			dialog.addOkActionListener(new FormActionListener() {
 				public void actionPerformed(FormEvent event) {
 					BigDecimal sum = ((InputDocumentSumDialog) event.getForm()).getDocSum();
-					//если ограничение включено, то уменьшим выбранную сумму
+					//РµСЃР»Рё РѕРіСЂР°РЅРёС‡РµРЅРёРµ РІРєР»СЋС‡РµРЅРѕ, С‚Рѕ СѓРјРµРЅСЊС€РёРј РІС‹Р±СЂР°РЅРЅСѓСЋ СЃСѓРјРјСѓ
 					if (!performedStage.isValueOutOfBound() && sum.abs().compareTo(docSum.abs()) == 1)
 						sum = docSum;
 					try {

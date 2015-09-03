@@ -19,7 +19,7 @@ import com.mg.framework.api.metadata.ApplicationLayer;
 import com.mg.framework.service.PersistentObjectHibernate;
 
 /**
- * Окно пользовательского интерфейса
+ * РћРєРЅРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: Window.java,v 1.1 2008/03/03 12:56:35 safonov Exp $

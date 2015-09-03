@@ -25,7 +25,7 @@ import com.mg.merp.docflow.support.DocFlowPluginFactoryManagerServiceLocator;
 import com.mg.merp.docflow.support.jboss.DocFlowPluginFactoryServiceMBean;
 
 /**
- * Реализация сервиса дополнительных модулей подсистемы "Контракты"
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "РљРѕРЅС‚СЂР°РєС‚С‹"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ContractDocFlowPluginService.java,v 1.1 2007/03/07 12:26:05 sharapov Exp $

@@ -17,7 +17,7 @@ package com.mg.merp.discount;
 import com.mg.merp.discount.model.ExtraDiscount;
 
 /**
- * Бизнес-компонент "Дополнительные скидки дисконтной карты"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СЃРєРёРґРєРё РґРёСЃРєРѕРЅС‚РЅРѕР№ РєР°СЂС‚С‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.discount.model.ExtraDiscount;
 public interface ExtraDiscountServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ExtraDiscount, Integer> {
 	
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/discount/ExtraDiscount"; //$NON-NLS-1$
 	

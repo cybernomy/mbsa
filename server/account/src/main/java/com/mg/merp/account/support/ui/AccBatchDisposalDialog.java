@@ -37,7 +37,7 @@ import com.mg.merp.account.support.Messages;
 import com.mg.merp.reference.model.Catalog;
 
 /**
- * Контроллер формы диалога списания с партии (вызывается при отработке ЭДО "Создать ХО")
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РґРёР°Р»РѕРіР° СЃРїРёСЃР°РЅРёСЏ СЃ РїР°СЂС‚РёРё (РІС‹Р·С‹РІР°РµС‚СЃСЏ РїСЂРё РѕС‚СЂР°Р±РѕС‚РєРµ Р­Р”Рћ "РЎРѕР·РґР°С‚СЊ РҐРћ")
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: AccBatchDisposalDialog.java,v 1.3 2008/03/25 14:54:12 alikaev Exp $
@@ -129,8 +129,8 @@ public class AccBatchDisposalDialog extends DefaultWizardDialog {
 			AccBatchHistoryItem item = specListModel.get(rowIndex);
 			switch (columnIndex) {
 			case 8: //processQuntity
-				//проверка если количество введенное пользователем больше чем остаток в партии, то устанавливаем 
-				//значение равное остатку в партии
+				//РїСЂРѕРІРµСЂРєР° РµСЃР»Рё РєРѕР»РёС‡РµСЃС‚РІРѕ РІРІРµРґРµРЅРЅРѕРµ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј Р±РѕР»СЊС€Рµ С‡РµРј РѕСЃС‚Р°С‚РѕРє РІ РїР°СЂС‚РёРё, С‚Рѕ СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј 
+				//Р·РЅР°С‡РµРЅРёРµ СЂР°РІРЅРѕРµ РѕСЃС‚Р°С‚РєСѓ РІ РїР°СЂС‚РёРё
 				BigDecimal processQuntity = (BigDecimal) value;
 				if (processQuntity.compareTo(item.diffQuntity) > 0)
 					processQuntity = item.diffQuntity;
@@ -155,10 +155,10 @@ public class AccBatchDisposalDialog extends DefaultWizardDialog {
 	}
 	
 	/**
-	 * Запуск диалогового окна
+	 * Р—Р°РїСѓСЃРє РґРёР°Р»РѕРіРѕРІРѕРіРѕ РѕРєРЅР°
 	 * 
 	 * @param economicSpec
-	 * 					- спецификация хоз. операции
+	 * 					- СЃРїРµС†РёС„РёРєР°С†РёСЏ С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 */
 	public void execute(EconomicSpec economicSpec) {
 		this.catalogDocSpec = economicSpec.getCatalog();
@@ -170,9 +170,9 @@ public class AccBatchDisposalDialog extends DefaultWizardDialog {
 	}
 	
 	/**
-	 * Загрузка данных в таблицу
+	 * Р—Р°РіСЂСѓР·РєР° РґР°РЅРЅС‹С… РІ С‚Р°Р±Р»РёС†Сѓ
 	 * @param economicSpec
-	 * 					- спецификация хоз. операции
+	 * 					- СЃРїРµС†РёС„РёРєР°С†РёСЏ С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * @return
 	 */
 	private List<AccBatchHistoryItem> loadModel(EconomicSpec economicSpec) {

@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PFCodeInServiceServiceLocal;
 import com.mg.merp.personnelref.model.PfCodeInService;
 
 /**
- * Бизнес-компонент "Коды стажа для ПФ" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљРѕРґС‹ СЃС‚Р°Р¶Р° РґР»СЏ РџР¤" 
  * 
  * @author leonova
  * @version $Id: PFCodeInServiceServiceBean.java,v 1.3 2006/09/06 12:49:54 leonova Exp $

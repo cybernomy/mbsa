@@ -29,7 +29,7 @@ import com.mg.merp.manufacture.model.ScrapDocumentHead;
 import com.mg.merp.manufacture.model.ScrapDocumentSpec;
 
 /**
- * Бизнес-компонент "Спецификации актов на списание потерь материалов 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёРё Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РјР°С‚РµСЂРёР°Р»РѕРІ 
  * 
  * @author leonova
  * @version $Id: ScrapMaterialSpecServiceBean.java,v 1.6 2007/08/06 12:44:53 safonov Exp $

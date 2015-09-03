@@ -42,7 +42,7 @@ import com.mg.framework.service.CustomFieldsManagerLocator;
 import com.mg.framework.support.ui.widget.TableEJBQLFieldDef;
 
 /**
- * Утилиты работы с базой данных
+ * РЈС‚РёР»РёС‚С‹ СЂР°Р±РѕС‚С‹ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: DatabaseUtils.java,v 1.15 2008/12/23 09:12:32 safonov Exp $
@@ -51,12 +51,12 @@ public class DatabaseUtils {
 	private static Logger logger = ServerUtils.getLogger(DatabaseUtils.class);
 	
 	/**
-	 * Тип СУБД
+	 * РўРёРї РЎРЈР‘Р”
 	 * 
 	 */
 	public enum DBMSType {
 		/**
-		 * неизвестная СУБД
+		 * РЅРµРёР·РІРµСЃС‚РЅР°СЏ РЎРЈР‘Р”
 		 */
 		UNKNOWN,
 		/**
@@ -69,12 +69,12 @@ public class DatabaseUtils {
 		ORACLE,
 		/**
 		 * DB2
-		 * не поддерживается
+		 * РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ
 		 */
 		DB2,
 		/**
 		 * MSSQL
-		 * не поддерживается
+		 * РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ
 		 */
 		MSSQL,
 		/**
@@ -88,14 +88,14 @@ public class DatabaseUtils {
 	}
 	
 	/**
-	 * СУБД из семейства Interbase
+	 * РЎРЈР‘Р” РёР· СЃРµРјРµР№СЃС‚РІР° Interbase
 	 */
 	public final static EnumSet<DBMSType> INTERBASE_FAMILY = EnumSet.of(DBMSType.INTERBASE, DBMSType.FIREBIRD);
 	
 	/**
-	 * получить тип СУБД для текущего источника данных
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РёРї РЎРЈР‘Р” РґР»СЏ С‚РµРєСѓС‰РµРіРѕ РёСЃС‚РѕС‡РЅРёРєР° РґР°РЅРЅС‹С…
 	 * 
-	 * @return	тип СУБД или <code>DBMSType.UNKNOWN</> если обнаружена не поддерживамая СУБД или произошла ошибка доступа к СУБД
+	 * @return	С‚РёРї РЎРЈР‘Р” РёР»Рё <code>DBMSType.UNKNOWN</> РµСЃР»Рё РѕР±РЅР°СЂСѓР¶РµРЅР° РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РјР°СЏ РЎРЈР‘Р” РёР»Рё РїСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР° РґРѕСЃС‚СѓРїР° Рє РЎРЈР‘Р”
 	 * 
 	 * @see DBMSType
 	 */
@@ -117,10 +117,10 @@ public class DatabaseUtils {
 	}
 
 	/**
-	 * получить тип СУБД по имени
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РёРї РЎРЈР‘Р” РїРѕ РёРјРµРЅРё
 	 * 
-	 * @param databaseName	имя СУБД
-	 * @return	тип СУБД или <code>DBMSType.UNKNOWN</> если обнаружена не поддерживамая СУБД
+	 * @param databaseName	РёРјСЏ РЎРЈР‘Р”
+	 * @return	С‚РёРї РЎРЈР‘Р” РёР»Рё <code>DBMSType.UNKNOWN</> РµСЃР»Рё РѕР±РЅР°СЂСѓР¶РµРЅР° РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РјР°СЏ РЎРЈР‘Р”
 	 */
 	public static DBMSType getDBMSType(String databaseName) {
 		DBMSType result = DBMSType.UNKNOWN;
@@ -137,10 +137,10 @@ public class DatabaseUtils {
 	}
 
 	/**
-	 * получить следующее значение последовательности
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃР»РµРґСѓСЋС‰РµРµ Р·РЅР°С‡РµРЅРёРµ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё
 	 * 
-	 * @param sequenceName	наименование последовательности
-	 * @return	следующее значение
+	 * @param sequenceName	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё
+	 * @return	СЃР»РµРґСѓСЋС‰РµРµ Р·РЅР°С‡РµРЅРёРµ
 	 */
 	public static Object getSequenceNextValue(String sequenceName) {
 		String sql;
@@ -168,13 +168,13 @@ public class DatabaseUtils {
 	}
 
 	/**
-	 * формируем запрос (EJBQL) для выборки пользовательских полей в браузерах бизнес-компонентов
+	 * С„РѕСЂРјРёСЂСѓРµРј Р·Р°РїСЂРѕСЃ (EJBQL) РґР»СЏ РІС‹Р±РѕСЂРєРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№ РІ Р±СЂР°СѓР·РµСЂР°С… Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
 	 * 
-	 * @param queryString	строка запроса для выборки данных
-	 * @param service		бизнес-компонент
-	 * @param keyName		имя поля первичного ключа
-	 * @param fieldsSet		список полей необходимых для выборки
-	 * @return	текст запроса
+	 * @param queryString	СЃС‚СЂРѕРєР° Р·Р°РїСЂРѕСЃР° РґР»СЏ РІС‹Р±РѕСЂРєРё РґР°РЅРЅС‹С…
+	 * @param service		Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param keyName		РёРјСЏ РїРѕР»СЏ РїРµСЂРІРёС‡РЅРѕРіРѕ РєР»СЋС‡Р°
+	 * @param fieldsSet		СЃРїРёСЃРѕРє РїРѕР»РµР№ РЅРµРѕР±С…РѕРґРёРјС‹С… РґР»СЏ РІС‹Р±РѕСЂРєРё
+	 * @return	С‚РµРєСЃС‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public static String embedAddinFieldsBrowseEJBQL(final String queryString, DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> service,
 			final String keyName, Set<String> fieldsSet) {
@@ -182,40 +182,40 @@ public class DatabaseUtils {
 	}
 	
 	/**
-	 * формирует список полей по умолчанию для выборки пользовательских полей
+	 * С„РѕСЂРјРёСЂСѓРµС‚ СЃРїРёСЃРѕРє РїРѕР»РµР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ РІС‹Р±РѕСЂРєРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 * 
-	 * @param fieldsSet	начальный список полей
-	 * @param service	бизнес-компонент
-	 * @return	список полей с пользовательскими полями
+	 * @param fieldsSet	РЅР°С‡Р°Р»СЊРЅС‹Р№ СЃРїРёСЃРѕРє РїРѕР»РµР№
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @return	СЃРїРёСЃРѕРє РїРѕР»РµР№ СЃ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРјРё РїРѕР»СЏРјРё
 	 */
 	public static Set<String> embedAddinFieldsDefaultFieldsSet(Set<String> fieldsSet, DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> service) {
 		return fieldsSet;
 	}
 	
 	/**
-	 * генерация элемента <code>where</code> запроса EJBQL для выборки
-	 * иерархических объектов без учета структуры иерархии, но учитывая права пользователей.
-	 * <p> Например:
+	 * РіРµРЅРµСЂР°С†РёСЏ СЌР»РµРјРµРЅС‚Р° <code>where</code> Р·Р°РїСЂРѕСЃР° EJBQL РґР»СЏ РІС‹Р±РѕСЂРєРё
+	 * РёРµСЂР°СЂС…РёС‡РµСЃРєРёС… РѕР±СЉРµРєС‚РѕРІ Р±РµР· СѓС‡РµС‚Р° СЃС‚СЂСѓРєС‚СѓСЂС‹ РёРµСЂР°СЂС…РёРё, РЅРѕ СѓС‡РёС‚С‹РІР°СЏ РїСЂР°РІР° РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№.
+	 * <p> РќР°РїСЂРёРјРµСЂ:
 	 * <blockquote><pre>
 	 *   String ejbqlText = "from CatalogFolder cf where".concat(DatabaseUtils.generateFlatBrowseWhereEJBQL("cf.Id", 1).concat(" order by cf.Id");
 	 * </pre></blockquote>
 	 * 
-	 * @param folderFieldName	наименование поля объекта отвечающего за связь со структурой
-	 * @param folderPart		вид иерархии
-	 * @return	строку элемента <code>where</code>
+	 * @param folderFieldName	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїРѕР»СЏ РѕР±СЉРµРєС‚Р° РѕС‚РІРµС‡Р°СЋС‰РµРіРѕ Р·Р° СЃРІСЏР·СЊ СЃРѕ СЃС‚СЂСѓРєС‚СѓСЂРѕР№
+	 * @param folderPart		РІРёРґ РёРµСЂР°СЂС…РёРё
+	 * @return	СЃС‚СЂРѕРєСѓ СЌР»РµРјРµРЅС‚Р° <code>where</code>
 	 */
 	public static String generateFlatBrowseWhereEJBQL(final String folderFieldName, final int folderPart) {
 		return String.format(" exists (from FolderRights fr where (fr.FolderId = %s) and (fr.SecGroups in (%s)) and (fr.FolderPart = %d) and (fr.Permission = true))", folderFieldName, ServerUtils.getUserProfile().getGroupsCommaText(), folderPart); //$NON-NLS-1$
 	}
 	
 	/**
-	 * генерация критериев для выборки
-	 * иерархических объектов без учета структуры иерархии, но учитывая права пользователей.
+	 * РіРµРЅРµСЂР°С†РёСЏ РєСЂРёС‚РµСЂРёРµРІ РґР»СЏ РІС‹Р±РѕСЂРєРё
+	 * РёРµСЂР°СЂС…РёС‡РµСЃРєРёС… РѕР±СЉРµРєС‚РѕРІ Р±РµР· СѓС‡РµС‚Р° СЃС‚СЂСѓРєС‚СѓСЂС‹ РёРµСЂР°СЂС…РёРё, РЅРѕ СѓС‡РёС‚С‹РІР°СЏ РїСЂР°РІР° РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№.
 	 * 
-	 * @param criteria			критерии
-	 * @param folderFieldName	наименование поля объекта отвечающего за связь со структурой
-	 * @param folderPart		вид иерархии
-	 * @return	критерии
+	 * @param criteria			РєСЂРёС‚РµСЂРёРё
+	 * @param folderFieldName	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїРѕР»СЏ РѕР±СЉРµРєС‚Р° РѕС‚РІРµС‡Р°СЋС‰РµРіРѕ Р·Р° СЃРІСЏР·СЊ СЃРѕ СЃС‚СЂСѓРєС‚СѓСЂРѕР№
+	 * @param folderPart		РІРёРґ РёРµСЂР°СЂС…РёРё
+	 * @return	РєСЂРёС‚РµСЂРёРё
 	 */
 	public static Criteria generateFlatBrowseCriteria(final Criteria criteria, final String folderFieldName, final int folderPart) {
 		DetachedCriteria dc = DetachedCriteria.forEntityName("com.mg.merp.core.model.FolderRights", "fr").add(Property.forName("fr.FolderId").eqProperty(folderFieldName))
@@ -227,12 +227,12 @@ public class DatabaseUtils {
 	}
 	
 	/**
-	 * добавляет префикс <code>and</code> в строку запроса для организации множественных условий если
-	 * это не первое ограничение
+	 * РґРѕР±Р°РІР»СЏРµС‚ РїСЂРµС„РёРєСЃ <code>and</code> РІ СЃС‚СЂРѕРєСѓ Р·Р°РїСЂРѕСЃР° РґР»СЏ РѕСЂРіР°РЅРёР·Р°С†РёРё РјРЅРѕР¶РµСЃС‚РІРµРЅРЅС‹С… СѓСЃР»РѕРІРёР№ РµСЃР»Рё
+	 * СЌС‚Рѕ РЅРµ РїРµСЂРІРѕРµ РѕРіСЂР°РЅРёС‡РµРЅРёРµ
 	 * 
-	 * @param restrictionText	строка ограничения
-	 * @param firstRestriction	первое ограничение, если <code>false</code>, то в результате будет установлен суффикс <code>" and "</code>
-	 * @return	строку элемента <code>where</code>
+	 * @param restrictionText	СЃС‚СЂРѕРєР° РѕРіСЂР°РЅРёС‡РµРЅРёСЏ
+	 * @param firstRestriction	РїРµСЂРІРѕРµ РѕРіСЂР°РЅРёС‡РµРЅРёРµ, РµСЃР»Рё <code>false</code>, С‚Рѕ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ Р±СѓРґРµС‚ СѓСЃС‚Р°РЅРѕРІР»РµРЅ СЃСѓС„С„РёРєСЃ <code>" and "</code>
+	 * @return	СЃС‚СЂРѕРєСѓ СЌР»РµРјРµРЅС‚Р° <code>where</code>
 	 */
 	private static String generateRestrictionPrefix(final String restrictionText, boolean firstRestriction) {
 		if (!firstRestriction)
@@ -242,19 +242,19 @@ public class DatabaseUtils {
 	}
 	
 	/**
-	 * генерация элемента <code>where</code> запроса EJBQL для ограничения по текстовому полю
-	 * <p> Например:
+	 * РіРµРЅРµСЂР°С†РёСЏ СЌР»РµРјРµРЅС‚Р° <code>where</code> Р·Р°РїСЂРѕСЃР° EJBQL РґР»СЏ РѕРіСЂР°РЅРёС‡РµРЅРёСЏ РїРѕ С‚РµРєСЃС‚РѕРІРѕРјСѓ РїРѕР»СЋ
+	 * <p> РќР°РїСЂРёРјРµСЂ:
 	 * <blockquote><pre>
 	 *   whereText = whereText.concat(DatabaseUtils.formatEJBQLStringRestriction("cat.Code", restForm.getCode(), "code", paramsName, paramsValue, false));
 	 * </pre></blockquote>
 	 * 
-	 * @param fieldName			имя поля по которому происходит ограничение
-	 * @param value				значение поля
-	 * @param paramName			имя параметра запроса
-	 * @param paramsName		список имен параметров запроса
-	 * @param paramsValue		список значений параметров запроса
-	 * @param firstRestriction	первое ограничение, если <code>false</code>, то в результате будет установлен суффикс <code>" and "</code>
-	 * @return	строку элемента <code>where</code>
+	 * @param fieldName			РёРјСЏ РїРѕР»СЏ РїРѕ РєРѕС‚РѕСЂРѕРјСѓ РїСЂРѕРёСЃС…РѕРґРёС‚ РѕРіСЂР°РЅРёС‡РµРЅРёРµ
+	 * @param value				Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ
+	 * @param paramName			РёРјСЏ РїР°СЂР°РјРµС‚СЂР° Р·Р°РїСЂРѕСЃР°
+	 * @param paramsName		СЃРїРёСЃРѕРє РёРјРµРЅ РїР°СЂР°РјРµС‚СЂРѕРІ Р·Р°РїСЂРѕСЃР°
+	 * @param paramsValue		СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№ РїР°СЂР°РјРµС‚СЂРѕРІ Р·Р°РїСЂРѕСЃР°
+	 * @param firstRestriction	РїРµСЂРІРѕРµ РѕРіСЂР°РЅРёС‡РµРЅРёРµ, РµСЃР»Рё <code>false</code>, С‚Рѕ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ Р±СѓРґРµС‚ СѓСЃС‚Р°РЅРѕРІР»РµРЅ СЃСѓС„С„РёРєСЃ <code>" and "</code>
+	 * @return	СЃС‚СЂРѕРєСѓ СЌР»РµРјРµРЅС‚Р° <code>where</code>
 	 */
 	public static String formatEJBQLStringRestriction(final String fieldName, final String value, final String paramName, List<String> paramsName, List<Object> paramsValue, boolean firstRestriction) {
 		String result = "";
@@ -278,17 +278,17 @@ public class DatabaseUtils {
 	}
 	
 	/**
-	 * генерация элемента <code>where</code> запроса EJBQL для ограничения по полю иерархии
+	 * РіРµРЅРµСЂР°С†РёСЏ СЌР»РµРјРµРЅС‚Р° <code>where</code> Р·Р°РїСЂРѕСЃР° EJBQL РґР»СЏ РѕРіСЂР°РЅРёС‡РµРЅРёСЏ РїРѕ РїРѕР»СЋ РёРµСЂР°СЂС…РёРё
 	 * 
-	 * @param isUseHierarchy	использовать отбор по иерархии, если <code>false</code>, то будет сгенерирован запрос без учета структуры иерархии
-	 * @param folderFieldName	наименование поля объекта отвечающего за связь со структурой
-	 * @param folderPart		вид иерархии
-	 * @param folderParamName	имя параметра объекта иерархии
-	 * @param folderEntity		объект иерархии
-	 * @param paramsName		список имен параметров запроса
-	 * @param paramsValue		список значений параметров запроса
-	 * @param firstRestriction	первое ограничение, если <code>false</code>, то в результате будет установлен суффикс <code>" and "</code>
-	 * @return	строку элемента <code>where</code>
+	 * @param isUseHierarchy	РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РѕС‚Р±РѕСЂ РїРѕ РёРµСЂР°СЂС…РёРё, РµСЃР»Рё <code>false</code>, С‚Рѕ Р±СѓРґРµС‚ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅ Р·Р°РїСЂРѕСЃ Р±РµР· СѓС‡РµС‚Р° СЃС‚СЂСѓРєС‚СѓСЂС‹ РёРµСЂР°СЂС…РёРё
+	 * @param folderFieldName	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїРѕР»СЏ РѕР±СЉРµРєС‚Р° РѕС‚РІРµС‡Р°СЋС‰РµРіРѕ Р·Р° СЃРІСЏР·СЊ СЃРѕ СЃС‚СЂСѓРєС‚СѓСЂРѕР№
+	 * @param folderPart		РІРёРґ РёРµСЂР°СЂС…РёРё
+	 * @param folderParamName	РёРјСЏ РїР°СЂР°РјРµС‚СЂР° РѕР±СЉРµРєС‚Р° РёРµСЂР°СЂС…РёРё
+	 * @param folderEntity		РѕР±СЉРµРєС‚ РёРµСЂР°СЂС…РёРё
+	 * @param paramsName		СЃРїРёСЃРѕРє РёРјРµРЅ РїР°СЂР°РјРµС‚СЂРѕРІ Р·Р°РїСЂРѕСЃР°
+	 * @param paramsValue		СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№ РїР°СЂР°РјРµС‚СЂРѕРІ Р·Р°РїСЂРѕСЃР°
+	 * @param firstRestriction	РїРµСЂРІРѕРµ РѕРіСЂР°РЅРёС‡РµРЅРёРµ, РµСЃР»Рё <code>false</code>, С‚Рѕ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ Р±СѓРґРµС‚ СѓСЃС‚Р°РЅРѕРІР»РµРЅ СЃСѓС„С„РёРєСЃ <code>" and "</code>
+	 * @return	СЃС‚СЂРѕРєСѓ СЌР»РµРјРµРЅС‚Р° <code>where</code>
 	 * 
 	 * @see #generateFlatBrowseWhereEJBQL(String, int)
 	 */
@@ -307,19 +307,19 @@ public class DatabaseUtils {
 	}
 	
 	/**
-	 * генерация элемента <code>where</code> запроса EJBQL для ограничения по полю
-	 * <p> Например:
+	 * РіРµРЅРµСЂР°С†РёСЏ СЌР»РµРјРµРЅС‚Р° <code>where</code> Р·Р°РїСЂРѕСЃР° EJBQL РґР»СЏ РѕРіСЂР°РЅРёС‡РµРЅРёСЏ РїРѕ РїРѕР»СЋ
+	 * <p> РќР°РїСЂРёРјРµСЂ:
 	 * <blockquote><pre>
 	 *   whereText = whereText.concat(DatabaseUtils.formatEJBQLObjectRestriction("cat.GoodType", restForm.getGoodType(), "goodType", paramsName, paramsValue, false));
 	 * </pre></blockquote>
 	 * 
-	 * @param fieldName			имя поля по которому происходит ограничение
-	 * @param value				значение поля
-	 * @param paramName			имя параметра запроса
-	 * @param paramsName		список имен параметров запроса
-	 * @param paramsValue		список значений параметров запроса
-	 * @param firstRestriction		первое ограничение, если <code>false</code>, то в результате будет установлен суффикс <code>" and "</code>
-	 * @return	строку элемента <code>where</code>
+	 * @param fieldName			РёРјСЏ РїРѕР»СЏ РїРѕ РєРѕС‚РѕСЂРѕРјСѓ РїСЂРѕРёСЃС…РѕРґРёС‚ РѕРіСЂР°РЅРёС‡РµРЅРёРµ
+	 * @param value				Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ
+	 * @param paramName			РёРјСЏ РїР°СЂР°РјРµС‚СЂР° Р·Р°РїСЂРѕСЃР°
+	 * @param paramsName		СЃРїРёСЃРѕРє РёРјРµРЅ РїР°СЂР°РјРµС‚СЂРѕРІ Р·Р°РїСЂРѕСЃР°
+	 * @param paramsValue		СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№ РїР°СЂР°РјРµС‚СЂРѕРІ Р·Р°РїСЂРѕСЃР°
+	 * @param firstRestriction		РїРµСЂРІРѕРµ РѕРіСЂР°РЅРёС‡РµРЅРёРµ, РµСЃР»Рё <code>false</code>, С‚Рѕ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ Р±СѓРґРµС‚ СѓСЃС‚Р°РЅРѕРІР»РµРЅ СЃСѓС„С„РёРєСЃ <code>" and "</code>
+	 * @return	СЃС‚СЂРѕРєСѓ СЌР»РµРјРµРЅС‚Р° <code>where</code>
 	 */
 	public static String formatEJBQLObjectRestriction(final String fieldName, final Object value, final String paramName, List<String> paramsName, List<Object> paramsValue, boolean firstRestriction) {
 		String result = "";
@@ -333,21 +333,21 @@ public class DatabaseUtils {
 	}
 	
 	/**
-	 * генерация элемента <code>where</code> запроса EJBQL для ограничения по полю диапазоном значений
-	 * <p> Например:
+	 * РіРµРЅРµСЂР°С†РёСЏ СЌР»РµРјРµРЅС‚Р° <code>where</code> Р·Р°РїСЂРѕСЃР° EJBQL РґР»СЏ РѕРіСЂР°РЅРёС‡РµРЅРёСЏ РїРѕ РїРѕР»СЋ РґРёР°РїР°Р·РѕРЅРѕРј Р·РЅР°С‡РµРЅРёР№
+	 * <p> РќР°РїСЂРёРјРµСЂ:
 	 * <blockquote><pre>
 	 *   whereText = whereText.concat(DatabaseUtils.formatEJBQLObjectRangeRestriction("cat.MarketingMargin", restForm.getTradeTaxFrom(), restForm.getTradeTaxTo(), "taxFrom", "taxTo", paramsName, paramsValue, false));
 	 * </pre></blockquote>
 	 * 
-	 * @param fieldName		имя поля по которому происходит ограничение
-	 * @param value1		значение поля "левой" границы
-	 * @param value2		значение поля "правой" границы
-	 * @param paramName1	имя параметра запроса для "левой" границы
-	 * @param paramName2	имя параметра запроса для "правой" границы
-	 * @param paramsName	список имен параметров запроса
-	 * @param paramsValue	список значений параметров запроса
-	 * @param firstRestriction		первое ограничение, если <code>false</code>, то в результате будет установлен суффикс <code>" and "</code>
-	 * @return	строку элемента <code>where</code>
+	 * @param fieldName		РёРјСЏ РїРѕР»СЏ РїРѕ РєРѕС‚РѕСЂРѕРјСѓ РїСЂРѕРёСЃС…РѕРґРёС‚ РѕРіСЂР°РЅРёС‡РµРЅРёРµ
+	 * @param value1		Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ "Р»РµРІРѕР№" РіСЂР°РЅРёС†С‹
+	 * @param value2		Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ "РїСЂР°РІРѕР№" РіСЂР°РЅРёС†С‹
+	 * @param paramName1	РёРјСЏ РїР°СЂР°РјРµС‚СЂР° Р·Р°РїСЂРѕСЃР° РґР»СЏ "Р»РµРІРѕР№" РіСЂР°РЅРёС†С‹
+	 * @param paramName2	РёРјСЏ РїР°СЂР°РјРµС‚СЂР° Р·Р°РїСЂРѕСЃР° РґР»СЏ "РїСЂР°РІРѕР№" РіСЂР°РЅРёС†С‹
+	 * @param paramsName	СЃРїРёСЃРѕРє РёРјРµРЅ РїР°СЂР°РјРµС‚СЂРѕРІ Р·Р°РїСЂРѕСЃР°
+	 * @param paramsValue	СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№ РїР°СЂР°РјРµС‚СЂРѕРІ Р·Р°РїСЂРѕСЃР°
+	 * @param firstRestriction		РїРµСЂРІРѕРµ РѕРіСЂР°РЅРёС‡РµРЅРёРµ, РµСЃР»Рё <code>false</code>, С‚Рѕ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ Р±СѓРґРµС‚ СѓСЃС‚Р°РЅРѕРІР»РµРЅ СЃСѓС„С„РёРєСЃ <code>" and "</code>
+	 * @return	СЃС‚СЂРѕРєСѓ СЌР»РµРјРµРЅС‚Р° <code>where</code>
 	 */
 	public static String formatEJBQLObjectRangeRestriction(final String fieldName, final Object value1, final Object value2, final String paramName1, final String paramName2, List<String> paramsName, List<Object> paramsValue, boolean firstRestriction) {
 		String result = "";
@@ -381,13 +381,13 @@ public class DatabaseUtils {
 	}
 	
 	/**
-	 * генерация элемента <code>where</code> запроса EJBQL для ограничения по пользовательским полям
+	 * РіРµРЅРµСЂР°С†РёСЏ СЌР»РµРјРµРЅС‚Р° <code>where</code> Р·Р°РїСЂРѕСЃР° EJBQL РґР»СЏ РѕРіСЂР°РЅРёС‡РµРЅРёСЏ РїРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРј РїРѕР»СЏРј
 	 * 
-	 * @param service	бизнес-компонент
-	 * @param keyName	имя поля первичного ключа
-	 * @param addinFieldsRestriction	ограничения по пользовательским полям
-	 * @param firstRestriction	первое ограничение, если <code>false</code>, то в результате будет установлен суффикс <code>" and "</code>
-	 * @return	строку элемента <code>where</code>
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param keyName	РёРјСЏ РїРѕР»СЏ РїРµСЂРІРёС‡РЅРѕРіРѕ РєР»СЋС‡Р°
+	 * @param addinFieldsRestriction	РѕРіСЂР°РЅРёС‡РµРЅРёСЏ РїРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРј РїРѕР»СЏРј
+	 * @param firstRestriction	РїРµСЂРІРѕРµ РѕРіСЂР°РЅРёС‡РµРЅРёРµ, РµСЃР»Рё <code>false</code>, С‚Рѕ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ Р±СѓРґРµС‚ СѓСЃС‚Р°РЅРѕРІР»РµРЅ СЃСѓС„С„РёРєСЃ <code>" and "</code>
+	 * @return	СЃС‚СЂРѕРєСѓ СЌР»РµРјРµРЅС‚Р° <code>where</code>
 	 */
 	public static String formatEJBQLAddinFieldsRestriction(DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> service, final String keyName, AddinFieldsRestriction addinFieldsRestriction, boolean firstRestriction) {
 		//TODO implement
@@ -395,15 +395,15 @@ public class DatabaseUtils {
 	}
 	
 	/**
-	 * генерация списка полей браузера по умолчанию из строкового представления, разделителем является символ '<strong>,</strong>'
-	 * <p> Например:
+	 * РіРµРЅРµСЂР°С†РёСЏ СЃРїРёСЃРєР° РїРѕР»РµР№ Р±СЂР°СѓР·РµСЂР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РёР· СЃС‚СЂРѕРєРѕРІРѕРіРѕ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ, СЂР°Р·РґРµР»РёС‚РµР»РµРј СЏРІР»СЏРµС‚СЃСЏ СЃРёРјРІРѕР» '<strong>,</strong>'
+	 * <p> РќР°РїСЂРёРјРµСЂ:
 	 * <blockquote><pre>
 	 *   fieldsSet = DatabaseUtils.generateDefaultFieldsSet("Id,Code,Name", service));
 	 * </pre></blockquote>
 	 * 
-	 * @param fieldsSet	строковое представление
-	 * @param service	бизнес-компонент
-	 * @return	множество полей
+	 * @param fieldsSet	СЃС‚СЂРѕРєРѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @return	РјРЅРѕР¶РµСЃС‚РІРѕ РїРѕР»РµР№
 	 */
 	public static Set<String> generateDefaultFieldsSet(final String fieldsSet, DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> service) {
 		Set<String> result = new LinkedHashSet<String>();
@@ -412,15 +412,15 @@ public class DatabaseUtils {
 	}
 	
 	/**
-	 * генерация списка полей для выражения <code>select</code> EJBQL запроса
+	 * РіРµРЅРµСЂР°С†РёСЏ СЃРїРёСЃРєР° РїРѕР»РµР№ РґР»СЏ РІС‹СЂР°Р¶РµРЅРёСЏ <code>select</code> EJBQL Р·Р°РїСЂРѕСЃР°
 	 * 
-	 * @param fieldDefs	описатели полей
-	 * @return	список полей
+	 * @param fieldDefs	РѕРїРёСЃР°С‚РµР»Рё РїРѕР»РµР№
+	 * @return	СЃРїРёСЃРѕРє РїРѕР»РµР№
 	 */
 	public static String generateEJBQLSelectClause(Set<TableEJBQLFieldDef> fieldDefs) {
 		StringBuilder result = new StringBuilder();
 		for (TableEJBQLFieldDef fieldDef : fieldDefs) {
-			//не включаем пользовательские поля в предложение select
+			//РЅРµ РІРєР»СЋС‡Р°РµРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РїРѕР»СЏ РІ РїСЂРµРґР»РѕР¶РµРЅРёРµ select
 			if (fieldDef.getFieldName().startsWith(CustomFieldsManager.CUSTOM_FIELD_NAME_PREFIX))
 				continue;
 
@@ -432,10 +432,10 @@ public class DatabaseUtils {
 	}
 
 	/**
-	 * генерация выражения <code>from</code> EJBQL запроса
+	 * РіРµРЅРµСЂР°С†РёСЏ РІС‹СЂР°Р¶РµРЅРёСЏ <code>from</code> EJBQL Р·Р°РїСЂРѕСЃР°
 	 * 
-	 * @param fieldDefs	описатели полей
-	 * @return	выражение <code>from</code>
+	 * @param fieldDefs	РѕРїРёСЃР°С‚РµР»Рё РїРѕР»РµР№
+	 * @return	РІС‹СЂР°Р¶РµРЅРёРµ <code>from</code>
 	 */
 	public static String generateEJBQLFromClause(Set<TableEJBQLFieldDef> fieldDefs) {
 		StringBuilder result = new StringBuilder();
@@ -448,11 +448,11 @@ public class DatabaseUtils {
 	}
 
 	/**
-	 * формирует список описателей полей по умолчанию для выборки пользовательских полей
+	 * С„РѕСЂРјРёСЂСѓРµС‚ СЃРїРёСЃРѕРє РѕРїРёСЃР°С‚РµР»РµР№ РїРѕР»РµР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ РІС‹Р±РѕСЂРєРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 * 
-	 * @param fieldDefs	начальный список описателей полей
-	 * @param service	бизнес-компонент
-	 * @return	список описателей полей с пользовательскими полями
+	 * @param fieldDefs	РЅР°С‡Р°Р»СЊРЅС‹Р№ СЃРїРёСЃРѕРє РѕРїРёСЃР°С‚РµР»РµР№ РїРѕР»РµР№
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @return	СЃРїРёСЃРѕРє РѕРїРёСЃР°С‚РµР»РµР№ РїРѕР»РµР№ СЃ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРјРё РїРѕР»СЏРјРё
 	 */
 	public static Set<TableEJBQLFieldDef> embedAddinFieldsDefaultEJBQLFieldDefs(Set<TableEJBQLFieldDef> fieldDefs, DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> service) {
 		if (service != null) {

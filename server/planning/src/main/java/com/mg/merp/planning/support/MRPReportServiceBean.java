@@ -25,7 +25,7 @@ import com.mg.merp.planning.model.MrpReport;
 import com.mg.merp.planning.model.MrpVersionControl;
 
 /**
- * Бизнес-компонент "Итоги расчета ППМ" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РС‚РѕРіРё СЂР°СЃС‡РµС‚Р° РџРџРњ" 
  * 
  * @author leonova
  * @version $Id: MRPReportServiceBean.java,v 1.4 2007/07/30 10:36:48 safonov Exp $

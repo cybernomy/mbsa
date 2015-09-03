@@ -24,19 +24,19 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName("Manufacture.MchRecoveryFlag")
 public enum MachineRecoveryFlag {
 	/**
-	 * На один час операции
+	 * РќР° РѕРґРёРЅ С‡Р°СЃ РѕРїРµСЂР°С†РёРё
 	 */
 	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#MchRecoveryFlag.Time")
 	TIME,
 	
 	/**
-	 * На единицу готовой продукции
+	 * РќР° РµРґРёРЅРёС†Сѓ РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё
 	 */
 	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#MchRecoveryFlag.Unit")
 	UNIT,
 	
 	/**
-	 * Фиксированная стоимость на партию готовой продукции
+	 * Р¤РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ РЅР° РїР°СЂС‚РёСЋ РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё
 	 */
 	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#MchRecoveryFlag.Fixed")
 	FIXED

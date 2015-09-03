@@ -22,7 +22,7 @@ import com.mg.merp.warehouse.model.BinLocation;
 import com.mg.merp.warehouse.model.Warehouse;
 
 /**
- * Контроллер диалога ввода секции хранения
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° РІРІРѕРґР° СЃРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ
  * 
  * @author Artem V. Sharapov
  * @version $Id: InputBinLocationDlg.java,v 1.1 2008/05/30 13:03:56 sharapov Exp $
@@ -46,11 +46,11 @@ public class InputBinLocationDlg extends DefaultWizardDialog {
 	}
 	
 	/**
-	 * Запустить диалог на показ
-	 * @param quantity - кол-во
-	 * @param catalogCode - код позиции каталога
-	 * @param catalogName - наименование позиции каталога
-	 * @param warehouse - склад
+	 * Р—Р°РїСѓСЃС‚РёС‚СЊ РґРёР°Р»РѕРі РЅР° РїРѕРєР°Р·
+	 * @param quantity - РєРѕР»-РІРѕ
+	 * @param catalogCode - РєРѕРґ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР°
+	 * @param catalogName - РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР°
+	 * @param warehouse - СЃРєР»Р°Рґ
 	 */
 	public void execute(BigDecimal quantity, String catalogCode, String catalogName, Warehouse warehouse) {
 		this.quantity = quantity;

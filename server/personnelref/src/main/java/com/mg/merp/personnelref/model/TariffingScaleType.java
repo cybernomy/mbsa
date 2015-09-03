@@ -17,32 +17,32 @@ package com.mg.merp.personnelref.model;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип тарифной сетки
+ * РўРёРї С‚Р°СЂРёС„РЅРѕР№ СЃРµС‚РєРё
  * 
  * @author leonova
  * @version $Id: TariffingScaleType.java,v 1.1 2006/04/13 10:23:53 safonov Exp $
  */
 public enum TariffingScaleType {
 	/**
-	 * Оклад помесячно
+	 * РћРєР»Р°Рґ РїРѕРјРµСЃСЏС‡РЅРѕ
 	 */
 	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TariffingScaleType.Monthly")
 	MONTHLY,
 	
 	/**
-	 * Ставка за день
+	 * РЎС‚Р°РІРєР° Р·Р° РґРµРЅСЊ
 	 */
 	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TariffingScaleType.ScaleDay")
 	SCALEDAY,	
 	
 	/**
-	 * Ставка за час
+	 * РЎС‚Р°РІРєР° Р·Р° С‡Р°СЃ
 	 */
 	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TariffingScaleType.ScaleHour")
 	SCALEHOUR,
 
 	/**
-	 * За объем работ
+	 * Р—Р° РѕР±СЉРµРј СЂР°Р±РѕС‚
 	 */
 	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TariffingScaleType.VolumeWork")
 	VOLUMEWORK

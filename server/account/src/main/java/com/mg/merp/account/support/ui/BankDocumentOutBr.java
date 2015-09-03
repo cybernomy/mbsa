@@ -28,7 +28,7 @@ import com.mg.merp.account.model.BankDocument;
 import com.mg.merp.core.support.CoreUtils;
 
 /**
- * Контроллер формы списка исходящих банковских документов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РёСЃС…РѕРґСЏС‰РёС… Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @author Artem V. Sharapov

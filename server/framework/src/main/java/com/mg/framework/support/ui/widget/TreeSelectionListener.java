@@ -21,7 +21,7 @@ import com.mg.framework.api.ui.TreeChangeEvent;
 
 
 /**
- * Слушатель события выделения элемента дерева
+ * РЎР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёСЏ РІС‹РґРµР»РµРЅРёСЏ СЌР»РµРјРµРЅС‚Р° РґРµСЂРµРІР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: TreeSelectionListener.java,v 1.2 2006/08/31 08:49:31 safonov Exp $
@@ -29,9 +29,9 @@ import com.mg.framework.api.ui.TreeChangeEvent;
 public interface TreeSelectionListener extends EventListener, Serializable {
 	
 	/**
-	 * происходит в момент выделения жлемента дерева
+	 * РїСЂРѕРёСЃС…РѕРґРёС‚ РІ РјРѕРјРµРЅС‚ РІС‹РґРµР»РµРЅРёСЏ Р¶Р»РµРјРµРЅС‚Р° РґРµСЂРµРІР°
 	 * 
-	 * @param event	событие изменения дерева
+	 * @param event	СЃРѕР±С‹С‚РёРµ РёР·РјРµРЅРµРЅРёСЏ РґРµСЂРµРІР°
 	 */
 	public void valueChanged(TreeChangeEvent event);
 }

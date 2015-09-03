@@ -26,7 +26,7 @@ import com.mg.merp.personnelref.model.DeductionClass;
 import com.mg.merp.personnelref.model.DeductionKind;
 
 /**
- * Бизнес-компонент "Виды вычетов, предоставляемых налогоплательщикам" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РёРґС‹ РІС‹С‡РµС‚РѕРІ, РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµРјС‹С… РЅР°Р»РѕРіРѕРїР»Р°С‚РµР»СЊС‰РёРєР°Рј" 
  * 
  * @author leonova
  * @version $Id: DeductionKindServiceBean.java,v 1.4 2006/09/29 08:43:21 leonova Exp $

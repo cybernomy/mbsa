@@ -17,7 +17,7 @@ package com.mg.merp.salary.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Расчетный листок"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р Р°СЃС‡РµС‚РЅС‹Р№ Р»РёСЃС‚РѕРє"
  * 
  * @author Artem V. Sharapov
  * @version $Id: CalcList.java,v 1.7 2007/07/09 08:21:57 sharapov Exp $

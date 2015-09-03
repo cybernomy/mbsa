@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PersonnelSocialBenefitServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelSocialBenefit;
 
 /**
- * Реализация бизнес-компонента "Социальные льготы" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРѕС†РёР°Р»СЊРЅС‹Рµ Р»СЊРіРѕС‚С‹" 
  * 
  * @author Artem V. Sharapov
  * @author leonova

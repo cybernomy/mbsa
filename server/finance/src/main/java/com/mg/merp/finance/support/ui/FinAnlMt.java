@@ -24,7 +24,7 @@ import com.mg.merp.finance.model.Account;
 import com.mg.merp.finance.model.Analytics;
 
 /**
- * Контроллер формы поддержки бизнес - компонента "Аналитика фин. операции"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ - РєРѕРјРїРѕРЅРµРЅС‚Р° "РђРЅР°Р»РёС‚РёРєР° С„РёРЅ. РѕРїРµСЂР°С†РёРё"
  * 
  * @author leonova
  * @version $Id: FinAnlMt.java,v 1.2 2007/11/21 10:52:41 alikaev Exp $

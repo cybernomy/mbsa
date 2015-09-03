@@ -15,7 +15,7 @@
 package com.mg.merp.manufacture.support.ui;
 
 /**
- * Механизм поиска операций ЗНП для документов на списание потерь
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° РѕРїРµСЂР°С†РёР№ Р—РќРџ РґР»СЏ РґРѕРєСѓРјРµРЅС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ
  * 
  * @author Oleg V. Safonov
  * @version $Id: JobRouteDetectSearchHelp.java,v 1.1 2007/07/31 06:31:06 safonov Exp $

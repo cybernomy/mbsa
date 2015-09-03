@@ -28,7 +28,7 @@ import com.mg.merp.account.model.BankDocument;
 import com.mg.merp.core.support.CoreUtils;
 
 /**
- * Контроллер формы списка входящих банковских документов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РІС…РѕРґСЏС‰РёС… Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: BankDocumentInBr.java,v 1.11 2009/02/10 14:19:51 safonov Exp $

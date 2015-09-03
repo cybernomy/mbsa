@@ -33,7 +33,7 @@ import com.mg.merp.reference.model.NaturalPerson;
 import com.mg.merp.reference.model.PersonAddress;
 
 /**
- * Реализация бизнес-компонента "Адреса проживания" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РђРґСЂРµСЃР° РїСЂРѕР¶РёРІР°РЅРёСЏ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -71,9 +71,9 @@ public class PersonAddressServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * формирует и записывает полный адрес
+	 * С„РѕСЂРјРёСЂСѓРµС‚ Рё Р·Р°РїРёСЃС‹РІР°РµС‚ РїРѕР»РЅС‹Р№ Р°РґСЂРµСЃ
 	 * 
-	 * @param personAddress адрес проживания физического лица
+	 * @param personAddress Р°РґСЂРµСЃ РїСЂРѕР¶РёРІР°РЅРёСЏ С„РёР·РёС‡РµСЃРєРѕРіРѕ Р»РёС†Р°
 	 */
 	private void doGetFullAddress(PersonAddress personAddress) {
 		if (personAddress != null){

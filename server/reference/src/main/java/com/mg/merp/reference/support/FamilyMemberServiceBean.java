@@ -25,7 +25,7 @@ import com.mg.merp.reference.FamilyMemberServiceLocal;
 import com.mg.merp.reference.model.FamilyMember;
 
 /**
- * Бизнес-копмонент "Состав семьи"
+ * Р‘РёР·РЅРµСЃ-РєРѕРїРјРѕРЅРµРЅС‚ "РЎРѕСЃС‚Р°РІ СЃРµРјСЊРё"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -62,7 +62,7 @@ public class FamilyMemberServiceBean extends AbstractPOJODataBusinessObjectServi
 	}
 
 	/**
-	 * функция заполнения полей "Имя" и "Отчество" 
+	 * С„СѓРЅРєС†РёСЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РїРѕР»РµР№ "РРјСЏ" Рё "РћС‚С‡РµСЃС‚РІРѕ" 
 	 * 
 	 * @param entity
 	 */

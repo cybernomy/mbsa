@@ -33,7 +33,7 @@ import com.mg.merp.docprocess.model.DocHeadState;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Форма истории выполнения ДО
+ * Р¤РѕСЂРјР° РёСЃС‚РѕСЂРёРё РІС‹РїРѕР»РЅРµРЅРёСЏ Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowHistoryForm.java,v 1.11 2006/12/12 14:54:37 safonov Exp $
@@ -141,7 +141,7 @@ public class DocFlowHistoryForm extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик события "Закрыть форму"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "Р—Р°РєСЂС‹С‚СЊ С„РѕСЂРјСѓ"
 	 * 
 	 * @param event
 	 */
@@ -150,7 +150,7 @@ public class DocFlowHistoryForm extends AbstractForm {
 	}
 
 	/**
-	 * обработчик события "Показать результат выполнения ДО"
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РџРѕРєР°Р·Р°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ Р”Рћ"
 	 * 
 	 * @param event
 	 */
@@ -161,7 +161,7 @@ public class DocFlowHistoryForm extends AbstractForm {
 	}
 
 	/**
-	 * показать форму
+	 * РїРѕРєР°Р·Р°С‚СЊ С„РѕСЂРјСѓ
 	 * 
 	 * @param documentId
 	 */

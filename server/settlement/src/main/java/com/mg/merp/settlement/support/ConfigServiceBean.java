@@ -22,7 +22,7 @@ import com.mg.merp.settlement.ConfigServiceLocal;
 import com.mg.merp.settlement.model.StlConfig;
 
 /**
- * Реализация бизнес-компонента "Конфигурация модуля <Расчеты с партнерами>"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <Р Р°СЃС‡РµС‚С‹ СЃ РїР°СЂС‚РЅРµСЂР°РјРё>"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

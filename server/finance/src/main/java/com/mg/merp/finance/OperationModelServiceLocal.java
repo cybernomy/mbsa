@@ -17,7 +17,7 @@ package com.mg.merp.finance;
 import com.mg.merp.finance.model.OperationModel;
 
 /**
- * Бизнес-компонент "Образцы финансовых операций"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ С„РёРЅР°РЅСЃРѕРІС‹С… РѕРїРµСЂР°С†РёР№"
  * 
  * @author leonova
  * @version $Id: OperationModelServiceLocal.java,v 1.3 2007/10/08 14:24:15 safonov Exp $
@@ -25,11 +25,11 @@ import com.mg.merp.finance.model.OperationModel;
 public interface OperationModelServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<OperationModel, Integer> {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/finance/OperationModel";
 	/**
-	 * тип папки для образцов финансовых операций
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ С„РёРЅР°РЅСЃРѕРІС‹С… РѕРїРµСЂР°С†РёР№
 	 */
 	final static short FOLDER_PART = 53;
 }

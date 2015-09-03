@@ -65,13 +65,13 @@ public class PeriodCache
   
   private static PeriodItem getFromCash(Date date)
   {
-	  //TODO: Поискать для начала в кеше
+	  //TODO: РџРѕРёСЃРєР°С‚СЊ РґР»СЏ РЅР°С‡Р°Р»Р° РІ РєРµС€Рµ
 	  return null;
   }
   
   private static PeriodItem getFromCash(int id)
   {
-	  //TODO: Поискать для начала в кеше
+	  //TODO: РџРѕРёСЃРєР°С‚СЊ РґР»СЏ РЅР°С‡Р°Р»Р° РІ РєРµС€Рµ
 	  return null;
   }  
   
@@ -132,7 +132,7 @@ public class PeriodCache
   
   private static List<PeriodItem> getFromCash(Date date1, Date date2)
   {
-	  //TODO: Поискать для начала в кеше
+	  //TODO: РџРѕРёСЃРєР°С‚СЊ РґР»СЏ РЅР°С‡Р°Р»Р° РІ РєРµС€Рµ
 	  return null;
   }  
   

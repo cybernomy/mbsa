@@ -25,7 +25,7 @@ import com.mg.merp.paymentalloc.model.DocGroup;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер формы условий отбора  журнала платежей
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР°  Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№
  * 
  * @author leonova
  * @version $Id: PaymentRest.java,v 1.4 2008/03/04 11:26:59 alikaev Exp $ 

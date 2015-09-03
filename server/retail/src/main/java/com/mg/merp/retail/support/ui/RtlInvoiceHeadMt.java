@@ -51,7 +51,7 @@ import com.mg.merp.retail.model.RtlInvoiceHead;
 import com.mg.merp.retail.model.RtlInvoiceSpec;
 
 /**
- * Контроллер формы поддержки документов на отпуск
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РґРѕРєСѓРјРµРЅС‚РѕРІ РЅР° РѕС‚РїСѓСЃРє
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -101,9 +101,9 @@ public class RtlInvoiceHeadMt extends GoodsDocumentMaintenanceForm {
 	}
 	
 	/**
-	 * Обработчик кнопки "Выбрать дисконтную карту"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ РґРёСЃРєРѕРЅС‚РЅСѓСЋ РєР°СЂС‚Сѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseDisCard(WidgetEvent event) throws Exception {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.discount.support.ui.CardSearchHelp"); //$NON-NLS-1$
@@ -151,8 +151,8 @@ public class RtlInvoiceHeadMt extends GoodsDocumentMaintenanceForm {
 	}
 	
 	/**
-	 * Обработчик кнопки "Удалить дисконтную карту"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РЈРґР°Р»РёС‚СЊ РґРёСЃРєРѕРЅС‚РЅСѓСЋ РєР°СЂС‚Сѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionClearDisCard(WidgetEvent event) {
 		((RtlInvoiceHead) getEntity()).setDiscountCard(null);
@@ -161,8 +161,8 @@ public class RtlInvoiceHeadMt extends GoodsDocumentMaintenanceForm {
 	}
 	
 	/**
-	 * Обработчик кнопки "Просмотреть дисконтную карту"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРёСЃРєРѕРЅС‚РЅСѓСЋ РєР°СЂС‚Сѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewDisCard(WidgetEvent event) {
 		Card disCard = ((RtlInvoiceHead) getEntity()).getDiscountCard();
@@ -171,19 +171,19 @@ public class RtlInvoiceHeadMt extends GoodsDocumentMaintenanceForm {
 	}
 	
 	/**
-	 * Обработчик кнопки "Применить скидку/наценку"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РџСЂРёРјРµРЅРёС‚СЊ СЃРєРёРґРєСѓ/РЅР°С†РµРЅРєСѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionApplyDiscount(WidgetEvent event) {
 		doApplyDiscount();
 	}
 	
 	/**
-	 * реализация применения скидок/наценок
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РїСЂРёРјРµРЅРµРЅРёСЏ СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє
 	 */
 	protected void doApplyDiscount() {
 		DocHead docHead = (DocHead) getEntity();
-		if (docHead.getId() == null) //не обрабатываем не созданную запись
+		if (docHead.getId() == null) //РЅРµ РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј РЅРµ СЃРѕР·РґР°РЅРЅСѓСЋ Р·Р°РїРёСЃСЊ
 			return;
 		
 		((InvoiceHeadServiceLocal) getService()).applyDiscount(docHead, new ApplyDiscountListener() {
@@ -259,8 +259,8 @@ public class RtlInvoiceHeadMt extends GoodsDocumentMaintenanceForm {
 	}
 
 	/**
-	 * Сделать активной/неактивной кнопку "Применить с/н"
-	 * @param enabled - признак "активности"
+	 * РЎРґРµР»Р°С‚СЊ Р°РєС‚РёРІРЅРѕР№/РЅРµР°РєС‚РёРІРЅРѕР№ РєРЅРѕРїРєСѓ "РџСЂРёРјРµРЅРёС‚СЊ СЃ/РЅ"
+	 * @param enabled - РїСЂРёР·РЅР°Рє "Р°РєС‚РёРІРЅРѕСЃС‚Рё"
 	 */
 	private void setEnabledApplyDiscountButton(boolean enabled) {
 		Widget applyDiscountButton = view.getWidget("ApplyDiscount"); //$NON-NLS-1$

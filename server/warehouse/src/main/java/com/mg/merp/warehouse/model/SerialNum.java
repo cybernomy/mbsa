@@ -17,7 +17,7 @@ package com.mg.merp.warehouse.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Серийные номера"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРµСЂРёР№РЅС‹Рµ РЅРѕРјРµСЂР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: SerialNum.java,v 1.3 2007/07/19 11:25:02 sharapov Exp $

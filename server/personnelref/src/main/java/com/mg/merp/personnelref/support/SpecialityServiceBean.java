@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.SpecialityServiceLocal;
 import com.mg.merp.personnelref.model.Speciality;
 
 /**
- * Бизнес-компонент "Специальности" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @version $Id: SpecialityServiceBean.java,v 1.3 2006/09/04 13:02:21 leonova Exp $

@@ -17,7 +17,7 @@ package com.mg.merp.settlement;
 import com.mg.merp.reference.model.OrgUnit;
 
 /**
- * Сервис бизнес-компонента "Центры учета"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р¦РµРЅС‚СЂС‹ СѓС‡РµС‚Р°"
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -23,7 +23,7 @@ import com.mg.merp.reference.model.OrgUnit;
 
 
 /**
- * Сервис рассчёта количества на складах
+ * РЎРµСЂРІРёСЃ СЂР°СЃСЃС‡С‘С‚Р° РєРѕР»РёС‡РµСЃС‚РІР° РЅР° СЃРєР»Р°РґР°С…
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: CurrentStockSituation.java,v 1.4 2008/09/09 13:33:54 sharapov Exp $
@@ -32,93 +32,93 @@ public interface CurrentStockSituation {
 	String SERVICE_NAME = "merp:warehouse=CurrentStockSituationService";
 	
 	/**
-	 * Рассчёт количества позиций каталога <code>catalog</code> 
-	 * на складе <code>warehouse</code> с МОЛ <code>mol</code> 
+	 * Р Р°СЃСЃС‡С‘С‚ РєРѕР»РёС‡РµСЃС‚РІР° РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР° <code>catalog</code> 
+	 * РЅР° СЃРєР»Р°РґРµ <code>warehouse</code> СЃ РњРћР› <code>mol</code> 
 	 * 
 	 * @param warehouse
-	 * 			склад
+	 * 			СЃРєР»Р°Рґ
 	 * @param mol
-	 * 			МОЛ
+	 * 			РњРћР›
 	 * @param catalog
-	 * 			позиция каталога
-	 * @return количество на складе или <code>null</code> если на складе нет доступных количеств
+	 * 			РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР°
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РЅР° СЃРєР»Р°РґРµ РёР»Рё <code>null</code> РµСЃР»Рё РЅР° СЃРєР»Р°РґРµ РЅРµС‚ РґРѕСЃС‚СѓРїРЅС‹С… РєРѕР»РёС‡РµСЃС‚РІ
 	 */
 	StockSituationValues getSituation(OrgUnit warehouse, Contractor mol,
 		Catalog catalog);
 
 	/**
-	 * Рассчёт количества позиций каталога <code>catalog</code> 
-	 * на складе <code>warehouse</code> с МОЛ <code>mol</code> 
+	 * Р Р°СЃСЃС‡С‘С‚ РєРѕР»РёС‡РµСЃС‚РІР° РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР° <code>catalog</code> 
+	 * РЅР° СЃРєР»Р°РґРµ <code>warehouse</code> СЃ РњРћР› <code>mol</code> 
 	 * 
 	 * @param warehouse
-	 * 			склад
+	 * 			СЃРєР»Р°Рґ
 	 * @param mol
-	 * 			МОЛ
+	 * 			РњРћР›
 	 * @param catalog
-	 * 			позиция каталога
+	 * 			РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР°
 	 * @param onlyAvailable
-	 * 			искать только доступные для текущего пользователя
-	 * @return количество на складе или <code>null</code> если на складе нет доступных количеств
+	 * 			РёСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РґРѕСЃС‚СѓРїРЅС‹Рµ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РЅР° СЃРєР»Р°РґРµ РёР»Рё <code>null</code> РµСЃР»Рё РЅР° СЃРєР»Р°РґРµ РЅРµС‚ РґРѕСЃС‚СѓРїРЅС‹С… РєРѕР»РёС‡РµСЃС‚РІ
 	 */
 	StockSituationValues getSituation(OrgUnit warehouse, Contractor mol,
 		Catalog catalog, boolean onlyAvailable);
 
 	/**
-	 * Рассчёт количества позиций каталога <code>catalog</code> 
-	 * на складе <code>warehouse</code>
+	 * Р Р°СЃСЃС‡С‘С‚ РєРѕР»РёС‡РµСЃС‚РІР° РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР° <code>catalog</code> 
+	 * РЅР° СЃРєР»Р°РґРµ <code>warehouse</code>
 	 * 
-	 * @param warehouse	склад
-	 * @param catalog	позиция каталога
-	 * @return	количество на складе или <code>null</code> если на складе нет доступных количеств
+	 * @param warehouse	СЃРєР»Р°Рґ
+	 * @param catalog	РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР°
+	 * @return	РєРѕР»РёС‡РµСЃС‚РІРѕ РЅР° СЃРєР»Р°РґРµ РёР»Рё <code>null</code> РµСЃР»Рё РЅР° СЃРєР»Р°РґРµ РЅРµС‚ РґРѕСЃС‚СѓРїРЅС‹С… РєРѕР»РёС‡РµСЃС‚РІ
 	 */
 	StockSituationValues getSituation(OrgUnit warehouse, Catalog catalog);
 
 	/**
-	 * Рассчёт количества позиций каталога <code>catalog</code> 
-	 * на складе <code>warehouse</code>
+	 * Р Р°СЃСЃС‡С‘С‚ РєРѕР»РёС‡РµСЃС‚РІР° РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР° <code>catalog</code> 
+	 * РЅР° СЃРєР»Р°РґРµ <code>warehouse</code>
 	 * 
-	 * @param warehouse	склад
-	 * @param catalog	позиция каталога
-	 * @param onlyAvailable искать только доступные для текущего пользователя
-	 * @return	количество на складе или <code>null</code> если на складе нет доступных количеств
+	 * @param warehouse	СЃРєР»Р°Рґ
+	 * @param catalog	РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР°
+	 * @param onlyAvailable РёСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РґРѕСЃС‚СѓРїРЅС‹Рµ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	 * @return	РєРѕР»РёС‡РµСЃС‚РІРѕ РЅР° СЃРєР»Р°РґРµ РёР»Рё <code>null</code> РµСЃР»Рё РЅР° СЃРєР»Р°РґРµ РЅРµС‚ РґРѕСЃС‚СѓРїРЅС‹С… РєРѕР»РёС‡РµСЃС‚РІ
 	 */
 	StockSituationValues getSituation(OrgUnit warehouse, Catalog catalog, boolean onlyAvailable);
 
 	/**
-	 * Рассчёт количества на всех складах
+	 * Р Р°СЃСЃС‡С‘С‚ РєРѕР»РёС‡РµСЃС‚РІР° РЅР° РІСЃРµС… СЃРєР»Р°РґР°С…
 	 * 
-	 * @return количество на складах
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РЅР° СЃРєР»Р°РґР°С…
 	 */
 	List<StockSituationValues> getSituation(Catalog catalog);
 	
 	/**
-	 * Рассчёт агрегированного количества позиций каталога на всех складах 
-	 * @param catalogId - идентификатор позиции каталога
-	 * @return количества на всех складах
+	 * Р Р°СЃСЃС‡С‘С‚ Р°РіСЂРµРіРёСЂРѕРІР°РЅРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР° РЅР° РІСЃРµС… СЃРєР»Р°РґР°С… 
+	 * @param catalogId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР°
+	 * @return РєРѕР»РёС‡РµСЃС‚РІР° РЅР° РІСЃРµС… СЃРєР»Р°РґР°С…
 	 */
 	StockSituationValues getAgregateSituation(Integer catalogId);
 	
 	/**
-	 * Рассчёт агрегированного количества позиций каталога на всех складах 
-	 * @param catalog - позиция каталога
-	 * @return количества на всех складах
+	 * Р Р°СЃСЃС‡С‘С‚ Р°РіСЂРµРіРёСЂРѕРІР°РЅРЅРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР° РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР° РЅР° РІСЃРµС… СЃРєР»Р°РґР°С… 
+	 * @param catalog - РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР°
+	 * @return РєРѕР»РёС‡РµСЃС‚РІР° РЅР° РІСЃРµС… СЃРєР»Р°РґР°С…
 	 */
 	StockSituationValues getAgregateSituation(Catalog catalog);
 		
 	/**
-	 * Вызов формы, отображающей доступное количество на складах
-	 *  для позиции каталога <code>catalog</code>
+	 * Р’С‹Р·РѕРІ С„РѕСЂРјС‹, РѕС‚РѕР±СЂР°Р¶Р°СЋС‰РµР№ РґРѕСЃС‚СѓРїРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РЅР° СЃРєР»Р°РґР°С…
+	 *  РґР»СЏ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР° <code>catalog</code>
 	 * 
 	 * @param catalog
-	 * 		позиция каталога
+	 * 		РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР°
 	 */
 	void showSituationForm(Catalog catalog);
 
 	/**
-	 * Вызов форм, отображающих доступное количество на складах
-	 * для позиций каталога
+	 * Р’С‹Р·РѕРІ С„РѕСЂРј, РѕС‚РѕР±СЂР°Р¶Р°СЋС‰РёС… РґРѕСЃС‚СѓРїРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РЅР° СЃРєР»Р°РґР°С…
+	 * РґР»СЏ РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР°
 	 * 
-	 * @param catalogIds	список идентификаторов каталога
+	 * @param catalogIds	СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ РєР°С‚Р°Р»РѕРіР°
 	 */
 	void showSituationForm(Serializable[] catalogIds);
 

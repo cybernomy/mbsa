@@ -33,7 +33,7 @@ import com.mg.merp.planning.model.InventoryForecastLine;
 
 
 /**
- * Контроллер формы поддержки прогнозов складских запасов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РїСЂРѕРіРЅРѕР·РѕРІ СЃРєР»Р°РґСЃРєРёС… Р·Р°РїР°СЃРѕРІ
  * 
  * @author leonova
  * @version $Id: InventoryForecastMt.java,v 1.6 2007/09/06 04:46:46 alikaev Exp $

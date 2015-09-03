@@ -17,7 +17,7 @@ package com.mg.merp.paymentalloc;
 import com.mg.merp.paymentalloc.model.DocGroupLink;
 
 /**
- * Бизнес-компонент "Типы документов в группах"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ РґРѕРєСѓРјРµРЅС‚РѕРІ РІ РіСЂСѓРїРїР°С…"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.paymentalloc.model.DocGroupLink;
 public interface DocGroupLinkServiceLocal extends com.mg.framework.api.DataBusinessObjectService<DocGroupLink, Integer> {
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/paymentalloc/DocGroupLink"; //$NON-NLS-1$
 	

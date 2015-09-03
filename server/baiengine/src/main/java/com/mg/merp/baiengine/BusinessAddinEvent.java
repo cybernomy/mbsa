@@ -17,7 +17,7 @@ package com.mg.merp.baiengine;
 import java.util.EventObject;
 
 /**
- * Событие возвращаемое после завершения BAi
+ * РЎРѕР±С‹С‚РёРµ РІРѕР·РІСЂР°С‰Р°РµРјРѕРµ РїРѕСЃР»Рµ Р·Р°РІРµСЂС€РµРЅРёСЏ BAi
  * 
  * @author Oleg V. Safonov
  * @version $Id: BusinessAddinEvent.java,v 1.2 2007/09/07 12:36:22 safonov Exp $
@@ -31,7 +31,7 @@ public class BusinessAddinEvent<T> extends EventObject {
 	}
 
 	/**
-	 * Получить BAi
+	 * РџРѕР»СѓС‡РёС‚СЊ BAi
 	 * 
 	 * @return
 	 */
@@ -41,9 +41,9 @@ public class BusinessAddinEvent<T> extends EventObject {
 	}
 	
 	/**
-	 * Получить результат выполнения
+	 * РџРѕР»СѓС‡РёС‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ
 	 * 
-	 * @return	результат, возможно значение <code>null</code>
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚, РІРѕР·РјРѕР¶РЅРѕ Р·РЅР°С‡РµРЅРёРµ <code>null</code>
 	 */
 	public T getResult() {
 		return result;

@@ -23,7 +23,7 @@ import com.mg.merp.document.model.DocType;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер формы условий отбора бухгалтерских книг
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° Р±СѓС…РіР°Р»С‚РµСЂСЃРєРёС… РєРЅРёРі
  * 
  * @author leonova
  * @version $Id: AccountBookRest.java,v 1.3 2006/10/17 11:51:47 leonova Exp $ 

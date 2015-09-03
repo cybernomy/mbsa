@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.personnelref.model.PositionFillKind;
 
 /**
- * Браузер видов исполнения должностей
+ * Р‘СЂР°СѓР·РµСЂ РІРёРґРѕРІ РёСЃРїРѕР»РЅРµРЅРёСЏ РґРѕР»Р¶РЅРѕСЃС‚РµР№
  * 
  * @author leonova
  * @version $Id: PositionFillKindBr.java,v 1.1 2006/09/06 12:47:55 leonova Exp $ 

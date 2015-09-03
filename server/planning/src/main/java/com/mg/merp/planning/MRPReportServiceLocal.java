@@ -18,7 +18,7 @@ import com.mg.merp.planning.model.MrpReport;
 import com.mg.merp.planning.model.MrpVersionControl;
 
 /**
- * Бизнес-компонент "Итоги расчета ППМ"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РС‚РѕРіРё СЂР°СЃС‡РµС‚Р° РџРџРњ"
  * 
  * @author leonova
  * @version $Id: MRPReportServiceLocal.java,v 1.2 2007/07/30 10:37:51 safonov Exp $
@@ -27,14 +27,14 @@ public interface MRPReportServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<MrpReport, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/planning/MRPReport";
 	
 	/**
-	 * очистить итоги расчета товара
+	 * РѕС‡РёСЃС‚РёС‚СЊ РёС‚РѕРіРё СЂР°СЃС‡РµС‚Р° С‚РѕРІР°СЂР°
 	 * 
-	 * @param mrpVersion	версия ППМ
+	 * @param mrpVersion	РІРµСЂСЃРёСЏ РџРџРњ
 	 */
 	void clear(MrpVersionControl mrpVersion);
 

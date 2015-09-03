@@ -22,7 +22,7 @@ import com.mg.merp.account.AccountConfigServiceLocal;
 import com.mg.merp.account.model.AccConfig;
 
 /**
- * Реализация бизнес-компонента "Конфигурация модуля <Бух.учет>"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <Р‘СѓС….СѓС‡РµС‚>"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

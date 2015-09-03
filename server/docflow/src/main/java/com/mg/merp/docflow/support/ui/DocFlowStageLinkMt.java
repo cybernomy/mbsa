@@ -18,7 +18,7 @@ import com.mg.framework.generic.ui.DefaultDialog;
 import com.mg.merp.docprocess.model.LinkStage;
 
 /**
- * Контроллер формы редактирования связи этапов ДО
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ СЃРІСЏР·Рё СЌС‚Р°РїРѕРІ Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowStageLinkMt.java,v 1.2 2006/08/25 11:48:17 safonov Exp $
@@ -47,9 +47,9 @@ public class DocFlowStageLinkMt extends DefaultDialog {
 	}
 
 	/**
-	 * установка модели
+	 * СѓСЃС‚Р°РЅРѕРІРєР° РјРѕРґРµР»Рё
 	 * 
-	 * @param link	модель
+	 * @param link	РјРѕРґРµР»СЊ
 	 */
 	public void setLink(LinkStage link) {
 		directly = link.isDirectly();

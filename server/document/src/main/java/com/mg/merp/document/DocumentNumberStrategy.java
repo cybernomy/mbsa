@@ -17,7 +17,7 @@ package com.mg.merp.document;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Стратегия формирования номера документа
+ * РЎС‚СЂР°С‚РµРіРёСЏ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РЅРѕРјРµСЂР° РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentNumberStrategy.java,v 1.1 2007/03/23 13:52:02 safonov Exp $
@@ -25,10 +25,10 @@ import com.mg.merp.document.model.DocHead;
 public interface DocumentNumberStrategy {
 
 	/**
-	 * формирование номера документа
+	 * С„РѕСЂРјРёСЂРѕРІР°РЅРёРµ РЅРѕРјРµСЂР° РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docHead	сущность документа
-	 * @return	номер документа
+	 * @param docHead	СЃСѓС‰РЅРѕСЃС‚СЊ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	String generateNumber(DocHead docHead);
 

@@ -26,7 +26,7 @@ import com.mg.merp.baiengine.BusinessAddinListener;
 import com.mg.merp.baiengine.support.BusinessAddinEngineImpl;
 
 /**
- * Реализация сервиса машины бизнес расширений системы для JBoss
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РјР°С€РёРЅС‹ Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёР№ СЃРёСЃС‚РµРјС‹ РґР»СЏ JBoss
  * 
  * @author Oleg V. Safonov
  * @version $Id: BusinessAddinEngineService.java,v 1.5 2007/11/15 13:13:09 safonov Exp $

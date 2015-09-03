@@ -27,7 +27,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.paymentcontrol.model.VersionStatus;
 
 /**
- * Браузер статусов версий планирования
+ * Р‘СЂР°СѓР·РµСЂ СЃС‚Р°С‚СѓСЃРѕРІ РІРµСЂСЃРёР№ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
  * 
  * @author leonova
  * @version $Id: VersionStatusBr.java,v 1.3 2007/05/14 05:23:52 sharapov Exp $ 

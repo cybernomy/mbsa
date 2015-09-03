@@ -30,7 +30,7 @@ import com.mg.merp.reference.support.ReferenceUtils;
 import com.mg.merp.salary.FeeSummaryModelServiceLocal;
 
 /**
- * Контроллер формы списка образцов сводов н/у
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ СЃРІРѕРґРѕРІ РЅ/Сѓ
  * 
  * @author leonova
  * @version $Id: FeeSummaryModelBr.java,v 1.4 2006/09/12 11:04:21 leonova Exp $

@@ -24,10 +24,10 @@ import com.mg.merp.wb.core.ui.dialogs.Dialogs;
 import com.mg.merp.wb.core.ui.plugin.BusinessObjectPlugin;
 
 /**
- * Стандартная форма редактирования
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ С„РѕСЂРјР° СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
  * 
- * EP-формы редактирования, наследники StandartEditorPage<br>
- * T-класс, представляющий собой содержание формы редактирования
+ * EP-С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ, РЅР°СЃР»РµРґРЅРёРєРё StandartEditorPage<br>
+ * T-РєР»Р°СЃСЃ, РїСЂРµРґСЃС‚Р°РІР»СЏСЋС‰РёР№ СЃРѕР±РѕР№ СЃРѕРґРµСЂР¶Р°РЅРёРµ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: StandartEditorForm.java,v 1.1 2006/12/29 15:19:41 poroxnenko
@@ -52,7 +52,7 @@ public abstract class StandartEditorForm<EP extends StandartEditorPage, T>
 	}
 
 	/**
-	 * сохранение формы редактирования
+	 * СЃРѕС…СЂР°РЅРµРЅРёРµ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
 	 */
 	@Override
 	public void doSave(IProgressMonitor monitor) {
@@ -68,9 +68,9 @@ public abstract class StandartEditorForm<EP extends StandartEditorPage, T>
 			else
 				obj = businessObj.editBusinessObject(obj);
 			
-			//после успешного выполнения закрываем форму
+			//РїРѕСЃР»Рµ СѓСЃРїРµС€РЅРѕРіРѕ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РєСЂС‹РІР°РµРј С„РѕСЂРјСѓ
 			close(false);
-			//обновляем вид
+			//РѕР±РЅРѕРІР»СЏРµРј РІРёРґ
 			businessObj.getView().refresh();
 		} catch (java.rmi.ConnectException e) {
 			hookServerConnectException(isNew, e);
@@ -94,12 +94,12 @@ public abstract class StandartEditorForm<EP extends StandartEditorPage, T>
 	}
 
 	/**
-	 * @return форму редактирования бизнес объекта
+	 * @return С„РѕСЂРјСѓ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ Р±РёР·РЅРµСЃ РѕР±СЉРµРєС‚Р°
 	 */
 	protected abstract EP getEditorPage();
 
 	/**
-	 * инициализация формы редактирования
+	 * РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
 	 */
 	protected abstract void pagePostCreating();
 
@@ -109,7 +109,7 @@ public abstract class StandartEditorForm<EP extends StandartEditorPage, T>
 
 	/**
 	 * @return
-	 * 			плагин, отвечающий за управление бизнес компонентом
+	 * 			РїР»Р°РіРёРЅ, РѕС‚РІРµС‡Р°СЋС‰РёР№ Р·Р° СѓРїСЂР°РІР»РµРЅРёРµ Р±РёР·РЅРµСЃ РєРѕРјРїРѕРЅРµРЅС‚РѕРј
 	 */
 	protected abstract BusinessObjectPlugin<T> getBusinessObjectTool();
 	

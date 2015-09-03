@@ -26,7 +26,7 @@ import com.mg.merp.reference.ZipCodeServiceLocal;
 import com.mg.merp.reference.model.ZipCode;
 
 /**
- * Реализация бизнес-компонента "Почтовые индексы"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРѕС‡С‚РѕРІС‹Рµ РёРЅРґРµРєСЃС‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov

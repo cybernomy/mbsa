@@ -32,7 +32,7 @@ import com.mg.merp.planning.PlanningForecastServiceLocal;
 import com.mg.merp.planning.model.PlanningForecast;
 
 /**
- * Контроллер формы поддержки версий прогнозов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РІРµСЂСЃРёР№ РїСЂРѕРіРЅРѕР·РѕРІ
  * 
  * @author leonova
  * @version $Id: ForecastVersionMt.java,v 1.6 2007/07/30 10:36:31 safonov Exp $

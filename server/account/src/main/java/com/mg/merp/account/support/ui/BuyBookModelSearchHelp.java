@@ -21,7 +21,7 @@ import com.mg.framework.generic.ui.AbstractSearchHelp;
 import com.mg.merp.account.model.BuyBook;
 
 /**
- * Механизм поиска образцов "Книги покупок"
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ "РљРЅРёРіРё РїРѕРєСѓРїРѕРє"
  * 
  * @author Artem V. Sharapov
  * @version $Id: BuyBookModelSearchHelp.java,v 1.1 2009/03/16 14:27:22 sharapov Exp $

@@ -36,7 +36,7 @@ import com.mg.merp.reference.PriceListSpecServiceLocal;
 import com.mg.merp.reference.model.PriceListHead;
 
 /**
- * Контроллер браузера заголовков прайс-листов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р·Р°РіРѕР»РѕРІРєРѕРІ РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -114,9 +114,9 @@ public class PriceListHeadBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Показать спецификацию прайс-листа"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџРѕРєР°Р·Р°С‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionShowSpecPriceList(WidgetEvent event) throws Exception {
 		final PriceListSpecServiceLocal service = (PriceListSpecServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/PriceListSpec"); //$NON-NLS-1$
@@ -130,8 +130,8 @@ public class PriceListHeadBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Пересчитать цены"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџРµСЂРµСЃС‡РёС‚Р°С‚СЊ С†РµРЅС‹"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRecalcPrices(WidgetEvent event) {
 		Serializable[] priceListHeadIds = ((MaintenanceTableModel) table.getModel()).getSelectedPrimaryKeys();
@@ -140,8 +140,8 @@ public class PriceListHeadBr extends DefaultPlainBrowseForm {
 	}
 	
 	/**
-	 * Обработчик пункта КМ "Изменить базовые цены"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РР·РјРµРЅРёС‚СЊ Р±Р°Р·РѕРІС‹Рµ С†РµРЅС‹"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionOverestimation(WidgetEvent event) {
 		final Serializable[] priceListHeadIds = ((MaintenanceTableModel) table.getModel()).getSelectedPrimaryKeys();
@@ -162,8 +162,8 @@ public class PriceListHeadBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Обработчик события "Настройки прав доступа на прайс-листы"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РќР°СЃС‚СЂРѕР№РєРё РїСЂР°РІ РґРѕСЃС‚СѓРїР° РЅР° РїСЂР°Р№СЃ-Р»РёСЃС‚С‹"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionSetupPriceListPermissions(WidgetEvent event) {
 		Serializable[] keys = ((MaintenanceTableModel) table.getModel()).getSelectedPrimaryKeys();

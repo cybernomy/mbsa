@@ -26,7 +26,7 @@ import com.mg.merp.finance.support.FinOperEntityInterceptorImpl;
 import com.mg.merp.finance.support.FinSpecEntityInterceptorImpl;
 
 /**
- * Реализация сервиса регистрации перхватчиков моделей подсистемы "Финансы"
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° СЂРµРіРёСЃС‚СЂР°С†РёРё РїРµСЂС…РІР°С‚С‡РёРєРѕРІ РјРѕРґРµР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "Р¤РёРЅР°РЅСЃС‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: FinanceEntityInterceptorService.java,v 1.1 2007/01/16 14:44:05 safonov Exp $

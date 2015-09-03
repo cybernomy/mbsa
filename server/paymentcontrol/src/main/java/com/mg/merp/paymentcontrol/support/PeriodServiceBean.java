@@ -32,7 +32,7 @@ import com.mg.merp.paymentcontrol.PeriodServiceLocal;
 import com.mg.merp.paymentcontrol.model.PmcPeriod;
 
 /**
- * Реализация бизнес-компонента "Периоды планирования" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРµСЂРёРѕРґС‹ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -59,8 +59,8 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Проверка возможности удаления периода планирования
-	 * @param entity - период планирования
+	 * РџСЂРѕРІРµСЂРєР° РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё СѓРґР°Р»РµРЅРёСЏ РїРµСЂРёРѕРґР° РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param entity - РїРµСЂРёРѕРґ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
 	 */
 	private void checkForErasePossibility(PmcPeriod entity) {
 		Messages msg = Messages.getInstance();
@@ -71,8 +71,8 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Получить корневую запись (т.е. "Периоды планирования")
-	 * @return корневая запись
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕСЂРЅРµРІСѓСЋ Р·Р°РїРёСЃСЊ (С‚.Рµ. "РџРµСЂРёРѕРґС‹ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ")
+	 * @return РєРѕСЂРЅРµРІР°СЏ Р·Р°РїРёСЃСЊ
 	 */
 	private PmcPeriod getRoot() {
 		return OrmTemplate.getInstance().findUniqueByCriteria(OrmTemplate.createCriteria(PmcPeriod.class)
@@ -88,17 +88,17 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Вспомогательный метод для создание периодов планирования (с заданным интервалом)
-	 * @param isPmcYear - годовой интервал
-	 * @param isPmcHalfYear - полу-годовой интервал
-	 * @param isPmcQuarter - квартальный интервал
-	 * @param isPmcMonth - месячный интервал
-	 * @param isPmcTenDays - интервал декада
-	 * @param isPmcWeek - недельный интервал
-	 * @param isPmcDay - дневной интервал
-	 * @param beginDate - дата начала формирования
-	 * @param upLevelQuantity - количество периодов (верхнего уровня)
-	 * @param Parent - родительский узел
+	 * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РјРµС‚РѕРґ РґР»СЏ СЃРѕР·РґР°РЅРёРµ РїРµСЂРёРѕРґРѕРІ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ (СЃ Р·Р°РґР°РЅРЅС‹Рј РёРЅС‚РµСЂРІР°Р»РѕРј)
+	 * @param isPmcYear - РіРѕРґРѕРІРѕР№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcHalfYear - РїРѕР»Сѓ-РіРѕРґРѕРІРѕР№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcQuarter - РєРІР°СЂС‚Р°Р»СЊРЅС‹Р№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcMonth - РјРµСЃСЏС‡РЅС‹Р№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcTenDays - РёРЅС‚РµСЂРІР°Р» РґРµРєР°РґР°
+	 * @param isPmcWeek - РЅРµРґРµР»СЊРЅС‹Р№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcDay - РґРЅРµРІРЅРѕР№ РёРЅС‚РµСЂРІР°Р»
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ
+	 * @param upLevelQuantity - РєРѕР»РёС‡РµСЃС‚РІРѕ РїРµСЂРёРѕРґРѕРІ (РІРµСЂС…РЅРµРіРѕ СѓСЂРѕРІРЅСЏ)
+	 * @param Parent - СЂРѕРґРёС‚РµР»СЊСЃРєРёР№ СѓР·РµР»
 	 */
 	private void internalCreatePeriods(boolean isPmcYear, boolean isPmcHalfYear, boolean isPmcQuarter, boolean isPmcMonth, boolean isPmcTenDays, boolean isPmcWeek, boolean isPmcDay, java.util.Date beginDate, java.lang.Integer upLevelQuantity, com.mg.merp.paymentcontrol.model.PmcPeriod Parent) {
 		Locale serverLocale = ServerUtils.getUserLocale();
@@ -121,20 +121,20 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 		if(!periodList.isEmpty())
 			storePmcPeriods(periodList);
 
-		getPersistentManager().flush(); // для проверки индекса IDX_PMC_PERIOD_UN_DATE
+		getPersistentManager().flush(); // РґР»СЏ РїСЂРѕРІРµСЂРєРё РёРЅРґРµРєСЃР° IDX_PMC_PERIOD_UN_DATE
 	}
 
 	/**
-	 * Определяет дату начала формирования периода 
-	 * @param isPmcHalfYear - полу-годовой интервал
-	 * @param isPmcQuarter - квартальный интервал
-	 * @param isPmcMonth - месячный интервал
-	 * @param isPmcTenDays - интервал декада
-	 * @param isPmcWeek - недельный интервал
-	 * @param isPmcDay - дневной интервал
-	 * @param beginDate - начальная дата
-	 * @param locale - локаль временных(даты, времени) параметров 
-	 * @return дата начала формирования периода
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РґР°С‚Сѓ РЅР°С‡Р°Р»Р° С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РїРµСЂРёРѕРґР° 
+	 * @param isPmcHalfYear - РїРѕР»Сѓ-РіРѕРґРѕРІРѕР№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcQuarter - РєРІР°СЂС‚Р°Р»СЊРЅС‹Р№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcMonth - РјРµСЃСЏС‡РЅС‹Р№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcTenDays - РёРЅС‚РµСЂРІР°Р» РґРµРєР°РґР°
+	 * @param isPmcWeek - РЅРµРґРµР»СЊРЅС‹Р№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcDay - РґРЅРµРІРЅРѕР№ РёРЅС‚РµСЂРІР°Р»
+	 * @param beginDate - РЅР°С‡Р°Р»СЊРЅР°СЏ РґР°С‚Р°
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ 
+	 * @return РґР°С‚Р° РЅР°С‡Р°Р»Р° С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РїРµСЂРёРѕРґР°
 	 */
 	protected java.util.Date startDateOfPmcPeriod(boolean isPmcYear, boolean isPmcHalfYear, boolean isPmcQuarter, boolean isPmcMonth, boolean isPmcTenDays, boolean isPmcWeek, boolean isPmcDay, java.util.Date beginDate, Locale locale) {
 		if(isPmcYear)
@@ -154,19 +154,19 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Рекурсивное создание периодов планирования (с заданным интервалом)
-	 * @param isPmcYear - годовой интервал
-	 * @param isPmcHalfYear - полу-годовой интервал
-	 * @param isPmcQuarter - квартальный интервал
-	 * @param isPmcMonth - месячный интервал
-	 * @param isPmcTenDays - интервал декада
-	 * @param isPmcWeek - недельный интервал
-	 * @param isPmcDay - дневной интервал
-	 * @param beginDate - дата начала формирования
-	 * @param upLevelQuantity - количество периодов (верхнего уровня)
-	 * @param Parent - родительский узел
-	 * @param periodList - список для формирования созданных узлов
-	 * @param locale локаль временных(даты, времени) параметров
+	 * Р РµРєСѓСЂСЃРёРІРЅРѕРµ СЃРѕР·РґР°РЅРёРµ РїРµСЂРёРѕРґРѕРІ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ (СЃ Р·Р°РґР°РЅРЅС‹Рј РёРЅС‚РµСЂРІР°Р»РѕРј)
+	 * @param isPmcYear - РіРѕРґРѕРІРѕР№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcHalfYear - РїРѕР»Сѓ-РіРѕРґРѕРІРѕР№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcQuarter - РєРІР°СЂС‚Р°Р»СЊРЅС‹Р№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcMonth - РјРµСЃСЏС‡РЅС‹Р№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcTenDays - РёРЅС‚РµСЂРІР°Р» РґРµРєР°РґР°
+	 * @param isPmcWeek - РЅРµРґРµР»СЊРЅС‹Р№ РёРЅС‚РµСЂРІР°Р»
+	 * @param isPmcDay - РґРЅРµРІРЅРѕР№ РёРЅС‚РµСЂРІР°Р»
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ
+	 * @param upLevelQuantity - РєРѕР»РёС‡РµСЃС‚РІРѕ РїРµСЂРёРѕРґРѕРІ (РІРµСЂС…РЅРµРіРѕ СѓСЂРѕРІРЅСЏ)
+	 * @param Parent - СЂРѕРґРёС‚РµР»СЊСЃРєРёР№ СѓР·РµР»
+	 * @param periodList - СЃРїРёСЃРѕРє РґР»СЏ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ СЃРѕР·РґР°РЅРЅС‹С… СѓР·Р»РѕРІ
+	 * @param locale Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
 	 */	
 	protected void recurseCreate(boolean isPmcYear, boolean isPmcHalfYear, boolean isPmcQuarter, boolean isPmcMonth, boolean isPmcTenDays, boolean isPmcWeek, boolean isPmcDay, java.util.Date beginDate, java.util.Date endDate, int upLevelQuantity, com.mg.merp.paymentcontrol.model.PmcPeriod Parent, List<PmcPeriod> periodList, Locale locale) {
 		com.mg.merp.paymentcontrol.model.PmcPeriod currentEntity;
@@ -294,13 +294,13 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Инициализация периода заданными параметрами
-	 * @param name - наименование периода
-	 * @param dateFrom - начало периода
-	 * @param dateTill - окончание периода
-	 * @param kind - вид периода
-	 * @param parent - родительский узел 
-	 * @return период с установленными параметрами
+	 * РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РїРµСЂРёРѕРґР° Р·Р°РґР°РЅРЅС‹РјРё РїР°СЂР°РјРµС‚СЂР°РјРё
+	 * @param name - РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїРµСЂРёРѕРґР°
+	 * @param dateFrom - РЅР°С‡Р°Р»Рѕ РїРµСЂРёРѕРґР°
+	 * @param dateTill - РѕРєРѕРЅС‡Р°РЅРёРµ РїРµСЂРёРѕРґР°
+	 * @param kind - РІРёРґ РїРµСЂРёРѕРґР°
+	 * @param parent - СЂРѕРґРёС‚РµР»СЊСЃРєРёР№ СѓР·РµР» 
+	 * @return РїРµСЂРёРѕРґ СЃ СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹РјРё РїР°СЂР°РјРµС‚СЂР°РјРё
 	 */
 	protected PmcPeriod intializePmcPeriod(String name, java.util.Date dateFrom, java.util.Date dateTill, short kind, PmcPeriod parent) {
 		PmcPeriod periodEntity = initialize();
@@ -313,8 +313,8 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Осуществляет запись периодов в постоянное хранилище
-	 * @param periodList - список периодов для записи 
+	 * РћСЃСѓС‰РµСЃС‚РІР»СЏРµС‚ Р·Р°РїРёСЃСЊ РїРµСЂРёРѕРґРѕРІ РІ РїРѕСЃС‚РѕСЏРЅРЅРѕРµ С…СЂР°РЅРёР»РёС‰Рµ
+	 * @param periodList - СЃРїРёСЃРѕРє РїРµСЂРёРѕРґРѕРІ РґР»СЏ Р·Р°РїРёСЃРё 
 	 */
 	protected void storePmcPeriods(List<PmcPeriod> periodList) {
 		for(PmcPeriod periodEntity : periodList) 

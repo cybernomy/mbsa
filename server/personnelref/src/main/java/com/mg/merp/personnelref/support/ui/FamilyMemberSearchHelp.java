@@ -22,7 +22,7 @@ import com.mg.merp.reference.model.FamilyMember;
 import com.mg.merp.reference.model.NaturalPerson;
 
 /**
- * Поисковик членов семьи бизнес-компонента "Вычеты на членов семьи"
+ * РџРѕРёСЃРєРѕРІРёРє С‡Р»РµРЅРѕРІ СЃРµРјСЊРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’С‹С‡РµС‚С‹ РЅР° С‡Р»РµРЅРѕРІ СЃРµРјСЊРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: FamilyMemberSearchHelp.java,v 1.1 2007/01/24 11:28:59 sharapov Exp $

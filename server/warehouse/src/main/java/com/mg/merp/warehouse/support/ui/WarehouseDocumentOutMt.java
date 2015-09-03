@@ -26,7 +26,7 @@ import com.mg.merp.warehouse.generic.ui.AbstractWarehouseDocumentMaintenaceForm;
 import com.mg.merp.warehouse.model.StockDocumentSpec;
 
 /**
- * Контроллер формы поддержки расходных ордеров
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЂР°СЃС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: WarehouseDocumentOutMt.java,v 1.10 2009/02/05 10:03:53 sharapov Exp $

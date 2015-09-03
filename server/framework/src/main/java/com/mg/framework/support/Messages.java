@@ -17,7 +17,7 @@ package com.mg.framework.support;
 import com.mg.framework.generic.MessageSourceAccessor;
 
 /**
- * Класс текстовых ресурсов
+ * РљР»Р°СЃСЃ С‚РµРєСЃС‚РѕРІС‹С… СЂРµСЃСѓСЂСЃРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: Messages.java,v 1.30 2008/12/23 09:24:06 safonov Exp $

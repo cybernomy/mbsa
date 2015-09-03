@@ -17,7 +17,7 @@ package com.mg.merp.retail;
 import com.mg.merp.retail.model.RtlInvoiceSpec;
 
 /**
- * Бизнес-компонент "Спецификация документа на отпуск"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕС‚РїСѓСЃРє"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.retail.model.RtlInvoiceSpec;
 public interface InvoiceSpecServiceLocal extends com.mg.merp.document.GoodsDocumentSpecification<RtlInvoiceSpec, Integer> {
 	
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/retail/InvoiceSpec"; //$NON-NLS-1$
 	

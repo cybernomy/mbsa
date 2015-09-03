@@ -23,7 +23,7 @@ import com.mg.merp.warehouse.generic.AbstractWarehouseDocumentSpec;
 import com.mg.merp.warehouse.model.StockDocumentSpec;
 
 /**
- * Бизнес-компонент "Спецификация расходных ордеров" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ СЂР°СЃС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ" 
  * 
  * @author leonova
  * @version $Id: WarehouseDocumentSpecOutServiceBean.java,v 1.6 2007/09/07 12:27:13 safonov Exp $

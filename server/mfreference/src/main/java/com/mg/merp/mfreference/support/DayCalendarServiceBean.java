@@ -24,7 +24,7 @@ import com.mg.merp.mfreference.DayCalendarServiceLocal;
 import com.mg.merp.mfreference.model.DayCalendar;
 
 /**
- * Бизнес-компонент "Дневной календарь" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”РЅРµРІРЅРѕР№ РєР°Р»РµРЅРґР°СЂСЊ" 
  * 
  * @author leonova
  * @version $Id: DayCalendarServiceBean.java,v 1.3 2006/09/04 05:52:43 leonova Exp $

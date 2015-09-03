@@ -19,7 +19,7 @@ import java.util.List;
 import com.mg.merp.reference.model.PriceListHeadRights;
 
 /**
- * Бизнес-компонент "Права на заголовки прайс-листов"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂР°РІР° РЅР° Р·Р°РіРѕР»РѕРІРєРё РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -28,35 +28,35 @@ import com.mg.merp.reference.model.PriceListHeadRights;
 public interface PriceListAccessServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PriceListHeadRights, Integer> {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/reference/PriceListAccess"; //$NON-NLS-1$
 
 	/**
-	 * Загрузить список прав пользователя для прайс-листа
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє РїСЂР°РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РґР»СЏ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 * 
 	 * @param priceListId
-	 * 				- идентификатор прайс-листа
+	 * 				- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 * @return
-	 * 				- список прав пользователя для прайс-листа
+	 * 				- СЃРїРёСЃРѕРє РїСЂР°РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РґР»СЏ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
    List<PriceListAccessResult> loadPriceListPermissions(Integer priceListId);
 
 	/**
-	 * Установить право доступа для прайс-листа
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР° РґР»СЏ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 * 
 	 * @param permission 
-	 * 				- право доступа
+	 * 				- РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР°
 	 * @param priceListId 
-	 * 				- идентификатор прайс-листа
+	 * 				- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	void grantPermission(PriceListAccessResult permission, Integer priceListId);
 	
 	/**
-	 * Отменить право доступа для прас-листа
+	 * РћС‚РјРµРЅРёС‚СЊ РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР° РґР»СЏ РїСЂР°СЃ-Р»РёСЃС‚Р°
 	 * 
 	 * @param permission 
-	 * 				- право доступа
+	 * 				- РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР°
 	 */
 	void revokePermission(PriceListAccessResult permission);
 

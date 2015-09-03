@@ -24,25 +24,25 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("LbSchedule.Item.DateOffSetKind")
 public enum DateOffSetKind {
 	/**
-	 * рабочих дней
+	 * СЂР°Р±РѕС‡РёС… РґРЅРµР№
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#DateOffSetKind.Workday")
 	WORKDAY,
 
 	/**
-	 * календарных дней
+	 * РєР°Р»РµРЅРґР°СЂРЅС‹С… РґРЅРµР№
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#DateOffSetKind.Day")
 	DAY,
 	
 	/**
-	 * месяцев
+	 * РјРµСЃСЏС†РµРІ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#DateOffSetKind.Month")
 	MONTH,
 	
 	/**
-	 * лет
+	 * Р»РµС‚
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#DateOffSetKind.Year")
 	YEAR

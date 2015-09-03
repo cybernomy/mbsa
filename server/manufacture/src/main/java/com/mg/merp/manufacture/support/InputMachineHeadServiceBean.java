@@ -25,7 +25,7 @@ import com.mg.merp.manufacture.InputMachineSpecServiceLocal;
 import com.mg.merp.manufacture.model.InputDocumentHead;
 
 /**
- * Бизнес-компонент "Акты на списание времени, отработанного оборудование в НЗП" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РђРєС‚С‹ РЅР° СЃРїРёСЃР°РЅРёРµ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµ РІ РќР—Рџ" 
  * 
  * @author leonova
  * @version $Id: InputMachineHeadServiceBean.java,v 1.6 2006/09/20 10:56:37 safonov Exp $

@@ -29,7 +29,7 @@ import com.mg.merp.personnelref.model.Street;
 import com.mg.merp.reference.model.Country;
 
 /**
- * Контроллер формы поддержки "Адрес проживания сотрудников"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РђРґСЂРµСЃ РїСЂРѕР¶РёРІР°РЅРёСЏ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: AddressMt.java,v 1.1 2007/07/16 13:22:45 sharapov Exp $
@@ -83,9 +83,9 @@ public class AddressMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик кнопки "Выбрать страну"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ СЃС‚СЂР°РЅСѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseCountry(WidgetEvent event) throws Exception {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch(COUNTRY_SEARCH_HELP_NAME);
@@ -104,9 +104,9 @@ public class AddressMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик кнопки "Выбрать улицу"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ СѓР»РёС†Сѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseStreet(WidgetEvent event) throws Exception {
 		StreetSearchHelp searchHelp = (StreetSearchHelp) SearchHelpProcessor.createSearch(STREET_SEARCH_HELP_NAME);
@@ -138,137 +138,137 @@ public class AddressMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик кнопки "Выбрать сокращенное наименование улицы"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ СЃРѕРєСЂР°С‰РµРЅРЅРѕРµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СѓР»РёС†С‹"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseStreetType(final WidgetEvent event) throws Exception {
 		searchAndSetAddressElementAbbreviation(KladrServiceLocal.STREET_LEVEL, event.getWidget().getName());
 	}
 
 	/**
-	 * Обработчик кнопки "Выбрать регион"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ СЂРµРіРёРѕРЅ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseRegion(final WidgetEvent event) throws Exception {
 		searchAndSetAddressElement(KladrServiceLocal.REGION_LEVEL, event.getWidget().getName());
 	}
 
 	/**
-	 * Обработчик кнопки "Выбрать сокращенное наименование региона"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ СЃРѕРєСЂР°С‰РµРЅРЅРѕРµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЂРµРіРёРѕРЅР°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseRegionType(final WidgetEvent event) throws Exception {
 		searchAndSetAddressElementAbbreviation(KladrServiceLocal.REGION_LEVEL, event.getWidget().getName());
 	}
 
 	/**
-	 * Обработчик кнопки "Выбрать район"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ СЂР°Р№РѕРЅ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseDistrict(final WidgetEvent event) throws Exception {
 		searchAndSetAddressElement(KladrServiceLocal.DISTRICT_LEVEL, event.getWidget().getName());
 	}
 
 	/**
-	 * Обработчик кнопки "Выбрать сокращенное наименование района"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ СЃРѕРєСЂР°С‰РµРЅРЅРѕРµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЂР°Р№РѕРЅР°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseDistrictType(final WidgetEvent event) throws Exception {
 		searchAndSetAddressElementAbbreviation(KladrServiceLocal.DISTRICT_LEVEL, event.getWidget().getName());
 	}
 
 	/**
-	 * Обработчик кнопки "Выбрать город"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ РіРѕСЂРѕРґ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseCity(final WidgetEvent event) throws Exception {
 		searchAndSetAddressElement(KladrServiceLocal.CITY_LEVEL, event.getWidget().getName());
 	}
 
 	/**
-	 * Обработчик кнопки "Выбрать сокращенное наименование города"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ СЃРѕРєСЂР°С‰РµРЅРЅРѕРµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РіРѕСЂРѕРґР°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseCityType(final WidgetEvent event) throws Exception {
 		searchAndSetAddressElementAbbreviation(KladrServiceLocal.CITY_LEVEL, event.getWidget().getName());
 	}
 
 	/**
-	 * Обработчик кнопки "Выбрать населенный пункт"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ РЅР°СЃРµР»РµРЅРЅС‹Р№ РїСѓРЅРєС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseArea(final WidgetEvent event) throws Exception {
 		searchAndSetAddressElement(KladrServiceLocal.AREA_LEVEL, event.getWidget().getName());
 	}
 
 	/**
-	 * Обработчик кнопки "Выбрать сокращенное наименование нас.пункта"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ СЃРѕРєСЂР°С‰РµРЅРЅРѕРµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РЅР°СЃ.РїСѓРЅРєС‚Р°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseAreaType(final WidgetEvent event) throws Exception {
 		searchAndSetAddressElementAbbreviation(KladrServiceLocal.AREA_LEVEL, event.getWidget().getName());
 	}
 	
 	/**
-	 * Обработчик кнопки "Очистить наименование страны"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РћС‡РёСЃС‚РёС‚СЊ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃС‚СЂР°РЅС‹"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionClearCountry(WidgetEvent event) {
 		clearCountry();
 	}
 
 	/**
-	 * Обработчик кнопки "Очистить наименование региона"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РћС‡РёСЃС‚РёС‚СЊ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЂРµРіРёРѕРЅР°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionClearRegion(WidgetEvent event) {
 		clearRegion();
 	}
 	
 	/**
-	 * Обработчик кнопки "Очистить наименование района"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РћС‡РёСЃС‚РёС‚СЊ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЂР°Р№РѕРЅР°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionClearDistrict(WidgetEvent event) {
 		clearDistrict();
 	}
 	
 	/**
-	 * Обработчик кнопки "Очистить наименование города"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РћС‡РёСЃС‚РёС‚СЊ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РіРѕСЂРѕРґР°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionClearCity(WidgetEvent event) {
 		clearCity();
 	}
 	
 	/**
-	 * Обработчик кнопки "Очистить наименование нас.пункта"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РћС‡РёСЃС‚РёС‚СЊ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РЅР°СЃ.РїСѓРЅРєС‚Р°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionClearArea(WidgetEvent event) {
 		clearArea();
 	}
 	
 	/**
-	 * Обработчик кнопки "Очистить наименование улицы"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РћС‡РёСЃС‚РёС‚СЊ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СѓР»РёС†С‹"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionClearStreet(WidgetEvent event) {
 		clearStreet();
 	}
 	
 	/**
-	 * Обработчик кнопки "Обновить полный адрес"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РћР±РЅРѕРІРёС‚СЊ РїРѕР»РЅС‹Р№ Р°РґСЂРµСЃ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRefreshFullAddress(WidgetEvent event) {
 		((AddressServiceLocal) getService()).adjustFullAddress((Address) getEntity());
@@ -276,10 +276,10 @@ public class AddressMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Выбрать и установить сокращенное наименование элемента адреса
-	 * @param abbreviationLevel - уровень для поиска сокращения
-	 * @param sourceWidgetName - наименование интерфейсного элемента источника адреса
-	 * @throws Exception - ИС
+	 * Р’С‹Р±СЂР°С‚СЊ Рё СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРѕРєСЂР°С‰РµРЅРЅРѕРµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЌР»РµРјРµРЅС‚Р° Р°РґСЂРµСЃР°
+	 * @param abbreviationLevel - СѓСЂРѕРІРµРЅСЊ РґР»СЏ РїРѕРёСЃРєР° СЃРѕРєСЂР°С‰РµРЅРёСЏ
+	 * @param sourceWidgetName - РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РёРЅС‚РµСЂС„РµР№СЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РёСЃС‚РѕС‡РЅРёРєР° Р°РґСЂРµСЃР°
+	 * @throws Exception - РРЎ
 	 */
 	private void searchAndSetAddressElementAbbreviation(final int abbreviationLevel, final String sourceWidgetName) throws Exception {
 		AbbreviationSearchHelp searchHelp = (AbbreviationSearchHelp) SearchHelpProcessor.createSearch(ABBREVIATION_SEARCH_HELP_NAME);

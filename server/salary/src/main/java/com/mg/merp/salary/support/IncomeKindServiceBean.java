@@ -25,7 +25,7 @@ import com.mg.merp.salary.IncomeKindServiceLocal;
 import com.mg.merp.salary.model.IncomeKind;
 
 /**
- * Бизнес-компонент "Виды доходов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РёРґС‹ РґРѕС…РѕРґРѕРІ" 
  * 
  * @author leonova
  * @version $Id: IncomeKindServiceBean.java,v 1.3 2006/08/31 11:37:58 leonova Exp $

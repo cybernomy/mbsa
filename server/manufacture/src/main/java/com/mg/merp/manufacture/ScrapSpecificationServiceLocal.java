@@ -19,7 +19,7 @@ import com.mg.merp.manufacture.model.ScrapDocumentHead;
 import com.mg.merp.manufacture.model.ScrapDocumentSpec;
 
 /**
- * Базовый интерфейс актов на списание потерь
+ * Р‘Р°Р·РѕРІС‹Р№ РёРЅС‚РµСЂС„РµР№СЃ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ScrapSpecificationServiceLocal.java,v 1.1 2007/08/06 12:46:24 safonov Exp $
@@ -28,9 +28,9 @@ public interface ScrapSpecificationServiceLocal<T extends ScrapDocumentSpec> ext
 		GoodsDocumentSpecification<T, Integer> {
 
 	/**
-	 * создание спецификаций
+	 * СЃРѕР·РґР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 * 
-	 * @param docHead	документ
+	 * @param docHead	РґРѕРєСѓРјРµРЅС‚
 	 */
 	void createSpecifications(ScrapDocumentHead docHead);
 

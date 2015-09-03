@@ -15,7 +15,7 @@
 package com.mg.framework.api.ui;
 
 /**
- * Вертикальное выравнивание
+ * Р’РµСЂС‚РёРєР°Р»СЊРЅРѕРµ РІС‹СЂР°РІРЅРёРІР°РЅРёРµ
  * 
  * @author Oleg V. Safonov
  * @version $Id: VerticalAlignment.java,v 1.1 2008/07/24 15:12:25 safonov Exp $

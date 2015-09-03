@@ -23,7 +23,7 @@ import com.mg.merp.humanresources.OrderServiceLocal;
 import com.mg.merp.humanresources.model.Order;
 
 /**
- * Реализация бизнес-компонента "Приказы"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРёРєР°Р·С‹"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

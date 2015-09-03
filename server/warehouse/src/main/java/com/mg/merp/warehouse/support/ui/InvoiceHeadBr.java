@@ -15,7 +15,7 @@
 package com.mg.merp.warehouse.support.ui;
 
 /**
- * Контроллер формы списка накладных
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РЅР°РєР»Р°РґРЅС‹С…
  * 
  * @author leonova
  * @version $Id: InvoiceHeadBr.java,v 1.2 2008/02/22 11:08:33 alikaev Exp $ 

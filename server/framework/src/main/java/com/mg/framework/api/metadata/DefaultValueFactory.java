@@ -15,7 +15,7 @@
 package com.mg.framework.api.metadata;
 
 /**
- * Фабрика создания значений по умолчанию для доменов
+ * Р¤Р°Р±СЂРёРєР° СЃРѕР·РґР°РЅРёСЏ Р·РЅР°С‡РµРЅРёР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ РґРѕРјРµРЅРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultValueFactory.java,v 1.1 2006/09/30 11:41:43 safonov Exp $
@@ -23,9 +23,9 @@ package com.mg.framework.api.metadata;
 public interface DefaultValueFactory<T> {
 
 	/**
-	 * создание значения по умолчанию
+	 * СЃРѕР·РґР°РЅРёРµ Р·РЅР°С‡РµРЅРёСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 * 
-	 * @return	объект значение
+	 * @return	РѕР±СЉРµРєС‚ Р·РЅР°С‡РµРЅРёРµ
 	 */
 	T createDefaultValue();
 

@@ -17,7 +17,7 @@ package com.mg.merp.account.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Авансовые отчеты"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РђРІР°РЅСЃРѕРІС‹Рµ РѕС‚С‡РµС‚С‹"
  * 
  * @author hbm2java
  * @version $Id: AdvanceRepHead.java,v 1.7 2008/03/12 11:17:30 alikaev Exp $

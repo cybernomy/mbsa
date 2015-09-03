@@ -23,7 +23,7 @@ import com.mg.merp.salary.PaySheetServiceLocal;
 import com.mg.merp.salary.model.PaySheet;
 
 /**
- * Бизнес-компонент "Платежные ведомости" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџР»Р°С‚РµР¶РЅС‹Рµ РІРµРґРѕРјРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @version $Id: PaySheetServiceBean.java,v 1.4 2006/08/28 12:44:53 leonova Exp $

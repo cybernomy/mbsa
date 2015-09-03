@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.RiseServiceLocal;
 import com.mg.merp.personnelref.model.Rise;
 
 /**
- * Бизнес-компонент "Надбавки" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РќР°РґР±Р°РІРєРё" 
  * 
  * @author leonova
  * @version $Id: RiseServiceBean.java,v 1.3 2006/09/04 13:02:21 leonova Exp $

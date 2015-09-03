@@ -35,7 +35,7 @@ import com.mg.merp.paymentcontrol.model.Liability;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Браузер образцов реестра обязательств
+ * Р‘СЂР°СѓР·РµСЂ РѕР±СЂР°Р·С†РѕРІ СЂРµРµСЃС‚СЂР° РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ
  * 
  * @author leonova
  * @version $Id: LiabilityModelBr.java,v 1.3 2006/09/14 10:41:46 leonova Exp $

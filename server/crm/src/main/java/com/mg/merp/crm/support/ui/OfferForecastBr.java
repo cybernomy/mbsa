@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.OfferForecast;
 
 /**
- * Браузер прогнозов предложений
+ * Р‘СЂР°СѓР·РµСЂ РїСЂРѕРіРЅРѕР·РѕРІ РїСЂРµРґР»РѕР¶РµРЅРёР№
  * 
  * @author leonova
  * @version $Id: OfferForecastBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

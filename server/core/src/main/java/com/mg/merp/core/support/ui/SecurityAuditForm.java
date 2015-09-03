@@ -32,7 +32,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.core.model.SecurityAudit;
 
 /**
- * Контроллер формы аудита безопасности
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ Р°СѓРґРёС‚Р° Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: SecurityAuditForm.java,v 1.1 2007/10/19 06:50:09 safonov Exp $
@@ -94,7 +94,7 @@ public class SecurityAuditForm extends AbstractForm {
 	}
 
 	/**
-	 * запуск формы
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹
 	 */
 	public void execute() {
 		eventDateFrom = DateTimeUtils.nowDate();

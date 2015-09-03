@@ -15,7 +15,7 @@
 package com.mg.framework.api.ui;
 
 /**
- * Стандартная форма "Диалог"
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ С„РѕСЂРјР° "Р”РёР°Р»РѕРі"
  * 
  * @author Oleg V. Safonov
  * @version $Id: DialogForm.java,v 1.1 2006/10/19 09:32:42 safonov Exp $
@@ -23,50 +23,50 @@ package com.mg.framework.api.ui;
 public interface DialogForm extends Form {
 
 	/**
-	 * возвращает список слушателей на событие "ok"
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє СЃР»СѓС€Р°С‚РµР»РµР№ РЅР° СЃРѕР±С‹С‚РёРµ "ok"
 	 * 
-	 * @return	список слушателей
+	 * @return	СЃРїРёСЃРѕРє СЃР»СѓС€Р°С‚РµР»РµР№
 	 */
 	FormActionListener[] getOkActionListenerList();
 	
 	/**
-	 * зарегистировать слушатель на событие "ок"
+	 * Р·Р°СЂРµРіРёСЃС‚РёСЂРѕРІР°С‚СЊ СЃР»СѓС€Р°С‚РµР»СЊ РЅР° СЃРѕР±С‹С‚РёРµ "РѕРє"
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	void addOkActionListener(FormActionListener listener);
 	
 	/**
-	 * удалить слушателя на событие "ок"
+	 * СѓРґР°Р»РёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЏ РЅР° СЃРѕР±С‹С‚РёРµ "РѕРє"
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	void removeOkActionListener(FormActionListener listener);
 
 	
 	/**
-	 * возвращает список слушателей на событие "отмена"
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє СЃР»СѓС€Р°С‚РµР»РµР№ РЅР° СЃРѕР±С‹С‚РёРµ "РѕС‚РјРµРЅР°"
 	 * 
-	 * @return	список слушателей
+	 * @return	СЃРїРёСЃРѕРє СЃР»СѓС€Р°С‚РµР»РµР№
 	 */
 	FormActionListener[] getCancelActionListenerList();
 	
 	/**
-	 * зарегистировать слушатель на событие "отмена"
+	 * Р·Р°СЂРµРіРёСЃС‚РёСЂРѕРІР°С‚СЊ СЃР»СѓС€Р°С‚РµР»СЊ РЅР° СЃРѕР±С‹С‚РёРµ "РѕС‚РјРµРЅР°"
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	void addCancelActionListener(FormActionListener listener);
 	
 	/**
-	 * удалить слушателя на событие "отмена"
+	 * СѓРґР°Р»РёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЏ РЅР° СЃРѕР±С‹С‚РёРµ "РѕС‚РјРµРЅР°"
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	void removeCancelActionListener(FormActionListener listener);
 	
 	/**
-	 * запуск диалога (показ)
+	 * Р·Р°РїСѓСЃРє РґРёР°Р»РѕРіР° (РїРѕРєР°Р·)
 	 *
 	 */
 	void execute();

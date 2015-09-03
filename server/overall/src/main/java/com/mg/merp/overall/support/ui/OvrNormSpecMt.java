@@ -32,7 +32,7 @@ import com.mg.merp.overall.NormSpecLinkServiceLocal;
 import com.mg.merp.overall.model.NormSpecLink;
 
 /**
- * Контроллер формы поддержки бизнес компонента "Спецификации норм выдачи спецодежды"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёРё РЅРѕСЂРј РІС‹РґР°С‡Рё СЃРїРµС†РѕРґРµР¶РґС‹"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

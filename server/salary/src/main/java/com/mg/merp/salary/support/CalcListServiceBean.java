@@ -76,7 +76,7 @@ import com.mg.merp.salary.model.TariffingInFee;
 import com.mg.merp.salary.model.TripleSumSign;
 
 /**
- * Реализация бизнес-компонента "Расчетные листки"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р Р°СЃС‡РµС‚РЅС‹Рµ Р»РёСЃС‚РєРё"
  *
  * @author leonova
  * @author Artem V. Sharapov
@@ -151,10 +151,10 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * Подготовить расчетный листок для расчета
-	 * @param calcList - расчетный листок
-	 * @param calculationParams - параметры расчета
-	 * @param isClear - признак "очистки" расчетного листка перед расчетом
+	 * РџРѕРґРіРѕС‚РѕРІРёС‚СЊ СЂР°СЃС‡РµС‚РЅС‹Р№ Р»РёСЃС‚РѕРє РґР»СЏ СЂР°СЃС‡РµС‚Р°
+	 * @param calcList - СЂР°СЃС‡РµС‚РЅС‹Р№ Р»РёСЃС‚РѕРє
+	 * @param calculationParams - РїР°СЂР°РјРµС‚СЂС‹ СЂР°СЃС‡РµС‚Р°
+	 * @param isClear - РїСЂРёР·РЅР°Рє "РѕС‡РёСЃС‚РєРё" СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚РєР° РїРµСЂРµРґ СЂР°СЃС‡РµС‚РѕРј
 	 */
 	protected void doPrepareCalcList(CalcList calcList, CalculationParams calculationParams, boolean isClear) {
 		if(calcList.getIsClosed())
@@ -163,7 +163,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 		boolean isNeedCalcListToRecalc = false;
 
 		if(isClear)
-			clearCalcList(calcList); // удалим все н/у из расчетного листка (кроме не подлежащих пересчету)
+			clearCalcList(calcList); // СѓРґР°Р»РёРј РІСЃРµ РЅ/Сѓ РёР· СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚РєР° (РєСЂРѕРјРµ РЅРµ РїРѕРґР»РµР¶Р°С‰РёС… РїРµСЂРµСЃС‡РµС‚Сѓ)
 
 
 		PositionFill positionFill = calcList.getPositionFill();
@@ -173,43 +173,43 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 				PersonnelrefUtils.getMinDate(calculationParams.getPeriodEndDate(), positionFill.getEndDate()),
 								calculationParams.getStaffList());
 
-		// возьмем список всех н/у из лицевого счета сотрудника (с учетом даты действия или периода за который начисляется)
+		// РІРѕР·СЊРјРµРј СЃРїРёСЃРѕРє РІСЃРµС… РЅ/Сѓ РёР· Р»РёС†РµРІРѕРіРѕ СЃС‡РµС‚Р° СЃРѕС‚СЂСѓРґРЅРёРєР° (СЃ СѓС‡РµС‚РѕРј РґР°С‚С‹ РґРµР№СЃС‚РІРёСЏ РёР»Рё РїРµСЂРёРѕРґР° Р·Р° РєРѕС‚РѕСЂС‹Р№ РЅР°С‡РёСЃР»СЏРµС‚СЃСЏ)
 		List<FeeModel> feeModelList = getFeesFromPersonalAccount(positionFill.getPersonalAccount(), actualCalculationParams);
 		if(feeModelList.size() == 0)
 			return;
 
 		PayRoll payRoll = calcList.getPayRoll();
 		List<FeeModel> selectedFeeModelList = new ArrayList<FeeModel>();
-		// цикл по всем начислениям
+		// С†РёРєР» РїРѕ РІСЃРµРј РЅР°С‡РёСЃР»РµРЅРёСЏРј
 		for (FeeModel feeModel : feeModelList) {
-			// не расчитываем этот образец, если тип ведомости задан и не совпадает с указанным в расчетной ведомости
+			// РЅРµ СЂР°СЃС‡РёС‚С‹РІР°РµРј СЌС‚РѕС‚ РѕР±СЂР°Р·РµС†, РµСЃР»Рё С‚РёРї РІРµРґРѕРјРѕСЃС‚Рё Р·Р°РґР°РЅ Рё РЅРµ СЃРѕРІРїР°РґР°РµС‚ СЃ СѓРєР°Р·Р°РЅРЅС‹Рј РІ СЂР°СЃС‡РµС‚РЅРѕР№ РІРµРґРѕРјРѕСЃС‚Рё
 			if(feeModel.getRollKind() != null && feeModel.getRollKind().getId() != payRoll.getRollKind().getId())
 				continue;
 
-			// не расчитываем этот образец, если исполняемая должность задана и не совпадает с указанной в расчетном листке
+			// РЅРµ СЂР°СЃС‡РёС‚С‹РІР°РµРј СЌС‚РѕС‚ РѕР±СЂР°Р·РµС†, РµСЃР»Рё РёСЃРїРѕР»РЅСЏРµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ Р·Р°РґР°РЅР° Рё РЅРµ СЃРѕРІРїР°РґР°РµС‚ СЃ СѓРєР°Р·Р°РЅРЅРѕР№ РІ СЂР°СЃС‡РµС‚РЅРѕРј Р»РёСЃС‚РєРµ
 			if(feeModel.getPositionFill() != null && feeModel.getPositionFill().getId() != calcList.getPositionFill().getId())
 				continue;
 
-			// если указано, что считать только для базовой должности, то и должность из расчетного листа должна быть базовой
+			// РµСЃР»Рё СѓРєР°Р·Р°РЅРѕ, С‡С‚Рѕ СЃС‡РёС‚Р°С‚СЊ С‚РѕР»СЊРєРѕ РґР»СЏ Р±Р°Р·РѕРІРѕР№ РґРѕР»Р¶РЅРѕСЃС‚Рё, С‚Рѕ Рё РґРѕР»Р¶РЅРѕСЃС‚СЊ РёР· СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚Р° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ Р±Р°Р·РѕРІРѕР№
 			if(feeModel.getUseBasicPosition() && !positionFill.getIsBasic())
 				continue;
 
-			// добавим в список реально действующих начислений
+			// РґРѕР±Р°РІРёРј РІ СЃРїРёСЃРѕРє СЂРµР°Р»СЊРЅРѕ РґРµР№СЃС‚РІСѓСЋС‰РёС… РЅР°С‡РёСЃР»РµРЅРёР№
 			selectedFeeModelList.add(feeModel);
 		}
 
 		List<CalcListFee> existingFeeList = getFeesFromCalcList(calcList);
 
-		// цикл по реально действующим начислениям
+		// С†РёРєР» РїРѕ СЂРµР°Р»СЊРЅРѕ РґРµР№СЃС‚РІСѓСЋС‰РёРј РЅР°С‡РёСЃР»РµРЅРёСЏРј
 		for(FeeModel selectedFeeModel : selectedFeeModelList) {
-			// проверим существует ли в РЛ это начисление, если существует, то его не надо добавлять в РЛ
+			// РїСЂРѕРІРµСЂРёРј СЃСѓС‰РµСЃС‚РІСѓРµС‚ Р»Рё РІ Р Р› СЌС‚Рѕ РЅР°С‡РёСЃР»РµРЅРёРµ, РµСЃР»Рё СЃСѓС‰РµСЃС‚РІСѓРµС‚, С‚Рѕ РµРіРѕ РЅРµ РЅР°РґРѕ РґРѕР±Р°РІР»СЏС‚СЊ РІ Р Р›
 			if(isFeePresent(existingFeeList, selectedFeeModel))
 				continue;
 
-			// если указана конкретная сумма, то нет необходимости выполнять алгоритм
+			// РµСЃР»Рё СѓРєР°Р·Р°РЅР° РєРѕРЅРєСЂРµС‚РЅР°СЏ СЃСѓРјРјР°, С‚Рѕ РЅРµС‚ РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё РІС‹РїРѕР»РЅСЏС‚СЊ Р°Р»РіРѕСЂРёС‚Рј
 			if(selectedFeeModel.getSumma() != null)
 				addFeeToCalcList(calcList, selectedFeeModel, actualCalculationParams);
-			else // если алгоритм расчета указан, используем его
+			else // РµСЃР»Рё Р°Р»РіРѕСЂРёС‚Рј СЂР°СЃС‡РµС‚Р° СѓРєР°Р·Р°РЅ, РёСЃРїРѕР»СЊР·СѓРµРј РµРіРѕ
 				if(selectedFeeModel.getFeeRef() != null && selectedFeeModel.getFeeRef().getCalcAlg() != null)
 					isNeedCalcListToRecalc = doPrepareCalcListFee(calcList, positionFill, selectedFeeModel, selectedFeeModelList, actualCalculationParams);
 		}
@@ -223,9 +223,9 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * Выполнить расчет
-	 * @param calcList - расчетный листок
-	 * @param calculationParams - параметры расчета
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ СЂР°СЃС‡РµС‚
+	 * @param calcList - СЂР°СЃС‡РµС‚РЅС‹Р№ Р»РёСЃС‚РѕРє
+	 * @param calculationParams - РїР°СЂР°РјРµС‚СЂС‹ СЂР°СЃС‡РµС‚Р°
 	 */
 	protected void doPerformCalculation(CalcList calcList, CalculationParams calculationParams) {
 		if(calcList.getNeedParams())
@@ -234,24 +234,24 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 		List<CalcListFee> calcListFees = getFeesFromCalcList(calcList);
 		RoundContext currencyPrecisionRoundContext = getCurrencyPrecisionRoundContext();
 
-		// цикл по начислениям
+		// С†РёРєР» РїРѕ РЅР°С‡РёСЃР»РµРЅРёСЏРј
 		for(CalcListFee calcListFee : calcListFees) {
 			if(calcListFee.getDontRecalc())
 				continue;
 
-			// если задана сумма н/у в лицевом счете, то подставить ее
+			// РµСЃР»Рё Р·Р°РґР°РЅР° СЃСѓРјРјР° РЅ/Сѓ РІ Р»РёС†РµРІРѕРј СЃС‡РµС‚Рµ, С‚Рѕ РїРѕРґСЃС‚Р°РІРёС‚СЊ РµРµ
 			if(calcListFee.getFeeModel() != null && calcListFee.getFeeModel().getSumma() != null) {
 				calcListFee.setSumma(calcListFee.getFeeModel().getSumma());
 				getCalcListFeeService().store(calcListFee);
-			} // если есть алгоритм, то рассчитать
+			} // РµСЃР»Рё РµСЃС‚СЊ Р°Р»РіРѕСЂРёС‚Рј, С‚Рѕ СЂР°СЃСЃС‡РёС‚Р°С‚СЊ
 			else if(calcListFee.getFeeModel().getFeeRef().getCalcAlg() != null) {
 					Map<String, Object> calcContextParams = getCalcContextParams(calcList, calcListFee, calculationParams);
 
 					List<CalcListFeeParam> calcListFeeParams = getCalcListFeeParamsFromCalcListFee(calcListFee);
-					// цикл по параметрам
+					// С†РёРєР» РїРѕ РїР°СЂР°РјРµС‚СЂР°Рј
 					for(CalcListFeeParam calcListFeeParam : calcListFeeParams) {
 						FeeRefParam feeRefParam = calcListFeeParam.getFeeRefParam();
-						// если есть алгоритм, то расчитать
+						// РµСЃР»Рё РµСЃС‚СЊ Р°Р»РіРѕСЂРёС‚Рј, С‚Рѕ СЂР°СЃС‡РёС‚Р°С‚СЊ
 						if(feeRefParam.getCalcAlg() != null) {
 							if(!(feeRefParam.getCalcOnce() && calcListFee.getIsCalculated())) {
 								FeeParamBusinessAddinListener feeParamBusinessAddinListener = new FeeParamBusinessAddinListener();
@@ -271,9 +271,9 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * Получить список параметров начисления/удержания расчетного листка
-	 * @param calcListFee - начисление/удержание расчетного листка
-	 * @return список параметров начисления/удержания расчетного листка
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚РєР°
+	 * @param calcListFee - РЅР°С‡РёСЃР»РµРЅРёРµ/СѓРґРµСЂР¶Р°РЅРёРµ СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚РєР°
+	 * @return СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚РєР°
 	 */
 	protected List<CalcListFeeParam> getCalcListFeeParamsFromCalcListFee(CalcListFee calcListFee) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(CalcListFeeParam.class)
@@ -283,11 +283,11 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * Получить параметры контекста выполнения расчета
-	 * @param calcList - расчетный листок
-	 * @param calcListFee - начисление/удержание расчетного листка
-	 * @param calculationParams - дополнительные параметры, используемые в контексте выполнения расчета
-	 * @return параметры контекста выполнения расчета
+	 * РџРѕР»СѓС‡РёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РєРѕРЅС‚РµРєСЃС‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ СЂР°СЃС‡РµС‚Р°
+	 * @param calcList - СЂР°СЃС‡РµС‚РЅС‹Р№ Р»РёСЃС‚РѕРє
+	 * @param calcListFee - РЅР°С‡РёСЃР»РµРЅРёРµ/СѓРґРµСЂР¶Р°РЅРёРµ СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚РєР°
+	 * @param calculationParams - РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹, РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ РІ РєРѕРЅС‚РµРєСЃС‚Рµ РІС‹РїРѕР»РЅРµРЅРёСЏ СЂР°СЃС‡РµС‚Р°
+	 * @return РїР°СЂР°РјРµС‚СЂС‹ РєРѕРЅС‚РµРєСЃС‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ СЂР°СЃС‡РµС‚Р°
 	 */
 	protected Map<String, Object> getCalcContextParams(CalcList calcList, CalcListFee calcListFee, CalculationParams calculationParams) {
 		Map<String, Object> calcContextParams = new HashMap<String, Object>();
@@ -319,10 +319,10 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * Обработать начисление/удержание после выполнения расчета
-	 * @param calcListFee - начисление/удержание
-	 * @param calcResult - результаты расчета
-	 * @param currencyPrecisionRoundContext - контекст округления денежных величин
+	 * РћР±СЂР°Р±РѕС‚Р°С‚СЊ РЅР°С‡РёСЃР»РµРЅРёРµ/СѓРґРµСЂР¶Р°РЅРёРµ РїРѕСЃР»Рµ РІС‹РїРѕР»РЅРµРЅРёСЏ СЂР°СЃС‡РµС‚Р°
+	 * @param calcListFee - РЅР°С‡РёСЃР»РµРЅРёРµ/СѓРґРµСЂР¶Р°РЅРёРµ
+	 * @param calcResult - СЂРµР·СѓР»СЊС‚Р°С‚С‹ СЂР°СЃС‡РµС‚Р°
+	 * @param currencyPrecisionRoundContext - РєРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ РґРµРЅРµР¶РЅС‹С… РІРµР»РёС‡РёРЅ
 	 */
 	protected void proccessCalcListFeeAfterCalculation(CalcListFee calcListFee, final FeeBAiResult calcResult, RoundContext currencyPrecisionRoundContext) {
 		updateCalcListFeeByCalculationResult(calcListFee, calcResult, currencyPrecisionRoundContext);
@@ -333,10 +333,10 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * Изменить начисление/удержание в соответсвии с результатами расчета
-	 * @param calcListFee - начисление/удержание
-	 * @param calcResult - результаты расчета
-	 * @param currencyPrecisionRoundContext - контекст округления денежных величин
+	 * РР·РјРµРЅРёС‚СЊ РЅР°С‡РёСЃР»РµРЅРёРµ/СѓРґРµСЂР¶Р°РЅРёРµ РІ СЃРѕРѕС‚РІРµС‚СЃРІРёРё СЃ СЂРµР·СѓР»СЊС‚Р°С‚Р°РјРё СЂР°СЃС‡РµС‚Р°
+	 * @param calcListFee - РЅР°С‡РёСЃР»РµРЅРёРµ/СѓРґРµСЂР¶Р°РЅРёРµ
+	 * @param calcResult - СЂРµР·СѓР»СЊС‚Р°С‚С‹ СЂР°СЃС‡РµС‚Р°
+	 * @param currencyPrecisionRoundContext - РєРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ РґРµРЅРµР¶РЅС‹С… РІРµР»РёС‡РёРЅ
 	 */
 	protected void updateCalcListFeeByCalculationResult(CalcListFee calcListFee, final FeeBAiResult calcResult, RoundContext currencyPrecisionRoundContext) {
 		calcListFee.setSumma(MathUtils.round(calcResult.getSum(), currencyPrecisionRoundContext));
@@ -366,8 +366,8 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * Получить контекст округления денежных величин (из конфигурации модуля "Справочник персонала")
-	 * @return контекст округления денежных величин
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ РґРµРЅРµР¶РЅС‹С… РІРµР»РёС‡РёРЅ (РёР· РєРѕРЅС„РёРіСѓСЂР°С†РёРё РјРѕРґСѓР»СЏ "РЎРїСЂР°РІРѕС‡РЅРёРє РїРµСЂСЃРѕРЅР°Р»Р°")
+	 * @return РєРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ РґРµРЅРµР¶РЅС‹С… РІРµР»РёС‡РёРЅ
 	 */
 	protected RoundContext getCurrencyPrecisionRoundContext() {
 		return new RoundContext(getModuleConfiguration().getCurrencyPrec());
@@ -395,9 +395,9 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * Получить список начислений/удержаний расчетного листка
-	 * @param calcList - расчетный листок
-	 * @return список начислений/удержаний расчетного листка
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№ СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚РєР°
+	 * @param calcList - СЂР°СЃС‡РµС‚РЅС‹Р№ Р»РёСЃС‚РѕРє
+	 * @return СЃРїРёСЃРѕРє РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№ СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚РєР°
 	 */
 	protected List<CalcListFee> getFeesFromCalcList(CalcList calcList) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(CalcListFee.class)
@@ -420,12 +420,12 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	protected void addFeeToCalcList(CalcList calcList, FeeModel feeModel, CalculationParams calculationParams) {
-		CalcListFeeServiceLocal сalcListFeeService = getCalcListFeeService();
-		createCalcListFee(initializeCalcListFee(feeModel, getCalcListSectionByCalcListAndReferencedCalcListSection(calcList, feeModel.getFeeRef().getCalcListSectionRef()), calculationParams.getPeriodBeginDate(), calculationParams.getPeriodEndDate(), сalcListFeeService), сalcListFeeService);
+		CalcListFeeServiceLocal СЃalcListFeeService = getCalcListFeeService();
+		createCalcListFee(initializeCalcListFee(feeModel, getCalcListSectionByCalcListAndReferencedCalcListSection(calcList, feeModel.getFeeRef().getCalcListSectionRef()), calculationParams.getPeriodBeginDate(), calculationParams.getPeriodEndDate(), СЃalcListFeeService), СЃalcListFeeService);
 	}
 
-	protected CalcListFee initializeCalcListFee(FeeModel feeModel, CalcListSection calcListSection, Date periodBeginDate, Date periodEndDate, CalcListFeeServiceLocal сalcListFeeService) {
-		CalcListFee calcListFee = сalcListFeeService.initialize();
+	protected CalcListFee initializeCalcListFee(FeeModel feeModel, CalcListSection calcListSection, Date periodBeginDate, Date periodEndDate, CalcListFeeServiceLocal СЃalcListFeeService) {
+		CalcListFee calcListFee = СЃalcListFeeService.initialize();
 		calcListFee.setCalcListSection(calcListSection);
 		calcListFee.setFeeModel(feeModel);
 		calcListFee.setBeginDate(PersonnelrefUtils.getMaxDate(feeModel.getBeginDate(), periodBeginDate));
@@ -449,15 +449,15 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 		return calcListFee;
 	}
 
-	protected void createCalcListFee(CalcListFee calcListFee, CalcListFeeServiceLocal сalcListFeeService) {
-		сalcListFeeService.create(calcListFee);
+	protected void createCalcListFee(CalcListFee calcListFee, CalcListFeeServiceLocal СЃalcListFeeService) {
+		СЃalcListFeeService.create(calcListFee);
 	}
 
 	/**
-	 * Получить раздел расчетного листка
-	 * @param calcList - расчетный листок
-	 * @param referenceCalcListSection - раздел расчетного листка из справочника
-	 * @return раздел расчетного листка
+	 * РџРѕР»СѓС‡РёС‚СЊ СЂР°Р·РґРµР» СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚РєР°
+	 * @param calcList - СЂР°СЃС‡РµС‚РЅС‹Р№ Р»РёСЃС‚РѕРє
+	 * @param referenceCalcListSection - СЂР°Р·РґРµР» СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚РєР° РёР· СЃРїСЂР°РІРѕС‡РЅРёРєР°
+	 * @return СЂР°Р·РґРµР» СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚РєР°
 	 */
 	protected CalcListSection getCalcListSectionByCalcListAndReferencedCalcListSection(CalcList calcList, CalcListSectionRef referenceCalcListSection) {
 		List<CalcListSection> calcListSections = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(CalcListSection.class)
@@ -471,8 +471,8 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * Очистить расчетный листок
-	 * @param calcList - расчетный листок
+	 * РћС‡РёСЃС‚РёС‚СЊ СЂР°СЃС‡РµС‚РЅС‹Р№ Р»РёСЃС‚РѕРє
+	 * @param calcList - СЂР°СЃС‡РµС‚РЅС‹Р№ Р»РёСЃС‚РѕРє
 	 */
 	protected void clearCalcList(CalcList calcList) {
 		final String PARAM_NAME = "calcList"; //$NON-NLS-1$
@@ -487,58 +487,58 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * Подготовить начисления/удержания для проведения расчета
-	 * @param calcList - расчетный листок
-	 * @param positionFill - занимаемая должность
-	 * @param feeModel - образец начисления/удержания
-	 * @param feeModelList - список образцов начислений/удержаний
-	 * @param calculationParams - параметры расчета
-	 * @return true - если требуется перерасчет
+	 * РџРѕРґРіРѕС‚РѕРІРёС‚СЊ РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ РґР»СЏ РїСЂРѕРІРµРґРµРЅРёСЏ СЂР°СЃС‡РµС‚Р°
+	 * @param calcList - СЂР°СЃС‡РµС‚РЅС‹Р№ Р»РёСЃС‚РѕРє
+	 * @param positionFill - Р·Р°РЅРёРјР°РµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param feeModel - РѕР±СЂР°Р·РµС† РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ
+	 * @param feeModelList - СЃРїРёСЃРѕРє РѕР±СЂР°Р·С†РѕРІ РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№
+	 * @param calculationParams - РїР°СЂР°РјРµС‚СЂС‹ СЂР°СЃС‡РµС‚Р°
+	 * @return true - РµСЃР»Рё С‚СЂРµР±СѓРµС‚СЃСЏ РїРµСЂРµСЂР°СЃС‡РµС‚
 	 */
 	protected boolean doPrepareCalcListFee(CalcList calcList, PositionFill positionFill, FeeModel feeModel, List<FeeModel> feeModelList, CalculationParams calculationParams) {
 		boolean isNeedRecalc = false;
 		Date feeBeginDate;
 		Date feeEndDate;
 
-		// если период в образце н/у не указан, то учитываем расчетный период
+		// РµСЃР»Рё РїРµСЂРёРѕРґ РІ РѕР±СЂР°Р·С†Рµ РЅ/Сѓ РЅРµ СѓРєР°Р·Р°РЅ, С‚Рѕ СѓС‡РёС‚С‹РІР°РµРј СЂР°СЃС‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ
 		if(feeModel.getCalcPeriod() == null) {
 			feeBeginDate = PersonnelrefUtils.getMaxDate(feeModel.getBeginDate(), calculationParams.getPeriodBeginDate());
 			feeEndDate = PersonnelrefUtils.getMinDate(feeModel.getEndDate(), calculationParams.getPeriodEndDate());
 		}
-		else { // иначе рассчитать строго по диапазону действия н/у
+		else { // РёРЅР°С‡Рµ СЂР°СЃСЃС‡РёС‚Р°С‚СЊ СЃС‚СЂРѕРіРѕ РїРѕ РґРёР°РїР°Р·РѕРЅСѓ РґРµР№СЃС‚РІРёСЏ РЅ/Сѓ
 			feeBeginDate = feeModel.getBeginDate();
 			feeEndDate = feeModel.getEndDate();
 		}
 
-		List<DateInterval> dateIntervals1 = new ArrayList<DateInterval>(); // интервалы без вытеснений
-		// выделим интервалы на которых начиление не вытесняется
+		List<DateInterval> dateIntervals1 = new ArrayList<DateInterval>(); // РёРЅС‚РµСЂРІР°Р»С‹ Р±РµР· РІС‹С‚РµСЃРЅРµРЅРёР№
+		// РІС‹РґРµР»РёРј РёРЅС‚РµСЂРІР°Р»С‹ РЅР° РєРѕС‚РѕСЂС‹С… РЅР°С‡РёР»РµРЅРёРµ РЅРµ РІС‹С‚РµСЃРЅСЏРµС‚СЃСЏ
 		if(!getNotReplacedIntervals(feeModel, feeModelList, feeBeginDate, feeEndDate, dateIntervals1))
 			return isNeedRecalc;
 
-		List<DateInterval> dateIntervals2 = new ArrayList<DateInterval>(); // интервалы постоянства тарифов
+		List<DateInterval> dateIntervals2 = new ArrayList<DateInterval>(); // РёРЅС‚РµСЂРІР°Р»С‹ РїРѕСЃС‚РѕСЏРЅСЃС‚РІР° С‚Р°СЂРёС„РѕРІ
 		for(int i = 0; i < dateIntervals1.size(); i++) {
-			// поверим, все ли тарифы есть для данного алгоритма в данном периоде
+			// РїРѕРІРµСЂРёРј, РІСЃРµ Р»Рё С‚Р°СЂРёС„С‹ РµСЃС‚СЊ РґР»СЏ РґР°РЅРЅРѕРіРѕ Р°Р»РіРѕСЂРёС‚РјР° РІ РґР°РЅРЅРѕРј РїРµСЂРёРѕРґРµ
 			if(!getTariffsPermanencyIntervals(feeModel, calculationParams.getStaffList(), positionFill, dateIntervals1.get(i).beginDate, dateIntervals1.get(i).endDate, dateIntervals2))
 				return isNeedRecalc;
 
-			// выберем из справочника те параметры, которых нет в образце
+			// РІС‹Р±РµСЂРµРј РёР· СЃРїСЂР°РІРѕС‡РЅРёРєР° С‚Рµ РїР°СЂР°РјРµС‚СЂС‹, РєРѕС‚РѕСЂС‹С… РЅРµС‚ РІ РѕР±СЂР°Р·С†Рµ
 			List<Integer> feeRefParamIds = getParamIdListFromFeeRef(feeModel);
 
-			// цикл по временным интервалам
+			// С†РёРєР» РїРѕ РІСЂРµРјРµРЅРЅС‹Рј РёРЅС‚РµСЂРІР°Р»Р°Рј
 			for(int j = 0; j < dateIntervals2.size(); j++) {
-				// создадим начисление в расчетном листке (с теми параметрами, которые есть в образце)
+				// СЃРѕР·РґР°РґРёРј РЅР°С‡РёСЃР»РµРЅРёРµ РІ СЂР°СЃС‡РµС‚РЅРѕРј Р»РёСЃС‚РєРµ (СЃ С‚РµРјРё РїР°СЂР°РјРµС‚СЂР°РјРё, РєРѕС‚РѕСЂС‹Рµ РµСЃС‚СЊ РІ РѕР±СЂР°Р·С†Рµ)
 				CalcListFee calcListFee = initializeCalcListFee(feeModel, getCalcListSectionByCalcListAndReferencedCalcListSection(calcList, feeModel.getFeeRef().getCalcListSectionRef()));
 				createCalcListFee(calcListFee, getCalcListFeeService());
 
-				// добавление параметров
+				// РґРѕР±Р°РІР»РµРЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ
 				for(int k = 0; k < feeRefParamIds.size(); k++) {
 					FeeRefParam feeRefParam = ServerUtils.getPersistentManager().find(FeeRefParam.class, feeRefParamIds.get(k));
 					CalcListFeeParam calcListFeeParam = getCalcListFeeParamService().initialize();
 
-					// если есть алгоритм, то установим нулевое значение параметра
+					// РµСЃР»Рё РµСЃС‚СЊ Р°Р»РіРѕСЂРёС‚Рј, С‚Рѕ СѓСЃС‚Р°РЅРѕРІРёРј РЅСѓР»РµРІРѕРµ Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°
 					if(feeRefParam.getCalcAlg() != null)
 						calcListFeeParam.setParamValue(StringUtils.EMPTY_STRING);
-					else { // если нет, то установим пустой параметр и выставим признак "требуется перерасчет"
+					else { // РµСЃР»Рё РЅРµС‚, С‚Рѕ СѓСЃС‚Р°РЅРѕРІРёРј РїСѓСЃС‚РѕР№ РїР°СЂР°РјРµС‚СЂ Рё РІС‹СЃС‚Р°РІРёРј РїСЂРёР·РЅР°Рє "С‚СЂРµР±СѓРµС‚СЃСЏ РїРµСЂРµСЂР°СЃС‡РµС‚"
 						calcListFeeParam.setParamValue(null);
 						isNeedRecalc = true;
 					}
@@ -549,7 +549,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 					createCalcListFeeParam(calcListFeeParam);
 				}
 
-				// запись начисления
+				// Р·Р°РїРёСЃСЊ РЅР°С‡РёСЃР»РµРЅРёСЏ
 				makeAccrual(calcListFee, feeModel, dateIntervals2.get(j).beginDate, dateIntervals2.get(j).endDate, calculationParams.getPeriodBeginDate(), calculationParams.getPeriodEndDate());
 				storeCalcListFee(calcListFee);
 			}
@@ -571,9 +571,9 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * Получить из справочника список идентификаторов тех параметров, которых нет в образце начисления/удержания
-	 * @param feeModel - образец начислений/удержаний
-	 * @return список идентификаторов тех параметров, которых нет в образце начисления/удержания
+	 * РџРѕР»СѓС‡РёС‚СЊ РёР· СЃРїСЂР°РІРѕС‡РЅРёРєР° СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ С‚РµС… РїР°СЂР°РјРµС‚СЂРѕРІ, РєРѕС‚РѕСЂС‹С… РЅРµС‚ РІ РѕР±СЂР°Р·С†Рµ РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ
+	 * @param feeModel - РѕР±СЂР°Р·РµС† РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№
+	 * @return СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ С‚РµС… РїР°СЂР°РјРµС‚СЂРѕРІ, РєРѕС‚РѕСЂС‹С… РЅРµС‚ РІ РѕР±СЂР°Р·С†Рµ РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ
 	 */
 	private List<Integer> getParamIdListFromFeeRef(FeeModel feeModel) {
 		Object[] queryParams = new Object[] {feeModel.getId()};
@@ -598,58 +598,58 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 
 	private boolean getNotReplacedIntervals(FeeModel feeModel, List<FeeModel> feeModelList, Date intervalBeginDate, Date intervalEndDate, List<DateInterval> dateIntervals) {
 		boolean result = true;
-		// границы действия начислений
+		// РіСЂР°РЅРёС†С‹ РґРµР№СЃС‚РІРёСЏ РЅР°С‡РёСЃР»РµРЅРёР№
 		int feeBeginDate;
 		int feeEndDate;
-		// если TRUE, то в этот день не вытесняется
+		// РµСЃР»Рё TRUE, С‚Рѕ РІ СЌС‚РѕС‚ РґРµРЅСЊ РЅРµ РІС‹С‚РµСЃРЅСЏРµС‚СЃСЏ
 		boolean notReplacedDays[];
 
-		// загрузим из справочника список начислений, которые вытесняют данное
+		// Р·Р°РіСЂСѓР·РёРј РёР· СЃРїСЂР°РІРѕС‡РЅРёРєР° СЃРїРёСЃРѕРє РЅР°С‡РёСЃР»РµРЅРёР№, РєРѕС‚РѕСЂС‹Рµ РІС‹С‚РµСЃРЅСЏСЋС‚ РґР°РЅРЅРѕРµ
 		List<ReplacedFee> replacedFeeList = getReplacedFeeList(feeModel.getFeeRef());
 
-		// нет вытесняющих начислений
+		// РЅРµС‚ РІС‹С‚РµСЃРЅСЏСЋС‰РёС… РЅР°С‡РёСЃР»РµРЅРёР№
 		if(replacedFeeList.size() == 0) {
 			dateIntervals.add(new DateInterval(intervalBeginDate, intervalEndDate));
 			return result;
 		}
 
-		// в начальном состоянии весь интервал не вытеснен
+		// РІ РЅР°С‡Р°Р»СЊРЅРѕРј СЃРѕСЃС‚РѕСЏРЅРёРё РІРµСЃСЊ РёРЅС‚РµСЂРІР°Р» РЅРµ РІС‹С‚РµСЃРЅРµРЅ
 		notReplacedDays = new boolean[(int) DateTimeUtils.getDaysBetween(intervalEndDate, intervalBeginDate) + 1];
 		for(int i = 0; i < notReplacedDays.length; i++)
 			notReplacedDays[i] = true;
 
-		// составим список невытесненных дней
+		// СЃРѕСЃС‚Р°РІРёРј СЃРїРёСЃРѕРє РЅРµРІС‹С‚РµСЃРЅРµРЅРЅС‹С… РґРЅРµР№
 		for(int i = 0; i < feeModelList.size(); i++) {
 			for(int j = 0; j < replacedFeeList.size(); j++) {
-				// найдем в лицевом счете вытесняющие начисления
+				// РЅР°Р№РґРµРј РІ Р»РёС†РµРІРѕРј СЃС‡РµС‚Рµ РІС‹С‚РµСЃРЅСЏСЋС‰РёРµ РЅР°С‡РёСЃР»РµРЅРёСЏ
 				if(replacedFeeList.get(j).getFeeRef().getId() == feeModelList.get(i).getFeeRef().getId()) {
 					FeeModel currentFeeModel = feeModelList.get(i);
 					feeBeginDate = getIntDate(PersonnelrefUtils.getMaxDate(currentFeeModel.getBeginDate(), intervalBeginDate));
 					feeEndDate = getIntDate(PersonnelrefUtils.getMinDate(currentFeeModel.getEndDate(), intervalEndDate));
-					// установим признак, что день вытеснен
+					// СѓСЃС‚Р°РЅРѕРІРёРј РїСЂРёР·РЅР°Рє, С‡С‚Рѕ РґРµРЅСЊ РІС‹С‚РµСЃРЅРµРЅ
 					for(int k = feeBeginDate; k <= feeEndDate; k++)
 						notReplacedDays[k - getIntDate(intervalBeginDate)] = false;
 				}
 			}
 		}
 
-		// разобъем список на интервалы дат
+		// СЂР°Р·РѕР±СЉРµРј СЃРїРёСЃРѕРє РЅР° РёРЅС‚РµСЂРІР°Р»С‹ РґР°С‚
 		boolean intervalIsOpen = false;
 		int j = 0;
 		for(int i = 0; i < notReplacedDays.length; i++) {
 			if(!notReplacedDays[i] && intervalIsOpen) {
-				// закроем интервал
+				// Р·Р°РєСЂРѕРµРј РёРЅС‚РµСЂРІР°Р»
 				dateIntervals.get(j - 1).endDate = DateTimeUtils.incDay(intervalBeginDate, i - 1);
 				intervalIsOpen = false;
 			}
 			if(notReplacedDays[i] && !intervalIsOpen) {
-				// откроем интервал
+				// РѕС‚РєСЂРѕРµРј РёРЅС‚РµСЂРІР°Р»
 				j++;
 				dateIntervals.add(new DateInterval(DateTimeUtils.incDay(intervalBeginDate, i), null)); // BeginDate
 				intervalIsOpen = true;
 			}
 		}
-		// закроем последний интервал
+		// Р·Р°РєСЂРѕРµРј РїРѕСЃР»РµРґРЅРёР№ РёРЅС‚РµСЂРІР°Р»
 		if(intervalIsOpen)
 			dateIntervals.get(j - 1).endDate = intervalEndDate;
 
@@ -661,12 +661,12 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 
 	private boolean getTariffsPermanencyIntervals(FeeModel feeModel, StaffList staffList,  PositionFill positionFill, Date intervalBeginDate, Date intervalEndDate, List<DateInterval> dateIntervals) {
 		boolean result = true;
-		// возьмем список тарифов, действующих в текущий расчетный период
+		// РІРѕР·СЊРјРµРј СЃРїРёСЃРѕРє С‚Р°СЂРёС„РѕРІ, РґРµР№СЃС‚РІСѓСЋС‰РёС… РІ С‚РµРєСѓС‰РёР№ СЂР°СЃС‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ
 		List<PeriodTarif> periodTarifs = getGetUsedTariffing(feeModel.getFeeRef(), positionFill, intervalBeginDate, intervalEndDate, staffList);
 
-		// проверим есть ли все нужные тарифы в лицевом счете (без учета дат)
+		// РїСЂРѕРІРµСЂРёРј РµСЃС‚СЊ Р»Рё РІСЃРµ РЅСѓР¶РЅС‹Рµ С‚Р°СЂРёС„С‹ РІ Р»РёС†РµРІРѕРј СЃС‡РµС‚Рµ (Р±РµР· СѓС‡РµС‚Р° РґР°С‚)
 		for(PeriodTarif periodTarif : periodTarifs) {
-			if(periodTarif.tarifId == null) { // один из тарифов вообще отсутствует
+			if(periodTarif.tarifId == null) { // РѕРґРёРЅ РёР· С‚Р°СЂРёС„РѕРІ РІРѕРѕР±С‰Рµ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚
 				result = false;
 				break;
 			}
@@ -674,10 +674,10 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 		if(!result)
 			return result;
 
-		// возьмем список категорий тарификации должности, используемых в начислении
+		// РІРѕР·СЊРјРµРј СЃРїРёСЃРѕРє РєР°С‚РµРіРѕСЂРёР№ С‚Р°СЂРёС„РёРєР°С†РёРё РґРѕР»Р¶РЅРѕСЃС‚Рё, РёСЃРїРѕР»СЊР·СѓРµРјС‹С… РІ РЅР°С‡РёСЃР»РµРЅРёРё
 		List<TariffingCategory> categories = getTarrifingCategories(feeModel.getFeeRef());
 
-		// тарифы не используются
+		// С‚Р°СЂРёС„С‹ РЅРµ РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ
 		if(categories.isEmpty()) {
 			dateIntervals.add(new DateInterval(intervalBeginDate, intervalEndDate));
 			return result;
@@ -686,15 +686,15 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 		Integer[] currentTariffsId = new Integer[categories.size()];
 		Integer[] yesterdayTariffsId = new Integer[categories.size()];
 
-		// определим интервалы постоянства тарифов
-		// для этого в пределах расчетного периода сделаем цикл по дням
+		// РѕРїСЂРµРґРµР»РёРј РёРЅС‚РµСЂРІР°Р»С‹ РїРѕСЃС‚РѕСЏРЅСЃС‚РІР° С‚Р°СЂРёС„РѕРІ
+		// РґР»СЏ СЌС‚РѕРіРѕ РІ РїСЂРµРґРµР»Р°С… СЂР°СЃС‡РµС‚РЅРѕРіРѕ РїРµСЂРёРѕРґР° СЃРґРµР»Р°РµРј С†РёРєР» РїРѕ РґРЅСЏРј
 		Date currentDate = intervalBeginDate;
 		boolean intervalIsOpen = false;
 		int j = 0;
 		while(currentDate.compareTo(intervalEndDate) <= 0) {
 			boolean isMissingTariff = false;
 			boolean isChangedTariff = false;
-			// заполним список текущих тарифов
+			// Р·Р°РїРѕР»РЅРёРј СЃРїРёСЃРѕРє С‚РµРєСѓС‰РёС… С‚Р°СЂРёС„РѕРІ
 			for(int i = 0; i < categories.size(); i++) {
 				currentTariffsId[i] = findTariff(currentDate, categories.get(i), periodTarifs);
 				if(currentTariffsId[i] == null)
@@ -703,30 +703,30 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 					isChangedTariff = true;
 			}
 
-			// проанализируем список
-			if(isMissingTariff) { // нет одного из тарифов
+			// РїСЂРѕР°РЅР°Р»РёР·РёСЂСѓРµРј СЃРїРёСЃРѕРє
+			if(isMissingTariff) { // РЅРµС‚ РѕРґРЅРѕРіРѕ РёР· С‚Р°СЂРёС„РѕРІ
 				if(intervalIsOpen) {
-					// закроем текущий интервал
+					// Р·Р°РєСЂРѕРµРј С‚РµРєСѓС‰РёР№ РёРЅС‚РµСЂРІР°Р»
 					dateIntervals.get(j - 1).endDate = DateTimeUtils.incDay(currentDate, -1); // EndDate
 					intervalIsOpen = false;
 				}
 			}
-			else if(isChangedTariff) { // один из тарифов изменился
+			else if(isChangedTariff) { // РѕРґРёРЅ РёР· С‚Р°СЂРёС„РѕРІ РёР·РјРµРЅРёР»СЃСЏ
 				if(intervalIsOpen) {
-					// закроем текущий интервал
+					// Р·Р°РєСЂРѕРµРј С‚РµРєСѓС‰РёР№ РёРЅС‚РµСЂРІР°Р»
 					dateIntervals.get(j - 1).endDate = DateTimeUtils.incDay(currentDate, -1); // EndDate
 				}
-				// откроем новый интервал
+				// РѕС‚РєСЂРѕРµРј РЅРѕРІС‹Р№ РёРЅС‚РµСЂРІР°Р»
 				j++;
 				dateIntervals.add(new DateInterval(currentDate, null)); // BeginDate
 				intervalIsOpen = true;
 			}
-			// установим курсор на следующий день
+			// СѓСЃС‚Р°РЅРѕРІРёРј РєСѓСЂСЃРѕСЂ РЅР° СЃР»РµРґСѓСЋС‰РёР№ РґРµРЅСЊ
 			for(int i = 0; i < categories.size(); i++)
 				yesterdayTariffsId[i] = currentTariffsId[i];
 			currentDate = DateTimeUtils.incDay(currentDate, 1);
 		}
-		// закроем последний интервал
+		// Р·Р°РєСЂРѕРµРј РїРѕСЃР»РµРґРЅРёР№ РёРЅС‚РµСЂРІР°Р»
 		if(intervalIsOpen)
 			dateIntervals.get(j - 1).endDate = DateTimeUtils.incDay(currentDate, -1); // EndDate
 
@@ -846,8 +846,8 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 
 
 	/**
-	 * Добавить список разделов расчетного листка (из справочника)
-	 * @param calcList - расчетный листок
+	 * Р”РѕР±Р°РІРёС‚СЊ СЃРїРёСЃРѕРє СЂР°Р·РґРµР»РѕРІ СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚РєР° (РёР· СЃРїСЂР°РІРѕС‡РЅРёРєР°)
+	 * @param calcList - СЂР°СЃС‡РµС‚РЅС‹Р№ Р»РёСЃС‚РѕРє
 	 */
 	protected void addCalcListSections(CalcList calcList) {
 		CalcListSectionServiceLocal calcListSectionService = getCalcListSectionService();
@@ -1025,8 +1025,8 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 		}
 
 		/**
-		 * @param beginDate - начальная дата интервала
-		 * @param endDate - конечная дата интервала
+		 * @param beginDate - РЅР°С‡Р°Р»СЊРЅР°СЏ РґР°С‚Р° РёРЅС‚РµСЂРІР°Р»Р°
+		 * @param endDate - РєРѕРЅРµС‡РЅР°СЏ РґР°С‚Р° РёРЅС‚РµСЂРІР°Р»Р°
 		 */
 		public DateInterval(Date beginDate, Date endDate) {
 			this.beginDate = beginDate;

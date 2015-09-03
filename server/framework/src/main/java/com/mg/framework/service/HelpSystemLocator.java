@@ -19,7 +19,7 @@ import com.mg.framework.api.help.HelpSystem;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Локатор сервиса системы помощи
+ * Р›РѕРєР°С‚РѕСЂ СЃРµСЂРІРёСЃР° СЃРёСЃС‚РµРјС‹ РїРѕРјРѕС‰Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: HelpSystemLocator.java,v 1.1 2006/11/11 10:34:32 safonov Exp $
@@ -28,10 +28,10 @@ public class HelpSystemLocator {
     private static volatile HelpSystem instance = null;
     
     /**
-     * поиск сервиса
+     * РїРѕРёСЃРє СЃРµСЂРІРёСЃР°
      * 
-     * @return	сервис
-     * @throws ApplicationException	при возникновении любых ошибок
+     * @return	СЃРµСЂРІРёСЃ
+     * @throws ApplicationException	РїСЂРё РІРѕР·РЅРёРєРЅРѕРІРµРЅРёРё Р»СЋР±С‹С… РѕС€РёР±РѕРє
      */
     public static HelpSystem locate() throws ApplicationException {
         if (instance == null)

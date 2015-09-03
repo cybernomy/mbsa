@@ -17,7 +17,7 @@ package com.mg.merp.paymentcontrol.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Периоды планирования"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРµСЂРёРѕРґС‹ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmcPeriod.java,v 1.5 2007/05/14 05:12:10 sharapov Exp $

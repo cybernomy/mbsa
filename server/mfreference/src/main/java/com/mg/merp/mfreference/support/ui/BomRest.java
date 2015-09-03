@@ -29,7 +29,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер условий отбора состава изделий
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° СЃРѕСЃС‚Р°РІР° РёР·РґРµР»РёР№
  * 
  * @author leonova
  * @version $Id: BomRest.java,v 1.4 2007/07/30 10:24:19 safonov Exp $ 

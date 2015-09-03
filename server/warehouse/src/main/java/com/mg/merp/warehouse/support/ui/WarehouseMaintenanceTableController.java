@@ -32,7 +32,7 @@ import com.mg.merp.warehouse.WarehouseServiceLocal;
 import com.mg.merp.warehouse.model.Warehouse;
 
 /**
- * Реализация адаптера таблицы поддержки складов
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р°РґР°РїС‚РµСЂР° С‚Р°Р±Р»РёС†С‹ РїРѕРґРґРµСЂР¶РєРё СЃРєР»Р°РґРѕРІ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseMaintenanceTableController.java,v 1.2 2008/05/23 16:10:21 safonov Exp $ 

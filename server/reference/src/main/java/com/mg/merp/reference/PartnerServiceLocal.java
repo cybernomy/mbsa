@@ -18,38 +18,38 @@ import com.mg.merp.reference.model.BankAccount;
 import com.mg.merp.reference.model.Partner;
 
 /**
- * Бизнес-компонент "Партнеры"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџР°СЂС‚РЅРµСЂС‹"
  * 
  * @author leonova
  * @version $Id: PartnerServiceLocal.java,v 1.5 2007/11/08 14:51:10 sharapov Exp $
  */
 public interface PartnerServiceLocal extends com.mg.merp.reference.Contractor<Partner> {
 	/**
-	 * тип папки для партнеров
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РїР°СЂС‚РЅРµСЂРѕРІ
 	 */
 	final static short FOLDER_PART = 1;
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/reference/Partner";
 	
 	/**
-	 * формирует полный почтовый адрес
+	 * С„РѕСЂРјРёСЂСѓРµС‚ РїРѕР»РЅС‹Р№ РїРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ
 	 * 
-	 * @param partner партнер
+	 * @param partner РїР°СЂС‚РЅРµСЂ
 	 */
 	void getFullAddress(Partner partner); 
 	/**
-	 * формирует полный юридический адрес
+	 * С„РѕСЂРјРёСЂСѓРµС‚ РїРѕР»РЅС‹Р№ СЋСЂРёРґРёС‡РµСЃРєРёР№ Р°РґСЂРµСЃ
 	 * 
-	 * @param partner партнер
+	 * @param partner РїР°СЂС‚РЅРµСЂ
 	 */
 	void getFullAddressLegal(Partner partner);
 	
 	/**
-	 * Получить банковский счет по умолчанию 
-	 * @param partner - партнер
-	 * @return банковский счет по умолчанию, или <code>null</code> если не найден
+	 * РџРѕР»СѓС‡РёС‚СЊ Р±Р°РЅРєРѕРІСЃРєРёР№ СЃС‡РµС‚ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ 
+	 * @param partner - РїР°СЂС‚РЅРµСЂ
+	 * @return Р±Р°РЅРєРѕРІСЃРєРёР№ СЃС‡РµС‚ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	BankAccount getDefaultBankAccount(Partner partner);
 	

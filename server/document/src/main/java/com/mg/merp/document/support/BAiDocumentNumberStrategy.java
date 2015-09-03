@@ -23,7 +23,7 @@ import com.mg.merp.document.generic.AbstractDocumentNumberStrategy;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Стратегия формирования номера через BAi
+ * РЎС‚СЂР°С‚РµРіРёСЏ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РЅРѕРјРµСЂР° С‡РµСЂРµР· BAi
  * 
  * @author Oleg V. Safonov
  * @version $Id: BAiDocumentNumberStrategy.java,v 1.2 2007/03/23 14:33:23 safonov Exp $

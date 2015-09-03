@@ -23,7 +23,7 @@ import com.mg.framework.generic.ui.DefaultCompoundMaintenanceForm;
 import com.mg.merp.reference.OriginalDocumentServiceLocal;
 
 /**
- * Котроллер формы поддержки бизнес-компонента "Оригиналы документов"
+ * РљРѕС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЂРёРіРёРЅР°Р»С‹ РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author leonova
  * @version $Id: OriginalDocumentMt.java,v 1.3 2008/12/29 13:08:40 safonov Exp $
@@ -35,7 +35,7 @@ public class OriginalDocumentMt extends DefaultCompoundMaintenanceForm {
 	}
 	
 	/**
-	 * обработчик загрузки оригинала на клиента
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РіСЂСѓР·РєРё РѕСЂРёРіРёРЅР°Р»Р° РЅР° РєР»РёРµРЅС‚Р°
 	 * 
 	 * @param event
 	 */
@@ -44,7 +44,7 @@ public class OriginalDocumentMt extends DefaultCompoundMaintenanceForm {
 	}
 
 	/**
-	 * обработчик загрузки оригинала в систему
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РіСЂСѓР·РєРё РѕСЂРёРіРёРЅР°Р»Р° РІ СЃРёСЃС‚РµРјСѓ
 	 * 
 	 * @param event
 	 */
@@ -53,7 +53,7 @@ public class OriginalDocumentMt extends DefaultCompoundMaintenanceForm {
 	}
 
 	/**
-	 * обработчик удаления оригиналов
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СѓРґР°Р»РµРЅРёСЏ РѕСЂРёРіРёРЅР°Р»РѕРІ
 	 * 
 	 * @param event
 	 */
@@ -62,7 +62,7 @@ public class OriginalDocumentMt extends DefaultCompoundMaintenanceForm {
 	}
 
 	/**
-	 * обработчик показа оригиналов
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РїРѕРєР°Р·Р° РѕСЂРёРіРёРЅР°Р»РѕРІ
 	 * 
 	 * @param event
 	 */

@@ -22,7 +22,7 @@ import com.mg.merp.document.DocumentSpecSerialNumServiceLocal;
 import com.mg.merp.document.model.DocumentSpecSerialNum;
 
 /**
- * Бизнес-компонент "Серийные номера" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРµСЂРёР№РЅС‹Рµ РЅРѕРјРµСЂР°" 
  * 
  * @author leonova
  * @version $Id: DocumentSpecSerialNumServiceBean.java,v 1.3 2006/08/22 07:13:46 leonova Exp $

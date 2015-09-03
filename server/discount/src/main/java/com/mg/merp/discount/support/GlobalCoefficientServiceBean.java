@@ -24,7 +24,7 @@ import com.mg.merp.discount.GlobalCoefficientServiceLocal;
 import com.mg.merp.discount.model.Coefficient;
 
 /**
- * Бизнес-компонент "Коэффициенты каталога" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљРѕСЌС„С„РёС†РёРµРЅС‚С‹ РєР°С‚Р°Р»РѕРіР°" 
  * 
  * @author leonova
  * @version $Id: GlobalCoefficientServiceBean.java,v 1.5 2008/05/22 09:44:35 alikaev Exp $

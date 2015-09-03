@@ -34,7 +34,7 @@ import com.mg.merp.contract.model.PhaseFactItem;
 import com.mg.merp.document.support.DocumentUtils;
 
 /**
- * Контроллер формы поддержки фактических пунктов контракта
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё С„Р°РєС‚РёС‡РµСЃРєРёС… РїСѓРЅРєС‚РѕРІ РєРѕРЅС‚СЂР°РєС‚Р°
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -111,8 +111,8 @@ public class PhaseFactItemMt extends DefaultMaintenanceForm implements MasterMod
 	}
 
 	/**
-	 * Сделать доступными/недоступными для редактирования поля с указанием типа, номера и даты документа
-	 * @param isEnabled - признак доступности для редактирования
+	 * РЎРґРµР»Р°С‚СЊ РґРѕСЃС‚СѓРїРЅС‹РјРё/РЅРµРґРѕСЃС‚СѓРїРЅС‹РјРё РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РїРѕР»СЏ СЃ СѓРєР°Р·Р°РЅРёРµРј С‚РёРїР°, РЅРѕРјРµСЂР° Рё РґР°С‚С‹ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param isEnabled - РїСЂРёР·РЅР°Рє РґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
 	 */
 	protected void setDocumentFieldsEnabled(boolean isEnabled) {
 		view.getWidget(DOCUMENT_TYPE_WIDGET_NAME).setReadOnly(!isEnabled);
@@ -121,16 +121,16 @@ public class PhaseFactItemMt extends DefaultMaintenanceForm implements MasterMod
 	}
 
 	/**
-	 * Обработчик просмотра документа
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewDocument(WidgetEvent event) {
 		DocumentUtils.viewDocument(getEntity(), DOCUMENT_ATTRIBUTE_NAME);
 	}
 
 	/**
-	 * Обработчик кнопки "Рассчитать"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃСЃС‡РёС‚Р°С‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionAdjust(WidgetEvent event) {
 		((PhaseFactItemServiceLocal) getService()).adjust((PhaseFactItem) getEntity());

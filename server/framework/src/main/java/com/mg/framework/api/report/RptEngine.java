@@ -17,7 +17,7 @@ package com.mg.framework.api.report;
 import com.mg.framework.api.orm.PersistentObject;
 
 /**
- * Платформа MBIRT (Millennium BI and Report Tools)
+ * РџР»Р°С‚С„РѕСЂРјР° MBIRT (Millennium BI and Report Tools)
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -25,30 +25,30 @@ import com.mg.framework.api.orm.PersistentObject;
  */
 public interface RptEngine {
 	/**
-	 * Имя сервиса Генератора отчётов
+	 * РРјСЏ СЃРµСЂРІРёСЃР° Р“РµРЅРµСЂР°С‚РѕСЂР° РѕС‚С‡С‘С‚РѕРІ
 	 */
 	static final String SERVICE_NAME = "merp:service=RptEngineService";
 
 	/**
-	 * Запуск генерации и вывод отчета, при наличии нескольких шаблонов отчетов будет выполнен интерактивный запрос
-	 * выбора шаблона
+	 * Р—Р°РїСѓСЃРє РіРµРЅРµСЂР°С†РёРё Рё РІС‹РІРѕРґ РѕС‚С‡РµС‚Р°, РїСЂРё РЅР°Р»РёС‡РёРё РЅРµСЃРєРѕР»СЊРєРёС… С€Р°Р±Р»РѕРЅРѕРІ РѕС‚С‡РµС‚РѕРІ Р±СѓРґРµС‚ РІС‹РїРѕР»РЅРµРЅ РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹Р№ Р·Р°РїСЂРѕСЃ
+	 * РІС‹Р±РѕСЂР° С€Р°Р±Р»РѕРЅР°
 	 * 
-	 * @param properties	параметры отчёта
+	 * @param properties	РїР°СЂР°РјРµС‚СЂС‹ РѕС‚С‡С‘С‚Р°
 	 */
 	void runAndRenderReport(RptProperties properties);
 
 	/**
-	 * создание параметров генерации отчета
+	 * СЃРѕР·РґР°РЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ РіРµРЅРµСЂР°С†РёРё РѕС‚С‡РµС‚Р°
 	 * 
-	 * @return	экземпляр параметров генерации отчета
+	 * @return	СЌРєР·РµРјРїР»СЏСЂ РїР°СЂР°РјРµС‚СЂРѕРІ РіРµРЅРµСЂР°С†РёРё РѕС‚С‡РµС‚Р°
 	 */
 	RptProperties createProperies();
 
 	/**
-	 * Запуск генерации и вывод отчета с указанным шаблоном
+	 * Р—Р°РїСѓСЃРє РіРµРЅРµСЂР°С†РёРё Рё РІС‹РІРѕРґ РѕС‚С‡РµС‚Р° СЃ СѓРєР°Р·Р°РЅРЅС‹Рј С€Р°Р±Р»РѕРЅРѕРј
 	 * 
-	 * @param report	отчёт
-	 * @param properties	параметры печати отчёта
+	 * @param report	РѕС‚С‡С‘С‚
+	 * @param properties	РїР°СЂР°РјРµС‚СЂС‹ РїРµС‡Р°С‚Рё РѕС‚С‡С‘С‚Р°
 	 */
 	void runAndRenderReport(PersistentObject report, RptProperties properties);
 
@@ -62,10 +62,10 @@ public interface RptEngine {
 	Object getDelegate();
 
 	/**
-	 * получить контекст приложения для отчета
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС‚РµРєСЃС‚ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ РѕС‚С‡РµС‚Р°
 	 * 
-	 * @param contextId	идентификатор контекста приложения
-	 * @return	контекст или <code>null</code> если не установлен
+	 * @param contextId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРЅС‚РµРєСЃС‚Р° РїСЂРёР»РѕР¶РµРЅРёСЏ
+	 * @return	РєРѕРЅС‚РµРєСЃС‚ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ
 	 */
 	Object getReportContext(String contextId);
 	

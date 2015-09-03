@@ -39,7 +39,7 @@ import com.mg.merp.report.service.RptBIRTDeployer;
 import com.mg.merp.security.model.Groups;
 
 /**
- * Класс-реализация интерфейса {@link RptBIRTDeployer}
+ * РљР»Р°СЃСЃ-СЂРµР°Р»РёР·Р°С†РёСЏ РёРЅС‚РµСЂС„РµР№СЃР° {@link RptBIRTDeployer}
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -105,10 +105,10 @@ public class RptBIRTDeployerImpl implements RptBIRTDeployer {
 		try {
 			RptMain rpt = OrmTemplate.getInstance().findUniqueByCriteria(RptMain.class, Restrictions.eq("Code", rmt.code));
 			if (rpt == null)
-				// отсутствует запись с таким кодом
+				// РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ Р·Р°РїРёСЃСЊ СЃ С‚Р°РєРёРј РєРѕРґРѕРј
 				throw new ApplicationException(Messages.getInstance().getMessage(Messages.REPORT_MISSING, new Object[]{rmt.code}));
-			//дополнительная проверка на то, чтобы изменяли действительно тот отчёт, который забрали в репозитарий
-			//и из той же базы(в разных базах отчёты с одинаковым кодом)
+			//РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ РїСЂРѕРІРµСЂРєР° РЅР° С‚Рѕ, С‡С‚РѕР±С‹ РёР·РјРµРЅСЏР»Рё РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ С‚РѕС‚ РѕС‚С‡С‘С‚, РєРѕС‚РѕСЂС‹Р№ Р·Р°Р±СЂР°Р»Рё РІ СЂРµРїРѕР·РёС‚Р°СЂРёР№
+			//Рё РёР· С‚РѕР№ Р¶Рµ Р±Р°Р·С‹(РІ СЂР°Р·РЅС‹С… Р±Р°Р·Р°С… РѕС‚С‡С‘С‚С‹ СЃ РѕРґРёРЅР°РєРѕРІС‹Рј РєРѕРґРѕРј)
 			if ((rpt.getId().intValue() != rmt.id.intValue()) || rpt.getSysVersion().after(rmt.sysVersion))
 				throw new OldReportException();
 			rpt.setTemplate(rmt.template);

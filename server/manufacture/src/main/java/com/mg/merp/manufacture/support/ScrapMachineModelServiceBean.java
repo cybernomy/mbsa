@@ -23,7 +23,7 @@ import com.mg.merp.manufacture.ScrapMachineModelServiceLocal;
 import com.mg.merp.manufacture.model.ScrapDocumentModel;
 
 /**
- * Бизнес-компонент "Образцы актов на списание потерь времени, отработанного оборудование" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµ" 
  * 
  * @author leonova
  * @version $Id: ScrapMachineModelServiceBean.java,v 1.3 2006/09/12 11:08:13 leonova Exp $

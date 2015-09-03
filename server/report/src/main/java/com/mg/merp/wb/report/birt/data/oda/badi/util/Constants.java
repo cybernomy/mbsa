@@ -15,7 +15,7 @@
 package com.mg.merp.wb.report.birt.data.oda.badi.util;
 
 /**
- * Набор постоянных драйвера
+ * РќР°Р±РѕСЂ РїРѕСЃС‚РѕСЏРЅРЅС‹С… РґСЂР°Р№РІРµСЂР°
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -28,50 +28,50 @@ public final class Constants {
 	public static final int DATA_SOURCE_MINOR_VERSION = 10;
 
 	/**
-	 * Идентификатор источника данных
+	 * РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РёСЃС‚РѕС‡РЅРёРєР° РґР°РЅРЅС‹С…
 	 */
 	public static final String DATA_SOURCE_PRODUCT_NAME = "com.mg.merp.wb.report.birt.data.oda.badi";
 
 	//public static final int CACHED_RESULT_SET_LENGTH = 10000;
 
 	/**
-	 * Параметр "Код алгоритма" в шаблоне
+	 * РџР°СЂР°РјРµС‚СЂ "РљРѕРґ Р°Р»РіРѕСЂРёС‚РјР°" РІ С€Р°Р±Р»РѕРЅРµ
 	 */
 	public static final String BAI_CODE = "BAI_CODE";
 
 	/**
-	 * Параметр "Запрос" в шаблоне
+	 * РџР°СЂР°РјРµС‚СЂ "Р—Р°РїСЂРѕСЃ" РІ С€Р°Р±Р»РѕРЅРµ
 	 */
 	public static final String QUERY_TEXT = "queryText";
 
 	/**
-	 * Идентификатор набора данных MBSA(он же MERP)
+	 * РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С… MBSA(РѕРЅ Р¶Рµ MERP)
 	 */
 	public static final String MERP_DATASET_ID = "com.mg.merp.wb.report.birt.data.oda.badi.dataSet";
 
 	/**
-	 * Параметр "Вспомогательная информация" в шаблоне
+	 * РџР°СЂР°РјРµС‚СЂ "Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ" РІ С€Р°Р±Р»РѕРЅРµ
 	 */
 	public static final String CONST_PROP_RELATIONINFORMATION = "RELATIONINFORMATION";
 
 	/**
-	 * Имя параметра, содержащего параметры отчёта
+	 * РРјСЏ РїР°СЂР°РјРµС‚СЂР°, СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ РїР°СЂР°РјРµС‚СЂС‹ РѕС‚С‡С‘С‚Р°
 	 */
 	public static final String REPORT_PARAMS = "REPORT_PARAMS";
 
 	/**
-	 * Имя параметра, содержащего параметры конкретного набора данных
+	 * РРјСЏ РїР°СЂР°РјРµС‚СЂР°, СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ РїР°СЂР°РјРµС‚СЂС‹ РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С…
 	 */
 	public static final String DATASET_PARAMS = "DATASET_PARAMS";
 
 	/**
-	 * Имя параметра, содержащего контекст выполнения отчета
+	 * РРјСЏ РїР°СЂР°РјРµС‚СЂР°, СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРёСЏ РѕС‚С‡РµС‚Р°
 	 */
 	public static final String REPORT_CONTEXT_PARAMS = "REPORT_CONTEXT_PARAMS";
 
 	/**
-	 * Имя параметра, содержащего мета-данные, необходимые для построения набора
-	 * данных
+	 * РРјСЏ РїР°СЂР°РјРµС‚СЂР°, СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ РјРµС‚Р°-РґР°РЅРЅС‹Рµ, РЅРµРѕР±С…РѕРґРёРјС‹Рµ РґР»СЏ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РЅР°Р±РѕСЂР°
+	 * РґР°РЅРЅС‹С…
 	 */
 	public static final String DATASET_METADATA = "DATASET_METADATA";
 	
@@ -80,27 +80,27 @@ public final class Constants {
 	public static final String DATASET_COLUMN_TYPES = "DATASET_COLUMN_TYPES";
 	
 	/**
-	 * Имя параметра, содержащего интерфейс к сервисам машины BAi
+	 * РРјСЏ РїР°СЂР°РјРµС‚СЂР°, СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ РёРЅС‚РµСЂС„РµР№СЃ Рє СЃРµСЂРІРёСЃР°Рј РјР°С€РёРЅС‹ BAi
 	 */
 	public static final String BAI_ENGINE_PARAM = "BAI_ENGINE_PARAM";
 
 	/**
-	 * Имя параметра, содержащего идентификаторы сущностей
+	 * РРјСЏ РїР°СЂР°РјРµС‚СЂР°, СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂС‹ СЃСѓС‰РЅРѕСЃС‚РµР№
 	 */
 	public static final String ENTITY_IDS = "ENTITY_IDS";
 
 	/**
-	 * Имя параметра, содержащего бизнес-компонент для которого генерируется отчет
+	 * РРјСЏ РїР°СЂР°РјРµС‚СЂР°, СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РѕС‚С‡РµС‚
 	 */
 	public static final String BUSINESS_SERVICE = "BUSINESS_SERVICE";
 
 	/**
-	 * Имя параметра, содержащего текущую сессию в контексте приложения
+	 * РРјСЏ РїР°СЂР°РјРµС‚СЂР°, СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ С‚РµРєСѓС‰СѓСЋ СЃРµСЃСЃРёСЋ РІ РєРѕРЅС‚РµРєСЃС‚Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ
 	 */
 	public static final String CURRENT_SESSION_PARAM = "CURRENT_SESSION_PARAM";
 
 	/**
-	 * Имя параметра, содержащего контекст приложения
+	 * РРјСЏ РїР°СЂР°РјРµС‚СЂР°, СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ РєРѕРЅС‚РµРєСЃС‚ РїСЂРёР»РѕР¶РµРЅРёСЏ
 	 */
 	public static final String APP_REPORT_CONTEXT = "__mg_ReportContext";
 }

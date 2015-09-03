@@ -18,7 +18,7 @@ package com.mg.merp.manufacture;
 import com.mg.merp.manufacture.model.InputDocumentSpec;
 
 /**
- * Бизнес-компонент "Спецификации актов на списание времени оборудования"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёРё Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РІСЂРµРјРµРЅРё РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: InputMachineSpecServiceLocal.java,v 1.4 2007/08/06 12:46:24 safonov Exp $
@@ -27,7 +27,7 @@ public interface InputMachineSpecServiceLocal
 		extends InputSpecificationServiceLocal<InputDocumentSpec> {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/manufacture/InputMachineSpec";
 

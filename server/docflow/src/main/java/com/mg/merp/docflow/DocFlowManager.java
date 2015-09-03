@@ -23,7 +23,7 @@ import com.mg.framework.api.BusinessObjectService;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Сервис менеджер документооборота
+ * РЎРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowManager.java,v 1.6 2008/07/31 14:21:03 safonov Exp $
@@ -32,166 +32,166 @@ import com.mg.merp.document.model.DocHead;
 public interface DocFlowManager extends BusinessObjectService {
 	
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/docflow/DocFlowManager";
 
 	/**
-	 * Зарезервированный ID этапа создание документа
+	 * Р—Р°СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРЅС‹Р№ ID СЌС‚Р°РїР° СЃРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	final int DOC_FLOW_CREATE_DOC = 1;
 	
 	/**
-	 * Зарезервированный ID этапа создание документа на основе
+	 * Р—Р°СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРЅС‹Р№ ID СЌС‚Р°РїР° СЃРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІРµ
 	 */
 	final int DOC_FLOW_BASED_ON = 2;
 
 	/**
-	 * Зарезервированный ID этапа создание документа с помощью BAi (Business Add-in)
+	 * Р—Р°СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРЅС‹Р№ ID СЌС‚Р°РїР° СЃРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° СЃ РїРѕРјРѕС‰СЊСЋ BAi (Business Add-in)
 	 */
 	final int CREATE_DOC_BY_BAI = 50;
 	
 	/**
-	 * Зарезервированный ID этапа завершения ДО, после прохождения данного этапа ДО будет
-	 * считаться выполненным
+	 * Р—Р°СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРЅС‹Р№ ID СЌС‚Р°РїР° Р·Р°РІРµСЂС€РµРЅРёСЏ Р”Рћ, РїРѕСЃР»Рµ РїСЂРѕС…РѕР¶РґРµРЅРёСЏ РґР°РЅРЅРѕРіРѕ СЌС‚Р°РїР° Р”Рћ Р±СѓРґРµС‚
+	 * СЃС‡РёС‚Р°С‚СЊСЃСЏ РІС‹РїРѕР»РЅРµРЅРЅС‹Рј
 	 */
 	final int DOC_FLOW_END = 60;
 	
 	/**
-	 * Владельцем документа является ДО
+	 * Р’Р»Р°РґРµР»СЊС†РµРј РґРѕРєСѓРјРµРЅС‚Р° СЏРІР»СЏРµС‚СЃСЏ Р”Рћ
 	 */
 	final int DOCFLOW_OWNER = 0x10;
 	
 	/**
-	 * выполнить ДО
+	 * РІС‹РїРѕР»РЅРёС‚СЊ Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
-	 * @param listener		слушатель ДО
-	 * @throws AlreadyCompletedException	если ДО выполнен
-	 * @throws DocumentNotFound				если документ не найден
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ Р”Рћ
+	 * @throws AlreadyCompletedException	РµСЃР»Рё Р”Рћ РІС‹РїРѕР»РЅРµРЅ
+	 * @throws DocumentNotFound				РµСЃР»Рё РґРѕРєСѓРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	void execute(Serializable documentId, final DocFlowListener listener)
 			throws AlreadyCompletedException, DocumentNotFound;
 
 	/**
-	 * выполнить ДО
+	 * РІС‹РїРѕР»РЅРёС‚СЊ Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
-	 * @param listener		слушатель ДО
-	 * @param paramsStrategy	стратегия обработки параметров ДО
-	 * @throws AlreadyCompletedException	если ДО выполнен
-	 * @throws DocumentNotFound	если документ не найден
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ Р”Рћ
+	 * @param paramsStrategy	СЃС‚СЂР°С‚РµРіРёСЏ РѕР±СЂР°Р±РѕС‚РєРё РїР°СЂР°РјРµС‚СЂРѕРІ Р”Рћ
+	 * @throws AlreadyCompletedException	РµСЃР»Рё Р”Рћ РІС‹РїРѕР»РЅРµРЅ
+	 * @throws DocumentNotFound	РµСЃР»Рё РґРѕРєСѓРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	void execute(Serializable documentId, final DocFlowListener listener, final DocFlowParamsStrategy paramsStrategy)
 			throws AlreadyCompletedException, DocumentNotFound;
 	
 	/**
-	 * выполнить ДО
+	 * РІС‹РїРѕР»РЅРёС‚СЊ Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
-	 * @param listener		слушатель ДО
-	 * @param requester		инициатор выполнения
-	 * @param silent		признак использования пользовательского интерфейса, если <code>true</code> то не использовать UI
-	 * @throws AlreadyCompletedException	если ДО выполнен
-	 * @throws DocumentNotFound				если документ не найден
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ Р”Рћ
+	 * @param requester		РёРЅРёС†РёР°С‚РѕСЂ РІС‹РїРѕР»РЅРµРЅРёСЏ
+	 * @param silent		РїСЂРёР·РЅР°Рє РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°, РµСЃР»Рё <code>true</code> С‚Рѕ РЅРµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ UI
+	 * @throws AlreadyCompletedException	РµСЃР»Рё Р”Рћ РІС‹РїРѕР»РЅРµРЅ
+	 * @throws DocumentNotFound				РµСЃР»Рё РґРѕРєСѓРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	void execute(Serializable documentId, final DocFlowListener listener, int requester, boolean silent)
 			throws AlreadyCompletedException, DocumentNotFound;
 
 	/**
-	 * выполнить ДО
+	 * РІС‹РїРѕР»РЅРёС‚СЊ Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
-	 * @param listener		слушатель ДО
-	 * @param stageCode		код этапа ДО для выполнения
-	 * @throws AlreadyCompletedException	если ДО выполнен
-	 * @throws DocumentNotFound	если документ не найден
-	 * @throws InaccesibleStateException	если указанный код не доступен для выполнения
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ Р”Рћ
+	 * @param stageCode		РєРѕРґ СЌС‚Р°РїР° Р”Рћ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ
+	 * @throws AlreadyCompletedException	РµСЃР»Рё Р”Рћ РІС‹РїРѕР»РЅРµРЅ
+	 * @throws DocumentNotFound	РµСЃР»Рё РґРѕРєСѓРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ
+	 * @throws InaccesibleStateException	РµСЃР»Рё СѓРєР°Р·Р°РЅРЅС‹Р№ РєРѕРґ РЅРµ РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ
 	 */
 	void execute(Serializable documentId, final DocFlowListener listener, String stageCode)
 			throws AlreadyCompletedException, DocumentNotFound, InaccesibleStateException;
 	
 	/**
-	 * выполнить ДО
+	 * РІС‹РїРѕР»РЅРёС‚СЊ Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
-	 * @param listener		слушатель ДО
-	 * @param stageCode		код этапа ДО для выполнения
-	 * @param processDate	дата отработки ДО
-	 * @param requester		инициатор выполнения
-	 * @param silent		признак использования пользовательского интерфейса, если <code>true</code> то не использовать UI
-	 * @throws AlreadyCompletedException	если ДО выполнен
-	 * @throws DocumentNotFound	если документ не найден
-	 * @throws InaccesibleStateException	если указанный код не доступен для выполнения
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ Р”Рћ
+	 * @param stageCode		РєРѕРґ СЌС‚Р°РїР° Р”Рћ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ
+	 * @param processDate	РґР°С‚Р° РѕС‚СЂР°Р±РѕС‚РєРё Р”Рћ
+	 * @param requester		РёРЅРёС†РёР°С‚РѕСЂ РІС‹РїРѕР»РЅРµРЅРёСЏ
+	 * @param silent		РїСЂРёР·РЅР°Рє РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°, РµСЃР»Рё <code>true</code> С‚Рѕ РЅРµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ UI
+	 * @throws AlreadyCompletedException	РµСЃР»Рё Р”Рћ РІС‹РїРѕР»РЅРµРЅ
+	 * @throws DocumentNotFound	РµСЃР»Рё РґРѕРєСѓРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ
+	 * @throws InaccesibleStateException	РµСЃР»Рё СѓРєР°Р·Р°РЅРЅС‹Р№ РєРѕРґ РЅРµ РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ
 	 */
 	void execute(Serializable documentId, final DocFlowListener listener, String stageCode, Date processDate, int requester, boolean silent)
 			throws AlreadyCompletedException, DocumentNotFound, InaccesibleStateException;
 
 	/**
-	 * откатить выполнение ДО
+	 * РѕС‚РєР°С‚РёС‚СЊ РІС‹РїРѕР»РЅРµРЅРёРµ Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
-	 * @param listener		слушатель ДО
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ Р”Рћ
 	 */
 	void rollback(Serializable documentId, final DocFlowListener listener);
 	
 	/**
-	 * откатить выполнение ДО
+	 * РѕС‚РєР°С‚РёС‚СЊ РІС‹РїРѕР»РЅРµРЅРёРµ Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
-	 * @param listener		слушатель ДО
-	 * @param paramsStrategy	стратегия обработки параметров ДО
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ Р”Рћ
+	 * @param paramsStrategy	СЃС‚СЂР°С‚РµРіРёСЏ РѕР±СЂР°Р±РѕС‚РєРё РїР°СЂР°РјРµС‚СЂРѕРІ Р”Рћ
 	 */
 	void rollback(Serializable documentId, final DocFlowListener listener, final DocFlowParamsStrategy paramsStrategy);
 	
 	/**
-	 * откатить выполнение ДО
+	 * РѕС‚РєР°С‚РёС‚СЊ РІС‹РїРѕР»РЅРµРЅРёРµ Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
-	 * @param listener		слушатель ДО
-	 * @param requester		инициатор выполнения
-	 * @param silent		признак использования пользовательского интерфейса, если <code>true</code> то не использовать UI
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ Р”Рћ
+	 * @param requester		РёРЅРёС†РёР°С‚РѕСЂ РІС‹РїРѕР»РЅРµРЅРёСЏ
+	 * @param silent		РїСЂРёР·РЅР°Рє РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°, РµСЃР»Рё <code>true</code> С‚Рѕ РЅРµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ UI
 	 */
 	void rollback(Serializable documentId, final DocFlowListener listener, int requester, boolean silent);
 	
 	/**
 	 * 
 	 * 
-	 * @param documentId	идентификатор документа
-	 * @param listener		слушатель ДО
-	 * @param stageCode		код этапа ДО для выполнения
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ Р”Рћ
+	 * @param stageCode		РєРѕРґ СЌС‚Р°РїР° Р”Рћ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ
 	 */
 	void rollback(Serializable documentId, final DocFlowListener listener, String stageCode);
 	
 	/**
-	 * откатить выполнение ДО
+	 * РѕС‚РєР°С‚РёС‚СЊ РІС‹РїРѕР»РЅРµРЅРёРµ Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
-	 * @param listener		слушатель ДО
-	 * @param stageCode		код этапа ДО для выполнения
-	 * @param requester		инициатор выполнения
-	 * @param silent		признак использования пользовательского интерфейса, если <code>true</code> то не использовать UI
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ Р”Рћ
+	 * @param stageCode		РєРѕРґ СЌС‚Р°РїР° Р”Рћ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ
+	 * @param requester		РёРЅРёС†РёР°С‚РѕСЂ РІС‹РїРѕР»РЅРµРЅРёСЏ
+	 * @param silent		РїСЂРёР·РЅР°Рє РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°, РµСЃР»Рё <code>true</code> С‚Рѕ РЅРµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ UI
 	 */
 	void rollback(Serializable documentId, final DocFlowListener listener, String stageCode, int requester, boolean silent);
 	
 	/**
-	 * регистрация создания документа
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docHead	объект документ
+	 * @param docHead	РѕР±СЉРµРєС‚ РґРѕРєСѓРјРµРЅС‚
 	 */
 	void createDocument(DocHead docHead);
 	
 	/**
-	 * регистрация изменения документа
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ РёР·РјРµРЅРµРЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docHead	объект документ
+	 * @param docHead	РѕР±СЉРµРєС‚ РґРѕРєСѓРјРµРЅС‚
 	 */
 	void modifyDocument(DocHead docHead);
 
 	/**
-	 * проверка возможности изменения документа
+	 * РїСЂРѕРІРµСЂРєР° РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РёР·РјРµРЅРµРЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docHead	объект документ
+	 * @param docHead	РѕР±СЉРµРєС‚ РґРѕРєСѓРјРµРЅС‚
 	 */
 	void checkStatus(DocHead docHead);
 

@@ -22,100 +22,100 @@ import com.mg.framework.api.orm.PersistentObject;
 
 
 /**
- * Менеджер управления пользовательскими полями
+ * РњРµРЅРµРґР¶РµСЂ СѓРїСЂР°РІР»РµРЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРјРё РїРѕР»СЏРјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomFieldsManager.java,v 1.3 2008/12/23 09:09:50 safonov Exp $
  */
 public interface CustomFieldsManager {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:service=CustomFieldsManagerService";
 
 	/**
-	 * имя стандартного динамического макроса для отображения пользовательских полей
-	 * в формах поддержки
+	 * РёРјСЏ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°РєСЂРѕСЃР° РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
+	 * РІ С„РѕСЂРјР°С… РїРѕРґРґРµСЂР¶РєРё
 	 */
 	final static String CUSTOM_FIELDS_AREA_MACROS = "com.mg.framework.CustomFieldsMacros";
 	
 	/**
-	 * суффикс наименования пользовательского атрибута
+	 * СЃСѓС„С„РёРєСЃ РЅР°РёРјРµРЅРѕРІР°РЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ Р°С‚СЂРёР±СѓС‚Р°
 	 */
 	final static String CUSTOM_FIELD_NAME_PREFIX = "FEAT$";
 	
 	/**
-	 * делитель отделяющий индекс свойства типа массив
+	 * РґРµР»РёС‚РµР»СЊ РѕС‚РґРµР»СЏСЋС‰РёР№ РёРЅРґРµРєСЃ СЃРІРѕР№СЃС‚РІР° С‚РёРїР° РјР°СЃСЃРёРІ
 	 */
 	final static String INDEX_DELIMITER = "$";
 
 	/**
-	 * загрузка метаданных пользовательских полей
+	 * Р·Р°РіСЂСѓР·РєР° РјРµС‚Р°РґР°РЅРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 * 
-	 * @param service	бизнес-компонент
-	 * @return	метаданные пользовательских полей
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @return	РјРµС‚Р°РґР°РЅРЅС‹Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 */
 	FieldMetadata[] loadFieldsMetadata(DataBusinessObjectService<?, ?> service);
 
 	/**
-	 * генерация тела макроса для отображения пользовательских полей в формах поддержки
+	 * РіРµРЅРµСЂР°С†РёСЏ С‚РµР»Р° РјР°РєСЂРѕСЃР° РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№ РІ С„РѕСЂРјР°С… РїРѕРґРґРµСЂР¶РєРё
 	 * 
-	 * @param service	бизнес-компонент
-	 * @return	тело макроса
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @return	С‚РµР»Рѕ РјР°РєСЂРѕСЃР°
 	 */
 	String generateMaintenanceArea(DataBusinessObjectService<?, ?> service);
 
 	/**
-	 * сохранения значений пользовательских полей
+	 * СЃРѕС…СЂР°РЅРµРЅРёСЏ Р·РЅР°С‡РµРЅРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 * 
-	 * @param fieldsValues	значения
-	 * @param service		бизнес-компонент
-	 * @param key			идентификатор сущности
+	 * @param fieldsValues	Р·РЅР°С‡РµРЅРёСЏ
+	 * @param service		Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param key			РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСѓС‰РЅРѕСЃС‚Рё
 	 */
 	void storeValues(Map<String, Object> fieldsValues, DataBusinessObjectService<?, ?> service, Object key);
 	
 	/**
-	 * загрузка значений пользовательских полей
+	 * Р·Р°РіСЂСѓР·РєР° Р·РЅР°С‡РµРЅРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 * 
-	 * @param service	бизнес-компонент
-	 * @param key		идентификатор сущности
-	 * @return	значения
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param key		РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @return	Р·РЅР°С‡РµРЅРёСЏ
 	 */
 	Map<String, Object> loadValues(DataBusinessObjectService<?, ?> service, Object key);
 	
 	/**
-	 * создание репозитария для хранения пользовательских полей
+	 * СЃРѕР·РґР°РЅРёРµ СЂРµРїРѕР·РёС‚Р°СЂРёСЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 * 
-	 * @param service	бизнес-компонент
-	 * @param key		идентификатор сущности
-	 * @return	репозитарий
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param key		РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @return	СЂРµРїРѕР·РёС‚Р°СЂРёР№
 	 */
 	EntityCustomFieldsStorage createStorage(DataBusinessObjectService<?, ?> service, Object key);
 	
 	/**
-	 * сохранения значений пользовательских полей
+	 * СЃРѕС…СЂР°РЅРµРЅРёСЏ Р·РЅР°С‡РµРЅРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 * 
-	 * @param storage	репозитарий
-	 * @param service	бизнес-компонент
-	 * @param key		идентификатор сущности
+	 * @param storage	СЂРµРїРѕР·РёС‚Р°СЂРёР№
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param key		РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСѓС‰РЅРѕСЃС‚Рё
 	 */
 	void storeValues(EntityCustomFieldsStorage storage, DataBusinessObjectService<?, ?> service, Object key);
 	
 	/**
-	 * удалений пользовательских полей
+	 * СѓРґР°Р»РµРЅРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 * 
-	 * @param service	бизнес-компонент
-	 * @param key		идентификатор сущности
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param key		РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСѓС‰РЅРѕСЃС‚Рё
 	 */
 	void removeValues(DataBusinessObjectService<?, ?> service, Object key);
 	
 	/**
-	 * копирование пользовательских полей
+	 * РєРѕРїРёСЂРѕРІР°РЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 * 
-	 * @param serviceSrc	бизнес-компонент источник
-	 * @param entitySrc		сущность источник
-	 * @param serviceDst	бизнес-компонент приемник
-	 * @param entityDst		сущность приемник
+	 * @param serviceSrc	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ РёСЃС‚РѕС‡РЅРёРє
+	 * @param entitySrc		СЃСѓС‰РЅРѕСЃС‚СЊ РёСЃС‚РѕС‡РЅРёРє
+	 * @param serviceDst	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ РїСЂРёРµРјРЅРёРє
+	 * @param entityDst		СЃСѓС‰РЅРѕСЃС‚СЊ РїСЂРёРµРјРЅРёРє
 	 */
 	void cloneValues(DataBusinessObjectService<?, ?> serviceSrc, PersistentObject entitySrc,
 			DataBusinessObjectService<?, ?> serviceDst, PersistentObject entityDst);

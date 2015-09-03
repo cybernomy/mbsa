@@ -15,7 +15,7 @@
 package com.mg.merp.warehouse.support.ui;
 
 /**
- * Контроллер формы списка образцов счетов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: BillHeadModelBrowseForm.java,v 1.1 2006/09/12 11:01:10 leonova Exp $ 

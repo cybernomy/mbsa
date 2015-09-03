@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.warehouse.model.BinLocationType;
 
 /**
- * Браузер типов секций хранения
+ * Р‘СЂР°СѓР·РµСЂ С‚РёРїРѕРІ СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ
  * 
  * @author leonova
  * @version $Id: BinLocationTypeBr.java,v 1.1 2006/09/05 03:59:05 leonova Exp $ 

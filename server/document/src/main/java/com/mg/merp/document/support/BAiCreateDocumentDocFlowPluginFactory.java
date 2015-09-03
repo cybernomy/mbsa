@@ -28,7 +28,7 @@ import com.mg.merp.docflow.support.DocFlowBusinessAddin;
 import com.mg.merp.document.generic.AbstractCreateDocumentDocFlowPlugin;
 
 /**
- * Реализация фабрики реализаций этапа ДО "Создание документа на основе текущего бизнес-расширением"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїР° Р”Рћ "РЎРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІРµ С‚РµРєСѓС‰РµРіРѕ Р±РёР·РЅРµСЃ-СЂР°СЃС€РёСЂРµРЅРёРµРј"
  * 
  * @author Oleg V. Safonov
  * @version $Id: BAiCreateDocumentDocFlowPluginFactory.java,v 1.1 2007/09/27 07:19:59 safonov Exp $

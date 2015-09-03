@@ -31,7 +31,7 @@ import com.mg.merp.security.model.Groups;
 import com.mg.merp.security.model.MethodAccess;
 
 /**
- * Реализация бизнес-компонента "Права на методы бизнес-компонентов"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂР°РІР° РЅР° РјРµС‚РѕРґС‹ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ"
  *
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -48,11 +48,11 @@ public class MethodAccessServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 
 	/**
-	 * Установить права для всех бизнес-компонентов модуля
-	 * @param subSystemId - идентификатор модуля(подсистемы)
-	 * @param group - группа пользователей
-	 * @param isPermit - <code>true</code> - дать права; <code>false</code> - отобрать права
-	 * @param methodNames - список имён методов
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂР°РІР° РґР»СЏ РІСЃРµС… Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ РјРѕРґСѓР»СЏ
+	 * @param subSystemId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РјРѕРґСѓР»СЏ(РїРѕРґСЃРёСЃС‚РµРјС‹)
+	 * @param group - РіСЂСѓРїРїР° РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
+	 * @param isPermit - <code>true</code> - РґР°С‚СЊ РїСЂР°РІР°; <code>false</code> - РѕС‚РѕР±СЂР°С‚СЊ РїСЂР°РІР°
+	 * @param methodNames - СЃРїРёСЃРѕРє РёРјС‘РЅ РјРµС‚РѕРґРѕРІ
 	 */
 	protected void doSetPermissionForSubsystemBusinessObjects(Integer subSystemId, Groups group, boolean isPermit, List<String> methodNames) {
 		JdbcTemplate jdbcTemplate = JdbcTemplate.getInstance();

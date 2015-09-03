@@ -22,7 +22,7 @@ package com.mg.merp.account;
  */
 public interface ProcessorServiceLocal extends com.mg.framework.api.BusinessObjectService, Processor {
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/account/Processor";
 

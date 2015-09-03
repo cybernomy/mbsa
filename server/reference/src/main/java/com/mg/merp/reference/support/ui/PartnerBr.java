@@ -35,7 +35,7 @@ import com.mg.merp.reference.PartnerServiceLocal;
 import com.mg.merp.reference.model.Partner;
 
 /**
- * Браузер партнеров
+ * Р‘СЂР°СѓР·РµСЂ РїР°СЂС‚РЅРµСЂРѕРІ
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

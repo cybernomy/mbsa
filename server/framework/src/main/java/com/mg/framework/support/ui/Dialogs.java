@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.FormActionListener;
 import com.mg.framework.api.ui.FormEvent;
 
 /**
- * Класс помощник диалогов для запроса значений  
+ * РљР»Р°СЃСЃ РїРѕРјРѕС‰РЅРёРє РґРёР°Р»РѕРіРѕРІ РґР»СЏ Р·Р°РїСЂРѕСЃР° Р·РЅР°С‡РµРЅРёР№  
  * 
  * @author Oleg V. Safonov
  * @version $Id: Dialogs.java,v 1.5 2009/01/14 13:14:52 safonov Exp $
@@ -26,30 +26,30 @@ import com.mg.framework.api.ui.FormEvent;
 public class Dialogs {
 
 	/**
-	 * Слушатель событий диалога для запроса одиночного параметра
+	 * РЎР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№ РґРёР°Р»РѕРіР° РґР»СЏ Р·Р°РїСЂРѕСЃР° РѕРґРёРЅРѕС‡РЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР°
 	 */
 	public interface InputQueryDialogListener<T> {
 		/**
-		 * ввод значения параметра выполнен
+		 * РІРІРѕРґ Р·РЅР°С‡РµРЅРёСЏ РїР°СЂР°РјРµС‚СЂР° РІС‹РїРѕР»РЅРµРЅ
 		 * 
-		 * @param value	значение параметра
+		 * @param value	Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°
 		 */
 		public void inputPerformed(T value);
 		
 		/**
-		 * ввод отменен
+		 * РІРІРѕРґ РѕС‚РјРµРЅРµРЅ
 		 */
 		public void inputCanceled();
 	}
 	
 	/**
-	 * ввод одиночного параметра
+	 * РІРІРѕРґ РѕРґРёРЅРѕС‡РЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР°
 	 * 
-	 * @param <T>				тип параметра
-	 * @param title				заголовок диалога
-	 * @param prompt			подсказка
-	 * @param value				значение, не может быть <code>null</code>
-	 * @param actionListener	слушатель событий
+	 * @param <T>				С‚РёРї РїР°СЂР°РјРµС‚СЂР°
+	 * @param title				Р·Р°РіРѕР»РѕРІРѕРє РґРёР°Р»РѕРіР°
+	 * @param prompt			РїРѕРґСЃРєР°Р·РєР°
+	 * @param value				Р·РЅР°С‡РµРЅРёРµ, РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>
+	 * @param actionListener	СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> void inputQuery(final String title, final String prompt, T value,

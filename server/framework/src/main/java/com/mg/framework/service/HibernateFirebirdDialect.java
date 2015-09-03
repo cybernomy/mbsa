@@ -19,7 +19,7 @@ import org.hibernate.dialect.function.StandardSQLFunction;
 import org.hibernate.exception.ViolatedConstraintNameExtracter;
 
 /**
- * Äèàëåêò ÑÓÁÄ Firebird
+ * Ğ”Ğ¸Ğ°Ğ»ĞµĞºÑ‚ Ğ¡Ğ£Ğ‘Ğ” Firebird
  * 
  * @author Oleg V. Safonov
  * @version $Id: HibernateFirebirdDialect.java,v 1.2 2007/04/03 14:41:15 safonov Exp $

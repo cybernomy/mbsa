@@ -22,7 +22,7 @@ import com.mg.merp.paymentcontrol.PaymentControlProcessorListener;
 import com.mg.merp.paymentcontrol.PaymentcontrolProcessorServiceLocal;
 
 /**
- * Реализация фабрики реализации этапа ДО "Создание записи реестра обязательств"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёРё СЌС‚Р°РїР° Р”Рћ "РЎРѕР·РґР°РЅРёРµ Р·Р°РїРёСЃРё СЂРµРµСЃС‚СЂР° РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: CreateLiabilityDocFlowPluginFactory.java,v 1.1 2007/05/14 05:18:50 sharapov Exp $

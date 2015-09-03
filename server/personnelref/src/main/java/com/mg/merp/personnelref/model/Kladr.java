@@ -18,7 +18,7 @@ package com.mg.merp.personnelref.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Классификатор адресов (КЛАДР)"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂ Р°РґСЂРµСЃРѕРІ (РљР›РђР”Р )"
  * 
  * @author Artem V. Sharapov
  * @version $Id: Kladr.java,v 1.3 2007/07/16 13:16:44 sharapov Exp $

@@ -23,7 +23,7 @@ import com.mg.merp.docflow.support.FinishDocFlowPluginFactory;
 import com.mg.merp.docflow.support.SignatureDocFlowPluginFactory;
 
 /**
- * Сервис регистрации фабрик этапов ДО реализованных в данном модуле
+ * РЎРµСЂРІРёСЃ СЂРµРіРёСЃС‚СЂР°С†РёРё С„Р°Р±СЂРёРє СЌС‚Р°РїРѕРІ Р”Рћ СЂРµР°Р»РёР·РѕРІР°РЅРЅС‹С… РІ РґР°РЅРЅРѕРј РјРѕРґСѓР»Рµ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowPluginService.java,v 1.4 2008/07/31 14:22:28 safonov Exp $

@@ -19,7 +19,7 @@ import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 import com.mg.merp.crm.model.Problem;
 
 /**
- * Контроллер условий отбора симптомов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° СЃРёРјРїС‚РѕРјРѕРІ
  * 
  * @author leonova
  * @version $Id: SymptomRest.java,v 1.1 2006/10/16 11:03:03 leonova Exp $

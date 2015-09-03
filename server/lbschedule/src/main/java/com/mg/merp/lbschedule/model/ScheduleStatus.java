@@ -24,25 +24,25 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("LbSchedule.Schedule.ScheduleStatus")
 public enum ScheduleStatus {
 	/**
-	 * Запланировано
+	 * Р—Р°РїР»Р°РЅРёСЂРѕРІР°РЅРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Status.Planned")
 	PLANNED,
 	
 	/**
-	 * В работе
+	 * Р’ СЂР°Р±РѕС‚Рµ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Status.InWork")
 	INWORK,
 	
 	/**
-	 * Выполнено
+	 * Р’С‹РїРѕР»РЅРµРЅРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Status.Executed")
 	EXECUTED,
 	
 	/**
-	 * Не используется
+	 * РќРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Status.NotInUse")
 	NOTINUSE

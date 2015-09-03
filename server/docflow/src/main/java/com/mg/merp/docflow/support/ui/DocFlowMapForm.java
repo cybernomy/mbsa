@@ -90,12 +90,12 @@ public class DocFlowMapForm extends AbstractForm {
 	public void onActionAddEdge(WidgetEvent event) {
 		List<GraphElement> selected = map.getSelectedElements();
 		if (selected.size() == 2 && selected.get(0) instanceof Vertex && selected.get(1) instanceof Vertex) {
-			//если отмечены две вершины то создаем связь между ними
+			//РµСЃР»Рё РѕС‚РјРµС‡РµРЅС‹ РґРІРµ РІРµСЂС€РёРЅС‹ С‚Рѕ СЃРѕР·РґР°РµРј СЃРІСЏР·СЊ РјРµР¶РґСѓ РЅРёРјРё
 			Vertex source = (Vertex) selected.get(0);
 			Vertex target = (Vertex) selected.get(1);
 			DocProcessStage sourceStage = (DocProcessStage) elementsMap.get(source);
 			DocProcessStage targetStage = (DocProcessStage) elementsMap.get(target);
-			//этапы создания не могут быть целью
+			//СЌС‚Р°РїС‹ СЃРѕР·РґР°РЅРёСЏ РЅРµ РјРѕРіСѓС‚ Р±С‹С‚СЊ С†РµР»СЊСЋ
 			boolean createLink = (targetStage.getStage().getId() != 1) && (targetStage.getStage().getId() != 2);
 			if (createLink)
 				for (Entry<GraphElement, PersistentObject> entry : elementsMap.entrySet()) {
@@ -143,13 +143,13 @@ public class DocFlowMapForm extends AbstractForm {
 	
 	public void onActionEdit(WidgetEvent event) {
 		List<GraphElement> selected = map.getSelectedElements();
-		//не редактируем если отмечено несколько элементов или нет отмеченных
+		//РЅРµ СЂРµРґР°РєС‚РёСЂСѓРµРј РµСЃР»Рё РѕС‚РјРµС‡РµРЅРѕ РЅРµСЃРєРѕР»СЊРєРѕ СЌР»РµРјРµРЅС‚РѕРІ РёР»Рё РЅРµС‚ РѕС‚РјРµС‡РµРЅРЅС‹С…
 		if (selected.size() != 1)
 			return;
 		
 		final GraphElement element = selected.get(0);
 		if (element instanceof Rectangle) {
-			//редактируем этап
+			//СЂРµРґР°РєС‚РёСЂСѓРµРј СЌС‚Р°Рї
 			MaintenanceHelper.edit(stageService, elementsMap.get(element), null, new MaintenanceFormActionListener() {
 				public void performed(MaintenanceFormEvent event) {
 					map.cellChanged(element);
@@ -160,7 +160,7 @@ public class DocFlowMapForm extends AbstractForm {
 			});
 		}
 		else if (element instanceof Edge) {
-			//редактируем связь
+			//СЂРµРґР°РєС‚РёСЂСѓРµРј СЃРІСЏР·СЊ
 			final DocFlowStageLinkMt linkForm = (DocFlowStageLinkMt) UIProducer.produceForm("com/mg/merp/docflow/resources/DocFlowStageLinkMt.mfd.xml");
 			final LinkStage link = (LinkStage) elementsMap.get(element);
 			linkForm.setLink(link);
@@ -182,7 +182,7 @@ public class DocFlowMapForm extends AbstractForm {
 				stageService.erase((DocProcessStage) elementsMap.get(cell));
 			else
 				ServerUtils.getPersistentManager().remove(elementsMap.get(cell));
-			//в карте могут остаться связи ссылающиеся на вершину, при этом выделили только вершину
+			//РІ РєР°СЂС‚Рµ РјРѕРіСѓС‚ РѕСЃС‚Р°С‚СЊСЃСЏ СЃРІСЏР·Рё СЃСЃС‹Р»Р°СЋС‰РёРµСЃСЏ РЅР° РІРµСЂС€РёРЅСѓ, РїСЂРё СЌС‚РѕРј РІС‹РґРµР»РёР»Рё С‚РѕР»СЊРєРѕ РІРµСЂС€РёРЅСѓ
 			elementsMap.remove(cell);
 			map.removeCell(cell);
 		}
@@ -211,7 +211,7 @@ public class DocFlowMapForm extends AbstractForm {
 		List<DocProcessStage> stages = stageService.findByCriteria(Restrictions.eq("DocType", docType));
 		
 		if (stages.size() == 0) {
-			//документооборот не инициализирован
+			//РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚ РЅРµ РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅ
 			stageService.initializeDocFlow(docType);
 			stages = stageService.findByCriteria(Restrictions.eq("DocType", docType));
 		}
@@ -220,11 +220,11 @@ public class DocFlowMapForm extends AbstractForm {
 		
 		setTitle(String.format(ServerUtils.getUserLocale(), Messages.getInstance().getMessage(Messages.DOCFLOW_MAP_TITLE), docType.getCode().trim(), docType.getName().trim()));
 		
-		//заполним этапы ДО, сохраним связь между этапами и графическими элементами
+		//Р·Р°РїРѕР»РЅРёРј СЌС‚Р°РїС‹ Р”Рћ, СЃРѕС…СЂР°РЅРёРј СЃРІСЏР·СЊ РјРµР¶РґСѓ СЌС‚Р°РїР°РјРё Рё РіСЂР°С„РёС‡РµСЃРєРёРјРё СЌР»РµРјРµРЅС‚Р°РјРё
 		for (DocProcessStage stage : stages) {
 			stageVertexMap.put(stage, createVertex(stage));
 		}
-		//заполним связи между этапами ДО
+		//Р·Р°РїРѕР»РЅРёРј СЃРІСЏР·Рё РјРµР¶РґСѓ СЌС‚Р°РїР°РјРё Р”Рћ
 		for (DocProcessStage stage : stages) {
 			if (stage.getNextStages() != null)
 				for (LinkStage link : stage.getNextStages()) {

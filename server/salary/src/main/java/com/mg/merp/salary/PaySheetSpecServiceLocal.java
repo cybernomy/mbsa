@@ -17,7 +17,7 @@ package com.mg.merp.salary;
 import com.mg.merp.salary.model.PaySheetSpec;
 
 /**
- * Сервис бизнес-компонента "Позиции платежной ведомости"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРѕР·РёС†РёРё РїР»Р°С‚РµР¶РЅРѕР№ РІРµРґРѕРјРѕСЃС‚Рё"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.salary.model.PaySheetSpec;
 public interface PaySheetSpecServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PaySheetSpec, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME= "merp/salary/PaySheetSpec"; //$NON-NLS-1$
 	

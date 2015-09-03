@@ -44,7 +44,7 @@ import com.mg.merp.wb.core.ui.editor.StandartEditorInput;
 import com.mg.merp.wb.core.ui.editor.StandartEditorPage;
 
 /**
- * Содержание формы редактирования BAi
+ * РЎРѕРґРµСЂР¶Р°РЅРёРµ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ BAi
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: BAiEditorPage.java,v 1.3 2007/05/04 10:48:42 poroxnenko Exp $
@@ -52,7 +52,7 @@ import com.mg.merp.wb.core.ui.editor.StandartEditorPage;
 public class BAiEditorPage extends StandartEditorPage<Repository> {
 
 	/**
-	 * Данные BAi
+	 * Р”Р°РЅРЅС‹Рµ BAi
 	 */
 	private Repository repository;
 
@@ -71,17 +71,17 @@ public class BAiEditorPage extends StandartEditorPage<Repository> {
 	private static final int CODE_FIELD_WIDTH = 220;
 
 	/**
-	 * Текстовое поле, содержащее код BAi
+	 * РўРµРєСЃС‚РѕРІРѕРµ РїРѕР»Рµ, СЃРѕРґРµСЂР¶Р°С‰РµРµ РєРѕРґ BAi
 	 */
 	private Text tCode = null;
 
 	/**
-	 * Текстовое поле, содержащее наименование BAi
+	 * РўРµРєСЃС‚РѕРІРѕРµ РїРѕР»Рµ, СЃРѕРґРµСЂР¶Р°С‰РµРµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ BAi
 	 */
 	private Text tName = null;
 
 	/**
-	 * Текстовое поле, содержащее имя класса, реализующего BAi
+	 * РўРµРєСЃС‚РѕРІРѕРµ РїРѕР»Рµ, СЃРѕРґРµСЂР¶Р°С‰РµРµ РёРјСЏ РєР»Р°СЃСЃР°, СЂРµР°Р»РёР·СѓСЋС‰РµРіРѕ BAi
 	 */
 	private Text tImplName = null;
 

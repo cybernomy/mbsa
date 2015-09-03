@@ -27,7 +27,7 @@ import com.mg.merp.warehouse.WarehouseConfigServiceLocal;
 import com.mg.merp.warehouse.model.WarehouseConfig;
 
 /**
- * Контроллер комманды меню "Конфигурация модуля <Склады, снабжение, сбыт>"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРјРјР°РЅРґС‹ РјРµРЅСЋ "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РЎРєР»Р°РґС‹, СЃРЅР°Р±Р¶РµРЅРёРµ, СЃР±С‹С‚>"
  * 
  * @author Artem V. Sharapov
  * @version $Id: WarehouseConfigMenuCommand.java,v 1.3 2009/01/23 13:06:57 safonov Exp $

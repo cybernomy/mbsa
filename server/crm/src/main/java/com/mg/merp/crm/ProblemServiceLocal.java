@@ -19,7 +19,7 @@ import com.mg.merp.crm.model.Solution;
 import com.mg.merp.crm.model.Symptom;
 
 /**
- * Сервис бизнес-компонента "Проблемы" 
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРѕР±Р»РµРјС‹" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -28,33 +28,33 @@ import com.mg.merp.crm.model.Symptom;
 public interface ProblemServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Problem, Integer> {
 
 	/**
-	 * тип папки для симптомов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ СЃРёРјРїС‚РѕРјРѕРІ
 	 */
 	final static short FOLDER_PART = 13502;
 
 	/**
-	 * Добавить симптом проблемы
+	 * Р”РѕР±Р°РІРёС‚СЊ СЃРёРјРїС‚РѕРј РїСЂРѕР±Р»РµРјС‹
 	 * @param problem
 	 * @param symptom
 	 */
 	void linkSymptom(Problem problem, Symptom symptom);
 
 	/**
-	 * Удалить симптом проблемы
+	 * РЈРґР°Р»РёС‚СЊ СЃРёРјРїС‚РѕРј РїСЂРѕР±Р»РµРјС‹
 	 * @param problem
 	 * @param symptom
 	 */
 	void unLinkSymptom(Problem problem, Symptom symptom);
 
 	/**
-	 * Добавить решение проблемы
+	 * Р”РѕР±Р°РІРёС‚СЊ СЂРµС€РµРЅРёРµ РїСЂРѕР±Р»РµРјС‹
 	 * @param problem
 	 * @param solution
 	 */
 	void linkSolution(Problem problem, Solution solution);
 
 	/**
-	 * Удалить решение проблемы
+	 * РЈРґР°Р»РёС‚СЊ СЂРµС€РµРЅРёРµ РїСЂРѕР±Р»РµРјС‹
 	 * @param problem
 	 * @param solution
 	 */

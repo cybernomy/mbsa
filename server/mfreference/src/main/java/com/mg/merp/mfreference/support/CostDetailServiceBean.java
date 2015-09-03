@@ -22,7 +22,7 @@ import com.mg.merp.mfreference.CostDetailServiceLocal;
 import com.mg.merp.mfreference.model.CostDetail;
 
 /**
- * Бизнес-компонент "Расшифровка стоимости" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р Р°СЃС€РёС„СЂРѕРІРєР° СЃС‚РѕРёРјРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @version $Id: CostDetailServiceBean.java,v 1.3 2006/09/07 10:57:04 leonova Exp $

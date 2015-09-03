@@ -26,7 +26,7 @@ import com.mg.merp.document.model.DocSpec;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы поддержки фнутренних актов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё С„РЅСѓС‚СЂРµРЅРЅРёС… Р°РєС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: InternalActHeadMt.java,v 1.7 2008/12/25 10:12:32 safonov Exp $

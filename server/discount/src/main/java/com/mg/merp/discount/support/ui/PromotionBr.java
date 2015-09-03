@@ -26,7 +26,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.discount.model.Promotion;
 
 /**
- * Контроллер браузера "Рекламные мероприятия"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "Р РµРєР»Р°РјРЅС‹Рµ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PromotionBr.java,v 1.1 2007/10/30 14:15:02 sharapov Exp $

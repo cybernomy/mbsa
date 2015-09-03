@@ -24,7 +24,7 @@ import com.mg.merp.document.generic.AbstractDocSpecPropertiesCalculationStrategy
 import com.mg.merp.retail.model.RtlInvoiceSpec;
 
 /**
- * Стандартная реализация стратегии расчета свойств спецификации розничного документа
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё СЂР°СЃС‡РµС‚Р° СЃРІРѕР№СЃС‚РІ СЃРїРµС†РёС„РёРєР°С†РёРё СЂРѕР·РЅРёС‡РЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Artem V. Sharapov
  * @version $Id: DefaultRtlDocSpecPropertiesCalculationStrategy.java,v 1.2 2008/02/05 10:05:51 safonov Exp $
@@ -50,22 +50,22 @@ public class DefaultRtlDocSpecPropertiesCalculationStrategy extends AbstractDocS
 	@Override
 	protected void doAdjust() {
 		BigDecimal quantity = docSpec.getQuantity();
-		//скидка/наценка в % из документа
+		//СЃРєРёРґРєР°/РЅР°С†РµРЅРєР° РІ % РёР· РґРѕРєСѓРјРµРЅС‚Р°
 		BigDecimal docDiscount = docSpec.getDocDiscount();
 		if (docDiscount == null)
 			docDiscount = BigDecimal.ZERO;
-		//сумма внешней скидки/наценки расчитанной для данной спецификации
+		//СЃСѓРјРјР° РІРЅРµС€РЅРµР№ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё СЂР°СЃС‡РёС‚Р°РЅРЅРѕР№ РґР»СЏ РґР°РЅРЅРѕР№ СЃРїРµС†РёС„РёРєР°С†РёРё
 		BigDecimal calculatedDiscount = docSpec.getExternalDiscountValue();
 		if (calculatedDiscount == null) {
 			calculatedDiscount = BigDecimal.ZERO;
-			//+ скидка/наценка в % из спецификации если нет внешней скидки/наценки
+			//+ СЃРєРёРґРєР°/РЅР°С†РµРЅРєР° РІ % РёР· СЃРїРµС†РёС„РёРєР°С†РёРё РµСЃР»Рё РЅРµС‚ РІРЅРµС€РЅРµР№ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
 			if (docSpec.getDiscount() != null)
 				docDiscount = docDiscount.add(docSpec.getDiscount());
 		}
 
 		if (docSpec.getPrice1() == null || MathUtils.compareToZero(docSpec.getPrice1()) == 0) {
-			//если не заданы цены и суммы, то выходим, вероятно здесь еще надо проверять
-			//цены и суммы со скидками и от них уже вычислять
+			//РµСЃР»Рё РЅРµ Р·Р°РґР°РЅС‹ С†РµРЅС‹ Рё СЃСѓРјРјС‹, С‚Рѕ РІС‹С…РѕРґРёРј, РІРµСЂРѕСЏС‚РЅРѕ Р·РґРµСЃСЊ РµС‰Рµ РЅР°РґРѕ РїСЂРѕРІРµСЂСЏС‚СЊ
+			//С†РµРЅС‹ Рё СЃСѓРјРјС‹ СЃРѕ СЃРєРёРґРєР°РјРё Рё РѕС‚ РЅРёС… СѓР¶Рµ РІС‹С‡РёСЃР»СЏС‚СЊ
 			if (docSpec.getPriceWithDiscount() != null && MathUtils.compareToZero(docSpec.getPriceWithDiscount()) != 0) {
 				docSpec.setPrice1(MathUtils.round(MathUtils.divide(docSpec.getPriceWithDiscount(), MathUtils.divide(MathUtils.HUNDRED.add(docDiscount), MathUtils.HUNDRED, roundContext), roundContext), new RoundContext(currencyScale))); 
 				calculateSumWithIncldedTaxesAndSumWithDiscount(quantity);
@@ -96,7 +96,7 @@ public class DefaultRtlDocSpecPropertiesCalculationStrategy extends AbstractDocS
 				docSpec.setSumma1(docSpec.getPrice1());				
 			}
 		}
-		//если есть внешняя скидка/наценка то расчитаем в % для данной спецификации
+		//РµСЃР»Рё РµСЃС‚СЊ РІРЅРµС€РЅСЏСЏ СЃРєРёРґРєР°/РЅР°С†РµРЅРєР° С‚Рѕ СЂР°СЃС‡РёС‚Р°РµРј РІ % РґР»СЏ РґР°РЅРЅРѕР№ СЃРїРµС†РёС„РёРєР°С†РёРё
 		if (docSpec.getExternalDiscountValue() != null)
 			docSpec.setDiscount(MathUtils.divide(calculatedDiscount.multiply(MathUtils.HUNDRED), docSpec.getPrice1(), new RoundContext(6)));
 	}
@@ -117,8 +117,8 @@ public class DefaultRtlDocSpecPropertiesCalculationStrategy extends AbstractDocS
 	}
 
 	/**
-	 * Рассчитать сумму(с включенными налогами) и сумму со с/н
-	 * @param quantity - кол-во
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјСѓ(СЃ РІРєР»СЋС‡РµРЅРЅС‹РјРё РЅР°Р»РѕРіР°РјРё) Рё СЃСѓРјРјСѓ СЃРѕ СЃ/РЅ
+	 * @param quantity - РєРѕР»-РІРѕ
 	 */
 	private void calculateSumWithIncldedTaxesAndSumWithDiscount(BigDecimal quantity) {
 		if (quantity != null || MathUtils.compareToZero(quantity) != 0) {

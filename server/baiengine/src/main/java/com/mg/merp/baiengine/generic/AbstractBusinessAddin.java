@@ -26,7 +26,7 @@ import com.mg.merp.baiengine.BusinessAddinEvent;
 import com.mg.merp.baiengine.BusinessAddinListener;
 
 /**
- * Базовый класс всех BAi (Business Add-in) бизнес расширений системы
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РІСЃРµС… BAi (Business Add-in) Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёР№ СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractBusinessAddin.java,v 1.3 2008/04/24 15:10:07 safonov Exp $
@@ -40,16 +40,16 @@ public abstract class AbstractBusinessAddin<T> implements BusinessAddin<T> {
     }
 
     /**
-     * Метод предназначен для извлечения переданных параметров, как правило переопределяется
-     * в базовых классах дополнениях конкретных точек вызова, например в базовом классе
-     * настраиваемых действий пользователя
+     * РњРµС‚РѕРґ РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅ РґР»СЏ РёР·РІР»РµС‡РµРЅРёСЏ РїРµСЂРµРґР°РЅРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ, РєР°Рє РїСЂР°РІРёР»Рѕ РїРµСЂРµРѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ
+     * РІ Р±Р°Р·РѕРІС‹С… РєР»Р°СЃСЃР°С… РґРѕРїРѕР»РЅРµРЅРёСЏС… РєРѕРЅРєСЂРµС‚РЅС‹С… С‚РѕС‡РµРє РІС‹Р·РѕРІР°, РЅР°РїСЂРёРјРµСЂ РІ Р±Р°Р·РѕРІРѕРј РєР»Р°СЃСЃРµ
+     * РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
      * 
      * @param params
      */
     protected abstract void extractParams(Map<String, ? extends Object> params);
     
     /**
-     * Абстрактный метод который необходимо переопределить в реальных алгоритмах
+     * РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ РјРµС‚РѕРґ РєРѕС‚РѕСЂС‹Р№ РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРѕРїСЂРµРґРµР»РёС‚СЊ РІ СЂРµР°Р»СЊРЅС‹С… Р°Р»РіРѕСЂРёС‚РјР°С…
      * 
      * @throws Exception
      */
@@ -66,18 +66,18 @@ public abstract class AbstractBusinessAddin<T> implements BusinessAddin<T> {
 	}
 
 	/**
-	 * Завершить успешное выполнение алгоритма, на всех зарегистрированных слушателях
-	 * будет вызван метод {@link BusinessAddinListener#completed(BusinessAddinEvent)}
+	 * Р—Р°РІРµСЂС€РёС‚СЊ СѓСЃРїРµС€РЅРѕРµ РІС‹РїРѕР»РЅРµРЅРёРµ Р°Р»РіРѕСЂРёС‚РјР°, РЅР° РІСЃРµС… Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹С… СЃР»СѓС€Р°С‚РµР»СЏС…
+	 * Р±СѓРґРµС‚ РІС‹Р·РІР°РЅ РјРµС‚РѕРґ {@link BusinessAddinListener#completed(BusinessAddinEvent)}
 	 * 
-	 * @param result	результат выполнения, или <code>null</code> если результат не требуется
+	 * @param result	СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ, РёР»Рё <code>null</code> РµСЃР»Рё СЂРµР·СѓР»СЊС‚Р°С‚ РЅРµ С‚СЂРµР±СѓРµС‚СЃСЏ
 	 */
 	public void complete(T result) {
 		firePerformCompleted(new BusinessAddinEvent<T>(this, result));
 	}
 	
 	/**
-	 * Прерывает выполнение алгоритма, на всех зарегистрированных слушателях
-	 * будет вызван метод {@link BusinessAddinListener#aborted(BusinessAddinEvent)}
+	 * РџСЂРµСЂС‹РІР°РµС‚ РІС‹РїРѕР»РЅРµРЅРёРµ Р°Р»РіРѕСЂРёС‚РјР°, РЅР° РІСЃРµС… Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹С… СЃР»СѓС€Р°С‚РµР»СЏС…
+	 * Р±СѓРґРµС‚ РІС‹Р·РІР°РЅ РјРµС‚РѕРґ {@link BusinessAddinListener#aborted(BusinessAddinEvent)}
 	 */
 	public void abort() {
 		firePerformAborted(new BusinessAddinEvent<T>(this, null));

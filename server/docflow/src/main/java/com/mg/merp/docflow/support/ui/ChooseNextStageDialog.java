@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.docprocess.model.DocProcessStage;
 
 /**
- * Контроллер формы выбора этапа ДО для отработки и отката
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РІС‹Р±РѕСЂР° СЌС‚Р°РїР° Р”Рћ РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё Рё РѕС‚РєР°С‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: ChooseNextStageDialog.java,v 1.6 2007/10/27 08:22:04 safonov Exp $
@@ -46,43 +46,43 @@ public class ChooseNextStageDialog extends DefaultWizardDialog {
 			DocProcessStage st = getEntityList().get(row);
 			String stdName = st.getStage().getName();
 			String result = st.getName();
-			//если есть название этапа то используем, иначе берем стандартное
+			//РµСЃР»Рё РµСЃС‚СЊ РЅР°Р·РІР°РЅРёРµ СЌС‚Р°РїР° С‚Рѕ РёСЃРїРѕР»СЊР·СѓРµРј, РёРЅР°С‡Рµ Р±РµСЂРµРј СЃС‚Р°РЅРґР°СЂС‚РЅРѕРµ
 			return StringUtils.stringNullOrEmpty(result) ? stdName : String.format("%s (%s)", result, stdName); //$NON-NLS-1$
 		}
 
 	}
 	
 	/**
-	 * установить дату отработки документа
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РґР°С‚Сѓ РѕС‚СЂР°Р±РѕС‚РєРё РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param processDate	дата отработки
+	 * @param processDate	РґР°С‚Р° РѕС‚СЂР°Р±РѕС‚РєРё
 	 */
 	public void setProcessDate(Date processDate) {
 		this.processDate = processDate;
 	}
 	
 	/**
-	 * получить дату отработки документа
+	 * РїРѕР»СѓС‡РёС‚СЊ РґР°С‚Сѓ РѕС‚СЂР°Р±РѕС‚РєРё РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @return	дата отработки
+	 * @return	РґР°С‚Р° РѕС‚СЂР°Р±РѕС‚РєРё
 	 */
 	public Date getProcessDate() {
 		return processDate;
 	}
 	
 	/**
-	 * установить список этапов ДО доступных для отработки
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРїРёСЃРѕРє СЌС‚Р°РїРѕРІ Р”Рћ РґРѕСЃС‚СѓРїРЅС‹С… РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
 	 * 
-	 * @param stages	список этапов
+	 * @param stages	СЃРїРёСЃРѕРє СЌС‚Р°РїРѕРІ
 	 */
 	public void setStages(List<DocProcessStage> stages) {
 		((NextStageTableModel) stagesList.getModel()).setEntityList(stages, new String[] {"Stage"}); //$NON-NLS-1$
 	}
 	
 	/**
-	 * получить этап выбранный пользователем для отработки
+	 * РїРѕР»СѓС‡РёС‚СЊ СЌС‚Р°Рї РІС‹Р±СЂР°РЅРЅС‹Р№ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
 	 * 
-	 * @return	этап для отработки
+	 * @return	СЌС‚Р°Рї РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
 	 */
 	public DocProcessStage getStage() {
 		DocProcessStage[] stages = ((NextStageTableModel) stagesList.getModel()).getSelectedEntities();

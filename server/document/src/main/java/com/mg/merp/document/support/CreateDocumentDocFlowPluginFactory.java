@@ -22,7 +22,7 @@ import com.mg.merp.document.DocumentProcessorServiceLocal;
 import com.mg.merp.document.generic.AbstractCreateDocumentDocFlowPlugin;
 
 /**
- * Реализация фабрики реализаций этапа ДО "Создание документа на основе текущего"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїР° Р”Рћ "РЎРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІРµ С‚РµРєСѓС‰РµРіРѕ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: CreateDocumentDocFlowPluginFactory.java,v 1.4 2009/02/04 09:37:32 safonov Exp $

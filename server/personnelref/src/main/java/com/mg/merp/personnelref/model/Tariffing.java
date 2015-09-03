@@ -17,7 +17,7 @@ package com.mg.merp.personnelref.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Тарификация должности"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РўР°СЂРёС„РёРєР°С†РёСЏ РґРѕР»Р¶РЅРѕСЃС‚Рё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: Tariffing.java,v 1.8 2007/07/09 07:47:11 sharapov Exp $

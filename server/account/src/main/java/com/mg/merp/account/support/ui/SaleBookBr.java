@@ -34,7 +34,7 @@ import com.mg.merp.account.model.SaleBook;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Браузер книги продаж
+ * Р‘СЂР°СѓР·РµСЂ РєРЅРёРіРё РїСЂРѕРґР°Р¶
  * 
  * @author leonova
  * @version $Id: SaleBookBr.java,v 1.7 2006/10/20 06:12:28 leonova Exp $

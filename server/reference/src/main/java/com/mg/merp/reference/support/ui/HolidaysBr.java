@@ -30,7 +30,7 @@ import com.mg.merp.reference.HolidaysServiceLocal;
 import com.mg.merp.reference.model.Holidays;
 
 /**
- * Браузер праздничных дней
+ * Р‘СЂР°СѓР·РµСЂ РїСЂР°Р·РґРЅРёС‡РЅС‹С… РґРЅРµР№
  * 
  * @author leonova
  * @version $Id: HolidaysBr.java,v 1.4 2007/07/30 06:25:58 safonov Exp $ 
@@ -98,7 +98,7 @@ public class HolidaysBr extends DefaultPlainBrowseForm{
 	}
 	
 	/**
-	 * обработчик копирования праздничных дней на следующий год
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РєРѕРїРёСЂРѕРІР°РЅРёСЏ РїСЂР°Р·РґРЅРёС‡РЅС‹С… РґРЅРµР№ РЅР° СЃР»РµРґСѓСЋС‰РёР№ РіРѕРґ
 	 * 
 	 * @param event
 	 */

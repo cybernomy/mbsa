@@ -20,7 +20,7 @@ import com.mg.merp.mfreference.model.DayCalendar;
 import com.mg.merp.mfreference.model.WeekCalendarChange;
 
 /**
- * Бизнес-компонент "Изменения недельного календаря"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РР·РјРµРЅРµРЅРёСЏ РЅРµРґРµР»СЊРЅРѕРіРѕ РєР°Р»РµРЅРґР°СЂСЏ"
  * 
  * @author leonova
  * @version $Id: WeekCalendarChangeServiceLocal.java,v 1.2 2007/07/30 10:25:31 safonov Exp $
@@ -29,16 +29,16 @@ public interface WeekCalendarChangeServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<WeekCalendarChange, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/mfreference/WeekCalendarChange";
 
 	/**
-	 * получение дневного календаря
+	 * РїРѕР»СѓС‡РµРЅРёРµ РґРЅРµРІРЅРѕРіРѕ РєР°Р»РµРЅРґР°СЂСЏ
 	 * 
-	 * @param weekCalId		недельный календарь
-	 * @param searchDate	дата
-	 * @return	дневной календарь или <code>null</code> если не найден
+	 * @param weekCalId		РЅРµРґРµР»СЊРЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ
+	 * @param searchDate	РґР°С‚Р°
+	 * @return	РґРЅРµРІРЅРѕР№ РєР°Р»РµРЅРґР°СЂСЊ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	DayCalendar getDayCalendar(int weekCalId, Date searchDate);
 }

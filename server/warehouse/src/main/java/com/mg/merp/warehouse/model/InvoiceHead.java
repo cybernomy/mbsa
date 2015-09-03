@@ -17,7 +17,7 @@ package com.mg.merp.warehouse.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Накладная"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќР°РєР»Р°РґРЅР°СЏ"
  * 
  * @author hbm2java
  * @version $Id: InvoiceHead.java,v 1.9 2008/02/29 12:33:59 safonov Exp $

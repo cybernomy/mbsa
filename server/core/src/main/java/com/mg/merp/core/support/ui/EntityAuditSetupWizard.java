@@ -29,7 +29,7 @@ import com.mg.merp.core.EntityAuditItem;
 import com.mg.merp.core.PropertyAuditItem;
 
 /**
- * Контроллер формы настройки аудита хранилища данных
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РЅР°СЃС‚СЂРѕР№РєРё Р°СѓРґРёС‚Р° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityAuditSetupWizard.java,v 1.2 2008/05/29 08:38:35 safonov Exp $
@@ -218,7 +218,7 @@ public class EntityAuditSetupWizard extends AbstractForm {
 			return;
 		getSetupService().setAuditModify(currentEntityAuditItem.getEntityName(), auditModify);
 		currentEntityAuditItem.setAuditModify(auditModify);
-		//загрузим аудит для свойств заново, т.к. они будут сброшены
+		//Р·Р°РіСЂСѓР·РёРј Р°СѓРґРёС‚ РґР»СЏ СЃРІРѕР№СЃС‚РІ Р·Р°РЅРѕРІРѕ, С‚.Рє. РѕРЅРё Р±СѓРґСѓС‚ СЃР±СЂРѕС€РµРЅС‹
 		loadPropertySetup();
 	}
 
@@ -238,7 +238,7 @@ public class EntityAuditSetupWizard extends AbstractForm {
 	}
 
 	/**
-	 * запуск формы
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹
 	 */
 	public void execute() {
 		loadEntitySetup();

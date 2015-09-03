@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.SearchHelpName;
 
 /**
- * Метаданные свойства модели
+ * РњРµС‚Р°РґР°РЅРЅС‹Рµ СЃРІРѕР№СЃС‚РІР° РјРѕРґРµР»Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: ReflectionMetadata.java,v 1.3 2008/03/13 07:30:00 safonov Exp $
@@ -45,7 +45,7 @@ public class ReflectionMetadata {
 	}
 
 	/**
-	 * Получить элемент данных
+	 * РџРѕР»СѓС‡РёС‚СЊ СЌР»РµРјРµРЅС‚ РґР°РЅРЅС‹С…
 	 * 
 	 * @return Returns the dataItemName.
 	 */
@@ -54,7 +54,7 @@ public class ReflectionMetadata {
 	}
 
 	/**
-	 * Установить имя элемента данных
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РёРјСЏ СЌР»РµРјРµРЅС‚Р° РґР°РЅРЅС‹С…
 	 * 
 	 * @param dataItemName The dataItemName to set.
 	 */
@@ -63,7 +63,7 @@ public class ReflectionMetadata {
 	}
 
 	/**
-	 * Установить имя элемента данных
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РёРјСЏ СЌР»РµРјРµРЅС‚Р° РґР°РЅРЅС‹С…
 	 * 
 	 * @param dataItemName
 	 */
@@ -72,7 +72,7 @@ public class ReflectionMetadata {
 	}
 
 	/**
-	 * Получить тип свойства
+	 * РџРѕР»СѓС‡РёС‚СЊ С‚РёРї СЃРІРѕР№СЃС‚РІР°
 	 * 
 	 * @return Returns the propertyType.
 	 */
@@ -81,7 +81,7 @@ public class ReflectionMetadata {
 	}
 
 	/**
-	 * Установить тип свойства
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ С‚РёРї СЃРІРѕР№СЃС‚РІР°
 	 * 
 	 * @param propertyType The propertyType to set.
 	 */
@@ -90,7 +90,7 @@ public class ReflectionMetadata {
 	}
 
 	/**
-	 * Получить механизм поиска
+	 * РџРѕР»СѓС‡РёС‚СЊ РјРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР°
 	 * 
 	 * @return the searchHelpName
 	 */
@@ -99,7 +99,7 @@ public class ReflectionMetadata {
 	}
 
 	/**
-	 * Установить механизм поиска
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РјРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР°
 	 * 
 	 * @param searchHelpName the searchHelpName to set
 	 */
@@ -108,9 +108,9 @@ public class ReflectionMetadata {
 	}
 
 	/**
-	 * Установить механизм поиска
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РјРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР°
 	 * 
-	 * @param searchHelpName	имя механизма поиска
+	 * @param searchHelpName	РёРјСЏ РјРµС…Р°РЅРёР·РјР° РїРѕРёСЃРєР°
 	 */
 	public void setSearchHelpName(String searchHelpName) {
 		this.searchHelpName = searchHelpName;

@@ -24,7 +24,7 @@ import com.mg.merp.crm.ClientRankServiceLocal;
 import com.mg.merp.crm.model.ClientRank;
 
 /**
- * Бизнес-компонент "Ранги клиентов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р Р°РЅРіРё РєР»РёРµРЅС‚РѕРІ" 
  * 
  * @author leonova
  * @version $Id: ClientRankServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

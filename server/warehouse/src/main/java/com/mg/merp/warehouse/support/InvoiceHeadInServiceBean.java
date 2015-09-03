@@ -26,7 +26,7 @@ import com.mg.merp.warehouse.generic.AbstractWarehouseDocument;
 import com.mg.merp.warehouse.model.InvoiceHead;
 
 /**
- * Бизнес-компонент "Входящие накладные" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’С…РѕРґСЏС‰РёРµ РЅР°РєР»Р°РґРЅС‹Рµ" 
  * 
  * @author leonova
  * @version $Id: InvoiceHeadInServiceBean.java,v 1.7 2008/11/24 12:55:53 safonov Exp $

@@ -23,7 +23,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.reference.Contractor;
 
 /**
- * Базовая реализация бизнес-компонентов "Контрагенты"
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ "РљРѕРЅС‚СЂР°РіРµРЅС‚С‹"
  * 
  * @author Oleg V. Safonov
  */

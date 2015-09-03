@@ -20,7 +20,7 @@ import com.mg.framework.api.BusinessException;
 import com.mg.merp.manufacture.support.Messages;
 
 /**
- * ИС генерируется если ЗНП уже содержит состав изделия
+ * РРЎ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РµСЃР»Рё Р—РќРџ СѓР¶Рµ СЃРѕРґРµСЂР¶РёС‚ СЃРѕСЃС‚Р°РІ РёР·РґРµР»РёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: BOMAlreadyExistException.java,v 1.2 2007/07/30 10:28:17 safonov Exp $

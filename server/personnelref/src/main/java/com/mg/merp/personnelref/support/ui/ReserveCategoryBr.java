@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.personnelref.model.ReserveCategory;
 
 /**
- * Браузер категорий резерва
+ * Р‘СЂР°СѓР·РµСЂ РєР°С‚РµРіРѕСЂРёР№ СЂРµР·РµСЂРІР°
  * 
  * @author leonova
  * @version $Id: ReserveCategoryBr.java,v 1.1 2006/09/04 13:03:49 leonova Exp $ 

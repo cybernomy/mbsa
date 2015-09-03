@@ -28,19 +28,19 @@ public enum ContractorSource {
 	NONE,
 	
 	/**
-	 * От кого 
+	 * РћС‚ РєРѕРіРѕ 
 	 */
 	@EnumConstantText ("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#ContractorSource.Type.From")
 	FROM,
 	
 	/**
-	 * Кому 
+	 * РљРѕРјСѓ 
 	 */
 	@EnumConstantText ("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#ContractorSource.Type.To")
 	TO,
 	
 	/**
-	 * Через кого 
+	 * Р§РµСЂРµР· РєРѕРіРѕ 
 	 */
 	@EnumConstantText ("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#ContractorSource.Type.Through")
 	THROUGH

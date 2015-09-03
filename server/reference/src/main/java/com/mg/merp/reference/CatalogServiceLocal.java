@@ -17,7 +17,7 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.Catalog;
 
 /**
- * Бизнес-компонент "Каталог товаров и услуг"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљР°С‚Р°Р»РѕРі С‚РѕРІР°СЂРѕРІ Рё СѓСЃР»СѓРі"
  * 
  * @author Oleg V. Safonov
  * @author leonova
@@ -27,23 +27,23 @@ public interface CatalogServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<Catalog, Integer> {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/reference/Catalog"; //$NON-NLS-1$
 
 	/**
-	 * поиск по коду
+	 * РїРѕРёСЃРє РїРѕ РєРѕРґСѓ
 	 * 
-	 * @param code	код
-	 * @return	позиция каталога или <code>null</code> если не найдена
+	 * @param code	РєРѕРґ
+	 * @return	РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР° РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅР°
 	 */
 	Catalog findByCode(String code);
 
 	/**
-	 * поиск по штрих-коду
+	 * РїРѕРёСЃРє РїРѕ С€С‚СЂРёС…-РєРѕРґСѓ
 	 * 
-	 * @param barCode	штрих код
-	 * @return	позиция каталога или <code>null</code> если не найдена
+	 * @param barCode	С€С‚СЂРёС… РєРѕРґ
+	 * @return	РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР° РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅР°
 	 */
 	Catalog findByBarCode(String barCode);
 

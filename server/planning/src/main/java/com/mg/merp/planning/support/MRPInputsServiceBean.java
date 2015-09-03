@@ -24,7 +24,7 @@ import com.mg.merp.planning.model.MrpInputs;
 import com.mg.merp.planning.model.MrpVersionControl;
 
 /**
- * Бизнес-компонент "Поступление товаров для расчета ППМ"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџРѕСЃС‚СѓРїР»РµРЅРёРµ С‚РѕРІР°СЂРѕРІ РґР»СЏ СЂР°СЃС‡РµС‚Р° РџРџРњ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: MRPInputsServiceBean.java,v 1.3 2007/07/30 10:36:48 safonov Exp $

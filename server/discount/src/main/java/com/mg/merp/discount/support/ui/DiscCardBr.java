@@ -34,7 +34,7 @@ import com.mg.merp.discount.CardServiceLocal;
 import com.mg.merp.discount.model.Card;
 
 /**
- * Контроллер браузера "Дисконтные карты"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "Р”РёСЃРєРѕРЅС‚РЅС‹Рµ РєР°СЂС‚С‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -48,7 +48,7 @@ public class FinSpecFeatureMt extends FinAnalytics {
 	}
 	
 	/**
-	 * Обработчик кнопки "Удаление признака"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РЈРґР°Р»РµРЅРёРµ РїСЂРёР·РЅР°РєР°"
 	 * @param event
 	 */
 	protected void onActionClearAccFeat(WidgetEvent event) {
@@ -58,7 +58,7 @@ public class FinSpecFeatureMt extends FinAnalytics {
 	}
 	
 	/**
-	 * Обработчик кнопки "Выбор принака"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±РѕСЂ РїСЂРёРЅР°РєР°"
 	 * @param event
 	 * @throws Exception
 	 */
@@ -87,7 +87,7 @@ public class FinSpecFeatureMt extends FinAnalytics {
 	}
 	
 	/**
-	 * Удаляем установленные аналитики признака
+	 * РЈРґР°Р»СЏРµРј СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рµ Р°РЅР°Р»РёС‚РёРєРё РїСЂРёР·РЅР°РєР°
 	 */
 	private void clearFeatAnalytics() {
 		(getTypeModel()).setAttribute("SrcAnl1", null);

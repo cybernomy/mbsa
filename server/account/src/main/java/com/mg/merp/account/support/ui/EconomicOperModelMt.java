@@ -41,7 +41,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.support.DocumentUtils;
 
 /**
- * Контроллер формы поддержки образцов хозяйственных операций
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РѕР±СЂР°Р·С†РѕРІ С…РѕР·СЏР№СЃС‚РІРµРЅРЅС‹С… РѕРїРµСЂР°С†РёР№
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -132,24 +132,24 @@ public class EconomicOperModelMt extends DefaultMaintenanceForm implements Maste
 	}
 
 	/**
-	 * Обработчик просмотра документа-основания
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewBaseDocument(WidgetEvent event) {
 		DocumentUtils.viewDocument(((EconomicOperModel) getEntity()).getBaseDoc());
 	}
 	
 	/**
-	 * Обработчик просмотра документа
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewConfirmDocument(WidgetEvent event) {
 		DocumentUtils.viewDocument(((EconomicOperModel) getEntity()).getConfirmDoc());
 	}
 
 	/**
-	 * Обработчик просмотра/выбора контракта
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР°/РІС‹Р±РѕСЂР° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewOrChooseContract(WidgetEvent event) {
 		final EconomicOperModel economicOperModel = (EconomicOperModel) getEntity();

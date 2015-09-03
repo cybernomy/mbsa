@@ -19,7 +19,7 @@ import com.mg.framework.api.annotations.SearchHelpName;
 import com.mg.merp.reference.model.TimePeriodKind;
 
 /**
- * Модель бизнес-компонента "Спецификации образцов документов" 
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёРё РѕР±СЂР°Р·С†РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ" 
  * 
  * @author hbm2java
  * @version $Id: DocSpecModel.java,v 1.6 2008/03/20 14:05:22 alikaev Exp $

@@ -30,7 +30,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.scheduler.support.SchedulerManagerServiceImpl;
 
 /**
- * Рализация JMX сервиса менеджера планировщика
+ * Р Р°Р»РёР·Р°С†РёСЏ JMX СЃРµСЂРІРёСЃР° РјРµРЅРµРґР¶РµСЂР° РїР»Р°РЅРёСЂРѕРІС‰РёРєР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: SchedulerManagerService.java,v 1.2 2008/08/28 13:40:11 safonov Exp $
@@ -89,7 +89,7 @@ public class SchedulerManagerService extends ListenerServiceMBeanSupport
 	@Override
 	public void handleNotification2(Notification notification, Object handback) {
 		String type = notification.getType().intern();
-		//после запуска сервера загружаем задачи для щедулера
+		//РїРѕСЃР»Рµ Р·Р°РїСѓСЃРєР° СЃРµСЂРІРµСЂР° Р·Р°РіСЂСѓР¶Р°РµРј Р·Р°РґР°С‡Рё РґР»СЏ С‰РµРґСѓР»РµСЂР°
 		if (type == Server.START_NOTIFICATION_TYPE) {
 			delegate.scheduleTasks();
 		}

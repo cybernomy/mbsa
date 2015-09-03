@@ -32,7 +32,7 @@ import com.mg.merp.docflow.PluginNotImplementedException;
 import com.mg.merp.docflow.generic.BaseDocFlowBusinessAddin;
 
 /**
- * Активатор этапов ДО
+ * РђРєС‚РёРІР°С‚РѕСЂ СЌС‚Р°РїРѕРІ Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowPluginInvoker.java,v 1.2 2007/12/14 08:48:53 safonov Exp $

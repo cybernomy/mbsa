@@ -23,7 +23,7 @@ import org.eclipse.swt.widgets.Composite;
 import com.mg.merp.wb.core.support.CoreUtils;
 
 /**
- * Редактор однострочного текста с памятью
+ * Р РµРґР°РєС‚РѕСЂ РѕРґРЅРѕСЃС‚СЂРѕС‡РЅРѕРіРѕ С‚РµРєСЃС‚Р° СЃ РїР°РјСЏС‚СЊСЋ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: ComboFieldEditor.java,v 1.3 2007/07/11 06:05:15 poroxnenko Exp $ 

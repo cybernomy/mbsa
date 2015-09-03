@@ -21,7 +21,7 @@ import com.mg.merp.reference.support.ui.FolderByTypeSearchHelp;
 
 
 /**
- * SearchHelp папка-приемника в образцах документов
+ * SearchHelp РїР°РїРєР°-РїСЂРёРµРјРЅРёРєР° РІ РѕР±СЂР°Р·С†Р°С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: DocModelFolderDestSearchHelp.java,v 1.3 2007/02/05 15:00:52 safonov Exp $

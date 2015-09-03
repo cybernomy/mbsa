@@ -55,7 +55,7 @@ public class MPSPlanningLevelSearchHelp extends PlanningLevelSearchHelp {
 	@Override
 	protected void doOnSearchPerformed(SearchHelpEvent event) {
 		Date planningDate = (Date) getImportContextValue(PLANNING_DATE);
-		//не устанавливаем дату если планируемая пустая
+		//РЅРµ СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РґР°С‚Сѓ РµСЃР»Рё РїР»Р°РЅРёСЂСѓРµРјР°СЏ РїСѓСЃС‚Р°СЏ
 		if (planningDate == null)
 			return;
 		

@@ -26,7 +26,7 @@ import com.mg.framework.api.Logger;
 import com.mg.framework.api.ui.Language;
 
 /**
- * Языковые утилиты
+ * РЇР·С‹РєРѕРІС‹Рµ СѓС‚РёР»РёС‚С‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: LanguageUtils.java,v 1.1 2008/04/09 14:32:07 safonov Exp $
@@ -38,14 +38,14 @@ public class LanguageUtils {
 	static {
 		log = ServerUtils.getLogger(LanguageUtils.class);
 		
-		//загрузка языков поддерживаемых системой
-		//в каталоге <appserver>/<conf>/mg-custom/languages находится список языков
-		//для каждого языка необходимо создать файл <язык>.language имеющего формат
-		//файла свойств, возможны следующие параметры:
-		//name имя языка отображаемого в интерфейсе пользователя
-		//language 2х буквенный код языка
-		//country 2х буквенный код страны
-		//variant вариант языка (необязательный параметр)
+		//Р·Р°РіСЂСѓР·РєР° СЏР·С‹РєРѕРІ РїРѕРґРґРµСЂР¶РёРІР°РµРјС‹С… СЃРёСЃС‚РµРјРѕР№
+		//РІ РєР°С‚Р°Р»РѕРіРµ <appserver>/<conf>/mg-custom/languages РЅР°С…РѕРґРёС‚СЃСЏ СЃРїРёСЃРѕРє СЏР·С‹РєРѕРІ
+		//РґР»СЏ РєР°Р¶РґРѕРіРѕ СЏР·С‹РєР° РЅРµРѕР±С…РѕРґРёРјРѕ СЃРѕР·РґР°С‚СЊ С„Р°Р№Р» <СЏР·С‹Рє>.language РёРјРµСЋС‰РµРіРѕ С„РѕСЂРјР°С‚
+		//С„Р°Р№Р»Р° СЃРІРѕР№СЃС‚РІ, РІРѕР·РјРѕР¶РЅС‹ СЃР»РµРґСѓСЋС‰РёРµ РїР°СЂР°РјРµС‚СЂС‹:
+		//name РёРјСЏ СЏР·С‹РєР° РѕС‚РѕР±СЂР°Р¶Р°РµРјРѕРіРѕ РІ РёРЅС‚РµСЂС„РµР№СЃРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+		//language 2С… Р±СѓРєРІРµРЅРЅС‹Р№ РєРѕРґ СЏР·С‹РєР°
+		//country 2С… Р±СѓРєРІРµРЅРЅС‹Р№ РєРѕРґ СЃС‚СЂР°РЅС‹
+		//variant РІР°СЂРёР°РЅС‚ СЏР·С‹РєР° (РЅРµРѕР±СЏР·Р°С‚РµР»СЊРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ)
 		try {
 			File languagesDescDir = new File(new StringBuilder(ServerUtils.MBSA_CUSTOM_LOCATION).append(File.separatorChar).append("languages").toString());
 			File[] languagesDesc = languagesDescDir.listFiles(new FilenameFilter() {
@@ -81,28 +81,28 @@ public class LanguageUtils {
 	}
 	
 	/**
-	 * получить список имен поддерживаемых языков
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РёРјРµРЅ РїРѕРґРґРµСЂР¶РёРІР°РµРјС‹С… СЏР·С‹РєРѕРІ
 	 * 
-	 * @return	список имен
+	 * @return	СЃРїРёСЃРѕРє РёРјРµРЅ
 	 */
 	public static String[] getNames() {
 		String[] result = new String[languages.length];
-		for (int i = 0; i < languages.length; i++) //не используем итераторы, т.к. мультипоточность
+		for (int i = 0; i < languages.length; i++) //РЅРµ РёСЃРїРѕР»СЊР·СѓРµРј РёС‚РµСЂР°С‚РѕСЂС‹, С‚.Рє. РјСѓР»СЊС‚РёРїРѕС‚РѕС‡РЅРѕСЃС‚СЊ
 			result[i] = languages[i].getName();
 		return result;
 	}
 
 	/**
-	 * получить описание языка по локали
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕРїРёСЃР°РЅРёРµ СЏР·С‹РєР° РїРѕ Р»РѕРєР°Р»Рё
 	 * 
-	 * @param locale	локаль
-	 * @return	описатель языка
+	 * @param locale	Р»РѕРєР°Р»СЊ
+	 * @return	РѕРїРёСЃР°С‚РµР»СЊ СЏР·С‹РєР°
 	 */
 	public static Language getLanguage(Locale locale) {
 		if (locale == null)
 			return null;
 		
-		for (int i = 0; i < languages.length; i++) //не используем итераторы, т.к. мультипоточность
+		for (int i = 0; i < languages.length; i++) //РЅРµ РёСЃРїРѕР»СЊР·СѓРµРј РёС‚РµСЂР°С‚РѕСЂС‹, С‚.Рє. РјСѓР»СЊС‚РёРїРѕС‚РѕС‡РЅРѕСЃС‚СЊ
 			if (languages[i].getLocale().equals(locale))
 				return languages[i];
 		
@@ -110,16 +110,16 @@ public class LanguageUtils {
 	}
 	
 	/**
-	 * получить описание языка по имени
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕРїРёСЃР°РЅРёРµ СЏР·С‹РєР° РїРѕ РёРјРµРЅРё
 	 * 
-	 * @param languageName	имя
-	 * @return	описатель языка
+	 * @param languageName	РёРјСЏ
+	 * @return	РѕРїРёСЃР°С‚РµР»СЊ СЏР·С‹РєР°
 	 */
 	public static Language getLanguage(String languageName) {
 		if (languageName == null)
 			return null;
 		
-		for (int i = 0; i < languages.length; i++) //не используем итераторы, т.к. мультипоточность
+		for (int i = 0; i < languages.length; i++) //РЅРµ РёСЃРїРѕР»СЊР·СѓРµРј РёС‚РµСЂР°С‚РѕСЂС‹, С‚.Рє. РјСѓР»СЊС‚РёРїРѕС‚РѕС‡РЅРѕСЃС‚СЊ
 			if (languages[i].getName().equals(languageName))
 				return languages[i];
 		
@@ -127,10 +127,10 @@ public class LanguageUtils {
 	}
 	
 	/**
-	 * получить локаль по имени языка
+	 * РїРѕР»СѓС‡РёС‚СЊ Р»РѕРєР°Р»СЊ РїРѕ РёРјРµРЅРё СЏР·С‹РєР°
 	 * 
-	 * @param languageName	имя
-	 * @return	локаль
+	 * @param languageName	РёРјСЏ
+	 * @return	Р»РѕРєР°Р»СЊ
 	 */
 	public static Locale getLocale(String languageName) {
 		Language language = getLanguage(languageName);

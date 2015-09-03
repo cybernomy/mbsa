@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.personnelref.model.MilitaryValidity;
 
 /**
- * Браузер категорий годности к воинской службе
+ * Р‘СЂР°СѓР·РµСЂ РєР°С‚РµРіРѕСЂРёР№ РіРѕРґРЅРѕСЃС‚Рё Рє РІРѕРёРЅСЃРєРѕР№ СЃР»СѓР¶Р±Рµ
  * 
  * @author leonova
  * @version $Id: MilitaryValidityBr.java,v 1.1 2006/08/03 11:25:05 leonova Exp $ 

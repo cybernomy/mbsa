@@ -31,7 +31,7 @@ import com.mg.merp.personnelref.model.TariffScale;
 import com.mg.merp.personnelref.model.TariffScaleClass;
 
 /**
- * Браузер тарифоных сеток
+ * Р‘СЂР°СѓР·РµСЂ С‚Р°СЂРёС„РѕРЅС‹С… СЃРµС‚РѕРє
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: TariffScaleBr.java,v 1.4 2006/10/02 06:23:31 leonova Exp $

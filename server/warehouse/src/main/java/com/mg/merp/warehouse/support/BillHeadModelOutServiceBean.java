@@ -23,7 +23,7 @@ import com.mg.merp.warehouse.BillHeadOutServiceLocal;
 import com.mg.merp.warehouse.model.BillHeadModel;
 
 /**
- * Бизнес-компонент "Образцы исходящих счетов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ РёСЃС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ" 
  * 
  * @author leonova
  * @version $Id: BillHeadModelOutServiceBean.java,v 1.3 2006/09/12 10:48:36 leonova Exp $

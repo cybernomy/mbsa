@@ -20,7 +20,7 @@ import org.eclipse.datatools.connectivity.oda.design.ui.wizards.DataSourceEditor
 import org.eclipse.swt.widgets.Composite;
 
 /**
- * Страница свойств
+ * РЎС‚СЂР°РЅРёС†Р° СЃРІРѕР№СЃС‚РІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: HibernatePropertyPage.java,v 1.1 2007/10/29 08:54:16 safonov Exp $

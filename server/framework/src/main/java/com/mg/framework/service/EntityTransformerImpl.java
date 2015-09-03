@@ -30,7 +30,7 @@ import com.mg.framework.api.jdbc.RowMapper;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Реализация сервиса преобразования сущностей
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ СЃСѓС‰РЅРѕСЃС‚РµР№
  * 
  * @author Oleg V. Safonov
  * @author Valentin A. Poroxnenko
@@ -122,15 +122,15 @@ public class EntityTransformerImpl implements EntityTransformer {
 	}
 	
 	/**
-	 * Хэш код для пары имён
+	 * РҐСЌС€ РєРѕРґ РґР»СЏ РїР°СЂС‹ РёРјС‘РЅ
 	 * @param classA
-	 * 			имя класса А
+	 * 			РёРјСЏ РєР»Р°СЃСЃР° Рђ
 	 * @param classB
-	 * 			имя класса Б
-	 * @return хэш код
+	 * 			РёРјСЏ РєР»Р°СЃСЃР° Р‘
+	 * @return С…СЌС€ РєРѕРґ
 	 */
 	public static int getHash(String classA, String classB){
-		//TODO: возможно, необходимо использовать взрослый алгоритм хеширования?
+		//TODO: РІРѕР·РјРѕР¶РЅРѕ, РЅРµРѕР±С…РѕРґРёРјРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РІР·СЂРѕСЃР»С‹Р№ Р°Р»РіРѕСЂРёС‚Рј С…РµС€РёСЂРѕРІР°РЅРёСЏ?
 		int h1 = (classA + classB).hashCode();
 		int h2 = (classB + classA).hashCode();
 		return (h1^h2);

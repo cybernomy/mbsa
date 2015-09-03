@@ -17,7 +17,7 @@ package com.mg.framework.api.ui;
 import com.mg.framework.api.orm.PersistentObject;
 
 /**
- * событие формы поддержки
+ * СЃРѕР±С‹С‚РёРµ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: MaintenanceFormEvent.java,v 1.1 2006/05/10 13:19:49 safonov Exp $
@@ -26,10 +26,10 @@ public class MaintenanceFormEvent extends FormEvent {
 	private PersistentObject entity;
 	
 	/**
-	 * создание события формы поддержки
+	 * СЃРѕР·РґР°РЅРёРµ СЃРѕР±С‹С‚РёСЏ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё
 	 * 
-	 * @param source	форма
-	 * @param entity	объект сущность
+	 * @param source	С„РѕСЂРјР°
+	 * @param entity	РѕР±СЉРµРєС‚ СЃСѓС‰РЅРѕСЃС‚СЊ
 	 */
 	public MaintenanceFormEvent(Form source, PersistentObject entity) {
 		super(source);
@@ -37,10 +37,10 @@ public class MaintenanceFormEvent extends FormEvent {
 	}
 	
 	/**
-	 * возвращает объект сущность обрабатываемый в форме поддержки
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ РѕР±СЉРµРєС‚ СЃСѓС‰РЅРѕСЃС‚СЊ РѕР±СЂР°Р±Р°С‚С‹РІР°РµРјС‹Р№ РІ С„РѕСЂРјРµ РїРѕРґРґРµСЂР¶РєРё
 	 * 
-	 * @return	объект сущность
-	 * @throws	IllegalStateException если объект сущность <code>null</code>
+	 * @return	РѕР±СЉРµРєС‚ СЃСѓС‰РЅРѕСЃС‚СЊ
+	 * @throws	IllegalStateException РµСЃР»Рё РѕР±СЉРµРєС‚ СЃСѓС‰РЅРѕСЃС‚СЊ <code>null</code>
 	 */
 	public PersistentObject getEntity() {
 		if (entity == null)

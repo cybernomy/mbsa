@@ -20,7 +20,7 @@ package com.mg.framework.support.dataset;
  */
 public class ExcStrings 
 {
-  public static final String SROW_INFO_NOT_EXIST = "Нет информации о столбцах";
-  public static final String SEOF = "Достигнут конец набора данных";
-  public static final String S_INDEX_NOT_EXIST = "Нет информации об индексах";
+  public static final String SROW_INFO_NOT_EXIST = "РќРµС‚ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃС‚РѕР»Р±С†Р°С…";
+  public static final String SEOF = "Р”РѕСЃС‚РёРіРЅСѓС‚ РєРѕРЅРµС† РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С…";
+  public static final String S_INDEX_NOT_EXIST = "РќРµС‚ РёРЅС„РѕСЂРјР°С†РёРё РѕР± РёРЅРґРµРєСЃР°С…";
 }

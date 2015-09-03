@@ -22,7 +22,7 @@ import com.mg.merp.reference.PlaceServiceLocal;
 import com.mg.merp.reference.model.Place;
 
 /**
- * Бизнес-компонент "Населенные пункты"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РќР°СЃРµР»РµРЅРЅС‹Рµ РїСѓРЅРєС‚С‹"
  * 
  * @author leonova
  * @version $Id: PlaceServiceBean.java,v 1.3 2006/08/03 10:37:01 leonova Exp $

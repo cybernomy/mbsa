@@ -23,7 +23,7 @@ import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.reference.model.NaturalPerson;
 
 /**
- * Контроллер формы условий отбора
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР°
  * 
  * @author leonova
  * @version $Id: RelationRest.java,v 1.5 2006/10/16 07:17:51 leonova Exp $ 

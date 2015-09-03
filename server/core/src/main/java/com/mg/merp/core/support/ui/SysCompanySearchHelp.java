@@ -18,7 +18,7 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 import com.mg.merp.core.SysCompanyServiceLocal;
 
 /**
- * Поиск сущностей бизнес-компонента "Балансовые единицы"
+ * РџРѕРёСЃРє СЃСѓС‰РЅРѕСЃС‚РµР№ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р‘Р°Р»Р°РЅСЃРѕРІС‹Рµ РµРґРёРЅРёС†С‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: SysCompanySearchHelp.java,v 1.1 2007/09/20 15:07:10 safonov Exp $

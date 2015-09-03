@@ -68,7 +68,7 @@ public class DocFlowStageMt extends DefaultMaintenanceForm implements MasterMode
 			@Override
 			protected Set<TableEJBQLFieldDef> getDefaultFieldDefsSet() {
 				Set<TableEJBQLFieldDef> result = super.getDefaultFieldDefsSet();
-				result.add(new TableEJBQLFieldDef(DocProcessStageRights.class, "Id", "r.Id", true));//не перемещать данное поле, индекс 0 используется в методе setSelectedRows
+				result.add(new TableEJBQLFieldDef(DocProcessStageRights.class, "Id", "r.Id", true));//РЅРµ РїРµСЂРµРјРµС‰Р°С‚СЊ РґР°РЅРЅРѕРµ РїРѕР»Рµ, РёРЅРґРµРєСЃ 0 РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІ РјРµС‚РѕРґРµ setSelectedRows
 				result.add(new TableEJBQLFieldDef(DocProcessStageRights.class, "SecGroups.Name", "r.SecGroups.Name", true));
 				result.add(new TableEJBQLFieldDef(DocProcessStageRights.class, "Grants", "r.Grants", true));
 				return result;

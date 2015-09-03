@@ -21,7 +21,7 @@ import com.mg.framework.service.EntityInterceptorManagerLocator;
 import com.mg.merp.scheduler.support.TaskInterceptorImpl;
 
 /**
- * Реализация JMX сервиса регистрация перехватчиков на сущность "задачи планировщика"
+ * Р РµР°Р»РёР·Р°С†РёСЏ JMX СЃРµСЂРІРёСЃР° СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РЅР° СЃСѓС‰РЅРѕСЃС‚СЊ "Р·Р°РґР°С‡Рё РїР»Р°РЅРёСЂРѕРІС‰РёРєР°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: TaskInterceptorService.java,v 1.1 2008/04/25 10:57:23 safonov Exp $

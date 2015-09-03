@@ -33,7 +33,7 @@ import com.mg.merp.finance.model.Account;
 import com.mg.merp.finance.model.Analytics;
 
 /**
- * Бизнес-компонент "Финансовые счета" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р¤РёРЅР°РЅСЃРѕРІС‹Рµ СЃС‡РµС‚Р°" 
  * 
  * @author leonova
  * @version $Id: AccountServiceBean.java,v 1.5 2007/11/08 06:42:17 sharapov Exp $

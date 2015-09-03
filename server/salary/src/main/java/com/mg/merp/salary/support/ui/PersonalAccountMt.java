@@ -35,7 +35,7 @@ import com.mg.merp.salary.PositionFillServiceLocal;
 import com.mg.merp.salary.model.FeeModel;
 
 /**
- * Контроллер формы поддерки лицевых счетов сотрудников
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂРєРё Р»РёС†РµРІС‹С… СЃС‡РµС‚РѕРІ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ
  * 
  * @author leonova
  * @version $Id: PersonalAccountMt.java,v 1.8 2007/07/09 13:58:45 sharapov Exp $

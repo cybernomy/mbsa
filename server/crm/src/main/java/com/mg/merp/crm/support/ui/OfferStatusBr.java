@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.OfferStatus;
 
 /**
- * Браузер статусов предложений
+ * Р‘СЂР°СѓР·РµСЂ СЃС‚Р°С‚СѓСЃРѕРІ РїСЂРµРґР»РѕР¶РµРЅРёР№
  * 
  * @author leonova
  * @version $Id: OfferStatusBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

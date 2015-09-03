@@ -21,7 +21,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.support.Messages;
 
 /**
- * Модель таблицы "Электронный адрес"
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ "Р­Р»РµРєС‚СЂРѕРЅРЅС‹Р№ Р°РґСЂРµСЃ"
  * 
  * @author Artem V. Sharapov
  * @author Konstantin S. Alikaev

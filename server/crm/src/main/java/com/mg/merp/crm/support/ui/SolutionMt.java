@@ -43,7 +43,7 @@ import com.mg.merp.crm.model.Problem;
 import com.mg.merp.crm.model.Solution;
 
 /**
- * Контроллер формы поддержки решений
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЂРµС€РµРЅРёР№
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -200,9 +200,9 @@ public class SolutionMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 		
 	/**
-	 * Обработка события выбора пункта контекстного меню "Выбрать проблему"
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "Р’С‹Р±СЂР°С‚СЊ РїСЂРѕР±Р»РµРјСѓ"
 	 * 
-	 * @param event - событие
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionIncludeProblem(WidgetEvent event) throws ApplicationException {
@@ -224,9 +224,9 @@ public class SolutionMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 	
 	/**
-	 * Обработка события выбора пункта контекстного меню "Убрать проблему"
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РЈР±СЂР°С‚СЊ РїСЂРѕР±Р»РµРјСѓ"
 	 * 
-	 * @param event - событие
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionExcludeProblem(WidgetEvent event) throws ApplicationException {

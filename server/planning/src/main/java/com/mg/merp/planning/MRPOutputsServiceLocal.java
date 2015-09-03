@@ -18,7 +18,7 @@ import com.mg.merp.planning.model.MrpOutputs;
 import com.mg.merp.planning.model.MrpVersionControl;
 
 /**
- * Бизнес-компонент "Потребности товаров для расчета MRP"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџРѕС‚СЂРµР±РЅРѕСЃС‚Рё С‚РѕРІР°СЂРѕРІ РґР»СЏ СЂР°СЃС‡РµС‚Р° MRP"
  * 
  * @author Oleg V. Safonov
  * @author leonova
@@ -28,14 +28,14 @@ public interface MRPOutputsServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<MrpOutputs, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/planning/MRPOutputs";
 	
 	/**
-	 * очистить потребности товара
+	 * РѕС‡РёСЃС‚РёС‚СЊ РїРѕС‚СЂРµР±РЅРѕСЃС‚Рё С‚РѕРІР°СЂР°
 	 * 
-	 * @param mrpVersion	версия ППМ
+	 * @param mrpVersion	РІРµСЂСЃРёСЏ РџРџРњ
 	 */
 	void clear(MrpVersionControl mrpVersion);
 

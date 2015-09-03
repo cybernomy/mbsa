@@ -23,7 +23,7 @@ import com.mg.merp.docprocess.model.DocHeadState;
 import com.mg.merp.warehouse.WarehouseProcessorServiceLocal;
 
 /**
- * Реализация фабрики реализаций этапа ДО "Собрать комплект"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїР° Р”Рћ "РЎРѕР±СЂР°С‚СЊ РєРѕРјРїР»РµРєС‚"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: WarehouseAssembleProductDocFlowPluginFactory.java,v 1.1 2007/10/23 14:05:19 alikaev Exp $
@@ -31,7 +31,7 @@ import com.mg.merp.warehouse.WarehouseProcessorServiceLocal;
 public class WarehouseAssembleProductDocFlowPluginFactory extends AbstractDocFlowPluginFactory {
 
 	/**
-	 * Идентификатор фабрики
+	 * РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„Р°Р±СЂРёРєРё
 	 */
 	public final static int FACTORY_IDENTIFIER = 27;
 

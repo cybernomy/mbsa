@@ -35,7 +35,7 @@ import com.mg.merp.account.model.Period;
 import com.mg.merp.account.model.RemnDbKt;
 
 /**
- * Реализация бизнес-компонента "Ведомость расчетов с контрагентами"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РµРґРѕРјРѕСЃС‚СЊ СЂР°СЃС‡РµС‚РѕРІ СЃ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°РјРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov

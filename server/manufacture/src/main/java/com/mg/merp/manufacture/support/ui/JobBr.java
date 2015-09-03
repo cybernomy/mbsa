@@ -36,7 +36,7 @@ import com.mg.merp.manufacture.model.Job;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Контроллер формы списка заказ-нарядов на производство
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р·Р°РєР°Р·-РЅР°СЂСЏРґРѕРІ РЅР° РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: JobBr.java,v 1.5 2007/07/30 10:27:10 safonov Exp $

@@ -32,7 +32,7 @@ import com.mg.merp.wb.badi.library.BadiLibraryPlugin;
 import com.mg.merp.wb.badi.library.ContainerPage;
 
 /**
- * Контроллер для {@link ContainerPageController}
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґР»СЏ {@link ContainerPageController}
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: ContainerPageController.java,v 1.2 2006/11/24 09:06:40
@@ -166,11 +166,11 @@ public class ContainerPageController implements IStructuredContentProvider,
 	}
 
 	/**
-	 * Заполняет список имёнами архивов, которые будут помещены в библиотеку, на
-	 * основе конфигурации проекта
+	 * Р—Р°РїРѕР»РЅСЏРµС‚ СЃРїРёСЃРѕРє РёРјС‘РЅР°РјРё Р°СЂС…РёРІРѕРІ, РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ РїРѕРјРµС‰РµРЅС‹ РІ Р±РёР±Р»РёРѕС‚РµРєСѓ, РЅР°
+	 * РѕСЃРЅРѕРІРµ РєРѕРЅС„РёРіСѓСЂР°С†РёРё РїСЂРѕРµРєС‚Р°
 	 * 
 	 * @param project
-	 *            текущий Java-проект
+	 *            С‚РµРєСѓС‰РёР№ Java-РїСЂРѕРµРєС‚
 	 */
 	public void initLibs(IJavaProject project) {
 		libs = BadiLibraryPlugin.initLibsFromPropFile(project);

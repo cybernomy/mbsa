@@ -22,7 +22,7 @@ import java.util.Observer;
 import com.mg.framework.support.Messages;
 
 /**
- * Обработчик получений сообщений от администратора системы пользователю
+ * РћР±СЂР°Р±РѕС‚С‡РёРє РїРѕР»СѓС‡РµРЅРёР№ СЃРѕРѕР±С‰РµРЅРёР№ РѕС‚ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР° СЃРёСЃС‚РµРјС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ
  * 
  * @author Oleg V. Safonov
  * @version $Id: AdminMessageQueueHandler.java,v 1.1 2008/07/14 14:11:27 safonov Exp $
@@ -44,8 +44,8 @@ public class AdminMessageQueueHandler implements Observer, Serializable {
 		if (arg instanceof AdminMessageSender.AdminMessage) {
 			AdminMessageSender.AdminMessage message = (AdminMessageSender.AdminMessage) arg;
 			for (String id : message.getSessionIds())
-				//для каждой сессии создается свой обработчик, проверяем есть ли сообщение для
-				//нашей сесии
+				//РґР»СЏ РєР°Р¶РґРѕР№ СЃРµСЃСЃРёРё СЃРѕР·РґР°РµС‚СЃСЏ СЃРІРѕР№ РѕР±СЂР°Р±РѕС‚С‡РёРє, РїСЂРѕРІРµСЂСЏРµРј РµСЃС‚СЊ Р»Рё СЃРѕРѕР±С‰РµРЅРёРµ РґР»СЏ
+				//РЅР°С€РµР№ СЃРµСЃРёРё
 				if (id != null && id.equals(httpSessionId)) {
 					synchronized(this) {
 						messageBody = message.getMessage();
@@ -57,16 +57,16 @@ public class AdminMessageQueueHandler implements Observer, Serializable {
 	}
 
 	/**
-	 * получить сообщение
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ
 	 * 
-	 * @return	сообщение или <code>null</code> если сообщений не было
+	 * @return	СЃРѕРѕР±С‰РµРЅРёРµ РёР»Рё <code>null</code> РµСЃР»Рё СЃРѕРѕР±С‰РµРЅРёР№ РЅРµ Р±С‹Р»Рѕ
 	 */
 	public String getMessage() {
 		synchronized(this) {
 			String result = messageBody;
 			if (result != null)
 				result = Messages.getInstance().getMessage(Messages.ADMIN_MESSAGE_BODY, new Object[] {messageTime, messageBody});
-			//сбросим сообщение после получения, считаем обработанным
+			//СЃР±СЂРѕСЃРёРј СЃРѕРѕР±С‰РµРЅРёРµ РїРѕСЃР»Рµ РїРѕР»СѓС‡РµРЅРёСЏ, СЃС‡РёС‚Р°РµРј РѕР±СЂР°Р±РѕС‚Р°РЅРЅС‹Рј
 			messageBody = null;
 			messageTime = null;
 			return result;

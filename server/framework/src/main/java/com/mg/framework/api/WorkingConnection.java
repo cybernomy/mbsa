@@ -21,34 +21,34 @@ import javax.security.auth.login.LoginException;
 import com.mg.framework.api.security.InvalidUserNameOrPassword;
 
 /**
- * Рабочее соединение
+ * Р Р°Р±РѕС‡РµРµ СЃРѕРµРґРёРЅРµРЅРёРµ
  * 
  * @author Oleg V. Safonov
  * @version $Id: WorkingConnection.java,v 1.8 2008/04/09 14:34:54 safonov Exp $
  */
 public interface WorkingConnection {
 	/**
-	 * имя параметра пользователь
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ
 	 */
 	final static String LOGIN_PARAM = "loginParam";
 	/**
-	 * имя параметра пароль
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° РїР°СЂРѕР»СЊ
 	 */
 	final static String PASSW_PARAM = "passwParam";
 	/**
-	 * имя параметра локаль с которой подключился пользователь
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° Р»РѕРєР°Р»СЊ СЃ РєРѕС‚РѕСЂРѕР№ РїРѕРґРєР»СЋС‡РёР»СЃСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ
 	 */
 	final static String LOCALE_PARAM = "localeParam";
 	/**
-	 * имя параметра локаль по умолчанию
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° Р»РѕРєР°Р»СЊ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
 	final static String DEFAULT_LOCALE_PARAM = "defaultLocaleParam";
 	/**
-	 * имя параметра признак использования смарт-карты
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° РїСЂРёР·РЅР°Рє РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ СЃРјР°СЂС‚-РєР°СЂС‚С‹
 	 */
 	final static String SMARTCARD_PARAM = "smartcardParam";
 	/**
-	 * имя параметра принтер для серверной печати
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° РїСЂРёРЅС‚РµСЂ РґР»СЏ СЃРµСЂРІРµСЂРЅРѕР№ РїРµС‡Р°С‚Рё
 	 */
 	final static String PRINTER_PARAM = "printerParam";
 	/**
@@ -77,28 +77,28 @@ public interface WorkingConnection {
 	final static int DBMS_FIREBIRD = 3;
 
 	/**
-	 * выполнить аутентификацию пользователя
+	 * РІС‹РїРѕР»РЅРёС‚СЊ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёСЋ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @param name			логин пользователя
-	 * @param password		пароль
-	 * @param locale		локаль
-	 * @param defaultLocale	локаль по умолчанию
-	 * @param smartCard		использовать смарт-карту
+	 * @param name			Р»РѕРіРёРЅ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	 * @param password		РїР°СЂРѕР»СЊ
+	 * @param locale		Р»РѕРєР°Р»СЊ
+	 * @param defaultLocale	Р»РѕРєР°Р»СЊ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @param smartCard		РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЃРјР°СЂС‚-РєР°СЂС‚Сѓ
 	 * @throws InvalidUserNameOrPassword
 	 * @throws LoginException
 	 */
 	void login(Map<String, Object> params) throws InvalidUserNameOrPassword, LoginException;
 	
 	/**
-	 * выполнить отключение пользователя
+	 * РІС‹РїРѕР»РЅРёС‚СЊ РѕС‚РєР»СЋС‡РµРЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 *
 	 */
 	void logout();
 	
 	/**
-	 * получить тип СУБД
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РёРї РЎРЈР‘Р”
 	 * 
-	 * @return	тип СУБД
+	 * @return	С‚РёРї РЎРЈР‘Р”
 	 * @see #DBMS_FIREBIRD
 	 * @see #DBMS_INTERBASE
 	 * @see #DBMS_MSSQL
@@ -110,7 +110,7 @@ public interface WorkingConnection {
 	int DBMSEngine();
 	
 	/**
-	 * получить пользовательский профайл соединения
+	 * РїРѕР»СѓС‡РёС‚СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ РїСЂРѕС„Р°Р№Р» СЃРѕРµРґРёРЅРµРЅРёСЏ
 	 * 
 	 * @return
 	 */

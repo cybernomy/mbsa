@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.planning.model.InventoryForecast;
 
 /**
- * Браузер прогнозов складских запасов 
+ * Р‘СЂР°СѓР·РµСЂ РїСЂРѕРіРЅРѕР·РѕРІ СЃРєР»Р°РґСЃРєРёС… Р·Р°РїР°СЃРѕРІ 
  * 
  * @author leonova
  * @version $Id: InventoryForecastBr.java,v 1.1 2006/08/25 10:17:54 leonova Exp $ 

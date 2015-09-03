@@ -28,7 +28,7 @@ import com.mg.framework.support.ui.widget.SetupMaintenanceTableForm;
 import com.mg.framework.support.ui.widget.TableColumnInfo;
 
 /**
- * Реализация формы настройки внешнего вида таблицы поддержки бизнес-компонентов
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„РѕСЂРјС‹ РЅР°СЃС‚СЂРѕР№РєРё РІРЅРµС€РЅРµРіРѕ РІРёРґР° С‚Р°Р±Р»РёС†С‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: SetupMaintenanceTableFormImpl.java,v 1.2 2009/02/04 14:09:27 safonov Exp $
@@ -49,7 +49,7 @@ public class SetupMaintenanceTableFormImpl extends DefaultDialog implements
 				switch (column) {
 				case 0:
 					String title = fieldInfos.get(row).getTitle();
-					//удалим перенос строк, чтобы умещалось по высоте в строке таблицы
+					//СѓРґР°Р»РёРј РїРµСЂРµРЅРѕСЃ СЃС‚СЂРѕРє, С‡С‚РѕР±С‹ СѓРјРµС‰Р°Р»РѕСЃСЊ РїРѕ РІС‹СЃРѕС‚Рµ РІ СЃС‚СЂРѕРєРµ С‚Р°Р±Р»РёС†С‹
 					return title != null ? title.replaceAll("<br>", " ").replaceAll("\n", " ").replaceAll("\r", " ") : null;
 				case 1:
 					return fieldInfos.get(row).isVisible();
@@ -71,7 +71,7 @@ public class SetupMaintenanceTableFormImpl extends DefaultDialog implements
 			 */
 			@Override
 			public boolean isCellEditable(int row, int column) {
-				//у обязательных полей нельзя сбросить признак видимости
+				//Сѓ РѕР±СЏР·Р°С‚РµР»СЊРЅС‹С… РїРѕР»РµР№ РЅРµР»СЊР·СЏ СЃР±СЂРѕСЃРёС‚СЊ РїСЂРёР·РЅР°Рє РІРёРґРёРјРѕСЃС‚Рё
 				return column == 1 && !fieldInfos.get(row).isMandatory();
 			}
 

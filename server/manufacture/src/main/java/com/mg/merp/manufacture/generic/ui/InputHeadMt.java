@@ -19,7 +19,7 @@ import com.mg.merp.manufacture.InputSpecificationServiceLocal;
 import com.mg.merp.manufacture.model.InputDocumentHead;
 
 /**
- * Базовая реализация котроллера формы поддержки документов на списание ресурсов
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РєРѕС‚СЂРѕР»Р»РµСЂР° С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РґРѕРєСѓРјРµРЅС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ СЂРµСЃСѓСЂСЃРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: InputHeadMt.java,v 1.1 2007/08/06 12:45:50 safonov Exp $

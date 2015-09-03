@@ -19,7 +19,7 @@ import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 import com.mg.merp.manufacture.model.Job;
 
 /**
- * Бизнес-компонет "Процессор производства"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµС‚ "РџСЂРѕС†РµСЃСЃРѕСЂ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ManufactureProcessorServiceLocal.java,v 1.1 2007/08/06 12:46:24 safonov Exp $
@@ -27,14 +27,14 @@ import com.mg.merp.manufacture.model.Job;
 public interface ManufactureProcessorServiceLocal extends BusinessObjectService {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/manufacture/ManufactureProcessor";
 
 	/**
-	 * создание документов на отклонения
+	 * СЃРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚РѕРІ РЅР° РѕС‚РєР»РѕРЅРµРЅРёСЏ
 	 * 
-	 * @param job	ЗНП
+	 * @param job	Р—РќРџ
 	 */
 	void createVarianceDocument(Job job);
 	

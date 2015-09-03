@@ -26,7 +26,7 @@ import com.mg.framework.utils.SecurityUtils;
 import com.mg.merp.finance.TurnAccFlatServiceLocal;
 
 /**
- * Контроллер комманды меню "Перенос остатков" фин.учета
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРјРјР°РЅРґС‹ РјРµРЅСЋ "РџРµСЂРµРЅРѕСЃ РѕСЃС‚Р°С‚РєРѕРІ" С„РёРЅ.СѓС‡РµС‚Р°
  * @author Artem V. Sharapov
  * @version $Id: CarryForwardMenuCommand.java,v 1.2 2008/07/09 11:51:37 safonov Exp $
  */

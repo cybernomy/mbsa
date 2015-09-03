@@ -25,7 +25,7 @@ import com.mg.framework.support.dataset.sohlman.GroupCalc;
 public interface DataSet {
 	
 	/**
-	 * Устанавливает поля таблицы
+	 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РїРѕР»СЏ С‚Р°Р±Р»РёС†С‹
 	 * @param defFields
 	 * @return
 	 */
@@ -38,7 +38,7 @@ public interface DataSet {
 	public ColumnDef[] getColumnsInfo();
 	
 	/**
-	 * Вставляет строку в таблицу перед строкой номер before
+	 * Р’СЃС‚Р°РІР»СЏРµС‚ СЃС‚СЂРѕРєСѓ РІ С‚Р°Р±Р»РёС†Сѓ РїРµСЂРµРґ СЃС‚СЂРѕРєРѕР№ РЅРѕРјРµСЂ before
 	 * @param before
 	 * @param row
 	 * @return
@@ -46,14 +46,14 @@ public interface DataSet {
 	public int insertRow(int before, List<Object> row);
 	
 	/**
-	 * Добавляет строку в конец таблицы
+	 * Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚СЂРѕРєСѓ РІ РєРѕРЅРµС† С‚Р°Р±Р»РёС†С‹
 	 * @param row
 	 * @return
 	 */
 	public int addRow(List<Object> row);
 	
 	/**
-	 * Добавляет строку в конец таблицы
+	 * Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚СЂРѕРєСѓ РІ РєРѕРЅРµС† С‚Р°Р±Р»РёС†С‹
 	 * @param row
 	 * @return
 	 */
@@ -67,7 +67,7 @@ public interface DataSet {
 	
 	
 	/**
-	 * Делает поля с номерами keyFields индексными 
+	 * Р”РµР»Р°РµС‚ РїРѕР»СЏ СЃ РЅРѕРјРµСЂР°РјРё keyFields РёРЅРґРµРєСЃРЅС‹РјРё 
 	 * @param keyFields
 	 */
 	public void setIndexFields(ArrayList<Integer> keyFields);
@@ -87,24 +87,24 @@ public interface DataSet {
 	public LinkedList<Object> getRowIndex(int rowCount);
 	
 	/**
-	 * Очищает таблицу
+	 * РћС‡РёС‰Р°РµС‚ С‚Р°Р±Р»РёС†Сѓ
 	 */
 	public void clear();
 	
 	/**
-	 * Возвращает данные в виде списка
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РґР°РЅРЅС‹Рµ РІ РІРёРґРµ СЃРїРёСЃРєР°
 	 * @return
 	 */
 	public List getData();
 	
 	/**
-	 * Возвращает строку по текущей позиции курсора
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃС‚СЂРѕРєСѓ РїРѕ С‚РµРєСѓС‰РµР№ РїРѕР·РёС†РёРё РєСѓСЂСЃРѕСЂР°
 	 * @return
 	 */
 	public Object[] getRow();
 	
 	/**
-	 * Возвращает номер столбца по имени
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РЅРѕРјРµСЂ СЃС‚РѕР»Р±С†Р° РїРѕ РёРјРµРЅРё
 	 * @param colName
 	 * @return
 	 */
@@ -137,46 +137,46 @@ public interface DataSet {
 	public Object[] getGroupByColName(String colName);
 	
 	/**
-	 * Возвращает текущую позицию курсора
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ С‚РµРєСѓС‰СѓСЋ РїРѕР·РёС†РёСЋ РєСѓСЂСЃРѕСЂР°
 	 * @return
 	 */
 	public int getCurPos();
 	
 	/**
-	 * Устанавливает курсор в позицию pos
+	 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РєСѓСЂСЃРѕСЂ РІ РїРѕР·РёС†РёСЋ pos
 	 * @param pos
 	 */
 	public boolean setCurPos(int pos);
 	
 	/**
-	 * Возвращает количество записей в таблице
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№ РІ С‚Р°Р±Р»РёС†Рµ
 	 * @return
 	 */
 	public int getRowCount();
 
 	/**
-	 * Возвращает количество полей таблицы
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР»РµР№ С‚Р°Р±Р»РёС†С‹
 	 * @return
 	 */
 	public int getColumnCount();
 
 	/**
-	 * Переводит курсор в следующую позицию
+	 * РџРµСЂРµРІРѕРґРёС‚ РєСѓСЂСЃРѕСЂ РІ СЃР»РµРґСѓСЋС‰СѓСЋ РїРѕР·РёС†РёСЋ
 	 */
 	public boolean nextRow();
 
 	/**
-	 * Переводит курсор на первую запись
+	 * РџРµСЂРµРІРѕРґРёС‚ РєСѓСЂСЃРѕСЂ РЅР° РїРµСЂРІСѓСЋ Р·Р°РїРёСЃСЊ
 	 */
 	public boolean firstRow();
 	
 	/**
-	 * Устанавливает курсор перед началом набора данных
+	 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РєСѓСЂСЃРѕСЂ РїРµСЂРµРґ РЅР°С‡Р°Р»РѕРј РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С…
 	 */
 	public boolean beforeFirstRow();
 
 	/**
-	 * Устанавливает значение obj в поле с номером columnIndex
+	 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ Р·РЅР°С‡РµРЅРёРµ obj РІ РїРѕР»Рµ СЃ РЅРѕРјРµСЂРѕРј columnIndex
 	 * @param obj
 	 * @param columnIndex
 	 * @return
@@ -184,7 +184,7 @@ public interface DataSet {
 	public boolean setValueAt(Object obj, int columnIndex);
 
 	/**
-	 * Устанавливает значение obj в поле с именем columnName
+	 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ Р·РЅР°С‡РµРЅРёРµ obj РІ РїРѕР»Рµ СЃ РёРјРµРЅРµРј columnName
 	 * @param obj
 	 * @param columnName
 	 * @return
@@ -192,33 +192,33 @@ public interface DataSet {
 	public boolean setValueAt(Object obj, String columnName);
 
 	/**
-	 * Возвращает значение поля с номером columnIndex
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ СЃ РЅРѕРјРµСЂРѕРј columnIndex
 	 * @param columnIndex
 	 * @return
 	 */
 	public Object getValueAt(int columnIndex);
 
 	/**
-	 * Возвращает значение поля с именем columnName
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ СЃ РёРјРµРЅРµРј columnName
 	 * @param columnName
 	 * @return
 	 */
 	public Object getValueAt(String columnName);
 
 	/**
-	 * Возвращает true, если курсор установлен на последней записи
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ true, РµСЃР»Рё РєСѓСЂСЃРѕСЂ СѓСЃС‚Р°РЅРѕРІР»РµРЅ РЅР° РїРѕСЃР»РµРґРЅРµР№ Р·Р°РїРёСЃРё
 	 * @return
 	 */
 	public boolean isEndOfSet();
 
 	/**
-	 * Возвращает хэш-таблицу
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ С…СЌС€-С‚Р°Р±Р»РёС†Сѓ
 	 * @return
 	 */
 	public Map<Integer, List<Integer>> getHashTable();
 	
 	/**
-	 * Группировка
+	 * Р“СЂСѓРїРїРёСЂРѕРІРєР°
 	 * @param liGroupColumns
 	 * @param lGroupCalc
 	 * @return

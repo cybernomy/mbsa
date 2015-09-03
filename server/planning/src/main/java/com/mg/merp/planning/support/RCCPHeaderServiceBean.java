@@ -25,7 +25,7 @@ import com.mg.merp.planning.RCCPHeaderServiceLocal;
 import com.mg.merp.planning.model.RccpHeader;
 
 /**
- * Бизнес-компонент "УППМ" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЈРџРџРњ" 
  * 
  * @author leonova
  * @version $Id: RCCPHeaderServiceBean.java,v 1.3 2006/08/25 10:18:33 leonova Exp $

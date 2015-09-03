@@ -22,7 +22,7 @@ import com.mg.merp.docflow.support.Messages;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Класс ИС этап ДО недоступен
+ * РљР»Р°СЃСЃ РРЎ СЌС‚Р°Рї Р”Рћ РЅРµРґРѕСЃС‚СѓРїРµРЅ
  * 
  * @author Oleg V. Safonov
  * @version $Id: InaccesibleStateException.java,v 1.3 2007/10/23 15:21:09 safonov Exp $

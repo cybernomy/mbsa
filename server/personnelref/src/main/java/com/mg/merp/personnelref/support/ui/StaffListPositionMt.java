@@ -42,7 +42,7 @@ import com.mg.merp.personnelref.model.Tariffing;
 import com.mg.merp.reference.model.NaturalPerson;
 
 /**
- * Контроллер формы поддержки "Должности в штатном расписании"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "Р”РѕР»Р¶РЅРѕСЃС‚Рё РІ С€С‚Р°С‚РЅРѕРј СЂР°СЃРїРёСЃР°РЅРёРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -21,7 +21,7 @@ import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 import com.mg.framework.utils.StringUtils;
 
 /**
- * Контроллер формы условий отбора "Средств платежа"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° "РЎСЂРµРґСЃС‚РІ РїР»Р°С‚РµР¶Р°"
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -30,7 +30,7 @@ import com.mg.merp.paymentcontrol.PeriodServiceLocal;
 import com.mg.merp.paymentcontrol.model.PmcPeriod;
 
 /**
- * Контроллер браузера "Периоды планирования" 
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "РџРµСЂРёРѕРґС‹ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -70,8 +70,8 @@ public class PmcPeriodBr extends DefaultTreeBrowseForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Создать периоды"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЎРѕР·РґР°С‚СЊ РїРµСЂРёРѕРґС‹"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionCreatePmcPeriod(WidgetEvent event) {
 		dialog = (PmcCreatePeriodsDialog) UIProducer.produceForm("com/mg/merp/paymentcontrol/resources/PmcCreatePeriodsDialog.mfd.xml"); //$NON-NLS-1$

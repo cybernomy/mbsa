@@ -25,7 +25,7 @@ import com.mg.merp.docflow.support.DocFlowPluginFactoryManagerServiceLocator;
 import com.mg.merp.docflow.support.jboss.DocFlowPluginFactoryServiceMBean;
 
 /**
- * Реализация сервиса дополнительных модулей подсистемы "Бухгалтерия"
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "Р‘СѓС…РіР°Р»С‚РµСЂРёСЏ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: AccountDocFlowPluginService.java,v 1.1 2006/10/21 11:07:04 safonov Exp $

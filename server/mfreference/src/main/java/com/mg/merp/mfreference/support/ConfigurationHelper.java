@@ -21,7 +21,7 @@ import com.mg.merp.document.support.ConfigurationImpl;
 import com.mg.merp.mfreference.model.ManufactureConfig;
 
 /**
- * Класс помощник конфигурации модуля "Производство"
+ * РљР»Р°СЃСЃ РїРѕРјРѕС‰РЅРёРє РєРѕРЅС„РёРіСѓСЂР°С†РёРё РјРѕРґСѓР»СЏ "РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ConfigurationHelper.java,v 1.1 2007/03/26 10:40:02 safonov Exp $
@@ -29,7 +29,7 @@ import com.mg.merp.mfreference.model.ManufactureConfig;
 public class ConfigurationHelper {
 
 	/**
-	 * получить конфигурацию модуля
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ РјРѕРґСѓР»СЏ
 	 * 
 	 * @return
 	 */
@@ -38,7 +38,7 @@ public class ConfigurationHelper {
 	}
 
 	/**
-	 * получить конфигурацию документов данного модуля
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ РґРѕРєСѓРјРµРЅС‚РѕРІ РґР°РЅРЅРѕРіРѕ РјРѕРґСѓР»СЏ
 	 * 
 	 * @return
 	 */

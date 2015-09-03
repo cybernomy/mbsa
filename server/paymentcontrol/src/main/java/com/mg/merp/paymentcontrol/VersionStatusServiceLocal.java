@@ -21,7 +21,7 @@ import com.mg.merp.paymentcontrol.model.VersionStatus;
 import com.mg.merp.paymentcontrol.model.VersionStatusKind;
 
 /**
- * Сервис бизнес-компонента "Статус версии планирования"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎС‚Р°С‚СѓСЃ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -30,17 +30,17 @@ import com.mg.merp.paymentcontrol.model.VersionStatusKind;
 public interface VersionStatusServiceLocal extends com.mg.framework.api.DataBusinessObjectService<VersionStatus, Integer> {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/paymentcontrol/VersionStatus"; //$NON-NLS-1$
 	
 	/**
-	 * Добавить статус версии
-	 * @param version - версия планирования
-	 * @param kind - статус
-	 * @param createDate - дата создания
-	 * @param dateFrom - дата с 
-	 * @param dateTill - дата по
+	 * Р”РѕР±Р°РІРёС‚СЊ СЃС‚Р°С‚СѓСЃ РІРµСЂСЃРёРё
+	 * @param version - РІРµСЂСЃРёСЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param kind - СЃС‚Р°С‚СѓСЃ
+	 * @param createDate - РґР°С‚Р° СЃРѕР·РґР°РЅРёСЏ
+	 * @param dateFrom - РґР°С‚Р° СЃ 
+	 * @param dateTill - РґР°С‚Р° РїРѕ
 	 */
 	void addVersionStatus(Version version, VersionStatusKind kind, Date createDate, Date dateFrom, Date dateTill);
 	

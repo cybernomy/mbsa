@@ -34,7 +34,7 @@ public enum EngineType {
 	/**
 	 * BeanShell
 	 * 
-	 * Не поддерживается в текущей реализации
+	 * РќРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ РІ С‚РµРєСѓС‰РµР№ СЂРµР°Р»РёР·Р°С†РёРё
 	 */
 	@EnumConstantText ("resource://com.mg.merp.baiengine.resources.dataitemlabels#EngineType.BeanShellEngine")
 	BEANSHELL_ENDINE,
@@ -42,7 +42,7 @@ public enum EngineType {
 	/**
 	 * Pascal
 	 * 
-	 * @deprecated не поддерживается начиная в версии 4.x
+	 * @deprecated РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ РЅР°С‡РёРЅР°СЏ РІ РІРµСЂСЃРёРё 4.x
 	 */
 	@EnumConstantText ("resource://com.mg.merp.baiengine.resources.dataitemlabels#EngineType.PascalEngine")
 	@Deprecated

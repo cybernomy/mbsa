@@ -18,7 +18,7 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 import com.mg.merp.core.SysDomainServiceLocal;
 
 /**
- * Механизм поиска доментов
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° РґРѕРјРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: SysDomainSearchHelp.java,v 1.1 2008/03/03 13:05:04 safonov Exp $

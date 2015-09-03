@@ -20,7 +20,7 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.warehouse.model.WarehouseTransactionDay;
 
 /**
- * Сервис бизнес-компонента "Операционные дни"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћРїРµСЂР°С†РёРѕРЅРЅС‹Рµ РґРЅРё"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: WarehouseTransactionDayServiceLocal.java,v 1.1 2007/11/29 08:37:13 alikaev Exp $
@@ -30,16 +30,16 @@ public interface WarehouseTransactionDayServiceLocal extends DataBusinessObjectS
 	final static String SERVICE_NAME = "merp/warehouse/WarehouseTransactionDay";
 	
 	/**
-	 * Открыть операционные дни
+	 * РћС‚РєСЂС‹С‚СЊ РѕРїРµСЂР°С†РёРѕРЅРЅС‹Рµ РґРЅРё
 	 * 
-	 * @param periods - набор операционных дней
+	 * @param periods - РЅР°Р±РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅС‹С… РґРЅРµР№
 	 */
 	void openTransactionDay(Serializable[] dayIds);
 
 	/**
-	 * Закрыть операционные дни
+	 * Р—Р°РєСЂС‹С‚СЊ РѕРїРµСЂР°С†РёРѕРЅРЅС‹Рµ РґРЅРё
 	 * 
-	 * @param periods - набор операционных дней
+	 * @param periods - РЅР°Р±РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅС‹С… РґРЅРµР№
 	 */
 	void closeTransactionDay(Serializable[] dayIds);
 

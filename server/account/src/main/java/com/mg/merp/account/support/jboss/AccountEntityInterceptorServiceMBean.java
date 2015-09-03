@@ -17,14 +17,14 @@ package com.mg.merp.account.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис регистрации перехватчиков на сущности подсистемы "Бухгалтерия"
+ * РЎРµСЂРІРёСЃ СЂРµРіРёСЃС‚СЂР°С†РёРё РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РЅР° СЃСѓС‰РЅРѕСЃС‚Рё РїРѕРґСЃРёСЃС‚РµРјС‹ "Р‘СѓС…РіР°Р»С‚РµСЂРёСЏ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: AccountEntityInterceptorServiceMBean.java,v 1.1 2007/01/16 11:46:37 safonov Exp $
  */
 public interface AccountEntityInterceptorServiceMBean extends ServiceMBean {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:account=EntityInterceptorService"; //$NON-NLS-1$
 

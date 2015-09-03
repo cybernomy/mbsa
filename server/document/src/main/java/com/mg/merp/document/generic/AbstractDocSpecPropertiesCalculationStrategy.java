@@ -17,7 +17,7 @@ package com.mg.merp.document.generic;
 import com.mg.merp.document.DocSpecPropertiesCalculationStrategy;
 
 /**
- * Базовая реализация стратегии расчета свойств спецификации документа
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё СЂР°СЃС‡РµС‚Р° СЃРІРѕР№СЃС‚РІ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Artem V. Sharapov
  * @version $Id: AbstractDocSpecPropertiesCalculationStrategy.java,v 1.1 2007/10/30 14:26:47 sharapov Exp $
@@ -25,12 +25,12 @@ import com.mg.merp.document.DocSpecPropertiesCalculationStrategy;
 public abstract class AbstractDocSpecPropertiesCalculationStrategy implements DocSpecPropertiesCalculationStrategy {
 	
 	/**
-	 * реализация вычисления цен и сумм
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РІС‹С‡РёСЃР»РµРЅРёСЏ С†РµРЅ Рё СЃСѓРјРј
 	 */
 	protected abstract void doAdjust();
 	
 	/**
-	 * реализация вычисления налогов
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РІС‹С‡РёСЃР»РµРЅРёСЏ РЅР°Р»РѕРіРѕРІ
 	 */
 	protected abstract void doCalculateTaxes();
 	

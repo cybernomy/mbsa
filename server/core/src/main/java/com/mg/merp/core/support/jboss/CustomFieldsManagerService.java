@@ -28,7 +28,7 @@ import com.mg.framework.api.orm.PersistentObject;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Реализация сервиса менеджера управления пользовательскими полями
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РјРµРЅРµРґР¶РµСЂР° СѓРїСЂР°РІР»РµРЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРјРё РїРѕР»СЏРјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomFieldsManagerService.java,v 1.3 2008/12/23 09:43:37 safonov Exp $

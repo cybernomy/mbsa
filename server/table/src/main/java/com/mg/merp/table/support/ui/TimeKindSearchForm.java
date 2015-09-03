@@ -28,7 +28,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.table.model.TimeKind;
 
 /**
- * Контроллер формы поиска сущностей "Тип времени"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РўРёРї РІСЂРµРјРµРЅРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: TimeKindSearchForm.java,v 1.1 2008/08/12 14:38:08 sharapov Exp $
@@ -113,8 +113,8 @@ public class TimeKindSearchForm extends AbstractSearchForm {
 	}
 
 	/**
-	 * Установить признак отбора "Учитывать по дням"
-	 * @param isWholeDay - признак отбора "Учитывать по дням"
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРёР·РЅР°Рє РѕС‚Р±РѕСЂР° "РЈС‡РёС‚С‹РІР°С‚СЊ РїРѕ РґРЅСЏРј"
+	 * @param isWholeDay - РїСЂРёР·РЅР°Рє РѕС‚Р±РѕСЂР° "РЈС‡РёС‚С‹РІР°С‚СЊ РїРѕ РґРЅСЏРј"
 	 */
 	public void setIsWholeDay(Boolean isWholeDay) {
 		this.isWholeDay = isWholeDay;

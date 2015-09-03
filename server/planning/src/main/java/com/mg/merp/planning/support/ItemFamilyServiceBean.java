@@ -25,7 +25,7 @@ import com.mg.merp.planning.ItemFamilyServiceLocal;
 import com.mg.merp.planning.model.ItemFamily;
 
 /**
- * Бизнес-компонент "Семейcтва обобщенных товаров" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРµРјРµР№cС‚РІР° РѕР±РѕР±С‰РµРЅРЅС‹С… С‚РѕРІР°СЂРѕРІ" 
  * 
  * @author leonova
  * @version $Id: ItemFamilyServiceBean.java,v 1.4 2007/08/27 07:10:43 alikaev Exp $
@@ -65,10 +65,10 @@ public class ItemFamilyServiceBean extends AbstractPOJODataBusinessObjectService
 	}
 
 	/**
-	 * функция проверяет совпадает ли родительский и обобщенные товары
+	 * С„СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂСЏРµС‚ СЃРѕРІРїР°РґР°РµС‚ Р»Рё СЂРѕРґРёС‚РµР»СЊСЃРєРёР№ Рё РѕР±РѕР±С‰РµРЅРЅС‹Рµ С‚РѕРІР°СЂС‹
 	 * 
 	 * @param entity
-	 * @return возвращает <code>true</code> если совпадают, иначе <code>false</code>
+	 * @return РІРѕР·РІСЂР°С‰Р°РµС‚ <code>true</code> РµСЃР»Рё СЃРѕРІРїР°РґР°СЋС‚, РёРЅР°С‡Рµ <code>false</code>
 	 */
 	private boolean isParentConcurWithChildItem(ItemFamily entity){
 		if (entity.getParentGenericItem() == null)

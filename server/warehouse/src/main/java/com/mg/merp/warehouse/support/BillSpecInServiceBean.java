@@ -23,7 +23,7 @@ import com.mg.merp.warehouse.BillSpecInServiceLocal;
 import com.mg.merp.warehouse.model.BillSpec;
 
 /**
- * Бизнес-компонент "Спецификация входящих счетов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РІС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ" 
  * 
  * @author leonova
  * @version $Id: BillSpecInServiceBean.java,v 1.6 2008/12/01 09:37:57 safonov Exp $

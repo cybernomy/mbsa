@@ -21,7 +21,7 @@ import com.mg.merp.overall.CancellationServiceLocal;
 import com.mg.merp.overall.model.Cancellation;
 
 /**
- * Реализация бизнес - компонента "Погашение"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ - РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРѕРіР°С€РµРЅРёРµ"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

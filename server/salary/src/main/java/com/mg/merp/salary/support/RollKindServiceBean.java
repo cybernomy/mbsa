@@ -24,7 +24,7 @@ import com.mg.merp.salary.RollKindServiceLocal;
 import com.mg.merp.salary.model.RollKind;
 
 /**
- * Бизнес-компонент "Типы расчетных ведомостей" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ СЂР°СЃС‡РµС‚РЅС‹С… РІРµРґРѕРјРѕСЃС‚РµР№" 
  * 
  * @author leonova
  * @version $Id: RollKindServiceBean.java,v 1.3 2006/08/28 12:44:53 leonova Exp $

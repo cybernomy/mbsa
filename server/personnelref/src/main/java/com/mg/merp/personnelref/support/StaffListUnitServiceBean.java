@@ -27,7 +27,7 @@ import com.mg.merp.personnelref.StaffListUnitServiceLocal;
 import com.mg.merp.personnelref.model.StaffListUnit;
 
 /**
- * Ðåàëèçàöèÿ áèçíåñ-êîìïîíåíòà "Ïîäðàçäåëåíèÿ â øòàòíîì ðàñïèñàíèè" 
+ * Ð ÐµÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ Ð±Ð¸Ð·Ð½ÐµÑ-ÐºÐ¾Ð¼Ð¿Ð¾Ð½ÐµÐ½Ñ‚Ð° "ÐŸÐ¾Ð´Ñ€Ð°Ð·Ð´ÐµÐ»ÐµÐ½Ð¸Ñ Ð² ÑˆÑ‚Ð°Ñ‚Ð½Ð¾Ð¼ Ñ€Ð°ÑÐ¿Ð¸ÑÐ°Ð½Ð¸Ð¸" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -54,8 +54,8 @@ public class StaffListUnitServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Óñòàíîâèòü âàðèàíò ØÐ äëÿ ïîäðàçäåëåíèÿ â ØÐ
-	 * @param staffListUnit - ïîäðàçäåëåíèå â ØÐ
+	 * Ð£ÑÑ‚Ð°Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ Ð²Ð°Ñ€Ð¸Ð°Ð½Ñ‚ Ð¨Ð  Ð´Ð»Ñ Ð¿Ð¾Ð´Ñ€Ð°Ð·Ð´ÐµÐ»ÐµÐ½Ð¸Ñ Ð² Ð¨Ð 
+	 * @param staffListUnit - Ð¿Ð¾Ð´Ñ€Ð°Ð·Ð´ÐµÐ»ÐµÐ½Ð¸Ðµ Ð² Ð¨Ð 
 	 */
 	protected void doSetStaffList(StaffListUnit staffListUnit) {
 		if(staffListUnit.getParent() != null && staffListUnit.getStaffList() == null)
@@ -73,8 +73,8 @@ public class StaffListUnitServiceBean extends AbstractPOJODataBusinessObjectServ
 		for (Integer key : primaryKeys) {
 			StaffListUnit entity = load(key);
 			StaffListUnit targetUnit = (StaffListUnit) targetEntity;
-			//íå êîïèðóåì êîðíåâóþ ïàïêó è ïàïêó íà ñàìó ñåáÿ, èäåíòèôèêàòîð äîëæåí áûòü áîëüøå èäåíòèôèêàòîðà ïðèåìíèêà, â ïðîòèâíîì
-			//ñëó÷àå íåâîçìîæíî ïîñòðîèòü äåðåâî èåðàðõèè
+			//Ð½Ðµ ÐºÐ¾Ð¿Ð¸Ñ€ÑƒÐµÐ¼ ÐºÐ¾Ñ€Ð½ÐµÐ²ÑƒÑŽ Ð¿Ð°Ð¿ÐºÑƒ Ð¸ Ð¿Ð°Ð¿ÐºÑƒ Ð½Ð° ÑÐ°Ð¼Ñƒ ÑÐµÐ±Ñ, Ð¸Ð´ÐµÐ½Ñ‚Ð¸Ñ„Ð¸ÐºÐ°Ñ‚Ð¾Ñ€ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ Ð¸Ð´ÐµÐ½Ñ‚Ð¸Ñ„Ð¸ÐºÐ°Ñ‚Ð¾Ñ€Ð° Ð¿Ñ€Ð¸ÐµÐ¼Ð½Ð¸ÐºÐ°, Ð² Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²Ð½Ð¾Ð¼
+			//ÑÐ»ÑƒÑ‡Ð°Ðµ Ð½ÐµÐ²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ Ð¿Ð¾ÑÑ‚Ñ€Ð¾Ð¸Ñ‚ÑŒ Ð´ÐµÑ€ÐµÐ²Ð¾ Ð¸ÐµÑ€Ð°Ñ€Ñ…Ð¸Ð¸
 			if (entity.getParent() != null && entity.getId() > targetUnit.getId() && entity.getParent().getId() != targetUnit.getId()) {
 				entity.setParent(targetUnit);
 				result = true;

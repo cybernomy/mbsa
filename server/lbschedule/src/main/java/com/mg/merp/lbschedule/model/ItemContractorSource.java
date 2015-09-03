@@ -30,43 +30,43 @@ public enum ItemContractorSource {
 	NONE,
 	
 	/**
-	 * От кого
+	 * РћС‚ РєРѕРіРѕ
 	 */	
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#ItemContractorSource.Type.From")
 	FROM,
 	
 	/**
-	 * Кому
+	 * РљРѕРјСѓ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#ItemContractorSource.Type.To")
 	TO,
 	
 	/**
-	 * Через кого
+	 * Р§РµСЂРµР· РєРѕРіРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#ItemContractorSource.Type.Through")
 	THROUGH,
 	
 	/**
-	 * Склад-источник
+	 * РЎРєР»Р°Рґ-РёСЃС‚РѕС‡РЅРёРє
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#ItemContractorSource.Type.StockFrom")
 	STOCKFROM,
 	
 	/**
-	 * Склад-приемник
+	 * РЎРєР»Р°Рґ-РїСЂРёРµРјРЅРёРє
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#ItemContractorSource.Type.StockTo")
 	STOCKTO,	
 	
 	/**
-	 * Склад-приемник
+	 * РЎРєР»Р°Рґ-РїСЂРёРµРјРЅРёРє
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#ItemContractorSource.Type.MolFrom")
 	MOLFROM,
 	
 	/**
-	 * Склад-приемник
+	 * РЎРєР»Р°Рґ-РїСЂРёРµРјРЅРёРє
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#ItemContractorSource.Type.MolTo")
 	MOLTO	

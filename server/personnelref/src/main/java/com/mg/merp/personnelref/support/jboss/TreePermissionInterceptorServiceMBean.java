@@ -17,14 +17,14 @@ package com.mg.merp.personnelref.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис перехватчика для добавления прав на элементы иерархии при создании
+ * РЎРµСЂРІРёСЃ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ РґРѕР±Р°РІР»РµРЅРёСЏ РїСЂР°РІ РЅР° СЌР»РµРјРµРЅС‚С‹ РёРµСЂР°СЂС…РёРё РїСЂРё СЃРѕР·РґР°РЅРёРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: TreePermissionInterceptorServiceMBean.java,v 1.1 2006/12/29 07:43:06 safonov Exp $
  */
 public interface TreePermissionInterceptorServiceMBean extends ServiceMBean {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:personnelref=TreePermissionInterceptorService";
 }

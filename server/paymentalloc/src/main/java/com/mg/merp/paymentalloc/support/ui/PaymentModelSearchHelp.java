@@ -17,7 +17,7 @@ package com.mg.merp.paymentalloc.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * Поисковик бизнес-компонента "Образцы записей журнала платежей"
+ * РџРѕРёСЃРєРѕРІРёРє Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·С†С‹ Р·Р°РїРёСЃРµР№ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PaymentModelSearchHelp.java,v 1.1 2007/02/16 14:44:32 sharapov Exp $

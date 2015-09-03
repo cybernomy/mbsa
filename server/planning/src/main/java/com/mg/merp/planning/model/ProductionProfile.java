@@ -17,7 +17,7 @@ package com.mg.merp.planning.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Профили производства"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРѕС„РёР»Рё РїСЂРѕРёР·РІРѕРґСЃС‚РІР°"
  * 
  * @author hbm2java
  * @author Artem V. Sharapov

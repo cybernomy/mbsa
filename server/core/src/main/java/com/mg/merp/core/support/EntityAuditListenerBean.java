@@ -29,7 +29,7 @@ import com.mg.merp.core.model.DatabaseAuditDetail;
 import com.mg.merp.core.model.SysClient;
 
 /**
- * Реализация обработчика события аудита хранилища данных
+ * Р РµР°Р»РёР·Р°С†РёСЏ РѕР±СЂР°Р±РѕС‚С‡РёРєР° СЃРѕР±С‹С‚РёСЏ Р°СѓРґРёС‚Р° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityAuditListenerBean.java,v 1.4 2008/05/29 08:37:10 safonov Exp $

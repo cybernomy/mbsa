@@ -28,7 +28,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.warehouse.support.Messages;
 
 /**
- * Контроллер диалога выбора секций хранения
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° РІС‹Р±РѕСЂР° СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ
  * 
  * @author Artem V. Sharapov
  * @version $Id: SelectBinLocationDlg.java,v 1.1 2008/05/30 13:03:56 sharapov Exp $
@@ -132,12 +132,12 @@ public class SelectBinLocationDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Запустить диалог на показ
+	 * Р—Р°РїСѓСЃС‚РёС‚СЊ РґРёР°Р»РѕРі РЅР° РїРѕРєР°Р·
 	 * @param necessaryQuantity - 
-	 * @param catalogCode - код позиции каталога
-	 * @param catalogName - наименование позиции каталога
-	 * @param numberLot - номер партии
-	 * @param vendorLot - номер партии поставщика
+	 * @param catalogCode - РєРѕРґ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР°
+	 * @param catalogName - РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР°
+	 * @param numberLot - РЅРѕРјРµСЂ РїР°СЂС‚РёРё
+	 * @param vendorLot - РЅРѕРјРµСЂ РїР°СЂС‚РёРё РїРѕСЃС‚Р°РІС‰РёРєР°
 	 */
 	public void execute(BigDecimal necessaryQuantity, List<BinLocationData> binLocationTableModelItemList, String catalogCode, String catalogName, String numberLot, String vendorLot) {
 		this.necessaryQuantity = necessaryQuantity;

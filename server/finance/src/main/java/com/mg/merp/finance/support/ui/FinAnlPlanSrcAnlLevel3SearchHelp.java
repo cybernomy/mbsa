@@ -15,7 +15,7 @@
 package com.mg.merp.finance.support.ui;
 
 /**
- * SearchHelp для аналитики третьего уровня счета по кредиту
+ * SearchHelp РґР»СЏ Р°РЅР°Р»РёС‚РёРєРё С‚СЂРµС‚СЊРµРіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р° РїРѕ РєСЂРµРґРёС‚Сѓ
  * 
  * @author leonova
  * @version $Id: FinAnlPlanSrcAnlLevel3SearchHelp.java,v 1.1 2006/10/30 13:50:17 leonova Exp $

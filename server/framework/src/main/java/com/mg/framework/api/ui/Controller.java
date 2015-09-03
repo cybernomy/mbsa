@@ -20,8 +20,8 @@ import com.mg.framework.api.Logger;
 import com.mg.framework.api.metadata.ui.FieldMetadata;
 
 /**
- * Базовый интерфейс всех контроллеров интерактивных форм. Используется для
- * взаимодействия с видом.
+ * Р‘Р°Р·РѕРІС‹Р№ РёРЅС‚РµСЂС„РµР№СЃ РІСЃРµС… РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹С… С„РѕСЂРј. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ
+ * РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ РІРёРґРѕРј.
  * 
  * @author Oleg V. Safonov
  * @version $Id: Controller.java,v 1.4 2008/10/08 11:41:20 safonov Exp $
@@ -29,11 +29,11 @@ import com.mg.framework.api.metadata.ui.FieldMetadata;
 public interface Controller {
 	
 	/**
-	 * Получить значение поля контроллера. Используется видом для заполнения
-	 * элементов формы.
+	 * РџРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ РєРѕРЅС‚СЂРѕР»Р»РµСЂР°. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІРёРґРѕРј РґР»СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ
+	 * СЌР»РµРјРµРЅС‚РѕРІ С„РѕСЂРјС‹.
 	 * 
-	 * @param name	имя поля
-	 * @return	значение поля
+	 * @param name	РёРјСЏ РїРѕР»СЏ
+	 * @return	Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ
 	 * @throws NoSuchFieldException
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
@@ -41,11 +41,11 @@ public interface Controller {
 	Object getFieldValue(String name) throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException;
 	
 	/**
-	 * Установить значение поля контроллера. Используется видом для заполнения
-	 * поля значением из элемента формы.
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ РєРѕРЅС‚СЂРѕР»Р»РµСЂР°. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІРёРґРѕРј РґР»СЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ
+	 * РїРѕР»СЏ Р·РЅР°С‡РµРЅРёРµРј РёР· СЌР»РµРјРµРЅС‚Р° С„РѕСЂРјС‹.
 	 * 
-	 * @param name	имя поля
-	 * @param value	устанавливаемое значение поля
+	 * @param name	РёРјСЏ РїРѕР»СЏ
+	 * @param value	СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ РїРѕР»СЏ
 	 * @throws NoSuchFieldException
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
@@ -53,29 +53,29 @@ public interface Controller {
 	void setFieldValue(String name, Object value) throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException;
 	
 	/**
-	 * Получить метаданные поля контроллера. Используется видом для идентификации
-	 * необходимой метаинформации используемой при создании элементов формы.
+	 * РџРѕР»СѓС‡РёС‚СЊ РјРµС‚Р°РґР°РЅРЅС‹Рµ РїРѕР»СЏ РєРѕРЅС‚СЂРѕР»Р»РµСЂР°. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІРёРґРѕРј РґР»СЏ РёРґРµРЅС‚РёС„РёРєР°С†РёРё
+	 * РЅРµРѕР±С…РѕРґРёРјРѕР№ РјРµС‚Р°РёРЅС„РѕСЂРјР°С†РёРё РёСЃРїРѕР»СЊР·СѓРµРјРѕР№ РїСЂРё СЃРѕР·РґР°РЅРёРё СЌР»РµРјРµРЅС‚РѕРІ С„РѕСЂРјС‹.
 	 * 
-	 * @param name	имя поля
-	 * @return	метаданные связанные с полем
+	 * @param name	РёРјСЏ РїРѕР»СЏ
+	 * @return	РјРµС‚Р°РґР°РЅРЅС‹Рµ СЃРІСЏР·Р°РЅРЅС‹Рµ СЃ РїРѕР»РµРј
 	 */
 	FieldMetadata getFieldMetadata(String name);
 	
 	/**
-	 * Получить тип поля контроллера.
+	 * РџРѕР»СѓС‡РёС‚СЊ С‚РёРї РїРѕР»СЏ РєРѕРЅС‚СЂРѕР»Р»РµСЂР°.
 	 * 
-	 * @param name	имя поля
-	 * @return	тип поля
+	 * @param name	РёРјСЏ РїРѕР»СЏ
+	 * @return	С‚РёРї РїРѕР»СЏ
 	 */
 	Class<?> getFieldType(String name);
 
 	/**
-	 * Вызов обработчика контроллера. Используется видом для вызова обработчика
-	 * установленного у элемента формы.
+	 * Р’С‹Р·РѕРІ РѕР±СЂР°Р±РѕС‚С‡РёРєР° РєРѕРЅС‚СЂРѕР»Р»РµСЂР°. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІРёРґРѕРј РґР»СЏ РІС‹Р·РѕРІР° РѕР±СЂР°Р±РѕС‚С‡РёРєР°
+	 * СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅРѕРіРѕ Сѓ СЌР»РµРјРµРЅС‚Р° С„РѕСЂРјС‹.
 	 * 
-	 * @param handlerName	имя обработчика
-	 * @param args	аргументы вызова обработчика
-	 * @return	результат
+	 * @param handlerName	РёРјСЏ РѕР±СЂР°Р±РѕС‚С‡РёРєР°
+	 * @param args	Р°СЂРіСѓРјРµРЅС‚С‹ РІС‹Р·РѕРІР° РѕР±СЂР°Р±РѕС‚С‡РёРєР°
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚
 	 * @throws NoSuchMethodException
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
@@ -84,38 +84,38 @@ public interface Controller {
 	Object invokeHandler(String handlerName, Object ... args) throws NoSuchMethodException, IllegalArgumentException, IllegalAccessException, InvocationTargetException;
 
 	/**
-	 * Установка вида
+	 * РЈСЃС‚Р°РЅРѕРІРєР° РІРёРґР°
 	 * 
-	 * @param view	вид
+	 * @param view	РІРёРґ
 	 */
 	void setView(View view);
 	
 	/**
-	 * получить <code>Logger</code>
+	 * РїРѕР»СѓС‡РёС‚СЊ <code>Logger</code>
 	 * 
 	 * @return	<code>Logger</code>
 	 */
 	Logger getLogger();
 
 	/**
-	 * отменить последнее изменение модели
+	 * РѕС‚РјРµРЅРёС‚СЊ РїРѕСЃР»РµРґРЅРµРµ РёР·РјРµРЅРµРЅРёРµ РјРѕРґРµР»Рё
 	 */
 	void undo();
 
 	/**
-	 * отменить все изменения модели
+	 * РѕС‚РјРµРЅРёС‚СЊ РІСЃРµ РёР·РјРµРЅРµРЅРёСЏ РјРѕРґРµР»Рё
 	 */
 	void undoAll();
 
 	/**
-	 * сбросить все изменения модели
+	 * СЃР±СЂРѕСЃРёС‚СЊ РІСЃРµ РёР·РјРµРЅРµРЅРёСЏ РјРѕРґРµР»Рё
 	 */
 	void resetUndo();
 
 	/**
-	 * получить признак изменения модели
+	 * РїРѕР»СѓС‡РёС‚СЊ РїСЂРёР·РЅР°Рє РёР·РјРµРЅРµРЅРёСЏ РјРѕРґРµР»Рё
 	 * 
-	 * @return	<code>true</code> если модель имела изменения
+	 * @return	<code>true</code> РµСЃР»Рё РјРѕРґРµР»СЊ РёРјРµР»Р° РёР·РјРµРЅРµРЅРёСЏ
 	 */
 	boolean hasModelChanges();
 

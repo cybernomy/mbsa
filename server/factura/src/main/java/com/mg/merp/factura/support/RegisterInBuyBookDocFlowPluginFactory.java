@@ -21,7 +21,7 @@ import com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory;
 import com.mg.merp.factura.FacturaProcessorServiceLocal;
 
 /**
- * Реализация фабрики реализаций этапа ДО "Регистрация в книге покупок"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїР° Р”Рћ "Р РµРіРёСЃС‚СЂР°С†РёСЏ РІ РєРЅРёРіРµ РїРѕРєСѓРїРѕРє"
  * 
  * @author Artem V. Sharapov
  * @version $Id: RegisterInBuyBookDocFlowPluginFactory.java,v 1.1 2009/03/16 14:30:34 sharapov Exp $

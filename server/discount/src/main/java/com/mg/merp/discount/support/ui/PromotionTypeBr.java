@@ -26,7 +26,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.discount.model.PromotionType;
 
 /**
- * Контроллер браузера "Типы рекламных мероприятий"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "РўРёРїС‹ СЂРµРєР»Р°РјРЅС‹С… РјРµСЂРѕРїСЂРёСЏС‚РёР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PromotionTypeBr.java,v 1.2 2007/11/12 12:08:19 sharapov Exp $

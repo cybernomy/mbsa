@@ -17,7 +17,7 @@ package com.mg.merp.account.support.ui;
 import com.mg.merp.document.generic.ui.DocumentModelBrowseForm;
 
 /**
- * Контроллер формы списка образцов банковских документов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: BankDocumentModelBrowseForm.java,v 1.1 2006/09/12 11:23:25 leonova Exp $ 

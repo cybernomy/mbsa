@@ -24,7 +24,7 @@ import com.mg.merp.reference.CurrencyRateAuthorityServiceLocal;
 import com.mg.merp.reference.model.CurrencyRateAuthority;
 
 /**
- * Бизнес-компонент "Источники курсов валют" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РСЃС‚РѕС‡РЅРёРєРё РєСѓСЂСЃРѕРІ РІР°Р»СЋС‚" 
  * 
  * @author leonova
  * @version $Id: CurrencyRateAuthorityServiceBean.java,v 1.4 2006/10/20 05:52:40 leonova Exp $

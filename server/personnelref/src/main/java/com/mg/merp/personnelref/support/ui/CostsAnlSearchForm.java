@@ -28,7 +28,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.personnelref.model.CostsAnl;
 
 /**
- * Контроллер формы поиска сущностей "Аналитика состава затрат"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РђРЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚"
  * 
  * @author Artem V. Sharapov
  * @version $Id: CostsAnlSearchForm.java,v 1.1 2007/07/09 08:07:46 sharapov Exp $
@@ -109,7 +109,7 @@ public class CostsAnlSearchForm extends AbstractSearchForm {
 	}
 
 	/**
-	 * Установить уровень аналитики для поиска
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СѓСЂРѕРІРµРЅСЊ Р°РЅР°Р»РёС‚РёРєРё РґР»СЏ РїРѕРёСЃРєР°
 	 */
 	public void setAnaliticsLevel(short analiticsLevel) {
 		paramsName.add("anlLevel"); //$NON-NLS-1$

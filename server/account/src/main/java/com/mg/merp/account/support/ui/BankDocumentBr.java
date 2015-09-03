@@ -18,7 +18,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.document.generic.ui.DocumentBrowseForm;
 
 /**
- * Базовый класс контроллера браузера банковских документов
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РєРѕРЅС‚СЂРѕР»Р»РµСЂР° Р±СЂР°СѓР·РµСЂР° Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @author Artem V. Sharapov

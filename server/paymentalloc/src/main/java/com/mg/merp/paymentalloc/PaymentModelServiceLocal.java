@@ -25,7 +25,7 @@ public interface PaymentModelServiceLocal
    extends com.mg.framework.api.DataBusinessObjectService<Payment, Integer>
 {
 	/**
-	 * тип папки для образцов записей журнала платажей
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ Р·Р°РїРёСЃРµР№ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚Р°Р¶РµР№
 	 */
 	final static short FOLDER_PART = 13301;
 

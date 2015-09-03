@@ -23,7 +23,7 @@ import com.mg.merp.account.model.InternalInvoiceSpec;
 import com.mg.merp.document.generic.GoodsDocumentSpecificationServiceBean;
 
 /**
- * Бизнес-компонент "Спецификация внутренних накладных" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РІРЅСѓС‚СЂРµРЅРЅРёС… РЅР°РєР»Р°РґРЅС‹С…" 
  * 
  * @author leonova
  * @version $Id: InternalInvoiceSpecServiceBean.java,v 1.5 2007/02/06 16:59:09 safonov Exp $

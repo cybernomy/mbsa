@@ -33,7 +33,7 @@ import com.mg.merp.paymentalloc.PaymentModelServiceLocal;
 import com.mg.merp.paymentalloc.model.Payment;
 
 /**
- * Контроллер браузера "Образцы записей журнала платежей"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "РћР±СЂР°Р·С†С‹ Р·Р°РїРёСЃРµР№ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№"
  * 
  * @author leonova
  * @author Artem V. Sharapov

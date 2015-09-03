@@ -22,7 +22,7 @@ import com.mg.merp.document.generic.ui.DocModelMaintenanceEJBQLTableModel;
 import com.mg.merp.document.model.DocHeadModel;
 
 /**
- * Вспомогательный класс для отображения формы списка образцов складких документов
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ СЃРєР»Р°РґРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: WarehouseDocModelMaintenanceEJBQLTableModel.java,v 1.1 2006/09/12 10:52:39 leonova Exp $ 

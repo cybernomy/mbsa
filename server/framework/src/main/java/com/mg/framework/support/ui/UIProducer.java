@@ -37,7 +37,7 @@ import com.mg.framework.utils.MiscUtils;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Фабрика форм пользовательского интерфейса
+ * Р¤Р°Р±СЂРёРєР° С„РѕСЂРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: UIProducer.java,v 1.9 2007/03/13 13:32:39 safonov Exp $
@@ -55,35 +55,35 @@ public class UIProducer {
 	private final static String RUNTIME_MACROS_NAME_ATTR = "runtime";
 	
 	/**
-	 * создает форму по наименованию описателя, описатель формы должен быть доступен текущему загрузчику
-	 * ресурсов, если описатель не нейден будет сгенерирована ИС.
+	 * СЃРѕР·РґР°РµС‚ С„РѕСЂРјСѓ РїРѕ РЅР°РёРјРµРЅРѕРІР°РЅРёСЋ РѕРїРёСЃР°С‚РµР»СЏ, РѕРїРёСЃР°С‚РµР»СЊ С„РѕСЂРјС‹ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РґРѕСЃС‚СѓРїРµРЅ С‚РµРєСѓС‰РµРјСѓ Р·Р°РіСЂСѓР·С‡РёРєСѓ
+	 * СЂРµСЃСѓСЂСЃРѕРІ, РµСЃР»Рё РѕРїРёСЃР°С‚РµР»СЊ РЅРµ РЅРµР№РґРµРЅ Р±СѓРґРµС‚ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅР° РРЎ.
 	 * 
-	 * @param formName	имя формы
-	 * @return	форма
+	 * @param formName	РёРјСЏ С„РѕСЂРјС‹
+	 * @return	С„РѕСЂРјР°
 	 */
 	public static Form produceForm(String formName) {
 		return doProduceForm(loadFormDescription(formName), formName, null);
 	}
 	
 	/**
-	 * создает форму по наименованию описателя, используется генератор макросов, описатель формы должен быть доступен текущему загрузчику
-	 * ресурсов, если описатель не нейден будет сгенерирована ИС.
+	 * СЃРѕР·РґР°РµС‚ С„РѕСЂРјСѓ РїРѕ РЅР°РёРјРµРЅРѕРІР°РЅРёСЋ РѕРїРёСЃР°С‚РµР»СЏ, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РіРµРЅРµСЂР°С‚РѕСЂ РјР°РєСЂРѕСЃРѕРІ, РѕРїРёСЃР°С‚РµР»СЊ С„РѕСЂРјС‹ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РґРѕСЃС‚СѓРїРµРЅ С‚РµРєСѓС‰РµРјСѓ Р·Р°РіСЂСѓР·С‡РёРєСѓ
+	 * СЂРµСЃСѓСЂСЃРѕРІ, РµСЃР»Рё РѕРїРёСЃР°С‚РµР»СЊ РЅРµ РЅРµР№РґРµРЅ Р±СѓРґРµС‚ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅР° РРЎ.
 	 * 
 	 * @see RuntimeMacrosLoader
 	 * 
-	 * @param formName				имя формы
-	 * @param runtimeMacrosLoader	генератор динамических макросов
-	 * @return	форма
+	 * @param formName				РёРјСЏ С„РѕСЂРјС‹
+	 * @param runtimeMacrosLoader	РіРµРЅРµСЂР°С‚РѕСЂ РґРёРЅР°РјРёС‡РµСЃРєРёС… РјР°РєСЂРѕСЃРѕРІ
+	 * @return	С„РѕСЂРјР°
 	 */
 	public static Form produceForm(String formName, RuntimeMacrosLoader runtimeMacrosLoader) {
 		return doProduceForm(loadFormDescription(formName), formName, runtimeMacrosLoader);
 	}
 	
 	/**
-	 * создает форму по содежимому, строка должна представлять из себя стандартный описатель форм
+	 * СЃРѕР·РґР°РµС‚ С„РѕСЂРјСѓ РїРѕ СЃРѕРґРµР¶РёРјРѕРјСѓ, СЃС‚СЂРѕРєР° РґРѕР»Р¶РЅР° РїСЂРµРґСЃС‚Р°РІР»СЏС‚СЊ РёР· СЃРµР±СЏ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ РѕРїРёСЃР°С‚РµР»СЊ С„РѕСЂРј
 	 * 
-	 * @param body	тело описателя
-	 * @return	форма
+	 * @param body	С‚РµР»Рѕ РѕРїРёСЃР°С‚РµР»СЏ
+	 * @return	С„РѕСЂРјР°
 	 */
 	public static Form produceFormFromString(String body) {
 		if (body == null)
@@ -121,7 +121,7 @@ public class UIProducer {
 		Element root = performDocument(document, runtimeMacrosLoader).getRootElement();
 		
 		String controllerName = root.attributeValue(CONTROLLER_NAME);
-		//пытаемся прочитать имя формы из описателя
+		//РїС‹С‚Р°РµРјСЃСЏ РїСЂРѕС‡РёС‚Р°С‚СЊ РёРјСЏ С„РѕСЂРјС‹ РёР· РѕРїРёСЃР°С‚РµР»СЏ
 		if (formName == null)
 			formName = root.attributeValue(FORM_NAME);
 		
@@ -154,7 +154,7 @@ public class UIProducer {
 		result.setRootElement(copyElement(document.getRootElement(), runtimeMacrosLoader));
 		result.getRootElement().addNamespace(document.getRootElement().getNamespacePrefix(), document.getRootElement().getNamespaceURI());
 		try {
-			//пересоздаем документ через строку, чтобы устранить проблемы с namespaces
+			//РїРµСЂРµСЃРѕР·РґР°РµРј РґРѕРєСѓРјРµРЅС‚ С‡РµСЂРµР· СЃС‚СЂРѕРєСѓ, С‡С‚РѕР±С‹ СѓСЃС‚СЂР°РЅРёС‚СЊ РїСЂРѕР±Р»РµРјС‹ СЃ namespaces
 			result = DocumentHelper.parseText(result.asXML());
 			logger.debug("Finished form descriptor:\n".concat(result.asXML()));
 			return result;
@@ -252,7 +252,7 @@ public class UIProducer {
 			String macros = null;
 			if (runtimeMacrosLoader != null)
 				macros = runtimeMacrosLoader.loadMacros(name);
-			//если не загрузили макрос, то сделаем его пустым
+			//РµСЃР»Рё РЅРµ Р·Р°РіСЂСѓР·РёР»Рё РјР°РєСЂРѕСЃ, С‚Рѕ СЃРґРµР»Р°РµРј РµРіРѕ РїСѓСЃС‚С‹Рј
 			if (macros == null)
 				macros = "<jfd:empty-macros xmlns:jfd=\"http://xmlns.m-g.ru/jet/ui\" />";
 			return new SAXReader().read(new StringReader(macros));

@@ -22,7 +22,7 @@ import com.mg.merp.warehouse.WarehouseProcessListener;
 import com.mg.merp.warehouse.WarehouseProcessorServiceLocal;
 
 /**
- * Реализация фабрики реализации этапа ДО "Проставить номер ГТД из складской партии"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёРё СЌС‚Р°РїР° Р”Рћ "РџСЂРѕСЃС‚Р°РІРёС‚СЊ РЅРѕРјРµСЂ Р“РўР” РёР· СЃРєР»Р°РґСЃРєРѕР№ РїР°СЂС‚РёРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: CustomsDeclarationByStockBachDocFlowPluginFactory.java,v 1.1 2008/08/27 09:41:21 sharapov Exp $
@@ -30,7 +30,7 @@ import com.mg.merp.warehouse.WarehouseProcessorServiceLocal;
 public class CustomsDeclarationByStockBachDocFlowPluginFactory extends AbstractDocFlowPluginFactory {
 	
 	/**
-	 * Идентификатор фабрики
+	 * РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„Р°Р±СЂРёРєРё
 	 */
 	public final static int FACTORY_IDENTIFIER = 10005;
 		

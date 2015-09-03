@@ -58,7 +58,7 @@ import com.mg.merp.reference.CurrencyConversionResult;
 import com.mg.merp.reference.CurrencyServiceLocal;
 
 /**
- * Реализация бизнес-компонента "Исполнение обязательств"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РСЃРїРѕР»РЅРµРЅРёРµ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -98,7 +98,7 @@ public class ExecutionServiceBean extends com.mg.framework.generic.AbstractPOJOD
 	}
 
 	private void doExecuteLiability(Liability liability, PmcResource pmcResource, Date planDate, BigDecimal sumCur) {
-		short transferKind = 0; // НЕ внутреннее перемещение средств
+		short transferKind = 0; // РќР• РІРЅСѓС‚СЂРµРЅРЅРµРµ РїРµСЂРµРјРµС‰РµРЅРёРµ СЃСЂРµРґСЃС‚РІ
 		Execution execution = createExecution(liability, pmcResource, planDate, sumCur, transferKind, null);
 		ServerUtils.getPersistentManager().persist(execution);
 	}
@@ -110,7 +110,7 @@ public class ExecutionServiceBean extends com.mg.framework.generic.AbstractPOJOD
 	public void executeLiability(Integer resourceId, Integer resourceFolderId, Liability liability, Integer versionId, Date execDate, BigDecimal sumCur) {
 		checkVersionStatus(versionId, execDate);
 
-		short transferKind = 0; // НЕ внутреннее перемещение средств
+		short transferKind = 0; // РќР• РІРЅСѓС‚СЂРµРЅРЅРµРµ РїРµСЂРµРјРµС‰РµРЅРёРµ СЃСЂРµРґСЃС‚РІ
 		Version version = ServerUtils.getPersistentManager().find(Version.class, versionId);
 		Execution execution = createExecution(liability, null, execDate, sumCur, transferKind, version);
 
@@ -169,19 +169,19 @@ public class ExecutionServiceBean extends com.mg.framework.generic.AbstractPOJOD
 	}
 
 	private void internalTransferResourses(TransferParams transferParams, Integer versionId) {
-		short transferKind = 1; // внутреннее перемещение средств
+		short transferKind = 1; // РІРЅСѓС‚СЂРµРЅРЅРµРµ РїРµСЂРµРјРµС‰РµРЅРёРµ СЃСЂРµРґСЃС‚РІ
 		Version version = null;
 
 		if(versionId != null)
 			version = ServerUtils.getPersistentManager().find(Version.class, versionId);
 
-		// расход (expense)
+		// СЂР°СЃС…РѕРґ (expense)
 		checkVersionStatus(versionId, transferParams.getDateExpense());
-		// обязательство по расходу (expense)
+		// РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ РїРѕ СЂР°СЃС…РѕРґСѓ (expense)
 		Liability liabilityModelExpense = ServerUtils.getPersistentManager().find(Liability.class, transferParams.getLiabilityModelExpense().getId()); // to avoid lazy initilize exception
 		Liability liabilityExpense = createLiabilityWithModel(transferParams.getResourceExpense(), transferParams.getDateExpense(), transferParams.getSumExpense(), liabilityModelExpense, transferKind, version);
 
-		// исполнение обязательства по расходу (expense)
+		// РёСЃРїРѕР»РЅРµРЅРёРµ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР° РїРѕ СЂР°СЃС…РѕРґСѓ (expense)
 		Execution executionExpense = createExecution(liabilityExpense, transferParams.getResourceExpense(), transferParams.getDateExpense(), transferParams.getSumExpense(), transferKind, version);
 		if(transferParams.getResourceExpense() == null)
 			executionExpense.setResourceFolder(transferParams.getResourceFolderExpense());
@@ -189,13 +189,13 @@ public class ExecutionServiceBean extends com.mg.framework.generic.AbstractPOJOD
 		ServerUtils.getPersistentManager().persist(liabilityExpense);
 		ServerUtils.getPersistentManager().persist(executionExpense);
 
-		// приход (income)
+		// РїСЂРёС…РѕРґ (income)
 		checkVersionStatus(versionId, transferParams.getDateIncome());
-		// обязательство по приходу (income)
+		// РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ РїРѕ РїСЂРёС…РѕРґСѓ (income)
 		Liability liabilityModelIncome = ServerUtils.getPersistentManager().find(Liability.class, transferParams.getLiabilityModelIncome().getId()); // to avoid lazy initilize exception
 		Liability liabilityIncome = createLiabilityWithModel(transferParams.getResourceIncome(), transferParams.getDateIncome(), transferParams.getSumIncome(), liabilityModelIncome, transferKind, version);
 
-		// исполнение обязательства по приходу (income)
+		// РёСЃРїРѕР»РЅРµРЅРёРµ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР° РїРѕ РїСЂРёС…РѕРґСѓ (income)
 		Execution executionIncome = createExecution(liabilityIncome, transferParams.getResourceIncome(), transferParams.getDateIncome(), transferParams.getSumIncome(), transferKind, version);
 		if(transferParams.getResourceIncome() == null)
 			executionIncome.setResourceFolder(transferParams.getResourceFolderIncome());
@@ -205,14 +205,14 @@ public class ExecutionServiceBean extends com.mg.framework.generic.AbstractPOJOD
 	}
 
 	/**
-	 * Создать обязательство с использованием образца
-	 * @param resource - средство платежа
-	 * @param dateToExecute - дата иполнения
-	 * @param sumCur - сумма
-	 * @param liabilityModel - образец обязательства
-	 * @param transferKind - признак перемещения ресурсов
-	 * @param version - версия планирования
-	 * @return обязательство
+	 * РЎРѕР·РґР°С‚СЊ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј РѕР±СЂР°Р·С†Р°
+	 * @param resource - СЃСЂРµРґСЃС‚РІРѕ РїР»Р°С‚РµР¶Р°
+	 * @param dateToExecute - РґР°С‚Р° РёРїРѕР»РЅРµРЅРёСЏ
+	 * @param sumCur - СЃСѓРјРјР°
+	 * @param liabilityModel - РѕР±СЂР°Р·РµС† РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°
+	 * @param transferKind - РїСЂРёР·РЅР°Рє РїРµСЂРµРјРµС‰РµРЅРёСЏ СЂРµСЃСѓСЂСЃРѕРІ
+	 * @param version - РІРµСЂСЃРёСЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @return РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ
 	 */
 	private Liability createLiabilityWithModel(PmcResource resource, Date dateToExecute, BigDecimal sumCur, Liability liabilityModel, short transferKind, Version version) {
 		PmcConfig config = getModuleConfiguration();

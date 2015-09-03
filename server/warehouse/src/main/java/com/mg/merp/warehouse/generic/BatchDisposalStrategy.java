@@ -33,7 +33,7 @@ import com.mg.merp.warehouse.support.BatchQuanTransfer;
 import com.mg.merp.warehouse.support.ui.WarehouseBatchSelectionDialog;
 
 /**
- * Стратегия партионного списани со склада
+ * РЎС‚СЂР°С‚РµРіРёСЏ РїР°СЂС‚РёРѕРЅРЅРѕРіРѕ СЃРїРёСЃР°РЅРё СЃРѕ СЃРєР»Р°РґР°
  * 
  * @author Valentin A. Poroxnenko
  * @author Artem V. Sharapov

@@ -33,7 +33,7 @@ import com.mg.merp.account.model.AccType;
 import com.mg.merp.account.model.AnlForm;
 
 /**
- * Бизнес-компонент "План счетов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџР»Р°РЅ СЃС‡РµС‚РѕРІ" 
  * 
  * @author leonova
  * @version $Id: AccountServiceBean.java,v 1.6 2008/03/13 06:20:53 alikaev Exp $

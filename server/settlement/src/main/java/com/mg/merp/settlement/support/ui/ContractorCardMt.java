@@ -45,7 +45,7 @@ import com.mg.merp.settlement.model.ContractorCardHist;
 import com.mg.merp.settlement.model.ContractorCardPlan;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Карточки расчетов с партнерами"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР°СЂС‚РѕС‡РєРё СЂР°СЃС‡РµС‚РѕРІ СЃ РїР°СЂС‚РЅРµСЂР°РјРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -328,8 +328,8 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Обработка события "Применить" (фильтр)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РџСЂРёРјРµРЅРёС‚СЊ" (С„РёР»СЊС‚СЂ)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionApply(WidgetEvent event) {
 		if(!isFilterEnabled)
@@ -343,8 +343,8 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Обработка события "Очистить" (фильтр)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РћС‡РёСЃС‚РёС‚СЊ" (С„РёР»СЊС‚СЂ)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionClear(WidgetEvent event) {
 		clearFilter();
@@ -358,8 +358,8 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Обработка события "Показать документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РџРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionPlanIncomeShowDocument(WidgetEvent event) throws ApplicationException {
@@ -368,8 +368,8 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Обработка события "Показать документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РџРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionPlanExpenseShowDocument(WidgetEvent event) throws ApplicationException {
@@ -378,8 +378,8 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Обработка события "Показать документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РџРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionConfirmDocIncomeShowDocument(WidgetEvent event) throws ApplicationException {
@@ -388,8 +388,8 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Обработка события "Показать документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РџРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionConfirmDocExpenseShowDocument(WidgetEvent event) throws ApplicationException {
@@ -398,8 +398,8 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Обработка события "Показать документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РџРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionBaseDocIncomeShowDocument(WidgetEvent event) throws ApplicationException {
@@ -408,8 +408,8 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Обработка события "Показать документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РџРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionBaseDocExpenseShowDocument(WidgetEvent event) throws ApplicationException {
@@ -418,8 +418,8 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Обработка события "Показать документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РџРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionContractIncomeShowDocument(WidgetEvent event) throws ApplicationException {
@@ -428,8 +428,8 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Обработка события "Показать документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РџРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionContractExpenseShowDocument(WidgetEvent event) throws ApplicationException {
@@ -438,9 +438,9 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Получить документ
-	 * @param identifier - идентификатор
-	 * @return документ
+	 * РџРѕР»СѓС‡РёС‚СЊ РґРѕРєСѓРјРµРЅС‚
+	 * @param identifier - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ
+	 * @return РґРѕРєСѓРјРµРЅС‚
 	 */
 	private DocHead getCardPlanDocHead(Integer identifier) {
 		if(identifier != null)
@@ -450,9 +450,9 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Получить документ
-	 * @param identifier - идентификатор
-	 * @return документ
+	 * РџРѕР»СѓС‡РёС‚СЊ РґРѕРєСѓРјРµРЅС‚
+	 * @param identifier - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ
+	 * @return РґРѕРєСѓРјРµРЅС‚
 	 */
 	private DocHead getCardHistDocHead(Integer identifier) {
 		if(identifier != null)
@@ -462,8 +462,8 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Вывод документа для просмотра
-	 * @param docHead - документ
+	 * Р’С‹РІРѕРґ РґРѕРєСѓРјРµРЅС‚Р° РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР°
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	private void internalShowDocument(DocHead docHead) {
@@ -472,9 +472,9 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Получить список документов-оснований
-	 * @param queryParams - параметры отбора (фильтрация)
-	 * @return список документов-оснований
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РґРѕРєСѓРјРµРЅС‚РѕРІ-РѕСЃРЅРѕРІР°РЅРёР№
+	 * @param queryParams - РїР°СЂР°РјРµС‚СЂС‹ РѕС‚Р±РѕСЂР° (С„РёР»СЊС‚СЂР°С†РёСЏ)
+	 * @return СЃРїРёСЃРѕРє РґРѕРєСѓРјРµРЅС‚РѕРІ-РѕСЃРЅРѕРІР°РЅРёР№
 	 */
 	private List<DocListItem> getBaseDocs(Map<String, Object> queryParams) {
 		StringBuilder queryText = new StringBuilder().
@@ -507,9 +507,9 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Получить список контрактов
-	 * @param queryParams - параметры отбора (фильтрация)
-	 * @return список контрактов
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РєРѕРЅС‚СЂР°РєС‚РѕРІ
+	 * @param queryParams - РїР°СЂР°РјРµС‚СЂС‹ РѕС‚Р±РѕСЂР° (С„РёР»СЊС‚СЂР°С†РёСЏ)
+	 * @return СЃРїРёСЃРѕРє РєРѕРЅС‚СЂР°РєС‚РѕРІ
 	 */
 	private List<DocListItem> getContracts(Map<String, Object> queryParams) {
 		StringBuilder queryText = new StringBuilder().
@@ -542,10 +542,10 @@ public class ContractorCardMt extends DefaultMaintenanceForm implements MasterMo
 	}
 
 	/**
-	 * Получить список документов
-	 * @param queryText - SQL-запрос
-	 * @param queryParams - параметры запроса
-	 * @return список документов
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РґРѕРєСѓРјРµРЅС‚РѕРІ
+	 * @param queryText - SQL-Р·Р°РїСЂРѕСЃ
+	 * @param queryParams - РїР°СЂР°РјРµС‚СЂС‹ Р·Р°РїСЂРѕСЃР°
+	 * @return СЃРїРёСЃРѕРє РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 */
 	private List<DocListItem> getDocList(String queryText, Object[] queryParams) {
 		List<DocListItem> docList = JdbcTemplate.getInstance().query(queryText, queryParams, new RowMapper<DocListItem>() {

@@ -43,7 +43,7 @@ import com.mg.merp.account.model.InvLocation;
 import com.mg.merp.account.model.Inventory;
 
 /**
- * Бизнес-компонент "История инвентарной карточки" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РСЃС‚РѕСЂРёСЏ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРё" 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -73,10 +73,10 @@ public class InvHistoryServiceBean extends AbstractPOJODataBusinessObjectService
 	}
 	
 	/**
-	 * Откат истории инв.объекта
+	 * РћС‚РєР°С‚ РёСЃС‚РѕСЂРёРё РёРЅРІ.РѕР±СЉРµРєС‚Р°
 	 * 
 	 * @param invHistory
-	 * 			- история инвентарной карточки
+	 * 			- РёСЃС‚РѕСЂРёСЏ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРё
 	 */
 	protected void doRollbackInvHistory(InvHistory invHistory) {
 		RoundContext roundContext = new RoundContext(ConfigurationHelper.getConfiguration().getCurrencyPrec());
@@ -148,22 +148,22 @@ public class InvHistoryServiceBean extends AbstractPOJODataBusinessObjectService
 	}
 
 	/**
-	 * Проверка, является ли история инвентарной карточки последней
+	 * РџСЂРѕРІРµСЂРєР°, СЏРІР»СЏРµС‚СЃСЏ Р»Рё РёСЃС‚РѕСЂРёСЏ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРё РїРѕСЃР»РµРґРЅРµР№
 	 * 
 	 * @param invHistory
-	 * 			- инвентарная карточка
+	 * 			- РёРЅРІРµРЅС‚Р°СЂРЅР°СЏ РєР°СЂС‚РѕС‡РєР°
 	 * @return
-	 * 			- <code>true</code> - последняя, иначе <code>false</code> 
+	 * 			- <code>true</code> - РїРѕСЃР»РµРґРЅСЏСЏ, РёРЅР°С‡Рµ <code>false</code> 
 	 */
 	private boolean isLastRecord(InvHistory invHistory) {
 		return findByCriteria(Restrictions.eq("Inventory", invHistory.getInventory()), Restrictions.gt("Id", invHistory.getId())).isEmpty() ? true : false;
 	}
 	
 	/**
-	 * Возвращает предыдущую историю инвентарной карточки
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РїСЂРµРґС‹РґСѓС‰СѓСЋ РёСЃС‚РѕСЂРёСЋ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРё
 	 * 
 	 * @param invHistory
-	 * 			- история инвентарной карточки
+	 * 			- РёСЃС‚РѕСЂРёСЏ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРё
 	 * @return
 	 */
 	private InvHistory getPrevInvHistory(InvHistory invHistory) {
@@ -177,7 +177,7 @@ public class InvHistoryServiceBean extends AbstractPOJODataBusinessObjectService
 	}
 	
 	/**
-	 * Возвращет бизнес-компонент "Хоз. операция"
+	 * Р’РѕР·РІСЂР°С‰РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РҐРѕР·. РѕРїРµСЂР°С†РёСЏ"
 	 *  
 	 * @return
 	 */
@@ -188,7 +188,7 @@ public class InvHistoryServiceBean extends AbstractPOJODataBusinessObjectService
 	}
 
 	/**
-	 * Возвращает бизнес-компонент "Ведомость начисления амортизации"
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РµРґРѕРјРѕСЃС‚СЊ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё"
 	 * 
 	 * @return
 	 */

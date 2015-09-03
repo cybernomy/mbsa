@@ -24,7 +24,7 @@ import com.mg.merp.reference.OkatoServiceLocal;
 import com.mg.merp.reference.model.Okato;
 
 /**
- * Бизнес-компонент "Коды ОКАТО" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљРѕРґС‹ РћРљРђРўРћ" 
  * 
  * @author leonova
  * @version $Id: OkatoServiceBean.java,v 1.4 2006/10/19 04:35:38 leonova Exp $

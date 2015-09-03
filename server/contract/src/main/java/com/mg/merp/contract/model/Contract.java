@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Контракт"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС‚СЂР°РєС‚"
  * 
  * @author Artem V. Sharapov
  * @version $Id: Contract.java,v 1.12 2008/09/22 10:03:59 sharapov Exp $
@@ -669,7 +669,7 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
 	}
 
 	/**
-	 * Получить "Контрагента"
+	 * РџРѕР»СѓС‡РёС‚СЊ "РљРѕРЅС‚СЂР°РіРµРЅС‚Р°"
 	 */
 	@DataItemName("Contract.Contract.Contractor") //$NON-NLS-1$
 	public com.mg.merp.reference.model.Contractor getFrom() {
@@ -677,7 +677,7 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
 	}
 
 	/**
-	 * Получить "Нашу организацию"
+	 * РџРѕР»СѓС‡РёС‚СЊ "РќР°С€Сѓ РѕСЂРіР°РЅРёР·Р°С†РёСЋ"
 	 */
 	@DataItemName("Contract.Contract.Company") //$NON-NLS-1$
 	public com.mg.merp.reference.model.Contractor getTo() {

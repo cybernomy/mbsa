@@ -23,7 +23,7 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.merp.contract.ContractCategoryServiceLocal;
 
 /**
- * SearchHelp бизнес-компонента "Категория договора"
+ * SearchHelp Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР°С‚РµРіРѕСЂРёСЏ РґРѕРіРѕРІРѕСЂР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ContractCategorySearchHelp.java,v 1.1 2007/09/17 12:29:23 alikaev Exp $

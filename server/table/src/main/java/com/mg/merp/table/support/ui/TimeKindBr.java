@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.table.model.TimeKind;
 
 /**
- * Браузер типов времени
+ * Р‘СЂР°СѓР·РµСЂ С‚РёРїРѕРІ РІСЂРµРјРµРЅРё
  * 
  * @author leonova
  * @version $Id: TimeKindBr.java,v 1.1 2006/08/29 12:48:57 leonova Exp $ 

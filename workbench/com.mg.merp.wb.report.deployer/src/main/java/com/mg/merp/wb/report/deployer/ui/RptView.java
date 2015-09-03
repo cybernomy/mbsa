@@ -24,7 +24,7 @@ import com.mg.merp.wb.report.deployer.DeployerPlugin;
 import com.mg.merp.wb.report.deployer.support.RptViewController;
 
 /**
- * Панель репозитария отчётов
+ * РџР°РЅРµР»СЊ СЂРµРїРѕР·РёС‚Р°СЂРёСЏ РѕС‚С‡С‘С‚РѕРІ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: RptView.java,v 1.6 2007/04/11 06:58:44 poroxnenko Exp $

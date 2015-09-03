@@ -25,7 +25,7 @@ import com.mg.merp.mfreference.CrewServiceLocal;
 import com.mg.merp.mfreference.model.Crew;
 
 /**
- * Реализация бизнес-компонента "Бригады" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р‘СЂРёРіР°РґС‹" 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -61,7 +61,7 @@ public class CrewServiceBean extends AbstractPOJODataBusinessObjectServiceBean<C
 	}
 	
 	/**
-	 * функция заполнения поля "Name"
+	 * С„СѓРЅРєС†РёСЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РїРѕР»СЏ "Name"
 	 * 
 	 * @param entity
 	 */

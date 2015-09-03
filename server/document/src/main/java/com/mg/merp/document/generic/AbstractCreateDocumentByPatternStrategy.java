@@ -21,7 +21,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocHeadModel;
 
 /**
- * Базовая реализация стратегии создания документа по образцу
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РїРѕ РѕР±СЂР°Р·С†Сѓ
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractCreateDocumentByPatternStrategy.java,v 1.1 2007/09/28 12:04:20 safonov Exp $
@@ -31,11 +31,11 @@ public abstract class AbstractCreateDocumentByPatternStrategy implements
 	protected Logger logger = ServerUtils.getLogger(getClass());
 
 	/**
-	 * реализация создания документа на основании образца
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІР°РЅРёРё РѕР±СЂР°Р·С†Р°
 	 * 
-	 * @param document	документ
-	 * @param documentPattern	образец
-	 * @return	документ
+	 * @param document	РґРѕРєСѓРјРµРЅС‚
+	 * @param documentPattern	РѕР±СЂР°Р·РµС†
+	 * @return	РґРѕРєСѓРјРµРЅС‚
 	 */
 	protected abstract DocHead doCreateDocument(DocHead document, DocHeadModel documentPattern);
 	

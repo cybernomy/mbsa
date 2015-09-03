@@ -20,7 +20,7 @@ import com.mg.merp.personnelref.model.PositionFill;
 import com.mg.merp.salary.model.CalcList;
 
 /**
- * Сервис бизнес-компонента "Расчетные листки"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р Р°СЃС‡РµС‚РЅС‹Рµ Р»РёСЃС‚РєРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -29,28 +29,28 @@ import com.mg.merp.salary.model.CalcList;
 public interface CalcListServiceLocal extends com.mg.framework.api.DataBusinessObjectService<CalcList, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String LOCAL_SERVICE_NAME= "merp/salary/CalcList"; //$NON-NLS-1$
 	
 	/**
-	 * Добавить расчетные листки в расчетную ведомость
-	 * @param positionFills - список занимаемых должностей сотрудниками
-	 * @param payRollId - идентификатор расчетной ведомости
+	 * Р”РѕР±Р°РІРёС‚СЊ СЂР°СЃС‡РµС‚РЅС‹Рµ Р»РёСЃС‚РєРё РІ СЂР°СЃС‡РµС‚РЅСѓСЋ РІРµРґРѕРјРѕСЃС‚СЊ
+	 * @param positionFills - СЃРїРёСЃРѕРє Р·Р°РЅРёРјР°РµРјС‹С… РґРѕР»Р¶РЅРѕСЃС‚РµР№ СЃРѕС‚СЂСѓРґРЅРёРєР°РјРё
+	 * @param payRollId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂР°СЃС‡РµС‚РЅРѕР№ РІРµРґРѕРјРѕСЃС‚Рё
 	 */
 	void addCalcLists(PositionFill[] positionFills, int payRollId);
 	
 	/**
-	 * Рассчитать
-	 * @param calcListIds - список идентификаторов расчетных листков
-	 * @param isClear - признак "очистки" Р.Л. перед расчетом
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ
+	 * @param calcListIds - СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ СЂР°СЃС‡РµС‚РЅС‹С… Р»РёСЃС‚РєРѕРІ
+	 * @param isClear - РїСЂРёР·РЅР°Рє "РѕС‡РёСЃС‚РєРё" Р .Р›. РїРµСЂРµРґ СЂР°СЃС‡РµС‚РѕРј
 	 */
 	void calculate(Serializable[] calcListIds, boolean isClear);
 		
 	/**
-	 * Установить/снять признак "Расчитан и закрыт"
-	 * @param calcListIds - список идентификаторов расчетных листков
-	 * @param isClosed - признак "Расчитан и закрыт"
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ/СЃРЅСЏС‚СЊ РїСЂРёР·РЅР°Рє "Р Р°СЃС‡РёС‚Р°РЅ Рё Р·Р°РєСЂС‹С‚"
+	 * @param calcListIds - СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ СЂР°СЃС‡РµС‚РЅС‹С… Р»РёСЃС‚РєРѕРІ
+	 * @param isClosed - РїСЂРёР·РЅР°Рє "Р Р°СЃС‡РёС‚Р°РЅ Рё Р·Р°РєСЂС‹С‚"
 	 */
 	void setClosed(Serializable[] calcListIds, boolean isClosed);
 

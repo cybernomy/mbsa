@@ -18,14 +18,14 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.core.model.Form;
 
 /**
- * Бизнес-компонент "Форма системы"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р¤РѕСЂРјР° СЃРёСЃС‚РµРјС‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: FormServiceLocal.java,v 1.1 2008/03/03 12:55:18 safonov Exp $
  */
 public interface FormServiceLocal extends DataBusinessObjectService<Form, Integer> {
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/core/SysForm";
 }

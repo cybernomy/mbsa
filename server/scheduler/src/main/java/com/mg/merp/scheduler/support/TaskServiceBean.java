@@ -30,7 +30,7 @@ import com.mg.merp.scheduler.TaskServiceLocal;
 import com.mg.merp.scheduler.model.Task;
 
 /**
- * Бизнес-компонент "Задачи планировщика"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р—Р°РґР°С‡Рё РїР»Р°РЅРёСЂРѕРІС‰РёРєР°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: TaskServiceBean.java,v 1.1 2008/04/25 10:57:23 safonov Exp $

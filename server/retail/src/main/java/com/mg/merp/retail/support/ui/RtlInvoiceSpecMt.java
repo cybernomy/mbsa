@@ -17,7 +17,7 @@ package com.mg.merp.retail.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы спецификаций документов на отпуск
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРєСѓРјРµРЅС‚РѕРІ РЅР° РѕС‚РїСѓСЃРє
  * 
  * @author leonova
  * @version $Id: RtlInvoiceSpecMt.java,v 1.3 2006/08/22 07:41:45 leonova Exp $

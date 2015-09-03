@@ -20,7 +20,7 @@ import com.mg.merp.reference.model.CatalogFolder;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер формы условия отбора товарных документов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёСЏ РѕС‚Р±РѕСЂР° С‚РѕРІР°СЂРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: GoodsDocumentRest.java,v 1.6 2006/12/20 07:45:09 leonova Exp $

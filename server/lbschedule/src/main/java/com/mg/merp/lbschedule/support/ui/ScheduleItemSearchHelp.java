@@ -22,7 +22,7 @@ import com.mg.merp.lbschedule.model.Item;
 import com.mg.merp.lbschedule.model.Schedule;
 
 /**
- * Поисковик объектов-сущностей "Пунктов графика исполнения обязательств"
+ * РџРѕРёСЃРєРѕРІРёРє РѕР±СЉРµРєС‚РѕРІ-СЃСѓС‰РЅРѕСЃС‚РµР№ "РџСѓРЅРєС‚РѕРІ РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ScheduleItemSearchHelp.java,v 1.1 2007/04/17 12:51:41 sharapov Exp $

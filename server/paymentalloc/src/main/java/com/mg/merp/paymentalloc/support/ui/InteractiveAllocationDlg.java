@@ -29,7 +29,7 @@ import com.mg.merp.paymentalloc.model.SpecInfo;
 import com.mg.merp.paymentalloc.support.Messages;
 
 /**
- * Контроллер диалога "Интерактивное распределение платежа по спецификации документа"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "РРЅС‚РµСЂР°РєС‚РёРІРЅРѕРµ СЂР°СЃРїСЂРµРґРµР»РµРЅРёРµ РїР»Р°С‚РµР¶Р° РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: InteractiveAllocationDlg.java,v 1.1 2007/05/31 14:13:30 sharapov Exp $
@@ -131,9 +131,9 @@ public class InteractiveAllocationDlg extends DefaultDialog {
 	}
 
 	/**
-	 * Установить параметры запуска диалога
-	 * @param allocationList - список позиций спецификации документа
-	 * @param sumToAllocate - сумма к распределению
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ Р·Р°РїСѓСЃРєР° РґРёР°Р»РѕРіР°
+	 * @param allocationList - СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param sumToAllocate - СЃСѓРјРјР° Рє СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЋ
 	 */
 	public void setParams(List<SpecInfo> allocationList, BigDecimal sumToAllocate) {
 		this.allocationList = allocationList;
@@ -142,8 +142,8 @@ public class InteractiveAllocationDlg extends DefaultDialog {
 	}
 
 	/**
-	 * Обработчик кнопки "Распределить"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃРїСЂРµРґРµР»РёС‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionAllocate(WidgetEvent event) {
 		if(selectedItem != null) {
@@ -172,8 +172,8 @@ public class InteractiveAllocationDlg extends DefaultDialog {
 	}
 
 	/**
-	 * Обработчик кнопки "Отменить распределение"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РћС‚РјРµРЅРёС‚СЊ СЂР°СЃРїСЂРµРґРµР»РµРЅРёРµ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionDeAllocate(WidgetEvent event) {
 		if(selectedItem != null) {
@@ -185,8 +185,8 @@ public class InteractiveAllocationDlg extends DefaultDialog {
 	}
 
 	/**
-	 * Получить общую распределенную сумму
-	 * @return общая распределенная сумма
+	 * РџРѕР»СѓС‡РёС‚СЊ РѕР±С‰СѓСЋ СЂР°СЃРїСЂРµРґРµР»РµРЅРЅСѓСЋ СЃСѓРјРјСѓ
+	 * @return РѕР±С‰Р°СЏ СЂР°СЃРїСЂРµРґРµР»РµРЅРЅР°СЏ СЃСѓРјРјР°
 	 */
 	private BigDecimal getTotalAllocatedSum() {
 		BigDecimal totalAllocationSum = BigDecimal.ZERO;

@@ -21,11 +21,11 @@ import com.mg.merp.baiengine.generic.AbstractBusinessAddin;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Базовый класс BAi формирования номера документа. Класс алгоритма должен
- * реализовывать следующий метод <code>protected String doPerform() throws Exception</code>.
- * Данный метод возвращает сформированный номер документа.
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ BAi С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РЅРѕРјРµСЂР° РґРѕРєСѓРјРµРЅС‚Р°. РљР»Р°СЃСЃ Р°Р»РіРѕСЂРёС‚РјР° РґРѕР»Р¶РµРЅ
+ * СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёР№ РјРµС‚РѕРґ <code>protected String doPerform() throws Exception</code>.
+ * Р”Р°РЅРЅС‹Р№ РјРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ СЃС„РѕСЂРјРёСЂРѕРІР°РЅРЅС‹Р№ РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°.
  * 
- * <p>Пример данного метода:
+ * <p>РџСЂРёРјРµСЂ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР°:
  * <pre>
  *  protected void doPerform() throws Exception {
  *  	complete("My number");
@@ -37,15 +37,15 @@ import com.mg.merp.document.model.DocHead;
  */
 public abstract class DocumentNumberBusinessAddin extends AbstractBusinessAddin<String> {
 	/**
-	 * имя параметра для передачи сущности документа
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° РґР»СЏ РїРµСЂРµРґР°С‡Рё СЃСѓС‰РЅРѕСЃС‚Рё РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	public final static String DOCHEAD_PARAM = "DOCHEAD_PARAM"; //$NON-NLS-1$
 	private DocHead docHead;
 
 	/**
-	 * получить сущность документа для которого генерится номер
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃСѓС‰РЅРѕСЃС‚СЊ РґРѕРєСѓРјРµРЅС‚Р° РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ РіРµРЅРµСЂРёС‚СЃСЏ РЅРѕРјРµСЂ
 	 * 
-	 * @return	сущность документа
+	 * @return	СЃСѓС‰РЅРѕСЃС‚СЊ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected DocHead getDocHead() {
 		return docHead;
@@ -60,9 +60,9 @@ public abstract class DocumentNumberBusinessAddin extends AbstractBusinessAddin<
 	}
 
 	/**
-	 * Возвращает номер документа, сформированный процедурой по-умолчанию
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°, СЃС„РѕСЂРјРёСЂРѕРІР°РЅРЅС‹Р№ РїСЂРѕС†РµРґСѓСЂРѕР№ РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ
 	 * 
-	 * @return	номер документа
+	 * @return	РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°
 	 * @throws ApplicationException
 	 */
 	final public String createDefaultDocNum() throws ApplicationException {

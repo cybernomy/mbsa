@@ -38,7 +38,7 @@ import com.mg.merp.core.model.FeatureLink;
 import com.mg.merp.core.model.FeatureVal;
 
 /**
- * Бизнес-компонент "Дополнительные признаки"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїСЂРёР·РЅР°РєРё"
  * 
  * @author leonova
  * @version $Id: FeatureServiceBean.java,v 1.13 2007/11/08 12:03:10 sharapov Exp $
@@ -116,10 +116,10 @@ public class FeatureServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 		initAttributes.put(FEATURE_ATTRIBUTE_NAME, entityClone);
 		FeatureValServiceLocal featureValService = (FeatureValServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/core/FeatureVal"); //$NON-NLS-1$
 		FeatureLinkServiceLocal featureLinkService = (FeatureLinkServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/core/FeatureLink"); //$NON-NLS-1$
-		// копирование значений
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ Р·РЅР°С‡РµРЅРёР№
 		for (FeatureVal featureVal : featureValService.findByCriteria(Restrictions.eq(FEATURE_ATTRIBUTE_NAME, entity)))
 			featureValService.clone(featureVal, true, initAttributes);
-		// копирование связей
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ СЃРІСЏР·РµР№
 		for(FeatureLink featureLink : featureLinkService.findByCriteria(Restrictions.eq(FEATURE_ATTRIBUTE_NAME, entity)))
 			featureLinkService.clone(featureLink, true, initAttributes);
 	}

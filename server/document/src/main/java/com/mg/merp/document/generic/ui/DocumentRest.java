@@ -28,7 +28,7 @@ import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Êîíòğîëëåğ ôîğìû óñëîâèÿ îòáîğà äîêóìåíòîâ
+ * ĞšĞ¾Ğ½Ñ‚Ñ€Ğ¾Ğ»Ğ»ĞµÑ€ Ñ„Ğ¾Ñ€Ğ¼Ñ‹ ÑƒÑĞ»Ğ¾Ğ²Ğ¸Ñ Ğ¾Ñ‚Ğ±Ğ¾Ñ€Ğ° Ğ´Ğ¾ĞºÑƒĞ¼ĞµĞ½Ñ‚Ğ¾Ğ²
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -65,7 +65,7 @@ public class DocumentRest extends DefaultHierarhyRestrictionForm {
 	private Date docDateTill = null;
 	@DataItemName("DocumentRest.DocType") //$NON-NLS-1$
 	private DocType docType = null;	
-	private Currency ñurCode = null;
+	private Currency ÑurCode = null;
 	@DataItemName("Document.Through")	 //$NON-NLS-1$
 	private Contractor throughCode = null;
 	@DataItemName("Document.From") //$NON-NLS-1$
@@ -104,7 +104,7 @@ public class DocumentRest extends DefaultHierarhyRestrictionForm {
 		this.contractDate = null;
 		this.contractNumber = StringUtils.EMPTY_STRING;
 		this.contractType = null;	
-		this.ñurCode = null;
+		this.ÑurCode = null;
 		this.sumNatMin = null;
 		this.sumNatMax = null;	
 		this.sumCurMin = null;
@@ -220,10 +220,10 @@ public class DocumentRest extends DefaultHierarhyRestrictionForm {
 		return toCode;
 	}
 	/**
-	 * @return Returns the ñurCode.
+	 * @return Returns the ÑurCode.
 	 */
-	public Currency getÑurCode() {
-		return ñurCode;
+	public Currency getĞ¡urCode() {
+		return ÑurCode;
 	}
 	public DocSection getDocSection() {
 		return docSection;

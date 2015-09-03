@@ -31,9 +31,9 @@ public abstract class ManufactureDocumentSpecServiceBean<T extends com.mg.merp.d
 		GoodsDocumentSpecificationServiceBean<T, ID> {
 
 	/**
-	 * удаление всех спецификаций документа
+	 * СѓРґР°Р»РµРЅРёРµ РІСЃРµС… СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docHead	документ
+	 * @param docHead	РґРѕРєСѓРјРµРЅС‚
 	 */
 	@SuppressWarnings("unchecked")
 	protected void clear(DocHead docHead) {

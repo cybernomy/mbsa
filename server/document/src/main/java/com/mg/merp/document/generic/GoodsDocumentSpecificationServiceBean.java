@@ -59,7 +59,7 @@ import com.mg.merp.reference.model.PriceListSpec;
 import com.mg.merp.reference.model.TimePeriodKind;
 
 /**
- * Базовая реализация бизнес-компонента "Спецификации документа"
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°"
  * 
  * @author Oleg V. Safonov
  * @author Konstantin S. Alikaev
@@ -89,10 +89,10 @@ public abstract class GoodsDocumentSpecificationServiceBean<T extends com.mg.mer
 	}
 
 	protected void doAdjust(T entity) {
-		//TODO реализовать алгоритм принятия решения что пересчитать в спецификации
+		//TODO СЂРµР°Р»РёР·РѕРІР°С‚СЊ Р°Р»РіРѕСЂРёС‚Рј РїСЂРёРЅСЏС‚РёСЏ СЂРµС€РµРЅРёСЏ С‡С‚Рѕ РїРµСЂРµСЃС‡РёС‚Р°С‚СЊ РІ СЃРїРµС†РёС„РёРєР°С†РёРё
 
 		RoundContext rc = getRoundContext();
-		//расчет от цен/сум со всеми налогами
+		//СЂР°СЃС‡РµС‚ РѕС‚ С†РµРЅ/СЃСѓРј СЃРѕ РІСЃРµРјРё РЅР°Р»РѕРіР°РјРё
 		boolean total = false;//MathUtils.compareToZero(entity.getPrice()) != 0 && MathUtils.compareToZero(entity.getSumma()) != 0;
 
 		BigDecimal quantity = entity.getQuantity();
@@ -180,19 +180,19 @@ public abstract class GoodsDocumentSpecificationServiceBean<T extends com.mg.mer
 	@Override
 	protected void doDeepClone(T entity, T entityClone) {
 		AttributeMap attributeMap = DataUtils.toAttributeMap("DocSpec", entityClone);
-		//налоги
+		//РЅР°Р»РѕРіРё
 		List<DocumentSpecTax> taxes = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(DocumentSpecTax.class)
 				.add(Restrictions.eq("DocSpec", entity)));
 		for (DocumentSpecTax tax : taxes) {
 			DocumentSpecTax taxClone = (DocumentSpecTax) tax.cloneEntity(attributeMap);
 			getPersistentManager().persist(taxClone);
 		}
-		//упаковки
+		//СѓРїР°РєРѕРІРєРё
 		DocumentSpecPackageServiceLocal packageService = (DocumentSpecPackageServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(DocumentSpecPackageServiceLocal.SERVICE_NAME);
 		for (DocumentSpecPackage pkg : packageService.findByCriteria(Restrictions.eq("DocSpec", entity))) {
 			packageService.clone(pkg, true, attributeMap);
 		}
-		//серийные номера
+		//СЃРµСЂРёР№РЅС‹Рµ РЅРѕРјРµСЂР°
 		DocumentSpecSerialNumServiceLocal serNumService = (DocumentSpecSerialNumServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(DocumentSpecSerialNumServiceLocal.SERVICE_NAME);
 		for (DocumentSpecSerialNum serNum : serNumService.findByCriteria(Restrictions.eq("DocSpec", entity))) {
 			serNumService.clone(serNum, true, attributeMap);
@@ -229,15 +229,15 @@ public abstract class GoodsDocumentSpecificationServiceBean<T extends com.mg.mer
 			exactPrice = BigDecimal.ZERO;
 
 		if (goodsInfo.getPricelistId() == null) {
-			//добавили из каталога
+			//РґРѕР±Р°РІРёР»Рё РёР· РєР°С‚Р°Р»РѕРіР°
 			specEntity.setPrice1(exactPrice);
 		}
 		else {
-			//добавили из прайс-листа
+			//РґРѕР±Р°РІРёР»Рё РёР· РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 			specEntity.setPriceListSpec(getPersistentManager().find(PriceListSpec.class, goodsInfo.getPricelistId()));
 			Currency docCur = docHead.getCurrency();
 			Currency priceListCur = specEntity.getPriceListSpec().getFolder().getPriceListHead().getCurrency();
-			//пересчитаем при разных валютах документа и прайс-листа
+			//РїРµСЂРµСЃС‡РёС‚Р°РµРј РїСЂРё СЂР°Р·РЅС‹С… РІР°Р»СЋС‚Р°С… РґРѕРєСѓРјРµРЅС‚Р° Рё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 			if (priceListCur != null && docCur != null && priceListCur.getId() != docCur.getId()) {
 				CurrencyServiceLocal curService = (CurrencyServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/Currency");
 				exactPrice = curService.conversion(docCur, priceListCur, docHead.getCurrencyRateAuthority(), docHead.getCurrencyRateType(), docHead.getDocDate(), goodsInfo.getPrice());
@@ -287,9 +287,9 @@ public abstract class GoodsDocumentSpecificationServiceBean<T extends com.mg.mer
 		if (goodsInfoList == null)
 			throw new IllegalArgumentException("Goods list is null");
 		
-		//загрузим сущность документа в сессиию и используем при инициализации спецификаций, чтобы при дальнейших действиях
-		//использовалась сущность из сессии, иначе возможны побочные действия влияющие на расчет
-		//агрегатных значений документа
+		//Р·Р°РіСЂСѓР·РёРј СЃСѓС‰РЅРѕСЃС‚СЊ РґРѕРєСѓРјРµРЅС‚Р° РІ СЃРµСЃСЃРёРёСЋ Рё РёСЃРїРѕР»СЊР·СѓРµРј РїСЂРё РёРЅРёС†РёР°Р»РёР·Р°С†РёРё СЃРїРµС†РёС„РёРєР°С†РёР№, С‡С‚РѕР±С‹ РїСЂРё РґР°Р»СЊРЅРµР№С€РёС… РґРµР№СЃС‚РІРёСЏС…
+		//РёСЃРїРѕР»СЊР·РѕРІР°Р»Р°СЃСЊ СЃСѓС‰РЅРѕСЃС‚СЊ РёР· СЃРµСЃСЃРёРё, РёРЅР°С‡Рµ РІРѕР·РјРѕР¶РЅС‹ РїРѕР±РѕС‡РЅС‹Рµ РґРµР№СЃС‚РІРёСЏ РІР»РёСЏСЋС‰РёРµ РЅР° СЂР°СЃС‡РµС‚
+		//Р°РіСЂРµРіР°С‚РЅС‹С… Р·РЅР°С‡РµРЅРёР№ РґРѕРєСѓРјРµРЅС‚Р°
 		doBulkCreate(DocumentUtils.loadDocumentHead(docHead, getDocSection()), goodsInfoList);
 	}
 
@@ -312,9 +312,9 @@ public abstract class GoodsDocumentSpecificationServiceBean<T extends com.mg.mer
 	}
 
 	/**
-	 * Расчет срока годности у позиций спецификации документа
+	 * Р Р°СЃС‡РµС‚ СЃСЂРѕРєР° РіРѕРґРЅРѕСЃС‚Рё Сѓ РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param entity	документ
+	 * @param entity	РґРѕРєСѓРјРµРЅС‚
 	 */
 	protected void doUpdateSpecBestBefore(DocHead dochead) {
 		for (T docSpec : findByCriteria(Restrictions.eq("DocHead", dochead)))
@@ -323,19 +323,19 @@ public abstract class GoodsDocumentSpecificationServiceBean<T extends com.mg.mer
 	}
 
 	/**
-	 * Расчет срока годности у позиции спецификации
-	 * @param entity	спецификация
-	 * @param docDate	дата документа
+	 * Р Р°СЃС‡РµС‚ СЃСЂРѕРєР° РіРѕРґРЅРѕСЃС‚Рё Сѓ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param entity	СЃРїРµС†РёС„РёРєР°С†РёСЏ
+	 * @param docDate	РґР°С‚Р° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	private void updateSpecBestBefore(T entity, Date docDate) {
-		// срок хранения
+		// СЃСЂРѕРє С…СЂР°РЅРµРЅРёСЏ
 		BigDecimal shelfLife = entity.getShelfLife();
-		// ед. изм. срока хранения
+		// РµРґ. РёР·Рј. СЃСЂРѕРєР° С…СЂР°РЅРµРЅРёСЏ
 		TimePeriodKind shelfLifeMeas = entity.getShelfLifeMeas();
 		if (MathUtils.compareToZeroOrNull(shelfLife) != 0 && shelfLifeMeas != null && shelfLifeMeas != TimePeriodKind.NONE) {
-			// тип расчета даты срока итечение срока годности
+			// С‚РёРї СЂР°СЃС‡РµС‚Р° РґР°С‚С‹ СЃСЂРѕРєР° РёС‚РµС‡РµРЅРёРµ СЃСЂРѕРєР° РіРѕРґРЅРѕСЃС‚Рё
 			CatalogExpDate calcKind = entity.getCatalog().getExpDateCalcKind();
-			// срок годности
+			// СЃСЂРѕРє РіРѕРґРЅРѕСЃС‚Рё
 			Date bestBefore = null;
 			if (calcKind == CatalogExpDate.EDCKPRODUCTION) {
 				bestBefore = calculateBestBefore(entity.getProductionDate(), shelfLife, shelfLifeMeas);
@@ -348,11 +348,11 @@ public abstract class GoodsDocumentSpecificationServiceBean<T extends com.mg.mer
 	}
 	
 	/**
-	 * Расчет даты срока истечения годности
+	 * Р Р°СЃС‡РµС‚ РґР°С‚С‹ СЃСЂРѕРєР° РёСЃС‚РµС‡РµРЅРёСЏ РіРѕРґРЅРѕСЃС‚Рё
 	 * 
-	 * @param date		дата относительно которой расчитывается дата срока истечения годности
-	 * @param shelfLife			срок хранения
-	 * @param shelfLifeMeas		ед. изм. срока хранения
+	 * @param date		РґР°С‚Р° РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РєРѕС‚РѕСЂРѕР№ СЂР°СЃС‡РёС‚С‹РІР°РµС‚СЃСЏ РґР°С‚Р° СЃСЂРѕРєР° РёСЃС‚РµС‡РµРЅРёСЏ РіРѕРґРЅРѕСЃС‚Рё
+	 * @param shelfLife			СЃСЂРѕРє С…СЂР°РЅРµРЅРёСЏ
+	 * @param shelfLifeMeas		РµРґ. РёР·Рј. СЃСЂРѕРєР° С…СЂР°РЅРµРЅРёСЏ
 	 * @return
 	 */
 	private Date calculateBestBefore(Date date, BigDecimal shelfLife, TimePeriodKind shelfLifeMeas) {

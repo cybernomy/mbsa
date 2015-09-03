@@ -21,7 +21,7 @@ import org.eclipse.jdt.core.IJavaProject;
 import org.eclipse.jdt.core.JavaCore;
 
 /**
- * Инициализатор библиотеки .MBAi
+ * РРЅРёС†РёР°Р»РёР·Р°С‚РѕСЂ Р±РёР±Р»РёРѕС‚РµРєРё .MBAi
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: ContainerInitializer.java,v 1.1 2006/11/22 13:03:19 poroxnenko
@@ -30,8 +30,8 @@ import org.eclipse.jdt.core.JavaCore;
 public class ContainerInitializer extends ClasspathContainerInitializer {
 
 	/**
-	 * Если библиотека подключена к проекту, то при старте платформы её
-	 * необходимо инициализировать.
+	 * Р•СЃР»Рё Р±РёР±Р»РёРѕС‚РµРєР° РїРѕРґРєР»СЋС‡РµРЅР° Рє РїСЂРѕРµРєС‚Сѓ, С‚Рѕ РїСЂРё СЃС‚Р°СЂС‚Рµ РїР»Р°С‚С„РѕСЂРјС‹ РµС‘
+	 * РЅРµРѕР±С…РѕРґРёРјРѕ РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ.
 	 */
 	@Override
 	public void initialize(IPath containerPath, IJavaProject project)

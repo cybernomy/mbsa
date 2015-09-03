@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Расчет суммы
+ * Р Р°СЃС‡РµС‚ СЃСѓРјРјС‹
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -27,13 +27,13 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Contract.CalcSumKind") //$NON-NLS-1$
 public enum CalcSumKind {
 	/**
-	 * Не расчитывается
+	 * РќРµ СЂР°СЃС‡РёС‚С‹РІР°РµС‚СЃСЏ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.contract.resources.dataitemlabels#CalcSumKind.Manual") //$NON-NLS-1$
 	MANUAL,
 
 	/**
-	 * Автоматически (по этапам/пунктам)
+	 * РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРё (РїРѕ СЌС‚Р°РїР°Рј/РїСѓРЅРєС‚Р°Рј)
 	 */
 	@EnumConstantText ("resource://com.mg.merp.contract.resources.dataitemlabels#CalcSumKind.PhasesAggregate") //$NON-NLS-1$
 	PHASESAGGREGATE

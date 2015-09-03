@@ -25,7 +25,7 @@ import com.mg.framework.api.security.SecurityAuditType;
 import com.mg.framework.service.SecuritySystemLocator;
 
 /**
- * Утилиты безопасности
+ * РЈС‚РёР»РёС‚С‹ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id$
@@ -33,20 +33,20 @@ import com.mg.framework.service.SecuritySystemLocator;
 public class SecurityUtils {
 
 	/**
-	 * проверка разрешения
+	 * РїСЂРѕРІРµСЂРєР° СЂР°Р·СЂРµС€РµРЅРёСЏ
 	 * 
-	 * @param perm	разрешение
-	 * @throws AccessControlException если нет прав
+	 * @param perm	СЂР°Р·СЂРµС€РµРЅРёРµ
+	 * @throws AccessControlException РµСЃР»Рё РЅРµС‚ РїСЂР°РІ
 	 */
 	public static void checkPermission(Permission perm) throws AccessControlException {
 		SecuritySystemLocator.locate().checkPermission(perm);
 	}
 
 	/**
-	 * проверка разрешения
+	 * РїСЂРѕРІРµСЂРєР° СЂР°Р·СЂРµС€РµРЅРёСЏ
 	 * 
-	 * @param perm	разрешение
-	 * @return	<code>false</code> если нет прав
+	 * @param perm	СЂР°Р·СЂРµС€РµРЅРёРµ
+	 * @return	<code>false</code> РµСЃР»Рё РЅРµС‚ РїСЂР°РІ
 	 */
 	public static boolean tryCheckPermission(final Permission perm) {
 		try {
@@ -58,53 +58,53 @@ public class SecurityUtils {
 	}
 	
 	/**
-	 * аутентификация пользователя
+	 * Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @param login	логин пользователя
-	 * @param password	пароль
-	 * @throws LoginException	если произошка ошибка аутентификации
+	 * @param login	Р»РѕРіРёРЅ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	 * @param password	РїР°СЂРѕР»СЊ
+	 * @throws LoginException	РµСЃР»Рё РїСЂРѕРёР·РѕС€РєР° РѕС€РёР±РєР° Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё
 	 */
 	public static void authenticate(String login, String password) throws LoginException {
 		SecuritySystemLocator.locate().authenticate(login, password);
 	}
 	
 	/**
-	 * отключение текущего пользователя
+	 * РѕС‚РєР»СЋС‡РµРЅРёРµ С‚РµРєСѓС‰РµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 */
 	public static void logout() {
 		SecuritySystemLocator.locate().logout();
 	}
 	
 	/**
-	 * добавить событие в аудит безопасности
+	 * РґРѕР±Р°РІРёС‚СЊ СЃРѕР±С‹С‚РёРµ РІ Р°СѓРґРёС‚ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
 	 * 
-	 * @param auditType	тип события
-	 * @param beanName	источник события
-	 * @param userName	имя пользователя
-	 * @param details	описание события
+	 * @param auditType	С‚РёРї СЃРѕР±С‹С‚РёСЏ
+	 * @param beanName	РёСЃС‚РѕС‡РЅРёРє СЃРѕР±С‹С‚РёСЏ
+	 * @param userName	РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	 * @param details	РѕРїРёСЃР°РЅРёРµ СЃРѕР±С‹С‚РёСЏ
 	 */
 	public static void addAuditEvent(SecurityAuditType auditType, String beanName, String userName, String details) {
 		SecuritySystemLocator.locate().addAuditEvent(auditType, beanName, userName, details);
 	}
 
 	/**
-	 * добавить событие в аудит безопасности
+	 * РґРѕР±Р°РІРёС‚СЊ СЃРѕР±С‹С‚РёРµ РІ Р°СѓРґРёС‚ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
 	 * 
-	 * @param auditType	тип события
-	 * @param beanName	источник события
-	 * @param details	описание события
+	 * @param auditType	С‚РёРї СЃРѕР±С‹С‚РёСЏ
+	 * @param beanName	РёСЃС‚РѕС‡РЅРёРє СЃРѕР±С‹С‚РёСЏ
+	 * @param details	РѕРїРёСЃР°РЅРёРµ СЃРѕР±С‹С‚РёСЏ
 	 */
 	public static void addAuditEvent(SecurityAuditType auditType, String beanName, String details) {
 		addAuditEvent(auditType, beanName, ServerUtils.getCurrentSession().getWorkingConnection().getUserProfile().getUserName(), details);
 	}
 
 	/**
-	 * создание параметров подключения
+	 * СЃРѕР·РґР°РЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
 	 * 
-	 * @param login	имя пользователя
-	 * @param password	пароль пользователя
-	 * @param tenant	мандант для подключения
-	 * @return	параметры подключения
+	 * @param login	РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	 * @param password	РїР°СЂРѕР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	 * @param tenant	РјР°РЅРґР°РЅС‚ РґР»СЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
+	 * @return	РїР°СЂР°РјРµС‚СЂС‹ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
 	 */
 	public static Map<String, Object> createAuthenticateParams(String login, String password, String tenant) {
 		Map<String, Object> loginParams = new HashMap<String, Object>();

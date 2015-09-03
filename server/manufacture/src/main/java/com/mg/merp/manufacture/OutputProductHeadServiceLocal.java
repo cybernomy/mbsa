@@ -18,7 +18,7 @@ package com.mg.merp.manufacture;
 import com.mg.merp.manufacture.model.OutputProductHead;
 
 /**
- * Бизнес-компонент "Акты выпуска готовой продукции"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РђРєС‚С‹ РІС‹РїСѓСЃРєР° РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё"
  * 
  * @author Oleg V. Safonov
  * @version $Id: OutputProductHeadServiceLocal.java,v 1.5 2007/08/06 12:46:24 safonov Exp $
@@ -28,17 +28,17 @@ public interface OutputProductHeadServiceLocal
 {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/manufacture/OutputProductHead";
 
 	/**
-	 * тип папки для актов выпуска готовой продукции
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ Р°РєС‚РѕРІ РІС‹РїСѓСЃРєР° РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё
 	 */
 	final static short FOLDER_PART = 12502;
 
 	/**
-	 * docsection для актов выпуска готовой продукции
+	 * docsection РґР»СЏ Р°РєС‚РѕРІ РІС‹РїСѓСЃРєР° РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё
 	 */
 	final static short DOCSECTION = 12001;
 }

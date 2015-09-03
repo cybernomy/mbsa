@@ -17,7 +17,7 @@ package com.mg.merp.retail.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Спецификация документов на отпуск"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚РѕРІ РЅР° РѕС‚РїСѓСЃРє"
  * 
  * @author Artem V. Sharapov
  * @version $Id: RtlInvoiceSpec.java,v 1.5 2007/10/30 14:43:19 sharapov Exp $

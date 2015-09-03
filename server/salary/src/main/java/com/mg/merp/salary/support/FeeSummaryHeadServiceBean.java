@@ -28,7 +28,7 @@ import com.mg.merp.salary.FeeSummarySpecServiceLocal;
 import com.mg.merp.salary.model.FeeSummaryHead;
 
 /**
- * Реализация бизнес-компонента "Своды н/у по аналитике" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРІРѕРґС‹ РЅ/Сѓ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

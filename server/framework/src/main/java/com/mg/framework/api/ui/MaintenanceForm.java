@@ -20,8 +20,8 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.framework.api.orm.PersistentObject;
 
 /**
- * Стандартная форма поддержки для бизнес-компонента. Выполняются стандартные интерактивные операции
- * над объектом-сущностью бизнес-компонента создать, изменить, просмотреть.
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ С„РѕСЂРјР° РїРѕРґРґРµСЂР¶РєРё РґР»СЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°. Р’С‹РїРѕР»РЅСЏСЋС‚СЃСЏ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рµ РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹Рµ РѕРїРµСЂР°С†РёРё
+ * РЅР°Рґ РѕР±СЉРµРєС‚РѕРј-СЃСѓС‰РЅРѕСЃС‚СЊСЋ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° СЃРѕР·РґР°С‚СЊ, РёР·РјРµРЅРёС‚СЊ, РїСЂРѕСЃРјРѕС‚СЂРµС‚СЊ.
  * 
  * @author Oleg V. Safonov
  * @version $Id: MaintenanceForm.java,v 1.2 2008/03/07 12:53:39 safonov Exp $
@@ -29,39 +29,39 @@ import com.mg.framework.api.orm.PersistentObject;
 public interface MaintenanceForm extends Form {
 
 	/**
-	 * режим обновления сущности в форме поддержки
+	 * СЂРµР¶РёРј РѕР±РЅРѕРІР»РµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё РІ С„РѕСЂРјРµ РїРѕРґРґРµСЂР¶РєРё
 	 */
 	enum RefreshMode {
 		/**
-		 * обновлять после создания в хранилище
+		 * РѕР±РЅРѕРІР»СЏС‚СЊ РїРѕСЃР»Рµ СЃРѕР·РґР°РЅРёСЏ РІ С…СЂР°РЅРёР»РёС‰Рµ
 		 */
 		AFTER_CREATE,
 		/**
-		 * обновлять после изменения в хранилище
+		 * РѕР±РЅРѕРІР»СЏС‚СЊ РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ РІ С…СЂР°РЅРёР»РёС‰Рµ
 		 */
 		AFTER_STORE
 	}
 
 	/**
-	 * добавить слушателя на событие формы поддержки
+	 * РґРѕР±Р°РІРёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЏ РЅР° СЃРѕР±С‹С‚РёРµ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	void addMaintenanceFormActionListener(final MaintenanceFormActionListener listener);
 	
 	/**
-	 * удалить слушателя на событие формы поддержки
+	 * СѓРґР°Р»РёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЏ РЅР° СЃРѕР±С‹С‚РёРµ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	void removeMaintenanceFormActionListener(final MaintenanceFormActionListener listener);
 
 	/**
-	 * запуск формы поддержки
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё
 	 * 
-	 * @param service	бизнес-компонент
-	 * @param entity	объект-сущность
-	 * @param action	действие
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param entity	РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ
+	 * @param action	РґРµР№СЃС‚РІРёРµ
 	 */
 	void execute(final DataBusinessObjectService<PersistentObject, Serializable> service,
 			final PersistentObject entity, final MaintenanceAction action);

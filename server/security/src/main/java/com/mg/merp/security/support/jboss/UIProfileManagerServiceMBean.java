@@ -19,7 +19,7 @@ import org.jboss.system.ServiceMBean;
 import com.mg.framework.api.ui.UIProfileManager;
 
 /**
- * MBean менеджера профиля пользовательского интерфейса
+ * MBean РјРµРЅРµРґР¶РµСЂР° РїСЂРѕС„РёР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: UIProfileManagerServiceMBean.java,v 1.1 2007/03/13 13:47:30 safonov Exp $

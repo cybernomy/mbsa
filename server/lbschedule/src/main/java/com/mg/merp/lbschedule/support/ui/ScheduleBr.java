@@ -41,7 +41,7 @@ import com.mg.merp.lbschedule.model.Schedule;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Контроллер браузера "Графиков исполнения обязательств"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "Р“СЂР°С„РёРєРѕРІ РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -170,8 +170,8 @@ public class ScheduleBr extends DefaultHierarchyBrowseForm {
 	}
 	
 	/**
-	 * Обработчик пункта КМ "Просмотреть документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	public void onActionViewDocument(WidgetEvent event) {

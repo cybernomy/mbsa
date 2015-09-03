@@ -38,7 +38,7 @@ import com.mg.merp.discount.model.Coefficient;
 import com.mg.merp.discount.model.ExtraDiscount;
 
 /**
- * Контроллер формы поддержки дисконтных карт
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РґРёСЃРєРѕРЅС‚РЅС‹С… РєР°СЂС‚
  * 
  * @author leonova
  * @version $Id: DiscCardMt.java,v 1.6 2007/10/30 14:19:30 sharapov Exp $

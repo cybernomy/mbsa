@@ -28,7 +28,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.finance.FeatAnalyticsServiceLocal;
 
 /**
- * Контроллер формы поддержки для бизнес - компонента "Признак финю операции"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РґР»СЏ Р±РёР·РЅРµСЃ - РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРёР·РЅР°Рє С„РёРЅСЋ РѕРїРµСЂР°С†РёРё"
  * 
  * @author leonova
  * @version $Id: FinFeatureMt.java,v 1.6 2007/11/21 11:37:43 alikaev Exp $

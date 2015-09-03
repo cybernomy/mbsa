@@ -18,8 +18,8 @@ import com.mg.framework.api.ui.ControllableWidget;
 import com.mg.framework.api.ui.Widget;
 
 /**
- * Пользовательский элемент "Shuttle", предназначен для перемещения значений
- * между двумя списками
+ * РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ СЌР»РµРјРµРЅС‚ "Shuttle", РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅ РґР»СЏ РїРµСЂРµРјРµС‰РµРЅРёСЏ Р·РЅР°С‡РµРЅРёР№
+ * РјРµР¶РґСѓ РґРІСѓРјСЏ СЃРїРёСЃРєР°РјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: Shuttle.java,v 1.1 2006/08/31 08:35:21 safonov Exp $
@@ -27,12 +27,12 @@ import com.mg.framework.api.ui.Widget;
 public interface Shuttle extends Widget, ControllableWidget {
 
 	/**
-	 * атрибут заголовка списка источника
+	 * Р°С‚СЂРёР±СѓС‚ Р·Р°РіРѕР»РѕРІРєР° СЃРїРёСЃРєР° РёСЃС‚РѕС‡РЅРёРєР°
 	 */
 	static final String LEADING_HEADER = "leadingHeader";
 	
 	/**
-	 * атрибут заголовка списка источника
+	 * Р°С‚СЂРёР±СѓС‚ Р·Р°РіРѕР»РѕРІРєР° СЃРїРёСЃРєР° РёСЃС‚РѕС‡РЅРёРєР°
 	 */
 	static final String TRAILING_HEADER = "trailingHeader";
 

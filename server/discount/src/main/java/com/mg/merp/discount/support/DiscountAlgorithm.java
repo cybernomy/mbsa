@@ -18,12 +18,12 @@ import com.mg.framework.api.ApplicationException;
 import com.mg.merp.baiengine.generic.AbstractBusinessAddin;
 
 /**
- * Базовый класс BAi расчета скидок/наценок. Класс алгоритма должен
- * реализовывать следующий метод <code>protected Double doPerform() throws Exception</code>
- * который возвращает вещественное число - абсолютное значение скидки/наценки.
- * Это значение будет прибавлено к цене спецификации для получения итоговой цены.
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ BAi СЂР°СЃС‡РµС‚Р° СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє. РљР»Р°СЃСЃ Р°Р»РіРѕСЂРёС‚РјР° РґРѕР»Р¶РµРЅ
+ * СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёР№ РјРµС‚РѕРґ <code>protected Double doPerform() throws Exception</code>
+ * РєРѕС‚РѕСЂС‹Р№ РІРѕР·РІСЂР°С‰Р°РµС‚ РІРµС‰РµСЃС‚РІРµРЅРЅРѕРµ С‡РёСЃР»Рѕ - Р°Р±СЃРѕР»СЋС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё.
+ * Р­С‚Рѕ Р·РЅР°С‡РµРЅРёРµ Р±СѓРґРµС‚ РїСЂРёР±Р°РІР»РµРЅРѕ Рє С†РµРЅРµ СЃРїРµС†РёС„РёРєР°С†РёРё РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ РёС‚РѕРіРѕРІРѕР№ С†РµРЅС‹.
  * 
- * <p>Например, чтобы дать 20% скидку на цену, нужно создать следующий алгоритм:
+ * <p>РќР°РїСЂРёРјРµСЂ, С‡С‚РѕР±С‹ РґР°С‚СЊ 20% СЃРєРёРґРєСѓ РЅР° С†РµРЅСѓ, РЅСѓР¶РЅРѕ СЃРѕР·РґР°С‚СЊ СЃР»РµРґСѓСЋС‰РёР№ Р°Р»РіРѕСЂРёС‚Рј:
  * <pre>
  * protected Double doPerform() throws Exception {
  *     complete(getSpecificationParam("Price") * (-0.2));
@@ -32,15 +32,15 @@ import com.mg.merp.baiengine.generic.AbstractBusinessAddin;
  * 
  * @author Oleg V. Safonov
  * @version $Id: DiscountAlgorithm.java,v 1.4 2007/09/07 12:02:18 safonov Exp $
- * @deprecated используйте {@link DiscountBusinessAddin}
+ * @deprecated РёСЃРїРѕР»СЊР·СѓР№С‚Рµ {@link DiscountBusinessAddin}
  */
 @Deprecated
 public abstract class DiscountAlgorithm extends AbstractBusinessAddin<Double> {
 
 	/**
-	 * Возвращает значение, заданное пользователем в поле "Скидка/наценка на документ"
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ, Р·Р°РґР°РЅРЅРѕРµ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј РІ РїРѕР»Рµ "РЎРєРёРґРєР°/РЅР°С†РµРЅРєР° РЅР° РґРѕРєСѓРјРµРЅС‚"
 	 * 
-	 * @return	значение скидки/наценки
+	 * @return	Р·РЅР°С‡РµРЅРёРµ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
 	 * @throws ApplicationException
 	 */
 	final public double getDiscountOnDoc() throws ApplicationException {

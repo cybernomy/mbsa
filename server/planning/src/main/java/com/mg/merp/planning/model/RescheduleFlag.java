@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Способ перепланирования
+ * РЎРїРѕСЃРѕР± РїРµСЂРµРїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
  * 
  * @author leonova
  * @version $Id: RescheduleFlag.java,v 1.1 2007/07/30 10:37:30 safonov Exp $
@@ -26,31 +26,31 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Planning.RescheduleFlag")
 public enum RescheduleFlag {
 	/**
-	 * Предложено расчетом ППМ
+	 * РџСЂРµРґР»РѕР¶РµРЅРѕ СЂР°СЃС‡РµС‚РѕРј РџРџРњ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPRescheduleSuggested")
 	SUGGESTED,
 	
 	/**
-	 * Перепланировано
+	 * РџРµСЂРµРїР»Р°РЅРёСЂРѕРІР°РЅРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPReschedule")
 	RESCHEDULE,
 	
 	/**
-	 * Предупреждение. Запланированный приход не нужен
+	 * РџСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ. Р—Р°РїР»Р°РЅРёСЂРѕРІР°РЅРЅС‹Р№ РїСЂРёС…РѕРґ РЅРµ РЅСѓР¶РµРЅ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPRescheduleWarning")	
 	WARNING,
 	
 	/**
-	 * Отменено
+	 * РћС‚РјРµРЅРµРЅРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPRescheduleCancel")	
 	CANCEL,
 	
 	/**
-	 * Просрочено
+	 * РџСЂРѕСЃСЂРѕС‡РµРЅРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPRescheduleUnusedExpired")	
 	UNUSED_EXPIRED

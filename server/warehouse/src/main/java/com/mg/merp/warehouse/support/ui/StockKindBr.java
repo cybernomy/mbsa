@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.warehouse.model.StockKind;
 
 /**
- * Браузер видов запасов
+ * Р‘СЂР°СѓР·РµСЂ РІРёРґРѕРІ Р·Р°РїР°СЃРѕРІ
  * 
  * @author leonova
  * @version $Id: StockKindBr.java,v 1.1 2006/09/14 12:47:30 leonova Exp $ 

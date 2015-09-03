@@ -18,29 +18,29 @@ import com.mg.merp.baiengine.model.CustomUserAction;
 import com.mg.merp.baiengine.model.CustomUserActionPermiss;
 
 /**
- * Бизнес-компонент "Настраиваемые действия"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РќР°СЃС‚СЂР°РёРІР°РµРјС‹Рµ РґРµР№СЃС‚РІРёСЏ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomUserActionServiceLocal.java,v 1.1 2007/11/15 09:04:38 safonov Exp $
  */
 public interface CustomUserActionServiceLocal extends com.mg.framework.api.DataBusinessObjectService<CustomUserAction, Integer> {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/baiengine/CustomUserAction";
 	
 	/**
-	 * установить права на действие
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂР°РІР° РЅР° РґРµР№СЃС‚РІРёРµ
 	 * 
-	 * @param actionId	идентификатор действия
-	 * @param roleId	идентификатор роли
+	 * @param actionId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРµР№СЃС‚РІРёСЏ
+	 * @param roleId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂРѕР»Рё
 	 */
 	void grantPermission(int actionId, int roleId);
 
 	/**
-	 * удалить права действие
+	 * СѓРґР°Р»РёС‚СЊ РїСЂР°РІР° РґРµР№СЃС‚РІРёРµ
 	 * 
-	 * @param perms	права 
+	 * @param perms	РїСЂР°РІР° 
 	 */
 	void revokePermission(CustomUserActionPermiss[] perms);
 

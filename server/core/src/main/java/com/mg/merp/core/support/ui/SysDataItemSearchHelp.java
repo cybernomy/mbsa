@@ -18,7 +18,7 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 import com.mg.merp.core.SysDataItemServiceLocal;
 
 /**
- * Механизм поиска элементов данных
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° СЌР»РµРјРµРЅС‚РѕРІ РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: SysDataItemSearchHelp.java,v 1.1 2008/03/03 13:05:04 safonov Exp $

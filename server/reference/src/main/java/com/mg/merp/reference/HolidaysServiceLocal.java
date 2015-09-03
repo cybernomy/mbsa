@@ -20,7 +20,7 @@ import java.util.Date;
 import com.mg.merp.reference.model.Holidays;
 
 /**
- * Бизнес-компонент "Праздничные дни"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂР°Р·РґРЅРёС‡РЅС‹Рµ РґРЅРё"
  * 
  * @author leonova
  * @version $Id: HolidaysServiceLocal.java,v 1.2 2007/07/30 06:27:42 safonov Exp $
@@ -30,20 +30,20 @@ public interface HolidaysServiceLocal
 {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/reference/Holidays";
 	
 	/**
-	 * является ли дата праздничным днем
+	 * СЏРІР»СЏРµС‚СЃСЏ Р»Рё РґР°С‚Р° РїСЂР°Р·РґРЅРёС‡РЅС‹Рј РґРЅРµРј
 	 * 
-	 * @param date	дата
-	 * @return	<code>true</code> если дата праздничный день
+	 * @param date	РґР°С‚Р°
+	 * @return	<code>true</code> РµСЃР»Рё РґР°С‚Р° РїСЂР°Р·РґРЅРёС‡РЅС‹Р№ РґРµРЅСЊ
 	 */
 	boolean isDayHoliday(Date date);
 	
 	/**
-	 * копирование праздничных дней на следующий год
+	 * РєРѕРїРёСЂРѕРІР°РЅРёРµ РїСЂР°Р·РґРЅРёС‡РЅС‹С… РґРЅРµР№ РЅР° СЃР»РµРґСѓСЋС‰РёР№ РіРѕРґ
 	 * 
 	 * @param keys
 	 */

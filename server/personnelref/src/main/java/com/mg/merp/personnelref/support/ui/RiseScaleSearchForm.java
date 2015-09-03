@@ -29,7 +29,7 @@ import com.mg.merp.personnelref.model.Rise;
 import com.mg.merp.personnelref.model.RiseScale;
 
 /**
- * Контроллер формы поиска сущностей "Шкала надбавки"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РЁРєР°Р»Р° РЅР°РґР±Р°РІРєРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: RiseScaleSearchForm.java,v 1.1 2007/07/09 08:07:47 sharapov Exp $

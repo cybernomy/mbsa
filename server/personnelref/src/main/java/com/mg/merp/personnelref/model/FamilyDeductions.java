@@ -17,7 +17,7 @@ package com.mg.merp.personnelref.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Вычеты на членов семьи" 
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’С‹С‡РµС‚С‹ РЅР° С‡Р»РµРЅРѕРІ СЃРµРјСЊРё" 
  * 
  * @author hbm2java
  * @author Artem V. Sharapov
@@ -43,8 +43,8 @@ java.io.Serializable {
 	private java.math.BigDecimal Ratio;
 	
 	/**
-	 * person - объект-сущность "Сотрудник"
-	 * Служит для реализации механизма поиска членов семьи сотрудника
+	 * person - РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ "РЎРѕС‚СЂСѓРґРЅРёРє"
+	 * РЎР»СѓР¶РёС‚ РґР»СЏ СЂРµР°Р»РёР·Р°С†РёРё РјРµС…Р°РЅРёР·РјР° РїРѕРёСЃРєР° С‡Р»РµРЅРѕРІ СЃРµРјСЊРё СЃРѕС‚СЂСѓРґРЅРёРєР°
 	 */
 	private com.mg.merp.reference.model.NaturalPerson person;
 

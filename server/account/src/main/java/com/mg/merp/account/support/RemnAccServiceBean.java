@@ -33,7 +33,7 @@ import com.mg.merp.account.model.Period;
 import com.mg.merp.account.model.RemnAcc;
 
 /**
- * Реализация бизнес-компонента "Остатки и обороты по счетам бух. учета"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ СЃС‡РµС‚Р°Рј Р±СѓС…. СѓС‡РµС‚Р°"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

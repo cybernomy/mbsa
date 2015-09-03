@@ -22,7 +22,7 @@ import com.mg.merp.account.model.CashDocumentModel;
 import com.mg.merp.document.generic.ui.DocModelMaintenanceEJBQLTableModel;
 
 /**
- * Вспомогательный класс для отображения формы списка образцов кассовых документов
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ РєР°СЃСЃРѕРІС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: CashDocumentModelMaintenanceEJBQLTableModel.java,v 1.1 2006/09/12 11:29:11 leonova Exp $ 

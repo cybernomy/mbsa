@@ -24,9 +24,9 @@ import com.mg.framework.service.ApplicationDictionaryLocator;
 import com.mg.framework.utils.SecurityUtils;
 
 /**
- * Обработчик команды меню для показа формы списка бизнес-компонента, обрабатывает два параметра:
- * <code>ServiceName</code> - наименование бизнес-компонента, <code>FormName</code> - наименование
- * формы списка
+ * РћР±СЂР°Р±РѕС‚С‡РёРє РєРѕРјР°РЅРґС‹ РјРµРЅСЋ РґР»СЏ РїРѕРєР°Р·Р° С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°, РѕР±СЂР°Р±Р°С‚С‹РІР°РµС‚ РґРІР° РїР°СЂР°РјРµС‚СЂР°:
+ * <code>ServiceName</code> - РЅР°РёРјРµРЅРѕРІР°РЅРёРµ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°, <code>FormName</code> - РЅР°РёРјРµРЅРѕРІР°РЅРёРµ
+ * С„РѕСЂРјС‹ СЃРїРёСЃРєР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: ShowComponentBrowse.java,v 1.5 2006/08/31 08:59:49 safonov Exp $

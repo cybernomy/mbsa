@@ -24,7 +24,7 @@ import com.mg.merp.crm.ActivitySphereServiceLocal;
 import com.mg.merp.crm.model.ActivitySphere;
 
 /**
- * Бизнес-компонент "Сферы деятельности" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎС„РµСЂС‹ РґРµСЏС‚РµР»СЊРЅРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @version $Id: ActivitySphereServiceBean.java,v 1.5 2006/10/12 05:41:44 leonova Exp $

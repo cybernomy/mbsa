@@ -22,7 +22,7 @@ import com.mg.merp.table.TableConfigServiceLocal;
 import com.mg.merp.table.model.TableConfig;
 
 /**
- * Реализация бизнес-компонента "Конфигурация модуля <Табельный учет>"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РўР°Р±РµР»СЊРЅС‹Р№ СѓС‡РµС‚>"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

@@ -17,7 +17,7 @@ package com.mg.framework.api.validator;
 import com.mg.framework.api.ApplicationException;
 
 /**
- * ИС контроля данных, возбуждается в случае нарушения контроля данных
+ * РРЎ РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…, РІРѕР·Р±СѓР¶РґР°РµС‚СЃСЏ РІ СЃР»СѓС‡Р°Рµ РЅР°СЂСѓС€РµРЅРёСЏ РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: ValidationException.java,v 1.1 2006/08/14 14:07:42 safonov Exp $

@@ -16,7 +16,7 @@ import com.mg.merp.core.model.SysClass;
 import com.mg.merp.reference.SysClassServiceLocal;
 
 /**
- * Бизнес-компонент "Бизнес-компоненты" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚С‹" 
  * 
  * @author leonova
  * @version $Id: SysClassServiceBean.java,v 1.3 2006/09/13 07:00:35 leonova Exp $

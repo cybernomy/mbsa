@@ -25,7 +25,7 @@ import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.support.ui.FolderTreeNode;
 
 /**
- * Утилиты платформы Jet
+ * РЈС‚РёР»РёС‚С‹ РїР»Р°С‚С„РѕСЂРјС‹ Jet
  * 
  * @author Oleg V. Safonov
  * @version $Id: CoreUtils.java,v 1.2 2007/11/08 16:44:12 safonov Exp $
@@ -33,11 +33,11 @@ import com.mg.merp.core.support.ui.FolderTreeNode;
 public class CoreUtils {
 	
 	/**
-	 * загрузка иерархической структуры папок, используется для установки модели дерева
-	 * в иерархических браузерах
+	 * Р·Р°РіСЂСѓР·РєР° РёРµСЂР°СЂС…РёС‡РµСЃРєРѕР№ СЃС‚СЂСѓРєС‚СѓСЂС‹ РїР°РїРѕРє, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё РјРѕРґРµР»Рё РґРµСЂРµРІР°
+	 * РІ РёРµСЂР°СЂС…РёС‡РµСЃРєРёС… Р±СЂР°СѓР·РµСЂР°С…
 	 * 
-	 * @param folderType	тип папки
-	 * @return	иерархическая структура
+	 * @param folderType	С‚РёРї РїР°РїРєРё
+	 * @return	РёРµСЂР°СЂС…РёС‡РµСЃРєР°СЏ СЃС‚СЂСѓРєС‚СѓСЂР°
 	 */
 	public static TreeNode loadFolderHierarchy(short folderType) {
 		List<Folder> list = OrmTemplate.getInstance().findByCriteria(DatabaseUtils.generateFlatBrowseCriteria(OrmTemplate.createCriteria(Folder.class, "f"), "f.Id", 0)

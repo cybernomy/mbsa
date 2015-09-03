@@ -15,7 +15,7 @@
 package com.mg.merp.account.support.ui;
 
 /**
- * Базовый класс для SearchHelp аналитических счетов по дебету
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РґР»СЏ SearchHelp Р°РЅР°Р»РёС‚РёС‡РµСЃРєРёС… СЃС‡РµС‚РѕРІ РїРѕ РґРµР±РµС‚Сѓ
  * 
  * @author leonova
  * @version $Id: AnlPlanAccDbSearchHelp.java,v 1.1 2006/10/04 06:19:16 leonova Exp $

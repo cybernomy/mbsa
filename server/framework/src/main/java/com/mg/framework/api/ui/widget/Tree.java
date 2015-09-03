@@ -19,7 +19,7 @@ import com.mg.framework.api.ui.Widget;
 import com.mg.framework.support.ui.widget.tree.TreeNode;
 
 /**
- * Элемент пользовательского интерфейса "Дерево"
+ * Р­Р»РµРјРµРЅС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР° "Р”РµСЂРµРІРѕ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: Tree.java,v 1.4 2009/02/09 13:17:47 safonov Exp $
@@ -27,23 +27,23 @@ import com.mg.framework.support.ui.widget.tree.TreeNode;
 public interface Tree extends Widget, ControllableWidget {
 
 	/**
-	 * выделяет узел на указанном ряду
+	 * РІС‹РґРµР»СЏРµС‚ СѓР·РµР» РЅР° СѓРєР°Р·Р°РЅРЅРѕРј СЂСЏРґСѓ
 	 * 
-	 * @param row	ряд, нумерация начинается с <code>0</code>
+	 * @param row	СЂСЏРґ, РЅСѓРјРµСЂР°С†РёСЏ РЅР°С‡РёРЅР°РµС‚СЃСЏ СЃ <code>0</code>
 	 */
 	void setSelectionRow(int row);
 
 	/**
-	 * получить список выделенных рядов
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РІС‹РґРµР»РµРЅРЅС‹С… СЂСЏРґРѕРІ
 	 * 
-	 * @return	список выделенных рядов
+	 * @return	СЃРїРёСЃРѕРє РІС‹РґРµР»РµРЅРЅС‹С… СЂСЏРґРѕРІ
 	 */
 	int[] getSelectionRows();
 
 	/**
-	 * выделить узел по указанному маршруту
+	 * РІС‹РґРµР»РёС‚СЊ СѓР·РµР» РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РјР°СЂС€СЂСѓС‚Сѓ
 	 * 
-	 * @param nodes	маршрут узлов начиная с корневого
+	 * @param nodes	РјР°СЂС€СЂСѓС‚ СѓР·Р»РѕРІ РЅР°С‡РёРЅР°СЏ СЃ РєРѕСЂРЅРµРІРѕРіРѕ
 	 */
 	void setSelectionPath(TreeNode nodes[]);
 

@@ -23,7 +23,7 @@ import com.mg.framework.generic.ui.DefaultMaintenanceForm;
 import com.mg.merp.baiengine.model.ConstantValue;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Значение константы"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р—РЅР°С‡РµРЅРёРµ РєРѕРЅСЃС‚Р°РЅС‚С‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ConstantValueMt.java,v 1.2 2007/11/15 09:20:46 safonov Exp $
@@ -39,7 +39,7 @@ public class ConstantValueMt extends DefaultMaintenanceForm{
 	protected FieldMetadata doGetFieldMetadata(String name) {
 		FieldMetadata fieldMetadata = super.doGetFieldMetadata(name);
 		int numberOfDecimalPlaces = 0;
-		//переопределяем метаданные в зависимости от типа константы для user friendly отображения значения константы
+		//РїРµСЂРµРѕРїСЂРµРґРµР»СЏРµРј РјРµС‚Р°РґР°РЅРЅС‹Рµ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ С‚РёРїР° РєРѕРЅСЃС‚Р°РЅС‚С‹ РґР»СЏ user friendly РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ РєРѕРЅСЃС‚Р°РЅС‚С‹
 		if (VAL_ATRIBUTE_NAME.equals(name)) { //$NON-NLS-1$
 			BuiltInType builtInType;
 			Class<?> clazz;
@@ -67,7 +67,7 @@ public class ConstantValueMt extends DefaultMaintenanceForm{
 			}
 			fieldMetadata.setBuiltInType(builtInType);
 			fieldMetadata.setJavaType(clazz);
-			//Устанавливаем количество знаков после запятой для типа константы FLOAT
+			//РЈСЃС‚Р°РЅР°РІР»РёРІР°РµРј РєРѕР»РёС‡РµСЃС‚РІРѕ Р·РЅР°РєРѕРІ РїРѕСЃР»Рµ Р·Р°РїСЏС‚РѕР№ РґР»СЏ С‚РёРїР° РєРѕРЅСЃС‚Р°РЅС‚С‹ FLOAT
 			if (numberOfDecimalPlaces != 0)
 				fieldMetadata.setNumberOfDecimalPlaces(numberOfDecimalPlaces);
 		}

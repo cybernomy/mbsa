@@ -17,7 +17,7 @@ package com.mg.framework.api;
 import com.mg.framework.api.orm.PersistentObject;
 
 /**
- * Менеджер перехватчиков действий над объектами сущностями
+ * РњРµРЅРµРґР¶РµСЂ РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РґРµР№СЃС‚РІРёР№ РЅР°Рґ РѕР±СЉРµРєС‚Р°РјРё СЃСѓС‰РЅРѕСЃС‚СЏРјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityInterceptorManager.java,v 1.4 2007/12/17 09:10:30 safonov Exp $
@@ -25,229 +25,229 @@ import com.mg.framework.api.orm.PersistentObject;
 public interface EntityInterceptorManager {
 	
 	/**
-	 * регистрация перехватчика в менеджере
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° РІ РјРµРЅРµРґР¶РµСЂРµ
 	 * 
-	 * @param interceptor	перехватчик
+	 * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
 	 */
     void registerInterceptor(EntityInterceptor interceptor);
     
     /**
-     * удаление перехватчика из менеджера
+     * СѓРґР°Р»РµРЅРёРµ РїРµСЂРµС…РІР°С‚С‡РёРєР° РёР· РјРµРЅРµРґР¶РµСЂР°
      * 
-     * @param interceptor	перехватчик
+     * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
      */
     void unregisterInterceptor(EntityInterceptor interceptor);
 
 	/**
-	 * регистрация перехватчика "перед добавлением" в менеджере
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРµСЂРµРґ РґРѕР±Р°РІР»РµРЅРёРµРј" РІ РјРµРЅРµРґР¶РµСЂРµ
 	 * 
-	 * @param interceptor	перехватчик
+	 * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
 	 */
     void registerPrePersistInterceptor(EntityInterceptor interceptor);
     
     /**
-     * удаление перехватчика "перед добавлением" из менеджера
+     * СѓРґР°Р»РµРЅРёРµ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРµСЂРµРґ РґРѕР±Р°РІР»РµРЅРёРµРј" РёР· РјРµРЅРµРґР¶РµСЂР°
      * 
-     * @param interceptor	перехватчик
+     * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
      */
     void unregisterPrePersistInterceptor(EntityInterceptor interceptor);
 
 	/**
-	 * регистрация перехватчика "после добавления" в менеджере
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРѕСЃР»Рµ РґРѕР±Р°РІР»РµРЅРёСЏ" РІ РјРµРЅРµРґР¶РµСЂРµ
 	 * 
-	 * @param interceptor	перехватчик
+	 * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
 	 */
     void registerPostPersistInterceptor(EntityInterceptor interceptor);
     
     /**
-     * удаление перехватчика "после добавления" из менеджера
+     * СѓРґР°Р»РµРЅРёРµ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРѕСЃР»Рµ РґРѕР±Р°РІР»РµРЅРёСЏ" РёР· РјРµРЅРµРґР¶РµСЂР°
      * 
-     * @param interceptor	перехватчик
+     * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
      */
     void unregisterPostPersistInterceptor(EntityInterceptor interceptor);
 
 	/**
-	 * регистрация перехватчика "после добавления и фиксации транзакции" в менеджере
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРѕСЃР»Рµ РґРѕР±Р°РІР»РµРЅРёСЏ Рё С„РёРєСЃР°С†РёРё С‚СЂР°РЅР·Р°РєС†РёРё" РІ РјРµРЅРµРґР¶РµСЂРµ
 	 * 
-	 * @param interceptor	перехватчик
+	 * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
 	 */
     void registerPostCommitPersistInterceptor(EntityInterceptor interceptor);
     
     /**
-     * удаление перехватчика "после добавления и фиксации транзакции" из менеджера
+     * СѓРґР°Р»РµРЅРёРµ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРѕСЃР»Рµ РґРѕР±Р°РІР»РµРЅРёСЏ Рё С„РёРєСЃР°С†РёРё С‚СЂР°РЅР·Р°РєС†РёРё" РёР· РјРµРЅРµРґР¶РµСЂР°
      * 
-     * @param interceptor	перехватчик
+     * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
      */
     void unregisterPostCommitPersistInterceptor(EntityInterceptor interceptor);
 
 	/**
-	 * регистрация перехватчика "перед изменением" в менеджере
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРµСЂРµРґ РёР·РјРµРЅРµРЅРёРµРј" РІ РјРµРЅРµРґР¶РµСЂРµ
 	 * 
-	 * @param interceptor	перехватчик
+	 * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
 	 */
     void registerPreUpdateInterceptor(EntityInterceptor interceptor);
     
     /**
-     * удаление перехватчика "перед изменением" из менеджера
+     * СѓРґР°Р»РµРЅРёРµ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРµСЂРµРґ РёР·РјРµРЅРµРЅРёРµРј" РёР· РјРµРЅРµРґР¶РµСЂР°
      * 
-     * @param interceptor	перехватчик
+     * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
      */
     void unregisterPreUpdateInterceptor(EntityInterceptor interceptor);
 
 	/**
-	 * регистрация перехватчика "после изменения" в менеджере
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ" РІ РјРµРЅРµРґР¶РµСЂРµ
 	 * 
-	 * @param interceptor	перехватчик
+	 * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
 	 */
     void registerPostUpdateInterceptor(EntityInterceptor interceptor);
     
     /**
-     * удаление перехватчика "после изменения" из менеджера
+     * СѓРґР°Р»РµРЅРёРµ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ" РёР· РјРµРЅРµРґР¶РµСЂР°
      * 
-     * @param interceptor	перехватчик
+     * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
      */
     void unregisterPostUpdateInterceptor(EntityInterceptor interceptor);
 
 	/**
-	 * регистрация перехватчика "после изменения и фиксации транзакции" в менеджере
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ Рё С„РёРєСЃР°С†РёРё С‚СЂР°РЅР·Р°РєС†РёРё" РІ РјРµРЅРµРґР¶РµСЂРµ
 	 * 
-	 * @param interceptor	перехватчик
+	 * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
 	 */
     void registerPostCommitUpdateInterceptor(EntityInterceptor interceptor);
     
     /**
-     * удаление перехватчика "после изменения и фиксации транзакции" из менеджера
+     * СѓРґР°Р»РµРЅРёРµ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ Рё С„РёРєСЃР°С†РёРё С‚СЂР°РЅР·Р°РєС†РёРё" РёР· РјРµРЅРµРґР¶РµСЂР°
      * 
-     * @param interceptor	перехватчик
+     * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
      */
     void unregisterPostCommitUpdateInterceptor(EntityInterceptor interceptor);
 
 	/**
-	 * регистрация перехватчика "перед удалением" в менеджере
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРµСЂРµРґ СѓРґР°Р»РµРЅРёРµРј" РІ РјРµРЅРµРґР¶РµСЂРµ
 	 * 
-	 * @param interceptor	перехватчик
+	 * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
 	 */
     void registerPreRemoveInterceptor(EntityInterceptor interceptor);
     
     /**
-     * удаление перехватчика "перед удалением" из менеджера
+     * СѓРґР°Р»РµРЅРёРµ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРµСЂРµРґ СѓРґР°Р»РµРЅРёРµРј" РёР· РјРµРЅРµРґР¶РµСЂР°
      * 
-     * @param interceptor	перехватчик
+     * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
      */
     void unregisterPreRemoveInterceptor(EntityInterceptor interceptor);
 
 	/**
-	 * регистрация перехватчика "после удаления" в менеджере
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРѕСЃР»Рµ СѓРґР°Р»РµРЅРёСЏ" РІ РјРµРЅРµРґР¶РµСЂРµ
 	 * 
-	 * @param interceptor	перехватчик
+	 * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
 	 */
     void registerPostRemoveInterceptor(EntityInterceptor interceptor);
     
     /**
-     * удаление перехватчика "после удаления" из менеджера
+     * СѓРґР°Р»РµРЅРёРµ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРѕСЃР»Рµ СѓРґР°Р»РµРЅРёСЏ" РёР· РјРµРЅРµРґР¶РµСЂР°
      * 
-     * @param interceptor	перехватчик
+     * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
      */
     void unregisterPostRemoveInterceptor(EntityInterceptor interceptor);
 
 	/**
-	 * регистрация перехватчика "после удаления и фиксации транзакции" в менеджере
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРѕСЃР»Рµ СѓРґР°Р»РµРЅРёСЏ Рё С„РёРєСЃР°С†РёРё С‚СЂР°РЅР·Р°РєС†РёРё" РІ РјРµРЅРµРґР¶РµСЂРµ
 	 * 
-	 * @param interceptor	перехватчик
+	 * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
 	 */
     void registerPostCommitRemoveInterceptor(EntityInterceptor interceptor);
     
     /**
-     * удаление перехватчика "после удаления и фиксации транзакции" из менеджера
+     * СѓРґР°Р»РµРЅРёРµ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРѕСЃР»Рµ СѓРґР°Р»РµРЅРёСЏ Рё С„РёРєСЃР°С†РёРё С‚СЂР°РЅР·Р°РєС†РёРё" РёР· РјРµРЅРµРґР¶РµСЂР°
      * 
-     * @param interceptor	перехватчик
+     * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
      */
     void unregisterPostCommitRemoveInterceptor(EntityInterceptor interceptor);
 
 	/**
-	 * регистрация перехватчика "после загрузки" в менеджере
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРѕСЃР»Рµ Р·Р°РіСЂСѓР·РєРё" РІ РјРµРЅРµРґР¶РµСЂРµ
 	 * 
-	 * @param interceptor	перехватчик
+	 * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
 	 */
     void registerPostLoadInterceptor(EntityInterceptor interceptor);
     
     /**
-     * удаление перехватчика "после загрузки" из менеджера
+     * СѓРґР°Р»РµРЅРёРµ РїРµСЂРµС…РІР°С‚С‡РёРєР° "РїРѕСЃР»Рµ Р·Р°РіСЂСѓР·РєРё" РёР· РјРµРЅРµРґР¶РµСЂР°
      * 
-     * @param interceptor	перехватчик
+     * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
      */
     void unregisterPostLoadInterceptor(EntityInterceptor interceptor);
     
     /**
-     * вызов перехватчика для сущности перед добавлением в хранилище
+     * РІС‹Р·РѕРІ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ СЃСѓС‰РЅРѕСЃС‚Рё РїРµСЂРµРґ РґРѕР±Р°РІР»РµРЅРёРµРј РІ С…СЂР°РЅРёР»РёС‰Рµ
      * 
-     * @param entity	сущность
+     * @param entity	СЃСѓС‰РЅРѕСЃС‚СЊ
      */
     void invokeOnPrePersistInterceptor(PersistentObject entity);
     
     /**
-     * вызов перехватчика для сущности после добавления в хранилище
+     * РІС‹Р·РѕРІ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ СЃСѓС‰РЅРѕСЃС‚Рё РїРѕСЃР»Рµ РґРѕР±Р°РІР»РµРЅРёСЏ РІ С…СЂР°РЅРёР»РёС‰Рµ
      * 
-     * @param entity	сущность
+     * @param entity	СЃСѓС‰РЅРѕСЃС‚СЊ
      */
     void invokeOnPostPersistInterceptor(PersistentObject entity);
     
     /**
-     * вызов перехватчика для сущности после добавления в хранилище и фиксации транзакции
+     * РІС‹Р·РѕРІ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ СЃСѓС‰РЅРѕСЃС‚Рё РїРѕСЃР»Рµ РґРѕР±Р°РІР»РµРЅРёСЏ РІ С…СЂР°РЅРёР»РёС‰Рµ Рё С„РёРєСЃР°С†РёРё С‚СЂР°РЅР·Р°РєС†РёРё
      * 
-     * @param entity	сущность
+     * @param entity	СЃСѓС‰РЅРѕСЃС‚СЊ
      */
     void invokeOnPostCommitPersistInterceptor(PersistentObject entity);
     
     /**
-     * вызов перехватчика для сущности перед удалением из хранилища
+     * РІС‹Р·РѕРІ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ СЃСѓС‰РЅРѕСЃС‚Рё РїРµСЂРµРґ СѓРґР°Р»РµРЅРёРµРј РёР· С…СЂР°РЅРёР»РёС‰Р°
      * 
-     * @param entity	сущность
+     * @param entity	СЃСѓС‰РЅРѕСЃС‚СЊ
      */
     void invokeOnPreRemoveInterceptor(PersistentObject entity);
     
     /**
-     * вызов перехватчика для сущности после удаления из хранилища
+     * РІС‹Р·РѕРІ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ СЃСѓС‰РЅРѕСЃС‚Рё РїРѕСЃР»Рµ СѓРґР°Р»РµРЅРёСЏ РёР· С…СЂР°РЅРёР»РёС‰Р°
      * 
-     * @param entity	сущность
+     * @param entity	СЃСѓС‰РЅРѕСЃС‚СЊ
      */
     void invokeOnPostRemoveInterceptor(PersistentObject entity);
     
     /**
-     * вызов перехватчика для сущности после удаления из хранилища и фиксации транзакции
+     * РІС‹Р·РѕРІ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ СЃСѓС‰РЅРѕСЃС‚Рё РїРѕСЃР»Рµ СѓРґР°Р»РµРЅРёСЏ РёР· С…СЂР°РЅРёР»РёС‰Р° Рё С„РёРєСЃР°С†РёРё С‚СЂР°РЅР·Р°РєС†РёРё
      * 
-     * @param entity	сущность
+     * @param entity	СЃСѓС‰РЅРѕСЃС‚СЊ
      */
     void invokeOnPostCommitRemoveInterceptor(PersistentObject entity);
     
     /**
-     * вызов перехватчика для сущности перед изменением в хранилище
+     * РІС‹Р·РѕРІ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ СЃСѓС‰РЅРѕСЃС‚Рё РїРµСЂРµРґ РёР·РјРµРЅРµРЅРёРµРј РІ С…СЂР°РЅРёР»РёС‰Рµ
      * 
-     * @param entity	сущность
-     * @param oldState	предыдущее состояние объекта
+     * @param entity	СЃСѓС‰РЅРѕСЃС‚СЊ
+     * @param oldState	РїСЂРµРґС‹РґСѓС‰РµРµ СЃРѕСЃС‚РѕСЏРЅРёРµ РѕР±СЉРµРєС‚Р°
      */
     void invokeOnPreUpdateInterceptor(PersistentObject entity, AttributeMap oldState);
     
     /**
-     * вызов перехватчика для сущности после изменения в хранилище
+     * РІС‹Р·РѕРІ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ СЃСѓС‰РЅРѕСЃС‚Рё РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ РІ С…СЂР°РЅРёР»РёС‰Рµ
      * 
-     * @param entity	сущность
-     * @param oldState	предыдущее состояние объекта
+     * @param entity	СЃСѓС‰РЅРѕСЃС‚СЊ
+     * @param oldState	РїСЂРµРґС‹РґСѓС‰РµРµ СЃРѕСЃС‚РѕСЏРЅРёРµ РѕР±СЉРµРєС‚Р°
      */
     void invokeOnPostUpdateInterceptor(PersistentObject entity, AttributeMap oldState);
     
     /**
-     * вызов перехватчика для сущности после изменения в хранилище и фиксации транзакции
+     * РІС‹Р·РѕРІ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ СЃСѓС‰РЅРѕСЃС‚Рё РїРѕСЃР»Рµ РёР·РјРµРЅРµРЅРёСЏ РІ С…СЂР°РЅРёР»РёС‰Рµ Рё С„РёРєСЃР°С†РёРё С‚СЂР°РЅР·Р°РєС†РёРё
      * 
-     * @param entity	сущность
-     * @param oldState	предыдущее состояние объекта
+     * @param entity	СЃСѓС‰РЅРѕСЃС‚СЊ
+     * @param oldState	РїСЂРµРґС‹РґСѓС‰РµРµ СЃРѕСЃС‚РѕСЏРЅРёРµ РѕР±СЉРµРєС‚Р°
      */
     void invokeOnPostCommitUpdateInterceptor(PersistentObject entity, AttributeMap oldState);
     
     /**
-     * вызов перехватчика для сущности после загрузки из хранилища
+     * РІС‹Р·РѕРІ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ СЃСѓС‰РЅРѕСЃС‚Рё РїРѕСЃР»Рµ Р·Р°РіСЂСѓР·РєРё РёР· С…СЂР°РЅРёР»РёС‰Р°
      * 
-     * @param entity	сущность
+     * @param entity	СЃСѓС‰РЅРѕСЃС‚СЊ
      */
     void invokeOnPostLoadInterceptor(PersistentObject entity);
     

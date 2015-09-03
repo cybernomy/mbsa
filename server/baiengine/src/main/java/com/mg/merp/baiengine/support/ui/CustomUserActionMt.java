@@ -36,7 +36,7 @@ import com.mg.merp.baiengine.model.CustomUserActionPermiss;
 import com.mg.merp.security.model.Groups;
 
 /**
- * Контроллер формы поддержки настраиваемых действий
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№
  * 
  * @author leonova
  * @version $Id: CustomUserActionMt.java,v 1.2 2007/11/15 09:57:04 safonov Exp $
@@ -83,7 +83,7 @@ public class CustomUserActionMt extends DefaultMaintenanceForm implements Master
 	}
 
 	/**
-	 * обработчик добавления прав на действие
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РґРѕР±Р°РІР»РµРЅРёСЏ РїСЂР°РІ РЅР° РґРµР№СЃС‚РІРёРµ
 	 * 
 	 * @param event
 	 * @throws Exception
@@ -106,7 +106,7 @@ public class CustomUserActionMt extends DefaultMaintenanceForm implements Master
 	}
 
 	/**
-	 * обработчик удаления прав на действие
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СѓРґР°Р»РµРЅРёСЏ РїСЂР°РІ РЅР° РґРµР№СЃС‚РІРёРµ
 	 * 
 	 * @param event
 	 */

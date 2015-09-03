@@ -24,7 +24,7 @@ import com.mg.merp.crm.OperationPurposeServiceLocal;
 import com.mg.merp.crm.model.OperationPurpose;
 
 /**
- * Бизнес-компонент "Цели действий" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р¦РµР»Рё РґРµР№СЃС‚РІРёР№" 
  * 
  * @author leonova
  * @version $Id: OperationPurposeServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

@@ -33,7 +33,7 @@ import com.mg.merp.planning.model.FirmPlannedOrder;
 import com.mg.merp.planning.model.RecommendType;
 
 /**
- * Контроллер форма браузера "Подтвержденных заказов"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјР° Р±СЂР°СѓР·РµСЂР° "РџРѕРґС‚РІРµСЂР¶РґРµРЅРЅС‹С… Р·Р°РєР°Р·РѕРІ"
  * 
  * @author leonova
  * @version $Id: FirmPlannedOrderBr.java,v 1.4 2007/08/06 14:28:13 safonov Exp $ 
@@ -124,7 +124,7 @@ public class FirmPlannedOrderBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * обработчик создания заказов
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР·РґР°РЅРёСЏ Р·Р°РєР°Р·РѕРІ
 	 * 
 	 * @param event
 	 * @throws Exception

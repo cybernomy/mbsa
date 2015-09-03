@@ -25,7 +25,7 @@ import com.mg.merp.mfreference.CostCategoriesServiceLocal;
 import com.mg.merp.mfreference.model.CostCategories;
 
 /**
- * Бизнес-компонент "Категории затрат" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљР°С‚РµРіРѕСЂРёРё Р·Р°С‚СЂР°С‚" 
  * 
  * @author leonova
  * @version $Id: CostCategoriesServiceBean.java,v 1.3 2006/08/24 12:31:25 leonova Exp $

@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.MilitaryValidityServiceLocal;
 import com.mg.merp.personnelref.model.MilitaryValidity;
 
 /**
- * Реализация бизнес-компонента "Категории годности к воинской службе" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР°С‚РµРіРѕСЂРёРё РіРѕРґРЅРѕСЃС‚Рё Рє РІРѕРёРЅСЃРєРѕР№ СЃР»СѓР¶Р±Рµ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -33,7 +33,7 @@ import com.mg.merp.document.model.DocTypeRights;
 import com.mg.merp.security.model.Groups;
 
 /**
- * Реализация бизнес-компонента "Права на типы документов"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂР°РІР° РЅР° С‚РёРїС‹ РґРѕРєСѓРјРµРЅС‚РѕРІ"
  *
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -67,9 +67,9 @@ public class DocTypeAccessServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Загрузить список прав доступа для типа документа
-	 * @param docTypeId - идентификатор типа документа
-	 * @return список прав доступа для типа документа
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє РїСЂР°РІ РґРѕСЃС‚СѓРїР° РґР»СЏ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docTypeId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return СЃРїРёСЃРѕРє РїСЂР°РІ РґРѕСЃС‚СѓРїР° РґР»СЏ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected List<DocTypePermission> doLoadDocTypePermissions(Integer docTypeId) {
 		return JdbcTemplate.getInstance().query(LOAD_DOC_TYPE_PERMISSIONS_SQL, new Object[] {docTypeId}, new RowMapper<DocTypePermission>() {
@@ -82,9 +82,9 @@ public class DocTypeAccessServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Установить право доступа для типа документа
-	 * @param permission - право доступа
-	 * @param docTypeId - идентификатор типа документа
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР° РґР»СЏ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param permission - РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР°
+	 * @param docTypeId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected void doGrantPermission(DocTypePermission permission, Integer docTypeId) {
 		if (permission == null) {
@@ -110,8 +110,8 @@ public class DocTypeAccessServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Отменить право доступа для типа документа
-	 * @param permission - право доступа
+	 * РћС‚РјРµРЅРёС‚СЊ РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР° РґР»СЏ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param permission - РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР°
 	 */
 	protected void doRevokePermission(DocTypePermission permission) {
 		if (permission == null) {

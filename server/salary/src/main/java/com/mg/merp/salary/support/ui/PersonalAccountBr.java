@@ -28,7 +28,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.personnelref.model.PersonalAccount;
 
 /**
- * Контроллер формы поддержки лицевых счетов сотрудников - плоский список
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р»РёС†РµРІС‹С… СЃС‡РµС‚РѕРІ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ - РїР»РѕСЃРєРёР№ СЃРїРёСЃРѕРє
  * 
  * @author leonova
  * @version $Id: PersonalAccountBr.java,v 1.4 2006/11/02 16:25:25 safonov Exp $ 

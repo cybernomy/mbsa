@@ -26,7 +26,7 @@ public interface AdvanceRepHeadModelServiceLocal
    extends DocumentPattern<AdvanceRepHeadModel, Integer>
 {
 	/**
-	 * тип папки для образцов авансовых отчетов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ Р°РІР°РЅСЃРѕРІС‹С… РѕС‚С‡РµС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 6002;
 }

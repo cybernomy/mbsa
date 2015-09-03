@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.personnelref.model.CostsAnl;
 
 /**
- * Браузер аналитики состава затрат
+ * Р‘СЂР°СѓР·РµСЂ Р°РЅР°Р»РёС‚РёРєРё СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚
  * 
  * @author leonova
  * @version $Id: CostsAnlBr.java,v 1.1 2006/09/04 13:03:50 leonova Exp $ 

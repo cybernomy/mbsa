@@ -24,7 +24,7 @@ import com.mg.merp.account.AnlPlanServiceLocal;
 import com.mg.merp.account.model.AccPlan;
 
 /**
- * Базовый класс для SearchHelp аналитических счетов
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РґР»СЏ SearchHelp Р°РЅР°Р»РёС‚РёС‡РµСЃРєРёС… СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: AnlPlanSearchHelp.java,v 1.7 2009/02/25 15:09:59 safonov Exp $

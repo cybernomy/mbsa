@@ -45,7 +45,7 @@ import com.mg.merp.discount.model.Coefficient;
 import com.mg.merp.discount.model.ExtraDiscount;
 
 /**
- * Реализация бизнес-компонента "Дисконтные карты" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”РёСЃРєРѕРЅС‚РЅС‹Рµ РєР°СЂС‚С‹" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -89,22 +89,22 @@ public class CardServiceBean extends AbstractPOJODataBusinessObjectServiceBean<C
 	@Override
 	protected void doDeepClone(Card entity, Card entityClone) {
 		final String CARD_ATTRIBUTE_NAME = "Card"; //$NON-NLS-1$
-		CardUserServiceLocal сardUserService = (CardUserServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CardUserServiceLocal.SERVICE_NAME);
+		CardUserServiceLocal СЃardUserService = (CardUserServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CardUserServiceLocal.SERVICE_NAME);
 		CardHistServiceLocal cardHistoryService = (CardHistServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CardHistServiceLocal.SERVICE_NAME);
 		CoefficientServiceLocal coefficientService = (CoefficientServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CoefficientServiceLocal.SERVICE_NAME);
 		ExtraDiscountServiceLocal extraDiscountService = (ExtraDiscountServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(ExtraDiscountServiceLocal.SERVICE_NAME);
 		AttributeMap initAttributes = new LocalDataTransferObject();
 		initAttributes.put(CARD_ATTRIBUTE_NAME, entityClone);
-		// копирование пользователей ДК
-		for(CardUser cardUser : сardUserService.findByCriteria(Restrictions.eq(CARD_ATTRIBUTE_NAME, entity)))
-			сardUserService.clone(cardUser, true, initAttributes);
-		// копирование истории ДК
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ Р”Рљ
+		for(CardUser cardUser : СЃardUserService.findByCriteria(Restrictions.eq(CARD_ATTRIBUTE_NAME, entity)))
+			СЃardUserService.clone(cardUser, true, initAttributes);
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ РёСЃС‚РѕСЂРёРё Р”Рљ
 		for (CardHist cardHist : cardHistoryService.findByCriteria(Restrictions.eq(CARD_ATTRIBUTE_NAME, entity)))
 			cardHistoryService.clone(cardHist, true, initAttributes);
-		// копирование коэфициентов
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ РєРѕСЌС„РёС†РёРµРЅС‚РѕРІ
 		for (Coefficient coefficient : coefficientService.findByCriteria(Restrictions.eq(CARD_ATTRIBUTE_NAME, entity)))
 			coefficientService.clone(coefficient, true, initAttributes);
-		// копирование доп.скидок
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ РґРѕРї.СЃРєРёРґРѕРє
 		for (ExtraDiscount extraDiscount : extraDiscountService.findByCriteria(Restrictions.eq(CARD_ATTRIBUTE_NAME, entity)))
 			extraDiscountService.clone(extraDiscount, true, initAttributes);
 	}

@@ -19,7 +19,7 @@ import com.mg.framework.api.UserActionInterceptorManager;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Локатор менеджера перехватчиков интерактивных действий сервиса бизнес-компонентов
+ * Р›РѕРєР°С‚РѕСЂ РјРµРЅРµРґР¶РµСЂР° РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹С… РґРµР№СЃС‚РІРёР№ СЃРµСЂРІРёСЃР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: UserActionInterceptorManagerLocator.java,v 1.3 2006/10/26 13:12:02 safonov Exp $

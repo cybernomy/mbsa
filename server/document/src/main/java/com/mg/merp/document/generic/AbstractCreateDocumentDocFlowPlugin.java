@@ -33,7 +33,7 @@ import com.mg.merp.document.support.DocumentUtils;
 import com.mg.merp.document.support.Messages;
 
 /**
- * Базовый класс подключаемого модуля документооборота для создания документов на основании другого
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РїРѕРґРєР»СЋС‡Р°РµРјРѕРіРѕ РјРѕРґСѓР»СЏ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р° РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚РѕРІ РЅР° РѕСЃРЅРѕРІР°РЅРёРё РґСЂСѓРіРѕРіРѕ
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractCreateDocumentDocFlowPlugin.java,v 1.2 2008/12/29 09:54:49 safonov Exp $

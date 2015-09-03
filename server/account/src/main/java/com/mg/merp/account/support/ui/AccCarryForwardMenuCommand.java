@@ -31,7 +31,7 @@ import com.mg.merp.account.RemnValServiceLocal;
 import com.mg.merp.account.support.Messages;
 
 /**
- * Контроллер комманды меню "Перенос остатков" бух.учета
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРјРјР°РЅРґС‹ РјРµРЅСЋ "РџРµСЂРµРЅРѕСЃ РѕСЃС‚Р°С‚РєРѕРІ" Р±СѓС….СѓС‡РµС‚Р°
  * 
  * @author Artem V. Sharapov
  * @version $Id: AccCarryForwardMenuCommand.java,v 1.2 2008/08/15 13:43:36 sharapov Exp $

@@ -40,7 +40,7 @@ import com.mg.merp.reference.model.PriceListHead;
 import com.mg.merp.reference.model.PriceType;
 
 /**
- * Контроллер формы подбора номенклатуры при создании спецификаций документов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґР±РѕСЂР° РЅРѕРјРµРЅРєР»Р°С‚СѓСЂС‹ РїСЂРё СЃРѕР·РґР°РЅРёРё СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -239,22 +239,22 @@ public class GoodsSelectionForm extends AbstractForm implements com.mg.merp.docu
 	}
 
 	/**
-	 * запуск формы подбора номенклатуры
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹ РїРѕРґР±РѕСЂР° РЅРѕРјРµРЅРєР»Р°С‚СѓСЂС‹
 	 * 
-	 * @param listener		слушатель
-	 * @param docHead		документ
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ
+	 * @param docHead		РґРѕРєСѓРјРµРЅС‚
 	 */
 	public void execute(GoodsSelectionListener listener, DocHead docHead) {
 		execute(listener, docHead.getPriceList(), docHead.getPriceType(), docHead.getDocDate(), Messages.getInstance().getMessage(Messages.GOODS_SELECTION_TITLE, new Object[] {DocumentUtils.generateDocumentTitle(docHead)}));
 	}
 
 	/**
-	 * запуск формы подбора номенклатуры
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹ РїРѕРґР±РѕСЂР° РЅРѕРјРµРЅРєР»Р°С‚СѓСЂС‹
 	 * 
-	 * @param listener		слушатель
-	 * @param priceList		прайс-лист
-	 * @param priceType		тип цены
-	 * @param title			заголовок формы
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ
+	 * @param priceList		РїСЂР°Р№СЃ-Р»РёСЃС‚
+	 * @param priceType		С‚РёРї С†РµРЅС‹
+	 * @param title			Р·Р°РіРѕР»РѕРІРѕРє С„РѕСЂРјС‹
 	 */
 	public void execute(GoodsSelectionListener listener, PriceListHead priceList, PriceType priceType, Date actDate, String title) {
 		initialize(priceList, priceType, actDate, listener);
@@ -264,11 +264,11 @@ public class GoodsSelectionForm extends AbstractForm implements com.mg.merp.docu
 	}
 		
 	/**
-	 * Инициализировать параметры запуска формы подбора номенклатуры
-	 * @param priceList - прайс-лист
-	 * @param priceType - тип цены
-	 * @param actDate - на дату
-	 * @param listener - слушатель
+	 * РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ РїР°СЂР°РјРµС‚СЂС‹ Р·Р°РїСѓСЃРєР° С„РѕСЂРјС‹ РїРѕРґР±РѕСЂР° РЅРѕРјРµРЅРєР»Р°С‚СѓСЂС‹
+	 * @param priceList - РїСЂР°Р№СЃ-Р»РёСЃС‚
+	 * @param priceType - С‚РёРї С†РµРЅС‹
+	 * @param actDate - РЅР° РґР°С‚Сѓ
+	 * @param listener - СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	private void initialize(PriceListHead priceList, PriceType priceType, Date actDate, GoodsSelectionListener listener) {
 		this.selectionListener = listener;
@@ -278,14 +278,14 @@ public class GoodsSelectionForm extends AbstractForm implements com.mg.merp.docu
 	}
 	
 	/**
-	 * Заполнить таблицу данными
+	 * Р—Р°РїРѕР»РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ РґР°РЅРЅС‹РјРё
 	 */
 	private void loadGoodsTable() {
 		loadGoodsList(priceList, priceType, actDate);
 	}
 
 	/**
-	 * обработчик события выбора номенклатуры
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РЅРѕРјРµРЅРєР»Р°С‚СѓСЂС‹
 	 * 
 	 * @param event
 	 */
@@ -309,8 +309,8 @@ public class GoodsSelectionForm extends AbstractForm implements com.mg.merp.docu
 	}
 	
 	/**
-	 * Обработчик события обновления номенклатуры
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РѕР±РЅРѕРІР»РµРЅРёСЏ РЅРѕРјРµРЅРєР»Р°С‚СѓСЂС‹
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRefresh(WidgetEvent event) {
 		loadGoodsTable();
@@ -318,7 +318,7 @@ public class GoodsSelectionForm extends AbstractForm implements com.mg.merp.docu
 	}
 	
 	/**
-	 * обработчик события получения состояния складов
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РїРѕР»СѓС‡РµРЅРёСЏ СЃРѕСЃС‚РѕСЏРЅРёСЏ СЃРєР»Р°РґРѕРІ
 	 * 
 	 * @param event
 	 */

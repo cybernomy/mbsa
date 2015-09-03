@@ -23,7 +23,7 @@ import com.mg.merp.reference.OkpServiceLocal;
 import com.mg.merp.reference.model.Okp;
 
 /**
- * Бизнес-компонент "Коды ОКР" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљРѕРґС‹ РћРљР " 
  * 
  * @author leonova
  * @version $Id: OkpServiceBean.java,v 1.4 2006/10/19 04:39:35 leonova Exp $

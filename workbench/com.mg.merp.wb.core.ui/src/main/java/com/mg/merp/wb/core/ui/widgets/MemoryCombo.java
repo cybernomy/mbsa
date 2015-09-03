@@ -19,7 +19,7 @@ import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 
 /**
- * Combobox с памятью
+ * Combobox СЃ РїР°РјСЏС‚СЊСЋ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: MemoryCombo.java,v 1.5 2007/07/11 06:05:15 poroxnenko Exp $ 

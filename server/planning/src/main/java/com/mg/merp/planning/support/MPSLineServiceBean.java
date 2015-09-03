@@ -38,7 +38,7 @@ import com.mg.merp.planning.MPSLineServiceLocal;
 import com.mg.merp.planning.model.MpsLine;
 
 /**
- * Бизнес-компонент "Строки производственного плана" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎС‚СЂРѕРєРё РїСЂРѕРёР·РІРѕРґСЃС‚РІРµРЅРЅРѕРіРѕ РїР»Р°РЅР°" 
  * 
  * @author leonova
  * @version $Id: MPSLineServiceBean.java,v 1.5 2007/07/30 10:36:48 safonov Exp $
@@ -84,7 +84,7 @@ public class MPSLineServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 			
 			jobService.create(job);
 			jobService.copyBOM(job);
-			//TODO реализовать формирование номера ЗНП
+			//TODO СЂРµР°Р»РёР·РѕРІР°С‚СЊ С„РѕСЂРјРёСЂРѕРІР°РЅРёРµ РЅРѕРјРµСЂР° Р—РќРџ
 			job.setJobNumber(String.valueOf(job.getId()));
 			
 			line.setMpsOrdered(true);

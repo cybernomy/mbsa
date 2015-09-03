@@ -18,26 +18,26 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Метод измерения расхода
+ * РњРµС‚РѕРґ РёР·РјРµСЂРµРЅРёСЏ СЂР°СЃС…РѕРґР°
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: LaborClassTimeRateFlag.java,v 1.2 2007/07/30 10:25:11 safonov Exp $
  */
 @DataItemName("MfReference.LbrCl.TimeRateFlag")
 public enum LaborClassTimeRateFlag {
 	/**
-	 * Время на единицу ГП
+	 * Р’СЂРµРјСЏ РЅР° РµРґРёРЅРёС†Сѓ Р“Рџ
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#TimeRateFlag.Xxx")
 	TIME,
 	
 	/**
-	 * Единиц ГП на время
+	 * Р•РґРёРЅРёС† Р“Рџ РЅР° РІСЂРµРјСЏ
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#TimeRateFlag.Yyy")
 	RATE,
 	
 	/**
-	 * Фиксированное время на партию ГП
+	 * Р¤РёРєСЃРёСЂРѕРІР°РЅРЅРѕРµ РІСЂРµРјСЏ РЅР° РїР°СЂС‚РёСЋ Р“Рџ
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#TimeRateFlag.Zzz")
 	FIXED

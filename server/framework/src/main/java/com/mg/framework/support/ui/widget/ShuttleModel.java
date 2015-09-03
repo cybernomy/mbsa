@@ -16,7 +16,7 @@ package com.mg.framework.support.ui.widget;
 
 
 /**
- * Модель элемента "Shuttle"
+ * РњРѕРґРµР»СЊ СЌР»РµРјРµРЅС‚Р° "Shuttle"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ShuttleModel.java,v 1.1 2006/08/31 08:36:41 safonov Exp $
@@ -24,44 +24,44 @@ package com.mg.framework.support.ui.widget;
 public interface ShuttleModel {
 
 	/**
-	 * получить список источника
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РёСЃС‚РѕС‡РЅРёРєР°
 	 * 
-	 * @return	список значений
+	 * @return	СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№
 	 */
 	Object[] getLeadingList();
 	
 	/**
-	 * установить список источника
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРїРёСЃРѕРє РёСЃС‚РѕС‡РЅРёРєР°
 	 * 
-	 * @param contents	список значений
+	 * @param contents	СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№
 	 */
 	void setLeadingList(Object[] contents);
 	
 	/**
-	 * получить список приемника
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїСЂРёРµРјРЅРёРєР°
 	 * 
-	 * @return	список значений
+	 * @return	СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№
 	 */
 	Object[] getTrailingList();
 	
 	/**
-	 * установить список приемника
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРїРёСЃРѕРє РїСЂРёРµРјРЅРёРєР°
 	 * 
-	 * @param contents	список значений
+	 * @param contents	СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№
 	 */
 	void setTrailingList(Object[] contents);
 	
 	/**
-	 * добавить слушателя на модель
+	 * РґРѕР±Р°РІРёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЏ РЅР° РјРѕРґРµР»СЊ
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	void addShuttleModelListener(ShuttleModelListener listener);
 	
 	/**
-	 * удалить слушателя на модель
+	 * СѓРґР°Р»РёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЏ РЅР° РјРѕРґРµР»СЊ
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	void removeShuttleModelListener(ShuttleModelListener listener);
 }

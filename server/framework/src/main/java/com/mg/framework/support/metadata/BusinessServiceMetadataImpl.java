@@ -19,7 +19,7 @@ import java.io.Serializable;
 import com.mg.framework.api.metadata.BusinessServiceMetadata;
 
 /**
- * Реализация метаданных бизнес компонента
+ * Р РµР°Р»РёР·Р°С†РёСЏ РјРµС‚Р°РґР°РЅРЅС‹С… Р±РёР·РЅРµСЃ РєРѕРјРїРѕРЅРµРЅС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: BusinessServiceMetadataImpl.java,v 1.2 2006/07/27 15:40:14 safonov Exp $

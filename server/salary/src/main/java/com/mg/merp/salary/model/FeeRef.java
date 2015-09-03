@@ -17,7 +17,7 @@ package com.mg.merp.salary.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Справочник начислений/удержаний"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїСЂР°РІРѕС‡РЅРёРє РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: FeeRef.java,v 1.9 2007/08/21 05:27:57 sharapov Exp $

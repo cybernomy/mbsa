@@ -33,7 +33,7 @@ import com.mg.merp.planning.model.MrpVersionControl;
 import com.mg.merp.planning.support.Messages;
 
 /**
- * Контроллер формы списка рекомендаций ППМ
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° СЂРµРєРѕРјРµРЅРґР°С†РёР№ РџРџРњ
  * 
  * @author Oleg V. Safonov
  * @author leonova
@@ -115,9 +115,9 @@ public class MRPRecommendationBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Показать форму списка рекомендаций ППМ
+	 * РџРѕРєР°Р·Р°С‚СЊ С„РѕСЂРјСѓ СЃРїРёСЃРєР° СЂРµРєРѕРјРµРЅРґР°С†РёР№ РџРџРњ
 	 * 
-	 * @param mrpId	версия ППМ
+	 * @param mrpId	РІРµСЂСЃРёСЏ РџРџРњ
 	 */
 	public void execute(Serializable mrpId) {
 		this.mrpId = (Integer) mrpId;
@@ -129,7 +129,7 @@ public class MRPRecommendationBr extends DefaultPlainBrowseForm {
 	}
 	
 	/**
-	 * обработчик подтверждения заказов
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ Р·Р°РєР°Р·РѕРІ
 	 * 
 	 * @param event
 	 */
@@ -140,7 +140,7 @@ public class MRPRecommendationBr extends DefaultPlainBrowseForm {
 	}
 	
 	/**
-	 * обработчик создания заказов
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР·РґР°РЅРёСЏ Р·Р°РєР°Р·РѕРІ
 	 * 
 	 * @param event
 	 * @throws Exception

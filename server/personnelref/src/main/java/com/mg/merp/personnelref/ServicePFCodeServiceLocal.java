@@ -25,7 +25,7 @@ public interface ServicePFCodeServiceLocal
    extends com.mg.framework.api.DataBusinessObjectService<ServicePfCode, Integer>
 {
 	/**
-	 * тип папки для видов кодов стажа для ПФ
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РІРёРґРѕРІ РєРѕРґРѕРІ СЃС‚Р°Р¶Р° РґР»СЏ РџР¤
 	 */
 	final static short FOLDER_PART = 3001;
 }

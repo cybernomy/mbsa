@@ -25,7 +25,7 @@ import com.mg.framework.api.WorkingConnection;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Реализация сессии
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЃСЃРёРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: SessionImpl.java,v 1.9 2008/08/28 13:15:27 safonov Exp $
@@ -108,7 +108,7 @@ public class SessionImpl
 	 * @see com.mg.framework.api.Session#getAttribute(java.lang.String)
 	 */
 	public Object getAttribute(String key) {
-		//поиск по всем областям видимости
+		//РїРѕРёСЃРє РїРѕ РІСЃРµРј РѕР±Р»Р°СЃС‚СЏРј РІРёРґРёРјРѕСЃС‚Рё
 		for (Map<String, Object> value : attrMap.values()) {
 			Object result = value.get(key);
 			if (result != null)
@@ -121,7 +121,7 @@ public class SessionImpl
 	 * @see com.mg.framework.api.Session#removeAttribute(java.lang.String)
 	 */
 	public void removeAttribute(String key) {
-		//поиск по всем областям видимости
+		//РїРѕРёСЃРє РїРѕ РІСЃРµРј РѕР±Р»Р°СЃС‚СЏРј РІРёРґРёРјРѕСЃС‚Рё
 		for (Map<String, Object> value : attrMap.values())
 			value.remove(key);
 	}
@@ -130,7 +130,7 @@ public class SessionImpl
 	 * @see com.mg.framework.api.Session#getSystemTenant()
 	 */
 	public SystemTenant getSystemTenant() {
-		//TODO необходимо заполнять текущим мандантом в который вошел пользователь
+		//TODO РЅРµРѕР±С…РѕРґРёРјРѕ Р·Р°РїРѕР»РЅСЏС‚СЊ С‚РµРєСѓС‰РёРј РјР°РЅРґР°РЅС‚РѕРј РІ РєРѕС‚РѕСЂС‹Р№ РІРѕС€РµР» РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ
 		return (SystemTenant) ServerUtils.getPersistentManager().find("com.mg.merp.core.model.SysClient", 1);
 	}
 

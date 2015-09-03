@@ -89,7 +89,7 @@ import com.mg.merp.reference.model.Currency;
 import com.mg.merp.reference.model.TaxGroup;
 
 /**
- * Реализация бизнес-компонента "Процессор хозяйственной операции"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРѕС†РµСЃСЃРѕСЂ С…РѕР·СЏР№СЃС‚РІРµРЅРЅРѕР№ РѕРїРµСЂР°С†РёРё"
 
  * @author Konstantin S. Alikaev
  * @version $Id: ProcessorImpl.java,v 1.4 2008/10/31 11:35:15 safonov Exp $
@@ -150,10 +150,10 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Реализация отработки ЭДО "Создать ХО"
+	 * Р РµР°Р»РёР·Р°С†РёСЏ РѕС‚СЂР°Р±РѕС‚РєРё Р­Р”Рћ "РЎРѕР·РґР°С‚СЊ РҐРћ"
 	 * 
 	 * @param params
-	 * 			- параметры документооборота
+	 * 			- РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
 	 */
 	private void doProcessCreateEconomicOper(DocFlowPluginInvokeParams params) {
 		OperationModelServiceLocal operServModel = (OperationModelServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/account/OperationModel"); //$NON-NLS-1$
@@ -164,9 +164,9 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Завершение выполнения ЭДО
+	 * Р—Р°РІРµСЂС€РµРЅРёРµ РІС‹РїРѕР»РЅРµРЅРёСЏ Р­Р”Рћ
 	 * @param eo
-	 * 			- созданная хоз. операция
+	 * 			- СЃРѕР·РґР°РЅРЅР°СЏ С…РѕР·. РѕРїРµСЂР°С†РёСЏ
 	 */
 	private void endDocFlow(EconomicOper eo) {
 		bulkCreateEconomicSpec(eo, economicSpecs);
@@ -174,7 +174,7 @@ public class ProcessorImpl implements Processor {
 		params.setData2(eo.getId());
 
 		if (params.getPerformedStage().isShowNewDocument()){
-			//сбрасываем перед показом контекст
+			//СЃР±СЂР°СЃС‹РІР°РµРј РїРµСЂРµРґ РїРѕРєР°Р·РѕРј РєРѕРЅС‚РµРєСЃС‚
 //			ServerUtils.getPersistentManager().flush();
 			MaintenanceHelper.edit(getServiceEconomicOperation(), eo.getId(), null, new MaintenanceFormActionListener() {
 
@@ -191,16 +191,16 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Функция отката ЭДО "Создать ХО"
+	 * Р¤СѓРЅРєС†РёСЏ РѕС‚РєР°С‚Р° Р­Р”Рћ "РЎРѕР·РґР°С‚СЊ РҐРћ"
 	 * @param params
-	 * 			- параметры отката
+	 * 			- РїР°СЂР°РјРµС‚СЂС‹ РѕС‚РєР°С‚Р°
 	 */
 	private void doRollbackCreateFinOper(DocFlowPluginInvokeParams params) {
 		getServiceEconomicOperation().erase(params.getData2());	
 	}
 
 	/**
-	 * Возвращает сервис бизнес-компонента "Хозяйственная операция"
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РҐРѕР·СЏР№СЃС‚РІРµРЅРЅР°СЏ РѕРїРµСЂР°С†РёСЏ"
 	 * @return
 	 */
 	private OperationServiceLocal getServiceEconomicOperation() {
@@ -210,9 +210,9 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Инициализируем создаваемую хоз. операцию значениями образца
+	 * РРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј СЃРѕР·РґР°РІР°РµРјСѓСЋ С…РѕР·. РѕРїРµСЂР°С†РёСЋ Р·РЅР°С‡РµРЅРёСЏРјРё РѕР±СЂР°Р·С†Р°
 	 * 
-	 * @param pattern - образец хоз. операции
+	 * @param pattern - РѕР±СЂР°Р·РµС† С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * @return
 	 */
 	private EconomicOper createByPattern(EconomicOperModel pattern) {
@@ -231,11 +231,11 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Устанавливает какие атрибуты можно копировать из образца хоз. операции в 
-	 * создаваемую хоз. операцию
+	 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РєР°РєРёРµ Р°С‚СЂРёР±СѓС‚С‹ РјРѕР¶РЅРѕ РєРѕРїРёСЂРѕРІР°С‚СЊ РёР· РѕР±СЂР°Р·С†Р° С…РѕР·. РѕРїРµСЂР°С†РёРё РІ 
+	 * СЃРѕР·РґР°РІР°РµРјСѓСЋ С…РѕР·. РѕРїРµСЂР°С†РёСЋ
 	 * 
-	 * @param attributeName 	-	 имя атрибута
-	 * @return						<code>true</code> - если можно, иначе <code>false</code>				
+	 * @param attributeName 	-	 РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
+	 * @return						<code>true</code> - РµСЃР»Рё РјРѕР¶РЅРѕ, РёРЅР°С‡Рµ <code>false</code>				
 	 */
 	public static boolean isMutableEconomicOperAttribute(String attributeName) {
 		String[] attributeNames = new String[] {"Id", "SourceTo", "ModelName", "SourceFrom", "ModelDestFolder", "Folder", "EconomicSpecsModel"}; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$ //$NON-NLS-7$
@@ -246,21 +246,21 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Создание ХО на основание документа по образцу ХО
+	 * РЎРѕР·РґР°РЅРёРµ РҐРћ РЅР° РѕСЃРЅРѕРІР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° РїРѕ РѕР±СЂР°Р·С†Сѓ РҐРћ
 	 * 
 	 * @param srcDocHead
-	 * 			- документ основание
+	 * 			- РґРѕРєСѓРјРµРЅС‚ РѕСЃРЅРѕРІР°РЅРёРµ
 	 * @param economicOper
-	 * 			- создаваемая хоз. операция
+	 * 			- СЃРѕР·РґР°РІР°РµРјР°СЏ С…РѕР·. РѕРїРµСЂР°С†РёСЏ
 	 * @param economicOperModel
-	 * 			- образец создаваемой хоз. операции
+	 * 			- РѕР±СЂР°Р·РµС† СЃРѕР·РґР°РІР°РµРјРѕР№ С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * @param processDate
-	 * 			- время отработки ЭДО "Создать ХО"
+	 * 			- РІСЂРµРјСЏ РѕС‚СЂР°Р±РѕС‚РєРё Р­Р”Рћ "РЎРѕР·РґР°С‚СЊ РҐРћ"
 	 * @param folder
-	 * 			- папка-приемник
+	 * 			- РїР°РїРєР°-РїСЂРёРµРјРЅРёРє
 	 */
 	private void createEconomicOper(DocHead srcDocHead, EconomicOper economicOper, EconomicOperModel economicOperModel, Date processDate, Folder folder) {
-		//установим дату ХО датой отработки
+		//СѓСЃС‚Р°РЅРѕРІРёРј РґР°С‚Сѓ РҐРћ РґР°С‚РѕР№ РѕС‚СЂР°Р±РѕС‚РєРё
 		economicOper.setKeepDate(processDate);
 		economicOper.setConfirmDoc(srcDocHead);
 		economicOper.setConfirmDocType(srcDocHead.getDocType());
@@ -356,10 +356,10 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Создание спецификаций хозяйственной операции
+	 * РЎРѕР·РґР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёР№ С…РѕР·СЏР№СЃС‚РІРµРЅРЅРѕР№ РѕРїРµСЂР°С†РёРё
 	 * 
 	 * @param economicOperModel
-	 * 			- образец создаваемой хоз операции.
+	 * 			- РѕР±СЂР°Р·РµС† СЃРѕР·РґР°РІР°РµРјРѕР№ С…РѕР· РѕРїРµСЂР°С†РёРё.
 	 */
 	private void createEconomicOperSpecs(EconomicOperModel economicOperModel) {
 		List<EconomicSpecModel> economicSpecModelList = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(EconomicSpecModel.class)
@@ -374,7 +374,7 @@ public class ProcessorImpl implements Processor {
 			boolean specRealis = economicSpecModel.getAccDb().isRealisationAcc() || economicSpecModel.getAccKt().isRealisationAcc();
 			if (specMat && !docHead.getDocSection().isWithSpec())
 				throw new BusinessException(Messages.getInstance().getMessage(Messages.DOCUMENT_NOT_IS_WITH_SPEC));
-			//валюта проводки
+			//РІР°Р»СЋС‚Р° РїСЂРѕРІРѕРґРєРё
 			Currency currencyEconomicSpec = economicSpecModel.getAccDb().getCurrency();
 			Currency currencySrcDocHead = this.economicOper.getConfirmDoc().getCurrency();
 			if (currencyEconomicSpec == null)
@@ -382,15 +382,15 @@ public class ProcessorImpl implements Processor {
 			if (docSpecItemList != null) {
 				for (DocumentSpecItem dsi : docSpecItemList) {
 					docSpec = dsi.getDocSpec();
-					//условие вхождения
+					//СѓСЃР»РѕРІРёРµ РІС…РѕР¶РґРµРЅРёСЏ
 					if (isEntryParams(economicSpecModel, docSpec)) {
-						//если корреспонденция материальная, то документ должен быть со спецификациями
+						//РµСЃР»Рё РєРѕСЂСЂРµСЃРїРѕРЅРґРµРЅС†РёСЏ РјР°С‚РµСЂРёР°Р»СЊРЅР°СЏ, С‚Рѕ РґРѕРєСѓРјРµРЅС‚ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ СЃРѕ СЃРїРµС†РёС„РёРєР°С†РёСЏРјРё
 						if (specMat || specRealis) {
 							economicSpec = createEconomicSpec(economicSpecModel, docSpec);
 							economicSpec.setQuantity(calculateQuntity(economicSpec, economicSpecModel, dsi));
 							BigDecimal sumSpec = calculateSum(economicSpec, economicSpecModel, dsi);
 							if (sumSpec.compareTo(BigDecimal.ZERO) > 0) {
-								//конвертация валют
+								//РєРѕРЅРІРµСЂС‚Р°С†РёСЏ РІР°Р»СЋС‚
 								adjustEconomicSpec(economicSpec, currencyEconomicSpec, currencySrcDocHead, sumSpec);
 								economicSpecs.add(economicSpec);
 							}
@@ -402,7 +402,7 @@ public class ProcessorImpl implements Processor {
 					}
 				}
 				if (sum.compareTo(BigDecimal.ZERO) > 0) {
-					//конвертация валют
+					//РєРѕРЅРІРµСЂС‚Р°С†РёСЏ РІР°Р»СЋС‚
 					adjustEconomicSpec(economicSpec, currencyEconomicSpec, currencySrcDocHead, sum);
 					economicSpecs.add(economicSpec);
 				}
@@ -418,17 +418,17 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Списываем партионные счета через запрос партий у пользователя
+	 * РЎРїРёСЃС‹РІР°РµРј РїР°СЂС‚РёРѕРЅРЅС‹Рµ СЃС‡РµС‚Р° С‡РµСЂРµР· Р·Р°РїСЂРѕСЃ РїР°СЂС‚РёР№ Сѓ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
 	 * @param iterator
-	 * 				- итератор списка сформированных спецификаций
+	 * 				- РёС‚РµСЂР°С‚РѕСЂ СЃРїРёСЃРєР° СЃС„РѕСЂРјРёСЂРѕРІР°РЅРЅС‹С… СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	private void createEconomicSpecByAccBath(final Iterator<EconomicSpec> iterator) {
 		if (iterator.hasNext()) {
 			final EconomicSpec economicSpec = iterator.next();
 			AccPlan accKt = economicSpec.getAccKt();
-			//если кредитный счет партионный, то предлагаем пользователю выбрать позиции по которым нужно списывать 
+			//РµСЃР»Рё РєСЂРµРґРёС‚РЅС‹Р№ СЃС‡РµС‚ РїР°СЂС‚РёРѕРЅРЅС‹Р№, С‚Рѕ РїСЂРµРґР»Р°РіР°РµРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ РІС‹Р±СЂР°С‚СЊ РїРѕР·РёС†РёРё РїРѕ РєРѕС‚РѕСЂС‹Рј РЅСѓР¶РЅРѕ СЃРїРёСЃС‹РІР°С‚СЊ 
 			if (accKt.getAnlForm() == AnlForm.BATCHCALC) {
 				chooseAccBatch(economicSpec, new BusinessAddinListener() {
 
@@ -449,7 +449,7 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Массовое добавление спецификаций
+	 * РњР°СЃСЃРѕРІРѕРµ РґРѕР±Р°РІР»РµРЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 * @param economicSpecs
 	 */
 	private void bulkCreateEconomicSpec(EconomicOper eo, List<EconomicSpec> economicSpecs) {
@@ -466,7 +466,7 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Запуск диалогового окна списания с партии
+	 * Р—Р°РїСѓСЃРє РґРёР°Р»РѕРіРѕРІРѕРіРѕ РѕРєРЅР° СЃРїРёСЃР°РЅРёСЏ СЃ РїР°СЂС‚РёРё
 	 * 
 	 * @param economicSpec
 	 * 				- 
@@ -479,9 +479,9 @@ public class ProcessorImpl implements Processor {
 			public void actionPerformed(FormEvent event) {
 				List<AccBatchDisposalDialog.AccBatchHistoryItem> rowList = dialog.getRowList();
 				BigDecimal allProcessQuntity = BigDecimal.ZERO;
-				//количество указанное в спецификации
+				//РєРѕР»РёС‡РµСЃС‚РІРѕ СѓРєР°Р·Р°РЅРЅРѕРµ РІ СЃРїРµС†РёС„РёРєР°С†РёРё
 				BigDecimal economicSpecQuntity = economicSpec.getQuantity() != null ? economicSpec.getQuantity() : BigDecimal.ZERO;
-				//условие первого вхождения
+				//СѓСЃР»РѕРІРёРµ РїРµСЂРІРѕРіРѕ РІС…РѕР¶РґРµРЅРёСЏ
 				boolean flag = true;
 				CalculateOutCostResult result = null;
 				PersistentManager pm = ServerUtils.getPersistentManager();
@@ -500,14 +500,14 @@ public class ProcessorImpl implements Processor {
 						}
 						allProcessQuntity = allProcessQuntity.add(processQuntity);
 						if (allProcessQuntity.compareTo(economicSpecQuntity) > 0) {
-							//если общее отмеченное количество больше чем в спецификации, то уменьшаем количество
-							// отмеченное пользователем 
+							//РµСЃР»Рё РѕР±С‰РµРµ РѕС‚РјРµС‡РµРЅРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ Р±РѕР»СЊС€Рµ С‡РµРј РІ СЃРїРµС†РёС„РёРєР°С†РёРё, С‚Рѕ СѓРјРµРЅСЊС€Р°РµРј РєРѕР»РёС‡РµСЃС‚РІРѕ
+							// РѕС‚РјРµС‡РµРЅРЅРѕРµ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј 
 							processQuntity = economicSpecQuntity.subtract(allProcessQuntity).add(processQuntity);
 							allProcessQuntity = economicSpecQuntity;
 						}
-						// установка значений количества в спецификацию и создание спецификации если не создана
+						// СѓСЃС‚Р°РЅРѕРІРєР° Р·РЅР°С‡РµРЅРёР№ РєРѕР»РёС‡РµСЃС‚РІР° РІ СЃРїРµС†РёС„РёРєР°С†РёСЋ Рё СЃРѕР·РґР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёРё РµСЃР»Рё РЅРµ СЃРѕР·РґР°РЅР°
 						if (MathUtils.compareToZero(processQuntity) > 0) {
-							//пересчитать цену списания
+							//РїРµСЂРµСЃС‡РёС‚Р°С‚СЊ С†РµРЅСѓ СЃРїРёСЃР°РЅРёСЏ
 							AccBatch accBatch = pm.find(AccBatch.class, accBHI.getId());
 							result = calculateOutCost(economicOper.getKeepDate(), accBatch, 
 									economicSpec.getAccKt(), economicSpec.getAnlKt1(), economicSpec.getAnlKt2(), economicSpec.getAnlKt3(), economicSpec.getAnlKt4(), 
@@ -542,16 +542,16 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Копируем проводку и устанавливаем в нее значение суммы и количества
+	 * РљРѕРїРёСЂСѓРµРј РїСЂРѕРІРѕРґРєСѓ Рё СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РІ РЅРµРµ Р·РЅР°С‡РµРЅРёРµ СЃСѓРјРјС‹ Рё РєРѕР»РёС‡РµСЃС‚РІР°
 	 *  
 	 * @param economicSpec
-	 * 					- проводка-источник
+	 * 					- РїСЂРѕРІРѕРґРєР°-РёСЃС‚РѕС‡РЅРёРє
 	 * @param quntity
-	 * 					- устанавливаемое количество
+	 * 					- СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРјРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ
 	 * @param sumNat
-	 * 					- устанавливаемая сумма в нац. валюте
+	 * 					- СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРјР°СЏ СЃСѓРјРјР° РІ РЅР°С†. РІР°Р»СЋС‚Рµ
 	 * @param sumCur
-	 * 					- устанавливаемая сумма в валюте
+	 * 					- СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРјР°СЏ СЃСѓРјРјР° РІ РІР°Р»СЋС‚Рµ
 	 * @return
 	 */
 	private EconomicSpec copyEconomicSpec(EconomicSpec economicSpec, AccBatch accBatchKt, BigDecimal quntity, BigDecimal sumNat, BigDecimal sumCur) {
@@ -572,15 +572,15 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Устанавливает в проводке значения валют и курс
+	 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РІ РїСЂРѕРІРѕРґРєРµ Р·РЅР°С‡РµРЅРёСЏ РІР°Р»СЋС‚ Рё РєСѓСЂСЃ
 	 * @param economicSpec
-	 * 					- создаваемая проводка хоз. операции
+	 * 					- СЃРѕР·РґР°РІР°РµРјР°СЏ РїСЂРѕРІРѕРґРєР° С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * @param currencyEconomicSpec
-	 * 					- валюта создаваемой проводки
+	 * 					- РІР°Р»СЋС‚Р° СЃРѕР·РґР°РІР°РµРјРѕР№ РїСЂРѕРІРѕРґРєРё
 	 * @param currencySrcDocHead
-	 * 					- валюта документа-источника
+	 * 					- РІР°Р»СЋС‚Р° РґРѕРєСѓРјРµРЅС‚Р°-РёСЃС‚РѕС‡РЅРёРєР°
 	 * @param sumSpec
-	 * 					- сумма, полученная BAi в валюте документа
+	 * 					- СЃСѓРјРјР°, РїРѕР»СѓС‡РµРЅРЅР°СЏ BAi РІ РІР°Р»СЋС‚Рµ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	private void adjustEconomicSpec(EconomicSpec economicSpec, Currency currencyEconomicSpec, Currency currencySrcDocHead, BigDecimal sumSpec) {
 		Currency currencyConfNat = config.getNatCurrency();
@@ -605,7 +605,7 @@ public class ProcessorImpl implements Processor {
 	} 
 
 	/**
-	 * Возвращает сервис курса валют
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРµСЂРІРёСЃ РєСѓСЂСЃР° РІР°Р»СЋС‚
 	 * @return
 	 */
 	private CurrencyRateServiceLocal getServiceCurrencyRate() {
@@ -616,7 +616,7 @@ public class ProcessorImpl implements Processor {
 	} 
 
 	/**
-	 * Возвращает сервис валют
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРµСЂРІРёСЃ РІР°Р»СЋС‚
 	 * @return
 	 */
 	private CurrencyServiceLocal getServiceCurrency() {
@@ -627,15 +627,15 @@ public class ProcessorImpl implements Processor {
 	} 
 
 	/**
-	 * Вызывает BAi для пересчета суммы проводки
+	 * Р’С‹Р·С‹РІР°РµС‚ BAi РґР»СЏ РїРµСЂРµСЃС‡РµС‚Р° СЃСѓРјРјС‹ РїСЂРѕРІРѕРґРєРё
 	 * @param economicSpec
-	 * 					- создаваемая проводка
+	 * 					- СЃРѕР·РґР°РІР°РµРјР°СЏ РїСЂРѕРІРѕРґРєР°
 	 * @param economicSpecModel
-	 * 					- образец проводки
+	 * 					- РѕР±СЂР°Р·РµС† РїСЂРѕРІРѕРґРєРё
 	 * @param dsi
-	 * 					- данные ДО
+	 * 					- РґР°РЅРЅС‹Рµ Р”Рћ
 	 * @return
-	 * 					- сумму проводки
+	 * 					- СЃСѓРјРјСѓ РїСЂРѕРІРѕРґРєРё
 	 */
 	private BigDecimal calculateSum(EconomicSpec economicSpec, EconomicSpecModel economicSpecModel, DocumentSpecItem dsi) {
 		Map<String, Object> baiParams = createBAiParams(dsi, economicSpec);
@@ -647,15 +647,15 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Вызывает BAi для пересчета количества проводки
+	 * Р’С‹Р·С‹РІР°РµС‚ BAi РґР»СЏ РїРµСЂРµСЃС‡РµС‚Р° РєРѕР»РёС‡РµСЃС‚РІР° РїСЂРѕРІРѕРґРєРё
 	 * @param economicSpec
-	 * 					- создаваемая проводка
+	 * 					- СЃРѕР·РґР°РІР°РµРјР°СЏ РїСЂРѕРІРѕРґРєР°
 	 * @param economicSpecModel
-	 * 					- образец проводки
+	 * 					- РѕР±СЂР°Р·РµС† РїСЂРѕРІРѕРґРєРё
 	 * @param dsi
-	 * 					- данные ДО
+	 * 					- РґР°РЅРЅС‹Рµ Р”Рћ
 	 * @return
-	 * 					- количество проводки
+	 * 					- РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕРІРѕРґРєРё
 	 */
 	private BigDecimal calculateQuntity(EconomicSpec economicSpec, EconomicSpecModel economicSpecModel, DocumentSpecItem dsi) {
 		Map<String, Object> baiParams = createBAiParams(dsi, economicSpec);
@@ -667,13 +667,13 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Порверка условий вхождения
+	 * РџРѕСЂРІРµСЂРєР° СѓСЃР»РѕРІРёР№ РІС…РѕР¶РґРµРЅРёСЏ
 	 * @param economicSpecModel
-	 * 				- спецификация образца хоз. операции
+	 * 				- СЃРїРµС†РёС„РёРєР°С†РёСЏ РѕР±СЂР°Р·С†Р° С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * @param srcDocSpec
-	 * 				- спецификация документа-основания
-	 * @return	- <code>true</code> - если параметры спецификации документа-основания удовлетворяют параметрам 
-	 * вхождения спецификации образца хоз. операции
+	 * 				- СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
+	 * @return	- <code>true</code> - РµСЃР»Рё РїР°СЂР°РјРµС‚СЂС‹ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ СѓРґРѕРІР»РµС‚РІРѕСЂСЏСЋС‚ РїР°СЂР°РјРµС‚СЂР°Рј 
+	 * РІС…РѕР¶РґРµРЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РѕР±СЂР°Р·С†Р° С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 */
 	private boolean isEntryParams(EconomicSpecModel economicSpecModel, DocSpec srcDocSpec) {
 		CatalogFolder catalogFolderEconomicSpec = economicSpecModel.getEntryFolder();
@@ -694,14 +694,14 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Создает проводку по образцу и по спецификации документа основания
+	 * РЎРѕР·РґР°РµС‚ РїСЂРѕРІРѕРґРєСѓ РїРѕ РѕР±СЂР°Р·С†Сѓ Рё РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р° РѕСЃРЅРѕРІР°РЅРёСЏ
 	 * 
 	 * @param economicSpecModel
-	 * 				- образец проводки хоз. операции
+	 * 				- РѕР±СЂР°Р·РµС† РїСЂРѕРІРѕРґРєРё С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * @param docSpec
-	 * 				- спецификация документа-основания
+	 * 				- СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
 	 * @return
-	 * 				- созданную проводку
+	 * 				- СЃРѕР·РґР°РЅРЅСѓСЋ РїСЂРѕРІРѕРґРєСѓ
 	 */
 	private EconomicSpec createEconomicSpec(EconomicSpecModel economicSpecModel, DocSpec docSpec) {
 		EconomicSpec dstEconomicSpec = getEconomicSpecService().initialize();
@@ -721,11 +721,11 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Устанавливает какие атрибуты можно копировать из спецификации образца хоз. операции в 
-	 * спецификацию создаваемой хоз. операции
+	 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РєР°РєРёРµ Р°С‚СЂРёР±СѓС‚С‹ РјРѕР¶РЅРѕ РєРѕРїРёСЂРѕРІР°С‚СЊ РёР· СЃРїРµС†РёС„РёРєР°С†РёРё РѕР±СЂР°Р·С†Р° С…РѕР·. РѕРїРµСЂР°С†РёРё РІ 
+	 * СЃРїРµС†РёС„РёРєР°С†РёСЋ СЃРѕР·РґР°РІР°РµРјРѕР№ С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * 
-	 * @param attributeName 	-	 имя атрибута
-	 * @return						<code>true</code> - если можно, иначе <code>false</code>				
+	 * @param attributeName 	-	 РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
+	 * @return						<code>true</code> - РµСЃР»Рё РјРѕР¶РЅРѕ, РёРЅР°С‡Рµ <code>false</code>				
 	 */
 	public static boolean isMutableEconomicSpecAttribute(String attributeName) {
 		String[] attributeNames = new String[] {"Id", "EconomicOperModel", "TaxGroup", "SumAlg", "QtyAlg", "EntryFolder", "EntryGoodType", "SummaFormula",  //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$ //$NON-NLS-6$ //$NON-NLS-7$ //$NON-NLS-8$
@@ -763,7 +763,7 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Бизнес-компонент проводка хоз. операции
+	 * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ РїСЂРѕРІРѕРґРєР° С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * @return
 	 */
 	public EconomicSpecServiceLocal getEconomicSpecService() {
@@ -773,7 +773,7 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Бизнес-компонент образца проводки хоз. операции
+	 * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ РѕР±СЂР°Р·С†Р° РїСЂРѕРІРѕРґРєРё С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * @return
 	 */
 	public EconomicSpecModelServiceLocal getEconomicSpecModelService() {
@@ -802,28 +802,28 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Процедура рассчитывает количество ТМЦ на заданную дату по оборотке по ТМЦ
+	 * РџСЂРѕС†РµРґСѓСЂР° СЂР°СЃСЃС‡РёС‚С‹РІР°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РўРњР¦ РЅР° Р·Р°РґР°РЅРЅСѓСЋ РґР°С‚Сѓ РїРѕ РѕР±РѕСЂРѕС‚РєРµ РїРѕ РўРњР¦
 	 * 
 	 * @param operDate
-	 * 				- дата для расчета цены списания
+	 * 				- РґР°С‚Р° РґР»СЏ СЂР°СЃС‡РµС‚Р° С†РµРЅС‹ СЃРїРёСЃР°РЅРёСЏ
 	 * @param acc
-	 * 				- счет кредит
+	 * 				- СЃС‡РµС‚ РєСЂРµРґРёС‚
 	 * @param anl1
-	 * 				- аналитика 1-го уровня счета кредита
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 1-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р° РєСЂРµРґРёС‚Р°
 	 * @param anl2
-	 * 				- аналитика 2-го уровня счета кредита
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 2-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р° РєСЂРµРґРёС‚Р°
 	 * @param anl3
-	 * 				- аналитика 3-го уровня счета кредита
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 3-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р° РєСЂРµРґРёС‚Р°
 	 * @param anl4
-	 * 				- аналитика 4-го уровня счета кредита
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 4-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р° РєСЂРµРґРёС‚Р°
 	 * @param anl5
-	 * 				- аналитика 5-го уровня счета кредита
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 5-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р° РєСЂРµРґРёС‚Р°
 	 * @param catalog
-	 * 				- товар
+	 * 				- С‚РѕРІР°СЂ
 	 * @param contractor
-	 * 				- контрагент
+	 * 				- РєРѕРЅС‚СЂР°РіРµРЅС‚
 	 * @return
-	 * 				- количество ТМЦ на заданную дату по оборотке по ТМЦ
+	 * 				- РєРѕР»РёС‡РµСЃС‚РІРѕ РўРњР¦ РЅР° Р·Р°РґР°РЅРЅСѓСЋ РґР°С‚Сѓ РїРѕ РѕР±РѕСЂРѕС‚РєРµ РїРѕ РўРњР¦
 	 */
 	protected BigDecimal doCalculateQuantityEnd(Date operDate, AccBatch accBatch,
 			AccPlan acc, AnlPlan anl1, AnlPlan anl2, AnlPlan anl3,
@@ -874,7 +874,7 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Расчет цены списания по бух. учету
+	 * Р Р°СЃС‡РµС‚ С†РµРЅС‹ СЃРїРёСЃР°РЅРёСЏ РїРѕ Р±СѓС…. СѓС‡РµС‚Сѓ
 	 * 
 	 * @param operDate
 	 * @param accBatch
@@ -964,7 +964,7 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Рассчет сумм списания
+	 * Р Р°СЃСЃС‡РµС‚ СЃСѓРјРј СЃРїРёСЃР°РЅРёСЏ
 	 * 
 	 * @param operDate
 	 * @param accBatch
@@ -1006,15 +1006,15 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Возвращает сумму и количество оборотки по ТМЦ
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃСѓРјРјСѓ Рё РєРѕР»РёС‡РµСЃС‚РІРѕ РѕР±РѕСЂРѕС‚РєРё РїРѕ РўРњР¦
 	 * @param remnVal
-	 * 			- оборотка по ТМЦ
+	 * 			- РѕР±РѕСЂРѕС‚РєР° РїРѕ РўРњР¦
 	 * @param operDate
-	 * 			- дата
+	 * 			- РґР°С‚Р°
 	 * @param isKredit
-	 * 			- <code>true</code> возвращает кредитовые суммы и количества, иначе дебетовые
+	 * 			- <code>true</code> РІРѕР·РІСЂР°С‰Р°РµС‚ РєСЂРµРґРёС‚РѕРІС‹Рµ СЃСѓРјРјС‹ Рё РєРѕР»РёС‡РµСЃС‚РІР°, РёРЅР°С‡Рµ РґРµР±РµС‚РѕРІС‹Рµ
 	 * @param isBoundIncluded
-	 * 			- признак включения оборотов из даты <code>operDate</code>
+	 * 			- РїСЂРёР·РЅР°Рє РІРєР»СЋС‡РµРЅРёСЏ РѕР±РѕСЂРѕС‚РѕРІ РёР· РґР°С‚С‹ <code>operDate</code>
 	 * @return
 	 */
 	private TurnResult getTurnResult(RemnVal remnVal, Date operDate, boolean isKredit, boolean isBoundIncluded) {
@@ -1049,7 +1049,7 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Рассчитывает цену списания для средних цен
+	 * Р Р°СЃСЃС‡РёС‚С‹РІР°РµС‚ С†РµРЅСѓ СЃРїРёСЃР°РЅРёСЏ РґР»СЏ СЃСЂРµРґРЅРёС… С†РµРЅ
 	 * 
 	 * @param operDate
 	 * @param acc
@@ -1128,7 +1128,7 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Расчет цены списания для счетов 'Материалы, товары FIFO', 'Материалы, товары LIFO'
+	 * Р Р°СЃС‡РµС‚ С†РµРЅС‹ СЃРїРёСЃР°РЅРёСЏ РґР»СЏ СЃС‡РµС‚РѕРІ 'РњР°С‚РµСЂРёР°Р»С‹, С‚РѕРІР°СЂС‹ FIFO', 'РњР°С‚РµСЂРёР°Р»С‹, С‚РѕРІР°СЂС‹ LIFO'
 	 * @param operDate
 	 * @param accBatch
 	 * @param acc
@@ -1197,7 +1197,7 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Возращает историю партии
+	 * Р’РѕР·СЂР°С‰Р°РµС‚ РёСЃС‚РѕСЂРёСЋ РїР°СЂС‚РёРё
 	 * @param accBatch
 	 * @param operDate
 	 * @return
@@ -1210,7 +1210,7 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Класс результат для хранения обороток 
+	 * РљР»Р°СЃСЃ СЂРµР·СѓР»СЊС‚Р°С‚ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РѕР±РѕСЂРѕС‚РѕРє 
 	 */
 	private class TurnResult {
 
@@ -1228,7 +1228,7 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Возвращает сервис бизнес-компонента "Периоды бух. учета" 
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРµСЂРёРѕРґС‹ Р±СѓС…. СѓС‡РµС‚Р°" 
 	 * @return
 	 */
 	private PeriodServiceLocal getPeriodService() {
@@ -1252,10 +1252,10 @@ public class ProcessorImpl implements Processor {
 	}
 
 	/**
-	 * Пересчет цен списания
+	 * РџРµСЂРµСЃС‡РµС‚ С†РµРЅ СЃРїРёСЃР°РЅРёСЏ
 	 * 
 	 * @param remnValId
-	 * 			- идентификатор оборотной ведомости по ТМЦ
+	 * 			- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕР±РѕСЂРѕС‚РЅРѕР№ РІРµРґРѕРјРѕСЃС‚Рё РїРѕ РўРњР¦
 	 */
 	protected void doEvaluateOutCost(Integer remnValId) {
 		RemnVal remnVal = ServerUtils.getPersistentManager().find(RemnVal.class, remnValId);

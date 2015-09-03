@@ -24,7 +24,7 @@ import com.mg.merp.settlement.ContractorCardServiceLocal;
 import com.mg.merp.settlement.model.ContractorCard;
 
 /**
- * Бизнес-компонент "Карточки расчетов с партнерами" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљР°СЂС‚РѕС‡РєРё СЂР°СЃС‡РµС‚РѕРІ СЃ РїР°СЂС‚РЅРµСЂР°РјРё" 
  * 
  * @author leonova
  * @version $Id: ContractorCardServiceBean.java,v 1.5 2008/02/01 11:33:54 safonov Exp $

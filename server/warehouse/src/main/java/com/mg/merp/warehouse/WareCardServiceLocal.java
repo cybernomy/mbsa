@@ -19,7 +19,7 @@ import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.warehouse.model.StockCard;
 
 /**
- * Бизнес-компонент "Карточка складского учета"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљР°СЂС‚РѕС‡РєР° СЃРєР»Р°РґСЃРєРѕРіРѕ СѓС‡РµС‚Р°"
  * 
  * @author Oleg V. Safonov
  * @author leonova
@@ -29,42 +29,42 @@ public interface WareCardServiceLocal extends
 		com.mg.framework.api.DataBusinessObjectService<StockCard, Integer> {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/warehouse/WareCard";
 
 	/**
-	 * Поиск КСУ
+	 * РџРѕРёСЃРє РљРЎРЈ
 	 * 
 	 * @param warehouse
-	 *            склад
+	 *            СЃРєР»Р°Рґ
 	 * @param mol
-	 *            МОЛ
+	 *            РњРћР›
 	 * @param catalog
-	 *            позиция каталога
+	 *            РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР°
 	 * @param onlyAvailable
-	 * 			искать только доступные для текущего пользователя
-	 * @return КСУ или <code>null</code> если не найдена
+	 * 			РёСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РґРѕСЃС‚СѓРїРЅС‹Рµ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	 * @return РљРЎРЈ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅР°
 	 * 
 	 */
 	StockCard findStockCard(Contractor warehouse, Contractor mol,
 		Catalog catalog, boolean onlyAvailable);
 
 	/**
-	 * Поиск КСУ без учета МОЛ
+	 * РџРѕРёСЃРє РљРЎРЈ Р±РµР· СѓС‡РµС‚Р° РњРћР›
 	 * 
-	 * @param warehouse	склад
-	 * @param catalog	позиция каталога
-	 * @param onlyAvailable	искать только доступные для текущего пользователя
-	 * @return	КСУ или <code>null</code> если не найдена
+	 * @param warehouse	СЃРєР»Р°Рґ
+	 * @param catalog	РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР°
+	 * @param onlyAvailable	РёСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РґРѕСЃС‚СѓРїРЅС‹Рµ РґР»СЏ С‚РµРєСѓС‰РµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	 * @return	РљРЎРЈ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅР°
 	 */
 	StockCard findStockCard(Contractor warehouse, Catalog catalog, boolean onlyAvailable);
 
 	/**
-	 * Удаление КСУ, на которые нет ссылок
+	 * РЈРґР°Р»РµРЅРёРµ РљРЎРЈ, РЅР° РєРѕС‚РѕСЂС‹Рµ РЅРµС‚ СЃСЃС‹Р»РѕРє
 	 * 
 	 * @param 
-	 * 			sctockCards список КСУ
+	 * 			sctockCards СЃРїРёСЃРѕРє РљРЎРЈ
 	 */
 	void deleteStockCards(StockCard ... sctockCards);
 }

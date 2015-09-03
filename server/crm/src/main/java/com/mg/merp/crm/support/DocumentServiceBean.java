@@ -44,7 +44,7 @@ import com.mg.merp.document.model.DocHead;
  *
  */
 /**
- * Бизнес-компонент "Документы" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”РѕРєСѓРјРµРЅС‚С‹" 
  * 
  * @author leonova
  * @version $Id: DocumentServiceBean.java,v 1.3 2006/10/17 10:08:12 leonova Exp $

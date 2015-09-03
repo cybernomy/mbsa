@@ -21,15 +21,15 @@ import com.mg.framework.api.Logger;
 import com.mg.framework.api.ui.HorizontalAlignment;
 
 /**
- * Свойства пользовательского интерфейса. При изменении файла настроек требуется перезагрузка
- * сервера приложения для вступления в силу изменений.
+ * РЎРІРѕР№СЃС‚РІР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°. РџСЂРё РёР·РјРµРЅРµРЅРёРё С„Р°Р№Р»Р° РЅР°СЃС‚СЂРѕРµРє С‚СЂРµР±СѓРµС‚СЃСЏ РїРµСЂРµР·Р°РіСЂСѓР·РєР°
+ * СЃРµСЂРІРµСЂР° РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ РІСЃС‚СѓРїР»РµРЅРёСЏ РІ СЃРёР»Сѓ РёР·РјРµРЅРµРЅРёР№.
  * 
  * @author Oleg V. Safonov
  * @version $Id: UIProperties.java,v 1.1 2008/07/28 14:20:16 safonov Exp $
  */
 public class UIProperties {
 	/**
-	 * имя файла свойств хранящего настройки по умолчанию
+	 * РёРјСЏ С„Р°Р№Р»Р° СЃРІРѕР№СЃС‚РІ С…СЂР°РЅСЏС‰РµРіРѕ РЅР°СЃС‚СЂРѕР№РєРё РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
 	private static final String UI_PROPERTIES_FILE_PATH = "/conf/ui.properties";
 	private static Logger logger = ServerUtils.getLogger(UIProperties.class);
@@ -45,47 +45,47 @@ public class UIProperties {
 	}
 
 	/**
-	 * получить формат отображения денежных величин в ячейках таблицы
+	 * РїРѕР»СѓС‡РёС‚СЊ С„РѕСЂРјР°С‚ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РґРµРЅРµР¶РЅС‹С… РІРµР»РёС‡РёРЅ РІ СЏС‡РµР№РєР°С… С‚Р°Р±Р»РёС†С‹
 	 * 
-	 * @return	формат
+	 * @return	С„РѕСЂРјР°С‚
 	 */
 	public static String getMonetaryAmountTableFormat() {
 		return uiProperties.getProperty("table.monetaryamountcell.format", ",##0.00");
 	}
 	
 	/**
-	 * получить формат отображения денежных величин в редакторах
+	 * РїРѕР»СѓС‡РёС‚СЊ С„РѕСЂРјР°С‚ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РґРµРЅРµР¶РЅС‹С… РІРµР»РёС‡РёРЅ РІ СЂРµРґР°РєС‚РѕСЂР°С…
 	 * 
-	 * @return	формат
+	 * @return	С„РѕСЂРјР°С‚
 	 */
 	public static String getMonetaryAmountEditorFormat() {
 		return uiProperties.getProperty("editor.monetaryamount.format", ",##0.00");
 	}
 
 	/**
-	 * получить формат отображения количественных величин в ячейках таблицы
+	 * РїРѕР»СѓС‡РёС‚СЊ С„РѕСЂРјР°С‚ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РєРѕР»РёС‡РµСЃС‚РІРµРЅРЅС‹С… РІРµР»РёС‡РёРЅ РІ СЏС‡РµР№РєР°С… С‚Р°Р±Р»РёС†С‹
 	 * 
-	 * @return	формат
+	 * @return	С„РѕСЂРјР°С‚
 	 */
 	public static String getQuantityTableFormat() {
 		return uiProperties.getProperty("table.quantitycell.format", ",##0.000");
 	}
 	
 	/**
-	 * получить формат отображения количественных величин в редакторах
+	 * РїРѕР»СѓС‡РёС‚СЊ С„РѕСЂРјР°С‚ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РєРѕР»РёС‡РµСЃС‚РІРµРЅРЅС‹С… РІРµР»РёС‡РёРЅ РІ СЂРµРґР°РєС‚РѕСЂР°С…
 	 * 
-	 * @return	формат
+	 * @return	С„РѕСЂРјР°С‚
 	 */
 	public static String getQuantityEditorFormat() {
 		return uiProperties.getProperty("editor.quantity.format", ",##0.000");
 	}
 
 	/**
-	 * получить свойство горизонтального выравнивания
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРІРѕР№СЃС‚РІРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕРіРѕ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ
 	 * 
-	 * @param name	имя свойства
-	 * @param defaultValue	значение по умолчанию
-	 * @return	значение свойства или {@link com.mg.framework.api.ui.HorizontalAlignment#LEFT} если не найдено
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param defaultValue	Р·РЅР°С‡РµРЅРёРµ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @return	Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР° РёР»Рё {@link com.mg.framework.api.ui.HorizontalAlignment#LEFT} РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	public static HorizontalAlignment getHorizontalAlignmentProperty(String name, HorizontalAlignment defaultValue) {
 		try {
@@ -101,54 +101,54 @@ public class UIProperties {
 	}
 
 	/**
-	 * получить свойство горизонтального выравнивания числовых величин в ячейках таблицы
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРІРѕР№СЃС‚РІРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕРіРѕ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ С‡РёСЃР»РѕРІС‹С… РІРµР»РёС‡РёРЅ РІ СЏС‡РµР№РєР°С… С‚Р°Р±Р»РёС†С‹
 	 * 
-	 * @return	значение свойства или {@link com.mg.framework.api.ui.HorizontalAlignment#RIGHT} если не найдено
+	 * @return	Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР° РёР»Рё {@link com.mg.framework.api.ui.HorizontalAlignment#RIGHT} РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	public static HorizontalAlignment getNumberTableCellHorizontalAlignment() {
 		return getHorizontalAlignmentProperty("table.numbercell.horizontalalignment", HorizontalAlignment.RIGHT);
 	}
 
 	/**
-	 * получить свойство горизонтального выравнивания денежных величин в ячейках таблицы
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРІРѕР№СЃС‚РІРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕРіРѕ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ РґРµРЅРµР¶РЅС‹С… РІРµР»РёС‡РёРЅ РІ СЏС‡РµР№РєР°С… С‚Р°Р±Р»РёС†С‹
 	 * 
-	 * @return	значение свойства или {@link com.mg.framework.api.ui.HorizontalAlignment#RIGHT} если не найдено
+	 * @return	Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР° РёР»Рё {@link com.mg.framework.api.ui.HorizontalAlignment#RIGHT} РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	public static HorizontalAlignment getMonetaryAmountTableCellHorizontalAlignment() {
 		return getHorizontalAlignmentProperty("table.monetaryamountcell.horizontalalignment", HorizontalAlignment.RIGHT);
 	}
 
 	/**
-	 * получить свойство горизонтального выравнивания количественных величин в ячейках таблицы
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРІРѕР№СЃС‚РІРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕРіРѕ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ РєРѕР»РёС‡РµСЃС‚РІРµРЅРЅС‹С… РІРµР»РёС‡РёРЅ РІ СЏС‡РµР№РєР°С… С‚Р°Р±Р»РёС†С‹
 	 * 
-	 * @return	значение свойства или {@link com.mg.framework.api.ui.HorizontalAlignment#RIGHT} если не найдено
+	 * @return	Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР° РёР»Рё {@link com.mg.framework.api.ui.HorizontalAlignment#RIGHT} РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	public static HorizontalAlignment getQuantityTableCellHorizontalAlignment() {
 		return getHorizontalAlignmentProperty("table.quantitycell.horizontalalignment", HorizontalAlignment.RIGHT);
 	}
 
 	/**
-	 * получить свойство горизонтального выравнивания числовых величин в редакторах
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРІРѕР№СЃС‚РІРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕРіРѕ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ С‡РёСЃР»РѕРІС‹С… РІРµР»РёС‡РёРЅ РІ СЂРµРґР°РєС‚РѕСЂР°С…
 	 * 
-	 * @return	значение свойства или {@link com.mg.framework.api.ui.HorizontalAlignment#RIGHT} если не найдено
+	 * @return	Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР° РёР»Рё {@link com.mg.framework.api.ui.HorizontalAlignment#RIGHT} РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	public static HorizontalAlignment getNumberEditorHorizontalAlignment() {
 		return getHorizontalAlignmentProperty("editor.number.horizontalalignment", HorizontalAlignment.RIGHT);
 	}
 
 	/**
-	 * получить свойство горизонтального выравнивания денежных величин в редакторах
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРІРѕР№СЃС‚РІРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕРіРѕ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ РґРµРЅРµР¶РЅС‹С… РІРµР»РёС‡РёРЅ РІ СЂРµРґР°РєС‚РѕСЂР°С…
 	 * 
-	 * @return	значение свойства или {@link com.mg.framework.api.ui.HorizontalAlignment#RIGHT} если не найдено
+	 * @return	Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР° РёР»Рё {@link com.mg.framework.api.ui.HorizontalAlignment#RIGHT} РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	public static HorizontalAlignment getMonetaryAmountEditorHorizontalAlignment() {
 		return getHorizontalAlignmentProperty("editor.monetaryamount.horizontalalignment", HorizontalAlignment.RIGHT);
 	}
 
 	/**
-	 * получить свойство горизонтального выравнивания количественных величин в редакторах
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРІРѕР№СЃС‚РІРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕРіРѕ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ РєРѕР»РёС‡РµСЃС‚РІРµРЅРЅС‹С… РІРµР»РёС‡РёРЅ РІ СЂРµРґР°РєС‚РѕСЂР°С…
 	 * 
-	 * @return	значение свойства или {@link com.mg.framework.api.ui.HorizontalAlignment#RIGHT} если не найдено
+	 * @return	Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР° РёР»Рё {@link com.mg.framework.api.ui.HorizontalAlignment#RIGHT} РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	public static HorizontalAlignment getQuantityEditorHorizontalAlignment() {
 		return getHorizontalAlignmentProperty("editor.quantity.horizontalalignment", HorizontalAlignment.RIGHT);

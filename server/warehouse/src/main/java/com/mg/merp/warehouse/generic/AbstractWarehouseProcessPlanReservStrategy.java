@@ -30,8 +30,8 @@ import com.mg.merp.warehouse.model.StockPlanHistoryKind;
 import com.mg.merp.warehouse.model.Warehouse;
 
 /**
- * Абстрактный класс-предок для классов-стратегий складского планирования и
- * резервирования
+ * РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ РєР»Р°СЃСЃ-РїСЂРµРґРѕРє РґР»СЏ РєР»Р°СЃСЃРѕРІ-СЃС‚СЂР°С‚РµРіРёР№ СЃРєР»Р°РґСЃРєРѕРіРѕ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ Рё
+ * СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРёСЏ
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -55,11 +55,11 @@ public abstract class AbstractWarehouseProcessPlanReservStrategy implements
 	}
 
 	/**
-	 * Создание КСУ
+	 * РЎРѕР·РґР°РЅРёРµ РљРЎРЈ
 	 * 
 	 * @param docSpec
-	 *            спецификация документа
-	 * @return КСУ
+	 *            СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return РљРЎРЈ
 	 */
 	private StockCard fillStockCard(WarehouseProcessDocumentLineData docLineData, StockPlanHistoryKind kind, StockPlanHistoryDirection dir) {
 		WareCardServiceLocal service = (WareCardServiceLocal) ApplicationDictionaryLocator.locate()
@@ -73,7 +73,7 @@ public abstract class AbstractWarehouseProcessPlanReservStrategy implements
 		
 		StockCard stockCard = service.findStockCard(stock, mol, docLineData.getCatalog(), false);
 		if (stockCard == null) {
-			// КСУ отсутствует
+			// РљРЎРЈ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚
 			stockCard = service.initialize();
 			stockCard.setCatalog(docLineData.getCatalog());
 			stockCard.setMol(mol);
@@ -121,29 +121,29 @@ public abstract class AbstractWarehouseProcessPlanReservStrategy implements
 	}
 
 	/**
-	 * инициализация КСУ
+	 * РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РљРЎРЈ
 	 * 
-	 * @param stockCard	КСУ
-	 * @param docLineData	информация о спецификации
-	 * @param direction	направление
+	 * @param stockCard	РљРЎРЈ
+	 * @param docLineData	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param direction	РЅР°РїСЂР°РІР»РµРЅРёРµ
 	 */
 	protected abstract void createQuanAttribute(StockCard stockCard,
 			WarehouseProcessDocumentLineData docLineData, StockPlanHistoryDirection direction);
 	
 	/**
-	 * изменение КСУ
+	 * РёР·РјРµРЅРµРЅРёРµ РљРЎРЈ
 	 * 
-	 * @param stockCard	КСУ
-	 * @param docLineData	информация о спецификации
-	 * @param direction	направление
+	 * @param stockCard	РљРЎРЈ
+	 * @param docLineData	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param direction	РЅР°РїСЂР°РІР»РµРЅРёРµ
 	 */
 	protected abstract void updateQuanAttribute(StockCard stockCard,
 			WarehouseProcessDocumentLineData docLineData, StockPlanHistoryDirection direction);
 
 	/**
-	 * реализация процесса
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС†РµСЃСЃР°
 	 * 
-	 * @param docLineData	информация о спецификации
+	 * @param docLineData	РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	protected abstract void doProcess(WarehouseProcessDocumentLineData docLineData);
 

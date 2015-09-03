@@ -24,7 +24,7 @@ import com.mg.merp.retail.InvoiceSpecServiceLocal;
 import com.mg.merp.retail.model.RtlInvoiceSpec;
 
 /**
- * Реализация бизнес-компонента "Спецификация документов на отпуск" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚РѕРІ РЅР° РѕС‚РїСѓСЃРє" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

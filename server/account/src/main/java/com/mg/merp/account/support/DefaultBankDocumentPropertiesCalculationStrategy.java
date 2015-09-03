@@ -21,7 +21,7 @@ import com.mg.framework.utils.MathUtils;
 import com.mg.merp.account.model.BankDocument;
 
 /**
- * Стандартная реализация стратегии расчета свойств банковского документа
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё СЂР°СЃС‡РµС‚Р° СЃРІРѕР№СЃС‚РІ Р±Р°РЅРєРѕРІСЃРєРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Artem V. Sharapov
  * @version $Id: DefaultBankDocumentPropertiesCalculationStrategy.java,v 1.1 2007/11/08 12:18:48 sharapov Exp $
@@ -40,7 +40,7 @@ public class DefaultBankDocumentPropertiesCalculationStrategy {
 	}
 	
 	/**
-	 * Рассчитать и установить сумму документа
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ Рё СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃСѓРјРјСѓ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	public void calculateDocSum() {
 		BigDecimal sumNds1 = entity.getNds1Summa() == null ? BigDecimal.ZERO : entity.getNds1Summa(); 
@@ -52,7 +52,7 @@ public class DefaultBankDocumentPropertiesCalculationStrategy {
 	}
 
 	/**
-	 * Рассчитать и установить суммы НДС
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ Рё СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃСѓРјРјС‹ РќР”РЎ
 	 */
 	public void calculateNdsSum() {
 		BigDecimal nds1Rate = entity.getNds1Rate() == null ? BigDecimal.ZERO : entity.getNds1Rate();

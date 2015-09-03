@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.TariffingCategoryServiceLocal;
 import com.mg.merp.personnelref.model.TariffingCategory;
 
 /**
- * Бизнес-компонент "Категории тарификации должности" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљР°С‚РµРіРѕСЂРёРё С‚Р°СЂРёС„РёРєР°С†РёРё РґРѕР»Р¶РЅРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @version $Id: TariffingCategoryServiceBean.java,v 1.4 2006/09/04 13:02:21 leonova Exp $

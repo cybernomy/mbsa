@@ -26,7 +26,7 @@ import com.mg.merp.core.model.SysClient;
 import com.mg.merp.paymentcontrol.ConfigServiceLocal;
 
 /**
- * Контроллер комманды меню "Конфигурация модуля <Платежный календарь>"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРјРјР°РЅРґС‹ РјРµРЅСЋ "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РџР»Р°С‚РµР¶РЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ>"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmcConfigMenuCommand.java,v 1.2 2008/08/15 14:57:38 sharapov Exp $

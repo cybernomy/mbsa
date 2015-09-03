@@ -17,7 +17,7 @@ package com.mg.merp.planning;
 import com.mg.merp.planning.model.FirmPlannedOrder;
 
 /**
- * Бизнес-компонент "Подтвержденные заказы"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџРѕРґС‚РІРµСЂР¶РґРµРЅРЅС‹Рµ Р·Р°РєР°Р·С‹"
  * 
  * @author Oleg V. Safonov
  * @author leonova
@@ -27,14 +27,14 @@ public interface FirmPlannedOrderServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<FirmPlannedOrder, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/planning/FirmPlannedOrder";
 
 	/**
-	 * создание заказов по рекомендациям ППМ
+	 * СЃРѕР·РґР°РЅРёРµ Р·Р°РєР°Р·РѕРІ РїРѕ СЂРµРєРѕРјРµРЅРґР°С†РёСЏРј РџРџРњ
 	 * 
-	 * @param mrpVersionId	версия ППМ
+	 * @param mrpVersionId	РІРµСЂСЃРёСЏ РџРџРњ
 	 */
 	void createByMrpRecommendation(int mrpVersionId);
 

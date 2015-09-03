@@ -24,7 +24,7 @@ import com.mg.merp.lbschedule.ItemKindServiceLocal;
 import com.mg.merp.lbschedule.model.ItemKind;
 
 /**
- * Бизнес-компонент "Типы пунктов ГИО" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ РїСѓРЅРєС‚РѕРІ Р“РРћ" 
  * 
  * @author leonova
  * @version $Id: ItemKindServiceBean.java,v 1.3 2006/09/15 04:30:27 leonova Exp $

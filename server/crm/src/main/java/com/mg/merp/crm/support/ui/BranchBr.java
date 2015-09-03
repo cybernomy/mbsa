@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.Branch;
 
 /**
- * Браузер отраслей
+ * Р‘СЂР°СѓР·РµСЂ РѕС‚СЂР°СЃР»РµР№
  * 
  * @author leonova
  * @version $Id: BranchBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

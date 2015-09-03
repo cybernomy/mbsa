@@ -24,7 +24,7 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.merp.reference.CurrencyServiceLocal;
 
 /**
- * Поиск сущности "Валюта"
+ * РџРѕРёСЃРє СЃСѓС‰РЅРѕСЃС‚Рё "Р’Р°Р»СЋС‚Р°"
  * 
  * @author leonova
  * @version $Id: CurrencySearchHelp.java,v 1.4 2006/09/15 11:50:51 safonov Exp $

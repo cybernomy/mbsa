@@ -20,7 +20,7 @@ import com.mg.framework.service.jboss.SQLExceptionTranslatorManagerServiceMBean;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Локатор менеджера трансляторов SQL ИС в пользовательские исключения
+ * Р›РѕРєР°С‚РѕСЂ РјРµРЅРµРґР¶РµСЂР° С‚СЂР°РЅСЃР»СЏС‚РѕСЂРѕРІ SQL РРЎ РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РёСЃРєР»СЋС‡РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: SQLExceptionTranslatorManagerLocator.java,v 1.1 2006/11/17 14:28:55 safonov Exp $
@@ -29,10 +29,10 @@ public class SQLExceptionTranslatorManagerLocator {
 	private static volatile SQLExceptionTranslatorManager instance = null;
 
 	/**
-	 * найти сервис менеджера трансляторов
+	 * РЅР°Р№С‚Рё СЃРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° С‚СЂР°РЅСЃР»СЏС‚РѕСЂРѕРІ
 	 * 
-	 * @return	сервис
-	 * @throws ApplicationException	при любых ошибках
+	 * @return	СЃРµСЂРІРёСЃ
+	 * @throws ApplicationException	РїСЂРё Р»СЋР±С‹С… РѕС€РёР±РєР°С…
 	 */
 	public static SQLExceptionTranslatorManager locate() throws ApplicationException {
 		if (instance == null)

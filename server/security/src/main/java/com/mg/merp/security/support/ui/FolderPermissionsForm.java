@@ -31,7 +31,7 @@ import com.mg.merp.security.FolderAccessServiceLocal;
 import com.mg.merp.security.FolderPermission;
 
 /**
- * Форма настройки прав пользователя на папки
+ * Р¤РѕСЂРјР° РЅР°СЃС‚СЂРѕР№РєРё РїСЂР°РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РЅР° РїР°РїРєРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: FolderPermissionsForm.java,v 1.1 2007/02/24 14:23:54 safonov Exp $
@@ -109,7 +109,7 @@ public class FolderPermissionsForm extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик события "Закрыть форму"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "Р—Р°РєСЂС‹С‚СЊ С„РѕСЂРјСѓ"
 	 * 
 	 * @param event
 	 */

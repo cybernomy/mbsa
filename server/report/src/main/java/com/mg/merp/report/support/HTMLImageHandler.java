@@ -29,8 +29,8 @@ import com.mg.framework.support.ui.UniversalFileWebResourceProvider;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Реализация обработчика изображений генератора отчетов для отображения через
- * менеджер загрузок
+ * Р РµР°Р»РёР·Р°С†РёСЏ РѕР±СЂР°Р±РѕС‚С‡РёРєР° РёР·РѕР±СЂР°Р¶РµРЅРёР№ РіРµРЅРµСЂР°С‚РѕСЂР° РѕС‚С‡РµС‚РѕРІ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С‡РµСЂРµР·
+ * РјРµРЅРµРґР¶РµСЂ Р·Р°РіСЂСѓР·РѕРє
  * 
  * @author Oleg V. Safonov
  * @version $Id: HTMLImageHandler.java,v 1.1 2007/11/09 12:05:07 safonov Exp $
@@ -72,7 +72,7 @@ public class HTMLImageHandler extends HTMLServerImageHandler {
 		} catch (IOException e)	{
 			log.log(Level.SEVERE, e.getMessage(), e);
 		}
-		file.deleteOnExit();//временные файлы
+		file.deleteOnExit();//РІСЂРµРјРµРЅРЅС‹Рµ С„Р°Р№Р»С‹
 		
 		DownloadManager.getInstance().put(fileName, new UniversalFileWebResourceProvider(file));
 		ret = generateURI(fileName);

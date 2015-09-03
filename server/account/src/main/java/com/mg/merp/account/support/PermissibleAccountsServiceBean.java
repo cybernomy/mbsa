@@ -40,7 +40,7 @@ import com.mg.merp.account.model.EconomicSpec;
 import com.mg.merp.account.model.PermissibleAccounts;
 
 /**
- * Реализация бизнес-компонента "Допустимая корреспонденция счетов" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”РѕРїСѓСЃС‚РёРјР°СЏ РєРѕСЂСЂРµСЃРїРѕРЅРґРµРЅС†РёСЏ СЃС‡РµС‚РѕРІ" 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -88,12 +88,12 @@ public class PermissibleAccountsServiceBean extends AbstractPOJODataBusinessObje
  	}
  
 	/**
-	 * Создание на основе хоз. операций
+	 * РЎРѕР·РґР°РЅРёРµ РЅР° РѕСЃРЅРѕРІРµ С…РѕР·. РѕРїРµСЂР°С†РёР№
 	 * 
 	 * @param beginDate
-	 * 				- с даты
+	 * 				- СЃ РґР°С‚С‹
 	 * @param endDate
-	 * 				- по дату
+	 * 				- РїРѕ РґР°С‚Сѓ
 	 */
  	protected void doCreateFromEconomicOper(Date beginDate, Date endDate) {
  		if (beginDate == null)
@@ -165,8 +165,8 @@ public class PermissibleAccountsServiceBean extends AbstractPOJODataBusinessObje
  	 		else
  	 			criteria.add(Restrictions.eq("AnlKt5", anlKt5));
  			List<PermissibleAccounts> permAccList = ormTemplate.findByCriteria(criteria);
- 			// если среди допустимых счетов нет счета с аттрибутами проводки
- 			// создаем домустимый счет
+ 			// РµСЃР»Рё СЃСЂРµРґРё РґРѕРїСѓСЃС‚РёРјС‹С… СЃС‡РµС‚РѕРІ РЅРµС‚ СЃС‡РµС‚Р° СЃ Р°С‚С‚СЂРёР±СѓС‚Р°РјРё РїСЂРѕРІРѕРґРєРё
+ 			// СЃРѕР·РґР°РµРј РґРѕРјСѓСЃС‚РёРјС‹Р№ СЃС‡РµС‚
  			if (permAccList.isEmpty()) {
  				PermissibleAccounts permAcc = initialize();
  				permAcc.setAccDb(accDb);

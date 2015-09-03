@@ -30,7 +30,7 @@ import com.mg.merp.warehouse.WareCardServiceLocal;
 import com.mg.merp.warehouse.model.StockCard;
 
 /**
- * Бизнес-компонент "Карточки складского учета"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљР°СЂС‚РѕС‡РєРё СЃРєР»Р°РґСЃРєРѕРіРѕ СѓС‡РµС‚Р°"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WareCardServiceBean.java,v 1.11 2008/04/18 15:22:11 safonov Exp $
@@ -51,14 +51,14 @@ public class WareCardServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 		Criteria criteria = OrmTemplate.createCriteria(StockCard.class, "sc")
 				.add(Restrictions.eq("sc.Catalog", catalog))
 				.add(Restrictions.eq("sc.Stock", warehouse));
-		//учитываем МОЛ
+		//СѓС‡РёС‚С‹РІР°РµРј РњРћР›
 		if (byContractor) {
 			if (mol != null)
 				criteria.add(Restrictions.eq("sc.Mol", mol));
 			else
 				criteria.add(Restrictions.isNull("sc.Mol"));
 		}
-		//учитываем права пользователя
+		//СѓС‡РёС‚С‹РІР°РµРј РїСЂР°РІР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 		if (onlyAvailable)
 			DatabaseUtils.generateFlatBrowseCriteria(criteria, "sc.Stock", 4);
 		return OrmTemplate.getInstance().findUniqueByCriteria(criteria);

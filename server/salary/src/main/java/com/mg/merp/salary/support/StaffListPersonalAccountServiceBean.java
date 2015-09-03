@@ -22,7 +22,7 @@ import com.mg.merp.salary.StaffListPersonalAccountServiceLocal;
 import com.mg.merp.personnelref.model.PersonalAccount;
 
 /**
- * Бизнес-компонент "Лицевые счета сотрудников" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р›РёС†РµРІС‹Рµ СЃС‡РµС‚Р° СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ" 
  * 
  * @author leonova
  * @version $Id: StaffListPersonalAccountServiceBean.java,v 1.5 2006/11/02 16:24:34 safonov Exp $

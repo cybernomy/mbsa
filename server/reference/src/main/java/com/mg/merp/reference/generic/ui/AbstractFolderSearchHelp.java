@@ -20,8 +20,8 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.merp.reference.support.ui.FolderSearchForm;
 
 /**
- * Абстрактный класс поиска папок, отбирает папки по типу папок, классы наследники должны
- * загружать в контекст импорта тип папки и указать имя контекста
+ * РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ РєР»Р°СЃСЃ РїРѕРёСЃРєР° РїР°РїРѕРє, РѕС‚Р±РёСЂР°РµС‚ РїР°РїРєРё РїРѕ С‚РёРїСѓ РїР°РїРѕРє, РєР»Р°СЃСЃС‹ РЅР°СЃР»РµРґРЅРёРєРё РґРѕР»Р¶РЅС‹
+ * Р·Р°РіСЂСѓР¶Р°С‚СЊ РІ РєРѕРЅС‚РµРєСЃС‚ РёРјРїРѕСЂС‚Р° С‚РёРї РїР°РїРєРё Рё СѓРєР°Р·Р°С‚СЊ РёРјСЏ РєРѕРЅС‚РµРєСЃС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractFolderSearchHelp.java,v 1.2 2006/09/20 13:05:37 safonov Exp $
@@ -29,9 +29,9 @@ import com.mg.merp.reference.support.ui.FolderSearchForm;
 public abstract class AbstractFolderSearchHelp extends AbstractSearchHelp {
 
 	/**
-	 * возвращает имя контекста в котором хранится тип папки
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ РёРјСЏ РєРѕРЅС‚РµРєСЃС‚Р° РІ РєРѕС‚РѕСЂРѕРј С…СЂР°РЅРёС‚СЃСЏ С‚РёРї РїР°РїРєРё
 	 * 
-	 * @return	имя контекста
+	 * @return	РёРјСЏ РєРѕРЅС‚РµРєСЃС‚Р°
 	 */
 	protected abstract String getFolderTypeContextName();
 	

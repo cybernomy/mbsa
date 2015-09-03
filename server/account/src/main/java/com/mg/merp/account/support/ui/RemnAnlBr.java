@@ -43,7 +43,7 @@ import com.mg.merp.core.support.CoreUtils;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Контроллер формы списка бизнес-компонента "Остатки и обороты по аналитическим счетам"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ Р°РЅР°Р»РёС‚РёС‡РµСЃРєРёРј СЃС‡РµС‚Р°Рј"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -204,7 +204,7 @@ public class RemnAnlBr extends AbstractHierarchyBrowseFormWithTurn {
 	}
 	
 	/**
-	 * Вызов сервиса бизнес-компонента "Остатки и обороты по счетам бух. учета"
+	 * Р’С‹Р·РѕРІ СЃРµСЂРІРёСЃР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ СЃС‡РµС‚Р°Рј Р±СѓС…. СѓС‡РµС‚Р°"
 	 * @return
 	 */
 	protected RemnAnlServiceLocal getRemnAnlService() {
@@ -214,7 +214,7 @@ public class RemnAnlBr extends AbstractHierarchyBrowseFormWithTurn {
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Удалить пустые строки"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РЈРґР°Р»РёС‚СЊ РїСѓСЃС‚С‹Рµ СЃС‚СЂРѕРєРё"
 	 * 
 	 * @param event
 	 * @throws ApplicationException

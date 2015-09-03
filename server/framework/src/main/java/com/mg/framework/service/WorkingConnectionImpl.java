@@ -34,7 +34,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.framework.utils.StringUtils;
 
 /**
- * Реализация рабочего соединения
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЂР°Р±РѕС‡РµРіРѕ СЃРѕРµРґРёРЅРµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: WorkingConnectionImpl.java,v 1.20 2008/08/28 16:49:25 safonov Exp $
@@ -78,7 +78,7 @@ public final class WorkingConnectionImpl
 
 	public void login(Map<String, Object> params) throws InvalidUserNameOrPassword, LoginException {
 		SecurityUtils.authenticate((String) params.get(LOGIN_PARAM), (String) params.get(PASSW_PARAM));
-		//TODO здесь должны выполнить проверку специфичных для приложения прав, например не истек ли срок действия логина и т.п.
+		//TODO Р·РґРµСЃСЊ РґРѕР»Р¶РЅС‹ РІС‹РїРѕР»РЅРёС‚СЊ РїСЂРѕРІРµСЂРєСѓ СЃРїРµС†РёС„РёС‡РЅС‹С… РґР»СЏ РїСЂРёР»РѕР¶РµРЅРёСЏ РїСЂР°РІ, РЅР°РїСЂРёРјРµСЂ РЅРµ РёСЃС‚РµРє Р»Рё СЃСЂРѕРє РґРµР№СЃС‚РІРёСЏ Р»РѕРіРёРЅР° Рё С‚.Рї.
 
 		userProfile = SecuritySystemLocator.locate().loadUserProfile((String) params.get(LOGIN_PARAM), (Locale) params.get(LOCALE_PARAM), (Locale) params.get(DEFAULT_LOCALE_PARAM));
 		

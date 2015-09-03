@@ -31,7 +31,7 @@ import com.mg.merp.mfreference.model.DayCalendar;
 import com.mg.merp.mfreference.model.DayTime;
 
 /**
- * Браузер дневного календаря
+ * Р‘СЂР°СѓР·РµСЂ РґРЅРµРІРЅРѕРіРѕ РєР°Р»РµРЅРґР°СЂСЏ
  * 
  * @author Oleg V. Safonov
  * @author Julia 'Jetta' Konyashkina

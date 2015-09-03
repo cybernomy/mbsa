@@ -22,7 +22,7 @@ import com.mg.merp.reference.model.Measure;
 import com.mg.merp.reference.model.PriceListHead;
 
 /**
- * Модель данных для создания позиции спецификации пункта графика
+ * РњРѕРґРµР»СЊ РґР°РЅРЅС‹С… РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р° РіСЂР°С„РёРєР°
  * 
  * @author Artem V. Sharapov
  * @version $Id: ItemSpecCreateData.java,v 1.1 2007/04/17 12:49:25 sharapov Exp $

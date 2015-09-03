@@ -18,7 +18,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.document.generic.ui.DocumentBrowseForm;
 
 /**
- * Контроллер формы списка кассовых документов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РєР°СЃСЃРѕРІС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: CashDocumentBr.java,v 1.5 2008/02/21 12:19:40 alikaev Exp $ 

@@ -17,7 +17,7 @@ package com.mg.merp.document;
 import java.util.EventListener;
 
 /**
- * Слушатель создания документа на основе этапом ДО
+ * РЎР»СѓС€Р°С‚РµР»СЊ СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІРµ СЌС‚Р°РїРѕРј Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: CreateDocumentDocFlowListener.java,v 1.1 2007/09/27 07:17:11 safonov Exp $
@@ -25,12 +25,12 @@ import java.util.EventListener;
 public interface CreateDocumentDocFlowListener extends EventListener {
 
 	/**
-	 * действие выполнено
+	 * РґРµР№СЃС‚РІРёРµ РІС‹РїРѕР»РЅРµРЅРѕ
 	 */
 	void completed();
 	
 	/**
-	 * действие отменено
+	 * РґРµР№СЃС‚РІРёРµ РѕС‚РјРµРЅРµРЅРѕ
 	 */
 	void canceled();
 	

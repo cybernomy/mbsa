@@ -28,7 +28,7 @@ import com.mg.merp.document.model.DocType;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер ввода данных для проведения операции перемещение инвентарной карточки
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РІРІРѕРґР° РґР°РЅРЅС‹С… РґР»СЏ РїСЂРѕРІРµРґРµРЅРёСЏ РѕРїРµСЂР°С†РёРё РїРµСЂРµРјРµС‰РµРЅРёРµ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРё
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: AccInventoryMoveDlg.java,v 1.1 2008/04/29 05:29:04 alikaev Exp $

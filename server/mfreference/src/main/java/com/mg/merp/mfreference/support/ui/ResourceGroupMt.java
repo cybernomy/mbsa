@@ -32,7 +32,7 @@ import com.mg.merp.mfreference.ResourceGroupCapacityServiceLocal;
 import com.mg.merp.mfreference.model.ResourceGroupCapacity;
 
 /**
- * Контроллер формы поддержки групп ресурсов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РіСЂСѓРїРї СЂРµСЃСѓСЂСЃРѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: ResourceGroupMt.java,v 1.5 2008/03/04 09:15:15 alikaev Exp $

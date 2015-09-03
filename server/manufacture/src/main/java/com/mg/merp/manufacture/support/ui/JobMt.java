@@ -40,7 +40,7 @@ import com.mg.merp.manufacture.model.JobRoute;
 import com.mg.merp.mfreference.support.ui.CostDetailTableController;
 
 /**
- * Контроллер формы поддержки заказ-нарядов на производство
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р·Р°РєР°Р·-РЅР°СЂСЏРґРѕРІ РЅР° РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕ
  *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: JobMt.java,v 1.8 2009/03/06 07:20:57 safonov Exp $

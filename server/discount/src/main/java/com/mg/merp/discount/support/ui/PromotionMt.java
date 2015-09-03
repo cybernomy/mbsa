@@ -32,7 +32,7 @@ import com.mg.merp.discount.PromotionLineServiceLocal;
 import com.mg.merp.discount.model.PromotionLine;
 
 /**
- * Контроллер формы поддержки "Рекламное мероприятие"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "Р РµРєР»Р°РјРЅРѕРµ РјРµСЂРѕРїСЂРёСЏС‚РёРµ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PromotionMt.java,v 1.1 2007/10/30 14:15:02 sharapov Exp $

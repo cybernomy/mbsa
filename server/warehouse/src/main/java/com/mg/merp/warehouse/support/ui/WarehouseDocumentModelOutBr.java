@@ -28,7 +28,7 @@ import com.mg.merp.warehouse.WarehouseDocumentHeadModelOutServiceLocal;
 import com.mg.merp.warehouse.model.StockDocumentHeadModel;
 
 /**
- * Контроллер формы списка образцов расходных ордеров
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ СЂР°СЃС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: WarehouseDocumentModelOutBr.java,v 1.4 2006/09/12 10:51:47 leonova Exp $

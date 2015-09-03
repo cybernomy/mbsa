@@ -17,7 +17,7 @@ package com.mg.merp.finance.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Периоды финансового учета"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРµСЂРёРѕРґС‹ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°"
  * 
  * @author hbm2java
  * @author Artem V. Sharapov
@@ -57,7 +57,7 @@ implements java.io.Serializable {
 	// Property accessors
 
 	/**
-	 * @return Id - идентификатор сущности
+	 * @return Id - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСѓС‰РЅРѕСЃС‚Рё
 	 */
 	@DataItemName("ID") //$NON-NLS-1$
 	public java.lang.Integer getId() {
@@ -86,7 +86,7 @@ implements java.io.Serializable {
 	}
 
 	/**
-	 * @return java.lang.String - Наименование фин. периода
+	 * @return java.lang.String - РќР°РёРјРµРЅРѕРІР°РЅРёРµ С„РёРЅ. РїРµСЂРёРѕРґР°
 	 */
 	@DataItemName("Finance.Period.PName") //$NON-NLS-1$
 	public java.lang.String getPName() {
@@ -95,14 +95,14 @@ implements java.io.Serializable {
 
 	/**
 	 * @param Pname -
-	 *            Наименование фин. периода
+	 *            РќР°РёРјРµРЅРѕРІР°РЅРёРµ С„РёРЅ. РїРµСЂРёРѕРґР°
 	 */
 	public void setPName(java.lang.String Pname) {
 		this.PName = Pname;
 	}
 
 	/**
-	 * @return java.util.Date - Дата начала фин. периода
+	 * @return java.util.Date - Р”Р°С‚Р° РЅР°С‡Р°Р»Р° С„РёРЅ. РїРµСЂРёРѕРґР°
 	 */
 	@DataItemName("Finance.Period.DateFrom") //$NON-NLS-1$
 	public java.util.Date getDateFrom() {
@@ -111,14 +111,14 @@ implements java.io.Serializable {
 
 	/**
 	 * @param Datefrom -
-	 *            Дата начала фин. периода
+	 *            Р”Р°С‚Р° РЅР°С‡Р°Р»Р° С„РёРЅ. РїРµСЂРёРѕРґР°
 	 */
 	public void setDateFrom(java.util.Date Datefrom) {
 		this.DateFrom = Datefrom;
 	}
 
 	/**
-	 * @return java.util.Date - Дата окончания фин. периода
+	 * @return java.util.Date - Р”Р°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ С„РёРЅ. РїРµСЂРёРѕРґР°
 	 */
 	@DataItemName("Finance.Period.DateTo") //$NON-NLS-1$
 	public java.util.Date getDateTo() {
@@ -127,14 +127,14 @@ implements java.io.Serializable {
 
 	/**
 	 * @param Dateto -
-	 *            Дата окончания фин. периода
+	 *            Р”Р°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ С„РёРЅ. РїРµСЂРёРѕРґР°
 	 */
 	public void setDateTo(java.util.Date Dateto) {
 		this.DateTo = Dateto;
 	}
 
 	/**
-	 * @return java.lang.String - Кто закрыл фин.период
+	 * @return java.lang.String - РљС‚Рѕ Р·Р°РєСЂС‹Р» С„РёРЅ.РїРµСЂРёРѕРґ
 	 */
 	@DataItemName("Finance.Period.WhoClosed") //$NON-NLS-1$
 	public java.lang.String getWhoClosed() {
@@ -143,14 +143,14 @@ implements java.io.Serializable {
 
 	/**
 	 * @param Whoclosed -
-	 *            Кто закрыл фин.период
+	 *            РљС‚Рѕ Р·Р°РєСЂС‹Р» С„РёРЅ.РїРµСЂРёРѕРґ
 	 */
 	public void setWhoClosed(java.lang.String Whoclosed) {
 		this.WhoClosed = Whoclosed;
 	}
 
 	/**
-	 * @return java.util.Date - дата закрытия фин. периода
+	 * @return java.util.Date - РґР°С‚Р° Р·Р°РєСЂС‹С‚РёСЏ С„РёРЅ. РїРµСЂРёРѕРґР°
 	 */
 	@DataItemName("Finance.Period.DateClose") //$NON-NLS-1$
 	public java.util.Date getDateClose() {
@@ -159,7 +159,7 @@ implements java.io.Serializable {
 
 	/**
 	 * @param Dateclose -
-	 *            дата закрытия фин. периода
+	 *            РґР°С‚Р° Р·Р°РєСЂС‹С‚РёСЏ С„РёРЅ. РїРµСЂРёРѕРґР°
 	 */
 	public void setDateClose(java.util.Date Dateclose) {
 		this.DateClose = Dateclose;

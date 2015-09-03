@@ -28,7 +28,7 @@ import com.mg.merp.core.model.SysAudit;
 import com.mg.merp.core.model.SysClient;
 
 /**
- * Реализация обработчика события аудита системы
+ * Р РµР°Р»РёР·Р°С†РёСЏ РѕР±СЂР°Р±РѕС‚С‡РёРєР° СЃРѕР±С‹С‚РёСЏ Р°СѓРґРёС‚Р° СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: SystemAuditListenerBean.java,v 1.3 2008/05/29 08:37:10 safonov Exp $

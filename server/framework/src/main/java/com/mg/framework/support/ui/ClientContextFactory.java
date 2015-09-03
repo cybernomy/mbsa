@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.ClientContext;
 import com.mg.framework.support.ui.ulc.ULCClientContext;
 
 /**
- * Фабрика среды пользовательского интерфейса
+ * Р¤Р°Р±СЂРёРєР° СЃСЂРµРґС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: ClientContextFactory.java,v 1.1 2006/11/11 10:36:20 safonov Exp $
@@ -28,18 +28,18 @@ public class ClientContextFactory {
 	private ClientContext defaultClientContext = new ULCClientContext();
 	
 	/**
-	 * получить объект-одиночку
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕР±СЉРµРєС‚-РѕРґРёРЅРѕС‡РєСѓ
 	 * 
-	 * @return	экземпляр фабрики
+	 * @return	СЌРєР·РµРјРїР»СЏСЂ С„Р°Р±СЂРёРєРё
 	 */
 	public static ClientContextFactory getInstance() {
 		return instance;
 	}
 	
 	/**
-	 * получить среду пользовательского интерфейса
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃСЂРµРґСѓ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
 	 * 
-	 * @return	среда пользовательского интерфейса
+	 * @return	СЃСЂРµРґР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
 	 */
 	public ClientContext getDefaultClientContext() {
 		return defaultClientContext;

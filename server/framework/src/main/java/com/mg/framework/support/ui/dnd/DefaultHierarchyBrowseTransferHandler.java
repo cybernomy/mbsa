@@ -33,7 +33,7 @@ import com.mg.framework.support.ui.widget.MaintenanceTreeController;
 import com.mg.framework.support.ui.widget.tree.EntityTreeNode;
 
 /**
- * Стандартная реализация обработчика операций DnD для форм браузеров с иерархией
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РѕР±СЂР°Р±РѕС‚С‡РёРєР° РѕРїРµСЂР°С†РёР№ DnD РґР»СЏ С„РѕСЂРј Р±СЂР°СѓР·РµСЂРѕРІ СЃ РёРµСЂР°СЂС…РёРµР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultHierarchyBrowseTransferHandler.java,v 1.1 2007/08/16 13:59:03 safonov Exp $
@@ -86,20 +86,20 @@ public class DefaultHierarchyBrowseTransferHandler implements TransferHandler {
 			return false;
 		
 		if (dragData instanceof DnDTableData) {
-			//только в пределах одного браузера обрабатываем перенос
+			//С‚РѕР»СЊРєРѕ РІ РїСЂРµРґРµР»Р°С… РѕРґРЅРѕРіРѕ Р±СЂР°СѓР·РµСЂР° РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј РїРµСЂРµРЅРѕСЃ
 			if (((DnDTableData) dragData).getTable().getView() != dropData.getTree().getView())
 				return false;
-			//переносим из таблицы в папку
+			//РїРµСЂРµРЅРѕСЃРёРј РёР· С‚Р°Р±Р»РёС†С‹ РІ РїР°РїРєСѓ
 			if (service.move(Arrays.asList(((MaintenanceTableModel) table.getModel()).getSelectedPrimaryKeys()), ((EntityTreeNode) dropData.getTreeNodes()[0]).getEntity())) {
 				table.refresh();
 				return true;
 			} else
 				return false;
-		} else if (dragData instanceof DnDTreeData && changeHierarchyPerm) { //если есть права на изменения иерархии
-			//переносим папки
+		} else if (dragData instanceof DnDTreeData && changeHierarchyPerm) { //РµСЃР»Рё РµСЃС‚СЊ РїСЂР°РІР° РЅР° РёР·РјРµРЅРµРЅРёСЏ РёРµСЂР°СЂС…РёРё
+			//РїРµСЂРµРЅРѕСЃРёРј РїР°РїРєРё
 			DnDTreeData treeData = (DnDTreeData) dragData;
 			
-			//только в пределах одного браузера обрабатываем перенос
+			//С‚РѕР»СЊРєРѕ РІ РїСЂРµРґРµР»Р°С… РѕРґРЅРѕРіРѕ Р±СЂР°СѓР·РµСЂР° РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј РїРµСЂРµРЅРѕСЃ
 			if (treeData.getTree().getView() != dropData.getTree().getView())
 				return false;
 			

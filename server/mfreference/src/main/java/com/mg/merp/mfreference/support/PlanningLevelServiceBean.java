@@ -35,7 +35,7 @@ import com.mg.merp.mfreference.model.PlanningLevel;
 import com.mg.merp.mfreference.model.PlanningLevelBucket;
 
 /**
- * Реализация бизнес-компонента "Уровни планирования" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЈСЂРѕРІРЅРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -61,10 +61,10 @@ public class PlanningLevelServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Создать периоды уровня планирования
-	 * @param planningLevel - уровень планирования
-	 * @param bucketLength - длина периода в днях
-	 * @param bucketNumber - количество периодов
+	 * РЎРѕР·РґР°С‚СЊ РїРµСЂРёРѕРґС‹ СѓСЂРѕРІРЅСЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param planningLevel - СѓСЂРѕРІРµРЅСЊ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param bucketLength - РґР»РёРЅР° РїРµСЂРёРѕРґР° РІ РґРЅСЏС…
+	 * @param bucketNumber - РєРѕР»РёС‡РµСЃС‚РІРѕ РїРµСЂРёРѕРґРѕРІ
 	 */
 	private void internalGenerateBuckets(PlanningLevel planningLevel, Integer bucketLength, Integer bucketNumber) {
 		if((planningLevel != null) && (bucketLength != null && bucketLength > 0) && (bucketNumber != null && bucketNumber > 0)) {
@@ -86,9 +86,9 @@ public class PlanningLevelServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Получить последний "бакет" уровня планирования
-	 * @param planningLevel - уровень планирования
-	 * @return "бакет" с максимальным порядковым номером
+	 * РџРѕР»СѓС‡РёС‚СЊ РїРѕСЃР»РµРґРЅРёР№ "Р±Р°РєРµС‚" СѓСЂРѕРІРЅСЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param planningLevel - СѓСЂРѕРІРµРЅСЊ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @return "Р±Р°РєРµС‚" СЃ РјР°РєСЃРёРјР°Р»СЊРЅС‹Рј РїРѕСЂСЏРґРєРѕРІС‹Рј РЅРѕРјРµСЂРѕРј
 	 */
 	private PlanningLevelBucket getLastBucket(PlanningLevel planningLevel) {
 		List<PlanningLevelBucket> lastBuckets = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(PlanningLevelBucket.class)
@@ -102,12 +102,12 @@ public class PlanningLevelServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Инициализировать "бакет"
-	 * @param planningLevel  - уровень планирования
-	 * @param startDate - начальная дата "бакета"
-	 * @param endDate - конечная дата "бакета"
-	 * @param bucketOffset - порядковый номер "бакета"
-	 * @return сущность "бакет"
+	 * РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ "Р±Р°РєРµС‚"
+	 * @param planningLevel  - СѓСЂРѕРІРµРЅСЊ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param startDate - РЅР°С‡Р°Р»СЊРЅР°СЏ РґР°С‚Р° "Р±Р°РєРµС‚Р°"
+	 * @param endDate - РєРѕРЅРµС‡РЅР°СЏ РґР°С‚Р° "Р±Р°РєРµС‚Р°"
+	 * @param bucketOffset - РїРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ "Р±Р°РєРµС‚Р°"
+	 * @return СЃСѓС‰РЅРѕСЃС‚СЊ "Р±Р°РєРµС‚"
 	 */
 	private PlanningLevelBucket initializeBucket(PlanningLevel planningLevel, Date startDate, Date endDate, short bucketOffset) {
 		PlanningLevelBucket bucket = getPlanningLevelBucketService().initialize();
@@ -119,8 +119,8 @@ public class PlanningLevelServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Поместить "бакет" в перманентное хранилище
-	 * @param bucket - сущность "бакет"
+	 * РџРѕРјРµСЃС‚РёС‚СЊ "Р±Р°РєРµС‚" РІ РїРµСЂРјР°РЅРµРЅС‚РЅРѕРµ С…СЂР°РЅРёР»РёС‰Рµ
+	 * @param bucket - СЃСѓС‰РЅРѕСЃС‚СЊ "Р±Р°РєРµС‚"
 	 */
 	private void storeBucket(PlanningLevelBucket bucket) {
 		if(bucket != null)

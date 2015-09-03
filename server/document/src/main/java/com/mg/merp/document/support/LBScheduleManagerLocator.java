@@ -19,7 +19,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.document.LBScheduleManager;
 
 /**
- * Локатор менеджера управления графиками исполнения обязательств
+ * Р›РѕРєР°С‚РѕСЂ РјРµРЅРµРґР¶РµСЂР° СѓРїСЂР°РІР»РµРЅРёСЏ РіСЂР°С„РёРєР°РјРё РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ
  * 
  * @author Artem V. Sharapov
  * @version $Id: LBScheduleManagerLocator.java,v 1.1 2007/04/21 11:46:07 sharapov Exp $
@@ -29,8 +29,8 @@ public class LBScheduleManagerLocator {
 	private static volatile LBScheduleManager instance = null;
 
 	/**
-	 * Найти сервис менеджера управления графиками исполнения обязательств
-	 * @return сервис менеджера 
+	 * РќР°Р№С‚Рё СЃРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° СѓРїСЂР°РІР»РµРЅРёСЏ РіСЂР°С„РёРєР°РјРё РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ
+	 * @return СЃРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° 
 	 */
 	public static  LBScheduleManager locate() {
 		if (instance == null) {

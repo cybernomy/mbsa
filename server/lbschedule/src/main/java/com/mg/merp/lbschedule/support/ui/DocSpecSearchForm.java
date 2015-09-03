@@ -30,7 +30,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * Контроллер формы поиска объектов-сущностей "Позиций cпецификации документа"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° РѕР±СЉРµРєС‚РѕРІ-СЃСѓС‰РЅРѕСЃС‚РµР№ "РџРѕР·РёС†РёР№ cРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: DocSpecSearchForm.java,v 1.3 2009/02/09 12:08:32 safonov Exp $

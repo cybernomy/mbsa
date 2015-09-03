@@ -50,7 +50,7 @@ import com.mg.merp.factura.model.FacturaHead;
 import com.mg.merp.reference.model.TaxForm;
 
 /**
- * Реализация процессора счетов-фактур
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС†РµСЃСЃРѕСЂР° СЃС‡РµС‚РѕРІ-С„Р°РєС‚СѓСЂ
  * 
  * @author Artem V. Sharapov
  * @version $Id: FacturaProcessorServiceBean.java,v 1.4 2009/03/16 14:30:34 sharapov Exp $
@@ -177,14 +177,14 @@ public class FacturaProcessorServiceBean extends AbstractPOJOBusinessObjectState
 	}
 
 	/**
-	 * Регистрация счета-фактуры в книге покупок
-	 * @param docHead - счет-фактура
-	 * @param docSpec - позиция документа
-	 * @param dstFolder - папка-приемник
-	 * @param processDate - дата регистрации в книге покупок
-	 * @param sum - сумма позиции документа
-	 * @param book - книга покупок
-	 * @return книга покупок
+	 * Р РµРіРёСЃС‚СЂР°С†РёСЏ СЃС‡РµС‚Р°-С„Р°РєС‚СѓСЂС‹ РІ РєРЅРёРіРµ РїРѕРєСѓРїРѕРє
+	 * @param docHead - СЃС‡РµС‚-С„Р°РєС‚СѓСЂР°
+	 * @param docSpec - РїРѕР·РёС†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param dstFolder - РїР°РїРєР°-РїСЂРёРµРјРЅРёРє
+	 * @param processDate - РґР°С‚Р° СЂРµРіРёСЃС‚СЂР°С†РёРё РІ РєРЅРёРіРµ РїРѕРєСѓРїРѕРє
+	 * @param sum - СЃСѓРјРјР° РїРѕР·РёС†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param book - РєРЅРёРіР° РїРѕРєСѓРїРѕРє
+	 * @return РєРЅРёРіР° РїРѕРєСѓРїРѕРє
 	 */
 	protected BuyBook doRegisterFacturaInBuyBook(FacturaHead docHead, DocSpec docSpec, Folder dstFolder, Date processDate, BigDecimal sum, BuyBook book) {
 		final RoundContext RC = new RoundContext(4);
@@ -277,9 +277,9 @@ public class FacturaProcessorServiceBean extends AbstractPOJOBusinessObjectState
 	}
 
 	/**
-	 * Выполнить округление сумм книги покупок
-	 * @param book - книга покупок
-	 * @param roundPrec - точность округления
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РѕРєСЂСѓРіР»РµРЅРёРµ СЃСѓРјРј РєРЅРёРіРё РїРѕРєСѓРїРѕРє
+	 * @param book - РєРЅРёРіР° РїРѕРєСѓРїРѕРє
+	 * @param roundPrec - С‚РѕС‡РЅРѕСЃС‚СЊ РѕРєСЂСѓРіР»РµРЅРёСЏ
 	 */
 	protected void doRoundBuyBook(BuyBook book, Integer roundPrec) {
 		if (book != null && roundPrec != null) {
@@ -342,14 +342,14 @@ public class FacturaProcessorServiceBean extends AbstractPOJOBusinessObjectState
 	}
 	
 	/**
-	 * Регистрация счета-фактуры в книге покупок
-	 * @param docHead - счет-фактура
-	 * @param docSpec - позиция документа
-	 * @param dstFolder - папка-приемник
-	 * @param processDate - дата регистрации в книге покупок
-	 * @param sum - сумма позиции документа
-	 * @param book - книга покупок
-	 * @return книга покупок
+	 * Р РµРіРёСЃС‚СЂР°С†РёСЏ СЃС‡РµС‚Р°-С„Р°РєС‚СѓСЂС‹ РІ РєРЅРёРіРµ РїРѕРєСѓРїРѕРє
+	 * @param docHead - СЃС‡РµС‚-С„Р°РєС‚СѓСЂР°
+	 * @param docSpec - РїРѕР·РёС†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param dstFolder - РїР°РїРєР°-РїСЂРёРµРјРЅРёРє
+	 * @param processDate - РґР°С‚Р° СЂРµРіРёСЃС‚СЂР°С†РёРё РІ РєРЅРёРіРµ РїРѕРєСѓРїРѕРє
+	 * @param sum - СЃСѓРјРјР° РїРѕР·РёС†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param book - РєРЅРёРіР° РїРѕРєСѓРїРѕРє
+	 * @return РєРЅРёРіР° РїРѕРєСѓРїРѕРє
 	 */
 	protected SaleBook doRegisterFacturaInSaleBook(FacturaHead docHead, DocSpec docSpec, Folder dstFolder, Date processDate, BigDecimal sum, SaleBook book) {
 		final RoundContext RC = new RoundContext(4);
@@ -440,9 +440,9 @@ public class FacturaProcessorServiceBean extends AbstractPOJOBusinessObjectState
 	}
 	
 	/**
-	 * Выполнить округление сумм книги продаж
-	 * @param book - книга продаж
-	 * @param roundPrec - точность округления
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РѕРєСЂСѓРіР»РµРЅРёРµ СЃСѓРјРј РєРЅРёРіРё РїСЂРѕРґР°Р¶
+	 * @param book - РєРЅРёРіР° РїСЂРѕРґР°Р¶
+	 * @param roundPrec - С‚РѕС‡РЅРѕСЃС‚СЊ РѕРєСЂСѓРіР»РµРЅРёСЏ
 	 */
 	protected void doRoundSaleBook(SaleBook book, Integer roundPrec) {
 		if (book != null && roundPrec != null) {
@@ -477,9 +477,9 @@ public class FacturaProcessorServiceBean extends AbstractPOJOBusinessObjectState
 	}
 	
 	/**
-	 * Получить данные о налогах для позиции документа
-	 * @param docSpec - позиция документа
-	 * @return данные о налогах
+	 * РџРѕР»СѓС‡РёС‚СЊ РґР°РЅРЅС‹Рµ Рѕ РЅР°Р»РѕРіР°С… РґР»СЏ РїРѕР·РёС†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docSpec - РїРѕР·РёС†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return РґР°РЅРЅС‹Рµ Рѕ РЅР°Р»РѕРіР°С…
 	 */
 	private List<TaxData> getTaxData(DocSpec docSpec) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(DocumentSpecTax.class, "dst")
@@ -506,7 +506,7 @@ public class FacturaProcessorServiceBean extends AbstractPOJOBusinessObjectState
 	}
 	
 	/**
-	 * Элемент данных о налогах позиции документа
+	 * Р­Р»РµРјРµРЅС‚ РґР°РЅРЅС‹С… Рѕ РЅР°Р»РѕРіР°С… РїРѕР·РёС†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	private class TaxData {
 

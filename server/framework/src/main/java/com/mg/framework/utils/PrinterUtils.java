@@ -18,7 +18,7 @@ import javax.print.PrintService;
 import javax.print.PrintServiceLookup;
 
 /**
- * Утилиты сервиса печати
+ * РЈС‚РёР»РёС‚С‹ СЃРµСЂРІРёСЃР° РїРµС‡Р°С‚Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: PrinterUtils.java,v 1.1 2008/04/09 14:30:19 safonov Exp $
@@ -27,9 +27,9 @@ public class PrinterUtils {
 	private static PrintService[] printServices = PrintServiceLookup.lookupPrintServices(null, null);
 	
 	/**
-	 * получить список принтеров доступных серверу приложения
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїСЂРёРЅС‚РµСЂРѕРІ РґРѕСЃС‚СѓРїРЅС‹С… СЃРµСЂРІРµСЂСѓ РїСЂРёР»РѕР¶РµРЅРёСЏ
 	 * 
-	 * @return	список имен принтеров
+	 * @return	СЃРїРёСЃРѕРє РёРјРµРЅ РїСЂРёРЅС‚РµСЂРѕРІ
 	 */
 	public static String[] getPrinterNames() {
 		String[] result = new String[printServices.length];

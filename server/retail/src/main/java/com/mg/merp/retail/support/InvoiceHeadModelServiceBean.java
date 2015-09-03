@@ -23,7 +23,7 @@ import com.mg.merp.retail.InvoiceHeadServiceLocal;
 import com.mg.merp.retail.model.RtlInvoiceHeadModel;
 
 /**
- * Бизнес-компонент "Образцы документов на отпуск" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ РґРѕРєСѓРјРµРЅС‚РѕРІ РЅР° РѕС‚РїСѓСЃРє" 
  * 
  * @author leonova
  * @version $Id: InvoiceHeadModelServiceBean.java,v 1.3 2006/09/12 11:05:41 leonova Exp $

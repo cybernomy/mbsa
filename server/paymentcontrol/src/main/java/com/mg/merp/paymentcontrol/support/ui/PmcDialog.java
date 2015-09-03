@@ -61,7 +61,7 @@ import com.mg.merp.paymentcontrol.model.PmcResource;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Контроллер формы "Управление платежами"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ "РЈРїСЂР°РІР»РµРЅРёРµ РїР»Р°С‚РµР¶Р°РјРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmcDialog.java,v 1.11 2007/09/10 11:19:21 sharapov Exp $
@@ -420,8 +420,8 @@ public class PmcDialog extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик кнопки/пункта КМ "Исполнить обязательство"
-	 * @param event - событие 
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё/РїСѓРЅРєС‚Р° РљРњ "РСЃРїРѕР»РЅРёС‚СЊ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ 
 	 */
 	public void onActionExecuteLiability(WidgetEvent event) {
 		Serializable[] resourceIds = ((DefaultMaintenanceEJBQLTableModel) resourceTable.getModel()).getSelectedPrimaryKeys();
@@ -436,8 +436,8 @@ public class PmcDialog extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик кнопки "Переместить средства"
-	 * @param event - событие 
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РџРµСЂРµРјРµСЃС‚РёС‚СЊ СЃСЂРµРґСЃС‚РІР°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ 
 	 */
 	public void onActionTransferResources(WidgetEvent event) {
 		Serializable[] resourceIds = ((DefaultMaintenanceEJBQLTableModel) resourceTable.getModel()).getSelectedPrimaryKeys();
@@ -454,8 +454,8 @@ public class PmcDialog extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик кнопки "Сформировать документы"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ РґРѕРєСѓРјРµРЅС‚С‹"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionCreateDocuments(WidgetEvent event) {
 		Serializable[] executionIds = ((DefaultMaintenanceEJBQLTableModel) executionTable.getModel()).getSelectedPrimaryKeys();
@@ -469,8 +469,8 @@ public class PmcDialog extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Утвердить"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЈС‚РІРµСЂРґРёС‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionApprove(WidgetEvent event) {
 		Serializable[] executionIds = ((DefaultMaintenanceEJBQLTableModel) executionTable.getModel()).getSelectedPrimaryKeys();
@@ -481,8 +481,8 @@ public class PmcDialog extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Снять утверждение"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЎРЅСЏС‚СЊ СѓС‚РІРµСЂР¶РґРµРЅРёРµ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionDisApprove(WidgetEvent event) {
 		Serializable[] executionIds = ((DefaultMaintenanceEJBQLTableModel) executionTable.getModel()).getSelectedPrimaryKeys();
@@ -493,8 +493,8 @@ public class PmcDialog extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Показать созданный документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџРѕРєР°Р·Р°С‚СЊ СЃРѕР·РґР°РЅРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionShowCreatedDocument(WidgetEvent event) {
 		Serializable[] executionIds = ((DefaultMaintenanceEJBQLTableModel) executionTable.getModel()).getSelectedPrimaryKeys();
@@ -503,8 +503,8 @@ public class PmcDialog extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Удалить созданный документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЈРґР°Р»РёС‚СЊ СЃРѕР·РґР°РЅРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionDeleteCreatedDocument(WidgetEvent event) {
 		Serializable[] executionIds = ((DefaultMaintenanceEJBQLTableModel) executionTable.getModel()).getSelectedPrimaryKeys();
@@ -519,8 +519,8 @@ public class PmcDialog extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик кнопки "Обновить"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РћР±РЅРѕРІРёС‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRefreshByDate(WidgetEvent event) {
 		executionTable.refresh();
@@ -529,17 +529,17 @@ public class PmcDialog extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик события изменения значения
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РёР·РјРµРЅРµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRefreshByLiability(WidgetEvent event) {
 		executionTable.refresh();
 	}
 	
 	/**
-	 * Обработчик пункта КМ "Поддержка образцов"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџРѕРґРґРµСЂР¶РєР° РѕР±СЂР°Р·С†РѕРІ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionShowLiabilityModel(WidgetEvent event) throws Exception {
 		final LiabilityModelServiceLocal service = (LiabilityModelServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/paymentcontrol/LiabilityModel"); //$NON-NLS-1$
@@ -548,9 +548,9 @@ public class PmcDialog extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Вставка с образцом"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "Р’СЃС‚Р°РІРєР° СЃ РѕР±СЂР°Р·С†РѕРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionInsertModel(WidgetEvent event) throws Exception {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.paymentcontrol.support.ui.LiabilityModelSearchHelp"); //$NON-NLS-1$
@@ -568,8 +568,8 @@ public class PmcDialog extends AbstractForm {
 	}
 
 	/**
-	 * Создание обязательства по образцу
-	 * @param model - образец
+	 * РЎРѕР·РґР°РЅРёРµ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР° РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param model - РѕР±СЂР°Р·РµС†
 	 */
 	private void doOnActionInsertModel(Liability model) {
 		Liability liability = liabilityService.createByPattern(model, liabilityService.getRootFolder());
@@ -592,8 +592,8 @@ public class PmcDialog extends AbstractForm {
 	}
 	
 	/**
-	 * Обработчик измения поля "Показывать исполненную сумму"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РёР·РјРµРЅРёСЏ РїРѕР»СЏ "РџРѕРєР°Р·С‹РІР°С‚СЊ РёСЃРїРѕР»РЅРµРЅРЅСѓСЋ СЃСѓРјРјСѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRefreshByExecutedSum(WidgetEvent event) {
 		Serializable[] liabilityIds = ((DefaultMaintenanceEJBQLTableModel) liabilityTable.getModel()).getSelectedPrimaryKeys();
@@ -602,8 +602,8 @@ public class PmcDialog extends AbstractForm {
 	}
 	
 	/**
-	 * Обработчик измения поля "Показывать остаток текущего средства платежа"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РёР·РјРµРЅРёСЏ РїРѕР»СЏ "РџРѕРєР°Р·С‹РІР°С‚СЊ РѕСЃС‚Р°С‚РѕРє С‚РµРєСѓС‰РµРіРѕ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRefreshByResourceBalanceSum(WidgetEvent event) {
 		Serializable[] resourceIds = ((DefaultMaintenanceEJBQLTableModel) resourceTable.getModel()).getSelectedPrimaryKeys();

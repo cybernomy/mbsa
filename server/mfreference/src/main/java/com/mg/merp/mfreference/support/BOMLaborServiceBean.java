@@ -25,7 +25,7 @@ import com.mg.merp.mfreference.model.BomLabor;
 import com.mg.merp.mfreference.model.ManufactureConfig;
 
 /**
- * Бизнес-компонент "Операции / Рабочая сила"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћРїРµСЂР°С†РёРё / Р Р°Р±РѕС‡Р°СЏ СЃРёР»Р°"
  *
  * @author leonova
  * @version $Id: BOMLaborServiceBean.java,v 1.9 2009/04/29 07:58:36 safonov Exp $

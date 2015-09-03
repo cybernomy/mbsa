@@ -25,7 +25,7 @@ public interface AccountServiceLocal
    extends com.mg.framework.api.DataBusinessObjectService<Account, Integer>
 {
 	/**
-	 * тип папки для финансового плана счетов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ РїР»Р°РЅР° СЃС‡РµС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 38;
 	

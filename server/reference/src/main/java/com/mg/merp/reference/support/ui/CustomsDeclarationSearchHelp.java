@@ -17,7 +17,7 @@ package com.mg.merp.reference.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * Контроллер формы поиска бизнес-компонента "Грузовые таможенные декларации"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р“СЂСѓР·РѕРІС‹Рµ С‚Р°РјРѕР¶РµРЅРЅС‹Рµ РґРµРєР»Р°СЂР°С†РёРё"
  *  
  * @author Konstantin S. Alikaev
  * @version $Id: CustomsDeclarationSearchHelp.java,v 1.1 2008/03/20 09:46:50 alikaev Exp $

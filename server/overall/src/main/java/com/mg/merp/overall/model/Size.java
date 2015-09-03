@@ -17,7 +17,7 @@ package com.mg.merp.overall.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Размеры"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р Р°Р·РјРµСЂС‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: Size.java,v 1.4 2008/06/30 04:15:16 alikaev Exp $

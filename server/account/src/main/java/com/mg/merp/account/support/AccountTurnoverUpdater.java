@@ -28,7 +28,7 @@ import com.mg.framework.api.jdbc.RowMapper;
 import com.mg.merp.account.model.EconomicOper;
 
 /**
- * Класс обертка изменения оборотных ведомостей
+ * РљР»Р°СЃСЃ РѕР±РµСЂС‚РєР° РёР·РјРµРЅРµРЅРёСЏ РѕР±РѕСЂРѕС‚РЅС‹С… РІРµРґРѕРјРѕСЃС‚РµР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: AccountTurnoverUpdater.java,v 1.1 2007/01/16 11:45:51 safonov Exp $
@@ -134,10 +134,10 @@ public class AccountTurnoverUpdater {
 	}*/
 
 	/**
-	 * запуск изменения оборотных ведомостей
+	 * Р·Р°РїСѓСЃРє РёР·РјРµРЅРµРЅРёСЏ РѕР±РѕСЂРѕС‚РЅС‹С… РІРµРґРѕРјРѕСЃС‚РµР№
 	 * 
-	 * @param economicOper ХО
-	 * @param isOperRemoving признак удаления ХО, необходимо установить в <code>true</code> если ХО удаляется
+	 * @param economicOper РҐРћ
+	 * @param isOperRemoving РїСЂРёР·РЅР°Рє СѓРґР°Р»РµРЅРёСЏ РҐРћ, РЅРµРѕР±С…РѕРґРёРјРѕ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РІ <code>true</code> РµСЃР»Рё РҐРћ СѓРґР°Р»СЏРµС‚СЃСЏ
 	 */
 	public static void execute(final EconomicOper economicOper, final boolean isOperRemoving) {
 		OperInfo oper = new OperInfo();
@@ -158,10 +158,10 @@ public class AccountTurnoverUpdater {
 	}
 	
 	/**
-	 * запуск изменения оборотных ведомостей
+	 * Р·Р°РїСѓСЃРє РёР·РјРµРЅРµРЅРёСЏ РѕР±РѕСЂРѕС‚РЅС‹С… РІРµРґРѕРјРѕСЃС‚РµР№
 	 * 
-	 * @param economicOperId идентификатор ХО
-	 * @param isOperRemoving признак удаления ХО, необходимо установить в <code>true</code> если ХО удаляется
+	 * @param economicOperId РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РҐРћ
+	 * @param isOperRemoving РїСЂРёР·РЅР°Рє СѓРґР°Р»РµРЅРёСЏ РҐРћ, РЅРµРѕР±С…РѕРґРёРјРѕ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РІ <code>true</code> РµСЃР»Рё РҐРћ СѓРґР°Р»СЏРµС‚СЃСЏ
 	 */
 	public static void execute(int economicOperId, boolean isOperRemoving) {
 		updateTurnover(economicOperId, loadEconomicOper(economicOperId), isOperRemoving);

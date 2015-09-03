@@ -40,7 +40,7 @@ import com.mg.merp.paymentcontrol.model.Execution;
 import com.mg.merp.paymentcontrol.model.Liability;
 
 /**
- * Реализация бизнес-компонента "Обязательства" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -107,10 +107,10 @@ public class LiabilityServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Создание обязательства по образцу
-	 * @param pattern - образец
-	 * @param folder - папка-приемник
-	 * @return обязательство
+	 * РЎРѕР·РґР°РЅРёРµ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР° РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param pattern - РѕР±СЂР°Р·РµС†
+	 * @param folder - РїР°РїРєР°-РїСЂРёРµРјРЅРёРє
+	 * @return РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ
 	 */
 	protected Liability doCreateByPattern(Liability pattern, Folder folder) {
 		Liability liability = initialize();
@@ -189,11 +189,11 @@ public class LiabilityServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Найти заголовок документа по заданным параметрам
-	 * @param type - тип документа
-	 * @param number - номер документа
-	 * @param date - дата документа
-	 * @return заголовок документа
+	 * РќР°Р№С‚Рё Р·Р°РіРѕР»РѕРІРѕРє РґРѕРєСѓРјРµРЅС‚Р° РїРѕ Р·Р°РґР°РЅРЅС‹Рј РїР°СЂР°РјРµС‚СЂР°Рј
+	 * @param type - С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param number - РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param date - РґР°С‚Р° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return Р·Р°РіРѕР»РѕРІРѕРє РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	private DocHead findDocHeadByParams(DocType type, String number, Date date) {
 		if(number != null)

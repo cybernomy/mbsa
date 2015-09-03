@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип расчета даты истечения срока годности
+ * РўРёРї СЂР°СЃС‡РµС‚Р° РґР°С‚С‹ РёСЃС‚РµС‡РµРЅРёСЏ СЃСЂРѕРєР° РіРѕРґРЅРѕСЃС‚Рё
  * 
  * @author leonova
  * @version $Id: CatalogExpDate.java,v 1.1 2006/03/29 13:06:23 safonov Exp $ 
@@ -28,19 +28,19 @@ import com.mg.framework.api.annotations.EnumConstantText;
 public enum CatalogExpDate {
 
 	/**
-	 * Относительно даты изготовления
+	 * РћС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РґР°С‚С‹ РёР·РіРѕС‚РѕРІР»РµРЅРёСЏ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#ExpDate.Type.Edckproduction")
 	EDCKPRODUCTION,
 	
 	/**
-	 * Относительно даты документа
+	 * РћС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РґР°С‚С‹ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#ExpDate.Type.Edckdocument")
 	EDCKDOCUMENT,
 	
 	/**
-	 * Относительно даты прихода на склад
+	 * РћС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РґР°С‚С‹ РїСЂРёС…РѕРґР° РЅР° СЃРєР»Р°Рґ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#ExpDate.Type.Edckstrock")
 	EDCKSTOCK	

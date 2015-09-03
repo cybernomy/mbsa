@@ -23,7 +23,7 @@ import com.mg.merp.reference.model.OrgUnit;
 import com.mg.merp.reference.model.PriceListFolder;
 
 /**
- * Реализация перехватчика для добавления прав на элементы иерархии при создании
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ РґРѕР±Р°РІР»РµРЅРёСЏ РїСЂР°РІ РЅР° СЌР»РµРјРµРЅС‚С‹ РёРµСЂР°СЂС…РёРё РїСЂРё СЃРѕР·РґР°РЅРёРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: TreePermissionInterceptorImpl.java,v 1.8 2006/11/02 16:22:10 safonov Exp $
@@ -58,19 +58,19 @@ public class TreePermissionInterceptorImpl extends AbstractEntityInterceptor {
 	public void onPostPersist(PersistentObject entity) {
 		String entityName = entity.getEntityName();
 		
-		if (FOLDER_CLASS.equals(entityName)) //папки
+		if (FOLDER_CLASS.equals(entityName)) //РїР°РїРєРё
 			ServerUtils.getSecuritySystem().grantTreePermission((Integer) entity.getPrimaryKey(), ((Folder) entity).getFolder().getId(), 0);
-		else if (CATALOGFOLDER_CLASS.equals(entityName)) //папки каталога
+		else if (CATALOGFOLDER_CLASS.equals(entityName)) //РїР°РїРєРё РєР°С‚Р°Р»РѕРіР°
 			ServerUtils.getSecuritySystem().grantTreePermission((Integer) entity.getPrimaryKey(), ((CatalogFolder) entity).getCatalogFolder().getId(), 1);
-		else if (ORGUNIT_CLASS.equals(entityName)) //подразделения
+		else if (ORGUNIT_CLASS.equals(entityName)) //РїРѕРґСЂР°Р·РґРµР»РµРЅРёСЏ
 			ServerUtils.getSecuritySystem().grantTreePermission((Integer) entity.getPrimaryKey(), ((OrgUnit) entity).getFolderId(), 4);
-		else if (PRICELST_CLASS.equals(entityName)) {//папки прайс-листов
+		else if (PRICELST_CLASS.equals(entityName)) {//РїР°РїРєРё РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ
 			PriceListFolder folder = ((PriceListFolder) entity).getParent();
 			ServerUtils.getSecuritySystem().grantTreePermission((Integer) entity.getPrimaryKey(), folder == null ? (Integer)entity.getPrimaryKey() : folder.getId(), 2);
 		}
-//		else if (PERSONNEL_GROUP_CLASS.equals(entityName)) //папки основных сведений о сотрудниках		
+//		else if (PERSONNEL_GROUP_CLASS.equals(entityName)) //РїР°РїРєРё РѕСЃРЅРѕРІРЅС‹С… СЃРІРµРґРµРЅРёР№ Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С…		
 //			ServerUtils.getSecuritySystem().grantTreePermission((Integer) entity.getPrimaryKey(), ((PersonnelGroup) entity).getParentId(), 5);
-//		else if (STAFF_LIST_UNIT_CLASS.equals(entityName)) //папки штатного расписания		
+//		else if (STAFF_LIST_UNIT_CLASS.equals(entityName)) //РїР°РїРєРё С€С‚Р°С‚РЅРѕРіРѕ СЂР°СЃРїРёСЃР°РЅРёСЏ		
 //			ServerUtils.getSecuritySystem().grantTreePermission((Integer) entity.getPrimaryKey(), ((StaffListUnit) entity).getParent().getId(), 6);
 	}
 

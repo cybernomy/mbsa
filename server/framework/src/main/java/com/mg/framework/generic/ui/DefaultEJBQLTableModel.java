@@ -34,8 +34,8 @@ import com.mg.framework.utils.ReflectionUtils;
 import com.mg.framework.utils.StringUtils;
 
 /**
- * Стандартная реализация модели таблицы для отображения данных полученных с помощью языка
- * объектных запросов (EJBQL)
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РјРѕРґРµР»Рё С‚Р°Р±Р»РёС†С‹ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РґР°РЅРЅС‹С… РїРѕР»СѓС‡РµРЅРЅС‹С… СЃ РїРѕРјРѕС‰СЊСЋ СЏР·С‹РєР°
+ * РѕР±СЉРµРєС‚РЅС‹С… Р·Р°РїСЂРѕСЃРѕРІ (EJBQL)
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultEJBQLTableModel.java,v 1.11 2008/12/23 09:26:01 safonov Exp $
@@ -51,7 +51,7 @@ public class DefaultEJBQLTableModel extends AbstractTableModel {
 
 	protected TableColumnModel[] getColumnModel() {
 		if (!isColumnModelCreated && columnsModel.length == 0) {
-			//если список в описателе пустой, то проверяем columnsDef и создаем список столбцов
+			//РµСЃР»Рё СЃРїРёСЃРѕРє РІ РѕРїРёСЃР°С‚РµР»Рµ РїСѓСЃС‚РѕР№, С‚Рѕ РїСЂРѕРІРµСЂСЏРµРј columnsDef Рё СЃРѕР·РґР°РµРј СЃРїРёСЃРѕРє СЃС‚РѕР»Р±С†РѕРІ
 			createColumnsModel();
 			isColumnModelCreated = true;
 			columnsModel = new TableColumnModel[columnsDef.size()];
@@ -72,17 +72,17 @@ public class DefaultEJBQLTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * получить список данных, каждый элемент является строкой выборки
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РґР°РЅРЅС‹С…, РєР°Р¶РґС‹Р№ СЌР»РµРјРµРЅС‚ СЏРІР»СЏРµС‚СЃСЏ СЃС‚СЂРѕРєРѕР№ РІС‹Р±РѕСЂРєРё
 	 * 
-	 * @return список данных
+	 * @return СЃРїРёСЃРѕРє РґР°РЅРЅС‹С…
 	 */
 	protected List<Object[]> getRowList() {
 		return rowList;
 	}
 
 	/**
-	 * создание модели столбцов, может быть переопределен в наследнике для создания модели
-	 * в режиме runtime
+	 * СЃРѕР·РґР°РЅРёРµ РјРѕРґРµР»Рё СЃС‚РѕР»Р±С†РѕРІ, РјРѕР¶РµС‚ Р±С‹С‚СЊ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ РІ РЅР°СЃР»РµРґРЅРёРєРµ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РјРѕРґРµР»Рё
+	 * РІ СЂРµР¶РёРјРµ runtime
 	 *
 	 */
 	protected void createColumnsModel() {
@@ -90,21 +90,21 @@ public class DefaultEJBQLTableModel extends AbstractTableModel {
 	}
 	
 	/**
-	 * добавляет описание в модель столбцов, последовательность добавления элементов должна совпадать
-	 * с последовательностью полей в тексте запроса получающего выборку для данной модели
+	 * РґРѕР±Р°РІР»СЏРµС‚ РѕРїРёСЃР°РЅРёРµ РІ РјРѕРґРµР»СЊ СЃС‚РѕР»Р±С†РѕРІ, РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ РґРѕР±Р°РІР»РµРЅРёСЏ СЌР»РµРјРµРЅС‚РѕРІ РґРѕР»Р¶РЅР° СЃРѕРІРїР°РґР°С‚СЊ
+	 * СЃ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊСЋ РїРѕР»РµР№ РІ С‚РµРєСЃС‚Рµ Р·Р°РїСЂРѕСЃР° РїРѕР»СѓС‡Р°СЋС‰РµРіРѕ РІС‹Р±РѕСЂРєСѓ РґР»СЏ РґР°РЅРЅРѕР№ РјРѕРґРµР»Рё
 	 * 
-	 * @param entityClazz	класс сущности
-	 * @param propertyName	наименование свойства отображаемого в данном столбце
-	 * @param columnName	наименование столбца, может быть <code>null</code>, тогда в качестве наименования столбца будет использован параметр <code>propertyName</code>
+	 * @param entityClazz	РєР»Р°СЃСЃ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @param propertyName	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРІРѕР№СЃС‚РІР° РѕС‚РѕР±СЂР°Р¶Р°РµРјРѕРіРѕ РІ РґР°РЅРЅРѕРј СЃС‚РѕР»Р±С†Рµ
+	 * @param columnName	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃС‚РѕР»Р±С†Р°, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>, С‚РѕРіРґР° РІ РєР°С‡РµСЃС‚РІРµ РЅР°РёРјРµРЅРѕРІР°РЅРёСЏ СЃС‚РѕР»Р±С†Р° Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°РЅ РїР°СЂР°РјРµС‚СЂ <code>propertyName</code>
 	 */
 	protected final void addColumnDef(Class<? extends PersistentObject> entityClazz, String propertyName, String columnName) {
 		columnsDef.put(columnName != null ? columnName : propertyName, ApplicationDictionaryLocator.locate().getFieldMetadata(ReflectionUtils.getPropertyReflectionMetadata(entityClazz, propertyName)));
 	}
 	
 	/**
-	 * добавляет описание в модель столбцов на основании описателей полей запроса EJBQL
+	 * РґРѕР±Р°РІР»СЏРµС‚ РѕРїРёСЃР°РЅРёРµ РІ РјРѕРґРµР»СЊ СЃС‚РѕР»Р±С†РѕРІ РЅР° РѕСЃРЅРѕРІР°РЅРёРё РѕРїРёСЃР°С‚РµР»РµР№ РїРѕР»РµР№ Р·Р°РїСЂРѕСЃР° EJBQL
 	 * 
-	 * @param fieldDefs	список описателей полей
+	 * @param fieldDefs	СЃРїРёСЃРѕРє РѕРїРёСЃР°С‚РµР»РµР№ РїРѕР»РµР№
 	 */
 	protected final void addColumnDefs(Set<TableEJBQLFieldDef> fieldDefs) {
 		for (TableEJBQLFieldDef fieldDef : fieldDefs) {
@@ -114,20 +114,20 @@ public class DefaultEJBQLTableModel extends AbstractTableModel {
 	}
 	
 	/**
-	 * добавляет описание пользовательских полей (в предыдущих версиях системы дополнительные признаки) в
-	 * модель столбцов, использовать только в случае добавления в запрос пользовательских полей
+	 * РґРѕР±Р°РІР»СЏРµС‚ РѕРїРёСЃР°РЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№ (РІ РїСЂРµРґС‹РґСѓС‰РёС… РІРµСЂСЃРёСЏС… СЃРёСЃС‚РµРјС‹ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїСЂРёР·РЅР°РєРё) РІ
+	 * РјРѕРґРµР»СЊ СЃС‚РѕР»Р±С†РѕРІ, РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ С‚РѕР»СЊРєРѕ РІ СЃР»СѓС‡Р°Рµ РґРѕР±Р°РІР»РµРЅРёСЏ РІ Р·Р°РїСЂРѕСЃ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 * 
-	 * @param service безнес-компонент
+	 * @param service Р±РµР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
 	 */
 	protected void addAddinFieldDef(DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> service) {
 		//TODO implement
 	}
 	
 	/**
-	 * возвращает список описателей полей по умолчанию отображаемых в таблице, возможно переопределение
-	 * в классе наследнике
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє РѕРїРёСЃР°С‚РµР»РµР№ РїРѕР»РµР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РѕС‚РѕР±СЂР°Р¶Р°РµРјС‹С… РІ С‚Р°Р±Р»РёС†Рµ, РІРѕР·РјРѕР¶РЅРѕ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ
+	 * РІ РєР»Р°СЃСЃРµ РЅР°СЃР»РµРґРЅРёРєРµ
 	 * 
-	 * @return	список описателей полей
+	 * @return	СЃРїРёСЃРѕРє РѕРїРёСЃР°С‚РµР»РµР№ РїРѕР»РµР№
 	 */
 	protected Set<TableEJBQLFieldDef> getDefaultFieldDefsSet() {
 		return new LinkedHashSet<TableEJBQLFieldDef>();
@@ -138,22 +138,22 @@ public class DefaultEJBQLTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * возвращает список описателей полей отображаемых в таблице
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє РѕРїРёСЃР°С‚РµР»РµР№ РїРѕР»РµР№ РѕС‚РѕР±СЂР°Р¶Р°РµРјС‹С… РІ С‚Р°Р±Р»РёС†Рµ
 	 * 
-	 * @return	список описателей полей
+	 * @return	СЃРїРёСЃРѕРє РѕРїРёСЃР°С‚РµР»РµР№ РїРѕР»РµР№
 	 */
 	public final Set<TableEJBQLFieldDef> getFieldDefsSet() {
 		if (fieldDefs == null) {
-			//TODO implement, проверка доступности поля для пользователя
+			//TODO implement, РїСЂРѕРІРµСЂРєР° РґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё РїРѕР»СЏ РґР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 			fieldDefs = doCreateFieldDefsSet();			
 		}
 		return fieldDefs;
 	}
 
 	/**
-	 * устанавливает данные выборки для модели
+	 * СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РґР°РЅРЅС‹Рµ РІС‹Р±РѕСЂРєРё РґР»СЏ РјРѕРґРµР»Рё
 	 * 
-	 * @param rowList данные выборки
+	 * @param rowList РґР°РЅРЅС‹Рµ РІС‹Р±РѕСЂРєРё
 	 */
 	@SuppressWarnings("unchecked")
 	public void setRowList(List rowList) {
@@ -163,14 +163,14 @@ public class DefaultEJBQLTableModel extends AbstractTableModel {
 		this.rowList = new ArrayList<Object[]>();
 		for (int i = 0; i < rowList.size(); i++) {
 			Object tuple = rowList.get(i);
-			//если нулевой элемент массив, то копируем весь список, т.к. список должен быть однородным
-			//т.е. все кортежи состоят из массивов объектов одинаковой длины
+			//РµСЃР»Рё РЅСѓР»РµРІРѕР№ СЌР»РµРјРµРЅС‚ РјР°СЃСЃРёРІ, С‚Рѕ РєРѕРїРёСЂСѓРµРј РІРµСЃСЊ СЃРїРёСЃРѕРє, С‚.Рє. СЃРїРёСЃРѕРє РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РѕРґРЅРѕСЂРѕРґРЅС‹Рј
+			//С‚.Рµ. РІСЃРµ РєРѕСЂС‚РµР¶Рё СЃРѕСЃС‚РѕСЏС‚ РёР· РјР°СЃСЃРёРІРѕРІ РѕР±СЉРµРєС‚РѕРІ РѕРґРёРЅР°РєРѕРІРѕР№ РґР»РёРЅС‹
 			if (i == 0 && tuple instanceof Object[]) {
 				this.rowList.addAll(rowList);
 				break;
 			} else {
-				//преобразуем в массив каждый кортеж, такая ситуация возможна, если в результурующем
-				//наборе только одно поле
+				//РїСЂРµРѕР±СЂР°Р·СѓРµРј РІ РјР°СЃСЃРёРІ РєР°Р¶РґС‹Р№ РєРѕСЂС‚РµР¶, С‚Р°РєР°СЏ СЃРёС‚СѓР°С†РёСЏ РІРѕР·РјРѕР¶РЅР°, РµСЃР»Рё РІ СЂРµР·СѓР»СЊС‚СѓСЂСѓСЋС‰РµРј
+				//РЅР°Р±РѕСЂРµ С‚РѕР»СЊРєРѕ РѕРґРЅРѕ РїРѕР»Рµ
 				this.rowList.add(new Object[] {tuple});
 			}
 		}
@@ -178,20 +178,20 @@ public class DefaultEJBQLTableModel extends AbstractTableModel {
 	}
 	
 	/**
-	 * установка текста запроса и параметров запроса
+	 * СѓСЃС‚Р°РЅРѕРІРєР° С‚РµРєСЃС‚Р° Р·Р°РїСЂРѕСЃР° Рё РїР°СЂР°РјРµС‚СЂРѕРІ Р·Р°РїСЂРѕСЃР°
 	 * 
-	 * @param queryString	текст запрос (должен удовлетворять синтаксису EJBQL)
-	 * @param paramNames	список наименование параметров запроса
-	 * @param values		список значений параметров
+	 * @param queryString	С‚РµРєСЃС‚ Р·Р°РїСЂРѕСЃ (РґРѕР»Р¶РµРЅ СѓРґРѕРІР»РµС‚РІРѕСЂСЏС‚СЊ СЃРёРЅС‚Р°РєСЃРёСЃСѓ EJBQL)
+	 * @param paramNames	СЃРїРёСЃРѕРє РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ Р·Р°РїСЂРѕСЃР°
+	 * @param values		СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№ РїР°СЂР°РјРµС‚СЂРѕРІ
 	 */
 	public void setQuery(final String queryString, final String[] paramNames, final Object[] values) {
 		setRowList(getOrmTemplate().findByNamedParam(queryString, paramNames, values));
 	}
 
 	/**
-	 * установка текста запроса
+	 * СѓСЃС‚Р°РЅРѕРІРєР° С‚РµРєСЃС‚Р° Р·Р°РїСЂРѕСЃР°
 	 * 
-	 * @param queryString	текст запрос (должен удовлетворять синтаксису EJBQL)
+	 * @param queryString	С‚РµРєСЃС‚ Р·Р°РїСЂРѕСЃ (РґРѕР»Р¶РµРЅ СѓРґРѕРІР»РµС‚РІРѕСЂСЏС‚СЊ СЃРёРЅС‚Р°РєСЃРёСЃСѓ EJBQL)
 	 */
 	public void setQuery(final String queryString) {
 		setRowList(getOrmTemplate().find(queryString));
@@ -205,7 +205,7 @@ public class DefaultEJBQLTableModel extends AbstractTableModel {
 		columnsModel = columns;
 		createColumnsModel();
 		isColumnModelCreated = true;
-		//используем список полей установленный в описателе формы
+		//РёСЃРїРѕР»СЊР·СѓРµРј СЃРїРёСЃРѕРє РїРѕР»РµР№ СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Р№ РІ РѕРїРёСЃР°С‚РµР»Рµ С„РѕСЂРјС‹
 		for (TableColumnModel column : columnsModel) {
 			if (StringUtils.stringNullOrEmpty(column.getTitle()))
 				column.setMetadata(columnsDef.get(column.getFieldName()));
@@ -225,7 +225,7 @@ public class DefaultEJBQLTableModel extends AbstractTableModel {
 	 */
 	@Override
 	public void fireTableStructureChanged() {
-		//сбросим кэш при изменении структуры таблицы
+		//СЃР±СЂРѕСЃРёРј РєСЌС€ РїСЂРё РёР·РјРµРЅРµРЅРёРё СЃС‚СЂСѓРєС‚СѓСЂС‹ С‚Р°Р±Р»РёС†С‹
 		isColumnModelCreated = false;
 		columnsModel = new TableColumnModel[0];
 		if (fieldDefs != null)

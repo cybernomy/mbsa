@@ -18,7 +18,7 @@ import com.mg.framework.generic.ui.DefaultWizardDialog;
 import com.mg.merp.account.model.Period;
 
 /**
- * Контроллер формы ввода параметров для операции формирование остатков инвентарных карточек
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РІРІРѕРґР° РїР°СЂР°РјРµС‚СЂРѕРІ РґР»СЏ РѕРїРµСЂР°С†РёРё С„РѕСЂРјРёСЂРѕРІР°РЅРёРµ РѕСЃС‚Р°С‚РєРѕРІ РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‡РµРє
  *  
  * @author Konstantin S. Alikaev
  * @version $Id: AccInventoryMakeRemainsDialog.java,v 1.1 2008/04/29 05:29:04 alikaev Exp $
@@ -26,7 +26,7 @@ import com.mg.merp.account.model.Period;
 public class AccInventoryMakeRemainsDialog extends DefaultWizardDialog {
 	
 	/**
-	 * период бугалтерского учета
+	 * РїРµСЂРёРѕРґ Р±СѓРіР°Р»С‚РµСЂСЃРєРѕРіРѕ СѓС‡РµС‚Р°
 	 */
 	private Period period;
 

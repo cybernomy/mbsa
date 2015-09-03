@@ -18,10 +18,10 @@ import com.mg.framework.api.ApplicationException;
 import com.mg.merp.salary.FeeRefAlgorithmResult;
 
 /**
- * Базовый класс расчета н/у. Класс алгоритма должен
- * реализовывать следующий метод <code>protected FeeRefAlgorithmResult internalExecute() throws Exception</code>.
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ СЂР°СЃС‡РµС‚Р° РЅ/Сѓ. РљР»Р°СЃСЃ Р°Р»РіРѕСЂРёС‚РјР° РґРѕР»Р¶РµРЅ
+ * СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёР№ РјРµС‚РѕРґ <code>protected FeeRefAlgorithmResult internalExecute() throws Exception</code>.
  * 
- * <p>Пример данного метода:
+ * <p>РџСЂРёРјРµСЂ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР°:
  * 	<pre>
  * 		protected FeeRefAlgorithmResult internalExecute() throws Exception {
  * 			FeeRefAlgorithmResult result = new FeeRefAlgorithmResult();

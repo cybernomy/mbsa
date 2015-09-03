@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Типы данных
+ * РўРёРїС‹ РґР°РЅРЅС‹С…
  * 
  * @author leonova
  * @version $Id: ConstantDataType.java,v 1.1 2007/08/17 09:19:21 alikaev Exp $
@@ -26,25 +26,25 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("BAi.Const.ConstantDataType") //$NON-NLS-1$
 public enum ConstantDataType {
 	/**
-	 * Строка
+	 * РЎС‚СЂРѕРєР°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.baiengine.resources.dataitemlabels#ConstantDataType.String") //$NON-NLS-1$
 	STRING,
 	
 	/**
-	 * Число целое
+	 * Р§РёСЃР»Рѕ С†РµР»РѕРµ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.baiengine.resources.dataitemlabels#ConstantDataType.Integer") //$NON-NLS-1$
 	INTEGER,
 	
 	/**
-	 * Число вещественное
+	 * Р§РёСЃР»Рѕ РІРµС‰РµСЃС‚РІРµРЅРЅРѕРµ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.baiengine.resources.dataitemlabels#ConstantDataType.Float") //$NON-NLS-1$
 	FLOAT,
 	
 	/**
-	 * Дата
+	 * Р”Р°С‚Р°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.baiengine.resources.dataitemlabels#ConstantDataType.Date") //$NON-NLS-1$
 	DATE

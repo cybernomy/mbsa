@@ -18,7 +18,7 @@ import com.mg.merp.discount.ApplyDiscountListener;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Документ со скидкой/наценкой
+ * Р”РѕРєСѓРјРµРЅС‚ СЃРѕ СЃРєРёРґРєРѕР№/РЅР°С†РµРЅРєРѕР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: DiscountDocument.java,v 1.2 2009/01/22 06:52:07 sharapov Exp $
@@ -26,15 +26,15 @@ import com.mg.merp.document.model.DocHead;
 public interface DiscountDocument {
 
 	/**
-	 * применить скидку/неценку
+	 * РїСЂРёРјРµРЅРёС‚СЊ СЃРєРёРґРєСѓ/РЅРµС†РµРЅРєСѓ
 	 */
 	void applyDiscount(DocHead docHead);
 	
 	/**
-	 * Применить скидку/неценку
-	 * @param docHead - документ
-	 * @param аpplyDiscountListener - слушатель применения скидки/наценки
+	 * РџСЂРёРјРµРЅРёС‚СЊ СЃРєРёРґРєСѓ/РЅРµС†РµРЅРєСѓ
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
+	 * @param Р°pplyDiscountListener - СЃР»СѓС€Р°С‚РµР»СЊ РїСЂРёРјРµРЅРµРЅРёСЏ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
 	 */
-	void applyDiscount(DocHead docHead, ApplyDiscountListener аpplyDiscountListener);
+	void applyDiscount(DocHead docHead, ApplyDiscountListener Р°pplyDiscountListener);
 
 }

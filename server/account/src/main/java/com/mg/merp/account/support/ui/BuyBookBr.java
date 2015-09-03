@@ -36,7 +36,7 @@ import com.mg.merp.account.model.BuyBook;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Браузер книги покупок
+ * Р‘СЂР°СѓР·РµСЂ РєРЅРёРіРё РїРѕРєСѓРїРѕРє
  * 
  * @author leonova
  * @version $Id: BuyBookBr.java,v 1.7 2006/10/20 06:12:20 leonova Exp $

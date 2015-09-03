@@ -17,14 +17,14 @@ package com.mg.merp.document.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис дополнительных модулей подсистемы "Документы"
+ * РЎРµСЂРІРёСЃ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "Р”РѕРєСѓРјРµРЅС‚С‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentDocFlowPluginServiceMBean.java,v 1.1 2006/10/21 10:56:26 safonov Exp $
  */
 public interface DocumentDocFlowPluginServiceMBean extends ServiceMBean {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:document=DocFlowPluginService"; //$NON-NLS-1$
 

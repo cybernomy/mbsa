@@ -25,7 +25,7 @@ import com.mg.merp.warehouse.generic.ui.AbstractWarehouseDocumentMaintenaceForm;
 import com.mg.merp.warehouse.model.InvoiceSpec;
 
 /**
- * Контроллер формы поддержки исходящих накладных
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РёСЃС…РѕРґСЏС‰РёС… РЅР°РєР»Р°РґРЅС‹С…
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InvoiceHeadOutMt.java,v 1.8 2008/12/25 10:26:56 safonov Exp $

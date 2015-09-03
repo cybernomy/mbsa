@@ -32,7 +32,7 @@ import com.mg.merp.planning.MRPReportServiceLocal;
 import com.mg.merp.planning.model.MrpVersionControl;
 
 /**
- * Котроллер формы списка версий ППМ
+ * РљРѕС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РІРµСЂСЃРёР№ РџРџРњ
  * 
  * @author Oleg V. Safonov
  * @author leonova

@@ -26,7 +26,7 @@ import com.mg.merp.warehouse.generic.AbstractWarehouseDocument;
 import com.mg.merp.warehouse.model.BillHead;
 
 /**
- * Бизнес-компонент "Исходящие счета" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РСЃС…РѕРґСЏС‰РёРµ СЃС‡РµС‚Р°" 
  * 
  * @author leonova
  * @version $Id: BillHeadOutServiceBean.java,v 1.6 2007/03/27 13:36:47 safonov Exp $

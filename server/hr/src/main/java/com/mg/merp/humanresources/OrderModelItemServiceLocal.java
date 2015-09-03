@@ -17,7 +17,7 @@ package com.mg.merp.humanresources;
 import com.mg.merp.humanresources.model.OrderModelItem;
 
 /**
- * Сервис бизнес-компонента "Образцы пунктов приказа"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·С†С‹ РїСѓРЅРєС‚РѕРІ РїСЂРёРєР°Р·Р°"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.humanresources.model.OrderModelItem;
 public interface OrderModelItemServiceLocal extends com.mg.framework.api.DataBusinessObjectService<OrderModelItem, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/humanresources/OrderModelItem"; //$NON-NLS-1$
 

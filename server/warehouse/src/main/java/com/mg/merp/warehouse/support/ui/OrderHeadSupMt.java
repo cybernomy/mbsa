@@ -24,14 +24,14 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 import com.mg.merp.warehouse.OrderSpecSupServiceLocal;
 
 /**
- * Контроллер формы поддержки заказов постащикам
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р·Р°РєР°Р·РѕРІ РїРѕСЃС‚Р°С‰РёРєР°Рј
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: OrderHeadSupMt.java,v 1.8 2008/12/25 10:26:25 safonov Exp $
  */
 public class OrderHeadSupMt extends GoodsDocumentMaintenanceForm {
 	/**
-	 * контекст импорта для SearchHelp поля "Ответственный"
+	 * РєРѕРЅС‚РµРєСЃС‚ РёРјРїРѕСЂС‚Р° РґР»СЏ SearchHelp РїРѕР»СЏ "РћС‚РІРµС‚СЃС‚РІРµРЅРЅС‹Р№"
 	 */
 	protected String[] contractorResponsibleKinds;
 	

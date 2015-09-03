@@ -21,7 +21,7 @@ import com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory;
 import com.mg.merp.settlement.SettlementProcessorServiceLocal;
 
 /**
- * Реализация фабрики реализации этапа ДО "Поставить в план расчетов с партнерами"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёРё СЌС‚Р°РїР° Р”Рћ "РџРѕСЃС‚Р°РІРёС‚СЊ РІ РїР»Р°РЅ СЂР°СЃС‡РµС‚РѕРІ СЃ РїР°СЂС‚РЅРµСЂР°РјРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: DoPlanContractorCardDocFlowPluginFactory.java,v 1.1 2007/03/19 15:05:29 sharapov Exp $

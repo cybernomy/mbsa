@@ -34,7 +34,7 @@ import com.mg.merp.paymentalloc.model.Payment;
 import com.mg.merp.paymentalloc.model.TransactHead;
 
 /**
- * Контрллер формы поддержки "Записи журнала платежей"
+ * РљРѕРЅС‚СЂР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "Р—Р°РїРёСЃРё Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -89,8 +89,8 @@ public class PaymentMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * Обработчик кнопки "Расчитать курс"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃС‡РёС‚Р°С‚СЊ РєСѓСЂСЃ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionChooseCurrencyRate(WidgetEvent event) {
 		getPaymentService().computeCurRateAndSumNat((Payment) getEntity());
@@ -98,16 +98,16 @@ public class PaymentMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * Обработчик кнопки "Обновить"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РћР±РЅРѕРІРёС‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRefresh(WidgetEvent event) {
 		refreshAllTables();
 	}
 
 	/**
-	 * Обработчик пункта КМ "Просмотреть документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewDocHead(WidgetEvent event) {
 		if(getEntity().getAttribute("Id") != null) { //$NON-NLS-1$
@@ -136,16 +136,16 @@ public class PaymentMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * Обработчик события просмотра документа-основания
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewBaseDocument(WidgetEvent event) {
 		DocumentUtils.viewDocument(((Payment) getEntity()).getBaseDoc());
 	}
 
 	/**
-	 * Обработчик просмотра/выбора контракта
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР°/РІС‹Р±РѕСЂР° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewOrChooseContract(WidgetEvent event) {
 		final Payment docHead = (Payment) getEntity();

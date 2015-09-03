@@ -41,7 +41,7 @@ import com.mg.framework.support.ui.widget.tree.TreeNode;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Реализация адаптера дерева поддержки объектов сущностей 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р°РґР°РїС‚РµСЂР° РґРµСЂРµРІР° РїРѕРґРґРµСЂР¶РєРё РѕР±СЉРµРєС‚РѕРІ СЃСѓС‰РЅРѕСЃС‚РµР№ 
  * 
  * @author Oleg V. Safonov
  * @version $Id: MaintenanceTreeController.java,v 1.13 2009/02/09 13:46:23 safonov Exp $
@@ -86,10 +86,10 @@ public class MaintenanceTreeController implements MaintenanceTreeControllerAdapt
 	}
 	
 	/**
-	 * установка формы поддержки сервиса, устанавливается для всех видов
-	 * поддержки (добавление, изменение, просмотр)
+	 * СѓСЃС‚Р°РЅРѕРІРєР° С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРµСЂРІРёСЃР°, СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ РґР»СЏ РІСЃРµС… РІРёРґРѕРІ
+	 * РїРѕРґРґРµСЂР¶РєРё (РґРѕР±Р°РІР»РµРЅРёРµ, РёР·РјРµРЅРµРЅРёРµ, РїСЂРѕСЃРјРѕС‚СЂ)
 	 * 
-	 * @param formName наименование формы
+	 * @param formName РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С„РѕСЂРјС‹
 	 */
 	public void setMaintenanceForm(String formName) {
 		addForm = formName;
@@ -98,34 +98,34 @@ public class MaintenanceTreeController implements MaintenanceTreeControllerAdapt
 	}
 	
 	/**
-	 * установка формы поддержки добавления сервиса
+	 * СѓСЃС‚Р°РЅРѕРІРєР° С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РґРѕР±Р°РІР»РµРЅРёСЏ СЃРµСЂРІРёСЃР°
 	 * 
-	 * @param formName наименование формы
+	 * @param formName РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С„РѕСЂРјС‹
 	 */
 	public void setAddForm(String formName) {
 		addForm = formName;
 	}
 	
 	/**
-	 * установка формы поддержки изменения сервиса
+	 * СѓСЃС‚Р°РЅРѕРІРєР° С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РёР·РјРµРЅРµРЅРёСЏ СЃРµСЂРІРёСЃР°
 	 * 
-	 * @param formName наименование формы
+	 * @param formName РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С„РѕСЂРјС‹
 	 */
 	public void setEditForm(String formName) {
 		editForm = formName;
 	}
 	
 	/**
-	 * установка формы поддержки просмотра сервиса
+	 * СѓСЃС‚Р°РЅРѕРІРєР° С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РїСЂРѕСЃРјРѕС‚СЂР° СЃРµСЂРІРёСЃР°
 	 * 
-	 * @param formName наименование формы
+	 * @param formName РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С„РѕСЂРјС‹
 	 */
 	public void setViewForm(String formName) {
 		viewForm = formName;
 	}
 	
 	/**
-	 * реализация добавления сущности
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РґРѕР±Р°РІР»РµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 *
 	 */
 	protected void doAdd() {
@@ -148,7 +148,7 @@ public class MaintenanceTreeController implements MaintenanceTreeControllerAdapt
 	}
 	
 	/**
-	 * реализация изменения сущности
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РёР·РјРµРЅРµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 *
 	 */
 	protected void doEdit() {
@@ -166,7 +166,7 @@ public class MaintenanceTreeController implements MaintenanceTreeControllerAdapt
 	}
 	
 	/**
-	 * реализация просмотра сущности
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РїСЂРѕСЃРјРѕС‚СЂР° СЃСѓС‰РЅРѕСЃС‚Рё
 	 *
 	 */
 	protected void doView() {
@@ -176,7 +176,7 @@ public class MaintenanceTreeController implements MaintenanceTreeControllerAdapt
 	}
 	
 	/**
-	 * реализация удаления сущности
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СѓРґР°Р»РµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 *
 	 */
 	protected void doErase() {
@@ -197,23 +197,23 @@ public class MaintenanceTreeController implements MaintenanceTreeControllerAdapt
 	}
 	
 	/**
-	 * реализация обновления списка сущностей
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРїРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№
 	 *
 	 */
 	protected void doRefresh() {
 		int[] selectedRows = null;
-		//такая ситуация возникает если было удаление
+		//С‚Р°РєР°СЏ СЃРёС‚СѓР°С†РёСЏ РІРѕР·РЅРёРєР°РµС‚ РµСЃР»Рё Р±С‹Р»Рѕ СѓРґР°Р»РµРЅРёРµ
 		if (currentNodeId == null)
 			selectedRows = treeWidget.getSelectionRows();
 		treeModel.load();
 		if (selectedRows == null || selectedRows.length == 0)
 			locate(currentNodeId);
 		else
-			treeWidget.setSelectionRow(selectedRows[0] - 1); //при удалении установим на ряд выше
+			treeWidget.setSelectionRow(selectedRows[0] - 1); //РїСЂРё СѓРґР°Р»РµРЅРёРё СѓСЃС‚Р°РЅРѕРІРёРј РЅР° СЂСЏРґ РІС‹С€Рµ
 	}
 	
 	/**
-	 * реализация настройки прав доступа на элемент дерева
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РЅР°СЃС‚СЂРѕР№РєРё РїСЂР°РІ РґРѕСЃС‚СѓРїР° РЅР° СЌР»РµРјРµРЅС‚ РґРµСЂРµРІР°
 	 *
 	 */
 	protected void doSetupPermissions() {
@@ -282,9 +282,9 @@ public class MaintenanceTreeController implements MaintenanceTreeControllerAdapt
 	}
 
 	/**
-	 * Установка свойства отвечающего за иерархию дерева 
+	 * РЈСЃС‚Р°РЅРѕРІРєР° СЃРІРѕР№СЃС‚РІР° РѕС‚РІРµС‡Р°СЋС‰РµРіРѕ Р·Р° РёРµСЂР°СЂС…РёСЋ РґРµСЂРµРІР° 
 	 * 
-	 * @param value	наименования свойства
+	 * @param value	РЅР°РёРјРµРЅРѕРІР°РЅРёСЏ СЃРІРѕР№СЃС‚РІР°
 	 */
 	public void setParentPropertyName(String value) {
 		this.parentPropertyName = value;
@@ -326,11 +326,11 @@ public class MaintenanceTreeController implements MaintenanceTreeControllerAdapt
 	}
 
 	/**
-	 * поиск и позиционирование в дереве по значению первичного ключа, если в модели найден узел
-	 * то производится позиционирование на данный узел
+	 * РїРѕРёСЃРє Рё РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ РІ РґРµСЂРµРІРµ РїРѕ Р·РЅР°С‡РµРЅРёСЋ РїРµСЂРІРёС‡РЅРѕРіРѕ РєР»СЋС‡Р°, РµСЃР»Рё РІ РјРѕРґРµР»Рё РЅР°Р№РґРµРЅ СѓР·РµР»
+	 * С‚Рѕ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёРµ РЅР° РґР°РЅРЅС‹Р№ СѓР·РµР»
 	 * 
-	 * @param primaryKey	значение первичного ключа, если <code>null</code> то поиск не производится
-	 * @return	возвращает маршрут до найденного узла или <code>null</code> если маршрут не найден
+	 * @param primaryKey	Р·РЅР°С‡РµРЅРёРµ РїРµСЂРІРёС‡РЅРѕРіРѕ РєР»СЋС‡Р°, РµСЃР»Рё <code>null</code> С‚Рѕ РїРѕРёСЃРє РЅРµ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ
+	 * @return	РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°СЂС€СЂСѓС‚ РґРѕ РЅР°Р№РґРµРЅРЅРѕРіРѕ СѓР·Р»Р° РёР»Рё <code>null</code> РµСЃР»Рё РјР°СЂС€СЂСѓС‚ РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	public EntityTreeNode[] locate(Object primaryKey) {
 		if (primaryKey != null) {

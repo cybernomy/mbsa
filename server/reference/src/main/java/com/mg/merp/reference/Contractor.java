@@ -16,7 +16,7 @@ package com.mg.merp.reference;
 
 
 /**
- * Базовый интерфейс бизнес-компонентов "Контрагенты"
+ * Р‘Р°Р·РѕРІС‹Р№ РёРЅС‚РµСЂС„РµР№СЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ "РљРѕРЅС‚СЂР°РіРµРЅС‚С‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: Contractor.java,v 1.2 2007/08/16 14:14:04 safonov Exp $
@@ -24,7 +24,7 @@ package com.mg.merp.reference;
 public interface Contractor<T extends com.mg.merp.reference.model.Contractor> extends com.mg.framework.api.DataBusinessObjectService<T, Integer> {
 	
 	/**
-	 * поиск контрагента по коду
+	 * РїРѕРёСЃРє РєРѕРЅС‚СЂР°РіРµРЅС‚Р° РїРѕ РєРѕРґСѓ
 	 * 
 	 * @param code
 	 * @return

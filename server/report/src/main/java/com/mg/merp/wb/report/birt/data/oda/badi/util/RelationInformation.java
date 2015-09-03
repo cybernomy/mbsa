@@ -19,8 +19,8 @@ import java.util.HashMap;
 import org.eclipse.datatools.connectivity.oda.OdaException;
 
 /**
- * Вспомогательная информация, необходимая для построения ресультирующего набора
- * данных запроса
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ, РЅРµРѕР±С…РѕРґРёРјР°СЏ РґР»СЏ РїРѕСЃС‚СЂРѕРµРЅРёСЏ СЂРµСЃСѓР»СЊС‚РёСЂСѓСЋС‰РµРіРѕ РЅР°Р±РѕСЂР°
+ * РґР°РЅРЅС‹С… Р·Р°РїСЂРѕСЃР°
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: RelationInformation.java,v 1.4 2006/11/07 08:04:27 poroxnenko
@@ -32,16 +32,16 @@ public class RelationInformation {
 	public static final String CONST_COLUMN_DELIMITER = ",";
 
 	/**
-	 * Информация о таблице
+	 * РРЅС„РѕСЂРјР°С†РёСЏ Рѕ С‚Р°Р±Р»РёС†Рµ
 	 */
 	private TableInfo tableInfo;
 
 	/**
-	 * Конструктор
+	 * РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
 	 * @param relationString
-	 *            строка, содержащая метаданные, необходимые для построения
-	 *            таблицы
+	 *            СЃС‚СЂРѕРєР°, СЃРѕРґРµСЂР¶Р°С‰Р°СЏ РјРµС‚Р°РґР°РЅРЅС‹Рµ, РЅРµРѕР±С…РѕРґРёРјС‹Рµ РґР»СЏ РїРѕСЃС‚СЂРѕРµРЅРёСЏ
+	 *            С‚Р°Р±Р»РёС†С‹
 	 * @throws OdaException
 	 */
 	public RelationInformation(String relationString) throws OdaException {
@@ -50,7 +50,7 @@ public class RelationInformation {
 	}
 
 	/**
-	 * Инициализация tableInfos по строке метаданных.
+	 * РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ tableInfos РїРѕ СЃС‚СЂРѕРєРµ РјРµС‚Р°РґР°РЅРЅС‹С….
 	 * 
 	 * @param relationString
 	 * @throws OdaException
@@ -80,15 +80,15 @@ public class RelationInformation {
 
 	/**
 	 * @param columnName
-	 *            имя столбца
-	 * @return тип столбца
+	 *            РёРјСЏ СЃС‚РѕР»Р±С†Р°
+	 * @return С‚РёРї СЃС‚РѕР»Р±С†Р°
 	 */
 	public String getTableColumnType(String columnName) {
 		return tableInfo.getType(columnName);
 	}
 
 	/**
-	 * @return массив названий столбцов
+	 * @return РјР°СЃСЃРёРІ РЅР°Р·РІР°РЅРёР№ СЃС‚РѕР»Р±С†РѕРІ
 	 */
 	public String[] getTableColumnNames() {
 		return tableInfo.getColumnNames();
@@ -97,17 +97,17 @@ public class RelationInformation {
 }
 
 /**
- * Класс, описывающий таблицу
+ * РљР»Р°СЃСЃ, РѕРїРёСЃС‹РІР°СЋС‰РёР№ С‚Р°Р±Р»РёС†Сѓ
  * 
  */
 class TableInfo {
 	/**
-	 * Хранилище информации о столбцах
+	 * РҐСЂР°РЅРёР»РёС‰Рµ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃС‚РѕР»Р±С†Р°С…
 	 */
 	private HashMap<String, ColumnInfo> columnInfos;
 
 	/**
-	 * Конструктор
+	 * РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
 	 */
 	public TableInfo() {
@@ -116,24 +116,24 @@ class TableInfo {
 
 	/**
 	 * @param columnName
-	 * @return тип столбца по его имени
+	 * @return С‚РёРї СЃС‚РѕР»Р±С†Р° РїРѕ РµРіРѕ РёРјРµРЅРё
 	 */
 	public String getType(String columnName) {
 		return this.columnInfos.get(columnName).getColumnType();
 	}
 
 	/**
-	 * Добавляет столбец в таблицу
+	 * Р”РѕР±Р°РІР»СЏРµС‚ СЃС‚РѕР»Р±РµС† РІ С‚Р°Р±Р»РёС†Сѓ
 	 * 
 	 * @param ci
-	 *            информация о столбце
+	 *            РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ СЃС‚РѕР»Р±С†Рµ
 	 */
 	public void addColumn(ColumnInfo ci) {
 		this.columnInfos.put(ci.getColumnName(), ci);
 	}
 
 	/**
-	 * @return массив имён столбцов
+	 * @return РјР°СЃСЃРёРІ РёРјС‘РЅ СЃС‚РѕР»Р±С†РѕРІ
 	 */
 	public String[] getColumnNames() {
 		Object[] names = this.columnInfos.keySet().toArray();
@@ -147,34 +147,34 @@ class TableInfo {
 }
 
 /**
- * Метаданные одного столбца
+ * РњРµС‚Р°РґР°РЅРЅС‹Рµ РѕРґРЅРѕРіРѕ СЃС‚РѕР»Р±С†Р°
  * 
  */
 class ColumnInfo {
 	/**
-	 * Индекс
+	 * РРЅРґРµРєСЃ
 	 */
 	private int index;
 
 	/**
-	 * Имя
+	 * РРјСЏ
 	 */
 	private String name;
 
 	/**
-	 * Тип
+	 * РўРёРї
 	 */
 	private String type;
 
 	/**
-	 * Конструктор
+	 * РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
 	 * @param index
-	 *            индекс
+	 *            РёРЅРґРµРєСЃ
 	 * @param name
-	 *            имя
+	 *            РёРјСЏ
 	 * @param type
-	 *            тип
+	 *            С‚РёРї
 	 * @throws OdaException
 	 */
 	public ColumnInfo(int index, String name, String type) throws OdaException {
@@ -186,21 +186,21 @@ class ColumnInfo {
 	}
 
 	/**
-	 * @return имя столбца
+	 * @return РёРјСЏ СЃС‚РѕР»Р±С†Р°
 	 */
 	public String getColumnName() {
 		return this.name;
 	}
 
 	/**
-	 * @return тип столбца
+	 * @return С‚РёРї СЃС‚РѕР»Р±С†Р°
 	 */
 	public String getColumnType() {
 		return this.type;
 	}
 
 	/**
-	 * @return индекс столбца
+	 * @return РёРЅРґРµРєСЃ СЃС‚РѕР»Р±С†Р°
 	 */
 	public int getColumnIndex() {
 		return this.index;

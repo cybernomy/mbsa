@@ -17,26 +17,26 @@ package com.mg.merp.salary.model;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Знак начсления/удержания
+ * Р—РЅР°Рє РЅР°С‡СЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ
  * 
  * @author leonova
  * @version $Id: TripleSumSign.java,v 1.1 2006/03/30 11:31:37 safonov Exp $
  */
 public enum TripleSumSign {
 	/**
-	 * Не влияет
+	 * РќРµ РІР»РёСЏРµС‚
 	 */
 	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#TripleSumSign.None")
 	NONE,
 
 	/**
-	 * Плюс
+	 * РџР»СЋСЃ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#TripleSumSign.Plus")
 	Plus,
 	
 	/**
-	 * Минус
+	 * РњРёРЅСѓСЃ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#TripleSumSign.Minus")
 	Minus

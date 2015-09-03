@@ -28,7 +28,7 @@ import com.mg.merp.salary.TaxScaleServiceLocal;
 import com.mg.merp.salary.model.TaxHead;
 
 /**
- * Контроллер браузера налоговых сеток
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° РЅР°Р»РѕРіРѕРІС‹С… СЃРµС‚РѕРє
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -89,8 +89,8 @@ public class TaxHeadBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Налоговые шкалы"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РќР°Р»РѕРіРѕРІС‹Рµ С€РєР°Р»С‹"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionShowTaxScale(WidgetEvent event) {
 		Serializable[] selectedPrimaryKeys = ((MaintenanceTableModel) table.getModel()).getSelectedPrimaryKeys();

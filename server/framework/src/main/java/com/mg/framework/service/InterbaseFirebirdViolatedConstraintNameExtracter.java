@@ -20,7 +20,7 @@ import org.hibernate.exception.JDBCExceptionHelper;
 import org.hibernate.exception.TemplatedViolatedConstraintNameExtracter;
 
 /**
- * Класс извлечения имен конструкций из специфичных ИС СУБД Interbase и Firebird
+ * РљР»Р°СЃСЃ РёР·РІР»РµС‡РµРЅРёСЏ РёРјРµРЅ РєРѕРЅСЃС‚СЂСѓРєС†РёР№ РёР· СЃРїРµС†РёС„РёС‡РЅС‹С… РРЎ РЎРЈР‘Р” Interbase Рё Firebird
  * 
  * @author Oleg V. Safonov
  * @version $Id: InterbaseFirebirdViolatedConstraintNameExtracter.java,v 1.1 2006/12/15 10:02:51 safonov Exp $

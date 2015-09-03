@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.ReserveCategoryServiceLocal;
 import com.mg.merp.personnelref.model.ReserveCategory;
 
 /**
- * Бизнес-компонент "Категории резерва" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљР°С‚РµРіРѕСЂРёРё СЂРµР·РµСЂРІР°" 
  * 
  * @author leonova
  * @version $Id: ReserveCategoryServiceBean.java,v 1.3 2006/09/04 13:02:21 leonova Exp $

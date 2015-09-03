@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PersonnelServiceServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelService;
 
 /**
- * Реализация бизнес-компонента "Стаж сотрудника" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎС‚Р°Р¶ СЃРѕС‚СЂСѓРґРЅРёРєР°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -27,7 +27,7 @@ import com.mg.merp.document.generic.GoodsDocumentServiceBean;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Бизнес-компонент "Внутренниые акты" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РЅСѓС‚СЂРµРЅРЅРёС‹Рµ Р°РєС‚С‹" 
  * 
  * @author leonova
  * @version $Id: InternalActHeadServiceBean.java,v 1.6 2007/03/23 16:11:41 safonov Exp $

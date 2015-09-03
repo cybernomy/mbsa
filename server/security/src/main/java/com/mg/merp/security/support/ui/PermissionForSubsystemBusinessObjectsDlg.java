@@ -25,7 +25,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.security.support.Messages;
 
 /**
- * Контроллер диалога установки/сброса прав для всех бизнес-компонентов модуля
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° СѓСЃС‚Р°РЅРѕРІРєРё/СЃР±СЂРѕСЃР° РїСЂР°РІ РґР»СЏ РІСЃРµС… Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ РјРѕРґСѓР»СЏ
  * 
  * @author Artem V. Sharapov
  * @version $Id: PermissionForSubsystemBusinessObjectsDlg.java,v 1.2 2008/07/15 08:18:24 safonov Exp $
@@ -125,8 +125,8 @@ public class PermissionForSubsystemBusinessObjectsDlg extends DefaultDialog {
 	}
 	
 	/**
-	 * Запустить диалог на показ
-	 * @param moduleName - наименование модуля
+	 * Р—Р°РїСѓСЃС‚РёС‚СЊ РґРёР°Р»РѕРі РЅР° РїРѕРєР°Р·
+	 * @param moduleName - РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РјРѕРґСѓР»СЏ
 	 */
 	public void execute(String moduleName) {
 		this.moduleName = moduleName;
@@ -135,8 +135,8 @@ public class PermissionForSubsystemBusinessObjectsDlg extends DefaultDialog {
 	}
 	
 	/**
-	 * Получить список выбранных методов
-	 * @return список выбранных методов
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РІС‹Р±СЂР°РЅРЅС‹С… РјРµС‚РѕРґРѕРІ
+	 * @return СЃРїРёСЃРѕРє РІС‹Р±СЂР°РЅРЅС‹С… РјРµС‚РѕРґРѕРІ
 	 */
 	public List<String> getSelectedMethodsList() {
 		List<String> selectedMethods = new ArrayList<String>();
@@ -148,15 +148,15 @@ public class PermissionForSubsystemBusinessObjectsDlg extends DefaultDialog {
 	}
 	
 	/**
-	 * Получить признак установки/сброса прав
-	 * @return <code>true</code> - установка прав; <code>false</code> - во всех остальных случаях
+	 * РџРѕР»СѓС‡РёС‚СЊ РїСЂРёР·РЅР°Рє СѓСЃС‚Р°РЅРѕРІРєРё/СЃР±СЂРѕСЃР° РїСЂР°РІ
+	 * @return <code>true</code> - СѓСЃС‚Р°РЅРѕРІРєР° РїСЂР°РІ; <code>false</code> - РІРѕ РІСЃРµС… РѕСЃС‚Р°Р»СЊРЅС‹С… СЃР»СѓС‡Р°СЏС…
 	 */
 	public boolean isGrantPermission() {
 		return permissionAction == 0;
 	}
 		
 	/**
-	 * Загрузить данные в таблицу
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ РґР°РЅРЅС‹Рµ РІ С‚Р°Р±Р»РёС†Сѓ
 	 */
 	protected void loadMethodsTable() {
 		methodsTableItemList.add(new MethodsTableModelItem(BusinessMethodPermission.LOAD_METHOD));

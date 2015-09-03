@@ -17,7 +17,7 @@ package com.mg.merp.lbschedule;
 import com.mg.merp.lbschedule.model.Item;
 
 /**
- * Сервис бизнес-компонента "Пункты графика исполнения обязательств"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСѓРЅРєС‚С‹ РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,14 +26,14 @@ import com.mg.merp.lbschedule.model.Item;
 public interface ItemServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Item, Integer> {
    
 	/**
-    * Расчет даты начала пункта
-    * @param item - пункт графика
+    * Р Р°СЃС‡РµС‚ РґР°С‚С‹ РЅР°С‡Р°Р»Р° РїСѓРЅРєС‚Р°
+    * @param item - РїСѓРЅРєС‚ РіСЂР°С„РёРєР°
     */
    void computeResultDate(Item item);
    
    /**
-    * Расчет суммы пункта
-    * @param item - пункт графика
+    * Р Р°СЃС‡РµС‚ СЃСѓРјРјС‹ РїСѓРЅРєС‚Р°
+    * @param item - РїСѓРЅРєС‚ РіСЂР°С„РёРєР°
     */
    void computeResultSum(Item item);
 

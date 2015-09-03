@@ -17,21 +17,21 @@ package com.mg.merp.baiengine;
 import java.util.EventListener;
 
 /**
- * Слушатель событий в BAi
+ * РЎР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№ РІ BAi
  * 
  * @author Oleg V. Safonov
  * @version $Id: BusinessAddinListener.java,v 1.1 2006/06/08 11:39:47 safonov Exp $
  */
 public interface BusinessAddinListener<T> extends EventListener {
 	/**
-	 * Обработка успешного завершения BAi
+	 * РћР±СЂР°Р±РѕС‚РєР° СѓСЃРїРµС€РЅРѕРіРѕ Р·Р°РІРµСЂС€РµРЅРёСЏ BAi
 	 * 
 	 * @param event
 	 */
 	public void completed(BusinessAddinEvent<T> event);
 	
 	/**
-	 * Обработка прерывания выполнения BAi
+	 * РћР±СЂР°Р±РѕС‚РєР° РїСЂРµСЂС‹РІР°РЅРёСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ BAi
 	 * 
 	 * @param event
 	 */

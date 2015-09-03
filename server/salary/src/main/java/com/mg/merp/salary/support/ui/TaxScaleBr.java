@@ -32,7 +32,7 @@ import com.mg.merp.salary.model.TaxRate;
 import com.mg.merp.salary.model.TaxScale;
 
 /**
- * Контроллер браузера Налоговых шкал
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° РќР°Р»РѕРіРѕРІС‹С… С€РєР°Р»
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -174,8 +174,8 @@ public class TaxScaleBr extends DefaultMDBrowseForm implements MasterModelListen
 	}
 
 	/**
-	 * Установить идентификатор налоговой сетки
-	 * @param taxHeadId - идентификатор налоговой сетки
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РЅР°Р»РѕРіРѕРІРѕР№ СЃРµС‚РєРё
+	 * @param taxHeadId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РЅР°Р»РѕРіРѕРІРѕР№ СЃРµС‚РєРё
 	 */
 	public void setTaxHeadId(Serializable taxHeadId) {
 		this.taxHeadId = taxHeadId;

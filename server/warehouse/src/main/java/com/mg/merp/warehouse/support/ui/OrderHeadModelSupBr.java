@@ -27,7 +27,7 @@ import com.mg.merp.reference.support.ReferenceUtils;
 import com.mg.merp.warehouse.OrderHeadModelSupServiceLocal;
 
 /**
- * Браузер образцов заказов поставщиков
+ * Р‘СЂР°СѓР·РµСЂ РѕР±СЂР°Р·С†РѕРІ Р·Р°РєР°Р·РѕРІ РїРѕСЃС‚Р°РІС‰РёРєРѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: OrderHeadModelSupBr.java,v 1.4 2006/09/12 10:54:35 leonova Exp $

@@ -27,7 +27,7 @@ import com.mg.merp.account.MetalServiceLocal;
 import com.mg.merp.account.model.Metal;
 
 /**
- * Бизнес-компонент "Драгоценные металы" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”СЂР°РіРѕС†РµРЅРЅС‹Рµ РјРµС‚Р°Р»С‹" 
  * 
  * @author leonova
  * @version $Id: MetalServiceBean.java,v 1.7 2008/03/04 07:02:00 alikaev Exp $
@@ -46,7 +46,7 @@ public class MetalServiceBean extends AbstractPOJODataBusinessObjectServiceBean<
 	protected void onCreate(Metal entity) {
 		adjustMetal(entity);
 		if (findByCriteria(Restrictions.eq("UpCode", entity.getUpCode())).size() > 0) //$NON-NLS-1$
-			throw new BusinessException(StringUtils.format(Messages.getInstance().getMessage(Messages.NOT_UNIQUE_ATTRIBUTE), "'Код'")); //$NON-NLS-1$
+			throw new BusinessException(StringUtils.format(Messages.getInstance().getMessage(Messages.NOT_UNIQUE_ATTRIBUTE), "'РљРѕРґ'")); //$NON-NLS-1$
 	}
 
 	/* (non-Javadoc)

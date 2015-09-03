@@ -27,7 +27,7 @@ import com.mg.merp.core.support.CoreUtils;
 import com.mg.merp.manufacture.InputLaborHeadServiceLocal;
 
 /**
- * Браузер формы списка актов на списание времени, отработанного РС в НЗП
+ * Р‘СЂР°СѓР·РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ Р РЎ РІ РќР—Рџ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InputLaborHeadBr.java,v 1.10 2009/02/10 14:34:19 safonov Exp $

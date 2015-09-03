@@ -39,7 +39,7 @@ import com.mg.merp.account.support.Messages;
 import com.mg.merp.reference.model.Catalog;
 
 /**
- * Контроллер формы списка бизнес-компонента "Ведомость начисления амортизации"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РµРґРѕРјРѕСЃС‚СЊ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: AmortizationBr.java,v 1.3 2008/05/20 11:49:20 alikaev Exp $
@@ -57,18 +57,18 @@ public class AmortizationBr extends DefaultPlainBrowseForm implements Conversati
 	private boolean okAction = false;
 
 	/**
-	 * список слушателей на событие "Продолжить"
+	 * СЃРїРёСЃРѕРє СЃР»СѓС€Р°С‚РµР»РµР№ РЅР° СЃРѕР±С‹С‚РёРµ "РџСЂРѕРґРѕР»Р¶РёС‚СЊ"
 	 */
 	private List<FormActionListener> okActionListener = new ArrayList<FormActionListener>();
 	/**
-	 * список слушателей на событие "Отменить"
+	 * СЃРїРёСЃРѕРє СЃР»СѓС€Р°С‚РµР»РµР№ РЅР° СЃРѕР±С‹С‚РёРµ "РћС‚РјРµРЅРёС‚СЊ"
 	 */
 	private List<FormActionListener> cancelActionListener = new ArrayList<FormActionListener>();
 
 	/**
-	 * отправка события о событии "Продолжить"
+	 * РѕС‚РїСЂР°РІРєР° СЃРѕР±С‹С‚РёСЏ Рѕ СЃРѕР±С‹С‚РёРё "РџСЂРѕРґРѕР»Р¶РёС‚СЊ"
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void fireOkAction(FormEvent event) throws ApplicationException {
@@ -77,9 +77,9 @@ public class AmortizationBr extends DefaultPlainBrowseForm implements Conversati
 	}
 
 	/**
-	 * отправка события о событии "Отменить"
+	 * РѕС‚РїСЂР°РІРєР° СЃРѕР±С‹С‚РёСЏ Рѕ СЃРѕР±С‹С‚РёРё "РћС‚РјРµРЅРёС‚СЊ"
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void fireCancelAction(FormEvent event) throws ApplicationException {
@@ -186,25 +186,25 @@ public class AmortizationBr extends DefaultPlainBrowseForm implements Conversati
 	}
 
 	/**
-	 * Номер партии проведения массового начисления амортизации
+	 * РќРѕРјРµСЂ РїР°СЂС‚РёРё РїСЂРѕРІРµРґРµРЅРёСЏ РјР°СЃСЃРѕРІРѕРіРѕ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * 
-	 * @param batch задаваемое batch
+	 * @param batch Р·Р°РґР°РІР°РµРјРѕРµ batch
 	 */
 	public void setBatch(Integer batch) {
 		this.batch = batch;
 	}
 
 	/**
-	 * Вид учета основных средств и норм амортизации
+	 * Р’РёРґ СѓС‡РµС‚Р° РѕСЃРЅРѕРІРЅС‹С… СЃСЂРµРґСЃС‚РІ Рё РЅРѕСЂРј Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * 
-	 * @param accKindName задаваемое accKindName
+	 * @param accKindName Р·Р°РґР°РІР°РµРјРѕРµ accKindName
 	 */
 	public void setAccKindName(String accKindName) {
 		this.accKindName = accKindName;
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Продолжить"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РџСЂРѕРґРѕР»Р¶РёС‚СЊ"
 	 * 
 	 * @param event
 	 * @throws ApplicationException
@@ -215,7 +215,7 @@ public class AmortizationBr extends DefaultPlainBrowseForm implements Conversati
 	}
 	
 	/**
-	 * Обработчик кнопки контекстного меню "Удаление ведомостей начисления амортизации"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РЈРґР°Р»РµРЅРёРµ РІРµРґРѕРјРѕСЃС‚РµР№ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё"
 	 * 
 	 * @param event
 	 * @throws ApplicationException
@@ -246,8 +246,8 @@ public class AmortizationBr extends DefaultPlainBrowseForm implements Conversati
 	}
 
 	/**
-	 * Возвращает признак нажатия кнопки продолжить
-	 * <code>true</code> - нажата кнопка продолжить
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РїСЂРёР·РЅР°Рє РЅР°Р¶Р°С‚РёСЏ РєРЅРѕРїРєРё РїСЂРѕРґРѕР»Р¶РёС‚СЊ
+	 * <code>true</code> - РЅР°Р¶Р°С‚Р° РєРЅРѕРїРєР° РїСЂРѕРґРѕР»Р¶РёС‚СЊ
 	 * @return
 	 */
 	public boolean isOkAction() {
@@ -255,7 +255,7 @@ public class AmortizationBr extends DefaultPlainBrowseForm implements Conversati
 	}
 
 	/**
-	 * Устанавливает признак нажати кнопки
+	 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РїСЂРёР·РЅР°Рє РЅР°Р¶Р°С‚Рё РєРЅРѕРїРєРё
 	 * @param okAction
 	 */
 	public void setOkAction(boolean okAction) {

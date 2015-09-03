@@ -33,7 +33,7 @@ import com.mg.merp.salary.model.FeeModel;
 import com.mg.merp.salary.model.FeeModelParam;
 
 /**
- * Реализация бизнес-компонента "Начисления/ударжания расчетных листков" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќР°С‡РёСЃР»РµРЅРёСЏ/СѓРґР°СЂР¶Р°РЅРёСЏ СЂР°СЃС‡РµС‚РЅС‹С… Р»РёСЃС‚РєРѕРІ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -59,8 +59,8 @@ public class CalcListFeeServiceBean extends AbstractPOJODataBusinessObjectServic
 	}
 
 	/**
-	 * Добавить параметры из ообразца начисления/удержания
-	 * @param calcListFee - начисление/удержание
+	 * Р”РѕР±Р°РІРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РёР· РѕРѕР±СЂР°Р·С†Р° РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ
+	 * @param calcListFee - РЅР°С‡РёСЃР»РµРЅРёРµ/СѓРґРµСЂР¶Р°РЅРёРµ
 	 */
 	protected void addParamsFromFeeModel(CalcListFee calcListFee) {
 		List<FeeModelParam> feeModelParams = getFeeModelParams(calcListFee.getFeeModel());
@@ -74,9 +74,9 @@ public class CalcListFeeServiceBean extends AbstractPOJODataBusinessObjectServic
 	}
 
 	/**
-	 * Получить список параметров образца начисления/удержания
-	 * @param feeModel - образец начисления/удержания
-	 * @return список параметров образца начисления/удержания
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ РѕР±СЂР°Р·С†Р° РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ
+	 * @param feeModel - РѕР±СЂР°Р·РµС† РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ
+	 * @return СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ РѕР±СЂР°Р·С†Р° РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ
 	 */
 	protected List<FeeModelParam> getFeeModelParams(FeeModel feeModel) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(FeeModelParam.class)

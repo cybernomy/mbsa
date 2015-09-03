@@ -33,7 +33,7 @@ import com.mg.merp.warehouse.model.WarehouseTransactionDay;
 import com.mg.merp.warehouse.support.Messages;
 
 /**
- * Контроллер формы списка бизнес-компонента "Операционный день"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћРїРµСЂР°С†РёРѕРЅРЅС‹Р№ РґРµРЅСЊ"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: WarehouseTransactionDayBr.java,v 1.1 2007/11/29 08:48:48 alikaev Exp $
@@ -104,7 +104,7 @@ public class WarehouseTransactionDayBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * показать форму
+	 * РїРѕРєР°Р·Р°С‚СЊ С„РѕСЂРјСѓ
 	 * 
 	 * @param documentId
 	 */
@@ -117,7 +117,7 @@ public class WarehouseTransactionDayBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Обработчик события "Закрыть день"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "Р—Р°РєСЂС‹С‚СЊ РґРµРЅСЊ"
 	 * 
 	 * @param event
 	 * @throws Exception
@@ -130,7 +130,7 @@ public class WarehouseTransactionDayBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Обработчик события "Открыть день"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РћС‚РєСЂС‹С‚СЊ РґРµРЅСЊ"
 	 * 
 	 * @param event
 	 * @throws Exception

@@ -22,7 +22,7 @@ import com.mg.merp.baiengine.model.Repository;
 import com.mg.merp.core.model.SysClient;
 
 /**
- * Модель бизнес-компонента "Тип рекламного мероприятия"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РўРёРї СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PromotionType.java,v 1.2 2007/11/12 13:17:05 sharapov Exp $

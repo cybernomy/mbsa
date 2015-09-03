@@ -19,7 +19,7 @@ import java.util.EventListener;
 import com.mg.merp.paymentcontrol.model.PlanPaymentItem;
 
 /**
- * Слушатель изменения позиции курсора таблицы "Планирование платежей"
+ * РЎР»СѓС€Р°С‚РµР»СЊ РёР·РјРµРЅРµРЅРёСЏ РїРѕР·РёС†РёРё РєСѓСЂСЃРѕСЂР° С‚Р°Р±Р»РёС†С‹ "РџР»Р°РЅРёСЂРѕРІР°РЅРёРµ РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: SelectionRowListener.java,v 1.1 2007/05/14 04:59:59 sharapov Exp $
@@ -27,8 +27,8 @@ import com.mg.merp.paymentcontrol.model.PlanPaymentItem;
 public interface SelectionRowListener extends EventListener {
 
 	/**
-	 * Cобытие "Изменение позиции курсора таблицы"
-	 * @param selectedItem - текущая позиция курсора таблицы
+	 * CРѕР±С‹С‚РёРµ "РР·РјРµРЅРµРЅРёРµ РїРѕР·РёС†РёРё РєСѓСЂСЃРѕСЂР° С‚Р°Р±Р»РёС†С‹"
+	 * @param selectedItem - С‚РµРєСѓС‰Р°СЏ РїРѕР·РёС†РёСЏ РєСѓСЂСЃРѕСЂР° С‚Р°Р±Р»РёС†С‹
 	 */
 	public void selectedRowChange(PlanPaymentItem selectedItem);
 	

@@ -25,7 +25,7 @@ import com.mg.merp.core.model.SysClient;
 import com.mg.merp.finance.FinConfigServiceLocal;
 
 /**
- * Контроллер комманды меню "Конфигурация модуля <Фин.учет>"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРјРјР°РЅРґС‹ РјРµРЅСЋ "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <Р¤РёРЅ.СѓС‡РµС‚>"
  *  
  * @author Artem V. Sharapov
  * @version $Id: FinConfigMenuCommand.java,v 1.2 2008/08/18 06:23:16 sharapov Exp $

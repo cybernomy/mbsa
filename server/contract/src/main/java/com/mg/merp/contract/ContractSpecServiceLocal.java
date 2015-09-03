@@ -17,7 +17,7 @@ package com.mg.merp.contract;
 import com.mg.merp.contract.model.ContractSpec;
 
 /**
- * Бизнес-компонент "Спецификация контракта"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РєРѕРЅС‚СЂР°РєС‚Р°"
  * 
  * @author leonova
  * @author Artem V Sharapov
@@ -26,13 +26,13 @@ import com.mg.merp.contract.model.ContractSpec;
 public interface ContractSpecServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ContractSpec, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/contract/ContractSpec"; //$NON-NLS-1$
 
 	/**
-	 * Рассчитать аттрибуты позиции спецификации контракта
-	 * @param contractSpec - позиция спецификации контракта
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ Р°С‚С‚СЂРёР±СѓС‚С‹ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param contractSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	void adjust(ContractSpec contractSpec);	
 

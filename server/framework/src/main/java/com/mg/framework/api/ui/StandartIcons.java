@@ -15,82 +15,82 @@
 package com.mg.framework.api.ui;
 
 /**
- * Стандартные иконки используемые в приложении
+ * РЎС‚Р°РЅРґР°СЂС‚РЅС‹Рµ РёРєРѕРЅРєРё РёСЃРїРѕР»СЊР·СѓРµРјС‹Рµ РІ РїСЂРёР»РѕР¶РµРЅРёРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: StandartIcons.java,v 1.7 2008/12/23 09:36:26 safonov Exp $
  */
 public interface StandartIcons {
 	/**
-	 * логотип продукта
+	 * Р»РѕРіРѕС‚РёРї РїСЂРѕРґСѓРєС‚Р°
 	 */
 	final static String LOGO = "com/mg/framework/resources/logo.gif";
 	/**
-	 * выход
+	 * РІС‹С…РѕРґ
 	 */
 	final static String EXIT = "com/mg/framework/resources/exiticon.png";
 	/**
-	 * о программе
+	 * Рѕ РїСЂРѕРіСЂР°РјРјРµ
 	 */
 	final static String ABOUT = "com/mg/framework/resources/abouticon.png";
 	/**
-	 * помощь
+	 * РїРѕРјРѕС‰СЊ
 	 */
 	final static String HELP = "com/mg/framework/resources/helpicon.png";
 	/**
-	 * добавление
+	 * РґРѕР±Р°РІР»РµРЅРёРµ
 	 */
 	final static String ADD_BUTTON = "com/mg/framework/resources/addbuttonicon.png";
 	/**
-	 * редактирование
+	 * СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ
 	 */
 	final static String EDIT_BUTTON = "com/mg/framework/resources/editbuttonicon.png";
 	/**
-	 * просмотр
+	 * РїСЂРѕСЃРјРѕС‚СЂ
 	 */
 	final static String VIEW_BUTTON = "com/mg/framework/resources/viewbuttonicon.png";
 	/**
-	 * копирование
+	 * РєРѕРїРёСЂРѕРІР°РЅРёРµ
 	 */
 	final static String CLONE_BUTTON = "com/mg/framework/resources/clonebuttonicon.png";
 	/**
-	 * копирование
+	 * РєРѕРїРёСЂРѕРІР°РЅРёРµ
 	 */
 	final static String DEEP_CLONE_BUTTON = "com/mg/framework/resources/deepclonebuttonicon.png";
 	/**
-	 * обновить
+	 * РѕР±РЅРѕРІРёС‚СЊ
 	 */
 	final static String REFRESH_BUTTON = "com/mg/framework/resources/refreshbuttonicon.png";
 	/**
-	 * условия отбора
+	 * СѓСЃР»РѕРІРёСЏ РѕС‚Р±РѕСЂР°
 	 */
 	final static String RESTRICTION_BUTTON = "com/mg/framework/resources/restbuttonicon.png";
 	/**
-	 * печать
+	 * РїРµС‡Р°С‚СЊ
 	 */
 	final static String PRINT_BUTTON = "com/mg/framework/resources/printbuttonicon.png";
 	/**
-	 * удаление
+	 * СѓРґР°Р»РµРЅРёРµ
 	 */
 	final static String ERASE_BUTTON = "com/mg/framework/resources/erasebuttonicon.png";
 	/**
-	 * доступ
+	 * РґРѕСЃС‚СѓРї
 	 */
 	final static String PERMISSION_BUTTON = "com/mg/framework/resources/permissionbuttonicon.png";
 	/**
-	 * настройка таблицы
+	 * РЅР°СЃС‚СЂРѕР№РєР° С‚Р°Р±Р»РёС†С‹
 	 */
 	final static String SETUP_TABLE_BUTTON = "com/mg/framework/resources/setuptablebuttonicon.png";
 	/**
-	 * календарь
+	 * РєР°Р»РµРЅРґР°СЂСЊ
 	 */
 	final static String CALENDAR = "com/mg/framework/ulcdatecomponent/application/calendar.png";
 	/**
-	 * сортировка возрастающая
+	 * СЃРѕСЂС‚РёСЂРѕРІРєР° РІРѕР·СЂР°СЃС‚Р°СЋС‰Р°СЏ
 	 */
 	final static String UP_ICON = "com/mg/framework/resources/up.gif";
 	/**
-	 * сортировка убывающая
+	 * СЃРѕСЂС‚РёСЂРѕРІРєР° СѓР±С‹РІР°СЋС‰Р°СЏ
 	 */
 	final static String DOWN_ICON = "com/mg/framework/resources/down.gif";
 }

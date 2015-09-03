@@ -22,7 +22,7 @@ import com.mg.framework.api.ui.ShuttleChangeEvent;
 import com.mg.framework.generic.ui.DefaultShuttleModel;
 
 /**
- * Реализация адаптера элемента "Shuttle"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р°РґР°РїС‚РµСЂР° СЌР»РµРјРµРЅС‚Р° "Shuttle"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ShuttleController.java,v 1.1 2006/08/31 08:36:41 safonov Exp $
@@ -36,9 +36,9 @@ public class ShuttleController implements ShuttleControllerAdapter, Serializable
 	}
 
 	/**
-	 * отправить событие о перемещении из списка источника в список приемник
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕР±С‹С‚РёРµ Рѕ РїРµСЂРµРјРµС‰РµРЅРёРё РёР· СЃРїРёСЃРєР° РёСЃС‚РѕС‡РЅРёРєР° РІ СЃРїРёСЃРѕРє РїСЂРёРµРјРЅРёРє
 	 * 
-	 * @param contents	содержимое
+	 * @param contents	СЃРѕРґРµСЂР¶РёРјРѕРµ
 	 */
 	public void fireMove(ShuttleChangeEvent event) {
 		for (ShuttleListener listener : listenerList.getListeners(ShuttleListener.class))
@@ -46,9 +46,9 @@ public class ShuttleController implements ShuttleControllerAdapter, Serializable
 	}
 
 	/**
-	 * отправить событие о перемещении из списка приемника в список источник
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕР±С‹С‚РёРµ Рѕ РїРµСЂРµРјРµС‰РµРЅРёРё РёР· СЃРїРёСЃРєР° РїСЂРёРµРјРЅРёРєР° РІ СЃРїРёСЃРѕРє РёСЃС‚РѕС‡РЅРёРє
 	 * 
-	 * @param contents	содержимое
+	 * @param contents	СЃРѕРґРµСЂР¶РёРјРѕРµ
 	 */
 	public void fireRemove(ShuttleChangeEvent event) {
 		for (ShuttleListener listener : listenerList.getListeners(ShuttleListener.class))

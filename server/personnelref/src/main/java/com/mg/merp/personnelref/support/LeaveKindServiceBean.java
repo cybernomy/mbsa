@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.LeaveKindServiceLocal;
 import com.mg.merp.personnelref.model.LeaveKind;
 
 /**
- * Реализация бизнес-компонента "Виды отпусков" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РёРґС‹ РѕС‚РїСѓСЃРєРѕРІ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

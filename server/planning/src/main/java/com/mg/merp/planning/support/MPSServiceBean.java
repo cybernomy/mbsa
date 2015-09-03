@@ -24,7 +24,7 @@ import com.mg.merp.planning.MPSServiceLocal;
 import com.mg.merp.planning.model.Mps;
 
 /**
- * Реализация бизнес-компонента "ОПП" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћРџРџ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

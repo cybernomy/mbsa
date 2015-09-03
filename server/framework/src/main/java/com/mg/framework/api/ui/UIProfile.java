@@ -15,7 +15,7 @@
 package com.mg.framework.api.ui;
 
 /**
- * Профиль пользовательского интерфейса
+ * РџСЂРѕС„РёР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: UIProfile.java,v 1.1 2007/03/13 13:22:21 safonov Exp $
@@ -23,136 +23,136 @@ package com.mg.framework.api.ui;
 public interface UIProfile {
 
 	/**
-	 * имя профиля
+	 * РёРјСЏ РїСЂРѕС„РёР»СЏ
 	 * 
-	 * @return	имя
+	 * @return	РёРјСЏ
 	 */
 	String getName();
 	
 	/**
-	 * получить значение свойства
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @return	значений свойство или <code>null</code> если не найдено
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @return	Р·РЅР°С‡РµРЅРёР№ СЃРІРѕР№СЃС‚РІРѕ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	String getProperty(String name);
 
 	/**
-	 * получить значение свойства
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @param defaultValue	значений по умолчанию
-	 * @return	значений свойство или <code>defaultValue</code> если не найдено
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param defaultValue	Р·РЅР°С‡РµРЅРёР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @return	Р·РЅР°С‡РµРЅРёР№ СЃРІРѕР№СЃС‚РІРѕ РёР»Рё <code>defaultValue</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	String getProperty(String name, String defaultValue);
 	
 	/**
-	 * получить значение свойства
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @param defaultValue	значений по умолчанию
-	 * @return	значений свойство или <code>defaultValue</code> если не найдено
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param defaultValue	Р·РЅР°С‡РµРЅРёР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @return	Р·РЅР°С‡РµРЅРёР№ СЃРІРѕР№СЃС‚РІРѕ РёР»Рё <code>defaultValue</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	int getProperty(String name, int defaultValue);
 	
 	/**
-	 * получить значение свойства
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @param defaultValue	значений по умолчанию
-	 * @return	значений свойство или <code>defaultValue</code> если не найдено
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param defaultValue	Р·РЅР°С‡РµРЅРёР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @return	Р·РЅР°С‡РµРЅРёР№ СЃРІРѕР№СЃС‚РІРѕ РёР»Рё <code>defaultValue</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	boolean getProperty(String name, boolean defaultValue);
 	
 	/**
-	 * получить значение свойства
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @param defaultValue	значений по умолчанию
-	 * @return	значений свойство или <code>defaultValue</code> если не найдено
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param defaultValue	Р·РЅР°С‡РµРЅРёР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @return	Р·РЅР°С‡РµРЅРёР№ СЃРІРѕР№СЃС‚РІРѕ РёР»Рё <code>defaultValue</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	double getProperty(String name, double defaultValue);
 	
 	/**
-	 * получить значение свойства
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @param defaultValue	значений по умолчанию
-	 * @return	значений свойство или <code>defaultValue</code> если не найдено
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param defaultValue	Р·РЅР°С‡РµРЅРёР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @return	Р·РЅР°С‡РµРЅРёР№ СЃРІРѕР№СЃС‚РІРѕ РёР»Рё <code>defaultValue</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	float getProperty(String name, float defaultValue);
 	
 	/**
-	 * получить значение свойства
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @param defaultValue	значений по умолчанию
-	 * @return	значений свойство или <code>defaultValue</code> если не найдено
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param defaultValue	Р·РЅР°С‡РµРЅРёР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @return	Р·РЅР°С‡РµРЅРёР№ СЃРІРѕР№СЃС‚РІРѕ РёР»Рё <code>defaultValue</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	long getProperty(String name, long defaultValue);
 	
 	/**
-	 * получить значение свойства
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @param defaultValue	значений по умолчанию
-	 * @return	значений свойство или <code>defaultValue</code> если не найдено
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param defaultValue	Р·РЅР°С‡РµРЅРёР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @return	Р·РЅР°С‡РµРЅРёР№ СЃРІРѕР№СЃС‚РІРѕ РёР»Рё <code>defaultValue</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	short getProperty(String name, short defaultValue);
 	
 	/**
-	 * установить значение свойства
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @param value	значений
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param value	Р·РЅР°С‡РµРЅРёР№
 	 */
 	void setProperty(String name, String value);
 
 	/**
-	 * установить значение свойства
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @param value	значений
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param value	Р·РЅР°С‡РµРЅРёР№
 	 */
 	void setProperty(String name, int value);
 	
 	/**
-	 * установить значение свойства
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @param value	значений
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param value	Р·РЅР°С‡РµРЅРёР№
 	 */
 	void setProperty(String name, boolean value);
 	
 	/**
-	 * установить значение свойства
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @param value	значений
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param value	Р·РЅР°С‡РµРЅРёР№
 	 */
 	void setProperty(String name, double value);
 	
 	/**
-	 * установить значение свойства
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @param value	значений
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param value	Р·РЅР°С‡РµРЅРёР№
 	 */
 	void setProperty(String name, float value);
 	
 	/**
-	 * установить значение свойства
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @param value	значений
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param value	Р·РЅР°С‡РµРЅРёР№
 	 */
 	void setProperty(String name, long value);
 	
 	/**
-	 * установить значение свойства
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 * 
-	 * @param name	имя свойства
-	 * @param value	значений
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param value	Р·РЅР°С‡РµРЅРёР№
 	 */
 	void setProperty(String name, short value);
 

@@ -27,7 +27,7 @@ import com.mg.merp.mfreference.support.ConfigurationHelper;
 import com.mg.merp.mfreference.support.MfUtils;
 
 /**
- * Бизнес-компонент "Операции ЗНП" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћРїРµСЂР°С†РёРё Р—РќРџ" 
  * 
  * @author leonova
  * @version $Id: JobRouteServiceBean.java,v 1.8 2009/03/05 12:32:15 safonov Exp $

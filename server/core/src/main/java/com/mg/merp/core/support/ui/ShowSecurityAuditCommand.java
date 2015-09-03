@@ -23,7 +23,7 @@ import com.mg.framework.utils.SecurityUtils;
 import com.mg.merp.core.SecurityAuditServiceLocal;
 
 /**
- * Реализация команды показа аудита безопасности
+ * Р РµР°Р»РёР·Р°С†РёСЏ РєРѕРјР°РЅРґС‹ РїРѕРєР°Р·Р° Р°СѓРґРёС‚Р° Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: ShowSecurityAuditCommand.java,v 1.2 2008/03/03 13:05:04 safonov Exp $

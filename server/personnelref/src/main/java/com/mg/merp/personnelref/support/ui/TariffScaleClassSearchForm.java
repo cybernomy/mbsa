@@ -30,7 +30,7 @@ import com.mg.merp.personnelref.model.TariffScale;
 import com.mg.merp.personnelref.model.TariffScaleClass;
 
 /**
- * Контроллер формы поиска сущностей "Разряд тарифной сетки"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "Р Р°Р·СЂСЏРґ С‚Р°СЂРёС„РЅРѕР№ СЃРµС‚РєРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: TariffScaleClassSearchForm.java,v 1.1 2007/07/18 11:12:13 sharapov Exp $

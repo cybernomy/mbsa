@@ -34,7 +34,7 @@ import com.mg.merp.paymentcontrol.model.PmcResource;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Контроллер браузера "Cредство платежа"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "CСЂРµРґСЃС‚РІРѕ РїР»Р°С‚РµР¶Р°"
  * 
  * @author leonova
  * @version $Id: PmcResourceBr.java,v 1.5 2007/05/14 05:23:52 sharapov Exp $

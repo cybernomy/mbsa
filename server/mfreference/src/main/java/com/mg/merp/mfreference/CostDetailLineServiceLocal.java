@@ -20,7 +20,7 @@ import com.mg.merp.mfreference.model.CostDetail;
 import com.mg.merp.mfreference.model.CostDetailLine;
 
 /**
- * Бизнес-компонент "Строки расшифровки стоимости"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎС‚СЂРѕРєРё СЂР°СЃС€РёС„СЂРѕРІРєРё СЃС‚РѕРёРјРѕСЃС‚Рё"
  * 
  * @author leonova
  * @version $Id: CostDetailLineServiceLocal.java,v 1.2 2007/07/30 10:25:31 safonov Exp $
@@ -28,23 +28,23 @@ import com.mg.merp.mfreference.model.CostDetailLine;
 public interface CostDetailLineServiceLocal extends com.mg.framework.api.DataBusinessObjectService<CostDetailLine, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/mfreference/CostDetailLine";
 
 	/**
-	 * расчет себестоимости
+	 * СЂР°СЃС‡РµС‚ СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚Рё
 	 * 
-	 * @param costDetail		расшифровка стоимости
-	 * @param groupByCategories	группировать по категориям
-	 * @return	список спецификаций себестоимости
+	 * @param costDetail		СЂР°СЃС€РёС„СЂРѕРІРєР° СЃС‚РѕРёРјРѕСЃС‚Рё
+	 * @param groupByCategories	РіСЂСѓРїРїРёСЂРѕРІР°С‚СЊ РїРѕ РєР°С‚РµРіРѕСЂРёСЏРј
+	 * @return	СЃРїРёСЃРѕРє СЃРїРµС†РёС„РёРєР°С†РёР№ СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚Рё
 	 */
 	List<CostDetailLineItem> calculateCost(CostDetail costDetail, boolean groupByCategories);
 	
 	/**
-	 * удаление расшифровок себестоимости
+	 * СѓРґР°Р»РµРЅРёРµ СЂР°СЃС€РёС„СЂРѕРІРѕРє СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚Рё
 	 * 
-	 * @param costDetail	расшифровка стоимости
+	 * @param costDetail	СЂР°СЃС€РёС„СЂРѕРІРєР° СЃС‚РѕРёРјРѕСЃС‚Рё
 	 */
 	void clear(CostDetail costDetail);
 

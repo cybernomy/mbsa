@@ -46,7 +46,7 @@ import com.mg.merp.warehouse.support.DefaultBinLocationProccessStrategy;
 import com.mg.merp.warehouse.support.DefaultSerialNumberProccessStrategy;
 
 /**
- * Абстрактный класс-предок стратегий создания складских партий
+ * РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ РєР»Р°СЃСЃ-РїСЂРµРґРѕРє СЃС‚СЂР°С‚РµРіРёР№ СЃРѕР·РґР°РЅРёСЏ СЃРєР»Р°РґСЃРєРёС… РїР°СЂС‚РёР№
  * 
  * @author Valentin A. Poroxnenko
  * @author Artem V. Sharapov
@@ -64,41 +64,41 @@ StockBatchCreateStrategy {
 	}
 
 	/**
-	 * Создание партии
+	 * РЎРѕР·РґР°РЅРёРµ РїР°СЂС‚РёРё
 	 * 
 	 * @param docSpec
-	 *            спецификация документа
+	 *            СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 * @param stockCard
-	 *            КСУ
+	 *            РљРЎРЈ
 	 * @param params
-	 *            параметры этапа "отработка по складу"
+	 *            РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР° "РѕС‚СЂР°Р±РѕС‚РєР° РїРѕ СЃРєР»Р°РґСѓ"
 	 * @param strategy
-	 *            стратегия рассчёта цены партии
-	 * @return складская партия
+	 *            СЃС‚СЂР°С‚РµРіРёСЏ СЂР°СЃСЃС‡С‘С‚Р° С†РµРЅС‹ РїР°СЂС‚РёРё
+	 * @return СЃРєР»Р°РґСЃРєР°СЏ РїР°СЂС‚РёСЏ
 	 */
 	protected abstract StockBatch doFillStockBatch(WarehouseProcessDocumentLineData docLineData,
 			StockCard stockCard, DocFlowPluginInvokeParams params,
 			BatchPriceStrategy strategy);
 
 	/**
-	 * Создание истории партии
+	 * РЎРѕР·РґР°РЅРёРµ РёСЃС‚РѕСЂРёРё РїР°СЂС‚РёРё
 	 * 
 	 * @param docSpec
-	 *            спецификация документа
+	 *            СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 * @param stockBatch
-	 *            КСУ
+	 *            РљРЎРЈ
 	 * @param params
-	 *            параметры этапа "отработка по складу"
-	 * @return история партии
+	 *            РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР° "РѕС‚СЂР°Р±РѕС‚РєР° РїРѕ СЃРєР»Р°РґСѓ"
+	 * @return РёСЃС‚РѕСЂРёСЏ РїР°СЂС‚РёРё
 	 */
 	protected abstract StockBatchHistory doFillStockBatchHistory(WarehouseProcessDocumentLineData docLineData,
 			StockBatch stockBatch, DocFlowPluginInvokeParams params);
 
-	// TODO: на данный момент bai просто возвращает экземпляр класса
-	// стратегии,
-	// возможно, стратегия будет формироваться динамически, тогда КСУ и
-	// спецификацию
-	// надо будет передавать в bai.
+	// TODO: РЅР° РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚ bai РїСЂРѕСЃС‚Рѕ РІРѕР·РІСЂР°С‰Р°РµС‚ СЌРєР·РµРјРїР»СЏСЂ РєР»Р°СЃСЃР°
+	// СЃС‚СЂР°С‚РµРіРёРё,
+	// РІРѕР·РјРѕР¶РЅРѕ, СЃС‚СЂР°С‚РµРіРёСЏ Р±СѓРґРµС‚ С„РѕСЂРјРёСЂРѕРІР°С‚СЊСЃСЏ РґРёРЅР°РјРёС‡РµСЃРєРё, С‚РѕРіРґР° РљРЎРЈ Рё
+	// СЃРїРµС†РёС„РёРєР°С†РёСЋ
+	// РЅР°РґРѕ Р±СѓРґРµС‚ РїРµСЂРµРґР°РІР°С‚СЊ РІ bai.
 	class CalcPriceBAiListener implements BusinessAddinListener<BatchPriceStrategy> {
 		private WarehouseProcessDocumentLineData docLineData;
 		private StockCard stockCard;
@@ -148,14 +148,14 @@ StockBatchCreateStrategy {
 	}
 
 	/**
-	 * Создание истории и партии
+	 * РЎРѕР·РґР°РЅРёРµ РёСЃС‚РѕСЂРёРё Рё РїР°СЂС‚РёРё
 	 * 
 	 * @param docSpec
-	 *            спецификация документа
+	 *            СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 * @param stockBatch
-	 *            КСУ
+	 *            РљРЎРЈ
 	 * @param params
-	 *            параметры этапа "отработка по складу"
+	 *            РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР° "РѕС‚СЂР°Р±РѕС‚РєР° РїРѕ СЃРєР»Р°РґСѓ"
 	 */
 	private void makeBatchAndHistory(final WarehouseProcessDocumentLineData docLineData, StockCard stockCard,
 			DocFlowPluginInvokeParams params, BatchPriceStrategy strategy) {
@@ -164,7 +164,7 @@ StockBatchCreateStrategy {
 		final StockBatch stockBatch = doFillStockBatch(docLineData, stockCard, params, strategy);
 		docLineData.getDocumentSpecItem().setData1(sbhServ.create(doFillStockBatchHistory(docLineData, stockBatch, params)));
 
-		//при создании в интерактивном режиме необходимо показать партию пользователю
+		//РїСЂРё СЃРѕР·РґР°РЅРёРё РІ РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕРј СЂРµР¶РёРјРµ РЅРµРѕР±С…РѕРґРёРјРѕ РїРѕРєР°Р·Р°С‚СЊ РїР°СЂС‚РёСЋ РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ
 		if (!doInteractive) {
 			doExtraProccessing(docLineData, stockBatch);
 		}
@@ -185,9 +185,9 @@ StockBatchCreateStrategy {
 	}
 
 	/**
-	 * Выполнить дополнительную обработку
-	 * @param docLineData - данные по спецификации
-	 * @param stockBatch - партия
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅСѓСЋ РѕР±СЂР°Р±РѕС‚РєСѓ
+	 * @param docLineData - РґР°РЅРЅС‹Рµ РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param stockBatch - РїР°СЂС‚РёСЏ
 	 */
 	private void doExtraProccessing(final WarehouseProcessDocumentLineData docLineData, final StockBatch stockBatch) {
 		ExtraProccessingListener extraProccessingListener = new ExtraProccessingListener(docLineData, stockBatch, listener);
@@ -199,10 +199,10 @@ StockBatchCreateStrategy {
 	}
 	
 	/**
-	 * Выполнить обработку секций хранения
-	 * @param docLineData - данные по спецификации
-	 * @param stockBatch - партия
-	 * @param listener - слушатель
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РѕР±СЂР°Р±РѕС‚РєСѓ СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ
+	 * @param docLineData - РґР°РЅРЅС‹Рµ РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param stockBatch - РїР°СЂС‚РёСЏ
+	 * @param listener - СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	private void proccessBinLocation(final WarehouseProcessDocumentLineData docLineData, final StockBatch stockBatch, WarehouseProcessListener listener) {
 		Warehouse warehouse = docLineData.getDstStock();

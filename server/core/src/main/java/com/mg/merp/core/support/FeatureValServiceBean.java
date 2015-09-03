@@ -29,7 +29,7 @@ import com.mg.merp.core.FeatureValServiceLocal;
 import com.mg.merp.core.model.FeatureVal;
 
 /**
- * Бизнес-компонент "Значания дополнительных признаков"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р—РЅР°С‡Р°РЅРёСЏ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РїСЂРёР·РЅР°РєРѕРІ"
  * 
  * @author leonova
  * @version $Id: FeatureValServiceBean.java,v 1.6 2007/07/06 08:54:08 safonov Exp $

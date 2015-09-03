@@ -20,7 +20,7 @@ import com.mg.framework.generic.AbstractEntityInterceptor;
 import com.mg.merp.account.model.EconomicSpec;
 
 /**
- * Реализация перехватчика сущностей проводок ХО
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ РїСЂРѕРІРѕРґРѕРє РҐРћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: EconomicSpecEntityInterceptorImpl.java,v 1.3 2008/03/13 06:20:53 alikaev Exp $
@@ -48,7 +48,7 @@ public class EconomicSpecEntityInterceptorImpl extends AbstractEntityInterceptor
 	 */
 	@Override
 	public void onPostPersist(PersistentObject entity) {
-		//отражение изменений в оборотках
+		//РѕС‚СЂР°Р¶РµРЅРёРµ РёР·РјРµРЅРµРЅРёР№ РІ РѕР±РѕСЂРѕС‚РєР°С…
 		if (!((EconomicSpec) entity).isBulkOperation())
 			AccountTurnoverUpdater.execute(((EconomicSpec) entity).getEconomicOper().getId(), false);
 	}
@@ -58,7 +58,7 @@ public class EconomicSpecEntityInterceptorImpl extends AbstractEntityInterceptor
 	 */
 	@Override
 	public void onPostRemove(PersistentObject entity) {
-		//отражение изменений в оборотках
+		//РѕС‚СЂР°Р¶РµРЅРёРµ РёР·РјРµРЅРµРЅРёР№ РІ РѕР±РѕСЂРѕС‚РєР°С…
 		if (!((EconomicSpec) entity).isBulkOperation())
 			AccountTurnoverUpdater.execute(((EconomicSpec) entity).getEconomicOper().getId(), false);
 	}
@@ -68,7 +68,7 @@ public class EconomicSpecEntityInterceptorImpl extends AbstractEntityInterceptor
 	 */
 	@Override
 	public void onPostUpdate(PersistentObject entity, AttributeMap oldState) {
-		//отражение изменений в оборотках
+		//РѕС‚СЂР°Р¶РµРЅРёРµ РёР·РјРµРЅРµРЅРёР№ РІ РѕР±РѕСЂРѕС‚РєР°С…
 		if (!((EconomicSpec) entity).isBulkOperation())
 			AccountTurnoverUpdater.execute(((EconomicSpec) entity).getEconomicOper().getId(), false);
 	}

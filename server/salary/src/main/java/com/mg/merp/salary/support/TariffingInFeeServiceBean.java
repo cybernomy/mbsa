@@ -24,7 +24,7 @@ import com.mg.merp.salary.TariffingInFeeServiceLocal;
 import com.mg.merp.salary.model.TariffingInFee;
 
 /**
- * Бизнес-компонент "Используемые тарифы" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РСЃРїРѕР»СЊР·СѓРµРјС‹Рµ С‚Р°СЂРёС„С‹" 
  * 
  * @author leonova
  * @version $Id: TariffingInFeeServiceBean.java,v 1.3 2006/08/31 11:37:58 leonova Exp $

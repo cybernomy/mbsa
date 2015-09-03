@@ -22,7 +22,7 @@ import com.mg.merp.discount.CoefficientServiceLocal;
 import com.mg.merp.discount.model.Coefficient;
 
 /**
- * Бизнес-компонент "Коэффициенты дисконтной карты" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљРѕСЌС„С„РёС†РёРµРЅС‚С‹ РґРёСЃРєРѕРЅС‚РЅРѕР№ РєР°СЂС‚С‹" 
  * 
  * @author leonova
  * @version $Id: CoefficientServiceBean.java,v 1.4 2007/09/07 12:02:18 safonov Exp $

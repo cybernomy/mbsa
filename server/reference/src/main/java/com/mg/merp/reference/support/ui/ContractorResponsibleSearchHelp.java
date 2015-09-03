@@ -25,7 +25,7 @@ import com.mg.merp.reference.PartnerEmplServiceLocal;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Базовый класс для SearchHelp сотрудников партнера
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РґР»СЏ SearchHelp СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РїР°СЂС‚РЅРµСЂР°
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -27,8 +27,8 @@ import com.mg.framework.api.Logger;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Фильтр принудительной установки mime типа, т.к. при обращении к некоторым разделам помощи из приложения
- * JNLP на клиентской стороне генерируется NPE (<a href="https://issues.m-g.ru/bugzilla/show_bug.cgi?id=4886">запрос 4886</a>).
+ * Р¤РёР»СЊС‚СЂ РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕР№ СѓСЃС‚Р°РЅРѕРІРєРё mime С‚РёРїР°, С‚.Рє. РїСЂРё РѕР±СЂР°С‰РµРЅРёРё Рє РЅРµРєРѕС‚РѕСЂС‹Рј СЂР°Р·РґРµР»Р°Рј РїРѕРјРѕС‰Рё РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ
+ * JNLP РЅР° РєР»РёРµРЅС‚СЃРєРѕР№ СЃС‚РѕСЂРѕРЅРµ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ NPE (<a href="https://issues.m-g.ru/bugzilla/show_bug.cgi?id=4886">Р·Р°РїСЂРѕСЃ 4886</a>).
  * 
  * @author Oleg V. Safonov
  * @version $Id: MimeTypeFilter.java,v 1.1 2008/10/31 06:38:43 safonov Exp $

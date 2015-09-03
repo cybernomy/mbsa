@@ -28,7 +28,7 @@ import com.mg.merp.warehouse.BillHeadOutServiceLocal;
 import com.mg.merp.warehouse.model.BillHead;
 
 /**
- * Контроллер браузера исходящих счетов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° РёСЃС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov

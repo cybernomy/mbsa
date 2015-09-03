@@ -23,7 +23,7 @@ import com.mg.framework.api.ui.Widget;
 import com.mg.framework.api.ui.WidgetFactory;
 
 /**
- * Абстрактная реализация фабрики элементов пользовательского интерфейса
+ * РђР±СЃС‚СЂР°РєС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЌР»РµРјРµРЅС‚РѕРІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractWidgetFactory.java,v 1.5 2006/11/21 15:37:40 safonov Exp $
@@ -31,27 +31,27 @@ import com.mg.framework.api.ui.WidgetFactory;
 public abstract class AbstractWidgetFactory implements WidgetFactory {
 
 	/**
-	 * реализация создания элемента пользовательского интерфейса
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СЃРѕР·РґР°РЅРёСЏ СЌР»РµРјРµРЅС‚Р° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
 	 * 
-	 * @param type		имя типа
-	 * @param name		имя элемента
-	 * @param element	описатель
-	 * @param view		вид
-	 * @return	элемент
+	 * @param type		РёРјСЏ С‚РёРїР°
+	 * @param name		РёРјСЏ СЌР»РµРјРµРЅС‚Р°
+	 * @param element	РѕРїРёСЃР°С‚РµР»СЊ
+	 * @param view		РІРёРґ
+	 * @return	СЌР»РµРјРµРЅС‚
 	 */
 	protected abstract Widget doCreateWidget(String type, String name, Element element, View view);
 	
 	/**
-	 * реализация создания диалога Alert
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СЃРѕР·РґР°РЅРёСЏ РґРёР°Р»РѕРіР° Alert
 	 * 
-	 * @return	диалог
+	 * @return	РґРёР°Р»РѕРі
 	 */
 	protected abstract Alert doCreateAlert();
 	
 	/**
-	 * реализация создания диалога Сообщение об ИС
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СЃРѕР·РґР°РЅРёСЏ РґРёР°Р»РѕРіР° РЎРѕРѕР±С‰РµРЅРёРµ РѕР± РРЎ
 	 * 
-	 * @return	диалог
+	 * @return	РґРёР°Р»РѕРі
 	 */
 	protected abstract ShowExceptionDialog doCreateExceptionDialog();
 	

@@ -21,7 +21,7 @@ import com.mg.merp.document.support.ui.ContractDocTypeByDocSectionSearchHelp;
 import com.mg.merp.document.support.ui.DocTypeSearchForm;
 
 /**
- * Поисковик сущностей "Тип контракта"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РўРёРї РєРѕРЅС‚СЂР°РєС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ContractDocTypeSearchHelp.java,v 1.1 2007/11/30 14:29:04 sharapov Exp $

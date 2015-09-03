@@ -27,7 +27,7 @@ import com.mg.merp.core.support.CoreUtils;
 import com.mg.merp.manufacture.OutputProductHeadServiceLocal;
 
 /**
- * Контроллер формы списка акта выпуска готовой продукции
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р°РєС‚Р° РІС‹РїСѓСЃРєР° РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: OutputProductHeadBr.java,v 1.13 2009/02/10 14:34:19 safonov Exp $

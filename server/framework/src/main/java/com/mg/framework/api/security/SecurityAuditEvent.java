@@ -20,7 +20,7 @@ import java.util.Date;
 import com.mg.framework.utils.DateTimeUtils;
 
 /**
- * Событие аудита безопасности
+ * РЎРѕР±С‹С‚РёРµ Р°СѓРґРёС‚Р° Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: SecurityAuditEvent.java,v 1.2 2008/05/29 08:34:42 safonov Exp $

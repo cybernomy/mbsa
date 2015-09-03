@@ -15,7 +15,7 @@
 package com.mg.merp.personnelref.support.ui;
 
 /**
- * Поисковик сущностей "Аналитика состава затрат" (верхнего уровня) 
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РђРЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚" (РІРµСЂС…РЅРµРіРѕ СѓСЂРѕРІРЅСЏ) 
  * 
  * @author Artem V. Sharapov
  * @version $Id: CostsAnlParentSearchHelp.java,v 1.1 2007/07/18 05:14:53 sharapov Exp $
@@ -42,7 +42,7 @@ public class CostsAnlParentSearchHelp extends CostsAnlSearchHelp {
 	}
 	
 	/**
-	 * Получить верхний уровень аналитики состава затрат
+	 * РџРѕР»СѓС‡РёС‚СЊ РІРµСЂС…РЅРёР№ СѓСЂРѕРІРµРЅСЊ Р°РЅР°Р»РёС‚РёРєРё СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚
 	 */
 	protected short getParentAnaliticsLevel() {
 		return new Short((short)((Short) getImportContextValue(ANALITICS_LEVEL_IMPORT) - 1));

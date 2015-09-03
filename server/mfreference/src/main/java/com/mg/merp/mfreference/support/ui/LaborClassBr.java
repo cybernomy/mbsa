@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.mfreference.model.LaborClass;
 
 /**
- * Браузер класс рабочей силы
+ * Р‘СЂР°СѓР·РµСЂ РєР»Р°СЃСЃ СЂР°Р±РѕС‡РµР№ СЃРёР»С‹
  * 
  * @author leonova
  * @version $Id: LaborClassBr.java,v 1.3 2008/03/04 10:42:31 sharapov Exp $ 

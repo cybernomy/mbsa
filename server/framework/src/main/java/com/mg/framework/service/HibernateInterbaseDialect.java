@@ -18,7 +18,7 @@ import org.hibernate.dialect.InterbaseDialect;
 import org.hibernate.exception.ViolatedConstraintNameExtracter;
 
 /**
- * Äèàëåêò ÑÓÁÄ Interbase
+ * Ğ”Ğ¸Ğ°Ğ»ĞµĞºÑ‚ Ğ¡Ğ£Ğ‘Ğ” Interbase
  * 
  * @author Oleg V. Safonov
  * @version $Id: HibernateInterbaseDialect.java,v 1.2 2006/12/15 10:02:51 safonov Exp $

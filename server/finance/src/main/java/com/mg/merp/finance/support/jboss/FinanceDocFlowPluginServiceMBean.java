@@ -17,14 +17,14 @@ package com.mg.merp.finance.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис дополнительных модулей подсистемы "Финансы"
+ * РЎРµСЂРІРёСЃ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "Р¤РёРЅР°РЅСЃС‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: FinanceDocFlowPluginServiceMBean.java,v 1.1 2006/10/21 10:59:21 safonov Exp $
  */
 public interface FinanceDocFlowPluginServiceMBean extends ServiceMBean {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:finance=DocFlowPluginService"; //$NON-NLS-1$
 

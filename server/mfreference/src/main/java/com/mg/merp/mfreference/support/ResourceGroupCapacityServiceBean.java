@@ -22,7 +22,7 @@ import com.mg.merp.mfreference.ResourceGroupCapacityServiceLocal;
 import com.mg.merp.mfreference.model.ResourceGroupCapacity;
 
 /**
- * Бизнес-компонент "Емкость групп ресурсов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р•РјРєРѕСЃС‚СЊ РіСЂСѓРїРї СЂРµСЃСѓСЂСЃРѕРІ" 
  * 
  * @author leonova
  * @version $Id: ResourceGroupCapacityServiceBean.java,v 1.3 2006/08/24 12:31:25 leonova Exp $

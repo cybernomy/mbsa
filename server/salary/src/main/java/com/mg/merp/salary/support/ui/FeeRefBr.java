@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.salary.model.FeeRef;
 
 /**
- * Браузер начислений удержаний
+ * Р‘СЂР°СѓР·РµСЂ РЅР°С‡РёСЃР»РµРЅРёР№ СѓРґРµСЂР¶Р°РЅРёР№
  * 
  * @author leonova
  * @version $Id: FeeRefBr.java,v 1.1 2006/08/31 11:35:59 leonova Exp $ 

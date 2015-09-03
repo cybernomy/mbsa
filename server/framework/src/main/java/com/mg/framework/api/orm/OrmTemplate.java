@@ -33,7 +33,7 @@ import com.mg.framework.support.orm.OrmTemplateHibernateImpl;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Шаблон выполнения объектных запросов
+ * РЁР°Р±Р»РѕРЅ РІС‹РїРѕР»РЅРµРЅРёСЏ РѕР±СЉРµРєС‚РЅС‹С… Р·Р°РїСЂРѕСЃРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: OrmTemplate.java,v 1.9 2007/07/27 09:32:16 safonov Exp $
@@ -48,7 +48,7 @@ public abstract class OrmTemplate {
 	private FlushMode flushMode;
 
 	/**
-	 * получить экземпляр объекта
+	 * РїРѕР»СѓС‡РёС‚СЊ СЌРєР·РµРјРїР»СЏСЂ РѕР±СЉРµРєС‚Р°
 	 * 
 	 * @return
 	 */
@@ -57,42 +57,42 @@ public abstract class OrmTemplate {
 	}
 
 	/**
-	 * создает экземпляр критериев для класса сущности или наследника класса сущности
+	 * СЃРѕР·РґР°РµС‚ СЌРєР·РµРјРїР»СЏСЂ РєСЂРёС‚РµСЂРёРµРІ РґР»СЏ РєР»Р°СЃСЃР° СЃСѓС‰РЅРѕСЃС‚Рё РёР»Рё РЅР°СЃР»РµРґРЅРёРєР° РєР»Р°СЃСЃР° СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param persistentClass	класс сущности
-	 * @return	критерии
+	 * @param persistentClass	РєР»Р°СЃСЃ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @return	РєСЂРёС‚РµСЂРёРё
 	 */
 	public static Criteria createCriteria(Class<?> persistentClass) {
 		return createCriteria(persistentClass.getName());
 	}
 
 	/**
-	 * создает экземпляр критериев для сущности
+	 * СЃРѕР·РґР°РµС‚ СЌРєР·РµРјРїР»СЏСЂ РєСЂРёС‚РµСЂРёРµРІ РґР»СЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param entityName	имя класса сущности
-	 * @return	критерии
+	 * @param entityName	РёРјСЏ РєР»Р°СЃСЃР° СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @return	РєСЂРёС‚РµСЂРёРё
 	 */
 	public static Criteria createCriteria(String entityName) {
 		return ServerUtils.getPersistentManager().createCriteria(entityName);
 	}
 
 	/**
-	 * создает экземпляр критериев для класса сущности или наследника класса сущности с указанным псевдонимом
+	 * СЃРѕР·РґР°РµС‚ СЌРєР·РµРјРїР»СЏСЂ РєСЂРёС‚РµСЂРёРµРІ РґР»СЏ РєР»Р°СЃСЃР° СЃСѓС‰РЅРѕСЃС‚Рё РёР»Рё РЅР°СЃР»РµРґРЅРёРєР° РєР»Р°СЃСЃР° СЃСѓС‰РЅРѕСЃС‚Рё СЃ СѓРєР°Р·Р°РЅРЅС‹Рј РїСЃРµРІРґРѕРЅРёРјРѕРј
 	 * 
-	 * @param persistentClass	класс сущности
-	 * @param alias		псевдоним
-	 * @return	критерии
+	 * @param persistentClass	РєР»Р°СЃСЃ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @param alias		РїСЃРµРІРґРѕРЅРёРј
+	 * @return	РєСЂРёС‚РµСЂРёРё
 	 */
 	public static Criteria createCriteria(Class<?> persistentClass, String alias) {
 		return createCriteria(persistentClass.getName(), alias);
 	}
 	
 	/**
-	 * создает экземпляр критериев для сущности с указанным псевдонимом
+	 * СЃРѕР·РґР°РµС‚ СЌРєР·РµРјРїР»СЏСЂ РєСЂРёС‚РµСЂРёРµРІ РґР»СЏ СЃСѓС‰РЅРѕСЃС‚Рё СЃ СѓРєР°Р·Р°РЅРЅС‹Рј РїСЃРµРІРґРѕРЅРёРјРѕРј
 	 * 
-	 * @param entityName	имя класса сущности
-	 * @param alias		псевдоним
-	 * @return	критерии
+	 * @param entityName	РёРјСЏ РєР»Р°СЃСЃР° СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @param alias		РїСЃРµРІРґРѕРЅРёРј
+	 * @return	РєСЂРёС‚РµСЂРёРё
 	 */
 	public static Criteria createCriteria(String entityName, String alias) {
 		try {
@@ -303,12 +303,12 @@ public abstract class OrmTemplate {
 	}
 	
 	/**
-	 * поиск по EJBQL запросу
+	 * РїРѕРёСЃРє РїРѕ EJBQL Р·Р°РїСЂРѕСЃСѓ
 	 * 
-	 * @param <T>	тип результата
-	 * @param persistentClass	класс результата
-	 * @param queryString	текст запроса
-	 * @return	результат запроса
+	 * @param <T>	С‚РёРї СЂРµР·СѓР»СЊС‚Р°С‚Р°
+	 * @param persistentClass	РєР»Р°СЃСЃ СЂРµР·СѓР»СЊС‚Р°С‚Р°
+	 * @param queryString	С‚РµРєСЃС‚ Р·Р°РїСЂРѕСЃР°
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	public <T> List<T> find(final Class<T> persistentClass, String queryString) {
@@ -316,32 +316,32 @@ public abstract class OrmTemplate {
 	}
 
 	/**
-	 * поиск по EJBQL запросу
+	 * РїРѕРёСЃРє РїРѕ EJBQL Р·Р°РїСЂРѕСЃСѓ
 	 * 
-	 * @param queryString	текст запроса
-	 * @return	результат запроса
+	 * @param queryString	С‚РµРєСЃС‚ Р·Р°РїСЂРѕСЃР°
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public List find(String queryString) {
 		return find(queryString, (Object[]) null);
 	}
 
 	/**
-	 * поиск по EJBQL запросу и параметру
+	 * РїРѕРёСЃРє РїРѕ EJBQL Р·Р°РїСЂРѕСЃСѓ Рё РїР°СЂР°РјРµС‚СЂСѓ
 	 * 
-	 * @param queryString	текст запроса
-	 * @param value	значение параметра
-	 * @return	результат запроса
+	 * @param queryString	С‚РµРєСЃС‚ Р·Р°РїСЂРѕСЃР°
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public List find(String queryString, Object value) {
 		return find(queryString, new Object[] {value});
 	}
 
 	/**
-	 * поиск по EJBQL запросу и параметрам
+	 * РїРѕРёСЃРє РїРѕ EJBQL Р·Р°РїСЂРѕСЃСѓ Рё РїР°СЂР°РјРµС‚СЂР°Рј
 	 * 
-	 * @param queryString	текст запроса
-	 * @param values	значения параметров
-	 * @return	результат запроса
+	 * @param queryString	С‚РµРєСЃС‚ Р·Р°РїСЂРѕСЃР°
+	 * @param values	Р·РЅР°С‡РµРЅРёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public List find(final String queryString, final Object[] values) {
 		return (List) execute(new HibernateCallback<List>() {
@@ -359,12 +359,12 @@ public abstract class OrmTemplate {
 	}
 
 	/**
-	 * поиск по EJBQL запросу и именованому параметру
+	 * РїРѕРёСЃРє РїРѕ EJBQL Р·Р°РїСЂРѕСЃСѓ Рё РёРјРµРЅРѕРІР°РЅРѕРјСѓ РїР°СЂР°РјРµС‚СЂСѓ
 	 * 
-	 * @param queryString	текст запроса
-	 * @param paramName	имя параметра
-	 * @param value	значение параметра
-	 * @return	результат запроса
+	 * @param queryString	С‚РµРєСЃС‚ Р·Р°РїСЂРѕСЃР°
+	 * @param paramName	РёРјСЏ РїР°СЂР°РјРµС‚СЂР°
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public List findByNamedParam(String queryString, String paramName, Object value) {
 		return findByNamedParam(queryString, new String[] { paramName },
@@ -372,12 +372,12 @@ public abstract class OrmTemplate {
 	}
 
 	/**
-	 * поиск по EJBQL запросу и именованым параметрам
+	 * РїРѕРёСЃРє РїРѕ EJBQL Р·Р°РїСЂРѕСЃСѓ Рё РёРјРµРЅРѕРІР°РЅС‹Рј РїР°СЂР°РјРµС‚СЂР°Рј
 	 * 
-	 * @param queryString	текст запроса
-	 * @param paramNames	имена параметров
-	 * @param values	значения парамтеров
-	 * @return	результат запроса
+	 * @param queryString	С‚РµРєСЃС‚ Р·Р°РїСЂРѕСЃР°
+	 * @param paramNames	РёРјРµРЅР° РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @param values	Р·РЅР°С‡РµРЅРёСЏ РїР°СЂР°РјС‚РµСЂРѕРІ
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public List findByNamedParam(final String queryString,
 			final String[] paramNames, final Object[] values) {
@@ -401,13 +401,13 @@ public abstract class OrmTemplate {
 	}
 	
 	/**
-	 * поиск по EJBQL запросу и именованым параметрам
+	 * РїРѕРёСЃРє РїРѕ EJBQL Р·Р°РїСЂРѕСЃСѓ Рё РёРјРµРЅРѕРІР°РЅС‹Рј РїР°СЂР°РјРµС‚СЂР°Рј
 	 * 
-	 * @param queryString	текст запроса
-	 * @param paramNames	имена параметров
-	 * @param values	значения парамтеров
-	 * @param resultTransformer стратегия для обработки результата запроса
-	 * @return	результат запроса
+	 * @param queryString	С‚РµРєСЃС‚ Р·Р°РїСЂРѕСЃР°
+	 * @param paramNames	РёРјРµРЅР° РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @param values	Р·РЅР°С‡РµРЅРёСЏ РїР°СЂР°РјС‚РµСЂРѕРІ
+	 * @param resultTransformer СЃС‚СЂР°С‚РµРіРёСЏ РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё СЂРµР·СѓР»СЊС‚Р°С‚Р° Р·Р°РїСЂРѕСЃР°
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public <T> List<T> findByNamedParam(final String queryString,
 			final String[] paramNames, final Object[] values, final ResultTransformer<T> resultTransformer) {
@@ -432,11 +432,11 @@ public abstract class OrmTemplate {
 	}
 
 	/**
-	 * поиск по EJBQL запросу и именованым параметрам
+	 * РїРѕРёСЃРє РїРѕ EJBQL Р·Р°РїСЂРѕСЃСѓ Рё РёРјРµРЅРѕРІР°РЅС‹Рј РїР°СЂР°РјРµС‚СЂР°Рј
 	 * 
-	 * @param queryString	текст запроса
-	 * @param params		пары имя параметра - значение
-	 * @return	результат запроса
+	 * @param queryString	С‚РµРєСЃС‚ Р·Р°РїСЂРѕСЃР°
+	 * @param params		РїР°СЂС‹ РёРјСЏ РїР°СЂР°РјРµС‚СЂР° - Р·РЅР°С‡РµРЅРёРµ
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public List findByNamedParam(final String queryString, final Map<String, Object> params) {
 		return (List) execute(new HibernateCallback<List>() {
@@ -450,32 +450,32 @@ public abstract class OrmTemplate {
 	}
 	
 	/**
-	 * поиск по именованому EJBQL запросу
+	 * РїРѕРёСЃРє РїРѕ РёРјРµРЅРѕРІР°РЅРѕРјСѓ EJBQL Р·Р°РїСЂРѕСЃСѓ
 	 * 
-	 * @param queryName	имя запроса
-	 * @return	результат запроса
+	 * @param queryName	РёРјСЏ Р·Р°РїСЂРѕСЃР°
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public List findByNamedQuery(String queryName) {
 		return findByNamedQuery(queryName, (Object[]) null);
 	}
 
 	/**
-	 * поиск по именованому EJBQL запросу и параметру
+	 * РїРѕРёСЃРє РїРѕ РёРјРµРЅРѕРІР°РЅРѕРјСѓ EJBQL Р·Р°РїСЂРѕСЃСѓ Рё РїР°СЂР°РјРµС‚СЂСѓ
 	 * 
-	 * @param queryName	имя запроса
-	 * @param value	значение параметра
-	 * @return	результат запроса
+	 * @param queryName	РёРјСЏ Р·Р°РїСЂРѕСЃР°
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public List findByNamedQuery(String queryName, Object value) {
 		return findByNamedQuery(queryName, new Object[] {value});
 	}
 
 	/**
-	 * поиск по именованому EJBQL запросу и параметрам
+	 * РїРѕРёСЃРє РїРѕ РёРјРµРЅРѕРІР°РЅРѕРјСѓ EJBQL Р·Р°РїСЂРѕСЃСѓ Рё РїР°СЂР°РјРµС‚СЂР°Рј
 	 * 
-	 * @param queryName	имя запроса
-	 * @param values	значения параметров
-	 * @return	результат запроса
+	 * @param queryName	РёРјСЏ Р·Р°РїСЂРѕСЃР°
+	 * @param values	Р·РЅР°С‡РµРЅРёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public List findByNamedQuery(final String queryName, final Object[] values) {
 		return (List) execute(new HibernateCallback<List>() {
@@ -493,12 +493,12 @@ public abstract class OrmTemplate {
 	}
 
 	/**
-	 * поиск по именованому EJBQL запросу и именованому параметру
+	 * РїРѕРёСЃРє РїРѕ РёРјРµРЅРѕРІР°РЅРѕРјСѓ EJBQL Р·Р°РїСЂРѕСЃСѓ Рё РёРјРµРЅРѕРІР°РЅРѕРјСѓ РїР°СЂР°РјРµС‚СЂСѓ
 	 * 
-	 * @param queryName	имя запроса
-	 * @param paramName	имя параметра
-	 * @param value	значение параметра
-	 * @return	результат запроса
+	 * @param queryName	РёРјСЏ Р·Р°РїСЂРѕСЃР°
+	 * @param paramName	РёРјСЏ РїР°СЂР°РјРµС‚СЂР°
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public List findByNamedQueryAndNamedParam(String queryName, String paramName, Object value) {
 		return findByNamedQueryAndNamedParam(queryName, new String[] {paramName}, new Object[] {value});
@@ -510,12 +510,12 @@ public abstract class OrmTemplate {
 	}
 
 	/**
-	 * поиск по именованому EJBQL запросу и именованым параметрам
+	 * РїРѕРёСЃРє РїРѕ РёРјРµРЅРѕРІР°РЅРѕРјСѓ EJBQL Р·Р°РїСЂРѕСЃСѓ Рё РёРјРµРЅРѕРІР°РЅС‹Рј РїР°СЂР°РјРµС‚СЂР°Рј
 	 * 
-	 * @param queryName		имя запроса
-	 * @param paramNames	имена параметров
-	 * @param values		значения параметров
-	 * @return	результат запроса
+	 * @param queryName		РёРјСЏ Р·Р°РїСЂРѕСЃР°
+	 * @param paramNames	РёРјРµРЅР° РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @param values		Р·РЅР°С‡РµРЅРёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public <T> List<T> findByNamedQueryAndNamedParam(
 			final String queryName, final String[] paramNames, final Object[] values, final ResultTransformer<T> resultTransformer) {
@@ -540,11 +540,11 @@ public abstract class OrmTemplate {
 	}
 
 	/**
-	 * поиск по именованому EJBQL запросу и именованым параметрам
+	 * РїРѕРёСЃРє РїРѕ РёРјРµРЅРѕРІР°РЅРѕРјСѓ EJBQL Р·Р°РїСЂРѕСЃСѓ Рё РёРјРµРЅРѕРІР°РЅС‹Рј РїР°СЂР°РјРµС‚СЂР°Рј
 	 * 
-	 * @param queryName		имя запроса
-	 * @param params		пары имя параметра - значение
-	 * @return	результат запроса
+	 * @param queryName		РёРјСЏ Р·Р°РїСЂРѕСЃР°
+	 * @param params		РїР°СЂС‹ РёРјСЏ РїР°СЂР°РјРµС‚СЂР° - Р·РЅР°С‡РµРЅРёРµ
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public List findByNamedQueryAndNamedParam(final String queryName, final Map<String, Object> params) {
 		return (List) execute(new HibernateCallback<List>() {
@@ -558,11 +558,11 @@ public abstract class OrmTemplate {
 	}
 	
 	/**
-	 * поиск по критериям
+	 * РїРѕРёСЃРє РїРѕ РєСЂРёС‚РµСЂРёСЏРј
 	 * 
-	 * @param <T>	тип объекта
-	 * @param criteria	критерии
-	 * @return	результат запроса
+	 * @param <T>	С‚РёРї РѕР±СЉРµРєС‚Р°
+	 * @param criteria	РєСЂРёС‚РµСЂРёРё
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	public <T> List<T> findByCriteria(final Criteria criteria) {
@@ -574,11 +574,11 @@ public abstract class OrmTemplate {
 	}
 
 	/**
-	 * поиск уникального результата по критериям
+	 * РїРѕРёСЃРє СѓРЅРёРєР°Р»СЊРЅРѕРіРѕ СЂРµР·СѓР»СЊС‚Р°С‚Р° РїРѕ РєСЂРёС‚РµСЂРёСЏРј
 	 * 
-	 * @param <T>	тип объекта
-	 * @param criteria	критерии
-	 * @return	результат или <code>null</code> если не найден
+	 * @param <T>	С‚РёРї РѕР±СЉРµРєС‚Р°
+	 * @param criteria	РєСЂРёС‚РµСЂРёРё
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	public <T> T findUniqueByCriteria(final Criteria criteria) {
@@ -590,12 +590,12 @@ public abstract class OrmTemplate {
 	}
 
 	/**
-	 * поиск по списку критериев
+	 * РїРѕРёСЃРє РїРѕ СЃРїРёСЃРєСѓ РєСЂРёС‚РµСЂРёРµРІ
 	 * 
-	 * @param <T>				тип объекта
-	 * @param persistentClass	класс объекта
-	 * @param criteria			список критериев
-	 * @return	результат запроса
+	 * @param <T>				С‚РёРї РѕР±СЉРµРєС‚Р°
+	 * @param persistentClass	РєР»Р°СЃСЃ РѕР±СЉРµРєС‚Р°
+	 * @param criteria			СЃРїРёСЃРѕРє РєСЂРёС‚РµСЂРёРµРІ
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public <T> List<T> findByCriteria(final Class<T> persistentClass, final Criterion ... criteria) {
 		if (criteria.length == 0)
@@ -607,12 +607,12 @@ public abstract class OrmTemplate {
 	}
 
 	/**
-	 * поиск уникального результата по списку критериев
+	 * РїРѕРёСЃРє СѓРЅРёРєР°Р»СЊРЅРѕРіРѕ СЂРµР·СѓР»СЊС‚Р°С‚Р° РїРѕ СЃРїРёСЃРєСѓ РєСЂРёС‚РµСЂРёРµРІ
 	 * 
-	 * @param <T>				тип объекта
-	 * @param persistentClass	класс объекта
-	 * @param criteria			список критериев
-	 * @return	результат или <code>null</code> если не найден
+	 * @param <T>				С‚РёРї РѕР±СЉРµРєС‚Р°
+	 * @param persistentClass	РєР»Р°СЃСЃ РѕР±СЉРµРєС‚Р°
+	 * @param criteria			СЃРїРёСЃРѕРє РєСЂРёС‚РµСЂРёРµРІ
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	@SuppressWarnings("unchecked")
 	public <T> T findUniqueByCriteria(final Class<T> persistentClass, final Criterion ... criteria) {

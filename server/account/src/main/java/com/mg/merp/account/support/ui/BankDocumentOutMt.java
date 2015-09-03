@@ -21,7 +21,7 @@ import com.mg.merp.document.generic.ui.DocumentMaintenanceForm;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы поддержки "Исходящих банковских документов"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РСЃС…РѕРґСЏС‰РёС… Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -35,16 +35,16 @@ public class BankDocumentOutMt extends DocumentMaintenanceForm {
 	}
 	
 	/**
-	 * Обработчик кнопки "Рассчитать суммы НДС"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃСЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјС‹ РќР”РЎ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionCalculateNdsSum(WidgetEvent event) {
 		((BankDocumentOutServiceLocal) this.getService()).calculateNdsSum((BankDocument) getEntity());
 	}
 	
 	/**
-	 * Обработчик кнопки "Рассчитать сумму документа"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃСЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјСѓ РґРѕРєСѓРјРµРЅС‚Р°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionCalculateDocSum(WidgetEvent event) {
 		((BankDocumentOutServiceLocal) this.getService()).calculateDocSum((BankDocument) getEntity());

@@ -24,7 +24,7 @@ import org.eclipse.birt.report.engine.api.IParameterSelectionChoice;
 import com.mg.merp.report.parameters.SelectionChoice;
 
 /**
- * Реализация элемента выбора параметра
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЌР»РµРјРµРЅС‚Р° РІС‹Р±РѕСЂР° РїР°СЂР°РјРµС‚СЂР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: SelectionChoiceImpl.java,v 1.1 2008/05/13 15:14:20 safonov Exp $
@@ -44,10 +44,10 @@ public class SelectionChoiceImpl implements SelectionChoice {
 	}
 
 	/**
-	 * конвертация значений параметров BIRT
+	 * РєРѕРЅРІРµСЂС‚Р°С†РёСЏ Р·РЅР°С‡РµРЅРёР№ РїР°СЂР°РјРµС‚СЂРѕРІ BIRT
 	 * 
-	 * @param selectionList	значения платформы BIRT
-	 * @return	значения платформы Jet
+	 * @param selectionList	Р·РЅР°С‡РµРЅРёСЏ РїР»Р°С‚С„РѕСЂРјС‹ BIRT
+	 * @return	Р·РЅР°С‡РµРЅРёСЏ РїР»Р°С‚С„РѕСЂРјС‹ Jet
 	 */
 	@SuppressWarnings("unchecked")
 	public static List<SelectionChoice> convertEngineParameterSelectionChoice(Collection selectionList) {
@@ -60,11 +60,11 @@ public class SelectionChoiceImpl implements SelectionChoice {
 	}
 
 	/**
-	 * найти индекс в списке значений параметра по значению параметра
+	 * РЅР°Р№С‚Рё РёРЅРґРµРєСЃ РІ СЃРїРёСЃРєРµ Р·РЅР°С‡РµРЅРёР№ РїР°СЂР°РјРµС‚СЂР° РїРѕ Р·РЅР°С‡РµРЅРёСЋ РїР°СЂР°РјРµС‚СЂР°
 	 * 
-	 * @param selectionList	список значений
-	 * @param value	значение параметра
-	 * @return	индекс или -1 если не найден
+	 * @param selectionList	СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°
+	 * @return	РёРЅРґРµРєСЃ РёР»Рё -1 РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	public static int findSelectionIndexByValue(List<SelectionChoice> selectionList, Object value) {
 		if (value != null)
@@ -75,11 +75,11 @@ public class SelectionChoiceImpl implements SelectionChoice {
 	}
 
 	/**
-	 * найти индекс в списке значений параметра по метке UI параметра
+	 * РЅР°Р№С‚Рё РёРЅРґРµРєСЃ РІ СЃРїРёСЃРєРµ Р·РЅР°С‡РµРЅРёР№ РїР°СЂР°РјРµС‚СЂР° РїРѕ РјРµС‚РєРµ UI РїР°СЂР°РјРµС‚СЂР°
 	 * 
-	 * @param selectionList	список значений
-	 * @param label	метка UI
-	 * @return	индекс или -1 если не найден
+	 * @param selectionList	СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№
+	 * @param label	РјРµС‚РєР° UI
+	 * @return	РёРЅРґРµРєСЃ РёР»Рё -1 РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	public static int findSelectionIndexByLabel(List<SelectionChoice> selectionList, String label) {
 		if (label != null)
@@ -90,10 +90,10 @@ public class SelectionChoiceImpl implements SelectionChoice {
 	}
 
 	/**
-	 * конвертация списка выбора параметров в список значений параметра 
+	 * РєРѕРЅРІРµСЂС‚Р°С†РёСЏ СЃРїРёСЃРєР° РІС‹Р±РѕСЂР° РїР°СЂР°РјРµС‚СЂРѕРІ РІ СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№ РїР°СЂР°РјРµС‚СЂР° 
 	 * 
-	 * @param selectionList	список выбора
-	 * @return	список значений
+	 * @param selectionList	СЃРїРёСЃРѕРє РІС‹Р±РѕСЂР°
+	 * @return	СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№
 	 */
 	public static Object[] convertParameterSelectionChoiceToValues(List<SelectionChoice> selectionList) {
 		if (selectionList == null)

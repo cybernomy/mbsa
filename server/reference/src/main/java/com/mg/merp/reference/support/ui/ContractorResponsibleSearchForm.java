@@ -27,7 +27,7 @@ import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.reference.model.PartnerEmpl;
 
 /**
- * Класс отображения SearchHelp для сотрудников партнера
+ * РљР»Р°СЃСЃ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ SearchHelp РґР»СЏ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РїР°СЂС‚РЅРµСЂР°
  *  
  * @author leonova
  * @version $Id: ContractorResponsibleSearchForm.java,v 1.2 2009/02/09 12:12:58 safonov Exp $

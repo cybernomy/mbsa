@@ -22,7 +22,7 @@ import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер формы условий отбора "Дисконтных карт"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° "Р”РёСЃРєРѕРЅС‚РЅС‹С… РєР°СЂС‚"
  * 
  * @author Artem V. Sharapov
  * @version $Id: DiscCardRest.java,v 1.1 2007/12/04 14:58:15 sharapov Exp $

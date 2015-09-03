@@ -24,7 +24,7 @@ import com.mg.merp.table.TimeKindServiceLocal;
 import com.mg.merp.table.model.TimeKind;
 
 /**
- * Бизнес-компонент "Типы времени" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ РІСЂРµРјРµРЅРё" 
  * 
  * @author leonova
  * @version $Id: TimeKindServiceBean.java,v 1.5 2008/01/31 09:31:59 safonov Exp $

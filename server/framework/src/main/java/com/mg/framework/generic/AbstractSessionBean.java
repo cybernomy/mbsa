@@ -22,7 +22,7 @@ import javax.ejb.Remove;
 import javax.ejb.SessionContext;
 
 /**
- * Базовая реализация сессионных EJB
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЃРµСЃСЃРёРѕРЅРЅС‹С… EJB
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractSessionBean.java,v 1.6 2007/09/07 12:33:50 safonov Exp $

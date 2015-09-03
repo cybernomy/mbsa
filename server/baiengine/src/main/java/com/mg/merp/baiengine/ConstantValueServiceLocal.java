@@ -17,14 +17,14 @@ package com.mg.merp.baiengine;
 import com.mg.merp.baiengine.model.ConstantValue;
 
 /**
- * Бизнес-компонент "Значение константы"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р—РЅР°С‡РµРЅРёРµ РєРѕРЅСЃС‚Р°РЅС‚С‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ConstantValueServiceLocal.java,v 1.1 2007/08/21 12:55:46 alikaev Exp $
  */
 public interface ConstantValueServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ConstantValue, Integer> {
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/bai/ConstantValue";
 

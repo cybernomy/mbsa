@@ -18,7 +18,7 @@ import com.mg.framework.api.ApplicationException;
 import com.mg.merp.baiengine.generic.AbstractBusinessAddin;
 
 /**
- * Базовый класс расчета з/п
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ СЂР°СЃС‡РµС‚Р° Р·/Рї
  * 
  * @author Oleg V. Safonov
  * @version $Id$
@@ -30,11 +30,11 @@ public abstract class SalaryAlgorithm<T> extends AbstractBusinessAddin<T> {
 	private SalaryAlgorithmContext calcContext = null;
 
 	/**
-	 * Возвращает класс помошник для вычисления з/п
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РєР»Р°СЃСЃ РїРѕРјРѕС€РЅРёРє РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ Р·/Рї
 	 * 
 	 * @see SalaryHelper
 	 * 
-	 * @return	класс помошник
+	 * @return	РєР»Р°СЃСЃ РїРѕРјРѕС€РЅРёРє
 	 * @throws ApplicationException
 	 */
 	final public SalaryHelper getSalaryHelper() throws ApplicationException {
@@ -45,11 +45,11 @@ public abstract class SalaryAlgorithm<T> extends AbstractBusinessAddin<T> {
 	}
 	
 	/**
-	 * Возвращает класс помошник для работы с графиками работ и табелем
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РєР»Р°СЃСЃ РїРѕРјРѕС€РЅРёРє РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РіСЂР°С„РёРєР°РјРё СЂР°Р±РѕС‚ Рё С‚Р°Р±РµР»РµРј
 	 * 
 	 * @see TableHelper
 	 * 
-	 * @return	класс помошник
+	 * @return	РєР»Р°СЃСЃ РїРѕРјРѕС€РЅРёРє
 	 * @throws ApplicationException
 	 */
 	final public TableHelper getTableHelper() throws ApplicationException {
@@ -60,11 +60,11 @@ public abstract class SalaryAlgorithm<T> extends AbstractBusinessAddin<T> {
 	}
 	
 	/**
-	 * Возвращает контекст выполнения расчета з/п
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРёСЏ СЂР°СЃС‡РµС‚Р° Р·/Рї
 	 * 
 	 * @see SalaryAlgorithmContext
 	 * 
-	 * @return	контекст
+	 * @return	РєРѕРЅС‚РµРєСЃС‚
 	 * @throws ApplicationException
 	 */
 	final public SalaryAlgorithmContext getContext() throws ApplicationException {

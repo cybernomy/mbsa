@@ -19,7 +19,7 @@ import com.mg.framework.support.ui.UIProducer;
 import com.mg.framework.support.ui.UIUtils;
 
 /**
- * Поисковик сущностей "Период планирования"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РџРµСЂРёРѕРґ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmcPeriodSearchHelp.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $

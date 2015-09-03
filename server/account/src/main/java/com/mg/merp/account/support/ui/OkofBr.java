@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.account.model.Okof;
 
 /**
- * Браузер кодов ОКОФ
+ * Р‘СЂР°СѓР·РµСЂ РєРѕРґРѕРІ РћРљРћР¤
  * 
  * @author leonova
  * @version $Id: OkofBr.java,v 1.1 2006/08/23 10:27:59 leonova Exp $ 

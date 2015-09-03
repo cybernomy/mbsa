@@ -23,8 +23,8 @@ import com.mg.framework.api.orm.Projection;
 import com.mg.framework.api.orm.ResultTransformer;
 
 /**
- * Реализация критериев не связанных с текущим контекстом, не использовать данный класс в прикладном коде, для создания
- * критериев использовать класс фабрику {@link com.mg.framework.api.orm.DetachedCriteria}
+ * Р РµР°Р»РёР·Р°С†РёСЏ РєСЂРёС‚РµСЂРёРµРІ РЅРµ СЃРІСЏР·Р°РЅРЅС‹С… СЃ С‚РµРєСѓС‰РёРј РєРѕРЅС‚РµРєСЃС‚РѕРј, РЅРµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґР°РЅРЅС‹Р№ РєР»Р°СЃСЃ РІ РїСЂРёРєР»Р°РґРЅРѕРј РєРѕРґРµ, РґР»СЏ СЃРѕР·РґР°РЅРёСЏ
+ * РєСЂРёС‚РµСЂРёРµРІ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РєР»Р°СЃСЃ С„Р°Р±СЂРёРєСѓ {@link com.mg.framework.api.orm.DetachedCriteria}
  * 
  * @author Oleg V. Safonov
  * @version $Id: DetachedCriteriaHibernateImpl.java,v 1.2 2007/03/23 12:00:32 safonov Exp $

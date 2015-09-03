@@ -17,7 +17,7 @@ package com.mg.merp.docflow;
 import java.util.EventListener;
 
 /**
- * Слушатель выбора образца документа
+ * РЎР»СѓС€Р°С‚РµР»СЊ РІС‹Р±РѕСЂР° РѕР±СЂР°Р·С†Р° РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: ChooseDocumentPatternListener.java,v 1.1 2006/12/12 15:23:33 safonov Exp $
@@ -25,14 +25,14 @@ import java.util.EventListener;
 public interface ChooseDocumentPatternListener extends EventListener {
 
 	/**
-	 * образец выбран 
+	 * РѕР±СЂР°Р·РµС† РІС‹Р±СЂР°РЅ 
 	 * 
-	 * @param patternId	идентификатор образца
+	 * @param patternId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕР±СЂР°Р·С†Р°
 	 */
 	void performed(Integer patternId);
 	
 	/**
-	 * выбор образца отменен
+	 * РІС‹Р±РѕСЂ РѕР±СЂР°Р·С†Р° РѕС‚РјРµРЅРµРЅ
 	 *
 	 */
 	void canceled();	

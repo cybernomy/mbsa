@@ -17,7 +17,7 @@ package com.mg.merp.warehouse.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы поддержки спецификации расходных ордеров 
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёРё СЂР°СЃС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ 
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: WarehouseDocumentSpecOutMt.java,v 1.3 2006/08/22 08:07:22 leonova Exp $

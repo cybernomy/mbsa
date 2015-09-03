@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PersonnelLabourContractServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelLabourContract;
 
 /**
- * Реализация бизнес-компонента "Трудовой договор" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РўСЂСѓРґРѕРІРѕР№ РґРѕРіРѕРІРѕСЂ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

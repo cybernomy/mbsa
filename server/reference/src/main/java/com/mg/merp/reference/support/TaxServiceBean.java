@@ -26,7 +26,7 @@ import com.mg.merp.reference.TaxServiceLocal;
 import com.mg.merp.reference.model.Tax;
 
 /**
- * Бизнес-компонент "Налоги"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РќР°Р»РѕРіРё"
  * 
  * @author leonova
  * @version $Id: TaxServiceBean.java,v 1.5 2006/09/15 12:53:03 leonova Exp $

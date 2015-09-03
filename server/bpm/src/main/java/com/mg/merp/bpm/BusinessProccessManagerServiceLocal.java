@@ -23,7 +23,7 @@ import org.jbpm.taskmgmt.exe.TaskInstance;
 import com.mg.framework.api.BusinessObjectService;
 
 /**
- * Бизнес-компонент "Менеджер бизнес-процессов"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РњРµРЅРµРґР¶РµСЂ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: BusinessProccessManagerServiceLocal.java,v 1.1 2008/03/11 08:20:32 sharapov Exp $
@@ -31,64 +31,64 @@ import com.mg.framework.api.BusinessObjectService;
 public interface BusinessProccessManagerServiceLocal extends BusinessObjectService {
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/bpm/BusinessProccessManager"; //$NON-NLS-1$
 	
 	/**
-	 * Имя метода "Загрузить список задач"
+	 * РРјСЏ РјРµС‚РѕРґР° "Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє Р·Р°РґР°С‡"
 	 */
 	static final String LOAD_TASKS_METHOD = "loadTasks"; //$NON-NLS-1$
 	
 	/**
-	 * Имя метода "Загрузить список бизнес-процессов"
+	 * РРјСЏ РјРµС‚РѕРґР° "Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ"
 	 */
 	static final String LOAD_PROCESSES_METHOD = "loadProcesses"; //$NON-NLS-1$
 	
 	/**
-	 * Имя метода "Развернуть бизнес-процесс"
+	 * РРјСЏ РјРµС‚РѕРґР° "Р Р°Р·РІРµСЂРЅСѓС‚СЊ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃ"
 	 */
 	static final String DEPLOY_PROCESS_METHOD = "deployProcess"; //$NON-NLS-1$
 	
 	/**
-	 * Загрузить список задач
-	 * @return список задач
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє Р·Р°РґР°С‡
+	 * @return СЃРїРёСЃРѕРє Р·Р°РґР°С‡
 	 */
 	List<TaskInstance> loadTasks();
 		
 	/**
-	 * Запустить задачу
-	 * @param taskId - идентификатор задачи
+	 * Р—Р°РїСѓСЃС‚РёС‚СЊ Р·Р°РґР°С‡Сѓ
+	 * @param taskId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РґР°С‡Рё
 	 */
 	void startTask(long taskId);
 	
 	/**
-	 * Завершить задачу
-	 * @param taskId - идентификатор задачи
+	 * Р—Р°РІРµСЂС€РёС‚СЊ Р·Р°РґР°С‡Сѓ
+	 * @param taskId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РґР°С‡Рё
 	 */
 	void endTask(long taskId);
 		
 	/**
-	 * Загрузить список бизнес-процессов
-	 * @return список бизнес-процессов
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ
+	 * @return СЃРїРёСЃРѕРє Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ
 	 */
 	List<ProcessDefinition> loadProcesses();
 	
 	/**
-	 * Развернуть бизнес-процесс
-	 * @param inputStream - поток
+	 * Р Р°Р·РІРµСЂРЅСѓС‚СЊ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃ
+	 * @param inputStream - РїРѕС‚РѕРє
 	 */
 	void deployProcess(InputStream inputStream);
 	
 	/**
-	 * Удалить бизнес-процесс
-	 * @param processId - идентификатор бизнес-процесса
+	 * РЈРґР°Р»РёС‚СЊ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃ
+	 * @param processId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃР°
 	 */
 	void deleteProcess(long processId);
 	
 	/**
-	 * Создать экземпляр бизнес-процесса
-	 * @param processId - идентификатор бизнес-процесса
+	 * РЎРѕР·РґР°С‚СЊ СЌРєР·РµРјРїР»СЏСЂ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃР°
+	 * @param processId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃР°
 	 */
 	void createProcessInstance(long processId);
 		

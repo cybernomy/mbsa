@@ -17,7 +17,7 @@ package com.mg.merp.settlement.model;
 import com.mg.framework.service.PersistentObjectHibernate;
 
 /**
- * Модель бизнес-компонента "Конфигурация модуля <Расчеты с партнерами>"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <Р Р°СЃС‡РµС‚С‹ СЃ РїР°СЂС‚РЅРµСЂР°РјРё>"
  * 
  * @author Artem V. Sharapov
  * @version $Id: StlConfig.java,v 1.1 2007/03/19 14:55:34 sharapov Exp $

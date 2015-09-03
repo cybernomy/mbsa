@@ -20,7 +20,7 @@ import com.mg.framework.generic.validator.EntityBeanRule;
 import com.mg.framework.support.Messages;
 
 /**
- * Правило гарантирующее, что атрибут сущности не будет <code>null</code>
+ * РџСЂР°РІРёР»Рѕ РіР°СЂР°РЅС‚РёСЂСѓСЋС‰РµРµ, С‡С‚Рѕ Р°С‚СЂРёР±СѓС‚ СЃСѓС‰РЅРѕСЃС‚Рё РЅРµ Р±СѓРґРµС‚ <code>null</code>
  * 
  * @author Oleg V. Safonov
  * @version $Id: MandatoryAttribute.java,v 1.1 2006/08/14 14:08:44 safonov Exp $
@@ -28,10 +28,10 @@ import com.mg.framework.support.Messages;
 public class MandatoryAttribute extends EntityBeanRule {
 
 	/**
-	 * создает правило
+	 * СЃРѕР·РґР°РµС‚ РїСЂР°РІРёР»Рѕ
 	 * 
-	 * @param entity		объект-сущность контроля
-	 * @param propertyName	наименование атрибута контроля
+	 * @param entity		РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ РєРѕРЅС‚СЂРѕР»СЏ
+	 * @param propertyName	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ Р°С‚СЂРёР±СѓС‚Р° РєРѕРЅС‚СЂРѕР»СЏ
 	 */
 	public MandatoryAttribute(PersistentObject entity, String propertyName) {
 		super(Messages.getInstance().getMessage(Messages.MANDATORY_VALIDATOR), entity, propertyName);
@@ -43,7 +43,7 @@ public class MandatoryAttribute extends EntityBeanRule {
 	@Override
 	protected void doValidate(ValidationContext context) {
 		Object toValidate = toValidate();
-		//проверка на null
+		//РїСЂРѕРІРµСЂРєР° РЅР° null
 		if (toValidate == null)
 			context.getStatus().error(this);
 	}

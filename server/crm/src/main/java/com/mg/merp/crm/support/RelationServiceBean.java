@@ -22,7 +22,7 @@ import com.mg.merp.crm.RelationServiceLocal;
 import com.mg.merp.crm.model.Relation;
 
 /**
- * Бизнес-компонент "Деловые отношения" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”РµР»РѕРІС‹Рµ РѕС‚РЅРѕС€РµРЅРёСЏ" 
  * 
  * @author leonova
  * @version $Id: RelationServiceBean.java,v 1.3 2006/09/06 05:24:25 leonova Exp $

@@ -26,7 +26,7 @@ import com.mg.merp.document.Configuration;
 import com.mg.merp.document.generic.DocumentServiceBean;
 
 /**
- * Бизнес-компонент "Прочие банковские документы" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРѕС‡РёРµ Р±Р°РЅРєРѕРІСЃРєРёРµ РґРѕРєСѓРјРµРЅС‚С‹" 
  * 
  * @author leonova
  * @version $Id: BankDocumentOtherServiceBean.java,v 1.6 2007/03/23 16:11:41 safonov Exp $

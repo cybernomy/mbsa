@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.widget.Tree;
 import com.mg.framework.support.ui.widget.tree.TreeNode;
 
 /**
- * адаптер визуального элемента дерево
+ * Р°РґР°РїС‚РµСЂ РІРёР·СѓР°Р»СЊРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РґРµСЂРµРІРѕ
  * 
  * @author Oleg V. Safonov
  * @version $Id: TreeControllerAdapter.java,v 1.3 2009/02/09 13:41:21 safonov Exp $
@@ -26,23 +26,23 @@ import com.mg.framework.support.ui.widget.tree.TreeNode;
 public interface TreeControllerAdapter {
 	
 	/**
-	 * получить модель
+	 * РїРѕР»СѓС‡РёС‚СЊ РјРѕРґРµР»СЊ
 	 * 
-	 * @return	модель
+	 * @return	РјРѕРґРµР»СЊ
 	 */
 	TreeModel getModel();
 	
 	/**
-	 * установка текущего узла дерева
+	 * СѓСЃС‚Р°РЅРѕРІРєР° С‚РµРєСѓС‰РµРіРѕ СѓР·Р»Р° РґРµСЂРµРІР°
 	 * 
-	 * @param node	текущий узел
+	 * @param node	С‚РµРєСѓС‰РёР№ СѓР·РµР»
 	 */
 	void setCurrentNode(TreeNode node);
 
 	/**
-	 * установка элемента пользовательского интерфейса "Дерево" связанного с данным контроллером
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЌР»РµРјРµРЅС‚Р° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР° "Р”РµСЂРµРІРѕ" СЃРІСЏР·Р°РЅРЅРѕРіРѕ СЃ РґР°РЅРЅС‹Рј РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРј
 	 * 
-	 * @param tree	элемент UI "Дерево"
+	 * @param tree	СЌР»РµРјРµРЅС‚ UI "Р”РµСЂРµРІРѕ"
 	 */
 	void setTree(Tree tree);
 

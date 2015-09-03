@@ -24,7 +24,7 @@ import com.mg.merp.crm.OperationPriorityServiceLocal;
 import com.mg.merp.crm.model.OperationPriority;
 
 /**
- * Бизнес-компонент "Приоритеты действий" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРёРѕСЂРёС‚РµС‚С‹ РґРµР№СЃС‚РІРёР№" 
  * 
  * @author leonova
  * @version $Id: OperationPriorityServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

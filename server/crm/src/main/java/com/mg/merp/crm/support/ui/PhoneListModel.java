@@ -21,7 +21,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.support.Messages;
 
 /**
- * Модель таблицы "Телефоны"
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ "РўРµР»РµС„РѕРЅС‹"
  * @author Artem V. Sharapov
  * @author Konstantin S. Alikaev
  * @version $Id: PhoneListModel.java,v 1.2 2008/03/04 08:55:01 alikaev Exp $

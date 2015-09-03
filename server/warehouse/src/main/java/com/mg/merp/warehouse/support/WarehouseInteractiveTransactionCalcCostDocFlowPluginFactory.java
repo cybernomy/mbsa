@@ -17,7 +17,7 @@ package com.mg.merp.warehouse.support;
 import com.mg.merp.warehouse.generic.AbstractWarehouseTransactionDocFlowPluginFactory;
 
 /**
- * Фабрика этапа ДО "Интерактивная отработка с расчетом цены"
+ * Р¤Р°Р±СЂРёРєР° СЌС‚Р°РїР° Р”Рћ "РРЅС‚РµСЂР°РєС‚РёРІРЅР°СЏ РѕС‚СЂР°Р±РѕС‚РєР° СЃ СЂР°СЃС‡РµС‚РѕРј С†РµРЅС‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: WarehouseInteractiveTransactionCalcCostDocFlowPluginFactory.java,v 1.1 2008/04/18 15:22:11 safonov Exp $

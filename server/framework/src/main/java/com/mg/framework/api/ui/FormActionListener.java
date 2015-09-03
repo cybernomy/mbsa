@@ -18,7 +18,7 @@ import java.io.Serializable;
 
 
 /**
- * Слушатель событий формы пользовательского интерфейса
+ * РЎР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№ С„РѕСЂРјС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: FormActionListener.java,v 1.2 2006/08/31 09:01:06 safonov Exp $
@@ -26,9 +26,9 @@ import java.io.Serializable;
 public interface FormActionListener extends Serializable {
 	
 	/**
-	 * вызывается в процессе возникновения события от формы
+	 * РІС‹Р·С‹РІР°РµС‚СЃСЏ РІ РїСЂРѕС†РµСЃСЃРµ РІРѕР·РЅРёРєРЅРѕРІРµРЅРёСЏ СЃРѕР±С‹С‚РёСЏ РѕС‚ С„РѕСЂРјС‹
 	 * 
-	 * @param event	событие формы
+	 * @param event	СЃРѕР±С‹С‚РёРµ С„РѕСЂРјС‹
 	 */
 	void actionPerformed(FormEvent event);
 }

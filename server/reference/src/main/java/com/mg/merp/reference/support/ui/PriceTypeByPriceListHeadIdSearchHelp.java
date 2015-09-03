@@ -27,7 +27,7 @@ import com.mg.merp.reference.PriceTypeServiceLocal;
 import com.mg.merp.reference.model.PriceListHead;
 
 /**
- * Поиск типов цен из списка связей с прайс-листом
+ * РџРѕРёСЃРє С‚РёРїРѕРІ С†РµРЅ РёР· СЃРїРёСЃРєР° СЃРІСЏР·РµР№ СЃ РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРј
  * 
  * @author Artem V. Sharapov
  * @version $Id: PriceTypeByPriceListHeadIdSearchHelp.java,v 1.1 2008/10/13 05:50:58 sharapov Exp $
@@ -74,8 +74,8 @@ public abstract class PriceTypeByPriceListHeadIdSearchHelp extends AbstractSearc
 	}
 	
 	/**
-	 * Получть наименование аттрибута, содержащего идентификатор заголовка прайс-листа
-	 * @return наименование аттрибута
+	 * РџРѕР»СѓС‡С‚СЊ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ Р°С‚С‚СЂРёР±СѓС‚Р°, СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РіРѕР»РѕРІРєР° РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @return РЅР°РёРјРµРЅРѕРІР°РЅРёРµ Р°С‚С‚СЂРёР±СѓС‚Р°
 	 */
 	protected abstract String getPriceListHeadIdAttribute();
 	

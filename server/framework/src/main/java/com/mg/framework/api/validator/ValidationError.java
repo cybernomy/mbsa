@@ -15,7 +15,7 @@
 package com.mg.framework.api.validator;
 
 /**
- * Ошибка контроля данных
+ * РћС€РёР±РєР° РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: ValidationError.java,v 1.1 2006/08/14 14:07:42 safonov Exp $
@@ -28,7 +28,7 @@ public class ValidationError {
 	}
 
 	/**
-	 * получить сообщение об ошибки контроля данных
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ РѕР± РѕС€РёР±РєРё РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…
 	 * 
 	 * @return Returns the message.
 	 */

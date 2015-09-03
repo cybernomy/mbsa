@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.ContainerContext;
 import com.mg.framework.support.ui.ulc.ULCContainerContext;
 
 /**
- * Фабрика среды контейнера выполнения приложения
+ * Р¤Р°Р±СЂРёРєР° СЃСЂРµРґС‹ РєРѕРЅС‚РµР№РЅРµСЂР° РІС‹РїРѕР»РЅРµРЅРёСЏ РїСЂРёР»РѕР¶РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ContainerContextFactory.java,v 1.2 2007/11/09 12:31:23 safonov Exp $
@@ -28,18 +28,18 @@ public class ContainerContextFactory {
 	private ContainerContext defaultContainerContext = new ULCContainerContext();
 
 	/**
-	 * получить объект-одиночку
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕР±СЉРµРєС‚-РѕРґРёРЅРѕС‡РєСѓ
 	 * 
-	 * @return	экземпляр фабрики
+	 * @return	СЌРєР·РµРјРїР»СЏСЂ С„Р°Р±СЂРёРєРё
 	 */
 	public static ContainerContextFactory getInstance() {
 		return instance;
 	}
 	
 	/**
-	 * получить среду контейнера выполнения приложения
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃСЂРµРґСѓ РєРѕРЅС‚РµР№РЅРµСЂР° РІС‹РїРѕР»РЅРµРЅРёСЏ РїСЂРёР»РѕР¶РµРЅРёСЏ
 	 * 
-	 * @return	среда контейнера выполнения приложения
+	 * @return	СЃСЂРµРґР° РєРѕРЅС‚РµР№РЅРµСЂР° РІС‹РїРѕР»РЅРµРЅРёСЏ РїСЂРёР»РѕР¶РµРЅРёСЏ
 	 */
 	public ContainerContext getDefaultContainerContext() {
 		return defaultContainerContext;

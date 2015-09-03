@@ -17,7 +17,7 @@ package com.mg.merp.account.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * Контроллер формы поиска бизнес-компонента "Расходные кассовые документы"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р Р°СЃС…РѕРґРЅС‹Рµ РєР°СЃСЃРѕРІС‹Рµ РґРѕРєСѓРјРµРЅС‚С‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: CashDocumentOutSearchHelp.java,v 1.1 2008/03/12 11:22:38 alikaev Exp $

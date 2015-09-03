@@ -15,7 +15,7 @@
 package com.mg.merp.warehouse.support.ui;
 
 /**
- * Модель данных выбора серийных номеров
+ * РњРѕРґРµР»СЊ РґР°РЅРЅС‹С… РІС‹Р±РѕСЂР° СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
  * 
  * @author Artem V. Sharapov
  * @version $Id: SerialNumberModelItem.java,v 1.1 2008/05/30 13:03:56 sharapov Exp $

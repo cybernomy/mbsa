@@ -36,7 +36,7 @@ import com.mg.merp.personnelref.model.StaffListPosition;
 import com.mg.merp.personnelref.model.StaffListUnit;
 
 /**
- * Контроллер браузера "Должности в штатном расписании"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "Р”РѕР»Р¶РЅРѕСЃС‚Рё РІ С€С‚Р°С‚РЅРѕРј СЂР°СЃРїРёСЃР°РЅРёРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -177,8 +177,8 @@ public class StaffListPositionBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Получить идентификатор варианта ШР
-	 * @return идентификатор варианта ШР
+	 * РџРѕР»СѓС‡РёС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІР°СЂРёР°РЅС‚Р° РЁР 
+	 * @return РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІР°СЂРёР°РЅС‚Р° РЁР 
 	 */
 	private Integer getStaffListId() {
 		if(staffListId == null)

@@ -19,7 +19,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип выбытия из эксплуатации 
+ * РўРёРї РІС‹Р±С‹С‚РёСЏ РёР· СЌРєСЃРїР»СѓР°С‚Р°С†РёРё 
  * 
  * @author Anna V. Leonova
  * @version $Id: RemoveType.java,v 1.2 2008/06/30 04:15:16 alikaev Exp $
@@ -34,31 +34,31 @@ public enum RemoveType {
 	NONE,
 	
 	/**
-	 * Выдано
+	 * Р’С‹РґР°РЅРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.GivenOut")
 	GIVENOUT,
 	
 	/**
-	 * В эксплуатации
+	 * Р’ СЌРєСЃРїР»СѓР°С‚Р°С†РёРё
 	 */
 	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.InExpl")
 	INEXPL,
 	
 	/**
-	 * Возвращено
+	 * Р’РѕР·РІСЂР°С‰РµРЅРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.Returned")
 	RETURNED,
 	
 	/**
-	 * Утеряно
+	 * РЈС‚РµСЂСЏРЅРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.Lost")
 	LOST,
 	
 	/**
-	 * Списано
+	 * РЎРїРёСЃР°РЅРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.WrittenOff")
 	WRITTENOFF	

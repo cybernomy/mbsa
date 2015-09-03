@@ -32,7 +32,7 @@ import com.mg.framework.support.ui.widget.tree.TreeNode;
 import com.mg.merp.paymentcontrol.model.PmcPeriod;
 
 /**
- * Контроллер формы поиска сущности "Период планирования"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚Рё "РџРµСЂРёРѕРґ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmcPeriodSearchForm.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $

@@ -18,7 +18,7 @@ import com.mg.framework.api.BusinessObjectService;
 import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 
 /**
- * Процессор счетов-фактур
+ * РџСЂРѕС†РµСЃСЃРѕСЂ СЃС‡РµС‚РѕРІ-С„Р°РєС‚СѓСЂ
  * 
  * @author Artem V. Sharapov
  * @version $Id: FacturaProcessorServiceLocal.java,v 1.2 2009/03/16 14:30:34 sharapov Exp $
@@ -28,66 +28,66 @@ public interface FacturaProcessorServiceLocal extends BusinessObjectService {
 	static final String SERVICE_NAME = "merp/factura/FacturaProcessor";
 		
 	/**
-	 * Выполнить ЭДО "Регистрация счет-фактуры"
-	 * @param params - параметры ЭДО
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ Р­Р”Рћ "Р РµРіРёСЃС‚СЂР°С†РёСЏ СЃС‡РµС‚-С„Р°РєС‚СѓСЂС‹"
+	 * @param params - РїР°СЂР°РјРµС‚СЂС‹ Р­Р”Рћ
 	 */
 	void registerFactura(DocFlowPluginInvokeParams params);
 	
 	/**
-	 * Откатить ЭДО "Регистрация счет-фактуры"
-	 * @param params - параметры ЭДО
+	 * РћС‚РєР°С‚РёС‚СЊ Р­Р”Рћ "Р РµРіРёСЃС‚СЂР°С†РёСЏ СЃС‡РµС‚-С„Р°РєС‚СѓСЂС‹"
+	 * @param params - РїР°СЂР°РјРµС‚СЂС‹ Р­Р”Рћ
 	 */
 	void rollBackRegisterFactura(DocFlowPluginInvokeParams params);
 	
 	
 	/**
-	 * Выполнить ЭДО "Регистрация даты оприходования"
-	 * @param params - параметры ЭДО
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ Р­Р”Рћ "Р РµРіРёСЃС‚СЂР°С†РёСЏ РґР°С‚С‹ РѕРїСЂРёС…РѕРґРѕРІР°РЅРёСЏ"
+	 * @param params - РїР°СЂР°РјРµС‚СЂС‹ Р­Р”Рћ
 	 */
 	void registerStockDate(DocFlowPluginInvokeParams params);
 	
 	/**
-	 * Откатить ЭДО "Регистрация даты оприходования"
-	 * @param params - параметры ЭДО
+	 * РћС‚РєР°С‚РёС‚СЊ Р­Р”Рћ "Р РµРіРёСЃС‚СЂР°С†РёСЏ РґР°С‚С‹ РѕРїСЂРёС…РѕРґРѕРІР°РЅРёСЏ"
+	 * @param params - РїР°СЂР°РјРµС‚СЂС‹ Р­Р”Рћ
 	 */
 	void rollBackRegisterStockDate(DocFlowPluginInvokeParams params);
 	
 	
 	/**
-	 * Выполнить ЭДО "Регистрация даты оплаты"
-	 * @param params - параметры ЭДО
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ Р­Р”Рћ "Р РµРіРёСЃС‚СЂР°С†РёСЏ РґР°С‚С‹ РѕРїР»Р°С‚С‹"
+	 * @param params - РїР°СЂР°РјРµС‚СЂС‹ Р­Р”Рћ
 	 */
 	void registerPayDate(DocFlowPluginInvokeParams params);
 	
 	/**
-	 * Откатить ЭДО "Регистрация даты оплаты"
-	 * @param params - параметры ЭДО
+	 * РћС‚РєР°С‚РёС‚СЊ Р­Р”Рћ "Р РµРіРёСЃС‚СЂР°С†РёСЏ РґР°С‚С‹ РѕРїР»Р°С‚С‹"
+	 * @param params - РїР°СЂР°РјРµС‚СЂС‹ Р­Р”Рћ
 	 */
 	void rollBackRegisterPayDate(DocFlowPluginInvokeParams params);
 	
 	
 	/**
-	 * Выполнить ЭДО "Регистрация в книге покупок"
-	 * @param params - параметры ЭДО
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ Р­Р”Рћ "Р РµРіРёСЃС‚СЂР°С†РёСЏ РІ РєРЅРёРіРµ РїРѕРєСѓРїРѕРє"
+	 * @param params - РїР°СЂР°РјРµС‚СЂС‹ Р­Р”Рћ
 	 */
 	void registerInBuyBook(DocFlowPluginInvokeParams params);
 	
 	/**
-	 * Откатить ЭДО "Регистрация в книге покупок"
-	 * @param params - параметры ЭДО
+	 * РћС‚РєР°С‚РёС‚СЊ Р­Р”Рћ "Р РµРіРёСЃС‚СЂР°С†РёСЏ РІ РєРЅРёРіРµ РїРѕРєСѓРїРѕРє"
+	 * @param params - РїР°СЂР°РјРµС‚СЂС‹ Р­Р”Рћ
 	 */
 	void rollBackRegisterInBuyBook(DocFlowPluginInvokeParams params);
 	
 	
 	/**
-	 * Выполнить ЭДО "Регистрация в книге продаж"
-	 * @param params - параметры ЭДО
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ Р­Р”Рћ "Р РµРіРёСЃС‚СЂР°С†РёСЏ РІ РєРЅРёРіРµ РїСЂРѕРґР°Р¶"
+	 * @param params - РїР°СЂР°РјРµС‚СЂС‹ Р­Р”Рћ
 	 */
 	void registerInSaleBook(DocFlowPluginInvokeParams params);
 	
 	/**
-	 * Откатить ЭДО "Регистрация в книге продаж"
-	 * @param params - параметры ЭДО
+	 * РћС‚РєР°С‚РёС‚СЊ Р­Р”Рћ "Р РµРіРёСЃС‚СЂР°С†РёСЏ РІ РєРЅРёРіРµ РїСЂРѕРґР°Р¶"
+	 * @param params - РїР°СЂР°РјРµС‚СЂС‹ Р­Р”Рћ
 	 */
 	void rollBackRegisterInSaleBook(DocFlowPluginInvokeParams params);
 	

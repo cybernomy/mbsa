@@ -19,7 +19,7 @@ import com.mg.framework.support.ui.UIProducer;
 import com.mg.framework.support.ui.UIUtils;
 
 /**
- * Поисковик сущностей "Классификатор адресов (КЛАДР)"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РљР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂ Р°РґСЂРµСЃРѕРІ (РљР›РђР”Р )"
  * 
  * @author Artem V. Sharapov
  * @version $Id: KladrSearchHelp.java,v 1.1 2007/07/16 13:22:45 sharapov Exp $
@@ -46,11 +46,11 @@ public class KladrSearchHelp extends AbstractSearchHelp {
 	}
 
 	/**
-	 * Установить параметры поиска КЛАДР
-	 * @param kladrLevel - уровень КЛАДР
-	 * @param regionCode - код региона
-	 * @param districtCode - код района
-	 * @param cityCode - код города
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РїРѕРёСЃРєР° РљР›РђР”Р 
+	 * @param kladrLevel - СѓСЂРѕРІРµРЅСЊ РљР›РђР”Р 
+	 * @param regionCode - РєРѕРґ СЂРµРіРёРѕРЅР°
+	 * @param districtCode - РєРѕРґ СЂР°Р№РѕРЅР°
+	 * @param cityCode - РєРѕРґ РіРѕСЂРѕРґР°
 	 */
 	public void setSearchParams(Integer kladrLevel, String regionCode, String districtCode, String cityCode) {
 		this.kladrLevel = kladrLevel;

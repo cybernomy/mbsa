@@ -17,7 +17,7 @@ package com.mg.merp.mfreference;
 import com.mg.merp.mfreference.model.PlanningLevel;
 
 /**
- * Сервис бизнес-компонента "Уровни планирования"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЈСЂРѕРІРЅРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,10 +26,10 @@ import com.mg.merp.mfreference.model.PlanningLevel;
 public interface PlanningLevelServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PlanningLevel, Integer> {
 
 	/**
-	 * Создать периоды уровня планирования
-	 * @param planningLevel - уровень планирования
-	 * @param bucketLength - длина периода в днях
-	 * @param bucketNumber - количество периодов
+	 * РЎРѕР·РґР°С‚СЊ РїРµСЂРёРѕРґС‹ СѓСЂРѕРІРЅСЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param planningLevel - СѓСЂРѕРІРµРЅСЊ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param bucketLength - РґР»РёРЅР° РїРµСЂРёРѕРґР° РІ РґРЅСЏС…
+	 * @param bucketNumber - РєРѕР»РёС‡РµСЃС‚РІРѕ РїРµСЂРёРѕРґРѕРІ
 	 */
 	void generateBuckets(PlanningLevel planningLevel, Integer bucketLength, Integer bucketNumber);
 

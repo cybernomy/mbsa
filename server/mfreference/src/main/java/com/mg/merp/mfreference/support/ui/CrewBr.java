@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.mfreference.model.Crew;
 
 /**
- * Браузер бригад
+ * Р‘СЂР°СѓР·РµСЂ Р±СЂРёРіР°Рґ
  * 
  * @author leonova
  * @version $Id: CrewBr.java,v 1.1 2006/08/24 12:20:15 leonova Exp $ 

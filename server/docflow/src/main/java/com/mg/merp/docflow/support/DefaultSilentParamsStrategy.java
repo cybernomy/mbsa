@@ -31,8 +31,8 @@ import com.mg.merp.docprocess.model.DocProcessStage;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Реализация стратегии ДО для"тихого" выполнения, в случае если требуется взаимодействие с пользователем
- * будет сгенерирована ИС {@link SilentException}
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё Р”Рћ РґР»СЏ"С‚РёС…РѕРіРѕ" РІС‹РїРѕР»РЅРµРЅРёСЏ, РІ СЃР»СѓС‡Р°Рµ РµСЃР»Рё С‚СЂРµР±СѓРµС‚СЃСЏ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёРµ СЃ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј
+ * Р±СѓРґРµС‚ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅР° РРЎ {@link SilentException}
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultSilentParamsStrategy.java,v 1.1 2006/12/12 15:24:36 safonov Exp $

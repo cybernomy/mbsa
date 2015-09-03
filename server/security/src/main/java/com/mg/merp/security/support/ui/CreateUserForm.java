@@ -22,7 +22,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.security.support.Messages;
 
 /**
- * Форма создания пользователя системы
+ * Р¤РѕСЂРјР° СЃРѕР·РґР°РЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: CreateUserForm.java,v 1.2 2007/09/15 07:04:24 alikaev Exp $

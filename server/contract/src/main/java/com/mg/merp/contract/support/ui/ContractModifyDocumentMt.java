@@ -19,7 +19,7 @@ import com.mg.framework.generic.ui.DefaultMaintenanceForm;
 import com.mg.merp.document.support.DocumentUtils;
 
 /**
- * Контроллер формы поддержки "Изменение контракта" 
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РР·РјРµРЅРµРЅРёРµ РєРѕРЅС‚СЂР°РєС‚Р°" 
  * 
  * @author Artem V. Sharapov
  * @version $Id: ContractModifyDocumentMt.java,v 1.1 2007/11/22 15:59:26 sharapov Exp $
@@ -32,8 +32,8 @@ public class ContractModifyDocumentMt extends DefaultMaintenanceForm {
 	}
 	
 	/**
-	 * Обработчик просмотра документа
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewDocument(WidgetEvent event) {
 		DocumentUtils.viewDocument(getEntity(), DOCUMENT_ATTRIBUTE_NAME);

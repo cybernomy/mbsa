@@ -25,7 +25,7 @@ import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.reference.model.PartnerEmpl;
 
 /**
- * Контроллер формы условий отбора контрактов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° РєРѕРЅС‚СЂР°РєС‚РѕРІ
  * 
  * @author leonova
  * @author Artem V. Sharapov

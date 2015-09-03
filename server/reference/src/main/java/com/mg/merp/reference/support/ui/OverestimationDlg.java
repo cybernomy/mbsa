@@ -21,7 +21,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.generic.ui.DefaultDialog;
 
 /**
- * Контроллер диалога "Переоценка"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "РџРµСЂРµРѕС†РµРЅРєР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: OverestimationDlg.java,v 1.2 2009/02/12 07:59:01 sharapov Exp $

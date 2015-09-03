@@ -17,7 +17,7 @@ package com.mg.merp.document.support.ui;
 import com.mg.merp.document.model.DocumentKind;
 
 /**
- * SearchHelp типов контрактов для вызова в форме условия отбора
+ * SearchHelp С‚РёРїРѕРІ РєРѕРЅС‚СЂР°РєС‚РѕРІ РґР»СЏ РІС‹Р·РѕРІР° РІ С„РѕСЂРјРµ СѓСЃР»РѕРІРёСЏ РѕС‚Р±РѕСЂР°
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ContractDocTypeForDocumentRestSearchHelp.java,v 1.1 2008/02/12 08:10:11 alikaev Exp $

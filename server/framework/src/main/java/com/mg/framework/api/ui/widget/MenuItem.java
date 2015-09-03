@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.widget;
 import com.mg.framework.api.ui.Widget;
 
 /**
- * Элемент "Элемент меню"
+ * Р­Р»РµРјРµРЅС‚ "Р­Р»РµРјРµРЅС‚ РјРµРЅСЋ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: MenuItem.java,v 1.4 2008/06/07 09:16:13 safonov Exp $
@@ -25,14 +25,14 @@ import com.mg.framework.api.ui.Widget;
 public interface MenuItem extends Widget {
 
 	/**
-	 * атрибут клавиш быстрого доступа, должен иметь следующий синтаксис:
+	 * Р°С‚СЂРёР±СѓС‚ РєР»Р°РІРёС€ Р±С‹СЃС‚СЂРѕРіРѕ РґРѕСЃС‚СѓРїР°, РґРѕР»Р¶РµРЅ РёРјРµС‚СЊ СЃР»РµРґСѓСЋС‰РёР№ СЃРёРЅС‚Р°РєСЃРёСЃ:
 	 * <pre> "&lt;modifiers&gt; &lt;key&gt;" modifiers := shift | control | meta | alt
-	 * key := символ клавиши быстрого доступа. </pre>
+	 * key := СЃРёРјРІРѕР» РєР»Р°РІРёС€Рё Р±С‹СЃС‚СЂРѕРіРѕ РґРѕСЃС‚СѓРїР°. </pre>
 	 */
 	static final String KEY_STROKE = "keyStroke"; //$NON-NLS-1$
 	
 	/**
-	 * атрибут тип переключателя, может иметь следующие значения: {@link #TOGGLE_NONE},
+	 * Р°С‚СЂРёР±СѓС‚ С‚РёРї РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЏ, РјРѕР¶РµС‚ РёРјРµС‚СЊ СЃР»РµРґСѓСЋС‰РёРµ Р·РЅР°С‡РµРЅРёСЏ: {@link #TOGGLE_NONE},
 	 * {@link #TOGGLE_CHECK_BOX}, {@link #TOGGLE_RADIO_BUTTON}
 	 * 
 	 * @since 4.0.6
@@ -40,33 +40,33 @@ public interface MenuItem extends Widget {
 	static final String TOGGLE = "toggle"; //$NON-NLS-1$
 	
 	/**
-	 * пункт меню не является переключателем, используется по умолчанию
+	 * РїСѓРЅРєС‚ РјРµРЅСЋ РЅРµ СЏРІР»СЏРµС‚СЃСЏ РїРµСЂРµРєР»СЋС‡Р°С‚РµР»РµРј, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
 	static final String TOGGLE_NONE = "none"; //$NON-NLS-1$
 	
 	/**
-	 * пункт меню имеет тип переключателя CheckBox
+	 * РїСѓРЅРєС‚ РјРµРЅСЋ РёРјРµРµС‚ С‚РёРї РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЏ CheckBox
 	 */
 	static final String TOGGLE_CHECK_BOX = "checkBox"; //$NON-NLS-1$
 	
 	/**
-	 * пункт меню имеет тип переключателя Radio button, не поддерживается
-	 * в текущей версии
+	 * РїСѓРЅРєС‚ РјРµРЅСЋ РёРјРµРµС‚ С‚РёРї РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЏ Radio button, РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ
+	 * РІ С‚РµРєСѓС‰РµР№ РІРµСЂСЃРёРё
 	 */
 	static final String TOGGLE_RADIO_BUTTON = "radioButton"; //$NON-NLS-1$
 	
 	/**
-	 * тэг элемента меню с которым связано действие
+	 * С‚СЌРі СЌР»РµРјРµРЅС‚Р° РјРµРЅСЋ СЃ РєРѕС‚РѕСЂС‹Рј СЃРІСЏР·Р°РЅРѕ РґРµР№СЃС‚РІРёРµ
 	 */
 	static final String MENU_ITEM = "jfd:menuItem"; //$NON-NLS-1$
 	
 	/**
-	 * тэг элемента подменю
+	 * С‚СЌРі СЌР»РµРјРµРЅС‚Р° РїРѕРґРјРµРЅСЋ
 	 */
 	static final String MENU = "jfd:menu"; //$NON-NLS-1$
 	
 	/**
-	 * тэг элемента меню разделитель
+	 * С‚СЌРі СЌР»РµРјРµРЅС‚Р° РјРµРЅСЋ СЂР°Р·РґРµР»РёС‚РµР»СЊ
 	 */
 	static final String SEPARATOR = "jfd:separator"; //$NON-NLS-1$
 }

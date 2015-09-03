@@ -19,7 +19,7 @@ import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.MessageSourceAccessor;
 
 /**
- * Абстрактное правило контроля данных
+ * РђР±СЃС‚СЂР°РєС‚РЅРѕРµ РїСЂР°РІРёР»Рѕ РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractRule.java,v 1.1 2006/08/14 14:08:09 safonov Exp $
@@ -29,10 +29,10 @@ public abstract class AbstractRule implements Rule {
 	private Object toValidate;
 
 	/**
-	 * создает правило
+	 * СЃРѕР·РґР°РµС‚ РїСЂР°РІРёР»Рѕ
 	 * 
-	 * @param message		сообщение
-	 * @param toValidate	объект контроля
+	 * @param message		СЃРѕРѕР±С‰РµРЅРёРµ
+	 * @param toValidate	РѕР±СЉРµРєС‚ РєРѕРЅС‚СЂРѕР»СЏ
 	 */
 	public AbstractRule(String message, Object toValidate) {
 		this.message = message;
@@ -40,26 +40,26 @@ public abstract class AbstractRule implements Rule {
 	}
 	
 	/**
-	 * создает правило
+	 * СЃРѕР·РґР°РµС‚ РїСЂР°РІРёР»Рѕ
 	 * 
-	 * @param messageSource	источник сообщения
-	 * @param code			код сообщения
-	 * @param toValidate	объект контроля
+	 * @param messageSource	РёСЃС‚РѕС‡РЅРёРє СЃРѕРѕР±С‰РµРЅРёСЏ
+	 * @param code			РєРѕРґ СЃРѕРѕР±С‰РµРЅРёСЏ
+	 * @param toValidate	РѕР±СЉРµРєС‚ РєРѕРЅС‚СЂРѕР»СЏ
 	 */
 	public AbstractRule(MessageSourceAccessor messageSource, String code, Object toValidate) {
 		this.message = messageSource.getMessage(code);
 	}
 	
 	/**
-	 * выполнение контроля данных, необходимо переопределить в реализациях конкретных правил
-	 * <p> Например:
+	 * РІС‹РїРѕР»РЅРµРЅРёРµ РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…, РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРѕРїСЂРµРґРµР»РёС‚СЊ РІ СЂРµР°Р»РёР·Р°С†РёСЏС… РєРѕРЅРєСЂРµС‚РЅС‹С… РїСЂР°РІРёР»
+	 * <p> РќР°РїСЂРёРјРµСЂ:
 	 * <blockquote><pre>
 	 *   Object toValidate = toValidate();
 	 *   if (toValidate == null)
 	 *   	context.getStatus().error(this);
 	 * </pre></blockquote>
 	 * 
-	 * @param context	контекст контроля данных
+	 * @param context	РєРѕРЅС‚РµРєСЃС‚ РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…
 	 */
 	protected abstract void doValidate(ValidationContext context);
 	
@@ -71,9 +71,9 @@ public abstract class AbstractRule implements Rule {
 	}
 
 	/**
-	 * получить объект для контроля данных
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕР±СЉРµРєС‚ РґР»СЏ РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…
 	 * 
-	 * @return	объект контроля
+	 * @return	РѕР±СЉРµРєС‚ РєРѕРЅС‚СЂРѕР»СЏ
 	 */
 	protected Object toValidate() {
 		return toValidate;

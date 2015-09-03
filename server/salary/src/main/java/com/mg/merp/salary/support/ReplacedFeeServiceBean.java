@@ -24,7 +24,7 @@ import com.mg.merp.salary.ReplacedFeeServiceLocal;
 import com.mg.merp.salary.model.ReplacedFee;
 
 /**
- * Бизнес-компонент "Вытесняемые н/у" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’С‹С‚РµСЃРЅСЏРµРјС‹Рµ РЅ/Сѓ" 
  * 
  * @author leonova
  * @version $Id: ReplacedFeeServiceBean.java,v 1.4 2006/08/31 11:37:58 leonova Exp $

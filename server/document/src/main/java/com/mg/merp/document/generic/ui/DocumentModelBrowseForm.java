@@ -26,7 +26,7 @@ import com.mg.framework.utils.DatabaseUtils;
 
 
 /**
- * Базовый класс контроллеров моделей документов
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ РјРѕРґРµР»РµР№ РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: DocumentModelBrowseForm.java,v 1.3 2006/09/20 10:42:17 safonov Exp $

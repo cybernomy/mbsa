@@ -44,7 +44,7 @@ import com.mg.merp.reference.model.OriginalDocument;
 import com.mg.merp.reference.support.ui.OriginalDocumentFolderSearchHelp;
 
 /**
- * Контроллер формы поддержки действий
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РґРµР№СЃС‚РІРёР№
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -140,8 +140,8 @@ public class OperationMt extends DefaultCompoundMaintenanceForm implements Maste
 	}
 
 	/**
-	 * Добавить связанный документ с оригиналом
-	 * @param originalDocument - оригинал
+	 * Р”РѕР±Р°РІРёС‚СЊ СЃРІСЏР·Р°РЅРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚ СЃ РѕСЂРёРіРёРЅР°Р»РѕРј
+	 * @param originalDocument - РѕСЂРёРіРёРЅР°Р»
 	 */
 	protected void doAddLinkedDocumentWithOriginalDocument(OriginalDocument originalDocument) {
 		originalService.createForOperationWithOriginal((Operation) getEntity(), originalDocument);
@@ -149,7 +149,7 @@ public class OperationMt extends DefaultCompoundMaintenanceForm implements Maste
 	}
 
 	/**
-	 * Просмотр оригинала связанного документа
+	 * РџСЂРѕСЃРјРѕС‚СЂ РѕСЂРёРіРёРЅР°Р»Р° СЃРІСЏР·Р°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected void doViewOriginalDocumentOfLinkedDocument() {
 		OriginalDocument originalDocument = getOriginalDocumentOfCurrentLinkedDocument();
@@ -158,7 +158,7 @@ public class OperationMt extends DefaultCompoundMaintenanceForm implements Maste
 	}
 
 	/**
-	 * Редактирование оригинала связанного документа
+	 * Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РѕСЂРёРіРёРЅР°Р»Р° СЃРІСЏР·Р°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected void doEditOriginalDocumentOfLinkedDocument() {
 		OriginalDocument originalDocument = getOriginalDocumentOfCurrentLinkedDocument();
@@ -183,8 +183,8 @@ public class OperationMt extends DefaultCompoundMaintenanceForm implements Maste
 	}
 
 	/**
-	 * Обработчик пункта КМ "Выбрать документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "Р’С‹Р±СЂР°С‚СЊ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionSelectOriginalDocumnet(WidgetEvent event) {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.reference.support.ui.OriginalDocumentSearchHelp"); //$NON-NLS-1$
@@ -202,8 +202,8 @@ public class OperationMt extends DefaultCompoundMaintenanceForm implements Maste
 	}
 
 	/**
-	 * Добавить оригинал со связанным документом
-	 * @param originalDocumentDstFolder - папка-приемник документа оригинала связанного документа
+	 * Р”РѕР±Р°РІРёС‚СЊ РѕСЂРёРіРёРЅР°Р» СЃРѕ СЃРІСЏР·Р°РЅРЅС‹Рј РґРѕРєСѓРјРµРЅС‚РѕРј
+	 * @param originalDocumentDstFolder - РїР°РїРєР°-РїСЂРёРµРјРЅРёРє РґРѕРєСѓРјРµРЅС‚Р° РѕСЂРёРіРёРЅР°Р»Р° СЃРІСЏР·Р°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected void doAddOriginalDocumentOfLinkedDocument(Folder originalDocumentDstFolder) {
 		if(originalDocumentDstFolder != null) {
@@ -229,8 +229,8 @@ public class OperationMt extends DefaultCompoundMaintenanceForm implements Maste
 	}
 
 	/**
-	 * Получить оригинал текущего связанного документа
-	 * @return оригинал связанного документа или <code>null</code> если не найден
+	 * РџРѕР»СѓС‡РёС‚СЊ РѕСЂРёРіРёРЅР°Р» С‚РµРєСѓС‰РµРіРѕ СЃРІСЏР·Р°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return РѕСЂРёРіРёРЅР°Р» СЃРІСЏР·Р°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	private OriginalDocument getOriginalDocumentOfCurrentLinkedDocument() {
 		Serializable[] selectedIds = ((DefaultEJBQLTableModel) original.getModel()).getSelectedPrimaryKeys();

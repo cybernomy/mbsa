@@ -22,7 +22,7 @@ import java.util.List;
 import com.mg.framework.support.Messages;
 
 /**
- * Статус контроля данных
+ * РЎС‚Р°С‚СѓСЃ РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: Status.java,v 1.1 2006/08/14 14:07:42 safonov Exp $
@@ -35,38 +35,38 @@ public class Status {
 	}
 	
 	/**
-	 * установить ошибку контроля
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РѕС€РёР±РєСѓ РєРѕРЅС‚СЂРѕР»СЏ
 	 * 
-	 * @param rule		правило
-	 * @param message	сообщение
+	 * @param rule		РїСЂР°РІРёР»Рѕ
+	 * @param message	СЃРѕРѕР±С‰РµРЅРёРµ
 	 */
 	public void error(Rule rule, String message) {
 		addError(new ValidationError(message));
 	}
 
 	/**
-	 * установить ошибку контроля
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РѕС€РёР±РєСѓ РєРѕРЅС‚СЂРѕР»СЏ
 	 * 
-	 * @param rule	правило
+	 * @param rule	РїСЂР°РІРёР»Рѕ
 	 */
 	public void error(Rule rule) {
 		addError(new ValidationError(rule.getMessage()));
 	}
 
 	/**
-	 * проверка статуса контроля
+	 * РїСЂРѕРІРµСЂРєР° СЃС‚Р°С‚СѓСЃР° РєРѕРЅС‚СЂРѕР»СЏ
 	 * 
-	 * @return	<code>true</code> если статус содержит ошибки контроля данных
+	 * @return	<code>true</code> РµСЃР»Рё СЃС‚Р°С‚СѓСЃ СЃРѕРґРµСЂР¶РёС‚ РѕС€РёР±РєРё РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…
 	 */
 	public boolean isError() {
 		return errors.size() != 0;
 	}
 
 	/**
-	 * получить сообщение контроля данных, используется для текстового представления
-	 * ошибок содержащихся в данном объекте
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ С‚РµРєСЃС‚РѕРІРѕРіРѕ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ
+	 * РѕС€РёР±РѕРє СЃРѕРґРµСЂР¶Р°С‰РёС…СЃСЏ РІ РґР°РЅРЅРѕРј РѕР±СЉРµРєС‚Рµ
 	 * 
-	 * @return	сообщение
+	 * @return	СЃРѕРѕР±С‰РµРЅРёРµ
 	 */
 	public String getMessage() {
 		StringWriter buf = new StringWriter();

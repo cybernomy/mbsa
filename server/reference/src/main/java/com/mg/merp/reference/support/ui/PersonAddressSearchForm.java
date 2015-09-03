@@ -31,7 +31,7 @@ import com.mg.merp.reference.model.NaturalPerson;
 import com.mg.merp.reference.model.PersonAddress;
 
 /**
- * Контроллер формы поиска бизнес-компонента "Адреса проживания"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РђРґСЂРµСЃР° РїСЂРѕР¶РёРІР°РЅРёСЏ"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: PersonAddressSearchForm.java,v 1.2 2008/03/27 13:28:31 alikaev Exp $
@@ -101,9 +101,9 @@ public class PersonAddressSearchForm extends AbstractSearchForm{
 			}
 
 			/**
-			 * формируем sql запрос
+			 * С„РѕСЂРјРёСЂСѓРµРј sql Р·Р°РїСЂРѕСЃ
 			 * 
-			 * @return текст sql запроса
+			 * @return С‚РµРєСЃС‚ sql Р·Р°РїСЂРѕСЃР°
 			 */
 			private String createQueryText() {
 				Set<TableEJBQLFieldDef> fieldDefs = ((DefaultEJBQLTableModel) table.getModel()).getFieldDefsSet();
@@ -152,7 +152,7 @@ public class PersonAddressSearchForm extends AbstractSearchForm{
 	}
 
 	/**
-	 * @param person задаваемое person
+	 * @param person Р·Р°РґР°РІР°РµРјРѕРµ person
 	 */
 	public void setPerson(NaturalPerson person) {
 		this.person = person;

@@ -20,7 +20,7 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.core.model.DatabaseAuditSetup;
 
 /**
- * Бизнес-компонент настройки аудита хранилища данных
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ РЅР°СЃС‚СЂРѕР№РєРё Р°СѓРґРёС‚Р° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: DatabaseAuditSetupServiceLocal.java,v 1.1 2007/10/19 06:40:17 safonov Exp $
@@ -29,55 +29,55 @@ public interface DatabaseAuditSetupServiceLocal extends
 		DataBusinessObjectService<DatabaseAuditSetup, Integer> {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/core/DatabaseAuditSetup";
 	
 	/**
-	 * загрузка настройки аудита сущностей
+	 * Р·Р°РіСЂСѓР·РєР° РЅР°СЃС‚СЂРѕР№РєРё Р°СѓРґРёС‚Р° СЃСѓС‰РЅРѕСЃС‚РµР№
 	 * 
-	 * @return	аудит сущностей
+	 * @return	Р°СѓРґРёС‚ СЃСѓС‰РЅРѕСЃС‚РµР№
 	 */
 	List<EntityAuditItem> loadEntityAudit();
 
 	/**
-	 * загрузка настройки аудита атрибутов сущности
+	 * Р·Р°РіСЂСѓР·РєР° РЅР°СЃС‚СЂРѕР№РєРё Р°СѓРґРёС‚Р° Р°С‚СЂРёР±СѓС‚РѕРІ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param entityName	имя сущности
-	 * @return	аудит атрибутов
+	 * @param entityName	РёРјСЏ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @return	Р°СѓРґРёС‚ Р°С‚СЂРёР±СѓС‚РѕРІ
 	 */
 	List<PropertyAuditItem> loadPropertyAudit(String entityName);
 	
 	/**
-	 * установить признак аудита создания сущности
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРёР·РЅР°Рє Р°СѓРґРёС‚Р° СЃРѕР·РґР°РЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param entityName	имя сущности
-	 * @param audit	признак аудита
+	 * @param entityName	РёРјСЏ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @param audit	РїСЂРёР·РЅР°Рє Р°СѓРґРёС‚Р°
 	 */
 	void setAuditCreate(String entityName, boolean audit);
 	
 	/**
-	 * установить признак аудита изменения сущности
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРёР·РЅР°Рє Р°СѓРґРёС‚Р° РёР·РјРµРЅРµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param entityName	имя сущности
-	 * @param audit	признак аудита
+	 * @param entityName	РёРјСЏ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @param audit	РїСЂРёР·РЅР°Рє Р°СѓРґРёС‚Р°
 	 */
 	void setAuditModify(String entityName, boolean audit);
 	
 	/**
-	 * установить признак аудита удаления сущности
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРёР·РЅР°Рє Р°СѓРґРёС‚Р° СѓРґР°Р»РµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param entityName	имя сущности
-	 * @param audit	признак аудита
+	 * @param entityName	РёРјСЏ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @param audit	РїСЂРёР·РЅР°Рє Р°СѓРґРёС‚Р°
 	 */
 	void setAuditRemove(String entityName, boolean audit);
 	
 	/**
-	 * установить признак аудита изменения атрибута сущности
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРёР·РЅР°Рє Р°СѓРґРёС‚Р° РёР·РјРµРЅРµРЅРёСЏ Р°С‚СЂРёР±СѓС‚Р° СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param entityName	имя сущности
-	 * @param propertyName	имя атрибута
-	 * @param audit	признак аудита
+	 * @param entityName	РёРјСЏ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @param propertyName	РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
+	 * @param audit	РїСЂРёР·РЅР°Рє Р°СѓРґРёС‚Р°
 	 */
 	void setAuditModify(String entityName, String propertyName, boolean audit);
 	

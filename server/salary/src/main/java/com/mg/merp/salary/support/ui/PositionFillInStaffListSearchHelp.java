@@ -21,7 +21,7 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.merp.personnelref.CalcPeriodServiceLocal;
 
 /**
- * Поисковик сущностей "Занимаемые должности в ШР"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "Р—Р°РЅРёРјР°РµРјС‹Рµ РґРѕР»Р¶РЅРѕСЃС‚Рё РІ РЁР "
  * 
  * @author Artem V. Sharapov
  * @version $Id: PositionFillInStaffListSearchHelp.java,v 1.1 2007/07/09 08:33:47 sharapov Exp $

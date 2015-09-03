@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 import com.mg.merp.mfreference.model.CostCategories;
 
 /**
- * Спецификация себестоимости
+ * РЎРїРµС†РёС„РёРєР°С†РёСЏ СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: CostDetailLineItem.java,v 1.1 2007/07/30 10:25:31 safonov Exp $
@@ -35,7 +35,7 @@ public class CostDetailLineItem {
 	}
 
 	/**
-	 * получить себестоимость
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚СЊ
 	 * 
 	 * @return the cost
 	 */
@@ -44,7 +44,7 @@ public class CostDetailLineItem {
 	}
 
 	/**
-	 * получить категорию затрат
+	 * РїРѕР»СѓС‡РёС‚СЊ РєР°С‚РµРіРѕСЂРёСЋ Р·Р°С‚СЂР°С‚
 	 * 
 	 * @return the costCategory
 	 */
@@ -53,7 +53,7 @@ public class CostDetailLineItem {
 	}
 
 	/**
-	 * установить себестоимость
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚СЊ
 	 * 
 	 * @param cost the cost to set
 	 */
@@ -62,7 +62,7 @@ public class CostDetailLineItem {
 	}
 
 	/**
-	 * установить категорию затрат
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РєР°С‚РµРіРѕСЂРёСЋ Р·Р°С‚СЂР°С‚
 	 * 
 	 * @param costCategory the costCategory to set
 	 */

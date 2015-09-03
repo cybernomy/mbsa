@@ -30,7 +30,7 @@ import com.mg.merp.manufacture.model.ScrapDocumentSpec;
 import com.mg.merp.mfreference.support.ConfigurationHelper;
 
 /**
- * Бизнес-компонент "Спецификация актов на списание потерь времени, отработанного РС" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ Р РЎ" 
  * 
  * @author leonova
  * @version $Id: ScrapLaborSpecServiceBean.java,v 1.6 2007/08/06 12:44:54 safonov Exp $

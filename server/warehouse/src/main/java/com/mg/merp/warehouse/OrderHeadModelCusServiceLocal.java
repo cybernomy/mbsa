@@ -26,7 +26,7 @@ public interface OrderHeadModelCusServiceLocal
    extends DocumentPattern<OrderHeadModel, Integer>
 {
 	/**
-	 * тип папки для образцов заказов покупателей
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ Р·Р°РєР°Р·РѕРІ РїРѕРєСѓРїР°С‚РµР»РµР№
 	 */
 	final static short FOLDER_PART = 44;
 }

@@ -23,7 +23,7 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.merp.contract.ContractTypeServiceLocal;
 
 /**
- * SearchHelp бизнес-компонента "Вид договора"
+ * SearchHelp Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РёРґ РґРѕРіРѕРІРѕСЂР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ContractTypeSearchHelp.java,v 1.1 2007/09/17 12:29:23 alikaev Exp $

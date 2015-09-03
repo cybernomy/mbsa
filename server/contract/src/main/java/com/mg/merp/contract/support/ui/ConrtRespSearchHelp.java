@@ -17,7 +17,7 @@ package com.mg.merp.contract.support.ui;
 import com.mg.merp.reference.support.ui.ContractorResponsibleSearchHelp;
 
 /**
- * SearchHelp для ответственного сотрудника нашей организации
+ * SearchHelp РґР»СЏ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕРіРѕ СЃРѕС‚СЂСѓРґРЅРёРєР° РЅР°С€РµР№ РѕСЂРіР°РЅРёР·Р°С†РёРё
  * 
  * @author leonova
  * @author Artem V. Sharapov

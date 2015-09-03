@@ -19,7 +19,7 @@ import javax.jms.Message;
 import javax.jms.Session;
 
 /**
- * Обработчик создания сообщения для сессии JMS
+ * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР·РґР°РЅРёСЏ СЃРѕРѕР±С‰РµРЅРёСЏ РґР»СЏ СЃРµСЃСЃРёРё JMS
  * 
  * @author Oleg V. Safonov
  * @version $Id: MessageCreator.java,v 1.1 2008/04/25 07:23:23 safonov Exp $
@@ -27,10 +27,10 @@ import javax.jms.Session;
 public interface MessageCreator {
 
 	/**
-	 * создать сообщение
+	 * СЃРѕР·РґР°С‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ
 	 * 
-	 * @param session	сессия JMS
-	 * @return	сообщение
+	 * @param session	СЃРµСЃСЃРёСЏ JMS
+	 * @return	СЃРѕРѕР±С‰РµРЅРёРµ
 	 * @throws JMSException
 	 */
 	Message create(Session session) throws JMSException;

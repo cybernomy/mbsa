@@ -27,7 +27,7 @@ import com.mg.merp.paymentcontrol.model.PmcPeriod;
 import com.mg.merp.paymentcontrol.model.VersionStatusKind;
 
 /**
- * Контроллер диалога "добавления статуса версии"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "РґРѕР±Р°РІР»РµРЅРёСЏ СЃС‚Р°С‚СѓСЃР° РІРµСЂСЃРёРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: VersionStatusDlg.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $
@@ -53,9 +53,9 @@ public class VersionStatusDlg extends DefaultDialog {
 	}
 
 	/**
-	 * Обработчик кнопки "Выбрать период планирования"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р’С‹Р±СЂР°С‚СЊ РїРµСЂРёРѕРґ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChoosePmcPeriod(WidgetEvent event) throws Exception {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.paymentcontrol.support.ui.PmcPeriodSearchHelp"); //$NON-NLS-1$

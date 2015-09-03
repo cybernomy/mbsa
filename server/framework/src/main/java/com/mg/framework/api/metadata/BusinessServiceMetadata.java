@@ -15,7 +15,7 @@
 package com.mg.framework.api.metadata;
 
 /**
- * Метаданные бизнес-компонента
+ * РњРµС‚Р°РґР°РЅРЅС‹Рµ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: BusinessServiceMetadata.java,v 1.2 2006/07/27 15:35:14 safonov Exp $
@@ -23,16 +23,16 @@ package com.mg.framework.api.metadata;
 public interface BusinessServiceMetadata {
 	
 	/**
-	 * получить идентификатор сервиса из хранилища
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРµСЂРІРёСЃР° РёР· С…СЂР°РЅРёР»РёС‰Р°
 	 * 
-	 * @return	идентификатор
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ
 	 */
 	int getIdentificator();
 	
 	/**
-	 * получить имя бизнес-компонента
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРјСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
-	 * @return	имя
+	 * @return	РёРјСЏ
 	 */
 	String getName();
 }

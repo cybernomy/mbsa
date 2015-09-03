@@ -22,7 +22,7 @@ import com.mg.merp.paymentcontrol.model.PlanPaymentItem;
 import com.mg.merp.paymentcontrol.support.Messages;
 
 /**
- * Модель таблицы "Планирование платежей"
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ "РџР»Р°РЅРёСЂРѕРІР°РЅРёРµ РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PlanPaymentTableModel.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $

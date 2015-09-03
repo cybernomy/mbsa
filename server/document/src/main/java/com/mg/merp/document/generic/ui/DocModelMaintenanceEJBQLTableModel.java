@@ -25,7 +25,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.document.model.DocHeadModel;
 
 /**
- * Базовый класс для отобрадения формы списка образцов документов
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°РґРµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

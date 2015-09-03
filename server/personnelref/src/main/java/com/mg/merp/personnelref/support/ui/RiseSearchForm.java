@@ -23,7 +23,7 @@ import com.mg.framework.utils.MiscUtils;
 import com.mg.merp.personnelref.model.Rise;
 
 /**
- * Форма поиска бизнес-компонента "Надбавки"
+ * Р¤РѕСЂРјР° РїРѕРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќР°РґР±Р°РІРєРё"
  * 
  * @author leonova
  * @version $Id: RiseSearchForm.java,v 1.2 2009/02/09 12:11:17 safonov Exp $

@@ -38,7 +38,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер диалога "Распределение фактичеcкой суммы"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "Р Р°СЃРїСЂРµРґРµР»РµРЅРёРµ С„Р°РєС‚РёС‡РµcРєРѕР№ СЃСѓРјРјС‹"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ManualDistributionDlg.java,v 1.3 2007/03/09 06:42:37 sharapov Exp $
@@ -149,8 +149,8 @@ public class ManualDistributionDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработка события "Выполнить распределение"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "Р’С‹РїРѕР»РЅРёС‚СЊ СЂР°СЃРїСЂРµРґРµР»РµРЅРёРµ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionPerformDistribution(WidgetEvent event) throws Exception {
@@ -193,8 +193,8 @@ public class ManualDistributionDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработка события "Отменить распределение" 
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РћС‚РјРµРЅРёС‚СЊ СЂР°СЃРїСЂРµРґРµР»РµРЅРёРµ" 
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionCancelDistribution(WidgetEvent event) throws Exception {
@@ -209,8 +209,8 @@ public class ManualDistributionDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработка события нажатия кнопки "OK"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РЅР°Р¶Р°С‚РёСЏ РєРЅРѕРїРєРё "OK"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionOk(WidgetEvent event) throws Exception {
@@ -219,19 +219,19 @@ public class ManualDistributionDlg extends AbstractForm {
 	}
 
 	/**
-	 * Собрать информацию о выполненом распределении позиций
+	 * РЎРѕР±СЂР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РІС‹РїРѕР»РЅРµРЅРѕРј СЂР°СЃРїСЂРµРґРµР»РµРЅРёРё РїРѕР·РёС†РёР№
 	 */
 	private void doDistributeItems() {
 		manualDistributionItems = new ManualDistributionData[getDisributedItemsCount()];
 		int counter = 0;
 		for(DistributionListItem item : distributionList)
-			if(item.distSum.compareTo(new BigDecimal(0)) > 0) // собираем только распределённые позиции
+			if(item.distSum.compareTo(new BigDecimal(0)) > 0) // СЃРѕР±РёСЂР°РµРј С‚РѕР»СЊРєРѕ СЂР°СЃРїСЂРµРґРµР»С‘РЅРЅС‹Рµ РїРѕР·РёС†РёРё
 				manualDistributionItems[counter++] = new ManualDistributionData(item.id, item.distSum);
 	}
 
 	/**
-	 * Получить количество распределенных позиций (т.е. те позиции у которых распределенная сумма > 0)
-	 * @return количество
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ СЂР°СЃРїСЂРµРґРµР»РµРЅРЅС‹С… РїРѕР·РёС†РёР№ (С‚.Рµ. С‚Рµ РїРѕР·РёС†РёРё Сѓ РєРѕС‚РѕСЂС‹С… СЂР°СЃРїСЂРµРґРµР»РµРЅРЅР°СЏ СЃСѓРјРјР° > 0)
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ
 	 */
 	private int getDisributedItemsCount() {
 		int counter = 0;
@@ -242,10 +242,10 @@ public class ManualDistributionDlg extends AbstractForm {
 	}
 
 	/**
-	 * Установить параметры запуска
-	 * @param docHead - документ
-	 * @param kind - тип пункта
-	 * @param distributionSum - распределяемая сумма
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ Р·Р°РїСѓСЃРєР°
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
+	 * @param kind - С‚РёРї РїСѓРЅРєС‚Р°
+	 * @param distributionSum - СЂР°СЃРїСЂРµРґРµР»СЏРµРјР°СЏ СЃСѓРјРјР°
 	 */
 	public void setParams(DocHead docHead, ItemKind kind, BigDecimal distributionSum) {
 		this.distributionSum = distributionSum;

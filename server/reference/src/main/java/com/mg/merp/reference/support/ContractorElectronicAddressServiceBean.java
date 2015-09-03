@@ -24,7 +24,7 @@ import com.mg.merp.reference.ContractorElectronicAddressServiceLocal;
 import com.mg.merp.reference.model.ContractorElectronicAddress;
 
 /**
- * Бизнес-компонент "Электронные адреса партнеров" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р­Р»РµРєС‚СЂРѕРЅРЅС‹Рµ Р°РґСЂРµСЃР° РїР°СЂС‚РЅРµСЂРѕРІ" 
  * 
  * @author leonova
  * @version $Id: ContractorElectronicAddressServiceBean.java,v 1.3 2006/09/13 07:01:10 leonova Exp $

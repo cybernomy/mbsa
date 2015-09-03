@@ -34,7 +34,7 @@ import com.mg.merp.finance.model.TurnAccount;
 import com.mg.merp.finance.model.TurnFeature;
 
 /**
- * Реализация бизнес-компонента "Остатки и обороты по счетам финансового учета"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ СЃС‡РµС‚Р°Рј С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -52,11 +52,11 @@ public class TurnAccFlatServiceBean extends com.mg.framework.generic.AbstractPOJ
 	}
 
 	/**
-	 * Перенос остатков финансового учета
-	 * @param periodFrom - с фин.периода
-	 * @param periodTo - по фин.период
-	 * @param allAcc - по всем счетам
-	 * @param accList - список выбранных счетов
+	 * РџРµСЂРµРЅРѕСЃ РѕСЃС‚Р°С‚РєРѕРІ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°
+	 * @param periodFrom - СЃ С„РёРЅ.РїРµСЂРёРѕРґР°
+	 * @param periodTo - РїРѕ С„РёРЅ.РїРµСЂРёРѕРґ
+	 * @param allAcc - РїРѕ РІСЃРµРј СЃС‡РµС‚Р°Рј
+	 * @param accList - СЃРїРёСЃРѕРє РІС‹Р±СЂР°РЅРЅС‹С… СЃС‡РµС‚РѕРІ
 	 */
 	protected void internalCarryForward (FinPeriod periodFrom, FinPeriod periodTo, boolean allAcc, Account[] accList) {
 		Messages errorMsg = Messages.getInstance();
@@ -85,10 +85,10 @@ public class TurnAccFlatServiceBean extends com.mg.framework.generic.AbstractPOJ
 	}
 
 	/**
-	 * Получить диапазон фин.периодов подлежащий переносу остатков
-	 * @param periodFrom - с фин.периода
-	 * @param periodTo - по фин.период
-	 * @return диапазон фин.периодов подлежащий переносу остатков
+	 * РџРѕР»СѓС‡РёС‚СЊ РґРёР°РїР°Р·РѕРЅ С„РёРЅ.РїРµСЂРёРѕРґРѕРІ РїРѕРґР»РµР¶Р°С‰РёР№ РїРµСЂРµРЅРѕСЃСѓ РѕСЃС‚Р°С‚РєРѕРІ
+	 * @param periodFrom - СЃ С„РёРЅ.РїРµСЂРёРѕРґР°
+	 * @param periodTo - РїРѕ С„РёРЅ.РїРµСЂРёРѕРґ
+	 * @return РґРёР°РїР°Р·РѕРЅ С„РёРЅ.РїРµСЂРёРѕРґРѕРІ РїРѕРґР»РµР¶Р°С‰РёР№ РїРµСЂРµРЅРѕСЃСѓ РѕСЃС‚Р°С‚РєРѕРІ
 	 */
 	protected List<FinPeriod> getFinPeriodsRange(FinPeriod periodFrom, FinPeriod periodTo) {
 		List<FinPeriod> finPeriods = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(FinPeriod.class)
@@ -98,8 +98,8 @@ public class TurnAccFlatServiceBean extends com.mg.framework.generic.AbstractPOJ
 	}
 
 	/**
-	 * Получить список всех счетов финансового учета 
-	 * @return список всех счетов финансового учета
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РІСЃРµС… СЃС‡РµС‚РѕРІ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р° 
+	 * @return СЃРїРёСЃРѕРє РІСЃРµС… СЃС‡РµС‚РѕРІ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°
 	 */
 	protected Account[] getAllAccountsList() {
 		List<Account> accounts = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(Account.class).add(Restrictions.isNotNull("Id"))); //$NON-NLS-1$
@@ -107,9 +107,9 @@ public class TurnAccFlatServiceBean extends com.mg.framework.generic.AbstractPOJ
 	}
 
 	/**
-	 * Перенос остатков
-	 * @param finPeriod - фин.период
-	 * @param account - фин.счет
+	 * РџРµСЂРµРЅРѕСЃ РѕСЃС‚Р°С‚РєРѕРІ
+	 * @param finPeriod - С„РёРЅ.РїРµСЂРёРѕРґ
+	 * @param account - С„РёРЅ.СЃС‡РµС‚
 	 */
 	protected void carryForwardBalance(FinPeriod finPeriod, Account account) {
 		OrmTemplate ormTemplateInst = OrmTemplate.getInstance();

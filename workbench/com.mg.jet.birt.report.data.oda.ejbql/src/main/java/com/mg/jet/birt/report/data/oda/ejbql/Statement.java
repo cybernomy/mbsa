@@ -231,9 +231,9 @@ public class Statement implements IQuery {
 	private Method convertParamValueMethod = null;
 	
 	private Object convertParamValue(Session hibsession, String name, Object value) throws Exception {
-		//используем reflection для исключения статичной ссылки на класс и зависимости данного плагина от других
-		//т.к. этот плагин используется и в design и в runtime режиме то зависимость от плагина shared
-		//не позволит работать в runtime
+		//РёСЃРїРѕР»СЊР·СѓРµРј reflection РґР»СЏ РёСЃРєР»СЋС‡РµРЅРёСЏ СЃС‚Р°С‚РёС‡РЅРѕР№ СЃСЃС‹Р»РєРё РЅР° РєР»Р°СЃСЃ Рё Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РґР°РЅРЅРѕРіРѕ РїР»Р°РіРёРЅР° РѕС‚ РґСЂСѓРіРёС…
+		//С‚.Рє. СЌС‚РѕС‚ РїР»Р°РіРёРЅ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ Рё РІ design Рё РІ runtime СЂРµР¶РёРјРµ С‚Рѕ Р·Р°РІРёСЃРёРјРѕСЃС‚СЊ РѕС‚ РїР»Р°РіРёРЅР° shared
+		//РЅРµ РїРѕР·РІРѕР»РёС‚ СЂР°Р±РѕС‚Р°С‚СЊ РІ runtime
 		if (convertParamValueMethod == null) {
 			Class<?> clazz = Thread.currentThread().getContextClassLoader().loadClass("com.mg.framework.support.report.ReportUtils");
 			convertParamValueMethod = clazz.getMethod("convertParamValue", new Class[] {String.class, Object.class, Object.class});

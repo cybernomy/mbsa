@@ -23,7 +23,7 @@ import com.mg.framework.utils.SecurityUtils;
 import com.mg.merp.core.SystemAuditServiceLocal;
 
 /**
- * Реализация команды показа аудита системы
+ * Р РµР°Р»РёР·Р°С†РёСЏ РєРѕРјР°РЅРґС‹ РїРѕРєР°Р·Р° Р°СѓРґРёС‚Р° СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: ShowSystemAuditCommand.java,v 1.2 2008/03/03 13:05:04 safonov Exp $

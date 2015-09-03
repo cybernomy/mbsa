@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.personnelref.model.AdditionalEducationKind;
 
 /**
- * Браузер видов дополнительного образования
+ * Р‘СЂР°СѓР·РµСЂ РІРёРґРѕРІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРіРѕ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ
  * 
  * @author leonova
  * @version $Id: AdditionalEducationKindBr.java,v 1.1 2006/08/03 11:21:13 leonova Exp $ 

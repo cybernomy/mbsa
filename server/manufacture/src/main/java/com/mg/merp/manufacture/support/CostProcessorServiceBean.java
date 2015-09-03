@@ -66,7 +66,7 @@ import com.mg.merp.reference.model.CurrencyRateType;
 import com.mg.merp.reference.model.Measure;
 
 /**
- * Бизнес-компонет "Расчет нормативной цены состава изделия"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµС‚ "Р Р°СЃС‡РµС‚ РЅРѕСЂРјР°С‚РёРІРЅРѕР№ С†РµРЅС‹ СЃРѕСЃС‚Р°РІР° РёР·РґРµР»РёСЏ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: CostProcessorServiceBean.java,v 1.6 2007/08/06 12:44:54 safonov Exp $
@@ -112,7 +112,7 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 					break;
 				}
 			
-			//создадим элемент с категорией затрат, т.к. не было в списке
+			//СЃРѕР·РґР°РґРёРј СЌР»РµРјРµРЅС‚ СЃ РєР°С‚РµРіРѕСЂРёРµР№ Р·Р°С‚СЂР°С‚, С‚.Рє. РЅРµ Р±С‹Р»Рѕ РІ СЃРїРёСЃРєРµ
 			if (!findFlag)
 				ownerCost.add(new CostDetailLineItem(item.getCostCategory(), cost));
 		}
@@ -122,7 +122,7 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 		CostDetailLineServiceLocal costDetailLineService = ((CostDetailLineServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CostDetailLineServiceLocal.SERVICE_NAME));
 		for (CostDetailLineItem item : items) {
 			BigDecimal cost = quantity.multiply(item.getCost());
-			//учитываем элементы стоимости только с категориями
+			//СѓС‡РёС‚С‹РІР°РµРј СЌР»РµРјРµРЅС‚С‹ СЃС‚РѕРёРјРѕСЃС‚Рё С‚РѕР»СЊРєРѕ СЃ РєР°С‚РµРіРѕСЂРёСЏРјРё
 			if (item.getCostCategory() == null || MathUtils.compareToZero(cost) == 0)
 				continue;
 			
@@ -148,7 +148,7 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 		List<CostDetailLineItem> ohLabCost = new ArrayList<CostDetailLineItem>();
 		ohLabCost.add(new CostDetailLineItem(costCategory, cost));
 		createCostDetailLine(BigDecimal.ONE, ohLabCost, costDetail, currency);
-		//изменим стоимость операции
+		//РёР·РјРµРЅРёРј СЃС‚РѕРёРјРѕСЃС‚СЊ РѕРїРµСЂР°С†РёРё
 		updateCostDetailLineSeq(actualityDate, ownerCost, ohLabCost, currency, ConfigurationHelper.getConfiguration().getBaseCurrency());
 	}
 	
@@ -172,11 +172,11 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 		List<CostDetailLineItem> labCost = new ArrayList<CostDetailLineItem>();
 		labCost.add(new CostDetailLineItem(costCategories, tLabor.multiply(lbrRate)));
 		createCostDetailLine(BigDecimal.ONE, labCost, costDetail, rateCurrency);
-		//изменим стоимость операции
+		//РёР·РјРµРЅРёРј СЃС‚РѕРёРјРѕСЃС‚СЊ РѕРїРµСЂР°С†РёРё
 		updateCostDetailLineSeq(actualityDate, ownerCost, labCost, rateCurrency, ConfigurationHelper.getConfiguration().getBaseCurrency());
 		
 		if (isLbrOhBackflushFlag) {
-			//для НР на рабочую силу			
+			//РґР»СЏ РќР  РЅР° СЂР°Р±РѕС‡СѓСЋ СЃРёР»Сѓ			
 			BigDecimal cost = BigDecimal.ZERO;
 			switch (laborOhAllocationFlag) {
 			case TIME:
@@ -203,7 +203,7 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 				.add(Restrictions.eq("BomRoute", bomRoute))
 				.add(Restrictions.le("EffOnDate", actualityDate))
 				.add(Restrictions.ge("EffOffDate", actualityDate)));
-		BigDecimal result = BigDecimal.ZERO; //время операции
+		BigDecimal result = BigDecimal.ZERO; //РІСЂРµРјСЏ РѕРїРµСЂР°С†РёРё
 		
 		for (BomLabor bomLabor : bomLabors) {
 			clearCostDetailLine(bomLabor.getStandartCostDetail());
@@ -222,7 +222,7 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 				.add(Restrictions.eq("Oper", jobRoute))
 				.add(Restrictions.le("EffOnDate", actualityDate))
 				.add(Restrictions.ge("EffOffDate", actualityDate)));
-		BigDecimal result = BigDecimal.ZERO; //время операции
+		BigDecimal result = BigDecimal.ZERO; //РІСЂРµРјСЏ РѕРїРµСЂР°С†РёРё
 		
 		for (JobLabor jobLabor : jobLabors) {
 			clearCostDetailLine(jobLabor.getStdCostDetail());
@@ -241,7 +241,7 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 		BOMServiceLocal bomService = (BOMServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(BOMServiceLocal.SERVICE_NAME);
 		Bom standartBom = bomService.findStandartBOM(catalog.getId());
 		if (standartBom == null) {
-			//простой материал, возмем цену из КТУ
+			//РїСЂРѕСЃС‚РѕР№ РјР°С‚РµСЂРёР°Р», РІРѕР·РјРµРј С†РµРЅСѓ РёР· РљРўРЈ
 			CatalogPrice catalogPrice = ((CatalogPriceServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CatalogPriceServiceLocal.SERVICE_NAME)).findActual(actualityDate, catalog, currency);
 			if (catalogPrice == null)
 				throw new StandartCostNotFoundException(catalog);
@@ -253,12 +253,12 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 			}
 			result.add(new CostDetailLineItem(costCategory, catalogPrice.getPrice().multiply(ratio)));
 		} else {
-			//материал (полуфабрикат)
+			//РјР°С‚РµСЂРёР°Р» (РїРѕР»СѓС„Р°Р±СЂРёРєР°С‚)
 			result = ((CostDetailLineServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CostDetailLineServiceLocal.SERVICE_NAME))
 					.calculateCost(standartBom.getStandartCostDetail(), costCategory == null);
 			if (result.isEmpty())
 				throw new IllegalStateException();
-			//если не Null то всегда один элемент массива
+			//РµСЃР»Рё РЅРµ Null С‚Рѕ РІСЃРµРіРґР° РѕРґРёРЅ СЌР»РµРјРµРЅС‚ РјР°СЃСЃРёРІР°
 			if (costCategory != null)
 				result.get(0).setCostCategory(costCategory);
 		}
@@ -287,11 +287,11 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 		
 		List<CostDetailLineItem> mtlCost = calculateUnitMaterialCost(catalog, actualityDate, currency, measure, costCategory);
 		createCostDetailLine(quan, mtlCost, costDetail, currency);
-		//изменим стоимость операции
+		//РёР·РјРµРЅРёРј СЃС‚РѕРёРјРѕСЃС‚СЊ РѕРїРµСЂР°С†РёРё
 		updateCostDetailLineSeq(actualityDate, ownerCost, mtlCost, currency, ConfigurationHelper.getConfiguration().getBaseCurrency());
 		
 		if (isOhBackflush) {
-			//для НР на материалы
+			//РґР»СЏ РќР  РЅР° РјР°С‚РµСЂРёР°Р»С‹
 			BigDecimal cost = BigDecimal.ZERO;
 			switch (ohAllocationFlag) {
 			case UNIT:
@@ -369,11 +369,11 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 		List<CostDetailLineItem> mchCost = new ArrayList<CostDetailLineItem>();
 		mchCost.add(new CostDetailLineItem(costCategory, cost));
 		createCostDetailLine(BigDecimal.ONE, mchCost, costDetail, currency);
-		//изменим стоимость операции
+		//РёР·РјРµРЅРёРј СЃС‚РѕРёРјРѕСЃС‚СЊ РѕРїРµСЂР°С†РёРё
 		updateCostDetailLineSeq(actualityDate, ownerCost, mchCost, currency, ConfigurationHelper.getConfiguration().getBaseCurrency());
 		
 		if (isOhBackflush) {
-			//для НР на оборудование
+			//РґР»СЏ РќР  РЅР° РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµ
 			cost = BigDecimal.ZERO;
 			switch (ohAllocationFlag) {
 			case TIME:
@@ -431,16 +431,16 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 		for (BomRoute bomRoute : bomRoutes) {
 			clearCostDetailLine(bomRoute.getStandartCostDetail());
 			List<CostDetailLineItem> routeCost = new ArrayList<CostDetailLineItem>();
-            //вычислим для ресурсов каждой операции
-            //первым вычислим для рабочей силы, результаты используются в дальнейших вычислениях
+            //РІС‹С‡РёСЃР»РёРј РґР»СЏ СЂРµСЃСѓСЂСЃРѕРІ РєР°Р¶РґРѕР№ РѕРїРµСЂР°С†РёРё
+            //РїРµСЂРІС‹Рј РІС‹С‡РёСЃР»РёРј РґР»СЏ СЂР°Р±РѕС‡РµР№ СЃРёР»С‹, СЂРµР·СѓР»СЊС‚Р°С‚С‹ РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ РІ РґР°Р»СЊРЅРµР№С€РёС… РІС‹С‡РёСЃР»РµРЅРёСЏС…
 			BigDecimal operTime = calculateLaborCost(bomRoute, targetQuan, actualityDate, routeCost);
 			calculateMaterialCost(bomRoute, targetQuan, operTime, actualityDate, routeCost);
 			calculateMachineCost(bomRoute, targetQuan, operTime, actualityDate, routeCost);
 			
-			//создадим себестоимость для операции
+			//СЃРѕР·РґР°РґРёРј СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚СЊ РґР»СЏ РѕРїРµСЂР°С†РёРё
 			createCostDetailLine(BigDecimal.ONE, routeCost, bomRoute.getStandartCostDetail(), baseCurrency);
 			
-			//изменим стоимость БОМа
+			//РёР·РјРµРЅРёРј СЃС‚РѕРёРјРѕСЃС‚СЊ Р‘РћРњР°
 			updateCostDetailLineSeq(actualityDate, ownerCost, routeCost, baseCurrency, baseCurrency);
 		}
 	}
@@ -455,16 +455,16 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 		for (JobRoute jobRoute : jobRoutes) {
 			clearCostDetailLine(jobRoute.getStdCostDetail());
 			List<CostDetailLineItem> routeCost = new ArrayList<CostDetailLineItem>();
-            //вычислим для ресурсов каждой операции
-            //первым вычислим для рабочей силы, результаты используются в дальнейших вычислениях
+            //РІС‹С‡РёСЃР»РёРј РґР»СЏ СЂРµСЃСѓСЂСЃРѕРІ РєР°Р¶РґРѕР№ РѕРїРµСЂР°С†РёРё
+            //РїРµСЂРІС‹Рј РІС‹С‡РёСЃР»РёРј РґР»СЏ СЂР°Р±РѕС‡РµР№ СЃРёР»С‹, СЂРµР·СѓР»СЊС‚Р°С‚С‹ РёСЃРїРѕР»СЊР·СѓСЋС‚СЃСЏ РІ РґР°Р»СЊРЅРµР№С€РёС… РІС‹С‡РёСЃР»РµРЅРёСЏС…
 			BigDecimal operTime = calculateLaborCost(jobRoute, targetQuan, actualityDate, routeCost);
 			calculateMaterialCost(jobRoute, targetQuan, operTime, actualityDate, routeCost);
 			calculateMachineCost(jobRoute, targetQuan, operTime, actualityDate, routeCost);
 			
-			//создадим себестоимость для операции
+			//СЃРѕР·РґР°РґРёРј СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚СЊ РґР»СЏ РѕРїРµСЂР°С†РёРё
 			createCostDetailLine(BigDecimal.ONE, routeCost, jobRoute.getStdCostDetail(), baseCurrency);
 			
-			//изменим стоимость БОМа
+			//РёР·РјРµРЅРёРј СЃС‚РѕРёРјРѕСЃС‚СЊ Р‘РћРњР°
 			updateCostDetailLineSeq(actualityDate, ownerCost, routeCost, baseCurrency, baseCurrency);
 		}
 	}
@@ -478,10 +478,10 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 			BigDecimal targetQuan = bom.getPlanningLotQty();
 			calculateRouteCost(bom, targetQuan, actualityDate, bomCost);
 			
-			//создадим себестоимость для БОМа
+			//СЃРѕР·РґР°РґРёРј СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚СЊ РґР»СЏ Р‘РћРњР°
 			createCostDetailLine(BigDecimal.ONE, bomCost, bom.getStandartCostDetail(), ConfigurationHelper.getConfiguration().getBaseCurrency());
 			
-			//проставим отметку о пересчете
+			//РїСЂРѕСЃС‚Р°РІРёРј РѕС‚РјРµС‚РєСѓ Рѕ РїРµСЂРµСЃС‡РµС‚Рµ
 			bomService.updateRollupDateTime(bom, DateTimeUtils.nowDate());
 		}
 	}
@@ -495,10 +495,10 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 			BigDecimal targetQuan = job.getQtyReleased();
 			calculateRouteCost(job, targetQuan, actualityDate, jobCost);
 
-			//создадим себестоимость для БОМа
+			//СЃРѕР·РґР°РґРёРј СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚СЊ РґР»СЏ Р‘РћРњР°
 			createCostDetailLine(BigDecimal.ONE, jobCost, job.getStdCostDetail(), ConfigurationHelper.getConfiguration().getBaseCurrency());
 			
-			//проставим отметку о пересчете
+			//РїСЂРѕСЃС‚Р°РІРёРј РѕС‚РјРµС‚РєСѓ Рѕ РїРµСЂРµСЃС‡РµС‚Рµ
 			jobService.updateRollupDateTime(job, DateTimeUtils.nowDate());
 		}
 	}

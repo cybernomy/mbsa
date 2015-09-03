@@ -15,7 +15,7 @@
 package com.mg.framework.api.help;
 
 /**
- * Система помощи
+ * РЎРёСЃС‚РµРјР° РїРѕРјРѕС‰Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: HelpSystem.java,v 1.1 2006/11/11 09:44:57 safonov Exp $
@@ -23,14 +23,14 @@ package com.mg.framework.api.help;
 public interface HelpSystem {
 	
 	/**
-	 * имя сервиса системы помощи
+	 * РёРјСЏ СЃРµСЂРІРёСЃР° СЃРёСЃС‚РµРјС‹ РїРѕРјРѕС‰Рё
 	 */
 	String SERVICE_NAME = "merp:service=HelpSystemService";
 
 	/**
-	 * показать контекстную помощь
+	 * РїРѕРєР°Р·Р°С‚СЊ РєРѕРЅС‚РµРєСЃС‚РЅСѓСЋ РїРѕРјРѕС‰СЊ
 	 * 
-	 * @param helpTopic	тематический раздел помощи
+	 * @param helpTopic	С‚РµРјР°С‚РёС‡РµСЃРєРёР№ СЂР°Р·РґРµР» РїРѕРјРѕС‰Рё
 	 */
 	void showContextHelp(String helpTopic);
 

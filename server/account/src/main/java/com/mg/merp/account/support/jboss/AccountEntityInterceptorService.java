@@ -26,7 +26,7 @@ import com.mg.merp.account.support.EconomicOperEntityInterceptorImpl;
 import com.mg.merp.account.support.EconomicSpecEntityInterceptorImpl;
 
 /**
- * Реализация сервиса регистрации перехватчиков на сущности подсистемы "Бухгалтерия"
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° СЂРµРіРёСЃС‚СЂР°С†РёРё РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РЅР° СЃСѓС‰РЅРѕСЃС‚Рё РїРѕРґСЃРёСЃС‚РµРјС‹ "Р‘СѓС…РіР°Р»С‚РµСЂРёСЏ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: AccountEntityInterceptorService.java,v 1.1 2007/01/16 11:46:37 safonov Exp $

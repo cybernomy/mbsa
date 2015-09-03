@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип счета
+ * РўРёРї СЃС‡РµС‚Р°
  * 
  * @author leonova
  * @version $Id: AccType.java,v 1.1 2006/03/30 11:22:12 safonov Exp $
@@ -26,31 +26,31 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Account.Plan.AccType")
 public enum AccType {
 	/**
-	 * Активный
+	 * РђРєС‚РёРІРЅС‹Р№
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AccType.Active")
 	ACTIVE,
 	
 	/**
-	 * Пассивный
+	 * РџР°СЃСЃРёРІРЅС‹Р№
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AccType.Passive")
 	PASSIVE,
 	
 	/**
-	 * Активно/пассивный(развернутое сальдо)
+	 * РђРєС‚РёРІРЅРѕ/РїР°СЃСЃРёРІРЅС‹Р№(СЂР°Р·РІРµСЂРЅСѓС‚РѕРµ СЃР°Р»СЊРґРѕ)
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AccType.APUnwrap")
 	APUNWRAP,
 	
 	/**
-	 * Активно/пассивный(свернутое сальдо)
+	 * РђРєС‚РёРІРЅРѕ/РїР°СЃСЃРёРІРЅС‹Р№(СЃРІРµСЂРЅСѓС‚РѕРµ СЃР°Р»СЊРґРѕ)
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AccType.APRollUp")
 	APROLLUP,
 	
 	/**
-	 * Нулевой
+	 * РќСѓР»РµРІРѕР№
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AccType.Zero")
 	ZERO

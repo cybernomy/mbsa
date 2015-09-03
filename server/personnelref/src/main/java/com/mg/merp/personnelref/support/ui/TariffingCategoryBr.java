@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.personnelref.model.TariffingCategory;
 
 /**
- * Категории тарификации должностей
+ * РљР°С‚РµРіРѕСЂРёРё С‚Р°СЂРёС„РёРєР°С†РёРё РґРѕР»Р¶РЅРѕСЃС‚РµР№
  * 
  * @author leonova
  * @version $Id: TariffingCategoryBr.java,v 1.1 2006/09/04 13:03:50 leonova Exp $ 

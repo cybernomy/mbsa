@@ -20,7 +20,7 @@ import com.mg.framework.support.ui.widget.TableEJBQLFieldDef;
 import com.mg.framework.utils.DatabaseUtils;
 
 /**
- * Контроллер формы списка актов на списание потерь
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ
  * 
  * @author leonova
  * @version $Id: ScrapDocumentBr.java,v 1.4 2008/02/21 12:23:10 alikaev Exp $ 

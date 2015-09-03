@@ -21,7 +21,7 @@ import com.mg.framework.api.orm.PersistentObject;
 import com.mg.framework.service.LockManagerImpl;
 
 /**
- * Реализация сервиса менеджера блокировок
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РјРµРЅРµРґР¶РµСЂР° Р±Р»РѕРєРёСЂРѕРІРѕРє
  * 
  * @author Oleg V. Safonov
  * @version $Id: LockManagerService.java,v 1.1 2006/12/15 09:30:39 safonov Exp $

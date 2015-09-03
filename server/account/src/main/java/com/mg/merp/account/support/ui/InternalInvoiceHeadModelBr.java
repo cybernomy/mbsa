@@ -30,7 +30,7 @@ import com.mg.merp.document.model.DocHeadModel;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Браузер образцов внутренних накладных
+ * Р‘СЂР°СѓР·РµСЂ РѕР±СЂР°Р·С†РѕРІ РІРЅСѓС‚СЂРµРЅРЅРёС… РЅР°РєР»Р°РґРЅС‹С…
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InternalInvoiceHeadModelBr.java,v 1.4 2006/09/12 11:31:14 leonova Exp $

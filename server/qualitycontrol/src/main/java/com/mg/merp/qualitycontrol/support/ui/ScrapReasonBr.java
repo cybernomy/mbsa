@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.qualitycontrol.model.ScrapReason;
 
 /**
- * Браузер причин потерь
+ * Р‘СЂР°СѓР·РµСЂ РїСЂРёС‡РёРЅ РїРѕС‚РµСЂСЊ
  * 
  * @author leonova
  * @version $Id: ScrapReasonBr.java,v 1.1 2006/08/03 08:53:18 leonova Exp $ 

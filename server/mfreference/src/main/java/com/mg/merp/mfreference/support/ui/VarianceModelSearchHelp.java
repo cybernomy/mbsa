@@ -16,7 +16,7 @@ package com.mg.merp.mfreference.support.ui;
 
 
 /**
- * Поисковик "Образцов актов по отклонениям"
+ * РџРѕРёСЃРєРѕРІРёРє "РћР±СЂР°Р·С†РѕРІ Р°РєС‚РѕРІ РїРѕ РѕС‚РєР»РѕРЅРµРЅРёСЏРј"
  * 
  * @author Artem V. Sharapov
  * @version $Id: VarianceModelSearchHelp.java,v 1.2 2007/01/13 15:44:06 sharapov Exp $
@@ -30,7 +30,7 @@ public class VarianceModelSearchHelp extends ModelSearchHelp {
 	protected short getDocSectionPrimaryKey() {
 		//return VarianceDocumentHeadServiceLocal.DOCSECTION;
 		/**
-		 * docsection для Документов по отклонениям
+		 * docsection РґР»СЏ Р”РѕРєСѓРјРµРЅС‚РѕРІ РїРѕ РѕС‚РєР»РѕРЅРµРЅРёСЏРј
 		 */
 		return 12009;
 	}

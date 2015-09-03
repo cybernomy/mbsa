@@ -31,7 +31,7 @@ import com.mg.merp.reference.model.Currency;
 import com.mg.merp.reference.model.CurrencyRate;
 
 /**
- * Браузер курсов валют
+ * Р‘СЂР°СѓР·РµСЂ РєСѓСЂСЃРѕРІ РІР°Р»СЋС‚
  * 
  * @author Oleg V. Safonov
  * @version $Id: CurrencyBr.java,v 1.4 2006/09/29 05:37:06 leonova Exp $

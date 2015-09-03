@@ -36,7 +36,7 @@ import com.mg.merp.warehouse.model.WarehouseConfig;
 import com.mg.merp.warehouse.support.ConfigurationHelper;
 
 /**
- * Базовая реализация документов модуля "Управление запасами"
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РґРѕРєСѓРјРµРЅС‚РѕРІ РјРѕРґСѓР»СЏ "РЈРїСЂР°РІР»РµРЅРёРµ Р·Р°РїР°СЃР°РјРё"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -46,7 +46,7 @@ import com.mg.merp.warehouse.support.ConfigurationHelper;
 public abstract class AbstractWarehouseDocument<T extends com.mg.merp.document.model.DocHead, ID extends Serializable, M extends DocumentPattern, S extends GoodsDocumentSpecification> extends
 		GoodsDocumentServiceBean<T, ID, M, S> {
 	/**
-	 * атрибут скидки/наценки на документ
+	 * Р°С‚СЂРёР±СѓС‚ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё РЅР° РґРѕРєСѓРјРµРЅС‚
 	 */
 	private static final String DISCOUNT_ON_DOC = "DiscountOnDoc";
 
@@ -60,21 +60,21 @@ public abstract class AbstractWarehouseDocument<T extends com.mg.merp.document.m
 	}
 
 	/**
-	 * реализация применения скидок/наценок
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РїСЂРёРјРµРЅРµРЅРёСЏ СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє
 	 * 
-	 * @param docHead	документ
+	 * @param docHead	РґРѕРєСѓРјРµРЅС‚
 	 */
-	protected void doApplyDiscount(DocHead docHead, ApplyDiscountListener аpplyDiscountListener) {
+	protected void doApplyDiscount(DocHead docHead, ApplyDiscountListener Р°pplyDiscountListener) {
 		S specService = getSpecificationService();
 		DiscountProcessorServiceLocal discountProcessor = null;
 		try {
-			//проверим доступность модуля
+			//РїСЂРѕРІРµСЂРёРј РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ РјРѕРґСѓР»СЏ
 			discountProcessor = (DiscountProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(DiscountProcessorServiceLocal.SERVICE_NAME);
 		} catch (LicenseException e) {
 			getLogger().info("Subsystem \"Discount\" is not licensed");
 		}
 		
-		//модуль скидок недоступен, применяем только скидку на документ
+		//РјРѕРґСѓР»СЊ СЃРєРёРґРѕРє РЅРµРґРѕСЃС‚СѓРїРµРЅ, РїСЂРёРјРµРЅСЏРµРј С‚РѕР»СЊРєРѕ СЃРєРёРґРєСѓ РЅР° РґРѕРєСѓРјРµРЅС‚
 		if (discountProcessor == null) {
 			List<DocSpec> specs = specService.findByCriteria(Restrictions.eq("DocHead", docHead));
 			if (specs.isEmpty())
@@ -89,14 +89,14 @@ public abstract class AbstractWarehouseDocument<T extends com.mg.merp.document.m
 			modifySpecifaction(specs.toArray(new DocSpec[specs.size()]));
 
 		} else {
-			discountProcessor.applyDiscount(docHead, аpplyDiscountListener);
+			discountProcessor.applyDiscount(docHead, Р°pplyDiscountListener);
 		}
 	}
 	
 	/**
-	 * применить скидку/неценку
+	 * РїСЂРёРјРµРЅРёС‚СЊ СЃРєРёРґРєСѓ/РЅРµС†РµРЅРєСѓ
 	 */
-	public void applyDiscount(DocHead docHead, ApplyDiscountListener аpplyDiscountListener) {
+	public void applyDiscount(DocHead docHead, ApplyDiscountListener Р°pplyDiscountListener) {
 		if (docHead == null)
 			throw new IllegalArgumentException("document is null");
 		
@@ -105,26 +105,26 @@ public abstract class AbstractWarehouseDocument<T extends com.mg.merp.document.m
 			return;
 		}
 		
-		//сохраним атрибуты связанные со скидками/наценками
+		//СЃРѕС…СЂР°РЅРёРј Р°С‚СЂРёР±СѓС‚С‹ СЃРІСЏР·Р°РЅРЅС‹Рµ СЃРѕ СЃРєРёРґРєР°РјРё/РЅР°С†РµРЅРєР°РјРё
 		Folder discountGroup = docHead.getDiscountFolder();
 		BigDecimal discountOnDoc = null;
 		if (docHead.hasAttribute(DISCOUNT_ON_DOC))
 			discountOnDoc = (BigDecimal) docHead.getAttribute(DISCOUNT_ON_DOC);
-		//загрузим документ в сессию, т.к. при применении скидок/наценок будут меняться спецификации
-		//и соответсвенно заголовок, возможно новые значения скидок/наценок еще не были сохранены,
-		//поэтому установим данные атрибуты, чтобы было соответствие 
+		//Р·Р°РіСЂСѓР·РёРј РґРѕРєСѓРјРµРЅС‚ РІ СЃРµСЃСЃРёСЋ, С‚.Рє. РїСЂРё РїСЂРёРјРµРЅРµРЅРёРё СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє Р±СѓРґСѓС‚ РјРµРЅСЏС‚СЊСЃСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
+		//Рё СЃРѕРѕС‚РІРµС‚СЃРІРµРЅРЅРѕ Р·Р°РіРѕР»РѕРІРѕРє, РІРѕР·РјРѕР¶РЅРѕ РЅРѕРІС‹Рµ Р·РЅР°С‡РµРЅРёСЏ СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє РµС‰Рµ РЅРµ Р±С‹Р»Рё СЃРѕС…СЂР°РЅРµРЅС‹,
+		//РїРѕСЌС‚РѕРјСѓ СѓСЃС‚Р°РЅРѕРІРёРј РґР°РЅРЅС‹Рµ Р°С‚СЂРёР±СѓС‚С‹, С‡С‚РѕР±С‹ Р±С‹Р»Рѕ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРµ 
 		docHead = (DocHead) load((ID) docHead.getId());
 		if (discountGroup != null)
 			docHead.setDiscountFolder(discountGroup);
 		if (discountOnDoc != null)
 			docHead.setAttribute(DISCOUNT_ON_DOC, discountOnDoc);
 		
-		doApplyDiscount(docHead, аpplyDiscountListener);
+		doApplyDiscount(docHead, Р°pplyDiscountListener);
 	}
 	
 	/**
-	 * Применить скидку/неценку
-	 * @param docHead - документ
+	 * РџСЂРёРјРµРЅРёС‚СЊ СЃРєРёРґРєСѓ/РЅРµС†РµРЅРєСѓ
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
 	 */
 	public void applyDiscount(DocHead docHead) {
 		doApplyDiscount(docHead, null);

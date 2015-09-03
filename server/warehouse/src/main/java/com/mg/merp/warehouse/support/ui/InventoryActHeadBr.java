@@ -31,7 +31,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.warehouse.InventoryActHeadServiceLocal;
 
 /**
- * Контроллер формы списка актов инвентаризации
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р°РєС‚РѕРІ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov

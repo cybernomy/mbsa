@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.widget;
 import com.mg.framework.api.ui.FieldEditor;
 
 /**
- * Элемент "Редактор даты/времени"
+ * Р­Р»РµРјРµРЅС‚ "Р РµРґР°РєС‚РѕСЂ РґР°С‚С‹/РІСЂРµРјРµРЅРё"
  * 
  * @author Oleg V. Safonov
  * @version $Id: DateTimeField.java,v 1.1 2007/06/20 10:53:52 safonov Exp $

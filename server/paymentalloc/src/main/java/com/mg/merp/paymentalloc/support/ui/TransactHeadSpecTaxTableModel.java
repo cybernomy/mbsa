@@ -25,7 +25,7 @@ import com.mg.merp.paymentalloc.model.TransactSpec;
 import com.mg.merp.paymentalloc.model.TransactTax;
 
 /**
- * Модель таблицы "Налоги позиции спецификации заголовка, связанного документа"
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ "РќР°Р»РѕРіРё РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё Р·Р°РіРѕР»РѕРІРєР°, СЃРІСЏР·Р°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: TransactHeadSpecTaxTableModel.java,v 1.1 2007/06/05 12:50:57 sharapov Exp $

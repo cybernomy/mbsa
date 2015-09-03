@@ -17,7 +17,7 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.OrderHead;
 
 /**
- * Бизнес-компонент "Заказы покупателей"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р—Р°РєР°Р·С‹ РїРѕРєСѓРїР°С‚РµР»РµР№"
  * 
  * @author Oleg V. Safonov
  * @version $Id: OrderHeadCusServiceLocal.java,v 1.4 2007/09/07 12:23:15 safonov Exp $
@@ -26,12 +26,12 @@ public interface OrderHeadCusServiceLocal
 		extends com.mg.merp.document.GoodsDocument<OrderHead, Integer, OrderHeadModelCusServiceLocal, OrderSpecCusServiceLocal>, DiscountDocument {
 
 	/**
-	 * тип папки для заказов покупателей
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ Р·Р°РєР°Р·РѕРІ РїРѕРєСѓРїР°С‚РµР»РµР№
 	 */
 	final static short FOLDER_PART = 42;
 
 	/**
-	 * docsection для заказов покупателей
+	 * docsection РґР»СЏ Р·Р°РєР°Р·РѕРІ РїРѕРєСѓРїР°С‚РµР»РµР№
 	 */
 	final static short DOCSECTION = 22;
 

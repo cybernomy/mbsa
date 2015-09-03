@@ -24,7 +24,7 @@ import com.mg.merp.humanresources.OrderItemRollbackServiceLocal;
 import com.mg.merp.humanresources.model.OrderItemRollback;
 
 /**
- * Реализация бизнес-компонента ""
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° ""
  * 
  * @author Artem V. Sharapov
  * @version $Id: OrderItemRollbackServiceBean.java,v 1.5 2007/08/27 13:34:01 sharapov Exp $

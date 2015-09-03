@@ -21,7 +21,7 @@ import com.mg.merp.manufacture.model.Job;
 import com.mg.merp.manufacture.model.JobStatus;
 
 /**
- * Бизнес-компонент "ЗНП"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р—РќРџ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: JobServiceLocal.java,v 1.5 2007/08/06 12:46:24 safonov Exp $
@@ -31,64 +31,64 @@ public interface JobServiceLocal
 {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/manufacture/Job";
 	
 	/**
-	 * тип папки для заказ-нарядов на производство
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ Р·Р°РєР°Р·-РЅР°СЂСЏРґРѕРІ РЅР° РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕ
 	 */
 	final static short FOLDER_PART = 12501;
 
 	/**
-	 * копирование БОМа в ЗНП
+	 * РєРѕРїРёСЂРѕРІР°РЅРёРµ Р‘РћРњР° РІ Р—РќРџ
 	 * 
-	 * @param jobId	идентификатор ЗНП
+	 * @param jobId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р—РќРџ
 	 */
 	void copyBOM(int jobId);
 
 	/**
-	 * копирование БОМа в ЗНП
+	 * РєРѕРїРёСЂРѕРІР°РЅРёРµ Р‘РћРњР° РІ Р—РќРџ
 	 * 
-	 * @param job	ЗНП
+	 * @param job	Р—РќРџ
 	 */
 	void copyBOM(Job job);
 
 	/**
-	 * запустить ЗНП
+	 * Р·Р°РїСѓСЃС‚РёС‚СЊ Р—РќРџ
 	 * 
-	 * @param jobId	идентификатор ЗНП
+	 * @param jobId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р—РќРџ
 	 */
 	void run(int jobId);
 
 	/**
-	 * остановить ЗНП
+	 * РѕСЃС‚Р°РЅРѕРІРёС‚СЊ Р—РќРџ
 	 * 
-	 * @param jobId	идентификатор ЗНП
+	 * @param jobId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р—РќРџ
 	 */
 	void stop(int jobId);
 
 	/**
-	 * завершить ЗНП
+	 * Р·Р°РІРµСЂС€РёС‚СЊ Р—РќРџ
 	 * 
-	 * @param jobId	идентификатор ЗНП
+	 * @param jobId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р—РќРџ
 	 */
 	void complete(int jobId);
 
 	/**
-	 * изменение даты расчета нормативной себестоимости
+	 * РёР·РјРµРЅРµРЅРёРµ РґР°С‚С‹ СЂР°СЃС‡РµС‚Р° РЅРѕСЂРјР°С‚РёРІРЅРѕР№ СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚Рё
 	 * 
-	 * @param job	ЗНП
-	 * @param date	дата расчета
+	 * @param job	Р—РќРџ
+	 * @param date	РґР°С‚Р° СЂР°СЃС‡РµС‚Р°
 	 */
 	void updateRollupDateTime(Job job, Date date);
 
 	/**
-	 * проверка статуса ЗНП
+	 * РїСЂРѕРІРµСЂРєР° СЃС‚Р°С‚СѓСЃР° Р—РќРџ
 	 * 
-	 * @param job		ЗНП
-	 * @param jobStatus	множество проверяемых статусов
-	 * @throws InvalidJobStatusException если статус ЗНП не соответствует проверяемым статусам
+	 * @param job		Р—РќРџ
+	 * @param jobStatus	РјРЅРѕР¶РµСЃС‚РІРѕ РїСЂРѕРІРµСЂСЏРµРјС‹С… СЃС‚Р°С‚СѓСЃРѕРІ
+	 * @throws InvalidJobStatusException РµСЃР»Рё СЃС‚Р°С‚СѓСЃ Р—РќРџ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ РїСЂРѕРІРµСЂСЏРµРјС‹Рј СЃС‚Р°С‚СѓСЃР°Рј
 	 */
 	void checkStatus(Job job, EnumSet<JobStatus> jobStatus) throws InvalidJobStatusException;
 	

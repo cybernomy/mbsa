@@ -22,7 +22,7 @@ import com.mg.framework.support.ui.UIProducer;
 import com.mg.framework.utils.SecurityUtils;
 
 /**
- * Контроллер комманды меню "Поиск решения"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРјРјР°РЅРґС‹ РјРµРЅСЋ "РџРѕРёСЃРє СЂРµС€РµРЅРёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: SolutionSearchMenuCommand.java,v 1.3 2008/08/15 14:15:23 sharapov Exp $

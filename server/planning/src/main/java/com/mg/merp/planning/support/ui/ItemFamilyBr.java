@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.planning.model.ItemFamily;
 
 /**
- * Браузер семейств обобщенных товаров
+ * Р‘СЂР°СѓР·РµСЂ СЃРµРјРµР№СЃС‚РІ РѕР±РѕР±С‰РµРЅРЅС‹С… С‚РѕРІР°СЂРѕРІ
  * 
  * @author leonova
  * @version $Id: ItemFamilyBr.java,v 1.1 2006/08/25 10:17:13 leonova Exp $ 

@@ -23,7 +23,7 @@ import com.mg.framework.support.ui.widget.MaintenanceTableModel;
 import com.mg.framework.support.ui.widget.TableColumnInfo;
 
 /**
- * Стандартная модель поддержки списка объектов сущностей
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ РјРѕРґРµР»СЊ РїРѕРґРґРµСЂР¶РєРё СЃРїРёСЃРєР° РѕР±СЉРµРєС‚РѕРІ СЃСѓС‰РЅРѕСЃС‚РµР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultMaintenanceEntityListTableModel.java,v 1.4 2009/02/09 14:30:35 safonov Exp $

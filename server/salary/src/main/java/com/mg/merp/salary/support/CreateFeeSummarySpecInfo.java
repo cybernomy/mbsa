@@ -20,7 +20,7 @@ import com.mg.merp.document.CreateSpecificationInfo;
 import com.mg.merp.personnelref.model.CostsAnl;
 
 /**
- * Информация о номеклатуре для спецификации свода начислений/удержаний по аналитике
+ * РРЅС„РѕСЂРјР°С†РёСЏ Рѕ РЅРѕРјРµРєР»Р°С‚СѓСЂРµ РґР»СЏ СЃРїРµС†РёС„РёРєР°С†РёРё СЃРІРѕРґР° РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ
  * 
  * @author Artem V. Sharapov
  * @version $Id: CreateFeeSummarySpecInfo.java,v 1.1 2007/08/27 06:19:40 sharapov Exp $
@@ -37,14 +37,14 @@ public class CreateFeeSummarySpecInfo implements CreateSpecificationInfo {
 	private CostsAnl costsAnl5;
 	
 	/**
-	 * Создать информацию о номеклатуре для спецификации свода начислений/удержаний по аналитике
-	 * @param catalogId - идентификатор каталога
-	 * @param price - цена
-	 * @param costsAnl1 - аналитика состава затрат 1-го уровня
-	 * @param costsAnl2 - аналитика состава затрат 2-го уровня
-	 * @param costsAnl3 - аналитика состава затрат 3-го уровня
-	 * @param costsAnl4 - аналитика состава затрат 4-го уровня
-	 * @param costsAnl5 - аналитика состава затрат 5-го уровня
+	 * РЎРѕР·РґР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РЅРѕРјРµРєР»Р°С‚СѓСЂРµ РґР»СЏ СЃРїРµС†РёС„РёРєР°С†РёРё СЃРІРѕРґР° РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ
+	 * @param catalogId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєР°С‚Р°Р»РѕРіР°
+	 * @param price - С†РµРЅР°
+	 * @param costsAnl1 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 1-РіРѕ СѓСЂРѕРІРЅСЏ
+	 * @param costsAnl2 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 2-РіРѕ СѓСЂРѕРІРЅСЏ
+	 * @param costsAnl3 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 3-РіРѕ СѓСЂРѕРІРЅСЏ
+	 * @param costsAnl4 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 4-РіРѕ СѓСЂРѕРІРЅСЏ
+	 * @param costsAnl5 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 5-РіРѕ СѓСЂРѕРІРЅСЏ
 	 */
 	public CreateFeeSummarySpecInfo(Integer catalogId, BigDecimal price, CostsAnl costsAnl1, CostsAnl costsAnl2, CostsAnl costsAnl3, CostsAnl costsAnl4, CostsAnl costsAnl5) {
 		this.catalogId = catalogId;

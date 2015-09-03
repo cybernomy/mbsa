@@ -27,7 +27,7 @@ import com.mg.merp.account.CashDocumentModelInServiceLocal;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Браузер образцов приходных касовых ордеров
+ * Р‘СЂР°СѓР·РµСЂ РѕР±СЂР°Р·С†РѕРІ РїСЂРёС…РѕРґРЅС‹С… РєР°СЃРѕРІС‹С… РѕСЂРґРµСЂРѕРІ
  * 
  * @author leonova
  * @version $Id: CashDocumentModelInBr.java,v 1.4 2006/09/12 11:19:50 leonova Exp $

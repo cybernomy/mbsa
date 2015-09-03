@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.ProblemType;
 
 /**
- * Браузер типов проблем
+ * Р‘СЂР°СѓР·РµСЂ С‚РёРїРѕРІ РїСЂРѕР±Р»РµРј
  * 
  * @author leonova
  * @version $Id: ProblemTypeBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

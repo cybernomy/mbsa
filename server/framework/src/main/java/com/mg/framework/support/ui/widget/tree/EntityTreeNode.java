@@ -22,7 +22,7 @@ import java.util.List;
 import com.mg.framework.api.orm.PersistentObject;
 
 /**
- * Узел дерева связанный с объектом сущностью
+ * РЈР·РµР» РґРµСЂРµРІР° СЃРІСЏР·Р°РЅРЅС‹Р№ СЃ РѕР±СЉРµРєС‚РѕРј СЃСѓС‰РЅРѕСЃС‚СЊСЋ
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityTreeNode.java,v 1.3 2009/02/09 13:36:35 safonov Exp $
@@ -40,7 +40,7 @@ public abstract class EntityTreeNode extends TreeNode {
 	}
 
 	/**
-	 * получения первичного ключа сущности связанной с данным узлом дерева
+	 * РїРѕР»СѓС‡РµРЅРёСЏ РїРµСЂРІРёС‡РЅРѕРіРѕ РєР»СЋС‡Р° СЃСѓС‰РЅРѕСЃС‚Рё СЃРІСЏР·Р°РЅРЅРѕР№ СЃ РґР°РЅРЅС‹Рј СѓР·Р»РѕРј РґРµСЂРµРІР°
 	 * 
 	 * @return
 	 */
@@ -63,7 +63,7 @@ public abstract class EntityTreeNode extends TreeNode {
 		
 		for (int i = 0; i < getChildCount(); i++) {
 			boolean find = ((EntityTreeNode) getChildAt(i)).findPathToChild(primaryKey, list);
-			//добавим родителя в путь
+			//РґРѕР±Р°РІРёРј СЂРѕРґРёС‚РµР»СЏ РІ РїСѓС‚СЊ
 			if (find) {
 				list.add(this);
 				return true;
@@ -75,10 +75,10 @@ public abstract class EntityTreeNode extends TreeNode {
 	}
 
 	/**
-	 * поиск маршрута до узла содержащего сущность с требуемым первичным ключом
+	 * РїРѕРёСЃРє РјР°СЂС€СЂСѓС‚Р° РґРѕ СѓР·Р»Р° СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ СЃСѓС‰РЅРѕСЃС‚СЊ СЃ С‚СЂРµР±СѓРµРјС‹Рј РїРµСЂРІРёС‡РЅС‹Рј РєР»СЋС‡РѕРј
 	 * 
-	 * @param primaryKey	первичный ключ
-	 * @return	маршрут от корневого узла до узла содержащего сущность или <code>null</code> если маршрут не найден
+	 * @param primaryKey	РїРµСЂРІРёС‡РЅС‹Р№ РєР»СЋС‡
+	 * @return	РјР°СЂС€СЂСѓС‚ РѕС‚ РєРѕСЂРЅРµРІРѕРіРѕ СѓР·Р»Р° РґРѕ СѓР·Р»Р° СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ СЃСѓС‰РЅРѕСЃС‚СЊ РёР»Рё <code>null</code> РµСЃР»Рё РјР°СЂС€СЂСѓС‚ РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	public EntityTreeNode[] findPathToEntity(Serializable primaryKey) {
 		if (primaryKey == null)

@@ -24,7 +24,7 @@ import com.mg.merp.crm.ClientTypeServiceLocal;
 import com.mg.merp.crm.model.ClientType;
 
 /**
- * Бизнес-компонент "Типы клиентов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ РєР»РёРµРЅС‚РѕРІ" 
  * 
  * @author leonova
  * @version $Id: ClientTypeServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

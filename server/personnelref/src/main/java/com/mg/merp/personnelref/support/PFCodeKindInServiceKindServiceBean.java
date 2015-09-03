@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PFCodeKindInServiceKindServiceLocal;
 import com.mg.merp.personnelref.model.PfCodeKindInServiceKind;
 
 /**
- * Бизнес-компонент "Виды стажа для ПФ" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РёРґС‹ СЃС‚Р°Р¶Р° РґР»СЏ РџР¤" 
  * 
  * @author leonova
  * @version $Id: PFCodeKindInServiceKindServiceBean.java,v 1.3 2006/09/06 12:49:54 leonova Exp $

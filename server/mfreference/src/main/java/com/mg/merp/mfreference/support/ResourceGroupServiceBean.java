@@ -25,7 +25,7 @@ import com.mg.merp.mfreference.ResourceGroupServiceLocal;
 import com.mg.merp.mfreference.model.ResourceGroup;
 
 /**
- * Бизнес-компонент "Группы ресурсов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р“СЂСѓРїРїС‹ СЂРµСЃСѓСЂСЃРѕРІ" 
  * 
  * @author leonova
  * @version $Id: ResourceGroupServiceBean.java,v 1.3 2006/08/24 12:31:25 leonova Exp $

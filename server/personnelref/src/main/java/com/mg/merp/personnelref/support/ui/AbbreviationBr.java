@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.personnelref.model.Abbreviation;
 
 /**
- * Браузер списка сокращений
+ * Р‘СЂР°СѓР·РµСЂ СЃРїРёСЃРєР° СЃРѕРєСЂР°С‰РµРЅРёР№
  * 
  * @author leonova
  * @version $Id: AbbreviationBr.java,v 1.1 2006/09/04 13:03:50 leonova Exp $ 

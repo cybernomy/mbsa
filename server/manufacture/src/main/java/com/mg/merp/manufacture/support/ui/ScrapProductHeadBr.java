@@ -27,7 +27,7 @@ import com.mg.merp.core.support.CoreUtils;
 import com.mg.merp.manufacture.ScrapProductHeadServiceLocal;
 
 /**
- * Контроллер формы поддержки актов на списание потерь с операции
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ СЃ РѕРїРµСЂР°С†РёРё
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: ScrapProductHeadBr.java,v 1.10 2009/02/10 14:34:19 safonov Exp $

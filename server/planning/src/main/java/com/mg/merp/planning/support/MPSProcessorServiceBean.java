@@ -78,7 +78,7 @@ import com.mg.merp.warehouse.OrderHeadSupServiceLocal;
 import com.mg.merp.warehouse.model.OrderStatus;
 
 /**
- * Реализация бизнес-компонента "Процессор MPS"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРѕС†РµСЃСЃРѕСЂ MPS"
  * 
  * @author Oleg V. Safonov
  * @version $Id: MPSProcessorServiceBean.java,v 1.6 2009/03/05 10:51:04 safonov Exp $
@@ -122,19 +122,19 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 	private PlanningRange calculateMPSPlanningRange(Mps mps) {
 		PlanningRange result = new PlanningRange();
 		PlanningLevel planningLevel = mps.getPlanningLevel();
-		//начальная дата уже есть в MPS, она должна быть выровнена по дате начала бакета
+		//РЅР°С‡Р°Р»СЊРЅР°СЏ РґР°С‚Р° СѓР¶Рµ РµСЃС‚СЊ РІ MPS, РѕРЅР° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РІС‹СЂРѕРІРЅРµРЅР° РїРѕ РґР°С‚Рµ РЅР°С‡Р°Р»Р° Р±Р°РєРµС‚Р°
 		result.startPlanningDate = mps.getPlanningDate();
 		result.startBucket = MfUtils.determineBucketOffset(planningLevel.getId(), result.startPlanningDate);
-		//если не нашли бакет, то делать здесь уже нечего
+		//РµСЃР»Рё РЅРµ РЅР°С€Р»Рё Р±Р°РєРµС‚, С‚Рѕ РґРµР»Р°С‚СЊ Р·РґРµСЃСЊ СѓР¶Рµ РЅРµС‡РµРіРѕ
 		if (result.startBucket == -1)
-			throw new BusinessException(StringUtils.format("Не найден бакет уровня планирования для даты dd/mm/yyyy", result.startPlanningDate));
+			throw new BusinessException(StringUtils.format("РќРµ РЅР°Р№РґРµРЅ Р±Р°РєРµС‚ СѓСЂРѕРІРЅСЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ РґР»СЏ РґР°С‚С‹ dd/mm/yyyy", result.startPlanningDate));
 		
 		result.endBucket = (short)(result.startBucket + planningLevel.getTimeFence() - 1);
 		BucketRange bucketRange = MfUtils.determineBucketRange(planningLevel.getId(), result.endBucket);
 		result.endPlanningDate = bucketRange.getBucketEnd();
-		//если не нашли бакет, то делать здесь уже нечего
+		//РµСЃР»Рё РЅРµ РЅР°С€Р»Рё Р±Р°РєРµС‚, С‚Рѕ РґРµР»Р°С‚СЊ Р·РґРµСЃСЊ СѓР¶Рµ РЅРµС‡РµРіРѕ
 		if (result.endPlanningDate.getTime() == 0)
-			throw new BusinessException(StringUtils.format("Не найден бакет уровня планирования с номером %d", result.endBucket));
+			throw new BusinessException(StringUtils.format("РќРµ РЅР°Р№РґРµРЅ Р±Р°РєРµС‚ СѓСЂРѕРІРЅСЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ СЃ РЅРѕРјРµСЂРѕРј %d", result.endBucket));
 		return result;
 	}
 	
@@ -167,7 +167,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 	
 	private MpsLine initMPSLineItem(Mps mps, GenericItem genericItem, short bucketOffset, int outputMPSSequence) {
-		//увеличим только при добавлении строки MPS
+		//СѓРІРµР»РёС‡РёРј С‚РѕР»СЊРєРѕ РїСЂРё РґРѕР±Р°РІР»РµРЅРёРё СЃС‚СЂРѕРєРё MPS
 		mpsSequence++;
 		MpsLine result = mpsLineService.initialize();
 		result.setMps(mps);
@@ -194,8 +194,8 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 //			
 //		});
 		MpsLine findedMPSLine = null;
-		//ищем в локальном списке
-		//TODO быстрый поиск
+		//РёС‰РµРј РІ Р»РѕРєР°Р»СЊРЅРѕРј СЃРїРёСЃРєРµ
+		//TODO Р±С‹СЃС‚СЂС‹Р№ РїРѕРёСЃРє
 		for (MpsLine mpsLine : generatedMPSLines) {
 			if (/*mpsLine.getMps().getId() == mps.getId()
 					&& */mpsLine.getPlanningItem().getId() == genericItem.getId()
@@ -205,7 +205,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 				break;
 			}
 		}
-		//ищем в хранилище
+		//РёС‰РµРј РІ С…СЂР°РЅРёР»РёС‰Рµ
 		if (findedMPSLine == null) {
 //			Criteria criteria = OrmTemplate.createCriteria(MpsLine.class)
 //					.add(Restrictions.eq("Mps", mps))
@@ -214,7 +214,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 //			if (outputMPSSequence != 0)
 //				criteria.add(Restrictions.eq("OutputMpsSequence", outputMPSSequence));
 //			findedMPSLine = ormTemplate.findUniqueByCriteria(criteria);
-//			//если не нашли то создадим
+//			//РµСЃР»Рё РЅРµ РЅР°С€Р»Рё С‚Рѕ СЃРѕР·РґР°РґРёРј
 //			if (findedMPSLine == null) {
 				findedMPSLine = initMPSLineItem(mps, genericItem, bucketOffset, outputMPSSequence);
 //			}
@@ -233,7 +233,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 //				if (genericItem.getMeasure().getId() != productDemandItem.measure.getId()) {
 //					productDemandItem.quan = getMeasureConversionService()
 //							.conversion(productDemandItem.measure, genericItem.getMeasure(), productDemandItem.catalog, productDemandItem.requiredDate, productDemandItem.quan);
-//					//планируем в ЕИ обощенного товара
+//					//РїР»Р°РЅРёСЂСѓРµРј РІ Р•Р РѕР±РѕС‰РµРЅРЅРѕРіРѕ С‚РѕРІР°СЂР°
 //					productDemandItem.measure = genericItem.getMeasure();
 //				}
 //				result.add(productDemandItem);
@@ -292,7 +292,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 //				if (genericItem.getMeasure().getId() != productDemandItem.measure.getId()) {
 //					productDemandItem.quan = getMeasureConversionService()
 //							.conversion(productDemandItem.measure, genericItem.getMeasure(), productDemandItem.catalog, productDemandItem.requiredDate, productDemandItem.quan);
-//					//планируем в ЕИ обощенного товара
+//					//РїР»Р°РЅРёСЂСѓРµРј РІ Р•Р РѕР±РѕС‰РµРЅРЅРѕРіРѕ С‚РѕРІР°СЂР°
 //					productDemandItem.measure = genericItem.getMeasure();
 //				}
 //				result.add(productDemandItem);
@@ -328,8 +328,8 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 	
 	/**
-	 * до граничной даты прогнозы вообще надо игнорировать,
-	 * т.е. берется максимум из прогнозов и заказов клиентов.
+	 * РґРѕ РіСЂР°РЅРёС‡РЅРѕР№ РґР°С‚С‹ РїСЂРѕРіРЅРѕР·С‹ РІРѕРѕР±С‰Рµ РЅР°РґРѕ РёРіРЅРѕСЂРёСЂРѕРІР°С‚СЊ,
+	 * С‚.Рµ. Р±РµСЂРµС‚СЃСЏ РјР°РєСЃРёРјСѓРј РёР· РїСЂРѕРіРЅРѕР·РѕРІ Рё Р·Р°РєР°Р·РѕРІ РєР»РёРµРЅС‚РѕРІ.
 	 * 
 	 * @param forecastMethod
 	 * @param requiredDate
@@ -381,7 +381,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 //					
 //				}));
 //		fromForecast = prepareProductDemands(fromForecast);
-		//загружаем прогнозы у которых есть ссылка на КТУ (CATALOG_ID is not null)
+		//Р·Р°РіСЂСѓР¶Р°РµРј РїСЂРѕРіРЅРѕР·С‹ Сѓ РєРѕС‚РѕСЂС‹С… РµСЃС‚СЊ СЃСЃС‹Р»РєР° РЅР° РљРўРЈ (CATALOG_ID is not null)
 		List<ProductDemandItem> fromForecast = ormTemplate.findByNamedQueryAndNamedParam("Planing.MPSProcessor.loadDemandFromSalesForecastByCatalog",
 				new String[] {"planningLevel", "startDate", "endDate", "startBucket", "endBucket", "forecastVersion"},
 				new Object[] {mps.getPlanningLevel(), planningRange.startPlanningDate, planningRange.endPlanningDate, planningRange.startBucket, planningRange.endBucket, mps.getForecastVersion()},
@@ -401,9 +401,9 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 					}
 			
 		});
-		//загружаем прогнозы у которых есть ссылка на обобщенные продукты (PLANNING_ITEM_ID is not null)
-		//TODO проверяются только планируемые обобщенные продукты (planning_item_flag = 1),
-		//необходимо также проверять и виртуальные продукты, развернуть их по иерархии до реальных продуктов }
+		//Р·Р°РіСЂСѓР¶Р°РµРј РїСЂРѕРіРЅРѕР·С‹ Сѓ РєРѕС‚РѕСЂС‹С… РµСЃС‚СЊ СЃСЃС‹Р»РєР° РЅР° РѕР±РѕР±С‰РµРЅРЅС‹Рµ РїСЂРѕРґСѓРєС‚С‹ (PLANNING_ITEM_ID is not null)
+		//TODO РїСЂРѕРІРµСЂСЏСЋС‚СЃСЏ С‚РѕР»СЊРєРѕ РїР»Р°РЅРёСЂСѓРµРјС‹Рµ РѕР±РѕР±С‰РµРЅРЅС‹Рµ РїСЂРѕРґСѓРєС‚С‹ (planning_item_flag = 1),
+		//РЅРµРѕР±С…РѕРґРёРјРѕ С‚Р°РєР¶Рµ РїСЂРѕРІРµСЂСЏС‚СЊ Рё РІРёСЂС‚СѓР°Р»СЊРЅС‹Рµ РїСЂРѕРґСѓРєС‚С‹, СЂР°Р·РІРµСЂРЅСѓС‚СЊ РёС… РїРѕ РёРµСЂР°СЂС…РёРё РґРѕ СЂРµР°Р»СЊРЅС‹С… РїСЂРѕРґСѓРєС‚РѕРІ }
 		fromForecast.addAll(ormTemplate.findByNamedQueryAndNamedParam("Planing.MPSProcessor.loadDemandFromSalesForecastByGenericItem",
 				new String[] {"planningLevel", "startDate", "endDate", "startBucket", "endBucket", "forecastVersion"},
 				new Object[] {mps.getPlanningLevel(), planningRange.startPlanningDate, planningRange.endPlanningDate, planningRange.startBucket, planningRange.endBucket, mps.getForecastVersion()},
@@ -424,7 +424,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 			
 		}));
 
-		//удаляем пустые записи, они не удовлетворяют граничной дате
+		//СѓРґР°Р»СЏРµРј РїСѓСЃС‚С‹Рµ Р·Р°РїРёСЃРё, РѕРЅРё РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂСЏСЋС‚ РіСЂР°РЅРёС‡РЅРѕР№ РґР°С‚Рµ
 		List<ProductDemandItem> result = new ArrayList<ProductDemandItem>();
 		for (ProductDemandItem productDemandItem : fromForecast)
 			if (productDemandItem != null)
@@ -571,7 +571,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 			BucketRange bucketRange = MfUtils.determineBucketRange(mps.getPlanningLevel().getId(), productDemandItem.bucketOffset);
 			int generatedCount = generatedMPSLines.size();
 			MpsLine mpsLine = prepareMPSLine(mps, productDemandItem.genericItem, productDemandItem.bucketOffset);
-			//проверим было ли добавление
+			//РїСЂРѕРІРµСЂРёРј Р±С‹Р»Рѕ Р»Рё РґРѕР±Р°РІР»РµРЅРёРµ
 			if (generatedCount == generatedMPSLines.size())
 				mpsLine.setQtyAvailable(mpsLine.getQtyAvailable().add(productDemandItem.quan));
 			else {
@@ -588,13 +588,13 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 	private void processSafetyLevel(Date planningStartDate, short startBucket) {
 		CatalogWarehouseServiceLocal catalogWarehouseService = (CatalogWarehouseServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CatalogWarehouseServiceLocal.SERVICE_NAME);
 		for (SafetyLevel safetyLevel: catalogWarehouseService.getSafetyLevel()) {
-			//только для планируемых материалов
+			//С‚РѕР»СЊРєРѕ РґР»СЏ РїР»Р°РЅРёСЂСѓРµРјС‹С… РјР°С‚РµСЂРёР°Р»РѕРІ
 			if (safetyLevel.getGenericItem() == null || !safetyLevel.getGenericItem().getPlanningItemFlag())
 				continue;
 			
 			int lineCount = generatedMPSLines.size();
 			MpsLine mpsLine = prepareMPSLine(mps, safetyLevel.getGenericItem(), startBucket);
-			//таким способом проверяем добавляли запись в список сгенерированных
+			//С‚Р°РєРёРј СЃРїРѕСЃРѕР±РѕРј РїСЂРѕРІРµСЂСЏРµРј РґРѕР±Р°РІР»СЏР»Рё Р·Р°РїРёСЃСЊ РІ СЃРїРёСЃРѕРє СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹С…
 			if (lineCount != generatedMPSLines.size()) {
 				mpsLine.setBucketOffsetDate(planningStartDate);
 				mpsLine.setLevelCode(safetyLevel.getGenericItem().getLowLevelCode());
@@ -650,7 +650,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 	
 	private void processDependantDemand(short lowLevelCode) {
 		Map<ProductionDemandKey, ProductionDemandEntry> productionDemand = new HashMap<ProductionDemandKey, ProductionDemandEntry>();
-		//группируем по BucketOffset, PlanningItem, Measure. Вычисляем потребность в производстве
+		//РіСЂСѓРїРїРёСЂСѓРµРј РїРѕ BucketOffset, PlanningItem, Measure. Р’С‹С‡РёСЃР»СЏРµРј РїРѕС‚СЂРµР±РЅРѕСЃС‚СЊ РІ РїСЂРѕРёР·РІРѕРґСЃС‚РІРµ
 		for (MpsLine mpsLine : generatedMPSLines) {
 			if (MathUtils.compareToZero(mpsLine.getProductionDemandQty()) > 0 && mpsLine.getLevelCode() == lowLevelCode) {
 				ProductionDemandKey key = new ProductionDemandKey(mpsLine.getBucketOffset(), mpsLine.getPlanningItem().getId(), mpsLine.getMeasure().getId());
@@ -685,7 +685,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 	
 	private void calculateProductionPlan(short lowLevelCode) {
-		//сортируем по PlanningItem, BucketOffset desc
+		//СЃРѕСЂС‚РёСЂСѓРµРј РїРѕ PlanningItem, BucketOffset desc
 		Collections.sort(generatedMPSLines, new Comparator<MpsLine>() {
 
 			public int compare(MpsLine o1, MpsLine o2) {
@@ -723,7 +723,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 					if (!(MathUtils.compareToZeroOrNull(MaxQty) == 0
 							|| MathUtils.compareToZeroOrNull(MinQty) == 0
 							|| MathUtils.compareToZeroOrNull(Increment) == 0)) {
-						//если не совпадают ЕИ планирования и БОМа
+						//РµСЃР»Рё РЅРµ СЃРѕРІРїР°РґР°СЋС‚ Р•Р РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ Рё Р‘РћРњР°
 						if (bom.getCatalog().getMeasure1().getId() != mpsLine.getMeasure().getId()) {
 							MaxQty = getMeasureConversionService().conversion(bom.getCatalog().getMeasure1(), mpsLine.getMeasure(), bom.getCatalog(), mpsLine.getBucketOffsetDate(), MaxQty);
 							MinQty = getMeasureConversionService().conversion(bom.getCatalog().getMeasure1(), mpsLine.getMeasure(), bom.getCatalog(), mpsLine.getBucketOffsetDate(), MinQty);
@@ -762,12 +762,12 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 				.add(Restrictions.eq("Bom", bom))
 				.add(Restrictions.le("EffOnDate", MfUtils.tickToDate(requiredDate)))
 				.add(Restrictions.ge("EffOffDate", MfUtils.tickToDate(requiredDate)))
-				.addOrder(Order.desc("OperNum"))); //идем от конечных операций к начальным назад
+				.addOrder(Order.desc("OperNum"))); //РёРґРµРј РѕС‚ РєРѕРЅРµС‡РЅС‹С… РѕРїРµСЂР°С†РёР№ Рє РЅР°С‡Р°Р»СЊРЅС‹Рј РЅР°Р·Р°Рґ
 		for (BomRoute bomRoute : routeList) {
-			//Вычисляем время выполнения текущей операции в тиках 
+			//Р’С‹С‡РёСЃР»СЏРµРј РІСЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ С‚РµРєСѓС‰РµР№ РѕРїРµСЂР°С†РёРё РІ С‚РёРєР°С… 
 			long timeOper = numberOfJobs * bomRoute.getSetupTicks() + lotQty.longValue() * numberOfJobs * bomRoute.getRunTicks();
 			
-			//Определяем время окончания текущей операции
+			//РћРїСЂРµРґРµР»СЏРµРј РІСЂРµРјСЏ РѕРєРѕРЅС‡Р°РЅРёСЏ С‚РµРєСѓС‰РµР№ РѕРїРµСЂР°С†РёРё
 			TimeRange timeRange = MfUtils.getTimes(mps.getWeekCal().getId(), reqDate, timeOper, ScheduleDirection.BACKWARD);
 			long operStartDate = timeRange.getStartDateTime();
 			
@@ -784,7 +784,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 				
 				short bucketOffset = MfUtils.determineBucketOffset(mps.getPlanningLevel().getId(), MfUtils.tickToDate(operStartDate));
 				if (bucketOffset == -1)
-					throw new BusinessException("Не найден бакет уровня планирования для даты dd/mm/yyyy");
+					throw new BusinessException("РќРµ РЅР°Р№РґРµРЅ Р±Р°РєРµС‚ СѓСЂРѕРІРЅСЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ РґР»СЏ РґР°С‚С‹ dd/mm/yyyy");
 				BucketRange bucketRange = MfUtils.determineBucketRange(mps.getPlanningLevel().getId(), bucketOffset);
 				MpsLine mpsl = prepareMPSLine(mps, planningItem, bucketOffset, mpsLine.getMpsSequence());
 				mpsl.setBucketOffset(bucketOffset);
@@ -796,13 +796,13 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 				mpsl.setMeasure(planningItem.getMeasure());
 			}
 			timeRange = MfUtils.getTimes(mps.getWeekCal().getId(), operStartDate, bomRoute.getMoveTicks() * numberOfJobs, ScheduleDirection.BACKWARD);
-			reqDate = timeRange.getStartDateTime();//вычитаем время на перемещение между операциями
+			reqDate = timeRange.getStartDateTime();//РІС‹С‡РёС‚Р°РµРј РІСЂРµРјСЏ РЅР° РїРµСЂРµРјРµС‰РµРЅРёРµ РјРµР¶РґСѓ РѕРїРµСЂР°С†РёСЏРјРё
 		}
 		return reqDate;
 	}
 	
 	private void calculateDependantDemand(short lowLevelCode) {
-		for (MpsLine mpsLine : new ArrayList<MpsLine>(generatedMPSLines)) { //работаем с копией, т.к. дальше происходит изменения списка generatedMPSLines
+		for (MpsLine mpsLine : new ArrayList<MpsLine>(generatedMPSLines)) { //СЂР°Р±РѕС‚Р°РµРј СЃ РєРѕРїРёРµР№, С‚.Рє. РґР°Р»СЊС€Рµ РїСЂРѕРёСЃС…РѕРґРёС‚ РёР·РјРµРЅРµРЅРёСЏ СЃРїРёСЃРєР° generatedMPSLines
 			if (mpsLine.getLevelCode() == lowLevelCode
 					&& MathUtils.compareToZero(mpsLine.getPlannedQty()) > 0) {
 				BucketRange bucketRange = MfUtils.determineBucketRange(mps.getPlanningLevel().getId(), mpsLine.getBucketOffset());
@@ -820,7 +820,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 				Remainder = PlannedQty.subtract(MaxLotQty.multiply(new BigDecimal(NumberOfMaxJobs)));
 				OddJobSize = Remainder;
 				
-				long CurrentRequiredDate = MfUtils.dateToTick(DateTimeUtils.incDay(bucketRange.getBucketEnd(), 1)) - 1000; //на конец текущего дня
+				long CurrentRequiredDate = MfUtils.dateToTick(DateTimeUtils.incDay(bucketRange.getBucketEnd(), 1)) - 1000; //РЅР° РєРѕРЅРµС† С‚РµРєСѓС‰РµРіРѕ РґРЅСЏ
 				mpsMaterialBreakdown(bom, mpsLine, 1, MaxLotQty.multiply(new BigDecimal(NumberOfMaxJobs)).add(OddJobSize), CurrentRequiredDate);
 			}
 		}
@@ -914,7 +914,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 			mpsLine.setPlannedQty(roundedQty);
 			
 			generatedMPSLines.add(mpsLine);
-			//увеличим только при добавлении строки MPS
+			//СѓРІРµР»РёС‡РёРј С‚РѕР»СЊРєРѕ РїСЂРё РґРѕР±Р°РІР»РµРЅРёРё СЃС‚СЂРѕРєРё MPS
 			return new RollUpMPSResult(roundedQty, mpsSequence + 1);
 		} else {
 			mpsLine.setPlannedQty(mpsLine.getPlannedQty().add(roundedQty));
@@ -942,7 +942,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 		long numberOfDays = 1;
 		int currentBucketOffset = 1;
 		for (MpsLine mpsLine : lines) {
-			//для первой записи в выборке мы тоже должны попасть внутрь этого if-а
+			//РґР»СЏ РїРµСЂРІРѕР№ Р·Р°РїРёСЃРё РІ РІС‹Р±РѕСЂРєРµ РјС‹ С‚РѕР¶Рµ РґРѕР»Р¶РЅС‹ РїРѕРїР°СЃС‚СЊ РІРЅСѓС‚СЂСЊ СЌС‚РѕРіРѕ if-Р°
 			if (firstLine || currentBucketOffset != mpsLine.getBucketOffset()) {
 				bucketRange = MfUtils.determineBucketRange(mpsSrc.getPlanningLevel().getId(), mpsLine.getBucketOffset());
 				//NumberOfDays = EndDay - StartDay + 1
@@ -953,7 +953,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 			
 			BigDecimal remainingQty = mpsLine.getPlannedQty().add(mpsLine.getAdjustmentQty());
 		    // if PlanStartDay <= EndDay and PlanEndDay >= StartDay then
-		    // Обрабатываем, только если периоды имеют непустое пересечение
+		    // РћР±СЂР°Р±Р°С‚С‹РІР°РµРј, С‚РѕР»СЊРєРѕ РµСЃР»Рё РїРµСЂРёРѕРґС‹ РёРјРµСЋС‚ РЅРµРїСѓСЃС‚РѕРµ РїРµСЂРµСЃРµС‡РµРЅРёРµ
 			int c1 = planningRange.startPlanningDate.compareTo(bucketRange.getBucketEnd());
 			int c2 = planningRange.endPlanningDate.compareTo(bucketRange.getBucketStart());
 			if (c1 <= 0 && c2 >= 0) {
@@ -969,7 +969,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 					//if CountDay >= PlanStartDay and CountDay <= PlanEndDay then
 					if (countDay.compareTo(planningRange.startPlanningDate) >= 0 && countDay.compareTo(planningRange.endPlanningDate) <= 0) {
 						RollUpMPSResult rollUpMPSResult = rollUpMPS(mpsDst, mpsLine, srcQty, countDay, mpsDstSequence);
-						mpsDstSequence = rollUpMPSResult.mpsSequence; //возможно изменилась
+						mpsDstSequence = rollUpMPSResult.mpsSequence; //РІРѕР·РјРѕР¶РЅРѕ РёР·РјРµРЅРёР»Р°СЃСЊ
 						remainingNumberOfDays -= 1;
 						remainingQty = remainingQty.subtract(rollUpMPSResult.quan);
 						if (remainingNumberOfDays > 0)
@@ -986,39 +986,39 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 		generatedMPSLines = new ArrayList<MpsLine>();
 		mpsSequence = 0;
 
-		//вычислим диапазон планирования
+		//РІС‹С‡РёСЃР»РёРј РґРёР°РїР°Р·РѕРЅ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
 		PlanningRange planningRange = calculateMPSPlanningRange(mps);
 		
-		//обработаем заказы клиентов
+		//РѕР±СЂР°Р±РѕС‚Р°РµРј Р·Р°РєР°Р·С‹ РєР»РёРµРЅС‚РѕРІ
 		if (mps.getSalesLive())
 			processOrders(planningRange.startPlanningDate, planningRange.endPlanningDate, OrderHeadCusServiceLocal.DOCSECTION);
 		
-		//обработаем прогнозы продаж
+		//РѕР±СЂР°Р±РѕС‚Р°РµРј РїСЂРѕРіРЅРѕР·С‹ РїСЂРѕРґР°Р¶
 		if (mps.getSalesForecasts())
 			processSalesForecasts(planningRange);
 		
-		//обработаем заказы поставщиков
+		//РѕР±СЂР°Р±РѕС‚Р°РµРј Р·Р°РєР°Р·С‹ РїРѕСЃС‚Р°РІС‰РёРєРѕРІ
 		if (mps.getPurchasesLive())
 			processOrders(planningRange.startPlanningDate, planningRange.endPlanningDate, OrderHeadSupServiceLocal.DOCSECTION);
 		
-		//обработаем текущие складские запасы
+		//РѕР±СЂР°Р±РѕС‚Р°РµРј С‚РµРєСѓС‰РёРµ СЃРєР»Р°РґСЃРєРёРµ Р·Р°РїР°СЃС‹
 		if (mps.getQtyOnHand())
 			processCurrentQuantityOnHand(planningRange.startPlanningDate, planningRange.startBucket);
 		
-		//обработаем запущенные в производство ЗНП
+		//РѕР±СЂР°Р±РѕС‚Р°РµРј Р·Р°РїСѓС‰РµРЅРЅС‹Рµ РІ РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕ Р—РќРџ
 		if (mps.getProduction()) {
 			processLiveProductionOutputs(planningRange.startPlanningDate, planningRange.endPlanningDate);
 			processLiveProductionInputs(planningRange.startPlanningDate, planningRange.endPlanningDate);
 		}
 		
-		//обработаем прогнозируемых остатков товаров на складах предприятия
+		//РѕР±СЂР°Р±РѕС‚Р°РµРј РїСЂРѕРіРЅРѕР·РёСЂСѓРµРјС‹С… РѕСЃС‚Р°С‚РєРѕРІ С‚РѕРІР°СЂРѕРІ РЅР° СЃРєР»Р°РґР°С… РїСЂРµРґРїСЂРёСЏС‚РёСЏ
 		if (mps.getInventoryForecast() != null)
 			processQOHForecasts(planningRange.startPlanningDate, planningRange.endPlanningDate, mps.getInventoryForecast());
 		
-		//обработаем страховой запас
+		//РѕР±СЂР°Р±РѕС‚Р°РµРј СЃС‚СЂР°С…РѕРІРѕР№ Р·Р°РїР°СЃ
 		processSafetyLevel(planningRange.startPlanningDate, planningRange.startBucket);
 		
-		//главный цикл по LLC
+		//РіР»Р°РІРЅС‹Р№ С†РёРєР» РїРѕ LLC
 		short lowLevelCode = 1;
 		while (lowLevelCode <= mps.getLevelProcessedTo()) {
 			if (lowLevelCode > 1)
@@ -1029,9 +1029,9 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 			lowLevelCode++;
 		}
 		
-		//сохранение сформированных строк
+		//СЃРѕС…СЂР°РЅРµРЅРёРµ СЃС„РѕСЂРјРёСЂРѕРІР°РЅРЅС‹С… СЃС‚СЂРѕРє
 		persistGeneratedMPSLines();
-		//отметка о расчете в MPS
+		//РѕС‚РјРµС‚РєР° Рѕ СЂР°СЃС‡РµС‚Рµ РІ MPS
 		mps.setLastRunDateTime(DateTimeUtils.nowDate());
 		mps.setMpsVersion(mps.getMpsVersion() + 1);
 		mpsService.store(mps);
@@ -1042,7 +1042,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 	 */
 	@Remove
 	public void generateMps(int mpsId) {
-		ServerUtils.setTransactionTimeout(86400);//неизвестно сколько будет идти расчет MPS, ставит таймаут на сутки
+		ServerUtils.setTransactionTimeout(86400);//РЅРµРёР·РІРµСЃС‚РЅРѕ СЃРєРѕР»СЊРєРѕ Р±СѓРґРµС‚ РёРґС‚Рё СЂР°СЃС‡РµС‚ MPS, СЃС‚Р°РІРёС‚ С‚Р°Р№РјР°СѓС‚ РЅР° СЃСѓС‚РєРё
 		ormTemplate = OrmTemplate.getInstance();
 		mpsService = (MPSServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(MPSServiceLocal.SERVICE_NAME);
 		mpsLineService = (MPSLineServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(MPSLineServiceLocal.SERVICE_NAME);

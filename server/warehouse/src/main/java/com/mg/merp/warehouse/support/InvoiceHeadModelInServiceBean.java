@@ -23,7 +23,7 @@ import com.mg.merp.warehouse.InvoiceHeadModelInServiceLocal;
 import com.mg.merp.warehouse.model.InvoiceHeadModel;
 
 /**
- * Бизнес-компонент "Образцы входящих накладных" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ РІС…РѕРґСЏС‰РёС… РЅР°РєР»Р°РґРЅС‹С…" 
  * 
  * @author leonova
  * @version $Id: InvoiceHeadModelInServiceBean.java,v 1.3 2006/09/12 10:48:36 leonova Exp $

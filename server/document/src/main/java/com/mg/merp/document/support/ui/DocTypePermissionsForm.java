@@ -31,7 +31,7 @@ import com.mg.merp.document.DocTypeAccessServiceLocal;
 import com.mg.merp.document.DocTypePermission;
 
 /**
- * Контроллер формы настройки прав пользователя на типы документов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РЅР°СЃС‚СЂРѕР№РєРё РїСЂР°РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РЅР° С‚РёРїС‹ РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author Artem V. Sharapov
  * @version $Id: DocTypePermissionsForm.java,v 1.1 2007/11/20 14:53:03 sharapov Exp $
@@ -67,8 +67,8 @@ public class DocTypePermissionsForm extends AbstractForm {
 	}
 	
 	/**
-	 * Запустить форму настройки прав для типа документа
-	 * @param docTypeId - идентификатор типа документа
+	 * Р—Р°РїСѓСЃС‚РёС‚СЊ С„РѕСЂРјСѓ РЅР°СЃС‚СЂРѕР№РєРё РїСЂР°РІ РґР»СЏ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docTypeId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	public void execute(Integer docTypeId) {
 		this.docTypeId = docTypeId;
@@ -114,8 +114,8 @@ public class DocTypePermissionsForm extends AbstractForm {
 	}
 	
 	/**
-	 * Обработчик события "Закрыть форму"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "Р—Р°РєСЂС‹С‚СЊ С„РѕСЂРјСѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionOk(WidgetEvent event) {
 		close();

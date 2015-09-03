@@ -28,7 +28,7 @@ import com.mg.merp.crm.model.ContactLinkId;
 import com.mg.merp.crm.model.Relation;
 
 /**
- * Реализация бизнес-компонента "Контактные лица" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС‚Р°РєС‚РЅС‹Рµ Р»РёС†Р°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -62,8 +62,8 @@ public class ContactServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 
 	/**
-	 * Проверяет существование связи "отношение-контакт"
-	 * @param contactLinkId - идентификатор связи
+	 * РџСЂРѕРІРµСЂСЏРµС‚ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ СЃРІСЏР·Рё "РѕС‚РЅРѕС€РµРЅРёРµ-РєРѕРЅС‚Р°РєС‚"
+	 * @param contactLinkId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРІСЏР·Рё
 	 * @return
 	 */
 	private boolean isContactLinkExist(ContactLinkId contactLinkId) {
@@ -75,10 +75,10 @@ public class ContactServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 
 	/**
-	 * Создать связь "отношение-контакт"
-	 * @param contact - контакт
-	 * @param relation - отношение
-	 * @return связь "отношение-контакт"
+	 * РЎРѕР·РґР°С‚СЊ СЃРІСЏР·СЊ "РѕС‚РЅРѕС€РµРЅРёРµ-РєРѕРЅС‚Р°РєС‚"
+	 * @param contact - РєРѕРЅС‚Р°РєС‚
+	 * @param relation - РѕС‚РЅРѕС€РµРЅРёРµ
+	 * @return СЃРІСЏР·СЊ "РѕС‚РЅРѕС€РµРЅРёРµ-РєРѕРЅС‚Р°РєС‚"
 	 */
 	private ContactLink createContactLink(Contact contact, Relation relation) {
 		if(contact == null || relation == null)

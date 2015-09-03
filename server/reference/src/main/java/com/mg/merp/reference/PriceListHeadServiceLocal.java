@@ -21,7 +21,7 @@ import java.util.Date;
 import com.mg.merp.reference.model.PriceListHead;
 
 /**
- * Бизнес-компонент "Заголовки прайс-листов"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р—Р°РіРѕР»РѕРІРєРё РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -30,22 +30,22 @@ import com.mg.merp.reference.model.PriceListHead;
 public interface PriceListHeadServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PriceListHead, Integer> {
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/reference/PriceListHead"; //$NON-NLS-1$
 	
 	/**
-	 * Пересчитать цены спецификации прайс-листа
-	 * @param priceListHeadIds - список идентификаторов прайс-листов
+	 * РџРµСЂРµСЃС‡РёС‚Р°С‚СЊ С†РµРЅС‹ СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param priceListHeadIds - СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ
 	 */
 	void recalcPrices(Serializable[] priceListHeadIds);
 	
 	/**
-	 * Выполнить переоценку
-	 * @param priceListHeadId - идентификатор прайс-листа
-	 * @param actualDate - дата актуальности
-	 * @param percent - процент
-	 * @param precision - точность вычислений
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РїРµСЂРµРѕС†РµРЅРєСѓ
+	 * @param priceListHeadId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param actualDate - РґР°С‚Р° Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё
+	 * @param percent - РїСЂРѕС†РµРЅС‚
+	 * @param precision - С‚РѕС‡РЅРѕСЃС‚СЊ РІС‹С‡РёСЃР»РµРЅРёР№
 	 */
 	void overestimation(Serializable priceListHeadId, Date actualDate, BigDecimal percent, Integer precision);
 	

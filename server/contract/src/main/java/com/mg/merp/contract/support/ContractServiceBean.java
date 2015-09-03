@@ -40,7 +40,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocType;
 
 /**
- * Реализация бизнес-компонента "Контракт" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС‚СЂР°РєС‚" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

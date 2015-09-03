@@ -27,7 +27,7 @@ import com.mg.merp.core.support.CoreUtils;
 import com.mg.merp.manufacture.ScrapMachineHeadServiceLocal;
 
 /**
- * Контроллер формы списка актов на списание потерь времени, отработанногооборудованием
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕРѕР±РѕСЂСѓРґРѕРІР°РЅРёРµРј
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: ScrapMachineHeadBr.java,v 1.10 2009/02/10 14:34:19 safonov Exp $
@@ -43,7 +43,7 @@ public class ScrapMachineHeadBr extends ScrapDocumentBr {
 	}	
 
 
-	/* (non-Javadoc)ы
+	/* (non-Javadoc)С‹
 	 * @see com.mg.framework.generic.ui.DefaultHierarchyBrowseForm#loadFolders()
 	 */
 	@Override

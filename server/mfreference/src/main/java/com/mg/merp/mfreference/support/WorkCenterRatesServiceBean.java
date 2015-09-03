@@ -22,7 +22,7 @@ import com.mg.merp.mfreference.WorkCenterRatesServiceLocal;
 import com.mg.merp.mfreference.model.WorkCenterRates;
 
 /**
- * Бизнес-компонент "Нормы стоимости" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РќРѕСЂРјС‹ СЃС‚РѕРёРјРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @version $Id: WorkCenterRatesServiceBean.java,v 1.3 2006/08/24 12:31:25 leonova Exp $

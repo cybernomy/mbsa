@@ -23,11 +23,11 @@ import com.mg.merp.account.model.EconomicOperModel;
  */
 public interface OperationModelServiceLocal	extends com.mg.framework.api.DataBusinessObjectService<EconomicOperModel, Integer> {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/account/OperationModel";
 	/**
-	 * тип папки для образцов хозяйственных операций
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ С…РѕР·СЏР№СЃС‚РІРµРЅРЅС‹С… РѕРїРµСЂР°С†РёР№
 	 */
 	final static short FOLDER_PART = 18;
 }

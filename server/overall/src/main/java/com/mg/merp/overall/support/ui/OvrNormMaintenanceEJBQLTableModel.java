@@ -26,7 +26,7 @@ import com.mg.merp.overall.model.NormSpec;
 
 /**
  * 
- * Класс для отображения списка спецификации норм
+ * РљР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃРїРёСЃРєР° СЃРїРµС†РёС„РёРєР°С†РёРё РЅРѕСЂРј
  * 
  * @author leonova
  * @version $Id: OvrNormMaintenanceEJBQLTableModel.java,v 1.2 2008/06/30 04:22:00 alikaev Exp $

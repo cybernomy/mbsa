@@ -21,7 +21,7 @@ import com.mg.merp.overall.CardServiceLocal;
 import com.mg.merp.overall.model.OvrCard;
 
 /**
- * Бизнес-компонент "Лицевые карточки сотрудников"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р›РёС†РµРІС‹Рµ РєР°СЂС‚РѕС‡РєРё СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: CardServiceBean.java,v 1.1 2008/06/30 04:19:36 alikaev Exp $

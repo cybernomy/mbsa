@@ -18,7 +18,7 @@ import com.mg.merp.document.generic.ui.DocumentModelMaintenanceForm;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы поддержки "Образцов входящих счетов"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РћР±СЂР°Р·С†РѕРІ РІС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ"
  * 
  * @author leonova
  * @version $Id: BillHeadModelInMt.java,v 1.2 2007/05/22 04:54:03 sharapov Exp $

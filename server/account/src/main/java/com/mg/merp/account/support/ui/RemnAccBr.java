@@ -42,7 +42,7 @@ import com.mg.merp.core.support.CoreUtils;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Контроллер браузера бизнес-компонента "Остатки и обороты по счетам"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ СЃС‡РµС‚Р°Рј"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -172,7 +172,7 @@ public class RemnAccBr extends AbstractHierarchyBrowseFormWithTurn {
 	}
 	
 	/**
-	 * Вызов сервиса бизнес-компонента "Остатки и обороты по счетам бух. учета"
+	 * Р’С‹Р·РѕРІ СЃРµСЂРІРёСЃР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ СЃС‡РµС‚Р°Рј Р±СѓС…. СѓС‡РµС‚Р°"
 	 * @return
 	 */
 	protected RemnAccServiceLocal getRemnAccService() {
@@ -182,7 +182,7 @@ public class RemnAccBr extends AbstractHierarchyBrowseFormWithTurn {
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Удалить пустые строки"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РЈРґР°Р»РёС‚СЊ РїСѓСЃС‚С‹Рµ СЃС‚СЂРѕРєРё"
 	 * 
 	 * @param event
 	 * @throws ApplicationException

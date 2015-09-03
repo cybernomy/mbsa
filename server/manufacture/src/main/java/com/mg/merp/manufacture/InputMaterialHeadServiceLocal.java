@@ -17,7 +17,7 @@ package com.mg.merp.manufacture;
 import com.mg.merp.manufacture.model.InputDocumentHead;
 
 /**
- * Бизнес-компонент "Акт на списание материалов в НЗП"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РђРєС‚ РЅР° СЃРїРёСЃР°РЅРёРµ РјР°С‚РµСЂРёР°Р»РѕРІ РІ РќР—Рџ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: InputMaterialHeadServiceLocal.java,v 1.5 2007/08/06 12:46:24 safonov Exp $
@@ -26,17 +26,17 @@ public interface InputMaterialHeadServiceLocal
    extends com.mg.merp.document.GoodsDocument<InputDocumentHead, Integer, InputMaterialModelServiceLocal, InputMaterialSpecServiceLocal>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/manufacture/InputMaterialHead";
 	
 	/**
-	 * тип папки для актов на списание материалов в НЗП
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РјР°С‚РµСЂРёР°Р»РѕРІ РІ РќР—Рџ
 	 */
 	final static short FOLDER_PART = 12503;
 	
 	/**
-	 * docsection для актов на списание материалов в НЗП
+	 * docsection РґР»СЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РјР°С‚РµСЂРёР°Р»РѕРІ РІ РќР—Рџ
 	 */
 	final static short DOCSECTION = 12002;
 	

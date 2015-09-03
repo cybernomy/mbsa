@@ -57,7 +57,7 @@ import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Реализация процессора модуля "Платежный календарь"
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС†РµСЃСЃРѕСЂР° РјРѕРґСѓР»СЏ "РџР»Р°С‚РµР¶РЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PaymentcontrolProcessorServiceBean.java,v 1.6 2007/10/02 12:54:35 sharapov Exp $
@@ -137,9 +137,9 @@ implements PaymentcontrolProcessorServiceLocal {
 	}
 	
 	/**
-	 * Получить исполнение обязательства по сформированному документу
-	 * @param docHead - документ
-	 * @return исполнение обязательства
+	 * РџРѕР»СѓС‡РёС‚СЊ РёСЃРїРѕР»РЅРµРЅРёРµ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР° РїРѕ СЃС„РѕСЂРјРёСЂРѕРІР°РЅРЅРѕРјСѓ РґРѕРєСѓРјРµРЅС‚Сѓ
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
+	 * @return РёСЃРїРѕР»РЅРµРЅРёРµ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°
 	 */
 	protected Execution getExecutionByDoc(DocHead docHead) {
 		return OrmTemplate.getInstance().findUniqueByCriteria(OrmTemplate.createCriteria(Execution.class)
@@ -147,10 +147,10 @@ implements PaymentcontrolProcessorServiceLocal {
 	}
 	
 	/**
-	 * Обработать исполнение
-	 * @param execution - исполнение
-	 * @param isDocPocessed - признак подтверждения исполнения документом
-	 * @param factDate - дата подтверждения
+	 * РћР±СЂР°Р±РѕС‚Р°С‚СЊ РёСЃРїРѕР»РЅРµРЅРёРµ
+	 * @param execution - РёСЃРїРѕР»РЅРµРЅРёРµ
+	 * @param isDocPocessed - РїСЂРёР·РЅР°Рє РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РёСЃРїРѕР»РЅРµРЅРёСЏ РґРѕРєСѓРјРµРЅС‚РѕРј
+	 * @param factDate - РґР°С‚Р° РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ
 	 */
 	protected void processExecution(Execution execution, boolean isDocPocessed, Date factDate) {
 		execution.setDocProcessed(isDocPocessed);
@@ -253,14 +253,14 @@ implements PaymentcontrolProcessorServiceLocal {
 			liability.setToBankAcc(getDefaultBankAccount(liability.getTo()));
 
 		liability.setSumCur(MathUtils.round(docSum, new RoundContext(moduleConfig.getCurrencyPrec())));
-		// берем валюту из документа, если не указана в образце
+		// Р±РµСЂРµРј РІР°Р»СЋС‚Сѓ РёР· РґРѕРєСѓРјРµРЅС‚Р°, РµСЃР»Рё РЅРµ СѓРєР°Р·Р°РЅР° РІ РѕР±СЂР°Р·С†Рµ
 		if(liabilityModel.getCurCode() == null) {
 			liability.setCurCode(document.getCurrency());
 			liability.setCurRateAuthority(document.getCurrencyRateAuthority());
 			liability.setCurRateType(document.getCurrencyRateType());
 		}
 		else { 
-			// если валюты образца и документа различны, то конвертируем сумму в валюту образца 
+			// РµСЃР»Рё РІР°Р»СЋС‚С‹ РѕР±СЂР°Р·С†Р° Рё РґРѕРєСѓРјРµРЅС‚Р° СЂР°Р·Р»РёС‡РЅС‹, С‚Рѕ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРј СЃСѓРјРјСѓ РІ РІР°Р»СЋС‚Сѓ РѕР±СЂР°Р·С†Р° 
 			if(!isSameCurrency(liability.getCurCode(), document.getCurrency())) {
 				BigDecimal convertedToModelCurSum = getCurrencyConverter().conversion(
 						liability.getCurCode(), 

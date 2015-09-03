@@ -25,7 +25,7 @@ import com.mg.merp.docflow.support.jboss.DocFlowPluginFactoryServiceMBean;
 import com.mg.merp.finance.support.CreateOperationDocFlowPluginFactory;
 
 /**
- * Реализация сервиса дополнительных модулей подсистемы "Финансы"
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "Р¤РёРЅР°РЅСЃС‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: FinanceDocFlowPluginService.java,v 1.1 2006/10/21 10:59:21 safonov Exp $

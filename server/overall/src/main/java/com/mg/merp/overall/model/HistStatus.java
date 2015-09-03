@@ -15,7 +15,7 @@
 package com.mg.merp.overall.model;
 
 /**
- * Модель бизнес-компонента ""
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° ""
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: HistStatus.java,v 1.3 2008/06/30 04:15:16 alikaev Exp $

@@ -20,7 +20,7 @@ import org.eclipse.datatools.connectivity.oda.LogConfiguration;
 import org.eclipse.datatools.connectivity.oda.OdaException;
 
 /**
- * Реализация интерфейса {@link IDriver}
+ * Р РµР°Р»РёР·Р°С†РёСЏ РёРЅС‚РµСЂС„РµР№СЃР° {@link IDriver}
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: Driver.java,v 1.5 2006/12/05 13:43:33 poroxnenko Exp $

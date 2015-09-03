@@ -20,12 +20,12 @@ package com.mg.merp.finance.totals.helperclasses;
  */
 public class ResStr
 {
-	public static final String SINVALID_ANL_LEVEL = "Неверно указан уровень аналитики";
-	public static final String SINVALID_PERIOD = "Период не существует";
-	public static final String SCANT_SEL_CORACCOUNTS = "Выборка корреспондирующих счетов для оборотной ведомости по признакам не возможна";
-	public static final String SCOR_ACCOUNTS_NOT_SEL = "Выборка корреспондирующих счетов не задана";
-	public static final String SINVALID_FIELD_NAME = "Недопустимое имя поля %s";
-	public static final String SINVALID_ACC_CODE = "В списке указан несуществующий код";
+	public static final String SINVALID_ANL_LEVEL = "РќРµРІРµСЂРЅРѕ СѓРєР°Р·Р°РЅ СѓСЂРѕРІРµРЅСЊ Р°РЅР°Р»РёС‚РёРєРё";
+	public static final String SINVALID_PERIOD = "РџРµСЂРёРѕРґ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚";
+	public static final String SCANT_SEL_CORACCOUNTS = "Р’С‹Р±РѕСЂРєР° РєРѕСЂСЂРµСЃРїРѕРЅРґРёСЂСѓСЋС‰РёС… СЃС‡РµС‚РѕРІ РґР»СЏ РѕР±РѕСЂРѕС‚РЅРѕР№ РІРµРґРѕРјРѕСЃС‚Рё РїРѕ РїСЂРёР·РЅР°РєР°Рј РЅРµ РІРѕР·РјРѕР¶РЅР°";
+	public static final String SCOR_ACCOUNTS_NOT_SEL = "Р’С‹Р±РѕСЂРєР° РєРѕСЂСЂРµСЃРїРѕРЅРґРёСЂСѓСЋС‰РёС… СЃС‡РµС‚РѕРІ РЅРµ Р·Р°РґР°РЅР°";
+	public static final String SINVALID_FIELD_NAME = "РќРµРґРѕРїСѓСЃС‚РёРјРѕРµ РёРјСЏ РїРѕР»СЏ %s";
+	public static final String SINVALID_ACC_CODE = "Р’ СЃРїРёСЃРєРµ СѓРєР°Р·Р°РЅ РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ РєРѕРґ";
 	public static final String SBETWEEN_DATES_SQL = "select %s from finspec s join finoper h on h.id = s.finoper_id" +
               " where (s.planned= %d) and (s.%s = %d ) %s;";
 }

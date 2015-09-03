@@ -24,7 +24,7 @@ import com.mg.merp.discount.CardUserServiceLocal;
 import com.mg.merp.discount.model.CardUser;
 
 /**
- * Бизнес-компонент "Пользователи дисконтной карты" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџРѕР»СЊР·РѕРІР°С‚РµР»Рё РґРёСЃРєРѕРЅС‚РЅРѕР№ РєР°СЂС‚С‹" 
  * 
  * @author leonova
  * @version $Id: CardUserServiceBean.java,v 1.4 2007/09/07 12:02:18 safonov Exp $

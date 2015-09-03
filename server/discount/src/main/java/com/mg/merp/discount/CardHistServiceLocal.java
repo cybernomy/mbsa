@@ -17,7 +17,7 @@ package com.mg.merp.discount;
 import com.mg.merp.discount.model.CardHist;
 
 /**
- * Бизнес-компонент "История дисконтных карт" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РСЃС‚РѕСЂРёСЏ РґРёСЃРєРѕРЅС‚РЅС‹С… РєР°СЂС‚" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.discount.model.CardHist;
 public interface CardHistServiceLocal extends com.mg.framework.api.DataBusinessObjectService<CardHist, Integer> {
 	
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/discount/CardHist"; //$NON-NLS-1$
 	

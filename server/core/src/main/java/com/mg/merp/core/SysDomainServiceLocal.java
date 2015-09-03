@@ -17,14 +17,14 @@ package com.mg.merp.core;
 import com.mg.framework.api.DataBusinessObjectService;
 
 /**
- * Бизнес-компонент "Домен системы"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”РѕРјРµРЅ СЃРёСЃС‚РµРјС‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: SysDomainServiceLocal.java,v 1.1 2008/03/03 12:55:18 safonov Exp $
  */
 public interface SysDomainServiceLocal extends DataBusinessObjectService<com.mg.merp.core.model.SysDomain, Integer> {
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/core/SysDomain";
 }

@@ -15,7 +15,7 @@
 package com.mg.framework.api.ui.dnd;
 
 /**
- * Тип операции DnD
+ * РўРёРї РѕРїРµСЂР°С†РёРё DnD
  * 
  * @author Oleg V. Safonov
  * @version $Id: DropAction.java,v 1.1 2007/08/16 13:48:06 safonov Exp $

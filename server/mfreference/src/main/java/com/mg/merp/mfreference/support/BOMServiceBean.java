@@ -40,7 +40,7 @@ import com.mg.merp.mfreference.model.LaborClass;
 import com.mg.merp.mfreference.model.TimeRateFlag;
 
 /**
- * Бизнес-компонент "Состав изделий" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРѕСЃС‚Р°РІ РёР·РґРµР»РёР№" 
  * 
  * @author leonova
  * @version $Id: BOMServiceBean.java,v 1.8 2009/03/05 12:26:46 safonov Exp $
@@ -90,8 +90,8 @@ public class BOMServiceBean extends AbstractPOJODataBusinessObjectServiceBean<Bo
 			for (BomRouteResource resource : resources) {
 				if (timeSeq != resource.getTimeSequence()) {
 					timeSeq = resource.getTimeSequence();
-					fixedTicks += fixedTicksInSeq; //Накапливаем максимумы
-					varTicks += varTicksInSeq; //Накапливаем максимумы
+					fixedTicks += fixedTicksInSeq; //РќР°РєР°РїР»РёРІР°РµРј РјР°РєСЃРёРјСѓРјС‹
+					varTicks += varTicksInSeq; //РќР°РєР°РїР»РёРІР°РµРј РјР°РєСЃРёРјСѓРјС‹
 					fixedTicksInSeq = 0;
 					varTicksInSeq = 0;
 				}
@@ -103,11 +103,11 @@ public class BOMServiceBean extends AbstractPOJODataBusinessObjectServiceBean<Bo
 						lbrNumber = BigDecimal.ONE;
 					if (laborClass.getTimeRateFlag() == TimeRateFlag.FIXED) {
 						if (bomLabor.getRunTicksLbr() / lbrNumber.longValue() > fixedTicksInSeq)
-							fixedTicksInSeq = bomLabor.getRunTicksLbr() / lbrNumber.longValue(); //то есть ищем максимум
+							fixedTicksInSeq = bomLabor.getRunTicksLbr() / lbrNumber.longValue(); //С‚Рѕ РµСЃС‚СЊ РёС‰РµРј РјР°РєСЃРёРјСѓРј
 					} else {
-						//Время на единицу готовой продукции
+						//Р’СЂРµРјСЏ РЅР° РµРґРёРЅРёС†Сѓ РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё
 						if (bomLabor.getRunTicksLbr() / lbrNumber.longValue() > varTicksInSeq)
-							varTicksInSeq = bomLabor.getRunTicksLbr() / lbrNumber.longValue(); //то есть ищем максимум						
+							varTicksInSeq = bomLabor.getRunTicksLbr() / lbrNumber.longValue(); //С‚Рѕ РµСЃС‚СЊ РёС‰РµРј РјР°РєСЃРёРјСѓРј						
 					}
 				} else if (resource instanceof BomMachine) {
 					BomMachine bomMachine = (BomMachine) resource;
@@ -116,16 +116,16 @@ public class BOMServiceBean extends AbstractPOJODataBusinessObjectServiceBean<Bo
 						mchNumber = BigDecimal.ONE;
 					if (bomMachine.getTimeRateFlag() == TimeRateFlag.FIXED) {
 						if (bomMachine.getRunTicksMch() / mchNumber.longValue() > fixedTicksInSeq)
-							fixedTicksInSeq = bomMachine.getRunTicksMch() / mchNumber.longValue(); //то есть ищем максимум
+							fixedTicksInSeq = bomMachine.getRunTicksMch() / mchNumber.longValue(); //С‚Рѕ РµСЃС‚СЊ РёС‰РµРј РјР°РєСЃРёРјСѓРј
 					} else {
-						//Время на единицу готовой продукции
+						//Р’СЂРµРјСЏ РЅР° РµРґРёРЅРёС†Сѓ РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё
 						if (bomMachine.getRunTicksMch() / mchNumber.longValue() > varTicksInSeq)
-							varTicksInSeq = bomMachine.getRunTicksMch() / mchNumber.longValue(); //то есть ищем максимум
+							varTicksInSeq = bomMachine.getRunTicksMch() / mchNumber.longValue(); //С‚Рѕ РµСЃС‚СЊ РёС‰РµРј РјР°РєСЃРёРјСѓРј
 					}
 				}
 			}
-			fixedTicks = Math.max(fixedTicks, fixedTicksInSeq); //Добавляем последний максимум
-			varTicks = Math.max(varTicks, varTicksInSeq); //Добавляем последний максимум
+			fixedTicks = Math.max(fixedTicks, fixedTicksInSeq); //Р”РѕР±Р°РІР»СЏРµРј РїРѕСЃР»РµРґРЅРёР№ РјР°РєСЃРёРјСѓРј
+			varTicks = Math.max(varTicks, varTicksInSeq); //Р”РѕР±Р°РІР»СЏРµРј РїРѕСЃР»РµРґРЅРёР№ РјР°РєСЃРёРјСѓРј
 			
 			route.setSetupTicks(fixedTicks);
 			route.setRunTicks(varTicks);

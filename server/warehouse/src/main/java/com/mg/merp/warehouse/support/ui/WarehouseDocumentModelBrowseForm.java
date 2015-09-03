@@ -17,7 +17,7 @@ package com.mg.merp.warehouse.support.ui;
 import com.mg.merp.document.generic.ui.DocumentModelBrowseForm;
 
 /**
- * Контроллер формы списка образцов складских документов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ СЃРєР»Р°РґСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: WarehouseDocumentModelBrowseForm.java,v 1.1 2006/09/12 10:53:18 leonova Exp $ 

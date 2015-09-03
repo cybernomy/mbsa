@@ -17,7 +17,7 @@ package com.mg.merp.paymentalloc;
 import com.mg.merp.paymentalloc.model.TransactHead;
 
 /**
- * Сервис бизнес-компонент "Связанные документы" 
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРІСЏР·Р°РЅРЅС‹Рµ РґРѕРєСѓРјРµРЅС‚С‹" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.paymentalloc.model.TransactHead;
 public interface TransactHeadServiceLocal extends com.mg.framework.api.DataBusinessObjectService<TransactHead, Integer> {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/paymentalloc/TransactHead"; //$NON-NLS-1$
 	

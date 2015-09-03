@@ -26,7 +26,7 @@ import com.mg.merp.report.model.RptMain;
 import com.mg.merp.report.support.RptEngineServiceImpl;
 
 /**
- * Реализация сервиса MBIRT (Millennium BI and Report Tools) для AS JBoss
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° MBIRT (Millennium BI and Report Tools) РґР»СЏ AS JBoss
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov

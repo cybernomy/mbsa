@@ -21,7 +21,7 @@ import com.mg.merp.report.parameters.ReportParameter;
 import com.mg.merp.report.parameters.ReportParametersDialog;
 
 /**
- * Базовый класс контроллера формы запроса параметров отчета
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РєРѕРЅС‚СЂРѕР»Р»РµСЂР° С„РѕСЂРјС‹ Р·Р°РїСЂРѕСЃР° РїР°СЂР°РјРµС‚СЂРѕРІ РѕС‚С‡РµС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractReportParametersDialog.java,v 1.2 2008/03/28 06:26:29 safonov Exp $

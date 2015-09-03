@@ -24,31 +24,31 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName("Warehouse.OrderHead.DueDateKind")
 public enum OrderDueDateKind {
 	/**
-	 * нет
+	 * РЅРµС‚
 	 */
 	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.None")
 	NONE,
 	
 	/**
-	 * час
+	 * С‡Р°СЃ
 	 */
 	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.Hour")
 	HOUR,
 
 	/**
-	 * день
+	 * РґРµРЅСЊ
 	 */
 	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.Day")
 	DAY,	
 
 	/**
-	 * месяц
+	 * РјРµСЃСЏС†
 	 */
 	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.Month")
 	MONTH,	
 	
 	/**
-	 * год
+	 * РіРѕРґ
 	 */
 	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.Year")
 	YEAR		

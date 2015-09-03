@@ -21,8 +21,8 @@ import com.mg.framework.generic.ui.DefaultDialog;
 import com.mg.framework.service.ApplicationDictionaryLocator;
 
 /**
- * Контроллер формы запроса одиночного параметра, отображает диалог с редактором значения, редактор
- * зависит от типа значения
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ Р·Р°РїСЂРѕСЃР° РѕРґРёРЅРѕС‡РЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР°, РѕС‚РѕР±СЂР°Р¶Р°РµС‚ РґРёР°Р»РѕРі СЃ СЂРµРґР°РєС‚РѕСЂРѕРј Р·РЅР°С‡РµРЅРёСЏ, СЂРµРґР°РєС‚РѕСЂ
+ * Р·Р°РІРёСЃРёС‚ РѕС‚ С‚РёРїР° Р·РЅР°С‡РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: InputQueryDialog.java,v 1.5 2008/03/13 07:32:05 safonov Exp $
@@ -32,9 +32,9 @@ public class InputQueryDialog<T> extends DefaultDialog {
 	protected String prompt;
 	
 	/**
-	 * установить начальное значение
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РЅР°С‡Р°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
 	 * 
-	 * @param value	значение, не может быть <code>null</code>
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ, РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>
 	 */
 	public void setValue(T value) {
 		if (value == null)
@@ -44,18 +44,18 @@ public class InputQueryDialog<T> extends DefaultDialog {
 	}
 	
 	/**
-	 * получить значений
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёР№
 	 * 
-	 * @return	введенное значение
+	 * @return	РІРІРµРґРµРЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
 	 */
 	public T getValue() {
 		return value;
 	}
 
 	/**
-	 * установить подсказку
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїРѕРґСЃРєР°Р·РєСѓ
 	 * 
-	 * @param prompt	подсказка
+	 * @param prompt	РїРѕРґСЃРєР°Р·РєР°
 	 */
 	public void setPrompt(String prompt) {
 		this.prompt = prompt;
@@ -66,7 +66,7 @@ public class InputQueryDialog<T> extends DefaultDialog {
 	 */
 	@Override
 	protected FieldMetadata doGetFieldMetadata(String name) {
-		//сгенерируем метаданные по значению, поскольку тип значения до установки неизвестен
+		//СЃРіРµРЅРµСЂРёСЂСѓРµРј РјРµС‚Р°РґР°РЅРЅС‹Рµ РїРѕ Р·РЅР°С‡РµРЅРёСЋ, РїРѕСЃРєРѕР»СЊРєСѓ С‚РёРї Р·РЅР°С‡РµРЅРёСЏ РґРѕ СѓСЃС‚Р°РЅРѕРІРєРё РЅРµРёР·РІРµСЃС‚РµРЅ
 		return ApplicationDictionaryLocator.locate().getFieldMetadata(new ReflectionMetadata((String) null, value.getClass()));
 	}
 

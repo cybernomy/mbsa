@@ -26,7 +26,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.account.model.Metal;
 
 /**
- * Браузер драгоценных металов
+ * Р‘СЂР°СѓР·РµСЂ РґСЂР°РіРѕС†РµРЅРЅС‹С… РјРµС‚Р°Р»РѕРІ
  * 
  * @author leonova
  * @version $Id: MetalBr.java,v 1.2 2008/02/21 08:21:12 alikaev Exp $ 

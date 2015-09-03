@@ -35,9 +35,9 @@ import com.mg.merp.finance.support.Messages;
 public class FinUtils {
 	
 	/**
-	 * Возвращает имя БК
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РёРјСЏ Р‘Рљ
 	 * 
-	 * @param classAnl - id класса
+	 * @param classAnl - id РєР»Р°СЃСЃР°
 	 * @return
 	 */
 	public static String getBeanName(SysClass classAnl) {
@@ -46,10 +46,10 @@ public class FinUtils {
 	}
 	
 	/**
-	 * Возвращает значение DataItem
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ DataItem
 	 * 
-	 * @param beanName - имя БК
-	 * @param idAnl - id записи
+	 * @param beanName - РёРјСЏ Р‘Рљ
+	 * @param idAnl - id Р·Р°РїРёСЃРё
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
@@ -57,7 +57,7 @@ public class FinUtils {
 		ApplicationDictionary applicationDictionary = ApplicationDictionaryLocator.locate();
 		DataBusinessObjectService<?, Integer> service = (DataBusinessObjectService<?, Integer>) applicationDictionary.getBusinessService(beanName);
 		FieldMetadata metadata = applicationDictionary.getFieldMetadata(ReflectionUtils.getClassReflectionMetadata(service.getEntityClass()));
-		//не знаем как отобразить, просто возвращаем ID
+		//РЅРµ Р·РЅР°РµРј РєР°Рє РѕС‚РѕР±СЂР°Р·РёС‚СЊ, РїСЂРѕСЃС‚Рѕ РІРѕР·РІСЂР°С‰Р°РµРј ID
 		if (metadata == null)
 			return idAnl.toString();
 		PersistentObject entity = service.load(idAnl);

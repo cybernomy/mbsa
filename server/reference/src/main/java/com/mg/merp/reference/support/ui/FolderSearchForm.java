@@ -21,7 +21,7 @@ import com.mg.framework.support.ui.widget.tree.TreeNode;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Форма для выбора папок, загружает список папок по установленному типу папки
+ * Р¤РѕСЂРјР° РґР»СЏ РІС‹Р±РѕСЂР° РїР°РїРѕРє, Р·Р°РіСЂСѓР¶Р°РµС‚ СЃРїРёСЃРѕРє РїР°РїРѕРє РїРѕ СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅРѕРјСѓ С‚РёРїСѓ РїР°РїРєРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: FolderSearchForm.java,v 1.1 2006/08/23 11:40:49 safonov Exp $
@@ -44,7 +44,7 @@ public class FolderSearchForm extends DefaultTreeBrowseForm {
 	}
 
 	/**
-	 * получить тип папки
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РёРї РїР°РїРєРё
 	 * 
 	 * @return Returns the folderType.
 	 */
@@ -53,7 +53,7 @@ public class FolderSearchForm extends DefaultTreeBrowseForm {
 	}
 
 	/**
-	 * установить тип папки
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ С‚РёРї РїР°РїРєРё
 	 * 
 	 * @param folderType The folderType to set.
 	 */

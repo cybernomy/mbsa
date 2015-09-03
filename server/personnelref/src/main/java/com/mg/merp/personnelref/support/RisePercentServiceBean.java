@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.RisePercentServiceLocal;
 import com.mg.merp.personnelref.model.RisePercent;
 
 /**
- * Бизнес-компонент "Процент надбавки" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРѕС†РµРЅС‚ РЅР°РґР±Р°РІРєРё" 
  * 
  * @author leonova
  * @version $Id: RisePercentServiceBean.java,v 1.3 2006/09/04 13:02:21 leonova Exp $

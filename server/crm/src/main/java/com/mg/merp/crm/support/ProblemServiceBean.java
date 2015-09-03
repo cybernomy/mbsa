@@ -30,7 +30,7 @@ import com.mg.merp.crm.model.Solution;
 import com.mg.merp.crm.model.Symptom;
 
 /**
- * Реализация бизнес-компонента "Проблемы" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРѕР±Р»РµРјС‹" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -57,10 +57,10 @@ public class ProblemServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 
 	/**
-	 * Создать связь "Проблема - симптом"
-	 * @param problem - проблема
-	 * @param symptom - симптом
-	 * @return объект "проблема-симптом"
+	 * РЎРѕР·РґР°С‚СЊ СЃРІСЏР·СЊ "РџСЂРѕР±Р»РµРјР° - СЃРёРјРїС‚РѕРј"
+	 * @param problem - РїСЂРѕР±Р»РµРјР°
+	 * @param symptom - СЃРёРјРїС‚РѕРј
+	 * @return РѕР±СЉРµРєС‚ "РїСЂРѕР±Р»РµРјР°-СЃРёРјРїС‚РѕРј"
 	 */
 	private LinkSymptomProblem createSymptomProblemLink(Problem problem, Symptom symptom) {
 		getPersistentManager().refresh(problem);
@@ -91,10 +91,10 @@ public class ProblemServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 
 	/**
-	 * Создать связь "Проблема - решение"
-	 * @param problem - проблема
-	 * @param solution - решение
-	 * @return объект "проблема-решение"
+	 * РЎРѕР·РґР°С‚СЊ СЃРІСЏР·СЊ "РџСЂРѕР±Р»РµРјР° - СЂРµС€РµРЅРёРµ"
+	 * @param problem - РїСЂРѕР±Р»РµРјР°
+	 * @param solution - СЂРµС€РµРЅРёРµ
+	 * @return РѕР±СЉРµРєС‚ "РїСЂРѕР±Р»РµРјР°-СЂРµС€РµРЅРёРµ"
 	 */
 	private LinkProblemSolution createSolutionProblemLink(Problem problem, Solution solution) {
 //		getPersistentManager().refresh(problem);
@@ -108,7 +108,7 @@ public class ProblemServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 
 	/**
-	 * Проверка существования связи "Проблема - решение"
+	 * РџСЂРѕРІРµСЂРєР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ СЃРІСЏР·Рё "РџСЂРѕР±Р»РµРјР° - СЂРµС€РµРЅРёРµ"
 	 */
 	private boolean isExistLinkProblemSolution(Problem problem, Solution solution) {
 		LinkProblemSolutionId linkProblemSolutionId = new LinkProblemSolutionId();
@@ -123,7 +123,7 @@ public class ProblemServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 	
 	/**
-	 * Проверка существования связи "Проблема - симптом"
+	 * РџСЂРѕРІРµСЂРєР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёСЏ СЃРІСЏР·Рё "РџСЂРѕР±Р»РµРјР° - СЃРёРјРїС‚РѕРј"
 	 */
 	private boolean isExistLinkProblemSymptom(Problem problem, Symptom symptom) {
 		LinkSymptomProblemId linkSymptomProblemId = new LinkSymptomProblemId();

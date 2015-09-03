@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.CurrencyRateAuthority;
 
 /**
- * Источники курсов валют
+ * РСЃС‚РѕС‡РЅРёРєРё РєСѓСЂСЃРѕРІ РІР°Р»СЋС‚
  * 
  * @author leonova
  * @version $Id: CurrencyRateAuthorityBr.java,v 1.2 2006/10/20 05:51:13 leonova Exp $ 

@@ -17,7 +17,7 @@ package com.mg.merp.document.support.ui;
 import com.mg.merp.reference.support.ui.UniversalContractorSearchHelp;
 
 /**
- * Поиск контрагента для поля документа "От кого"
+ * РџРѕРёСЃРє РєРѕРЅС‚СЂР°РіРµРЅС‚Р° РґР»СЏ РїРѕР»СЏ РґРѕРєСѓРјРµРЅС‚Р° "РћС‚ РєРѕРіРѕ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: FromContractorSearchHelp.java,v 1.1 2006/12/02 12:16:31 safonov Exp $

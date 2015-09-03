@@ -27,7 +27,7 @@ import com.mg.merp.document.generic.GoodsDocumentServiceBean;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Бизнес-компонент "Внутренние накладные" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РЅСѓС‚СЂРµРЅРЅРёРµ РЅР°РєР»Р°РґРЅС‹Рµ" 
  * 
  * @author leonova
  * @version $Id: InternalInvoiceHeadServiceBean.java,v 1.6 2007/03/23 16:11:41 safonov Exp $

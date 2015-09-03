@@ -40,7 +40,7 @@ import com.mg.merp.warehouse.model.Warehouse;
 import com.mg.merp.warehouse.support.Messages;
 
 /**
- * Контроллер формы браузера КСУ
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ Р±СЂР°СѓР·РµСЂР° РљРЎРЈ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Poroxnenko
@@ -171,7 +171,7 @@ public class WareCardBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * показать форму
+	 * РїРѕРєР°Р·Р°С‚СЊ С„РѕСЂРјСѓ
 	 * 
 	 * @param documentId
 	 */

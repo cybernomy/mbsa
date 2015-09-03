@@ -17,7 +17,7 @@ package com.mg.merp.document;
 import java.io.Serializable;
 
 /**
- * Стратегия расчета свойств спецификации документа
+ * РЎС‚СЂР°С‚РµРіРёСЏ СЂР°СЃС‡РµС‚Р° СЃРІРѕР№СЃС‚РІ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Artem V. Sharapov
  * @version $Id: DocSpecPropertiesCalculationStrategy.java,v 1.1 2007/10/30 14:25:30 sharapov Exp $
@@ -25,7 +25,7 @@ import java.io.Serializable;
 public interface DocSpecPropertiesCalculationStrategy extends Serializable {
 
 	/**
-	 * Рассчитать и установить свойства спецификации
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ Рё СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРІРѕР№СЃС‚РІР° СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	void adjust();
 	

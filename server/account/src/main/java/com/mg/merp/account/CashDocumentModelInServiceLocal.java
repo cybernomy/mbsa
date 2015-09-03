@@ -26,7 +26,7 @@ public interface CashDocumentModelInServiceLocal
    extends DocumentPattern<CashDocumentModel, Integer>
 {
 	/**
-	 * тип папки для образцов приходных кассовых ордеров
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ РїСЂРёС…РѕРґРЅС‹С… РєР°СЃСЃРѕРІС‹С… РѕСЂРґРµСЂРѕРІ
 	 */
 	final static short FOLDER_PART = 16;
 }

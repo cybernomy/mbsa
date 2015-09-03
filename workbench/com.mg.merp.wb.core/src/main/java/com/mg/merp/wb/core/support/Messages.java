@@ -17,7 +17,7 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 /**
- * Вспомогательный класс для предоставления локализованых сообщений
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РїСЂРµРґРѕСЃС‚Р°РІР»РµРЅРёСЏ Р»РѕРєР°Р»РёР·РѕРІР°РЅС‹С… СЃРѕРѕР±С‰РµРЅРёР№
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: Messages.java,v 1.5 2007/07/10 10:48:55 poroxnenko Exp $
@@ -28,15 +28,15 @@ public class Messages {
 	}
 
 	/**
-	 * Получить локализованную строку
+	 * РџРѕР»СѓС‡РёС‚СЊ Р»РѕРєР°Р»РёР·РѕРІР°РЅРЅСѓСЋ СЃС‚СЂРѕРєСѓ
 	 * 
 	 * @param resourceBundle
-	 * 			строковой ресурс
+	 * 			СЃС‚СЂРѕРєРѕРІРѕР№ СЂРµСЃСѓСЂСЃ
 	 * @param key
-	 * 			ключ
+	 * 			РєР»СЋС‡
 	 * 
 	 * @return
-	 * 			строка
+	 * 			СЃС‚СЂРѕРєР°
 	 */
 	public static String getString(ResourceBundle resourceBundle, String key) {
 		try {
@@ -47,17 +47,17 @@ public class Messages {
 	}
 
 	/**
-	 * Получить форматированную локализованую строку
+	 * РџРѕР»СѓС‡РёС‚СЊ С„РѕСЂРјР°С‚РёСЂРѕРІР°РЅРЅСѓСЋ Р»РѕРєР°Р»РёР·РѕРІР°РЅСѓСЋ СЃС‚СЂРѕРєСѓ
 	 * 
 	 * @param resourceBundle
-	 * 			строковой ресурс
+	 * 			СЃС‚СЂРѕРєРѕРІРѕР№ СЂРµСЃСѓСЂСЃ
 	 * @param key
-	 * 			ключ
+	 * 			РєР»СЋС‡
 	 * @param arguments
-	 * 			аргументы для вставки
+	 * 			Р°СЂРіСѓРјРµРЅС‚С‹ РґР»СЏ РІСЃС‚Р°РІРєРё
 	 * 
 	 * @return
-	 * 			строка
+	 * 			СЃС‚СЂРѕРєР°
 	 */
 	public static String getFormattedString(ResourceBundle resourceBundle, String key, Object[] arguments) {
 		return String.format(getString(resourceBundle, key), arguments);

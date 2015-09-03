@@ -40,7 +40,7 @@ import com.mg.merp.document.model.DocTypeDocSectionLink;
 import com.mg.merp.document.model.DocumentKind;
 
 /**
- * Реализация бизнес-компонента "Тип документа"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РўРёРї РґРѕРєСѓРјРµРЅС‚Р°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocTypeServiceBean.java,v 1.8 2007/11/08 06:40:50 sharapov Exp $
@@ -153,18 +153,18 @@ public class DocTypeServiceBean extends com.mg.framework.generic.AbstractPOJODat
 		List<DocProcessStageRights> clonedDocProcessStageRights = new ArrayList<DocProcessStageRights>();
 		List<LinkStage> clonedLinkStages = new ArrayList<LinkStage>();
 
-		// копирование связей типов документов с классами документов
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ СЃРІСЏР·РµР№ С‚РёРїРѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ СЃ РєР»Р°СЃСЃР°РјРё РґРѕРєСѓРјРµРЅС‚РѕРІ
 		List<DocTypeDocSectionLink> clonedDocTypeDocSectionLinks = cloneDocTypeDocSectionLink(entity, entityClone);
 		
 		List<DocProcessStage> docProcessStages = getDocProcessStages(entity);
 		for (DocProcessStage docProcessStage : docProcessStages) {
-			// копирование этапов ДО
+			// РєРѕРїРёСЂРѕРІР°РЅРёРµ СЌС‚Р°РїРѕРІ Р”Рћ
 			DocProcessStage clonedDocProcessStage = cloneDocProcessStage(docProcessStage, entityClone);
 			clonedDocProcessStages.add(clonedDocProcessStage);
-			// копирование прав на этапы
+			// РєРѕРїРёСЂРѕРІР°РЅРёРµ РїСЂР°РІ РЅР° СЌС‚Р°РїС‹
 			clonedDocProcessStageRights.addAll(cloneUserGrants(docProcessStage.getUserGrants(), clonedDocProcessStage));
 		}
-		// копирование связей этапов
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ СЃРІСЏР·РµР№ СЌС‚Р°РїРѕРІ
 		for (int i = 0; i < clonedDocProcessStages.size(); i++)
 			clonedLinkStages.addAll(cloneLinkStages(clonedDocProcessStages.get(i), docProcessStages.get(i).getNextStages(), docProcessStages, clonedDocProcessStages));
 
@@ -175,12 +175,12 @@ public class DocTypeServiceBean extends com.mg.framework.generic.AbstractPOJODat
 	}
 
 	/**
-	 * Выполнить копирование связей между этапами ДО
-	 * @param clonedDocProcessStage - этап ДО
-	 * @param nextStages - связи этапа
-	 * @param docProcessStages - список этапов ДО
-	 * @param clonedDocProcessStages - список копий этапов ДО
-	 * @return список связей между этапами ДО
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРїРёСЂРѕРІР°РЅРёРµ СЃРІСЏР·РµР№ РјРµР¶РґСѓ СЌС‚Р°РїР°РјРё Р”Рћ
+	 * @param clonedDocProcessStage - СЌС‚Р°Рї Р”Рћ
+	 * @param nextStages - СЃРІСЏР·Рё СЌС‚Р°РїР°
+	 * @param docProcessStages - СЃРїРёСЃРѕРє СЌС‚Р°РїРѕРІ Р”Рћ
+	 * @param clonedDocProcessStages - СЃРїРёСЃРѕРє РєРѕРїРёР№ СЌС‚Р°РїРѕРІ Р”Рћ
+	 * @return СЃРїРёСЃРѕРє СЃРІСЏР·РµР№ РјРµР¶РґСѓ СЌС‚Р°РїР°РјРё Р”Рћ
 	 */
 	protected List<LinkStage> cloneLinkStages(DocProcessStage clonedDocProcessStage, Set<LinkStage> nextStages, List<DocProcessStage> docProcessStages, List<DocProcessStage> clonedDocProcessStages) {
 		List<LinkStage> clonedLinkStages = new ArrayList<LinkStage>();
@@ -195,10 +195,10 @@ public class DocTypeServiceBean extends com.mg.framework.generic.AbstractPOJODat
 	}
 
 	/**
-	 * Выполнить копирование этапа ДО
-	 * @param docProcessStage - этап ДО
-	 * @param docType - тип документа
-	 * @return объект-копия этапа ДО
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРїРёСЂРѕРІР°РЅРёРµ СЌС‚Р°РїР° Р”Рћ
+	 * @param docProcessStage - СЌС‚Р°Рї Р”Рћ
+	 * @param docType - С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return РѕР±СЉРµРєС‚-РєРѕРїРёСЏ СЌС‚Р°РїР° Р”Рћ
 	 */
 	protected DocProcessStage cloneDocProcessStage(DocProcessStage docProcessStage, DocType docType) {
 		AttributeMap initAttr = docProcessStage.getAllAttributes();
@@ -211,10 +211,10 @@ public class DocTypeServiceBean extends com.mg.framework.generic.AbstractPOJODat
 	}
 
 	/**
-	 * Выполнить копирование связей типов документов с классами документов
-	 * @param entity - тип документа
-	 * @param entityClone - копия типа документа
-	 * @return список объектов-копий связей типов документов с классами документов
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРїРёСЂРѕРІР°РЅРёРµ СЃРІСЏР·РµР№ С‚РёРїРѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ СЃ РєР»Р°СЃСЃР°РјРё РґРѕРєСѓРјРµРЅС‚РѕРІ
+	 * @param entity - С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param entityClone - РєРѕРїРёСЏ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return СЃРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ-РєРѕРїРёР№ СЃРІСЏР·РµР№ С‚РёРїРѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ СЃ РєР»Р°СЃСЃР°РјРё РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 */
 	protected List<DocTypeDocSectionLink> cloneDocTypeDocSectionLink(DocType entity, DocType entityClone) {
 		DocTypeDocSectionLink[][] docTypeDocSectionLinks = loadDocSectionLinks(entity);
@@ -232,10 +232,10 @@ public class DocTypeServiceBean extends com.mg.framework.generic.AbstractPOJODat
 	}
 
 	/**
-	 * Выполнить копирование прав доступа на этап ДО
-	 * @param docProcessStageRights - права доступа на этап ДО
-	 * @param docProcessStage - этап ДО
-	 * @return список прав доступа на этап ДО
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРїРёСЂРѕРІР°РЅРёРµ РїСЂР°РІ РґРѕСЃС‚СѓРїР° РЅР° СЌС‚Р°Рї Р”Рћ
+	 * @param docProcessStageRights - РїСЂР°РІР° РґРѕСЃС‚СѓРїР° РЅР° СЌС‚Р°Рї Р”Рћ
+	 * @param docProcessStage - СЌС‚Р°Рї Р”Рћ
+	 * @return СЃРїРёСЃРѕРє РїСЂР°РІ РґРѕСЃС‚СѓРїР° РЅР° СЌС‚Р°Рї Р”Рћ
 	 */
 	protected List<DocProcessStageRights> cloneUserGrants(Set<DocProcessStageRights> docProcessStageRights, DocProcessStage docProcessStage) {
 		List<DocProcessStageRights> clonedDocProcessStageRights = new ArrayList<DocProcessStageRights>();
@@ -249,9 +249,9 @@ public class DocTypeServiceBean extends com.mg.framework.generic.AbstractPOJODat
 	}
 
 	/**
-	 * Получить список этапов ДО для типа документа
-	 * @param docType - тип документа
-	 * @return список этапов ДО для типа документа
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє СЌС‚Р°РїРѕРІ Р”Рћ РґР»СЏ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docType - С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return СЃРїРёСЃРѕРє СЌС‚Р°РїРѕРІ Р”Рћ РґР»СЏ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected List<DocProcessStage> getDocProcessStages(DocType docType) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(DocProcessStage.class)

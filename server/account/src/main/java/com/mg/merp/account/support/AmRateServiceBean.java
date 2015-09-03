@@ -31,7 +31,7 @@ import com.mg.merp.account.model.AmCode;
 import com.mg.merp.account.model.AmRate;
 
 /**
- * Реализация бизнес-компонента "Нормы амортизации" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќРѕСЂРјС‹ Р°РјРѕСЂС‚РёР·Р°С†РёРё" 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -49,12 +49,12 @@ public class AmRateServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 	
 	/**
-	 * Возвращает норму амортизации в процентах
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РЅРѕСЂРјСѓ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ РїСЂРѕС†РµРЅС‚Р°С…
 	 * 
 	 * @param amCode
-	 * 			- шифр нормы амортизации
+	 * 			- С€РёС„СЂ РЅРѕСЂРјС‹ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * @param aMonth
-	 * 				- месяц начисления амортизации в абсолютном исчислении (год*12 + месяц)
+	 * 				- РјРµСЃСЏС† РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ Р°Р±СЃРѕР»СЋС‚РЅРѕРј РёСЃС‡РёСЃР»РµРЅРёРё (РіРѕРґ*12 + РјРµСЃСЏС†)
 	 * @return
 	 */
 	protected BigDecimal doGetAmortRate(AmCode amCode, Short month) {
@@ -80,12 +80,12 @@ public class AmRateServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Возращает предполагаемый объем продукции
+	 * Р’РѕР·СЂР°С‰Р°РµС‚ РїСЂРµРґРїРѕР»Р°РіР°РµРјС‹Р№ РѕР±СЉРµРј РїСЂРѕРґСѓРєС†РёРё
 	 * 
 	 * @param amCode
-	 * 			- шифр нормы амортизации
+	 * 			- С€РёС„СЂ РЅРѕСЂРјС‹ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * @param aMonth
-	 * 				- месяц начисления амортизации в абсолютном исчислении (год*12 + месяц)
+	 * 				- РјРµСЃСЏС† РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ Р°Р±СЃРѕР»СЋС‚РЅРѕРј РёСЃС‡РёСЃР»РµРЅРёРё (РіРѕРґ*12 + РјРµСЃСЏС†)
 	 * @return
 	 */
 	protected BigDecimal doGetVolumeProd(AmCode amCode, Short month) {

@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Состояние действия
+ * РЎРѕСЃС‚РѕСЏРЅРёРµ РґРµР№СЃС‚РІРёСЏ
  * 
  * @author leonova
  * @version $Id: OperationState.java,v 1.1 2006/03/30 11:24:41 safonov Exp $
@@ -32,19 +32,19 @@ public enum OperationState {
 	OPSTATENONO,
 	
 	/**
-	 * Принято
+	 * РџСЂРёРЅСЏС‚Рѕ
 	 */
 	@EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationState.OpStateAccepted")
 	OPSTATEACCEPTED,
 	
 	/**
-	 * Отклонено
+	 * РћС‚РєР»РѕРЅРµРЅРѕ
 	 */
 	@EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationState.OpStateDenied")
 	OPSTATEDENIED,
 	
 	/**
-	 * Перенесено
+	 * РџРµСЂРµРЅРµСЃРµРЅРѕ
 	 */
 	@EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationState.OpStateMoved")
 	OPSTATEMOVED

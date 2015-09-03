@@ -17,7 +17,7 @@ package com.mg.merp.baiengine;
 import com.mg.framework.api.ApplicationException;
 
 /**
- * Класс ИС машины бизнес расширений системы
+ * РљР»Р°СЃСЃ РРЎ РјР°С€РёРЅС‹ Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёР№ СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: BusinessAddinException.java,v 1.1 2006/10/12 12:02:05 safonov Exp $

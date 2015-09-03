@@ -41,7 +41,7 @@ import com.mg.merp.salary.model.TariffingInFee;
 import com.mg.merp.salary.model.TripleSumSign;
 
 /**
- * Реализация бизнес-компонента "Начисления / удержания" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќР°С‡РёСЃР»РµРЅРёСЏ / СѓРґРµСЂР¶Р°РЅРёСЏ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -111,16 +111,16 @@ public class FeeRefServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	
 		AttributeMap initAttributes = new LocalDataTransferObject();
 		initAttributes.put(FEE_REF_ATTRIBUTE_NAME, entityClone);
-		// копирование параметров
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ
 		for (FeeRefParam feeRefParam : feeRefParamService.findByCriteria(Restrictions.eq(FEE_REF_ATTRIBUTE_NAME, entity)))
 			feeRefParamService.clone(feeRefParam, true, initAttributes);
-		// копирование используемых тарифов
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ РёСЃРїРѕР»СЊР·СѓРµРјС‹С… С‚Р°СЂРёС„РѕРІ
 		for (TariffingInFee tariffingInFee : tariffingInFeeService.findByCriteria(Restrictions.eq(FEE_REF_ATTRIBUTE_NAME, entity)))
 			tariffingInFeeService.clone(tariffingInFee, true, initAttributes);
-		// копирование входящих н/у
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ РІС…РѕРґСЏС‰РёС… РЅ/Сѓ
 		for (IncludedFee includedFee : includedFeeService.findByCriteria(Restrictions.eq(FEE_REF_ATTRIBUTE_NAME, entity)))
 			includedFeeService.clone(includedFee, true, initAttributes);
-		// копирование вытесняемых н/у
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ РІС‹С‚РµСЃРЅСЏРµРјС‹С… РЅ/Сѓ
 		for (ReplacedFee replacedFee : replacedFeeService.findByCriteria(Restrictions.eq(FEE_REF_ATTRIBUTE_NAME, entity)))
 			replacedFeeService.clone(replacedFee, true, initAttributes);
 	}

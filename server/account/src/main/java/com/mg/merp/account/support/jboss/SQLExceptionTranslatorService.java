@@ -25,7 +25,7 @@ import com.mg.framework.service.jboss.DefaultSQLExceptionTranslatorServiceMBean;
 import com.mg.merp.account.support.SQLExceptionTranslatorImpl;
 
 /**
- * Реализация сервиса транслятора SQL ИС модуля бухгалтерия
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° С‚СЂР°РЅСЃР»СЏС‚РѕСЂР° SQL РРЎ РјРѕРґСѓР»СЏ Р±СѓС…РіР°Р»С‚РµСЂРёСЏ
  * 
  * @author Artem V. Sharapov
  * @version $Id: SQLExceptionTranslatorService.java,v 1.1 2009/03/04 12:38:48 sharapov Exp $

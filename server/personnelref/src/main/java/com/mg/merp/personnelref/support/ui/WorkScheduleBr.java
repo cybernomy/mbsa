@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.personnelref.model.WorkSchedule;
 
 /**
- * Браузер графиков работ
+ * Р‘СЂР°СѓР·РµСЂ РіСЂР°С„РёРєРѕРІ СЂР°Р±РѕС‚
  * 
  * @author leonova
  * @version $Id: WorkScheduleBr.java,v 1.1 2006/09/04 13:03:50 leonova Exp $ 

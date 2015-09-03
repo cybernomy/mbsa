@@ -25,7 +25,7 @@ import com.mg.merp.mfreference.model.BomRoute;
 import com.mg.merp.mfreference.model.ManufactureConfig;
 
 /**
- * Бизнес-компонент "Операции" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћРїРµСЂР°С†РёРё" 
  * 
  * @author leonova
  * @version $Id: BOMRouteServiceBean.java,v 1.8 2009/03/05 12:36:48 safonov Exp $

@@ -34,7 +34,7 @@ import com.mg.merp.finance.model.OperationModel;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Браузер образцов финансовых операций
+ * Р‘СЂР°СѓР·РµСЂ РѕР±СЂР°Р·С†РѕРІ С„РёРЅР°РЅСЃРѕРІС‹С… РѕРїРµСЂР°С†РёР№
  * 
  * @author leonova
  * @version $Id: FinOperModelBr.java,v 1.4 2006/10/26 06:37:15 leonova Exp $

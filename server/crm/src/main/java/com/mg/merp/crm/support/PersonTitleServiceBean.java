@@ -24,7 +24,7 @@ import com.mg.merp.crm.PersonTitleServiceLocal;
 import com.mg.merp.crm.model.PersonTitle;
 
 /**
- * Бизнес-компонент "Обращения к человеку" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°С‰РµРЅРёСЏ Рє С‡РµР»РѕРІРµРєСѓ" 
  * 
  * @author leonova
  * @version $Id: PersonTitleServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

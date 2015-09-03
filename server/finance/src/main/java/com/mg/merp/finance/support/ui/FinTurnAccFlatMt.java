@@ -29,7 +29,7 @@ import com.mg.merp.finance.model.Account;
 import com.mg.merp.finance.model.Analytics;
 
 /**
- * Контроллер формы поддержки "Остататки и обороты по счетам финансового учета"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РћСЃС‚Р°С‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ СЃС‡РµС‚Р°Рј С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: FinTurnAccFlatMt.java,v 1.1 2009/02/16 07:46:40 sharapov Exp $

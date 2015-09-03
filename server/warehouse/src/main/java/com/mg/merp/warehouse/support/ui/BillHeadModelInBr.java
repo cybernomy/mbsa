@@ -27,7 +27,7 @@ import com.mg.merp.reference.support.ReferenceUtils;
 import com.mg.merp.warehouse.BillHeadModelInServiceLocal;
 
 /**
- * Контроллер формы списка образцов входящих счетов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ РІС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: BillHeadModelInBr.java,v 1.4 2006/09/12 10:49:56 leonova Exp $

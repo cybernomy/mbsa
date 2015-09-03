@@ -21,7 +21,7 @@ import com.mg.merp.warehouse.WarehouseBatchHistoryServiceLocal;
 import com.mg.merp.warehouse.model.StockBatchHistory;
 
 /**
- * Реализация бизнес-компонента "История фактического движения по партии"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РСЃС‚РѕСЂРёСЏ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РґРІРёР¶РµРЅРёСЏ РїРѕ РїР°СЂС‚РёРё"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseBatchHistoryServiceBean.java,v 1.3 2007/07/31 10:29:14 safonov Exp $

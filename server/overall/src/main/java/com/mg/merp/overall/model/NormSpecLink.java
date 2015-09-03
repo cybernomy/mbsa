@@ -17,7 +17,7 @@ package com.mg.merp.overall.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Связь спецификации нормы выдачи и КТУ"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРІСЏР·СЊ СЃРїРµС†РёС„РёРєР°С†РёРё РЅРѕСЂРјС‹ РІС‹РґР°С‡Рё Рё РљРўРЈ"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: NormSpecLink.java,v 1.3 2008/06/30 04:15:16 alikaev Exp $

@@ -43,7 +43,7 @@ import com.mg.merp.warehouse.support.ui.SelectSerialNumberDlg;
 import com.mg.merp.warehouse.support.ui.SerialNumberModelItem;
 
 /**
- * Реализация стандартной стратегии обработки/отката серийных номеров
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃС‚Р°РЅРґР°СЂС‚РЅРѕР№ СЃС‚СЂР°С‚РµРіРёРё РѕР±СЂР°Р±РѕС‚РєРё/РѕС‚РєР°С‚Р° СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
  * 
  * @author Artem V. Sharapov
  * @version $Id: DefaultSerialNumberProccessStrategy.java,v 1.2 2008/07/15 08:24:22 safonov Exp $
@@ -70,14 +70,14 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 	}
 
 	/**
-	 * Выполнить обработку серийных номеров при приходовании на склад
-	 * @param docSpec - позиция спецификации
-	 * @param stockBatch - партия
-	 * @param processListener - слушатель складского процессора
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РѕР±СЂР°Р±РѕС‚РєСѓ СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ РїСЂРё РїСЂРёС…РѕРґРѕРІР°РЅРёРё РЅР° СЃРєР»Р°Рґ
+	 * @param docSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param stockBatch - РїР°СЂС‚РёСЏ
+	 * @param processListener - СЃР»СѓС€Р°С‚РµР»СЊ СЃРєР»Р°РґСЃРєРѕРіРѕ РїСЂРѕС†РµСЃСЃРѕСЂР°
 	 */
 	protected void doProccessOnReceipt(WarehouseProcessDocumentLineData docLineData, final StockBatch stockBatch, final WarehouseProcessListener processListener) {
 		final DocSpec docSpec = docLineData.getDocumentSpec();
-		// если для товара в позиции спецификации не указано использование серийных номеров, то завершаем обработку 
+		// РµСЃР»Рё РґР»СЏ С‚РѕРІР°СЂР° РІ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РЅРµ СѓРєР°Р·Р°РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ, С‚Рѕ Р·Р°РІРµСЂС€Р°РµРј РѕР±СЂР°Р±РѕС‚РєСѓ 
 		if(!docSpec.getCatalog().getUseSerialNum())
 			processListener.completed();
 		else {
@@ -87,7 +87,7 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 				necessarySerialNumbersQuantity = docSpec.getQuantity().intValue();
 			necessarySerialNumbersQuantity = necessarySerialNumbersQuantity - avalibleSerialNumberList.size(); 
 
-			// если для позиции спецификации присутствуют не все серийные номера, то запускаем диалог ввода серийных номеров
+			// РµСЃР»Рё РґР»СЏ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂРёСЃСѓС‚СЃС‚РІСѓСЋС‚ РЅРµ РІСЃРµ СЃРµСЂРёР№РЅС‹Рµ РЅРѕРјРµСЂР°, С‚Рѕ Р·Р°РїСѓСЃРєР°РµРј РґРёР°Р»РѕРі РІРІРѕРґР° СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
 			if(necessarySerialNumbersQuantity > 0) {
 				final InputSerialNumberDlg inputSerialNumberDialog = (InputSerialNumberDlg) ApplicationDictionaryLocator.locate().getWindow(INPUT_DIALOG_NAME);
 				inputSerialNumberDialog.addOkActionListener(new FormActionListener() {
@@ -112,7 +112,7 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 					}
 				});
 				inputSerialNumberDialog.execute(necessarySerialNumbersQuantity, docSpec.getCatalog().getCode(), docSpec.getCatalog().getFullName(), stockBatch.getNumberLot(), stockBatch.getVendorLot());
-			} else { // если для позиции спецификации присутствуют все серийные номера, то создаем список серийных номеров, принадлежащих позиции спецификации
+			} else { // РµСЃР»Рё РґР»СЏ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂРёСЃСѓС‚СЃС‚РІСѓСЋС‚ РІСЃРµ СЃРµСЂРёР№РЅС‹Рµ РЅРѕРјРµСЂР°, С‚Рѕ СЃРѕР·РґР°РµРј СЃРїРёСЃРѕРє СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ, РїСЂРёРЅР°РґР»РµР¶Р°С‰РёС… РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
 				createSerialNumbers(initializeSerialNumbers(avalibleSerialNumberList, stockBatch, docSpec.getId()));
 				processListener.completed();
 			}
@@ -120,11 +120,11 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 	}
 
 	/**
-	 * Инициализировать список серийных номеров
-	 * @param numberList - список серийных номеров
-	 * @param stockBatch - складская партия
-	 * @param incomeDocSpecId - иденификатор позиции спецификации документа прихода
-	 * @return список серийных номеров
+	 * РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ СЃРїРёСЃРѕРє СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
+	 * @param numberList - СЃРїРёСЃРѕРє СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
+	 * @param stockBatch - СЃРєР»Р°РґСЃРєР°СЏ РїР°СЂС‚РёСЏ
+	 * @param incomeDocSpecId - РёРґРµРЅРёС„РёРєР°С‚РѕСЂ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р° РїСЂРёС…РѕРґР°
+	 * @return СЃРїРёСЃРѕРє СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
 	 */
 	private List<SerialNum> initializeSerialNumbers(List<String> numberList, StockBatch stockBatch, Integer incomeDocSpecId) {
 		List<SerialNum> serialNumbers = new ArrayList<SerialNum>();
@@ -140,8 +140,8 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 	}
 
 	/**
-	 * Создать серийные номера
-	 * @param serialNumbers - список серийных номеров
+	 * РЎРѕР·РґР°С‚СЊ СЃРµСЂРёР№РЅС‹Рµ РЅРѕРјРµСЂР°
+	 * @param serialNumbers - СЃРїРёСЃРѕРє СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
 	 */
 	private void createSerialNumbers(List<SerialNum> serialNumbers) {
 		for (SerialNum serialNumber : serialNumbers)
@@ -149,9 +149,9 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 	}
 
 	/**
-	 * Получить список серийных номеров, принадлежащих позиции спецификации
-	 * @param docSpec - позиция спецификации
-	 * @return список серийных номеров, принадлежащих позиции спецификации
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ, РїСЂРёРЅР°РґР»РµР¶Р°С‰РёС… РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param docSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @return СЃРїРёСЃРѕРє СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ, РїСЂРёРЅР°РґР»РµР¶Р°С‰РёС… РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	private List<String> getDocSpecSerialNumberList(DocSpec docSpec) {
 		return ormTemplate.findByCriteria(OrmTemplate.createCriteria(DocumentSpecSerialNum.class)
@@ -168,14 +168,14 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 	}
 
 	/**
-	 * Выполнить обработку серийных номеров при списании товара с партии
-	 * @param docLineData - данные по спецификации для отработки
-	 * @param stockBatches - список партий подлежащих списанию
-	 * @param processListener - слушатель складского процессора
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РѕР±СЂР°Р±РѕС‚РєСѓ СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ РїСЂРё СЃРїРёСЃР°РЅРёРё С‚РѕРІР°СЂР° СЃ РїР°СЂС‚РёРё
+	 * @param docLineData - РґР°РЅРЅС‹Рµ РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
+	 * @param stockBatches - СЃРїРёСЃРѕРє РїР°СЂС‚РёР№ РїРѕРґР»РµР¶Р°С‰РёС… СЃРїРёСЃР°РЅРёСЋ
+	 * @param processListener - СЃР»СѓС€Р°С‚РµР»СЊ СЃРєР»Р°РґСЃРєРѕРіРѕ РїСЂРѕС†РµСЃСЃРѕСЂР°
 	 */
 	protected void doProccessOnIssue(WarehouseProcessDocumentLineData docLineData, List<StockBatch> stockBatches, final WarehouseProcessListener processListener) {
 		final DocSpec docSpec = docLineData.getDocumentSpec();
-		// если для товара в позиции спецификации не указано использование серийных номеров, то завершаем обработку 
+		// РµСЃР»Рё РґР»СЏ С‚РѕРІР°СЂР° РІ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РЅРµ СѓРєР°Р·Р°РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ, С‚Рѕ Р·Р°РІРµСЂС€Р°РµРј РѕР±СЂР°Р±РѕС‚РєСѓ 
 		if(!docSpec.getCatalog().getUseSerialNum() || docSpec.getQuantity() == null || MathUtils.compareToZero(docSpec.getQuantity()) == 0)
 			processListener.completed();
 		else {
@@ -185,10 +185,10 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 	}
 
 	/**
-	 * Выполнить проход по партиям и обработку серийных номеров
-	 * @param stockBatchesIterator - итератор партий
-	 * @param docSpec - позиция спецификации документа
-	 * @param processListener - слушатель складского процессора
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РїСЂРѕС…РѕРґ РїРѕ РїР°СЂС‚РёСЏРј Рё РѕР±СЂР°Р±РѕС‚РєСѓ СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
+	 * @param stockBatchesIterator - РёС‚РµСЂР°С‚РѕСЂ РїР°СЂС‚РёР№
+	 * @param docSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param processListener - СЃР»СѓС€Р°С‚РµР»СЊ СЃРєР»Р°РґСЃРєРѕРіРѕ РїСЂРѕС†РµСЃСЃРѕСЂР°
 	 */
 	private void iterateOverStockBatches(final Iterator<StockBatch> stockBatchesIterator, final DocSpec docSpec, final WarehouseProcessListener processListener) {
 		if(!stockBatchesIterator.hasNext())
@@ -226,9 +226,9 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 	}
 
 	/**
-	 * Выполнить копирование сер.номеров со склада в позицию спецификации документа
-	 * @param numberList - список номеров
-	 * @param docSpec - позиция спецификации документа
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРїРёСЂРѕРІР°РЅРёРµ СЃРµСЂ.РЅРѕРјРµСЂРѕРІ СЃРѕ СЃРєР»Р°РґР° РІ РїРѕР·РёС†РёСЋ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param numberList - СЃРїРёСЃРѕРє РЅРѕРјРµСЂРѕРІ
+	 * @param docSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	private void copySerialNumbersFromWarehouseToDocSpec(List<String> numberList, DocSpec docSpec, StockBatch stockBatch) {
 		List<DocumentSpecSerialNum> documentSpecSerialNumberList = new ArrayList<DocumentSpecSerialNum>();
@@ -242,11 +242,11 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 	}
 
 	/**
-	 * Инициализировать сер.номер позиции спецификации документа
-	 * @param docSpec - позиция спецификации документа
-	 * @param number - номер
-	 * @param documentSpecSerialNumberService - сервис сер.номера позиции спецификации документа
-	 * @return сер.номер позиции спецификации документа
+	 * РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ СЃРµСЂ.РЅРѕРјРµСЂ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param number - РЅРѕРјРµСЂ
+	 * @param documentSpecSerialNumberService - СЃРµСЂРІРёСЃ СЃРµСЂ.РЅРѕРјРµСЂР° РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return СЃРµСЂ.РЅРѕРјРµСЂ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	private DocumentSpecSerialNum initializeDocumentSpecSerialNumber(DocSpec docSpec, String number) {
 		DocumentSpecSerialNum documentSpecSerialNumber = documentSpecSerialNumberService.initialize();
@@ -256,9 +256,9 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 	}
 
 	/**
-	 * Создать сер.номера позиции спецификации документа
-	 * @param documentSpecSerialNumberList - список сер.номеров позиции спецификации документа
-	 * @param documentSpecSerialNumberService - сервис сер.номера позиции спецификации документа
+	 * РЎРѕР·РґР°С‚СЊ СЃРµСЂ.РЅРѕРјРµСЂР° РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param documentSpecSerialNumberList - СЃРїРёСЃРѕРє СЃРµСЂ.РЅРѕРјРµСЂРѕРІ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param documentSpecSerialNumberService - СЃРµСЂРІРёСЃ СЃРµСЂ.РЅРѕРјРµСЂР° РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	private void createDocumentSpecSerialNumbers(List<DocumentSpecSerialNum> documentSpecSerialNumberList) {
 		for (DocumentSpecSerialNum documentSpecSerialNumber : documentSpecSerialNumberList)
@@ -267,9 +267,9 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 	}
 
 	/**
-	 * Получить список складских серийных номеров партии для отображения в диалоге выбора
-	 * @param stockBatch - партия
-	 * @return список складских серийных номеров партии
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє СЃРєР»Р°РґСЃРєРёС… СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ РїР°СЂС‚РёРё РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РІ РґРёР°Р»РѕРіРµ РІС‹Р±РѕСЂР°
+	 * @param stockBatch - РїР°СЂС‚РёСЏ
+	 * @return СЃРїРёСЃРѕРє СЃРєР»Р°РґСЃРєРёС… СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ РїР°СЂС‚РёРё
 	 */
 	private List<SerialNumberModelItem> getWarehouseSerialNumberModelItemList(StockBatch stockBatch) {
 		return ormTemplate.findByCriteria(OrmTemplate.createCriteria(SerialNum.class)
@@ -288,9 +288,9 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 	}
 
 	/**
-	 * Получить список складских серийных номеров партии
-	 * @param stockBatch - партия
-	 * @return список складских серийных номеров партии
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє СЃРєР»Р°РґСЃРєРёС… СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ РїР°СЂС‚РёРё
+	 * @param stockBatch - РїР°СЂС‚РёСЏ
+	 * @return СЃРїРёСЃРѕРє СЃРєР»Р°РґСЃРєРёС… СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ РїР°СЂС‚РёРё
 	 */
 	private List<String> getWarehouseSerialNumbersList(StockBatch stockBatch) {
 		return ormTemplate.findByCriteria(OrmTemplate.createCriteria(SerialNum.class)
@@ -307,8 +307,8 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 	}
 
 	/**
-	 * Выполнить откат обработки серийных номеров при приходовании товара на склад
-	 * @param history - история
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РѕС‚РєР°С‚ РѕР±СЂР°Р±РѕС‚РєРё СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ РїСЂРё РїСЂРёС…РѕРґРѕРІР°РЅРёРё С‚РѕРІР°СЂР° РЅР° СЃРєР»Р°Рґ
+	 * @param history - РёСЃС‚РѕСЂРёСЏ
 	 */
 	protected void doRollbackOnReceipt(StockBatchHistory history) {
 		ormTemplate.bulkUpdateByNamedQuery("Warehouse.DefaultSerialNumberProccessStrategy.deleteReceiptWarehouseSerialNumbers", //$NON-NLS-1$
@@ -324,8 +324,8 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
 	}
 
 	/**
-	 * Выполнить откат обработки серийных номеров при списании товара со склада
-	 * @param history - история
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РѕС‚РєР°С‚ РѕР±СЂР°Р±РѕС‚РєРё СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ РїСЂРё СЃРїРёСЃР°РЅРёРё С‚РѕРІР°СЂР° СЃРѕ СЃРєР»Р°РґР°
+	 * @param history - РёСЃС‚РѕСЂРёСЏ
 	 */
 	protected void doRollbackOnIssue(StockBatchHistory history) {
 		ormTemplate.bulkUpdateByNamedQuery("Warehouse.DefaultSerialNumberProccessStrategy.updateIssueWarehouseSerialNumbers", //$NON-NLS-1$

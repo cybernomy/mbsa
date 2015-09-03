@@ -17,7 +17,7 @@ package com.mg.merp.account.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы поддержки спецификации авансовых отчетов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёРё Р°РІР°РЅСЃРѕРІС‹С… РѕС‚С‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: AdvanceRepSpecMt.java,v 1.3 2006/08/22 06:44:55 leonova Exp $

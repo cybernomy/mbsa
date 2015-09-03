@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.WidgetFactory;
 import com.mg.framework.support.ui.ulc.ULCWidgetFactory;
 
 /**
- * Фабрика фабрики элементов пользовательского интерфейса
+ * Р¤Р°Р±СЂРёРєР° С„Р°Р±СЂРёРєРё СЌР»РµРјРµРЅС‚РѕРІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: WidgetFactoryFactory.java,v 1.2 2006/11/11 10:38:12 safonov Exp $
@@ -28,18 +28,18 @@ public class WidgetFactoryFactory {
 	private WidgetFactory defaultFactory = new ULCWidgetFactory();
 	
 	/**
-	 * получить объект одиночку
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕР±СЉРµРєС‚ РѕРґРёРЅРѕС‡РєСѓ
 	 * 
-	 * @return	экземпляр фабрики
+	 * @return	СЌРєР·РµРјРїР»СЏСЂ С„Р°Р±СЂРёРєРё
 	 */
 	public static WidgetFactoryFactory getInstance() {
 		return instance;
 	}
 	
 	/**
-	 * получить фабрику элементов пользовательского интерфейса
+	 * РїРѕР»СѓС‡РёС‚СЊ С„Р°Р±СЂРёРєСѓ СЌР»РµРјРµРЅС‚РѕРІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
 	 * 
-	 * @return	фабрика элементов пользовательского интерфейса
+	 * @return	С„Р°Р±СЂРёРєР° СЌР»РµРјРµРЅС‚РѕРІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
 	 */
 	public WidgetFactory getDefaultWidgetFactory() {
 		return defaultFactory;

@@ -20,7 +20,7 @@ import com.mg.framework.service.jboss.DataBusinessServiceInterceptorManagerServi
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Локатор менеджера перехватчиков действий бизнес-компонентов управляющих данными
+ * Р›РѕРєР°С‚РѕСЂ РјРµРЅРµРґР¶РµСЂР° РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РґРµР№СЃС‚РІРёР№ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ СѓРїСЂР°РІР»СЏСЋС‰РёС… РґР°РЅРЅС‹РјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: DataBusinessServiceInterceptorManagerLocator.java,v 1.1 2007/12/13 13:06:56 safonov Exp $
@@ -29,9 +29,9 @@ public class DataBusinessServiceInterceptorManagerLocator {
     private static volatile DataBusinessServiceInterceptorManager instance = null;
     
     /**
-     * получить менеджер
+     * РїРѕР»СѓС‡РёС‚СЊ РјРµРЅРµРґР¶РµСЂ
      * 
-     * @return	менеджер
+     * @return	РјРµРЅРµРґР¶РµСЂ
      */
     public static DataBusinessServiceInterceptorManager locate() {
         if (instance == null)

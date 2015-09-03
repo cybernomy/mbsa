@@ -17,7 +17,7 @@ package com.mg.merp.warehouse.model;
 import java.math.BigDecimal;
 
 /**
- * Модель даныых "Расхождения по позиции спецификации инвентаризационного акта"
+ * РњРѕРґРµР»СЊ РґР°РЅС‹С‹С… "Р Р°СЃС…РѕР¶РґРµРЅРёСЏ РїРѕ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРѕРЅРЅРѕРіРѕ Р°РєС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: InventoryActSpecDifferencesResult.java,v 1.1 2007/06/18 12:50:37 sharapov Exp $

@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.mfreference.model.CostCategories;
 
 /**
- * Браузер категорий затрат
+ * Р‘СЂР°СѓР·РµСЂ РєР°С‚РµРіРѕСЂРёР№ Р·Р°С‚СЂР°С‚
  * 
  * @author leonova
  * @version $Id: CostCategoriesBr.java,v 1.1 2006/08/24 12:20:15 leonova Exp $ 

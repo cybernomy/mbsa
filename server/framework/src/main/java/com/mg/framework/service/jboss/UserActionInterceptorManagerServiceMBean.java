@@ -19,8 +19,8 @@ import org.jboss.system.ServiceMBean;
 import com.mg.framework.api.UserActionInterceptorManager;
 
 /**
- * Сервис менеджера перехватчиков действий интерактивной поддержки (добавление, изменение, копирование, просмотр)
- * бизнес-компонентов
+ * РЎРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РґРµР№СЃС‚РІРёР№ РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕР№ РїРѕРґРґРµСЂР¶РєРё (РґРѕР±Р°РІР»РµРЅРёРµ, РёР·РјРµРЅРµРЅРёРµ, РєРѕРїРёСЂРѕРІР°РЅРёРµ, РїСЂРѕСЃРјРѕС‚СЂ)
+ * Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: UserActionInterceptorManagerServiceMBean.java,v 1.2 2006/10/26 13:27:52 safonov Exp $
@@ -28,7 +28,7 @@ import com.mg.framework.api.UserActionInterceptorManager;
 public interface UserActionInterceptorManagerServiceMBean extends
         UserActionInterceptorManager, ServiceMBean {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:service=UserActionInterceptorManagerService";
 }

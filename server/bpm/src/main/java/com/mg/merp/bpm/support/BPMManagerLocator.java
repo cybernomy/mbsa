@@ -26,9 +26,9 @@ public class BPMManagerLocator {
     private static volatile BPMManager instance = null;
     
     /**
-     * поиск сервиса
+     * РїРѕРёСЃРє СЃРµСЂРІРёСЃР°
      * 
-     * @return	сервис
+     * @return	СЃРµСЂРІРёСЃ
      */
     public static BPMManager locate() {
         if (instance == null)

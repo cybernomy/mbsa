@@ -17,7 +17,7 @@ package com.mg.framework.support.ui.widget;
 import com.mg.framework.support.ui.widget.tree.TreeNode;
 
 /**
- * ìîäåëü äåðåâà
+ * Ð¼Ð¾Ð´ÐµÐ»ÑŒ Ð´ÐµÑ€ÐµÐ²Ð°
  * 
  * @author Oleg V. Safonov
  * @version $Id: TreeModel.java,v 1.1 2006/06/26 11:47:21 safonov Exp $
@@ -25,9 +25,9 @@ import com.mg.framework.support.ui.widget.tree.TreeNode;
 public interface TreeModel {
 	
 	/**
-	 * ïîëó÷èòü êîðíåâîé óçåë
+	 * Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ñ‚ÑŒ ÐºÐ¾Ñ€Ð½ÐµÐ²Ð¾Ð¹ ÑƒÐ·ÐµÐ»
 	 * 
-	 * @return êîðíåâîé óçåë
+	 * @return ÐºÐ¾Ñ€Ð½ÐµÐ²Ð¾Ð¹ ÑƒÐ·ÐµÐ»
 	 */
 	TreeNode getRootNode();
 	
@@ -50,7 +50,7 @@ public interface TreeModel {
 	void removeTreeModelListener(TreeModelListener listener);
 	
 	/**
-	 * çàãðóçêà ìîäåëè
+	 * Ð·Ð°Ð³Ñ€ÑƒÐ·ÐºÐ° Ð¼Ð¾Ð´ÐµÐ»Ð¸
 	 *
 	 */
 	void load();

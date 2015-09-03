@@ -26,7 +26,7 @@ import com.mg.merp.crm.model.Problem;
 import com.mg.merp.crm.model.Solution;
 
 /**
- * Бизнес-компонент "Решения" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р РµС€РµРЅРёСЏ" 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

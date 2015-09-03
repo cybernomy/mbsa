@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.PhoneKind;
 
 /**
- * Браузер типов телефонных номеров
+ * Р‘СЂР°СѓР·РµСЂ С‚РёРїРѕРІ С‚РµР»РµС„РѕРЅРЅС‹С… РЅРѕРјРµСЂРѕРІ
  * 
  * @author leonova
  * @version $Id: PhoneKindBr.java,v 1.2 2006/08/11 07:28:48 leonova Exp $ 

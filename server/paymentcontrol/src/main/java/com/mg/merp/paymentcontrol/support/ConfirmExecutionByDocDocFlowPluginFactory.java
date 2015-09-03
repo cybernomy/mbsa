@@ -21,7 +21,7 @@ import com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory;
 import com.mg.merp.paymentcontrol.PaymentcontrolProcessorServiceLocal;
 
 /**
- * Реализация фабрики реализации этапа ДО "Подтверждение исполнения обязательства"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёРё СЌС‚Р°РїР° Р”Рћ "РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ConfirmExecutionByDocDocFlowPluginFactory.java,v 1.1 2007/06/01 07:15:12 sharapov Exp $

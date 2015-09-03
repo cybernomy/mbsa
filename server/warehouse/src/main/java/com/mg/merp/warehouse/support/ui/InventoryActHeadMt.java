@@ -50,7 +50,7 @@ import com.mg.merp.warehouse.model.InventoryActSpec;
 import com.mg.merp.warehouse.support.InventoryParametrs;
 
 /**
- * Контроллер формы поддержки актов инвентаризации
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р°РєС‚РѕРІ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InventoryActHeadMt.java,v 1.15 2009/02/05 10:03:53 sharapov Exp $
@@ -85,7 +85,7 @@ public class InventoryActHeadMt extends GoodsDocumentMaintenanceForm {
 			public void setValueAt(Object value, int row, int column) {
 				if (column == REAL_QUANTITY_COLUMN) {
 					Object[] item = getRowList().get(row);
-					//загружаем спецификацию для сохранения введенного фактического количества
+					//Р·Р°РіСЂСѓР¶Р°РµРј СЃРїРµС†РёС„РёРєР°С†РёСЋ РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ РІРІРµРґРµРЅРЅРѕРіРѕ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РєРѕР»РёС‡РµСЃС‚РІР°
 					InventoryActSpec docSpec = inventoryActSpecService.load((Integer) item[0]);
 					item[REAL_QUANTITY_COLUMN] = (BigDecimal) value;
 					docSpec.setRealQuantity((BigDecimal) value);
@@ -275,9 +275,9 @@ public class InventoryActHeadMt extends GoodsDocumentMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Провести инвентаризацию"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџСЂРѕРІРµСЃС‚Рё РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёСЋ"
 	 * 
-	 * @param event - событие
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionExecuteInventarization(WidgetEvent event) {
 		final WarehouseInventoryParamsDlg dialog = (WarehouseInventoryParamsDlg) UIProducer.produceForm("com/mg/merp/warehouse/resources/WarehouseInventoryParamsDlg.mfd.xml"); //$NON-NLS-1$

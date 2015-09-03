@@ -17,8 +17,8 @@ package com.mg.framework.generic.ui;
 import com.mg.framework.support.ui.widget.TableColumnModel;
 
 /**
- * Базовый класс модели таблицы поддерживающий список столбцов установленных в описателе
- * форм
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РјРѕРґРµР»Рё С‚Р°Р±Р»РёС†С‹ РїРѕРґРґРµСЂР¶РёРІР°СЋС‰РёР№ СЃРїРёСЃРѕРє СЃС‚РѕР»Р±С†РѕРІ СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹С… РІ РѕРїРёСЃР°С‚РµР»Рµ
+ * С„РѕСЂРј
  * 
  * @author Oleg V. Safonov
  * @version $Id: ColumnsTableModel.java,v 1.1 2007/05/28 13:31:12 safonov Exp $

@@ -42,7 +42,7 @@ import com.mg.merp.personnelref.model.StaffListPosition;
 import com.mg.merp.personnelref.model.StaffListUnit;
 
 /**
- * Контроллер формы поиска сущностей "Должности в штатном расписании"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "Р”РѕР»Р¶РЅРѕСЃС‚Рё РІ С€С‚Р°С‚РЅРѕРј СЂР°СЃРїРёСЃР°РЅРёРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: StaffListPositionSearchForm.java,v 1.1 2007/07/10 07:34:05 sharapov Exp $
@@ -164,7 +164,7 @@ public class StaffListPositionSearchForm extends AbstractSearchForm {
 	}
 	
 	/**
-	 * Установить идентификатор штатного расписания для поиска должностей
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С€С‚Р°С‚РЅРѕРіРѕ СЂР°СЃРїРёСЃР°РЅРёСЏ РґР»СЏ РїРѕРёСЃРєР° РґРѕР»Р¶РЅРѕСЃС‚РµР№
 	 */
 	public void setStaffListId(Integer staffListId) {
 		this.staffListId = staffListId;

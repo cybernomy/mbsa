@@ -38,7 +38,7 @@ import com.mg.merp.warehouse.model.StockBatchHistoryKind;
 import com.mg.merp.warehouse.model.StockCard;
 
 /**
- * Стратегия создания складской партии "по-умолчанию"
+ * РЎС‚СЂР°С‚РµРіРёСЏ СЃРѕР·РґР°РЅРёСЏ СЃРєР»Р°РґСЃРєРѕР№ РїР°СЂС‚РёРё "РїРѕ-СѓРјРѕР»С‡Р°РЅРёСЋ"
  * 
  * @author Valentin A. Poroxnenko
  * @author Artem V. Sharapov
@@ -62,18 +62,18 @@ public class DefaultStockBatchCreateStrategy extends AbstractStockBatchCreateStr
 	}
 
 	/**
-	 * Изменить/создать партию
-	 * @param docLineData - данные по спецификации
-	 * @param stockCard - КСУ
-	 * @param stockBatch - складская партия
-	 * @param priceNat - цена
-	 * @param priceCur - цена в валюте
-	 * @param params - параметры этапа "отработка по складу"
-	 * @return партия
+	 * РР·РјРµРЅРёС‚СЊ/СЃРѕР·РґР°С‚СЊ РїР°СЂС‚РёСЋ
+	 * @param docLineData - РґР°РЅРЅС‹Рµ РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param stockCard - РљРЎРЈ
+	 * @param stockBatch - СЃРєР»Р°РґСЃРєР°СЏ РїР°СЂС‚РёСЏ
+	 * @param priceNat - С†РµРЅР°
+	 * @param priceCur - С†РµРЅР° РІ РІР°Р»СЋС‚Рµ
+	 * @param params - РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР° "РѕС‚СЂР°Р±РѕС‚РєР° РїРѕ СЃРєР»Р°РґСѓ"
+	 * @return РїР°СЂС‚РёСЏ
 	 */
 	private StockBatch modifyOrCreateStockBatch(WarehouseProcessDocumentLineData docLineData, StockCard stockCard, StockBatch stockBatch, BigDecimal priceNat, BigDecimal priceCur, DocFlowPluginInvokeParams params) {
 		if (stockBatch == null) {
-			// создаём новую партию
+			// СЃРѕР·РґР°С‘Рј РЅРѕРІСѓСЋ РїР°СЂС‚РёСЋ
 			DocSpec docSpec = docLineData.getDocumentSpec();
 			DocHead docHead = docSpec.getDocHead();
 			stockBatch = getWarehouseBatchService().initialize();
@@ -109,12 +109,12 @@ public class DefaultStockBatchCreateStrategy extends AbstractStockBatchCreateStr
 	}
 
 	/**
-	 * Найти партию
-	 * @param docSpec - позиция спецификации документа 
-	 * @param stockCard - КСУ
-	 * @param priceNat - цена
-	 * @param priceCur - цена в валюте
-	 * @return партия или <code>null</code> если не найдена
+	 * РќР°Р№С‚Рё РїР°СЂС‚РёСЋ
+	 * @param docSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р° 
+	 * @param stockCard - РљРЎРЈ
+	 * @param priceNat - С†РµРЅР°
+	 * @param priceCur - С†РµРЅР° РІ РІР°Р»СЋС‚Рµ
+	 * @return РїР°СЂС‚РёСЏ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅР°
 	 */
 	private StockBatch findStockBatch(DocSpec docSpec, StockCard stockCard, BigDecimal priceNat, BigDecimal priceCur) {
 		DocHead docHead = docSpec.getDocHead();
@@ -152,7 +152,7 @@ public class DefaultStockBatchCreateStrategy extends AbstractStockBatchCreateStr
 		history.setDocSpec(docLineData.getDocumentSpec());
 		history.setStockBatch(stockBatch);
 		history.setDateTime(DateTimeUtils.nowDate());
-		//приход
+		//РїСЂРёС…РѕРґ
 		history.setKind(StockBatchHistoryKind.IN);
 		history.setQuantity(docLineData.getQuantity1());
 		history.setProcessDate(params.getProcessDate());

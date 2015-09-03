@@ -17,7 +17,7 @@ import com.mg.framework.api.BusinessException;
 import com.mg.merp.warehouse.support.Messages;
 
 /**
- * ИС "Недостаточно позиций для списания со склада"
+ * РРЎ "РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїРѕР·РёС†РёР№ РґР»СЏ СЃРїРёСЃР°РЅРёСЏ СЃРѕ СЃРєР»Р°РґР°"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: NotEnoughDisposalPositionsException.java,v 1.2 2007/03/26 13:31:18 poroxnenko Exp $ 

@@ -24,7 +24,7 @@ import com.mg.merp.reference.CurrencyRateTypeServiceLocal;
 import com.mg.merp.reference.model.CurrencyRateType;
 
 /**
- * Бизнес-компонент "Типы курсов валют" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ РєСѓСЂСЃРѕРІ РІР°Р»СЋС‚" 
  * 
  * @author leonova
  * @version $Id: CurrencyRateTypeServiceBean.java,v 1.4 2006/10/20 05:53:02 leonova Exp $

@@ -21,7 +21,7 @@ import com.mg.framework.service.DefaultSQLExceptionTranslatorImpl;
 import com.mg.framework.service.SQLExceptionTranslatorManagerLocator;
 
 /**
- * Реализация сервиса регистрации стандартного обработчика SQL ИС
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° СЂРµРіРёСЃС‚СЂР°С†РёРё СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ РѕР±СЂР°Р±РѕС‚С‡РёРєР° SQL РРЎ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultSQLExceptionTranslatorService.java,v 1.1 2006/11/17 14:31:44 safonov Exp $

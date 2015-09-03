@@ -24,7 +24,7 @@ import com.mg.merp.reference.PartnEmplLinkServiceLocal;
 import com.mg.merp.reference.model.PartnEmplLink;
 
 /**
- * Реализация бизнес-компонента "Связи с сотрудниками"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРІСЏР·Рё СЃ СЃРѕС‚СЂСѓРґРЅРёРєР°РјРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov

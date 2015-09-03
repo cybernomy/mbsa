@@ -28,7 +28,7 @@ import com.mg.merp.warehouse.WarehouseDocumentHeadInServiceLocal;
 import com.mg.merp.warehouse.model.StockDocumentHead;
 
 /**
- * Контроллер формы списка приходных ордеров
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РїСЂРёС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: WarehouseDocumentInBr.java,v 1.11 2009/02/10 14:29:13 safonov Exp $

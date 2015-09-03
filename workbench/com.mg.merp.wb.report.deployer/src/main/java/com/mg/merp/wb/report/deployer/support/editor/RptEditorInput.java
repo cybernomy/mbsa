@@ -21,7 +21,7 @@ import com.mg.merp.wb.core.ui.editor.StandartEditorInput;
 import com.mg.merp.wb.report.deployer.DeployerPlugin;
 
 /**
- * Класс, реализующий {@link IEditorInput} для формы редактирования отчёта
+ * РљР»Р°СЃСЃ, СЂРµР°Р»РёР·СѓСЋС‰РёР№ {@link IEditorInput} РґР»СЏ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РѕС‚С‡С‘С‚Р°
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: RptEditorInput.java,v 1.2 2007/04/11 07:00:35 poroxnenko Exp $
@@ -36,7 +36,7 @@ public class RptEditorInput extends StandartEditorInput<RptMainTransfer> {
 	public static final String FORM_PART = "report.form.edit.part";
 
 	/**
-	 * Ссылка на файл с шаблоном
+	 * РЎСЃС‹Р»РєР° РЅР° С„Р°Р№Р» СЃ С€Р°Р±Р»РѕРЅРѕРј
 	 */
 	private IFile template;
 

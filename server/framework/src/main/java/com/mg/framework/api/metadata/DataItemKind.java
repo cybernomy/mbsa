@@ -17,7 +17,7 @@ package com.mg.framework.api.metadata;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Тип элемента данных
+ * РўРёРї СЌР»РµРјРµРЅС‚Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: DataItemKind.java,v 1.2 2008/03/03 13:11:02 safonov Exp $
@@ -25,12 +25,12 @@ import com.mg.framework.api.annotations.DataItemName;
 @DataItemName ("Core.DataItemKind")
 public enum DataItemKind {
 	/**
-	 * Используется домен
+	 * РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґРѕРјРµРЅ
 	 */
 	DOMAIN,
 	
 	/**
-	 * Ссылка на элемент данных
+	 * РЎСЃС‹Р»РєР° РЅР° СЌР»РµРјРµРЅС‚ РґР°РЅРЅС‹С…
 	 */
 	REFERENCE
 }

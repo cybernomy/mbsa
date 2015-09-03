@@ -37,7 +37,7 @@ import com.mg.merp.contract.model.PlanAndFactSumsByKindResult;
 import com.mg.merp.document.support.DocumentUtils;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Этапы контракта"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р­С‚Р°РїС‹ РєРѕРЅС‚СЂР°РєС‚Р°"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -249,8 +249,8 @@ public class ContractPhaseMt extends DefaultMaintenanceForm implements MasterMod
 	}
 	
 	/**
-	 * Сделать доступными/недоступными для редактирования поля с указанием типа, номера и даты документа
-	 * @param isEnabled - признак доступности для редактирования
+	 * РЎРґРµР»Р°С‚СЊ РґРѕСЃС‚СѓРїРЅС‹РјРё/РЅРµРґРѕСЃС‚СѓРїРЅС‹РјРё РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РїРѕР»СЏ СЃ СѓРєР°Р·Р°РЅРёРµРј С‚РёРїР°, РЅРѕРјРµСЂР° Рё РґР°С‚С‹ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param isEnabled - РїСЂРёР·РЅР°Рє РґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
 	 */
 	protected void setDocumentFieldsEnabled(boolean isEnabled) {
 		view.getWidget(DOCUMENT_TYPE_WIDGET_NAME).setReadOnly(!isEnabled);
@@ -259,8 +259,8 @@ public class ContractPhaseMt extends DefaultMaintenanceForm implements MasterMod
 	}
 
 	/**
-	 * Обработчик кнопки "Расчитать"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃС‡РёС‚Р°С‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionCalculateSum(WidgetEvent event) throws Exception {
@@ -278,7 +278,7 @@ public class ContractPhaseMt extends DefaultMaintenanceForm implements MasterMod
 	}
 	
 	private void refreshPlanAndFactSumElements() {
-		// расчет сумм по плану/фактически
+		// СЂР°СЃС‡РµС‚ СЃСѓРјРј РїРѕ РїР»Р°РЅСѓ/С„Р°РєС‚РёС‡РµСЃРєРё
 		PlanAndFactSumsByKindResult planAndFactSumsByKind = ((PhaseServiceLocal) getService()).getTotalPlanAndFactSumsByKind((Phase) getEntity());
 		
 		((Phase) getEntity()).setItemShippedPayment(planAndFactSumsByKind.getPlanShippedPayment());
@@ -307,13 +307,13 @@ public class ContractPhaseMt extends DefaultMaintenanceForm implements MasterMod
 	}
 
 	private void refreshRestSumElements() {
-		// расчет остатков по плану
+		// СЂР°СЃС‡РµС‚ РѕСЃС‚Р°С‚РєРѕРІ РїРѕ РїР»Р°РЅСѓ
 		BigDecimal shippedPaymentSum = ((Phase) getEntity()).getItemShippedPayment();
 		BigDecimal receivedGoodSum = ((Phase) getEntity()).getItemReceivedGood();
 		BigDecimal receivedPaymentSum = ((Phase) getEntity()).getItemReceivedPayment();
 		BigDecimal shippedGoodSum = ((Phase) getEntity()).getItemShippedGood();
 		planRest = contractService.calculateRestSum(shippedPaymentSum, receivedGoodSum, receivedPaymentSum, shippedGoodSum);
-		// расчет остатков по факту
+		// СЂР°СЃС‡РµС‚ РѕСЃС‚Р°С‚РєРѕРІ РїРѕ С„Р°РєС‚Сѓ
 		shippedPaymentSum = ((Phase) getEntity()).getFactShippedPayment();
 		receivedGoodSum = ((Phase) getEntity()).getFactReceivedGood();
 		receivedPaymentSum = ((Phase) getEntity()).getFactReceivedPayment();
@@ -322,8 +322,8 @@ public class ContractPhaseMt extends DefaultMaintenanceForm implements MasterMod
 	}
 	
 	/**
-	 * Обработчик просмотра документа
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewDocument(WidgetEvent event) {
 		DocumentUtils.viewDocument(getEntity(), DOCUMENT_ATTRIBUTE_NAME);

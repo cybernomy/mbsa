@@ -19,7 +19,7 @@ import com.mg.framework.support.ui.UIProducer;
 import com.mg.framework.support.ui.UIUtils;
 
 /**
- * Поисковик сущностей "Записи журнала платежа"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "Р—Р°РїРёСЃРё Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PaymentSearchHelp.java,v 1.1 2007/05/31 14:13:30 sharapov Exp $

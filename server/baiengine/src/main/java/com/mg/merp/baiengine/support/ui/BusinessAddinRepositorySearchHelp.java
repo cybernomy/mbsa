@@ -26,7 +26,7 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.merp.baiengine.RepositoryServiceLocal;
 
 /**
- * Механизм поиска сущности BAi
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚Рё BAi
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

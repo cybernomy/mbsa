@@ -30,7 +30,7 @@ import com.mg.framework.support.ui.widget.tree.TreeNode;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Контроллер формы поиска сущностей "Папки" модуля <Журнал платежей>
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РџР°РїРєРё" РјРѕРґСѓР»СЏ <Р–СѓСЂРЅР°Р» РїР»Р°С‚РµР¶РµР№>
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmaFolderSearchForm.java,v 1.1 2007/05/25 08:42:43 sharapov Exp $

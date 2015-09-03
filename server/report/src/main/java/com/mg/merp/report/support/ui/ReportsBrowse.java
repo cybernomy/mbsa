@@ -36,7 +36,7 @@ import com.mg.merp.report.RptMainServiceLocal;
 import com.mg.merp.report.model.RptMain;
 
 /**
- * Контроллер формы списка отчетов для сериса MERP/REPORT/REPORTS
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕС‚С‡РµС‚РѕРІ РґР»СЏ СЃРµСЂРёСЃР° MERP/REPORT/REPORTS
  * 
  * @author leonova
  * @author Oleg V. Safonov

@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.ClientRank;
 
 /**
- * Браузер ранга клиентов
+ * Р‘СЂР°СѓР·РµСЂ СЂР°РЅРіР° РєР»РёРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: ClientRankBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

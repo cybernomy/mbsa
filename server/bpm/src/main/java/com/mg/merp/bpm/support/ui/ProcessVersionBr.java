@@ -30,7 +30,7 @@ import com.mg.merp.bpm.support.BPMManagerLocator;
 import com.mg.merp.bpm.support.Messages;
 
 /**
- * Контроллер формы списка версий процессов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РІРµСЂСЃРёР№ РїСЂРѕС†РµСЃСЃРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ProcessVersionBr.java,v 1.1 2007/05/28 13:05:48 safonov Exp $

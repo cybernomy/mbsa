@@ -19,7 +19,7 @@ import java.util.Date;
 import com.mg.framework.generic.ui.DefaultDialog;
 
 /**
- * Контроллер диалога "Диапазон дат"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "Р”РёР°РїР°Р·РѕРЅ РґР°С‚"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: QueryDateRangeDlg.java,v 1.1 2008/03/27 10:40:42 alikaev Exp $
@@ -34,7 +34,7 @@ public class QueryDateRangeDlg extends DefaultDialog {
 	}
 
 	/**
-	 * С даты
+	 * РЎ РґР°С‚С‹
 	 * @return beginDate
 	 */
 	public Date getBeginDate() {
@@ -42,7 +42,7 @@ public class QueryDateRangeDlg extends DefaultDialog {
 	}
 
 	/**
-	 * По дату
+	 * РџРѕ РґР°С‚Сѓ
 	 * @return endDate
 	 */
 	public Date getEndDate() {

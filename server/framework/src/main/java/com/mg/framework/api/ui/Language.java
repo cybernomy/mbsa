@@ -18,7 +18,7 @@ import java.io.Serializable;
 import java.util.Locale;
 
 /**
- * Описатель языка
+ * РћРїРёСЃР°С‚РµР»СЊ СЏР·С‹РєР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: Language.java,v 1.1 2008/04/09 14:32:34 safonov Exp $
@@ -28,12 +28,12 @@ public class Language implements Serializable {
 	private Locale locale;
 
 	/**
-	 * создание описателя
+	 * СЃРѕР·РґР°РЅРёРµ РѕРїРёСЃР°С‚РµР»СЏ
 	 * 
-	 * @param name		имя
-	 * @param language	язык
-	 * @param country	страна
-	 * @param variant	вариант языка
+	 * @param name		РёРјСЏ
+	 * @param language	СЏР·С‹Рє
+	 * @param country	СЃС‚СЂР°РЅР°
+	 * @param variant	РІР°СЂРёР°РЅС‚ СЏР·С‹РєР°
 	 */
 	public Language(String name, String language, String country, String variant) {
 		super();
@@ -42,7 +42,7 @@ public class Language implements Serializable {
 	}
 
 	/**
-	 * получить имя
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРјСЏ
 	 * 
 	 * @return the name
 	 */
@@ -51,7 +51,7 @@ public class Language implements Serializable {
 	}
 
 	/**
-	 * получить локаль
+	 * РїРѕР»СѓС‡РёС‚СЊ Р»РѕРєР°Р»СЊ
 	 * 
 	 * @return the locale
 	 */

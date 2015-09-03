@@ -17,7 +17,7 @@ package com.mg.merp.salary;
 import com.mg.merp.salary.model.FeeSummaryHead;
 
 /**
- * Сервис бизнес-компонента "Своды н/у по аналитике"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРІРѕРґС‹ РЅ/Сѓ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,17 +26,17 @@ import com.mg.merp.salary.model.FeeSummaryHead;
 public interface FeeSummaryHeadServiceLocal extends com.mg.merp.document.GoodsDocument<FeeSummaryHead, Integer, FeeSummaryModelServiceLocal, FeeSummarySpecServiceLocal> {
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME= "merp/salary/FeeSummaryHead"; //$NON-NLS-1$
 	
 	/**
-	 * тип папки для сводов по н/у
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ СЃРІРѕРґРѕРІ РїРѕ РЅ/Сѓ
 	 */
 	final static short FOLDER_PART = 10501;
 	
 	/**
-	 * docsection для сводов по н/у
+	 * docsection РґР»СЏ СЃРІРѕРґРѕРІ РїРѕ РЅ/Сѓ
 	 */
 	final static short DOCSECTION = 10501;
 	

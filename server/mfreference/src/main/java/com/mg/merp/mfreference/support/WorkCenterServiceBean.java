@@ -28,7 +28,7 @@ import com.mg.merp.mfreference.WorkCenterServiceLocal;
 import com.mg.merp.mfreference.model.WorkCenter;
 
 /**
- * Бизнес-компонент "Рабочие центры" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р Р°Р±РѕС‡РёРµ С†РµРЅС‚СЂС‹" 
  * 
  * @author leonova
  * @version $Id: WorkCenterServiceBean.java,v 1.4 2006/09/28 13:04:06 leonova Exp $

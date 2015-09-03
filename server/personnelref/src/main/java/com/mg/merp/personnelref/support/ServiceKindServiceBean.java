@@ -26,7 +26,7 @@ import com.mg.merp.personnelref.ServiceKindServiceLocal;
 import com.mg.merp.personnelref.model.ServiceKind;
 
 /**
- * Бизнес-компонент "Виды стажа" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РёРґС‹ СЃС‚Р°Р¶Р°" 
  * 
  * @author leonova
  * @version $Id: ServiceKindServiceBean.java,v 1.5 2007/08/16 14:12:16 safonov Exp $

@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.personnelref.model.PersonnelGroupType;
 
 /**
- * Браузер типов групп
+ * Р‘СЂР°СѓР·РµСЂ С‚РёРїРѕРІ РіСЂСѓРїРї
  * 
  * @author leonova
  * @version $Id: PersonnelGroupTypeBr.java,v 1.1 2006/09/04 13:05:19 leonova Exp $ 

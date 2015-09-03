@@ -16,7 +16,7 @@ package com.mg.merp.reference.support.ui;
 
 
 /**
- * SearchHelp для банка получателя банковских документов
+ * SearchHelp РґР»СЏ Р±Р°РЅРєР° РїРѕР»СѓС‡Р°С‚РµР»СЏ Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: ConsigneeBankAccountSearchHelp.java,v 1.1 2006/10/07 10:11:00 leonova Exp $

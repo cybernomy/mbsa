@@ -25,7 +25,7 @@ import com.mg.merp.qualitycontrol.ScrapReasonServiceLocal;
 import com.mg.merp.qualitycontrol.model.ScrapReason;
 
 /**
- * Бизнес-компонент "Причины потерь" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРёС‡РёРЅС‹ РїРѕС‚РµСЂСЊ" 
  * 
  * @author leonova
  * @version $Id: ScrapReasonServiceBean.java,v 1.4 2007/08/24 09:11:28 alikaev Exp $
@@ -61,7 +61,7 @@ public class ScrapReasonServiceBean extends AbstractPOJODataBusinessObjectServic
 	}
 	
 	/**
-	 * функция заполнения поля "Name"
+	 * С„СѓРЅРєС†РёСЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РїРѕР»СЏ "Name"
 	 * 
 	 * @param entity
 	 */

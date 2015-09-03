@@ -24,7 +24,7 @@ import com.mg.merp.reference.PriceTypeServiceLocal;
 import com.mg.merp.reference.model.PriceType;
 
 /**
- * Бизнес-компонент "Типы цен"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ С†РµРЅ"
  * 
  * @author leonova
  * @version $Id: PriceTypeServiceBean.java,v 1.4 2006/10/20 07:20:57 leonova Exp $

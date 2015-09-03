@@ -38,7 +38,7 @@ import com.mg.merp.reference.model.CurrencyRateAuthority;
 import com.mg.merp.reference.model.CurrencyRateType;
 
 /**
- * Бизнес-компонент "Курсы валют"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљСѓСЂСЃС‹ РІР°Р»СЋС‚"
  * 
  * @author leonova
  * @version $Id: CurrencyRateServiceBean.java,v 1.7 2007/07/11 08:18:34 safonov Exp $
@@ -60,7 +60,7 @@ public class CurrencyRateServiceBean extends AbstractPOJODataBusinessObjectServi
 
 	protected BigDecimal doGetCurrencyRate(Currency currencyTo, Currency currencyFrom, CurrencyRateAuthority rateAuthority, CurrencyRateType rateType, Date effectiveDate) throws CurrencyRateNotFoundException {
 		if (currencyTo == null || currencyFrom == null || currencyTo.getId().equals(currencyFrom.getId()))
-			return BigDecimal.ONE;//нет одной из валют или для одинаковых валют курс 1
+			return BigDecimal.ONE;//РЅРµС‚ РѕРґРЅРѕР№ РёР· РІР°Р»СЋС‚ РёР»Рё РґР»СЏ РѕРґРёРЅР°РєРѕРІС‹С… РІР°Р»СЋС‚ РєСѓСЂСЃ 1
 		else {
 			if (effectiveDate == null)
 				effectiveDate = DateTimeUtils.nowTimestamp();
@@ -88,7 +88,7 @@ public class CurrencyRateServiceBean extends AbstractPOJODataBusinessObjectServi
 //					.add(Restrictions.eq("cr1.CurrencyRateType", rateType))
 //					.add(Restrictions.eq("cr1.CurrencyRateAuthority", rateAuthority))
 //					//.add(Subqueries.propertyEq("cr1.EffectiveDate", dc)));
-			//используем SQL, предыдущий код не работает, вероятно дефект в hibernate
+			//РёСЃРїРѕР»СЊР·СѓРµРј SQL, РїСЂРµРґС‹РґСѓС‰РёР№ РєРѕРґ РЅРµ СЂР°Р±РѕС‚Р°РµС‚, РІРµСЂРѕСЏС‚РЅРѕ РґРµС„РµРєС‚ РІ hibernate
 			List<BigDecimal> result = JdbcTemplate.getInstance()
 					.query(new StringBuilder("select cr.rate from ref_currency_rate cr where ((cr.currency_code1 = ?) and (cr.currency_code2 = ?)")
 							.append(" and (cr.rate_authority_id = ?) and (cr.rate_type_id = ?)")
@@ -124,7 +124,7 @@ public class CurrencyRateServiceBean extends AbstractPOJODataBusinessObjectServi
 	 */
 	@PermitAll
 	public BigDecimal getIndirectCurrencyRate(Currency currencyTo, Currency currencyFrom, CurrencyRateAuthority rateAuthority, CurrencyRateType rateType, Date effectiveDate) throws CurrencyRateNotFoundException {
-		//меняем местами валюты
+		//РјРµРЅСЏРµРј РјРµСЃС‚Р°РјРё РІР°Р»СЋС‚С‹
 		return doGetCurrencyRate(currencyFrom, currencyTo, rateAuthority, rateType, effectiveDate);
 	}
 

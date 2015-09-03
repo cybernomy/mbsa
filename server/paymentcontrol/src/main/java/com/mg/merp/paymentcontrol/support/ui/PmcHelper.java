@@ -43,7 +43,7 @@ import com.mg.merp.paymentcontrol.support.Messages;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Класс помощник для работы с обязательствами
+ * РљР»Р°СЃСЃ РїРѕРјРѕС‰РЅРёРє РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°РјРё
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmcHelper.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $
@@ -51,11 +51,11 @@ import com.mg.merp.reference.model.Currency;
 public class PmcHelper {
 
 	/**
-	 * Исполнить обязательство
-	 * @param resourceId - идентификатор средства платежа
-	 * @param liabilityId - идентификатор обязательства
-	 * @param actDate - дата операции
-	 * @param pmcHelperListener - слушатель завершения операции
+	 * РСЃРїРѕР»РЅРёС‚СЊ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ
+	 * @param resourceId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
+	 * @param liabilityId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°
+	 * @param actDate - РґР°С‚Р° РѕРїРµСЂР°С†РёРё
+	 * @param pmcHelperListener - СЃР»СѓС€Р°С‚РµР»СЊ Р·Р°РІРµСЂС€РµРЅРёСЏ РѕРїРµСЂР°С†РёРё
 	 */
 	public static void executeLiabilityByPmcManagment(Integer resourceId, Integer liabilityId, Date actDate, final PmcHelperListener pmcHelperListener) {
 		if(resourceId == null || liabilityId == null || actDate == null)
@@ -88,11 +88,11 @@ public class PmcHelper {
 	}
 
 	/**
-	 * Исполнить обязательство
-	 * @param liabilityId - идентификатор обязательства
-	 * @param planPaymentItem - строка оборотки плана
-	 * @param versionId - идентификатор версии планирования
-	 * @param pmcHelperListener - слушатель завершения операции
+	 * РСЃРїРѕР»РЅРёС‚СЊ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ
+	 * @param liabilityId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°
+	 * @param planPaymentItem - СЃС‚СЂРѕРєР° РѕР±РѕСЂРѕС‚РєРё РїР»Р°РЅР°
+	 * @param versionId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param pmcHelperListener - СЃР»СѓС€Р°С‚РµР»СЊ Р·Р°РІРµСЂС€РµРЅРёСЏ РѕРїРµСЂР°С†РёРё
 	 */
 	public static void executeLiabilityByPmcPlaning(Integer liabilityId, final PlanPaymentItem planPaymentItem, final Integer versionId, final PmcHelperListener pmcHelperListener) {
 		final Liability liability = ServerUtils.getPersistentManager().find(Liability.class, liabilityId);
@@ -120,11 +120,11 @@ public class PmcHelper {
 	}
 	
 	/**
-	 * Подготовить параметры отображения для диалога "Параметры исполнения обязательства"
-	 * @param liabilityId - идентификатор обязательства
-	 * @param planPaymentItem - строка оборотки плана
-	 * @param versionId - идентификатор версии планирования
-	 * @return параметры для диалога
+	 * РџРѕРґРіРѕС‚РѕРІРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РґР»СЏ РґРёР°Р»РѕРіР° "РџР°СЂР°РјРµС‚СЂС‹ РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°"
+	 * @param liabilityId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°
+	 * @param planPaymentItem - СЃС‚СЂРѕРєР° РѕР±РѕСЂРѕС‚РєРё РїР»Р°РЅР°
+	 * @param versionId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @return РїР°СЂР°РјРµС‚СЂС‹ РґР»СЏ РґРёР°Р»РѕРіР°
 	 */
 	private static ExecutionParams prepareExecutionParams(Integer liabilityId, PlanPaymentItem planPaymentItem, Integer versionId) {
 		Liability liability = ServerUtils.getPersistentManager().find(Liability.class, liabilityId);
@@ -166,11 +166,11 @@ public class PmcHelper {
 	}
 	
 	/**
-	 * Подготовить параметры отображения для диалога "Параметры исполнения обязательства"
-	 * @param resource - средство платежа
-	 * @param liability - обязательство
-	 * @param actDate - дата операции
-	 * @return параметры для диалога
+	 * РџРѕРґРіРѕС‚РѕРІРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РґР»СЏ РґРёР°Р»РѕРіР° "РџР°СЂР°РјРµС‚СЂС‹ РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°"
+	 * @param resource - СЃСЂРµРґСЃС‚РІРѕ РїР»Р°С‚РµР¶Р°
+	 * @param liability - РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ
+	 * @param actDate - РґР°С‚Р° РѕРїРµСЂР°С†РёРё
+	 * @return РїР°СЂР°РјРµС‚СЂС‹ РґР»СЏ РґРёР°Р»РѕРіР°
 	 */
 	private static ExecutionParams prepareExecutionParams(PmcResource resource, Liability liability, Date actDate) {
 		if(!isSameCurrency(resource.getCurCode(), liability.getCurCode()))
@@ -191,8 +191,8 @@ public class PmcHelper {
 
 		if(liability.getPrefOnly() && liability.getPrefResource() != null) {
 			resource = liability.getPrefResource();
-			//TODO: нужна ли повторная проверка валюты если в качестве средства платежа используется "предпочтительное средство платежа" обязательства?
-			//TODO: по какому средству платежа расчитывать Баланс?
+			//TODO: РЅСѓР¶РЅР° Р»Рё РїРѕРІС‚РѕСЂРЅР°СЏ РїСЂРѕРІРµСЂРєР° РІР°Р»СЋС‚С‹ РµСЃР»Рё РІ РєР°С‡РµСЃС‚РІРµ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р° РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ "РїСЂРµРґРїРѕС‡С‚РёС‚РµР»СЊРЅРѕРµ СЃСЂРµРґСЃС‚РІРѕ РїР»Р°С‚РµР¶Р°" РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°?
+			//TODO: РїРѕ РєР°РєРѕРјСѓ СЃСЂРµРґСЃС‚РІСѓ РїР»Р°С‚РµР¶Р° СЂР°СЃС‡РёС‚С‹РІР°С‚СЊ Р‘Р°Р»Р°РЅСЃ?
 		}
 
 		ExecutionParams executionParams = new ExecutionParams();
@@ -205,13 +205,13 @@ public class PmcHelper {
 	}
 	
 	/**
-	 * Создать диалог "Параметры исполнения обязательства" с параметрами
-	 * @param resourceName - наименование средства платежа
-	 * @param sumToExecute - сумма исполнения
-	 * @param executionCur - валюта исполнения
-	 * @param actDate - дата исполнения
-	 * @param dateToExecute - исполнить
-	 * @return диалог
+	 * РЎРѕР·РґР°С‚СЊ РґРёР°Р»РѕРі "РџР°СЂР°РјРµС‚СЂС‹ РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°" СЃ РїР°СЂР°РјРµС‚СЂР°РјРё
+	 * @param resourceName - РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
+	 * @param sumToExecute - СЃСѓРјРјР° РёСЃРїРѕР»РЅРµРЅРёСЏ
+	 * @param executionCur - РІР°Р»СЋС‚Р° РёСЃРїРѕР»РЅРµРЅРёСЏ
+	 * @param actDate - РґР°С‚Р° РёСЃРїРѕР»РЅРµРЅРёСЏ
+	 * @param dateToExecute - РёСЃРїРѕР»РЅРёС‚СЊ
+	 * @return РґРёР°Р»РѕРі
 	 */
 	private static ExecutionDlg createExecutionDialog(String resourceName, BigDecimal sumToExecute, Currency executionCur, Date actDate, Date dateToExecute) {
 		ExecutionDlg executionDlg = (ExecutionDlg) UIProducer.produceForm("com/mg/merp/paymentcontrol/resources/ExecutionDlg.mfd.xml"); //$NON-NLS-1$
@@ -224,9 +224,9 @@ public class PmcHelper {
 	}
 
 	/**
-	 * Проверка возможности исполнения обязательства
-	 * @param remnSum - неисполненный остаток обязательства
-	 * @return true - да возможно; false - обязательство уже исполнено
+	 * РџСЂРѕРІРµСЂРєР° РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°
+	 * @param remnSum - РЅРµРёСЃРїРѕР»РЅРµРЅРЅС‹Р№ РѕСЃС‚Р°С‚РѕРє РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°
+	 * @return true - РґР° РІРѕР·РјРѕР¶РЅРѕ; false - РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ СѓР¶Рµ РёСЃРїРѕР»РЅРµРЅРѕ
 	 */
 	private static boolean isCanBeExecuted(BigDecimal remnSum) {
 		if(MathUtils.compareToZero(remnSum) <= 0)
@@ -236,11 +236,11 @@ public class PmcHelper {
 	}
 
 	/**
-	 * Переместить средства
-	 * @param resourceId - идентификатор средства платежа
-	 * @param resourceFolderId - идентификатор папки средства платежа
-	 * @param versionId - идентификатор версии планирования
-	 * @param actDate - дата операции
+	 * РџРµСЂРµРјРµСЃС‚РёС‚СЊ СЃСЂРµРґСЃС‚РІР°
+	 * @param resourceId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
+	 * @param resourceFolderId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїР°РїРєРё СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
+	 * @param versionId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param actDate - РґР°С‚Р° РѕРїРµСЂР°С†РёРё
 	 */
 	public static void transferResourses(Integer resourceId, Integer resourceFolderId, final Integer versionId, Date actDate, final PmcHelperListener pmcHelperListener) {
 		final TransferDlg transferDlg = (TransferDlg) UIProducer.produceForm("com/mg/merp/paymentcontrol/resources/TransferDlg.mfd.xml"); //$NON-NLS-1$
@@ -285,9 +285,9 @@ public class PmcHelper {
 	}
 
 	/**
-	 * Сформировать документы
-	 * @param executionIds - список идентификаторов исполнений
-	 * @param actDate - дата формирования
+	 * РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ РґРѕРєСѓРјРµРЅС‚С‹
+	 * @param executionIds - СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ РёСЃРїРѕР»РЅРµРЅРёР№
+	 * @param actDate - РґР°С‚Р° С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ
 	 */
 	public static void createDocuments(Serializable[] executionIds, Date actDate, final PmcHelperListener pmcHelperListener) {
 		String report = getExecutionService().createDocuments(executionIds, actDate);
@@ -296,8 +296,8 @@ public class PmcHelper {
 	}
 
 	/**
-	 * Удалить созданный документ
-	 * @param executionIds - список идентификаторов исполнений
+	 * РЈРґР°Р»РёС‚СЊ СЃРѕР·РґР°РЅРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚
+	 * @param executionIds - СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ РёСЃРїРѕР»РЅРµРЅРёР№
 	 */
 	public static void deleteCreatedDocument(final Serializable[] executionIds, final PmcHelperListener pmcHelperListener) {
 		if(executionIds != null && executionIds.length > 0) {
@@ -316,8 +316,8 @@ public class PmcHelper {
 	}
 
 	/**
-	 * Удалить исполнение
-	 * @param executionId - идентификатор исполнения
+	 * РЈРґР°Р»РёС‚СЊ РёСЃРїРѕР»РЅРµРЅРёРµ
+	 * @param executionId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РёСЃРїРѕР»РЅРµРЅРёСЏ
 	 */
 	public static void removeExecution(final Serializable executionId, final Integer versionId, final PmcHelperListener pmcHelperListener) {
 		if(executionId != null) {

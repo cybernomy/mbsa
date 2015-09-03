@@ -16,7 +16,7 @@ package com.mg.merp.reference.support.ui;
 
 
 /**
- * Поиск типов цен из заголовков документов
+ * РџРѕРёСЃРє С‚РёРїРѕРІ С†РµРЅ РёР· Р·Р°РіРѕР»РѕРІРєРѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: PriceTypeInDocSearchHelp.java,v 1.3 2007/05/10 07:32:01 safonov Exp $

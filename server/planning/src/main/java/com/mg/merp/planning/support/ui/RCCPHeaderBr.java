@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.planning.model.RccpHeader;
 
 /**
- * Áðàóçåð ÓÏÏÌ
+ * Ð‘Ñ€Ð°ÑƒÐ·ÐµÑ€ Ð£ÐŸÐŸÐœ
  * 
  * @author leonova
  * @version $Id: RCCPHeaderBr.java,v 1.1 2006/08/25 10:17:13 leonova Exp $ 

@@ -41,7 +41,7 @@ import com.mg.merp.document.model.DocumentSpecSerialNum;
 import com.mg.merp.document.model.DocumentSpecTax;
 
 /**
- * Контроллер формы поддержки спецификаций
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёР№
  * 
  * @author leonova
  * @version $Id: GoodsDocumentSpecMaintenanceForm.java,v 1.7 2008/06/06 06:36:11 sharapov Exp $
@@ -231,16 +231,16 @@ public class GoodsDocumentSpecMaintenanceForm extends DefaultMaintenanceForm imp
 	}
 
 	/**
-	 * обработчик кнопки "Adjust"
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Adjust"
 	 * 
 	 * @param event
 	 */
 	@SuppressWarnings("unchecked")
 	public void onActionAdjust(WidgetEvent event) {
 		((GoodsDocumentSpecification) getService()).adjust((DocSpec) getEntity());
-		//обновим спецификацию
+		//РѕР±РЅРѕРІРёРј СЃРїРµС†РёС„РёРєР°С†РёСЋ
 		view.flushModel();
-		//обновим список налогов
+		//РѕР±РЅРѕРІРёРј СЃРїРёСЃРѕРє РЅР°Р»РѕРіРѕРІ
 		documentSpecTaxes.getModel().load();
 	}
 

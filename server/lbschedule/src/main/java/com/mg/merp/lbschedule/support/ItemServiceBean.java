@@ -43,7 +43,7 @@ import com.mg.merp.reference.model.Currency;
 import com.mg.merp.reference.model.Holidays;
 
 /**
- * Реализация бизнес-компонента "Пункты графиков исполнения обязательств" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСѓРЅРєС‚С‹ РіСЂР°С„РёРєРѕРІ РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

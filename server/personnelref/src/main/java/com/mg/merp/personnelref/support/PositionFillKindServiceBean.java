@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PositionFillKindServiceLocal;
 import com.mg.merp.personnelref.model.PositionFillKind;
 
 /**
- * Бизнес-компонент "Виды исполнения должностей" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РёРґС‹ РёСЃРїРѕР»РЅРµРЅРёСЏ РґРѕР»Р¶РЅРѕСЃС‚РµР№" 
  * 
  * @author leonova
  * @version $Id: PositionFillKindServiceBean.java,v 1.4 2006/09/06 12:49:54 leonova Exp $

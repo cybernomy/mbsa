@@ -17,50 +17,50 @@ package com.mg.framework.api.ui;
 import com.mg.framework.api.BusinessObjectService;
 
 /**
- * Менеджер настраиваемых действий
+ * РњРµРЅРµРґР¶РµСЂ РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomActionManager.java,v 1.2 2007/11/15 14:30:40 safonov Exp $
  */
 public interface CustomActionManager {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:service=CustomActionManagerService";
 	/**
-	 * название формлета используемого в описателях форм для создания доступа
-	 * к настраиваемым действиям
+	 * РЅР°Р·РІР°РЅРёРµ С„РѕСЂРјР»РµС‚Р° РёСЃРїРѕР»СЊР·СѓРµРјРѕРіРѕ РІ РѕРїРёСЃР°С‚РµР»СЏС… С„РѕСЂРј РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РґРѕСЃС‚СѓРїР°
+	 * Рє РЅР°СЃС‚СЂР°РёРІР°РµРјС‹Рј РґРµР№СЃС‚РІРёСЏРј
 	 */
 	final static String CUSTOM_ACTIONS_AREA_FORMLET = "com.mg.jet.ui.CustomActionsFormlet";
 	/**
-	 * название обработчика настраеваемых действий
+	 * РЅР°Р·РІР°РЅРёРµ РѕР±СЂР°Р±РѕС‚С‡РёРєР° РЅР°СЃС‚СЂР°РµРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№
 	 */
 	final static String CUSTOM_ACTION_LISTENER_NAME = "ExecuteCustomUserAction";
 	/**
-	 * название подменю контекстного меню содержащего пункты вызова настраиваемых действий
+	 * РЅР°Р·РІР°РЅРёРµ РїРѕРґРјРµРЅСЋ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ РїСѓРЅРєС‚С‹ РІС‹Р·РѕРІР° РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№
 	 */
 	final static String CUSTOM_ACTION_MENU_NAME = "customUserActionMenu";
 	
 	/**
-	 * генерация формлета для создания доступа к настраиваемым действиям
+	 * РіРµРЅРµСЂР°С†РёСЏ С„РѕСЂРјР»РµС‚Р° РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РґРѕСЃС‚СѓРїР° Рє РЅР°СЃС‚СЂР°РёРІР°РµРјС‹Рј РґРµР№СЃС‚РІРёСЏРј
 	 * 
-	 * @param service	бизнес-компонент
-	 * @return	формлет
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @return	С„РѕСЂРјР»РµС‚
 	 */
 	String generateActionsArea(BusinessObjectService service);
 
 	/**
-	 * выполнить действие
+	 * РІС‹РїРѕР»РЅРёС‚СЊ РґРµР№СЃС‚РІРёРµ
 	 * 
-	 * @param context	контекст выполнения
+	 * @param context	РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРёСЏ
 	 */
 	void executeAction(CustomActionExecutionContext context);
 	
 	/**
-	 * получить список действий для бизнес-компонента
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РґРµР№СЃС‚РІРёР№ РґР»СЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
-	 * @param service	бизнес-компонент
-	 * @return	список действие
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @return	СЃРїРёСЃРѕРє РґРµР№СЃС‚РІРёРµ
 	 */
 	CustomActionDescriptor[] getCustomActions(BusinessObjectService service);
 	

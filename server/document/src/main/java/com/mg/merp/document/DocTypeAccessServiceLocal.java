@@ -19,7 +19,7 @@ import java.util.List;
 import com.mg.merp.document.model.DocTypeRights;
 
 /**
- * Бизнес-компонент "Права на типы документов"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂР°РІР° РЅР° С‚РёРїС‹ РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -28,27 +28,27 @@ import com.mg.merp.document.model.DocTypeRights;
 public interface DocTypeAccessServiceLocal extends com.mg.framework.api.DataBusinessObjectService<DocTypeRights, Integer> {
 	
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/document/DocTypeAccess"; //$NON-NLS-1$
 
 	/**
-	 * Загрузить список прав доступа для типа документа
-	 * @param docTypeId - идентификатор типа документа
-	 * @return список прав доступа для типа документа
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє РїСЂР°РІ РґРѕСЃС‚СѓРїР° РґР»СЏ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docTypeId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return СЃРїРёСЃРѕРє РїСЂР°РІ РґРѕСЃС‚СѓРїР° РґР»СЏ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	List<DocTypePermission> loadDocTypePermissions(Integer docTypeId);
 	
 	/**
-	 * Установить право доступа для типа документа
-	 * @param permission - право доступа
-	 * @param docTypeId - идентификатор типа документа
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР° РґР»СЏ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param permission - РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР°
+	 * @param docTypeId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	void grantPermission(DocTypePermission permission, Integer docTypeId);
 	
 	/**
-	 * Отменить право доступа для типа документа
-	 * @param permission - право доступа
+	 * РћС‚РјРµРЅРёС‚СЊ РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР° РґР»СЏ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param permission - РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР°
 	 */
 	void revokePermission(DocTypePermission permission);
 

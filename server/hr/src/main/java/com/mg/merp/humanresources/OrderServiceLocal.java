@@ -17,7 +17,7 @@ package com.mg.merp.humanresources;
 import com.mg.merp.humanresources.model.Order;
 
 /**
- * Сервис бизнес-компонента "Приказы"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРёРєР°Р·С‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,24 +26,24 @@ import com.mg.merp.humanresources.model.Order;
 public interface OrderServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Order, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/humanresources/Order"; //$NON-NLS-1$
 
 	/**
-	 * тип папки для приказов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РїСЂРёРєР°Р·РѕРІ
 	 */
 	final static short FOLDER_TYPE = 11500;
 	
 	/**
-	 * Не реализована
+	 * РќРµ СЂРµР°Р»РёР·РѕРІР°РЅР°
 	 * @param orderId
 	 * @return
 	 */
 	boolean prepareForSign(long orderId);
 
 	/**
-	 * Не реализована
+	 * РќРµ СЂРµР°Р»РёР·РѕРІР°РЅР°
 	 * @param orderId
 	 * @return
 	 * @throws com.mg.framework.api.ApplicationException
@@ -51,7 +51,7 @@ public interface OrderServiceLocal extends com.mg.framework.api.DataBusinessObje
 	boolean signOrder(long orderId);
 
 	/**
-	 * Не реализована
+	 * РќРµ СЂРµР°Р»РёР·РѕРІР°РЅР°
 	 * @param orderId
 	 * @return
 	 * @throws com.mg.framework.api.ApplicationException
@@ -59,7 +59,7 @@ public interface OrderServiceLocal extends com.mg.framework.api.DataBusinessObje
 	boolean processOrder(long orderId);
 
 	/**
-	 * Не реализована
+	 * РќРµ СЂРµР°Р»РёР·РѕРІР°РЅР°
 	 * @param orderId
 	 * @return
 	 * @throws com.mg.framework.api.ApplicationException

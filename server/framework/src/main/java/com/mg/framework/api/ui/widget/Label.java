@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.widget;
 import com.mg.framework.api.ui.Widget;
 
 /**
- * Элемент "Текстовая метка"
+ * Р­Р»РµРјРµРЅС‚ "РўРµРєСЃС‚РѕРІР°СЏ РјРµС‚РєР°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: Label.java,v 1.3 2008/07/24 15:14:43 safonov Exp $
@@ -25,17 +25,17 @@ import com.mg.framework.api.ui.Widget;
 public interface Label extends Widget {
 	
 	/**
-	 * атрибут текста метки
+	 * Р°С‚СЂРёР±СѓС‚ С‚РµРєСЃС‚Р° РјРµС‚РєРё
 	 */
 	final static String TEXT = "text";
 	
 	/**
-	 * атрибут признак видимости текста, имеет тип <code>boolean</code>
+	 * Р°С‚СЂРёР±СѓС‚ РїСЂРёР·РЅР°Рє РІРёРґРёРјРѕСЃС‚Рё С‚РµРєСЃС‚Р°, РёРјРµРµС‚ С‚РёРї <code>boolean</code>
 	 */
 	final static String TEXT_VISIBLE = "textVisible";
 	
 	/**
-	 * атрибут вертикального выравнивания, может иметь значения:
+	 * Р°С‚СЂРёР±СѓС‚ РІРµСЂС‚РёРєР°Р»СЊРЅРѕРіРѕ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ, РјРѕР¶РµС‚ РёРјРµС‚СЊ Р·РЅР°С‡РµРЅРёСЏ:
 	 * </br>bottom
 	 * </br>center
 	 * </br>top
@@ -43,7 +43,7 @@ public interface Label extends Widget {
 	final static String VERTICAL_ALIGNMENT  = "verticalAlignment";
 
 	/**
-	 * атрибут горизонтального выравнивания, может иметь значения:
+	 * Р°С‚СЂРёР±СѓС‚ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕРіРѕ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ, РјРѕР¶РµС‚ РёРјРµС‚СЊ Р·РЅР°С‡РµРЅРёСЏ:
 	 * </br>left
 	 * </br>center
 	 * </br>right
@@ -53,16 +53,16 @@ public interface Label extends Widget {
 	final static String HORIZONTAL_ALIGNMENT  = "horizontalAlignment";
 
 	/**
-	 * установка связанного с меткой элемента
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЃРІСЏР·Р°РЅРЅРѕРіРѕ СЃ РјРµС‚РєРѕР№ СЌР»РµРјРµРЅС‚Р°
 	 * 
-	 * @param widget	элемент
+	 * @param widget	СЌР»РµРјРµРЅС‚
 	 */
 	void setLabelFor(Widget widget);
 	
 	/**
-	 * установка текстового значения метки
+	 * СѓСЃС‚Р°РЅРѕРІРєР° С‚РµРєСЃС‚РѕРІРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ РјРµС‚РєРё
 	 * 
-	 * @param text	тесктовое значение
+	 * @param text	С‚РµСЃРєС‚РѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
 	 */
 	void setText(String text);
 }

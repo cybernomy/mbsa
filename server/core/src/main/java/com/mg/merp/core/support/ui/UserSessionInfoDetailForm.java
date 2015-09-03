@@ -27,7 +27,7 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Контроллер формы подробной информации о сессии пользователя
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґСЂРѕР±РЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃРµСЃСЃРёРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: UserSessionInfoDetailForm.java,v 1.2 2008/12/08 06:22:24 safonov Exp $
@@ -112,7 +112,7 @@ public class UserSessionInfoDetailForm extends AbstractForm {
 	}
 
 	/**
-	 * запуск формы
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹
 	 * 
 	 * @param userSessionInfo
 	 */

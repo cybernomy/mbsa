@@ -35,7 +35,7 @@ import com.mg.merp.security.UserServiceLocal;
 import com.mg.merp.security.model.SecUser;
 
 /**
- * Браузер пользователей
+ * Р‘СЂР°СѓР·РµСЂ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
  * 
  * @author leonova
  * @version $Id: UserBr.java,v 1.5 2008/12/09 10:31:01 safonov Exp $ 

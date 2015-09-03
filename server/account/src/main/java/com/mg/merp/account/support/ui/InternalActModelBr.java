@@ -30,7 +30,7 @@ import com.mg.merp.document.model.DocHeadModel;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Браузер образцов внутренних актов
+ * Р‘СЂР°СѓР·РµСЂ РѕР±СЂР°Р·С†РѕРІ РІРЅСѓС‚СЂРµРЅРЅРёС… Р°РєС‚РѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InternalActModelBr.java,v 1.4 2006/09/12 11:30:48 leonova Exp $

@@ -29,7 +29,7 @@ import com.mg.framework.utils.ReflectionUtils;
 import com.mg.framework.utils.StringUtils;
 
 /**
- * модель предназначена для отображения списка объектов сущностей
+ * РјРѕРґРµР»СЊ РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅР° РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃРїРёСЃРєР° РѕР±СЉРµРєС‚РѕРІ СЃСѓС‰РЅРѕСЃС‚РµР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultEntityListTableModel.java,v 1.8 2008/07/28 14:38:14 safonov Exp $
@@ -61,9 +61,9 @@ public abstract class DefaultEntityListTableModel<E extends PersistentObject> ex
 	}
 	
 	/**
-	 * установка списка атрибутов для вывода
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЃРїРёСЃРєР° Р°С‚СЂРёР±СѓС‚РѕРІ РґР»СЏ РІС‹РІРѕРґР°
 	 * 
-	 * @param columnsName	список атрибутов для вывода в таблице
+	 * @param columnsName	СЃРїРёСЃРѕРє Р°С‚СЂРёР±СѓС‚РѕРІ РґР»СЏ РІС‹РІРѕРґР° РІ С‚Р°Р±Р»РёС†Рµ
 	 */
 	public void setColumns(String[] columnsName) {
 		columnsModel = new TableColumnModel[columnsName.length];
@@ -80,10 +80,10 @@ public abstract class DefaultEntityListTableModel<E extends PersistentObject> ex
 	}
 	
 	/**
-	 * установка списка сущностей
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЃРїРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№
 	 * 
-	 * @param entityList	список сущностей
-	 * @param columnsName	список атрибутов для вывода в таблице
+	 * @param entityList	СЃРїРёСЃРѕРє СЃСѓС‰РЅРѕСЃС‚РµР№
+	 * @param columnsName	СЃРїРёСЃРѕРє Р°С‚СЂРёР±СѓС‚РѕРІ РґР»СЏ РІС‹РІРѕРґР° РІ С‚Р°Р±Р»РёС†Рµ
 	 */
 	public void setEntityList(List<E> entityList, String[] columnsName) {
 		this.entityList = entityList;
@@ -91,9 +91,9 @@ public abstract class DefaultEntityListTableModel<E extends PersistentObject> ex
 	}
 	
 	/**
-	 * установка списка сущностей
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЃРїРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№
 	 * 
-	 * @param entityList	список сущностей
+	 * @param entityList	СЃРїРёСЃРѕРє СЃСѓС‰РЅРѕСЃС‚РµР№
 	 */
 	public void setEntityList(List<E> entityList) {
 		this.entityList = entityList;
@@ -101,9 +101,9 @@ public abstract class DefaultEntityListTableModel<E extends PersistentObject> ex
 	}
 	
 	/**
-	 * получить список отмеченных объектов-сущностей
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РѕС‚РјРµС‡РµРЅРЅС‹С… РѕР±СЉРµРєС‚РѕРІ-СЃСѓС‰РЅРѕСЃС‚РµР№
 	 * 
-	 * @return	список сущностей
+	 * @return	СЃРїРёСЃРѕРє СЃСѓС‰РЅРѕСЃС‚РµР№
 	 */
 	@SuppressWarnings("unchecked")
 	public E[] getSelectedEntities() {

@@ -22,7 +22,7 @@ import com.mg.framework.api.ui.dnd.TransferHandler;
 import com.mg.framework.api.ui.dnd.Transferable;
 
 /**
- * Стандартная реализация обработчика DnD для таблицы, таблица работает только в качестве источника
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РѕР±СЂР°Р±РѕС‚С‡РёРєР° DnD РґР»СЏ С‚Р°Р±Р»РёС†С‹, С‚Р°Р±Р»РёС†Р° СЂР°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ РІ РєР°С‡РµСЃС‚РІРµ РёСЃС‚РѕС‡РЅРёРєР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultTableTransferHandler.java,v 1.1 2007/08/16 13:59:03 safonov Exp $

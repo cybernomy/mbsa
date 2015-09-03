@@ -17,7 +17,7 @@ package com.mg.framework.api.ui;
 import java.io.Serializable;
 
 /**
- * Обработчик выбора файлов пользователем
+ * РћР±СЂР°Р±РѕС‚С‡РёРє РІС‹Р±РѕСЂР° С„Р°Р№Р»РѕРІ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј
  * 
  * @author Oleg V. Safonov
  * @version $Id: FileChooseHandler.java,v 1.1 2008/05/29 13:41:01 safonov Exp $

@@ -23,7 +23,7 @@ import com.mg.merp.bpm.support.BPMManagerLocator;
 import com.mg.merp.bpm.support.Messages;
 
 /**
- * Контроллер формы показа схемы процесса
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРєР°Р·Р° СЃС…РµРјС‹ РїСЂРѕС†РµСЃСЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: ProcessImageForm.java,v 1.1 2007/05/28 13:05:48 safonov Exp $

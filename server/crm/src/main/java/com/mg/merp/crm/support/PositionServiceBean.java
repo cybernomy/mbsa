@@ -22,7 +22,7 @@ import com.mg.merp.crm.PositionServiceLocal;
 import com.mg.merp.crm.model.Position;
 
 /**
- * Бизнес-компонент "Должности" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”РѕР»Р¶РЅРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @version $Id: PositionServiceBean.java,v 1.4 2006/10/12 05:57:42 leonova Exp $

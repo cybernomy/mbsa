@@ -21,7 +21,7 @@ import com.mg.merp.docprocess.model.ActionType;
 import com.mg.merp.docprocess.model.StageState;
 
 /**
- * Класс помошник для получиения истории ДО
+ * РљР»Р°СЃСЃ РїРѕРјРѕС€РЅРёРє РґР»СЏ РїРѕР»СѓС‡РёРµРЅРёСЏ РёСЃС‚РѕСЂРёРё Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocHistory.java,v 1.3 2006/11/11 11:19:18 safonov Exp $

@@ -17,7 +17,7 @@ package com.mg.merp.personnelref.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Улицы" (из КЛАДР)
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЈР»РёС†С‹" (РёР· РљР›РђР”Р )
  * 
  * @author Artem V. Sharapov
  * @version $Id: Street.java,v 1.4 2007/07/16 13:16:44 sharapov Exp $

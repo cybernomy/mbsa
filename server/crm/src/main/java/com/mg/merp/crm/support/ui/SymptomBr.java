@@ -34,7 +34,7 @@ import com.mg.merp.crm.model.Symptom;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Браузер симптомов
+ * Р‘СЂР°СѓР·РµСЂ СЃРёРјРїС‚РѕРјРѕРІ
  * 
  * @author leonova
  * @version $Id: SymptomBr.java,v 1.4 2006/10/16 11:02:22 leonova Exp $

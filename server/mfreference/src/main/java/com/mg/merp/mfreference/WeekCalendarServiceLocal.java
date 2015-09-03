@@ -17,7 +17,7 @@ package com.mg.merp.mfreference;
 import com.mg.merp.mfreference.model.WeekCalendar;
 
 /**
- * Бизнес-компонент "Недельный календарь"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РќРµРґРµР»СЊРЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ"
  * 
  * @author leonova
  * @version $Id: WeekCalendarServiceLocal.java,v 1.2 2007/07/30 10:25:31 safonov Exp $
@@ -26,7 +26,7 @@ public interface WeekCalendarServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<WeekCalendar, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/mfreference/WeekCalendar";
 

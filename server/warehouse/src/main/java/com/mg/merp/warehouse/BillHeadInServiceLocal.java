@@ -17,7 +17,7 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.BillHead;
 
 /**
- * Бизнес - компонент "Входящие счета"
+ * Р‘РёР·РЅРµСЃ - РєРѕРјРїРѕРЅРµРЅС‚ "Р’С…РѕРґСЏС‰РёРµ СЃС‡РµС‚Р°"
  * 
  * @author leonova
  * @version $Id: BillHeadInServiceLocal.java,v 1.3 2006/09/20 11:02:09 safonov Exp $
@@ -26,12 +26,12 @@ public interface BillHeadInServiceLocal
    extends com.mg.merp.document.GoodsDocument<BillHead, Integer, BillHeadModelInServiceLocal, BillSpecInServiceLocal>
 {
 	/**
-	 * тип папки для входящих счетов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РІС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 49;
 	
 	/**
-	 * docsection для входящих счетов
+	 * docsection РґР»СЏ РІС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ
 	 */	
 	final static short DOCSECTION = 25;
 }

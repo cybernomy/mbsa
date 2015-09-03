@@ -25,7 +25,7 @@ public interface StaffListServiceLocal
    extends com.mg.framework.api.DataBusinessObjectService<StaffList, Integer>
 {
 	/**
-	 * тип папки для вариантов штатного расписания
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РІР°СЂРёР°РЅС‚РѕРІ С€С‚Р°С‚РЅРѕРіРѕ СЂР°СЃРїРёСЃР°РЅРёСЏ
 	 */
 	final static short FOLDER_PART = 3002;
 }

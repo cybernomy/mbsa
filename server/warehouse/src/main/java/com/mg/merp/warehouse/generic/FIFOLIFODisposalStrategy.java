@@ -28,7 +28,7 @@ import com.mg.merp.warehouse.model.StockBatch;
 import com.mg.merp.warehouse.model.StockBatchHistory;
 
 /**
- * Стратегия списани со склада FIFO/LIFO
+ * РЎС‚СЂР°С‚РµРіРёСЏ СЃРїРёСЃР°РЅРё СЃРѕ СЃРєР»Р°РґР° FIFO/LIFO
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: FIFOLIFODisposalStrategy.java,v 1.13 2008/05/30 12:52:55 sharapov Exp $

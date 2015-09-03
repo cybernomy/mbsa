@@ -24,7 +24,7 @@ import com.mg.merp.planning.MRPVersionControlServiceLocal;
 import com.mg.merp.planning.model.MrpVersionControl;
 
 /**
- * Реализация бизнес-компонента "ППМ" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРџРњ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

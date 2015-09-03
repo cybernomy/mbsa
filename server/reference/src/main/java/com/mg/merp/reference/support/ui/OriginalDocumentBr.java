@@ -35,7 +35,7 @@ import com.mg.merp.reference.OriginalDocumentServiceLocal;
 import com.mg.merp.reference.model.OriginalDocument;
 
 /**
- * Контроллер браузера "Оригиналов документов"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "РћСЂРёРіРёРЅР°Р»РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -127,7 +127,7 @@ public class OriginalDocumentBr extends DefaultHierarchyBrowseForm {
 	}	
 
 	/**
-	 * обработчик загрузки оригинала на клиента
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РіСЂСѓР·РєРё РѕСЂРёРіРёРЅР°Р»Р° РЅР° РєР»РёРµРЅС‚Р°
 	 * 
 	 * @param event
 	 */
@@ -136,7 +136,7 @@ public class OriginalDocumentBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * обработчик загрузки оригинала в систему
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РіСЂСѓР·РєРё РѕСЂРёРіРёРЅР°Р»Р° РІ СЃРёСЃС‚РµРјСѓ
 	 * 
 	 * @param event
 	 */
@@ -145,7 +145,7 @@ public class OriginalDocumentBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * обработчик удаления оригиналов
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СѓРґР°Р»РµРЅРёСЏ РѕСЂРёРіРёРЅР°Р»РѕРІ
 	 * 
 	 * @param event
 	 */
@@ -154,7 +154,7 @@ public class OriginalDocumentBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * обработчик показа оригиналов
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РїРѕРєР°Р·Р° РѕСЂРёРіРёРЅР°Р»РѕРІ
 	 * 
 	 * @param event
 	 */

@@ -286,8 +286,8 @@ public class PersistentObjectHibernate implements PersistentObject, EntityCustom
             	}
             }
             else {
-                //устанавливаем таким способом ссылку на объект, второе название атрибута
-                //должно быть первичным ключом объекта на который ссылаемся
+                //СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј С‚Р°РєРёРј СЃРїРѕСЃРѕР±РѕРј СЃСЃС‹Р»РєСѓ РЅР° РѕР±СЉРµРєС‚, РІС‚РѕСЂРѕРµ РЅР°Р·РІР°РЅРёРµ Р°С‚СЂРёР±СѓС‚Р°
+                //РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РїРµСЂРІРёС‡РЅС‹Рј РєР»СЋС‡РѕРј РѕР±СЉРµРєС‚Р° РЅР° РєРѕС‚РѕСЂС‹Р№ СЃСЃС‹Р»Р°РµРјСЃСЏ
                 String fldName = propList.get(0);
                 //Field fld = this.getClass().getDeclaredField(fldName);
                 //fld.setAccessible(true);
@@ -360,8 +360,8 @@ public class PersistentObjectHibernate implements PersistentObject, EntityCustom
 		for (int i = 0; i < props.length; i++) {
 			if (values[i] == LazyPropertyInitializer.UNFETCHED_PROPERTY) {
 				//http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4664
-				//используем стандартный способ получения атрибута, для загрузки lazy атрибутов
-				//сущность должна реализовывать get и set методы специальным образом
+				//РёСЃРїРѕР»СЊР·СѓРµРј СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ СЃРїРѕСЃРѕР± РїРѕР»СѓС‡РµРЅРёСЏ Р°С‚СЂРёР±СѓС‚Р°, РґР»СЏ Р·Р°РіСЂСѓР·РєРё lazy Р°С‚СЂРёР±СѓС‚РѕРІ
+				//СЃСѓС‰РЅРѕСЃС‚СЊ РґРѕР»Р¶РЅР° СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ get Рё set РјРµС‚РѕРґС‹ СЃРїРµС†РёР°Р»СЊРЅС‹Рј РѕР±СЂР°Р·РѕРј
 				values[i] = getAttribute(props[i]);
 			}
 			result.put(props[i], values[i]);
@@ -386,9 +386,9 @@ public class PersistentObjectHibernate implements PersistentObject, EntityCustom
 	}
 
 	/**
-	 * реализация копирования сущности
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РєРѕРїРёСЂРѕРІР°РЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @return копия
+	 * @return РєРѕРїРёСЏ
 	 */
 	protected PersistentObject doCloneEntity(AttributeMap attributes) {
 		PersistentObjectHibernate result = null;
@@ -397,7 +397,7 @@ public class PersistentObjectHibernate implements PersistentObject, EntityCustom
 			result = clazz.newInstance();
 			org.hibernate.metadata.ClassMetadata meta = getFactory().getClassMetadata(clazz);
 			Object[] values = meta.getPropertyValues(this, getEntityMode());
-			//удалим коллекции, Hibernate ругается когда шарится одна коллекция между разными сущностями
+			//СѓРґР°Р»РёРј РєРѕР»Р»РµРєС†РёРё, Hibernate СЂСѓРіР°РµС‚СЃСЏ РєРѕРіРґР° С€Р°СЂРёС‚СЃСЏ РѕРґРЅР° РєРѕР»Р»РµРєС†РёСЏ РјРµР¶РґСѓ СЂР°Р·РЅС‹РјРё СЃСѓС‰РЅРѕСЃС‚СЏРјРё
 			org.hibernate.type.Type[] types = meta.getPropertyTypes();
 			for (int i = 0; i < types.length; i++)
 				if (types[i].isCollectionType())
@@ -438,10 +438,10 @@ public class PersistentObjectHibernate implements PersistentObject, EntityCustom
 		if (obj == this)
 			return true;
 		PersistentObject po = (PersistentObject) obj;
-		//проверим принадлежат ли объекты одной иерархии
+		//РїСЂРѕРІРµСЂРёРј РїСЂРёРЅР°РґР»РµР¶Р°С‚ Р»Рё РѕР±СЉРµРєС‚С‹ РѕРґРЅРѕР№ РёРµСЂР°СЂС…РёРё
 		if (ReflectionUtils.getEntityClass(po).isAssignableFrom(ReflectionUtils.getEntityClass(this))
 				|| ReflectionUtils.getEntityClass(this).isAssignableFrom(ReflectionUtils.getEntityClass(po))) {
-			//проверяем по первичным ключам, если хотя бы один ключ null, то объекты не равны
+			//РїСЂРѕРІРµСЂСЏРµРј РїРѕ РїРµСЂРІРёС‡РЅС‹Рј РєР»СЋС‡Р°Рј, РµСЃР»Рё С…РѕС‚СЏ Р±С‹ РѕРґРёРЅ РєР»СЋС‡ null, С‚Рѕ РѕР±СЉРµРєС‚С‹ РЅРµ СЂР°РІРЅС‹
 			Object thisPk = getPrimaryKey();
 			Object objPk = ((PersistentObject) obj).getPrimaryKey();
 			return (thisPk != null) && (objPk != null) && thisPk.equals(objPk);

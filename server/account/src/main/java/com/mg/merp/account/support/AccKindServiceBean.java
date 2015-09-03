@@ -24,7 +24,7 @@ import com.mg.merp.account.AccKindServiceLocal;
 import com.mg.merp.account.model.AccKind;
 
 /**
- * Бизнес-компонент "Виды учета" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РёРґС‹ СѓС‡РµС‚Р°" 
  * 
  * @author leonova
  * @version $Id: AccKindServiceBean.java,v 1.3 2006/08/24 06:44:08 leonova Exp $

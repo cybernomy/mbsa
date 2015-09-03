@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.SearchHelpEvent;
 import com.mg.merp.reference.model.Catalog;
 
 /**
- * Механизм поиска сущности бизнес-компонента "Каталог" для спецификации прайс-листа
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚Рё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР°С‚Р°Р»РѕРі" РґР»СЏ СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: CatalogByPriceListSpecSearchHelp.java,v 1.1 2008/05/13 10:32:01 alikaev Exp $

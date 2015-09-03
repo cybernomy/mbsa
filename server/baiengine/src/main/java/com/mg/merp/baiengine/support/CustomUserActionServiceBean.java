@@ -28,7 +28,7 @@ import com.mg.merp.baiengine.model.CustomUserActionPermiss;
 import com.mg.merp.security.model.Groups;
 
 /**
- * Бизнес-компонент "Настраиваемые действия пользователя" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РќР°СЃС‚СЂР°РёРІР°РµРјС‹Рµ РґРµР№СЃС‚РІРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ" 
  * 
  * @author leonova
  * @version $Id: CustomUserActionServiceBean.java,v 1.1 2007/11/15 09:19:05 safonov Exp $

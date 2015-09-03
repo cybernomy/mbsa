@@ -24,7 +24,7 @@ import com.mg.merp.lbschedule.ScheduleConfigServiceLocal;
 import com.mg.merp.lbschedule.model.ScheduleConfig;
 
 /**
- * Реализация бизнес-компонента "Конфигурация модуля <Графики исполнения обязательств>"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <Р“СЂР°С„РёРєРё РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ>"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

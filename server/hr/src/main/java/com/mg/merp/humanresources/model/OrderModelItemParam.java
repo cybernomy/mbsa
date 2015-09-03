@@ -17,7 +17,7 @@ package com.mg.merp.humanresources.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Параметры образца пункта приказа"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџР°СЂР°РјРµС‚СЂС‹ РѕР±СЂР°Р·С†Р° РїСѓРЅРєС‚Р° РїСЂРёРєР°Р·Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: OrderModelItemParam.java,v 1.3 2007/08/27 12:05:53 sharapov Exp $

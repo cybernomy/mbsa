@@ -91,7 +91,7 @@ import com.mg.merp.reference.model.Currency;
 import com.mg.merp.reference.model.Measure;
 
 /**
- * Бизнес-компонет "Процессор производства"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµС‚ "РџСЂРѕС†РµСЃСЃРѕСЂ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ManufactureProcessorServiceBean.java,v 1.2 2007/08/06 12:44:54 safonov Exp $
@@ -224,7 +224,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
 			}
 			
 			if (labor.getLaborClass().getLbrCostCategory() == null)
-				throw new BusinessException("Не установлена категория затрат для класса рабочей силы"); //TODO
+				throw new BusinessException("РќРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅР° РєР°С‚РµРіРѕСЂРёСЏ Р·Р°С‚СЂР°С‚ РґР»СЏ РєР»Р°СЃСЃР° СЂР°Р±РѕС‡РµР№ СЃРёР»С‹"); //TODO
 			
 			varianceVT.update(ConfigurationHelper.getConfiguration().getLaborTime(), labor.getLaborClass().getLbrCostCategory(),
 					BigDecimal.ZERO, laborTime, BigDecimal.ZERO, laborCost, false, null);
@@ -259,7 +259,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
 			}
 			
 			if (machine.getMchCostCategory() == null)
-				throw new BusinessException("Не установлена категория затрат для оборудования в составе изделия"); //TODO
+				throw new BusinessException("РќРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅР° РєР°С‚РµРіРѕСЂРёСЏ Р·Р°С‚СЂР°С‚ РґР»СЏ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ РІ СЃРѕСЃС‚Р°РІРµ РёР·РґРµР»РёСЏ"); //TODO
 			
 			varianceVT.update(ConfigurationHelper.getConfiguration().getMachineTime(), machine.getMchCostCategory(), 
 					BigDecimal.ZERO, machineTime, BigDecimal.ZERO, machineCost, false, null);
@@ -463,7 +463,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
 	}
 	
 	private boolean isFinalRoute(List<JobRoute> routes, JobRoute jobRoute) {
-		return routes.get(0).getId() == jobRoute.getId(); //проверим нулевой, т.к. выборка была desc
+		return routes.get(0).getId() == jobRoute.getId(); //РїСЂРѕРІРµСЂРёРј РЅСѓР»РµРІРѕР№, С‚.Рє. РІС‹Р±РѕСЂРєР° Р±С‹Р»Р° desc
 	}
 	
 	private void internalUpdateJobFromOutputDocument(Job job, JobRoute jobRoute, BigDecimal quantity, boolean isOutputDocument) {
@@ -674,15 +674,15 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
 				.add(Restrictions.eq("Oper", jobRoute)));
 		
 		for (JobMaterial material : materials) {
-			/*устанавливаем цену 0, в текущей реализации невозможно получить цену
-			  списания без отработки по складу, таким образом вычисляем только количество
-			  для корректного получения цены списания следующим этапом должен идти
-			  этап "Отработка по складу с простановкой цен", далее необходимо
-			  выполнить этап "Расчет НР" который откорректирует суммы НР, т.е.
-			  цепочка ДО выглядит следующим образом
-			  "Отработка обратного списания" -> "Отработка по складу с простановкой цен" -> "Расчет НР"
-			  вынуждаем двигаться именно по такой цепочке, но иначе обойти данную
-			  проблему не представляется возможным*/
+			/*СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј С†РµРЅСѓ 0, РІ С‚РµРєСѓС‰РµР№ СЂРµР°Р»РёР·Р°С†РёРё РЅРµРІРѕР·РјРѕР¶РЅРѕ РїРѕР»СѓС‡РёС‚СЊ С†РµРЅСѓ
+			  СЃРїРёСЃР°РЅРёСЏ Р±РµР· РѕС‚СЂР°Р±РѕС‚РєРё РїРѕ СЃРєР»Р°РґСѓ, С‚Р°РєРёРј РѕР±СЂР°Р·РѕРј РІС‹С‡РёСЃР»СЏРµРј С‚РѕР»СЊРєРѕ РєРѕР»РёС‡РµСЃС‚РІРѕ
+			  РґР»СЏ РєРѕСЂСЂРµРєС‚РЅРѕРіРѕ РїРѕР»СѓС‡РµРЅРёСЏ С†РµРЅС‹ СЃРїРёСЃР°РЅРёСЏ СЃР»РµРґСѓСЋС‰РёРј СЌС‚Р°РїРѕРј РґРѕР»Р¶РµРЅ РёРґС‚Рё
+			  СЌС‚Р°Рї "РћС‚СЂР°Р±РѕС‚РєР° РїРѕ СЃРєР»Р°РґСѓ СЃ РїСЂРѕСЃС‚Р°РЅРѕРІРєРѕР№ С†РµРЅ", РґР°Р»РµРµ РЅРµРѕР±С…РѕРґРёРјРѕ
+			  РІС‹РїРѕР»РЅРёС‚СЊ СЌС‚Р°Рї "Р Р°СЃС‡РµС‚ РќР " РєРѕС‚РѕСЂС‹Р№ РѕС‚РєРѕСЂСЂРµРєС‚РёСЂСѓРµС‚ СЃСѓРјРјС‹ РќР , С‚.Рµ.
+			  С†РµРїРѕС‡РєР° Р”Рћ РІС‹РіР»СЏРґРёС‚ СЃР»РµРґСѓСЋС‰РёРј РѕР±СЂР°Р·РѕРј
+			  "РћС‚СЂР°Р±РѕС‚РєР° РѕР±СЂР°С‚РЅРѕРіРѕ СЃРїРёСЃР°РЅРёСЏ" -> "РћС‚СЂР°Р±РѕС‚РєР° РїРѕ СЃРєР»Р°РґСѓ СЃ РїСЂРѕСЃС‚Р°РЅРѕРІРєРѕР№ С†РµРЅ" -> "Р Р°СЃС‡РµС‚ РќР "
+			  РІС‹РЅСѓР¶РґР°РµРј РґРІРёРіР°С‚СЊСЃСЏ РёРјРµРЅРЅРѕ РїРѕ С‚Р°РєРѕР№ С†РµРїРѕС‡РєРµ, РЅРѕ РёРЅР°С‡Рµ РѕР±РѕР№С‚Рё РґР°РЅРЅСѓСЋ
+			  РїСЂРѕР±Р»РµРјСѓ РЅРµ РїСЂРµРґСЃС‚Р°РІР»СЏРµС‚СЃСЏ РІРѕР·РјРѕР¶РЅС‹Рј*/
 			BigDecimal materialCost = BigDecimal.ZERO;
 			if (material.getMtlBackflushFlag()) {
 				BigDecimal quan = BigDecimal.ZERO;
@@ -767,7 +767,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
 		
 		for (int i = currentJobOperIndex; i <= prevControlPoint; i++) {
 			JobRoute jobRoute = routes.get(i);
-			BigDecimal tOper = createInputLaborDocument(jobRoute, productQuan, docHead); //выполняем первой, в ней готовятся входные данные для следующих
+			BigDecimal tOper = createInputLaborDocument(jobRoute, productQuan, docHead); //РІС‹РїРѕР»РЅСЏРµРј РїРµСЂРІРѕР№, РІ РЅРµР№ РіРѕС‚РѕРІСЏС‚СЃСЏ РІС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ РґР»СЏ СЃР»РµРґСѓСЋС‰РёС…
 			createInputMaterialDocument(jobRoute, productQuan, tOper, docHead);
 			createInputMachineDocument(jobRoute, productQuan, tOper, docHead);
 		}
@@ -778,7 +778,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
 		List<InputDocumentHead> docs = ormTemplate.findByCriteria(OrmTemplate.createCriteria(InputDocumentHead.class)
 				.add(Restrictions.eq("OutputDocHead", docHead))
 				.add(Restrictions.eq("BackFlushFlag", true)));
-		//удаляем средствами сервиса документов, чтобы были выполнены все проверки
+		//СѓРґР°Р»СЏРµРј СЃСЂРµРґСЃС‚РІР°РјРё СЃРµСЂРІРёСЃР° РґРѕРєСѓРјРµРЅС‚РѕРІ, С‡С‚РѕР±С‹ Р±С‹Р»Рё РІС‹РїРѕР»РЅРµРЅС‹ РІСЃРµ РїСЂРѕРІРµСЂРєРё
 		for (InputDocumentHead inputDoc : docs)
 			DocumentUtils.getDocumentService(inputDoc.getDocSection()).erase((PersistentObject) inputDoc);
 	}
@@ -903,7 +903,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
 				tran.setCostCategory(scrapDocSpec.getCostCategory());
 				break;
 			default:
-				continue;//продолжим цикл, но впринципе не должны сюда попадать
+				continue;//РїСЂРѕРґРѕР»Р¶РёРј С†РёРєР», РЅРѕ РІРїСЂРёРЅС†РёРїРµ РЅРµ РґРѕР»Р¶РЅС‹ СЃСЋРґР° РїРѕРїР°РґР°С‚СЊ
 			}
 			
 			tranService.create(tran);
@@ -1072,15 +1072,15 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
 				.add(Restrictions.eq("Oper", jobRoute)));
 		
 		for (JobMaterial material : materials) {
-			/*устанавливаем цену 0, в текущей реализации невозможно получить цену
-			  списания без отработки по складу, таким образом вычисляем только количество
-			  для корректного получения цены списания следующим этапом должен идти
-			  этап "Отработка по складу с простановкой цен", далее необходимо
-			  выполнить этап "Расчет НР" который откорректирует суммы НР, т.е.
-			  цепочка ДО выглядит следующим образом
-			  "Отработка обратного списания" -> "Отработка по складу с простановкой цен" -> "Расчет НР"
-			  вынуждаем двигаться именно по такой цепочке, но иначе обойти данную
-			  проблему не представляется возможным*/
+			/*СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј С†РµРЅСѓ 0, РІ С‚РµРєСѓС‰РµР№ СЂРµР°Р»РёР·Р°С†РёРё РЅРµРІРѕР·РјРѕР¶РЅРѕ РїРѕР»СѓС‡РёС‚СЊ С†РµРЅСѓ
+			  СЃРїРёСЃР°РЅРёСЏ Р±РµР· РѕС‚СЂР°Р±РѕС‚РєРё РїРѕ СЃРєР»Р°РґСѓ, С‚Р°РєРёРј РѕР±СЂР°Р·РѕРј РІС‹С‡РёСЃР»СЏРµРј С‚РѕР»СЊРєРѕ РєРѕР»РёС‡РµСЃС‚РІРѕ
+			  РґР»СЏ РєРѕСЂСЂРµРєС‚РЅРѕРіРѕ РїРѕР»СѓС‡РµРЅРёСЏ С†РµРЅС‹ СЃРїРёСЃР°РЅРёСЏ СЃР»РµРґСѓСЋС‰РёРј СЌС‚Р°РїРѕРј РґРѕР»Р¶РµРЅ РёРґС‚Рё
+			  СЌС‚Р°Рї "РћС‚СЂР°Р±РѕС‚РєР° РїРѕ СЃРєР»Р°РґСѓ СЃ РїСЂРѕСЃС‚Р°РЅРѕРІРєРѕР№ С†РµРЅ", РґР°Р»РµРµ РЅРµРѕР±С…РѕРґРёРјРѕ
+			  РІС‹РїРѕР»РЅРёС‚СЊ СЌС‚Р°Рї "Р Р°СЃС‡РµС‚ РќР " РєРѕС‚РѕСЂС‹Р№ РѕС‚РєРѕСЂСЂРµРєС‚РёСЂСѓРµС‚ СЃСѓРјРјС‹ РќР , С‚.Рµ.
+			  С†РµРїРѕС‡РєР° Р”Рћ РІС‹РіР»СЏРґРёС‚ СЃР»РµРґСѓСЋС‰РёРј РѕР±СЂР°Р·РѕРј
+			  "РћС‚СЂР°Р±РѕС‚РєР° РѕР±СЂР°С‚РЅРѕРіРѕ СЃРїРёСЃР°РЅРёСЏ" -> "РћС‚СЂР°Р±РѕС‚РєР° РїРѕ СЃРєР»Р°РґСѓ СЃ РїСЂРѕСЃС‚Р°РЅРѕРІРєРѕР№ С†РµРЅ" -> "Р Р°СЃС‡РµС‚ РќР "
+			  РІС‹РЅСѓР¶РґР°РµРј РґРІРёРіР°С‚СЊСЃСЏ РёРјРµРЅРЅРѕ РїРѕ С‚Р°РєРѕР№ С†РµРїРѕС‡РєРµ, РЅРѕ РёРЅР°С‡Рµ РѕР±РѕР№С‚Рё РґР°РЅРЅСѓСЋ
+			  РїСЂРѕР±Р»РµРјСѓ РЅРµ РїСЂРµРґСЃС‚Р°РІР»СЏРµС‚СЃСЏ РІРѕР·РјРѕР¶РЅС‹Рј*/
 			BigDecimal materialCost = BigDecimal.ZERO;
 				BigDecimal quan = BigDecimal.ZERO;
 				switch (material.getQuantityRateFlag()) {
@@ -1136,7 +1136,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
 		
 		for (int i = currentJobOperIndex; i <= routes.size() - 1 && i >= 0; i++) {
 			JobRoute jobRoute = routes.get(i);
-			BigDecimal tOper = createScrapLaborDocument(jobRoute, quantity, docHead, processDate); //выполняем первой, в ней готовятся входные данные для следующих
+			BigDecimal tOper = createScrapLaborDocument(jobRoute, quantity, docHead, processDate); //РІС‹РїРѕР»РЅСЏРµРј РїРµСЂРІРѕР№, РІ РЅРµР№ РіРѕС‚РѕРІСЏС‚СЃСЏ РІС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ РґР»СЏ СЃР»РµРґСѓСЋС‰РёС…
 			createScrapMaterialDocument(jobRoute, quantity, tOper, docHead, processDate);
 			createScrapMachineDocument(jobRoute, quantity, tOper, docHead, processDate);
 		}		
@@ -1146,7 +1146,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
 	private void internalRollbackPerformScrap(ScrapDocumentHead docHead) {
 		List<ScrapDocumentHead> docs = ormTemplate.findByCriteria(OrmTemplate.createCriteria(ScrapDocumentHead.class)
 				.add(Restrictions.eq("BaseDocument", docHead)));
-		//удаляем средствами сервиса документов, чтобы были выполнены все проверки
+		//СѓРґР°Р»СЏРµРј СЃСЂРµРґСЃС‚РІР°РјРё СЃРµСЂРІРёСЃР° РґРѕРєСѓРјРµРЅС‚РѕРІ, С‡С‚РѕР±С‹ Р±С‹Р»Рё РІС‹РїРѕР»РЅРµРЅС‹ РІСЃРµ РїСЂРѕРІРµСЂРєРё
 		for (ScrapDocumentHead scrapDoc : docs)
 			DocumentUtils.getDocumentService(scrapDoc.getDocSection()).erase((PersistentObject) scrapDoc);
 	}

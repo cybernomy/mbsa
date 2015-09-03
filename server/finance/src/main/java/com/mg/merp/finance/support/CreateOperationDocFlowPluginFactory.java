@@ -33,7 +33,7 @@ import com.mg.merp.finance.OperationServiceLocal;
 import com.mg.merp.finance.model.FinOperation;
 
 /**
- * Реализация фабрики реализаций этапа ДО "Создание финансовой операции"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїР° Р”Рћ "РЎРѕР·РґР°РЅРёРµ С„РёРЅР°РЅСЃРѕРІРѕР№ РѕРїРµСЂР°С†РёРё"
  * 
  * @author Oleg V. Safonov
  * @version $Id: CreateOperationDocFlowPluginFactory.java,v 1.2 2007/11/30 13:01:38 alikaev Exp $

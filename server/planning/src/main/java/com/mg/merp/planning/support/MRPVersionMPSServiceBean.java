@@ -25,7 +25,7 @@ import com.mg.merp.planning.MRPVersionMPSServiceLocal;
 import com.mg.merp.planning.model.MrpVersionMps;
 
 /**
- * Бизнес-компонент "Версии ОПП в ППМ" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РµСЂСЃРёРё РћРџРџ РІ РџРџРњ" 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

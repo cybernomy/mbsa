@@ -18,7 +18,7 @@ import com.mg.merp.manufacture.model.Job;
 import com.mg.merp.mfreference.model.WorkCenter;
 
 /**
- * Контроллер формы условий отбора документов о отклонениям
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° РґРѕРєСѓРјРµРЅС‚РѕРІ Рѕ РѕС‚РєР»РѕРЅРµРЅРёСЏРј
  * 
  * @author leonova
  * @version $Id: VarianceDocumentHeadRest.java,v 1.3 2007/07/31 06:31:06 safonov Exp $ 

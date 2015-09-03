@@ -15,7 +15,7 @@
 package com.mg.framework.api.ui;
 
 /**
- * Форма ограничений (условий отбора)
+ * Р¤РѕСЂРјР° РѕРіСЂР°РЅРёС‡РµРЅРёР№ (СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР°)
  * 
  * @author Oleg V. Safonov
  * @version $Id: RestrictionForm.java,v 1.2 2007/03/13 13:25:18 safonov Exp $
@@ -23,9 +23,9 @@ package com.mg.framework.api.ui;
 public interface RestrictionForm extends DialogForm {
 
 	/**
-	 * показывать при входе в раздел
+	 * РїРѕРєР°Р·С‹РІР°С‚СЊ РїСЂРё РІС…РѕРґРµ РІ СЂР°Р·РґРµР»
 	 * 
-	 * @return	если <code>true</code> то форма будет открыта перед показом браузера
+	 * @return	РµСЃР»Рё <code>true</code> С‚Рѕ С„РѕСЂРјР° Р±СѓРґРµС‚ РѕС‚РєСЂС‹С‚Р° РїРµСЂРµРґ РїРѕРєР°Р·РѕРј Р±СЂР°СѓР·РµСЂР°
 	 */
 	boolean isShowOnEnter();
 

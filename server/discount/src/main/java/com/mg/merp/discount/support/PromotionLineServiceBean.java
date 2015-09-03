@@ -23,7 +23,7 @@ import com.mg.merp.discount.PromotionLineServiceLocal;
 import com.mg.merp.discount.model.PromotionLine;
 
 /**
- * Реализация бизнес-компонента "Позиция рекламного мероприятия"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРѕР·РёС†РёСЏ СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PromotionLineServiceBean.java,v 1.1 2007/10/30 14:10:57 sharapov Exp $

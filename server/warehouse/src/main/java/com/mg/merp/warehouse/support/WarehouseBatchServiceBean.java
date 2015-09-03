@@ -23,7 +23,7 @@ import com.mg.merp.warehouse.WarehouseBatchServiceLocal;
 import com.mg.merp.warehouse.model.StockBatch;
 
 /**
- * Бизнес-компонент "Партии" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџР°СЂС‚РёРё" 
  * 
  * @author leonova
  * @version $Id: WarehouseBatchServiceBean.java,v 1.4 2007/07/30 11:07:32 safonov Exp $

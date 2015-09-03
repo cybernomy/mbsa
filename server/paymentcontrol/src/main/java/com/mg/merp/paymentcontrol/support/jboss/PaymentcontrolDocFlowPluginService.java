@@ -26,7 +26,7 @@ import com.mg.merp.paymentcontrol.support.ConfirmExecutionByDocDocFlowPluginFact
 import com.mg.merp.paymentcontrol.support.CreateLiabilityDocFlowPluginFactory;
 
 /**
- * Реализация сервиса дополнительных модулей подсистемы "Платежный календарь"
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "РџР»Р°С‚РµР¶РЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PaymentcontrolDocFlowPluginService.java,v 1.2 2007/06/01 07:15:44 sharapov Exp $

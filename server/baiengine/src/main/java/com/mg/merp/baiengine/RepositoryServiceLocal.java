@@ -22,7 +22,7 @@ import com.mg.merp.baiengine.model.Repository;
 public interface RepositoryServiceLocal extends
 		com.mg.framework.api.DataBusinessObjectService<Repository, Integer> {
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/algorithmengine/AlgorithmRepository";
 

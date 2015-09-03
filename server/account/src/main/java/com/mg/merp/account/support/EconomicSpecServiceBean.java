@@ -32,7 +32,7 @@ import com.mg.merp.account.model.EconomicOper;
 import com.mg.merp.account.model.EconomicSpec;
 
 /**
- * Бизнес-компонент "Спецификация хозяйственных операций" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ С…РѕР·СЏР№СЃС‚РІРµРЅРЅС‹С… РѕРїРµСЂР°С†РёР№" 
  * 
  * @author leonova
  * @author Oleg V. Safonov
@@ -43,9 +43,9 @@ import com.mg.merp.account.model.EconomicSpec;
 public class EconomicSpecServiceBean extends AbstractPOJODataBusinessObjectServiceBean<EconomicSpec, Integer> implements EconomicSpecServiceLocal {
 
 	/**
-	 * проверка периода на возможность изменения
+	 * РїСЂРѕРІРµСЂРєР° РїРµСЂРёРѕРґР° РЅР° РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РёР·РјРµРЅРµРЅРёСЏ
 	 * 
-	 * @param operDate	дата ХО
+	 * @param operDate	РґР°С‚Р° РҐРћ
 	 */
 	private void checkPeriod(EconomicSpec spec) {
 		((PeriodServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/account/Period")).checkPeriod(getPersistentManager().find(EconomicOper.class, spec.getEconomicOper().getId()).getKeepDate());

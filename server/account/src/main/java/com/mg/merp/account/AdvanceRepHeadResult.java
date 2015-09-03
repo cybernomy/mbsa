@@ -20,7 +20,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * Модель результата при расчете суммы предыдущего аванса
+ * РњРѕРґРµР»СЊ СЂРµР·СѓР»СЊС‚Р°С‚Р° РїСЂРё СЂР°СЃС‡РµС‚Рµ СЃСѓРјРјС‹ РїСЂРµРґС‹РґСѓС‰РµРіРѕ Р°РІР°РЅСЃР°
  * 
  * @author pashistova
  * @author Konstantin S. Alikaev

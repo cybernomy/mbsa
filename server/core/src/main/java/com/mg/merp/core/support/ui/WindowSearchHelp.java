@@ -18,7 +18,7 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 import com.mg.merp.core.WindowServiceLocal;
 
 /**
- * Механизм поиска окон системы
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° РѕРєРѕРЅ СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: WindowSearchHelp.java,v 1.1 2008/03/03 13:05:04 safonov Exp $

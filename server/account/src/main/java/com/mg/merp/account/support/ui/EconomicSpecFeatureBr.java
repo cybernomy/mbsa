@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.account.model.EconomicSpecFeature;
 
 /**
- * Браузер характеристик проводов
+ * Р‘СЂР°СѓР·РµСЂ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРє РїСЂРѕРІРѕРґРѕРІ
  * 
  * @author leonova
  * @version $Id: EconomicSpecFeatureBr.java,v 1.1 2006/09/13 12:55:37 leonova Exp $ 

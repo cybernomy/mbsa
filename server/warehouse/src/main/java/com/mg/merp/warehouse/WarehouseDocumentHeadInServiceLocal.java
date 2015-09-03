@@ -26,12 +26,12 @@ public interface WarehouseDocumentHeadInServiceLocal
 {
 
 	/**
-	 * тип папки для приходных ордеров
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РїСЂРёС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ
 	 */
 	final static short FOLDER_PART = 30;
 	
 	/**
-	 * docsection для приходных ордеров
+	 * docsection РґР»СЏ РїСЂРёС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ
 	 */
 	final static short DOCSECTION = 16;
 }

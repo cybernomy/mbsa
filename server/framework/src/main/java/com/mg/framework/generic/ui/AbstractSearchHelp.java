@@ -28,9 +28,9 @@ import com.mg.framework.api.ui.SearchHelpListener;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Реализация механизма поиска сущностей, базовый абстрактный класс, в наследнике обязательно необходимо
- * переопределить как минимум один из методов {@link #doSearch()} или {@link #doSearch(PersistentObject)}.
- * Если ни один из методов не будет переопределен, то возникнет зацикливание.
+ * Р РµР°Р»РёР·Р°С†РёСЏ РјРµС…Р°РЅРёР·РјР° РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№, Р±Р°Р·РѕРІС‹Р№ Р°Р±СЃС‚СЂР°РєС‚РЅС‹Р№ РєР»Р°СЃСЃ, РІ РЅР°СЃР»РµРґРЅРёРєРµ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РЅРµРѕР±С…РѕРґРёРјРѕ
+ * РїРµСЂРµРѕРїСЂРµРґРµР»РёС‚СЊ РєР°Рє РјРёРЅРёРјСѓРј РѕРґРёРЅ РёР· РјРµС‚РѕРґРѕРІ {@link #doSearch()} РёР»Рё {@link #doSearch(PersistentObject)}.
+ * Р•СЃР»Рё РЅРё РѕРґРёРЅ РёР· РјРµС‚РѕРґРѕРІ РЅРµ Р±СѓРґРµС‚ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ, С‚Рѕ РІРѕР·РЅРёРєРЅРµС‚ Р·Р°С†РёРєР»РёРІР°РЅРёРµ.
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractSearchHelp.java,v 1.7 2009/02/09 14:56:03 safonov Exp $
@@ -42,7 +42,7 @@ public abstract class AbstractSearchHelp implements SearchHelp, SearchHelpListen
 	private Map<String, Object> exportContext = new HashMap<String, Object>();
 
 	/**
-	 * выполняет поиск, должен быть переопределен в наследнике если не переопределен метод {@link #doSearch(PersistentObject)}
+	 * РІС‹РїРѕР»РЅСЏРµС‚ РїРѕРёСЃРє, РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ РІ РЅР°СЃР»РµРґРЅРёРєРµ РµСЃР»Рё РЅРµ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ РјРµС‚РѕРґ {@link #doSearch(PersistentObject)}
 	 * 
 	 * @throws Exception
 	 */
@@ -51,9 +51,9 @@ public abstract class AbstractSearchHelp implements SearchHelp, SearchHelpListen
 	}
 	
 	/**
-	 * выполняет поиск, должен быть переопределен в наследнике если не переопределен метод {@link #doSearch()}
+	 * РІС‹РїРѕР»РЅСЏРµС‚ РїРѕРёСЃРє, РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ РІ РЅР°СЃР»РµРґРЅРёРєРµ РµСЃР»Рё РЅРµ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ РјРµС‚РѕРґ {@link #doSearch()}
 	 * 
-	 * @param entity	сущность
+	 * @param entity	СЃСѓС‰РЅРѕСЃС‚СЊ
 	 * @throws Exception
 	 */
 	protected void doSearch(PersistentObject entity) throws Exception {
@@ -61,39 +61,39 @@ public abstract class AbstractSearchHelp implements SearchHelp, SearchHelpListen
 	}
 	
 	/**
-	 * выполняет интерактивный просмотр, должен быть переопределен в наследнике
-	 * если поддерживается просмотр
+	 * РІС‹РїРѕР»РЅСЏРµС‚ РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹Р№ РїСЂРѕСЃРјРѕС‚СЂ, РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ РІ РЅР°СЃР»РµРґРЅРёРєРµ
+	 * РµСЃР»Рё РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ РїСЂРѕСЃРјРѕС‚СЂ
 	 * 
-	 * @param entity сущность
+	 * @param entity СЃСѓС‰РЅРѕСЃС‚СЊ
 	 */
 	protected void doView(PersistentObject entity) {
 		throw new UnsupportedOperationException();
 	}
 	
 	/**
-	 * вызывается непосредственно после выполнения поиска, наследник может
-	 * реализовать дополнительную функциональность, например установить контекст
-	 * экспорта
+	 * РІС‹Р·С‹РІР°РµС‚СЃСЏ РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ РїРѕСЃР»Рµ РІС‹РїРѕР»РЅРµРЅРёСЏ РїРѕРёСЃРєР°, РЅР°СЃР»РµРґРЅРёРє РјРѕР¶РµС‚
+	 * СЂРµР°Р»РёР·РѕРІР°С‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅСѓСЋ С„СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕСЃС‚СЊ, РЅР°РїСЂРёРјРµСЂ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕРЅС‚РµРєСЃС‚
+	 * СЌРєСЃРїРѕСЂС‚Р°
 	 * 
-	 * @param event событие поиска
+	 * @param event СЃРѕР±С‹С‚РёРµ РїРѕРёСЃРєР°
 	 */
 	protected void doOnSearchPerformed(SearchHelpEvent event) {
 		
 	}
 	
 	/**
-	 * описывает контекст экспорта
+	 * РѕРїРёСЃС‹РІР°РµС‚ РєРѕРЅС‚РµРєСЃС‚ СЌРєСЃРїРѕСЂС‚Р°
 	 * 
-	 * @return	контекст
+	 * @return	РєРѕРЅС‚РµРєСЃС‚
 	 */
 	protected String[] defineExportContext() {
 		return null;
 	}
 	
 	/**
-	 * описывает контекст импорта
+	 * РѕРїРёСЃС‹РІР°РµС‚ РєРѕРЅС‚РµРєСЃС‚ РёРјРїРѕСЂС‚Р°
 	 * 
-	 * @return	контекст
+	 * @return	РєРѕРЅС‚РµРєСЃС‚
 	 */
 	protected String[] defineImportContext() {
 		return null;
@@ -109,29 +109,29 @@ public abstract class AbstractSearchHelp implements SearchHelp, SearchHelpListen
 	}
 	
 	/**
-	 * получить значение контекста импорта
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚Р° РёРјРїРѕСЂС‚Р°
 	 * 
-	 * @param name	имя значения
-	 * @return		значение
+	 * @param name	РёРјСЏ Р·РЅР°С‡РµРЅРёСЏ
+	 * @return		Р·РЅР°С‡РµРЅРёРµ
 	 */
 	protected Object getImportContextValue(String name) {
 		return importContext.get(name);
 	}
 	
 	/**
-	 * установить значение контекста экспорта
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚Р° СЌРєСЃРїРѕСЂС‚Р°
 	 * 
-	 * @param name	имя значения
-	 * @param value	значение
+	 * @param name	РёРјСЏ Р·РЅР°С‡РµРЅРёСЏ
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ
 	 */
 	protected void setExportContextValue(String name, Object value) {
 		exportContext.put(name, value);
 	}
 	
 	/**
-	 * отправить событие о выполнении поиска
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕР±С‹С‚РёРµ Рѕ РІС‹РїРѕР»РЅРµРЅРёРё РїРѕРёСЃРєР°
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void fireSearchPerformed(SearchHelpEvent event) {
 		for (SearchHelpListener listener : listeners)
@@ -139,9 +139,9 @@ public abstract class AbstractSearchHelp implements SearchHelp, SearchHelpListen
 	}
 
 	/**
-	 * отправить событие об отмене поиска
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕР±С‹С‚РёРµ РѕР± РѕС‚РјРµРЅРµ РїРѕРёСЃРєР°
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void fireSearchCanceled(SearchHelpEvent event) {
 		for (SearchHelpListener listener : listeners)

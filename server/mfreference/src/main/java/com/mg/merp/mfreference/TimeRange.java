@@ -15,7 +15,7 @@
 package com.mg.merp.mfreference;
 
 /**
- * Интервал времени в тиках
+ * РРЅС‚РµСЂРІР°Р» РІСЂРµРјРµРЅРё РІ С‚РёРєР°С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: TimeRange.java,v 1.1 2007/07/30 10:25:31 safonov Exp $

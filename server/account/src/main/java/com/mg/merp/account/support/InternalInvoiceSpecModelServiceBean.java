@@ -27,7 +27,7 @@ import com.mg.merp.account.model.InternalInvoiceSpecModel;
 import com.mg.merp.reference.model.TimePeriodKind;
 
 /**
- * Бизнес-компонент "Образцы спецификаций внутренних накладных" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ СЃРїРµС†РёС„РёРєР°С†РёР№ РІРЅСѓС‚СЂРµРЅРЅРёС… РЅР°РєР»Р°РґРЅС‹С…" 
  * 
  * @author leonova
  * @version $Id: InternalInvoiceSpecModelServiceBean.java,v 1.4 2007/09/07 08:06:10 alikaev Exp $
@@ -64,7 +64,7 @@ public class InternalInvoiceSpecModelServiceBean extends AbstractPOJODataBusines
 	}
 	
 	/**
-	 * Заполняет обязательные поля
+	 * Р—Р°РїРѕР»РЅСЏРµС‚ РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РїРѕР»СЏ
 	 * @param entity
 	 */
 	private void adjustOrderSpecModelCus(InternalInvoiceSpecModel entity) {

@@ -17,7 +17,7 @@ package com.mg.merp.contract.support;
 import java.math.BigDecimal;
 
 /**
- * Результат рассчета суммы пункта контракта
+ * Р РµР·СѓР»СЊС‚Р°С‚ СЂР°СЃСЃС‡РµС‚Р° СЃСѓРјРјС‹ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
  * 
  * @author Artem V. Sharapov
  * @version $Id: AgregateSumBySpecificationResult.java,v 1.1 2008/03/11 09:49:41 sharapov Exp $
@@ -29,9 +29,9 @@ public class AgregateSumBySpecificationResult {
 
 	
 	/**
-	 * Создать результат рассчета суммы пункта контракта
-	 * @param contractSpecCount - количество позиций спецификации пункта
-	 * @param agregateSum - агрегированная сумма спецификации пункта
+	 * РЎРѕР·РґР°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ СЂР°СЃСЃС‡РµС‚Р° СЃСѓРјРјС‹ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param contractSpecCount - РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р°
+	 * @param agregateSum - Р°РіСЂРµРіРёСЂРѕРІР°РЅРЅР°СЏ СЃСѓРјРјР° СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р°
 	 */
 	public AgregateSumBySpecificationResult(Integer contractSpecCount, BigDecimal agregateSum) {
 		this.contractSpecCount = contractSpecCount;
@@ -39,16 +39,16 @@ public class AgregateSumBySpecificationResult {
 	}
 
 	/**
-	 * Получить количество позиций спецификации пункта
-	 * @return количество позиций спецификации пункта
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р°
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р°
 	 */
 	public Integer getContractSpecCount() {
 		return this.contractSpecCount;
 	}
 
 	/**
-	 * Получить агрегированную сумму спецификации пункта
-	 * @return агрегированная сумма спецификации пункта
+	 * РџРѕР»СѓС‡РёС‚СЊ Р°РіСЂРµРіРёСЂРѕРІР°РЅРЅСѓСЋ СЃСѓРјРјСѓ СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р°
+	 * @return Р°РіСЂРµРіРёСЂРѕРІР°РЅРЅР°СЏ СЃСѓРјРјР° СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р°
 	 */
 	public BigDecimal getAgregateSum() {
 		return this.agregateSum;

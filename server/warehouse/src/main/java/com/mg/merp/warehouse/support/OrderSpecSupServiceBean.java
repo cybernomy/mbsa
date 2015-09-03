@@ -25,7 +25,7 @@ import com.mg.merp.warehouse.OrderSpecSupServiceLocal;
 import com.mg.merp.warehouse.model.OrderSpec;
 
 /**
- * Бизнес-компонент "Спецификация заказов поставщикам" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ Р·Р°РєР°Р·РѕРІ РїРѕСЃС‚Р°РІС‰РёРєР°Рј" 
  * 
  * @author leonova
  * @version $Id: OrderSpecSupServiceBean.java,v 1.7 2008/12/01 09:37:57 safonov Exp $

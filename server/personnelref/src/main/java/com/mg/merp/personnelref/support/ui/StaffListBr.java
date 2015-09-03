@@ -37,7 +37,7 @@ import com.mg.merp.personnelref.model.StaffList;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Контроллер браузера "Варианты штатного расписания"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "Р’Р°СЂРёР°РЅС‚С‹ С€С‚Р°С‚РЅРѕРіРѕ СЂР°СЃРїРёСЃР°РЅРёСЏ"
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: StaffListBr.java,v 1.5 2007/07/09 08:07:47 sharapov Exp $
@@ -123,8 +123,8 @@ public class StaffListBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Показать штатное расписание"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџРѕРєР°Р·Р°С‚СЊ С€С‚Р°С‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅРёРµ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionShowStuffListPositions(WidgetEvent event) {
 		Serializable[] selectedPrimaryKeys = ((MaintenanceTableModel) table.getModel()).getSelectedPrimaryKeys();

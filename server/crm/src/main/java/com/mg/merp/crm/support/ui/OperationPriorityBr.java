@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.OperationPriority;
 
 /**
- * Браузер приоритетов действий
+ * Р‘СЂР°СѓР·РµСЂ РїСЂРёРѕСЂРёС‚РµС‚РѕРІ РґРµР№СЃС‚РІРёР№
  * 
  * @author leonova
  * @version $Id: OperationPriorityBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

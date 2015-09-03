@@ -26,7 +26,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.scheduler.support.jboss.SchedulerManagerServiceMBean;
 
 /**
- * Очередь событий действий над сущностью "Задачи планировщика"
+ * РћС‡РµСЂРµРґСЊ СЃРѕР±С‹С‚РёР№ РґРµР№СЃС‚РІРёР№ РЅР°Рґ СЃСѓС‰РЅРѕСЃС‚СЊСЋ "Р—Р°РґР°С‡Рё РїР»Р°РЅРёСЂРѕРІС‰РёРєР°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: TaskListenerBean.java,v 1.1 2008/04/25 10:57:23 safonov Exp $

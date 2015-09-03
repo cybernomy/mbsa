@@ -20,7 +20,7 @@ import com.mg.framework.support.ui.widget.TableEJBQLFieldDef;
 import com.mg.framework.utils.DatabaseUtils;
 
 /**
- * Стандартная модель таблицы спецификаций для отображения формы списка спецификаций товарных документов
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ РјРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ СЃРїРµС†РёС„РёРєР°С†РёР№ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° СЃРїРµС†РёС„РёРєР°С†РёР№ С‚РѕРІР°СЂРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: DefaultGoodsDocSpecEJBQLTableModel.java,v 1.1 2009/02/12 08:22:23 safonov Exp $

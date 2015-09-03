@@ -38,12 +38,12 @@ import org.apache.commons.codec.binary.Base64;
 public class StringUtils {
 
 	/**
-	 * пустая строка
+	 * РїСѓСЃС‚Р°СЏ СЃС‚СЂРѕРєР°
 	 */
 	public static String EMPTY_STRING = "";
 	
 	/**
-	 * текстовая константа <пробел>
+	 * С‚РµРєСЃС‚РѕРІР°СЏ РєРѕРЅСЃС‚Р°РЅС‚Р° <РїСЂРѕР±РµР»>
 	 */
 	public static final String BLANK_STRING = " ";
 
@@ -302,7 +302,7 @@ public class StringUtils {
         str = cleanHexString(str);
         int stringLength = str.length();
         if ((stringLength & 0x1) != 0) {
-            throw new IllegalArgumentException("fromHexStringКrequiresКanКevenКnumberКofКhexКcharacters");
+            throw new IllegalArgumentException("fromHexStringРљrequiresРљanРљevenРљnumberРљofРљhexРљcharacters");
         }
         byte[] b = new byte[stringLength / 2];
 
@@ -315,22 +315,22 @@ public class StringUtils {
     }
 
     /**
-     * преобразует первый символ строки в верхний регистр, используется текущая локаль,
-     * данный вызов эквивалентен <code>firstCharToUpper(str, ServerUtils.getUserLocale)</code>.
+     * РїСЂРµРѕР±СЂР°Р·СѓРµС‚ РїРµСЂРІС‹Р№ СЃРёРјРІРѕР» СЃС‚СЂРѕРєРё РІ РІРµСЂС…РЅРёР№ СЂРµРіРёСЃС‚СЂ, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ С‚РµРєСѓС‰Р°СЏ Р»РѕРєР°Р»СЊ,
+     * РґР°РЅРЅС‹Р№ РІС‹Р·РѕРІ СЌРєРІРёРІР°Р»РµРЅС‚РµРЅ <code>firstCharToUpper(str, ServerUtils.getUserLocale)</code>.
      * 
-     * @param str	строка для преобразования
-     * @return		преобразованная строка
+     * @param str	СЃС‚СЂРѕРєР° РґР»СЏ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ
+     * @return		РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРЅР°СЏ СЃС‚СЂРѕРєР°
      */
     public static String firstCharToUpper(String str) {
     	return firstCharToUpper(str, ServerUtils.getUserLocale());
     }
     
     /**
-     * преобразует первый символ строки в верхний регистр
+     * РїСЂРµРѕР±СЂР°Р·СѓРµС‚ РїРµСЂРІС‹Р№ СЃРёРјРІРѕР» СЃС‚СЂРѕРєРё РІ РІРµСЂС…РЅРёР№ СЂРµРіРёСЃС‚СЂ
      * 
-     * @param str		строка для преобразования
-     * @param locale	локаль используемая при преобразовании
-     * @return			преобразованная строка
+     * @param str		СЃС‚СЂРѕРєР° РґР»СЏ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ
+     * @param locale	Р»РѕРєР°Р»СЊ РёСЃРїРѕР»СЊР·СѓРµРјР°СЏ РїСЂРё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРё
+     * @return			РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРЅР°СЏ СЃС‚СЂРѕРєР°
      */
     public static String firstCharToUpper(String str, Locale locale) {
         String    first, rest;
@@ -344,22 +344,22 @@ public class StringUtils {
     }
     
     /**
-     * преобразует первый символ строки в нижний регистр, используется текущая локаль,
-     * данный вызов эквивалентен <code>firstCharToLower(str, ServerUtils.getUserLocale)</code>.
+     * РїСЂРµРѕР±СЂР°Р·СѓРµС‚ РїРµСЂРІС‹Р№ СЃРёРјРІРѕР» СЃС‚СЂРѕРєРё РІ РЅРёР¶РЅРёР№ СЂРµРіРёСЃС‚СЂ, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ С‚РµРєСѓС‰Р°СЏ Р»РѕРєР°Р»СЊ,
+     * РґР°РЅРЅС‹Р№ РІС‹Р·РѕРІ СЌРєРІРёРІР°Р»РµРЅС‚РµРЅ <code>firstCharToLower(str, ServerUtils.getUserLocale)</code>.
      * 
-     * @param str	строка для преобразования
-     * @return		преобразованная строка
+     * @param str	СЃС‚СЂРѕРєР° РґР»СЏ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ
+     * @return		РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРЅР°СЏ СЃС‚СЂРѕРєР°
      */
     public static String firstCharToLower(String str) {
     	return firstCharToLower(str, ServerUtils.getUserLocale());
     }
 
     /**
-     * преобразует первый символ строки в нижний регистр
+     * РїСЂРµРѕР±СЂР°Р·СѓРµС‚ РїРµСЂРІС‹Р№ СЃРёРјРІРѕР» СЃС‚СЂРѕРєРё РІ РЅРёР¶РЅРёР№ СЂРµРіРёСЃС‚СЂ
      * 
-     * @param str		строка для преобразования
-     * @param locale	локаль используемая при преобразовании
-     * @return			преобразованная строка
+     * @param str		СЃС‚СЂРѕРєР° РґР»СЏ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ
+     * @param locale	Р»РѕРєР°Р»СЊ РёСЃРїРѕР»СЊР·СѓРµРјР°СЏ РїСЂРё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРё
+     * @return			РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРЅР°СЏ СЃС‚СЂРѕРєР°
      */
     public static String firstCharToLower(String str, Locale locale) {
         String first, rest;
@@ -374,10 +374,10 @@ public class StringUtils {
     }
 
     /**
-     * проверка строки на <code>null</code> или пустую строку
+     * РїСЂРѕРІРµСЂРєР° СЃС‚СЂРѕРєРё РЅР° <code>null</code> РёР»Рё РїСѓСЃС‚СѓСЋ СЃС‚СЂРѕРєСѓ
      * 
-     * @param str	проверяемая строка
-     * @return		<code>true</code> если строка <code>null</code> или пустая
+     * @param str	РїСЂРѕРІРµСЂСЏРµРјР°СЏ СЃС‚СЂРѕРєР°
+     * @return		<code>true</code> РµСЃР»Рё СЃС‚СЂРѕРєР° <code>null</code> РёР»Рё РїСѓСЃС‚Р°СЏ
      */
     public static boolean stringNullOrEmpty(String str) {
     	return (str == null) || (str.length() == 0);
@@ -428,13 +428,13 @@ public class StringUtils {
     }
 
     /**
-     * дополняет строку символами слева.
+     * РґРѕРїРѕР»РЅСЏРµС‚ СЃС‚СЂРѕРєСѓ СЃРёРјРІРѕР»Р°РјРё СЃР»РµРІР°.
      * 
-     * @param string	исходная строка
-     * @param length	длина новой строки
-     * @param padChar	символ для добавления
-     * @param cut		используется если длина исходной строки больше <code>length</code>, если <code>true</code> то строка будет урезана до новой длины, иначе вернет исходную строку 
-     * @return	сформированная строка
+     * @param string	РёСЃС…РѕРґРЅР°СЏ СЃС‚СЂРѕРєР°
+     * @param length	РґР»РёРЅР° РЅРѕРІРѕР№ СЃС‚СЂРѕРєРё
+     * @param padChar	СЃРёРјРІРѕР» РґР»СЏ РґРѕР±Р°РІР»РµРЅРёСЏ
+     * @param cut		РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РµСЃР»Рё РґР»РёРЅР° РёСЃС…РѕРґРЅРѕР№ СЃС‚СЂРѕРєРё Р±РѕР»СЊС€Рµ <code>length</code>, РµСЃР»Рё <code>true</code> С‚Рѕ СЃС‚СЂРѕРєР° Р±СѓРґРµС‚ СѓСЂРµР·Р°РЅР° РґРѕ РЅРѕРІРѕР№ РґР»РёРЅС‹, РёРЅР°С‡Рµ РІРµСЂРЅРµС‚ РёСЃС…РѕРґРЅСѓСЋ СЃС‚СЂРѕРєСѓ 
+     * @return	СЃС„РѕСЂРјРёСЂРѕРІР°РЅРЅР°СЏ СЃС‚СЂРѕРєР°
      */
     public static String padLeft(String string, int length, char padChar, boolean cut) {
     	if (string == null)
@@ -449,13 +449,13 @@ public class StringUtils {
     }
 
     /**
-     * дополняет строку символами справа до длины
+     * РґРѕРїРѕР»РЅСЏРµС‚ СЃС‚СЂРѕРєСѓ СЃРёРјРІРѕР»Р°РјРё СЃРїСЂР°РІР° РґРѕ РґР»РёРЅС‹
      * 
-     * @param string	исходная строка
-     * @param length	длина новой строки
-     * @param padChar	символ для добавления
-     * @param cut		используется если длина исходной строки больше <code>length</code>, если <code>true</code> то строка будет урезана до новой длины, иначе вернет исходную строку
-     * @return	сформированная строка
+     * @param string	РёСЃС…РѕРґРЅР°СЏ СЃС‚СЂРѕРєР°
+     * @param length	РґР»РёРЅР° РЅРѕРІРѕР№ СЃС‚СЂРѕРєРё
+     * @param padChar	СЃРёРјРІРѕР» РґР»СЏ РґРѕР±Р°РІР»РµРЅРёСЏ
+     * @param cut		РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РµСЃР»Рё РґР»РёРЅР° РёСЃС…РѕРґРЅРѕР№ СЃС‚СЂРѕРєРё Р±РѕР»СЊС€Рµ <code>length</code>, РµСЃР»Рё <code>true</code> С‚Рѕ СЃС‚СЂРѕРєР° Р±СѓРґРµС‚ СѓСЂРµР·Р°РЅР° РґРѕ РЅРѕРІРѕР№ РґР»РёРЅС‹, РёРЅР°С‡Рµ РІРµСЂРЅРµС‚ РёСЃС…РѕРґРЅСѓСЋ СЃС‚СЂРѕРєСѓ
+     * @return	СЃС„РѕСЂРјРёСЂРѕРІР°РЅРЅР°СЏ СЃС‚СЂРѕРєР°
      */
     public static String padRight(String string, int length, char padChar, boolean cut) {
     	if (string == null)

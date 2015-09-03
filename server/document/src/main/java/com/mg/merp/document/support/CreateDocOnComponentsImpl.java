@@ -41,7 +41,7 @@ import com.mg.merp.reference.model.CatalogType;
 import com.mg.merp.reference.model.SetOfGood;
 
 /**
- * Реализация сервиса создания документа на комплектующие
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РєРѕРјРїР»РµРєС‚СѓСЋС‰РёРµ
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: CreateDocOnComponentsImpl.java,v 1.2 2008/02/14 13:02:52 alikaev Exp $
@@ -60,7 +60,7 @@ public class CreateDocOnComponentsImpl<S extends DocHead, D extends DocHead, P e
 			CreateDocumentBasisOfCallback createCallback) {
 		if (specList != null && specList.size() > 0){
 			if (dstDoc.getDocSection().isWithSpec()) {
-				//оба документа со спецификациями
+				//РѕР±Р° РґРѕРєСѓРјРµРЅС‚Р° СЃРѕ СЃРїРµС†РёС„РёРєР°С†РёСЏРјРё
 				GoodsDocumentSpecification dstDocSpecServ = DocumentUtils.getGoodsDocumentSpecificationService(dstDoc.getDocSection());
 				GoodsDocumentSpecification srcDocSpecServ = DocumentUtils.getGoodsDocumentSpecificationService(srcDoc.getDocSection());
 				List<DocSpec> newDocSpecs = new LinkedList<DocSpec>();
@@ -110,13 +110,13 @@ public class CreateDocOnComponentsImpl<S extends DocHead, D extends DocHead, P e
 							CustomFieldsManagerLocator.locate().cloneValues(srcDocSpecServ, srcDocSpec, dstDocSpecServ, dstDocSpec);
 
 							ajustDocSpec(srcDocSpec, dstDocSpec, component);
-							//выполним дополнительную обработку, если существует
+							//РІС‹РїРѕР»РЅРёРј РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅСѓСЋ РѕР±СЂР°Р±РѕС‚РєСѓ, РµСЃР»Рё СЃСѓС‰РµСЃС‚РІСѓРµС‚
 							if (createCallback != null) {
 								logger.debug("execute document line callback");
 								createCallback.processDocumentSpec(dstDoc, srcDoc, dstDocSpec, srcDocSpec);
 							}
 
-							dstDocSpec.setBulkOperation(true); //чтобы не изменял заголовок, после добавления всех применим массовую операцию на заголовке
+							dstDocSpec.setBulkOperation(true); //С‡С‚РѕР±С‹ РЅРµ РёР·РјРµРЅСЏР» Р·Р°РіРѕР»РѕРІРѕРє, РїРѕСЃР»Рµ РґРѕР±Р°РІР»РµРЅРёСЏ РІСЃРµС… РїСЂРёРјРµРЅРёРј РјР°СЃСЃРѕРІСѓСЋ РѕРїРµСЂР°С†РёСЋ РЅР° Р·Р°РіРѕР»РѕРІРєРµ
 							dstDocSpecServ.create(dstDocSpec);
 
 							newDocSpecs.add(dstDocSpec);
@@ -130,14 +130,14 @@ public class CreateDocOnComponentsImpl<S extends DocHead, D extends DocHead, P e
 	}
 
 	/**
-	 * Изменяем спецификацию 
+	 * РР·РјРµРЅСЏРµРј СЃРїРµС†РёС„РёРєР°С†РёСЋ 
 	 * 
 	 * @param docSpec		
-	 * 		спецификация документа источника
+	 * 		СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р° РёСЃС‚РѕС‡РЅРёРєР°
 	 * @param dstDocSpec
-	 * 		спецификация документа приемника
+	 * 		СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р° РїСЂРёРµРјРЅРёРєР°
 	 * @param component
-	 * 		комплектующая
+	 * 		РєРѕРјРїР»РµРєС‚СѓСЋС‰Р°СЏ
 	 */
 	private void ajustDocSpec(DocSpec docSpec, DocSpec dstDocSpec, SetOfGood component) {
 		Catalog catalogComponent = component.getCatalogComponent();

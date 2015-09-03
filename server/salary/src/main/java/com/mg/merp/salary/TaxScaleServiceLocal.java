@@ -17,7 +17,7 @@ package com.mg.merp.salary;
 import com.mg.merp.salary.model.TaxScale;
 
 /**
- * Сервис бизнес-компонента "Налоговые шкалы"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќР°Р»РѕРіРѕРІС‹Рµ С€РєР°Р»С‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.salary.model.TaxScale;
 public interface TaxScaleServiceLocal extends com.mg.framework.api.DataBusinessObjectService<TaxScale, Integer> {	
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String LOCAL_SERVICE_NAME= "merp/salary/TaxScale"; //$NON-NLS-1$
 	

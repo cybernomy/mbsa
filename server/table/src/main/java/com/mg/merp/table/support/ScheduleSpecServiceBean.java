@@ -28,7 +28,7 @@ import com.mg.merp.table.model.ScheduleHead;
 import com.mg.merp.table.model.ScheduleSpec;
 
 /**
- * Бизнес-компонент "Спецификация графиков работ в табельном учете" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РіСЂР°С„РёРєРѕРІ СЂР°Р±РѕС‚ РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ" 
  * 
  * @author leonova
  * @version $Id: ScheduleSpecServiceBean.java,v 1.6 2008/08/12 14:36:17 sharapov Exp $

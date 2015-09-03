@@ -20,7 +20,7 @@ import com.mg.merp.contract.model.PhaseFactItem;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Сервис бизнес-компонента "Фактический пункт контракта"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р¤Р°РєС‚РёС‡РµСЃРєРёР№ РїСѓРЅРєС‚ РєРѕРЅС‚СЂР°РєС‚Р°"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -29,47 +29,47 @@ import com.mg.merp.document.model.DocHead;
 public interface PhaseFactItemServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PhaseFactItem, Integer> {
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/contract/PhaseFactItem"; //$NON-NLS-1$
 	
 	/**
-	 * Рассчитать аттрибуты фактического пункта контракта
-	 * @param phaseFactItem - фактический пункт контракта
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ Р°С‚С‚СЂРёР±СѓС‚С‹ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param phaseFactItem - С„Р°РєС‚РёС‡РµСЃРєРёР№ РїСѓРЅРєС‚ РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	void adjust(PhaseFactItem phaseFactItem);
 	
 	/**
-	 * Распределить фактичекую сумму автоматически
-	 * @param phaseFactItem - фактический пункт контракта
+	 * Р Р°СЃРїСЂРµРґРµР»РёС‚СЊ С„Р°РєС‚РёС‡РµРєСѓСЋ СЃСѓРјРјСѓ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё
+	 * @param phaseFactItem - С„Р°РєС‚РёС‡РµСЃРєРёР№ РїСѓРЅРєС‚ РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	void autoDistributionFactSum(PhaseFactItem phaseFactItem);
 
 	/**
-	 * Распределить фактичекую сумму вручную
-	 * @param data - структура данных для распределения фактичекой суммы
-	 * @param factItemId - идентификатор фактического пункта контракта
+	 * Р Р°СЃРїСЂРµРґРµР»РёС‚СЊ С„Р°РєС‚РёС‡РµРєСѓСЋ СЃСѓРјРјСѓ РІСЂСѓС‡РЅСѓСЋ
+	 * @param data - СЃС‚СЂСѓРєС‚СѓСЂР° РґР°РЅРЅС‹С… РґР»СЏ СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ С„Р°РєС‚РёС‡РµРєРѕР№ СЃСѓРјРјС‹
+	 * @param factItemId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	void manualDistributionFactSum(ManualDistributionData[] data, Integer factItemId);
 
 	/**
-	 * Аннулировать распределение фактической суммы
-	 * @param factItemId - идентификатор фактического пункта контракта
+	 * РђРЅРЅСѓР»РёСЂРѕРІР°С‚СЊ СЂР°СЃРїСЂРµРґРµР»РµРЅРёРµ С„Р°РєС‚РёС‡РµСЃРєРѕР№ СЃСѓРјРјС‹
+	 * @param factItemId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	void avoidDistributionFactSum(Integer factItemId);
 	
 	/**
-	 * Создать фактический пункт контракта
-	 * @param factItemData - данные для создания
-	 * @return фактический пункт контракта
+	 * РЎРѕР·РґР°С‚СЊ С„Р°РєС‚РёС‡РµСЃРєРёР№ РїСѓРЅРєС‚ РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param factItemData - РґР°РЅРЅС‹Рµ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ
+	 * @return С„Р°РєС‚РёС‡РµСЃРєРёР№ РїСѓРЅРєС‚ РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	PhaseFactItem createContractFactItem(FactItemData factItemData);
 
 	/**
-	 * Откат создания фактического пункта контракта
-	 * @param docHead - заголовок документа содержащего ссылку на контракт
-	 * @param contractFactItemId - идентификатор фактического пункта контракта
-	 * @param data - дополнительный признак
+	 * РћС‚РєР°С‚ СЃРѕР·РґР°РЅРёСЏ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param docHead - Р·Р°РіРѕР»РѕРІРѕРє РґРѕРєСѓРјРµРЅС‚Р° СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ СЃСЃС‹Р»РєСѓ РЅР° РєРѕРЅС‚СЂР°РєС‚
+	 * @param contractFactItemId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param data - РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ РїСЂРёР·РЅР°Рє
 	 */
 	void rollBackCreateContractFactItem(DocHead docHead, Integer contractFactItemId, Integer data);
 	

@@ -22,7 +22,7 @@ import com.mg.merp.personnelref.PersonnelAttestationServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelAttestation;
 
 /**
- * Бизнес-компонент "Аттестация сотрудников" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РђС‚С‚РµСЃС‚Р°С†РёСЏ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ" 
  * 
  * @author leonova
  * @version $Id: PersonnelAttestationServiceBean.java,v 1.3 2006/08/14 12:50:04 leonova Exp $

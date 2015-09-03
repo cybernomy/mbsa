@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.Kbk;
 
 /**
- * Браузер кодов КБК
+ * Р‘СЂР°СѓР·РµСЂ РєРѕРґРѕРІ РљР‘Рљ
  * 
  * @author leonova
  * @version $Id: KbkBr.java,v 1.2 2006/10/19 04:42:49 leonova Exp $ 

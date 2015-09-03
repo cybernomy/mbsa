@@ -23,7 +23,7 @@ import com.mg.framework.generic.ui.FileWebResourceProvider;
 import com.mg.framework.utils.FileUtils;
 
 /**
- * Универсальный файловый web ресурс
+ * РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Р№ С„Р°Р№Р»РѕРІС‹Р№ web СЂРµСЃСѓСЂСЃ
  * 
  * @author Oleg V. Safonov
  * @author Etienne.Studer@canoo.com
@@ -34,10 +34,10 @@ public class UniversalFileWebResourceProvider extends FileWebResourceProvider {
 	private String fileName;
 
 	/**
-	 * создание ресурса по mime типу и файлу
+	 * СЃРѕР·РґР°РЅРёРµ СЂРµСЃСѓСЂСЃР° РїРѕ mime С‚РёРїСѓ Рё С„Р°Р№Р»Сѓ
 	 * 
-	 * @param mimeType	mime тип
-	 * @param file	файл
+	 * @param mimeType	mime С‚РёРї
+	 * @param file	С„Р°Р№Р»
 	 */
 	public UniversalFileWebResourceProvider(String mimeType, File file) {
 		super(mimeType);
@@ -45,9 +45,9 @@ public class UniversalFileWebResourceProvider extends FileWebResourceProvider {
 	}
 
 	/**
-	 * создание ресурса по файлу
+	 * СЃРѕР·РґР°РЅРёРµ СЂРµСЃСѓСЂСЃР° РїРѕ С„Р°Р№Р»Сѓ
 	 * 
-	 * @param file	файл
+	 * @param file	С„Р°Р№Р»
 	 */
 	public UniversalFileWebResourceProvider(File file) {
 		super(FileUtils.getMimeTypeByFileName(file.getName()));
@@ -55,10 +55,10 @@ public class UniversalFileWebResourceProvider extends FileWebResourceProvider {
 	}
 
 	/**
-	 * создание ресурса по содержимому файла
+	 * СЃРѕР·РґР°РЅРёРµ СЂРµСЃСѓСЂСЃР° РїРѕ СЃРѕРґРµСЂР¶РёРјРѕРјСѓ С„Р°Р№Р»Р°
 	 * 
-	 * @param fileName		имя файла
-	 * @param fileContents	содержимое
+	 * @param fileName		РёРјСЏ С„Р°Р№Р»Р°
+	 * @param fileContents	СЃРѕРґРµСЂР¶РёРјРѕРµ
 	 */
 	public UniversalFileWebResourceProvider(String fileName, byte[] fileContents) {
 		super(FileUtils.getMimeTypeByFileName(fileName));
@@ -67,11 +67,11 @@ public class UniversalFileWebResourceProvider extends FileWebResourceProvider {
 	}
 
 	/**
-	 * создание ресурса по содержимому файла
+	 * СЃРѕР·РґР°РЅРёРµ СЂРµСЃСѓСЂСЃР° РїРѕ СЃРѕРґРµСЂР¶РёРјРѕРјСѓ С„Р°Р№Р»Р°
 	 * 
-	 * @param mimeType		mime тип
-	 * @param fileName		имя файла
-	 * @param fileContents	содержимое
+	 * @param mimeType		mime С‚РёРї
+	 * @param fileName		РёРјСЏ С„Р°Р№Р»Р°
+	 * @param fileContents	СЃРѕРґРµСЂР¶РёРјРѕРµ
 	 */
 	public UniversalFileWebResourceProvider(String mimeType, String fileName, byte[] fileContents) {
 		super(mimeType);

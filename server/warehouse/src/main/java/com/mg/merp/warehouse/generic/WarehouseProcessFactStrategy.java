@@ -51,7 +51,7 @@ import com.mg.merp.warehouse.support.ConfigurationHelper;
 import com.mg.merp.warehouse.support.DefaultStockBatchCreateStrategy;
 
 /**
- * Стратегия реализации этапа ДО "Отработка по складу"
+ * РЎС‚СЂР°С‚РµРіРёСЏ СЂРµР°Р»РёР·Р°С†РёРё СЌС‚Р°РїР° Р”Рћ "РћС‚СЂР°Р±РѕС‚РєР° РїРѕ СЃРєР»Р°РґСѓ"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseProcessFactStrategy.java,v 1.15 2008/06/05 12:42:15 sharapov Exp $
@@ -95,7 +95,7 @@ public class WarehouseProcessFactStrategy implements WarehouseProcessStrategy {
 		}
 		
 		public void completed() {
-			//восстановим слушатель
+			//РІРѕСЃСЃС‚Р°РЅРѕРІРёРј СЃР»СѓС€Р°С‚РµР»СЊ
 			this.warehouseProcessFactStrategy.processListener = this.processListener;
 			
 			//Receipt
@@ -120,7 +120,7 @@ public class WarehouseProcessFactStrategy implements WarehouseProcessStrategy {
 	}
 	
 	protected void doProcess(WarehouseProcessDocumentLineData docLineData) {
-		//создадим новый слушатель для дальнейшей обработки
+		//СЃРѕР·РґР°РґРёРј РЅРѕРІС‹Р№ СЃР»СѓС€Р°С‚РµР»СЊ РґР»СЏ РґР°Р»СЊРЅРµР№С€РµР№ РѕР±СЂР°Р±РѕС‚РєРё
 		processListener = new ReceiptListenerImpl(this, docLineData, processListener);
 		//Issue
 		if (docLineData.getSrcStock() != null) {
@@ -136,8 +136,8 @@ public class WarehouseProcessFactStrategy implements WarehouseProcessStrategy {
 
 	protected void doProcessReceipt(WarehouseProcessDocumentLineData docLineData) {
 		StockCard sc = fillStockCard(docLineData);
-		// Заглушка. Пока непонятно как и где хранить стратегию
-		// запрос # 3906
+		// Р—Р°РіР»СѓС€РєР°. РџРѕРєР° РЅРµРїРѕРЅСЏС‚РЅРѕ РєР°Рє Рё РіРґРµ С…СЂР°РЅРёС‚СЊ СЃС‚СЂР°С‚РµРіРёСЋ
+		// Р·Р°РїСЂРѕСЃ # 3906
 		createStockBatch(sc, docLineData, new DefaultStockBatchCreateStrategy(this, processListener, doInteractive), params);
 	}
 
@@ -158,7 +158,7 @@ public class WarehouseProcessFactStrategy implements WarehouseProcessStrategy {
 			event.getResult().doIssue();
 			if (doCalculateCost)
 				doCalculateCost(docLineData, batches);
-			//уведомляем о завершении транзакции
+			//СѓРІРµРґРѕРјР»СЏРµРј Рѕ Р·Р°РІРµСЂС€РµРЅРёРё С‚СЂР°РЅР·Р°РєС†РёРё
 			event.getResult().notifyComplete();
 		}
 	
@@ -233,9 +233,9 @@ public class WarehouseProcessFactStrategy implements WarehouseProcessStrategy {
 		BigDecimal price1 = MathUtils.divide(sum, docLineData.getQuantity1(), rc);
 		
 		po.setAttribute("Price1", price1);
-		//сумма проставляется автоматически
+		//СЃСѓРјРјР° РїСЂРѕСЃС‚Р°РІР»СЏРµС‚СЃСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё
 		specServ.store(po);
-		//пересчёт параметра "выполнен на сумму"
+		//РїРµСЂРµСЃС‡С‘С‚ РїР°СЂР°РјРµС‚СЂР° "РІС‹РїРѕР»РЅРµРЅ РЅР° СЃСѓРјРјСѓ"
 		if (performedSummBeg) {
 			performedSummBeg = false;
 			params.setPerformedSum(sum);
@@ -244,18 +244,18 @@ public class WarehouseProcessFactStrategy implements WarehouseProcessStrategy {
 	}
 
 	/**
-	 * Создание КСУ
+	 * РЎРѕР·РґР°РЅРёРµ РљРЎРЈ
 	 * 
 	 * @param docSpec
-	 *            спецификация документа
-	 * @return КСУ
+	 *            СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return РљРЎРЈ
 	 */
 	private StockCard fillStockCard(WarehouseProcessDocumentLineData docLineData) {
 		WareCardServiceLocal service = (WareCardServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(
 			WareCardServiceLocal.LOCAL_SERVICE_NAME);
 		StockCard stockCard = service.findStockCard(docLineData.getDstStock(), docLineData.getDstMol(), docLineData.getCatalog(), false);
 		if (stockCard == null) {
-			// КСУ отсутствует
+			// РљРЎРЈ РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚
 			stockCard = service.initialize();
 			stockCard.setCatalog(docLineData.getCatalog());
 			stockCard.setMol(docLineData.getDstMol());
@@ -276,16 +276,16 @@ public class WarehouseProcessFactStrategy implements WarehouseProcessStrategy {
 	}
 
 	/**
-	 * Создание партии
+	 * РЎРѕР·РґР°РЅРёРµ РїР°СЂС‚РёРё
 	 * 
 	 * @param stockCard
-	 *            КСУ
+	 *            РљРЎРЈ
 	 * @param docSpec
-	 *            спецификация документа
+	 *            СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 * @param sbCrtStrategy
-	 *            стратегия формирования партии
+	 *            СЃС‚СЂР°С‚РµРіРёСЏ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РїР°СЂС‚РёРё
 	 * @param params
-	 *            параметры этапа "отработка по-складу"
+	 *            РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР° "РѕС‚СЂР°Р±РѕС‚РєР° РїРѕ-СЃРєР»Р°РґСѓ"
 	 */
 	private void createStockBatch(StockCard stockCard, WarehouseProcessDocumentLineData docLineData, StockBatchCreateStrategy sbCrtStrategy,
 		DocFlowPluginInvokeParams params) {

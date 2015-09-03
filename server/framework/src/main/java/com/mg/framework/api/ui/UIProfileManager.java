@@ -15,7 +15,7 @@
 package com.mg.framework.api.ui;
 
 /**
- * Менеджер профиля пользовательского интерфейса
+ * РњРµРЅРµРґР¶РµСЂ РїСЂРѕС„РёР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: UIProfileManager.java,v 1.1 2007/03/13 13:24:27 safonov Exp $
@@ -23,17 +23,17 @@ package com.mg.framework.api.ui;
 public interface UIProfileManager {
 
 	/**
-	 * загрузить профиль
+	 * Р·Р°РіСЂСѓР·РёС‚СЊ РїСЂРѕС„РёР»СЊ
 	 * 
-	 * @param name	имя профиля
-	 * @return	профиль
+	 * @param name	РёРјСЏ РїСЂРѕС„РёР»СЏ
+	 * @return	РїСЂРѕС„РёР»СЊ
 	 */
 	UIProfile load(String name);
 
 	/**
-	 * сохранить профиль
+	 * СЃРѕС…СЂР°РЅРёС‚СЊ РїСЂРѕС„РёР»СЊ
 	 * 
-	 * @param profile	профиль
+	 * @param profile	РїСЂРѕС„РёР»СЊ
 	 */
 	void store(UIProfile profile);
 

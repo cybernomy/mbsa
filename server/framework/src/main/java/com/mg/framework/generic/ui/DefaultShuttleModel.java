@@ -23,7 +23,7 @@ import com.mg.framework.support.ui.widget.ShuttleModel;
 import com.mg.framework.support.ui.widget.ShuttleModelListener;
 
 /**
- * Стандартная реализация модели элемента "Shuttle"
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РјРѕРґРµР»Рё СЌР»РµРјРµРЅС‚Р° "Shuttle"
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultShuttleModel.java,v 1.1 2006/08/31 08:53:48 safonov Exp $
@@ -34,9 +34,9 @@ public class DefaultShuttleModel implements ShuttleModel, Serializable {
 	private EventListenerList listenerList = new EventListenerList();
 
 	/**
-	 * отправить сообщение о смене списка источника
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ Рѕ СЃРјРµРЅРµ СЃРїРёСЃРєР° РёСЃС‚РѕС‡РЅРёРєР°
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void fireLeadingChanged(ShuttleChangeEvent event) {
 		for (ShuttleModelListener listener : listenerList.getListeners(ShuttleModelListener.class))
@@ -44,9 +44,9 @@ public class DefaultShuttleModel implements ShuttleModel, Serializable {
 	}
 	
 	/**
-	 * отправить сообщение о смене списка приемника
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ Рѕ СЃРјРµРЅРµ СЃРїРёСЃРєР° РїСЂРёРµРјРЅРёРєР°
 	 *
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void fireTrailingChanged(ShuttleChangeEvent event) {
 		for (ShuttleModelListener listener : listenerList.getListeners(ShuttleModelListener.class))

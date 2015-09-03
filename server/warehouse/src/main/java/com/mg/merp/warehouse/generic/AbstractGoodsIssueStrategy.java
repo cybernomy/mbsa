@@ -44,7 +44,7 @@ import com.mg.merp.warehouse.support.DefaultBinLocationProccessStrategy;
 import com.mg.merp.warehouse.support.DefaultSerialNumberProccessStrategy;
 
 /**
- * Абстрактный класс-предок для классов-стратегий списания со склада
+ * РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ РєР»Р°СЃСЃ-РїСЂРµРґРѕРє РґР»СЏ РєР»Р°СЃСЃРѕРІ-СЃС‚СЂР°С‚РµРіРёР№ СЃРїРёСЃР°РЅРёСЏ СЃРѕ СЃРєР»Р°РґР°
  * 
  * @author Valentin A. Poroxnenko
  * @author Artem V. Sharapov
@@ -59,7 +59,7 @@ public abstract class AbstractGoodsIssueStrategy implements GoodsIssueStrategy {
 	private WarehouseProcessListener processListener;
 	
 	/**
-	 * Партии, с которых производится списывание товара 
+	 * РџР°СЂС‚РёРё, СЃ РєРѕС‚РѕСЂС‹С… РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ СЃРїРёСЃС‹РІР°РЅРёРµ С‚РѕРІР°СЂР° 
 	 */
 	protected List<StockBatch> disposedBatches = new ArrayList<StockBatch>();
 
@@ -75,7 +75,7 @@ public abstract class AbstractGoodsIssueStrategy implements GoodsIssueStrategy {
 	}
 
 	/**
-	 * Подготовка предварительных данных для стратегии списания
+	 * РџРѕРґРіРѕС‚РѕРІРєР° РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅС‹С… РґР°РЅРЅС‹С… РґР»СЏ СЃС‚СЂР°С‚РµРіРёРё СЃРїРёСЃР°РЅРёСЏ
 	 */
 	private void doPrepare() {
 		if (stockCard == null)
@@ -102,11 +102,11 @@ public abstract class AbstractGoodsIssueStrategy implements GoodsIssueStrategy {
 	}
 	
 	/**
-	 * Выполнить дополнительную обработку
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅСѓСЋ РѕР±СЂР°Р±РѕС‚РєСѓ
 	 */
 	private void doExtraProccessing() {
 		ExtraProccessingListener extraProccessingListener = new ExtraProccessingListener(processListener);
-		if (docLineData.getDocumentSpec().getCatalog().getUseSerialNum() && MathUtils.compareToZero(docLineData.getQuantity1()) == 1) { // и НЕ storno!
+		if (docLineData.getDocumentSpec().getCatalog().getUseSerialNum() && MathUtils.compareToZero(docLineData.getQuantity1()) == 1) { // Рё РќР• storno!
 			SerialNumberProccessStrategy serialNumberProccessStrategy = new DefaultSerialNumberProccessStrategy();
 			serialNumberProccessStrategy.proccessOnIssue(docLineData, disposedBatches, extraProccessingListener);
 		} else if (processListener != null)
@@ -114,7 +114,7 @@ public abstract class AbstractGoodsIssueStrategy implements GoodsIssueStrategy {
 	}
 	
 	/**
-	 * Слушатель дополнительной обработки
+	 * РЎР»СѓС€Р°С‚РµР»СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ РѕР±СЂР°Р±РѕС‚РєРё
 	 */
 	private class ExtraProccessingListener implements WarehouseProcessListener {
 
@@ -140,10 +140,10 @@ public abstract class AbstractGoodsIssueStrategy implements GoodsIssueStrategy {
 	}
 	
 	/**
-	 * Выполнть обработку секций хранения при списании товара со склада
-	 * @param docLineData - данные по спецификации для отработки
-	 * @param stockBatches - список партий подлежащих списанию
-	 * @param listener - слушатель
+	 * Р’С‹РїРѕР»РЅС‚СЊ РѕР±СЂР°Р±РѕС‚РєСѓ СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ РїСЂРё СЃРїРёСЃР°РЅРёРё С‚РѕРІР°СЂР° СЃРѕ СЃРєР»Р°РґР°
+	 * @param docLineData - РґР°РЅРЅС‹Рµ РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
+	 * @param stockBatches - СЃРїРёСЃРѕРє РїР°СЂС‚РёР№ РїРѕРґР»РµР¶Р°С‰РёС… СЃРїРёСЃР°РЅРёСЋ
+	 * @param listener - СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	private void proccessBinLocation(final WarehouseProcessDocumentLineData docLineData, List<StockBatch> stockBatches, WarehouseProcessListener listener) {
 		Warehouse warehouse = docLineData.getSrcStock();
@@ -165,19 +165,19 @@ public abstract class AbstractGoodsIssueStrategy implements GoodsIssueStrategy {
 	}
 
 	/**
-	 * реализация завершения отпуска
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ Р·Р°РІРµСЂС€РµРЅРёСЏ РѕС‚РїСѓСЃРєР°
 	 */
 	protected void doOnComplete() {
 	}
 
 	/**
-	 * реализация отмены отпуска
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РѕС‚РјРµРЅС‹ РѕС‚РїСѓСЃРєР°
 	 */
 	protected void doOnCancel() {
 	}
 
 	/**
-	 * Метод, изменяющий количество позиций в КСУ при списании
+	 * РњРµС‚РѕРґ, РёР·РјРµРЅСЏСЋС‰РёР№ РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕР·РёС†РёР№ РІ РљРЎРЈ РїСЂРё СЃРїРёСЃР°РЅРёРё
 	 */
 	protected void changeWareCard() {
 		stockCard.setQuantity(stockCard.getQuantity().subtract(docLineData.getQuantity1()));
@@ -192,21 +192,21 @@ public abstract class AbstractGoodsIssueStrategy implements GoodsIssueStrategy {
 	}
 
 	/**
-	 * Метод, создающий историю партии
+	 * РњРµС‚РѕРґ, СЃРѕР·РґР°СЋС‰РёР№ РёСЃС‚РѕСЂРёСЋ РїР°СЂС‚РёРё
 	 * 
 	 * @param sb 
-	 * 			Складская партия
+	 * 			РЎРєР»Р°РґСЃРєР°СЏ РїР°СЂС‚РёСЏ
 	 * 
 	 * @param quan1 
-	 * 			позиций в первой ЕИ
+	 * 			РїРѕР·РёС†РёР№ РІ РїРµСЂРІРѕР№ Р•Р
 	 * 
 	 * @param quan2 
-	 * 			позиций во второй ЕИ
+	 * 			РїРѕР·РёС†РёР№ РІРѕ РІС‚РѕСЂРѕР№ Р•Р
 	 * 
 	 * @param prevHist 
-	 * 			предыдущая история
+	 * 			РїСЂРµРґС‹РґСѓС‰Р°СЏ РёСЃС‚РѕСЂРёСЏ
 	 * 
-	 * @return созданная история партии
+	 * @return СЃРѕР·РґР°РЅРЅР°СЏ РёСЃС‚РѕСЂРёСЏ РїР°СЂС‚РёРё
 	 */
 	protected StockBatchHistory createHistory(StockBatch sb, BigDecimal quan1,
 			BigDecimal quan2, StockBatchHistory prevHist) {
@@ -216,7 +216,7 @@ public abstract class AbstractGoodsIssueStrategy implements GoodsIssueStrategy {
 		history.setDocSpec(docLineData.getDocumentSpec());
 		history.setStockBatch(sb);
 		history.setDateTime(DateTimeUtils.nowTimestamp());
-		// расход
+		// СЂР°СЃС…РѕРґ
 		history.setKind(StockBatchHistoryKind.OUT);
 		history.setQuantity(quan1);
 		history.setProcessDate(processOnDate);
@@ -239,14 +239,14 @@ public abstract class AbstractGoodsIssueStrategy implements GoodsIssueStrategy {
 	}
 	
 	/**
-	 * Реализация отпуска со склада со склада
+	 * Р РµР°Р»РёР·Р°С†РёСЏ РѕС‚РїСѓСЃРєР° СЃРѕ СЃРєР»Р°РґР° СЃРѕ СЃРєР»Р°РґР°
 	 */
 	protected abstract void internalIssue();
 	
 	/**
-	 * получить объект сравнения порядка партий в списке
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕР±СЉРµРєС‚ СЃСЂР°РІРЅРµРЅРёСЏ РїРѕСЂСЏРґРєР° РїР°СЂС‚РёР№ РІ СЃРїРёСЃРєРµ
 	 * 
-	 * @return объект сравнения порядка партий в списке
+	 * @return РѕР±СЉРµРєС‚ СЃСЂР°РІРЅРµРЅРёСЏ РїРѕСЂСЏРґРєР° РїР°СЂС‚РёР№ РІ СЃРїРёСЃРєРµ
 	 */
 	protected abstract Comparator<StockBatch> getComparator();
 	

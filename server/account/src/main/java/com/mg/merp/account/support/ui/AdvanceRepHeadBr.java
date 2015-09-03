@@ -30,7 +30,7 @@ import com.mg.merp.document.generic.ui.DocumentMaintenanceEJBQLTableModel;
 import com.mg.merp.document.generic.ui.GoodsDocumentBrowseForm;
 
 /**
- * Браузер авансовых отчетов
+ * Р‘СЂР°СѓР·РµСЂ Р°РІР°РЅСЃРѕРІС‹С… РѕС‚С‡РµС‚РѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov

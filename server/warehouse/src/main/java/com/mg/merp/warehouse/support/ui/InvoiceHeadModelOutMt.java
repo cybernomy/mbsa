@@ -18,7 +18,7 @@ import com.mg.merp.document.generic.ui.DocumentModelMaintenanceForm;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы поддержки "Образцов исходящих накладных"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РћР±СЂР°Р·С†РѕРІ РёСЃС…РѕРґСЏС‰РёС… РЅР°РєР»Р°РґРЅС‹С…"
  * 
  * @author leonova
  * @version $Id: InvoiceHeadModelOutMt.java,v 1.2 2007/05/22 05:22:30 sharapov Exp $

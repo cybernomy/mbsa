@@ -17,7 +17,7 @@ package com.mg.merp.document;
 import com.mg.merp.document.model.DocumentSpecSerialNum;
 
 /**
- * Бизнес-компонент "Серийные номера спецификаций"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРµСЂРёР№РЅС‹Рµ РЅРѕРјРµСЂР° СЃРїРµС†РёС„РёРєР°С†РёР№"
  * 
  * @author leonova
  * @version $Id: DocumentSpecSerialNumServiceLocal.java,v 1.2 2007/08/10 13:29:19 safonov Exp $
@@ -25,7 +25,7 @@ import com.mg.merp.document.model.DocumentSpecSerialNum;
 public interface DocumentSpecSerialNumServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<DocumentSpecSerialNum, Integer> {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/document/DocumentSpecSerialNum";
 

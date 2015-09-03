@@ -29,7 +29,7 @@ import com.mg.merp.reference.model.OrgUnit;
 import com.mg.merp.reference.model.Partner;
 
 /**
- * Универсальный поиск контрагентов, предназначен для поиска партнеров, подразделений, сотрудников
+ * РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Р№ РїРѕРёСЃРє РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ, РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅ РґР»СЏ РїРѕРёСЃРєР° РїР°СЂС‚РЅРµСЂРѕРІ, РїРѕРґСЂР°Р·РґРµР»РµРЅРёР№, СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: UniversalContractorSearchHelp.java,v 1.1 2006/12/02 12:12:58 safonov Exp $
@@ -38,10 +38,10 @@ public abstract class UniversalContractorSearchHelp extends AbstractSearchHelp {
 	private static final String SEARCH_FORM = "com/mg/merp/reference/resources/ContractorSearchForm.mfd.xml"; //$NON-NLS-1$
 
 	/**
-	 * получить список типов контрагентов для поиска, может состоять из следующих значений:
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє С‚РёРїРѕРІ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ РґР»СЏ РїРѕРёСЃРєР°, РјРѕР¶РµС‚ СЃРѕСЃС‚РѕСЏС‚СЊ РёР· СЃР»РµРґСѓСЋС‰РёС… Р·РЅР°С‡РµРЅРёР№:
 	 * <code>partner</code>, <code>orgunit</code>, <code>employee</code> 
 	 * 
-	 * @return	список типов контрагентов
+	 * @return	СЃРїРёСЃРѕРє С‚РёРїРѕРІ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ
 	 */
 	protected abstract String[] getContractorKinds();
 

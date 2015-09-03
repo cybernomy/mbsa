@@ -43,7 +43,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Реализация бизнес-компонента "Спецификация пункта графика исполнения обязательств"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёСЏ РїСѓРЅРєС‚Р° РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -121,9 +121,9 @@ public class ItemSpecServiceBean extends com.mg.framework.generic.AbstractPOJODa
 	}
 
 	/**
-	 * Добавить позиции спецификации пункта графика из спецификации документа
-	 * @param item - пункт графика
-	 * @param itemSpecCreateData - данные для создания позиции спецификации
+	 * Р”РѕР±Р°РІРёС‚СЊ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р° РіСЂР°С„РёРєР° РёР· СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param item - РїСѓРЅРєС‚ РіСЂР°С„РёРєР°
+	 * @param itemSpecCreateData - РґР°РЅРЅС‹Рµ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	private void addSpecByDocSpec(Item item, ItemSpecCreateData[] itemSpecCreateData) {
 		BigDecimal factor;
@@ -172,9 +172,9 @@ public class ItemSpecServiceBean extends com.mg.framework.generic.AbstractPOJODa
 	}
 
 	/**
-	 * Добавить позиции спецификации пункта графика из прайс-листа
-	 * @param item - пункт графика
-	 * @param itemSpecCreateData - данные для создания позиции спецификации
+	 * Р”РѕР±Р°РІРёС‚СЊ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р° РіСЂР°С„РёРєР° РёР· РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param item - РїСѓРЅРєС‚ РіСЂР°С„РёРєР°
+	 * @param itemSpecCreateData - РґР°РЅРЅС‹Рµ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	private void addSpecByPriceList(Item item, ItemSpecCreateData[] itemSpecCreateData) {
 		for (ItemSpecCreateData data : itemSpecCreateData) {
@@ -241,9 +241,9 @@ public class ItemSpecServiceBean extends com.mg.framework.generic.AbstractPOJODa
 	}
 
 	/**
-	 * Добавить позиции спецификации пункта графика из каталога
-	 * @param item - пункт графика
-	 * @param itemSpecCreateData - данные для создания позиции спецификации
+	 * Р”РѕР±Р°РІРёС‚СЊ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р° РіСЂР°С„РёРєР° РёР· РєР°С‚Р°Р»РѕРіР°
+	 * @param item - РїСѓРЅРєС‚ РіСЂР°С„РёРєР°
+	 * @param itemSpecCreateData - РґР°РЅРЅС‹Рµ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	private void addSpecByCatalog(Item item, ItemSpecCreateData[] itemSpecCreateData) {
 		for (ItemSpecCreateData data : itemSpecCreateData) {

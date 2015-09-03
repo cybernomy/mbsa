@@ -27,7 +27,7 @@ import com.mg.merp.warehouse.model.InventoryActSpecDifferencesResult;
 import com.mg.merp.warehouse.support.InventoryParametrs;
 
 /**
- * Сервис бизнес-компонента "Акт инвентаризации"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РђРєС‚ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -36,86 +36,86 @@ import com.mg.merp.warehouse.support.InventoryParametrs;
 public interface InventoryActHeadServiceLocal extends com.mg.merp.document.GoodsDocument<InventoryActHead, Integer, DocumentPattern, InventoryActSpecServiceLocal> {
 
 	/**
-	 * Тип папки инвентаризационного акта
+	 * РўРёРї РїР°РїРєРё РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРѕРЅРЅРѕРіРѕ Р°РєС‚Р°
 	 */
 	final static short FOLDER_PART = 34;
 
 	/**
-	 * Раздел инвентаризационного акта
+	 * Р Р°Р·РґРµР» РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРѕРЅРЅРѕРіРѕ Р°РєС‚Р°
 	 */
 	final static short DOCSECTION = 18;
 
 	/**
-	 * Выполнить инвентаризацию склада
-	 * @param invActHead - акт инвентаризации
-	 * @param endDate - дата инвентаризации
-	 * @param stock - склад
-	 * @param mol - МОЛ
-	 * @param beginCode - начало диапазона кодов позиций каталога
-	 * @param endCode - конец диапазона кодов позиций каталога
-	 * @param stockKind - правило формирования строк по партиям:
-	 * 					0 - одна строка ТМЦ по одной цене прихода;
-	 * 					1 - одна строка ТМЦ по всем ценам прихода;
-	 * @param isIncludeEmpty - признак включения позиций с нулевым остатком
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёСЋ СЃРєР»Р°РґР°
+	 * @param invActHead - Р°РєС‚ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @param endDate - РґР°С‚Р° РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @param stock - СЃРєР»Р°Рґ
+	 * @param mol - РњРћР›
+	 * @param beginCode - РЅР°С‡Р°Р»Рѕ РґРёР°РїР°Р·РѕРЅР° РєРѕРґРѕРІ РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР°
+	 * @param endCode - РєРѕРЅРµС† РґРёР°РїР°Р·РѕРЅР° РєРѕРґРѕРІ РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР°
+	 * @param stockKind - РїСЂР°РІРёР»Рѕ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ СЃС‚СЂРѕРє РїРѕ РїР°СЂС‚РёСЏРј:
+	 * 					0 - РѕРґРЅР° СЃС‚СЂРѕРєР° РўРњР¦ РїРѕ РѕРґРЅРѕР№ С†РµРЅРµ РїСЂРёС…РѕРґР°;
+	 * 					1 - РѕРґРЅР° СЃС‚СЂРѕРєР° РўРњР¦ РїРѕ РІСЃРµРј С†РµРЅР°Рј РїСЂРёС…РѕРґР°;
+	 * @param isIncludeEmpty - РїСЂРёР·РЅР°Рє РІРєР»СЋС‡РµРЅРёСЏ РїРѕР·РёС†РёР№ СЃ РЅСѓР»РµРІС‹Рј РѕСЃС‚Р°С‚РєРѕРј
 	 */
 
 	void executeStockInventory(InventoryActHead invActHead, Date endDate, OrgUnit stock, Contractor mol, String beginCode, String endCode, short stockKind, boolean isIncludeEmpty);
 
 	/**
-	 * Выполнить инвентаризацию склада
-	 * <p>Пример формирования <code>criteria</code>:
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёСЋ СЃРєР»Р°РґР°
+	 * <p>РџСЂРёРјРµСЂ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ <code>criteria</code>:
 	 * <pre>
 	 * 		Criteria criteria = OrmTemplate.createCriteria(StockBatch.class)
 	 *				.createAlias("StockCard", "sc", JoinType.INNER_JOIN)
 	 *				.createAlias("sc.Catalog", "cat", JoinType.INNER_JOIN)
 	 *				.add(Restrictions.eq("sc.Stock", document.getSrcStock()));
 	 * </pre>
-	 * @param invActHead	- акт инвентаризации
-	 * @param param 		- параметры инвентаризации
-	 * @param criteria		- критерий отбора партии: обязательно в критерии указать склад для отбора КСУ 
+	 * @param invActHead	- Р°РєС‚ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @param param 		- РїР°СЂР°РјРµС‚СЂС‹ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @param criteria		- РєСЂРёС‚РµСЂРёР№ РѕС‚Р±РѕСЂР° РїР°СЂС‚РёРё: РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РІ РєСЂРёС‚РµСЂРёРё СѓРєР°Р·Р°С‚СЊ СЃРєР»Р°Рґ РґР»СЏ РѕС‚Р±РѕСЂР° РљРЎРЈ 
 	 */
 	void executeStockInventory(InventoryActHead invActHead, InventoryParametrs params, Criteria criteria);
 
 	/**
-	 * Выполнить инвентаризацию склада
-	 * @param invActHead	- акт инвентаризации
-	 * @param param 		- параметры инвентаризации
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёСЋ СЃРєР»Р°РґР°
+	 * @param invActHead	- Р°РєС‚ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @param param 		- РїР°СЂР°РјРµС‚СЂС‹ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
 	 */
 	void executeStockInventory(InventoryActHead invActHead, InventoryParametrs params);
 
 	/**
-	 * Рассчитать сумму относительно количества
-	 * @param inventoryActSpec - позиция спецификации акта инвентаризации
-	 * @return результат
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјСѓ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РєРѕР»РёС‡РµСЃС‚РІР°
+	 * @param inventoryActSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё Р°РєС‚Р° РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @return СЂРµР·СѓР»СЊС‚Р°С‚
 	 */
 	InventoryActSpecDifferencesResult computeDifferenceByQuantity(InventoryActSpec inventoryActSpec);
 
 	/**
-	 * Рассчитать количество относительно суммы
-	 * @param inventoryActSpec - позиция спецификации акта инвентаризации
-	 * @return результат
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ СЃСѓРјРјС‹
+	 * @param inventoryActSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё Р°РєС‚Р° РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @return СЂРµР·СѓР»СЊС‚Р°С‚
 	 */
 	InventoryActSpecDifferencesResult computeDifferenceBySum(InventoryActSpec inventoryActSpec);
 
 	/**
-	 * Рассчитать суммы излишков/недостачи акта инвентаризации
-	 * @param inventoryActHead - акт инвентаризации
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјС‹ РёР·Р»РёС€РєРѕРІ/РЅРµРґРѕСЃС‚Р°С‡Рё Р°РєС‚Р° РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @param inventoryActHead - Р°РєС‚ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
 	 */
 	void computeShortageAndExsessSum(InventoryActHead inventoryActHead);
 
 	/**
-	 * удалить члена комиссии
+	 * СѓРґР°Р»РёС‚СЊ С‡Р»РµРЅР° РєРѕРјРёСЃСЃРёРё
 	 * 
-	 * @param commLink	связь
+	 * @param commLink	СЃРІСЏР·СЊ
 	 */
 	void excludeInvCommision(InventoryActCommission commLink);
 
 	/**
-	 * добавить члена комиссии
+	 * РґРѕР±Р°РІРёС‚СЊ С‡Р»РµРЅР° РєРѕРјРёСЃСЃРёРё
 	 * 
-	 * @param invActHead	акт инвентаризации
-	 * @param empl			сотрудник
-	 * @return	связь
+	 * @param invActHead	Р°РєС‚ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @param empl			СЃРѕС‚СЂСѓРґРЅРёРє
+	 * @return	СЃРІСЏР·СЊ
 	 */
 	InventoryActCommission includeInvCommision(InventoryActHead invActHead, Contractor empl);
 

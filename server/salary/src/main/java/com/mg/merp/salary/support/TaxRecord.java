@@ -17,7 +17,7 @@ package com.mg.merp.salary.support;
 import java.util.Date;
 
 /**
- * Запись о налоге
+ * Р—Р°РїРёСЃСЊ Рѕ РЅР°Р»РѕРіРµ
  * 
  * @see SalaryHelper#getTaxByIncome(String, Date, int, double)
  * @see SalaryHelper#getTaxByNumber(String, Date, int, int)
@@ -44,7 +44,7 @@ public class TaxRecord {
 
 	/**
 	 * 
-	 * @return фиксированная сумма
+	 * @return С„РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ СЃСѓРјРјР°
 	 */
 	public double getConstValue() {
 		return constValue;
@@ -52,7 +52,7 @@ public class TaxRecord {
 
 	/**
 	 * 
-	 * @return максимальный доход, до которого действует данная ставка
+	 * @return РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ РґРѕС…РѕРґ, РґРѕ РєРѕС‚РѕСЂРѕРіРѕ РґРµР№СЃС‚РІСѓРµС‚ РґР°РЅРЅР°СЏ СЃС‚Р°РІРєР°
 	 */
 	public double getMaxIncome() {
 		return maxIncome;
@@ -60,7 +60,7 @@ public class TaxRecord {
 
 	/**
 	 * 
-	 * @return минимальный доход, начиная с которого действует данная ставка
+	 * @return РјРёРЅРёРјР°Р»СЊРЅС‹Р№ РґРѕС…РѕРґ, РЅР°С‡РёРЅР°СЏ СЃ РєРѕС‚РѕСЂРѕРіРѕ РґРµР№СЃС‚РІСѓРµС‚ РґР°РЅРЅР°СЏ СЃС‚Р°РІРєР°
 	 */
 	public double getMinIncome() {
 		return minIncome;
@@ -68,7 +68,7 @@ public class TaxRecord {
 
 	/**
 	 * 
-	 * @return процент ставки
+	 * @return РїСЂРѕС†РµРЅС‚ СЃС‚Р°РІРєРё
 	 */
 	public double getPercent() {
 		return percent;
@@ -76,7 +76,7 @@ public class TaxRecord {
 
 	/**
 	 * 
-	 * @return коэффициент для льгот
+	 * @return РєРѕСЌС„С„РёС†РёРµРЅС‚ РґР»СЏ Р»СЊРіРѕС‚
 	 */
 	public double getPrivilegeRatio() {
 		return privilegeRatio;
@@ -84,7 +84,7 @@ public class TaxRecord {
 
 	/**
 	 * 
-	 * @return номер ставки
+	 * @return РЅРѕРјРµСЂ СЃС‚Р°РІРєРё
 	 */
 	public int getRateNumber() {
 		return rateNumber;

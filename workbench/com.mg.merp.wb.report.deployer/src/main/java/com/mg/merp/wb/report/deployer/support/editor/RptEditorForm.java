@@ -23,7 +23,7 @@ import com.mg.merp.wb.core.ui.plugin.BusinessObjectPlugin;
 import com.mg.merp.wb.report.deployer.DeployerPlugin;
 
 /**
- * Форма редактирования отчёта
+ * Р¤РѕСЂРјР° СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РѕС‚С‡С‘С‚Р°
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: RptEditorForm.java,v 1.6 2007/11/04 14:35:01 safonov Exp $

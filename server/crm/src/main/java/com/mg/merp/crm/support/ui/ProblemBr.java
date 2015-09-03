@@ -34,7 +34,7 @@ import com.mg.merp.crm.model.Problem;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Контроллер браузера бизнес-компонента "Проблемы"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРѕР±Р»РµРјС‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov

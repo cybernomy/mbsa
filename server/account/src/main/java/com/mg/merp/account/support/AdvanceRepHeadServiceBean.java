@@ -51,7 +51,7 @@ import com.mg.merp.reference.model.Currency;
 
 
 /**
- * Бизнес-компонент "Авансовые отчеты" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РђРІР°РЅСЃРѕРІС‹Рµ РѕС‚С‡РµС‚С‹" 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -126,7 +126,7 @@ public class AdvanceRepHeadServiceBean extends  GoodsDocumentServiceBean<Advance
 				.add(Restrictions.eq("AccDb", accPlan)) //$NON-NLS-1$
 				.add(Restrictions.eq("akt.AnlForm", AnlForm.MONEYMEANS)) //$NON-NLS-1$
 				.setProjection(Projections.max("eo.KeepDate"))); //$NON-NLS-1$
-		//в двойке написано так last_date := FieldByName('max_date').AsDateTime - 1, предположил что вычитается день
+		//РІ РґРІРѕР№РєРµ РЅР°РїРёСЃР°РЅРѕ С‚Р°Рє last_date := FieldByName('max_date').AsDateTime - 1, РїСЂРµРґРїРѕР»РѕР¶РёР» С‡С‚Рѕ РІС‹С‡РёС‚Р°РµС‚СЃСЏ РґРµРЅСЊ
 		BigDecimal prevAdvanceSum = BigDecimal.ZERO;
 		if (lastDate != null) {
 			lastDate = DateTimeUtils.incDay(lastDate, -1);
@@ -241,9 +241,9 @@ public class AdvanceRepHeadServiceBean extends  GoodsDocumentServiceBean<Advance
 		BigDecimal received1Sum = entity.getReceived1Sum() != null ? entity.getReceived1Sum() : BigDecimal.ZERO;
 		BigDecimal received2Sum = entity.getReceived2Sum() != null ? entity.getReceived2Sum() : BigDecimal.ZERO;
 		BigDecimal received3Sum = entity.getReceived3Sum() != null ? entity.getReceived3Sum() : BigDecimal.ZERO;
-		//сумма получено
+		//СЃСѓРјРјР° РїРѕР»СѓС‡РµРЅРѕ
 		entity.setReceivedSum(received1Sum.add(received2Sum.add(received3Sum)));
-		//сумма остаток перерасход
+		//СЃСѓРјРјР° РѕСЃС‚Р°С‚РѕРє РїРµСЂРµСЂР°СЃС…РѕРґ
 		BigDecimal restSum = entity.getBalanceSum();
 		if (entity.getPrevAdvanceSum() != null) {
 			restSum = entity.getRestDocKind() ? restSum.add(entity.getPrevAdvanceSum()) : 
@@ -258,7 +258,7 @@ public class AdvanceRepHeadServiceBean extends  GoodsDocumentServiceBean<Advance
 		}		
 	}
 
-	// написал класс т.к. у RemnDbKt загрузка идет через хранимую процедуру, а для решения задачи нужны только три поля
+	// РЅР°РїРёСЃР°Р» РєР»Р°СЃСЃ С‚.Рє. Сѓ RemnDbKt Р·Р°РіСЂСѓР·РєР° РёРґРµС‚ С‡РµСЂРµР· С…СЂР°РЅРёРјСѓСЋ РїСЂРѕС†РµРґСѓСЂСѓ, Р° РґР»СЏ СЂРµС€РµРЅРёСЏ Р·Р°РґР°С‡Рё РЅСѓР¶РЅС‹ С‚РѕР»СЊРєРѕ С‚СЂРё РїРѕР»СЏ
 	private class RemnDbKtItem {
 		BigDecimal remnBegNatDb;
 		BigDecimal remnBegNatKt;

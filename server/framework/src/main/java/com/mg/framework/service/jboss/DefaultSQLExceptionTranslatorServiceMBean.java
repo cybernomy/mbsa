@@ -17,14 +17,14 @@ package com.mg.framework.service.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис регистрации стандартного обработчика SQL ИС
+ * РЎРµСЂРІРёСЃ СЂРµРіРёСЃС‚СЂР°С†РёРё СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ РѕР±СЂР°Р±РѕС‚С‡РёРєР° SQL РРЎ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultSQLExceptionTranslatorServiceMBean.java,v 1.1 2006/11/17 14:31:44 safonov Exp $
  */
 public interface DefaultSQLExceptionTranslatorServiceMBean extends ServiceMBean {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:service=DefaultSQLExceptionTranslatorService";
 }

@@ -21,7 +21,7 @@ import com.mg.merp.planning.model.GenericItem;
 import com.mg.merp.reference.model.Catalog;
 
 /**
- * Элемент страхового запаса
+ * Р­Р»РµРјРµРЅС‚ СЃС‚СЂР°С…РѕРІРѕРіРѕ Р·Р°РїР°СЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: SafetyLevel.java,v 1.1 2007/07/30 10:37:51 safonov Exp $
@@ -38,7 +38,7 @@ public class SafetyLevel implements Serializable {
 		this.genericItem = genericItem;
 	}
 	/**
-	 * позиция каталога
+	 * РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР°
 	 * 
 	 * @return the catalog
 	 */
@@ -47,7 +47,7 @@ public class SafetyLevel implements Serializable {
 	}
 
 	/**
-	 * обобщенный товар
+	 * РѕР±РѕР±С‰РµРЅРЅС‹Р№ С‚РѕРІР°СЂ
 	 * 
 	 * @return the genericItem
 	 */
@@ -56,7 +56,7 @@ public class SafetyLevel implements Serializable {
 	}
 
 	/**
-	 * страховой запас
+	 * СЃС‚СЂР°С…РѕРІРѕР№ Р·Р°РїР°СЃ
 	 * 
 	 * @return the quantity
 	 */

@@ -19,7 +19,7 @@ import org.jboss.system.ServiceMBean;
 import com.mg.merp.docflow.DocFlowPluginFactoryManager;
 
 /**
- * Сервис менеджера фабрик реализаций этапов ДО
+ * РЎРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° С„Р°Р±СЂРёРє СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїРѕРІ Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowPluginFactoryServiceMBean.java,v 1.3 2007/01/29 14:10:02 safonov Exp $
@@ -27,7 +27,7 @@ import com.mg.merp.docflow.DocFlowPluginFactoryManager;
 public interface DocFlowPluginFactoryServiceMBean extends DocFlowPluginFactoryManager,
 		ServiceMBean {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:service=DocFlowPluginFactoryManagerService"; //$NON-NLS-1$
 

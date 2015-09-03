@@ -21,7 +21,7 @@ import com.mg.merp.docflow.support.Messages;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Класс ИС ДО выполнен
+ * РљР»Р°СЃСЃ РРЎ Р”Рћ РІС‹РїРѕР»РЅРµРЅ
  * 
  * @author Oleg V. Safonov
  * @version $Id: AlreadyCompletedException.java,v 1.4 2007/08/06 13:19:45 safonov Exp $

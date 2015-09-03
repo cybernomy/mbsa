@@ -31,7 +31,7 @@ import com.mg.merp.reference.FamilyMemberServiceLocal;
 import com.mg.merp.reference.model.FamilyMember;
 
 /**
- * Контроллер диалога поиска членов семьи бизнес-компонента "Вычеты на членов семьи"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° РїРѕРёСЃРєР° С‡Р»РµРЅРѕРІ СЃРµРјСЊРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’С‹С‡РµС‚С‹ РЅР° С‡Р»РµРЅРѕРІ СЃРµРјСЊРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: FamilyMemberSearchForm.java,v 1.2 2009/02/09 12:11:17 safonov Exp $

@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.salary.model.MinSalary;
 
 /**
- * Браузер минимальных заработных плат
+ * Р‘СЂР°СѓР·РµСЂ РјРёРЅРёРјР°Р»СЊРЅС‹С… Р·Р°СЂР°Р±РѕС‚РЅС‹С… РїР»Р°С‚
  * 
  * @author leonova
  * @version $Id: MinSalaryBr.java,v 1.1 2006/08/28 12:43:47 leonova Exp $ 

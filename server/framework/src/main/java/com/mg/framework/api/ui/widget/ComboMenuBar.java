@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.widget;
 import com.mg.framework.api.ui.Widget;
 
 /**
- * Элемент "Всплывающее меню"
+ * Р­Р»РµРјРµРЅС‚ "Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ComboMenuBar.java,v 1.1 2008/05/19 14:30:35 safonov Exp $
@@ -25,17 +25,17 @@ import com.mg.framework.api.ui.Widget;
 public interface ComboMenuBar extends Widget {
 
 	/**
-	 * получить элемент меню по наименованию
+	 * РїРѕР»СѓС‡РёС‚СЊ СЌР»РµРјРµРЅС‚ РјРµРЅСЋ РїРѕ РЅР°РёРјРµРЅРѕРІР°РЅРёСЋ
 	 * 
-	 * @param id	имя элемента меню
-	 * @return	элемент меню или <code>null</code> если не найден
+	 * @param id	РёРјСЏ СЌР»РµРјРµРЅС‚Р° РјРµРЅСЋ
+	 * @return	СЌР»РµРјРµРЅС‚ РјРµРЅСЋ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	MenuItem getMenuItem(String id);
 
 	/**
-	 * установка заголовка
+	 * СѓСЃС‚Р°РЅРѕРІРєР° Р·Р°РіРѕР»РѕРІРєР°
 	 * 
-	 * @param text	заголовок
+	 * @param text	Р·Р°РіРѕР»РѕРІРѕРє
 	 */
 	void setText(String text);
 	

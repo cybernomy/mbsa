@@ -21,7 +21,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.warehouse.model.InvoiceHeadModel;
 
 /**
- * Вспомогательный класс для отображения формы списка образцов накладных
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ РЅР°РєР»Р°РґРЅС‹С…
  * 
  * @author leonova
  * @version $Id: InvoiceHeadModelMaintenanceEJBQLTableModel.java,v 1.1 2006/09/12 11:00:10 leonova Exp $ 

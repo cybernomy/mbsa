@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.reference.model.BankAccountType;
 
 /**
- * Браузер типов банковских счетов
+ * Р‘СЂР°СѓР·РµСЂ С‚РёРїРѕРІ Р±Р°РЅРєРѕРІСЃРєРёС… СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: BankAccountTypeBr.java,v 1.1 2006/08/02 12:04:01 leonova Exp $ 

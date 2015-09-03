@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.Country;
 
 /**
- * Браузер стран
+ * Р‘СЂР°СѓР·РµСЂ СЃС‚СЂР°РЅ
  * 
  * @author leonova
  * @version $Id: CountryBr.java,v 1.2 2006/08/11 07:19:06 leonova Exp $ 

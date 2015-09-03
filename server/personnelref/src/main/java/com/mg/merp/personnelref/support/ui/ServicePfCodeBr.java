@@ -34,7 +34,7 @@ import com.mg.merp.personnelref.model.ServicePfCode;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Браузер кодов стажа для ПФ
+ * Р‘СЂР°СѓР·РµСЂ РєРѕРґРѕРІ СЃС‚Р°Р¶Р° РґР»СЏ РџР¤
  * 
  * @author Julia 'Jetta' Konyashkina & Anna Leonova
  * @version $Id: ServicePfCodeBr.java,v 1.3 2006/09/06 12:47:54 leonova Exp $

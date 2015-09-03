@@ -20,7 +20,7 @@ import java.util.EventListener;
 import com.mg.merp.docprocess.model.DocProcessStage;
 
 /**
- * Слушатель выбора этапа для отработки
+ * РЎР»СѓС€Р°С‚РµР»СЊ РІС‹Р±РѕСЂР° СЌС‚Р°РїР° РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: ChooseNextStageListener.java,v 1.1 2006/12/12 15:23:33 safonov Exp $
@@ -28,15 +28,15 @@ import com.mg.merp.docprocess.model.DocProcessStage;
 public interface ChooseNextStageListener extends EventListener {
 
 	/**
-	 * этап выбран
+	 * СЌС‚Р°Рї РІС‹Р±СЂР°РЅ
 	 * 
-	 * @param processDate		дата для выполнения отработки
-	 * @param performedStage	этап для отработки
+	 * @param processDate		РґР°С‚Р° РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ РѕС‚СЂР°Р±РѕС‚РєРё
+	 * @param performedStage	СЌС‚Р°Рї РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
 	 */
 	void performed(Date processDate, DocProcessStage performedStage);
 	
 	/**
-	 * выбор этапа отменен
+	 * РІС‹Р±РѕСЂ СЌС‚Р°РїР° РѕС‚РјРµРЅРµРЅ
 	 *
 	 */
 	void canceled();	

@@ -17,7 +17,7 @@ package com.mg.merp.paymentcontrol;
 import java.util.EventListener;
 
 /**
- * Слушатель класса помощника для работы с обязательствами
+ * РЎР»СѓС€Р°С‚РµР»СЊ РєР»Р°СЃСЃР° РїРѕРјРѕС‰РЅРёРєР° РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°РјРё
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmcHelperListener.java,v 1.1 2007/05/14 04:59:59 sharapov Exp $

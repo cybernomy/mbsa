@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.widget;
 import com.mg.framework.api.ui.FieldEditor;
 
 /**
- * Элемент "Редактор денежных значений"
+ * Р­Р»РµРјРµРЅС‚ "Р РµРґР°РєС‚РѕСЂ РґРµРЅРµР¶РЅС‹С… Р·РЅР°С‡РµРЅРёР№"
  * 
  * @author Oleg V. Safonov
  * @version $Id: MonetaryAmountField.java,v 1.1 2007/02/07 13:44:22 safonov Exp $

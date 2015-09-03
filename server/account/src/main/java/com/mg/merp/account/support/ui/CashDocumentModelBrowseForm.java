@@ -17,7 +17,7 @@ package com.mg.merp.account.support.ui;
 import com.mg.merp.document.generic.ui.DocumentModelBrowseForm;
 
 /**
- * Контроллер формы списка кассовых документов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РєР°СЃСЃРѕРІС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: CashDocumentModelBrowseForm.java,v 1.1 2006/09/12 11:28:47 leonova Exp $ 

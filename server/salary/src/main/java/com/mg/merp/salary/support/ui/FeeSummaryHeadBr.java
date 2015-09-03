@@ -31,7 +31,7 @@ import com.mg.merp.salary.FeeSummaryHeadServiceLocal;
 import com.mg.merp.salary.model.FeeSummaryHead;
 
 /**
- * Контроллер формы списка сводов по н/у
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° СЃРІРѕРґРѕРІ РїРѕ РЅ/Сѓ
  * 
  * @author leonova
  * @version $Id: FeeSummaryHeadBr.java,v 1.12 2009/02/10 14:37:49 safonov Exp $

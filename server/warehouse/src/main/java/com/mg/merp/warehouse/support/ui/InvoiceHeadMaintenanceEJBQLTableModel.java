@@ -20,7 +20,7 @@ import com.mg.framework.support.ui.widget.TableEJBQLFieldDef;
 import com.mg.merp.warehouse.model.InvoiceHead;
 
 /**
- * Вспомогательный класс для отображения формы списка накладных
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РЅР°РєР»Р°РґРЅС‹С…
  * 
  * @author leonova
  * @version $Id: InvoiceHeadMaintenanceEJBQLTableModel.java,v 1.2 2009/02/10 14:29:13 safonov Exp $ 

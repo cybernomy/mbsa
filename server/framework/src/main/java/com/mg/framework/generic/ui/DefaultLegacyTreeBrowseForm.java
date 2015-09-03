@@ -61,9 +61,9 @@ public class DefaultLegacyTreeBrowseForm extends AbstractForm implements Mainten
 		//tree.setData(loadFolders());
 		super.doOnRun();
 		
-		//обработка SearchHelp, если используется в данном качестве, то откроем кнопку chooseButton
+		//РѕР±СЂР°Р±РѕС‚РєР° SearchHelp, РµСЃР»Рё РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІ РґР°РЅРЅРѕРј РєР°С‡РµСЃС‚РІРµ, С‚Рѕ РѕС‚РєСЂРѕРµРј РєРЅРѕРїРєСѓ chooseButton
 		if (listener != null) {
-			Widget chooseButton = view.getWidget("сhooseButton");
+			Widget chooseButton = view.getWidget("СЃhooseButton");
 			if (chooseButton != null)
 				chooseButton.setVisible(true);
 		}

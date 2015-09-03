@@ -28,7 +28,7 @@ import com.mg.merp.reference.OriginalDocumentServiceLocal;
 import com.mg.merp.reference.model.OriginalDocument;
 
 /**
- * Реализация бизнес-компонента "Оригиналы докуметов"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЂРёРіРёРЅР°Р»С‹ РґРѕРєСѓРјРµС‚РѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov

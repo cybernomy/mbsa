@@ -25,7 +25,7 @@ import com.mg.merp.account.model.AccPlan;
 import com.mg.merp.account.model.AnlPlan;
 
 /**
- * Класс отображения SearchHelp для аналитических счетов
+ * РљР»Р°СЃСЃ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ SearchHelp РґР»СЏ Р°РЅР°Р»РёС‚РёС‡РµСЃРєРёС… СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: AnlPlanSearchForm.java,v 1.3 2009/02/25 14:44:21 safonov Exp $

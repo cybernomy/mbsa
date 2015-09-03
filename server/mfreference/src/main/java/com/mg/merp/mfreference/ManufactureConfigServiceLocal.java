@@ -17,7 +17,7 @@ package com.mg.merp.mfreference;
 import com.mg.merp.mfreference.model.ManufactureConfig;
 
 /**
- * Сервис бизнес-компонента "Конфигурация модуля <Производство>"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ>"
  * 
  * @author leonova
  * @author Artem V. Sharapov

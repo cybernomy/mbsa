@@ -52,7 +52,7 @@ import com.mg.merp.table.support.Messages;
 import com.mg.merp.table.support.TimeBoardHelper;
 
 /**
- * Контроллер формы поддержки "График работ в табельном учете"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "Р“СЂР°С„РёРє СЂР°Р±РѕС‚ РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -155,9 +155,9 @@ public class ScheduleHeadMt extends DefaultMaintenanceForm implements MasterMode
 	}
 
 	/**
-	 * Обработчик пункта КМ "Выбрать тип времени с учетом по дням"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "Р’С‹Р±СЂР°С‚СЊ С‚РёРї РІСЂРµРјРµРЅРё СЃ СѓС‡РµС‚РѕРј РїРѕ РґРЅСЏРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseDayliTimeKind(WidgetEvent event) throws Exception {
 		final int[] columns = getSelectedColumns();
@@ -178,8 +178,8 @@ public class ScheduleHeadMt extends DefaultMaintenanceForm implements MasterMode
 	}
 
 	/**
-	 * Обработчик пункта КМ "Установить кол-во часов"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕР»-РІРѕ С‡Р°СЃРѕРІ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionSetHours(WidgetEvent event) {
 		final int[] columns = getSelectedColumns();
@@ -205,8 +205,8 @@ public class ScheduleHeadMt extends DefaultMaintenanceForm implements MasterMode
 	}
 
 	/**
-	 * Обработчик пункта КМ "Заполнить по шаблону"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "Р—Р°РїРѕР»РЅРёС‚СЊ РїРѕ С€Р°Р±Р»РѕРЅСѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionFillByPattern(WidgetEvent event) {
 		SecurityUtils.checkPermission(new BusinessMethodPermission(ScheduleHeadServiceLocal.SERVICE_NAME, ScheduleHeadServiceLocal.CREATE_BY_PATTERN_METHOD_NAME));
@@ -243,7 +243,7 @@ public class ScheduleHeadMt extends DefaultMaintenanceForm implements MasterMode
 	}
 
 	/**
-	 * Обработчик события "Выбора параметров заполнения спецификации по шаблону"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "Р’С‹Р±РѕСЂР° РїР°СЂР°РјРµС‚СЂРѕРІ Р·Р°РїРѕР»РЅРµРЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РїРѕ С€Р°Р±Р»РѕРЅСѓ"
 	 */
 	protected void doOnFillByPatternParamsSelected(ScheduleHead scheduleHead, PatternHead patternHead, Integer initialShift, Date beginDate, Date endDate) {
 		CalcPeriod calcPeriodEntity = getCurrentCalcPeriod();

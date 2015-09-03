@@ -30,7 +30,7 @@ import com.mg.merp.report.RptMainServiceLocal;
 import com.mg.merp.report.model.RptMain;
 
 /**
- * Бизнес-компонент "Репозитарий отчетов"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р РµРїРѕР·РёС‚Р°СЂРёР№ РѕС‚С‡РµС‚РѕРІ"
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov

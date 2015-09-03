@@ -24,7 +24,7 @@ import com.mg.merp.account.AccGroupServiceLocal;
 import com.mg.merp.account.model.AccGroup;
 
 /**
- * Бизнес-компонент "Группы учета" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р“СЂСѓРїРїС‹ СѓС‡РµС‚Р°" 
  * 
  * @author leonova
  * @version $Id: AccGroupServiceBean.java,v 1.3 2006/08/24 06:44:08 leonova Exp $

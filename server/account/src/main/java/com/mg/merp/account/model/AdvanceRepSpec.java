@@ -17,7 +17,7 @@ package com.mg.merp.account.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Объектная модель бизнес-компонента "Спецификации авансовых отчетов"
+ * РћР±СЉРµРєС‚РЅР°СЏ РјРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёРё Р°РІР°РЅСЃРѕРІС‹С… РѕС‚С‡РµС‚РѕРІ"
  *  
  * @author hbm2java
  * @version $Id: AdvanceRepSpec.java,v 1.6 2008/03/27 11:56:22 alikaev Exp $

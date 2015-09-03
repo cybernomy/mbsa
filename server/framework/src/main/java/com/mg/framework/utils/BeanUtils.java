@@ -25,7 +25,7 @@ import com.mg.framework.api.orm.PersistentObject;
 import com.mg.framework.service.PersistentManagerHibernateImpl;
 
 /**
- * Утилиты доступа к объектам сущностям
+ * РЈС‚РёР»РёС‚С‹ РґРѕСЃС‚СѓРїР° Рє РѕР±СЉРµРєС‚Р°Рј СЃСѓС‰РЅРѕСЃС‚СЏРј
  * 
  * @author Oleg V. Safonov
  * @version $Id: BeanUtils.java,v 1.4 2009/02/09 13:06:02 safonov Exp $
@@ -35,11 +35,11 @@ public class BeanUtils {
 	public final static char NESTED_DELIM = '.';
 
 	/**
-	 * получить значение атрибута
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р°
 	 * 
-	 * @param bean	объект
-	 * @param name	имя атрибута
-	 * @return	значение атрибута
+	 * @param bean	РѕР±СЉРµРєС‚
+	 * @param name	РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
+	 * @return	Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р°
 	 */
 	public static Object getProperty(final Object bean, final String name) {
 		if (bean == null) {
@@ -65,12 +65,12 @@ public class BeanUtils {
 	}
 
 	/**
-	 * получить значение идентификатора сущности, данный метод позволяет получить идентификатор сущности
-	 * которая не принадлежит текущей сессии в отличии от метода {@link com.mg.framework.api.orm.PersistentObject#getPrimaryKey()}
-	 * который позволяет получить идентификатор только для сущностей принадлежащих текущей сессии
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР° СЃСѓС‰РЅРѕСЃС‚Рё, РґР°РЅРЅС‹Р№ РјРµС‚РѕРґ РїРѕР·РІРѕР»СЏРµС‚ РїРѕР»СѓС‡РёС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * РєРѕС‚РѕСЂР°СЏ РЅРµ РїСЂРёРЅР°РґР»РµР¶РёС‚ С‚РµРєСѓС‰РµР№ СЃРµСЃСЃРёРё РІ РѕС‚Р»РёС‡РёРё РѕС‚ РјРµС‚РѕРґР° {@link com.mg.framework.api.orm.PersistentObject#getPrimaryKey()}
+	 * РєРѕС‚РѕСЂС‹Р№ РїРѕР·РІРѕР»СЏРµС‚ РїРѕР»СѓС‡РёС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РѕР»СЊРєРѕ РґР»СЏ СЃСѓС‰РЅРѕСЃС‚РµР№ РїСЂРёРЅР°РґР»РµР¶Р°С‰РёС… С‚РµРєСѓС‰РµР№ СЃРµСЃСЃРёРё
 	 * 
-	 * @param bean	сущность
-	 * @return	значение идентификатора
+	 * @param bean	СЃСѓС‰РЅРѕСЃС‚СЊ
+	 * @return	Р·РЅР°С‡РµРЅРёРµ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР°
 	 */
 	public static Object getIdentifierProperty(final Object bean) {
 		if (bean == null)
@@ -80,11 +80,11 @@ public class BeanUtils {
 	}
 
 	/**
-	 * установить значение атрибута
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р°
 	 * 
-	 * @param bean	объект
-	 * @param name	имя атрибута
-	 * @param value	значение атрибута
+	 * @param bean	РѕР±СЉРµРєС‚
+	 * @param name	РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р°
 	 */
 	public static void setProperty(final Object bean, final String name, final Object value) {
 		if (bean == null) {
@@ -110,11 +110,11 @@ public class BeanUtils {
 	}
 
 	/**
-	 * сравнение значения свойства сущности
+	 * СЃСЂР°РІРЅРµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІР° СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param oldValue	старое значение
-	 * @param newValue	новое значение
-	 * @return	<code>true</code> если значения различны
+	 * @param oldValue	СЃС‚Р°СЂРѕРµ Р·РЅР°С‡РµРЅРёРµ
+	 * @param newValue	РЅРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
+	 * @return	<code>true</code> РµСЃР»Рё Р·РЅР°С‡РµРЅРёСЏ СЂР°Р·Р»РёС‡РЅС‹
 	 */
 	public static boolean isPropertyDifferent(Object oldValue, Object newValue) {
     	if (oldValue instanceof BigDecimal && newValue instanceof BigDecimal)

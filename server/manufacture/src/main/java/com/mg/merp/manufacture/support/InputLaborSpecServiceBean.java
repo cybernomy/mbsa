@@ -29,7 +29,7 @@ import com.mg.merp.manufacture.model.JobLabor;
 import com.mg.merp.mfreference.support.ConfigurationHelper;
 
 /**
- * Бизнес-компонент "Спецификация актов на списание времени, отработанного РС в НЗП" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ Р РЎ РІ РќР—Рџ" 
  * 
  * @author leonova
  * @version $Id: InputLaborSpecServiceBean.java,v 1.6 2007/08/06 12:44:54 safonov Exp $

@@ -45,7 +45,7 @@ import com.mg.merp.table.model.TableConfig;
 import com.mg.merp.table.model.TimeKind;
 
 /**
- * Реализация бизнес-компонента "Графики работ в табельном учете" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р“СЂР°С„РёРєРё СЂР°Р±РѕС‚ РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -76,13 +76,13 @@ public class ScheduleHeadServiceBean extends AbstractPOJODataBusinessObjectServi
 	}
 
 	/**
-	 * Создать график по образцу
-	 * @param scheduleHead - заголовок графика в табельном учете
-	 * @param patternHead - заголовок образца
-	 * @param initialShift - смещение(для сменных графиков)
-	 * @param beginDate - дата с
-	 * @param endDate - дата по
-	 * @return список позиций спецификации графика в табельном учете
+	 * РЎРѕР·РґР°С‚СЊ РіСЂР°С„РёРє РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param scheduleHead - Р·Р°РіРѕР»РѕРІРѕРє РіСЂР°С„РёРєР° РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ
+	 * @param patternHead - Р·Р°РіРѕР»РѕРІРѕРє РѕР±СЂР°Р·С†Р°
+	 * @param initialShift - СЃРјРµС‰РµРЅРёРµ(РґР»СЏ СЃРјРµРЅРЅС‹С… РіСЂР°С„РёРєРѕРІ)
+	 * @param beginDate - РґР°С‚Р° СЃ
+	 * @param endDate - РґР°С‚Р° РїРѕ
+	 * @return СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё РіСЂР°С„РёРєР° РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ
 	 */
 	protected List<ScheduleSpec> doCreateByPattern(ScheduleHead scheduleHead, PatternHead patternHead, Integer initialShift, Date beginDate, Date endDate) {
 		List<ScheduleSpec> scheduleSpecs = doFillByPattern(scheduleHead, patternHead, initialShift, beginDate, endDate);
@@ -91,13 +91,13 @@ public class ScheduleHeadServiceBean extends AbstractPOJODataBusinessObjectServi
 	}
 
 	/**
-	 * Заполнить график по образцу
-	 * @param scheduleHead - заголовок графика в табельном учете
-	 * @param patternHead - заголовок образца
-	 * @param initialShift - смещение(для сменных графиков)
-	 * @param beginDate - дата с
-	 * @param endDate - дата по
-	 * @return список позиций спецификации графика в табельном учете
+	 * Р—Р°РїРѕР»РЅРёС‚СЊ РіСЂР°С„РёРє РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param scheduleHead - Р·Р°РіРѕР»РѕРІРѕРє РіСЂР°С„РёРєР° РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ
+	 * @param patternHead - Р·Р°РіРѕР»РѕРІРѕРє РѕР±СЂР°Р·С†Р°
+	 * @param initialShift - СЃРјРµС‰РµРЅРёРµ(РґР»СЏ СЃРјРµРЅРЅС‹С… РіСЂР°С„РёРєРѕРІ)
+	 * @param beginDate - РґР°С‚Р° СЃ
+	 * @param endDate - РґР°С‚Р° РїРѕ
+	 * @return СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё РіСЂР°С„РёРєР° РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ
 	 */
 	protected List<ScheduleSpec> doFillByPattern(ScheduleHead scheduleHead, PatternHead patternHead, Integer initialShift, Date beginDate, Date endDate) {
 		List<ScheduleSpec> scheduleSpecs = new ArrayList<ScheduleSpec>();
@@ -196,8 +196,8 @@ public class ScheduleHeadServiceBean extends AbstractPOJODataBusinessObjectServi
 	}
 
 	/**
-	 * Создать спецификацию графика работ в табельном учете
-	 * @param scheduleSpecs - список позиций
+	 * РЎРѕР·РґР°С‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ РіСЂР°С„РёРєР° СЂР°Р±РѕС‚ РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ
+	 * @param scheduleSpecs - СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№
 	 */
 	private void createScheduleSpecs(List<ScheduleSpec> scheduleSpecs) {
 		ScheduleSpecServiceLocal scheduleSpecService = getScheduleSpecService();
@@ -206,20 +206,20 @@ public class ScheduleHeadServiceBean extends AbstractPOJODataBusinessObjectServi
 	}
 
 	/**
-	 * Удалить спецификации которые лежат в диапазоне дат
-	 * @param scheduleHead - заголовок графика работ
-	 * @param beginDate - дата с
-	 * @param endDate - дата по
+	 * РЈРґР°Р»РёС‚СЊ СЃРїРµС†РёС„РёРєР°С†РёРё РєРѕС‚РѕСЂС‹Рµ Р»РµР¶Р°С‚ РІ РґРёР°РїР°Р·РѕРЅРµ РґР°С‚
+	 * @param scheduleHead - Р·Р°РіРѕР»РѕРІРѕРє РіСЂР°С„РёРєР° СЂР°Р±РѕС‚
+	 * @param beginDate - РґР°С‚Р° СЃ
+	 * @param endDate - РґР°С‚Р° РїРѕ
 	 */
 	private void deleteSpecsOverPeriod(ScheduleHead scheduleHead, Date beginDate, Date endDate) {
 		OrmTemplate.getInstance().bulkUpdateByNamedQuery(DELETE_SPECS_OVER_PERIOD_EJBQL_QUERY_NAME,  new String[] {"scheduleHead", "beginDate", "endDate"}, new Object[] {scheduleHead, beginDate, endDate}); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 	}
 
 	/**
-	 * Получить список дат праздников которые лежат в диапазоне дат
-	 * @param dateBegin - дата с
-	 * @param dateEnd - дата по
-	 * @return список дат праздников
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РґР°С‚ РїСЂР°Р·РґРЅРёРєРѕРІ РєРѕС‚РѕСЂС‹Рµ Р»РµР¶Р°С‚ РІ РґРёР°РїР°Р·РѕРЅРµ РґР°С‚
+	 * @param dateBegin - РґР°С‚Р° СЃ
+	 * @param dateEnd - РґР°С‚Р° РїРѕ
+	 * @return СЃРїРёСЃРѕРє РґР°С‚ РїСЂР°Р·РґРЅРёРєРѕРІ
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	private List<Date> getHolidayDates(Date dateBegin, Date dateEnd) {
@@ -227,17 +227,17 @@ public class ScheduleHeadServiceBean extends AbstractPOJODataBusinessObjectServi
 	}
 
 	/**
-	 * Загрузить спецификацию шаблона
-	 * @param patternHead - заголовок шаблона
-	 * @return список позиций
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ С€Р°Р±Р»РѕРЅР°
+	 * @param patternHead - Р·Р°РіРѕР»РѕРІРѕРє С€Р°Р±Р»РѕРЅР°
+	 * @return СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№
 	 */
 	protected List<PatternSpec> loadPatternSpec(PatternHead patternHead) {
 		return getPatternSpecService().loadSpecs(patternHead);
 	}
 
 	/**
-	 * Получить конфигурацию модуля 
-	 * @return конфигурация модуля или <code>null</code> если не инициализирована
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ РјРѕРґСѓР»СЏ 
+	 * @return РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°РЅР°
 	 */
 	protected TableConfig getTableConfig() {
 		return ServerUtils.getPersistentManager().find(TableConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
@@ -252,9 +252,9 @@ public class ScheduleHeadServiceBean extends AbstractPOJODataBusinessObjectServi
 	}
 
 	/**
-	 * Получить индекс дня недели
-	 * @param date - дата
-	 * @return индекс дня недели (1 - понедельник ... 7 - воскресенье)
+	 * РџРѕР»СѓС‡РёС‚СЊ РёРЅРґРµРєСЃ РґРЅСЏ РЅРµРґРµР»Рё
+	 * @param date - РґР°С‚Р°
+	 * @return РёРЅРґРµРєСЃ РґРЅСЏ РЅРµРґРµР»Рё (1 - РїРѕРЅРµРґРµР»СЊРЅРёРє ... 7 - РІРѕСЃРєСЂРµСЃРµРЅСЊРµ)
 	 */
 	private int getDayOfWeekIndex(Date date) {
 		int dayOfWeekIndex = 0;

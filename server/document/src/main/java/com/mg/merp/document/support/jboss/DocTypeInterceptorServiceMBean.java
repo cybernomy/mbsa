@@ -17,14 +17,14 @@ package com.mg.merp.document.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис перехватчика для обслуживания типов документов
+ * РЎРµСЂРІРёСЃ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ РѕР±СЃР»СѓР¶РёРІР°РЅРёСЏ С‚РёРїРѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocTypeInterceptorServiceMBean.java,v 1.1 2006/10/18 10:31:46 safonov Exp $
  */
 public interface DocTypeInterceptorServiceMBean extends ServiceMBean {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:document=DocTypeInterceptorService"; //$NON-NLS-1$
 }

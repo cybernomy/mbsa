@@ -17,7 +17,7 @@ package com.mg.merp.core;
 import com.mg.merp.core.model.Feature;
 
 /**
- * Бизнес-компонент "Пользовательские поля"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РїРѕР»СЏ"
  * 
  * @author leonova
  * @author Oleg V. Safonov
@@ -27,10 +27,10 @@ public interface FeatureServiceLocal
    extends  com.mg.framework.api.DataBusinessObjectService<Feature, Integer>
 {
 	/**
-	 * поиск описателя пользовательского поля по коду
+	 * РїРѕРёСЃРє РѕРїРёСЃР°С‚РµР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РїРѕР»СЏ РїРѕ РєРѕРґСѓ
 	 * 
-	 * @param code	код
-	 * @return	описатель пользовательского поля
+	 * @param code	РєРѕРґ
+	 * @return	РѕРїРёСЃР°С‚РµР»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РїРѕР»СЏ
 	 */
 	Feature findByCode(String code);
 }

@@ -21,7 +21,7 @@ import com.mg.merp.manufacture.model.JobRouteResource;
 import com.mg.merp.mfreference.support.MfUtils;
 
 /**
- * Базовый класс сервисов ресурсов операций ЗНП
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ СЃРµСЂРІРёСЃРѕРІ СЂРµСЃСѓСЂСЃРѕРІ РѕРїРµСЂР°С†РёР№ Р—РќРџ
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractJobResource.java,v 1.2 2007/08/21 15:27:26 safonov Exp $

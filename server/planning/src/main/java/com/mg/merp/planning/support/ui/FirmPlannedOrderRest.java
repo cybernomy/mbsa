@@ -23,7 +23,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер формы условий отбора подтвержденных заказов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° РїРѕРґС‚РІРµСЂР¶РґРµРЅРЅС‹С… Р·Р°РєР°Р·РѕРІ
  * 
  * @author leonova
  * @version $Id: FirmPlannedOrderRest.java,v 1.2 2006/08/25 10:18:05 leonova Exp $ 

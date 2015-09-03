@@ -17,7 +17,7 @@ package com.mg.framework.support.ui.widget;
 import com.mg.framework.api.ui.Form;
 
 /**
- * Форма настройки внешнего вида таблицы поддержки бизнес-компонентов
+ * Р¤РѕСЂРјР° РЅР°СЃС‚СЂРѕР№РєРё РІРЅРµС€РЅРµРіРѕ РІРёРґР° С‚Р°Р±Р»РёС†С‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: SetupMaintenanceTableForm.java,v 1.1 2008/12/23 09:19:54 safonov Exp $
@@ -25,14 +25,14 @@ import com.mg.framework.api.ui.Form;
 public interface SetupMaintenanceTableForm extends Form {
 
 	/**
-	 * имя формы
+	 * РёРјСЏ С„РѕСЂРјС‹
 	 */
 	final static String FORM_NAME = "com.mg.merp.core.SetupMaintenanceTableForm";
 
 	/**
-	 * запуск формы настройки
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹ РЅР°СЃС‚СЂРѕР№РєРё
 	 * 
-	 * @param tableModel	модель таблицы
+	 * @param tableModel	РјРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹
 	 */
 	void execute(MaintenanceTableModel tableModel);
 

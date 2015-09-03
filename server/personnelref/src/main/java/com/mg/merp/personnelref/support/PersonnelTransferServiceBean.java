@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PersonnelTransferServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelTransfer;
 
 /**
- * Реализация бизнес-компонента "Прием и переводы на работу" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРёРµРј Рё РїРµСЂРµРІРѕРґС‹ РЅР° СЂР°Р±РѕС‚Сѓ" 
  * 
  * @author leonova
  * @version $Id: PersonnelTransferServiceBean.java,v 1.4 2007/07/10 07:32:26 sharapov Exp $

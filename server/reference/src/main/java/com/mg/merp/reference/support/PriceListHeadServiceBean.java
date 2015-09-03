@@ -57,7 +57,7 @@ import com.mg.merp.reference.model.PriceListSpecPrice;
 import com.mg.merp.reference.model.PriceListSpecPriceId;
 
 /**
- * Реализация бизнес-компонента "Заголовки прайс-листов"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р—Р°РіРѕР»РѕРІРєРё РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ"
  * 
  * @author leonova
  * @author Oleg V. Safonov
@@ -87,8 +87,8 @@ public class PriceListHeadServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Пересчитать цены спецификации прайс-листа
-	 * @param priceListHeadIds - список идентификаторов прайс-листов
+	 * РџРµСЂРµСЃС‡РёС‚Р°С‚СЊ С†РµРЅС‹ СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param priceListHeadIds - СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ
 	 */
 	protected void doRecalcPrices(Serializable[] priceListHeadIds) {
 		if(priceListHeadIds == null || priceListHeadIds.length < 1)
@@ -127,17 +127,17 @@ public class PriceListHeadServiceBean extends AbstractPOJODataBusinessObjectServ
 		initAttributes.put(PRICE_LIST_HEAD_ATTRIBUTE_NAME, entityClone);
 
 		PersistentManager persistentManager = ServerUtils.getPersistentManager();
-		// копирование связей с типами цен
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ СЃРІСЏР·РµР№ СЃ С‚РёРїР°РјРё С†РµРЅ
 		for(PriceListPriceTypeLink priceListPriceTypeLink : pricelistPricetypeLinkService.findByCriteria(Restrictions.eq(PRICE_LIST_HEAD_ATTRIBUTE_NAME, entity)))
 			pricelistPricetypeLinkService.clone(priceListPriceTypeLink, true, initAttributes);
 
-		// копирование иерархической структуры
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ РёРµСЂР°СЂС…РёС‡РµСЃРєРѕР№ СЃС‚СЂСѓРєС‚СѓСЂС‹
 		for(PriceListFolder priceListFolder : priceListFolders) {
 			PriceListFolder clonedPriceListFolder = (PriceListFolder) priceListFolder.cloneEntity(initAttributes);
 			clonedPriceListFolder.setAttribute("Id", DatabaseUtils.getSequenceNextValue("pricelistfolder_id_gen")); //$NON-NLS-1$ //$NON-NLS-2$
 			clonedPriceListFolders.add(clonedPriceListFolder);
 
-			// копирование прав иерархической структуры
+			// РєРѕРїРёСЂРѕРІР°РЅРёРµ РїСЂР°РІ РёРµСЂР°СЂС…РёС‡РµСЃРєРѕР№ СЃС‚СЂСѓРєС‚СѓСЂС‹
 			folderRightsInitAttributes.put(PRICE_LIST_FOLDER_ID_ATTRIBUTE_NAME, clonedPriceListFolder.getId());
 			for (FolderRights folderRights : getPriceListFolderRights(priceListFolder.getId()))
 				persistentManager.persist(folderRights.cloneEntity(folderRightsInitAttributes));
@@ -145,15 +145,15 @@ public class PriceListHeadServiceBean extends AbstractPOJODataBusinessObjectServ
 		for(int i = 0; i < clonedPriceListFolders.size(); i++) {
 			PriceListFolder clonedPriceListFolder = clonedPriceListFolders.get(i);
 			PriceListFolder priceListFolder = priceListFolders.get(i);
-			// настройка иерархической структуры
+			// РЅР°СЃС‚СЂРѕР№РєР° РёРµСЂР°СЂС…РёС‡РµСЃРєРѕР№ СЃС‚СЂСѓРєС‚СѓСЂС‹
 			if(clonedPriceListFolder.getParent() != null)
 				clonedPriceListFolder.setParent(clonedPriceListFolders.get(priceListFolders.indexOf(priceListFolder.getParent())));
 
-			// создание прав иерархической структуры
+			// СЃРѕР·РґР°РЅРёРµ РїСЂР°РІ РёРµСЂР°СЂС…РёС‡РµСЃРєРѕР№ СЃС‚СЂСѓРєС‚СѓСЂС‹
 			JdbcTemplate.getInstance().update("INSERT INTO PRICELISTFOLDER (ID, PRICELISTHEAD_ID, PARENT_ID, FNAME, FOLDER_TAG) VALUES (?, ?, ?, ?, ?)", //$NON-NLS-1$
 					new Object[] {clonedPriceListFolder.getId(), clonedPriceListFolder.getPriceListHead().getId(), clonedPriceListFolder.getParent() == null ? clonedPriceListFolder.getParent() : clonedPriceListFolder.getParent().getId(), clonedPriceListFolder.getFName(), clonedPriceListFolder.getFolderTag()});
 
-			// копирование спецификации
+			// РєРѕРїРёСЂРѕРІР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёРё
 			priceListSpecInitAttr.put(PRICE_LIST_FOLDER_ATTRIBUTE_NAME, clonedPriceListFolder);
 			priceListSpecInitAttr.put(PRICE_LIST_HEAD_ID_ATTRIBUTE_NAME, entityClone.getId());
 			for(PriceListSpec priceListSpec : priceListSpecService.findByCriteria(Restrictions.eq(PRICE_LIST_FOLDER_ATTRIBUTE_NAME, priceListFolder))) {
@@ -166,9 +166,9 @@ public class PriceListHeadServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Выполнить копирование типов цен
-	 * @param priceListSpec - оригинал позиции спецификации прайс-листа
-	 * @param priceListSpecClone - копия позиции спецификации прайс-листа
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРїРёСЂРѕРІР°РЅРёРµ С‚РёРїРѕРІ С†РµРЅ
+	 * @param priceListSpec - РѕСЂРёРіРёРЅР°Р» РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param priceListSpecClone - РєРѕРїРёСЏ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	protected void doCloneSpecPriceList(PriceListSpec priceListSpec, PriceListSpec priceListSpecClone) {
 		List<PriceListSpecPrice> prices = new ArrayList<PriceListSpecPrice>();
@@ -186,9 +186,9 @@ public class PriceListHeadServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 
 	/**
-	 * Получить список прав на папку прайс-листа
-	 * @param priceListfolderId - идентификатор папки прайс-листа
-	 * @return список прав на папку прайс-листа
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїСЂР°РІ РЅР° РїР°РїРєСѓ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param priceListfolderId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїР°РїРєРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @return СЃРїРёСЃРѕРє РїСЂР°РІ РЅР° РїР°РїРєСѓ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	private List<FolderRights> getPriceListFolderRights(Integer priceListfolderId) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(FolderRights.class)
@@ -204,11 +204,11 @@ public class PriceListHeadServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 	
 	/**
-	 * Выполнить переоценку
-	 * @param priceListHeadId - идентификатор прайс-листа
-	 * @param actualDate - дата актуальности
-	 * @param percent - процент
-	 * @param precision - точность вычислений
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РїРµСЂРµРѕС†РµРЅРєСѓ
+	 * @param priceListHeadId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param actualDate - РґР°С‚Р° Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё
+	 * @param percent - РїСЂРѕС†РµРЅС‚
+	 * @param precision - С‚РѕС‡РЅРѕСЃС‚СЊ РІС‹С‡РёСЃР»РµРЅРёР№
 	 */
 	protected void doOverestimation(Serializable priceListHeadId, Date actualDate, BigDecimal percent, Integer precision) {
 		validateOverestimationParams(priceListHeadId, actualDate, percent, precision);
@@ -239,21 +239,21 @@ public class PriceListHeadServiceBean extends AbstractPOJODataBusinessObjectServ
 	}
 	
 	/**
-	 * Найти позиции спецификации прайс-листа на дату
-	 * @param priceListHeadId - иденификатор прайс-листа
-	 * @param actualDate - дата актуальности
-	 * @return список позиций спецификации прайс-листа
+	 * РќР°Р№С‚Рё РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р° РЅР° РґР°С‚Сѓ
+	 * @param priceListHeadId - РёРґРµРЅРёС„РёРєР°С‚РѕСЂ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param actualDate - РґР°С‚Р° Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё
+	 * @return СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	private List<PriceListSpec> findPriceListSpecs(Serializable priceListHeadId, Date actualDate) {
 		return MiscUtils.convertUncheckedList(PriceListSpec.class, OrmTemplate.getInstance().findByNamedParam("select pls from com.mg.merp.reference.model.PriceListSpec pls where pls.PriceListHeadId = :priceListHeadId and (:actualDate between pls.ActDate and pls.ActDateTill)", new String[] {"priceListHeadId", "actualDate"}, new Object[] {priceListHeadId, actualDate})); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 	}
 	
 	/**
-	 * Выполнить контроль корректности параметров переоценки
-	 * @param priceListHeadId - идентификатор прайс-листа
-	 * @param actualDate - дата актуальности
-	 * @param percent - процент
-	 * @param precision - точность вычислений
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРЅС‚СЂРѕР»СЊ РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РїР°СЂР°РјРµС‚СЂРѕРІ РїРµСЂРµРѕС†РµРЅРєРё
+	 * @param priceListHeadId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param actualDate - РґР°С‚Р° Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё
+	 * @param percent - РїСЂРѕС†РµРЅС‚
+	 * @param precision - С‚РѕС‡РЅРѕСЃС‚СЊ РІС‹С‡РёСЃР»РµРЅРёР№
 	 */
 	private void validateOverestimationParams(Serializable priceListHeadId, Date actualDate, BigDecimal percent, Integer precision) {
 		if (priceListHeadId == null)

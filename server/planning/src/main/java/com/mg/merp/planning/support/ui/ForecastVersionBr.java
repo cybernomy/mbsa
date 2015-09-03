@@ -26,7 +26,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.planning.model.ForecastVersion;
 
 /**
- * Браузер версий прогнозов
+ * Р‘СЂР°СѓР·РµСЂ РІРµСЂСЃРёР№ РїСЂРѕРіРЅРѕР·РѕРІ
  * 
  * @author leonova
  * @version $Id: ForecastVersionBr.java,v 1.2 2006/08/25 10:16:38 leonova Exp $ 

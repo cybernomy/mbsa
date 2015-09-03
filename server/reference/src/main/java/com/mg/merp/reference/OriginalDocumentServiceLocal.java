@@ -17,7 +17,7 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.OriginalDocument;
 
 /**
- * Сервис бизнес-компонента "Оригиналы документов"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЂРёРіРёРЅР°Р»С‹ РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,12 +26,12 @@ import com.mg.merp.reference.model.OriginalDocument;
 public interface OriginalDocumentServiceLocal extends com.mg.framework.api.DataBusinessObjectService<OriginalDocument, Integer>, AttachmentHandler {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/reference/OriginalDocument"; //$NON-NLS-1$
 	
 	/**
-	 * тип папки для Оригиналов документов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РћСЂРёРіРёРЅР°Р»РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 2501;
 

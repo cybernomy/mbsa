@@ -17,7 +17,7 @@ package com.mg.merp.finance;
 import com.mg.merp.finance.model.FinConfig;
 
 /**
- * Сервис бизнес-компонента "Конфигурация модуля <Фин.учет>"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <Р¤РёРЅ.СѓС‡РµС‚>"
  * 
  * @author leonova
  * @author Artem V. Sharapov

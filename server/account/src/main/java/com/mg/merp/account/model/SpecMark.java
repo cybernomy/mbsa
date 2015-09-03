@@ -17,7 +17,7 @@ package com.mg.merp.account.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Особые отметки"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃРѕР±С‹Рµ РѕС‚РјРµС‚РєРё"
  * 
  * @author hbm2java
  * @author Artem V. Sharapov
@@ -98,7 +98,7 @@ java.io.Serializable {
 	}
 
 	/**
-	 * @return Идентификатор
+	 * @return РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ
 	 */
 	@DataItemName("ID") //$NON-NLS-1$
 	public java.lang.Integer getId() {
@@ -106,7 +106,7 @@ java.io.Serializable {
 	}
 
 	/**
-	 * @param id - Идентификатор
+	 * @param id - РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ
 	 */
 	public void setId(java.lang.Integer id) {
 		this.id = id;

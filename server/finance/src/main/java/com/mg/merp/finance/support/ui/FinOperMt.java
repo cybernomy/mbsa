@@ -56,7 +56,7 @@ import com.mg.merp.reference.CurrencyRateNotFoundException;
 import com.mg.merp.reference.CurrencyRateServiceLocal;
 
 /**
- * Контроллер формы поддержки бизнес - компонента "Финансовая операция"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ - РєРѕРјРїРѕРЅРµРЅС‚Р° "Р¤РёРЅР°РЅСЃРѕРІР°СЏ РѕРїРµСЂР°С†РёСЏ"
  *
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -327,7 +327,7 @@ public class FinOperMt extends DefaultMaintenanceForm implements MasterModelList
 
 	}
 	/**
-	 * Обработчик курса валют
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєСѓСЂСЃР° РІР°Р»СЋС‚
 	 *
 	 * @param event
 	 */
@@ -337,14 +337,14 @@ public class FinOperMt extends DefaultMaintenanceForm implements MasterModelList
 		if (cfg != null) {
 			CurrencyRateServiceLocal currencyRateService = (CurrencyRateServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/CurrencyRate"); //$NON-NLS-1$
 			try {
-				//пытаемся получить прямой курс для валют
+				//РїС‹С‚Р°РµРјСЃСЏ РїРѕР»СѓС‡РёС‚СЊ РїСЂСЏРјРѕР№ РєСѓСЂСЃ РґР»СЏ РІР°Р»СЋС‚
 				entity.setCurRate(currencyRateService.getCurrencyRate(cfg.getNatCurrency(), entity.getCurrency(), entity.getCurRateAuthority(), entity.getCurRateType(), entity.getKeepDate()));
 			} catch (CurrencyRateNotFoundException e) {
-				//если прямого курса нет, то пытаемся получить обратный курс
+				//РµСЃР»Рё РїСЂСЏРјРѕРіРѕ РєСѓСЂСЃР° РЅРµС‚, С‚Рѕ РїС‹С‚Р°РµРјСЃСЏ РїРѕР»СѓС‡РёС‚СЊ РѕР±СЂР°С‚РЅС‹Р№ РєСѓСЂСЃ
 				entity.setCurRate(MathUtils.divide(BigDecimal.ONE, currencyRateService.getCurrencyRate(entity.getCurrency(), cfg.getNatCurrency(), entity.getCurRateAuthority(), entity.getCurRateType(), entity.getKeepDate()), new RoundContext(CurrencyRateServiceLocal.DEFAULT_RATE_SCALE)));
 			}
 		} else {
-			//если нет конфигурации, то вообще непонятно как обработать
+			//РµСЃР»Рё РЅРµС‚ РєРѕРЅС„РёРіСѓСЂР°С†РёРё, С‚Рѕ РІРѕРѕР±С‰Рµ РЅРµРїРѕРЅСЏС‚РЅРѕ РєР°Рє РѕР±СЂР°Р±РѕС‚Р°С‚СЊ
 			entity.setCurRate(BigDecimal.ONE);
 		}
 	}
@@ -366,15 +366,15 @@ public class FinOperMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * Возвращает код аналитики
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РєРѕРґ Р°РЅР°Р»РёС‚РёРєРё
 	 * @param accountCode
-	 * 				- код счета
+	 * 				- РєРѕРґ СЃС‡РµС‚Р°
 	 * @param anlId
-	 * 				- идентификатор аналитики
+	 * 				- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р°РЅР°Р»РёС‚РёРєРё
 	 * @param anlLevel
-	 * 				- уровень аналитики
+	 * 				- СѓСЂРѕРІРµРЅСЊ Р°РЅР°Р»РёС‚РёРєРё
 	 * @param anlClass
-	 * 				- класс аналитики
+	 * 				- РєР»Р°СЃСЃ Р°РЅР°Р»РёС‚РёРєРё
 	 * @return
 	 */
 	protected String getFieldName(String accountCode, Integer anlId, int anlLevel, String anlClass) {
@@ -395,24 +395,24 @@ public class FinOperMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * Обработчик просмотра документа-основания
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewBaseDocument(WidgetEvent event) {
 		DocumentUtils.viewDocument(((FinOperation) getEntity()).getBaseDoc());
 	}
 
 	/**
-	 * Обработчик просмотра документа
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewConfirmDocument(WidgetEvent event) {
 		DocumentUtils.viewDocument(((FinOperation) getEntity()).getConfirmDoc());
 	}
 
 	/**
-	 * Обработчик просмотра/выбора контракта
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР°/РІС‹Р±РѕСЂР° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewOrChooseContract(WidgetEvent event) {
 		final FinOperation finOperation = (FinOperation) getEntity();

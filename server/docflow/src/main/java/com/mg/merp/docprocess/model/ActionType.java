@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип действия над документом
+ * РўРёРї РґРµР№СЃС‚РІРёСЏ РЅР°Рґ РґРѕРєСѓРјРµРЅС‚РѕРј
  * 
  * @author Oleg V. Safonov
  * @version $Id: ActionType.java,v 1.2 2006/10/21 11:37:32 safonov Exp $
@@ -26,19 +26,19 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName("DocFlow.DocAction.Type")
 public enum ActionType {
 	/**
-	 * Выполнен этап ДО
+	 * Р’С‹РїРѕР»РЅРµРЅ СЌС‚Р°Рї Р”Рћ
 	 */
 	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#DocAction.Type.Stage")
 	STAGE,
 	
 	/**
-	 * Изменение
+	 * РР·РјРµРЅРµРЅРёРµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#DocAction.Type.Update")
 	UPDATE,
 	
 	/**
-	 * Удаление
+	 * РЈРґР°Р»РµРЅРёРµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#DocAction.Type.Delete")
 	DELETE

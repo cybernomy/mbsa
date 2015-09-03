@@ -17,7 +17,7 @@ package com.mg.merp.manufacture;
 import com.mg.merp.manufacture.model.ScrapDocumentHead;
 
 /**
- * Бизнес-компонент "Акт на списание потерь времени, отработанного РС"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РђРєС‚ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ Р РЎ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ScrapLaborHeadServiceLocal.java,v 1.5 2007/08/06 12:46:24 safonov Exp $
@@ -26,16 +26,16 @@ public interface ScrapLaborHeadServiceLocal
    extends com.mg.merp.document.GoodsDocument<ScrapDocumentHead, Integer, ScrapLaborModelServiceLocal, ScrapLaborSpecServiceLocal>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/manufacture/ScrapLaborHead";
 	
 	/**
-	 * тип папки для актов на списание потерь времени, отработанного РС	 */
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ Р РЎ	 */
 	final static short FOLDER_PART = 12508;
 	
 	/**
-	 * docsection для актов на списание потерь времени, отработанного РС
+	 * docsection РґР»СЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ Р РЎ
 	 */
 	final static short DOCSECTION = 12007;
 }

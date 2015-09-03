@@ -28,8 +28,8 @@ import com.mg.merp.account.model.EconomicOper;
 import com.mg.merp.account.support.Messages;
 
 /**
- * Базовый класс модели таблицы для отображения спецификаций документа 
- * в дополнительном браузере расположенном в основном браузере документов
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РјРѕРґРµР»Рё С‚Р°Р±Р»РёС†С‹ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРєСѓРјРµРЅС‚Р° 
+ * РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРј Р±СЂР°СѓР·РµСЂРµ СЂР°СЃРїРѕР»РѕР¶РµРЅРЅРѕРј РІ РѕСЃРЅРѕРІРЅРѕРј Р±СЂР°СѓР·РµСЂРµ РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author Artem V. Sharapov
  * @version $Id: AbstractTurnTableModel.java,v 1.1 2009/02/26 08:14:32 sharapov Exp $
@@ -95,7 +95,7 @@ public abstract class AbstractTurnTableModel extends DefaultMaintenanceEJBQLTabl
 	}
 
 	/**
-	 * Формирование запроса для отображение в таблице спецификаций
+	 * Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ Р·Р°РїСЂРѕСЃР° РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ РІ С‚Р°Р±Р»РёС†Рµ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	private String createQueryText() {
 		Set<TableEJBQLFieldDef> fieldDefs = getFieldDefsSet();
@@ -115,9 +115,9 @@ public abstract class AbstractTurnTableModel extends DefaultMaintenanceEJBQLTabl
 	}
 	
 	/**
-	 * Получить where-часть текста запроса
-	 * @param paramsName - список имен параметров
-	 * @return where-часть текста запроса
+	 * РџРѕР»СѓС‡РёС‚СЊ where-С‡Р°СЃС‚СЊ С‚РµРєСЃС‚Р° Р·Р°РїСЂРѕСЃР°
+	 * @param paramsName - СЃРїРёСЃРѕРє РёРјРµРЅ РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return where-С‡Р°СЃС‚СЊ С‚РµРєСЃС‚Р° Р·Р°РїСЂРѕСЃР°
 	 */
 	protected abstract String doGetWhereText(List<String> paramsName);
 

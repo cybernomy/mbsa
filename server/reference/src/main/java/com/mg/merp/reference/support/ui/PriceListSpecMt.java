@@ -29,7 +29,7 @@ import com.mg.merp.reference.model.PriceListSpec;
 import com.mg.merp.reference.model.PriceListSpecPrice;
 
 /**
- * Контроллер формы поддержки "Спецификации прайс-листов"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РЎРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov

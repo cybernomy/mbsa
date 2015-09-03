@@ -18,7 +18,7 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 import com.mg.merp.core.FormServiceLocal;
 
 /**
- * Механизм поиска форм системы
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° С„РѕСЂРј СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: FormSearchHelp.java,v 1.1 2008/03/03 13:05:04 safonov Exp $

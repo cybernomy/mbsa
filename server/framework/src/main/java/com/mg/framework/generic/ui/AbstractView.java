@@ -39,7 +39,7 @@ import com.mg.framework.support.ui.WidgetFactoryFactory;
 import com.mg.framework.utils.StringUtils;
 
 /**
- * Реализация вида
+ * Р РµР°Р»РёР·Р°С†РёСЏ РІРёРґР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractView.java,v 1.16 2008/01/10 08:53:28 safonov Exp $
@@ -164,7 +164,7 @@ public class AbstractView implements View, Serializable {
 	}
 	
 	protected void doShow() {
-		//возможно форма уже показывалась и создание не требуется
+		//РІРѕР·РјРѕР¶РЅРѕ С„РѕСЂРјР° СѓР¶Рµ РїРѕРєР°Р·С‹РІР°Р»Р°СЃСЊ Рё СЃРѕР·РґР°РЅРёРµ РЅРµ С‚СЂРµР±СѓРµС‚СЃСЏ
 		if (window == null) {
 			String implName = isModal() || UIUtils.isConversation() ? WidgetFactory.DIALOG_WINDOW : WidgetFactory.INTERNAL_FRAME_WINDOW;
 			window = (Window) WidgetFactoryFactory.getInstance().getDefaultWidgetFactory().createWidget(implName, StringUtils.EMPTY_STRING, null, this);
@@ -255,7 +255,7 @@ public class AbstractView implements View, Serializable {
 	 */
 	public void setTitle(String title) {
 		viewTitle = title;
-		//если уже установлена реализация вида, то установим у элемента реализации
+		//РµСЃР»Рё СѓР¶Рµ СѓСЃС‚Р°РЅРѕРІР»РµРЅР° СЂРµР°Р»РёР·Р°С†РёСЏ РІРёРґР°, С‚Рѕ СѓСЃС‚Р°РЅРѕРІРёРј Сѓ СЌР»РµРјРµРЅС‚Р° СЂРµР°Р»РёР·Р°С†РёРё
 		if (window != null)
 			window.setTitle(title);
 	}
@@ -281,10 +281,10 @@ public class AbstractView implements View, Serializable {
 	 */
 	public Object invokeHandler(String handlerName, Object... args) throws Throwable {
 		try {
-			//заполним поля контроллера перед вызовом обработчика
+			//Р·Р°РїРѕР»РЅРёРј РїРѕР»СЏ РєРѕРЅС‚СЂРѕР»Р»РµСЂР° РїРµСЂРµРґ РІС‹Р·РѕРІРѕРј РѕР±СЂР°Р±РѕС‚С‡РёРєР°
 			fillFields();
 			Object result = controller.invokeHandler(handlerName, args);
-			//заполним поля вида, если не была выполнена операция закрытия формы
+			//Р·Р°РїРѕР»РЅРёРј РїРѕР»СЏ РІРёРґР°, РµСЃР»Рё РЅРµ Р±С‹Р»Р° РІС‹РїРѕР»РЅРµРЅР° РѕРїРµСЂР°С†РёСЏ Р·Р°РєСЂС‹С‚РёСЏ С„РѕСЂРјС‹
 			if (controller != null)
 				fillWidgets(false);
 			return result;

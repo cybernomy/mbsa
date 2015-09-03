@@ -23,8 +23,8 @@ import com.mg.merp.warehouse.model.OrderStatus;
 import com.mg.merp.warehouse.model.Warehouse;
 
 /**
- * Класс дополнительной информации для обработки массовых операций (bulk) со спецификациями
- * заказов поставщиков/покупателей
+ * РљР»Р°СЃСЃ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё РјР°СЃСЃРѕРІС‹С… РѕРїРµСЂР°С†РёР№ (bulk) СЃРѕ СЃРїРµС†РёС„РёРєР°С†РёСЏРјРё
+ * Р·Р°РєР°Р·РѕРІ РїРѕСЃС‚Р°РІС‰РёРєРѕРІ/РїРѕРєСѓРїР°С‚РµР»РµР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: CreateOrderSpecificationInfoImpl.java,v 1.1 2007/07/27 12:05:44 safonov Exp $
@@ -45,7 +45,7 @@ public class CreateOrderSpecificationInfoImpl extends
 	private OrderStatus status;
 
 	/**
-	 * Коструктор
+	 * РљРѕСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
 	 * @param catalogId
 	 * @param pricelistId

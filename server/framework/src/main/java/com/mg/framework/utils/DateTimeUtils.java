@@ -29,33 +29,33 @@ import java.util.Locale;
 public class DateTimeUtils {
 	
 	/**
-	 * нулевая дата применяемая в Delphi
+	 * РЅСѓР»РµРІР°СЏ РґР°С‚Р° РїСЂРёРјРµРЅСЏРµРјР°СЏ РІ Delphi
 	 * 
-	 * @return дата 30.12.1899 0:00:00
+	 * @return РґР°С‚Р° 30.12.1899 0:00:00
 	 */
 	public static final Date LEGACY_ZERO_DATE = new Date(-2209176000000L);
 
 	/**
-	 * нулевая дата
+	 * РЅСѓР»РµРІР°СЏ РґР°С‚Р°
 	 * 
-	 * @return дата 1.1.1970 0:00:00 GMT
+	 * @return РґР°С‚Р° 1.1.1970 0:00:00 GMT
 	 */
 	public static final Date ZERO_DATE = new Date(0L);
 
 	/**
-	 * максимальная дата - 01.01.2100
+	 * РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґР°С‚Р° - 01.01.2100
 	 * 
-	 * @return дата 01.01.2100 0:00:00 GMT
+	 * @return РґР°С‚Р° 01.01.2100 0:00:00 GMT
 	 */
 	public static final Date MAX_DATE = new Date(4102430400000L);
 	
 	/**
-	 * количество миллисекунд в сутках
+	 * РєРѕР»РёС‡РµСЃС‚РІРѕ РјРёР»Р»РёСЃРµРєСѓРЅРґ РІ СЃСѓС‚РєР°С…
 	 */
 	public static final long MSECS_IN_DAY = 3600000L * 24L;
 	
 	/**
-	 * количество миллисекунд в часе
+	 * РєРѕР»РёС‡РµСЃС‚РІРѕ РјРёР»Р»РёСЃРµРєСѓРЅРґ РІ С‡Р°СЃРµ
 	 */
 	public static final long MSECS_IN_HOUR = 3600000L;
 	
@@ -643,7 +643,7 @@ public class DateTimeUtils {
 	public static Date convertToTolerance(Date date) {
 		Calendar c = Calendar.getInstance();
 		c.setTime(date);
-		// ограничим мартом
+		// РѕРіСЂР°РЅРёС‡РёРј РјР°СЂС‚РѕРј
 		if (c.get(Calendar.MONTH) > 2) {
 			c.set(Calendar.MONTH, 2);
 		}
@@ -667,90 +667,90 @@ public class DateTimeUtils {
 	}
 	
 	/**
-	 * получить год
+	 * РїРѕР»СѓС‡РёС‚СЊ РіРѕРґ
 	 * 
-	 * @param date	дата
-	 * @return	год
+	 * @param date	РґР°С‚Р°
+	 * @return	РіРѕРґ
 	 */
 	public static int getYear(Date date) {
 		return getField(date, Calendar.YEAR);
 	}
 
 	/**
-	 * получить месяц, первый месяц года имеет порядковый номер 1
+	 * РїРѕР»СѓС‡РёС‚СЊ РјРµСЃСЏС†, РїРµСЂРІС‹Р№ РјРµСЃСЏС† РіРѕРґР° РёРјРµРµС‚ РїРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ 1
 	 * 
-	 * @param date	дата
-	 * @return	месяц
+	 * @param date	РґР°С‚Р°
+	 * @return	РјРµСЃСЏС†
 	 */
 	public static int getMonth(Date date) {
 		return getField(date, Calendar.MONTH) + 1;
 	}
 
 	/**
-	 * получить день месяца, первый день месяца имеет порядковый номер 1
+	 * РїРѕР»СѓС‡РёС‚СЊ РґРµРЅСЊ РјРµСЃСЏС†Р°, РїРµСЂРІС‹Р№ РґРµРЅСЊ РјРµСЃСЏС†Р° РёРјРµРµС‚ РїРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ 1
 	 * 
 	 * @param date
-	 * @return	день месяца
+	 * @return	РґРµРЅСЊ РјРµСЃСЏС†Р°
 	 */
 	public static int getDayOfMonth(Date date) {
 		return getField(date, Calendar.DAY_OF_MONTH);
 	}
 
 	/**
-	 * получить день недели
+	 * РїРѕР»СѓС‡РёС‚СЊ РґРµРЅСЊ РЅРµРґРµР»Рё
 	 * 
 	 * @param date
-	 * @return	день недели
+	 * @return	РґРµРЅСЊ РЅРµРґРµР»Рё
 	 */
 	public static int getDayOfWeek(Date date) {
 		return getField(date, Calendar.DAY_OF_WEEK);
 	}
 
 	/**
-	 * получить день года, первый день года имеет порядковый номер 1
+	 * РїРѕР»СѓС‡РёС‚СЊ РґРµРЅСЊ РіРѕРґР°, РїРµСЂРІС‹Р№ РґРµРЅСЊ РіРѕРґР° РёРјРµРµС‚ РїРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ 1
 	 * 
 	 * @param date
-	 * @return	день года
+	 * @return	РґРµРЅСЊ РіРѕРґР°
 	 */	
 	public static int getDayOfYear(Date date) {
 		return getField(date, Calendar.DAY_OF_YEAR);
 	}
 
 	/**
-	 * получить час
+	 * РїРѕР»СѓС‡РёС‚СЊ С‡Р°СЃ
 	 * 
-	 * @param date	дата
-	 * @return	час
+	 * @param date	РґР°С‚Р°
+	 * @return	С‡Р°СЃ
 	 */
 	public static int getHour(Date date) {
 		return getField(date, Calendar.HOUR_OF_DAY);
 	}
 
 	/**
-	 * получить минута
+	 * РїРѕР»СѓС‡РёС‚СЊ РјРёРЅСѓС‚Р°
 	 * 
-	 * @param date	дата
-	 * @return	минута
+	 * @param date	РґР°С‚Р°
+	 * @return	РјРёРЅСѓС‚Р°
 	 */
 	public static int getMinute(Date date) {
 		return getField(date, Calendar.MINUTE);
 	}
 
 	/**
-	 * получить секунду
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРµРєСѓРЅРґСѓ
 	 * 
-	 * @param date	дата
-	 * @return	секунда
+	 * @param date	РґР°С‚Р°
+	 * @return	СЃРµРєСѓРЅРґР°
 	 */
 	public static int getSecond(Date date) {
 		return getField(date, Calendar.SECOND);
 	}
 
 	/**
-	 * получить миллисекунду
+	 * РїРѕР»СѓС‡РёС‚СЊ РјРёР»Р»РёСЃРµРєСѓРЅРґСѓ
 	 * 
-	 * @param date	дата
-	 * @return	миллисекунда
+	 * @param date	РґР°С‚Р°
+	 * @return	РјРёР»Р»РёСЃРµРєСѓРЅРґР°
 	 */
 	public static int getMillisecond(Date date) {
 		return getField(date, Calendar.MILLISECOND);
@@ -764,171 +764,171 @@ public class DateTimeUtils {
 	}
 	
 	/**
-	 * добавить дней
+	 * РґРѕР±Р°РІРёС‚СЊ РґРЅРµР№
 	 * 
-	 * @param date	дата
-	 * @param numberOfDays	количество дней
-	 * @return	дата
+	 * @param date	РґР°С‚Р°
+	 * @param numberOfDays	РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№
+	 * @return	РґР°С‚Р°
 	 */
 	public static Date incDay(Date date, int numberOfDays) {
 		return incDay(date, numberOfDays, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * добавить дней
+	 * РґРѕР±Р°РІРёС‚СЊ РґРЅРµР№
 	 * 
-	 * @param date	дата
-	 * @param numberOfDays	количество дней
-	 * @param locale	локаль
-	 * @return	дата
+	 * @param date	РґР°С‚Р°
+	 * @param numberOfDays	РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№
+	 * @param locale	Р»РѕРєР°Р»СЊ
+	 * @return	РґР°С‚Р°
 	 */
 	public static Date incDay(Date date, int numberOfDays, Locale locale) {
 		return incField(date, Calendar.DAY_OF_YEAR, numberOfDays, locale);
 	}
 
 	/**
-	 * добавить месяцы
+	 * РґРѕР±Р°РІРёС‚СЊ РјРµСЃСЏС†С‹
 	 * 
-	 * @param date	дата
-	 * @param numberOfMonths	количество месяцев
-	 * @return	дата
+	 * @param date	РґР°С‚Р°
+	 * @param numberOfMonths	РєРѕР»РёС‡РµСЃС‚РІРѕ РјРµСЃСЏС†РµРІ
+	 * @return	РґР°С‚Р°
 	 */
 	public static Date incMonth(Date date, int numberOfMonths) {
 		return incMonth(date, numberOfMonths, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * добавить месяцы
+	 * РґРѕР±Р°РІРёС‚СЊ РјРµСЃСЏС†С‹
 	 * 
-	 * @param date	дата
-	 * @param numberOfMonths	количество месяцев
-	 * @param locale	локаль
-	 * @return	дата
+	 * @param date	РґР°С‚Р°
+	 * @param numberOfMonths	РєРѕР»РёС‡РµСЃС‚РІРѕ РјРµСЃСЏС†РµРІ
+	 * @param locale	Р»РѕРєР°Р»СЊ
+	 * @return	РґР°С‚Р°
 	 */
 	public static Date incMonth(Date date, int numberOfMonths, Locale locale) {
 		return incField(date, Calendar.MONTH, numberOfMonths, locale);
 	}
 
 	/**
-	 * добавить годы
+	 * РґРѕР±Р°РІРёС‚СЊ РіРѕРґС‹
 	 * 
-	 * @param date	дата
-	 * @param numberOfYears	количество лет
-	 * @return	дата
+	 * @param date	РґР°С‚Р°
+	 * @param numberOfYears	РєРѕР»РёС‡РµСЃС‚РІРѕ Р»РµС‚
+	 * @return	РґР°С‚Р°
 	 */
 	public static Date incYear(Date date, int numberOfYears) {
 		return incYear(date, numberOfYears, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * добавить годы
+	 * РґРѕР±Р°РІРёС‚СЊ РіРѕРґС‹
 	 * 
-	 * @param date	дата
-	 * @param numberOfYears	количество лет
-	 * @param locale	локаль
-	 * @return	дата
+	 * @param date	РґР°С‚Р°
+	 * @param numberOfYears	РєРѕР»РёС‡РµСЃС‚РІРѕ Р»РµС‚
+	 * @param locale	Р»РѕРєР°Р»СЊ
+	 * @return	РґР°С‚Р°
 	 */
 	public static Date incYear(Date date, int numberOfYears, Locale locale) {
 		return incField(date, Calendar.YEAR, numberOfYears, locale);
 	}
 
 	/**
-	 * добавить часы
+	 * РґРѕР±Р°РІРёС‚СЊ С‡Р°СЃС‹
 	 * 
-	 * @param date	дата
-	 * @param numberOfHours	количество часов
-	 * @return	дата
+	 * @param date	РґР°С‚Р°
+	 * @param numberOfHours	РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ
+	 * @return	РґР°С‚Р°
 	 */
 	public static Date incHour(Date date, int numberOfHours) {
 		return incHour(date, numberOfHours, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * добавить часы
+	 * РґРѕР±Р°РІРёС‚СЊ С‡Р°СЃС‹
 	 * 
-	 * @param date	дата
-	 * @param numberOfHours	количество часов
-	 * @param locale	локаль
-	 * @return	дата
+	 * @param date	РґР°С‚Р°
+	 * @param numberOfHours	РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ
+	 * @param locale	Р»РѕРєР°Р»СЊ
+	 * @return	РґР°С‚Р°
 	 */
 	public static Date incHour(Date date, int numberOfHours, Locale locale) {
 		return incField(date, Calendar.HOUR_OF_DAY, numberOfHours, locale);
 	}
 
 	/**
-	 * добавить минуты
+	 * РґРѕР±Р°РІРёС‚СЊ РјРёРЅСѓС‚С‹
 	 * 
-	 * @param date	дата
-	 * @param numberOfMinutes	количество минут
-	 * @return	дата
+	 * @param date	РґР°С‚Р°
+	 * @param numberOfMinutes	РєРѕР»РёС‡РµСЃС‚РІРѕ РјРёРЅСѓС‚
+	 * @return	РґР°С‚Р°
 	 */
 	public static Date incMinute(Date date, int numberOfMinutes) {
 		return incMinute(date, numberOfMinutes, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * добавить минуты
+	 * РґРѕР±Р°РІРёС‚СЊ РјРёРЅСѓС‚С‹
 	 * 
-	 * @param date	дата
-	 * @param numberOfMinutes	количество минут
-	 * @param locale	локаль
-	 * @return	дата
+	 * @param date	РґР°С‚Р°
+	 * @param numberOfMinutes	РєРѕР»РёС‡РµСЃС‚РІРѕ РјРёРЅСѓС‚
+	 * @param locale	Р»РѕРєР°Р»СЊ
+	 * @return	РґР°С‚Р°
 	 */
 	public static Date incMinute(Date date, int numberOfMinutes, Locale locale) {
 		return incField(date, Calendar.MINUTE, numberOfMinutes, locale);
 	}
 
 	/**
-	 * добавить секунды
+	 * РґРѕР±Р°РІРёС‚СЊ СЃРµРєСѓРЅРґС‹
 	 * 
-	 * @param date	дата
-	 * @param numberOfSeconds	количество секунд
-	 * @return	дата
+	 * @param date	РґР°С‚Р°
+	 * @param numberOfSeconds	РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРµРєСѓРЅРґ
+	 * @return	РґР°С‚Р°
 	 */
 	public static Date incSecond(Date date, int numberOfSeconds) {
 		return incSecond(date, numberOfSeconds, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * добавить секунды
+	 * РґРѕР±Р°РІРёС‚СЊ СЃРµРєСѓРЅРґС‹
 	 * 
-	 * @param date	дата
-	 * @param numberOfSeconds	количество секунд
-	 * @param locale	локаль
-	 * @return	дата
+	 * @param date	РґР°С‚Р°
+	 * @param numberOfSeconds	РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРµРєСѓРЅРґ
+	 * @param locale	Р»РѕРєР°Р»СЊ
+	 * @return	РґР°С‚Р°
 	 */
 	public static Date incSecond(Date date, int numberOfSeconds, Locale locale) {
 		return incField(date, Calendar.SECOND, numberOfSeconds, locale);
 	}
 
 	/**
-	 * добавить миллисекунды
+	 * РґРѕР±Р°РІРёС‚СЊ РјРёР»Р»РёСЃРµРєСѓРЅРґС‹
 	 * 
-	 * @param date	дата
-	 * @param numberOfMilliseconds	количество миллисекунд
-	 * @return	дата
+	 * @param date	РґР°С‚Р°
+	 * @param numberOfMilliseconds	РєРѕР»РёС‡РµСЃС‚РІРѕ РјРёР»Р»РёСЃРµРєСѓРЅРґ
+	 * @return	РґР°С‚Р°
 	 */
 	public static Date incMillisecond(Date date, int numberOfMilliseconds) {
 		return incMillisecond(date, numberOfMilliseconds, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * добавить миллисекунды
+	 * РґРѕР±Р°РІРёС‚СЊ РјРёР»Р»РёСЃРµРєСѓРЅРґС‹
 	 * 
-	 * @param date	дата
-	 * @param numberOfMilliseconds	количество миллисекунд
-	 * @return	дата
+	 * @param date	РґР°С‚Р°
+	 * @param numberOfMilliseconds	РєРѕР»РёС‡РµСЃС‚РІРѕ РјРёР»Р»РёСЃРµРєСѓРЅРґ
+	 * @return	РґР°С‚Р°
 	 */
 	public static Date incMillisecond(Date date, int numberOfMilliseconds, Locale locale) {
 		return incField(date, Calendar.MILLISECOND, numberOfMilliseconds, locale);
 	}
 
 	/**
-	 * возвращает число дней между двумя датами
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ С‡РёСЃР»Рѕ РґРЅРµР№ РјРµР¶РґСѓ РґРІСѓРјСЏ РґР°С‚Р°РјРё
 	 * 
-	 * @param now	1я дата
-	 * @param then	2я дата
-	 * @return	количество дней
+	 * @param now	1СЏ РґР°С‚Р°
+	 * @param then	2СЏ РґР°С‚Р°
+	 * @return	РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№
 	 */
 	public static long getDaysBetween(Date now, Date then) {
 		long thenTime = then.getTime();
@@ -940,20 +940,20 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * Определяет начало полугодия
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РЅР°С‡Р°Р»Рѕ РїРѕР»СѓРіРѕРґРёСЏ
 	 * 
 	 * @param date
-	 * @return дата начала полугодия
+	 * @return РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРѕР»СѓРіРѕРґРёСЏ
 	 */
 	public static Date beginOfTheHalfYear(Date date) {
 		return beginOfTheHalfYear(date, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * Определяет начало полугодия
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РЅР°С‡Р°Р»Рѕ РїРѕР»СѓРіРѕРґРёСЏ
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return дата начала полугодия
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРѕР»СѓРіРѕРґРёСЏ
 	 */
 	public static Date beginOfTheHalfYear(Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
@@ -968,44 +968,44 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * Определяет начало квартала
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РЅР°С‡Р°Р»Рѕ РєРІР°СЂС‚Р°Р»Р°
 	 * 
 	 * @param date
-	 * @return дата начала квартала
+	 * @return РґР°С‚Р° РЅР°С‡Р°Р»Р° РєРІР°СЂС‚Р°Р»Р°
 	 */
 	public static Date beginOfTheQuarter(Date date) {
 		return beginOfTheQuarter(date, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * Определяет начало квартала
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РЅР°С‡Р°Р»Рѕ РєРІР°СЂС‚Р°Р»Р°
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return дата начала квартала
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РґР°С‚Р° РЅР°С‡Р°Р»Р° РєРІР°СЂС‚Р°Р»Р°
 	 */
 	public static Date beginOfTheQuarter(Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
 		calendar.setTime(date);
 		int quarter = ((calendar.get(Calendar.MONTH)) / 3) + 1;
-		calendar.set(calendar.get(Calendar.YEAR), quarter * 3 - 3, 1, 0, 0, 0);//начало квартала
+		calendar.set(calendar.get(Calendar.YEAR), quarter * 3 - 3, 1, 0, 0, 0);//РЅР°С‡Р°Р»Рѕ РєРІР°СЂС‚Р°Р»Р°
 		calendar.set(Calendar.MILLISECOND, 0);
 		return calendar.getTime();
 	}
 
 	/**
-	 * Определяет конец месяца 
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РєРѕРЅРµС† РјРµСЃСЏС†Р° 
 	 * @param date
-	 * @return дата установленная в конец месяца (последнее число месяца XX.XX.XX 23:59:59)
+	 * @return РґР°С‚Р° СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅР°СЏ РІ РєРѕРЅРµС† РјРµСЃСЏС†Р° (РїРѕСЃР»РµРґРЅРµРµ С‡РёСЃР»Рѕ РјРµСЃСЏС†Р° XX.XX.XX 23:59:59)
 	 */
 	public static Date endOfTheMonth(Date date) {
 		return endOfTheMonth(date, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * Определяет конец месяца 
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РєРѕРЅРµС† РјРµСЃСЏС†Р° 
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return дата установленная в конец месяца (последнее число месяца XX.XX.XX 23:59:59)
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РґР°С‚Р° СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅР°СЏ РІ РєРѕРЅРµС† РјРµСЃСЏС†Р° (РїРѕСЃР»РµРґРЅРµРµ С‡РёСЃР»Рѕ РјРµСЃСЏС†Р° XX.XX.XX 23:59:59)
 	 */
 	public static Date endOfTheMonth(Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
@@ -1016,19 +1016,19 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * Определяет конец недели 
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РєРѕРЅРµС† РЅРµРґРµР»Рё 
 	 * @param date
-	 * @return дата установленная в конец недели (воскресение 23:59:59)
+	 * @return РґР°С‚Р° СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅР°СЏ РІ РєРѕРЅРµС† РЅРµРґРµР»Рё (РІРѕСЃРєСЂРµСЃРµРЅРёРµ 23:59:59)
 	 */
 	public static Date endOfTheWeek(Date date) {
 		return endOfTheWeek(date, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * Определяет конец недели 
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РєРѕРЅРµС† РЅРµРґРµР»Рё 
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return дата установленная в конец недели (воскресение 23:59:59)
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РґР°С‚Р° СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅР°СЏ РІ РєРѕРЅРµС† РЅРµРґРµР»Рё (РІРѕСЃРєСЂРµСЃРµРЅРёРµ 23:59:59)
 	 */
 	public static Date endOfTheWeek(Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
@@ -1043,42 +1043,42 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * Определяет конец года
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РєРѕРЅРµС† РіРѕРґР°
 	 * @param date
-	 * @return конец года (31.12.XX 23:59:59)
+	 * @return РєРѕРЅРµС† РіРѕРґР° (31.12.XX 23:59:59)
 	 */
 	public static Date endOfTheYear(Date date) {
 		return endOfTheYear(date, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * Определяет конец года
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РєРѕРЅРµС† РіРѕРґР°
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return конец года (31.12.XX 23:59:59)
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РєРѕРЅРµС† РіРѕРґР° (31.12.XX 23:59:59)
 	 */
 	public static Date endOfTheYear(Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
 		calendar.setTime(date);
-		calendar.set(calendar.get(Calendar.YEAR), Calendar.DECEMBER, 31, 23, 59, 59); //конец года
+		calendar.set(calendar.get(Calendar.YEAR), Calendar.DECEMBER, 31, 23, 59, 59); //РєРѕРЅРµС† РіРѕРґР°
 		calendar.set(Calendar.MILLISECOND, 999);
 		return calendar.getTime();
 	}
 
 	/**
-	 * Определяет полугодие
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РїРѕР»СѓРіРѕРґРёРµ
 	 * @param date
-	 * @return полугодие (первое или второе)
+	 * @return РїРѕР»СѓРіРѕРґРёРµ (РїРµСЂРІРѕРµ РёР»Рё РІС‚РѕСЂРѕРµ)
 	 */
 	public static int halfYearOf(Date date) {
 		return halfYearOf(date, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * Определяет полугодие
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РїРѕР»СѓРіРѕРґРёРµ
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return полугодие (первое или второе)
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РїРѕР»СѓРіРѕРґРёРµ (РїРµСЂРІРѕРµ РёР»Рё РІС‚РѕСЂРѕРµ)
 	 */
 	public static int halfYearOf(Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
@@ -1087,19 +1087,19 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * Определяет квартал
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РєРІР°СЂС‚Р°Р»
 	 * @param date
-	 * @return квартал
+	 * @return РєРІР°СЂС‚Р°Р»
 	 */
 	public static int qurterOf(Date date) {
 		return qurterOf(date, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * Определяет квартал
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РєРІР°СЂС‚Р°Р»
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return квартал
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РєРІР°СЂС‚Р°Р»
 	 */
 	public static int qurterOf(Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
@@ -1108,42 +1108,42 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * Определяет дату начала года 
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РґР°С‚Сѓ РЅР°С‡Р°Р»Р° РіРѕРґР° 
 	 * @param date 
-	 * @return начало года
+	 * @return РЅР°С‡Р°Р»Рѕ РіРѕРґР°
 	 */
 	public static Date startOfTheYear(Date date) {
 		return startOfTheYear(date, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * Определяет дату начала года 
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РґР°С‚Сѓ РЅР°С‡Р°Р»Р° РіРѕРґР° 
 	 * @param date 
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return начало года
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РЅР°С‡Р°Р»Рѕ РіРѕРґР°
 	 */
 	public static Date startOfTheYear(Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
 		calendar.setTime(date);
-		calendar.set(calendar.get(Calendar.YEAR), Calendar.JANUARY, 1, 0, 0, 0);//начало года
+		calendar.set(calendar.get(Calendar.YEAR), Calendar.JANUARY, 1, 0, 0, 0);//РЅР°С‡Р°Р»Рѕ РіРѕРґР°
 		calendar.set(Calendar.MILLISECOND, 0);
 		return calendar.getTime();
 	}
 
 	/**
-	 * Определяет номер недели года
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РЅРѕРјРµСЂ РЅРµРґРµР»Рё РіРѕРґР°
 	 * @param date
-	 * @return номер недели года
+	 * @return РЅРѕРјРµСЂ РЅРµРґРµР»Рё РіРѕРґР°
 	 */
 	public static int weekOfYear(java.util.Date date) {
 		return weekOfYear(date, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * Определяет номер недели года
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РЅРѕРјРµСЂ РЅРµРґРµР»Рё РіРѕРґР°
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return номер недели года
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РЅРѕРјРµСЂ РЅРµРґРµР»Рё РіРѕРґР°
 	 */
 	public static int weekOfYear(java.util.Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
@@ -1152,14 +1152,14 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * определяет имеет ли дата граничные значения
+	 * РѕРїСЂРµРґРµР»СЏРµС‚ РёРјРµРµС‚ Р»Рё РґР°С‚Р° РіСЂР°РЅРёС‡РЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ
 	 * 
 	 * @see #LEGACY_ZERO_DATE
 	 * @see #MAX_DATE
 	 * @see #ZERO_DATE
 	 * 
-	 * @param value	дата, не может быть <code>null</code>
-	 * @return	<code>true</code> если имеет граничные значения
+	 * @param value	РґР°С‚Р°, РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>
+	 * @return	<code>true</code> РµСЃР»Рё РёРјРµРµС‚ РіСЂР°РЅРёС‡РЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ
 	 */
 	public static boolean isBoundDateValue(Date value) {
 		return value.compareTo(DateTimeUtils.LEGACY_ZERO_DATE) <= 0
@@ -1168,18 +1168,18 @@ public class DateTimeUtils {
 	}
 	
 	/**
-	 * Получить максимальную дату из списка дат
-	 * @param dates - список дат
-	 * @return максимальная дата
+	 * РџРѕР»СѓС‡РёС‚СЊ РјР°РєСЃРёРјР°Р»СЊРЅСѓСЋ РґР°С‚Сѓ РёР· СЃРїРёСЃРєР° РґР°С‚
+	 * @param dates - СЃРїРёСЃРѕРє РґР°С‚
+	 * @return РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґР°С‚Р°
 	 */
 	public static Date getMaxDate(Date ... dates) {
 		return getMinOrMaxDate(true, dates);
 	}
 	
 	/**
-	 * Получить минимальную дату из списка дат
-	 * @param dates - список дат
-	 * @return минимальная дата
+	 * РџРѕР»СѓС‡РёС‚СЊ РјРёРЅРёРјР°Р»СЊРЅСѓСЋ РґР°С‚Сѓ РёР· СЃРїРёСЃРєР° РґР°С‚
+	 * @param dates - СЃРїРёСЃРѕРє РґР°С‚
+	 * @return РјРёРЅРёРјР°Р»СЊРЅР°СЏ РґР°С‚Р°
 	 */
 	public static Date getMinDate(Date ... dates) {
 		return getMinOrMaxDate(false, dates);
@@ -1208,11 +1208,11 @@ public class DateTimeUtils {
 	}
 	
 	/**
-	 * Выполнить проверку даты <code>date</code> на принадлежность интервалу c <code>dateFrom<code> по <code>dateTill</code>
-	 * @param date - проверяемая дата
-	 * @param dateFrom - дата с
-	 * @param dateTill - дата по
-	 * @return true если дата находится в интервале включая границы;<br> false во всех остальных случаях
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РїСЂРѕРІРµСЂРєСѓ РґР°С‚С‹ <code>date</code> РЅР° РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚СЊ РёРЅС‚РµСЂРІР°Р»Сѓ c <code>dateFrom<code> РїРѕ <code>dateTill</code>
+	 * @param date - РїСЂРѕРІРµСЂСЏРµРјР°СЏ РґР°С‚Р°
+	 * @param dateFrom - РґР°С‚Р° СЃ
+	 * @param dateTill - РґР°С‚Р° РїРѕ
+	 * @return true РµСЃР»Рё РґР°С‚Р° РЅР°С…РѕРґРёС‚СЃСЏ РІ РёРЅС‚РµСЂРІР°Р»Рµ РІРєР»СЋС‡Р°СЏ РіСЂР°РЅРёС†С‹;<br> false РІРѕ РІСЃРµС… РѕСЃС‚Р°Р»СЊРЅС‹С… СЃР»СѓС‡Р°СЏС…
 	 */
 	public static boolean isDateBetweenNulable(Date date, Date dateFrom, Date dateTill) {
 		if(date == null || dateFrom == null || dateTill == null)
