@@ -24,7 +24,7 @@ import com.mg.merp.crm.DeliveryKindServiceLocal;
 import com.mg.merp.crm.model.DeliveryKind;
 
 /**
- * Бизнес-компонент "Виды доставки" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РёРґС‹ РґРѕСЃС‚Р°РІРєРё" 
  * 
  * @author leonova
  * @version $Id: DeliveryKindServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 
 /**
- * Контроллер условий отбора для бизнес-компонента "Константы"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° РґР»СЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅСЃС‚Р°РЅС‚С‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ConstantRest.java,v 1.1 2007/08/21 12:56:51 alikaev Exp $

@@ -26,7 +26,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.warehouse.support.Messages;
 
 /**
- * Контроллер диалога ввода серийных номеров
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° РІРІРѕРґР° СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
  * 
  * @author Artem V. Sharapov
  * @version $Id: InputSerialNumberDlg.java,v 1.1 2008/05/30 13:03:56 sharapov Exp $
@@ -136,8 +136,8 @@ public class InputSerialNumberDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Обработчик кнопки "Добавить"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р”РѕР±Р°РІРёС‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionAddSerialNumber(WidgetEvent event) {
 		if(!StringUtils.stringNullOrEmpty(newSerialNumber)) {
@@ -149,8 +149,8 @@ public class InputSerialNumberDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Обработчик кнопки "Удалить"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РЈРґР°Р»РёС‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRemoveSerialNumber(WidgetEvent event) {
 		if(selectedItems != null && selectedItems.length > 0) {
@@ -172,19 +172,19 @@ public class InputSerialNumberDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Обновить таблицу серийных номеров
+	 * РћР±РЅРѕРІРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
 	 */
 	private void refreshTable() {
 		((SerialNumberTableModel) serialNumberTable.getModel()).fireModelChange();
 	}
 
 	/**
-	 * Запустить диалог ввода серийных номеров
-	 * @param necessarySerialNumbersQuantity - кол-во номеров для ввода
-	 * @param catalogCode - код позиции каталога
-	 * @param catalogName - наименование позиции каталога
-	 * @param numberLot - номер партии
-	 * @param vendorLot - номер партии поставщика
+	 * Р—Р°РїСѓСЃС‚РёС‚СЊ РґРёР°Р»РѕРі РІРІРѕРґР° СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
+	 * @param necessarySerialNumbersQuantity - РєРѕР»-РІРѕ РЅРѕРјРµСЂРѕРІ РґР»СЏ РІРІРѕРґР°
+	 * @param catalogCode - РєРѕРґ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР°
+	 * @param catalogName - РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР°
+	 * @param numberLot - РЅРѕРјРµСЂ РїР°СЂС‚РёРё
+	 * @param vendorLot - РЅРѕРјРµСЂ РїР°СЂС‚РёРё РїРѕСЃС‚Р°РІС‰РёРєР°
 	 */
 	public void execute(Integer necessarySerialNumbersQuantity, String catalogCode, String catalogName, String numberLot, String vendorLot) {
 		this.necessarySerialNumbersQuantity = necessarySerialNumbersQuantity;
@@ -196,8 +196,8 @@ public class InputSerialNumberDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Получить список серийных номеров
-	 * @return список серийных номеров
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
+	 * @return СЃРїРёСЃРѕРє СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
 	 */
 	public List<String> getSerialNumbers() {
 		return serialNumberList;

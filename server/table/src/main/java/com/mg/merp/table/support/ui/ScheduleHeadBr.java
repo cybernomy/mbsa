@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.table.model.ScheduleHead;
 
 /**
- * Браузер графиков работ в табельном учете
+ * Р‘СЂР°СѓР·РµСЂ РіСЂР°С„РёРєРѕРІ СЂР°Р±РѕС‚ РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ
  * 
  * @author leonova
  * @version $Id: ScheduleHeadBr.java,v 1.1 2006/08/29 12:48:57 leonova Exp $ 

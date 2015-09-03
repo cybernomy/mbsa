@@ -19,7 +19,7 @@ import com.mg.merp.manufacture.support.Messages;
 import com.mg.merp.reference.model.Catalog;
 
 /**
- * ИС генерируется если не найдена нормативная цена для позоции каталога
+ * РРЎ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅР° РЅРѕСЂРјР°С‚РёРІРЅР°СЏ С†РµРЅР° РґР»СЏ РїРѕР·РѕС†РёРё РєР°С‚Р°Р»РѕРіР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: StandartCostNotFoundException.java,v 1.1 2007/07/30 10:28:17 safonov Exp $

@@ -21,7 +21,7 @@ import com.mg.framework.utils.DateTimeUtils;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Событие аудита системы
+ * РЎРѕР±С‹С‚РёРµ Р°СѓРґРёС‚Р° СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: SystemAuditEvent.java,v 1.2 2008/05/29 08:35:13 safonov Exp $

@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.widget;
 import com.mg.framework.api.ui.FieldEditor;
 
 /**
- * Элемент "Флаг"
+ * Р­Р»РµРјРµРЅС‚ "Р¤Р»Р°Рі"
  * 
  * @author Oleg V. Safonov
  * @version $Id: CheckBox.java,v 1.2 2006/11/21 15:34:06 safonov Exp $

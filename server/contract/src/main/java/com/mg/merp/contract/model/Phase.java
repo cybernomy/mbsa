@@ -17,7 +17,7 @@ package com.mg.merp.contract.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Этапы контракта"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р­С‚Р°РїС‹ РєРѕРЅС‚СЂР°РєС‚Р°"
  * 
  * @author Artem V. Sharapov 
  * @version $Id: Phase.java,v 1.8 2007/11/22 15:55:11 sharapov Exp $

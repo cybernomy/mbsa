@@ -23,7 +23,7 @@ import com.mg.merp.manufacture.ScrapMaterialModelServiceLocal;
 import com.mg.merp.manufacture.model.ScrapDocumentModel;
 
 /**
- * Бизнес-компонент "Образцы актов на списание потарь материалов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚Р°СЂСЊ РјР°С‚РµСЂРёР°Р»РѕРІ" 
  * 
  * @author leonova
  * @version $Id: ScrapMaterialModelServiceBean.java,v 1.3 2006/09/12 11:08:13 leonova Exp $

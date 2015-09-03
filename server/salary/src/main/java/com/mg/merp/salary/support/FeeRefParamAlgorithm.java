@@ -15,10 +15,10 @@
 package com.mg.merp.salary.support;
 
 /**
- * Базовый класс расчета параметров н/у. Класс алгоритма должен
- * реализовывать следующий метод <code>protected Double internalExecute() throws Exception</code>.
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ СЂР°СЃС‡РµС‚Р° РїР°СЂР°РјРµС‚СЂРѕРІ РЅ/Сѓ. РљР»Р°СЃСЃ Р°Р»РіРѕСЂРёС‚РјР° РґРѕР»Р¶РµРЅ
+ * СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёР№ РјРµС‚РѕРґ <code>protected Double internalExecute() throws Exception</code>.
  * 
- * <p>Пример данного метода:
+ * <p>РџСЂРёРјРµСЂ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР°:
  * 	<pre>
  * 		protected Double internalExecute() throws Exception {
  * 			return 100.0;

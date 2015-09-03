@@ -24,7 +24,7 @@ import com.mg.merp.account.InvProductionServiceLocal;
 import com.mg.merp.account.model.InvProduction;
 
 /**
- * Бизнес-компонент "Продукция" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРѕРґСѓРєС†РёСЏ" 
  * 
  * @author leonova
  * @version $Id: InvProductionServiceBean.java,v 1.4 2006/10/11 06:15:42 leonova Exp $

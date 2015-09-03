@@ -23,7 +23,7 @@ import com.mg.merp.wb.core.ui.plugin.BusinessObjectPlugin;
 import com.mg.merp.wb.entitymapper.Activator;
 
 /**
- * Форма редактирования маппинга преобразования классов
+ * Р¤РѕСЂРјР° СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РјР°РїРїРёРЅРіР° РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РєР»Р°СЃСЃРѕРІ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: EntityMapperEditorForm.java,v 1.2 2007/11/04 14:34:24 safonov Exp $

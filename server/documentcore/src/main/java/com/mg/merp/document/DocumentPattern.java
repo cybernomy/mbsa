@@ -20,7 +20,7 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.document.model.DocHeadModel;
 
 /**
- * Бизнес-компонент "Образец документа"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·РµС† РґРѕРєСѓРјРµРЅС‚Р°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentPattern.java,v 1.1 2006/09/20 10:40:51 safonov Exp $

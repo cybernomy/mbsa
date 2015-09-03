@@ -20,7 +20,7 @@ import com.mg.framework.service.jboss.ApplicationServerServiceMBean;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Локатор сервиса управления прикладными функциями сервера приложения
+ * Р›РѕРєР°С‚РѕСЂ СЃРµСЂРІРёСЃР° СѓРїСЂР°РІР»РµРЅРёСЏ РїСЂРёРєР»Р°РґРЅС‹РјРё С„СѓРЅРєС†РёСЏРјРё СЃРµСЂРІРµСЂР° РїСЂРёР»РѕР¶РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ApplicationServerLocator.java,v 1.1 2008/07/14 14:11:27 safonov Exp $
@@ -29,10 +29,10 @@ public class ApplicationServerLocator {
     private static volatile ApplicationServer instance = null;
     
     /**
-     * получить сервис
+     * РїРѕР»СѓС‡РёС‚СЊ СЃРµСЂРІРёСЃ
      * 
-     * @return	сервис
-     * @throws ApplicationException	в случае любой ошибки
+     * @return	СЃРµСЂРІРёСЃ
+     * @throws ApplicationException	РІ СЃР»СѓС‡Р°Рµ Р»СЋР±РѕР№ РѕС€РёР±РєРё
      */
     public static ApplicationServer locate() throws ApplicationException {
         if (instance == null)

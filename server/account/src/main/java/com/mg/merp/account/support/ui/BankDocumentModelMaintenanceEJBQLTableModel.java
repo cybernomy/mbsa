@@ -22,7 +22,7 @@ import com.mg.merp.account.model.BankDocumentModel;
 import com.mg.merp.document.generic.ui.DocModelMaintenanceEJBQLTableModel;
 
 /**
- * Вспомогательный класс для отображения формы списка образцов банковских документов
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: BankDocumentModelMaintenanceEJBQLTableModel.java,v 1.1 2006/09/12 11:28:01 leonova Exp $ 

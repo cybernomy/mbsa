@@ -23,7 +23,7 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.merp.warehouse.WarehouseTypeServiceLocal;
 
 /**
- * SearchHelp бизнес-компонента "Тип склада"
+ * SearchHelp Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РўРёРї СЃРєР»Р°РґР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: WarehouseTypeSearchHelp.java,v 1.1 2007/09/17 12:55:25 alikaev Exp $

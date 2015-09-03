@@ -45,7 +45,7 @@ import com.mg.merp.reference.support.Messages;
 
 
 /**
- * Контроллер формы поддержки партнеров
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РїР°СЂС‚РЅРµСЂРѕРІ
  * 
  * @author leonova
  * @version $Id: PartnerMt.java,v 1.12 2008/05/21 10:55:56 alikaev Exp $
@@ -356,7 +356,7 @@ public class PartnerMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * действие на  событие обновить почтовый адрес
+	 * РґРµР№СЃС‚РІРёРµ РЅР°  СЃРѕР±С‹С‚РёРµ РѕР±РЅРѕРІРёС‚СЊ РїРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ
 	 * @param event
 	 */
 	public void onActionBuildAddress(WidgetEvent event) {
@@ -365,7 +365,7 @@ public class PartnerMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * действие на  событие обновить юридический адрес
+	 * РґРµР№СЃС‚РІРёРµ РЅР°  СЃРѕР±С‹С‚РёРµ РѕР±РЅРѕРІРёС‚СЊ СЋСЂРёРґРёС‡РµСЃРєРёР№ Р°РґСЂРµСЃ
 	 * @param event
 	 */
 	public void onActionBuildAddressLegal(WidgetEvent event) {

@@ -21,7 +21,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocType;
 
 /**
- * Ñòğóêòóğà äàííûõ äëÿ ñîçäàíèÿ ôàêòè÷åñêîãî ïóíêòà êîíòğàêòà
+ * Ğ¡Ñ‚Ñ€ÑƒĞºÑ‚ÑƒÑ€Ğ° Ğ´Ğ°Ğ½Ğ½Ñ‹Ñ… Ğ´Ğ»Ñ ÑĞ¾Ğ·Ğ´Ğ°Ğ½Ğ¸Ñ Ñ„Ğ°ĞºÑ‚Ğ¸Ñ‡ĞµÑĞºĞ¾Ğ³Ğ¾ Ğ¿ÑƒĞ½ĞºÑ‚Ğ° ĞºĞ¾Ğ½Ñ‚Ñ€Ğ°ĞºÑ‚Ğ°
  * 
  * @author Artem V. Sharapov
  * @version $Id: FactItemData.java,v 1.1 2007/03/07 12:31:28 sharapov Exp $
@@ -36,8 +36,8 @@ public class FactItemData {
 	private ItemKind itemKind;
 	private FactItemContractorSource contractorSource;
 	private boolean isCreateSpec;
-	private com.mg.merp.document.model.DocType ñontractType;
-	private String ñontractNumber;
+	private com.mg.merp.document.model.DocType ÑontractType;
+	private String ÑontractNumber;
 	private Date contractDate;
 	private DocHead contract;
 	
@@ -46,15 +46,15 @@ public class FactItemData {
 	public FactItemData() {
 	}
 
-	public FactItemData(DocHead docHead, Date processDate, BigDecimal performedSum, ItemKind itemKind, FactItemContractorSource contractorSource, boolean isCreateSpec, DocType ñontractType, String ñontractNumber, Date contractDate, DocHead contract) {
+	public FactItemData(DocHead docHead, Date processDate, BigDecimal performedSum, ItemKind itemKind, FactItemContractorSource contractorSource, boolean isCreateSpec, DocType ÑontractType, String ÑontractNumber, Date contractDate, DocHead contract) {
 		this.docHead = docHead;
 		this.processDate = processDate;
 		this.performedSum = performedSum;
 		this.itemKind = itemKind;
 		this.contractorSource = contractorSource;
 		this.isCreateSpec = isCreateSpec;
-		this.ñontractType = ñontractType;
-		this.ñontractNumber = ñontractNumber;
+		this.ÑontractType = ÑontractType;
+		this.ÑontractNumber = ÑontractNumber;
 		this.contractDate = contractDate;
 		this.contract = contract;
 	}
@@ -160,31 +160,31 @@ public class FactItemData {
 	}
 
 	/**
-	 * @return the ñontractNumber
+	 * @return the ÑontractNumber
 	 */
-	public String getñontractNumber() {
-		return ñontractNumber;
+	public String getÑontractNumber() {
+		return ÑontractNumber;
 	}
 
 	/**
-	 * @param ñontractNumber the ñontractNumber to set
+	 * @param ÑontractNumber the ÑontractNumber to set
 	 */
-	public void setñontractNumber(String ñontractNumber) {
-		this.ñontractNumber = ñontractNumber;
+	public void setÑontractNumber(String ÑontractNumber) {
+		this.ÑontractNumber = ÑontractNumber;
 	}
 
 	/**
-	 * @return the ñontractType
+	 * @return the ÑontractType
 	 */
-	public com.mg.merp.document.model.DocType getñontractType() {
-		return ñontractType;
+	public com.mg.merp.document.model.DocType getÑontractType() {
+		return ÑontractType;
 	}
 
 	/**
-	 * @param ñontractType the ñontractType to set
+	 * @param ÑontractType the ÑontractType to set
 	 */
-	public void setñontractType(com.mg.merp.document.model.DocType ñontractType) {
-		this.ñontractType = ñontractType;
+	public void setÑontractType(com.mg.merp.document.model.DocType ÑontractType) {
+		this.ÑontractType = ÑontractType;
 	}
 
 	/**

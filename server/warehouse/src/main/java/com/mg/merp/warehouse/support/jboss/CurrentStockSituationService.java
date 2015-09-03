@@ -29,7 +29,7 @@ import com.mg.merp.reference.model.OrgUnit;
 import com.mg.merp.warehouse.support.CurrentStockSituationImpl;
 
 /**
- * Реализация сервиса рассчёта количества на складах для JBoss
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° СЂР°СЃСЃС‡С‘С‚Р° РєРѕР»РёС‡РµСЃС‚РІР° РЅР° СЃРєР»Р°РґР°С… РґР»СЏ JBoss
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: CurrentStockSituationService.java,v 1.4 2008/09/09 12:29:01 sharapov Exp $

@@ -17,7 +17,7 @@ package com.mg.merp.mfreference.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Конфигурация модуля <Производство>"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ>"
  * 
  * @author hbm2java
  * @author Artem V. Sharapov

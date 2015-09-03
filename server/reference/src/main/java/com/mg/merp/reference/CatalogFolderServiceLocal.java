@@ -19,7 +19,7 @@ import java.util.List;
 import com.mg.merp.reference.model.CatalogFolder;
 
 /**
- * Сервис бизнес-компонента "Папки каталога"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџР°РїРєРё РєР°С‚Р°Р»РѕРіР°"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -28,11 +28,11 @@ import com.mg.merp.reference.model.CatalogFolder;
 public interface CatalogFolderServiceLocal extends com.mg.framework.api.DataBusinessObjectService<CatalogFolder, Integer> {
 	
 	/**
-	 * Получть список вложенных папок каталога для заданной папки каталога
-	 * @param catalogFolder - папка каталога
-	 * @param isRecurseSearch - признак "рекурсивный поиск вложенных папок каталога"
-	 * @param isIncludeRootFolder - признак "включать указанную папку каталога в список"
-	 * @return список вложенных папок каталога для заданной папки каталога
+	 * РџРѕР»СѓС‡С‚СЊ СЃРїРёСЃРѕРє РІР»РѕР¶РµРЅРЅС‹С… РїР°РїРѕРє РєР°С‚Р°Р»РѕРіР° РґР»СЏ Р·Р°РґР°РЅРЅРѕР№ РїР°РїРєРё РєР°С‚Р°Р»РѕРіР°
+	 * @param catalogFolder - РїР°РїРєР° РєР°С‚Р°Р»РѕРіР°
+	 * @param isRecurseSearch - РїСЂРёР·РЅР°Рє "СЂРµРєСѓСЂСЃРёРІРЅС‹Р№ РїРѕРёСЃРє РІР»РѕР¶РµРЅРЅС‹С… РїР°РїРѕРє РєР°С‚Р°Р»РѕРіР°"
+	 * @param isIncludeRootFolder - РїСЂРёР·РЅР°Рє "РІРєР»СЋС‡Р°С‚СЊ СѓРєР°Р·Р°РЅРЅСѓСЋ РїР°РїРєСѓ РєР°С‚Р°Р»РѕРіР° РІ СЃРїРёСЃРѕРє"
+	 * @return СЃРїРёСЃРѕРє РІР»РѕР¶РµРЅРЅС‹С… РїР°РїРѕРє РєР°С‚Р°Р»РѕРіР° РґР»СЏ Р·Р°РґР°РЅРЅРѕР№ РїР°РїРєРё РєР°С‚Р°Р»РѕРіР°
 	 */
 	List<CatalogFolder> getNestedCatalogFolders(CatalogFolder catalogFolder, boolean isRecurseSearch, boolean isIncludeRootFolder);
 	

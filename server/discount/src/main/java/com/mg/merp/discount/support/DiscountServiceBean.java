@@ -24,7 +24,7 @@ import com.mg.merp.discount.DiscountServiceLocal;
 import com.mg.merp.discount.model.Discount;
 
 /**
- * Бизнес-компонент "Скидки / наценки" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРєРёРґРєРё / РЅР°С†РµРЅРєРё" 
  * 
  * @author leonova
  * @version $Id: DiscountServiceBean.java,v 1.4 2007/09/07 12:02:18 safonov Exp $

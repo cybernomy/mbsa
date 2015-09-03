@@ -17,7 +17,7 @@ package com.mg.merp.account.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы поддержки спецификации внутренних накладных
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёРё РІРЅСѓС‚СЂРµРЅРЅРёС… РЅР°РєР»Р°РґРЅС‹С…
  * 
  * @author leonova
  * @version $Id: InternalInvoiceSpecMt.java,v 1.3 2006/08/22 06:57:43 leonova Exp $

@@ -19,7 +19,7 @@ import java.util.Calendar;
 import java.util.Locale;
 
 /**
- * Утилита обработки дат
+ * РЈС‚РёР»РёС‚Р° РѕР±СЂР°Р±РѕС‚РєРё РґР°С‚
  * 
  * @author Artem V. Sharapov
  * @version $Id: DateTimeUtils.java,v 1.2 2007/07/30 10:24:41 safonov Exp $
@@ -29,29 +29,29 @@ import java.util.Locale;
 public class DateTimeUtils {
 
 	/**
-	 * Определяет дату начала года 
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РґР°С‚Сѓ РЅР°С‡Р°Р»Р° РіРѕРґР° 
 	 * @param date 
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return начало года
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РЅР°С‡Р°Р»Рѕ РіРѕРґР°
 	 */
 	public static java.util.Date startOfTheYear(java.util.Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
 		calendar.setTime(date);
-		calendar.set(Calendar.DATE, 1);//начало года
+		calendar.set(Calendar.DATE, 1);//РЅР°С‡Р°Р»Рѕ РіРѕРґР°
 		calendar.set(Calendar.MONTH, Calendar.JANUARY);
 		return calendar.getTime();
 	}
 
 	/**
-	 * Определяет конец года
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РєРѕРЅРµС† РіРѕРґР°
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return конец года (31.12.XX 23:59:59)
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РєРѕРЅРµС† РіРѕРґР° (31.12.XX 23:59:59)
 	 */
 	public static java.util.Date endOfTheYear(java.util.Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
 		calendar.setTime(date);
-		calendar.set(Calendar.MONTH, Calendar.DECEMBER);//конец года
+		calendar.set(Calendar.MONTH, Calendar.DECEMBER);//РєРѕРЅРµС† РіРѕРґР°
 		calendar.set(Calendar.DATE, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
 
 		calendar.set(Calendar.HOUR_OF_DAY, 23);
@@ -61,10 +61,10 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * Определяет конец месяца 
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РєРѕРЅРµС† РјРµСЃСЏС†Р° 
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return дата установленная в конец месяца (последнее число месяца XX.XX.XX 23:59:59)
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РґР°С‚Р° СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅР°СЏ РІ РєРѕРЅРµС† РјРµСЃСЏС†Р° (РїРѕСЃР»РµРґРЅРµРµ С‡РёСЃР»Рѕ РјРµСЃСЏС†Р° XX.XX.XX 23:59:59)
 	 */
 	public static java.util.Date endOfTheMonth(java.util.Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
@@ -78,10 +78,10 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * Определяет конец недели 
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РєРѕРЅРµС† РЅРµРґРµР»Рё 
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return дата установленная в конец недели (воскресение 23:59:59)
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РґР°С‚Р° СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅР°СЏ РІ РєРѕРЅРµС† РЅРµРґРµР»Рё (РІРѕСЃРєСЂРµСЃРµРЅРёРµ 23:59:59)
 	 */
 	public static java.util.Date endOfTheWeek(java.util.Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
@@ -95,10 +95,10 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * Определяет начало недели
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РЅР°С‡Р°Р»Рѕ РЅРµРґРµР»Рё
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return дата установленная в начало недели (понедельник)
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РґР°С‚Р° СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅР°СЏ РІ РЅР°С‡Р°Р»Рѕ РЅРµРґРµР»Рё (РїРѕРЅРµРґРµР»СЊРЅРёРє)
 	 */
 	public static java.util.Date startOfTheWeek(java.util.Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
@@ -108,11 +108,11 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * Увеличивает неделю на число заданное параметром amount
+	 * РЈРІРµР»РёС‡РёРІР°РµС‚ РЅРµРґРµР»СЋ РЅР° С‡РёСЃР»Рѕ Р·Р°РґР°РЅРЅРѕРµ РїР°СЂР°РјРµС‚СЂРѕРј amount
 	 * @param date
-	 * @param amount - шаг увеличения
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return дату увеличенную на число заданное параметром amount
+	 * @param amount - С€Р°Рі СѓРІРµР»РёС‡РµРЅРёСЏ
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РґР°С‚Сѓ СѓРІРµР»РёС‡РµРЅРЅСѓСЋ РЅР° С‡РёСЃР»Рѕ Р·Р°РґР°РЅРЅРѕРµ РїР°СЂР°РјРµС‚СЂРѕРј amount
 	 */
 //	public static java.util.Date incWeek(java.util.Date date, int amount, Locale locale) {
 //		Calendar calendar = Calendar.getInstance(locale);
@@ -122,10 +122,10 @@ public class DateTimeUtils {
 //	}
 
 	/**
-	 * Определяет начало месяца
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РЅР°С‡Р°Р»Рѕ РјРµСЃСЏС†Р°
 	 * @param date
 	 * @param locale
-	 * @return дату установленную в начало месяца (01.XX.XX)
+	 * @return РґР°С‚Сѓ СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅСѓСЋ РІ РЅР°С‡Р°Р»Рѕ РјРµСЃСЏС†Р° (01.XX.XX)
 	 */
 	public static java.util.Date startOfTheMonth(java.util.Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
@@ -135,11 +135,11 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * Увеличивает год на число заданное параметром amount
+	 * РЈРІРµР»РёС‡РёРІР°РµС‚ РіРѕРґ РЅР° С‡РёСЃР»Рѕ Р·Р°РґР°РЅРЅРѕРµ РїР°СЂР°РјРµС‚СЂРѕРј amount
 	 * @param date
-	 * @param amount - шаг инкрементации
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return дата с увеличенным годом
+	 * @param amount - С€Р°Рі РёРЅРєСЂРµРјРµРЅС‚Р°С†РёРё
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РґР°С‚Р° СЃ СѓРІРµР»РёС‡РµРЅРЅС‹Рј РіРѕРґРѕРј
 	 */
 //	public static java.util.Date incYear(java.util.Date date, int amount, Locale locale) {
 //		Calendar calendar = Calendar.getInstance(locale);
@@ -149,11 +149,11 @@ public class DateTimeUtils {
 //	}
 
 	/**
-	 * Увеличивает месяц на число заданное параметром amount
+	 * РЈРІРµР»РёС‡РёРІР°РµС‚ РјРµСЃСЏС† РЅР° С‡РёСЃР»Рѕ Р·Р°РґР°РЅРЅРѕРµ РїР°СЂР°РјРµС‚СЂРѕРј amount
 	 * @param date
-	 * @param amount - шаг инкрементации
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return дата с увеличенным месяцом
+	 * @param amount - С€Р°Рі РёРЅРєСЂРµРјРµРЅС‚Р°С†РёРё
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РґР°С‚Р° СЃ СѓРІРµР»РёС‡РµРЅРЅС‹Рј РјРµСЃСЏС†РѕРј
 	 */
 //	public static java.util.Date incMonth(java.util.Date date, int amount, Locale locale) {
 //		Calendar calendar = Calendar.getInstance(locale);
@@ -163,11 +163,11 @@ public class DateTimeUtils {
 //	}
 
 	/**
-	 * Увеличивает день на число заданное параметром amount
+	 * РЈРІРµР»РёС‡РёРІР°РµС‚ РґРµРЅСЊ РЅР° С‡РёСЃР»Рѕ Р·Р°РґР°РЅРЅРѕРµ РїР°СЂР°РјРµС‚СЂРѕРј amount
 	 * @param date
-	 * @param amount - шаг инкрементации
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return дата с увеличенным днем
+	 * @param amount - С€Р°Рі РёРЅРєСЂРµРјРµРЅС‚Р°С†РёРё
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РґР°С‚Р° СЃ СѓРІРµР»РёС‡РµРЅРЅС‹Рј РґРЅРµРј
 	 */
 //	public static java.util.Date incDay(java.util.Date date, int amount, Locale locale) {
 //		Calendar calendar = Calendar.getInstance(locale);
@@ -177,10 +177,10 @@ public class DateTimeUtils {
 //	}
 
 	/**
-	 * Определяет полугодие
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РїРѕР»СѓРіРѕРґРёРµ
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return полугодие (первое или второе)
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РїРѕР»СѓРіРѕРґРёРµ (РїРµСЂРІРѕРµ РёР»Рё РІС‚РѕСЂРѕРµ)
 	 */
 	public static int halfYearOf(java.util.Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
@@ -189,10 +189,10 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * Определяет квартал
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РєРІР°СЂС‚Р°Р»
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return квартал
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РєРІР°СЂС‚Р°Р»
 	 */
 	public static int qurterOf(java.util.Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
@@ -201,10 +201,10 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * Определяет номер недели года
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РЅРѕРјРµСЂ РЅРµРґРµР»Рё РіРѕРґР°
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return номер недели года
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РЅРѕРјРµСЂ РЅРµРґРµР»Рё РіРѕРґР°
 	 */
 	public static int weekOfYear(java.util.Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
@@ -213,37 +213,37 @@ public class DateTimeUtils {
 	}
 
 	/**
-	 * Определяет начало полугодия
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РЅР°С‡Р°Р»Рѕ РїРѕР»СѓРіРѕРґРёСЏ
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return дата начала полугодия
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРѕР»СѓРіРѕРґРёСЏ
 	 */
 	public static java.util.Date beginOfTheHalfYear(java.util.Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
 		calendar.setTime(date);
 		if(calendar.get(Calendar.MONTH) <= 6) {
-			calendar.set(Calendar.MONTH, Calendar.JANUARY);//начало 1 полугодия
+			calendar.set(Calendar.MONTH, Calendar.JANUARY);//РЅР°С‡Р°Р»Рѕ 1 РїРѕР»СѓРіРѕРґРёСЏ
 			calendar.set(Calendar.DATE, 1);
 			return calendar.getTime();
 		}
 		else {
-			calendar.set(Calendar.MONTH, Calendar.JULY);//начало 2 полугодия
+			calendar.set(Calendar.MONTH, Calendar.JULY);//РЅР°С‡Р°Р»Рѕ 2 РїРѕР»СѓРіРѕРґРёСЏ
 			calendar.set(Calendar.DATE, 1);
 			return calendar.getTime();
 		}
 	}
 
 	/**
-	 * Определяет начало квартала
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РЅР°С‡Р°Р»Рѕ РєРІР°СЂС‚Р°Р»Р°
 	 * @param date
-	 * @param locale - локаль временных(даты, времени) параметров
-	 * @return дата начала квартала
+	 * @param locale - Р»РѕРєР°Р»СЊ РІСЂРµРјРµРЅРЅС‹С…(РґР°С‚С‹, РІСЂРµРјРµРЅРё) РїР°СЂР°РјРµС‚СЂРѕРІ
+	 * @return РґР°С‚Р° РЅР°С‡Р°Р»Р° РєРІР°СЂС‚Р°Р»Р°
 	 */
 	public static java.util.Date beginOfTheQuarter(java.util.Date date, Locale locale) {
 		Calendar calendar = Calendar.getInstance(locale);
 		calendar.setTime(date);
 		int quarter = ((calendar.get(Calendar.MONTH)) / 3) + 1;
-		calendar.set(Calendar.MONTH, quarter * 3 - 3);//начало квартала
+		calendar.set(Calendar.MONTH, quarter * 3 - 3);//РЅР°С‡Р°Р»Рѕ РєРІР°СЂС‚Р°Р»Р°
 		calendar.set(Calendar.DATE, 1);
 		return calendar.getTime();
 	}

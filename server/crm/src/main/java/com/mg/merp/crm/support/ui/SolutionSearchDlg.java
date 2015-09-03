@@ -39,7 +39,7 @@ import com.mg.merp.crm.model.Solution;
 import com.mg.merp.crm.model.Symptom;
 
 /**
- * Контроллер диалога бизнес-компонента "Поиск решения"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРѕРёСЃРє СЂРµС€РµРЅРёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: SolutionSearchDlg.java,v 1.2 2007/05/16 06:21:43 sharapov Exp $
@@ -153,8 +153,8 @@ public class SolutionSearchDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Выбрать симптом"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "Р’С‹Р±СЂР°С‚СЊ СЃРёРјРїС‚РѕРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionIncludeSymptom(WidgetEvent event) throws ApplicationException {
@@ -177,8 +177,8 @@ public class SolutionSearchDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Убрать симптом"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РЈР±СЂР°С‚СЊ СЃРёРјРїС‚РѕРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionExcludeSymptom(WidgetEvent event) throws ApplicationException {
@@ -190,9 +190,9 @@ public class SolutionSearchDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Выбрать проблему"
-	 * @param event - событие
-	 * @throws ApplicationException - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "Р’С‹Р±СЂР°С‚СЊ РїСЂРѕР±Р»РµРјСѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws ApplicationException - РРЎ
 	 */
 	public void onActionIncludeProblem(WidgetEvent event) throws ApplicationException {
 		SearchHelpForm form = (SearchHelpForm) ApplicationDictionaryLocator.locate().getBrowseForm(problemService, null);
@@ -211,16 +211,16 @@ public class SolutionSearchDlg extends AbstractForm {
 	}
 
 	/**
-	 * Добавить запись в таблицу "Проблемы"
-	 * @param problem - проблема
+	 * Р”РѕР±Р°РІРёС‚СЊ Р·Р°РїРёСЃСЊ РІ С‚Р°Р±Р»РёС†Сѓ "РџСЂРѕР±Р»РµРјС‹"
+	 * @param problem - РїСЂРѕР±Р»РµРјР°
 	 */
 	private void includeProblem(Problem problem) {
 		((SolutionSearchProblemTableModel) problemTable.getModel()).addRow(problem);
 	}
 
 	/**
-	 * Обработчик пункта КМ "Убрать проблему"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЈР±СЂР°С‚СЊ РїСЂРѕР±Р»РµРјСѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionExcludeProblem(WidgetEvent event) {
 		((SolutionSearchProblemTableModel) problemTable.getModel()).removeRow(problemSelectedRow);
@@ -228,8 +228,8 @@ public class SolutionSearchDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик кнопки/пункта КМ "Найти"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё/РїСѓРЅРєС‚Р° РљРњ "РќР°Р№С‚Рё"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionSearch(WidgetEvent event) {
 		((SolutionSearchProblemTableModel) problemTable.getModel()).setSymptoms(symptoms);
@@ -237,8 +237,8 @@ public class SolutionSearchDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Просмотреть" (проблему)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ" (РїСЂРѕР±Р»РµРјСѓ)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionViewProblem(WidgetEvent event) throws ApplicationException {
@@ -249,8 +249,8 @@ public class SolutionSearchDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Изменить" (проблему)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РР·РјРµРЅРёС‚СЊ" (РїСЂРѕР±Р»РµРјСѓ)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionEditProblem(WidgetEvent event) throws ApplicationException {
@@ -261,8 +261,8 @@ public class SolutionSearchDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Просмотреть" (решение)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ" (СЂРµС€РµРЅРёРµ)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionViewSolution(WidgetEvent event) throws ApplicationException {
@@ -273,8 +273,8 @@ public class SolutionSearchDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Изменить" (решение)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РР·РјРµРЅРёС‚СЊ" (СЂРµС€РµРЅРёРµ)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionEditSolution(WidgetEvent event) throws ApplicationException {

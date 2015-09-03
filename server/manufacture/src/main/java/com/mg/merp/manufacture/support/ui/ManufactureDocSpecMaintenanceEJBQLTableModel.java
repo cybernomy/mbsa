@@ -21,7 +21,7 @@ import com.mg.merp.document.generic.ui.GoodsDocSpecMaintenanceEJBQLTableModel;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * Вспомогательный класс для отображения формы спецификации производственных документов
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂРѕРёР·РІРѕРґСЃС‚РІРµРЅРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: ManufactureDocSpecMaintenanceEJBQLTableModel.java,v 1.2 2008/12/25 10:17:46 safonov Exp $ 

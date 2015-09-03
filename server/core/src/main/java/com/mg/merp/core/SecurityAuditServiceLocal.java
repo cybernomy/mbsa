@@ -18,14 +18,14 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.core.model.SecurityAudit;
 
 /**
- * Бизнес-компонент аудита безопасности
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ Р°СѓРґРёС‚Р° Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: SecurityAuditServiceLocal.java,v 1.1 2007/10/19 06:40:17 safonov Exp $
  */
 public interface SecurityAuditServiceLocal extends DataBusinessObjectService<SecurityAudit, Long> {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/core/SecurityAudit";
 }

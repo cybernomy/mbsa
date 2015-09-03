@@ -76,11 +76,11 @@ public class BusinessAddinWorkbenchImpl implements BusinessAddinWorkbench {
 		try {
 			PersistentManager pm = ServerUtils.getPersistentManager();
 			Repository rpr = pm.find(Repository.class, ((Repository) repository).getId());
-			// был изменён
+			// Р±С‹Р» РёР·РјРµРЅС‘РЅ
 			wasChanged = rpr.getSysVersion().after(((Repository) repository).getSysVersion());
 
-			// проверка уникальности кода
-			// Берём список, т.к. раньше не было уникальности кода алгоритма
+			// РїСЂРѕРІРµСЂРєР° СѓРЅРёРєР°Р»СЊРЅРѕСЃС‚Рё РєРѕРґР°
+			// Р‘РµСЂС‘Рј СЃРїРёСЃРѕРє, С‚.Рє. СЂР°РЅСЊС€Рµ РЅРµ Р±С‹Р»Рѕ СѓРЅРёРєР°Р»СЊРЅРѕСЃС‚Рё РєРѕРґР° Р°Р»РіРѕСЂРёС‚РјР°
 			List<Repository> rpzL = OrmTemplate.getInstance().findByCriteria(
 					Repository.class, Restrictions.eq("Code", tmpCode));
 			if (rpzL.size() == 1 && !wasChanged) {
@@ -124,8 +124,8 @@ public class BusinessAddinWorkbenchImpl implements BusinessAddinWorkbench {
 				((Repository) repository).setFolder(fldr);
 				((Repository) repository).setEngine(EngineType.JAVA_ENGINE);
 
-				// SysClient проставляется автоматически, но при наличии
-				// контекста пользователя. Его сейчас нет
+				// SysClient РїСЂРѕСЃС‚Р°РІР»СЏРµС‚СЃСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё, РЅРѕ РїСЂРё РЅР°Р»РёС‡РёРё
+				// РєРѕРЅС‚РµРєСЃС‚Р° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ. Р•РіРѕ СЃРµР№С‡Р°СЃ РЅРµС‚
 				((Repository) repository).setSysClient(fldr.getSysClient());
 
 				pm.persist(((Repository) repository));
@@ -135,10 +135,10 @@ public class BusinessAddinWorkbenchImpl implements BusinessAddinWorkbench {
 			}
 		} catch (Exception ex) {
 			tm.rollback();
-			// операция не удалась
+			// РѕРїРµСЂР°С†РёСЏ РЅРµ СѓРґР°Р»Р°СЃСЊ
 			throw new ApplicationException(Messages.getInstance().getMessage(Messages.BAI_ADD_ERROR, new Object[] {tmpCode}), ex.getCause());
 		}
-		// если условие (rpz == null)не выполнилось
+		// РµСЃР»Рё СѓСЃР»РѕРІРёРµ (rpz == null)РЅРµ РІС‹РїРѕР»РЅРёР»РѕСЃСЊ
 		tm.rollback();
 		throw new DataAccessException(Messages.getInstance().getMessage(Messages.BAI_UNIQUE_CODE, new Object[] {tmpCode}));
 	}

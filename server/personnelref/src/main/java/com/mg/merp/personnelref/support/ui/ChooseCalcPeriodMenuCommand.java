@@ -29,7 +29,7 @@ import com.mg.merp.personnelref.CalcPeriodServiceLocal;
 import com.mg.merp.personnelref.model.CalcPeriod;
 
 /**
- * Контроллер комманды меню "Установить рассчетный период" управление персонала
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРјРјР°РЅРґС‹ РјРµРЅСЋ "РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СЂР°СЃСЃС‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ" СѓРїСЂР°РІР»РµРЅРёРµ РїРµСЂСЃРѕРЅР°Р»Р°
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ChooseCalcPeriodMenuCommand.java,v 1.1 2008/03/25 09:40:02 alikaev Exp $

@@ -30,18 +30,18 @@ public interface CountryServiceLocal extends com.mg.framework.api.DataBusinessOb
 	final  public static String SERVICE_NAME = "merp/reference/Country";
 	
 	/**
-	 * Формирует полный адрес
+	 * Р¤РѕСЂРјРёСЂСѓРµС‚ РїРѕР»РЅС‹Р№ Р°РґСЂРµСЃ
 	 * 
-	 * @param country	страна
-	 * @param region	регион
-	 * @param district	район
-	 * @param place		населенный пункт
-	 * @param street	улица
-	 * @param house		дом
-	 * @param building	строение
-	 * @param room		помещение
-	 * @param zipcode	индекс
-	 * @return			полный адрес проживания
+	 * @param country	СЃС‚СЂР°РЅР°
+	 * @param region	СЂРµРіРёРѕРЅ
+	 * @param district	СЂР°Р№РѕРЅ
+	 * @param place		РЅР°СЃРµР»РµРЅРЅС‹Р№ РїСѓРЅРєС‚
+	 * @param street	СѓР»РёС†Р°
+	 * @param house		РґРѕРј
+	 * @param building	СЃС‚СЂРѕРµРЅРёРµ
+	 * @param room		РїРѕРјРµС‰РµРЅРёРµ
+	 * @param zipcode	РёРЅРґРµРєСЃ
+	 * @return			РїРѕР»РЅС‹Р№ Р°РґСЂРµСЃ РїСЂРѕР¶РёРІР°РЅРёСЏ
 	 */
 	String getAddressText(Country country, Region region, District district, Place place, String street, String house, String building, String room, ZipCode zipcode);
 

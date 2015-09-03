@@ -24,7 +24,7 @@ import com.mg.merp.planning.model.MrpShortage;
 import com.mg.merp.planning.model.MrpVersionControl;
 
 /**
- * Бизнес-компонент "Дефицит товаров по результатом MRP расчета"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”РµС„РёС†РёС‚ С‚РѕРІР°СЂРѕРІ РїРѕ СЂРµР·СѓР»СЊС‚Р°С‚РѕРј MRP СЂР°СЃС‡РµС‚Р°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: MRPShortageServiceBean.java,v 1.3 2007/07/30 10:36:48 safonov Exp $

@@ -37,7 +37,7 @@ import com.mg.merp.document.model.DocTypeDocSectionLink;
 import com.mg.merp.document.model.DocumentKind;
 
 /**
- * Контроллер формы поддержки типа документа
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author leonova
  * @version $Id: DocTypeMt.java,v 1.5 2007/07/10 12:55:03 safonov Exp $
@@ -167,7 +167,7 @@ public class DocTypeMt extends DefaultMaintenanceForm implements MasterModelList
 	 */
 	@Override
 	protected void doOnAdd() {
-		//на создании объекта инициализируем списки разделами документов
+		//РЅР° СЃРѕР·РґР°РЅРёРё РѕР±СЉРµРєС‚Р° РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј СЃРїРёСЃРєРё СЂР°Р·РґРµР»Р°РјРё РґРѕРєСѓРјРµРЅС‚РѕРІ
 		documentLink.getModel().setLeadingList(mapDocSections.keySet().toArray(new String[0]));
 		docConfirmLink.getModel().setLeadingList(mapDocSections.keySet().toArray(new String[0]));
 		docBaseLink.getModel().setLeadingList(mapDocSections.keySet().toArray(new String[0]));
@@ -179,7 +179,7 @@ public class DocTypeMt extends DefaultMaintenanceForm implements MasterModelList
 	 * @see com.mg.framework.api.ui.MasterModelListener#masterChange(com.mg.framework.api.ui.ModelChangeEvent)
 	 */
 	public void masterChange(ModelChangeEvent event) {
-		//заполним связями типа документа с видами документов
+		//Р·Р°РїРѕР»РЅРёРј СЃРІСЏР·СЏРјРё С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р° СЃ РІРёРґР°РјРё РґРѕРєСѓРјРµРЅС‚РѕРІ
 		DocTypeDocSectionLink[][] links = docTypeService.loadDocSectionLinks((DocType) getEntity());
 		fillDocSectionLinks(links[DocumentKind.DOCUMENT.ordinal()], documentLink, mapDocSections, mapDocSectionLinks);
 		fillDocSectionLinks(links[DocumentKind.CONFIRMATION.ordinal()], docConfirmLink, mapConfirmDocSections, mapConfirmDocSectionLinks);

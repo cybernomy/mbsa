@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.RelationStatus;
 
 /**
- * Браузер статусов отношений
+ * Р‘СЂР°СѓР·РµСЂ СЃС‚Р°С‚СѓСЃРѕРІ РѕС‚РЅРѕС€РµРЅРёР№
  * 
  * @author leonova
  * @version $Id: RelationStatusBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

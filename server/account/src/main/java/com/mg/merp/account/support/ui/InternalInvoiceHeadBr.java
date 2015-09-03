@@ -30,7 +30,7 @@ import com.mg.merp.document.generic.ui.GoodsDocumentMaintenanceEJBQLTableModel;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Контроллер формы списка внутренних накладных
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РІРЅСѓС‚СЂРµРЅРЅРёС… РЅР°РєР»Р°РґРЅС‹С…
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov

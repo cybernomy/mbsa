@@ -20,7 +20,7 @@ import com.mg.framework.support.ui.UIProducer;
 import com.mg.framework.support.ui.UIUtils;
 
 /**
- * Поиск объектов-сущностей {@link com.mg.merp.document.model.DocSection DocSection}
+ * РџРѕРёСЃРє РѕР±СЉРµРєС‚РѕРІ-СЃСѓС‰РЅРѕСЃС‚РµР№ {@link com.mg.merp.document.model.DocSection DocSection}
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocSectionSearchHelp.java,v 1.2 2006/09/18 13:12:06 safonov Exp $

@@ -32,7 +32,7 @@ import com.mg.merp.paymentcontrol.VersionStatusServiceLocal;
 import com.mg.merp.paymentcontrol.model.Version;
 
 /**
- * Контроллер формы списка версий планирования платежей
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РІРµСЂСЃРёР№ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ РїР»Р°С‚РµР¶РµР№
  * 
  * @author leonova
  * @version $Id: VersionBr.java,v 1.5 2007/05/23 09:58:56 sharapov Exp $ 
@@ -107,9 +107,9 @@ public class VersionBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Обработчик события КМ "Установить статус версии"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РљРњ "РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СЃС‚Р°С‚СѓСЃ РІРµСЂСЃРёРё"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionSetStatus(WidgetEvent event) throws Exception {
 		PersistentObject[] searchedEntities = getSearchedEntities();
@@ -134,9 +134,9 @@ public class VersionBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Обработчик события КМ "Планирование платежей"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РљРњ "РџР»Р°РЅРёСЂРѕРІР°РЅРёРµ РїР»Р°С‚РµР¶РµР№"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionShowPlanPayment(WidgetEvent event) throws Exception {
 		PmcPlaningDlg dialog = (PmcPlaningDlg) UIProducer.produceForm("com/mg/merp/paymentcontrol/resources/PmcPlaningDlg.mfd.xml"); //$NON-NLS-1$

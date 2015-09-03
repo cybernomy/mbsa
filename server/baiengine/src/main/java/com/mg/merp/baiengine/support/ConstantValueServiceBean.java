@@ -21,7 +21,7 @@ import com.mg.merp.baiengine.ConstantValueServiceLocal;
 import com.mg.merp.baiengine.model.ConstantValue;
 
 /**
- * Бизнес-компонент "Значение константы"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р—РЅР°С‡РµРЅРёРµ РєРѕРЅСЃС‚Р°РЅС‚С‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ConstantValueServiceBean.java,v 1.1 2007/08/21 12:56:51 alikaev Exp $

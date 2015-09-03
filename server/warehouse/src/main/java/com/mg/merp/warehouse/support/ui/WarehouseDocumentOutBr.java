@@ -29,7 +29,7 @@ import com.mg.merp.warehouse.model.InvoiceHead;
 import com.mg.merp.warehouse.model.StockDocumentHead;
 
 /**
- * Контроллер формы списка расходных ордеров
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° СЂР°СЃС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: WarehouseDocumentOutBr.java,v 1.12 2009/02/10 14:29:13 safonov Exp $

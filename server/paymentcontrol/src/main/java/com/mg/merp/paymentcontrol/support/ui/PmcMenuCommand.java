@@ -23,7 +23,7 @@ import com.mg.framework.utils.SecurityUtils;
 import com.mg.merp.paymentcontrol.ResourceServiceLocal;
 
 /**
- * Контроллер комманды меню "Управление платежами"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРјРјР°РЅРґС‹ РјРµРЅСЋ "РЈРїСЂР°РІР»РµРЅРёРµ РїР»Р°С‚РµР¶Р°РјРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmcMenuCommand.java,v 1.2 2008/08/18 07:14:24 sharapov Exp $

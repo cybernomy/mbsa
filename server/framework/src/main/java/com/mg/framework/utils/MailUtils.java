@@ -27,7 +27,7 @@ import javax.naming.NamingException;
 import com.mg.framework.api.InternalException;
 
 /**
- * Утилиты отправки почтовых сообщений
+ * РЈС‚РёР»РёС‚С‹ РѕС‚РїСЂР°РІРєРё РїРѕС‡С‚РѕРІС‹С… СЃРѕРѕР±С‰РµРЅРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: MailUtils.java,v 1.1 2007/10/01 11:04:08 safonov Exp $
@@ -35,9 +35,9 @@ import com.mg.framework.api.InternalException;
 public class MailUtils {
 
 	/**
-	 * получить сессию
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРµСЃСЃРёСЋ
 	 * 
-	 * @return	сессия
+	 * @return	СЃРµСЃСЃРёСЏ
 	 */
 	private static Session getMailSession() {
 		try {
@@ -49,12 +49,12 @@ public class MailUtils {
 	}
 	
 	/**
-	 * отправить сообщение
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ
 	 * 
-	 * @param to		кому, список email адресов разделенных запятой
-	 * @param subject	тема
-	 * @param body		содержимое
-	 * @param charset	тип MIME
+	 * @param to		РєРѕРјСѓ, СЃРїРёСЃРѕРє email Р°РґСЂРµСЃРѕРІ СЂР°Р·РґРµР»РµРЅРЅС‹С… Р·Р°РїСЏС‚РѕР№
+	 * @param subject	С‚РµРјР°
+	 * @param body		СЃРѕРґРµСЂР¶РёРјРѕРµ
+	 * @param charset	С‚РёРї MIME
 	 */
 	public static void send(String to, String subject, String body, String mimeType) {
 		Session session = getMailSession();
@@ -76,11 +76,11 @@ public class MailUtils {
 	}
 
 	/**
-	 * отправить сообщение, сообщение будет иметь тип MIME "text/plain", кодировку "UTF-8"
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ, СЃРѕРѕР±С‰РµРЅРёРµ Р±СѓРґРµС‚ РёРјРµС‚СЊ С‚РёРї MIME "text/plain", РєРѕРґРёСЂРѕРІРєСѓ "UTF-8"
 	 * 
-	 * @param to		кому, список email адресов разделенных запятой
-	 * @param subject	тема
-	 * @param body		содержимое
+	 * @param to		РєРѕРјСѓ, СЃРїРёСЃРѕРє email Р°РґСЂРµСЃРѕРІ СЂР°Р·РґРµР»РµРЅРЅС‹С… Р·Р°РїСЏС‚РѕР№
+	 * @param subject	С‚РµРјР°
+	 * @param body		СЃРѕРґРµСЂР¶РёРјРѕРµ
 	 */
 	public static void send(String to, String subject, String body) {
 		send(to, subject, body, "text/plain;charset=\"UTF-8\"");

@@ -22,7 +22,7 @@ import com.mg.framework.api.ui.widget.CheckBox;
 import com.mg.framework.generic.ui.DefaultDialog;
 
 /**
- * Контроллер диалога "Cоздание периодов планирования"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "CРѕР·РґР°РЅРёРµ РїРµСЂРёРѕРґРѕРІ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmcCreatePeriodsDialog.java,v 1.2 2007/05/14 05:23:52 sharapov Exp $
@@ -55,16 +55,16 @@ public class PmcCreatePeriodsDialog extends DefaultDialog {
 	// Methods
 
 	/**
-	 * Обработчик изменения значения "Декады"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РёР·РјРµРЅРµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ "Р”РµРєР°РґС‹"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionPmcTenDaysChanged(WidgetEvent event) {
 		view.getWidget(WEEK_WIDGET).setEnabled(!(Boolean) ((CheckBox) view.getWidget(TEN_DAYS_WIDGET)).getEditorValue());
 	}
 
 	/**
-	 * Обработчик изменения значения "Недели"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РёР·РјРµРЅРµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ "РќРµРґРµР»Рё"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionPmcWeekChanged(WidgetEvent event) {
 		view.getWidget(TEN_DAYS_WIDGET).setEnabled(!(Boolean) ((CheckBox) view.getWidget(WEEK_WIDGET)).getEditorValue());

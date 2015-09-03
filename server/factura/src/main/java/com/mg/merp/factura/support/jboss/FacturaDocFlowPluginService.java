@@ -29,7 +29,7 @@ import com.mg.merp.factura.support.RegisterPayDateDocFlowPluginFactory;
 import com.mg.merp.factura.support.RegisterStockDateDocFlowPluginFactory;
 
 /**
- * Реализация сервиса дополнительных модулей подсистемы "Счета-фактуры"
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "РЎС‡РµС‚Р°-С„Р°РєС‚СѓСЂС‹"
  * 
  * @author Artem V. Sharapov
  * @version $Id: FacturaDocFlowPluginService.java,v 1.1 2009/03/16 14:30:34 sharapov Exp $

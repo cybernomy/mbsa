@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.crm.model.User;
 
 /**
- * Браузер пользователей CRM
+ * Р‘СЂР°СѓР·РµСЂ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№ CRM
  * 
  * @author leonova
  * @version $Id: UserBr.java,v 1.1 2006/09/06 05:22:17 leonova Exp $ 

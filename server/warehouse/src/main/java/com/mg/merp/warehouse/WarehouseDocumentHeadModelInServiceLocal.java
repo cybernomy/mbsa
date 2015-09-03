@@ -26,7 +26,7 @@ public interface WarehouseDocumentHeadModelInServiceLocal
    extends DocumentPattern<StockDocumentHeadModel, Integer>
 {
 	/**
-	 * тип папки для образцов приходных ордеров
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ РїСЂРёС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ
 	 */
 	final static short FOLDER_PART = 32;
 }

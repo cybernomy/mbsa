@@ -24,7 +24,7 @@ import com.mg.merp.manufacture.generic.ui.ScrapHeadMt;
 import com.mg.merp.manufacture.model.ScrapDocumentSpec;
 
 /**
- * Контроллер формы поддержки актов на списание потерь материалов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РјР°С‚РµСЂРёР°Р»РѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: ScrapMaterialHeadMt.java,v 1.8 2008/12/25 10:17:46 safonov Exp $

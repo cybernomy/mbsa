@@ -28,7 +28,7 @@ import com.mg.merp.manufacture.model.InputDocumentSpec;
 import com.mg.merp.manufacture.support.CreateManufactureSpecificationInfoImpl;
 
 /**
- * Базовая реализация актов на списание ресурсов
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ СЂРµСЃСѓСЂСЃРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: InputDocumentSpecServiceBean.java,v 1.4 2007/08/16 14:07:09 safonov Exp $
@@ -37,7 +37,7 @@ public abstract class InputDocumentSpecServiceBean<T extends InputDocumentSpec> 
 		implements InputSpecificationServiceLocal<T> {
 
 	/**
-	 * создание спецификаций на основании ЗНП
+	 * СЃРѕР·РґР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёР№ РЅР° РѕСЃРЅРѕРІР°РЅРёРё Р—РќРџ
 	 * 
 	 * @param docHead
 	 */
@@ -64,7 +64,7 @@ public abstract class InputDocumentSpecServiceBean<T extends InputDocumentSpec> 
 	 */
 	@PermitAll
 	public void createSpecifications(InputDocumentHead docHead) {
-		//проверим права на методо "создать", не имеет смысла создавать дополнительный метод
+		//РїСЂРѕРІРµСЂРёРј РїСЂР°РІР° РЅР° РјРµС‚РѕРґРѕ "СЃРѕР·РґР°С‚СЊ", РЅРµ РёРјРµРµС‚ СЃРјС‹СЃР»Р° СЃРѕР·РґР°РІР°С‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ РјРµС‚РѕРґ
 		SecurityUtils.checkPermission(new BusinessMethodPermission(getBusinessServiceMetadata().getName(), BusinessMethodPermission.CREATE_METHOD));
 		
 		if (docHead.getJob() == null || docHead.getOper() == null)

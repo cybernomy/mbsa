@@ -46,7 +46,7 @@ import org.hibernate.cfg.Configuration;
 import org.osgi.framework.Bundle;
 
 /**
- * Утилиты хранилища данных
+ * РЈС‚РёР»РёС‚С‹ С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: HibernateUtil.java,v 1.6 2009/03/04 10:15:25 safonov Exp $
@@ -162,7 +162,7 @@ public class HibernateUtil {
 	public static synchronized void buildConfig(String hibfile, String mapdir, Configuration cfg ) throws HibernateException, IOException, Exception {
 		Bundle hibbundle = Platform.getBundle( "com.mg.jet.birt.report.data.oda.ejbql" );
 
-		//пытаемся загрузить мапинги из указанного места
+		//РїС‹С‚Р°РµРјСЃСЏ Р·Р°РіСЂСѓР·РёС‚СЊ РјР°РїРёРЅРіРё РёР· СѓРєР°Р·Р°РЅРЅРѕРіРѕ РјРµСЃС‚Р°
 		File cfgDir = new File(mapdir);
 		if( cfgDir != null) {
 			if (cfgDir.isDirectory())
@@ -175,7 +175,7 @@ public class HibernateUtil {
 		URL hibURL = FileLocator.resolve(hibfiles);
 		File hibDirectory = new File(hibURL.getPath());
 
-		//загрузим специальные мапинги перед загрузкой основного архива, например для создания описателей глобальных фильтров
+		//Р·Р°РіСЂСѓР·РёРј СЃРїРµС†РёР°Р»СЊРЅС‹Рµ РјР°РїРёРЅРіРё РїРµСЂРµРґ Р·Р°РіСЂСѓР·РєРѕР№ РѕСЃРЅРѕРІРЅРѕРіРѕ Р°СЂС…РёРІР°, РЅР°РїСЂРёРјРµСЂ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РѕРїРёСЃР°С‚РµР»РµР№ РіР»РѕР±Р°Р»СЊРЅС‹С… С„РёР»СЊС‚СЂРѕРІ
 		File[] files = hibDirectory.listFiles();
 		if (files != null)
 			for ( int i = 0; i < files.length ; i++ ) {
@@ -184,7 +184,7 @@ public class HibernateUtil {
 				}
 			}
 
-		//грузим стандартный мапинг MBSA
+		//РіСЂСѓР·РёРј СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ РјР°РїРёРЅРі MBSA
 //		loadMBSADatawarehouse(cfg);
 		File mbsaData = new File(hibURL.getPath().concat(CommonConstant.DATAWAREHOUSE));
 		if (mbsaData.isFile())

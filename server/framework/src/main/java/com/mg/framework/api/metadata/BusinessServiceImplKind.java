@@ -17,7 +17,7 @@ package com.mg.framework.api.metadata;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Вид реализации безнес-компонента
+ * Р’РёРґ СЂРµР°Р»РёР·Р°С†РёРё Р±РµР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: BusinessServiceImplKind.java,v 1.2 2008/03/03 13:11:02 safonov Exp $
@@ -26,7 +26,7 @@ import com.mg.framework.api.annotations.DataItemName;
 public enum BusinessServiceImplKind {
 	
 	/**
-	 * Бизнес-компонент реализован на EJB
+	 * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ СЂРµР°Р»РёР·РѕРІР°РЅ РЅР° EJB
 	 */
 	EJB
 }

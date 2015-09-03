@@ -19,7 +19,7 @@ import java.util.Date;
 import com.mg.merp.mfreference.model.Bom;
 
 /**
- * Бизнес-компонент "Состав изделия"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРѕСЃС‚Р°РІ РёР·РґРµР»РёСЏ"
  * 
  * @author leonova
  * @version $Id: BOMServiceLocal.java,v 1.4 2007/08/06 12:16:10 safonov Exp $
@@ -28,44 +28,44 @@ public interface BOMServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<Bom, Integer>
 {
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/mfreference/BOM";
 
 	/**
-	 * тип папки для составов изделий
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ СЃРѕСЃС‚Р°РІРѕРІ РёР·РґРµР»РёР№
 	 */
 	final static short FOLDER_PART = 12001;
 
 	/**
-	 * Расчет параметров времени выполнения
+	 * Р Р°СЃС‡РµС‚ РїР°СЂР°РјРµС‚СЂРѕРІ РІСЂРµРјРµРЅРё РІС‹РїРѕР»РЅРµРЅРёСЏ
 	 * 
-	 * @param actualityDate	дата актуальности
-	 * @param catalogList	список позиций каталога
+	 * @param actualityDate	РґР°С‚Р° Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё
+	 * @param catalogList	СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР°
 	 */
 	void calculateOperLeadTimes(Date actualityDate, int[] catalogList);
 
 	/**
-	 * поиск текущего состава изделия
+	 * РїРѕРёСЃРє С‚РµРєСѓС‰РµРіРѕ СЃРѕСЃС‚Р°РІР° РёР·РґРµР»РёСЏ
 	 * 
-	 * @param catalogId	идентификатор позиции каталога
-	 * @return	состав изделия или <code>null</code> если не найден
+	 * @param catalogId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР°
+	 * @return	СЃРѕСЃС‚Р°РІ РёР·РґРµР»РёСЏ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	Bom findCurrentBOM(int catalogId);
 
 	/**
-	 * поиск стандартного состава изделия
+	 * РїРѕРёСЃРє СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ СЃРѕСЃС‚Р°РІР° РёР·РґРµР»РёСЏ
 	 * 
-	 * @param catalogId	идентификатор позиции каталога
-	 * @return	состав изделия или <code>null</code> если не найден
+	 * @param catalogId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР°
+	 * @return	СЃРѕСЃС‚Р°РІ РёР·РґРµР»РёСЏ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	Bom findStandartBOM(int catalogId);
 	
 	/**
-	 * изменение даты расчета нормативной себестоимости
+	 * РёР·РјРµРЅРµРЅРёРµ РґР°С‚С‹ СЂР°СЃС‡РµС‚Р° РЅРѕСЂРјР°С‚РёРІРЅРѕР№ СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚Рё
 	 * 
-	 * @param bom	состав изделия
-	 * @param date	дата расчета
+	 * @param bom	СЃРѕСЃС‚Р°РІ РёР·РґРµР»РёСЏ
+	 * @param date	РґР°С‚Р° СЂР°СЃС‡РµС‚Р°
 	 */
 	void updateRollupDateTime(Bom bom, Date date);
 	

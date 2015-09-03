@@ -18,7 +18,7 @@ import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IPersistableElement;
 
 /**
- * Класс, реализующий {@link IEditorInput} для формы редактирования
+ * РљР»Р°СЃСЃ, СЂРµР°Р»РёР·СѓСЋС‰РёР№ {@link IEditorInput} РґР»СЏ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: StandartEditorInput.java,v 1.5 2008/08/15 10:49:59 safonov Exp $
@@ -26,12 +26,12 @@ import org.eclipse.ui.IPersistableElement;
 public abstract class StandartEditorInput<T> implements IEditorInput {
 
 	/**
-	 * Данные
+	 * Р”Р°РЅРЅС‹Рµ
 	 */
 	protected T object;
 
 	/**
-	 * Признак создания нового объекта
+	 * РџСЂРёР·РЅР°Рє СЃРѕР·РґР°РЅРёСЏ РЅРѕРІРѕРіРѕ РѕР±СЉРµРєС‚Р°
 	 */
 	private boolean createNew;
 
@@ -104,8 +104,8 @@ public abstract class StandartEditorInput<T> implements IEditorInput {
 
 	/**
 	 * @return
-	 * 			истина если создаётся новый бизнес компонент,
-	 * 			ложь-если редактируется существующий
+	 * 			РёСЃС‚РёРЅР° РµСЃР»Рё СЃРѕР·РґР°С‘С‚СЃСЏ РЅРѕРІС‹Р№ Р±РёР·РЅРµСЃ РєРѕРјРїРѕРЅРµРЅС‚,
+	 * 			Р»РѕР¶СЊ-РµСЃР»Рё СЂРµРґР°РєС‚РёСЂСѓРµС‚СЃСЏ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№
 	 */
 	public boolean isCreateNew() {
 		return createNew;
@@ -122,8 +122,8 @@ public abstract class StandartEditorInput<T> implements IEditorInput {
 	@SuppressWarnings("unchecked")
 	@Override
 	public boolean equals(Object obj){
-		//сравниваем именна классов для определения того ли типа объект, иначе на
-		//следующем приведении возможна ClassCastException
+		//СЃСЂР°РІРЅРёРІР°РµРј РёРјРµРЅРЅР° РєР»Р°СЃСЃРѕРІ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ С‚РѕРіРѕ Р»Рё С‚РёРїР° РѕР±СЉРµРєС‚, РёРЅР°С‡Рµ РЅР°
+		//СЃР»РµРґСѓСЋС‰РµРј РїСЂРёРІРµРґРµРЅРёРё РІРѕР·РјРѕР¶РЅР° ClassCastException
 		if (obj != null && this.getClass().equals(obj.getClass())) {
 			return isMatch(((StandartEditorInput<T>) obj).object);
 		}
@@ -132,7 +132,7 @@ public abstract class StandartEditorInput<T> implements IEditorInput {
 	}
 	
 	/**
-	 * Сравнение двух БК на идентичность
+	 * РЎСЂР°РІРЅРµРЅРёРµ РґРІСѓС… Р‘Рљ РЅР° РёРґРµРЅС‚РёС‡РЅРѕСЃС‚СЊ
 	 * 
 	 * @param obj
 	 * 

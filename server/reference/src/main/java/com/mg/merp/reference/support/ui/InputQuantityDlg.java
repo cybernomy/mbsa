@@ -21,7 +21,7 @@ import com.mg.framework.generic.ui.DefaultDialog;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Контроллер диалога ввода количеств
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° РІРІРѕРґР° РєРѕР»РёС‡РµСЃС‚РІ
  * 
  * @author Artem V. Sharapov
  * @version $Id: InputQuantityDlg.java,v 1.3 2008/09/10 07:34:18 sharapov Exp $
@@ -39,17 +39,17 @@ public class InputQuantityDlg extends DefaultDialog {
 	private final static String CURRENCY_WIDGET = "currency"; //$NON-NLS-1$
 
 	/**
-	 * Высота интерфесного элемента
+	 * Р’С‹СЃРѕС‚Р° РёРЅС‚РµСЂС„РµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°
 	 */
 	private final static int WIDGET_HEIGHT = 20;
 
 	/**
-	 * Высота формы
+	 * Р’С‹СЃРѕС‚Р° С„РѕСЂРјС‹
 	 */
 	private final static int FORM_HEIGHT = 126;
 
 	/**
-	 * Ширина формы
+	 * РЁРёСЂРёРЅР° С„РѕСЂРјС‹
 	 */
 	private final static int FORM_WIDTH = 330;
 
@@ -70,15 +70,15 @@ public class InputQuantityDlg extends DefaultDialog {
 	}
 
 	/**
-	 * Запустить диалог
-	 * @param quantity1 - кол-во в основной ЕИ
-	 * @param measureCode1 - код основной ЕИ
-	 * @param quantity2 - кол-во в дополнительной ЕИ
-	 * @param measureCode2 - код дополнительной ЕИ
-	 * @param price - цена
-	 * @param currency - валюта
-	 * @param isShowQuantity2Fields - признак "показывать поля для кол-ва в дополнительной ЕИ" 
-	 * @param isShowPriceFields - признак "показывать поля для цены"
+	 * Р—Р°РїСѓСЃС‚РёС‚СЊ РґРёР°Р»РѕРі
+	 * @param quantity1 - РєРѕР»-РІРѕ РІ РѕСЃРЅРѕРІРЅРѕР№ Р•Р
+	 * @param measureCode1 - РєРѕРґ РѕСЃРЅРѕРІРЅРѕР№ Р•Р
+	 * @param quantity2 - РєРѕР»-РІРѕ РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ Р•Р
+	 * @param measureCode2 - РєРѕРґ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ Р•Р
+	 * @param price - С†РµРЅР°
+	 * @param currency - РІР°Р»СЋС‚Р°
+	 * @param isShowQuantity2Fields - РїСЂРёР·РЅР°Рє "РїРѕРєР°Р·С‹РІР°С‚СЊ РїРѕР»СЏ РґР»СЏ РєРѕР»-РІР° РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ Р•Р" 
+	 * @param isShowPriceFields - РїСЂРёР·РЅР°Рє "РїРѕРєР°Р·С‹РІР°С‚СЊ РїРѕР»СЏ РґР»СЏ С†РµРЅС‹"
 	 */
 	public void execute(BigDecimal quantity1, String measureCode1, BigDecimal quantity2, String measureCode2, BigDecimal price, Currency currency, boolean isShowQuantity2Fields, boolean isShowPriceFields) {
 		this.quantity1 = quantity1;

@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.DeliveryKind;
 
 /**
- * Браузер видов доставки
+ * Р‘СЂР°СѓР·РµСЂ РІРёРґРѕРІ РґРѕСЃС‚Р°РІРєРё
  * 
  * @author leonova
  * @version $Id: DeliveryKindBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

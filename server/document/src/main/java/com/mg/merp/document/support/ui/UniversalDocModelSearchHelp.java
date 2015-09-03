@@ -23,11 +23,11 @@ import com.mg.framework.support.metadata.SearchHelpProcessor;
 import com.mg.merp.document.model.DocSection;
 
 /**
- * Универсальный поиск образцов документов всех типов, использует в качестве SearchHelp
- * класс установленный в атрибуте DocSection.DocumentModelSearchHelp.
- * Содержит контекст импорта из следующих параметров: {@link com.mg.merp.document.model.DocSection DocSection}
- * - раздел документа, {@link com.mg.merp.core.model.Folder DocModelFolder} - папка образца (если <code>null</code> то
- * поиск будет производиться без учета папки)
+ * РЈРЅРёРІРµСЂСЃР°Р»СЊРЅС‹Р№ РїРѕРёСЃРє РѕР±СЂР°Р·С†РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ РІСЃРµС… С‚РёРїРѕРІ, РёСЃРїРѕР»СЊР·СѓРµС‚ РІ РєР°С‡РµСЃС‚РІРµ SearchHelp
+ * РєР»Р°СЃСЃ СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Р№ РІ Р°С‚СЂРёР±СѓС‚Рµ DocSection.DocumentModelSearchHelp.
+ * РЎРѕРґРµСЂР¶РёС‚ РєРѕРЅС‚РµРєСЃС‚ РёРјРїРѕСЂС‚Р° РёР· СЃР»РµРґСѓСЋС‰РёС… РїР°СЂР°РјРµС‚СЂРѕРІ: {@link com.mg.merp.document.model.DocSection DocSection}
+ * - СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚Р°, {@link com.mg.merp.core.model.Folder DocModelFolder} - РїР°РїРєР° РѕР±СЂР°Р·С†Р° (РµСЃР»Рё <code>null</code> С‚Рѕ
+ * РїРѕРёСЃРє Р±СѓРґРµС‚ РїСЂРѕРёР·РІРѕРґРёС‚СЊСЃСЏ Р±РµР· СѓС‡РµС‚Р° РїР°РїРєРё)
  * 
  * @see com.mg.merp.document.model.DocSection
  * 

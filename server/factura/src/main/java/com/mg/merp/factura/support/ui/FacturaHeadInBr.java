@@ -28,7 +28,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.factura.FacturaHeadInServiceLocal;
 
 /**
- * Контроллер формы списка входящих счет - фактур
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РІС…РѕРґСЏС‰РёС… СЃС‡РµС‚ - С„Р°РєС‚СѓСЂ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov

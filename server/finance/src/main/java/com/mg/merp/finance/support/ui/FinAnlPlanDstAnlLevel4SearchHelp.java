@@ -15,7 +15,7 @@
 package com.mg.merp.finance.support.ui;
 
 /**
- * SearchHelp для аналитики четвертого уровня счета по дебету
+ * SearchHelp РґР»СЏ Р°РЅР°Р»РёС‚РёРєРё С‡РµС‚РІРµСЂС‚РѕРіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р° РїРѕ РґРµР±РµС‚Сѓ
  * 
  * @author leonova
  * @version $Id: FinAnlPlanDstAnlLevel4SearchHelp.java,v 1.1 2006/10/30 13:50:17 leonova Exp $

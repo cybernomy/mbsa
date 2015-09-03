@@ -37,7 +37,7 @@ import com.mg.merp.baiengine.model.Constant;
 import com.mg.merp.baiengine.model.ConstantValue;
 
 /**
- * Контроллер формы поддержи бизнес-компонента "Константа"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶Рё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅСЃС‚Р°РЅС‚Р°"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -97,7 +97,7 @@ public class ConstantMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * заглушка для тестирования 
+	 * Р·Р°РіР»СѓС€РєР° РґР»СЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ 
 	 * @param event
 	 */
 	public void onActionFindActualValue(WidgetEvent event) {

@@ -17,7 +17,7 @@ package com.mg.merp.finance;
 import com.mg.merp.finance.model.Center;
 
 /**
- * Бизнес-компонент "Центры финансового учета"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р¦РµРЅС‚СЂС‹ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°"
  * 
  * @author leonova
  * @version $Id: CenterServiceLocal.java,v 1.2 2007/08/16 14:05:29 safonov Exp $

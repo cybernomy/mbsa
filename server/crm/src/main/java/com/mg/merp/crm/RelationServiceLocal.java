@@ -25,7 +25,7 @@ public interface RelationServiceLocal
    extends com.mg.framework.api.DataBusinessObjectService<Relation, Integer>
 {
 	/**
-	 * тип папки для деловых отношений
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РґРµР»РѕРІС‹С… РѕС‚РЅРѕС€РµРЅРёР№
 	 */
 	final static short FOLDER_PART = 13500;
 }

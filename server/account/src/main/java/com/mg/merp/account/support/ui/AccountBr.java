@@ -34,7 +34,7 @@ import com.mg.merp.account.model.AccPlan;
 import com.mg.merp.core.support.CoreUtils;
 
 /**
- * Браузер плана счетов
+ * Р‘СЂР°СѓР·РµСЂ РїР»Р°РЅР° СЃС‡РµС‚РѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: AccountBr.java,v 1.6 2008/03/05 07:18:49 alikaev Exp $

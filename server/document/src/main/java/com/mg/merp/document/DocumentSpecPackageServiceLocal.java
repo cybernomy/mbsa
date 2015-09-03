@@ -17,7 +17,7 @@ package com.mg.merp.document;
 import com.mg.merp.document.model.DocumentSpecPackage;
 
 /**
- * Сервис бизнес-компонента "Упаковки товара позиции спецификации документа"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЈРїР°РєРѕРІРєРё С‚РѕРІР°СЂР° РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,13 +26,13 @@ import com.mg.merp.document.model.DocumentSpecPackage;
 public interface DocumentSpecPackageServiceLocal extends com.mg.framework.api.DataBusinessObjectService<DocumentSpecPackage, Integer> {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/document/DocumentSpecPackage";
 	
 	/**
-	 * Рассчитать вес и объем упаковки
-	 * @param documentSpecPackage - упаковка товара позиции спецификации документа
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ РІРµСЃ Рё РѕР±СЉРµРј СѓРїР°РєРѕРІРєРё
+	 * @param documentSpecPackage - СѓРїР°РєРѕРІРєР° С‚РѕРІР°СЂР° РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	void computeWeightAndVolume(DocumentSpecPackage documentSpecPackage);
 	

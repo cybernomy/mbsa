@@ -59,7 +59,7 @@ import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Реализация бизнес-компонента "Процессор финансовых операций"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРѕС†РµСЃСЃРѕСЂ С„РёРЅР°РЅСЃРѕРІС‹С… РѕРїРµСЂР°С†РёР№"
  * 
  * @author Konstantin S. Alikaev
  * @author Oleg V. Safonov
@@ -111,12 +111,12 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 	}
 
 	/**
-	 * Реализация отработки ЭДО "Создать ФО"
+	 * Р РµР°Р»РёР·Р°С†РёСЏ РѕС‚СЂР°Р±РѕС‚РєРё Р­Р”Рћ "РЎРѕР·РґР°С‚СЊ Р¤Рћ"
 	 * 
 	 * @param params
-	 * 			- параметры документооборота
+	 * 			- РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
 	 * @param listener
-	 * 			- слушатель на событие открыть документ на редактирование
+	 * 			- СЃР»СѓС€Р°С‚РµР»СЊ РЅР° СЃРѕР±С‹С‚РёРµ РѕС‚РєСЂС‹С‚СЊ РґРѕРєСѓРјРµРЅС‚ РЅР° СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ
 	 */
 	private void doProcessCreateFinOper(DocFlowPluginInvokeParams params, final CreateDocumentDocFlowListener listener) {
 		OperationModelServiceLocal operServModel = (OperationModelServiceLocal) ApplicationDictionaryLocator.locate()
@@ -126,14 +126,14 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 		FinOperation fo =  createByPattern(finOperModel);
 		createFinOper(params.getDocument(), fo, finOperModel, params.getProcessDate(), params.getPerformedStage().getLinkDocDestFolder());
 
-		//data1-секция документа data2-id созданного документа
+		//data1-СЃРµРєС†РёСЏ РґРѕРєСѓРјРµРЅС‚Р° data2-id СЃРѕР·РґР°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 		params.setData1(params.getPerformedStage().getLinkDocSection().getId());
 		params.setData2(fo.getId());
 
 		if (params.getPerformedStage().isShowNewDocument() && !params.isSilent()){
-			//сбрасываем перед показом контекст
+			//СЃР±СЂР°СЃС‹РІР°РµРј РїРµСЂРµРґ РїРѕРєР°Р·РѕРј РєРѕРЅС‚РµРєСЃС‚
 			ServerUtils.getPersistentManager().flush();
-			//обновим чтобы были видны суммы операции
+			//РѕР±РЅРѕРІРёРј С‡С‚РѕР±С‹ Р±С‹Р»Рё РІРёРґРЅС‹ СЃСѓРјРјС‹ РѕРїРµСЂР°С†РёРё
 			ServerUtils.getPersistentManager().refresh(this.finOper);
 			MaintenanceHelper.edit(getServiceFinOperation(), fo.getId(), null, new MaintenanceFormActionListener() {
 
@@ -151,16 +151,16 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 	}
 
 	/**
-	 * Функция отката ЭДО "Создать ФО"
+	 * Р¤СѓРЅРєС†РёСЏ РѕС‚РєР°С‚Р° Р­Р”Рћ "РЎРѕР·РґР°С‚СЊ Р¤Рћ"
 	 * @param params
-	 * 			- параметры отката
+	 * 			- РїР°СЂР°РјРµС‚СЂС‹ РѕС‚РєР°С‚Р°
 	 */
 	private void doRollbackCreateFinOper(DocFlowPluginInvokeParams params) {
 		getServiceFinOperation().erase(params.getData2());	
 	}
 
 	/**
-	 * Возвращает сервис финансовой операции
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРµСЂРІРёСЃ С„РёРЅР°РЅСЃРѕРІРѕР№ РѕРїРµСЂР°С†РёРё
 	 * @return
 	 */
 	private OperationServiceLocal getServiceFinOperation() {
@@ -170,7 +170,7 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 	}
 
 	/**
-	 * Возвращает сервис спецификации фин. операции
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРµСЂРІРёСЃ СЃРїРµС†РёС„РёРєР°С†РёРё С„РёРЅ. РѕРїРµСЂР°С†РёРё
 	 * @return
 	 */
 	private SpecificationServiceLocal getServiceFinSpec() {
@@ -180,7 +180,7 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 	} 
 
 	/**
-	 * Возвращает сервис курса валют
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРµСЂРІРёСЃ РєСѓСЂСЃР° РІР°Р»СЋС‚
 	 * @return
 	 */
 	private CurrencyRateServiceLocal getServiceCurrencyRate() {
@@ -196,18 +196,18 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 	}
 
 	/**
-	 * Создание ФО на основание документа по образцу ФО
+	 * РЎРѕР·РґР°РЅРёРµ Р¤Рћ РЅР° РѕСЃРЅРѕРІР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° РїРѕ РѕР±СЂР°Р·С†Сѓ Р¤Рћ
 	 * 
 	 * @param srcDocHead
-	 * 			- документ основание
+	 * 			- РґРѕРєСѓРјРµРЅС‚ РѕСЃРЅРѕРІР°РЅРёРµ
 	 * @param finOper
-	 * 			- создаваемая фин. операция
+	 * 			- СЃРѕР·РґР°РІР°РµРјР°СЏ С„РёРЅ. РѕРїРµСЂР°С†РёСЏ
 	 * @param finOperModel
-	 * 			- образец создаваемой фин. операции
+	 * 			- РѕР±СЂР°Р·РµС† СЃРѕР·РґР°РІР°РµРјРѕР№ С„РёРЅ. РѕРїРµСЂР°С†РёРё
 	 * @param processDate
-	 * 			- время отработки ЭДО "Создать ФО"
+	 * 			- РІСЂРµРјСЏ РѕС‚СЂР°Р±РѕС‚РєРё Р­Р”Рћ "РЎРѕР·РґР°С‚СЊ Р¤Рћ"
 	 * @param folder
-	 * 			- папка-приемник
+	 * 			- РїР°РїРєР°-РїСЂРёРµРјРЅРёРє
 	 */
 	private void createFinOper(DocHead srcDocHead, FinOperation finOper, OperationModel finOperModel, Date processDate, Folder folder) {
 		fillItemByModel(finOper, finOperModel, processDate);
@@ -313,7 +313,7 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 				}
 		else 
 			finOper.setTo(finOperModel.getTo());
-		// установка параметров валюты
+		// СѓСЃС‚Р°РЅРѕРІРєР° РїР°СЂР°РјРµС‚СЂРѕРІ РІР°Р»СЋС‚С‹
 		FinConfig config = ConfigurationHelper.getConfiguration(); 
 		if (finOperModel.getCurrency() == null) 
 			finOper.setCurrency(srcDocHead.getCurrency());
@@ -331,14 +331,14 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 			finOper.setComment(StringUtils.EMPTY_STRING);
 		getServiceFinOperation().create(finOper);
 		this.finOper = finOper;
-		//создаем проводки
+		//СЃРѕР·РґР°РµРј РїСЂРѕРІРѕРґРєРё
 		createFinSpecs(srcDocHead, finOper, finOperModel);
 	}
 
 	/**
-	 * Инициализируем создаваемую фин. операцию значениями образца
+	 * РРЅРёС†РёР°Р»РёР·РёСЂСѓРµРј СЃРѕР·РґР°РІР°РµРјСѓСЋ С„РёРЅ. РѕРїРµСЂР°С†РёСЋ Р·РЅР°С‡РµРЅРёСЏРјРё РѕР±СЂР°Р·С†Р°
 	 * 
-	 * @param pattern - образец фин. операции
+	 * @param pattern - РѕР±СЂР°Р·РµС† С„РёРЅ. РѕРїРµСЂР°С†РёРё
 	 * @return
 	 */
 	private FinOperation createByPattern(OperationModel pattern) {
@@ -358,11 +358,11 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 	}
 
 	/**
-	 * Устанавливает какие атрибуты можно копировать из образца фин. операции в 
-	 * создаваемую фин. операцию
+	 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РєР°РєРёРµ Р°С‚СЂРёР±СѓС‚С‹ РјРѕР¶РЅРѕ РєРѕРїРёСЂРѕРІР°С‚СЊ РёР· РѕР±СЂР°Р·С†Р° С„РёРЅ. РѕРїРµСЂР°С†РёРё РІ 
+	 * СЃРѕР·РґР°РІР°РµРјСѓСЋ С„РёРЅ. РѕРїРµСЂР°С†РёСЋ
 	 * 
-	 * @param attributeName 	-	 имя атрибута
-	 * @return						<code>true</code> - если можно, иначе <code>false</code>				
+	 * @param attributeName 	-	 РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
+	 * @return						<code>true</code> - РµСЃР»Рё РјРѕР¶РЅРѕ, РёРЅР°С‡Рµ <code>false</code>				
 	 */
 	public static boolean isMutableFinOperAttribute(String attributeName) {
 		String[] attributeNames = new String[] {"Id", "SourceTo", "ModelName", "SourceFrom", "ModelDestFolder", "Folder", "Specifications"};
@@ -373,68 +373,68 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 	}
 
 	/**
-	 * Возвращает курс валюты ФО относительно нацинальной валюты взятой из конфигурации модуля
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РєСѓСЂСЃ РІР°Р»СЋС‚С‹ Р¤Рћ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РЅР°С†РёРЅР°Р»СЊРЅРѕР№ РІР°Р»СЋС‚С‹ РІР·СЏС‚РѕР№ РёР· РєРѕРЅС„РёРіСѓСЂР°С†РёРё РјРѕРґСѓР»СЏ
 	 * 
 	 * @param finOper
-	 * 		- ФО
+	 * 		- Р¤Рћ
 	 * @param config
-	 * 		- конфигурация модуля фин. учет
+	 * 		- РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ С„РёРЅ. СѓС‡РµС‚
 	 * @return
 	 */
 	private BigDecimal getCurRate(FinOperation finOper, FinConfig config) {
 		try {
-			//пытаемся получить прямой курс для валют
+			//РїС‹С‚Р°РµРјСЃСЏ РїРѕР»СѓС‡РёС‚СЊ РїСЂСЏРјРѕР№ РєСѓСЂСЃ РґР»СЏ РІР°Р»СЋС‚
 			return getServiceCurrencyRate().getCurrencyRate(config.getNatCurrency(), finOper.getCurrency()
 					, finOper.getCurRateAuthority(), finOper.getCurRateType(), finOper.getKeepDate());
 		} catch (CurrencyRateNotFoundException e) {
-			//если прямого курса нет, то пытаемся получить обратный курс
+			//РµСЃР»Рё РїСЂСЏРјРѕРіРѕ РєСѓСЂСЃР° РЅРµС‚, С‚Рѕ РїС‹С‚Р°РµРјСЃСЏ РїРѕР»СѓС‡РёС‚СЊ РѕР±СЂР°С‚РЅС‹Р№ РєСѓСЂСЃ
 			return MathUtils.divide(BigDecimal.ONE, getServiceCurrencyRate().getIndirectCurrencyRate(config.getNatCurrency(), finOper.getCurrency()
 					, finOper.getCurRateAuthority(), finOper.getCurRateType(), finOper.getKeepDate()), new RoundContext(CurrencyRateServiceLocal.DEFAULT_RATE_SCALE));
 		}
 	}
 
 	/**
-	 * Расчет курса валют создаваемой ФО
+	 * Р Р°СЃС‡РµС‚ РєСѓСЂСЃР° РІР°Р»СЋС‚ СЃРѕР·РґР°РІР°РµРјРѕР№ Р¤Рћ
 	 * @param finOper
-	 * 			- создаваемая ФО
+	 * 			- СЃРѕР·РґР°РІР°РµРјР°СЏ Р¤Рћ
 	 * @param finOperModel
-	 * 			- образец ФО
+	 * 			- РѕР±СЂР°Р·РµС† Р¤Рћ
 	 */
 	private void fillItemByModel(FinOperation finOper, OperationModel finOperModel, Date processDate) {
 		if (processDate != null)
 			finOper.setKeepDate(processDate);
 		else
 			finOper.setKeepDate(DateTimeUtils.getDayStart(DateTimeUtils.nowDate()));
-		// в двойке осуществлялся пересчет курса в 4- ке это делается по нажатию кнопки
+		// РІ РґРІРѕР№РєРµ РѕСЃСѓС‰РµСЃС‚РІР»СЏР»СЃСЏ РїРµСЂРµСЃС‡РµС‚ РєСѓСЂСЃР° РІ 4- РєРµ СЌС‚Рѕ РґРµР»Р°РµС‚СЃСЏ РїРѕ РЅР°Р¶Р°С‚РёСЋ РєРЅРѕРїРєРё
 	}
 
 	/**
-	 * Осуществляется создание спецификаций создаваемой фин. операции
+	 * РћСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ СЃРѕР·РґР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёР№ СЃРѕР·РґР°РІР°РµРјРѕР№ С„РёРЅ. РѕРїРµСЂР°С†РёРё
 	 * 
 	 * @param srcDocHead
-	 * 			- документ-источник
+	 * 			- РґРѕРєСѓРјРµРЅС‚-РёСЃС‚РѕС‡РЅРёРє
 	 * @param finOper
-	 * 			- создаваемая фин. операция
+	 * 			- СЃРѕР·РґР°РІР°РµРјР°СЏ С„РёРЅ. РѕРїРµСЂР°С†РёСЏ
 	 * @param finOperModel
-	 * 			- образец фин. операции
+	 * 			- РѕР±СЂР°Р·РµС† С„РёРЅ. РѕРїРµСЂР°С†РёРё
 	 */
 	private void createFinSpecs(DocHead srcDocHead, FinOperation finOper, OperationModel finOperModel) {
-		// в двойке был набор данных, здесь решили работать с картой
-		// но и в карте нет необходимости, можно ограничится списком
-		// пока оставлю карту вдруг появятся дополнительные параметры
+		// РІ РґРІРѕР№РєРµ Р±С‹Р» РЅР°Р±РѕСЂ РґР°РЅРЅС‹С…, Р·РґРµСЃСЊ СЂРµС€РёР»Рё СЂР°Р±РѕС‚Р°С‚СЊ СЃ РєР°СЂС‚РѕР№
+		// РЅРѕ Рё РІ РєР°СЂС‚Рµ РЅРµС‚ РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚Рё, РјРѕР¶РЅРѕ РѕРіСЂР°РЅРёС‡РёС‚СЃСЏ СЃРїРёСЃРєРѕРј
+		// РїРѕРєР° РѕСЃС‚Р°РІР»СЋ РєР°СЂС‚Сѓ РІРґСЂСѓРі РїРѕСЏРІСЏС‚СЃСЏ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹
 		finSpecList.clear();
 		for (SpecificationModel finSpecModel : finOperModel.getSpecifications()) {
-			// в методе calculateFormula создаются и 
-			// пересчитываются по алгоритму счета создаваемой фин операции и заносятся в map
+			// РІ РјРµС‚РѕРґРµ calculateFormula СЃРѕР·РґР°СЋС‚СЃСЏ Рё 
+			// РїРµСЂРµСЃС‡РёС‚С‹РІР°СЋС‚СЃСЏ РїРѕ Р°Р»РіРѕСЂРёС‚РјСѓ СЃС‡РµС‚Р° СЃРѕР·РґР°РІР°РµРјРѕР№ С„РёРЅ РѕРїРµСЂР°С†РёРё Рё Р·Р°РЅРѕСЃСЏС‚СЃСЏ РІ map
 			calculateFormula(finSpecModel, null);
 			for (Specification finSpec : finSpecList) {
 				List<SpecificationModel> finFeatureModelList = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(SpecificationModel.class)
 						.add(Restrictions.eq("Parent", finSpecModel))
 						.setFlushMode(FlushMode.MANUAL));
-				//цикл по характеристикам каждой спецификации образца
+				//С†РёРєР» РїРѕ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєР°Рј РєР°Р¶РґРѕР№ СЃРїРµС†РёС„РёРєР°С†РёРё РѕР±СЂР°Р·С†Р°
 				for (SpecificationModel finFeatureModel : finFeatureModelList) {
-					// в методе calculateFormula создаются и 
-					// пересчитываются по алгоритму признаки создаваемой фин операции и заносятся в map
+					// РІ РјРµС‚РѕРґРµ calculateFormula СЃРѕР·РґР°СЋС‚СЃСЏ Рё 
+					// РїРµСЂРµСЃС‡РёС‚С‹РІР°СЋС‚СЃСЏ РїРѕ Р°Р»РіРѕСЂРёС‚РјСѓ РїСЂРёР·РЅР°РєРё СЃРѕР·РґР°РІР°РµРјРѕР№ С„РёРЅ РѕРїРµСЂР°С†РёРё Рё Р·Р°РЅРѕСЃСЏС‚СЃСЏ РІ map
 					calculateFormula(finFeatureModel, finSpec);					
 				}
 
@@ -469,23 +469,23 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 	}
 
 	/**
-	 * Осуществляется создание спецификаций создаваемой фин. операции, а также пересчет ее суммы с учетом загружаемых алгоритмов
+	 * РћСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ СЃРѕР·РґР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёР№ СЃРѕР·РґР°РІР°РµРјРѕР№ С„РёРЅ. РѕРїРµСЂР°С†РёРё, Р° С‚Р°РєР¶Рµ РїРµСЂРµСЃС‡РµС‚ РµРµ СЃСѓРјРјС‹ СЃ СѓС‡РµС‚РѕРј Р·Р°РіСЂСѓР¶Р°РµРјС‹С… Р°Р»РіРѕСЂРёС‚РјРѕРІ
 	 * 
 	 * @param finSpecModel
-	 * 		- спецификация образца фин. операции
+	 * 		- СЃРїРµС†РёС„РёРєР°С†РёСЏ РѕР±СЂР°Р·С†Р° С„РёРЅ. РѕРїРµСЂР°С†РёРё
 	 * @param parentSpec
-	 * 		- для проводок признаков - идентификатор проводки счетов, которой принадлежит данная проводка, а
-	 *	для проводок счетов - null 
+	 * 		- РґР»СЏ РїСЂРѕРІРѕРґРѕРє РїСЂРёР·РЅР°РєРѕРІ - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂРѕРІРѕРґРєРё СЃС‡РµС‚РѕРІ, РєРѕС‚РѕСЂРѕР№ РїСЂРёРЅР°РґР»РµР¶РёС‚ РґР°РЅРЅР°СЏ РїСЂРѕРІРѕРґРєР°, Р°
+	 *	РґР»СЏ РїСЂРѕРІРѕРґРѕРє СЃС‡РµС‚РѕРІ - null 
 	 */
 	private void calculateFormula(SpecificationModel finSpecModel, Specification parentSpec) {
-		//сумма возвращаемая BAI
+		//СЃСѓРјРјР° РІРѕР·РІСЂР°С‰Р°РµРјР°СЏ BAI
 		BigDecimal sum = BigDecimal.ZERO;
 		FinConfig config = ConfigurationHelper.getConfiguration(); 
 		CurrencyServiceLocal curServ = (CurrencyServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CurrencyServiceLocal.LOCAL_SERVICE_NAME);
 		Currency srcDocCurrency = params.getDocument().getCurrency();
 		Currency finOperCurrency = finOper.getCurrency();
 		Specification dstFinSpec = createFinSpec(finSpecModel, parentSpec, null, null);
-		//если в документе источнике есть спецификации
+		//РµСЃР»Рё РІ РґРѕРєСѓРјРµРЅС‚Рµ РёСЃС‚РѕС‡РЅРёРєРµ РµСЃС‚СЊ СЃРїРµС†РёС„РёРєР°С†РёРё
 		if (docSpecItemList != null)
 			for (DocumentSpecItem dsi : docSpecItemList) {
 				Map<String, Object> baiParams = createBAiParams(dsi, dstFinSpec);
@@ -494,24 +494,24 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 				sum = MathUtils.addNullable(sum, listener.getSum(), new RoundContext(config.getCurrencyPrec()));
 			}
 		else {
-			// если в документе источнике нет спецификаций
-			// как то инициализируется алгоритм и запускается
+			// РµСЃР»Рё РІ РґРѕРєСѓРјРµРЅС‚Рµ РёСЃС‚РѕС‡РЅРёРєРµ РЅРµС‚ СЃРїРµС†РёС„РёРєР°С†РёР№
+			// РєР°Рє С‚Рѕ РёРЅРёС†РёР°Р»РёР·РёСЂСѓРµС‚СЃСЏ Р°Р»РіРѕСЂРёС‚Рј Рё Р·Р°РїСѓСЃРєР°РµС‚СЃСЏ
 			Map<String, Object> baiParams = createBAiParams(null, dstFinSpec);
 			BusinessAddinListenerImpl listener = new BusinessAddinListenerImpl();
 			BusinessAddinEngineLocator.locate().perform(finSpecModel.getAlg(), baiParams, listener);
 			sum = listener.getSum();
 		}
-		//конвертим полученную сумму в валюту фин. операции
+		//РєРѕРЅРІРµСЂС‚РёРј РїРѕР»СѓС‡РµРЅРЅСѓСЋ СЃСѓРјРјСѓ РІ РІР°Р»СЋС‚Сѓ С„РёРЅ. РѕРїРµСЂР°С†РёРё
 		BigDecimal sumCur = BigDecimal.ZERO;
 		if (finOperCurrency.getId() != srcDocCurrency.getId()) {
 			sumCur = currencyConvert(finOperCurrency, srcDocCurrency, curServ, sum, config);					
 		} else
 			sumCur = sum;
 
-		// сумма спецификации фин. операции в национальной валюте
+		// СЃСѓРјРјР° СЃРїРµС†РёС„РёРєР°С†РёРё С„РёРЅ. РѕРїРµСЂР°С†РёРё РІ РЅР°С†РёРѕРЅР°Р»СЊРЅРѕР№ РІР°Р»СЋС‚Рµ
 		BigDecimal sumNat = BigDecimal.ZERO;
 		Currency natCurrency = config.getNatCurrency();
-		//конвертим полученную сумму в национальную валюту
+		//РєРѕРЅРІРµСЂС‚РёРј РїРѕР»СѓС‡РµРЅРЅСѓСЋ СЃСѓРјРјСѓ РІ РЅР°С†РёРѕРЅР°Р»СЊРЅСѓСЋ РІР°Р»СЋС‚Сѓ
 		if (natCurrency.getId() != srcDocCurrency.getId())
 			sumNat = currencyConvert(natCurrency, srcDocCurrency, curServ, sum, config);
 		else 
@@ -521,18 +521,18 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 	}
 
 	/**
-	 * Конвертация значений сумм
+	 * РљРѕРЅРІРµСЂС‚Р°С†РёСЏ Р·РЅР°С‡РµРЅРёР№ СЃСѓРјРј
 	 * @param curTo
-	 * 			- в какую валюту
+	 * 			- РІ РєР°РєСѓСЋ РІР°Р»СЋС‚Сѓ
 	 * @param curFrom
-	 * 			- из какой валюты
+	 * 			- РёР· РєР°РєРѕР№ РІР°Р»СЋС‚С‹
 	 * @param curServ
-	 * 			- сервис конвертации валют
+	 * 			- СЃРµСЂРІРёСЃ РєРѕРЅРІРµСЂС‚Р°С†РёРё РІР°Р»СЋС‚
 	 * @param currencyFromAmount
-	 * 			- значение которое хотим конвертить
+	 * 			- Р·РЅР°С‡РµРЅРёРµ РєРѕС‚РѕСЂРѕРµ С…РѕС‚РёРј РєРѕРЅРІРµСЂС‚РёС‚СЊ
 	 * @param config
-	 * 			- кофигурация модуля фин. учет
-	 * @return currencyFromAmount в валюте curTo
+	 * 			- РєРѕС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ С„РёРЅ. СѓС‡РµС‚
+	 * @return currencyFromAmount РІ РІР°Р»СЋС‚Рµ curTo
 	 */
 	private BigDecimal currencyConvert(Currency curTo, Currency curFrom, CurrencyServiceLocal curServ, BigDecimal currencyFromAmount, FinConfig config) {
 		return MathUtils.round(curServ.conversion(curTo, curFrom, finOper.getCurRateAuthority(), finOper.getCurRateType(), finOper.getKeepDate(), currencyFromAmount),
@@ -540,12 +540,12 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 
 	}
 	/**
-	 * Создает спецификацию(счет/признак) фин. операции
+	 * РЎРѕР·РґР°РµС‚ СЃРїРµС†РёС„РёРєР°С†РёСЋ(СЃС‡РµС‚/РїСЂРёР·РЅР°Рє) С„РёРЅ. РѕРїРµСЂР°С†РёРё
 	 * 
-	 * @param finSpecModel - образец спецификации
-	 * @param parent	   - для проводок признаков - идентификатор проводки счетов, которой принадлежит данная проводка, а
-	 *					для проводок счетов - null 
-	 * @param sumSpec	   - значение суммы создаваемой спецификации
+	 * @param finSpecModel - РѕР±СЂР°Р·РµС† СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param parent	   - РґР»СЏ РїСЂРѕРІРѕРґРѕРє РїСЂРёР·РЅР°РєРѕРІ - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂРѕРІРѕРґРєРё СЃС‡РµС‚РѕРІ, РєРѕС‚РѕСЂРѕР№ РїСЂРёРЅР°РґР»РµР¶РёС‚ РґР°РЅРЅР°СЏ РїСЂРѕРІРѕРґРєР°, Р°
+	 *					РґР»СЏ РїСЂРѕРІРѕРґРѕРє СЃС‡РµС‚РѕРІ - null 
+	 * @param sumSpec	   - Р·РЅР°С‡РµРЅРёРµ СЃСѓРјРјС‹ СЃРѕР·РґР°РІР°РµРјРѕР№ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	private Specification createFinSpec(SpecificationModel finSpecModel, Specification parent, BigDecimal sumCur, BigDecimal sumNat) {
 		Specification dstFinSpec = getServiceFinSpec().initialize();
@@ -570,11 +570,11 @@ public class FinOperProcessorImpl implements FinOperProcessor{
 	}
 
 	/**
-	 * Устанавливает какие атрибуты можно копировать из спецификации образца фин. операции в 
-	 * спецификацию создаваемой фин. операции
+	 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РєР°РєРёРµ Р°С‚СЂРёР±СѓС‚С‹ РјРѕР¶РЅРѕ РєРѕРїРёСЂРѕРІР°С‚СЊ РёР· СЃРїРµС†РёС„РёРєР°С†РёРё РѕР±СЂР°Р·С†Р° С„РёРЅ. РѕРїРµСЂР°С†РёРё РІ 
+	 * СЃРїРµС†РёС„РёРєР°С†РёСЋ СЃРѕР·РґР°РІР°РµРјРѕР№ С„РёРЅ. РѕРїРµСЂР°С†РёРё
 	 * 
-	 * @param attributeName 	-	 имя атрибута
-	 * @return						<code>true</code> - если можно, иначе <code>false</code>				
+	 * @param attributeName 	-	 РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
+	 * @return						<code>true</code> - РµСЃР»Рё РјРѕР¶РЅРѕ, РёРЅР°С‡Рµ <code>false</code>				
 	 */
 	public static boolean isMutableFinSpecAttribute(String attributeName) {
 		String[] attributeNames = new String[] {"Id", "FinOper", "Parent", "Alg", "SumNat", "SumCur", "Formula"};

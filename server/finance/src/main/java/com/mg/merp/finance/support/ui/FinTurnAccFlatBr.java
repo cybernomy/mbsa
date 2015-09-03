@@ -39,7 +39,7 @@ import com.mg.merp.finance.model.TurnAccount;
 import com.mg.merp.finance.totals.FinanceTotalsGate;
 
 /**
- * Контроллер браузера бизнес-компонента "Остатки и оброты по счетам"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃС‚Р°С‚РєРё Рё РѕР±СЂРѕС‚С‹ РїРѕ СЃС‡РµС‚Р°Рј"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -257,8 +257,8 @@ public class FinTurnAccFlatBr extends AbstractFinTurnBrowseForm { //DefaultHiera
 			 */
 			@Override
 			public FieldMetadata getColumnMetadata(int column) {
-				//для полей аналитик встроенные метаданные представляют целые значения,
-				//но требуется отображение строк
+				//РґР»СЏ РїРѕР»РµР№ Р°РЅР°Р»РёС‚РёРє РІСЃС‚СЂРѕРµРЅРЅС‹Рµ РјРµС‚Р°РґР°РЅРЅС‹Рµ РїСЂРµРґСЃС‚Р°РІР»СЏСЋС‚ С†РµР»С‹Рµ Р·РЅР°С‡РµРЅРёСЏ,
+				//РЅРѕ С‚СЂРµР±СѓРµС‚СЃСЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ СЃС‚СЂРѕРє
 				if (isAnalyticsColumn(getColumnName(column)))
 					return null;
 				else

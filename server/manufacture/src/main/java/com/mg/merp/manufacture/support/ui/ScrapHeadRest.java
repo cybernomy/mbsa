@@ -24,7 +24,7 @@ import com.mg.merp.qualitycontrol.model.ScrapType;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер формы условий отбора актов на списание потерь 
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ 
  * 
  * @author leonova
  * @version $Id: ScrapHeadRest.java,v 1.3 2007/07/31 06:31:06 safonov Exp $ 
@@ -34,7 +34,7 @@ public class ScrapHeadRest extends ManufactureDocumentRest {
 	@DataItemName("Manufacture.ScrapDocHead.CauseOper")
 	private JobRoute causeOper = null;
 	private WorkCenter causeWorkCenter = null;
-	private Job CauseJob = null; //названо по JavaBean NC, чтобы работал SearchHelp
+	private Job CauseJob = null; //РЅР°Р·РІР°РЅРѕ РїРѕ JavaBean NC, С‡С‚РѕР±С‹ СЂР°Р±РѕС‚Р°Р» SearchHelp
 	@DataItemName("Manufacture.InputDocHead.Contractor")
 	private Contractor causeContractor = null;
 	@DataItemName("Manufacture.InputDocHead.Employee")
@@ -43,7 +43,7 @@ public class ScrapHeadRest extends ManufactureDocumentRest {
 	@DataItemName("Manufacture.ScrapDocHead.DetectOper")
 	private JobRoute detectOper = null;
 	private WorkCenter detectWorkCenter = null;
-	private Job DetectJob = null; //названо по JavaBean NC, чтобы работал SearchHelp
+	private Job DetectJob = null; //РЅР°Р·РІР°РЅРѕ РїРѕ JavaBean NC, С‡С‚РѕР±С‹ СЂР°Р±РѕС‚Р°Р» SearchHelp
 	@DataItemName("Manufacture.InputDocHead.Contractor")
 	private Contractor detectContractor = null;
 	@DataItemName("Manufacture.InputDocHead.Employee")

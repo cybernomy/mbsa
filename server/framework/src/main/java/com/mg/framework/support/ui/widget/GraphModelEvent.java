@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.UIEvent;
 import com.mg.framework.support.ui.widget.graph.GraphElement;
 
 /**
- * Событие на изменение модели графа
+ * РЎРѕР±С‹С‚РёРµ РЅР° РёР·РјРµРЅРµРЅРёРµ РјРѕРґРµР»Рё РіСЂР°С„Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: GraphModelEvent.java,v 1.2 2006/11/21 15:39:15 safonov Exp $
@@ -32,7 +32,7 @@ public class GraphModelEvent extends UIEvent {
 	}
 
 	/**
-	 * получить измененный элемент графа
+	 * РїРѕР»СѓС‡РёС‚СЊ РёР·РјРµРЅРµРЅРЅС‹Р№ СЌР»РµРјРµРЅС‚ РіСЂР°С„Р°
 	 * 
 	 * @return
 	 */

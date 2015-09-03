@@ -23,7 +23,7 @@ import com.mg.merp.humanresources.OrderItemServiceLocal;
 import com.mg.merp.humanresources.model.OrderItem;
 
 /**
- * Реализация бизнес-компонента "Пункты приказа"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСѓРЅРєС‚С‹ РїСЂРёРєР°Р·Р°"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

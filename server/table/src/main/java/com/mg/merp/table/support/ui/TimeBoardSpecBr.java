@@ -54,7 +54,7 @@ import com.mg.merp.table.support.Messages;
 import com.mg.merp.table.support.TimeBoardHelper;
 
 /**
- * Контроллер браузера "Табель"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "РўР°Р±РµР»СЊ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -119,9 +119,9 @@ public class TimeBoardSpecBr extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Выбрать тип времени с учетом по дням"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "Р’С‹Р±СЂР°С‚СЊ С‚РёРї РІСЂРµРјРµРЅРё СЃ СѓС‡РµС‚РѕРј РїРѕ РґРЅСЏРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionChooseDayliTimeKind(WidgetEvent event) throws Exception {
 		final int[] columns = getSelectedColumns();
@@ -143,8 +143,8 @@ public class TimeBoardSpecBr extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Установить кол-во часов"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕР»-РІРѕ С‡Р°СЃРѕРІ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionSetHours(WidgetEvent event) {
 		final int[] columns = getSelectedColumns();

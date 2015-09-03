@@ -23,7 +23,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер формы условий отбора ЗНП
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° Р—РќРџ
  * 
  * @author leonova
  * @version $Id: JobRest.java,v 1.3 2006/10/18 12:59:01 leonova Exp $ 

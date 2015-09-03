@@ -21,7 +21,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.warehouse.model.OrderHeadModel;
 
 /**
- * Вспомогательный класс для отображения формы списка образцов заказов
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ Р·Р°РєР°Р·РѕРІ
  * 
  * @author leonova
  * @version $Id: OrderHeadModelMaintenanceEJBQLTableModel.java,v 1.1 2006/09/12 10:55:51 leonova Exp $ 

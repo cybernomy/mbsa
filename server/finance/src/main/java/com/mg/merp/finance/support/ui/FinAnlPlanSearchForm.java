@@ -27,7 +27,7 @@ import com.mg.merp.finance.model.Account;
 import com.mg.merp.finance.model.Analytics;
 
 /**
- * Класс отображения SearchHelp для аналитических счетов в финансовых
+ * РљР»Р°СЃСЃ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ SearchHelp РґР»СЏ Р°РЅР°Р»РёС‚РёС‡РµСЃРєРёС… СЃС‡РµС‚РѕРІ РІ С„РёРЅР°РЅСЃРѕРІС‹С…
  *  
  * @author leonova
  * @version $Id: FinAnlPlanSearchForm.java,v 1.2 2009/02/09 09:46:07 safonov Exp $

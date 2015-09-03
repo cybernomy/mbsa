@@ -19,7 +19,7 @@ import com.mg.framework.api.EntityInterceptorManager;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Локатор менеджера перехватчиков действий над объектами сущностями
+ * Р›РѕРєР°С‚РѕСЂ РјРµРЅРµРґР¶РµСЂР° РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РґРµР№СЃС‚РІРёР№ РЅР°Рґ РѕР±СЉРµРєС‚Р°РјРё СЃСѓС‰РЅРѕСЃС‚СЏРјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityInterceptorManagerLocator.java,v 1.1 2006/08/04 12:33:51 safonov Exp $
@@ -28,9 +28,9 @@ public class EntityInterceptorManagerLocator {
     private static volatile EntityInterceptorManager instance = null;
     
     /**
-     * получить менеджер
+     * РїРѕР»СѓС‡РёС‚СЊ РјРµРЅРµРґР¶РµСЂ
      * 
-     * @return	менеджер
+     * @return	РјРµРЅРµРґР¶РµСЂ
      */
     public static EntityInterceptorManager locate() {
         if (instance == null)

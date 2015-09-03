@@ -18,7 +18,7 @@ import com.mg.merp.mfreference.model.DayTime;
 import com.mg.merp.mfreference.model.ScheduleDirection;
 
 /**
- * Бизнес-компонент "Сменный календарь"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРјРµРЅРЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ"
  * 
  * @author leonova
  * @version $Id: DayTimeServiceLocal.java,v 1.2 2007/07/30 10:25:31 safonov Exp $
@@ -27,18 +27,18 @@ public interface DayTimeServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<DayTime, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/mfreference/DayTime";
 	
 	/**
-	 * получение диапазона времени
+	 * РїРѕР»СѓС‡РµРЅРёРµ РґРёР°РїР°Р·РѕРЅР° РІСЂРµРјРµРЅРё
 	 * 
-	 * @param weekCalId			недельный календарь
-	 * @param baseDateTime		дата
-	 * @param runTime			время в тиках
-	 * @param schedDirection	направление планирования
-	 * @return	диапазон времени
+	 * @param weekCalId			РЅРµРґРµР»СЊРЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ
+	 * @param baseDateTime		РґР°С‚Р°
+	 * @param runTime			РІСЂРµРјСЏ РІ С‚РёРєР°С…
+	 * @param schedDirection	РЅР°РїСЂР°РІР»РµРЅРёРµ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @return	РґРёР°РїР°Р·РѕРЅ РІСЂРµРјРµРЅРё
 	 */
 	TimeRange getTimes(int weekCalId, long baseDateTime, long runTime, ScheduleDirection schedDirection);
 

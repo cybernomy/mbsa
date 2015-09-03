@@ -26,7 +26,7 @@ import com.mg.merp.core.model.SysClient;
 import com.mg.merp.personnelref.PersonnelConfigServiceLocal;
 
 /**
- * Контроллер комманды меню "Конфигурация модуля <Управление персоналом>"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРјРјР°РЅРґС‹ РјРµРЅСЋ "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РЈРїСЂР°РІР»РµРЅРёРµ РїРµСЂСЃРѕРЅР°Р»РѕРј>"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PersonelConfigMenuCommand.java,v 1.2 2008/08/15 15:07:15 sharapov Exp $

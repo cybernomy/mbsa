@@ -28,7 +28,7 @@ import com.mg.merp.factura.FacturaHeadModelOutServiceLocal;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Браузер образцов исходящих счет-фактур
+ * Р‘СЂР°СѓР·РµСЂ РѕР±СЂР°Р·С†РѕРІ РёСЃС…РѕРґСЏС‰РёС… СЃС‡РµС‚-С„Р°РєС‚СѓСЂ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: FacturaHeadModelOutBr.java,v 1.4 2006/09/12 11:12:23 leonova Exp $

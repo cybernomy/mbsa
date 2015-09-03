@@ -37,15 +37,15 @@ import com.mg.merp.baiengine.generic.AbstractBusinessAddin;
 import com.mg.merp.report.parameters.ReportParameter;
 
 /**
- * Базовый класс BAi формирования набора данных для генератора отчётов. Класс
- * алгоритма должен реализовывать следующий метод
- * <code>protected void doFillDataSet()</code> и возвращать заполненый набор
- * данных, представляющий из себя {@link com.mg.framework.api.dataset.DataSet DataSet}. Алгоритм
- * имеет доступ к параметрам набора данных через метод {@link #getDataSetParameter(String)}. Доступ к идентификатору
- * выбраных сущностей осуществляется вызовом метода {@link #getEntityIds()}, возвращающего массив объектов типа
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ BAi С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С… РґР»СЏ РіРµРЅРµСЂР°С‚РѕСЂР° РѕС‚С‡С‘С‚РѕРІ. РљР»Р°СЃСЃ
+ * Р°Р»РіРѕСЂРёС‚РјР° РґРѕР»Р¶РµРЅ СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёР№ РјРµС‚РѕРґ
+ * <code>protected void doFillDataSet()</code> Рё РІРѕР·РІСЂР°С‰Р°С‚СЊ Р·Р°РїРѕР»РЅРµРЅС‹Р№ РЅР°Р±РѕСЂ
+ * РґР°РЅРЅС‹С…, РїСЂРµРґСЃС‚Р°РІР»СЏСЋС‰РёР№ РёР· СЃРµР±СЏ {@link com.mg.framework.api.dataset.DataSet DataSet}. РђР»РіРѕСЂРёС‚Рј
+ * РёРјРµРµС‚ РґРѕСЃС‚СѓРї Рє РїР°СЂР°РјРµС‚СЂР°Рј РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С… С‡РµСЂРµР· РјРµС‚РѕРґ {@link #getDataSetParameter(String)}. Р”РѕСЃС‚СѓРї Рє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ
+ * РІС‹Р±СЂР°РЅС‹С… СЃСѓС‰РЅРѕСЃС‚РµР№ РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ РІС‹Р·РѕРІРѕРј РјРµС‚РѕРґР° {@link #getEntityIds()}, РІРѕР·РІСЂР°С‰Р°СЋС‰РµРіРѕ РјР°СЃСЃРёРІ РѕР±СЉРµРєС‚РѕРІ С‚РёРїР°
  * java.io.Serializable.
  * 
- * <p>Пример1:
+ * <p>РџСЂРёРјРµСЂ1:
  * 
  * <pre>
  * protected void doFillDataSet() {
@@ -54,13 +54,13 @@ import com.mg.merp.report.parameters.ReportParameter;
  * 		setParameter(s, &quot;param_&quot; + s);
  * 	addRow();
  * 	setField(&quot;v2&quot;, (Integer) getEntityId());
- * 	setField(&quot;code&quot;, &quot;СТРОКА&quot;);
+ * 	setField(&quot;code&quot;, &quot;РЎРўР РћРљРђ&quot;);
  * 	addRow();
  * 	setField(&quot;v2&quot;, new Integer(777));
  * 	setField(&quot;code&quot;, &quot;string777&quot;);
  * }</pre>
  * 
- * <p>Пример2:
+ * <p>РџСЂРёРјРµСЂ2:
  * 
  * <pre>
  * protected void doFillDataSet() {
@@ -72,7 +72,7 @@ import com.mg.merp.report.parameters.ReportParameter;
  * 	putData(r3);
  * }</pre>
  * 
- * <p>Пример3: Параметры набора данных
+ * <p>РџСЂРёРјРµСЂ3: РџР°СЂР°РјРµС‚СЂС‹ РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С…
  * 
  * <pre>
  * protected void doFillDataSet() {
@@ -87,36 +87,36 @@ import com.mg.merp.report.parameters.ReportParameter;
  */
 public abstract class ReportBusinessAddin extends AbstractBusinessAddin<DataSet> {
 	/**
-	 * Метаданные для построения DataSet
+	 * РњРµС‚Р°РґР°РЅРЅС‹Рµ РґР»СЏ РїРѕСЃС‚СЂРѕРµРЅРёСЏ DataSet
 	 */
 	//private RelationInformation relationInfo;
 	private String[] columnNames;
 	private String[] columnTypes;
 	/**
-	 * идентификаторы выбранных сущностей, может быть <code>null</code>
+	 * РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂС‹ РІС‹Р±СЂР°РЅРЅС‹С… СЃСѓС‰РЅРѕСЃС‚РµР№, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>
 	 */
 	private Serializable[] entityIds;
 	/**
-	 * бизнес-компонет для которого генерируется отчет
+	 * Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµС‚ РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РѕС‚С‡РµС‚
 	 */
 	private BusinessObjectService businessService;
 	/**
-	 * набор данных
+	 * РЅР°Р±РѕСЂ РґР°РЅРЅС‹С…
 	 */
 	private DataSet dataSet;
 	/**
-	 * Входные параметры отчёта
+	 * Р’С…РѕРґРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РѕС‚С‡С‘С‚Р°
 	 */
 	private Map<String, ReportParameter> reportParameterValues;
 
 	/**
-	 * Входные параметры для конкретного набора данных
+	 * Р’С…РѕРґРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РґР»СЏ РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С…
 	 */
 	private Map<String, Object> datataSetParameterValues;
 
 	/**
-	 * контекст выполнения отчета, в данном контексте возможно сохранять данные доступные
-	 * для всех BAi участвующих в формировании отчета
+	 * РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРёСЏ РѕС‚С‡РµС‚Р°, РІ РґР°РЅРЅРѕРј РєРѕРЅС‚РµРєСЃС‚Рµ РІРѕР·РјРѕР¶РЅРѕ СЃРѕС…СЂР°РЅСЏС‚СЊ РґР°РЅРЅС‹Рµ РґРѕСЃС‚СѓРїРЅС‹Рµ
+	 * РґР»СЏ РІСЃРµС… BAi СѓС‡Р°СЃС‚РІСѓСЋС‰РёС… РІ С„РѕСЂРјРёСЂРѕРІР°РЅРёРё РѕС‚С‡РµС‚Р°
 	 */
 	private Map<String, Object> reportContext;
 
@@ -135,7 +135,7 @@ public abstract class ReportBusinessAddin extends AbstractBusinessAddin<DataSet>
 	}
 
 	/**
-	 * подготовка параметров
+	 * РїРѕРґРіРѕС‚РѕРІРєР° РїР°СЂР°РјРµС‚СЂРѕРІ
 	 */
 	private void prepareDataSetParams() {
 		String[] paramNames = datataSetParameterValues.keySet().toArray(new String[datataSetParameterValues.size()]);
@@ -145,7 +145,7 @@ public abstract class ReportBusinessAddin extends AbstractBusinessAddin<DataSet>
 		}
 		Object ids = datataSetParameterValues.get(RptProperties.ENTITY_IDS_DATASET_PARAMETER);
 		if (ids != null) {
-			//параметр может быть массивом или одиночным значением, преобразуем одиночное в массив
+			//РїР°СЂР°РјРµС‚СЂ РјРѕР¶РµС‚ Р±С‹С‚СЊ РјР°СЃСЃРёРІРѕРј РёР»Рё РѕРґРёРЅРѕС‡РЅС‹Рј Р·РЅР°С‡РµРЅРёРµРј, РїСЂРµРѕР±СЂР°Р·СѓРµРј РѕРґРёРЅРѕС‡РЅРѕРµ РІ РјР°СЃСЃРёРІ
 			if (ids instanceof Serializable[])
 				entityIds = (Serializable[]) ids;
 			else
@@ -157,7 +157,7 @@ public abstract class ReportBusinessAddin extends AbstractBusinessAddin<DataSet>
 	}
 
 	/**
-	 * создание DataSet на основе метаданных, содержащихся в {@link #relationInfo}
+	 * СЃРѕР·РґР°РЅРёРµ DataSet РЅР° РѕСЃРЅРѕРІРµ РјРµС‚Р°РґР°РЅРЅС‹С…, СЃРѕРґРµСЂР¶Р°С‰РёС…СЃСЏ РІ {@link #relationInfo}
 	 * 
 	 * @throws ClassNotFoundException
 	 */
@@ -173,38 +173,38 @@ public abstract class ReportBusinessAddin extends AbstractBusinessAddin<DataSet>
 	}
 
 	/**
-	 * добавление записи в набор данных
+	 * РґРѕР±Р°РІР»РµРЅРёРµ Р·Р°РїРёСЃРё РІ РЅР°Р±РѕСЂ РґР°РЅРЅС‹С…
 	 * 
-	 * @param data	массив данных, представляющих собой одну запись набора данных
+	 * @param data	РјР°СЃСЃРёРІ РґР°РЅРЅС‹С…, РїСЂРµРґСЃС‚Р°РІР»СЏСЋС‰РёС… СЃРѕР±РѕР№ РѕРґРЅСѓ Р·Р°РїРёСЃСЊ РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С…
 	 */
 	protected void putData(Object[] data) {
 		dataSet.addRow(data);
 	}
 
 	/**
-	 * Установка значения поля fieldNum в value для текущей строки
+	 * РЈСЃС‚Р°РЅРѕРІРєР° Р·РЅР°С‡РµРЅРёСЏ РїРѕР»СЏ fieldNum РІ value РґР»СЏ С‚РµРєСѓС‰РµР№ СЃС‚СЂРѕРєРё
 	 * 
-	 * @param fieldNum	номер столбца
-	 * @param value	новое значение
+	 * @param fieldNum	РЅРѕРјРµСЂ СЃС‚РѕР»Р±С†Р°
+	 * @param value	РЅРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
 	 */
 	protected void setField(int fieldNum, Object value) {
 		dataSet.setValueAt(value, fieldNum);
 	}
 
 	/**
-	 * Установка значения поля fieldName в value для текущей строки
+	 * РЈСЃС‚Р°РЅРѕРІРєР° Р·РЅР°С‡РµРЅРёСЏ РїРѕР»СЏ fieldName РІ value РґР»СЏ С‚РµРєСѓС‰РµР№ СЃС‚СЂРѕРєРё
 	 * 
-	 * @param fieldName	имя столбца
-	 * @param value	новое значение
+	 * @param fieldName	РёРјСЏ СЃС‚РѕР»Р±С†Р°
+	 * @param value	РЅРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
 	 */
 	protected void setField(String fieldName, Object value) {
 		dataSet.setValueAt(value, fieldName);
 	}
 
 	/**
-	 * добавление новой пустой строки в набор данных
+	 * РґРѕР±Р°РІР»РµРЅРёРµ РЅРѕРІРѕР№ РїСѓСЃС‚РѕР№ СЃС‚СЂРѕРєРё РІ РЅР°Р±РѕСЂ РґР°РЅРЅС‹С…
 	 * 
-	 * @return позиция курсора
+	 * @return РїРѕР·РёС†РёСЏ РєСѓСЂСЃРѕСЂР°
 	 */
 	protected int addRow() {
 		return dataSet.addRow(new Object[dataSet.getColumnsInfo().length]);
@@ -221,15 +221,15 @@ public abstract class ReportBusinessAddin extends AbstractBusinessAddin<DataSet>
 	}
 
 	/**
-	 * заполнение набора данных, необходимо переопределять в классах наследниках
+	 * Р·Р°РїРѕР»РЅРµРЅРёРµ РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С…, РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРѕРїСЂРµРґРµР»СЏС‚СЊ РІ РєР»Р°СЃСЃР°С… РЅР°СЃР»РµРґРЅРёРєР°С…
 	 */
 	protected abstract void doFillDataSet();
 
 	/**
-	 * получение идентификатора сущности для которой генерируется отчет
+	 * РїРѕР»СѓС‡РµРЅРёРµ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР° СЃСѓС‰РЅРѕСЃС‚Рё РґР»СЏ РєРѕС‚РѕСЂРѕР№ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РѕС‚С‡РµС‚
 	 *
-	 * @return идентификатор текущей сущности, может быть <code>null</code>
-	 * @deprecated используйте {@link #getEntityId()}
+	 * @return РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµРєСѓС‰РµР№ СЃСѓС‰РЅРѕСЃС‚Рё, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>
+	 * @deprecated РёСЃРїРѕР»СЊР·СѓР№С‚Рµ {@link #getEntityId()}
 	 */
 	@Deprecated
 	public Serializable getRecordId() {
@@ -237,9 +237,9 @@ public abstract class ReportBusinessAddin extends AbstractBusinessAddin<DataSet>
 	}
 
 	/**
-	 * получение идентификатора сущности для которой генерируется отчет
+	 * РїРѕР»СѓС‡РµРЅРёРµ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР° СЃСѓС‰РЅРѕСЃС‚Рё РґР»СЏ РєРѕС‚РѕСЂРѕР№ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РѕС‚С‡РµС‚
 	 * 
-	 * @return	идентификатор первой сущности из списка идентификаторов или <code>null</code> если список пустой
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРµСЂРІРѕР№ СЃСѓС‰РЅРѕСЃС‚Рё РёР· СЃРїРёСЃРєР° РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ РёР»Рё <code>null</code> РµСЃР»Рё СЃРїРёСЃРѕРє РїСѓСЃС‚РѕР№
 	 */
 	protected Serializable getEntityId() {
 		if (entityIds != null && entityIds.length > 0)
@@ -249,27 +249,27 @@ public abstract class ReportBusinessAddin extends AbstractBusinessAddin<DataSet>
 	}
 	
 	/**
-	 * получение списка идентификаторов сущностей для которых генерируется отчет
+	 * РїРѕР»СѓС‡РµРЅРёРµ СЃРїРёСЃРєР° РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ СЃСѓС‰РЅРѕСЃС‚РµР№ РґР»СЏ РєРѕС‚РѕСЂС‹С… РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РѕС‚С‡РµС‚
 	 * 
-	 * @return	список идентификаторов сущностей или <code>null</code> если список пустой
+	 * @return	СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ СЃСѓС‰РЅРѕСЃС‚РµР№ РёР»Рё <code>null</code> РµСЃР»Рё СЃРїРёСЃРѕРє РїСѓСЃС‚РѕР№
 	 */
 	protected Serializable[] getEntityIds() {
 		return entityIds;
 	}
 	
 	/**
-	 * получение бизнес-компонента для которого генерируется отчет
+	 * РїРѕР»СѓС‡РµРЅРёРµ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РѕС‚С‡РµС‚
 	 * 
-	 * @return	бизнес-компонент или <code>null</code> если не установлен
+	 * @return	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ
 	 */
 	protected BusinessObjectService getBusinessService() {
 		return businessService;
 	}
 	
 	/**
-	 * получение списка имен параметров отчета
+	 * РїРѕР»СѓС‡РµРЅРёРµ СЃРїРёСЃРєР° РёРјРµРЅ РїР°СЂР°РјРµС‚СЂРѕРІ РѕС‚С‡РµС‚Р°
 	 * 
-	 * @return	список имен параметров
+	 * @return	СЃРїРёСЃРѕРє РёРјРµРЅ РїР°СЂР°РјРµС‚СЂРѕРІ
 	 * 
 	 * @deprecated
 	 */
@@ -279,12 +279,12 @@ public abstract class ReportBusinessAddin extends AbstractBusinessAddin<DataSet>
 	}
 
 	/**
-	 * получение параметра отчёта по имени
+	 * РїРѕР»СѓС‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР° РѕС‚С‡С‘С‚Р° РїРѕ РёРјРµРЅРё
 	 * 
-	 * @param name	имя параметра
-	 * @return	значение параметра
+	 * @param name	РёРјСЏ РїР°СЂР°РјРµС‚СЂР°
+	 * @return	Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°
 	 * 
-	 * @deprecated используйте {@link #getDataSetParameter(String)}
+	 * @deprecated РёСЃРїРѕР»СЊР·СѓР№С‚Рµ {@link #getDataSetParameter(String)}
 	 */
 	@Deprecated
 	public ReportParameter getReportParameter(String name) {
@@ -292,10 +292,10 @@ public abstract class ReportBusinessAddin extends AbstractBusinessAddin<DataSet>
 	}
 
 	/**
-	 * установка значение параметра отчёта
+	 * СѓСЃС‚Р°РЅРѕРІРєР° Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР° РѕС‚С‡С‘С‚Р°
 	 * 
-	 * @param name	имя параметра
-	 * @param param	значение параметра
+	 * @param name	РёРјСЏ РїР°СЂР°РјРµС‚СЂР°
+	 * @param param	Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°
 	 * 
 	 * @deprecated
 	 */
@@ -305,59 +305,59 @@ public abstract class ReportBusinessAddin extends AbstractBusinessAddin<DataSet>
 	}
 
 	/**
-	 * завершение выполнения алгоритма, необходимо вызвать после формирования набора данных
+	 * Р·Р°РІРµСЂС€РµРЅРёРµ РІС‹РїРѕР»РЅРµРЅРёСЏ Р°Р»РіРѕСЂРёС‚РјР°, РЅРµРѕР±С…РѕРґРёРјРѕ РІС‹Р·РІР°С‚СЊ РїРѕСЃР»Рµ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С…
 	 * 
-	 * @deprecated	не требует вызова начиная с 4.0.3
+	 * @deprecated	РЅРµ С‚СЂРµР±СѓРµС‚ РІС‹Р·РѕРІР° РЅР°С‡РёРЅР°СЏ СЃ 4.0.3
 	 */
 	@Deprecated
 	protected void complete() {
-		//вызываем напрямую в doPerform, т.к. в данном типе BAi может быть только прямой порядок выполнения 
+		//РІС‹Р·С‹РІР°РµРј РЅР°РїСЂСЏРјСѓСЋ РІ doPerform, С‚.Рє. РІ РґР°РЅРЅРѕРј С‚РёРїРµ BAi РјРѕР¶РµС‚ Р±С‹С‚СЊ С‚РѕР»СЊРєРѕ РїСЂСЏРјРѕР№ РїРѕСЂСЏРґРѕРє РІС‹РїРѕР»РЅРµРЅРёСЏ 
 		//super.complete(dataSet);
 	}
 
 	/**
-	 * получение списка имён параметров набора данных
+	 * РїРѕР»СѓС‡РµРЅРёРµ СЃРїРёСЃРєР° РёРјС‘РЅ РїР°СЂР°РјРµС‚СЂРѕРІ РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С…
 	 * 
-	 * @return список имён параметров набора данных
+	 * @return СЃРїРёСЃРѕРє РёРјС‘РЅ РїР°СЂР°РјРµС‚СЂРѕРІ РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С…
 	 */
 	protected Set<String> getDataSetParamNames() {
 		return datataSetParameterValues.keySet();
 	}
 
 	/**
-	 * получение параметра текущего набора данных по имени
+	 * РїРѕР»СѓС‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР° С‚РµРєСѓС‰РµРіРѕ РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С… РїРѕ РёРјРµРЅРё
 	 * 
-	 * @param name	имя параметра
-	 * @return значение параметра
+	 * @param name	РёРјСЏ РїР°СЂР°РјРµС‚СЂР°
+	 * @return Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°
 	 */
 	protected Object getDataSetParameter(String name) {
 		return datataSetParameterValues.get(name);
 	}
 
 	/**
-	 * получить значение контекста
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚Р°
 	 * 
-	 * @param name	имя контекста
-	 * @return	значение или <code>null</code> если не установлен
+	 * @param name	РёРјСЏ РєРѕРЅС‚РµРєСЃС‚Р°
+	 * @return	Р·РЅР°С‡РµРЅРёРµ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ
 	 */
 	protected Object getReportContextValue(String name) {
 		return reportContext.get(name);
 	}
 	
 	/**
-	 * установить значение контекста
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚Р°
 	 * 
-	 * @param name	имя контекста
-	 * @param value	значение контекста
+	 * @param name	РёРјСЏ РєРѕРЅС‚РµРєСЃС‚Р°
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚Р°
 	 */
 	protected void setReportContextValue(String name, Object value) {
 		reportContext.put(name, value);
 	}
 	
 	/**
-	 * получить список имен контекста
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РёРјРµРЅ РєРѕРЅС‚РµРєСЃС‚Р°
 	 * 
-	 * @return	список имен
+	 * @return	СЃРїРёСЃРѕРє РёРјРµРЅ
 	 */
 	protected Set<String> getReportContextNames() {
 		return reportContext.keySet();

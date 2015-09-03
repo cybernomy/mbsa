@@ -24,7 +24,7 @@ import com.mg.merp.planning.ForecastVersionServiceLocal;
 import com.mg.merp.planning.model.ForecastVersion;
 
 /**
- * Бизнес-компонент "Версии прогнозов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РµСЂСЃРёРё РїСЂРѕРіРЅРѕР·РѕРІ" 
  * 
  * @author leonova
  * @version $Id: ForecastVersionServiceBean.java,v 1.4 2006/10/16 07:41:44 leonova Exp $

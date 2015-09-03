@@ -22,22 +22,22 @@ import com.mg.merp.warehouse.WarehouseProcessDocumentLineData;
 import com.mg.merp.warehouse.model.StockCard;
 
 /**
- * Базовый класс бизнес-расширения рассчета цены прихода на склад.<br>
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ Р±РёР·РЅРµСЃ-СЂР°СЃС€РёСЂРµРЅРёСЏ СЂР°СЃСЃС‡РµС‚Р° С†РµРЅС‹ РїСЂРёС…РѕРґР° РЅР° СЃРєР»Р°Рґ.<br>
  * <p>
- * Класс наследник должен реализовывать следующий метод:<br> 
+ * РљР»Р°СЃСЃ РЅР°СЃР»РµРґРЅРёРє РґРѕР»Р¶РµРЅ СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёР№ РјРµС‚РѕРґ:<br> 
  * <code> protected BatchPriceStrategy createBatchPriceStrategy()</code><br>
- * Метод возвращает стратегию рассчёта цены прихода товарной позиции на склад.
+ * РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ СЃС‚СЂР°С‚РµРіРёСЋ СЂР°СЃСЃС‡С‘С‚Р° С†РµРЅС‹ РїСЂРёС…РѕРґР° С‚РѕРІР°СЂРЅРѕР№ РїРѕР·РёС†РёРё РЅР° СЃРєР»Р°Рґ.
  * <p>
- * Пример данного метода:
+ * РџСЂРёРјРµСЂ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР°:
  * <pre>
  * protected BatchPriceStrategy createBatchPriceStrategy() {
  *     return new TestBatchPriceStrategy();
  * }
  * 
- * // Cтратегия рассчёта цены складской партии
+ * // CС‚СЂР°С‚РµРіРёСЏ СЂР°СЃСЃС‡С‘С‚Р° С†РµРЅС‹ СЃРєР»Р°РґСЃРєРѕР№ РїР°СЂС‚РёРё
  * class TestBatchPriceStrategy implements BatchPriceStrategy {
  *	
- *  // рассчёт цены складской партии: полная цена позиции спецификации * 10			
+ *  // СЂР°СЃСЃС‡С‘С‚ С†РµРЅС‹ СЃРєР»Р°РґСЃРєРѕР№ РїР°СЂС‚РёРё: РїРѕР»РЅР°СЏ С†РµРЅР° РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё * 10			
  *  public BigDecimal doCalculate(DocSpec docSpec) {
  *      return docSpec.getPrice1().multiply(BigDecimal.TEN);
  *  }
@@ -77,22 +77,22 @@ public abstract class BatchPriceStrategyBusinessAddin extends AbstractBusinessAd
 	}
 
 	/**
-	 * Создать стратегию рассчёта цены партии
-	 * @return стратегия рассчёта цены партии
+	 * РЎРѕР·РґР°С‚СЊ СЃС‚СЂР°С‚РµРіРёСЋ СЂР°СЃСЃС‡С‘С‚Р° С†РµРЅС‹ РїР°СЂС‚РёРё
+	 * @return СЃС‚СЂР°С‚РµРіРёСЏ СЂР°СЃСЃС‡С‘С‚Р° С†РµРЅС‹ РїР°СЂС‚РёРё
 	 */
 	protected abstract BatchPriceStrategy createBatchPriceStrategy();
 
 	/**
-	 * Получить данные по спецификации для отработки по складам
-	 * @return данные по спецификации для отработки по складам
+	 * РџРѕР»СѓС‡РёС‚СЊ РґР°РЅРЅС‹Рµ РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё РїРѕ СЃРєР»Р°РґР°Рј
+	 * @return РґР°РЅРЅС‹Рµ РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё РїРѕ СЃРєР»Р°РґР°Рј
 	 */
 	public WarehouseProcessDocumentLineData getDocLineData() {
 		return this.docLineData;
 	}
 
 	/**
-	 * Получить КСУ
-	 * @return КСУ
+	 * РџРѕР»СѓС‡РёС‚СЊ РљРЎРЈ
+	 * @return РљРЎРЈ
 	 */
 	public StockCard getStockCard() {
 		return this.stockCard;

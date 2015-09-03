@@ -28,7 +28,7 @@ import com.mg.merp.paymentcontrol.model.VersionStatusKind;
 import com.mg.merp.security.model.SecUser;
 
 /**
- * Реализация бизнес-компонента "Статусы версий планирования" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎС‚Р°С‚СѓСЃС‹ РІРµСЂСЃРёР№ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -33,7 +33,7 @@ import com.mg.merp.reference.model.CurrencyRateAuthority;
 import com.mg.merp.reference.model.CurrencyRateType;
 
 /**
- * Контроллер диалога "Внутреннее перемещение средств"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "Р’РЅСѓС‚СЂРµРЅРЅРµРµ РїРµСЂРµРјРµС‰РµРЅРёРµ СЃСЂРµРґСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: TransferDlg.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $
@@ -84,8 +84,8 @@ public class TransferDlg extends DefaultDialog {
 	}
 
 	/**
-	 * Обработчик кнопки "Расчитать сумму расхода" 
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјСѓ СЂР°СЃС…РѕРґР°" 
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionComputeSumExpense(WidgetEvent event) {
 		if(sumIncome == null || incomeCur == null || (resourceExpense == null && resourceFolderExpense == null))
@@ -107,8 +107,8 @@ public class TransferDlg extends DefaultDialog {
 	}
 
 	/**
-	 * Обработчик кнопки "Расчитать сумму прихода"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјСѓ РїСЂРёС…РѕРґР°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionComputeSumIncome(WidgetEvent event) {
 		if(sumExpense == null || expenseCur == null || (resourceIncome == null && resourceFolderIncome == null))

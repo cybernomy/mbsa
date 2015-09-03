@@ -17,7 +17,7 @@ package com.mg.merp.table.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Список сотрудников в табеле"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРёСЃРѕРє СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РІ С‚Р°Р±РµР»Рµ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: TimeBoardPosition.java,v 1.5 2008/08/12 14:11:44 sharapov Exp $

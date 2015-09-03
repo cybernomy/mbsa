@@ -15,7 +15,7 @@
 package com.mg.merp.table.support.ui;
 
 /**
- * Механизм поиска сущностей "Тип времени" (с учетом по дням)
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РўРёРї РІСЂРµРјРµРЅРё" (СЃ СѓС‡РµС‚РѕРј РїРѕ РґРЅСЏРј)
  * 
  * @author Artem V. Sharapov
  * @version $Id: TimeKindDayliSearchHelp.java,v 1.1 2008/08/12 14:38:08 sharapov Exp $

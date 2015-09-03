@@ -27,7 +27,7 @@ import com.mg.framework.api.ui.View;
 import com.mg.framework.api.ui.Widget;
 
 /**
- * Реализация диалоговой сессии поддержки бизнес-компонента
+ * Р РµР°Р»РёР·Р°С†РёСЏ РґРёР°Р»РѕРіРѕРІРѕР№ СЃРµСЃСЃРёРё РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: MaintenanceConversationSessionImpl.java,v 1.1 2006/10/26 13:29:01 safonov Exp $

@@ -17,7 +17,7 @@ package com.mg.merp.table.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Конфигурация модуля <Табельный учет>"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РўР°Р±РµР»СЊРЅС‹Р№ СѓС‡РµС‚>"
  * 
  * @author hbm2java
  * @author Artem V. Sharapov

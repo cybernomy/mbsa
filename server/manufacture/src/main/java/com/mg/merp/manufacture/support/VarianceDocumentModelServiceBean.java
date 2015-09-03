@@ -23,7 +23,7 @@ import com.mg.merp.manufacture.VarianceDocumentModelServiceLocal;
 import com.mg.merp.manufacture.model.VarianceDocumentModel;
 
 /**
- * Бизнес-компонент "Образцы документов по отклонениям" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ РґРѕРєСѓРјРµРЅС‚РѕРІ РїРѕ РѕС‚РєР»РѕРЅРµРЅРёСЏРј" 
  * 
  * @author leonova
  * @version $Id: VarianceDocumentModelServiceBean.java,v 1.4 2007/09/17 08:07:15 alikaev Exp $

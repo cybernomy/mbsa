@@ -29,8 +29,8 @@ import com.mg.framework.api.orm.Projection;
 import com.mg.framework.api.orm.ResultTransformer;
 
 /**
- * Реализация API критериев, не использовать данный класс в прикладном коде, для создания
- * критериев использовать {@link com.mg.framework.api.orm.OrmTemplate#createCriteria}
+ * Р РµР°Р»РёР·Р°С†РёСЏ API РєСЂРёС‚РµСЂРёРµРІ, РЅРµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґР°РЅРЅС‹Р№ РєР»Р°СЃСЃ РІ РїСЂРёРєР»Р°РґРЅРѕРј РєРѕРґРµ, РґР»СЏ СЃРѕР·РґР°РЅРёСЏ
+ * РєСЂРёС‚РµСЂРёРµРІ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ {@link com.mg.framework.api.orm.OrmTemplate#createCriteria}
  * 
  * @author Oleg V. Safonov
  * @version $Id: CriteriaHibernateImpl.java,v 1.2 2007/07/27 09:32:54 safonov Exp $

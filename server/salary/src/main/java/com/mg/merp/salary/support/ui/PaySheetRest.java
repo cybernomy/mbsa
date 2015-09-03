@@ -24,7 +24,7 @@ import com.mg.merp.salary.model.PayRoll;
 import com.mg.merp.salary.model.RollKind;
 
 /**
- * Контроллер формы условий отбора платежных ведомостей
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° РїР»Р°С‚РµР¶РЅС‹С… РІРµРґРѕРјРѕСЃС‚РµР№
  * 
  * @author leonova
  * @version $Id: PaySheetRest.java,v 1.4 2006/08/28 12:44:17 leonova Exp $ 

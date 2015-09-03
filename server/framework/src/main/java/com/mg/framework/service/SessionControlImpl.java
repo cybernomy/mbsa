@@ -22,7 +22,7 @@ import com.mg.framework.api.Session;
 import com.mg.framework.api.SessionControl;
 
 /**
- * Реализация менеджера сессий
+ * Р РµР°Р»РёР·Р°С†РёСЏ РјРµРЅРµРґР¶РµСЂР° СЃРµСЃСЃРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: SessionControlImpl.java,v 1.4 2006/09/22 08:42:45 safonov Exp $
@@ -33,16 +33,16 @@ public class SessionControlImpl implements SessionControl {
 	private static ThreadLocal<Session> tl = new ThreadLocal<Session>();
 
 	/**
-	 * коструктор
+	 * РєРѕСЃС‚СЂСѓРєС‚РѕСЂ
 	 */
 	private SessionControlImpl() {
 		super();
 	}
 	
 	/**
-	 * получить экземпляр менеджера
+	 * РїРѕР»СѓС‡РёС‚СЊ СЌРєР·РµРјРїР»СЏСЂ РјРµРЅРµРґР¶РµСЂР°
 	 * 
-	 * @return	менеджер
+	 * @return	РјРµРЅРµРґР¶РµСЂ
 	 */
 	public static SessionControl getSingleton() {
 		return singleton;

@@ -19,7 +19,7 @@ import com.mg.framework.api.ui.Widget;
 import com.mg.framework.support.ui.widget.GraphModelListener;
 
 /**
- * Элемент "Граф", предназначен для отображения графов
+ * Р­Р»РµРјРµРЅС‚ "Р“СЂР°С„", РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РіСЂР°С„РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: Graph.java,v 1.2 2006/11/21 15:34:06 safonov Exp $

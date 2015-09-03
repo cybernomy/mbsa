@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Типы действий с инвентарной карточкой
+ * РўРёРїС‹ РґРµР№СЃС‚РІРёР№ СЃ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРѕР№
  * 
  * @author leonova
  * @version $Id: InvActionKind.java,v 1.1 2006/08/28 08:28:02 leonova Exp $
@@ -26,37 +26,37 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName("Account.InvHistory.InvActionKind")
 public enum InvActionKind {
 	/**
-	 * Начисление амортизации
+	 * РќР°С‡РёСЃР»РµРЅРёРµ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#InvActionKind.Amort")
 	AMORT,
 	
 	/**
-	 * Переоценка
+	 * РџРµСЂРµРѕС†РµРЅРєР°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#InvActionKind.Reval")
 	REVAL,
 	
 	/**
-	 * Перемещение
+	 * РџРµСЂРµРјРµС‰РµРЅРёРµ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#InvActionKind.Move")
 	MOVE,
 	
 	/**
-	 * Списание
+	 * РЎРїРёСЃР°РЅРёРµ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#InvActionKind.Retire")
 	RETIRE,
 	
 	/**
-	 * Консервация
+	 * РљРѕРЅСЃРµСЂРІР°С†РёСЏ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#InvActionKind.Freez")
 	FREEZ,
 	
 	/**
-	 * Дооценка
+	 * Р”РѕРѕС†РµРЅРєР°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#InvActionKind.Overestimation")
 	OVERESTIMATION

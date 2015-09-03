@@ -20,7 +20,7 @@ import com.mg.framework.api.DataAccessException;
 import com.mg.framework.api.jdbc.SQLExceptionTranslator;
 
 /**
- * Абстрактная реализация траслятора SQL ИС
+ * РђР±СЃС‚СЂР°РєС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ С‚СЂР°СЃР»СЏС‚РѕСЂР° SQL РРЎ
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractSQLExceptionTranslator.java,v 1.1 2006/11/17 14:15:57 safonov Exp $

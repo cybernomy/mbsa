@@ -29,7 +29,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Ведомость начисления амортизации"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РµРґРѕРјРѕСЃС‚СЊ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё"
  *  
  * @author Konstantin S. Alikaev
  * @version $Id: AmortizationMt.java,v 1.1 2008/05/08 09:04:14 alikaev Exp $

@@ -28,7 +28,7 @@ import com.mg.merp.salary.model.PaySheetSpec;
 import com.mg.merp.salary.support.Messages;
 
 /**
- * Контроллер браузера "Спецификация платежной ведомости"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "РЎРїРµС†РёС„РёРєР°С†РёСЏ РїР»Р°С‚РµР¶РЅРѕР№ РІРµРґРѕРјРѕСЃС‚Рё"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -111,14 +111,14 @@ public class PaySheetSpecBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Установить заголовок платежной ведомости
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ Р·Р°РіРѕР»РѕРІРѕРє РїР»Р°С‚РµР¶РЅРѕР№ РІРµРґРѕРјРѕСЃС‚Рё
 	 */
 	public void setPaySheet(PaySheet paySheet) {
 		this.paySheet = paySheet;
 	}
 
 	/**
-	 * Настроить заголовок браузера в соответствии с контекстом отображения
+	 * РќР°СЃС‚СЂРѕРёС‚СЊ Р·Р°РіРѕР»РѕРІРѕРє Р±СЂР°СѓР·РµСЂР° РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ РєРѕРЅС‚РµРєСЃС‚РѕРј РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ
 	 */
 	protected void adjustTitle() {
 		if(paySheet != null)

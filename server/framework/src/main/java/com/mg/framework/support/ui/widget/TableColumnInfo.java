@@ -17,7 +17,7 @@ package com.mg.framework.support.ui.widget;
 import java.io.Serializable;
 
 /**
- * Информация о столбцах таблицы
+ * РРЅС„РѕСЂРјР°С†РёСЏ Рѕ СЃС‚РѕР»Р±С†Р°С… С‚Р°Р±Р»РёС†С‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: TableColumnInfo.java,v 1.1 2008/12/23 09:19:54 safonov Exp $
@@ -29,10 +29,10 @@ public class TableColumnInfo implements Serializable {
 	private boolean isMandatory;
 	
 	/**
-	 * @param name	имя поля отображаемого в данном столбце
-	 * @param title	заголовок столбца в UI
-	 * @param isVisible	признак показа в UI
-	 * @param isMandatory	признак обязательного присутствия в списке столбцов
+	 * @param name	РёРјСЏ РїРѕР»СЏ РѕС‚РѕР±СЂР°Р¶Р°РµРјРѕРіРѕ РІ РґР°РЅРЅРѕРј СЃС‚РѕР»Р±С†Рµ
+	 * @param title	Р·Р°РіРѕР»РѕРІРѕРє СЃС‚РѕР»Р±С†Р° РІ UI
+	 * @param isVisible	РїСЂРёР·РЅР°Рє РїРѕРєР°Р·Р° РІ UI
+	 * @param isMandatory	РїСЂРёР·РЅР°Рє РѕР±СЏР·Р°С‚РµР»СЊРЅРѕРіРѕ РїСЂРёСЃСѓС‚СЃС‚РІРёСЏ РІ СЃРїРёСЃРєРµ СЃС‚РѕР»Р±С†РѕРІ
 	 */
 	public TableColumnInfo(String name, String title, boolean isVisible, boolean isMandatory) {
 		super();

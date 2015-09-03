@@ -29,7 +29,7 @@ import com.mg.merp.personnelref.KladrServiceLocal;
 import com.mg.merp.personnelref.model.Street;
 
 /**
- * Контроллер формы поиска сущностей "Улицы" (из КЛАДР)
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РЈР»РёС†С‹" (РёР· РљР›РђР”Р )
  * 
  * @author Artem V. Sharapov
  * @version $Id: StreetSearchForm.java,v 1.1 2007/07/16 13:22:45 sharapov Exp $
@@ -39,7 +39,7 @@ public class StreetSearchForm extends AbstractSearchForm {
 	private DefaultTableController table;
 	private final String INIT_QUERY_TEXT = "select %s from Street s %s"; //$NON-NLS-1$
 	private String whereText = ""; //$NON-NLS-1$
-	private final String STREET_WHERE_TEXT = "where (s.KCode like :streetMask) and (s.KType not like 'ДОМ')"; //$NON-NLS-1$
+	private final String STREET_WHERE_TEXT = "where (s.KCode like :streetMask) and (s.KType not like 'Р”РћРњ')"; //$NON-NLS-1$
 
 	private List<String> paramsName = new ArrayList<String>();
 	private List<Object> paramsValue = new ArrayList<Object>();

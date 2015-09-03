@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.personnelref.model.PrefJob;
 
 /**
- * Браузер профессий предприятий
+ * Р‘СЂР°СѓР·РµСЂ РїСЂРѕС„РµСЃСЃРёР№ РїСЂРµРґРїСЂРёСЏС‚РёР№
  * 
  * @author leonova
  * @version $Id: PrefJobBr.java,v 1.1 2006/08/03 11:24:03 leonova Exp $ 

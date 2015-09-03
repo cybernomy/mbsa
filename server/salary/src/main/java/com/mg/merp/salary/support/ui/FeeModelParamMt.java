@@ -19,7 +19,7 @@ import com.mg.framework.api.ui.ModelChangeEvent;
 import com.mg.framework.generic.ui.DefaultMaintenanceForm;
 
 /**
- * Контроллер формы поддержки "Параметр образца начислений/удержаний"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РџР°СЂР°РјРµС‚СЂ РѕР±СЂР°Р·С†Р° РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: FeeModelParamMt.java,v 1.1 2007/07/09 08:33:47 sharapov Exp $

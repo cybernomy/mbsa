@@ -23,7 +23,7 @@ import com.mg.framework.service.PersistentObjectHibernate;
 import com.mg.merp.core.model.SysClient;
 
 /**
- * Модель бизнес-компонента "Рекламное мероприятие"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р РµРєР»Р°РјРЅРѕРµ РјРµСЂРѕРїСЂРёСЏС‚РёРµ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: Promotion.java,v 1.1 2007/10/30 14:02:22 sharapov Exp $

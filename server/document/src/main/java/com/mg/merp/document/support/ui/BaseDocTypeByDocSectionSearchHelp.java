@@ -17,7 +17,7 @@ package com.mg.merp.document.support.ui;
 import com.mg.merp.document.model.DocumentKind;
 
 /**
- * SearchHelp для типов документов-оснований по DocSection документа
+ * SearchHelp РґР»СЏ С‚РёРїРѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ-РѕСЃРЅРѕРІР°РЅРёР№ РїРѕ DocSection РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author leonova
  * @version $Id: BaseDocTypeByDocSectionSearchHelp.java,v 1.2 2006/10/16 06:26:29 leonova Exp $

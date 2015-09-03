@@ -23,7 +23,7 @@ import com.mg.merp.overall.NormSpecServiceLocal;
 import com.mg.merp.overall.model.NormSpec;
 
 /**
- * Реализация бизнес-компонента "Спецификации норм выдачи спецодежды"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёРё РЅРѕСЂРј РІС‹РґР°С‡Рё СЃРїРµС†РѕРґРµР¶РґС‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: NormSpecServiceBean.java,v 1.1 2008/06/30 04:19:36 alikaev Exp $

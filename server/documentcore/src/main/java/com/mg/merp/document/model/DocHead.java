@@ -19,7 +19,7 @@ import org.hibernate.bytecode.javassist.FieldHandler;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Объектная модель документов
+ * РћР±СЉРµРєС‚РЅР°СЏ РјРѕРґРµР»СЊ РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author hbm2java
  * @version $Id: DocHead.java,v 1.13 2008/06/07 07:58:35 alikaev Exp $
@@ -619,8 +619,8 @@ public class DocHead extends com.mg.framework.service.PersistentObjectHibernate
 	}
 
 	/**
-	 * признак корректности сущности, если <code>true</code> то система не автоматически корректировать
-	 * сущность при внесении в хранилище
+	 * РїСЂРёР·РЅР°Рє РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё СЃСѓС‰РЅРѕСЃС‚Рё, РµСЃР»Рё <code>true</code> С‚Рѕ СЃРёСЃС‚РµРјР° РЅРµ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РєРѕСЂСЂРµРєС‚РёСЂРѕРІР°С‚СЊ
+	 * СЃСѓС‰РЅРѕСЃС‚СЊ РїСЂРё РІРЅРµСЃРµРЅРёРё РІ С…СЂР°РЅРёР»РёС‰Рµ
 	 * 
 	 * @return the isAdjusted
 	 */
@@ -637,8 +637,8 @@ public class DocHead extends com.mg.framework.service.PersistentObjectHibernate
 	}
 
 	/**
-	 * признак ручной установки номера документа, если <code>true</code> то номер не будет формироваться
-	 * автоматически
+	 * РїСЂРёР·РЅР°Рє СЂСѓС‡РЅРѕР№ СѓСЃС‚Р°РЅРѕРІРєРё РЅРѕРјРµСЂР° РґРѕРєСѓРјРµРЅС‚Р°, РµСЃР»Рё <code>true</code> С‚Рѕ РЅРѕРјРµСЂ РЅРµ Р±СѓРґРµС‚ С„РѕСЂРјРёСЂРѕРІР°С‚СЊСЃСЏ
+	 * Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё
 	 * 
 	 * @return the isManualDocNumber
 	 */

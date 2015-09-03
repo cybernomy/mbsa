@@ -29,7 +29,7 @@ import com.mg.merp.account.PermissibleAccountsServiceLocal;
 import com.mg.merp.account.model.PermissibleAccounts;
 
 /**
- * Браузер допустимой корреспонденции счетов
+ * Р‘СЂР°СѓР·РµСЂ РґРѕРїСѓСЃС‚РёРјРѕР№ РєРѕСЂСЂРµСЃРїРѕРЅРґРµРЅС†РёРё СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -101,7 +101,7 @@ public class PermissibleAccountsBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Обработчик пункта контекстного меню "Создать на основе хоз. операций"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РЎРѕР·РґР°С‚СЊ РЅР° РѕСЃРЅРѕРІРµ С…РѕР·. РѕРїРµСЂР°С†РёР№"
 	 * @param event
 	 * @throws Exception
 	 */

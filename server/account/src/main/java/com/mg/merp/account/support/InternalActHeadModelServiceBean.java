@@ -23,7 +23,7 @@ import com.mg.merp.document.generic.DocumentModelServiceBean;
 import com.mg.merp.document.model.DocHeadModel;
 
 /**
- * Бизнес-компонент "Образцы внутренних актов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ РІРЅСѓС‚СЂРµРЅРЅРёС… Р°РєС‚РѕРІ" 
  * 
  * @author leonova
  * @version $Id: InternalActHeadModelServiceBean.java,v 1.3 2006/09/12 11:16:43 leonova Exp $

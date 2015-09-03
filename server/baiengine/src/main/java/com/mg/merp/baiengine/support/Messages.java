@@ -17,7 +17,7 @@ package com.mg.merp.baiengine.support;
 import com.mg.framework.generic.MessageSourceAccessor;
 
 /**
- * Сообщения модуля BAi
+ * РЎРѕРѕР±С‰РµРЅРёСЏ РјРѕРґСѓР»СЏ BAi
  * 
  * @author Oleg V. Safonov
  * @version $Id: Messages.java,v 1.5 2007/11/15 13:12:08 safonov Exp $

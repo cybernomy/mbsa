@@ -20,7 +20,7 @@ import java.util.Date;
 import com.mg.merp.personnelref.model.CostsAnl;
 
 /**
- * Результат выполнения BAi расчета начислений/удержаний ЗП 
+ * Р РµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ BAi СЂР°СЃС‡РµС‚Р° РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№ Р—Рџ 
  * 
  * @author Artem V. Sharapov
  * @version $Id: FeeBAiResult.java,v 1.1 2007/08/21 05:33:09 sharapov Exp $
@@ -28,52 +28,52 @@ import com.mg.merp.personnelref.model.CostsAnl;
 public class FeeBAiResult {
 
 	/**
-	 * Cумма н/у
+	 * CСѓРјРјР° РЅ/Сѓ
 	 */
 	private BigDecimal sum;
 	
 	/**
-	 * Начислено с
+	 * РќР°С‡РёСЃР»РµРЅРѕ СЃ
 	 */
 	private Date beginDate;
 	
 	/**
-	 * Начислено по
+	 * РќР°С‡РёСЃР»РµРЅРѕ РїРѕ
 	 */
 	private Date endDate;
 	
 	/**
-	 * За период с
+	 * Р—Р° РїРµСЂРёРѕРґ СЃ
 	 */
 	private Date periodBeginDate;
 	
 	/**
-	 * За период по
+	 * Р—Р° РїРµСЂРёРѕРґ РїРѕ
 	 */
 	private Date periodEndDate;
 	
 	/**
-	 * Аналитика состава затрат 1-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 1-РіРѕ СѓСЂРѕРІРЅСЏ
 	 */
 	private CostsAnl costsAnl1;
 	
 	/**
-	 * Аналитика состава затрат 2-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 2-РіРѕ СѓСЂРѕРІРЅСЏ
 	 */
 	private CostsAnl costsAnl2;
 	
 	/**
-	 * Аналитика состава затрат 3-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 3-РіРѕ СѓСЂРѕРІРЅСЏ
 	 */
 	private CostsAnl costsAnl3;
 	
 	/**
-	 * Аналитика состава затрат 4-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 4-РіРѕ СѓСЂРѕРІРЅСЏ
 	 */
 	private CostsAnl costsAnl4;
 	
 	/**
-	 * Аналитика состава затрат 5-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 5-РіРѕ СѓСЂРѕРІРЅСЏ
 	 */
 	private CostsAnl costsAnl5;
 
@@ -82,17 +82,17 @@ public class FeeBAiResult {
 	}
 		
 	/**
-	 * Создать результат выполнения расчета начислений/удержаний ЗП
-	 * @param sum - cумма н/у
-	 * @param beginDate - начислено с
-	 * @param endDate - начислено по
-	 * @param periodBeginDate - за период с
-	 * @param periodEndDate - за период по
-	 * @param costsAnl1 - аналитика состава затрат 1-го уровня
-	 * @param costsAnl2 - аналитика состава затрат 2-го уровня
-	 * @param costsAnl3 - аналитика состава затрат 3-го уровня
-	 * @param costsAnl4 - аналитика состава затрат 4-го уровня
-	 * @param costsAnl5 - аналитика состава затрат 5-го уровня
+	 * РЎРѕР·РґР°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ СЂР°СЃС‡РµС‚Р° РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№ Р—Рџ
+	 * @param sum - cСѓРјРјР° РЅ/Сѓ
+	 * @param beginDate - РЅР°С‡РёСЃР»РµРЅРѕ СЃ
+	 * @param endDate - РЅР°С‡РёСЃР»РµРЅРѕ РїРѕ
+	 * @param periodBeginDate - Р·Р° РїРµСЂРёРѕРґ СЃ
+	 * @param periodEndDate - Р·Р° РїРµСЂРёРѕРґ РїРѕ
+	 * @param costsAnl1 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 1-РіРѕ СѓСЂРѕРІРЅСЏ
+	 * @param costsAnl2 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 2-РіРѕ СѓСЂРѕРІРЅСЏ
+	 * @param costsAnl3 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 3-РіРѕ СѓСЂРѕРІРЅСЏ
+	 * @param costsAnl4 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 4-РіРѕ СѓСЂРѕРІРЅСЏ
+	 * @param costsAnl5 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 5-РіРѕ СѓСЂРѕРІРЅСЏ
 	 */
 	public FeeBAiResult(BigDecimal sum, Date beginDate, Date endDate, Date periodBeginDate, Date periodEndDate, CostsAnl costsAnl1, CostsAnl costsAnl2, CostsAnl costsAnl3, CostsAnl costsAnl4, CostsAnl costsAnl5) {
 		this.sum = sum;

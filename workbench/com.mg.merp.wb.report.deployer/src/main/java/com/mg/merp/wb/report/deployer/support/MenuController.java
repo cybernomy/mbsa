@@ -27,7 +27,7 @@ import com.mg.merp.report.RptMainTransfer;
 import com.mg.merp.wb.report.deployer.support.utils.RptTool;
 
 /**
- * Контроллер контекстного меню шаблона отчёта
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ С€Р°Р±Р»РѕРЅР° РѕС‚С‡С‘С‚Р°
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: MenuController.java,v 1.6 2007/04/11 07:01:54 poroxnenko Exp $
@@ -35,17 +35,17 @@ import com.mg.merp.wb.report.deployer.support.utils.RptTool;
 public class MenuController implements IObjectActionDelegate {
 
 	/**
-	 * Флаг, показывает факт синхронизации файла шаблона с репозитарием отчётов
+	 * Р¤Р»Р°Рі, РїРѕРєР°Р·С‹РІР°РµС‚ С„Р°РєС‚ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё С„Р°Р№Р»Р° С€Р°Р±Р»РѕРЅР° СЃ СЂРµРїРѕР·РёС‚Р°СЂРёРµРј РѕС‚С‡С‘С‚РѕРІ
 	 */
 	private static boolean isDeployEnabled;
 
 	/**
-	 * Файл шаблона
+	 * Р¤Р°Р№Р» С€Р°Р±Р»РѕРЅР°
 	 */
 	private IFile template;
 
 	/**
-	 * Список файлов шаблонов, подлежащих удалению
+	 * РЎРїРёСЃРѕРє С„Р°Р№Р»РѕРІ С€Р°Р±Р»РѕРЅРѕРІ, РїРѕРґР»РµР¶Р°С‰РёС… СѓРґР°Р»РµРЅРёСЋ
 	 */
 	private List<IFile> templToDel;
 
@@ -95,11 +95,11 @@ public class MenuController implements IObjectActionDelegate {
 	}
 
 	/**
-	 * Проверка синхронизированности отчётов
+	 * РџСЂРѕРІРµСЂРєР° СЃРёРЅС…СЂРѕРЅРёР·РёСЂРѕРІР°РЅРЅРѕСЃС‚Рё РѕС‚С‡С‘С‚РѕРІ
 	 * 
 	 * @param list
-	 *            список файлов отчётов, подлежащих проверке на
-	 *            синхронизированность с репозитарием
+	 *            СЃРїРёСЃРѕРє С„Р°Р№Р»РѕРІ РѕС‚С‡С‘С‚РѕРІ, РїРѕРґР»РµР¶Р°С‰РёС… РїСЂРѕРІРµСЂРєРµ РЅР°
+	 *            СЃРёРЅС…СЂРѕРЅРёР·РёСЂРѕРІР°РЅРЅРѕСЃС‚СЊ СЃ СЂРµРїРѕР·РёС‚Р°СЂРёРµРј
 	 * @return
 	 */
 	private boolean isAllSynchronized(List<IFile> list) {

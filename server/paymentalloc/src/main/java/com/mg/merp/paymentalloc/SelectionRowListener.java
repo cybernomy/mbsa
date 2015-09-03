@@ -17,7 +17,7 @@ package com.mg.merp.paymentalloc;
 import java.util.EventListener;
 
 /**
- * Слушатель события изменения позиции курсора таблицы
+ * РЎР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёСЏ РёР·РјРµРЅРµРЅРёСЏ РїРѕР·РёС†РёРё РєСѓСЂСЃРѕСЂР° С‚Р°Р±Р»РёС†С‹
  * 
  * @author Artem V. Sharapov
  * @version $Id: SelectionRowListener.java,v 1.1 2007/06/05 12:44:31 sharapov Exp $

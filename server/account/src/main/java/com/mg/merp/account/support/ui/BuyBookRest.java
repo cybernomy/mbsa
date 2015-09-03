@@ -16,7 +16,7 @@ package com.mg.merp.account.support.ui;
 
 
 /**
- * Контроллер формы условий отбора книги покупок
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° РєРЅРёРіРё РїРѕРєСѓРїРѕРє
  * 
  * @author leonova
  * @version $Id: BuyBookRest.java,v 1.2 2006/08/23 10:26:15 leonova Exp $ 

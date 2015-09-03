@@ -34,7 +34,7 @@ import com.mg.merp.overall.NormHeadServiceLocal;
 import com.mg.merp.overall.model.NormHead;
 
 /**
- * Контроллер формы списка бизнес-компонента "Нормы выдачи спецодежды"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќРѕСЂРјС‹ РІС‹РґР°С‡Рё СЃРїРµС†РѕРґРµР¶РґС‹"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

@@ -24,13 +24,13 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Planning.ForecastType")
 public enum ForecastType {
 	/**
-	 * Прогноз продаж
+	 * РџСЂРѕРіРЅРѕР· РїСЂРѕРґР°Р¶
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Forecast.Type.Sale")
 	SALE,
 	
 	/**
-	 * Прогноз закупок
+	 * РџСЂРѕРіРЅРѕР· Р·Р°РєСѓРїРѕРє
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Forecast.Type.Purchase")
 	PURCHASE

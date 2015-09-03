@@ -37,7 +37,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.CatalogFolder;
 
 /**
- * Контроллер браузера каталога
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° РєР°С‚Р°Р»РѕРіР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: CatalogBr.java,v 1.11 2008/02/21 12:44:15 alikaev Exp $

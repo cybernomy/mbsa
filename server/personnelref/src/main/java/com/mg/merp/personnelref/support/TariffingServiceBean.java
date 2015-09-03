@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.TariffingServiceLocal;
 import com.mg.merp.personnelref.model.Tariffing;
 
 /**
- * Реализация бизнес-компонента "Тарифы должности" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РўР°СЂРёС„С‹ РґРѕР»Р¶РЅРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

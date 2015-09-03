@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.ActivitySphere;
 
 /**
- * Браузеры сфер деятельности
+ * Р‘СЂР°СѓР·РµСЂС‹ СЃС„РµСЂ РґРµСЏС‚РµР»СЊРЅРѕСЃС‚Рё
  * 
  * @author leonova
  * @version $Id: ActivitySphereBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

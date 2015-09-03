@@ -20,7 +20,7 @@ import org.jbpm.graph.exe.ExecutionContext;
 import org.jbpm.taskmgmt.exe.TaskMgmtInstance;
 
 /**
- * Базовый класс обработки действий JBPM
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РѕР±СЂР°Р±РѕС‚РєРё РґРµР№СЃС‚РІРёР№ JBPM
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractActionHandler.java,v 1.1 2007/05/28 13:05:48 safonov Exp $
@@ -29,37 +29,37 @@ public abstract class AbstractActionHandler implements ActionHandler {
 	private ExecutionContext executionContext;
 
 	/**
-	 * необходимо реализовать в классе обработчике выполняющем специфичные действия
-	 * бизнес-логики
+	 * РЅРµРѕР±С…РѕРґРёРјРѕ СЂРµР°Р»РёР·РѕРІР°С‚СЊ РІ РєР»Р°СЃСЃРµ РѕР±СЂР°Р±РѕС‚С‡РёРєРµ РІС‹РїРѕР»РЅСЏСЋС‰РµРј СЃРїРµС†РёС„РёС‡РЅС‹Рµ РґРµР№СЃС‚РІРёСЏ
+	 * Р±РёР·РЅРµСЃ-Р»РѕРіРёРєРё
 	 * 
 	 * @throws Exception
 	 */
 	protected abstract void doExecute() throws Exception;
 
 	/**
-	 * получить контекст выполнения JBPM
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРёСЏ JBPM
 	 * 
-	 * @return	контекст выполнения
+	 * @return	РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРёСЏ
 	 */
 	protected ExecutionContext getExecutionContext() {
 		return executionContext;
 	}
 	
 	/**
-	 * получить контекст экземпляра процесса
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС‚РµРєСЃС‚ СЌРєР·РµРјРїР»СЏСЂР° РїСЂРѕС†РµСЃСЃР°
 	 * @see org.jbpm.context.exe.ContextInstance
 	 * 
-	 * @return	контекст экземпляра
+	 * @return	РєРѕРЅС‚РµРєСЃС‚ СЌРєР·РµРјРїР»СЏСЂР°
 	 */
 	protected ContextInstance getContextInstance() {
 		return executionContext.getContextInstance();
 	}
 	
 	/**
-	 * получить менеджер управления задачами процесса
+	 * РїРѕР»СѓС‡РёС‚СЊ РјРµРЅРµРґР¶РµСЂ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РґР°С‡Р°РјРё РїСЂРѕС†РµСЃСЃР°
 	 * @see org.jbpm.context.exe.TaskMgmtInstance
 	 * 
-	 * @return	менеджер управления задачами
+	 * @return	РјРµРЅРµРґР¶РµСЂ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РґР°С‡Р°РјРё
 	 */
 	protected TaskMgmtInstance getTaskMgmtInstance() {
 		return executionContext.getTaskMgmtInstance();

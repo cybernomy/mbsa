@@ -17,7 +17,7 @@ package com.mg.merp.humanresources.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Приказы"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРёРєР°Р·С‹"
  * 
  * @author Artem V. Sharapov
  * @version $Id: Order.java,v 1.4 2007/08/27 13:08:46 sharapov Exp $

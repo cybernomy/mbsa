@@ -25,7 +25,7 @@ import com.mg.merp.warehouse.BinLocationServiceLocal;
 import com.mg.merp.warehouse.model.Warehouse;
 
 /**
- * Механизм поиска сущностей "Секции хранения"
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РЎРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: BinLocationSearchHelp.java,v 1.4 2008/07/15 08:24:22 safonov Exp $
@@ -49,8 +49,8 @@ public class BinLocationSearchHelp extends AbstractSearchHelp {
 	}
 	
 	/**
-	 * Получить "Склад" из контекста импорта 
-	 * @return "Склад" из контекста импорта
+	 * РџРѕР»СѓС‡РёС‚СЊ "РЎРєР»Р°Рґ" РёР· РєРѕРЅС‚РµРєСЃС‚Р° РёРјРїРѕСЂС‚Р° 
+	 * @return "РЎРєР»Р°Рґ" РёР· РєРѕРЅС‚РµРєСЃС‚Р° РёРјРїРѕСЂС‚Р°
 	 */
 	protected Warehouse getWarehouseContextValue() {
 		return (Warehouse) getImportContextValue(WAREHOUSE_IMPORT_NAME);

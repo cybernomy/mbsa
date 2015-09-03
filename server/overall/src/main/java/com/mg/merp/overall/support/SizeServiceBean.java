@@ -26,7 +26,7 @@ import com.mg.merp.overall.SizeServiceLocal;
 import com.mg.merp.overall.model.Size;
 
 /**
- * Реализация бизнес-компонента "Размеры"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р Р°Р·РјРµСЂС‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: SizeServiceBean.java,v 1.1 2008/06/30 04:20:11 alikaev Exp $

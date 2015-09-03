@@ -19,7 +19,7 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Реализация сервиса системы помощи
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° СЃРёСЃС‚РµРјС‹ РїРѕРјРѕС‰Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: HelpSystemImpl.java,v 1.1 2006/11/14 15:29:39 safonov Exp $

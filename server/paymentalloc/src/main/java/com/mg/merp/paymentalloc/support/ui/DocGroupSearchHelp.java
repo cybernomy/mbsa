@@ -17,7 +17,7 @@ package com.mg.merp.paymentalloc.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * Поисковик "Групп документов"
+ * РџРѕРёСЃРєРѕРІРёРє "Р“СЂСѓРїРї РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: DocGroupSearchHelp.java,v 1.1 2007/01/13 13:26:39 sharapov Exp $

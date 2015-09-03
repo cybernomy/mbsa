@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.LanguageKnowledgeServiceLocal;
 import com.mg.merp.personnelref.model.LanguageKnowledge;
 
 /**
- * Реализация бизнес-компонента "Степени знания иностранных языков" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎС‚РµРїРµРЅРё Р·РЅР°РЅРёСЏ РёРЅРѕСЃС‚СЂР°РЅРЅС‹С… СЏР·С‹РєРѕРІ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

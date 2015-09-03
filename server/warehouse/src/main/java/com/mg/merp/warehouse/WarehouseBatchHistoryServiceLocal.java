@@ -17,7 +17,7 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.warehouse.model.StockBatchHistory;
 
 /**
- * Сервис бизнес-компонента "История фактического движения по партии"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РСЃС‚РѕСЂРёСЏ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РґРІРёР¶РµРЅРёСЏ РїРѕ РїР°СЂС‚РёРё"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseBatchHistoryServiceLocal.java,v 1.2 2007/03/07 10:51:51 poroxnenko Exp $
@@ -26,7 +26,7 @@ public interface WarehouseBatchHistoryServiceLocal extends
 		DataBusinessObjectService<StockBatchHistory, Integer> {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/warehouse/WarehouseBatchHistory";
 }

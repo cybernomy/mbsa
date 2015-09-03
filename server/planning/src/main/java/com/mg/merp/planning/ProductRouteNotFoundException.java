@@ -22,7 +22,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.warehouse.model.Warehouse;
 
 /**
- * ИС генерируется если не найден логистический маршрут
+ * РРЎ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ Р»РѕРіРёСЃС‚РёС‡РµСЃРєРёР№ РјР°СЂС€СЂСѓС‚
  * 
  * @author Oleg V. Safonov
  * @version $Id: ProductRouteNotFoundException.java,v 1.1 2007/07/30 10:37:51 safonov Exp $

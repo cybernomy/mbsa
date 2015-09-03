@@ -22,7 +22,7 @@ import com.mg.merp.table.model.ScheduleHead;
 import com.mg.merp.table.model.ScheduleSpec;
 
 /**
- * Бизнес-компонент "Графики работ в табельном учете"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р“СЂР°С„РёРєРё СЂР°Р±РѕС‚ РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -31,23 +31,23 @@ import com.mg.merp.table.model.ScheduleSpec;
 public interface ScheduleHeadServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ScheduleHead, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/table/ScheduleHead"; //$NON-NLS-1$
 
 	/**
-	 * Имя метода "Создать график по образцу"
+	 * РРјСЏ РјРµС‚РѕРґР° "РЎРѕР·РґР°С‚СЊ РіСЂР°С„РёРє РїРѕ РѕР±СЂР°Р·С†Сѓ"
 	 */
 	static final String CREATE_BY_PATTERN_METHOD_NAME = "createByPattern"; //$NON-NLS-1$
 	
 	/**
-	 * Создать график по образцу
-	 * @param scheduleHead - заголовок графика в табельном учете
-	 * @param patternHead - заголовок образца
-	 * @param initialShift - смещение(для сменных графиков)
-	 * @param beginDate - дата с
-	 * @param endDate - дата по
-	 * @return список позиций спецификации графика в табельном учете
+	 * РЎРѕР·РґР°С‚СЊ РіСЂР°С„РёРє РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param scheduleHead - Р·Р°РіРѕР»РѕРІРѕРє РіСЂР°С„РёРєР° РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ
+	 * @param patternHead - Р·Р°РіРѕР»РѕРІРѕРє РѕР±СЂР°Р·С†Р°
+	 * @param initialShift - СЃРјРµС‰РµРЅРёРµ(РґР»СЏ СЃРјРµРЅРЅС‹С… РіСЂР°С„РёРєРѕРІ)
+	 * @param beginDate - РґР°С‚Р° СЃ
+	 * @param endDate - РґР°С‚Р° РїРѕ
+	 * @return СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё РіСЂР°С„РёРєР° РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ
 	 */
 	List<ScheduleSpec> createByPattern(ScheduleHead scheduleHead, PatternHead patternHead, Integer initialShift, Date beginDate, Date endDate);
 

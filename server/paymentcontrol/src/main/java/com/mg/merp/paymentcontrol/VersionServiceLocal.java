@@ -17,7 +17,7 @@ package com.mg.merp.paymentcontrol;
 import com.mg.merp.paymentcontrol.model.Version;
 
 /**
- * Сервис бизнес-компонента "Версии планирования"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ"
  * 
  * @author leonova
  * @author Artem V. Sharapov

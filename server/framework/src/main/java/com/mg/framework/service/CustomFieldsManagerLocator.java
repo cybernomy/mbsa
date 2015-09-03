@@ -19,7 +19,7 @@ import com.mg.framework.api.metadata.CustomFieldsManager;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Локатор менеджера пользовательских полей
+ * Р›РѕРєР°С‚РѕСЂ РјРµРЅРµРґР¶РµСЂР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomFieldsManagerLocator.java,v 1.1 2007/01/25 15:25:33 safonov Exp $
@@ -29,10 +29,10 @@ public class CustomFieldsManagerLocator {
 	private static volatile CustomFieldsManager instance = null;
 
 	/**
-	 * найти сервис менеджера пользовательских полей
+	 * РЅР°Р№С‚Рё СЃРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 * 
-	 * @return	сервис
-	 * @throws ApplicationException	при любых ошибках
+	 * @return	СЃРµСЂРІРёСЃ
+	 * @throws ApplicationException	РїСЂРё Р»СЋР±С‹С… РѕС€РёР±РєР°С…
 	 */
 	public static CustomFieldsManager locate() {
 		if (instance == null)

@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.IdentDocKind;
 
 /**
- * Браузер видов документов
+ * Р‘СЂР°СѓР·РµСЂ РІРёРґРѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: IdentDocKindBr.java,v 1.2 2006/08/11 07:28:38 leonova Exp $ 

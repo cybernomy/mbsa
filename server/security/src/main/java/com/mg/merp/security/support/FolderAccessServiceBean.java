@@ -32,7 +32,7 @@ import com.mg.merp.security.FolderPermission;
 import com.mg.merp.security.model.Groups;
 
 /**
- * Бизнес-компонент "Права на папки"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂР°РІР° РЅР° РїР°РїРєРё"
  *
  * @author Oleg V. Safonov
  * @version $Id: FolderAccessServiceBean.java,v 1.7 2009/03/17 09:20:14 safonov Exp $

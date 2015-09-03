@@ -30,7 +30,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.contract.model.ContractType;
 
 /**
- * SearchForm бизнес-компонента "Вид договора"
+ * SearchForm Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РёРґ РґРѕРіРѕРІРѕСЂР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ContractTypeSearchForm.java,v 1.1 2007/09/17 12:29:23 alikaev Exp $
@@ -88,9 +88,9 @@ public class ContractTypeSearchForm extends AbstractSearchForm {
 			}
 
 			/**
-			 * формируем sql запрос
+			 * С„РѕСЂРјРёСЂСѓРµРј sql Р·Р°РїСЂРѕСЃ
 			 * 
-			 * @return текст sql запроса
+			 * @return С‚РµРєСЃС‚ sql Р·Р°РїСЂРѕСЃР°
 			 */
 			private String createQueryText() {
 				Set<TableEJBQLFieldDef> fieldDefs = ((DefaultEJBQLTableModel) table.getModel()).getFieldDefsSet();

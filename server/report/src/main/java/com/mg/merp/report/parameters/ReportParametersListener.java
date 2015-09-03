@@ -16,7 +16,7 @@ package com.mg.merp.report.parameters;
 import java.io.Serializable;
 
 /**
- * Слушатель для запроса параметров отчёта
+ * РЎР»СѓС€Р°С‚РµР»СЊ РґР»СЏ Р·Р°РїСЂРѕСЃР° РїР°СЂР°РјРµС‚СЂРѕРІ РѕС‚С‡С‘С‚Р°
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: ReportParametersListener.java,v 1.2 2008/03/27 08:12:15 safonov Exp $
@@ -27,9 +27,9 @@ import java.io.Serializable;
 public interface ReportParametersListener extends Serializable {
 
 	/**
-	 * Получить параметры отчёта
+	 * РџРѕР»СѓС‡РёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РѕС‚С‡С‘С‚Р°
 	 * 
-	 * @param event событие, содержащее результат ввода параметров
+	 * @param event СЃРѕР±С‹С‚РёРµ, СЃРѕРґРµСЂР¶Р°С‰РµРµ СЂРµР·СѓР»СЊС‚Р°С‚ РІРІРѕРґР° РїР°СЂР°РјРµС‚СЂРѕРІ
 	 */
 	void getParameters(ReportParametersEvent event);
 }

@@ -17,7 +17,7 @@ package com.mg.merp.salary;
 import com.mg.merp.salary.model.CalcListFee;
 
 /**
- * Сервис бизнес-компонента "Начисления/ударжания расчетных листков"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќР°С‡РёСЃР»РµРЅРёСЏ/СѓРґР°СЂР¶Р°РЅРёСЏ СЂР°СЃС‡РµС‚РЅС‹С… Р»РёСЃС‚РєРѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.salary.model.CalcListFee;
 public interface CalcListFeeServiceLocal extends com.mg.framework.api.DataBusinessObjectService<CalcListFee, Integer> {
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String LOCAL_SERVICE_NAME= "merp/salary/CalcListFee"; //$NON-NLS-1$
 

@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.TaxCalcKindServiceLocal;
 import com.mg.merp.personnelref.model.TaxCalcKind;
 
 /**
- * Бизнес-компонент "Схемы расчета налогов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎС…РµРјС‹ СЂР°СЃС‡РµС‚Р° РЅР°Р»РѕРіРѕРІ" 
  * 
  * @author leonova
  * @version $Id: TaxCalcKindServiceBean.java,v 1.3 2006/09/04 13:02:21 leonova Exp $

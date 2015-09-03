@@ -17,7 +17,7 @@ package com.mg.merp.warehouse;
 import java.util.EventListener;
 
 /**
- * Слушатель складского процессора
+ * РЎР»СѓС€Р°С‚РµР»СЊ СЃРєР»Р°РґСЃРєРѕРіРѕ РїСЂРѕС†РµСЃСЃРѕСЂР°
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -26,12 +26,12 @@ import java.util.EventListener;
 public interface WarehouseProcessListener extends EventListener {
 
 	/**
-	 * завершение складской операции
+	 * Р·Р°РІРµСЂС€РµРЅРёРµ СЃРєР»Р°РґСЃРєРѕР№ РѕРїРµСЂР°С†РёРё
 	 */
 	void completed();
 
 	/**
-	 * отмена складской операции
+	 * РѕС‚РјРµРЅР° СЃРєР»Р°РґСЃРєРѕР№ РѕРїРµСЂР°С†РёРё
 	 */
 	void aborted();
 	

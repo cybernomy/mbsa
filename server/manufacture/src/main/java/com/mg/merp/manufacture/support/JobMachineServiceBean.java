@@ -25,7 +25,7 @@ import com.mg.merp.manufacture.model.JobMachine;
 import com.mg.merp.mfreference.support.ConfigurationHelper;
 
 /**
- * Бизнес-компонент "Оборудование в ЗНП" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±РѕСЂСѓРґРѕРІР°РЅРёРµ РІ Р—РќРџ" 
  * 
  * @author leonova
  * @version $Id: JobMachineServiceBean.java,v 1.7 2009/03/05 12:32:15 safonov Exp $

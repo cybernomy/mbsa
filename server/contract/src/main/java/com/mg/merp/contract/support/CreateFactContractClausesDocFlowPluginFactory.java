@@ -28,7 +28,7 @@ import com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Реализация фабрики реализаций этапа ДО "Создание фактических пунктов договора" (Отработать документ как факт по договору)
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїР° Р”Рћ "РЎРѕР·РґР°РЅРёРµ С„Р°РєС‚РёС‡РµСЃРєРёС… РїСѓРЅРєС‚РѕРІ РґРѕРіРѕРІРѕСЂР°" (РћС‚СЂР°Р±РѕС‚Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚ РєР°Рє С„Р°РєС‚ РїРѕ РґРѕРіРѕРІРѕСЂСѓ)
  * 
  * @author Artem V. Sharapov
  * @version $Id: CreateFactContractClausesDocFlowPluginFactory.java,v 1.1 2007/03/07 12:26:27 sharapov Exp $
@@ -65,8 +65,8 @@ public class CreateFactContractClausesDocFlowPluginFactory extends AbstractDocFl
 								dialog.getItemKind(), 
 								dialog.getContractorSource(), 
 								dialog.isCreateSpec(),
-								dialog.getсontractType(),
-								dialog.getсontractNumber(),
+								dialog.getСЃontractType(),
+								dialog.getСЃontractNumber(),
 								dialog.getContractDate(),
 								dialog.getContract());
 						getParams().setData1(service.createContractFactItem(factItemData).getId());
@@ -94,9 +94,9 @@ public class CreateFactContractClausesDocFlowPluginFactory extends AbstractDocFl
 					getParams().setData2(1);
 
 				dialog.setContract(contract);
-				dialog.setсontractType(getParams().getDocument().getContractType());
+				dialog.setСЃontractType(getParams().getDocument().getContractType());
 				dialog.setContractDate(getParams().getDocument().getContractDate());
-				dialog.setсontractNumber(getParams().getDocument().getContractNumber());
+				dialog.setСЃontractNumber(getParams().getDocument().getContractNumber());
 				dialog.execute();
 			}
 

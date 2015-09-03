@@ -19,7 +19,7 @@ import com.mg.framework.api.ui.ModelChangeEvent;
 import com.mg.framework.api.ui.widget.Table;
 
 /**
- * Стандартная реализация адаптера таблицы
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ Р°РґР°РїС‚РµСЂР° С‚Р°Р±Р»РёС†С‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultTableController.java,v 1.4 2009/02/09 14:22:17 safonov Exp $

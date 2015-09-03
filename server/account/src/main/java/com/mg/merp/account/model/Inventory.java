@@ -17,7 +17,7 @@ package com.mg.merp.account.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Объектная модель бизнес-компонента "Данные по видам учета"
+ * РћР±СЉРµРєС‚РЅР°СЏ РјРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”Р°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°"
  * 
  * @author hbm2java
  * @author Konstantin S. Alikaev

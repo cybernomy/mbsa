@@ -36,7 +36,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.core.support.Messages;
 
 /**
- * Контроллер формы списка сессий пользователей
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° СЃРµСЃСЃРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: MonitorUserSessionForm.java,v 1.2 2008/12/08 06:22:24 safonov Exp $
@@ -175,7 +175,7 @@ public class MonitorUserSessionForm extends AbstractForm {
 			List<String> sessionIds = new ArrayList<String>();
 			for (int i = 0; i < currentIndexes.length; i++) {
 				UserSessionInfo userSessionInfo = users.get(currentIndexes[i]);
-				//не отправляет сам себе
+				//РЅРµ РѕС‚РїСЂР°РІР»СЏРµС‚ СЃР°Рј СЃРµР±Рµ
 				if (!userSessionInfo.isCurrentPrincipal())
 					sessionIds.add(userSessionInfo.getHttpSessionId());
 			}

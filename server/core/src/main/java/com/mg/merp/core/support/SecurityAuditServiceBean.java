@@ -21,7 +21,7 @@ import com.mg.merp.core.SecurityAuditServiceLocal;
 import com.mg.merp.core.model.SecurityAudit;
 
 /**
- * Реализация бизнес-компонента аудита безопасности
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° Р°СѓРґРёС‚Р° Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: SecurityAuditServiceBean.java,v 1.1 2007/10/19 06:45:53 safonov Exp $

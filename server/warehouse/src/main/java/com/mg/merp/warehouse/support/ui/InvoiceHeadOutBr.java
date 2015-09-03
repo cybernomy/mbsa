@@ -28,7 +28,7 @@ import com.mg.merp.warehouse.InvoiceHeadOutServiceLocal;
 import com.mg.merp.warehouse.model.InvoiceHead;
 
 /**
- * Контроллер формы списка исходящих накладных
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РёСЃС…РѕРґСЏС‰РёС… РЅР°РєР»Р°РґРЅС‹С…
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov

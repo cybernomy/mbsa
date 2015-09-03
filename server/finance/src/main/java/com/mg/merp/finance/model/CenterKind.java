@@ -24,25 +24,25 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Finance.Center.Kind")
 public enum CenterKind {
 	/**
-	 * Центр финансового учета
+	 * Р¦РµРЅС‚СЂ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinCenter.Kind.CFU")
 	CFU,
 	
 	/**
-	 * Центр финансовой ответственности
+	 * Р¦РµРЅС‚СЂ С„РёРЅР°РЅСЃРѕРІРѕР№ РѕС‚РІРµС‚СЃС‚РІРµРЅРЅРѕСЃС‚Рё
 	 */
 	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinCenter.Kind.CFO")
 	CFO,
 	
 	/**
-	 * Венчур-центр
+	 * Р’РµРЅС‡СѓСЂ-С†РµРЅС‚СЂ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinCenter.Kind.Venture")
 	VENCHURE,
 	
 	/**
-	 * Профит-центр
+	 * РџСЂРѕС„РёС‚-С†РµРЅС‚СЂ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinCenter.Kind.Profit")
 	PROFIT

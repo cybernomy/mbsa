@@ -18,7 +18,7 @@ import com.mg.merp.mfreference.support.ui.TimeTickConversion;
 import com.mg.merp.reference.model.Measure;
 
 /**
- * Конвертация атрибута SetupTime объекта JobRoute
+ * РљРѕРЅРІРµСЂС‚Р°С†РёСЏ Р°С‚СЂРёР±СѓС‚Р° SetupTime РѕР±СЉРµРєС‚Р° JobRoute
  * 
  * @author Oleg V. Safonov
  * @version $Id: JobRouteSetupTickConversion.java,v 1.1 2006/07/07 10:11:14 leonova Exp $

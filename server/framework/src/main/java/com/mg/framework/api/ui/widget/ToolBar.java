@@ -25,7 +25,7 @@ import com.mg.framework.api.ui.Container;
 public interface ToolBar extends Container {
 
 	/**
-	 * Атрибут признака "всплывающая панель", имеет тип <code>boolean</code>
+	 * РђС‚СЂРёР±СѓС‚ РїСЂРёР·РЅР°РєР° "РІСЃРїР»С‹РІР°СЋС‰Р°СЏ РїР°РЅРµР»СЊ", РёРјРµРµС‚ С‚РёРї <code>boolean</code>
 	 */
 	final static String FLOATABLE = "floatable";
 }

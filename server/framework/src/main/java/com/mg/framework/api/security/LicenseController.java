@@ -17,7 +17,7 @@ package com.mg.framework.api.security;
 import com.mg.framework.api.Session;
 
 /**
- * Менеджер лицензий
+ * РњРµРЅРµРґР¶РµСЂ Р»РёС†РµРЅР·РёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: LicenseController.java,v 1.3 2007/04/13 14:14:48 safonov Exp $
@@ -25,24 +25,24 @@ import com.mg.framework.api.Session;
 public interface LicenseController {
 	
 	/**
-	 * запрос лицензий
+	 * Р·Р°РїСЂРѕСЃ Р»РёС†РµРЅР·РёР№
 	 * 
-	 * @param session	сессия
+	 * @param session	СЃРµСЃСЃРёСЏ
 	 */
     void occupyLicense(Session session);
     
     /**
-     * освобождение лицензий
+     * РѕСЃРІРѕР±РѕР¶РґРµРЅРёРµ Р»РёС†РµРЅР·РёР№
      * 
-     * @param session	сессия
+     * @param session	СЃРµСЃСЃРёСЏ
      */
     void freeLicense(Session session);
     
     /**
-     * выполнить лицензионное действие
+     * РІС‹РїРѕР»РЅРёС‚СЊ Р»РёС†РµРЅР·РёРѕРЅРЅРѕРµ РґРµР№СЃС‚РІРёРµ
      * 
-     * @param action	действие
-     * @return	результат действия
+     * @param action	РґРµР№СЃС‚РІРёРµ
+     * @return	СЂРµР·СѓР»СЊС‚Р°С‚ РґРµР№СЃС‚РІРёСЏ
      */
     <T> T doAsLicensed(LicensedAction<T> action);
     

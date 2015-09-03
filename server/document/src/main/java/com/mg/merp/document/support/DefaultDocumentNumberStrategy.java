@@ -28,7 +28,7 @@ import com.mg.merp.document.generic.AbstractDocumentNumberStrategy;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Стандартная стратегия формирования номера документов
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЃС‚СЂР°С‚РµРіРёСЏ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РЅРѕРјРµСЂР° РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultDocumentNumberStrategy.java,v 1.3 2008/12/18 12:31:57 safonov Exp $
@@ -38,10 +38,10 @@ public class DefaultDocumentNumberStrategy extends AbstractDocumentNumberStrateg
 	public final static char DOCNUMBER_PREFIX_CHAR = '0';
 
 	/**
-	 * поиск последнего номера
+	 * РїРѕРёСЃРє РїРѕСЃР»РµРґРЅРµРіРѕ РЅРѕРјРµСЂР°
 	 * 
-	 * @param docHead	сущность документа
-	 * @return	номер документа или <code>null</code> если не найден
+	 * @param docHead	СЃСѓС‰РЅРѕСЃС‚СЊ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р° РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	protected String loadDocNumber(DocHead docHead) {
 		Criteria criteria = OrmTemplate.createCriteria(ReflectionUtils.getEntityClass(docHead))
@@ -51,7 +51,7 @@ public class DefaultDocumentNumberStrategy extends AbstractDocumentNumberStrateg
 				.add(Restrictions.sqlRestriction(String.format("extract(year from DocDate) = %d", DateTimeUtils.getYear(docHead.getDocDate()))))
 				.addOrder(Order.desc("DocNumber"))
 				.setMaxResults(1);
-		//не учитываем номер данного документа
+		//РЅРµ СѓС‡РёС‚С‹РІР°РµРј РЅРѕРјРµСЂ РґР°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 		if (docHead.getId() != null)
 			criteria.add(Restrictions.ne("Id", docHead.getId()));
 		List<String> findRes = OrmTemplate.getInstance().findByCriteria(criteria);
@@ -71,13 +71,13 @@ public class DefaultDocumentNumberStrategy extends AbstractDocumentNumberStrateg
 				logger.debug("Document number founded: ".concat(number));
 			int len = number.length() - 1;
 			int i = len;
-			//удалим последние не цифры
+			//СѓРґР°Р»РёРј РїРѕСЃР»РµРґРЅРёРµ РЅРµ С†РёС„СЂС‹
 			while ((i >= 0) && !Character.isDigit(number.charAt(i)))
 				i--;
 			
 			number = number.substring(0, i + 1);
 			i = number.length() - 1;
-			//найдем последние цифры
+			//РЅР°Р№РґРµРј РїРѕСЃР»РµРґРЅРёРµ С†РёС„СЂС‹
 			while ((i >= 0) && Character.isDigit(number.charAt(i)))
 				i--;
 			

@@ -17,7 +17,7 @@ package com.mg.framework.api.ui;
 import java.io.Serializable;
 
 /**
- * Команда установки значения атрибута модели в пользовательском интерфейсе
+ * РљРѕРјР°РЅРґР° СѓСЃС‚Р°РЅРѕРІРєРё Р·РЅР°С‡РµРЅРёСЏ Р°С‚СЂРёР±СѓС‚Р° РјРѕРґРµР»Рё РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРј РёРЅС‚РµСЂС„РµР№СЃРµ
  * 
  * @author Oleg V. Safonov
  * @version $Id: SetPropertyCommand.java,v 1.1 2008/10/08 11:41:20 safonov Exp $
@@ -28,11 +28,11 @@ public class SetPropertyCommand implements Serializable {
     private Object oldValue;
 
     /**
-     * создание команды
+     * СЃРѕР·РґР°РЅРёРµ РєРѕРјР°РЅРґС‹
      * 
-     * @param newValue	новое значение
-     * @param oldValue	старое значение
-     * @param propertyName	имя атрибута модели
+     * @param newValue	РЅРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
+     * @param oldValue	СЃС‚Р°СЂРѕРµ Р·РЅР°С‡РµРЅРёРµ
+     * @param propertyName	РёРјСЏ Р°С‚СЂРёР±СѓС‚Р° РјРѕРґРµР»Рё
      */
     public SetPropertyCommand(Object newValue, Object oldValue,
 			String propertyName) {
@@ -43,7 +43,7 @@ public class SetPropertyCommand implements Serializable {
 	}
 
 	/**
-	 * получить имя атрибута
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
 	 * 
 	 * @return the propertyName
 	 */
@@ -52,7 +52,7 @@ public class SetPropertyCommand implements Serializable {
 	}
 
 	/**
-	 * получить новое значение
+	 * РїРѕР»СѓС‡РёС‚СЊ РЅРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
 	 * 
 	 * @return the newValue
 	 */
@@ -61,7 +61,7 @@ public class SetPropertyCommand implements Serializable {
 	}
 
 	/**
-	 * получить старое значение
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃС‚Р°СЂРѕРµ Р·РЅР°С‡РµРЅРёРµ
 	 * 
 	 * @return the oldValue
 	 */

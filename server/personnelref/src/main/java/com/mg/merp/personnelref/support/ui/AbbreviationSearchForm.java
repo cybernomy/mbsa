@@ -28,7 +28,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.personnelref.model.Abbreviation;
 
 /**
- * Контроллер формы поиска сущностей "Сокращенные наименования элемента адреса"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РЎРѕРєСЂР°С‰РµРЅРЅС‹Рµ РЅР°РёРјРµРЅРѕРІР°РЅРёСЏ СЌР»РµРјРµРЅС‚Р° Р°РґСЂРµСЃР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: AbbreviationSearchForm.java,v 1.1 2007/07/16 13:22:45 sharapov Exp $
@@ -107,7 +107,7 @@ public class AbbreviationSearchForm extends AbstractSearchForm {
 	}
 
 	/**
-	 * Установить уровень для поиска 
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СѓСЂРѕРІРµРЅСЊ РґР»СЏ РїРѕРёСЃРєР° 
 	 */
 	public void setAbbreviationLevel(Integer abbreviationLevel) {
 		if(abbreviationLevel != null) {

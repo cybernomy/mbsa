@@ -17,7 +17,7 @@ package com.mg.merp.table.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Шаблон графика"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЁР°Р±Р»РѕРЅ РіСЂР°С„РёРєР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PatternHead.java,v 1.7 2008/08/12 14:11:44 sharapov Exp $

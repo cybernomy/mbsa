@@ -20,7 +20,7 @@ import com.mg.framework.api.help.HelpSystem;
 import com.mg.merp.help.support.HelpSystemImpl;
 
 /**
- * Реализация сервиса системы помощи для сервера JBoss
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° СЃРёСЃС‚РµРјС‹ РїРѕРјРѕС‰Рё РґР»СЏ СЃРµСЂРІРµСЂР° JBoss
  * 
  * @author Oleg V. Safonov
  * @version $Id: HelpSystemService.java,v 1.1 2006/11/14 15:29:39 safonov Exp $

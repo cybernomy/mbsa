@@ -23,7 +23,7 @@ import com.mg.merp.warehouse.model.WarehouseConfig;
 import com.mg.merp.warehouse.support.ConfigurationServiceImpl;
 
 /**
- * Реализация сервиса конфигурации модуля "Управление запасами" для контейнера JBoss
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РєРѕРЅС„РёРіСѓСЂР°С†РёРё РјРѕРґСѓР»СЏ "РЈРїСЂР°РІР»РµРЅРёРµ Р·Р°РїР°СЃР°РјРё" РґР»СЏ РєРѕРЅС‚РµР№РЅРµСЂР° JBoss
  * 
  * @author Oleg V. Safonov
  * @version $Id: ConfigurationServiceSupport.java,v 1.1 2006/12/12 15:31:10 safonov Exp $

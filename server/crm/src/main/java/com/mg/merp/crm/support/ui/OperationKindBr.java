@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.OperationKind;
 
 /**
- * Браузер видов действий
+ * Р‘СЂР°СѓР·РµСЂ РІРёРґРѕРІ РґРµР№СЃС‚РІРёР№
  * 
  * @author leonova
  * @version $Id: OperationKindBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

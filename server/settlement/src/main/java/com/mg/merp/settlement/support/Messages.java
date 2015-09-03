@@ -18,7 +18,7 @@ import com.mg.framework.generic.MessageSourceAccessor;
 
 
 /**
- * Класс сообщений
+ * РљР»Р°СЃСЃ СЃРѕРѕР±С‰РµРЅРёР№
  * 
  * @author Artem V. Sharapov
  * @author Konstantin S. Alikaev

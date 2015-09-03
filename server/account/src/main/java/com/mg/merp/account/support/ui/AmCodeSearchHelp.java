@@ -22,7 +22,7 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.merp.account.AmCodeServiceLocal;
 
 /**
- * Механизм поиска сущностей бизнес-компонента "Шифры амортизации"
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЁРёС„СЂС‹ Р°РјРѕСЂС‚РёР·Р°С†РёРё"
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: AmCodeSearchHelp.java,v 1.4 2008/07/15 08:15:09 safonov Exp $

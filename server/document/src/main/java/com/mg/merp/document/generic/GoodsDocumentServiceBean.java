@@ -32,7 +32,7 @@ import com.mg.merp.document.model.DocSpec;
 import com.mg.merp.document.support.DocumentUtils;
 
 /**
- * Базовая реализация бизнес-компонента "Документ со спецификациями"
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”РѕРєСѓРјРµРЅС‚ СЃРѕ СЃРїРµС†РёС„РёРєР°С†РёСЏРјРё"
  * 
  * @author Oleg V. Safonov
  * @author Konstantin S. Alikaev
@@ -42,9 +42,9 @@ public abstract class GoodsDocumentServiceBean<T extends com.mg.merp.document.mo
 		extends DocumentServiceBean<T, ID, M> implements GoodsDocument<T, ID, M, S> {
 	
 	/**
-	 * реализация изменения спецификации документа
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РёР·РјРµРЅРµРЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docSpecs	спецификации документа
+	 * @param docSpecs	СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected void doModifySpecifaction(DocSpec ... docSpecs) {
 		DefaultDocumentAggregatePropertiesStrategy st = new DefaultDocumentAggregatePropertiesStrategy(this, docSpecs, false, getConfiguration().getCurrencyScale());
@@ -52,9 +52,9 @@ public abstract class GoodsDocumentServiceBean<T extends com.mg.merp.document.mo
 	}
 	
 	/**
-	 * реализация создания спецификации документа
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СЃРѕР·РґР°РЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docSpecs	спецификации документа
+	 * @param docSpecs	СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected void doCreateSpecifaction(DocSpec ... docSpecs) {
 		DefaultDocumentAggregatePropertiesStrategy st = new DefaultDocumentAggregatePropertiesStrategy(this, docSpecs, false, getConfiguration().getCurrencyScale());
@@ -62,9 +62,9 @@ public abstract class GoodsDocumentServiceBean<T extends com.mg.merp.document.mo
 	}
 	
 	/**
-	 * реализация удаления спецификации документа
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СѓРґР°Р»РµРЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docSpecs	спецификации документа
+	 * @param docSpecs	СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected void doRemoveSpecifaction(DocSpec ... docSpecs) {
 		DefaultDocumentAggregatePropertiesStrategy st = new DefaultDocumentAggregatePropertiesStrategy(this, docSpecs, true, getConfiguration().getCurrencyScale());
@@ -78,7 +78,7 @@ public abstract class GoodsDocumentServiceBean<T extends com.mg.merp.document.mo
 	protected void onClone(T entity) {
 		super.onClone(entity);
 		//https://issues.m-g.ru/bugzilla/show_bug.cgi?id=4810
-		//если копируется со строками, то агрегатные значения будут вычисляться
+		//РµСЃР»Рё РєРѕРїРёСЂСѓРµС‚СЃСЏ СЃРѕ СЃС‚СЂРѕРєР°РјРё, С‚Рѕ Р°РіСЂРµРіР°С‚РЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ Р±СѓРґСѓС‚ РІС‹С‡РёСЃР»СЏС‚СЊСЃСЏ
 		entity.setSumCur(null);
 		entity.setSumNat(null);
 		entity.setVolume(null);
@@ -96,11 +96,11 @@ public abstract class GoodsDocumentServiceBean<T extends com.mg.merp.document.mo
 		List<DocSpec> clonedSpecs = new ArrayList<DocSpec>();
 		AttributeMap initAttr = new LocalDataTransferObject();
 		initAttr.put("DocHead", entityClone);
-		initAttr.put("BulkOperation", true); //признак группового создания спецификаций
+		initAttr.put("BulkOperation", true); //РїСЂРёР·РЅР°Рє РіСЂСѓРїРїРѕРІРѕРіРѕ СЃРѕР·РґР°РЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёР№
 		for (DocSpec docSpec : specs) {
 			clonedSpecs.add((DocSpec) specService.clone(docSpec, true, initAttr));
 		}
-		//изменим заголовок, т.к. был установлен признак BulkOperation
+		//РёР·РјРµРЅРёРј Р·Р°РіРѕР»РѕРІРѕРє, С‚.Рє. Р±С‹Р» СѓСЃС‚Р°РЅРѕРІР»РµРЅ РїСЂРёР·РЅР°Рє BulkOperation
 		createSpecifaction(clonedSpecs.toArray(new DocSpec[clonedSpecs.size()]));
 	}
 
@@ -112,7 +112,7 @@ public abstract class GoodsDocumentServiceBean<T extends com.mg.merp.document.mo
 		if (docSpecs == null || docSpecs.length == 0)
 			return;
 		
-		//TODO реализовать блокировку объекта-сущности
+		//TODO СЂРµР°Р»РёР·РѕРІР°С‚СЊ Р±Р»РѕРєРёСЂРѕРІРєСѓ РѕР±СЉРµРєС‚Р°-СЃСѓС‰РЅРѕСЃС‚Рё
 		doModifySpecifaction(docSpecs);
 		DocFlowHelper.modifyDocument(docSpecs[0].getDocHead());
 	}
@@ -125,7 +125,7 @@ public abstract class GoodsDocumentServiceBean<T extends com.mg.merp.document.mo
 		if (docSpecs == null || docSpecs.length == 0)
 			return;
 		
-		// TODO реализовать блокировку объекта-сущности
+		// TODO СЂРµР°Р»РёР·РѕРІР°С‚СЊ Р±Р»РѕРєРёСЂРѕРІРєСѓ РѕР±СЉРµРєС‚Р°-СЃСѓС‰РЅРѕСЃС‚Рё
 		doCreateSpecifaction(docSpecs);
 		DocFlowHelper.modifyDocument(docSpecs[0].getDocHead());
 	}
@@ -138,7 +138,7 @@ public abstract class GoodsDocumentServiceBean<T extends com.mg.merp.document.mo
 		if (docSpecs == null || docSpecs.length == 0)
 			return;
 
-		// TODO реализовать блокировку объекта-сущности
+		// TODO СЂРµР°Р»РёР·РѕРІР°С‚СЊ Р±Р»РѕРєРёСЂРѕРІРєСѓ РѕР±СЉРµРєС‚Р°-СЃСѓС‰РЅРѕСЃС‚Рё
 		doRemoveSpecifaction(docSpecs);
 		DocFlowHelper.modifyDocument(docSpecs[0].getDocHead());
 	}
@@ -149,7 +149,7 @@ public abstract class GoodsDocumentServiceBean<T extends com.mg.merp.document.mo
 	 */
 	@Override
 	protected int getDocSectionIdentifier() {
-		// TODO Автоматически созданная заглушка метода
+		// TODO РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРё СЃРѕР·РґР°РЅРЅР°СЏ Р·Р°РіР»СѓС€РєР° РјРµС‚РѕРґР°
 		return 0;
 	}
 

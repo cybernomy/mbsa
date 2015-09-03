@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.paymentalloc.model.DocGroup;
 
 /**
- * Браузер Групп документов
+ * Р‘СЂР°СѓР·РµСЂ Р“СЂСѓРїРї РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: DocGroupBr.java,v 1.1 2006/08/29 13:36:17 leonova Exp $ 

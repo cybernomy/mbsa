@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.CustomActionDescriptor;
 import com.mg.merp.baiengine.model.CustomUserAction;
 
 /**
- * Реализация настраиваемого действия
+ * Р РµР°Р»РёР·Р°С†РёСЏ РЅР°СЃС‚СЂР°РёРІР°РµРјРѕРіРѕ РґРµР№СЃС‚РІРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomActionDescriptorImpl.java,v 1.1 2007/11/15 09:19:05 safonov Exp $
@@ -36,9 +36,9 @@ public class CustomActionDescriptorImpl implements CustomActionDescriptor {
 	private boolean separatorAfter;
 
 	/**
-	 * конструктор
+	 * РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
-	 * @param action	сущность настраиваемого действия
+	 * @param action	СЃСѓС‰РЅРѕСЃС‚СЊ РЅР°СЃС‚СЂР°РёРІР°РµРјРѕРіРѕ РґРµР№СЃС‚РІРёСЏ
 	 */
 	public CustomActionDescriptorImpl(CustomUserAction action) {
 		super();

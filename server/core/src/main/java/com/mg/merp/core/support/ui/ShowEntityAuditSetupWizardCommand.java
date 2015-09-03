@@ -23,7 +23,7 @@ import com.mg.framework.utils.SecurityUtils;
 import com.mg.merp.core.DatabaseAuditSetupServiceLocal;
 
 /**
- * Реализация команды показа настройки аудита хранилища данных
+ * Р РµР°Р»РёР·Р°С†РёСЏ РєРѕРјР°РЅРґС‹ РїРѕРєР°Р·Р° РЅР°СЃС‚СЂРѕР№РєРё Р°СѓРґРёС‚Р° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: ShowEntityAuditSetupWizardCommand.java,v 1.2 2008/03/03 13:05:04 safonov Exp $

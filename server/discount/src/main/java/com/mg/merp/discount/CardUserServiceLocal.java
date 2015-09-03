@@ -17,7 +17,7 @@ package com.mg.merp.discount;
 import com.mg.merp.discount.model.CardUser;
 
 /**
- * Бизнес-компонент "Пользователи дисконтной карты"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџРѕР»СЊР·РѕРІР°С‚РµР»Рё РґРёСЃРєРѕРЅС‚РЅРѕР№ РєР°СЂС‚С‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.discount.model.CardUser;
 public interface CardUserServiceLocal extends com.mg.framework.api.DataBusinessObjectService<CardUser, Integer> {
 	
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/discount/CardUser"; //$NON-NLS-1$
 	

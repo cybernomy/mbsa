@@ -18,7 +18,7 @@ import com.mg.merp.crm.model.Contact;
 import com.mg.merp.crm.model.Relation;
 
 /**
- * Сервис бизнес-компонента "Контактные лица" 
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС‚Р°РєС‚РЅС‹Рµ Р»РёС†Р°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -27,16 +27,16 @@ import com.mg.merp.crm.model.Relation;
 public interface ContactServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Contact, Integer> {
 
 	/**
-	 * Добавить связь "отношение - контактное лицо"
-	 * @param contact - контактное лицо
-	 * @param relation - отношение
+	 * Р”РѕР±Р°РІРёС‚СЊ СЃРІСЏР·СЊ "РѕС‚РЅРѕС€РµРЅРёРµ - РєРѕРЅС‚Р°РєС‚РЅРѕРµ Р»РёС†Рѕ"
+	 * @param contact - РєРѕРЅС‚Р°РєС‚РЅРѕРµ Р»РёС†Рѕ
+	 * @param relation - РѕС‚РЅРѕС€РµРЅРёРµ
 	 */
 	void linkRelation(Contact contact, Relation relation);
 
 	/**
-	 * Удалить связь "отношение - контактное лицо"
-	 * @param contact - контактное лицо
-	 * @param relation - отношение
+	 * РЈРґР°Р»РёС‚СЊ СЃРІСЏР·СЊ "РѕС‚РЅРѕС€РµРЅРёРµ - РєРѕРЅС‚Р°РєС‚РЅРѕРµ Р»РёС†Рѕ"
+	 * @param contact - РєРѕРЅС‚Р°РєС‚РЅРѕРµ Р»РёС†Рѕ
+	 * @param relation - РѕС‚РЅРѕС€РµРЅРёРµ
 	 */
 	void unLinkRelation(Contact contact, Relation relation);
 }

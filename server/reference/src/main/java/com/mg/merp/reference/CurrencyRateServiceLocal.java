@@ -22,7 +22,7 @@ import com.mg.merp.reference.model.CurrencyRateAuthority;
 import com.mg.merp.reference.model.CurrencyRateType;
 
 /**
- * Бизнес-компонент "Курсы валют"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљСѓСЂСЃС‹ РІР°Р»СЋС‚"
  * 
  * @author leonova
  * @version $Id: CurrencyRateServiceLocal.java,v 1.4 2007/03/27 12:59:36 safonov Exp $
@@ -32,39 +32,39 @@ public interface CurrencyRateServiceLocal
 {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/reference/CurrencyRate"; //$NON-NLS-1$
 
 	/**
-	 * точность курса валют
+	 * С‚РѕС‡РЅРѕСЃС‚СЊ РєСѓСЂСЃР° РІР°Р»СЋС‚
 	 */
 	static final int DEFAULT_RATE_SCALE = 6;
 	
 	/**
-	 * получить прямой курс валют
+	 * РїРѕР»СѓС‡РёС‚СЊ РїСЂСЏРјРѕР№ РєСѓСЂСЃ РІР°Р»СЋС‚
 	 * 
-	 * @param currencyTo		валюта для которой берется курс
-	 * @param currencyFrom		валюта по отношению к которой берется курс
-	 * @param rateAuthority	источник курса
-	 * @param rateType		тип курса
-	 * @param effectiveDate	дата курса, если <code>null</code>, то будет использована текущая дата
-	 * @return	курс валюты
-	 * @throws CurrencyRateNotFoundException	если курс не найден
+	 * @param currencyTo		РІР°Р»СЋС‚Р° РґР»СЏ РєРѕС‚РѕСЂРѕР№ Р±РµСЂРµС‚СЃСЏ РєСѓСЂСЃ
+	 * @param currencyFrom		РІР°Р»СЋС‚Р° РїРѕ РѕС‚РЅРѕС€РµРЅРёСЋ Рє РєРѕС‚РѕСЂРѕР№ Р±РµСЂРµС‚СЃСЏ РєСѓСЂСЃ
+	 * @param rateAuthority	РёСЃС‚РѕС‡РЅРёРє РєСѓСЂСЃР°
+	 * @param rateType		С‚РёРї РєСѓСЂСЃР°
+	 * @param effectiveDate	РґР°С‚Р° РєСѓСЂСЃР°, РµСЃР»Рё <code>null</code>, С‚Рѕ Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°РЅР° С‚РµРєСѓС‰Р°СЏ РґР°С‚Р°
+	 * @return	РєСѓСЂСЃ РІР°Р»СЋС‚С‹
+	 * @throws CurrencyRateNotFoundException	РµСЃР»Рё РєСѓСЂСЃ РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	BigDecimal getCurrencyRate(Currency currencyTo, Currency currencyFrom, 
 			CurrencyRateAuthority rateAuthority, CurrencyRateType rateType, java.util.Date effectiveDate) throws CurrencyRateNotFoundException;
 
 	/**
-	 * получить обратный курс валют
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕР±СЂР°С‚РЅС‹Р№ РєСѓСЂСЃ РІР°Р»СЋС‚
 	 * 
-	 * @param currencyTo		валюта для которой берется курс
-	 * @param currencyFrom		валюта по отношению к которой берется курс
-	 * @param rateAuthority	источник курса
-	 * @param rateType		тип курса
-	 * @param effectiveDate	дата курса, если <code>null</code>, то будет использована текущая дата
-	 * @return	курс валюты
-	 * @throws CurrencyRateNotFoundException	если курс не найден
+	 * @param currencyTo		РІР°Р»СЋС‚Р° РґР»СЏ РєРѕС‚РѕСЂРѕР№ Р±РµСЂРµС‚СЃСЏ РєСѓСЂСЃ
+	 * @param currencyFrom		РІР°Р»СЋС‚Р° РїРѕ РѕС‚РЅРѕС€РµРЅРёСЋ Рє РєРѕС‚РѕСЂРѕР№ Р±РµСЂРµС‚СЃСЏ РєСѓСЂСЃ
+	 * @param rateAuthority	РёСЃС‚РѕС‡РЅРёРє РєСѓСЂСЃР°
+	 * @param rateType		С‚РёРї РєСѓСЂСЃР°
+	 * @param effectiveDate	РґР°С‚Р° РєСѓСЂСЃР°, РµСЃР»Рё <code>null</code>, С‚Рѕ Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°РЅР° С‚РµРєСѓС‰Р°СЏ РґР°С‚Р°
+	 * @return	РєСѓСЂСЃ РІР°Р»СЋС‚С‹
+	 * @throws CurrencyRateNotFoundException	РµСЃР»Рё РєСѓСЂСЃ РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	BigDecimal getIndirectCurrencyRate(Currency currencyTo, Currency currencyFrom, 
 			CurrencyRateAuthority rateAuthority, CurrencyRateType rateType, java.util.Date effectiveDate) throws CurrencyRateNotFoundException;

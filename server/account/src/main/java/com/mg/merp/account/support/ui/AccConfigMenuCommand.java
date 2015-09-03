@@ -26,7 +26,7 @@ import com.mg.merp.account.AccountConfigServiceLocal;
 import com.mg.merp.core.model.SysClient;
 
 /**
- * Контроллер комманды меню "Конфигурация модуля <Бух.учет>"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРјРјР°РЅРґС‹ РјРµРЅСЋ "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <Р‘СѓС….СѓС‡РµС‚>"
  * 
  * @author Artem V. Sharapov
  * @version $Id: AccConfigMenuCommand.java,v 1.2 2008/08/15 15:04:41 sharapov Exp $

@@ -38,7 +38,7 @@ import com.mg.merp.planning.model.GenericItem;
 import com.mg.merp.reference.model.Catalog;
 
 /**
- * Реализация бизнес-компонента "Обобщенный товар" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±РѕР±С‰РµРЅРЅС‹Р№ С‚РѕРІР°СЂ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -55,7 +55,7 @@ public class GenericItemServiceBean extends AbstractPOJODataBusinessObjectServic
 	private void performBOM(GenericItem genericItem, short level) {
 		Date nowDate = DateTimeUtils.nowDate();
 		OrmTemplate tmpl = OrmTemplate.getInstance();
-		//загрузим материалы из БОМов которые описывают текущий обобщенный товар
+		//Р·Р°РіСЂСѓР·РёРј РјР°С‚РµСЂРёР°Р»С‹ РёР· Р‘РћРњРѕРІ РєРѕС‚РѕСЂС‹Рµ РѕРїРёСЃС‹РІР°СЋС‚ С‚РµРєСѓС‰РёР№ РѕР±РѕР±С‰РµРЅРЅС‹Р№ С‚РѕРІР°СЂ
 		List<Catalog> catalogList = tmpl.findByCriteria(OrmTemplate.createCriteria(BomMaterial.class, "bm")
 				.createAlias("bm.BomRoute", "br")
 				.createAlias("br.Bom", "b")
@@ -65,7 +65,7 @@ public class GenericItemServiceBean extends AbstractPOJODataBusinessObjectServic
 				.add(Restrictions.le("bm.EffOnDate", nowDate))
 				.add(Restrictions.ge("bm.EffOffDate", nowDate))
 				.setProjection(Projections.property("bm.Catalog")));
-		//загрузим материалы из ЗНП которые описывают текущий обобщенный товар
+		//Р·Р°РіСЂСѓР·РёРј РјР°С‚РµСЂРёР°Р»С‹ РёР· Р—РќРџ РєРѕС‚РѕСЂС‹Рµ РѕРїРёСЃС‹РІР°СЋС‚ С‚РµРєСѓС‰РёР№ РѕР±РѕР±С‰РµРЅРЅС‹Р№ С‚РѕРІР°СЂ
 		List<Catalog> jobCatalogList = tmpl.findByCriteria(OrmTemplate.createCriteria(JobMaterial.class, "jm")
 				.createAlias("jm.Oper", "jr")
 				.createAlias("jr.Job", "j")
@@ -78,7 +78,7 @@ public class GenericItemServiceBean extends AbstractPOJODataBusinessObjectServic
 		catalogList.addAll(jobCatalogList);
 		
 		for (Catalog catalog : catalogList) {
-			//ищем обобщенный товар для материала, если нашли, значит на один уровень вниз
+			//РёС‰РµРј РѕР±РѕР±С‰РµРЅРЅС‹Р№ С‚РѕРІР°СЂ РґР»СЏ РјР°С‚РµСЂРёР°Р»Р°, РµСЃР»Рё РЅР°С€Р»Рё, Р·РЅР°С‡РёС‚ РЅР° РѕРґРёРЅ СѓСЂРѕРІРµРЅСЊ РІРЅРёР·
 			GenericItem gi = tmpl.findUniqueByCriteria(OrmTemplate.createCriteria(GenericItem.class)
 					.add(Restrictions.eq("Catalog", catalog)));
 			if (gi != null) {
@@ -89,7 +89,7 @@ public class GenericItemServiceBean extends AbstractPOJODataBusinessObjectServic
 	}
 	
 	/**
-	 * реализация расчета кода нижнего уровня
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СЂР°СЃС‡РµС‚Р° РєРѕРґР° РЅРёР¶РЅРµРіРѕ СѓСЂРѕРІРЅСЏ
 	 *
 	 */
 	protected void internalBuildLowLevelCodes() {
@@ -116,7 +116,7 @@ public class GenericItemServiceBean extends AbstractPOJODataBusinessObjectServic
 		context.addRule(new MandatoryStringAttribute(entity, "GenericItemCode")); //$NON-NLS-1$
 		context.addRule(new MandatoryAttribute(entity, "Measure"));	 //$NON-NLS-1$
 		context.addRule(new MandatoryAttribute(entity, "GenericItemName"));	 //$NON-NLS-1$
-		//на одну позицию каталога может ссылаться только один обобщенный товар
+		//РЅР° РѕРґРЅСѓ РїРѕР·РёС†РёСЋ РєР°С‚Р°Р»РѕРіР° РјРѕР¶РµС‚ СЃСЃС‹Р»Р°С‚СЊСЃСЏ С‚РѕР»СЊРєРѕ РѕРґРёРЅ РѕР±РѕР±С‰РµРЅРЅС‹Р№ С‚РѕРІР°СЂ
 		context.addRule(new EntityBeanRule(Messages.getInstance().getMessage(Messages.DUPLICATE_GENERIC_ITEM_CATALOG), entity, "Catalog") {
 
 			@Override

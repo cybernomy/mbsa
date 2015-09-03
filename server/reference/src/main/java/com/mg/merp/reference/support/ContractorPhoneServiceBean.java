@@ -22,7 +22,7 @@ import com.mg.merp.reference.ContractorPhoneServiceLocal;
 import com.mg.merp.reference.model.ContractorPhone;
 
 /**
- * Бизнес-компонент "Телефоны партнеров" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРµР»РµС„РѕРЅС‹ РїР°СЂС‚РЅРµСЂРѕРІ" 
  * 
  * @author leonova
  * @version $Id: ContractorPhoneServiceBean.java,v 1.4 2006/08/16 04:47:14 leonova Exp $

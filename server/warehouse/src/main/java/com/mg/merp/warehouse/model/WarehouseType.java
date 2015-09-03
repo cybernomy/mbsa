@@ -17,7 +17,7 @@ package com.mg.merp.warehouse.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонент "Тип склада"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРї СЃРєР»Р°РґР°"
  *  
  * @author Konstantin S. Alikaev
  * @version $Id: WarehouseType.java,v 1.1 2007/09/17 12:45:56 alikaev Exp $

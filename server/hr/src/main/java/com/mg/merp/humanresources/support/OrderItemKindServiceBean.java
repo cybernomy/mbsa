@@ -23,7 +23,7 @@ import com.mg.merp.humanresources.OrderItemKindServiceLocal;
 import com.mg.merp.humanresources.model.OrderItemKind;
 
 /**
- * Реализация бизнес-компонента "Виды пунктов приказов"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РёРґС‹ РїСѓРЅРєС‚РѕРІ РїСЂРёРєР°Р·РѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: OrderItemKindServiceBean.java,v 1.5 2007/08/27 13:34:01 sharapov Exp $

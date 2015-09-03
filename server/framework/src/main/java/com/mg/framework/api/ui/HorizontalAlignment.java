@@ -15,7 +15,7 @@
 package com.mg.framework.api.ui;
 
 /**
- * Горизонтальное выравнивание
+ * Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕРµ РІС‹СЂР°РІРЅРёРІР°РЅРёРµ
  * 
  * @author Oleg V. Safonov
  * @version $Id: HorizontalAlignment.java,v 1.1 2008/07/24 15:12:25 safonov Exp $

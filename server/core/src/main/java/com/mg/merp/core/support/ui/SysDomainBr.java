@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.core.model.SysDomain;
 
 /**
- * Браузер доменов
+ * Р‘СЂР°СѓР·РµСЂ РґРѕРјРµРЅРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: SysDomainBr.java,v 1.1 2008/03/03 13:05:04 safonov Exp $

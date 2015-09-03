@@ -22,8 +22,8 @@ import com.mg.framework.utils.BeanUtils;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Класс-преобразователь документов в Map и обратно. Необходим для обхода
- * ситуации
+ * РљР»Р°СЃСЃ-РїСЂРµРѕР±СЂР°Р·РѕРІР°С‚РµР»СЊ РґРѕРєСѓРјРµРЅС‚РѕРІ РІ Map Рё РѕР±СЂР°С‚РЅРѕ. РќРµРѕР±С…РѕРґРёРј РґР»СЏ РѕР±С…РѕРґР°
+ * СЃРёС‚СѓР°С†РёРё
  * http://sourceforge.net/tracker/index.php?func=detail&aid=1709116&group_id=133517&atid=727368
  * 
  * @author Oleg V. Safonov
@@ -38,14 +38,14 @@ public class MapToDocumentCustomConverter extends AbstractConverter {
 	}
 	
 	/**
-	 * удаление атрибутов документа не предназначенных для переноса в другой документ
+	 * СѓРґР°Р»РµРЅРёРµ Р°С‚СЂРёР±СѓС‚РѕРІ РґРѕРєСѓРјРµРЅС‚Р° РЅРµ РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅРЅС‹С… РґР»СЏ РїРµСЂРµРЅРѕСЃР° РІ РґСЂСѓРіРѕР№ РґРѕРєСѓРјРµРЅС‚
 	 * 
-	 * @param docAttr	список атрибутов
+	 * @param docAttr	СЃРїРёСЃРѕРє Р°С‚СЂРёР±СѓС‚РѕРІ
 	 */
 	protected void removeUnusedAttributes(Map<String, Object> docAttr) {
-		docAttr.remove("Id"); //не копируем первичный ключ
-		docAttr.remove("UNID"); //не копируем UID
-		docAttr.remove("Requester"); //должен устанавливаться текущим
+		docAttr.remove("Id"); //РЅРµ РєРѕРїРёСЂСѓРµРј РїРµСЂРІРёС‡РЅС‹Р№ РєР»СЋС‡
+		docAttr.remove("UNID"); //РЅРµ РєРѕРїРёСЂСѓРµРј UID
+		docAttr.remove("Requester"); //РґРѕР»Р¶РµРЅ СѓСЃС‚Р°РЅР°РІР»РёРІР°С‚СЊСЃСЏ С‚РµРєСѓС‰РёРј
 	}
 	
 	/* (non-Javadoc)
@@ -67,7 +67,7 @@ public class MapToDocumentCustomConverter extends AbstractConverter {
 
 			removeUnusedAttributes(srcMap);
 
-			DocHead result = (DocHead) dest; //должен быть документом
+			DocHead result = (DocHead) dest; //РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РґРѕРєСѓРјРµРЅС‚РѕРј
 			for (String key : srcMap.keySet()) {
 				Object value = srcMap.get(key);
 				if (result.hasAttribute(key)) //http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4407
@@ -79,7 +79,7 @@ public class MapToDocumentCustomConverter extends AbstractConverter {
 			if (destination == null)
 				return ((DocHead) source).getAllAttributes();
 			else {
-				Map<String, Object> dest = convertToMap(destination); //должен быть map
+				Map<String, Object> dest = convertToMap(destination); //РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ map
 				dest.putAll(((DocHead) source).getAllAttributes());
 				return dest;
 			}

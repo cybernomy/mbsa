@@ -18,7 +18,7 @@ import com.mg.merp.planning.model.MrpInputs;
 import com.mg.merp.planning.model.MrpVersionControl;
 
 /**
- * Бизнес-компонент "Поступление товаров для расчета ППМ"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџРѕСЃС‚СѓРїР»РµРЅРёРµ С‚РѕРІР°СЂРѕРІ РґР»СЏ СЂР°СЃС‡РµС‚Р° РџРџРњ"
  * 
  * @author Oleg V. Safonov
  * @author leonova
@@ -28,14 +28,14 @@ public interface MRPInputsServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<MrpInputs, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/planning/MRPInputs";
 	
 	/**
-	 * очистить поступления товара
+	 * РѕС‡РёСЃС‚РёС‚СЊ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ С‚РѕРІР°СЂР°
 	 * 
-	 * @param mrpVersion	версия ППМ
+	 * @param mrpVersion	РІРµСЂСЃРёСЏ РџРџРњ
 	 */
 	void clear(MrpVersionControl mrpVersion);
 	

@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.Widget;
 import com.mg.framework.api.ui.Window;
 
 /**
- * диалоговое окно (модальное), используется при UI диалогах
+ * РґРёР°Р»РѕРіРѕРІРѕРµ РѕРєРЅРѕ (РјРѕРґР°Р»СЊРЅРѕРµ), РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РїСЂРё UI РґРёР°Р»РѕРіР°С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: Dialog.java,v 1.4 2006/11/21 15:34:06 safonov Exp $
@@ -26,15 +26,15 @@ import com.mg.framework.api.ui.Window;
 public interface Dialog extends Widget, Window {
 
 	/**
-	 * заголовок диалога по умолчанию
+	 * Р·Р°РіРѕР»РѕРІРѕРє РґРёР°Р»РѕРіР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
 	final static String DEFAULT_TITLE = "Dialog";
 	
 	/**
-	 * установка размеров окна
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ РѕРєРЅР°
 	 * 
-	 * @param width		ширина (в пикселах)
-	 * @param height	высота (в пикселах)
+	 * @param width		С€РёСЂРёРЅР° (РІ РїРёРєСЃРµР»Р°С…)
+	 * @param height	РІС‹СЃРѕС‚Р° (РІ РїРёРєСЃРµР»Р°С…)
 	 */
 	void setSize(int width, int height);
 }

@@ -29,7 +29,7 @@ import com.mg.merp.personnelref.KladrServiceLocal;
 import com.mg.merp.personnelref.model.Kladr;
 
 /**
- * Контроллер формы поиска сущностей "Классификатор адресов (КЛАДР)"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РљР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂ Р°РґСЂРµСЃРѕРІ (РљР›РђР”Р )"
  * 
  * @author Artem V. Sharapov
  * @version $Id: KladrSearchForm.java,v 1.1 2007/07/16 13:22:45 sharapov Exp $
@@ -136,8 +136,8 @@ public class KladrSearchForm extends AbstractSearchForm {
 		StringBuilder cityMask = new StringBuilder().append(regionCode).append(districtCode).append(KladrServiceLocal.CITY_SUB_MASK);
 		StringBuilder areaMask = new StringBuilder().append(regionCode).append(districtCode).append(cityCode).append(KladrServiceLocal.AREA_SUB_MASK);
 
-		// для отбора объектов соответствующего уровня надо, чтобы код объекта подходил
-		// под маску объектов этого уровня и не подходил под маски более высоких уровней
+		// РґР»СЏ РѕС‚Р±РѕСЂР° РѕР±СЉРµРєС‚РѕРІ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµРіРѕ СѓСЂРѕРІРЅСЏ РЅР°РґРѕ, С‡С‚РѕР±С‹ РєРѕРґ РѕР±СЉРµРєС‚Р° РїРѕРґС…РѕРґРёР»
+		// РїРѕРґ РјР°СЃРєСѓ РѕР±СЉРµРєС‚РѕРІ СЌС‚РѕРіРѕ СѓСЂРѕРІРЅСЏ Рё РЅРµ РїРѕРґС…РѕРґРёР» РїРѕРґ РјР°СЃРєРё Р±РѕР»РµРµ РІС‹СЃРѕРєРёС… СѓСЂРѕРІРЅРµР№
 		switch(kladrLevel) {
 			case KladrServiceLocal.REGION_LEVEL :
 				paramsName.add(REGION_MASK_PARAM_NAME);

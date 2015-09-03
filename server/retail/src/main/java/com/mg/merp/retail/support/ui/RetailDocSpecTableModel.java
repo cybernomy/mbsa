@@ -22,7 +22,7 @@ import com.mg.merp.document.generic.ui.AbstractGoodsDocSpecTableModel;
 import com.mg.merp.retail.model.RtlInvoiceSpec;
 
 /**
- * Модель списка спецификаций дополнительно браузера спецификаций
+ * РњРѕРґРµР»СЊ СЃРїРёСЃРєР° СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕ Р±СЂР°СѓР·РµСЂР° СЃРїРµС†РёС„РёРєР°С†РёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: RetailDocSpecTableModel.java,v 1.1 2009/02/12 08:23:40 safonov Exp $

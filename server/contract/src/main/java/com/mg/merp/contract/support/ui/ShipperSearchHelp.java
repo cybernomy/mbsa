@@ -21,7 +21,7 @@ import com.mg.merp.reference.model.Partner;
 import com.mg.merp.reference.support.ui.PartnerSearchHelp;
 
 /**
- * Механизм поиска "Грузоотправителя" с установкой "Банковского счета грузоотправителя"
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° "Р“СЂСѓР·РѕРѕС‚РїСЂР°РІРёС‚РµР»СЏ" СЃ СѓСЃС‚Р°РЅРѕРІРєРѕР№ "Р‘Р°РЅРєРѕРІСЃРєРѕРіРѕ СЃС‡РµС‚Р° РіСЂСѓР·РѕРѕС‚РїСЂР°РІРёС‚РµР»СЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ShipperSearchHelp.java,v 1.1 2008/09/22 10:09:34 sharapov Exp $

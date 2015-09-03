@@ -20,7 +20,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.warehouse.model.Warehouse;
 
 /**
- * Контроллер формы условий отбора складов хранения товаров
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° СЃРєР»Р°РґРѕРІ С…СЂР°РЅРµРЅРёСЏ С‚РѕРІР°СЂРѕРІ
  * 
  * @author leonova
  * @version $Id: CatalogWarehouseRest.java,v 1.4 2006/10/16 10:53:29 leonova Exp $ 

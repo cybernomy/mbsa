@@ -17,7 +17,7 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.warehouse.model.StockPlanHistory;
 
 /**
- * Сервис бизнес-компонента "История планового движения и резервирования по партии"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РСЃС‚РѕСЂРёСЏ РїР»Р°РЅРѕРІРѕРіРѕ РґРІРёР¶РµРЅРёСЏ Рё СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРёСЏ РїРѕ РїР°СЂС‚РёРё"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehousePlanHistoryServiceLocal.java,v 1.1 2007/03/07 10:51:09 poroxnenko Exp $ 
@@ -26,7 +26,7 @@ public interface WarehousePlanHistoryServiceLocal extends
 		DataBusinessObjectService<StockPlanHistory, Integer> {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/warehouse/WarehousePlanHistory";
 }

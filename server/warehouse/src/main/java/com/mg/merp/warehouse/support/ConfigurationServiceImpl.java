@@ -19,7 +19,7 @@ import com.mg.merp.warehouse.ConfigurationService;
 import com.mg.merp.warehouse.model.WarehouseConfig;
 
 /**
- * Реализация конфигурации модуля "Управление запасами"
+ * Р РµР°Р»РёР·Р°С†РёСЏ РєРѕРЅС„РёРіСѓСЂР°С†РёРё РјРѕРґСѓР»СЏ "РЈРїСЂР°РІР»РµРЅРёРµ Р·Р°РїР°СЃР°РјРё"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ConfigurationServiceImpl.java,v 1.1 2006/12/12 15:33:03 safonov Exp $

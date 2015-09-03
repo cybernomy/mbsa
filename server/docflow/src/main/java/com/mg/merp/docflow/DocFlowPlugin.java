@@ -18,7 +18,7 @@ import com.mg.merp.docprocess.model.DocHeadState;
 
 
 /**
- * Подключаемый модуль машины документооборота для выполнения этапов
+ * РџРѕРґРєР»СЋС‡Р°РµРјС‹Р№ РјРѕРґСѓР»СЊ РјР°С€РёРЅС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р° РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ СЌС‚Р°РїРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowPlugin.java,v 1.2 2006/10/21 10:48:22 safonov Exp $
@@ -26,49 +26,49 @@ import com.mg.merp.docprocess.model.DocHeadState;
 public interface DocFlowPlugin {
 	
 	/**
-	 * зарегистрировать слушателя на события подключаемого модуля
+	 * Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊ СЃР»СѓС€Р°С‚РµР»СЏ РЅР° СЃРѕР±С‹С‚РёСЏ РїРѕРґРєР»СЋС‡Р°РµРјРѕРіРѕ РјРѕРґСѓР»СЏ
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	void registerListener(DocFlowPluginListener listener);
 	
 	/**
-	 * удалить слушателя на события подключаемого модуля
+	 * СѓРґР°Р»РёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЏ РЅР° СЃРѕР±С‹С‚РёСЏ РїРѕРґРєР»СЋС‡Р°РµРјРѕРіРѕ РјРѕРґСѓР»СЏ
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	void unregisterListener(DocFlowPluginListener listener);
 	
 	/**
-	 * выполнить этап ДО
+	 * РІС‹РїРѕР»РЅРёС‚СЊ СЌС‚Р°Рї Р”Рћ
 	 * 
-	 * @param params		параметры ДО
-	 * @throws Exception	при любых ИС
+	 * @param params		РїР°СЂР°РјРµС‚СЂС‹ Р”Рћ
+	 * @throws Exception	РїСЂРё Р»СЋР±С‹С… РРЎ
 	 */
 	void execute(DocFlowPluginInvokeParams params) throws Exception;
 	
 	/**
-	 * выполнить откат этап ДО
+	 * РІС‹РїРѕР»РЅРёС‚СЊ РѕС‚РєР°С‚ СЌС‚Р°Рї Р”Рћ
 	 * 
-	 * @param params		параметры ДО
-	 * @throws Exception	при любых ИС
+	 * @param params		РїР°СЂР°РјРµС‚СЂС‹ Р”Рћ
+	 * @throws Exception	РїСЂРё Р»СЋР±С‹С… РРЎ
 	 */
 	void rollback(DocFlowPluginInvokeParams params) throws Exception;
 	
 	/**
-	 * получить текстовое представление о результате выполнения этапа ДО
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ Рѕ СЂРµР·СѓР»СЊС‚Р°С‚Рµ РІС‹РїРѕР»РЅРµРЅРёСЏ СЌС‚Р°РїР° Р”Рћ
 	 * 
-	 * @param docHeadState		состояние этапа ДО
-	 * @return	текстовое	представление
+	 * @param docHeadState		СЃРѕСЃС‚РѕСЏРЅРёРµ СЌС‚Р°РїР° Р”Рћ
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ	РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 */
 	String getDocActionResultTextRepresentation(DocHeadState docHeadState);
 	
 	/**
-	 * показать в пользовательском интерфейсе результат выполненного этапа ДО.
-	 * <strong>Вызов данного метода возможен только если текущий пользователь
-	 * является интерактивным.</strong>
+	 * РїРѕРєР°Р·Р°С‚СЊ РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРј РёРЅС‚РµСЂС„РµР№СЃРµ СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРЅРѕРіРѕ СЌС‚Р°РїР° Р”Рћ.
+	 * <strong>Р’С‹Р·РѕРІ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР° РІРѕР·РјРѕР¶РµРЅ С‚РѕР»СЊРєРѕ РµСЃР»Рё С‚РµРєСѓС‰РёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ
+	 * СЏРІР»СЏРµС‚СЃСЏ РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹Рј.</strong>
 	 * 
-	 * @param docHeadState		состояние этапа ДО
+	 * @param docHeadState		СЃРѕСЃС‚РѕСЏРЅРёРµ СЌС‚Р°РїР° Р”Рћ
 	 */
 	void showDocActionResult(DocHeadState docHeadState);
 	

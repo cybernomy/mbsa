@@ -20,7 +20,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.service.PersistentObjectHibernate;
 
 /**
- * Налог на спецификации документа
+ * РќР°Р»РѕРі РЅР° СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentSpecTax.java,v 1.3 2006/12/03 12:42:16 safonov Exp $
@@ -66,9 +66,9 @@ public class DocumentSpecTax extends PersistentObjectHibernate implements
 	}
 
 	/**
-	 * получить налог
+	 * РїРѕР»СѓС‡РёС‚СЊ РЅР°Р»РѕРі
 	 * 
-	 * @return	налог
+	 * @return	РЅР°Р»РѕРі
 	 */
 	public com.mg.merp.reference.model.Tax getTax() {
 		return this.tax;
@@ -79,9 +79,9 @@ public class DocumentSpecTax extends PersistentObjectHibernate implements
 	}
 
 	/**
-	 * получить спецификацию документа
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @return	спецификация документа
+	 * @return	СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	public com.mg.merp.document.model.DocSpec getDocSpec() {
 		return this.docSpec;
@@ -92,9 +92,9 @@ public class DocumentSpecTax extends PersistentObjectHibernate implements
 	}
 
 	/**
-	 * получить сумму не включенного налога
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃСѓРјРјСѓ РЅРµ РІРєР»СЋС‡РµРЅРЅРѕРіРѕ РЅР°Р»РѕРіР°
 	 * 
-	 * @return	сумма налога
+	 * @return	СЃСѓРјРјР° РЅР°Р»РѕРіР°
 	 */
 	@DataItemName("Document.DocumentSpecTax.Sum")
 	public java.math.BigDecimal getSumElement() {
@@ -106,9 +106,9 @@ public class DocumentSpecTax extends PersistentObjectHibernate implements
 	}
 
 	/**
-	 * получить величину не включенного налога в цене
+	 * РїРѕР»СѓС‡РёС‚СЊ РІРµР»РёС‡РёРЅСѓ РЅРµ РІРєР»СЋС‡РµРЅРЅРѕРіРѕ РЅР°Р»РѕРіР° РІ С†РµРЅРµ
 	 * 
-	 * @return	величина налога в цене
+	 * @return	РІРµР»РёС‡РёРЅР° РЅР°Р»РѕРіР° РІ С†РµРЅРµ
 	 */
 	@DataItemName("Document.DocumentSpecTax.Price")
 	public java.math.BigDecimal getPriceElement() {

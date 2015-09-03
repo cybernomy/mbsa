@@ -35,7 +35,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.framework.utils.StringUtils;
 
 /**
- * Реализация сервиса управления прикладными функциями сервера приложения
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° СѓРїСЂР°РІР»РµРЅРёСЏ РїСЂРёРєР»Р°РґРЅС‹РјРё С„СѓРЅРєС†РёСЏРјРё СЃРµСЂРІРµСЂР° РїСЂРёР»РѕР¶РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ApplicationServerImpl.java,v 1.2 2008/12/08 06:12:27 safonov Exp $
@@ -91,21 +91,21 @@ public class ApplicationServerImpl implements ApplicationServer {
 	}
 	
 	/**
-	 * загрузка активных сессий пользователей, для реализации используется
-	 * библиотека <a href="http://messadmin.sourceforge.net/">MessAdmin</a>
+	 * Р·Р°РіСЂСѓР·РєР° Р°РєС‚РёРІРЅС‹С… СЃРµСЃСЃРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№, РґР»СЏ СЂРµР°Р»РёР·Р°С†РёРё РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
+	 * Р±РёР±Р»РёРѕС‚РµРєР° <a href="http://messadmin.sourceforge.net/">MessAdmin</a>
 	 * 
-	 * @return	информация об активных HTTP сессиях
+	 * @return	РёРЅС„РѕСЂРјР°С†РёСЏ РѕР± Р°РєС‚РёРІРЅС‹С… HTTP СЃРµСЃСЃРёСЏС…
 	 */
 	@SuppressWarnings("unchecked")
 	private Set<UserSessionInfo> loadActiveUser() {
 		Set<UserSessionInfo> result = new HashSet<UserSessionInfo>();
 		String currentHttpSessionId = getCurrentHttpSessionId();
 		Application application = getApplication();
-		if (application == null) //такого не должно быть
+		if (application == null) //С‚Р°РєРѕРіРѕ РЅРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ
 			return result;
 		Set<ISessionInfo> sessionInfos = application.getActiveSessionInfos();
 		for (ISessionInfo sessionInfo : sessionInfos) {
-			//если есть пользователь, то значит активный
+			//РµСЃР»Рё РµСЃС‚СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ, С‚Рѕ Р·РЅР°С‡РёС‚ Р°РєС‚РёРІРЅС‹Р№
 			if (sessionInfo.getGuessedUser() instanceof String)
 				result.add(createUserSessionInfo(sessionInfo, currentHttpSessionId));
 		}
@@ -115,7 +115,7 @@ public class ApplicationServerImpl implements ApplicationServer {
 	protected UserSessionInfo doGetUserSessionInfo(String httpSessionId) throws Exception {
 		String currentHttpSessionId = getCurrentHttpSessionId();
 		Application application = getApplication();
-		if (application == null) //такого не должно быть
+		if (application == null) //С‚Р°РєРѕРіРѕ РЅРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ
 			return null;
 		
 		Session session = application.getSession(httpSessionId);
@@ -156,13 +156,13 @@ public class ApplicationServerImpl implements ApplicationServer {
 	protected void doInvalidateUserSessions(final String[] sessionIds) {
 		final String currentHttpSessionId = getCurrentHttpSessionId();
 		final Application application = getApplication();
-		if (application == null) //такого не должно быть
+		if (application == null) //С‚Р°РєРѕРіРѕ РЅРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ
 			return;
 
-		//используем поток, т.к. вызов может происходить из приложения администратора, тогда
-		//текущая сессия приложения будет администратора и для нее будет выполнена команда logout,
-		//однако http сессия будет та, которую и собирались завершить и в рамках веб сервера именно
-		//она будет завершена
+		//РёСЃРїРѕР»СЊР·СѓРµРј РїРѕС‚РѕРє, С‚.Рє. РІС‹Р·РѕРІ РјРѕР¶РµС‚ РїСЂРѕРёСЃС…РѕРґРёС‚СЊ РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°, С‚РѕРіРґР°
+		//С‚РµРєСѓС‰Р°СЏ СЃРµСЃСЃРёСЏ РїСЂРёР»РѕР¶РµРЅРёСЏ Р±СѓРґРµС‚ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР° Рё РґР»СЏ РЅРµРµ Р±СѓРґРµС‚ РІС‹РїРѕР»РЅРµРЅР° РєРѕРјР°РЅРґР° logout,
+		//РѕРґРЅР°РєРѕ http СЃРµСЃСЃРёСЏ Р±СѓРґРµС‚ С‚Р°, РєРѕС‚РѕСЂСѓСЋ Рё СЃРѕР±РёСЂР°Р»РёСЃСЊ Р·Р°РІРµСЂС€РёС‚СЊ Рё РІ СЂР°РјРєР°С… РІРµР± СЃРµСЂРІРµСЂР° РёРјРµРЅРЅРѕ
+		//РѕРЅР° Р±СѓРґРµС‚ Р·Р°РІРµСЂС€РµРЅР°
 		new Thread(new Runnable() {
 
 			public void run() {

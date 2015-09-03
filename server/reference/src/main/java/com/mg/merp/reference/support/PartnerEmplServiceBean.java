@@ -22,7 +22,7 @@ import com.mg.merp.reference.PartnerEmplServiceLocal;
 import com.mg.merp.reference.model.PartnerEmpl;
 
 /**
- * Бизнес-компонент "Сотрудники партнера" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРѕС‚СЂСѓРґРЅРёРєРё РїР°СЂС‚РЅРµСЂР°" 
  * 
  * @author leonova
  * @version $Id: PartnerEmplServiceBean.java,v 1.3 2006/08/16 04:56:01 leonova Exp $

@@ -26,7 +26,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.warehouse.support.Messages;
 
 /**
- * Контроллер диалога выбора серийных номеров
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° РІС‹Р±РѕСЂР° СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
  * 
  * @author Artem V. Sharapov
  * @version $Id: SelectSerialNumberDlg.java,v 1.1 2008/05/30 13:03:56 sharapov Exp $
@@ -133,12 +133,12 @@ public class SelectSerialNumberDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Запустить диалог ввода серийных номеров
-	 * @param necessarySerialNumbersQuantity - кол-во номеров для выбора
-	 * @param catalogCode - код позиции каталога
-	 * @param catalogName - наименование позиции каталога
-	 * @param numberLot - номер партии
-	 * @param vendorLot - номер партии поставщика
+	 * Р—Р°РїСѓСЃС‚РёС‚СЊ РґРёР°Р»РѕРі РІРІРѕРґР° СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
+	 * @param necessarySerialNumbersQuantity - РєРѕР»-РІРѕ РЅРѕРјРµСЂРѕРІ РґР»СЏ РІС‹Р±РѕСЂР°
+	 * @param catalogCode - РєРѕРґ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР°
+	 * @param catalogName - РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР°
+	 * @param numberLot - РЅРѕРјРµСЂ РїР°СЂС‚РёРё
+	 * @param vendorLot - РЅРѕРјРµСЂ РїР°СЂС‚РёРё РїРѕСЃС‚Р°РІС‰РёРєР°
 	 */
 	public void execute(Integer necessarySerialNumbersQuantity, List<SerialNumberModelItem> serialNumberItemList, String catalogCode, String catalogName, String numberLot, String vendorLot) {
 		this.necessarySerialNumbersQuantity = necessarySerialNumbersQuantity;
@@ -160,17 +160,17 @@ public class SelectSerialNumberDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Выполнить проверку корректности кол-ва выбранных серийных номеров
-	 * @return <code>true</code> - если кол-во выбранных номеров равно требуемому кол-ву номеров для выбора<br>
-	 * <code>false</code> - во всех остальных случаях
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РїСЂРѕРІРµСЂРєСѓ РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РєРѕР»-РІР° РІС‹Р±СЂР°РЅРЅС‹С… СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
+	 * @return <code>true</code> - РµСЃР»Рё РєРѕР»-РІРѕ РІС‹Р±СЂР°РЅРЅС‹С… РЅРѕРјРµСЂРѕРІ СЂР°РІРЅРѕ С‚СЂРµР±СѓРµРјРѕРјСѓ РєРѕР»-РІСѓ РЅРѕРјРµСЂРѕРІ РґР»СЏ РІС‹Р±РѕСЂР°<br>
+	 * <code>false</code> - РІРѕ РІСЃРµС… РѕСЃС‚Р°Р»СЊРЅС‹С… СЃР»СѓС‡Р°СЏС…
 	 */
 	private boolean isSelectionValid() {
 		return getSelectionResult() == necessarySerialNumbersQuantity;
 	}
 
 	/**
-	 * Получить кол-во выбранных серийных номеров
-	 * @return кол-во выбранных серийных номеров
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»-РІРѕ РІС‹Р±СЂР°РЅРЅС‹С… СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
+	 * @return РєРѕР»-РІРѕ РІС‹Р±СЂР°РЅРЅС‹С… СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
 	 */
 	private int getSelectionResult() {
 		selectedSerialNumbers.clear();
@@ -182,8 +182,8 @@ public class SelectSerialNumberDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Получить список выбранных серийных номеров
-	 * @return список серийных номеров
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РІС‹Р±СЂР°РЅРЅС‹С… СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
+	 * @return СЃРїРёСЃРѕРє СЃРµСЂРёР№РЅС‹С… РЅРѕРјРµСЂРѕРІ
 	 */
 	public List<String> getSelectedSerialNumbers() {
 		return selectedSerialNumbers;

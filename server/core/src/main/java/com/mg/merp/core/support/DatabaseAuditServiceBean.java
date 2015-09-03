@@ -21,7 +21,7 @@ import com.mg.merp.core.DatabaseAuditServiceLocal;
 import com.mg.merp.core.model.DatabaseAudit;
 
 /**
- * Реализация бизнес-компонента аудита хранилища данных
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° Р°СѓРґРёС‚Р° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: DatabaseAuditServiceBean.java,v 1.1 2007/10/19 06:45:53 safonov Exp $

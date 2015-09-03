@@ -18,7 +18,7 @@ import java.io.Serializable;
 import java.util.EventListener;
 
 /**
- * Слушатель события смены объекта мастера в модели
+ * РЎР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёСЏ СЃРјРµРЅС‹ РѕР±СЉРµРєС‚Р° РјР°СЃС‚РµСЂР° РІ РјРѕРґРµР»Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: MasterModelListener.java,v 1.2 2006/08/31 09:01:06 safonov Exp $
@@ -26,7 +26,7 @@ import java.util.EventListener;
 public interface MasterModelListener extends EventListener, Serializable {
 	
 	/**
-	 * вызов происходит в момент смены текущего объекта мастера в модели
+	 * РІС‹Р·РѕРІ РїСЂРѕРёСЃС…РѕРґРёС‚ РІ РјРѕРјРµРЅС‚ СЃРјРµРЅС‹ С‚РµРєСѓС‰РµРіРѕ РѕР±СЉРµРєС‚Р° РјР°СЃС‚РµСЂР° РІ РјРѕРґРµР»Рё
 	 * 
 	 * @param event
 	 */

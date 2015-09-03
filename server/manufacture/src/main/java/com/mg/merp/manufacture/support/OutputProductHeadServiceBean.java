@@ -25,7 +25,7 @@ import com.mg.merp.manufacture.OutputProductSpecServiceLocal;
 import com.mg.merp.manufacture.model.OutputProductHead;
 
 /**
- * Бизнес-компонент "Акты выпуска готовой продукции" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РђРєС‚С‹ РІС‹РїСѓСЃРєР° РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё" 
  * 
  * @author leonova
  * @version $Id: OutputProductHeadServiceBean.java,v 1.6 2006/09/20 10:56:37 safonov Exp $

@@ -22,7 +22,7 @@ import com.mg.merp.docprocess.model.DocHeadState;
 import com.mg.merp.warehouse.WarehouseProcessorServiceLocal;
 
 /**
- * Реализация фабрики реализаций этапа ДО "Снятие с резерва по складу"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїР° Р”Рћ "РЎРЅСЏС‚РёРµ СЃ СЂРµР·РµСЂРІР° РїРѕ СЃРєР»Р°РґСѓ"
  * 
  * @author Valentin A. Poroxnenko
  * @version $$Id: WarehouseReservWithdrawalTransactionDocFlowPluginFactory.java,v 1.2 2007/03/29 08:49:08 poroxnenko Exp $$
@@ -52,7 +52,7 @@ public class WarehouseReservWithdrawalTransactionDocFlowPluginFactory extends
 			@Override
 			protected String doGetDocActionResultTextRepresentation(
 					DocHeadState docHeadState) {
-				// TODO: спросить консультантов
+				// TODO: СЃРїСЂРѕСЃРёС‚СЊ РєРѕРЅСЃСѓР»СЊС‚Р°РЅС‚РѕРІ
 				return StringUtils.BLANK_STRING;
 			}
 

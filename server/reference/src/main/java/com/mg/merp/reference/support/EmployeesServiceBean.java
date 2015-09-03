@@ -31,7 +31,7 @@ import com.mg.merp.reference.model.Employees;
 import com.mg.merp.reference.model.NaturalPerson;
 
 /**
- * Бизнес-копмонент "Сотрудники"
+ * Р‘РёР·РЅРµСЃ-РєРѕРїРјРѕРЅРµРЅС‚ "РЎРѕС‚СЂСѓРґРЅРёРєРё"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

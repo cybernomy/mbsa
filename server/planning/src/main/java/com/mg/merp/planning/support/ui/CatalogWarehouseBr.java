@@ -26,7 +26,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.planning.model.CatalogWarehouse;
 
 /**
- * Браузер складов хранения товаров
+ * Р‘СЂР°СѓР·РµСЂ СЃРєР»Р°РґРѕРІ С…СЂР°РЅРµРЅРёСЏ С‚РѕРІР°СЂРѕРІ
  * 
  * @author leonova
  * @version $Id: CatalogWarehouseBr.java,v 1.7 2007/07/30 10:36:31 safonov Exp $

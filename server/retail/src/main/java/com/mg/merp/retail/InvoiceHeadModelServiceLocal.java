@@ -26,7 +26,7 @@ public interface InvoiceHeadModelServiceLocal
    extends DocumentPattern<RtlInvoiceHeadModel, Integer>
 {
 	/**
-	 * тип папки для образцов разничных документов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ СЂР°Р·РЅРёС‡РЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 13201;
 }

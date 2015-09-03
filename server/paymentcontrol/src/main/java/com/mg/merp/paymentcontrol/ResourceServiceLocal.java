@@ -23,7 +23,7 @@ import com.mg.merp.paymentcontrol.model.PmcResource;
 import com.mg.merp.paymentcontrol.model.TurnResult;
 
 /**
- * Сервис бизнес-компонента "Средства платежа"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -32,54 +32,54 @@ import com.mg.merp.paymentcontrol.model.TurnResult;
 public interface ResourceServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PmcResource, Integer> {
 	
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/paymentcontrol/Resource"; //$NON-NLS-1$
 	
 	/**
-	 * Тип папки для средства платежа
+	 * РўРёРї РїР°РїРєРё РґР»СЏ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
 	 */
 	final static short FOLDER_PART = 13400;
 	
 	/**
-	 * Получить баланс средства платежа на заданную дату
-	 * @param resourceId - идентификатор средства платежа
-	 * @param dateBalance - дата баланса
-	 * @return баланс
+	 * РџРѕР»СѓС‡РёС‚СЊ Р±Р°Р»Р°РЅСЃ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р° РЅР° Р·Р°РґР°РЅРЅСѓСЋ РґР°С‚Сѓ
+	 * @param resourceId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
+	 * @param dateBalance - РґР°С‚Р° Р±Р°Р»Р°РЅСЃР°
+	 * @return Р±Р°Р»Р°РЅСЃ
 	 */
 	BigDecimal getBalance(Integer resourceId, Date dateBalance);
 	
 	/**
-	 * Получить список групп(папок) средств платежа
-	 * @param parentId - идентификатор родительской группы(папки)
-	 * @return список групп(папок) средств платежа
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РіСЂСѓРїРї(РїР°РїРѕРє) СЃСЂРµРґСЃС‚РІ РїР»Р°С‚РµР¶Р°
+	 * @param parentId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂРѕРґРёС‚РµР»СЊСЃРєРѕР№ РіСЂСѓРїРїС‹(РїР°РїРєРё)
+	 * @return СЃРїРёСЃРѕРє РіСЂСѓРїРї(РїР°РїРѕРє) СЃСЂРµРґСЃС‚РІ РїР»Р°С‚РµР¶Р°
 	 */
 	List<Folder> getResurceGroups(Integer parentId);
 	 
 	/**
-	 * Получить список средств платежа принадлежащих к группе(папке)
-	 * @param folderId - идентификатор группы(папки)
-	 * @return список средств платежа
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє СЃСЂРµРґСЃС‚РІ РїР»Р°С‚РµР¶Р° РїСЂРёРЅР°РґР»РµР¶Р°С‰РёС… Рє РіСЂСѓРїРїРµ(РїР°РїРєРµ)
+	 * @param folderId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РіСЂСѓРїРїС‹(РїР°РїРєРё)
+	 * @return СЃРїРёСЃРѕРє СЃСЂРµРґСЃС‚РІ РїР»Р°С‚РµР¶Р°
 	 */
 	List<PmcResource> getResourcesByGroup(Integer folderId);
 	
 	/**
-	 * Получить оборотку по средству платежа
-	 * @param resourceId - идентификатор средства платежа 
-	 * @param versionId - идентификатор версии планирования
-	 * @param dateFrom - период(дата с)
-	 * @param dateTill - период(дата по)
-	 * @return оборотка по средству платежа
+	 * РџРѕР»СѓС‡РёС‚СЊ РѕР±РѕСЂРѕС‚РєСѓ РїРѕ СЃСЂРµРґСЃС‚РІСѓ РїР»Р°С‚РµР¶Р°
+	 * @param resourceId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р° 
+	 * @param versionId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param dateFrom - РїРµСЂРёРѕРґ(РґР°С‚Р° СЃ)
+	 * @param dateTill - РїРµСЂРёРѕРґ(РґР°С‚Р° РїРѕ)
+	 * @return РѕР±РѕСЂРѕС‚РєР° РїРѕ СЃСЂРµРґСЃС‚РІСѓ РїР»Р°С‚РµР¶Р°
 	 */
 	TurnResult getTurnByResource(Integer resourceId, Integer versionId, Date dateFrom, Date dateTill);
 	
 	/**
-	 * Получить оборотку по группе(папке) средства платежа
-	 * @param resourceFolderId - идентификатор группы(папки) средства платежа
-	 * @param versionId - идентификатор версии планирования
-	 * @param dateFrom - период(дата с)
-	 * @param dateTill - период(дата по)
-	 * @return оборотка по группе(папке) средства платежа
+	 * РџРѕР»СѓС‡РёС‚СЊ РѕР±РѕСЂРѕС‚РєСѓ РїРѕ РіСЂСѓРїРїРµ(РїР°РїРєРµ) СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
+	 * @param resourceFolderId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РіСЂСѓРїРїС‹(РїР°РїРєРё) СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
+	 * @param versionId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param dateFrom - РїРµСЂРёРѕРґ(РґР°С‚Р° СЃ)
+	 * @param dateTill - РїРµСЂРёРѕРґ(РґР°С‚Р° РїРѕ)
+	 * @return РѕР±РѕСЂРѕС‚РєР° РїРѕ РіСЂСѓРїРїРµ(РїР°РїРєРµ) СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
 	 */
 	TurnResult getTurnByResourceGroup(Integer resourceFolderId, Integer versionId, Date dateFrom, Date dateTill);
 	

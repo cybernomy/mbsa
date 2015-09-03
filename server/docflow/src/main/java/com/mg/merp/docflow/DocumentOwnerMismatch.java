@@ -18,7 +18,7 @@ import com.mg.framework.api.BusinessException;
 import com.mg.merp.docflow.support.Messages;
 
 /**
- * Класс ИС не соответствия владельца документа с текущим инициатором
+ * РљР»Р°СЃСЃ РРЎ РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёСЏ РІР»Р°РґРµР»СЊС†Р° РґРѕРєСѓРјРµРЅС‚Р° СЃ С‚РµРєСѓС‰РёРј РёРЅРёС†РёР°С‚РѕСЂРѕРј
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentOwnerMismatch.java,v 1.2 2006/08/25 11:44:01 safonov Exp $

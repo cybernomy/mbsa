@@ -24,7 +24,7 @@ import com.mg.merp.mfreference.WeekCalendarServiceLocal;
 import com.mg.merp.mfreference.model.WeekCalendar;
 
 /**
- * Бизнес-компонент "Недельный календарь" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РќРµРґРµР»СЊРЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ" 
  * 
  * @author leonova
  * @version $Id: WeekCalendarServiceBean.java,v 1.4 2007/07/30 10:24:41 safonov Exp $

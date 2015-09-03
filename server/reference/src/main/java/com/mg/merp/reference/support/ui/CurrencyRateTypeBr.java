@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.CurrencyRateType;
 
 /**
- * Браузер типов курсов валют
+ * Р‘СЂР°СѓР·РµСЂ С‚РёРїРѕРІ РєСѓСЂСЃРѕРІ РІР°Р»СЋС‚
  * 
  * @author leonova
  * @version $Id: CurrencyRateTypeBr.java,v 1.2 2006/10/20 05:51:05 leonova Exp $ 

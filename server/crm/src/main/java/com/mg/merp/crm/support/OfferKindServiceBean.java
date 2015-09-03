@@ -24,7 +24,7 @@ import com.mg.merp.crm.OfferKindServiceLocal;
 import com.mg.merp.crm.model.OfferKind;
 
 /**
- * Бизнес-компонент "Виды предложений" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РёРґС‹ РїСЂРµРґР»РѕР¶РµРЅРёР№" 
  * 
  * @author leonova
  * @version $Id: OfferKindServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

@@ -26,14 +26,14 @@ import com.mg.merp.docprocess.model.DocProcessStage;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Базовый класс BAi формирования проводок хоз. операций. Класс должен
- * реализовывать следующий метод <code>protected void doPerform() throws Exception</code>.
- * Метод возвращает результат (это может быть сумма в валюте отрабатываемого документа или количество).
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ BAi С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РїСЂРѕРІРѕРґРѕРє С…РѕР·. РѕРїРµСЂР°С†РёР№. РљР»Р°СЃСЃ РґРѕР»Р¶РµРЅ
+ * СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёР№ РјРµС‚РѕРґ <code>protected void doPerform() throws Exception</code>.
+ * РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ (СЌС‚Рѕ РјРѕР¶РµС‚ Р±С‹С‚СЊ СЃСѓРјРјР° РІ РІР°Р»СЋС‚Рµ РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРјРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° РёР»Рё РєРѕР»РёС‡РµСЃС‚РІРѕ).
  * 
- * <p>Пример данного метода:
+ * <p>РџСЂРёРјРµСЂ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР°:
  * <pre>
  * protected void doPerform() throws Exception {
- *     complete(getDocumentSpecItem().getPerformedSum()); //сумма спецификации отмеченная к отработке
+ *     complete(getDocumentSpecItem().getPerformedSum()); //СЃСѓРјРјР° СЃРїРµС†РёС„РёРєР°С†РёРё РѕС‚РјРµС‡РµРЅРЅР°СЏ Рє РѕС‚СЂР°Р±РѕС‚РєРµ
  * }</pre>
  * @author Konstantin S. Alikaev
  * @version $Id: AccountBusinessAddin.java,v 1.1 2008/03/13 06:20:53 alikaev Exp $
@@ -41,19 +41,19 @@ import com.mg.merp.document.model.DocHead;
 public abstract class AccountBusinessAddin extends AbstractBusinessAddin<BigDecimal> {
 
 	/**
-	 * имя параметра этап ДО
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° СЌС‚Р°Рї Р”Рћ
 	 */
 	public static final String DOCFLOW_PARAM_NAME = "DOCFLOW_PARAM_NAME";
 	/**
-	 * имя параметра спецификация документа отмеченная к отработке
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р° РѕС‚РјРµС‡РµРЅРЅР°СЏ Рє РѕС‚СЂР°Р±РѕС‚РєРµ
 	 */
 	public static final String DOCSPEC_PARAM_NAME = "DOCSPEC_PARAM_NAME";
 	/**
-	 * имя параметра хозяйственной операции	 
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° С…РѕР·СЏР№СЃС‚РІРµРЅРЅРѕР№ РѕРїРµСЂР°С†РёРё	 
 	 */
 	public static final String ECONOMIC_OPER_PARAM_NAME = "ECONOMIC_OPER_PARAM_NAME";
 	/**
-	 * имя параметра хозяйственная проводка/признак
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° С…РѕР·СЏР№СЃС‚РІРµРЅРЅР°СЏ РїСЂРѕРІРѕРґРєР°/РїСЂРёР·РЅР°Рє
 	 */
 	public static final String ECONOMIC_SPEC_PARAM_NAME = "ECONOMIC_SPEC_PARAM_NAME";
 	
@@ -74,54 +74,54 @@ public abstract class AccountBusinessAddin extends AbstractBusinessAddin<BigDeci
 	}
 	
 	/**
-	 * получить отрабатываемый документ
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРјС‹Р№ РґРѕРєСѓРјРµРЅС‚
 	 * 
-	 * @return	текущий документ
+	 * @return	С‚РµРєСѓС‰РёР№ РґРѕРєСѓРјРµРЅС‚
 	 */
 	protected DocHead getDocument() {
 		return mDocFlowParams.getDocument();
 	}
 	
 	/**
-	 * получить отрабатываемую сумму документа, используется для документов без спецификаций
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРјСѓСЋ СЃСѓРјРјСѓ РґРѕРєСѓРјРµРЅС‚Р°, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РґРѕРєСѓРјРµРЅС‚РѕРІ Р±РµР· СЃРїРµС†РёС„РёРєР°С†РёР№
 	 * 
-	 * @return	отрабатываемая сумма документа
+	 * @return	РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРјР°СЏ СЃСѓРјРјР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected BigDecimal getPerformedSum() {
 		return mDocFlowParams.getPerformedSum();
 	}
 	
 	/**
-	 * получить текущий этап ДО
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰РёР№ СЌС‚Р°Рї Р”Рћ
 	 * 
-	 * @return	текущий этап ДО
+	 * @return	С‚РµРєСѓС‰РёР№ СЌС‚Р°Рї Р”Рћ
 	 */
 	protected DocProcessStage getDocProcessStage() {
 		return mDocFlowParams.getPerformedStage();
 	}
 	
 	/**
-	 * получить текущую спецификацию документа
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰СѓСЋ СЃРїРµС†РёС„РёРєР°С†РёСЋ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @return	текущая спецификация документа или <code>null</code> если документ без спецификаций
+	 * @return	С‚РµРєСѓС‰Р°СЏ СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р° РёР»Рё <code>null</code> РµСЃР»Рё РґРѕРєСѓРјРµРЅС‚ Р±РµР· СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	protected DocumentSpecItem getDocumentSpecItem() {
 		return mDocumentSpecItem;
 	}
 
 	/**
-	 * Получить хозяйственную операцию
+	 * РџРѕР»СѓС‡РёС‚СЊ С…РѕР·СЏР№СЃС‚РІРµРЅРЅСѓСЋ РѕРїРµСЂР°С†РёСЋ
 	 * 
-	 * @return	создаваемая хозяйственная операция
+	 * @return	СЃРѕР·РґР°РІР°РµРјР°СЏ С…РѕР·СЏР№СЃС‚РІРµРЅРЅР°СЏ РѕРїРµСЂР°С†РёСЏ
 	 */
 	public EconomicOper getEconomicOper() {
 		return mEconomicOper;
 	}
 
 	/**
-	 * Получить хозяйственную спецификацию
+	 * РџРѕР»СѓС‡РёС‚СЊ С…РѕР·СЏР№СЃС‚РІРµРЅРЅСѓСЋ СЃРїРµС†РёС„РёРєР°С†РёСЋ
 	 * 
-	 * @return	создаваемая хозяйственная спецификация
+	 * @return	СЃРѕР·РґР°РІР°РµРјР°СЏ С…РѕР·СЏР№СЃС‚РІРµРЅРЅР°СЏ СЃРїРµС†РёС„РёРєР°С†РёСЏ
 	 */
 	public EconomicSpec getEconomicSpec() {
 		return mEconomicSpec;

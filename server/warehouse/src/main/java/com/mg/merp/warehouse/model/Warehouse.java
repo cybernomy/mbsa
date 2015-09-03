@@ -21,7 +21,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.merp.reference.model.OrgUnit;
 
 /**
- * Модель бизнес-компонента "Склады"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРєР»Р°РґС‹"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -41,27 +41,27 @@ public class Warehouse extends OrgUnit implements Serializable {
 	private WarehouseType WarehouseType;
 
 	/**
-	 * учитывать закрытие операционных дней
+	 * СѓС‡РёС‚С‹РІР°С‚СЊ Р·Р°РєСЂС‹С‚РёРµ РѕРїРµСЂР°С†РёРѕРЅРЅС‹С… РґРЅРµР№
 	 */
 	private boolean CheckTransactionDay;
 
 	/**
-	 * закрыть склад для фактического движения
+	 * Р·Р°РєСЂС‹С‚СЊ СЃРєР»Р°Рґ РґР»СЏ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РґРІРёР¶РµРЅРёСЏ
 	 */
 	private boolean WarehouseTransactionClosed;
 
 	/**
-	 * закрыт по число
+	 * Р·Р°РєСЂС‹С‚ РїРѕ С‡РёСЃР»Рѕ
 	 */
 	private Date closedDateTill;
 
 	/**
-	 * сотрудник кто закрыл
+	 * СЃРѕС‚СЂСѓРґРЅРёРє РєС‚Рѕ Р·Р°РєСЂС‹Р»
 	 */
 	private String userStockClosed;
 
 	/**
-	 * дата закрытия
+	 * РґР°С‚Р° Р·Р°РєСЂС‹С‚РёСЏ
 	 */
 	private Date operationDate;
 
@@ -86,12 +86,12 @@ public class Warehouse extends OrgUnit implements Serializable {
 	private boolean BinSizing;
 
 	/**
-	 * BAi рассчёта цены прихода складской партии
+	 * BAi СЂР°СЃСЃС‡С‘С‚Р° С†РµРЅС‹ РїСЂРёС…РѕРґР° СЃРєР»Р°РґСЃРєРѕР№ РїР°СЂС‚РёРё
 	 */
 	private com.mg.merp.baiengine.model.Repository batchPriceBAi;
 
 	/**
-	 * BAi cтратегии списания
+	 * BAi cС‚СЂР°С‚РµРіРёРё СЃРїРёСЃР°РЅРёСЏ
 	 */
 	private com.mg.merp.baiengine.model.Repository DisposalStrategy;
 
@@ -120,7 +120,7 @@ public class Warehouse extends OrgUnit implements Serializable {
 	}
 
 	/**
-	 * Получить BAi рассчёта цены прихода складской партии
+	 * РџРѕР»СѓС‡РёС‚СЊ BAi СЂР°СЃСЃС‡С‘С‚Р° С†РµРЅС‹ РїСЂРёС…РѕРґР° СЃРєР»Р°РґСЃРєРѕР№ РїР°СЂС‚РёРё
 	 */
 	@DataItemName("Warehouse.Warehouse.AlgRepository") //$NON-NLS-1$
 	public com.mg.merp.baiengine.model.Repository getBatchPriceBAi() {

@@ -46,7 +46,7 @@ import com.mg.merp.paymentcontrol.model.Liability;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Контроллер браузера "Реестр обязательств"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "Р РµРµСЃС‚СЂ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -191,9 +191,9 @@ public class LiabilityBr extends DefaultHierarchyBrowseForm {
 	}	
 
 	/**
-	 * Обработчик пункта КМ "Поддержка образцов"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџРѕРґРґРµСЂР¶РєР° РѕР±СЂР°Р·С†РѕРІ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionShowLiabilityModel(WidgetEvent event) throws Exception {
 		final LiabilityModelServiceLocal service = (LiabilityModelServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/paymentcontrol/LiabilityModel"); //$NON-NLS-1$
@@ -202,9 +202,9 @@ public class LiabilityBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Вставка с образцом"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "Р’СЃС‚Р°РІРєР° СЃ РѕР±СЂР°Р·С†РѕРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionInsertModel(WidgetEvent event) throws Exception {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.paymentcontrol.support.ui.LiabilityModelSearchHelp"); //$NON-NLS-1$
@@ -222,8 +222,8 @@ public class LiabilityBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Создание обязательства по образцу
-	 * @param model - образец
+	 * РЎРѕР·РґР°РЅРёРµ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР° РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param model - РѕР±СЂР°Р·РµС†
 	 */
 	private void doOnActionInsertModel(Liability model) {
 		LiabilityServiceLocal service = (LiabilityServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/paymentcontrol/Liability"); //$NON-NLS-1$
@@ -248,32 +248,32 @@ public class LiabilityBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Просмотреть документ"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewDoc(WidgetEvent event) {
 		viewDocument(getLiabilityService().findDoc(getSelectedEntity()));
 	}	 
 
 	/**
-	 * Обработчик пункта КМ "Просмотреть документ-основание"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚-РѕСЃРЅРѕРІР°РЅРёРµ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewBaseDoc(WidgetEvent event) {
 		viewDocument(getLiabilityService().findBaseDoc(getSelectedEntity()));
 	}
 
 	/**
-	 * Обработчик пункта КМ "Просмотреть контракт"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РєРѕРЅС‚СЂР°РєС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewContract(WidgetEvent event) {
 		viewDocument(getLiabilityService().findContract(getSelectedEntity()));
 	}
 
 	/**
-	 * Показать документ в режиме просмотра
-	 * @param docHead - документ
+	 * РџРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚ РІ СЂРµР¶РёРјРµ РїСЂРѕСЃРјРѕС‚СЂР°
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	private void viewDocument(DocHead docHead) {

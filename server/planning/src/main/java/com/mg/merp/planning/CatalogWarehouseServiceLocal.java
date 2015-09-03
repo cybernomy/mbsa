@@ -17,7 +17,7 @@ package com.mg.merp.planning;
 import com.mg.merp.planning.model.CatalogWarehouse;
 
 /**
- * Бизнес-компонент "Склады хранения товаров"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРєР»Р°РґС‹ С…СЂР°РЅРµРЅРёСЏ С‚РѕРІР°СЂРѕРІ"
  * 
  * @author leonova
  * @version $Id: CatalogWarehouseServiceLocal.java,v 1.2 2007/07/30 10:37:51 safonov Exp $
@@ -26,14 +26,14 @@ public interface CatalogWarehouseServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<CatalogWarehouse, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/planning/CatalogWarehouse";
 	
 	/**
-	 * получить страховой запас для всех товаров на всех складах
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃС‚СЂР°С…РѕРІРѕР№ Р·Р°РїР°СЃ РґР»СЏ РІСЃРµС… С‚РѕРІР°СЂРѕРІ РЅР° РІСЃРµС… СЃРєР»Р°РґР°С…
 	 * 
-	 * @return	страховой запас
+	 * @return	СЃС‚СЂР°С…РѕРІРѕР№ Р·Р°РїР°СЃ
 	 */
 	SafetyLevel[] getSafetyLevel();
 }

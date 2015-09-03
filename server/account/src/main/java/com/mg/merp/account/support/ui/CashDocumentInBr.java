@@ -28,7 +28,7 @@ import com.mg.merp.core.support.CoreUtils;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Контроллер формы списка приходных кассовых документов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РїСЂРёС…РѕРґРЅС‹С… РєР°СЃСЃРѕРІС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov

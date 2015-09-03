@@ -33,7 +33,7 @@ import com.mg.merp.finance.model.Center;
 import com.mg.merp.finance.model.CenterKind;
 
 /**
- * Бизнес-компонент "Центры финансового учета" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р¦РµРЅС‚СЂС‹ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°" 
  * 
  * @author leonova
  * @version $Id: CenterServiceBean.java,v 1.5 2007/08/16 14:06:05 safonov Exp $

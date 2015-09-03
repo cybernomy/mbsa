@@ -31,7 +31,7 @@ import com.mg.merp.document.model.DocHeadModel;
 import com.mg.merp.document.support.CreateDocOnComponentsImpl;
 
 /**
- * Реализация сервиса создания документа на комплектующие для JBoss
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РєРѕРјРїР»РµРєС‚СѓСЋС‰РёРµ РґР»СЏ JBoss
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: CreateDocOnComponentsService.java,v 1.1 2007/10/23 13:55:29 alikaev Exp $

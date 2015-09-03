@@ -17,7 +17,7 @@ package com.mg.merp.table;
 import com.mg.merp.table.model.TableConfig;
 
 /**
- * Сервис бизнес-компонента "Конфигурация модуля <Табельный учет>"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РўР°Р±РµР»СЊРЅС‹Р№ СѓС‡РµС‚>"
  * 
  * @author leonova
  * @author Artem V. Sharapov

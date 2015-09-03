@@ -17,7 +17,7 @@ package com.mg.merp.contract.model;
 import java.math.BigDecimal;
 
 /**
- * Результат агрегированных по видам пунктов, значений фактичесих и планируемых сумм
+ * Р РµР·СѓР»СЊС‚Р°С‚ Р°РіСЂРµРіРёСЂРѕРІР°РЅРЅС‹С… РїРѕ РІРёРґР°Рј РїСѓРЅРєС‚РѕРІ, Р·РЅР°С‡РµРЅРёР№ С„Р°РєС‚РёС‡РµСЃРёС… Рё РїР»Р°РЅРёСЂСѓРµРјС‹С… СЃСѓРјРј
  * 
  * @author Artem V. Sharapov
  * @version $Id: PlanAndFactSumsByKindResult.java,v 1.1 2007/07/16 10:12:50 sharapov Exp $
@@ -36,14 +36,14 @@ public class PlanAndFactSumsByKindResult {
 	
 	
 	/**
-	 * @param planShippedPayment - сумма платежей контрагенту, по плану
-	 * @param planReceivedPayment - сумма платежей от контрагента, по плану
-	 * @param planShippedGood - сумма ТМЦ и услуг контрагенту, по плану
-	 * @param planReceivedGood - сумма ТМЦ и услуг от контрагента, по плану
-	 * @param factShippedPayment - сумма платежей контрагенту, фактически
-	 * @param factReceivedPayment - сумма платежей от контрагента, фактически
-	 * @param factShippedGood - сумма ТМЦ и услуг контрагенту, фактически
-	 * @param factReceivedGood - сумма ТМЦ и услуг от контрагента, фактически
+	 * @param planShippedPayment - СЃСѓРјРјР° РїР»Р°С‚РµР¶РµР№ РєРѕРЅС‚СЂР°РіРµРЅС‚Сѓ, РїРѕ РїР»Р°РЅСѓ
+	 * @param planReceivedPayment - СЃСѓРјРјР° РїР»Р°С‚РµР¶РµР№ РѕС‚ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°, РїРѕ РїР»Р°РЅСѓ
+	 * @param planShippedGood - СЃСѓРјРјР° РўРњР¦ Рё СѓСЃР»СѓРі РєРѕРЅС‚СЂР°РіРµРЅС‚Сѓ, РїРѕ РїР»Р°РЅСѓ
+	 * @param planReceivedGood - СЃСѓРјРјР° РўРњР¦ Рё СѓСЃР»СѓРі РѕС‚ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°, РїРѕ РїР»Р°РЅСѓ
+	 * @param factShippedPayment - СЃСѓРјРјР° РїР»Р°С‚РµР¶РµР№ РєРѕРЅС‚СЂР°РіРµРЅС‚Сѓ, С„Р°РєС‚РёС‡РµСЃРєРё
+	 * @param factReceivedPayment - СЃСѓРјРјР° РїР»Р°С‚РµР¶РµР№ РѕС‚ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°, С„Р°РєС‚РёС‡РµСЃРєРё
+	 * @param factShippedGood - СЃСѓРјРјР° РўРњР¦ Рё СѓСЃР»СѓРі РєРѕРЅС‚СЂР°РіРµРЅС‚Сѓ, С„Р°РєС‚РёС‡РµСЃРєРё
+	 * @param factReceivedGood - СЃСѓРјРјР° РўРњР¦ Рё СѓСЃР»СѓРі РѕС‚ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°, С„Р°РєС‚РёС‡РµСЃРєРё
 	 */
 	public PlanAndFactSumsByKindResult(BigDecimal planShippedPayment, BigDecimal planReceivedPayment, BigDecimal planShippedGood, BigDecimal planReceivedGood, BigDecimal factShippedPayment, BigDecimal factReceivedPayment, BigDecimal factShippedGood, BigDecimal factReceivedGood) {
 		this.planShippedPayment = planShippedPayment;

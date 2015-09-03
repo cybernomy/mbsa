@@ -35,7 +35,7 @@ import com.mg.merp.scheduler.TaskServiceLocal;
 import com.mg.merp.scheduler.model.Task;
 
 /**
- * Контроллер формы браузера "Задачи планировщика"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ Р±СЂР°СѓР·РµСЂР° "Р—Р°РґР°С‡Рё РїР»Р°РЅРёСЂРѕРІС‰РёРєР°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: TaskBr.java,v 1.1 2008/04/25 10:57:23 safonov Exp $

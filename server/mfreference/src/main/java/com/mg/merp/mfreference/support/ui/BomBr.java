@@ -46,7 +46,7 @@ import com.mg.merp.mfreference.support.Messages;
 import com.mg.merp.reference.support.ui.CatalogSearchHelp;
 
 /**
- * Браузер состава изделий
+ * Р‘СЂР°СѓР·РµСЂ СЃРѕСЃС‚Р°РІР° РёР·РґРµР»РёР№
  * 
  * @author leonova
  * @version $Id: BomBr.java,v 1.14 2009/03/05 11:22:24 safonov Exp $

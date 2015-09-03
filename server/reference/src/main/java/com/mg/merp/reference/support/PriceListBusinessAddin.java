@@ -21,14 +21,14 @@ import com.mg.merp.baiengine.generic.AbstractBusinessAddin;
 import com.mg.merp.reference.model.PriceListSpec;
 
 /**
- * Базовый класс бизнес-расширения расчета цены прайс-листа. Класс бизнес-расширения должен
- * реализовывать следующий метод <code>protected void doPerform() throws Exception</code>.
- * Метод возвращает расчитанную цену прайс-листа.
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ Р±РёР·РЅРµСЃ-СЂР°СЃС€РёСЂРµРЅРёСЏ СЂР°СЃС‡РµС‚Р° С†РµРЅС‹ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°. РљР»Р°СЃСЃ Р±РёР·РЅРµСЃ-СЂР°СЃС€РёСЂРµРЅРёСЏ РґРѕР»Р¶РµРЅ
+ * СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёР№ РјРµС‚РѕРґ <code>protected void doPerform() throws Exception</code>.
+ * РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ СЂР°СЃС‡РёС‚Р°РЅРЅСѓСЋ С†РµРЅСѓ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°.
  * 
- * <p>Пример данного метода:
+ * <p>РџСЂРёРјРµСЂ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР°:
  * <pre>
  * protected void doPerform() throws Exception {
- *     //умножить базовую цену на 2
+ *     //СѓРјРЅРѕР¶РёС‚СЊ Р±Р°Р·РѕРІСѓСЋ С†РµРЅСѓ РЅР° 2
  *     complete(getPriceListSpec().getPrice().multiply(new BigDecimal(2.0)));
  * }
  * </pre>
@@ -38,7 +38,7 @@ import com.mg.merp.reference.model.PriceListSpec;
  */
 public abstract class PriceListBusinessAddin extends AbstractBusinessAddin<BigDecimal> {
 	/**
-	 * имя параметра хранящего спецификацию прайс-листа
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° С…СЂР°РЅСЏС‰РµРіРѕ СЃРїРµС†РёС„РёРєР°С†РёСЋ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	public final static String PRICE_LIST_SPEC = "priceListSpec";
 	
@@ -53,9 +53,9 @@ public abstract class PriceListBusinessAddin extends AbstractBusinessAddin<BigDe
 	}
 
 	/**
-	 * получение позиции спецификации прайс-листа для которой пересчитываются цены
+	 * РїРѕР»СѓС‡РµРЅРёРµ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р° РґР»СЏ РєРѕС‚РѕСЂРѕР№ РїРµСЂРµСЃС‡РёС‚С‹РІР°СЋС‚СЃСЏ С†РµРЅС‹
 	 * 
-	 * @return	позиция спецификации прайс-листа
+	 * @return	РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	final protected PriceListSpec getPriceListSpec() {
 		return priceListSpec;

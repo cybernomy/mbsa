@@ -24,7 +24,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.CatalogFolder;
 
 /**
- * Бизнес-компонент "Рекламное мероприятие"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р РµРєР»Р°РјРЅРѕРµ РјРµСЂРѕРїСЂРёСЏС‚РёРµ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PromotionServiceLocal.java,v 1.1 2007/10/30 13:55:56 sharapov Exp $
@@ -32,16 +32,16 @@ import com.mg.merp.reference.model.CatalogFolder;
 public interface PromotionServiceLocal extends DataBusinessObjectService<Promotion, Integer> {
 	
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/discount/Promotion"; //$NON-NLS-1$
 	
 	/**
-	 * Получить список действующих рекламных мероприятий по приоритету на дату, для позиции каталога или для папки каталога 
-	 * @param actualDate - на дату
-	 * @param catalog - позиция каталога
-	 * @param catalogFolder - папка каталога 
-	 * @return список действующих рекламных мероприятий по приоритету на дату, по позиции каталога или папке каталога
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РґРµР№СЃС‚РІСѓСЋС‰РёС… СЂРµРєР»Р°РјРЅС‹С… РјРµСЂРѕРїСЂРёСЏС‚РёР№ РїРѕ РїСЂРёРѕСЂРёС‚РµС‚Сѓ РЅР° РґР°С‚Сѓ, РґР»СЏ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР° РёР»Рё РґР»СЏ РїР°РїРєРё РєР°С‚Р°Р»РѕРіР° 
+	 * @param actualDate - РЅР° РґР°С‚Сѓ
+	 * @param catalog - РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР°
+	 * @param catalogFolder - РїР°РїРєР° РєР°С‚Р°Р»РѕРіР° 
+	 * @return СЃРїРёСЃРѕРє РґРµР№СЃС‚РІСѓСЋС‰РёС… СЂРµРєР»Р°РјРЅС‹С… РјРµСЂРѕРїСЂРёСЏС‚РёР№ РїРѕ РїСЂРёРѕСЂРёС‚РµС‚Сѓ РЅР° РґР°С‚Сѓ, РїРѕ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР° РёР»Рё РїР°РїРєРµ РєР°С‚Р°Р»РѕРіР°
 	 */
 	 List<PromotionLine> getPromotions(Date actualDate, Catalog catalog, CatalogFolder catalogFolder);
 	

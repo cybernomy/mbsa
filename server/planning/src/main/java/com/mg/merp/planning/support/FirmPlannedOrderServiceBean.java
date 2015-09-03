@@ -30,7 +30,7 @@ import com.mg.merp.planning.model.MrpRecommendation;
 import com.mg.merp.planning.model.RecommendType;
 
 /**
- * Бизнес-компонент "Подтвержденные заказы" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџРѕРґС‚РІРµСЂР¶РґРµРЅРЅС‹Рµ Р·Р°РєР°Р·С‹" 
  * 
  * @author leonova
  * @version $Id: FirmPlannedOrderServiceBean.java,v 1.7 2007/08/27 09:38:12 alikaev Exp $
@@ -55,7 +55,7 @@ public class FirmPlannedOrderServiceBean extends AbstractPOJODataBusinessObjectS
 	 * @see com.mg.merp.planning.FirmPlannedOrderServiceLocal#createByMrpRecommendation(int)
 	 */
 	public void createByMrpRecommendation(int mrpVersionId) {
-		//Отбираем только рекомендации на межскладское перемещение
+		//РћС‚Р±РёСЂР°РµРј С‚РѕР»СЊРєРѕ СЂРµРєРѕРјРµРЅРґР°С†РёРё РЅР° РјРµР¶СЃРєР»Р°РґСЃРєРѕРµ РїРµСЂРµРјРµС‰РµРЅРёРµ
 		OrmTemplate ormTemplate = OrmTemplate.getInstance();
 		List<MrpRecommendation> recommends = ormTemplate.findByCriteria(OrmTemplate.createCriteria(MrpRecommendation.class)
 				.add(Restrictions.eq("MrpVersionControl.Id", mrpVersionId)) //$NON-NLS-1$
@@ -64,10 +64,10 @@ public class FirmPlannedOrderServiceBean extends AbstractPOJODataBusinessObjectS
 				.add(Restrictions.eq("MrpOrdered", false))); //$NON-NLS-1$
  		
 		for (MrpRecommendation recommend : recommends) {
-			//пытаемся найти одобренные заказы
+			//РїС‹С‚Р°РµРјСЃСЏ РЅР°Р№С‚Рё РѕРґРѕР±СЂРµРЅРЅС‹Рµ Р·Р°РєР°Р·С‹
 			List<FirmPlannedOrder> orders = ormTemplate.findByCriteria(OrmTemplate.createCriteria(FirmPlannedOrder.class)
 					.add(Restrictions.eq("MrpRecommendation", recommend))); //$NON-NLS-1$
-			//если нет одобренных заказов, то создаем
+			//РµСЃР»Рё РЅРµС‚ РѕРґРѕР±СЂРµРЅРЅС‹С… Р·Р°РєР°Р·РѕРІ, С‚Рѕ СЃРѕР·РґР°РµРј
 			if (orders.isEmpty()) {
 				FirmPlannedOrder order = initialize();
 				order.setMrpVersionControl(recommend.getMrpVersionControl());
@@ -87,7 +87,7 @@ public class FirmPlannedOrderServiceBean extends AbstractPOJODataBusinessObjectS
 				
 				create(order);
 				
-				//изменим флаг в рекомендациях
+				//РёР·РјРµРЅРёРј С„Р»Р°Рі РІ СЂРµРєРѕРјРµРЅРґР°С†РёСЏС…
 				recommend.setMrpOrdered(true);
 			}
 		}

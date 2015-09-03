@@ -17,7 +17,7 @@ package com.mg.merp.table;
 import com.mg.merp.table.model.TimeBoardSpec;
 
 /**
- * Бизнес-компонент "Спецификация табеля"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ С‚Р°Р±РµР»СЏ"
  * 
  * @author leonova
  * @version $Id: TimeBoardSpecServiceLocal.java,v 1.3 2008/08/12 14:08:13 sharapov Exp $
@@ -25,7 +25,7 @@ import com.mg.merp.table.model.TimeBoardSpec;
 public interface TimeBoardSpecServiceLocal extends com.mg.framework.api.DataBusinessObjectService<TimeBoardSpec, Integer> {
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/table/TimeBoardSpec"; //$NON-NLS-1$
 	

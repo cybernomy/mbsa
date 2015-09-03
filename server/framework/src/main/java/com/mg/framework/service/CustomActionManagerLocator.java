@@ -19,7 +19,7 @@ import com.mg.framework.api.ui.CustomActionManager;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Локатор менеджера настраиваемых действий
+ * Р›РѕРєР°С‚РѕСЂ РјРµРЅРµРґР¶РµСЂР° РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomActionManagerLocator.java,v 1.1 2007/11/15 08:37:31 safonov Exp $
@@ -29,10 +29,10 @@ public class CustomActionManagerLocator {
 	private static volatile CustomActionManager instance = null;
 
 	/**
-	 * найти сервис менеджера настраиваемых действий
+	 * РЅР°Р№С‚Рё СЃРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№
 	 * 
-	 * @return	сервис
-	 * @throws ApplicationException	при любых ошибках
+	 * @return	СЃРµСЂРІРёСЃ
+	 * @throws ApplicationException	РїСЂРё Р»СЋР±С‹С… РѕС€РёР±РєР°С…
 	 */
 	public static CustomActionManager locate() {
 		if (instance == null)

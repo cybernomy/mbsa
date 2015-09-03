@@ -15,7 +15,7 @@
 package com.mg.merp.docflow;
 
 /**
- * Менеджер фабрик реализаций этапов ДО
+ * РњРµРЅРµРґР¶РµСЂ С„Р°Р±СЂРёРє СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїРѕРІ Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowPluginFactoryManager.java,v 1.2 2007/01/29 13:55:40 safonov Exp $
@@ -23,25 +23,25 @@ package com.mg.merp.docflow;
 public interface DocFlowPluginFactoryManager {
 	
 	/**
-	 * регистрация фабрики
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ С„Р°Р±СЂРёРєРё
 	 * 
-	 * @param pluginFactory	фабрика
+	 * @param pluginFactory	С„Р°Р±СЂРёРєР°
 	 */
 	void registerPluginFactory(DocFlowPluginFactory pluginFactory);
 	
 	/**
-	 * удаление фабрики
+	 * СѓРґР°Р»РµРЅРёРµ С„Р°Р±СЂРёРєРё
 	 * 
-	 * @param pluginFactory	фабрика
+	 * @param pluginFactory	С„Р°Р±СЂРёРєР°
 	 */
 	void unregisterPluginFactory(DocFlowPluginFactory pluginFactory);
 	
 	/**
-	 * поиск фабрики по идентификатору
+	 * РїРѕРёСЃРє С„Р°Р±СЂРёРєРё РїРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂСѓ
 	 * 
-	 * @param identifier	идентификатор
-	 * @return	фабрика
-	 * @throws PluginNotImplementedException	если фабрика не найдена
+	 * @param identifier	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ
+	 * @return	С„Р°Р±СЂРёРєР°
+	 * @throws PluginNotImplementedException	РµСЃР»Рё С„Р°Р±СЂРёРєР° РЅРµ РЅР°Р№РґРµРЅР°
 	 */
 	DocFlowPluginFactory findPluginFactory(int identifier) throws PluginNotImplementedException;
 }

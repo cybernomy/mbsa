@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип позиции каталога
+ * РўРёРї РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: CatalogType.java,v 1.1 2006/03/29 13:06:23 safonov Exp $
@@ -27,61 +27,61 @@ import com.mg.framework.api.annotations.EnumConstantText;
 public enum CatalogType {
 	
 	/**
-	 * Товар
+	 * РўРѕРІР°СЂ
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Goods")
 	GOODS,
 	
 	/**
-	 * Комплект товаров
+	 * РљРѕРјРїР»РµРєС‚ С‚РѕРІР°СЂРѕРІ
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.SetOfGoods")
 	SET_OF_GOODS,
 	
 	/**
-	 * Тара
+	 * РўР°СЂР°
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Package")
 	PACKAGE,
 	
 	/**
-	 * Услуга нормированная
+	 * РЈСЃР»СѓРіР° РЅРѕСЂРјРёСЂРѕРІР°РЅРЅР°СЏ
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.ServiceFixed")
 	SERVICE_FIXED,
 	
 	/**
-	 * Услуга не нормированная
+	 * РЈСЃР»СѓРіР° РЅРµ РЅРѕСЂРјРёСЂРѕРІР°РЅРЅР°СЏ
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.ServiceNotFixed")
 	SERVICE_NOT_FIXED,
 	
 	/**
-	 * Налог
+	 * РќР°Р»РѕРі
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Tax")
 	TAX,
 	
 	/**
-	 * Тариф
+	 * РўР°СЂРёС„
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Tariff")
 	TARIFF,
 	
 	/**
-	 * Вексель
+	 * Р’РµРєСЃРµР»СЊ
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.BillOfCredit")
 	BILL_OF_CREDIT,
 	
 	/**
-	 * Акция
+	 * РђРєС†РёСЏ
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Share")
 	SHARE,
 	
 	/**
-	 * Облигация
+	 * РћР±Р»РёРіР°С†РёСЏ
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Bond")
 	BOND

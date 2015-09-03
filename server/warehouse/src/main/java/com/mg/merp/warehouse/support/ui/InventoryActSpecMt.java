@@ -24,7 +24,7 @@ import com.mg.merp.warehouse.model.InventoryActSpec;
 import com.mg.merp.warehouse.model.InventoryActSpecDifferencesResult;
 
 /**
- * Контроллер формы поддержки спецификации актов инвентаризации
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёРё Р°РєС‚РѕРІ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov
@@ -52,8 +52,8 @@ public class InventoryActSpecMt extends GoodsDocumentSpecMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик кнопки "Рассчитать сумму относительно количества"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃСЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјСѓ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РєРѕР»РёС‡РµСЃС‚РІР°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionComputeDifferenceQuntities(WidgetEvent event) {
 		InventoryActSpecDifferencesResult inventoryActSpecDifferencesResult = getInventoryActHeadService().computeDifferenceByQuantity((InventoryActSpec) getEntity()); 
@@ -63,8 +63,8 @@ public class InventoryActSpecMt extends GoodsDocumentSpecMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик кнопки "Рассчитать количество относительно суммы"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃСЃС‡РёС‚Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ СЃСѓРјРјС‹"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionComputeDifferenceSum(WidgetEvent event) {
 		InventoryActSpecDifferencesResult inventoryActSpecDifferencesResult = getInventoryActHeadService().computeDifferenceBySum((InventoryActSpec) getEntity()); 

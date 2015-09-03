@@ -34,7 +34,7 @@ import com.mg.merp.reference.NaturalPersonServiceLocal;
 import com.mg.merp.reference.model.NaturalPerson;
 
 /**
- * Браузер физических лиц
+ * Р‘СЂР°СѓР·РµСЂ С„РёР·РёС‡РµСЃРєРёС… Р»РёС†
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

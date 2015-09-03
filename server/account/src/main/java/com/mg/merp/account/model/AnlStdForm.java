@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Типовые формы учета для аналитических счетов
+ * РўРёРїРѕРІС‹Рµ С„РѕСЂРјС‹ СѓС‡РµС‚Р° РґР»СЏ Р°РЅР°Р»РёС‚РёС‡РµСЃРєРёС… СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: AnlStdForm.java,v 1.1 2006/03/30 11:22:12 safonov Exp $
@@ -26,25 +26,25 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Account.Plan.AnlStdForm")
 public enum AnlStdForm {
 	/**
-	 * Сквозной признак
+	 * РЎРєРІРѕР·РЅРѕР№ РїСЂРёР·РЅР°Рє
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlStdForm.Through")
 	THROUGH,
 	
 	/**
-	 * Денежные средства
+	 * Р”РµРЅРµР¶РЅС‹Рµ СЃСЂРµРґСЃС‚РІР°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlStdForm.Money")
 	MONEY,
 	
 	/**
-	 * Материалы, товары учетные цены
+	 * РњР°С‚РµСЂРёР°Р»С‹, С‚РѕРІР°СЂС‹ СѓС‡РµС‚РЅС‹Рµ С†РµРЅС‹
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlStdForm.Material")
 	MATERIAL,
 	
 	/**
-	 * Заказ; объект
+	 * Р—Р°РєР°Р·; РѕР±СЉРµРєС‚
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlStdForm.ORDER")
 	ORDER

@@ -18,7 +18,7 @@ import com.mg.merp.overall.model.OvrCardHist;
 
 /**
 /**
- * Бизнес - компонент "История выдачи"
+ * Р‘РёР·РЅРµСЃ - РєРѕРјРїРѕРЅРµРЅС‚ "РСЃС‚РѕСЂРёСЏ РІС‹РґР°С‡Рё"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

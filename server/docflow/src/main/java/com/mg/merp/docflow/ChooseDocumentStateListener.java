@@ -17,7 +17,7 @@ package com.mg.merp.docflow;
 import java.util.EventListener;
 
 /**
- * Слушатель выбора состояния документа для отработки отката
+ * РЎР»СѓС€Р°С‚РµР»СЊ РІС‹Р±РѕСЂР° СЃРѕСЃС‚РѕСЏРЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё РѕС‚РєР°С‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: ChooseDocumentStateListener.java,v 1.1 2006/12/12 15:23:33 safonov Exp $
@@ -25,14 +25,14 @@ import java.util.EventListener;
 public interface ChooseDocumentStateListener extends EventListener {
 
 	/**
-	 * состояние выбрано
+	 * СЃРѕСЃС‚РѕСЏРЅРёРµ РІС‹Р±СЂР°РЅРѕ
 	 * 
-	 * @param stateId	идентификатор состояния
+	 * @param stateId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРѕСЃС‚РѕСЏРЅРёСЏ
 	 */
 	void performed(Integer stateId);
 	
 	/**
-	 * выбор состояния отменен
+	 * РІС‹Р±РѕСЂ СЃРѕСЃС‚РѕСЏРЅРёСЏ РѕС‚РјРµРЅРµРЅ
 	 *
 	 */
 	void canceled();	

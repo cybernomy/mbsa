@@ -29,7 +29,7 @@ import com.mg.framework.api.security.InvalidUserNameOrPassword;
 import com.mg.merp.security.support.SecuritySystemImpl;
 
 /**
- * Реализация поддержки MBean системы безопасности
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїРѕРґРґРµСЂР¶РєРё MBean СЃРёСЃС‚РµРјС‹ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id$

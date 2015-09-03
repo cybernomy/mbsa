@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.personnelref.model.LeaveKind;
 
 /**
- * Браузер видов отпусков
+ * Р‘СЂР°СѓР·РµСЂ РІРёРґРѕРІ РѕС‚РїСѓСЃРєРѕРІ
  * 
  * @author leonova
  * @version $Id: LeaveKindBr.java,v 1.1 2006/08/03 11:24:42 leonova Exp $ 

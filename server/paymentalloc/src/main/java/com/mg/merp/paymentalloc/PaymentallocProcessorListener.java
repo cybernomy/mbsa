@@ -17,7 +17,7 @@ package com.mg.merp.paymentalloc;
 import java.util.EventListener;
 
 /**
- * Слушатель процессора модуля "Журнал платежей"
+ * РЎР»СѓС€Р°С‚РµР»СЊ РїСЂРѕС†РµСЃСЃРѕСЂР° РјРѕРґСѓР»СЏ "Р–СѓСЂРЅР°Р» РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PaymentallocProcessorListener.java,v 1.1 2007/05/25 08:40:09 sharapov Exp $

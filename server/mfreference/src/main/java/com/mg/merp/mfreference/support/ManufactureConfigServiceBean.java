@@ -22,7 +22,7 @@ import com.mg.merp.mfreference.ManufactureConfigServiceLocal;
 import com.mg.merp.mfreference.model.ManufactureConfig;
 
 /**
- * Реализация бизнес-компонента "Конфигурация модуля <Производство>"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ>"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

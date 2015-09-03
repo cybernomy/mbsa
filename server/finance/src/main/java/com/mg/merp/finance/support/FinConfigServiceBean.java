@@ -22,7 +22,7 @@ import com.mg.merp.finance.FinConfigServiceLocal;
 import com.mg.merp.finance.model.FinConfig;
 
 /**
- * Реализация бизнес-компонента "Конфигурация модуля <Фин.учет>"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <Р¤РёРЅ.СѓС‡РµС‚>"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

@@ -47,7 +47,7 @@ import com.mg.merp.paymentalloc.PaymentServiceLocal;
 import com.mg.merp.paymentalloc.model.Payment;
 
 /**
- * Контроллер браузера бизнес-компонента "Журнал платежей"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р–СѓСЂРЅР°Р» РїР»Р°С‚РµР¶РµР№"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -196,9 +196,9 @@ public class PaymentBr extends DefaultHierarchyBrowseForm {
 	}	
 
 	/**
-	 * Обработчик пункта КМ "Образцы записей"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РћР±СЂР°Р·С†С‹ Р·Р°РїРёСЃРµР№"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionShowModel(WidgetEvent event) throws Exception {
 		final PaymentModelServiceLocal service = (PaymentModelServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/paymentalloc/PaymentModel"); //$NON-NLS-1$
@@ -207,9 +207,9 @@ public class PaymentBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Вставка с образцом"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "Р’СЃС‚Р°РІРєР° СЃ РѕР±СЂР°Р·С†РѕРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionInsertModel(WidgetEvent event) throws Exception {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.paymentalloc.support.ui.PaymentModelSearchHelp"); //$NON-NLS-1$
@@ -226,8 +226,8 @@ public class PaymentBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Создание записи журнала по образцу
-	 * @param model - образец
+	 * РЎРѕР·РґР°РЅРёРµ Р·Р°РїРёСЃРё Р¶СѓСЂРЅР°Р»Р° РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param model - РѕР±СЂР°Р·РµС†
 	 */
 	private void doOnActionInsertModel(Payment model) {
 		PaymentServiceLocal service = (PaymentServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/paymentalloc/Payment"); //$NON-NLS-1$

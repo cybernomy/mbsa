@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.account.model.SpecMark;
 
 /**
- * Контроллер браузера "Особые отметки"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "РћСЃРѕР±С‹Рµ РѕС‚РјРµС‚РєРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov

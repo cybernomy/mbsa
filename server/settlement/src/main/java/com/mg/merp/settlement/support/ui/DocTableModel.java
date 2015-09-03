@@ -23,7 +23,7 @@ import com.mg.merp.settlement.SelectionRowListener;
 import com.mg.merp.settlement.support.ui.ContractorCardMt.DocListItem;
 
 /**
- * Модель таблицы для отображения документов-оснований и контрактов в карточке расчетов с партнерами
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РґРѕРєСѓРјРµРЅС‚РѕРІ-РѕСЃРЅРѕРІР°РЅРёР№ Рё РєРѕРЅС‚СЂР°РєС‚РѕРІ РІ РєР°СЂС‚РѕС‡РєРµ СЂР°СЃС‡РµС‚РѕРІ СЃ РїР°СЂС‚РЅРµСЂР°РјРё
  * 
  * @author Artem V. Sharapov
  * @version $Id: DocTableModel.java,v 1.1 2007/03/19 15:05:29 sharapov Exp $

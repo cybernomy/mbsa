@@ -25,7 +25,7 @@ public interface SaleBookServiceLocal
    extends com.mg.framework.api.DataBusinessObjectService<SaleBook, Integer>
 {
 	/**
-	 * тип папки для книги продаж
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РєРЅРёРіРё РїСЂРѕРґР°Р¶
 	 */
 	final static short FOLDER_PART = 27;
 	

@@ -319,7 +319,7 @@ public class RowCalculator {
 		String sWhere = StringUtils.EMPTY_STRING;
 		Object[] params;
 		if (!PeriodCache.isBeginOfPeriod(periodId, date1)) {
-			// остатки на начало
+			// РѕСЃС‚Р°С‚РєРё РЅР° РЅР°С‡Р°Р»Рѕ
 			sWhere = " and (h.keepdate < ? )"; //$NON-NLS-1$
 			params = new Object[1];
 			params[0] = new Timestamp(date1.getTime());
@@ -415,8 +415,8 @@ public class RowCalculator {
 				strSQL = fillCorDSCreateSQL(true, false, sWhere, sJoin);
 				List<CorrDataItem> list = JdbcTemplate.getInstance().query(strSQL, params, new CorrDataItemRM());
 
-				// HAshMap необходим для, того, чтобы можно было брать
-				// быстро запись по ACC_ID
+				// HAshMap РЅРµРѕР±С…РѕРґРёРј РґР»СЏ, С‚РѕРіРѕ, С‡С‚РѕР±С‹ РјРѕР¶РЅРѕ Р±С‹Р»Рѕ Р±СЂР°С‚СЊ
+				// Р±С‹СЃС‚СЂРѕ Р·Р°РїРёСЃСЊ РїРѕ ACC_ID
 				for (Iterator<CorrDataItem> it = list.listIterator(); it.hasNext();) {
 					CorrDataItem item = it.next();
 					Integer key = item.accId;

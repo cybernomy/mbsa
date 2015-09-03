@@ -19,7 +19,7 @@ import com.mg.framework.support.ui.UIProducer;
 import com.mg.framework.support.ui.UIUtils;
 
 /**
- * Поисковик сущностей "Улицы" (из КЛАДР)
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РЈР»РёС†С‹" (РёР· РљР›РђР”Р )
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov
@@ -48,12 +48,12 @@ public class StreetSearchHelp extends AbstractSearchHelp {
 	}
 	
 	/**
-	 * Установить параметры поиска КЛАДР
-	 * @param kladrLevel - уровень КЛАДР
-	 * @param regionCode - код региона
-	 * @param districtCode - код района
-	 * @param cityCode - код города
-	 * @param areaCode - код нас.пункта
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РїРѕРёСЃРєР° РљР›РђР”Р 
+	 * @param kladrLevel - СѓСЂРѕРІРµРЅСЊ РљР›РђР”Р 
+	 * @param regionCode - РєРѕРґ СЂРµРіРёРѕРЅР°
+	 * @param districtCode - РєРѕРґ СЂР°Р№РѕРЅР°
+	 * @param cityCode - РєРѕРґ РіРѕСЂРѕРґР°
+	 * @param areaCode - РєРѕРґ РЅР°СЃ.РїСѓРЅРєС‚Р°
 	 */
 	public void setSearchParams(Integer kladrLevel, String regionCode, String districtCode, String cityCode, String areaCode) {
 		this.kladrLevel = kladrLevel;

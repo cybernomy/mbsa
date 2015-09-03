@@ -26,7 +26,7 @@ public interface FacturaHeadModelInServiceLocal
    extends DocumentPattern<FacturaHeadModel, Integer>
 {
 	/**
-	 * тип папки для образцов входящих счет - фактур
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ РІС…РѕРґСЏС‰РёС… СЃС‡РµС‚ - С„Р°РєС‚СѓСЂ
 	 */
 	final static short FOLDER_PART = 22;
 }

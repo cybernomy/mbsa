@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.personnelref.model.Speciality;
 
 /**
- * Браузер специальностей
+ * Р‘СЂР°СѓР·РµСЂ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚РµР№
  * 
  * @author leonova
  * @version $Id: SpecialityBr.java,v 1.1 2006/09/04 13:03:49 leonova Exp $ 

@@ -19,7 +19,7 @@ import com.mg.framework.utils.ServerUtils;
 
 
 /**
- * Локатор сервиса рассчёта количества на складах
+ * Р›РѕРєР°С‚РѕСЂ СЃРµСЂРІРёСЃР° СЂР°СЃСЃС‡С‘С‚Р° РєРѕР»РёС‡РµСЃС‚РІР° РЅР° СЃРєР»Р°РґР°С…
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: CurrentStockSituationLocator.java,v 1.1 2007/04/05 12:25:41 poroxnenko Exp $
@@ -28,7 +28,7 @@ public class CurrentStockSituationLocator {
 	private static volatile CurrentStockSituation instance = null;
 	
 	/**
-	 * @return	сервис рассчёта количества на складах
+	 * @return	СЃРµСЂРІРёСЃ СЂР°СЃСЃС‡С‘С‚Р° РєРѕР»РёС‡РµСЃС‚РІР° РЅР° СЃРєР»Р°РґР°С…
 	 */
 	public static CurrentStockSituation locate() {
         if (instance == null)

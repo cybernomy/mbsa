@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.personnelref.model.DeductionKind;
 
 /**
- * Браузер видов вычетов
+ * Р‘СЂР°СѓР·РµСЂ РІРёРґРѕРІ РІС‹С‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: DeductionKindBr.java,v 1.1 2006/09/04 13:05:19 leonova Exp $ 

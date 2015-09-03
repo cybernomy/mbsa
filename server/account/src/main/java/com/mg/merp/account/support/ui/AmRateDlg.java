@@ -30,7 +30,7 @@ import com.mg.merp.account.support.Messages;
 import com.mg.merp.reference.model.MonthOfYear;
 
 /**
- * Контроллер диалога "Ведите дату начисления амортизации"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "Р’РµРґРёС‚Рµ РґР°С‚Сѓ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: AmRateDlg.java,v 1.2 2008/05/20 11:49:20 alikaev Exp $
@@ -66,12 +66,12 @@ public class AmRateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * По месяцу и году возвращет количество дней в месяце
+	 * РџРѕ РјРµСЃСЏС†Сѓ Рё РіРѕРґСѓ РІРѕР·РІСЂР°С‰РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№ РІ РјРµСЃСЏС†Рµ
 	 * 
 	 * @param month
-	 * 			- номер месяца
+	 * 			- РЅРѕРјРµСЂ РјРµСЃСЏС†Р°
 	 * @param year
-	 * 			- год
+	 * 			- РіРѕРґ
 	 * @return
 	 */
 	private int DaysPerMonth(int month, int year) {
@@ -80,7 +80,7 @@ public class AmRateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Номер месяца
+	 * РќРѕРјРµСЂ РјРµСЃСЏС†Р°
 	 * @return month
 	 */
 	public MonthOfYear getMonth() {
@@ -88,7 +88,7 @@ public class AmRateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Год
+	 * Р“РѕРґ
 	 * @return year
 	 */
 	public Integer getYear() {
@@ -96,7 +96,7 @@ public class AmRateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Возвращает номер месяца
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РЅРѕРјРµСЂ РјРµСЃСЏС†Р°
 	 * 
 	 * @return
 	 */
@@ -105,10 +105,10 @@ public class AmRateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Номеру месяца возвращает месяц
+	 * РќРѕРјРµСЂСѓ РјРµСЃСЏС†Р° РІРѕР·РІСЂР°С‰Р°РµС‚ РјРµСЃСЏС†
 	 * 
 	 * @param number
-	 * 				- номер месяца
+	 * 				- РЅРѕРјРµСЂ РјРµСЃСЏС†Р°
 	 * @return
 	 */
 	public MonthOfYear getMonth(int number) {

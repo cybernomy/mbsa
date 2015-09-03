@@ -23,7 +23,7 @@ import com.mg.merp.factura.FacturaHeadOutServiceLocal;
 import com.mg.merp.factura.model.FacturaHeadModel;
 
 /**
- * Бизнес-компонент "Образцы исходящих счет - фактур" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ РёСЃС…РѕРґСЏС‰РёС… СЃС‡РµС‚ - С„Р°РєС‚СѓСЂ" 
  * 
  * @author leonova
  * @version $Id: FacturaHeadModelOutServiceBean.java,v 1.3 2006/09/12 11:11:21 leonova Exp $

@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PersonnelSkillRaisingServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelSkillRaising;
 
 /**
- * Реализация бизнес-компонента "Повышение квалификации" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРѕРІС‹С€РµРЅРёРµ РєРІР°Р»РёС„РёРєР°С†РёРё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

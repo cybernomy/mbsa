@@ -22,7 +22,7 @@ import com.mg.merp.warehouse.model.StockPlanHistoryDirection;
 import com.mg.merp.warehouse.model.StockPlanHistoryKind;
 
 /**
- * Стратегия реализации этапа ДО "Отработка планируемого движения по складу"
+ * РЎС‚СЂР°С‚РµРіРёСЏ СЂРµР°Р»РёР·Р°С†РёРё СЌС‚Р°РїР° Р”Рћ "РћС‚СЂР°Р±РѕС‚РєР° РїР»Р°РЅРёСЂСѓРµРјРѕРіРѕ РґРІРёР¶РµРЅРёСЏ РїРѕ СЃРєР»Р°РґСѓ"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseProcessPlanStrategy.java,v 1.5 2008/04/18 15:18:20 safonov Exp $

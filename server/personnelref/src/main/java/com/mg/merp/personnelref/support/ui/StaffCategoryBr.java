@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.personnelref.model.StaffCategory;
 
 /**
- * Браузер категорий персонала
+ * Р‘СЂР°СѓР·РµСЂ РєР°С‚РµРіРѕСЂРёР№ РїРµСЂСЃРѕРЅР°Р»Р°
  * 
  * @author leonova
  * @version $Id: StaffCategoryBr.java,v 1.1 2006/09/06 12:47:55 leonova Exp $ 

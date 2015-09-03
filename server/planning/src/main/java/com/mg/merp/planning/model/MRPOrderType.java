@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип заказа ППМ
+ * РўРёРї Р·Р°РєР°Р·Р° РџРџРњ
  * 
  * @author Oleg V. Safonov
  * @version $Id: MRPOrderType.java,v 1.1 2007/07/30 10:37:30 safonov Exp $
@@ -26,31 +26,31 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Planning.MRPOrderType")
 public enum MRPOrderType {
 	/**
-	 * Действительный
+	 * Р”РµР№СЃС‚РІРёС‚РµР»СЊРЅС‹Р№
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.Actual")
 	ACTUAL,
 	
 	/**
-	 * Закупка
+	 * Р—Р°РєСѓРїРєР°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.Purchase")
 	PURCHASE,
 	
 	/**
-	 * Прогноз
+	 * РџСЂРѕРіРЅРѕР·
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.Forecast")
 	FORECAST,
 	
 	/**
-	 * Запланировано
+	 * Р—Р°РїР»Р°РЅРёСЂРѕРІР°РЅРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.FirmPlanned")
 	FIRM_PLANNED,
 	
 	/**
-	 * Предлагаемый
+	 * РџСЂРµРґР»Р°РіР°РµРјС‹Р№
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.RescheduleSuggested")
 	RESCHEDULE_SUGGESTED

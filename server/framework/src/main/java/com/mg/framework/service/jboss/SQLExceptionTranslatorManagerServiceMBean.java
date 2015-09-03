@@ -19,7 +19,7 @@ import org.jboss.system.ServiceMBean;
 import com.mg.framework.api.jdbc.SQLExceptionTranslatorManager;
 
 /**
- * Сервис менеджера трансляторов SQL ИС в пользовательские исключения
+ * РЎРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° С‚СЂР°РЅСЃР»СЏС‚РѕСЂРѕРІ SQL РРЎ РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РёСЃРєР»СЋС‡РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: SQLExceptionTranslatorManagerServiceMBean.java,v 1.1 2006/11/17 14:31:44 safonov Exp $
@@ -27,7 +27,7 @@ import com.mg.framework.api.jdbc.SQLExceptionTranslatorManager;
 public interface SQLExceptionTranslatorManagerServiceMBean extends
 		SQLExceptionTranslatorManager, ServiceMBean {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:service=SQLExceptionTranslatorManagerService";
 

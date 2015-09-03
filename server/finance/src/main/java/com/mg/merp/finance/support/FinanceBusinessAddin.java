@@ -26,14 +26,14 @@ import com.mg.merp.finance.model.FinOperation;
 import com.mg.merp.finance.model.Specification;
 
 /**
- * Базовый класс BAi формирования финансовых проводок. Класс должен
- * реализовывать следующий метод <code>protected void doPerform() throws Exception</code>.
- * Метод возвращает сумму проводки в валюте отрабатываемого документа.
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ BAi С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ С„РёРЅР°РЅСЃРѕРІС‹С… РїСЂРѕРІРѕРґРѕРє. РљР»Р°СЃСЃ РґРѕР»Р¶РµРЅ
+ * СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёР№ РјРµС‚РѕРґ <code>protected void doPerform() throws Exception</code>.
+ * РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ СЃСѓРјРјСѓ РїСЂРѕРІРѕРґРєРё РІ РІР°Р»СЋС‚Рµ РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРјРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°.
  * 
- * <p>Пример данного метода:
+ * <p>РџСЂРёРјРµСЂ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР°:
  * <pre>
  * protected void doPerform() throws Exception {
- *     complete(getDocumentSpecItem().getPerformedSum()); //сумма спецификации отмеченная к отработке
+ *     complete(getDocumentSpecItem().getPerformedSum()); //СЃСѓРјРјР° СЃРїРµС†РёС„РёРєР°С†РёРё РѕС‚РјРµС‡РµРЅРЅР°СЏ Рє РѕС‚СЂР°Р±РѕС‚РєРµ
  * }</pre>
  * 
  * @author Oleg V. Safonov
@@ -41,19 +41,19 @@ import com.mg.merp.finance.model.Specification;
  */
 public abstract class FinanceBusinessAddin extends AbstractBusinessAddin<BigDecimal> {
 	/**
-	 * имя параметра этап ДО
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° СЌС‚Р°Рї Р”Рћ
 	 */
 	public static final String DOCFLOW_PARAM_NAME = "DOCFLOW_PARAM_NAME";
 	/**
-	 * имя параметра спецификация документа отмеченная к отработке
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р° РѕС‚РјРµС‡РµРЅРЅР°СЏ Рє РѕС‚СЂР°Р±РѕС‚РєРµ
 	 */
 	public static final String DOCSPEC_PARAM_NAME = "DOCSPEC_PARAM_NAME";
 	/**
-	 * имя параметра финансовая операция
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° С„РёРЅР°РЅСЃРѕРІР°СЏ РѕРїРµСЂР°С†РёСЏ
 	 */
 	public static final String FINOPER_PARAM_NAME = "FINOPER_PARAM_NAME";
 	/**
-	 * имя параметра финансовая проводка/признак
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° С„РёРЅР°РЅСЃРѕРІР°СЏ РїСЂРѕРІРѕРґРєР°/РїСЂРёР·РЅР°Рє
 	 */
 	public static final String FINSPEC_PARAM_NAME = "FINSPEC_PARAM_NAME";
 	
@@ -74,54 +74,54 @@ public abstract class FinanceBusinessAddin extends AbstractBusinessAddin<BigDeci
 	}
 
 	/**
-	 * получить отрабатываемый документ
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРјС‹Р№ РґРѕРєСѓРјРµРЅС‚
 	 * 
-	 * @return	текущий документ
+	 * @return	С‚РµРєСѓС‰РёР№ РґРѕРєСѓРјРµРЅС‚
 	 */
 	protected DocHead getDocument() {
 		return mDocFlowParams.getDocument();
 	}
 	
 	/**
-	 * получить отрабатываемую сумму документа, используется для документов без спецификаций
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРјСѓСЋ СЃСѓРјРјСѓ РґРѕРєСѓРјРµРЅС‚Р°, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РґРѕРєСѓРјРµРЅС‚РѕРІ Р±РµР· СЃРїРµС†РёС„РёРєР°С†РёР№
 	 * 
-	 * @return	отрабатываемая сумма документа
+	 * @return	РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРјР°СЏ СЃСѓРјРјР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected BigDecimal getPerformedSum() {
 		return mDocFlowParams.getPerformedSum();
 	}
 	
 	/**
-	 * получить текущий этап ДО
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰РёР№ СЌС‚Р°Рї Р”Рћ
 	 * 
-	 * @return	текущий этап ДО
+	 * @return	С‚РµРєСѓС‰РёР№ СЌС‚Р°Рї Р”Рћ
 	 */
 	protected DocProcessStage getDocProcessStage() {
 		return mDocFlowParams.getPerformedStage();
 	}
 	
 	/**
-	 * получить текущую спецификацию документа
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰СѓСЋ СЃРїРµС†РёС„РёРєР°С†РёСЋ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @return	текущая спецификация документа или <code>null</code> если документ без спецификаций
+	 * @return	С‚РµРєСѓС‰Р°СЏ СЃРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р° РёР»Рё <code>null</code> РµСЃР»Рё РґРѕРєСѓРјРµРЅС‚ Р±РµР· СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	protected DocumentSpecItem getDocumentSpecItem() {
 		return mDocumentSpecItem;
 	}
 
 	/**
-	 * получить финансовую операцию
+	 * РїРѕР»СѓС‡РёС‚СЊ С„РёРЅР°РЅСЃРѕРІСѓСЋ РѕРїРµСЂР°С†РёСЋ
 	 * 
-	 * @return	создаваемая финансовая операция
+	 * @return	СЃРѕР·РґР°РІР°РµРјР°СЏ С„РёРЅР°РЅСЃРѕРІР°СЏ РѕРїРµСЂР°С†РёСЏ
 	 */
 	protected FinOperation getFinanceOperation() {
 		return mFinanceOperation;
 	}
 
 	/**
-	 * получить финансовую спецификацию/признак
+	 * РїРѕР»СѓС‡РёС‚СЊ С„РёРЅР°РЅСЃРѕРІСѓСЋ СЃРїРµС†РёС„РёРєР°С†РёСЋ/РїСЂРёР·РЅР°Рє
 	 * 
-	 * @return	создаваемая финансовая спецификация/признак
+	 * @return	СЃРѕР·РґР°РІР°РµРјР°СЏ С„РёРЅР°РЅСЃРѕРІР°СЏ СЃРїРµС†РёС„РёРєР°С†РёСЏ/РїСЂРёР·РЅР°Рє
 	 */
 	protected Specification getFinanceSpecification() {
 		return mFinanceSpecification;

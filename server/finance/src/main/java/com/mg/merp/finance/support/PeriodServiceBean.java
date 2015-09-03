@@ -39,7 +39,7 @@ import com.mg.merp.finance.model.FinOperation;
 import com.mg.merp.finance.model.FinPeriod;
 
 /**
- * Реализация бизнес-компонента "Периоды финансового учета" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРµСЂРёРѕРґС‹ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -88,9 +88,9 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Проверка фин.периода на принадлежность фин.операциям
-	 * @param entity - фин.период
-	 * @return результат проверки
+	 * РџСЂРѕРІРµСЂРєР° С„РёРЅ.РїРµСЂРёРѕРґР° РЅР° РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚СЊ С„РёРЅ.РѕРїРµСЂР°С†РёСЏРј
+	 * @param entity - С„РёРЅ.РїРµСЂРёРѕРґ
+	 * @return СЂРµР·СѓР»СЊС‚Р°С‚ РїСЂРѕРІРµСЂРєРё
 	 */
 	private boolean isPeriodInUse(FinPeriod entity) {
 		Object count = OrmTemplate.getInstance().findUniqueByCriteria(OrmTemplate.createCriteria(FinOperation.class)
@@ -101,22 +101,22 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Проверка корректности фин.периода
-	 * @param entity - фин.период
-	 * @return результат проверки
+	 * РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё С„РёРЅ.РїРµСЂРёРѕРґР°
+	 * @param entity - С„РёРЅ.РїРµСЂРёРѕРґ
+	 * @return СЂРµР·СѓР»СЊС‚Р°С‚ РїСЂРѕРІРµСЂРєРё
 	 */
 	private boolean isPeriodInvalid(FinPeriod entity) {
-		// проверка корректности диапазона
+		// РїСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РґРёР°РїР°Р·РѕРЅР°
 		if((entity.getDateFrom().compareTo(entity.getDateTo()) == 0) || (entity.getDateFrom().compareTo(entity.getDateTo()) > 0))
 			return true;
-		// проверка на пересечение
+		// РїСЂРѕРІРµСЂРєР° РЅР° РїРµСЂРµСЃРµС‡РµРЅРёРµ
 		Criteria criteria = OrmTemplate.createCriteria(FinPeriod.class)
 		.add(Restrictions.or(
 				Restrictions.or(
 						Restrictions.and(Restrictions.le("DateFrom", entity.getDateFrom()), Restrictions.ge("DateTo", entity.getDateFrom())), 
 						Restrictions.and(Restrictions.le("DateFrom", entity.getDateTo()), Restrictions.ge("DateTo", entity.getDateTo()))), 
 				Restrictions.and(Restrictions.ge("DateFrom", entity.getDateFrom()), Restrictions.le("DateTo", entity.getDateTo()))));		
-		// при редактировании периода исключаем изменяемый период из списка существующих периодов
+		// РїСЂРё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРё РїРµСЂРёРѕРґР° РёСЃРєР»СЋС‡Р°РµРј РёР·РјРµРЅСЏРµРјС‹Р№ РїРµСЂРёРѕРґ РёР· СЃРїРёСЃРєР° СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёС… РїРµСЂРёРѕРґРѕРІ
 		if(entity.getId() != null)
 			criteria.add(Restrictions.ne("Id", entity.getId())); //$NON-NLS-1$
 		List<FinPeriod> finPeriods = OrmTemplate.getInstance().findByCriteria(criteria);
@@ -138,8 +138,8 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Закрыть период
-	 * @param finPeriod - сущность период фин. учета
+	 * Р—Р°РєСЂС‹С‚СЊ РїРµСЂРёРѕРґ
+	 * @param finPeriod - СЃСѓС‰РЅРѕСЃС‚СЊ РїРµСЂРёРѕРґ С„РёРЅ. СѓС‡РµС‚Р°
 	 */
 	private void internalClosePeriod(FinPeriod finPeriod){
 		finPeriod.setDateClose(DateTimeUtils.nowDate());
@@ -161,8 +161,8 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Открыть период
-	 * @param finPeriod	- сущность период фин. учета
+	 * РћС‚РєСЂС‹С‚СЊ РїРµСЂРёРѕРґ
+	 * @param finPeriod	- СЃСѓС‰РЅРѕСЃС‚СЊ РїРµСЂРёРѕРґ С„РёРЅ. СѓС‡РµС‚Р°
 	 */
 	private void internalOpenPeriod(FinPeriod finPeriod){
 		finPeriod.setDateClose(null);

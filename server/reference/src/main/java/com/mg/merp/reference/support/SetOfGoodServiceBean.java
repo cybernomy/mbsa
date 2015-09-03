@@ -25,7 +25,7 @@ import com.mg.merp.reference.SetOfGoodServiceLocal;
 import com.mg.merp.reference.model.SetOfGood;
 
 /**
- * Реализация бизнес-компонента "Каталог / Комплект" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР°С‚Р°Р»РѕРі / РљРѕРјРїР»РµРєС‚" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

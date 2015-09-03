@@ -17,7 +17,7 @@ package com.mg.merp.retail.support.ui;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Позиция модели таблицы "Выбор покупателя"
+ * РџРѕР·РёС†РёСЏ РјРѕРґРµР»Рё С‚Р°Р±Р»РёС†С‹ "Р’С‹Р±РѕСЂ РїРѕРєСѓРїР°С‚РµР»СЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: CustomerSelectTableModelItem.java,v 1.1 2007/10/05 07:35:57 sharapov Exp $

@@ -25,7 +25,7 @@ import com.mg.merp.finance.FeatAnalyticsServiceLocal;
 import com.mg.merp.finance.model.Analytics;
 
 /**
- * Бизнес-компонент "Спецификация признаков финансового учета" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РїСЂРёР·РЅР°РєРѕРІ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°" 
  * 
  * @author leonova
  * @version $Id: FeatAnalyticsServiceBean.java,v 1.3 2006/08/28 12:48:45 leonova Exp $

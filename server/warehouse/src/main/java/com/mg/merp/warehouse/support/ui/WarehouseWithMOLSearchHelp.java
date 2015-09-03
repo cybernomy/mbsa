@@ -20,7 +20,7 @@ import com.mg.merp.warehouse.WarehouseServiceLocal;
 import com.mg.merp.warehouse.model.Warehouse;
 
 /**
- * Базовый класс поисковика склада-приемника с установкой МОЛ(по умолчанию)
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РїРѕРёСЃРєРѕРІРёРєР° СЃРєР»Р°РґР°-РїСЂРёРµРјРЅРёРєР° СЃ СѓСЃС‚Р°РЅРѕРІРєРѕР№ РњРћР›(РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ)
  * 
  * @author Artem V. Sharapov
  * @version $Id: WarehouseWithMOLSearchHelp.java,v 1.1 2007/11/12 10:32:45 sharapov Exp $
@@ -30,8 +30,8 @@ public abstract class WarehouseWithMOLSearchHelp extends WarehouseSearchHelp {
 	private WarehouseServiceLocal warehouseService = (WarehouseServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(WarehouseServiceLocal.LOCAL_SERVICE_NAME);
 	
 	/**
-	 * Получить аттрибут МОЛ для экспорта
-	 * @return аттрибут МОЛ для экспорта
+	 * РџРѕР»СѓС‡РёС‚СЊ Р°С‚С‚СЂРёР±СѓС‚ РњРћР› РґР»СЏ СЌРєСЃРїРѕСЂС‚Р°
+	 * @return Р°С‚С‚СЂРёР±СѓС‚ РњРћР› РґР»СЏ СЌРєСЃРїРѕСЂС‚Р°
 	 */
 	abstract String getMolExportAttribute();
 	

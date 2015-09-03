@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PositionServiceLocal;
 import com.mg.merp.personnelref.model.PrefPosition;
 
 /**
- * Реализация бизнес-компонента "Должности на предприятии" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”РѕР»Р¶РЅРѕСЃС‚Рё РЅР° РїСЂРµРґРїСЂРёСЏС‚РёРё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

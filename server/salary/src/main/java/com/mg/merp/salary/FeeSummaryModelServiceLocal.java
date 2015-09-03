@@ -26,7 +26,7 @@ public interface FeeSummaryModelServiceLocal
    extends DocumentPattern<DocHeadModel, Integer>
 {
 	/**
-	 * тип папки для образцов сводов н/у
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ СЃРІРѕРґРѕРІ РЅ/Сѓ
 	 */
 	final static short FOLDER_PART = 10502;
 }

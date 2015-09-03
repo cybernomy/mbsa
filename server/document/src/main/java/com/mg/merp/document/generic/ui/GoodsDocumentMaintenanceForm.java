@@ -47,46 +47,46 @@ import com.mg.merp.reference.StockSituationBrowser;
 
 
 /**
- * Контроллер формы поддержки товарных документов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё С‚РѕРІР°СЂРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: GoodsDocumentMaintenanceForm.java,v 1.21 2009/02/12 08:53:01 safonov Exp $
  */
 public class GoodsDocumentMaintenanceForm extends DocumentMaintenanceForm implements MasterModelListener, StockSituationBrowser {
 	/**
-	 * наименование таблицы спецификаций
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	protected final String SPEC_TABLE_WIDGET = "spec";
 	/**
-	 * наименование панели вкладок
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїР°РЅРµР»Рё РІРєР»Р°РґРѕРє
 	 */
 	protected final String TABBED_PANE = "fields";
 	/**
-	 * наименование кнопки переключения в режим поддержки спецификаций
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РєРЅРѕРїРєРё РїРµСЂРµРєР»СЋС‡РµРЅРёСЏ РІ СЂРµР¶РёРј РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	protected final String LINE_MAINTENANCE_BUTTON = "LineMaintenanceButton";
 	/**
-	 * таблица спецификаций
+	 * С‚Р°Р±Р»РёС†Р° СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	protected MaintenanceTableController spec;
 	/**
-	 * инициализирующие свойства спецификации
+	 * РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‰РёРµ СЃРІРѕР№СЃС‚РІР° СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	protected AttributeMap specProperties = new LocalDataTransferObject();
 	/**
-	 * бизнес-компонент спецификация
+	 * Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ СЃРїРµС†РёС„РёРєР°С†РёСЏ
 	 */
 	protected GoodsDocumentSpecification<? extends DocSpec, Integer> specService;
 	/**
-	 * форма подбора номенклатуры для добавления спецификаций
+	 * С„РѕСЂРјР° РїРѕРґР±РѕСЂР° РЅРѕРјРµРЅРєР»Р°С‚СѓСЂС‹ РґР»СЏ РґРѕР±Р°РІР»РµРЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	protected Form goodsSelectionForm;
 	/**
-	 * контекст импорта для SearchHelp поля "через кого"
+	 * РєРѕРЅС‚РµРєСЃС‚ РёРјРїРѕСЂС‚Р° РґР»СЏ SearchHelp РїРѕР»СЏ "С‡РµСЂРµР· РєРѕРіРѕ"
 	 */
 	protected String[] contractorThroughKinds;
 	/**
-	 * имя формы для подбора спецификаций документа
+	 * РёРјСЏ С„РѕСЂРјС‹ РґР»СЏ РїРѕРґР±РѕСЂР° СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected String goodsSelectionFormName = "com.mg.merp.document.GoodsSelectionForm";
 	
@@ -100,9 +100,9 @@ public class GoodsDocumentMaintenanceForm extends DocumentMaintenanceForm implem
 			@Override
 			protected void doRefresh() {
 				super.doRefresh();
-				//обновим модель если находимся в режиме поддержки спецификаций, чтобы отобразить изменения
-				//в заголовке документа, в противном случае не обновляем, т.к. находимся в режиме поддержки
-				//заголовка и можем потерять данные введенные пользователем но не внесенные в хранилище
+				//РѕР±РЅРѕРІРёРј РјРѕРґРµР»СЊ РµСЃР»Рё РЅР°С…РѕРґРёРјСЃСЏ РІ СЂРµР¶РёРјРµ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёР№, С‡С‚РѕР±С‹ РѕС‚РѕР±СЂР°Р·РёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ
+				//РІ Р·Р°РіРѕР»РѕРІРєРµ РґРѕРєСѓРјРµРЅС‚Р°, РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ РЅРµ РѕР±РЅРѕРІР»СЏРµРј, С‚.Рє. РЅР°С…РѕРґРёРјСЃСЏ РІ СЂРµР¶РёРјРµ РїРѕРґРґРµСЂР¶РєРё
+				//Р·Р°РіРѕР»РѕРІРєР° Рё РјРѕР¶РµРј РїРѕС‚РµСЂСЏС‚СЊ РґР°РЅРЅС‹Рµ РІРІРµРґРµРЅРЅС‹Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј РЅРѕ РЅРµ РІРЅРµСЃРµРЅРЅС‹Рµ РІ С…СЂР°РЅРёР»РёС‰Рµ
 				//http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4560
 				if (!isDocLineTableReadOnly())
 					refreshModel();
@@ -117,7 +117,7 @@ public class GoodsDocumentMaintenanceForm extends DocumentMaintenanceForm implem
 	}
 
 	/**
-	 * реализация добавления спецификаций документа
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РґРѕР±Р°РІР»РµРЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРєСѓРјРµРЅС‚Р°
 	 *
 	 */
 	protected void doAddSpecification() {
@@ -140,7 +140,7 @@ public class GoodsDocumentMaintenanceForm extends DocumentMaintenanceForm implem
 	}
 	
 	/**
-	 * закрыть атрибуты формируемые на основе спецификаций
+	 * Р·Р°РєСЂС‹С‚СЊ Р°С‚СЂРёР±СѓС‚С‹ С„РѕСЂРјРёСЂСѓРµРјС‹Рµ РЅР° РѕСЃРЅРѕРІРµ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 *
 	 */
 	private void closeAggregateFields() {
@@ -155,7 +155,7 @@ public class GoodsDocumentMaintenanceForm extends DocumentMaintenanceForm implem
 	 */
 	@Override
 	protected void doOnClose() {
-		//закроем связанную форму
+		//Р·Р°РєСЂРѕРµРј СЃРІСЏР·Р°РЅРЅСѓСЋ С„РѕСЂРјСѓ
 		if (goodsSelectionForm != null) {
 			goodsSelectionForm.close();
 			goodsSelectionForm = null;
@@ -217,20 +217,20 @@ public class GoodsDocumentMaintenanceForm extends DocumentMaintenanceForm implem
 	}
 
 	/**
-	 * перевод формы поддержки документа в режим изменения спецификаций
+	 * РїРµСЂРµРІРѕРґ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РґРѕРєСѓРјРµРЅС‚Р° РІ СЂРµР¶РёРј РёР·РјРµРЅРµРЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	protected void setSpecificationEditable() {
 		setDocLineTableReadOnly(false);
-		//установим активной закладку со спецификациями
+		//СѓСЃС‚Р°РЅРѕРІРёРј Р°РєС‚РёРІРЅРѕР№ Р·Р°РєР»Р°РґРєСѓ СЃРѕ СЃРїРµС†РёС„РёРєР°С†РёСЏРјРё
 		TabbedPane tabbedPane = (TabbedPane) view.getWidget(TABBED_PANE);
 		if (tabbedPane != null)
 			tabbedPane.setSelectedComponent(view.getWidget(SPEC_TABLE_WIDGET));
 	}
 	
 	/**
-	 * установка режима поддержки таблицы спецификаций
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЂРµР¶РёРјР° РїРѕРґРґРµСЂР¶РєРё С‚Р°Р±Р»РёС†С‹ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 * 
-	 * @param readOnly	режим
+	 * @param readOnly	СЂРµР¶РёРј
 	 */
 	protected void setDocLineTableReadOnly(boolean readOnly) {
 		Widget docLineWidget = view.getWidget(SPEC_TABLE_WIDGET);
@@ -239,7 +239,7 @@ public class GoodsDocumentMaintenanceForm extends DocumentMaintenanceForm implem
 	}
 
 	/**
-	 * получить режим поддержки таблицы спецификаций
+	 * РїРѕР»СѓС‡РёС‚СЊ СЂРµР¶РёРј РїРѕРґРґРµСЂР¶РєРё С‚Р°Р±Р»РёС†С‹ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 * 
 	 * @return
 	 */
@@ -271,18 +271,18 @@ public class GoodsDocumentMaintenanceForm extends DocumentMaintenanceForm implem
 
 	@SuppressWarnings("unchecked")
 	public void onActionLineMaintenance(WidgetEvent event) {
-		//сохраняем заголовок документа
-		//не можем вызвать doSave из предка, т.к. закроется форма, поэтому выполняем теже действия
-		//только без закрытия
+		//СЃРѕС…СЂР°РЅСЏРµРј Р·Р°РіРѕР»РѕРІРѕРє РґРѕРєСѓРјРµРЅС‚Р°
+		//РЅРµ РјРѕР¶РµРј РІС‹Р·РІР°С‚СЊ doSave РёР· РїСЂРµРґРєР°, С‚.Рє. Р·Р°РєСЂРѕРµС‚СЃСЏ С„РѕСЂРјР°, РїРѕСЌС‚РѕРјСѓ РІС‹РїРѕР»РЅСЏРµРј С‚РµР¶Рµ РґРµР№СЃС‚РІРёСЏ
+		//С‚РѕР»СЊРєРѕ Р±РµР· Р·Р°РєСЂС‹С‚РёСЏ
 		setEntity(((Document) getService()).store((DocHead) getEntity()));
-		//для отработки логики на СУБД
+		//РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё Р»РѕРіРёРєРё РЅР° РЎРЈР‘Р”
 		ServerUtils.getPersistentManager().flush();
 		if (getRefreshMode() != null && getRefreshMode().contains(RefreshMode.AFTER_STORE))
 			doRefreshModel();
-		//заблокируем кнопки
+		//Р·Р°Р±Р»РѕРєРёСЂСѓРµРј РєРЅРѕРїРєРё
 		view.getWidget(LINE_MAINTENANCE_BUTTON).setEnabled(false);
 		view.getWidget(OK_BUTTON_NAME).setEnabled(false);
-		//перейдем в режим поддержки спецификаций
+		//РїРµСЂРµР№РґРµРј РІ СЂРµР¶РёРј РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёР№
 		setSpecificationEditable();
 	}
 
@@ -291,10 +291,10 @@ public class GoodsDocumentMaintenanceForm extends DocumentMaintenanceForm implem
 	 */
 	@Override
 	protected void doCancel() {
-		//если находимся в режиме поддержки спецификаций, то посылаем событие о выполнении действия,
-		//т.к. невозможно судить о том были ли изменения в спецификациях, также если редактировали
-		//заголовок и перешли в режим поддержки спецификаций то необходимо отправить событие выполнено,
-		//в противном случае внешние слушатели получат событие отмены, что неверно
+		//РµСЃР»Рё РЅР°С…РѕРґРёРјСЃСЏ РІ СЂРµР¶РёРјРµ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёР№, С‚Рѕ РїРѕСЃС‹Р»Р°РµРј СЃРѕР±С‹С‚РёРµ Рѕ РІС‹РїРѕР»РЅРµРЅРёРё РґРµР№СЃС‚РІРёСЏ,
+		//С‚.Рє. РЅРµРІРѕР·РјРѕР¶РЅРѕ СЃСѓРґРёС‚СЊ Рѕ С‚РѕРј Р±С‹Р»Рё Р»Рё РёР·РјРµРЅРµРЅРёСЏ РІ СЃРїРµС†РёС„РёРєР°С†РёСЏС…, С‚Р°РєР¶Рµ РµСЃР»Рё СЂРµРґР°РєС‚РёСЂРѕРІР°Р»Рё
+		//Р·Р°РіРѕР»РѕРІРѕРє Рё РїРµСЂРµС€Р»Рё РІ СЂРµР¶РёРј РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёР№ С‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕР±С‹С‚РёРµ РІС‹РїРѕР»РЅРµРЅРѕ,
+		//РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ РІРЅРµС€РЅРёРµ СЃР»СѓС€Р°С‚РµР»Рё РїРѕР»СѓС‡Р°С‚ СЃРѕР±С‹С‚РёРµ РѕС‚РјРµРЅС‹, С‡С‚Рѕ РЅРµРІРµСЂРЅРѕ
 		if (!isDocLineTableReadOnly()) {
 			fireSaveAction(new MaintenanceFormEvent(this, getEntity()));
 			close();
@@ -304,14 +304,14 @@ public class GoodsDocumentMaintenanceForm extends DocumentMaintenanceForm implem
 	}
 
 	/**
-	 * запуск формы поддержки документа для изменения списка спецификаций
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РґРѕРєСѓРјРµРЅС‚Р° РґР»СЏ РёР·РјРµРЅРµРЅРёСЏ СЃРїРёСЃРєР° СЃРїРµС†РёС„РёРєР°С†РёР№
 	 * 
-	 * @param documentService	сервис документа
-	 * @param documentEntity	документ
+	 * @param documentService	СЃРµСЂРІРёСЃ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param documentEntity	РґРѕРєСѓРјРµРЅС‚
 	 */
 	@SuppressWarnings("unchecked")
 	public void executeEditSpecifications(final Document documentService, final DocHead documentEntity) {
-		//проверим доступность редактирования документа (http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4200)
+		//РїСЂРѕРІРµСЂРёРј РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° (http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4200)
 		DocFlowHelper.checkStatus(documentEntity);
 		execute(documentService, documentEntity, MaintenanceAction.VIEW);
 		setSpecificationEditable();

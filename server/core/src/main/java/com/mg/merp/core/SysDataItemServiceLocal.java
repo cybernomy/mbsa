@@ -18,14 +18,14 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.core.model.SysDataItem;
 
 /**
- * Бизнес-компонент "Элементы данных системы"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р­Р»РµРјРµРЅС‚С‹ РґР°РЅРЅС‹С… СЃРёСЃС‚РµРјС‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: SysDataItemServiceLocal.java,v 1.1 2008/03/03 12:55:18 safonov Exp $
  */
 public interface SysDataItemServiceLocal extends DataBusinessObjectService<SysDataItem, Integer> {
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/core/SysDataItem";
 }

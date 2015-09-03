@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 
 /**
- * Контроллер формы условий отбора "Карточек расчетов с партнерами"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° "РљР°СЂС‚РѕС‡РµРє СЂР°СЃС‡РµС‚РѕРІ СЃ РїР°СЂС‚РЅРµСЂР°РјРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ContractorCardRest.java,v 1.1 2007/03/28 11:07:55 sharapov Exp $

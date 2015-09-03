@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 import com.mg.merp.document.CreateSpecificationInfo;
 
 /**
- * Базовая реализация информации о номенклатуре для создания спецификаций
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РёРЅС„РѕСЂРјР°С†РёРё Рѕ РЅРѕРјРµРЅРєР»Р°С‚СѓСЂРµ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: CreateSpecificationInfoImpl.java,v 1.1 2007/07/27 12:01:38 safonov Exp $

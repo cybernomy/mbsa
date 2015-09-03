@@ -17,7 +17,7 @@ package com.mg.merp.reference.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Единицы измерения"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р•РґРёРЅРёС†С‹ РёР·РјРµСЂРµРЅРёСЏ"
  * 
  * @author hbm2java
  * @version $Id: Measure.java,v 1.4 2007/09/18 05:53:04 alikaev Exp $

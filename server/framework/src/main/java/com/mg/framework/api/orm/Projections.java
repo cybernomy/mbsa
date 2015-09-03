@@ -19,7 +19,7 @@ import org.hibernate.criterion.ProjectionList;
 import com.mg.framework.support.orm.GenericProjectionImpl;
 
 /**
- * Фабрика создания отображений и агрегатов
+ * Р¤Р°Р±СЂРёРєР° СЃРѕР·РґР°РЅРёСЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёР№ Рё Р°РіСЂРµРіР°С‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: Projections.java,v 1.2 2006/12/12 13:54:52 safonov Exp $

@@ -29,7 +29,7 @@ import org.eclipse.jdt.core.JavaCore;
 import com.mg.merp.wb.badi.library.util.LibInfo;
 
 /**
- * Контейнер, необходимый для формирования Classpath Java-проекта
+ * РљРѕРЅС‚РµР№РЅРµСЂ, РЅРµРѕР±С…РѕРґРёРјС‹Р№ РґР»СЏ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ Classpath Java-РїСЂРѕРµРєС‚Р°
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: Container.java,v 1.4 2007/07/11 07:31:29 poroxnenko Exp $
@@ -40,7 +40,7 @@ public class Container implements IClasspathContainer {
 	private IClasspathEntry[] classpathEntries;
 
 	/**
-	 * Список имён архивов, доступных для помещения в библиотеку
+	 * РЎРїРёСЃРѕРє РёРјС‘РЅ Р°СЂС…РёРІРѕРІ, РґРѕСЃС‚СѓРїРЅС‹С… РґР»СЏ РїРѕРјРµС‰РµРЅРёСЏ РІ Р±РёР±Р»РёРѕС‚РµРєСѓ
 	 */
 	private Set<String> includedLibs;
 
@@ -54,8 +54,8 @@ public class Container implements IClasspathContainer {
 	}
 
 	/**
-	 * Метод заполняет контейнер jar библиотеками в соответствии с
-	 * {@link Container#includedLibs} и включает библиотеки из папки thirdpart
+	 * РњРµС‚РѕРґ Р·Р°РїРѕР»РЅСЏРµС‚ РєРѕРЅС‚РµР№РЅРµСЂ jar Р±РёР±Р»РёРѕС‚РµРєР°РјРё РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ
+	 * {@link Container#includedLibs} Рё РІРєР»СЋС‡Р°РµС‚ Р±РёР±Р»РёРѕС‚РµРєРё РёР· РїР°РїРєРё thirdpart
 	 */
 	private void computeClasspathEntries() {
 		createIncludedLibs();
@@ -98,8 +98,8 @@ public class Container implements IClasspathContainer {
 	}
 
 	/**
-	 * Метод создаёт Set строк, из конфигурации Java-проекта, и представляет
-	 * список имён архивов, доступных для помещения в библиотеку
+	 * РњРµС‚РѕРґ СЃРѕР·РґР°С‘С‚ Set СЃС‚СЂРѕРє, РёР· РєРѕРЅС„РёРіСѓСЂР°С†РёРё Java-РїСЂРѕРµРєС‚Р°, Рё РїСЂРµРґСЃС‚Р°РІР»СЏРµС‚
+	 * СЃРїРёСЃРѕРє РёРјС‘РЅ Р°СЂС…РёРІРѕРІ, РґРѕСЃС‚СѓРїРЅС‹С… РґР»СЏ РїРѕРјРµС‰РµРЅРёСЏ РІ Р±РёР±Р»РёРѕС‚РµРєСѓ
 	 */
 	private void createIncludedLibs() {
 		includedLibs = BadiLibraryPlugin.initLibsFromPropFile(project);

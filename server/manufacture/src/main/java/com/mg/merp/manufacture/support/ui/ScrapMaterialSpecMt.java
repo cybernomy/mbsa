@@ -17,7 +17,7 @@ package com.mg.merp.manufacture.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы поддержки спецификации актов на списание потерь материалов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёРё Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РјР°С‚РµСЂРёР°Р»РѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: ScrapMaterialSpecMt.java,v 1.3 2006/08/28 04:32:37 leonova Exp $

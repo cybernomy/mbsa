@@ -18,7 +18,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
- * Результат выполнения функции {@link #accCheckLastBatch()} сервиса {@link #ProcessorServiceLocal}.
+ * Р РµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ С„СѓРЅРєС†РёРё {@link #accCheckLastBatch()} СЃРµСЂРІРёСЃР° {@link #ProcessorServiceLocal}.
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: AccCheckLastBatchResult.java,v 1.1 2008/03/25 14:49:51 alikaev Exp $
@@ -30,11 +30,11 @@ public class AccCheckLastBatchResult implements Serializable {
 	private BigDecimal realSummaCur;
 	
 	/**
-	 * Конструктор
+	 * РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * @param realSummaNat
-	 * 				- сумма в НДЕ
+	 * 				- СЃСѓРјРјР° РІ РќР”Р•
 	 * @param realSummaCur
-	 * 				- сумма в валюте
+	 * 				- СЃСѓРјРјР° РІ РІР°Р»СЋС‚Рµ
 	 */
 	public AccCheckLastBatchResult(BigDecimal realSummaNat, BigDecimal realSummaCur) {
 		this.realSummaNat = realSummaNat;
@@ -42,7 +42,7 @@ public class AccCheckLastBatchResult implements Serializable {
 	}
 
 	/**
-	 * Сумма в НДЕ
+	 * РЎСѓРјРјР° РІ РќР”Р•
 	 * @return realSummaNat
 	 */
 	public BigDecimal getRealSummaNat() {
@@ -50,7 +50,7 @@ public class AccCheckLastBatchResult implements Serializable {
 	}
 
 	/**
-	 * Сумма в валюте
+	 * РЎСѓРјРјР° РІ РІР°Р»СЋС‚Рµ
 	 * @return realSummaCur
 	 */
 	public BigDecimal getRealSummaCur() {

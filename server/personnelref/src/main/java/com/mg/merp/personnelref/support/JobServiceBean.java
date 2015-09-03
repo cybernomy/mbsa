@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.JobServiceLocal;
 import com.mg.merp.personnelref.model.PrefJob;
 
 /**
- * Реализация бизнес-компонента "Профессии на предприятии" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРѕС„РµСЃСЃРёРё РЅР° РїСЂРµРґРїСЂРёСЏС‚РёРё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

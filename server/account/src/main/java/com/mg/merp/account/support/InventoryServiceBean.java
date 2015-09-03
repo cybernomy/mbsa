@@ -72,7 +72,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Реализация бизнес-компонента "Данные по видам учета" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”Р°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°" 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -167,14 +167,14 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Начисление амортизации
+	 * РќР°С‡РёСЃР»РµРЅРёРµ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * 
 	 * @param inventory
-	 * 				- данные по видам учета
+	 * 				- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * @param aMonth
-	 * 				- месяц начисления амортизации в абсолютном исчислении (год*12 + месяц)
+	 * 				- РјРµСЃСЏС† РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ Р°Р±СЃРѕР»СЋС‚РЅРѕРј РёСЃС‡РёСЃР»РµРЅРёРё (РіРѕРґ*12 + РјРµСЃСЏС†)
 	 * @param batch
-	 * 				- служебное поле
+	 * 				- СЃР»СѓР¶РµР±РЅРѕРµ РїРѕР»Рµ
 	 */
 	protected Integer doCalcAmortization(List<Inventory> inventories, Short month, Integer batch) {
 		Long accAmortizationBatchGen = (Long) DatabaseUtils.getSequenceNextValue("ACC_AMORTIZATION_BATCH_GEN"); //$NON-NLS-1$
@@ -212,14 +212,14 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Расчет амортизации пропорционально остаточной стоимости
+	 * Р Р°СЃС‡РµС‚ Р°РјРѕСЂС‚РёР·Р°С†РёРё РїСЂРѕРїРѕСЂС†РёРѕРЅР°Р»СЊРЅРѕ РѕСЃС‚Р°С‚РѕС‡РЅРѕР№ СЃС‚РѕРёРјРѕСЃС‚Рё
 	 * 
 	 * @param inventory
-	 * 				- данные по видам учета
+	 * 				- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * @param aMonth
-	 * 				- месяц начисления амортизации в абсолютном исчислении (год*12 + месяц)
+	 * 				- РјРµСЃСЏС† РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ Р°Р±СЃРѕР»СЋС‚РЅРѕРј РёСЃС‡РёСЃР»РµРЅРёРё (РіРѕРґ*12 + РјРµСЃСЏС†)
 	 * @param batch
-	 * 				- служебное поле
+	 * 				- СЃР»СѓР¶РµР±РЅРѕРµ РїРѕР»Рµ
 	 */
 	protected void doCalcAmortizationDeprVal(Inventory inventory, Short month, Integer batch) {
 		RoundContext roundContext = new RoundContext(ConfigurationHelper.getConfiguration().getCurrencyPrec());
@@ -272,14 +272,14 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Расчет амортизации линейным методом
+	 * Р Р°СЃС‡РµС‚ Р°РјРѕСЂС‚РёР·Р°С†РёРё Р»РёРЅРµР№РЅС‹Рј РјРµС‚РѕРґРѕРј
 	 * 
 	 * @param inventory
-	 * 				- данные по видам учета
+	 * 				- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * @param aMonth
-	 * 				- месяц начисления амортизации в абсолютном исчислении (год*12 + месяц)
+	 * 				- РјРµСЃСЏС† РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ Р°Р±СЃРѕР»СЋС‚РЅРѕРј РёСЃС‡РёСЃР»РµРЅРёРё (РіРѕРґ*12 + РјРµСЃСЏС†)
 	 * @param batch
-	 * 				- служебное поле
+	 * 				- СЃР»СѓР¶РµР±РЅРѕРµ РїРѕР»Рµ
 	 */
 	protected void doCalcAmortizationLinear(Inventory inventory, Short month, Integer batch) {
 		RoundContext roundContext = new RoundContext(ConfigurationHelper.getConfiguration().getCurrencyPrec());
@@ -321,14 +321,14 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Расчет амортизации пропорционально периоду эксплуатации
+	 * Р Р°СЃС‡РµС‚ Р°РјРѕСЂС‚РёР·Р°С†РёРё РїСЂРѕРїРѕСЂС†РёРѕРЅР°Р»СЊРЅРѕ РїРµСЂРёРѕРґСѓ СЌРєСЃРїР»СѓР°С‚Р°С†РёРё
 	 * 
 	 * @param inventory
-	 * 				- данные по видам учета
+	 * 				- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * @param aMonth
-	 * 				- месяц начисления амортизации в абсолютном исчислении (год*12 + месяц)
+	 * 				- РјРµСЃСЏС† РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ Р°Р±СЃРѕР»СЋС‚РЅРѕРј РёСЃС‡РёСЃР»РµРЅРёРё (РіРѕРґ*12 + РјРµСЃСЏС†)
 	 * @param batch
-	 * 				- служебное поле
+	 * 				- СЃР»СѓР¶РµР±РЅРѕРµ РїРѕР»Рµ
 	 */
 	protected void doCalcAmortizationPeriod(Inventory inventory, Short month, Integer batch) {
 		RoundContext roundContext = new RoundContext(ConfigurationHelper.getConfiguration().getCurrencyPrec());
@@ -368,14 +368,14 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Расчет амортизации по продукции
+	 * Р Р°СЃС‡РµС‚ Р°РјРѕСЂС‚РёР·Р°С†РёРё РїРѕ РїСЂРѕРґСѓРєС†РёРё
 	 * 
 	 * @param inventory
-	 * 				- данные по видам учета
+	 * 				- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * @param aMonth
-	 * 				- месяц начисления амортизации в абсолютном исчислении (год*12 + месяц)
+	 * 				- РјРµСЃСЏС† РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ Р°Р±СЃРѕР»СЋС‚РЅРѕРј РёСЃС‡РёСЃР»РµРЅРёРё (РіРѕРґ*12 + РјРµСЃСЏС†)
 	 * @param batch
-	 * 				- служебное поле
+	 * 				- СЃР»СѓР¶РµР±РЅРѕРµ РїРѕР»Рµ
 	 */
 	protected void doCalcAmortizationProduction(Inventory inventory, Short month, Integer batch) {
 		RoundContext roundContext = new RoundContext(ConfigurationHelper.getConfiguration().getCurrencyPrec());
@@ -428,12 +428,12 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Переоценка/дооценка
+	 * РџРµСЂРµРѕС†РµРЅРєР°/РґРѕРѕС†РµРЅРєР°
 	 * 
 	 * @param inventories
-	 * 				- данные по видам учета
+	 * 				- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * @param accRevaluateParams
-	 * 				- параметры для проведения переоценки
+	 * 				- РїР°СЂР°РјРµС‚СЂС‹ РґР»СЏ РїСЂРѕРІРµРґРµРЅРёСЏ РїРµСЂРµРѕС†РµРЅРєРё
 	 */
 	protected void doRevaluate(List<Inventory> inventories, AccRevaluateParams accRevaluateParams) {
 		RoundContext roundContext = new RoundContext(ConfigurationHelper.getConfiguration().getCurrencyPrec());
@@ -526,10 +526,10 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Отменить последнее действие
+	 * РћС‚РјРµРЅРёС‚СЊ РїРѕСЃР»РµРґРЅРµРµ РґРµР№СЃС‚РІРёРµ
 	 * 
 	 * @param inventories
-	 * 				- данные по видам учета
+	 * 				- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 */
 	protected void doRollback(List<Inventory> inventories) {
 		OrmTemplate ormTemplate = OrmTemplate.getInstance();
@@ -556,12 +556,12 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Перемещение
+	 * РџРµСЂРµРјРµС‰РµРЅРёРµ
 	 * 
 	 * @param inventories
-	 * 				- инвентарные карточки
+	 * 				- РёРЅРІРµРЅС‚Р°СЂРЅС‹Рµ РєР°СЂС‚РѕС‡РєРё
 	 * @param params
-	 * 			- параметры для проведения операции перемещения инвентарных карточек
+	 * 			- РїР°СЂР°РјРµС‚СЂС‹ РґР»СЏ РїСЂРѕРІРµРґРµРЅРёСЏ РѕРїРµСЂР°С†РёРё РїРµСЂРµРјРµС‰РµРЅРёСЏ РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‡РµРє
 	 */
 	protected void doMoveInventory(List<Inventory> inventories, AccInventoryMoveParams params) {
 		Contractor contr = params.getContractor();
@@ -620,12 +620,12 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Списание
+	 * РЎРїРёСЃР°РЅРёРµ
 	 * 
 	 * @param inventories
-	 * 				- инвентарные карточки
+	 * 				- РёРЅРІРµРЅС‚Р°СЂРЅС‹Рµ РєР°СЂС‚РѕС‡РєРё
 	 * @param params
-	 * 			- параметры для проведения операции списания инвентарных карточек
+	 * 			- РїР°СЂР°РјРµС‚СЂС‹ РґР»СЏ РїСЂРѕРІРµРґРµРЅРёСЏ РѕРїРµСЂР°С†РёРё СЃРїРёСЃР°РЅРёСЏ РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‡РµРє
 	 */
 	protected void doRetire(List<Inventory> inventories, AccInventoryRetireParams params) {
 		RoundContext roundContext = new RoundContext(ConfigurationHelper.getConfiguration().getCurrencyPrec());
@@ -655,12 +655,12 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Консервация 
+	 * РљРѕРЅСЃРµСЂРІР°С†РёСЏ 
 	 * 
 	 * @param inventories
-	 * 				- инвентарные карточки
+	 * 				- РёРЅРІРµРЅС‚Р°СЂРЅС‹Рµ РєР°СЂС‚РѕС‡РєРё
 	 * @param freezeDate
-	 * 				- дата по которую осуществляется консервация инвентарных карточек
+	 * 				- РґР°С‚Р° РїРѕ РєРѕС‚РѕСЂСѓСЋ РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ РєРѕРЅСЃРµСЂРІР°С†РёСЏ РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‡РµРє
 	 */
 	protected void doFreeze(List<Inventory> inventories, Date freezeDate) {
 		int absMonth = DateTimeUtils.getYear(freezeDate) * 12 + DateTimeUtils.getMonth(freezeDate);
@@ -680,12 +680,12 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Формирование остатков
+	 * Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РѕСЃС‚Р°С‚РєРѕРІ
 	 * 
 	 * @param inventories
-	 * 				- инвентарные карточки
+	 * 				- РёРЅРІРµРЅС‚Р°СЂРЅС‹Рµ РєР°СЂС‚РѕС‡РєРё
 	 * @param period
-	 * 				- учетный период
+	 * 				- СѓС‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ
 	 */
 	protected void doMakeRemains(List<Inventory> inventories, Period period) {
 		for (Inventory inventory : inventories) {
@@ -705,14 +705,14 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Формирование "Остатки и обороты по счетам бух. учета"
+	 * Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ СЃС‡РµС‚Р°Рј Р±СѓС…. СѓС‡РµС‚Р°"
 	 * 
 	 * @param accPlan
-	 * 				- счет
+	 * 				- СЃС‡РµС‚
 	 * @param period
-	 * 				- период
+	 * 				- РїРµСЂРёРѕРґ
 	 * @param summa
-	 * 				- сумма
+	 * 				- СЃСѓРјРјР°
 	 */
 	private void adjustRemnAcc(AccPlan accPlan, Period period, BigDecimal summa) {
 		RoundContext roundContext = new RoundContext(ConfigurationHelper.getConfiguration().getCurrencyPrec());
@@ -738,28 +738,28 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 	
 	/**
-	 * Формирование "Остатки и обороты по ТМЦ бух. учета"
+	 * Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ РўРњР¦ Р±СѓС…. СѓС‡РµС‚Р°"
 	 * 
 	 * @param accPlan
-	 * 				- счет
+	 * 				- СЃС‡РµС‚
 	 * @param anl1
-	 * 				- аналитика 1-го уровня
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 1-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param anl2
-	 * 				- аналитика 2-го уровня
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 2-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param anl3
-	 * 				- аналитика 3-го уровня
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 3-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param anl4
-	 * 				- аналитика 4-го уровня
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 4-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param anl5
-	 * 				- аналитика 5-го уровня
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 5-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param catalog
-	 * 				- товар
+	 * 				- С‚РѕРІР°СЂ
 	 * @param contractor
-	 * 				- контрагент
+	 * 				- РєРѕРЅС‚СЂР°РіРµРЅС‚
 	 * @param period
-	 * 				- период
+	 * 				- РїРµСЂРёРѕРґ
 	 * @param summa
-	 * 				- сумма
+	 * 				- СЃСѓРјРјР°
 	 */
 	private void adjustRemnVal(AccPlan accPlan, AnlPlan anl1, AnlPlan anl2, AnlPlan anl3, AnlPlan anl4, AnlPlan anl5, Catalog catalog, Contractor contractor, Period period, BigDecimal summa) {
 		RoundContext roundContext = new RoundContext(ConfigurationHelper.getConfiguration().getCurrencyPrec());
@@ -798,26 +798,26 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	} 
 	
 	/**
-	 * Формирование "Ведомость расчетов с контрагентами"
+	 * Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ "Р’РµРґРѕРјРѕСЃС‚СЊ СЂР°СЃС‡РµС‚РѕРІ СЃ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°РјРё"
 	 * 
 	 * @param accPlan
-	 * 				- счет
+	 * 				- СЃС‡РµС‚
 	 * @param anl1
-	 * 				- аналитика 1-го уровня
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 1-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param anl2
-	 * 				- аналитика 2-го уровня
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 2-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param anl3
-	 * 				- аналитика 3-го уровня
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 3-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param anl4
-	 * 				- аналитика 4-го уровня
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 4-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param anl5
-	 * 				- аналитика 5-го уровня
+	 * 				- Р°РЅР°Р»РёС‚РёРєР° 5-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @param contractor
-	 * 				- контрагент
+	 * 				- РєРѕРЅС‚СЂР°РіРµРЅС‚
 	 * @param period
-	 * 				- период
+	 * 				- РїРµСЂРёРѕРґ
 	 * @param summa
-	 * 				- сумма
+	 * 				- СЃСѓРјРјР°
 	 */
 	private void adjustRemnDbKt(AccPlan accPlan, AnlPlan anl1, AnlPlan anl2, AnlPlan anl3, AnlPlan anl4, AnlPlan anl5, Contractor contractor, Period period, BigDecimal summa) {
 		RoundContext roundContext = new RoundContext(ConfigurationHelper.getConfiguration().getCurrencyPrec());
@@ -853,16 +853,16 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	} 
 	
 	/**
-	 * Расчет количества месяцев начисления амортизации
+	 * Р Р°СЃС‡РµС‚ РєРѕР»РёС‡РµСЃС‚РІР° РјРµСЃСЏС†РµРІ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * 
 	 * @param inventory
-	 * 				- данные по видам учета
+	 * 				- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * @param aMonth
-	 * 				- месяц начисления амортизации в абсолютном исчислении (год*12 + месяц)
+	 * 				- РјРµСЃСЏС† РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ Р°Р±СЃРѕР»СЋС‚РЅРѕРј РёСЃС‡РёСЃР»РµРЅРёРё (РіРѕРґ*12 + РјРµСЃСЏС†)
 	 * @param inDate
-	 * 				- акт ввода в эксплуатацию - дата
+	 * 				- Р°РєС‚ РІРІРѕРґР° РІ СЌРєСЃРїР»СѓР°С‚Р°С†РёСЋ - РґР°С‚Р°
 	 * @param outDate
-	 * 				- акт выбытия из эксплуатации - дата
+	 * 				- Р°РєС‚ РІС‹Р±С‹С‚РёСЏ РёР· СЌРєСЃРїР»СѓР°С‚Р°С†РёРё - РґР°С‚Р°
 	 * @return
 	 */
 	protected NumMonthsResult getNumMonths(Inventory inventory, Short month, Date inDate, Date outDate) {
@@ -898,7 +898,7 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Класс результат выполнения функции {@link #getNumMonths()}
+	 * РљР»Р°СЃСЃ СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ С„СѓРЅРєС†РёРё {@link #getNumMonths()}
 	 */
 	private class NumMonthsResult {
 		private short months; 
@@ -911,7 +911,7 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Возвращает бизнес-компонент "Ведомость начисления амортизации"
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РµРґРѕРјРѕСЃС‚СЊ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё"
 	 * 
 	 * @return
 	 */
@@ -922,7 +922,7 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Возвращает бизнес-компонент "Нормы амортизации"
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РќРѕСЂРјС‹ Р°РјРѕСЂС‚РёР·Р°С†РёРё"
 	 * @return
 	 */
 	private AmRateServiceLocal getAmRateService() {
@@ -932,42 +932,42 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Создание ведомости начисления амортизации
+	 * РЎРѕР·РґР°РЅРёРµ РІРµРґРѕРјРѕСЃС‚Рё РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * 
 	 * @param inventory
-	 * 			- данные по видам учета
+	 * 			- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * @param month
-	 * 			- месяц начисления амортизации в абсолютном исчислении (год*12 + месяц)
+	 * 			- РјРµСЃСЏС† РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ Р°Р±СЃРѕР»СЋС‚РЅРѕРј РёСЃС‡РёСЃР»РµРЅРёРё (РіРѕРґ*12 + РјРµСЃСЏС†)
 	 * @param batch
-	 * 			- номер партии
+	 * 			- РЅРѕРјРµСЂ РїР°СЂС‚РёРё
 	 * @param factor
-	 * 			- поправочный коэффициент
+	 * 			- РїРѕРїСЂР°РІРѕС‡РЅС‹Р№ РєРѕСЌС„С„РёС†РёРµРЅС‚
 	 * @param amCodeId
-	 * 			- идентификатор шифра амортизации
+	 * 			- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С€РёС„СЂР° Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * @param balanceCost
-	 * 			- балансовая стоимость 
+	 * 			- Р±Р°Р»Р°РЅСЃРѕРІР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ 
 	 * @param endCost
-	 * 			- остаточная стоимость
+	 * 			- РѕСЃС‚Р°С‚РѕС‡РЅР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ
 	 * @param months
-	 * 			- число месяцев, за которое была начислена амортизация
+	 * 			- С‡РёСЃР»Рѕ РјРµСЃСЏС†РµРІ, Р·Р° РєРѕС‚РѕСЂРѕРµ Р±С‹Р»Р° РЅР°С‡РёСЃР»РµРЅР° Р°РјРѕСЂС‚РёР·Р°С†РёСЏ
 	 * @param amRate
-	 * 			- норма амортизации
+	 * 			- РЅРѕСЂРјР° Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * @param productEst
-	 * 			- предполагаемый объем продукции
+	 * 			- РїСЂРµРґРїРѕР»Р°РіР°РµРјС‹Р№ РѕР±СЉРµРј РїСЂРѕРґСѓРєС†РёРё
 	 * @param productFact
-	 * 			- фактический объем продукции
+	 * 			- С„Р°РєС‚РёС‡РµСЃРєРёР№ РѕР±СЉРµРј РїСЂРѕРґСѓРєС†РёРё
 	 * @param explPeriodY
-	 * 			- период эксплуатации, лет
+	 * 			- РїРµСЂРёРѕРґ СЌРєСЃРїР»СѓР°С‚Р°С†РёРё, Р»РµС‚
 	 * @param explPeriodM
-	 * 			- период эксплуатации, месяцев
+	 * 			- РїРµСЂРёРѕРґ СЌРєСЃРїР»СѓР°С‚Р°С†РёРё, РјРµСЃСЏС†РµРІ
 	 * @param sumProduct
-	 * 			- сумма, начисленная по произведенной продукции
+	 * 			- СЃСѓРјРјР°, РЅР°С‡РёСЃР»РµРЅРЅР°СЏ РїРѕ РїСЂРѕРёР·РІРµРґРµРЅРЅРѕР№ РїСЂРѕРґСѓРєС†РёРё
 	 * @param sumPeriod
-	 * 			- сумма, начисленная по периоду
+	 * 			- СЃСѓРјРјР°, РЅР°С‡РёСЃР»РµРЅРЅР°СЏ РїРѕ РїРµСЂРёРѕРґСѓ
 	 * @param sumRate
-	 * 			- сумма, начисленная амортизацией
+	 * 			- СЃСѓРјРјР°, РЅР°С‡РёСЃР»РµРЅРЅР°СЏ Р°РјРѕСЂС‚РёР·Р°С†РёРµР№
 	 * @param sumTotal
-	 * 			- итоговая сумма начисленной амортизации
+	 * 			- РёС‚РѕРіРѕРІР°СЏ СЃСѓРјРјР° РЅР°С‡РёСЃР»РµРЅРЅРѕР№ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 */
 	private Amortization createAmortization(Inventory inventory, Short month, Integer batch, Float factor, Integer amCodeId, BigDecimal balanceCost, 
 			BigDecimal endCost, Short months, BigDecimal amRate, Float productEst, Float productFact, Float explPeriodY, Float explPeriodM, 
@@ -995,60 +995,60 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Создание ведомости начисления амортизации
+	 * РЎРѕР·РґР°РЅРёРµ РІРµРґРѕРјРѕСЃС‚Рё РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * 
 	 * @param inventory
-	 * 			- данные по видам учета
+	 * 			- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * @param month
-	 * 			- месяц начисления амортизации в абсолютном исчислении (год*12 + месяц)
+	 * 			- РјРµСЃСЏС† РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ Р°Р±СЃРѕР»СЋС‚РЅРѕРј РёСЃС‡РёСЃР»РµРЅРёРё (РіРѕРґ*12 + РјРµСЃСЏС†)
 	 * @param batch
-	 * 			- номер партии
+	 * 			- РЅРѕРјРµСЂ РїР°СЂС‚РёРё
 	 * @param factor
-	 * 			- поправочный коэффициент
+	 * 			- РїРѕРїСЂР°РІРѕС‡РЅС‹Р№ РєРѕСЌС„С„РёС†РёРµРЅС‚
 	 * @param amCodeId
-	 * 			- идентификатор шифра амортизации
+	 * 			- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С€РёС„СЂР° Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * @param balanceCost
-	 * 			- балансовая стоимость 
+	 * 			- Р±Р°Р»Р°РЅСЃРѕРІР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ 
 	 * @param endCost
-	 * 			- остаточная стоимость
+	 * 			- РѕСЃС‚Р°С‚РѕС‡РЅР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ
 	 * @param months
-	 * 			- число месяцев, за которое была начислена амортизация
+	 * 			- С‡РёСЃР»Рѕ РјРµСЃСЏС†РµРІ, Р·Р° РєРѕС‚РѕСЂРѕРµ Р±С‹Р»Р° РЅР°С‡РёСЃР»РµРЅР° Р°РјРѕСЂС‚РёР·Р°С†РёСЏ
 	 * @param amRate
-	 * 			- норма амортизации
+	 * 			- РЅРѕСЂРјР° Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * @param sumRate
-	 * 			- сумма, начисленная амортизацией
+	 * 			- СЃСѓРјРјР°, РЅР°С‡РёСЃР»РµРЅРЅР°СЏ Р°РјРѕСЂС‚РёР·Р°С†РёРµР№
 	 * @param sumTotal
-	 * 			- итоговая сумма начисленной амортизации
+	 * 			- РёС‚РѕРіРѕРІР°СЏ СЃСѓРјРјР° РЅР°С‡РёСЃР»РµРЅРЅРѕР№ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 */
 	private Amortization createAmortization(Inventory inventory, Short month, Integer batch, Float factor, Integer amCodeId, BigDecimal balanceCost, BigDecimal endCost, Short months, BigDecimal amRate, BigDecimal sumRate, BigDecimal sumTotal) {
 		return createAmortization(inventory, month, batch, factor, amCodeId, balanceCost, endCost, months, amRate, null, null, null, null, null, null, sumRate, sumTotal);
 	}
 
 	/**
-	 * Создание хоз. операции
+	 * РЎРѕР·РґР°РЅРёРµ С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * 
 	 * @param keepDate
-	 * 			- дата хоз. операции
+	 * 			- РґР°С‚Р° С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * @param folder
-	 * 			- папка приемник
+	 * 			- РїР°РїРєР° РїСЂРёРµРјРЅРёРє
 	 * @param comment
-	 * 			- комментарий
+	 * 			- РєРѕРјРјРµРЅС‚Р°СЂРёР№
 	 * @param docType
-	 * 			- тип документ
+	 * 			- С‚РёРї РґРѕРєСѓРјРµРЅС‚
 	 * @param docNumber
-	 * 			- номер документа
+	 * 			- РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°
 	 * @param docDate
-	 * 			- дата документа
+	 * 			- РґР°С‚Р° РґРѕРєСѓРјРµРЅС‚Р°
 	 * @param baseDocType
-	 * 			- тип документа-основания
+	 * 			- С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
 	 * @param baseDocNumber
-	 * 			- номер документа-основания
+	 * 			- РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
 	 * @param baseDocDate
-	 * 			- дата документа- основания
+	 * 			- РґР°С‚Р° РґРѕРєСѓРјРµРЅС‚Р°- РѕСЃРЅРѕРІР°РЅРёСЏ
 	 * @param from
-	 * 			- от кого
+	 * 			- РѕС‚ РєРѕРіРѕ
 	 * @param to
-	 * 			- кому
+	 * 			- РєРѕРјСѓ
 	 * @return
 	 */
 	private EconomicOper createEconomicOper(Date keepDate, Folder folder, String comment, DocType docType, String docNumber, Date docDate, DocType baseDocType, String baseDocNumber, Date baseDocDate, Contractor from, Contractor to) {
@@ -1069,40 +1069,40 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Создание проводки хоз. операции
+	 * РЎРѕР·РґР°РЅРёРµ РїСЂРѕРІРѕРґРєРё С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * 
 	 * @param eo
-	 * 			- хоз. операция
+	 * 			- С…РѕР·. РѕРїРµСЂР°С†РёСЏ
 	 * @param accDb
-	 * 			- счет дебет
+	 * 			- СЃС‡РµС‚ РґРµР±РµС‚
 	 * @param anlDb1
-	 * 			- аналитика 1-го уровня счета-дебета
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 1-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р°-РґРµР±РµС‚Р°
 	 * @param anlDb2
-	 * 			- аналитика 2-го уровня счета-дебета
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 2-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р°-РґРµР±РµС‚Р°
 	 * @param anlDb3
-	 * 			- аналитика 3-го уровня счета-дебета
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 3-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р°-РґРµР±РµС‚Р°
 	 * @param anlDb4
-	 * 			- аналитика 4-го уровня счета-дебета
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 4-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р°-РґРµР±РµС‚Р°
 	 * @param anlDb5
-	 * 			- аналитика 5-го уровня счета-дебета
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 5-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р°-РґРµР±РµС‚Р°
 	 * @param accKt
-	 * 			- счет-кредит
+	 * 			- СЃС‡РµС‚-РєСЂРµРґРёС‚
 	 * @param anlKt1
-	 * 			- аналитика 1-го уровня счета-кредита 
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 1-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р°-РєСЂРµРґРёС‚Р° 
 	 * @param anlKt2
-	 * 			- аналитика 2-го уровня счета-кредита 
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 2-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р°-РєСЂРµРґРёС‚Р° 
 	 * @param anlKt3
-	 * 			- аналитика 3-го уровня счета-кредита 
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 3-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р°-РєСЂРµРґРёС‚Р° 
 	 * @param anlKt4
-	 * 			- аналитика 4-го уровня счета-кредита 
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 4-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р°-РєСЂРµРґРёС‚Р° 
 	 * @param anlKt5
-	 * 			- аналитика 5-го уровня счета-кредита 
+	 * 			- Р°РЅР°Р»РёС‚РёРєР° 5-РіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р°-РєСЂРµРґРёС‚Р° 
 	 * @param catalog
-	 * 			- товар
+	 * 			- С‚РѕРІР°СЂ
 	 * @param quatity
-	 * 			- количество
+	 * 			- РєРѕР»РёС‡РµСЃС‚РІРѕ
 	 * @param summaNat
-	 * 			- сумма в НДЕ
+	 * 			- СЃСѓРјРјР° РІ РќР”Р•
 	 * @return
 	 */
 	protected EconomicSpec createEconomicSpec(EconomicOper eo, AccPlan accDb, AnlPlan anlDb1, AnlPlan anlDb2, AnlPlan anlDb3, AnlPlan anlDb4, AnlPlan anlDb5, 
@@ -1130,66 +1130,66 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Создание истории действия, произведенных над инвентарной карточкой
+	 * РЎРѕР·РґР°РЅРёРµ РёСЃС‚РѕСЂРёРё РґРµР№СЃС‚РІРёСЏ, РїСЂРѕРёР·РІРµРґРµРЅРЅС‹С… РЅР°Рґ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРѕР№
 	 * 
 	 * @param inventory
-	 * 			- данные по видам учета
+	 * 			- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * @param eo
-	 * 			- хоз. операция
+	 * 			- С…РѕР·. РѕРїРµСЂР°С†РёСЏ
 	 * @param es
-	 * 			- проводка хоз. операции
+	 * 			- РїСЂРѕРІРѕРґРєР° С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * @param kind
-	 * 			- тип записи истории
+	 * 			- С‚РёРї Р·Р°РїРёСЃРё РёСЃС‚РѕСЂРёРё
 	 * @param deltaBalCost
-	 * 			- изменение балансовой стоимости
+	 * 			- РёР·РјРµРЅРµРЅРёРµ Р±Р°Р»Р°РЅСЃРѕРІРѕР№ СЃС‚РѕРёРјРѕСЃС‚Рё
 	 * @param deltaDeprVal
-	 * 			- изменение остаточной стоимости, при переоценке - изменение начисленной амортизации
+	 * 			- РёР·РјРµРЅРµРЅРёРµ РѕСЃС‚Р°С‚РѕС‡РЅРѕР№ СЃС‚РѕРёРјРѕСЃС‚Рё, РїСЂРё РїРµСЂРµРѕС†РµРЅРєРµ - РёР·РјРµРЅРµРЅРёРµ РЅР°С‡РёСЃР»РµРЅРЅРѕР№ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * @param deltaBeginLoss
-	 * 			- при переоценке - изменение начального износа
+	 * 			- РїСЂРё РїРµСЂРµРѕС†РµРЅРєРµ - РёР·РјРµРЅРµРЅРёРµ РЅР°С‡Р°Р»СЊРЅРѕРіРѕ РёР·РЅРѕСЃР°
 	 * @param deltaInitialLoss
-	 * 			- при переоценке - изменение износа при создании карточки
+	 * 			- РїСЂРё РїРµСЂРµРѕС†РµРЅРєРµ - РёР·РјРµРЅРµРЅРёРµ РёР·РЅРѕСЃР° РїСЂРё СЃРѕР·РґР°РЅРёРё РєР°СЂС‚РѕС‡РєРё
 	 * @param revalFactor
-	 * 			- коэффициент переоценки
+	 * 			- РєРѕСЌС„С„РёС†РёРµРЅС‚ РїРµСЂРµРѕС†РµРЅРєРё
 	 * @param revalSum
-	 * 			- сумма переоценки
+	 * 			- СЃСѓРјРјР° РїРµСЂРµРѕС†РµРЅРєРё
 	 * @param actDate
-	 * 			- дата произведенного действия
+	 * 			- РґР°С‚Р° РїСЂРѕРёР·РІРµРґРµРЅРЅРѕРіРѕ РґРµР№СЃС‚РІРёСЏ
 	 */
 	private void createInvHistory(Inventory inventory, EconomicOper eo, EconomicSpec es, InvActionKind kind, BigDecimal deltaBalCost, BigDecimal deltaDeprVal, BigDecimal deltaBeginLoss, BigDecimal deltaInitialLoss, BigDecimal revalFactor, BigDecimal revalSum, Date actDate) {
 		createInvHistory(inventory, eo, es, null, kind, deltaBalCost, deltaDeprVal, deltaBeginLoss, deltaInitialLoss, revalFactor, revalSum, actDate, null, null, null);
 	}
 
 	/**
-	 * Создание истории действия, произведенных над инвентарной карточкой
+	 * РЎРѕР·РґР°РЅРёРµ РёСЃС‚РѕСЂРёРё РґРµР№СЃС‚РІРёСЏ, РїСЂРѕРёР·РІРµРґРµРЅРЅС‹С… РЅР°Рґ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРѕР№
 	 * 
 	 * @param inventory
-	 * 			- данные по видам учета
+	 * 			- РґР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * @param eo
-	 * 			- хоз. операция
+	 * 			- С…РѕР·. РѕРїРµСЂР°С†РёСЏ
 	 * @param es
-	 * 			- проводка хоз. операции
+	 * 			- РїСЂРѕРІРѕРґРєР° С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 * @param kind
-	 * 			- тип записи истории
+	 * 			- С‚РёРї Р·Р°РїРёСЃРё РёСЃС‚РѕСЂРёРё
 	 * @param deltaBalCost
-	 * 			- изменение балансовой стоимости
+	 * 			- РёР·РјРµРЅРµРЅРёРµ Р±Р°Р»Р°РЅСЃРѕРІРѕР№ СЃС‚РѕРёРјРѕСЃС‚Рё
 	 * @param deltaDeprVal
-	 * 			- изменение остаточной стоимости, при переоценке - изменение начисленной амортизации
+	 * 			- РёР·РјРµРЅРµРЅРёРµ РѕСЃС‚Р°С‚РѕС‡РЅРѕР№ СЃС‚РѕРёРјРѕСЃС‚Рё, РїСЂРё РїРµСЂРµРѕС†РµРЅРєРµ - РёР·РјРµРЅРµРЅРёРµ РЅР°С‡РёСЃР»РµРЅРЅРѕР№ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * @param deltaBeginLoss
-	 * 			- при переоценке - изменение начального износа
+	 * 			- РїСЂРё РїРµСЂРµРѕС†РµРЅРєРµ - РёР·РјРµРЅРµРЅРёРµ РЅР°С‡Р°Р»СЊРЅРѕРіРѕ РёР·РЅРѕСЃР°
 	 * @param deltaInitialLoss
-	 * 			- при переоценке - изменение износа при создании карточки
+	 * 			- РїСЂРё РїРµСЂРµРѕС†РµРЅРєРµ - РёР·РјРµРЅРµРЅРёРµ РёР·РЅРѕСЃР° РїСЂРё СЃРѕР·РґР°РЅРёРё РєР°СЂС‚РѕС‡РєРё
 	 * @param revalFactor
-	 * 			- коэффициент переоценки
+	 * 			- РєРѕСЌС„С„РёС†РёРµРЅС‚ РїРµСЂРµРѕС†РµРЅРєРё
 	 * @param revalSum
-	 * 			- сумма переоценки
+	 * 			- СЃСѓРјРјР° РїРµСЂРµРѕС†РµРЅРєРё
 	 * @param actDate
-	 * 			- дата произведенного действия
+	 * 			- РґР°С‚Р° РїСЂРѕРёР·РІРµРґРµРЅРЅРѕРіРѕ РґРµР№СЃС‚РІРёСЏ
 	 * @param oldInvLocationId
-	 * 			- прежний идентификатор местонахождения
+	 * 			- РїСЂРµР¶РЅРёР№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РјРµСЃС‚РѕРЅР°С…РѕР¶РґРµРЅРёСЏ
 	 * @param oldInOperDocNum
-	 * 			- номер акта ввода в эксплуатацию
+	 * 			- РЅРѕРјРµСЂ Р°РєС‚Р° РІРІРѕРґР° РІ СЌРєСЃРїР»СѓР°С‚Р°С†РёСЋ
 	 * @param oldInOperDate
-	 * 			- дата акта ввода в эксплуатацию
+	 * 			- РґР°С‚Р° Р°РєС‚Р° РІРІРѕРґР° РІ СЌРєСЃРїР»СѓР°С‚Р°С†РёСЋ
 	 * 
 	 */
 	private void createInvHistory(Inventory inventory, EconomicOper eo, EconomicSpec es, Amortization accAmort, InvActionKind kind, BigDecimal deltaBalCost, BigDecimal deltaDeprVal, BigDecimal deltaBeginLoss, BigDecimal deltaInitialLoss, BigDecimal revalFactor, BigDecimal revalSum, Date actDate, Integer oldInvLocationId, String oldInOperDocNum, Date oldInOperDate) {
@@ -1213,7 +1213,7 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Возвращает бизнес-компонент "Спецификация хоз. операции"
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ С…РѕР·. РѕРїРµСЂР°С†РёРё"
 	 * 
 	 * @return
 	 */
@@ -1224,7 +1224,7 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Возвращет бизнес-компонент "Хоз. операция"
+	 * Р’РѕР·РІСЂР°С‰РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РҐРѕР·. РѕРїРµСЂР°С†РёСЏ"
 	 *  
 	 * @return
 	 */
@@ -1235,7 +1235,7 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Возвращает бизнес-компонент "История инвентраной карточки"
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РСЃС‚РѕСЂРёСЏ РёРЅРІРµРЅС‚СЂР°РЅРѕР№ РєР°СЂС‚РѕС‡РєРё"
 	 * 
 	 * @return
 	 */
@@ -1246,7 +1246,7 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Возвращает бизнес-компонент "Остатки и обороты по ТМЦ бух. учета" 
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ РўРњР¦ Р±СѓС…. СѓС‡РµС‚Р°" 
 	 * @return
 	 */
 	private RemnValServiceLocal getRemnValService() {
@@ -1256,7 +1256,7 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Возвращает бизнес-компонент "Остатки и обороты по счетам бух. учета"
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ СЃС‡РµС‚Р°Рј Р±СѓС…. СѓС‡РµС‚Р°"
 	 * @return
 	 */
 	private RemnAccServiceLocal getRemnAccService() {
@@ -1266,7 +1266,7 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Возвращает бизнес-компонент "Ведомость расчетов с контрагентами"
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РµРґРѕРјРѕСЃС‚СЊ СЂР°СЃС‡РµС‚РѕРІ СЃ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°РјРё"
 	 * @return
 	 */
 	private RemnDbKtServiceLocal getRemnDbKtService() {

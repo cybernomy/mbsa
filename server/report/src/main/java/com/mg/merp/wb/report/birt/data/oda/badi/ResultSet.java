@@ -29,7 +29,7 @@ import com.mg.framework.api.dataset.DataSet;
 import com.mg.merp.wb.report.birt.data.oda.badi.util.RelationInformation;
 
 /**
- * Реализация интерфейса {@link IResultSet}
+ * Р РµР°Р»РёР·Р°С†РёСЏ РёРЅС‚РµСЂС„РµР№СЃР° {@link IResultSet}
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -38,22 +38,22 @@ import com.mg.merp.wb.report.birt.data.oda.badi.util.RelationInformation;
 public class ResultSet implements IResultSet {
 
 	/**
-	 * Метаданные результирующего набора данных
+	 * РњРµС‚Р°РґР°РЅРЅС‹Рµ СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РµРіРѕ РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С…
 	 */
 	private ResultSetMetaData rsMetaData;
 
 	/**
-	 * Индикатор того, что последний вызов getX() вернул null
+	 * РРЅРґРёРєР°С‚РѕСЂ С‚РѕРіРѕ, С‡С‚Рѕ РїРѕСЃР»РµРґРЅРёР№ РІС‹Р·РѕРІ getX() РІРµСЂРЅСѓР» null
 	 */
 	private boolean wasNull;
 
 	/**
-	 * флаг, показывающий, закрыт набор данных, или нет
+	 * С„Р»Р°Рі, РїРѕРєР°Р·С‹РІР°СЋС‰РёР№, Р·Р°РєСЂС‹С‚ РЅР°Р±РѕСЂ РґР°РЅРЅС‹С…, РёР»Рё РЅРµС‚
 	 */
 	private boolean isClosed;
 
 	/**
-	 * Результирующий набор данных
+	 * Р РµР·СѓР»СЊС‚РёСЂСѓСЋС‰РёР№ РЅР°Р±РѕСЂ РґР°РЅРЅС‹С…
 	 */
 	private DataSet rs;
 	
@@ -63,12 +63,12 @@ public class ResultSet implements IResultSet {
 	private int maxRows;
 
 	/**
-	 * Конструктор
+	 * РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
 	 * @param ri
-	 *            Метаданные результата выполнения запроса {@link Query}
+	 *            РњРµС‚Р°РґР°РЅРЅС‹Рµ СЂРµР·СѓР»СЊС‚Р°С‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РїСЂРѕСЃР° {@link Query}
 	 * @param merpDataSet
-	 *            результат выполнения запроса {@link Query}
+	 *            СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РїСЂРѕСЃР° {@link Query}
 	 * @throws OdaException
 	 */
 	public ResultSet(RelationInformation ri, DataSet merpDataSet, int maxRows)
@@ -147,11 +147,11 @@ public class ResultSet implements IResultSet {
 	}
 
 	/**
-	 * Возвращает значение из набора данных по текущему курсору и имени столбца
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ РёР· РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С… РїРѕ С‚РµРєСѓС‰РµРјСѓ РєСѓСЂСЃРѕСЂСѓ Рё РёРјРµРЅРё СЃС‚РѕР»Р±С†Р°
 	 * 
 	 * @param name
-	 *            имя поля
-	 * @return значени поля
+	 *            РёРјСЏ РїРѕР»СЏ
+	 * @return Р·РЅР°С‡РµРЅРё РїРѕР»СЏ
 	 * @throws OdaException
 	 */
 	private Object getValue(String name) throws OdaException {
@@ -162,12 +162,12 @@ public class ResultSet implements IResultSet {
 	}
 
 	/**
-	 * Возвращает значение из набора данных по текущему курсору и индексу
-	 * столбца
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ РёР· РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С… РїРѕ С‚РµРєСѓС‰РµРјСѓ РєСѓСЂСЃРѕСЂСѓ Рё РёРЅРґРµРєСЃСѓ
+	 * СЃС‚РѕР»Р±С†Р°
 	 * 
 	 * @param index
-	 *            индекс поля
-	 * @return значени поля
+	 *            РёРЅРґРµРєСЃ РїРѕР»СЏ
+	 * @return Р·РЅР°С‡РµРЅРё РїРѕР»СЏ
 	 * @throws OdaException
 	 */
 	private Object getValue(int index) throws OdaException {
@@ -256,7 +256,7 @@ public class ResultSet implements IResultSet {
 	 * @see org.eclipse.datatools.connectivity.oda.IResultSet#getDate(int)
 	 */
 	public Date getDate(int index) throws OdaException {
-		//MBSA работает с java.util.Date
+		//MBSA СЂР°Р±РѕС‚Р°РµС‚ СЃ java.util.Date
 		Object v = getValue(index);
 		if (v == null)
 			return null;
@@ -272,7 +272,7 @@ public class ResultSet implements IResultSet {
 	 * @see org.eclipse.datatools.connectivity.oda.IResultSet#getDate(java.lang.String)
 	 */
 	public Date getDate(String columnName) throws OdaException {
-		// MBSA работает с java.util.Date
+		// MBSA СЂР°Р±РѕС‚Р°РµС‚ СЃ java.util.Date
 		Object v = getValue(columnName);
 		if (v == null)
 			return null;

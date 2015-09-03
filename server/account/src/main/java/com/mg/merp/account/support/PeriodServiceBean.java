@@ -39,7 +39,7 @@ import com.mg.merp.account.model.EconomicOper;
 import com.mg.merp.account.model.Period;
 
 /**
- * Реализация бизнес-компонента "Периоды бухгалтерского учета" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРµСЂРёРѕРґС‹ Р±СѓС…РіР°Р»С‚РµСЂСЃРєРѕРіРѕ СѓС‡РµС‚Р°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -89,9 +89,9 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Проверка периода на принадлежность хоз.операциям
-	 * @param entity - период
-	 * @return результат проверки
+	 * РџСЂРѕРІРµСЂРєР° РїРµСЂРёРѕРґР° РЅР° РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚СЊ С…РѕР·.РѕРїРµСЂР°С†РёСЏРј
+	 * @param entity - РїРµСЂРёРѕРґ
+	 * @return СЂРµР·СѓР»СЊС‚Р°С‚ РїСЂРѕРІРµСЂРєРё
 	 */
 	private boolean isPeriodInUse(Period entity) {
 		Object count = OrmTemplate.getInstance().findUniqueByCriteria(OrmTemplate.createCriteria(EconomicOper.class)
@@ -102,24 +102,24 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Проверка корректности периода бух.учета, если не корректен возвращаем <code>true</code>
-	 * @param entity - период бух.учета
-	 * @return результат проверки
+	 * РџСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РїРµСЂРёРѕРґР° Р±СѓС….СѓС‡РµС‚Р°, РµСЃР»Рё РЅРµ РєРѕСЂСЂРµРєС‚РµРЅ РІРѕР·РІСЂР°С‰Р°РµРј <code>true</code>
+	 * @param entity - РїРµСЂРёРѕРґ Р±СѓС….СѓС‡РµС‚Р°
+	 * @return СЂРµР·СѓР»СЊС‚Р°С‚ РїСЂРѕРІРµСЂРєРё
 	 */
 	private boolean isPeriodInvalid(Period entity) {
 		if (entity.getDateFrom() == null)
 			return false;
-		// проверка корректности диапазона
+		// РїСЂРѕРІРµСЂРєР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚Рё РґРёР°РїР°Р·РѕРЅР°
 		if((entity.getDateFrom().compareTo(entity.getDateTo()) == 0) || (entity.getDateFrom().compareTo(entity.getDateTo()) > 0))
 			return true;
-		// проверка на пересечение
+		// РїСЂРѕРІРµСЂРєР° РЅР° РїРµСЂРµСЃРµС‡РµРЅРёРµ
 		Criteria criteria = OrmTemplate.createCriteria(Period.class)
 				.add(Restrictions.or(
 						Restrictions.or(
 								Restrictions.and(Restrictions.le("DateFrom", entity.getDateFrom()), Restrictions.ge("DateTo", entity.getDateFrom())), //$NON-NLS-1$ //$NON-NLS-2$
 								Restrictions.and(Restrictions.le("DateFrom", entity.getDateTo()), Restrictions.ge("DateTo", entity.getDateTo()))),					
 						Restrictions.and(Restrictions.ge("DateFrom", entity.getDateFrom()), Restrictions.le("DateTo", entity.getDateTo()))));		
-		// при редактировании периода исключаем изменяемый период из списка существующих периодов
+		// РїСЂРё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРё РїРµСЂРёРѕРґР° РёСЃРєР»СЋС‡Р°РµРј РёР·РјРµРЅСЏРµРјС‹Р№ РїРµСЂРёРѕРґ РёР· СЃРїРёСЃРєР° СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёС… РїРµСЂРёРѕРґРѕРІ
 		if(entity.getId() != null)
 			criteria.add(Restrictions.ne("Id", entity.getId())); //$NON-NLS-1$
 		List<Period> accPeriods = OrmTemplate.getInstance().findByCriteria(criteria);
@@ -141,8 +141,8 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Открыть период бух.учета
-	 * @param accPeriod - период бух.учета
+	 * РћС‚РєСЂС‹С‚СЊ РїРµСЂРёРѕРґ Р±СѓС….СѓС‡РµС‚Р°
+	 * @param accPeriod - РїРµСЂРёРѕРґ Р±СѓС….СѓС‡РµС‚Р°
 	 */
 	private void internalOpenPeriod(Period accPeriod) {
 		accPeriod.setDateClose(null);
@@ -164,8 +164,8 @@ public class PeriodServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 	}
 
 	/**
-	 * Закрыть период бух.учета
-	 * @param accPeriod - период бух.учета
+	 * Р—Р°РєСЂС‹С‚СЊ РїРµСЂРёРѕРґ Р±СѓС….СѓС‡РµС‚Р°
+	 * @param accPeriod - РїРµСЂРёРѕРґ Р±СѓС….СѓС‡РµС‚Р°
 	 */
 	private void internalClosePeriod(Period accPeriod) {
 		accPeriod.setDateClose(DateTimeUtils.nowDate());

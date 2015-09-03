@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.discount.model.Coefficient;
 
 /**
- * Браузер коеффициентов каталога
+ * Р‘СЂР°СѓР·РµСЂ РєРѕРµС„С„РёС†РёРµРЅС‚РѕРІ РєР°С‚Р°Р»РѕРіР°
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

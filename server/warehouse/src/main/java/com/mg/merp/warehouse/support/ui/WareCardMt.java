@@ -62,7 +62,7 @@ import com.mg.merp.warehouse.model.StockPlanHistoryKind;
 import com.mg.merp.warehouse.support.Messages;
 
 /**
- * Контроллер формы поддержки "Карточки складского учета"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РљР°СЂС‚РѕС‡РєРё СЃРєР»Р°РґСЃРєРѕРіРѕ СѓС‡РµС‚Р°"
  *
  * @author Julia 'Jetta' Konyashkina
  * @author Konstantin S. Alikaev
@@ -143,7 +143,7 @@ public class WareCardMt extends DefaultMaintenanceForm {
 		private List<Object> paramsValue = new ArrayList<Object>();
 
 		/**
-		 * Возвращает признак списание или приход в партию
+		 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РїСЂРёР·РЅР°Рє СЃРїРёСЃР°РЅРёРµ РёР»Рё РїСЂРёС…РѕРґ РІ РїР°СЂС‚РёСЋ
 		 * @return
 		 */
 		protected StockBatchHistoryKind getKind() {
@@ -574,7 +574,7 @@ public class WareCardMt extends DefaultMaintenanceForm {
 					item.SysDateTime = sph.getSysDateTime();
 					result.add(item);
 				} else {
-					//ведем поиск по документу (https://issues.m-g.ru/bugzilla/show_bug.cgi?id=4951)
+					//РІРµРґРµРј РїРѕРёСЃРє РїРѕ РґРѕРєСѓРјРµРЅС‚Сѓ (https://issues.m-g.ru/bugzilla/show_bug.cgi?id=4951)
 					for (PlanReservItem item : result) {
 						if (item.documentId == sph.getDocHead().getId()) {
 							item.Quantity = MathUtils.subtractNullable(item.Quantity, sph.getQuantity(), Constants.QUANTITY_ROUND_CONTEXT);
@@ -921,9 +921,9 @@ public class WareCardMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ таблицы списание с партии "Просмотреть документ"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ С‚Р°Р±Р»РёС†С‹ СЃРїРёСЃР°РЅРёРµ СЃ РїР°СЂС‚РёРё "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚"
 	 * @param event
-	 * 			событие
+	 * 			СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewDocument(WidgetEvent event) {
 		Serializable[] keys = ((DefaultMaintenanceEJBQLTableModel)batchDisposal.getModel()).getSelectedPrimaryKeys();
@@ -932,9 +932,9 @@ public class WareCardMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ таблицы фактическое движение приход "Просмотреть документ"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ С‚Р°Р±Р»РёС†С‹ С„Р°РєС‚РёС‡РµСЃРєРѕРµ РґРІРёР¶РµРЅРёРµ РїСЂРёС…РѕРґ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚"
 	 * @param event
-	 * 			событие
+	 * 			СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewDocumentOnTableFactMoveIn(WidgetEvent event) {
 		Serializable[] keys = ((WareCardFactTableModel)factMoveIn.getModel()).getSelectedPrimaryKeys();
@@ -943,9 +943,9 @@ public class WareCardMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ таблицы фактическое движение расход "Просмотреть документ"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ С‚Р°Р±Р»РёС†С‹ С„Р°РєС‚РёС‡РµСЃРєРѕРµ РґРІРёР¶РµРЅРёРµ СЂР°СЃС…РѕРґ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚"
 	 * @param event
-	 * 			событие
+	 * 			СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewDocumentOnTableFactMoveOut(WidgetEvent event) {
 		Serializable[] keys = ((WareCardFactTableModel)factMoveOut.getModel()).getSelectedPrimaryKeys();
@@ -954,9 +954,9 @@ public class WareCardMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ таблицы планируемое движение приход "Просмотреть документ"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ С‚Р°Р±Р»РёС†С‹ РїР»Р°РЅРёСЂСѓРµРјРѕРµ РґРІРёР¶РµРЅРёРµ РїСЂРёС…РѕРґ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚"
 	 * @param event
-	 * 			событие
+	 * 			СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewDocumentOnTablePlanMoveIn(WidgetEvent event) {
 		Serializable[] keys = ((WareCardPlanReservTableModel)planMoveIn.getModel()).getSelectedPrimaryKeys();
@@ -965,9 +965,9 @@ public class WareCardMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ таблицы планируемое движение расход "Просмотреть документ"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ С‚Р°Р±Р»РёС†С‹ РїР»Р°РЅРёСЂСѓРµРјРѕРµ РґРІРёР¶РµРЅРёРµ СЂР°СЃС…РѕРґ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚"
 	 * @param event
-	 * 			событие
+	 * 			СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewDocumentOnTablePlanMoveOut(WidgetEvent event) {
 		Serializable[] keys = ((WareCardPlanReservTableModel)planMoveOut.getModel()).getSelectedPrimaryKeys();
@@ -976,9 +976,9 @@ public class WareCardMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ таблицы зарезервировано "Просмотреть документ"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ С‚Р°Р±Р»РёС†С‹ Р·Р°СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРѕ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚"
 	 * @param event
-	 * 			событие
+	 * 			СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewDocumentOnTableReserve(WidgetEvent event) {
 		Serializable[] keys = ((WareCardPlanReservTableModel)reserve.getModel()).getSelectedPrimaryKeys();
@@ -987,9 +987,9 @@ public class WareCardMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ таблицы поступления в партию "Просмотреть документ"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ С‚Р°Р±Р»РёС†С‹ РїРѕСЃС‚СѓРїР»РµРЅРёСЏ РІ РїР°СЂС‚РёСЋ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚"
 	 * @param event
-	 * 			событие
+	 * 			СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewDocumentOnTableWarehouseBatch(WidgetEvent event) {
 		Serializable[] keys = ((DefaultMaintenanceEJBQLTableModel)batchReceipt.getModel()).getSelectedPrimaryKeys();
@@ -998,7 +998,7 @@ public class WareCardMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Открывает документ на просмотр
+	 * РћС‚РєСЂС‹РІР°РµС‚ РґРѕРєСѓРјРµРЅС‚ РЅР° РїСЂРѕСЃРјРѕС‚СЂ
 	 * @param docHead
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$

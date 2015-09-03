@@ -23,7 +23,7 @@ import com.mg.merp.paymentalloc.TransactTaxServiceLocal;
 import com.mg.merp.paymentalloc.model.TransactTax;
 
 /**
- * Реализация бизнес-компонента "Налоги в спецификации связанных документов" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќР°Р»РѕРіРё РІ СЃРїРµС†РёС„РёРєР°С†РёРё СЃРІСЏР·Р°РЅРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

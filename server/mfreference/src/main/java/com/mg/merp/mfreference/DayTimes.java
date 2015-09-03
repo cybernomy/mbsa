@@ -15,7 +15,7 @@
 package com.mg.merp.mfreference;
 
 /**
- * Время дня в тиках
+ * Р’СЂРµРјСЏ РґРЅСЏ РІ С‚РёРєР°С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: DayTimes.java,v 1.1 2007/07/30 07:14:30 safonov Exp $

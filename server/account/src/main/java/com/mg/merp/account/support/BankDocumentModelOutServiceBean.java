@@ -23,7 +23,7 @@ import com.mg.merp.account.model.BankDocumentModel;
 import com.mg.merp.document.generic.DocumentModelServiceBean;
 
 /**
- * Бизнес-компонент "Образцы исходящих банковских документов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ РёСЃС…РѕРґСЏС‰РёС… Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ" 
  * 
  * @author leonova
  * @version $Id: BankDocumentModelOutServiceBean.java,v 1.3 2006/09/12 11:16:43 leonova Exp $

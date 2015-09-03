@@ -15,21 +15,21 @@
 package com.mg.merp.salary.support;
 
 /**
- * Базовый класс бизнес-расширения расчета начислений/удержаний ЗП.
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ Р±РёР·РЅРµСЃ-СЂР°СЃС€РёСЂРµРЅРёСЏ СЂР°СЃС‡РµС‚Р° РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№ Р—Рџ.
  * 
- * <p>Класс расширения должен реализовывать следующий метод: <code>protected void doPerform() throws Exception</code>.
- * <p>Метод возвращает результат выполнения расчета начислений/удержаний ЗП.
+ * <p>РљР»Р°СЃСЃ СЂР°СЃС€РёСЂРµРЅРёСЏ РґРѕР»Р¶РµРЅ СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёР№ РјРµС‚РѕРґ: <code>protected void doPerform() throws Exception</code>.
+ * <p>РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ СЂР°СЃС‡РµС‚Р° РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№ Р—Рџ.
  * 
- * <p>Пример данного метода:
+ * <p>РџСЂРёРјРµСЂ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР°:
  * <pre>
  * protected void doPerform() throws Exception {
- *     	BigDecimal base = (BigDecimal) getParam("СТАВКА_ОКЛАДА");
- *		BigDecimal numberOfRates = (BigDecimal) getParam("КОЛ_СТАВОК");
- *		BigDecimal percent = (BigDecimal) getParam("ПРОЦЕНТ");
+ *     	BigDecimal base = (BigDecimal) getParam("РЎРўРђР’РљРђ_РћРљР›РђР”Рђ");
+ *		BigDecimal numberOfRates = (BigDecimal) getParam("РљРћР›_РЎРўРђР’РћРљ");
+ *		BigDecimal percent = (BigDecimal) getParam("РџР РћР¦Р•РќРў");
  *			
  *		CostsAnlResult costsAnls = new CostsAnlResult();
  *		if(isCostsAnlEmpty())
- *			costsAnls = getCostsAnlFromTariff("ОКЛАД_СТАВКА");
+ *			costsAnls = getCostsAnlFromTariff("РћРљР›РђР”_РЎРўРђР’РљРђ");
  *				
  *		complete(new FeeBAiResult(
  *				base.multiply(numberOfRates).multiply(percent).divide(new BigDecimal(100)),

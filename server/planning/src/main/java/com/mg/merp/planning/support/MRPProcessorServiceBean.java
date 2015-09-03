@@ -92,7 +92,7 @@ import com.mg.merp.warehouse.model.OrderSpec;
 import com.mg.merp.warehouse.model.Warehouse;
 
 /**
- * Бизнес-компонент "Процессор MRP"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРѕС†РµСЃСЃРѕСЂ MRP"
  * 
  * @author Oleg V. Safonov
  * @version $Id: MRPProcessorServiceBean.java,v 1.5 2007/07/30 10:36:48 safonov Exp $
@@ -408,10 +408,10 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 		case DAY:
 			return shelfLife;
 		case MONTH:
-			//к нулевой дате прибавим к-во месяцев и возмем разницу между полученным результаттом и нулевой датой
+			//Рє РЅСѓР»РµРІРѕР№ РґР°С‚Рµ РїСЂРёР±Р°РІРёРј Рє-РІРѕ РјРµСЃСЏС†РµРІ Рё РІРѕР·РјРµРј СЂР°Р·РЅРёС†Сѓ РјРµР¶РґСѓ РїРѕР»СѓС‡РµРЅРЅС‹Рј СЂРµР·СѓР»СЊС‚Р°С‚С‚РѕРј Рё РЅСѓР»РµРІРѕР№ РґР°С‚РѕР№
 			return (int) DateTimeUtils.getDaysBetween(DateTimeUtils.ZERO_DATE, DateTimeUtils.incMonth(DateTimeUtils.ZERO_DATE, shelfLife));
 		case YEAR:
-			//к нулевой дате прибавим к-во лет и возмем разницу между полученным результаттом и нулевой датой
+			//Рє РЅСѓР»РµРІРѕР№ РґР°С‚Рµ РїСЂРёР±Р°РІРёРј Рє-РІРѕ Р»РµС‚ Рё РІРѕР·РјРµРј СЂР°Р·РЅРёС†Сѓ РјРµР¶РґСѓ РїРѕР»СѓС‡РµРЅРЅС‹Рј СЂРµР·СѓР»СЊС‚Р°С‚С‚РѕРј Рё РЅСѓР»РµРІРѕР№ РґР°С‚РѕР№
 			return (int) DateTimeUtils.getDaysBetween(DateTimeUtils.ZERO_DATE, DateTimeUtils.incYear(DateTimeUtils.ZERO_DATE, shelfLife));
 		default:
 			throw new IllegalArgumentException("Invalid shelflife type");
@@ -536,11 +536,11 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 				.add(Restrictions.eq("Bom", bom))
 				.add(Restrictions.le("EffOnDate", reqDate))
 				.add(Restrictions.ge("EffOffDate", reqDate))
-				.addOrder(Order.desc("OperNum"))); //идем от конечных операций к начальным назад
+				.addOrder(Order.desc("OperNum"))); //РёРґРµРј РѕС‚ РєРѕРЅРµС‡РЅС‹С… РѕРїРµСЂР°С†РёР№ Рє РЅР°С‡Р°Р»СЊРЅС‹Рј РЅР°Р·Р°Рґ
 		for (BomRoute bomRoute : bomRoutes) {
-			//Вычисляем время выполнения текущей операции в тиках
+			//Р’С‹С‡РёСЃР»СЏРµРј РІСЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ С‚РµРєСѓС‰РµР№ РѕРїРµСЂР°С†РёРё РІ С‚РёРєР°С…
 			long timeOper = numberOfJobs * bomRoute.getSetupTicks() + lotQty.multiply(new BigDecimal(numberOfJobs * bomRoute.getRunTicks())).longValue();
-			//Определяем время окончания текущей операции
+			//РћРїСЂРµРґРµР»СЏРµРј РІСЂРµРјСЏ РѕРєРѕРЅС‡Р°РЅРёСЏ С‚РµРєСѓС‰РµР№ РѕРїРµСЂР°С†РёРё
 			TimeRange timeRange = MfUtils.getTimes(weekCalendar.getId(), requiredDate, timeOper, ScheduleDirection.BACKWARD);
 			
 			List<BomMaterial> bomMaterials = ormTemplate.findByCriteria(OrmTemplate.createCriteria(BomMaterial.class)
@@ -554,7 +554,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 			}
 			
 			timeRange = MfUtils.getTimes(weekCalendar.getId(), timeRange.getStartDateTime(), numberOfJobs * bomRoute.getMoveTicks(), ScheduleDirection.BACKWARD);
-			requiredDate = timeRange.getStartDateTime(); //вычитаем время на перемещение между операциями
+			requiredDate = timeRange.getStartDateTime(); //РІС‹С‡РёС‚Р°РµРј РІСЂРµРјСЏ РЅР° РїРµСЂРµРјРµС‰РµРЅРёРµ РјРµР¶РґСѓ РѕРїРµСЂР°С†РёСЏРјРё
 		}
 		return requiredDate;
 	}
@@ -579,7 +579,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 				MRPOrderType.FIRM_PLANNED, MRPSource.MANUFACTURING, true, mpsLine.getPlanningItem().getCatalog(),
 				bom.getDefDstStock(), mpsLine.getMeasure(), true);
 		
-		long currentRequiredDate = MfUtils.dateToTick(DateTimeUtils.incDay(bucketRange.getBucketEnd(), 1)) - 1000; // на конец текущего дня
+		long currentRequiredDate = MfUtils.dateToTick(DateTimeUtils.incDay(bucketRange.getBucketEnd(), 1)) - 1000; // РЅР° РєРѕРЅРµС† С‚РµРєСѓС‰РµРіРѕ РґРЅСЏ
 		currentRequiredDate = materialBreakdown(mpsLine, bom, mpsLine.getMps().getWeekCal(), 1, maxLotQty.multiply(new BigDecimal(numberOfMaxJobs)).add(oddJobSize), currentRequiredDate);
 	}
 	
@@ -588,18 +588,18 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 		Date planningDate = DateTimeUtils.ZERO_DATE;
 		Date lastDateProcessed = DateTimeUtils.ZERO_DATE;
 		boolean firstEnter = true;
-	    /* здесь и далее подразумеваем, что разные версии MPS имеют разные
-	        даты начала планирования (PLANNING_DATE).
-	        Упорядочиваем выборку так, чтобы сначала шли записи от версии MPS
-	        с небольшим номером уровня планирования, (например с дневными бакетами),
-	        потом с бОльшим номером уровня планирования (например с недельными бакетами) */
+	    /* Р·РґРµСЃСЊ Рё РґР°Р»РµРµ РїРѕРґСЂР°Р·СѓРјРµРІР°РµРј, С‡С‚Рѕ СЂР°Р·РЅС‹Рµ РІРµСЂСЃРёРё MPS РёРјРµСЋС‚ СЂР°Р·РЅС‹Рµ
+	        РґР°С‚С‹ РЅР°С‡Р°Р»Р° РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ (PLANNING_DATE).
+	        РЈРїРѕСЂСЏРґРѕС‡РёРІР°РµРј РІС‹Р±РѕСЂРєСѓ С‚Р°Рє, С‡С‚РѕР±С‹ СЃРЅР°С‡Р°Р»Р° С€Р»Рё Р·Р°РїРёСЃРё РѕС‚ РІРµСЂСЃРёРё MPS
+	        СЃ РЅРµР±РѕР»СЊС€РёРј РЅРѕРјРµСЂРѕРј СѓСЂРѕРІРЅСЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ, (РЅР°РїСЂРёРјРµСЂ СЃ РґРЅРµРІРЅС‹РјРё Р±Р°РєРµС‚Р°РјРё),
+	        РїРѕС‚РѕРј СЃ Р±РћР»СЊС€РёРј РЅРѕРјРµСЂРѕРј СѓСЂРѕРІРЅСЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ (РЅР°РїСЂРёРјРµСЂ СЃ РЅРµРґРµР»СЊРЅС‹РјРё Р±Р°РєРµС‚Р°РјРё) */
 		for (MpsLine mpsLine : loadMPSLine()) {
-			//меняется значение набора полей
+			//РјРµРЅСЏРµС‚СЃСЏ Р·РЅР°С‡РµРЅРёРµ РЅР°Р±РѕСЂР° РїРѕР»РµР№
 			if (planningLevelNum != mpsLine.getMps().getPlanningLevel().getPlanningLevelNum()
 					&& planningDate.compareTo(mpsLine.getMps().getPlanningDate()) != 0) {
 				planningLevelNum = mpsLine.getMps().getPlanningLevel().getPlanningLevelNum();
 				planningDate = mpsLine.getMps().getPlanningDate();
-				//При обработке первой записи следующая процедура НЕ должна вызываться
+				//РџСЂРё РѕР±СЂР°Р±РѕС‚РєРµ РїРµСЂРІРѕР№ Р·Р°РїРёСЃРё СЃР»РµРґСѓСЋС‰Р°СЏ РїСЂРѕС†РµРґСѓСЂР° РќР• РґРѕР»Р¶РЅР° РІС‹Р·С‹РІР°С‚СЊСЃСЏ
 				if (!firstEnter)
 					lastDateProcessed = beforeProcessingNewMPS(mpsLine.getMps().getPlanningLevel(), mpsLine.getBucketOffset());
 			}
@@ -618,7 +618,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 					   one processed, therefore calculate a fraction of
 					   this buckets output to be used */
 					
-					//Определяем количество дней в бакете
+					//РћРїСЂРµРґРµР»СЏРµРј РєРѕР»РёС‡РµСЃС‚РІРѕ РґРЅРµР№ РІ Р±Р°РєРµС‚Рµ
 					long daysInBucket = DateTimeUtils.getDaysBetween(bucketRange.getBucketStart(), bucketRange.getBucketEnd()) + 1;
 					long daysOverlap = DateTimeUtils.getDaysBetween(lastDateProcessed, bucketRange.getBucketStart()) + 1;
 					fractionToUse = new BigDecimal(daysInBucket - daysOverlap).divide(new BigDecimal(daysInBucket));
@@ -654,8 +654,8 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 
 	private void processProductFamilies(PlanningForecast forecast, Date requiredDate) {
 		//TODO
-		//В прогнозы пока будем вводить только 
-		//обобщенные товары с PP_GENERIC_ITEM.PLANNING_ITEM_FLAG = true
+		//Р’ РїСЂРѕРіРЅРѕР·С‹ РїРѕРєР° Р±СѓРґРµРј РІРІРѕРґРёС‚СЊ С‚РѕР»СЊРєРѕ 
+		//РѕР±РѕР±С‰РµРЅРЅС‹Рµ С‚РѕРІР°СЂС‹ СЃ PP_GENERIC_ITEM.PLANNING_ITEM_FLAG = true
 	}
 
 	private void genericProductForecast(PlanningForecast forecast, Date requiredDate) {
@@ -729,8 +729,8 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 //				.setProjection(Projections.count("Id")));
 		List<PlanningLevel> planningLevels = loadPlanningLevel();
 		if (planningLevels.isEmpty()) {
-			// это означает, что в данной версии MRP расчета мы не хотим учитывать производственные
-			// планы (MPS), или что у нас вообще нет производства
+			// СЌС‚Рѕ РѕР·РЅР°С‡Р°РµС‚, С‡С‚Рѕ РІ РґР°РЅРЅРѕР№ РІРµСЂСЃРёРё MRP СЂР°СЃС‡РµС‚Р° РјС‹ РЅРµ С…РѕС‚РёРј СѓС‡РёС‚С‹РІР°С‚СЊ РїСЂРѕРёР·РІРѕРґСЃС‚РІРµРЅРЅС‹Рµ
+			// РїР»Р°РЅС‹ (MPS), РёР»Рё С‡С‚Рѕ Сѓ РЅР°СЃ РІРѕРѕР±С‰Рµ РЅРµС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°
 			List<MrpVersionForecast> forecasts = loadSalesForecast(ForecastType.SALE);
 			for (MrpVersionForecast forecast : forecasts)
 				processSalesForecastVersion(null, forecast);
@@ -745,8 +745,8 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 	private void processPurchaseForecasts() {
 		List<PlanningLevel> planningLevels = loadPlanningLevel();
 		if (planningLevels.isEmpty()) {
-			// это означает, что в данной версии MRP расчета мы не хотим учитывать производственные
-			// планы (MPS), или что у нас вообще нет производства
+			// СЌС‚Рѕ РѕР·РЅР°С‡Р°РµС‚, С‡С‚Рѕ РІ РґР°РЅРЅРѕР№ РІРµСЂСЃРёРё MRP СЂР°СЃС‡РµС‚Р° РјС‹ РЅРµ С…РѕС‚РёРј СѓС‡РёС‚С‹РІР°С‚СЊ РїСЂРѕРёР·РІРѕРґСЃС‚РІРµРЅРЅС‹Рµ
+			// РїР»Р°РЅС‹ (MPS), РёР»Рё С‡С‚Рѕ Сѓ РЅР°СЃ РІРѕРѕР±С‰Рµ РЅРµС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°
 			List<MrpVersionForecast> forecasts = loadSalesForecast(ForecastType.PURCHASE);
 			for (MrpVersionForecast forecast : forecasts)
 				processPurchaseForecastVersion(null, forecast);			
@@ -787,9 +787,9 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 		TransactionServiceLocal transactionService = (TransactionServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(TransactionServiceLocal.SERVICE_NAME);
 		
 		for (JobMaterial jobMaterial : jobMaterials) {
-			BigDecimal qtyMaterialRequired = jobMaterial.getOper().getJob().getQtyReleased() //количество продукции по ЗНП
-					.multiply(ManufactureUtils.calculateJobMaterialQuan(jobMaterial)) //применяемость
-					.subtract(transactionService.getQuantityByResource(jobMaterial.getId())); //фактически списано
+			BigDecimal qtyMaterialRequired = jobMaterial.getOper().getJob().getQtyReleased() //РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕРґСѓРєС†РёРё РїРѕ Р—РќРџ
+					.multiply(ManufactureUtils.calculateJobMaterialQuan(jobMaterial)) //РїСЂРёРјРµРЅСЏРµРјРѕСЃС‚СЊ
+					.subtract(transactionService.getQuantityByResource(jobMaterial.getId())); //С„Р°РєС‚РёС‡РµСЃРєРё СЃРїРёСЃР°РЅРѕ
 			
 			/* do not allow to go negative (ex., over-issued job,etc)
 			   since used as source of MRP_OUTPUTS(MRP_QUANTITY), which,
@@ -852,7 +852,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 
 	private void processMRPInventoryStream() {
-		//создаем таблицы в памяти для дальнейшей обработки
+		//СЃРѕР·РґР°РµРј С‚Р°Р±Р»РёС†С‹ РІ РїР°РјСЏС‚Рё РґР»СЏ РґР°Р»СЊРЅРµР№С€РµР№ РѕР±СЂР°Р±РѕС‚РєРё
 		virtualInputs = new MRPInputList();
 		virtualOutputs = new MRPOutputList();
 		try {
@@ -968,7 +968,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 		// Before running off and creating 'Suggested Purchase Orders'
 		// we first check to see if there are any Inputs at some point
 		// in the future that we can move back to this point in time
-		// Пытаемся перепланировать будущие НЕЗАФИКСИРОВАННЫЕ поступления на нужную дату
+		// РџС‹С‚Р°РµРјСЃСЏ РїРµСЂРµРїР»Р°РЅРёСЂРѕРІР°С‚СЊ Р±СѓРґСѓС‰РёРµ РќР•Р—РђР¤РРљРЎРР РћР’РђРќРќР«Р• РїРѕСЃС‚СѓРїР»РµРЅРёСЏ РЅР° РЅСѓР¶РЅСѓСЋ РґР°С‚Сѓ
 		for (MRPInputItem item : virtualInputs.listSortedByInputDate()) {
 			if (item.inputDate.compareTo(reqDate) > 0 && MathUtils.compareToZero(item.inputQty) > 0 && !item.fixedInput) {
 				if (MathUtils.compareToZero(qtyReqD) <= 0)
@@ -1025,7 +1025,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 		}
 		
 		if (MathUtils.compareToZero(qtyReqD) > 0 && reqDate.compareTo(mrpVersion.getRunDate()) >= 0) {
-			//Создание предложений о закупке
+			//РЎРѕР·РґР°РЅРёРµ РїСЂРµРґР»РѕР¶РµРЅРёР№ Рѕ Р·Р°РєСѓРїРєРµ
 			int suggestedOrderNumber;
 			if (!lookForAnEarlierSuggestedOrder(inventoryItem, reqDate, qtyReqD)) {
 				if (RouteSrcType.TRANSFER.equals(inventoryItem.route.getSrcType()))
@@ -1073,9 +1073,9 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 	
 	private BigDecimal calculatePurchaseUnits(MRPInventoryItem inventoryItem, BigDecimal quantity) {
-		//QtyPurchaseUnits := преобразовать QtyInvUnits в ЕИ для закупки;
-		//Если у нас в системе нигде не задается ЕИ для товара для закупок, то просто присваиваем
-		//OVS, пока не задается
+		//QtyPurchaseUnits := РїСЂРµРѕР±СЂР°Р·РѕРІР°С‚СЊ QtyInvUnits РІ Р•Р РґР»СЏ Р·Р°РєСѓРїРєРё;
+		//Р•СЃР»Рё Сѓ РЅР°СЃ РІ СЃРёСЃС‚РµРјРµ РЅРёРіРґРµ РЅРµ Р·Р°РґР°РµС‚СЃСЏ Р•Р РґР»СЏ С‚РѕРІР°СЂР° РґР»СЏ Р·Р°РєСѓРїРѕРє, С‚Рѕ РїСЂРѕСЃС‚Рѕ РїСЂРёСЃРІР°РёРІР°РµРј
+		//OVS, РїРѕРєР° РЅРµ Р·Р°РґР°РµС‚СЃСЏ
 		return quantity;
 	}
 	
@@ -1128,8 +1128,8 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 	
 	private void updateExpiredInputs(Date expiryDate) {
 		for (MRPInputItem item : virtualInputs.list()) {
-			// здесь подразумевается, что если у товара бесконечное время хранения,
-			// то BATCH_DATE is null и эти записи НЕ должны попадать в выборку
+			// Р·РґРµСЃСЊ РїРѕРґСЂР°Р·СѓРјРµРІР°РµС‚СЃСЏ, С‡С‚Рѕ РµСЃР»Рё Сѓ С‚РѕРІР°СЂР° Р±РµСЃРєРѕРЅРµС‡РЅРѕРµ РІСЂРµРјСЏ С…СЂР°РЅРµРЅРёСЏ,
+			// С‚Рѕ BATCH_DATE is null Рё СЌС‚Рё Р·Р°РїРёСЃРё РќР• РґРѕР»Р¶РЅС‹ РїРѕРїР°РґР°С‚СЊ РІ РІС‹Р±РѕСЂРєСѓ
 			if (item.batchDate != null && item.batchDate.compareTo(expiryDate) <= 0
 					&& MathUtils.compareToZero(item.inputQty) > 0) {
 				item.expiredQty = item.inputQty;
@@ -1218,7 +1218,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 			recommendItem.setVendor(null);
 			recommendItem.setMeasure(inventoryItem.catalog.getMeasure1());
 		} else {
-			//товар является закупаемым
+			//С‚РѕРІР°СЂ СЏРІР»СЏРµС‚СЃСЏ Р·Р°РєСѓРїР°РµРјС‹Рј
 			recommendItem.setMrpSource(MRPSource.PURCHASES);
 			recommendItem.setSourceWarehouse(null);
 			recommendItem.setPurchaseOrTransfer(RecommendType.PURCHASE);
@@ -1336,7 +1336,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 	private BigDecimal updateInputQtyProcessed(BigDecimal qtyProcessed) {
 		//QtyProcessed := FInputVT.FieldValues['ORIGINAL_INPUT_QTY'] - FInputVT.FieldValues['INPUT_QTY'] + FInputVT.FieldValues['EXPIRED_QTY'];
 		//if CompareFloatWithZero(QtyProcessed, 0) > 0 then ;
-		//UpdateInputQtyProcessed(QtyProcessed); { пусть пока будет просто заглушкой с пустым телом }
+		//UpdateInputQtyProcessed(QtyProcessed); { РїСѓСЃС‚СЊ РїРѕРєР° Р±СѓРґРµС‚ РїСЂРѕСЃС‚Рѕ Р·Р°РіР»СѓС€РєРѕР№ СЃ РїСѓСЃС‚С‹Рј С‚РµР»РѕРј }
 		//TODO
 		return qtyProcessed;
 	}
@@ -1360,11 +1360,11 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 				} else
 					maxCancellations = BigDecimal.ZERO;
 			} else if (item.suggestedPO && !RouteSrcType.MANUFACTURE.equals(inventoryItem.route.getSrcType())) {
-				//Записываем предложения на закупку				
+				//Р—Р°РїРёСЃС‹РІР°РµРј РїСЂРµРґР»РѕР¶РµРЅРёСЏ РЅР° Р·Р°РєСѓРїРєСѓ				
 				suggestedPOReport(inventoryItem, item);
 			} else if (item.originalInputDate != null && item.originalInputDate.compareTo(item.inputDate) != 0
 					&& item.fixedInput && !RouteSrcType.MANUFACTURE.equals(inventoryItem.route.getSrcType())) {
-				//Записываем рекомендации на перепланирование
+				//Р—Р°РїРёСЃС‹РІР°РµРј СЂРµРєРѕРјРµРЅРґР°С†РёРё РЅР° РїРµСЂРµРїР»Р°РЅРёСЂРѕРІР°РЅРёРµ
 				recommendedRescheduling(inventoryItem, item);
 			} else
 				recordInput(inventoryItem, item);
@@ -1374,7 +1374,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 	}
 	
 	private void reportExpiredQtys(MRPInventoryItem inventoryItem) {
-		//Записываем информацию о просроченных количествах
+		//Р—Р°РїРёСЃС‹РІР°РµРј РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РїСЂРѕСЃСЂРѕС‡РµРЅРЅС‹С… РєРѕР»РёС‡РµСЃС‚РІР°С…
 		for (MRPInputItem item : virtualInputs.list()) {
 			if (!item.ignoreForReport && MathUtils.compareToZero(item.expiredQty) > 0) {
 				MrpReport mrpReport = mrpReportService.initialize();
@@ -1444,7 +1444,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 				
 			if (available.compareTo(inventoryItem.catalogWarehouse.getSafetyLevel()) < 0
 					&& !RouteSrcType.MANUFACTURE.equals(inventoryItem.route.getSrcType()))
-				increaseAvailable(inventoryItem, day, available); //создание предложений на закупку в таблице в памяти
+				increaseAvailable(inventoryItem, day, available); //СЃРѕР·РґР°РЅРёРµ РїСЂРµРґР»РѕР¶РµРЅРёР№ РЅР° Р·Р°РєСѓРїРєСѓ РІ С‚Р°Р±Р»РёС†Рµ РІ РїР°РјСЏС‚Рё
 			
 			if (MathUtils.compareToZero(qtyOutput) > 0)
 				updateInputs(inventoryItem, day, qtyOutput);
@@ -1577,7 +1577,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 		
 		mrpBuild();
 		
-		//изменяем данные на заголовке
+		//РёР·РјРµРЅСЏРµРј РґР°РЅРЅС‹Рµ РЅР° Р·Р°РіРѕР»РѕРІРєРµ
 		mrpVersion.setMrpVersion(mrpVersion.getMrpVersion() != null ? mrpVersion.getMrpVersion() + 1 : 1);
 		mrpVersionService.store(mrpVersion);
 		
@@ -1588,7 +1588,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 	 * @see com.mg.merp.planning.MRPProcessorServiceLocal#generateMrp(int)
 	 */
 	public void generateMrp(int mrpVersionId) {
-		ServerUtils.setTransactionTimeout(86400);//неизвестно сколько будет идти расчет MRP, ставит таймаут на сутки
+		ServerUtils.setTransactionTimeout(86400);//РЅРµРёР·РІРµСЃС‚РЅРѕ СЃРєРѕР»СЊРєРѕ Р±СѓРґРµС‚ РёРґС‚Рё СЂР°СЃС‡РµС‚ MRP, СЃС‚Р°РІРёС‚ С‚Р°Р№РјР°СѓС‚ РЅР° СЃСѓС‚РєРё
 		ormTemplate = OrmTemplate.getInstance();
 		persistentManager = ServerUtils.getPersistentManager();
 		mrpVersionService = (MRPVersionControlServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(MRPVersionControlServiceLocal.SERVICE_NAME);

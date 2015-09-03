@@ -58,7 +58,7 @@ import com.mg.merp.wb.core.support.CoreUtils;
 import com.mg.merp.wb.core.ui.plugin.MerpUIPlugin;
 
 /**
- * Плугин-активатор подключаемой библиотеки
+ * РџР»СѓРіРёРЅ-Р°РєС‚РёРІР°С‚РѕСЂ РїРѕРґРєР»СЋС‡Р°РµРјРѕР№ Р±РёР±Р»РёРѕС‚РµРєРё
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: BadiLibraryPlugin.java,v 1.8 2008/09/23 13:41:22 safonov Exp $
@@ -69,7 +69,7 @@ public class BadiLibraryPlugin extends MerpUIPlugin {
 	public static final String PLUGIN_ID = "com.mg.merp.wb.badi.library";
 
 	/*
-	 * Храниться в манифесте
+	 * РҐСЂР°РЅРёС‚СЊСЃСЏ РІ РјР°РЅРёС„РµСЃС‚Рµ
 	 */
 	private static final String MAN_LIB_DEPENDS = "BadiLibrary-Dependencies";
 
@@ -80,7 +80,7 @@ public class BadiLibraryPlugin extends MerpUIPlugin {
 	private static final String MAN_LIB_VERSION = "BadiLibrary-Version";
 
 	/*
-	 * Храниться в файле properties
+	 * РҐСЂР°РЅРёС‚СЊСЃСЏ РІ С„Р°Р№Р»Рµ properties
 	 */
 	private static final String LIB_VENDOR = "Badi.Lib.Vendor";
 
@@ -89,7 +89,7 @@ public class BadiLibraryPlugin extends MerpUIPlugin {
 	private static final String LIB_TITLE = "Badi.Lib.Title";
 
 	/**
-	 * Дескриптор библиотеки
+	 * Р”РµСЃРєСЂРёРїС‚РѕСЂ Р±РёР±Р»РёРѕС‚РµРєРё
 	 */
 	private static final String LIB_DESC_FILE_PATH = "META-INF/badilibrary";
 
@@ -103,12 +103,12 @@ public class BadiLibraryPlugin extends MerpUIPlugin {
 	private static final String CONTAINER_ID = "com.mg.merp.wb.badi.library.CONTAINER";
 
 	/**
-	 * Архивы, доступные для динамического помещения в библиотеку
+	 * РђСЂС…РёРІС‹, РґРѕСЃС‚СѓРїРЅС‹Рµ РґР»СЏ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РїРѕРјРµС‰РµРЅРёСЏ РІ Р±РёР±Р»РёРѕС‚РµРєСѓ
 	 */
 	private static Map<String, LibInfo> libs;
 
 	/**
-	 * Пути к архивам thirdpart
+	 * РџСѓС‚Рё Рє Р°СЂС…РёРІР°Рј thirdpart
 	 */
 	private static List<String> thirdLibs;
 
@@ -136,7 +136,7 @@ public class BadiLibraryPlugin extends MerpUIPlugin {
 	}
 
 	/**
-	 * Инициализация архивов, которые будут доступны библиотеке
+	 * РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ Р°СЂС…РёРІРѕРІ, РєРѕС‚РѕСЂС‹Рµ Р±СѓРґСѓС‚ РґРѕСЃС‚СѓРїРЅС‹ Р±РёР±Р»РёРѕС‚РµРєРµ
 	 * 
 	 */
 	private static void initLibs() {
@@ -212,7 +212,7 @@ public class BadiLibraryPlugin extends MerpUIPlugin {
 
 			Attributes attrs = mf.getMainAttributes();
 			/*
-			 * Версия BadiLibrary-ManifestVersion: 1.0
+			 * Р’РµСЂСЃРёСЏ BadiLibrary-ManifestVersion: 1.0
 			 */
 			if (attrs.getValue(MAN_VERSION) != null
 					&& attrs.getValue(MAN_VERSION).equals(MAN_LIB_VERSION_1)) {
@@ -271,12 +271,12 @@ public class BadiLibraryPlugin extends MerpUIPlugin {
 	}
 
 	/**
-	 * Включение динамических библиотек при активации из описателя .MBAi
+	 * Р’РєР»СЋС‡РµРЅРёРµ РґРёРЅР°РјРёС‡РµСЃРєРёС… Р±РёР±Р»РёРѕС‚РµРє РїСЂРё Р°РєС‚РёРІР°С†РёРё РёР· РѕРїРёСЃР°С‚РµР»СЏ .MBAi
 	 * @param project
-	 * 			проект
+	 * 			РїСЂРѕРµРєС‚
 	 * 
 	 * @return
-	 * 			список имен архивов
+	 * 			СЃРїРёСЃРѕРє РёРјРµРЅ Р°СЂС…РёРІРѕРІ
 	 */
 	public static Set<String> initLibsFromPropFile(IJavaProject project) {
 		Set<String> result = null;
@@ -308,12 +308,12 @@ public class BadiLibraryPlugin extends MerpUIPlugin {
 	}
 
 	/**
-	 * Сохранение динамических архивов, включённых в библиотеку .MBAi
+	 * РЎРѕС…СЂР°РЅРµРЅРёРµ РґРёРЅР°РјРёС‡РµСЃРєРёС… Р°СЂС…РёРІРѕРІ, РІРєР»СЋС‡С‘РЅРЅС‹С… РІ Р±РёР±Р»РёРѕС‚РµРєСѓ .MBAi
 	 * 
 	 * @param project
-	 * 			проект
+	 * 			РїСЂРѕРµРєС‚
 	 * @param lst
-	 * 			список имен архивов
+	 * 			СЃРїРёСЃРѕРє РёРјРµРЅ Р°СЂС…РёРІРѕРІ
 	 */
 	public static void storeLibsInPropFile(IJavaProject project,
 			List<String> lst) {

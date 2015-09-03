@@ -15,7 +15,7 @@
 package com.mg.framework.support.ui.widget;
 
 /**
- * Адаптер элмента "Shuttle"
+ * РђРґР°РїС‚РµСЂ СЌР»РјРµРЅС‚Р° "Shuttle"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ShuttleControllerAdapter.java,v 1.1 2006/08/31 08:36:41 safonov Exp $
@@ -23,37 +23,37 @@ package com.mg.framework.support.ui.widget;
 public interface ShuttleControllerAdapter {
 
 	/**
-	 * получить модель
+	 * РїРѕР»СѓС‡РёС‚СЊ РјРѕРґРµР»СЊ
 	 * 
-	 * @return	модель
+	 * @return	РјРѕРґРµР»СЊ
 	 */
 	ShuttleModel getModel();
 	
 	/**
-	 * добавить слушателя на события элмента
+	 * РґРѕР±Р°РІРёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЏ РЅР° СЃРѕР±С‹С‚РёСЏ СЌР»РјРµРЅС‚Р°
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	void addShuttleListener(ShuttleListener listener);
 	
 	/**
-	 * удалить слушателя на события элемента
+	 * СѓРґР°Р»РёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЏ РЅР° СЃРѕР±С‹С‚РёСЏ СЌР»РµРјРµРЅС‚Р°
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	void removeShuttleListener(ShuttleListener listener);
 	
 	/**
-	 * переместить список из списка источника в список приемник
+	 * РїРµСЂРµРјРµСЃС‚РёС‚СЊ СЃРїРёСЃРѕРє РёР· СЃРїРёСЃРєР° РёСЃС‚РѕС‡РЅРёРєР° РІ СЃРїРёСЃРѕРє РїСЂРёРµРјРЅРёРє
 	 * 
-	 * @param contents	содержимое
+	 * @param contents	СЃРѕРґРµСЂР¶РёРјРѕРµ
 	 */
 	void move(Object[] contents);
 	
 	/**
-	 * переместить список из списка приемника в список источник
+	 * РїРµСЂРµРјРµСЃС‚РёС‚СЊ СЃРїРёСЃРѕРє РёР· СЃРїРёСЃРєР° РїСЂРёРµРјРЅРёРєР° РІ СЃРїРёСЃРѕРє РёСЃС‚РѕС‡РЅРёРє
 	 * 
-	 * @param contents	содержимое
+	 * @param contents	СЃРѕРґРµСЂР¶РёРјРѕРµ
 	 */
 	void remove(Object[] contents);
 

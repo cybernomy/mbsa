@@ -18,7 +18,7 @@ import com.mg.framework.api.BusinessObjectService;
 import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 
 /**
- * Сервис процессора модуля "Журнал платежей"
+ * РЎРµСЂРІРёСЃ РїСЂРѕС†РµСЃСЃРѕСЂР° РјРѕРґСѓР»СЏ "Р–СѓСЂРЅР°Р» РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PaymentallocProcessorServiceLocal.java,v 1.2 2007/05/31 14:08:57 sharapov Exp $
@@ -26,46 +26,46 @@ import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 public interface PaymentallocProcessorServiceLocal extends BusinessObjectService {
 	
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/paymentalloc/PaymentallocProcessor"; //$NON-NLS-1$
 	
 	/**
-	 * Этап ДО "Создать запись в журнале платежей"
-	 * @param docFlowParams - параметры ДО
-	 * @param processorListener - слушатель процессора
+	 * Р­С‚Р°Рї Р”Рћ "РЎРѕР·РґР°С‚СЊ Р·Р°РїРёСЃСЊ РІ Р¶СѓСЂРЅР°Р»Рµ РїР»Р°С‚РµР¶РµР№"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ Р”Рћ
+	 * @param processorListener - СЃР»СѓС€Р°С‚РµР»СЊ РїСЂРѕС†РµСЃСЃРѕСЂР°
 	 */
 	void createPayment(DocFlowPluginInvokeParams docFlowParams, PaymentallocProcessorListener processorListener) throws Exception;
 	
 	/**
-	 * Откат этапа ДО "Создать запись в журнале платежей"
-	 * @param docFlowParams - параметры ДО
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° Р”Рћ "РЎРѕР·РґР°С‚СЊ Р·Р°РїРёСЃСЊ РІ Р¶СѓСЂРЅР°Р»Рµ РїР»Р°С‚РµР¶РµР№"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ Р”Рћ
 	 */
 	void rollBackCreatePayment(DocFlowPluginInvokeParams docFlowParams);
 	
 	/**
-	 * Этап ДО "Отработка в журнале платежей"
-	 * @param docFlowParams - параметры ДО
-	 * @param processorListener - слушатель процессора
+	 * Р­С‚Р°Рї Р”Рћ "РћС‚СЂР°Р±РѕС‚РєР° РІ Р¶СѓСЂРЅР°Р»Рµ РїР»Р°С‚РµР¶РµР№"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ Р”Рћ
+	 * @param processorListener - СЃР»СѓС€Р°С‚РµР»СЊ РїСЂРѕС†РµСЃСЃРѕСЂР°
 	 */
 	void allocatePayment(DocFlowPluginInvokeParams docFlowParams, PaymentallocProcessorListener processorListener) throws Exception;
 	
 	/**
-	 * Откат этапа ДО "Отработка в журнале платежей"
-	 * @param docFlowParams - параметры ДО
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° Р”Рћ "РћС‚СЂР°Р±РѕС‚РєР° РІ Р¶СѓСЂРЅР°Р»Рµ РїР»Р°С‚РµР¶РµР№"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ Р”Рћ
 	 */
 	void rollBackAllocatePayment(DocFlowPluginInvokeParams docFlowParams);
 	
 	/**
-	 * Этап ДО "Отработка в журнале платежей интерактивная"
-	 * @param docFlowParams - параметры ДО
-	 * @param processorListener - слушатель процессора
+	 * Р­С‚Р°Рї Р”Рћ "РћС‚СЂР°Р±РѕС‚РєР° РІ Р¶СѓСЂРЅР°Р»Рµ РїР»Р°С‚РµР¶РµР№ РёРЅС‚РµСЂР°РєС‚РёРІРЅР°СЏ"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ Р”Рћ
+	 * @param processorListener - СЃР»СѓС€Р°С‚РµР»СЊ РїСЂРѕС†РµСЃСЃРѕСЂР°
 	 */
 	void allocatePaymentIteractive(DocFlowPluginInvokeParams docFlowParams, PaymentallocProcessorListener processorListener) throws Exception;
 	
 	/**
-	 * Откат этапа ДО "Отработка в журнале платежей интерактивная"
-	 * @param docFlowParams - параметры ДО
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° Р”Рћ "РћС‚СЂР°Р±РѕС‚РєР° РІ Р¶СѓСЂРЅР°Р»Рµ РїР»Р°С‚РµР¶РµР№ РёРЅС‚РµСЂР°РєС‚РёРІРЅР°СЏ"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ Р”Рћ
 	 */
 	void rollBackAllocatePaymentIteractive(DocFlowPluginInvokeParams docFlowParams);
 	

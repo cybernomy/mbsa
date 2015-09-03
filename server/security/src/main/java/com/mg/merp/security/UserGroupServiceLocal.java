@@ -17,7 +17,7 @@ package com.mg.merp.security;
 import com.mg.merp.security.model.Groups;
 
 /**
- * Бизнес-компонент "Группы пользователей"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р“СЂСѓРїРїС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№"
  * 
  * @author leonova
  * @version $Id: UserGroupServiceLocal.java,v 1.2 2008/01/28 13:11:39 safonov Exp $

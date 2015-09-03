@@ -27,7 +27,7 @@ import com.mg.merp.wb.core.ui.UiPlugin;
 import com.mg.merp.wb.core.ui.widgets.ComboFieldEditor;
 
 /**
- * Страница главных настроек студии разработки
+ * РЎС‚СЂР°РЅРёС†Р° РіР»Р°РІРЅС‹С… РЅР°СЃС‚СЂРѕРµРє СЃС‚СѓРґРёРё СЂР°Р·СЂР°Р±РѕС‚РєРё
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: MainPreferencePage.java,v 1.5 2007/09/03 13:04:05 safonov Exp $ 

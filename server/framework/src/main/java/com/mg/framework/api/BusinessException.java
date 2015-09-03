@@ -15,7 +15,7 @@
 package com.mg.framework.api;
 
 /**
- * Базовый класс прикладных ИС
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РїСЂРёРєР»Р°РґРЅС‹С… РРЎ
  * 
  * @author Oleg V. Safonov
  * @version $Id: BusinessException.java,v 1.2 2006/08/25 11:26:10 safonov Exp $

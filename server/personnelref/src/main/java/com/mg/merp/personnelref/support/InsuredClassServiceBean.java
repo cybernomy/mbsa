@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.InsuredClassServiceLocal;
 import com.mg.merp.personnelref.model.InsuredClass;
 
 /**
- * Реализация бизнес-компонента "Категории плательщиков страховых взносов" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР°С‚РµРіРѕСЂРёРё РїР»Р°С‚РµР»СЊС‰РёРєРѕРІ СЃС‚СЂР°С…РѕРІС‹С… РІР·РЅРѕСЃРѕРІ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -30,8 +30,8 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.framework.utils.StringUtils;
 
 /**
- * Утилиты генератора отчетов. Расположены в ядре, т.к. требуются и в студии разработки и в
- * сервере приложений
+ * РЈС‚РёР»РёС‚С‹ РіРµРЅРµСЂР°С‚РѕСЂР° РѕС‚С‡РµС‚РѕРІ. Р Р°СЃРїРѕР»РѕР¶РµРЅС‹ РІ СЏРґСЂРµ, С‚.Рє. С‚СЂРµР±СѓСЋС‚СЃСЏ Рё РІ СЃС‚СѓРґРёРё СЂР°Р·СЂР°Р±РѕС‚РєРё Рё РІ
+ * СЃРµСЂРІРµСЂРµ РїСЂРёР»РѕР¶РµРЅРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: ReportUtils.java,v 1.3 2008/08/04 13:35:47 safonov Exp $
@@ -54,17 +54,17 @@ public class ReportUtils {
 	}
 	
 	/**
-	 * преобразование параметров BIRT в прикладные типы BAi, т.к. в BIRT типы параметров зашиты, то для
-	 * создания собственных типов используем строковый тип и кодируем нужную нам информацию,
-	 * данный метод декодирует строку и ковертирует в параметр с custom типом системы.
-	 * На текущий момент поддерживатся тип Entity. Также преобразуются параметры с предустановленными
-	 * именами {@link com.mg.framework.api.report.RptProperties#ENTITY_IDS_DATASET_PARAMETER} и
+	 * РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ BIRT РІ РїСЂРёРєР»Р°РґРЅС‹Рµ С‚РёРїС‹ BAi, С‚.Рє. РІ BIRT С‚РёРїС‹ РїР°СЂР°РјРµС‚СЂРѕРІ Р·Р°С€РёС‚С‹, С‚Рѕ РґР»СЏ
+	 * СЃРѕР·РґР°РЅРёСЏ СЃРѕР±СЃС‚РІРµРЅРЅС‹С… С‚РёРїРѕРІ РёСЃРїРѕР»СЊР·СѓРµРј СЃС‚СЂРѕРєРѕРІС‹Р№ С‚РёРї Рё РєРѕРґРёСЂСѓРµРј РЅСѓР¶РЅСѓСЋ РЅР°Рј РёРЅС„РѕСЂРјР°С†РёСЋ,
+	 * РґР°РЅРЅС‹Р№ РјРµС‚РѕРґ РґРµРєРѕРґРёСЂСѓРµС‚ СЃС‚СЂРѕРєСѓ Рё РєРѕРІРµСЂС‚РёСЂСѓРµС‚ РІ РїР°СЂР°РјРµС‚СЂ СЃ custom С‚РёРїРѕРј СЃРёСЃС‚РµРјС‹.
+	 * РќР° С‚РµРєСѓС‰РёР№ РјРѕРјРµРЅС‚ РїРѕРґРґРµСЂР¶РёРІР°С‚СЃСЏ С‚РёРї Entity. РўР°РєР¶Рµ РїСЂРµРѕР±СЂР°Р·СѓСЋС‚СЃСЏ РїР°СЂР°РјРµС‚СЂС‹ СЃ РїСЂРµРґСѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹РјРё
+	 * РёРјРµРЅР°РјРё {@link com.mg.framework.api.report.RptProperties#ENTITY_IDS_DATASET_PARAMETER} Рё
 	 * {@link com.mg.framework.api.report.RptProperties#BUSINESS_SERVICE_DATASET_PARAMETER}
 	 * 
-	 * @param name	имя параметра
-	 * @param value	значение параметра генератора отчетов
-	 * @param entityManager	менеджер хранилища сущностей
-	 * @return	преобразованное значение параметра
+	 * @param name	РёРјСЏ РїР°СЂР°РјРµС‚СЂР°
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР° РіРµРЅРµСЂР°С‚РѕСЂР° РѕС‚С‡РµС‚РѕРІ
+	 * @param entityManager	РјРµРЅРµРґР¶РµСЂ С…СЂР°РЅРёР»РёС‰Р° СЃСѓС‰РЅРѕСЃС‚РµР№
+	 * @return	РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°
 	 */
 	public static Object convertParamValue(String name, Object value, Object entityManager) {
 		 if (value instanceof String) {
@@ -76,8 +76,8 @@ public class ReportUtils {
 					int length = strIds.length;
 					if (length == 0)
 						return value;
-					//делаем массив если только значений > 1, иначе создаем простой объект
-					//данное поведение предназначено для совместимости с параметрами в QL запросах
+					//РґРµР»Р°РµРј РјР°СЃСЃРёРІ РµСЃР»Рё С‚РѕР»СЊРєРѕ Р·РЅР°С‡РµРЅРёР№ > 1, РёРЅР°С‡Рµ СЃРѕР·РґР°РµРј РїСЂРѕСЃС‚РѕР№ РѕР±СЉРµРєС‚
+					//РґР°РЅРЅРѕРµ РїРѕРІРµРґРµРЅРёРµ РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅРѕ РґР»СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё СЃ РїР°СЂР°РјРµС‚СЂР°РјРё РІ QL Р·Р°РїСЂРѕСЃР°С…
 					if (length > 1) {
 						Serializable[] ids = new Serializable[strIds.length];
 						for (int i = 0; i < strIds.length; i++)
@@ -88,20 +88,20 @@ public class ReportUtils {
 				} else
 					return value;
 			} else if (RptProperties.BUSINESS_SERVICE_DATASET_PARAMETER.equalsIgnoreCase(name)) {
-				//имя сервиса бизнес-компонента
+				//РёРјСЏ СЃРµСЂРІРёСЃР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 				return ApplicationDictionaryLocator.locate().getBusinessService(strValue);
 			} else if (strValue.startsWith("${entity:") && strValue.endsWith("}")) {
-				//если строка представляет сущность, то загрузим сущность
+				//РµСЃР»Рё СЃС‚СЂРѕРєР° РїСЂРµРґСЃС‚Р°РІР»СЏРµС‚ СЃСѓС‰РЅРѕСЃС‚СЊ, С‚Рѕ Р·Р°РіСЂСѓР·РёРј СЃСѓС‰РЅРѕСЃС‚СЊ
 				//${entity:<entity name>#<identificator value>[;searchHelp:<search help name>]}
 				if (logger != null)
 					logger.debug("convert entity parameter: " + strValue);
 				strValue = strValue.substring(9, strValue.length() - 1);
-				//удалим информацию о searchHelp
+				//СѓРґР°Р»РёРј РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ searchHelp
 				int idx = strValue.indexOf(";searchHelp:");
 				if (idx != -1)
 					strValue = strValue.substring(0, idx);
 				String[] entityInfo = strValue.split("#");
-				//содержится не полная информация о сущности
+				//СЃРѕРґРµСЂР¶РёС‚СЃСЏ РЅРµ РїРѕР»РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ СЃСѓС‰РЅРѕСЃС‚Рё
 				if (entityInfo.length != 2) {
 					if (logger != null)
 						logger.error("invalid entity description: " + strValue);
@@ -127,15 +127,15 @@ public class ReportUtils {
 	}
 
 	/**
-	 * создает текстовое представление параметра с типом сущность
+	 * СЃРѕР·РґР°РµС‚ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР° СЃ С‚РёРїРѕРј СЃСѓС‰РЅРѕСЃС‚СЊ
 	 * 
-	 * @param entity	сущность
-	 * @return	строковое представление
+	 * @param entity	СЃСѓС‰РЅРѕСЃС‚СЊ
+	 * @return	СЃС‚СЂРѕРєРѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 */
 	public static String createEntityParam(Object entity) {
 		if (entity == null)
 			return null;
-		//преобразуем сущность в строку, чтобы можно было передать значение в драйвер
+		//РїСЂРµРѕР±СЂР°Р·СѓРµРј СЃСѓС‰РЅРѕСЃС‚СЊ РІ СЃС‚СЂРѕРєСѓ, С‡С‚РѕР±С‹ РјРѕР¶РЅРѕ Р±С‹Р»Рѕ РїРµСЂРµРґР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РІ РґСЂР°Р№РІРµСЂ
 		//${entity:<entity name>#<identificator value>}
 		Session session = (Session) ServerUtils.getPersistentManager().getDelegate();
 		session.lock(entity, LockMode.NONE);//reassociate a transient instance with a session
@@ -143,11 +143,11 @@ public class ReportUtils {
 	}
 	
 	/**
-	 * создает текстовое представление параметра с типом сущность
+	 * СЃРѕР·РґР°РµС‚ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР° СЃ С‚РёРїРѕРј СЃСѓС‰РЅРѕСЃС‚СЊ
 	 * 
-	 * @param entityName	имя сущности
-	 * @param entityId	идентификатор
-	 * @return	строковое представление
+	 * @param entityName	РёРјСЏ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @param entityId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ
+	 * @return	СЃС‚СЂРѕРєРѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 */
 	public static String createEntityParam(String entityName, Serializable entityId) {
 		StringBuilder sb = new StringBuilder("${entity:")
@@ -159,10 +159,10 @@ public class ReportUtils {
 	}
 	
 	/**
-	 * создает текстовое представление параметра с типом идентификаторы сущностей
+	 * СЃРѕР·РґР°РµС‚ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР° СЃ С‚РёРїРѕРј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂС‹ СЃСѓС‰РЅРѕСЃС‚РµР№
 	 * 
-	 * @param ids	идентификаторы сущностей
-	 * @return	строковое представление
+	 * @param ids	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂС‹ СЃСѓС‰РЅРѕСЃС‚РµР№
+	 * @return	СЃС‚СЂРѕРєРѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 */
 	public static String createEntityIdsParam(Serializable[] ids) {
 		if (ids == null || ids.length == 0)

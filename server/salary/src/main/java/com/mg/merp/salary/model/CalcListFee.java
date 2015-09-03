@@ -17,7 +17,7 @@ package com.mg.merp.salary.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Начисления/ударжания расчетных листков"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќР°С‡РёСЃР»РµРЅРёСЏ/СѓРґР°СЂР¶Р°РЅРёСЏ СЂР°СЃС‡РµС‚РЅС‹С… Р»РёСЃС‚РєРѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: CalcListFee.java,v 1.6 2007/08/21 05:27:58 sharapov Exp $
@@ -268,8 +268,8 @@ public class CalcListFee extends com.mg.framework.service.PersistentObjectHibern
 	}
 
 	/**
-	 * Получить список параметров начисления/удержания расчетного листка
-	 * @return список параметров начисления/удержания расчетного листка
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚РєР°
+	 * @return СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ СЂР°СЃС‡РµС‚РЅРѕРіРѕ Р»РёСЃС‚РєР°
 	 */
 	public java.util.Set<CalcListFeeParam> getCalcListFeeParams() {
 		return this.calcListFeeParams;

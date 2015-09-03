@@ -22,7 +22,7 @@ import com.mg.merp.wb.core.support.CoreUtils;
 import com.mg.merp.wb.core.ui.UiPlugin;
 
 /**
- * Утилитарный класс вызова стандартных диалоговых окон
+ * РЈС‚РёР»РёС‚Р°СЂРЅС‹Р№ РєР»Р°СЃСЃ РІС‹Р·РѕРІР° СЃС‚Р°РЅРґР°СЂС‚РЅС‹С… РґРёР°Р»РѕРіРѕРІС‹С… РѕРєРѕРЅ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: Dialogs.java,v 1.6 2007/11/04 14:37:47 safonov Exp $ 
@@ -30,15 +30,15 @@ import com.mg.merp.wb.core.ui.UiPlugin;
 public class Dialogs {
 
 	/**
-	 * Вызов окна сообщений
+	 * Р’С‹Р·РѕРІ РѕРєРЅР° СЃРѕРѕР±С‰РµРЅРёР№
 	 * 
 	 * @param message
-	 * 			текст сообщения
+	 * 			С‚РµРєСЃС‚ СЃРѕРѕР±С‰РµРЅРёСЏ
 	 * @param flags
-	 * 			флаги (ОК, CANCEL...)
+	 * 			С„Р»Р°РіРё (РћРљ, CANCEL...)
 	 * 
 	 * @return
-	 * 			код выбранной кнопки диалога
+	 * 			РєРѕРґ РІС‹Р±СЂР°РЅРЅРѕР№ РєРЅРѕРїРєРё РґРёР°Р»РѕРіР°
 	 */
 	public static int showMessage(String message, int flags){
 		MessageBox messageBox = new MessageBox(CoreUtils.getMainShell(), flags);
@@ -47,19 +47,19 @@ public class Dialogs {
 	}
 	
 	/**
-	 * Диалог для вывода сообщения об исключительной ситуации
+	 * Р”РёР°Р»РѕРі РґР»СЏ РІС‹РІРѕРґР° СЃРѕРѕР±С‰РµРЅРёСЏ РѕР± РёСЃРєР»СЋС‡РёС‚РµР»СЊРЅРѕР№ СЃРёС‚СѓР°С†РёРё
 	 * 
 	 * @param title
-	 * 			заголовок окна диалога
+	 * 			Р·Р°РіРѕР»РѕРІРѕРє РѕРєРЅР° РґРёР°Р»РѕРіР°
 	 * @param message
-	 * 			текст сообщения
+	 * 			С‚РµРєСЃС‚ СЃРѕРѕР±С‰РµРЅРёСЏ
 	 * @param pluginId
-	 * 			идентификатор плагин, из которого вызывается диалог
+	 * 			РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїР»Р°РіРёРЅ, РёР· РєРѕС‚РѕСЂРѕРіРѕ РІС‹Р·С‹РІР°РµС‚СЃСЏ РґРёР°Р»РѕРі
 	 * @param ex
-	 * 			исключительная ситуация
+	 * 			РёСЃРєР»СЋС‡РёС‚РµР»СЊРЅР°СЏ СЃРёС‚СѓР°С†РёСЏ
 	 * 
 	 * @return
-	 * 			код выбранной кнопки диалога
+	 * 			РєРѕРґ РІС‹Р±СЂР°РЅРЅРѕР№ РєРЅРѕРїРєРё РґРёР°Р»РѕРіР°
 	 */
 	public static int openError(String title, String message, String pluginId, Throwable ex){
 		CoreUtils.log(message, ex);

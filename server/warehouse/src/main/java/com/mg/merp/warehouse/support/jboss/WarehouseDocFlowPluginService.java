@@ -35,7 +35,7 @@ import com.mg.merp.warehouse.support.WarehouseTransactionCalcCostDocFlowPluginFa
 import com.mg.merp.warehouse.support.WarehouseTransactionDocFlowPluginFactory;
 
 /**
- * Реализация сервиса дополнительных модулей подсистемы "Склад"
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "РЎРєР»Р°Рґ"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseDocFlowPluginService.java,v 1.7 2008/08/27 09:41:48 sharapov Exp $ 

@@ -17,7 +17,7 @@ package com.mg.merp.reference.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Упаковка товара"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЈРїР°РєРѕРІРєР° С‚РѕРІР°СЂР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: Packing.java,v 1.6 2007/11/19 11:06:55 sharapov Exp $
@@ -166,8 +166,8 @@ public class Packing extends com.mg.framework.service.PersistentObjectHibernate 
 	}
 
 	/**
-	 * Получить количество в основной ЕИ в упаковке
-	 * @return количество в основной ЕИ в упаковке
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РѕСЃРЅРѕРІРЅРѕР№ Р•Р РІ СѓРїР°РєРѕРІРєРµ
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РѕСЃРЅРѕРІРЅРѕР№ Р•Р РІ СѓРїР°РєРѕРІРєРµ
 	 */
 	@DataItemName("Reference.Packing.QuantityMeasure1") //$NON-NLS-1$
 	public java.math.BigDecimal getQuantityMeasure1() {
@@ -175,16 +175,16 @@ public class Packing extends com.mg.framework.service.PersistentObjectHibernate 
 	}
 
 	/**
-	 * Установить количество в основной ЕИ в упаковке
-	 * @param quantityMeasure1 - количество в основной ЕИ в упаковке
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РѕСЃРЅРѕРІРЅРѕР№ Р•Р РІ СѓРїР°РєРѕРІРєРµ
+	 * @param quantityMeasure1 - РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РѕСЃРЅРѕРІРЅРѕР№ Р•Р РІ СѓРїР°РєРѕРІРєРµ
 	 */
 	public void setQuantityMeasure1(java.math.BigDecimal quantityMeasure1) {
 		this.quantityMeasure1 = quantityMeasure1;
 	}
 
 	/**
-	 * Получить количество в дополнительной ЕИ в упаковке
-	 * @return количество в дополнительной ЕИ в упаковке
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ Р•Р РІ СѓРїР°РєРѕРІРєРµ
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ Р•Р РІ СѓРїР°РєРѕРІРєРµ
 	 */
 	@DataItemName("Reference.Packing.QuantityMeasure2") //$NON-NLS-1$
 	public java.math.BigDecimal getQuantityMeasure2() {
@@ -192,8 +192,8 @@ public class Packing extends com.mg.framework.service.PersistentObjectHibernate 
 	}
 
 	/**
-	 * Установить количество в дополнительной ЕИ в упаковке
-	 * @param quantityMeasure2 - количество в дополнительной ЕИ в упаковке
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ Р•Р РІ СѓРїР°РєРѕРІРєРµ
+	 * @param quantityMeasure2 - РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ Р•Р РІ СѓРїР°РєРѕРІРєРµ
 	 */
 	public void setQuantityMeasure2(java.math.BigDecimal quantityMeasure2) {
 		this.quantityMeasure2 = quantityMeasure2;

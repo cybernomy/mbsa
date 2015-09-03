@@ -20,7 +20,7 @@ import javax.swing.tree.TreeModel;
 import com.mg.merp.security.model.Groups;
 
 /**
- * Интерфейс взаимодействия студии разработки с сервером приложений
+ * РРЅС‚РµСЂС„РµР№СЃ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃС‚СѓРґРёРё СЂР°Р·СЂР°Р±РѕС‚РєРё СЃ СЃРµСЂРІРµСЂРѕРј РїСЂРёР»РѕР¶РµРЅРёР№
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: Workbench.java,v 1.3 2007/04/11 06:52:06 poroxnenko Exp $ 
@@ -30,14 +30,14 @@ public interface Workbench {
 	public void testConnectionOK();
 	
     /**
-     * @return Возвращает список бизнес компонентов в виде
-     * строки BeanName1:=:Description1;...BeanNameN:=:DescriptionN
+     * @return Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє Р±РёР·РЅРµСЃ РєРѕРјРїРѕРЅРµРЅС‚РѕРІ РІ РІРёРґРµ
+     * СЃС‚СЂРѕРєРё BeanName1:=:Description1;...BeanNameN:=:DescriptionN
      */
 	TreeModel getSysClasses() throws Exception;
 	
 	/**
 	 * 
-	 * @return список групп пользователей
+	 * @return СЃРїРёСЃРѕРє РіСЂСѓРїРї РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
 	 * @throws Exception
 	 */
 	List<Groups> getSecGroups() throws Exception;

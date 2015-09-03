@@ -23,7 +23,7 @@ import com.mg.merp.account.model.CashDocumentModel;
 import com.mg.merp.document.generic.DocumentModelServiceBean;
 
 /**
- * Бизнес-компонент "Образцы приходных кассовых ордеров" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ РїСЂРёС…РѕРґРЅС‹С… РєР°СЃСЃРѕРІС‹С… РѕСЂРґРµСЂРѕРІ" 
  * 
  * @author leonova
  * @version $Id: CashDocumentModelInServiceBean.java,v 1.3 2006/09/12 11:16:43 leonova Exp $

@@ -18,7 +18,7 @@ import org.jboss.annotation.ejb.Local;
 import com.mg.framework.api.BusinessObjectService;
 
 /**
- * Сервис "Процессор управления запасами"
+ * РЎРµСЂРІРёСЃ "РџСЂРѕС†РµСЃСЃРѕСЂ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РїР°СЃР°РјРё"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseProcessorServiceLocal.java,v 1.2 2007/02/22 09:49:26
@@ -28,7 +28,7 @@ import com.mg.framework.api.BusinessObjectService;
 public interface WarehouseProcessorServiceLocal extends BusinessObjectService, WarehouseProcessor {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/warehouse/WarehouseProcessor";
 }

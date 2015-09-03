@@ -25,7 +25,7 @@ import com.mg.merp.account.EconomicSpecFeatureServiceLocal;
 import com.mg.merp.account.model.EconomicSpecFeature;
 
 /**
- * Бизнес-компонент "Признаки проводок хозяйственных операций" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРёР·РЅР°РєРё РїСЂРѕРІРѕРґРѕРє С…РѕР·СЏР№СЃС‚РІРµРЅРЅС‹С… РѕРїРµСЂР°С†РёР№" 
  * 
  * @author leonova
  * @version $Id: EconomicSpecFeatureServiceBean.java,v 1.4 2007/09/06 14:37:19 alikaev Exp $
@@ -61,7 +61,7 @@ public class EconomicSpecFeatureServiceBean extends AbstractPOJODataBusinessObje
 	}
 	
 	/**
-	 * Заполняем поле "Код в верхнем регистре" и "Наименование"
+	 * Р—Р°РїРѕР»РЅСЏРµРј РїРѕР»Рµ "РљРѕРґ РІ РІРµСЂС…РЅРµРј СЂРµРіРёСЃС‚СЂРµ" Рё "РќР°РёРјРµРЅРѕРІР°РЅРёРµ"
 	 * @param entity
 	 */
 	private void adjustEconomicSpecFeature(EconomicSpecFeature entity) {

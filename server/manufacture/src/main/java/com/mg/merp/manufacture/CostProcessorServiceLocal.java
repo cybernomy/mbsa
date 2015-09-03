@@ -17,7 +17,7 @@ package com.mg.merp.manufacture;
 import java.util.Date;
 
 /**
- * Бизнес-компонет "Расчет себестоимости состава изделия"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµС‚ "Р Р°СЃС‡РµС‚ СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚Рё СЃРѕСЃС‚Р°РІР° РёР·РґРµР»РёСЏ"
  * 
  * @author leonova
  * @version $Id: CostProcessorServiceLocal.java,v 1.2 2007/07/30 10:28:17 safonov Exp $
@@ -27,16 +27,16 @@ public interface CostProcessorServiceLocal extends com.mg.framework.api.Business
 	static final String SERVICE_NAME = "merp/manufacture/CostProcessor";
 	
 	/**
-	 * расчитать плановую себестоимость для состава изделия
+	 * СЂР°СЃС‡РёС‚Р°С‚СЊ РїР»Р°РЅРѕРІСѓСЋ СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚СЊ РґР»СЏ СЃРѕСЃС‚Р°РІР° РёР·РґРµР»РёСЏ
 	 * 
-	 * @param actualityDate	дата актуальности
+	 * @param actualityDate	РґР°С‚Р° Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё
 	 */
 	void calculateBOMStandartCost(Date actualityDate );
 
 	/**
-	 * расчитать плановую себестоимость для ЗНП
+	 * СЂР°СЃС‡РёС‚Р°С‚СЊ РїР»Р°РЅРѕРІСѓСЋ СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚СЊ РґР»СЏ Р—РќРџ
 	 * 
-	 * @param actualityDate	дата актуальности
+	 * @param actualityDate	РґР°С‚Р° Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё
 	 */
 	void calculateJobStandartCost(Date actualityDate );
 	

@@ -46,7 +46,7 @@ import com.mg.merp.reference.model.Currency;
 import com.mg.merp.reference.model.Measure;
 
 /**
- * Утилиты для модулей производство
+ * РЈС‚РёР»РёС‚С‹ РґР»СЏ РјРѕРґСѓР»РµР№ РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕ
  * 
  * @author Oleg V. Safonov
  * @version $Id: MfUtils.java,v 1.6 2007/08/21 15:23:57 safonov Exp $
@@ -54,27 +54,27 @@ import com.mg.merp.reference.model.Measure;
 public class MfUtils {
 
 	/**
-	 * количество тиков в секунде, 10^-3 seconds
+	 * РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РёРєРѕРІ РІ СЃРµРєСѓРЅРґРµ, 10^-3 seconds
 	 */
 	public final static long TICKS_PER_SECOND = 1000L;
 	
 	/**
-	 * количество тиков в минуте
+	 * РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РёРєРѕРІ РІ РјРёРЅСѓС‚Рµ
 	 */
 	public final static long TICKS_PER_MIN = 60L * TICKS_PER_SECOND;
 	
 	/**
-	 * количество тиков в часе
+	 * РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РёРєРѕРІ РІ С‡Р°СЃРµ
 	 */
 	public final static long TICKS_PER_HOUR = 60L * TICKS_PER_MIN;
 	
 	/**
-	 * количество тиков в дне
+	 * РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РёРєРѕРІ РІ РґРЅРµ
 	 */
 	public final static long TICKS_PER_DAY = 24L * TICKS_PER_HOUR;
 
 	/**
-	 * ЕИ час
+	 * Р•Р С‡Р°СЃ
 	 */
 	public final static Measure HOUR = new Measure();
 	
@@ -118,11 +118,11 @@ public class MfUtils {
 	}
 	
 	/**
-	 * преобразование тиков во время выраженное в ЕИ
+	 * РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ С‚РёРєРѕРІ РІРѕ РІСЂРµРјСЏ РІС‹СЂР°Р¶РµРЅРЅРѕРµ РІ Р•Р
 	 * 
-	 * @param tick		тики
-	 * @param timeUM	ЕИ времени
-	 * @return			время
+	 * @param tick		С‚РёРєРё
+	 * @param timeUM	Р•Р РІСЂРµРјРµРЅРё
+	 * @return			РІСЂРµРјСЏ
 	 */
 	public static BigDecimal tickToTime(Long tick, Measure timeUM) {
 		int idx = indexOfStandartTime(timeUM);
@@ -153,11 +153,11 @@ public class MfUtils {
 	}
 	
 	/**
-	 * преобразование времени выраженного в ЕИ в тики производства
+	 * РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІСЂРµРјРµРЅРё РІС‹СЂР°Р¶РµРЅРЅРѕРіРѕ РІ Р•Р РІ С‚РёРєРё РїСЂРѕРёР·РІРѕРґСЃС‚РІР°
 	 * 
-	 * @param tick		время
-	 * @param timeUM	ЕИ времени
-	 * @return			тики
+	 * @param tick		РІСЂРµРјСЏ
+	 * @param timeUM	Р•Р РІСЂРµРјРµРЅРё
+	 * @return			С‚РёРєРё
 	 */
 	public static Long timeToTick(BigDecimal time, Measure timeUM) {
 		int idx = indexOfStandartTime(timeUM);
@@ -188,34 +188,34 @@ public class MfUtils {
 	}
 
 	/**
-	 * преобразование времени в тики производства
+	 * РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІСЂРµРјРµРЅРё РІ С‚РёРєРё РїСЂРѕРёР·РІРѕРґСЃС‚РІР°
 	 * 
-	 * @param date	время
-	 * @return	время в тиках
+	 * @param date	РІСЂРµРјСЏ
+	 * @return	РІСЂРµРјСЏ РІ С‚РёРєР°С…
 	 */
 	public static long dateToTick(Date date) {
 		return date.getTime() + LEGACY_DATE_DELTA;
 	}
 	
 	/**
-	 * преобразование времени в тиках производства в время
+	 * РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РІСЂРµРјРµРЅРё РІ С‚РёРєР°С… РїСЂРѕРёР·РІРѕРґСЃС‚РІР° РІ РІСЂРµРјСЏ
 	 * 
-	 * @param tick	время в тиках
-	 * @return	время
+	 * @param tick	РІСЂРµРјСЏ РІ С‚РёРєР°С…
+	 * @return	РІСЂРµРјСЏ
 	 */
 	public static Date tickToDate(long tick) {
 		return new Date(tick - LEGACY_DATE_DELTA);
 	}
 	
 	/**
-	 * вычисление количества материала
+	 * РІС‹С‡РёСЃР»РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІР° РјР°С‚РµСЂРёР°Р»Р°
 	 * 
-	 * @param quantityRateFlag	тип вычисления количества
-	 * @param quan				количество
-	 * @param timeOper			время операции
-	 * @param scrapFactor		коэфициент брака
-	 * @param lotQuan			количество в партии
-	 * @return	количество материала
+	 * @param quantityRateFlag	С‚РёРї РІС‹С‡РёСЃР»РµРЅРёСЏ РєРѕР»РёС‡РµСЃС‚РІР°
+	 * @param quan				РєРѕР»РёС‡РµСЃС‚РІРѕ
+	 * @param timeOper			РІСЂРµРјСЏ РѕРїРµСЂР°С†РёРё
+	 * @param scrapFactor		РєРѕСЌС„РёС†РёРµРЅС‚ Р±СЂР°РєР°
+	 * @param lotQuan			РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РїР°СЂС‚РёРё
+	 * @return	РєРѕР»РёС‡РµСЃС‚РІРѕ РјР°С‚РµСЂРёР°Р»Р°
 	 */
 	public static BigDecimal calculateMaterialQuan(QuantityRateFlag quantityRateFlag, BigDecimal quan, BigDecimal timeOper, BigDecimal scrapFactor, BigDecimal lotQuan) {
 		switch (quantityRateFlag) {
@@ -257,25 +257,25 @@ public class MfUtils {
 	}
 	
 	/**
-	 * получение диапазона времени
+	 * РїРѕР»СѓС‡РµРЅРёРµ РґРёР°РїР°Р·РѕРЅР° РІСЂРµРјРµРЅРё
 	 * 
-	 * @param weekCalId			недельный календарь
-	 * @param baseDateTime		время
-	 * @param runTime			время работы
-	 * @param schedDirection	направление планирования
-	 * @return	диапазон
+	 * @param weekCalId			РЅРµРґРµР»СЊРЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ
+	 * @param baseDateTime		РІСЂРµРјСЏ
+	 * @param runTime			РІСЂРµРјСЏ СЂР°Р±РѕС‚С‹
+	 * @param schedDirection	РЅР°РїСЂР°РІР»РµРЅРёРµ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @return	РґРёР°РїР°Р·РѕРЅ
 	 */
 	public static TimeRange getTimes(int weekCalId, long baseDateTime, long runTime, ScheduleDirection schedDirection) {
 		return ((DayTimeServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(DayTimeServiceLocal.SERVICE_NAME)).getTimes(weekCalId, baseDateTime, runTime, schedDirection);
 	}
 	
 	/**
-	 * вычисление количество материала для состава изделия
+	 * РІС‹С‡РёСЃР»РµРЅРёРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РјР°С‚РµСЂРёР°Р»Р° РґР»СЏ СЃРѕСЃС‚Р°РІР° РёР·РґРµР»РёСЏ
 	 * 
-	 * @param bomMaterial	материал в составе изделия
-	 * @param actualityDate	дата
-	 * @param lotQuan		размер партии
-	 * @return	количество материала
+	 * @param bomMaterial	РјР°С‚РµСЂРёР°Р» РІ СЃРѕСЃС‚Р°РІРµ РёР·РґРµР»РёСЏ
+	 * @param actualityDate	РґР°С‚Р°
+	 * @param lotQuan		СЂР°Р·РјРµСЂ РїР°СЂС‚РёРё
+	 * @return	РєРѕР»РёС‡РµСЃС‚РІРѕ РјР°С‚РµСЂРёР°Р»Р°
 	 */
 	public static BigDecimal calculateBOMMaterialQuan(BomMaterial bomMaterial, Date actualityDate, BigDecimal lotQuan) {
 		return calculateMaterialQuan(bomMaterial.getQuantityRateFlag(), bomMaterial.getMtlQty()
@@ -283,20 +283,20 @@ public class MfUtils {
 	}
 	
 	/**
-	 * получение дневного календаря
+	 * РїРѕР»СѓС‡РµРЅРёРµ РґРЅРµРІРЅРѕРіРѕ РєР°Р»РµРЅРґР°СЂСЏ
 	 * 
-	 * @param weekCalId		недельный календарь
-	 * @param searchDate	дата
-	 * @return	дневной календарь
+	 * @param weekCalId		РЅРµРґРµР»СЊРЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ
+	 * @param searchDate	РґР°С‚Р°
+	 * @return	РґРЅРµРІРЅРѕР№ РєР°Р»РµРЅРґР°СЂСЊ
 	 */
 	public static DayCalendar getDayCalendar(int weekCalId, Date searchDate) {
 		return ((WeekCalendarChangeServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(WeekCalendarChangeServiceLocal.SERVICE_NAME)).getDayCalendar(weekCalId, searchDate);
 	}
 	
 	/**
-	 * Создает расшифровку стоимости
+	 * РЎРѕР·РґР°РµС‚ СЂР°СЃС€РёС„СЂРѕРІРєСѓ СЃС‚РѕРёРјРѕСЃС‚Рё
 	 * 
-	 * @return	расшифровровка стоимости
+	 * @return	СЂР°СЃС€РёС„СЂРѕРІСЂРѕРІРєР° СЃС‚РѕРёРјРѕСЃС‚Рё
 	 */
 	public static CostDetail createCostDetail() {
 		CostDetail result = new CostDetail();
@@ -305,7 +305,7 @@ public class MfUtils {
 	}
 
 	/**
-	 * Создает строку расшифровки стоимости
+	 * РЎРѕР·РґР°РµС‚ СЃС‚СЂРѕРєСѓ СЂР°СЃС€РёС„СЂРѕРІРєРё СЃС‚РѕРёРјРѕСЃС‚Рё
 	 * 
 	 * @param costDetail
 	 * @param costCategory
@@ -324,21 +324,21 @@ public class MfUtils {
 	}
 	
 	/**
-	 * определение смещения бакета
+	 * РѕРїСЂРµРґРµР»РµРЅРёРµ СЃРјРµС‰РµРЅРёСЏ Р±Р°РєРµС‚Р°
 	 * 
-	 * @param planningLevelId	уровень планирования
-	 * @param bucketOffsetDate	дата
-	 * @return	смещение бакета
+	 * @param planningLevelId	СѓСЂРѕРІРµРЅСЊ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param bucketOffsetDate	РґР°С‚Р°
+	 * @return	СЃРјРµС‰РµРЅРёРµ Р±Р°РєРµС‚Р°
 	 */
 	public static short determineBucketOffset(int planningLevelId, Date bucketOffsetDate) {
 		return ((PlanningLevelBucketServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(PlanningLevelBucketServiceLocal.SERVICE_NAME)).determineOffset(planningLevelId, bucketOffsetDate);
 	}
 
 	/**
-	 * определение диапазона бакета
+	 * РѕРїСЂРµРґРµР»РµРЅРёРµ РґРёР°РїР°Р·РѕРЅР° Р±Р°РєРµС‚Р°
 	 * 
-	 * @param planningLevelId	уровень планирования
-	 * @param bucketOffset		смещение бакета
+	 * @param planningLevelId	СѓСЂРѕРІРµРЅСЊ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param bucketOffset		СЃРјРµС‰РµРЅРёРµ Р±Р°РєРµС‚Р°
 	 * @return
 	 */
 	public static BucketRange determineBucketRange(int planningLevelId, short bucketOffset) {
@@ -346,9 +346,9 @@ public class MfUtils {
 	}
 
 	/**
-	 * удаление себестоимости
+	 * СѓРґР°Р»РµРЅРёРµ СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚Рё
 	 * 
-	 * @param costDetail	себестоимость
+	 * @param costDetail	СЃРµР±РµСЃС‚РѕРёРјРѕСЃС‚СЊ
 	 */
 	public static void clearCostDetailLine(CostDetail costDetail) {
 		((CostDetailLineServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CostDetailLineServiceLocal.SERVICE_NAME))
@@ -356,10 +356,10 @@ public class MfUtils {
 	}
 
 	/**
-	 * настройка дат действий объектов производства, производится поиск полей с именами EffOffDate и EffOnDate,
-	 * если данные поля не установлены, то приводятся к стандартным значениям
+	 * РЅР°СЃС‚СЂРѕР№РєР° РґР°С‚ РґРµР№СЃС‚РІРёР№ РѕР±СЉРµРєС‚РѕРІ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°, РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РїРѕРёСЃРє РїРѕР»РµР№ СЃ РёРјРµРЅР°РјРё EffOffDate Рё EffOnDate,
+	 * РµСЃР»Рё РґР°РЅРЅС‹Рµ РїРѕР»СЏ РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅС‹, С‚Рѕ РїСЂРёРІРѕРґСЏС‚СЃСЏ Рє СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рј Р·РЅР°С‡РµРЅРёСЏРј
 	 * 
-	 * @param entity	объект производства
+	 * @param entity	РѕР±СЉРµРєС‚ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°
 	 */
 	public static void adjustEffectiveDate(PersistentObject entity) {
 		if (entity.hasAttribute(EFF_OFF_DATE)) {

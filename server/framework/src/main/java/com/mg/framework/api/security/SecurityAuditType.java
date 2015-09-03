@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип аудита безопасности
+ * РўРёРї Р°СѓРґРёС‚Р° Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: SecurityAuditType.java,v 1.1 2007/10/19 06:31:34 safonov Exp $
@@ -26,17 +26,17 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName("Core.SecurityAuditType")
 public enum SecurityAuditType {
 	/**
-	 * ошибка
+	 * РѕС€РёР±РєР°
 	 */
 	@EnumConstantText("resource://com.mg.merp.core.resources.dataitemlabels#SecurityAuditType.Error")
 	ERROR,
 	/**
-	 * предупреждение
+	 * РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёРµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.core.resources.dataitemlabels#SecurityAuditType.Warning")
 	WARNING,
 	/**
-	 * информация
+	 * РёРЅС„РѕСЂРјР°С†РёСЏ
 	 */
 	@EnumConstantText("resource://com.mg.merp.core.resources.dataitemlabels#SecurityAuditType.Information")
 	INFORMATION

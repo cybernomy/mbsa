@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.widget;
 import com.mg.framework.api.ui.FieldEditor;
 
 /**
- * Элемент "Редактор ссылки на сущность"
+ * Р­Р»РµРјРµРЅС‚ "Р РµРґР°РєС‚РѕСЂ СЃСЃС‹Р»РєРё РЅР° СЃСѓС‰РЅРѕСЃС‚СЊ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityField.java,v 1.4 2007/03/27 08:40:10 safonov Exp $
@@ -25,17 +25,17 @@ import com.mg.framework.api.ui.FieldEditor;
 public interface EntityField extends FieldEditor {
 	
 	/**
-	 * атрибут названия реализации SearchHelp, если установлен, то заменяет используемый в описании типа сущности
+	 * Р°С‚СЂРёР±СѓС‚ РЅР°Р·РІР°РЅРёСЏ СЂРµР°Р»РёР·Р°С†РёРё SearchHelp, РµСЃР»Рё СѓСЃС‚Р°РЅРѕРІР»РµРЅ, С‚Рѕ Р·Р°РјРµРЅСЏРµС‚ РёСЃРїРѕР»СЊР·СѓРµРјС‹Р№ РІ РѕРїРёСЃР°РЅРёРё С‚РёРїР° СЃСѓС‰РЅРѕСЃС‚Рё
 	 */
 	final static String SEARCH_HELP = "searchHelp";
 
 	/**
-	 * атрибут списка свойств для отображения
+	 * Р°С‚СЂРёР±СѓС‚ СЃРїРёСЃРєР° СЃРІРѕР№СЃС‚РІ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ
 	 */
 	final static String ENTITY_PROPERTY_TEXT = "entityPropertyText";
 
 	/**
-	 * атрибут формата отображения
+	 * Р°С‚СЂРёР±СѓС‚ С„РѕСЂРјР°С‚Р° РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ
 	 */
 	final static String ENTITY_FORMAT = "entityFormat";
 

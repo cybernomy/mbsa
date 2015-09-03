@@ -29,7 +29,7 @@ import com.mg.merp.manufacture.model.Job;
 import com.mg.merp.manufacture.model.OutputProductHead;
 
 /**
- * Бизнес-компонент "Спецификация актов выпкуска готовой продукции" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ Р°РєС‚РѕРІ РІС‹РїРєСѓСЃРєР° РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё" 
  * 
  * @author leonova
  * @version $Id: OutputProductSpecServiceBean.java,v 1.7 2007/08/16 14:07:09 safonov Exp $
@@ -61,7 +61,7 @@ public class OutputProductSpecServiceBean extends ManufactureDocumentSpecService
 	 */
 	@PermitAll
 	public void createSpecifications(OutputProductHead docHead) {
-		//проверим права на методо "создать", не имеет смысла создавать дополнительный метод
+		//РїСЂРѕРІРµСЂРёРј РїСЂР°РІР° РЅР° РјРµС‚РѕРґРѕ "СЃРѕР·РґР°С‚СЊ", РЅРµ РёРјРµРµС‚ СЃРјС‹СЃР»Р° СЃРѕР·РґР°РІР°С‚СЊ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ РјРµС‚РѕРґ
 		SecurityUtils.checkPermission(new BusinessMethodPermission(getBusinessServiceMetadata().getName(), BusinessMethodPermission.CREATE_METHOD));
 		
 		if (docHead.getJob() == null)

@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.widget;
 import com.mg.framework.api.ui.FieldEditor;
 
 /**
- * Элемент "Ввод пароля"
+ * Р­Р»РµРјРµРЅС‚ "Р’РІРѕРґ РїР°СЂРѕР»СЏ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: SecretTextField.java,v 1.2 2006/11/21 15:34:06 safonov Exp $

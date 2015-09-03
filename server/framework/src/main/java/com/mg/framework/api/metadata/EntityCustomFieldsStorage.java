@@ -17,7 +17,7 @@ package com.mg.framework.api.metadata;
 import java.util.Map;
 
 /**
- * Репозитарий хранения пользовательских полей
+ * Р РµРїРѕР·РёС‚Р°СЂРёР№ С…СЂР°РЅРµРЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityCustomFieldsStorage.java,v 1.1 2007/01/25 15:17:13 safonov Exp $
@@ -25,32 +25,32 @@ import java.util.Map;
 public interface EntityCustomFieldsStorage {
 
 	/**
-	 * получить значение
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ
 	 * 
-	 * @param name	имя атрибута
-	 * @return	значение
+	 * @param name	РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
+	 * @return	Р·РЅР°С‡РµРЅРёРµ
 	 */
 	Object getValue(String name);
 	
 	/**
-	 * установить значение
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ
 	 * 
-	 * @param name	имя атрибута
-	 * @param value	значение
+	 * @param name	РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ
 	 */
 	void setValue(String name, Object value);
 	
 	/**
-	 * получить значения всех атрибутов
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёСЏ РІСЃРµС… Р°С‚СЂРёР±СѓС‚РѕРІ
 	 * 
-	 * @return	значения
+	 * @return	Р·РЅР°С‡РµРЅРёСЏ
 	 */
 	Map<String, Object> getValues();
 	
 	/**
-	 * установить значения
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёСЏ
 	 * 
-	 * @param values	значения
+	 * @param values	Р·РЅР°С‡РµРЅРёСЏ
 	 */
 	void setValues(Map<String, Object> values);
 	

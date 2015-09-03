@@ -23,7 +23,7 @@ import com.mg.merp.paymentalloc.TransactSpecServiceLocal;
 import com.mg.merp.paymentalloc.model.TransactSpec;
 
 /**
- * Реализация бизнес-компонента "Спецификации связанных документов" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёРё СЃРІСЏР·Р°РЅРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

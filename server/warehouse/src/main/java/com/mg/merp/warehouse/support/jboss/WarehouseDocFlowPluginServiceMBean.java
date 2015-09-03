@@ -16,14 +16,14 @@ package com.mg.merp.warehouse.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис дополнительных модулей подсистемы "Склад"
+ * РЎРµСЂРІРёСЃ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "РЎРєР»Р°Рґ"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseDocFlowPluginServiceMBean.java,v 1.1 2007/02/22 10:18:23 poroxnenko Exp $ 
  */
 public interface WarehouseDocFlowPluginServiceMBean extends ServiceMBean {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:warehouse=DocFlowPluginService"; //$NON-NLS-1$
 }

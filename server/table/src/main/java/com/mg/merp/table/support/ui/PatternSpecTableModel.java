@@ -32,7 +32,7 @@ import com.mg.merp.table.model.TimeKind;
 import com.mg.merp.table.support.TimeBoardHelper;
 
 /**
- * Модель таблицы "Спецификация шаблона"
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ "РЎРїРµС†РёС„РёРєР°С†РёСЏ С€Р°Р±Р»РѕРЅР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PatternSpecTableModel.java,v 1.1 2008/08/12 14:38:08 sharapov Exp $
@@ -130,9 +130,9 @@ public class PatternSpecTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * Установить тип времени
-	 * @param timeKind - тип времени
-	 * @param columns - список колонок для которых нужно установить
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ С‚РёРї РІСЂРµРјРµРЅРё
+	 * @param timeKind - С‚РёРї РІСЂРµРјРµРЅРё
+	 * @param columns - СЃРїРёСЃРѕРє РєРѕР»РѕРЅРѕРє РґР»СЏ РєРѕС‚РѕСЂС‹С… РЅСѓР¶РЅРѕ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ
 	 */
 	public void setTimeKind(TimeKind timeKind, int[] columns) {
 		if(columns == null || columns.length == 0 || selectedRows == null || selectedRows.length == 0)
@@ -148,9 +148,9 @@ public class PatternSpecTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * Установить количество часов
-	 * @param hours - кол-во часов
-	 * @param columns - список колонок для которых нужно установить
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ
+	 * @param hours - РєРѕР»-РІРѕ С‡Р°СЃРѕРІ
+	 * @param columns - СЃРїРёСЃРѕРє РєРѕР»РѕРЅРѕРє РґР»СЏ РєРѕС‚РѕСЂС‹С… РЅСѓР¶РЅРѕ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ
 	 */
 	public void setHours(BigDecimal hours, int[] columns) {
 		int row = selectedRows[0];
@@ -162,9 +162,9 @@ public class PatternSpecTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * Получить количество часов
-	 * @param columns - список колонок для которых нужно получить
-	 * @return количество часов
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ
+	 * @param columns - СЃРїРёСЃРѕРє РєРѕР»РѕРЅРѕРє РґР»СЏ РєРѕС‚РѕСЂС‹С… РЅСѓР¶РЅРѕ РїРѕР»СѓС‡РёС‚СЊ
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ
 	 */
 	public BigDecimal getHours(int[] columns) {
 		int row = selectedRows[0];
@@ -174,7 +174,7 @@ public class PatternSpecTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * Заполнить грид спецификации
+	 * Р—Р°РїРѕР»РЅРёС‚СЊ РіСЂРёРґ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	public void fillGrid(PatternHead patternHead, List<PatternSpec> patternSpecs, List<TimeKind> timeKinds) {
 		if(patternHead.getId() == null)
@@ -260,8 +260,8 @@ public class PatternSpecTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * Получить список позиций спецификации шаблона
-	 * @return список позиций спецификации шаблона
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё С€Р°Р±Р»РѕРЅР°
+	 * @return СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё С€Р°Р±Р»РѕРЅР°
 	 */
 	public List<PatternSpec[]> getTableModelItemList() {
 		return this.tableModelItemList;

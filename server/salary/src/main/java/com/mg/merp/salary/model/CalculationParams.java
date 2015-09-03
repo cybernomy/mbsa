@@ -19,7 +19,7 @@ import java.util.Date;
 import com.mg.merp.personnelref.model.StaffList;
 
 /**
- * Модель данных "Параметры расчета"
+ * РњРѕРґРµР»СЊ РґР°РЅРЅС‹С… "РџР°СЂР°РјРµС‚СЂС‹ СЂР°СЃС‡РµС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: CalculationParams.java,v 1.1 2007/07/09 08:21:56 sharapov Exp $

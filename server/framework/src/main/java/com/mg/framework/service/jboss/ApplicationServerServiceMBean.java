@@ -19,47 +19,47 @@ import org.jboss.system.ServiceMBean;
 import com.mg.framework.api.ApplicationServer;
 
 /**
- * JMX сервис управления прикладными функциями сервера приложения
+ * JMX СЃРµСЂРІРёСЃ СѓРїСЂР°РІР»РµРЅРёСЏ РїСЂРёРєР»Р°РґРЅС‹РјРё С„СѓРЅРєС†РёСЏРјРё СЃРµСЂРІРµСЂР° РїСЂРёР»РѕР¶РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ApplicationServerServiceMBean.java,v 1.4 2008/12/08 06:07:51 safonov Exp $
  */
 public interface ApplicationServerServiceMBean extends ApplicationServer, ServiceMBean {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:service=ApplicationServerService";
 
 	/**
-	 * конвертация базы данных
+	 * РєРѕРЅРІРµСЂС‚Р°С†РёСЏ Р±Р°Р·С‹ РґР°РЅРЅС‹С…
 	 * 
 	 * @throws Exception
 	 */
 	void convertDatabase() throws Exception;
 	
 	/**
-	 * остановка пула соединений с базой данных
+	 * РѕСЃС‚Р°РЅРѕРІРєР° РїСѓР»Р° СЃРѕРµРґРёРЅРµРЅРёР№ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С…
 	 * 
 	 * @throws Exception
 	 */
 	void stopDatabasePool(String connectionPoolName) throws Exception;
 	
 	/**
-	 * запуск пула соединений с базой данных
+	 * Р·Р°РїСѓСЃРє РїСѓР»Р° СЃРѕРµРґРёРЅРµРЅРёР№ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С…
 	 * 
 	 * @throws Exception
 	 */
 	void startDatabasePool(String connectionPoolName) throws Exception;
 
 	/**
-	 * конфигурация соединения
+	 * РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ СЃРѕРµРґРёРЅРµРЅРёСЏ
 	 * 
-	 * @return	конфигурация
+	 * @return	РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ
 	 */
 	org.w3c.dom.Element getDatabaseConfiguration();
 	
 	/**
-	 * установить конфигурацию соединения, должен иметь следующию структуру:
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ СЃРѕРµРґРёРЅРµРЅРёСЏ, РґРѕР»Р¶РµРЅ РёРјРµС‚СЊ СЃР»РµРґСѓСЋС‰РёСЋ СЃС‚СЂСѓРєС‚СѓСЂСѓ:
 	 * 
 	 * <pre>
 	 * &lt;attribute name="DatabaseConfiguration"&gt;
@@ -75,39 +75,39 @@ public interface ApplicationServerServiceMBean extends ApplicationServer, Servic
 	 * &lt;/attribute&gt;
 	 * </pre>
 	 * 
-	 * @param element	конфигурация
+	 * @param element	РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ
 	 */
 	void setDatabaseConfiguration(org.w3c.dom.Element element);
 	
 	/**
-	 * наименование сервера базы данных
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРµСЂР° Р±Р°Р·С‹ РґР°РЅРЅС‹С…
 	 * 
-	 * @return	наименование сервера базы данных
+	 * @return	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРµСЂР° Р±Р°Р·С‹ РґР°РЅРЅС‹С…
 	 */
 	String getDatabaseName();
 	
 	/**
-	 * установка наименования сервера базы данных, может иметь следующие значения:
+	 * СѓСЃС‚Р°РЅРѕРІРєР° РЅР°РёРјРµРЅРѕРІР°РЅРёСЏ СЃРµСЂРІРµСЂР° Р±Р°Р·С‹ РґР°РЅРЅС‹С…, РјРѕР¶РµС‚ РёРјРµС‚СЊ СЃР»РµРґСѓСЋС‰РёРµ Р·РЅР°С‡РµРЅРёСЏ:
 	 * <p>Firebird
 	 * <p>Interbase
 	 * <p>Oracle
 	 * <p>PostgreSQL
 	 * 
-	 * @param databaseName	наименование сервера базы данных
+	 * @param databaseName	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРµСЂР° Р±Р°Р·С‹ РґР°РЅРЅС‹С…
 	 */
 	void setDatabaseName(String databaseName);
 
 	/**
-	 * установить имя реализации менеджера хранилища данных
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РёРјСЏ СЂРµР°Р»РёР·Р°С†РёРё РјРµРЅРµРґР¶РµСЂР° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
 	 * 
-	 * @param implName	имя реализации
+	 * @param implName	РёРјСЏ СЂРµР°Р»РёР·Р°С†РёРё
 	 */
 	void setPersistentManagerImpl(String implName);
 
 	/**
-	 * получить имя реализации менеджера хранилища данных
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРјСЏ СЂРµР°Р»РёР·Р°С†РёРё РјРµРЅРµРґР¶РµСЂР° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
 	 * 
-	 * @return	имя реализации
+	 * @return	РёРјСЏ СЂРµР°Р»РёР·Р°С†РёРё
 	 */
 	String getPersistentManagerImpl();
 

@@ -17,7 +17,7 @@ import com.mg.framework.api.BusinessException;
 import com.mg.merp.warehouse.support.Messages;
 
 /**
- * ИС "Невозможно откатить документ - было списание с партии"
+ * РРЎ "РќРµРІРѕР·РјРѕР¶РЅРѕ РѕС‚РєР°С‚РёС‚СЊ РґРѕРєСѓРјРµРЅС‚ - Р±С‹Р»Рѕ СЃРїРёСЃР°РЅРёРµ СЃ РїР°СЂС‚РёРё"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: BatchNotAliveException.java,v 1.2 2007/03/26 13:31:18 poroxnenko Exp $ 

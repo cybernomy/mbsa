@@ -26,8 +26,8 @@ import com.mg.framework.api.ui.WidgetEvent;
 import com.mg.framework.api.ui.widget.Button;
 
 /**
- * Абстрактный класс формы поиска сущностей, как правило используется в паре с {@link com.mg.framework.api.ui.SearchHelp SearchHelp}.
- * Содержит базовую функциональность для работы с {@link com.mg.framework.api.ui.SearchHelp SearchHelp}.
+ * РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ РєР»Р°СЃСЃ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№, РєР°Рє РїСЂР°РІРёР»Рѕ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІ РїР°СЂРµ СЃ {@link com.mg.framework.api.ui.SearchHelp SearchHelp}.
+ * РЎРѕРґРµСЂР¶РёС‚ Р±Р°Р·РѕРІСѓСЋ С„СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕСЃС‚СЊ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ {@link com.mg.framework.api.ui.SearchHelp SearchHelp}.
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractSearchForm.java,v 1.5 2009/02/09 12:58:36 safonov Exp $
@@ -45,7 +45,7 @@ public abstract class AbstractSearchForm extends AbstractForm implements SearchH
 		searchPerformed = false;
 		super.doOnRun();
 		
-		//обработка SearchHelp, если используется в данном качестве, то откроем кнопку chooseButton
+		//РѕР±СЂР°Р±РѕС‚РєР° SearchHelp, РµСЃР»Рё РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІ РґР°РЅРЅРѕРј РєР°С‡РµСЃС‚РІРµ, С‚Рѕ РѕС‚РєСЂРѕРµРј РєРЅРѕРїРєСѓ chooseButton
 		if (!searchHelpListener.isEmpty()) {
 			Widget chooseButton = view.getWidget(STANDART_CHOOSE_BUTTON);
 			if (chooseButton != null) {
@@ -66,14 +66,14 @@ public abstract class AbstractSearchForm extends AbstractForm implements SearchH
 	}
 
 	/**
-	 * получить список найденных объектов-сущностей, должен быть переопределен в наследниках
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РЅР°Р№РґРµРЅРЅС‹С… РѕР±СЉРµРєС‚РѕРІ-СЃСѓС‰РЅРѕСЃС‚РµР№, РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ РІ РЅР°СЃР»РµРґРЅРёРєР°С…
 	 * 
 	 * @return
 	 */
 	protected abstract PersistentObject[] getSearchedEntities();
 	
 	/**
-	 * создать событие о выполнении поиска
+	 * СЃРѕР·РґР°С‚СЊ СЃРѕР±С‹С‚РёРµ Рѕ РІС‹РїРѕР»РЅРµРЅРёРё РїРѕРёСЃРєР°
 	 * 
 	 * @param event
 	 */
@@ -87,18 +87,18 @@ public abstract class AbstractSearchForm extends AbstractForm implements SearchH
 	}
 
 	/**
-	 * получить сущность для позиционирования
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃСѓС‰РЅРѕСЃС‚СЊ РґР»СЏ РїРѕР·РёС†РёРѕРЅРёСЂРѕРІР°РЅРёСЏ
 	 * 
-	 * @return	сущность, <code>null</code> если не установлена
+	 * @return	СЃСѓС‰РЅРѕСЃС‚СЊ, <code>null</code> РµСЃР»Рё РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅР°
 	 */
 	protected PersistentObject getTargetEntity() {
 		return targetEntity;
 	}
 
 	/**
-	 * отправка события о выполнении процедуры SearchHelp
+	 * РѕС‚РїСЂР°РІРєР° СЃРѕР±С‹С‚РёСЏ Рѕ РІС‹РїРѕР»РЅРµРЅРёРё РїСЂРѕС†РµРґСѓСЂС‹ SearchHelp
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void fireSearchPerformed(SearchHelpEvent event) {
 		for (SearchHelpListener listener : searchHelpListener)
@@ -106,9 +106,9 @@ public abstract class AbstractSearchForm extends AbstractForm implements SearchH
 	}
 
 	/**
-	 * отправка события об отмене процедуры SearchHelp
+	 * РѕС‚РїСЂР°РІРєР° СЃРѕР±С‹С‚РёСЏ РѕР± РѕС‚РјРµРЅРµ РїСЂРѕС†РµРґСѓСЂС‹ SearchHelp
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void fireSearchCanceled(SearchHelpEvent event) {
 		for (SearchHelpListener listener : searchHelpListener)
@@ -116,9 +116,9 @@ public abstract class AbstractSearchForm extends AbstractForm implements SearchH
 	}
 
 	/**
-	 * обработчик события выбора
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР°
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public final void onActionChoose(WidgetEvent event) {
 		//searchPerformed = true; https://issues.m-g.ru/bugzilla/show_bug.cgi?id=4986

@@ -48,7 +48,7 @@ import com.mg.merp.account.model.RemnDbKt;
 import com.mg.merp.core.model.Folder;
 
 /**
- * Реализация бизнес-компонента "Хозяйственные операции" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РҐРѕР·СЏР№СЃС‚РІРµРЅРЅС‹Рµ РѕРїРµСЂР°С†РёРё" 
  *
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -62,9 +62,9 @@ public class OperationServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	private AccConfig config = ConfigurationHelper.getConfiguration();
 
 	/**
-	 * проверка периода на возможность изменения
+	 * РїСЂРѕРІРµСЂРєР° РїРµСЂРёРѕРґР° РЅР° РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РёР·РјРµРЅРµРЅРёСЏ
 	 * 
-	 * @param operDate	дата ХО
+	 * @param operDate	РґР°С‚Р° РҐРћ
 	 */
 	private void checkPeriod(EconomicOper oper) {
 		((PeriodServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/account/Period")).checkPeriod(oper.getKeepDate()); //$NON-NLS-1$
@@ -111,12 +111,12 @@ public class OperationServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Копирование со сторонирование
+	 * РљРѕРїРёСЂРѕРІР°РЅРёРµ СЃРѕ СЃС‚РѕСЂРѕРЅРёСЂРѕРІР°РЅРёРµ
 	 * 
 	 * @param economicOper
-	 * 				- хоз.операция
+	 * 				- С…РѕР·.РѕРїРµСЂР°С†РёСЏ
 	 * @return
-	 * 				- клон хоз. операции
+	 * 				- РєР»РѕРЅ С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 */
 	protected EconomicOper doStorno(EconomicOper economicOper) {
 		AttributeMap attributes = economicOper.getAllAttributes();
@@ -143,15 +143,15 @@ public class OperationServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Создание хоз.операции по образцу
-	 * @param pattern - образец  
-	 * @param folder - папка назначения
-	 * @return хоз.операция
+	 * РЎРѕР·РґР°РЅРёРµ С…РѕР·.РѕРїРµСЂР°С†РёРё РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param pattern - РѕР±СЂР°Р·РµС†  
+	 * @param folder - РїР°РїРєР° РЅР°Р·РЅР°С‡РµРЅРёСЏ
+	 * @return С…РѕР·.РѕРїРµСЂР°С†РёСЏ
 	 */
 	protected EconomicOper doCreateByPattern(EconomicOperModel pattern, Folder folder) {
 		EconomicOper economicOper = initialize();
 		AttributeMap attributes = pattern.getAllAttributes();
-		//удаляем атрибуты образца, которые отсутсвуют в самой хоз. операции
+		//СѓРґР°Р»СЏРµРј Р°С‚СЂРёР±СѓС‚С‹ РѕР±СЂР°Р·С†Р°, РєРѕС‚РѕСЂС‹Рµ РѕС‚СЃСѓС‚СЃРІСѓСЋС‚ РІ СЃР°РјРѕР№ С…РѕР·. РѕРїРµСЂР°С†РёРё
 		attributes.remove("Id"); //$NON-NLS-1$
 		attributes.remove("SourceTo"); //$NON-NLS-1$
 		attributes.remove("ModelName"); //$NON-NLS-1$
@@ -173,9 +173,9 @@ public class OperationServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Создать спецификации хоз. операции по образцу
-	 * @param pattern - образец
-	 * @param economicOper - хоз. операция
+	 * РЎРѕР·РґР°С‚СЊ СЃРїРµС†РёС„РёРєР°С†РёРё С…РѕР·. РѕРїРµСЂР°С†РёРё РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param pattern - РѕР±СЂР°Р·РµС†
+	 * @param economicOper - С…РѕР·. РѕРїРµСЂР°С†РёСЏ
 	 */
 	private void createSpecs(EconomicOperModel pattern, EconomicOper economicOper) {
 		EconomicSpecServiceLocal specService = (EconomicSpecServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/account/EconomicSpec"); //$NON-NLS-1$;
@@ -195,7 +195,7 @@ public class OperationServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	private EconomicSpec initializeEconomicSpecByPattern(EconomicSpecModel patternSpec, EconomicOper economicOper, EconomicSpecServiceLocal specService) {
 		EconomicSpec economicSpec = specService.initialize();
 		AttributeMap attributes = patternSpec.getAllAttributes();
-		//удаляем атрибуты образца, которые отсутсвуют в самой спецификации операции
+		//СѓРґР°Р»СЏРµРј Р°С‚СЂРёР±СѓС‚С‹ РѕР±СЂР°Р·С†Р°, РєРѕС‚РѕСЂС‹Рµ РѕС‚СЃСѓС‚СЃРІСѓСЋС‚ РІ СЃР°РјРѕР№ СЃРїРµС†РёС„РёРєР°С†РёРё РѕРїРµСЂР°С†РёРё
 		attributes.remove("Id"); //$NON-NLS-1$
 		attributes.remove("EconomicOperModel"); //$NON-NLS-1$
 		attributes.remove("QtyAlg"); //$NON-NLS-1$
@@ -240,12 +240,12 @@ public class OperationServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Создание хоз. операции по оборотке "Ведомость расчета с контрагентом"
+	 * РЎРѕР·РґР°РЅРёРµ С…РѕР·. РѕРїРµСЂР°С†РёРё РїРѕ РѕР±РѕСЂРѕС‚РєРµ "Р’РµРґРѕРјРѕСЃС‚СЊ СЂР°СЃС‡РµС‚Р° СЃ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРј"
 	 * 
 	 * @param remnDbKt
-	 * 				- обротка "Ведомость расчета с контрагентом"
+	 * 				- РѕР±СЂРѕС‚РєР° "Р’РµРґРѕРјРѕСЃС‚СЊ СЂР°СЃС‡РµС‚Р° СЃ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРј"
 	 * @param folder
-	 * 				- папка-приемник для создаваемой хоз. операции
+	 * 				- РїР°РїРєР°-РїСЂРёРµРјРЅРёРє РґР»СЏ СЃРѕР·РґР°РІР°РµРјРѕР№ С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 */
 	protected EconomicOper doAddFromRemnDbKt(RemnDbKt remnDbKt, Folder folder) {
 		if (remnDbKt != null) {
@@ -254,7 +254,7 @@ public class OperationServiceBean extends AbstractPOJODataBusinessObjectServiceB
 			if (folder == null)
 				throw new BusinessException(Messages.getInstance().getMessage(Messages.NOT_CHOOSE_FOLDER));
 			economicOper.setFolder(folder);
-			//устанавливаем дату хоз. операции
+			//СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РґР°С‚Сѓ С…РѕР·. РѕРїРµСЂР°С†РёРё
 			Date keepDate = remnDbKt.getPeriod().getDateTo();
 			if (remnDbKt.getPeriod().getDateTo().compareTo(DateTimeUtils.nowDate()) > 0)
 				keepDate = DateTimeUtils.nowDate();
@@ -269,7 +269,7 @@ public class OperationServiceBean extends AbstractPOJODataBusinessObjectServiceB
 			economicOper.setFrom(remnDbKt.getContractor());
 			economicOper.setTo(remnDbKt.getContractor());
 			create(economicOper);
-			//создаем проводку
+			//СЃРѕР·РґР°РµРј РїСЂРѕРІРѕРґРєСѓ
 			EconomicSpecServiceLocal economicSpecService = (EconomicSpecServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/account/EconomicSpec"); //$NON-NLS-1$
 			EconomicSpec economicSpec = economicSpecService.initialize();
 			economicSpec.setEconomicOper(economicOper);

@@ -61,11 +61,11 @@ public class EntityMapperWorkbenchImpl implements EntityMapperWorkbench {
 		try {
 			PersistentManager pm = ServerUtils.getPersistentManager();
 			EntityTransformerMapping etm = pm.find(EntityTransformerMapping.class, mapping.getId());
-			// был изменён
+			// Р±С‹Р» РёР·РјРµРЅС‘РЅ
 			wasChanged = etm.getSysVersion().after(mapping.getSysVersion());
 			if (!wasChanged) {
 				etm.setMapId(mapping.getMapId());
-				//TODO: затупка, взять нормальный
+				//TODO: Р·Р°С‚СѓРїРєР°, РІР·СЏС‚СЊ РЅРѕСЂРјР°Р»СЊРЅС‹Р№
 				etm.setApplicationLayer(mapping.getApplicationLayer());
 				etm.setClassA(mapping.getClassA());
 				etm.setClassB(mapping.getClassB());
@@ -87,8 +87,8 @@ public class EntityMapperWorkbenchImpl implements EntityMapperWorkbench {
 			NotSupportedException, SystemException {
 		try {
 			PersistentManager pm = ServerUtils.getPersistentManager();
-			// SysClient проставляется автоматически, но при наличии
-			// контекста пользователя. Его сейчас нет
+			// SysClient РїСЂРѕСЃС‚Р°РІР»СЏРµС‚СЃСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё, РЅРѕ РїСЂРё РЅР°Р»РёС‡РёРё
+			// РєРѕРЅС‚РµРєСЃС‚Р° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ. Р•РіРѕ СЃРµР№С‡Р°СЃ РЅРµС‚
 			SysClient sc = pm.find(SysClient.class, 1);
 			mapping.setSysClient(sc);
 			mapping.setHashAB(EntityTransformerImpl.getHash(mapping.getClassA(), mapping.getClassB()));

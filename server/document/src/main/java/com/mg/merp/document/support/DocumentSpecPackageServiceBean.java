@@ -27,7 +27,7 @@ import com.mg.merp.document.DocumentSpecPackageServiceLocal;
 import com.mg.merp.document.model.DocumentSpecPackage;
 
 /**
- * Реализация бизнес-компонента "Упаковки товара позиции спецификации документа" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЈРїР°РєРѕРІРєРё С‚РѕРІР°СЂР° РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

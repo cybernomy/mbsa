@@ -21,7 +21,7 @@ import com.mg.merp.manufacture.support.Messages;
 import com.mg.merp.reference.model.Catalog;
 
 /**
- * ИС генерируется если не найден текущий состав изделия для продукции
+ * РРЎ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ С‚РµРєСѓС‰РёР№ СЃРѕСЃС‚Р°РІ РёР·РґРµР»РёСЏ РґР»СЏ РїСЂРѕРґСѓРєС†РёРё
  * 
  * @author safonov
  * @version $Id: BOMNotFoundException.java,v 1.2 2007/07/30 10:28:17 safonov Exp $

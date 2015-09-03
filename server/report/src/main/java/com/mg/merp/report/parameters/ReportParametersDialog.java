@@ -18,7 +18,7 @@ import java.util.Map;
 import com.mg.framework.api.ui.DialogForm;
 
 /**
- * Интерфейс формы запроса параметров отчёта
+ * РРЅС‚РµСЂС„РµР№СЃ С„РѕСЂРјС‹ Р·Р°РїСЂРѕСЃР° РїР°СЂР°РјРµС‚СЂРѕРІ РѕС‚С‡С‘С‚Р°
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: ReportParametersDialog.java,v 1.2 2008/03/27 08:12:15 safonov Exp $
@@ -26,16 +26,16 @@ import com.mg.framework.api.ui.DialogForm;
 public interface ReportParametersDialog extends DialogForm {
 
 	/**
-	 * установить параметры отчета
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РѕС‚С‡РµС‚Р°
 	 * 
-	 * @param params	список параметров отчета
+	 * @param params	СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ РѕС‚С‡РµС‚Р°
 	 */
 	void setParameters(Map<String, ReportParameter> params);
 	
 	/**
-	 * получить парамтеры отчета
+	 * РїРѕР»СѓС‡РёС‚СЊ РїР°СЂР°РјС‚РµСЂС‹ РѕС‚С‡РµС‚Р°
 	 * 
-	 * @return	список параметров отчета
+	 * @return	СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ РѕС‚С‡РµС‚Р°
 	 */
 	Map<String, ReportParameter> getParameters();
 

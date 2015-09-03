@@ -18,20 +18,20 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Статус Состава изделия
+ * РЎС‚Р°С‚СѓСЃ РЎРѕСЃС‚Р°РІР° РёР·РґРµР»РёСЏ
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: BomStatus.java,v 1.1 2006/04/13 10:20:42 safonov Exp $
  */
 @DataItemName ("MfReference.BomStatus")
 public enum BomStatus {
 	/**
-	 * Создаётся
+	 * РЎРѕР·РґР°С‘С‚СЃСЏ
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#BomStatus.IsCreating")
 	ISCREATING,
 	
 	/**
-	 * Создан
+	 * РЎРѕР·РґР°РЅ
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#BomStatus.Done")
 	DONE

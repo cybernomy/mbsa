@@ -32,7 +32,7 @@ import com.mg.merp.warehouse.WarehouseProcessDocumentLineData;
 import com.mg.merp.warehouse.model.Warehouse;
 
 /**
- * Реализация данных по отработке
+ * Р РµР°Р»РёР·Р°С†РёСЏ РґР°РЅРЅС‹С… РїРѕ РѕС‚СЂР°Р±РѕС‚РєРµ
  * 
  * @author Oleg V. Safonov
  * @version $Id: WarehouseProcessDocumentLineDataImpl.java,v 1.1 2008/04/18 15:22:11 safonov Exp $
@@ -77,8 +77,8 @@ public class WarehouseProcessDocumentLineDataImpl implements
 	}
 
 	private void convertQuantitiesAndPrices(DocSpec docSpec, Date processDate) {
-		//если не совпадают ЕИ в спецификации документа и в каталоге, то преобразуем количества
-		//к ЕИ каталога, т.к. склад хранит в ЕИ каталога
+		//РµСЃР»Рё РЅРµ СЃРѕРІРїР°РґР°СЋС‚ Р•Р РІ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р° Рё РІ РєР°С‚Р°Р»РѕРіРµ, С‚Рѕ РїСЂРµРѕР±СЂР°Р·СѓРµРј РєРѕР»РёС‡РµСЃС‚РІР°
+		//Рє Р•Р РєР°С‚Р°Р»РѕРіР°, С‚.Рє. СЃРєР»Р°Рґ С…СЂР°РЅРёС‚ РІ Р•Р РєР°С‚Р°Р»РѕРіР°
 		if ((docSpec.getMeasure1().getId() != docSpec.getCatalog().getMeasure1().getId())
 				|| (docSpec.getMeasure2() != null && docSpec.getCatalog().getMeasure2() != null
 				&& (docSpec.getMeasure2().getId() != docSpec.getCatalog().getMeasure2().getId()))) {
@@ -90,8 +90,8 @@ public class WarehouseProcessDocumentLineDataImpl implements
 			this.quantity1 = newQuantity;
 			this.price = this.price.multiply(measureFactor);
 
-			// на складах в 2х количествах учитываем только "учетно/весовые"
-			// для остальных 2е количество всегда = 0
+			// РЅР° СЃРєР»Р°РґР°С… РІ 2С… РєРѕР»РёС‡РµСЃС‚РІР°С… СѓС‡РёС‚С‹РІР°РµРј С‚РѕР»СЊРєРѕ "СѓС‡РµС‚РЅРѕ/РІРµСЃРѕРІС‹Рµ"
+			// РґР»СЏ РѕСЃС‚Р°Р»СЊРЅС‹С… 2Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РІСЃРµРіРґР° = 0
 			if (this.quantity2 != null && docSpec.getPrice1() != null
 					&& (docSpec.getCatalog().getMeasureControl() == MeasureControl.CATCHWEIGHT)) {
 

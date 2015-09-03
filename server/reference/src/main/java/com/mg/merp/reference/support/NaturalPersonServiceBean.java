@@ -27,7 +27,7 @@ import com.mg.merp.reference.model.NaturalPerson;
 import com.mg.merp.reference.model.NaturalPersonHist;
 
 /**
- * Реализация бизнес-компонента "Физические лица" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р¤РёР·РёС‡РµСЃРєРёРµ Р»РёС†Р°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

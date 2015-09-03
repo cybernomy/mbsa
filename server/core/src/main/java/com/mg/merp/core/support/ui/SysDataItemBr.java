@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.core.model.SysDataItem;
 
 /**
- * Браузер элементов данных
+ * Р‘СЂР°СѓР·РµСЂ СЌР»РµРјРµРЅС‚РѕРІ РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: SysDataItemBr.java,v 1.1 2008/03/03 13:05:04 safonov Exp $

@@ -23,7 +23,7 @@ import com.mg.framework.api.metadata.BusinessServiceMetadata;
 import com.mg.framework.utils.BusinessObjectUtils;
 
 /**
- * Абстрактная реализация бизнес-компонента основанного на сервисах не имеющих состояние во время выполнения (stateless)
+ * РђР±СЃС‚СЂР°РєС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РѕСЃРЅРѕРІР°РЅРЅРѕРіРѕ РЅР° СЃРµСЂРІРёСЃР°С… РЅРµ РёРјРµСЋС‰РёС… СЃРѕСЃС‚РѕСЏРЅРёРµ РІРѕ РІСЂРµРјСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ (stateless)
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractPOJOBusinessObjectStatelessServiceBean.java,v 1.4 2006/09/28 12:24:12 safonov Exp $
@@ -33,11 +33,11 @@ public abstract class AbstractPOJOBusinessObjectStatelessServiceBean extends
 	private BusinessServiceMetadata serviceMetadata = null;
 
 	/**
-	 * Перехватчик безопасности
+	 * РџРµСЂРµС…РІР°С‚С‡РёРє Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
 	 * 
-	 * @param ctx	контекст вызова
-	 * @return	результат вызова
-	 * @throws Exception	ИС сгенерированная во время вызова
+	 * @param ctx	РєРѕРЅС‚РµРєСЃС‚ РІС‹Р·РѕРІР°
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹Р·РѕРІР°
+	 * @throws Exception	РРЎ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅР°СЏ РІРѕ РІСЂРµРјСЏ РІС‹Р·РѕРІР°
 	 */
 	@AroundInvoke
 	public Object securityCheckIntercept(InvocationContext ctx) throws Exception {
@@ -45,9 +45,9 @@ public abstract class AbstractPOJOBusinessObjectStatelessServiceBean extends
 	}
 
 	/**
-	 * Реализация загрузки метаданных бизнес-компонента
+	 * Р РµР°Р»РёР·Р°С†РёСЏ Р·Р°РіСЂСѓР·РєРё РјРµС‚Р°РґР°РЅРЅС‹С… Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
-	 * @return	метаданные
+	 * @return	РјРµС‚Р°РґР°РЅРЅС‹Рµ
 	 */
 	protected BusinessServiceMetadata doLoadBusinessServiceMetadata() {
 		return BusinessObjectUtils.loadBusinessServiceMetadata(getSessionContext());

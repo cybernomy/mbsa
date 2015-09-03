@@ -32,28 +32,28 @@ import com.mg.framework.api.orm.PersistentObject;
 public class ReflectionUtils {
 
 	/**
-	 * получить метаданные поля класса
+	 * РїРѕР»СѓС‡РёС‚СЊ РјРµС‚Р°РґР°РЅРЅС‹Рµ РїРѕР»СЏ РєР»Р°СЃСЃР°
 	 * 
-	 * @param clazz		класс
-	 * @param fieldName	имя поля
-	 * @return			метаданные
+	 * @param clazz		РєР»Р°СЃСЃ
+	 * @param fieldName	РёРјСЏ РїРѕР»СЏ
+	 * @return			РјРµС‚Р°РґР°РЅРЅС‹Рµ
 	 */
 	public static ReflectionMetadata getFieldReflectionMetadata(Class<?> clazz, String fieldName) {
 		return getFieldReflectionMetadata(findDeclaredField(clazz, fieldName));
 	}
 	
 	/**
-	 * получить метаданные поля класса
+	 * РїРѕР»СѓС‡РёС‚СЊ РјРµС‚Р°РґР°РЅРЅС‹Рµ РїРѕР»СЏ РєР»Р°СЃСЃР°
 	 * 
-	 * @param field	поле
-	 * @return		метаданные
+	 * @param field	РїРѕР»Рµ
+	 * @return		РјРµС‚Р°РґР°РЅРЅС‹Рµ
 	 */
 	public static ReflectionMetadata getFieldReflectionMetadata(Field field) {
 		ReflectionMetadata result = new ReflectionMetadata();
 		if (field != null) {
 			Class<?> fieldClazz = field.getType();
 			DataItemName dataItemName = field.getAnnotation(DataItemName.class);
-        	//если у свойства нет типа данных то проверка наличия ссылки на элемент данных у типа
+        	//РµСЃР»Рё Сѓ СЃРІРѕР№СЃС‚РІР° РЅРµС‚ С‚РёРїР° РґР°РЅРЅС‹С… С‚Рѕ РїСЂРѕРІРµСЂРєР° РЅР°Р»РёС‡РёСЏ СЃСЃС‹Р»РєРё РЅР° СЌР»РµРјРµРЅС‚ РґР°РЅРЅС‹С… Сѓ С‚РёРїР°
         	if (dataItemName == null)
         		dataItemName = getDataItemByClass(fieldClazz);
         		
@@ -64,10 +64,10 @@ public class ReflectionUtils {
 	}
 	
 	/**
-	 * получить метаданные класса
+	 * РїРѕР»СѓС‡РёС‚СЊ РјРµС‚Р°РґР°РЅРЅС‹Рµ РєР»Р°СЃСЃР°
 	 * 
-	 * @param clazz	класс
-	 * @return		метаданные
+	 * @param clazz	РєР»Р°СЃСЃ
+	 * @return		РјРµС‚Р°РґР°РЅРЅС‹Рµ
 	 */
 	public static ReflectionMetadata getClassReflectionMetadata(Class<?> clazz) {
 		ReflectionMetadata result = new ReflectionMetadata();
@@ -77,11 +77,11 @@ public class ReflectionUtils {
 	}
 	
 	/**
-	 * получить метаданные атрибута класса-сущности
+	 * РїРѕР»СѓС‡РёС‚СЊ РјРµС‚Р°РґР°РЅРЅС‹Рµ Р°С‚СЂРёР±СѓС‚Р° РєР»Р°СЃСЃР°-СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param entityClazz	класс-сущность
-	 * @param propertyName	имя атрибута
-	 * @return				метаданные
+	 * @param entityClazz	РєР»Р°СЃСЃ-СЃСѓС‰РЅРѕСЃС‚СЊ
+	 * @param propertyName	РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
+	 * @return				РјРµС‚Р°РґР°РЅРЅС‹Рµ
 	 */
 	public static ReflectionMetadata getPropertyReflectionMetadata(Class<? extends PersistentObject> entityClazz, String propertyName) {
 		if (propertyName == null)
@@ -109,12 +109,12 @@ public class ReflectionUtils {
         else {
         	DataItemName dataItemAnot;
         	Class<?> clazz = m.getReturnType();
-        	//проверим элемент данных у свойства
+        	//РїСЂРѕРІРµСЂРёРј СЌР»РµРјРµРЅС‚ РґР°РЅРЅС‹С… Сѓ СЃРІРѕР№СЃС‚РІР°
         	dataItemAnot = m.getAnnotation(DataItemName.class);
-        	//если у свойства нет типа данных то проверка наличия ссылки на элемент данных у типа
+        	//РµСЃР»Рё Сѓ СЃРІРѕР№СЃС‚РІР° РЅРµС‚ С‚РёРїР° РґР°РЅРЅС‹С… С‚Рѕ РїСЂРѕРІРµСЂРєР° РЅР°Р»РёС‡РёСЏ СЃСЃС‹Р»РєРё РЅР° СЌР»РµРјРµРЅС‚ РґР°РЅРЅС‹С… Сѓ С‚РёРїР°
         	if (dataItemAnot == null)
         		dataItemAnot = getDataItemByClass(clazz);
-        	//проверим SearchHelp
+        	//РїСЂРѕРІРµСЂРёРј SearchHelp
         	SearchHelpName searchHelpName = m.getAnnotation(SearchHelpName.class);
         		
         	ReflectionMetadata result = new ReflectionMetadata();
@@ -127,11 +127,11 @@ public class ReflectionUtils {
 	}
 	
 	/**
-	 * получить класс атрибута класса-сущности
+	 * РїРѕР»СѓС‡РёС‚СЊ РєР»Р°СЃСЃ Р°С‚СЂРёР±СѓС‚Р° РєР»Р°СЃСЃР°-СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param entityClazz	класс-сущность
-	 * @param propertyName	имя атрибута
-	 * @return				метаданные
+	 * @param entityClazz	РєР»Р°СЃСЃ-СЃСѓС‰РЅРѕСЃС‚СЊ
+	 * @param propertyName	РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
+	 * @return				РјРµС‚Р°РґР°РЅРЅС‹Рµ
 	 */
 	public static Class<?> getPropertyType(Class<? extends PersistentObject> entityClazz, String propertyName) {
 		if (propertyName == null)
@@ -162,7 +162,7 @@ public class ReflectionUtils {
 	}
 	
 	private static DataItemName getDataItemByClass(Class<?> clazz) {
-    	//поддерживается тип enum и entity
+    	//РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ С‚РёРї enum Рё entity
     	if ((Enum.class.isAssignableFrom(clazz) ||
     			PersistentObject.class.isAssignableFrom(clazz)))
     		return clazz.getAnnotation(DataItemName.class);
@@ -171,13 +171,13 @@ public class ReflectionUtils {
 	}
 	
 	/**
-	 * получает родовой тип класса по индексу 
+	 * РїРѕР»СѓС‡Р°РµС‚ СЂРѕРґРѕРІРѕР№ С‚РёРї РєР»Р°СЃСЃР° РїРѕ РёРЅРґРµРєСЃСѓ 
 	 * 
-	 * @param <T>	тип
-	 * @param clazz	класс
-	 * @param index	индекс
-	 * @return		родовой тип
-	 * @throws		IndexOutOfBoundsException в случае если индекс превышает количество родовых типов
+	 * @param <T>	С‚РёРї
+	 * @param clazz	РєР»Р°СЃСЃ
+	 * @param index	РёРЅРґРµРєСЃ
+	 * @return		СЂРѕРґРѕРІРѕР№ С‚РёРї
+	 * @throws		IndexOutOfBoundsException РІ СЃР»СѓС‡Р°Рµ РµСЃР»Рё РёРЅРґРµРєСЃ РїСЂРµРІС‹С€Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ СЂРѕРґРѕРІС‹С… С‚РёРїРѕРІ
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T> Class<T> getGenericClass(Class<?> clazz, int index) {
@@ -188,16 +188,16 @@ public class ReflectionUtils {
 	}
 	
 	/**
-	 * возвращает класс объекта-сущности
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ РєР»Р°СЃСЃ РѕР±СЉРµРєС‚Р°-СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param entity	объект-сущность
-	 * @return			класс объекта-сущности
+	 * @param entity	РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ
+	 * @return			РєР»Р°СЃСЃ РѕР±СЉРµРєС‚Р°-СЃСѓС‰РЅРѕСЃС‚Рё
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T extends PersistentObject> Class<T> getEntityClass(T entity) {
 		Class<T> result = (Class<T>) entity.getClass();
-		//если в названии класса присутствует javassist, то класс создан с помощью javassist
-		//на основании реального класса сущности, реальный класс является предком
+		//РµСЃР»Рё РІ РЅР°Р·РІР°РЅРёРё РєР»Р°СЃСЃР° РїСЂРёСЃСѓС‚СЃС‚РІСѓРµС‚ javassist, С‚Рѕ РєР»Р°СЃСЃ СЃРѕР·РґР°РЅ СЃ РїРѕРјРѕС‰СЊСЋ javassist
+		//РЅР° РѕСЃРЅРѕРІР°РЅРёРё СЂРµР°Р»СЊРЅРѕРіРѕ РєР»Р°СЃСЃР° СЃСѓС‰РЅРѕСЃС‚Рё, СЂРµР°Р»СЊРЅС‹Р№ РєР»Р°СЃСЃ СЏРІР»СЏРµС‚СЃСЏ РїСЂРµРґРєРѕРј
 		if (result.getName().indexOf("javassist") != -1)
 			result = (Class<T>) result.getSuperclass();
 		return result;

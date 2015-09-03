@@ -18,7 +18,7 @@ import com.mg.merp.account.model.Amortization;
 import com.mg.merp.core.model.Folder;
 
 /**
- * Бизнес-компонент "Ведомость начисления амортизации"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РµРґРѕРјРѕСЃС‚СЊ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -27,20 +27,20 @@ import com.mg.merp.core.model.Folder;
 public interface AmortizationServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Amortization, Integer> {
 
 	/**
-	 * Создание хоз. операций по партии амортизаций
+	 * РЎРѕР·РґР°РЅРёРµ С…РѕР·. РѕРїРµСЂР°С†РёР№ РїРѕ РїР°СЂС‚РёРё Р°РјРѕСЂС‚РёР·Р°С†РёР№
 	 * 
 	 * @param batch
-	 * 			- служебное поле у амортизации(номер партии)
+	 * 			- СЃР»СѓР¶РµР±РЅРѕРµ РїРѕР»Рµ Сѓ Р°РјРѕСЂС‚РёР·Р°С†РёРё(РЅРѕРјРµСЂ РїР°СЂС‚РёРё)
 	 * @param folder
-	 * 			- папка для создания хоз. операции
+	 * 			- РїР°РїРєР° РґР»СЏ СЃРѕР·РґР°РЅРёСЏ С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 */
    void commitAmortization(Integer batch, Folder folder);
 
    /**
-    * Откат создания хоз. операций по партиям амортизаций
+    * РћС‚РєР°С‚ СЃРѕР·РґР°РЅРёСЏ С…РѕР·. РѕРїРµСЂР°С†РёР№ РїРѕ РїР°СЂС‚РёСЏРј Р°РјРѕСЂС‚РёР·Р°С†РёР№
     * 
     * @param batch
-	* 	    	- служебное поле у амортизации(номер партии)
+	* 	    	- СЃР»СѓР¶РµР±РЅРѕРµ РїРѕР»Рµ Сѓ Р°РјРѕСЂС‚РёР·Р°С†РёРё(РЅРѕРјРµСЂ РїР°СЂС‚РёРё)
     */
    void rollbackAmortization(Integer batch);
 

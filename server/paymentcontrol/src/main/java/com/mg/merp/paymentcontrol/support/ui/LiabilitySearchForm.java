@@ -41,7 +41,7 @@ import com.mg.merp.paymentcontrol.model.Liability;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Контроллер формы поиска сущностей "Обязательств"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РћР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: LiabilitySearchForm.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $

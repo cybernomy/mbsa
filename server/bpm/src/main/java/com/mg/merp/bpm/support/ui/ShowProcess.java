@@ -23,7 +23,7 @@ import com.mg.framework.utils.SecurityUtils;
 import com.mg.merp.bpm.BusinessProccessManagerServiceLocal;
 
 /**
- * Обработчик команды показа списка процессов из меню
+ * РћР±СЂР°Р±РѕС‚С‡РёРє РєРѕРјР°РЅРґС‹ РїРѕРєР°Р·Р° СЃРїРёСЃРєР° РїСЂРѕС†РµСЃСЃРѕРІ РёР· РјРµРЅСЋ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ShowProcess.java,v 1.2 2008/03/11 08:27:05 sharapov Exp $

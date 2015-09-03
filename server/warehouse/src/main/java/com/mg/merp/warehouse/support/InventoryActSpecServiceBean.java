@@ -26,7 +26,7 @@ import com.mg.merp.warehouse.InventoryActSpecServiceLocal;
 import com.mg.merp.warehouse.model.InventoryActSpec;
 
 /**
- * Бизнес-компонент "Спецификация актов инвентаризации" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ Р°РєС‚РѕРІ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -49,17 +49,17 @@ public class InventoryActSpecServiceBean extends GoodsDocumentSpecificationServi
 	@Override
 	protected InventoryActSpec initializeForBulkCreate(DocHead docHead, CreateSpecificationInfo goodsInfo) {
 		InventoryActSpec specEntity = super.initializeForBulkCreate(docHead, goodsInfo);
-		// если осуществляется операция "инвентаризация склада", то сумму и количество в доп. ЕИ берем из
-		// информации о номеклатуре для создания спецификации акта инвентаризации
-		// (если инвентаризация будет проводиться по правилу: одна строка ТМЦ по всем ценам прихода,
-		// что-бы сумма одинаковых позиций каталога не вычислялась путем умножения кол-ва на 'усредненную цену', а была математической суммой)
+		// РµСЃР»Рё РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ РѕРїРµСЂР°С†РёСЏ "РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёСЏ СЃРєР»Р°РґР°", С‚Рѕ СЃСѓРјРјСѓ Рё РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РґРѕРї. Р•Р Р±РµСЂРµРј РёР·
+		// РёРЅС„РѕСЂРјР°С†РёРё Рѕ РЅРѕРјРµРєР»Р°С‚СѓСЂРµ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё Р°РєС‚Р° РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+		// (РµСЃР»Рё РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёСЏ Р±СѓРґРµС‚ РїСЂРѕРІРѕРґРёС‚СЊСЃСЏ РїРѕ РїСЂР°РІРёР»Сѓ: РѕРґРЅР° СЃС‚СЂРѕРєР° РўРњР¦ РїРѕ РІСЃРµРј С†РµРЅР°Рј РїСЂРёС…РѕРґР°,
+		// С‡С‚Рѕ-Р±С‹ СЃСѓРјРјР° РѕРґРёРЅР°РєРѕРІС‹С… РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР° РЅРµ РІС‹С‡РёСЃР»СЏР»Р°СЃСЊ РїСѓС‚РµРј СѓРјРЅРѕР¶РµРЅРёСЏ РєРѕР»-РІР° РЅР° 'СѓСЃСЂРµРґРЅРµРЅРЅСѓСЋ С†РµРЅСѓ', Р° Р±С‹Р»Р° РјР°С‚РµРјР°С‚РёС‡РµСЃРєРѕР№ СЃСѓРјРјРѕР№)
 		if(goodsInfo instanceof CreateInventoryActSpecInfo) {
 			specEntity.setPrice(((CreateInventoryActSpecInfo) goodsInfo).getPrice());
 			specEntity.setSumma(((CreateInventoryActSpecInfo) goodsInfo).getSumma());
 			specEntity.setSumma1(((CreateInventoryActSpecInfo) goodsInfo).getSumma1());
 			specEntity.setQuantity2(((CreateInventoryActSpecInfo) goodsInfo).getQuantity2());
 			specEntity.setAdjusted(true);
-		} else { // добавление позиции из окна подбора номенклатуры (defect #4817)
+		} else { // РґРѕР±Р°РІР»РµРЅРёРµ РїРѕР·РёС†РёРё РёР· РѕРєРЅР° РїРѕРґР±РѕСЂР° РЅРѕРјРµРЅРєР»Р°С‚СѓСЂС‹ (defect #4817)
 			specEntity.setPrice(goodsInfo.getPrice());
 			specEntity.setQuantity(null);
 			specEntity.setRealQuantity(goodsInfo.getQuantity1());

@@ -17,7 +17,7 @@ package com.mg.merp.contract;
 import com.mg.merp.contract.model.PhasePlanItem;
 
 /**
- * Бизнес-компонент "Пункты плана"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСѓРЅРєС‚С‹ РїР»Р°РЅР°"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,13 +26,13 @@ import com.mg.merp.contract.model.PhasePlanItem;
 public interface PhasePlanItemServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PhasePlanItem, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/contract/PhasePlanItem"; //$NON-NLS-1$
 
 	/**
-	 * Рассчитать аттрибуты пункта плана контракта
-	 * @param phasePlanItem - пункт плана
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ Р°С‚С‚СЂРёР±СѓС‚С‹ РїСѓРЅРєС‚Р° РїР»Р°РЅР° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param phasePlanItem - РїСѓРЅРєС‚ РїР»Р°РЅР°
 	 */
 	void adjust(PhasePlanItem phasePlanItem);
 

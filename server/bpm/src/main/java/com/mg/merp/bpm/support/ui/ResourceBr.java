@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.bpm.model.Resource;
 
 /**
- * Контроллер формы списка ресурсов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° СЂРµСЃСѓСЂСЃРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ResourceBr.java,v 1.1 2007/05/28 13:05:48 safonov Exp $

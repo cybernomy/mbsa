@@ -30,7 +30,7 @@ import com.mg.merp.personnelref.model.RisePercent;
 import com.mg.merp.personnelref.model.RiseScale;
 
 /**
- * Бизнес-компонент "Шкалы надбавок" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЁРєР°Р»С‹ РЅР°РґР±Р°РІРѕРє" 
  * 
  * @author leonova
  * @version $Id: RiseScaleServiceBean.java,v 1.4 2007/11/08 06:53:56 sharapov Exp $

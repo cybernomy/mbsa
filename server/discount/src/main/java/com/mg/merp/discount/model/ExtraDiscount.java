@@ -19,7 +19,7 @@ import java.util.Date;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Дополнительные скидки"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ СЃРєРёРґРєРё"
  * 
  * @author Artem V. Sharapov 
  * @version $Id: ExtraDiscount.java,v 1.6 2007/10/30 13:58:58 sharapov Exp $

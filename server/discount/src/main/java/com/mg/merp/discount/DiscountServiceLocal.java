@@ -17,7 +17,7 @@ package com.mg.merp.discount;
 import com.mg.merp.discount.model.Discount;
 
 /**
- * Бизнес-компонент "Скидки / наценки"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРєРёРґРєРё / РЅР°С†РµРЅРєРё"
  * 
  * @author leonova
  * @version $Id: DiscountServiceLocal.java,v 1.3 2007/09/07 12:01:22 safonov Exp $
@@ -25,12 +25,12 @@ import com.mg.merp.discount.model.Discount;
 public interface DiscountServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Discount, Integer> {
 	
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/discount/Discount";
 	
 	/**
-	 * тип папки для скидок / наценок
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ СЃРєРёРґРѕРє / РЅР°С†РµРЅРѕРє
 	 */
 	final static short FOLDER_PART = 13101;
 	

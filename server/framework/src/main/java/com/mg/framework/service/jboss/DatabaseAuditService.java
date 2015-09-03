@@ -22,7 +22,7 @@ import org.jboss.system.ServiceMBeanSupport;
 import com.mg.framework.service.DatabaseAuditServiceImpl;
 
 /**
- * Реализация сервиса аудита хранилища данных
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° Р°СѓРґРёС‚Р° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: DatabaseAuditService.java,v 1.2 2007/11/27 14:48:36 safonov Exp $

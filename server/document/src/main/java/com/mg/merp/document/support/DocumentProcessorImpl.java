@@ -40,7 +40,7 @@ import com.mg.merp.document.model.DocHeadModel;
 import com.mg.merp.document.model.DocSection;
 
 /**
- * Реализация процессора документов
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС†РµСЃСЃРѕСЂР° РґРѕРєСѓРјРµРЅС‚РѕРІ
  *
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -96,14 +96,14 @@ public class DocumentProcessorImpl implements DocumentProcessor {
 	}
 
 	/**
-	 * Создание документа
+	 * РЎРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°
 	 *
 	 * @param params
-	 * 		данные этапа документооборота
+	 * 		РґР°РЅРЅС‹Рµ СЌС‚Р°РїР° РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
 	 * @param kind
-	 * 		признак создания документа (0 - создать документ на основании, 1 - создать документ на комплектующие и т.д.)
+	 * 		РїСЂРёР·РЅР°Рє СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° (0 - СЃРѕР·РґР°С‚СЊ РґРѕРєСѓРјРµРЅС‚ РЅР° РѕСЃРЅРѕРІР°РЅРёРё, 1 - СЃРѕР·РґР°С‚СЊ РґРѕРєСѓРјРµРЅС‚ РЅР° РєРѕРјРїР»РµРєС‚СѓСЋС‰РёРµ Рё С‚.Рґ.)
 	 * @param listener
-	 * 		слушатель на событие редактирование документа
+	 * 		СЃР»СѓС€Р°С‚РµР»СЊ РЅР° СЃРѕР±С‹С‚РёРµ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	@SuppressWarnings("unchecked")
 	private void doProcessCreateDocument(DocFlowPluginInvokeParams params, int kind, final CreateDocumentDocFlowListener listener, final CreateDocumentBasisOfCallback createCallback) {
@@ -118,21 +118,21 @@ public class DocumentProcessorImpl implements DocumentProcessor {
 
 		List<DocumentSpecItem> specList = null;
 
-		//проверка на наличие спецификаций
+		//РїСЂРѕРІРµСЂРєР° РЅР° РЅР°Р»РёС‡РёРµ СЃРїРµС†РёС„РёРєР°С†РёР№
 		if (ds.isWithSpec())
 			specList = params.getSpecList();
 
 		DocHead dh = (DocHead) docServ.initialize();
 		crdoc.doCreate(params.getDocument(), dh, dhm, params.getProcessDate(), specList, params.getPerformedStage().getLinkDocDestFolder(), createCallback);
 
-		//data1-секция документа data2-id созданного документа
+		//data1-СЃРµРєС†РёСЏ РґРѕРєСѓРјРµРЅС‚Р° data2-id СЃРѕР·РґР°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 		params.setData1(params.getPerformedStage().getLinkDocSection().getId());
 		params.setData2(dh.getId());
 
 
 		if (params.getPerformedStage().isShowNewDocument() && !params.isSilent()){
-			//иначе refresh ругается, что запись ещё не создана в БД!
-			//Когда в одном из документов присутствуют спецификации, а в другом-нет
+			//РёРЅР°С‡Рµ refresh СЂСѓРіР°РµС‚СЃСЏ, С‡С‚Рѕ Р·Р°РїРёСЃСЊ РµС‰С‘ РЅРµ СЃРѕР·РґР°РЅР° РІ Р‘Р”!
+			//РљРѕРіРґР° РІ РѕРґРЅРѕРј РёР· РґРѕРєСѓРјРµРЅС‚РѕРІ РїСЂРёСЃСѓС‚СЃС‚РІСѓСЋС‚ СЃРїРµС†РёС„РёРєР°С†РёРё, Р° РІ РґСЂСѓРіРѕРј-РЅРµС‚
 			ServerUtils.getPersistentManager().flush();
 			MaintenanceHelper.edit((DataBusinessObjectService)ApplicationDictionaryLocator.locate().getBusinessService(docServ.getBusinessServiceMetadata().getName()), dh.getId(), null, new MaintenanceFormActionListener() {
 
@@ -180,17 +180,17 @@ public class DocumentProcessorImpl implements DocumentProcessor {
 
 		public void performed() {
 			try {
-				//пытаемся еще раз откатывать, т.о. откатываем весь ДО, до тех пор пока не возникнет ИС RollbackNotAllowedException
+				//РїС‹С‚Р°РµРјСЃСЏ РµС‰Рµ СЂР°Р· РѕС‚РєР°С‚С‹РІР°С‚СЊ, С‚.Рѕ. РѕС‚РєР°С‚С‹РІР°РµРј РІРµСЃСЊ Р”Рћ, РґРѕ С‚РµС… РїРѕСЂ РїРѕРєР° РЅРµ РІРѕР·РЅРёРєРЅРµС‚ РРЎ RollbackNotAllowedException
 				DocFlowManager dm = (DocFlowManager) ApplicationDictionaryLocator.locate().getBusinessService(DocFlowManager.SERVICE_NAME);
 				dm.rollback(params.getData2(), this, currentOwner, isSilent);
 			} catch (RollbackNotAllowedException e) {
-				//данная ИС возникает если ДО откатываемого документа не выполнен, предположительно откатили весь ДО,
-				//поэтому пытаемся просто удалить созданный
-				//документ, если же ИС возникла вследствии отсутствия прав на откат, но при этом ДО созданного
-				//документа не откатили полностью, то ИС будет сгенерирована уже при удалении
+				//РґР°РЅРЅР°СЏ РРЎ РІРѕР·РЅРёРєР°РµС‚ РµСЃР»Рё Р”Рћ РѕС‚РєР°С‚С‹РІР°РµРјРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° РЅРµ РІС‹РїРѕР»РЅРµРЅ, РїСЂРµРґРїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕ РѕС‚РєР°С‚РёР»Рё РІРµСЃСЊ Р”Рћ,
+				//РїРѕСЌС‚РѕРјСѓ РїС‹С‚Р°РµРјСЃСЏ РїСЂРѕСЃС‚Рѕ СѓРґР°Р»РёС‚СЊ СЃРѕР·РґР°РЅРЅС‹Р№
+				//РґРѕРєСѓРјРµРЅС‚, РµСЃР»Рё Р¶Рµ РРЎ РІРѕР·РЅРёРєР»Р° РІСЃР»РµРґСЃС‚РІРёРё РѕС‚СЃСѓС‚СЃС‚РІРёСЏ РїСЂР°РІ РЅР° РѕС‚РєР°С‚, РЅРѕ РїСЂРё СЌС‚РѕРј Р”Рћ СЃРѕР·РґР°РЅРЅРѕРіРѕ
+				//РґРѕРєСѓРјРµРЅС‚Р° РЅРµ РѕС‚РєР°С‚РёР»Рё РїРѕР»РЅРѕСЃС‚СЊСЋ, С‚Рѕ РРЎ Р±СѓРґРµС‚ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅР° СѓР¶Рµ РїСЂРё СѓРґР°Р»РµРЅРёРё
 				try {
-					//сбросим в хранилище информацию об откате ДО, иначе удаление не пройдет, т.к. будет
-					//видеть ДО на удаляемом документе
+					//СЃР±СЂРѕСЃРёРј РІ С…СЂР°РЅРёР»РёС‰Рµ РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± РѕС‚РєР°С‚Рµ Р”Рћ, РёРЅР°С‡Рµ СѓРґР°Р»РµРЅРёРµ РЅРµ РїСЂРѕР№РґРµС‚, С‚.Рє. Р±СѓРґРµС‚
+					//РІРёРґРµС‚СЊ Р”Рћ РЅР° СѓРґР°Р»СЏРµРјРѕРј РґРѕРєСѓРјРµРЅС‚Рµ
 					ServerUtils.getPersistentManager().flush();
 					eraseDocument(params);
 					listener.completed();
@@ -207,7 +207,7 @@ public class DocumentProcessorImpl implements DocumentProcessor {
 	}
 
 	/**
-	 * Откат создания документа
+	 * РћС‚РєР°С‚ СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 *
 	 * @param params
 	 */
@@ -218,15 +218,15 @@ public class DocumentProcessorImpl implements DocumentProcessor {
 		if (params.getPerformedStage().isLinkDocRollback()) {
 			DocFlowManager dm = (DocFlowManager) ApplicationDictionaryLocator.locate().getBusinessService(DocFlowManager.SERVICE_NAME);
 			DocProcessInteractiveKind dpKind = params.getPerformedStage().getLinkDocRollbackInteractive();
-			//передадим параметр silent в зависимости от настроек этапа создания документа
+			//РїРµСЂРµРґР°РґРёРј РїР°СЂР°РјРµС‚СЂ silent РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РЅР°СЃС‚СЂРѕРµРє СЌС‚Р°РїР° СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 			boolean isSilent = DocProcessInteractiveKind.INHERITED.equals(dpKind) ? params.isSilent() : DocProcessInteractiveKind.SILENT.equals(dpKind);
 			short currentOwner = com.mg.merp.docflow.support.DocumentUtils.getCurrentDocumentOwner();
 			DocFlowListener docFlowListener = new RollbackDocFlowListenerImpl(params, listener, currentOwner, isSilent);
 			try {
 				dm.rollback(params.getData2(), docFlowListener, currentOwner, isSilent);
 			} catch (RollbackNotAllowedException re) {
-				//сбросим в хранилище информацию об откате ДО, иначе удаление не пройдет, т.к. будет
-				//видеть ДО на удаляемом документе
+				//СЃР±СЂРѕСЃРёРј РІ С…СЂР°РЅРёР»РёС‰Рµ РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± РѕС‚РєР°С‚Рµ Р”Рћ, РёРЅР°С‡Рµ СѓРґР°Р»РµРЅРёРµ РЅРµ РїСЂРѕР№РґРµС‚, С‚.Рє. Р±СѓРґРµС‚
+				//РІРёРґРµС‚СЊ Р”Рћ РЅР° СѓРґР°Р»СЏРµРјРѕРј РґРѕРєСѓРјРµРЅС‚Рµ
 				ServerUtils.getPersistentManager().flush();
 				eraseDocument(params);
 				listener.completed();
@@ -245,12 +245,12 @@ public class DocumentProcessorImpl implements DocumentProcessor {
 	}
 
 	/**
-	 * Определяет стратегию создания документа
+	 * РћРїСЂРµРґРµР»СЏРµС‚ СЃС‚СЂР°С‚РµРіРёСЋ СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 *
 	 * @param kind
-	 * 		признак создания документа (0 - создать документ на основании, 1 - создать документ на комплектующие и т.д.)
+	 * 		РїСЂРёР·РЅР°Рє СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° (0 - СЃРѕР·РґР°С‚СЊ РґРѕРєСѓРјРµРЅС‚ РЅР° РѕСЃРЅРѕРІР°РЅРёРё, 1 - СЃРѕР·РґР°С‚СЊ РґРѕРєСѓРјРµРЅС‚ РЅР° РєРѕРјРїР»РµРєС‚СѓСЋС‰РёРµ Рё С‚.Рґ.)
 	 * @return
-	 * 		стратегия создания документа
+	 * 		СЃС‚СЂР°С‚РµРіРёСЏ СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	@SuppressWarnings("unchecked")
 	private CreateDocumentBasisOf getCreateDocumentStrategy(int kind) {

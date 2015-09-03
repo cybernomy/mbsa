@@ -18,8 +18,8 @@ import com.mg.framework.api.ui.MaintenanceConversationSession;
 import com.mg.framework.api.validator.ValidationContext;
 
 /**
- * Менеджер перехватчиков действий интерактивной поддержки (добавление, изменение, копирование, просмотр)
- * сервиса бизнес-компонентов
+ * РњРµРЅРµРґР¶РµСЂ РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РґРµР№СЃС‚РІРёР№ РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕР№ РїРѕРґРґРµСЂР¶РєРё (РґРѕР±Р°РІР»РµРЅРёРµ, РёР·РјРµРЅРµРЅРёРµ, РєРѕРїРёСЂРѕРІР°РЅРёРµ, РїСЂРѕСЃРјРѕС‚СЂ)
+ * СЃРµСЂРІРёСЃР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: UserActionInterceptorManager.java,v 1.3 2006/10/26 13:14:33 safonov Exp $
@@ -27,34 +27,34 @@ import com.mg.framework.api.validator.ValidationContext;
 public interface UserActionInterceptorManager {
 	
 	/**
-	 * регистрация перехватчика
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР°
 	 * 
-	 * @param interceptor	перехватчик
+	 * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
 	 */
     void registerInterceptor(UserActionInterceptor interceptor);
     
     /**
-     * удаление перехватчика
+     * СѓРґР°Р»РµРЅРёРµ РїРµСЂРµС…РІР°С‚С‡РёРєР°
      * 
-     * @param interceptor	перехватчик
+     * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
      */
     void unregisterInterceptor(UserActionInterceptor interceptor);
     
     /**
-     * вызов перехватчика для сервиса бизнес-компонента перед выводом модели в форму поддержки
+     * РІС‹Р·РѕРІ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ СЃРµСЂРІРёСЃР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РїРµСЂРµРґ РІС‹РІРѕРґРѕРј РјРѕРґРµР»Рё РІ С„РѕСЂРјСѓ РїРѕРґРґРµСЂР¶РєРё
      * 
-     * @param dialogSession	пользовательская сессия процесса поддержки
+     * @param dialogSession	РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєР°СЏ СЃРµСЃСЃРёСЏ РїСЂРѕС†РµСЃСЃР° РїРѕРґРґРµСЂР¶РєРё
      */
     void invokeBeforeOutputInterceptor(MaintenanceConversationSession dialogSession);
     
     /**
-     * вызов перехватчика для сервиса бизнес-компонента после сброса значений формы поддержки
-     * в модель
+     * РІС‹Р·РѕРІ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ СЃРµСЂРІРёСЃР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РїРѕСЃР»Рµ СЃР±СЂРѕСЃР° Р·РЅР°С‡РµРЅРёР№ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё
+     * РІ РјРѕРґРµР»СЊ
      * 
-     * @param dialogSession		пользовательская сессия процесса поддержки
-     * @param validationContext	контекст контроля данных
-     * @param isSaveAction		если <code>true</code> то событие "Сохранить" формы поддержки
-     * @param isCloseAction		если <code>true</code> то событие "Закрыть" формы поддержки
+     * @param dialogSession		РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєР°СЏ СЃРµСЃСЃРёСЏ РїСЂРѕС†РµСЃСЃР° РїРѕРґРґРµСЂР¶РєРё
+     * @param validationContext	РєРѕРЅС‚РµРєСЃС‚ РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…
+     * @param isSaveAction		РµСЃР»Рё <code>true</code> С‚Рѕ СЃРѕР±С‹С‚РёРµ "РЎРѕС…СЂР°РЅРёС‚СЊ" С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё
+     * @param isCloseAction		РµСЃР»Рё <code>true</code> С‚Рѕ СЃРѕР±С‹С‚РёРµ "Р—Р°РєСЂС‹С‚СЊ" С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё
      */
     void invokeAfterInputInterceptor(MaintenanceConversationSession dialogSession, ValidationContext validationContext,
     		boolean isSaveAction, boolean isCloseAction);

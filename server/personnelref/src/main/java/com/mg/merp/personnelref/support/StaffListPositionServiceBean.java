@@ -25,7 +25,7 @@ import com.mg.merp.personnelref.StaffListPositionServiceLocal;
 import com.mg.merp.personnelref.model.StaffListPosition;
 
 /**
- * Реализация бизнес-компонента "Должности в штатном расписании" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”РѕР»Р¶РЅРѕСЃС‚Рё РІ С€С‚Р°С‚РЅРѕРј СЂР°СЃРїРёСЃР°РЅРёРё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

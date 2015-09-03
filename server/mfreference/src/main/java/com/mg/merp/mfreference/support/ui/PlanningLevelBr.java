@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.mfreference.model.PlanningLevel;
 
 /**
- * Браузер уровней планирвоания
+ * Р‘СЂР°СѓР·РµСЂ СѓСЂРѕРІРЅРµР№ РїР»Р°РЅРёСЂРІРѕР°РЅРёСЏ
  * 
  * @author leonova
  * @version $Id: PlanningLevelBr.java,v 1.1 2006/08/24 12:20:15 leonova Exp $ 

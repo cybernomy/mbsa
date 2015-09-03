@@ -37,7 +37,7 @@ import com.mg.merp.personnelref.CalcPeriodServiceLocal;
 import com.mg.merp.personnelref.model.CalcPeriod;
 
 /**
- * Реализация бизнес-компонента "Расчетные периоды" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р Р°СЃС‡РµС‚РЅС‹Рµ РїРµСЂРёРѕРґС‹" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -95,9 +95,9 @@ public class CalcPeriodServiceBean extends AbstractPOJODataBusinessObjectService
 	}
 
 	/**
-	 * Проверить корректность диапазона дат
-	 * @param calcPeriod - расчетный период
-	 * @return true - если диапазона дат корректен
+	 * РџСЂРѕРІРµСЂРёС‚СЊ РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ РґРёР°РїР°Р·РѕРЅР° РґР°С‚
+	 * @param calcPeriod - СЂР°СЃС‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @return true - РµСЃР»Рё РґРёР°РїР°Р·РѕРЅР° РґР°С‚ РєРѕСЂСЂРµРєС‚РµРЅ
 	 */
 	protected boolean isPeriodDatesValid(CalcPeriod calcPeriod) {
 		Date beginDate = calcPeriod.getBeginDate();
@@ -108,9 +108,9 @@ public class CalcPeriodServiceBean extends AbstractPOJODataBusinessObjectService
 	}
 
 	/**
-	 * Проверить пересечение даным периодом других периодов
-	 * @param calcPeriod - расчетный период
-	 * @return true - если данный период пересекает другие периоды
+	 * РџСЂРѕРІРµСЂРёС‚СЊ РїРµСЂРµСЃРµС‡РµРЅРёРµ РґР°РЅС‹Рј РїРµСЂРёРѕРґРѕРј РґСЂСѓРіРёС… РїРµСЂРёРѕРґРѕРІ
+	 * @param calcPeriod - СЂР°СЃС‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @return true - РµСЃР»Рё РґР°РЅРЅС‹Р№ РїРµСЂРёРѕРґ РїРµСЂРµСЃРµРєР°РµС‚ РґСЂСѓРіРёРµ РїРµСЂРёРѕРґС‹
 	 */
 	protected boolean isPeriodCross(CalcPeriod calcPeriod) {
 		Criteria criteria = OrmTemplate.createCriteria(CalcPeriod.class)
@@ -119,7 +119,7 @@ public class CalcPeriodServiceBean extends AbstractPOJODataBusinessObjectService
 							Restrictions.and(Restrictions.le("BeginDate", calcPeriod.getBeginDate()), Restrictions.ge("EndDate", calcPeriod.getBeginDate())), //$NON-NLS-1$ //$NON-NLS-2$
 							Restrictions.and(Restrictions.le("BeginDate", calcPeriod.getEndDate()), Restrictions.ge("EndDate", calcPeriod.getEndDate())))); //$NON-NLS-1$ //$NON-NLS-2$
 
-		// при редактировании периода исключаем изменяемый период из списка существующих периодов
+		// РїСЂРё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРё РїРµСЂРёРѕРґР° РёСЃРєР»СЋС‡Р°РµРј РёР·РјРµРЅСЏРµРјС‹Р№ РїРµСЂРёРѕРґ РёР· СЃРїРёСЃРєР° СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёС… РїРµСЂРёРѕРґРѕРІ
 		if(calcPeriod.getId() != null)
 			criteria.add(Restrictions.ne("Id", calcPeriod.getId())); //$NON-NLS-1$
 

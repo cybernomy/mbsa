@@ -29,7 +29,7 @@ import com.mg.merp.contract.ContractSpecServiceLocal;
 import com.mg.merp.contract.model.ContractSpec;
 
 /**
- * Реализация бизнес-компонента "Спецификация контракта" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёСЏ РєРѕРЅС‚СЂР°РєС‚Р°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -71,8 +71,8 @@ public class ContractSpecServiceBean extends AbstractPOJODataBusinessObjectServi
 	}
 
 	/**
-	 * Рассчитать аттрибуты позиции спецификации контракта
-	 * @param contractSpec - позиция спецификации контракта
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ Р°С‚С‚СЂРёР±СѓС‚С‹ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param contractSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	public void doAdjust(ContractSpec contractSpec) {
 		Integer currencyPrec = ConfigurationHelper.getConfiguration().getCurrencyPrec();

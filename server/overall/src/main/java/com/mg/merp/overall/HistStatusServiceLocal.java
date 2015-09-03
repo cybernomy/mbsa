@@ -17,7 +17,7 @@ package com.mg.merp.overall;
 import com.mg.merp.overall.model.HistStatus;
 
 /**
- * Бизнес - компонент ""
+ * Р‘РёР·РЅРµСЃ - РєРѕРјРїРѕРЅРµРЅС‚ ""
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

@@ -25,14 +25,14 @@ import com.mg.merp.warehouse.generic.ui.AbstractWarehouseDocumentMaintenaceForm;
 import com.mg.merp.warehouse.model.OrderSpec;
 
 /**
- * Контроллер формы поддержки заказов покупаталей
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р·Р°РєР°Р·РѕРІ РїРѕРєСѓРїР°С‚Р°Р»РµР№
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: OrderHeadCusMt.java,v 1.9 2008/12/25 10:26:56 safonov Exp $
  */
 public class OrderHeadCusMt extends AbstractWarehouseDocumentMaintenaceForm {
 	/**
-	 * контекст импорта для SearchHelp поля "Ответственный"
+	 * РєРѕРЅС‚РµРєСЃС‚ РёРјРїРѕСЂС‚Р° РґР»СЏ SearchHelp РїРѕР»СЏ "РћС‚РІРµС‚СЃС‚РІРµРЅРЅС‹Р№"
 	 */
 	protected String[] contractorResponsibleKinds;
 	

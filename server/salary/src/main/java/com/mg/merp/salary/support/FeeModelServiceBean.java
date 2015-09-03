@@ -26,7 +26,7 @@ import com.mg.merp.salary.FeeModelServiceLocal;
 import com.mg.merp.salary.model.FeeModel;
 
 /**
- * Реализация бизнес-компонента "Образцы начислений / удержаний" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·С†С‹ РЅР°С‡РёСЃР»РµРЅРёР№ / СѓРґРµСЂР¶Р°РЅРёР№" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

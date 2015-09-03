@@ -16,7 +16,7 @@ package com.mg.merp.warehouse.support;
 import com.mg.merp.warehouse.generic.AbstractWarehouseTransactionDocFlowPluginFactory;
 
 /**
- * Реализация фабрики реализаций этапа ДО "тработка по складу с вычислением цены списания"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїР° Р”Рћ "С‚СЂР°Р±РѕС‚РєР° РїРѕ СЃРєР»Р°РґСѓ СЃ РІС‹С‡РёСЃР»РµРЅРёРµРј С†РµРЅС‹ СЃРїРёСЃР°РЅРёСЏ"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseTransactionCalcCostDocFlowPluginFactory.java,v 1.2 2008/04/18 15:22:11 safonov Exp $

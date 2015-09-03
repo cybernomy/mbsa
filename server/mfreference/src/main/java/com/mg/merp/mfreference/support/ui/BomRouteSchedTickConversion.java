@@ -18,7 +18,7 @@ import com.mg.merp.mfreference.support.ui.TimeTickConversion;
 import com.mg.merp.reference.model.Measure;
 
 /**
- * Конвертация атрибута SchedTime объекта JobRoute
+ * РљРѕРЅРІРµСЂС‚Р°С†РёСЏ Р°С‚СЂРёР±СѓС‚Р° SchedTime РѕР±СЉРµРєС‚Р° JobRoute
  * 
  * @author Oleg V. Safonov
  * @version $Id: BomRouteSchedTickConversion.java,v 1.1 2006/07/07 10:20:33 leonova Exp $

@@ -23,7 +23,7 @@ import com.mg.merp.warehouse.WarehouseDocumentSpecInServiceLocal;
 import com.mg.merp.warehouse.model.StockDocumentSpec;
 
 /**
- * Бизнес-компонент "Спецификация приходных ордеров" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РїСЂРёС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ" 
  * 
  * @author leonova
  * @version $Id: WarehouseDocumentSpecInServiceBean.java,v 1.6 2008/12/01 09:37:57 safonov Exp $

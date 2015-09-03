@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 import com.mg.framework.utils.StringUtils;
 
 /**
- * Информация о секции хранения в партии
+ * РРЅС„РѕСЂРјР°С†РёСЏ Рѕ СЃРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ РІ РїР°СЂС‚РёРё
  * 
  * @author Artem V. Sharapov
  * @version $Id: BinLocationDetailData.java,v 1.1 2008/05/30 12:39:54 sharapov Exp $

@@ -18,7 +18,7 @@ import com.mg.framework.api.BusinessObjectService;
 import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 
 /**
- * Сервис процессора модуля "Платежный календарь"
+ * РЎРµСЂРІРёСЃ РїСЂРѕС†РµСЃСЃРѕСЂР° РјРѕРґСѓР»СЏ "РџР»Р°С‚РµР¶РЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PaymentcontrolProcessorServiceLocal.java,v 1.2 2007/06/01 07:14:11 sharapov Exp $
@@ -26,32 +26,32 @@ import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 public interface PaymentcontrolProcessorServiceLocal extends BusinessObjectService {
 	
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/paymentcontrol/PaymentcontrolProcessor"; //$NON-NLS-1$
 	
 	/**
-	 * Этап ДО "Создать запись реестра обязательств"
-	 * @param docFlowParams - параметры документооборота
-	 * @param processorListener - слушатель процессора
+	 * Р­С‚Р°Рї Р”Рћ "РЎРѕР·РґР°С‚СЊ Р·Р°РїРёСЃСЊ СЂРµРµСЃС‚СЂР° РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
+	 * @param processorListener - СЃР»СѓС€Р°С‚РµР»СЊ РїСЂРѕС†РµСЃСЃРѕСЂР°
 	 */
 	void createLiability(DocFlowPluginInvokeParams docFlowParams, PaymentControlProcessorListener processorListener)  throws Exception;
 	
 	/**
-	 * Откат этапа ДО "Создать запись реестра обязательств"
-	 * @param docFlowParams - параметры документооборота
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° Р”Рћ "РЎРѕР·РґР°С‚СЊ Р·Р°РїРёСЃСЊ СЂРµРµСЃС‚СЂР° РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
 	 */
 	void rollBackCreateLiability(DocFlowPluginInvokeParams docFlowParams);
 	
 	/**
-	 * Этап ДО "Подтверждение исполнения обязательства"
-	 * @param docFlowParams - параметры документооборота
+	 * Р­С‚Р°Рї Р”Рћ "РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
 	 */
 	void confirmExecutionByDocument(DocFlowPluginInvokeParams docFlowParams);
 	
 	/**
-	 * Откат этапа ДО "Подтверждение исполнения обязательства"
-	 * @param docFlowParams - параметры документооборота
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° Р”Рћ "РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
 	 */
 	void rollBackConfirmExecutionByDocument(DocFlowPluginInvokeParams docFlowParams);
 	

@@ -19,7 +19,7 @@ import org.hibernate.bytecode.javassist.FieldHandler;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Изменения контракта"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РР·РјРµРЅРµРЅРёСЏ РєРѕРЅС‚СЂР°РєС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ModifyDocument.java,v 1.11 2008/02/29 12:27:35 safonov Exp $

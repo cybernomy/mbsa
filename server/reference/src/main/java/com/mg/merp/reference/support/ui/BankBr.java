@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.Bank;
 
 /**
- * Браузер банков
+ * Р‘СЂР°СѓР·РµСЂ Р±Р°РЅРєРѕРІ
  * 
  * @author leonova
  * @version $Id: BankBr.java,v 1.2 2006/10/11 10:42:29 leonova Exp $ 

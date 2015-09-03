@@ -20,7 +20,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.generic.ui.DefaultRestrictionForm;
 
 /**
- * Контроллер формы условий отбора по учетным периодам
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° РїРѕ СѓС‡РµС‚РЅС‹Рј РїРµСЂРёРѕРґР°Рј
  * 
  * @author leonova
  * @version $Id: ItemWithDateIntervalRest.java,v 1.7 2006/08/28 12:42:24 leonova Exp $ 

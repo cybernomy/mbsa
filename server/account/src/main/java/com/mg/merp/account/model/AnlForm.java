@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Вид аналитической ведомости
+ * Р’РёРґ Р°РЅР°Р»РёС‚РёС‡РµСЃРєРѕР№ РІРµРґРѕРјРѕСЃС‚Рё
  * 
  * @author leonova
  * @version $Id: AnlForm.java,v 1.1 2006/03/30 11:22:13 safonov Exp $
@@ -26,115 +26,115 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Account.Plan.AnlForm")
 public enum AnlForm {
 	/**
-	 * Нет
+	 * РќРµС‚
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.None")
 	NONE,
 
 	/**
-	 * Основные средства
+	 * РћСЃРЅРѕРІРЅС‹Рµ СЃСЂРµРґСЃС‚РІР°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.BaseMeans")
 	BASEMEANS,
 	
 	/**
-	 * Капитальные вложения
+	 * РљР°РїРёС‚Р°Р»СЊРЅС‹Рµ РІР»РѕР¶РµРЅРёСЏ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.Capital")
 	CAPITAL,
 	
 	/**
-	 * Материалы, товары учетные цены
+	 * РњР°С‚РµСЂРёР°Р»С‹, С‚РѕРІР°СЂС‹ СѓС‡РµС‚РЅС‹Рµ С†РµРЅС‹
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.CalcCost")
 	CALCCOST,
 	
 	/**
-	 * Материалы, товары партионный учет
+	 * РњР°С‚РµСЂРёР°Р»С‹, С‚РѕРІР°СЂС‹ РїР°СЂС‚РёРѕРЅРЅС‹Р№ СѓС‡РµС‚
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.BatchCalc")
 	BATCHCALC,
 	
 	/**
-	 * Материалы, товары средние цены
+	 * РњР°С‚РµСЂРёР°Р»С‹, С‚РѕРІР°СЂС‹ СЃСЂРµРґРЅРёРµ С†РµРЅС‹
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.AverageCost")
 	AVERAGECOST,
 	
 	/**
-	 * Материалы, товары FIFO
+	 * РњР°С‚РµСЂРёР°Р»С‹, С‚РѕРІР°СЂС‹ FIFO
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.FIFO")
 	FIFO,
 	
 	/**
-	 * Материалы, товары LIFO
+	 * РњР°С‚РµСЂРёР°Р»С‹, С‚РѕРІР°СЂС‹ LIFO
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.LIFO")
 	LIFO,
 	
 	/**
-	 * МБП
+	 * РњР‘Рџ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.MBP")
 	MBP,
 	
 	/**
-	 * Торговая наценка
+	 * РўРѕСЂРіРѕРІР°СЏ РЅР°С†РµРЅРєР°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.TradeAdd")
 	TRADEADD,
 	
 	/**
-	 * Реализация
+	 * Р РµР°Р»РёР·Р°С†РёСЏ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.Realisation")
 	REALISARION,
 	
 	/**
-	 * Дебиторы-кредиторы (по основанию)
+	 * Р”РµР±РёС‚РѕСЂС‹-РєСЂРµРґРёС‚РѕСЂС‹ (РїРѕ РѕСЃРЅРѕРІР°РЅРёСЋ)
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.DKBase")
 	DKBASE,
 	
 	/**
-	 * Дебиторы-кредиторы (по договору)
+	 * Р”РµР±РёС‚РѕСЂС‹-РєСЂРµРґРёС‚РѕСЂС‹ (РїРѕ РґРѕРіРѕРІРѕСЂСѓ)
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.DKContract")
 	DKCONTRACT,
 	
 	/**
-	 * Дебиторы-кредиторы (по основанию/договору)
+	 * Р”РµР±РёС‚РѕСЂС‹-РєСЂРµРґРёС‚РѕСЂС‹ (РїРѕ РѕСЃРЅРѕРІР°РЅРёСЋ/РґРѕРіРѕРІРѕСЂСѓ)
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.DKBaseContract")
 	DKBASECONTRACT,
 	
 	/**
-	 * Дебиторы-кредиторы (по партнеру)
+	 * Р”РµР±РёС‚РѕСЂС‹-РєСЂРµРґРёС‚РѕСЂС‹ (РїРѕ РїР°СЂС‚РЅРµСЂСѓ)
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.DKPartner")
 	DKPARTNER,
 	
 	/**
-	 * Подотчетные лица
+	 * РџРѕРґРѕС‚С‡РµС‚РЅС‹Рµ Р»РёС†Р°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.ReportFace")
 	REPORTFACE,
 	
 	/**
-	 * Затраты
+	 * Р—Р°С‚СЂР°С‚С‹
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.Expense")
 	EXPENSE,
 	
 	/**
-	 * Расходы будущих периодов
+	 * Р Р°СЃС…РѕРґС‹ Р±СѓРґСѓС‰РёС… РїРµСЂРёРѕРґРѕРІ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.ExpenseFuture")
 	EXPENSEFUTURE,
 	
 	/**
-	 * Денежные средства
+	 * Р”РµРЅРµР¶РЅС‹Рµ СЃСЂРµРґСЃС‚РІР°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AnlForm.MoneyMeans")
 	MONEYMEANS

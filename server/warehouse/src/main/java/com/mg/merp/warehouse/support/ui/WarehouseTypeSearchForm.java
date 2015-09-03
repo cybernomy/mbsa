@@ -30,7 +30,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.warehouse.model.WarehouseType;
 
 /**
- * SearchForm бизнес-компонента "Тип склада"
+ * SearchForm Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РўРёРї СЃРєР»Р°РґР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: WarehouseTypeSearchForm.java,v 1.1 2007/09/17 12:55:25 alikaev Exp $
@@ -89,9 +89,9 @@ public class WarehouseTypeSearchForm extends AbstractSearchForm {
 			}
 
 			/**
-			 * формируем sql запрос
+			 * С„РѕСЂРјРёСЂСѓРµРј sql Р·Р°РїСЂРѕСЃ
 			 * 
-			 * @return текст sql запроса
+			 * @return С‚РµРєСЃС‚ sql Р·Р°РїСЂРѕСЃР°
 			 */
 			private String createQueryText() {
 				Set<TableEJBQLFieldDef> fieldDefs = ((DefaultEJBQLTableModel) table.getModel()).getFieldDefsSet();

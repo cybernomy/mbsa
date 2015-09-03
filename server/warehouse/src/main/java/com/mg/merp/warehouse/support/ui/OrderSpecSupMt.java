@@ -17,7 +17,7 @@ package com.mg.merp.warehouse.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы поддержки спецификации заказов поставщикам
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёРё Р·Р°РєР°Р·РѕРІ РїРѕСЃС‚Р°РІС‰РёРєР°Рј
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: OrderSpecSupMt.java,v 1.3 2006/08/22 08:08:51 leonova Exp $

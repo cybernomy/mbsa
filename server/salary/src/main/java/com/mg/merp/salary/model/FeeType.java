@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип начислений/удержаний
+ * РўРёРї РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№
  * 
  * @author leonova
  * @version $Id: FeeType.java,v 1.1 2006/03/30 11:31:37 safonov Exp $
@@ -26,19 +26,19 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Salary.FeeRef.FeeType")
 public enum FeeType {
 	/**
-	 * Основное
+	 * РћСЃРЅРѕРІРЅРѕРµ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#FeeType.Base")
 	BASE,
 	
 	/**
-	 * Скрытое
+	 * РЎРєСЂС‹С‚РѕРµ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#FeeType.Secret")
 	SECRET,
 	
 	/**
-	 * Системное
+	 * РЎРёСЃС‚РµРјРЅРѕРµ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#FeeType.System")
 	SYSTEM

@@ -22,7 +22,7 @@ import com.mg.merp.paymentalloc.DocGroupLinkServiceLocal;
 import com.mg.merp.paymentalloc.model.DocGroupLink;
 
 /**
- * Бизнес-компонент "Типы документов в группах" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ РґРѕРєСѓРјРµРЅС‚РѕРІ РІ РіСЂСѓРїРїР°С…" 
  * 
  * @author leonova
  * @version $Id: DocGroupLinkServiceBean.java,v 1.3 2006/08/29 13:36:50 leonova Exp $

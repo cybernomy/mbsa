@@ -24,7 +24,7 @@ import com.mg.merp.reference.IdentDocServiceLocal;
 import com.mg.merp.reference.model.IdentDoc;
 
 /**
- * Реализация бизнес-компонента "Документы" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”РѕРєСѓРјРµРЅС‚С‹" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -15,7 +15,7 @@
 package com.mg.merp.crm.support.ui;
 
 /**
- * Информациия о телефоне
+ * РРЅС„РѕСЂРјР°С†РёРёСЏ Рѕ С‚РµР»РµС„РѕРЅРµ
  *
  * @author Artem V. Sharapov
  * @version $Id: PhoneItem.java,v 1.1 2007/02/07 07:00:13 sharapov Exp $

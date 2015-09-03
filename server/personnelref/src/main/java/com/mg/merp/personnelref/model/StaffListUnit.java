@@ -17,7 +17,7 @@ package com.mg.merp.personnelref.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Подразделения в штатном расписании" 
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРѕРґСЂР°Р·РґРµР»РµРЅРёСЏ РІ С€С‚Р°С‚РЅРѕРј СЂР°СЃРїРёСЃР°РЅРёРё" 
  * 
  * @author Artem V. Sharapov
  * @version $Id: StaffListUnit.java,v 1.7 2007/07/09 07:47:11 sharapov Exp $

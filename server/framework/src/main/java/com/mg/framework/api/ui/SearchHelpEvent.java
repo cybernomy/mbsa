@@ -17,7 +17,7 @@ package com.mg.framework.api.ui;
 import com.mg.framework.api.orm.PersistentObject;
 
 /**
- * Событие выполнения поиска сущностей
+ * РЎРѕР±С‹С‚РёРµ РІС‹РїРѕР»РЅРµРЅРёСЏ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№
  * 
  * @see com.mg.framework.api.ui.SearchHelpListener
  * 
@@ -28,10 +28,10 @@ public class SearchHelpEvent extends FormEvent {
 	private PersistentObject[] items;
 	
 	/**
-	 * конструктор
+	 * РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
-	 * @param source	источник в котором произошло событие
-	 * @param items		найденные сущности
+	 * @param source	РёСЃС‚РѕС‡РЅРёРє РІ РєРѕС‚РѕСЂРѕРј РїСЂРѕРёР·РѕС€Р»Рѕ СЃРѕР±С‹С‚РёРµ
+	 * @param items		РЅР°Р№РґРµРЅРЅС‹Рµ СЃСѓС‰РЅРѕСЃС‚Рё
 	 */
 	public SearchHelpEvent(Form source, PersistentObject[] items) {
 		super(source);
@@ -39,9 +39,9 @@ public class SearchHelpEvent extends FormEvent {
 	}
 	
 	/**
-	 * получить список найденных сущностей
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РЅР°Р№РґРµРЅРЅС‹С… СЃСѓС‰РЅРѕСЃС‚РµР№
 	 * 
-	 * @return	найденные сущности
+	 * @return	РЅР°Р№РґРµРЅРЅС‹Рµ СЃСѓС‰РЅРѕСЃС‚Рё
 	 */
 	public PersistentObject[] getItems() {
 		return items;

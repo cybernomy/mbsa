@@ -26,7 +26,7 @@ import com.mg.merp.warehouse.generic.AbstractWarehouseDocument;
 import com.mg.merp.warehouse.model.StockDocumentHead;
 
 /**
- * Бизнес-компонент "Приходные ордера" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРёС…РѕРґРЅС‹Рµ РѕСЂРґРµСЂР°" 
  * 
  * @author leonova
  * @version $Id: WarehouseDocumentHeadInServiceBean.java,v 1.7 2008/11/24 12:55:53 safonov Exp $

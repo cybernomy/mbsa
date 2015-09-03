@@ -39,7 +39,7 @@ import com.mg.merp.lbschedule.model.ItemSpecAlt;
 import com.mg.merp.lbschedule.model.ItemSpecTax;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Позиция спецификации пункта графика исполнения обязательств"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р° РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ItemSpecMt.java,v 1.2 2007/04/24 15:42:23 sharapov Exp $
@@ -174,8 +174,8 @@ public class ItemSpecMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик кнопки "Расчитать"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃС‡РёС‚Р°С‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionComputeSum(WidgetEvent event) {
 		recomputeSum();
@@ -186,8 +186,8 @@ public class ItemSpecMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик события КМ "Обновить"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РљРњ "РћР±РЅРѕРІРёС‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRefreshTaxTable(WidgetEvent event) {
 		refreshTaxTable();

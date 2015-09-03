@@ -70,7 +70,7 @@ import com.mg.merp.security.model.SecUser;
 import com.mg.merp.security.support.ui.FolderPermissionsForm;
 
 /**
- * Реализация системы безопасности, использует jGuard как реализацию JAAS
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРёСЃС‚РµРјС‹ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё, РёСЃРїРѕР»СЊР·СѓРµС‚ jGuard РєР°Рє СЂРµР°Р»РёР·Р°С†РёСЋ JAAS
  * 
  * @author Oleg V. Safonov
  * @version $Id$
@@ -121,8 +121,8 @@ public class SecuritySystemImpl implements SecuritySystem {
 //			AccessControlException e = new AccessControlException(msg);
 //			throw e;
 //		}
-		//в текущей реализации проверка прав на методы происходит старым методом унаследованным из
-		//предыдущих версий системы, в следующих релизах будет переработан с использованием JAAS
+		//РІ С‚РµРєСѓС‰РµР№ СЂРµР°Р»РёР·Р°С†РёРё РїСЂРѕРІРµСЂРєР° РїСЂР°РІ РЅР° РјРµС‚РѕРґС‹ РїСЂРѕРёСЃС…РѕРґРёС‚ СЃС‚Р°СЂС‹Рј РјРµС‚РѕРґРѕРј СѓРЅР°СЃР»РµРґРѕРІР°РЅРЅС‹Рј РёР·
+		//РїСЂРµРґС‹РґСѓС‰РёС… РІРµСЂСЃРёР№ СЃРёСЃС‚РµРјС‹, РІ СЃР»РµРґСѓСЋС‰РёС… СЂРµР»РёР·Р°С… Р±СѓРґРµС‚ РїРµСЂРµСЂР°Р±РѕС‚Р°РЅ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј JAAS
 		if (perm instanceof BusinessMethodPermission)
 			checkBusinessMethodPermission((BusinessMethodPermission) perm);
 		else
@@ -142,9 +142,9 @@ public class SecuritySystemImpl implements SecuritySystem {
 	}
 
 	/**
-	 * унаследованная проверка прав на методы бизнес-компонентов, если отсутствует описание бизнес-компонента
-	 * или его метода, то будет нарушение прав, данное поведение принципиально отличается от версии 2.х где права
-	 * проверялись только для зарегистрированных методов
+	 * СѓРЅР°СЃР»РµРґРѕРІР°РЅРЅР°СЏ РїСЂРѕРІРµСЂРєР° РїСЂР°РІ РЅР° РјРµС‚РѕРґС‹ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ, РµСЃР»Рё РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РѕРїРёСЃР°РЅРёРµ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * РёР»Рё РµРіРѕ РјРµС‚РѕРґР°, С‚Рѕ Р±СѓРґРµС‚ РЅР°СЂСѓС€РµРЅРёРµ РїСЂР°РІ, РґР°РЅРЅРѕРµ РїРѕРІРµРґРµРЅРёРµ РїСЂРёРЅС†РёРїРёР°Р»СЊРЅРѕ РѕС‚Р»РёС‡Р°РµС‚СЃСЏ РѕС‚ РІРµСЂСЃРёРё 2.С… РіРґРµ РїСЂР°РІР°
+	 * РїСЂРѕРІРµСЂСЏР»РёСЃСЊ С‚РѕР»СЊРєРѕ РґР»СЏ Р·Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅРЅС‹С… РјРµС‚РѕРґРѕРІ
 	 * 
 	 * @param permission
 	 * @throws AccessControlException
@@ -224,7 +224,7 @@ public class SecuritySystemImpl implements SecuritySystem {
 				if (oldPerm == null)
 					beanMethods.put(methodName, permission);
 				else {
-					//объединение прав из разных групп
+					//РѕР±СЉРµРґРёРЅРµРЅРёРµ РїСЂР°РІ РёР· СЂР°Р·РЅС‹С… РіСЂСѓРїРї
 					if (!oldPerm && permission)
 						beanMethods.put(methodName, true);
 				}
@@ -262,7 +262,7 @@ public class SecuritySystemImpl implements SecuritySystem {
 	}
 
 	/**
-	 * добавление прав в хранилище
+	 * РґРѕР±Р°РІР»РµРЅРёРµ РїСЂР°РІ РІ С…СЂР°РЅРёР»РёС‰Рµ
 	 * 
 	 * @param folderIdentifier
 	 * @param folderPart
@@ -273,7 +273,7 @@ public class SecuritySystemImpl implements SecuritySystem {
 	}
 	
 	/**
-	 * реализация установки прав на элемент иерархии
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СѓСЃС‚Р°РЅРѕРІРєРё РїСЂР°РІ РЅР° СЌР»РµРјРµРЅС‚ РёРµСЂР°СЂС…РёРё
 	 * 
 	 * @param treeIdentifier
 	 * @param parentIdentifier

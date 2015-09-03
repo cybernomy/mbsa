@@ -28,7 +28,7 @@ import com.mg.merp.warehouse.OrderHeadSupServiceLocal;
 import com.mg.merp.warehouse.model.OrderHead;
 
 /**
- * Контроллер формы списка заказов поставщикам
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р·Р°РєР°Р·РѕРІ РїРѕСЃС‚Р°РІС‰РёРєР°Рј
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: OrderHeadSupBr.java,v 1.11 2009/02/10 14:29:13 safonov Exp $

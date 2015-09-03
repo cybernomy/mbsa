@@ -25,31 +25,31 @@ import com.mg.framework.api.annotations.EnumConstantText;
 public enum TimePeriodKind {
 
 	/**
-	 * нет
+	 * РЅРµС‚
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.None")
 	NONE,
 	
 	/**
-	 * час
+	 * С‡Р°СЃ
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.Hour")
 	HOUR,
 
 	/**
-	 * день
+	 * РґРµРЅСЊ
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.Day")
 	DAY,	
 
 	/**
-	 * месяц
+	 * РјРµСЃСЏС†
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.Month")
 	MONTH,	
 	
 	/**
-	 * год
+	 * РіРѕРґ
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.Year")
 	YEAR		

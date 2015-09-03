@@ -17,7 +17,7 @@ package com.mg.merp.salary;
 import com.mg.merp.salary.model.FeeRef;
 
 /**
- * Сервис бизнес-компонента "Начисления / удержания"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќР°С‡РёСЃР»РµРЅРёСЏ / СѓРґРµСЂР¶Р°РЅРёСЏ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.salary.model.FeeRef;
 public interface FeeRefServiceLocal extends com.mg.framework.api.DataBusinessObjectService<FeeRef, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String LOCAL_SERVICE_NAME= "merp/salary/FeeRef"; //$NON-NLS-1$
 

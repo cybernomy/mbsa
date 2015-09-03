@@ -25,12 +25,12 @@ public interface InternalActHeadServiceLocal
    extends com.mg.merp.document.GoodsDocument<DocHead, Integer, InternalActHeadModelServiceLocal, InternalActSpecServiceLocal>
 {
 	/**
-	 * тип папки для внутренних актов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРёС… Р°РєС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 28;
 	
 	/**
-	 * docsection для внутренних актов
+	 * docsection РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРёС… Р°РєС‚РѕРІ
 	 */
 	final static short DOCSECTION = 8;
 }

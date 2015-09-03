@@ -24,7 +24,7 @@ import com.mg.merp.crm.OfferForecastServiceLocal;
 import com.mg.merp.crm.model.OfferForecast;
 
 /**
- * Бизнес-компонент "Прогнозы предложений" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРѕРіРЅРѕР·С‹ РїСЂРµРґР»РѕР¶РµРЅРёР№" 
  * 
  * @author leonova
  * @version $Id: OfferForecastServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

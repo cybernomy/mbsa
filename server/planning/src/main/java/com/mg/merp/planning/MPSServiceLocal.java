@@ -17,7 +17,7 @@ package com.mg.merp.planning;
 import com.mg.merp.planning.model.Mps;
 
 /**
- * Бизнес-компонент "MPS"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "MPS"
  * 
  * @author leonova
  * @version $Id: MPSServiceLocal.java,v 1.2 2007/07/30 10:37:51 safonov Exp $
@@ -25,7 +25,7 @@ import com.mg.merp.planning.model.Mps;
 public interface MPSServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Mps, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/planning/MPS";
 }

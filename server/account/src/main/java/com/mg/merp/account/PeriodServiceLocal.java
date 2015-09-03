@@ -20,7 +20,7 @@ import java.util.Date;
 import com.mg.merp.account.model.Period;
 
 /**
- * Бизнес-компонент "Периоды бух.учета"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџРµСЂРёРѕРґС‹ Р±СѓС….СѓС‡РµС‚Р°"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -30,36 +30,36 @@ import com.mg.merp.account.model.Period;
 public interface PeriodServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Period, Integer>
 {
 	/**
-	 * Открыть периоды бух.учета
-	 * @param periods - набор периодов
+	 * РћС‚РєСЂС‹С‚СЊ РїРµСЂРёРѕРґС‹ Р±СѓС….СѓС‡РµС‚Р°
+	 * @param periods - РЅР°Р±РѕСЂ РїРµСЂРёРѕРґРѕРІ
 	 */
 	void openPeriod(Serializable[] periods);
 
 	/**
-	 * Закрыть периоды бух.учета
-	 * @param periods - набор периодов
+	 * Р—Р°РєСЂС‹С‚СЊ РїРµСЂРёРѕРґС‹ Р±СѓС….СѓС‡РµС‚Р°
+	 * @param periods - РЅР°Р±РѕСЂ РїРµСЂРёРѕРґРѕРІ
 	 */
 	void closePeriod(Serializable[] periods);
 
 	/**
-	 * найти период по дате, если период не найден то будет сгенерирована ИС
+	 * РЅР°Р№С‚Рё РїРµСЂРёРѕРґ РїРѕ РґР°С‚Рµ, РµСЃР»Рё РїРµСЂРёРѕРґ РЅРµ РЅР°Р№РґРµРЅ С‚Рѕ Р±СѓРґРµС‚ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅР° РРЎ
 	 * 
-	 * @param date	дата
-	 * @return	период
+	 * @param date	РґР°С‚Р°
+	 * @return	РїРµСЂРёРѕРґ
 	 */
 	Period findByDate(Date date);
 	
 	/**
-	 * проверка периода на доступность изменений
+	 * РїСЂРѕРІРµСЂРєР° РїРµСЂРёРѕРґР° РЅР° РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ РёР·РјРµРЅРµРЅРёР№
 	 * 
-	 * @param date	дата изменения
+	 * @param date	РґР°С‚Р° РёР·РјРµРЅРµРЅРёСЏ
 	 */
 	void checkPeriod(Date date);
 	
 	/**
-	 * проверка периода на доступность изменений
+	 * РїСЂРѕРІРµСЂРєР° РїРµСЂРёРѕРґР° РЅР° РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ РёР·РјРµРЅРµРЅРёР№
 	 * 
-	 * @param periodId	идентификатор периода
+	 * @param periodId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРµСЂРёРѕРґР°
 	 */
 	void checkPeriod(Integer periodId);
 	

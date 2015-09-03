@@ -17,7 +17,7 @@ package com.mg.merp.contract;
 import com.mg.merp.contract.model.ContractConfig;
 
 /**
- * Сервис бизнес-компонента "Конфигурация модуля <Контракты>"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РљРѕРЅС‚СЂР°РєС‚С‹>"
  * 
  * @author leonova
  * @author Artem V. Sharapov

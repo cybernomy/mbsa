@@ -17,7 +17,7 @@ package com.mg.merp.account.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис транслятора SQL ИС модуля бухгалтерия
+ * РЎРµСЂРІРёСЃ С‚СЂР°РЅСЃР»СЏС‚РѕСЂР° SQL РРЎ РјРѕРґСѓР»СЏ Р±СѓС…РіР°Р»С‚РµСЂРёСЏ
  * 
  * @author Artem V. Sharapov
  * @version $Id: SQLExceptionTranslatorServiceMBean.java,v 1.1 2009/03/04 12:38:48 sharapov Exp $
@@ -25,7 +25,7 @@ import org.jboss.system.ServiceMBean;
 public interface SQLExceptionTranslatorServiceMBean extends ServiceMBean {
 	
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:account=SQLExceptionTranslator";
 	

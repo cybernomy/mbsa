@@ -42,7 +42,7 @@ import com.mg.merp.reference.model.PriceListSpec;
 import com.mg.merp.security.model.Groups;
 
 /**
- * Бизнес-компонент "Папки прайс-листов"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџР°РїРєРё РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -62,14 +62,14 @@ public class PriceListFolderServiceBean extends AbstractPOJODataBusinessObjectSe
 	}
 
 	/**
-	 * Cоздать спецификации прайс-листа на основе каталога
+	 * CРѕР·РґР°С‚СЊ СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р° РЅР° РѕСЃРЅРѕРІРµ РєР°С‚Р°Р»РѕРіР°
 	 * 
 	 * @param catalogFolderId	
-	 * 					- папка каталога
+	 * 					- РїР°РїРєР° РєР°С‚Р°Р»РѕРіР°
 	 * @param priceListFolderId	
-	 * 					- папка прайс-листа
+	 * 					- РїР°РїРєР° РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 * @param createSpec		
-	 * 					- признак создания спецификаций прайс-листа
+	 * 					- РїСЂРёР·РЅР°Рє СЃРѕР·РґР°РЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёР№ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	protected void doAddFromCatalog(int catalogFolderId, int priceListFolderId, boolean createSpec) {
 		CatalogFolderServiceLocal catalogFolderService = (CatalogFolderServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/CatalogFolder");
@@ -82,7 +82,7 @@ public class PriceListFolderServiceBean extends AbstractPOJODataBusinessObjectSe
 		for (CatalogFolder catalogFolder : catalogFolderService.getNestedCatalogFolders(pm.find(CatalogFolder.class, catalogFolderId), true, true)) {
 			PriceListFolder priceListFolderParent = null;
 			CatalogFolder catalogFolderParent = catalogFolder.getCatalogFolder();
-			//Поиск папки-родителя по имени в прайсе
+			//РџРѕРёСЃРє РїР°РїРєРё-СЂРѕРґРёС‚РµР»СЏ РїРѕ РёРјРµРЅРё РІ РїСЂР°Р№СЃРµ
 			if (catalogFolderParent == null || catalogFolder.getId() == catFolder.getId())
 				priceListFolderParent = priceListFolder;
 			else 
@@ -90,9 +90,9 @@ public class PriceListFolderServiceBean extends AbstractPOJODataBusinessObjectSe
 						.add(Restrictions.eq("PriceListHead", plh))
 						.add(Restrictions.eq("FName", catalogFolderParent.getFName()))
 						.setFlushMode(FlushMode.MANUAL));
-			//Добавление папки
+			//Р”РѕР±Р°РІР»РµРЅРёРµ РїР°РїРєРё
 			PriceListFolder plFolder = createPriceListFolderAndAddedRigths(plh, priceListFolderParent, catalogFolder);
-			//Создание спецификаций прайс-листа
+			//РЎРѕР·РґР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёР№ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 			if (createSpec) {
 				List<Catalog> catalogs = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(Catalog.class)
 						.add(Restrictions.eq("Folder", catalogFolder))
@@ -104,16 +104,16 @@ public class PriceListFolderServiceBean extends AbstractPOJODataBusinessObjectSe
 	}
 
 	/**
-	 * Создание спецификации прас-листа
+	 * РЎРѕР·РґР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°СЃ-Р»РёСЃС‚Р°
 	 * 
-	 * @param folder	- папка
-	 * @param catalog	- товар
-	 * @param price		- базовая цена
-	 * @param lastCost	- цена последнего прихода
-	 * @param sName		- наименование позиции прайс-листа
-	 * @param canceled	- <code>true</code> - позиция аннулирована, иначе не аннулирована
-	 * @param priceListHeadId	- идентификатор заголовка прайс-листа
-	 * @param actDate	- дата начала действия позиции
+	 * @param folder	- РїР°РїРєР°
+	 * @param catalog	- С‚РѕРІР°СЂ
+	 * @param price		- Р±Р°Р·РѕРІР°СЏ С†РµРЅР°
+	 * @param lastCost	- С†РµРЅР° РїРѕСЃР»РµРґРЅРµРіРѕ РїСЂРёС…РѕРґР°
+	 * @param sName		- РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РїРѕР·РёС†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param canceled	- <code>true</code> - РїРѕР·РёС†РёСЏ Р°РЅРЅСѓР»РёСЂРѕРІР°РЅР°, РёРЅР°С‡Рµ РЅРµ Р°РЅРЅСѓР»РёСЂРѕРІР°РЅР°
+	 * @param priceListHeadId	- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РіРѕР»РѕРІРєР° РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param actDate	- РґР°С‚Р° РЅР°С‡Р°Р»Р° РґРµР№СЃС‚РІРёСЏ РїРѕР·РёС†РёРё
 	 */
 	private void createPriceListSpec(PriceListFolder folder, Catalog catalog, BigDecimal price, BigDecimal lastCost, String sName, boolean canceled, Integer priceListHeadId, Date actDate) {
 		PriceListSpec priceListSpec = getPriceListSpecService().initialize();
@@ -129,19 +129,19 @@ public class PriceListFolderServiceBean extends AbstractPOJODataBusinessObjectSe
 	}
 
 	/**
-	 * Добавление папки прайс-листа и установка прав на нее
+	 * Р”РѕР±Р°РІР»РµРЅРёРµ РїР°РїРєРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р° Рё СѓСЃС‚Р°РЅРѕРІРєР° РїСЂР°РІ РЅР° РЅРµРµ
 	 * 
 	 * @param priceListHead
-	 * 				- заголовок прайс-листа
+	 * 				- Р·Р°РіРѕР»РѕРІРѕРє РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 * @param priceListFolderParent
-	 * 				- папка родитель для создаваемой папки
+	 * 				- РїР°РїРєР° СЂРѕРґРёС‚РµР»СЊ РґР»СЏ СЃРѕР·РґР°РІР°РµРјРѕР№ РїР°РїРєРё
 	 * @param catalogFolder
-	 * 				- папка КТУ по которой создается папка прайс-листа 
+	 * 				- РїР°РїРєР° РљРўРЈ РїРѕ РєРѕС‚РѕСЂРѕР№ СЃРѕР·РґР°РµС‚СЃСЏ РїР°РїРєР° РїСЂР°Р№СЃ-Р»РёСЃС‚Р° 
 	 * @return
-	 * 				- созданную папку прайс-листа
+	 * 				- СЃРѕР·РґР°РЅРЅСѓСЋ РїР°РїРєСѓ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	private PriceListFolder createPriceListFolderAndAddedRigths(PriceListHead priceListHead, PriceListFolder priceListFolderParent, CatalogFolder catalogFolder) {
-		//Добавление папки прайс -листа
+		//Р”РѕР±Р°РІР»РµРЅРёРµ РїР°РїРєРё РїСЂР°Р№СЃ -Р»РёСЃС‚Р°
 		PriceListFolder plFolder = initialize();
 		plFolder.setPriceListHead(priceListHead);
 		plFolder.setParent(priceListFolderParent);
@@ -157,7 +157,7 @@ public class PriceListFolderServiceBean extends AbstractPOJODataBusinessObjectSe
 		for (FolderRights catFolderRight : catFolderRights) {
 			Groups group = catFolderRight.getSecGroups();
 			if (group.getId() != SecuritySystem.ADMIN_GROUP && !user.getGroupsCommaText().contains(group.getName())) {
-				//Добавление прав на папку прайс - листа
+				//Р”РѕР±Р°РІР»РµРЅРёРµ РїСЂР°РІ РЅР° РїР°РїРєСѓ РїСЂР°Р№СЃ - Р»РёСЃС‚Р°
 				FolderRights plFolderRights = new FolderRights();
 				plFolderRights.setFolderId(plFolder.getId());
 				plFolderRights.setFolderPart((short) 2);
@@ -178,8 +178,8 @@ public class PriceListFolderServiceBean extends AbstractPOJODataBusinessObjectSe
 		for (Integer key : primaryKeys) {
 			PriceListFolder entity = load(key);
 			PriceListFolder targetFolder = (PriceListFolder) targetEntity;
-			//не копируем корневую папку и папку на саму себя, идентификатор должен быть больше идентификатора приемника, в противном
-			//случае невозможно построить дерево иерархии
+			//РЅРµ РєРѕРїРёСЂСѓРµРј РєРѕСЂРЅРµРІСѓСЋ РїР°РїРєСѓ Рё РїР°РїРєСѓ РЅР° СЃР°РјСѓ СЃРµР±СЏ, РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР° РїСЂРёРµРјРЅРёРєР°, РІ РїСЂРѕС‚РёРІРЅРѕРј
+			//СЃР»СѓС‡Р°Рµ РЅРµРІРѕР·РјРѕР¶РЅРѕ РїРѕСЃС‚СЂРѕРёС‚СЊ РґРµСЂРµРІРѕ РёРµСЂР°СЂС…РёРё
 			if (entity.getParent() != null && entity.getId() > targetFolder.getId() && entity.getParent().getId() != targetFolder.getId()) {
 				entity.setParent(targetFolder);
 				result = true;
@@ -189,7 +189,7 @@ public class PriceListFolderServiceBean extends AbstractPOJODataBusinessObjectSe
 	}
 
 	/**
-	 * Возвращает бизнес-компонент "Спецификации прайс-листа"
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°"
 	 * 
 	 * @return
 	 */

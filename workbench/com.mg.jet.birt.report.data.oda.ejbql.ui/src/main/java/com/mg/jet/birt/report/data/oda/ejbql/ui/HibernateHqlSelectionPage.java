@@ -46,7 +46,7 @@ import com.mg.jet.birt.report.data.oda.ejbql.Connection;
 import com.mg.jet.birt.report.data.oda.ejbql.HibernateDriver;
 
 /**
- * Страница EJBQL запроса
+ * РЎС‚СЂР°РЅРёС†Р° EJBQL Р·Р°РїСЂРѕСЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: HibernateHqlSelectionPage.java,v 1.1 2007/10/29 08:54:16 safonov Exp $

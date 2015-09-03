@@ -18,7 +18,7 @@ import com.mg.merp.document.generic.ui.DocumentModelMaintenanceForm;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Конторллер формы поддержки "Образцов входящих счетов фактур"
+ * РљРѕРЅС‚РѕСЂР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РћР±СЂР°Р·С†РѕРІ РІС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ С„Р°РєС‚СѓСЂ"
  * 
  * @author leonova
  * @version $Id: FacturaHeadModelInMt.java,v 1.2 2007/05/22 09:04:23 sharapov Exp $

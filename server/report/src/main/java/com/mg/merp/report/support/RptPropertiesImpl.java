@@ -23,7 +23,7 @@ import com.mg.framework.api.BusinessObjectService;
 import com.mg.framework.api.report.RptProperties;
 
 /**
- * Реализация интерфейса {@link RptProperties}
+ * Р РµР°Р»РёР·Р°С†РёСЏ РёРЅС‚РµСЂС„РµР№СЃР° {@link RptProperties}
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov

@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.Place;
 
 /**
- * Браузер населенных пунктов
+ * Р‘СЂР°СѓР·РµСЂ РЅР°СЃРµР»РµРЅРЅС‹С… РїСѓРЅРєС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: PlaceBr.java,v 1.3 2006/08/11 07:19:17 leonova Exp $ 

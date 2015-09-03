@@ -21,7 +21,7 @@ import com.mg.framework.support.ui.widget.DefaultTableController;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер диалога "Выбор покупателя"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "Р’С‹Р±РѕСЂ РїРѕРєСѓРїР°С‚РµР»СЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: CustomerSelectDlg.java,v 1.1 2007/10/05 07:35:57 sharapov Exp $

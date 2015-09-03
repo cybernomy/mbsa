@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.AdditionalEducationKindServiceLocal;
 import com.mg.merp.personnelref.model.AdditionalEducationKind;
 
 /**
- * Реализация бизнес-компонента "Виды дополнительного образования" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РёРґС‹ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРіРѕ РѕР±СЂР°Р·РѕРІР°РЅРёСЏ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -23,8 +23,8 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.merp.paymentcontrol.model.PmcResource;
 
 /**
- * Поисковик сущностей "Средств платежа"
- * Специализирован для диалога "Внутреннее перемещение средств"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РЎСЂРµРґСЃС‚РІ РїР»Р°С‚РµР¶Р°"
+ * РЎРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅ РґР»СЏ РґРёР°Р»РѕРіР° "Р’РЅСѓС‚СЂРµРЅРЅРµРµ РїРµСЂРµРјРµС‰РµРЅРёРµ СЃСЂРµРґСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmcResourceExSearchHelp.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $

@@ -48,7 +48,7 @@ import com.mg.merp.finance.model.OperationModel;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Контроллер браузера бизнес-компонента "Финансовые операции"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р¤РёРЅР°РЅСЃРѕРІС‹Рµ РѕРїРµСЂР°С†РёРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -206,8 +206,8 @@ public class FinOperBr extends DefaultHierarchyBrowseForm{
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Вставка с образцом"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "Р’СЃС‚Р°РІРєР° СЃ РѕР±СЂР°Р·С†РѕРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionInsertFinOperPattern(WidgetEvent event) throws Exception {
@@ -225,8 +225,8 @@ public class FinOperBr extends DefaultHierarchyBrowseForm{
 	}
 
 	/**
-	 * Создание операции по образцу и ее редактирование
-	 * @param pattern - образец
+	 * РЎРѕР·РґР°РЅРёРµ РѕРїРµСЂР°С†РёРё РїРѕ РѕР±СЂР°Р·С†Сѓ Рё РµРµ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ
+	 * @param pattern - РѕР±СЂР°Р·РµС†
 	 */
 	private void internalInsertFinOperPattern(OperationModel pattern) {
 		pattern = ServerUtils.getPersistentManager().find(OperationModel.class, pattern.getId());
@@ -238,8 +238,8 @@ public class FinOperBr extends DefaultHierarchyBrowseForm{
 			 * @see com.mg.framework.api.ui.MaintenanceFormActionListener#canceled(com.mg.framework.api.ui.MaintenanceFormEvent)
 			 */
 			public void canceled(MaintenanceFormEvent event) {
-				// текущая реализация не поддерживает обработку события "Отмена"
-				// при отмене операции "Вставка с образцом" нужно удалить вручную созданную сущность
+				// С‚РµРєСѓС‰Р°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ РѕР±СЂР°Р±РѕС‚РєСѓ СЃРѕР±С‹С‚РёСЏ "РћС‚РјРµРЅР°"
+				// РїСЂРё РѕС‚РјРµРЅРµ РѕРїРµСЂР°С†РёРё "Р’СЃС‚Р°РІРєР° СЃ РѕР±СЂР°Р·С†РѕРј" РЅСѓР¶РЅРѕ СѓРґР°Р»РёС‚СЊ РІСЂСѓС‡РЅСѓСЋ СЃРѕР·РґР°РЅРЅСѓСЋ СЃСѓС‰РЅРѕСЃС‚СЊ
 				service.erase(economicOper.getId());
 				table.refresh();
 			}

@@ -17,7 +17,7 @@ package com.mg.merp.paymentcontrol;
 import com.mg.merp.paymentcontrol.model.PmcConfig;
 
 /**
- * Сервис бизнес-компонента "Конфигурация модуля <Платежный календарь>"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РџР»Р°С‚РµР¶РЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ>"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.paymentcontrol.model.PmcConfig;
 public interface ConfigServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PmcConfig, Integer> {
 	
 	/**
-	 * локальное имя сервиса
+	 * Р»РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/paymentcontrol/Config"; //$NON-NLS-1$
 	

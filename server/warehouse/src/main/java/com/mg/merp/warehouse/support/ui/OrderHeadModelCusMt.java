@@ -29,7 +29,7 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 import com.mg.merp.warehouse.OrderSpecModelCusServiceLocal;
 
 /**
- * Браузер образов заказов покупателей
+ * Р‘СЂР°СѓР·РµСЂ РѕР±СЂР°Р·РѕРІ Р·Р°РєР°Р·РѕРІ РїРѕРєСѓРїР°С‚РµР»РµР№
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: OrderHeadModelCusMt.java,v 1.8 2008/03/20 13:03:36 alikaev Exp $
@@ -41,11 +41,11 @@ public class OrderHeadModelCusMt extends DefaultCompoundMaintenanceForm implemen
 	protected AttributeMap orderSpecModelCusProperties = new LocalDataTransferObject();
 
 	/**
-	 * контекст импорта для SearchHelp поля "Ответственный"
+	 * РєРѕРЅС‚РµРєСЃС‚ РёРјРїРѕСЂС‚Р° РґР»СЏ SearchHelp РїРѕР»СЏ "РћС‚РІРµС‚СЃС‚РІРµРЅРЅС‹Р№"
 	 */
 	protected String[] contractorResponsibleKinds;
 	/**
-	 * контекст импорта для SearchHelp поля "через кого"
+	 * РєРѕРЅС‚РµРєСЃС‚ РёРјРїРѕСЂС‚Р° РґР»СЏ SearchHelp РїРѕР»СЏ "С‡РµСЂРµР· РєРѕРіРѕ"
 	 */
 	protected String[] contractorThroughKinds;
 	

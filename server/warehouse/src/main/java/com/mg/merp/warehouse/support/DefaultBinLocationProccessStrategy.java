@@ -46,7 +46,7 @@ import com.mg.merp.warehouse.support.ui.InputBinLocationDlg;
 import com.mg.merp.warehouse.support.ui.SelectBinLocationDlg;
 
 /**
- * Стандартная реализация стратегии обработки/отката секций хранения
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё РѕР±СЂР°Р±РѕС‚РєРё/РѕС‚РєР°С‚Р° СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ
  * 
  * @author Artem V. Sharapov
  * @version $Id: DefaultBinLocationProccessStrategy.java,v 1.2 2008/07/15 08:24:22 safonov Exp $
@@ -69,10 +69,10 @@ public class DefaultBinLocationProccessStrategy implements BinLocationProccessSt
 	}
 
 	/**
-	 * Выполнить размещение товара в секции хранения при приходовании на склад
-	 * @param docLineData - данные по спецификации
-	 * @param stockBatch - партия
-	 * @param processListener - слушатель складского процессора
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ СЂР°Р·РјРµС‰РµРЅРёРµ С‚РѕРІР°СЂР° РІ СЃРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ РїСЂРё РїСЂРёС…РѕРґРѕРІР°РЅРёРё РЅР° СЃРєР»Р°Рґ
+	 * @param docLineData - РґР°РЅРЅС‹Рµ РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param stockBatch - РїР°СЂС‚РёСЏ
+	 * @param processListener - СЃР»СѓС€Р°С‚РµР»СЊ СЃРєР»Р°РґСЃРєРѕРіРѕ РїСЂРѕС†РµСЃСЃРѕСЂР°
 	 */
 	protected void doProccessOnReceipt(WarehouseProcessDocumentLineData docLineData, StockBatch stockBatch, final WarehouseProcessListener processListener) {
 		internalProccessOnReceipt(BigDecimal.ZERO, docLineData.getQuantity1(), docLineData.getCatalog(), docLineData, stockBatch, docLineData.getDstStock(), processListener);
@@ -119,24 +119,24 @@ public class DefaultBinLocationProccessStrategy implements BinLocationProccessSt
 	}
 
 	/**
-	 * Разместить товар в секции хранения в партии
-	 * @param binLocation - секция хранения на складе
-	 * @param stockBatch - партия
-	 * @param quantity - кол-во товара, размещаемого в секции
-	 * @param docSpec - позиция спецификации документа
+	 * Р Р°Р·РјРµСЃС‚РёС‚СЊ С‚РѕРІР°СЂ РІ СЃРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ РІ РїР°СЂС‚РёРё
+	 * @param binLocation - СЃРµРєС†РёСЏ С…СЂР°РЅРµРЅРёСЏ РЅР° СЃРєР»Р°РґРµ
+	 * @param stockBatch - РїР°СЂС‚РёСЏ
+	 * @param quantity - РєРѕР»-РІРѕ С‚РѕРІР°СЂР°, СЂР°Р·РјРµС‰Р°РµРјРѕРіРѕ РІ СЃРµРєС†РёРё
+	 * @param docSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	private void occupyBinLocation(BinLocation binLocation, StockBatch stockBatch, BigDecimal quantity, DocSpec docSpec) {
 		persistentManager.persist(initializeBinLocationDetail(binLocation, stockBatch, quantity, docSpec.getId(), BinLocationServiceLocal.RECEIPT_KIND));
 	}
 
 	/**
-	 * Инициализировать секцию хранения в партии
-	 * @param binLocation - секция хранения на складе
-	 * @param stockBatch - партия
-	 * @param quantity - кол-во товара, размещаемого в секции
-	 * @param docSpecId - идентификатор позиции спецификации документа
-	 * @param kind - тип движения: 0 - приход, 1 - расход
-	 * @return секция хранения в партии
+	 * РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ СЃРµРєС†РёСЋ С…СЂР°РЅРµРЅРёСЏ РІ РїР°СЂС‚РёРё
+	 * @param binLocation - СЃРµРєС†РёСЏ С…СЂР°РЅРµРЅРёСЏ РЅР° СЃРєР»Р°РґРµ
+	 * @param stockBatch - РїР°СЂС‚РёСЏ
+	 * @param quantity - РєРѕР»-РІРѕ С‚РѕРІР°СЂР°, СЂР°Р·РјРµС‰Р°РµРјРѕРіРѕ РІ СЃРµРєС†РёРё
+	 * @param docSpecId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param kind - С‚РёРї РґРІРёР¶РµРЅРёСЏ: 0 - РїСЂРёС…РѕРґ, 1 - СЂР°СЃС…РѕРґ
+	 * @return СЃРµРєС†РёСЏ С…СЂР°РЅРµРЅРёСЏ РІ РїР°СЂС‚РёРё
 	 */
 	private BinLocationDetail initializeBinLocationDetail(BinLocation binLocation, StockBatch stockBatch, BigDecimal quantity, Integer docSpecId, short kind) {
 		BinLocationDetail binLocationDetail = new BinLocationDetail();
@@ -149,12 +149,12 @@ public class DefaultBinLocationProccessStrategy implements BinLocationProccessSt
 	}
 
 	/**
-	 * Выполнить проверку, подходит ли выбранная секция по размерам и вместимости, и существует ли вообще
-	 * @param catalog - позиция кталога
-	 * @param binLocation - секция хранения на складе
-	 * @param warehouse - склад
-	 * @param quantity - кол-во
-	 * @return результат проверки
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РїСЂРѕРІРµСЂРєСѓ, РїРѕРґС…РѕРґРёС‚ Р»Рё РІС‹Р±СЂР°РЅРЅР°СЏ СЃРµРєС†РёСЏ РїРѕ СЂР°Р·РјРµСЂР°Рј Рё РІРјРµСЃС‚РёРјРѕСЃС‚Рё, Рё СЃСѓС‰РµСЃС‚РІСѓРµС‚ Р»Рё РІРѕРѕР±С‰Рµ
+	 * @param catalog - РїРѕР·РёС†РёСЏ РєС‚Р°Р»РѕРіР°
+	 * @param binLocation - СЃРµРєС†РёСЏ С…СЂР°РЅРµРЅРёСЏ РЅР° СЃРєР»Р°РґРµ
+	 * @param warehouse - СЃРєР»Р°Рґ
+	 * @param quantity - РєРѕР»-РІРѕ
+	 * @return СЂРµР·СѓР»СЊС‚Р°С‚ РїСЂРѕРІРµСЂРєРё
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	protected BinLocationOccupancy checkBinLocationOccupancy(Catalog catalog, BinLocation binLocation, Warehouse warehouse, BigDecimal quantity) {
@@ -193,11 +193,11 @@ public class DefaultBinLocationProccessStrategy implements BinLocationProccessSt
 	}
 
 	/**
-	 * Получить кол-во товара, размещенного в секции хранения на складе
-	 * @param binLocation - секция хранения на складе
-	 * @param warehouse - склад
-	 * @param catalogCode - код товара
-	 * @return кол-во товара, размещенного в секции хранения на складе
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»-РІРѕ С‚РѕРІР°СЂР°, СЂР°Р·РјРµС‰РµРЅРЅРѕРіРѕ РІ СЃРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ РЅР° СЃРєР»Р°РґРµ
+	 * @param binLocation - СЃРµРєС†РёСЏ С…СЂР°РЅРµРЅРёСЏ РЅР° СЃРєР»Р°РґРµ
+	 * @param warehouse - СЃРєР»Р°Рґ
+	 * @param catalogCode - РєРѕРґ С‚РѕРІР°СЂР°
+	 * @return РєРѕР»-РІРѕ С‚РѕРІР°СЂР°, СЂР°Р·РјРµС‰РµРЅРЅРѕРіРѕ РІ СЃРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ РЅР° СЃРєР»Р°РґРµ
 	 */
 	private BigDecimal getQuantityInSection(BinLocation binLocation, Warehouse warehouse, String catalogCode) {
 		BigDecimal inQuantity = getQuantityInSectionByKind(binLocation, warehouse, catalogCode, BinLocationServiceLocal.RECEIPT_KIND);
@@ -206,12 +206,12 @@ public class DefaultBinLocationProccessStrategy implements BinLocationProccessSt
 	}
 
 	/**
-	 * Получить кол-во товара, размещенного в секции хранения на складе с учетом типа движения товара
-	 * @param binLocation - секция хранения на складе
-	 * @param warehouse - склад
-	 * @param catalogCode - код товара
-	 * @param kind - тип движения товара: 0 - приход, 1 - расход
-	 * @return кол-во товара, размещенного в секции хранения на складе с учетом типа движения товара
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»-РІРѕ С‚РѕРІР°СЂР°, СЂР°Р·РјРµС‰РµРЅРЅРѕРіРѕ РІ СЃРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ РЅР° СЃРєР»Р°РґРµ СЃ СѓС‡РµС‚РѕРј С‚РёРїР° РґРІРёР¶РµРЅРёСЏ С‚РѕРІР°СЂР°
+	 * @param binLocation - СЃРµРєС†РёСЏ С…СЂР°РЅРµРЅРёСЏ РЅР° СЃРєР»Р°РґРµ
+	 * @param warehouse - СЃРєР»Р°Рґ
+	 * @param catalogCode - РєРѕРґ С‚РѕРІР°СЂР°
+	 * @param kind - С‚РёРї РґРІРёР¶РµРЅРёСЏ С‚РѕРІР°СЂР°: 0 - РїСЂРёС…РѕРґ, 1 - СЂР°СЃС…РѕРґ
+	 * @return РєРѕР»-РІРѕ С‚РѕРІР°СЂР°, СЂР°Р·РјРµС‰РµРЅРЅРѕРіРѕ РІ СЃРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ РЅР° СЃРєР»Р°РґРµ СЃ СѓС‡РµС‚РѕРј С‚РёРїР° РґРІРёР¶РµРЅРёСЏ С‚РѕРІР°СЂР°
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	private BigDecimal getQuantityInSectionByKind(BinLocation binLocation, Warehouse warehouse, String catalogCode, short kind) {
@@ -239,12 +239,12 @@ public class DefaultBinLocationProccessStrategy implements BinLocationProccessSt
 	}
 
 	/**
-	 * Выполнить обработку секций хранения при списании товара
-	 * @param stockBatchIterator - итератор партий
-	 * @param docLineData - данные по спецификации для отработки
-	 * @param warehouse - склад
-	 * @param stockBatches - список партий
-	 * @param processListener - слушатель складского процессора
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РѕР±СЂР°Р±РѕС‚РєСѓ СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ РїСЂРё СЃРїРёСЃР°РЅРёРё С‚РѕРІР°СЂР°
+	 * @param stockBatchIterator - РёС‚РµСЂР°С‚РѕСЂ РїР°СЂС‚РёР№
+	 * @param docLineData - РґР°РЅРЅС‹Рµ РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё
+	 * @param warehouse - СЃРєР»Р°Рґ
+	 * @param stockBatches - СЃРїРёСЃРѕРє РїР°СЂС‚РёР№
+	 * @param processListener - СЃР»СѓС€Р°С‚РµР»СЊ СЃРєР»Р°РґСЃРєРѕРіРѕ РїСЂРѕС†РµСЃСЃРѕСЂР°
 	 */
 	private void internalProccessOnIssue(final Iterator<StockBatch> stockBatchIterator, final WarehouseProcessDocumentLineData docLineData, final Warehouse warehouse, final List<StockBatch> stockBatches, final WarehouseProcessListener processListener) {
 		if(!stockBatchIterator.hasNext())
@@ -286,9 +286,9 @@ public class DefaultBinLocationProccessStrategy implements BinLocationProccessSt
 	}
 
 	/**
-	 * Выполнить подготовку перед созданием секций хранения в партии 
-	 * @param binLocationDataItems - список секций хранения в партии
-	 * @param quantity - кол-во
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РїРѕРґРіРѕС‚РѕРІРєСѓ РїРµСЂРµРґ СЃРѕР·РґР°РЅРёРµРј СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ РІ РїР°СЂС‚РёРё 
+	 * @param binLocationDataItems - СЃРїРёСЃРѕРє СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ РІ РїР°СЂС‚РёРё
+	 * @param quantity - РєРѕР»-РІРѕ
 	 */
 	private void proccessBinLocationData(List<BinLocationData> binLocationDataItems, BigDecimal quantity) {
 		for (BinLocationData binLocationData : binLocationDataItems) {
@@ -307,9 +307,9 @@ public class DefaultBinLocationProccessStrategy implements BinLocationProccessSt
 	}
 
 	/**
-	 * Получить информациию о кол-ве товара в секции хранения
-	 * @param stockBatch - партия
-	 * @return информациия о кол-ве товара в секции хранения
+	 * РџРѕР»СѓС‡РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёРёСЋ Рѕ РєРѕР»-РІРµ С‚РѕРІР°СЂР° РІ СЃРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ
+	 * @param stockBatch - РїР°СЂС‚РёСЏ
+	 * @return РёРЅС„РѕСЂРјР°С†РёРёСЏ Рѕ РєРѕР»-РІРµ С‚РѕРІР°СЂР° РІ СЃРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ
 	 */
 	private List<BinLocationData> getStockBatchBinLocations(StockBatch stockBatch) {
 		final List<BinLocationData> stockBatchBinLocations = new ArrayList<BinLocationData>();
@@ -335,9 +335,9 @@ public class DefaultBinLocationProccessStrategy implements BinLocationProccessSt
 	}
 
 	/**
-	 * Получить общее кол-во товара в секциях хранения
-	 * @param binLocationDataItems - список секцияй хранения
-	 * @return общее кол-во товара в секциях хранения
+	 * РџРѕР»СѓС‡РёС‚СЊ РѕР±С‰РµРµ РєРѕР»-РІРѕ С‚РѕРІР°СЂР° РІ СЃРµРєС†РёСЏС… С…СЂР°РЅРµРЅРёСЏ
+	 * @param binLocationDataItems - СЃРїРёСЃРѕРє СЃРµРєС†РёСЏР№ С…СЂР°РЅРµРЅРёСЏ
+	 * @return РѕР±С‰РµРµ РєРѕР»-РІРѕ С‚РѕРІР°СЂР° РІ СЃРµРєС†РёСЏС… С…СЂР°РЅРµРЅРёСЏ
 	 */
 	private BigDecimal getTotalQuantityInSections(List<BinLocationData> binLocationDataItems) {
 		BigDecimal result = BigDecimal.ZERO;
@@ -349,9 +349,9 @@ public class DefaultBinLocationProccessStrategy implements BinLocationProccessSt
 	}
 
 	/**
-	 * Выполнить списание товара с секциий хранения
-	 * @param binLocationDataItems - список секций хранения
-	 * @param docSpecId - идентификатор позиции спецификации
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ СЃРїРёСЃР°РЅРёРµ С‚РѕРІР°СЂР° СЃ СЃРµРєС†РёРёР№ С…СЂР°РЅРµРЅРёСЏ
+	 * @param binLocationDataItems - СЃРїРёСЃРѕРє СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ
+	 * @param docSpecId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	private void freeBinLocations(List<BinLocationData> binLocationDataItems, Integer docSpecId) {
 		List<BinLocationDetail> binLocationDetailList = new ArrayList<BinLocationDetail>();
@@ -361,8 +361,8 @@ public class DefaultBinLocationProccessStrategy implements BinLocationProccessSt
 	}
 
 	/**
-	 * Выполнить создание секций хранения в партии
-	 * @param binLocationDetailList - список секций хранения
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ СЃРѕР·РґР°РЅРёРµ СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ РІ РїР°СЂС‚РёРё
+	 * @param binLocationDetailList - СЃРїРёСЃРѕРє СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ
 	 */
 	private void createBinLocationDetail(List<BinLocationDetail> binLocationDetailList) {
 		for (BinLocationDetail binLocationDetail : binLocationDetailList)
@@ -377,8 +377,8 @@ public class DefaultBinLocationProccessStrategy implements BinLocationProccessSt
 	}
 
 	/**
-	 * Выполнить откат обработки секций хранения при приходовании товара на склад
-	 * @param history - история партии
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РѕС‚РєР°С‚ РѕР±СЂР°Р±РѕС‚РєРё СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ РїСЂРё РїСЂРёС…РѕРґРѕРІР°РЅРёРё С‚РѕРІР°СЂР° РЅР° СЃРєР»Р°Рґ
+	 * @param history - РёСЃС‚РѕСЂРёСЏ РїР°СЂС‚РёРё
 	 */
 	protected void doRollbackOnReceipt(StockBatchHistory history) {
 		ormTemplate.bulkUpdateByNamedQuery("Warehouse.DefaultBinLocationProccessStrategy.deleteReceiptBinLocationDetail", //$NON-NLS-1$
@@ -394,8 +394,8 @@ public class DefaultBinLocationProccessStrategy implements BinLocationProccessSt
 	}
 
 	/**
-	 * Выполнить откат обработки секций хранения при списании товара со склада
-	 * @param history - история партии
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РѕС‚РєР°С‚ РѕР±СЂР°Р±РѕС‚РєРё СЃРµРєС†РёР№ С…СЂР°РЅРµРЅРёСЏ РїСЂРё СЃРїРёСЃР°РЅРёРё С‚РѕРІР°СЂР° СЃРѕ СЃРєР»Р°РґР°
+	 * @param history - РёСЃС‚РѕСЂРёСЏ РїР°СЂС‚РёРё
 	 */
 	protected void doRollbackOnIssue(StockBatchHistory history) {
 		ormTemplate.bulkUpdateByNamedQuery("Warehouse.DefaultBinLocationProccessStrategy.deleteIssueBinLocationDetail", //$NON-NLS-1$
@@ -404,22 +404,22 @@ public class DefaultBinLocationProccessStrategy implements BinLocationProccessSt
 	}
 
 	/**
-	 * Наличие секции по размерам и вместимости
+	 * РќР°Р»РёС‡РёРµ СЃРµРєС†РёРё РїРѕ СЂР°Р·РјРµСЂР°Рј Рё РІРјРµСЃС‚РёРјРѕСЃС‚Рё
 	 */
 	public enum BinLocationOccupancy {
 
 		/**
-		 * Доступна для размещения товара
+		 * Р”РѕСЃС‚СѓРїРЅР° РґР»СЏ СЂР°Р·РјРµС‰РµРЅРёСЏ С‚РѕРІР°СЂР°
 		 */
 		AVALIBLE,
 
 		/**
-		 * Не найдена
+		 * РќРµ РЅР°Р№РґРµРЅР°
 		 */
 		NOT_FOUND,
 
 		/**
-		 * Не доступна для размещения данного товара
+		 * РќРµ РґРѕСЃС‚СѓРїРЅР° РґР»СЏ СЂР°Р·РјРµС‰РµРЅРёСЏ РґР°РЅРЅРѕРіРѕ С‚РѕРІР°СЂР°
 		 */
 		PRODUCT_MISMATCH
 

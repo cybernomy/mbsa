@@ -21,7 +21,7 @@ import java.math.RoundingMode;
 import com.mg.framework.api.math.RoundContext;
 
 /**
- * Математические утилиты
+ * РњР°С‚РµРјР°С‚РёС‡РµСЃРєРёРµ СѓС‚РёР»РёС‚С‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: MathUtils.java,v 1.9 2008/06/04 09:35:45 sharapov Exp $
@@ -29,29 +29,29 @@ import com.mg.framework.api.math.RoundContext;
 public class MathUtils {
 
 	/**
-	 * константа 100
+	 * РєРѕРЅСЃС‚Р°РЅС‚Р° 100
 	 */
 	public final static BigDecimal HUNDRED = new BigDecimal(BigInteger.valueOf(100), 0);
 	/**
-	 * константа 1000
+	 * РєРѕРЅСЃС‚Р°РЅС‚Р° 1000
 	 */
 	public final static BigDecimal THOUSAND = new BigDecimal(BigInteger.valueOf(1000), 0);
 	
 	/**
-	 * сравнение с нулем
+	 * СЃСЂР°РІРЅРµРЅРёРµ СЃ РЅСѓР»РµРј
 	 * 
-	 * @param value	значение
-	 * @return	-1 если <code>value</code> меньше нуля, 0 если <code>value</code> равно нулю, 1 если <code>value</code> больше нуля
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ
+	 * @return	-1 РµСЃР»Рё <code>value</code> РјРµРЅСЊС€Рµ РЅСѓР»СЏ, 0 РµСЃР»Рё <code>value</code> СЂР°РІРЅРѕ РЅСѓР»СЋ, 1 РµСЃР»Рё <code>value</code> Р±РѕР»СЊС€Рµ РЅСѓР»СЏ
 	 */
 	public static int compareToZero(BigDecimal value) {
 		return value.compareTo(BigDecimal.ZERO);
 	}
 	
 	/**
-	 * сравнение с нулем/null
+	 * СЃСЂР°РІРЅРµРЅРёРµ СЃ РЅСѓР»РµРј/null
 	 * 
-	 * @param value	значение
-	 * @return	-1 если <code>value</code> меньше нуля, 0 если <code>value</code> равно нулю или <code>null</code>, 1 если <code>value</code> больше нуля
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ
+	 * @return	-1 РµСЃР»Рё <code>value</code> РјРµРЅСЊС€Рµ РЅСѓР»СЏ, 0 РµСЃР»Рё <code>value</code> СЂР°РІРЅРѕ РЅСѓР»СЋ РёР»Рё <code>null</code>, 1 РµСЃР»Рё <code>value</code> Р±РѕР»СЊС€Рµ РЅСѓР»СЏ
 	 */
 	public static int compareToZeroOrNull(BigDecimal value) {
 		if(value == null)
@@ -61,11 +61,11 @@ public class MathUtils {
 	}
 	
 	/**
-	 * округление значения
+	 * РѕРєСЂСѓРіР»РµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ
 	 * 
-	 * @param value	значение
-	 * @param rc	контекст {@link com.mg.framework.api.math.RoundContext RoundContext}
-	 * @return	округленное значение
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ
+	 * @param rc	РєРѕРЅС‚РµРєСЃС‚ {@link com.mg.framework.api.math.RoundContext RoundContext}
+	 * @return	РѕРєСЂСѓРіР»РµРЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
 	 */
 	public static BigDecimal round(BigDecimal value, RoundContext rc) {
 		//return value.round(new MathContext(value.precision() == 1 ? rc.getScale() : value.precision() - value.scale() + rc.getScale(), rc.getRoundingMode()));
@@ -73,24 +73,24 @@ public class MathUtils {
 	}
 
 	/**
-	 * округление значения
+	 * РѕРєСЂСѓРіР»РµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ
 	 * 
-	 * @param value			значение
-	 * @param scale			количество знаков после точки
-	 * @param roundingMode	режим округления {@link java.math.RoundingMode RoundingMode}
-	 * @return	округленное значение
+	 * @param value			Р·РЅР°С‡РµРЅРёРµ
+	 * @param scale			РєРѕР»РёС‡РµСЃС‚РІРѕ Р·РЅР°РєРѕРІ РїРѕСЃР»Рµ С‚РѕС‡РєРё
+	 * @param roundingMode	СЂРµР¶РёРј РѕРєСЂСѓРіР»РµРЅРёСЏ {@link java.math.RoundingMode RoundingMode}
+	 * @return	РѕРєСЂСѓРіР»РµРЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
 	 */
 	public static BigDecimal round(BigDecimal value, int scale, RoundingMode roundingMode) {
 		return value.setScale(scale, roundingMode);
 	}
 
 	/**
-	 * умножение с округлением
+	 * СѓРјРЅРѕР¶РµРЅРёРµ СЃ РѕРєСЂСѓРіР»РµРЅРёРµРј
 	 * 
-	 * @param multiplicand	множимое
-	 * @param multiplier	множитель
-	 * @param rc			контекст округления
-	 * @return				произведение, или <code>null</code> если <code>multiplicand == null</code> или <code>multiplier == null</code>
+	 * @param multiplicand	РјРЅРѕР¶РёРјРѕРµ
+	 * @param multiplier	РјРЅРѕР¶РёС‚РµР»СЊ
+	 * @param rc			РєРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ
+	 * @return				РїСЂРѕРёР·РІРµРґРµРЅРёРµ, РёР»Рё <code>null</code> РµСЃР»Рё <code>multiplicand == null</code> РёР»Рё <code>multiplier == null</code>
 	 */
 	public static BigDecimal multiply(BigDecimal multiplicand, BigDecimal multiplier, RoundContext rc) {
 		if (multiplicand == null || multiplier == null)
@@ -100,12 +100,12 @@ public class MathUtils {
 	}
 	
 	/**
-	 * сложение с округлением
+	 * СЃР»РѕР¶РµРЅРёРµ СЃ РѕРєСЂСѓРіР»РµРЅРёРµРј
 	 * 
-	 * @param augend	первое слагаемое
-	 * @param addend	второе слагаемое
-	 * @param rc		контекст округления
-	 * @return	сумма, или <code>null</code> если <code>augend == null</code> или <code>addend == null</code>
+	 * @param augend	РїРµСЂРІРѕРµ СЃР»Р°РіР°РµРјРѕРµ
+	 * @param addend	РІС‚РѕСЂРѕРµ СЃР»Р°РіР°РµРјРѕРµ
+	 * @param rc		РєРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ
+	 * @return	СЃСѓРјРјР°, РёР»Рё <code>null</code> РµСЃР»Рё <code>augend == null</code> РёР»Рё <code>addend == null</code>
 	 */
 	public static BigDecimal add(BigDecimal augend, BigDecimal addend, RoundContext rc) {
 		if (augend == null || addend == null)
@@ -114,12 +114,12 @@ public class MathUtils {
 	}
 	
 	/**
-	 * деление с округлением
+	 * РґРµР»РµРЅРёРµ СЃ РѕРєСЂСѓРіР»РµРЅРёРµРј
 	 * 
-	 * @param dividend	делимое
-	 * @param divisor	делитель
-	 * @param rc		контекст округления
-	 * @return	частное, или <code>null</code> если <code>dividend == null</code> или <code>divisor == null</code>
+	 * @param dividend	РґРµР»РёРјРѕРµ
+	 * @param divisor	РґРµР»РёС‚РµР»СЊ
+	 * @param rc		РєРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ
+	 * @return	С‡Р°СЃС‚РЅРѕРµ, РёР»Рё <code>null</code> РµСЃР»Рё <code>dividend == null</code> РёР»Рё <code>divisor == null</code>
 	 */
 	public static BigDecimal divide(BigDecimal dividend, BigDecimal divisor, RoundContext rc) {
 		if (dividend == null || divisor == null)
@@ -128,12 +128,12 @@ public class MathUtils {
 	}
 	
 	/**
-	 * вычитание с округлением
+	 * РІС‹С‡РёС‚Р°РЅРёРµ СЃ РѕРєСЂСѓРіР»РµРЅРёРµРј
 	 * 
-	 * @param minuend		уменьшаемое
-	 * @param subtrahend	вычитаемое	
-	 * @param rc			контекст округления
-	 * @return	разность, или <code>null</code> если <code>minuend == null</code> или <code>subtrahend == null</code>
+	 * @param minuend		СѓРјРµРЅСЊС€Р°РµРјРѕРµ
+	 * @param subtrahend	РІС‹С‡РёС‚Р°РµРјРѕРµ	
+	 * @param rc			РєРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ
+	 * @return	СЂР°Р·РЅРѕСЃС‚СЊ, РёР»Рё <code>null</code> РµСЃР»Рё <code>minuend == null</code> РёР»Рё <code>subtrahend == null</code>
 	 */
 	public static BigDecimal subtract(BigDecimal minuend, BigDecimal subtrahend, RoundContext rc) {
 		if (minuend == null || subtrahend == null)
@@ -142,12 +142,12 @@ public class MathUtils {
 	}
 	
 	/**
-	 * сложение с округлением
+	 * СЃР»РѕР¶РµРЅРёРµ СЃ РѕРєСЂСѓРіР»РµРЅРёРµРј
 	 * 
-	 * @param augend	первое слагаемое
-	 * @param addend	второе слагаемое
-	 * @param rc		контекст округления
-	 * @return	сумма, или <code>addend</code> если <code>augend == null</code>, или <code>augend</code> если <code>addend == null</code>
+	 * @param augend	РїРµСЂРІРѕРµ СЃР»Р°РіР°РµРјРѕРµ
+	 * @param addend	РІС‚РѕСЂРѕРµ СЃР»Р°РіР°РµРјРѕРµ
+	 * @param rc		РєРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ
+	 * @return	СЃСѓРјРјР°, РёР»Рё <code>addend</code> РµСЃР»Рё <code>augend == null</code>, РёР»Рё <code>augend</code> РµСЃР»Рё <code>addend == null</code>
 	 */
 	public static BigDecimal addNullable(BigDecimal augend, BigDecimal addend, RoundContext rc) {
 		if (augend == null)
@@ -156,12 +156,12 @@ public class MathUtils {
 	}
 
 	/**
-	 * вычитание с округлением
+	 * РІС‹С‡РёС‚Р°РЅРёРµ СЃ РѕРєСЂСѓРіР»РµРЅРёРµРј
 	 * 
-	 * @param minuend		уменьшаемое
-	 * @param subtrahend	вычитаемое	
-	 * @param rc			контекст округления
-	 * @return	разность, или <code>subtrahend</code> если <code>minuend == null</code>, <code>minuend</code> или <code>subtrahend == null</code>
+	 * @param minuend		СѓРјРµРЅСЊС€Р°РµРјРѕРµ
+	 * @param subtrahend	РІС‹С‡РёС‚Р°РµРјРѕРµ	
+	 * @param rc			РєРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ
+	 * @return	СЂР°Р·РЅРѕСЃС‚СЊ, РёР»Рё <code>subtrahend</code> РµСЃР»Рё <code>minuend == null</code>, <code>minuend</code> РёР»Рё <code>subtrahend == null</code>
 	 */
 	public static BigDecimal subtractNullable(BigDecimal minuend, BigDecimal subtrahend, RoundContext rc) {
 		if (minuend == null)
@@ -170,9 +170,9 @@ public class MathUtils {
 	}
 
 	/**
-	 * возвращает значение <code>-value</code>
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ <code>-value</code>
 	 * 
-	 * @param value	значение
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ
 	 * @return	<code>-value</code>
 	 */
 	public static BigDecimal negate(BigDecimal value) {
@@ -180,10 +180,10 @@ public class MathUtils {
 	}
 
 	/**
-	 * возвращает значение <code>-value</code>
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ <code>-value</code>
 	 * 
-	 * @param value	значение
-	 * @param rc	контекст
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ
+	 * @param rc	РєРѕРЅС‚РµРєСЃС‚
 	 * @return	<code>-value</code>
 	 */
 	public static BigDecimal negate(BigDecimal value, RoundContext rc) {

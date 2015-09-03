@@ -15,7 +15,7 @@ public interface ScrapMaterialModelServiceLocal
    extends DocumentPattern<ScrapDocumentModel, Integer>
 {
 	/**
-	 * тип папки для образцов актов на списание времени, отработанного РС в НЗП
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ Р РЎ РІ РќР—Рџ
 	 */
 	final static short FOLDER_PART = 12515;
 }

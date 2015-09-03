@@ -32,7 +32,7 @@ import com.mg.merp.document.model.DocType;
 import com.mg.merp.security.model.Groups;
 
 /**
- * Реализация бизнес-компонента "Этап ДО"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р­С‚Р°Рї Р”Рћ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowStageServiceBean.java,v 1.6 2007/10/02 09:14:13 safonov Exp $
@@ -91,7 +91,7 @@ public class DocFlowStageServiceBean extends
 	@PermitAll
 	public void grantRights(DocProcessStageRights[] rights, ActionUserGrant grant) {
 		for (DocProcessStageRights right : rights) {
-			//нет прав, просто удалим, нет смысла хранить запись без прав
+			//РЅРµС‚ РїСЂР°РІ, РїСЂРѕСЃС‚Рѕ СѓРґР°Р»РёРј, РЅРµС‚ СЃРјС‹СЃР»Р° С…СЂР°РЅРёС‚СЊ Р·Р°РїРёСЃСЊ Р±РµР· РїСЂР°РІ
 			if (grant == ActionUserGrant.NONE)
 				ServerUtils.getPersistentManager().remove(right);
 			else {
@@ -106,7 +106,7 @@ public class DocFlowStageServiceBean extends
 	 */
 	@PermitAll
 	public void initializeDocFlow(DocType docType) {
-		//этап создание документа
+		//СЌС‚Р°Рї СЃРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р°
 		DocProcessStage stage = initialize();
 		stage.setDocType(docType);
 		stage.setStage(getPersistentManager().find(StageAction.class, DocFlowManager.DOC_FLOW_CREATE_DOC));
@@ -115,7 +115,7 @@ public class DocFlowStageServiceBean extends
 		stage.setCoorX(50);
 		stage.setCoorY(50);
 		create(stage);
-		//этап создание документа на основе
+		//СЌС‚Р°Рї СЃРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІРµ
 		stage = initialize();
 		stage.setDocType(docType);
 		stage.setStage(getPersistentManager().find(StageAction.class, DocFlowManager.DOC_FLOW_BASED_ON));

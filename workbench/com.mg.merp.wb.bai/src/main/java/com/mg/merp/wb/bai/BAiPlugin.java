@@ -107,8 +107,8 @@ public class BAiPlugin extends BusinessObjectPlugin<Repository> {
 
 			/**
 			 * 
-			 * @return последний из найденных(AbstractBusinessAddin может
-			 *         находится в проекте, в библиотеке, внешнем архиве и т.д.)
+			 * @return РїРѕСЃР»РµРґРЅРёР№ РёР· РЅР°Р№РґРµРЅРЅС‹С…(AbstractBusinessAddin РјРѕР¶РµС‚
+			 *         РЅР°С…РѕРґРёС‚СЃСЏ РІ РїСЂРѕРµРєС‚Рµ, РІ Р±РёР±Р»РёРѕС‚РµРєРµ, РІРЅРµС€РЅРµРј Р°СЂС…РёРІРµ Рё С‚.Рґ.)
 			 */
 			public IType getBaiType() {
 				return baiType;

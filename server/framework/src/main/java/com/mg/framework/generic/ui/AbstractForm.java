@@ -37,8 +37,8 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.framework.utils.StringUtils;
 
 /**
- * Абстрактная реализация контроллера формы пользовательского интерфейса. Рекомендуется использовать
- * в качестве предка для контроллеров форм.
+ * РђР±СЃС‚СЂР°РєС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РєРѕРЅС‚СЂРѕР»Р»РµСЂР° С„РѕСЂРјС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°. Р РµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ
+ * РІ РєР°С‡РµСЃС‚РІРµ РїСЂРµРґРєР° РґР»СЏ РєРѕРЅС‚СЂРѕР»Р»РµСЂРѕРІ С„РѕСЂРј.
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractForm.java,v 1.12 2008/10/08 11:41:50 safonov Exp $
@@ -51,10 +51,10 @@ public abstract class AbstractForm implements Form, Controller, Serializable {
 	private List<SetPropertyCommand> modelChanges = new ArrayList<SetPropertyCommand>();
 
 	/**
-	 * реализация получения значения свойства модели
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РїРѕР»СѓС‡РµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІР° РјРѕРґРµР»Рё
 	 * 
-	 * @param name	имя свойства
-	 * @return	значение
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @return	Р·РЅР°С‡РµРЅРёРµ
 	 * @throws NoSuchFieldException
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
@@ -67,10 +67,10 @@ public abstract class AbstractForm implements Form, Controller, Serializable {
 	}
 	
 	/**
-	 * реализация установки значения свойства модели
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СѓСЃС‚Р°РЅРѕРІРєРё Р·РЅР°С‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІР° РјРѕРґРµР»Рё
 	 * 
-	 * @param name	имя свойства
-	 * @param value	значение
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ
 	 * @throws NoSuchFieldException
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
@@ -83,10 +83,10 @@ public abstract class AbstractForm implements Form, Controller, Serializable {
 	}
 	
 	/**
-	 * реализация получения метаданных свойства модели
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РїРѕР»СѓС‡РµРЅРёСЏ РјРµС‚Р°РґР°РЅРЅС‹С… СЃРІРѕР№СЃС‚РІР° РјРѕРґРµР»Рё
 	 * 
-	 * @param name	имя свойства
-	 * @return	метаданные или <code>null</code> если свойство не найдено
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @return	РјРµС‚Р°РґР°РЅРЅС‹Рµ РёР»Рё <code>null</code> РµСЃР»Рё СЃРІРѕР№СЃС‚РІРѕ РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	protected FieldMetadata doGetFieldMetadata(String name) {
 		Field fld = ReflectionUtils.findDeclaredField(this.getClass(), name);
@@ -95,10 +95,10 @@ public abstract class AbstractForm implements Form, Controller, Serializable {
 	}
 	
 	/**
-	 * реализация получения типа свойства модели
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РїРѕР»СѓС‡РµРЅРёСЏ С‚РёРїР° СЃРІРѕР№СЃС‚РІР° РјРѕРґРµР»Рё
 	 * 
-	 * @param name	имя свойства
-	 * @return	тип
+	 * @param name	РёРјСЏ СЃРІРѕР№СЃС‚РІР°
+	 * @return	С‚РёРї
 	 */
 	protected Class<?> doGetFieldType(String name) {
 		Field fld = ReflectionUtils.findDeclaredField(this.getClass(), name);
@@ -106,29 +106,29 @@ public abstract class AbstractForm implements Form, Controller, Serializable {
 	}
 
 	/**
-	 * получить список изменений модели
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РёР·РјРµРЅРµРЅРёР№ РјРѕРґРµР»Рё
 	 * 
-	 * @return	список изменений модели
+	 * @return	СЃРїРёСЃРѕРє РёР·РјРµРЅРµРЅРёР№ РјРѕРґРµР»Рё
 	 */
 	protected List<SetPropertyCommand> getModelChanges() {
 		return modelChanges;
 	}
 
 	/**
-	 * добавить изменение в список изменений модели
+	 * РґРѕР±Р°РІРёС‚СЊ РёР·РјРµРЅРµРЅРёРµ РІ СЃРїРёСЃРѕРє РёР·РјРµРЅРµРЅРёР№ РјРѕРґРµР»Рё
 	 * 
-	 * @param command	команда изменения модели
+	 * @param command	РєРѕРјР°РЅРґР° РёР·РјРµРЅРµРЅРёСЏ РјРѕРґРµР»Рё
 	 */
 	private void addModelChange(SetPropertyCommand command) {
 		getModelChanges().add(command);
 	}
 
 	/**
-	 * реализация вызова обработчика события
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РІС‹Р·РѕРІР° РѕР±СЂР°Р±РѕС‚С‡РёРєР° СЃРѕР±С‹С‚РёСЏ
 	 * 
-	 * @param handlerName	имя обработчика
-	 * @param args	аргументы вызова
-	 * @return	результат работы обработчика
+	 * @param handlerName	РёРјСЏ РѕР±СЂР°Р±РѕС‚С‡РёРєР°
+	 * @param args	Р°СЂРіСѓРјРµРЅС‚С‹ РІС‹Р·РѕРІР°
+	 * @return	СЂРµР·СѓР»СЊС‚Р°С‚ СЂР°Р±РѕС‚С‹ РѕР±СЂР°Р±РѕС‚С‡РёРєР°
 	 * @throws NoSuchMethodException
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
@@ -147,14 +147,14 @@ public abstract class AbstractForm implements Form, Controller, Serializable {
 	}
 	
 	/**
-	 * реализация показа формы в UI
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РїРѕРєР°Р·Р° С„РѕСЂРјС‹ РІ UI
 	 */
 	protected final void showForm() {
 		view.show(modal);
 	}
 	
 	/**
-	 * реализация закрытия формы в UI
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ Р·Р°РєСЂС‹С‚РёСЏ С„РѕСЂРјС‹ РІ UI
 	 */
 	protected final void closeForm() {
 		view.close();
@@ -163,65 +163,65 @@ public abstract class AbstractForm implements Form, Controller, Serializable {
 	}
 
 	/**
-	 * обработчик события <code>close</code>
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ <code>close</code>
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public final void onActionClose(WidgetEvent event) {
 		doOnActionClose(event);
 	}
 	
 	/**
-	 * используется для обработки события <code>close</code>, не вызывать напрямую,
-	 * данное событие можно использовать для обработки закрытия формы, например, если
-	 * сделать реализацию пустой, то окно не будет закрываться при нажатии на кнопку X
+	 * РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё СЃРѕР±С‹С‚РёСЏ <code>close</code>, РЅРµ РІС‹Р·С‹РІР°С‚СЊ РЅР°РїСЂСЏРјСѓСЋ,
+	 * РґР°РЅРЅРѕРµ СЃРѕР±С‹С‚РёРµ РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєСЂС‹С‚РёСЏ С„РѕСЂРјС‹, РЅР°РїСЂРёРјРµСЂ, РµСЃР»Рё
+	 * СЃРґРµР»Р°С‚СЊ СЂРµР°Р»РёР·Р°С†РёСЋ РїСѓСЃС‚РѕР№, С‚Рѕ РѕРєРЅРѕ РЅРµ Р±СѓРґРµС‚ Р·Р°РєСЂС‹РІР°С‚СЊСЃСЏ РїСЂРё РЅР°Р¶Р°С‚РёРё РЅР° РєРЅРѕРїРєСѓ X
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	protected void doOnActionClose(WidgetEvent event) {
 		close();
 	}
 	
 	/**
-	 * Метод предназначен для реализации дополнительных действий в классах наследниках
-	 * непосредственно перед показом формы, в базовой реализации данный метод
-	 * показывает форму, в случае если метод был переопределен, то необходимо вызвать
-	 * базовую реализацию <code>super.doOnRun();</code> или вызвать метод <code>showForm();</code>
+	 * РњРµС‚РѕРґ РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅ РґР»СЏ СЂРµР°Р»РёР·Р°С†РёРё РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РґРµР№СЃС‚РІРёР№ РІ РєР»Р°СЃСЃР°С… РЅР°СЃР»РµРґРЅРёРєР°С…
+	 * РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ РїРµСЂРµРґ РїРѕРєР°Р·РѕРј С„РѕСЂРјС‹, РІ Р±Р°Р·РѕРІРѕР№ СЂРµР°Р»РёР·Р°С†РёРё РґР°РЅРЅС‹Р№ РјРµС‚РѕРґ
+	 * РїРѕРєР°Р·С‹РІР°РµС‚ С„РѕСЂРјСѓ, РІ СЃР»СѓС‡Р°Рµ РµСЃР»Рё РјРµС‚РѕРґ Р±С‹Р» РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ, С‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ РІС‹Р·РІР°С‚СЊ
+	 * Р±Р°Р·РѕРІСѓСЋ СЂРµР°Р»РёР·Р°С†РёСЋ <code>super.doOnRun();</code> РёР»Рё РІС‹Р·РІР°С‚СЊ РјРµС‚РѕРґ <code>showForm();</code>
 	 */
 	protected void doOnRun() {
 		showForm();
 	}
 	
 	/**
-	 * Метод предназначен для реализации дополнительных действий в классах наследниках
-	 * непосредственно перед закрытием формы, в базовой реализации данный метод
-	 * закрывает форму, в случае если метод был переопределен, то необходимо вызвать
-	 * базовую реализацию <code>super.doOnClose();</code> или вызвать метод <code>closeForm();</code>
+	 * РњРµС‚РѕРґ РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅ РґР»СЏ СЂРµР°Р»РёР·Р°С†РёРё РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РґРµР№СЃС‚РІРёР№ РІ РєР»Р°СЃСЃР°С… РЅР°СЃР»РµРґРЅРёРєР°С…
+	 * РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ РїРµСЂРµРґ Р·Р°РєСЂС‹С‚РёРµРј С„РѕСЂРјС‹, РІ Р±Р°Р·РѕРІРѕР№ СЂРµР°Р»РёР·Р°С†РёРё РґР°РЅРЅС‹Р№ РјРµС‚РѕРґ
+	 * Р·Р°РєСЂС‹РІР°РµС‚ С„РѕСЂРјСѓ, РІ СЃР»СѓС‡Р°Рµ РµСЃР»Рё РјРµС‚РѕРґ Р±С‹Р» РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ, С‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ РІС‹Р·РІР°С‚СЊ
+	 * Р±Р°Р·РѕРІСѓСЋ СЂРµР°Р»РёР·Р°С†РёСЋ <code>super.doOnClose();</code> РёР»Рё РІС‹Р·РІР°С‚СЊ РјРµС‚РѕРґ <code>closeForm();</code>
 	 */
 	protected void doOnClose() {
 		closeForm();
 	}
 	
 	/**
-	 * признак модальности формы
+	 * РїСЂРёР·РЅР°Рє РјРѕРґР°Р»СЊРЅРѕСЃС‚Рё С„РѕСЂРјС‹
 	 * 
-	 * @return	<code>true</code> если форма модальная
+	 * @return	<code>true</code> РµСЃР»Рё С„РѕСЂРјР° РјРѕРґР°Р»СЊРЅР°СЏ
 	 */
 	protected boolean isModal() {
 		return modal;
 	}
 	
 	/**
-	 * реализация разрушения формы
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СЂР°Р·СЂСѓС€РµРЅРёСЏ С„РѕСЂРјС‹
 	 */
 	protected void doDispose() {
 		
 	}
 	
 	/**
-	 * отправка события о закрытии формы
+	 * РѕС‚РїСЂР°РІРєР° СЃРѕР±С‹С‚РёСЏ Рѕ Р·Р°РєСЂС‹С‚РёРё С„РѕСЂРјС‹
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void fireCloseAction(FormEvent event) {
 		for (FormActionListener listener : closeActionListeners)
@@ -292,8 +292,8 @@ public abstract class AbstractForm implements Form, Controller, Serializable {
 	 * @see com.mg.merp.core.support.ui.IController#setFieldValue(java.lang.String, java.lang.Object)
 	 */
 	public final void setFieldValue(String name, Object value) throws NoSuchFieldException, IllegalArgumentException, IllegalAccessException {
-		Object oldValue = getFieldValue(name); //получим старое значение
-		//изменим модель в случае если было изменение значения
+		Object oldValue = getFieldValue(name); //РїРѕР»СѓС‡РёРј СЃС‚Р°СЂРѕРµ Р·РЅР°С‡РµРЅРёРµ
+		//РёР·РјРµРЅРёРј РјРѕРґРµР»СЊ РІ СЃР»СѓС‡Р°Рµ РµСЃР»Рё Р±С‹Р»Рѕ РёР·РјРµРЅРµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ
 		if (BeanUtils.isPropertyDifferent(oldValue, value)) {
 			doSetFieldValue(name, value);
 			addModelChange(new SetPropertyCommand(value, oldValue, name));

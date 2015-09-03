@@ -24,7 +24,7 @@ import com.mg.merp.document.generic.AbstractDocSpecPropertiesCalculationStrategy
 import com.mg.merp.warehouse.model.BaseStockDocumentSpec;
 
 /**
- * Стандартная реализация стратегии расчета свойств спецификации товарного документа
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё СЂР°СЃС‡РµС‚Р° СЃРІРѕР№СЃС‚РІ СЃРїРµС†РёС„РёРєР°С†РёРё С‚РѕРІР°СЂРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultWarehouseSpecPropertiesCalculationStrategy.java,v 1.2 2008/06/04 09:38:02 sharapov Exp $
@@ -50,22 +50,22 @@ public class DefaultWarehouseSpecPropertiesCalculationStrategy extends
 	@Override
 	protected void doAdjust() {
 		BigDecimal quantity = entity.getQuantity();
-		//скидка/наценка в % из документа
+		//СЃРєРёРґРєР°/РЅР°С†РµРЅРєР° РІ % РёР· РґРѕРєСѓРјРµРЅС‚Р°
 		BigDecimal docDiscount = entity.getDocDiscount();
 		if (docDiscount == null)
 			docDiscount = BigDecimal.ZERO;
-		//сумма внешней скидки/наценки расчитанной для данной спецификации
+		//СЃСѓРјРјР° РІРЅРµС€РЅРµР№ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё СЂР°СЃС‡РёС‚Р°РЅРЅРѕР№ РґР»СЏ РґР°РЅРЅРѕР№ СЃРїРµС†РёС„РёРєР°С†РёРё
 		BigDecimal calculatedDiscount = entity.getExternalDiscountValue();
 		if (calculatedDiscount == null) {
 			calculatedDiscount = BigDecimal.ZERO;
-			//+ скидка/наценка в % из спецификации если нет внешней скидки/наценки
+			//+ СЃРєРёРґРєР°/РЅР°С†РµРЅРєР° РІ % РёР· СЃРїРµС†РёС„РёРєР°С†РёРё РµСЃР»Рё РЅРµС‚ РІРЅРµС€РЅРµР№ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
 			if (entity.getDiscount() != null)
 				docDiscount = docDiscount.add(entity.getDiscount());
 		}
 		
 		if (entity.getPrice1() == null || MathUtils.compareToZero(entity.getPrice1()) == 0) {
-			//если не заданы цены и суммы, то выходим, вероятно здесь еще надо проверять
-			//цены и суммы со скидками и от них уже вычислять
+			//РµСЃР»Рё РЅРµ Р·Р°РґР°РЅС‹ С†РµРЅС‹ Рё СЃСѓРјРјС‹, С‚Рѕ РІС‹С…РѕРґРёРј, РІРµСЂРѕСЏС‚РЅРѕ Р·РґРµСЃСЊ РµС‰Рµ РЅР°РґРѕ РїСЂРѕРІРµСЂСЏС‚СЊ
+			//С†РµРЅС‹ Рё СЃСѓРјРјС‹ СЃРѕ СЃРєРёРґРєР°РјРё Рё РѕС‚ РЅРёС… СѓР¶Рµ РІС‹С‡РёСЃР»СЏС‚СЊ
 			if (entity.getSumma1() == null || MathUtils.compareToZero(entity.getSumma1()) == 0) {
 				//http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4585
 				entity.setSummaWithDiscount(entity.getSumma1());
@@ -92,7 +92,7 @@ public class DefaultWarehouseSpecPropertiesCalculationStrategy extends
 			}
 		}
 		
-		//если есть внешняя скидка/наценка то расчитаем в % для данной спецификации
+		//РµСЃР»Рё РµСЃС‚СЊ РІРЅРµС€РЅСЏСЏ СЃРєРёРґРєР°/РЅР°С†РµРЅРєР° С‚Рѕ СЂР°СЃС‡РёС‚Р°РµРј РІ % РґР»СЏ РґР°РЅРЅРѕР№ СЃРїРµС†РёС„РёРєР°С†РёРё
 		if (entity.getExternalDiscountValue() != null)
 			entity.setDiscount(MathUtils.divide(calculatedDiscount.multiply(MathUtils.HUNDRED), entity.getPrice1(), new RoundContext(6)));
 	}

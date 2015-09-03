@@ -30,7 +30,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Packing;
 
 /**
- * Контроллер формы поиска сущностей "упаковки товара позиции спецификации документа"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "СѓРїР°РєРѕРІРєРё С‚РѕРІР°СЂР° РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: DocSpecPackingSearchForm.java,v 1.1 2007/06/21 11:59:42 sharapov Exp $
@@ -110,8 +110,8 @@ public class DocSpecPackingSearchForm extends AbstractSearchForm {
 	}
 
 	/**
-	 * Запустиь форму поиска
-	 * @param catalog - товар(упакованный), для которого будет осуществлен поиск упаковок
+	 * Р—Р°РїСѓСЃС‚РёСЊ С„РѕСЂРјСѓ РїРѕРёСЃРєР°
+	 * @param catalog - С‚РѕРІР°СЂ(СѓРїР°РєРѕРІР°РЅРЅС‹Р№), РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ Р±СѓРґРµС‚ РѕСЃСѓС‰РµСЃС‚РІР»РµРЅ РїРѕРёСЃРє СѓРїР°РєРѕРІРѕРє
 	 */
 	public void execute(Catalog catalog) {
 		if(catalog != null && catalog.getPackaged()) {

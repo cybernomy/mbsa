@@ -31,7 +31,7 @@ import com.mg.merp.finance.totals.helperclasses.caches.AccountCache;
 public class Utils {
 
 	public static String getAnlCode(int accId, int anlId, byte anlLevel) throws ApplicationException, NamingException {
-		//TODO: Косяк если имя сервиса содержит и прописные и строчные буквы
+		//TODO: РљРѕСЃСЏРє РµСЃР»Рё РёРјСЏ СЃРµСЂРІРёСЃР° СЃРѕРґРµСЂР¶РёС‚ Рё РїСЂРѕРїРёСЃРЅС‹Рµ Рё СЃС‚СЂРѕС‡РЅС‹Рµ Р±СѓРєРІС‹
 		if ((accId > 0) && (anlId > 0)) {
 			String beanName = StringUtils.EMPTY_STRING;
 			PersistentObject it = AccountCache.loadFinAccountById(accId);
@@ -62,7 +62,7 @@ public class Utils {
 			return (String)po.getAttribute("UpCode"); //$NON-NLS-1$
 		else  if ((String)po.getAttribute("AnlName") != null) //$NON-NLS-1$
 			return (String)po.getAttribute("AnlName"); //$NON-NLS-1$
-		//TODO: если нету ни кода, ни имени 
+		//TODO: РµСЃР»Рё РЅРµС‚Сѓ РЅРё РєРѕРґР°, РЅРё РёРјРµРЅРё 
 		else return "***"; //$NON-NLS-1$
 	}
 

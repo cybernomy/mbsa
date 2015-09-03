@@ -25,7 +25,7 @@ import com.mg.merp.account.InvLocationServiceLocal;
 import com.mg.merp.account.model.InvLocation;
 
 /**
- * Бизнес-компонент "Местонахождение объектов ОС" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РњРµСЃС‚РѕРЅР°С…РѕР¶РґРµРЅРёРµ РѕР±СЉРµРєС‚РѕРІ РћРЎ" 
  * 
  * @author leonova
  * @version $Id: InvLocationServiceBean.java,v 1.3 2006/08/24 06:44:08 leonova Exp $

@@ -34,7 +34,7 @@ import com.mg.merp.reference.HolidaysServiceLocal;
 import com.mg.merp.reference.model.Holidays;
 
 /**
- * Бизнес-компонент "Праздничные дни"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂР°Р·РґРЅРёС‡РЅС‹Рµ РґРЅРё"
  * 
  * @author leonova
  * @version $Id: HolidaysServiceBean.java,v 1.7 2007/08/06 14:50:05 safonov Exp $

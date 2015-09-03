@@ -54,7 +54,7 @@ import com.mg.merp.document.support.DocumentUtils;
 import com.mg.merp.reference.support.ui.AttachmentHelper;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Контракты"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС‚СЂР°РєС‚С‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -306,7 +306,7 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	protected void doOnRun() {
 		MaintenanceAction mtAction = getAction();
 		DocHead contract = (DocHead) getEntity();
-		//проверим доступность редактирования документа 
+		//РїСЂРѕРІРµСЂРёРј РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° 
 		if (MaintenanceAction.EDIT == mtAction)
 			DocFlowHelper.checkStatus(contract);
 		
@@ -325,8 +325,8 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события "Аннулировать" (Этап)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РђРЅРЅСѓР»РёСЂРѕРІР°С‚СЊ" (Р­С‚Р°Рї)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionMakeAvoid(WidgetEvent event) throws Exception {
@@ -342,8 +342,8 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события "Аннулированные" (Этапы)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РђРЅРЅСѓР»РёСЂРѕРІР°РЅРЅС‹Рµ" (Р­С‚Р°РїС‹)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionShowAvoid(WidgetEvent event) throws Exception {
@@ -364,8 +364,8 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события "Распределить" (автоматически)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "Р Р°СЃРїСЂРµРґРµР»РёС‚СЊ" (Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionAutoDistribution(WidgetEvent event) throws Exception {
@@ -377,8 +377,8 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события "Аннулировать распределение"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РђРЅРЅСѓР»РёСЂРѕРІР°С‚СЊ СЂР°СЃРїСЂРµРґРµР»РµРЅРёРµ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionAvoidDistribution(WidgetEvent event) throws Exception {
@@ -390,8 +390,8 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события "Распределить вручную"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "Р Р°СЃРїСЂРµРґРµР»РёС‚СЊ РІСЂСѓС‡РЅСѓСЋ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionManualDistribution(WidgetEvent event) throws Exception {
@@ -419,8 +419,8 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события "Показать документ" (фактического пункта контракта)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РџРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚" (С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
@@ -450,8 +450,8 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик кнопки "Расчитать"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃС‡РёС‚Р°С‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionCalculateSum(WidgetEvent event) throws Exception {
@@ -468,13 +468,13 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	private void refreshContractSumElements() {
-		// расчет сумм по контракту
+		// СЂР°СЃС‡РµС‚ СЃСѓРјРј РїРѕ РєРѕРЅС‚СЂР°РєС‚Сѓ
 		((ContractServiceLocal) getService()).adjust((Contract) getEntity());
 		refreshContractRestSum();
 	}
 
 	private void refreshContractRestSum() {
-		// расчет остатков по контракту
+		// СЂР°СЃС‡РµС‚ РѕСЃС‚Р°С‚РєРѕРІ РїРѕ РєРѕРЅС‚СЂР°РєС‚Сѓ
 		BigDecimal shippedPaymentSum = ((Contract) getEntity()).getShippedPayment();
 		BigDecimal receivedGoodSum = ((Contract) getEntity()).getReceivedGood();
 		BigDecimal receivedPaymentSum = ((Contract) getEntity()).getReceivedPayment();
@@ -483,13 +483,13 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	private void refreshRestSumElements() {
-		// расчет остатков по плану
+		// СЂР°СЃС‡РµС‚ РѕСЃС‚Р°С‚РєРѕРІ РїРѕ РїР»Р°РЅСѓ
 		BigDecimal shippedPaymentSum = ((Contract) getEntity()).getPhaseShippedPayment();
 		BigDecimal receivedGoodSum = ((Contract) getEntity()).getPhaseReceivedGood();
 		BigDecimal receivedPaymentSum = ((Contract) getEntity()).getPhaseReceivedPayment();
 		BigDecimal shippedGoodSum = ((Contract) getEntity()).getPhaseShippedGood();
 		planRest = ((ContractServiceLocal) getService()).calculateRestSum(shippedPaymentSum, receivedGoodSum, receivedPaymentSum, shippedGoodSum);
-		// расчет остатков по факту
+		// СЂР°СЃС‡РµС‚ РѕСЃС‚Р°С‚РєРѕРІ РїРѕ С„Р°РєС‚Сѓ
 		shippedPaymentSum = ((Contract) getEntity()).getFactShippedPayment();
 		receivedGoodSum = ((Contract) getEntity()).getFactReceivedGood();
 		receivedPaymentSum = ((Contract) getEntity()).getFactReceivedPayment();
@@ -499,13 +499,13 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	private void refreshPlanSumElements() {
-		// расчет сумм по плану
+		// СЂР°СЃС‡РµС‚ СЃСѓРјРј РїРѕ РїР»Р°РЅСѓ
 		BigDecimal[] planSums =  ((ContractServiceLocal) getService()).calculateTotalPlanSum((DocHead) getEntity());
 		((Contract) getEntity()).setPhaseShippedPayment(planSums[0]);
 		((Contract) getEntity()).setPhaseReceivedPayment(planSums[1]);
 		((Contract) getEntity()).setPhaseShippedGood(planSums[2]);
 		((Contract) getEntity()).setPhaseReceivedGood(planSums[3]);
-		// расчет остатков по плану
+		// СЂР°СЃС‡РµС‚ РѕСЃС‚Р°С‚РєРѕРІ РїРѕ РїР»Р°РЅСѓ
 		BigDecimal shippedPaymentSum = ((Contract) getEntity()).getPhaseShippedPayment();
 		BigDecimal receivedGoodSum = ((Contract) getEntity()).getPhaseReceivedGood();
 		BigDecimal receivedPaymentSum = ((Contract) getEntity()).getPhaseReceivedPayment();
@@ -514,13 +514,13 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	private void refreshFactSumElements() {
-		// расчет сумм по факту
+		// СЂР°СЃС‡РµС‚ СЃСѓРјРј РїРѕ С„Р°РєС‚Сѓ
 		BigDecimal[] factSums = ((ContractServiceLocal) getService()).calculateTotalFactSum((DocHead) getEntity());
 		((Contract) getEntity()).setFactShippedPayment(factSums[0]);
 		((Contract) getEntity()).setFactReceivedPayment(factSums[1]);
 		((Contract) getEntity()).setFactShippedGood(factSums[2]);
 		((Contract) getEntity()).setFactReceivedGood(factSums[3]);
-		// расчет остатков по факту
+		// СЂР°СЃС‡РµС‚ РѕСЃС‚Р°С‚РєРѕРІ РїРѕ С„Р°РєС‚Сѓ
 		BigDecimal shippedPaymentSum = ((Contract) getEntity()).getFactShippedPayment();
 		BigDecimal receivedGoodSum = ((Contract) getEntity()).getFactReceivedGood();
 		BigDecimal receivedPaymentSum = ((Contract) getEntity()).getFactReceivedPayment();
@@ -529,8 +529,8 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 	
 	/**
-	 * Сделать доступными/не доступными для редактирования поля док-та Документ-основание(тип, номер, дата)
-	 * @param isEnabled - признак доступности для редактирования
+	 * РЎРґРµР»Р°С‚СЊ РґРѕСЃС‚СѓРїРЅС‹РјРё/РЅРµ РґРѕСЃС‚СѓРїРЅС‹РјРё РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РїРѕР»СЏ РґРѕРє-С‚Р° Р”РѕРєСѓРјРµРЅС‚-РѕСЃРЅРѕРІР°РЅРёРµ(С‚РёРї, РЅРѕРјРµСЂ, РґР°С‚Р°)
+	 * @param isEnabled - РїСЂРёР·РЅР°Рє РґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
 	 */
 	protected void setBaseDocumentFieldsEnabled(boolean isEnabled) {
 		view.getWidget(BASE_DOC_TYPE_WIDGET_NAME).setReadOnly(!isEnabled);
@@ -549,7 +549,7 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * обработчик показа истории ДО
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РїРѕРєР°Р·Р° РёСЃС‚РѕСЂРёРё Р”Рћ
 	 * 
 	 * @param event
 	 */
@@ -558,7 +558,7 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * обработчик смены курса валюты
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРјРµРЅС‹ РєСѓСЂСЃР° РІР°Р»СЋС‚С‹
 	 * 
 	 * @param event
 	 */
@@ -568,8 +568,8 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик события "Показать оригинал"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РџРѕРєР°Р·Р°С‚СЊ РѕСЂРёРіРёРЅР°Р»"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionShowOriginal(WidgetEvent event) throws Exception {
@@ -577,8 +577,8 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик события "Загрузить оригинал как..."
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "Р—Р°РіСЂСѓР·РёС‚СЊ РѕСЂРёРіРёРЅР°Р» РєР°Рє..."
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionDownloadOriginal(WidgetEvent event) throws Exception {
@@ -586,8 +586,8 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик события "Сохранить оригинал..."
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РЎРѕС…СЂР°РЅРёС‚СЊ РѕСЂРёРіРёРЅР°Р»..."
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionUploadOriginal(WidgetEvent event) throws Exception {
@@ -595,8 +595,8 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик события "Удалить оригинал"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РЈРґР°Р»РёС‚СЊ РѕСЂРёРіРёРЅР°Р»"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionRemoveOriginal(WidgetEvent event) throws Exception {
@@ -604,8 +604,8 @@ public class ContractMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 	
 	/**
-	 * Обработчик события просмотра документа-основания
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewBaseDocument(WidgetEvent event) {
 		DocumentUtils.viewBaseDocument((DocHead) getEntity());

@@ -17,7 +17,7 @@ package com.mg.merp.report;
 import com.mg.framework.api.ApplicationException;
 
 /**
- * ИС платформы MBIRT (Millennium BI and Report Tools)
+ * РРЎ РїР»Р°С‚С„РѕСЂРјС‹ MBIRT (Millennium BI and Report Tools)
  * 
  * @author Oleg V. Safonov
  * @version $Id: ReportException.java,v 1.2 2008/08/12 09:22:12 safonov Exp $

@@ -25,7 +25,7 @@ import com.mg.merp.warehouse.WarehouseProcessorServiceLocal;
 import com.mg.merp.warehouse.WarehouseTransactionListener;
 
 /**
- * Класс-реализация интерфейса {@link WarehouseProcessorServiceLocal}
+ * РљР»Р°СЃСЃ-СЂРµР°Р»РёР·Р°С†РёСЏ РёРЅС‚РµСЂС„РµР№СЃР° {@link WarehouseProcessorServiceLocal}
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseProcessorServiceBean.java,v 1.19 2008/08/27 09:41:21 sharapov Exp $

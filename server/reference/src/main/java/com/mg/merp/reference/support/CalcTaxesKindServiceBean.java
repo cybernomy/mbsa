@@ -33,7 +33,7 @@ import com.mg.merp.reference.model.CalcTaxesSubject;
 import com.mg.merp.reference.model.Tax;
 
 /**
- * Бизнес-компонент "Виды начисления налогов"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РёРґС‹ РЅР°С‡РёСЃР»РµРЅРёСЏ РЅР°Р»РѕРіРѕРІ"
  * 
  * @author leonova
  * @version $Id: CalcTaxesKindServiceBean.java,v 1.9 2007/06/20 12:00:28 safonov Exp $

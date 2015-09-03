@@ -29,7 +29,7 @@ import com.mg.merp.mfreference.model.PlanningLevel;
 import com.mg.merp.mfreference.model.PlanningLevelBucket;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Профили производства"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРѕС„РёР»Рё РїСЂРѕРёР·РІРѕРґСЃС‚РІР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ProductionProfileMt.java,v 1.1 2007/01/15 08:09:26 sharapov Exp $
@@ -40,8 +40,8 @@ public class ProductionProfileMt extends DefaultMaintenanceForm {
 	private Map<String, Object> searchMap = null;
 
 	/**
-	 * Обработчик события нажатия кнопки "Выбор начального периода"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РЅР°Р¶Р°С‚РёСЏ РєРЅРѕРїРєРё "Р’С‹Р±РѕСЂ РЅР°С‡Р°Р»СЊРЅРѕРіРѕ РїРµСЂРёРѕРґР°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionChooseStartBucketOffset(WidgetEvent event) throws Exception {
@@ -62,8 +62,8 @@ public class ProductionProfileMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик события нажатия кнопки "Выбор конечного периода"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РЅР°Р¶Р°С‚РёСЏ РєРЅРѕРїРєРё "Р’С‹Р±РѕСЂ РєРѕРЅРµС‡РЅРѕРіРѕ РїРµСЂРёРѕРґР°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionChooseEndBucketOffset(WidgetEvent event) throws Exception {
@@ -84,8 +84,8 @@ public class ProductionProfileMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Создает список условий для поиска
-	 * @return список условий для поиска
+	 * РЎРѕР·РґР°РµС‚ СЃРїРёСЃРѕРє СѓСЃР»РѕРІРёР№ РґР»СЏ РїРѕРёСЃРєР°
+	 * @return СЃРїРёСЃРѕРє СѓСЃР»РѕРІРёР№ РґР»СЏ РїРѕРёСЃРєР°
 	 * @throws NoSuchFieldException
 	 * @throws IllegalAccessException
 	 */
@@ -99,8 +99,8 @@ public class ProductionProfileMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Устанавливает соответствующие значения для начального периода
-	 * @param startBucket - объект-сущность: Период уровня планирования 
+	 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ Р·РЅР°С‡РµРЅРёСЏ РґР»СЏ РЅР°С‡Р°Р»СЊРЅРѕРіРѕ РїРµСЂРёРѕРґР°
+	 * @param startBucket - РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ: РџРµСЂРёРѕРґ СѓСЂРѕРІРЅСЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ 
 	 */
 	private void setStartBucketValues(PlanningLevelBucket startBucket) {
 		((IntegerField) view.getWidget("StartBucketOffset")).setEditorValue(new Integer(startBucket.getBucketOffset())); //$NON-NLS-1$
@@ -110,8 +110,8 @@ public class ProductionProfileMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Устанавливает соответствующие значения для конечного периода
-	 * @param endBucket - объект-сущность: Период уровня планирования
+	 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёРµ Р·РЅР°С‡РµРЅРёСЏ РґР»СЏ РєРѕРЅРµС‡РЅРѕРіРѕ РїРµСЂРёРѕРґР°
+	 * @param endBucket - РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ: РџРµСЂРёРѕРґ СѓСЂРѕРІРЅСЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
 	 */
 	private void setEndBucketValues(PlanningLevelBucket endBucket) {
 		((IntegerField) view.getWidget("EndBucketOffset")).setEditorValue(new Integer(endBucket.getBucketOffset())); //$NON-NLS-1$

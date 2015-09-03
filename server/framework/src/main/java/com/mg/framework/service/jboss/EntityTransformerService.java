@@ -18,7 +18,7 @@ import org.jboss.system.ServiceMBeanSupport;
 import com.mg.framework.service.EntityTransformerImpl;
 
 /**
- * Реализация сервиса преобразования сущностей для контейнера JBoss
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ СЃСѓС‰РЅРѕСЃС‚РµР№ РґР»СЏ РєРѕРЅС‚РµР№РЅРµСЂР° JBoss
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: EntityTransformerService.java,v 1.3 2007/09/21 09:51:23 safonov Exp $ 

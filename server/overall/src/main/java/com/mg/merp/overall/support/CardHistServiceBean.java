@@ -21,7 +21,7 @@ import com.mg.merp.overall.CardHistServiceLocal;
 import com.mg.merp.overall.model.OvrCardHist;
 
 /**
- * Реализация бизнес - компонента "История выдачи"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ - РєРѕРјРїРѕРЅРµРЅС‚Р° "РСЃС‚РѕСЂРёСЏ РІС‹РґР°С‡Рё"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

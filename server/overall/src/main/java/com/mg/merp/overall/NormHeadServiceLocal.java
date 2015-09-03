@@ -17,7 +17,7 @@ package com.mg.merp.overall;
 import com.mg.merp.overall.model.NormHead;
 
 /**
- * Бизнес - компонент "Нормы выдачи спецодежды"
+ * Р‘РёР·РЅРµСЃ - РєРѕРјРїРѕРЅРµРЅС‚ "РќРѕСЂРјС‹ РІС‹РґР°С‡Рё СЃРїРµС†РѕРґРµР¶РґС‹"
  * 
  * @author leonova
  * @version $Id: NormHeadServiceLocal.java,v 1.1 2008/06/30 04:13:38 alikaev Exp $
@@ -25,7 +25,7 @@ import com.mg.merp.overall.model.NormHead;
 public interface NormHeadServiceLocal extends com.mg.framework.api.DataBusinessObjectService<NormHead, Integer> {
 	
 	/**
-	 * тип папки для норм выдачи одежды
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РЅРѕСЂРј РІС‹РґР°С‡Рё РѕРґРµР¶РґС‹
 	 */
 	final static short FOLDER_PART = 55;
 	

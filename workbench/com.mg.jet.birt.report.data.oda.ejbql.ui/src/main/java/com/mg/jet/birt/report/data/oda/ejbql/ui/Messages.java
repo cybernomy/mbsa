@@ -19,7 +19,7 @@ import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 /**
- * Сообщения
+ * РЎРѕРѕР±С‰РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: Messages.java,v 1.1 2007/10/29 08:54:16 safonov Exp $

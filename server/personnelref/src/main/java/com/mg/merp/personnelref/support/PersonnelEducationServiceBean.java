@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PersonnelEducationServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelEducation;
 
 /**
- * Реализация бизнес-компонента "Образование" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·РѕРІР°РЅРёРµ" 
  * 
  * @author Artem V. Sharapov
  * @author leonova

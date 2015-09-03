@@ -15,7 +15,7 @@
 package com.mg.merp.warehouse.support.ui;
 
 /**
- * Контроллер формы списка счетов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: BillHeadBr.java,v 1.2 2008/02/22 11:08:33 alikaev Exp $ 

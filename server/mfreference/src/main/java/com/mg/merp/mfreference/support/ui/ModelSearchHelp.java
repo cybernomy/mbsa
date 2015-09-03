@@ -24,7 +24,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.document.model.DocSection;
 
 /**
- * Базовый поисковик "Образцов актов"
+ * Р‘Р°Р·РѕРІС‹Р№ РїРѕРёСЃРєРѕРІРёРє "РћР±СЂР°Р·С†РѕРІ Р°РєС‚РѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ModelSearchHelp.java,v 1.1 2007/01/13 13:23:13 sharapov Exp $
@@ -48,7 +48,7 @@ public abstract class ModelSearchHelp extends AbstractSearchHelp {
 	}
 
 	/**
-	 * Получить DocSection
+	 * РџРѕР»СѓС‡РёС‚СЊ DocSection
 	 * @return DocSection
 	 */
 	private DocSection getDocSection() {
@@ -56,8 +56,8 @@ public abstract class ModelSearchHelp extends AbstractSearchHelp {
 	}
 
 	/**
-	 * Получить идентификатор DocSection'a. Должен быть реализован в классе-наследнике
-	 * @return идентификатор DocSection'a
+	 * РџРѕР»СѓС‡РёС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ DocSection'a. Р”РѕР»Р¶РµРЅ Р±С‹С‚СЊ СЂРµР°Р»РёР·РѕРІР°РЅ РІ РєР»Р°СЃСЃРµ-РЅР°СЃР»РµРґРЅРёРєРµ
+	 * @return РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ DocSection'a
 	 */
 	abstract protected short getDocSectionPrimaryKey(); 
 

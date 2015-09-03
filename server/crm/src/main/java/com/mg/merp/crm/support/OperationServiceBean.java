@@ -23,7 +23,7 @@ import com.mg.merp.crm.OperationServiceLocal;
 import com.mg.merp.crm.model.Operation;
 
 /**
- * Бизнес-компонент "Действия" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”РµР№СЃС‚РІРёСЏ" 
  * 
  * @author leonova
  * @version $Id: OperationServiceBean.java,v 1.4 2006/09/06 05:24:25 leonova Exp $

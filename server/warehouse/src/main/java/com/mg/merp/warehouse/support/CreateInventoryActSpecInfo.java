@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 import com.mg.merp.document.CreateSpecificationInfo;
 
 /**
- * Информация о номеклатуре для создания спецификации акта инвентаризации
+ * РРЅС„РѕСЂРјР°С†РёСЏ Рѕ РЅРѕРјРµРєР»Р°С‚СѓСЂРµ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё Р°РєС‚Р° РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
  * 
  * @author Artem V. Sharapov
  * @version $Id: CreateInventoryActSpecInfo.java,v 1.1 2007/06/18 12:51:33 sharapov Exp $
@@ -35,13 +35,13 @@ public class CreateInventoryActSpecInfo implements CreateSpecificationInfo {
 	
 	
 	/**
-	 * Создать информацию о номеклатуре для спецификации акта инвентаризации
-	 * @param catalogId - идентификатор каталога
-	 * @param price - цена
-	 * @param quantity1 - количество в основной ЕИ
-	 * @param quantity2 - количество в дополнительной ЕИ
-	 * @param summa - сумма с налогами
-	 * @param summa1 - сумма
+	 * РЎРѕР·РґР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РЅРѕРјРµРєР»Р°С‚СѓСЂРµ РґР»СЏ СЃРїРµС†РёС„РёРєР°С†РёРё Р°РєС‚Р° РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @param catalogId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєР°С‚Р°Р»РѕРіР°
+	 * @param price - С†РµРЅР°
+	 * @param quantity1 - РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РѕСЃРЅРѕРІРЅРѕР№ Р•Р
+	 * @param quantity2 - РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ Р•Р
+	 * @param summa - СЃСѓРјРјР° СЃ РЅР°Р»РѕРіР°РјРё
+	 * @param summa1 - СЃСѓРјРјР°
 	 */
 	public CreateInventoryActSpecInfo(Integer catalogId, BigDecimal price, BigDecimal quantity1, BigDecimal quantity2, BigDecimal summa, BigDecimal summa1) {
 		this.catalogId = catalogId;

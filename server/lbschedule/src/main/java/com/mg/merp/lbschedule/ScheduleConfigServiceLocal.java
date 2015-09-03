@@ -17,7 +17,7 @@ package com.mg.merp.lbschedule;
 import com.mg.merp.lbschedule.model.ScheduleConfig;
 
 /**
- * Сервис бизнес-компонента "Конфигурация модуля <Графики исполнения обязательств>"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <Р“СЂР°С„РёРєРё РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ>"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.lbschedule.model.ScheduleConfig;
 public interface ScheduleConfigServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ScheduleConfig, Integer> {
 	
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/lbschedule/ScheduleConfig"; //$NON-NLS-1$
 	

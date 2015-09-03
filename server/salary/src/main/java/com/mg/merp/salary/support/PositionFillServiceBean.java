@@ -27,7 +27,7 @@ import com.mg.merp.personnelref.support.DateIntervalRule;
 import com.mg.merp.personnelref.support.PersonnelrefUtils;
 
 /**
- * Реализация бизнес-компонента "Занимаемые должности" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р—Р°РЅРёРјР°РµРјС‹Рµ РґРѕР»Р¶РЅРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

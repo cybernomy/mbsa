@@ -37,7 +37,7 @@ import com.mg.merp.salary.model.CalcListFee;
 import com.mg.merp.salary.model.CalcListSection;
 
 /**
- * Контроллер формы поддержи "расчетных листков"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶Рё "СЂР°СЃС‡РµС‚РЅС‹С… Р»РёСЃС‚РєРѕРІ"
  *
  * @author leonova
  * @author Artem V. Sharapov
@@ -200,40 +200,40 @@ public class CalcListMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик кнопки "Лицевой счет"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р›РёС†РµРІРѕР№ СЃС‡РµС‚"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionEditPersonalAccount(WidgetEvent event) {
 
 	}
 
 	/**
-	 * Обработчик кнопки "Основные сведения"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РћСЃРЅРѕРІРЅС‹Рµ СЃРІРµРґРµРЅРёСЏ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionEditPersonel(WidgetEvent event) {
 
 	}
 
 	/**
-	 * Обработчик кнопки "Другие ведомости"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р”СЂСѓРіРёРµ РІРµРґРѕРјРѕСЃС‚Рё"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionChangeCalcList(WidgetEvent event) {
 
 	}
 
 	/**
-	 * Обработчик кнопки "Предыдущий расчетный период"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РџСЂРµРґС‹РґСѓС‰РёР№ СЂР°СЃС‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionPreviousCalcPeriod(WidgetEvent event) {
 
 	}
 
 	/**
-	 * Обработчик кнопки "Следующий расчетный период"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РЎР»РµРґСѓСЋС‰РёР№ СЂР°СЃС‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionNextCalcPeriod(WidgetEvent event) {
 

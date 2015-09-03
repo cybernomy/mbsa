@@ -16,7 +16,7 @@ package com.mg.framework.api.ui.widget;
 
 
 /**
- * Элемент "Редактор переключатель перечислимого типа"
+ * Р­Р»РµРјРµРЅС‚ "Р РµРґР°РєС‚РѕСЂ РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЊ РїРµСЂРµС‡РёСЃР»РёРјРѕРіРѕ С‚РёРїР°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: EnumRadioButtonField.java,v 1.2 2006/11/21 15:34:06 safonov Exp $

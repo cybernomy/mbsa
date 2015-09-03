@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Состояние контракта
+ * РЎРѕСЃС‚РѕСЏРЅРёРµ РєРѕРЅС‚СЂР°РєС‚Р°
  * 
  * @author leonova
  * @version $Id: ContractStatus.java,v 1.1 2006/03/30 11:23:46 safonov Exp $
@@ -26,19 +26,19 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Contract.ContractStatus")
 public enum ContractStatus {
 	/**
-	 * Зарегистрирован
+	 * Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°РЅ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.contract.resources.dataitemlabels#Contract.ContractStatus.Registered")
 	REGISTRED,
 	
 	/**
-	 * В работе
+	 * Р’ СЂР°Р±РѕС‚Рµ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.contract.resources.dataitemlabels#Contract.ContractStatus.InWork")
 	INWORK,
 
 	/**
-	 * Выполнен
+	 * Р’С‹РїРѕР»РЅРµРЅ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.contract.resources.dataitemlabels#Contract.ContractStatus.Complete")
 	COMPLETE

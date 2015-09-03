@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.MeasureConversion;
 
 /**
- * Браузер преобразования ЕИ
+ * Р‘СЂР°СѓР·РµСЂ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ Р•Р
  * 
  * @author leonova
  * @version $Id: MeasureConversionBr.java,v 1.1 2006/08/29 12:41:22 leonova Exp $ 

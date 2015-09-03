@@ -42,22 +42,22 @@ import com.mg.merp.reference.model.Partner;
 import com.mg.merp.reference.support.Messages;
 
 /**
- * Контроллер формы поиска контрагентов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ContractorSearchForm.java,v 1.5 2009/02/09 16:39:37 safonov Exp $
  */
 public class ContractorSearchForm extends AbstractSearchForm {
 	/**
-	 * контрагент партнер
+	 * РєРѕРЅС‚СЂР°РіРµРЅС‚ РїР°СЂС‚РЅРµСЂ
 	 */
 	public final static String CONTRACTOR_PARTNER = "partner";
 	/**
-	 * контрагент подразделение
+	 * РєРѕРЅС‚СЂР°РіРµРЅС‚ РїРѕРґСЂР°Р·РґРµР»РµРЅРёРµ
 	 */
 	public final static String CONTRACTOR_ORGUNIT = "orgunit";
 	/**
-	 * контрагент сотрудник
+	 * РєРѕРЅС‚СЂР°РіРµРЅС‚ СЃРѕС‚СЂСѓРґРЅРёРє
 	 */
 	public final static String CONTRACTOR_EMPLOYEE = "employee";
 
@@ -129,17 +129,17 @@ public class ContractorSearchForm extends AbstractSearchForm {
 	@Override
 	protected void doOnRun() {
 		super.doOnRun();
-		//установим фокус на таблице
+		//СѓСЃС‚Р°РЅРѕРІРёРј С„РѕРєСѓСЃ РЅР° С‚Р°Р±Р»РёС†Рµ
 		((Widget) view.getWidget("contractorList")).requestFocus();
-		//заполним переключатель доступными типами контрагентов
+		//Р·Р°РїРѕР»РЅРёРј РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЊ РґРѕСЃС‚СѓРїРЅС‹РјРё С‚РёРїР°РјРё РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ
 		((RadioButtonGroup) view.getWidget(CONTRACTOR_KIND_WIDGET)).setItems(contractorKindNames);
-		//если выбор из одного контрагента, то сразу загрузим список
+		//РµСЃР»Рё РІС‹Р±РѕСЂ РёР· РѕРґРЅРѕРіРѕ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°, С‚Рѕ СЃСЂР°Р·Сѓ Р·Р°РіСЂСѓР·РёРј СЃРїРёСЃРѕРє
 		if (contractorKinds.length == 1) {
 			contractorKind = 0;
 			loadContractors();
 			view.flushModel();
 		} else {
-			//загрузим из профиля тип контрагента к которому обращались последний раз
+			//Р·Р°РіСЂСѓР·РёРј РёР· РїСЂРѕС„РёР»СЏ С‚РёРї РєРѕРЅС‚СЂР°РіРµРЅС‚Р° Рє РєРѕС‚РѕСЂРѕРјСѓ РѕР±СЂР°С‰Р°Р»РёСЃСЊ РїРѕСЃР»РµРґРЅРёР№ СЂР°Р·
 			String lastKind = view.getUIProfile().getProperty(CONTRACTOR_KIND_PROPERTY);
 			if (!StringUtils.stringNullOrEmpty(lastKind))
 				for (int i = 0, length = contractorKinds.length; i < length; i++) {
@@ -157,7 +157,7 @@ public class ContractorSearchForm extends AbstractSearchForm {
 	 */
 	@Override
 	protected void doOnClose() {
-		//сохраним в профиле тип контрагента
+		//СЃРѕС…СЂР°РЅРёРј РІ РїСЂРѕС„РёР»Рµ С‚РёРї РєРѕРЅС‚СЂР°РіРµРЅС‚Р°
 		if (contractorKind >= 0 && contractorKind < contractorKinds.length) {
 			String kind = contractorKinds[contractorKind];
 			view.getUIProfile().setProperty(CONTRACTOR_KIND_PROPERTY, kind);
@@ -166,7 +166,7 @@ public class ContractorSearchForm extends AbstractSearchForm {
 	}
 
 	/**
-	 * загрузка контрагентов
+	 * Р·Р°РіСЂСѓР·РєР° РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ
 	 */
 	protected void loadContractors() {
 		if (contractorKind == -1)
@@ -192,7 +192,7 @@ public class ContractorSearchForm extends AbstractSearchForm {
 	}
 	
 	/**
-	 * обработчик события обновления списка контрагентов
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРїРёСЃРєР° РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ
 	 * 
 	 * @param event
 	 */
@@ -201,12 +201,12 @@ public class ContractorSearchForm extends AbstractSearchForm {
 	}
 
 	/**
-	 * запуск формы поиска
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹ РїРѕРёСЃРєР°
 	 * 
-	 * @param kinds	список типов контрагентов для поиска
+	 * @param kinds	СЃРїРёСЃРѕРє С‚РёРїРѕРІ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ РґР»СЏ РїРѕРёСЃРєР°
 	 */
 	public void execute(String[] kinds) {
-		//при пустом даем доступ ко всем контракторам системы
+		//РїСЂРё РїСѓСЃС‚РѕРј РґР°РµРј РґРѕСЃС‚СѓРї РєРѕ РІСЃРµРј РєРѕРЅС‚СЂР°РєС‚РѕСЂР°Рј СЃРёСЃС‚РµРјС‹
 		if (kinds != null)
 			contractorKinds = kinds;
 		else

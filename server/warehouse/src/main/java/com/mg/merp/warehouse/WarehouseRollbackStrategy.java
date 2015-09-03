@@ -15,7 +15,7 @@ package com.mg.merp.warehouse;
 
 
 /**
- * Интерфейс стратегий отката складских этапов ДО
+ * РРЅС‚РµСЂС„РµР№СЃ СЃС‚СЂР°С‚РµРіРёР№ РѕС‚РєР°С‚Р° СЃРєР»Р°РґСЃРєРёС… СЌС‚Р°РїРѕРІ Р”Рћ
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -24,10 +24,10 @@ package com.mg.merp.warehouse;
 public interface WarehouseRollbackStrategy {
 
 	/**
-	 * Выполнение отката
+	 * Р’С‹РїРѕР»РЅРµРЅРёРµ РѕС‚РєР°С‚Р°
 	 * 
 	 * @param docSpec
-	 *            спецификация
+	 *            СЃРїРµС†РёС„РёРєР°С†РёСЏ
 	 */
 	void rollback(WarehouseProcessDocumentLineData docLineData);
 

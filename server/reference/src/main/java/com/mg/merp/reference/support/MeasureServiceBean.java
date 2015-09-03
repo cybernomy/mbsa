@@ -24,7 +24,7 @@ import com.mg.merp.reference.MeasureServiceLocal;
 import com.mg.merp.reference.model.Measure;
 
 /**
- * Бизнес-компонент "Единицы измерения" (Unit of measure)
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р•РґРёРЅРёС†С‹ РёР·РјРµСЂРµРЅРёСЏ" (Unit of measure)
  * 
  * @author Oleg V. Safonov
  * @version $Id: MeasureServiceBean.java,v 1.4 2006/10/19 04:47:37 leonova Exp $

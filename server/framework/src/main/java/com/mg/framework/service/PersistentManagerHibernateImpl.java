@@ -41,7 +41,7 @@ import com.mg.framework.utils.ContextUtils;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Реализация менеджера перманентного хранилища на базе Hibernate
+ * Р РµР°Р»РёР·Р°С†РёСЏ РјРµРЅРµРґР¶РµСЂР° РїРµСЂРјР°РЅРµРЅС‚РЅРѕРіРѕ С…СЂР°РЅРёР»РёС‰Р° РЅР° Р±Р°Р·Рµ Hibernate
  * 
  * @author Oleg V. Safonov
  * @version $Id: PersistentManagerHibernateImpl.java,v 1.11 2008/12/08 06:10:47 safonov Exp $
@@ -51,18 +51,18 @@ public class PersistentManagerHibernateImpl implements PersistentManager, Serial
 	private static Logger log = ServerUtils.getLogger(PersistentManagerHibernateImpl.class);
 
 	/**
-	 * JNDI имя фабрики сессий
+	 * JNDI РёРјСЏ С„Р°Р±СЂРёРєРё СЃРµСЃСЃРёР№
 	 */
 	public static final String SESSION_FACTORY_NAME = "java:/hibernate/MERPSessionFactory";
 	/**
-	 * экземпляр менеджера перманентного хранилища
+	 * СЌРєР·РµРјРїР»СЏСЂ РјРµРЅРµРґР¶РµСЂР° РїРµСЂРјР°РЅРµРЅС‚РЅРѕРіРѕ С…СЂР°РЅРёР»РёС‰Р°
 	 */
 	private static volatile PersistentManager persistentManager = null;
 
 	/**
-	 * получить экземпляр менеджера перманентного хранилища
+	 * РїРѕР»СѓС‡РёС‚СЊ СЌРєР·РµРјРїР»СЏСЂ РјРµРЅРµРґР¶РµСЂР° РїРµСЂРјР°РЅРµРЅС‚РЅРѕРіРѕ С…СЂР°РЅРёР»РёС‰Р°
 	 * 
-	 * @return	менеджер перманентного хранилища
+	 * @return	РјРµРЅРµРґР¶РµСЂ РїРµСЂРјР°РЅРµРЅС‚РЅРѕРіРѕ С…СЂР°РЅРёР»РёС‰Р°
 	 */
 	public static PersistentManager getInstance() {
 		if (persistentManager == null)
@@ -345,7 +345,7 @@ public class PersistentManagerHibernateImpl implements PersistentManager, Serial
 	 */
 	public void refresh(PersistentObject entity) {
 		try {
-			//FIXME не проверяем присутствие в сессии, иногда необходимо обновлять detach объекты, однако это не рекомендуется авторами Hibernate, что делать не совсем понятно
+			//FIXME РЅРµ РїСЂРѕРІРµСЂСЏРµРј РїСЂРёСЃСѓС‚СЃС‚РІРёРµ РІ СЃРµСЃСЃРёРё, РёРЅРѕРіРґР° РЅРµРѕР±С…РѕРґРёРјРѕ РѕР±РЅРѕРІР»СЏС‚СЊ detach РѕР±СЉРµРєС‚С‹, РѕРґРЅР°РєРѕ СЌС‚Рѕ РЅРµ СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ Р°РІС‚РѕСЂР°РјРё Hibernate, С‡С‚Рѕ РґРµР»Р°С‚СЊ РЅРµ СЃРѕРІСЃРµРј РїРѕРЅСЏС‚РЅРѕ
 //			Session s = getCurrentSession();
 //			if (!s.contains(entity))
 //				throw new IllegalArgumentException("Entity not managed");
@@ -375,9 +375,9 @@ public class PersistentManagerHibernateImpl implements PersistentManager, Serial
 	}
 
 	/**
-	 * получить фабрику сессий библиотеки Hibernate
+	 * РїРѕР»СѓС‡РёС‚СЊ С„Р°Р±СЂРёРєСѓ СЃРµСЃСЃРёР№ Р±РёР±Р»РёРѕС‚РµРєРё Hibernate
 	 * 
-	 * @return	фабрика сессий
+	 * @return	С„Р°Р±СЂРёРєР° СЃРµСЃСЃРёР№
 	 */
 	public static SessionFactory getFactory() {
 		try {
@@ -389,10 +389,10 @@ public class PersistentManagerHibernateImpl implements PersistentManager, Serial
 	}
 
 	/**
-	 * получить текущую сессию
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰СѓСЋ СЃРµСЃСЃРёСЋ
 	 * 
-	 * @return	текущая сессия
-	 * @throws	IllegalStateException если текущая сессия не установлена
+	 * @return	С‚РµРєСѓС‰Р°СЏ СЃРµСЃСЃРёСЏ
+	 * @throws	IllegalStateException РµСЃР»Рё С‚РµРєСѓС‰Р°СЏ СЃРµСЃСЃРёСЏ РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅР°
 	 */
 	private Session getCurrentSession() {
 		Session result = getFactory().getCurrentSession();

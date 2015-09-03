@@ -17,7 +17,7 @@ package com.mg.merp.account.support.ui;
 import com.mg.framework.generic.ui.DefaultMaintenanceForm;
 
 /**
- * Контроллер формы списка бизнес-компонента "Драгоценные металлы"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”СЂР°РіРѕС†РµРЅРЅС‹Рµ РјРµС‚Р°Р»Р»С‹"
  * @author Konstantin S. Alikaev
  * @version $Id: MetalMt.java,v 1.1 2008/02/19 08:57:34 alikaev Exp $
  */
@@ -42,7 +42,7 @@ public class MetalMt extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Для поля код устанавливаем его доступность
+	 * Р”Р»СЏ РїРѕР»СЏ РєРѕРґ СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РµРіРѕ РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ
 	 * @param flag
 	 */
 	private void setReadOnlyCode(boolean flag) {

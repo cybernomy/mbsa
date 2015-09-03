@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Управление ЕИ
+ * РЈРїСЂР°РІР»РµРЅРёРµ Р•Р
  * 
  * @author leonova
  * @author Oleg V. Safonov
@@ -28,19 +28,19 @@ import com.mg.framework.api.annotations.EnumConstantText;
 public enum MeasureControl {
 
 	/**
-	 * номенклатура с одной ЕИ
+	 * РЅРѕРјРµРЅРєР»Р°С‚СѓСЂР° СЃ РѕРґРЅРѕР№ Р•Р
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#MControl.Type.Single")
 	SINGLE,
 	
 	/**
-	 * номенклатура с переменной эффективности (вторая единица измерения зависит от первой и расчитывается)
+	 * РЅРѕРјРµРЅРєР»Р°С‚СѓСЂР° СЃ РїРµСЂРµРјРµРЅРЅРѕР№ СЌС„С„РµРєС‚РёРІРЅРѕСЃС‚Рё (РІС‚РѕСЂР°СЏ РµРґРёРЅРёС†Р° РёР·РјРµСЂРµРЅРёСЏ Р·Р°РІРёСЃРёС‚ РѕС‚ РїРµСЂРІРѕР№ Рё СЂР°СЃС‡РёС‚С‹РІР°РµС‚СЃСЏ)
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#MControl.Type.Potency")
 	POTENCY,
 	
 	/**
-	 * номенклатура учетно-весовая (две единицы измерения не зависят друг от друга)
+	 * РЅРѕРјРµРЅРєР»Р°С‚СѓСЂР° СѓС‡РµС‚РЅРѕ-РІРµСЃРѕРІР°СЏ (РґРІРµ РµРґРёРЅРёС†С‹ РёР·РјРµСЂРµРЅРёСЏ РЅРµ Р·Р°РІРёСЃСЏС‚ РґСЂСѓРі РѕС‚ РґСЂСѓРіР°)
 	 */
 	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#MControl.Type.Catchweight")
 	CATCHWEIGHT

@@ -19,7 +19,7 @@ import java.util.Date;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Каталог"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР°С‚Р°Р»РѕРі"
  * 
  * @author Artem V. Sharapov
  * @sysVersion $Id: Catalog.java,v 1.6 2008/08/27 09:33:32 sharapov Exp $

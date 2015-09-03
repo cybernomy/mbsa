@@ -21,7 +21,7 @@ import com.mg.merp.lbschedule.model.ItemSpecTax;
 import com.mg.merp.lbschedule.model.TaxResult;
 
 /**
- * Сервис бизнес-компонента "Налоги позиции спецификации пункта графика исполнения обязательств"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќР°Р»РѕРіРё РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р° РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -30,15 +30,15 @@ import com.mg.merp.lbschedule.model.TaxResult;
 public interface ItemSpecTaxServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ItemSpecTax, Integer> {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/lbschedule/ItemSpecTax"; //$NON-NLS-1$
 
 	/**
-	 * Пересчитать налоги позиции спецификации пункта графика
-	 * @param itemSpec - позиция спецификации
-	 * @param factor - фактор
-	 * @return результат пересчета
+	 * РџРµСЂРµСЃС‡РёС‚Р°С‚СЊ РЅР°Р»РѕРіРё РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р° РіСЂР°С„РёРєР°
+	 * @param itemSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param factor - С„Р°РєС‚РѕСЂ
+	 * @return СЂРµР·СѓР»СЊС‚Р°С‚ РїРµСЂРµСЃС‡РµС‚Р°
 	 */
 	TaxResult recomputeTaxes(ItemSpec itemSpec, BigDecimal factor);
 }

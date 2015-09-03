@@ -25,7 +25,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.support.DocumentUtils;
 
 /**
- * Базовый класс контроллера формы поддержки документов 
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РєРѕРЅС‚СЂРѕР»Р»РµСЂР° С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РґРѕРєСѓРјРµРЅС‚РѕРІ 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -45,11 +45,11 @@ public class DocumentMaintenanceForm extends DefaultMaintenanceForm {
 	
 	
 	/**
-	 * контекст импорта для SearchHelp поля "от кого"
+	 * РєРѕРЅС‚РµРєСЃС‚ РёРјРїРѕСЂС‚Р° РґР»СЏ SearchHelp РїРѕР»СЏ "РѕС‚ РєРѕРіРѕ"
 	 */
 	protected String[] contractorFromKinds;
 	/**
-	 * контекст импорта для SearchHelp поля "кому"
+	 * РєРѕРЅС‚РµРєСЃС‚ РёРјРїРѕСЂС‚Р° РґР»СЏ SearchHelp РїРѕР»СЏ "РєРѕРјСѓ"
 	 */
 	protected String[] contractorToKinds;
 
@@ -76,7 +76,7 @@ public class DocumentMaintenanceForm extends DefaultMaintenanceForm {
 	protected void doOnRun() {
 		MaintenanceAction mtAction = getAction();
 		DocHead docHead = (DocHead) getEntity();
-		//проверим доступность редактирования документа (http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4200)
+		//РїСЂРѕРІРµСЂРёРј РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° (http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4200)
 		if (MaintenanceAction.EDIT == mtAction)
 			DocFlowHelper.checkStatus(docHead);
 		
@@ -97,8 +97,8 @@ public class DocumentMaintenanceForm extends DefaultMaintenanceForm {
 	}
 	
 	/**
-	 * Сделать доступными/не доступными для редактирования поля док-та Контракт(тип, номер, дата)
-	 * @param isEnabled - признак доступности для редактирования
+	 * РЎРґРµР»Р°С‚СЊ РґРѕСЃС‚СѓРїРЅС‹РјРё/РЅРµ РґРѕСЃС‚СѓРїРЅС‹РјРё РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РїРѕР»СЏ РґРѕРє-С‚Р° РљРѕРЅС‚СЂР°РєС‚(С‚РёРї, РЅРѕРјРµСЂ, РґР°С‚Р°)
+	 * @param isEnabled - РїСЂРёР·РЅР°Рє РґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
 	 */
 	protected void setContractFieldsEnabled(boolean isEnabled) {
 		view.getWidget(CONTRACT_TYPE_WIDGET_NAME).setReadOnly(!isEnabled);
@@ -107,8 +107,8 @@ public class DocumentMaintenanceForm extends DefaultMaintenanceForm {
 	}
 	
 	/**
-	 * Сделать доступными/не доступными для редактирования поля док-та Документ-основание(тип, номер, дата)
-	 * @param isEnabled - признак доступности для редактирования
+	 * РЎРґРµР»Р°С‚СЊ РґРѕСЃС‚СѓРїРЅС‹РјРё/РЅРµ РґРѕСЃС‚СѓРїРЅС‹РјРё РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РїРѕР»СЏ РґРѕРє-С‚Р° Р”РѕРєСѓРјРµРЅС‚-РѕСЃРЅРѕРІР°РЅРёРµ(С‚РёРї, РЅРѕРјРµСЂ, РґР°С‚Р°)
+	 * @param isEnabled - РїСЂРёР·РЅР°Рє РґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
 	 */
 	protected void setBaseDocumentFieldsEnabled(boolean isEnabled) {
 		view.getWidget(BASE_DOC_TYPE_WIDGET_NAME).setReadOnly(!isEnabled);
@@ -117,7 +117,7 @@ public class DocumentMaintenanceForm extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * обработчик показа истории ДО
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РїРѕРєР°Р·Р° РёСЃС‚РѕСЂРёРё Р”Рћ
 	 * 
 	 * @param event
 	 */
@@ -126,7 +126,7 @@ public class DocumentMaintenanceForm extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * обработчик смены курса валюты
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРјРµРЅС‹ РєСѓСЂСЃР° РІР°Р»СЋС‚С‹
 	 * 
 	 * @param event
 	 */
@@ -136,8 +136,8 @@ public class DocumentMaintenanceForm extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик просмотра/выбора контракта
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР°/РІС‹Р±РѕСЂР° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewOrChooseContract(WidgetEvent event) {
 		final DocHead docHead = (DocHead) getEntity();
@@ -167,8 +167,8 @@ public class DocumentMaintenanceForm extends DefaultMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик просмотра документа-основания
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewBaseDocument(WidgetEvent event) {
 		DocumentUtils.viewBaseDocument((DocHead) getEntity());

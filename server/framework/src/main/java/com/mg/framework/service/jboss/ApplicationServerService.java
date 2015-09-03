@@ -37,7 +37,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.framework.utils.StringUtils;
 
 /**
- * JMX реализация сервиса управления прикладными функциями сервера приложения
+ * JMX СЂРµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° СѓРїСЂР°РІР»РµРЅРёСЏ РїСЂРёРєР»Р°РґРЅС‹РјРё С„СѓРЅРєС†РёСЏРјРё СЃРµСЂРІРµСЂР° РїСЂРёР»РѕР¶РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ApplicationServerService.java,v 1.6 2008/12/08 06:08:15 safonov Exp $
@@ -157,7 +157,7 @@ public class ApplicationServerService extends ServiceMBeanSupport implements
 	public void convertDatabase() throws Exception {
 		Object converter = null;
 		try {
-			//проверка наличия класса конвертации системы
+			//РїСЂРѕРІРµСЂРєР° РЅР°Р»РёС‡РёСЏ РєР»Р°СЃСЃР° РєРѕРЅРІРµСЂС‚Р°С†РёРё СЃРёСЃС‚РµРјС‹
 			Class<?> converterClass = ServerUtils.loadClass("com.mg.framework.service.DatabaseConverter");
 			Method getInstanceMethod = converterClass.getMethod("getInstance", String.class);
 			converter = getInstanceMethod.invoke(null, databaseName);
@@ -183,7 +183,7 @@ public class ApplicationServerService extends ServiceMBeanSupport implements
 	}
 
 	private String getConnectionPoolName(String connectionPoolName) {
-		//если не указан, то работаем с главным соединением системы
+		//РµСЃР»Рё РЅРµ СѓРєР°Р·Р°РЅ, С‚Рѕ СЂР°Р±РѕС‚Р°РµРј СЃ РіР»Р°РІРЅС‹Рј СЃРѕРµРґРёРЅРµРЅРёРµРј СЃРёСЃС‚РµРјС‹
 		return StringUtils.stringNullOrEmpty(connectionPoolName) ? "MERPBackboneDS" : connectionPoolName;
 	}
 	

@@ -114,7 +114,7 @@ public class DataItemImpl implements DataItem {
 	 */
 	public String getMediumLabel(Locale locale) {
 		String result = UIUtils.loadL10nText(locale, model.getMediumLabel());
-		//используем короткую метку если не установлена средняя
+		//РёСЃРїРѕР»СЊР·СѓРµРј РєРѕСЂРѕС‚РєСѓСЋ РјРµС‚РєСѓ РµСЃР»Рё РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅР° СЃСЂРµРґРЅСЏСЏ
 		if (result == null)
 			result = getShortLabel(locale);
 		return result;
@@ -140,7 +140,7 @@ public class DataItemImpl implements DataItem {
 	 */
 	public String getLongLabel(Locale locale) {
 		String result = UIUtils.loadL10nText(locale, model.getLongLabel());
-		//используем среднюю метку если нет длинной
+		//РёСЃРїРѕР»СЊР·СѓРµРј СЃСЂРµРґРЅСЋСЋ РјРµС‚РєСѓ РµСЃР»Рё РЅРµС‚ РґР»РёРЅРЅРѕР№
 		if (result == null)
 			result = getMediumLabel(locale);
 		return result;
@@ -166,7 +166,7 @@ public class DataItemImpl implements DataItem {
 	 */
 	public String getHeader(Locale locale) {
 		String result = UIUtils.loadL10nText(locale, model.getHeader());
-		//если не установлен, то используем длинную метку в качестве заголовка
+		//РµСЃР»Рё РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ, С‚Рѕ РёСЃРїРѕР»СЊР·СѓРµРј РґР»РёРЅРЅСѓСЋ РјРµС‚РєСѓ РІ РєР°С‡РµСЃС‚РІРµ Р·Р°РіРѕР»РѕРІРєР°
 		if (result != null)
 			return result;
 		else

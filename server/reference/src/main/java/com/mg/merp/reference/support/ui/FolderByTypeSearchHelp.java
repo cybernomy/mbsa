@@ -19,7 +19,7 @@ import com.mg.framework.support.ui.UIProducer;
 import com.mg.framework.support.ui.UIUtils;
 
 /**
- * Абстрактный класс, отбирает папки по типу папок
+ * РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ РєР»Р°СЃСЃ, РѕС‚Р±РёСЂР°РµС‚ РїР°РїРєРё РїРѕ С‚РёРїСѓ РїР°РїРѕРє
  * 
  * @author leonova
  * @version $Id: FolderByTypeSearchHelp.java,v 1.1 2006/10/10 06:28:13 leonova Exp $

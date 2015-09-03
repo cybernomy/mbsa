@@ -17,7 +17,7 @@ package com.mg.merp.mfreference.support.ui;
 import com.mg.framework.generic.ui.DefaultDialog;
 
 /**
- * Контроллер диалога генерации периодов уровня планирования
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° РіРµРЅРµСЂР°С†РёРё РїРµСЂРёРѕРґРѕРІ СѓСЂРѕРІРЅСЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
  * 
  * @author Artem V. Sharapov
  * @version $Id: PlanningLevelBucketGenerationDlg.java,v 1.1 2007/02/19 12:55:14 sharapov Exp $
@@ -26,8 +26,8 @@ public class PlanningLevelBucketGenerationDlg extends DefaultDialog {
 
 	// Fields
 
-	private java.lang.Integer bucketLength; // длина периода в днях
-	private java.lang.Integer bucketNumber; // количество периодов
+	private java.lang.Integer bucketLength; // РґР»РёРЅР° РїРµСЂРёРѕРґР° РІ РґРЅСЏС…
+	private java.lang.Integer bucketNumber; // РєРѕР»РёС‡РµСЃС‚РІРѕ РїРµСЂРёРѕРґРѕРІ
 
 	// Property accessors
 

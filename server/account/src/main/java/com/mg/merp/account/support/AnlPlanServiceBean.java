@@ -30,7 +30,7 @@ import com.mg.merp.account.model.AnlPlan;
 import com.mg.merp.account.model.AnlStdForm;
 
 /**
- * Бизнес-компонент "Аналитические счета" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РђРЅР°Р»РёС‚РёС‡РµСЃРєРёРµ СЃС‡РµС‚Р°" 
  * 
  * @author leonova
  * @version $Id: AnlPlanServiceBean.java,v 1.5 2009/02/25 15:00:45 safonov Exp $

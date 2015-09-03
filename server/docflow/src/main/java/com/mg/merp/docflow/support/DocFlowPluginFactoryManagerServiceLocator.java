@@ -19,7 +19,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.docflow.DocFlowPluginFactoryManager;
 
 /**
- * Локатор менеджера фабрик реализаций этапов ДО
+ * Р›РѕРєР°С‚РѕСЂ РјРµРЅРµРґР¶РµСЂР° С„Р°Р±СЂРёРє СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїРѕРІ Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowPluginFactoryManagerServiceLocator.java,v 1.2 2007/01/29 14:09:17 safonov Exp $
@@ -28,9 +28,9 @@ public class DocFlowPluginFactoryManagerServiceLocator {
     private static volatile DocFlowPluginFactoryManager instance = null;
     
     /**
-     * поиск сервиса
+     * РїРѕРёСЃРє СЃРµСЂРІРёСЃР°
      * 
-     * @return	сервис
+     * @return	СЃРµСЂРІРёСЃ
      */
     public static DocFlowPluginFactoryManager locate() {
         if (instance == null)

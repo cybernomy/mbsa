@@ -21,7 +21,7 @@ import com.mg.framework.api.ui.CustomActionExecutionContext;
 import com.mg.framework.api.ui.CustomActionListener;
 
 /**
- * Реализация контекста запуска настраиваемых действий
+ * Р РµР°Р»РёР·Р°С†РёСЏ РєРѕРЅС‚РµРєСЃС‚Р° Р·Р°РїСѓСЃРєР° РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomActionExecutionContextImpl.java,v 1.1 2007/11/15 08:44:38 safonov Exp $
@@ -34,12 +34,12 @@ public class CustomActionExecutionContextImpl implements
 	private Serializable[] selectedIdentifiers;
 	
 	/**
-	 * конструктор
+	 * РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
-	 * @param action	код действия
-	 * @param service	бизнес-компонент
-	 * @param selectedIdentifiers	список идентификаторов сущностей
-	 * @param listener	слушатель действия
+	 * @param action	РєРѕРґ РґРµР№СЃС‚РІРёСЏ
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param selectedIdentifiers	СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ СЃСѓС‰РЅРѕСЃС‚РµР№
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ РґРµР№СЃС‚РІРёСЏ
 	 */
 	public CustomActionExecutionContextImpl(String action,
 			BusinessObjectService service, Serializable[] selectedIdentifiers, CustomActionListener listener) {

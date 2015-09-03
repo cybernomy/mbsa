@@ -66,7 +66,7 @@ import com.mg.merp.salary.model.TaxRate;
 import com.mg.merp.salary.model.TripleSumSign;
 
 /**
- * Класс вспомогательных функций для вычислений в алгоритмах з/п
+ * РљР»Р°СЃСЃ РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… С„СѓРЅРєС†РёР№ РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёР№ РІ Р°Р»РіРѕСЂРёС‚РјР°С… Р·/Рї
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -79,12 +79,12 @@ public class SalaryHelper {
 	
 	
 	/**
-	 * Получить аналитику состава затрат указанную в тарифе 
-	 * @param tariffCode - код тарифа
-	 * @param positionFill - занимаимая должность
-	 * @param staffList - штатное расписание
-	 * @param actualDate - на дату
-	 * @return аналитика(всех уровней) состава затрат указанная в тарифе
+	 * РџРѕР»СѓС‡РёС‚СЊ Р°РЅР°Р»РёС‚РёРєСѓ СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ СѓРєР°Р·Р°РЅРЅСѓСЋ РІ С‚Р°СЂРёС„Рµ 
+	 * @param tariffCode - РєРѕРґ С‚Р°СЂРёС„Р°
+	 * @param positionFill - Р·Р°РЅРёРјР°РёРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param staffList - С€С‚Р°С‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅРёРµ
+	 * @param actualDate - РЅР° РґР°С‚Сѓ
+	 * @return Р°РЅР°Р»РёС‚РёРєР°(РІСЃРµС… СѓСЂРѕРІРЅРµР№) СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ СѓРєР°Р·Р°РЅРЅР°СЏ РІ С‚Р°СЂРёС„Рµ
 	 */
 	public static CostsAnlResult getCostsAnlFromTariff(String tariffCode, PositionFill positionFill, StaffList staffList, Date actualDate) {
 		List<Tariffing> tariffings = getTariffList(tariffCode, actualDate, positionFill, staffList);
@@ -103,11 +103,11 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить вычет
-	 * @param deductionKindCode - код вида вычета
-	 * @param actualDate - на дату
-	 * @param income - доход
-	 * @return вычет на дату
+	 * РџРѕР»СѓС‡РёС‚СЊ РІС‹С‡РµС‚
+	 * @param deductionKindCode - РєРѕРґ РІРёРґР° РІС‹С‡РµС‚Р°
+	 * @param actualDate - РЅР° РґР°С‚Сѓ
+	 * @param income - РґРѕС…РѕРґ
+	 * @return РІС‹С‡РµС‚ РЅР° РґР°С‚Сѓ
 	 */
 	public static BigDecimal getDeduction(String deductionKindCode, Date actualDate, BigDecimal income) {
 		BigDecimal result = BigDecimal.ZERO;
@@ -127,12 +127,12 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить сумму вычетов на членов семьи
-	 * @param deductionClass - вид вычетов (если NULL то для всех видов)
-	 * @param actualDate - на дату
-	 * @param income - доход
-	 * @param personalAccount - лицевой счет сотрудника
-	 * @return сумма вычетов на членов семьи
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃСѓРјРјСѓ РІС‹С‡РµС‚РѕРІ РЅР° С‡Р»РµРЅРѕРІ СЃРµРјСЊРё
+	 * @param deductionClass - РІРёРґ РІС‹С‡РµС‚РѕРІ (РµСЃР»Рё NULL С‚Рѕ РґР»СЏ РІСЃРµС… РІРёРґРѕРІ)
+	 * @param actualDate - РЅР° РґР°С‚Сѓ
+	 * @param income - РґРѕС…РѕРґ
+	 * @param personalAccount - Р»РёС†РµРІРѕР№ СЃС‡РµС‚ СЃРѕС‚СЂСѓРґРЅРёРєР°
+	 * @return СЃСѓРјРјР° РІС‹С‡РµС‚РѕРІ РЅР° С‡Р»РµРЅРѕРІ СЃРµРјСЊРё
 	 */
 	public static BigDecimal getFamilyDeductionSum(DeductionClass deductionClass, Date actualDate, BigDecimal income, PersonalAccount personalAccount) {
 		Criteria criteria = OrmTemplate.createCriteria(FamilyDeductions.class)
@@ -162,9 +162,9 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить размер минимальной зарплаты из справочника на указанную дату
-	 * @param actualDate - дата
-	 * @return размер минимальной зарплаты из справочника на указанную дату
+	 * РџРѕР»СѓС‡РёС‚СЊ СЂР°Р·РјРµСЂ РјРёРЅРёРјР°Р»СЊРЅРѕР№ Р·Р°СЂРїР»Р°С‚С‹ РёР· СЃРїСЂР°РІРѕС‡РЅРёРєР° РЅР° СѓРєР°Р·Р°РЅРЅСѓСЋ РґР°С‚Сѓ
+	 * @param actualDate - РґР°С‚Р°
+	 * @return СЂР°Р·РјРµСЂ РјРёРЅРёРјР°Р»СЊРЅРѕР№ Р·Р°СЂРїР»Р°С‚С‹ РёР· СЃРїСЂР°РІРѕС‡РЅРёРєР° РЅР° СѓРєР°Р·Р°РЅРЅСѓСЋ РґР°С‚Сѓ
 	 */
 	public static BigDecimal getMinSalary(Date actualDate) {
 		List<MinSalary> minSalaries = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(MinSalary.class)
@@ -178,14 +178,14 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить сумму н/у по коду, за указанный период
-	 * @param feeCode - код н/у
-	 * @param beginDate - дата начала периода
-	 * @param endDate -  дата окончания периода
-	 * @param payRoll - расчетная ведомость. Если NULL, то для всех расчетных ведомостей
-	 * @param positionFill - исполняемая должность. Если NULL, то для всех должностей, исполняемых сотрудником
-	 * @param personalAccount - лицевой счет сотрудника
-	 * @return сумма н/у по коду, за указанный период
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃСѓРјРјСѓ РЅ/Сѓ РїРѕ РєРѕРґСѓ, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @param feeCode - РєРѕРґ РЅ/Сѓ
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРµСЂРёРѕРґР°
+	 * @param endDate -  РґР°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРёРѕРґР°
+	 * @param payRoll - СЂР°СЃС‡РµС‚РЅР°СЏ РІРµРґРѕРјРѕСЃС‚СЊ. Р•СЃР»Рё NULL, С‚Рѕ РґР»СЏ РІСЃРµС… СЂР°СЃС‡РµС‚РЅС‹С… РІРµРґРѕРјРѕСЃС‚РµР№
+	 * @param positionFill - РёСЃРїРѕР»РЅСЏРµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ. Р•СЃР»Рё NULL, С‚Рѕ РґР»СЏ РІСЃРµС… РґРѕР»Р¶РЅРѕСЃС‚РµР№, РёСЃРїРѕР»РЅСЏРµРјС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРј
+	 * @param personalAccount - Р»РёС†РµРІРѕР№ СЃС‡РµС‚ СЃРѕС‚СЂСѓРґРЅРёРєР°
+	 * @return СЃСѓРјРјР° РЅ/Сѓ РїРѕ РєРѕРґСѓ, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ
 	 */
 	public static BigDecimal getFeeSum(String feeCode, Date beginDate, Date endDate, PayRoll payRoll, PositionFill positionFill, PersonalAccount personalAccount) {
 		Criteria criteria = OrmTemplate.createCriteria(CalcListFee.class)
@@ -229,18 +229,18 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить сумму начислений/удержаний, коды которых указаны на закладке "входящие н/у" справочника н/у, за указанный период
-	 * @param beginDate - дата начала периода
-	 * @param endDate - дата окончания периода
-	 * @param payRoll - расчетная ведомость. Если null, то для всех расчетных ведомостей
-	 * @param positionFill - исполняемая должность. Если null, то для всех должностей, исполняемых сотрудником
-	 * @param feeSign - знак, с которым входят начисления:
-	 * 					TripleSumSign.NONE - взять все входящие начисления. Входящие со знаком "плюс" прибавляются к общей сумме, входящие со знаком "минус" вычитаются из общей суммы;
-	 * 					TripleSumSign.Plus - складываются только начисления, входящие со знаком "плюс";
-	 * 					TripleSumSign.Minus - складываются только начисления, входящие со знаком "минус". Результат > 0 !
-	 * @param feeModel - образец начислений/удержаний
-	 * @param personalAccount - лицевой счет сотрудника
-	 * @return сумма начислений/удержаний, коды которых указаны на закладке "входящие н/у" справочника н/у, за указанный период
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃСѓРјРјСѓ РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№, РєРѕРґС‹ РєРѕС‚РѕСЂС‹С… СѓРєР°Р·Р°РЅС‹ РЅР° Р·Р°РєР»Р°РґРєРµ "РІС…РѕРґСЏС‰РёРµ РЅ/Сѓ" СЃРїСЂР°РІРѕС‡РЅРёРєР° РЅ/Сѓ, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРµСЂРёРѕРґР°
+	 * @param endDate - РґР°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРёРѕРґР°
+	 * @param payRoll - СЂР°СЃС‡РµС‚РЅР°СЏ РІРµРґРѕРјРѕСЃС‚СЊ. Р•СЃР»Рё null, С‚Рѕ РґР»СЏ РІСЃРµС… СЂР°СЃС‡РµС‚РЅС‹С… РІРµРґРѕРјРѕСЃС‚РµР№
+	 * @param positionFill - РёСЃРїРѕР»РЅСЏРµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ. Р•СЃР»Рё null, С‚Рѕ РґР»СЏ РІСЃРµС… РґРѕР»Р¶РЅРѕСЃС‚РµР№, РёСЃРїРѕР»РЅСЏРµРјС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРј
+	 * @param feeSign - Р·РЅР°Рє, СЃ РєРѕС‚РѕСЂС‹Рј РІС…РѕРґСЏС‚ РЅР°С‡РёСЃР»РµРЅРёСЏ:
+	 * 					TripleSumSign.NONE - РІР·СЏС‚СЊ РІСЃРµ РІС…РѕРґСЏС‰РёРµ РЅР°С‡РёСЃР»РµРЅРёСЏ. Р’С…РѕРґСЏС‰РёРµ СЃРѕ Р·РЅР°РєРѕРј "РїР»СЋСЃ" РїСЂРёР±Р°РІР»СЏСЋС‚СЃСЏ Рє РѕР±С‰РµР№ СЃСѓРјРјРµ, РІС…РѕРґСЏС‰РёРµ СЃРѕ Р·РЅР°РєРѕРј "РјРёРЅСѓСЃ" РІС‹С‡РёС‚Р°СЋС‚СЃСЏ РёР· РѕР±С‰РµР№ СЃСѓРјРјС‹;
+	 * 					TripleSumSign.Plus - СЃРєР»Р°РґС‹РІР°СЋС‚СЃСЏ С‚РѕР»СЊРєРѕ РЅР°С‡РёСЃР»РµРЅРёСЏ, РІС…РѕРґСЏС‰РёРµ СЃРѕ Р·РЅР°РєРѕРј "РїР»СЋСЃ";
+	 * 					TripleSumSign.Minus - СЃРєР»Р°РґС‹РІР°СЋС‚СЃСЏ С‚РѕР»СЊРєРѕ РЅР°С‡РёСЃР»РµРЅРёСЏ, РІС…РѕРґСЏС‰РёРµ СЃРѕ Р·РЅР°РєРѕРј "РјРёРЅСѓСЃ". Р РµР·СѓР»СЊС‚Р°С‚ > 0 !
+	 * @param feeModel - РѕР±СЂР°Р·РµС† РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№
+	 * @param personalAccount - Р»РёС†РµРІРѕР№ СЃС‡РµС‚ СЃРѕС‚СЂСѓРґРЅРёРєР°
+	 * @return СЃСѓРјРјР° РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№, РєРѕРґС‹ РєРѕС‚РѕСЂС‹С… СѓРєР°Р·Р°РЅС‹ РЅР° Р·Р°РєР»Р°РґРєРµ "РІС…РѕРґСЏС‰РёРµ РЅ/Сѓ" СЃРїСЂР°РІРѕС‡РЅРёРєР° РЅ/Сѓ, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ
 	 */
 	public static BigDecimal getIncludedFeeSum(Date beginDate, Date endDate, PayRoll payRoll, PositionFill positionFill, TripleSumSign feeSign, FeeModel feeModel, PersonalAccount personalAccount) {
 		BigDecimal includedFeeSum = BigDecimal.ZERO;
@@ -258,17 +258,17 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить сумму н/у, коды которых указаны на закладке "входящие н/у" справочника н/у, за указанный период. Расширенный набор параметров.
-	 * @param beginDate - дата начала периода
-	 * @param endDate - дата окончания периода
-	 * @param payRoll - р/в. Если null, то для всех р/в
-	 * @param payRollKindName - наименование типа р/в. Если null, то для всех р/в.
-	 * @param positionFillKindCode - код вида исполнения должности. Если null, то для всех должностей, исполняемых сотрудником
-	 * @param positionFill - исполненяемая должность. Если null, то для всех должностей, исполняемых сотрудником
-	 * @param taxCalcKindCode - код схемы расчета налогов для должности. Если null, то для всех должностей, исполняемых сотрудником
-	 * @param feeSign - знак, с которым входят начисления
-	 * @param feeModel - образец начислений/удержаний
-	 * @return сумма н/у, коды которых указаны на закладке "входящие н/у" справочника н/у, за указанный период
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃСѓРјРјСѓ РЅ/Сѓ, РєРѕРґС‹ РєРѕС‚РѕСЂС‹С… СѓРєР°Р·Р°РЅС‹ РЅР° Р·Р°РєР»Р°РґРєРµ "РІС…РѕРґСЏС‰РёРµ РЅ/Сѓ" СЃРїСЂР°РІРѕС‡РЅРёРєР° РЅ/Сѓ, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ. Р Р°СЃС€РёСЂРµРЅРЅС‹Р№ РЅР°Р±РѕСЂ РїР°СЂР°РјРµС‚СЂРѕРІ.
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРµСЂРёРѕРґР°
+	 * @param endDate - РґР°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРёРѕРґР°
+	 * @param payRoll - СЂ/РІ. Р•СЃР»Рё null, С‚Рѕ РґР»СЏ РІСЃРµС… СЂ/РІ
+	 * @param payRollKindName - РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С‚РёРїР° СЂ/РІ. Р•СЃР»Рё null, С‚Рѕ РґР»СЏ РІСЃРµС… СЂ/РІ.
+	 * @param positionFillKindCode - РєРѕРґ РІРёРґР° РёСЃРїРѕР»РЅРµРЅРёСЏ РґРѕР»Р¶РЅРѕСЃС‚Рё. Р•СЃР»Рё null, С‚Рѕ РґР»СЏ РІСЃРµС… РґРѕР»Р¶РЅРѕСЃС‚РµР№, РёСЃРїРѕР»РЅСЏРµРјС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРј
+	 * @param positionFill - РёСЃРїРѕР»РЅРµРЅСЏРµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ. Р•СЃР»Рё null, С‚Рѕ РґР»СЏ РІСЃРµС… РґРѕР»Р¶РЅРѕСЃС‚РµР№, РёСЃРїРѕР»РЅСЏРµРјС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРј
+	 * @param taxCalcKindCode - РєРѕРґ СЃС…РµРјС‹ СЂР°СЃС‡РµС‚Р° РЅР°Р»РѕРіРѕРІ РґР»СЏ РґРѕР»Р¶РЅРѕСЃС‚Рё. Р•СЃР»Рё null, С‚Рѕ РґР»СЏ РІСЃРµС… РґРѕР»Р¶РЅРѕСЃС‚РµР№, РёСЃРїРѕР»РЅСЏРµРјС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРј
+	 * @param feeSign - Р·РЅР°Рє, СЃ РєРѕС‚РѕСЂС‹Рј РІС…РѕРґСЏС‚ РЅР°С‡РёСЃР»РµРЅРёСЏ
+	 * @param feeModel - РѕР±СЂР°Р·РµС† РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№
+	 * @return СЃСѓРјРјР° РЅ/Сѓ, РєРѕРґС‹ РєРѕС‚РѕСЂС‹С… СѓРєР°Р·Р°РЅС‹ РЅР° Р·Р°РєР»Р°РґРєРµ "РІС…РѕРґСЏС‰РёРµ РЅ/Сѓ" СЃРїСЂР°РІРѕС‡РЅРёРєР° РЅ/Сѓ, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ
 	 */
 	public static BigDecimal getIncludedFeeSumEx(Date beginDate, Date endDate, PayRoll payRoll, String payRollKindName, String positionFillKindCode, PositionFill positionFill, PersonalAccount personalAccount, String taxCalcKindCode, TripleSumSign feeSign, FeeModel feeModel) {
 		BigDecimal includedFeeSum = BigDecimal.ZERO;
@@ -377,14 +377,14 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить н/у, последнеее по дате начала действия, за указанный период.
-	 * @param feeCode - код н/у
-	 * @param beginDate - дата начала периода
-	 * @param endDate - дата окончания периода
-	 * @param payRoll - р/в. Если null, то для всех р/в
-	 * @param positionFill - исполненяемая должность. Если null, то для всех должностей, исполняемых сотрудником
-	 * @param personalAccount - личевой счет сотрудника
-	 * @return н/у, последнеее по дате начала действия, за указанный период
+	 * РџРѕР»СѓС‡РёС‚СЊ РЅ/Сѓ, РїРѕСЃР»РµРґРЅРµРµРµ РїРѕ РґР°С‚Рµ РЅР°С‡Р°Р»Р° РґРµР№СЃС‚РІРёСЏ, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ.
+	 * @param feeCode - РєРѕРґ РЅ/Сѓ
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРµСЂРёРѕРґР°
+	 * @param endDate - РґР°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРёРѕРґР°
+	 * @param payRoll - СЂ/РІ. Р•СЃР»Рё null, С‚Рѕ РґР»СЏ РІСЃРµС… СЂ/РІ
+	 * @param positionFill - РёСЃРїРѕР»РЅРµРЅСЏРµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ. Р•СЃР»Рё null, С‚Рѕ РґР»СЏ РІСЃРµС… РґРѕР»Р¶РЅРѕСЃС‚РµР№, РёСЃРїРѕР»РЅСЏРµРјС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРј
+	 * @param personalAccount - Р»РёС‡РµРІРѕР№ СЃС‡РµС‚ СЃРѕС‚СЂСѓРґРЅРёРєР°
+	 * @return РЅ/Сѓ, РїРѕСЃР»РµРґРЅРµРµРµ РїРѕ РґР°С‚Рµ РЅР°С‡Р°Р»Р° РґРµР№СЃС‚РІРёСЏ, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ
 	 */
 	public static BigDecimal getLastFee(String feeCode, Date beginDate, Date endDate, PayRoll payRoll, PositionFill positionFill, PersonalAccount personalAccount) {
 		Criteria criteria = OrmTemplate.createCriteria(CalcListFee.class)
@@ -432,11 +432,11 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить стаж сотрудника в годах по коду стажа
-	 * @param serviceKindCode - код стажа
-	 * @param actualDate - фактическая дата
-	 * @param personalAccount - личевой счет сотрудника
-	 * @return стаж сотрудника в годах по коду стажа
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃС‚Р°Р¶ СЃРѕС‚СЂСѓРґРЅРёРєР° РІ РіРѕРґР°С… РїРѕ РєРѕРґСѓ СЃС‚Р°Р¶Р°
+	 * @param serviceKindCode - РєРѕРґ СЃС‚Р°Р¶Р°
+	 * @param actualDate - С„Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р°
+	 * @param personalAccount - Р»РёС‡РµРІРѕР№ СЃС‡РµС‚ СЃРѕС‚СЂСѓРґРЅРёРєР°
+	 * @return СЃС‚Р°Р¶ СЃРѕС‚СЂСѓРґРЅРёРєР° РІ РіРѕРґР°С… РїРѕ РєРѕРґСѓ СЃС‚Р°Р¶Р°
 	 */
 	public static BigDecimal getLengthOfService(String serviceKindCode, Date actualDate, PersonalAccount personalAccount) {
 		Criteria criteria = OrmTemplate.createCriteria(PersonnelService.class)
@@ -466,19 +466,19 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить количество ставок, которое занимает сотрудник по указанной должности, на дату начала действия н/у
-	 * @param positionFill - исполненяемая должность
-	 * @return количество ставок, которое занимает сотрудник по указанной должности, на дату начала действия н/у
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚Р°РІРѕРє, РєРѕС‚РѕСЂРѕРµ Р·Р°РЅРёРјР°РµС‚ СЃРѕС‚СЂСѓРґРЅРёРє РїРѕ СѓРєР°Р·Р°РЅРЅРѕР№ РґРѕР»Р¶РЅРѕСЃС‚Рё, РЅР° РґР°С‚Сѓ РЅР°С‡Р°Р»Р° РґРµР№СЃС‚РІРёСЏ РЅ/Сѓ
+	 * @param positionFill - РёСЃРїРѕР»РЅРµРЅСЏРµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚Р°РІРѕРє, РєРѕС‚РѕСЂРѕРµ Р·Р°РЅРёРјР°РµС‚ СЃРѕС‚СЂСѓРґРЅРёРє РїРѕ СѓРєР°Р·Р°РЅРЅРѕР№ РґРѕР»Р¶РЅРѕСЃС‚Рё, РЅР° РґР°С‚Сѓ РЅР°С‡Р°Р»Р° РґРµР№СЃС‚РІРёСЏ РЅ/Сѓ
 	 */
 	public static BigDecimal getNumberOfRates(PositionFill positionFill) {
 		return positionFill.getRateNumber() == null ? BigDecimal.ZERO : positionFill.getRateNumber(); 
 	}
 
 	/**
-	 * Получить параметр текущего н/у
-	 * @param paramCode - код параметра
-	 * @param calcListFee - начисление/удержание
-	 * @return значение параметра начисления/удержания по коду параметра
+	 * РџРѕР»СѓС‡РёС‚СЊ РїР°СЂР°РјРµС‚СЂ С‚РµРєСѓС‰РµРіРѕ РЅ/Сѓ
+	 * @param paramCode - РєРѕРґ РїР°СЂР°РјРµС‚СЂР°
+	 * @param calcListFee - РЅР°С‡РёСЃР»РµРЅРёРµ/СѓРґРµСЂР¶Р°РЅРёРµ
+	 * @return Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР° РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ РїРѕ РєРѕРґСѓ РїР°СЂР°РјРµС‚СЂР°
 	 */
 	public static Object getParam(String paramCode, CalcListFee calcListFee) {
 		if(!isParametrBelongsToCalcListFee(paramCode, calcListFee))
@@ -499,15 +499,15 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить параметр н/у, последнего по дате начала действия, за указанный период
-	 * @param feeCode - код н/у
-	 * @param paramCode - код параметра
-	 * @param beginDate - дата начала периода
-	 * @param endDate - дата окончания периода
-	 * @param payRoll - р/в. Если null, то для всех р/в
-	 * @param positionFill - исполненяемая должность. Если null, то для всех должностей, исполняемых сотрудником
-	 * @param personalAccount - лицевой счет сотрудника
-	 * @return параметр н/у, последнего по дате начала действия, за указанный период
+	 * РџРѕР»СѓС‡РёС‚СЊ РїР°СЂР°РјРµС‚СЂ РЅ/Сѓ, РїРѕСЃР»РµРґРЅРµРіРѕ РїРѕ РґР°С‚Рµ РЅР°С‡Р°Р»Р° РґРµР№СЃС‚РІРёСЏ, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @param feeCode - РєРѕРґ РЅ/Сѓ
+	 * @param paramCode - РєРѕРґ РїР°СЂР°РјРµС‚СЂР°
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° РїРµСЂРёРѕРґР°
+	 * @param endDate - РґР°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РїРµСЂРёРѕРґР°
+	 * @param payRoll - СЂ/РІ. Р•СЃР»Рё null, С‚Рѕ РґР»СЏ РІСЃРµС… СЂ/РІ
+	 * @param positionFill - РёСЃРїРѕР»РЅРµРЅСЏРµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ. Р•СЃР»Рё null, С‚Рѕ РґР»СЏ РІСЃРµС… РґРѕР»Р¶РЅРѕСЃС‚РµР№, РёСЃРїРѕР»РЅСЏРµРјС‹С… СЃРѕС‚СЂСѓРґРЅРёРєРѕРј
+	 * @param personalAccount - Р»РёС†РµРІРѕР№ СЃС‡РµС‚ СЃРѕС‚СЂСѓРґРЅРёРєР°
+	 * @return РїР°СЂР°РјРµС‚СЂ РЅ/Сѓ, РїРѕСЃР»РµРґРЅРµРіРѕ РїРѕ РґР°С‚Рµ РЅР°С‡Р°Р»Р° РґРµР№СЃС‚РІРёСЏ, Р·Р° СѓРєР°Р·Р°РЅРЅС‹Р№ РїРµСЂРёРѕРґ
 	 */
 	public static Object getParamFromLastFee(String feeCode, String paramCode, Date beginDate, Date endDate, PayRoll payRoll, PositionFill positionFill, PersonalAccount personalAccount) {
 		List<FeeRefParam> feeRefParams = getParamByParamCodeAndFeeCode(paramCode, feeCode);
@@ -564,9 +564,9 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить код вида исполнения указанной должности
-	 * @param positionFill - исполненяемая должность
-	 * @return код вида исполнения указанной должности
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕРґ РІРёРґР° РёСЃРїРѕР»РЅРµРЅРёСЏ СѓРєР°Р·Р°РЅРЅРѕР№ РґРѕР»Р¶РЅРѕСЃС‚Рё
+	 * @param positionFill - РёСЃРїРѕР»РЅРµРЅСЏРµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @return РєРѕРґ РІРёРґР° РёСЃРїРѕР»РЅРµРЅРёСЏ СѓРєР°Р·Р°РЅРЅРѕР№ РґРѕР»Р¶РЅРѕСЃС‚Рё
 	 */
 	public static String getPositionKindCode(PositionFill positionFill) {
 		if(positionFill != null)
@@ -576,11 +576,11 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить код категории персонала для указанной должности 
-	 * @param positionFill - исполненяемая должность
-	 * @param actualDate - фактическая дата
-	 * @param staffList - штатное расписание
-	 * @return код категории персонала для указанной должности
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕРґ РєР°С‚РµРіРѕСЂРёРё РїРµСЂСЃРѕРЅР°Р»Р° РґР»СЏ СѓРєР°Р·Р°РЅРЅРѕР№ РґРѕР»Р¶РЅРѕСЃС‚Рё 
+	 * @param positionFill - РёСЃРїРѕР»РЅРµРЅСЏРµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param actualDate - С„Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р°
+	 * @param staffList - С€С‚Р°С‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅРёРµ
+	 * @return РєРѕРґ РєР°С‚РµРіРѕСЂРёРё РїРµСЂСЃРѕРЅР°Р»Р° РґР»СЏ СѓРєР°Р·Р°РЅРЅРѕР№ РґРѕР»Р¶РЅРѕСЃС‚Рё
 	 */
 	public static String getStaffCategoryCode(PositionFill positionFill, Date actualDate, StaffList staffList) {
 		List<String> staffCategoryCodes = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(StaffListPosition.class)
@@ -598,13 +598,13 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить по коду тариф из лицевого счета сотрудника, действующий на дату начала действия н/у
-	 * @param tariffCode - код тарифа
-	 * @param positionFill - исполненяемая должность
-	 * @param staffList - штатное расписание
-	 * @param beginDate - дата начала действия н/у
-	 * @param contextParams - параметры контекста выполнения расчета
-	 * @return тариф из лицевого счета сотрудника, действующий на дату начала действия н/у.
+	 * РџРѕР»СѓС‡РёС‚СЊ РїРѕ РєРѕРґСѓ С‚Р°СЂРёС„ РёР· Р»РёС†РµРІРѕРіРѕ СЃС‡РµС‚Р° СЃРѕС‚СЂСѓРґРЅРёРєР°, РґРµР№СЃС‚РІСѓСЋС‰РёР№ РЅР° РґР°С‚Сѓ РЅР°С‡Р°Р»Р° РґРµР№СЃС‚РІРёСЏ РЅ/Сѓ
+	 * @param tariffCode - РєРѕРґ С‚Р°СЂРёС„Р°
+	 * @param positionFill - РёСЃРїРѕР»РЅРµРЅСЏРµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param staffList - С€С‚Р°С‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅРёРµ
+	 * @param beginDate - РґР°С‚Р° РЅР°С‡Р°Р»Р° РґРµР№СЃС‚РІРёСЏ РЅ/Сѓ
+	 * @param contextParams - РїР°СЂР°РјРµС‚СЂС‹ РєРѕРЅС‚РµРєСЃС‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ СЂР°СЃС‡РµС‚Р°
+	 * @return С‚Р°СЂРёС„ РёР· Р»РёС†РµРІРѕРіРѕ СЃС‡РµС‚Р° СЃРѕС‚СЂСѓРґРЅРёРєР°, РґРµР№СЃС‚РІСѓСЋС‰РёР№ РЅР° РґР°С‚Сѓ РЅР°С‡Р°Р»Р° РґРµР№СЃС‚РІРёСЏ РЅ/Сѓ.
 	 */
 	public static BigDecimal getTariff(String tariffCode, PositionFill positionFill, StaffList staffList, Date beginDate, Map<String, ? extends Object> contextParams) {
 		BigDecimal resultTariff = BigDecimal.ZERO;
@@ -636,11 +636,11 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить норму рабочего времени в днях, по заданному исполнению должности, на заданную дату
-	 * @param positionFill - исполненяемая должность
-	 * @param actualDate - фактическая дата
-	 * @param staffList - штатное расписанте
-	 * @return норма рабочего времени в днях, по заданному исполнению должности, на заданную дату
+	 * РџРѕР»СѓС‡РёС‚СЊ РЅРѕСЂРјСѓ СЂР°Р±РѕС‡РµРіРѕ РІСЂРµРјРµРЅРё РІ РґРЅСЏС…, РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РёСЃРїРѕР»РЅРµРЅРёСЋ РґРѕР»Р¶РЅРѕСЃС‚Рё, РЅР° Р·Р°РґР°РЅРЅСѓСЋ РґР°С‚Сѓ
+	 * @param positionFill - РёСЃРїРѕР»РЅРµРЅСЏРµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param actualDate - С„Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р°
+	 * @param staffList - С€С‚Р°С‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅС‚Рµ
+	 * @return РЅРѕСЂРјР° СЂР°Р±РѕС‡РµРіРѕ РІСЂРµРјРµРЅРё РІ РґРЅСЏС…, РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РёСЃРїРѕР»РЅРµРЅРёСЋ РґРѕР»Р¶РЅРѕСЃС‚Рё, РЅР° Р·Р°РґР°РЅРЅСѓСЋ РґР°С‚Сѓ
 	 */
 	public static BigDecimal getWorkDaysNorm(PositionFill positionFill, Date actualDate, StaffList staffList) {
 		WorkNormResult workNorm = getWorkNorms(positionFill, actualDate, staffList);
@@ -652,11 +652,11 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить норму рабочего времени в часах, по заданному исполнению должности, на заданную дату
-	 * @param positionFill - исполненяемая должность
-	 * @param actualDate - фактическая дата
-	 * @param staffList - штатное расписанте
-	 * @return норма рабочего времени в часах, по заданному исполнению должности, на заданную дату
+	 * РџРѕР»СѓС‡РёС‚СЊ РЅРѕСЂРјСѓ СЂР°Р±РѕС‡РµРіРѕ РІСЂРµРјРµРЅРё РІ С‡Р°СЃР°С…, РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РёСЃРїРѕР»РЅРµРЅРёСЋ РґРѕР»Р¶РЅРѕСЃС‚Рё, РЅР° Р·Р°РґР°РЅРЅСѓСЋ РґР°С‚Сѓ
+	 * @param positionFill - РёСЃРїРѕР»РЅРµРЅСЏРµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param actualDate - С„Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р°
+	 * @param staffList - С€С‚Р°С‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅС‚Рµ
+	 * @return РЅРѕСЂРјР° СЂР°Р±РѕС‡РµРіРѕ РІСЂРµРјРµРЅРё РІ С‡Р°СЃР°С…, РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РёСЃРїРѕР»РЅРµРЅРёСЋ РґРѕР»Р¶РЅРѕСЃС‚Рё, РЅР° Р·Р°РґР°РЅРЅСѓСЋ РґР°С‚Сѓ
 	 */
 	public static BigDecimal getWorkHoursNorm(PositionFill positionFill, Date actualDate, StaffList staffList) {
 		WorkNormResult workNorm = getWorkNorms(positionFill, actualDate, staffList);
@@ -668,34 +668,34 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить информацию о налоге по указанному размеру дохода
-	 * @param taxCode - код налога из справочника
-	 * @param actualDate - фактическая дата
-	 * @param scaleNumber - номер шкалы
-	 * @param income - сумма дохода
-	 * @return информация о налоге по указанному размеру дохода
+	 * РџРѕР»СѓС‡РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РЅР°Р»РѕРіРµ РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ СЂР°Р·РјРµСЂСѓ РґРѕС…РѕРґР°
+	 * @param taxCode - РєРѕРґ РЅР°Р»РѕРіР° РёР· СЃРїСЂР°РІРѕС‡РЅРёРєР°
+	 * @param actualDate - С„Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р°
+	 * @param scaleNumber - РЅРѕРјРµСЂ С€РєР°Р»С‹
+	 * @param income - СЃСѓРјРјР° РґРѕС…РѕРґР°
+	 * @return РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РЅР°Р»РѕРіРµ РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ СЂР°Р·РјРµСЂСѓ РґРѕС…РѕРґР°
 	 */
 	public static TaxResult getTaxByIncome(String taxCode, Date actualDate, Integer scaleNumber, BigDecimal income) {
 		return getTaxInfo(true, income, taxCode, actualDate, scaleNumber, null);
 	}
 
 	/**
-	 * Получить информацию о налоге по номеру ставки
-	 * @param taxCode - код налога из справочника
-	 * @param actualDate - фактическая дата
-	 * @param scaleNumber - номер шкалы
-	 * @param rateNumber - номер ставки
-	 * @return информация о налоге по номеру ставки
+	 * РџРѕР»СѓС‡РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РЅР°Р»РѕРіРµ РїРѕ РЅРѕРјРµСЂСѓ СЃС‚Р°РІРєРё
+	 * @param taxCode - РєРѕРґ РЅР°Р»РѕРіР° РёР· СЃРїСЂР°РІРѕС‡РЅРёРєР°
+	 * @param actualDate - С„Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р°
+	 * @param scaleNumber - РЅРѕРјРµСЂ С€РєР°Р»С‹
+	 * @param rateNumber - РЅРѕРјРµСЂ СЃС‚Р°РІРєРё
+	 * @return РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РЅР°Р»РѕРіРµ РїРѕ РЅРѕРјРµСЂСѓ СЃС‚Р°РІРєРё
 	 */
 	public static TaxResult getTaxByNumber(String taxCode, Date actualDate, Integer scaleNumber, Integer rateNumber) {
 		return getTaxInfo(false, null, taxCode, actualDate, scaleNumber, rateNumber);
 	}
 	
 	/**
-	 * Получить значение константы из справочника по коду и дате актуальности
-	 * @param constantCode - код константы
-	 * @param actualDate - дата актуальности
-	 * @return значение константы из справочника по коду и дате актуальности, или <code>null</code> если не найдено
+	 * РџРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РєРѕРЅСЃС‚Р°РЅС‚С‹ РёР· СЃРїСЂР°РІРѕС‡РЅРёРєР° РїРѕ РєРѕРґСѓ Рё РґР°С‚Рµ Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё
+	 * @param constantCode - РєРѕРґ РєРѕРЅСЃС‚Р°РЅС‚С‹
+	 * @param actualDate - РґР°С‚Р° Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё
+	 * @return Р·РЅР°С‡РµРЅРёРµ РєРѕРЅСЃС‚Р°РЅС‚С‹ РёР· СЃРїСЂР°РІРѕС‡РЅРёРєР° РїРѕ РєРѕРґСѓ Рё РґР°С‚Рµ Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё, РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ
 	 */
 	public static Object getConstantValue(String constantCode, Date actualDate) {
 		return constantService.getActualValue(constantCode, actualDate);
@@ -703,11 +703,11 @@ public class SalaryHelper {
 
 	/**
 	 * 
-	 * @param costsAnl1 - аналитика состава затрат 1-го уровня
-	 * @param costsAnl2 - аналитика состава затрат 2-го уровня
-	 * @param costsAnl3 - аналитика состава затрат 3-го уровня
-	 * @param costsAnl4 - аналитика состава затрат 4-го уровня
-	 * @param costsAnl5 - аналитика состава затрат 5-го уровня
+	 * @param costsAnl1 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 1-РіРѕ СѓСЂРѕРІРЅСЏ
+	 * @param costsAnl2 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 2-РіРѕ СѓСЂРѕРІРЅСЏ
+	 * @param costsAnl3 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 3-РіРѕ СѓСЂРѕРІРЅСЏ
+	 * @param costsAnl4 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 4-РіРѕ СѓСЂРѕРІРЅСЏ
+	 * @param costsAnl5 - Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 5-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @return
 	 */
 	public static boolean isCostsAnlEmpty(CostsAnl costsAnl1, CostsAnl costsAnl2, CostsAnl costsAnl3, CostsAnl costsAnl4, CostsAnl costsAnl5) {
@@ -716,14 +716,14 @@ public class SalaryHelper {
 
 
 	/**
-	 * Получить информацию о налоге
-	 * @param isByIncome - признак отбора налогов: true - по указанному размеру дохода; false - по номеру ставки
-	 * @param actualIncome - сумма дохода
-	 * @param taxCode - код налога из справочника
-	 * @param actualDate - фактическая дата
-	 * @param scaleNumber - номер шкалы
-	 * @param rateNumber - номер ставки
-	 * @return информация о налоге
+	 * РџРѕР»СѓС‡РёС‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РЅР°Р»РѕРіРµ
+	 * @param isByIncome - РїСЂРёР·РЅР°Рє РѕС‚Р±РѕСЂР° РЅР°Р»РѕРіРѕРІ: true - РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ СЂР°Р·РјРµСЂСѓ РґРѕС…РѕРґР°; false - РїРѕ РЅРѕРјРµСЂСѓ СЃС‚Р°РІРєРё
+	 * @param actualIncome - СЃСѓРјРјР° РґРѕС…РѕРґР°
+	 * @param taxCode - РєРѕРґ РЅР°Р»РѕРіР° РёР· СЃРїСЂР°РІРѕС‡РЅРёРєР°
+	 * @param actualDate - С„Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р°
+	 * @param scaleNumber - РЅРѕРјРµСЂ С€РєР°Р»С‹
+	 * @param rateNumber - РЅРѕРјРµСЂ СЃС‚Р°РІРєРё
+	 * @return РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РЅР°Р»РѕРіРµ
 	 */
 	private static TaxResult getTaxInfo(boolean isByIncome, BigDecimal actualIncome, String taxCode, Date actualDate, Integer scaleNumber, Integer rateNumber) {
 		Criteria criteria = OrmTemplate.createCriteria(TaxRate.class)
@@ -772,11 +772,11 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить норму рабочего времени, по заданному исполнению должности, на заданную дату
-	 * @param positionFill - исполненяемая должность
-	 * @param actualDate - фактическая дата
-	 * @param staffList - штатное расписанте
-	 * @return норма рабочего времени, по заданному исполнению должности, на заданную дату
+	 * РџРѕР»СѓС‡РёС‚СЊ РЅРѕСЂРјСѓ СЂР°Р±РѕС‡РµРіРѕ РІСЂРµРјРµРЅРё, РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РёСЃРїРѕР»РЅРµРЅРёСЋ РґРѕР»Р¶РЅРѕСЃС‚Рё, РЅР° Р·Р°РґР°РЅРЅСѓСЋ РґР°С‚Сѓ
+	 * @param positionFill - РёСЃРїРѕР»РЅРµРЅСЏРµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param actualDate - С„Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р°
+	 * @param staffList - С€С‚Р°С‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅС‚Рµ
+	 * @return РЅРѕСЂРјР° СЂР°Р±РѕС‡РµРіРѕ РІСЂРµРјРµРЅРё, РїРѕ Р·Р°РґР°РЅРЅРѕРјСѓ РёСЃРїРѕР»РЅРµРЅРёСЋ РґРѕР»Р¶РЅРѕСЃС‚Рё, РЅР° Р·Р°РґР°РЅРЅСѓСЋ РґР°С‚Сѓ
 	 */
 	private static WorkNormResult getWorkNorms(PositionFill positionFill, Date actualDate, StaffList staffList) {
 		List<Integer[]> workNorms = MiscUtils.convertUncheckedList(Integer[].class, OrmTemplate.getInstance().findByNamedQueryAndNamedParam(WORK_NORMS_QUERY_NAME,
@@ -791,11 +791,11 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить значение из шкалы надбавки
-	 * @param tariffScaleCode - код шкалы надбавки
+	 * РџРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РёР· С€РєР°Р»С‹ РЅР°РґР±Р°РІРєРё
+	 * @param tariffScaleCode - РєРѕРґ С€РєР°Р»С‹ РЅР°РґР±Р°РІРєРё
 	 * @param classNumber
-	 * @param actualDate - дата актуальности
-	 * @return значение из шкалы по коду надбавки на дату 
+	 * @param actualDate - РґР°С‚Р° Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё
+	 * @return Р·РЅР°С‡РµРЅРёРµ РёР· С€РєР°Р»С‹ РїРѕ РєРѕРґСѓ РЅР°РґР±Р°РІРєРё РЅР° РґР°С‚Сѓ 
 	 */
 	private static BigDecimal getValueFromTariffScale(String tariffScaleCode, Integer classNumber, Date actualDate, Map<String, ? extends Object> contextParams) {
 		BigDecimal tariffScaleValue = BigDecimal.ZERO;
@@ -821,21 +821,21 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить процент надбавки
-	 * @param rise - надбавка
-	 * @param riseScale - шкала надбавки
-	 * @return процент надбавки
+	 * РџРѕР»СѓС‡РёС‚СЊ РїСЂРѕС†РµРЅС‚ РЅР°РґР±Р°РІРєРё
+	 * @param rise - РЅР°РґР±Р°РІРєР°
+	 * @param riseScale - С€РєР°Р»Р° РЅР°РґР±Р°РІРєРё
+	 * @return РїСЂРѕС†РµРЅС‚ РЅР°РґР±Р°РІРєРё
 	 */
 	private static BigDecimal getRiseValue(Rise rise, RiseScale riseScale) {
-		//TODO: Legasy stub: непонятно откуда брать стаж, по которому определяется процент надбавки
+		//TODO: Legasy stub: РЅРµРїРѕРЅСЏС‚РЅРѕ РѕС‚РєСѓРґР° Р±СЂР°С‚СЊ СЃС‚Р°Р¶, РїРѕ РєРѕС‚РѕСЂРѕРјСѓ РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ РїСЂРѕС†РµРЅС‚ РЅР°РґР±Р°РІРєРё
 		return BigDecimal.ZERO;
 	}
 
 	/**
-	 * Получить список начислений/удержаний, которые входят в образец начислений/удержаний
-	 * @param feeSign - знак, с которым входят начисления
-	 * @param feeModel - образец начислений/удержаний
-	 * @return список начислений/удержаний, которые входят в образец начислений/удержаний
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№, РєРѕС‚РѕСЂС‹Рµ РІС…РѕРґСЏС‚ РІ РѕР±СЂР°Р·РµС† РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№
+	 * @param feeSign - Р·РЅР°Рє, СЃ РєРѕС‚РѕСЂС‹Рј РІС…РѕРґСЏС‚ РЅР°С‡РёСЃР»РµРЅРёСЏ
+	 * @param feeModel - РѕР±СЂР°Р·РµС† РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№
+	 * @return СЃРїРёСЃРѕРє РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№, РєРѕС‚РѕСЂС‹Рµ РІС…РѕРґСЏС‚ РІ РѕР±СЂР°Р·РµС† РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№
 	 */
 	private static List<IncludedFee> getIncludedFees(TripleSumSign feeSign, FeeModel feeModel) {
 		Criteria criteria = OrmTemplate.createCriteria(IncludedFee.class)
@@ -850,10 +850,10 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Поверить принадлежность параметра начислению/удержанию
-	 * @param paramCode - код параметра
-	 * @param calcListFee - начисление/удержание
-	 * @return true - если заданный параметр принадлежит заданному начислению/удержанию
+	 * РџРѕРІРµСЂРёС‚СЊ РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚СЊ РїР°СЂР°РјРµС‚СЂР° РЅР°С‡РёСЃР»РµРЅРёСЋ/СѓРґРµСЂР¶Р°РЅРёСЋ
+	 * @param paramCode - РєРѕРґ РїР°СЂР°РјРµС‚СЂР°
+	 * @param calcListFee - РЅР°С‡РёСЃР»РµРЅРёРµ/СѓРґРµСЂР¶Р°РЅРёРµ
+	 * @return true - РµСЃР»Рё Р·Р°РґР°РЅРЅС‹Р№ РїР°СЂР°РјРµС‚СЂ РїСЂРёРЅР°РґР»РµР¶РёС‚ Р·Р°РґР°РЅРЅРѕРјСѓ РЅР°С‡РёСЃР»РµРЅРёСЋ/СѓРґРµСЂР¶Р°РЅРёСЋ
 	 */
 	private static boolean isParametrBelongsToCalcListFee(String paramCode, CalcListFee calcListFee) {
 		boolean isBelongs = false;
@@ -868,10 +868,10 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить список параметров по коду параметра и коду начисления/удержания
-	 * @param paramCode - код параметра
-	 * @param feeCode - код начисления/удержания
-	 * @return список параметров по коду параметра и коду начисления/удержания
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ РїРѕ РєРѕРґСѓ РїР°СЂР°РјРµС‚СЂР° Рё РєРѕРґСѓ РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ
+	 * @param paramCode - РєРѕРґ РїР°СЂР°РјРµС‚СЂР°
+	 * @param feeCode - РєРѕРґ РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ
+	 * @return СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ РїРѕ РєРѕРґСѓ РїР°СЂР°РјРµС‚СЂР° Рё РєРѕРґСѓ РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ
 	 */
 	private static List<FeeRefParam> getParamByParamCodeAndFeeCode(String paramCode, String feeCode) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(FeeRefParam.class)
@@ -881,10 +881,10 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить значение параметра в соответсвии с его типом
-	 * @param feeParamValue - значение параметра
-	 * @param feeParamType - тип параметра
-	 * @return значение параметра в соответсвии с его типом
+	 * РџРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР° РІ СЃРѕРѕС‚РІРµС‚СЃРІРёРё СЃ РµРіРѕ С‚РёРїРѕРј
+	 * @param feeParamValue - Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР°
+	 * @param feeParamType - С‚РёРї РїР°СЂР°РјРµС‚СЂР°
+	 * @return Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР° РІ СЃРѕРѕС‚РІРµС‚СЃРІРёРё СЃ РµРіРѕ С‚РёРїРѕРј
 	 */
 	private static Object getExactFeeParamValue(String feeParamValue, FeeParamType feeParamType) {
 		Object exactParamValue = null;
@@ -908,12 +908,12 @@ public class SalaryHelper {
 	}
 
 	/**
-	 * Получить список тарифов должности
-	 * @param tariffCode - код тарифа
-	 * @param actualDate - фактическая дата
-	 * @param positionFill - занимаемая должность
-	 * @param staffList - штатное расписание
-	 * @return список тарифов должности
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє С‚Р°СЂРёС„РѕРІ РґРѕР»Р¶РЅРѕСЃС‚Рё
+	 * @param tariffCode - РєРѕРґ С‚Р°СЂРёС„Р°
+	 * @param actualDate - С„Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р°
+	 * @param positionFill - Р·Р°РЅРёРјР°РµРјР°СЏ РґРѕР»Р¶РЅРѕСЃС‚СЊ
+	 * @param staffList - С€С‚Р°С‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅРёРµ
+	 * @return СЃРїРёСЃРѕРє С‚Р°СЂРёС„РѕРІ РґРѕР»Р¶РЅРѕСЃС‚Рё
 	 */
 	private static List<Tariffing> getTariffList(String tariffCode, Date actualDate, PositionFill positionFill, StaffList staffList) {
 		DetachedCriteria dc = DetachedCriteria.forClass(PositionFill.class)

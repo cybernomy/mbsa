@@ -28,7 +28,7 @@ import com.mg.merp.manufacture.TransactionServiceLocal;
 import com.mg.merp.manufacture.model.Transaction;
 
 /**
- * Реализация бизнес-компонента "Производственные транзакции"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРѕРёР·РІРѕРґСЃС‚РІРµРЅРЅС‹Рµ С‚СЂР°РЅР·Р°РєС†РёРё"
  * 
  * @author Oleg V. Safonov
  * @version $Id: TransactionServiceBean.java,v 1.3 2007/08/06 12:44:53 safonov Exp $

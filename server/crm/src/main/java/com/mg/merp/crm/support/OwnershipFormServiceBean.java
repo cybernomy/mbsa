@@ -24,7 +24,7 @@ import com.mg.merp.crm.OwnershipFormServiceLocal;
 import com.mg.merp.crm.model.OwnershipForm;
 
 /**
- * Бизнес-компонент "Формы собственности" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р¤РѕСЂРјС‹ СЃРѕР±СЃС‚РІРµРЅРЅРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @version $Id: OwnershipFormServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

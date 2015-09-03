@@ -21,7 +21,7 @@ import com.mg.framework.service.ApplicationDictionaryLocator;
 import com.mg.framework.utils.StringUtils;
 
 /**
- * Абстрактный класс контроллера браузера "Остатков и обротов"
+ * РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ РєР»Р°СЃСЃ РєРѕРЅС‚СЂРѕР»Р»РµСЂР° Р±СЂР°СѓР·РµСЂР° "РћСЃС‚Р°С‚РєРѕРІ Рё РѕР±СЂРѕС‚РѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: AbstractFinTurnBrowseForm.java,v 1.1 2009/02/16 07:46:40 sharapov Exp $

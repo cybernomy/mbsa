@@ -17,7 +17,7 @@ package com.mg.merp.workbench.support;
 import com.mg.framework.generic.MessageSourceAccessor;
 
 /**
- * Сообщения модуля Workbench
+ * РЎРѕРѕР±С‰РµРЅРёСЏ РјРѕРґСѓР»СЏ Workbench
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: Messages.java,v 1.1 2007/04/11 06:52:18 poroxnenko Exp $

@@ -22,7 +22,7 @@ import com.mg.merp.humanresources.OrderModelServiceLocal;
 import com.mg.merp.humanresources.model.OrderModel;
 
 /**
- * Реализация бизнес-компонента "Образцы приказов"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·С†С‹ РїСЂРёРєР°Р·РѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: OrderModelServiceBean.java,v 1.5 2007/08/27 13:34:01 sharapov Exp $

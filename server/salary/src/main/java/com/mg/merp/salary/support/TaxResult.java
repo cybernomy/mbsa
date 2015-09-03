@@ -17,7 +17,7 @@ package com.mg.merp.salary.support;
 import java.math.BigDecimal;
 
 /**
- * Класс-результат: информация о налоге
+ * РљР»Р°СЃСЃ-СЂРµР·СѓР»СЊС‚Р°С‚: РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РЅР°Р»РѕРіРµ
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -37,13 +37,13 @@ public class TaxResult {
 	}
 	
 	/**
-	 * Создать информацию о налоге
-	 * @param rateNumber - номер ставки
-	 * @param minIncome - минимальный доход, начиная с которого действует данная ставка
-	 * @param maxIncome - максимальный доход, до которого действует данная ставка
-	 * @param percent - процент ставки
-	 * @param constValue - фиксированная сумма
-	 * @param privilegeRatio - коэффициент для льгот
+	 * РЎРѕР·РґР°С‚СЊ РёРЅС„РѕСЂРјР°С†РёСЋ Рѕ РЅР°Р»РѕРіРµ
+	 * @param rateNumber - РЅРѕРјРµСЂ СЃС‚Р°РІРєРё
+	 * @param minIncome - РјРёРЅРёРјР°Р»СЊРЅС‹Р№ РґРѕС…РѕРґ, РЅР°С‡РёРЅР°СЏ СЃ РєРѕС‚РѕСЂРѕРіРѕ РґРµР№СЃС‚РІСѓРµС‚ РґР°РЅРЅР°СЏ СЃС‚Р°РІРєР°
+	 * @param maxIncome - РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ РґРѕС…РѕРґ, РґРѕ РєРѕС‚РѕСЂРѕРіРѕ РґРµР№СЃС‚РІСѓРµС‚ РґР°РЅРЅР°СЏ СЃС‚Р°РІРєР°
+	 * @param percent - РїСЂРѕС†РµРЅС‚ СЃС‚Р°РІРєРё
+	 * @param constValue - С„РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ СЃСѓРјРјР°
+	 * @param privilegeRatio - РєРѕСЌС„С„РёС†РёРµРЅС‚ РґР»СЏ Р»СЊРіРѕС‚
 	 */
 	public TaxResult(Integer rateNumber, BigDecimal minIncome, BigDecimal maxIncome, BigDecimal percent, BigDecimal constValue, BigDecimal privilegeRatio) {
 		this.rateNumber = rateNumber;
@@ -56,7 +56,7 @@ public class TaxResult {
 
 	/**
 	 * 
-	 * @return фиксированная сумма
+	 * @return С„РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ СЃСѓРјРјР°
 	 */
 	public BigDecimal getConstValue() {
 		return constValue;
@@ -64,7 +64,7 @@ public class TaxResult {
 
 	/**
 	 * 
-	 * @return максимальный доход, до которого действует данная ставка
+	 * @return РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ РґРѕС…РѕРґ, РґРѕ РєРѕС‚РѕСЂРѕРіРѕ РґРµР№СЃС‚РІСѓРµС‚ РґР°РЅРЅР°СЏ СЃС‚Р°РІРєР°
 	 */
 	public BigDecimal getMaxIncome() {
 		return maxIncome;
@@ -72,7 +72,7 @@ public class TaxResult {
 
 	/**
 	 * 
-	 * @return минимальный доход, начиная с которого действует данная ставка
+	 * @return РјРёРЅРёРјР°Р»СЊРЅС‹Р№ РґРѕС…РѕРґ, РЅР°С‡РёРЅР°СЏ СЃ РєРѕС‚РѕСЂРѕРіРѕ РґРµР№СЃС‚РІСѓРµС‚ РґР°РЅРЅР°СЏ СЃС‚Р°РІРєР°
 	 */
 	public BigDecimal getMinIncome() {
 		return minIncome;
@@ -80,7 +80,7 @@ public class TaxResult {
 
 	/**
 	 * 
-	 * @return процент ставки
+	 * @return РїСЂРѕС†РµРЅС‚ СЃС‚Р°РІРєРё
 	 */
 	public BigDecimal getPercent() {
 		return percent;
@@ -88,7 +88,7 @@ public class TaxResult {
 
 	/**
 	 * 
-	 * @return коэффициент для льгот
+	 * @return РєРѕСЌС„С„РёС†РёРµРЅС‚ РґР»СЏ Р»СЊРіРѕС‚
 	 */
 	public BigDecimal getPrivilegeRatio() {
 		return privilegeRatio;
@@ -96,7 +96,7 @@ public class TaxResult {
 
 	/**
 	 * 
-	 * @return номер ставки
+	 * @return РЅРѕРјРµСЂ СЃС‚Р°РІРєРё
 	 */
 	public Integer getRateNumber() {
 		return rateNumber;

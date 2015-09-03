@@ -17,7 +17,7 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.Address;
 
 /**
- * Сервис бизнес-компонента "Адрес проживания сотрудников" 
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РђРґСЂРµСЃ РїСЂРѕР¶РёРІР°РЅРёСЏ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,15 +26,15 @@ import com.mg.merp.personnelref.model.Address;
 public interface AddressServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Address, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/personnelref/Address"; //$NON-NLS-1$
 	
 	static final String ADDRESS_SEPARATOR = ","; //$NON-NLS-1$
 
 	/**
-	 * Сформировать полный адрес
-	 * @param address - адрес проживания
+	 * РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ РїРѕР»РЅС‹Р№ Р°РґСЂРµСЃ
+	 * @param address - Р°РґСЂРµСЃ РїСЂРѕР¶РёРІР°РЅРёСЏ
 	 */
 	void adjustFullAddress(Address address);
 

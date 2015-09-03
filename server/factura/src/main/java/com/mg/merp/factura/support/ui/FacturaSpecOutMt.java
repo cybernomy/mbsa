@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.MasterModelListener;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы поддержки спецификации исходящих счет - фактур
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёРё РёСЃС…РѕРґСЏС‰РёС… СЃС‡РµС‚ - С„Р°РєС‚СѓСЂ
  * 
  * @author leonova
  * @version $Id: FacturaSpecOutMt.java,v 1.3 2006/08/22 07:30:29 leonova Exp $

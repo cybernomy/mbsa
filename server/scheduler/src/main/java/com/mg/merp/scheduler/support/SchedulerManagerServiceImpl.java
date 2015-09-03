@@ -37,7 +37,7 @@ import com.mg.merp.baiengine.model.Repository;
 import com.mg.merp.scheduler.model.Task;
 
 /**
- * Реализация менеджера планировщика
+ * Р РµР°Р»РёР·Р°С†РёСЏ РјРµРЅРµРґР¶РµСЂР° РїР»Р°РЅРёСЂРѕРІС‰РёРєР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: SchedulerManagerServiceImpl.java,v 1.2 2008/08/28 13:32:54 safonov Exp $
@@ -113,10 +113,10 @@ public class SchedulerManagerServiceImpl {
 	}
 	
 	/**
-	 * старт менеджера
+	 * СЃС‚Р°СЂС‚ РјРµРЅРµРґР¶РµСЂР°
 	 * 
-	 * @param properties	свойства запуска
-	 * @throws Exception	при любых ошибках
+	 * @param properties	СЃРІРѕР№СЃС‚РІР° Р·Р°РїСѓСЃРєР°
+	 * @throws Exception	РїСЂРё Р»СЋР±С‹С… РѕС€РёР±РєР°С…
 	 */
 	public void start(Properties properties) throws Exception {
 		logger.debug("start scheduler");
@@ -126,9 +126,9 @@ public class SchedulerManagerServiceImpl {
 	}
 	
 	/**
-	 * остановка менеджера
+	 * РѕСЃС‚Р°РЅРѕРІРєР° РјРµРЅРµРґР¶РµСЂР°
 	 * 
-	 * @throws Exception	при любых ошибках
+	 * @throws Exception	РїСЂРё Р»СЋР±С‹С… РѕС€РёР±РєР°С…
 	 */
 	public void stop() throws Exception {
 		logger.debug("stop scheduler");
@@ -136,10 +136,10 @@ public class SchedulerManagerServiceImpl {
 	}
 	
 	/**
-	 * регистрация задачи планировщика в планировщик
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ Р·Р°РґР°С‡Рё РїР»Р°РЅРёСЂРѕРІС‰РёРєР° РІ РїР»Р°РЅРёСЂРѕРІС‰РёРє
 	 * 
-	 * @param sysClientId	мандант
-	 * @param taskCode		код задачи
+	 * @param sysClientId	РјР°РЅРґР°РЅС‚
+	 * @param taskCode		РєРѕРґ Р·Р°РґР°С‡Рё
 	 */
 	public void registerTask(Integer sysClientId, String taskCode) {
 		Task task = findByCode(sysClientId, taskCode);
@@ -148,10 +148,10 @@ public class SchedulerManagerServiceImpl {
 	}
 
 	/**
-	 * удаление задачи планировщика из планировщика
+	 * СѓРґР°Р»РµРЅРёРµ Р·Р°РґР°С‡Рё РїР»Р°РЅРёСЂРѕРІС‰РёРєР° РёР· РїР»Р°РЅРёСЂРѕРІС‰РёРєР°
 	 * 
-	 * @param sysClientId	мандант
-	 * @param taskCode		код задачи
+	 * @param sysClientId	РјР°РЅРґР°РЅС‚
+	 * @param taskCode		РєРѕРґ Р·Р°РґР°С‡Рё
 	 */
 	public void unregisterTask(Integer sysClientId, String taskCode) {
 		Task task = findByCode(sysClientId, taskCode);
@@ -160,7 +160,7 @@ public class SchedulerManagerServiceImpl {
 	}
 
 	/**
-	 * загрузка задач планировщика в планировщик
+	 * Р·Р°РіСЂСѓР·РєР° Р·Р°РґР°С‡ РїР»Р°РЅРёСЂРѕРІС‰РёРєР° РІ РїР»Р°РЅРёСЂРѕРІС‰РёРє
 	 */
 	public void scheduleTasks() {
 		logger.info("schedule tasks");
@@ -197,9 +197,9 @@ public class SchedulerManagerServiceImpl {
 	}
 	
 	/**
-	 * получить планировщик
+	 * РїРѕР»СѓС‡РёС‚СЊ РїР»Р°РЅРёСЂРѕРІС‰РёРє
 	 * 
-	 * @return	планировщик
+	 * @return	РїР»Р°РЅРёСЂРѕРІС‰РёРє
 	 */
 	public Scheduler getScheduler() {
 		return scheduler;

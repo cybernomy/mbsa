@@ -25,7 +25,7 @@ import com.mg.merp.warehouse.generic.AbstractWarehouseDocumentSpec;
 import com.mg.merp.warehouse.model.OrderSpec;
 
 /**
- * Бизнес-компонент "Спецификации заказов покупателей" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёРё Р·Р°РєР°Р·РѕРІ РїРѕРєСѓРїР°С‚РµР»РµР№" 
  * 
  * @author leonova
  * @version $Id: OrderSpecCusServiceBean.java,v 1.7 2007/09/07 12:27:13 safonov Exp $

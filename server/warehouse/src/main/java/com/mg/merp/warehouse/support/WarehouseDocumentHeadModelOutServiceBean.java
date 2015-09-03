@@ -23,7 +23,7 @@ import com.mg.merp.warehouse.WarehouseDocumentHeadOutServiceLocal;
 import com.mg.merp.warehouse.model.StockDocumentHeadModel;
 
 /**
- * Бизнес-компонент "Образцы расходных ордеров" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ СЂР°СЃС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ" 
  * 
  * @author leonova
  * @version $Id: WarehouseDocumentHeadModelOutServiceBean.java,v 1.3 2006/09/12 10:48:36 leonova Exp $

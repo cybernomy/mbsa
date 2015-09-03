@@ -19,7 +19,7 @@ import java.util.EventListener;
 import com.mg.merp.settlement.support.ui.ContractorCardMt.DocListItem;
 
 /**
- * Слушатель события "Изменения позиции курсора таблицы"
+ * РЎР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёСЏ "РР·РјРµРЅРµРЅРёСЏ РїРѕР·РёС†РёРё РєСѓСЂСЃРѕСЂР° С‚Р°Р±Р»РёС†С‹"
  * 
  * @author Artem V. Sharapov
  * @version $Id: SelectionRowListener.java,v 1.1 2007/03/19 15:05:29 sharapov Exp $
@@ -27,8 +27,8 @@ import com.mg.merp.settlement.support.ui.ContractorCardMt.DocListItem;
 public interface SelectionRowListener extends EventListener {
 
 	/**
-	 * Cобытие "Изменение позиции курсора таблицы"
-	 * @param selectedItem - данные текущей позиции курсора таблицы
+	 * CРѕР±С‹С‚РёРµ "РР·РјРµРЅРµРЅРёРµ РїРѕР·РёС†РёРё РєСѓСЂСЃРѕСЂР° С‚Р°Р±Р»РёС†С‹"
+	 * @param selectedItem - РґР°РЅРЅС‹Рµ С‚РµРєСѓС‰РµР№ РїРѕР·РёС†РёРё РєСѓСЂСЃРѕСЂР° С‚Р°Р±Р»РёС†С‹
 	 */
 	public void selectedRowChange(DocListItem selectedItem);
 

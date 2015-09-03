@@ -25,7 +25,7 @@ public interface SymptomServiceLocal
    extends com.mg.framework.api.DataBusinessObjectService<Symptom, Integer>
 {
 	/**
-	 * тип папки для симптомов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ СЃРёРјРїС‚РѕРјРѕРІ
 	 */
 	final static short FOLDER_PART = 13501;
 }

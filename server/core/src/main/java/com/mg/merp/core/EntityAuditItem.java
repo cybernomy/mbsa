@@ -15,7 +15,7 @@
 package com.mg.merp.core;
 
 /**
- * Настройка аудита сущности
+ * РќР°СЃС‚СЂРѕР№РєР° Р°СѓРґРёС‚Р° СЃСѓС‰РЅРѕСЃС‚Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityAuditItem.java,v 1.1 2007/10/19 06:40:17 safonov Exp $

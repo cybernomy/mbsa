@@ -33,7 +33,7 @@ import com.mg.merp.discount.model.Discount;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Браузер скидок / наценок
+ * Р‘СЂР°СѓР·РµСЂ СЃРєРёРґРѕРє / РЅР°С†РµРЅРѕРє
  * 
  * @author leonova
  * @version $Id: DiscountBr.java,v 1.4 2006/09/15 10:49:58 leonova Exp $

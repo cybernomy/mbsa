@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.account.model.InvLocation;
 
 /**
- * Браузер местонахождения объектов ОС
+ * Р‘СЂР°СѓР·РµСЂ РјРµСЃС‚РѕРЅР°С…РѕР¶РґРµРЅРёСЏ РѕР±СЉРµРєС‚РѕРІ РћРЎ
  * 
  * @author leonova
  * @version $Id: InvLocationBr.java,v 1.1 2006/08/24 06:42:30 leonova Exp $ 

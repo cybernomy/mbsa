@@ -17,7 +17,7 @@ package com.mg.merp.paymentcontrol.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * Поисковик сущностей "Средства платежа"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РЎСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°"
  * 
  * @author leonova
  * @version $Id: PmcResourceSearchHelp.java,v 1.3 2007/05/14 05:23:52 sharapov Exp $

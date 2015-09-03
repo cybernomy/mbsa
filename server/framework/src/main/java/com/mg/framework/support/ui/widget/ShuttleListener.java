@@ -20,8 +20,8 @@ import java.util.EventListener;
 import com.mg.framework.api.ui.ShuttleChangeEvent;
 
 /**
- * Слушатель событий элемента "Shuttle", предназначен для создания обработчиков
- * на события перемещения элементов между списками
+ * РЎР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№ СЌР»РµРјРµРЅС‚Р° "Shuttle", РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РѕР±СЂР°Р±РѕС‚С‡РёРєРѕРІ
+ * РЅР° СЃРѕР±С‹С‚РёСЏ РїРµСЂРµРјРµС‰РµРЅРёСЏ СЌР»РµРјРµРЅС‚РѕРІ РјРµР¶РґСѓ СЃРїРёСЃРєР°РјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: ShuttleListener.java,v 1.1 2006/08/31 08:36:41 safonov Exp $
@@ -29,16 +29,16 @@ import com.mg.framework.api.ui.ShuttleChangeEvent;
 public interface ShuttleListener extends EventListener, Serializable {
 
 	/**
-	 * содержимое перенесено из списка источника в список приемник
+	 * СЃРѕРґРµСЂР¶РёРјРѕРµ РїРµСЂРµРЅРµСЃРµРЅРѕ РёР· СЃРїРёСЃРєР° РёСЃС‚РѕС‡РЅРёРєР° РІ СЃРїРёСЃРѕРє РїСЂРёРµРјРЅРёРє
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	void shuttleContentsMoved(ShuttleChangeEvent event);
 
 	/**
-	 * содержимое перенесено из списка источника в список приемника
+	 * СЃРѕРґРµСЂР¶РёРјРѕРµ РїРµСЂРµРЅРµСЃРµРЅРѕ РёР· СЃРїРёСЃРєР° РёСЃС‚РѕС‡РЅРёРєР° РІ СЃРїРёСЃРѕРє РїСЂРёРµРјРЅРёРєР°
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	void shuttleContentsRemoved(ShuttleChangeEvent event);
 

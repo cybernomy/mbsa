@@ -62,7 +62,7 @@ import com.mg.merp.wb.report.deployer.support.RptEditorController;
 import com.mg.merp.wb.report.deployer.support.utils.RptTool;
 
 /**
- * Содержание формы редактирования отчёта
+ * РЎРѕРґРµСЂР¶Р°РЅРёРµ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РѕС‚С‡С‘С‚Р°
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: RptEditorPage.java,v 1.4 2007/08/30 15:00:28 safonov Exp $
@@ -75,17 +75,17 @@ public class RptEditorPage extends StandartEditorPage<RptMainTransfer> {
 	private RptMainTransfer rmt;
 
 	/**
-	 * Контроллер формы редактирования
+	 * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
 	 */
 	private RptEditorController formController;
 
 	/**
-	 * Контроллер таблицы "Бизнес-компоненты"
+	 * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С‚Р°Р±Р»РёС†С‹ "Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚С‹"
 	 */
 	private TableViewer beanTableViewer;
 	
 	/**
-	 * Контроллер таблицы "Права на отчёты"
+	 * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С‚Р°Р±Р»РёС†С‹ "РџСЂР°РІР° РЅР° РѕС‚С‡С‘С‚С‹"
 	 */
 	private TableViewer rightsTableViewer;
 	
@@ -147,37 +147,37 @@ public class RptEditorPage extends StandartEditorPage<RptMainTransfer> {
 	}
 
 	/**
-	 * Текстовое поле, содержащее код отчёта
+	 * РўРµРєСЃС‚РѕРІРѕРµ РїРѕР»Рµ, СЃРѕРґРµСЂР¶Р°С‰РµРµ РєРѕРґ РѕС‚С‡С‘С‚Р°
 	 */
 	private Text tCode = null;
 
 	/**
-	 * Текстовое поле, содержащее наименование отчёта
+	 * РўРµРєСЃС‚РѕРІРѕРµ РїРѕР»Рµ, СЃРѕРґРµСЂР¶Р°С‰РµРµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РѕС‚С‡С‘С‚Р°
 	 */
 	private Text tName = null;
 
 	/**
-	 * формат вывода отчета
+	 * С„РѕСЂРјР°С‚ РІС‹РІРѕРґР° РѕС‚С‡РµС‚Р°
 	 */
 	private Combo cOutputFormat = null;
 	
 	/**
-	 * Текстовое поле, содержащее описание отчёта
+	 * РўРµРєСЃС‚РѕРІРѕРµ РїРѕР»Рµ, СЃРѕРґРµСЂР¶Р°С‰РµРµ РѕРїРёСЃР°РЅРёРµ РѕС‚С‡С‘С‚Р°
 	 */
 	private Text tDescription = null;
 
 	/**
-	 * Полное имя формы запроса параметров отчёта
+	 * РџРѕР»РЅРѕРµ РёРјСЏ С„РѕСЂРјС‹ Р·Р°РїСЂРѕСЃР° РїР°СЂР°РјРµС‚СЂРѕРІ РѕС‚С‡С‘С‚Р°
 	 */
 	private Text tParamsFormName = null;
 
 	/**
-	 * Приоритет отчёта
+	 * РџСЂРёРѕСЂРёС‚РµС‚ РѕС‚С‡С‘С‚Р°
 	 */
 	private Spinner spPrior = null;
 
 	/**
-	 * Запрос параметров
+	 * Р—Р°РїСЂРѕСЃ РїР°СЂР°РјРµС‚СЂРѕРІ
 	 */
 	private Button cbAsk = null;
 	

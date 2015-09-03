@@ -19,7 +19,7 @@ import com.mg.merp.account.model.AccPlan;
 import com.mg.merp.account.model.Period;
 
 /**
- * Бизнес-компонент "Остатки и обороты по счетам бух. учета"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ СЃС‡РµС‚Р°Рј Р±СѓС…. СѓС‡РµС‚Р°"
  * 
  * @author pashistova
  * @author Artem V. Sharapov
@@ -35,21 +35,21 @@ public interface Remn {
 	public byte[] loadEconomicOperDbKtBrowse(int remnId) throws ApplicationException;
 
 	/**
-	 * Перенос остатков бух. учета
-	 * @param periodFrom - начальный период
-	 * @param periodTo - конечный период
-	 * @param allAcc - все счета
-	 * @param accList - список выбранных счетов
+	 * РџРµСЂРµРЅРѕСЃ РѕСЃС‚Р°С‚РєРѕРІ Р±СѓС…. СѓС‡РµС‚Р°
+	 * @param periodFrom - РЅР°С‡Р°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @param periodTo - РєРѕРЅРµС‡РЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @param allAcc - РІСЃРµ СЃС‡РµС‚Р°
+	 * @param accList - СЃРїРёСЃРѕРє РІС‹Р±СЂР°РЅРЅС‹С… СЃС‡РµС‚РѕРІ
 	 */
 	void carryForward(Period periodFrom, Period periodTo, boolean allAcc, AccPlan[] accList);
 	
 	/**
-	 * Удаление пустых строк
+	 * РЈРґР°Р»РµРЅРёРµ РїСѓСЃС‚С‹С… СЃС‚СЂРѕРє
 	 * 
 	 * @param periodFrom
-	 * 				- начальный период
+	 * 				- РЅР°С‡Р°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ
 	 * @param periodTo
-	 * 				- конечный период
+	 * 				- РєРѕРЅРµС‡РЅС‹Р№ РїРµСЂРёРѕРґ
 	 */
 	void removeEmptyRecords(Period periodFrom, Period periodTo);
 	

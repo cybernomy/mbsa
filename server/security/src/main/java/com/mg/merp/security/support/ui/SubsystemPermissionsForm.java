@@ -38,7 +38,7 @@ import com.mg.merp.security.model.ModuleAccess;
 import com.mg.merp.security.support.Messages;
 
 /**
- * Форма настройки доступа к подсистемам
+ * Р¤РѕСЂРјР° РЅР°СЃС‚СЂРѕР№РєРё РґРѕСЃС‚СѓРїР° Рє РїРѕРґСЃРёСЃС‚РµРјР°Рј
  *
  * @author Oleg V. Safonov
  * @version $Id: SubsystemPermissionsForm.java,v 1.3 2009/03/17 09:23:44 safonov Exp $
@@ -132,9 +132,9 @@ public class SubsystemPermissionsForm extends AbstractForm {
 	}
 
 	/**
-	 * запуск формы
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹
 	 *
-	 * @param role	роль
+	 * @param role	СЂРѕР»СЊ
 	 */
 	public void execute(Groups role) {
 		this.role = role;
@@ -144,7 +144,7 @@ public class SubsystemPermissionsForm extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик события "Закрыть форму"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "Р—Р°РєСЂС‹С‚СЊ С„РѕСЂРјСѓ"
 	 *
 	 * @param event
 	 */

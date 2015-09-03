@@ -24,7 +24,7 @@ import com.mg.merp.crm.RelationStatusServiceLocal;
 import com.mg.merp.crm.model.RelationStatus;
 
 /**
- * Бизнес-компонент "Статусы отношений" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎС‚Р°С‚СѓСЃС‹ РѕС‚РЅРѕС€РµРЅРёР№" 
  * 
  * @author leonova
  * @version $Id: RelationStatusServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

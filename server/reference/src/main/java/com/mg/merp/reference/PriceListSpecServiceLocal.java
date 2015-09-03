@@ -22,7 +22,7 @@ import com.mg.merp.reference.model.PriceListSpec;
 import com.mg.merp.reference.model.PriceListSpecPrice;
 
 /**
- * Бизнес-компонент "Спецификация прайс-листов"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -32,31 +32,31 @@ import com.mg.merp.reference.model.PriceListSpecPrice;
 public interface PriceListSpecServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PriceListSpec, Integer> {
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/reference/PriceListSpec"; //$NON-NLS-1$
 	
 	/**
-	 * Пересчет цен спецификации прайс-листа
+	 * РџРµСЂРµСЃС‡РµС‚ С†РµРЅ СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 * 
-	 * @param priceListSpec - объект-сущность спецификации прайс-листа 
+	 * @param priceListSpec - РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р° 
 	 */
 	void calcPrices(PriceListSpec priceListSpec);
 
 	/**
-	 * Добавление спецификаций прайс-листа по кааталожным позициям
+	 * Р”РѕР±Р°РІР»РµРЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёР№ РїСЂР°Р№СЃ-Р»РёСЃС‚Р° РїРѕ РєР°Р°С‚Р°Р»РѕР¶РЅС‹Рј РїРѕР·РёС†РёСЏРј
 	 * 
 	 * @param priceListHeadId
-	 * 				- идентификатор заголовока прайс-листа
+	 * 				- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РіРѕР»РѕРІРѕРєР° РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 * @param priceListFolder
-	 * 				- папка прайс-листа
+	 * 				- РїР°РїРєР° РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 * @param catalogs
-	 * 				- список каталожных позиций
+	 * 				- СЃРїРёСЃРѕРє РєР°С‚Р°Р»РѕР¶РЅС‹С… РїРѕР·РёС†РёР№
 	 */
 	void addFromCatalog(Integer priceListHeadId, PriceListFolder priceListFolder, List<Catalog> catalogs);
 
 	/**
-	 * поиск позиции прайс-листа по штрих-коду
+	 * РїРѕРёСЃРє РїРѕР·РёС†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р° РїРѕ С€С‚СЂРёС…-РєРѕРґСѓ
 	 * 
 	 * @param barCode
 	 * @param priceListId

@@ -27,15 +27,15 @@ import com.mg.framework.api.report.RptEngine;
 import com.mg.framework.service.RptEngineLocator;
 
 /**
- * Фильр для включения контекста приложения в контекст генератора отчетов
+ * Р¤РёР»СЊСЂ РґР»СЏ РІРєР»СЋС‡РµРЅРёСЏ РєРѕРЅС‚РµРєСЃС‚Р° РїСЂРёР»РѕР¶РµРЅРёСЏ РІ РєРѕРЅС‚РµРєСЃС‚ РіРµРЅРµСЂР°С‚РѕСЂР° РѕС‚С‡РµС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ContextFilter.java,v 1.1 2008/08/12 09:05:31 safonov Exp $
  */
 public class ContextFilter implements Filter {
 	/**
-	 * имя параметра содержащего идентификатор контекста приложения, переданного из merp,
-	 * должно соотвествовать {@link com.mg.merp.report.support.RptEngineImpl#VIEWER_CONTEXT_PARAM_NAME}
+	 * РёРјСЏ РїР°СЂР°РјРµС‚СЂР° СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРЅС‚РµРєСЃС‚Р° РїСЂРёР»РѕР¶РµРЅРёСЏ, РїРµСЂРµРґР°РЅРЅРѕРіРѕ РёР· merp,
+	 * РґРѕР»Р¶РЅРѕ СЃРѕРѕС‚РІРµСЃС‚РІРѕРІР°С‚СЊ {@link com.mg.merp.report.support.RptEngineImpl#VIEWER_CONTEXT_PARAM_NAME}
 	 */
 	private static final String VIEWER_CONTEXT_PARAM_NAME = "merpContextId"; //$NON-NLS-1$
 	/**
@@ -47,7 +47,7 @@ public class ContextFilter implements Filter {
 	 */
 	private static final String ATTR_APPCONTEXT_VALUE = "AppContextValue"; //$NON-NLS-1$
 	/**
-	 * Имя параметра содержащего контекст приложения, см. {@link com.mg.merp.wb.report.birt.data.oda.badi.util.Constants#APP_REPORT_CONTEXT}
+	 * РРјСЏ РїР°СЂР°РјРµС‚СЂР° СЃРѕРґРµСЂР¶Р°С‰РµРіРѕ РєРѕРЅС‚РµРєСЃС‚ РїСЂРёР»РѕР¶РµРЅРёСЏ, СЃРј. {@link com.mg.merp.wb.report.birt.data.oda.badi.util.Constants#APP_REPORT_CONTEXT}
 	 */
 	private static final String APP_REPORT_CONTEXT_PARAM_NAME = "__mg_ReportContext"; //$NON-NLS-1$
 
@@ -67,11 +67,11 @@ public class ContextFilter implements Filter {
 			FilterChain chain) throws IOException, ServletException {
 		String key = (String) request.getAttribute(ATTR_APPCONTEXT_KEY);
 		if (key == null) {
-			//идентификатор контекста передается как параметр запроса
+			//РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРЅС‚РµРєСЃС‚Р° РїРµСЂРµРґР°РµС‚СЃСЏ РєР°Рє РїР°СЂР°РјРµС‚СЂ Р·Р°РїСЂРѕСЃР°
 			String contextId = request.getParameter(VIEWER_CONTEXT_PARAM_NAME);
 			if (contextId != null) {
-				//загружаем контекст из сервиса и устанавливаем как атрибут запроса
-				//BIRT загружает данный контекст в контекст генератора отчетов при обработке запроса
+				//Р·Р°РіСЂСѓР¶Р°РµРј РєРѕРЅС‚РµРєСЃС‚ РёР· СЃРµСЂРІРёСЃР° Рё СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РєР°Рє Р°С‚СЂРёР±СѓС‚ Р·Р°РїСЂРѕСЃР°
+				//BIRT Р·Р°РіСЂСѓР¶Р°РµС‚ РґР°РЅРЅС‹Р№ РєРѕРЅС‚РµРєСЃС‚ РІ РєРѕРЅС‚РµРєСЃС‚ РіРµРЅРµСЂР°С‚РѕСЂР° РѕС‚С‡РµС‚РѕРІ РїСЂРё РѕР±СЂР°Р±РѕС‚РєРµ Р·Р°РїСЂРѕСЃР°
 				Object rptContext = rptEngine.getReportContext(contextId);
 				if (rptContext != null) {
 					request.setAttribute(ATTR_APPCONTEXT_KEY, APP_REPORT_CONTEXT_PARAM_NAME);

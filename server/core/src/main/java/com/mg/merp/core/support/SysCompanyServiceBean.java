@@ -23,7 +23,7 @@ import com.mg.merp.core.SysCompanyServiceLocal;
 import com.mg.merp.core.model.SysCompany;
 
 /**
- * Реализация бизнес-компонента "Балансовая единица"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р‘Р°Р»Р°РЅСЃРѕРІР°СЏ РµРґРёРЅРёС†Р°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: SysCompanyServiceBean.java,v 1.2 2007/10/01 06:28:53 safonov Exp $

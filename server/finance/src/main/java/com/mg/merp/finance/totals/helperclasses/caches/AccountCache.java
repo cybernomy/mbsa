@@ -56,12 +56,12 @@ public class AccountCache {
 	}
 
 	private static List<AccountItem> getFromCash(Set codes) {
-		//TODO: Поискать для начала в кеше
+		//TODO: РџРѕРёСЃРєР°С‚СЊ РґР»СЏ РЅР°С‡Р°Р»Р° РІ РєРµС€Рµ
 		return null;
 	}
 
 	private static PersistentObject loadFromCash(int id) {
-		//TODO: Поискать для начала в кеше
+		//TODO: РџРѕРёСЃРєР°С‚СЊ РґР»СЏ РЅР°С‡Р°Р»Р° РІ РєРµС€Рµ
 		return null;
 	}
 

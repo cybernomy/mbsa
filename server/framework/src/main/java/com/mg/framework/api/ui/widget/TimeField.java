@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.widget;
 import com.mg.framework.api.ui.FieldEditor;
 
 /**
- * Элемент "Редактор времени"
+ * Р­Р»РµРјРµРЅС‚ "Р РµРґР°РєС‚РѕСЂ РІСЂРµРјРµРЅРё"
  * 
  * @author Oleg V. Safonov
  * @version $Id: TimeField.java,v 1.1 2007/06/20 10:52:48 safonov Exp $
@@ -25,7 +25,7 @@ import com.mg.framework.api.ui.FieldEditor;
 public interface TimeField extends FieldEditor {
 	
 	/**
-	 * атрибут формат времени, может иметь следующие значения:
+	 * Р°С‚СЂРёР±СѓС‚ С„РѕСЂРјР°С‚ РІСЂРµРјРµРЅРё, РјРѕР¶РµС‚ РёРјРµС‚СЊ СЃР»РµРґСѓСЋС‰РёРµ Р·РЅР°С‡РµРЅРёСЏ:
 	 * </br>medium
 	 * </br>short
 	 * 
@@ -35,12 +35,12 @@ public interface TimeField extends FieldEditor {
 	final static String TIME_FORMAT = "timeFormat";
 	
 	/**
-	 * средний формат, поведение совпадает с форматом {@link java.text.DateFormat#MEDIUM}
+	 * СЃСЂРµРґРЅРёР№ С„РѕСЂРјР°С‚, РїРѕРІРµРґРµРЅРёРµ СЃРѕРІРїР°РґР°РµС‚ СЃ С„РѕСЂРјР°С‚РѕРј {@link java.text.DateFormat#MEDIUM}
 	 */
 	final static String TIME_MEDIUM = "medium";
 	
 	/**
-	 * короткий формат, поведение совпадает с форматом {@link java.text.DateFormat#SHORT}
+	 * РєРѕСЂРѕС‚РєРёР№ С„РѕСЂРјР°С‚, РїРѕРІРµРґРµРЅРёРµ СЃРѕРІРїР°РґР°РµС‚ СЃ С„РѕСЂРјР°С‚РѕРј {@link java.text.DateFormat#SHORT}
 	 */
 	final static String TIME_SHORT = "short";
 

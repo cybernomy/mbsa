@@ -60,7 +60,7 @@ import com.mg.merp.personnelref.model.PersonnelTransfer;
 import com.mg.merp.personnelref.model.PersonnelVocationalTraining;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Основные сведения о сотрудниках"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃРЅРѕРІРЅС‹Рµ СЃРІРµРґРµРЅРёСЏ Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С…"
  * 
  * @author leonova
  * @author Artem V. Sharapov

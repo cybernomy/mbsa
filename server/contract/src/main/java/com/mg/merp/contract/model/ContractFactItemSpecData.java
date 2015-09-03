@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 import com.mg.merp.reference.model.Catalog;
 
 /**
- * Структура данных для создания спецификации фактического пункта контракта
+ * РЎС‚СЂСѓРєС‚СѓСЂР° РґР°РЅРЅС‹С… РґР»СЏ СЃРѕР·РґР°РЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РїСѓРЅРєС‚Р° РєРѕРЅС‚СЂР°РєС‚Р°
  * 
  * @author Artem V. Sharapov
  * @version $Id: ContractFactItemSpecData.java,v 1.1 2007/03/07 12:31:28 sharapov Exp $

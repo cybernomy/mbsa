@@ -21,7 +21,7 @@ import com.mg.merp.reference.model.Measure;
 import com.mg.merp.reference.model.MeasureConversion;
 
 /**
- * Сервис бизнес-компонета преобразования ЕИ
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµС‚Р° РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ Р•Р
  * 
  * @author leonova
  * @version $Id: MeasureConversionServiceLocal.java,v 1.2 2006/12/02 13:32:40
@@ -32,26 +32,26 @@ public interface MeasureConversionServiceLocal
 		com.mg.framework.api.DataBusinessObjectService<MeasureConversion, Integer> {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/reference/MeasureConversion";
 
 	/**
-	 * преобразование ЕИ
+	 * РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ Р•Р
 	 * 
 	 * @param measureFrom
-	 *            ЕИ источник
+	 *            Р•Р РёСЃС‚РѕС‡РЅРёРє
 	 * @param measureTo
-	 *            ЕИ приемник
+	 *            Р•Р РїСЂРёРµРјРЅРёРє
 	 * @param catalog
-	 *            позиция каталога для которой происходит преобразование
+	 *            РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР° РґР»СЏ РєРѕС‚РѕСЂРѕР№ РїСЂРѕРёСЃС…РѕРґРёС‚ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ
 	 * @param convTime
-	 *            время на которое происходит преобразование
+	 *            РІСЂРµРјСЏ РЅР° РєРѕС‚РѕСЂРѕРµ РїСЂРѕРёСЃС…РѕРґРёС‚ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ
 	 * @param valueFrom
-	 *            количество в базовой ЕИ
-	 * @return количество в дополнительной ЕИ
+	 *            РєРѕР»РёС‡РµСЃС‚РІРѕ РІ Р±Р°Р·РѕРІРѕР№ Р•Р
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕР№ Р•Р
 	 * @throws InvalidMeasureConversion
-	 *             в случае ошибок преобразования
+	 *             РІ СЃР»СѓС‡Р°Рµ РѕС€РёР±РѕРє РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ
 	 */
 	BigDecimal conversion(Measure measureFrom, Measure measureTo,
 			Catalog catalog, java.util.Date convTime, BigDecimal valueFrom)

@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.core.model.Feature;
 
 /**
- * Браузер дополнительных признаков
+ * Р‘СЂР°СѓР·РµСЂ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РїСЂРёР·РЅР°РєРѕРІ
  * 
  * @author leonova
  * @version $Id: FeatureBr.java,v 1.2 2007/01/18 16:12:13 safonov Exp $ 

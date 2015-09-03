@@ -19,7 +19,7 @@ import java.util.Date;
 import com.mg.framework.api.UserSessionInfo;
 
 /**
- * Реализация информации о сессии пользователя
+ * Р РµР°Р»РёР·Р°С†РёСЏ РёРЅС„РѕСЂРјР°С†РёРё Рѕ СЃРµСЃСЃРёРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: UserSessionInfoImpl.java,v 1.1 2008/07/14 14:12:54 safonov Exp $

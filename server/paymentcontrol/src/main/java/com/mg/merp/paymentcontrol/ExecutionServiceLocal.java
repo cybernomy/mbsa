@@ -24,7 +24,7 @@ import com.mg.merp.paymentcontrol.model.PmcResource;
 import com.mg.merp.paymentcontrol.model.TransferParams;
 
 /**
- * Сервис бизнес-компонента "Исполнение обязательств"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РСЃРїРѕР»РЅРµРЅРёРµ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -33,79 +33,79 @@ import com.mg.merp.paymentcontrol.model.TransferParams;
 public interface ExecutionServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Execution, Integer> {
 	
 	/**
-	 * локальное имя сервиса
+	 * Р»РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/paymentcontrol/Execution"; //$NON-NLS-1$
 	
 	/**
-	 * тип папки для средств платежа
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ СЃСЂРµРґСЃС‚РІ РїР»Р°С‚РµР¶Р°
 	 */
 	final static short FOLDER_TYPE = 13400;
 
 	/**
-	 * Исполнить обязательство
-	 * @param liability - обязательство
-	 * @param pmcResource - средство платежа
-	 * @param planDate - дата исполнения
-	 * @param sumCur - сумма исполнения
+	 * РСЃРїРѕР»РЅРёС‚СЊ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ
+	 * @param liability - РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ
+	 * @param pmcResource - СЃСЂРµРґСЃС‚РІРѕ РїР»Р°С‚РµР¶Р°
+	 * @param planDate - РґР°С‚Р° РёСЃРїРѕР»РЅРµРЅРёСЏ
+	 * @param sumCur - СЃСѓРјРјР° РёСЃРїРѕР»РЅРµРЅРёСЏ
 	 */
 	void executeLiability(Liability liability, PmcResource pmcResource, Date planDate, BigDecimal sumCur);
 		
 	/**
-	 * Исполнить обязательство
-	 * @param resourceId - идентификатор средства платежа 
-	 * @param resourceFolderId - идентификатор группы средств платежа
-	 * @param liability - обязательство
-	 * @param versionId - идентификатор версии планирования
-	 * @param execDate - дата исполнения
-	 * @param sumCur - сумма исполнения
+	 * РСЃРїРѕР»РЅРёС‚СЊ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ
+	 * @param resourceId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р° 
+	 * @param resourceFolderId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РіСЂСѓРїРїС‹ СЃСЂРµРґСЃС‚РІ РїР»Р°С‚РµР¶Р°
+	 * @param liability - РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ
+	 * @param versionId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param execDate - РґР°С‚Р° РёСЃРїРѕР»РЅРµРЅРёСЏ
+	 * @param sumCur - СЃСѓРјРјР° РёСЃРїРѕР»РЅРµРЅРёСЏ
 	 */
 	void executeLiability(Integer resourceId, Integer resourceFolderId, Liability liability, Integer versionId, Date execDate, BigDecimal sumCur);
 
 	/**
-	 * Переместить средства
-	 * @param transferParams - параметры перемещения средств
-	 * @param versionId - идентификатор версии планирования
+	 * РџРµСЂРµРјРµСЃС‚РёС‚СЊ СЃСЂРµРґСЃС‚РІР°
+	 * @param transferParams - РїР°СЂР°РјРµС‚СЂС‹ РїРµСЂРµРјРµС‰РµРЅРёСЏ СЃСЂРµРґСЃС‚РІ
+	 * @param versionId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
 	 */
 	void transferResourses(TransferParams transferParams, Integer versionId);
 	
 	/**
-	 * Сформировать документы
-	 * @param executionIds - список идентификаторов исполнений
-	 * @param date - дата, на которую формируются документы
-	 * @return отчет о результах формирования
+	 * РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ РґРѕРєСѓРјРµРЅС‚С‹
+	 * @param executionIds - СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ РёСЃРїРѕР»РЅРµРЅРёР№
+	 * @param date - РґР°С‚Р°, РЅР° РєРѕС‚РѕСЂСѓСЋ С„РѕСЂРјРёСЂСѓСЋС‚СЃСЏ РґРѕРєСѓРјРµРЅС‚С‹
+	 * @return РѕС‚С‡РµС‚ Рѕ СЂРµР·СѓР»СЊС‚Р°С… С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ
 	 */
 	String createDocuments(Serializable[] executionIds, Date date);
 
 	/**
-	 * Утвердить/снять утверждение
-	 * @param executionIds - список идентификаторов исполнений
-	 * @param isApproved - признак утверждения
+	 * РЈС‚РІРµСЂРґРёС‚СЊ/СЃРЅСЏС‚СЊ СѓС‚РІРµСЂР¶РґРµРЅРёРµ
+	 * @param executionIds - СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ РёСЃРїРѕР»РЅРµРЅРёР№
+	 * @param isApproved - РїСЂРёР·РЅР°Рє СѓС‚РІРµСЂР¶РґРµРЅРёСЏ
 	 */
 	void setApproved(Serializable[] executionIds, boolean isApproved);
 	
 	/**
-	 * Показать созданный документ
-	 * @param executionId - идентификатор исполнения
+	 * РџРѕРєР°Р·Р°С‚СЊ СЃРѕР·РґР°РЅРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚
+	 * @param executionId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РёСЃРїРѕР»РЅРµРЅРёСЏ
 	 */
 	void showCreatedDocument(Integer executionId);
 	
 	/**
-	 * Удалить созданный документ
-	 * @param executionIds - список идентификаторов исполнений
+	 * РЈРґР°Р»РёС‚СЊ СЃРѕР·РґР°РЅРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚
+	 * @param executionIds - СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ РёСЃРїРѕР»РЅРµРЅРёР№
 	 */
 	void deleteCreatedDocument(Serializable[] executionIds);
 	
 	/**
-	 * Проверка возможности осуществления операции изменение/удаление над сущностью "исполнение обязательства"
-	 * @param entity - объект-сущность "исполнение обязательства"
+	 * РџСЂРѕРІРµСЂРєР° РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РѕСЃСѓС‰РµСЃС‚РІР»РµРЅРёСЏ РѕРїРµСЂР°С†РёРё РёР·РјРµРЅРµРЅРёРµ/СѓРґР°Р»РµРЅРёРµ РЅР°Рґ СЃСѓС‰РЅРѕСЃС‚СЊСЋ "РёСЃРїРѕР»РЅРµРЅРёРµ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°"
+	 * @param entity - РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ "РёСЃРїРѕР»РЅРµРЅРёРµ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°"
 	 */
 	void checkForOperationPossibility(Execution entity);
 	
 	/**
-	 * Проверить статус версии планирования
-	 * @param versionId - идентификатор версии планирования 
-	 * @param execDate - дата
+	 * РџСЂРѕРІРµСЂРёС‚СЊ СЃС‚Р°С‚СѓСЃ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param versionId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ 
+	 * @param execDate - РґР°С‚Р°
 	 */
 	void checkVersionStatus(Integer versionId, Date execDate);
 

@@ -25,7 +25,7 @@ import com.mg.merp.reference.FamilyRelationServiceLocal;
 import com.mg.merp.reference.model.FamilyRelation;
 
 /**
- * Бизнес-компонент "Степени родства" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎС‚РµРїРµРЅРё СЂРѕРґСЃС‚РІР°" 
  * 
  * @author leonova
  * @version $Id: FamilyRelationServiceBean.java,v 1.4 2006/10/20 05:44:57 leonova Exp $

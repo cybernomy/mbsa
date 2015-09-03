@@ -24,7 +24,7 @@ import com.mg.merp.crm.OfferReasonServiceLocal;
 import com.mg.merp.crm.model.OfferReason;
 
 /**
- * Бизнес-компонент "Причины заключения и потерь предложений" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРёС‡РёРЅС‹ Р·Р°РєР»СЋС‡РµРЅРёСЏ Рё РїРѕС‚РµСЂСЊ РїСЂРµРґР»РѕР¶РµРЅРёР№" 
  * 
  * @author leonova
  * @version $Id: OfferReasonServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

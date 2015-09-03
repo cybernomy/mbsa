@@ -17,7 +17,7 @@ package com.mg.merp.account.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы поддержки спецификации 
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёРё 
  * 
  * @author leonova
  * @version $Id: InternalActSpecMt.java,v 1.3 2006/08/22 06:55:55 leonova Exp $

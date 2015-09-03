@@ -18,7 +18,7 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 import com.mg.merp.reference.support.ui.UniversalContractorSearchHelp;
 
 /**
- * Поиск контрагента для поля документа "Через кого"
+ * РџРѕРёСЃРє РєРѕРЅС‚СЂР°РіРµРЅС‚Р° РґР»СЏ РїРѕР»СЏ РґРѕРєСѓРјРµРЅС‚Р° "Р§РµСЂРµР· РєРѕРіРѕ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ThroughContractorSearchHelp.java,v 1.3 2007/11/16 07:59:01 sharapov Exp $

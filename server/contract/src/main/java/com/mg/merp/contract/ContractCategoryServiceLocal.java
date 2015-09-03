@@ -18,7 +18,7 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.contract.model.ContractCategory;
 
 /**
- * Сервис бизнес-компонента "Категория договора"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР°С‚РµРіРѕСЂРёСЏ РґРѕРіРѕРІРѕСЂР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ContractCategoryServiceLocal.java,v 1.1 2007/09/17 12:14:48 alikaev Exp $
@@ -26,7 +26,7 @@ import com.mg.merp.contract.model.ContractCategory;
 public interface ContractCategoryServiceLocal extends DataBusinessObjectService<ContractCategory, Integer> {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/contract/ContractCategory";
 

@@ -31,7 +31,7 @@ import com.mg.merp.docflow.support.DocFlowHelper;
 import com.mg.merp.document.model.DocType;
 
 /**
- * Форма браузера бизнес-компонента "Тип документа"
+ * Р¤РѕСЂРјР° Р±СЂР°СѓР·РµСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РўРёРї РґРѕРєСѓРјРµРЅС‚Р°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocTypeBr.java,v 1.4 2007/11/20 14:54:16 sharapov Exp $
@@ -42,7 +42,7 @@ public class DocTypeBr extends DefaultPlainBrowseForm {
 	private List<Object> paramsValue = new ArrayList<Object>();
 	
 	/**
-	 * коструктор
+	 * РєРѕСЃС‚СЂСѓРєС‚РѕСЂ
 	 */
 	public DocTypeBr() {
 		super();
@@ -88,7 +88,7 @@ public class DocTypeBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * обработчик кнопки показа карты ДО
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РїРѕРєР°Р·Р° РєР°СЂС‚С‹ Р”Рћ
 	 * 
 	 * @param event
 	 */
@@ -120,8 +120,8 @@ public class DocTypeBr extends DefaultPlainBrowseForm {
 	}
 	
 	/**
-	 * Обработчик события "Настройки прав доступа на типы документов"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РќР°СЃС‚СЂРѕР№РєРё РїСЂР°РІ РґРѕСЃС‚СѓРїР° РЅР° С‚РёРїС‹ РґРѕРєСѓРјРµРЅС‚РѕРІ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionSetupDocTypePermissions(WidgetEvent event) {
 		Serializable[] keys = ((MaintenanceTableModel) table.getModel()).getSelectedPrimaryKeys();

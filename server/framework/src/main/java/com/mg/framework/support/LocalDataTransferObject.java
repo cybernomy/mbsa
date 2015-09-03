@@ -17,7 +17,7 @@ package com.mg.framework.support;
 import java.util.HashMap;
 
 /**
- * Реализация карты наименований свойств объекта и значений
+ * Р РµР°Р»РёР·Р°С†РёСЏ РєР°СЂС‚С‹ РЅР°РёРјРµРЅРѕРІР°РЅРёР№ СЃРІРѕР№СЃС‚РІ РѕР±СЉРµРєС‚Р° Рё Р·РЅР°С‡РµРЅРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: LocalDataTransferObject.java,v 1.3 2006/09/28 12:45:55 safonov Exp $

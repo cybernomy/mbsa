@@ -22,7 +22,7 @@ import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.retail.support.Messages;
 
 /**
- * Модель таблицы "Выбор покупателя"
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ "Р’С‹Р±РѕСЂ РїРѕРєСѓРїР°С‚РµР»СЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: CustomerSelectTableModel.java,v 1.1 2007/10/05 07:35:57 sharapov Exp $

@@ -48,7 +48,7 @@ import com.mg.merp.wb.core.ui.widgets.MemoryFilter;
 
 
 /**
- * Диалог выбора бизнес компонентов системы MBSA
+ * Р”РёР°Р»РѕРі РІС‹Р±РѕСЂР° Р±РёР·РЅРµСЃ РєРѕРјРїРѕРЅРµРЅС‚РѕРІ СЃРёСЃС‚РµРјС‹ MBSA
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: BeanSelectionDialog.java,v 1.4 2007/07/11 05:57:03 poroxnenko Exp $ 
@@ -105,8 +105,8 @@ public class BeanSelectionDialog extends SelectionDialog {
 		}
 
 		private void checkChild(DefaultMutableTreeNode node, boolean checked) {
-			/*корневой узел в PatternFilter не обязательно. т.к. если включены дети. то родитель 
-			 * автоматически включается в условия отбора*/
+			/*РєРѕСЂРЅРµРІРѕР№ СѓР·РµР» РІ PatternFilter РЅРµ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ. С‚.Рє. РµСЃР»Рё РІРєР»СЋС‡РµРЅС‹ РґРµС‚Рё. С‚Рѕ СЂРѕРґРёС‚РµР»СЊ 
+			 * Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РІРєР»СЋС‡Р°РµС‚СЃСЏ РІ СѓСЃР»РѕРІРёСЏ РѕС‚Р±РѕСЂР°*/
 			for(int i = 0; i<node.getChildCount();i++){
 				List<Object> chkd = new LinkedList<Object>();
 				try{
@@ -114,8 +114,8 @@ public class BeanSelectionDialog extends SelectionDialog {
 				}catch(Exception ex){};
 				
 				DefaultMutableTreeNode child = (DefaultMutableTreeNode)node.getChildAt(i);
-				/*двойная проверка условия, похоже ещё один баг в 
-				 * CheckboxTreeViewer. Элемент наприсован, но считается невидимым*/
+				/*РґРІРѕР№РЅР°СЏ РїСЂРѕРІРµСЂРєР° СѓСЃР»РѕРІРёСЏ, РїРѕС…РѕР¶Рµ РµС‰С‘ РѕРґРёРЅ Р±Р°Рі РІ 
+				 * CheckboxTreeViewer. Р­Р»РµРјРµРЅС‚ РЅР°РїСЂРёСЃРѕРІР°РЅ, РЅРѕ СЃС‡РёС‚Р°РµС‚СЃСЏ РЅРµРІРёРґРёРјС‹Рј*/
 				if (memoryFilter.getPatternFilter().isElementVisible(treeViewer, child)
 					|| chkd.contains(child)){
 					treeViewer.setChecked(child, checked);
@@ -178,7 +178,7 @@ public class BeanSelectionDialog extends SelectionDialog {
 					}
 				}
 			}
-			/*обнуляем, т.к. только при первой загрузке нужно установить выделение*/
+			/*РѕР±РЅСѓР»СЏРµРј, С‚.Рє. С‚РѕР»СЊРєРѕ РїСЂРё РїРµСЂРІРѕР№ Р·Р°РіСЂСѓР·РєРµ РЅСѓР¶РЅРѕ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РІС‹РґРµР»РµРЅРёРµ*/
 			preChecked = new LinkedList<String>();
 			return result;
 		}
@@ -282,12 +282,12 @@ public class BeanSelectionDialog extends SelectionDialog {
 			}
 
 			public void widgetSelected(SelectionEvent e) {
-				/*Похоже баг в CheckboxTreeViewer: после обновления treeViewer узлы. выделенные не кликом,
-				 * а методом setChecked(..) остаётся выделенным только корень.
-				 * Поэтому запоминаем те, что выделены сейчас*/
+				/*РџРѕС…РѕР¶Рµ Р±Р°Рі РІ CheckboxTreeViewer: РїРѕСЃР»Рµ РѕР±РЅРѕРІР»РµРЅРёСЏ treeViewer СѓР·Р»С‹. РІС‹РґРµР»РµРЅРЅС‹Рµ РЅРµ РєР»РёРєРѕРј,
+				 * Р° РјРµС‚РѕРґРѕРј setChecked(..) РѕСЃС‚Р°С‘С‚СЃСЏ РІС‹РґРµР»РµРЅРЅС‹Рј С‚РѕР»СЊРєРѕ РєРѕСЂРµРЅСЊ.
+				 * РџРѕСЌС‚РѕРјСѓ Р·Р°РїРѕРјРёРЅР°РµРј С‚Рµ, С‡С‚Рѕ РІС‹РґРµР»РµРЅС‹ СЃРµР№С‡Р°СЃ*/
 				Object[] ch = treeViewer.getCheckedElements();
 				treeViewer.refresh();
-				/*устанавливаем обратно*/
+				/*СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РѕР±СЂР°С‚РЅРѕ*/
 				treeViewer.setCheckedElements(ch);
 			}
 			

@@ -29,7 +29,7 @@ import com.mg.merp.reference.BankAccountServiceLocal;
 import com.mg.merp.reference.model.BankAccount;
 
 /**
- * Бизнес-компонент "Банковские счета" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р‘Р°РЅРєРѕРІСЃРєРёРµ СЃС‡РµС‚Р°" 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

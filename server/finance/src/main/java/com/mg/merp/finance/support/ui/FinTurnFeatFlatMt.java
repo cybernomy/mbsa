@@ -19,7 +19,7 @@ import com.mg.framework.api.ui.WidgetEvent;
 import com.mg.merp.finance.model.Account;
 
 /**
- * Контроллер формы поддержки "Остататки и обороты по признакам"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РћСЃС‚Р°С‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ РїСЂРёР·РЅР°РєР°Рј"
  * 
  * @author Artem V. Sharapov
  * @version $Id: FinTurnFeatFlatMt.java,v 1.1 2009/02/16 07:46:40 sharapov Exp $

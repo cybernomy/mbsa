@@ -36,7 +36,7 @@ import com.mg.merp.reference.support.ReferenceUtils;
 import com.mg.merp.settlement.model.ContractorCard;
 
 /**
- * Контроллер браузера "Картотеки расчетов с партнерами"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "РљР°СЂС‚РѕС‚РµРєРё СЂР°СЃС‡РµС‚РѕРІ СЃ РїР°СЂС‚РЅРµСЂР°РјРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov

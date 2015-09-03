@@ -16,7 +16,7 @@ package com.mg.merp.mfreference.support.ui;
 
 
 /**
- * Поисковик "Образцов актов по обратному списанию рабочей силы"
+ * РџРѕРёСЃРєРѕРІРёРє "РћР±СЂР°Р·С†РѕРІ Р°РєС‚РѕРІ РїРѕ РѕР±СЂР°С‚РЅРѕРјСѓ СЃРїРёСЃР°РЅРёСЋ СЂР°Р±РѕС‡РµР№ СЃРёР»С‹"
  * 
  * @author Artem V. Sharapov
  * @version $Id: InputLaborModelSearchHelp.java,v 1.2 2007/01/13 15:44:06 sharapov Exp $
@@ -29,7 +29,7 @@ public class InputLaborModelSearchHelp extends ModelSearchHelp {
 	@Override
 	protected short getDocSectionPrimaryKey() {
 		/**
-		 * docsection для актов на списание времени, отработанного РС в НЗП
+		 * docsection РґР»СЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ Р РЎ РІ РќР—Рџ
 		 */
 		return 12003;
 		//return InputLaborHeadServiceLocal.DOCSECTION;

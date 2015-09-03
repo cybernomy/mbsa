@@ -24,7 +24,7 @@ import com.mg.merp.warehouse.model.OrderDueDateKind;
 import com.mg.merp.warehouse.model.OrderHeadModel;
 
 /**
- * Бизнес-компонент "Образцы заказов покупателей" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ Р·Р°РєР°Р·РѕРІ РїРѕРєСѓРїР°С‚РµР»РµР№" 
  * 
  * @author leonova
  * @version $Id: OrderHeadModelCusServiceBean.java,v 1.5 2007/08/15 08:57:25 safonov Exp $

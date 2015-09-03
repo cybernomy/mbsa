@@ -31,7 +31,7 @@ import com.mg.merp.mfreference.model.WeekCalendar;
 import com.mg.merp.mfreference.model.WeekCalendarChange;
 
 /**
- * Браузер недельного календаря
+ * Р‘СЂР°СѓР·РµСЂ РЅРµРґРµР»СЊРЅРѕРіРѕ РєР°Р»РµРЅРґР°СЂСЏ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: WeekCalendarBr.java,v 1.4 2006/10/07 07:56:30 leonova Exp $

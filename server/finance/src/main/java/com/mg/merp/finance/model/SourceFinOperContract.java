@@ -28,55 +28,55 @@ public enum SourceFinOperContract {
 	NONE,
 	
 	/**
-	 * Поставщик
+	 * РџРѕСЃС‚Р°РІС‰РёРє
 	 */
 	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinOperModel.Source.Provider")
 	PROVIDER,
 	
 	/**
-	 * Покупатель
+	 * РџРѕРєСѓРїР°С‚РµР»СЊ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinOperModel.Source.Customer")
 	CUSTOMER,
 	
 	/**
-	 * Грузоотправитель
+	 * Р“СЂСѓР·РѕРѕС‚РїСЂР°РІРёС‚РµР»СЊ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinOperModel.Source.Shipper")
 	SHIPPER,
 	
 	/**
-	 * Грузополучатель
+	 * Р“СЂСѓР·РѕРїРѕР»СѓС‡Р°С‚РµР»СЊ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinOperModel.Source.Consignee")
 	CONSIDNEE,
 	
 	/**
-	 * Склад источник
+	 * РЎРєР»Р°Рґ РёСЃС‚РѕС‡РЅРёРє
 	 */
 	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinOperModel.Source.StockSrc")
 	STOCKSRC,
 	
 	/**
-	 * Склад приемник
+	 * РЎРєР»Р°Рґ РїСЂРёРµРјРЅРёРє
 	 */
 	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinOperModel.Source.StockDest")
 	STOCKDEST,
 	
 	/**
-	 * МОЛ источник
+	 * РњРћР› РёСЃС‚РѕС‡РЅРёРє
 	 */
 	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinOperModel.Source.MOLSrc")
 	MOLSRC,
 	
 	/**
-	 * МОЛ приемник
+	 * РњРћР› РїСЂРёРµРјРЅРёРє
 	 */
 	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinOperModel.Source.MOLDest")
 	MOLDEST,
 	
 	/**
-	 * Через кого
+	 * Р§РµСЂРµР· РєРѕРіРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinOperModel.Source.Through")
 	THROUGH

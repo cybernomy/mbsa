@@ -23,7 +23,7 @@ import com.mg.merp.manufacture.InputMaterialModelServiceLocal;
 import com.mg.merp.manufacture.model.InputDocumentModel;
 
 /**
- * Бизнес-компонент "Образцы актов на списание материалов в НЗП" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РјР°С‚РµСЂРёР°Р»РѕРІ РІ РќР—Рџ" 
  * 
  * @author leonova
  * @version $Id: InputMaterialModelServiceBean.java,v 1.3 2006/09/12 11:08:13 leonova Exp $

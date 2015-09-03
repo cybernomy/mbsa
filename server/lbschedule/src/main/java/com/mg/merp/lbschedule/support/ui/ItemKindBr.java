@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.lbschedule.model.ItemKind;
 
 /**
- * Браузер типов пунктов ГИО
+ * Р‘СЂР°СѓР·РµСЂ С‚РёРїРѕРІ РїСѓРЅРєС‚РѕРІ Р“РРћ
  * 
  * @author leonova
  * @version $Id: ItemKindBr.java,v 1.1 2006/09/15 04:29:47 leonova Exp $ 

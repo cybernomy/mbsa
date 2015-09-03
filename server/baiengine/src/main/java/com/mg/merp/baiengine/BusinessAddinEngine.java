@@ -20,54 +20,54 @@ import com.mg.framework.api.BusinessException;
 import com.mg.framework.api.orm.PersistentObject;
 
 /**
- * Сервис машины BAi (Business Add-in) бизнес расширений системы
+ * РЎРµСЂРІРёСЃ РјР°С€РёРЅС‹ BAi (Business Add-in) Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёР№ СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: BusinessAddinEngine.java,v 1.4 2007/11/15 13:13:09 safonov Exp $
  */
 public interface BusinessAddinEngine {
 	/**
-	 * имя JMX сервиса
+	 * РёРјСЏ JMX СЃРµСЂРІРёСЃР°
 	 */
 	String SERVICE_NAME = "merp:baiengine=BusinessAddinEngineService";
 	
 	/**
-	 * выполнить бизнес расширение системы
+	 * РІС‹РїРѕР»РЅРёС‚СЊ Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёРµ СЃРёСЃС‚РµРјС‹
 	 * 
-	 * @param <T>			тип результата
-	 * @param code			код реализации в репозитарии BAi
-	 * @param params		параметры передаваемые реализации BAi 
-	 * @param listener		слушатели результата выполнения BAi
-	 * @throws BusinessException	при возникновении прикладных ИС, как правило используется для сообщений
+	 * @param <T>			С‚РёРї СЂРµР·СѓР»СЊС‚Р°С‚Р°
+	 * @param code			РєРѕРґ СЂРµР°Р»РёР·Р°С†РёРё РІ СЂРµРїРѕР·РёС‚Р°СЂРёРё BAi
+	 * @param params		РїР°СЂР°РјРµС‚СЂС‹ РїРµСЂРµРґР°РІР°РµРјС‹Рµ СЂРµР°Р»РёР·Р°С†РёРё BAi 
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»Рё СЂРµР·СѓР»СЊС‚Р°С‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ BAi
+	 * @throws BusinessException	РїСЂРё РІРѕР·РЅРёРєРЅРѕРІРµРЅРёРё РїСЂРёРєР»Р°РґРЅС‹С… РРЎ, РєР°Рє РїСЂР°РІРёР»Рѕ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ СЃРѕРѕР±С‰РµРЅРёР№
 	 */
 	<T> void perform(String code, Map<String, ? extends Object> params, BusinessAddinListener<T> listener) throws BusinessException;
 	
 	/**
-	 * выполнить бизнес расширение системы
+	 * РІС‹РїРѕР»РЅРёС‚СЊ Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёРµ СЃРёСЃС‚РµРјС‹
 	 * 
-	 * @param <T>			тип результата
-	 * @param repository	репозитарии BAi
-	 * @param params		параметры передаваемые реализации BAi
-	 * @param listener		слушатели результата выполнения BAi
-	 * @throws BusinessException	при возникновении прикладных ИС, как правило используется для сообщений
+	 * @param <T>			С‚РёРї СЂРµР·СѓР»СЊС‚Р°С‚Р°
+	 * @param repository	СЂРµРїРѕР·РёС‚Р°СЂРёРё BAi
+	 * @param params		РїР°СЂР°РјРµС‚СЂС‹ РїРµСЂРµРґР°РІР°РµРјС‹Рµ СЂРµР°Р»РёР·Р°С†РёРё BAi
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»Рё СЂРµР·СѓР»СЊС‚Р°С‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ BAi
+	 * @throws BusinessException	РїСЂРё РІРѕР·РЅРёРєРЅРѕРІРµРЅРёРё РїСЂРёРєР»Р°РґРЅС‹С… РРЎ, РєР°Рє РїСЂР°РІРёР»Рѕ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ СЃРѕРѕР±С‰РµРЅРёР№
 	 */
 	<T> void perform(PersistentObject repository, Map<String, ? extends Object> params, BusinessAddinListener<T> listener) throws BusinessException;
 
 	/**
-	 * создать бизнес расширение системы
+	 * СЃРѕР·РґР°С‚СЊ Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёРµ СЃРёСЃС‚РµРјС‹
 	 * 
-	 * @param <T>		тип результата
-	 * @param code		код реализации в репозитарии BAi
-	 * @return			бизнес расширение системы
+	 * @param <T>		С‚РёРї СЂРµР·СѓР»СЊС‚Р°С‚Р°
+	 * @param code		РєРѕРґ СЂРµР°Р»РёР·Р°С†РёРё РІ СЂРµРїРѕР·РёС‚Р°СЂРёРё BAi
+	 * @return			Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёРµ СЃРёСЃС‚РµРјС‹
 	 */
 	<T> BusinessAddin<T> createBusinessAddin(String code);
 	
 	/**
-	 * создать бизнес расширение системы
+	 * СЃРѕР·РґР°С‚СЊ Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёРµ СЃРёСЃС‚РµРјС‹
 	 * 
-	 * @param <T>			тип результата
-	 * @param repository	репозитарии BAi
-	 * @return				бизнес расширение системы
+	 * @param <T>			С‚РёРї СЂРµР·СѓР»СЊС‚Р°С‚Р°
+	 * @param repository	СЂРµРїРѕР·РёС‚Р°СЂРёРё BAi
+	 * @return				Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёРµ СЃРёСЃС‚РµРјС‹
 	 */
 	<T> BusinessAddin<T> createBusinessAddin(PersistentObject repository);
 

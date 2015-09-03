@@ -16,18 +16,18 @@ package com.mg.framework.api.ui.dnd;
 
 
 /**
- * Вид данных операции DnD
+ * Р’РёРґ РґР°РЅРЅС‹С… РѕРїРµСЂР°С†РёРё DnD
  * 
  * @author Oleg V. Safonov
  * @version $Id: DataFlavor.java,v 1.1 2007/08/16 13:48:06 safonov Exp $
  */
 public enum DataFlavor {
 	/**
-	 * перетаскиваемые данные
+	 * РїРµСЂРµС‚Р°СЃРєРёРІР°РµРјС‹Рµ РґР°РЅРЅС‹Рµ
 	 */
 	DRAG_FLAVOR,
 	/**
-	 * данные при отпускании
+	 * РґР°РЅРЅС‹Рµ РїСЂРё РѕС‚РїСѓСЃРєР°РЅРёРё
 	 */
 	DROP_FLAVOR
 }

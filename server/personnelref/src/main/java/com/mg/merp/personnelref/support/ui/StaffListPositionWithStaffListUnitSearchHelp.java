@@ -26,7 +26,7 @@ import com.mg.merp.personnelref.StaffListPositionServiceLocal;
 import com.mg.merp.personnelref.model.StaffListPosition;
 
 /**
- * Поисковик сущностей "Должности в штатном расписании"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "Р”РѕР»Р¶РЅРѕСЃС‚Рё РІ С€С‚Р°С‚РЅРѕРј СЂР°СЃРїРёСЃР°РЅРёРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: StaffListPositionWithStaffListUnitSearchHelp.java,v 1.1 2007/07/10 07:34:05 sharapov Exp $
@@ -49,7 +49,7 @@ public class StaffListPositionWithStaffListUnitSearchHelp extends AbstractSearch
 	}
 	
 	/**
-	 * Получить идентификатор текущего штатного расписания
+	 * РџРѕР»СѓС‡РёС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµРєСѓС‰РµРіРѕ С€С‚Р°С‚РЅРѕРіРѕ СЂР°СЃРїРёСЃР°РЅРёСЏ
 	 */
 	private Integer getCurrentStaffListId() {
 		return ((CalcPeriodServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CalcPeriodServiceLocal.LOCAL_SERVICE_NAME)).getCurrentCalcPeriod().getStaffList().getId();

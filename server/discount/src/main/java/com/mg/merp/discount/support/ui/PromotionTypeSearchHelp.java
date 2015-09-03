@@ -23,7 +23,7 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.merp.discount.PromotionTypeServiceLocal;
 
 /**
- * Поиcковик сущностей "Тип рекламного мероприятия"
+ * РџРѕРёcРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РўРёРї СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PromotionTypeSearchHelp.java,v 1.1 2007/10/30 14:15:02 sharapov Exp $

@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.FamilyDeductionsServiceLocal;
 import com.mg.merp.personnelref.model.FamilyDeductions;
 
 /**
- * Реализация бизнес-компонента "Вычеты на членов семьи" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’С‹С‡РµС‚С‹ РЅР° С‡Р»РµРЅРѕРІ СЃРµРјСЊРё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

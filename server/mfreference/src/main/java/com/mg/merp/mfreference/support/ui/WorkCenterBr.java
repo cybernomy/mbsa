@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.mfreference.model.WorkCenter;
 
 /**
- * Браузер рабочих центров
+ * Р‘СЂР°СѓР·РµСЂ СЂР°Р±РѕС‡РёС… С†РµРЅС‚СЂРѕРІ
  * 
  * @author leonova
  * @version $Id: WorkCenterBr.java,v 1.2 2007/07/30 10:59:52 safonov Exp $ 

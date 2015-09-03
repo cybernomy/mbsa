@@ -19,7 +19,7 @@ import com.mg.merp.finance.model.FinOperation;
 import com.mg.merp.finance.model.OperationModel;
 
 /**
- * Сервис бизнес-компонента "Финансовые операции"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р¤РёРЅР°РЅСЃРѕРІС‹Рµ РѕРїРµСЂР°С†РёРё"
  * 
  * @author Artem V. Sharapov
  * @version $ID$
@@ -27,15 +27,15 @@ import com.mg.merp.finance.model.OperationModel;
 public interface OperationServiceLocal
 extends com.mg.framework.api.DataBusinessObjectService<FinOperation, Integer>  {
 	/**
-	 * тип папки для финансовых операций
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ С„РёРЅР°РЅСЃРѕРІС‹С… РѕРїРµСЂР°С†РёР№
 	 */
 	final static short FOLDER_PART = 40;
 
 	/**
-	 * Создание финансовой операции по образцу
-	 * @param pattern - образец
-	 * @param folder - папка назначения
-	 * @return финансовая операция
+	 * РЎРѕР·РґР°РЅРёРµ С„РёРЅР°РЅСЃРѕРІРѕР№ РѕРїРµСЂР°С†РёРё РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param pattern - РѕР±СЂР°Р·РµС†
+	 * @param folder - РїР°РїРєР° РЅР°Р·РЅР°С‡РµРЅРёСЏ
+	 * @return С„РёРЅР°РЅСЃРѕРІР°СЏ РѕРїРµСЂР°С†РёСЏ
 	 */
 	FinOperation createByPattern(OperationModel pattern, Folder folder);
 	

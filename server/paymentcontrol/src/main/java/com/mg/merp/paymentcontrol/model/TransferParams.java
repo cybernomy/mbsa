@@ -20,7 +20,7 @@ import java.util.Date;
 import com.mg.merp.core.model.Folder;
 
 /**
- * Модель данных для "Внутреннего перемещения средств"
+ * РњРѕРґРµР»СЊ РґР°РЅРЅС‹С… РґР»СЏ "Р’РЅСѓС‚СЂРµРЅРЅРµРіРѕ РїРµСЂРµРјРµС‰РµРЅРёСЏ СЃСЂРµРґСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: TransferParams.java,v 1.1 2007/05/14 05:12:10 sharapov Exp $

@@ -18,7 +18,7 @@ import com.mg.merp.document.generic.ui.DocumentModelMaintenanceForm;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы поддержки "Образцов расходных ордеров"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РћР±СЂР°Р·С†РѕРІ СЂР°СЃС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ"
  * 
  * @author leonova
  * @version $Id: WarehouseDocumentModelOutMt.java,v 1.2 2007/05/22 05:34:25 sharapov Exp $

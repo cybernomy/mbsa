@@ -21,7 +21,7 @@ import com.mg.merp.document.Configuration;
 import com.mg.merp.document.support.ConfigurationImpl;
 
 /**
- * Класс помощник конфигурации модуля "Бухгалтерия"
+ * РљР»Р°СЃСЃ РїРѕРјРѕС‰РЅРёРє РєРѕРЅС„РёРіСѓСЂР°С†РёРё РјРѕРґСѓР»СЏ "Р‘СѓС…РіР°Р»С‚РµСЂРёСЏ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ConfigurationHelper.java,v 1.1 2007/03/23 16:11:41 safonov Exp $
@@ -29,16 +29,16 @@ import com.mg.merp.document.support.ConfigurationImpl;
 public class ConfigurationHelper {
 
 	/**
-	 * получить конфигурацию модуля
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ РјРѕРґСѓР»СЏ
 	 * 
-	 * @return	конфигурация
+	 * @return	РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ
 	 */
 	public static AccConfig getConfiguration() {
 		return ServerUtils.getPersistentManager().find(AccConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
 	}
 
 	/**
-	 * получить конфигурацию документов данного модуля
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ РґРѕРєСѓРјРµРЅС‚РѕРІ РґР°РЅРЅРѕРіРѕ РјРѕРґСѓР»СЏ
 	 * 
 	 * @return
 	 */

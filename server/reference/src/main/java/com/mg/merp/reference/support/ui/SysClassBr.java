@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.core.model.SysClass;
 
 /**
- * Браузер бизнес - компонентов
+ * Р‘СЂР°СѓР·РµСЂ Р±РёР·РЅРµСЃ - РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: SysClassBr.java,v 1.2 2007/01/17 14:48:41 safonov Exp $ 

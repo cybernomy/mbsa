@@ -23,7 +23,7 @@ import com.mg.merp.document.support.DocumentUtils;
 import com.mg.merp.paymentcontrol.model.Liability;
 
 /**
- * Контроллер формы поддержки бизнес-компонента
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: LiabilityMt.java,v 1.1 2008/04/01 05:24:40 alikaev Exp $
@@ -31,24 +31,24 @@ import com.mg.merp.paymentcontrol.model.Liability;
 public class LiabilityMt extends DefaultMaintenanceForm {
 	
 	/**
-	 * Обработчик просмотра документа-основания
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewBaseDocument(WidgetEvent event) {
 		DocumentUtils.viewDocument(((Liability) getEntity()).getBaseDoc());
 	}
 	
 	/**
-	 * Обработчик просмотра документа
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewConfirmDocument(WidgetEvent event) {
 		DocumentUtils.viewDocument(((Liability) getEntity()).getDocHead());
 	}
 
 	/**
-	 * Обработчик просмотра/выбора контракта
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР°/РІС‹Р±РѕСЂР° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewOrChooseContract(WidgetEvent event) {
 		final Liability liability = (Liability) getEntity();

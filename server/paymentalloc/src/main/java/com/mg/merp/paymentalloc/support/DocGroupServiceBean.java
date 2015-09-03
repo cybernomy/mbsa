@@ -30,7 +30,7 @@ import com.mg.merp.paymentalloc.model.DocGroup;
 import com.mg.merp.paymentalloc.model.DocGroupLink;
 
 /**
- * Реализация бизнес-компонента "Группы документов" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р“СЂСѓРїРїС‹ РґРѕРєСѓРјРµРЅС‚РѕРІ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

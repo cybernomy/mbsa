@@ -28,7 +28,7 @@ import com.mg.merp.account.support.Messages;
 import com.mg.merp.document.model.DocType;
 
 /**
- * Контроллер ввода параметров для операции переоценка/дооценка с инвентарными карточками
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РІРІРѕРґР° РїР°СЂР°РјРµС‚СЂРѕРІ РґР»СЏ РѕРїРµСЂР°С†РёРё РїРµСЂРµРѕС†РµРЅРєР°/РґРѕРѕС†РµРЅРєР° СЃ РёРЅРІРµРЅС‚Р°СЂРЅС‹РјРё РєР°СЂС‚РѕС‡РєР°РјРё
  *  
  * @author Konstantin S. Alikaev
  * @version $Id: AccRevaluateDlg.java,v 1.1 2008/04/29 05:29:04 alikaev Exp $
@@ -37,19 +37,19 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 
 	private enum Kind {
 		/**
-		 * Коэффициент
+		 * РљРѕСЌС„С„РёС†РёРµРЅС‚
 		 */
 		@EnumConstantText("resource://com.mg.merp.account.resources.dataitemlabels#AccRevaluateDlg.Kind.Factor")
 		FACTOR,
 		
 		/**
-		 * До суммы
+		 * Р”Рѕ СЃСѓРјРјС‹
 		 */
 		@EnumConstantText("resource://com.mg.merp.account.resources.dataitemlabels#AccRevaluateDlg.Kind.Amount")
 		AMOUNT, 
 		
 		/**
-		 * На сумму
+		 * РќР° СЃСѓРјРјСѓ
 		 */
 		@EnumConstantText("resource://com.mg.merp.account.resources.dataitemlabels#AccRevaluateDlg.Kind.Delta")
 		DELTA
@@ -96,7 +96,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Дата учета
+	 * Р”Р°С‚Р° СѓС‡РµС‚Р°
 	 * @return revalDate
 	 */
 	public Date getRevalDate() {
@@ -104,7 +104,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Значение по признаку
+	 * Р—РЅР°С‡РµРЅРёРµ РїРѕ РїСЂРёР·РЅР°РєСѓ
 	 * 
 	 * @return value
 	 */
@@ -113,7 +113,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Тип документа
+	 * РўРёРї РґРѕРєСѓРјРµРЅС‚Р°
 	 * @return docType
 	 */
 	public DocType getDocType() {
@@ -121,7 +121,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Номер документа
+	 * РќРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°
 	 * @return docNumber
 	 */
 	public String getDocNumber() {
@@ -129,7 +129,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Дата документа
+	 * Р”Р°С‚Р° РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
 	 * @return docDate
 	 */
@@ -138,7 +138,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Тип документа-основания
+	 * РўРёРї РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
 	 * @return baseDocType
 	 */
 	public DocType getBaseDocType() {
@@ -146,7 +146,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Номер документа-основания
+	 * РќРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
 	 * @return baseDocNumber
 	 */
 	public String getBaseDocNumber() {
@@ -154,7 +154,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Дата документа-основания
+	 * Р”Р°С‚Р° РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
 	 * @return baseDocDate
 	 */
 	public Date getBaseDocDate() {
@@ -162,7 +162,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Счет
+	 * РЎС‡РµС‚
 	 * @return AccPlan
 	 */
 	public AccPlan getAccPlan() {
@@ -170,7 +170,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Аналитика 1-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° 1-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @return anl1
 	 */
 	public AnlPlan getAnl1() {
@@ -178,7 +178,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Аналитика 2-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° 2-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @return anl2
 	 */
 	public AnlPlan getAnl2() {
@@ -186,7 +186,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Аналитика 3-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° 3-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @return anl3
 	 */
 	public AnlPlan getAnl3() {
@@ -194,7 +194,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Аналитика 4-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° 4-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @return anl4
 	 */
 	public AnlPlan getAnl4() {
@@ -202,7 +202,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Аналитика 5-го уровня
+	 * РђРЅР°Р»РёС‚РёРєР° 5-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @return anl5
 	 */
 	public AnlPlan getAnl5() {
@@ -210,7 +210,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * Признак: 0 - фактор, 1 - до суммы, 2 - на сумму
+	 * РџСЂРёР·РЅР°Рє: 0 - С„Р°РєС‚РѕСЂ, 1 - РґРѕ СЃСѓРјРјС‹, 2 - РЅР° СЃСѓРјРјСѓ
 	 * @return kind
 	 */
 	public Kind getKind() {
@@ -218,7 +218,7 @@ public class AccRevaluateDlg extends DefaultWizardDialog {
 	}
 
 	/**
-	 * @param accRevaluateDlgTitle задаваемое accRevaluateDlgTitle
+	 * @param accRevaluateDlgTitle Р·Р°РґР°РІР°РµРјРѕРµ accRevaluateDlgTitle
 	 */
 	public void setAccRevaluateDlgTitle(String accRevaluateDlgTitle) {
 		this.accRevaluateDlgTitle = accRevaluateDlgTitle;

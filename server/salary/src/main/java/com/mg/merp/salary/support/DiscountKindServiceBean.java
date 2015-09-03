@@ -25,7 +25,7 @@ import com.mg.merp.salary.DiscountKindServiceLocal;
 import com.mg.merp.salary.model.DiscountKind;
 
 /**
- * Реализация бизнес-компонента "Виды скидок и расходов" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РёРґС‹ СЃРєРёРґРѕРє Рё СЂР°СЃС…РѕРґРѕРІ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

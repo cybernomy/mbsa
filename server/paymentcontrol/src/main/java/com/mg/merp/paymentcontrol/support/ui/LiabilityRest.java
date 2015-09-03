@@ -22,7 +22,7 @@ import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер формы условий отбора "Обязательств"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° "РћР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov

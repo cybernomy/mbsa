@@ -25,7 +25,7 @@ import com.mg.merp.reference.model.ZipCode;
 import com.mg.merp.reference.support.CountryServiceBean;
 
 /**
- * Набор тестов для формирования строки адреса 
+ * РќР°Р±РѕСЂ С‚РµСЃС‚РѕРІ РґР»СЏ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ СЃС‚СЂРѕРєРё Р°РґСЂРµСЃР° 
  * 
  * @author Artem V. Sharapov
  * @version $Id: AddressTest.java,v 1.1 2008/09/22 06:00:51 sharapov Exp $

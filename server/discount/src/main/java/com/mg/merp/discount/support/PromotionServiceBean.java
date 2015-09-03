@@ -34,7 +34,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.CatalogFolder;
 
 /**
- * Реализация бизнес-компонента "Рекламное мероприятие"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р РµРєР»Р°РјРЅРѕРµ РјРµСЂРѕРїСЂРёСЏС‚РёРµ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PromotionServiceBean.java,v 1.1 2007/10/30 14:10:57 sharapov Exp $
@@ -71,11 +71,11 @@ public class PromotionServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 	
 	/**
-	 * Получить список действующих рекламных мероприятий по приоритету на дату, для позиции каталога или для папки каталога 
-	 * @param actualDate - на дату
-	 * @param catalog - позиция каталога
-	 * @param catalogFolder - папка каталога 
-	 * @return список действующих рекламных мероприятий по приоритету на дату, по позиции каталога или папке каталога
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РґРµР№СЃС‚РІСѓСЋС‰РёС… СЂРµРєР»Р°РјРЅС‹С… РјРµСЂРѕРїСЂРёСЏС‚РёР№ РїРѕ РїСЂРёРѕСЂРёС‚РµС‚Сѓ РЅР° РґР°С‚Сѓ, РґР»СЏ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР° РёР»Рё РґР»СЏ РїР°РїРєРё РєР°С‚Р°Р»РѕРіР° 
+	 * @param actualDate - РЅР° РґР°С‚Сѓ
+	 * @param catalog - РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР°
+	 * @param catalogFolder - РїР°РїРєР° РєР°С‚Р°Р»РѕРіР° 
+	 * @return СЃРїРёСЃРѕРє РґРµР№СЃС‚РІСѓСЋС‰РёС… СЂРµРєР»Р°РјРЅС‹С… РјРµСЂРѕРїСЂРёСЏС‚РёР№ РїРѕ РїСЂРёРѕСЂРёС‚РµС‚Сѓ РЅР° РґР°С‚Сѓ, РїРѕ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР° РёР»Рё РїР°РїРєРµ РєР°С‚Р°Р»РѕРіР°
 	 */
 	protected List<PromotionLine> doGetPromotions(Date actualDate, Catalog catalog, CatalogFolder catalogFolder) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(PromotionLine.class)

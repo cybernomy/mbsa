@@ -17,7 +17,7 @@ package com.mg.merp.manufacture;
 import com.mg.merp.manufacture.model.InputDocumentHead;
 
 /**
- * Бизнес-компонент "Акт на списание времени, отработанного РС в ЗНП"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РђРєС‚ РЅР° СЃРїРёСЃР°РЅРёРµ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ Р РЎ РІ Р—РќРџ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: InputLaborHeadServiceLocal.java,v 1.4 2007/08/06 12:46:24 safonov Exp $
@@ -26,17 +26,17 @@ public interface InputLaborHeadServiceLocal
    extends com.mg.merp.document.GoodsDocument<InputDocumentHead, Integer, InputLaborModelServiceLocal, InputLaborSpecServiceLocal>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/manufacture/InputLaborHead";
 	
 	/**
-	 * тип папки для актов на списание времени, отработанного РС в НЗП
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ Р РЎ РІ РќР—Рџ
 	 */
 	final static short FOLDER_PART = 12504;
 	
 	/**
-	 * docsection для актов на списание времени, отработанного РС в НЗП
+	 * docsection РґР»СЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ Р РЎ РІ РќР—Рџ
 	 */
 	final static short DOCSECTION = 12003;
 }

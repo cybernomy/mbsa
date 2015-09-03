@@ -36,7 +36,7 @@ import com.mg.merp.reference.model.IdentDocKind;
 import com.mg.merp.salary.model.FeeRef;
 
 /**
- * Контроллер формы условий отбора штатного расписания
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° С€С‚Р°С‚РЅРѕРіРѕ СЂР°СЃРїРёСЃР°РЅРёСЏ
  * 
  * @author leonova
  * @version $Id: PersonalAccountRest.java,v 1.3 2006/10/09 04:44:23 leonova Exp $ 

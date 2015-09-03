@@ -30,7 +30,7 @@ import com.mg.merp.reference.CatalogFolderServiceLocal;
 import com.mg.merp.reference.model.CatalogFolder;
 
 /**
- * Иерархическая структура каталога, реализация сервиса бизнес-компонента "Папки каталога"
+ * РРµСЂР°СЂС…РёС‡РµСЃРєР°СЏ СЃС‚СЂСѓРєС‚СѓСЂР° РєР°С‚Р°Р»РѕРіР°, СЂРµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџР°РїРєРё РєР°С‚Р°Р»РѕРіР°"
  * 
  * @author Oleg V. Safonov
  * @author Konstantin S. Alikaev
@@ -65,8 +65,8 @@ public class CatalogFolderServiceBean extends com.mg.framework.generic.AbstractP
 		for (Integer key : primaryKeys) {
 			CatalogFolder entity = load(key);
 			CatalogFolder targetFolder = (CatalogFolder) targetEntity;
-			//не копируем корневую папку и папку на саму себя, идентификатор должен быть больше идентификатора приемника, в противном
-			//случае невозможно построить дерево иерархии
+			//РЅРµ РєРѕРїРёСЂСѓРµРј РєРѕСЂРЅРµРІСѓСЋ РїР°РїРєСѓ Рё РїР°РїРєСѓ РЅР° СЃР°РјСѓ СЃРµР±СЏ, РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР° РїСЂРёРµРјРЅРёРєР°, РІ РїСЂРѕС‚РёРІРЅРѕРј
+			//СЃР»СѓС‡Р°Рµ РЅРµРІРѕР·РјРѕР¶РЅРѕ РїРѕСЃС‚СЂРѕРёС‚СЊ РґРµСЂРµРІРѕ РёРµСЂР°СЂС…РёРё
 			if (entity.getCatalogFolder() != null && entity.getId() > targetFolder.getId() && entity.getCatalogFolder().getId() != targetFolder.getId()) {
 				entity.setCatalogFolder(targetFolder);
 				result = true;
@@ -84,11 +84,11 @@ public class CatalogFolderServiceBean extends com.mg.framework.generic.AbstractP
 	}
 
 	/**
-	 * Получть список вложенных папок каталога для заданной папки каталога
-	 * @param catalogFolder - папка каталога
-	 * @param isRecurseSearch - признак "рекурсивный поиск вложенных папок каталога"
-	 * @param isIncludeRootFolder - признак "включать указанную папку каталога в список"
-	 * @return список вложенных папок каталога для заданной папки каталога
+	 * РџРѕР»СѓС‡С‚СЊ СЃРїРёСЃРѕРє РІР»РѕР¶РµРЅРЅС‹С… РїР°РїРѕРє РєР°С‚Р°Р»РѕРіР° РґР»СЏ Р·Р°РґР°РЅРЅРѕР№ РїР°РїРєРё РєР°С‚Р°Р»РѕРіР°
+	 * @param catalogFolder - РїР°РїРєР° РєР°С‚Р°Р»РѕРіР°
+	 * @param isRecurseSearch - РїСЂРёР·РЅР°Рє "СЂРµРєСѓСЂСЃРёРІРЅС‹Р№ РїРѕРёСЃРє РІР»РѕР¶РµРЅРЅС‹С… РїР°РїРѕРє РєР°С‚Р°Р»РѕРіР°"
+	 * @param isIncludeRootFolder - РїСЂРёР·РЅР°Рє "РІРєР»СЋС‡Р°С‚СЊ СѓРєР°Р·Р°РЅРЅСѓСЋ РїР°РїРєСѓ РєР°С‚Р°Р»РѕРіР° РІ СЃРїРёСЃРѕРє"
+	 * @return СЃРїРёСЃРѕРє РІР»РѕР¶РµРЅРЅС‹С… РїР°РїРѕРє РєР°С‚Р°Р»РѕРіР° РґР»СЏ Р·Р°РґР°РЅРЅРѕР№ РїР°РїРєРё РєР°С‚Р°Р»РѕРіР°
 	 */
 	protected List<CatalogFolder> doGetNestedCatalogFolders(CatalogFolder catalogFolder, boolean isRecurseSearch, boolean isIncludeRootFolder) {
 		List<CatalogFolder> nestedFolders = new ArrayList<CatalogFolder>();
@@ -104,9 +104,9 @@ public class CatalogFolderServiceBean extends com.mg.framework.generic.AbstractP
 	}
 
 	/**
-	 * Выполнить рекурсивный поиск дочерних папок каталога
-	 * @param catalogFolder - папка каталога
-	 * @param nestedFolders - вложенные папки
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ СЂРµРєСѓСЂСЃРёРІРЅС‹Р№ РїРѕРёСЃРє РґРѕС‡РµСЂРЅРёС… РїР°РїРѕРє РєР°С‚Р°Р»РѕРіР°
+	 * @param catalogFolder - РїР°РїРєР° РєР°С‚Р°Р»РѕРіР°
+	 * @param nestedFolders - РІР»РѕР¶РµРЅРЅС‹Рµ РїР°РїРєРё
 	 */
 	private void recurseSearchChildCatalogFolders(CatalogFolder catalogFolder, List<CatalogFolder> nestedFolders) {
 		if(catalogFolder == null)
@@ -120,9 +120,9 @@ public class CatalogFolderServiceBean extends com.mg.framework.generic.AbstractP
 	}
 
 	/**
-	 * Получить список дочерних папок каталога
-	 * @param catalogFolder - папка каталога
-	 * @return список дочерних папок каталога
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РґРѕС‡РµСЂРЅРёС… РїР°РїРѕРє РєР°С‚Р°Р»РѕРіР°
+	 * @param catalogFolder - РїР°РїРєР° РєР°С‚Р°Р»РѕРіР°
+	 * @return СЃРїРёСЃРѕРє РґРѕС‡РµСЂРЅРёС… РїР°РїРѕРє РєР°С‚Р°Р»РѕРіР°
 	 */
 	private static List<CatalogFolder> getChildCatalogFolders(CatalogFolder catalogFolder) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(CatalogFolder.class)

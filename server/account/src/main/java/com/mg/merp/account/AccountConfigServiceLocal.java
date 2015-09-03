@@ -17,7 +17,7 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.AccConfig;
 
 /**
- * Сервис бизнес-компонента "Конфигурация модуля <Бух.учет>"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <Р‘СѓС….СѓС‡РµС‚>"
  * 
  * @author leonova
  * @author Artem V. Sharapov

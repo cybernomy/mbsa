@@ -35,7 +35,7 @@ import com.mg.merp.document.model.DocSection;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * Утилиты работы с документами
+ * РЈС‚РёР»РёС‚С‹ СЂР°Р±РѕС‚С‹ СЃ РґРѕРєСѓРјРµРЅС‚Р°РјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentUtils.java,v 1.6 2007/12/17 14:39:44 safonov Exp $
@@ -52,10 +52,10 @@ public class DocumentUtils {
 	}
 
 	/**
-	 * создание бизнес-компонента документа
+	 * СЃРѕР·РґР°РЅРёРµ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docSection	раздел документа
-	 * @return	бизнес-компонент
+	 * @param docSection	СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
 	 */
 	@SuppressWarnings("unchecked")
 	public static Document getDocumentService(DocSection docSection) {
@@ -63,10 +63,10 @@ public class DocumentUtils {
 	}
 
 	/**
-	 * создание бизнес-компонента спецификации
+	 * СЃРѕР·РґР°РЅРёРµ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° СЃРїРµС†РёС„РёРєР°С†РёРё
 	 * 
-	 * @param docSection	раздел документа
-	 * @return	бизнес-компонент
+	 * @param docSection	СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
 	 */
 	@SuppressWarnings("unchecked")
 	public static <T extends DocSpec, ID extends Serializable> GoodsDocumentSpecification<T, ID> getGoodsDocumentSpecificationService(DocSection docSection) {
@@ -74,10 +74,10 @@ public class DocumentUtils {
 	}
 
 	/**
-	 * создание бизнес-компонента документа со спецификациями
+	 * СЃРѕР·РґР°РЅРёРµ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РґРѕРєСѓРјРµРЅС‚Р° СЃРѕ СЃРїРµС†РёС„РёРєР°С†РёСЏРјРё
 	 * 
-	 * @param docSection	раздел документа
-	 * @return	бизнес-компонент
+	 * @param docSection	СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
 	 */
 	@SuppressWarnings("unchecked")
 	public static GoodsDocument getGoodsDocumentService(DocSection docSection) {
@@ -85,10 +85,10 @@ public class DocumentUtils {
 	}
 
 	/**
-	 * создание бизнес-компонента образца документа
+	 * СЃРѕР·РґР°РЅРёРµ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РѕР±СЂР°Р·С†Р° РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docSection	раздел документа
-	 * @return	бизнес-компонент
+	 * @param docSection	СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
 	 */
 	@SuppressWarnings("unchecked")
 	public static DocumentPattern getDocumentPatternService(DocSection docSection) {
@@ -96,11 +96,11 @@ public class DocumentUtils {
 	}
 
 	/**
-	 * загрузка образца документа
+	 * Р·Р°РіСЂСѓР·РєР° РѕР±СЂР°Р·С†Р° РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param sysClass	тип сервиса бизнес-компонента
-	 * @param modelId	идентификатор образца
-	 * @return	образец
+	 * @param sysClass	С‚РёРї СЃРµСЂРІРёСЃР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * @param modelId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕР±СЂР°Р·С†Р°
+	 * @return	РѕР±СЂР°Р·РµС†
 	 */
 	@SuppressWarnings("unchecked")
 	public static PersistentObject loadDocumentModel(SysClass sysClass, Integer modelId) {
@@ -110,10 +110,10 @@ public class DocumentUtils {
 	}
 	
 	/**
-	 * генерация строкового заголовка документа
+	 * РіРµРЅРµСЂР°С†РёСЏ СЃС‚СЂРѕРєРѕРІРѕРіРѕ Р·Р°РіРѕР»РѕРІРєР° РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docHead	модель документа
-	 * @return	строковый заголовок
+	 * @param docHead	РјРѕРґРµР»СЊ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	СЃС‚СЂРѕРєРѕРІС‹Р№ Р·Р°РіРѕР»РѕРІРѕРє
 	 */
 	public static String generateDocumentTitle(DocHead docHead) {
 		return generateDocumentTitle(docHead.getDocType() != null ? docHead.getDocType().getCode() : null,
@@ -121,12 +121,12 @@ public class DocumentUtils {
 	}
 
 	/**
-	 * генерация строкового заголовка документа
+	 * РіРµРЅРµСЂР°С†РёСЏ СЃС‚СЂРѕРєРѕРІРѕРіРѕ Р·Р°РіРѕР»РѕРІРєР° РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docTypeCode	код типа документа
-	 * @param docNumber		номер документа
-	 * @param docDate		дата документа
-	 * @return	строковый заголовок
+	 * @param docTypeCode	РєРѕРґ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docNumber		РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docDate		РґР°С‚Р° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	СЃС‚СЂРѕРєРѕРІС‹Р№ Р·Р°РіРѕР»РѕРІРѕРє
 	 */
 	public static String generateDocumentTitle(String docTypeCode, String docNumber, Date docDate) {
 		docTypeCode = docTypeCode != null ? docTypeCode.trim() : "<unknown>";
@@ -136,9 +136,9 @@ public class DocumentUtils {
 	}
 
 	/**
-	 * получить текущего владельца документами
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰РµРіРѕ РІР»Р°РґРµР»СЊС†Р° РґРѕРєСѓРјРµРЅС‚Р°РјРё
 	 * 
-	 * @return	текущий владелец, если не устанавливался то 0 (владелец текущий пользователь)
+	 * @return	С‚РµРєСѓС‰РёР№ РІР»Р°РґРµР»РµС†, РµСЃР»Рё РЅРµ СѓСЃС‚Р°РЅР°РІР»РёРІР°Р»СЃСЏ С‚Рѕ 0 (РІР»Р°РґРµР»РµС† С‚РµРєСѓС‰РёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ)
 	 */
 	public static Short getCurrentDocumentOwner() {
 		Short result = (Short) ServerUtils.getCurrentSession().getAttribute(DOCUMENT_OWNER); 
@@ -146,10 +146,10 @@ public class DocumentUtils {
 	}
 	
 	/**
-	 * установка текущего владельца документами
+	 * СѓСЃС‚Р°РЅРѕРІРєР° С‚РµРєСѓС‰РµРіРѕ РІР»Р°РґРµР»СЊС†Р° РґРѕРєСѓРјРµРЅС‚Р°РјРё
 	 * 
-	 * @param owner	текущий владелец
-	 * @return	старое значение если установлено
+	 * @param owner	С‚РµРєСѓС‰РёР№ РІР»Р°РґРµР»РµС†
+	 * @return	СЃС‚Р°СЂРѕРµ Р·РЅР°С‡РµРЅРёРµ РµСЃР»Рё СѓСЃС‚Р°РЅРѕРІР»РµРЅРѕ
 	 */
 	public static Short setCurrentDocumentOwner(Short owner) {
 		Short oldValue = getCurrentDocumentOwner();

@@ -21,7 +21,7 @@ import org.hibernate.EmptyInterceptor;
 import org.hibernate.type.Type;
 
 /**
- * Перехватчик событий системы персистенции Hibernate
+ * РџРµСЂРµС…РІР°С‚С‡РёРє СЃРѕР±С‹С‚РёР№ СЃРёСЃС‚РµРјС‹ РїРµСЂСЃРёСЃС‚РµРЅС†РёРё Hibernate
  * @see org.hibernate.Interceptor
  * 
  * @author Oleg V. Safonov
@@ -61,7 +61,7 @@ public class HibernateInterceptorImpl extends EmptyInterceptor {
 //        AttributeMap value = new LocalDataTransferObject();
 //        for (int i = 0; i < state.length; i++) {
 //        	if (propertyNames[i].equals("SysClient") && state[i] == null) {
-//        		//TODO заполняем поле sys_client 1, необходимо заполнять текущим мандантом в который вошел пользователь
+//        		//TODO Р·Р°РїРѕР»РЅСЏРµРј РїРѕР»Рµ sys_client 1, РЅРµРѕР±С…РѕРґРёРјРѕ Р·Р°РїРѕР»РЅСЏС‚СЊ С‚РµРєСѓС‰РёРј РјР°РЅРґР°РЅС‚РѕРј РІ РєРѕС‚РѕСЂС‹Р№ РІРѕС€РµР» РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ
 //        		state[i] = ServerUtils.getPersistentManager().find("com.mg.merp.core.model.SysClient", 1);
 //        		result = true;
 //        	}

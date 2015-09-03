@@ -109,14 +109,14 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 	/**
 	 * 
 	 * @param oldDocSpec
-	 *            спецификация, на основе которой производится перерасчёт
+	 *            СЃРїРµС†РёС„РёРєР°С†РёСЏ, РЅР° РѕСЃРЅРѕРІРµ РєРѕС‚РѕСЂРѕР№ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РїРµСЂРµСЂР°СЃС‡С‘С‚
 	 * 
 	 * @param newDocSpec
-	 *            измененная спецификация
+	 *            РёР·РјРµРЅРµРЅРЅР°СЏ СЃРїРµС†РёС„РёРєР°С†РёСЏ
 	 * 
 	 * @param processDate
-	 *            дата отработки
-	 * @return измененная спецификация
+	 *            РґР°С‚Р° РѕС‚СЂР°Р±РѕС‚РєРё
+	 * @return РёР·РјРµРЅРµРЅРЅР°СЏ СЃРїРµС†РёС„РёРєР°С†РёСЏ
 	 */
 	private DocSpec recalculateMeasure(DocSpec oldDocSpec, DocSpec newDocSpec, Date processDate) {
 		BigDecimal measureFactor = new BigDecimal(1);
@@ -131,8 +131,8 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 			newDocSpec.setQuantity(newVal);
 			newDocSpec.setPrice(newDocSpec.getPrice().multiply(measureFactor));
 
-			// на складах в 2х количествах учитываем только "учетно/весовые"
-			// для остальных 2е количество всегда = 0
+			// РЅР° СЃРєР»Р°РґР°С… РІ 2С… РєРѕР»РёС‡РµСЃС‚РІР°С… СѓС‡РёС‚С‹РІР°РµРј С‚РѕР»СЊРєРѕ "СѓС‡РµС‚РЅРѕ/РІРµСЃРѕРІС‹Рµ"
+			// РґР»СЏ РѕСЃС‚Р°Р»СЊРЅС‹С… 2Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ РІСЃРµРіРґР° = 0
 			if (newDocSpec.getQuantity2() != null && newDocSpec.getPrice1() != null
 					&& (oldDocSpec.getCatalog().getMeasureControl() == MeasureControl.CATCHWEIGHT)) {
 
@@ -159,10 +159,10 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 	}
 
 	/**
-	 * Рассчёт цены в документе на основании данных склада
+	 * Р Р°СЃСЃС‡С‘С‚ С†РµРЅС‹ РІ РґРѕРєСѓРјРµРЅС‚Рµ РЅР° РѕСЃРЅРѕРІР°РЅРёРё РґР°РЅРЅС‹С… СЃРєР»Р°РґР°
 	 * 
 	 * @param docSpec
-	 *            спецификация к отработке
+	 *            СЃРїРµС†РёС„РёРєР°С†РёСЏ Рє РѕС‚СЂР°Р±РѕС‚РєРµ
 	 */
 	private void doPrepareCalcPrices(DocSpec docSpec, final DocFlowPluginInvokeParams params) {
 		if ((docSpec.getCatalog().getGoodType() == CatalogType.GOODS
@@ -174,8 +174,8 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 			workDocSpec.setSrcMol(docSpec.getSrcMol() != null ? docSpec.getSrcMol() : docSpec.getDocHead().getSrcMol());
 			workDocSpec.setSrcStock(docSpec.getSrcStock() != null ? docSpec.getSrcStock() : docSpec.getDocHead().getSrcStock());
 
-			// TODO: сейчас при пустом складе этап проходит.
-			// уточнить у консультантов, может нужно генерировать ИС
+			// TODO: СЃРµР№С‡Р°СЃ РїСЂРё РїСѓСЃС‚РѕРј СЃРєР»Р°РґРµ СЌС‚Р°Рї РїСЂРѕС…РѕРґРёС‚.
+			// СѓС‚РѕС‡РЅРёС‚СЊ Сѓ РєРѕРЅСЃСѓР»СЊС‚Р°РЅС‚РѕРІ, РјРѕР¶РµС‚ РЅСѓР¶РЅРѕ РіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ РРЎ
 			if (workDocSpec.getSrcStock() != null) {
 				workDocSpec.setId(docSpec.getId());
 				workDocSpec.setCatalog(docSpec.getCatalog());
@@ -258,7 +258,7 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 		boolean getNext = true;
 		Iterator<StockBatch> it = batches.listIterator();
 		RoundContext rcCur = new RoundContext(ConfigurationHelper.getConfiguration().getCurrencyPrec());
-		//последняя из вновь созданных записей
+		//РїРѕСЃР»РµРґРЅСЏСЏ РёР· РІРЅРѕРІСЊ СЃРѕР·РґР°РЅРЅС‹С… Р·Р°РїРёСЃРµР№
 		PersistentObject lastRecord = null;
 		do {
 			StockBatch stockBatch = it.next();
@@ -285,19 +285,19 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 			}
 
 			nextRecord.setAttribute("Price1", priceCur); //$NON-NLS-1$
-			//сумма рассчитывается автоматически
+			//СЃСѓРјРјР° СЂР°СЃСЃС‡РёС‚С‹РІР°РµС‚СЃСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё
 
-			// TODO: Вес, объём, скидки
+			// TODO: Р’РµСЃ, РѕР±СЉС‘Рј, СЃРєРёРґРєРё
 
 			specServ.store(nextRecord);
-			//сохраняем созданную запись
+			//СЃРѕС…СЂР°РЅСЏРµРј СЃРѕР·РґР°РЅРЅСѓСЋ Р·Р°РїРёСЃСЊ
 			lastRecord = nextRecord;
 			AttributeMap am = po.getAllAttributes();
 			am.put("Id", null); //$NON-NLS-1$
 			nextRecord = specServ.initialize(am);
 		} while (getNext && it.hasNext());
-		//Если позиции в партиях кончились, а в документе осталось не рассчитанное количество,
-		//то цена проставляется из последней записи.
+		//Р•СЃР»Рё РїРѕР·РёС†РёРё РІ РїР°СЂС‚РёСЏС… РєРѕРЅС‡РёР»РёСЃСЊ, Р° РІ РґРѕРєСѓРјРµРЅС‚Рµ РѕСЃС‚Р°Р»РѕСЃСЊ РЅРµ СЂР°СЃСЃС‡РёС‚Р°РЅРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ,
+		//С‚Рѕ С†РµРЅР° РїСЂРѕСЃС‚Р°РІР»СЏРµС‚СЃСЏ РёР· РїРѕСЃР»РµРґРЅРµР№ Р·Р°РїРёСЃРё.
 		BigDecimal lastPortion = MathUtils.subtract(dispValue, strategy.getAvailable(), Constants.QUANTITY_ROUND_CONTEXT);
 		if (MathUtils.compareToZero(lastPortion) == 1) {
 			lastRecord.setAttribute("Quantity", lastPortion); //$NON-NLS-1$
@@ -306,7 +306,7 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 	}
 
 	/**
-	 * Откат отработки спецификации документа
+	 * РћС‚РєР°С‚ РѕС‚СЂР°Р±РѕС‚РєРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
 	 * @param docSpecItem
 	 */
@@ -319,7 +319,7 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 	}
 
 	/**
-	 * Откат отработки спецификации документа
+	 * РћС‚РєР°С‚ РѕС‚СЂР°Р±РѕС‚РєРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
 	 * @param docSpecItem
 	 */
@@ -329,20 +329,20 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 	}
 
 	/**
-	 * Проверяем закрыт ли склад и учитывает ли он операционные дни
+	 * РџСЂРѕРІРµСЂСЏРµРј Р·Р°РєСЂС‹С‚ Р»Рё СЃРєР»Р°Рґ Рё СѓС‡РёС‚С‹РІР°РµС‚ Р»Рё РѕРЅ РѕРїРµСЂР°С†РёРѕРЅРЅС‹Рµ РґРЅРё
 	 * @param stock
 	 */
 	private void preProcessingWarehouseTransaction(Contractor warehouse, Date processDate) {
 		if (warehouse != null) {
 			Warehouse stock = (Warehouse) ServerUtils.getPersistentManager().find(Warehouse.class, warehouse.getId());
 			Date dateTillClosed = stock.getClosedDateTill();
-			// если склад закрыт для фактического движения то смотрим по какую дату 
+			// РµСЃР»Рё СЃРєР»Р°Рґ Р·Р°РєСЂС‹С‚ РґР»СЏ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РґРІРёР¶РµРЅРёСЏ С‚Рѕ СЃРјРѕС‚СЂРёРј РїРѕ РєР°РєСѓСЋ РґР°С‚Сѓ 
 			if (stock.getWarehouseTransactionClosed() && dateTillClosed != null)
 				if (processDate.compareTo(dateTillClosed) < 1) {
 					throw new BusinessException(StringUtils.format(Messages.getInstance().getMessage(Messages.STOCK_CLOSED_DATE_TILL)
 							, stock.getCode().trim(), DateFormat.getDateInstance(DateFormat.SHORT).format(dateTillClosed)));					
 				}
-			// если на складе учитываются операционные дни то проверяем не является данный день закрытым
+			// РµСЃР»Рё РЅР° СЃРєР»Р°РґРµ СѓС‡РёС‚С‹РІР°СЋС‚СЃСЏ РѕРїРµСЂР°С†РёРѕРЅРЅС‹Рµ РґРЅРё С‚Рѕ РїСЂРѕРІРµСЂСЏРµРј РЅРµ СЏРІР»СЏРµС‚СЃСЏ РґР°РЅРЅС‹Р№ РґРµРЅСЊ Р·Р°РєСЂС‹С‚С‹Рј
 			if (stock.getCheckTransactionDay()) {
 				List<WarehouseTransactionDay> trDayList = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(WarehouseTransactionDay.class)
 						.add(Restrictions.eq("Stock", stock)) //$NON-NLS-1$
@@ -359,7 +359,7 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 	}
 	
 	/**
-	 * Проверяем разрешено ли фактическое движение по складу - источнику и складу приемнику
+	 * РџСЂРѕРІРµСЂСЏРµРј СЂР°Р·СЂРµС€РµРЅРѕ Р»Рё С„Р°РєС‚РёС‡РµСЃРєРѕРµ РґРІРёР¶РµРЅРёРµ РїРѕ СЃРєР»Р°РґСѓ - РёСЃС‚РѕС‡РЅРёРєСѓ Рё СЃРєР»Р°РґСѓ РїСЂРёРµРјРЅРёРєСѓ
 	 */
 	private void checkWarehouseTransaction(WarehouseProcessDocumentLineData docLineData) {
 		Date date = DateTimeUtils.getDayStart(docLineData.getProcessDate());
@@ -412,9 +412,9 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	public void processDisAssembleProductTransaction(DocFlowPluginInvokeParams params) {
 		for (DocumentSpecItem dsi : params.getSpecList()) {
-			// если тип товара спецификации комплект, то отрабатываем приход комплектующих и списание комплектов
+			// РµСЃР»Рё С‚РёРї С‚РѕРІР°СЂР° СЃРїРµС†РёС„РёРєР°С†РёРё РєРѕРјРїР»РµРєС‚, С‚Рѕ РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРј РїСЂРёС…РѕРґ РєРѕРјРїР»РµРєС‚СѓСЋС‰РёС… Рё СЃРїРёСЃР°РЅРёРµ РєРѕРјРїР»РµРєС‚РѕРІ
 			if (CatalogType.SET_OF_GOODS.compareTo(dsi.getDocSpec().getCatalog().getGoodType()) == 0) {
-				// оприходуем комплектующие
+				// РѕРїСЂРёС…РѕРґСѓРµРј РєРѕРјРїР»РµРєС‚СѓСЋС‰РёРµ
 				Set<SetOfGood> components =  dsi.getDocSpec().getCatalog().getSetOfSetOfGood();
 				List<Integer> historyIds = new ArrayList<Integer>();
 				for (SetOfGood component : components) {					
@@ -433,14 +433,14 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 						docLineData.getDocumentSpecItem().setData2(null);
 					}
 				}
-				//применяем новый способ хранения
-				//храним ссылки на все истории которые были созданы
-				//ВНИМАНИЕ! Данный способ не совместим с предыдущими версиями продукта
+				//РїСЂРёРјРµРЅСЏРµРј РЅРѕРІС‹Р№ СЃРїРѕСЃРѕР± С…СЂР°РЅРµРЅРёСЏ
+				//С…СЂР°РЅРёРј СЃСЃС‹Р»РєРё РЅР° РІСЃРµ РёСЃС‚РѕСЂРёРё РєРѕС‚РѕСЂС‹Рµ Р±С‹Р»Рё СЃРѕР·РґР°РЅС‹
+				//Р’РќРРњРђРќРР•! Р”Р°РЅРЅС‹Р№ СЃРїРѕСЃРѕР± РЅРµ СЃРѕРІРјРµСЃС‚РёРј СЃ РїСЂРµРґС‹РґСѓС‰РёРјРё РІРµСЂСЃРёСЏРјРё РїСЂРѕРґСѓРєС‚Р°
 				dsi.setStateValue(historyIds.toArray(new Integer[historyIds.size()]));
 				dsi.setData1(null);
 				dsi.setData2(null);
 
-				// списываем комплекты
+				// СЃРїРёСЃС‹РІР°РµРј РєРѕРјРїР»РµРєС‚С‹
 				WarehouseProcessDocumentLineDataImpl docLineData = new WarehouseProcessDocumentLineDataImpl(dsi, params.getProcessDate());
 				docLineData.setDstMol(null);
 				docLineData.setDstStock(null);
@@ -453,9 +453,9 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	public void processAssembleProductTransaction(DocFlowPluginInvokeParams params, boolean assembleProductKind) {
 		for (DocumentSpecItem dsi : params.getSpecList()) {
-			// если тип товара спецификации комплект, то отрабатываем приход комплекта и списание комплектующих
+			// РµСЃР»Рё С‚РёРї С‚РѕРІР°СЂР° СЃРїРµС†РёС„РёРєР°С†РёРё РєРѕРјРїР»РµРєС‚, С‚Рѕ РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРј РїСЂРёС…РѕРґ РєРѕРјРїР»РµРєС‚Р° Рё СЃРїРёСЃР°РЅРёРµ РєРѕРјРїР»РµРєС‚СѓСЋС‰РёС…
 			if (CatalogType.SET_OF_GOODS.compareTo(dsi.getDocSpec().getCatalog().getGoodType()) == 0) {
-				// отрабатываем приход комплекта
+				// РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРј РїСЂРёС…РѕРґ РєРѕРјРїР»РµРєС‚Р°
 				WarehouseProcessDocumentLineDataImpl docLineData = new WarehouseProcessDocumentLineDataImpl(dsi, params.getProcessDate());
 				docLineData.setSrcMol(null);
 				docLineData.setSrcStock(null);
@@ -464,7 +464,7 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 				Integer data2 = dsi.getData2();
 				dsi.setData1(null);
 				dsi.setData2(null);
-				// отрабатываем списание комплектующих со склада
+				// РѕС‚СЂР°Р±Р°С‚С‹РІР°РµРј СЃРїРёСЃР°РЅРёРµ РєРѕРјРїР»РµРєС‚СѓСЋС‰РёС… СЃРѕ СЃРєР»Р°РґР°
 				Set<SetOfGood> components =  dsi.getDocSpec().getCatalog().getSetOfSetOfGood();
 				List<Integer> historyIds = new ArrayList<Integer>();
 				for (SetOfGood component : components){					
@@ -483,9 +483,9 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 						docLineData.getDocumentSpecItem().setData2(null);
 					}
 				}
-				//применяем новый способ хранения
-				//храним ссылки на все истории которые были созданы
-				//ВНИМАНИЕ! Данный способ не совместим с предыдущими версиями продукта
+				//РїСЂРёРјРµРЅСЏРµРј РЅРѕРІС‹Р№ СЃРїРѕСЃРѕР± С…СЂР°РЅРµРЅРёСЏ
+				//С…СЂР°РЅРёРј СЃСЃС‹Р»РєРё РЅР° РІСЃРµ РёСЃС‚РѕСЂРёРё РєРѕС‚РѕСЂС‹Рµ Р±С‹Р»Рё СЃРѕР·РґР°РЅС‹
+				//Р’РќРРњРђРќРР•! Р”Р°РЅРЅС‹Р№ СЃРїРѕСЃРѕР± РЅРµ СЃРѕРІРјРµСЃС‚РёРј СЃ РїСЂРµРґС‹РґСѓС‰РёРјРё РІРµСЂСЃРёСЏРјРё РїСЂРѕРґСѓРєС‚Р°
 				dsi.setStateValue(historyIds.toArray(new Integer[historyIds.size()]));
 				dsi.setData1(data1);
 				dsi.setData2(data2);
@@ -597,10 +597,10 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
 	}
 	
 	/**
-	 * Найти партию c которой был списан товар
-	 * @param docHead - документ
-	 * @param docSpec - позиция спецификации
-	 * @return партия или <code>null</code> если не найдена
+	 * РќР°Р№С‚Рё РїР°СЂС‚РёСЋ c РєРѕС‚РѕСЂРѕР№ Р±С‹Р» СЃРїРёСЃР°РЅ С‚РѕРІР°СЂ
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
+	 * @param docSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @return РїР°СЂС‚РёСЏ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅР°
 	 */
 	protected StockBatch findStockBatch(DocHead docHead, DocSpec docSpec) {
 		Criteria criteria = OrmTemplate.createCriteria(StockBatchHistory.class, "sbh")

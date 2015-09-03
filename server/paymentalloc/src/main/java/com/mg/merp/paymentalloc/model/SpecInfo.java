@@ -17,7 +17,7 @@ package com.mg.merp.paymentalloc.model;
 import java.math.BigDecimal;
 
 /**
- * Модель данных для распределения платежа по спецификации документа
+ * РњРѕРґРµР»СЊ РґР°РЅРЅС‹С… РґР»СЏ СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ РїР»Р°С‚РµР¶Р° РїРѕ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Artem V. Sharapov
  * @version $Id: SpecInfo.java,v 1.1 2007/05/31 14:10:30 sharapov Exp $

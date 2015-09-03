@@ -24,7 +24,7 @@ import com.mg.merp.crm.OperationKindServiceLocal;
 import com.mg.merp.crm.model.OperationKind;
 
 /**
- * Бизнес-компонент "Виды действий" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РёРґС‹ РґРµР№СЃС‚РІРёР№" 
  * 
  * @author leonova
  * @version $Id: OperationKindServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

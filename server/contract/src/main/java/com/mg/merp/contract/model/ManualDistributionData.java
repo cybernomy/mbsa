@@ -17,7 +17,7 @@ package com.mg.merp.contract.model;
 import java.math.BigDecimal;
 
 /**
- * Структура данных для распределения фактичекой суммы
+ * РЎС‚СЂСѓРєС‚СѓСЂР° РґР°РЅРЅС‹С… РґР»СЏ СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ С„Р°РєС‚РёС‡РµРєРѕР№ СЃСѓРјРјС‹
  * 
  * @author Artem V. Sharapov
  * @version $Id: ManualDistributionData.java,v 1.1 2007/03/07 12:31:28 sharapov Exp $

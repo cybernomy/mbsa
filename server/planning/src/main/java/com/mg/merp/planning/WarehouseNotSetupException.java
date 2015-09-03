@@ -20,7 +20,7 @@ import com.mg.framework.api.BusinessException;
 import com.mg.merp.planning.support.Messages;
 
 /**
- * ИС генерируется если не настроен склад
+ * РРЎ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РµСЃР»Рё РЅРµ РЅР°СЃС‚СЂРѕРµРЅ СЃРєР»Р°Рґ
  * 
  * @author Oleg V. Safonov
  * @version $Id: WarehouseNotSetupException.java,v 1.1 2007/07/30 10:37:51 safonov Exp $

@@ -39,7 +39,7 @@ import com.mg.merp.warehouse.model.BinLocationDetail;
 import com.mg.merp.warehouse.model.StockBatch;
 
 /**
- * Реализация бизнес-компонента "Cекции хранения на складах"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "CРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ РЅР° СЃРєР»Р°РґР°С…"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -86,10 +86,10 @@ public class BinLocationServiceBean extends AbstractPOJODataBusinessObjectServic
 	}
 
 	/**
-	 * Получить агрегированные значения кол-ва в секции хранения партии с учетом вида движения
-	 * @param stockBatch - партия
-	 * @param kind - вид движения
-	 * @return агрегированные значения кол-ва в секции хранения партии с учетом вида движения
+	 * РџРѕР»СѓС‡РёС‚СЊ Р°РіСЂРµРіРёСЂРѕРІР°РЅРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ РєРѕР»-РІР° РІ СЃРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ РїР°СЂС‚РёРё СЃ СѓС‡РµС‚РѕРј РІРёРґР° РґРІРёР¶РµРЅРёСЏ
+	 * @param stockBatch - РїР°СЂС‚РёСЏ
+	 * @param kind - РІРёРґ РґРІРёР¶РµРЅРёСЏ
+	 * @return Р°РіСЂРµРіРёСЂРѕРІР°РЅРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ РєРѕР»-РІР° РІ СЃРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ РїР°СЂС‚РёРё СЃ СѓС‡РµС‚РѕРј РІРёРґР° РґРІРёР¶РµРЅРёСЏ
 	 */
 	private List<BinLocationDetailData> getBinLocationDetailsByKind(StockBatch stockBatch, short kind) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(BinLocationDetail.class)

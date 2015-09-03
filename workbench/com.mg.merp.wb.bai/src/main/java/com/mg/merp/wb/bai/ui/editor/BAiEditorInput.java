@@ -18,7 +18,7 @@ import com.mg.merp.wb.bai.BAiPlugin;
 import com.mg.merp.wb.core.ui.editor.StandartEditorInput;
 
 /**
- * Входные данные для формы редактирования BAi
+ * Р’С…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ РґР»СЏ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ BAi
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: BAiEditorInput.java,v 1.2 2007/04/11 06:48:20 poroxnenko Exp $

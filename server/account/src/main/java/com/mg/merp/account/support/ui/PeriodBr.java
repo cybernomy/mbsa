@@ -28,7 +28,7 @@ import com.mg.merp.account.PeriodServiceLocal;
 import com.mg.merp.account.model.Period;
 
 /**
- * Браузер бухгалтерских периодов
+ * Р‘СЂР°СѓР·РµСЂ Р±СѓС…РіР°Р»С‚РµСЂСЃРєРёС… РїРµСЂРёРѕРґРѕРІ
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -92,7 +92,7 @@ public class PeriodBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Обработка события контекстного меню: закрытие фин. периода
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ: Р·Р°РєСЂС‹С‚РёРµ С„РёРЅ. РїРµСЂРёРѕРґР°
 	 * @param event
 	 */
 	public void onActionCloseAccPeriod(WidgetEvent event) {

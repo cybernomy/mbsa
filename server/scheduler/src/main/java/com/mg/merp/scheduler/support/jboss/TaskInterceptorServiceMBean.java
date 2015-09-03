@@ -17,14 +17,14 @@ package com.mg.merp.scheduler.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * JMX сервис регистрация перехватчиков на сущность "задачи планировщика"
+ * JMX СЃРµСЂРІРёСЃ СЂРµРіРёСЃС‚СЂР°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РЅР° СЃСѓС‰РЅРѕСЃС‚СЊ "Р·Р°РґР°С‡Рё РїР»Р°РЅРёСЂРѕРІС‰РёРєР°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: TaskInterceptorServiceMBean.java,v 1.1 2008/04/25 10:57:23 safonov Exp $
  */
 public interface TaskInterceptorServiceMBean extends ServiceMBean {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:scheduler=TaskInterceptorService";
 }

@@ -25,7 +25,7 @@ import com.mg.merp.finance.model.OperationModel;
 import com.mg.merp.finance.model.SpecificationModel;
 
 /**
- * Бизнес-компонент "Признаки образцов финансовых операций" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРёР·РЅР°РєРё РѕР±СЂР°Р·С†РѕРІ С„РёРЅР°РЅСЃРѕРІС‹С… РѕРїРµСЂР°С†РёР№" 
  * 
  * @author leonova
  * @version $Id: SpecFeatureModelServiceBean.java,v 1.5 2007/11/27 11:55:33 alikaev Exp $

@@ -16,7 +16,7 @@ package com.mg.merp.reference.support.ui;
 
 
 /**
- * SearchHelp для банка плательщика банковских документов
+ * SearchHelp РґР»СЏ Р±Р°РЅРєР° РїР»Р°С‚РµР»СЊС‰РёРєР° Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: FromBankAccountSearchHelp.java,v 1.1 2006/10/07 10:11:00 leonova Exp $

@@ -17,7 +17,7 @@ package com.mg.merp.overall.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Норма выдачи спецодежды"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќРѕСЂРјР° РІС‹РґР°С‡Рё СЃРїРµС†РѕРґРµР¶РґС‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: NormHead.java,v 1.8 2008/06/30 04:15:16 alikaev Exp $

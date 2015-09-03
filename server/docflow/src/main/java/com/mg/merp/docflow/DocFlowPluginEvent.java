@@ -21,7 +21,7 @@ import java.util.EventObject;
 import java.util.List;
 
 /**
- * Событие выполнения этапа ДО
+ * РЎРѕР±С‹С‚РёРµ РІС‹РїРѕР»РЅРµРЅРёСЏ СЌС‚Р°РїР° Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowPluginEvent.java,v 1.2 2008/06/09 11:35:28 safonov Exp $

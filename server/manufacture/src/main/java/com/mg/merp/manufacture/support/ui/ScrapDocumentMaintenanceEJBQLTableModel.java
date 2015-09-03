@@ -16,7 +16,7 @@ package com.mg.merp.manufacture.support.ui;
 
 
 /**
- * Вспомогательный класс для отображения формы актов на списание потерь
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ
  * 
  * @author leonova
  * @version $Id: ScrapDocumentMaintenanceEJBQLTableModel.java,v 1.1 2006/08/28 04:39:27 leonova Exp $ 

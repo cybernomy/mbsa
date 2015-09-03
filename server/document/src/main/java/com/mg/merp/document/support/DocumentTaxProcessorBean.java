@@ -45,7 +45,7 @@ import com.mg.merp.reference.model.TaxLink;
 import com.mg.merp.reference.model.TaxType;
 
 /**
- * Реализация процессора обработки налогов на документах
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС†РµСЃСЃРѕСЂР° РѕР±СЂР°Р±РѕС‚РєРё РЅР°Р»РѕРіРѕРІ РЅР° РґРѕРєСѓРјРµРЅС‚Р°С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentTaxProcessorBean.java,v 1.11 2009/02/25 16:55:19 safonov Exp $
@@ -67,13 +67,13 @@ public class DocumentTaxProcessorBean extends
 	}
 	
 	/**
-	 * объединить список налогов в спецификации с новым списком налогов 
+	 * РѕР±СЉРµРґРёРЅРёС‚СЊ СЃРїРёСЃРѕРє РЅР°Р»РѕРіРѕРІ РІ СЃРїРµС†РёС„РёРєР°С†РёРё СЃ РЅРѕРІС‹Рј СЃРїРёСЃРєРѕРј РЅР°Р»РѕРіРѕРІ 
 	 * 
 	 * @param calcTaxItems
 	 * @param specTaxes
 	 */
 	protected void mergeDocumentSpecTaxes(List<CalcTaxItem> calcTaxItems, Set<DocumentSpecTax> specTaxes) {
-		//удаляем налоги которые не попали в список налогов спецификации
+		//СѓРґР°Р»СЏРµРј РЅР°Р»РѕРіРё РєРѕС‚РѕСЂС‹Рµ РЅРµ РїРѕРїР°Р»Рё РІ СЃРїРёСЃРѕРє РЅР°Р»РѕРіРѕРІ СЃРїРµС†РёС„РёРєР°С†РёРё
 		Set<DocumentSpecTax> deleteTaxes = new HashSet<DocumentSpecTax>();
 		for (DocumentSpecTax specTax : specTaxes) {
 			boolean find = false;
@@ -87,14 +87,14 @@ public class DocumentTaxProcessorBean extends
 				deleteTaxes.add(specTax);
 		}
 		specTaxes.removeAll(deleteTaxes);
-		//добавим новые налоги
+		//РґРѕР±Р°РІРёРј РЅРѕРІС‹Рµ РЅР°Р»РѕРіРё
 		Set<DocumentSpecTax> newTaxes = new HashSet<DocumentSpecTax>();
 		for (CalcTaxItem taxItem : calcTaxItems) {
 			boolean find = false;
 			for (DocumentSpecTax specTax : specTaxes)
 				if (taxItem.tax.getTax().getId().equals(specTax.getTax().getId())) {
 					find = true;
-					//подменим налог, возмем из спецификации
+					//РїРѕРґРјРµРЅРёРј РЅР°Р»РѕРі, РІРѕР·РјРµРј РёР· СЃРїРµС†РёС„РёРєР°С†РёРё
 					specTax.setSumElement(taxItem.tax.getSumElement());
 					taxItem.tax = specTax;
 					break;
@@ -109,7 +109,7 @@ public class DocumentTaxProcessorBean extends
 	private List<CalcTaxItem> createDocumentSpecTaxes(DocSpec spec, DocHead docHead) {
 		List<CalcTaxItem> result = new ArrayList<CalcTaxItem>();
 		
-		//для расчета налогов должны быть установлены группа налогов и вид начисления налогов
+		//РґР»СЏ СЂР°СЃС‡РµС‚Р° РЅР°Р»РѕРіРѕРІ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ СѓСЃС‚Р°РЅРѕРІР»РµРЅС‹ РіСЂСѓРїРїР° РЅР°Р»РѕРіРѕРІ Рё РІРёРґ РЅР°С‡РёСЃР»РµРЅРёСЏ РЅР°Р»РѕРіРѕРІ
 		if (docHead.getCalcTaxesKind() != null && spec.getTaxGroup() != null)	{	
 			TaxGroup taxGroup = ServerUtils.getPersistentManager().find(TaxGroup.class, spec.getTaxGroup().getId());
 			for (CalcTaxesLink calcTaxesLink: docHead.getCalcTaxesKind().getTaxLinks()) {
@@ -117,7 +117,7 @@ public class DocumentTaxProcessorBean extends
 					Date activeDate = taxLink.getTax().getActiveDate();
 					Date deactivateDate = taxLink.getTax().getDeactivateDate();
 					Date docDate = docHead.getDocDate();
-					//отбор по налогу и датам действия налога
+					//РѕС‚Р±РѕСЂ РїРѕ РЅР°Р»РѕРіСѓ Рё РґР°С‚Р°Рј РґРµР№СЃС‚РІРёСЏ РЅР°Р»РѕРіР°
 					if (taxLink.getTax().getId() == calcTaxesLink.getTax().getId() &&
 							(docDate.equals(activeDate) || docDate.after(activeDate)) && (docDate.equals(deactivateDate) || docDate.before(deactivateDate))) {
 						DocumentSpecTax specTax = new DocumentSpecTax();
@@ -133,11 +133,11 @@ public class DocumentTaxProcessorBean extends
 
 		Set<DocumentSpecTax> specTaxes = spec.getTaxes();
 		if (specTaxes != null) {
-			//список налогов был, редактирование спецификации
+			//СЃРїРёСЃРѕРє РЅР°Р»РѕРіРѕРІ Р±С‹Р», СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёРё
 			mergeDocumentSpecTaxes(result, specTaxes);
 		}
 		else {
-			//спискок налогов пустой, создание спецификации
+			//СЃРїРёСЃРєРѕРє РЅР°Р»РѕРіРѕРІ РїСѓСЃС‚РѕР№, СЃРѕР·РґР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёРё
 			Set<DocumentSpecTax> newTaxes = new HashSet<DocumentSpecTax>();
 			for (CalcTaxItem taxItem : result)
 				newTaxes.add(taxItem.tax);
@@ -147,19 +147,19 @@ public class DocumentTaxProcessorBean extends
 	}
 
 	/**
-	 * отобрать и отсортировать налоги в соответствии с условиями
+	 * РѕС‚РѕР±СЂР°С‚СЊ Рё РѕС‚СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ РЅР°Р»РѕРіРё РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ СѓСЃР»РѕРІРёСЏРјРё
 	 * 
-	 * @param allTaxes	все налоги
-	 * @param total		признак сортировки
-	 * @param included	включены/не включены
-	 * @return	список налогов
+	 * @param allTaxes	РІСЃРµ РЅР°Р»РѕРіРё
+	 * @param total		РїСЂРёР·РЅР°Рє СЃРѕСЂС‚РёСЂРѕРІРєРё
+	 * @param included	РІРєР»СЋС‡РµРЅС‹/РЅРµ РІРєР»СЋС‡РµРЅС‹
+	 * @return	СЃРїРёСЃРѕРє РЅР°Р»РѕРіРѕРІ
 	 */
 	protected List<CalcTaxItem> selectDocumentSpecTaxes(List<CalcTaxItem> allTaxes, final boolean total, boolean included) {
 		List<CalcTaxItem> result = new LinkedList<CalcTaxItem>();
 		for (CalcTaxItem item : allTaxes)
 			if (item.calcLink.getIncluded() == included)
 				result.add(item);
-		//сортировка по feeOrder, если total == true, то обратная сортировка
+		//СЃРѕСЂС‚РёСЂРѕРІРєР° РїРѕ feeOrder, РµСЃР»Рё total == true, С‚Рѕ РѕР±СЂР°С‚РЅР°СЏ СЃРѕСЂС‚РёСЂРѕРІРєР°
 		Collections.sort(result, new Comparator<CalcTaxItem>() {
 
 			public int compare(CalcTaxItem o1, CalcTaxItem o2) {
@@ -177,12 +177,12 @@ public class DocumentTaxProcessorBean extends
 	}
 
 	/**
-	 * получить сумму налога для уровня расчета
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃСѓРјРјСѓ РЅР°Р»РѕРіР° РґР»СЏ СѓСЂРѕРІРЅСЏ СЂР°СЃС‡РµС‚Р°
 	 * 
-	 * @param allTaxes	все налоги
-	 * @param feeOrder	уоровень расчета
-	 * @param included	включены/не включены
-	 * @return	список налогов
+	 * @param allTaxes	РІСЃРµ РЅР°Р»РѕРіРё
+	 * @param feeOrder	СѓРѕСЂРѕРІРµРЅСЊ СЂР°СЃС‡РµС‚Р°
+	 * @param included	РІРєР»СЋС‡РµРЅС‹/РЅРµ РІРєР»СЋС‡РµРЅС‹
+	 * @return	СЃРїРёСЃРѕРє РЅР°Р»РѕРіРѕРІ
 	 */
 	protected BigDecimal loadLayerRate(List<CalcTaxItem> allTaxes, short feeOrder, boolean included) {
 		BigDecimal result = BigDecimal.ZERO;
@@ -198,11 +198,11 @@ public class DocumentTaxProcessorBean extends
 	}
 
 	/**
-	 * расчет налогов
+	 * СЂР°СЃС‡РµС‚ РЅР°Р»РѕРіРѕРІ
 	 * 
 	 * @param spec
 	 * @param allTaxes
-	 * @param total			если true то расчет от summa, price (от общих), иначе расчет от summa1, price1 (от сум/цен с включенными налогами)
+	 * @param total			РµСЃР»Рё true С‚Рѕ СЂР°СЃС‡РµС‚ РѕС‚ summa, price (РѕС‚ РѕР±С‰РёС…), РёРЅР°С‡Рµ СЂР°СЃС‡РµС‚ РѕС‚ summa1, price1 (РѕС‚ СЃСѓРј/С†РµРЅ СЃ РІРєР»СЋС‡РµРЅРЅС‹РјРё РЅР°Р»РѕРіР°РјРё)
 	 * @param roundContext
 	 */
 	protected void modifyDocumentSpecTaxes(DocSpec spec, List<CalcTaxItem> allTaxes, BigDecimal price, BigDecimal sum, boolean total, RoundContext roundContext) {
@@ -249,7 +249,7 @@ public class DocumentTaxProcessorBean extends
 					}
 				}
 				else {
-					taxPrice = taxSum.divide(quantity, new MathContext(10)); //большая точность
+					taxPrice = taxSum.divide(quantity, new MathContext(10)); //Р±РѕР»СЊС€Р°СЏ С‚РѕС‡РЅРѕСЃС‚СЊ
 					
 					totalTaxPrice = MathUtils.round(taxPrice, roundContext);
 					totalTaxSum = MathUtils.round(taxSum, roundContext);
@@ -306,7 +306,7 @@ public class DocumentTaxProcessorBean extends
 					}
 				}
 				else {
-					taxPrice = taxSum.divide(quantity, new MathContext(10)); //большая точность
+					taxPrice = taxSum.divide(quantity, new MathContext(10)); //Р±РѕР»СЊС€Р°СЏ С‚РѕС‡РЅРѕСЃС‚СЊ
 					
 					totalTaxPrice = MathUtils.round(taxPrice, roundContext);
 					totalTaxSum = MathUtils.round(taxSum, roundContext);
@@ -386,7 +386,7 @@ public class DocumentTaxProcessorBean extends
 	}
 
 	/**
-	 * приведение спецификации в соответствии с расчитанными налогами
+	 * РїСЂРёРІРµРґРµРЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёРё РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ СЂР°СЃС‡РёС‚Р°РЅРЅС‹РјРё РЅР°Р»РѕРіР°РјРё
 	 * 
 	 * @param spec
 	 * @param allTaxes
@@ -397,20 +397,20 @@ public class DocumentTaxProcessorBean extends
 		int linkId = 0;
 		BigDecimal taxesOnPrice = BigDecimal.ZERO, taxesOnSum = BigDecimal.ZERO;
 		for (CalcTaxItem taxItem : allTaxes) {
-			//расчитываем сумму не включенных налогов для цены и суммы спецификации
+			//СЂР°СЃС‡РёС‚С‹РІР°РµРј СЃСѓРјРјСѓ РЅРµ РІРєР»СЋС‡РµРЅРЅС‹С… РЅР°Р»РѕРіРѕРІ РґР»СЏ С†РµРЅС‹ Рё СЃСѓРјРјС‹ СЃРїРµС†РёС„РёРєР°С†РёРё
 			if (!taxItem.calcLink.getIncluded()) {
 				taxesOnPrice = taxesOnPrice.add(taxItem.tax.getPriceElement());
 				taxesOnSum = taxesOnSum.add(taxItem.tax.getSumElement());
 			}
-			//на что начисляются налоги возмем из последней связи, для совместимости с предыдущей версией
-			//в данной реализации не поддерживается ситуация начисления налогов и на цену и на сумму в рамках
-			//одного вида начисления налогов
+			//РЅР° С‡С‚Рѕ РЅР°С‡РёСЃР»СЏСЋС‚СЃСЏ РЅР°Р»РѕРіРё РІРѕР·РјРµРј РёР· РїРѕСЃР»РµРґРЅРµР№ СЃРІСЏР·Рё, РґР»СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё СЃ РїСЂРµРґС‹РґСѓС‰РµР№ РІРµСЂСЃРёРµР№
+			//РІ РґР°РЅРЅРѕР№ СЂРµР°Р»РёР·Р°С†РёРё РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ СЃРёС‚СѓР°С†РёСЏ РЅР°С‡РёСЃР»РµРЅРёСЏ РЅР°Р»РѕРіРѕРІ Рё РЅР° С†РµРЅСѓ Рё РЅР° СЃСѓРјРјСѓ РІ СЂР°РјРєР°С…
+			//РѕРґРЅРѕРіРѕ РІРёРґР° РЅР°С‡РёСЃР»РµРЅРёСЏ РЅР°Р»РѕРіРѕРІ
 			if (taxItem.calcLink.getId() > linkId)
 				subject = taxItem.calcLink.getSubject();
 		}
-		//изменим спецификацию документа
+		//РёР·РјРµРЅРёРј СЃРїРµС†РёС„РёРєР°С†РёСЋ РґРѕРєСѓРјРµРЅС‚Р°
 		if (subject == null || CalcTaxesSubject.PRICE.equals(subject)) {
-			//налог на цену или нет налогов, если нет налогов то taxesOnPrice = 0
+			//РЅР°Р»РѕРі РЅР° С†РµРЅСѓ РёР»Рё РЅРµС‚ РЅР°Р»РѕРіРѕРІ, РµСЃР»Рё РЅРµС‚ РЅР°Р»РѕРіРѕРІ С‚Рѕ taxesOnPrice = 0
 			spec.setPrice(MathUtils.add(price, taxesOnPrice, roundContext));
 			if (spec.getQuantity() == null || MathUtils.compareToZero(spec.getQuantity()) == 0)
 				spec.setSumma(spec.getPrice());
@@ -418,7 +418,7 @@ public class DocumentTaxProcessorBean extends
 				spec.setSumma(MathUtils.multiply(spec.getPrice(), spec.getQuantity(), roundContext));
 		}
 		else if (CalcTaxesSubject.SUMMA.equals(subject)) {
-			//налог на сумму
+			//РЅР°Р»РѕРі РЅР° СЃСѓРјРјСѓ
 			spec.setSumma(MathUtils.add(sum, taxesOnSum, roundContext));
 			if (spec.getQuantity() == null || MathUtils.compareToZero(spec.getQuantity()) == 0)
 				spec.setPrice(spec.getSumma());
@@ -431,7 +431,7 @@ public class DocumentTaxProcessorBean extends
 	}
 	
 	/**
-	 * реализация расчета налогов
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СЂР°СЃС‡РµС‚Р° РЅР°Р»РѕРіРѕРІ
 	 * 
 	 * @param spec
 	 * @param allTaxes
@@ -451,7 +451,7 @@ public class DocumentTaxProcessorBean extends
 		if (getLogger().isDebugEnabled())
 			getLogger().debug("Calculate taxes for specification: " + spec.getId());
 		
-		//загрузим сущность если нет в сессии
+		//Р·Р°РіСЂСѓР·РёРј СЃСѓС‰РЅРѕСЃС‚СЊ РµСЃР»Рё РЅРµС‚ РІ СЃРµСЃСЃРёРё
 		if (!ServerUtils.getPersistentManager().contains(spec.getDocHead()))
 			spec.setDocHead(ServerUtils.getPersistentManager().find(DocHead.class, spec.getDocHead().getId()));
 		
@@ -467,7 +467,7 @@ public class DocumentTaxProcessorBean extends
 		if (getLogger().isDebugEnabled())
 			getLogger().debug("Calculate taxes for specification: " + spec.getId());
 		
-		//загрузим сущность если нет в сессии
+		//Р·Р°РіСЂСѓР·РёРј СЃСѓС‰РЅРѕСЃС‚СЊ РµСЃР»Рё РЅРµС‚ РІ СЃРµСЃСЃРёРё
 		if (!ServerUtils.getPersistentManager().contains(spec.getDocHead()))
 			spec.setDocHead(ServerUtils.getPersistentManager().find(DocHead.class, spec.getDocHead().getId()));
 		

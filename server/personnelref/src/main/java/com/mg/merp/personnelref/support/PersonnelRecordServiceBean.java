@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PersonnelRecordServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelRecord;
 
 /**
- * Реализация бизнес-компонента "Личное дело" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р›РёС‡РЅРѕРµ РґРµР»Рѕ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

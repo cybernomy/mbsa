@@ -29,7 +29,7 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 import com.mg.merp.warehouse.OrderSpecModelSupServiceLocal;
 
 /**
- * Контроллер формы поддержки заказов поставщиков
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р·Р°РєР°Р·РѕРІ РїРѕСЃС‚Р°РІС‰РёРєРѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: OrderHeadModelSupMt.java,v 1.8 2008/03/20 13:03:36 alikaev Exp $
@@ -40,11 +40,11 @@ public class OrderHeadModelSupMt extends DefaultCompoundMaintenanceForm implemen
 	private OrderSpecModelSupServiceLocal orderSpecModelSupService;
 	protected AttributeMap orderSpecModelSupProperties = new LocalDataTransferObject();
 	/**
-	 * контекст импорта для SearchHelp поля "Ответственный"
+	 * РєРѕРЅС‚РµРєСЃС‚ РёРјРїРѕСЂС‚Р° РґР»СЏ SearchHelp РїРѕР»СЏ "РћС‚РІРµС‚СЃС‚РІРµРЅРЅС‹Р№"
 	 */
 	protected String[] contractorResponsibleKinds;
 	/**
-	 * контекст импорта для SearchHelp поля "через кого"
+	 * РєРѕРЅС‚РµРєСЃС‚ РёРјРїРѕСЂС‚Р° РґР»СЏ SearchHelp РїРѕР»СЏ "С‡РµСЂРµР· РєРѕРіРѕ"
 	 */
 	protected String[] contractorThroughKinds;
 	

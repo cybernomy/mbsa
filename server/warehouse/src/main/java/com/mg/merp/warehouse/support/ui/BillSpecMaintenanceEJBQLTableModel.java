@@ -21,7 +21,7 @@ import com.mg.merp.document.model.DocSpec;
 import com.mg.merp.warehouse.model.BillSpec;
 
 /**
- * Вспомогательный класс для отображения формы спецификации счетов
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРµС†РёС„РёРєР°С†РёРё СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: BillSpecMaintenanceEJBQLTableModel.java,v 1.4 2009/02/05 10:03:53 sharapov Exp $ 

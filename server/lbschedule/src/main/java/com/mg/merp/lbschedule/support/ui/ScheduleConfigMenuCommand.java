@@ -27,7 +27,7 @@ import com.mg.merp.lbschedule.ScheduleConfigServiceLocal;
 import com.mg.merp.lbschedule.model.ScheduleConfig;
 
 /**
- * Контроллер комманды меню "Конфигурация модуля <Графики исполнения обязательств>"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРјРјР°РЅРґС‹ РјРµРЅСЋ "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <Р“СЂР°С„РёРєРё РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ>"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ScheduleConfigMenuCommand.java,v 1.3 2008/08/15 15:35:06 sharapov Exp $

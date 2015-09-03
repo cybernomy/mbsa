@@ -26,7 +26,7 @@ import com.mg.merp.reference.PriceTypeServiceLocal;
 import com.mg.merp.reference.model.PriceListHead;
 
 /**
- * Поиск типов цен из списка связей с прайс-листом
+ * РџРѕРёСЃРє С‚РёРїРѕРІ С†РµРЅ РёР· СЃРїРёСЃРєР° СЃРІСЏР·РµР№ СЃ РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРј
  * 
  * @author Oleg V. Safonov
  * @version $Id: PriceTypeBoundedSearchHelp.java,v 1.1 2007/05/10 07:31:13 safonov Exp $

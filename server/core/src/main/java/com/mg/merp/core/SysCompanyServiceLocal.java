@@ -18,14 +18,14 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.core.model.SysCompany;
 
 /**
- * Бизнес-компонент "Балансовая единица"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р‘Р°Р»Р°РЅСЃРѕРІР°СЏ РµРґРёРЅРёС†Р°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: SysCompanyServiceLocal.java,v 1.1 2007/09/20 15:04:48 safonov Exp $
  */
 public interface SysCompanyServiceLocal extends DataBusinessObjectService<SysCompany, Integer> {
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/core/SysCompany";
 }

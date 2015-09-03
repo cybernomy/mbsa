@@ -25,7 +25,7 @@ import com.mg.framework.service.jboss.EntityInterceptorManagerServiceMBean;
 import com.mg.merp.document.support.DocTypeInterceptorImpl;
 
 /**
- * Реализация сервиса перехватчика для обработки типов документов
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ РѕР±СЂР°Р±РѕС‚РєРё С‚РёРїРѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocTypeInterceptorService.java,v 1.2 2006/10/19 14:12:21 safonov Exp $

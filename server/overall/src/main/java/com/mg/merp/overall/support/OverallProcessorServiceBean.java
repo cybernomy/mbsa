@@ -21,7 +21,7 @@ import com.mg.framework.generic.AbstractPOJOBusinessObjectStatefulServiceBean;
 import com.mg.merp.overall.OverallProcessorServiceLocal;
 
 /**
- * Реализация процессора модуля "Спецодежда" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС†РµСЃСЃРѕСЂР° РјРѕРґСѓР»СЏ "РЎРїРµС†РѕРґРµР¶РґР°" 
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: OverallProcessorServiceBean.java,v 1.4 2008/06/30 04:19:36 alikaev Exp $

@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PersonnelLanguageServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelLanguage;
 
 /**
- * Реализация бизнес-компонента "Знание иностранных языков" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р—РЅР°РЅРёРµ РёРЅРѕСЃС‚СЂР°РЅРЅС‹С… СЏР·С‹РєРѕРІ" 
  * 
  * @author Artem V.Sharapov
  * @author leonova

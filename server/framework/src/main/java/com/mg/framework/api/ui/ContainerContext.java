@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * Среда контейнера выполнения WEB приложения
+ * РЎСЂРµРґР° РєРѕРЅС‚РµР№РЅРµСЂР° РІС‹РїРѕР»РЅРµРЅРёСЏ WEB РїСЂРёР»РѕР¶РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ContainerContext.java,v 1.1 2007/11/09 11:50:39 safonov Exp $
@@ -29,51 +29,51 @@ import javax.servlet.http.HttpSession;
 public interface ContainerContext {
 
 	/**
-	 * получить HTTP сессию
+	 * РїРѕР»СѓС‡РёС‚СЊ HTTP СЃРµСЃСЃРёСЋ
 	 * 
-	 * @return	HTTP сессия
+	 * @return	HTTP СЃРµСЃСЃРёСЏ
 	 */
 	HttpSession getHttpSession();
 	
 	/**
-	 * получить контекст сервлета
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС‚РµРєСЃС‚ СЃРµСЂРІР»РµС‚Р°
 	 * 
-	 * @return	контекст сервлета
+	 * @return	РєРѕРЅС‚РµРєСЃС‚ СЃРµСЂРІР»РµС‚Р°
 	 */
 	ServletContext getServletContext();
 	
 	/**
-	 * получить HTTP запрос
+	 * РїРѕР»СѓС‡РёС‚СЊ HTTP Р·Р°РїСЂРѕСЃ
 	 * 
-	 * @return	HTTP запрос
+	 * @return	HTTP Р·Р°РїСЂРѕСЃ
 	 */
 	HttpServletRequest getServletRequest();
 
 	/**
-	 * получить HTTP ответ
+	 * РїРѕР»СѓС‡РёС‚СЊ HTTP РѕС‚РІРµС‚
 	 * 
-	 * @return	HTTP ответ
+	 * @return	HTTP РѕС‚РІРµС‚
 	 */
 	HttpServletResponse getServletResponse();
 	
 	/**
-	 * получить конфигурацию сервлета
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ СЃРµСЂРІР»РµС‚Р°
 	 * 
-	 * @return	конфигурация сервлета
+	 * @return	РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ СЃРµСЂРІР»РµС‚Р°
 	 */
 	ServletConfig getServletConfig();
 
 	/**
-	 * получить URL web сервера 
+	 * РїРѕР»СѓС‡РёС‚СЊ URL web СЃРµСЂРІРµСЂР° 
 	 * 
-	 * @return	URL web сервера
+	 * @return	URL web СЃРµСЂРІРµСЂР°
 	 */
 	String getServerURL();
 	
 	/**
-	 * получить URL web приложения
+	 * РїРѕР»СѓС‡РёС‚СЊ URL web РїСЂРёР»РѕР¶РµРЅРёСЏ
 	 * 
-	 * @return	URL web приложения
+	 * @return	URL web РїСЂРёР»РѕР¶РµРЅРёСЏ
 	 */
 	String getApplicationURL();
 	

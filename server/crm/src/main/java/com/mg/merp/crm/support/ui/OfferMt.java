@@ -28,7 +28,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.crm.LinkedDocumentServiceLocal;
 
 /**
- * Контроллер формы поддержи бизнес-компонента "Предложения"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶Рё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРµРґР»РѕР¶РµРЅРёСЏ"
  * 
  * @author leonova
  * @version $Id: OfferMt.java,v 1.4 2008/03/18 12:14:47 alikaev Exp $

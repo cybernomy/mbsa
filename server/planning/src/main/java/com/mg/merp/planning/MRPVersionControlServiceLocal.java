@@ -17,7 +17,7 @@ package com.mg.merp.planning;
 import com.mg.merp.planning.model.MrpVersionControl;
 
 /**
- * Бизнес-компонент "Версии ППМ"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РµСЂСЃРёРё РџРџРњ"
  * 
  * @author leonova
  * @version $Id: MRPVersionControlServiceLocal.java,v 1.2 2007/07/30 10:37:51 safonov Exp $
@@ -26,7 +26,7 @@ public interface MRPVersionControlServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<MrpVersionControl, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/planning/MRPVersionControl";
 }

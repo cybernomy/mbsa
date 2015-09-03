@@ -25,7 +25,7 @@ import com.mg.merp.finance.FeatureServiceLocal;
 import com.mg.merp.finance.model.Account;
 
 /**
- * Бизнес-компонент "Признаки финансового учета" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРёР·РЅР°РєРё С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°" 
  * 
  * @author leonova
  * @version $Id: FeatureServiceBean.java,v 1.4 2006/10/26 07:05:14 leonova Exp $

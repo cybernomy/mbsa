@@ -20,7 +20,7 @@ import com.mg.merp.table.model.PatternHead;
 import com.mg.merp.table.model.PatternSpec;
 
 /**
- * Бизнес-компонент "Спецификация шаблона графика"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ С€Р°Р±Р»РѕРЅР° РіСЂР°С„РёРєР°"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -29,20 +29,20 @@ import com.mg.merp.table.model.PatternSpec;
 public interface PatternSpecServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PatternSpec, Integer> {
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/table/PatternSpec"; //$NON-NLS-1$
 
 	/**
-	 * Изменить спецификацию шаблона
-	 * @param specList - список позиций
+	 * РР·РјРµРЅРёС‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ С€Р°Р±Р»РѕРЅР°
+	 * @param specList - СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№
 	 */
 	void updateSpecs(List<PatternSpec[]> specList);
 	
 	/**
-	 * Загрузить спецификацию шаблона
-	 * @param patternHead - заголовок шаблона
-	 * @return список позиций
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ С€Р°Р±Р»РѕРЅР°
+	 * @param patternHead - Р·Р°РіРѕР»РѕРІРѕРє С€Р°Р±Р»РѕРЅР°
+	 * @return СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№
 	 */
 	List<PatternSpec> loadSpecs(PatternHead patternHead);
 	

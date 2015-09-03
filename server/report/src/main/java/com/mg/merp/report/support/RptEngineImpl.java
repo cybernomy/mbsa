@@ -84,7 +84,7 @@ import com.mg.merp.report.parameters.support.SelectionChoiceImpl;
 import com.mg.merp.report.support.ui.ReportParametersDialogImpl;
 
 /**
- * Реализация генератора отчётов
+ * Р РµР°Р»РёР·Р°С†РёСЏ РіРµРЅРµСЂР°С‚РѕСЂР° РѕС‚С‡С‘С‚РѕРІ
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -108,7 +108,7 @@ public class RptEngineImpl {
 
 	private Map<String, ReportParameter> reportParams;
 	/**
-	 * список параметров установленных через API запуска отчета
+	 * СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹С… С‡РµСЂРµР· API Р·Р°РїСѓСЃРєР° РѕС‚С‡РµС‚Р°
 	 */
 	private Set<String> externalParams;
 	
@@ -117,8 +117,8 @@ public class RptEngineImpl {
 	private Map<String, Object> context;
 	
 	/**
-	 * BIRT не работает с именованными параметрами. Используется для
-	 * установления соответствия между порядковым номером и именем параметром
+	 * BIRT РЅРµ СЂР°Р±РѕС‚Р°РµС‚ СЃ РёРјРµРЅРѕРІР°РЅРЅС‹РјРё РїР°СЂР°РјРµС‚СЂР°РјРё. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ
+	 * СѓСЃС‚Р°РЅРѕРІР»РµРЅРёСЏ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёСЏ РјРµР¶РґСѓ РїРѕСЂСЏРґРєРѕРІС‹Рј РЅРѕРјРµСЂРѕРј Рё РёРјРµРЅРµРј РїР°СЂР°РјРµС‚СЂРѕРј
 	 * 
 	 */
 	private Map<String, ArrayList<String>> datasetParams = new LinkedHashMap<String, ArrayList<String>>();
@@ -135,10 +135,10 @@ public class RptEngineImpl {
 	}
 
 	/**
-	 * загрузить список значений параметра отчета
+	 * Р·Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№ РїР°СЂР°РјРµС‚СЂР° РѕС‚С‡РµС‚Р°
 	 * 
-	 * @param paramName	имя параметра
-	 * @return	список значений
+	 * @param paramName	РёРјСЏ РїР°СЂР°РјРµС‚СЂР°
+	 * @return	СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№
 	 */
 	public List<SelectionChoice> getParameterSelectionList(String paramName) {
 		IGetParameterDefinitionTask task = null;
@@ -157,12 +157,12 @@ public class RptEngineImpl {
 	}
 
 	/**
-	 * загрузить список значений каскадного параметра
+	 * Р·Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№ РєР°СЃРєР°РґРЅРѕРіРѕ РїР°СЂР°РјРµС‚СЂР°
 	 * 
-	 * @param paramName	имя параметра
-	 * @param groupName	имя каскадной группы
-	 * @param groupKeys	список значений параметров находящихся выше по иерархии в каскадной группе
-	 * @return	список значений
+	 * @param paramName	РёРјСЏ РїР°СЂР°РјРµС‚СЂР°
+	 * @param groupName	РёРјСЏ РєР°СЃРєР°РґРЅРѕР№ РіСЂСѓРїРїС‹
+	 * @param groupKeys	СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№ РїР°СЂР°РјРµС‚СЂРѕРІ РЅР°С…РѕРґСЏС‰РёС…СЃСЏ РІС‹С€Рµ РїРѕ РёРµСЂР°СЂС…РёРё РІ РєР°СЃРєР°РґРЅРѕР№ РіСЂСѓРїРїРµ
+	 * @return	СЃРїРёСЃРѕРє Р·РЅР°С‡РµРЅРёР№
 	 */
 	@SuppressWarnings("deprecation")
 	public List<SelectionChoice> getSelectionListForCascadingGroup(String paramName, String groupName, Object[] groupKeys) {
@@ -183,20 +183,20 @@ public class RptEngineImpl {
 	}
 
 	/**
-	 * найти параметр отчета по имени
+	 * РЅР°Р№С‚Рё РїР°СЂР°РјРµС‚СЂ РѕС‚С‡РµС‚Р° РїРѕ РёРјРµРЅРё
 	 * 
-	 * @param name	имя параметра
-	 * @return	параметр или <code>null</code> если не найден
+	 * @param name	РёРјСЏ РїР°СЂР°РјРµС‚СЂР°
+	 * @return	РїР°СЂР°РјРµС‚СЂ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	public ReportParameter findReportParameter(String name) {
 		return reportParams.get(name);
 	}
 
 	/**
-	 * загрузить список параметров группы
+	 * Р·Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ РіСЂСѓРїРїС‹
 	 * 
-	 * @param groupName	имя группы
-	 * @return	список параметров
+	 * @param groupName	РёРјСЏ РіСЂСѓРїРїС‹
+	 * @return	СЃРїРёСЃРѕРє РїР°СЂР°РјРµС‚СЂРѕРІ
 	 */
 	public List<ReportParameter> findGroupReportParameters(String groupName) {
 		List<ReportParameter> result = new ArrayList<ReportParameter>();
@@ -208,7 +208,7 @@ public class RptEngineImpl {
 	}
 
 	/**
-	 * Заполнение отчёта
+	 * Р—Р°РїРѕР»РЅРµРЅРёРµ РѕС‚С‡С‘С‚Р°
 	 */
 	private void fillReport(RptMain report, RptProperties properties) {
 		String reportDoc = generateReportFileName(report, properties);
@@ -254,11 +254,11 @@ public class RptEngineImpl {
 	}
 
 	private void setupReportContext(Map<String, Object> reportContext, RptProperties properties) {
-		// драйвер не имеет прямого доступа к этим параметрам. Хотя, может это и
-		// не надо
+		// РґСЂР°Р№РІРµСЂ РЅРµ РёРјРµРµС‚ РїСЂСЏРјРѕРіРѕ РґРѕСЃС‚СѓРїР° Рє СЌС‚РёРј РїР°СЂР°РјРµС‚СЂР°Рј. РҐРѕС‚СЏ, РјРѕР¶РµС‚ СЌС‚Рѕ Рё
+		// РЅРµ РЅР°РґРѕ
 		reportContext.put(REPORT_PARAMS, reportParams);
-		// BIRT не даёт работать с поименованными параметрами, приходится
-		// обходить
+		// BIRT РЅРµ РґР°С‘С‚ СЂР°Р±РѕС‚Р°С‚СЊ СЃ РїРѕРёРјРµРЅРѕРІР°РЅРЅС‹РјРё РїР°СЂР°РјРµС‚СЂР°РјРё, РїСЂРёС…РѕРґРёС‚СЃСЏ
+		// РѕР±С…РѕРґРёС‚СЊ
 		reportContext.put(DATASET_PARAMS, datasetParams);
 
 		reportContext.put(ENTITY_IDS, properties.getEntityIds());
@@ -358,8 +358,8 @@ public class RptEngineImpl {
 		}
 		
 		/*
-		 * BIRT не даёт работать с поименованными параметрами, приходится
-		 * обходить
+		 * BIRT РЅРµ РґР°С‘С‚ СЂР°Р±РѕС‚Р°С‚СЊ СЃ РїРѕРёРјРµРЅРѕРІР°РЅРЅС‹РјРё РїР°СЂР°РјРµС‚СЂР°РјРё, РїСЂРёС…РѕРґРёС‚СЃСЏ
+		 * РѕР±С…РѕРґРёС‚СЊ
 		 */
 		List<DataSetHandle> dshL = (List<DataSetHandle>) design.getDesignHandle().getModuleHandle().getAllDataSets();
 
@@ -404,7 +404,7 @@ public class RptEngineImpl {
 	}
 	
 	private void internalShowReport(RptMain report, RptProperties properties, boolean showParams) {
-		//используем BIRT Report Viewer только для HTML отчетов, остальные сразу генерируем в нужном формате
+		//РёСЃРїРѕР»СЊР·СѓРµРј BIRT Report Viewer С‚РѕР»СЊРєРѕ РґР»СЏ HTML РѕС‚С‡РµС‚РѕРІ, РѕСЃС‚Р°Р»СЊРЅС‹Рµ СЃСЂР°Р·Сѓ РіРµРЅРµСЂРёСЂСѓРµРј РІ РЅСѓР¶РЅРѕРј С„РѕСЂРјР°С‚Рµ
 		if (properties.getOutputFormat() == null || properties.getOutputFormat() == RptProperties.OutputFormat.HTML) {
 			StringBuilder sb1 = new StringBuilder(reportFolder).append(File.separatorChar)
 					.append("report").append(Math.abs(new Random().nextInt()))
@@ -438,7 +438,7 @@ public class RptEngineImpl {
 	private void showHTMLReportViewer(RptMain report, String reportFileName, RptProperties properties, boolean showParams) {
 		setupReportContext(context, properties);
 		
-		//документация по BIRT Viewer
+		//РґРѕРєСѓРјРµРЅС‚Р°С†РёСЏ РїРѕ BIRT Viewer
 		//http://www.eclipse.org/birt/phoenix/deploy/viewerUsage2.2.php
 		StringBuilder sb = new StringBuilder(htmlReportViewerApp).append("/frameset?__report=")
 				.append(StringUtils.encodeBase64(reportFileName)).append("&__encodedPaths=true")
@@ -448,7 +448,7 @@ public class RptEngineImpl {
 				.append("&__locale=").append(ServerUtils.getUserLocale())
 				.append("&").append(VIEWER_CONTEXT_PARAM_NAME).append("=").append(context.get(CONTEXT_ID));
 		
-		//формирование параметров отчета
+		//С„РѕСЂРјРёСЂРѕРІР°РЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ РѕС‚С‡РµС‚Р°
 		for (String key : reportParams.keySet()) {
 			ReportParameter param = reportParams.get(key);
 			Object paramValue = null;
@@ -480,27 +480,27 @@ public class RptEngineImpl {
 	}
 	
 	/**
-	 * Генерация отчёта
+	 * Р“РµРЅРµСЂР°С†РёСЏ РѕС‚С‡С‘С‚Р°
 	 * 
-	 * @param report		отчет
-	 * @param properties	параметры генерации
+	 * @param report		РѕС‚С‡РµС‚
+	 * @param properties	РїР°СЂР°РјРµС‚СЂС‹ РіРµРЅРµСЂР°С†РёРё
 	 */
 	public void runAndRenderReport(RptMain report, RptProperties properties) {
 		internalRun(ServerUtils.getPersistentManager().find(RptMain.class, report.getId()), properties);
 	}
 
 	/**
-	 * Запрос параметров отчёта
+	 * Р—Р°РїСЂРѕСЃ РїР°СЂР°РјРµС‚СЂРѕРІ РѕС‚С‡С‘С‚Р°
 	 * 
 	 */
 	private void executeParamsDialog(final RptMain report, final RptProperties properties) {
 		if (report.isAskParams() && properties.isShowParametersDialog()) {
 			ReportParametersDialog dlg = null;
 			if (report.getParamsFormName() != null)
-				// запрос параметров с помощью формы пользователя
+				// Р·Р°РїСЂРѕСЃ РїР°СЂР°РјРµС‚СЂРѕРІ СЃ РїРѕРјРѕС‰СЊСЋ С„РѕСЂРјС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 				dlg = (ReportParametersDialog) UIProducer.produceForm(report.getParamsFormName());
 			else
-				// автоматическое создание формы
+				// Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРµ СЃРѕР·РґР°РЅРёРµ С„РѕСЂРјС‹
 				dlg = (ReportParametersDialog) UIProducer.produceFormFromString(
 						ReportParametersDialogImpl.createForm(report, reportParams));
 
@@ -524,7 +524,7 @@ public class RptEngineImpl {
 	}
 
 	/**
-	 * сохранение параметров отчета
+	 * СЃРѕС…СЂР°РЅРµРЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ РѕС‚С‡РµС‚Р°
 	 * 
 	 * @param report
 	 */
@@ -532,7 +532,7 @@ public class RptEngineImpl {
 		try {
 			UIProfile profile = getReportUIProfile(report);
 			for (Map.Entry<String, ReportParameter> entry : reportParams.entrySet()) {
-				//не сохраняем системные параметры
+				//РЅРµ СЃРѕС…СЂР°РЅСЏРµРј СЃРёСЃС‚РµРјРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹
 				if (!entry.getKey().startsWith("__"))
 					profile.setProperty(entry.getKey(), DataUtils.valueToString(entry.getValue().getValue()));
 			}
@@ -543,7 +543,7 @@ public class RptEngineImpl {
 	}
 
 	/**
-	 * восстановление парамтеров отчета
+	 * РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёРµ РїР°СЂР°РјС‚РµСЂРѕРІ РѕС‚С‡РµС‚Р°
 	 * 
 	 * @param report
 	 */
@@ -551,7 +551,7 @@ public class RptEngineImpl {
 		try {
 			UIProfile profile = getReportUIProfile(report);
 			for (Map.Entry<String, ReportParameter> entry : reportParams.entrySet()) {
-				//не восстанавливаем системные и установленные через API параметры
+				//РЅРµ РІРѕСЃСЃС‚Р°РЅР°РІР»РёРІР°РµРј СЃРёСЃС‚РµРјРЅС‹Рµ Рё СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рµ С‡РµСЂРµР· API РїР°СЂР°РјРµС‚СЂС‹
 				if (!entry.getKey().startsWith("__") && !externalParams.contains(entry.getKey())) {
 					String propValue = profile.getProperty(entry.getKey());
 					if (propValue != null)
@@ -564,11 +564,11 @@ public class RptEngineImpl {
 	}
 	
 	/**
-	 * генерация имени файла документа отчета
+	 * РіРµРЅРµСЂР°С†РёСЏ РёРјРµРЅРё С„Р°Р№Р»Р° РґРѕРєСѓРјРµРЅС‚Р° РѕС‚С‡РµС‚Р°
 	 * 
 	 * @param rptMain
 	 * @param properties
-	 * @return	имя файла документа отчёта
+	 * @return	РёРјСЏ С„Р°Р№Р»Р° РґРѕРєСѓРјРµРЅС‚Р° РѕС‚С‡С‘С‚Р°
 	 */
 	private static String generateReportFileName(RptMain rptMain, RptProperties properties) {
 		return new StringBuilder(ServerUtils.getServerTempDir().getAbsolutePath()).append(File.separatorChar)
@@ -616,9 +616,9 @@ public class RptEngineImpl {
 	}
 	
 	/**
-	 * Отображение отчёта
+	 * РћС‚РѕР±СЂР°Р¶РµРЅРёРµ РѕС‚С‡С‘С‚Р°
 	 * 
-	 * @param path	имя файла отчёта
+	 * @param path	РёРјСЏ С„Р°Р№Р»Р° РѕС‚С‡С‘С‚Р°
 	 */
 	private void showReport(RptMain report, byte[] reportResult, RptProperties properties) {
 		UIUtils.showDocument(new UniversalFileWebResourceProvider(getMimeType(properties),

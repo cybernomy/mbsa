@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.MilitaryRankKindServiceLocal;
 import com.mg.merp.personnelref.model.MilitaryRankKind;
 
 /**
- * Бизнес-компонент "Составы воинских званий" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРѕСЃС‚Р°РІС‹ РІРѕРёРЅСЃРєРёС… Р·РІР°РЅРёР№" 
  * 
  * @author leonova
  * @version $Id: MilitaryRankKindServiceBean.java,v 1.4 2006/10/20 05:55:13 leonova Exp $

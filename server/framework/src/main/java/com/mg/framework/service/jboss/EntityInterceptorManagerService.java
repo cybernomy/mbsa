@@ -23,7 +23,7 @@ import com.mg.framework.api.orm.PersistentObject;
 import com.mg.framework.service.EntityInterceptorManagerImpl;
 
 /**
- * Реализация сервиса менеджера перехватчиков действий над объектами сущностями
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РјРµРЅРµРґР¶РµСЂР° РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РґРµР№СЃС‚РІРёР№ РЅР°Рґ РѕР±СЉРµРєС‚Р°РјРё СЃСѓС‰РЅРѕСЃС‚СЏРјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityInterceptorManagerService.java,v 1.4 2007/12/17 09:12:07 safonov Exp $

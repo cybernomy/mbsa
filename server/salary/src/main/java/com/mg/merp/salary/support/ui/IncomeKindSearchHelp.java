@@ -19,7 +19,7 @@ import com.mg.framework.support.ui.UIProducer;
 import com.mg.framework.support.ui.UIUtils;
 
 /**
- * Поисковик сущностей "Вид дохода"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "Р’РёРґ РґРѕС…РѕРґР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: IncomeKindSearchHelp.java,v 1.1 2007/07/18 08:04:40 sharapov Exp $

@@ -17,7 +17,7 @@ package com.mg.framework.api.orm;
 import java.io.Serializable;
 
 /**
- * Фабрика создания сортировки запроса
+ * Р¤Р°Р±СЂРёРєР° СЃРѕР·РґР°РЅРёСЏ СЃРѕСЂС‚РёСЂРѕРІРєРё Р·Р°РїСЂРѕСЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: Order.java,v 1.2 2006/12/12 13:54:52 safonov Exp $

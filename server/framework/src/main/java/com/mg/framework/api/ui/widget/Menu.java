@@ -15,7 +15,7 @@
 package com.mg.framework.api.ui.widget;
 
 /**
- * Элемент "Меню"
+ * Р­Р»РµРјРµРЅС‚ "РњРµРЅСЋ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: Menu.java,v 1.1 2007/11/15 14:32:22 safonov Exp $
@@ -23,10 +23,10 @@ package com.mg.framework.api.ui.widget;
 public interface Menu extends MenuItem {
 
 	/**
-	 * получить элемент меню по наименованию
+	 * РїРѕР»СѓС‡РёС‚СЊ СЌР»РµРјРµРЅС‚ РјРµРЅСЋ РїРѕ РЅР°РёРјРµРЅРѕРІР°РЅРёСЋ
 	 * 
-	 * @param id	имя элемента меню
-	 * @return	элемент меню или <code>null</code> если не найден
+	 * @param id	РёРјСЏ СЌР»РµРјРµРЅС‚Р° РјРµРЅСЋ
+	 * @return	СЌР»РµРјРµРЅС‚ РјРµРЅСЋ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	MenuItem getMenuItem(String id);
 

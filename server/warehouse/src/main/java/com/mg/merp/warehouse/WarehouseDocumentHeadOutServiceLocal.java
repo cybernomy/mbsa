@@ -17,7 +17,7 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.StockDocumentHead;
 
 /**
- * Бизнес-компонент "Расходные ордера"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р Р°СЃС…РѕРґРЅС‹Рµ РѕСЂРґРµСЂР°"
  * 
  * @author leonova
  * @version $Id: WarehouseDocumentHeadOutServiceLocal.java,v 1.4 2007/09/07 12:23:15 safonov Exp $
@@ -26,12 +26,12 @@ public interface WarehouseDocumentHeadOutServiceLocal
 		extends com.mg.merp.document.GoodsDocument<StockDocumentHead, Integer, WarehouseDocumentHeadModelOutServiceLocal, WarehouseDocumentSpecOutServiceLocal>, DiscountDocument {
 
 	/**
-	 * тип папки для приходных ордеров
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РїСЂРёС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ
 	 */
 	final static short FOLDER_PART = 31;
 
 	/**
-	 * docsection для приходных ордеров
+	 * docsection РґР»СЏ РїСЂРёС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ
 	 */
 	final static short DOCSECTION = 17;
 

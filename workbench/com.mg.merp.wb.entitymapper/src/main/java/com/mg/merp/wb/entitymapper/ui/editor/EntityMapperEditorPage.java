@@ -47,7 +47,7 @@ import com.mg.merp.wb.core.ui.editor.StandartEditorPage;
 import com.mg.merp.wb.entitymapper.Activator;
 
 /**
- * Содержание формы редактирования маппинга преобразования классов
+ * РЎРѕРґРµСЂР¶Р°РЅРёРµ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РјР°РїРїРёРЅРіР° РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РєР»Р°СЃСЃРѕРІ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: EntityMapperEditorPage.java,v 1.1 2007/05/07 13:09:12 poroxnenko Exp $
@@ -55,7 +55,7 @@ import com.mg.merp.wb.entitymapper.Activator;
 public class EntityMapperEditorPage extends StandartEditorPage<EntityTransformerMapping> {
 
 	/**
-	 * Данные маппинга преобразования классов
+	 * Р”Р°РЅРЅС‹Рµ РјР°РїРїРёРЅРіР° РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РєР»Р°СЃСЃРѕРІ
 	 */
 	private EntityTransformerMapping mapping;
 
@@ -78,22 +78,22 @@ public class EntityMapperEditorPage extends StandartEditorPage<EntityTransformer
 	private static final int APPLAYER_FIELD_WIDTH = 30;
 
 	/**
-	 * Текстовое поле, содержащее уникальный идентификатор маппинга
+	 * РўРµРєСЃС‚РѕРІРѕРµ РїРѕР»Рµ, СЃРѕРґРµСЂР¶Р°С‰РµРµ СѓРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РјР°РїРїРёРЅРіР°
 	 */
 	private Text tMapId = null;
 
 	/**
-	 * Уровень приложения
+	 * РЈСЂРѕРІРµРЅСЊ РїСЂРёР»РѕР¶РµРЅРёСЏ
 	 */
 	private Spinner spAppLayer = null;
 
 	/**
-	 * Текстовое поле, содержащее имя класса А
+	 * РўРµРєСЃС‚РѕРІРѕРµ РїРѕР»Рµ, СЃРѕРґРµСЂР¶Р°С‰РµРµ РёРјСЏ РєР»Р°СЃСЃР° Рђ
 	 */
 	private Text tClassAName = null;
 	
 	/**
-	 * Текстовое поле, содержащее имя класса B
+	 * РўРµРєСЃС‚РѕРІРѕРµ РїРѕР»Рµ, СЃРѕРґРµСЂР¶Р°С‰РµРµ РёРјСЏ РєР»Р°СЃСЃР° B
 	 */
 	private Text tClassBName = null;
 

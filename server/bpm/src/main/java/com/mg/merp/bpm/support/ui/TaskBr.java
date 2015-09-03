@@ -29,7 +29,7 @@ import com.mg.framework.utils.MiscUtils;
 import com.mg.merp.bpm.BusinessProccessManagerServiceLocal;
 
 /**
- * Контроллер формы списка задач для пользователя или группы пользователей
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р·Р°РґР°С‡ РґР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РёР»Рё РіСЂСѓРїРїС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: TaskBr.java,v 1.3 2008/03/11 08:29:39 sharapov Exp $

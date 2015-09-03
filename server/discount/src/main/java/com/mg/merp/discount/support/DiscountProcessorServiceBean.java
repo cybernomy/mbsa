@@ -49,7 +49,7 @@ import com.mg.merp.document.model.DocSpec;
 import com.mg.merp.document.support.DocumentUtils;
 
 /**
- * Реализация бизнес-компонента "Процессор расчета скидок/наценок"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРѕС†РµСЃСЃРѕСЂ СЂР°СЃС‡РµС‚Р° СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -61,7 +61,7 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 	protected PromotionServiceLocal promotionService = (PromotionServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(PromotionServiceLocal.SERVICE_NAME);
 	protected Map<String, Object> processBAiContext = new HashMap<String, Object>();
 	protected OrmTemplate ormTemplate = OrmTemplate.getInstance();
-	protected ApplyDiscountListener аpplyDiscountListener;
+	protected ApplyDiscountListener Р°pplyDiscountListener;
 
 
 	private class RecursionBusinessAddinListenerImpl implements BusinessAddinListener<DiscountResult> {
@@ -85,7 +85,7 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 
 		public void completed(BusinessAddinEvent<DiscountResult> event) {
 			try {
-				//выполняем вызов расчета следующей в стеке скидке/наценки, накапливая при этом результат расчета
+				//РІС‹РїРѕР»РЅСЏРµРј РІС‹Р·РѕРІ СЂР°СЃС‡РµС‚Р° СЃР»РµРґСѓСЋС‰РµР№ РІ СЃС‚РµРєРµ СЃРєРёРґРєРµ/РЅР°С†РµРЅРєРё, РЅР°РєР°РїР»РёРІР°СЏ РїСЂРё СЌС‚РѕРј СЂРµР·СѓР»СЊС‚Р°С‚ СЂР°СЃС‡РµС‚Р°
 				BigDecimal discountValue = event.getResult().getDiscount();
 				if(discountValue != null)
 					discountResult.setDiscount(discountResult.getDiscount() == null ? discountValue : discountResult.getDiscount().add(discountValue));
@@ -94,7 +94,7 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 				discountResult.setIsApplied(event.getResult().getIsApplied());
 
 				if (getLogger().isDebugEnabled())
-					getLogger().debug(String.format("RecursionDiscountBAiListenerImpl сompleted: [Discount = %1$s]", discountResult.getDiscount())); //$NON-NLS-1$
+					getLogger().debug(String.format("RecursionDiscountBAiListenerImpl СЃompleted: [Discount = %1$s]", discountResult.getDiscount())); //$NON-NLS-1$
 
 				performCalculateDiscount(discounts, index + 1, params, discountResult, listener, event.getAddin());
 			} catch (RuntimeException e) {
@@ -125,7 +125,7 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 
 		public void completed(BusinessAddinEvent<PromotionDiscountResult> event) {
 			try {
-				// выполняем вызов расчета следующей в стеке позиции рекламного мероприятия, накапливая при этом результаты расчета
+				// РІС‹РїРѕР»РЅСЏРµРј РІС‹Р·РѕРІ СЂР°СЃС‡РµС‚Р° СЃР»РµРґСѓСЋС‰РµР№ РІ СЃС‚РµРєРµ РїРѕР·РёС†РёРё СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ, РЅР°РєР°РїР»РёРІР°СЏ РїСЂРё СЌС‚РѕРј СЂРµР·СѓР»СЊС‚Р°С‚С‹ СЂР°СЃС‡РµС‚Р°
 				BigDecimal discountValue = event.getResult().getDiscount();
 				if(discountValue != null)
 					promotionDiscountResult.setDiscount(promotionDiscountResult.getDiscount() == null ? discountValue : promotionDiscountResult.getDiscount().add(discountValue));
@@ -134,7 +134,7 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 				promotionDiscountResult.setIsApplied(event.getResult().getIsApplied());
 
 				if (getLogger().isDebugEnabled())
-					getLogger().debug(String.format("RecursionPromotionBAiListenerImpl сompleted: [Discount = %1$s]", promotionDiscountResult.getDiscount())); //$NON-NLS-1$
+					getLogger().debug(String.format("RecursionPromotionBAiListenerImpl СЃompleted: [Discount = %1$s]", promotionDiscountResult.getDiscount())); //$NON-NLS-1$
 
 				performCalculatePromotionDiscount(promotionLines, index + 1, params, promotionDiscountResult, listener, event.getAddin());
 			} catch (RuntimeException e) {
@@ -148,7 +148,7 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 		if (getLogger().isDebugEnabled())
 			getLogger().debug(String.format("PerformCalculateDiscount() [DiscountIndex = %1$s]", index)); //$NON-NLS-1$
 
-		//при достижении последнего элемента посылаем событие о завершении расчета
+		//РїСЂРё РґРѕСЃС‚РёР¶РµРЅРёРё РїРѕСЃР»РµРґРЅРµРіРѕ СЌР»РµРјРµРЅС‚Р° РїРѕСЃС‹Р»Р°РµРј СЃРѕР±С‹С‚РёРµ Рѕ Р·Р°РІРµСЂС€РµРЅРёРё СЂР°СЃС‡РµС‚Р°
 		if (index >= discounts.size()) {
 			listener.completed(new BusinessAddinEvent<DiscountResult>(businessAddin, discountResult));
 			return;
@@ -163,16 +163,16 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 	private void performCalculatePromotionDiscount(final List<PromotionLine> promotionLines, final int index, final Map<String, Object> params, final PromotionDiscountResult promotionDiscountResult, final BusinessAddinListener<PromotionDiscountResult> listener, BusinessAddin<PromotionDiscountResult> businessAddin) {
 		if (getLogger().isDebugEnabled())
 			getLogger().debug(String.format("PerformCalculateDiscount() [PromotionLineIndex = %1$s]", index)); //$NON-NLS-1$
-		// при достижении последнего рекламного мероприятия или 
-		// установленного признака "расчет скидок/наценок осуществляется в рамках одного рекламного мероприятия" 
-		// посылаем событие о завершении расчета
+		// РїСЂРё РґРѕСЃС‚РёР¶РµРЅРёРё РїРѕСЃР»РµРґРЅРµРіРѕ СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ РёР»Рё 
+		// СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅРѕРіРѕ РїСЂРёР·РЅР°РєР° "СЂР°СЃС‡РµС‚ СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ РІ СЂР°РјРєР°С… РѕРґРЅРѕРіРѕ СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ" 
+		// РїРѕСЃС‹Р»Р°РµРј СЃРѕР±С‹С‚РёРµ Рѕ Р·Р°РІРµСЂС€РµРЅРёРё СЂР°СЃС‡РµС‚Р°
 		if (index >= promotionLines.size() || promotionDiscountResult.isAlonePromotion()) {
 			listener.completed(new BusinessAddinEvent<PromotionDiscountResult>(businessAddin, promotionDiscountResult));
 			return;
 		}
 
 		PromotionLine promotionLine = promotionLines.get(index);
-		// выбор BAi РМ: BAi "позиции рекламного мероприятия" имеет приоритет выше чем BAi "рекламного мероприятия"
+		// РІС‹Р±РѕСЂ BAi Р Рњ: BAi "РїРѕР·РёС†РёРё СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ" РёРјРµРµС‚ РїСЂРёРѕСЂРёС‚РµС‚ РІС‹С€Рµ С‡РµРј BAi "СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ"
 		Repository promoBAi;
 		if(promotionLine.getPromotionType() != null)
 			promoBAi = promotionLine.getPromotionType().getBai();
@@ -248,20 +248,20 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 					getLogger().debug(String.format("Calculation discount by promotion completed [specID = %1$s] [promotionLineID = %2$s] CalculationResult([IsApplied = %3$s] [Discount = %4$s] [PriceWithDiscount = %5$s])", //$NON-NLS-1$
 							spec.getId(), promotionLine.getId(), result.getIsApplied(), result.getDiscount(), result.getPriceWithDiscount()));
 
-				if(result.getIsApplied()) { // если РМ действует
-					// если у позиции РМ установлен признак "разрешить применение с/н на документ"
+				if(result.getIsApplied()) { // РµСЃР»Рё Р Рњ РґРµР№СЃС‚РІСѓРµС‚
+					// РµСЃР»Рё Сѓ РїРѕР·РёС†РёРё Р Рњ СѓСЃС‚Р°РЅРѕРІР»РµРЅ РїСЂРёР·РЅР°Рє "СЂР°Р·СЂРµС€РёС‚СЊ РїСЂРёРјРµРЅРµРЅРёРµ СЃ/РЅ РЅР° РґРѕРєСѓРјРµРЅС‚"
 					if(promotionLine.getIsApplyDiscountOnDoc()) 
 						spec.setAttribute("DocDiscount", docHead.getAttribute("DiscountOnDoc")); //$NON-NLS-1$ //$NON-NLS-2$
 
-					if(result.getDiscount() != null) { // если расчитана скидка 
+					if(result.getDiscount() != null) { // РµСЃР»Рё СЂР°СЃС‡РёС‚Р°РЅР° СЃРєРёРґРєР° 
 						promotionDiscount = result.getDiscount();
 						spec.setAttribute("ExternalDiscountValue", promotionDiscount); //$NON-NLS-1$
 					}
-					else { // если расчитана цена со скидкой
+					else { // РµСЃР»Рё СЂР°СЃС‡РёС‚Р°РЅР° С†РµРЅР° СЃРѕ СЃРєРёРґРєРѕР№
 						spec.setAttribute("PriceWithDiscount", result.getPriceWithDiscount()); //$NON-NLS-1$
 						spec.setAttribute("Price1", null); //$NON-NLS-1$
 					}
-					// если у позиции РМ установлен признак "разрешить применение группы с/н"
+					// РµСЃР»Рё Сѓ РїРѕР·РёС†РёРё Р Рњ СѓСЃС‚Р°РЅРѕРІР»РµРЅ РїСЂРёР·РЅР°Рє "СЂР°Р·СЂРµС€РёС‚СЊ РїСЂРёРјРµРЅРµРЅРёРµ РіСЂСѓРїРїС‹ СЃ/РЅ"
 					spec.setBulkOperation(true);
 					specService.store(spec);
 					if(promotionLine.getIsApplyDiscountGroup())
@@ -281,16 +281,16 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 							@Override
 							public void completed(DiscountResult result) {
 								updateSpecByDiscountResult(spec, docHead, specService, result, promotionDiscount);
-								// выполнить расчет c/н для следующей позиции спецификации
+								// РІС‹РїРѕР»РЅРёС‚СЊ СЂР°СЃС‡РµС‚ c/РЅ РґР»СЏ СЃР»РµРґСѓСЋС‰РµР№ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
 								performApplyDiscount(specService, docHead, specs, index + 1);
 							}
 						});
-					else { // если у позиции РМ не установлен признак "разрешить применение группы с/н"
+					else { // РµСЃР»Рё Сѓ РїРѕР·РёС†РёРё Р Рњ РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ РїСЂРёР·РЅР°Рє "СЂР°Р·СЂРµС€РёС‚СЊ РїСЂРёРјРµРЅРµРЅРёРµ РіСЂСѓРїРїС‹ СЃ/РЅ"
 						specService.store(spec);
-						// выполнить расчет c/н для следующей позиции спецификации
+						// РІС‹РїРѕР»РЅРёС‚СЊ СЂР°СЃС‡РµС‚ c/РЅ РґР»СЏ СЃР»РµРґСѓСЋС‰РµР№ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
 						performApplyDiscount(specService, docHead, specs, index + 1);
 					}
-				} else // если РМ не действует, применить расчет группы с/н
+				} else // РµСЃР»Рё Р Рњ РЅРµ РґРµР№СЃС‚РІСѓРµС‚, РїСЂРёРјРµРЅРёС‚СЊ СЂР°СЃС‡РµС‚ РіСЂСѓРїРїС‹ СЃ/РЅ
 					calculateDiscountValue(docHead.getDiscountFolder(), spec, new CalculateDiscountListenerImpl(specService, docHead, specs, index) {
 
 						/* (non-Javadoc)
@@ -434,8 +434,8 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 	 */
 	@PermitAll
 	@Remove
-	public void applyDiscount(DocHead docHead, ApplyDiscountListener аpplyDiscountListener) {
-		initApplyDiscountListener(аpplyDiscountListener);
+	public void applyDiscount(DocHead docHead, ApplyDiscountListener Р°pplyDiscountListener) {
+		initApplyDiscountListener(Р°pplyDiscountListener);
 		applyDiscount(docHead);
 	}
 
@@ -444,8 +444,8 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 	 */
 	@PermitAll
 	@Remove
-	public void applyDiscount(DocHead docHead, List<DocSpec> specs, ApplyDiscountListener аpplyDiscountListener) {
-		initApplyDiscountListener(аpplyDiscountListener);
+	public void applyDiscount(DocHead docHead, List<DocSpec> specs, ApplyDiscountListener Р°pplyDiscountListener) {
+		initApplyDiscountListener(Р°pplyDiscountListener);
 		doApplyDiscount(docHead, specs);
 	}
 			
@@ -459,33 +459,33 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 	}
 	
 	/**
-	 * Инициализировать слушателя применения скидки/наценки
-	 * @param аpplyDiscountListener - слушатель применения скидки/наценки
+	 * РРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ СЃР»СѓС€Р°С‚РµР»СЏ РїСЂРёРјРµРЅРµРЅРёСЏ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
+	 * @param Р°pplyDiscountListener - СЃР»СѓС€Р°С‚РµР»СЊ РїСЂРёРјРµРЅРµРЅРёСЏ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
 	 */
-	private void initApplyDiscountListener(ApplyDiscountListener аpplyDiscountListener) {
-		this.аpplyDiscountListener = аpplyDiscountListener;
+	private void initApplyDiscountListener(ApplyDiscountListener Р°pplyDiscountListener) {
+		this.Р°pplyDiscountListener = Р°pplyDiscountListener;
 	}
 	
 	/**
-	 * Успешно завершить применение скидки/наценки
+	 * РЈСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РёС‚СЊ РїСЂРёРјРµРЅРµРЅРёРµ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
 	 */
 	private void completeApplyDiscount() {
-		if (аpplyDiscountListener != null)
-			аpplyDiscountListener.completed();
+		if (Р°pplyDiscountListener != null)
+			Р°pplyDiscountListener.completed();
 	}
 	
 	/**
-	 * Отменить применение скидки/наценки
+	 * РћС‚РјРµРЅРёС‚СЊ РїСЂРёРјРµРЅРµРЅРёРµ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
 	 */
 	private void abortApplyDiscount() {
-		if (аpplyDiscountListener != null)
-			аpplyDiscountListener.aborted();
+		if (Р°pplyDiscountListener != null)
+			Р°pplyDiscountListener.aborted();
 	}
 	
 	/**
-	 * Применить скидки/наценки на документ для позиций спецификации
-	 * @param docHead - документ
-	 * @param specs - список позиций спецификации
+	 * РџСЂРёРјРµРЅРёС‚СЊ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё РЅР° РґРѕРєСѓРјРµРЅС‚ РґР»СЏ РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
+	 * @param specs - СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	protected void doApplyDiscount(DocHead docHead, List<DocSpec> specs) {
 		if (getLogger().isDebugEnabled())
@@ -517,33 +517,33 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 	}
 
 	/**
-	 * Изменить позицию спецификации в соответствии с результами вычисления скидок/наценок
-	 * @param spec - позиция спецификации
-	 * @param docHead - заголовок документа
-	 * @param specService - сервис позиции спецификации
-	 * @param result - результат вычисления скидок/наценок
-	 * @param promotionDiscount - значение скидки/наченки по РМ
+	 * РР·РјРµРЅРёС‚СЊ РїРѕР·РёС†РёСЋ СЃРїРµС†РёС„РёРєР°С†РёРё РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ СЂРµР·СѓР»СЊС‚Р°РјРё РІС‹С‡РёСЃР»РµРЅРёСЏ СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє
+	 * @param spec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param docHead - Р·Р°РіРѕР»РѕРІРѕРє РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param specService - СЃРµСЂРІРёСЃ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param result - СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹С‡РёСЃР»РµРЅРёСЏ СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє
+	 * @param promotionDiscount - Р·РЅР°С‡РµРЅРёРµ СЃРєРёРґРєРё/РЅР°С‡РµРЅРєРё РїРѕ Р Рњ
 	 */
 	protected void updateSpecByDiscountResult(DocSpec spec, DocHead docHead, GoodsDocumentSpecification<DocSpec, Integer> specService, DiscountResult result, BigDecimal promotionDiscount) {
 		if(result.getIsApplied()) {
-			if(result.getIsApplyDiscountOnDoc()) // если разрешено применять "скидку на документ"
+			if(result.getIsApplyDiscountOnDoc()) // РµСЃР»Рё СЂР°Р·СЂРµС€РµРЅРѕ РїСЂРёРјРµРЅСЏС‚СЊ "СЃРєРёРґРєСѓ РЅР° РґРѕРєСѓРјРµРЅС‚"
 				spec.setAttribute("DocDiscount", docHead.getAttribute("DiscountOnDoc")); //$NON-NLS-1$ //$NON-NLS-2$
-			if(result.getDiscount() != null) // если расчитывалась скидка, то учтем скидку РМ
+			if(result.getDiscount() != null) // РµСЃР»Рё СЂР°СЃС‡РёС‚С‹РІР°Р»Р°СЃСЊ СЃРєРёРґРєР°, С‚Рѕ СѓС‡С‚РµРј СЃРєРёРґРєСѓ Р Рњ
 				spec.setAttribute("ExternalDiscountValue", result.getDiscount().add(promotionDiscount == null ? BigDecimal.ZERO : promotionDiscount)); //$NON-NLS-1$
-			else { // если расчитывалась цена со скидкой
+			else { // РµСЃР»Рё СЂР°СЃС‡РёС‚С‹РІР°Р»Р°СЃСЊ С†РµРЅР° СЃРѕ СЃРєРёРґРєРѕР№
 				spec.setAttribute("PriceWithDiscount", result.getPriceWithDiscount()); //$NON-NLS-1$
 				spec.setAttribute("Price1", null); //$NON-NLS-1$
 			}
-		} else // если скидка/наценка не действует в контексте бизнес-логики, то применить "скидку на документ"
+		} else // РµСЃР»Рё СЃРєРёРґРєР°/РЅР°С†РµРЅРєР° РЅРµ РґРµР№СЃС‚РІСѓРµС‚ РІ РєРѕРЅС‚РµРєСЃС‚Рµ Р±РёР·РЅРµСЃ-Р»РѕРіРёРєРё, С‚Рѕ РїСЂРёРјРµРЅРёС‚СЊ "СЃРєРёРґРєСѓ РЅР° РґРѕРєСѓРјРµРЅС‚"
 			spec.setAttribute("DocDiscount", docHead.getAttribute("DiscountOnDoc")); //$NON-NLS-1$ //$NON-NLS-2$
 		spec.setBulkOperation(true);
 		specService.store(spec);
 	}
 	
 	/**
-	 * Получить список скидок/наценок у которых установлен BAi расчета
-	 * @param discountGroup - папка скидок/наценок
-	 * @return список скидок/наценок у которых установлен BAi расчета
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє Сѓ РєРѕС‚РѕСЂС‹С… СѓСЃС‚Р°РЅРѕРІР»РµРЅ BAi СЂР°СЃС‡РµС‚Р°
+	 * @param discountGroup - РїР°РїРєР° СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє
+	 * @return СЃРїРёСЃРѕРє СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє Сѓ РєРѕС‚РѕСЂС‹С… СѓСЃС‚Р°РЅРѕРІР»РµРЅ BAi СЂР°СЃС‡РµС‚Р°
 	 */
 	protected List<Discount> getDiscounts(Folder discountGroup) {
 		return ormTemplate.findByCriteria(OrmTemplate.createCriteria(Discount.class)

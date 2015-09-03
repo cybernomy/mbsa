@@ -16,7 +16,7 @@ package com.mg.merp.mfreference.support.ui;
 
 
 /**
- * Поисковик "Образцов актов по списанию потерь материала"
+ * РџРѕРёСЃРєРѕРІРёРє "РћР±СЂР°Р·С†РѕРІ Р°РєС‚РѕРІ РїРѕ СЃРїРёСЃР°РЅРёСЋ РїРѕС‚РµСЂСЊ РјР°С‚РµСЂРёР°Р»Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ScrapMaterialModelSearchHelp.java,v 1.2 2007/01/13 15:44:06 sharapov Exp $
@@ -30,7 +30,7 @@ public class ScrapMaterialModelSearchHelp extends ModelSearchHelp {
 	protected short getDocSectionPrimaryKey() {
 		//return ScrapMaterialHeadServiceLocal.DOCSECTION;
 		/**
-		 * docsection для актов на списание потерь материалов
+		 * docsection РґР»СЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РјР°С‚РµСЂРёР°Р»РѕРІ
 		 */
 		return 12006;
 	}

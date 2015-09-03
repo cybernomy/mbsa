@@ -17,7 +17,7 @@ package com.mg.merp.salary.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Спецификация сводов н/у по аналитике" 
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёСЏ СЃРІРѕРґРѕРІ РЅ/Сѓ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ" 
  * 
  * @author Artem V. Sharapov
  * @version $Id: FeeSummarySpec.java,v 1.5 2007/08/27 06:17:21 sharapov Exp $

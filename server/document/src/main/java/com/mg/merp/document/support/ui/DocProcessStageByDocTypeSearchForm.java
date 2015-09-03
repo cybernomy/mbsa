@@ -24,7 +24,7 @@ import com.mg.merp.docprocess.model.DocProcessStage;
 import com.mg.merp.document.model.DocType;
 
 /**
- * Контроллер формы поиска сущностей этапов ДО конкретного типа документа
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ СЌС‚Р°РїРѕРІ Р”Рћ РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Artem V. Sharapov
  * @version $Id: DocProcessStageByDocTypeSearchForm.java,v 1.1 2008/08/15 06:27:14 sharapov Exp $
@@ -67,8 +67,8 @@ public class DocProcessStageByDocTypeSearchForm extends AbstractSearchForm {
 	}
 
 	/**
-	 * Установить параметры поиска
-	 * @param docType - тип документа
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РїРѕРёСЃРєР°
+	 * @param docType - С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	public void setSearchParams(DocType docType) {
 		this.docType = docType;

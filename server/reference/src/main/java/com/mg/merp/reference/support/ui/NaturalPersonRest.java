@@ -20,7 +20,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 
 /**
- * Контроллер формы условия отбора физических лиц
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёСЏ РѕС‚Р±РѕСЂР° С„РёР·РёС‡РµСЃРєРёС… Р»РёС†
  * 
  * @author leonova
  * @version $Id: NaturalPersonRest.java,v 1.5 2006/10/19 04:18:44 leonova Exp $ 

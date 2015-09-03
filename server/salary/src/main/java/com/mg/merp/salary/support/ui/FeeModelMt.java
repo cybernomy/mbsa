@@ -33,7 +33,7 @@ import com.mg.merp.salary.model.FeeModelParam;
 import com.mg.merp.salary.model.FeeRefParam;
 
 /**
- * Контроллер формы поддержки "Образцов начислений / удержаний"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РћР±СЂР°Р·С†РѕРІ РЅР°С‡РёСЃР»РµРЅРёР№ / СѓРґРµСЂР¶Р°РЅРёР№"
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -65,7 +65,7 @@ import com.mg.merp.paymentcontrol.model.TurnResult;
 import com.mg.merp.paymentcontrol.model.Version;
 
 /**
- * Контроллер формы "Планирование платежей"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ "РџР»Р°РЅРёСЂРѕРІР°РЅРёРµ РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmcPlaningDlg.java,v 1.2 2007/06/04 16:09:00 sharapov Exp $
@@ -318,8 +318,8 @@ public class PmcPlaningDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик кнопки "Исполнить обязательство"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РСЃРїРѕР»РЅРёС‚СЊ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionExecuteLiability(WidgetEvent event) {
 		Serializable[] liabilityIds = ((DefaultMaintenanceEJBQLTableModel) liabilityTable.getModel()).getSelectedPrimaryKeys();
@@ -335,24 +335,24 @@ public class PmcPlaningDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик КМ "Условия отбора"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РљРњ "РЈСЃР»РѕРІРёСЏ РѕС‚Р±РѕСЂР°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionShowRestriction(WidgetEvent event) {
 		pmcPlaningRest.run(true);
 	}
 
 	/**
-	 * Обработчик КМ "Обновить"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РљРњ "РћР±РЅРѕРІРёС‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionPlanTableRefresh(WidgetEvent event) {
 		globalRefresh();
 	}
 
 	/**
-	 * Обработчик кнопки "Переместить средства"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РџРµСЂРµРјРµСЃС‚РёС‚СЊ СЃСЂРµРґСЃС‚РІР°"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionTransferResources(WidgetEvent event) {
 		if(selectedPlanPaymentItem != null)
@@ -368,8 +368,8 @@ public class PmcPlaningDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Утвердить"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЈС‚РІРµСЂРґРёС‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionApprove(WidgetEvent event) {
 		Serializable[] executionIds = ((DefaultMaintenanceEJBQLTableModel) executionTable.getModel()).getSelectedPrimaryKeys();
@@ -380,8 +380,8 @@ public class PmcPlaningDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Снять утверждение"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЎРЅСЏС‚СЊ СѓС‚РІРµСЂР¶РґРµРЅРёРµ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionDisApprove(WidgetEvent event) {
 		Serializable[] executionIds = ((DefaultMaintenanceEJBQLTableModel) executionTable.getModel()).getSelectedPrimaryKeys();
@@ -392,8 +392,8 @@ public class PmcPlaningDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Удалить" (исполнение)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЈРґР°Р»РёС‚СЊ" (РёСЃРїРѕР»РЅРµРЅРёРµ)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRemove(WidgetEvent event) {
 		Serializable[] executionIds = ((DefaultMaintenanceEJBQLTableModel) executionTable.getModel()).getSelectedPrimaryKeys();
@@ -518,8 +518,8 @@ public class PmcPlaningDlg extends AbstractForm {
 	}	
 
 	/**
-	 * Расчитать строку оборотки
-	 * @param item - строка оборотки
+	 * Р Р°СЃС‡РёС‚Р°С‚СЊ СЃС‚СЂРѕРєСѓ РѕР±РѕСЂРѕС‚РєРё
+	 * @param item - СЃС‚СЂРѕРєР° РѕР±РѕСЂРѕС‚РєРё
 	 * @return
 	 */
 	private PlanPaymentItem recalcCurrentRow(PlanPaymentItem item) {
@@ -575,9 +575,9 @@ public class PmcPlaningDlg extends AbstractForm {
 	}
 	
 	/**
-	 * Обработчик пункта КМ "Поддержка образцов"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџРѕРґРґРµСЂР¶РєР° РѕР±СЂР°Р·С†РѕРІ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionShowLiabilityModel(WidgetEvent event) throws Exception {
 		final LiabilityModelServiceLocal service = (LiabilityModelServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/paymentcontrol/LiabilityModel"); //$NON-NLS-1$
@@ -586,9 +586,9 @@ public class PmcPlaningDlg extends AbstractForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Вставка с образцом"
-	 * @param event - событие
-	 * @throws Exception - ИС
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "Р’СЃС‚Р°РІРєР° СЃ РѕР±СЂР°Р·С†РѕРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
+	 * @throws Exception - РРЎ
 	 */
 	public void onActionInsertModel(WidgetEvent event) throws Exception {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.paymentcontrol.support.ui.LiabilityModelSearchHelp"); //$NON-NLS-1$
@@ -606,8 +606,8 @@ public class PmcPlaningDlg extends AbstractForm {
 	}
 
 	/**
-	 * Создание обязательства по образцу
-	 * @param model - образец
+	 * РЎРѕР·РґР°РЅРёРµ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР° РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param model - РѕР±СЂР°Р·РµС†
 	 */
 	private void doOnActionInsertModel(Liability model) {
 		Liability liability = liabilityService.createByPattern(model, liabilityService.getRootFolder());

@@ -23,7 +23,7 @@ import com.mg.framework.utils.MiscUtils;
 import com.mg.merp.mfreference.model.WeekCalendar;
 
 /**
- * Форма поиска бизнес-компонента "Недельный календар"
+ * Р¤РѕСЂРјР° РїРѕРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќРµРґРµР»СЊРЅС‹Р№ РєР°Р»РµРЅРґР°СЂ"
  * 
  * @author leonova
  * @version $Id: WeekCalendarSearchForm.java,v 1.2 2009/02/09 11:58:46 safonov Exp $

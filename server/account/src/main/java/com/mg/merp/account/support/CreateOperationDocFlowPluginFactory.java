@@ -33,7 +33,7 @@ import com.mg.merp.document.CreateDocumentDocFlowListener;
 import com.mg.merp.document.model.DocSection;
 
 /**
- * Реализация фабрики реализаций этапа ДО "Создание хозяйственной операции"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїР° Р”Рћ "РЎРѕР·РґР°РЅРёРµ С…РѕР·СЏР№СЃС‚РІРµРЅРЅРѕР№ РѕРїРµСЂР°С†РёРё"
  * 
  * @author Oleg V. Safonov
  * @author Konstantin S. Alikaev

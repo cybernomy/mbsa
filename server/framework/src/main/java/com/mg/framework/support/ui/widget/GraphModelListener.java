@@ -17,30 +17,30 @@ package com.mg.framework.support.ui.widget;
 import java.util.EventListener;
 
 /**
- * Слушатель модели графа
+ * РЎР»СѓС€Р°С‚РµР»СЊ РјРѕРґРµР»Рё РіСЂР°С„Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: GraphModelListener.java,v 1.2 2006/11/21 15:39:15 safonov Exp $
  */
 public interface GraphModelListener extends EventListener {
 	/**
-	 * обработчик события добавлен узел графа
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РґРѕР±Р°РІР»РµРЅ СѓР·РµР» РіСЂР°С„Р°
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	void vertexAdded(GraphModelEvent event);
 	
 	/**
-	 * обработчик события добавлено ребро графа
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РґРѕР±Р°РІР»РµРЅРѕ СЂРµР±СЂРѕ РіСЂР°С„Р°
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	void edgeAdded(GraphModelEvent event);
 	
 	/**
-	 * обработчик события удален элемент графа
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ СѓРґР°Р»РµРЅ СЌР»РµРјРµРЅС‚ РіСЂР°С„Р°
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	void cellRemoved(GraphModelEvent event);
 }

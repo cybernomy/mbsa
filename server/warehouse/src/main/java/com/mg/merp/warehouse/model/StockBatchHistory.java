@@ -17,7 +17,7 @@ package com.mg.merp.warehouse.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "История фактического движения по партии"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РСЃС‚РѕСЂРёСЏ С„Р°РєС‚РёС‡РµСЃРєРѕРіРѕ РґРІРёР¶РµРЅРёСЏ РїРѕ РїР°СЂС‚РёРё"
  * 
  * @author Artem V. Sharapov 
  * @version $Id: StockBatchHistory.java,v 1.5 2008/06/06 05:54:44 sharapov Exp $

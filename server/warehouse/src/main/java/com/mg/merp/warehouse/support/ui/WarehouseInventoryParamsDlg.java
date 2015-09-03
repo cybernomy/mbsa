@@ -18,7 +18,7 @@ import com.mg.framework.generic.ui.DefaultDialog;
 import com.mg.merp.warehouse.support.InventoryParametrs;
 
 /**
- * Контроллер диалога "Параметры инвентаризации склада"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "РџР°СЂР°РјРµС‚СЂС‹ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё СЃРєР»Р°РґР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: WarehouseInventoryParamsDlg.java,v 1.2 2007/11/13 09:47:21 alikaev Exp $
@@ -26,32 +26,32 @@ import com.mg.merp.warehouse.support.InventoryParametrs;
 public class WarehouseInventoryParamsDlg extends DefaultDialog {
 
 	/**
-	 * начало диапазона кодов позиций каталога
+	 * РЅР°С‡Р°Р»Рѕ РґРёР°РїР°Р·РѕРЅР° РєРѕРґРѕРІ РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР°
 	 */
 	private String catalogCodeFrom;
 
 	/**
-	 * конец диапазона кодов позиций каталога
+	 * РєРѕРЅРµС† РґРёР°РїР°Р·РѕРЅР° РєРѕРґРѕРІ РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР°
 	 */
 	private String catalogCodeTill;
 	
 	/**
-	 * Правила формирования строк по партиям(с учетом цены)
+	 * РџСЂР°РІРёР»Р° С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ СЃС‚СЂРѕРє РїРѕ РїР°СЂС‚РёСЏРј(СЃ СѓС‡РµС‚РѕРј С†РµРЅС‹)
 	 */
 	private InventoryParametrs.StockInventoryKind stockInventoryKind = InventoryParametrs.StockInventoryKind.ONEPRICEKIND;
 	
 	/**
-	 * 	правило формирования строк по партиям(с учетом МОЛ-ов)
+	 * 	РїСЂР°РІРёР»Рѕ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ СЃС‚СЂРѕРє РїРѕ РїР°СЂС‚РёСЏРј(СЃ СѓС‡РµС‚РѕРј РњРћР›-РѕРІ)
 	 */
 	private InventoryParametrs.MolInventoryKind molInventoryKind = InventoryParametrs.MolInventoryKind.ONEMOLKIND;
 	
 	/**
-	 * 	признак удаления спецификаций из акта инвентаризации перед инвентаризацией 
+	 * 	РїСЂРёР·РЅР°Рє СѓРґР°Р»РµРЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёР№ РёР· Р°РєС‚Р° РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё РїРµСЂРµРґ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРµР№ 
 	 */
 	private boolean isDeleteSpecList;
 
 	/**
-	 * 	признак включения позиций с нулевым остатком
+	 * 	РїСЂРёР·РЅР°Рє РІРєР»СЋС‡РµРЅРёСЏ РїРѕР·РёС†РёР№ СЃ РЅСѓР»РµРІС‹Рј РѕСЃС‚Р°С‚РєРѕРј
 	 */	
 	private boolean isIncludePositionsWithZeroRemn;
 	

@@ -17,7 +17,7 @@ package com.mg.merp.manufacture;
 import com.mg.merp.manufacture.model.JobLabor;
 
 /**
- * Бизнес-компонент "РС ЗНП"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р РЎ Р—РќРџ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: JobLaborServiceLocal.java,v 1.3 2007/07/30 10:28:17 safonov Exp $
@@ -26,7 +26,7 @@ public interface JobLaborServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<JobLabor, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/manufacture/JobLabor";
 }

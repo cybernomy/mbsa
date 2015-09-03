@@ -36,7 +36,7 @@ import com.mg.merp.account.model.InvProduction;
 import com.mg.merp.account.model.Inventory;
 
 /**
- * Контроллер формы формы поддержки инвентарной картотеки 
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‚РµРєРё 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

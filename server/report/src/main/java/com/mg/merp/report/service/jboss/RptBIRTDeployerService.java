@@ -20,8 +20,8 @@ import com.mg.merp.report.RptMainTransfer;
 import com.mg.merp.report.support.RptBIRTDeployerImpl;
 
 /**
- * Сервис интерфейса связи сервера приложений и редактора отчётов<br>
- * Реализует интерфейс {@link RptBIRTDeployer)
+ * РЎРµСЂРІРёСЃ РёРЅС‚РµСЂС„РµР№СЃР° СЃРІСЏР·Рё СЃРµСЂРІРµСЂР° РїСЂРёР»РѕР¶РµРЅРёР№ Рё СЂРµРґР°РєС‚РѕСЂР° РѕС‚С‡С‘С‚РѕРІ<br>
+ * Р РµР°Р»РёР·СѓРµС‚ РёРЅС‚РµСЂС„РµР№СЃ {@link RptBIRTDeployer)
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id:

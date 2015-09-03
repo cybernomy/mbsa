@@ -23,7 +23,7 @@ import com.mg.framework.api.ui.CustomActionManager;
 import com.mg.merp.baiengine.support.CustomActionManagerImpl;
 
 /**
- * Реализация JMX сервиса менеджера настраиваемых действий
+ * Р РµР°Р»РёР·Р°С†РёСЏ JMX СЃРµСЂРІРёСЃР° РјРµРЅРµРґР¶РµСЂР° РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomActionManagerService.java,v 1.1 2007/11/15 09:20:16 safonov Exp $

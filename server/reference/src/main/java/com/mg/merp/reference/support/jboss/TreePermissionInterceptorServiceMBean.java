@@ -17,7 +17,7 @@ package com.mg.merp.reference.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис перехватчика для добавления прав на элементы иерархии при создании
+ * РЎРµСЂРІРёСЃ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ РґРѕР±Р°РІР»РµРЅРёСЏ РїСЂР°РІ РЅР° СЌР»РµРјРµРЅС‚С‹ РёРµСЂР°СЂС…РёРё РїСЂРё СЃРѕР·РґР°РЅРёРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: TreePermissionInterceptorServiceMBean.java,v 1.2 2006/12/29 07:41:34 safonov Exp $

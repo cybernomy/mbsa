@@ -18,7 +18,7 @@ import com.mg.merp.paymentcontrol.LiabilityServiceLocal;
 
 
 /**
- * Поисковик сущностей "Папки-приемника обязательства"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РџР°РїРєРё-РїСЂРёРµРјРЅРёРєР° РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: LiabiltyDestinationFolderSearchHelp.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $

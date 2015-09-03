@@ -19,7 +19,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.scheduler.support.jboss.SchedulerManagerServiceMBean;
 
 /**
- * Локатор сервиса менеджера планировщика
+ * Р›РѕРєР°С‚РѕСЂ СЃРµСЂРІРёСЃР° РјРµРЅРµРґР¶РµСЂР° РїР»Р°РЅРёСЂРѕРІС‰РёРєР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: SchedulerManagerServiceLocator.java,v 1.1 2008/04/25 10:57:23 safonov Exp $
@@ -28,10 +28,10 @@ public class SchedulerManagerServiceLocator {
 	private static volatile SchedulerManagerServiceMBean instance = null;
 
 	/**
-	 * найти сервис менеджера планировщика
+	 * РЅР°Р№С‚Рё СЃРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° РїР»Р°РЅРёСЂРѕРІС‰РёРєР°
 	 * 
-	 * @return	сервис
-	 * @throws ApplicationException	при любых ошибках
+	 * @return	СЃРµСЂРІРёСЃ
+	 * @throws ApplicationException	РїСЂРё Р»СЋР±С‹С… РѕС€РёР±РєР°С…
 	 */
 	public static SchedulerManagerServiceMBean locate() {
 		if (instance == null)

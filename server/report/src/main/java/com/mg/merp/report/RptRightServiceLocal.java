@@ -24,7 +24,7 @@ import com.mg.merp.report.model.RptRight;
 public interface RptRightServiceLocal extends
 		com.mg.framework.api.DataBusinessObjectService<RptRight, Integer> {
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/report/RptRight";
 }

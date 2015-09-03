@@ -23,7 +23,7 @@ import com.mg.framework.utils.MiscUtils;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Контроллер формы поиска бизнес-компонента "Валюта"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’Р°Р»СЋС‚Р°"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

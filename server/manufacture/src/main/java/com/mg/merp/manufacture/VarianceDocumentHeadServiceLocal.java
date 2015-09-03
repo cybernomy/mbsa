@@ -17,7 +17,7 @@ package com.mg.merp.manufacture;
 import com.mg.merp.manufacture.model.VarianceDocumentHead;
 
 /**
- * Бизнес-компонент "Документ на отклонения"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”РѕРєСѓРјРµРЅС‚ РЅР° РѕС‚РєР»РѕРЅРµРЅРёСЏ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: VarianceDocumentHeadServiceLocal.java,v 1.5 2007/08/06 12:46:24 safonov Exp $
@@ -26,17 +26,17 @@ public interface VarianceDocumentHeadServiceLocal
    extends com.mg.merp.document.GoodsDocument<VarianceDocumentHead, Integer, VarianceDocumentModelServiceLocal, VarianceDocumentSpecServiceLocal>
 {
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/manufacture/VarianceDocumentHead";
 
 	/**
-	 * тип папки для Документов по отклонениям
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ Р”РѕРєСѓРјРµРЅС‚РѕРІ РїРѕ РѕС‚РєР»РѕРЅРµРЅРёСЏРј
 	 */
 	final static short FOLDER_PART = 12518;
 	
 	/**
-	 * docsection для Документов по отклонениям
+	 * docsection РґР»СЏ Р”РѕРєСѓРјРµРЅС‚РѕРІ РїРѕ РѕС‚РєР»РѕРЅРµРЅРёСЏРј
 	 */
 	final static short DOCSECTION = 12009;
 }

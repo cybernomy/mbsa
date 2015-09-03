@@ -21,10 +21,10 @@ import com.mg.merp.core.model.Folder;
 import com.mg.merp.document.model.DocSection;
 
 /**
- * Поиск стандартных (унаследованных от {@link com.mg.merp.document.model.DocHeadModel DocHeadModel}) образов документов.
- * Содержит контекст импорта из следующих параметров: {@link com.mg.merp.document.model.DocSection DocSection}
- *  - раздел документа, {@link com.mg.merp.core.model.Folder DocModelFolder} - папка образца (если <code>null</code> то
- * поиск будет производиться без учета папки)
+ * РџРѕРёСЃРє СЃС‚Р°РЅРґР°СЂС‚РЅС‹С… (СѓРЅР°СЃР»РµРґРѕРІР°РЅРЅС‹С… РѕС‚ {@link com.mg.merp.document.model.DocHeadModel DocHeadModel}) РѕР±СЂР°Р·РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ.
+ * РЎРѕРґРµСЂР¶РёС‚ РєРѕРЅС‚РµРєСЃС‚ РёРјРїРѕСЂС‚Р° РёР· СЃР»РµРґСѓСЋС‰РёС… РїР°СЂР°РјРµС‚СЂРѕРІ: {@link com.mg.merp.document.model.DocSection DocSection}
+ *  - СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚Р°, {@link com.mg.merp.core.model.Folder DocModelFolder} - РїР°РїРєР° РѕР±СЂР°Р·С†Р° (РµСЃР»Рё <code>null</code> С‚Рѕ
+ * РїРѕРёСЃРє Р±СѓРґРµС‚ РїСЂРѕРёР·РІРѕРґРёС‚СЊСЃСЏ Р±РµР· СѓС‡РµС‚Р° РїР°РїРєРё)
  * 
  * @author Oleg V. Safonov
  * @version $Id: StandartDocModelSearchHelp.java,v 1.3 2006/11/02 15:52:48 safonov Exp $

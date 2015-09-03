@@ -37,7 +37,7 @@ import com.mg.merp.salary.CalcListServiceLocal;
 import com.mg.merp.salary.model.CalcList;
 
 /**
- * Контроллер браузера "Расчетной ведомости (списка расчетных листков)"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "Р Р°СЃС‡РµС‚РЅРѕР№ РІРµРґРѕРјРѕСЃС‚Рё (СЃРїРёСЃРєР° СЂР°СЃС‡РµС‚РЅС‹С… Р»РёСЃС‚РєРѕРІ)"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -136,7 +136,7 @@ public class CalcListBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Добавить расчетные листки в расчетную ведомость
+	 * Р”РѕР±Р°РІРёС‚СЊ СЂР°СЃС‡РµС‚РЅС‹Рµ Р»РёСЃС‚РєРё РІ СЂР°СЃС‡РµС‚РЅСѓСЋ РІРµРґРѕРјРѕСЃС‚СЊ
 	 */
 	private void AddCalcLists() throws Exception {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.salary.support.ui.PositionFillInStaffListSearchHelp"); //$NON-NLS-1$
@@ -157,8 +157,8 @@ public class CalcListBr extends DefaultPlainBrowseForm {
 	}
 	
 	/**
-	 * Обработчик пункта КМ "Рассчитать"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "Р Р°СЃСЃС‡РёС‚Р°С‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionCalculate(WidgetEvent event) {
 		getCalcListService().calculate(getSelectedPrimaryKeys(), false);
@@ -166,8 +166,8 @@ public class CalcListBr extends DefaultPlainBrowseForm {
 	}
 	
 	/**
-	 * Обработчик пункта КМ "Очистить и рассчитать"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РћС‡РёСЃС‚РёС‚СЊ Рё СЂР°СЃСЃС‡РёС‚Р°С‚СЊ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionClearAndCalculate(WidgetEvent event) {
 		getCalcListService().calculate(getSelectedPrimaryKeys(), true);
@@ -175,8 +175,8 @@ public class CalcListBr extends DefaultPlainBrowseForm {
 	}
 	
 	/**
-	 * Обработчик пункта КМ "Установить признак "Рассчитан и закрыт""
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРёР·РЅР°Рє "Р Р°СЃСЃС‡РёС‚Р°РЅ Рё Р·Р°РєСЂС‹С‚""
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionSetCalculatedAndClosed(WidgetEvent event) {
 		getCalcListService().setClosed(getSelectedPrimaryKeys(), true);
@@ -184,8 +184,8 @@ public class CalcListBr extends DefaultPlainBrowseForm {
 	}
 	
 	/**
-	 * Обработчик пункта КМ "Снять признак "Рассчитан и закрыт""
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЎРЅСЏС‚СЊ РїСЂРёР·РЅР°Рє "Р Р°СЃСЃС‡РёС‚Р°РЅ Рё Р·Р°РєСЂС‹С‚""
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionUnSetCalculatedAndClosed(WidgetEvent event) {
 		getCalcListService().setClosed(getSelectedPrimaryKeys(), false);

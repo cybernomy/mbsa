@@ -17,7 +17,7 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.CostsAnl;
 
 /**
- * Сервис бизнес-компонента "Аналитика состава затрат"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РђРЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,17 +26,17 @@ import com.mg.merp.personnelref.model.CostsAnl;
 public interface CostsAnlServiceLocal extends com.mg.framework.api.DataBusinessObjectService<CostsAnl, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/personnelref/CostsAnl"; //$NON-NLS-1$
 	
 	/**
-	 * Минимальное значение уровня аналитики состава затрат
+	 * РњРёРЅРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ СѓСЂРѕРІРЅСЏ Р°РЅР°Р»РёС‚РёРєРё СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚
 	 */
 	static final short MIN_ANALITICS_LEVEL = 1;
 	
 	/**
-	 * Максимальное значение уровня аналитики состава затрат
+	 * РњР°РєСЃРёРјР°Р»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ СѓСЂРѕРІРЅСЏ Р°РЅР°Р»РёС‚РёРєРё СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚
 	 */
 	static final short MAX_ANALITICS_LEVEL = 5;
 	

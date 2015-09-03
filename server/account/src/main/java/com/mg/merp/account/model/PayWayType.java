@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * тип вида проведения платежа
+ * С‚РёРї РІРёРґР° РїСЂРѕРІРµРґРµРЅРёСЏ РїР»Р°С‚РµР¶Р°
  * 
  * @author leonova
  * @version $Id: PayWayType.java,v 1.1 2006/03/30 11:22:13 safonov Exp $
@@ -32,37 +32,37 @@ public enum PayWayType {
 	NONE,
 	
 	/**
-	 * Почта
+	 * РџРѕС‡С‚Р°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.Post")
 	POST,
 	
 	/**
-	 * Электронно
+	 * Р­Р»РµРєС‚СЂРѕРЅРЅРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.Electronic")
 	ELECTRONIC,
 	
 	/**
-	 * Телеграф
+	 * РўРµР»РµРіСЂР°С„
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.Telegraph")
 	TELEGRAPH,
 	
 	/**
-	 * Клиринг
+	 * РљР»РёСЂРёРЅРі
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.Clearing")
 	CLEARING,
 	
 	/**
-	 * Внутри региона
+	 * Р’РЅСѓС‚СЂРё СЂРµРіРёРѕРЅР°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.InsideRegion")
 	INSIDEREGION,
 	
 	/**
-	 * Расч.сист.СБ
+	 * Р Р°СЃС‡.СЃРёСЃС‚.РЎР‘
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.SberBank")
 	SBERBANK	

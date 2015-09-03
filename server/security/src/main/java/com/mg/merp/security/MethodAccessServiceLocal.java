@@ -20,7 +20,7 @@ import com.mg.merp.security.model.Groups;
 import com.mg.merp.security.model.MethodAccess;
 
 /**
- * Бизнес-компонент "Права на методы бизнес-компонентов"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂР°РІР° РЅР° РјРµС‚РѕРґС‹ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -29,16 +29,16 @@ import com.mg.merp.security.model.MethodAccess;
 public interface MethodAccessServiceLocal extends com.mg.framework.api.DataBusinessObjectService<MethodAccess, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static String SERVICE_NAME = "merp/security/MethodAccess"; //$NON-NLS-1$
 		
 	/**
-	 * Установить права для всех бизнес-компонентов модуля
-	 * @param subSystemId - идентификатор модуля(подсистемы)
-	 * @param group - группа пользователей
-	 * @param isPermit - <code>true</code> - дать права; <code>false</code> - отобрать права
-	 * @param methodNames - список имён методов 
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂР°РІР° РґР»СЏ РІСЃРµС… Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ РјРѕРґСѓР»СЏ
+	 * @param subSystemId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РјРѕРґСѓР»СЏ(РїРѕРґСЃРёСЃС‚РµРјС‹)
+	 * @param group - РіСЂСѓРїРїР° РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
+	 * @param isPermit - <code>true</code> - РґР°С‚СЊ РїСЂР°РІР°; <code>false</code> - РѕС‚РѕР±СЂР°С‚СЊ РїСЂР°РІР°
+	 * @param methodNames - СЃРїРёСЃРѕРє РёРјС‘РЅ РјРµС‚РѕРґРѕРІ 
 	 */
 	void setPermissionForSubsystemBusinessObjects(Integer subSystemId, Groups group, boolean isPermit, List<String> methodNames);
 	

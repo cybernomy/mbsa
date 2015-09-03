@@ -17,7 +17,7 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.BankDocument;
 
 /**
- * Бизнес-компонент "Входящие банковские документы"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’С…РѕРґСЏС‰РёРµ Р±Р°РЅРєРѕРІСЃРєРёРµ РґРѕРєСѓРјРµРЅС‚С‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,29 +26,29 @@ import com.mg.merp.account.model.BankDocument;
 public interface BankDocumentInServiceLocal extends com.mg.merp.document.Document<BankDocument, Integer, BankDocumentModelInServiceLocal> {
 	
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/account/BankDocumentIn"; //$NON-NLS-1$
 	
 	/**
-	 * тип папки для входящих банковских документов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РІС…РѕРґСЏС‰РёС… Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 9;
 	
 	/**
-	 * docsection для входящих банковских документов
+	 * docsection РґР»СЏ РІС…РѕРґСЏС‰РёС… Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 */
 	final static short DOCSECTION = 2;
 	
 	/**
-	 * Рассчитать и установить суммы НДС
-	 * @param bankDocument - входящий банковский документ
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ Рё СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃСѓРјРјС‹ РќР”РЎ
+	 * @param bankDocument - РІС…РѕРґСЏС‰РёР№ Р±Р°РЅРєРѕРІСЃРєРёР№ РґРѕРєСѓРјРµРЅС‚
 	 */
 	void calculateNdsSum(BankDocument bankDocument);
 	
 	/**
-	 * Рассчитать и установить сумму документа
-	 * @param bankDocument - входящий банковский документ
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ Рё СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃСѓРјРјСѓ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param bankDocument - РІС…РѕРґСЏС‰РёР№ Р±Р°РЅРєРѕРІСЃРєРёР№ РґРѕРєСѓРјРµРЅС‚
 	 */
 	void calculateDocSum(BankDocument bankDocument);
 	

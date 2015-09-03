@@ -27,7 +27,7 @@ import com.mg.merp.personnelref.support.DateIntervalRule;
 import com.mg.merp.personnelref.support.PersonnelrefUtils;
 
 /**
- * Реализация бизнес-компонента "Лицевые счета сотрудников - плоский список" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р›РёС†РµРІС‹Рµ СЃС‡РµС‚Р° СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ - РїР»РѕСЃРєРёР№ СЃРїРёСЃРѕРє" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

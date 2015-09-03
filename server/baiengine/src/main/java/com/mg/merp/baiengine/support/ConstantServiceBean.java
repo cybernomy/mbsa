@@ -34,7 +34,7 @@ import com.mg.merp.baiengine.model.Constant;
 import com.mg.merp.baiengine.model.ConstantValue;
 
 /**
- * Бизнес-компонент "Константы"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљРѕРЅСЃС‚Р°РЅС‚С‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ConstantServiceBean.java,v 1.3 2007/08/24 09:17:47 alikaev Exp $
@@ -53,7 +53,7 @@ public class ConstantServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 	
 	/**
-	 * реализация получения значения константы по коду и дате актуальности
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РїРѕР»СѓС‡РµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ РєРѕРЅСЃС‚Р°РЅС‚С‹ РїРѕ РєРѕРґСѓ Рё РґР°С‚Рµ Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё
 	 * 
 	 * @param code
 	 * @param actualDate

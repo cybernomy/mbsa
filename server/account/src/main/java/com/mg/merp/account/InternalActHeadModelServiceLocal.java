@@ -26,7 +26,7 @@ public interface InternalActHeadModelServiceLocal
    extends DocumentPattern<DocHeadModel, Integer>
 {
 	/**
-	 * тип папки для образцов внутренних актов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ РІРЅСѓС‚СЂРµРЅРЅРёС… Р°РєС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 29;
 }

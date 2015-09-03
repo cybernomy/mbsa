@@ -19,7 +19,7 @@ import java.util.Date;
 import com.mg.merp.mfreference.model.PlanningLevelBucket;
 
 /**
- * Бизнес-компонент "Бакеты уровней планирования"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р‘Р°РєРµС‚С‹ СѓСЂРѕРІРЅРµР№ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ"
  * 
  * @author leonova
  * @version $Id: PlanningLevelBucketServiceLocal.java,v 1.2 2007/07/30 10:25:31 safonov Exp $
@@ -28,34 +28,34 @@ public interface PlanningLevelBucketServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<PlanningLevelBucket, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/mfreference/PlanningLevelBucket";
 	
 	/**
-	 * получить ближайшую дату старта бакета к планируемой дате
+	 * РїРѕР»СѓС‡РёС‚СЊ Р±Р»РёР¶Р°Р№С€СѓСЋ РґР°С‚Сѓ СЃС‚Р°СЂС‚Р° Р±Р°РєРµС‚Р° Рє РїР»Р°РЅРёСЂСѓРµРјРѕР№ РґР°С‚Рµ
 	 * 
-	 * @param planningLevelId	идентификатор уровня планирования
-	 * @param planningDate	дата планирования
-	 * @return	ближайшая дата старта бакета или <code>null</code> если бакет не найден
+	 * @param planningLevelId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СѓСЂРѕРІРЅСЏ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param planningDate	РґР°С‚Р° РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @return	Р±Р»РёР¶Р°Р№С€Р°СЏ РґР°С‚Р° СЃС‚Р°СЂС‚Р° Р±Р°РєРµС‚Р° РёР»Рё <code>null</code> РµСЃР»Рё Р±Р°РєРµС‚ РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	Date nearestBucketStartDate(int planningLevelId, Date planningDate);
 
 	/**
-	 * определение смещения бакета
+	 * РѕРїСЂРµРґРµР»РµРЅРёРµ СЃРјРµС‰РµРЅРёСЏ Р±Р°РєРµС‚Р°
 	 * 
-	 * @param planningLevelId	уровень планирования
-	 * @param offsetDate		дата
-	 * @return	смещение бакета
+	 * @param planningLevelId	СѓСЂРѕРІРµРЅСЊ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param offsetDate		РґР°С‚Р°
+	 * @return	СЃРјРµС‰РµРЅРёРµ Р±Р°РєРµС‚Р°
 	 */
 	short determineOffset(int planningLevelId, Date offsetDate);
 	
 	/**
-	 * определение диапазона бакета
+	 * РѕРїСЂРµРґРµР»РµРЅРёРµ РґРёР°РїР°Р·РѕРЅР° Р±Р°РєРµС‚Р°
 	 * 
-	 * @param planningLevelId	уровень планирования
-	 * @param bucketOffset		смещение бакета
-	 * @return	диапазон бакета
+	 * @param planningLevelId	СѓСЂРѕРІРµРЅСЊ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param bucketOffset		СЃРјРµС‰РµРЅРёРµ Р±Р°РєРµС‚Р°
+	 * @return	РґРёР°РїР°Р·РѕРЅ Р±Р°РєРµС‚Р°
 	 */
 	BucketRange determineRange(int planningLevelId, short bucketOffset);
 

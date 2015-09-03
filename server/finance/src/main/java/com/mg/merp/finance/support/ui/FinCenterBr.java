@@ -24,7 +24,7 @@ import com.mg.framework.support.ui.widget.tree.TreeNode;
 import com.mg.merp.finance.model.Center;
 
 /**
- * Браузер центров финансового учета
+ * Р‘СЂР°СѓР·РµСЂ С†РµРЅС‚СЂРѕРІ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°
  * 
  * @author leonova
  * @version $Id: FinCenterBr.java,v 1.5 2007/11/08 16:04:24 safonov Exp $

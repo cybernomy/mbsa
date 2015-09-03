@@ -25,7 +25,7 @@ import com.mg.merp.docflow.support.ui.DocFlowMapForm;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Класс helper для взаимодействия с сервисом ДО
+ * РљР»Р°СЃСЃ helper РґР»СЏ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ СЃРµСЂРІРёСЃРѕРј Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocFlowHelper.java,v 1.7 2007/10/23 15:20:03 safonov Exp $
@@ -37,9 +37,9 @@ public class DocFlowHelper {
 	}
 	
 	/**
-	 * запуск ДО
+	 * Р·Р°РїСѓСЃРє Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	public static void execute(Serializable documentId) {
 		DocFlowManager manager = getDocFlowManager();
@@ -47,11 +47,11 @@ public class DocFlowHelper {
 	}
 
 	/**
-	 * запуск ДО
+	 * Р·Р°РїСѓСЃРє Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
-	 * @param requester		инициатор выполнения
-	 * @param silent		признак использования пользовательского интерфейса, если <code>true</code> то не использовать UI
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param requester		РёРЅРёС†РёР°С‚РѕСЂ РІС‹РїРѕР»РЅРµРЅРёСЏ
+	 * @param silent		РїСЂРёР·РЅР°Рє РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°, РµСЃР»Рё <code>true</code> С‚Рѕ РЅРµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ UI
 	 */
 	public static void execute(Serializable documentId, int requester, boolean silent) {
 		DocFlowManager manager = getDocFlowManager();
@@ -59,10 +59,10 @@ public class DocFlowHelper {
 	}
 	
 	/**
-	 * запуск ДО
+	 * Р·Р°РїСѓСЃРє Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
-	 * @param stageCode		код этапа ДО для выполнения
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param stageCode		РєРѕРґ СЌС‚Р°РїР° Р”Рћ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ
 	 */
 	public static void execute(Serializable documentId, String stageCode) {
 		DocFlowManager manager = getDocFlowManager();
@@ -70,10 +70,10 @@ public class DocFlowHelper {
 	}
 	
 	/**
-	 * запуск ДО
+	 * Р·Р°РїСѓСЃРє Р”Рћ
 	 * 
-	 * @param documentId		идентификатор документа
-	 * @param paramsStrategy	стратегия обработки параметров ДО
+	 * @param documentId		РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param paramsStrategy	СЃС‚СЂР°С‚РµРіРёСЏ РѕР±СЂР°Р±РѕС‚РєРё РїР°СЂР°РјРµС‚СЂРѕРІ Р”Рћ
 	 */
 	public static void execute(Serializable documentId, DocFlowParamsStrategy paramsStrategy) {
 		DocFlowManager manager = getDocFlowManager();
@@ -81,9 +81,9 @@ public class DocFlowHelper {
 	}
 	
 	/**
-	 * откат ДО
+	 * РѕС‚РєР°С‚ Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	public static void rollback(Serializable documentId) {
 		DocFlowManager manager = getDocFlowManager();
@@ -91,10 +91,10 @@ public class DocFlowHelper {
 	}
 
 	/**
-	 * откат ДО
+	 * РѕС‚РєР°С‚ Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
-	 * @param stageCode		код этапа ДО для выполнения
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param stageCode		РєРѕРґ СЌС‚Р°РїР° Р”Рћ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ
 	 */
 	public static void rollback(Serializable documentId, String stageCode) {
 		DocFlowManager manager = getDocFlowManager();
@@ -102,10 +102,10 @@ public class DocFlowHelper {
 	}
 	
 	/**
-	 * откат ДО
+	 * РѕС‚РєР°С‚ Р”Рћ
 	 * 
-	 * @param documentId		идентификатор документа
-	 * @param paramsStrategy	стратегия обработки параметров ДО
+	 * @param documentId		РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param paramsStrategy	СЃС‚СЂР°С‚РµРіРёСЏ РѕР±СЂР°Р±РѕС‚РєРё РїР°СЂР°РјРµС‚СЂРѕРІ Р”Рћ
 	 */
 	public static void rollback(Serializable documentId, DocFlowParamsStrategy paramsStrategy) {
 		DocFlowManager manager = getDocFlowManager();
@@ -113,11 +113,11 @@ public class DocFlowHelper {
 	}
 	
 	/**
-	 * откат ДО
+	 * РѕС‚РєР°С‚ Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
-	 * @param requester		инициатор выполнения
-	 * @param silent		признак использования пользовательского интерфейса, если <code>true</code> то не использовать UI
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param requester		РёРЅРёС†РёР°С‚РѕСЂ РІС‹РїРѕР»РЅРµРЅРёСЏ
+	 * @param silent		РїСЂРёР·РЅР°Рє РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°, РµСЃР»Рё <code>true</code> С‚Рѕ РЅРµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ UI
 	 */
 	public static void rollback(Serializable documentId, int requester, boolean silent) {
 		DocFlowManager manager = getDocFlowManager();
@@ -125,9 +125,9 @@ public class DocFlowHelper {
 	}
 
 	/**
-	 * показ истории ДО
+	 * РїРѕРєР°Р· РёСЃС‚РѕСЂРёРё Р”Рћ
 	 * 
-	 * @param documentId	идентификатор документа
+	 * @param documentId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	public static void showDocumentHistory(Serializable documentId) {
 		final DocFlowHistoryForm form = (DocFlowHistoryForm) UIProducer.produceForm("com/mg/merp/docflow/resources/DocFlowHistoryForm.mfd.xml");
@@ -135,9 +135,9 @@ public class DocFlowHelper {
 	}
 
 	/**
-	 * показ карты ДО
+	 * РїРѕРєР°Р· РєР°СЂС‚С‹ Р”Рћ
 	 * 
-	 * @param docTypeId		идентификатор типа документа
+	 * @param docTypeId		РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	public static void showDocFlowMap(Serializable docTypeId) {
 		final DocFlowMapForm form = (DocFlowMapForm) UIProducer.produceForm("com/mg/merp/docflow/resources/DocFlowMapForm.mfd.xml");
@@ -145,9 +145,9 @@ public class DocFlowHelper {
 	}
 	
 	/**
-	 * регистрация создания документа
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docHead	документ
+	 * @param docHead	РґРѕРєСѓРјРµРЅС‚
 	 */
 	public static void createDocument(DocHead docHead) {
 		DocFlowManager manager = (DocFlowManager) ApplicationDictionaryLocator.locate().getBusinessService(DocFlowManager.SERVICE_NAME);
@@ -155,9 +155,9 @@ public class DocFlowHelper {
 	}
 
 	/**
-	 * регистрация изменения документа
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ РёР·РјРµРЅРµРЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docHead	документ
+	 * @param docHead	РґРѕРєСѓРјРµРЅС‚
 	 */
 	public static void modifyDocument(DocHead docHead) {
 		DocFlowManager manager = (DocFlowManager) ApplicationDictionaryLocator.locate().getBusinessService(DocFlowManager.SERVICE_NAME);
@@ -165,9 +165,9 @@ public class DocFlowHelper {
 	}
 
 	/**
-	 * проверка возможности изменения документа
+	 * РїСЂРѕРІРµСЂРєР° РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РёР·РјРµРЅРµРЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docHead	документ
+	 * @param docHead	РґРѕРєСѓРјРµРЅС‚
 	 */
 	public static void checkStatus(DocHead docHead) {
 		DocFlowManager manager = (DocFlowManager) ApplicationDictionaryLocator.locate().getBusinessService(DocFlowManager.SERVICE_NAME);

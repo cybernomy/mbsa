@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.CalcTaxesKind;
 
 /**
- * Браузер видов начисления налогов
+ * Р‘СЂР°СѓР·РµСЂ РІРёРґРѕРІ РЅР°С‡РёСЃР»РµРЅРёСЏ РЅР°Р»РѕРіРѕРІ
  * 
  * @author leonova
  * @version $Id: CalcTaxesKindBr.java,v 1.1 2006/08/29 12:44:18 leonova Exp $ 

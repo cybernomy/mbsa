@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Политика списания со склада
+ * РџРѕР»РёС‚РёРєР° СЃРїРёСЃР°РЅРёСЏ СЃРѕ СЃРєР»Р°РґР°
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: StockPolicy.java,v 1.1 2006/04/13 10:28:32 safonov Exp $
  */
@@ -37,7 +37,7 @@ public enum StockPolicy {
 	SPLIFO,
 	
 	/**
-	 * Партионный учёт
+	 * РџР°СЂС‚РёРѕРЅРЅС‹Р№ СѓС‡С‘С‚
 	 */
 	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#STPolicy.Batch")
 	SPBATCH

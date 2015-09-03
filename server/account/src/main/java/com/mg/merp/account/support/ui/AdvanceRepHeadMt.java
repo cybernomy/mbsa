@@ -41,7 +41,7 @@ import com.mg.merp.document.support.DocumentUtils;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы поддержки авансовых отчетов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р°РІР°РЅСЃРѕРІС‹С… РѕС‚С‡РµС‚РѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Konstantin S. Alikaev
@@ -106,8 +106,8 @@ public class AdvanceRepHeadMt extends GoodsDocumentMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик просмотра/выбора документа-подтверждения
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР°/РІС‹Р±РѕСЂР° РґРѕРєСѓРјРµРЅС‚Р°-РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewConfirmDocument(WidgetEvent event) {
 		final AdvanceRepHead advanceRepHead = (AdvanceRepHead) getEntity();
@@ -122,18 +122,18 @@ public class AdvanceRepHeadMt extends GoodsDocumentMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик события обновить суммы
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РѕР±РЅРѕРІРёС‚СЊ СЃСѓРјРјС‹
 	 * 
-	 * @param event - событие
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionCalcAll(WidgetEvent event) {
 		getAdvanceRepHeadService().adjust((AdvanceRepHead) getEntity());
 	}
 
 	/**
-	 * Обработчик события расчитать полученные суммы
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ СЂР°СЃС‡РёС‚Р°С‚СЊ РїРѕР»СѓС‡РµРЅРЅС‹Рµ СЃСѓРјРјС‹
 	 * 
-	 * @param event - событие
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionCalcRec(WidgetEvent event) {
 		AdvanceRepHead advanceRepHead = (AdvanceRepHead) getEntity();
@@ -152,15 +152,15 @@ public class AdvanceRepHeadMt extends GoodsDocumentMaintenanceForm {
 	}
 
 	/**
-	 * Обработчик расчитать сумму остатка предыдущего аванса 
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЂР°СЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјСѓ РѕСЃС‚Р°С‚РєР° РїСЂРµРґС‹РґСѓС‰РµРіРѕ Р°РІР°РЅСЃР° 
 	 * 
-	 * @param event - событие
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionCalcAdv(WidgetEvent event) {
 		AdvanceRepHead advanceRepHead = (AdvanceRepHead) getEntity();
 		if (advanceRepHead.getAcc() != null) {
 			BigDecimal prevAdvanceSum = getAdvanceRepHeadService().getPrevAdvanceSum(advanceRepHead.getAcc(), advanceRepHead.getFrom(), advanceRepHead.getCurrency());
-			// если сумма больше нуля то остаток иначе перерасход.
+			// РµСЃР»Рё СЃСѓРјРјР° Р±РѕР»СЊС€Рµ РЅСѓР»СЏ С‚Рѕ РѕСЃС‚Р°С‚РѕРє РёРЅР°С‡Рµ РїРµСЂРµСЂР°СЃС…РѕРґ.
 			if (MathUtils.compareToZero(prevAdvanceSum) < 0) {
 				advanceRepHead.setPrevAdvanceSum(prevAdvanceSum.negate());
 				advanceRepHead.setRestDocKind(false);
@@ -173,12 +173,12 @@ public class AdvanceRepHeadMt extends GoodsDocumentMaintenanceForm {
 	}
 
 	/**
-	 * По имени запускает форму поиска и устанавливает поля номер, тип, дата документа-подтверждения
+	 * РџРѕ РёРјРµРЅРё Р·Р°РїСѓСЃРєР°РµС‚ С„РѕСЂРјСѓ РїРѕРёСЃРєР° Рё СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РїРѕР»СЏ РЅРѕРјРµСЂ, С‚РёРї, РґР°С‚Р° РґРѕРєСѓРјРµРЅС‚Р°-РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ
 	 * 
 	 * @param searchHelpName
-	 * 					- имя формы поиска
+	 * 					- РёРјСЏ С„РѕСЂРјС‹ РїРѕРёСЃРєР°
 	 * @param advanceRepHead
-	 * 					- текущий документ
+	 * 					- С‚РµРєСѓС‰РёР№ РґРѕРєСѓРјРµРЅС‚
 	 */
 	private void viewSearchHelp(String searchHelpName, final AdvanceRepHead advanceRepHead) {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch(searchHelpName); 
@@ -253,10 +253,10 @@ public class AdvanceRepHeadMt extends GoodsDocumentMaintenanceForm {
 	}
 
 	/**
-	 * Установка значений кнопок в режим доступно/недоступно
+	 * РЈСЃС‚Р°РЅРѕРІРєР° Р·РЅР°С‡РµРЅРёР№ РєРЅРѕРїРѕРє РІ СЂРµР¶РёРј РґРѕСЃС‚СѓРїРЅРѕ/РЅРµРґРѕСЃС‚СѓРїРЅРѕ
 	 * 
 	 * @param isReadOnly
-	 * 				- <code>true</code> - недоступно, иначе доступно
+	 * 				- <code>true</code> - РЅРµРґРѕСЃС‚СѓРїРЅРѕ, РёРЅР°С‡Рµ РґРѕСЃС‚СѓРїРЅРѕ
 	 */
 	private void setReadOnlyButton(boolean isReadOnly) {
 		view.getWidget("CalcAdv").setEnabled(isReadOnly);

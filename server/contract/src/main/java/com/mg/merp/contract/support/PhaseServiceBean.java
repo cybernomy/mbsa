@@ -38,7 +38,7 @@ import com.mg.merp.contract.model.PhasePlanItem;
 import com.mg.merp.contract.model.PlanAndFactSumsByKindResult;
 
 /**
- * Реализация бизнес-компонента "Этапы контракта" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р­С‚Р°РїС‹ РєРѕРЅС‚СЂР°РєС‚Р°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

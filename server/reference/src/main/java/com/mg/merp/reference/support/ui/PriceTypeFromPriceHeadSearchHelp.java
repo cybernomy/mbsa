@@ -16,7 +16,7 @@ package com.mg.merp.reference.support.ui;
 
 
 /**
- * Поиск типа цен из заголовка прайс-листа
+ * РџРѕРёСЃРє С‚РёРїР° С†РµРЅ РёР· Р·Р°РіРѕР»РѕРІРєР° РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: PriceTypeFromPriceHeadSearchHelp.java,v 1.1 2007/05/10 07:31:12 safonov Exp $

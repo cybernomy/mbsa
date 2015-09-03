@@ -17,7 +17,7 @@ package com.mg.merp.mfreference;
 import java.util.Date;
 
 /**
- * Диапазон бакета
+ * Р”РёР°РїР°Р·РѕРЅ Р±Р°РєРµС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: BucketRange.java,v 1.1 2007/07/30 10:25:31 safonov Exp $
@@ -33,7 +33,7 @@ public class BucketRange {
 	}
 
 	/**
-	 * получить дату завершения бакета
+	 * РїРѕР»СѓС‡РёС‚СЊ РґР°С‚Сѓ Р·Р°РІРµСЂС€РµРЅРёСЏ Р±Р°РєРµС‚Р°
 	 * 
 	 * @return the bucketEnd
 	 */
@@ -42,7 +42,7 @@ public class BucketRange {
 	}
 
 	/**
-	 * получить дату старта бакета
+	 * РїРѕР»СѓС‡РёС‚СЊ РґР°С‚Сѓ СЃС‚Р°СЂС‚Р° Р±Р°РєРµС‚Р°
 	 * 
 	 * @return the bucketStart
 	 */

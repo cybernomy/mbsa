@@ -25,7 +25,7 @@ import com.mg.merp.reference.FamilyStatusServiceLocal;
 import com.mg.merp.reference.model.FamilyStatus;
 
 /**
- * Реализация бизнес-копмонента "Семейное положение"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРїРјРѕРЅРµРЅС‚Р° "РЎРµРјРµР№РЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ"
  * 
  * @author leonova
  * @author Artem V. Sharapov

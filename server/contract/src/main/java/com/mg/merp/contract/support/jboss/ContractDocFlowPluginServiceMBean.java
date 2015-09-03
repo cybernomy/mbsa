@@ -17,7 +17,7 @@ package com.mg.merp.contract.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис дополнительных модулей подсистемы "Контракты"
+ * РЎРµСЂРІРёСЃ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "РљРѕРЅС‚СЂР°РєС‚С‹"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ContractDocFlowPluginServiceMBean.java,v 1.1 2007/03/07 12:26:05 sharapov Exp $
@@ -25,7 +25,7 @@ import org.jboss.system.ServiceMBean;
 public interface ContractDocFlowPluginServiceMBean extends ServiceMBean {
 
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:contract=DocFlowPluginService"; //$NON-NLS-1$
 

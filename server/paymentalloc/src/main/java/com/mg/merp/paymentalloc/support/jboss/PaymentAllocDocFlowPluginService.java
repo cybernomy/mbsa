@@ -27,7 +27,7 @@ import com.mg.merp.paymentalloc.support.AllocatePaymentInteractiveDocFlowPluginF
 import com.mg.merp.paymentalloc.support.CreatePaymentTransactionDocFlowPluginFactory;
 
 /**
- * Реализация сервиса дополнительных модулей подсистемы "Журнал платежей"
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "Р–СѓСЂРЅР°Р» РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Denis V. Arychkov
  * @author Artem V. Sharapov

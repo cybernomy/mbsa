@@ -18,79 +18,79 @@ import org.jboss.system.ListenerServiceMBean;
 import org.quartz.Scheduler;
 
 /**
- * JMX сервис менеджера планировщика
+ * JMX СЃРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° РїР»Р°РЅРёСЂРѕРІС‰РёРєР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: SchedulerManagerServiceMBean.java,v 1.2 2008/08/28 13:40:11 safonov Exp $
  */
 public interface SchedulerManagerServiceMBean extends ListenerServiceMBean {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:service=SchedulerManagerService"; //$NON-NLS-1$
 
 	/**
-	 * установить свойства планировщика
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРІРѕР№СЃС‚РІР° РїР»Р°РЅРёСЂРѕРІС‰РёРєР°
 	 * 
-	 * @param properties	свойства
+	 * @param properties	СЃРІРѕР№СЃС‚РІР°
 	 */
 	void setProperties(String properties);
 	
 	/**
-	 * получить свойства планировщика
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРІРѕР№СЃС‚РІР° РїР»Р°РЅРёСЂРѕРІС‰РёРєР°
 	 * 
-	 * @return	свойства
+	 * @return	СЃРІРѕР№СЃС‚РІР°
 	 */
 	String getProperties();
 
 	/**
-	 * регистрация задачи в планировщике
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ Р·Р°РґР°С‡Рё РІ РїР»Р°РЅРёСЂРѕРІС‰РёРєРµ
 	 * 
-	 * @param sysClientId	мандант
-	 * @param taskCode	код задачи
+	 * @param sysClientId	РјР°РЅРґР°РЅС‚
+	 * @param taskCode	РєРѕРґ Р·Р°РґР°С‡Рё
 	 */
 	void registerTask(Integer sysClientId, String taskCode);
 	
 	/**
-	 * удаление задачи из планировщика
+	 * СѓРґР°Р»РµРЅРёРµ Р·Р°РґР°С‡Рё РёР· РїР»Р°РЅРёСЂРѕРІС‰РёРєР°
 	 * 
-	 * @param sysClientId	мандант
-	 * @param taskCode	код задачи
+	 * @param sysClientId	РјР°РЅРґР°РЅС‚
+	 * @param taskCode	РєРѕРґ Р·Р°РґР°С‡Рё
 	 */
 	void unregisterTask(Integer sysClientId, String taskCode);
 	
 	/**
-	 * получить планировщик
+	 * РїРѕР»СѓС‡РёС‚СЊ РїР»Р°РЅРёСЂРѕРІС‰РёРє
 	 * 
-	 * @return	планировщик
+	 * @return	РїР»Р°РЅРёСЂРѕРІС‰РёРє
 	 */
 	Scheduler getScheduler();
 
 	/**
-	 * установить имя учетной записи для выполнения заданий
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РёРјСЏ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РґР°РЅРёР№
 	 * 
-	 * @param login	имя учетной записи
+	 * @param login	РёРјСЏ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё
 	 */
 	void setSchedulerUserName(String login);
 
 	/**
-	 * получить имя учетной записи для выполнения заданий
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРјСЏ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РґР°РЅРёР№
 	 * 
-	 * @return	имя учетной записи
+	 * @return	РёРјСЏ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё
 	 */
 	String getSchedulerUserName();
 
 	/**
-	 * установить пароль учетной записи для выполнения заданий
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°СЂРѕР»СЊ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РґР°РЅРёР№
 	 * 
-	 * @param login	пароль учетной записи
+	 * @param login	РїР°СЂРѕР»СЊ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё
 	 */
 	void setSchedulerPassword(String login);
 
 	/**
-	 * получить пароль учетной записи для выполнения заданий
+	 * РїРѕР»СѓС‡РёС‚СЊ РїР°СЂРѕР»СЊ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РґР°РЅРёР№
 	 * 
-	 * @return	пароль учетной записи
+	 * @return	РїР°СЂРѕР»СЊ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё
 	 */
 	String getSchedulerPassword();
 

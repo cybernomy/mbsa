@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PersonnelGroupServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelGroup;
 
 /**
- * Иерархическая структура основныех сведений о сотрудниках
+ * РРµСЂР°СЂС…РёС‡РµСЃРєР°СЏ СЃС‚СЂСѓРєС‚СѓСЂР° РѕСЃРЅРѕРІРЅС‹РµС… СЃРІРµРґРµРЅРёР№ Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С…
  * 
  * @author leonova
  * @version $Id: PersonnelGroupServiceBean.java,v 1.5 2007/08/16 14:12:16 safonov Exp $

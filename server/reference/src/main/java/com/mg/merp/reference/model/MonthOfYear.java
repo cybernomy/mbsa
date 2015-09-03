@@ -19,7 +19,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Μερÿφϋ γξδΰ
+ * ΠΠµΡΡΡ†Ρ‹ Π³ΠΎΠ΄Π°
  * 
  * @author leonova
  * @version $Id: MonthOfYear.java,v 1.1 2006/10/10 06:29:36 leonova Exp $
@@ -27,73 +27,73 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName("Reference.QMonth")
 public enum MonthOfYear {
 	/**
-	 * ίνβΰπό
+	 * Π―Π½Π²Π°Ρ€Ρ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#MonthOfYear.January")
 	JANUARY,
 	
 	/**
-	 * Τεβπΰλό
+	 * Π¤ΠµΠ²Ρ€Π°Π»Ρ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#MonthOfYear.February")
 	FEBRUARY,
 	
 	/**
-	 * Μΰπς
+	 * ΠΠ°Ρ€Ρ‚
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#MonthOfYear.March")
 	MARCH,
 	
 	/**
-	 * ΐοπελό
+	 * ΠΠΏΡ€ΠµΠ»Ρ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#MonthOfYear.April")
 	APRIL,
 	
 	/**
-	 * Μΰι
+	 * ΠΠ°ΠΉ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#MonthOfYear.May")
 	MAY,
 	
 	/**
-	 * Θώνό
+	 * ΠΡΠ½Ρ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#MonthOfYear.June")
 	JUNE,
 	
 	/**
-	 * Θώλό
+	 * ΠΡΠ»Ρ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#MonthOfYear.July")
 	JULY,
 	
 	/**
-	 * ΐβγσρς
+	 * ΠΠ²Π³ΡƒΡΡ‚
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#MonthOfYear.August")
 	AUGUST,
 	
 	/**
-	 * Ρενςÿαπό
+	 * Π΅ΠµΠ½Ρ‚ΡΠ±Ρ€Ρ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#MonthOfYear.September")
 	SEPTEMBER,
 	
 	/**
-	 * Ξκςÿαπό
+	 * ΠΠΊΡ‚ΡΠ±Ρ€Ρ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#MonthOfYear.October")
 	OCTORER,
 	
 	/**
-	 * Νξÿαπό
+	 * ΠΠΎΡΠ±Ρ€Ρ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#MonthOfYear.November")
 	NOVEMBER,
 	
 	/**
-	 * Δεκΰαπό
+	 * Π”ΠµΠΊΠ°Π±Ρ€Ρ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#MonthOfYear.December")
 	DECEMBER

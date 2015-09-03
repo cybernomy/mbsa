@@ -33,7 +33,7 @@ import com.mg.merp.reference.model.OrgUnit;
 import com.mg.merp.reference.support.ui.OrgUnitTreeNode;
 
 /**
- * Контроллер формы списка бизнес-компонента "Лицевые карточки сотрудников" 
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р›РёС†РµРІС‹Рµ РєР°СЂС‚РѕС‡РєРё СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ" 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

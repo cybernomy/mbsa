@@ -22,7 +22,7 @@ import com.mg.merp.document.DocumentProcessorServiceLocal;
 import com.mg.merp.document.generic.AbstractCreateDocumentDocFlowPlugin;
 
 /**
- * Реализация фабрики реализаций этапа ДО "Создать документ на комплектующие"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїР° Р”Рћ "РЎРѕР·РґР°С‚СЊ РґРѕРєСѓРјРµРЅС‚ РЅР° РєРѕРјРїР»РµРєС‚СѓСЋС‰РёРµ"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: CreateDocOnComponentsDocFlowPluginFactory.java,v 1.2 2009/02/04 09:35:26 safonov Exp $

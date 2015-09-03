@@ -24,13 +24,13 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Salary.TaxScale.TaxPayer")
 public enum TaxPayer {
 	/**
-	 * Сотрудник
+	 * РЎРѕС‚СЂСѓРґРЅРёРє
 	 */	
 	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#TaxPayer.Employee")
 	Employee,
 	
 	/**
-	 * Предприятие
+	 * РџСЂРµРґРїСЂРёСЏС‚РёРµ
 	 */	
 	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#TaxPayer.Company")
 	Company

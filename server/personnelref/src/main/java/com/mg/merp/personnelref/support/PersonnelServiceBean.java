@@ -25,7 +25,7 @@ import com.mg.merp.personnelref.model.Personnel;
 import com.mg.merp.personnelref.model.PersonnelGroup;
 
 /**
- * Бизнес-компонент "Основные сведения о сотрудниках" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћСЃРЅРѕРІРЅС‹Рµ СЃРІРµРґРµРЅРёСЏ Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С…" 
  * 
  * @author leonova
  * @author Oleg V. Safonov

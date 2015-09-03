@@ -38,7 +38,7 @@ import com.mg.merp.salary.PositionFillServiceLocal;
 import com.mg.merp.salary.model.FeeModel;
 
 /**
- * Контроллер формы поддержки "Лицевой счет сотрудника"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "Р›РёС†РµРІРѕР№ СЃС‡РµС‚ СЃРѕС‚СЂСѓРґРЅРёРєР°"
  *
  * @author leonova
  * @author Artem V. Sharapov

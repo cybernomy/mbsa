@@ -17,7 +17,7 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.Kladr;
 
 /**
- * Сервис бизнес-компонента "Классификатор адресов (КЛАДР)"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂ Р°РґСЂРµСЃРѕРІ (РљР›РђР”Р )"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,18 +26,18 @@ import com.mg.merp.personnelref.model.Kladr;
 public interface KladrServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Kladr, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/personnelref/Kladr"; //$NON-NLS-1$
 
-	// Уровни классификатора адресов
+	// РЈСЂРѕРІРЅРё РєР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂР° Р°РґСЂРµСЃРѕРІ
 	static final int REGION_LEVEL = 1;
 	static final int DISTRICT_LEVEL = 2;
 	static final int CITY_LEVEL = 3;
 	static final int AREA_LEVEL = 4;
 	static final int STREET_LEVEL = 5;
 
-	// Инициализирующие значения кодов
+	// РРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‰РёРµ Р·РЅР°С‡РµРЅРёСЏ РєРѕРґРѕРІ
 	static final String INIT_KLADR_CODE = "000000000000000"; //$NON-NLS-1$
 	static final String INIT_REGION_CODE = "00"; //$NON-NLS-1$
 	static final String INIT_DISTRICT_CODE = "000"; //$NON-NLS-1$
@@ -45,13 +45,13 @@ public interface KladrServiceLocal extends com.mg.framework.api.DataBusinessObje
 	static final String INIT_AREA_CODE = "000"; //$NON-NLS-1$
 	static final String INIT_STREET_CODE = "0000"; //$NON-NLS-1$
 	
-	// Маски инициализирующих значений кодов
+	// РњР°СЃРєРё РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‰РёС… Р·РЅР°С‡РµРЅРёР№ РєРѕРґРѕРІ
 	static final String INIT_REGION_CODE_MASK = "__"; //$NON-NLS-1$
 	static final String INIT_DISTRICT_CODE_MASK = "___"; //$NON-NLS-1$
 	static final String INIT_CITY_CODE_MASK = "___"; //$NON-NLS-1$
 	static final String INIT_AREA_CODE_MASK = "___"; //$NON-NLS-1$
 	
-	// Подмаски уровней классификатора
+	// РџРѕРґРјР°СЃРєРё СѓСЂРѕРІРЅРµР№ РєР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂР°
 	static final String REGION_SUB_MASK = "__000000000__"; //$NON-NLS-1$
 	static final String DISTRICT_SUB_MASK = "___000000__"; //$NON-NLS-1$
 	static final String CITY_SUB_MASK = "___000__"; //$NON-NLS-1$

@@ -26,7 +26,7 @@ import com.mg.merp.contract.ModifyDocumentServiceLocal;
 import com.mg.merp.contract.model.ModifyDocument;
 
 /**
- * Реализация бизнес-компонента "Изменение контракта" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РР·РјРµРЅРµРЅРёРµ РєРѕРЅС‚СЂР°РєС‚Р°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

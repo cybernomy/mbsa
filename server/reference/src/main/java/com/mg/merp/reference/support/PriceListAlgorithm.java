@@ -16,21 +16,21 @@ package com.mg.merp.reference.support;
 
 
 /**
- * Базовый класс алгоритма расчета цены прайс-листа. Класс алгоритма должен
- * реализовывать следующий метод <code>protected void doPerform() throws Exception</code>.
- * Метод возвращает расчитанную цену прайс-листа.
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ Р°Р»РіРѕСЂРёС‚РјР° СЂР°СЃС‡РµС‚Р° С†РµРЅС‹ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°. РљР»Р°СЃСЃ Р°Р»РіРѕСЂРёС‚РјР° РґРѕР»Р¶РµРЅ
+ * СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёР№ РјРµС‚РѕРґ <code>protected void doPerform() throws Exception</code>.
+ * РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ СЂР°СЃС‡РёС‚Р°РЅРЅСѓСЋ С†РµРЅСѓ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°.
  * 
- * <p>Пример данного метода:
+ * <p>РџСЂРёРјРµСЂ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР°:
  * <pre>
  * protected void doPerform() throws Exception {
- *     //умножить базовую цену на 2
+ *     //СѓРјРЅРѕР¶РёС‚СЊ Р±Р°Р·РѕРІСѓСЋ С†РµРЅСѓ РЅР° 2
  *     complete(getPriceListSpec().getPrice().multiply(new BigDecimal(2.0)));
  * }
  * </pre>
  * 
  * @author Oleg V. Safonov
  * @version $Id: PriceListAlgorithm.java,v 1.9 2007/09/04 12:37:32 safonov Exp $
- * @deprecated используйте {@link PriceListBusinessAddin}
+ * @deprecated РёСЃРїРѕР»СЊР·СѓР№С‚Рµ {@link PriceListBusinessAddin}
  */
 @Deprecated
 public abstract class PriceListAlgorithm extends PriceListBusinessAddin {

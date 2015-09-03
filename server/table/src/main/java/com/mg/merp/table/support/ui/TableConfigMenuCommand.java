@@ -26,7 +26,7 @@ import com.mg.merp.core.model.SysClient;
 import com.mg.merp.table.TableConfigServiceLocal;
 
 /**
- * Контроллер комманды меню "Конфигурация модуля <Табельный учет>"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРјРјР°РЅРґС‹ РјРµРЅСЋ "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РўР°Р±РµР»СЊРЅС‹Р№ СѓС‡РµС‚>"
  * 
  * @author Artem V. Sharapov
  * @version $Id: TableConfigMenuCommand.java,v 1.2 2008/08/15 15:32:14 sharapov Exp $

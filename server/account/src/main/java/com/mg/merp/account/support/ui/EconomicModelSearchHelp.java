@@ -17,7 +17,7 @@ package com.mg.merp.account.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * Поисковик бизнес-компонента "Образцы хоз. операций"
+ * РџРѕРёСЃРєРѕРІРёРє Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·С†С‹ С…РѕР·. РѕРїРµСЂР°С†РёР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: EconomicModelSearchHelp.java,v 1.1 2007/02/16 14:15:40 sharapov Exp $

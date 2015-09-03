@@ -28,7 +28,7 @@ import com.mg.merp.table.model.PatternHead;
 import com.mg.merp.table.model.PatternSpec;
 
 /**
- * Реализация бизнес-компонента "Спецификация шаблона графика"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёСЏ С€Р°Р±Р»РѕРЅР° РіСЂР°С„РёРєР°"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -50,21 +50,21 @@ public class PatternSpecServiceBean extends com.mg.framework.generic.AbstractPOJ
 			PatternSpec[] specs = specList.get(i);
 			for (int j = 1; j < specs.length; j++) {
 				PatternSpec spec = specs[j];
-				// позиция спецификации была добавлена
+				// РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё Р±С‹Р»Р° РґРѕР±Р°РІР»РµРЅР°
 				if(spec.getId() == null) {
 					if(i == 0) { 
-						// был установлен тип времени с учетом по дням или кол-во часов
+						// Р±С‹Р» СѓСЃС‚Р°РЅРѕРІР»РµРЅ С‚РёРї РІСЂРµРјРµРЅРё СЃ СѓС‡РµС‚РѕРј РїРѕ РґРЅСЏРј РёР»Рё РєРѕР»-РІРѕ С‡Р°СЃРѕРІ
 						if((spec.getHoursQuantity() == null && !spec.getTimeKind().getId().equals(specs[0].getTimeKind().getId())) || (MathUtils.compareToZeroOrNull(spec.getHoursQuantity()) != 0)) 
 							create(spec);
 					} else if(MathUtils.compareToZeroOrNull(spec.getHoursQuantity()) != 0)
 						create(spec);
 				}
-				// позиция спецификации была изменена
+				// РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё Р±С‹Р»Р° РёР·РјРµРЅРµРЅР°
 				else if(i == 0) {
-					// был установлен тип времени с учетом по дням или кол-во часов
+					// Р±С‹Р» СѓСЃС‚Р°РЅРѕРІР»РµРЅ С‚РёРї РІСЂРµРјРµРЅРё СЃ СѓС‡РµС‚РѕРј РїРѕ РґРЅСЏРј РёР»Рё РєРѕР»-РІРѕ С‡Р°СЃРѕРІ
 					if((spec.getHoursQuantity() == null && !spec.getTimeKind().getId().equals(specs[0].getTimeKind().getId())) || (MathUtils.compareToZeroOrNull(spec.getHoursQuantity()) != 0))
 						store(spec);
-					else // кол-во часов = 0
+					else // РєРѕР»-РІРѕ С‡Р°СЃРѕРІ = 0
 						erase(spec);
 				} else { 
 					if(MathUtils.compareToZeroOrNull(spec.getHoursQuantity()) == 0)

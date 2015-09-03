@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.TaxGroup;
 
 /**
- * Браузер групп налогов 
+ * Р‘СЂР°СѓР·РµСЂ РіСЂСѓРїРї РЅР°Р»РѕРіРѕРІ 
  * 
  * @author leonova
  * @version $Id: TaxGroupBr.java,v 1.1 2006/08/29 12:40:49 leonova Exp $ 

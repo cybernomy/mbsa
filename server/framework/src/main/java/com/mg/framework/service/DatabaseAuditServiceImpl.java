@@ -43,7 +43,7 @@ import com.mg.framework.utils.JmsUtils;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Ðåàëèçàöèÿ ñåðâèñà àóäèòà õðàíèëèùà äàííûõ
+ * Ð ÐµÐ°Ð»Ð¸Ð·Ð°Ñ†Ð¸Ñ ÑÐµÑ€Ð²Ð¸ÑÐ° Ð°ÑƒÐ´Ð¸Ñ‚Ð° Ñ…Ñ€Ð°Ð½Ð¸Ð»Ð¸Ñ‰Ð° Ð´Ð°Ð½Ð½Ñ‹Ñ…
  * 
  * @author Oleg V. Safonov
  * @version $Id: DatabaseAuditServiceImpl.java,v 1.3 2008/05/29 08:19:28 safonov Exp $
@@ -80,8 +80,8 @@ public class DatabaseAuditServiceImpl {
 		}
 
 		private boolean isAuditModifyProperty(String propertyName) {
-			//ïîïàäàåò â àóäèò åñëè ñïèñîê ñâîéñòâ ïóñòîé (ýòî çíà÷èò ÷òî àóäèðóåì âñå ñâîéñòâà)
-			//èëè åñòü â ñïèñêå
+			//Ð¿Ð¾Ð¿Ð°Ð´Ð°ÐµÑ‚ Ð² Ð°ÑƒÐ´Ð¸Ñ‚ ÐµÑÐ»Ð¸ ÑÐ¿Ð¸ÑÐ¾Ðº ÑÐ²Ð¾Ð¹ÑÑ‚Ð² Ð¿ÑƒÑÑ‚Ð¾Ð¹ (ÑÑ‚Ð¾ Ð·Ð½Ð°Ñ‡Ð¸Ñ‚ Ñ‡Ñ‚Ð¾ Ð°ÑƒÐ´Ð¸Ñ€ÑƒÐµÐ¼ Ð²ÑÐµ ÑÐ²Ð¾Ð¹ÑÑ‚Ð²Ð°)
+			//Ð¸Ð»Ð¸ ÐµÑÑ‚ÑŒ Ð² ÑÐ¿Ð¸ÑÐºÐµ
 			return auditModify && (propertyNames == null || propertyNames.contains(propertyName));
 		}
 		
@@ -276,11 +276,11 @@ public class DatabaseAuditServiceImpl {
 				j++;
 			}
 			
-			//íåò ñâîéñòâ äëÿ àóäèòà
+			//Ð½ÐµÑ‚ ÑÐ²Ð¾Ð¹ÑÑ‚Ð² Ð´Ð»Ñ Ð°ÑƒÐ´Ð¸Ñ‚Ð°
 			if (j == 0)
 				return;
 			
-			//ñâîéñòâ äëÿ àóäèòà ìåíüøå ÷åì áûëî óñòàíîâëåíî
+			//ÑÐ²Ð¾Ð¹ÑÑ‚Ð² Ð´Ð»Ñ Ð°ÑƒÐ´Ð¸Ñ‚Ð° Ð¼ÐµÐ½ÑŒÑˆÐµ Ñ‡ÐµÐ¼ Ð±Ñ‹Ð»Ð¾ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½Ð¾
 			if (names.length > j) {
 				auditedNames = (String[]) ArrayUtils.subarray(auditedNames, 0, j);
 				stateStr = (String[]) ArrayUtils.subarray(stateStr, 0, j);

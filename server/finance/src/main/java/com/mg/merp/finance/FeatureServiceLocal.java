@@ -25,7 +25,7 @@ public interface FeatureServiceLocal
    extends com.mg.framework.api.DataBusinessObjectService<Account, Integer>
 {
 	/**
-	 * тип папки для признаков финансового учета
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РїСЂРёР·РЅР°РєРѕРІ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°
 	 */
 	final static short FOLDER_PART = 39;
 }

@@ -25,7 +25,7 @@ import com.mg.merp.warehouse.model.StockBatch;
 public interface WarehouseBatchServiceLocal extends
 		com.mg.framework.api.DataBusinessObjectService<StockBatch, Integer> {
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/warehouse/WarehouseBatch";
 }

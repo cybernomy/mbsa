@@ -38,7 +38,7 @@ import com.mg.merp.warehouse.WarehouseServiceLocal;
 import com.mg.merp.warehouse.model.Warehouse;
 
 /**
- * Бизнес-компонент "Склады"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРєР»Р°РґС‹"
  * 
  * @author leonova
  * @version $Id: WarehouseServiceBean.java,v 1.10 2007/11/29 08:50:24 alikaev Exp $
@@ -50,7 +50,7 @@ WarehouseServiceLocal {
 
 	@PermitAll
 	public Warehouse addWarehouse(OrgUnit orgUnit) {
-		//проверим стандартный метод
+		//РїСЂРѕРІРµСЂРёРј СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ РјРµС‚РѕРґ
 		SecurityUtils.checkPermission(new BusinessMethodPermission(getBusinessServiceMetadata().getName(), BusinessMethodPermission.CREATE_METHOD));
 
 		JdbcTemplate.getInstance().update("INSERT INTO WH_WAREHOUSE (ID, CONTRACTOR_ID, CLIENT_ID) VALUES (?, ?, ?)", new Object[] {orgUnit.getId(), orgUnit.getId(), ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId()}); //$NON-NLS-1$ //$NON-NLS-2$
@@ -59,7 +59,7 @@ WarehouseServiceLocal {
 
 	@PermitAll
 	public void eraseWarehouse(int id) {
-		//проверим стандартный метод
+		//РїСЂРѕРІРµСЂРёРј СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ РјРµС‚РѕРґ
 		SecurityUtils.checkPermission(new BusinessMethodPermission(getBusinessServiceMetadata().getName(), BusinessMethodPermission.ERASE_METHOD));
 
 		JdbcTemplate.getInstance().update("DELETE FROM WH_WAREHOUSE WHERE (id = ?)", new Object[] {id});//$NON-NLS-1$ //$NON-NLS-2$
@@ -74,9 +74,9 @@ WarehouseServiceLocal {
 	}
 
 	/**
-	 * Получить МОЛ по умолчанию для склада
-	 * @param warehouse - склад
-	 * @return МОЛ(сотрудник) по умолчанию для склада, или <code>null</code> если не найден
+	 * РџРѕР»СѓС‡РёС‚СЊ РњРћР› РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ СЃРєР»Р°РґР°
+	 * @param warehouse - СЃРєР»Р°Рґ
+	 * @return РњРћР›(СЃРѕС‚СЂСѓРґРЅРёРє) РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РґР»СЏ СЃРєР»Р°РґР°, РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	protected Employees doGetWarehouseDefaultMOL(Warehouse warehouse) {
 		List<Employees> employees = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(Employees.class)
@@ -114,8 +114,8 @@ WarehouseServiceLocal {
 	}
 
 	/**
-	 * Закрыть склад
-	 * @param wh - склад
+	 * Р—Р°РєСЂС‹С‚СЊ СЃРєР»Р°Рґ
+	 * @param wh - СЃРєР»Р°Рґ
 	 */
 	private void internalCloseWarehouse(final Warehouse wh) {
 		wh.setWarehouseTransactionClosed(true);
@@ -127,8 +127,8 @@ WarehouseServiceLocal {
 	}
 
 	/**
-	 * Открыть склад
-	 * @param wh - склад
+	 * РћС‚РєСЂС‹С‚СЊ СЃРєР»Р°Рґ
+	 * @param wh - СЃРєР»Р°Рґ
 	 */
 	private void internalOpenWarehouse(final Warehouse wh) {
 		wh.setClosedDateTill(null);

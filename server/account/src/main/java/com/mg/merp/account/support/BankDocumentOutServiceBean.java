@@ -27,7 +27,7 @@ import com.mg.merp.document.Configuration;
 import com.mg.merp.document.generic.DocumentServiceBean;
 
 /**
- * Реализация бизнес-компонента "Исходящие банковские документы" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РСЃС…РѕРґСЏС‰РёРµ Р±Р°РЅРєРѕРІСЃРєРёРµ РґРѕРєСѓРјРµРЅС‚С‹" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

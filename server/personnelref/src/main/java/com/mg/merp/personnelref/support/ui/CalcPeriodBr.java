@@ -28,7 +28,7 @@ import com.mg.merp.personnelref.CalcPeriodServiceLocal;
 import com.mg.merp.personnelref.model.CalcPeriod;
 
 /**
- * Контроллер браузера "Расчетные периоды"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "Р Р°СЃС‡РµС‚РЅС‹Рµ РїРµСЂРёРѕРґС‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -92,8 +92,8 @@ public class CalcPeriodBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Установить текущий расчетный период"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЈСЃС‚Р°РЅРѕРІРёС‚СЊ С‚РµРєСѓС‰РёР№ СЂР°СЃС‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionSetCurrentCalcPeriod(WidgetEvent event) {
 		Serializable[] selectedPrimaryKeys = ((DefaultMaintenanceEJBQLTableModel) table.getModel()).getSelectedPrimaryKeys();

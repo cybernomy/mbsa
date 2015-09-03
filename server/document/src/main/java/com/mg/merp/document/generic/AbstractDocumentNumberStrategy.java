@@ -20,7 +20,7 @@ import com.mg.merp.document.DocumentNumberStrategy;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Абстрактная стратегия формирования номера документа, супер класс для всех стратегий
+ * РђР±СЃС‚СЂР°РєС‚РЅР°СЏ СЃС‚СЂР°С‚РµРіРёСЏ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РЅРѕРјРµСЂР° РґРѕРєСѓРјРµРЅС‚Р°, СЃСѓРїРµСЂ РєР»Р°СЃСЃ РґР»СЏ РІСЃРµС… СЃС‚СЂР°С‚РµРіРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractDocumentNumberStrategy.java,v 1.1 2007/03/23 13:52:29 safonov Exp $
@@ -30,10 +30,10 @@ public abstract class AbstractDocumentNumberStrategy implements
 	protected Logger logger = ServerUtils.getLogger(this.getClass());
 
 	/**
-	 * реализация формирования номера документа
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РЅРѕРјРµСЂР° РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docHead	сущность документа
-	 * @return	номер документа
+	 * @param docHead	СЃСѓС‰РЅРѕСЃС‚СЊ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected abstract String doGenerateNumber(DocHead docHead);
 	

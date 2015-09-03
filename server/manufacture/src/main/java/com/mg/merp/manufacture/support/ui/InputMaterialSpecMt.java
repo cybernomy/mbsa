@@ -17,7 +17,7 @@ package com.mg.merp.manufacture.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы поддержки спецификации акта на списание материалов в ЗНП
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёРё Р°РєС‚Р° РЅР° СЃРїРёСЃР°РЅРёРµ РјР°С‚РµСЂРёР°Р»РѕРІ РІ Р—РќРџ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InputMaterialSpecMt.java,v 1.3 2006/08/28 04:33:30 leonova Exp $

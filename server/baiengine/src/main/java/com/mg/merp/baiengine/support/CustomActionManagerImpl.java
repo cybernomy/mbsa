@@ -40,7 +40,7 @@ import com.mg.merp.baiengine.BusinessAddinListener;
 import com.mg.merp.baiengine.model.CustomUserAction;
 
 /**
- * Реализация менеджера настраиваемых действий
+ * Р РµР°Р»РёР·Р°С†РёСЏ РјРµРЅРµРґР¶РµСЂР° РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomActionManagerImpl.java,v 1.2 2007/11/15 14:05:45 safonov Exp $
@@ -50,10 +50,10 @@ public class CustomActionManagerImpl implements CustomActionManager {
 	private Logger logger = ServerUtils.getLogger(CustomActionManagerImpl.class);
 	
 	/**
-	 * загрузка списка настраиваемых действие для бизнес-компонента
+	 * Р·Р°РіСЂСѓР·РєР° СЃРїРёСЃРєР° РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёРµ РґР»СЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
-	 * @param classId	идентификатор бизнес-компонента
-	 * @return	список доступных действий
+	 * @param classId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * @return	СЃРїРёСЃРѕРє РґРѕСЃС‚СѓРїРЅС‹С… РґРµР№СЃС‚РІРёР№
 	 */
 	private List<CustomUserAction> loadUserActions(int classId) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(CustomUserAction.class, "cua")
@@ -66,10 +66,10 @@ public class CustomActionManagerImpl implements CustomActionManager {
 	}
 	
 	/**
-	 * загрузка действия по коду
+	 * Р·Р°РіСЂСѓР·РєР° РґРµР№СЃС‚РІРёСЏ РїРѕ РєРѕРґСѓ
 	 * 
-	 * @param code	код действия
-	 * @return	действие или <code>null</code> если не найдено или отсутствуют права
+	 * @param code	РєРѕРґ РґРµР№СЃС‚РІРёСЏ
+	 * @return	РґРµР№СЃС‚РІРёРµ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅРѕ РёР»Рё РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‚ РїСЂР°РІР°
 	 */
 	private CustomUserAction loadUserAction(String code) {
 		return OrmTemplate.getInstance().findUniqueByCriteria(OrmTemplate.createCriteria(CustomUserAction.class, "cua")
@@ -81,11 +81,11 @@ public class CustomActionManagerImpl implements CustomActionManager {
 	}
 	
 	/**
-	 * создание разделителя
+	 * СЃРѕР·РґР°РЅРёРµ СЂР°Р·РґРµР»РёС‚РµР»СЏ
 	 * 
-	 * @param formlet		формлет
-	 * @param actionName	имя действия
-	 * @param isBefore	признак размещения разделителя
+	 * @param formlet		С„РѕСЂРјР»РµС‚
+	 * @param actionName	РёРјСЏ РґРµР№СЃС‚РІРёСЏ
+	 * @param isBefore	РїСЂРёР·РЅР°Рє СЂР°Р·РјРµС‰РµРЅРёСЏ СЂР°Р·РґРµР»РёС‚РµР»СЏ
 	 */
 	private void createSeparator(StringBuilder formlet, String actionName, boolean isBefore) {
 		formlet.append("<").append(WidgetFactory.SEPARATOR_WIDGET)
@@ -93,10 +93,10 @@ public class CustomActionManagerImpl implements CustomActionManager {
 	}
 	
 	/**
-	 * реализация генерации формлета
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РіРµРЅРµСЂР°С†РёРё С„РѕСЂРјР»РµС‚Р°
 	 * 
-	 * @param service	бизнес-компонент
-	 * @return	формлет
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @return	С„РѕСЂРјР»РµС‚
 	 */
 	private String doGenerateActionsArea(BusinessObjectService service) {
 		if (service == null)
@@ -138,9 +138,9 @@ public class CustomActionManagerImpl implements CustomActionManager {
 	}
 	
 	/**
-	 * реализация выполнения действия
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ РґРµР№СЃС‚РІРёСЏ
 	 * 
-	 * @param context	контекст выполнения
+	 * @param context	РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРёСЏ
 	 */
 	private void doExecuteAction(final CustomActionExecutionContext context) {
 		final CustomUserAction action = loadUserAction(context.getAction());

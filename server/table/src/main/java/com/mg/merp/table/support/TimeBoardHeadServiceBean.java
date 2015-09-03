@@ -43,7 +43,7 @@ import com.mg.merp.table.model.TimeBoardPosition;
 import com.mg.merp.table.model.TimeBoardSpec;
 
 /**
- * Реализация бизнес-компонента "Заголовки табелей" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р—Р°РіРѕР»РѕРІРєРё С‚Р°Р±РµР»РµР№" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

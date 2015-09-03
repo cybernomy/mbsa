@@ -471,8 +471,8 @@ public class NaturalPersonMt extends DefaultMaintenanceForm implements MasterMod
 	 */
 	@Override
 	protected void doOnSave() {
-		//При сохранении проверяем заполнены ли обязательные поля физического лица
-		//Если да  то закрываем для редактирования поля физического лица
+		//РџСЂРё СЃРѕС…СЂР°РЅРµРЅРёРё РїСЂРѕРІРµСЂСЏРµРј Р·Р°РїРѕР»РЅРµРЅС‹ Р»Рё РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РїРѕР»СЏ С„РёР·РёС‡РµСЃРєРѕРіРѕ Р»РёС†Р°
+		//Р•СЃР»Рё РґР°  С‚Рѕ Р·Р°РєСЂС‹РІР°РµРј РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РїРѕР»СЏ С„РёР·РёС‡РµСЃРєРѕРіРѕ Р»РёС†Р°
 		if (((NaturalPerson) getEntity()).getActDate() != null && ((NaturalPerson) getEntity()).getSurname() != null 
 				&& StringUtils.EMPTY_STRING.compareTo(((NaturalPerson) getEntity()).getSurname()) != 0)
 			setReadOnlyFieldNaturalPerson(true);
@@ -530,9 +530,9 @@ public class NaturalPersonMt extends DefaultMaintenanceForm implements MasterMod
 	}
 
 	/**
-	 * закрываем/открываем для редактирования поля физического лица
+	 * Р·Р°РєСЂС‹РІР°РµРј/РѕС‚РєСЂС‹РІР°РµРј РґР»СЏ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РїРѕР»СЏ С„РёР·РёС‡РµСЃРєРѕРіРѕ Р»РёС†Р°
 	 *  
-	 * @param isReadOnly признак 
+	 * @param isReadOnly РїСЂРёР·РЅР°Рє 
 	 */
 	private void setReadOnlyFieldNaturalPerson(boolean isReadOnly){
 		view.getWidget("Surname").setReadOnly(isReadOnly); //$NON-NLS-1$

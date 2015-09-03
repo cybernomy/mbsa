@@ -39,7 +39,7 @@ import com.mg.merp.reference.model.TaxLink;
 import com.mg.merp.reference.support.Messages;
 
 /**
- * Стандартная форма поддержки бизнес-компонента "Группы налогов"
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ С„РѕСЂРјР° РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р“СЂСѓРїРїС‹ РЅР°Р»РѕРіРѕРІ"
  * 
  * @author Oleg V. Safonov
  * @author leonova

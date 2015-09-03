@@ -23,8 +23,8 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
 /**
- * Содержит информацию об атрибутах и формате для вывода в пользовательском интерфейсе
- * ссылки на объект
+ * РЎРѕРґРµСЂР¶РёС‚ РёРЅС„РѕСЂРјР°С†РёСЋ РѕР± Р°С‚СЂРёР±СѓС‚Р°С… Рё С„РѕСЂРјР°С‚Рµ РґР»СЏ РІС‹РІРѕРґР° РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРј РёРЅС‚РµСЂС„РµР№СЃРµ
+ * СЃСЃС‹Р»РєРё РЅР° РѕР±СЉРµРєС‚
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityPropertyText.java,v 1.1 2006/01/24 13:27:54 safonov Exp $
@@ -36,14 +36,14 @@ import java.lang.annotation.Target;
 public @interface EntityPropertyText {
 	
 	/**
-	 * Список наименований атрибутов
+	 * РЎРїРёСЃРѕРє РЅР°РёРјРµРЅРѕРІР°РЅРёР№ Р°С‚СЂРёР±СѓС‚РѕРІ
 	 * 
 	 * @return
 	 */
 	String[] value() default {};
 	
 	/**
-	 * Формат для вывода
+	 * Р¤РѕСЂРјР°С‚ РґР»СЏ РІС‹РІРѕРґР°
 	 * 
 	 * @see  java.util.Formatter
 	 * @return

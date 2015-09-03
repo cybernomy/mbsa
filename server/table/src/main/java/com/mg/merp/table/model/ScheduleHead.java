@@ -17,7 +17,7 @@ package com.mg.merp.table.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Графики работ в табельном учете"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р“СЂР°С„РёРєРё СЂР°Р±РѕС‚ РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ScheduleHead.java,v 1.5 2008/08/12 14:11:44 sharapov Exp $

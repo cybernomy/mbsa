@@ -21,7 +21,7 @@ import com.mg.merp.reference.model.CatalogPrice;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Бизнес-компонент "Нормативная цена"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РќРѕСЂРјР°С‚РёРІРЅР°СЏ С†РµРЅР°"
  * 
  * @author Oleg V. Safonov
  * @author leonova
@@ -30,17 +30,17 @@ import com.mg.merp.reference.model.Currency;
 public interface CatalogPriceServiceLocal extends com.mg.framework.api.DataBusinessObjectService<CatalogPrice, Integer>
 {
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/reference/CatalogPrice";
 	
 	/**
-	 * поиск актуальной нормативной цены
+	 * РїРѕРёСЃРє Р°РєС‚СѓР°Р»СЊРЅРѕР№ РЅРѕСЂРјР°С‚РёРІРЅРѕР№ С†РµРЅС‹
 	 * 
-	 * @param actualityDate	дата актуальности
-	 * @param catalog	позиция каталога
-	 * @param currency	валюта
-	 * @return	нормативная цена
+	 * @param actualityDate	РґР°С‚Р° Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё
+	 * @param catalog	РїРѕР·РёС†РёСЏ РєР°С‚Р°Р»РѕРіР°
+	 * @param currency	РІР°Р»СЋС‚Р°
+	 * @return	РЅРѕСЂРјР°С‚РёРІРЅР°СЏ С†РµРЅР°
 	 */
 	CatalogPrice findActual(Date actualityDate, Catalog catalog, Currency currency);
 

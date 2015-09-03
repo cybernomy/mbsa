@@ -18,7 +18,7 @@ import com.mg.merp.manufacture.model.InputDocumentSpec;
 
 
 /**
- * Бизнес-компонент "Спецификации актов на списание времени РС"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёРё Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РІСЂРµРјРµРЅРё Р РЎ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: InputLaborSpecServiceLocal.java,v 1.4 2007/08/06 12:46:24 safonov Exp $
@@ -27,7 +27,7 @@ public interface InputLaborSpecServiceLocal
 		extends InputSpecificationServiceLocal<InputDocumentSpec> {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/manufacture/InputLaborSpec";
 

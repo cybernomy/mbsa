@@ -24,7 +24,7 @@ import com.mg.merp.reference.IdentDocKindServiceLocal;
 import com.mg.merp.reference.model.IdentDocKind;
 
 /**
- * Бизнес-компонент "Виды документов, удостоверяющих личность" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РёРґС‹ РґРѕРєСѓРјРµРЅС‚РѕРІ, СѓРґРѕСЃС‚РѕРІРµСЂСЏСЋС‰РёС… Р»РёС‡РЅРѕСЃС‚СЊ" 
  * 
  * @author leonova
  * @version $Id: IdentDocKindServiceBean.java,v 1.4 2006/10/20 05:40:26 leonova Exp $

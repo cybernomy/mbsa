@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Пол
+ * РџРѕР»
  * 
  * @author leonova
  * @version $Id: GenderType.java,v 1.2 2006/05/02 12:31:38 safonov Exp $
@@ -26,13 +26,13 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Reference.Gender")
 public enum GenderType {
 	/**
-	 * мужской
+	 * РјСѓР¶СЃРєРѕР№
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#Gender.Type.Male")
 	MALE,
 	
 	/**
-	 * женский
+	 * Р¶РµРЅСЃРєРёР№
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#Gender.Type.Female")
 	FEMALE

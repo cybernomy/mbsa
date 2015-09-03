@@ -49,7 +49,7 @@ import com.mg.merp.reference.model.PersonElectronicAddress;
 import com.mg.merp.reference.model.PersonPhone;
 
 /**
- * Контроллер формы поддержки "Контактное лицо"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РљРѕРЅС‚Р°РєС‚РЅРѕРµ Р»РёС†Рѕ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -334,8 +334,8 @@ public class ContactMt extends DefaultCompoundMaintenanceForm implements MasterM
 	}
 
 	/**
-	 * Обработчик кнопки "Обновить адрес"  
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "РћР±РЅРѕРІРёС‚СЊ Р°РґСЂРµСЃ"  
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRefreshAdressInfo(WidgetEvent event) {
 		refreshAdressInfo();

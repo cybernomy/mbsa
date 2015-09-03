@@ -31,7 +31,7 @@ import com.mg.merp.personnelref.model.Rise;
 import com.mg.merp.personnelref.model.RiseScale;
 
 /**
- * Браузер надбавок
+ * Р‘СЂР°СѓР·РµСЂ РЅР°РґР±Р°РІРѕРє
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: RiseBr.java,v 1.4 2006/09/29 05:38:06 leonova Exp $

@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.utils.StringUtils;
 
 /**
- * Модель бизнес-компонента "Лицевые карточки сотрудников"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р›РёС†РµРІС‹Рµ РєР°СЂС‚РѕС‡РєРё СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: OvrCard.java,v 1.9 2008/06/30 04:15:16 alikaev Exp $
@@ -177,7 +177,7 @@ public class OvrCard extends com.mg.framework.service.PersistentObjectHibernate	
 	}
 
 	/**
-	 * @param cardHistories задаваемое cardHistories
+	 * @param cardHistories Р·Р°РґР°РІР°РµРјРѕРµ cardHistories
 	 */
 	public void setCardHistories(java.util.Set<OvrCardHist> ovrCardHists) {
 		this.cardHistories = ovrCardHists;
@@ -191,7 +191,7 @@ public class OvrCard extends com.mg.framework.service.PersistentObjectHibernate	
 	}
 
 	/**
-	 * @param sizes задаваемое sizes
+	 * @param sizes Р·Р°РґР°РІР°РµРјРѕРµ sizes
 	 */
 	public void setSizes(java.util.Set<Size> ovrSizes) {
 		this.sizes = ovrSizes;
@@ -205,7 +205,7 @@ public class OvrCard extends com.mg.framework.service.PersistentObjectHibernate	
 	}
 
 	/**
-	 * @param cardDocumentLinks задаваемое cardDocumentLinks
+	 * @param cardDocumentLinks Р·Р°РґР°РІР°РµРјРѕРµ cardDocumentLinks
 	 */
 	public void setCardDocumentLinks(
 			java.util.Set<OvrCardDocumentLink> ovrCardDocumentLinks) {

@@ -24,7 +24,7 @@ import com.mg.framework.api.jdbc.SQLExceptionTranslator;
 import com.mg.framework.api.jdbc.SQLExceptionTranslatorManager;
 
 /**
- * Реализация менеджера трансляторов SQL ИС в пользовательские исключения
+ * Р РµР°Р»РёР·Р°С†РёСЏ РјРµРЅРµРґР¶РµСЂР° С‚СЂР°РЅСЃР»СЏС‚РѕСЂРѕРІ SQL РРЎ РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РёСЃРєР»СЋС‡РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: SQLExceptionTranslatorManagerImpl.java,v 1.1 2006/11/17 14:28:55 safonov Exp $
@@ -37,7 +37,7 @@ public class SQLExceptionTranslatorManagerImpl implements
 	 * @see com.mg.framework.api.SQLExceptionTranslatorManager#registerTranslator(com.mg.framework.api.SQLExceptionTranslator)
 	 */
 	public void registerTranslator(SQLExceptionTranslator translator) {
-		//добавляем в начало, чтобы перекрыть более ранние трансляторы
+		//РґРѕР±Р°РІР»СЏРµРј РІ РЅР°С‡Р°Р»Рѕ, С‡С‚РѕР±С‹ РїРµСЂРµРєСЂС‹С‚СЊ Р±РѕР»РµРµ СЂР°РЅРЅРёРµ С‚СЂР°РЅСЃР»СЏС‚РѕСЂС‹
 		translatorList.add(0, translator);
 	}
 
@@ -52,13 +52,13 @@ public class SQLExceptionTranslatorManagerImpl implements
 	 * @see com.mg.framework.api.SQLExceptionTranslatorManager#translate(java.sql.SQLException)
 	 */
 	public DataAccessException translate(SQLException sqlException) {
-		for (SQLExceptionTranslator translator : new LinkedList<SQLExceptionTranslator>(translatorList)) { //копируем, итераторы не потокозащищенные
+		for (SQLExceptionTranslator translator : new LinkedList<SQLExceptionTranslator>(translatorList)) { //РєРѕРїРёСЂСѓРµРј, РёС‚РµСЂР°С‚РѕСЂС‹ РЅРµ РїРѕС‚РѕРєРѕР·Р°С‰РёС‰РµРЅРЅС‹Рµ
 			DataAccessException result = translator.translate(sqlException);
-			//сработает первый который транслировал
+			//СЃСЂР°Р±РѕС‚Р°РµС‚ РїРµСЂРІС‹Р№ РєРѕС‚РѕСЂС‹Р№ С‚СЂР°РЅСЃР»РёСЂРѕРІР°Р»
 			if (result != null)
 				return result;
 		}
-		//если ни один обработчик не транслировал ИС сгенерируем стандартное
+		//РµСЃР»Рё РЅРё РѕРґРёРЅ РѕР±СЂР°Р±РѕС‚С‡РёРє РЅРµ С‚СЂР°РЅСЃР»РёСЂРѕРІР°Р» РРЎ СЃРіРµРЅРµСЂРёСЂСѓРµРј СЃС‚Р°РЅРґР°СЂС‚РЅРѕРµ
 		return new DataAccessException(sqlException);
 	}
 

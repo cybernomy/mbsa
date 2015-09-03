@@ -18,32 +18,32 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Метод начисления накладных расходов на рабочую силу
+ * РњРµС‚РѕРґ РЅР°С‡РёСЃР»РµРЅРёСЏ РЅР°РєР»Р°РґРЅС‹С… СЂР°СЃС…РѕРґРѕРІ РЅР° СЂР°Р±РѕС‡СѓСЋ СЃРёР»Сѓ
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: LaborOverheadAllocationFlag.java,v 1.1 2007/07/30 10:25:11 safonov Exp $
  */
 @DataItemName("Manufacture.LbrOhAllocationFlag")
 public enum LaborOverheadAllocationFlag {
 	/**
-	 * На единицу времени
+	 * РќР° РµРґРёРЅРёС†Сѓ РІСЂРµРјРµРЅРё
 	 */
 	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#LbrOhAllocFlag.Time")
 	TIME,
 	
 	/**
-	 * На единицу готовой продукции
+	 * РќР° РµРґРёРЅРёС†Сѓ РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё
 	*/
 	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#LbrOhAllocFlag.Unit")
 	UNIT,
 	
 	/**
-	 *  Процент от стоимости работы
+	 *  РџСЂРѕС†РµРЅС‚ РѕС‚ СЃС‚РѕРёРјРѕСЃС‚Рё СЂР°Р±РѕС‚С‹
 	 */
 	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#LbrOhAllocFlag.Cost")
 	COST,
 	
 	/**
-	 *  Фиксированная стоимость на партию ГП
+	 *  Р¤РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ РЅР° РїР°СЂС‚РёСЋ Р“Рџ
 	 */
 	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#LbrOhAllocFlag.Fixed")
 	FIXED

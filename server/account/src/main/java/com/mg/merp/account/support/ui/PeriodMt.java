@@ -17,7 +17,7 @@ package com.mg.merp.account.support.ui;
 import com.mg.framework.generic.ui.DefaultMaintenanceForm;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Периоды бух. учета"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРµСЂРёРѕРґС‹ Р±СѓС…. СѓС‡РµС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PeriodMt.java,v 1.1 2007/04/04 12:06:36 sharapov Exp $

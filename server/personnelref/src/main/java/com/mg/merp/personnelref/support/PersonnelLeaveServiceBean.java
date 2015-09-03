@@ -25,7 +25,7 @@ import com.mg.merp.personnelref.PersonnelLeaveServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelLeave;
 
 /**
- * Реализация бизнес-компонента "Отпуска" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћС‚РїСѓСЃРєР°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

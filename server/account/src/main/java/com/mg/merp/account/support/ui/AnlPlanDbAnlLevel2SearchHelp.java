@@ -15,7 +15,7 @@
 package com.mg.merp.account.support.ui;
 
 /**
- * SearchHelp для аналитики второго уровня счета по дебету
+ * SearchHelp РґР»СЏ Р°РЅР°Р»РёС‚РёРєРё РІС‚РѕСЂРѕРіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р° РїРѕ РґРµР±РµС‚Сѓ
  * 
  * @author leonova
  * @version $Id: AnlPlanDbAnlLevel2SearchHelp.java,v 1.1 2006/10/04 06:18:10 leonova Exp $

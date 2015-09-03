@@ -32,7 +32,7 @@ import com.mg.merp.baiengine.UnsupportedBAiEngineException;
 import com.mg.merp.baiengine.model.Repository;
 
 /**
- * Реализация сервиса машины бизнес расширений системы
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РјР°С€РёРЅС‹ Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёР№ СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: BusinessAddinEngineImpl.java,v 1.4 2007/11/15 13:13:09 safonov Exp $
@@ -40,7 +40,7 @@ import com.mg.merp.baiengine.model.Repository;
 public class BusinessAddinEngineImpl implements BusinessAddinEngine {
 
 	/**
-	 * реализация выполнения класса бизнес расширения
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ РєР»Р°СЃСЃР° Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёСЏ
 	 * 
 	 * @param <T>
 	 * @param name
@@ -61,7 +61,7 @@ public class BusinessAddinEngineImpl implements BusinessAddinEngine {
 //	        bai = clazz.newInstance();
 //	        break;
 //		default:
-//			throw new ApplicationException("Не поддерживается");
+//			throw new ApplicationException("РќРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ");
 //		}
         bai.registerListener(listener);
         bai.perform(params);

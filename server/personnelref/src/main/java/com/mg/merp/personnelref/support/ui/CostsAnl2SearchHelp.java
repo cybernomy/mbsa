@@ -15,7 +15,7 @@
 package com.mg.merp.personnelref.support.ui;
 
 /**
- * Поисковик сущностей "Аналитика состава затрат 2-го уровня"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РђРЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 2-РіРѕ СѓСЂРѕРІРЅСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: CostsAnl2SearchHelp.java,v 1.1 2007/07/09 08:07:47 sharapov Exp $

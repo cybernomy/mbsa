@@ -22,7 +22,7 @@ import com.mg.merp.lbschedule.model.ItemSpec;
 import com.mg.merp.lbschedule.model.ItemSpecCreateData;
 
 /**
- * Сервис бизнес-компонента "Спецификация пункта графика исполнения обязательств"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёСЏ РїСѓРЅРєС‚Р° РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -31,26 +31,26 @@ import com.mg.merp.lbschedule.model.ItemSpecCreateData;
 public interface ItemSpecServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ItemSpec, Integer> {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/lbschedule/ItemSpec"; //$NON-NLS-1$
 	
 	/**
-	 * Добавить позиции спецификации пункта графика исполнения обязательств
-	 * @param item - пункт графика
-	 * @param itemSpecCreateData - данные для создания позиции спецификации
+	 * Р”РѕР±Р°РІРёС‚СЊ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р° РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ
+	 * @param item - РїСѓРЅРєС‚ РіСЂР°С„РёРєР°
+	 * @param itemSpecCreateData - РґР°РЅРЅС‹Рµ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	void addSpec(Item item, ItemSpecCreateData[] itemSpecCreateData);
 
 	/**
-	 * Удалить позиции спецификации пункта графика исполнения обязательств
-	 * @param specIDs - идентификаторы позиций спецификации
+	 * РЈРґР°Р»РёС‚СЊ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р° РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ
+	 * @param specIDs - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂС‹ РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	void removeSpec(Serializable[] specIDs);
 	
 	/**
-	 * Пересчитать суммы позиции спецификации
-	 * @param itemSpec - позиция спецификации
+	 * РџРµСЂРµСЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјС‹ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param itemSpec - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 * @param oldQuantity
 	 */
 	void recomputeSum(ItemSpec itemSpec, BigDecimal oldQuantity);

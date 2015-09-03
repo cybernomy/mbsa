@@ -33,7 +33,7 @@ import com.mg.merp.account.model.Period;
 import com.mg.merp.account.support.Messages;
 
 /**
- * Базовый класс реализации бизнес-компонента "Остатки и обороты бух. учета"
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ СЂРµР°Р»РёР·Р°С†РёРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ Р±СѓС…. СѓС‡РµС‚Р°"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -43,7 +43,7 @@ import com.mg.merp.account.support.Messages;
 public abstract class RemnServiceBean<T extends PersistentObject, ID extends Serializable> extends AbstractPOJODataBusinessObjectServiceBean<T, ID> implements Remn {
 
 	/**
-	 * Возвращает имя запроса для удаления пустых записей
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РёРјСЏ Р·Р°РїСЂРѕСЃР° РґР»СЏ СѓРґР°Р»РµРЅРёСЏ РїСѓСЃС‚С‹С… Р·Р°РїРёСЃРµР№
 	 * @return
 	 */
 	abstract protected String getQueryNameRemoveEmptyRecords();
@@ -59,35 +59,35 @@ public abstract class RemnServiceBean<T extends PersistentObject, ID extends Ser
 	}
 
 	/**
-	 * Перенос остатков бух.учета
-	 * @param periodFrom - начальный период
-	 * @param periodTo - конечный период
-	 * @param allAcc - все счета
-	 * @param accList - список выбранных счетов
+	 * РџРµСЂРµРЅРѕСЃ РѕСЃС‚Р°С‚РєРѕРІ Р±СѓС….СѓС‡РµС‚Р°
+	 * @param periodFrom - РЅР°С‡Р°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @param periodTo - РєРѕРЅРµС‡РЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @param allAcc - РІСЃРµ СЃС‡РµС‚Р°
+	 * @param accList - СЃРїРёСЃРѕРє РІС‹Р±СЂР°РЅРЅС‹С… СЃС‡РµС‚РѕРІ
 	 */
 	public void carryForward(Period periodFrom, Period periodTo, boolean allAcc, AccPlan[] accList) {
 		internalCarryForward(periodFrom, periodTo, allAcc, accList);
 	}
 
 	/**
-	 * Перенос остатков бух.учета
-	 * @param accPeriod - период
-	 * @param account - счет
+	 * РџРµСЂРµРЅРѕСЃ РѕСЃС‚Р°С‚РєРѕРІ Р±СѓС….СѓС‡РµС‚Р°
+	 * @param accPeriod - РїРµСЂРёРѕРґ
+	 * @param account - СЃС‡РµС‚
 	 */
 	abstract protected void carryForwardBalance(Period accPeriod,  AccPlan account);
 
 	/**
-	 * Определяет список всех счетов
-	 * @return список всех счетов
+	 * РћРїСЂРµРґРµР»СЏРµС‚ СЃРїРёСЃРѕРє РІСЃРµС… СЃС‡РµС‚РѕРІ
+	 * @return СЃРїРёСЃРѕРє РІСЃРµС… СЃС‡РµС‚РѕРІ
 	 */
 	abstract protected AccPlan[] getAllAccountsList();
 
 	/**
-	 * Перенос остатков бух.учета
-	 * @param periodFrom - начальный период
-	 * @param periodTo - конечный период
-	 * @param allAcc - все счета
-	 * @param accList - список выбранных счетов
+	 * РџРµСЂРµРЅРѕСЃ РѕСЃС‚Р°С‚РєРѕРІ Р±СѓС….СѓС‡РµС‚Р°
+	 * @param periodFrom - РЅР°С‡Р°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @param periodTo - РєРѕРЅРµС‡РЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @param allAcc - РІСЃРµ СЃС‡РµС‚Р°
+	 * @param accList - СЃРїРёСЃРѕРє РІС‹Р±СЂР°РЅРЅС‹С… СЃС‡РµС‚РѕРІ
 	 */
 	protected void internalCarryForward (Period periodFrom, Period periodTo, boolean allAcc, AccPlan[] accList) {
 		Messages errorMsg = Messages.getInstance();
@@ -118,10 +118,10 @@ public abstract class RemnServiceBean<T extends PersistentObject, ID extends Ser
 	}
 
 	/**
-	 * Определяет диапазон периодов, подлежащий переносу остатков
-	 * @param periodFrom - начальный период
-	 * @param periodTo - конечный период
-	 * @return список периодов, подлежащий переносу остатков
+	 * РћРїСЂРµРґРµР»СЏРµС‚ РґРёР°РїР°Р·РѕРЅ РїРµСЂРёРѕРґРѕРІ, РїРѕРґР»РµР¶Р°С‰РёР№ РїРµСЂРµРЅРѕСЃСѓ РѕСЃС‚Р°С‚РєРѕРІ
+	 * @param periodFrom - РЅР°С‡Р°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @param periodTo - РєРѕРЅРµС‡РЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @return СЃРїРёСЃРѕРє РїРµСЂРёРѕРґРѕРІ, РїРѕРґР»РµР¶Р°С‰РёР№ РїРµСЂРµРЅРѕСЃСѓ РѕСЃС‚Р°С‚РєРѕРІ
 	 */
 	protected List<Period> getAccPeriodsRange(Period periodFrom, Period periodTo) {
 		List<Period> accPeriods = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(Period.class)
@@ -138,12 +138,12 @@ public abstract class RemnServiceBean<T extends PersistentObject, ID extends Ser
 	}
 
 	/**
-	 * Удаление "пустых" обороток
+	 * РЈРґР°Р»РµРЅРёРµ "РїСѓСЃС‚С‹С…" РѕР±РѕСЂРѕС‚РѕРє
 	 * 
 	 * @param periodFrom
-	 * 				- начальный период
+	 * 				- РЅР°С‡Р°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ
 	 * @param periodTo
-	 * 				- конечный период
+	 * 				- РєРѕРЅРµС‡РЅС‹Р№ РїРµСЂРёРѕРґ
 	 */
 	protected void doRemoveEmptyRecords(Period periodFrom, Period periodTo) {
 		Criteria criteria = OrmTemplate.createCriteria(Period.class);
@@ -156,7 +156,7 @@ public abstract class RemnServiceBean<T extends PersistentObject, ID extends Ser
 	}
 	
 	/**
-	 * Не реализована
+	 * РќРµ СЂРµР°Р»РёР·РѕРІР°РЅР°
 	 * @param remnId
 	 * @return
 	 * @throws ApplicationException
@@ -168,7 +168,7 @@ public abstract class RemnServiceBean<T extends PersistentObject, ID extends Ser
 	}
 	
 	/**
-	 * Не реализована
+	 * РќРµ СЂРµР°Р»РёР·РѕРІР°РЅР°
 	 * @param remnId
 	 * @return
 	 * @throws ApplicationException
@@ -180,7 +180,7 @@ public abstract class RemnServiceBean<T extends PersistentObject, ID extends Ser
 	}
 	
 	/**
-	 * Не реализована
+	 * РќРµ СЂРµР°Р»РёР·РѕРІР°РЅР°
 	 * @param remnId
 	 * @return
 	 * @throws ApplicationException

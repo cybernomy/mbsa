@@ -13,29 +13,29 @@
  *
  */
 package com.mg.merp.finance.totals;
-//TODO: 1. Подведение итогов по признакам
-//TODO: 2. классу DataSet приделать метод, предоставляющий возможность использовать аггрегацию 
-//из Sohlman DataSet
-//TODO: 3. реализовать метод getTotalCorDataSet
-//TODO: 4. изменить метод fillCorDataSet у класса RowCalculator и mergeCorAccounts у класса 
-//FinanceTotalsFacade, что бы выборка корсчетов не "схлопывалась"
-//TODO: 5. Использовать кеширование для AccountCache и PeriodCache
-//TODO: 6. Изменить имеющиеся SQL запросы так, чтобы они стали вызывать хранимые процедуры.
-//все переменные передавать как параметры
-//TODO: 7. убрать все deprecated методы
-//TODO: 8. Реализовать исключения(где необходимо), возникающие при работе, 
-//для отображения на клиенте
-//TODO: 9. com.mg.merp.totals.finance.helperclasses.Utils проблемы
-//если имя сервиса содержит и прописные и строчные буквы. 
-//TODO: 10. com.mg.merp.totals.finance.helperclasses.Utils, метод getSomeCode. 
-//Предусмотреть возможность формирования кода, если нет ни поля name, ни поля code
-//TODO: 11. Убрать неиспользующиеся классы и методы.
-//TODO: 12. Использовать вместо HashMap класс FastHashMap пакета org.hibernate.util
-//TODO: 13. Выбрасывать исключение, если пользователь вызывает методы open,
-//getDataSet, getCorDataSet, getTotalCorDataSet до установки необходимых 
-//параметров. И методы getDataSet, getCorDataSet, getTotalCorDataSet до вызова open
-//TODO: leonova Желательно, чтобы при вызове функции getColIDbyName возвращала
-//id не только по имени, но и по алиасу
+//TODO: 1. РџРѕРґРІРµРґРµРЅРёРµ РёС‚РѕРіРѕРІ РїРѕ РїСЂРёР·РЅР°РєР°Рј
+//TODO: 2. РєР»Р°СЃСЃСѓ DataSet РїСЂРёРґРµР»Р°С‚СЊ РјРµС‚РѕРґ, РїСЂРµРґРѕСЃС‚Р°РІР»СЏСЋС‰РёР№ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р°РіРіСЂРµРіР°С†РёСЋ 
+//РёР· Sohlman DataSet
+//TODO: 3. СЂРµР°Р»РёР·РѕРІР°С‚СЊ РјРµС‚РѕРґ getTotalCorDataSet
+//TODO: 4. РёР·РјРµРЅРёС‚СЊ РјРµС‚РѕРґ fillCorDataSet Сѓ РєР»Р°СЃСЃР° RowCalculator Рё mergeCorAccounts Сѓ РєР»Р°СЃСЃР° 
+//FinanceTotalsFacade, С‡С‚Рѕ Р±С‹ РІС‹Р±РѕСЂРєР° РєРѕСЂСЃС‡РµС‚РѕРІ РЅРµ "СЃС…Р»РѕРїС‹РІР°Р»Р°СЃСЊ"
+//TODO: 5. РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РєРµС€РёСЂРѕРІР°РЅРёРµ РґР»СЏ AccountCache Рё PeriodCache
+//TODO: 6. РР·РјРµРЅРёС‚СЊ РёРјРµСЋС‰РёРµСЃСЏ SQL Р·Р°РїСЂРѕСЃС‹ С‚Р°Рє, С‡С‚РѕР±С‹ РѕРЅРё СЃС‚Р°Р»Рё РІС‹Р·С‹РІР°С‚СЊ С…СЂР°РЅРёРјС‹Рµ РїСЂРѕС†РµРґСѓСЂС‹.
+//РІСЃРµ РїРµСЂРµРјРµРЅРЅС‹Рµ РїРµСЂРµРґР°РІР°С‚СЊ РєР°Рє РїР°СЂР°РјРµС‚СЂС‹
+//TODO: 7. СѓР±СЂР°С‚СЊ РІСЃРµ deprecated РјРµС‚РѕРґС‹
+//TODO: 8. Р РµР°Р»РёР·РѕРІР°С‚СЊ РёСЃРєР»СЋС‡РµРЅРёСЏ(РіРґРµ РЅРµРѕР±С…РѕРґРёРјРѕ), РІРѕР·РЅРёРєР°СЋС‰РёРµ РїСЂРё СЂР°Р±РѕС‚Рµ, 
+//РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РЅР° РєР»РёРµРЅС‚Рµ
+//TODO: 9. com.mg.merp.totals.finance.helperclasses.Utils РїСЂРѕР±Р»РµРјС‹
+//РµСЃР»Рё РёРјСЏ СЃРµСЂРІРёСЃР° СЃРѕРґРµСЂР¶РёС‚ Рё РїСЂРѕРїРёСЃРЅС‹Рµ Рё СЃС‚СЂРѕС‡РЅС‹Рµ Р±СѓРєРІС‹. 
+//TODO: 10. com.mg.merp.totals.finance.helperclasses.Utils, РјРµС‚РѕРґ getSomeCode. 
+//РџСЂРµРґСѓСЃРјРѕС‚СЂРµС‚СЊ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РєРѕРґР°, РµСЃР»Рё РЅРµС‚ РЅРё РїРѕР»СЏ name, РЅРё РїРѕР»СЏ code
+//TODO: 11. РЈР±СЂР°С‚СЊ РЅРµРёСЃРїРѕР»СЊР·СѓСЋС‰РёРµСЃСЏ РєР»Р°СЃСЃС‹ Рё РјРµС‚РѕРґС‹.
+//TODO: 12. РСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РІРјРµСЃС‚Рѕ HashMap РєР»Р°СЃСЃ FastHashMap РїР°РєРµС‚Р° org.hibernate.util
+//TODO: 13. Р’С‹Р±СЂР°СЃС‹РІР°С‚СЊ РёСЃРєР»СЋС‡РµРЅРёРµ, РµСЃР»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РІС‹Р·С‹РІР°РµС‚ РјРµС‚РѕРґС‹ open,
+//getDataSet, getCorDataSet, getTotalCorDataSet РґРѕ СѓСЃС‚Р°РЅРѕРІРєРё РЅРµРѕР±С…РѕРґРёРјС‹С… 
+//РїР°СЂР°РјРµС‚СЂРѕРІ. Р РјРµС‚РѕРґС‹ getDataSet, getCorDataSet, getTotalCorDataSet РґРѕ РІС‹Р·РѕРІР° open
+//TODO: leonova Р–РµР»Р°С‚РµР»СЊРЅРѕ, С‡С‚РѕР±С‹ РїСЂРё РІС‹Р·РѕРІРµ С„СѓРЅРєС†РёРё getColIDbyName РІРѕР·РІСЂР°С‰Р°Р»Р°
+//id РЅРµ С‚РѕР»СЊРєРѕ РїРѕ РёРјРµРЅРё, РЅРѕ Рё РїРѕ Р°Р»РёР°СЃСѓ
 
 
 
@@ -529,7 +529,7 @@ public class FinanceTotalsGate {
 				throw new RuntimeException(ResStr.SINVALID_PERIOD);
 		}
 
-		// по периодам
+		// РїРѕ РїРµСЂРёРѕРґР°Рј
 		if (((dpp1.getDatePosition() == dppUnknown && dpp2.getDatePosition() == dppUnknown) 
 					|| (dpp1.getDatePosition() == dppBegin && dpp2.getDatePosition() == dppEnd))
 					&& isPreferPeriods)	{
@@ -542,7 +542,7 @@ public class FinanceTotalsGate {
 				date1 = PeriodCache.findById(periodId1).getBeginDate();
 			if (date2 == null)
 				date2 = PeriodCache.findById(periodId2).getEndDate();
-			// по датам
+			// РїРѕ РґР°С‚Р°Рј
 			if (periodId1 == periodId2) {
 				worker.setPeriods(periodId1, periodId1);
 				worker.setDates(date1, date2);
@@ -658,7 +658,7 @@ public class FinanceTotalsGate {
 				// TODO: corDs := FCorDsList.Data[PoIntegerer(rowId)];
 				corDS.firstRow();
 				while (!corDS.isEndOfSet())	{
-					// TODO: если что-то есть, то редактируем, иначе добавляем
+					// TODO: РµСЃР»Рё С‡С‚Рѕ-С‚Рѕ РµСЃС‚СЊ, С‚Рѕ СЂРµРґР°РєС‚РёСЂСѓРµРј, РёРЅР°С‡Рµ РґРѕР±Р°РІР»СЏРµРј
 					/*
 					 * if FTotalCorDs.Locate('ACC_ID',
 					 * VarArrayOf([corDs.FieldByName('ACC_ID').AsInteger]), [])

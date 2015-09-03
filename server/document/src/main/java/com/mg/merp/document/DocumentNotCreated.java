@@ -18,7 +18,7 @@ import com.mg.framework.api.BusinessException;
 import com.mg.merp.document.support.Messages;
 
 /**
- * Класс ИС генерируемый при попытке обращения к несозданному документооборотом документу
+ * РљР»Р°СЃСЃ РРЎ РіРµРЅРµСЂРёСЂСѓРµРјС‹Р№ РїСЂРё РїРѕРїС‹С‚РєРµ РѕР±СЂР°С‰РµРЅРёСЏ Рє РЅРµСЃРѕР·РґР°РЅРЅРѕРјСѓ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚РѕРј РґРѕРєСѓРјРµРЅС‚Сѓ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentNotCreated.java,v 1.1 2008/12/29 09:55:32 safonov Exp $

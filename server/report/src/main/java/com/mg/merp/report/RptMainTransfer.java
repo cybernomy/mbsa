@@ -18,8 +18,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 /**
- * Трансферный класс. Был создан для передачи отчёта в среду разработки. Т.к.
- * пакет com.mg.merp.report.model.* был не доступен для Workbench.
+ * РўСЂР°РЅСЃС„РµСЂРЅС‹Р№ РєР»Р°СЃСЃ. Р‘С‹Р» СЃРѕР·РґР°РЅ РґР»СЏ РїРµСЂРµРґР°С‡Рё РѕС‚С‡С‘С‚Р° РІ СЃСЂРµРґСѓ СЂР°Р·СЂР°Р±РѕС‚РєРё. Рў.Рє.
+ * РїР°РєРµС‚ com.mg.merp.report.model.* Р±С‹Р» РЅРµ РґРѕСЃС‚СѓРїРµРЅ РґР»СЏ Workbench.
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov

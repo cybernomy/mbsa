@@ -17,7 +17,7 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.OrderSpec;
 
 /**
- * Бизнес-компонент "Спецификация зазаза поставщика"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ Р·Р°Р·Р°Р·Р° РїРѕСЃС‚Р°РІС‰РёРєР°"
  * 
  * @author leonova
  * @version $Id: OrderSpecSupServiceLocal.java,v 1.3 2007/07/27 11:59:29 safonov Exp $
@@ -26,7 +26,7 @@ public interface OrderSpecSupServiceLocal
 		extends com.mg.merp.document.GoodsDocumentSpecification<OrderSpec, Integer>
 {
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/warehouse/OrderSpecSup";
 }

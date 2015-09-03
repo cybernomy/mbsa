@@ -20,7 +20,7 @@ import javax.ejb.Stateless;
 import com.mg.merp.paymentcontrol.PlanServiceLocal;
 
 /**
- * Реализация бизнес-компонента "Планирование платежей"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџР»Р°РЅРёСЂРѕРІР°РЅРёРµ РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Oleg V. Safonov
  * @version $Id: PlanServiceBean.java,v 1.5 2008/01/29 13:31:45 safonov Exp $

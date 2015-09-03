@@ -30,7 +30,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.scheduler.model.Task;
 
 /**
- * Перехватник действий модели "Задачи планировщика"
+ * РџРµСЂРµС…РІР°С‚РЅРёРє РґРµР№СЃС‚РІРёР№ РјРѕРґРµР»Рё "Р—Р°РґР°С‡Рё РїР»Р°РЅРёСЂРѕРІС‰РёРєР°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: TaskInterceptorImpl.java,v 1.1 2008/04/25 10:57:23 safonov Exp $

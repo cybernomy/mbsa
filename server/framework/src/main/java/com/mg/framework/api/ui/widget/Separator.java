@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.widget;
 import com.mg.framework.api.ui.Widget;
 
 /**
- * Элемент "Разделитель меню и панели инструментов"
+ * Р­Р»РµРјРµРЅС‚ "Р Р°Р·РґРµР»РёС‚РµР»СЊ РјРµРЅСЋ Рё РїР°РЅРµР»Рё РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: Separator.java,v 1.1 2007/11/15 14:31:54 safonov Exp $

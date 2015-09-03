@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.salary.model.GnsCode;
 
 /**
- * Браузер кодов МНС
+ * Р‘СЂР°СѓР·РµСЂ РєРѕРґРѕРІ РњРќРЎ
  * 
  * @author leonova
  * @version $Id: GNSCodeBr.java,v 1.1 2006/08/31 11:35:59 leonova Exp $ 

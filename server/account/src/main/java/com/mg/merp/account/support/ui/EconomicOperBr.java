@@ -60,7 +60,7 @@ import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.support.CoreUtils;
 
 /**
- * Контроллер браузера бизнес-компонента "Хозяйственные операции"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РҐРѕР·СЏР№СЃС‚РІРµРЅРЅС‹Рµ РѕРїРµСЂР°С†РёРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -73,22 +73,22 @@ public class EconomicOperBr extends DefaultHierarchyBrowseForm {
 	private StringBuilder accWhereText = new StringBuilder();
 
 	/**
-	 * наименование таблицы спецификаций
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	protected final String SPEC_TABLE_WIDGET = "spec";
 
 	/**
-	 * таблица спецификаций
+	 * С‚Р°Р±Р»РёС†Р° СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	protected MaintenanceTableController spec;
 
 	/**
-	 * Признак отображения таблицы спецификаций
+	 * РџСЂРёР·РЅР°Рє РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С‚Р°Р±Р»РёС†С‹ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	protected boolean isShowSpecTable = false;
 
 	/**
-	 * инициализирующие свойства спецификации
+	 * РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‰РёРµ СЃРІРѕР№СЃС‚РІР° СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	protected AttributeMap specProperties = new LocalDataTransferObject();
 
@@ -274,8 +274,8 @@ public class EconomicOperBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработка события выбора "Вставка с образцом"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° "Р’СЃС‚Р°РІРєР° СЃ РѕР±СЂР°Р·С†РѕРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionInsertEconomicOperPattern(WidgetEvent event) throws Exception {
@@ -293,8 +293,8 @@ public class EconomicOperBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * создание хоз. операции по образцу и ее редактирование
-	 * @param model - образец хоз. операции
+	 * СЃРѕР·РґР°РЅРёРµ С…РѕР·. РѕРїРµСЂР°С†РёРё РїРѕ РѕР±СЂР°Р·С†Сѓ Рё РµРµ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ
+	 * @param model - РѕР±СЂР°Р·РµС† С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 */
 	private void internalInsertEconomicOperPattern(EconomicOperModel model) {
 		model = ServerUtils.getPersistentManager().find(EconomicOperModel.class, model.getId());
@@ -306,8 +306,8 @@ public class EconomicOperBr extends DefaultHierarchyBrowseForm {
 			 * @see com.mg.framework.api.ui.MaintenanceFormActionListener#canceled(com.mg.framework.api.ui.MaintenanceFormEvent)
 			 */
 			public void canceled(MaintenanceFormEvent event) {
-				// текущая реализация не поддерживает обработку события "Отмена"
-				// при отмене операции "Вставка с образцом" нужно удалить вручную созданную сущность
+				// С‚РµРєСѓС‰Р°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ РѕР±СЂР°Р±РѕС‚РєСѓ СЃРѕР±С‹С‚РёСЏ "РћС‚РјРµРЅР°"
+				// РїСЂРё РѕС‚РјРµРЅРµ РѕРїРµСЂР°С†РёРё "Р’СЃС‚Р°РІРєР° СЃ РѕР±СЂР°Р·С†РѕРј" РЅСѓР¶РЅРѕ СѓРґР°Р»РёС‚СЊ РІСЂСѓС‡РЅСѓСЋ СЃРѕР·РґР°РЅРЅСѓСЋ СЃСѓС‰РЅРѕСЃС‚СЊ
 				service.erase(economicOper.getId());
 				table.refresh();
 			}
@@ -322,11 +322,11 @@ public class EconomicOperBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик копирование со сторонированием
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРѕРїРёСЂРѕРІР°РЅРёРµ СЃРѕ СЃС‚РѕСЂРѕРЅРёСЂРѕРІР°РЅРёРµРј
 	 * 
 	 * @param event
 	 */
-	public void onActionСloneStorno(WidgetEvent event) {
+	public void onActionРЎloneStorno(WidgetEvent event) {
 		final OperationServiceLocal operationService = (OperationServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/account/Operation");
 		if (getSearchedEntities().length == 1) {
 			final EconomicOper economicOper = operationService.storno((EconomicOper) getSearchedEntities()[0]);
@@ -355,8 +355,8 @@ public class EconomicOperBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Показать спецификацию"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџРѕРєР°Р·Р°С‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	protected void onActionViewDocumentLineList(WidgetEvent event) {
 		boolean selected = ((CheckBoxMenuItem) event.getWidget()).isSelected();
@@ -375,8 +375,8 @@ public class EconomicOperBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Установка значения видимости таблицы
-	 * @param isVisible	- <code>true</code> - видна, иначе не видна
+	 * РЈСЃС‚Р°РЅРѕРІРєР° Р·РЅР°С‡РµРЅРёСЏ РІРёРґРёРјРѕСЃС‚Рё С‚Р°Р±Р»РёС†С‹
+	 * @param isVisible	- <code>true</code> - РІРёРґРЅР°, РёРЅР°С‡Рµ РЅРµ РІРёРґРЅР°
 	 */
 	private void setVisibleSpec(boolean isVisible) {
 		Widget widget = view.getWidget(SPEC_TABLE_WIDGET);

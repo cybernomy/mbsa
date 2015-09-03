@@ -26,7 +26,7 @@ import com.mg.merp.account.SaleBookServiceLocal;
 import com.mg.merp.account.model.SaleBook;
 
 /**
- * Бизнес-компонент "Книга продаж" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљРЅРёРіР° РїСЂРѕРґР°Р¶" 
  * 
  * @author leonova
  * @version $Id: SaleBookServiceBean.java,v 1.4 2006/08/23 10:29:20 leonova Exp $

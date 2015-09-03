@@ -21,7 +21,7 @@ import com.mg.merp.reference.model.CurrencyRateAuthority;
 import com.mg.merp.reference.model.CurrencyRateType;
 
 /**
- * Бизнес-компонент "Валюта"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’Р°Р»СЋС‚Р°"
  * 
  * @author leonova
  * @author Oleg V. Safonov
@@ -31,46 +31,46 @@ public interface CurrencyServiceLocal
    extends com.mg.framework.api.DataBusinessObjectService<Currency, Integer>{
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/reference/Currency";
 	
 	/**
-	 * конвертация валют
+	 * РєРѕРЅРІРµСЂС‚Р°С†РёСЏ РІР°Р»СЋС‚
 	 * 
-	 * @param currencyTo		валюта в которую конвертируем
-	 * @param currencyFrom		валюта из которой конвертируем
-	 * @param rateAuthority	источник курса валюты
-	 * @param rateType		тип курса валюты
-	 * @param effectiveDate	дата конвертации, если <code>null</code>, то будет использована текущая дата
-	 * @param currencyFromAmount	сумма для конвертации
-	 * @return	конвертированная сумма
-	 * @throws CurrencyRateNotFoundException если не найден ни прямой ни обратный курс валют
+	 * @param currencyTo		РІР°Р»СЋС‚Р° РІ РєРѕС‚РѕСЂСѓСЋ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРј
+	 * @param currencyFrom		РІР°Р»СЋС‚Р° РёР· РєРѕС‚РѕСЂРѕР№ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРј
+	 * @param rateAuthority	РёСЃС‚РѕС‡РЅРёРє РєСѓСЂСЃР° РІР°Р»СЋС‚С‹
+	 * @param rateType		С‚РёРї РєСѓСЂСЃР° РІР°Р»СЋС‚С‹
+	 * @param effectiveDate	РґР°С‚Р° РєРѕРЅРІРµСЂС‚Р°С†РёРё, РµСЃР»Рё <code>null</code>, С‚Рѕ Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°РЅР° С‚РµРєСѓС‰Р°СЏ РґР°С‚Р°
+	 * @param currencyFromAmount	СЃСѓРјРјР° РґР»СЏ РєРѕРЅРІРµСЂС‚Р°С†РёРё
+	 * @return	РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРЅР°СЏ СЃСѓРјРјР°
+	 * @throws CurrencyRateNotFoundException РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ РЅРё РїСЂСЏРјРѕР№ РЅРё РѕР±СЂР°С‚РЅС‹Р№ РєСѓСЂСЃ РІР°Р»СЋС‚
 	 */
 	BigDecimal conversion(Currency currencyTo, Currency currencyFrom, 
 			CurrencyRateAuthority rateAuthority, CurrencyRateType rateType, java.util.Date effectiveDate, BigDecimal currencyFromAmount) throws CurrencyRateNotFoundException;
 
 	/**
-	 * расширенная конвертация валют, возвращает дополнительные параметры по которым была произведена
-	 * конвертация
+	 * СЂР°СЃС€РёСЂРµРЅРЅР°СЏ РєРѕРЅРІРµСЂС‚Р°С†РёСЏ РІР°Р»СЋС‚, РІРѕР·РІСЂР°С‰Р°РµС‚ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ РїРѕ РєРѕС‚РѕСЂС‹Рј Р±С‹Р»Р° РїСЂРѕРёР·РІРµРґРµРЅР°
+	 * РєРѕРЅРІРµСЂС‚Р°С†РёСЏ
 	 * 
-	 * @param currencyTo		валюта в которую конвертируем
-	 * @param currencyFrom		валюта из которой конвертируем
-	 * @param rateAuthority	источник курса валюты
-	 * @param rateType		тип курса валюты
-	 * @param effectiveDate	дата конвертации, если <code>null</code>, то будет использована текущая дата
-	 * @param currencyFromAmount	сумма для конвертации
-	 * @return	конвертированная сумма и параметры конвертации
-	 * @throws CurrencyRateNotFoundException если не найден ни прямой ни обратный курс валют
+	 * @param currencyTo		РІР°Р»СЋС‚Р° РІ РєРѕС‚РѕСЂСѓСЋ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРј
+	 * @param currencyFrom		РІР°Р»СЋС‚Р° РёР· РєРѕС‚РѕСЂРѕР№ РєРѕРЅРІРµСЂС‚РёСЂСѓРµРј
+	 * @param rateAuthority	РёСЃС‚РѕС‡РЅРёРє РєСѓСЂСЃР° РІР°Р»СЋС‚С‹
+	 * @param rateType		С‚РёРї РєСѓСЂСЃР° РІР°Р»СЋС‚С‹
+	 * @param effectiveDate	РґР°С‚Р° РєРѕРЅРІРµСЂС‚Р°С†РёРё, РµСЃР»Рё <code>null</code>, С‚Рѕ Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°РЅР° С‚РµРєСѓС‰Р°СЏ РґР°С‚Р°
+	 * @param currencyFromAmount	СЃСѓРјРјР° РґР»СЏ РєРѕРЅРІРµСЂС‚Р°С†РёРё
+	 * @return	РєРѕРЅРІРµСЂС‚РёСЂРѕРІР°РЅРЅР°СЏ СЃСѓРјРјР° Рё РїР°СЂР°РјРµС‚СЂС‹ РєРѕРЅРІРµСЂС‚Р°С†РёРё
+	 * @throws CurrencyRateNotFoundException РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ РЅРё РїСЂСЏРјРѕР№ РЅРё РѕР±СЂР°С‚РЅС‹Р№ РєСѓСЂСЃ РІР°Р»СЋС‚
 	 */
 	CurrencyConversionResult conversionEx(Currency currencyTo, Currency currencyFrom, 
 			CurrencyRateAuthority rateAuthority, CurrencyRateType rateType, java.util.Date effectiveDate, BigDecimal currencyFromAmount) throws CurrencyRateNotFoundException;
 	
 	/**
-	 * поиск валюты по коду
+	 * РїРѕРёСЃРє РІР°Р»СЋС‚С‹ РїРѕ РєРѕРґСѓ
 	 * 
-	 * @param code	код валюты
-	 * @return	валюта или <code>null</code> если не найдена
+	 * @param code	РєРѕРґ РІР°Р»СЋС‚С‹
+	 * @return	РІР°Р»СЋС‚Р° РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅР°
 	 */
 	Currency findByCode(String code);
 	

@@ -22,7 +22,7 @@ import com.mg.merp.document.generic.ui.DocModelMaintenanceEJBQLTableModel;
 import com.mg.merp.document.model.DocHeadModel;
 
 /**
- * Вспомогательный класс для отображения формы списка образцов счет-фактур
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ СЃС‡РµС‚-С„Р°РєС‚СѓСЂ
  * 
  * @author leonova
  * @version $Id: FacturaModelMaintenanceEJBQLTableModel.java,v 1.1 2006/09/12 11:13:05 leonova Exp $ 

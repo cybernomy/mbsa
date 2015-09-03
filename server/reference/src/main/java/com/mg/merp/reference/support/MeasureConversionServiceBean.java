@@ -38,7 +38,7 @@ import com.mg.merp.reference.model.Measure;
 import com.mg.merp.reference.model.MeasureConversion;
 
 /**
- * Бизнес-компонент "Преобразование ЕИ"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ Р•Р"
  * 
  * @author leonova
  * @version $Id: MeasureConversionServiceBean.java,v 1.7 2007/07/09 14:32:49 safonov Exp $
@@ -85,18 +85,18 @@ public class MeasureConversionServiceBean extends AbstractPOJODataBusinessObject
 	}
 	
 	protected BigDecimal doConversion(Measure measureFrom, Measure measureTo, Catalog catalog, java.util.Date convTime, BigDecimal valueFrom) throws InvalidMeasureConversion {
-		//если совпадают ЕИ, то не пересчитываем
+		//РµСЃР»Рё СЃРѕРІРїР°РґР°СЋС‚ Р•Р, С‚Рѕ РЅРµ РїРµСЂРµСЃС‡РёС‚С‹РІР°РµРј
 		if (measureFrom.getId() == measureTo.getId())
 			return valueFrom;
 		
 		OrmTemplate ormTemplate = OrmTemplate.getInstance();
-		//ищем алгоритм конвертации для пары ЕИ и позиции каталога
+		//РёС‰РµРј Р°Р»РіРѕСЂРёС‚Рј РєРѕРЅРІРµСЂС‚Р°С†РёРё РґР»СЏ РїР°СЂС‹ Р•Р Рё РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР°
 		MeasureConversion measureConversion = ormTemplate.findUniqueByCriteria(OrmTemplate.createCriteria(MeasureConversion.class)
 				.add(Restrictions.eq("MeasureFrom", measureFrom))
 				.add(Restrictions.eq("MeasureTo", measureTo))
 				.add(Restrictions.eq("Catalog", catalog))
 				.setFlushMode(FlushMode.MANUAL));
-		//если не нашли, то пытаемся найти для пары ЕИ
+		//РµСЃР»Рё РЅРµ РЅР°С€Р»Рё, С‚Рѕ РїС‹С‚Р°РµРјСЃСЏ РЅР°Р№С‚Рё РґР»СЏ РїР°СЂС‹ Р•Р
 		if (measureConversion == null) {
 			measureConversion = ormTemplate.findUniqueByCriteria(OrmTemplate.createCriteria(MeasureConversion.class)
 					.add(Restrictions.eq("MeasureFrom", measureFrom))
@@ -107,7 +107,7 @@ public class MeasureConversionServiceBean extends AbstractPOJODataBusinessObject
 		if (measureConversion == null)
 			throw new InvalidMeasureConversion(measureFrom.getCode(), measureTo.getCode());
 		
-		//не поддерживается интерактивность, поэтому сразу получаем результат
+		//РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕСЃС‚СЊ, РїРѕСЌС‚РѕРјСѓ СЃСЂР°Р·Сѓ РїРѕР»СѓС‡Р°РµРј СЂРµР·СѓР»СЊС‚Р°С‚
 		BusinessAddinExecuter businessAddinExecuter = new BusinessAddinExecuter();
 		businessAddinExecuter.execute(measureConversion, measureFrom, measureTo, catalog, convTime, valueFrom);
 		return businessAddinExecuter.valueTo;

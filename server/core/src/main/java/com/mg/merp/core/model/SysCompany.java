@@ -20,7 +20,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.service.PersistentObjectHibernate;
 
 /**
- * Сущность "Балансовая единица"
+ * РЎСѓС‰РЅРѕСЃС‚СЊ "Р‘Р°Р»Р°РЅСЃРѕРІР°СЏ РµРґРёРЅРёС†Р°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: SysCompany.java,v 1.1 2007/09/20 15:05:36 safonov Exp $

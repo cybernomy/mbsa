@@ -29,7 +29,7 @@ import com.mg.merp.contract.model.ItemKind;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Êîíòğîëëåğ äèàëîãà "Ñîçäàíèå ôàêòè÷åñêîãî ïóíêòà êîíòğàêòà"
+ * ĞšĞ¾Ğ½Ñ‚Ñ€Ğ¾Ğ»Ğ»ĞµÑ€ Ğ´Ğ¸Ğ°Ğ»Ğ¾Ğ³Ğ° "Ğ¡Ğ¾Ğ·Ğ´Ğ°Ğ½Ğ¸Ğµ Ñ„Ğ°ĞºÑ‚Ğ¸Ñ‡ĞµÑĞºĞ¾Ğ³Ğ¾ Ğ¿ÑƒĞ½ĞºÑ‚Ğ° ĞºĞ¾Ğ½Ñ‚Ñ€Ğ°ĞºÑ‚Ğ°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: CreatePhaseFactItemDlg.java,v 1.1 2007/03/07 12:31:28 sharapov Exp $
@@ -41,8 +41,8 @@ public class CreatePhaseFactItemDlg extends DefaultDialog {
 	private ItemKind itemKind;
 	private FactItemContractorSource contractorSource;
 	private boolean isCreateSpec;
-	private com.mg.merp.document.model.DocType ñontractType;
-	private String ñontractNumber;
+	private com.mg.merp.document.model.DocType ÑontractType;
+	private String ÑontractNumber;
 	private Date contractDate;
 	private DocHead contract;
 	private final String CHOOSE_CONTRACT_BUTTON_WIDGET_NAME = "chooseContract";  //$NON-NLS-1$
@@ -69,8 +69,8 @@ public class CreatePhaseFactItemDlg extends DefaultDialog {
 	}
 
 	/**
-	 * Îáğàáîòêà ñîáûòèÿ âûáîğà êîíòğàêòà
-	 * @param event - ñîáûòèå
+	 * ĞĞ±Ñ€Ğ°Ğ±Ğ¾Ñ‚ĞºĞ° ÑĞ¾Ğ±Ñ‹Ñ‚Ğ¸Ñ Ğ²Ñ‹Ğ±Ğ¾Ñ€Ğ° ĞºĞ¾Ğ½Ñ‚Ñ€Ğ°ĞºÑ‚Ğ°
+	 * @param event - ÑĞ¾Ğ±Ñ‹Ñ‚Ğ¸Ğµ
 	 * @throws Exception
 	 */
 	public void onActionChooseContract(WidgetEvent event) throws Exception {
@@ -79,8 +79,8 @@ public class CreatePhaseFactItemDlg extends DefaultDialog {
 		searchHelp.addSearchHelpListener(new SearchHelpListener() {
 			public void searchPerformed(SearchHelpEvent event) {
 				contract = (Contract) event.getItems()[0];
-				ñontractType = contract.getDocType();
-				ñontractNumber = contract.getDocNumber();
+				ÑontractType = contract.getDocType();
+				ÑontractNumber = contract.getDocNumber();
 				contractDate = contract.getDocDate();
 				view.flushModel();
 			}
@@ -138,17 +138,17 @@ public class CreatePhaseFactItemDlg extends DefaultDialog {
 	}
 
 	/**
-	 * @return the ñontractType
+	 * @return the ÑontractType
 	 */
-	public com.mg.merp.document.model.DocType getñontractType() {
-		return ñontractType;
+	public com.mg.merp.document.model.DocType getÑontractType() {
+		return ÑontractType;
 	}
 
 	/**
-	 * @param ñontractType the ñontractType to set
+	 * @param ÑontractType the ÑontractType to set
 	 */
-	public void setñontractType(com.mg.merp.document.model.DocType ñontractType) {
-		this.ñontractType = ñontractType;
+	public void setÑontractType(com.mg.merp.document.model.DocType ÑontractType) {
+		this.ÑontractType = ÑontractType;
 	}
 
 	/**
@@ -166,17 +166,17 @@ public class CreatePhaseFactItemDlg extends DefaultDialog {
 	}
 
 	/**
-	 * @return the ñontractNumber
+	 * @return the ÑontractNumber
 	 */
-	public String getñontractNumber() {
-		return ñontractNumber;
+	public String getÑontractNumber() {
+		return ÑontractNumber;
 	}
 
 	/**
-	 * @param ñontractNumber the ñontractNumber to set
+	 * @param ÑontractNumber the ÑontractNumber to set
 	 */
-	public void setñontractNumber(String ñontractNumber) {
-		this.ñontractNumber = ñontractNumber;
+	public void setÑontractNumber(String ÑontractNumber) {
+		this.ÑontractNumber = ÑontractNumber;
 	}
 
 	/**

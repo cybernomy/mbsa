@@ -17,7 +17,7 @@ package com.mg.merp.paymentalloc;
 import com.mg.merp.paymentalloc.model.TransactTax;
 
 /**
- * Сервис бизнес-компонента "Налоги в спецификации связанных документов"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќР°Р»РѕРіРё РІ СЃРїРµС†РёС„РёРєР°С†РёРё СЃРІСЏР·Р°РЅРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.paymentalloc.model.TransactTax;
 public interface TransactTaxServiceLocal extends com.mg.framework.api.DataBusinessObjectService<TransactTax, Integer> {
 	
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/paymentalloc/TransactTax"; //$NON-NLS-1$
 	

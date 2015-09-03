@@ -18,7 +18,7 @@ import com.mg.framework.api.BusinessException;
 import com.mg.merp.manufacture.support.Messages;
 
 /**
- * ИС генерируется если в ЗНП не указан продукт для производства
+ * РРЎ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РµСЃР»Рё РІ Р—РќРџ РЅРµ СѓРєР°Р·Р°РЅ РїСЂРѕРґСѓРєС‚ РґР»СЏ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°
  * 
  * @author safonov
  * @version $Id: ProductIsEmptyException.java,v 1.2 2007/07/30 10:28:17 safonov Exp $

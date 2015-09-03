@@ -22,7 +22,7 @@ import com.mg.merp.warehouse.StockKindServiceLocal;
 import com.mg.merp.warehouse.model.StockKind;
 
 /**
- * Бизнес-компонент "Вид запаса" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РёРґ Р·Р°РїР°СЃР°" 
  * 
  * @author leonova
  * @version $Id: StockKindServiceBean.java,v 1.4 2006/09/14 12:48:21 leonova Exp $

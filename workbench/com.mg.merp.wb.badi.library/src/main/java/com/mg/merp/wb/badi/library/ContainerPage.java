@@ -38,7 +38,7 @@ import org.eclipse.swt.widgets.TableColumn;
 import com.mg.merp.wb.badi.library.util.ContainerPageController;
 
 /**
- * Страница выбора наполнения для библиотеки
+ * РЎС‚СЂР°РЅРёС†Р° РІС‹Р±РѕСЂР° РЅР°РїРѕР»РЅРµРЅРёСЏ РґР»СЏ Р±РёР±Р»РёРѕС‚РµРєРё
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: ContainerPage.java,v 1.5 2007/07/11 07:31:29 poroxnenko Exp $

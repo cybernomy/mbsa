@@ -20,7 +20,7 @@ import com.mg.framework.generic.validator.EntityBeanRule;
 import com.mg.framework.support.Messages;
 
 /**
- * Правило гарантирующее, что текстовый атрибут сущности не будет <code>null</code> и не будет пустым
+ * РџСЂР°РІРёР»Рѕ РіР°СЂР°РЅС‚РёСЂСѓСЋС‰РµРµ, С‡С‚Рѕ С‚РµРєСЃС‚РѕРІС‹Р№ Р°С‚СЂРёР±СѓС‚ СЃСѓС‰РЅРѕСЃС‚Рё РЅРµ Р±СѓРґРµС‚ <code>null</code> Рё РЅРµ Р±СѓРґРµС‚ РїСѓСЃС‚С‹Рј
  * 
  * @author Oleg V. Safonov
  * @version $Id: MandatoryStringAttribute.java,v 1.1 2006/08/14 14:08:44 safonov Exp $
@@ -28,10 +28,10 @@ import com.mg.framework.support.Messages;
 public class MandatoryStringAttribute extends EntityBeanRule {
 
 	/**
-	 * создает правило
+	 * СЃРѕР·РґР°РµС‚ РїСЂР°РІРёР»Рѕ
 	 * 
-	 * @param entity		объект-сущность контроля
-	 * @param propertyName	наименование атрибута контроля
+	 * @param entity		РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ РєРѕРЅС‚СЂРѕР»СЏ
+	 * @param propertyName	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ Р°С‚СЂРёР±СѓС‚Р° РєРѕРЅС‚СЂРѕР»СЏ
 	 */
 	public MandatoryStringAttribute(PersistentObject entity, String propertyName) {
 		super(Messages.getInstance().getMessage(Messages.MANDATORY_VALIDATOR), entity, propertyName);
@@ -43,7 +43,7 @@ public class MandatoryStringAttribute extends EntityBeanRule {
 	@Override
 	protected void doValidate(ValidationContext context) {
 		Object toValidate = toValidate();
-		//проверка на null, если строка, то проверим на пустую строку
+		//РїСЂРѕРІРµСЂРєР° РЅР° null, РµСЃР»Рё СЃС‚СЂРѕРєР°, С‚Рѕ РїСЂРѕРІРµСЂРёРј РЅР° РїСѓСЃС‚СѓСЋ СЃС‚СЂРѕРєСѓ
 		if (toValidate == null)
 			context.getStatus().error(this);
 		else if (toValidate instanceof String && "".equals(toValidate))

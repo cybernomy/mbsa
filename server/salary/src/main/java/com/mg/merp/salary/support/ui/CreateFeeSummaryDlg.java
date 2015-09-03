@@ -21,7 +21,7 @@ import com.mg.merp.document.model.DocHeadModel;
 import com.mg.merp.document.model.DocSection;
 
 /**
- * Контроллер диалога "Создание свода н/у по аналитике"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "РЎРѕР·РґР°РЅРёРµ СЃРІРѕРґР° РЅ/Сѓ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: CreateFeeSummaryDlg.java,v 1.1 2007/08/27 06:21:48 sharapov Exp $

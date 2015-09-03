@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.District;
 
 /**
- * Браузер районов
+ * Р‘СЂР°СѓР·РµСЂ СЂР°Р№РѕРЅРѕРІ
  * 
  * @author leonova
  * @version $Id: DistrictBr.java,v 1.2 2006/08/11 07:21:34 leonova Exp $ 

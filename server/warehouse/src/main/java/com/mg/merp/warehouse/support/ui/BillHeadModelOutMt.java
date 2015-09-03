@@ -18,7 +18,7 @@ import com.mg.merp.document.generic.ui.DocumentModelMaintenanceForm;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы поддержки "Образцов исходящих счетов"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РћР±СЂР°Р·С†РѕРІ РёСЃС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov

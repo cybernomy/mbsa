@@ -17,7 +17,7 @@ package com.mg.framework.api.math;
 import java.math.RoundingMode;
 
 /**
- * Контекст округления
+ * РљРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: RoundContext.java,v 1.1 2006/12/02 12:05:10 safonov Exp $
@@ -30,19 +30,19 @@ public class RoundContext {
 	final RoundingMode roundingMode;
 
 	/**
-	 * создание контекста с точностью и режимом округления по умолчанию {@link RoundingMode.HALF_UP}
+	 * СЃРѕР·РґР°РЅРёРµ РєРѕРЅС‚РµРєСЃС‚Р° СЃ С‚РѕС‡РЅРѕСЃС‚СЊСЋ Рё СЂРµР¶РёРјРѕРј РѕРєСЂСѓРіР»РµРЅРёСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ {@link RoundingMode.HALF_UP}
 	 * 
-	 * @param scale	точность (количество знаков после точки)
+	 * @param scale	С‚РѕС‡РЅРѕСЃС‚СЊ (РєРѕР»РёС‡РµСЃС‚РІРѕ Р·РЅР°РєРѕРІ РїРѕСЃР»Рµ С‚РѕС‡РєРё)
 	 */
 	public RoundContext(int scale) {
 		this(scale, DEFAULT_ROUNDINGMODE);
 	}
 	
 	/**
-	 * создание контекста с точностью и режимом округления
+	 * СЃРѕР·РґР°РЅРёРµ РєРѕРЅС‚РµРєСЃС‚Р° СЃ С‚РѕС‡РЅРѕСЃС‚СЊСЋ Рё СЂРµР¶РёРјРѕРј РѕРєСЂСѓРіР»РµРЅРёСЏ
 	 * 
-	 * @param scale			точность (количество знаков после точки)
-	 * @param roundingMode	режим округления
+	 * @param scale			С‚РѕС‡РЅРѕСЃС‚СЊ (РєРѕР»РёС‡РµСЃС‚РІРѕ Р·РЅР°РєРѕРІ РїРѕСЃР»Рµ С‚РѕС‡РєРё)
+	 * @param roundingMode	СЂРµР¶РёРј РѕРєСЂСѓРіР»РµРЅРёСЏ
 	 */
 	public RoundContext(int scale, RoundingMode roundingMode) {
 		this.scale = scale;
@@ -50,7 +50,7 @@ public class RoundContext {
 	}
 
 	/**
-	 * получить режим округления
+	 * РїРѕР»СѓС‡РёС‚СЊ СЂРµР¶РёРј РѕРєСЂСѓРіР»РµРЅРёСЏ
 	 * @see java.math.RoundingMode
 	 * 
 	 * @return the roundingMode
@@ -60,7 +60,7 @@ public class RoundContext {
 	}
 
 	/**
-	 * получить точность округления (количество знаков после точки)
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РѕС‡РЅРѕСЃС‚СЊ РѕРєСЂСѓРіР»РµРЅРёСЏ (РєРѕР»РёС‡РµСЃС‚РІРѕ Р·РЅР°РєРѕРІ РїРѕСЃР»Рµ С‚РѕС‡РєРё)
 	 * 
 	 * @return the scale
 	 */

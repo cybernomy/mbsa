@@ -41,7 +41,7 @@ import com.mg.merp.paymentalloc.model.Payment;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Контроллер формы поиска сущностей "Записи журнала платежей"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "Р—Р°РїРёСЃРё Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PaymentSearchForm.java,v 1.2 2007/06/05 12:50:57 sharapov Exp $

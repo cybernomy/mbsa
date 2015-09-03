@@ -32,7 +32,7 @@ import com.mg.merp.reference.model.PriceListHeadRights;
 import com.mg.merp.security.model.Groups;
 
 /**
- * Реализация бизнес-компонента "Права на заголовки прайс-листов"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂР°РІР° РЅР° Р·Р°РіРѕР»РѕРІРєРё РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ"
  *
  * @author Oleg V. Safonov
  * @author Konstantin S. Alikaev
@@ -52,12 +52,12 @@ public class PriceListAccessServiceBean extends AbstractPOJODataBusinessObjectSe
 	}
 
 	/**
-	 * Установить право доступа для прайс-листа
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР° РґР»СЏ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 *
 	 * @param permission
-	 * 				- право доступа
+	 * 				- РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР°
 	 * @param priceListId
-	 * 				- идентификатор прайс-листа
+	 * 				- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	protected void doGrantPermission(PriceListAccessResult permission, Integer priceListId) {
 		if (permission == null) {
@@ -89,12 +89,12 @@ public class PriceListAccessServiceBean extends AbstractPOJODataBusinessObjectSe
 	}
 
 	/**
-	 * Загрузить список прав пользователя для прайс-листа
+	 * Р—Р°РіСЂСѓР·РёС‚СЊ СЃРїРёСЃРѕРє РїСЂР°РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РґР»СЏ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 *
 	 * @param priceListId
-	 * 				- идентификатор прайс-листа
+	 * 				- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 * @return
-	 * 				- список прав пользователя для прайс-листа
+	 * 				- СЃРїРёСЃРѕРє РїСЂР°РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РґР»СЏ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	protected List<PriceListAccessResult> doLoadPriceListPermissions(final Integer priceListId) {
 		return JdbcTemplate.getInstance().query(LOAD_PRICELIST_PERMISSIONS_SQL, new Object[] {priceListId}, new RowMapper<PriceListAccessResult>() {
@@ -115,10 +115,10 @@ public class PriceListAccessServiceBean extends AbstractPOJODataBusinessObjectSe
 	}
 
 	/**
-	 * Отменить право доступа для прас-листа
+	 * РћС‚РјРµРЅРёС‚СЊ РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР° РґР»СЏ РїСЂР°СЃ-Р»РёСЃС‚Р°
 	 *
 	 * @param permission
-	 * 				- право доступа
+	 * 				- РїСЂР°РІРѕ РґРѕСЃС‚СѓРїР°
 	 */
 	protected void doRevokePermission(PriceListAccessResult permission) {
 		if (permission == null) {

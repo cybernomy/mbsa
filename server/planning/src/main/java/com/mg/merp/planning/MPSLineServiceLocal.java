@@ -17,7 +17,7 @@ package com.mg.merp.planning;
 import com.mg.merp.planning.model.MpsLine;
 
 /**
- * Бизнес-компонент "Строки MPS"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎС‚СЂРѕРєРё MPS"
  * 
  * @author leonova
  * @version $Id: MPSLineServiceLocal.java,v 1.2 2007/07/30 10:37:51 safonov Exp $
@@ -25,22 +25,22 @@ import com.mg.merp.planning.model.MpsLine;
 public interface MPSLineServiceLocal extends com.mg.framework.api.DataBusinessObjectService<MpsLine, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/planning/MPSLine";
 	
 	/**
-	 * подтверждение строки MPS
+	 * РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ СЃС‚СЂРѕРєРё MPS
 	 * 
-	 * @param list	список строк MPS
+	 * @param list	СЃРїРёСЃРѕРє СЃС‚СЂРѕРє MPS
 	 */
 	void firm(int[] list);
 
 	/**
-	 * создание ЗНП на основании результатов формирования MPS
+	 * СЃРѕР·РґР°РЅРёРµ Р—РќРџ РЅР° РѕСЃРЅРѕРІР°РЅРёРё СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ MPS
 	 * 
-	 * @param folderId	папка приемник для ЗНП
-	 * @param mpsId	идентификатор MPS
+	 * @param folderId	РїР°РїРєР° РїСЂРёРµРјРЅРёРє РґР»СЏ Р—РќРџ
+	 * @param mpsId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ MPS
 	 */
 	void createJob(int folderId, int mpsId);
 

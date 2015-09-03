@@ -19,7 +19,7 @@ import org.jboss.system.ServiceMBean;
 import com.mg.framework.api.security.SecuritySystem;
 
 /**
- * MBean для системы безопасности функционирующий в среде JBoss
+ * MBean РґР»СЏ СЃРёСЃС‚РµРјС‹ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё С„СѓРЅРєС†РёРѕРЅРёСЂСѓСЋС‰РёР№ РІ СЃСЂРµРґРµ JBoss
  * 
  * @author Oleg V. Safonov
  * @version $Id$
@@ -27,7 +27,7 @@ import com.mg.framework.api.security.SecuritySystem;
 public interface SecuritySystemServiceMBean extends SecuritySystem, ServiceMBean {
 
 	/**
-	 * обновить права из хранилища
+	 * РѕР±РЅРѕРІРёС‚СЊ РїСЂР°РІР° РёР· С…СЂР°РЅРёР»РёС‰Р°
 	 *
 	 */
 	void refreshPermissions();

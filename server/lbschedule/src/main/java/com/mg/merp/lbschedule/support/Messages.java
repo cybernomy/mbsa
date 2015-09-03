@@ -17,7 +17,7 @@ package com.mg.merp.lbschedule.support;
 import com.mg.framework.generic.MessageSourceAccessor;
 
 /**
- * Класс пользовательских сообщений
+ * РљР»Р°СЃСЃ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… СЃРѕРѕР±С‰РµРЅРёР№
  * 
  * @author Artem V. Sharapov
  * @version $Id: Messages.java,v 1.1 2007/04/17 12:50:59 sharapov Exp $

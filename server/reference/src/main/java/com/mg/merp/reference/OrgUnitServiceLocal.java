@@ -17,14 +17,14 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.OrgUnit;
 
 /**
- * Бизнес-компонент "Подразделения"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџРѕРґСЂР°Р·РґРµР»РµРЅРёСЏ"
  * 
  * @author leonova
  * @version $Id: OrgUnitServiceLocal.java,v 1.2 2007/08/16 14:14:04 safonov Exp $
  */
 public interface OrgUnitServiceLocal extends com.mg.merp.reference.Contractor<OrgUnit> {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/reference/OrgUnit";
 }

@@ -33,7 +33,7 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.ui.dialogs.SelectionDialog;
 
 /**
- * Диалог выбора проекта из открытых проектов студии разработки
+ * Р”РёР°Р»РѕРі РІС‹Р±РѕСЂР° РїСЂРѕРµРєС‚Р° РёР· РѕС‚РєСЂС‹С‚С‹С… РїСЂРѕРµРєС‚РѕРІ СЃС‚СѓРґРёРё СЂР°Р·СЂР°Р±РѕС‚РєРё
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: ProjectSelectionDialog.java,v 1.3 2006/12/12 08:20:07

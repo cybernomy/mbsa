@@ -22,7 +22,7 @@ import com.mg.merp.mfreference.model.WorkCenter;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер формы условий отбора акта выпуска готовой продукции
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° Р°РєС‚Р° РІС‹РїСѓСЃРєР° РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё
  * 
  * @author leonova
  * @version $Id: OutputProductHeadRest.java,v 1.3 2007/07/31 06:31:06 safonov Exp $ 
@@ -32,7 +32,7 @@ public class OutputProductHeadRest extends ManufactureDocumentRest {
 	@DataItemName("Manufacture.OutputProductHead.Oper")
 	protected JobRoute oper = null;
 	protected WorkCenter workCenter = null;
-	protected Job Job = null; //названо по JavaBean NC, чтобы работал SearchHelp
+	protected Job Job = null; //РЅР°Р·РІР°РЅРѕ РїРѕ JavaBean NC, С‡С‚РѕР±С‹ СЂР°Р±РѕС‚Р°Р» SearchHelp
 	@DataItemName("Manufacture.OutputProductHead.Contractor")
 	protected Contractor contractor = null;
 	@DataItemName("Manufacture.OutputProductHead.Employee")

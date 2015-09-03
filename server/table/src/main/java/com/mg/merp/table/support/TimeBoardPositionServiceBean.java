@@ -40,7 +40,7 @@ import com.mg.merp.table.model.TimeBoardPosition;
 import com.mg.merp.table.model.TimeBoardSpec;
 
 /**
- * Реализация бизнес-компонента "Список сотрудников в табеле" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРёСЃРѕРє СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РІ С‚Р°Р±РµР»Рµ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

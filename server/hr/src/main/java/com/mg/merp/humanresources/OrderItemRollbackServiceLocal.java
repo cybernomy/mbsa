@@ -17,7 +17,7 @@ package com.mg.merp.humanresources;
 import com.mg.merp.humanresources.model.OrderItemRollback;
 
 /**
- * Сервис бизнес-компонента ""
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° ""
  * 
  * @author Artem V. Sharapov
  * @author leonova
@@ -26,7 +26,7 @@ import com.mg.merp.humanresources.model.OrderItemRollback;
 public interface OrderItemRollbackServiceLocal extends com.mg.framework.api.DataBusinessObjectService<OrderItemRollback, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "OrderItemRollback"; //$NON-NLS-1$
 	

@@ -24,8 +24,8 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.document.model.DocType;
 
 /**
- * Перехватчик для объекта-сущности "Тип документа", реализует инициализацию прав пользователей
- * после создания
+ * РџРµСЂРµС…РІР°С‚С‡РёРє РґР»СЏ РѕР±СЉРµРєС‚Р°-СЃСѓС‰РЅРѕСЃС‚Рё "РўРёРї РґРѕРєСѓРјРµРЅС‚Р°", СЂРµР°Р»РёР·СѓРµС‚ РёРЅРёС†РёР°Р»РёР·Р°С†РёСЋ РїСЂР°РІ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
+ * РїРѕСЃР»Рµ СЃРѕР·РґР°РЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocTypeInterceptorImpl.java,v 1.1 2006/10/18 10:32:09 safonov Exp $
@@ -33,10 +33,10 @@ import com.mg.merp.document.model.DocType;
 public class DocTypeInterceptorImpl extends AbstractEntityInterceptor {
 
 	/**
-	 * выдать права на объект
+	 * РІС‹РґР°С‚СЊ РїСЂР°РІР° РЅР° РѕР±СЉРµРєС‚
 	 * 
-	 * @param docTypeId	идентификатор типа документа
-	 * @param groupId	группа пользователя
+	 * @param docTypeId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param groupId	РіСЂСѓРїРїР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 */
 	private void grantDocTypePermission(int docTypeId, int groupId) {
 		JdbcTemplate.getInstance().update("INSERT INTO DOCTYPE_RIGHTS (ID, REC_ID, GROUP_ID, RIGHTS) VALUES (?, ?, ?, 1)", new Object[] {DatabaseUtils.getSequenceNextValue("DOCTYPE_RIGHTS_ID_GEN"), docTypeId, groupId}); //$NON-NLS-1$ //$NON-NLS-2$

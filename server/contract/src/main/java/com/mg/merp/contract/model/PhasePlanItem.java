@@ -17,7 +17,7 @@ package com.mg.merp.contract.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Пункт плана контракта"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСѓРЅРєС‚ РїР»Р°РЅР° РєРѕРЅС‚СЂР°РєС‚Р°"
  * 
  * @author Artem V. Sharapov 
  * @version $Id: PhasePlanItem.java,v 1.7 2007/11/22 15:55:11 sharapov Exp $

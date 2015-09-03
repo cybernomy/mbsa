@@ -19,7 +19,7 @@ import com.mg.merp.mfreference.model.BomRouteResource;
 import com.mg.merp.mfreference.support.MfUtils;
 
 /**
- * Базовая реализация ресурсов состава изделия
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЂРµСЃСѓСЂСЃРѕРІ СЃРѕСЃС‚Р°РІР° РёР·РґРµР»РёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractBOMResource.java,v 1.1 2007/08/21 15:24:41 safonov Exp $

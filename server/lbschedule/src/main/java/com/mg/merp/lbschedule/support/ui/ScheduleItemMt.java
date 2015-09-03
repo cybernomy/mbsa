@@ -73,7 +73,7 @@ import com.mg.merp.reference.model.PriceListHead;
 import com.mg.merp.reference.model.PriceType;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Пункты графика исполнения обязательств"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСѓРЅРєС‚С‹ РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -213,24 +213,24 @@ public class ScheduleItemMt  extends DefaultMaintenanceForm implements MasterMod
 	}
 
 	/**
-	 * Обработчик события "Расчет даты"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "Р Р°СЃС‡РµС‚ РґР°С‚С‹"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionCalculateDates(WidgetEvent event) {
 		((ItemServiceLocal) getService()).computeResultDate((Item) getEntity());
 	}
 
 	/**
-	 * Обработчик события "Расчет сумм"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "Р Р°СЃС‡РµС‚ СЃСѓРјРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionCalculateSums(WidgetEvent event) {
 		((ItemServiceLocal) getService()).computeResultSum((Item) getEntity());
 	}
 
 	/**
-	 * Обработчик события КМ "Добавить спецификацию" 
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РљРњ "Р”РѕР±Р°РІРёС‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ" 
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionAddSpec(WidgetEvent event) throws Exception {
 		if(getCheckBoxValue(HAS_SPEC_WIDGET)) {
@@ -245,8 +245,8 @@ public class ScheduleItemMt  extends DefaultMaintenanceForm implements MasterMod
 	}
 
 	/**
-	 * Добавление позиции спецификации из спецификации документа
-	 * @throws Exception - ИС
+	 * Р”РѕР±Р°РІР»РµРЅРёРµ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РёР· СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @throws Exception - РРЎ
 	 */
 	private void addSpecByDoc() throws Exception {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.lbschedule.support.ui.DocSpecSearchHelp"); //$NON-NLS-1$
@@ -279,8 +279,8 @@ public class ScheduleItemMt  extends DefaultMaintenanceForm implements MasterMod
 	}
 
 	/**
-	 * Добавление позиции спецификации из спецификации каталога
-	 * @throws Exception - ИС
+	 * Р”РѕР±Р°РІР»РµРЅРёРµ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РёР· СЃРїРµС†РёС„РёРєР°С†РёРё РєР°С‚Р°Р»РѕРіР°
+	 * @throws Exception - РРЎ
 	 */
 	private void addSpecByCatalog() throws Exception {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.reference.support.ui.CatalogSearchHelp"); //$NON-NLS-1$
@@ -312,7 +312,7 @@ public class ScheduleItemMt  extends DefaultMaintenanceForm implements MasterMod
 	}
 
 	/**
-	 * Добавление позиции спецификации из спецификации прайс-листа
+	 * Р”РѕР±Р°РІР»РµРЅРёРµ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РёР· СЃРїРµС†РёС„РёРєР°С†РёРё РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	private void addSpecByPriceList() {
 		GoodsSelectionForm goodsSelectionForm = (GoodsSelectionForm) UIProducer.produceForm("com/mg/merp/lbschedule/resources/GoodsSelectionForm.mfd.xml"); //$NON-NLS-1$
@@ -345,8 +345,8 @@ public class ScheduleItemMt  extends DefaultMaintenanceForm implements MasterMod
 	}
 
 	/**
-	 * Обработчик события КМ "Изменить позицию спецификации" 
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РљРњ "РР·РјРµРЅРёС‚СЊ РїРѕР·РёС†РёСЋ СЃРїРµС†РёС„РёРєР°С†РёРё" 
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionEditSpec(WidgetEvent event) {
 		Serializable[] selectedIDs = getSpecItemSelectedPrimaryKeys();
@@ -370,8 +370,8 @@ public class ScheduleItemMt  extends DefaultMaintenanceForm implements MasterMod
 	}
 
 	/**
-	 * Обработчик события КМ "Удалить позицию спецификации" 
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РљРњ "РЈРґР°Р»РёС‚СЊ РїРѕР·РёС†РёСЋ СЃРїРµС†РёС„РёРєР°С†РёРё" 
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRemoveSpec(WidgetEvent event) {
 		final Serializable[] selectedIDs = getSpecItemSelectedPrimaryKeys();
@@ -390,8 +390,8 @@ public class ScheduleItemMt  extends DefaultMaintenanceForm implements MasterMod
 	}
 
 	/**
-	 * Обработчик события КМ "Просмотр позиции спецификации" 
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РљРњ "РџСЂРѕСЃРјРѕС‚СЂ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё" 
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewSpec(WidgetEvent event) {
 		Serializable[] selectedIDs = getSpecItemSelectedPrimaryKeys();
@@ -400,8 +400,8 @@ public class ScheduleItemMt  extends DefaultMaintenanceForm implements MasterMod
 	}
 
 	/**
-	 * Обработчик события КМ "Обновить таблицу спецификаций" 
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РљРњ "РћР±РЅРѕРІРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ СЃРїРµС†РёС„РёРєР°С†РёР№" 
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRefreshSpec(WidgetEvent event) {
 		refreshSpecItemTable();

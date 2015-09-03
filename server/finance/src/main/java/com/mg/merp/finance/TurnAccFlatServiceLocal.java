@@ -19,7 +19,7 @@ import com.mg.merp.finance.model.FinPeriod;
 import com.mg.merp.finance.model.TurnAccount;
 
 /**
- * Бизнес-компонент "Остатки и обороты по счетам финансового учета"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ СЃС‡РµС‚Р°Рј С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°"
  *
  * @author leonova
  * @author Artem V. Sharapov
@@ -29,11 +29,11 @@ public interface TurnAccFlatServiceLocal
 extends com.mg.framework.api.DataBusinessObjectService<TurnAccount, Integer>
 {
 	/**
-	 * Перенос остатков финансового учета
-	 * @param periodFrom - с фин.периода
-	 * @param periodTo - по фин.период
-	 * @param allAcc - по всем счетам
-	 * @param accList - список выбранных счетов
+	 * РџРµСЂРµРЅРѕСЃ РѕСЃС‚Р°С‚РєРѕРІ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°
+	 * @param periodFrom - СЃ С„РёРЅ.РїРµСЂРёРѕРґР°
+	 * @param periodTo - РїРѕ С„РёРЅ.РїРµСЂРёРѕРґ
+	 * @param allAcc - РїРѕ РІСЃРµРј СЃС‡РµС‚Р°Рј
+	 * @param accList - СЃРїРёСЃРѕРє РІС‹Р±СЂР°РЅРЅС‹С… СЃС‡РµС‚РѕРІ
 	 */
 	void carryForward(FinPeriod periodFrom, FinPeriod periodTo, boolean allAcc, Account[] accList);
 

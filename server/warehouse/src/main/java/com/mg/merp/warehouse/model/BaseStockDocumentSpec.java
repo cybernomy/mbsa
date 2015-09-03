@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * Базовый класс спецификаций складских документов
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ СЃРїРµС†РёС„РёРєР°С†РёР№ СЃРєР»Р°РґСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: BaseStockDocumentSpec.java,v 1.1 2007/09/27 15:38:46 safonov Exp $

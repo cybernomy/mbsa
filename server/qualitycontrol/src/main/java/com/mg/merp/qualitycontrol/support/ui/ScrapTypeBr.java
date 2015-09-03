@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.qualitycontrol.model.ScrapType;
 
 /**
- * Браузер видов потерь
+ * Р‘СЂР°СѓР·РµСЂ РІРёРґРѕРІ РїРѕС‚РµСЂСЊ
  * 
  * @author leonova
  * @version $Id: ScrapTypeBr.java,v 1.1 2006/08/03 08:53:18 leonova Exp $ 

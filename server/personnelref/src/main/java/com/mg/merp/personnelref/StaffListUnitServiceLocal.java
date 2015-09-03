@@ -17,7 +17,7 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.StaffListUnit;
 
 /**
- * Сервис бизнес-компонента "Подразделения в штатном расписании"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРѕРґСЂР°Р·РґРµР»РµРЅРёСЏ РІ С€С‚Р°С‚РЅРѕРј СЂР°СЃРїРёСЃР°РЅРёРё"
  * 
  * @author leonova
  * @version $Id: StaffListUnitServiceLocal.java,v 1.4 2007/08/16 14:09:22 safonov Exp $
@@ -25,12 +25,12 @@ import com.mg.merp.personnelref.model.StaffListUnit;
 public interface StaffListUnitServiceLocal extends com.mg.framework.api.DataBusinessObjectService<StaffListUnit, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String LOCAL_SERVICE_NAME= "merp/personnelref/StaffListUnit"; //$NON-NLS-1$
 
 	/**
-	 * штатное расписание на период
+	 * С€С‚Р°С‚РЅРѕРµ СЂР°СЃРїРёСЃР°РЅРёРµ РЅР° РїРµСЂРёРѕРґ
 	 */
 	final static int STAFF_LIST_ID = 48;
 

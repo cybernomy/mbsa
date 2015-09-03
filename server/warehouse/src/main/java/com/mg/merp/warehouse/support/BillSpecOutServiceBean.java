@@ -23,7 +23,7 @@ import com.mg.merp.warehouse.generic.AbstractWarehouseDocumentSpec;
 import com.mg.merp.warehouse.model.BillSpec;
 
 /**
- * Бизнес-компонент "Спецификация исходящих счетов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РёСЃС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ" 
  * 
  * @author leonova
  * @version $Id: BillSpecOutServiceBean.java,v 1.6 2007/09/07 12:27:13 safonov Exp $

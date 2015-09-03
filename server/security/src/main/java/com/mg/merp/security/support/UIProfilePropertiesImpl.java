@@ -28,7 +28,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.security.model.SecUserProfileItem;
 
 /**
- * Реализация профиля пользовательского интерфейса основанного на стандартном классе {@link java.util.Properties}
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС„РёР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР° РѕСЃРЅРѕРІР°РЅРЅРѕРіРѕ РЅР° СЃС‚Р°РЅРґР°СЂС‚РЅРѕРј РєР»Р°СЃСЃРµ {@link java.util.Properties}
  * 
  * @author Oleg V. Safonov
  * @version $Id: UIProfilePropertiesImpl.java,v 1.3 2008/10/08 14:45:02 safonov Exp $

@@ -25,7 +25,7 @@ import com.mg.merp.reference.model.CatalogFolder;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Модель бизнес-компонента "Позиция рекламного мероприятия"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРѕР·РёС†РёСЏ СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PromotionLine.java,v 1.1 2007/10/30 14:02:22 sharapov Exp $

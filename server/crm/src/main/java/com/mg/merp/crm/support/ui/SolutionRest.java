@@ -19,7 +19,7 @@ import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 import com.mg.merp.crm.model.Problem;
 
 /**
- * Контроллер условий отбора решений
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° СЂРµС€РµРЅРёР№
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: SolutionRest.java,v 1.1 2007/08/17 08:44:50 alikaev Exp $

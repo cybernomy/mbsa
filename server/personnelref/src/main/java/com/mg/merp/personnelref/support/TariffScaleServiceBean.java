@@ -25,7 +25,7 @@ import com.mg.merp.personnelref.TariffScaleServiceLocal;
 import com.mg.merp.personnelref.model.TariffScale;
 
 /**
- * Бизнес-компонент "Тарифные сетки" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўР°СЂРёС„РЅС‹Рµ СЃРµС‚РєРё" 
  * 
  * @author leonova
  * @version $Id: TariffScaleServiceBean.java,v 1.5 2006/09/04 13:02:21 leonova Exp $

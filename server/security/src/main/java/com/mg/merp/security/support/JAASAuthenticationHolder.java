@@ -28,25 +28,25 @@ import com.mg.framework.support.ui.ContainerContextFactory;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Объект обрабатывающий аутентификацию через JAAS
+ * РћР±СЉРµРєС‚ РѕР±СЂР°Р±Р°С‚С‹РІР°СЋС‰РёР№ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёСЋ С‡РµСЂРµР· JAAS
  * 
  * @author Oleg V. Safonov
  * @version $Id$
  */
 public class JAASAuthenticationHolder implements Serializable {
 	/**
-	 * наименование конфигурации аутентификации
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РєРѕРЅС„РёРіСѓСЂР°С†РёРё Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё
 	 */
 	public static final String MBSA_SYSTEM = "MBSASystem";
 
 	/**
-	 * ключ атрибута хранящего объект аутентификации
+	 * РєР»СЋС‡ Р°С‚СЂРёР±СѓС‚Р° С…СЂР°РЅСЏС‰РµРіРѕ РѕР±СЉРµРєС‚ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё
 	 */
 	private static final String AUTH_HOLDER = "MG_AUTH_HOLDER";
 
 	/**
-	 * ключ атрибута для установки в http сессию, название используется
-	 * совместимое с MessAdmin
+	 * РєР»СЋС‡ Р°С‚СЂРёР±СѓС‚Р° РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё РІ http СЃРµСЃСЃРёСЋ, РЅР°Р·РІР°РЅРёРµ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
+	 * СЃРѕРІРјРµСЃС‚РёРјРѕРµ СЃ MessAdmin
 	 */
 	private static final String USER_NAME = "UserName";
 
@@ -62,7 +62,7 @@ public class JAASAuthenticationHolder implements Serializable {
 	}
 	
 	/**
-	 * реализация аутентификации
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё
 	 * 
 	 * @param login
 	 * @param password
@@ -76,10 +76,10 @@ public class JAASAuthenticationHolder implements Serializable {
 	}
 
 	/**
-	 * получить текущий объект аутентификации
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰РёР№ РѕР±СЉРµРєС‚ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё
 	 * 
-	 * @param conf	конфигурация
-	 * @return объект аутентификации
+	 * @param conf	РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ
+	 * @return РѕР±СЉРµРєС‚ Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё
 	 */
 	public static JAASAuthenticationHolder getAuthenticationHolder(Configuration conf) {
 		Session session = ServerUtils.getCurrentSession();
@@ -109,16 +109,16 @@ public class JAASAuthenticationHolder implements Serializable {
 	}
 
 	/**
-	 * аутентификация
+	 * Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёСЏ
 	 * 
 	 * @param login
-	 *            логин
+	 *            Р»РѕРіРёРЅ
 	 * @param password
-	 *            пароль
+	 *            РїР°СЂРѕР»СЊ
 	 * @param conf
-	 * 			  конфигурация
+	 * 			  РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ
 	 * @throws LoginException
-	 *             в случае неудачной попытки
+	 *             РІ СЃР»СѓС‡Р°Рµ РЅРµСѓРґР°С‡РЅРѕР№ РїРѕРїС‹С‚РєРё
 	 */
 	public static void authenticate(String login, String password, Configuration conf)
 			throws LoginException {
@@ -130,7 +130,7 @@ public class JAASAuthenticationHolder implements Serializable {
 		auth.useLoginContext(login, password);
 		Subject subject = auth.getSubject();
 
-		//установка логина для функционирования системы мониторинга MessAdmin
+		//СѓСЃС‚Р°РЅРѕРІРєР° Р»РѕРіРёРЅР° РґР»СЏ С„СѓРЅРєС†РёРѕРЅРёСЂРѕРІР°РЅРёСЏ СЃРёСЃС‚РµРјС‹ РјРѕРЅРёС‚РѕСЂРёРЅРіР° MessAdmin
 		if (ServerUtils.getCurrentSession().isInteractive())
 			ContainerContextFactory.getInstance().getDefaultContainerContext().getHttpSession().setAttribute(USER_NAME, login);
 
@@ -139,7 +139,7 @@ public class JAASAuthenticationHolder implements Serializable {
 	}
 
 	/**
-	 * получить Subject объекта аутентификации
+	 * РїРѕР»СѓС‡РёС‚СЊ Subject РѕР±СЉРµРєС‚Р° Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё
 	 * 
 	 * @return Returns the subject.
 	 */
@@ -148,7 +148,7 @@ public class JAASAuthenticationHolder implements Serializable {
 	}
 
 	/**
-	 * выполнить отключение объекта аутентификации
+	 * РІС‹РїРѕР»РЅРёС‚СЊ РѕС‚РєР»СЋС‡РµРЅРёРµ РѕР±СЉРµРєС‚Р° Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё
 	 * 
 	 */
 	public void logout() {

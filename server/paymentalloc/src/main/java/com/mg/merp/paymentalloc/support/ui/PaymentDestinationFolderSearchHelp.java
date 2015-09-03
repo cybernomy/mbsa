@@ -17,7 +17,7 @@ package com.mg.merp.paymentalloc.support.ui;
 import com.mg.merp.paymentalloc.PaymentServiceLocal;
 
 /**
- * Поисковик сущностей "Папки-приемника записи журнала платежа"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РџР°РїРєРё-РїСЂРёРµРјРЅРёРєР° Р·Р°РїРёСЃРё Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PaymentDestinationFolderSearchHelp.java,v 1.1 2007/05/25 08:42:43 sharapov Exp $

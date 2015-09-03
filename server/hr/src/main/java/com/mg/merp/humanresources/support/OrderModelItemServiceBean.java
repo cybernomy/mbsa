@@ -23,7 +23,7 @@ import com.mg.merp.humanresources.OrderModelItemServiceLocal;
 import com.mg.merp.humanresources.model.OrderModelItem;
 
 /**
- * Реализация бизнес-компонента "Образцы пунктов приказа"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·С†С‹ РїСѓРЅРєС‚РѕРІ РїСЂРёРєР°Р·Р°"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

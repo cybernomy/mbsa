@@ -16,7 +16,7 @@ package com.mg.merp.warehouse.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы поддержки спецификации исходящих накладных
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёРё РёСЃС…РѕРґСЏС‰РёС… РЅР°РєР»Р°РґРЅС‹С…
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InvoiceSpecOutMt.java,v 1.3 2006/08/22 08:09:27 leonova Exp $

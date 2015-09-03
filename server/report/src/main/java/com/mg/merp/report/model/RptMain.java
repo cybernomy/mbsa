@@ -335,7 +335,7 @@ public class RptMain extends com.mg.framework.service.PersistentObjectHibernate
 		if (ClassNames != null && ClassNames.length() > 0) {
 			List<String> newNames = StringUtils.split(ClassNames, ";");
 			List<String> names = new LinkedList<String>();
-			//получаем список БК, которые необходимо прикрутить
+			//РїРѕР»СѓС‡Р°РµРј СЃРїРёСЃРѕРє Р‘Рљ, РєРѕС‚РѕСЂС‹Рµ РЅРµРѕР±С…РѕРґРёРјРѕ РїСЂРёРєСЂСѓС‚РёС‚СЊ
 			for (String nm : newNames) {
 				int pos = nm.indexOf("->");
 				names.add(nm.substring(pos + 2, nm.indexOf("(", pos)));
@@ -346,7 +346,7 @@ public class RptMain extends com.mg.framework.service.PersistentObjectHibernate
 				setClassLinks(links);
 			}
 
-			//БК, которых нет в списке удаляем из classLinks()
+			//Р‘Рљ, РєРѕС‚РѕСЂС‹С… РЅРµС‚ РІ СЃРїРёСЃРєРµ СѓРґР°Р»СЏРµРј РёР· classLinks()
 			java.util.Set<ClassLink> removedLink = new HashSet<ClassLink>();
 			for (ClassLink link : links) {
 				String ss = link.getSysClass().getBeanName().toString();
@@ -357,7 +357,7 @@ public class RptMain extends com.mg.framework.service.PersistentObjectHibernate
 			}
 			links.removeAll(removedLink);
 
-			//если необходимо добавить новые БК
+			//РµСЃР»Рё РЅРµРѕР±С…РѕРґРёРјРѕ РґРѕР±Р°РІРёС‚СЊ РЅРѕРІС‹Рµ Р‘Рљ
 			if (names.size() > 0) {
 				PersistentManager pm = ServerUtils.getPersistentManager();
 
@@ -369,8 +369,8 @@ public class RptMain extends com.mg.framework.service.PersistentObjectHibernate
 
 					cl.setSysClass(sc);
 					cl.setReport(this);
-					//XXX: поле SysClient автоматически устанавливается только в рабочем контексте.
-					//А для RptBIRTDeployerImpl его нет 
+					//XXX: РїРѕР»Рµ SysClient Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ С‚РѕР»СЊРєРѕ РІ СЂР°Р±РѕС‡РµРј РєРѕРЅС‚РµРєСЃС‚Рµ.
+					//Рђ РґР»СЏ RptBIRTDeployerImpl РµРіРѕ РЅРµС‚ 
 					cl.setSysClient(getSysClient());
 					
 					links.add(cl);

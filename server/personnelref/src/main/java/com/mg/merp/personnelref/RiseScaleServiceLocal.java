@@ -17,7 +17,7 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.RiseScale;
 
 /**
- * Сервис бизнес-компонента "Шкала надбавки"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЁРєР°Р»Р° РЅР°РґР±Р°РІРєРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.personnelref.model.RiseScale;
 public interface RiseScaleServiceLocal extends com.mg.framework.api.DataBusinessObjectService<RiseScale, Integer> {
 	
 	/**
-	 * локальное имя сервиса
+	 * Р»РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/personnelref/RiseScale"; //$NON-NLS-1$
 	

@@ -20,7 +20,7 @@ import com.mg.merp.document.DocumentSpecPackageServiceLocal;
 import com.mg.merp.document.model.DocumentSpecPackage;
 
 /**
- * Контроллер формы поддержки "Упаковки товара позиции спецификации документа"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РЈРїР°РєРѕРІРєРё С‚РѕРІР°СЂР° РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: DocumentSpecPackageMt.java,v 1.1 2007/06/21 11:59:42 sharapov Exp $
@@ -29,8 +29,8 @@ public class DocumentSpecPackageMt extends DefaultMaintenanceForm {
 
 	
 	/**
-	 * Обработчик кнопки "Рассчитать вес и объем"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё "Р Р°СЃСЃС‡РёС‚Р°С‚СЊ РІРµСЃ Рё РѕР±СЉРµРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionComputeWeightAndVolume(WidgetEvent event) {
 		((DocumentSpecPackageServiceLocal) getService()).computeWeightAndVolume((DocumentSpecPackage) getEntity());

@@ -24,7 +24,7 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 import com.mg.merp.warehouse.InvoiceSpecInServiceLocal;
 
 /**
- * Контроллер формы поддержки входящих накладных
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РІС…РѕРґСЏС‰РёС… РЅР°РєР»Р°РґРЅС‹С…
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InvoiceHeadInMt.java,v 1.8 2008/12/25 10:26:25 safonov Exp $

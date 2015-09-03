@@ -17,7 +17,7 @@ package com.mg.merp.settlement.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис дополнительных модулей подсистемы "Расчеты с партнерами"
+ * РЎРµСЂРІРёСЃ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "Р Р°СЃС‡РµС‚С‹ СЃ РїР°СЂС‚РЅРµСЂР°РјРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: SettlementDocFlowPluginServiceMBean.java,v 1.1 2007/03/19 15:05:29 sharapov Exp $
@@ -25,7 +25,7 @@ import org.jboss.system.ServiceMBean;
 public interface SettlementDocFlowPluginServiceMBean extends ServiceMBean {
 
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:settlement=DocFlowPluginService"; //$NON-NLS-1$
 

@@ -24,7 +24,7 @@ import com.mg.merp.manufacture.generic.ui.ScrapHeadMt;
 import com.mg.merp.manufacture.model.ScrapDocumentSpec;
 
 /**
- * Контроллер формы поддержки актов на списание потерь времени, отработанного оборудованием
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµРј
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: ScrapMachineHeadMt.java,v 1.8 2008/12/25 10:17:45 safonov Exp $

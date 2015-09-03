@@ -22,7 +22,7 @@ import com.mg.merp.personnelref.KladrServiceLocal;
 import com.mg.merp.personnelref.model.Kladr;
 
 /**
- * Реализация бизнес-компонента "Классификатор адресов (КЛАДР)" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂ Р°РґСЂРµСЃРѕРІ (РљР›РђР”Р )" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

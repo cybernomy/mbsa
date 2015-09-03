@@ -24,7 +24,7 @@ import com.mg.merp.reference.PersonElectronicAddressServiceLocal;
 import com.mg.merp.reference.model.PersonElectronicAddress;
 
 /**
- * Бизнес-копмонент "Электронные адреса физических лиц"
+ * Р‘РёР·РЅРµСЃ-РєРѕРїРјРѕРЅРµРЅС‚ "Р­Р»РµРєС‚СЂРѕРЅРЅС‹Рµ Р°РґСЂРµСЃР° С„РёР·РёС‡РµСЃРєРёС… Р»РёС†"
  * 
  * @author leonova
  * @version $Id: PersonElectronicAddressServiceBean.java,v 1.3 2006/09/13 07:00:34 leonova Exp $

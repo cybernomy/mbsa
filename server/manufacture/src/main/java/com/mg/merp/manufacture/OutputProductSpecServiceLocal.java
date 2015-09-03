@@ -19,7 +19,7 @@ import com.mg.merp.document.model.DocSpec;
 import com.mg.merp.manufacture.model.OutputProductHead;
 
 /**
- * Бизнес-компонент "Спецификация актов выпкуска готовой продукции"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ Р°РєС‚РѕРІ РІС‹РїРєСѓСЃРєР° РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё"
  * 
  * @author Oleg V. Safonov
  * @version $Id: OutputProductSpecServiceLocal.java,v 1.4 2007/08/06 12:46:24 safonov Exp $
@@ -28,14 +28,14 @@ public interface OutputProductSpecServiceLocal
 		extends com.mg.merp.document.GoodsDocumentSpecification<DocSpec, Integer> {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/manufacture/OutputProductSpec";
 
 	/**
-	 * создание спецификаций
+	 * СЃРѕР·РґР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 * 
-	 * @param docHead	документ
+	 * @param docHead	РґРѕРєСѓРјРµРЅС‚
 	 */
 	void createSpecifications(OutputProductHead docHead);
 

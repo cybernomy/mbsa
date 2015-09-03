@@ -19,7 +19,7 @@ import com.mg.framework.api.ui.UIProfileManager;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Локатор менеджера профилей пользовательского интерфейса
+ * Р›РѕРєР°С‚РѕСЂ РјРµРЅРµРґР¶РµСЂР° РїСЂРѕС„РёР»РµР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: UIProfileManagerLocator.java,v 1.1 2007/03/13 13:31:40 safonov Exp $
@@ -28,10 +28,10 @@ public class UIProfileManagerLocator {
     private static volatile UIProfileManager instance = null;
     
     /**
-     * поиск сервиса
+     * РїРѕРёСЃРє СЃРµСЂРІРёСЃР°
      * 
-     * @return	сервис
-     * @throws ApplicationException в случае любой ИС
+     * @return	СЃРµСЂРІРёСЃ
+     * @throws ApplicationException РІ СЃР»СѓС‡Р°Рµ Р»СЋР±РѕР№ РРЎ
      */
     public static UIProfileManager locate() throws ApplicationException {
         if (instance == null)

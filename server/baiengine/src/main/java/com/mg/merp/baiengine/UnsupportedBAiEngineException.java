@@ -19,7 +19,7 @@ import com.mg.merp.baiengine.model.EngineType;
 import com.mg.merp.baiengine.support.Messages;
 
 /**
- * Класс ИС не поддерживаемого механизма выполнения бизнес расширений
+ * РљР»Р°СЃСЃ РРЎ РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµРјРѕРіРѕ РјРµС…Р°РЅРёР·РјР° РІС‹РїРѕР»РЅРµРЅРёСЏ Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: UnsupportedBAiEngineException.java,v 1.2 2007/11/15 13:12:08 safonov Exp $

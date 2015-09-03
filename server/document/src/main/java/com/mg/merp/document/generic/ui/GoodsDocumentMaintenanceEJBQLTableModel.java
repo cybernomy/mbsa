@@ -20,7 +20,7 @@ import com.mg.framework.support.ui.widget.TableEJBQLFieldDef;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Базовый класс контроллера формы списка товарных документов
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РєРѕРЅС‚СЂРѕР»Р»РµСЂР° С„РѕСЂРјС‹ СЃРїРёСЃРєР° С‚РѕРІР°СЂРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: GoodsDocumentMaintenanceEJBQLTableModel.java,v 1.2 2009/02/10 14:04:52 safonov Exp $ 

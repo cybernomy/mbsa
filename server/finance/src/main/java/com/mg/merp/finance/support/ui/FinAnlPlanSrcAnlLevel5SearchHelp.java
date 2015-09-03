@@ -15,7 +15,7 @@
 package com.mg.merp.finance.support.ui;
 
 /**
- * SearchHelp для аналитики пятого уровня счета по кредиту
+ * SearchHelp РґР»СЏ Р°РЅР°Р»РёС‚РёРєРё РїСЏС‚РѕРіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р° РїРѕ РєСЂРµРґРёС‚Сѓ
  * 
  * @author leonova
  * @version $Id: FinAnlPlanSrcAnlLevel5SearchHelp.java,v 1.1 2006/10/30 13:50:16 leonova Exp $

@@ -17,7 +17,7 @@ package com.mg.framework.api.metadata;
 import java.util.List;
 
 /**
- * Фабрика фиксированных значений для домена
+ * Р¤Р°Р±СЂРёРєР° С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹С… Р·РЅР°С‡РµРЅРёР№ РґР»СЏ РґРѕРјРµРЅР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: FixedValuesFactory.java,v 1.2 2008/03/03 13:11:02 safonov Exp $
@@ -25,9 +25,9 @@ import java.util.List;
 public interface FixedValuesFactory {
 
 	/**
-	 * создание фиксированных значений
+	 * СЃРѕР·РґР°РЅРёРµ С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹С… Р·РЅР°С‡РµРЅРёР№
 	 * 
-	 * @return	фиксированные значения
+	 * @return	С„РёРєСЃРёСЂРѕРІР°РЅРЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ
 	 */
 	List<FixedValue<?>> createFixedValues();
 

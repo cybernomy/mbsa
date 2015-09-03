@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.salary.model.RollKind;
 
 /**
- * Браузер типов расчетных ведомостей
+ * Р‘СЂР°СѓР·РµСЂ С‚РёРїРѕРІ СЂР°СЃС‡РµС‚РЅС‹С… РІРµРґРѕРјРѕСЃС‚РµР№
  * 
  * @author leonova
  * @version $Id: RollKindBr.java,v 1.1 2006/08/28 12:43:34 leonova Exp $ 

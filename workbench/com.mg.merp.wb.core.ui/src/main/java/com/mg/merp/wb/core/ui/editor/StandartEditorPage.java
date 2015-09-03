@@ -33,7 +33,7 @@ import org.eclipse.ui.forms.widgets.Section;
 import com.mg.merp.wb.core.ui.UiPlugin;
 
 /**
- * Содержание формы редактирования бизнес объекта
+ * РЎРѕРґРµСЂР¶Р°РЅРёРµ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ Р±РёР·РЅРµСЃ РѕР±СЉРµРєС‚Р°
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: StandartEditorPage.java,v 1.2 2007/07/11 06:00:05 poroxnenko Exp $
@@ -45,7 +45,7 @@ public abstract class StandartEditorPage<T> extends FormPage {
 	protected ScrolledForm form;
 
 	/**
-	 * Форма редактирования
+	 * Р¤РѕСЂРјР° СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
 	 */
 	protected FormEditor editor;
 
@@ -140,28 +140,28 @@ public abstract class StandartEditorPage<T> extends FormPage {
 	}
 
 	/**
-	 * Создание зоны редактировани
+	 * РЎРѕР·РґР°РЅРёРµ Р·РѕРЅС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРё
 	 * 
 	 * @param parent
 	 */
 	public abstract void createEditorArea(Composite parent);
 
 	/**
-	 * Обработчик события нажатия кнопки "Save"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РЅР°Р¶Р°С‚РёСЏ РєРЅРѕРїРєРё "Save"
 	 * 
 	 */
 	public abstract void doOnSaveClick();
 
 	/**
-	 * Заголовок формы редактирования
+	 * Р—Р°РіРѕР»РѕРІРѕРє С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
 	 */
 	public abstract String getEditorText();
 	
 	/**
-	 * Инициализация формы редактирования
+	 * РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ С„РѕСЂРјС‹ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ
 	 * 
 	 * @param object
-	 * 			БК
+	 * 			Р‘Рљ
 	 */
 	public abstract void formContentPrecreating(T object);
 }

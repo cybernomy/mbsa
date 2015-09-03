@@ -18,7 +18,7 @@ import com.mg.framework.api.BusinessException;
 import com.mg.merp.docflow.support.Messages;
 
 /**
- * Класс ИС документ не найден
+ * РљР»Р°СЃСЃ РРЎ РґРѕРєСѓРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentNotFound.java,v 1.2 2006/08/25 11:44:01 safonov Exp $

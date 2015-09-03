@@ -28,7 +28,7 @@ import com.mg.merp.warehouse.WarehouseTransactionDayServiceLocal;
 import com.mg.merp.warehouse.model.WarehouseTransactionDay;
 
 /**
- * Реализация сервиса бизнес-компонента "Операционные дни"
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћРїРµСЂР°С†РёРѕРЅРЅС‹Рµ РґРЅРё"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: WarehouseTransactionDayServiceBean.java,v 1.1 2007/11/29 08:50:24 alikaev Exp $
@@ -71,9 +71,9 @@ public class WarehouseTransactionDayServiceBean extends	AbstractPOJODataBusiness
 	}
 	
 	/**
-	 * Открыть операционный день склада
+	 * РћС‚РєСЂС‹С‚СЊ РѕРїРµСЂР°С†РёРѕРЅРЅС‹Р№ РґРµРЅСЊ СЃРєР»Р°РґР°
 	 * 
-	 * @param wtd - операционный день склада
+	 * @param wtd - РѕРїРµСЂР°С†РёРѕРЅРЅС‹Р№ РґРµРЅСЊ СЃРєР»Р°РґР°
 	 */
 	private void internalOpenTransactionDay(WarehouseTransactionDay wtd) {
 		wtd.setUserStockClosed(null);
@@ -83,9 +83,9 @@ public class WarehouseTransactionDayServiceBean extends	AbstractPOJODataBusiness
 	}
 
 	/**
-	 * Закрыть операционный день склада
+	 * Р—Р°РєСЂС‹С‚СЊ РѕРїРµСЂР°С†РёРѕРЅРЅС‹Р№ РґРµРЅСЊ СЃРєР»Р°РґР°
 	 * 
-	 * @param wtd - операционный день склада
+	 * @param wtd - РѕРїРµСЂР°С†РёРѕРЅРЅС‹Р№ РґРµРЅСЊ СЃРєР»Р°РґР°
 	 */
 	private void internalCloseTransactionDay(WarehouseTransactionDay wtd) {
 		wtd.setUserStockClosed(ServerUtils.getUserProfile().getUserName());

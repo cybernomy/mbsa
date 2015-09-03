@@ -25,7 +25,7 @@ import com.mg.merp.warehouse.generic.ui.AbstractWarehouseDocumentMaintenaceForm;
 import com.mg.merp.warehouse.model.BillSpec;
 
 /**
- * Контроллер формы поддержки исходящих счетов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РёСЃС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: BillHeadOutMt.java,v 1.9 2008/12/25 10:26:56 safonov Exp $

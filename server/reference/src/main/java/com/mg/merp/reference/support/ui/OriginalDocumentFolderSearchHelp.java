@@ -17,7 +17,7 @@ package com.mg.merp.reference.support.ui;
 import com.mg.merp.reference.OriginalDocumentServiceLocal;
 
 /**
- * Механизм поиска сущностей "Папки оригиналов документов"
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РџР°РїРєРё РѕСЂРёРіРёРЅР°Р»РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: OriginalDocumentFolderSearchHelp.java,v 1.1 2008/06/17 11:29:59 sharapov Exp $
@@ -25,7 +25,7 @@ import com.mg.merp.reference.OriginalDocumentServiceLocal;
 public class OriginalDocumentFolderSearchHelp extends FolderByTypeSearchHelp {
 
 	/**
-	 * Имя механизма поиска сущностей "Папки оригиналов документов"
+	 * РРјСЏ РјРµС…Р°РЅРёР·РјР° РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РџР°РїРєРё РѕСЂРёРіРёРЅР°Р»РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ"
 	 */
 	public static String SEARCH_HELP_NAME = "com.mg.merp.reference.support.ui.OriginalDocumentFolderSearchHelp"; //$NON-NLS-1$
 	

@@ -28,7 +28,7 @@ import com.mg.merp.core.support.CoreUtils;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Контроллер формы списка прочих банковских документов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РїСЂРѕС‡РёС… Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @author Aretm V. Sharapov

@@ -16,7 +16,7 @@ package com.mg.merp.crm.support.ui;
 
 
 /**
- * Информациия об электронном адресе
+ * РРЅС„РѕСЂРјР°С†РёРёСЏ РѕР± СЌР»РµРєС‚СЂРѕРЅРЅРѕРј Р°РґСЂРµСЃРµ
  * 
  * @author Artem V. Sharapov
  * @version $Id: ElectronicAdressItem.java,v 1.1 2007/02/07 07:00:13 sharapov Exp $

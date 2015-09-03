@@ -22,7 +22,7 @@ import com.mg.merp.personnelref.PersonnelConfigServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelConfig;
 
 /**
- * Реализация бизнес-компонента "Конфигурация модуля <Управление персоналом>"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РЈРїСЂР°РІР»РµРЅРёРµ РїРµСЂСЃРѕРЅР°Р»РѕРј>"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

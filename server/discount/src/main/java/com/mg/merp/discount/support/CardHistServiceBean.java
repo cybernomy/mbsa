@@ -26,7 +26,7 @@ import com.mg.merp.discount.model.CardHist;
 import com.mg.merp.security.model.SecUser;
 
 /**
- * Реализация бизнес-компонента "История дисконтных карт" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РСЃС‚РѕСЂРёСЏ РґРёСЃРєРѕРЅС‚РЅС‹С… РєР°СЂС‚" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -24,7 +24,7 @@ import com.mg.merp.planning.ProductionProfileServiceLocal;
 import com.mg.merp.planning.model.ProductionProfile;
 
 /**
- * Бизнес-компонент "Профили производства"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРѕС„РёР»Рё РїСЂРѕРёР·РІРѕРґСЃС‚РІР°"
  *  
  * @author leonova
  * @version $Id: ProductionProfileServiceBean.java,v 1.3 2006/08/25 10:18:33 leonova Exp $

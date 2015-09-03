@@ -24,7 +24,7 @@ import com.mg.merp.contract.model.ContractConfig;
 import com.mg.merp.core.model.SysClient;
 
 /**
- * Реализация бизнес-компонента "Конфигурация модуля <Контракты>"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <РљРѕРЅС‚СЂР°РєС‚С‹>"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

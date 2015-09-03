@@ -26,7 +26,7 @@ import com.mg.merp.core.model.SysClient;
 import com.mg.merp.settlement.ConfigServiceLocal;
 
 /**
- * Контроллер комманды меню "Конфигурация модуля <Расчеты с партнерами>"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РєРѕРјРјР°РЅРґС‹ РјРµРЅСЋ "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <Р Р°СЃС‡РµС‚С‹ СЃ РїР°СЂС‚РЅРµСЂР°РјРё>"
  * 
  * @author Artem V. Sharapov
  * @version $Id: StlConfigMenuCommand.java,v 1.2 2008/08/15 14:56:02 sharapov Exp $

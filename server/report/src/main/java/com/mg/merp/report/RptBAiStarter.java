@@ -18,7 +18,7 @@ import java.util.Map;
 import com.mg.framework.api.dataset.DataSet;
 
 /**
- * Интерфейс запуска BAi генератора отчётов
+ * РРЅС‚РµСЂС„РµР№СЃ Р·Р°РїСѓСЃРєР° BAi РіРµРЅРµСЂР°С‚РѕСЂР° РѕС‚С‡С‘С‚РѕРІ
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -27,17 +27,17 @@ import com.mg.framework.api.dataset.DataSet;
 public interface RptBAiStarter {
 
 	/**
-	 * выполнить BAi
+	 * РІС‹РїРѕР»РЅРёС‚СЊ BAi
 	 * 
-	 * @param code		код BAi
-	 * @param params	параметры
+	 * @param code		РєРѕРґ BAi
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹
 	 */
 	void perform(String code, Map<String, Object> params);
 
 	/**
-	 * получить сформированный набор данных
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃС„РѕСЂРјРёСЂРѕРІР°РЅРЅС‹Р№ РЅР°Р±РѕСЂ РґР°РЅРЅС‹С…
 	 * 
-	 * @return	набор данных
+	 * @return	РЅР°Р±РѕСЂ РґР°РЅРЅС‹С…
 	 */
 	DataSet getDataSet();
 

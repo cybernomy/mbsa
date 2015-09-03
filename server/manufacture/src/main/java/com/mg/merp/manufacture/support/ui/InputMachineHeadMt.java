@@ -24,7 +24,7 @@ import com.mg.merp.manufacture.generic.ui.InputHeadMt;
 import com.mg.merp.manufacture.model.InputDocumentSpec;
 
 /**
- * Контроллер формы поддержки Актов на списание времени, отработанного оборудованием в НЗП
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РђРєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµРј РІ РќР—Рџ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InputMachineHeadMt.java,v 1.8 2008/12/25 10:17:46 safonov Exp $

@@ -25,7 +25,7 @@ import com.mg.merp.crm.model.Relation;
 import com.mg.merp.crm.model.User;
 
 /**
- * Контроллер формы условий отбора
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР°
  * 
  * @author leonova
  * @version $Id: OperationRest.java,v 1.2 2006/09/06 05:23:43 leonova Exp $ 

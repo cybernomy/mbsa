@@ -23,7 +23,7 @@ import com.mg.merp.account.SpecMarkServiceLocal;
 import com.mg.merp.account.model.SpecMark;
 
 /**
- * Реализация бизнес-компонента "Особые отметки" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃРѕР±С‹Рµ РѕС‚РјРµС‚РєРё" 
  * 
  * @author leonova
  * @version $Id: SpecMarkServiceBean.java,v 1.4 2007/01/16 11:42:46 sharapov Exp $

@@ -23,7 +23,7 @@ import com.mg.merp.warehouse.InvoiceHeadOutServiceLocal;
 import com.mg.merp.warehouse.model.InvoiceHeadModel;
 
 /**
- * Бизнес-компонент "Образцы исходящих накладных" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ РёСЃС…РѕРґСЏС‰РёС… РЅР°РєР»Р°РґРЅС‹С…" 
  * 
  * @author leonova
  * @version $Id: InvoiceHeadModelOutServiceBean.java,v 1.3 2006/09/12 10:48:36 leonova Exp $

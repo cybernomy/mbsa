@@ -37,7 +37,7 @@ import com.mg.merp.wb.report.deployer.support.editor.RptEditorInput;
 import com.mg.merp.wb.report.deployer.ui.RptView;
 
 /**
- * Вспомогательный класс для управления созданием, изменением, удалением отчётов
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ СѓРїСЂР°РІР»РµРЅРёСЏ СЃРѕР·РґР°РЅРёРµРј, РёР·РјРµРЅРµРЅРёРµРј, СѓРґР°Р»РµРЅРёРµРј РѕС‚С‡С‘С‚РѕРІ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: RptTool.java,v 1.4 2007/11/04 14:28:14 safonov Exp $
@@ -51,10 +51,10 @@ public class RptTool {
 	private static final String REPORT_DEPLOY_ERROR = "tmpl.deploy.error";
 	
 	/**
-	 * Создание нового отчёта в базе
+	 * РЎРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ РѕС‚С‡С‘С‚Р° РІ Р±Р°Р·Рµ
 	 * 
 	 * @param templ
-	 *            шаблон
+	 *            С€Р°Р±Р»РѕРЅ
 	 */
 	public static void addReport(IFile templ) {
 		String code = getCode(templ);
@@ -67,10 +67,10 @@ public class RptTool {
 	}
 
 	/**
-	 * Разворачивание шаблона в базе
+	 * Р Р°Р·РІРѕСЂР°С‡РёРІР°РЅРёРµ С€Р°Р±Р»РѕРЅР° РІ Р±Р°Р·Рµ
 	 * 
 	 * @param templ
-	 *            шаблон
+	 *            С€Р°Р±Р»РѕРЅ
 	 */
 	public static void persistTemplate(IFile templ) {
 		if (Dialogs.showMessage(DeployerPlugin.getDefault().getString("tmpl.menu.deploy.question")
@@ -109,10 +109,10 @@ public class RptTool {
 	}
 
 	/**
-	 * Удаление списка отчётов
+	 * РЈРґР°Р»РµРЅРёРµ СЃРїРёСЃРєР° РѕС‚С‡С‘С‚РѕРІ
 	 * 
 	 * @param templToDel
-	 *            список отчётов
+	 *            СЃРїРёСЃРѕРє РѕС‚С‡С‘С‚РѕРІ
 	 */
 	public static void deleteReportList(List<IFile> templToDel) {
 		if (Dialogs.showMessage(DeployerPlugin.getDefault().getFormattedString("tmpl.menu.del.question", templToDel.size())
@@ -148,10 +148,10 @@ public class RptTool {
 	}
 
 	/**
-	 * Изменение отчёта в базе
+	 * РР·РјРµРЅРµРЅРёРµ РѕС‚С‡С‘С‚Р° РІ Р±Р°Р·Рµ
 	 * 
 	 * @param templ
-	 *            шаблон
+	 *            С€Р°Р±Р»РѕРЅ
 	 */
 	public static void editReport(IFile templ) {
 		String code = getCode(templ);
@@ -159,23 +159,23 @@ public class RptTool {
 	}
 
 	/**
-	 * Возвращает код отчёта, который представляет из себя имя файла шаблона
-	 * отчёта
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РєРѕРґ РѕС‚С‡С‘С‚Р°, РєРѕС‚РѕСЂС‹Р№ РїСЂРµРґСЃС‚Р°РІР»СЏРµС‚ РёР· СЃРµР±СЏ РёРјСЏ С„Р°Р№Р»Р° С€Р°Р±Р»РѕРЅР°
+	 * РѕС‚С‡С‘С‚Р°
 	 * 
 	 * @param templ
-	 *            шаблон
-	 * @return код отчёта
+	 *            С€Р°Р±Р»РѕРЅ
+	 * @return РєРѕРґ РѕС‚С‡С‘С‚Р°
 	 */
 	public static String getCode(IFile templ) {
 		return templ.getName().substring(0,	templ.getName().length() - templ.getFileExtension().length() - 1);
 	}
 
 	/**
-	 * Возвращает бинарное представление файла шаблона
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р±РёРЅР°СЂРЅРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ С„Р°Р№Р»Р° С€Р°Р±Р»РѕРЅР°
 	 * 
 	 * @param templ
-	 *            шаблон
-	 * @return бинарное представление шаблона
+	 *            С€Р°Р±Р»РѕРЅ
+	 * @return Р±РёРЅР°СЂРЅРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ С€Р°Р±Р»РѕРЅР°
 	 */
 	public static byte[] getData(IFile templ) {
 		byte[] buf = null;
@@ -191,20 +191,20 @@ public class RptTool {
 	}
 	
 	/**
-	 * Получить отчёт по коду из репозитория
+	 * РџРѕР»СѓС‡РёС‚СЊ РѕС‚С‡С‘С‚ РїРѕ РєРѕРґСѓ РёР· СЂРµРїРѕР·РёС‚РѕСЂРёСЏ
 	 * 
 	 * @param code
-	 *            код
-	 * @return отчёт или NULL
+	 *            РєРѕРґ
+	 * @return РѕС‚С‡С‘С‚ РёР»Рё NULL
 	 */
 	public static RptMainTransfer getReportFromRepository(String code) {
 		return getRptView().getViewController().getReports().get(code);
 	}
 
 	/**
-	 * Получить панель RptView
+	 * РџРѕР»СѓС‡РёС‚СЊ РїР°РЅРµР»СЊ RptView
 	 * 
-	 * @return панель RptView
+	 * @return РїР°РЅРµР»СЊ RptView
 	 */
 	public static RptView getRptView() {
 		return (RptView) PlatformUI.getWorkbench().getActiveWorkbenchWindow()
@@ -212,9 +212,9 @@ public class RptTool {
 	}
 
 	/**
-	 * Выбор проекта для шаблона отчёта
+	 * Р’С‹Р±РѕСЂ РїСЂРѕРµРєС‚Р° РґР»СЏ С€Р°Р±Р»РѕРЅР° РѕС‚С‡С‘С‚Р°
 	 * 
-	 * @return ресурс-проект
+	 * @return СЂРµСЃСѓСЂСЃ-РїСЂРѕРµРєС‚
 	 */
 	public static IResource selectResourceForTemplate() {
 		ProjectSelectionDialog psd = new ProjectSelectionDialog(CoreUtils.getMainShell()

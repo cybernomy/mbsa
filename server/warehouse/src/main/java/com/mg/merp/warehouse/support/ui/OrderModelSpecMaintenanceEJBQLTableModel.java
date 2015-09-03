@@ -27,7 +27,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.warehouse.model.OrderSpecModel;
 
 /**
- * Вспомогательный класс для отображения формы списка образцов заказов
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ Р·Р°РєР°Р·РѕРІ
  * 
  * @author leonova
  * @version $Id: OrderModelSpecMaintenanceEJBQLTableModel.java,v 1.1 2006/09/12 10:54:04 leonova Exp $ 

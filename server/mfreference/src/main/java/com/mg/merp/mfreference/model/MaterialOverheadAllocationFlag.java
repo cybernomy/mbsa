@@ -18,26 +18,26 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Метод начисления накладных расходов на материал
+ * РњРµС‚РѕРґ РЅР°С‡РёСЃР»РµРЅРёСЏ РЅР°РєР»Р°РґРЅС‹С… СЂР°СЃС…РѕРґРѕРІ РЅР° РјР°С‚РµСЂРёР°Р»
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: MaterialOverheadAllocationFlag.java,v 1.2 2007/07/30 10:25:11 safonov Exp $
  */
 @DataItemName("Manufacture.MtlOhAllocationFlag")
 public enum MaterialOverheadAllocationFlag {
 	/**
-	 * На единицу материала
+	 * РќР° РµРґРёРЅРёС†Сѓ РјР°С‚РµСЂРёР°Р»Р°
 	 */
 	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#MtlOhAllocFlag.Unit")
 	UNIT,
 	
 	/**
-	 * Коэффициент от стоимости ресурса
+	 * РљРѕСЌС„С„РёС†РёРµРЅС‚ РѕС‚ СЃС‚РѕРёРјРѕСЃС‚Рё СЂРµСЃСѓСЂСЃР°
 	 */
 	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#MtlOhAllocFlag.Cost")
 	COST,
 	
 	/**
-	 * Фиксированная стоимость на партию
+	 * Р¤РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ СЃС‚РѕРёРјРѕСЃС‚СЊ РЅР° РїР°СЂС‚РёСЋ
 	 */
 	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#MtlOhAllocFlag.Fixed")
 	FIXED

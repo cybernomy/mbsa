@@ -18,12 +18,12 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocHeadModel;
 
 /**
- * Сервис создания документа на комплектующие
+ * РЎРµСЂРІРёСЃ СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РєРѕРјРїР»РµРєС‚СѓСЋС‰РёРµ
  * 
  * <p>
- * <br>S - класс объекта источника
- * <br>D - результирующий класс
- * <br>P - Образец
+ * <br>S - РєР»Р°СЃСЃ РѕР±СЉРµРєС‚Р° РёСЃС‚РѕС‡РЅРёРєР°
+ * <br>D - СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РёР№ РєР»Р°СЃСЃ
+ * <br>P - РћР±СЂР°Р·РµС†
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: CreateDocOnComponents.java,v 1.1 2007/10/23 13:46:50 alikaev Exp $
@@ -31,7 +31,7 @@ import com.mg.merp.document.model.DocHeadModel;
 public interface CreateDocOnComponents<S extends DocHead, D extends DocHead, P extends DocHeadModel> extends CreateDocumentBasisOf<S, D, P> {
 	
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:document=CreateDocOnComponentsService"; //$NON-NLS-1$
 

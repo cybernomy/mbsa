@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 
 /**
- * Форма условий отбора партнеров
+ * Р¤РѕСЂРјР° СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° РїР°СЂС‚РЅРµСЂРѕРІ
  * 
  * @author leonova
  * @version $Id: PartnerRest.java,v 1.3 2006/10/18 10:50:12 leonova Exp $ 

@@ -21,14 +21,14 @@ import com.mg.merp.reference.PersonAddressServiceLocal;
 import com.mg.merp.reference.model.PersonAddress;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Адрес физического лица" 
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РђРґСЂРµСЃ С„РёР·РёС‡РµСЃРєРѕРіРѕ Р»РёС†Р°" 
  * @author Konstantin S. Alikaev
  * @version $Id: PersonAddressMt.java,v 1.1 2007/09/05 11:07:23 alikaev Exp $
  */
 public class PersonAddressMt extends DefaultMaintenanceForm {
 	
 	/**
-	 * действие на  событие обновить
+	 * РґРµР№СЃС‚РІРёРµ РЅР°  СЃРѕР±С‹С‚РёРµ РѕР±РЅРѕРІРёС‚СЊ
 	 * @param event
 	 */
 	public void onActionBuildFullAddress(WidgetEvent event){

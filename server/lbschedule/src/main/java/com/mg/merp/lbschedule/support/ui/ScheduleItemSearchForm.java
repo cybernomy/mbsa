@@ -30,7 +30,7 @@ import com.mg.merp.lbschedule.model.Item;
 import com.mg.merp.lbschedule.model.Schedule;
 
 /**
- * Контролер формы поиска объектов-сущностей "Пунктов графика исполнения обязательств"
+ * РљРѕРЅС‚СЂРѕР»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° РѕР±СЉРµРєС‚РѕРІ-СЃСѓС‰РЅРѕСЃС‚РµР№ "РџСѓРЅРєС‚РѕРІ РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ScheduleItemSearchForm.java,v 1.3 2009/02/09 12:08:32 safonov Exp $
@@ -120,9 +120,9 @@ public class ScheduleItemSearchForm extends AbstractSearchForm {
 	}
 
 	/**
-	 * Установить параметры поиска пунктов графика
-	 * @param itemId - пункт графика
-	 * @param schedule - график исполнения обязательств
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РїРѕРёСЃРєР° РїСѓРЅРєС‚РѕРІ РіСЂР°С„РёРєР°
+	 * @param itemId - РїСѓРЅРєС‚ РіСЂР°С„РёРєР°
+	 * @param schedule - РіСЂР°С„РёРє РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ
 	 */
 	public void setSearchParams(Integer itemId, Schedule schedule) {
 		queryText = new StringBuilder("select %s from Item i %s where i.Schedule = :schedule"); //$NON-NLS-1$
@@ -131,7 +131,7 @@ public class ScheduleItemSearchForm extends AbstractSearchForm {
 		paramsName.add("schedule"); //$NON-NLS-1$
 		paramsValue.add(schedule);			
 
-		// если поиск осуществляется для созданного пункта, то исключим его из списка
+		// РµСЃР»Рё РїРѕРёСЃРє РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ РґР»СЏ СЃРѕР·РґР°РЅРЅРѕРіРѕ РїСѓРЅРєС‚Р°, С‚Рѕ РёСЃРєР»СЋС‡РёРј РµРіРѕ РёР· СЃРїРёСЃРєР°
 		if(itemId != null) {
 			paramsName.add("itemId"); //$NON-NLS-1$
 			paramsValue.add(itemId);

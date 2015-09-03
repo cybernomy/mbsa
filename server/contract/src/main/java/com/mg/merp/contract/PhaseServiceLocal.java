@@ -20,7 +20,7 @@ import com.mg.merp.contract.model.Phase;
 import com.mg.merp.contract.model.PlanAndFactSumsByKindResult;
 
 /**
- * Сервис бизнес-компонента "Этапы контракта"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р­С‚Р°РїС‹ РєРѕРЅС‚СЂР°РєС‚Р°"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -29,41 +29,41 @@ import com.mg.merp.contract.model.PlanAndFactSumsByKindResult;
 public interface PhaseServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Phase, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/contract/Phase"; //$NON-NLS-1$
 
 	/**
-	 * Получить сумму этапа контракта по видам пунктов
-	 * @param contractPhase - этап контракта
-	 * @return сумма этапа контракта по видам пунктов
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃСѓРјРјСѓ СЌС‚Р°РїР° РєРѕРЅС‚СЂР°РєС‚Р° РїРѕ РІРёРґР°Рј РїСѓРЅРєС‚РѕРІ
+	 * @param contractPhase - СЌС‚Р°Рї РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @return СЃСѓРјРјР° СЌС‚Р°РїР° РєРѕРЅС‚СЂР°РєС‚Р° РїРѕ РІРёРґР°Рј РїСѓРЅРєС‚РѕРІ
 	 */
 	BigDecimal[] calculateTotalPhaseSumByKind(Phase contractPhase);
 
 	/**
-	 * Получить сумму
-	 * @param shippedPayment - сумма платежей контрагенту
-	 * @param receivedPayment - сумма платежей от контрагента
-	 * @return сумма
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃСѓРјРјСѓ
+	 * @param shippedPayment - СЃСѓРјРјР° РїР»Р°С‚РµР¶РµР№ РєРѕРЅС‚СЂР°РіРµРЅС‚Сѓ
+	 * @param receivedPayment - СЃСѓРјРјР° РїР»Р°С‚РµР¶РµР№ РѕС‚ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°
+	 * @return СЃСѓРјРјР°
 	 */
 	BigDecimal calculateSum(BigDecimal shippedPayment, BigDecimal receivedPayment);
 	
 	/**
-	 * Расчет суммы этапа контракта
-	 * @param phase - этап контракта
+	 * Р Р°СЃС‡РµС‚ СЃСѓРјРјС‹ СЌС‚Р°РїР° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param phase - СЌС‚Р°Рї РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	void adjust(Phase phase);
 	
 	/**
-	 * Получить агрегированные по видам пунктов значения фактичесих и планируемых сумм
-	 * @param contractPhase - этап контракта
-	 * @return агрегированные по видам пунктов значения фактичесих и планируемых сумм
+	 * РџРѕР»СѓС‡РёС‚СЊ Р°РіСЂРµРіРёСЂРѕРІР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј РїСѓРЅРєС‚РѕРІ Р·РЅР°С‡РµРЅРёСЏ С„Р°РєС‚РёС‡РµСЃРёС… Рё РїР»Р°РЅРёСЂСѓРµРјС‹С… СЃСѓРјРј
+	 * @param contractPhase - СЌС‚Р°Рї РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @return Р°РіСЂРµРіРёСЂРѕРІР°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј РїСѓРЅРєС‚РѕРІ Р·РЅР°С‡РµРЅРёСЏ С„Р°РєС‚РёС‡РµСЃРёС… Рё РїР»Р°РЅРёСЂСѓРµРјС‹С… СЃСѓРјРј
 	 */
 	PlanAndFactSumsByKindResult getTotalPlanAndFactSumsByKind(Phase contractPhase);
 		
 	/**
-	 * Аннулировать этап контракта
-	 * @param contractPhase - этап контракта 
+	 * РђРЅРЅСѓР»РёСЂРѕРІР°С‚СЊ СЌС‚Р°Рї РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param contractPhase - СЌС‚Р°Рї РєРѕРЅС‚СЂР°РєС‚Р° 
 	 */
 	void madeAvoid(Phase contractPhase);
 

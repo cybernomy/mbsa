@@ -20,7 +20,7 @@ import org.eclipse.datatools.connectivity.oda.design.ui.wizards.DataSourceWizard
 import org.eclipse.swt.widgets.Composite;
 
 /**
- * Мастер создания источника данных
+ * РњР°СЃС‚РµСЂ СЃРѕР·РґР°РЅРёСЏ РёСЃС‚РѕС‡РЅРёРєР° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: HibernateDataSourceWizard.java,v 1.1 2007/10/29 08:54:16 safonov Exp $

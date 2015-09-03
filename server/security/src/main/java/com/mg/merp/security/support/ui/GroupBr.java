@@ -28,7 +28,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.security.model.Groups;
 
 /**
- * Браузер групп пользователей
+ * Р‘СЂР°СѓР·РµСЂ РіСЂСѓРїРї РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
  * 
  * @author leonova
  * @version $Id: GroupBr.java,v 1.2 2007/02/24 14:23:54 safonov Exp $ 

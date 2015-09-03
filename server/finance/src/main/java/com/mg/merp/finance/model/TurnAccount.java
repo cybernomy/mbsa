@@ -20,7 +20,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.service.PersistentObjectHibernate;
 
 /**
- * Модель бизнес-компонента "Обороты по счетам"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±РѕСЂРѕС‚С‹ РїРѕ СЃС‡РµС‚Р°Рј"
  * 
  * @author hbm2java
  * @version $Id: TurnAccount.java,v 1.11 2009/02/16 07:45:11 sharapov Exp $

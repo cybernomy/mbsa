@@ -17,7 +17,7 @@ package com.mg.merp.document;
 import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 
 /**
- * Бизнес-компонент "Процессор документов"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРѕС†РµСЃСЃРѕСЂ РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: DocumentProcessor.java,v 1.4 2009/02/04 09:33:09 safonov Exp $ 
@@ -25,43 +25,43 @@ import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 public interface DocumentProcessor {
 
 	/**
-	 * Этап "Создание документа на основании текущего"
+	 * Р­С‚Р°Рї "РЎРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІР°РЅРёРё С‚РµРєСѓС‰РµРіРѕ"
 	 * 
-	 * @param params	параметры этапа
-	 * @param listener	слушатель создания документа на основе этапом ДО
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІРµ СЌС‚Р°РїРѕРј Р”Рћ
 	 */
 	void processCreateDocumentBasisOf(DocFlowPluginInvokeParams params, CreateDocumentDocFlowListener listener);
 
 	/**
-	 * Этап "Создание документа на основании текущего"
+	 * Р­С‚Р°Рї "РЎРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІР°РЅРёРё С‚РµРєСѓС‰РµРіРѕ"
 	 * 
-	 * @param params	параметры этапа
-	 * @param listener	слушатель создания документа на основе этапом ДО
-	 * @param createCallback	объект обратного вызова создания документа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІРµ СЌС‚Р°РїРѕРј Р”Рћ
+	 * @param createCallback	РѕР±СЉРµРєС‚ РѕР±СЂР°С‚РЅРѕРіРѕ РІС‹Р·РѕРІР° СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	void processCreateDocumentBasisOf(DocFlowPluginInvokeParams params, CreateDocumentDocFlowListener listener, CreateDocumentBasisOfCallback createCallback);
 
 	/**
-	 * Откат этапа "Создание документа на основании текущего"
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° "РЎРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІР°РЅРёРё С‚РµРєСѓС‰РµРіРѕ"
 	 * 
 	 * @param params
-	 *            параметры
+	 *            РїР°СЂР°РјРµС‚СЂС‹
 	 */
 	void rollbackCreateDocumentBasisOf(DocFlowPluginInvokeParams params, CreateDocumentDocFlowListener listener);
 
 	/**
-	 * Этап "Создание документа на комплектующие"
+	 * Р­С‚Р°Рї "РЎРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РєРѕРјРїР»РµРєС‚СѓСЋС‰РёРµ"
 	 * @param params
-	 * 			параметры этапа
+	 * 			РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void processCreateDocOnComponents(DocFlowPluginInvokeParams params, CreateDocumentDocFlowListener listener);
 	
 
 	/**
-	 * Откат этапа "Создание документа на комплектующие"
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° "РЎРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РєРѕРјРїР»РµРєС‚СѓСЋС‰РёРµ"
 	 * 
 	 * @param params
-	 *            параметры
+	 *            РїР°СЂР°РјРµС‚СЂС‹
 	 */
 	void rollbackCreateDocOnComponents(DocFlowPluginInvokeParams params, CreateDocumentDocFlowListener listener);
 }

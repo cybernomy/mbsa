@@ -18,7 +18,7 @@ import com.mg.merp.paymentcontrol.ResourceServiceLocal;
 
 
 /**
- * Поисковик сущностей "Папки для средства платежа"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РџР°РїРєРё РґР»СЏ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ResourceFolderSearchHelp.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $

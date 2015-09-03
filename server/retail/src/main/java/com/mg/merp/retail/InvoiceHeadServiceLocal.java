@@ -22,7 +22,7 @@ import com.mg.merp.document.model.DocSpec;
 import com.mg.merp.retail.model.RtlInvoiceHead;
 
 /**
- * Бизнес-компонент "Спецификация документа на отпуск"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕС‚РїСѓСЃРє"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -31,34 +31,34 @@ import com.mg.merp.retail.model.RtlInvoiceHead;
 public interface InvoiceHeadServiceLocal extends com.mg.merp.document.GoodsDocument<RtlInvoiceHead, Integer, InvoiceHeadModelServiceLocal, InvoiceSpecServiceLocal> {
 
 	/**
-	 * тип папки для документов на отпуск
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РґРѕРєСѓРјРµРЅС‚РѕРІ РЅР° РѕС‚РїСѓСЃРє
 	 */
 	final static short FOLDER_PART = 13200;
 
 	/**
-	 * раздел документов на отпуск
+	 * СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚РѕРІ РЅР° РѕС‚РїСѓСЃРє
 	 */
 	final static short DOCSECTION = 12500;
 
 	/**
-	 * Применить скидки/наценки
-	 * @param docHead - документ
+	 * РџСЂРёРјРµРЅРёС‚СЊ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
 	 */
 	void applyDiscount(DocHead docHead);
 	
 	/**
-	 * Применить скидки/наценки на документ
-	 * @param docHead - документ
-	 * @param аpplyDiscountListener - cлушатель применения скидки/наценки
+	 * РџСЂРёРјРµРЅРёС‚СЊ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё РЅР° РґРѕРєСѓРјРµРЅС‚
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
+	 * @param Р°pplyDiscountListener - cР»СѓС€Р°С‚РµР»СЊ РїСЂРёРјРµРЅРµРЅРёСЏ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
 	 */
-	void applyDiscount(DocHead docHead, ApplyDiscountListener аpplyDiscountListener);
+	void applyDiscount(DocHead docHead, ApplyDiscountListener Р°pplyDiscountListener);
 	
 	/**
-	 * Применить скидки/наценки на документ для позиций спецификации
-	 * @param docHead - документ
-	 * @param specs - список позиций спецификации
-	 * @param аpplyDiscountListener - cлушатель применения скидки/наценки
+	 * РџСЂРёРјРµРЅРёС‚СЊ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё РЅР° РґРѕРєСѓРјРµРЅС‚ РґР»СЏ РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
+	 * @param specs - СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param Р°pplyDiscountListener - cР»СѓС€Р°С‚РµР»СЊ РїСЂРёРјРµРЅРµРЅРёСЏ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
 	 */
-	void applyDiscount(DocHead docHead, List<DocSpec> specs, ApplyDiscountListener аpplyDiscountListener);
+	void applyDiscount(DocHead docHead, List<DocSpec> specs, ApplyDiscountListener Р°pplyDiscountListener);
 	
 }

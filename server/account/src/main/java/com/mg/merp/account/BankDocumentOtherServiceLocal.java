@@ -25,12 +25,12 @@ public interface BankDocumentOtherServiceLocal
    extends com.mg.merp.document.Document<BankDocument, Integer, BankDocumentModelOtherServiceLocal>
 {
 	/**
-	 * тип папки для прочих банковских документов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РїСЂРѕС‡РёС… Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 8;
 	
 	/**
-	 * docsection для прочих банковских документов
+	 * docsection РґР»СЏ РїСЂРѕС‡РёС… Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 */
 	final static short DOCSECTION = 4;
 }

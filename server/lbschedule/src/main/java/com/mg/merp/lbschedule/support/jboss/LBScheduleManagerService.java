@@ -23,7 +23,7 @@ import com.mg.merp.document.LBScheduleManager;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Реализация сервиса менеджера управления графиками исполнения обязательств
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РјРµРЅРµРґР¶РµСЂР° СѓРїСЂР°РІР»РµРЅРёСЏ РіСЂР°С„РёРєР°РјРё РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ
  * 
  * @author Artem V. Sharapov
  * @version $Id: LBScheduleManagerService.java,v 1.1 2007/04/21 11:49:33 sharapov Exp $

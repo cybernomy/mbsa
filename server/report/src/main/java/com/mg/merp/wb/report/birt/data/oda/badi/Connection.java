@@ -23,7 +23,7 @@ import org.eclipse.datatools.connectivity.oda.IQuery;
 import org.eclipse.datatools.connectivity.oda.OdaException;
 
 /**
- * Реализация интерфейса {@link IConnection}
+ * Р РµР°Р»РёР·Р°С†РёСЏ РёРЅС‚РµСЂС„РµР№СЃР° {@link IConnection}
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov

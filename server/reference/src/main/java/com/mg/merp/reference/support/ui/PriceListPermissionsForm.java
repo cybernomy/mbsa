@@ -31,7 +31,7 @@ import com.mg.merp.reference.PriceListAccessResult;
 import com.mg.merp.reference.PriceListAccessServiceLocal;
 
 /**
- * Контроллер формы настройки прав пользователя на прайс-листы
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РЅР°СЃС‚СЂРѕР№РєРё РїСЂР°РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РЅР° РїСЂР°Р№СЃ-Р»РёСЃС‚С‹
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: PriceListPermissionsForm.java,v 1.1 2008/05/13 09:55:17 alikaev Exp $
@@ -66,9 +66,9 @@ public class PriceListPermissionsForm extends AbstractForm {
 	}
 	
 	/**
-	 * Запустить форму настройки прав для прайс-листов
+	 * Р—Р°РїСѓСЃС‚РёС‚СЊ С„РѕСЂРјСѓ РЅР°СЃС‚СЂРѕР№РєРё РїСЂР°РІ РґР»СЏ РїСЂР°Р№СЃ-Р»РёСЃС‚РѕРІ
 	 * 
-	 * @param priceListId - идентификатор прайс-листа
+	 * @param priceListId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	public void execute(Integer priceListId) {
 		this.priceListId = priceListId;
@@ -114,8 +114,8 @@ public class PriceListPermissionsForm extends AbstractForm {
 	}
 	
 	/**
-	 * Обработчик события "Закрыть форму"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "Р—Р°РєСЂС‹С‚СЊ С„РѕСЂРјСѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionOk(WidgetEvent event) {
 		close();

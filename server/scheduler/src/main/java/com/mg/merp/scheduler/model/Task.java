@@ -21,7 +21,7 @@ import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.model.SysClient;
 
 /**
- * Модель "Задача планировщика"
+ * РњРѕРґРµР»СЊ "Р—Р°РґР°С‡Р° РїР»Р°РЅРёСЂРѕРІС‰РёРєР°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: Task.java,v 1.1 2008/04/25 10:57:23 safonov Exp $

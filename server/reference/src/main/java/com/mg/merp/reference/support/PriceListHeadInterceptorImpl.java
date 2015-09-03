@@ -23,8 +23,8 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.reference.model.PriceListHead;
 
 /**
- * Перехватчик для объекта-сущности "Прайс-лист", реализует инициализацию прав пользователей
- * после создания
+ * РџРµСЂРµС…РІР°С‚С‡РёРє РґР»СЏ РѕР±СЉРµРєС‚Р°-СЃСѓС‰РЅРѕСЃС‚Рё "РџСЂР°Р№СЃ-Р»РёСЃС‚", СЂРµР°Р»РёР·СѓРµС‚ РёРЅРёС†РёР°Р»РёР·Р°С†РёСЋ РїСЂР°РІ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
+ * РїРѕСЃР»Рµ СЃРѕР·РґР°РЅРёСЏ
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: PriceListHeadInterceptorImpl.java,v 1.1 2008/05/13 09:53:53 alikaev Exp $
@@ -32,12 +32,12 @@ import com.mg.merp.reference.model.PriceListHead;
 public class PriceListHeadInterceptorImpl extends AbstractEntityInterceptor {
 
 	/**
-	 * Выдать права на объект
+	 * Р’С‹РґР°С‚СЊ РїСЂР°РІР° РЅР° РѕР±СЉРµРєС‚
 	 * 
 	 * @param priceListHeadId	
-	 * 					- идентификатор прайс-листа
+	 * 					- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 * @param groupId	
-	 * 					- группа пользователя
+	 * 					- РіСЂСѓРїРїР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 */
 	private void grantDocTypePermission(int priceListHeadId, int groupId) {
 		JdbcTemplate.getInstance().update("INSERT INTO PRICELISTHEAD_RIGHTS (ID, REC_ID, GROUP_ID, RIGHTS) VALUES (?, ?, ?, 1)", new Object[] {DatabaseUtils.getSequenceNextValue("PRICELISTHEAD_RIGHTS_ID_GEN"), priceListHeadId, groupId}); //$NON-NLS-1$ //$NON-NLS-2$

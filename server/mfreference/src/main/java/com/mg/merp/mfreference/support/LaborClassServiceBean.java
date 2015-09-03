@@ -25,7 +25,7 @@ import com.mg.merp.mfreference.LaborClassServiceLocal;
 import com.mg.merp.mfreference.model.LaborClass;
 
 /**
- * Реализация бизнес-компонента "Класс рабочей силы" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР»Р°СЃСЃ СЂР°Р±РѕС‡РµР№ СЃРёР»С‹" 
  * 
  * @author leonova
  * @version $Id: LaborClassServiceBean.java,v 1.5 2008/03/06 10:03:17 sharapov Exp $

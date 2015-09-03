@@ -28,8 +28,8 @@ import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Реализация менеджера перехватчиков действий интерактивной поддержки (добавление, изменение, копирование, просмотр)
- * бизнес-компонентов
+ * Р РµР°Р»РёР·Р°С†РёСЏ РјРµРЅРµРґР¶РµСЂР° РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РґРµР№СЃС‚РІРёР№ РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕР№ РїРѕРґРґРµСЂР¶РєРё (РґРѕР±Р°РІР»РµРЅРёРµ, РёР·РјРµРЅРµРЅРёРµ, РєРѕРїРёСЂРѕРІР°РЅРёРµ, РїСЂРѕСЃРјРѕС‚СЂ)
+ * Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: UserActionInterceptorManagerImpl.java,v 1.3 2006/10/26 13:25:45 safonov Exp $
@@ -40,9 +40,9 @@ public class UserActionInterceptorManagerImpl implements
 	private Map<String, List<UserActionInterceptor>> interceptorsMap = Collections.synchronizedMap(new HashMap<String, List<UserActionInterceptor>>());
 
 	/**
-	 * проверка перехватчика
+	 * РїСЂРѕРІРµСЂРєР° РїРµСЂРµС…РІР°С‚С‡РёРєР°
 	 * 
-	 * @param interceptor	перехватчик
+	 * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
 	 */
 	private void checkInterceptor(UserActionInterceptor interceptor) {
 		if (interceptor == null)
@@ -50,11 +50,11 @@ public class UserActionInterceptorManagerImpl implements
 	}
 
 	/**
-	 * получить список перехватчиков по наименованию обслуживаемой сущности
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РїРѕ РЅР°РёРјРµРЅРѕРІР°РЅРёСЋ РѕР±СЃР»СѓР¶РёРІР°РµРјРѕР№ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param name		наименование сущности
-	 * @param create	признак создания списка перехватчиков если не существует
-	 * @return			список перехватчиков
+	 * @param name		РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @param create	РїСЂРёР·РЅР°Рє СЃРѕР·РґР°РЅРёСЏ СЃРїРёСЃРєР° РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РµСЃР»Рё РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚
+	 * @return			СЃРїРёСЃРѕРє РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ
 	 */
 	private List<UserActionInterceptor> getInterceptorsByName(final String name, final boolean create) {
 		List<UserActionInterceptor> interceptors = this.interceptorsMap.get(name);
@@ -66,12 +66,12 @@ public class UserActionInterceptorManagerImpl implements
 	}
 
 	/**
-	 * копируем список чтобы использовать итератор в цикле обхода списка перехватчиков,
-	 * предотвращая ConcurrentModificationException при изменении оригинального списка,
-	 * т.к. итераторы не потоко-безопасны 
+	 * РєРѕРїРёСЂСѓРµРј СЃРїРёСЃРѕРє С‡С‚РѕР±С‹ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РёС‚РµСЂР°С‚РѕСЂ РІ С†РёРєР»Рµ РѕР±С…РѕРґР° СЃРїРёСЃРєР° РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ,
+	 * РїСЂРµРґРѕС‚РІСЂР°С‰Р°СЏ ConcurrentModificationException РїСЂРё РёР·РјРµРЅРµРЅРёРё РѕСЂРёРіРёРЅР°Р»СЊРЅРѕРіРѕ СЃРїРёСЃРєР°,
+	 * С‚.Рє. РёС‚РµСЂР°С‚РѕСЂС‹ РЅРµ РїРѕС‚РѕРєРѕ-Р±РµР·РѕРїР°СЃРЅС‹ 
 	 * 
-	 * @param source	оригинальный список перехватчиков
-	 * @return	копия списка
+	 * @param source	РѕСЂРёРіРёРЅР°Р»СЊРЅС‹Р№ СЃРїРёСЃРѕРє РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ
+	 * @return	РєРѕРїРёСЏ СЃРїРёСЃРєР°
 	 */
 	private List<UserActionInterceptor> cloneInterceptorList(List<UserActionInterceptor> source) {
 		return new ArrayList<UserActionInterceptor>(source);

@@ -25,7 +25,7 @@ import com.mg.merp.warehouse.InventoryActHeadServiceLocal;
 import com.mg.merp.warehouse.model.InventoryActHead;
 
 /**
- * Реализация стратегии изменения агрегирующих свойств актов инвенторизации
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё РёР·РјРµРЅРµРЅРёСЏ Р°РіСЂРµРіРёСЂСѓСЋС‰РёС… СЃРІРѕР№СЃС‚РІ Р°РєС‚РѕРІ РёРЅРІРµРЅС‚РѕСЂРёР·Р°С†РёРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: InventoryActAggregatePropertiesStrategy.java,v 1.1 2007/09/26 09:51:31 safonov Exp $

@@ -26,7 +26,7 @@ import com.mg.framework.api.jdbc.JdbcTemplate;
 import com.mg.framework.api.jdbc.RowMapper;
 
 /**
- * Класс обертка изменения финансовых оборотных ведомостей
+ * РљР»Р°СЃСЃ РѕР±РµСЂС‚РєР° РёР·РјРµРЅРµРЅРёСЏ С„РёРЅР°РЅСЃРѕРІС‹С… РѕР±РѕСЂРѕС‚РЅС‹С… РІРµРґРѕРјРѕСЃС‚РµР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: FinanceTurnoverUpdater.java,v 1.1 2007/01/16 14:43:43 safonov Exp $
@@ -61,9 +61,9 @@ public class FinanceTurnoverUpdater {
 	}
 	
 	/**
-	 * изменить оборотную ведомость
+	 * РёР·РјРµРЅРёС‚СЊ РѕР±РѕСЂРѕС‚РЅСѓСЋ РІРµРґРѕРјРѕСЃС‚СЊ
 	 * 
-	 * @param operId	идентификатор финансовой операции
+	 * @param operId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„РёРЅР°РЅСЃРѕРІРѕР№ РѕРїРµСЂР°С†РёРё
 	 */
 	public static void execute(final int operId) {
 		final OperInfo oper = loadOperInfo(operId);

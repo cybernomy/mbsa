@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.salary.model.CalcListSectionRef;
 
 /**
- * Браузер разделов расчетных листков
+ * Р‘СЂР°СѓР·РµСЂ СЂР°Р·РґРµР»РѕРІ СЂР°СЃС‡РµС‚РЅС‹С… Р»РёСЃС‚РєРѕРІ
  * 
  * @author leonova
  * @version $Id: CalcListSectionRefBr.java,v 1.1 2006/08/31 11:35:59 leonova Exp $ 

@@ -23,7 +23,7 @@ import com.mg.merp.warehouse.WarehouseTypeServiceLocal;
 import com.mg.merp.warehouse.model.WarehouseType;
 
 /**
- * Реализация бизнес-компонента "Тип склада"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РўРёРї СЃРєР»Р°РґР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: WarehouseTypeServiceBean.java,v 1.1 2007/09/17 12:46:54 alikaev Exp $

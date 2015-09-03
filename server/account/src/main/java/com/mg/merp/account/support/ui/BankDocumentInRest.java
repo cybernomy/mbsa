@@ -18,7 +18,7 @@ package com.mg.merp.account.support.ui;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы условий отбора "Входящих банковских документов"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° "Р’С…РѕРґСЏС‰РёС… Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author leonova
  * @version $Id: BankDocumentInRest.java,v 1.4 2007/11/12 06:51:28 sharapov Exp $

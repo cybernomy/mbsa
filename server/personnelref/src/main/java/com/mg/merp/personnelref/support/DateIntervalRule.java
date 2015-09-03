@@ -21,8 +21,8 @@ import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.validator.AbstractRule;
 
 /**
- * Правило проверки интервала дат. 
- * Дата начала интервала не может позже даты окончания интервала. 
+ * РџСЂР°РІРёР»Рѕ РїСЂРѕРІРµСЂРєРё РёРЅС‚РµСЂРІР°Р»Р° РґР°С‚. 
+ * Р”Р°С‚Р° РЅР°С‡Р°Р»Р° РёРЅС‚РµСЂРІР°Р»Р° РЅРµ РјРѕР¶РµС‚ РїРѕР·Р¶Рµ РґР°С‚С‹ РѕРєРѕРЅС‡Р°РЅРёСЏ РёРЅС‚РµСЂРІР°Р»Р°. 
  * 
  * @author Artem V. Sharapov
  * @version $Id: DateIntervalRule.java,v 1.1 2007/08/22 06:38:18 sharapov Exp $

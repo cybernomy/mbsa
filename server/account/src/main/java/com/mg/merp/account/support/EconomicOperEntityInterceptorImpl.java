@@ -20,7 +20,7 @@ import com.mg.framework.generic.AbstractEntityInterceptor;
 import com.mg.merp.account.model.EconomicOper;
 
 /**
- * Реализация перехватчика сущностей ХО
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ РҐРћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: EconomicOperEntityInterceptorImpl.java,v 1.2 2007/12/17 09:13:52 safonov Exp $
@@ -48,7 +48,7 @@ public class EconomicOperEntityInterceptorImpl extends AbstractEntityInterceptor
 	 */
 	@Override
 	public void onPreRemove(PersistentObject entity) {
-		//отражение изменений в оборотках
+		//РѕС‚СЂР°Р¶РµРЅРёРµ РёР·РјРµРЅРµРЅРёР№ РІ РѕР±РѕСЂРѕС‚РєР°С…
 		AccountTurnoverUpdater.execute((EconomicOper) entity, true);
 	}
 
@@ -57,7 +57,7 @@ public class EconomicOperEntityInterceptorImpl extends AbstractEntityInterceptor
 	 */
 	@Override
 	public void onPreUpdate(PersistentObject entity, AttributeMap oldState) {
-		//отражение изменений в оборотках
+		//РѕС‚СЂР°Р¶РµРЅРёРµ РёР·РјРµРЅРµРЅРёР№ РІ РѕР±РѕСЂРѕС‚РєР°С…
 		AccountTurnoverUpdater.execute((EconomicOper) entity, false);
 	}
 

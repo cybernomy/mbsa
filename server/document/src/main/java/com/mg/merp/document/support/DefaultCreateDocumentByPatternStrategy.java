@@ -32,7 +32,7 @@ import com.mg.merp.reference.CurrencyRateServiceLocal;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Стандартная реализация стратегии создания документа по образцу
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РїРѕ РѕР±СЂР°Р·С†Сѓ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultCreateDocumentByPatternStrategy.java,v 1.3 2008/11/06 14:25:14 safonov Exp $
@@ -64,10 +64,10 @@ public class DefaultCreateDocumentByPatternStrategy extends
 	}
 
 	/**
-	 * проверка имен атрибутов для изменения в заголовке
+	 * РїСЂРѕРІРµСЂРєР° РёРјРµРЅ Р°С‚СЂРёР±СѓС‚РѕРІ РґР»СЏ РёР·РјРµРЅРµРЅРёСЏ РІ Р·Р°РіРѕР»РѕРІРєРµ
 	 * 
-	 * @param attributeName	имя атрибута
-	 * @return	<code>true</code> если атрибут нельзя менять
+	 * @param attributeName	РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
+	 * @return	<code>true</code> РµСЃР»Рё Р°С‚СЂРёР±СѓС‚ РЅРµР»СЊР·СЏ РјРµРЅСЏС‚СЊ
 	 */
 	private boolean isImmutableDocHeadAttribute(String attributeName) {
 		String[] attributeNames = new String[] {"Id", "Folder", "ModelDestFolder", "SysClient", "ModelName"};
@@ -99,27 +99,27 @@ public class DefaultCreateDocumentByPatternStrategy extends
 			if (logger.isDebugEnabled())
 				logger.debug("document pattern attribute '" + name + "' has value: " + (value == null ? "null" : value.toString()));
 
-			//копируем только имеющие значения, см. http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4386
+			//РєРѕРїРёСЂСѓРµРј С‚РѕР»СЊРєРѕ РёРјРµСЋС‰РёРµ Р·РЅР°С‡РµРЅРёСЏ, СЃРј. http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4386
 			if (value != null)
 				document.setAttribute(name, value);
 		}
-		// если папка-приемник не указана в образце, то создаем в текущей папке
+		// РµСЃР»Рё РїР°РїРєР°-РїСЂРёРµРјРЅРёРє РЅРµ СѓРєР°Р·Р°РЅР° РІ РѕР±СЂР°Р·С†Рµ, С‚Рѕ СЃРѕР·РґР°РµРј РІ С‚РµРєСѓС‰РµР№ РїР°РїРєРµ
 		if(documentPattern.getModelDestFolder() != null)
 			document.setFolder(documentPattern.getModelDestFolder());
 		else
 			document.setFolder(folder);
 
-		//устанавливаем курс валюты если валюта документа отличается от национальной валюты
+		//СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј РєСѓСЂСЃ РІР°Р»СЋС‚С‹ РµСЃР»Рё РІР°Р»СЋС‚Р° РґРѕРєСѓРјРµРЅС‚Р° РѕС‚Р»РёС‡Р°РµС‚СЃСЏ РѕС‚ РЅР°С†РёРѕРЅР°Р»СЊРЅРѕР№ РІР°Р»СЋС‚С‹
 		Currency localCurrency = documentService != null ? documentService.getConfiguration().getLocalCurrency() : null;
 		if (localCurrency != null && document.getCurrency() != null
 				&& document.getCurrencyRateAuthority() != null && document.getCurrencyRateType() != null
 				&& !localCurrency.equals(document.getCurrency())) {
 			CurrencyRateServiceLocal currencyRateService = (CurrencyRateServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CurrencyRateServiceLocal.SERVICE_NAME);
 			try {
-				//пытаемся получить прямой курс для валют
+				//РїС‹С‚Р°РµРјСЃСЏ РїРѕР»СѓС‡РёС‚СЊ РїСЂСЏРјРѕР№ РєСѓСЂСЃ РґР»СЏ РІР°Р»СЋС‚
 				document.setCurCource(currencyRateService.getCurrencyRate(localCurrency, document.getCurrency(), document.getCurrencyRateAuthority(), document.getCurrencyRateType(), document.getDocDate()));
 			} catch (CurrencyRateNotFoundException e) {
-				//если прямого курса нет, то пытаемся получить обратный курс
+				//РµСЃР»Рё РїСЂСЏРјРѕРіРѕ РєСѓСЂСЃР° РЅРµС‚, С‚Рѕ РїС‹С‚Р°РµРјСЃСЏ РїРѕР»СѓС‡РёС‚СЊ РѕР±СЂР°С‚РЅС‹Р№ РєСѓСЂСЃ
 				document.setCurCource(MathUtils.divide(BigDecimal.ONE, currencyRateService.getIndirectCurrencyRate(document.getCurrency(), localCurrency, document.getCurrencyRateAuthority(), document.getCurrencyRateType(), document.getDocDate()), new RoundContext(CurrencyRateServiceLocal.DEFAULT_RATE_SCALE)));
 			}
 		}

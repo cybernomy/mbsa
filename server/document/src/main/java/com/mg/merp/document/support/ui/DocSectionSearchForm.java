@@ -23,7 +23,7 @@ import com.mg.framework.utils.MiscUtils;
 import com.mg.merp.document.model.DocSection;
 
 /**
- * Форма поиска объектов-сущностей {@link com.mg.merp.document.model.DocSection DocSection}
+ * Р¤РѕСЂРјР° РїРѕРёСЃРєР° РѕР±СЉРµРєС‚РѕРІ-СЃСѓС‰РЅРѕСЃС‚РµР№ {@link com.mg.merp.document.model.DocSection DocSection}
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocSectionSearchForm.java,v 1.1 2006/08/23 13:27:52 safonov Exp $

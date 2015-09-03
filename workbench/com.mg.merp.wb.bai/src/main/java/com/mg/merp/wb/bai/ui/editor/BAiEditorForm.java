@@ -23,7 +23,7 @@ import com.mg.merp.wb.core.ui.editor.StandartEditorForm;
 import com.mg.merp.wb.core.ui.plugin.BusinessObjectPlugin;
 
 /**
- * Форма редактирования BAi
+ * Р¤РѕСЂРјР° СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ BAi
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: BAiEditorForm.java,v 1.3 2007/11/04 14:33:36 safonov Exp $

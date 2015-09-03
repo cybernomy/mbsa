@@ -53,24 +53,24 @@ import com.mg.framework.utils.ServerUtils;
  */
 public class UIUtils {
 	/**
-	 * разделитель, отделяющий название ресурса, поддерживается следующая нотация
+	 * СЂР°Р·РґРµР»РёС‚РµР»СЊ, РѕС‚РґРµР»СЏСЋС‰РёР№ РЅР°Р·РІР°РЅРёРµ СЂРµСЃСѓСЂСЃР°, РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ СЃР»РµРґСѓСЋС‰Р°СЏ РЅРѕС‚Р°С†РёСЏ
 	 * resource_bundle#resource_name
 	 */
 	public static final String RESOURCE_NAME_DELIM = "#"; //$NON-NLS-1$
 
 	/**
-	 * префикс текстовой ссылки указывающий на принадлежность к ресурсам, поддерживается
-	 * следующая нотация resource://resource_bundle
+	 * РїСЂРµС„РёРєСЃ С‚РµРєСЃС‚РѕРІРѕР№ СЃСЃС‹Р»РєРё СѓРєР°Р·С‹РІР°СЋС‰РёР№ РЅР° РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚СЊ Рє СЂРµСЃСѓСЂСЃР°Рј, РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ
+	 * СЃР»РµРґСѓСЋС‰Р°СЏ РЅРѕС‚Р°С†РёСЏ resource://resource_bundle
 	 */
 	public static final String RESOURCE_PREFIX = "resource://"; //$NON-NLS-1$
 
 	/**
-	 * имя переменной хранящая состояние пользовательской транзакции
+	 * РёРјСЏ РїРµСЂРµРјРµРЅРЅРѕР№ С…СЂР°РЅСЏС‰Р°СЏ СЃРѕСЃС‚РѕСЏРЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕР№ С‚СЂР°РЅР·Р°РєС†РёРё
 	 */
 	public final static String MG_CONVERSATION_FLAG = "MG_CONVERSATION_FLAG"; //$NON-NLS-1$
 	
 	/**
-	 * имя переменной хранящей режим модальности
+	 * РёРјСЏ РїРµСЂРµРјРµРЅРЅРѕР№ С…СЂР°РЅСЏС‰РµР№ СЂРµР¶РёРј РјРѕРґР°Р»СЊРЅРѕСЃС‚Рё
 	 */
 	private final static String MG_MODAL_MODE_FLAG = "MG_MODAL_MODE_FLAG"; //$NON-NLS-1$
 	
@@ -101,11 +101,11 @@ public class UIUtils {
 	}
 
 	/**
-	 * загрузка локализованного сообщения
+	 * Р·Р°РіСЂСѓР·РєР° Р»РѕРєР°Р»РёР·РѕРІР°РЅРЅРѕРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ
 	 * 
-	 * @param locale	локаль
-	 * @param text		сообщение
-	 * @return			локализованное сообщение, <code>text</code> если невозможно локализовать или <code>null</code> если <code>text == null</code>
+	 * @param locale	Р»РѕРєР°Р»СЊ
+	 * @param text		СЃРѕРѕР±С‰РµРЅРёРµ
+	 * @return			Р»РѕРєР°Р»РёР·РѕРІР°РЅРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ, <code>text</code> РµСЃР»Рё РЅРµРІРѕР·РјРѕР¶РЅРѕ Р»РѕРєР°Р»РёР·РѕРІР°С‚СЊ РёР»Рё <code>null</code> РµСЃР»Рё <code>text == null</code>
 	 */
 	public static String loadL10nText(Locale locale, String text) {
 		if (text == null)
@@ -118,28 +118,28 @@ public class UIUtils {
 	}
 
 	/**
-	 * загрузка локализованного сообщения по текущей локали пользователя
+	 * Р·Р°РіСЂСѓР·РєР° Р»РѕРєР°Р»РёР·РѕРІР°РЅРЅРѕРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ РїРѕ С‚РµРєСѓС‰РµР№ Р»РѕРєР°Р»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @param text		сообщение
-	 * @return			локализованное сообщение или <code>text</code> если невозможно локализовать
+	 * @param text		СЃРѕРѕР±С‰РµРЅРёРµ
+	 * @return			Р»РѕРєР°Р»РёР·РѕРІР°РЅРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ РёР»Рё <code>text</code> РµСЃР»Рё РЅРµРІРѕР·РјРѕР¶РЅРѕ Р»РѕРєР°Р»РёР·РѕРІР°С‚СЊ
 	 */
 	public static String loadL10nText(String text) {
 		return loadL10nText(ServerUtils.getUserLocale(), text);
 	}
 
 	/**
-	 * ориентация текста текущей локали пользователя
+	 * РѕСЂРёРµРЅС‚Р°С†РёСЏ С‚РµРєСЃС‚Р° С‚РµРєСѓС‰РµР№ Р»РѕРєР°Р»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @return	<code>true</code> если поддерживается ориентация слева/направо
+	 * @return	<code>true</code> РµСЃР»Рё РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ РѕСЂРёРµРЅС‚Р°С†РёСЏ СЃР»РµРІР°/РЅР°РїСЂР°РІРѕ
 	 */
 	public static boolean isLeftToRight() {
 		return ComponentOrientation.getOrientation(ServerUtils.getUserLocale()).isLeftToRight();
 	}
 	
 	/**
-	 * показать диалог для отображения исключительной ситуации
+	 * РїРѕРєР°Р·Р°С‚СЊ РґРёР°Р»РѕРі РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РёСЃРєР»СЋС‡РёС‚РµР»СЊРЅРѕР№ СЃРёС‚СѓР°С†РёРё
 	 * 
-	 * @param th	ИС
+	 * @param th	РРЎ
 	 */
 	public static void handleException(Throwable th) {
 		if (handleSecurityException(th))
@@ -148,10 +148,10 @@ public class UIUtils {
 	}
 
 	/**
-	 * показать диалог для отображения исключительной ситуации
+	 * РїРѕРєР°Р·Р°С‚СЊ РґРёР°Р»РѕРі РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РёСЃРєР»СЋС‡РёС‚РµР»СЊРЅРѕР№ СЃРёС‚СѓР°С†РёРё
 	 * 
-	 * @param title	заголовок диалога
-	 * @param th	ИС
+	 * @param title	Р·Р°РіРѕР»РѕРІРѕРє РґРёР°Р»РѕРіР°
+	 * @param th	РРЎ
 	 */
 	public static void handleException(String title, Throwable th) {
 		logger.debug("Application exception catched", th); //$NON-NLS-1$
@@ -177,18 +177,18 @@ public class UIUtils {
 	}
 	
 	/**
-	 * обработка ИС безопасности, при возникновении ИС безопасности не показываем стандартный
-	 * диалог чтобы исключить визуализацию стека вызова, просто сообщаем о нарушении прав
+	 * РѕР±СЂР°Р±РѕС‚РєР° РРЎ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё, РїСЂРё РІРѕР·РЅРёРєРЅРѕРІРµРЅРёРё РРЎ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё РЅРµ РїРѕРєР°Р·С‹РІР°РµРј СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№
+	 * РґРёР°Р»РѕРі С‡С‚РѕР±С‹ РёСЃРєР»СЋС‡РёС‚СЊ РІРёР·СѓР°Р»РёР·Р°С†РёСЋ СЃС‚РµРєР° РІС‹Р·РѕРІР°, РїСЂРѕСЃС‚Рѕ СЃРѕРѕР±С‰Р°РµРј Рѕ РЅР°СЂСѓС€РµРЅРёРё РїСЂР°РІ
 	 * 
-	 * @param th	ИС безопасности
-	 * @return		<code>true</code> если <code>th</code> это ИС безопасности и она обработана, <code>false</code> в противном случае
+	 * @param th	РРЎ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
+	 * @return		<code>true</code> РµСЃР»Рё <code>th</code> СЌС‚Рѕ РРЎ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё Рё РѕРЅР° РѕР±СЂР°Р±РѕС‚Р°РЅР°, <code>false</code> РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ
 	 */
 	private static boolean handleSecurityException(Throwable th) {
 		boolean handled = (th instanceof SecurityException) || (th instanceof com.mg.framework.api.SecurityException);
 		if (handled) {
 			logger.info("Security exception handled", th);
 			Messages msgs = Messages.getInstance();
-			//если прикладная ИС то сообщение возмем из нее, в противном случае установим стандартное
+			//РµСЃР»Рё РїСЂРёРєР»Р°РґРЅР°СЏ РРЎ С‚Рѕ СЃРѕРѕР±С‰РµРЅРёРµ РІРѕР·РјРµРј РёР· РЅРµРµ, РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ СѓСЃС‚Р°РЅРѕРІРёРј СЃС‚Р°РЅРґР°СЂС‚РЅРѕРµ
 			String message = msgs.getMessage(Messages.NO_PERMISSION);
 			if (th instanceof com.mg.framework.api.SecurityException)
 				message = ((com.mg.framework.api.SecurityException) th).getLocalizedMessage();
@@ -198,19 +198,19 @@ public class UIUtils {
 	}
 	
 	/**
-	 * проверка формы на управление пользовательской транзакцией
+	 * РїСЂРѕРІРµСЂРєР° С„РѕСЂРјС‹ РЅР° СѓРїСЂР°РІР»РµРЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕР№ С‚СЂР°РЅР·Р°РєС†РёРµР№
 	 * 
-	 * @param form	контроллер формы
-	 * @return	<code>true</code> если форма управляет пользователькой транзакцией
+	 * @param form	РєРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹
+	 * @return	<code>true</code> РµСЃР»Рё С„РѕСЂРјР° СѓРїСЂР°РІР»СЏРµС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊРєРѕР№ С‚СЂР°РЅР·Р°РєС†РёРµР№
 	 */
 	public static boolean isFormBeginnerOfConversation(Object form) {
 		return form instanceof ConversationBeginner;
 	}
 	
 	/**
-	 * проверка старта пользовательской транзакции
+	 * РїСЂРѕРІРµСЂРєР° СЃС‚Р°СЂС‚Р° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕР№ С‚СЂР°РЅР·Р°РєС†РёРё
 	 * 
-	 * @return	<code>true</code> если транзакция стартована
+	 * @return	<code>true</code> РµСЃР»Рё С‚СЂР°РЅР·Р°РєС†РёСЏ СЃС‚Р°СЂС‚РѕРІР°РЅР°
 	 */
 	public static boolean isConversation() {
 		Session session = ServerUtils.getCurrentSession();
@@ -237,18 +237,18 @@ public class UIUtils {
 	}
 	
 	/**
-	 * старт пользовательской транзакции
+	 * СЃС‚Р°СЂС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕР№ С‚СЂР°РЅР·Р°РєС†РёРё
 	 *
 	 */
 	public static void startConversation() {
 		Integer flag = (Integer) ServerUtils.getCurrentSession().getAttribute(MG_CONVERSATION_FLAG);
 		if (flag == null) {
 			try {
-				//регистрируем ресурс для сброса пользовательской транзакции при завершении
-				//транзакции сервера, в текущей реализации границы обеих транзакций совпадают
-				//если произойдет таймаут системной транзакции, то прервем пользовательскую
+				//СЂРµРіРёСЃС‚СЂРёСЂСѓРµРј СЂРµСЃСѓСЂСЃ РґР»СЏ СЃР±СЂРѕСЃР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕР№ С‚СЂР°РЅР·Р°РєС†РёРё РїСЂРё Р·Р°РІРµСЂС€РµРЅРёРё
+				//С‚СЂР°РЅР·Р°РєС†РёРё СЃРµСЂРІРµСЂР°, РІ С‚РµРєСѓС‰РµР№ СЂРµР°Р»РёР·Р°С†РёРё РіСЂР°РЅРёС†С‹ РѕР±РµРёС… С‚СЂР°РЅР·Р°РєС†РёР№ СЃРѕРІРїР°РґР°СЋС‚
+				//РµСЃР»Рё РїСЂРѕРёР·РѕР№РґРµС‚ С‚Р°Р№РјР°СѓС‚ СЃРёСЃС‚РµРјРЅРѕР№ С‚СЂР°РЅР·Р°РєС†РёРё, С‚Рѕ РїСЂРµСЂРІРµРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєСѓСЋ
 				
-				//закоментировано по запросу https://issues.m-g.ru/bugzilla/show_bug.cgi?id=4984
+				//Р·Р°РєРѕРјРµРЅС‚РёСЂРѕРІР°РЅРѕ РїРѕ Р·Р°РїСЂРѕСЃСѓ https://issues.m-g.ru/bugzilla/show_bug.cgi?id=4984
 				//ServerUtils.getTransactionManager().getTransaction().registerSynchronization(new ConversationSynchronization(ServerUtils.getCurrentSession()));
 				if (logger.isDebugEnabled())
 					logger.debug("Start conversation"); //$NON-NLS-1$
@@ -274,7 +274,7 @@ public class UIUtils {
 	}*/
 	
 	/**
-	 * завершение пользовательской транзакции
+	 * Р·Р°РІРµСЂС€РµРЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕР№ С‚СЂР°РЅР·Р°РєС†РёРё
 	 *
 	 */
 	public static void endConversation() {
@@ -293,19 +293,19 @@ public class UIUtils {
 	}
 	
 	/**
-	 * прерывание пользовательской транзакции
+	 * РїСЂРµСЂС‹РІР°РЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕР№ С‚СЂР°РЅР·Р°РєС†РёРё
 	 *
 	 */
 	public static void abortConversation() {
 		logger.debug("Abort conversation"); //$NON-NLS-1$
 		ServerUtils.setTransactionRollbackOnly();
 		endConversation();
-		//закоментировано по запросу https://issues.m-g.ru/bugzilla/show_bug.cgi?id=4984
+		//Р·Р°РєРѕРјРµРЅС‚РёСЂРѕРІР°РЅРѕ РїРѕ Р·Р°РїСЂРѕСЃСѓ https://issues.m-g.ru/bugzilla/show_bug.cgi?id=4984
 		//ServerUtils.getCurrentSession().setAttribute(MG_CONVERSATION_FLAG, null);
 	}
 	
 	/**
-	 * включение модального режима, используется для внутренних целей, не вызывать в прикладном коде
+	 * РІРєР»СЋС‡РµРЅРёРµ РјРѕРґР°Р»СЊРЅРѕРіРѕ СЂРµР¶РёРјР°, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРёС… С†РµР»РµР№, РЅРµ РІС‹Р·С‹РІР°С‚СЊ РІ РїСЂРёРєР»Р°РґРЅРѕРј РєРѕРґРµ
 	 *
 	 */
 	public static void modalModeOn() {
@@ -317,23 +317,23 @@ public class UIUtils {
 	}
 
 	/**
-	 * выключение модального режима, используется для внутренних целей, не вызывать в прикладном коде
+	 * РІС‹РєР»СЋС‡РµРЅРёРµ РјРѕРґР°Р»СЊРЅРѕРіРѕ СЂРµР¶РёРјР°, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРёС… С†РµР»РµР№, РЅРµ РІС‹Р·С‹РІР°С‚СЊ РІ РїСЂРёРєР»Р°РґРЅРѕРј РєРѕРґРµ
 	 *
 	 */
 	public static void modalModeOff() {
 		Session session = ServerUtils.getCurrentSession();
 		Integer value = (Integer) session.getAttribute(MG_MODAL_MODE_FLAG);
-		if ((value != null) && (value != 0)) //если не находимся в модальном режиме то не уходим в минус, вообще не должно быть такой ситуации
+		if ((value != null) && (value != 0)) //РµСЃР»Рё РЅРµ РЅР°С…РѕРґРёРјСЃСЏ РІ РјРѕРґР°Р»СЊРЅРѕРј СЂРµР¶РёРјРµ С‚Рѕ РЅРµ СѓС…РѕРґРёРј РІ РјРёРЅСѓСЃ, РІРѕРѕР±С‰Рµ РЅРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ С‚Р°РєРѕР№ СЃРёС‚СѓР°С†РёРё
 			session.setAttribute(MG_MODAL_MODE_FLAG, value - 1);			
 	}
 
 	/**
-	 * проверка установки модального режима, используется для определения наличия видимых модальных окон,
-	 * если существует видимое модальное окно и сделать видимым немодальное окно, то оно не будет доступным
-	 * пользователю, т.е. при существовании хотя бы одного модального окна, все последующие окна должны
-	 * быть модальными
+	 * РїСЂРѕРІРµСЂРєР° СѓСЃС‚Р°РЅРѕРІРєРё РјРѕРґР°Р»СЊРЅРѕРіРѕ СЂРµР¶РёРјР°, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РѕРїСЂРµРґРµР»РµРЅРёСЏ РЅР°Р»РёС‡РёСЏ РІРёРґРёРјС‹С… РјРѕРґР°Р»СЊРЅС‹С… РѕРєРѕРЅ,
+	 * РµСЃР»Рё СЃСѓС‰РµСЃС‚РІСѓРµС‚ РІРёРґРёРјРѕРµ РјРѕРґР°Р»СЊРЅРѕРµ РѕРєРЅРѕ Рё СЃРґРµР»Р°С‚СЊ РІРёРґРёРјС‹Рј РЅРµРјРѕРґР°Р»СЊРЅРѕРµ РѕРєРЅРѕ, С‚Рѕ РѕРЅРѕ РЅРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅС‹Рј
+	 * РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ, С‚.Рµ. РїСЂРё СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРё С…РѕС‚СЏ Р±С‹ РѕРґРЅРѕРіРѕ РјРѕРґР°Р»СЊРЅРѕРіРѕ РѕРєРЅР°, РІСЃРµ РїРѕСЃР»РµРґСѓСЋС‰РёРµ РѕРєРЅР° РґРѕР»Р¶РЅС‹
+	 * Р±С‹С‚СЊ РјРѕРґР°Р»СЊРЅС‹РјРё
 	 * 
-	 * @return	<code>true</code> если существует видимым хотя бы одно модальное окно
+	 * @return	<code>true</code> РµСЃР»Рё СЃСѓС‰РµСЃС‚РІСѓРµС‚ РІРёРґРёРјС‹Рј С…РѕС‚СЏ Р±С‹ РѕРґРЅРѕ РјРѕРґР°Р»СЊРЅРѕРµ РѕРєРЅРѕ
 	 */
 	public static boolean isModalMode() {
 		Session session = ServerUtils.getCurrentSession();
@@ -342,26 +342,26 @@ public class UIUtils {
 	}
 
 	/**
-	 * получить список локализованных наименований констант перечислимого типа по текущей локали пользователя
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє Р»РѕРєР°Р»РёР·РѕРІР°РЅРЅС‹С… РЅР°РёРјРµРЅРѕРІР°РЅРёР№ РєРѕРЅСЃС‚Р°РЅС‚ РїРµСЂРµС‡РёСЃР»РёРјРѕРіРѕ С‚РёРїР° РїРѕ С‚РµРєСѓС‰РµР№ Р»РѕРєР°Р»Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @param <T>	тип
-	 * @param value	класс перечислимого типа
-	 * @return	список наименований
+	 * @param <T>	С‚РёРї
+	 * @param value	РєР»Р°СЃСЃ РїРµСЂРµС‡РёСЃР»РёРјРѕРіРѕ С‚РёРїР°
+	 * @return	СЃРїРёСЃРѕРє РЅР°РёРјРµРЅРѕРІР°РЅРёР№
 	 */
 	public static <T extends Enum<?>> String[] enumToEnumConstantsText(Class<T> value) {
 		return enumToEnumConstantsText(ServerUtils.getUserLocale(), value);
 	}
 
 	/**
-	 * получить список локализованных наименований констант перечислимого типа
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє Р»РѕРєР°Р»РёР·РѕРІР°РЅРЅС‹С… РЅР°РёРјРµРЅРѕРІР°РЅРёР№ РєРѕРЅСЃС‚Р°РЅС‚ РїРµСЂРµС‡РёСЃР»РёРјРѕРіРѕ С‚РёРїР°
 	 * 
-	 * @param <T>	тип
-	 * @param locale	локаль
-	 * @param value	класс перечислимого типа
-	 * @return	список наименований
+	 * @param <T>	С‚РёРї
+	 * @param locale	Р»РѕРєР°Р»СЊ
+	 * @param value	РєР»Р°СЃСЃ РїРµСЂРµС‡РёСЃР»РёРјРѕРіРѕ С‚РёРїР°
+	 * @return	СЃРїРёСЃРѕРє РЅР°РёРјРµРЅРѕРІР°РЅРёР№
 	 */
 	public static <T extends Enum<?>> String[] enumToEnumConstantsText(Locale locale, Class<T> value) {
-		Enum<?>[] enumConstants = value.getEnumConstants();//т.к. тип enum, то не должно быть null
+		Enum<?>[] enumConstants = value.getEnumConstants();//С‚.Рє. С‚РёРї enum, С‚Рѕ РЅРµ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ null
 		String[] enumConstantsText = new String[enumConstants.length];
 		for(int i = 0; i < enumConstants.length; i++) {
 			Field fld = ReflectionUtils.findDeclaredField(value, enumConstants[i].name());
@@ -378,12 +378,12 @@ public class UIUtils {
 	}
 	
 	/**
-	 * Показать окно диалога предупреждения с одной кнопкой
+	 * РџРѕРєР°Р·Р°С‚СЊ РѕРєРЅРѕ РґРёР°Р»РѕРіР° РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ СЃ РѕРґРЅРѕР№ РєРЅРѕРїРєРѕР№
 	 * 
-	 * @param messageType		тип предупреждения
-	 * @param title				заголовок
-	 * @param message			сообщение
-	 * @param firstButtonLabel	метка кнопки
+	 * @param messageType		С‚РёРї РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ
+	 * @param title				Р·Р°РіРѕР»РѕРІРѕРє
+	 * @param message			СЃРѕРѕР±С‰РµРЅРёРµ
+	 * @param firstButtonLabel	РјРµС‚РєР° РєРЅРѕРїРєРё
 	 * 
 	 * @see com.mg.framework.api.ui.Alert.MessageType
 	 */
@@ -392,13 +392,13 @@ public class UIUtils {
 	}
 
 	/**
-	 * Показать окно диалога предупреждения с одной кнопкой
+	 * РџРѕРєР°Р·Р°С‚СЊ РѕРєРЅРѕ РґРёР°Р»РѕРіР° РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ СЃ РѕРґРЅРѕР№ РєРЅРѕРїРєРѕР№
 	 * 
-	 * @param messageType		тип предупреждения
-	 * @param title				заголовок
-	 * @param message			сообщение
-	 * @param firstButtonLabel	метка кнопки
-	 * @param listener			слушатель диалога
+	 * @param messageType		С‚РёРї РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ
+	 * @param title				Р·Р°РіРѕР»РѕРІРѕРє
+	 * @param message			СЃРѕРѕР±С‰РµРЅРёРµ
+	 * @param firstButtonLabel	РјРµС‚РєР° РєРЅРѕРїРєРё
+	 * @param listener			СЃР»СѓС€Р°С‚РµР»СЊ РґРёР°Р»РѕРіР°
 	 * 
 	 * @see com.mg.framework.api.ui.Alert.MessageType
 	 * @see AlertListener
@@ -408,14 +408,14 @@ public class UIUtils {
 	}
 
 	/**
-	 * Показать окно диалога предупреждения с двумя кнопками
+	 * РџРѕРєР°Р·Р°С‚СЊ РѕРєРЅРѕ РґРёР°Р»РѕРіР° РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ СЃ РґРІСѓРјСЏ РєРЅРѕРїРєР°РјРё
 	 * 
-	 * @param messageType		тип предупреждения
-	 * @param title				заголовок
-	 * @param message			сообщение
-	 * @param firstButtonLabel	метка первой кнопки
-	 * @param secondButtonLabel	метка второй кнопки
-	 * @param listener			слушатель диалога
+	 * @param messageType		С‚РёРї РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ
+	 * @param title				Р·Р°РіРѕР»РѕРІРѕРє
+	 * @param message			СЃРѕРѕР±С‰РµРЅРёРµ
+	 * @param firstButtonLabel	РјРµС‚РєР° РїРµСЂРІРѕР№ РєРЅРѕРїРєРё
+	 * @param secondButtonLabel	РјРµС‚РєР° РІС‚РѕСЂРѕР№ РєРЅРѕРїРєРё
+	 * @param listener			СЃР»СѓС€Р°С‚РµР»СЊ РґРёР°Р»РѕРіР°
 	 * 
 	 * @see com.mg.framework.api.ui.Alert.MessageType
 	 * @see AlertListener
@@ -425,15 +425,15 @@ public class UIUtils {
 	}
 
 	/**
-	 * Показать окно диалога предупреждения с тремя кнопками
+	 * РџРѕРєР°Р·Р°С‚СЊ РѕРєРЅРѕ РґРёР°Р»РѕРіР° РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ СЃ С‚СЂРµРјСЏ РєРЅРѕРїРєР°РјРё
 	 * 
-	 * @param messageType		тип предупреждения
-	 * @param title				заголовок
-	 * @param message			сообщение
-	 * @param firstButtonLabel	метка первой кнопки
-	 * @param secondButtonLabel	метка второй кнопки
-	 * @param thirdButtonLabel	метка третьей кнопки
-	 * @param listener			слушатель диалога
+	 * @param messageType		С‚РёРї РїСЂРµРґСѓРїСЂРµР¶РґРµРЅРёСЏ
+	 * @param title				Р·Р°РіРѕР»РѕРІРѕРє
+	 * @param message			СЃРѕРѕР±С‰РµРЅРёРµ
+	 * @param firstButtonLabel	РјРµС‚РєР° РїРµСЂРІРѕР№ РєРЅРѕРїРєРё
+	 * @param secondButtonLabel	РјРµС‚РєР° РІС‚РѕСЂРѕР№ РєРЅРѕРїРєРё
+	 * @param thirdButtonLabel	РјРµС‚РєР° С‚СЂРµС‚СЊРµР№ РєРЅРѕРїРєРё
+	 * @param listener			СЃР»СѓС€Р°С‚РµР»СЊ РґРёР°Р»РѕРіР°
 	 * 
 	 * @see com.mg.framework.api.ui.Alert.MessageType
 	 * @see AlertListener
@@ -445,9 +445,9 @@ public class UIUtils {
 	}
 
 	/**
-	 * Показать контекстную помощь
+	 * РџРѕРєР°Р·Р°С‚СЊ РєРѕРЅС‚РµРєСЃС‚РЅСѓСЋ РїРѕРјРѕС‰СЊ
 	 * 
-	 * @param helpTopic	тематический раздел помощи
+	 * @param helpTopic	С‚РµРјР°С‚РёС‡РµСЃРєРёР№ СЂР°Р·РґРµР» РїРѕРјРѕС‰Рё
 	 * 
 	 * @see com.mg.framework.api.help.HelpSystem
 	 */
@@ -456,10 +456,10 @@ public class UIUtils {
 	}
 	
 	/**
-	 * показать документ управляемый текущим сервером приложения, например если необходимо показать
-	 * документ <code>http://localhost:8080/jmx-console</code>, то необходимо передать путь <code>jmx-console</code>
+	 * РїРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚ СѓРїСЂР°РІР»СЏРµРјС‹Р№ С‚РµРєСѓС‰РёРј СЃРµСЂРІРµСЂРѕРј РїСЂРёР»РѕР¶РµРЅРёСЏ, РЅР°РїСЂРёРјРµСЂ РµСЃР»Рё РЅРµРѕР±С…РѕРґРёРјРѕ РїРѕРєР°Р·Р°С‚СЊ
+	 * РґРѕРєСѓРјРµРЅС‚ <code>http://localhost:8080/jmx-console</code>, С‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРґР°С‚СЊ РїСѓС‚СЊ <code>jmx-console</code>
 	 * 
-	 * @param urlString	путь к документу не включающий адрес текущего сервера
+	 * @param urlString	РїСѓС‚СЊ Рє РґРѕРєСѓРјРµРЅС‚Сѓ РЅРµ РІРєР»СЋС‡Р°СЋС‰РёР№ Р°РґСЂРµСЃ С‚РµРєСѓС‰РµРіРѕ СЃРµСЂРІРµСЂР°
 	 * 
 	 * @see com.mg.framework.api.ui.ClientContext
 	 */
@@ -468,9 +468,9 @@ public class UIUtils {
 	}
 
 	/**
-	 * показать документ
+	 * РїРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚
 	 * 
-	 * @param urlString	полный путь к документу, например <code>"http://www.m-g.ru"</code>
+	 * @param urlString	РїРѕР»РЅС‹Р№ РїСѓС‚СЊ Рє РґРѕРєСѓРјРµРЅС‚Сѓ, РЅР°РїСЂРёРјРµСЂ <code>"http://www.m-g.ru"</code>
 	 * 
 	 * @see com.mg.framework.api.ui.ClientContext
 	 */
@@ -479,9 +479,9 @@ public class UIUtils {
 	}
 
 	/**
-	 * показать документ
+	 * РїРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚
 	 * 
-	 * @param resourceProvider	провайдер документа
+	 * @param resourceProvider	РїСЂРѕРІР°Р№РґРµСЂ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	public static void showDocument(WebResourceProvider resourceProvider) {
 		String id = DownloadManager.getInstance().put(resourceProvider);
@@ -489,10 +489,10 @@ public class UIUtils {
 	}
 	
 	/**
-	 * установка свойства "только для чтения" элемента пользовательского интерфейса
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЃРІРѕР№СЃС‚РІР° "С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ" СЌР»РµРјРµРЅС‚Р° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
 	 * 
-	 * @param widget	элемент пользовательского интерфейса, если <code>null</code>, то не будет никаких действий
-	 * @param readOnly	значение свойства
+	 * @param widget	СЌР»РµРјРµРЅС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°, РµСЃР»Рё <code>null</code>, С‚Рѕ РЅРµ Р±СѓРґРµС‚ РЅРёРєР°РєРёС… РґРµР№СЃС‚РІРёР№
+	 * @param readOnly	Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 */
 	public static void setReadOnlyProperty(Widget widget, boolean readOnly) {
 		if (widget != null)
@@ -500,10 +500,10 @@ public class UIUtils {
 	}
 
 	/**
-	 * установка свойства "доступно" элемента пользовательского интерфейса
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЃРІРѕР№СЃС‚РІР° "РґРѕСЃС‚СѓРїРЅРѕ" СЌР»РµРјРµРЅС‚Р° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
 	 * 
-	 * @param widget	элемент пользовательского интерфейса, если <code>null</code>, то не будет никаких действий
-	 * @param enabled	значение свойства
+	 * @param widget	СЌР»РµРјРµРЅС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°, РµСЃР»Рё <code>null</code>, С‚Рѕ РЅРµ Р±СѓРґРµС‚ РЅРёРєР°РєРёС… РґРµР№СЃС‚РІРёР№
+	 * @param enabled	Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 */
 	public static void setEnabledProperty(Widget widget, boolean enabled) {
 		if (widget != null)
@@ -511,10 +511,10 @@ public class UIUtils {
 	}
 
 	/**
-	 * установка свойства "видимый" элемента пользовательского интерфейса
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЃРІРѕР№СЃС‚РІР° "РІРёРґРёРјС‹Р№" СЌР»РµРјРµРЅС‚Р° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
 	 * 
-	 * @param widget	элемент пользовательского интерфейса, если <code>null</code>, то не будет никаких действий
-	 * @param visible	значение свойства
+	 * @param widget	СЌР»РµРјРµРЅС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°, РµСЃР»Рё <code>null</code>, С‚Рѕ РЅРµ Р±СѓРґРµС‚ РЅРёРєР°РєРёС… РґРµР№СЃС‚РІРёР№
+	 * @param visible	Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 */
 	public static void setVisibleProperty(Widget widget, boolean visible) {
 		if (widget != null)
@@ -522,10 +522,10 @@ public class UIUtils {
 	}
 
 	/**
-	 * установка свойств "видимый и доступный" элемента пользовательского интерфейса
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЃРІРѕР№СЃС‚РІ "РІРёРґРёРјС‹Р№ Рё РґРѕСЃС‚СѓРїРЅС‹Р№" СЌР»РµРјРµРЅС‚Р° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
 	 * 
-	 * @param widget	элемент пользовательского интерфейса, если <code>null</code>, то не будет никаких действий
-	 * @param visibleEnabled	значение свойства
+	 * @param widget	СЌР»РµРјРµРЅС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°, РµСЃР»Рё <code>null</code>, С‚Рѕ РЅРµ Р±СѓРґРµС‚ РЅРёРєР°РєРёС… РґРµР№СЃС‚РІРёР№
+	 * @param visibleEnabled	Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
 	 */
 	public static void setVisibleEnabledProperty(Widget widget, boolean visibleEnabled) {
 		if (widget != null) {
@@ -535,82 +535,82 @@ public class UIUtils {
 	}
 
 	/**
-	 * загрузка файла на сервер приложения со стороны клиента
+	 * Р·Р°РіСЂСѓР·РєР° С„Р°Р№Р»Р° РЅР° СЃРµСЂРІРµСЂ РїСЂРёР»РѕР¶РµРЅРёСЏ СЃРѕ СЃС‚РѕСЂРѕРЅС‹ РєР»РёРµРЅС‚Р°
 	 * 
-	 * @param handler	обработчик загрузки
+	 * @param handler	РѕР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РіСЂСѓР·РєРё
 	 */
 	public static void loadFile(FileLoadHandler handler) {
 		ClientContextFactory.getInstance().getDefaultClientContext().loadFile(handler);
 	}
 
 	/**
-	 * загрузка файла на сервер приложения со стороны клиента с ограничением размера файла
+	 * Р·Р°РіСЂСѓР·РєР° С„Р°Р№Р»Р° РЅР° СЃРµСЂРІРµСЂ РїСЂРёР»РѕР¶РµРЅРёСЏ СЃРѕ СЃС‚РѕСЂРѕРЅС‹ РєР»РёРµРЅС‚Р° СЃ РѕРіСЂР°РЅРёС‡РµРЅРёРµРј СЂР°Р·РјРµСЂР° С„Р°Р№Р»Р°
 	 * 
-	 * @param handler	обработчик загрузки
-	 * @param maximumFileSize	максимальный размер файла в байтах
+	 * @param handler	РѕР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РіСЂСѓР·РєРё
+	 * @param maximumFileSize	РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СЂР°Р·РјРµСЂ С„Р°Р№Р»Р° РІ Р±Р°Р№С‚Р°С…
 	 */
 	public static void loadFile(FileLoadHandler handler, long maximumFileSize) {
 		ClientContextFactory.getInstance().getDefaultClientContext().loadFile(handler, maximumFileSize);
 	}
 
 	/**
-	 * загрузка файла на сервер приложения со стороны клиента
+	 * Р·Р°РіСЂСѓР·РєР° С„Р°Р№Р»Р° РЅР° СЃРµСЂРІРµСЂ РїСЂРёР»РѕР¶РµРЅРёСЏ СЃРѕ СЃС‚РѕСЂРѕРЅС‹ РєР»РёРµРЅС‚Р°
 	 * 
-	 * @param handler	обработчик загрузки
-	 * @param fileChooserConfig	кофигурация диалога загрузки
+	 * @param handler	РѕР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РіСЂСѓР·РєРё
+	 * @param fileChooserConfig	РєРѕС„РёРіСѓСЂР°С†РёСЏ РґРёР°Р»РѕРіР° Р·Р°РіСЂСѓР·РєРё
 	 */
 	public static void loadFile(FileLoadHandler handler, FileChooserConfig fileChooserConfig) {
 		ClientContextFactory.getInstance().getDefaultClientContext().loadFile(handler, fileChooserConfig);
 	}
 
 	/**
-	 * загрузка файла на сервер приложения со стороны клиента с ограничением размера файла
+	 * Р·Р°РіСЂСѓР·РєР° С„Р°Р№Р»Р° РЅР° СЃРµСЂРІРµСЂ РїСЂРёР»РѕР¶РµРЅРёСЏ СЃРѕ СЃС‚РѕСЂРѕРЅС‹ РєР»РёРµРЅС‚Р° СЃ РѕРіСЂР°РЅРёС‡РµРЅРёРµРј СЂР°Р·РјРµСЂР° С„Р°Р№Р»Р°
 	 * 
-	 * @param handler	обработчик загрузки
-	 * @param fileChooserConfig	кофигурация диалога загрузки
-	 * @param maximumFileSize	максимальный размер файла в байтах
+	 * @param handler	РѕР±СЂР°Р±РѕС‚С‡РёРє Р·Р°РіСЂСѓР·РєРё
+	 * @param fileChooserConfig	РєРѕС„РёРіСѓСЂР°С†РёСЏ РґРёР°Р»РѕРіР° Р·Р°РіСЂСѓР·РєРё
+	 * @param maximumFileSize	РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СЂР°Р·РјРµСЂ С„Р°Р№Р»Р° РІ Р±Р°Р№С‚Р°С…
 	 */
 	public static void loadFile(FileLoadHandler handler, FileChooserConfig fileChooserConfig, long maximumFileSize) {
 		ClientContextFactory.getInstance().getDefaultClientContext().loadFile(handler, fileChooserConfig, maximumFileSize);
 	}
 
 	/**
-	 * сохранение файла на стороне клиента
+	 * СЃРѕС…СЂР°РЅРµРЅРёРµ С„Р°Р№Р»Р° РЅР° СЃС‚РѕСЂРѕРЅРµ РєР»РёРµРЅС‚Р°
 	 * 
-	 * @param handler	обработчик сохранения
-	 * @param fileName	имя файла, может быть <code>null</code>
+	 * @param handler	РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕС…СЂР°РЅРµРЅРёСЏ
+	 * @param fileName	РёРјСЏ С„Р°Р№Р»Р°, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>
 	 */
 	public static void storeFile(FileStoreHandler handler, String fileName) {
 		ClientContextFactory.getInstance().getDefaultClientContext().storeFile(handler, fileName);
 	}
 
 	/**
-	 * сохранение файла на стороне клиента с ограничением размера файла
+	 * СЃРѕС…СЂР°РЅРµРЅРёРµ С„Р°Р№Р»Р° РЅР° СЃС‚РѕСЂРѕРЅРµ РєР»РёРµРЅС‚Р° СЃ РѕРіСЂР°РЅРёС‡РµРЅРёРµРј СЂР°Р·РјРµСЂР° С„Р°Р№Р»Р°
 	 * 
-	 * @param handler	обработчик сохранения
-	 * @param fileName	имя файла, может быть <code>null</code>
-	 * @param maximumFileSize	максимальный размер файла в байтах
+	 * @param handler	РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕС…СЂР°РЅРµРЅРёСЏ
+	 * @param fileName	РёРјСЏ С„Р°Р№Р»Р°, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>
+	 * @param maximumFileSize	РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СЂР°Р·РјРµСЂ С„Р°Р№Р»Р° РІ Р±Р°Р№С‚Р°С…
 	 */
 	public static void storeFile(FileStoreHandler handler, String fileName, long maximumFileSize) {
 		ClientContextFactory.getInstance().getDefaultClientContext().storeFile(handler, fileName, maximumFileSize);
 	}
 
 	/**
-	 * сохранение файла на стороне клиента
+	 * СЃРѕС…СЂР°РЅРµРЅРёРµ С„Р°Р№Р»Р° РЅР° СЃС‚РѕСЂРѕРЅРµ РєР»РёРµРЅС‚Р°
 	 * 
-	 * @param handler	обработчик сохранения
-	 * @param fileChooserConfig	кофигурация диалога сохранения
+	 * @param handler	РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕС…СЂР°РЅРµРЅРёСЏ
+	 * @param fileChooserConfig	РєРѕС„РёРіСѓСЂР°С†РёСЏ РґРёР°Р»РѕРіР° СЃРѕС…СЂР°РЅРµРЅРёСЏ
 	 */
 	public static void storeFile(FileStoreHandler handler, FileChooserConfig fileChooserConfig) {
 		ClientContextFactory.getInstance().getDefaultClientContext().storeFile(handler, fileChooserConfig);
 	}
 
 	/**
-	 * сохранение файла на стороне клиента с ограничением размера файла
+	 * СЃРѕС…СЂР°РЅРµРЅРёРµ С„Р°Р№Р»Р° РЅР° СЃС‚РѕСЂРѕРЅРµ РєР»РёРµРЅС‚Р° СЃ РѕРіСЂР°РЅРёС‡РµРЅРёРµРј СЂР°Р·РјРµСЂР° С„Р°Р№Р»Р°
 	 * 
-	 * @param handler	обработчик сохранения
-	 * @param fileChooserConfig	кофигурация диалога сохранения
-	 * @param maximumFileSize	максимальный размер файла в байтах
+	 * @param handler	РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕС…СЂР°РЅРµРЅРёСЏ
+	 * @param fileChooserConfig	РєРѕС„РёРіСѓСЂР°С†РёСЏ РґРёР°Р»РѕРіР° СЃРѕС…СЂР°РЅРµРЅРёСЏ
+	 * @param maximumFileSize	РјР°РєСЃРёРјР°Р»СЊРЅС‹Р№ СЂР°Р·РјРµСЂ С„Р°Р№Р»Р° РІ Р±Р°Р№С‚Р°С…
 	 */
 	public static void storeFile(FileStoreHandler handler, FileChooserConfig fileChooserConfig, long maximumFileSize) {
 		ClientContextFactory.getInstance().getDefaultClientContext().storeFile(handler, fileChooserConfig, maximumFileSize);
@@ -642,10 +642,10 @@ public class UIUtils {
 	}
 
 	/**
-	 * Выбор пользователем одного или нескольких файлов
+	 * Р’С‹Р±РѕСЂ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј РѕРґРЅРѕРіРѕ РёР»Рё РЅРµСЃРєРѕР»СЊРєРёС… С„Р°Р№Р»РѕРІ
 	 * 
-	 * @param fileChooseHandler	обработчик выбора
-	 * @param fileChooserConfig	кофигурация диалога выбора
+	 * @param fileChooseHandler	РѕР±СЂР°Р±РѕС‚С‡РёРє РІС‹Р±РѕСЂР°
+	 * @param fileChooserConfig	РєРѕС„РёРіСѓСЂР°С†РёСЏ РґРёР°Р»РѕРіР° РІС‹Р±РѕСЂР°
 	 */
 	public static void chooseFile(FileChooseHandler fileChooseHandler, FileChooserConfig fileChooserConfig) {
 		ClientContextFactory.getInstance().getDefaultClientContext().chooseFile(fileChooseHandler, fileChooserConfig);

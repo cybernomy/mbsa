@@ -21,7 +21,7 @@ import com.mg.framework.api.ui.UIProfileManager;
 import com.mg.merp.security.support.UIProfileManagerServiceImpl;
 
 /**
- * Реализация поддержки MBean менеджера профиля пользовательского интерфейса
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїРѕРґРґРµСЂР¶РєРё MBean РјРµРЅРµРґР¶РµСЂР° РїСЂРѕС„РёР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: UIProfileManagerService.java,v 1.1 2007/03/13 13:47:30 safonov Exp $

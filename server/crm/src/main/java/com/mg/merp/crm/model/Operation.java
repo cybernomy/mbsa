@@ -371,7 +371,7 @@ public class Operation extends
 	}
 
 	/**
-	 * @param linkedDocs задаваемое linkedDocs
+	 * @param linkedDocs Р·Р°РґР°РІР°РµРјРѕРµ linkedDocs
 	 */
 	public void setLinkedDocs(java.util.Set<LinkedDocument> linkedDocs) {
 		this.linkedDocs = linkedDocs;
@@ -385,7 +385,7 @@ public class Operation extends
 	}
 
 	/**
-	 * @param offers задаваемое offers
+	 * @param offers Р·Р°РґР°РІР°РµРјРѕРµ offers
 	 */
 	public void setOffers(java.util.Set<Offer> offers) {
 		this.offers = offers;
@@ -399,7 +399,7 @@ public class Operation extends
 	}
 
 	/**
-	 * @param operations задаваемое operations
+	 * @param operations Р·Р°РґР°РІР°РµРјРѕРµ operations
 	 */
 	public void setOperations(java.util.Set<Operation> operations) {
 		this.operations = operations;

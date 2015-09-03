@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.SkillRaisingKindServiceLocal;
 import com.mg.merp.personnelref.model.SkillRaisingKind;
 
 /**
- * Бизнес-компонент "Виды повышения квалификации" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РёРґС‹ РїРѕРІС‹С€РµРЅРёСЏ РєРІР°Р»РёС„РёРєР°С†РёРё" 
  * 
  * @author leonova
  * @version $Id: SkillRaisingKindServiceBean.java,v 1.3 2006/09/04 13:02:21 leonova Exp $

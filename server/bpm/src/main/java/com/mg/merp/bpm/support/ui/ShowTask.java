@@ -23,7 +23,7 @@ import com.mg.framework.utils.SecurityUtils;
 import com.mg.merp.bpm.BusinessProccessManagerServiceLocal;
 
 /**
- * Обработчик команды показа списка задач из меню
+ * РћР±СЂР°Р±РѕС‚С‡РёРє РєРѕРјР°РЅРґС‹ РїРѕРєР°Р·Р° СЃРїРёСЃРєР° Р·Р°РґР°С‡ РёР· РјРµРЅСЋ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ShowTask.java,v 1.2 2008/03/11 08:28:02 sharapov Exp $

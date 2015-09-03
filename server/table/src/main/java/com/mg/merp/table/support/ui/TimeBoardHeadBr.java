@@ -30,7 +30,7 @@ import com.mg.merp.table.TimeBoardPositionServiceLocal;
 import com.mg.merp.table.model.TimeBoardHead;
 
 /**
- * Контроллер браузера заголовков табелей
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р·Р°РіРѕР»РѕРІРєРѕРІ С‚Р°Р±РµР»РµР№
  * 
  * @author leonova
  * @author Artem V. Sharapov

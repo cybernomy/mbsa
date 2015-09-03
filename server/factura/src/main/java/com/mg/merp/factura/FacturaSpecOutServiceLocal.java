@@ -17,7 +17,7 @@ package com.mg.merp.factura;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * Бизнес-компонент "Спецификация исходящих счетов-фактур" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РёСЃС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ-С„Р°РєС‚СѓСЂ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.document.model.DocSpec;
 public interface FacturaSpecOutServiceLocal extends com.mg.merp.document.GoodsDocumentSpecification<DocSpec, Integer> {
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/factura/FacturaSpecOut"; //$NON-NLS-1$
 	

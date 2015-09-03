@@ -25,7 +25,7 @@ import com.mg.framework.service.jboss.DefaultSQLExceptionTranslatorServiceMBean;
 import com.mg.merp.paymentcontrol.support.SQLExceptionTranslatorImpl;
 
 /**
- * Реализация сервиса транслятора SQL ИС модуля платежный календарь
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° С‚СЂР°РЅСЃР»СЏС‚РѕСЂР° SQL РРЎ РјРѕРґСѓР»СЏ РїР»Р°С‚РµР¶РЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ
  * 
  * @author Artem V. Sharapov
  * @version $Id: SQLExceptionTranslatorService.java,v 1.1 2007/05/23 06:02:59 sharapov Exp $

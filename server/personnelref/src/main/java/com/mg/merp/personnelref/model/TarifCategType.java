@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип категории тарификации должности
+ * РўРёРї РєР°С‚РµРіРѕСЂРёРё С‚Р°СЂРёС„РёРєР°С†РёРё РґРѕР»Р¶РЅРѕСЃС‚Рё
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: TarifCategType.java,v 1.1 2006/04/13 10:23:53 safonov Exp $
@@ -26,25 +26,25 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName("PersonnelRef.TariffingCategory.Type")
 public enum TarifCategType {
 	/**
-	 * Оклад
+	 * РћРєР»Р°Рґ
 	 */
 	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TarifCategType.Rate")
 	RATE,
 
 	/**
-	 * Ставка по тарифной сетке
+	 * РЎС‚Р°РІРєР° РїРѕ С‚Р°СЂРёС„РЅРѕР№ СЃРµС‚РєРµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TarifCategType.Tariff")
 	TARIFF,
 	
 	/**
-	 * Процент надбавки
+	 * РџСЂРѕС†РµРЅС‚ РЅР°РґР±Р°РІРєРё
 	 */
 	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TarifCategType.Rise")
 	RISE,
 	
 	/**
-	 * Количество минимальных окладов
+	 * РљРѕР»РёС‡РµСЃС‚РІРѕ РјРёРЅРёРјР°Р»СЊРЅС‹С… РѕРєР»Р°РґРѕРІ
 	 */
 	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TarifCategType.Min")
 	MIN

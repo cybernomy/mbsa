@@ -31,7 +31,7 @@ import com.mg.merp.security.model.LinkUsersGroups;
 import com.mg.merp.security.model.SecUser;
 
 /**
- * Бизнес-компонент "Пользователи" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџРѕР»СЊР·РѕРІР°С‚РµР»Рё" 
  * 
  * @author leonova
  * @version $Id: UserServiceBean.java,v 1.5 2007/02/24 14:20:52 safonov Exp $

@@ -24,7 +24,7 @@ import com.mg.merp.account.AmCodeServiceLocal;
 import com.mg.merp.account.model.AmCode;
 
 /**
- * Бизнес-компонент "Шифры амортизации" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЁРёС„СЂС‹ Р°РјРѕСЂС‚РёР·Р°С†РёРё" 
  * 
  * @author leonova
  * @version $Id: AmCodeServiceBean.java,v 1.3 2006/09/01 13:02:40 leonova Exp $

@@ -22,7 +22,7 @@ import com.mg.merp.reference.PricelistPricetypeLinkServiceLocal;
 import com.mg.merp.reference.model.PriceListPriceTypeLink;
 
 /**
- * Бизнес-компонент "Связи с типами цен"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРІСЏР·Рё СЃ С‚РёРїР°РјРё С†РµРЅ"
  * 
  * @author leonova
  * @version $Id: PricelistPricetypeLinkServiceBean.java,v 1.3 2006/09/13 07:00:35 leonova Exp $

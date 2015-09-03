@@ -22,7 +22,7 @@ import com.mg.merp.crm.OfferServiceLocal;
 import com.mg.merp.crm.model.Offer;
 
 /**
- * Бизнес-компонент "Предложения" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРµРґР»РѕР¶РµРЅРёСЏ" 
  * 
  * @author leonova
  * @version $Id: OfferServiceBean.java,v 1.3 2006/09/06 05:24:25 leonova Exp $

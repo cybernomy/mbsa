@@ -33,7 +33,7 @@ import com.mg.merp.core.model.DatabaseAudit;
 import com.mg.merp.core.model.DatabaseAuditDetail;
 
 /**
- * Контроллер формы аудита хранилища данных
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ Р°СѓРґРёС‚Р° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityAuditForm.java,v 1.1 2007/10/19 06:50:09 safonov Exp $
@@ -129,7 +129,7 @@ public class EntityAuditForm extends AbstractForm {
 	}
 
 	/**
-	 * запуск формы
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹
 	 */
 	public void execute() {
 		eventDateFrom = DateTimeUtils.nowDate();

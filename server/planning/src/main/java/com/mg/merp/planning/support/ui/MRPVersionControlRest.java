@@ -22,7 +22,7 @@ import com.mg.merp.planning.model.ForecastVersion;
 import com.mg.merp.planning.model.Mps;
 
 /**
- * Контроллер формы условий отбора
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР°
  * 
  * @author leonova
  * @version $Id: MRPVersionControlRest.java,v 1.2 2006/08/25 10:16:52 leonova Exp $ 

@@ -22,7 +22,7 @@ import com.mg.merp.mfreference.BOMRouteResourceServiceLocal;
 import com.mg.merp.mfreference.model.BomRouteResource;
 
 /**
- * Бизнес-компонент "Ресурсы" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р РµСЃСѓСЂСЃС‹" 
  * 
  * @author leonova
  * @version $Id: BOMRouteResourceServiceBean.java,v 1.3 2006/09/07 10:57:04 leonova Exp $

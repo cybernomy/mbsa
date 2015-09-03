@@ -17,7 +17,7 @@ package com.mg.merp.paymentcontrol.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Обязательство"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЏР·Р°С‚РµР»СЊСЃС‚РІРѕ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: Liability.java,v 1.9 2007/05/14 05:12:10 sharapov Exp $

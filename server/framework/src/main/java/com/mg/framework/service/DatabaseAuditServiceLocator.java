@@ -19,7 +19,7 @@ import com.mg.framework.service.jboss.DatabaseAuditServiceMBean;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Локатор сервиса аудита хранилища данных
+ * Р›РѕРєР°С‚РѕСЂ СЃРµСЂРІРёСЃР° Р°СѓРґРёС‚Р° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: DatabaseAuditServiceLocator.java,v 1.1 2007/10/19 06:29:22 safonov Exp $
@@ -28,10 +28,10 @@ public class DatabaseAuditServiceLocator {
 	private static volatile DatabaseAuditServiceMBean instance = null;
 
 	/**
-	 * найти сервис менеджера пользовательских полей
+	 * РЅР°Р№С‚Рё СЃРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 * 
-	 * @return	сервис
-	 * @throws ApplicationException	при любых ошибках
+	 * @return	СЃРµСЂРІРёСЃ
+	 * @throws ApplicationException	РїСЂРё Р»СЋР±С‹С… РѕС€РёР±РєР°С…
 	 */
 	public static DatabaseAuditServiceMBean locate() {
 		if (instance == null)

@@ -22,7 +22,7 @@ import com.mg.merp.reference.BankServiceLocal;
 import com.mg.merp.reference.model.Bank;
 
 /**
- * Бизнес-компонент "Банки" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р‘Р°РЅРєРё" 
  * 
  * @author leonova
  * @version $Id: BankServiceBean.java,v 1.3 2006/08/02 12:13:42 leonova Exp $

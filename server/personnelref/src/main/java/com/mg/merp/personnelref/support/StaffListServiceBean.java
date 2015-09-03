@@ -36,7 +36,7 @@ import com.mg.merp.personnelref.model.StaffListPosition;
 import com.mg.merp.personnelref.model.StaffListUnit;
 
 /**
- * Реализация бизнес-компонента "Варианты штатного расписания" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’Р°СЂРёР°РЅС‚С‹ С€С‚Р°С‚РЅРѕРіРѕ СЂР°СЃРїРёСЃР°РЅРёСЏ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -62,8 +62,8 @@ public class StaffListServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Создать подразделение в штатном расписании для варианта ШР
-	 * @param staffList - вариант штатного расписания
+	 * РЎРѕР·РґР°С‚СЊ РїРѕРґСЂР°Р·РґРµР»РµРЅРёРµ РІ С€С‚Р°С‚РЅРѕРј СЂР°СЃРїРёСЃР°РЅРёРё РґР»СЏ РІР°СЂРёР°РЅС‚Р° РЁР 
+	 * @param staffList - РІР°СЂРёР°РЅС‚ С€С‚Р°С‚РЅРѕРіРѕ СЂР°СЃРїРёСЃР°РЅРёСЏ
 	 */
 	protected void doCreateStaffListUnitForStaffList(StaffList staffList) {
 		StaffListUnitServiceLocal staffListUnitService = (StaffListUnitServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(StaffListUnitServiceLocal.LOCAL_SERVICE_NAME);
@@ -98,21 +98,21 @@ public class StaffListServiceBean extends AbstractPOJODataBusinessObjectServiceB
 		AttributeMap StaffListUnitInitAttr = new LocalDataTransferObject();
 		StaffListUnitInitAttr.put(STAFF_LIST_ATTRIBUTE_NAME, entityClone);
 
-		// удаление корневого подразделения
+		// СѓРґР°Р»РµРЅРёРµ РєРѕСЂРЅРµРІРѕРіРѕ РїРѕРґСЂР°Р·РґРµР»РµРЅРёСЏ
 		for (StaffListUnit rootStaffListUnit : staffListUnitService.findByCriteria(Restrictions.eq(STAFF_LIST_ATTRIBUTE_NAME, entityClone)))
 			staffListUnitService.erase(rootStaffListUnit);
 
-		// копирование подразделений
+		// РєРѕРїРёСЂРѕРІР°РЅРёРµ РїРѕРґСЂР°Р·РґРµР»РµРЅРёР№
 		for (StaffListUnit staffListUnit : staffListUnits)
 			clonedStaffListUnits.add(staffListUnitService.clone(staffListUnit, true, StaffListUnitInitAttr));
 
 		for (int i = 0; i < clonedStaffListUnits.size(); i++) {	
 			StaffListUnit clonedStaffListUnit = clonedStaffListUnits.get(i);
 			StaffListUnit staffListUnit = staffListUnits.get(i);
-			// настройка иерархии подразделений
+			// РЅР°СЃС‚СЂРѕР№РєР° РёРµСЂР°СЂС…РёРё РїРѕРґСЂР°Р·РґРµР»РµРЅРёР№
 			if(clonedStaffListUnit.getParent() != null)
 				clonedStaffListUnit.setParent(clonedStaffListUnits.get(staffListUnits.indexOf(staffListUnit.getParent())));
-			// копирование должностей в штатном расписании
+			// РєРѕРїРёСЂРѕРІР°РЅРёРµ РґРѕР»Р¶РЅРѕСЃС‚РµР№ РІ С€С‚Р°С‚РЅРѕРј СЂР°СЃРїРёСЃР°РЅРёРё
 			staffListPositionInitAttr.put(STAFF_LIST_UNIT_ATTRIBUTE_NAME, clonedStaffListUnit);
 			for (StaffListPosition staffListPosition : staffListPositionService.findByCriteria(Restrictions.eq(STAFF_LIST_UNIT_ATTRIBUTE_NAME, staffListUnit)))
 				staffListPositionService.clone(staffListPosition, true, staffListPositionInitAttr);

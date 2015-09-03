@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.widget;
 import com.mg.framework.api.ui.Container;
 
 /**
- * Элемент "Блочный менеджер расположения BoxLayout"
+ * Р­Р»РµРјРµРЅС‚ "Р‘Р»РѕС‡РЅС‹Р№ РјРµРЅРµРґР¶РµСЂ СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ BoxLayout"
  * 
  * @author Oleg V. Safonov
  * @version $Id: BoxPane.java,v 1.4 2008/07/14 15:46:20 safonov Exp $
@@ -25,83 +25,83 @@ import com.mg.framework.api.ui.Container;
 public interface BoxPane extends Container {
 
 	/**
-	 * атрибут выравнивания
+	 * Р°С‚СЂРёР±СѓС‚ РІС‹СЂР°РІРЅРёРІР°РЅРёСЏ
 	 */
 	public static final String ALIGNMENT = "alignment"; //$NON-NLS-1$
 
 	/**
-	 * выранивание по умолчанию
+	 * РІС‹СЂР°РЅРёРІР°РЅРёРµ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
 	public static final String DEFAULT_ALIGNMENT = "left_top"; //$NON-NLS-1$
 	
 	/**
-	 * атрибут ориентации
+	 * Р°С‚СЂРёР±СѓС‚ РѕСЂРёРµРЅС‚Р°С†РёРё
 	 */
 	public final static String ORIENTATION = "orientation"; //$NON-NLS-1$
 	
 	/**
-	 * вертикальная ориентация
+	 * РІРµСЂС‚РёРєР°Р»СЊРЅР°СЏ РѕСЂРёРµРЅС‚Р°С†РёСЏ
 	 */
 	public final static String VERTICAL_ORIENTATION = "ver"; //$NON-NLS-1$
 	
 	/**
-	 * горизонтальная ориентация
+	 * РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ РѕСЂРёРµРЅС‚Р°С†РёСЏ
 	 */
 	public final static String HORIZONTAL_ORIENTATION = "hor"; //$NON-NLS-1$
 	
 	/**
-	 * количество колонок
+	 * РєРѕР»РёС‡РµСЃС‚РІРѕ РєРѕР»РѕРЅРѕРє
 	 */
 	public final static String COLUMNS = "columns"; //$NON-NLS-1$
 	
 	/**
-	 * количество рядов
+	 * РєРѕР»РёС‡РµСЃС‚РІРѕ СЂСЏРґРѕРІ
 	 */
 	public final static String ROWS = "rows"; //$NON-NLS-1$
 	
 	/**
-	 * зазор между рядами
+	 * Р·Р°Р·РѕСЂ РјРµР¶РґСѓ СЂСЏРґР°РјРё
 	 */
 	public final static String VERTICAL_GAP = "verticalGap"; //$NON-NLS-1$
 	
 	/**
-	 * зазор между столбцами
+	 * Р·Р°Р·РѕСЂ РјРµР¶РґСѓ СЃС‚РѕР»Р±С†Р°РјРё
 	 */
 	public final static String HORIZONTAL_GAP = "horizontalGap"; //$NON-NLS-1$
 	
 	/**
-	 * количество ячеек по горизонтали занимаемое элементом
+	 * РєРѕР»РёС‡РµСЃС‚РІРѕ СЏС‡РµРµРє РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё Р·Р°РЅРёРјР°РµРјРѕРµ СЌР»РµРјРµРЅС‚РѕРј
 	 */
 	public final static String HORIZONTAL_SPAN = "horizontalSpan"; //$NON-NLS-1$
 	
 	/**
-	 * количество ячеек по вертикали занимаемое элементом
+	 * РєРѕР»РёС‡РµСЃС‚РІРѕ СЏС‡РµРµРє РїРѕ РІРµСЂС‚РёРєР°Р»Рё Р·Р°РЅРёРјР°РµРјРѕРµ СЌР»РµРјРµРЅС‚РѕРј
 	 */
 	public final static String VERTICAL_SPAN = "verticalSpan"; //$NON-NLS-1$
 
 	/**
-	 * количество ячеек которое бодет пропущено перед добавлением элемента
+	 * РєРѕР»РёС‡РµСЃС‚РІРѕ СЏС‡РµРµРє РєРѕС‚РѕСЂРѕРµ Р±РѕРґРµС‚ РїСЂРѕРїСѓС‰РµРЅРѕ РїРµСЂРµРґ РґРѕР±Р°РІР»РµРЅРёРµРј СЌР»РµРјРµРЅС‚Р°
 	 */
 	public final static String SKIP = "skip"; //$NON-NLS-1$
 
 	/**
-	 * установка типа расположения
+	 * СѓСЃС‚Р°РЅРѕРІРєР° С‚РёРїР° СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ
 	 * 
-	 * @param vertical	если <code>true</code> то вертикальный, иначе горизонтальный
+	 * @param vertical	РµСЃР»Рё <code>true</code> С‚Рѕ РІРµСЂС‚РёРєР°Р»СЊРЅС‹Р№, РёРЅР°С‡Рµ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№
 	 */
 	void setVertical(boolean vertical);
 	
 	/**
-	 * установка зазора между рядами
+	 * СѓСЃС‚Р°РЅРѕРІРєР° Р·Р°Р·РѕСЂР° РјРµР¶РґСѓ СЂСЏРґР°РјРё
 	 * 
-	 * @param verticalGap	зазор между рядами
+	 * @param verticalGap	Р·Р°Р·РѕСЂ РјРµР¶РґСѓ СЂСЏРґР°РјРё
 	 */
 	void setVerticalGap(int verticalGap);
 	
 	/**
-	 * установка зазора между столбцами
+	 * СѓСЃС‚Р°РЅРѕРІРєР° Р·Р°Р·РѕСЂР° РјРµР¶РґСѓ СЃС‚РѕР»Р±С†Р°РјРё
 	 * 
-	 * @param horizontalGap	зазор между столбцами
+	 * @param horizontalGap	Р·Р°Р·РѕСЂ РјРµР¶РґСѓ СЃС‚РѕР»Р±С†Р°РјРё
 	 */
 	void setHorizontalGap(int horizontalGap);
 	

@@ -20,8 +20,8 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocHeadModel;
 
 /**
- * Стратегия создания документа по образцу, в качестве
- * реализации рекомендуется использовать экземпляр класса наследованного от
+ * РЎС‚СЂР°С‚РµРіРёСЏ СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РїРѕ РѕР±СЂР°Р·С†Сѓ, РІ РєР°С‡РµСЃС‚РІРµ
+ * СЂРµР°Р»РёР·Р°С†РёРё СЂРµРєРѕРјРµРЅРґСѓРµС‚СЃСЏ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СЌРєР·РµРјРїР»СЏСЂ РєР»Р°СЃСЃР° РЅР°СЃР»РµРґРѕРІР°РЅРЅРѕРіРѕ РѕС‚
  * {@link com.mg.merp.document.generic.AbstractCreateDocumentByPatternStrategy}
  * 
  * @author Oleg V. Safonov
@@ -30,11 +30,11 @@ import com.mg.merp.document.model.DocHeadModel;
 public interface CreateDocumentByPatternStrategy extends Serializable {
 
 	/**
-	 * создание документа на основании образца
+	 * СЃРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІР°РЅРёРё РѕР±СЂР°Р·С†Р°
 	 * 
-	 * @param document	документ
-	 * @param documentPattern	образец
-	 * @return	документ
+	 * @param document	РґРѕРєСѓРјРµРЅС‚
+	 * @param documentPattern	РѕР±СЂР°Р·РµС†
+	 * @return	РґРѕРєСѓРјРµРЅС‚
 	 */
 	DocHead createDocument(DocHead document, DocHeadModel documentPattern);
 	

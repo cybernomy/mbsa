@@ -19,16 +19,16 @@ import com.mg.merp.core.model.SysClient;
 import com.mg.merp.finance.model.FinConfig;
 
 /**
- * Класс помощник конфигурации модуля "Финансы"
+ * РљР»Р°СЃСЃ РїРѕРјРѕС‰РЅРёРє РєРѕРЅС„РёРіСѓСЂР°С†РёРё РјРѕРґСѓР»СЏ "Р¤РёРЅР°РЅСЃС‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ConfigurationHelper.java,v 1.1 2007/08/17 09:09:18 alikaev Exp $
  */
 public class ConfigurationHelper {
 	/**
-	 * получить конфигурацию модуля
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ РјРѕРґСѓР»СЏ
 	 * 
-	 * @return	конфигурация
+	 * @return	РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ
 	 */
 	public static FinConfig getConfiguration() {
 		return ServerUtils.getPersistentManager().find(FinConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());

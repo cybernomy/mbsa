@@ -17,7 +17,7 @@ package com.mg.merp.paymentcontrol.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис дополнительных модулей подсистемы "Платежный календарь"
+ * РЎРµСЂРІРёСЃ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "РџР»Р°С‚РµР¶РЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PaymentcontrolDocFlowPluginServiceMBean.java,v 1.1 2007/05/14 05:21:27 sharapov Exp $
@@ -25,7 +25,7 @@ import org.jboss.system.ServiceMBean;
 public interface PaymentcontrolDocFlowPluginServiceMBean extends ServiceMBean {
 
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:paymentcontrol=DocFlowPluginService"; //$NON-NLS-1$
 

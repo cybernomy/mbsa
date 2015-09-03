@@ -20,7 +20,7 @@ import com.mg.framework.service.jboss.LockManagerServiceMBean;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Локатор сервиса менеджера блокировок
+ * Р›РѕРєР°С‚РѕСЂ СЃРµСЂРІРёСЃР° РјРµРЅРµРґР¶РµСЂР° Р±Р»РѕРєРёСЂРѕРІРѕРє
  * 
  * @author Oleg V. Safonov
  * @version $Id: LockManagerLocator.java,v 1.1 2006/12/15 09:28:45 safonov Exp $
@@ -29,9 +29,9 @@ public class LockManagerLocator {
     private static volatile LockManager instance = null;
     
     /**
-     * получить менеджер
+     * РїРѕР»СѓС‡РёС‚СЊ РјРµРЅРµРґР¶РµСЂ
      * 
-     * @return	менеджер
+     * @return	РјРµРЅРµРґР¶РµСЂ
      */
     public static LockManager locate() {
         if (instance == null)

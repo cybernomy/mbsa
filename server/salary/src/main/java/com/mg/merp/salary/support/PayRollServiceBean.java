@@ -56,7 +56,7 @@ import com.mg.merp.salary.model.PaySheetSpec;
 import com.mg.merp.salary.model.RollKind;
 
 /**
- * Реализация бизнес-компонента "Расчетные ведомости" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р Р°СЃС‡РµС‚РЅС‹Рµ РІРµРґРѕРјРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -90,10 +90,10 @@ public class PayRollServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 	
 	/**
-	 * Создать свод начислений/удержаний по аналитике 
-	 * @param payRollIds - список идентификаторов расчетных ведомостей
-	 * @param feeSummaryPattern - образец свода начислений/удержаний по аналитике
-	 * @return свод начислений/удержаний по аналитике
+	 * РЎРѕР·РґР°С‚СЊ СЃРІРѕРґ РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ 
+	 * @param payRollIds - СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ СЂР°СЃС‡РµС‚РЅС‹С… РІРµРґРѕРјРѕСЃС‚РµР№
+	 * @param feeSummaryPattern - РѕР±СЂР°Р·РµС† СЃРІРѕРґР° РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ
+	 * @return СЃРІРѕРґ РЅР°С‡РёСЃР»РµРЅРёР№/СѓРґРµСЂР¶Р°РЅРёР№ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ
 	 */
 	protected FeeSummaryHead doCreateFeeSummary(Serializable[] payRollIds, DocHeadModel feeSummaryPattern) {
 		List<CostAnaliticsInfo> agregateListOfAnalitics = getAgregateListOfAnalitics(payRollIds);
@@ -115,9 +115,9 @@ public class PayRollServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 	
 	/**
-	 * Получить сгруппированный по аналитике список сумм
-	 * @param payRollIds - список идентификаторов расчетных ведомостей
-	 * @return сгруппированный по аналитике список сумм
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРіСЂСѓРїРїРёСЂРѕРІР°РЅРЅС‹Р№ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ СЃРїРёСЃРѕРє СЃСѓРјРј
+	 * @param payRollIds - СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ СЂР°СЃС‡РµС‚РЅС‹С… РІРµРґРѕРјРѕСЃС‚РµР№
+	 * @return СЃРіСЂСѓРїРїРёСЂРѕРІР°РЅРЅС‹Р№ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ СЃРїРёСЃРѕРє СЃСѓРјРј
 	 */
 	protected List<CostAnaliticsInfo> getAgregateListOfAnalitics(Serializable[] payRollIds) {
 		List<CostAnaliticsInfo> resultList = new ArrayList<CostAnaliticsInfo>();
@@ -126,13 +126,13 @@ public class PayRollServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 		int j = 0;
 		for (int i = 0; i < allFeesList.size(); i++) {
 			CostAnaliticsInfo currentAnlInfo = allFeesList.get(i);
-				// если аналитика в следующей записи не совпадает с предыдущей
+				// РµСЃР»Рё Р°РЅР°Р»РёС‚РёРєР° РІ СЃР»РµРґСѓСЋС‰РµР№ Р·Р°РїРёСЃРё РЅРµ СЃРѕРІРїР°РґР°РµС‚ СЃ РїСЂРµРґС‹РґСѓС‰РµР№
 			if (currentAnlInfo.costsAnl1.getId() != prevAnlInfo.costsAnl1.getId()
 			 || currentAnlInfo.costsAnl2.getId() != prevAnlInfo.costsAnl2.getId()
 			 || currentAnlInfo.costsAnl3.getId() != prevAnlInfo.costsAnl3.getId()
 			 || currentAnlInfo.costsAnl4.getId() != prevAnlInfo.costsAnl4.getId()
 			 || currentAnlInfo.costsAnl5.getId() != prevAnlInfo.costsAnl5.getId()) {
-				// то открыть новую сумму
+				// С‚Рѕ РѕС‚РєСЂС‹С‚СЊ РЅРѕРІСѓСЋ СЃСѓРјРјСѓ
 				j++;
 				resultList.add(new CostAnaliticsInfo(
 												BigDecimal.ZERO,
@@ -189,10 +189,10 @@ public class PayRollServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 	
 	/**
-	 * Получить сумму документа и подготовить позиции спецификации для массового добавления
-	 * @param agregateListOfAnalitics - сгруппированный по аналитике список сумм
-	 * @param feeSummarySpecs - позиции спецификации(пустой список)
-	 * @return сумма документа
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃСѓРјРјСѓ РґРѕРєСѓРјРµРЅС‚Р° Рё РїРѕРґРіРѕС‚РѕРІРёС‚СЊ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґР»СЏ РјР°СЃСЃРѕРІРѕРіРѕ РґРѕР±Р°РІР»РµРЅРёСЏ
+	 * @param agregateListOfAnalitics - СЃРіСЂСѓРїРїРёСЂРѕРІР°РЅРЅС‹Р№ РїРѕ Р°РЅР°Р»РёС‚РёРєРµ СЃРїРёСЃРѕРє СЃСѓРјРј
+	 * @param feeSummarySpecs - РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё(РїСѓСЃС‚РѕР№ СЃРїРёСЃРѕРє)
+	 * @return СЃСѓРјРјР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected BigDecimal getDocSumAndPrepareFeeSummarySpecs(List<CostAnaliticsInfo> agregateListOfAnalitics, CreateFeeSummarySpecInfo[] feeSummarySpecs) {
 		BigDecimal docSum = BigDecimal.ZERO;
@@ -232,8 +232,8 @@ public class PayRollServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 	
 	/**
-	 * Получить аналитику состава затрат из конфигурации модуля "Управление персоналом"
-	 * @return аналитика состава затрат или <code>null</code>, если не найдена
+	 * РџРѕР»СѓС‡РёС‚СЊ Р°РЅР°Р»РёС‚РёРєСѓ СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ РёР· РєРѕРЅС„РёРіСѓСЂР°С†РёРё РјРѕРґСѓР»СЏ "РЈРїСЂР°РІР»РµРЅРёРµ РїРµСЂСЃРѕРЅР°Р»РѕРј"
+	 * @return Р°РЅР°Р»РёС‚РёРєР° СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ РёР»Рё <code>null</code>, РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅР°
 	 */
 	protected Catalog getCostsAnlFromPersonnelModuleConfiguraition() {
 		PersonnelConfig config = ServerUtils.getPersistentManager().find(PersonnelConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
@@ -244,9 +244,9 @@ public class PayRollServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 
 	/**
-	 * Создать платежную ведомость на основе рассчетной
-	 * @param payRollId - идентификатор рассчетной ведомости
-	 * @return платежная ведомость
+	 * РЎРѕР·РґР°С‚СЊ РїР»Р°С‚РµР¶РЅСѓСЋ РІРµРґРѕРјРѕСЃС‚СЊ РЅР° РѕСЃРЅРѕРІРµ СЂР°СЃСЃС‡РµС‚РЅРѕР№
+	 * @param payRollId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂР°СЃСЃС‡РµС‚РЅРѕР№ РІРµРґРѕРјРѕСЃС‚Рё
+	 * @return РїР»Р°С‚РµР¶РЅР°СЏ РІРµРґРѕРјРѕСЃС‚СЊ
 	 */
 	protected PaySheet doCreatePaySheetByPayRoll(Integer payRollId) {
 		if(payRollId == null)
@@ -254,7 +254,7 @@ public class PayRollServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 		PayRoll payRoll = load(payRollId);
 		
 		List<BasicPositionFillResult> personalAccountList = getBasicPositionFillList(payRoll);
-		// пустая ведомость или нет базовых должностей
+		// РїСѓСЃС‚Р°СЏ РІРµРґРѕРјРѕСЃС‚СЊ РёР»Рё РЅРµС‚ Р±Р°Р·РѕРІС‹С… РґРѕР»Р¶РЅРѕСЃС‚РµР№
 		if(personalAccountList.isEmpty())
 			throw new BusinessException(Messages.getInstance().getMessage(Messages.BASIC_POSITION_IN_PAYROLL_NOT_FOUND));
 		
@@ -267,7 +267,7 @@ public class PayRollServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 		BigDecimal personTotalSum = BigDecimal.ZERO;
 		PaySheetSpec[] paySheetSpecs = new PaySheetSpec[personalAccountList.size()]; 
 		
-		// заполним спецификацию(строки платежной ведомости)
+		// Р·Р°РїРѕР»РЅРёРј СЃРїРµС†РёС„РёРєР°С†РёСЋ(СЃС‚СЂРѕРєРё РїР»Р°С‚РµР¶РЅРѕР№ РІРµРґРѕРјРѕСЃС‚Рё)
 		for (int i = 0; i < personalAccountList.size(); i++) {
 			BasicPositionFillResult result = personalAccountList.get(i);
 			personTotalSum = getPersonTotalSum(result.personalAccount, rollKind, calcPeriod);

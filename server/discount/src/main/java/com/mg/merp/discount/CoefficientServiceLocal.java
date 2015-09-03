@@ -17,7 +17,7 @@ package com.mg.merp.discount;
 import com.mg.merp.discount.model.Coefficient;
 
 /**
- * Бизнес-компонент "Коэффициенты дисконтной карты"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљРѕСЌС„С„РёС†РёРµРЅС‚С‹ РґРёСЃРєРѕРЅС‚РЅРѕР№ РєР°СЂС‚С‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.discount.model.Coefficient;
 public interface CoefficientServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Coefficient, Integer> {
 	
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/discount/Coefficient"; //$NON-NLS-1$
 	

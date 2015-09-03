@@ -17,7 +17,7 @@ package com.mg.merp.lbschedule.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Пункт графика исполнения обязательств"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСѓРЅРєС‚ РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: Item.java,v 1.8 2007/04/21 11:49:33 sharapov Exp $

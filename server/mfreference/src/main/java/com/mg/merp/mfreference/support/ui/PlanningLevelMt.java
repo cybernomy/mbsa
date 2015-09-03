@@ -38,7 +38,7 @@ import com.mg.merp.mfreference.model.PlanningLevel;
 import com.mg.merp.mfreference.model.PlanningLevelBucket;
 
 /**
- * Контроллер формы поддержки уровней планирования
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СѓСЂРѕРІРЅРµР№ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov
@@ -109,8 +109,8 @@ public class PlanningLevelMt extends DefaultMaintenanceForm implements MasterMod
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Генерация периодов"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "Р“РµРЅРµСЂР°С†РёСЏ РїРµСЂРёРѕРґРѕРІ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionGeneratePlaningLevelBuckets(WidgetEvent event) throws Exception {

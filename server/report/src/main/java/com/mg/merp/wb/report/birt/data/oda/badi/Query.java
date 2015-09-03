@@ -46,7 +46,7 @@ import com.mg.merp.wb.report.birt.data.oda.badi.util.Constants;
 import com.mg.merp.wb.report.birt.data.oda.badi.util.RelationInformation;
 
 /**
- * Реализация интерфейса {@link IQuery}
+ * Р РµР°Р»РёР·Р°С†РёСЏ РёРЅС‚РµСЂС„РµР№СЃР° {@link IQuery}
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -56,14 +56,14 @@ public class Query implements IQuery {
 	/** logger */
 	private static Logger logger = Logger.getLogger(Connection.class.getName( ));	
 	/**
-	 * Вспомогательная информация. Необходима для построения таблицы
-	 * результирующего набора данных
+	 * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ. РќРµРѕР±С…РѕРґРёРјР° РґР»СЏ РїРѕСЃС‚СЂРѕРµРЅРёСЏ С‚Р°Р±Р»РёС†С‹
+	 * СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РµРіРѕ РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С…
 	 */
 	private RelationInformation relationInformation;
 
 	/**
-	 * Код алгоритма, который обеспечивает получение результирующего набора
-	 * данных запроса
+	 * РљРѕРґ Р°Р»РіРѕСЂРёС‚РјР°, РєРѕС‚РѕСЂС‹Р№ РѕР±РµСЃРїРµС‡РёРІР°РµС‚ РїРѕР»СѓС‡РµРЅРёРµ СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РµРіРѕ РЅР°Р±РѕСЂР°
+	 * РґР°РЅРЅС‹С… Р·Р°РїСЂРѕСЃР°
 	 */
 	private String baiCode;
 
@@ -71,7 +71,7 @@ public class Query implements IQuery {
 	private boolean isClosed;
 
 	/**
-	 * Результат выполнения запроса
+	 * Р РµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РїСЂРѕСЃР°
 	 */
 	//private DataSet resultSet;
 
@@ -83,23 +83,23 @@ public class Query implements IQuery {
 	private int maxRows;
 
 	/**
-	 * Параметры, передаваемые в бизнес-расширение(алгоритм), для получения
-	 * конкретного набора данных
+	 * РџР°СЂР°РјРµС‚СЂС‹, РїРµСЂРµРґР°РІР°РµРјС‹Рµ РІ Р±РёР·РЅРµСЃ-СЂР°СЃС€РёСЂРµРЅРёРµ(Р°Р»РіРѕСЂРёС‚Рј), РґР»СЏ РїРѕР»СѓС‡РµРЅРёСЏ
+	 * РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ РЅР°Р±РѕСЂР° РґР°РЅРЅС‹С…
 	 */
 	private Map<String, Object> dataSetParams = new HashMap<String, Object>();
 
 	/**
-	 * Массив имён параметров результирующего набора. Необходим в текущей
-	 * реализации, т.к. сама платформа BIRT не позволяет устанавливать параметры
-	 * по именам (Ошибка там)
+	 * РњР°СЃСЃРёРІ РёРјС‘РЅ РїР°СЂР°РјРµС‚СЂРѕРІ СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РµРіРѕ РЅР°Р±РѕСЂР°. РќРµРѕР±С…РѕРґРёРј РІ С‚РµРєСѓС‰РµР№
+	 * СЂРµР°Р»РёР·Р°С†РёРё, С‚.Рє. СЃР°РјР° РїР»Р°С‚С„РѕСЂРјР° BIRT РЅРµ РїРѕР·РІРѕР»СЏРµС‚ СѓСЃС‚Р°РЅР°РІР»РёРІР°С‚СЊ РїР°СЂР°РјРµС‚СЂС‹
+	 * РїРѕ РёРјРµРЅР°Рј (РћС€РёР±РєР° С‚Р°Рј)
 	 */
 	private List<String> dataSetParamsNames;
 
 	/**
-	 * Конструктор экземпляра запроса
+	 * РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЌРєР·РµРјРїР»СЏСЂР° Р·Р°РїСЂРѕСЃР°
 	 * 
 	 * @param appContext
-	 *            контекст запроса
+	 *            РєРѕРЅС‚РµРєСЃС‚ Р·Р°РїСЂРѕСЃР°
 	 */
 	public Query(Map<String, Object> appContext) {
 		isClosed = false;
@@ -132,8 +132,8 @@ public class Query implements IQuery {
 	public void setProperty(String name, String value) throws OdaException {
 		if (BAI_CODE.equals(name)) {
 			this.baiCode = value;
-			// проверка, т.к. в на данный момент в designTime контекст
-			// недоступен
+			// РїСЂРѕРІРµСЂРєР°, С‚.Рє. РІ РЅР° РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚ РІ designTime РєРѕРЅС‚РµРєСЃС‚
+			// РЅРµРґРѕСЃС‚СѓРїРµРЅ
 			if (appContext != null) {
 				Map<String, Object> rptContext = (Map<String, Object>) appContext.get(APP_REPORT_CONTEXT);
 				if (rptContext != null) {
@@ -204,10 +204,10 @@ public class Query implements IQuery {
 				throw new OdaException("Query.QueryHasNotBeenPrepared"); //$NON-NLS-1$
 			RptBAiStarter rbs = (RptBAiStarter) rptContext.get(BAI_ENGINE_PARAM);
 			if (rbs == null) {
-				//если не установлен, то находимся в студии разработки,
-				//пытаемся удаленно подключиться к серверу и выполнить BAi для предварительного просмотра
+				//РµСЃР»Рё РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ, С‚Рѕ РЅР°С…РѕРґРёРјСЃСЏ РІ СЃС‚СѓРґРёРё СЂР°Р·СЂР°Р±РѕС‚РєРё,
+				//РїС‹С‚Р°РµРјСЃСЏ СѓРґР°Р»РµРЅРЅРѕ РїРѕРґРєР»СЋС‡РёС‚СЊСЃСЏ Рє СЃРµСЂРІРµСЂСѓ Рё РІС‹РїРѕР»РЅРёС‚СЊ BAi РґР»СЏ РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅРѕРіРѕ РїСЂРѕСЃРјРѕС‚СЂР°
 				//rbs = new RemoteRptBAiStarterImpl();
-				//установим реализацию для последующей обработки
+				//СѓСЃС‚Р°РЅРѕРІРёРј СЂРµР°Р»РёР·Р°С†РёСЋ РґР»СЏ РїРѕСЃР»РµРґСѓСЋС‰РµР№ РѕР±СЂР°Р±РѕС‚РєРё
 				//appContext.put(BAI_ENGINE_PARAM, rbs);
 				throw new OdaException("Query.QueryHasNotBeenPrepared"); //$NON-NLS-1$
 			}
@@ -226,7 +226,7 @@ public class Query implements IQuery {
 			params.put(DATASET_PARAMS, dataSetParams);
 			params.put(CURRENT_SESSION_PARAM, rptContext.get(CURRENT_SESSION_PARAM));
 			Object reportContext = rptContext.get(REPORT_CONTEXT_PARAMS);
-			//если контекст выполнения не был создан, то создадим и внесем в appContext
+			//РµСЃР»Рё РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРёСЏ РЅРµ Р±С‹Р» СЃРѕР·РґР°РЅ, С‚Рѕ СЃРѕР·РґР°РґРёРј Рё РІРЅРµСЃРµРј РІ appContext
 			if (reportContext == null) {
 				reportContext = new HashMap<String, Object>();
 				rptContext.put(REPORT_CONTEXT_PARAMS, reportContext);
@@ -240,7 +240,7 @@ public class Query implements IQuery {
 				ResultSet result = new ResultSet(relationInformation, resultSet, maxRows);
 				return result;
 			} catch (Throwable e) {
-				//создадим обертку для ИС сгенерированных в BAi
+				//СЃРѕР·РґР°РґРёРј РѕР±РµСЂС‚РєСѓ РґР»СЏ РРЎ СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹С… РІ BAi
 				OdaException odaE = new OdaException(e.getLocalizedMessage());
 				odaE.initCause(e);
 				throw odaE;
@@ -424,7 +424,7 @@ public class Query implements IQuery {
 	 * @see org.eclipse.datatools.connectivity.oda.IQuery#findInParameter(java.lang.String)
 	 */
 	public int findInParameter(String parameterName) throws OdaException {
-		// нумерация параметров идёт с 1
+		// РЅСѓРјРµСЂР°С†РёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ РёРґС‘С‚ СЃ 1
 		if (appContext != null && dataSetParamsNames != null)
 			return dataSetParamsNames.indexOf(parameterName) + 1;
 		else
@@ -437,7 +437,7 @@ public class Query implements IQuery {
 	 * @see org.eclipse.datatools.connectivity.oda.IQuery#getParameterMetaData()
 	 */
 	public IParameterMetaData getParameterMetaData() throws OdaException {
-		// TODO: заглушка
+		// TODO: Р·Р°РіР»СѓС€РєР°
 		return new IParameterMetaData() {
 
 			public int getParameterCount() throws OdaException {
@@ -524,14 +524,14 @@ public class Query implements IQuery {
 	}
 
 	private void setDataSetParam(int parameterId, Object value) {
-		// нумерация параметров идёт с 1
+		// РЅСѓРјРµСЂР°С†РёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ РёРґС‘С‚ СЃ 1
 		if (appContext != null && dataSetParamsNames != null)
 			dataSetParams.put(dataSetParamsNames.get(parameterId - 1), value);
 
 	}
 	
 	/**
-	 * Если результирующий набор закрыт, то выбрасывается исключение.
+	 * Р•СЃР»Рё СЂРµР·СѓР»СЊС‚РёСЂСѓСЋС‰РёР№ РЅР°Р±РѕСЂ Р·Р°РєСЂС‹С‚, С‚Рѕ РІС‹Р±СЂР°СЃС‹РІР°РµС‚СЃСЏ РёСЃРєР»СЋС‡РµРЅРёРµ.
 	 * 
 	 * @throws OdaException
 	 */

@@ -36,7 +36,7 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 
 /**
- * Утилиты
+ * РЈС‚РёР»РёС‚С‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: HibernatePageHelper.java,v 1.1 2007/10/29 08:54:16 safonov Exp $

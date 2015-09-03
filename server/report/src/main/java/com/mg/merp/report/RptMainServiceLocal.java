@@ -19,7 +19,7 @@ import java.util.List;
 import com.mg.merp.report.model.RptMain;
 
 /**
- * Бизнес-компонент "Репозитарий отчетов"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р РµРїРѕР·РёС‚Р°СЂРёР№ РѕС‚С‡РµС‚РѕРІ"
  * 
  * @author leonova
  * @author Oleg V. Safonov
@@ -28,15 +28,15 @@ import com.mg.merp.report.model.RptMain;
 public interface RptMainServiceLocal extends
 		com.mg.framework.api.DataBusinessObjectService<RptMain, Integer> {
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/report/RptMain";
 	
 	/**
-	 * загрузка отчетов связанных с бизнес-компонентом и доступных пользователю
+	 * Р·Р°РіСЂСѓР·РєР° РѕС‚С‡РµС‚РѕРІ СЃРІСЏР·Р°РЅРЅС‹С… СЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРј Рё РґРѕСЃС‚СѓРїРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ
 	 * 
-	 * @param classId	идентификатор бизнес-компонента, если <code>null</code>, то будут загружены отчеты для всех бизнес-компонентов
-	 * @return	список отчетов
+	 * @param classId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°, РµСЃР»Рё <code>null</code>, С‚Рѕ Р±СѓРґСѓС‚ Р·Р°РіСЂСѓР¶РµРЅС‹ РѕС‚С‡РµС‚С‹ РґР»СЏ РІСЃРµС… Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
+	 * @return	СЃРїРёСЃРѕРє РѕС‚С‡РµС‚РѕРІ
 	 */
 	List<RptMain> loadAvailableReports(Integer classId);
 

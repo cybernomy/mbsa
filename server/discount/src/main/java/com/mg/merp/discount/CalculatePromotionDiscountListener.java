@@ -19,7 +19,7 @@ import java.io.Serializable;
 import com.mg.merp.discount.support.PromotionDiscountResult;
 
 /**
- * Слушатель расчета скидки/наценки по рекламному мероприятию
+ * РЎР»СѓС€Р°С‚РµР»СЊ СЂР°СЃС‡РµС‚Р° СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё РїРѕ СЂРµРєР»Р°РјРЅРѕРјСѓ РјРµСЂРѕРїСЂРёСЏС‚РёСЋ
  * 
  * @author Artem V. Sharapov
  * @version $Id: CalculatePromotionDiscountListener.java,v 1.1 2007/10/30 13:55:56 sharapov Exp $
@@ -27,13 +27,13 @@ import com.mg.merp.discount.support.PromotionDiscountResult;
 public interface CalculatePromotionDiscountListener extends Serializable {
 
 	/**
-	 * Расчет выполнен
-	 * @param result - результат расчета
+	 * Р Р°СЃС‡РµС‚ РІС‹РїРѕР»РЅРµРЅ
+	 * @param result - СЂРµР·СѓР»СЊС‚Р°С‚ СЂР°СЃС‡РµС‚Р°
 	 */
 	void completed(PromotionDiscountResult result);
 	
 	/**
-	 * Расчет прерван
+	 * Р Р°СЃС‡РµС‚ РїСЂРµСЂРІР°РЅ
 	 */
 	void aborted();
 

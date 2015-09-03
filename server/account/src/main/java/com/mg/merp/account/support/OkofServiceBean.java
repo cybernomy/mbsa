@@ -25,7 +25,7 @@ import com.mg.merp.account.OkofServiceLocal;
 import com.mg.merp.account.model.Okof;
 
 /**
- * Бизнес-компонент "Коды ОКОФ" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљРѕРґС‹ РћРљРћР¤" 
  * 
  * @author leonova
  * @version $Id: OkofServiceBean.java,v 1.3 2006/08/23 10:29:11 leonova Exp $

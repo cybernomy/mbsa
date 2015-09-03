@@ -16,7 +16,7 @@ package com.mg.framework.generic;
 import net.sf.dozer.util.mapping.converters.CustomConverter;
 
 /**
- * Класс-предок для классов-настраиваемых преобразователей одной сущности в другую
+ * РљР»Р°СЃСЃ-РїСЂРµРґРѕРє РґР»СЏ РєР»Р°СЃСЃРѕРІ-РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РїСЂРµРѕР±СЂР°Р·РѕРІР°С‚РµР»РµР№ РѕРґРЅРѕР№ СЃСѓС‰РЅРѕСЃС‚Рё РІ РґСЂСѓРіСѓСЋ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: AbstractConverter.java,v 1.3 2007/09/24 15:49:52 safonov Exp $ 
@@ -24,30 +24,30 @@ import net.sf.dozer.util.mapping.converters.CustomConverter;
 public abstract class AbstractConverter implements CustomConverter {
 
 	/**
-	 * реализация конвертации объектов, должен быть реализован механизм 
-	 * двунаправленной трансформации (destination --> source и source --> destination)
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РєРѕРЅРІРµСЂС‚Р°С†РёРё РѕР±СЉРµРєС‚РѕРІ, РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ СЂРµР°Р»РёР·РѕРІР°РЅ РјРµС…Р°РЅРёР·Рј 
+	 * РґРІСѓРЅР°РїСЂР°РІР»РµРЅРЅРѕР№ С‚СЂР°РЅСЃС„РѕСЂРјР°С†РёРё (destination --> source Рё source --> destination)
 	 * 
-	 * @param destination	объект приемник
-	 * @param source		объект источник
-	 * @param destClass		класс объекта приемника
-	 * @param sourceClass	класс объекта источника
-	 * @return	объект полученный в ходе конвертации
+	 * @param destination	РѕР±СЉРµРєС‚ РїСЂРёРµРјРЅРёРє
+	 * @param source		РѕР±СЉРµРєС‚ РёСЃС‚РѕС‡РЅРёРє
+	 * @param destClass		РєР»Р°СЃСЃ РѕР±СЉРµРєС‚Р° РїСЂРёРµРјРЅРёРєР°
+	 * @param sourceClass	РєР»Р°СЃСЃ РѕР±СЉРµРєС‚Р° РёСЃС‚РѕС‡РЅРёРєР°
+	 * @return	РѕР±СЉРµРєС‚ РїРѕР»СѓС‡РµРЅРЅС‹Р№ РІ С…РѕРґРµ РєРѕРЅРІРµСЂС‚Р°С†РёРё
 	 */
 	abstract protected Object doConvert(Object destination, Object source, Class<?> destClass, Class<?> sourceClass);
 	
 	/**
-	 * конвертация одного объекта в другой и обратно
+	 * РєРѕРЅРІРµСЂС‚Р°С†РёСЏ РѕРґРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° РІ РґСЂСѓРіРѕР№ Рё РѕР±СЂР°С‚РЅРѕ
 	 * 
 	 * @param destination
-	 * 			Объект А	
+	 * 			РћР±СЉРµРєС‚ Рђ	
 	 * @param source
-	 * 			Объект В
+	 * 			РћР±СЉРµРєС‚ Р’
 	 * @param destClass
-	 * 			Класс объекта А
+	 * 			РљР»Р°СЃСЃ РѕР±СЉРµРєС‚Р° Рђ
 	 * @param sourceClass
-	 * 			Класс объекта В
+	 * 			РљР»Р°СЃСЃ РѕР±СЉРµРєС‚Р° Р’
 	 * 
-	 * @return	Трансформированный объект
+	 * @return	РўСЂР°РЅСЃС„РѕСЂРјРёСЂРѕРІР°РЅРЅС‹Р№ РѕР±СЉРµРєС‚
 	 */
 	@SuppressWarnings("unchecked")
 	public final Object convert(Object destination, Object source, Class destClass, Class sourceClass) {

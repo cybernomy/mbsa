@@ -17,14 +17,14 @@ package com.mg.merp.reference.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис транслятора SQL ИС модуля справочники
+ * РЎРµСЂРІРёСЃ С‚СЂР°РЅСЃР»СЏС‚РѕСЂР° SQL РРЎ РјРѕРґСѓР»СЏ СЃРїСЂР°РІРѕС‡РЅРёРєРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: SQLExceptionTranslatorServiceMBean.java,v 1.1 2006/11/17 16:28:19 safonov Exp $
  */
 public interface SQLExceptionTranslatorServiceMBean extends ServiceMBean {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:reference=SQLExceptionTranslator";
 }

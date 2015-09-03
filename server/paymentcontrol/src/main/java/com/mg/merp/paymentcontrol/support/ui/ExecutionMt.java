@@ -23,7 +23,7 @@ import com.mg.merp.paymentcontrol.ExecutionServiceLocal;
 import com.mg.merp.paymentcontrol.model.Execution;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Исполнения обязательств"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ExecutionMt.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $

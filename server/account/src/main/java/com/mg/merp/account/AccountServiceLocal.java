@@ -17,14 +17,14 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.AccPlan;
 
 /**
- * Контроллер плана счетов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РїР»Р°РЅР° СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: AccountServiceLocal.java,v 1.3 2008/03/13 06:18:18 alikaev Exp $
  */
 public interface AccountServiceLocal extends com.mg.framework.api.DataBusinessObjectService<AccPlan, Integer> {
 	/**
-	 * тип папки для плана счетов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РїР»Р°РЅР° СЃС‡РµС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 2;
 	

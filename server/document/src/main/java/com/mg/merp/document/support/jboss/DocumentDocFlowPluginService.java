@@ -27,7 +27,7 @@ import com.mg.merp.document.support.CreateDocOnComponentsDocFlowPluginFactory;
 import com.mg.merp.document.support.CreateDocumentDocFlowPluginFactory;
 
 /**
- * Реализация сервиса дополнительных модулей подсистемы "Документы"
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "Р”РѕРєСѓРјРµРЅС‚С‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentDocFlowPluginService.java,v 1.3 2007/10/23 13:55:29 alikaev Exp $

@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.core.model.Window;
 
 /**
- * Браузер окон системы
+ * Р‘СЂР°СѓР·РµСЂ РѕРєРѕРЅ СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: WindowBr.java,v 1.1 2008/03/03 13:05:04 safonov Exp $

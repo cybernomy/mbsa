@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 /**
- * Модель данных позиции таблицы "Планирование платежей"
+ * РњРѕРґРµР»СЊ РґР°РЅРЅС‹С… РїРѕР·РёС†РёРё С‚Р°Р±Р»РёС†С‹ "РџР»Р°РЅРёСЂРѕРІР°РЅРёРµ РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PlanPaymentItem.java,v 1.1 2007/05/14 05:12:10 sharapov Exp $

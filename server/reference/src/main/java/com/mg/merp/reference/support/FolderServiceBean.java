@@ -26,7 +26,7 @@ import com.mg.merp.core.model.Folder;
 import com.mg.merp.reference.FolderServiceLocal;
 
 /**
- * Áèçíåñ-êîìïîíåíò "Ïàïêè"
+ * Ğ‘Ğ¸Ğ·Ğ½ĞµÑ-ĞºĞ¾Ğ¼Ğ¿Ğ¾Ğ½ĞµĞ½Ñ‚ "ĞŸĞ°Ğ¿ĞºĞ¸"
  * 
  * @author Oleg V. Safonov
  * @author leonova
@@ -53,8 +53,8 @@ public class FolderServiceBean extends AbstractPOJODataBusinessObjectServiceBean
 		for (Integer key : primaryKeys) {
 			Folder entity = load(key);
 			Folder targetFolder = (Folder) targetEntity;
-			//íå êîïèğóåì êîğíåâóş ïàïêó è ïàïêó íà ñàìó ñåáÿ, èäåíòèôèêàòîğ äîëæåí áûòü áîëüøå èäåíòèôèêàòîğà ïğèåìíèêà, â ïğîòèâíîì
-			//ñëó÷àå íåâîçìîæíî ïîñòğîèòü äåğåâî èåğàğõèè
+			//Ğ½Ğµ ĞºĞ¾Ğ¿Ğ¸Ñ€ÑƒĞµĞ¼ ĞºĞ¾Ñ€Ğ½ĞµĞ²ÑƒÑ Ğ¿Ğ°Ğ¿ĞºÑƒ Ğ¸ Ğ¿Ğ°Ğ¿ĞºÑƒ Ğ½Ğ° ÑĞ°Ğ¼Ñƒ ÑĞµĞ±Ñ, Ğ¸Ğ´ĞµĞ½Ñ‚Ğ¸Ñ„Ğ¸ĞºĞ°Ñ‚Ğ¾Ñ€ Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ±Ñ‹Ñ‚ÑŒ Ğ±Ğ¾Ğ»ÑŒÑˆĞµ Ğ¸Ğ´ĞµĞ½Ñ‚Ğ¸Ñ„Ğ¸ĞºĞ°Ñ‚Ğ¾Ñ€Ğ° Ğ¿Ñ€Ğ¸ĞµĞ¼Ğ½Ğ¸ĞºĞ°, Ğ² Ğ¿Ñ€Ğ¾Ñ‚Ğ¸Ğ²Ğ½Ğ¾Ğ¼
+			//ÑĞ»ÑƒÑ‡Ğ°Ğµ Ğ½ĞµĞ²Ğ¾Ğ·Ğ¼Ğ¾Ğ¶Ğ½Ğ¾ Ğ¿Ğ¾ÑÑ‚Ñ€Ğ¾Ğ¸Ñ‚ÑŒ Ğ´ĞµÑ€ĞµĞ²Ğ¾ Ğ¸ĞµÑ€Ğ°Ñ€Ñ…Ğ¸Ğ¸
 			if (entity.getFolder() != null && entity.getId() > targetFolder.getId() && entity.getFolder().getId() != targetFolder.getId()) {
 				entity.setFolder(targetFolder);
 				result = true;

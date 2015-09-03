@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.ForeignLanguageServiceLocal;
 import com.mg.merp.personnelref.model.ForeignLanguage;
 
 /**
- * Реализация бизнес-компонента "Иностранные языки" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РРЅРѕСЃС‚СЂР°РЅРЅС‹Рµ СЏР·С‹РєРё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

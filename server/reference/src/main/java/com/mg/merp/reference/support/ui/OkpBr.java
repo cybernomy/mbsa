@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.Okp;
 
 /**
- * Браузер кодов ОКП
+ * Р‘СЂР°СѓР·РµСЂ РєРѕРґРѕРІ РћРљРџ
  * 
  * @author leonova
  * @version $Id: OkpBr.java,v 1.2 2006/10/19 04:39:24 leonova Exp $ 

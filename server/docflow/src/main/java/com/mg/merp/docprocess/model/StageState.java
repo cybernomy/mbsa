@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Состояние этапа документооборота
+ * РЎРѕСЃС‚РѕСЏРЅРёРµ СЌС‚Р°РїР° РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: StageState.java,v 1.2 2006/10/21 11:37:32 safonov Exp $
@@ -26,19 +26,19 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName("DocFlow.DocFlowStage.State")
 public enum StageState {
 	/**
-	 * Не выполнен
+	 * РќРµ РІС‹РїРѕР»РЅРµРЅ
 	 */
 	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#DocFlowStage.State.None")
 	NONE,
 	
 	/**
-	 * Выполнен частично
+	 * Р’С‹РїРѕР»РЅРµРЅ С‡Р°СЃС‚РёС‡РЅРѕ
 	 */
 	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#DocFlowStage.State.Partition")
 	PARTITION,
 	
 	/**
-	 * Выполнен полностью
+	 * Р’С‹РїРѕР»РЅРµРЅ РїРѕР»РЅРѕСЃС‚СЊСЋ
 	 */
 	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#DocFlowStage.State.Complete")
 	COMPLETE

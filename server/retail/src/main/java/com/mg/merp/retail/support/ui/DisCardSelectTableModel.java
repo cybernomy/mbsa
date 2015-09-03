@@ -22,7 +22,7 @@ import com.mg.merp.discount.model.Card;
 import com.mg.merp.retail.support.Messages;
 
 /**
- * Модель таблицы "Выбор дисконтной карты"
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ "Р’С‹Р±РѕСЂ РґРёСЃРєРѕРЅС‚РЅРѕР№ РєР°СЂС‚С‹"
  * 
  * @author Artem V. Sharapov
  * @version $Id: DisCardSelectTableModel.java,v 1.1 2007/10/05 07:35:57 sharapov Exp $

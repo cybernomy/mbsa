@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Количество на складах
+ * РљРѕР»РёС‡РµСЃС‚РІРѕ РЅР° СЃРєР»Р°РґР°С…
  * 
  * @author leonova
  * @version $Id: QuantityKind.java,v 1.1 2006/07/03 12:51:13 leonova Exp $ 
@@ -32,31 +32,31 @@ public enum QuantityKind {
 	EMPTY,
 	
 	/**
-	 * Фактическое количество
+	 * Р¤Р°РєС‚РёС‡РµСЃРєРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.FactQuan")
 	FACTQUAN,
 	
 	/**
-	 * Планируемый приход
+	 * РџР»Р°РЅРёСЂСѓРµРјС‹Р№ РїСЂРёС…РѕРґ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.PlanQuanIn")
 	PLANQUANIN,
 	
 	/**
-	 * Планируемый приход
+	 * РџР»Р°РЅРёСЂСѓРµРјС‹Р№ РїСЂРёС…РѕРґ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.PlanQuanOut")
 	PLANQUANOUT,
 	
 	/**
-	 * Зарезервировано
+	 * Р—Р°СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.Reserve")
 	RESERVE,
 	
 	/**
-	 * Доступное количество
+	 * Р”РѕСЃС‚СѓРїРЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.AccessQuan")
 	ACCESSQUAN

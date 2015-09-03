@@ -48,20 +48,20 @@ import com.mg.framework.utils.ReflectionUtils;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Реализация стандартной формы поддержки для бизнес-компонента. Выполняются стандартные интерактивные операции
- * над объектом-сущностью бизнес-компонента создать, изменить, просмотреть.
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃС‚Р°РЅРґР°СЂС‚РЅРѕР№ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РґР»СЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°. Р’С‹РїРѕР»РЅСЏСЋС‚СЃСЏ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рµ РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹Рµ РѕРїРµСЂР°С†РёРё
+ * РЅР°Рґ РѕР±СЉРµРєС‚РѕРј-СЃСѓС‰РЅРѕСЃС‚СЊСЋ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° СЃРѕР·РґР°С‚СЊ, РёР·РјРµРЅРёС‚СЊ, РїСЂРѕСЃРјРѕС‚СЂРµС‚СЊ.
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultMaintenanceForm.java,v 1.27 2009/02/04 10:15:49 safonov Exp $
  */
 public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceForm {
 	/**
-	 * наименование кнопки "Отмена"
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РєРЅРѕРїРєРё "РћС‚РјРµРЅР°"
 	 */
 	public static final String CANCEL_BUTTON_NAME = "CancelButton";
 
 	/**
-	 * наименование кнопки "Ок"
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РєРЅРѕРїРєРё "РћРє"
 	 */
 	public static final String OK_BUTTON_NAME = "OkButton";
 
@@ -73,36 +73,36 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	private MaintenanceConversationSession maintenanceSession;
 	
 	/**
-	 * режим обновления сущности, по умолчанию обновление отключено
+	 * СЂРµР¶РёРј РѕР±РЅРѕРІР»РµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё, РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РѕР±РЅРѕРІР»РµРЅРёРµ РѕС‚РєР»СЋС‡РµРЅРѕ
 	 */
 	private EnumSet<RefreshMode> refreshMode = EnumSet.noneOf(RefreshMode.class);
 	
 	/**
-	 * признак редактирования сложного объекта (в форме редактирования находятся
-	 * списки других объектов которые можно изменять), данные объекты создаются
-	 * в два этапа, на первом этапе заполняется и становится персистентным объект-мастер,
-	 * на втором этапе возможно создание объектов-деталей
+	 * РїСЂРёР·РЅР°Рє СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ СЃР»РѕР¶РЅРѕРіРѕ РѕР±СЉРµРєС‚Р° (РІ С„РѕСЂРјРµ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РЅР°С…РѕРґСЏС‚СЃСЏ
+	 * СЃРїРёСЃРєРё РґСЂСѓРіРёС… РѕР±СЉРµРєС‚РѕРІ РєРѕС‚РѕСЂС‹Рµ РјРѕР¶РЅРѕ РёР·РјРµРЅСЏС‚СЊ), РґР°РЅРЅС‹Рµ РѕР±СЉРµРєС‚С‹ СЃРѕР·РґР°СЋС‚СЃСЏ
+	 * РІ РґРІР° СЌС‚Р°РїР°, РЅР° РїРµСЂРІРѕРј СЌС‚Р°РїРµ Р·Р°РїРѕР»РЅСЏРµС‚СЃСЏ Рё СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РїРµСЂСЃРёСЃС‚РµРЅС‚РЅС‹Рј РѕР±СЉРµРєС‚-РјР°СЃС‚РµСЂ,
+	 * РЅР° РІС‚РѕСЂРѕРј СЌС‚Р°РїРµ РІРѕР·РјРѕР¶РЅРѕ СЃРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚РѕРІ-РґРµС‚Р°Р»РµР№
 	 */
 	private boolean isMasterDetail = false;
 	
 	/**
-	 * признак записи объекта мастера в постоянное хранилище
+	 * РїСЂРёР·РЅР°Рє Р·Р°РїРёСЃРё РѕР±СЉРµРєС‚Р° РјР°СЃС‚РµСЂР° РІ РїРѕСЃС‚РѕСЏРЅРЅРѕРµ С…СЂР°РЅРёР»РёС‰Рµ
 	 */
 	private boolean isSaved = true;
 	
 	/**
-	 * признак "замораживания" возможности редактирования для сложного объекта, при создании объекта,
-	 * после функции "добавить" редактирование объекта мастера становится невозможным, применяется
-	 * в объектах, для которых невозможно совместное изменение мастера и деталей
+	 * РїСЂРёР·РЅР°Рє "Р·Р°РјРѕСЂР°Р¶РёРІР°РЅРёСЏ" РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РґР»СЏ СЃР»РѕР¶РЅРѕРіРѕ РѕР±СЉРµРєС‚Р°, РїСЂРё СЃРѕР·РґР°РЅРёРё РѕР±СЉРµРєС‚Р°,
+	 * РїРѕСЃР»Рµ С„СѓРЅРєС†РёРё "РґРѕР±Р°РІРёС‚СЊ" СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ РѕР±СЉРµРєС‚Р° РјР°СЃС‚РµСЂР° СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РЅРµРІРѕР·РјРѕР¶РЅС‹Рј, РїСЂРёРјРµРЅСЏРµС‚СЃСЏ
+	 * РІ РѕР±СЉРµРєС‚Р°С…, РґР»СЏ РєРѕС‚РѕСЂС‹С… РЅРµРІРѕР·РјРѕР¶РЅРѕ СЃРѕРІРјРµСЃС‚РЅРѕРµ РёР·РјРµРЅРµРЅРёРµ РјР°СЃС‚РµСЂР° Рё РґРµС‚Р°Р»РµР№
 	 */
 	private boolean isFreezeMaster = false;
 	
 	/**
-	 * установка признака "только для чтения"
+	 * СѓСЃС‚Р°РЅРѕРІРєР° РїСЂРёР·РЅР°РєР° "С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"
 	 * 
 	 * @see #doSetDependentReadOnly(boolean)
 	 * 
-	 * @param readOnly	признак "только для чтения"
+	 * @param readOnly	РїСЂРёР·РЅР°Рє "С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"
 	 */
 	private void setDependentReadOnly(boolean readOnly) {
 		doSetDependentReadOnly(readOnly);
@@ -129,18 +129,18 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}	
 	
 	/**
-	 * получить признак "замораживания"
+	 * РїРѕР»СѓС‡РёС‚СЊ РїСЂРёР·РЅР°Рє "Р·Р°РјРѕСЂР°Р¶РёРІР°РЅРёСЏ"
 	 * 
 	 * @see #isFreezeMaster
 	 * 
-	 * @return	признак "замораживания"
+	 * @return	РїСЂРёР·РЅР°Рє "Р·Р°РјРѕСЂР°Р¶РёРІР°РЅРёСЏ"
 	 */
 	public boolean isFreezeMaster() {
 		return isFreezeMaster;
 	}
 	
 	/**
-	 * установить признак "замораживания"
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРёР·РЅР°Рє "Р·Р°РјРѕСЂР°Р¶РёРІР°РЅРёСЏ"
 	 * 
 	 * @see #isFreezeMaster
 	 * 
@@ -151,34 +151,34 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 
 	/**
-	 * получить режим обновления сущности
+	 * РїРѕР»СѓС‡РёС‚СЊ СЂРµР¶РёРј РѕР±РЅРѕРІР»РµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @return the refreshMode режим обновления
+	 * @return the refreshMode СЂРµР¶РёРј РѕР±РЅРѕРІР»РµРЅРёСЏ
 	 */
 	protected EnumSet<RefreshMode> getRefreshMode() {
 		return refreshMode;
 	}
 
 	/**
-	 * установить режим обновления сущности, в случае если при сохранении в хранилище происходит изменение
-	 * сущности, например с помощью триггера СУБД, и требуется показать данные изменения в форме поддержки
-	 * то необходимо установить соответствующий режим обновления
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЂРµР¶РёРј РѕР±РЅРѕРІР»РµРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё, РІ СЃР»СѓС‡Р°Рµ РµСЃР»Рё РїСЂРё СЃРѕС…СЂР°РЅРµРЅРёРё РІ С…СЂР°РЅРёР»РёС‰Рµ РїСЂРѕРёСЃС…РѕРґРёС‚ РёР·РјРµРЅРµРЅРёРµ
+	 * СЃСѓС‰РЅРѕСЃС‚Рё, РЅР°РїСЂРёРјРµСЂ СЃ РїРѕРјРѕС‰СЊСЋ С‚СЂРёРіРіРµСЂР° РЎРЈР‘Р”, Рё С‚СЂРµР±СѓРµС‚СЃСЏ РїРѕРєР°Р·Р°С‚СЊ РґР°РЅРЅС‹Рµ РёР·РјРµРЅРµРЅРёСЏ РІ С„РѕСЂРјРµ РїРѕРґРґРµСЂР¶РєРё
+	 * С‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РёР№ СЂРµР¶РёРј РѕР±РЅРѕРІР»РµРЅРёСЏ
 	 * 
 	 * @see RefreshMode
 	 * 
-	 * @param refreshMode режим обновления
+	 * @param refreshMode СЂРµР¶РёРј РѕР±РЅРѕРІР»РµРЅРёСЏ
 	 */
 	protected void setRefreshMode(EnumSet<RefreshMode> refreshMode) {
 		this.refreshMode = refreshMode;
 	}
 
 	/**
-	 * событие на действие "добавить"
+	 * СЃРѕР±С‹С‚РёРµ РЅР° РґРµР№СЃС‚РІРёРµ "РґРѕР±Р°РІРёС‚СЊ"
 	 *
 	 */
 	protected void doOnAdd() {
-		//если мастер-деталь, то изменим текст кнопки по смыслу действия,
-		//сбросим флаг записи
+		//РµСЃР»Рё РјР°СЃС‚РµСЂ-РґРµС‚Р°Р»СЊ, С‚Рѕ РёР·РјРµРЅРёРј С‚РµРєСЃС‚ РєРЅРѕРїРєРё РїРѕ СЃРјС‹СЃР»Сѓ РґРµР№СЃС‚РІРёСЏ,
+		//СЃР±СЂРѕСЃРёРј С„Р»Р°Рі Р·Р°РїРёСЃРё
 		if (isMasterDetail) {
 			isSaved = false;
 			setDependentReadOnly(true);
@@ -187,13 +187,13 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 
 	/**
-	 * установка в формах для сложных объектах (<code>isMasterDetail == true</code>) признака "только для чтения",
-	 * как правило используется для предотвращения изменений свойств зависящих от объекта-мастера, например
-	 * запретить создание объектов-деталей если объект-мастер еще не создан. Реализовано стандартное поведение:
-	 * блокирование элемента {@link com.mg.framework.api.ui.widget.MaintenanceTable MaintenanceTable}. В потомках
-	 * возможно переопределение стандартного поведения. 
+	 * СѓСЃС‚Р°РЅРѕРІРєР° РІ С„РѕСЂРјР°С… РґР»СЏ СЃР»РѕР¶РЅС‹С… РѕР±СЉРµРєС‚Р°С… (<code>isMasterDetail == true</code>) РїСЂРёР·РЅР°РєР° "С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ",
+	 * РєР°Рє РїСЂР°РІРёР»Рѕ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ РїСЂРµРґРѕС‚РІСЂР°С‰РµРЅРёСЏ РёР·РјРµРЅРµРЅРёР№ СЃРІРѕР№СЃС‚РІ Р·Р°РІРёСЃСЏС‰РёС… РѕС‚ РѕР±СЉРµРєС‚Р°-РјР°СЃС‚РµСЂР°, РЅР°РїСЂРёРјРµСЂ
+	 * Р·Р°РїСЂРµС‚РёС‚СЊ СЃРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚РѕРІ-РґРµС‚Р°Р»РµР№ РµСЃР»Рё РѕР±СЉРµРєС‚-РјР°СЃС‚РµСЂ РµС‰Рµ РЅРµ СЃРѕР·РґР°РЅ. Р РµР°Р»РёР·РѕРІР°РЅРѕ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРµ РїРѕРІРµРґРµРЅРёРµ:
+	 * Р±Р»РѕРєРёСЂРѕРІР°РЅРёРµ СЌР»РµРјРµРЅС‚Р° {@link com.mg.framework.api.ui.widget.MaintenanceTable MaintenanceTable}. Р’ РїРѕС‚РѕРјРєР°С…
+	 * РІРѕР·РјРѕР¶РЅРѕ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅРёРµ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ РїРѕРІРµРґРµРЅРёСЏ. 
 	 * 
-	 * @param readOnly	признак "только для чтения"
+	 * @param readOnly	РїСЂРёР·РЅР°Рє "С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"
 	 */
 	protected void doSetDependentReadOnly(boolean readOnly) {
 		for (Widget widget : view.getWidgets()) {
@@ -208,7 +208,7 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 
 	/**
-	 * событие на действие "изменить"
+	 * СЃРѕР±С‹С‚РёРµ РЅР° РґРµР№СЃС‚РІРёРµ "РёР·РјРµРЅРёС‚СЊ"
 	 *
 	 */
 	protected void doOnEdit() {
@@ -216,7 +216,7 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * событие на действие "копировать"
+	 * СЃРѕР±С‹С‚РёРµ РЅР° РґРµР№СЃС‚РІРёРµ "РєРѕРїРёСЂРѕРІР°С‚СЊ"
 	 *
 	 */
 	protected void doOnClone() {
@@ -224,7 +224,7 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * событие на действие "просмотр"
+	 * СЃРѕР±С‹С‚РёРµ РЅР° РґРµР№СЃС‚РІРёРµ "РїСЂРѕСЃРјРѕС‚СЂ"
 	 *
 	 */
 	protected void doOnView() {
@@ -235,7 +235,7 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * событие на действие "сохранить"
+	 * СЃРѕР±С‹С‚РёРµ РЅР° РґРµР№СЃС‚РІРёРµ "СЃРѕС…СЂР°РЅРёС‚СЊ"
 	 *
 	 */
 	protected void doOnSave() {
@@ -243,7 +243,7 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * событие на действие "отменить"
+	 * СЃРѕР±С‹С‚РёРµ РЅР° РґРµР№СЃС‚РІРёРµ "РѕС‚РјРµРЅРёС‚СЊ"
 	 *
 	 */
 	protected void doOnCancel() {
@@ -251,21 +251,21 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 
 	/**
-	 * получить текущее действие
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰РµРµ РґРµР№СЃС‚РІРёРµ
 	 * 
 	 * @see com.mg.framework.api.ui.MaintenanceAction
 	 * 
-	 * @return	текущее действие
+	 * @return	С‚РµРєСѓС‰РµРµ РґРµР№СЃС‚РІРёРµ
 	 */
 	protected MaintenanceAction getAction() {
 		return action;
 	}
 	
 	/**
-	 * получить текущий объект-сущность
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰РёР№ РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ
 	 * 
-	 * @return	объект-сущность
-	 * @throws IllegalStateException если объект-сущность <code>null</code>
+	 * @return	РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ
+	 * @throws IllegalStateException РµСЃР»Рё РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ <code>null</code>
 	 */
 	protected PersistentObject getEntity() {
 		if (entity == null)
@@ -274,7 +274,7 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * установка объекта-сущности
+	 * СѓСЃС‚Р°РЅРѕРІРєР° РѕР±СЉРµРєС‚Р°-СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
 	 * @param entity
 	 */
@@ -283,9 +283,9 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * получить сервис бизнес-компонента поддерживаемого данной формой
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РїРѕРґРґРµСЂР¶РёРІР°РµРјРѕРіРѕ РґР°РЅРЅРѕР№ С„РѕСЂРјРѕР№
 	 * 
-	 * @return	сервис бизнес-компонента
+	 * @return	СЃРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 */
 	protected DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> getService() {
 		if (service == null)
@@ -298,12 +298,12 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	 */
 	@Override
 	protected void doOnActionClose(WidgetEvent event) {
-		//проверка изменения модели при закрытии формы кнопкой Х или комбинацией Ctrl+F4
+		//РїСЂРѕРІРµСЂРєР° РёР·РјРµРЅРµРЅРёСЏ РјРѕРґРµР»Рё РїСЂРё Р·Р°РєСЂС‹С‚РёРё С„РѕСЂРјС‹ РєРЅРѕРїРєРѕР№ РҐ РёР»Рё РєРѕРјР±РёРЅР°С†РёРµР№ Ctrl+F4
 		if (EnumSet.of(MaintenanceAction.ADD, MaintenanceAction.EDIT, MaintenanceAction.CLONE).contains(action)
 				&& hasModelChanges()) {
 			Messages msg = Messages.getInstance();
 			final String yesButton = msg.getMessage(Messages.YES_BUTTON_TEXT), noButton = msg.getMessage(Messages.NO_BUTTON_TEXT);
-			//при изменении вызываем диалог: Сохранить? Да, Нет, Отменить
+			//РїСЂРё РёР·РјРµРЅРµРЅРёРё РІС‹Р·С‹РІР°РµРј РґРёР°Р»РѕРі: РЎРѕС…СЂР°РЅРёС‚СЊ? Р”Р°, РќРµС‚, РћС‚РјРµРЅРёС‚СЊ
 			UIUtils.showAlert(Alert.MessageType.QUESTION_MESSAGE, null,
 					msg.getMessage(Messages.CLOSE_MAINTENANCE_FORM_WARNING),
 					yesButton, noButton,
@@ -311,13 +311,13 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 
 				public void alertClosing(String value) {
 					if (yesButton.equals(value))
-						//выполняем сохранение, создаем новое событе, т.к. данный метод ожидает кнопку Ok
+						//РІС‹РїРѕР»РЅСЏРµРј СЃРѕС…СЂР°РЅРµРЅРёРµ, СЃРѕР·РґР°РµРј РЅРѕРІРѕРµ СЃРѕР±С‹С‚Рµ, С‚.Рє. РґР°РЅРЅС‹Р№ РјРµС‚РѕРґ РѕР¶РёРґР°РµС‚ РєРЅРѕРїРєСѓ Ok
 						doSave(new WidgetEvent(view.getWidget(OK_BUTTON_NAME)));
 					else if (noButton.equals(value))
 						try {
 							doCancel();
 						} catch (Exception e) {
-							//в случае ИС всеравно закроем форму, иначе нет никакого способа ее закрыть
+							//РІ СЃР»СѓС‡Р°Рµ РРЎ РІСЃРµСЂР°РІРЅРѕ Р·Р°РєСЂРѕРµРј С„РѕСЂРјСѓ, РёРЅР°С‡Рµ РЅРµС‚ РЅРёРєР°РєРѕРіРѕ СЃРїРѕСЃРѕР±Р° РµРµ Р·Р°РєСЂС‹С‚СЊ
 							logger.error("cancel maintenance failed", e);
 							close();
 						}
@@ -325,7 +325,7 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 
 			});
 		} else
-			doCancel(); //посылаем событие отмены приводя поведение в соответствии с кнопкой "Отменить"
+			doCancel(); //РїРѕСЃС‹Р»Р°РµРј СЃРѕР±С‹С‚РёРµ РѕС‚РјРµРЅС‹ РїСЂРёРІРѕРґСЏ РїРѕРІРµРґРµРЅРёРµ РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё СЃ РєРЅРѕРїРєРѕР№ "РћС‚РјРµРЅРёС‚СЊ"
 	}
 
 	/* (non-Javadoc)
@@ -349,7 +349,7 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 				doOnView();
 				break;
 		}
-		//отправим сообщение после инициализации widgets
+		//РѕС‚РїСЂР°РІРёРј СЃРѕРѕР±С‰РµРЅРёРµ РїРѕСЃР»Рµ РёРЅРёС†РёР°Р»РёР·Р°С†РёРё widgets
 		if (action != MaintenanceAction.ADD)
 			fireMasterModelChange(new ModelChangeEvent(this, this.entity));
 	}
@@ -359,7 +359,7 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	 */
 	@Override
 	protected Object doGetFieldValue(String name) throws NoSuchFieldException, IllegalAccessException {
-		//пытаемся загрузить из полей объекта entity, затем из полей формы
+		//РїС‹С‚Р°РµРјСЃСЏ Р·Р°РіСЂСѓР·РёС‚СЊ РёР· РїРѕР»РµР№ РѕР±СЉРµРєС‚Р° entity, Р·Р°С‚РµРј РёР· РїРѕР»РµР№ С„РѕСЂРјС‹
 		try {
 			return entity.getAttribute(name);
 		}
@@ -407,7 +407,7 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * перечитать значение объекта-сущности из хранилища
+	 * РїРµСЂРµС‡РёС‚Р°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РѕР±СЉРµРєС‚Р°-СЃСѓС‰РЅРѕСЃС‚Рё РёР· С…СЂР°РЅРёР»РёС‰Р°
 	 */
 	protected void doRefreshModel() {
 		PersistentManager pm = ServerUtils.getPersistentManager();
@@ -418,26 +418,26 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * выполнить сохранение
+	 * РІС‹РїРѕР»РЅРёС‚СЊ СЃРѕС…СЂР°РЅРµРЅРёРµ
 	 * 
-	 * @param event	событие от элемента вызвавшего событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ РѕС‚ СЌР»РµРјРµРЅС‚Р° РІС‹Р·РІР°РІС€РµРіРѕ СЃРѕР±С‹С‚РёРµ
 	 */
 	protected void doSave(WidgetEvent event) {
 		doOnSave();
 		if (isMasterDetail) {
 			if (MaintenanceAction.CLONE.equals(action)) {
-				//при копировании сложного объекта на основании isFreezeMaster принимаем решение
-				//о редактировании объектов зависящих от деталей, при первом проходе
-				//закрываем кнопку ОК, контроллеры наследники должны открыть нужные
-				//детали на добавление
+				//РїСЂРё РєРѕРїРёСЂРѕРІР°РЅРёРё СЃР»РѕР¶РЅРѕРіРѕ РѕР±СЉРµРєС‚Р° РЅР° РѕСЃРЅРѕРІР°РЅРёРё isFreezeMaster РїСЂРёРЅРёРјР°РµРј СЂРµС€РµРЅРёРµ
+				//Рѕ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРё РѕР±СЉРµРєС‚РѕРІ Р·Р°РІРёСЃСЏС‰РёС… РѕС‚ РґРµС‚Р°Р»РµР№, РїСЂРё РїРµСЂРІРѕРј РїСЂРѕС…РѕРґРµ
+				//Р·Р°РєСЂС‹РІР°РµРј РєРЅРѕРїРєСѓ РћРљ, РєРѕРЅС‚СЂРѕР»Р»РµСЂС‹ РЅР°СЃР»РµРґРЅРёРєРё РґРѕР»Р¶РЅС‹ РѕС‚РєСЂС‹С‚СЊ РЅСѓР¶РЅС‹Рµ
+				//РґРµС‚Р°Р»Рё РЅР° РґРѕР±Р°РІР»РµРЅРёРµ
 				entity = service.store(entity);
-				//для отработки логики на СУБД
+				//РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё Р»РѕРіРёРєРё РЅР° РЎРЈР‘Р”
 				ServerUtils.getPersistentManager().flush();
 				if (refreshMode != null && refreshMode.contains(RefreshMode.AFTER_STORE))
 					doRefreshModel();
 				if (isFreezeMaster()) {
 					Button okButton = (Button) event.getWidget();
-					//XXX по состоянию кнопки определяем был ли уже один проход
+					//XXX РїРѕ СЃРѕСЃС‚РѕСЏРЅРёСЋ РєРЅРѕРїРєРё РѕРїСЂРµРґРµР»СЏРµРј Р±С‹Р» Р»Рё СѓР¶Рµ РѕРґРёРЅ РїСЂРѕС…РѕРґ
 					if (okButton.isEnabled())
 						okButton.setEnabled(false);
 					else {
@@ -450,10 +450,10 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 				}
 			} else {
 				if (!isSaved) {
-					//если мастер-деталь и не сохранялся, то сбрасываем данные в хранилище
-					//переводим в режим стандартной обработки
+					//РµСЃР»Рё РјР°СЃС‚РµСЂ-РґРµС‚Р°Р»СЊ Рё РЅРµ СЃРѕС…СЂР°РЅСЏР»СЃСЏ, С‚Рѕ СЃР±СЂР°СЃС‹РІР°РµРј РґР°РЅРЅС‹Рµ РІ С…СЂР°РЅРёР»РёС‰Рµ
+					//РїРµСЂРµРІРѕРґРёРј РІ СЂРµР¶РёРј СЃС‚Р°РЅРґР°СЂС‚РЅРѕР№ РѕР±СЂР°Р±РѕС‚РєРё
 					service.create(entity);
-					//для отработки логики на СУБД
+					//РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё Р»РѕРіРёРєРё РЅР° РЎРЈР‘Р”
 					ServerUtils.getPersistentManager().flush();
 					if (refreshMode != null && refreshMode.contains(RefreshMode.AFTER_CREATE))
 						doRefreshModel();
@@ -462,17 +462,17 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 					if (isFreezeMaster)
 						okButton.setEnabled(false);
 					okButton.setText(Messages.getInstance().getMessage(Messages.OK_BUTTON_TEXT));
-					//изменим на "Закрыть", т.к. сложный объект уже добавлен в бд, и отменить это действие нельзя
+					//РёР·РјРµРЅРёРј РЅР° "Р—Р°РєСЂС‹С‚СЊ", С‚.Рє. СЃР»РѕР¶РЅС‹Р№ РѕР±СЉРµРєС‚ СѓР¶Рµ РґРѕР±Р°РІР»РµРЅ РІ Р±Рґ, Рё РѕС‚РјРµРЅРёС‚СЊ СЌС‚Рѕ РґРµР№СЃС‚РІРёРµ РЅРµР»СЊР·СЏ
 					((Button) view.getWidget(CANCEL_BUTTON_NAME)).setText(Messages.getInstance().getMessage(Messages.CLOSE_BUTTON_TEXT));
-					//отправим событие о смене мастера, в сложных объектах существуют детали
-					//которые необходимо загружать
+					//РѕС‚РїСЂР°РІРёРј СЃРѕР±С‹С‚РёРµ Рѕ СЃРјРµРЅРµ РјР°СЃС‚РµСЂР°, РІ СЃР»РѕР¶РЅС‹С… РѕР±СЉРµРєС‚Р°С… СЃСѓС‰РµСЃС‚РІСѓСЋС‚ РґРµС‚Р°Р»Рё
+					//РєРѕС‚РѕСЂС‹Рµ РЅРµРѕР±С…РѕРґРёРјРѕ Р·Р°РіСЂСѓР¶Р°С‚СЊ
 					fireMasterModelChange(new ModelChangeEvent(this, this.entity));
 					setDependentReadOnly(false);
 				}
 				else {
-					//объект уже был добавлен
+					//РѕР±СЉРµРєС‚ СѓР¶Рµ Р±С‹Р» РґРѕР±Р°РІР»РµРЅ
 					entity = service.store(entity);
-					//для отработки логики на СУБД
+					//РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё Р»РѕРіРёРєРё РЅР° РЎРЈР‘Р”
 					ServerUtils.getPersistentManager().flush();
 					if (refreshMode != null && refreshMode.contains(RefreshMode.AFTER_STORE))
 						doRefreshModel();
@@ -482,11 +482,11 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 			}
 		}
 		else {
-			//выполняем стандартные функции по закрытию формы
+			//РІС‹РїРѕР»РЅСЏРµРј СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рµ С„СѓРЅРєС†РёРё РїРѕ Р·Р°РєСЂС‹С‚РёСЋ С„РѕСЂРјС‹
 			switch (action) {
 			case ADD:
 				service.create(entity);
-				//для отработки логики на СУБД
+				//РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё Р»РѕРіРёРєРё РЅР° РЎРЈР‘Р”
 				ServerUtils.getPersistentManager().flush();
 				if (refreshMode != null && refreshMode.contains(RefreshMode.AFTER_CREATE))
 					doRefreshModel();
@@ -494,7 +494,7 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 			case EDIT:
 			case CLONE:
 				entity = service.store(entity);
-				//для отработки логики на СУБД
+				//РґР»СЏ РѕС‚СЂР°Р±РѕС‚РєРё Р»РѕРіРёРєРё РЅР° РЎРЈР‘Р”
 				ServerUtils.getPersistentManager().flush();
 				if (refreshMode != null && refreshMode.contains(RefreshMode.AFTER_STORE))
 					doRefreshModel();
@@ -506,31 +506,31 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * выполнить отмену действий
+	 * РІС‹РїРѕР»РЅРёС‚СЊ РѕС‚РјРµРЅСѓ РґРµР№СЃС‚РІРёР№
 	 *
 	 */
 	protected void doCancel() {
 		doOnCancel();
-		//в сложном объекте на этапе "создания сущности" если была вставка в сессию (isSaved == true)
-		//посылаем событие записи даже на отмене, т.к. была операция вставки,
-		//в остальных случаях посылаем событие отмены и обновляем сущность из базы для предотвращения
-		//вставки отмененных данных (если сущность прокси, то сессия автоматически внесет изменения
-		//тех полей сущности которые изменил пользователь в форме), заменили это действие операцией undo,
-		//данная операция вне зависимости от состояния сущности приведет к ее восстановлению,
-		//исключаем тем самым дополнительный запрос к БД и ситуацию когда сущность была изменена до показа
-		//в форме поддержки и произведена отмена, в случае использования refresh были бы сброшены и
-		//изменения произведенные до формы поддержки
+		//РІ СЃР»РѕР¶РЅРѕРј РѕР±СЉРµРєС‚Рµ РЅР° СЌС‚Р°РїРµ "СЃРѕР·РґР°РЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё" РµСЃР»Рё Р±С‹Р»Р° РІСЃС‚Р°РІРєР° РІ СЃРµСЃСЃРёСЋ (isSaved == true)
+		//РїРѕСЃС‹Р»Р°РµРј СЃРѕР±С‹С‚РёРµ Р·Р°РїРёСЃРё РґР°Р¶Рµ РЅР° РѕС‚РјРµРЅРµ, С‚.Рє. Р±С‹Р»Р° РѕРїРµСЂР°С†РёСЏ РІСЃС‚Р°РІРєРё,
+		//РІ РѕСЃС‚Р°Р»СЊРЅС‹С… СЃР»СѓС‡Р°СЏС… РїРѕСЃС‹Р»Р°РµРј СЃРѕР±С‹С‚РёРµ РѕС‚РјРµРЅС‹ Рё РѕР±РЅРѕРІР»СЏРµРј СЃСѓС‰РЅРѕСЃС‚СЊ РёР· Р±Р°Р·С‹ РґР»СЏ РїСЂРµРґРѕС‚РІСЂР°С‰РµРЅРёСЏ
+		//РІСЃС‚Р°РІРєРё РѕС‚РјРµРЅРµРЅРЅС‹С… РґР°РЅРЅС‹С… (РµСЃР»Рё СЃСѓС‰РЅРѕСЃС‚СЊ РїСЂРѕРєСЃРё, С‚Рѕ СЃРµСЃСЃРёСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РІРЅРµСЃРµС‚ РёР·РјРµРЅРµРЅРёСЏ
+		//С‚РµС… РїРѕР»РµР№ СЃСѓС‰РЅРѕСЃС‚Рё РєРѕС‚РѕСЂС‹Рµ РёР·РјРµРЅРёР» РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РІ С„РѕСЂРјРµ), Р·Р°РјРµРЅРёР»Рё СЌС‚Рѕ РґРµР№СЃС‚РІРёРµ РѕРїРµСЂР°С†РёРµР№ undo,
+		//РґР°РЅРЅР°СЏ РѕРїРµСЂР°С†РёСЏ РІРЅРµ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ СЃРѕСЃС‚РѕСЏРЅРёСЏ СЃСѓС‰РЅРѕСЃС‚Рё РїСЂРёРІРµРґРµС‚ Рє РµРµ РІРѕСЃСЃС‚Р°РЅРѕРІР»РµРЅРёСЋ,
+		//РёСЃРєР»СЋС‡Р°РµРј С‚РµРј СЃР°РјС‹Рј РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ Р·Р°РїСЂРѕСЃ Рє Р‘Р” Рё СЃРёС‚СѓР°С†РёСЋ РєРѕРіРґР° СЃСѓС‰РЅРѕСЃС‚СЊ Р±С‹Р»Р° РёР·РјРµРЅРµРЅР° РґРѕ РїРѕРєР°Р·Р°
+		//РІ С„РѕСЂРјРµ РїРѕРґРґРµСЂР¶РєРё Рё РїСЂРѕРёР·РІРµРґРµРЅР° РѕС‚РјРµРЅР°, РІ СЃР»СѓС‡Р°Рµ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ refresh Р±С‹Р»Рё Р±С‹ СЃР±СЂРѕС€РµРЅС‹ Рё
+		//РёР·РјРµРЅРµРЅРёСЏ РїСЂРѕРёР·РІРµРґРµРЅРЅС‹Рµ РґРѕ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё
 		if (isMasterDetail && isSaved && action == MaintenanceAction.ADD)
 			fireSaveAction(new MaintenanceFormEvent(this, entity));
 		else if (action == MaintenanceAction.CLONE) {
 			Button okButton = (Button) view.getWidget(OK_BUTTON_NAME);
-			//XXX по состоянию кнопки определяем был ли уже один проход, если был, то запись сохраняли
-			//и даже при отмене генерируем событие записи
+			//XXX РїРѕ СЃРѕСЃС‚РѕСЏРЅРёСЋ РєРЅРѕРїРєРё РѕРїСЂРµРґРµР»СЏРµРј Р±С‹Р» Р»Рё СѓР¶Рµ РѕРґРёРЅ РїСЂРѕС…РѕРґ, РµСЃР»Рё Р±С‹Р», С‚Рѕ Р·Р°РїРёСЃСЊ СЃРѕС…СЂР°РЅСЏР»Рё
+			//Рё РґР°Р¶Рµ РїСЂРё РѕС‚РјРµРЅРµ РіРµРЅРµСЂРёСЂСѓРµРј СЃРѕР±С‹С‚РёРµ Р·Р°РїРёСЃРё
 			if (isFreezeMaster() && !okButton.isEnabled())
 				fireSaveAction(new MaintenanceFormEvent(this, entity));
 			else {
-				//удаляем, т.к. при копировании сущность сначала создается, неоптимально,
-				//но так реализовано копирование
+				//СѓРґР°Р»СЏРµРј, С‚.Рє. РїСЂРё РєРѕРїРёСЂРѕРІР°РЅРёРё СЃСѓС‰РЅРѕСЃС‚СЊ СЃРЅР°С‡Р°Р»Р° СЃРѕР·РґР°РµС‚СЃСЏ, РЅРµРѕРїС‚РёРјР°Р»СЊРЅРѕ,
+				//РЅРѕ С‚Р°Рє СЂРµР°Р»РёР·РѕРІР°РЅРѕ РєРѕРїРёСЂРѕРІР°РЅРёРµ
 				ServerUtils.getPersistentManager().remove(entity);
 				fireCancelAction(new MaintenanceFormEvent(this, entity));
 			}
@@ -540,7 +540,7 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 				try {
 					pm.refresh(entity);
 				} catch (RuntimeException e) {
-					//при обновлении возможны ИС, например если сущность еще не существует в базе
+					//РїСЂРё РѕР±РЅРѕРІР»РµРЅРёРё РІРѕР·РјРѕР¶РЅС‹ РРЎ, РЅР°РїСЂРёРјРµСЂ РµСЃР»Рё СЃСѓС‰РЅРѕСЃС‚СЊ РµС‰Рµ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ РІ Р±Р°Р·Рµ
 					logger.debug("refresh entity failed", e);
 				}*/
 			undoAll();
@@ -550,7 +550,7 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * событие срабатывающее перед сбросом модели в вид
+	 * СЃРѕР±С‹С‚РёРµ СЃСЂР°Р±Р°С‚С‹РІР°СЋС‰РµРµ РїРµСЂРµРґ СЃР±СЂРѕСЃРѕРј РјРѕРґРµР»Рё РІ РІРёРґ
 	 *
 	 */
 	protected void doBeforeOutput() {
@@ -558,7 +558,7 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * событие срабатывающее после сброса значений из вида в модель
+	 * СЃРѕР±С‹С‚РёРµ СЃСЂР°Р±Р°С‚С‹РІР°СЋС‰РµРµ РїРѕСЃР»Рµ СЃР±СЂРѕСЃР° Р·РЅР°С‡РµРЅРёР№ РёР· РІРёРґР° РІ РјРѕРґРµР»СЊ
 	 *
 	 */
 	protected void doAfterInput(boolean isSaveAction, boolean isCloseAction) {
@@ -572,15 +572,15 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	 */
 	@Override
 	protected Object doInvokeHandler(String handlerName, Object ... args) throws NoSuchMethodException, IllegalArgumentException, IllegalAccessException, InvocationTargetException {
-		//проверка частного случая обработки кнопок "Сохранить" и "Отменить"
+		//РїСЂРѕРІРµСЂРєР° С‡Р°СЃС‚РЅРѕРіРѕ СЃР»СѓС‡Р°СЏ РѕР±СЂР°Р±РѕС‚РєРё РєРЅРѕРїРѕРє "РЎРѕС…СЂР°РЅРёС‚СЊ" Рё "РћС‚РјРµРЅРёС‚СЊ"
 		boolean isWidget = args.length > 0 && args[0] instanceof WidgetEvent;
 		String widgetName = null;
 		if (isWidget)
 			widgetName = ((WidgetEvent) args[0]).getWidget().getName();
 		doAfterInput(OK_BUTTON_NAME.equals(widgetName), CANCEL_BUTTON_NAME.equals(widgetName));
-		//вызов обработчика события
+		//РІС‹Р·РѕРІ РѕР±СЂР°Р±РѕС‚С‡РёРєР° СЃРѕР±С‹С‚РёСЏ
 		Object result = super.doInvokeHandler(handlerName, args);
-		//вызовем обработчик если форма не закрыта
+		//РІС‹Р·РѕРІРµРј РѕР±СЂР°Р±РѕС‚С‡РёРє РµСЃР»Рё С„РѕСЂРјР° РЅРµ Р·Р°РєСЂС‹С‚Р°
 		if (view.isVisible())
 			doBeforeOutput();
 		return result;
@@ -600,9 +600,9 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * добавить слушателя на событие смены модели формы поддержки
+	 * РґРѕР±Р°РІРёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЏ РЅР° СЃРѕР±С‹С‚РёРµ СЃРјРµРЅС‹ РјРѕРґРµР»Рё С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	public void addMasterModelListener(final MasterModelListener listener) {
 		if (listener != null)
@@ -610,9 +610,9 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 
 	/**
-	 * удалить слушателя на событие смены модели формы поддержки
+	 * СѓРґР°Р»РёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЏ РЅР° СЃРѕР±С‹С‚РёРµ СЃРјРµРЅС‹ РјРѕРґРµР»Рё С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	public void removeMasterModelListener(final MasterModelListener listener) {
 		this.modelListeners.remove(listener);
@@ -634,9 +634,9 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * отправка сообщения о событии формы поддержки "Выполнено"
+	 * РѕС‚РїСЂР°РІРєР° СЃРѕРѕР±С‰РµРЅРёСЏ Рѕ СЃРѕР±С‹С‚РёРё С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "Р’С‹РїРѕР»РЅРµРЅРѕ"
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void fireSaveAction(MaintenanceFormEvent event) {
 		for (MaintenanceFormActionListener listener : actionListeners)
@@ -644,9 +644,9 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * отправка сообщения о событии формы поддержки "Отменено"
+	 * РѕС‚РїСЂР°РІРєР° СЃРѕРѕР±С‰РµРЅРёСЏ Рѕ СЃРѕР±С‹С‚РёРё С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РћС‚РјРµРЅРµРЅРѕ"
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void fireCancelAction(MaintenanceFormEvent event) {
 		for (MaintenanceFormActionListener listener : actionListeners)
@@ -654,11 +654,11 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 	
 	/**
-	 * отправка сообщения о смене модели формы поддержки, данное событие не срабатывает
-	 * при функции "добавить" простого объекта, сообщение будет послано для сложного объекта
-	 * только после того, как он станет персистентным, смотри {@link #isMasterDetail}
+	 * РѕС‚РїСЂР°РІРєР° СЃРѕРѕР±С‰РµРЅРёСЏ Рѕ СЃРјРµРЅРµ РјРѕРґРµР»Рё С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё, РґР°РЅРЅРѕРµ СЃРѕР±С‹С‚РёРµ РЅРµ СЃСЂР°Р±Р°С‚С‹РІР°РµС‚
+	 * РїСЂРё С„СѓРЅРєС†РёРё "РґРѕР±Р°РІРёС‚СЊ" РїСЂРѕСЃС‚РѕРіРѕ РѕР±СЉРµРєС‚Р°, СЃРѕРѕР±С‰РµРЅРёРµ Р±СѓРґРµС‚ РїРѕСЃР»Р°РЅРѕ РґР»СЏ СЃР»РѕР¶РЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+	 * С‚РѕР»СЊРєРѕ РїРѕСЃР»Рµ С‚РѕРіРѕ, РєР°Рє РѕРЅ СЃС‚Р°РЅРµС‚ РїРµСЂСЃРёСЃС‚РµРЅС‚РЅС‹Рј, СЃРјРѕС‚СЂРё {@link #isMasterDetail}
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void fireMasterModelChange(ModelChangeEvent event) {
 		for(MasterModelListener listener : modelListeners)
@@ -666,25 +666,25 @@ public class DefaultMaintenanceForm extends AbstractForm implements MaintenanceF
 	}
 
 	/**
-	 * обработчик события "Сохранить"
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РЎРѕС…СЂР°РЅРёС‚СЊ"
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	protected void onActionSave(WidgetEvent event) {
 		doSave(event);
 	}
 	
 	/**
-	 * обработчик события "Отменить"
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РћС‚РјРµРЅРёС‚СЊ"
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	protected void onActionCancel(WidgetEvent event) {
 		doCancel();
 	}
 
 	/**
-	 * перечитать значение объекта-сущности из хранилища и обновить вид
+	 * РїРµСЂРµС‡РёС‚Р°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РѕР±СЉРµРєС‚Р°-СЃСѓС‰РЅРѕСЃС‚Рё РёР· С…СЂР°РЅРёР»РёС‰Р° Рё РѕР±РЅРѕРІРёС‚СЊ РІРёРґ
 	 *
 	 */
 	public void refreshModel() {

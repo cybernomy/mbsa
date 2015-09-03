@@ -17,7 +17,7 @@ package com.mg.merp.manufacture;
 import com.mg.merp.manufacture.model.JobMaterial;
 
 /**
- * Бизнес-компонент "Материалы ЗНП"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РњР°С‚РµСЂРёР°Р»С‹ Р—РќРџ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: JobMaterialServiceLocal.java,v 1.3 2007/07/30 10:28:17 safonov Exp $
@@ -26,7 +26,7 @@ public interface JobMaterialServiceLocal
 		extends com.mg.framework.api.DataBusinessObjectService<JobMaterial, Integer>
 {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/manufacture/JobMaterial";
 }

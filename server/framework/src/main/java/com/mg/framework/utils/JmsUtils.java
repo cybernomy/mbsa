@@ -34,7 +34,7 @@ import javax.naming.InitialContext;
 import com.mg.framework.api.jms.MessageCreator;
 
 /**
- * Утилиты JMS
+ * РЈС‚РёР»РёС‚С‹ JMS
  * 
  * @author Oleg V. Safonov
  * @version $Id: JmsUtils.java,v 1.3 2008/04/25 07:23:42 safonov Exp $
@@ -43,7 +43,7 @@ public class JmsUtils {
 	private static String factoryName = "ConnectionFactory";
 	
 	/**
-	 * создатель объектного сообщения
+	 * СЃРѕР·РґР°С‚РµР»СЊ РѕР±СЉРµРєС‚РЅРѕРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ
 	 */
 	static class ObjectMessageCreator implements MessageCreator {
 		private Serializable messageBody;
@@ -60,11 +60,11 @@ public class JmsUtils {
 	}
 
 	/**
-	 * отправка сообщения в очередь
+	 * РѕС‚РїСЂР°РІРєР° СЃРѕРѕР±С‰РµРЅРёСЏ РІ РѕС‡РµСЂРµРґСЊ
 	 * 
-	 * @param queueName	имя очереди
-	 * @param messageCreator	создатель сообщения
-	 * @throws Exception	при любых проблемах отправки
+	 * @param queueName	РёРјСЏ РѕС‡РµСЂРµРґРё
+	 * @param messageCreator	СЃРѕР·РґР°С‚РµР»СЊ СЃРѕРѕР±С‰РµРЅРёСЏ
+	 * @throws Exception	РїСЂРё Р»СЋР±С‹С… РїСЂРѕР±Р»РµРјР°С… РѕС‚РїСЂР°РІРєРё
 	 */
 	public static void sendObjectMessageToQueue(String queueName, MessageCreator messageCreator) throws Exception {
 		if (messageCreator == null)
@@ -92,11 +92,11 @@ public class JmsUtils {
 	}
 
 	/**
-	 * отправка сообщения в тему
+	 * РѕС‚РїСЂР°РІРєР° СЃРѕРѕР±С‰РµРЅРёСЏ РІ С‚РµРјСѓ
 	 * 
-	 * @param topicName	имя темы
-	 * @param messageCreator	создатель сообщения
-	 * @throws Exception	при любых проблемах отправки
+	 * @param topicName	РёРјСЏ С‚РµРјС‹
+	 * @param messageCreator	СЃРѕР·РґР°С‚РµР»СЊ СЃРѕРѕР±С‰РµРЅРёСЏ
+	 * @throws Exception	РїСЂРё Р»СЋР±С‹С… РїСЂРѕР±Р»РµРјР°С… РѕС‚РїСЂР°РІРєРё
 	 */
 	public static void sendObjectMessageToTopic(String topicName, MessageCreator messageCreator) throws Exception {
 		if (messageCreator == null)
@@ -124,22 +124,22 @@ public class JmsUtils {
 	}
 
 	/**
-	 * отправка объектного сообщения в очередь
+	 * РѕС‚РїСЂР°РІРєР° РѕР±СЉРµРєС‚РЅРѕРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ РІ РѕС‡РµСЂРµРґСЊ
 	 * 
-	 * @param queueName	имя очереди
-	 * @param messageBody	сообщение
-	 * @throws Exception	при любых проблемах отправки
+	 * @param queueName	РёРјСЏ РѕС‡РµСЂРµРґРё
+	 * @param messageBody	СЃРѕРѕР±С‰РµРЅРёРµ
+	 * @throws Exception	РїСЂРё Р»СЋР±С‹С… РїСЂРѕР±Р»РµРјР°С… РѕС‚РїСЂР°РІРєРё
 	 */
 	public static void sendObjectMessageToQueue(String queueName, Serializable messageBody) throws Exception {
 		sendObjectMessageToQueue(queueName, new ObjectMessageCreator(messageBody));
 	}
 	
 	/**
-	 * отправка объектного сообщения в тему
+	 * РѕС‚РїСЂР°РІРєР° РѕР±СЉРµРєС‚РЅРѕРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ РІ С‚РµРјСѓ
 	 * 
-	 * @param topicName	имя темы
-	 * @param messageBody	сообщение
-	 * @throws Exception	при любых проблемах отправки
+	 * @param topicName	РёРјСЏ С‚РµРјС‹
+	 * @param messageBody	СЃРѕРѕР±С‰РµРЅРёРµ
+	 * @throws Exception	РїСЂРё Р»СЋР±С‹С… РїСЂРѕР±Р»РµРјР°С… РѕС‚РїСЂР°РІРєРё
 	 */
 	public static void sendObjectMessageToTopic(String topicName, Serializable messageBody) throws Exception {
 		sendObjectMessageToTopic(topicName, new ObjectMessageCreator(messageBody));

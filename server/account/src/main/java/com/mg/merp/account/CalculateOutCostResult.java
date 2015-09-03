@@ -21,7 +21,7 @@ import com.mg.merp.account.model.AccBatch;
 import com.mg.merp.account.model.AccBatchHistory;
 
 /**
- * Результат выполнения функции "Расчет цены списания по бух. учету"
+ * Р РµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ С„СѓРЅРєС†РёРё "Р Р°СЃС‡РµС‚ С†РµРЅС‹ СЃРїРёСЃР°РЅРёСЏ РїРѕ Р±СѓС…. СѓС‡РµС‚Сѓ"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: CalculateOutCostResult.java,v 1.1 2008/03/25 14:49:51 alikaev Exp $
@@ -43,22 +43,22 @@ public class CalculateOutCostResult implements Serializable {
 	private AccBatchHistory accBatchHistory;
 
 	/**
-	 * Конструктор
+	 * РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
 	 * @param costNat
-	 * 				- цена
+	 * 				- С†РµРЅР°
 	 * @param costCur
-	 * 				- цена в валюте
+	 * 				- С†РµРЅР° РІ РІР°Р»СЋС‚Рµ
 	 * @param summaNat
-	 * 				- сумма
+	 * 				- СЃСѓРјРјР°
 	 * @param summaCur
-	 * 				- сумма в валюте
+	 * 				- СЃСѓРјРјР° РІ РІР°Р»СЋС‚Рµ
 	 * @param realQuantity
-	 * 				- количество
+	 * 				- РєРѕР»РёС‡РµСЃС‚РІРѕ
 	 * @param accBatch
-	 * 				- партия
+	 * 				- РїР°СЂС‚РёСЏ
 	 * @param accBatchHistory
-	 * 				- история партии
+	 * 				- РёСЃС‚РѕСЂРёСЏ РїР°СЂС‚РёРё
 	 */
 	public CalculateOutCostResult(BigDecimal costNat, BigDecimal costCur, BigDecimal summaNat, BigDecimal summaCur, BigDecimal realQuantity,
 			AccBatch accBatch, AccBatchHistory accBatchHistory) {
@@ -72,7 +72,7 @@ public class CalculateOutCostResult implements Serializable {
 	}
 
 	/**
-	 * Цена
+	 * Р¦РµРЅР°
 	 * @return costNat
 	 */
 	public BigDecimal getCostNat() {
@@ -80,7 +80,7 @@ public class CalculateOutCostResult implements Serializable {
 	}
 
 	/**
-	 * Цена в валюте
+	 * Р¦РµРЅР° РІ РІР°Р»СЋС‚Рµ
 	 * @return costCur
 	 */
 	public BigDecimal getCostCur() {
@@ -88,7 +88,7 @@ public class CalculateOutCostResult implements Serializable {
 	}
 
 	/**
-	 * Сумма
+	 * РЎСѓРјРјР°
 	 * @return summaNat
 	 */
 	public BigDecimal getSummaNat() {
@@ -96,7 +96,7 @@ public class CalculateOutCostResult implements Serializable {
 	}
 
 	/**
-	 * Сумма в валюте
+	 * РЎСѓРјРјР° РІ РІР°Р»СЋС‚Рµ
 	 * @return summaCur
 	 */
 	public BigDecimal getSummaCur() {
@@ -104,7 +104,7 @@ public class CalculateOutCostResult implements Serializable {
 	}
 
 	/**
-	 * Количество
+	 * РљРѕР»РёС‡РµСЃС‚РІРѕ
 	 * @return realQuantity
 	 */
 	public BigDecimal getRealQuantity() {
@@ -112,7 +112,7 @@ public class CalculateOutCostResult implements Serializable {
 	}
 
 	/**
-	 * Партия
+	 * РџР°СЂС‚РёСЏ
 	 * @return accBatch
 	 */
 	public AccBatch getAccBatch() {
@@ -120,7 +120,7 @@ public class CalculateOutCostResult implements Serializable {
 	}
 
 	/**
-	 * История партии
+	 * РСЃС‚РѕСЂРёСЏ РїР°СЂС‚РёРё
 	 * @return accBatchHistory
 	 */
 	public AccBatchHistory getAccBatchHistory() {

@@ -24,7 +24,7 @@ import com.mg.merp.crm.ActivityKindServiceLocal;
 import com.mg.merp.crm.model.ActivityKind;
 
 /**
- * Бизнес-компонент "Виды деятельности" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РёРґС‹ РґРµСЏС‚РµР»СЊРЅРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @version $Id: ActivityKindServiceBean.java,v 1.5 2006/10/12 05:42:49 leonova Exp $

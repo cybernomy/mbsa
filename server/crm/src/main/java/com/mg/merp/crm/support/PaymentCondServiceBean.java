@@ -24,7 +24,7 @@ import com.mg.merp.crm.PaymentCondServiceLocal;
 import com.mg.merp.crm.model.PaymentCond;
 
 /**
- * Бизнес-компонент "Условия оплаты" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЈСЃР»РѕРІРёСЏ РѕРїР»Р°С‚С‹" 
  * 
  * @author leonova
  * @version $Id: PaymentCondServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

@@ -28,7 +28,7 @@ import com.mg.merp.planning.model.ForecastType;
 import com.mg.merp.planning.model.PlanningForecast;
 
 /**
- * Бизнес-компонент "Строки версий прогнозов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎС‚СЂРѕРєРё РІРµСЂСЃРёР№ РїСЂРѕРіРЅРѕР·РѕРІ" 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

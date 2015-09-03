@@ -32,7 +32,7 @@ import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Реализация менеджера перехватчиков действий бизнес-компонентов управляющих данными
+ * Р РµР°Р»РёР·Р°С†РёСЏ РјРµРЅРµРґР¶РµСЂР° РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РґРµР№СЃС‚РІРёР№ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ СѓРїСЂР°РІР»СЏСЋС‰РёС… РґР°РЅРЅС‹РјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: DataBusinessServiceInterceptorManagerImpl.java,v 1.1 2007/12/13 13:06:56 safonov Exp $

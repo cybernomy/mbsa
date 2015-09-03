@@ -19,7 +19,7 @@ import com.mg.merp.warehouse.model.StockCard;
 import com.mg.merp.warehouse.model.StockPlanHistory;
 
 /**
- * Стратегия отката этапа ДО "Снятие с резерва по складу"
+ * РЎС‚СЂР°С‚РµРіРёСЏ РѕС‚РєР°С‚Р° СЌС‚Р°РїР° Р”Рћ "РЎРЅСЏС‚РёРµ СЃ СЂРµР·РµСЂРІР° РїРѕ СЃРєР»Р°РґСѓ"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseRollbackReservWithdrawalStrategy.java,v 1.4 2008/04/18 15:18:19 safonov Exp $ 

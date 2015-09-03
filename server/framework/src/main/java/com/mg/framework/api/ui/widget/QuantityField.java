@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.widget;
 import com.mg.framework.api.ui.FieldEditor;
 
 /**
- * Элемент "Редактор количественных значений"
+ * Р­Р»РµРјРµРЅС‚ "Р РµРґР°РєС‚РѕСЂ РєРѕР»РёС‡РµСЃС‚РІРµРЅРЅС‹С… Р·РЅР°С‡РµРЅРёР№"
  * 
  * @author Oleg V. Safonov
  * @version $Id: QuantityField.java,v 1.1 2008/07/28 13:35:42 safonov Exp $

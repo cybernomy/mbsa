@@ -19,7 +19,7 @@ import java.io.Serializable;
 import com.mg.framework.api.BusinessObjectService;
 
 /**
- * Контекст запуска настраиваемых действий
+ * РљРѕРЅС‚РµРєСЃС‚ Р·Р°РїСѓСЃРєР° РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomActionExecutionContext.java,v 1.1 2007/11/15 08:35:11 safonov Exp $
@@ -27,30 +27,30 @@ import com.mg.framework.api.BusinessObjectService;
 public interface CustomActionExecutionContext {
 
 	/**
-	 * код действия
+	 * РєРѕРґ РґРµР№СЃС‚РІРёСЏ
 	 * 
-	 * @return	код
+	 * @return	РєРѕРґ
 	 */
 	String getAction();
 	
 	/**
-	 * бизнес-компонент для которого было вызвано действие
+	 * Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ Р±С‹Р»Рѕ РІС‹Р·РІР°РЅРѕ РґРµР№СЃС‚РІРёРµ
 	 * 
-	 * @return	бизнес-компонент
+	 * @return	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
 	 */
 	BusinessObjectService getService();
 	
 	/**
-	 * список идентификаторов отмеченных сущностей
+	 * СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ РѕС‚РјРµС‡РµРЅРЅС‹С… СЃСѓС‰РЅРѕСЃС‚РµР№
 	 * 
-	 * @return	список идентификаторов
+	 * @return	СЃРїРёСЃРѕРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ
 	 */
 	Serializable[] getSelectedIdentifiers();
 	
 	/**
-	 * список слушателей настраиваемого действия
+	 * СЃРїРёСЃРѕРє СЃР»СѓС€Р°С‚РµР»РµР№ РЅР°СЃС‚СЂР°РёРІР°РµРјРѕРіРѕ РґРµР№СЃС‚РІРёСЏ
 	 * 
-	 * @return	список слушателей
+	 * @return	СЃРїРёСЃРѕРє СЃР»СѓС€Р°С‚РµР»РµР№
 	 */
 	CustomActionListener[] getListeners();
 	

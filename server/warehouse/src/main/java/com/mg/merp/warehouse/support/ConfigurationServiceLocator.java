@@ -20,7 +20,7 @@ import com.mg.merp.warehouse.ConfigurationService;
 import com.mg.merp.warehouse.support.jboss.ConfigurationServiceMBean;
 
 /**
- * Локатор сервиса реализации конфигурации модуля "Управление запасами"
+ * Р›РѕРєР°С‚РѕСЂ СЃРµСЂРІРёСЃР° СЂРµР°Р»РёР·Р°С†РёРё РєРѕРЅС„РёРіСѓСЂР°С†РёРё РјРѕРґСѓР»СЏ "РЈРїСЂР°РІР»РµРЅРёРµ Р·Р°РїР°СЃР°РјРё"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ConfigurationServiceLocator.java,v 1.1 2006/12/12 15:33:03 safonov Exp $
@@ -29,10 +29,10 @@ public class ConfigurationServiceLocator {
 	private static volatile ConfigurationService instance = null;
 
 	/**
-	 * найти сервис конфигурации
+	 * РЅР°Р№С‚Рё СЃРµСЂРІРёСЃ РєРѕРЅС„РёРіСѓСЂР°С†РёРё
 	 * 
-	 * @return	сервис
-	 * @throws ApplicationException	при любых ошибках
+	 * @return	СЃРµСЂРІРёСЃ
+	 * @throws ApplicationException	РїСЂРё Р»СЋР±С‹С… РѕС€РёР±РєР°С…
 	 */
 	public static ConfigurationService locate() throws ApplicationException {
 		if (instance == null)

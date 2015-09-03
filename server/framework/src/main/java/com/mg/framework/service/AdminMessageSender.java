@@ -21,8 +21,8 @@ import java.util.Observable;
 import com.mg.framework.utils.DateTimeUtils;
 
 /**
- * Реализация сервиса отправки сообщений администратора системы пользователям. Используется
- * простейшая реализация, не поддерживается кластерная установка.
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РѕС‚РїСЂР°РІРєРё СЃРѕРѕР±С‰РµРЅРёР№ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР° СЃРёСЃС‚РµРјС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏРј. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ
+ * РїСЂРѕСЃС‚РµР№С€Р°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ, РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ РєР»Р°СЃС‚РµСЂРЅР°СЏ СѓСЃС‚Р°РЅРѕРІРєР°.
  * 
  * @author Oleg V. Safonov
  * @version $Id: AdminMessageSender.java,v 1.1 2008/07/14 14:11:27 safonov Exp $
@@ -31,7 +31,7 @@ public class AdminMessageSender extends Observable {
 	private static AdminMessageSender instance = new AdminMessageSender();
 
 	/**
-	 * Класс сообщение администратора
+	 * РљР»Р°СЃСЃ СЃРѕРѕР±С‰РµРЅРёРµ Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂР°
 	 */
 	public class AdminMessage implements Serializable {
 		private String[] sessionIds;
@@ -46,7 +46,7 @@ public class AdminMessageSender extends Observable {
 		}
 
 		/**
-		 * список сессий
+		 * СЃРїРёСЃРѕРє СЃРµСЃСЃРёР№
 		 * 
 		 * @return the sessionIds
 		 */
@@ -55,7 +55,7 @@ public class AdminMessageSender extends Observable {
 		}
 
 		/**
-		 * сообщение
+		 * СЃРѕРѕР±С‰РµРЅРёРµ
 		 * 
 		 * @return the message
 		 */
@@ -64,7 +64,7 @@ public class AdminMessageSender extends Observable {
 		}
 
 		/**
-		 * время создания сообщения
+		 * РІСЂРµРјСЏ СЃРѕР·РґР°РЅРёСЏ СЃРѕРѕР±С‰РµРЅРёСЏ
 		 * 
 		 * @return the messageTime
 		 */
@@ -75,19 +75,19 @@ public class AdminMessageSender extends Observable {
 	}
 	
 	/**
-	 * получить экземпляр сервиса
+	 * РїРѕР»СѓС‡РёС‚СЊ СЌРєР·РµРјРїР»СЏСЂ СЃРµСЂРІРёСЃР°
 	 * 
-	 * @return	экземпляр сервиса
+	 * @return	СЌРєР·РµРјРїР»СЏСЂ СЃРµСЂРІРёСЃР°
 	 */
 	public static AdminMessageSender getInstance() {
 		return instance;
 	}
 
 	/**
-	 * отправить сообщение пользователям
+	 * РѕС‚РїСЂР°РІРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏРј
 	 * 
-	 * @param sessionIds	список сессий пользователей
-	 * @param message	сообщение
+	 * @param sessionIds	СЃРїРёСЃРѕРє СЃРµСЃСЃРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
+	 * @param message	СЃРѕРѕР±С‰РµРЅРёРµ
 	 */
 	public void sendMessage(String[] sessionIds, String message) {
 		setChanged();

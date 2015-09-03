@@ -33,7 +33,7 @@ import com.mg.merp.document.model.DocType;
 import com.mg.merp.document.model.DocumentKind;
 
 /**
- * Контроллер формы поиска сущностей "Типы документа"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РўРёРїС‹ РґРѕРєСѓРјРµРЅС‚Р°"
  * 
  * @author leonova
  * @author Artem V. Sharapov

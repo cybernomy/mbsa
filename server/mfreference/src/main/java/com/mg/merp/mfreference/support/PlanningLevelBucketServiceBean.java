@@ -30,7 +30,7 @@ import com.mg.merp.mfreference.PlanningLevelBucketServiceLocal;
 import com.mg.merp.mfreference.model.PlanningLevelBucket;
 
 /**
- * Бизнес-компонент "Бакеты уровней планирования" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р‘Р°РєРµС‚С‹ СѓСЂРѕРІРЅРµР№ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ" 
  * 
  * @author leonova
  * @version $Id: PlanningLevelBucketServiceBean.java,v 1.5 2007/07/30 10:24:41 safonov Exp $
@@ -44,17 +44,17 @@ public class PlanningLevelBucketServiceBean extends AbstractPOJODataBusinessObje
 	@PermitAll
 	public Date nearestBucketStartDate(int planningLevel, Date planningDate) {
 		OrmTemplate tmpl = OrmTemplate.getInstance();
-		//ищем в диапазоне
+		//РёС‰РµРј РІ РґРёР°РїР°Р·РѕРЅРµ
 		PlanningLevelBucket plb = tmpl.findUniqueByCriteria(OrmTemplate.createCriteria(PlanningLevelBucket.class)
 				.add(Restrictions.eq("PlanningLevel.Id", planningLevel))
 				.add(Restrictions.le("StartDate", planningDate))
 				.add(Restrictions.ge("EndDate", planningDate)));
 		if (plb != null)
 			return plb.getStartDate();
-		//если не нашли, то ищем ближайший бакет
+		//РµСЃР»Рё РЅРµ РЅР°С€Р»Рё, С‚Рѕ РёС‰РµРј Р±Р»РёР¶Р°Р№С€РёР№ Р±Р°РєРµС‚
 		List<PlanningLevelBucket> list = tmpl.findByCriteria(OrmTemplate.createCriteria(PlanningLevelBucket.class)
 				.add(Restrictions.eq("PlanningLevel.Id", planningLevel)));
-		//если не нашли
+		//РµСЃР»Рё РЅРµ РЅР°С€Р»Рё
 		if (list.isEmpty())
 			return null;
 		
@@ -72,7 +72,7 @@ public class PlanningLevelBucketServiceBean extends AbstractPOJODataBusinessObje
 	 */
 	@PermitAll
 	public short determineOffset(int planningLevelId, Date offsetDate) {
-		//для диапазона дат должен существовать один и только один бакет
+		//РґР»СЏ РґРёР°РїР°Р·РѕРЅР° РґР°С‚ РґРѕР»Р¶РµРЅ СЃСѓС‰РµСЃС‚РІРѕРІР°С‚СЊ РѕРґРёРЅ Рё С‚РѕР»СЊРєРѕ РѕРґРёРЅ Р±Р°РєРµС‚
 		Date date = DateTimeUtils.getDayStart(offsetDate);
 		PlanningLevelBucket planningLevelBucket = OrmTemplate.getInstance().findUniqueByCriteria(OrmTemplate.createCriteria(PlanningLevelBucket.class)
 				.add(Restrictions.eq("PlanningLevel.Id", planningLevelId))
@@ -89,12 +89,12 @@ public class PlanningLevelBucketServiceBean extends AbstractPOJODataBusinessObje
 	 */
 	@PermitAll
 	public BucketRange determineRange(int planningLevelId, short bucketOffset) {
-		//должен существовать один и только один бакет
+		//РґРѕР»Р¶РµРЅ СЃСѓС‰РµСЃС‚РІРѕРІР°С‚СЊ РѕРґРёРЅ Рё С‚РѕР»СЊРєРѕ РѕРґРёРЅ Р±Р°РєРµС‚
 		PlanningLevelBucket planningLevelBucket = OrmTemplate.getInstance().findUniqueByCriteria(OrmTemplate.createCriteria(PlanningLevelBucket.class)
 				.add(Restrictions.eq("PlanningLevel.Id", planningLevelId))
 				.add(Restrictions.eq("BucketOffset", bucketOffset)));
 		if (planningLevelBucket == null)
-			return new BucketRange(new Date(0), new Date(0)); //думаю что планировать на 1970 год не будут
+			return new BucketRange(new Date(0), new Date(0)); //РґСѓРјР°СЋ С‡С‚Рѕ РїР»Р°РЅРёСЂРѕРІР°С‚СЊ РЅР° 1970 РіРѕРґ РЅРµ Р±СѓРґСѓС‚
 		else
 			return new BucketRange(planningLevelBucket.getStartDate(), planningLevelBucket.getEndDate());
 	}

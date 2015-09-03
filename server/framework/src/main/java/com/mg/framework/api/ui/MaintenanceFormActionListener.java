@@ -18,7 +18,7 @@ import java.io.Serializable;
 import java.util.EventListener;
 
 /**
- * Слушатель формы поддержки бизнес-компонента
+ * РЎР»СѓС€Р°С‚РµР»СЊ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
  * 
  * @see MaintenanceHelper
  * 
@@ -28,16 +28,16 @@ import java.util.EventListener;
 public interface MaintenanceFormActionListener extends EventListener, Serializable {
 	
 	/**
-	 * выполнены действия по поддержке сущности
+	 * РІС‹РїРѕР»РЅРµРЅС‹ РґРµР№СЃС‚РІРёСЏ РїРѕ РїРѕРґРґРµСЂР¶РєРµ СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	void performed(MaintenanceFormEvent event);
 	
 	/**
-	 * действия по поддержке отменены
+	 * РґРµР№СЃС‚РІРёСЏ РїРѕ РїРѕРґРґРµСЂР¶РєРµ РѕС‚РјРµРЅРµРЅС‹
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	void canceled(MaintenanceFormEvent event);
 }

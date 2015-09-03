@@ -58,7 +58,7 @@ import com.mg.merp.core.support.CoreUtils;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Браузер инвентарной картотеки
+ * Р‘СЂР°СѓР·РµСЂ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‚РµРєРё
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Konstantin S. Alikaev
@@ -70,8 +70,8 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	private List<String> paramsName = new ArrayList<String>();
 	private List<Object> paramsValue = new ArrayList<Object>();
 
-	// данные которые нужно сохранить для операции перемещение,
-	// перемещение осуществляется по всем видам учета и с одинаковым контрагентом кому
+	// РґР°РЅРЅС‹Рµ РєРѕС‚РѕСЂС‹Рµ РЅСѓР¶РЅРѕ СЃРѕС…СЂР°РЅРёС‚СЊ РґР»СЏ РѕРїРµСЂР°С†РёРё РїРµСЂРµРјРµС‰РµРЅРёРµ,
+	// РїРµСЂРµРјРµС‰РµРЅРёРµ РѕСЃСѓС‰РµСЃС‚РІР»СЏРµС‚СЃСЏ РїРѕ РІСЃРµРј РІРёРґР°Рј СѓС‡РµС‚Р° Рё СЃ РѕРґРёРЅР°РєРѕРІС‹Рј РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРј РєРѕРјСѓ
 	private Contractor contractor = null;
 	private InvLocation invLocation = null;
 	private String operDocNum = StringUtils.EMPTY_STRING;
@@ -178,7 +178,7 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Начисление амортизации"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РќР°С‡РёСЃР»РµРЅРёРµ Р°РјРѕСЂС‚РёР·Р°С†РёРё"
 	 * 
 	 * @param event
 	 * @throws ApplicationException
@@ -224,12 +224,12 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Вызов формы запроса параметров переоценка/дооценка инвентарной карточки
+	 * Р’С‹Р·РѕРІ С„РѕСЂРјС‹ Р·Р°РїСЂРѕСЃР° РїР°СЂР°РјРµС‚СЂРѕРІ РїРµСЂРµРѕС†РµРЅРєР°/РґРѕРѕС†РµРЅРєР° РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРё
 	 * 
 	 * @param iterator
-	 * 				- итератор списка виды учета
+	 * 				- РёС‚РµСЂР°С‚РѕСЂ СЃРїРёСЃРєР° РІРёРґС‹ СѓС‡РµС‚Р°
 	 * @param invHeads
-	 * 				- список инвентарных картотек
+	 * 				- СЃРїРёСЃРѕРє РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‚РµРє
 	 */
 	private void queryCalcAmortizationInventoryParams(final Iterator<AccKind> iterator, final List<InvHead> invHeads, final short months) {
 		if (iterator.hasNext()) {
@@ -284,7 +284,7 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Переоценка"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РџРµСЂРµРѕС†РµРЅРєР°"
 	 * 
 	 * @param event
 	 * @throws ApplicationException
@@ -294,7 +294,7 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Дооценка"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "Р”РѕРѕС†РµРЅРєР°"
 	 * 
 	 * @param event
 	 * @throws ApplicationException
@@ -304,7 +304,7 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Возвращает бизнес-компонент "Ведомость начисления амортизации"
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’РµРґРѕРјРѕСЃС‚СЊ РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё"
 	 * @return
 	 */
 	private AmortizationServiceLocal getAmortizationService() {
@@ -314,10 +314,10 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик действия переоценка/дооценка
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РґРµР№СЃС‚РІРёСЏ РїРµСЂРµРѕС†РµРЅРєР°/РґРѕРѕС†РµРЅРєР°
 	 *  
 	 * @param isOverestimation
-	 * 				- <code>false</code> - переоценка, иначе дооценка 
+	 * 				- <code>false</code> - РїРµСЂРµРѕС†РµРЅРєР°, РёРЅР°С‡Рµ РґРѕРѕС†РµРЅРєР° 
 	 */
 	private void revaluate(final boolean isOverestimation) {
 		int countEntities = getSearchedEntities().length;
@@ -349,12 +349,12 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Вызов формы запроса параметров переоценка/дооценка инвентарной карточки
+	 * Р’С‹Р·РѕРІ С„РѕСЂРјС‹ Р·Р°РїСЂРѕСЃР° РїР°СЂР°РјРµС‚СЂРѕРІ РїРµСЂРµРѕС†РµРЅРєР°/РґРѕРѕС†РµРЅРєР° РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРё
 	 * 
 	 * @param iterator
-	 * 				- итератор списка виды учета
+	 * 				- РёС‚РµСЂР°С‚РѕСЂ СЃРїРёСЃРєР° РІРёРґС‹ СѓС‡РµС‚Р°
 	 * @param invHeads
-	 * 				- список инвентарных картотек
+	 * 				- СЃРїРёСЃРѕРє РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‚РµРє
 	 */
 	private void queryRevaluateInventoryParams(final Iterator<AccKind> iterator, final List<InvHead> invHeads, final boolean isOverestimation) {
 		if (iterator.hasNext()) {
@@ -400,7 +400,7 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Отменить последнее действие"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РћС‚РјРµРЅРёС‚СЊ РїРѕСЃР»РµРґРЅРµРµ РґРµР№СЃС‚РІРёРµ"
 	 * 
 	 * @param event
 	 * @throws ApplicationException
@@ -435,7 +435,7 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Перемещение"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РџРµСЂРµРјРµС‰РµРЅРёРµ"
 	 * 
 	 * @param event
 	 * @throws ApplicationException
@@ -454,12 +454,12 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Вызов формы запроса параметров перемещения инвентарной карточки
+	 * Р’С‹Р·РѕРІ С„РѕСЂРјС‹ Р·Р°РїСЂРѕСЃР° РїР°СЂР°РјРµС‚СЂРѕРІ РїРµСЂРµРјРµС‰РµРЅРёСЏ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРё
 	 * 
 	 * @param iterator
-	 * 				- итератор списка виды учета
+	 * 				- РёС‚РµСЂР°С‚РѕСЂ СЃРїРёСЃРєР° РІРёРґС‹ СѓС‡РµС‚Р°
 	 * @param invHeads
-	 * 				- список инвентарных картотек
+	 * 				- СЃРїРёСЃРѕРє РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‚РµРє
 	 */
 	private void queryMoveInventoryParams(final Iterator<AccKind> iterator, final List<InvHead> invHeads) {
 		if (iterator.hasNext()) {
@@ -521,7 +521,7 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Списание"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РЎРїРёСЃР°РЅРёРµ"
 	 * 
 	 * @param event
 	 * @throws ApplicationException
@@ -538,12 +538,12 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Вызов формы запроса параметров списание инвентарной карточки
+	 * Р’С‹Р·РѕРІ С„РѕСЂРјС‹ Р·Р°РїСЂРѕСЃР° РїР°СЂР°РјРµС‚СЂРѕРІ СЃРїРёСЃР°РЅРёРµ РёРЅРІРµРЅС‚Р°СЂРЅРѕР№ РєР°СЂС‚РѕС‡РєРё
 	 * 
 	 * @param iterator
-	 * 				- итератор списка виды учета
+	 * 				- РёС‚РµСЂР°С‚РѕСЂ СЃРїРёСЃРєР° РІРёРґС‹ СѓС‡РµС‚Р°
 	 * @param invHeads
-	 * 				- список инвентарных картотек
+	 * 				- СЃРїРёСЃРѕРє РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‚РµРє
 	 */
 	private void queryRetireInventoryParams(final Iterator<AccKind> iterator, final List<InvHead> invHeads) {
 		if (iterator.hasNext()) {
@@ -594,7 +594,7 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Консервация"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РљРѕРЅСЃРµСЂРІР°С†РёСЏ"
 	 * 
 	 * @param event
 	 * @throws ApplicationException
@@ -635,7 +635,7 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Формирование остатков"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РѕСЃС‚Р°С‚РєРѕРІ"
 	 * 
 	 * @param event
 	 * @throws ApplicationException
@@ -681,7 +681,7 @@ public class InvHeadBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Бизнес-компонент инвентарная картотека
+	 * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ РёРЅРІРµРЅС‚Р°СЂРЅР°СЏ РєР°СЂС‚РѕС‚РµРєР°
 	 * 
 	 * @return
 	 */

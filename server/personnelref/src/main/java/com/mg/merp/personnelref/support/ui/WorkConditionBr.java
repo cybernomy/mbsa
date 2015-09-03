@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.personnelref.model.WorkCondition;
 
 /**
- * Браузер условий труда
+ * Р‘СЂР°СѓР·РµСЂ СѓСЃР»РѕРІРёР№ С‚СЂСѓРґР°
  * 
  * @author leonova
  * @version $Id: WorkConditionBr.java,v 1.1 2006/09/04 13:03:49 leonova Exp $ 

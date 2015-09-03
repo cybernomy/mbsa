@@ -23,7 +23,7 @@ import com.mg.framework.support.ui.widget.tree.EntityTreeNode;
 import com.mg.merp.personnelref.model.PersonnelGroup;
 
 /**
- * Узел дерева "Группы сотрудников"
+ * РЈР·РµР» РґРµСЂРµРІР° "Р“СЂСѓРїРїС‹ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ"
  * 
  * @author leonova
  * @author Oleg V. Safonov

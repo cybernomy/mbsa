@@ -18,26 +18,26 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип источника товара
+ * РўРёРї РёСЃС‚РѕС‡РЅРёРєР° С‚РѕРІР°СЂР°
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: RouteSrcType.java,v 1.2 2007/07/30 10:25:11 safonov Exp $
  */
 @DataItemName("MfReference.RouteSrcType")
 public enum RouteSrcType {
 	/**
-	 * Закупка
+	 * Р—Р°РєСѓРїРєР°
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Purchase")
 	PURCHASE,
 	
 	/**
-	 * Производство
+	 * РџСЂРѕРёР·РІРѕРґСЃС‚РІРѕ
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Manufacture")
 	MANUFACTURE,
 		
 	/**
-	 * Перемещение
+	 * РџРµСЂРµРјРµС‰РµРЅРёРµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Transfer")
 	TRANSFER

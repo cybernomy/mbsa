@@ -25,12 +25,12 @@ public interface InvoiceHeadInServiceLocal
    extends com.mg.merp.document.GoodsDocument<InvoiceHead, Integer, InvoiceHeadModelInServiceLocal, InvoiceSpecInServiceLocal>
 {
 	/**
-	 * тип папки для входящих накладных
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РІС…РѕРґСЏС‰РёС… РЅР°РєР»Р°РґРЅС‹С…
 	 */
 	final static short FOLDER_PART = 45;
 	
 	/**
-	 * docsection для входящих накладных
+	 * docsection РґР»СЏ РІС…РѕРґСЏС‰РёС… РЅР°РєР»Р°РґРЅС‹С…
 	 */
 	final static short DOCSECTION = 23;
 }

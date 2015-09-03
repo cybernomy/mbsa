@@ -22,7 +22,7 @@ import com.mg.framework.generic.ui.DefaultDialog;
 import com.mg.merp.table.model.PatternHead;
 
 /**
- * Контроллер диалога "Параметры заполнения спецификации графика в табельном учете"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "РџР°СЂР°РјРµС‚СЂС‹ Р·Р°РїРѕР»РЅРµРЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё РіСЂР°С„РёРєР° РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: FillByPatternScheduleSpecParamsDlg.java,v 1.1 2008/08/12 14:38:08 sharapov Exp $

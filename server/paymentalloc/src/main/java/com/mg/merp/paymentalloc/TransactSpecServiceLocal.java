@@ -17,7 +17,7 @@ package com.mg.merp.paymentalloc;
 import com.mg.merp.paymentalloc.model.TransactSpec;
 
 /**
- * Сервис бизнес-компонента "Спецификации связанных документов"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРїРµС†РёС„РёРєР°С†РёРё СЃРІСЏР·Р°РЅРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.paymentalloc.model.TransactSpec;
 public interface TransactSpecServiceLocal extends com.mg.framework.api.DataBusinessObjectService<TransactSpec, Integer> {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/paymentalloc/TransactSpec"; //$NON-NLS-1$
 	

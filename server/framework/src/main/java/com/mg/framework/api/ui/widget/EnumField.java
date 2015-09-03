@@ -18,22 +18,22 @@ import com.mg.framework.api.ui.FieldEditor;
 
 
 /**
- * Элемент "Редактор перечислимого типа"
+ * Р­Р»РµРјРµРЅС‚ "Р РµРґР°РєС‚РѕСЂ РїРµСЂРµС‡РёСЃР»РёРјРѕРіРѕ С‚РёРїР°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: EnumField.java,v 1.2 2006/11/21 15:34:06 safonov Exp $
  */
 public interface EnumField extends FieldEditor {
 	/**
-	 * тип редактора
+	 * С‚РёРї СЂРµРґР°РєС‚РѕСЂР°
 	 */
 	enum EnumFieldType {
 		/**
-		 * раскрывающийся список
+		 * СЂР°СЃРєСЂС‹РІР°СЋС‰РёР№СЃСЏ СЃРїРёСЃРѕРє
 		 */
 		COMBOBOX,
 		/**
-		 * переключатель
+		 * РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЊ
 		 */
 		RADIOBUTTON
 	};

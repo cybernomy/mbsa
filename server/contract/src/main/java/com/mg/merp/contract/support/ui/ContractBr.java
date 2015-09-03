@@ -30,7 +30,7 @@ import com.mg.merp.document.generic.ui.DocumentBrowseForm;
 import com.mg.merp.document.generic.ui.DocumentMaintenanceEJBQLTableModel;
 
 /**
- * Контроллер браузера контрактов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° РєРѕРЅС‚СЂР°РєС‚РѕРІ
  * 
  * @author leonova
  * @author Artem V. Sharapov

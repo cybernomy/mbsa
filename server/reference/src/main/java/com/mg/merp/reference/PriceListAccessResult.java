@@ -18,7 +18,7 @@ import java.io.Serializable;
 
 
 /**
- * Модель данных "Права на прайс-листы"
+ * РњРѕРґРµР»СЊ РґР°РЅРЅС‹С… "РџСЂР°РІР° РЅР° РїСЂР°Р№СЃ-Р»РёСЃС‚С‹"
  * 
  * @author pashistova
  * @author Konstantin S. Alikaev
@@ -35,16 +35,16 @@ public class PriceListAccessResult implements Serializable {
 	private Integer permissionId;
 	
 	/**
-	 * Создать модель данных "Права на прайс-листы"
+	 * РЎРѕР·РґР°С‚СЊ РјРѕРґРµР»СЊ РґР°РЅРЅС‹С… "РџСЂР°РІР° РЅР° РїСЂР°Р№СЃ-Р»РёСЃС‚С‹"
 	 * 
 	 * @param roleId 
-	 * 				- иденификатор группы пользователей
+	 * 				- РёРґРµРЅРёС„РёРєР°С‚РѕСЂ РіСЂСѓРїРїС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
 	 * @param roleName 
-	 * 				- наименование группы пользователей
+	 * 				- РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РіСЂСѓРїРїС‹ РїРѕР»СЊР·РѕРІР°С‚РµР»РµР№
 	 * @param permission 
-	 * 				- признак наличия права
+	 * 				- РїСЂРёР·РЅР°Рє РЅР°Р»РёС‡РёСЏ РїСЂР°РІР°
 	 * @param permissionId 
-	 * 				- идентификатор права доступа для прайс-листа
+	 * 				- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂР°РІР° РґРѕСЃС‚СѓРїР° РґР»СЏ РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	public PriceListAccessResult(Integer roleId, String roleName, Boolean permission, Integer permissionId) {
 		this.roleId = roleId;

@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.PriceType;
 
 /**
- * Браузер типов цен
+ * Р‘СЂР°СѓР·РµСЂ С‚РёРїРѕРІ С†РµРЅ
  * 
  * @author leonova
  * @version $Id: PriceTypeBr.java,v 1.2 2006/10/20 07:21:17 leonova Exp $ 

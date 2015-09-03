@@ -18,10 +18,10 @@ import com.mg.merp.baiengine.generic.AbstractBusinessAddin;
 import com.mg.merp.warehouse.GoodsIssueStrategy;
 
 /**
- * Бизнес-расширение "Пользовательская стратегия списания товарной позиции со склада".
- * Класс алгоритма должен реализовывать следующий метод 
+ * Р‘РёР·РЅРµСЃ-СЂР°СЃС€РёСЂРµРЅРёРµ "РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєР°СЏ СЃС‚СЂР°С‚РµРіРёСЏ СЃРїРёСЃР°РЅРёСЏ С‚РѕРІР°СЂРЅРѕР№ РїРѕР·РёС†РёРё СЃРѕ СЃРєР»Р°РґР°".
+ * РљР»Р°СЃСЃ Р°Р»РіРѕСЂРёС‚РјР° РґРѕР»Р¶РµРЅ СЂРµР°Р»РёР·РѕРІС‹РІР°С‚СЊ СЃР»РµРґСѓСЋС‰РёР№ РјРµС‚РѕРґ 
  * <code>protected GoodsIssueStrategy createGoodsIssueStrategy()</code>.
- * Метод возвращает стратегию списания товарной позиции со склада.
+ * РњРµС‚РѕРґ РІРѕР·РІСЂР°С‰Р°РµС‚ СЃС‚СЂР°С‚РµРіРёСЋ СЃРїРёСЃР°РЅРёСЏ С‚РѕРІР°СЂРЅРѕР№ РїРѕР·РёС†РёРё СЃРѕ СЃРєР»Р°РґР°.
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: CustomGoodsIssueStrategyBusinessAddin.java,v 1.1 2007/09/04 13:09:28 safonov Exp $
@@ -35,7 +35,7 @@ public abstract class CustomGoodsIssueStrategyBusinessAddin extends AbstractBusi
 
 	/**
 	 * 
-	 * @return Стратегия списания
+	 * @return РЎС‚СЂР°С‚РµРіРёСЏ СЃРїРёСЃР°РЅРёСЏ
 	 */
 	public abstract GoodsIssueStrategy createGoodsIssueStrategy();
 

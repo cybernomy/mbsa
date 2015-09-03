@@ -22,7 +22,7 @@ import com.mg.framework.generic.validator.EntityBeanRule;
 import com.mg.framework.support.Messages;
 
 /**
- * Ïðàâèëî ãàðàíòèðóþùåå, ÷òî àòðèáóò ñóùíîñòè áóäåò áîëüøå íóëÿ
+ * ÐŸÑ€Ð°Ð²Ð¸Ð»Ð¾ Ð³Ð°Ñ€Ð°Ð½Ñ‚Ð¸Ñ€ÑƒÑŽÑ‰ÐµÐµ, Ñ‡Ñ‚Ð¾ Ð°Ñ‚Ñ€Ð¸Ð±ÑƒÑ‚ ÑÑƒÑ‰Ð½Ð¾ÑÑ‚Ð¸ Ð±ÑƒÐ´ÐµÑ‚ Ð±Ð¾Ð»ÑŒÑˆÐµ Ð½ÑƒÐ»Ñ
  * 
  * @author leonova
  * @version $Id: PositiveAttribute.java,v 1.1 2006/10/07 10:52:14 leonova Exp $
@@ -30,10 +30,10 @@ import com.mg.framework.support.Messages;
 public class PositiveAttribute extends EntityBeanRule {
 	
 	/**
-	 * ñîçäàåò ïðàâèëî
+	 * ÑÐ¾Ð·Ð´Ð°ÐµÑ‚ Ð¿Ñ€Ð°Ð²Ð¸Ð»Ð¾
 	 * 
-	 * @param entity		îáúåêò-ñóùíîñòü êîíòðîëÿ
-	 * @param propertyName	íàèìåíîâàíèå àòðèáóòà êîíòðîëÿ
+	 * @param entity		Ð¾Ð±ÑŠÐµÐºÑ‚-ÑÑƒÑ‰Ð½Ð¾ÑÑ‚ÑŒ ÐºÐ¾Ð½Ñ‚Ñ€Ð¾Ð»Ñ
+	 * @param propertyName	Ð½Ð°Ð¸Ð¼ÐµÐ½Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð°Ñ‚Ñ€Ð¸Ð±ÑƒÑ‚Ð° ÐºÐ¾Ð½Ñ‚Ñ€Ð¾Ð»Ñ
 	 */
 	public PositiveAttribute(PersistentObject entity, String propertyName) {
 		super(Messages.getInstance().getMessage(Messages.POSITIVE_ATTRIBUTE_VALIDATOR), entity, propertyName);
@@ -45,7 +45,7 @@ public class PositiveAttribute extends EntityBeanRule {
 	@Override
 	protected void doValidate(ValidationContext context) {
 		Object toValidate = toValidate();
-		//ïðîâåðêà íà null, åñëè BigDecimal, òî ïðîâåðèì óñëîâèå áîëüøå íóëÿ
+		//Ð¿Ñ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð½Ð° null, ÐµÑÐ»Ð¸ BigDecimal, Ñ‚Ð¾ Ð¿Ñ€Ð¾Ð²ÐµÑ€Ð¸Ð¼ ÑƒÑÐ»Ð¾Ð²Ð¸Ðµ Ð±Ð¾Ð»ÑŒÑˆÐµ Ð½ÑƒÐ»Ñ
 		if (toValidate == null)
 			context.getStatus().error(this);
 		 else if (toValidate instanceof BigDecimal && BigDecimal.ZERO.compareTo((BigDecimal) toValidate) >= 0)

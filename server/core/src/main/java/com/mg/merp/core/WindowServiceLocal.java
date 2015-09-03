@@ -18,14 +18,14 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.core.model.Window;
 
 /**
- * Бизнес-компонент "Окно системы"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћРєРЅРѕ СЃРёСЃС‚РµРјС‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: WindowServiceLocal.java,v 1.1 2008/03/03 12:55:18 safonov Exp $
  */
 public interface WindowServiceLocal extends DataBusinessObjectService<Window, Integer> {
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/core/SysWindow";
 }

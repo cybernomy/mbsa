@@ -17,7 +17,7 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.BillHead;
 
 /**
- * Бизнес-компонент "Исходящие счета"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РСЃС…РѕРґСЏС‰РёРµ СЃС‡РµС‚Р°"
  * 
  * @author leonova
  * @version $Id: BillHeadOutServiceLocal.java,v 1.4 2007/09/07 12:23:15 safonov Exp $
@@ -26,12 +26,12 @@ public interface BillHeadOutServiceLocal
 		extends com.mg.merp.document.GoodsDocument<BillHead, Integer, BillHeadModelOutServiceLocal, BillSpecOutServiceLocal>, DiscountDocument {
 
 	/**
-	 * тип папки для исходящих счетов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РёСЃС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 50;
 	
 	/**
-	 * docsection для исходящих счетов
+	 * docsection РґР»СЏ РёСЃС…РѕРґСЏС‰РёС… СЃС‡РµС‚РѕРІ
 	 */
 	final static short DOCSECTION = 26;
 }

@@ -46,7 +46,7 @@ import com.mg.merp.crm.model.Solution;
 import com.mg.merp.crm.model.Symptom;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Проблемы"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџСЂРѕР±Р»РµРјС‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -260,8 +260,8 @@ public class ProblemMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * Открыть/закрыть пункты контекстного меню
-	 * @param enabled - признак
+	 * РћС‚РєСЂС‹С‚СЊ/Р·Р°РєСЂС‹С‚СЊ РїСѓРЅРєС‚С‹ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
+	 * @param enabled - РїСЂРёР·РЅР°Рє
 	 */
 	private void setPopupMenuEnabled(boolean enabled) {
 		PopupMenu symptomMenu = view.getWidget(WIGET_SYMPTOM_TABEL).getPopupMenu();
@@ -275,8 +275,8 @@ public class ProblemMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Добавить симптом"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "Р”РѕР±Р°РІРёС‚СЊ СЃРёРјРїС‚РѕРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionIncludeSymptom(WidgetEvent event) throws ApplicationException {
@@ -297,8 +297,8 @@ public class ProblemMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Удалить симптом"
-	 * @param event - событие 
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РЈРґР°Р»РёС‚СЊ СЃРёРјРїС‚РѕРј"
+	 * @param event - СЃРѕР±С‹С‚РёРµ 
 	 * @throws ApplicationException
 	 */
 	public void onActionExcludeSymptom(WidgetEvent event) throws ApplicationException {
@@ -310,8 +310,8 @@ public class ProblemMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Просмотреть" (симптом)
-	 * @param event - событие 
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ" (СЃРёРјРїС‚РѕРј)
+	 * @param event - СЃРѕР±С‹С‚РёРµ 
 	 * @throws ApplicationException
 	 */
 	public void onActionShowSymptom(WidgetEvent event) throws ApplicationException {
@@ -322,8 +322,8 @@ public class ProblemMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Изменить" (симптом)
-	 * @param event - событие 
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РР·РјРµРЅРёС‚СЊ" (СЃРёРјРїС‚РѕРј)
+	 * @param event - СЃРѕР±С‹С‚РёРµ 
 	 * @throws ApplicationException
 	 */
 	public void onActionEditSymptom(WidgetEvent event) throws ApplicationException {
@@ -334,8 +334,8 @@ public class ProblemMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Добавить решение"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "Р”РѕР±Р°РІРёС‚СЊ СЂРµС€РµРЅРёРµ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionIncludeSolution(WidgetEvent event) throws ApplicationException {
@@ -355,8 +355,8 @@ public class ProblemMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Удалить решение"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РЈРґР°Р»РёС‚СЊ СЂРµС€РµРЅРёРµ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionExcludeSolution(WidgetEvent event) throws ApplicationException {
@@ -368,8 +368,8 @@ public class ProblemMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Просмотреть" (решение)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ" (СЂРµС€РµРЅРёРµ)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionShowSolution(WidgetEvent event) throws ApplicationException {
@@ -380,8 +380,8 @@ public class ProblemMt extends DefaultMaintenanceForm implements MasterModelList
 	}
 
 	/**
-	 * Обработка события выбора пункта контекстного меню "Изменить" (решение)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РР·РјРµРЅРёС‚СЊ" (СЂРµС€РµРЅРёРµ)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionEditSolution(WidgetEvent event) throws ApplicationException {

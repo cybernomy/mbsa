@@ -17,7 +17,7 @@ package com.mg.merp.manufacture.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы поддержки спецификации акта на списание времени, отработанного оборудованием в ЗНП
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё СЃРїРµС†РёС„РёРєР°С†РёРё Р°РєС‚Р° РЅР° СЃРїРёСЃР°РЅРёРµ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµРј РІ Р—РќРџ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InputMachineSpecMt.java,v 1.3 2006/08/28 04:33:16 leonova Exp $

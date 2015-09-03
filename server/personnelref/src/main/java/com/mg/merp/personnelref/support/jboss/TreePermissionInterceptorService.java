@@ -25,7 +25,7 @@ import com.mg.framework.service.jboss.EntityInterceptorManagerServiceMBean;
 import com.mg.merp.personnelref.support.TreePermissionInterceptorImpl;
 
 /**
- * Реализация сервиса перехватчика для добавления прав на элементы иерархии при создании
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ РґРѕР±Р°РІР»РµРЅРёСЏ РїСЂР°РІ РЅР° СЌР»РµРјРµРЅС‚С‹ РёРµСЂР°СЂС…РёРё РїСЂРё СЃРѕР·РґР°РЅРёРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: TreePermissionInterceptorService.java,v 1.2 2007/01/12 11:37:56 safonov Exp $

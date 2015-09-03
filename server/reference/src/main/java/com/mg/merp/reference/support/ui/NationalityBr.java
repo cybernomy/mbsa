@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.Nationality;
 
 /**
- * Браузер национальностей
+ * Р‘СЂР°СѓР·РµСЂ РЅР°С†РёРѕРЅР°Р»СЊРЅРѕСЃС‚РµР№
  * 
  * @author leonova
  * @version $Id: NationalityBr.java,v 1.2 2006/08/11 07:28:29 leonova Exp $ 

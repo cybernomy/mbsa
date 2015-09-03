@@ -27,7 +27,7 @@ import com.mg.merp.contract.model.ContractConfig;
 import com.mg.merp.core.model.SysClient;
 
 /**
- *  ÓÌÚÓÎÎÂ ÍÓÏÏ‡Ì‰˚ ÏÂÌ˛ " ÓÌÙË„Û‡ˆËˇ ÏÓ‰ÛÎˇ < ÓÌÚ‡ÍÚ˚>"
+ * –ö–æ–Ω—Ç—Ä–æ–ª–ª–µ—Ä –∫–æ–º–º–∞–Ω–¥—ã –º–µ–Ω—é "–ö–æ–Ω—Ñ–∏–≥—É—Ä–∞—Ü–∏—è –º–æ–¥—É–ª—è <–ö–æ–Ω—Ç—Ä–∞–∫—Ç—ã>"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ContractConfigMenuCommand.java,v 1.3 2008/08/15 14:49:36 sharapov Exp $
@@ -38,14 +38,14 @@ public class ContractConfigMenuCommand implements MenuCommand {
 	 * @see com.mg.framework.api.ui.MenuCommand#execute()
 	 */
 	public void execute() throws Exception {
-		ContractConfigServiceLocal ÒontractConfigService = (ContractConfigServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/contract/ContractConfig"); //$NON-NLS-1$
+		ContractConfigServiceLocal —ÅontractConfigService = (ContractConfigServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/contract/ContractConfig"); //$NON-NLS-1$
 		SysClient sysClient = (SysClient) ServerUtils.getCurrentSession().getSystemTenant(); 
-		ContractConfig config = ÒontractConfigService.load(sysClient.getId());
+		ContractConfig config = —ÅontractConfigService.load(sysClient.getId());
 		if(config != null)
-			MaintenanceHelper.edit(ÒontractConfigService, sysClient.getId(), null, null);
+			MaintenanceHelper.edit(—ÅontractConfigService, sysClient.getId(), null, null);
 		else {
-			config = ÒontractConfigService.initialize();
-			MaintenanceHelper.add(ÒontractConfigService, config, null, null);
+			config = —ÅontractConfigService.initialize();
+			MaintenanceHelper.add(—ÅontractConfigService, config, null, null);
 		}
 	}
 

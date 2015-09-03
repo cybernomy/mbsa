@@ -29,7 +29,7 @@ import com.mg.merp.personnelref.model.PersonalAccount;
 import com.mg.merp.personnelref.model.PositionFill;
 
 /**
- * Контроллер формы поиска сущностей "Занимаемые должности"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "Р—Р°РЅРёРјР°РµРјС‹Рµ РґРѕР»Р¶РЅРѕСЃС‚Рё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PositionFillSearchForm.java,v 1.1 2007/07/09 08:33:47 sharapov Exp $
@@ -114,7 +114,7 @@ public class PositionFillSearchForm extends AbstractSearchForm {
 	}
 	
 	/**
-	 * Установить лицевой счет сотрудника для поиска
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ Р»РёС†РµРІРѕР№ СЃС‡РµС‚ СЃРѕС‚СЂСѓРґРЅРёРєР° РґР»СЏ РїРѕРёСЃРєР°
 	 */
 	public void setPersonalAccount(PersonalAccount personalAccount) {
 		paramsName.add("personalAccount"); //$NON-NLS-1$

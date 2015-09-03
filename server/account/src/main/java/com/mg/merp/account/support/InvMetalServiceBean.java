@@ -24,7 +24,7 @@ import com.mg.merp.account.InvMetalServiceLocal;
 import com.mg.merp.account.model.InvMetal;
 
 /**
- * Бизнес-компонент "Инвентарная картотека" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РРЅРІРµРЅС‚Р°СЂРЅР°СЏ РєР°СЂС‚РѕС‚РµРєР°" 
  * 
  * @author leonova
  * @version $Id: InvMetalServiceBean.java,v 1.3 2006/08/24 06:44:08 leonova Exp $

@@ -35,7 +35,7 @@ import com.mg.merp.crm.model.Relation;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Контроллер браузера "деловых отношений"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "РґРµР»РѕРІС‹С… РѕС‚РЅРѕС€РµРЅРёР№"
  * 
  * @author leonova
  * @version $Id: RelationBr.java,v 1.5 2007/05/16 06:48:07 sharapov Exp $

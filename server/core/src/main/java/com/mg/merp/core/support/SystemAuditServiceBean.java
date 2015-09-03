@@ -21,7 +21,7 @@ import com.mg.merp.core.SystemAuditServiceLocal;
 import com.mg.merp.core.model.SysAudit;
 
 /**
- * Реализация бизнес-компонента аудита системы
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° Р°СѓРґРёС‚Р° СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: SystemAuditServiceBean.java,v 1.1 2007/10/19 06:45:53 safonov Exp $

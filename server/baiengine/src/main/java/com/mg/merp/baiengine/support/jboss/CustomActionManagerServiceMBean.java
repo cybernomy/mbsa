@@ -19,7 +19,7 @@ import org.jboss.system.ServiceMBean;
 import com.mg.framework.api.ui.CustomActionManager;
 
 /**
- * JMX сервис менеджера настраиваемых действий
+ * JMX СЃРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomActionManagerServiceMBean.java,v 1.1 2007/11/15 09:20:16 safonov Exp $

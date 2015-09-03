@@ -18,7 +18,7 @@ import com.mg.merp.personnelref.model.PositionFill;
 import com.mg.merp.table.model.TimeBoardPosition;
 
 /**
- * Бизнес-компонент "Список сотрудников в табеле"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРёСЃРѕРє СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ РІ С‚Р°Р±РµР»Рµ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -27,14 +27,14 @@ import com.mg.merp.table.model.TimeBoardPosition;
 public interface TimeBoardPositionServiceLocal extends com.mg.framework.api.DataBusinessObjectService<TimeBoardPosition, Integer> {
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String SERVICE_NAME = "merp/table/TimeBoardPosition"; //$NON-NLS-1$
 	
 	/**
-	 * Добавить сотудников в табель
-	 * @param timeBoardHeadId - идентификатор заголовка табеля
-	 * @param positionFills - список должностей занимаемых сотрудниками
+	 * Р”РѕР±Р°РІРёС‚СЊ СЃРѕС‚СѓРґРЅРёРєРѕРІ РІ С‚Р°Р±РµР»СЊ
+	 * @param timeBoardHeadId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РіРѕР»РѕРІРєР° С‚Р°Р±РµР»СЏ
+	 * @param positionFills - СЃРїРёСЃРѕРє РґРѕР»Р¶РЅРѕСЃС‚РµР№ Р·Р°РЅРёРјР°РµРјС‹С… СЃРѕС‚СЂСѓРґРЅРёРєР°РјРё
 	 */
 	void addTimeBoardPositions(Integer timeBoardHeadId, PositionFill[] positionFills);
 	

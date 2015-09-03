@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * Интерфейс стратегии рассчёта цены складской партии
+ * РРЅС‚РµСЂС„РµР№СЃ СЃС‚СЂР°С‚РµРіРёРё СЂР°СЃСЃС‡С‘С‚Р° С†РµРЅС‹ СЃРєР»Р°РґСЃРєРѕР№ РїР°СЂС‚РёРё
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: BatchPriceStrategy.java,v 1.1 2007/02/22 09:44:57 poroxnenko Exp $
@@ -26,11 +26,11 @@ import com.mg.merp.document.model.DocSpec;
 public interface BatchPriceStrategy {
 
 	/**
-	 * Метод рассчитывает цену складской партии
+	 * РњРµС‚РѕРґ СЂР°СЃСЃС‡РёС‚С‹РІР°РµС‚ С†РµРЅСѓ СЃРєР»Р°РґСЃРєРѕР№ РїР°СЂС‚РёРё
 	 * 
 	 * @param docSpec
-	 *            спецификации документа, на основании которого производится
-	 *            рассчёт
+	 *            СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°, РЅР° РѕСЃРЅРѕРІР°РЅРёРё РєРѕС‚РѕСЂРѕРіРѕ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ
+	 *            СЂР°СЃСЃС‡С‘С‚
 	 * @return
 	 */
 	BigDecimal doCalculate(DocSpec docSpec);

@@ -26,7 +26,7 @@ import com.mg.merp.table.model.PatternHead;
 import com.mg.merp.table.model.PatternKind;
 
 /**
- * Бизнес-компонент "Шаблоны графиков" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЁР°Р±Р»РѕРЅС‹ РіСЂР°С„РёРєРѕРІ" 
  * 
  * @author leonova
  * @version $Id: PatternHeadServiceBean.java,v 1.4 2006/10/12 07:12:47 leonova Exp $

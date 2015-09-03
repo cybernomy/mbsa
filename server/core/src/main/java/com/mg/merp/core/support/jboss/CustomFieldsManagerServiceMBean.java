@@ -19,7 +19,7 @@ import org.jboss.system.ServiceMBean;
 import com.mg.framework.api.metadata.CustomFieldsManager;
 
 /**
- * Сервис менеджера управления пользовательскими полями
+ * РЎРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° СѓРїСЂР°РІР»РµРЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРјРё РїРѕР»СЏРјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomFieldsManagerServiceMBean.java,v 1.1 2007/01/25 15:44:35 safonov Exp $

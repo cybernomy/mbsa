@@ -18,7 +18,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
- * Класс для хранения результата процедуры {@link #accCalcAverageOutCost()}
+ * РљР»Р°СЃСЃ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ СЂРµР·СѓР»СЊС‚Р°С‚Р° РїСЂРѕС†РµРґСѓСЂС‹ {@link #accCalcAverageOutCost()}
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: AccCalcAverageOutCostResult.java,v 1.1 2008/03/25 14:49:51 alikaev Exp $
@@ -44,7 +44,7 @@ public class AccCalcAverageOutCostResult implements Serializable {
 	}
 
 	/**
-	 * Цена в НДЕ
+	 * Р¦РµРЅР° РІ РќР”Р•
 	 * @return costNat
 	 */
 	public BigDecimal getCostNat() {
@@ -52,7 +52,7 @@ public class AccCalcAverageOutCostResult implements Serializable {
 	}
 
 	/**
-	 * Цена в валюте
+	 * Р¦РµРЅР° РІ РІР°Р»СЋС‚Рµ
 	 * @return costCur
 	 */
 	public BigDecimal getCostCur() {
@@ -60,7 +60,7 @@ public class AccCalcAverageOutCostResult implements Serializable {
 	}
 
 	/**
-	 * Сумма в НДЕ
+	 * РЎСѓРјРјР° РІ РќР”Р•
 	 * @return summaNat
 	 */
 	public BigDecimal getSummaNat() {
@@ -68,7 +68,7 @@ public class AccCalcAverageOutCostResult implements Serializable {
 	}
 
 	/**
-	 * Сумма в валюте
+	 * РЎСѓРјРјР° РІ РІР°Р»СЋС‚Рµ
 	 * @return summaCur
 	 */
 	public BigDecimal getSummaCur() {
@@ -76,7 +76,7 @@ public class AccCalcAverageOutCostResult implements Serializable {
 	}
 
 	/**
-	 * Количество
+	 * РљРѕР»РёС‡РµСЃС‚РІРѕ
 	 * @return realQuan
 	 */
 	public BigDecimal getRealQuan() {

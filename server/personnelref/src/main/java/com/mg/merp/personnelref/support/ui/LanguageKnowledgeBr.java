@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.personnelref.model.LanguageKnowledge;
 
 /**
- * Браузер знания иностранных языков
+ * Р‘СЂР°СѓР·РµСЂ Р·РЅР°РЅРёСЏ РёРЅРѕСЃС‚СЂР°РЅРЅС‹С… СЏР·С‹РєРѕРІ
  * 
  * @author leonova
  * @version $Id: LanguageKnowledgeBr.java,v 1.1 2006/08/03 11:24:30 leonova Exp $ 

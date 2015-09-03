@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.salary.model.DiscountKind;
 
 /**
- * Браузер видов скидок и расходов
+ * Р‘СЂР°СѓР·РµСЂ РІРёРґРѕРІ СЃРєРёРґРѕРє Рё СЂР°СЃС…РѕРґРѕРІ
  * 
  * @author leonova
  * @version $Id: DiscountKindBr.java,v 1.1 2006/08/28 12:43:20 leonova Exp $ 

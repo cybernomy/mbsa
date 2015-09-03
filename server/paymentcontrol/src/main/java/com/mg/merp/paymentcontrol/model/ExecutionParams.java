@@ -20,7 +20,7 @@ import java.util.Date;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Модель данных отображения параметров в диалоге "исполнение обязательства"
+ * РњРѕРґРµР»СЊ РґР°РЅРЅС‹С… РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ РІ РґРёР°Р»РѕРіРµ "РёСЃРїРѕР»РЅРµРЅРёРµ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІР°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ExecutionParams.java,v 1.1 2007/05/14 05:12:10 sharapov Exp $

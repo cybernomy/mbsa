@@ -25,7 +25,7 @@ import com.mg.merp.wb.core.CorePlugin;
 import com.mg.merp.wb.core.support.CoreUtils;
 
 /**
- * Сервис подключения студии разработки к серверу приложений
+ * РЎРµСЂРІРёСЃ РїРѕРґРєР»СЋС‡РµРЅРёСЏ СЃС‚СѓРґРёРё СЂР°Р·СЂР°Р±РѕС‚РєРё Рє СЃРµСЂРІРµСЂСѓ РїСЂРёР»РѕР¶РµРЅРёР№
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: ServiceConnector.java,v 1.7 2008/08/15 13:47:50 safonov Exp $ 
@@ -47,10 +47,10 @@ public class ServiceConnector {
     }
     
     /**
-     * Возвращает сервис подключения к серверу приложений
+     * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРµСЂРІРёСЃ РїРѕРґРєР»СЋС‡РµРЅРёСЏ Рє СЃРµСЂРІРµСЂСѓ РїСЂРёР»РѕР¶РµРЅРёР№
      * 
      * @return
-     * 			сервис подключения
+     * 			СЃРµСЂРІРёСЃ РїРѕРґРєР»СЋС‡РµРЅРёСЏ
      * @throws Exception
      */
     public static ServiceConnector getServiceConnector() throws Exception {
@@ -81,7 +81,7 @@ public class ServiceConnector {
 	        try {
 	        	server = initialContext.lookup("jmx/invoker/RMIAdaptor"); //$NON-NLS-1$
 	        } catch (javax.naming.CommunicationException e) {
-	        	//пытались обратиться через созданный объект к рестартованному серверу
+	        	//РїС‹С‚Р°Р»РёСЃСЊ РѕР±СЂР°С‚РёС‚СЊСЃСЏ С‡РµСЂРµР· СЃРѕР·РґР°РЅРЅС‹Р№ РѕР±СЉРµРєС‚ Рє СЂРµСЃС‚Р°СЂС‚РѕРІР°РЅРЅРѕРјСѓ СЃРµСЂРІРµСЂСѓ
 	        	if (e.getCause() instanceof NoSuchObjectException)
 	        		server = initialContext.lookup("jmx/invoker/RMIAdaptor"); //$NON-NLS-1$
 	        	else
@@ -95,19 +95,19 @@ public class ServiceConnector {
     }
     
     /**
-     * Вызов удалённого метода на сервере приложений
+     * Р’С‹Р·РѕРІ СѓРґР°Р»С‘РЅРЅРѕРіРѕ РјРµС‚РѕРґР° РЅР° СЃРµСЂРІРµСЂРµ РїСЂРёР»РѕР¶РµРЅРёР№
      * 
      * @param name
-     * 			имя сервиса, у которого вызывается метод
+     * 			РёРјСЏ СЃРµСЂРІРёСЃР°, Сѓ РєРѕС‚РѕСЂРѕРіРѕ РІС‹Р·С‹РІР°РµС‚СЃСЏ РјРµС‚РѕРґ
      * @param method
-     * 			имя вызываемого метода
+     * 			РёРјСЏ РІС‹Р·С‹РІР°РµРјРѕРіРѕ РјРµС‚РѕРґР°
      * @param args
-     * 			значения аргументов, передаваемых в метод
+     * 			Р·РЅР°С‡РµРЅРёСЏ Р°СЂРіСѓРјРµРЅС‚РѕРІ, РїРµСЂРµРґР°РІР°РµРјС‹С… РІ РјРµС‚РѕРґ
      * @param sig
-     * 			сигнатура метода
+     * 			СЃРёРіРЅР°С‚СѓСЂР° РјРµС‚РѕРґР°
      * 
      * @return
-     * 			результат вызова операции
+     * 			СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹Р·РѕРІР° РѕРїРµСЂР°С†РёРё
      * @throws Exception
      */
     public Object invoke(ObjectName name, String method, Object[] args, String[] sig) throws Exception {
@@ -115,7 +115,7 @@ public class ServiceConnector {
 		try {
 			return internalInvoke(serverType, name, method, args, sig);
 		} catch (NoSuchObjectException e) {
-			//пытались обратиться через созданный объект к рестартованному серверу 
+			//РїС‹С‚Р°Р»РёСЃСЊ РѕР±СЂР°С‚РёС‚СЊСЃСЏ С‡РµСЂРµР· СЃРѕР·РґР°РЅРЅС‹Р№ РѕР±СЉРµРєС‚ Рє СЂРµСЃС‚Р°СЂС‚РѕРІР°РЅРЅРѕРјСѓ СЃРµСЂРІРµСЂСѓ 
 			init();
 			return internalInvoke(serverType, name, method, args, sig);
 		}

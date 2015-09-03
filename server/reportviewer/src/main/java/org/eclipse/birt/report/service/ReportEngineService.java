@@ -95,8 +95,8 @@ import org.eclipse.birt.report.utility.ParameterAccessor;
 import com.mg.framework.service.RptEngineLocator;
 
 /**
- * Патч для приложения просмотра BIRT, использует платформу BIRT которая создается
- * сервисом отчетов MBSA, см. {@link #setEngineContext(ServletContext)}
+ * РџР°С‚С‡ РґР»СЏ РїСЂРёР»РѕР¶РµРЅРёСЏ РїСЂРѕСЃРјРѕС‚СЂР° BIRT, РёСЃРїРѕР»СЊР·СѓРµС‚ РїР»Р°С‚С„РѕСЂРјСѓ BIRT РєРѕС‚РѕСЂР°СЏ СЃРѕР·РґР°РµС‚СЃСЏ
+ * СЃРµСЂРІРёСЃРѕРј РѕС‚С‡РµС‚РѕРІ MBSA, СЃРј. {@link #setEngineContext(ServletContext)}
  * 
  * @author Oleg V. Safonov
  * @version $Id: ReportEngineService.java,v 1.2 2008/10/01 14:06:41 safonov Exp $
@@ -341,7 +341,7 @@ public class ReportEngineService
 			}
 			engine = factory.createReportEngine( config );*/
 
-			//используем движок из сервиса отчетов
+			//РёСЃРїРѕР»СЊР·СѓРµРј РґРІРёР¶РѕРє РёР· СЃРµСЂРІРёСЃР° РѕС‚С‡РµС‚РѕРІ
 			engine = (IReportEngine) RptEngineLocator.locate().getDelegate();
 
 			// Get supported output formats

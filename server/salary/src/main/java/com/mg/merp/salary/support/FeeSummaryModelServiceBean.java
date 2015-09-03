@@ -23,7 +23,7 @@ import com.mg.merp.salary.FeeSummaryHeadServiceLocal;
 import com.mg.merp.salary.FeeSummaryModelServiceLocal;
 
 /**
- * Бизнес-компонент "Образцы сводов по н/у" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ СЃРІРѕРґРѕРІ РїРѕ РЅ/Сѓ" 
  * 
  * @author leonova
  * @version $Id: FeeSummaryModelServiceBean.java,v 1.4 2006/09/12 11:03:39 leonova Exp $

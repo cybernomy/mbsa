@@ -41,7 +41,7 @@ import com.mg.merp.paymentcontrol.model.PmcResource;
 import com.mg.merp.paymentcontrol.model.TurnResult;
 
 /**
- * Реализация бизнес-компонента "Средства платежа" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -74,11 +74,11 @@ public class ResourceServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * Получить приход/расход средства платежа
-	 * @param resourceId - идентификатор средства платежа
-	 * @param date - расчет на дату
-	 * @param isIncome - признак(приход/расход)
-	 * @return приход/расход
+	 * РџРѕР»СѓС‡РёС‚СЊ РїСЂРёС…РѕРґ/СЂР°СЃС…РѕРґ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
+	 * @param resourceId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
+	 * @param date - СЂР°СЃС‡РµС‚ РЅР° РґР°С‚Сѓ
+	 * @param isIncome - РїСЂРёР·РЅР°Рє(РїСЂРёС…РѕРґ/СЂР°СЃС…РѕРґ)
+	 * @return РїСЂРёС…РѕРґ/СЂР°СЃС…РѕРґ
 	 */
 	private BigDecimal getAgregateSum(Integer resourceId, Date date, boolean isIncome) {
 		Criteria criteria = OrmTemplate.createCriteria(Execution.class)
@@ -180,12 +180,12 @@ public class ResourceServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * Получить остаток на начало для средства платежа
-	 * @param resourceId - идентификатор средства платежа
-	 * @param versionId - идентификатор версии планирования
-	 * @param dateFrom - период (дата с)
-	 * @param dateTill - период (дата по)
-	 * @return остаток на начало для средства платежа
+	 * РџРѕР»СѓС‡РёС‚СЊ РѕСЃС‚Р°С‚РѕРє РЅР° РЅР°С‡Р°Р»Рѕ РґР»СЏ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
+	 * @param resourceId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
+	 * @param versionId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param dateFrom - РїРµСЂРёРѕРґ (РґР°С‚Р° СЃ)
+	 * @param dateTill - РїРµСЂРёРѕРґ (РґР°С‚Р° РїРѕ)
+	 * @return РѕСЃС‚Р°С‚РѕРє РЅР° РЅР°С‡Р°Р»Рѕ РґР»СЏ СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
 	 */
 	private BigDecimal getBeginSaldoByResource(Integer resourceId, Integer versionId, Date dateFrom, Date dateTill) {
 		Locale locale = ServerUtils.getUserLocale();
@@ -234,12 +234,12 @@ public class ResourceServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * Получить остаток на начало для группы(папки) средства платежа
-	 * @param nestedFolders - вложенные группы(папки) средства платежа
-	 * @param versionId - идентификатор версии планирования
-	 * @param dateFrom - период(дата с)
-	 * @param dateTill - период(дата по)
-	 * @return остаток на начало для группы(папки) средства платежа
+	 * РџРѕР»СѓС‡РёС‚СЊ РѕСЃС‚Р°С‚РѕРє РЅР° РЅР°С‡Р°Р»Рѕ РґР»СЏ РіСЂСѓРїРїС‹(РїР°РїРєРё) СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
+	 * @param nestedFolders - РІР»РѕР¶РµРЅРЅС‹Рµ РіСЂСѓРїРїС‹(РїР°РїРєРё) СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
+	 * @param versionId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ
+	 * @param dateFrom - РїРµСЂРёРѕРґ(РґР°С‚Р° СЃ)
+	 * @param dateTill - РїРµСЂРёРѕРґ(РґР°С‚Р° РїРѕ)
+	 * @return РѕСЃС‚Р°С‚РѕРє РЅР° РЅР°С‡Р°Р»Рѕ РґР»СЏ РіСЂСѓРїРїС‹(РїР°РїРєРё) СЃСЂРµРґСЃС‚РІР° РїР»Р°С‚РµР¶Р°
 	 */
 	private BigDecimal getBeginSaldoByResourceGroup(Object[] nestedFolders, Integer versionId, Date dateFrom, Date dateTill) {
 		Locale locale = ServerUtils.getUserLocale();

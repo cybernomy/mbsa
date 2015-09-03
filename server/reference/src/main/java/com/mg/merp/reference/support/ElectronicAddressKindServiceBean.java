@@ -22,7 +22,7 @@ import com.mg.merp.reference.ElectronicAddressKindServiceLocal;
 import com.mg.merp.reference.model.ElectronicAddressKind;
 
 /**
- * Бизнес-копмонент "Виды эелектронных адресов"
+ * Р‘РёР·РЅРµСЃ-РєРѕРїРјРѕРЅРµРЅС‚ "Р’РёРґС‹ СЌРµР»РµРєС‚СЂРѕРЅРЅС‹С… Р°РґСЂРµСЃРѕРІ"
  * 
  * @author leonova
  * @version $Id: ElectronicAddressKindServiceBean.java,v 1.3 2006/09/13 07:00:58 leonova Exp $

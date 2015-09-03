@@ -99,7 +99,7 @@ public final class UserProfileImpl implements UserProfile, Serializable {
 	 * @see com.mg.framework.api.UserProfile#getGlobalMenu()
 	 */
 	public URL getGlobalMenu() {
-		//TODO реализовать загрузку названия ресурса меню из записи пользователя или из SystemClient
+		//TODO СЂРµР°Р»РёР·РѕРІР°С‚СЊ Р·Р°РіСЂСѓР·РєСѓ РЅР°Р·РІР°РЅРёСЏ СЂРµСЃСѓСЂСЃР° РјРµРЅСЋ РёР· Р·Р°РїРёСЃРё РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РёР»Рё РёР· SystemClient
 		return null;
 	}
 

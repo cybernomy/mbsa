@@ -22,7 +22,7 @@ import com.mg.framework.utils.MiscUtils;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Модель столбца таблицы
+ * РњРѕРґРµР»СЊ СЃС‚РѕР»Р±С†Р° С‚Р°Р±Р»РёС†С‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: TableColumnModel.java,v 1.4 2008/07/24 15:24:24 safonov Exp $
@@ -34,10 +34,10 @@ public class TableColumnModel implements Serializable {
 	private Locale locale;
 	
 	/**
-	 * конструктор
+	 * РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
-	 * @param name	имя столбца
-	 * @param title	заголовок столбца
+	 * @param name	РёРјСЏ СЃС‚РѕР»Р±С†Р°
+	 * @param title	Р·Р°РіРѕР»РѕРІРѕРє СЃС‚РѕР»Р±С†Р°
 	 */
 	public TableColumnModel(String name, String title) {
 		this.fieldName = name;
@@ -46,10 +46,10 @@ public class TableColumnModel implements Serializable {
 	}
 
 	/**
-	 * конструктор
+	 * РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
-	 * @param name		имя столбца
-	 * @param metadata	метаданные столбца
+	 * @param name		РёРјСЏ СЃС‚РѕР»Р±С†Р°
+	 * @param metadata	РјРµС‚Р°РґР°РЅРЅС‹Рµ СЃС‚РѕР»Р±С†Р°
 	 */
 	public TableColumnModel(String name, FieldMetadata metadata) {
 		this.fieldName = name;
@@ -58,12 +58,12 @@ public class TableColumnModel implements Serializable {
 	}
 
 	private void setTitle(String fieldName, FieldMetadata metadata) {
-		//если нет метеданных, то установим заголовок именем поля, будет не локализованым
+		//РµСЃР»Рё РЅРµС‚ РјРµС‚РµРґР°РЅРЅС‹С…, С‚Рѕ СѓСЃС‚Р°РЅРѕРІРёРј Р·Р°РіРѕР»РѕРІРѕРє РёРјРµРЅРµРј РїРѕР»СЏ, Р±СѓРґРµС‚ РЅРµ Р»РѕРєР°Р»РёР·РѕРІР°РЅС‹Рј
 		this.title = metadata == null ? fieldName : metadata.getHeader();
 	}
 	
 	/**
-	 * получить имя столбца
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРјСЏ СЃС‚РѕР»Р±С†Р°
 	 * 
 	 * @return the fieldName
 	 */
@@ -72,7 +72,7 @@ public class TableColumnModel implements Serializable {
 	}
 
 	/**
-	 * получить заголовок
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·Р°РіРѕР»РѕРІРѕРє
 	 * 
 	 * @return the title
 	 */
@@ -81,7 +81,7 @@ public class TableColumnModel implements Serializable {
 	}
 
 	/**
-	 * установить имя столбца
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РёРјСЏ СЃС‚РѕР»Р±С†Р°
 	 * 
 	 * @param fieldName the fieldName to set
 	 */
@@ -90,7 +90,7 @@ public class TableColumnModel implements Serializable {
 	}
 
 	/**
-	 * установить заголовок
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·Р°РіРѕР»РѕРІРѕРє
 	 * 
 	 * @param title the title to set
 	 */
@@ -99,7 +99,7 @@ public class TableColumnModel implements Serializable {
 	}
 
 	/**
-	 * получить метаданные столбца
+	 * РїРѕР»СѓС‡РёС‚СЊ РјРµС‚Р°РґР°РЅРЅС‹Рµ СЃС‚РѕР»Р±С†Р°
 	 * 
 	 * @return the metadata or <code>null</code>
 	 */
@@ -108,7 +108,7 @@ public class TableColumnModel implements Serializable {
 	}
 
 	/**
-	 * установить метаданные
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РјРµС‚Р°РґР°РЅРЅС‹Рµ
 	 * 
 	 * @param metadata the metadata to set
 	 */

@@ -35,7 +35,7 @@ import com.mg.merp.reference.model.Employees;
 import com.mg.merp.reference.model.OrgUnit;
 
 /**
- * Браузер сотрудников
+ * Р‘СЂР°СѓР·РµСЂ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ
  * 
  * @author leonova
  * @author Artem V. Sharapov

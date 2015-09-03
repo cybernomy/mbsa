@@ -20,9 +20,9 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.framework.api.orm.PersistentObject;
 
 /**
- * Диалоговая сессия, служит для хранения произвольной информации в процессе
- * интерактивного взаимодействия с пользователем, доступна в событиях beforeOutput и
- * afterInput для форм поддержки
+ * Р”РёР°Р»РѕРіРѕРІР°СЏ СЃРµСЃСЃРёСЏ, СЃР»СѓР¶РёС‚ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РїСЂРѕРёР·РІРѕР»СЊРЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё РІ РїСЂРѕС†РµСЃСЃРµ
+ * РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕРіРѕ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј, РґРѕСЃС‚СѓРїРЅР° РІ СЃРѕР±С‹С‚РёСЏС… beforeOutput Рё
+ * afterInput РґР»СЏ С„РѕСЂРј РїРѕРґРґРµСЂР¶РєРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: MaintenanceConversationSession.java,v 1.1 2006/10/26 13:19:12 safonov Exp $
@@ -30,63 +30,63 @@ import com.mg.framework.api.orm.PersistentObject;
 public interface MaintenanceConversationSession extends Serializable {
 
     /**
-     * Возвращает сервис обслуживающий текущий сеанс пользователя 
+     * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРµСЂРІРёСЃ РѕР±СЃР»СѓР¶РёРІР°СЋС‰РёР№ С‚РµРєСѓС‰РёР№ СЃРµР°РЅСЃ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ 
      * 
-     * @return  сервис
+     * @return  СЃРµСЂРІРёСЃ
      */
     DataBusinessObjectService getService();
     
     /**
-     * получить действие выполняемое пользователем
+     * РїРѕР»СѓС‡РёС‚СЊ РґРµР№СЃС‚РІРёРµ РІС‹РїРѕР»РЅСЏРµРјРѕРµ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј
      * 
      * @return
      */
     MaintenanceAction getMaintenanceAction();
 
     /**
-     * получить элемент пользовательского интерфейса
+     * РїРѕР»СѓС‡РёС‚СЊ СЌР»РµРјРµРЅС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
      * 
-     * @param name	имя элемента
-     * @return	элемент или <code>null</code> если не найден
+     * @param name	РёРјСЏ СЌР»РµРјРµРЅС‚Р°
+     * @return	СЌР»РµРјРµРЅС‚ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
      */
     Widget getWidget(String name);
 
     /**
-     * получить объект-сущность
+     * РїРѕР»СѓС‡РёС‚СЊ РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ
      * 
-     * @return	объект-сущность
+     * @return	РѕР±СЉРµРєС‚-СЃСѓС‰РЅРѕСЃС‚СЊ
      */
     PersistentObject getEntity();
     
     /**
-     * получить значение атрибута модели
+     * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р° РјРѕРґРµР»Рё
      * 
-     * @param name	имя атрибута модели
-     * @return	значение
+     * @param name	РёРјСЏ Р°С‚СЂРёР±СѓС‚Р° РјРѕРґРµР»Рё
+     * @return	Р·РЅР°С‡РµРЅРёРµ
      */
     Object getModelAttribute(String name) throws IllegalArgumentException, NoSuchFieldException, IllegalAccessException;
     
     /**
-     * установить значение атрибута модели
+     * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р° РјРѕРґРµР»Рё
      * 
-     * @param name	имя атрибута модели
-     * @param value	значение
+     * @param name	РёРјСЏ Р°С‚СЂРёР±СѓС‚Р° РјРѕРґРµР»Рё
+     * @param value	Р·РЅР°С‡РµРЅРёРµ
      */
     void setModelAttribute(String name, Object value) throws IllegalArgumentException, NoSuchFieldException, IllegalAccessException;
     
     /**
-     * Получает значение атрибута диалоговой сессии по имени
+     * РџРѕР»СѓС‡Р°РµС‚ Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р° РґРёР°Р»РѕРіРѕРІРѕР№ СЃРµСЃСЃРёРё РїРѕ РёРјРµРЅРё
      * 
-     * @param name  наименование атрибута
-     * @return      значение атрибута
+     * @param name  РЅР°РёРјРµРЅРѕРІР°РЅРёРµ Р°С‚СЂРёР±СѓС‚Р°
+     * @return      Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р°
      */
     Serializable getAttribute(String name);
     
     /**
-     * Устанавливает значение атрибута в диалоговой сессии
+     * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р° РІ РґРёР°Р»РѕРіРѕРІРѕР№ СЃРµСЃСЃРёРё
      * 
-     * @param name  наименование атрибута
-     * @param value значение атрибута
+     * @param name  РЅР°РёРјРµРЅРѕРІР°РЅРёРµ Р°С‚СЂРёР±СѓС‚Р°
+     * @param value Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р°
      */
     void setAttribute(String name, Serializable value);
 }

@@ -32,7 +32,7 @@ import com.mg.merp.paymentalloc.DocGroupLinkServiceLocal;
 import com.mg.merp.paymentalloc.model.DocGroupLink;
 
 /**
- * Контроллер формы поддержки групп документов 
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РіСЂСѓРїРї РґРѕРєСѓРјРµРЅС‚РѕРІ 
  * 
  * @author leonova
  * @version $Id: DocGroupMt.java,v 1.5 2007/06/22 13:09:52 sharapov Exp $

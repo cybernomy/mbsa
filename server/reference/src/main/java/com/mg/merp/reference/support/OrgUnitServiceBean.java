@@ -33,7 +33,7 @@ import com.mg.merp.reference.model.OrgUnit;
 import com.mg.merp.reference.model.OrgUnitType;
 
 /**
- * Подразделения
+ * РџРѕРґСЂР°Р·РґРµР»РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: OrgUnitServiceBean.java,v 1.9 2009/01/12 14:39:21 safonov Exp $

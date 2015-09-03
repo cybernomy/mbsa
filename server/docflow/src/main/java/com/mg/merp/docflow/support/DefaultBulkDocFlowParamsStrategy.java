@@ -28,7 +28,7 @@ import com.mg.merp.docprocess.model.DocProcessStage;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Реализация стратегии ДО для массовой отработки документов по выбранному этапу
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё Р”Рћ РґР»СЏ РјР°СЃСЃРѕРІРѕР№ РѕС‚СЂР°Р±РѕС‚РєРё РґРѕРєСѓРјРµРЅС‚РѕРІ РїРѕ РІС‹Р±СЂР°РЅРЅРѕРјСѓ СЌС‚Р°РїСѓ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultBulkDocFlowParamsStrategy.java,v 1.1 2006/12/12 15:24:36 safonov Exp $
@@ -60,7 +60,7 @@ public class DefaultBulkDocFlowParamsStrategy extends DefaultInteractiveParamsSt
 				}
 
 				public void performed(Folder folder) {
-					//спросим папку один раз, будем использовать для всех документов
+					//СЃРїСЂРѕСЃРёРј РїР°РїРєСѓ РѕРґРёРЅ СЂР°Р·, Р±СѓРґРµРј РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґР»СЏ РІСЃРµС… РґРѕРєСѓРјРµРЅС‚РѕРІ
 					destFolderForBulk = folder;
 					listener.performed(folder);
 				}
@@ -83,7 +83,7 @@ public class DefaultBulkDocFlowParamsStrategy extends DefaultInteractiveParamsSt
 				}
 
 				public void performed(Integer patternId) {
-					//спросим образец один раз, будем использовать для всех документов
+					//СЃРїСЂРѕСЃРёРј РѕР±СЂР°Р·РµС† РѕРґРёРЅ СЂР°Р·, Р±СѓРґРµРј РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РґР»СЏ РІСЃРµС… РґРѕРєСѓРјРµРЅС‚РѕРІ
 					destDocPatternForBulk = patternId;
 					listener.performed(patternId);
 				}
@@ -98,7 +98,7 @@ public class DefaultBulkDocFlowParamsStrategy extends DefaultInteractiveParamsSt
 	public void chooseNextStage(DocHead docHead, Date processDate,
 			List<DocProcessStage> stages, ChooseNextStageListener listener) {
 		assert stageForBulk == null;
-		//при массовой отработке выполняем этап который указан юзером
+		//РїСЂРё РјР°СЃСЃРѕРІРѕР№ РѕС‚СЂР°Р±РѕС‚РєРµ РІС‹РїРѕР»РЅСЏРµРј СЌС‚Р°Рї РєРѕС‚РѕСЂС‹Р№ СѓРєР°Р·Р°РЅ СЋР·РµСЂРѕРј
 		listener.performed(processDate, stageForBulk);
 	}
 

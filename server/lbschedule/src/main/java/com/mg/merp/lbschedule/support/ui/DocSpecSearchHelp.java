@@ -20,7 +20,7 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Поисковик объектов-сущностей "Позиций спецификации документа"
+ * РџРѕРёСЃРєРѕРІРёРє РѕР±СЉРµРєС‚РѕРІ-СЃСѓС‰РЅРѕСЃС‚РµР№ "РџРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: DocSpecSearchHelp.java,v 1.1 2007/04/17 12:51:41 sharapov Exp $

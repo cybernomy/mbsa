@@ -26,7 +26,7 @@ import com.mg.merp.crm.UserServiceLocal;
 import com.mg.merp.crm.model.User;
 
 /**
- * Бизнес-компонент "Пользователи CRM" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџРѕР»СЊР·РѕРІР°С‚РµР»Рё CRM" 
  * 
  * @author leonova
  * @version $Id: UserServiceBean.java,v 1.4 2006/09/06 05:24:25 leonova Exp $

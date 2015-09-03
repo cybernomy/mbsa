@@ -18,26 +18,26 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип для состава изделия
+ * РўРёРї РґР»СЏ СЃРѕСЃС‚Р°РІР° РёР·РґРµР»РёСЏ
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: BomType.java,v 1.1 2006/04/13 10:20:42 safonov Exp $
  */
 @DataItemName ("MfReference.BomType")
 public enum BomType {
 	/**
-	 * Подготовительный
+	 * РџРѕРґРіРѕС‚РѕРІРёС‚РµР»СЊРЅС‹Р№
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#BomType.Preparatory")
 	PREPARATORY,
 	
 	/**
-	 * Текущий
+	 * РўРµРєСѓС‰РёР№
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#BomType.Current")
 	CURRENT,
 	
 	/**
-	 * Стандартный
+	 * РЎС‚Р°РЅРґР°СЂС‚РЅС‹Р№
 	 */
 	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#BomType.Standart")
 	STANDART

@@ -21,72 +21,72 @@ import com.mg.framework.api.ui.Icon;
 import com.mg.framework.api.ui.VerticalAlignment;
 
 /**
- * Параметры отрисовки ячейки таблицы
+ * РџР°СЂР°РјРµС‚СЂС‹ РѕС‚СЂРёСЃРѕРІРєРё СЏС‡РµР№РєРё С‚Р°Р±Р»РёС†С‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: TableCellRenderParameters.java,v 1.1 2008/07/24 15:16:05 safonov Exp $
  */
 public interface TableCellRenderParameters {
 	/**
-	 * установить цвет фона
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ С†РІРµС‚ С„РѕРЅР°
 	 * 
-	 * @param color	цвет фона
+	 * @param color	С†РІРµС‚ С„РѕРЅР°
 	 */
 	void setBackground(Color color);
 
 	/**
-	 * установить цвет шрифта
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ С†РІРµС‚ С€СЂРёС„С‚Р°
 	 * 
-	 * @param color	цвет шрифта
+	 * @param color	С†РІРµС‚ С€СЂРёС„С‚Р°
 	 */
 	void setForeground(Color color);
 
 	/**
-	 * установить признак прозрачности
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРёР·РЅР°Рє РїСЂРѕР·СЂР°С‡РЅРѕСЃС‚Рё
 	 * 
-	 * @param opaque	если <code>true</code> то не прозрачный
+	 * @param opaque	РµСЃР»Рё <code>true</code> С‚Рѕ РЅРµ РїСЂРѕР·СЂР°С‡РЅС‹Р№
 	 */
 	void setOpaque(boolean opaque);
 
 	/**
-	 * установить шрифт
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ С€СЂРёС„С‚
 	 * 
-	 * @param font	шрифт
+	 * @param font	С€СЂРёС„С‚
 	 */
 	void setFont(Font font);
 
 	/**
-	 * установить признак отображения текста
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРёР·РЅР°Рє РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С‚РµРєСЃС‚Р°
 	 * 
-	 * @param textVisible	если <code>true</code> то текст отображается
+	 * @param textVisible	РµСЃР»Рё <code>true</code> С‚Рѕ С‚РµРєСЃС‚ РѕС‚РѕР±СЂР°Р¶Р°РµС‚СЃСЏ
 	 */
 	void setTextVisible(boolean textVisible);
 
 	/**
-	 * установить интервал между иконкой и текстом
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РёРЅС‚РµСЂРІР°Р» РјРµР¶РґСѓ РёРєРѕРЅРєРѕР№ Рё С‚РµРєСЃС‚РѕРј
 	 * 
-	 * @param iconTextGap	интервал в пикселах
+	 * @param iconTextGap	РёРЅС‚РµСЂРІР°Р» РІ РїРёРєСЃРµР»Р°С…
 	 */
 	void setIconTextGap(int iconTextGap);
 
 	/**
-	 * установить горизонтальное выравнивание
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕРµ РІС‹СЂР°РІРЅРёРІР°РЅРёРµ
 	 * 
-	 * @param alignment	горизонтальное выравнивание
+	 * @param alignment	РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅРѕРµ РІС‹СЂР°РІРЅРёРІР°РЅРёРµ
 	 */
 	void setHorizontalAlignment(HorizontalAlignment alignment);
 
 	/**
-	 * установить вертикальное выравнивание
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РІРµСЂС‚РёРєР°Р»СЊРЅРѕРµ РІС‹СЂР°РІРЅРёРІР°РЅРёРµ
 	 * 
-	 * @param alignment	вертикальное выравнивание
+	 * @param alignment	РІРµСЂС‚РёРєР°Р»СЊРЅРѕРµ РІС‹СЂР°РІРЅРёРІР°РЅРёРµ
 	 */
 	void setVerticalAlignment(VerticalAlignment alignment);
 
 	/**
-	 * установить иконку для отображения
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РёРєРѕРЅРєСѓ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ
 	 * 
-	 * @param icon	иконка
+	 * @param icon	РёРєРѕРЅРєР°
 	 */
 	void setIcon(Icon icon);
 }

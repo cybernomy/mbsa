@@ -24,16 +24,16 @@ import com.mg.framework.support.ui.widget.MaintenanceTableModel;
  */
 public abstract class AbstractMaintenanceTableModel extends AbstractTableModel implements MaintenanceTableModel {
 	/**
-	 * идентификатор мастера
+	 * РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РјР°СЃС‚РµСЂР°
 	 */
 	private Serializable masterKey;
 	protected abstract Serializable[] doGetSelectedPrimaryKeys();
 	
 	/**
-	 * получить идентификатор мастера, значение будет доступно после срабатывания слушателя
-	 * таблицы мастера
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РјР°СЃС‚РµСЂР°, Р·РЅР°С‡РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РїРѕСЃР»Рµ СЃСЂР°Р±Р°С‚С‹РІР°РЅРёСЏ СЃР»СѓС€Р°С‚РµР»СЏ
+	 * С‚Р°Р±Р»РёС†С‹ РјР°СЃС‚РµСЂР°
 	 * 
-	 * @return	идентификатор мастера
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РјР°СЃС‚РµСЂР°
 	 */
 	protected Serializable getMasterKey() {
 		return masterKey;

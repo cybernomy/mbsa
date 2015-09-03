@@ -542,8 +542,8 @@ public class ColumnMappingPage extends WizardPage implements IPropertyPage,
 	 * @see org.eclipse.birt.report.designer.ui.dialogs.properties.IPropertyPage#canLeave()
 	 */
 	public boolean canLeave() {
-		//TODO: Проверить на наличие хоть одного столбца
-		//И поля код алгоритма 
+		//TODO: РџСЂРѕРІРµСЂРёС‚СЊ РЅР° РЅР°Р»РёС‡РёРµ С…РѕС‚СЊ РѕРґРЅРѕРіРѕ СЃС‚РѕР»Р±С†Р°
+		//Р РїРѕР»СЏ РєРѕРґ Р°Р»РіРѕСЂРёС‚РјР° 
 		setDataSetConfig(this.merpConn.getRelationInformation());
 		return true;
 	}
@@ -580,8 +580,8 @@ public class ColumnMappingPage extends WizardPage implements IPropertyPage,
 					this.baiCode = (String) this.dataSetHandle.getProperty(Constants.BAI_CODE);
 				this.dataSetHandle.setQueryText(str);
 				this.dataSetHandle.setProperty(Constants.BAI_CODE, this.baiCode);
-				//обновить список resultSet, новое API BIRT 2.2, в дальнейшем
-				//необходимо привести к новому API
+				//РѕР±РЅРѕРІРёС‚СЊ СЃРїРёСЃРѕРє resultSet, РЅРѕРІРѕРµ API BIRT 2.2, РІ РґР°Р»СЊРЅРµР№С€РµРј
+				//РЅРµРѕР±С…РѕРґРёРјРѕ РїСЂРёРІРµСЃС‚Рё Рє РЅРѕРІРѕРјСѓ API
 				List<OdaResultSetColumn> list = new ArrayList<OdaResultSetColumn>();
 				for (int i = 0; i < columnMappingList.size(); i++) {
 					ColumnMappingElement element = columnMappingList.get(i);
@@ -593,11 +593,11 @@ public class ColumnMappingPage extends WizardPage implements IPropertyPage,
 					column.setPosition(i + 1); //index from 1
 					list.add(column);
 				}
-				//т.к. список результата пересчитан полностью очистим старый список если он есть
+				//С‚.Рє. СЃРїРёСЃРѕРє СЂРµР·СѓР»СЊС‚Р°С‚Р° РїРµСЂРµСЃС‡РёС‚Р°РЅ РїРѕР»РЅРѕСЃС‚СЊСЋ РѕС‡РёСЃС‚РёРј СЃС‚Р°СЂС‹Р№ СЃРїРёСЃРѕРє РµСЃР»Рё РѕРЅ РµСЃС‚СЊ
 				ArrayList resultSetPropValue = this.dataSetHandle.getPropertyHandle(IDataSetModel.RESULT_SET_PROP).getListValue();
 				if (resultSetPropValue != null)
 					resultSetPropValue.clear();
-				//используем утилиты BIRT обратной совместимости
+				//РёСЃРїРѕР»СЊР·СѓРµРј СѓС‚РёР»РёС‚С‹ BIRT РѕР±СЂР°С‚РЅРѕР№ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё
 				CompatibilityUtil.addResultSetColumn(dataSetHandle, list);
 			}
 		} catch (SemanticException e) {

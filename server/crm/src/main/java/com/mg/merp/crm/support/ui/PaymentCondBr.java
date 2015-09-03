@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.PaymentCond;
 
 /**
- * Браузер условий оплаты
+ * Р‘СЂР°СѓР·РµСЂ СѓСЃР»РѕРІРёР№ РѕРїР»Р°С‚С‹
  * 
  * @author leonova
  * @version $Id: PaymentCondBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

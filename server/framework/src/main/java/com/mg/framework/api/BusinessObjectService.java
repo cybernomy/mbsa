@@ -19,7 +19,7 @@ import javax.ejb.Remove;
 import com.mg.framework.api.metadata.BusinessServiceMetadata;
 
 /**
- * Бизнес компонент
+ * Р‘РёР·РЅРµСЃ РєРѕРјРїРѕРЅРµРЅС‚
  * 
  * @author Oleg V. Safonov
  * @version $Id: BusinessObjectService.java,v 1.5 2006/09/28 12:24:12 safonov Exp $
@@ -28,14 +28,14 @@ import com.mg.framework.api.metadata.BusinessServiceMetadata;
 public interface BusinessObjectService {
 	
 	/**
-	 * Получение метаданных бизнес компонента
+	 * РџРѕР»СѓС‡РµРЅРёРµ РјРµС‚Р°РґР°РЅРЅС‹С… Р±РёР·РЅРµСЃ РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
-	 * @return	метаданные
+	 * @return	РјРµС‚Р°РґР°РЅРЅС‹Рµ
 	 */
 	BusinessServiceMetadata getBusinessServiceMetadata();
 	
 	/**
-	 * Удаляет сервис, используется только для Stateful сервисов
+	 * РЈРґР°Р»СЏРµС‚ СЃРµСЂРІРёСЃ, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ С‚РѕР»СЊРєРѕ РґР»СЏ Stateful СЃРµСЂРІРёСЃРѕРІ
 	 *
 	 */
 	@Remove

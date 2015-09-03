@@ -19,7 +19,7 @@ import com.mg.framework.api.metadata.DefaultValueFactory;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Процессор обработки значений по умолчанию
+ * РџСЂРѕС†РµСЃСЃРѕСЂ РѕР±СЂР°Р±РѕС‚РєРё Р·РЅР°С‡РµРЅРёР№ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultValueProcessor.java,v 1.1 2006/09/30 11:42:05 safonov Exp $
@@ -28,10 +28,10 @@ public class DefaultValueProcessor {
 	private static Logger logger = ServerUtils.getLogger(DefaultValueProcessor.class);
 	
 	/**
-	 * создание значения по умолчанию
+	 * СЃРѕР·РґР°РЅРёРµ Р·РЅР°С‡РµРЅРёСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 * 
-	 * @param name	наименование фабрики значений
-	 * @return	объект значение
+	 * @param name	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С„Р°Р±СЂРёРєРё Р·РЅР°С‡РµРЅРёР№
+	 * @return	РѕР±СЉРµРєС‚ Р·РЅР°С‡РµРЅРёРµ
 	 */
 	public static Object createDefaultValue(String name) {
 		if (name == null)

@@ -17,7 +17,7 @@ package com.mg.framework.api.ui;
 import java.util.EventListener;
 
 /**
- * Слушатель настраиваемых действий
+ * РЎР»СѓС€Р°С‚РµР»СЊ РЅР°СЃС‚СЂР°РёРІР°РµРјС‹С… РґРµР№СЃС‚РІРёР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: CustomActionListener.java,v 1.1 2007/11/15 08:35:11 safonov Exp $
@@ -25,14 +25,14 @@ import java.util.EventListener;
 public interface CustomActionListener extends EventListener {
 
 	/**
-	 * действие выполнено
+	 * РґРµР№СЃС‚РІРёРµ РІС‹РїРѕР»РЅРµРЅРѕ
 	 * 
-	 * @param refresh	признак обновления содержимого элемента пользовательского интерфейса
+	 * @param refresh	РїСЂРёР·РЅР°Рє РѕР±РЅРѕРІР»РµРЅРёСЏ СЃРѕРґРµСЂР¶РёРјРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРіРѕ РёРЅС‚РµСЂС„РµР№СЃР°
 	 */
 	void completed(boolean refresh);
 	
 	/**
-	 * действие отменено
+	 * РґРµР№СЃС‚РІРёРµ РѕС‚РјРµРЅРµРЅРѕ
 	 */
 	void aborted();
 

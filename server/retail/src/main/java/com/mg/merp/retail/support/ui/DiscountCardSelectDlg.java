@@ -21,7 +21,7 @@ import com.mg.framework.support.ui.widget.DefaultTableController;
 import com.mg.merp.discount.model.Card;
 
 /**
- * Контроллер диалога "Выбор дисконтной карты"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "Р’С‹Р±РѕСЂ РґРёСЃРєРѕРЅС‚РЅРѕР№ РєР°СЂС‚С‹"
  * 
  * @author Artem V. Sharapov
  * @version $Id: DiscountCardSelectDlg.java,v 1.1 2007/10/05 07:35:57 sharapov Exp $

@@ -27,8 +27,8 @@ import com.mg.merp.document.model.DocHeadModel;
 import com.mg.merp.document.support.DocumentUtils;
 
 /**
- * Класс для SearchHelp, реализующий поиск по DocSection. 
- * После выбора DocSection осущесвляется поиск по образцам документов выбранного типа 
+ * РљР»Р°СЃСЃ РґР»СЏ SearchHelp, СЂРµР°Р»РёР·СѓСЋС‰РёР№ РїРѕРёСЃРє РїРѕ DocSection. 
+ * РџРѕСЃР»Рµ РІС‹Р±РѕСЂР° DocSection РѕСЃСѓС‰РµСЃРІР»СЏРµС‚СЃСЏ РїРѕРёСЃРє РїРѕ РѕР±СЂР°Р·С†Р°Рј РґРѕРєСѓРјРµРЅС‚РѕРІ РІС‹Р±СЂР°РЅРЅРѕРіРѕ С‚РёРїР° 
  * 
  * @author leonova
  * @author Artem V. Sharapov

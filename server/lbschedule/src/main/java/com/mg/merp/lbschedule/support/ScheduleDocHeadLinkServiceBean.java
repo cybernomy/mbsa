@@ -21,7 +21,7 @@ import com.mg.merp.lbschedule.ScheduleDocHeadLinkServiceLocal;
 import com.mg.merp.lbschedule.model.ScheduleDocHeadLink;
 
 /**
- * Реализация бизнес-компонента "Связь графика исполнения обязательств с документом"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРІСЏР·СЊ РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ СЃ РґРѕРєСѓРјРµРЅС‚РѕРј"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ScheduleDocHeadLinkServiceBean.java,v 1.1 2007/04/21 11:49:33 sharapov Exp $

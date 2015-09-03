@@ -24,7 +24,7 @@ import com.mg.merp.finance.OperationModelServiceLocal;
 import com.mg.merp.finance.model.OperationModel;
 
 /**
- * Бизнес-компонент "Образцы финансовых операций" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ С„РёРЅР°РЅСЃРѕРІС‹С… РѕРїРµСЂР°С†РёР№" 
  * 
  * @author leonova
  * @version $Id: OperationModelServiceBean.java,v 1.4 2006/10/11 05:09:35 leonova Exp $

@@ -31,7 +31,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.reference.AttachmentHandler;
 
 /**
- * UI утилиты "Оригиналов"
+ * UI СѓС‚РёР»РёС‚С‹ "РћСЂРёРіРёРЅР°Р»РѕРІ"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -48,14 +48,14 @@ public class OriginalDocumentHelper {
 	}
 
 	private static void download(final AttachmentHandler originalDocumentService, final Serializable[] keys, final int index) {
-		//сохраняем столько файлов, сколько отмечено записей
-		//прошли весь список
+		//СЃРѕС…СЂР°РЅСЏРµРј СЃС‚РѕР»СЊРєРѕ С„Р°Р№Р»РѕРІ, СЃРєРѕР»СЊРєРѕ РѕС‚РјРµС‡РµРЅРѕ Р·Р°РїРёСЃРµР№
+		//РїСЂРѕС€Р»Рё РІРµСЃСЊ СЃРїРёСЃРѕРє
 		if (index >= keys.length)
 			return;
 
 		Integer key = (Integer) keys[index];
 		final byte[] original = originalDocumentService.loadAttachmentBody(key);
-		if (original == null) //нечего сохранять для данного документа
+		if (original == null) //РЅРµС‡РµРіРѕ СЃРѕС…СЂР°РЅСЏС‚СЊ РґР»СЏ РґР°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 			download(originalDocumentService, keys, index + 1);
 		else {
 			String name = originalDocumentService.loadAttachmentName(key);
@@ -81,11 +81,11 @@ public class OriginalDocumentHelper {
 	}
 
 	/**
-	 * интеркативное сохранение оригиналов в системе, происходит запрос файла для сохранения,
-	 * выбранный файл будет сохранен для всех переданных сущностей
+	 * РёРЅС‚РµСЂРєР°С‚РёРІРЅРѕРµ СЃРѕС…СЂР°РЅРµРЅРёРµ РѕСЂРёРіРёРЅР°Р»РѕРІ РІ СЃРёСЃС‚РµРјРµ, РїСЂРѕРёСЃС…РѕРґРёС‚ Р·Р°РїСЂРѕСЃ С„Р°Р№Р»Р° РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ,
+	 * РІС‹Р±СЂР°РЅРЅС‹Р№ С„Р°Р№Р» Р±СѓРґРµС‚ СЃРѕС…СЂР°РЅРµРЅ РґР»СЏ РІСЃРµС… РїРµСЂРµРґР°РЅРЅС‹С… СЃСѓС‰РЅРѕСЃС‚РµР№
 	 * 
-	 * @param keys	список первичных ключей сущностей оригиналов документов
-	 * @param businessServiceName  имя бизнес-сервиса
+	 * @param keys	СЃРїРёСЃРѕРє РїРµСЂРІРёС‡РЅС‹С… РєР»СЋС‡РµР№ СЃСѓС‰РЅРѕСЃС‚РµР№ РѕСЂРёРіРёРЅР°Р»РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ
+	 * @param businessServiceName  РёРјСЏ Р±РёР·РЅРµСЃ-СЃРµСЂРІРёСЃР°
 	 */
 	public static void upload(final Serializable[] keys, final String businessServiceName) {
 		if (keys.length == 0)
@@ -109,7 +109,7 @@ public class OriginalDocumentHelper {
 
 					AttachmentHandler originalDocumentService = getOriginalDocumentService(businessServiceName);
 
-					//сохраним файл для всех отмеченных записей
+					//СЃРѕС…СЂР°РЅРёРј С„Р°Р№Р» РґР»СЏ РІСЃРµС… РѕС‚РјРµС‡РµРЅРЅС‹С… Р·Р°РїРёСЃРµР№
 					for (int i = 0; i < keys.length; i++)
 						originalDocumentService.storeAttachment(body, fileNames != null ? fileNames[0] : "attachment", (Integer) keys[i]);
 				} catch (IOException e) {
@@ -121,22 +121,22 @@ public class OriginalDocumentHelper {
 	}
 
 	/**
-	 * интерактивное загрузка оригиналов на локальную систему, происходит запрос куда сохранить файл,
-	 * количество запросов будет соответсвовать количеству переданных сущностей
+	 * РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕРµ Р·Р°РіСЂСѓР·РєР° РѕСЂРёРіРёРЅР°Р»РѕРІ РЅР° Р»РѕРєР°Р»СЊРЅСѓСЋ СЃРёСЃС‚РµРјСѓ, РїСЂРѕРёСЃС…РѕРґРёС‚ Р·Р°РїСЂРѕСЃ РєСѓРґР° СЃРѕС…СЂР°РЅРёС‚СЊ С„Р°Р№Р»,
+	 * РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїСЂРѕСЃРѕРІ Р±СѓРґРµС‚ СЃРѕРѕС‚РІРµС‚СЃРІРѕРІР°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІСѓ РїРµСЂРµРґР°РЅРЅС‹С… СЃСѓС‰РЅРѕСЃС‚РµР№
 	 * 
-	 * @param keys	список первичных ключей сущностей оригиналов документов
-	 * @param businessServiceName  имя бизнес-сервиса
+	 * @param keys	СЃРїРёСЃРѕРє РїРµСЂРІРёС‡РЅС‹С… РєР»СЋС‡РµР№ СЃСѓС‰РЅРѕСЃС‚РµР№ РѕСЂРёРіРёРЅР°Р»РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ
+	 * @param businessServiceName  РёРјСЏ Р±РёР·РЅРµСЃ-СЃРµСЂРІРёСЃР°
 	 */
 	public static void download(final Serializable[] keys, final String businessServiceName) {
 		download(getOriginalDocumentService(businessServiceName), keys, 0);
 	}
 
 	/**
-	 * показ оригиналов на локальной системе, количество показанных документов будет соответсвовать
-	 * количеству переданных сущностей
+	 * РїРѕРєР°Р· РѕСЂРёРіРёРЅР°Р»РѕРІ РЅР° Р»РѕРєР°Р»СЊРЅРѕР№ СЃРёСЃС‚РµРјРµ, РєРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРєР°Р·Р°РЅРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ Р±СѓРґРµС‚ СЃРѕРѕС‚РІРµС‚СЃРІРѕРІР°С‚СЊ
+	 * РєРѕР»РёС‡РµСЃС‚РІСѓ РїРµСЂРµРґР°РЅРЅС‹С… СЃСѓС‰РЅРѕСЃС‚РµР№
 	 * 
-	 * @param keys	список первичных ключей сущностей оригиналов документов
-	 * @param businessServiceName  имя бизнес-сервиса
+	 * @param keys	СЃРїРёСЃРѕРє РїРµСЂРІРёС‡РЅС‹С… РєР»СЋС‡РµР№ СЃСѓС‰РЅРѕСЃС‚РµР№ РѕСЂРёРіРёРЅР°Р»РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ
+	 * @param businessServiceName  РёРјСЏ Р±РёР·РЅРµСЃ-СЃРµСЂРІРёСЃР°
 	 */
 	public static void show(final Serializable[] keys, final String businessServiceName) {
 		if (keys.length == 0)
@@ -145,7 +145,7 @@ public class OriginalDocumentHelper {
 		AttachmentHandler originalDocumentService = getOriginalDocumentService(businessServiceName);
 		for (int i = 0; i < keys.length; i ++) {
 			final byte[] original = originalDocumentService.loadAttachmentBody((Integer) keys[i]);
-			if (original == null) //нечего сохранять для данного документа
+			if (original == null) //РЅРµС‡РµРіРѕ СЃРѕС…СЂР°РЅСЏС‚СЊ РґР»СЏ РґР°РЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 				continue;
 			String name = originalDocumentService.loadAttachmentName((Integer) keys[i]);
 			UIUtils.showDocument(new UniversalFileWebResourceProvider(name, original));

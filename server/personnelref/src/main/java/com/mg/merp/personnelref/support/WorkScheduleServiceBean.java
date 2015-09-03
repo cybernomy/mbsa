@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.WorkScheduleServiceLocal;
 import com.mg.merp.personnelref.model.WorkSchedule;
 
 /**
- * Реализация бизнес-компонента "Графики работ" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р“СЂР°С„РёРєРё СЂР°Р±РѕС‚" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

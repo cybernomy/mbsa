@@ -24,7 +24,7 @@ import com.mg.merp.crm.SolutionTypeServiceLocal;
 import com.mg.merp.crm.model.SolutionType;
 
 /**
- * Бизнес-компонент "Типы решений" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ СЂРµС€РµРЅРёР№" 
  * 
  * @author leonova
  * @version $Id: SolutionTypeServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

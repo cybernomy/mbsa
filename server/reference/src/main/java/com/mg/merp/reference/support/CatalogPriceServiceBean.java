@@ -34,7 +34,7 @@ import com.mg.merp.reference.model.CatalogPrice;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Бизнес-компонент "Каталог / Нормативные цены" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РљР°С‚Р°Р»РѕРі / РќРѕСЂРјР°С‚РёРІРЅС‹Рµ С†РµРЅС‹" 
  * 
  * @author leonova
  * @version $Id: CatalogPriceServiceBean.java,v 1.5 2007/07/27 12:08:53 safonov Exp $

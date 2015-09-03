@@ -21,7 +21,7 @@ import com.mg.merp.warehouse.WarehousePlanHistoryServiceLocal;
 import com.mg.merp.warehouse.model.StockPlanHistory;
 
 /**
- * Реализация бизнес-компонента "История планового движения и резервирования по партии"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РСЃС‚РѕСЂРёСЏ РїР»Р°РЅРѕРІРѕРіРѕ РґРІРёР¶РµРЅРёСЏ Рё СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРёСЏ РїРѕ РїР°СЂС‚РёРё"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehousePlanHistoryServiceBean.java,v 1.2 2007/09/25 09:31:34 safonov Exp $

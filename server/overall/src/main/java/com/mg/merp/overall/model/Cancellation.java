@@ -19,7 +19,7 @@ import com.mg.framework.api.annotations.DataItemName;
 
 
 /**
- * Модель бизнес компонента "Погашение"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРѕРіР°С€РµРЅРёРµ"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: Cancellation.java,v 1.3 2008/06/30 04:15:16 alikaev Exp $

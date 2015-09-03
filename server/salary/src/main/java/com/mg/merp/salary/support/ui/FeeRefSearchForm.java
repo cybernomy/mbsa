@@ -26,7 +26,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.salary.model.FeeRef;
 
 /**
- * Контроллер формы поиска сущностей "Начисление/удержание"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РќР°С‡РёСЃР»РµРЅРёРµ/СѓРґРµСЂР¶Р°РЅРёРµ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: FeeRefSearchForm.java,v 1.1 2007/07/09 08:33:47 sharapov Exp $

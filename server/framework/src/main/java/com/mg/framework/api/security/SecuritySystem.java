@@ -24,7 +24,7 @@ import com.mg.framework.api.ApplicationException;
 import com.mg.framework.api.UserProfile;
 
 /**
- * Система безопасности
+ * РЎРёСЃС‚РµРјР° Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
  * 
  * @author Oleg V. Safonov
  * @version $Id: SecuritySystem.java,v 1.9 2007/10/19 06:31:34 safonov Exp $
@@ -32,45 +32,45 @@ import com.mg.framework.api.UserProfile;
 public interface SecuritySystem {
 	
 	/**
-	 * идентификатор группы "Администраторы"
+	 * РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РіСЂСѓРїРїС‹ "РђРґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂС‹"
 	 */
 	final int ADMIN_GROUP = 1;
 	
 	/**
-	 * проверка права на ресурс
+	 * РїСЂРѕРІРµСЂРєР° РїСЂР°РІР° РЅР° СЂРµСЃСѓСЂСЃ
 	 * 
-	 * @param perm	ресурс
-	 * @throws AccessControlException если ресурс недоступен
+	 * @param perm	СЂРµСЃСѓСЂСЃ
+	 * @throws AccessControlException РµСЃР»Рё СЂРµСЃСѓСЂСЃ РЅРµРґРѕСЃС‚СѓРїРµРЅ
 	 */
 	void checkPermission(final Permission perm) throws AccessControlException;
 	
 	/**
-	 * аутентификация
+	 * Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёСЏ
 	 * 
-	 * @param login		логин
-	 * @param password	пароль
-	 * @throws LoginException	в случае неудачной попытки
+	 * @param login		Р»РѕРіРёРЅ
+	 * @param password	РїР°СЂРѕР»СЊ
+	 * @throws LoginException	РІ СЃР»СѓС‡Р°Рµ РЅРµСѓРґР°С‡РЅРѕР№ РїРѕРїС‹С‚РєРё
 	 */
 	void authenticate(String login, String password) throws LoginException;
 	
 	/**
-	 * выполнить отключение
+	 * РІС‹РїРѕР»РЅРёС‚СЊ РѕС‚РєР»СЋС‡РµРЅРёРµ
 	 *
 	 */
 	void logout();
 	
 	/**
-	 * загрузить пользовательский профайл
+	 * Р·Р°РіСЂСѓР·РёС‚СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёР№ РїСЂРѕС„Р°Р№Р»
 	 * 
-	 * @param login			логин
-	 * @param locale		локаль пользователя
-	 * @param defaultLocale	локаль по умолчанию, будет использована в случае если невозможно использовать локаль пользователя
-	 * @return	профайл
+	 * @param login			Р»РѕРіРёРЅ
+	 * @param locale		Р»РѕРєР°Р»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	 * @param defaultLocale	Р»РѕРєР°Р»СЊ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°РЅР° РІ СЃР»СѓС‡Р°Рµ РµСЃР»Рё РЅРµРІРѕР·РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ Р»РѕРєР°Р»СЊ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	 * @return	РїСЂРѕС„Р°Р№Р»
 	 */
 	UserProfile loadUserProfile(String login, Locale locale, Locale defaultLocale);
 	
 	/**
-	 * подключение пользователя
+	 * РїРѕРґРєР»СЋС‡РµРЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
 	 * @param name
 	 * @param password
@@ -85,7 +85,7 @@ public interface SecuritySystem {
 	Integer login(String name, String password, boolean smartCard) throws ApplicationException, InvalidUserNameOrPassword;
 
 	/**
-	 * загрузка наименований модулей используемых пользователем
+	 * Р·Р°РіСЂСѓР·РєР° РЅР°РёРјРµРЅРѕРІР°РЅРёР№ РјРѕРґСѓР»РµР№ РёСЃРїРѕР»СЊР·СѓРµРјС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј
 	 * 
 	 * @param userId
 	 * @return
@@ -97,54 +97,54 @@ public interface SecuritySystem {
 	String[] getModuleAccess(Integer userId) throws ApplicationException;
 	
 	/**
-	 * установка разрешений на элемент иерархии
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·СЂРµС€РµРЅРёР№ РЅР° СЌР»РµРјРµРЅС‚ РёРµСЂР°СЂС…РёРё
 	 * 
-	 * @param treeIdentifier	идентификатор элемента
-	 * @param parentIdentifier	идентификатор родителя элемента
-	 * @param treePart		вид иерархии
+	 * @param treeIdentifier	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЌР»РµРјРµРЅС‚Р°
+	 * @param parentIdentifier	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂРѕРґРёС‚РµР»СЏ СЌР»РµРјРµРЅС‚Р°
+	 * @param treePart		РІРёРґ РёРµСЂР°СЂС…РёРё
 	 */
 	void grantTreePermission(int treeIdentifier, int parentIdentifier, int treePart);
 	
 	/**
-	 * интерактивная настройка разрешений на элемент иерархии
+	 * РёРЅС‚РµСЂР°РєС‚РёРІРЅР°СЏ РЅР°СЃС‚СЂРѕР№РєР° СЂР°Р·СЂРµС€РµРЅРёР№ РЅР° СЌР»РµРјРµРЅС‚ РёРµСЂР°СЂС…РёРё
 	 * 
-	 * @param treeIdentifier	идентификатор элемента
-	 * @param treePart			вид иерархии
-	 * @param className			класс модели иерархии
-	 * @param parentProperty	имя свойства ссылки на родителя
+	 * @param treeIdentifier	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЌР»РµРјРµРЅС‚Р°
+	 * @param treePart			РІРёРґ РёРµСЂР°СЂС…РёРё
+	 * @param className			РєР»Р°СЃСЃ РјРѕРґРµР»Рё РёРµСЂР°СЂС…РёРё
+	 * @param parentProperty	РёРјСЏ СЃРІРѕР№СЃС‚РІР° СЃСЃС‹Р»РєРё РЅР° СЂРѕРґРёС‚РµР»СЏ
 	 */
 	void setupTreePermission(int treeIdentifier, int treePart, String className, String parentProperty);
 	
 	/**
-	 * создание пользователя
+	 * СЃРѕР·РґР°РЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @param userName	имя пользователя
-	 * @param passw		пароль
+	 * @param userName	РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	 * @param passw		РїР°СЂРѕР»СЊ
 	 */
 	void createUser(String userName, String passw);
 	
 	/**
-	 * удаление пользователя
+	 * СѓРґР°Р»РµРЅРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @param userName	имя пользователя
+	 * @param userName	РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 */
 	void deleteUser(String userName);
 	
 	/**
-	 * изменение пароля пользователя
+	 * РёР·РјРµРЅРµРЅРёРµ РїР°СЂРѕР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @param userName	имя пользователя
-	 * @param passw		новый пароль
+	 * @param userName	РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	 * @param passw		РЅРѕРІС‹Р№ РїР°СЂРѕР»СЊ
 	 */
 	void changePassword(String userName, String passw);
 	
 	/**
-	 * создать аудит безопасности системы
+	 * СЃРѕР·РґР°С‚СЊ Р°СѓРґРёС‚ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё СЃРёСЃС‚РµРјС‹
 	 * 
-	 * @param auditType	тип события
-	 * @param beanName	источник события
-	 * @param userName	имя пользователя
-	 * @param details	описание события
+	 * @param auditType	С‚РёРї СЃРѕР±С‹С‚РёСЏ
+	 * @param beanName	РёСЃС‚РѕС‡РЅРёРє СЃРѕР±С‹С‚РёСЏ
+	 * @param userName	РёРјСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
+	 * @param details	РѕРїРёСЃР°РЅРёРµ СЃРѕР±С‹С‚РёСЏ
 	 */
 	void addAuditEvent(SecurityAuditType auditType, String beanName, String userName, String details);
 	

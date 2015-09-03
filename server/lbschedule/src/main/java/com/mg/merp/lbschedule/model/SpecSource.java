@@ -24,19 +24,19 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("LbSchedule.Item.SpecSource")
 public enum SpecSource {
 	/**
-	 * Документ
+	 * Р”РѕРєСѓРјРµРЅС‚
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#SpecSource.Document")
 	DOCUMENT,
 
 	/**
-	 * Каталог
+	 * РљР°С‚Р°Р»РѕРі
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#SpecSource.Catalog")
 	CATALOG,
 	
 	/**
-	 * Прайс-лист
+	 * РџСЂР°Р№СЃ-Р»РёСЃС‚
 	 */
 	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#SpecSource.PriceList")
 	PRICELIST	

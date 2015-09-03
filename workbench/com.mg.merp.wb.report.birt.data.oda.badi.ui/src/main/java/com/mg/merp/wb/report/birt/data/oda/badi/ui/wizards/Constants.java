@@ -15,7 +15,7 @@
 package com.mg.merp.wb.report.birt.data.oda.badi.ui.wizards;
 
 /**
- * Константы
+ * РљРѕРЅСЃС‚Р°РЅС‚С‹
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: Constants.java,v 1.4 2007/08/30 15:05:37 safonov Exp $

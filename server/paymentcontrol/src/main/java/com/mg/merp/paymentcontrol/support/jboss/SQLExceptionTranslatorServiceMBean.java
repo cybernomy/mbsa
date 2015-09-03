@@ -17,7 +17,7 @@ package com.mg.merp.paymentcontrol.support.jboss;
 import org.jboss.system.ServiceMBean;
 
 /**
- * Сервис транслятора SQL ИС модуля платежный календарь
+ * РЎРµСЂРІРёСЃ С‚СЂР°РЅСЃР»СЏС‚РѕСЂР° SQL РРЎ РјРѕРґСѓР»СЏ РїР»Р°С‚РµР¶РЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ
  * 
  * @author Artem V. Sharapov
  * @version $Id: SQLExceptionTranslatorServiceMBean.java,v 1.1 2007/05/23 06:02:59 sharapov Exp $
@@ -25,7 +25,7 @@ import org.jboss.system.ServiceMBean;
 public interface SQLExceptionTranslatorServiceMBean extends ServiceMBean {
 
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:paymentcontrol=SQLExceptionTranslator"; //$NON-NLS-1$
 

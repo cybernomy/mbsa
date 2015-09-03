@@ -17,7 +17,7 @@ package com.mg.merp.warehouse.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Секции хранения в партии"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРµРєС†РёРё С…СЂР°РЅРµРЅРёСЏ РІ РїР°СЂС‚РёРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: BinLocationDetail.java,v 1.2 2007/07/19 11:25:02 sharapov Exp $

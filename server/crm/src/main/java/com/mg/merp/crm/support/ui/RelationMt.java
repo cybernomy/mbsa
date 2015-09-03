@@ -91,7 +91,7 @@ import com.mg.merp.settlement.ContractorCardServiceLocal;
 import com.mg.merp.settlement.model.ContractorCard;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Деловые отношения" 
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”РµР»РѕРІС‹Рµ РѕС‚РЅРѕС€РµРЅРёСЏ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -596,7 +596,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обновить таблицу телефонов
+	 * РћР±РЅРѕРІРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ С‚РµР»РµС„РѕРЅРѕРІ
 	 */
 	private void refreshPhoneTable() {
 		List<PhoneItem> phoneItems = new ArrayList<PhoneItem>();
@@ -633,7 +633,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обновить таблицу электронных адресов
+	 * РћР±РЅРѕРІРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ СЌР»РµРєС‚СЂРѕРЅРЅС‹С… Р°РґСЂРµСЃРѕРІ
 	 */
 	private void refreshEAdressTable() {
 		List<ElectronicAdressItem> eAdressItems = new ArrayList<ElectronicAdressItem>();
@@ -671,14 +671,14 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обновить таблицу карточек расчетов 
+	 * РћР±РЅРѕРІРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ РєР°СЂС‚РѕС‡РµРє СЂР°СЃС‡РµС‚РѕРІ 
 	 */
 	private void refreshContractorCardTable() {
 		contractorCardTable.getModel().load();
 	}
 
 	/**
-	 * Обновить таблицу контакных лиц 
+	 * РћР±РЅРѕРІРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ РєРѕРЅС‚Р°РєРЅС‹С… Р»РёС† 
 	 */
 	private void refreshContactPersonTable() {
 		contact.getModel().load();
@@ -693,7 +693,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Получить адрес (юр.лица или физ.лица)  
+	 * РџРѕР»СѓС‡РёС‚СЊ Р°РґСЂРµСЃ (СЋСЂ.Р»РёС†Р° РёР»Рё С„РёР·.Р»РёС†Р°)  
 	 */
 	private void getAdressInformation() {
 		resetAdressInformation();
@@ -758,7 +758,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Сбросить значения полей адреса в NULL
+	 * РЎР±СЂРѕСЃРёС‚СЊ Р·РЅР°С‡РµРЅРёСЏ РїРѕР»РµР№ Р°РґСЂРµСЃР° РІ NULL
 	 */
 	private void resetAdressInformation() {
 		index = null;
@@ -774,8 +774,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события изменения типа лица (юридичекое/физическое)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РёР·РјРµРЅРµРЅРёСЏ С‚РёРїР° Р»РёС†Р° (СЋСЂРёРґРёС‡РµРєРѕРµ/С„РёР·РёС‡РµСЃРєРѕРµ)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionPersonTypeChanged(WidgetEvent event) {
 		view.flushForm();
@@ -786,8 +786,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события добавления контактного лица
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РґРѕР±Р°РІР»РµРЅРёСЏ РєРѕРЅС‚Р°РєС‚РЅРѕРіРѕ Р»РёС†Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionAddContactPerson(WidgetEvent event) throws Exception {
@@ -808,8 +808,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события удаления контактного лица
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ СѓРґР°Р»РµРЅРёСЏ РєРѕРЅС‚Р°РєС‚РЅРѕРіРѕ Р»РёС†Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionRemoveContactPerson(WidgetEvent event) throws Exception {
@@ -821,8 +821,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события просмотра контактного лица
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РїСЂРѕСЃРјРѕС‚СЂР° РєРѕРЅС‚Р°РєС‚РЅРѕРіРѕ Р»РёС†Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionShowContactPerson(WidgetEvent event) throws Exception {
@@ -831,8 +831,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события изменения контактного лица
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РёР·РјРµРЅРµРЅРёСЏ РєРѕРЅС‚Р°РєС‚РЅРѕРіРѕ Р»РёС†Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionEditContactPerson(WidgetEvent event) throws Exception {
@@ -856,8 +856,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события обновления контактной информации (телефоны/электронные адреса)
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РѕР±РЅРѕРІР»РµРЅРёСЏ РєРѕРЅС‚Р°РєС‚РЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё (С‚РµР»РµС„РѕРЅС‹/СЌР»РµРєС‚СЂРѕРЅРЅС‹Рµ Р°РґСЂРµСЃР°)
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionRefreshContact(WidgetEvent event) throws ApplicationException {
@@ -866,8 +866,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события добавления телефона
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РґРѕР±Р°РІР»РµРЅРёСЏ С‚РµР»РµС„РѕРЅР°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionAddPhone(WidgetEvent event) throws ApplicationException {
@@ -878,7 +878,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Добавить телефон физ.лицу
+	 * Р”РѕР±Р°РІРёС‚СЊ С‚РµР»РµС„РѕРЅ С„РёР·.Р»РёС†Сѓ
 	 */	
 	private void AddPhoneToNaturalPerson(NaturalPerson naturalPerson) {
 		if(naturalPerson == null)
@@ -904,7 +904,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Добавить телефон юр.лицу
+	 * Р”РѕР±Р°РІРёС‚СЊ С‚РµР»РµС„РѕРЅ СЋСЂ.Р»РёС†Сѓ
 	 */
 	private void AddPhoneToLegalPerson(Contractor legalPerson) {
 		if(legalPerson == null)
@@ -930,8 +930,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события удаления телефона
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ СѓРґР°Р»РµРЅРёСЏ С‚РµР»РµС„РѕРЅР°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionRemovePhone(WidgetEvent event) throws ApplicationException {
@@ -944,8 +944,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Удалить телефон юр.лица
-	 * @param phoneId - идентификатор телефона
+	 * РЈРґР°Р»РёС‚СЊ С‚РµР»РµС„РѕРЅ СЋСЂ.Р»РёС†Р°
+	 * @param phoneId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµР»РµС„РѕРЅР°
 	 */
 	private void RemovePhoneFromLegalPerson(Integer phoneId) {
 		if(phoneId != null)
@@ -953,8 +953,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Удалить телефон физ.лица
-	 * @param phoneId - идентификатор телефона
+	 * РЈРґР°Р»РёС‚СЊ С‚РµР»РµС„РѕРЅ С„РёР·.Р»РёС†Р°
+	 * @param phoneId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµР»РµС„РѕРЅР°
 	 */
 	private void RemovePhoneFromNaturalPerson(Integer phoneId) {
 		if(phoneId != null)
@@ -962,8 +962,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события просмотра телефона
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РїСЂРѕСЃРјРѕС‚СЂР° С‚РµР»РµС„РѕРЅР°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionShowPhone(WidgetEvent event) throws ApplicationException {
@@ -975,8 +975,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Просмотр телефона юр.лица
-	 * @param phoneId - идентификатор телефона
+	 * РџСЂРѕСЃРјРѕС‚СЂ С‚РµР»РµС„РѕРЅР° СЋСЂ.Р»РёС†Р°
+	 * @param phoneId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµР»РµС„РѕРЅР°
 	 */
 	private void ShowPhoneOfLegalPerson(Integer phoneId) {
 		if(phoneId != null)
@@ -984,8 +984,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Просмотр телефона физ.лица
-	 * @param phoneId - идентификатор телефона
+	 * РџСЂРѕСЃРјРѕС‚СЂ С‚РµР»РµС„РѕРЅР° С„РёР·.Р»РёС†Р°
+	 * @param phoneId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµР»РµС„РѕРЅР°
 	 */
 	private void ShowPhoneOfNaturalPerson(Integer phoneId) {
 		if(phoneId != null)
@@ -993,8 +993,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события изменения телефона
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РёР·РјРµРЅРµРЅРёСЏ С‚РµР»РµС„РѕРЅР°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionEditPhone(WidgetEvent event) throws ApplicationException {
@@ -1006,8 +1006,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Изменение телефона юр.лица
-	 * @param phoneId - идентификатор телефона
+	 * РР·РјРµРЅРµРЅРёРµ С‚РµР»РµС„РѕРЅР° СЋСЂ.Р»РёС†Р°
+	 * @param phoneId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµР»РµС„РѕРЅР°
 	 */
 	private void EditPhoneOfLegalPerson(Integer phoneId) {
 		if(phoneId == null)
@@ -1031,8 +1031,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Изменение телефона физ.лица
-	 * @param phoneId - идентификатор телефона
+	 * РР·РјРµРЅРµРЅРёРµ С‚РµР»РµС„РѕРЅР° С„РёР·.Р»РёС†Р°
+	 * @param phoneId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµР»РµС„РѕРЅР°
 	 */
 	private void EditPhoneOfNaturalPerson(Integer phoneId) {
 		if(phoneId == null)
@@ -1056,8 +1056,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события добавления электронного адреса
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РґРѕР±Р°РІР»РµРЅРёСЏ СЌР»РµРєС‚СЂРѕРЅРЅРѕРіРѕ Р°РґСЂРµСЃР°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionAddEAdress(WidgetEvent event) throws ApplicationException {
@@ -1068,8 +1068,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Добавить электронный адрес юр.лицу
-	 * @param legalPerson - юр.лицо
+	 * Р”РѕР±Р°РІРёС‚СЊ СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№ Р°РґСЂРµСЃ СЋСЂ.Р»РёС†Сѓ
+	 * @param legalPerson - СЋСЂ.Р»РёС†Рѕ
 	 */
 	private void AddEAdressToLegalPerson(Contractor legalPerson) {
 		if(legalPerson == null)
@@ -1095,8 +1095,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Добавить электронный адрес физ.лицу
-	 * @param naturalPerson - физ.лицо
+	 * Р”РѕР±Р°РІРёС‚СЊ СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№ Р°РґСЂРµСЃ С„РёР·.Р»РёС†Сѓ
+	 * @param naturalPerson - С„РёР·.Р»РёС†Рѕ
 	 */
 	private void AddEAdressToNaturalPerson(NaturalPerson naturalPerson) {
 		if(naturalPerson == null)
@@ -1122,8 +1122,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события удаления электронного адреса
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ СѓРґР°Р»РµРЅРёСЏ СЌР»РµРєС‚СЂРѕРЅРЅРѕРіРѕ Р°РґСЂРµСЃР°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionRemoveEAdress(WidgetEvent event) throws ApplicationException {
@@ -1136,8 +1136,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Удалить электронный адрес у юр.лица
-	 * @param eAdressId - идентификатор электронного адреса
+	 * РЈРґР°Р»РёС‚СЊ СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№ Р°РґСЂРµСЃ Сѓ СЋСЂ.Р»РёС†Р°
+	 * @param eAdressId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЌР»РµРєС‚СЂРѕРЅРЅРѕРіРѕ Р°РґСЂРµСЃР°
 	 */
 	private void removeEAdressFromLegalPerson(Integer eAdressId) {
 		if(eAdressId != null)
@@ -1145,8 +1145,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Удалить электронный адрес у физ.лица
-	 * @param eAdressId - идентификатор электронного адреса
+	 * РЈРґР°Р»РёС‚СЊ СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№ Р°РґСЂРµСЃ Сѓ С„РёР·.Р»РёС†Р°
+	 * @param eAdressId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЌР»РµРєС‚СЂРѕРЅРЅРѕРіРѕ Р°РґСЂРµСЃР°
 	 */
 	private void removeEAdressFromNaturalPerson(Integer eAdressId) {
 		if(eAdressId != null)
@@ -1154,8 +1154,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события просмотра электронного адреса
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РїСЂРѕСЃРјРѕС‚СЂР° СЌР»РµРєС‚СЂРѕРЅРЅРѕРіРѕ Р°РґСЂРµСЃР°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionShowEAdress(WidgetEvent event) throws ApplicationException {
@@ -1167,8 +1167,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Просмотреть электронный адрес у юр.лица
-	 * @param eAdressId - идентификатор электронного адреса
+	 * РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№ Р°РґСЂРµСЃ Сѓ СЋСЂ.Р»РёС†Р°
+	 * @param eAdressId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЌР»РµРєС‚СЂРѕРЅРЅРѕРіРѕ Р°РґСЂРµСЃР°
 	 */
 	private void showEAdressOfLegalPerson(Integer eAdressId) {
 		if(eAdressId != null)
@@ -1176,8 +1176,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Просмотреть электронный адрес у физ.лица
-	 * @param eAdressId - идентификатор электронного адреса
+	 * РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№ Р°РґСЂРµСЃ Сѓ С„РёР·.Р»РёС†Р°
+	 * @param eAdressId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЌР»РµРєС‚СЂРѕРЅРЅРѕРіРѕ Р°РґСЂРµСЃР°
 	 */
 	private void showEAdressOfNaturalPerson(Integer eAdressId) {
 		if(eAdressId != null)
@@ -1185,8 +1185,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события изменения электронного адреса
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РёР·РјРµРЅРµРЅРёСЏ СЌР»РµРєС‚СЂРѕРЅРЅРѕРіРѕ Р°РґСЂРµСЃР°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionEditEAdress(WidgetEvent event) {
 		Integer eAdressId = ((ElectronicAdressTableModel) eAdressTable.getModel()).getSelectedElectronicAdressId();
@@ -1197,8 +1197,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Изменить электронный адрес у юр.лица
-	 * @param eAdressId - идентификатор электронного адреса
+	 * РР·РјРµРЅРёС‚СЊ СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№ Р°РґСЂРµСЃ Сѓ СЋСЂ.Р»РёС†Р°
+	 * @param eAdressId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЌР»РµРєС‚СЂРѕРЅРЅРѕРіРѕ Р°РґСЂРµСЃР°
 	 */
 	private void editEAdressOfLegalPerson(Integer eAdressId) {
 		if(eAdressId == null)
@@ -1222,8 +1222,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Изменить электронный адрес у физ.лица
-	 * @param eAdressId - идентификатор электронного адреса
+	 * РР·РјРµРЅРёС‚СЊ СЌР»РµРєС‚СЂРѕРЅРЅС‹Р№ Р°РґСЂРµСЃ Сѓ С„РёР·.Р»РёС†Р°
+	 * @param eAdressId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЌР»РµРєС‚СЂРѕРЅРЅРѕРіРѕ Р°РґСЂРµСЃР°
 	 */
 	private void editEAdressOfNaturalPerson(Integer eAdressId) {
 		if(eAdressId == null)
@@ -1247,8 +1247,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события просмотра карточки расчетов
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РїСЂРѕСЃРјРѕС‚СЂР° РєР°СЂС‚РѕС‡РєРё СЂР°СЃС‡РµС‚РѕРІ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionShowContractorCard(WidgetEvent event) throws ApplicationException {
@@ -1258,8 +1258,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события изменения карточки расчетов
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РёР·РјРµРЅРµРЅРёСЏ РєР°СЂС‚РѕС‡РєРё СЂР°СЃС‡РµС‚РѕРІ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionEditContractorCard(WidgetEvent event) throws ApplicationException {
@@ -1284,8 +1284,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработка события обновления таблицы карточек расчетов
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РѕР±РЅРѕРІР»РµРЅРёСЏ С‚Р°Р±Р»РёС†С‹ РєР°СЂС‚РѕС‡РµРє СЂР°СЃС‡РµС‚РѕРІ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws ApplicationException
 	 */
 	public void onActionRefreshContractorCard(WidgetEvent event) throws ApplicationException {
@@ -1293,8 +1293,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик пункта КМ "Добавить документ"  
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "Р”РѕР±Р°РІРёС‚СЊ РґРѕРєСѓРјРµРЅС‚"  
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionAddDocument(WidgetEvent event) throws Exception {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.document.support.ui.DocSectionSearchHelp"); //$NON-NLS-1$
@@ -1316,10 +1316,10 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Показать форму поиска образца документа
-	 * @param docSection - раздел документа
-	 * @param documentService - сервис документа
-	 * @throws Exception - ИС
+	 * РџРѕРєР°Р·Р°С‚СЊ С„РѕСЂРјСѓ РїРѕРёСЃРєР° РѕР±СЂР°Р·С†Р° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docSection - СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param documentService - СЃРµСЂРІРёСЃ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @throws Exception - РРЎ
 	 */
 	private void showPatternDialog(DocSection docSection, final Document documentService) throws Exception {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.document.support.ui.UniversalDocModelSearchHelp"); //$NON-NLS-1$
@@ -1339,9 +1339,9 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Создать документ по образцу и отобразить
-	 * @param docHeadModel - образец документа
-	 * @param documentService - сервис документа
+	 * РЎРѕР·РґР°С‚СЊ РґРѕРєСѓРјРµРЅС‚ РїРѕ РѕР±СЂР°Р·С†Сѓ Рё РѕС‚РѕР±СЂР°Р·РёС‚СЊ
+	 * @param docHeadModel - РѕР±СЂР°Р·РµС† РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param documentService - СЃРµСЂРІРёСЃ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	private void insertDocumentByPattern(DocHeadModel docHeadModel, Document documentService) {
@@ -1366,8 +1366,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик пункта КМ "Изменить документ"  
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РР·РјРµРЅРёС‚СЊ РґРѕРєСѓРјРµРЅС‚"  
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	public void onActionEditDocument(WidgetEvent event) {
@@ -1389,8 +1389,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик пункта КМ "Удалить документ"  
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЈРґР°Р»РёС‚СЊ РґРѕРєСѓРјРµРЅС‚"  
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionDeleteDocument(WidgetEvent event) {
 		final DocHead docHead = getDocHead();
@@ -1409,8 +1409,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик пункта КМ "Просмотреть документ"  
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚"  
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	public void onActionViewDocument(WidgetEvent event) {
@@ -1422,24 +1422,24 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик пункта КМ "Обновить таблицу документов"  
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РћР±РЅРѕРІРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ РґРѕРєСѓРјРµРЅС‚РѕРІ"  
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRefreshDocument(WidgetEvent event) {
 		documents.getModel().load();
 	}
 
 	/**
-	 * Обработчик пункта КМ "Условия отбора документов"  
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РЈСЃР»РѕРІРёСЏ РѕС‚Р±РѕСЂР° РґРѕРєСѓРјРµРЅС‚РѕРІ"  
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRestDocument(WidgetEvent event) {
 
 	}
 
 	/**
-	 * Обработчик пункта КМ "Изменение спецификаций"  
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РР·РјРµРЅРµРЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёР№"  
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionEditSpecification(WidgetEvent event) {
 		Integer selectedKey = getDocumentSelectedPrimaryKey();
@@ -1456,9 +1456,9 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Показать документ в режиме изменения спецификаций
-	 * @param documentService - cервис документа
-	 * @param docId - идентификатор документа
+	 * РџРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚ РІ СЂРµР¶РёРјРµ РёР·РјРµРЅРµРЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёР№
+	 * @param documentService - cРµСЂРІРёСЃ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	private void editDocumetSpecification(Document documentService, Serializable docId) {
@@ -1478,8 +1478,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик пункта КМ "Отработка документа"  
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РћС‚СЂР°Р±РѕС‚РєР° РґРѕРєСѓРјРµРЅС‚Р°"  
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionExecuteDocFlow(WidgetEvent event) {
 		Integer selectedKey = getDocumentSelectedPrimaryKey();
@@ -1488,8 +1488,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик пункта КМ "Откат ДО"  
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РћС‚РєР°С‚ Р”Рћ"  
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRollBackDocFlow(WidgetEvent event) {
 		Integer selectedKey = getDocumentSelectedPrimaryKey();
@@ -1498,8 +1498,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Обработчик пункта КМ "История ДО"  
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РСЃС‚РѕСЂРёСЏ Р”Рћ"  
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionDocFlowHistory(WidgetEvent event) {
 		Integer selectedKey = getDocumentSelectedPrimaryKey();
@@ -1520,8 +1520,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Получить физ.лицо
-	 * @return физ.лицо
+	 * РџРѕР»СѓС‡РёС‚СЊ С„РёР·.Р»РёС†Рѕ
+	 * @return С„РёР·.Р»РёС†Рѕ
 	 */
 	private NaturalPerson getNaturalPerson() {
 		NaturalPerson naturalPerson = (NaturalPerson) getEntity().getAttribute("NaturalPerson"); //$NON-NLS-1$
@@ -1531,8 +1531,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Получить юр.лицо
-	 * @return юр.лицо
+	 * РџРѕР»СѓС‡РёС‚СЊ СЋСЂ.Р»РёС†Рѕ
+	 * @return СЋСЂ.Р»РёС†Рѕ
 	 */
 	private Contractor getLegalPerson() {
 		Contractor legalPerson = (Contractor) getEntity().getAttribute("LegalPerson"); //$NON-NLS-1$
@@ -1542,8 +1542,8 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
 	}
 
 	/**
-	 * Получить текущий тип лица
-	 * @return true - юр.лицо; false - физ.лицо
+	 * РџРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰РёР№ С‚РёРї Р»РёС†Р°
+	 * @return true - СЋСЂ.Р»РёС†Рѕ; false - С„РёР·.Р»РёС†Рѕ
 	 */
 	private boolean getIsLeagalPerson() {
 		return (Boolean)getEntity().getAttribute("IsLegalPerson"); //$NON-NLS-1$

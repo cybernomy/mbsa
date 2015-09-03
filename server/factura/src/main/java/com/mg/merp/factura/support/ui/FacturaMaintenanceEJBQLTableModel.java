@@ -22,7 +22,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.factura.model.FacturaHead;
 
 /**
- * Вспомогательный класс для отображения формы списка счет - фактур
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° СЃС‡РµС‚ - С„Р°РєС‚СѓСЂ
  * 
  * @author leonova
  * @version $Id: FacturaMaintenanceEJBQLTableModel.java,v 1.4 2009/02/10 14:23:44 safonov Exp $ 

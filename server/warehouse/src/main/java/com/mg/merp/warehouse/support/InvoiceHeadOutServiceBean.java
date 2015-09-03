@@ -26,7 +26,7 @@ import com.mg.merp.warehouse.generic.AbstractWarehouseDocument;
 import com.mg.merp.warehouse.model.InvoiceHead;
 
 /**
- * Бизнес-компонент "Исходящие накладные" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РСЃС…РѕРґСЏС‰РёРµ РЅР°РєР»Р°РґРЅС‹Рµ" 
  * 
  * @author leonova
  * @version $Id: InvoiceHeadOutServiceBean.java,v 1.6 2006/12/12 15:34:04 safonov Exp $

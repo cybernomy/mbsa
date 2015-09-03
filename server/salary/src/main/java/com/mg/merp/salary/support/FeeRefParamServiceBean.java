@@ -24,7 +24,7 @@ import com.mg.merp.salary.FeeRefParamServiceLocal;
 import com.mg.merp.salary.model.FeeRefParam;
 
 /**
- * Бизнес-компонент "Параметры начислений / удержаний" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџР°СЂР°РјРµС‚СЂС‹ РЅР°С‡РёСЃР»РµРЅРёР№ / СѓРґРµСЂР¶Р°РЅРёР№" 
  * 
  * @author leonova
  * @version $Id: FeeRefParamServiceBean.java,v 1.3 2006/08/31 11:37:58 leonova Exp $

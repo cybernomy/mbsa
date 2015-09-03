@@ -36,7 +36,7 @@ import com.mg.merp.reference.CurrencyServiceLocal;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Реализация бизнес-компонента "Журнал платежей" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р–СѓСЂРЅР°Р» РїР»Р°С‚РµР¶РµР№" 
  * 
  * @author leonova
  * @author Artem V Sharapov

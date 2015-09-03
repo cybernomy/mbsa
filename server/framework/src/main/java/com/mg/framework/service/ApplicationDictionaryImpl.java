@@ -57,7 +57,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.framework.utils.StringUtils;
 
 /**
- * Реализация репозитария метаданных системы.
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЂРµРїРѕР·РёС‚Р°СЂРёСЏ РјРµС‚Р°РґР°РЅРЅС‹С… СЃРёСЃС‚РµРјС‹.
  * 
  * @author Oleg V. Safonov
  * @version $Id: ApplicationDictionaryImpl.java,v 1.15 2008/12/08 06:13:57 safonov Exp $
@@ -152,7 +152,7 @@ public class ApplicationDictionaryImpl implements ApplicationDictionary {
 	}
 	
 	/**
-	 * рекурсивная загрузка элемента данных
+	 * СЂРµРєСѓСЂСЃРёРІРЅР°СЏ Р·Р°РіСЂСѓР·РєР° СЌР»РµРјРµРЅС‚Р° РґР°РЅРЅС‹С…
 	 * 
 	 * @param name
 	 * @return
@@ -178,7 +178,7 @@ public class ApplicationDictionaryImpl implements ApplicationDictionary {
 		case DOMAIN:
 			return model;
 		case REFERENCE:
-			//если ссылка, то в качестве модели возмем элемент даннных на который ссылаемся
+			//РµСЃР»Рё СЃСЃС‹Р»РєР°, С‚Рѕ РІ РєР°С‡РµСЃС‚РІРµ РјРѕРґРµР»Рё РІРѕР·РјРµРј СЌР»РµРјРµРЅС‚ РґР°РЅРЅРЅС‹С… РЅР° РєРѕС‚РѕСЂС‹Р№ СЃСЃС‹Р»Р°РµРјСЃСЏ
 			return loadDataItem((String) (((PersistentObject) model).getAttribute("ReferenceDataItemName")));
 		default:
 			throw new IllegalStateException();
@@ -191,11 +191,11 @@ public class ApplicationDictionaryImpl implements ApplicationDictionary {
 	}
 	
 	private void checkLicense(PersistentObject subsystemObject) {
-		//компонент должен быть связан с модулем, непонятно что делать если не связан
+		//РєРѕРјРїРѕРЅРµРЅС‚ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ СЃРІСЏР·Р°РЅ СЃ РјРѕРґСѓР»РµРј, РЅРµРїРѕРЅСЏС‚РЅРѕ С‡С‚Рѕ РґРµР»Р°С‚СЊ РµСЃР»Рё РЅРµ СЃРІСЏР·Р°РЅ
 		if (subsystemObject == null)
 			return;
 		Session session = ServerUtils.getCurrentSession();
-		//интерактивный пользователь обязательно должен иметь сессию, другие пользователи не лицензируются
+		//РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹Р№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РґРѕР»Р¶РµРЅ РёРјРµС‚СЊ СЃРµСЃСЃРёСЋ, РґСЂСѓРіРёРµ РїРѕР»СЊР·РѕРІР°С‚РµР»Рё РЅРµ Р»РёС†РµРЅР·РёСЂСѓСЋС‚СЃСЏ
 		if (session == null || !session.isInteractive())
 			return;
 		UserProfile up = session.getWorkingConnection().getUserProfile();
@@ -205,7 +205,7 @@ public class ApplicationDictionaryImpl implements ApplicationDictionary {
 		for (String subsystem : up.getPermittableSubsystems())
 			if (subsystemName.equalsIgnoreCase(subsystem))
 				return;
-		//модуля нет в списке доступных
+		//РјРѕРґСѓР»СЏ РЅРµС‚ РІ СЃРїРёСЃРєРµ РґРѕСЃС‚СѓРїРЅС‹С…
 		throw new LicenseException(Messages.getInstance().getMessage(Messages.SUBSYSTEM_ACCESS_DENIED, new Object[] {subsystemName}));
 	}
 	
@@ -260,7 +260,7 @@ public class ApplicationDictionaryImpl implements ApplicationDictionary {
 				result.setEnumConstantsText(UIUtils.enumToEnumConstantsText(propertyClass.asSubclass(Enum.class)));
 			else if (PersistentObject.class.isAssignableFrom(propertyClass)) {
 				if (result.getEntityPropertyText() == null) {
-					//загрузим из анотаций если не было установлено в описании элемента данных
+					//Р·Р°РіСЂСѓР·РёРј РёР· Р°РЅРѕС‚Р°С†РёР№ РµСЃР»Рё РЅРµ Р±С‹Р»Рѕ СѓСЃС‚Р°РЅРѕРІР»РµРЅРѕ РІ РѕРїРёСЃР°РЅРёРё СЌР»РµРјРµРЅС‚Р° РґР°РЅРЅС‹С…
 					EntityPropertyText entityPropertyText = propertyClass.getAnnotation(EntityPropertyText.class);
 					if (entityPropertyText != null) {
 						result.setEntityPropertyText(entityPropertyText.value());
@@ -269,7 +269,7 @@ public class ApplicationDictionaryImpl implements ApplicationDictionary {
 				}
 			}
 
-			//установим SearchHelp если указан дополнительно на атрибуте сущности
+			//СѓСЃС‚Р°РЅРѕРІРёРј SearchHelp РµСЃР»Рё СѓРєР°Р·Р°РЅ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕ РЅР° Р°С‚СЂРёР±СѓС‚Рµ СЃСѓС‰РЅРѕСЃС‚Рё
 			String searchHelpName = propertyMetadata.getSearchHelpName();
 			if (!StringUtils.stringNullOrEmpty(searchHelpName))
 				result.setSearchHelp(SearchHelpProcessor.createSearch(searchHelpName));
@@ -279,8 +279,8 @@ public class ApplicationDictionaryImpl implements ApplicationDictionary {
 		else {
 			if (log.isDebugEnabled())
 				log.debug("create field metadata, class: " + propertyClass.getName());
-			//если нет связи с элементом данных, то пытаемся создать метаданные
-			//на основании значения поля
+			//РµСЃР»Рё РЅРµС‚ СЃРІСЏР·Рё СЃ СЌР»РµРјРµРЅС‚РѕРј РґР°РЅРЅС‹С…, С‚Рѕ РїС‹С‚Р°РµРјСЃСЏ СЃРѕР·РґР°С‚СЊ РјРµС‚Р°РґР°РЅРЅС‹Рµ
+			//РЅР° РѕСЃРЅРѕРІР°РЅРёРё Р·РЅР°С‡РµРЅРёСЏ РїРѕР»СЏ
 			FieldMetadata result = new FieldMetadata(propertyClass.getName(), MiscUtils.javaTypeToBuiltInType(propertyClass), propertyClass, 0, "");
 			if (Enum.class.isAssignableFrom(propertyClass))
 				result.setEnumConstantsText(UIUtils.enumToEnumConstantsText(propertyClass.asSubclass(Enum.class)));
@@ -343,8 +343,8 @@ public class ApplicationDictionaryImpl implements ApplicationDictionary {
 		Messages msgs = Messages.getInstance();
 		String msg = msgs.getMessage(Messages.CREATE_BUSINESS_BEAN_FAILED, new Object[] {name});
 
-		//выполним с помощью 2х запросов, хотя возможно обойтись одним для того, чтобы определить
-		//причину неполадок, отсутствует описание бизнес-компонента или его реализации
+		//РІС‹РїРѕР»РЅРёРј СЃ РїРѕРјРѕС‰СЊСЋ 2С… Р·Р°РїСЂРѕСЃРѕРІ, С…РѕС‚СЏ РІРѕР·РјРѕР¶РЅРѕ РѕР±РѕР№С‚РёСЃСЊ РѕРґРЅРёРј РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР±С‹ РѕРїСЂРµРґРµР»РёС‚СЊ
+		//РїСЂРёС‡РёРЅСѓ РЅРµРїРѕР»Р°РґРѕРє, РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РѕРїРёСЃР°РЅРёРµ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РёР»Рё РµРіРѕ СЂРµР°Р»РёР·Р°С†РёРё
 		OrmTemplate tmpl = OrmTemplate.getInstance();
 		PersistentObject sysClass = tmpl.findUniqueByCriteria(OrmTemplate.createCriteria("com.mg.merp.core.model.SysClass", "sc")
 				.add(Restrictions.eq("sc.BeanName", upperName))

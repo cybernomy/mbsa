@@ -27,7 +27,7 @@ import com.mg.merp.account.support.Messages;
 import com.mg.merp.document.model.DocType;
 
 /**
- * Контроллер ввода данных для проведения операции списания инвентарных карточек
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РІРІРѕРґР° РґР°РЅРЅС‹С… РґР»СЏ РїСЂРѕРІРµРґРµРЅРёСЏ РѕРїРµСЂР°С†РёРё СЃРїРёСЃР°РЅРёСЏ РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‡РµРє
  *  
  * @author Konstantin S. Alikaev
  * @version $Id: AccInventoryRetireDialog.java,v 1.1 2008/04/29 05:29:04 alikaev Exp $
@@ -35,75 +35,75 @@ import com.mg.merp.document.model.DocType;
 public class AccInventoryRetireDialog extends DefaultWizardDialog {
 
 	/**
-	 * заголовок дилогового окна
+	 * Р·Р°РіРѕР»РѕРІРѕРє РґРёР»РѕРіРѕРІРѕРіРѕ РѕРєРЅР°
 	 */
 	private String dialogTitle;
 
 	/**
-	 * дата учета
+	 * РґР°С‚Р° СѓС‡РµС‚Р°
 	 */
 	private Date revalDate;
 	
 	/**
-	 * тип документа
+	 * С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	private DocType docType;
 	
 	/**
-	 * номер документа
+	 * РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	private String docNumber;
 	
 	/**
-	 * дата документа
+	 * РґР°С‚Р° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	private Date docDate;
 	
 	/**
-	 * тип документа основания
+	 * С‚РёРї РґРѕРєСѓРјРµРЅС‚Р° РѕСЃРЅРѕРІР°РЅРёСЏ
 	 */
 	private DocType baseDocType;
 	
 	/**
-	 * номер докумнта основания
+	 * РЅРѕРјРµСЂ РґРѕРєСѓРјРЅС‚Р° РѕСЃРЅРѕРІР°РЅРёСЏ
 	 */
 	private String baseDocNumber;
 	
 	/**
-	 * дата документа основания
+	 * РґР°С‚Р° РґРѕРєСѓРјРµРЅС‚Р° РѕСЃРЅРѕРІР°РЅРёСЏ
 	 */
 	private Date baseDocDate;
 	
 	/**
-	 * счет
+	 * СЃС‡РµС‚
 	 */
 	private AccPlan AccPlan;
 	
 	/**
-	 * аналитика 1-го уровня
+	 * Р°РЅР°Р»РёС‚РёРєР° 1-РіРѕ СѓСЂРѕРІРЅСЏ
 	 */
 	@DataItemName("Account.Inventory.Anl1")
 	private AnlPlan anl1;
 	
 	/**
-	 * аналитика 2-го уровня
+	 * Р°РЅР°Р»РёС‚РёРєР° 2-РіРѕ СѓСЂРѕРІРЅСЏ
 	 */
 	@DataItemName("Account.Inventory.Anl2")
 	private AnlPlan anl2;
 	/**
-	 * аналитика 3-го уровня
+	 * Р°РЅР°Р»РёС‚РёРєР° 3-РіРѕ СѓСЂРѕРІРЅСЏ
 	 */
 	@DataItemName("Account.Inventory.Anl3")
 	private AnlPlan anl3;
 
 	/**
-	 * аналитика 4-го уровня
+	 * Р°РЅР°Р»РёС‚РёРєР° 4-РіРѕ СѓСЂРѕРІРЅСЏ
 	 */
 	@DataItemName("Account.Inventory.Anl4")
 	private AnlPlan anl4;
 	
 	/**
-	 * аналитика 5-го уровня
+	 * Р°РЅР°Р»РёС‚РёРєР° 5-РіРѕ СѓСЂРѕРІРЅСЏ
 	 */
 	@DataItemName("Account.Inventory.Anl5")
 	private AnlPlan anl5;

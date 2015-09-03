@@ -25,7 +25,7 @@ import com.mg.merp.finance.AnalyticsServiceLocal;
 import com.mg.merp.finance.model.Analytics;
 
 /**
- * Бизнес-компонент "Аналитика финансовых счетов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РђРЅР°Р»РёС‚РёРєР° С„РёРЅР°РЅСЃРѕРІС‹С… СЃС‡РµС‚РѕРІ" 
  * 
  * @author leonova
  * @version $Id: AnalyticsServiceBean.java,v 1.3 2006/08/28 12:48:45 leonova Exp $

@@ -47,7 +47,7 @@ import com.mg.merp.report.model.RptMain;
 import com.mg.merp.report.support.ui.ChooseReportDialog;
 
 /**
- * Реализация сервиса MBIRT (Millennium BI and Report Tools)
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° MBIRT (Millennium BI and Report Tools)
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -59,36 +59,36 @@ public class RptEngineServiceImpl {
 	private String reportFolder;
 
 	/**
-	 * Конфигурация движка BIRT
+	 * РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РґРІРёР¶РєР° BIRT
 	 */
 	private EngineConfig config;
 
 	/**
-	 * Интерфейс движка BIRT
+	 * РРЅС‚РµСЂС„РµР№СЃ РґРІРёР¶РєР° BIRT
 	 */
 	private IReportEngine engine;
 
 	/**
-	 * абсолютный путь платформы BIRT
+	 * Р°Р±СЃРѕР»СЋС‚РЅС‹Р№ РїСѓС‚СЊ РїР»Р°С‚С„РѕСЂРјС‹ BIRT
 	 */
 	private String engineHome;
 	
 	/**
-	 * формат вывода по умолчанию
+	 * С„РѕСЂРјР°С‚ РІС‹РІРѕРґР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
 	private RptProperties.OutputFormat defaultOutputFormat;
 	
 	/**
-	 * уровень логирования
+	 * СѓСЂРѕРІРµРЅСЊ Р»РѕРіРёСЂРѕРІР°РЅРёСЏ
 	 */
 	private Level logLevel;
 	
 	private Map<String, Map<String, Object>> contextMap = new ConcurrentHashMap<String, Map<String,Object>>();
 	
 	/**
-	 * конструктор
+	 * РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
-	 * @param engineHome	абсолютный путь к платформе BIRT
+	 * @param engineHome	Р°Р±СЃРѕР»СЋС‚РЅС‹Р№ РїСѓС‚СЊ Рє РїР»Р°С‚С„РѕСЂРјРµ BIRT
 	 */
 	public RptEngineServiceImpl(String engineHome, String defaultOutputFormat, String logLevel,
 			String htmlReportViewerApp, String reportFolder) {
@@ -100,10 +100,10 @@ public class RptEngineServiceImpl {
 	}
 
 	/**
-	 * получить уровень логирования
+	 * РїРѕР»СѓС‡РёС‚СЊ СѓСЂРѕРІРµРЅСЊ Р»РѕРіРёСЂРѕРІР°РЅРёСЏ
 	 * 
-	 * @param logLevel	наименование уровня логирования
-	 * @return	уровень логирования {@link java.util.logging.Level}
+	 * @param logLevel	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СѓСЂРѕРІРЅСЏ Р»РѕРіРёСЂРѕРІР°РЅРёСЏ
+	 * @return	СѓСЂРѕРІРµРЅСЊ Р»РѕРіРёСЂРѕРІР°РЅРёСЏ {@link java.util.logging.Level}
 	 */
 	private Level getLogLevel(String logLevel) {
 		Level level = Level.SEVERE;
@@ -143,10 +143,10 @@ public class RptEngineServiceImpl {
 	}
 	
 	/**
-	 * получить формат вывода по строке
+	 * РїРѕР»СѓС‡РёС‚СЊ С„РѕСЂРјР°С‚ РІС‹РІРѕРґР° РїРѕ СЃС‚СЂРѕРєРµ
 	 * 
-	 * @param defaultOutputFormat	строковое представление формата вывода
-	 * @return	формат вывода
+	 * @param defaultOutputFormat	СЃС‚СЂРѕРєРѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ С„РѕСЂРјР°С‚Р° РІС‹РІРѕРґР°
+	 * @return	С„РѕСЂРјР°С‚ РІС‹РІРѕРґР°
 	 */
 	private RptProperties.OutputFormat getOutputFormat(String defaultOutputFormat) {
 		if (!StringUtils.stringNullOrEmpty(defaultOutputFormat))
@@ -160,9 +160,9 @@ public class RptEngineServiceImpl {
 	}
 
 	/**
-	 * создание конфигурации платформы BIRT
+	 * СЃРѕР·РґР°РЅРёРµ РєРѕРЅС„РёРіСѓСЂР°С†РёРё РїР»Р°С‚С„РѕСЂРјС‹ BIRT
 	 * 
-	 * @return	конфигурация
+	 * @return	РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ
 	 */
 	@SuppressWarnings("unchecked")
 	private EngineConfig createEngineConfig() {
@@ -172,7 +172,7 @@ public class RptEngineServiceImpl {
 		result.setResourcePath(engineHome.concat("/resources"));
 		result.setTempDir(ServerUtils.getServerTempDir().getAbsolutePath());
 		
-		//настройка для HTML формата
+		//РЅР°СЃС‚СЂРѕР№РєР° РґР»СЏ HTML С„РѕСЂРјР°С‚Р°
 		HTMLRenderOption renderOption = new HTMLRenderOption();
 		renderOption.setActionHandler(new HTMLActionHandler());
 		HTMLServerImageHandler imageHandler = new HTMLServerImageHandler();
@@ -183,7 +183,7 @@ public class RptEngineServiceImpl {
 	}
 	
 	/**
-	 * проверка платформы
+	 * РїСЂРѕРІРµСЂРєР° РїР»Р°С‚С„РѕСЂРјС‹
 	 */
 	private void checkEngine() {
 		if (engine == null)
@@ -191,22 +191,22 @@ public class RptEngineServiceImpl {
 	}
 	
 	/**
-	 * подготовка свойств генерации отчета
+	 * РїРѕРґРіРѕС‚РѕРІРєР° СЃРІРѕР№СЃС‚РІ РіРµРЅРµСЂР°С†РёРё РѕС‚С‡РµС‚Р°
 	 * 
-	 * @param properties	свойства
-	 * @return	подготовленные свойства
+	 * @param properties	СЃРІРѕР№СЃС‚РІР°
+	 * @return	РїРѕРґРіРѕС‚РѕРІР»РµРЅРЅС‹Рµ СЃРІРѕР№СЃС‚РІР°
 	 */
 	private RptProperties prepareProperties(RptMain report, RptProperties properties) {
 		RptProperties result = properties;
-		//создадим параметры по умолчанию
+		//СЃРѕР·РґР°РґРёРј РїР°СЂР°РјРµС‚СЂС‹ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 		if (result == null) {
 			log.warn("Generate default report properties");
 			result = new RptPropertiesImpl();
 		}
-		//установим формат вывода из описателя отчета
+		//СѓСЃС‚Р°РЅРѕРІРёРј С„РѕСЂРјР°С‚ РІС‹РІРѕРґР° РёР· РѕРїРёСЃР°С‚РµР»СЏ РѕС‚С‡РµС‚Р°
 		if (report.getOutputFormat() != null)
 			result.setOutputFormat(getOutputFormat(report.getOutputFormat()));
-		//если формат не установлен, то используем по умолчанию
+		//РµСЃР»Рё С„РѕСЂРјР°С‚ РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ, С‚Рѕ РёСЃРїРѕР»СЊР·СѓРµРј РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 		if (result.getOutputFormat() == null) {
 			log.warn("Report output format is null, set to default format " + defaultOutputFormat.toString());
 			result.setOutputFormat(defaultOutputFormat);			
@@ -215,9 +215,9 @@ public class RptEngineServiceImpl {
 	}
 	
 	/**
-	 * получить список доступных отчетов для бизнес-компонента
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РґРѕСЃС‚СѓРїРЅС‹С… РѕС‚С‡РµС‚РѕРІ РґР»СЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
-	 * @return Доступные отчёты
+	 * @return Р”РѕСЃС‚СѓРїРЅС‹Рµ РѕС‚С‡С‘С‚С‹
 	 */
 	private List<RptMain> getAvailableReports(BusinessObjectService businessService) {
 		return ((RptMainServiceLocal) ApplicationDictionaryLocator.locate()
@@ -225,7 +225,7 @@ public class RptEngineServiceImpl {
 	}
 
 	/**
-	 * Инициализация генератора отчётов
+	 * РРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РіРµРЅРµСЂР°С‚РѕСЂР° РѕС‚С‡С‘С‚РѕРІ
 	 * 
 	 * @param properties
 	 */
@@ -244,7 +244,7 @@ public class RptEngineServiceImpl {
 
 	
 	/**
-	 * создание и старт сервиса
+	 * СЃРѕР·РґР°РЅРёРµ Рё СЃС‚Р°СЂС‚ СЃРµСЂРІРёСЃР°
 	 */
 	public void createEngine() throws Exception {
 		if (config != null && engine != null)
@@ -274,7 +274,7 @@ public class RptEngineServiceImpl {
 	}
 
 	/**
-	 * остановка и освобождение ресурсов сервиса
+	 * РѕСЃС‚Р°РЅРѕРІРєР° Рё РѕСЃРІРѕР±РѕР¶РґРµРЅРёРµ СЂРµСЃСѓСЂСЃРѕРІ СЃРµСЂРІРёСЃР°
 	 */
 	public void destroyEngine() {
 		engine.destroy();
@@ -284,18 +284,18 @@ public class RptEngineServiceImpl {
 	}
 
 	/**
-	 * получить сервис платформы BIRT
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРµСЂРІРёСЃ РїР»Р°С‚С„РѕСЂРјС‹ BIRT
 	 * 
-	 * @return	движок платформы
+	 * @return	РґРІРёР¶РѕРє РїР»Р°С‚С„РѕСЂРјС‹
 	 */
 	public IReportEngine getEngine() {
 		return engine;
 	}
 
 	/**
-	 * запуск генерации отчета
+	 * Р·Р°РїСѓСЃРє РіРµРЅРµСЂР°С†РёРё РѕС‚С‡РµС‚Р°
 	 * 
-	 * @param properties	параметры отчета
+	 * @param properties	РїР°СЂР°РјРµС‚СЂС‹ РѕС‚С‡РµС‚Р°
 	 */
 	public void runAndRenderReport(RptProperties properties) {
 		List<RptMain> rptList = getAvailableReports(properties.getBusinessService());
@@ -308,19 +308,19 @@ public class RptEngineServiceImpl {
 	}
 
 	/**
-	 * создание реализации параметров платформы
+	 * СЃРѕР·РґР°РЅРёРµ СЂРµР°Р»РёР·Р°С†РёРё РїР°СЂР°РјРµС‚СЂРѕРІ РїР»Р°С‚С„РѕСЂРјС‹
 	 * 
-	 * @return	экземпляр параметров
+	 * @return	СЌРєР·РµРјРїР»СЏСЂ РїР°СЂР°РјРµС‚СЂРѕРІ
 	 */
 	public RptProperties createProperies() {
 		return new RptPropertiesImpl();
 	}
 	
 	/**
-	 * запуск генерации отчета
+	 * Р·Р°РїСѓСЃРє РіРµРЅРµСЂР°С†РёРё РѕС‚С‡РµС‚Р°
 	 * 
-	 * @param report		отчет
-	 * @param properties	параметры отчета
+	 * @param report		РѕС‚С‡РµС‚
+	 * @param properties	РїР°СЂР°РјРµС‚СЂС‹ РѕС‚С‡РµС‚Р°
 	 */
 	public void runAndRenderReport(RptMain report, RptProperties properties) {
 		checkEngine();
@@ -333,15 +333,15 @@ public class RptEngineServiceImpl {
 	}
 
 	public List<Object[]> performBAi(String code, Map<String, Object> params) {
-		//TODO выполнение BAi из студии разработки, для реализации функции предварительного просмотра
+		//TODO РІС‹РїРѕР»РЅРµРЅРёРµ BAi РёР· СЃС‚СѓРґРёРё СЂР°Р·СЂР°Р±РѕС‚РєРё, РґР»СЏ СЂРµР°Р»РёР·Р°С†РёРё С„СѓРЅРєС†РёРё РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅРѕРіРѕ РїСЂРѕСЃРјРѕС‚СЂР°
 		return new ArrayList<Object[]>();
 	}
 
 	/**
-	 * получить контекст приложения для отчета
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС‚РµРєСЃС‚ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ РѕС‚С‡РµС‚Р°
 	 * 
-	 * @param contextId	идентификатор контекста
-	 * @return	контекст или <code>null</code> если не установлен
+	 * @param contextId	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРЅС‚РµРєСЃС‚Р°
+	 * @return	РєРѕРЅС‚РµРєСЃС‚ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ
 	 */
 	public Object getReportContext(String contextId) {
 		return contextId == null ? null : contextMap.get(contextId);

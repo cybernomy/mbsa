@@ -18,7 +18,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.document.generic.ui.GoodsDocumentBrowseForm;
 
 /**
- * Контроллер формы списка счет - фактур
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° СЃС‡РµС‚ - С„Р°РєС‚СѓСЂ
  * 
  * @author leonova
  * @version $Id: FacturaBr.java,v 1.6 2008/02/21 12:20:40 alikaev Exp $ 

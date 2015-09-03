@@ -18,7 +18,7 @@ import com.mg.merp.document.model.DocType;
 import com.mg.merp.document.model.DocTypeDocSectionLink;
 
 /**
- * Бизнес-компонент "Тип документа"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРї РґРѕРєСѓРјРµРЅС‚Р°"
  * 
  * @author leonova
  * @version $Id: DocTypeServiceLocal.java,v 1.2 2006/08/31 09:09:30 safonov Exp $
@@ -28,26 +28,26 @@ public interface DocTypeServiceLocal
 {
 
 	/**
-	 * загрузка связей типа документа с различными видами документов
+	 * Р·Р°РіСЂСѓР·РєР° СЃРІСЏР·РµР№ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р° СЃ СЂР°Р·Р»РёС‡РЅС‹РјРё РІРёРґР°РјРё РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 * 
 	 * @see com.mg.merp.document.model.DocumentKind
 	 * 
-	 * @param docType	тип документа
-	 * @return	двумерный массив связей с видами документов, первое измерение - виды документов
+	 * @param docType	С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	РґРІСѓРјРµСЂРЅС‹Р№ РјР°СЃСЃРёРІ СЃРІСЏР·РµР№ СЃ РІРёРґР°РјРё РґРѕРєСѓРјРµРЅС‚РѕРІ, РїРµСЂРІРѕРµ РёР·РјРµСЂРµРЅРёРµ - РІРёРґС‹ РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 */
 	DocTypeDocSectionLink[][] loadDocSectionLinks(DocType docType);
 
 	/**
-	 * удаление связей типа документа с видами документов
+	 * СѓРґР°Р»РµРЅРёРµ СЃРІСЏР·РµР№ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р° СЃ РІРёРґР°РјРё РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 * 
-	 * @param links	связи типа документа
+	 * @param links	СЃРІСЏР·Рё С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	void removeDocSectionLinks(DocTypeDocSectionLink[] links);
 	
 	/**
-	 * создание связей типа документа с видами документов
+	 * СЃРѕР·РґР°РЅРёРµ СЃРІСЏР·РµР№ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р° СЃ РІРёРґР°РјРё РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 * 
-	 * @param links	links	связи типа документа
+	 * @param links	links	СЃРІСЏР·Рё С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	void createDocSectionLinks(DocTypeDocSectionLink[] links);
 

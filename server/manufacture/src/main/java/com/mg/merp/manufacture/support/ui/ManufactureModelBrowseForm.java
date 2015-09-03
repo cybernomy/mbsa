@@ -17,7 +17,7 @@ package com.mg.merp.manufacture.support.ui;
 import com.mg.merp.document.generic.ui.DocumentModelBrowseForm;
 
 /**
- * Контроллер формы списка производственных документов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РїСЂРѕРёР·РІРѕРґСЃС‚РІРµРЅРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: ManufactureModelBrowseForm.java,v 1.1 2006/09/12 11:09:44 leonova Exp $ 

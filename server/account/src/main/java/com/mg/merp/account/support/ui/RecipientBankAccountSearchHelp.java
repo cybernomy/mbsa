@@ -19,7 +19,7 @@ import com.mg.merp.reference.model.BankAccount;
 import com.mg.merp.reference.support.ui.BankAccountSearchHelp;
 
 /**
- * Поисковик банковского счета покупателя (для контрагента "Кому")
+ * РџРѕРёСЃРєРѕРІРёРє Р±Р°РЅРєРѕРІСЃРєРѕРіРѕ СЃС‡РµС‚Р° РїРѕРєСѓРїР°С‚РµР»СЏ (РґР»СЏ РєРѕРЅС‚СЂР°РіРµРЅС‚Р° "РљРѕРјСѓ")
  * 
  * @author Artem V. Sharapov
  * @version $Id: RecipientBankAccountSearchHelp.java,v 1.3 2007/11/12 06:51:28 sharapov Exp $

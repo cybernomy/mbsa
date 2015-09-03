@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.personnelref.model.InsuredClass;
 
 /**
- * Браузер категорий плательщиков страховых взносов
+ * Р‘СЂР°СѓР·РµСЂ РєР°С‚РµРіРѕСЂРёР№ РїР»Р°С‚РµР»СЊС‰РёРєРѕРІ СЃС‚СЂР°С…РѕРІС‹С… РІР·РЅРѕСЃРѕРІ
  * 
  * @author leonova
  * @version $Id: InsuredClassBr.java,v 1.1 2006/08/03 11:24:18 leonova Exp $ 

@@ -17,7 +17,7 @@ package com.mg.merp.finance.support.ui;
 import com.mg.framework.generic.ui.DefaultMaintenanceForm;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Периоды финансового учета"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРµСЂРёРѕРґС‹ С„РёРЅР°РЅСЃРѕРІРѕРіРѕ СѓС‡РµС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: FinPeriodMt.java,v 1.1 2007/04/04 12:08:07 sharapov Exp $

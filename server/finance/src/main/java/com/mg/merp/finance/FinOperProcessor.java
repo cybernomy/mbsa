@@ -18,7 +18,7 @@ import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 import com.mg.merp.document.CreateDocumentDocFlowListener;
 
 /**
- * Бизнес-компонент "Процессор финансовых операций"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРѕС†РµСЃСЃРѕСЂ С„РёРЅР°РЅСЃРѕРІС‹С… РѕРїРµСЂР°С†РёР№"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: FinOperProcessor.java,v 1.1 2007/11/30 12:55:41 alikaev Exp $
@@ -26,19 +26,19 @@ import com.mg.merp.document.CreateDocumentDocFlowListener;
 public interface FinOperProcessor {
 	
 	/**
-	 * Отработка этапа документооборота "Создать ФО"
+	 * РћС‚СЂР°Р±РѕС‚РєР° СЌС‚Р°РїР° РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р° "РЎРѕР·РґР°С‚СЊ Р¤Рћ"
 	 * 
 	 * @param params
-	 * 				- параметры документооборота
+	 * 				- РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
 	 * @param listener
-	 * 				- слушатель на событие открыть созданную ФО
+	 * 				- СЃР»СѓС€Р°С‚РµР»СЊ РЅР° СЃРѕР±С‹С‚РёРµ РѕС‚РєСЂС‹С‚СЊ СЃРѕР·РґР°РЅРЅСѓСЋ Р¤Рћ
 	 */
 	void processCreateFinOper(DocFlowPluginInvokeParams params, CreateDocumentDocFlowListener listener);
 	
 	/**
-	 * Откат этапа документооборота "Создать ФО"
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р° "РЎРѕР·РґР°С‚СЊ Р¤Рћ"
 	 * @param params
-	 * 				- параметры документооборота
+	 * 				- РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
 	 */
 	void rollbackCreateFinOper(DocFlowPluginInvokeParams params);
 	

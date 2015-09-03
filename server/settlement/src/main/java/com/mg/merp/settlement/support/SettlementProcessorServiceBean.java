@@ -51,7 +51,7 @@ import com.mg.merp.settlement.model.ContractorCardPlan;
 import com.mg.merp.settlement.model.StlConfig;
 
 /**
- * Реализация процессора модуля "Расчеты с партнерами"
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС†РµСЃСЃРѕСЂР° РјРѕРґСѓР»СЏ "Р Р°СЃС‡РµС‚С‹ СЃ РїР°СЂС‚РЅРµСЂР°РјРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: SettlementProcessorServiceBean.java,v 1.6 2007/07/12 13:15:56 safonov Exp $
@@ -156,21 +156,21 @@ public class SettlementProcessorServiceBean extends AbstractPOJOBusinessObjectSt
 	}
 
 	/**
-	 * Обновить карточку расчетов с партнером
+	 * РћР±РЅРѕРІРёС‚СЊ РєР°СЂС‚РѕС‡РєСѓ СЂР°СЃС‡РµС‚РѕРІ СЃ РїР°СЂС‚РЅРµСЂРѕРј
 	 * @param isPlan 
-	 * @param isSet - признак "поставить в план" / "снять с плана"
-	 * @param docHead - документ
-	 * @param from - от кого
-	 * @param to - кому
-	 * @param processDate - дата обработки документа
-	 * @param sumCur - сумма в валюте
-	 * @param sumNat - сумма в нац. валюте
-	 * @return результат завершения операции
+	 * @param isSet - РїСЂРёР·РЅР°Рє "РїРѕСЃС‚Р°РІРёС‚СЊ РІ РїР»Р°РЅ" / "СЃРЅСЏС‚СЊ СЃ РїР»Р°РЅР°"
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
+	 * @param from - РѕС‚ РєРѕРіРѕ
+	 * @param to - РєРѕРјСѓ
+	 * @param processDate - РґР°С‚Р° РѕР±СЂР°Р±РѕС‚РєРё РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param sumCur - СЃСѓРјРјР° РІ РІР°Р»СЋС‚Рµ
+	 * @param sumNat - СЃСѓРјРјР° РІ РЅР°С†. РІР°Р»СЋС‚Рµ
+	 * @return СЂРµР·СѓР»СЊС‚Р°С‚ Р·Р°РІРµСЂС€РµРЅРёСЏ РѕРїРµСЂР°С†РёРё
 	 */
 	private boolean internalUpdateContractorCard(boolean isPlan, boolean isSet, DocHead docHead, Contractor from, Contractor to, Date processDate, BigDecimal sumCur, BigDecimal sumNat) {
 		boolean result = false;
 		Contractor company = null;
-		// expense (расход)
+		// expense (СЂР°СЃС…РѕРґ)
 		company = getCompany(from);
 		if(company != null) {
 			ContractorCard card = getCard(company, to);
@@ -180,7 +180,7 @@ public class SettlementProcessorServiceBean extends AbstractPOJOBusinessObjectSt
 				expenseHistId =	createHistory(card, docHead, processDate, sumCur, sumNat, EXPENSE_KIND);
 			result = true;
 		}
-		// income (приход)
+		// income (РїСЂРёС…РѕРґ)
 		company = getCompany(to);
 		if(company != null) {
 			ContractorCard card = getCard(company, from);
@@ -204,10 +204,10 @@ public class SettlementProcessorServiceBean extends AbstractPOJOBusinessObjectSt
 	}
 
 	/**
-	 * Получить карточку расчетов с партнером
-	 * @param company - подразделение
-	 * @param partner - партнер
-	 * @return карточка расчетов с партнером
+	 * РџРѕР»СѓС‡РёС‚СЊ РєР°СЂС‚РѕС‡РєСѓ СЂР°СЃС‡РµС‚РѕРІ СЃ РїР°СЂС‚РЅРµСЂРѕРј
+	 * @param company - РїРѕРґСЂР°Р·РґРµР»РµРЅРёРµ
+	 * @param partner - РїР°СЂС‚РЅРµСЂ
+	 * @return РєР°СЂС‚РѕС‡РєР° СЂР°СЃС‡РµС‚РѕРІ СЃ РїР°СЂС‚РЅРµСЂРѕРј
 	 */
 	private ContractorCard getCard(Contractor company, Contractor partner) {
 		List<ContractorCard> cards = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(ContractorCard.class)
@@ -220,10 +220,10 @@ public class SettlementProcessorServiceBean extends AbstractPOJOBusinessObjectSt
 	}
 
 	/**
-	 * Создать карточку расчетов с партнером
-	 * @param company - подразделение
-	 * @param partner - партнер
-	 * @return карточка расчетов с партнером
+	 * РЎРѕР·РґР°С‚СЊ РєР°СЂС‚РѕС‡РєСѓ СЂР°СЃС‡РµС‚РѕРІ СЃ РїР°СЂС‚РЅРµСЂРѕРј
+	 * @param company - РїРѕРґСЂР°Р·РґРµР»РµРЅРёРµ
+	 * @param partner - РїР°СЂС‚РЅРµСЂ
+	 * @return РєР°СЂС‚РѕС‡РєР° СЂР°СЃС‡РµС‚РѕРІ СЃ РїР°СЂС‚РЅРµСЂРѕРј
 	 */
 	private ContractorCard createCard(Contractor company, Contractor partner) {
 		ContractorCardServiceLocal contractorCardService = (ContractorCardServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/settlement/ContractorCard"); //$NON-NLS-1$
@@ -357,7 +357,7 @@ public class SettlementProcessorServiceBean extends AbstractPOJOBusinessObjectSt
 	}
 
 	/**
-	 * Обновить параметры документооборота 
+	 * РћР±РЅРѕРІРёС‚СЊ РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р° 
 	 */
 	private void updateDocFlowParams() {
 		docFlowParams.setData1(expenseHistId);

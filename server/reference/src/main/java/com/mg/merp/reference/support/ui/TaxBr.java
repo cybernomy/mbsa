@@ -25,7 +25,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.reference.model.Tax;
 
 /**
- * Браузер налогов
+ * Р‘СЂР°СѓР·РµСЂ РЅР°Р»РѕРіРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: TaxBr.java,v 1.1 2006/08/02 12:03:15 leonova Exp $

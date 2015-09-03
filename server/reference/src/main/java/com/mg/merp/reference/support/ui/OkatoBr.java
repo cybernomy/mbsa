@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.Okato;
 
 /**
- * Браузер кодов ОКАТО
+ * Р‘СЂР°СѓР·РµСЂ РєРѕРґРѕРІ РћРљРђРўРћ
  * 
  * @author leonova
  * @version $Id: OkatoBr.java,v 1.2 2006/10/19 04:34:12 leonova Exp $ 

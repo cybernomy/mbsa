@@ -35,7 +35,7 @@ import com.mg.merp.reference.model.BankAccount;
 import com.mg.merp.reference.model.Partner;
 
 /**
- * Реализация бизнес-компонента "Партнеры"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџР°СЂС‚РЅРµСЂС‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -122,9 +122,9 @@ public class PartnerServiceBean extends ContractorServiceBean<Partner> implement
 	}
 
 	/**
-	 * формирует и записывает полный почтовый адрес
+	 * С„РѕСЂРјРёСЂСѓРµС‚ Рё Р·Р°РїРёСЃС‹РІР°РµС‚ РїРѕР»РЅС‹Р№ РїРѕС‡С‚РѕРІС‹Р№ Р°РґСЂРµСЃ
 	 * 
-	 * @param personAddress адрес проживания физического лица
+	 * @param personAddress Р°РґСЂРµСЃ РїСЂРѕР¶РёРІР°РЅРёСЏ С„РёР·РёС‡РµСЃРєРѕРіРѕ Р»РёС†Р°
 	 */
 	private void doGetFullAddress(Partner partner) {
 		if (partner != null) {
@@ -148,9 +148,9 @@ public class PartnerServiceBean extends ContractorServiceBean<Partner> implement
 	}
 
 	/**
-	 * формирует и записывает полный юредический адрес
+	 * С„РѕСЂРјРёСЂСѓРµС‚ Рё Р·Р°РїРёСЃС‹РІР°РµС‚ РїРѕР»РЅС‹Р№ СЋСЂРµРґРёС‡РµСЃРєРёР№ Р°РґСЂРµСЃ
 	 * 
-	 * @param personAddress адрес проживания физического лица
+	 * @param personAddress Р°РґСЂРµСЃ РїСЂРѕР¶РёРІР°РЅРёСЏ С„РёР·РёС‡РµСЃРєРѕРіРѕ Р»РёС†Р°
 	 */
 	private void doGetFullAddressLegal(Partner partner) {
 		if (partner != null) {
@@ -173,9 +173,9 @@ public class PartnerServiceBean extends ContractorServiceBean<Partner> implement
 	}
 	
 	/**
-	 * Получить банковский счет по умолчанию 
-	 * @param partner - партнер
-	 * @return банковский счет по умолчанию, или <code>null</code> если не найден
+	 * РџРѕР»СѓС‡РёС‚СЊ Р±Р°РЅРєРѕРІСЃРєРёР№ СЃС‡РµС‚ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ 
+	 * @param partner - РїР°СЂС‚РЅРµСЂ
+	 * @return Р±Р°РЅРєРѕРІСЃРєРёР№ СЃС‡РµС‚ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	protected BankAccount doGetDefaultBankAccount(Partner partner) {
 		List<BankAccount> bankAccounts = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(BankAccount.class)

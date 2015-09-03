@@ -20,7 +20,7 @@ import com.mg.merp.account.model.RemnDbKt;
 import com.mg.merp.core.model.Folder;
 
 /**
- * Сервис бизнес-компонента "Хозяйственные операции"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РҐРѕР·СЏР№СЃС‚РІРµРЅРЅС‹Рµ РѕРїРµСЂР°С†РёРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -30,35 +30,35 @@ import com.mg.merp.core.model.Folder;
 public interface OperationServiceLocal extends com.mg.framework.api.DataBusinessObjectService<EconomicOper, Integer> {
 	
 	/**
-	 * тип папки для хозяйственных операций
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ С…РѕР·СЏР№СЃС‚РІРµРЅРЅС‹С… РѕРїРµСЂР°С†РёР№
 	 */
 	final static short FOLDER_PART = 6;
 
 	/**
-	 * Копирование со сторонирование
+	 * РљРѕРїРёСЂРѕРІР°РЅРёРµ СЃРѕ СЃС‚РѕСЂРѕРЅРёСЂРѕРІР°РЅРёРµ
 	 * 
 	 * @param economicOper
-	 * 				- хоз.операция
+	 * 				- С…РѕР·.РѕРїРµСЂР°С†РёСЏ
 	 * @return
-	 * 				- клон хоз. операции
+	 * 				- РєР»РѕРЅ С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 */
 	EconomicOper storno(EconomicOper economicOper);
 
 	/**
-	 * Создание хоз.операции по образцу
-	 * @param pattern - образец  
-	 * @param folder - папка назначения
-	 * @return хоз.операция
+	 * РЎРѕР·РґР°РЅРёРµ С…РѕР·.РѕРїРµСЂР°С†РёРё РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param pattern - РѕР±СЂР°Р·РµС†  
+	 * @param folder - РїР°РїРєР° РЅР°Р·РЅР°С‡РµРЅРёСЏ
+	 * @return С…РѕР·.РѕРїРµСЂР°С†РёСЏ
 	 */
 	EconomicOper createByPattern(EconomicOperModel pattern, Folder folder);
 
 	/**
-	 * Создание хоз. операции по оборотке "Ведомость расчета с контрагентом"
+	 * РЎРѕР·РґР°РЅРёРµ С…РѕР·. РѕРїРµСЂР°С†РёРё РїРѕ РѕР±РѕСЂРѕС‚РєРµ "Р’РµРґРѕРјРѕСЃС‚СЊ СЂР°СЃС‡РµС‚Р° СЃ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРј"
 	 * 
 	 * @param remnDbKt
-	 * 				- обротка "Ведомость расчета с контрагентом"
+	 * 				- РѕР±СЂРѕС‚РєР° "Р’РµРґРѕРјРѕСЃС‚СЊ СЂР°СЃС‡РµС‚Р° СЃ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРј"
 	 * @param folder
-	 * 				- папка-приемник для создаваемой хоз. операции
+	 * 				- РїР°РїРєР°-РїСЂРёРµРјРЅРёРє РґР»СЏ СЃРѕР·РґР°РІР°РµРјРѕР№ С…РѕР·. РѕРїРµСЂР°С†РёРё
 	 */
 	EconomicOper addFromRemnDbKt(RemnDbKt remnDbKt, Folder folder);
 

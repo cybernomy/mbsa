@@ -30,7 +30,7 @@ import com.mg.merp.reference.model.Partner;
 import com.mg.merp.reference.support.ui.PartnerSearchHelp;
 
 /**
- * Поисковик сущностей "Партнер" (и дисконтных карт ему принадлежащих)
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РџР°СЂС‚РЅРµСЂ" (Рё РґРёСЃРєРѕРЅС‚РЅС‹С… РєР°СЂС‚ РµРјСѓ РїСЂРёРЅР°РґР»РµР¶Р°С‰РёС…)
  * 
  * @author Artem V. Sharapov
  * @version $Id: PartnerWithDiscountCardSearchHelp.java,v 1.1 2007/10/05 07:35:57 sharapov Exp $
@@ -81,9 +81,9 @@ public class PartnerWithDiscountCardSearchHelp extends PartnerSearchHelp {
 	}
 
 	/**
-	 * Получить список дисконтных карт принадлежащих владельцу
-	 * @param owner - владелец
-	 * @return список дисконтных карт принадлежащих владельцу
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РґРёСЃРєРѕРЅС‚РЅС‹С… РєР°СЂС‚ РїСЂРёРЅР°РґР»РµР¶Р°С‰РёС… РІР»Р°РґРµР»СЊС†Сѓ
+	 * @param owner - РІР»Р°РґРµР»РµС†
+	 * @return СЃРїРёСЃРѕРє РґРёСЃРєРѕРЅС‚РЅС‹С… РєР°СЂС‚ РїСЂРёРЅР°РґР»РµР¶Р°С‰РёС… РІР»Р°РґРµР»СЊС†Сѓ
 	 */
 	protected List<Card> getDicountCardsByOwner(Partner owner) {
 		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(Card.class)

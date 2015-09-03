@@ -21,7 +21,7 @@ import com.mg.merp.personnelref.model.PersonnelGroup;
 import com.mg.merp.personnelref.model.StaffListUnit;
 
 /**
- * Реализация перехватчика для добавления прав на элементы иерархии при создании
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ РґРѕР±Р°РІР»РµРЅРёСЏ РїСЂР°РІ РЅР° СЌР»РµРјРµРЅС‚С‹ РёРµСЂР°СЂС…РёРё РїСЂРё СЃРѕР·РґР°РЅРёРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: TreePermissionInterceptorImpl.java,v 1.2 2007/07/09 07:55:22 sharapov Exp $
@@ -53,9 +53,9 @@ public class TreePermissionInterceptorImpl extends AbstractEntityInterceptor {
 	@Override
 	public void onPostPersist(PersistentObject entity) {
 		String entityName = entity.getEntityName();
-		if (PERSONNEL_GROUP_CLASS.equals(entityName)) //папки основных сведений о сотрудниках		
+		if (PERSONNEL_GROUP_CLASS.equals(entityName)) //РїР°РїРєРё РѕСЃРЅРѕРІРЅС‹С… СЃРІРµРґРµРЅРёР№ Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С…		
 			ServerUtils.getSecuritySystem().grantTreePermission((Integer) entity.getPrimaryKey(), ((PersonnelGroup) entity).getParentId(), 5);
-		else if (STAFF_LIST_UNIT_CLASS.equals(entityName)) { //папки штатного расписания		
+		else if (STAFF_LIST_UNIT_CLASS.equals(entityName)) { //РїР°РїРєРё С€С‚Р°С‚РЅРѕРіРѕ СЂР°СЃРїРёСЃР°РЅРёСЏ		
 			StaffListUnit parentStaffListUnit = ((StaffListUnit) entity).getParent();
 			ServerUtils.getSecuritySystem().grantTreePermission((Integer) entity.getPrimaryKey(), parentStaffListUnit == null ? (Integer) entity.getPrimaryKey() : ((StaffListUnit) entity).getParent().getId(), 6);
 		}

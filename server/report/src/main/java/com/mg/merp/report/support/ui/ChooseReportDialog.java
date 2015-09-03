@@ -22,7 +22,7 @@ import com.mg.framework.support.ui.widget.DefaultTableController;
 import com.mg.merp.report.model.RptMain;
 
 /**
- * Контроллер формы выбора доступных отчётов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РІС‹Р±РѕСЂР° РґРѕСЃС‚СѓРїРЅС‹С… РѕС‚С‡С‘С‚РѕРІ
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -42,7 +42,7 @@ public class ChooseReportDialog extends DefaultDialog {
 	}
 
 	/**
-	 * Модель таблицы доступных отчётов
+	 * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ РґРѕСЃС‚СѓРїРЅС‹С… РѕС‚С‡С‘С‚РѕРІ
 	 */
 	private class ReportsListModel extends DefaultEntityListTableModel<RptMain> {
 
@@ -54,9 +54,9 @@ public class ChooseReportDialog extends DefaultDialog {
 	}
 
 	/**
-	 * Устанавливает список отчётов
+	 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ СЃРїРёСЃРѕРє РѕС‚С‡С‘С‚РѕРІ
 	 * 
-	 * @param reports	список доступных отчетов
+	 * @param reports	СЃРїРёСЃРѕРє РґРѕСЃС‚СѓРїРЅС‹С… РѕС‚С‡РµС‚РѕРІ
 	 */
 	public void setReports(List<RptMain> reports) {
 		this.reports = reports;
@@ -64,9 +64,9 @@ public class ChooseReportDialog extends DefaultDialog {
 	}
 
 	/**
-	 * возвращает выбранный отчет
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ РІС‹Р±СЂР°РЅРЅС‹Р№ РѕС‚С‡РµС‚
 	 * 
-	 * @return	выбранный отчёт или <code>null</code>
+	 * @return	РІС‹Р±СЂР°РЅРЅС‹Р№ РѕС‚С‡С‘С‚ РёР»Рё <code>null</code>
 	 */
 	public RptMain getReport() {
 		RptMain[] rptMains = ((ReportsListModel) reportsList.getModel()).getSelectedEntities();

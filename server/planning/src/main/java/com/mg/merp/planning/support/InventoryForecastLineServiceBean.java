@@ -25,7 +25,7 @@ import com.mg.merp.planning.InventoryForecastLineServiceLocal;
 import com.mg.merp.planning.model.InventoryForecastLine;
 
 /**
- * Бизнес-компонент "Строки версий складских запасов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎС‚СЂРѕРєРё РІРµСЂСЃРёР№ СЃРєР»Р°РґСЃРєРёС… Р·Р°РїР°СЃРѕРІ" 
  * 
  * @author leonova
  * @version $Id: InventoryForecastLineServiceBean.java,v 1.5 2007/08/06 14:46:08 safonov Exp $

@@ -21,7 +21,7 @@ import com.mg.framework.support.ui.widget.TableEJBQLFieldDef;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Базовый класс для отобрадения формы списка документов
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°РґРµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: DocumentMaintenanceEJBQLTableModel.java,v 1.2 2009/02/10 14:04:52 safonov Exp $ 

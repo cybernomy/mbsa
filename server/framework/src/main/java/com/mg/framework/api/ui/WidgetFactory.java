@@ -25,161 +25,161 @@ import org.dom4j.Element;
 public interface WidgetFactory {
 	
 	/**
-	 * элемент текстовая метка
+	 * СЌР»РµРјРµРЅС‚ С‚РµРєСЃС‚РѕРІР°СЏ РјРµС‚РєР°
 	 * 
 	 * @see com.mg.framework.api.ui.widget.Label
 	 */
 	final static String LABEL_WIDGET = "jfd:label"; //$NON-NLS-1$
 	
 	/**
-	 * элемент панель прокрутки
+	 * СЌР»РµРјРµРЅС‚ РїР°РЅРµР»СЊ РїСЂРѕРєСЂСѓС‚РєРё
 	 * 
 	 * @see com.mg.framework.api.ui.widget.ScrollPane
 	 */
 	final static String SCROLL_PANE = "jfd:scroll"; //$NON-NLS-1$
 	
 	/**
-	 * элемент редактор целых чисел
+	 * СЌР»РµРјРµРЅС‚ СЂРµРґР°РєС‚РѕСЂ С†РµР»С‹С… С‡РёСЃРµР»
 	 * 
 	 * @see com.mg.framework.api.ui.widget.IntegerField
 	 */
 	final static String INTEGER_EDIT_WIDGET = "jfd:integerField"; //$NON-NLS-1$
 	
 	/**
-	 * элемент флаг
+	 * СЌР»РµРјРµРЅС‚ С„Р»Р°Рі
 	 * 
 	 * @see com.mg.framework.api.ui.widget.CheckBox
 	 */
 	final static String CHECKBOX_WIDGET = "jfd:checkBox"; //$NON-NLS-1$
 	
 	/**
-	 * элемент редактор однострочного текста
+	 * СЌР»РµРјРµРЅС‚ СЂРµРґР°РєС‚РѕСЂ РѕРґРЅРѕСЃС‚СЂРѕС‡РЅРѕРіРѕ С‚РµРєСЃС‚Р°
 	 * 
 	 * @see com.mg.framework.api.ui.widget.TextField
 	 */
 	final static String TEXT_EDIT_WIDGET = "jfd:textField"; //$NON-NLS-1$
 	
 	/**
-	 * элемент редактор многострочного текста
+	 * СЌР»РµРјРµРЅС‚ СЂРµРґР°РєС‚РѕСЂ РјРЅРѕРіРѕСЃС‚СЂРѕС‡РЅРѕРіРѕ С‚РµРєСЃС‚Р°
 	 * 
 	 * @see com.mg.framework.api.ui.widget.TextAreaField
 	 */
 	final static String TEXT_AREA_EDIT_WIDGET = "jfd:textAreaField"; //$NON-NLS-1$
 	
 	/**
-	 * элемент редактор дат
+	 * СЌР»РµРјРµРЅС‚ СЂРµРґР°РєС‚РѕСЂ РґР°С‚
 	 * 
 	 * @see com.mg.framework.api.ui.widget.DateField
 	 */
 	final static String DATE_EDIT_WIDGET = "jfd:dateField"; //$NON-NLS-1$
 
 	/**
-	 * элемент редактор даты/времени
+	 * СЌР»РµРјРµРЅС‚ СЂРµРґР°РєС‚РѕСЂ РґР°С‚С‹/РІСЂРµРјРµРЅРё
 	 * 
 	 * @see com.mg.framework.api.ui.widget.DateTimeField
 	 */
 	final static String DATE_TIME_EDIT_WIDGET = "jfd:dateTimeField"; //$NON-NLS-1$
 
 	/**
-	 * элемент редактор времени
+	 * СЌР»РµРјРµРЅС‚ СЂРµРґР°РєС‚РѕСЂ РІСЂРµРјРµРЅРё
 	 * 
 	 * @see com.mg.framework.api.ui.widget.TimeField
 	 */
 	final static String TIME_EDIT_WIDGET = "jfd:timeField"; //$NON-NLS-1$
 
 	/**
-	 * элемент редактор дробных чисел
+	 * СЌР»РµРјРµРЅС‚ СЂРµРґР°РєС‚РѕСЂ РґСЂРѕР±РЅС‹С… С‡РёСЃРµР»
 	 * 
 	 * @see com.mg.framework.api.ui.widget.NumberField
 	 */
 	final static String NUMBER_EDIT_WIDGET = "jfd:numberField"; //$NON-NLS-1$
 	
 	/**
-	 * элемент редактор денежных величин
+	 * СЌР»РµРјРµРЅС‚ СЂРµРґР°РєС‚РѕСЂ РґРµРЅРµР¶РЅС‹С… РІРµР»РёС‡РёРЅ
 	 * 
 	 * @see com.mg.framework.api.ui.widget.MonetaryAmountField
 	 */
 	final static String MONETARY_AMOUNT_EDIT_WIDGET = "jfd:monetaryAmountField"; //$NON-NLS-1$
 	
 	/**
-	 * элемент редактор перечислимых типов
+	 * СЌР»РµРјРµРЅС‚ СЂРµРґР°РєС‚РѕСЂ РїРµСЂРµС‡РёСЃР»РёРјС‹С… С‚РёРїРѕРІ
 	 * 
 	 * @see com.mg.framework.api.ui.widget.EnumField
 	 */
 	final static String ENUM_EDIT_WIDGET = "jfd:enumField"; //$NON-NLS-1$
 	
 	/**
-	 * элемент редактор перечислимых типов в виде раскрывающегося списка
+	 * СЌР»РµРјРµРЅС‚ СЂРµРґР°РєС‚РѕСЂ РїРµСЂРµС‡РёСЃР»РёРјС‹С… С‚РёРїРѕРІ РІ РІРёРґРµ СЂР°СЃРєСЂС‹РІР°СЋС‰РµРіРѕСЃСЏ СЃРїРёСЃРєР°
 	 * 
 	 * @see com.mg.framework.api.ui.widget.EnumComboBoxField
 	 */
 	final static String ENUM_COMBOBOX_EDIT_WIDGET = "jfd:enumComboBoxField"; //$NON-NLS-1$
 	
 	/**
-	 * элемент редактор перечислимых типов в виде кнопок переключателей
+	 * СЌР»РµРјРµРЅС‚ СЂРµРґР°РєС‚РѕСЂ РїРµСЂРµС‡РёСЃР»РёРјС‹С… С‚РёРїРѕРІ РІ РІРёРґРµ РєРЅРѕРїРѕРє РїРµСЂРµРєР»СЋС‡Р°С‚РµР»РµР№
 	 * 
 	 * @see com.mg.framework.api.ui.widget.EnumRadioButtonField
 	 */
 	final static String ENUM_RADIOBUTTON_EDIT_WIDGET = "jfd:enumRadioButtonField"; //$NON-NLS-1$
 	
 	/**
-	 * элемент редактор сущностей
+	 * СЌР»РµРјРµРЅС‚ СЂРµРґР°РєС‚РѕСЂ СЃСѓС‰РЅРѕСЃС‚РµР№
 	 * 
 	 * @see com.mg.framework.api.ui.widget.EntityField
 	 */
 	final static String ENTITY_EDIT_WIDGET = "jfd:entityField"; //$NON-NLS-1$
 	
 	/**
-	 * элемент раскрывающейся список
+	 * СЌР»РµРјРµРЅС‚ СЂР°СЃРєСЂС‹РІР°СЋС‰РµР№СЃСЏ СЃРїРёСЃРѕРє
 	 * 
 	 * @see com.mg.framework.api.ui.widget.ComboBox
 	 */
 	final static String COMBOBOX_WIDGET = "jfd:comboBox"; //$NON-NLS-1$
 	
 	/**
-	 * элемент кнопка
+	 * СЌР»РµРјРµРЅС‚ РєРЅРѕРїРєР°
 	 * 
 	 * @see com.mg.framework.api.ui.widget.Button
 	 */
 	final static String BUTTON_WIDGET = "jfd:button"; //$NON-NLS-1$
 	
 	/**
-	 * элемент таблица с функциями поддержки бизнес-компонентов
+	 * СЌР»РµРјРµРЅС‚ С‚Р°Р±Р»РёС†Р° СЃ С„СѓРЅРєС†РёСЏРјРё РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
 	 * 
 	 * @see com.mg.framework.api.ui.widget.MaintenanceTable
 	 */
 	final static String MT_TABLE_WIDGET = "jfd:maintenanceTable"; //$NON-NLS-1$
 	
 	/**
-	 * элемент дерево с функциями поддержки бизнес-компонентов
+	 * СЌР»РµРјРµРЅС‚ РґРµСЂРµРІРѕ СЃ С„СѓРЅРєС†РёСЏРјРё РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРІ
 	 * 
 	 * @see com.mg.framework.api.ui.widget.MaintenanceTree
 	 */
 	final static String MT_TREE_WIDGET = "jfd:maintenanceTree"; //$NON-NLS-1$
 	
 	/**
-	 * элемент таблица
+	 * СЌР»РµРјРµРЅС‚ С‚Р°Р±Р»РёС†Р°
 	 * 
 	 * @see com.mg.framework.api.ui.widget.Table
 	 */
 	final static String TABLE_WIDGET = "jfd:table"; //$NON-NLS-1$
 	
 	/**
-	 * элемент заполнитель
+	 * СЌР»РµРјРµРЅС‚ Р·Р°РїРѕР»РЅРёС‚РµР»СЊ
 	 * 
 	 * @see com.mg.framework.api.ui.widget.Filler
 	 */
 	final static String FILLER_WIDGET = "jfd:filler"; //$NON-NLS-1$
 	
 	/**
-	 * элемент блочное расположение
+	 * СЌР»РµРјРµРЅС‚ Р±Р»РѕС‡РЅРѕРµ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ
 	 * 
 	 * @see com.mg.framework.api.ui.widget.BoxPane
 	 */
 	final static String BOX_LAYOUT = "jfd:box"; //$NON-NLS-1$
 	
 	/**
-	 * элемент стандартное расположение на форме поддержки бизнес-компонента
+	 * СЌР»РµРјРµРЅС‚ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРµ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РЅР° С„РѕСЂРјРµ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
 	 * @deprecated use {@link #DEFAULT_MT_PANE_LAYOUT} instead
 	 */
@@ -187,112 +187,112 @@ public interface WidgetFactory {
 	final static String DEFAULT_MT_GRID_BAG_LAYOUT = "jfd:defaultMtGridBag"; //$NON-NLS-1$
 	
 	/**
-	 * элемент стандартное расположение на форме поддержки бизнес-компонента
+	 * СЌР»РµРјРµРЅС‚ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРµ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РЅР° С„РѕСЂРјРµ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
 	 * @see com.mg.framework.api.ui.widget.DefaultMaintenancePane
 	 */
 	final static String DEFAULT_MT_PANE_LAYOUT = "jfd:defaultMtLayout"; //$NON-NLS-1$
 	
 	/**
-	 * элемент разделяемая панель
+	 * СЌР»РµРјРµРЅС‚ СЂР°Р·РґРµР»СЏРµРјР°СЏ РїР°РЅРµР»СЊ
 	 * 
 	 * @see com.mg.framework.api.ui.widget.SplitPane
 	 */
 	final static String SPLIT_PANE = "jfd:split"; //$NON-NLS-1$
 	
 	/**
-	 * элемент панель с вкладками
+	 * СЌР»РµРјРµРЅС‚ РїР°РЅРµР»СЊ СЃ РІРєР»Р°РґРєР°РјРё
 	 * 
 	 * @see com.mg.framework.api.ui.widget.TabbedPane
 	 */
 	final static String TABBED_PANE = "jfd:tabbed"; //$NON-NLS-1$
 
 	/**
-	 * элемент панель инструментов
+	 * СЌР»РµРјРµРЅС‚ РїР°РЅРµР»СЊ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ
 	 * 
 	 * @see com.mg.framework.api.ui.widget.ToolBar
 	 */
 	final static String TOOLBAR_WIDGET = "jfd:toolBar"; //$NON-NLS-1$
 	
 	/**
-	 * окно диалог
+	 * РѕРєРЅРѕ РґРёР°Р»РѕРі
 	 * 
 	 * @see com.mg.framework.api.ui.widget.Dialog
 	 */
 	final static String DIALOG_WINDOW = "jfd:dialog"; //$NON-NLS-1$
 	
 	/**
-	 * окно внутренний фрейм, для MDI интерфейса
+	 * РѕРєРЅРѕ РІРЅСѓС‚СЂРµРЅРЅРёР№ С„СЂРµР№Рј, РґР»СЏ MDI РёРЅС‚РµСЂС„РµР№СЃР°
 	 * 
 	 * @see com.mg.framework.api.ui.widget.InternalFrame
 	 */
 	final static String INTERNAL_FRAME_WINDOW = "jfd:internalFrame"; //$NON-NLS-1$
 	
 	/**
-	 * элемент граф
+	 * СЌР»РµРјРµРЅС‚ РіСЂР°С„
 	 * 
 	 * @see com.mg.framework.api.ui.widget.Graph
 	 */
 	final static String GRAPH_WIDGET = "jfd:graph"; //$NON-NLS-1$
 	
 	/**
-	 * элемент Shuttle
+	 * СЌР»РµРјРµРЅС‚ Shuttle
 	 * 
 	 * @see com.mg.framework.api.ui.widget.Shuttle
 	 */
 	final static String SHUTTLE_WIDGET = "jfd:shuttle"; //$NON-NLS-1$
 	
 	/**
-	 * элемент список
+	 * СЌР»РµРјРµРЅС‚ СЃРїРёСЃРѕРє
 	 * 
 	 * @see com.mg.framework.api.ui.widget.List
 	 */
 	final static String LIST_WIDGET = "jfd:list"; //$NON-NLS-1$
 	
 	/**
-	 * элемент группа кнопок переключателей
+	 * СЌР»РµРјРµРЅС‚ РіСЂСѓРїРїР° РєРЅРѕРїРѕРє РїРµСЂРµРєР»СЋС‡Р°С‚РµР»РµР№
 	 * 
 	 * @see com.mg.framework.api.ui.widget.RadioButtonGroup
 	 */
 	final static String RADIOBUTTON_GROUP_WIDGET = "jfd:radioButtonGroup"; //$NON-NLS-1$
 	
 	/**
-	 * элемент редактор секретного текста
+	 * СЌР»РµРјРµРЅС‚ СЂРµРґР°РєС‚РѕСЂ СЃРµРєСЂРµС‚РЅРѕРіРѕ С‚РµРєСЃС‚Р°
 	 * 
 	 * @see com.mg.framework.api.ui.widget.TextField
 	 */
 	final static String SECRET_EDIT_WIDGET = "jfd:secretField"; //$NON-NLS-1$
 
 	/**
-	 * элемент изображение
+	 * СЌР»РµРјРµРЅС‚ РёР·РѕР±СЂР°Р¶РµРЅРёРµ
 	 * 
 	 * @see com.mg.framework.api.ui.widget.Image
 	 */
 	final static String IMAGE_WIDGET = "jfd:image"; //$NON-NLS-1$
 	
 	/**
-	 * контекстное меню
+	 * РєРѕРЅС‚РµРєСЃС‚РЅРѕРµ РјРµРЅСЋ
 	 * 
 	 * @see com.mg.framework.api.ui.widget.PopupMenu
 	 */
 	final static String POPUP_MENU = "jfd:popupMenu"; //$NON-NLS-1$
 	
 	/**
-	 * элемент разделитель меню и панели инструментов
+	 * СЌР»РµРјРµРЅС‚ СЂР°Р·РґРµР»РёС‚РµР»СЊ РјРµРЅСЋ Рё РїР°РЅРµР»Рё РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ
 	 * 
 	 * @see com.mg.framework.api.ui.widget.Separator
 	 */
 	final static String SEPARATOR_WIDGET = "jfd:separator"; //$NON-NLS-1$
 
 	/**
-	 * всплывающее меню
+	 * РІСЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ
 	 * 
 	 * @see com.mg.framework.api.ui.widget.ComboMenuBar
 	 */
 	final static String COMBO_MENU_BAR = "jfd:comboMenuBar"; //$NON-NLS-1$
 
 	/**
-	 * элемент редактор количественных величин
+	 * СЌР»РµРјРµРЅС‚ СЂРµРґР°РєС‚РѕСЂ РєРѕР»РёС‡РµСЃС‚РІРµРЅРЅС‹С… РІРµР»РёС‡РёРЅ
 	 * 
 	 * @see com.mg.framework.api.ui.widget.QuantityField
 	 */

@@ -40,7 +40,7 @@ import com.mg.merp.reference.CurrencyRateNotFoundException;
 import com.mg.merp.reference.CurrencyRateServiceLocal;
 
 /**
- * Утилиты работы с документами
+ * РЈС‚РёР»РёС‚С‹ СЂР°Р±РѕС‚С‹ СЃ РґРѕРєСѓРјРµРЅС‚Р°РјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentUtils.java,v 1.9 2008/08/20 06:06:55 safonov Exp $
@@ -48,10 +48,10 @@ import com.mg.merp.reference.CurrencyRateServiceLocal;
 public class DocumentUtils {
 
 	/**
-	 * создание бизнес-компонента документа
+	 * СЃРѕР·РґР°РЅРёРµ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docSection	раздел документа
-	 * @return	бизнес-компонент
+	 * @param docSection	СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
 	 */
 	@SuppressWarnings("unchecked")
 	public static Document getDocumentService(DocSection docSection) {
@@ -59,10 +59,10 @@ public class DocumentUtils {
 	}
 
 	/**
-	 * создание бизнес-компонента документа со спецификациями
+	 * СЃРѕР·РґР°РЅРёРµ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РґРѕРєСѓРјРµРЅС‚Р° СЃРѕ СЃРїРµС†РёС„РёРєР°С†РёСЏРјРё
 	 * 
-	 * @param docSection	раздел документа
-	 * @return	бизнес-компонент
+	 * @param docSection	СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
 	 */
 	@SuppressWarnings("unchecked")
 	public static GoodsDocument getGoodsDocumentService(DocSection docSection) {
@@ -70,20 +70,20 @@ public class DocumentUtils {
 	}
 
 	/**
-	 * создание бизнес-компонента спецификации
+	 * СЃРѕР·РґР°РЅРёРµ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° СЃРїРµС†РёС„РёРєР°С†РёРё
 	 * 
-	 * @param docSection	раздел документа
-	 * @return	бизнес-компонент
+	 * @param docSection	СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
 	 */
 	public static <T extends DocSpec, ID extends Serializable> GoodsDocumentSpecification<T, ID> getGoodsDocumentSpecificationService(DocSection docSection) {
 		return com.mg.merp.docflow.support.DocumentUtils.getGoodsDocumentSpecificationService(docSection);
 	}
 
 	/**
-	 * создание бизнес-компонента образца документа
+	 * СЃРѕР·РґР°РЅРёРµ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РѕР±СЂР°Р·С†Р° РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docSection	раздел документа
-	 * @return	бизнес-компонент
+	 * @param docSection	СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
 	 */
 	@SuppressWarnings("unchecked")
 	public static DocumentPattern getDocumentPatternService(DocSection docSection) {
@@ -91,10 +91,10 @@ public class DocumentUtils {
 	}
 
 	/**
-	 * установка курса валют документа
+	 * СѓСЃС‚Р°РЅРѕРІРєР° РєСѓСЂСЃР° РІР°Р»СЋС‚ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param document	сервис документа
-	 * @param docHead	сущность документа
+	 * @param document	СЃРµСЂРІРёСЃ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docHead	СЃСѓС‰РЅРѕСЃС‚СЊ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	public static void setExchangeRate(DataBusinessObjectService document, DocHead docHead) {
@@ -102,11 +102,11 @@ public class DocumentUtils {
 		Configuration cfg = docService.getConfiguration();
 		CurrencyRateServiceLocal currencyRateService = (CurrencyRateServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CurrencyRateServiceLocal.SERVICE_NAME);
 		try {
-			//пытаемся получить прямой курс для валют
+			//РїС‹С‚Р°РµРјСЃСЏ РїРѕР»СѓС‡РёС‚СЊ РїСЂСЏРјРѕР№ РєСѓСЂСЃ РґР»СЏ РІР°Р»СЋС‚
 			docHead.setCurCource(currencyRateService.getCurrencyRate(cfg.getLocalCurrency(), docHead.getCurrency(),
 					docHead.getCurrencyRateAuthority(), docHead.getCurrencyRateType(), docHead.getDocDate()));
 		} catch (CurrencyRateNotFoundException e) {
-			//если прямого курса нет, то пытаемся получить обратный курс
+			//РµСЃР»Рё РїСЂСЏРјРѕРіРѕ РєСѓСЂСЃР° РЅРµС‚, С‚Рѕ РїС‹С‚Р°РµРјСЃСЏ РїРѕР»СѓС‡РёС‚СЊ РѕР±СЂР°С‚РЅС‹Р№ РєСѓСЂСЃ
 			docHead.setCurCource(MathUtils.divide(BigDecimal.ONE, currencyRateService.getCurrencyRate(docHead.getCurrency(), cfg.getLocalCurrency(),
 					docHead.getCurrencyRateAuthority(), docHead.getCurrencyRateType(), docHead.getDocDate()), new RoundContext(CurrencyRateServiceLocal.DEFAULT_RATE_SCALE)));
 		}
@@ -114,8 +114,8 @@ public class DocumentUtils {
 	}
 
 	/**
-	 * Выбрать контракт
-	 * @param searchHelpListener - слушатель выбора контракта
+	 * Р’С‹Р±СЂР°С‚СЊ РєРѕРЅС‚СЂР°РєС‚
+	 * @param searchHelpListener - СЃР»СѓС€Р°С‚РµР»СЊ РІС‹Р±РѕСЂР° РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	public static void chooseContract(SearchHelpListener searchHelpListener) {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.contract.support.ui.ContractSearchHelp"); //$NON-NLS-1$
@@ -124,8 +124,8 @@ public class DocumentUtils {
 	}
 	
 	/**
-	 * Просмотреть контракт у документа
-	 * @param docHead - документ
+	 * РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РєРѕРЅС‚СЂР°РєС‚ Сѓ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
 	 */
 	public static void viewContract(DocHead docHead) {
 		if(docHead != null)
@@ -133,8 +133,8 @@ public class DocumentUtils {
 	}
 
 	/**
-	 * Просмотреть документ-основание у документа
-	 * @param docHead - документ
+	 * РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚-РѕСЃРЅРѕРІР°РЅРёРµ Сѓ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
 	 */
 	public static void viewBaseDocument(DocHead docHead) {
 		if(docHead != null)
@@ -142,8 +142,8 @@ public class DocumentUtils {
 	}
 	
 	/**
-	 * Просмотреть документ
-	 * @param docHead - документ
+	 * РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚
+	 * @param docHead - РґРѕРєСѓРјРµРЅС‚
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	public static void viewDocument(DocHead docHead) {
@@ -155,9 +155,9 @@ public class DocumentUtils {
 	}
 	
 	/**
-	 * Просмотреть документ
-	 * @param entity - сущность
-	 * @param documentAttributeName - наименование атрибута документа у сущности
+	 * РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РґРѕРєСѓРјРµРЅС‚
+	 * @param entity - СЃСѓС‰РЅРѕСЃС‚СЊ
+	 * @param documentAttributeName - РЅР°РёРјРµРЅРѕРІР°РЅРёРµ Р°С‚СЂРёР±СѓС‚Р° РґРѕРєСѓРјРµРЅС‚Р° Сѓ СЃСѓС‰РЅРѕСЃС‚Рё
 	 */
 	public static void viewDocument(PersistentObject entity, String documentAttributeName) {
 		if(entity == null || StringUtils.stringNullOrEmpty(documentAttributeName))
@@ -172,22 +172,22 @@ public class DocumentUtils {
 	}
 
 	/**
-	 * получить раздел документов
+	 * РїРѕР»СѓС‡РёС‚СЊ СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 * 
-	 * @param docSection	идентификатор раздела
-	 * @return	раздел документов
+	 * @param docSection	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂР°Р·РґРµР»Р°
+	 * @return	СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 */
 	public static DocSection getDocSection(int docSection) {
 		return ServerUtils.getPersistentManager().find(DocSection.class, docSection);
 	}
 
 	/**
-	 * получить сущность заголовка документа через сервис документов, если сущность не находится в сессии
-	 * то будет загружена новая сущность из хранилища
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃСѓС‰РЅРѕСЃС‚СЊ Р·Р°РіРѕР»РѕРІРєР° РґРѕРєСѓРјРµРЅС‚Р° С‡РµСЂРµР· СЃРµСЂРІРёСЃ РґРѕРєСѓРјРµРЅС‚РѕРІ, РµСЃР»Рё СЃСѓС‰РЅРѕСЃС‚СЊ РЅРµ РЅР°С…РѕРґРёС‚СЃСЏ РІ СЃРµСЃСЃРёРё
+	 * С‚Рѕ Р±СѓРґРµС‚ Р·Р°РіСЂСѓР¶РµРЅР° РЅРѕРІР°СЏ СЃСѓС‰РЅРѕСЃС‚СЊ РёР· С…СЂР°РЅРёР»РёС‰Р°
 	 * 
-	 * @param docHead	сущность заголовка документа
-	 * @param docSection	раздел документов
-	 * @return	сущность заголовка документа
+	 * @param docHead	СЃСѓС‰РЅРѕСЃС‚СЊ Р·Р°РіРѕР»РѕРІРєР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docSection	СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚РѕРІ
+	 * @return	СЃСѓС‰РЅРѕСЃС‚СЊ Р·Р°РіРѕР»РѕРІРєР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	@SuppressWarnings("unchecked")
 	public static DocHead loadDocumentHead(DocHead docHead, DocSection docSection) {
@@ -198,12 +198,12 @@ public class DocumentUtils {
 	}
 
 	/**
-	 * получить сущность заголовка документа через сервис документов, если сущность не находится в сессии
-	 * то будет загружена новая сущность из хранилища
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃСѓС‰РЅРѕСЃС‚СЊ Р·Р°РіРѕР»РѕРІРєР° РґРѕРєСѓРјРµРЅС‚Р° С‡РµСЂРµР· СЃРµСЂРІРёСЃ РґРѕРєСѓРјРµРЅС‚РѕРІ, РµСЃР»Рё СЃСѓС‰РЅРѕСЃС‚СЊ РЅРµ РЅР°С…РѕРґРёС‚СЃСЏ РІ СЃРµСЃСЃРёРё
+	 * С‚Рѕ Р±СѓРґРµС‚ Р·Р°РіСЂСѓР¶РµРЅР° РЅРѕРІР°СЏ СЃСѓС‰РЅРѕСЃС‚СЊ РёР· С…СЂР°РЅРёР»РёС‰Р°
 	 * 
-	 * @param docHead	сущность заголовка документа
-	 * @param docSection	идентификатор раздела документов
-	 * @return	сущность заголовка документа
+	 * @param docHead	СЃСѓС‰РЅРѕСЃС‚СЊ Р·Р°РіРѕР»РѕРІРєР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param docSection	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂР°Р·РґРµР»Р° РґРѕРєСѓРјРµРЅС‚РѕРІ
+	 * @return	СЃСѓС‰РЅРѕСЃС‚СЊ Р·Р°РіРѕР»РѕРІРєР° РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	public static DocHead loadDocumentHead(DocHead docHead, int docSection) {
 		return loadDocumentHead(docHead, getDocSection(docSection));

@@ -26,24 +26,24 @@ public interface SolutionServiceLocal
    extends com.mg.framework.api.DataBusinessObjectService<Solution, Integer>
 {
 	/**
-	 * тип папки для решений
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ СЂРµС€РµРЅРёР№
 	 */
 	final static short FOLDER_PART = 13503;
 	
 	/**
-	 * добавить проблему решению
+	 * РґРѕР±Р°РІРёС‚СЊ РїСЂРѕР±Р»РµРјСѓ СЂРµС€РµРЅРёСЋ
 	 * 
-	 * @param problem		проблема
-	 * @param solution		решение
+	 * @param problem		РїСЂРѕР±Р»РµРјР°
+	 * @param solution		СЂРµС€РµРЅРёРµ
 	 * @throws com.mg.framework.api.ApplicationException
 	 */
 	public void linkProblem(Problem problem, Solution solution);
 	
 	/**
-	 * удалить проблему из решения
+	 * СѓРґР°Р»РёС‚СЊ РїСЂРѕР±Р»РµРјСѓ РёР· СЂРµС€РµРЅРёСЏ
 	 * 
-	 * @param problem		проблема
-	 * @param solution		решение
+	 * @param problem		РїСЂРѕР±Р»РµРјР°
+	 * @param solution		СЂРµС€РµРЅРёРµ
 	 * @throws com.mg.framework.api.ApplicationException
 	 */
 	public void unLinkProblem(Problem problem, Solution solution);

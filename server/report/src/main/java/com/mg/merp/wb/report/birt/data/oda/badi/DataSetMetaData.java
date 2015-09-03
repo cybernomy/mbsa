@@ -22,7 +22,7 @@ import org.eclipse.datatools.connectivity.oda.OdaException;
 import com.mg.merp.wb.report.birt.data.oda.badi.util.Constants;
 
 /**
- * Реализация интерфейса {@link IDataSetMetaData}
+ * Р РµР°Р»РёР·Р°С†РёСЏ РёРЅС‚РµСЂС„РµР№СЃР° {@link IDataSetMetaData}
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: DataSetMetaData.java,v 1.6 2006/12/05 13:43:33 poroxnenko Exp $

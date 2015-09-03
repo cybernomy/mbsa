@@ -19,7 +19,7 @@ import com.mg.merp.docflow.generic.AbstractDocFlowPlugin;
 import com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory;
 
 /**
- * Реализация фабрики реализаций этапа ДО "Электронная подпись"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёР№ СЌС‚Р°РїР° Р”Рћ "Р­Р»РµРєС‚СЂРѕРЅРЅР°СЏ РїРѕРґРїРёСЃСЊ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: SignatureDocFlowPluginFactory.java,v 1.2 2006/10/21 10:50:19 safonov Exp $

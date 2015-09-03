@@ -50,7 +50,7 @@ import com.mg.merp.warehouse.model.OrderStatus;
 import com.mg.merp.warehouse.support.CreateOrderSpecificationInfoImpl;
 
 /**
- * Бизнес-компонент "Рекомендации ППМ" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р РµРєРѕРјРµРЅРґР°С†РёРё РџРџРњ" 
  * 
  * @author Oleg V. Safonov
  * @author leonova
@@ -94,7 +94,7 @@ public class MRPRecommendationServiceBean extends AbstractPOJODataBusinessObject
 	}
 	
 	/**
-	 * создание заказа поставщику
+	 * СЃРѕР·РґР°РЅРёРµ Р·Р°РєР°Р·Р° РїРѕСЃС‚Р°РІС‰РёРєСѓ
 	 * 
 	 * @param orderItem
 	 * @param recommends
@@ -166,7 +166,7 @@ public class MRPRecommendationServiceBean extends AbstractPOJODataBusinessObject
 		try {
 			Map<OrderItem, List<MrpRecommendation>> groupedRecommends = new HashMap<OrderItem, List<MrpRecommendation>>();
 			for (MrpRecommendation recommend : recommends) {
-				//группируем по "поставщику" и "дате заказа"
+				//РіСЂСѓРїРїРёСЂСѓРµРј РїРѕ "РїРѕСЃС‚Р°РІС‰РёРєСѓ" Рё "РґР°С‚Рµ Р·Р°РєР°Р·Р°"
 				OrderItem orderItem = new OrderItem(recommend.getVendor(), recommend.getOrderDate());
 				List<MrpRecommendation> list = groupedRecommends.get(orderItem);
 				if (list == null) {
@@ -175,21 +175,21 @@ public class MRPRecommendationServiceBean extends AbstractPOJODataBusinessObject
 				}
 				list.add(recommend);
 
-				//проставим отметку на рекомендациях MRP
+				//РїСЂРѕСЃС‚Р°РІРёРј РѕС‚РјРµС‚РєСѓ РЅР° СЂРµРєРѕРјРµРЅРґР°С†РёСЏС… MRP
 				recommend.setMrpOrdered(true);
 			}
 
 			if (groupedRecommends.isEmpty())
 				return;
 
-			//заказ поставщику
+			//Р·Р°РєР°Р· РїРѕСЃС‚Р°РІС‰РёРєСѓ
 			OrderHeadSupServiceLocal orderService = (OrderHeadSupServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(OrderHeadSupServiceLocal.SERVICE_NAME);
 			OrderSpecSupServiceLocal orderSpecService = (OrderSpecSupServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(OrderSpecSupServiceLocal.SERVICE_NAME);
 
 			for (OrderItem orderItem : groupedRecommends.keySet())
 				createOrder(orderItem, groupedRecommends.get(orderItem), orderService, orderSpecService);
 
-			//создаем заказы на перемещение
+			//СЃРѕР·РґР°РµРј Р·Р°РєР°Р·С‹ РЅР° РїРµСЂРµРјРµС‰РµРЅРёРµ
 			((FirmPlannedOrderServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(FirmPlannedOrderServiceLocal.SERVICE_NAME)).createByMrpRecommendation(mrpVersionId);
 		} catch (ApplicationException e) {
 			ServerUtils.setTransactionRollbackOnly();

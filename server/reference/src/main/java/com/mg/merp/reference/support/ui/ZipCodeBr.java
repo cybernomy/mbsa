@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.model.ZipCode;
 
 /**
- * Браузер почтовых индексов
+ * Р‘СЂР°СѓР·РµСЂ РїРѕС‡С‚РѕРІС‹С… РёРЅРґРµРєСЃРѕРІ
  * 
  * @author leonova
  * @version $Id: ZipCodeBr.java,v 1.2 2006/08/11 07:18:52 leonova Exp $ 

@@ -46,11 +46,11 @@ import com.mg.framework.utils.XMLUtils;
  */
 public class UIRender {
 	/**
-	 * элемент контейнер
+	 * СЌР»РµРјРµРЅС‚ РєРѕРЅС‚РµР№РЅРµСЂ
 	 */
 	public static final String CONTAINER_WIDGET = "jfd:container"; //$NON-NLS-1$
 	/**
-	 * элемент поле, решение о типе элемента принимается в зависимости от типа модели
+	 * СЌР»РµРјРµРЅС‚ РїРѕР»Рµ, СЂРµС€РµРЅРёРµ Рѕ С‚РёРїРµ СЌР»РµРјРµРЅС‚Р° РїСЂРёРЅРёРјР°РµС‚СЃСЏ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ С‚РёРїР° РјРѕРґРµР»Рё
 	 */
 	public static final String FIELD_WIDGET = "jfd:field"; //$NON-NLS-1$
 	private static final String SCROLL_PANE = "scrollPane"; //$NON-NLS-1$
@@ -87,7 +87,7 @@ public class UIRender {
     	if (widget instanceof Container) {
     		((Container) widget).startContainer();
     		try {
-        		//обрабатываем контейнер, возможно у него есть вложенные элементы
+        		//РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј РєРѕРЅС‚РµР№РЅРµСЂ, РІРѕР·РјРѕР¶РЅРѕ Сѓ РЅРµРіРѕ РµСЃС‚СЊ РІР»РѕР¶РµРЅРЅС‹Рµ СЌР»РµРјРµРЅС‚С‹
     			List<Element> nestedElements = MiscUtils.convertUncheckedList(Element.class, element.elements());
         		for (Element nestedElement : nestedElements) {
         			handleElement(nestedElement, (Container) widget);
@@ -116,7 +116,7 @@ public class UIRender {
 		
 		if (elementName.equals(FIELD_WIDGET)) {
 			result = createFieldWidget(id, element);
-			labelFor = (Label) componentMap.get(generateLabelForName(id)); //проверим была ли создана метка
+			labelFor = (Label) componentMap.get(generateLabelForName(id)); //РїСЂРѕРІРµСЂРёРј Р±С‹Р»Р° Р»Рё СЃРѕР·РґР°РЅР° РјРµС‚РєР°
 		}
 		else if (elementName.equals(CONTAINER_WIDGET)) {
 			String layout = element.attributeValue(Container.LAYOUT, StringUtils.EMPTY_STRING);
@@ -130,8 +130,8 @@ public class UIRender {
 
 		result.init(element);
 
-		//видимость метки зависит от элемента
-		//см. https://issues.m-g.ru/bugzilla/show_bug.cgi?id=4191
+		//РІРёРґРёРјРѕСЃС‚СЊ РјРµС‚РєРё Р·Р°РІРёСЃРёС‚ РѕС‚ СЌР»РµРјРµРЅС‚Р°
+		//СЃРј. https://issues.m-g.ru/bugzilla/show_bug.cgi?id=4191
 		if (labelFor != null && !result.isVisible())
 			labelFor.setVisible(false);
 
@@ -177,11 +177,11 @@ public class UIRender {
 		boolean showLabel = XMLUtils.checkBoolean(element.attributeValue(FieldEditor.SHOW_LABEL), true);
 
 		FieldMetadata fldMeta = null;
-		//пытаемся загрузить из описателя поля
+		//РїС‹С‚Р°РµРјСЃСЏ Р·Р°РіСЂСѓР·РёС‚СЊ РёР· РѕРїРёСЃР°С‚РµР»СЏ РїРѕР»СЏ
 		String dataItemName = element.attributeValue(FieldEditor.DATA_ITEM);
 		if (!StringUtils.stringNullOrEmpty(dataItemName))
 			fldMeta = ApplicationDictionaryLocator.locate().getFieldMetadata(new ReflectionMetadata(dataItemName, controller.getFieldType(id)));
-		//если не установлен, то грузим стандартно из контроллера
+		//РµСЃР»Рё РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ, С‚Рѕ РіСЂСѓР·РёРј СЃС‚Р°РЅРґР°СЂС‚РЅРѕ РёР· РєРѕРЅС‚СЂРѕР»Р»РµСЂР°
 		if (fldMeta == null)
 			fldMeta = controller.getFieldMetadata(id);
 		if (fldMeta == null)
@@ -232,8 +232,8 @@ public class UIRender {
 				
 				String editorType = element.attributeValue(EnumField.EDITOR_TYPE);
 				if (editorType == null) {
-					//если не установлен тип редактора,
-					//принимаем решение о типе редактора, если количество вариантов > 3 используем combobox
+					//РµСЃР»Рё РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ С‚РёРї СЂРµРґР°РєС‚РѕСЂР°,
+					//РїСЂРёРЅРёРјР°РµРј СЂРµС€РµРЅРёРµ Рѕ С‚РёРїРµ СЂРµРґР°РєС‚РѕСЂР°, РµСЃР»Рё РєРѕР»РёС‡РµСЃС‚РІРѕ РІР°СЂРёР°РЅС‚РѕРІ > 3 РёСЃРїРѕР»СЊР·СѓРµРј combobox
 					widgetType = fldMeta.getEnumConstantsText().length > 3 ? WidgetFactory.ENUM_COMBOBOX_EDIT_WIDGET : WidgetFactory.ENUM_RADIOBUTTON_EDIT_WIDGET;
 				}
 				else if (editorType.equalsIgnoreCase(EnumField.EnumFieldType.COMBOBOX.name()))

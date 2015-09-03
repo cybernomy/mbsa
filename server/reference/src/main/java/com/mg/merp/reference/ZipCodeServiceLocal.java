@@ -17,7 +17,7 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.ZipCode;
 
 /**
- * Сервис бизнес-компонента "Индекс"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РРЅРґРµРєСЃ"
  * 
  * @author leonova
  * @version $Id: ZipCodeServiceLocal.java,v 1.3 2008/09/23 09:16:56 safonov Exp $
@@ -25,10 +25,10 @@ import com.mg.merp.reference.model.ZipCode;
 public interface ZipCodeServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ZipCode, Integer> {
 
 	/**
-	 * поиск по коду
+	 * РїРѕРёСЃРє РїРѕ РєРѕРґСѓ
 	 * 
-	 * @param code	код
-	 * @return	индекс или <code>null</code> если не найден
+	 * @param code	РєРѕРґ
+	 * @return	РёРЅРґРµРєСЃ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ
 	 */
 	public ZipCode findByCode(String code);
 

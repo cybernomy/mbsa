@@ -18,7 +18,7 @@ import com.mg.framework.api.BusinessObjectService;
 import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 
 /**
- * Сервис процессора модуля "Расчеты с партнерами"
+ * РЎРµСЂРІРёСЃ РїСЂРѕС†РµСЃСЃРѕСЂР° РјРѕРґСѓР»СЏ "Р Р°СЃС‡РµС‚С‹ СЃ РїР°СЂС‚РЅРµСЂР°РјРё"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -27,43 +27,43 @@ import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 public interface SettlementProcessorServiceLocal extends BusinessObjectService {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/settlement/SettlementProcessor"; //$NON-NLS-1$
 
 	/**
-	 * Этап ДО "Поставить в план расчётов с партнёром"
-	 * @param docFlowParams - параметры документооборота
+	 * Р­С‚Р°Рї Р”Рћ "РџРѕСЃС‚Р°РІРёС‚СЊ РІ РїР»Р°РЅ СЂР°СЃС‡С‘С‚РѕРІ СЃ РїР°СЂС‚РЅС‘СЂРѕРј"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
 	 */
 	void setToPlanContractorCard(DocFlowPluginInvokeParams docFlowParams);
 
 	/**
-	 * Откат этапа ДО "Поставить в план расчётов с партнёром"
-	 * @param docFlowParams - параметры документооборота
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° Р”Рћ "РџРѕСЃС‚Р°РІРёС‚СЊ РІ РїР»Р°РЅ СЂР°СЃС‡С‘С‚РѕРІ СЃ РїР°СЂС‚РЅС‘СЂРѕРј"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
 	 */
 	void rollBackSetToPlanContractorCard(DocFlowPluginInvokeParams docFlowParams);
 
 	/**
-	 * Этап ДО "Отработать в расчетах"
-	 * @param docFlowParams - параметры документооборота
+	 * Р­С‚Р°Рї Р”Рћ "РћС‚СЂР°Р±РѕС‚Р°С‚СЊ РІ СЂР°СЃС‡РµС‚Р°С…"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
 	 */
 	void processInSettlement(DocFlowPluginInvokeParams docFlowParams);
 
 	/**
-	 * Откат этапа ДО "Отработать в расчетах"
-	 * @param docFlowParams - параметры документооборота
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° Р”Рћ "РћС‚СЂР°Р±РѕС‚Р°С‚СЊ РІ СЂР°СЃС‡РµС‚Р°С…"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
 	 */
 	void rollBackProcessInSettlement(DocFlowPluginInvokeParams docFlowParams);
 
 	/**
-	 * Этап ДО "Снять с плана расчётов с партнёром"
-	 * @param docFlowParams - параметры документооборота
+	 * Р­С‚Р°Рї Р”Рћ "РЎРЅСЏС‚СЊ СЃ РїР»Р°РЅР° СЂР°СЃС‡С‘С‚РѕРІ СЃ РїР°СЂС‚РЅС‘СЂРѕРј"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
 	 */
 	void unsetFromPlanContractorCard(DocFlowPluginInvokeParams docFlowParams);
 
 	/**
-	 * Откат этапа ДО "Снять с плана расчётов с партнёром"
-	 * @param docFlowParams - параметры документооборота
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° Р”Рћ "РЎРЅСЏС‚СЊ СЃ РїР»Р°РЅР° СЂР°СЃС‡С‘С‚РѕРІ СЃ РїР°СЂС‚РЅС‘СЂРѕРј"
+	 * @param docFlowParams - РїР°СЂР°РјРµС‚СЂС‹ РґРѕРєСѓРјРµРЅС‚РѕРѕР±РѕСЂРѕС‚Р°
 	 */
 	void rollBackUnsetFromPlanContractorCard(DocFlowPluginInvokeParams docFlowParams);
 

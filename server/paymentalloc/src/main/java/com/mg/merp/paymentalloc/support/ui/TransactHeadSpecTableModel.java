@@ -26,7 +26,7 @@ import com.mg.merp.paymentalloc.model.TransactHead;
 import com.mg.merp.paymentalloc.model.TransactSpec;
 
 /**
- * Модель таблицы "Спецификация заголовков, связанных документов"
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ "РЎРїРµС†РёС„РёРєР°С†РёСЏ Р·Р°РіРѕР»РѕРІРєРѕРІ, СЃРІСЏР·Р°РЅРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: TransactHeadSpecTableModel.java,v 1.1 2007/06/05 12:50:57 sharapov Exp $

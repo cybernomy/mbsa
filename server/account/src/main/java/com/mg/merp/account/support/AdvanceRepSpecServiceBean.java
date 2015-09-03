@@ -25,7 +25,7 @@ import com.mg.merp.account.model.AdvanceRepSpec;
 import com.mg.merp.document.generic.GoodsDocumentSpecificationServiceBean;
 
 /**
- * Бизнес-компонент "Спецификация авансовых отчетов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ Р°РІР°РЅСЃРѕРІС‹С… РѕС‚С‡РµС‚РѕРІ" 
  * 
  * @author leonova
  * @version $Id: AdvanceRepSpecServiceBean.java,v 1.7 2008/03/12 11:19:58 alikaev Exp $
@@ -47,7 +47,7 @@ public class AdvanceRepSpecServiceBean extends GoodsDocumentSpecificationService
 	 */
 	@Override
 	protected void doAdjust(AdvanceRepSpec entity) {
-		// без этой строчки налоги не пересчитываются
+		// Р±РµР· СЌС‚РѕР№ СЃС‚СЂРѕС‡РєРё РЅР°Р»РѕРіРё РЅРµ РїРµСЂРµСЃС‡РёС‚С‹РІР°СЋС‚СЃСЏ
 		entity.setDocHead(ServerUtils.getPersistentManager().find(AdvanceRepHead.class, entity.getDocHead().getId()));
 		super.doAdjust(entity);
 	}	

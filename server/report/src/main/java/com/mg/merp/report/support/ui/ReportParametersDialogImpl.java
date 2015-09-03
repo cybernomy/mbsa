@@ -38,8 +38,8 @@ import com.mg.merp.report.parameters.support.SelectionChoiceImpl;
 import com.mg.merp.report.support.Messages;
 
 /**
- * Реализация интерфейса {@link ReportParametersDialog} Контроллер для
- * автоматической формы запроса параметров
+ * Р РµР°Р»РёР·Р°С†РёСЏ РёРЅС‚РµСЂС„РµР№СЃР° {@link ReportParametersDialog} РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґР»СЏ
+ * Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕР№ С„РѕСЂРјС‹ Р·Р°РїСЂРѕСЃР° РїР°СЂР°РјРµС‚СЂРѕРІ
  *
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -49,7 +49,7 @@ public class ReportParametersDialogImpl extends AbstractReportParametersDialog {
 	private boolean isListParamSetup = false;
 
 	/**
-	 * установка значений параметров со списком
+	 * СѓСЃС‚Р°РЅРѕРІРєР° Р·РЅР°С‡РµРЅРёР№ РїР°СЂР°РјРµС‚СЂРѕРІ СЃРѕ СЃРїРёСЃРєРѕРј
 	 */
 	private void setupListParam() {
 		if (params == null)
@@ -57,8 +57,8 @@ public class ReportParametersDialogImpl extends AbstractReportParametersDialog {
 
 		boolean hasListValues = false;
 		for (Map.Entry<String, ReportParameter> paramEntry : params.entrySet()) {
-			//грузим значения для параметров со списком, для каскадных параметров грузим только
-			//верхний по иерархии, остальные будут загружены по событию изменения значения текущего параметра
+			//РіСЂСѓР·РёРј Р·РЅР°С‡РµРЅРёСЏ РґР»СЏ РїР°СЂР°РјРµС‚СЂРѕРІ СЃРѕ СЃРїРёСЃРєРѕРј, РґР»СЏ РєР°СЃРєР°РґРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ РіСЂСѓР·РёРј С‚РѕР»СЊРєРѕ
+			//РІРµСЂС…РЅРёР№ РїРѕ РёРµСЂР°СЂС…РёРё, РѕСЃС‚Р°Р»СЊРЅС‹Рµ Р±СѓРґСѓС‚ Р·Р°РіСЂСѓР¶РµРЅС‹ РїРѕ СЃРѕР±С‹С‚РёСЋ РёР·РјРµРЅРµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ С‚РµРєСѓС‰РµРіРѕ РїР°СЂР°РјРµС‚СЂР°
 			if (paramEntry.getValue().hasListValues() && paramEntry.getValue().indexInGroup() <= 0) {
 				Object[] items = SelectionChoiceImpl.convertParameterSelectionChoiceToValues(paramEntry.getValue().getSelectionList());
 				if (items.length > 0) {
@@ -75,15 +75,15 @@ public class ReportParametersDialogImpl extends AbstractReportParametersDialog {
 			}
 		}
 		isListParamSetup = true;
-		//после загрузки списков установим на значения параметров
+		//РїРѕСЃР»Рµ Р·Р°РіСЂСѓР·РєРё СЃРїРёСЃРєРѕРІ СѓСЃС‚Р°РЅРѕРІРёРј РЅР° Р·РЅР°С‡РµРЅРёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ
 		if (hasListValues)
 			view.flushModel();
 
 		//workaround https://issues.m-g.ru/bugzilla/show_bug.cgi?id=5040
-		//т.к. значения динамических параметров заполняются после "упаковки" и показа формы,
-		//то размер формы не учитывает эти значения, еще раз "пакуем" формы для учитывания
-		//значений параметров, текущее API не позволяет "паковать" форму после показа поэтому
-		//используем reflection
+		//С‚.Рє. Р·РЅР°С‡РµРЅРёСЏ РґРёРЅР°РјРёС‡РµСЃРєРёС… РїР°СЂР°РјРµС‚СЂРѕРІ Р·Р°РїРѕР»РЅСЏСЋС‚СЃСЏ РїРѕСЃР»Рµ "СѓРїР°РєРѕРІРєРё" Рё РїРѕРєР°Р·Р° С„РѕСЂРјС‹,
+		//С‚Рѕ СЂР°Р·РјРµСЂ С„РѕСЂРјС‹ РЅРµ СѓС‡РёС‚С‹РІР°РµС‚ СЌС‚Рё Р·РЅР°С‡РµРЅРёСЏ, РµС‰Рµ СЂР°Р· "РїР°РєСѓРµРј" С„РѕСЂРјС‹ РґР»СЏ СѓС‡РёС‚С‹РІР°РЅРёСЏ
+		//Р·РЅР°С‡РµРЅРёР№ РїР°СЂР°РјРµС‚СЂРѕРІ, С‚РµРєСѓС‰РµРµ API РЅРµ РїРѕР·РІРѕР»СЏРµС‚ "РїР°РєРѕРІР°С‚СЊ" С„РѕСЂРјСѓ РїРѕСЃР»Рµ РїРѕРєР°Р·Р° РїРѕСЌС‚РѕРјСѓ
+		//РёСЃРїРѕР»СЊР·СѓРµРј reflection
 		try {
 			Object dialog = ((Widget) view.getWindow()).getDelegate();
 			Method m = dialog.getClass().getMethod("pack");
@@ -133,7 +133,7 @@ public class ReportParametersDialogImpl extends AbstractReportParametersDialog {
 
 		ReportParameter param = this.params.get(name);
 		if (param.hasListValues())
-			//не устанваливаем значение если списки еще не были загружены
+			//РЅРµ СѓСЃС‚Р°РЅРІР°Р»РёРІР°РµРј Р·РЅР°С‡РµРЅРёРµ РµСЃР»Рё СЃРїРёСЃРєРё РµС‰Рµ РЅРµ Р±С‹Р»Рё Р·Р°РіСЂСѓР¶РµРЅС‹
 			return isListParamSetup ? SelectionChoiceImpl.findSelectionIndexByValue(param.getSelectionList(), param.getValue()) : -1;
 		else
 			return param.getValue();
@@ -142,7 +142,7 @@ public class ReportParametersDialogImpl extends AbstractReportParametersDialog {
 	public static String createForm(RptMain report, Map<String, ReportParameter> reportParams) {
 		StringBuilder prms = new StringBuilder();
 		for (ReportParameter param : reportParams.values()) {
-			//не отображаем скрытые параметры
+			//РЅРµ РѕС‚РѕР±СЂР°Р¶Р°РµРј СЃРєСЂС‹С‚С‹Рµ РїР°СЂР°РјРµС‚СЂС‹
 			if (param.isHidden())
 				continue;
 
@@ -157,7 +157,7 @@ public class ReportParametersDialogImpl extends AbstractReportParametersDialog {
 				.append("orientation=\"ver\" > ")
 				.append("<jfd:container id=\"reportParameters\" layout=\"jfd:box\" columns=\"2\" alignment=\"expand_expand\">")
 				.append("<jfd:border style=\"bevel\" type=\"raised\" />");
-		//создание метки с именем отчета
+		//СЃРѕР·РґР°РЅРёРµ РјРµС‚РєРё СЃ РёРјРµРЅРµРј РѕС‚С‡РµС‚Р°
 		String reportName = !StringUtils.stringNullOrEmpty(report.getComment()) ? report.getComment() : report.getRptName();
 		if (!StringUtils.stringNullOrEmpty(reportName))
 			form.append("<jfd:label id=\"titleLabel\" alignment=\"center_top\" horizontalSpan=\"2\" text=\"").append(reportName).append("\" />");
@@ -180,7 +180,7 @@ public class ReportParametersDialogImpl extends AbstractReportParametersDialog {
 			name = WidgetFactory.LIST_WIDGET;
 			break;
 		default:
-			return new StringBuilder(); //если неизвестный контрол, то непонятно что делать
+			return new StringBuilder(); //РµСЃР»Рё РЅРµРёР·РІРµСЃС‚РЅС‹Р№ РєРѕРЅС‚СЂРѕР», С‚Рѕ РЅРµРїРѕРЅСЏС‚РЅРѕ С‡С‚Рѕ РґРµР»Р°С‚СЊ
 		}
 		String label = param.getDisplayName() != null ? param.getDisplayName() : param.getName();
 
@@ -203,14 +203,14 @@ public class ReportParametersDialogImpl extends AbstractReportParametersDialog {
 	}
 
 	protected void onActionChangeCascadeParam(WidgetEvent event) {
-		//загрузим новые значения для каскадных параметров той же группы что и изменившийся
-		//но которые находятся ниже по иерархии
+		//Р·Р°РіСЂСѓР·РёРј РЅРѕРІС‹Рµ Р·РЅР°С‡РµРЅРёСЏ РґР»СЏ РєР°СЃРєР°РґРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ С‚РѕР№ Р¶Рµ РіСЂСѓРїРїС‹ С‡С‚Рѕ Рё РёР·РјРµРЅРёРІС€РёР№СЃСЏ
+		//РЅРѕ РєРѕС‚РѕСЂС‹Рµ РЅР°С…РѕРґСЏС‚СЃСЏ РЅРёР¶Рµ РїРѕ РёРµСЂР°СЂС…РёРё
 		ReportParameter currentParam = params.get(event.getWidget().getName());
 		if (currentParam != null && currentParam.cascade()) {
 			//System.out.println("current param: " + currentParam.getName());
 			int selfIndex = currentParam.indexInGroup();
 			for (ReportParameter groupParam : params.values()) {
-				//загрузим только один следующий за текущим, остальные в каскаде обновятся рекурсивно
+				//Р·Р°РіСЂСѓР·РёРј С‚РѕР»СЊРєРѕ РѕРґРёРЅ СЃР»РµРґСѓСЋС‰РёР№ Р·Р° С‚РµРєСѓС‰РёРј, РѕСЃС‚Р°Р»СЊРЅС‹Рµ РІ РєР°СЃРєР°РґРµ РѕР±РЅРѕРІСЏС‚СЃСЏ СЂРµРєСѓСЂСЃРёРІРЅРѕ
 				if (currentParam.groupName().equals(groupParam.groupName()) && selfIndex == groupParam.indexInGroup() - 1) {
 					Widget widget = view.getWidget(groupParam.getName());
 					if (widget instanceof ComboBox) {
@@ -292,7 +292,7 @@ public class ReportParametersDialogImpl extends AbstractReportParametersDialog {
 		@Override
 		protected void doValidate(ValidationContext context) {
 			Object toValidate = toValidate();
-			//проверка на null
+			//РїСЂРѕРІРµСЂРєР° РЅР° null
 			if (toValidate == null)
 				context.getStatus().error(this);
 		}
@@ -313,7 +313,7 @@ public class ReportParametersDialogImpl extends AbstractReportParametersDialog {
 	 */
 	@Override
 	public void onActionOk(WidgetEvent event) {
-		//проверка обязательных параметров
+		//РїСЂРѕРІРµСЂРєР° РѕР±СЏР·Р°С‚РµР»СЊРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ
 		ValidationContext validationContext = new ValidationContext();
 		for (ReportParameter param : params.values()) {
 			if (param.isRequired()) {

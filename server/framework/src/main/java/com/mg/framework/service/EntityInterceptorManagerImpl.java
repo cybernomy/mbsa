@@ -29,7 +29,7 @@ import com.mg.framework.api.orm.PersistentObject;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Реализация менеджера перехватчиков действий над объектами сущностями
+ * Р РµР°Р»РёР·Р°С†РёСЏ РјРµРЅРµРґР¶РµСЂР° РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РґРµР№СЃС‚РІРёР№ РЅР°Рґ РѕР±СЉРµРєС‚Р°РјРё СЃСѓС‰РЅРѕСЃС‚СЏРјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityInterceptorManagerImpl.java,v 1.6 2007/12/17 09:11:26 safonov Exp $
@@ -50,21 +50,21 @@ public class EntityInterceptorManagerImpl implements EntityInterceptorManager {
     private Map<String, List<EntityInterceptor>[]> interceptorsMap = Collections.synchronizedMap(new HashMap<String, List<EntityInterceptor>[]>());
 
     /**
-     * копируем список чтобы использовать итератор в цикле обхода списка перехватчиков,
-     * предотвращая ConcurrentModificationException при изменении оригинального списка,
-     * т.к. итераторы не потоко-безопасны 
+     * РєРѕРїРёСЂСѓРµРј СЃРїРёСЃРѕРє С‡С‚РѕР±С‹ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РёС‚РµСЂР°С‚РѕСЂ РІ С†РёРєР»Рµ РѕР±С…РѕРґР° СЃРїРёСЃРєР° РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ,
+     * РїСЂРµРґРѕС‚РІСЂР°С‰Р°СЏ ConcurrentModificationException РїСЂРё РёР·РјРµРЅРµРЅРёРё РѕСЂРёРіРёРЅР°Р»СЊРЅРѕРіРѕ СЃРїРёСЃРєР°,
+     * С‚.Рє. РёС‚РµСЂР°С‚РѕСЂС‹ РЅРµ РїРѕС‚РѕРєРѕ-Р±РµР·РѕРїР°СЃРЅС‹ 
      * 
-     * @param source	оригинальный список перехватчиков
-     * @return	копия списка
+     * @param source	РѕСЂРёРіРёРЅР°Р»СЊРЅС‹Р№ СЃРїРёСЃРѕРє РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ
+     * @return	РєРѕРїРёСЏ СЃРїРёСЃРєР°
      */
     private List<EntityInterceptor> cloneInterceptorList(List<EntityInterceptor> source) {
     	return new ArrayList<EntityInterceptor>(source);
     }
     
     /**
-     * инициализация списков перехватчиков для всех типов перехватчиков
+     * РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ СЃРїРёСЃРєРѕРІ РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РґР»СЏ РІСЃРµС… С‚РёРїРѕРІ РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ
      * 
-     * @return	список перехватчиков
+     * @return	СЃРїРёСЃРѕРє РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ
      */
     @SuppressWarnings("unchecked")
 	private List<EntityInterceptor>[] initializeInterceptorsList() {
@@ -75,17 +75,17 @@ public class EntityInterceptorManagerImpl implements EntityInterceptorManager {
     }
     
     /**
-     * получить список перехватчиков по наименованию обслуживаемой сущности
+     * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РїРѕ РЅР°РёРјРµРЅРѕРІР°РЅРёСЋ РѕР±СЃР»СѓР¶РёРІР°РµРјРѕР№ СЃСѓС‰РЅРѕСЃС‚Рё
      * 
-     * @param name		наименование сущности
-     * @param create	признак создания списка перехватчиков если не существует
-     * @return			список перехватчиков
+     * @param name		РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃСѓС‰РЅРѕСЃС‚Рё
+     * @param create	РїСЂРёР·РЅР°Рє СЃРѕР·РґР°РЅРёСЏ СЃРїРёСЃРєР° РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РµСЃР»Рё РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚
+     * @return			СЃРїРёСЃРѕРє РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ
      */
     private List<EntityInterceptor>[] getInterceptorsByName(final String name, final boolean create) {
 		List<EntityInterceptor>[] interceptors = this.interceptorsMap.get(name);
 		boolean isNotFind = interceptors == null;
 		if (!create && isNotFind) {
-			//обработка специального случая, если не создаем список то попробуем найти обработчик всех сущностей
+			//РѕР±СЂР°Р±РѕС‚РєР° СЃРїРµС†РёР°Р»СЊРЅРѕРіРѕ СЃР»СѓС‡Р°СЏ, РµСЃР»Рё РЅРµ СЃРѕР·РґР°РµРј СЃРїРёСЃРѕРє С‚Рѕ РїРѕРїСЂРѕР±СѓРµРј РЅР°Р№С‚Рё РѕР±СЂР°Р±РѕС‚С‡РёРє РІСЃРµС… СЃСѓС‰РЅРѕСЃС‚РµР№
 			interceptors = this.interceptorsMap.get(EntityInterceptor.HANDLED_ALL_ENTITIES);
 		}
 		else if (isNotFind) {
@@ -96,9 +96,9 @@ public class EntityInterceptorManagerImpl implements EntityInterceptorManager {
     }
     
     /**
-     * проверка перехватчика
+     * РїСЂРѕРІРµСЂРєР° РїРµСЂРµС…РІР°С‚С‡РёРєР°
      * 
-     * @param interceptor	перехватчик
+     * @param interceptor	РїРµСЂРµС…РІР°С‚С‡РёРє
      */
     private void checkInterceptor(EntityInterceptor interceptor) {
     	if (interceptor == null)

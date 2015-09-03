@@ -42,7 +42,7 @@ import com.mg.framework.service.SessionControlImpl;
 import com.mg.framework.service.WorkingConnectionImpl;
 
 /**
- * Серверные утилиты общего назначения
+ * РЎРµСЂРІРµСЂРЅС‹Рµ СѓС‚РёР»РёС‚С‹ РѕР±С‰РµРіРѕ РЅР°Р·РЅР°С‡РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ServerUtils.java,v 1.29 2008/12/08 06:02:01 safonov Exp $
@@ -52,47 +52,47 @@ public class ServerUtils {
 	private static Logger logger = getLogger(ServerUtils.class);
 	
 	/**
-	 * Источник данных системы
+	 * РСЃС‚РѕС‡РЅРёРє РґР°РЅРЅС‹С… СЃРёСЃС‚РµРјС‹
 	 */
 	public static String MBSA_DATASOURCE_NAME = "java:/MERPBackboneDS";
 	/**
-	 * Расположение дополнительных ресурсов системы в среде сервера приложения
+	 * Р Р°СЃРїРѕР»РѕР¶РµРЅРёРµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… СЂРµСЃСѓСЂСЃРѕРІ СЃРёСЃС‚РµРјС‹ РІ СЃСЂРµРґРµ СЃРµСЂРІРµСЂР° РїСЂРёР»РѕР¶РµРЅРёСЏ
 	 */
 	public static String MBSA_CUSTOM_LOCATION = "";
 
 	/**
-	 * получить контекст именований JNDI
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС‚РµРєСЃС‚ РёРјРµРЅРѕРІР°РЅРёР№ JNDI
 	 * 
-	 * @return	контекст
-	 * @throws NamingException	при ошибке создания
+	 * @return	РєРѕРЅС‚РµРєСЃС‚
+	 * @throws NamingException	РїСЂРё РѕС€РёР±РєРµ СЃРѕР·РґР°РЅРёСЏ
 	 */
 	public static Context getContext() throws NamingException {
 		return new InitialContext();
 	}
 
 	/**
-	 * получить JNDI имя EJB на основании контекста
+	 * РїРѕР»СѓС‡РёС‚СЊ JNDI РёРјСЏ EJB РЅР° РѕСЃРЅРѕРІР°РЅРёРё РєРѕРЅС‚РµРєСЃС‚Р°
 	 * 
-	 * @param sessionContext	контекст
-	 * @return	имя EJB
+	 * @param sessionContext	РєРѕРЅС‚РµРєСЃС‚
+	 * @return	РёРјСЏ EJB
 	 */
 	public static String getJNDIName(SessionContext sessionContext) {
 		return ProxyFactoryHelper.getLocalJndiName(((BaseSessionContext) sessionContext).getContainer());
 	}
 	
 	/**
-	 * получить текущую сессию
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰СѓСЋ СЃРµСЃСЃРёСЋ
 	 * 
-	 * @return	текущая сессия
+	 * @return	С‚РµРєСѓС‰Р°СЏ СЃРµСЃСЃРёСЏ
 	 */
 	public static com.mg.framework.api.Session getCurrentSession() {
 		return SessionControlImpl.getSingleton().getCurrentSession();
 	}
 
 	/**
-	 * получить локаль текущего пользователя 
+	 * РїРѕР»СѓС‡РёС‚СЊ Р»РѕРєР°Р»СЊ С‚РµРєСѓС‰РµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ 
 	 * 
-	 * @return	текущая локаль
+	 * @return	С‚РµРєСѓС‰Р°СЏ Р»РѕРєР°Р»СЊ
 	 */
 	public static Locale getUserLocale() {
 		com.mg.framework.api.Session session = getCurrentSession();
@@ -103,9 +103,9 @@ public class ServerUtils {
 	}
 
 	/**
-	 * получить текущее рабочее соединение
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰РµРµ СЂР°Р±РѕС‡РµРµ СЃРѕРµРґРёРЅРµРЅРёРµ
 	 * 
-	 * @return	рабочее соединение или <code>null</code> если нет текущей сессии
+	 * @return	СЂР°Р±РѕС‡РµРµ СЃРѕРµРґРёРЅРµРЅРёРµ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµС‚ С‚РµРєСѓС‰РµР№ СЃРµСЃСЃРёРё
 	 */
 	public static com.mg.framework.api.WorkingConnection getWorkingConnection() {
 		//check current session, maybe already initialized
@@ -114,9 +114,9 @@ public class ServerUtils {
 	}
 
 	/**
-	 * получить профиль текущего пользователя
+	 * РїРѕР»СѓС‡РёС‚СЊ РїСЂРѕС„РёР»СЊ С‚РµРєСѓС‰РµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @return	профиль текущего пользователя или <code>null</code> если нет текущей сессии
+	 * @return	РїСЂРѕС„РёР»СЊ С‚РµРєСѓС‰РµРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РёР»Рё <code>null</code> РµСЃР»Рё РЅРµС‚ С‚РµРєСѓС‰РµР№ СЃРµСЃСЃРёРё
 	 */
 	public static com.mg.framework.api.UserProfile getUserProfile() {
 		com.mg.framework.api.WorkingConnection wc = getWorkingConnection();
@@ -124,18 +124,18 @@ public class ServerUtils {
 	}
 	
 	/**
-	 * создать рабочее соединение
+	 * СЃРѕР·РґР°С‚СЊ СЂР°Р±РѕС‡РµРµ СЃРѕРµРґРёРЅРµРЅРёРµ
 	 * 
-	 * @return	рабочее соединение
+	 * @return	СЂР°Р±РѕС‡РµРµ СЃРѕРµРґРёРЅРµРЅРёРµ
 	 */
 	public static com.mg.framework.api.WorkingConnection createWorkingConnection(String sessionImpl) throws Exception {
 		return new WorkingConnectionImpl(sessionImpl);
 	}
 
 	/**
-	 * получить соединение с хранилицем данных
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРѕРµРґРёРЅРµРЅРёРµ СЃ С…СЂР°РЅРёР»РёС†РµРј РґР°РЅРЅС‹С…
 	 * 
-	 * @return	соединение
+	 * @return	СЃРѕРµРґРёРЅРµРЅРёРµ
 	 */
 	public static java.sql.Connection getConnection() {
 		try {
@@ -152,7 +152,7 @@ public class ServerUtils {
 	}
 
 	/**
-	 * Получить устаревший менеджер перманентного хранилища
+	 * РџРѕР»СѓС‡РёС‚СЊ СѓСЃС‚Р°СЂРµРІС€РёР№ РјРµРЅРµРґР¶РµСЂ РїРµСЂРјР°РЅРµРЅС‚РЅРѕРіРѕ С…СЂР°РЅРёР»РёС‰Р°
 	 * 
 	 * @return
 	 * 
@@ -164,9 +164,9 @@ public class ServerUtils {
 	}
 
 	/**
-	 * Получить менеджер перманентного хранилища
+	 * РџРѕР»СѓС‡РёС‚СЊ РјРµРЅРµРґР¶РµСЂ РїРµСЂРјР°РЅРµРЅС‚РЅРѕРіРѕ С…СЂР°РЅРёР»РёС‰Р°
 	 * 
-	 * @return	менеджер перманентного хранилища
+	 * @return	РјРµРЅРµРґР¶РµСЂ РїРµСЂРјР°РЅРµРЅС‚РЅРѕРіРѕ С…СЂР°РЅРёР»РёС‰Р°
 	 */
 	public static PersistentManager getPersistentManager() {
 		try {
@@ -177,9 +177,9 @@ public class ServerUtils {
 	}
 
 	/**
-	 * получить имя класса реализующего Logger
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРјСЏ РєР»Р°СЃСЃР° СЂРµР°Р»РёР·СѓСЋС‰РµРіРѕ Logger
 	 * 
-	 * @return	имя класса реализующего Logger
+	 * @return	РёРјСЏ РєР»Р°СЃСЃР° СЂРµР°Р»РёР·СѓСЋС‰РµРіРѕ Logger
 	 */
 	public static String getLoggerClassName() {
 		//TODO get logger plugin name from config file
@@ -187,38 +187,38 @@ public class ServerUtils {
 	}
 
 	/**
-	 * получить объект Logger для класса
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕР±СЉРµРєС‚ Logger РґР»СЏ РєР»Р°СЃСЃР°
 	 * 
-	 * @param clazz	класс
-	 * @return	объект Logger
+	 * @param clazz	РєР»Р°СЃСЃ
+	 * @return	РѕР±СЉРµРєС‚ Logger
 	 */
 	public static com.mg.framework.api.Logger getLogger(Class<?> clazz) {
         	return getLogger(clazz.getName());
 	}
 
 	/**
-	 * получить объект Logger по имени класса
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕР±СЉРµРєС‚ Logger РїРѕ РёРјРµРЅРё РєР»Р°СЃСЃР°
 	 * 
-	 * @param className	имя класса
-	 * @return	объект Logger
+	 * @param className	РёРјСЏ РєР»Р°СЃСЃР°
+	 * @return	РѕР±СЉРµРєС‚ Logger
 	 */
 	public static com.mg.framework.api.Logger getLogger(String className) {
         return com.mg.framework.api.Logger.getLogger(className);
 	}
 
 	/**
-	 * получить сервис системы безопасности
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРµСЂРІРёСЃ СЃРёСЃС‚РµРјС‹ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
 	 * 
-	 * @return	сервис системы безопасности
+	 * @return	СЃРµСЂРІРёСЃ СЃРёСЃС‚РµРјС‹ Р±РµР·РѕРїР°СЃРЅРѕСЃС‚Рё
 	 */
 	public static com.mg.framework.api.security.SecuritySystem getSecuritySystem() {
 		return SecuritySystemLocator.locate();
 	}
 
 	/**
-	 * получить менеджер транзакций
+	 * РїРѕР»СѓС‡РёС‚СЊ РјРµРЅРµРґР¶РµСЂ С‚СЂР°РЅР·Р°РєС†РёР№
 	 * 
-	 * @return	менеджер транзакций
+	 * @return	РјРµРЅРµРґР¶РµСЂ С‚СЂР°РЅР·Р°РєС†РёР№
 	 */
 	public static TransactionManager getTransactionManager() {
         try {
@@ -230,9 +230,9 @@ public class ServerUtils {
 	}
 	
 	/**
-	 * получить текущую транзакцию
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰СѓСЋ С‚СЂР°РЅР·Р°РєС†РёСЋ
 	 * 
-	 * @return	текущая транзакция
+	 * @return	С‚РµРєСѓС‰Р°СЏ С‚СЂР°РЅР·Р°РєС†РёСЏ
 	 */
 	public static Transaction getCurrentTransaction() {
         TransactionManager transactionManager;
@@ -254,42 +254,42 @@ public class ServerUtils {
 	}
 
 	/**
-	 * создать MBean заглушку (proxy)
+	 * СЃРѕР·РґР°С‚СЊ MBean Р·Р°РіР»СѓС€РєСѓ (proxy)
 	 * 
-	 * @param intf	интерфейс для которого будет реализована заглушка
-	 * @param name	строка используемая при создании имя MBean сервиса
-	 * @return	MBean заглушка
-	 * @throws MalformedObjectNameException	при неверном имени сервиса
+	 * @param intf	РёРЅС‚РµСЂС„РµР№СЃ РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ Р±СѓРґРµС‚ СЂРµР°Р»РёР·РѕРІР°РЅР° Р·Р°РіР»СѓС€РєР°
+	 * @param name	СЃС‚СЂРѕРєР° РёСЃРїРѕР»СЊР·СѓРµРјР°СЏ РїСЂРё СЃРѕР·РґР°РЅРёРё РёРјСЏ MBean СЃРµСЂРІРёСЃР°
+	 * @return	MBean Р·Р°РіР»СѓС€РєР°
+	 * @throws MalformedObjectNameException	РїСЂРё РЅРµРІРµСЂРЅРѕРј РёРјРµРЅРё СЃРµСЂРІРёСЃР°
 	 */
 	public static Object createMBeanProxy(final Class<?> intf, final String name) throws MalformedObjectNameException {
 	    return MBeanProxyExt.create(intf, name);
 	}
     
 	/**
-	 * загрузить класс по имени
+	 * Р·Р°РіСЂСѓР·РёС‚СЊ РєР»Р°СЃСЃ РїРѕ РёРјРµРЅРё
 	 * 
-	 * @param className	имя класса
-	 * @return	класс
-	 * @throws ClassNotFoundException	если класс не найден
+	 * @param className	РёРјСЏ РєР»Р°СЃСЃР°
+	 * @return	РєР»Р°СЃСЃ
+	 * @throws ClassNotFoundException	РµСЃР»Рё РєР»Р°СЃСЃ РЅРµ РЅР°Р№РґРµРЅ
 	 */
     public static Class<?> loadClass(String className) throws ClassNotFoundException {
         return Thread.currentThread().getContextClassLoader().loadClass(className);
     }
     
     /**
-     * загрузить ресурс по имени
+     * Р·Р°РіСЂСѓР·РёС‚СЊ СЂРµСЃСѓСЂСЃ РїРѕ РёРјРµРЅРё
      * 
-     * @param name	имя ресурса
-     * @return	ресурс
+     * @param name	РёРјСЏ СЂРµСЃСѓСЂСЃР°
+     * @return	СЂРµСЃСѓСЂСЃ
      */
     public static URL loadResource(String name) {
     	return Thread.currentThread().getContextClassLoader().getResource(name);
     }
     
     /**
-     * получить временную папку сервера приложения
+     * РїРѕР»СѓС‡РёС‚СЊ РІСЂРµРјРµРЅРЅСѓСЋ РїР°РїРєСѓ СЃРµСЂРІРµСЂР° РїСЂРёР»РѕР¶РµРЅРёСЏ
      * 
-     * @return	временная папка
+     * @return	РІСЂРµРјРµРЅРЅР°СЏ РїР°РїРєР°
      */
     public static File getServerTempDir() {
     	//TODO remove JBoss specific
@@ -297,9 +297,9 @@ public class ServerUtils {
     }
 
     /**
-     * получить папку логов сервера приложения
+     * РїРѕР»СѓС‡РёС‚СЊ РїР°РїРєСѓ Р»РѕРіРѕРІ СЃРµСЂРІРµСЂР° РїСЂРёР»РѕР¶РµРЅРёСЏ
      * 
-     * @return	папка логов
+     * @return	РїР°РїРєР° Р»РѕРіРѕРІ
      */
     public static File getServerLogDir() {
     	//TODO remove JBoss specific
@@ -307,7 +307,7 @@ public class ServerUtils {
     }
 
     /**
-     * пометить текущую транзакцию так, что возможен только откат данной транзакции
+     * РїРѕРјРµС‚РёС‚СЊ С‚РµРєСѓС‰СѓСЋ С‚СЂР°РЅР·Р°РєС†РёСЋ С‚Р°Рє, С‡С‚Рѕ РІРѕР·РјРѕР¶РµРЅ С‚РѕР»СЊРєРѕ РѕС‚РєР°С‚ РґР°РЅРЅРѕР№ С‚СЂР°РЅР·Р°РєС†РёРё
      *
      */
     public static void setTransactionRollbackOnly() {
@@ -319,10 +319,10 @@ public class ServerUtils {
     }
 
     /**
-     * установить таймаут текущей транзакции
+     * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ С‚Р°Р№РјР°СѓС‚ С‚РµРєСѓС‰РµР№ С‚СЂР°РЅР·Р°РєС†РёРё
      * 
-     * @param seconds	величина таймаута в секундах, если значение параметра <code>0</code>, то значение
-     *        таймаута будет сброшено в значение по умолчанию
+     * @param seconds	РІРµР»РёС‡РёРЅР° С‚Р°Р№РјР°СѓС‚Р° РІ СЃРµРєСѓРЅРґР°С…, РµСЃР»Рё Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР° <code>0</code>, С‚Рѕ Р·РЅР°С‡РµРЅРёРµ
+     *        С‚Р°Р№РјР°СѓС‚Р° Р±СѓРґРµС‚ СЃР±СЂРѕС€РµРЅРѕ РІ Р·РЅР°С‡РµРЅРёРµ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
      */
     public static void setTransactionTimeout(int seconds) {
     	try {
@@ -333,12 +333,12 @@ public class ServerUtils {
     }
 
     /**
-     * получить идентификатор текущего манданта
+     * РїРѕР»СѓС‡РёС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµРєСѓС‰РµРіРѕ РјР°РЅРґР°РЅС‚Р°
      * 
-     * @return	идентификатор
+     * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ
      */
     public static int getSystemTenantId() {
-    	//TODO реализовать хранение идентификатора в сессии, чтобы не требовалось обращение к хранилищу, т.о. избежим проблем при обращении вне транзакции
+    	//TODO СЂРµР°Р»РёР·РѕРІР°С‚СЊ С…СЂР°РЅРµРЅРёРµ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР° РІ СЃРµСЃСЃРёРё, С‡С‚РѕР±С‹ РЅРµ С‚СЂРµР±РѕРІР°Р»РѕСЃСЊ РѕР±СЂР°С‰РµРЅРёРµ Рє С…СЂР°РЅРёР»РёС‰Сѓ, С‚.Рѕ. РёР·Р±РµР¶РёРј РїСЂРѕР±Р»РµРј РїСЂРё РѕР±СЂР°С‰РµРЅРёРё РІРЅРµ С‚СЂР°РЅР·Р°РєС†РёРё
     	return 1;
     	/*Session session = ServerUtils.getCurrentSession();
     	if (session != null)
@@ -348,9 +348,9 @@ public class ServerUtils {
     }
     
     /**
-     * создать событие системного аудита
+     * СЃРѕР·РґР°С‚СЊ СЃРѕР±С‹С‚РёРµ СЃРёСЃС‚РµРјРЅРѕРіРѕ Р°СѓРґРёС‚Р°
      * 
-     * @param event	событие
+     * @param event	СЃРѕР±С‹С‚РёРµ
      */
     public static void addSystemAuditEvent(SystemAuditEvent event) {
     	try {
@@ -361,12 +361,12 @@ public class ServerUtils {
     }
     
     /**
-     * создать событие системного аудита, в качестве отправителя будет использован текущий
-     * пользователь
+     * СЃРѕР·РґР°С‚СЊ СЃРѕР±С‹С‚РёРµ СЃРёСЃС‚РµРјРЅРѕРіРѕ Р°СѓРґРёС‚Р°, РІ РєР°С‡РµСЃС‚РІРµ РѕС‚РїСЂР°РІРёС‚РµР»СЏ Р±СѓРґРµС‚ РёСЃРїРѕР»СЊР·РѕРІР°РЅ С‚РµРєСѓС‰РёР№
+     * РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ
      * 
-     * @param beanName	объект источник
-     * @param operation	операция
-     * @param details	описание события
+     * @param beanName	РѕР±СЉРµРєС‚ РёСЃС‚РѕС‡РЅРёРє
+     * @param operation	РѕРїРµСЂР°С†РёСЏ
+     * @param details	РѕРїРёСЃР°РЅРёРµ СЃРѕР±С‹С‚РёСЏ
      */
     public static void addSystemAuditEvent(String beanName, String operation, String details) {
     	Session session = ServerUtils.getCurrentSession();

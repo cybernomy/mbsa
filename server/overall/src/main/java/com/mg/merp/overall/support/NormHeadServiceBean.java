@@ -23,7 +23,7 @@ import com.mg.merp.overall.NormHeadServiceLocal;
 import com.mg.merp.overall.model.NormHead;
 
 /**
- * Реализация бизнес-компонента "Нормы выдачи спецодежды"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќРѕСЂРјС‹ РІС‹РґР°С‡Рё СЃРїРµС†РѕРґРµР¶РґС‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: NormHeadServiceBean.java,v 1.1 2008/06/30 04:19:36 alikaev Exp $

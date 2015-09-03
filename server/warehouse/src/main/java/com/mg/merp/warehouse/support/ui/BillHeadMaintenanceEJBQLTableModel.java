@@ -20,7 +20,7 @@ import com.mg.framework.support.ui.widget.TableEJBQLFieldDef;
 import com.mg.merp.warehouse.model.BillHead;
 
 /**
- * Вспомогательный класс для отображения формы списка счетов
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: BillHeadMaintenanceEJBQLTableModel.java,v 1.2 2009/02/10 14:29:13 safonov Exp $ 

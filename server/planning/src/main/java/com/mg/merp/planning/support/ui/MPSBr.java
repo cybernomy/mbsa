@@ -33,7 +33,7 @@ import com.mg.merp.planning.MPSProcessorServiceLocal;
 import com.mg.merp.planning.model.Mps;
 
 /**
- * Контроллер браузера бизнес-компонента "ОПП"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћРџРџ"
  * 
  * @author leonova
  * @author Artem V. Sharapov

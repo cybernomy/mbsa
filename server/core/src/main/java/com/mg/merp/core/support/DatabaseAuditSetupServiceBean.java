@@ -42,7 +42,7 @@ import com.mg.merp.core.PropertyAuditItem;
 import com.mg.merp.core.model.DatabaseAuditSetup;
 
 /**
- * Реализация бизнес-компонента настройки аудита хранилища данных
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° РЅР°СЃС‚СЂРѕР№РєРё Р°СѓРґРёС‚Р° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: DatabaseAuditSetupServiceBean.java,v 1.4 2008/03/05 08:55:27 sharapov Exp $
@@ -131,7 +131,7 @@ public class DatabaseAuditSetupServiceBean extends
 		for (DatabaseAuditSetup auditSetup : setupList) {
 			PropertyAuditItem item = propertyMap.get(auditSetup.getPropertyName());
 			if (item != null) {
-				item.setAudit(auditSetup.getAuditModify());//для свойств аудит только на изменения
+				item.setAudit(auditSetup.getAuditModify());//РґР»СЏ СЃРІРѕР№СЃС‚РІ Р°СѓРґРёС‚ С‚РѕР»СЊРєРѕ РЅР° РёР·РјРµРЅРµРЅРёСЏ
 			} else {
 				getLogger().warn(String.format("Entity %s is not contain property %s", entityName, auditSetup.getPropertyName()));
 			}
@@ -152,7 +152,7 @@ public class DatabaseAuditSetupServiceBean extends
 		if (setupList.isEmpty())
 			return null;
 		else
-			return setupList.get(0); //должен быть всегда один
+			return setupList.get(0); //РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РІСЃРµРіРґР° РѕРґРёРЅ
 	}
 	
 	/* (non-Javadoc)
@@ -196,11 +196,11 @@ public class DatabaseAuditSetupServiceBean extends
 	public void setAuditModify(String entityName, String propertyName,
 			boolean audit) {
 		DatabaseAuditSetup auditSetup = loadAuditSetup(entityName, "AuditModify");
-		//удалим запись отвечающую за аудит всех атрибутов объекта, т.к. создаем для конкретного атрибута
+		//СѓРґР°Р»РёРј Р·Р°РїРёСЃСЊ РѕС‚РІРµС‡Р°СЋС‰СѓСЋ Р·Р° Р°СѓРґРёС‚ РІСЃРµС… Р°С‚СЂРёР±СѓС‚РѕРІ РѕР±СЉРµРєС‚Р°, С‚.Рє. СЃРѕР·РґР°РµРј РґР»СЏ РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ Р°С‚СЂРёР±СѓС‚Р°
 		if (auditSetup != null)
 			erase(auditSetup);
 		
-		//ищем запись для нужного атрибута
+		//РёС‰РµРј Р·Р°РїРёСЃСЊ РґР»СЏ РЅСѓР¶РЅРѕРіРѕ Р°С‚СЂРёР±СѓС‚Р°
 		List<DatabaseAuditSetup> auditList = findByCriteria(Restrictions.eq("AuditedEntityName", entityName), Restrictions.eq("PropertyName", propertyName));
 		if (!auditList.isEmpty())
 			auditSetup = auditList.get(0);

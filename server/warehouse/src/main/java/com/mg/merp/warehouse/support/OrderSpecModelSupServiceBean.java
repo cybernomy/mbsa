@@ -27,7 +27,7 @@ import com.mg.merp.warehouse.OrderSpecModelSupServiceLocal;
 import com.mg.merp.warehouse.model.OrderSpecModel;
 
 /**
- * Бизнес-компонент "Образцы спецификаций заказов постащикам" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ СЃРїРµС†РёС„РёРєР°С†РёР№ Р·Р°РєР°Р·РѕРІ РїРѕСЃС‚Р°С‰РёРєР°Рј" 
  * 
  * @author leonova
  * @version $Id: OrderSpecModelSupServiceBean.java,v 1.4 2007/09/07 08:06:59 alikaev Exp $
@@ -64,7 +64,7 @@ public class OrderSpecModelSupServiceBean extends AbstractPOJODataBusinessObject
 	}
 	
 	/**
-	 * Заполняет обязательные поля
+	 * Р—Р°РїРѕР»РЅСЏРµС‚ РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ РїРѕР»СЏ
 	 * @param entity
 	 */
 	private void adjustOrderSpecModelCus(OrderSpecModel entity) {

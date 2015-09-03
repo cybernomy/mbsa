@@ -17,7 +17,7 @@ package com.mg.merp.table.support;
 import com.mg.framework.generic.MessageSourceAccessor;
 
 /**
- * Класс сообщений
+ * РљР»Р°СЃСЃ СЃРѕРѕР±С‰РµРЅРёР№
  * 
  * @author Artem V. Sharapov
  * @version $Id: Messages.java,v 1.1 2008/08/12 14:36:17 sharapov Exp $

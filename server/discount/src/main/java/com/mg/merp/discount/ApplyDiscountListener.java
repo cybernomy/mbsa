@@ -17,7 +17,7 @@ package com.mg.merp.discount;
 import java.io.Serializable;
 
 /**
- * Слушатель применения скидки/наценки
+ * РЎР»СѓС€Р°С‚РµР»СЊ РїСЂРёРјРµРЅРµРЅРёСЏ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
  * 
  * @author Artem V. Sharapov
  * @version $Id: ApplyDiscountListener.java,v 1.1 2009/01/22 06:47:35 sharapov Exp $
@@ -25,12 +25,12 @@ import java.io.Serializable;
 public interface ApplyDiscountListener extends Serializable {
 
 	/**
-	 * Применение скидки/наценки завершено успешно
+	 * РџСЂРёРјРµРЅРµРЅРёРµ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё Р·Р°РІРµСЂС€РµРЅРѕ СѓСЃРїРµС€РЅРѕ
 	 */
 	void completed();
 	
 	/**
-	 * Применение скидки/наценки отменено
+	 * РџСЂРёРјРµРЅРµРЅРёРµ СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё РѕС‚РјРµРЅРµРЅРѕ
 	 */
 	void aborted();
 	

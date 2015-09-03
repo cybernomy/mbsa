@@ -24,33 +24,33 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Planning.MRPSource")
 public enum MRPSource {
 	/**
-	 * Запасы
+	 * Р—Р°РїР°СЃС‹
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.SourceMRP.MRPSourceInventory")
 	INVENTORY,	
 	/**
-	 * ЗНП
+	 * Р—РќРџ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.SourceMRP.MRPSourceJobs")
 	JOBS,	
 	/**
-	 * Закупка
+	 * Р—Р°РєСѓРїРєР°
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.SourceMRP.MRPSourcePurchases")
 	PURCHASES,	
 	/**
-	 * Продажа
+	 * РџСЂРѕРґР°Р¶Р°
 	 */	
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.SourceMRP.MRPSourceSales")
 	SALES,	
 	/**
-	 * Перемещение
+	 * РџРµСЂРµРјРµС‰РµРЅРёРµ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.SourceMRP.MRPSourceTransfers")	
 	TRANSFERS,
 	
 	/**
-	 * ОПП
+	 * РћРџРџ
 	 */	
 	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.SourceMRP.MRPSourceManufacturing")
 	MANUFACTURING	

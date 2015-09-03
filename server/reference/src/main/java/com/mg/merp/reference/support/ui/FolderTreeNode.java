@@ -23,7 +23,7 @@ import com.mg.framework.support.ui.widget.tree.EntityTreeNode;
 import com.mg.merp.core.model.Folder;
 
 /**
- * Узел дерева объекта папка
+ * РЈР·РµР» РґРµСЂРµРІР° РѕР±СЉРµРєС‚Р° РїР°РїРєР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: FolderTreeNode.java,v 1.4 2007/08/21 13:40:27 safonov Exp $
@@ -58,7 +58,7 @@ public class FolderTreeNode extends EntityTreeNode {
 	}
 	
 	/**
-	 * преобразование списка папок в иерархическую структуру
+	 * РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ СЃРїРёСЃРєР° РїР°РїРѕРє РІ РёРµСЂР°СЂС…РёС‡РµСЃРєСѓСЋ СЃС‚СЂСѓРєС‚СѓСЂСѓ
 	 * 
 	 * @param folders
 	 * @return

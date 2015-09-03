@@ -25,7 +25,7 @@ import com.mg.merp.qualitycontrol.ScrapTypeServiceLocal;
 import com.mg.merp.qualitycontrol.model.ScrapType;
 
 /**
- * Бизнес-компонент "Типы потерь" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ РїРѕС‚РµСЂСЊ" 
  * 
  * @author leonova
  * @version $Id: ScrapTypeServiceBean.java,v 1.4 2007/08/24 08:47:51 alikaev Exp $
@@ -61,7 +61,7 @@ public class ScrapTypeServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 	
 	/**
-	 * функция заполнения поля "Name" 
+	 * С„СѓРЅРєС†РёСЏ Р·Р°РїРѕР»РЅРµРЅРёСЏ РїРѕР»СЏ "Name" 
 	 * 
 	 * @param entity
 	 */

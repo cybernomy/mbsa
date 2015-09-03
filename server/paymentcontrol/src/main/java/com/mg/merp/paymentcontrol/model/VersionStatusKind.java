@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Статус версии планирования платежей
+ * РЎС‚Р°С‚СѓСЃ РІРµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ РїР»Р°С‚РµР¶РµР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: VersionStatusKind.java,v 1.1 2007/02/06 09:28:31 safonov Exp $
@@ -26,31 +26,31 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName("PaymentControl.VersionStatus.Kind")
 public enum VersionStatusKind {
 	/**
-	 * не установлен
+	 * РЅРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅ
 	 */
 	@EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.None")
 	NONE,
 	
 	/**
-	 * в работе
+	 * РІ СЂР°Р±РѕС‚Рµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.InWork")
 	IN_WORK,
 	
 	/**
-	 * готово
+	 * РіРѕС‚РѕРІРѕ
 	 */
 	@EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.Ready")
 	READY,
 	
 	/**
-	 * утверждено
+	 * СѓС‚РІРµСЂР¶РґРµРЅРѕ
 	 */
 	@EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.Execute")
 	EXECUTE,
 	
 	/**
-	 * созданы документы
+	 * СЃРѕР·РґР°РЅС‹ РґРѕРєСѓРјРµРЅС‚С‹
 	 */
 	@EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.Documents")
 	DOCUMENTS

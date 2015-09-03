@@ -16,7 +16,7 @@ package com.mg.merp.paymentcontrol.support;
 
 import com.mg.framework.generic.MessageSourceAccessor;
 /**
- * Класс пользовательских сообщений
+ * РљР»Р°СЃСЃ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… СЃРѕРѕР±С‰РµРЅРёР№
  * 
  * @author Artem V. Sharapov
  * @version $Id: Messages.java,v 1.5 2007/08/21 06:36:52 sharapov Exp $

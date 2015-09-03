@@ -32,7 +32,7 @@ import com.mg.framework.support.LocalDataTransferObject;
 
 
 /**
- * Утилиты работы с данными
+ * РЈС‚РёР»РёС‚С‹ СЂР°Р±РѕС‚С‹ СЃ РґР°РЅРЅС‹РјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: DataUtils.java,v 1.13 2008/10/09 06:44:03 safonov Exp $
@@ -40,15 +40,15 @@ import com.mg.framework.support.LocalDataTransferObject;
  */
 public class DataUtils {
 	/**
-	 * максимальная длина имени оригинала в байтах
+	 * РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґР»РёРЅР° РёРјРµРЅРё РѕСЂРёРіРёРЅР°Р»Р° РІ Р±Р°Р№С‚Р°С…
 	 */
 	public static final int ORIGINAL_NAME_LENGTH = 0xff;
 
 	/**
-	 * конвертирует перечислимы тип в порядковое значение
+	 * РєРѕРЅРІРµСЂС‚РёСЂСѓРµС‚ РїРµСЂРµС‡РёСЃР»РёРјС‹ С‚РёРї РІ РїРѕСЂСЏРґРєРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
 	 * 
-	 * @param value	значение перечислимого типа
-	 * @return	порядковое значение или -1 если <code>value == null</code>
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ РїРµСЂРµС‡РёСЃР»РёРјРѕРіРѕ С‚РёРїР°
+	 * @return	РїРѕСЂСЏРґРєРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ РёР»Рё -1 РµСЃР»Рё <code>value == null</code>
 	 */
 	public static Integer convertEnumToOrdinal(Enum<?> value) {
 		if (value == null)
@@ -58,12 +58,12 @@ public class DataUtils {
 	}
 
 	/**
-	 * конвертирует порядковое значение перечислимого типа в перечислимый тип
+	 * РєРѕРЅРІРµСЂС‚РёСЂСѓРµС‚ РїРѕСЂСЏРґРєРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ РїРµСЂРµС‡РёСЃР»РёРјРѕРіРѕ С‚РёРїР° РІ РїРµСЂРµС‡РёСЃР»РёРјС‹Р№ С‚РёРї
 	 * 
-	 * @param <T>	перечислимый тип
-	 * @param clazz	класс перечислимого типа
-	 * @param value	порядковое значение
-	 * @return	значение перечислимого типа или <code>null</code> если <code>value == -1</code>
+	 * @param <T>	РїРµСЂРµС‡РёСЃР»РёРјС‹Р№ С‚РёРї
+	 * @param clazz	РєР»Р°СЃСЃ РїРµСЂРµС‡РёСЃР»РёРјРѕРіРѕ С‚РёРїР°
+	 * @param value	РїРѕСЂСЏРґРєРѕРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
+	 * @return	Р·РЅР°С‡РµРЅРёРµ РїРµСЂРµС‡РёСЃР»РёРјРѕРіРѕ С‚РёРїР° РёР»Рё <code>null</code> РµСЃР»Рё <code>value == -1</code>
 	 */
 	public static <T extends Enum<?>> T convertOrdinalToEnum(Class<T> clazz, Integer value) {
 		if (value == -1)
@@ -73,10 +73,10 @@ public class DataUtils {
 	}
 
 	/**
-	 * извлечь тело содержимого оригинала
+	 * РёР·РІР»РµС‡СЊ С‚РµР»Рѕ СЃРѕРґРµСЂР¶РёРјРѕРіРѕ РѕСЂРёРіРёРЅР°Р»Р°
 	 * 
-	 * @param original	оригинал
-	 * @return	тило оригинала
+	 * @param original	РѕСЂРёРіРёРЅР°Р»
+	 * @return	С‚РёР»Рѕ РѕСЂРёРіРёРЅР°Р»Р°
 	 */
 	public static byte[] extractOriginalBody(byte[] original) {
 		if (original == null)
@@ -88,10 +88,10 @@ public class DataUtils {
 	}
 
 	/**
-	 * извлечь наименование оригинала
+	 * РёР·РІР»РµС‡СЊ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ РѕСЂРёРіРёРЅР°Р»Р°
 	 * 
-	 * @param original	оригинал
-	 * @return	имя оригинала
+	 * @param original	РѕСЂРёРіРёРЅР°Р»
+	 * @return	РёРјСЏ РѕСЂРёРіРёРЅР°Р»Р°
 	 */
 	public static String extractOriginalName(byte[] original) {
 		if (original == null)
@@ -104,17 +104,17 @@ public class DataUtils {
 					break;
 			return new String(original, 0, lastIdx, "UTF-8");
 		} catch (UnsupportedEncodingException e) {
-			//если не прочитали в UTF-8, то пытаемся прочитать в стандартной, это только для совместимости с предыдущими версиями
+			//РµСЃР»Рё РЅРµ РїСЂРѕС‡РёС‚Р°Р»Рё РІ UTF-8, С‚Рѕ РїС‹С‚Р°РµРјСЃСЏ РїСЂРѕС‡РёС‚Р°С‚СЊ РІ СЃС‚Р°РЅРґР°СЂС‚РЅРѕР№, СЌС‚Рѕ С‚РѕР»СЊРєРѕ РґР»СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё СЃ РїСЂРµРґС‹РґСѓС‰РёРјРё РІРµСЂСЃРёСЏРјРё
 			return new String(original, 0, lastIdx);
 		}
 	}
 
 	/**
-	 * создать оригинал по телу и имени
+	 * СЃРѕР·РґР°С‚СЊ РѕСЂРёРіРёРЅР°Р» РїРѕ С‚РµР»Сѓ Рё РёРјРµРЅРё
 	 * 
-	 * @param body	тело оригинала
-	 * @param name	имя
-	 * @return	оригинал
+	 * @param body	С‚РµР»Рѕ РѕСЂРёРіРёРЅР°Р»Р°
+	 * @param name	РёРјСЏ
+	 * @return	РѕСЂРёРіРёРЅР°Р»
 	 */
 	public static byte[] originalToBinary(byte[] body, String name) {
 		byte[] result = new byte[body.length + ORIGINAL_NAME_LENGTH];
@@ -131,9 +131,9 @@ public class DataUtils {
 	}
 	
 	/**
-	 * генерация уникальной строки
+	 * РіРµРЅРµСЂР°С†РёСЏ СѓРЅРёРєР°Р»СЊРЅРѕР№ СЃС‚СЂРѕРєРё
 	 * 
-	 * @param maxLength	максимальная длина строки
+	 * @param maxLength	РјР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґР»РёРЅР° СЃС‚СЂРѕРєРё
 	 * @return
 	 */
 	public static String generateUniqueString(int maxLength) {
@@ -145,11 +145,11 @@ public class DataUtils {
 	}
 	
 	/**
-	 * создание списка атрибутов
+	 * СЃРѕР·РґР°РЅРёРµ СЃРїРёСЃРєР° Р°С‚СЂРёР±СѓС‚РѕРІ
 	 * 
-	 * @param name	имя
-	 * @param value	значение
-	 * @return	список атрибутов
+	 * @param name	РёРјСЏ
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ
+	 * @return	СЃРїРёСЃРѕРє Р°С‚СЂРёР±СѓС‚РѕРІ
 	 */
 	public static AttributeMap toAttributeMap(String name, Object value) {
 		AttributeMap result = new LocalDataTransferObject();
@@ -158,7 +158,7 @@ public class DataUtils {
 	}
 
 	/**
-	 * генерация UUID, результат будет приведен к верхнему регистру и будут удалены символы <code>-</code>
+	 * РіРµРЅРµСЂР°С†РёСЏ UUID, СЂРµР·СѓР»СЊС‚Р°С‚ Р±СѓРґРµС‚ РїСЂРёРІРµРґРµРЅ Рє РІРµСЂС…РЅРµРјСѓ СЂРµРіРёСЃС‚СЂСѓ Рё Р±СѓРґСѓС‚ СѓРґР°Р»РµРЅС‹ СЃРёРјРІРѕР»С‹ <code>-</code>
 	 * 
 	 * @return	UUID
 	 */
@@ -167,10 +167,10 @@ public class DataUtils {
 	}
 
 	/**
-	 * преобразовать значение свойства в строку не используя локализацию
+	 * РїСЂРµРѕР±СЂР°Р·РѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР° РІ СЃС‚СЂРѕРєСѓ РЅРµ РёСЃРїРѕР»СЊР·СѓСЏ Р»РѕРєР°Р»РёР·Р°С†РёСЋ
 	 * 
-	 * @param value	значение
-	 * @return	преобразованное в строку значение или <code>null</code> если <code>value == null</code>
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ
+	 * @return	РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРЅРѕРµ РІ СЃС‚СЂРѕРєСѓ Р·РЅР°С‡РµРЅРёРµ РёР»Рё <code>null</code> РµСЃР»Рё <code>value == null</code>
 	 */
 	public static String valueToString(Object value) {
 		if (value == null)
@@ -189,11 +189,11 @@ public class DataUtils {
 	}
 
 	/**
-	 * преобразование строкового представления значения свойства в значение не используя локализацию
+	 * РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ СЃС‚СЂРѕРєРѕРІРѕРіРѕ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІР° РІ Р·РЅР°С‡РµРЅРёРµ РЅРµ РёСЃРїРѕР»СЊР·СѓСЏ Р»РѕРєР°Р»РёР·Р°С†РёСЋ
 	 * 
-	 * @param str	строкового представление
-	 * @param clazz	тип результата
-	 * @return	значение
+	 * @param str	СЃС‚СЂРѕРєРѕРІРѕРіРѕ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
+	 * @param clazz	С‚РёРї СЂРµР·СѓР»СЊС‚Р°С‚Р°
+	 * @return	Р·РЅР°С‡РµРЅРёРµ
 	 */
 	@SuppressWarnings("unchecked")
 	public static Object stringToValue(String str, Class<?> clazz) {
@@ -201,9 +201,9 @@ public class DataUtils {
 			return str;
 		if (PersistentObject.class.isAssignableFrom(clazz)) {
 			if (str.startsWith("__entity:")) {
-				//удалим префикс, 1я часть это имя сущности, 2я часть первичный ключ
+				//СѓРґР°Р»РёРј РїСЂРµС„РёРєСЃ, 1СЏ С‡Р°СЃС‚СЊ СЌС‚Рѕ РёРјСЏ СЃСѓС‰РЅРѕСЃС‚Рё, 2СЏ С‡Р°СЃС‚СЊ РїРµСЂРІРёС‡РЅС‹Р№ РєР»СЋС‡
 				String[] entityStr = str.substring(9).split("#");
-				//TODO обрабатываются только сущности с первичным ключом Integer
+				//TODO РѕР±СЂР°Р±Р°С‚С‹РІР°СЋС‚СЃСЏ С‚РѕР»СЊРєРѕ СЃСѓС‰РЅРѕСЃС‚Рё СЃ РїРµСЂРІРёС‡РЅС‹Рј РєР»СЋС‡РѕРј Integer
 				return ServerUtils.getPersistentManager().find(entityStr[0], Integer.valueOf(entityStr[1]));
 			} else
 				return str;

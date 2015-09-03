@@ -26,7 +26,7 @@ import com.mg.merp.warehouse.WarehouseDocumentSpecInServiceLocal;
 import com.mg.merp.warehouse.model.StockDocumentSpec;
 
 /**
- * Контроллер формы поддержки приходных ордеров
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РїСЂРёС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: WarehouseDocumentInMt.java,v 1.8 2009/02/05 10:03:53 sharapov Exp $

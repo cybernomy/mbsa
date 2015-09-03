@@ -47,7 +47,7 @@ import com.mg.merp.reference.CurrencyRateNotFoundException;
 import com.mg.merp.reference.CurrencyRateServiceLocal;
 
 /**
- * Базовая реализация бизнес-компонента "Документ"
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”РѕРєСѓРјРµРЅС‚"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -75,14 +75,14 @@ public abstract class DocumentServiceBean<T extends com.mg.merp.document.model.D
 			entity.setCurrencyRateAuthority(cfg.getCurrencyRateAuthority());
 			CurrencyRateServiceLocal currencyRateService = (CurrencyRateServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/CurrencyRate"); //$NON-NLS-1$
 			try {
-				//пытаемся получить прямой курс для валют
+				//РїС‹С‚Р°РµРјСЃСЏ РїРѕР»СѓС‡РёС‚СЊ РїСЂСЏРјРѕР№ РєСѓСЂСЃ РґР»СЏ РІР°Р»СЋС‚
 				entity.setCurCource(currencyRateService.getCurrencyRate(cfg.getLocalCurrency(), entity.getCurrency(), entity.getCurrencyRateAuthority(), entity.getCurrencyRateType(), entity.getDocDate()));
 			} catch (CurrencyRateNotFoundException e) {
-				//если прямого курса нет, то пытаемся получить обратный курс
+				//РµСЃР»Рё РїСЂСЏРјРѕРіРѕ РєСѓСЂСЃР° РЅРµС‚, С‚Рѕ РїС‹С‚Р°РµРјСЃСЏ РїРѕР»СѓС‡РёС‚СЊ РѕР±СЂР°С‚РЅС‹Р№ РєСѓСЂСЃ
 				entity.setCurCource(MathUtils.divide(BigDecimal.ONE, currencyRateService.getCurrencyRate(entity.getCurrency(), cfg.getLocalCurrency(), entity.getCurrencyRateAuthority(), entity.getCurrencyRateType(), entity.getDocDate()), new RoundContext(CurrencyRateServiceLocal.DEFAULT_RATE_SCALE)));
 			}
 		} else {
-			//если нет конфигурации, то вообще непонятно как обработать
+			//РµСЃР»Рё РЅРµС‚ РєРѕРЅС„РёРіСѓСЂР°С†РёРё, С‚Рѕ РІРѕРѕР±С‰Рµ РЅРµРїРѕРЅСЏС‚РЅРѕ РєР°Рє РѕР±СЂР°Р±РѕС‚Р°С‚СЊ
 			entity.setCurCource(BigDecimal.ONE);
 		}
 	}
@@ -145,18 +145,18 @@ public abstract class DocumentServiceBean<T extends com.mg.merp.document.model.D
 		entity.setUNID(DataUtils.generateUUID());
 		entity.setRequester(com.mg.merp.docflow.support.DocumentUtils.getCurrentDocumentOwner());
 		entity.setBaseDocument(null);
-		entity.setManualDocNumber(false); //чтобы сразу сгенерировался новый номер
+		entity.setManualDocNumber(false); //С‡С‚РѕР±С‹ СЃСЂР°Р·Сѓ СЃРіРµРЅРµСЂРёСЂРѕРІР°Р»СЃСЏ РЅРѕРІС‹Р№ РЅРѕРјРµСЂ
 	}
 
 	/**
-	 * получить идентификатор раздела документа, должен быть переопределен в классе реального документа
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂР°Р·РґРµР»Р° РґРѕРєСѓРјРµРЅС‚Р°, РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ РІ РєР»Р°СЃСЃРµ СЂРµР°Р»СЊРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @return	идентификатор
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ
 	 */
 	protected abstract int getDocSectionIdentifier();
 
 	/**
-	 * реализация расчета атрибутов документа
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ СЂР°СЃС‡РµС‚Р° Р°С‚СЂРёР±СѓС‚РѕРІ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
 	 * @param entity
 	 */
@@ -166,7 +166,7 @@ public abstract class DocumentServiceBean<T extends com.mg.merp.document.model.D
 			DocumentNumberStrategy dns = DocumentNumberStrategyFactory.createStrategy(entity);
 			if (dns != null) {
 				entity.setDocNumber(dns.generateNumber(entity));
-				entity.setManualDocNumber(true); //генерируем номер один раз, затем переводим в ручной режим
+				entity.setManualDocNumber(true); //РіРµРЅРµСЂРёСЂСѓРµРј РЅРѕРјРµСЂ РѕРґРёРЅ СЂР°Р·, Р·Р°С‚РµРј РїРµСЂРµРІРѕРґРёРј РІ СЂСѓС‡РЅРѕР№ СЂРµР¶РёРј
 			}
 			else
 				getLogger().debug("Document number strategy is null"); //$NON-NLS-1$
@@ -183,7 +183,7 @@ public abstract class DocumentServiceBean<T extends com.mg.merp.document.model.D
 	}
 
 	/**
-	 * создание конфигурации документа
+	 * СЃРѕР·РґР°РЅРёРµ РєРѕРЅС„РёРіСѓСЂР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
 	 * @return
 	 */
@@ -192,11 +192,11 @@ public abstract class DocumentServiceBean<T extends com.mg.merp.document.model.D
 	}
 
 	/**
-	 * создать документ по образцу
+	 * СЃРѕР·РґР°С‚СЊ РґРѕРєСѓРјРµРЅС‚ РїРѕ РѕР±СЂР°Р·С†Сѓ
 	 * 
-	 * @param pattern - образец
-	 * @param folder - папка-приемник
-	 * @return документ
+	 * @param pattern - РѕР±СЂР°Р·РµС†
+	 * @param folder - РїР°РїРєР°-РїСЂРёРµРјРЅРёРє
+	 * @return РґРѕРєСѓРјРµРЅС‚
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	protected T doCreateByPattern(DocHeadModel pattern, Folder folder, CreateDocumentByPatternStrategy createStrategy) {
@@ -206,7 +206,7 @@ public abstract class DocumentServiceBean<T extends com.mg.merp.document.model.D
 		pattern = (DocHeadModel) getPatternService().load(pattern.getId());
 		T docHead = initialize();
 		
-		//если стратегия не задана используем стандартную
+		//РµСЃР»Рё СЃС‚СЂР°С‚РµРіРёСЏ РЅРµ Р·Р°РґР°РЅР° РёСЃРїРѕР»СЊР·СѓРµРј СЃС‚Р°РЅРґР°СЂС‚РЅСѓСЋ
 		if (createStrategy == null) {
 			getLogger().debug("use default strategy for create document by pattern");
 			createStrategy = new DefaultCreateDocumentByPatternStrategy(folder, true, this, getPatternService());
@@ -268,8 +268,8 @@ public abstract class DocumentServiceBean<T extends com.mg.merp.document.model.D
 	@Override
 	public T store(T entity) {
 		T result = super.store(entity);
-		//перенесли из onStore, выполним после всех изменений, сущность уже будет находиться в контексте
-		//и содержать необходимое состояние
+		//РїРµСЂРµРЅРµСЃР»Рё РёР· onStore, РІС‹РїРѕР»РЅРёРј РїРѕСЃР»Рµ РІСЃРµС… РёР·РјРµРЅРµРЅРёР№, СЃСѓС‰РЅРѕСЃС‚СЊ СѓР¶Рµ Р±СѓРґРµС‚ РЅР°С…РѕРґРёС‚СЊСЃСЏ РІ РєРѕРЅС‚РµРєСЃС‚Рµ
+		//Рё СЃРѕРґРµСЂР¶Р°С‚СЊ РЅРµРѕР±С…РѕРґРёРјРѕРµ СЃРѕСЃС‚РѕСЏРЅРёРµ
 		DocFlowHelper.modifyDocument(result);		
 		return result;
 	}
@@ -370,20 +370,20 @@ public abstract class DocumentServiceBean<T extends com.mg.merp.document.model.D
 	}
 	
 	/**
-	 * Метод производит дополнительные преобразования документа dstDoc
+	 * РњРµС‚РѕРґ РїСЂРѕРёР·РІРѕРґРёС‚ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рµ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° dstDoc
 	 * 
 	 * @param <T1>
-	 * 			Тип документа-источника
+	 * 			РўРёРї РґРѕРєСѓРјРµРЅС‚Р°-РёСЃС‚РѕС‡РЅРёРєР°
 	 * @param <T2>
-	 * 			Тип модели документа
+	 * 			РўРёРї РјРѕРґРµР»Рё РґРѕРєСѓРјРµРЅС‚Р°
 	 * @param srcDoc
-	 * 			Документ-источник
+	 * 			Р”РѕРєСѓРјРµРЅС‚-РёСЃС‚РѕС‡РЅРёРє
 	 * @param dstDoc
-	 * 			Результирующий документ
+	 * 			Р РµР·СѓР»СЊС‚РёСЂСѓСЋС‰РёР№ РґРѕРєСѓРјРµРЅС‚
 	 * @param model
-	 * 			Модель документа
+	 * 			РњРѕРґРµР»СЊ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @return Результирующий документ
+	 * @return Р РµР·СѓР»СЊС‚РёСЂСѓСЋС‰РёР№ РґРѕРєСѓРјРµРЅС‚
 	 */
 	protected <T1 extends DocHead, T2 extends DocHeadModel> T doCreateDocumentBasisOf(T1 srcDoc, T dstDoc, T2 model){
 		return dstDoc;

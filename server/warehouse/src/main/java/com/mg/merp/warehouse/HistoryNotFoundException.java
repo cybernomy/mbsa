@@ -17,7 +17,7 @@ import com.mg.framework.api.InternalException;
 import com.mg.merp.warehouse.support.Messages;
 
 /**
- * ИС "Невозможно откатить документ - не найдена история"
+ * РРЎ "РќРµРІРѕР·РјРѕР¶РЅРѕ РѕС‚РєР°С‚РёС‚СЊ РґРѕРєСѓРјРµРЅС‚ - РЅРµ РЅР°Р№РґРµРЅР° РёСЃС‚РѕСЂРёСЏ"
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: HistoryNotFoundException.java,v 1.2 2007/03/26 13:31:18 poroxnenko Exp $ 

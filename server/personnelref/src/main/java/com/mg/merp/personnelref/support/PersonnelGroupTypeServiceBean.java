@@ -22,7 +22,7 @@ import com.mg.merp.personnelref.PersonnelGroupTypeServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelGroupType;
 
 /**
- * Бизнес-компонент "Типы групп" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ РіСЂСѓРїРї" 
  * 
  * @author leonova
  * @version $Id: PersonnelGroupTypeServiceBean.java,v 1.3 2006/09/04 13:02:21 leonova Exp $

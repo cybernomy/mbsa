@@ -34,7 +34,7 @@ import com.mg.merp.planning.model.CatalogWarehouse;
 import com.mg.merp.reference.model.Catalog;
 
 /**
- * Бизнес-компонент "Склады хранения товаров" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРєР»Р°РґС‹ С…СЂР°РЅРµРЅРёСЏ С‚РѕРІР°СЂРѕРІ" 
  * 
  * @author leonova
  * @version $Id: CatalogWarehouseServiceBean.java,v 1.4 2007/07/30 10:36:48 safonov Exp $

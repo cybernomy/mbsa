@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.generic.ui.DefaultRestrictionForm;
 
 /**
- * Контроллер формы условий отбора праздничных дней
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° РїСЂР°Р·РґРЅРёС‡РЅС‹С… РґРЅРµР№
  * 
  * @author leonova
  * @version $Id: HolidaysRest.java,v 1.3 2006/10/03 05:36:17 leonova Exp $ 

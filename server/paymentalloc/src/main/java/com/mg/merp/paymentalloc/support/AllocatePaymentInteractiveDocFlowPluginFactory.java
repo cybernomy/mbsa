@@ -21,7 +21,7 @@ import com.mg.merp.paymentalloc.PaymentallocProcessorListener;
 import com.mg.merp.paymentalloc.PaymentallocProcessorServiceLocal;
 
 /**
- * Реализация фабрики реализации этапа ДО "Отработка в журнале платежей интерактивная"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёРё СЌС‚Р°РїР° Р”Рћ "РћС‚СЂР°Р±РѕС‚РєР° РІ Р¶СѓСЂРЅР°Р»Рµ РїР»Р°С‚РµР¶РµР№ РёРЅС‚РµСЂР°РєС‚РёРІРЅР°СЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: AllocatePaymentInteractiveDocFlowPluginFactory.java,v 1.1 2007/05/31 14:11:43 sharapov Exp $

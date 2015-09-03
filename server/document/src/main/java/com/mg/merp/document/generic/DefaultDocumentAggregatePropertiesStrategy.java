@@ -30,7 +30,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * Стандартная реализация стратегии изменения агрегирующих свойств документа
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЃС‚СЂР°С‚РµРіРёРё РёР·РјРµРЅРµРЅРёСЏ Р°РіСЂРµРіРёСЂСѓСЋС‰РёС… СЃРІРѕР№СЃС‚РІ РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultDocumentAggregatePropertiesStrategy.java,v 1.5 2009/01/23 14:16:58 safonov Exp $
@@ -73,8 +73,8 @@ public class DefaultDocumentAggregatePropertiesStrategy extends
 			ids[i] = docSpec.getId();
 		}
 		
-		Class<DocSpec> docSpecClass = DocSpec.class; //возмем базовый класс спецификаций
-		if (docSpecs.length > 0) //но если есть возможность, то возмем тип из самой спецификации
+		Class<DocSpec> docSpecClass = DocSpec.class; //РІРѕР·РјРµРј Р±Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ СЃРїРµС†РёС„РёРєР°С†РёР№
+		if (docSpecs.length > 0) //РЅРѕ РµСЃР»Рё РµСЃС‚СЊ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ, С‚Рѕ РІРѕР·РјРµРј С‚РёРї РёР· СЃР°РјРѕР№ СЃРїРµС†РёС„РёРєР°С†РёРё
 			docSpecClass = ReflectionUtils.getEntityClass(docSpecs[0]);
 		
 		Projection[] docSpecProjections = new Projection[docSpecFields.length];
@@ -100,7 +100,7 @@ public class DefaultDocumentAggregatePropertiesStrategy extends
 		if (docHead == null)
 			throw new IllegalStateException("document is null");
 		
-		//загрузим если не в сессии (через сервис документа чтобы был правильный реальный тип сущности)
+		//Р·Р°РіСЂСѓР·РёРј РµСЃР»Рё РЅРµ РІ СЃРµСЃСЃРёРё (С‡РµСЂРµР· СЃРµСЂРІРёСЃ РґРѕРєСѓРјРµРЅС‚Р° С‡С‚РѕР±С‹ Р±С‹Р» РїСЂР°РІРёР»СЊРЅС‹Р№ СЂРµР°Р»СЊРЅС‹Р№ С‚РёРї СЃСѓС‰РЅРѕСЃС‚Рё)
 		return (DocHead) documentService.load(docHead.getId());
 	}
 	
@@ -140,14 +140,14 @@ public class DefaultDocumentAggregatePropertiesStrategy extends
 	}
 
 	/**
-	 * вычисление дополнительных полей документа
+	 * РІС‹С‡РёСЃР»РµРЅРёРµ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РїРѕР»РµР№ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
 	 * @param docHead
 	 */
 	protected void doAdjustDocHead(DocHead docHead) {
-		//вычислим сумму в локальной валюте
+		//РІС‹С‡РёСЃР»РёРј СЃСѓРјРјСѓ РІ Р»РѕРєР°Р»СЊРЅРѕР№ РІР°Р»СЋС‚Рµ
 		docHead.setSumNat(MathUtils.multiply(docHead.getSumCur(), docHead.getCurCource(), new RoundContext(currencyScale)));
-		// округлим сумму в валюте до точности, установленной в конфигурации модуля
+		// РѕРєСЂСѓРіР»РёРј СЃСѓРјРјСѓ РІ РІР°Р»СЋС‚Рµ РґРѕ С‚РѕС‡РЅРѕСЃС‚Рё, СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅРѕР№ РІ РєРѕРЅС„РёРіСѓСЂР°С†РёРё РјРѕРґСѓР»СЏ
 		docHead.setSumCur(MathUtils.round(docHead.getSumCur(), new RoundContext(currencyScale)));
 	}
 	
@@ -156,7 +156,7 @@ public class DefaultDocumentAggregatePropertiesStrategy extends
 	 */
 	@Override
 	protected void doCalculate() {
-		//нет изменяемых спецификаций, не изменяем заголовок
+		//РЅРµС‚ РёР·РјРµРЅСЏРµРјС‹С… СЃРїРµС†РёС„РёРєР°С†РёР№, РЅРµ РёР·РјРµРЅСЏРµРј Р·Р°РіРѕР»РѕРІРѕРє
 		if (docSpecs == null || docSpecs.length == 0)
 			return;
 		
@@ -164,14 +164,14 @@ public class DefaultDocumentAggregatePropertiesStrategy extends
 			throw new IllegalStateException("lenght of fields list mismatch");
 		
 		DocHead docHead = loadDocHead();
-		//при модификации документа не проверяем ДО, иначе невозможно модифицировать
-		//документ штатными методами сервисов после прохождения ДО, проверку на прохождение ДО
-		//возлагаем на прикладной код, там где это требуется, например при интерактивном
-		//изменении документа пользователем (http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4436)
+		//РїСЂРё РјРѕРґРёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р° РЅРµ РїСЂРѕРІРµСЂСЏРµРј Р”Рћ, РёРЅР°С‡Рµ РЅРµРІРѕР·РјРѕР¶РЅРѕ РјРѕРґРёС„РёС†РёСЂРѕРІР°С‚СЊ
+		//РґРѕРєСѓРјРµРЅС‚ С€С‚Р°С‚РЅС‹РјРё РјРµС‚РѕРґР°РјРё СЃРµСЂРІРёСЃРѕРІ РїРѕСЃР»Рµ РїСЂРѕС…РѕР¶РґРµРЅРёСЏ Р”Рћ, РїСЂРѕРІРµСЂРєСѓ РЅР° РїСЂРѕС…РѕР¶РґРµРЅРёРµ Р”Рћ
+		//РІРѕР·Р»Р°РіР°РµРј РЅР° РїСЂРёРєР»Р°РґРЅРѕР№ РєРѕРґ, С‚Р°Рј РіРґРµ СЌС‚Рѕ С‚СЂРµР±СѓРµС‚СЃСЏ, РЅР°РїСЂРёРјРµСЂ РїСЂРё РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕРј
+		//РёР·РјРµРЅРµРЅРёРё РґРѕРєСѓРјРµРЅС‚Р° РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј (http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4436)
 		//DocFlowHelper.checkStatus(docHead);
 		
 		BigDecimal[] aggregateValues = loadAggregateValues(docHead);
-		//включим спецификации из списка, т.к. они не участвовали в загрузке агрегирующих значений (кроме удаляемых)
+		//РІРєР»СЋС‡РёРј СЃРїРµС†РёС„РёРєР°С†РёРё РёР· СЃРїРёСЃРєР°, С‚.Рє. РѕРЅРё РЅРµ СѓС‡Р°СЃС‚РІРѕРІР°Р»Рё РІ Р·Р°РіСЂСѓР·РєРµ Р°РіСЂРµРіРёСЂСѓСЋС‰РёС… Р·РЅР°С‡РµРЅРёР№ (РєСЂРѕРјРµ СѓРґР°Р»СЏРµРјС‹С…)
 		if (!isRemove)
 			for (DocSpec spec : docSpecs) {
 				for (int i = 0; i < docSpecFields.length; i++) {
@@ -181,14 +181,14 @@ public class DefaultDocumentAggregatePropertiesStrategy extends
 				}
 			}
 		
-		//проставим агрегирующие значения в документе
+		//РїСЂРѕСЃС‚Р°РІРёРј Р°РіСЂРµРіРёСЂСѓСЋС‰РёРµ Р·РЅР°С‡РµРЅРёСЏ РІ РґРѕРєСѓРјРµРЅС‚Рµ
 		for (int i = 0; i < docHeadFields.length; i++) {
 			docHead.setAttribute(docHeadFields[i], aggregateValues[i]);
 		}
 		
 		doAdjustDocHead(docHead);
 
-		//сбросим изменения заголовка документа в базу, см. https://issues.m-g.ru/bugzilla/show_bug.cgi?id=4985
+		//СЃР±СЂРѕСЃРёРј РёР·РјРµРЅРµРЅРёСЏ Р·Р°РіРѕР»РѕРІРєР° РґРѕРєСѓРјРµРЅС‚Р° РІ Р±Р°Р·Сѓ, СЃРј. https://issues.m-g.ru/bugzilla/show_bug.cgi?id=4985
 		ServerUtils.getPersistentManager().flush();
 	}
 

@@ -36,7 +36,7 @@ import com.mg.merp.account.model.Period;
 import com.mg.merp.account.model.RemnVal;
 
 /**
- * Реализация бизнес-компонента "Остатки и обороты по ТМЦ бух. учета"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ РўРњР¦ Р±СѓС…. СѓС‡РµС‚Р°"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -190,7 +190,7 @@ public class RemnValServiceBean extends RemnServiceBean<RemnVal, Integer> implem
 	}
 
 	/**
-	 * Не реализован
+	 * РќРµ СЂРµР°Р»РёР·РѕРІР°РЅ
 	 * 
 	 * @param remnId
 	 * @return
@@ -203,7 +203,7 @@ public class RemnValServiceBean extends RemnServiceBean<RemnVal, Integer> implem
 	}
 
 	/**
-	 * Не реализован
+	 * РќРµ СЂРµР°Р»РёР·РѕРІР°РЅ
 	 * 
 	 * @param keys
 	 * @throws ApplicationException

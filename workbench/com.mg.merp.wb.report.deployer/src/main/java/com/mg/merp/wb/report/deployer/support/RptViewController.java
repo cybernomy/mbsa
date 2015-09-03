@@ -37,7 +37,7 @@ import com.mg.merp.wb.report.deployer.support.utils.RptTool;
 import com.mg.merp.wb.report.deployer.ui.RptView;
 
 /**
- * Контроллер панели RptView
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РїР°РЅРµР»Рё RptView
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: RptViewController.java,v 1.9 2007/05/07 13:02:51 poroxnenko Exp $
@@ -171,7 +171,7 @@ public class RptViewController extends StandartBrowserViewController<RptView, Rp
 	}
 
 	/**
-	 * Поместить шаблон в проект
+	 * РџРѕРјРµСЃС‚РёС‚СЊ С€Р°Р±Р»РѕРЅ РІ РїСЂРѕРµРєС‚
 	 * 
 	 */
 	public void putTemplateToProject() {

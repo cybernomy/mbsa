@@ -17,7 +17,7 @@ package com.mg.merp.account.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Конфигурация модуля <Бух.учет>"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљРѕРЅС„РёРіСѓСЂР°С†РёСЏ РјРѕРґСѓР»СЏ <Р‘СѓС….СѓС‡РµС‚>"
  * 
  * @author hbm2java
  * @author Artem V. Sharapov

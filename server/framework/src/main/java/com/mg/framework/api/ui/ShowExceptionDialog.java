@@ -23,11 +23,11 @@ package com.mg.framework.api.ui;
 public interface ShowExceptionDialog {
 
 	/**
-	 * показать форму сообщения и ИС
+	 * РїРѕРєР°Р·Р°С‚СЊ С„РѕСЂРјСѓ СЃРѕРѕР±С‰РµРЅРёСЏ Рё РРЎ
 	 * 
-	 * @param title			заголовок формы
-	 * @param message		сообщение
-	 * @param detailMessage	дополнительное сообщение
+	 * @param title			Р·Р°РіРѕР»РѕРІРѕРє С„РѕСЂРјС‹
+	 * @param message		СЃРѕРѕР±С‰РµРЅРёРµ
+	 * @param detailMessage	РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРµ СЃРѕРѕР±С‰РµРЅРёРµ
 	 */
 	void show(String title, String message, String detailMessage);
 

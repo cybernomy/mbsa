@@ -20,7 +20,7 @@ import com.mg.framework.support.ui.UIUtils;
 import com.mg.merp.document.model.DocType;
 
 /**
- * Механизм поиска сущностей этапов ДО конкретного типа документа
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ СЌС‚Р°РїРѕРІ Р”Рћ РєРѕРЅРєСЂРµС‚РЅРѕРіРѕ С‚РёРїР° РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Artem V. Sharapov
  * @version $Id: DocProcessStageByDocTypeSearchHelp.java,v 1.1 2008/08/15 06:27:14 sharapov Exp $

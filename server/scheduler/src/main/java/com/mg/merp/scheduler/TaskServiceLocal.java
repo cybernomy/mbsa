@@ -18,18 +18,18 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.scheduler.model.Task;
 
 /**
- * Бизнес-компонент "Задачи планировщика"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р—Р°РґР°С‡Рё РїР»Р°РЅРёСЂРѕРІС‰РёРєР°"
  * 
  * @author Oleg V. Safonov
  * @version $Id: TaskServiceLocal.java,v 1.1 2008/04/25 10:57:23 safonov Exp $
  */
 public interface TaskServiceLocal extends DataBusinessObjectService<Task, Integer> {
 	/**
-	 * имя сервиса
+	 * РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp/schedule/Task"; //$NON-NLS-1$
 	/**
-	 * тип папки для констант
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РєРѕРЅСЃС‚Р°РЅС‚
 	 */
 	final static short FOLDER_TYPE = 13000;
 

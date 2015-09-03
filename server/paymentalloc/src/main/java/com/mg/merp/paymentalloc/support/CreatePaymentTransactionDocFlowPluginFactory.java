@@ -21,7 +21,7 @@ import com.mg.merp.paymentalloc.PaymentallocProcessorListener;
 import com.mg.merp.paymentalloc.PaymentallocProcessorServiceLocal;
 
 /**
- * Реализация фабрики реализации этапа ДО "Создать запись в журнале платежей"
+ * Р РµР°Р»РёР·Р°С†РёСЏ С„Р°Р±СЂРёРєРё СЂРµР°Р»РёР·Р°С†РёРё СЌС‚Р°РїР° Р”Рћ "РЎРѕР·РґР°С‚СЊ Р·Р°РїРёСЃСЊ РІ Р¶СѓСЂРЅР°Р»Рµ РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Denis V. Arychkov
  * @author Artem V. Sharapov

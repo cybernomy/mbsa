@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.widget;
 import com.mg.framework.api.ui.FieldEditor;
 
 /**
- * Элемент "Редактор числового значения"
+ * Р­Р»РµРјРµРЅС‚ "Р РµРґР°РєС‚РѕСЂ С‡РёСЃР»РѕРІРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ"
  * 
  * @author Oleg V. Safonov
  * @version $Id: NumberField.java,v 1.2 2006/11/21 15:34:06 safonov Exp $

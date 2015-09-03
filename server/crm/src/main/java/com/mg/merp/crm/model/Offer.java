@@ -311,7 +311,7 @@ public class Offer extends com.mg.framework.service.PersistentObjectHibernate
 	}
 
 	/**
-	 * @param linkedDocs задаваемое linkedDocs
+	 * @param linkedDocs Р·Р°РґР°РІР°РµРјРѕРµ linkedDocs
 	 */
 	public void setLinkedDocs(java.util.Set<LinkedDocument> linkedDocs) {
 		this.linkedDocs = linkedDocs;

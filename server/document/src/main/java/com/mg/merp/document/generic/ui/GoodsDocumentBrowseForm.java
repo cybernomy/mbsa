@@ -40,7 +40,7 @@ import com.mg.merp.document.model.DocSpec;
 import com.mg.merp.reference.CurrentStockSituationLocator;
 
 /**
- * Базовый класс контроллера формы списка товарных документов
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РєРѕРЅС‚СЂРѕР»Р»РµСЂР° С„РѕСЂРјС‹ СЃРїРёСЃРєР° С‚РѕРІР°СЂРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -57,27 +57,27 @@ public class GoodsDocumentBrowseForm extends DocumentBrowseForm {
 	protected String specMaintenanceFormName;
 
 	/**
-	 * наименование таблицы спецификаций
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	protected final String SPEC_TABLE_WIDGET = "spec";
 
 	/**
-	 * таблица спецификаций
+	 * С‚Р°Р±Р»РёС†Р° СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	protected MaintenanceTableController spec;
 
 	/**
-	 * инициализирующие свойства спецификации
+	 * РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‰РёРµ СЃРІРѕР№СЃС‚РІР° СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	protected AttributeMap specProperties = new LocalDataTransferObject();
 
 	/**
-	 * бизнес-компонент спецификация
+	 * Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ СЃРїРµС†РёС„РёРєР°С†РёСЏ
 	 */
 	protected GoodsDocumentSpecification<? extends DocSpec, Integer> specService = null;
 
 	/**
-	 * Признак отображения таблицы спецификаций
+	 * РџСЂРёР·РЅР°Рє РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С‚Р°Р±Р»РёС†С‹ СЃРїРµС†РёС„РёРєР°С†РёР№
 	 */
 	protected boolean isShowSpecTable = false;
 	
@@ -97,7 +97,7 @@ public class GoodsDocumentBrowseForm extends DocumentBrowseForm {
 	}
 
 	/**
-	 * создание адаптера таблицы спецификаций дополнительного списка
+	 * СЃРѕР·РґР°РЅРёРµ Р°РґР°РїС‚РµСЂР° С‚Р°Р±Р»РёС†С‹ СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРіРѕ СЃРїРёСЃРєР°
 	 * 
 	 * @return
 	 */
@@ -106,9 +106,9 @@ public class GoodsDocumentBrowseForm extends DocumentBrowseForm {
 	}
 
 	/**
-	 * получить бизнес-компонент спецификации документа
+	 * РїРѕР»СѓС‡РёС‚СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @return	бизнес-компонент спецификации документа
+	 * @return	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	@SuppressWarnings("unchecked")
 	protected GoodsDocumentSpecification<?, Integer> getDocSpecService() {
@@ -118,9 +118,9 @@ public class GoodsDocumentBrowseForm extends DocumentBrowseForm {
 	}
 
 	/**
-	 * создать модель для отображения спецификаций документа в дополнительном браузере
+	 * СЃРѕР·РґР°С‚СЊ РјРѕРґРµР»СЊ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРєСѓРјРµРЅС‚Р° РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅРѕРј Р±СЂР°СѓР·РµСЂРµ
 	 * 
-	 * @return	модель спецификаций документа
+	 * @return	РјРѕРґРµР»СЊ СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	protected AbstractGoodsDocSpecTableModel createGoodsDocSpecTableModel() {
 		return new DefaultGoodsDocSpecEJBQLTableModel();
@@ -159,7 +159,7 @@ public class GoodsDocumentBrowseForm extends DocumentBrowseForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Изменить спецификации"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РР·РјРµРЅРёС‚СЊ СЃРїРµС†РёС„РёРєР°С†РёРё"
 	 * @param event
 	 */
 	@SuppressWarnings("unchecked")
@@ -184,7 +184,7 @@ public class GoodsDocumentBrowseForm extends DocumentBrowseForm {
 	}
 
 	/**
-	 * Обработчик пункта КМ "Показать спецификацию"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РџРѕРєР°Р·Р°С‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ"
 	 * @param event
 	 */
 	protected void onActionViewDocumentLineList(WidgetEvent event) {
@@ -204,7 +204,7 @@ public class GoodsDocumentBrowseForm extends DocumentBrowseForm {
 	}
 
 	/**
-	 * обработчик пункта КМ "Количество на складах"
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РљРѕР»РёС‡РµСЃС‚РІРѕ РЅР° СЃРєР»Р°РґР°С…"
 	 * 
 	 * @param event
 	 */
@@ -223,9 +223,9 @@ public class GoodsDocumentBrowseForm extends DocumentBrowseForm {
 	}
 
 	/**
-	 * Установка значения видимости таблицы
+	 * РЈСЃС‚Р°РЅРѕРІРєР° Р·РЅР°С‡РµРЅРёСЏ РІРёРґРёРјРѕСЃС‚Рё С‚Р°Р±Р»РёС†С‹
 	 * 
-	 * @param isVisible	- <code>true</code> - видна, иначе не видна
+	 * @param isVisible	- <code>true</code> - РІРёРґРЅР°, РёРЅР°С‡Рµ РЅРµ РІРёРґРЅР°
 	 */
 	private void setVisibleSpec(boolean isVisible) {
 		Widget widget = view.getWidget(SPEC_TABLE_WIDGET);

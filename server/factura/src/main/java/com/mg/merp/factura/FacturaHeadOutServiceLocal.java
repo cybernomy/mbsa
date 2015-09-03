@@ -25,12 +25,12 @@ public interface FacturaHeadOutServiceLocal
    extends com.mg.merp.document.GoodsDocument<FacturaHead, Integer, FacturaHeadModelOutServiceLocal, FacturaSpecOutServiceLocal>
 {
 	/**
-	 * тип папки для входящих счет - фактур
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РІС…РѕРґСЏС‰РёС… СЃС‡РµС‚ - С„Р°РєС‚СѓСЂ
 	 */
 	final static short FOLDER_PART = 23;
 	
 	/**
-	 * docsection для входящих счет - фактур
+	 * docsection РґР»СЏ РІС…РѕРґСЏС‰РёС… СЃС‡РµС‚ - С„Р°РєС‚СѓСЂ
 	 */
 	final static short DOCSECTION = 13;
 }

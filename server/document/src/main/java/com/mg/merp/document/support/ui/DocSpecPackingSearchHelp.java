@@ -21,7 +21,7 @@ import com.mg.merp.document.model.DocSpec;
 import com.mg.merp.document.model.DocumentSpecPackage;
 
 /**
- * Поисковик сущностей "упаковки товара позиции спецификации документа"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "СѓРїР°РєРѕРІРєРё С‚РѕРІР°СЂР° РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґРѕРєСѓРјРµРЅС‚Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: DocSpecPackingSearchHelp.java,v 1.2 2007/08/10 13:22:24 safonov Exp $

@@ -32,7 +32,7 @@ import com.mg.merp.contract.ContractSpecServiceLocal;
 import com.mg.merp.document.support.DocumentUtils;
 
 /**
- * Контроллер формы поодержки пунктов контракта
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРѕРґРµСЂР¶РєРё РїСѓРЅРєС‚РѕРІ РєРѕРЅС‚СЂР°РєС‚Р°
  * 
  * @author leonova
  * @version $Id: PhaseItemMt.java,v 1.6 2008/02/19 05:19:25 alikaev Exp $
@@ -134,8 +134,8 @@ public class PhaseItemMt extends DefaultMaintenanceForm implements MasterModelLi
 	}
 
 	/**
-	 * Обработчик просмотра документа
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewDocument(WidgetEvent event) {
 		DocumentUtils.viewDocument(getEntity(), DOCUMENT_ATTRIBUTE_NAME);

@@ -25,7 +25,7 @@ public interface BuyBookServiceLocal
    extends com.mg.framework.api.DataBusinessObjectService<BuyBook, Integer>
 {
 	/**
-	 * тип папки для книги покупок
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РєРЅРёРіРё РїРѕРєСѓРїРѕРє
 	 */
 	final static short FOLDER_PART = 26;
 	

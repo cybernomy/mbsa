@@ -24,7 +24,7 @@ import com.mg.merp.core.SysDomainServiceLocal;
 import com.mg.merp.core.model.SysDomain;
 
 /**
- * Реализация бизнес-компонента "Домен системы"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”РѕРјРµРЅ СЃРёСЃС‚РµРјС‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: SysDomainServiceBean.java,v 1.1 2008/03/03 12:57:32 safonov Exp $

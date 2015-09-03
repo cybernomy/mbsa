@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.mfreference.model.Cell;
 
 /**
- * Браузер производственных линий
+ * Р‘СЂР°СѓР·РµСЂ РїСЂРѕРёР·РІРѕРґСЃС‚РІРµРЅРЅС‹С… Р»РёРЅРёР№
  * 
  * @author leonova
  * @version $Id: CellBr.java,v 1.3 2006/10/24 12:01:44 leonova Exp $ 

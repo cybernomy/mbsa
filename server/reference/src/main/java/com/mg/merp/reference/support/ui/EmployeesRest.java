@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 
 
 /**
- *  Контроллер формы условий отбора сотрудников
+ *  РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ
  *  
  *  @author Artem V. Sharapov
  */
@@ -38,14 +38,14 @@ public class EmployeesRest extends NaturalPersonRest {
 	}
 
 	/**
-	 * @return табельный номер
+	 * @return С‚Р°Р±РµР»СЊРЅС‹Р№ РЅРѕРјРµСЂ
 	 */
 	public String getTableNumber() {
 		return tableNumber;
 	}
 
 	/**
-	 * @return Код(ФИО)
+	 * @return РљРѕРґ(Р¤РРћ)
 	 */
 	public String getPersonCode() { 
 		return personCode;

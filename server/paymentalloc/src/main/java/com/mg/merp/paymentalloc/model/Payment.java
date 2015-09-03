@@ -17,7 +17,7 @@ package com.mg.merp.paymentalloc.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Запись журнала платежей"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р—Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: Payment.java,v 1.7 2007/06/04 05:18:36 sharapov Exp $
@@ -458,8 +458,8 @@ public class Payment extends com.mg.framework.service.PersistentObjectHibernate 
 	}
 
 	/**
-	 * Получть тип документа
-	 * @return тип документа
+	 * РџРѕР»СѓС‡С‚СЊ С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	@DataItemName("PaymentAlloc.Payment.DocType") //$NON-NLS-1$
 	public com.mg.merp.document.model.DocType getDocType() {
@@ -471,8 +471,8 @@ public class Payment extends com.mg.framework.service.PersistentObjectHibernate 
 	}
 
 	/**
-	 * Получть тип документа-основания
-	 * @return тип документа-основания
+	 * РџРѕР»СѓС‡С‚СЊ С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
+	 * @return С‚РёРї РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
 	 */
 	@DataItemName("PaymentAlloc.Payment.BaseDocType") //$NON-NLS-1$
 	public com.mg.merp.document.model.DocType getBaseDocType() {
@@ -484,8 +484,8 @@ public class Payment extends com.mg.framework.service.PersistentObjectHibernate 
 	}
 	
 	/**
-	 * Получть тип контракта
-	 * @return тип контракта
+	 * РџРѕР»СѓС‡С‚СЊ С‚РёРї РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @return С‚РёРї РєРѕРЅС‚СЂР°РєС‚Р°
 	 */
 	@DataItemName("PaymentAlloc.Payment.ContractType") //$NON-NLS-1$
 	public com.mg.merp.document.model.DocType getContractType() {

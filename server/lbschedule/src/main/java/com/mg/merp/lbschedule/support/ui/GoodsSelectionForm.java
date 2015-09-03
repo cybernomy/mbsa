@@ -40,7 +40,7 @@ import com.mg.merp.reference.model.PriceListHead;
 import com.mg.merp.reference.model.PriceType;
 
 /**
- * Контроллер формы подбора номенклатуры при создании спецификаций пункта графика 
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґР±РѕСЂР° РЅРѕРјРµРЅРєР»Р°С‚СѓСЂС‹ РїСЂРё СЃРѕР·РґР°РЅРёРё СЃРїРµС†РёС„РёРєР°С†РёР№ РїСѓРЅРєС‚Р° РіСЂР°С„РёРєР° 
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -205,11 +205,11 @@ public class GoodsSelectionForm extends AbstractForm {
 	}
 
 	/**
-	 * запуск формы подбора номенклатуры
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹ РїРѕРґР±РѕСЂР° РЅРѕРјРµРЅРєР»Р°С‚СѓСЂС‹
 	 * 
-	 * @param listener		слушатель
-	 * @param priceList		прайс-лист
-	 * @param priceTypeLink	тип цен
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ
+	 * @param priceList		РїСЂР°Р№СЃ-Р»РёСЃС‚
+	 * @param priceTypeLink	С‚РёРї С†РµРЅ
 	 */
 	public void execute(GoodsSelectionListener listener, DocHead docHead) {
 		selectionListener = listener;
@@ -219,10 +219,10 @@ public class GoodsSelectionForm extends AbstractForm {
 	}
 
 	/**
-	 * запуск формы
-	 * @param listener - слушатель
-	 * @param priceList - прайс-лист
-	 * @param priceType - тип цены
+	 * Р·Р°РїСѓСЃРє С„РѕСЂРјС‹
+	 * @param listener - СЃР»СѓС€Р°С‚РµР»СЊ
+	 * @param priceList - РїСЂР°Р№СЃ-Р»РёСЃС‚
+	 * @param priceType - С‚РёРї С†РµРЅС‹
 	 */
 	public void execute(PriceListHead priceList, PriceType priceType, GoodsSelectionListener listener) {
 		selectionListener = listener;
@@ -232,7 +232,7 @@ public class GoodsSelectionForm extends AbstractForm {
 	}
 
 	/**
-	 * обработчик события выбора номенклатуры
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РЅРѕРјРµРЅРєР»Р°С‚СѓСЂС‹
 	 * 
 	 * @param event
 	 */

@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип аудита хранилища данных
+ * РўРёРї Р°СѓРґРёС‚Р° С…СЂР°РЅРёР»РёС‰Р° РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: DatabaseAuditType.java,v 1.1 2007/10/19 06:33:10 safonov Exp $
@@ -26,17 +26,17 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName("Core.DatabaseAuditType")
 public enum DatabaseAuditType {
 	/**
-	 * создание
+	 * СЃРѕР·РґР°РЅРёРµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.core.resources.dataitemlabels#DatabaseAuditType.Create")
 	CREATE,
 	/**
-	 * изменение
+	 * РёР·РјРµРЅРµРЅРёРµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.core.resources.dataitemlabels#DatabaseAuditType.Modify")
 	MODIFY,
 	/**
-	 * удаление
+	 * СѓРґР°Р»РµРЅРёРµ
 	 */
 	@EnumConstantText("resource://com.mg.merp.core.resources.dataitemlabels#DatabaseAuditType.Remove")
 	REMOVE

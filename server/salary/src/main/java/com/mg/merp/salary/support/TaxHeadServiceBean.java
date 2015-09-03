@@ -24,7 +24,7 @@ import com.mg.merp.salary.TaxHeadServiceLocal;
 import com.mg.merp.salary.model.TaxHead;
 
 /**
- * Бизнес-компонент "Налоговые сетки" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РќР°Р»РѕРіРѕРІС‹Рµ СЃРµС‚РєРё" 
  * 
  * @author leonova
  * @version $Id: TaxHeadServiceBean.java,v 1.3 2006/09/08 07:10:03 leonova Exp $

@@ -24,7 +24,7 @@ import com.mg.merp.planning.InventoryForecastServiceLocal;
 import com.mg.merp.planning.model.InventoryForecast;
 
 /**
- * Бизнес-компонент "Прогнозы складских запасов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРѕРіРЅРѕР·С‹ СЃРєР»Р°РґСЃРєРёС… Р·Р°РїР°СЃРѕРІ" 
  * 
  * @author leonova
  * @version $Id: InventoryForecastServiceBean.java,v 1.4 2006/10/16 07:50:10 leonova Exp $

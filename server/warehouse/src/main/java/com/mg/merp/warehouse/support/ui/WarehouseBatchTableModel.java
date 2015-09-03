@@ -23,7 +23,7 @@ import com.mg.merp.warehouse.support.BatchQuanTransfer;
 import com.mg.merp.warehouse.support.Messages;
 
 /**
- * Модель таблицы складских партий для списания
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ СЃРєР»Р°РґСЃРєРёС… РїР°СЂС‚РёР№ РґР»СЏ СЃРїРёСЃР°РЅРёСЏ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseBatchTableModel.java,v 1.3 2008/08/27 09:44:07 sharapov Exp $
@@ -33,13 +33,13 @@ public class WarehouseBatchTableModel extends AbstractTableModel {
 	private String[] columnsName;
 
 	/**
-	 * Список партий
+	 * РЎРїРёСЃРѕРє РїР°СЂС‚РёР№
 	 */
 	private List<StockBatch> batchesList;
 
 	/**
-	 * Список объектов, содержащих в себе количество, подлежащее списанию в двух
-	 * ЕИ. Связан с batchesList по индексу элемента
+	 * РЎРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ, СЃРѕРґРµСЂР¶Р°С‰РёС… РІ СЃРµР±Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ, РїРѕРґР»РµР¶Р°С‰РµРµ СЃРїРёСЃР°РЅРёСЋ РІ РґРІСѓС…
+	 * Р•Р. РЎРІСЏР·Р°РЅ СЃ batchesList РїРѕ РёРЅРґРµРєСЃСѓ СЌР»РµРјРµРЅС‚Р°
 	 */
 	private List<BatchQuanTransfer> dispQuan;
 
@@ -170,10 +170,10 @@ public class WarehouseBatchTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * Наполнение модели
+	 * РќР°РїРѕР»РЅРµРЅРёРµ РјРѕРґРµР»Рё
 	 * 
 	 * @param batchesList
-	 *            Список доступных складских партий
+	 *            РЎРїРёСЃРѕРє РґРѕСЃС‚СѓРїРЅС‹С… СЃРєР»Р°РґСЃРєРёС… РїР°СЂС‚РёР№
 	 */
 	public void setBatchesList(List<StockBatch> batchesList) {
 		this.batchesList = batchesList;
@@ -184,8 +184,8 @@ public class WarehouseBatchTableModel extends AbstractTableModel {
 
 	/**
 	 * 
-	 * @return список объектов, содержащий в себе количество списываемых позиций
-	 *         в двух ЕИ
+	 * @return СЃРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ, СЃРѕРґРµСЂР¶Р°С‰РёР№ РІ СЃРµР±Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРїРёСЃС‹РІР°РµРјС‹С… РїРѕР·РёС†РёР№
+	 *         РІ РґРІСѓС… Р•Р
 	 */
 	public List<BatchQuanTransfer> getDispQuan() {
 		return dispQuan;

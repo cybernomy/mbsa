@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.generic.ui.DefaultRestrictionForm;
 
 /**
- * Контроллер формы условий отбора версий планирования платежей
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° РІРµСЂСЃРёР№ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ РїР»Р°С‚РµР¶РµР№
  * 
  * @author leonova
  * @version $Id: VersionRest.java,v 1.2 2006/09/01 08:04:34 leonova Exp $ 

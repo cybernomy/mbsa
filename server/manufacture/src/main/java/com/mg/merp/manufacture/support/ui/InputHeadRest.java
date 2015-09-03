@@ -25,7 +25,7 @@ import com.mg.merp.mfreference.model.WorkCenter;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Контроллер формы условий отбора актов выпуска готовой продукции
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° Р°РєС‚РѕРІ РІС‹РїСѓСЃРєР° РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё
  * 
  * @author leonova
  * @version $Id: InputHeadRest.java,v 1.3 2007/07/31 06:31:06 safonov Exp $ 
@@ -35,7 +35,7 @@ public class InputHeadRest extends ManufactureDocumentRest {
 	@DataItemName("Manufacture.InputDocHead.Oper")
 	protected JobRoute oper = null;
 	protected WorkCenter workCenter = null;
-	protected Job Job = null; //названо по JavaBean NC, чтобы работал SearchHelp
+	protected Job Job = null; //РЅР°Р·РІР°РЅРѕ РїРѕ JavaBean NC, С‡С‚РѕР±С‹ СЂР°Р±РѕС‚Р°Р» SearchHelp
 	@DataItemName("Manufacture.InputDocHead.Contractor")
 	protected Contractor contractor = null;
 	@DataItemName("Manufacture.InputDocHead.Employee")

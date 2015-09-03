@@ -19,7 +19,7 @@ import java.io.Serializable;
 import com.mg.merp.docprocess.model.DocHeadState;
 
 /**
- * Вывод результатов выполнения этапа ДО бизнес-расширением в UI
+ * Р’С‹РІРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РІС‹РїРѕР»РЅРµРЅРёСЏ СЌС‚Р°РїР° Р”Рћ Р±РёР·РЅРµСЃ-СЂР°СЃС€РёСЂРµРЅРёРµРј РІ UI
  * 
  * @author Oleg V. Safonov
  * @version $Id: BAiDocFlowPluginViewer.java,v 1.1 2007/09/27 09:21:05 safonov Exp $
@@ -27,18 +27,18 @@ import com.mg.merp.docprocess.model.DocHeadState;
 public interface BAiDocFlowPluginViewer extends Serializable {
 
 	/**
-	 * получить текстовое представление результата выполнения этапа ДО
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ СЂРµР·СѓР»СЊС‚Р°С‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ СЌС‚Р°РїР° Р”Рћ
 	 * 
-	 * @param docHeadState	состояние ДО
-	 * @return	текстовое представление
+	 * @param docHeadState	СЃРѕСЃС‚РѕСЏРЅРёРµ Р”Рћ
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 */
 	String getDocActionResultTextRepresentation(DocHeadState docHeadState);
 	
 	/**
-	 * показать результат выполнения этапа ДО (например если этап создал документ, то можно
-	 * показать данный документ в UI)
+	 * РїРѕРєР°Р·Р°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ СЌС‚Р°РїР° Р”Рћ (РЅР°РїСЂРёРјРµСЂ РµСЃР»Рё СЌС‚Р°Рї СЃРѕР·РґР°Р» РґРѕРєСѓРјРµРЅС‚, С‚Рѕ РјРѕР¶РЅРѕ
+	 * РїРѕРєР°Р·Р°С‚СЊ РґР°РЅРЅС‹Р№ РґРѕРєСѓРјРµРЅС‚ РІ UI)
 	 * 
-	 * @param docHeadState	состояние ДО
+	 * @param docHeadState	СЃРѕСЃС‚РѕСЏРЅРёРµ Р”Рћ
 	 */
 	void showDocActionResult(DocHeadState docHeadState);
 

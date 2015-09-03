@@ -16,7 +16,7 @@ package com.mg.merp.warehouse;
 import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 
 /**
- * Интерфейс "Процессор управления запасами"
+ * РРЅС‚РµСЂС„РµР№СЃ "РџСЂРѕС†РµСЃСЃРѕСЂ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РїР°СЃР°РјРё"
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -25,131 +25,131 @@ import com.mg.merp.docflow.DocFlowPluginInvokeParams;
 public interface WarehouseProcessor {
 
 	/**
-	 * Этап "Отработка по складу"
+	 * Р­С‚Р°Рї "РћС‚СЂР°Р±РѕС‚РєР° РїРѕ СЃРєР»Р°РґСѓ"
 	 * 
-	 * @param params	параметры этапа
-	 * @param doInteractive	выполнять интерактивно
-	 * @param doCalculateCost	расчитывать цену
-	 * @param listener	слушатель
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
+	 * @param doInteractive	РІС‹РїРѕР»РЅСЏС‚СЊ РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕ
+	 * @param doCalculateCost	СЂР°СЃС‡РёС‚С‹РІР°С‚СЊ С†РµРЅСѓ
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	void processWarehouseTransaction(DocFlowPluginInvokeParams params, boolean doInteractive
 			, boolean doCalculateCost, WarehouseTransactionListener listener);
 
 	/**
-	 * Откат этапа "Отработка по складу"
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° "РћС‚СЂР°Р±РѕС‚РєР° РїРѕ СЃРєР»Р°РґСѓ"
 	 * 
-	 * @param params	параметры
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹
 	 */
 	void rollbackWarehouseTransaction(DocFlowPluginInvokeParams params);
 
 	/**
-	 * Этап "Отработка планируемого движения по складу"
+	 * Р­С‚Р°Рї "РћС‚СЂР°Р±РѕС‚РєР° РїР»Р°РЅРёСЂСѓРµРјРѕРіРѕ РґРІРёР¶РµРЅРёСЏ РїРѕ СЃРєР»Р°РґСѓ"
 	 * 
-	 * @param params	параметры этапа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void processWarehousePlanTransaction(DocFlowPluginInvokeParams params);
 
 	/**
-	 * Откат этапа "Отработка планируемого движения по складу"
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° "РћС‚СЂР°Р±РѕС‚РєР° РїР»Р°РЅРёСЂСѓРµРјРѕРіРѕ РґРІРёР¶РµРЅРёСЏ РїРѕ СЃРєР»Р°РґСѓ"
 	 * 
-	 * @param params	параметры этапа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void rollbackWarehousePlanTransaction(DocFlowPluginInvokeParams params);
 
 	/**
-	 * Этап "Снятие с плана движения по складу"
+	 * Р­С‚Р°Рї "РЎРЅСЏС‚РёРµ СЃ РїР»Р°РЅР° РґРІРёР¶РµРЅРёСЏ РїРѕ СЃРєР»Р°РґСѓ"
 	 * 
-	 * @param params	параметры этапа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void processWarehousePlanWithdrawalTransaction(DocFlowPluginInvokeParams params);
 
 	/**
-	 * Откат этапа "Снятие с плана движения по складу"
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° "РЎРЅСЏС‚РёРµ СЃ РїР»Р°РЅР° РґРІРёР¶РµРЅРёСЏ РїРѕ СЃРєР»Р°РґСѓ"
 	 * 
-	 * @param params	параметры этапа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void rollbackWarehousePlanWithdrawalTransaction(DocFlowPluginInvokeParams params);
 
 	/**
-	 * Этап "Резервирование по складу"
+	 * Р­С‚Р°Рї "Р РµР·РµСЂРІРёСЂРѕРІР°РЅРёРµ РїРѕ СЃРєР»Р°РґСѓ"
 	 * 
-	 * @param params	параметры этапа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void processWarehouseReservTransaction(DocFlowPluginInvokeParams params);
 
 	/**
-	 * Откат этапа "Резервирование по складу"
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° "Р РµР·РµСЂРІРёСЂРѕРІР°РЅРёРµ РїРѕ СЃРєР»Р°РґСѓ"
 	 * 
-	 * @param params	параметры этапа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void rollbackWarehouseReservTransaction(DocFlowPluginInvokeParams params);
 
 	/**
-	 * Этап "Снятие с резерва по складу"
+	 * Р­С‚Р°Рї "РЎРЅСЏС‚РёРµ СЃ СЂРµР·РµСЂРІР° РїРѕ СЃРєР»Р°РґСѓ"
 	 * 
-	 * @param params	параметры этапа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void processWarehouseReservWithdrawalTransaction(DocFlowPluginInvokeParams params);
 
 	/**
-	 * Откат этапа "Снятие с резерва по складу"
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° "РЎРЅСЏС‚РёРµ СЃ СЂРµР·РµСЂРІР° РїРѕ СЃРєР»Р°РґСѓ"
 	 * 
-	 * @param params	параметры этапа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void rollbackWarehouseReservWithdrawalTransaction(DocFlowPluginInvokeParams params);
 	
 	/**
-	 * Этап "Рассчитать цены в документе на основании данных склада"
+	 * Р­С‚Р°Рї "Р Р°СЃСЃС‡РёС‚Р°С‚СЊ С†РµРЅС‹ РІ РґРѕРєСѓРјРµРЅС‚Рµ РЅР° РѕСЃРЅРѕРІР°РЅРёРё РґР°РЅРЅС‹С… СЃРєР»Р°РґР°"
 	 * 
-	 * @param params	параметры этапа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void processCalcPricesByWarehouseDataTransaction(DocFlowPluginInvokeParams params);
 
 	/**
-	 * Откат этапа "Рассчитать цены в документе на основании данных склада"
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° "Р Р°СЃСЃС‡РёС‚Р°С‚СЊ С†РµРЅС‹ РІ РґРѕРєСѓРјРµРЅС‚Рµ РЅР° РѕСЃРЅРѕРІР°РЅРёРё РґР°РЅРЅС‹С… СЃРєР»Р°РґР°"
 	 * 
-	 * @param params	параметры этапа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void rollbackCalcPricesByWarehouseDataTransaction(DocFlowPluginInvokeParams params);
 	
 	/**
-	 * Этап "Собрать комплект"
+	 * Р­С‚Р°Рї "РЎРѕР±СЂР°С‚СЊ РєРѕРјРїР»РµРєС‚"
 	 * 
-	 * @param params	параметры этапа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void processAssembleProductTransaction(DocFlowPluginInvokeParams params, boolean assembleProductKind);
 
 	/**
-	 * Откат этапа "Собрать комплект"
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° "РЎРѕР±СЂР°С‚СЊ РєРѕРјРїР»РµРєС‚"
 	 * 
-	 * @param params	параметры этапа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void rollbackAssembleProductTransaction(DocFlowPluginInvokeParams params);
 	
 	/**
-	 * Этап "Разобрать комплект"
+	 * Р­С‚Р°Рї "Р Р°Р·РѕР±СЂР°С‚СЊ РєРѕРјРїР»РµРєС‚"
 	 * 
-	 * @param params	параметры этапа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void processDisAssembleProductTransaction(DocFlowPluginInvokeParams params);
 
 	/**
-	 * Откат этапа "Разобрать комплект"
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° "Р Р°Р·РѕР±СЂР°С‚СЊ РєРѕРјРїР»РµРєС‚"
 	 * 
-	 * @param params	параметры этапа
+	 * @param params	РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void rollbackDisAssembleProductTransaction(DocFlowPluginInvokeParams params);
 	
 	/**
-	 * Этап "Проставить номер ГТД из складской партии"
-	 * @param params - параметры этапа
-	 * @param warehouseProcessListener - слушатель складского процессора
+	 * Р­С‚Р°Рї "РџСЂРѕСЃС‚Р°РІРёС‚СЊ РЅРѕРјРµСЂ Р“РўР” РёР· СЃРєР»Р°РґСЃРєРѕР№ РїР°СЂС‚РёРё"
+	 * @param params - РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
+	 * @param warehouseProcessListener - СЃР»СѓС€Р°С‚РµР»СЊ СЃРєР»Р°РґСЃРєРѕРіРѕ РїСЂРѕС†РµСЃСЃРѕСЂР°
 	 */
 	void proccessCustomsDeclarationByStockBach(DocFlowPluginInvokeParams params, WarehouseProcessListener warehouseProcessListener);
 	
 	/**
-	 * Откат этапа "Проставить номер ГТД из складской партии"
-	 * @param params - параметры этапа
+	 * РћС‚РєР°С‚ СЌС‚Р°РїР° "РџСЂРѕСЃС‚Р°РІРёС‚СЊ РЅРѕРјРµСЂ Р“РўР” РёР· СЃРєР»Р°РґСЃРєРѕР№ РїР°СЂС‚РёРё"
+	 * @param params - РїР°СЂР°РјРµС‚СЂС‹ СЌС‚Р°РїР°
 	 */
 	void rollbackCustomsDeclarationByStockBach(DocFlowPluginInvokeParams params);
 	

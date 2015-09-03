@@ -23,7 +23,7 @@ import com.mg.merp.account.model.AdvanceRepHeadModel;
 import com.mg.merp.document.generic.DocumentModelServiceBean;
 
 /**
- * Бизнес-компонент "Образцы авансовых отчетов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ Р°РІР°РЅСЃРѕРІС‹С… РѕС‚С‡РµС‚РѕРІ" 
  * 
  * @author leonova
  * @version $Id: AdvanceRepHeadModelServiceBean.java,v 1.3 2006/09/12 11:16:43 leonova Exp $

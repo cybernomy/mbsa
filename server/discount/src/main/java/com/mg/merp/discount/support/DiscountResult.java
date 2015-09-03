@@ -17,7 +17,7 @@ package com.mg.merp.discount.support;
 import java.math.BigDecimal;
 
 /**
- * Результат расчета группы скидок/наценок
+ * Р РµР·СѓР»СЊС‚Р°С‚ СЂР°СЃС‡РµС‚Р° РіСЂСѓРїРїС‹ СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє
  * 
  * @author Artem V. Sharapov
  * @version $Id: DiscountResult.java,v 1.1 2007/10/30 14:13:48 sharapov Exp $
@@ -27,17 +27,17 @@ public class DiscountResult {
 	// Fields
 	
 	/**
-	 * Цена позиции с учетом скидки/наценки
+	 * Р¦РµРЅР° РїРѕР·РёС†РёРё СЃ СѓС‡РµС‚РѕРј СЃРєРёРґРєРё/РЅР°С†РµРЅРєРё
 	 */
 	private BigDecimal priceWithDiscount;
 	
 	/**
-	 * Скидка/наценка позиции
+	 * РЎРєРёРґРєР°/РЅР°С†РµРЅРєР° РїРѕР·РёС†РёРё
 	 */
 	private BigDecimal discount;
 	
 	/**
-	 * Признак "действует ли скидка в данном контексте"
+	 * РџСЂРёР·РЅР°Рє "РґРµР№СЃС‚РІСѓРµС‚ Р»Рё СЃРєРёРґРєР° РІ РґР°РЅРЅРѕРј РєРѕРЅС‚РµРєСЃС‚Рµ"
 	 */
 	private boolean isApplied;
 	

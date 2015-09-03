@@ -19,7 +19,7 @@ import org.jboss.system.ServiceMBean;
 import com.mg.framework.api.EntityInterceptorManager;
 
 /**
- * Сервис менеджера перехватчиков действий над объектами сущностями
+ * РЎРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° РїРµСЂРµС…РІР°С‚С‡РёРєРѕРІ РґРµР№СЃС‚РІРёР№ РЅР°Рґ РѕР±СЉРµРєС‚Р°РјРё СЃСѓС‰РЅРѕСЃС‚СЏРјРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityInterceptorManagerServiceMBean.java,v 1.2 2006/08/04 13:27:52 safonov Exp $

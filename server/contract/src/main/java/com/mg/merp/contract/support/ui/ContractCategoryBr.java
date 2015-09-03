@@ -24,14 +24,14 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.contract.model.ContractCategory;
 
 /**
- * Контроллер браузера бизнес-компонента "Категория договора"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР°С‚РµРіРѕСЂРёСЏ РґРѕРіРѕРІРѕСЂР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ContractCategoryBr.java,v 1.1 2007/09/17 12:29:23 alikaev Exp $
  */
 public class ContractCategoryBr extends DefaultPlainBrowseForm {
 	
-	private final String INIT_QUERY_TEXT = "select %s from ContractCategory cс";	
+	private final String INIT_QUERY_TEXT = "select %s from ContractCategory cСЃ";	
 
 	/*
 	 * (non-Javadoc)
@@ -47,9 +47,9 @@ public class ContractCategoryBr extends DefaultPlainBrowseForm {
 			@Override
 			protected Set<TableEJBQLFieldDef> getDefaultFieldDefsSet() {
 				Set<TableEJBQLFieldDef> result = super.getDefaultFieldDefsSet();
-				result.add(new TableEJBQLFieldDef(ContractCategory.class, "Id", "cс.Id", true));
-				result.add(new TableEJBQLFieldDef(ContractCategory.class, "Code", "cс.Code", false));				
-				result.add(new TableEJBQLFieldDef(ContractCategory.class, "Name", "cс.Name", false));				
+				result.add(new TableEJBQLFieldDef(ContractCategory.class, "Id", "cСЃ.Id", true));
+				result.add(new TableEJBQLFieldDef(ContractCategory.class, "Code", "cСЃ.Code", false));				
+				result.add(new TableEJBQLFieldDef(ContractCategory.class, "Name", "cСЃ.Name", false));				
 				return DatabaseUtils.embedAddinFieldsDefaultEJBQLFieldDefs(result, service);
 
 			}

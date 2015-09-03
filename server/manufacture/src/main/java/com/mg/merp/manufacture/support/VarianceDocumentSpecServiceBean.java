@@ -23,7 +23,7 @@ import com.mg.merp.manufacture.generic.ManufactureDocumentSpecServiceBean;
 import com.mg.merp.manufacture.model.VarianceDocumentSpec;
 
 /**
- * Бизнес-компонент "Спецификация докумементов по отклонениям" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРєСѓРјРµРјРµРЅС‚РѕРІ РїРѕ РѕС‚РєР»РѕРЅРµРЅРёСЏРј" 
  * 
  * @author leonova
  * @version $Id: VarianceDocumentSpecServiceBean.java,v 1.5 2007/02/06 17:15:40 safonov Exp $

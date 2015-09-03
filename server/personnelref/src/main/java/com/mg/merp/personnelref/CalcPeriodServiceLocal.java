@@ -17,7 +17,7 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.CalcPeriod;
 
 /**
- * Сервис бизнес-компонента "Расчетные периоды"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р Р°СЃС‡РµС‚РЅС‹Рµ РїРµСЂРёРѕРґС‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,29 +26,29 @@ import com.mg.merp.personnelref.model.CalcPeriod;
 public interface CalcPeriodServiceLocal extends com.mg.framework.api.DataBusinessObjectService<CalcPeriod, Integer> {
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/personnelref/CalcPeriod"; //$NON-NLS-1$
 	
 	/**
-	 * Имя профиля пользователя для хранения текущего расчетного периода 
+	 * РРјСЏ РїСЂРѕС„РёР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ С‚РµРєСѓС‰РµРіРѕ СЂР°СЃС‡РµС‚РЅРѕРіРѕ РїРµСЂРёРѕРґР° 
 	 */
 	static final String PROFILE_NAME = "PersonnelRef"; //$NON-NLS-1$
 	
 	/**
-	 * Имя значения текущего расчетного периода в профиле пользователя
+	 * РРјСЏ Р·РЅР°С‡РµРЅРёСЏ С‚РµРєСѓС‰РµРіРѕ СЂР°СЃС‡РµС‚РЅРѕРіРѕ РїРµСЂРёРѕРґР° РІ РїСЂРѕС„РёР»Рµ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 */
 	static final String PROFILE_PROPERTY = "CurrentCalcPeriodId"; //$NON-NLS-1$
 		
 	/**
-	 * Получить текущий расчетный период
-	 * @return текущий расчетный период
+	 * РџРѕР»СѓС‡РёС‚СЊ С‚РµРєСѓС‰РёР№ СЂР°СЃС‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @return С‚РµРєСѓС‰РёР№ СЂР°СЃС‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ
 	 */
 	CalcPeriod getCurrentCalcPeriod();
 	
 	/**
-	 * Установить текущий расчетный период
-	 * @param calcPeriodId - идентификатор расчетного периода
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ С‚РµРєСѓС‰РёР№ СЂР°СЃС‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ
+	 * @param calcPeriodId - РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂР°СЃС‡РµС‚РЅРѕРіРѕ РїРµСЂРёРѕРґР°
 	 */
 	void setCurrentCalcPeriod(Integer calcPeriodId);
 	

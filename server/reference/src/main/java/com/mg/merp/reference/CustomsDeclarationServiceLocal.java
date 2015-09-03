@@ -18,7 +18,7 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.reference.model.CustomsDeclaration;
 
 /**
- * Сервис бизнес-компонента "Грузовые таможенные декларации"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р“СЂСѓР·РѕРІС‹Рµ С‚Р°РјРѕР¶РµРЅРЅС‹Рµ РґРµРєР»Р°СЂР°С†РёРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: CustomsDeclarationServiceLocal.java,v 1.1 2007/01/17 11:50:58 sharapov Exp $

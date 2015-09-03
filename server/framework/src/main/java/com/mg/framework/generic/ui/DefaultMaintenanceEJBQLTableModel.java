@@ -34,8 +34,8 @@ import com.mg.framework.support.ui.widget.TableEJBQLFieldDef;
 import com.mg.framework.utils.MiscUtils;
 
 /**
- * Стандартная реализация модели таблицы поддержки для отображения данных полученных с помощью языка
- * объектных запросов (EJBQL)
+ * РЎС‚Р°РЅРґР°СЂС‚РЅР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РјРѕРґРµР»Рё С‚Р°Р±Р»РёС†С‹ РїРѕРґРґРµСЂР¶РєРё РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ РґР°РЅРЅС‹С… РїРѕР»СѓС‡РµРЅРЅС‹С… СЃ РїРѕРјРѕС‰СЊСЋ СЏР·С‹РєР°
+ * РѕР±СЉРµРєС‚РЅС‹С… Р·Р°РїСЂРѕСЃРѕРІ (EJBQL)
  * 
  * @author Oleg V. Safonov
  * @version $Id: DefaultMaintenanceEJBQLTableModel.java,v 1.5 2009/02/09 14:30:35 safonov Exp $
@@ -49,7 +49,7 @@ public abstract class DefaultMaintenanceEJBQLTableModel extends DefaultEJBQLTabl
 	protected List<TableColumnInfo> columnInfos = null;
 	protected List<String> visibleColumnNames = null;
 	/**
-	 * идентификатор мастера
+	 * РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РјР°СЃС‚РµСЂР°
 	 */
 	private Serializable masterKey;
 
@@ -87,10 +87,10 @@ public abstract class DefaultMaintenanceEJBQLTableModel extends DefaultEJBQLTabl
 	}
 	
 	/**
-	 * возвращает индекс столбца первичного ключа, должен быть переопределен в классе наследнике если отличается от 0,
-	 * значение находится в диапазоне от 0 до количество столбцов в браузере - 1
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ РёРЅРґРµРєСЃ СЃС‚РѕР»Р±С†Р° РїРµСЂРІРёС‡РЅРѕРіРѕ РєР»СЋС‡Р°, РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїРµСЂРµРѕРїСЂРµРґРµР»РµРЅ РІ РєР»Р°СЃСЃРµ РЅР°СЃР»РµРґРЅРёРєРµ РµСЃР»Рё РѕС‚Р»РёС‡Р°РµС‚СЃСЏ РѕС‚ 0,
+	 * Р·РЅР°С‡РµРЅРёРµ РЅР°С…РѕРґРёС‚СЃСЏ РІ РґРёР°РїР°Р·РѕРЅРµ РѕС‚ 0 РґРѕ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ РІ Р±СЂР°СѓР·РµСЂРµ - 1
 	 * 
-	 * @return индекс
+	 * @return РёРЅРґРµРєСЃ
 	 */
 	protected int getPrimaryKeyFieldIndex() {
 		return 0;
@@ -104,10 +104,10 @@ public abstract class DefaultMaintenanceEJBQLTableModel extends DefaultEJBQLTabl
 	}
 
 	/**
-	 * получить идентификатор мастера, значение будет доступно после срабатывания слушателя
-	 * таблицы мастера
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РјР°СЃС‚РµСЂР°, Р·РЅР°С‡РµРЅРёРµ Р±СѓРґРµС‚ РґРѕСЃС‚СѓРїРЅРѕ РїРѕСЃР»Рµ СЃСЂР°Р±Р°С‚С‹РІР°РЅРёСЏ СЃР»СѓС€Р°С‚РµР»СЏ
+	 * С‚Р°Р±Р»РёС†С‹ РјР°СЃС‚РµСЂР°
 	 * 
-	 * @return	идентификатор мастера
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РјР°СЃС‚РµСЂР°
 	 */
 	protected Serializable getMasterKey() {
 		return masterKey;
@@ -184,15 +184,15 @@ public abstract class DefaultMaintenanceEJBQLTableModel extends DefaultEJBQLTabl
 			}
 		}
 
-		//создадим описатель видимых полей
+		//СЃРѕР·РґР°РґРёРј РѕРїРёСЃР°С‚РµР»СЊ РІРёРґРёРјС‹С… РїРѕР»РµР№
 		if (columnInfos == null) {
 			columnInfos = new ArrayList<TableColumnInfo>();
 			for (TableEJBQLFieldDef fldDef : defaultFieldDefs) {
-				//если нет метаданных то используем псевдоним как заголовок
+				//РµСЃР»Рё РЅРµС‚ РјРµС‚Р°РґР°РЅРЅС‹С… С‚Рѕ РёСЃРїРѕР»СЊР·СѓРµРј РїСЃРµРІРґРѕРЅРёРј РєР°Рє Р·Р°РіРѕР»РѕРІРѕРє
 				String title = fldDef.getFieldMetadata() == null ? fldDef.getAlias() : fldDef.getFieldMetadata().getHeader();
-				//если не устанавливали видимость полей и поле не является пользовательским, то поля видны
-				//пользовательские поля делаем невидимыми по умолчанию, до тех пор пока пользователь не отметит
-				//их как видимые
+				//РµСЃР»Рё РЅРµ СѓСЃС‚Р°РЅР°РІР»РёРІР°Р»Рё РІРёРґРёРјРѕСЃС‚СЊ РїРѕР»РµР№ Рё РїРѕР»Рµ РЅРµ СЏРІР»СЏРµС‚СЃСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРј, С‚Рѕ РїРѕР»СЏ РІРёРґРЅС‹
+				//РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РїРѕР»СЏ РґРµР»Р°РµРј РЅРµРІРёРґРёРјС‹РјРё РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, РґРѕ С‚РµС… РїРѕСЂ РїРѕРєР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РЅРµ РѕС‚РјРµС‚РёС‚
+				//РёС… РєР°Рє РІРёРґРёРјС‹Рµ
 				boolean isVisible = visibleColumnNames == null ? !fldDef.getAlias().startsWith(CustomFieldsManager.CUSTOM_FIELD_NAME_PREFIX) : visibleColumnNames.indexOf(fldDef.getAlias()) != -1;
 				columnInfos.add(new TableColumnInfo(fldDef.getAlias(), title, isVisible, fldDef.isMandatory()));
 			}
@@ -224,8 +224,8 @@ public abstract class DefaultMaintenanceEJBQLTableModel extends DefaultEJBQLTabl
 		
 		this.visibleColumnNames = visibleColumnNames;
 
-		//перегрузим таблицу если только была заполнена, иначе просто установим список видимых полей
-		//при формировании таблицы они будут учтены
+		//РїРµСЂРµРіСЂСѓР·РёРј С‚Р°Р±Р»РёС†Сѓ РµСЃР»Рё С‚РѕР»СЊРєРѕ Р±С‹Р»Р° Р·Р°РїРѕР»РЅРµРЅР°, РёРЅР°С‡Рµ РїСЂРѕСЃС‚Рѕ СѓСЃС‚Р°РЅРѕРІРёРј СЃРїРёСЃРѕРє РІРёРґРёРјС‹С… РїРѕР»РµР№
+		//РїСЂРё С„РѕСЂРјРёСЂРѕРІР°РЅРёРё С‚Р°Р±Р»РёС†С‹ РѕРЅРё Р±СѓРґСѓС‚ СѓС‡С‚РµРЅС‹
 		if (columnInfos != null) {
 			for (TableColumnInfo info : columnInfos)
 				info.setVisible(visibleColumnNames.indexOf(info.getName()) != -1);

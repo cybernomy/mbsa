@@ -32,7 +32,7 @@ import com.mg.merp.reference.model.PriceListHead;
 import com.mg.merp.reference.model.PriceType;
 
 /**
- * Контроллер формы поиска "Типов цен"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° "РўРёРїРѕРІ С†РµРЅ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -122,8 +122,8 @@ public class PriceTypeSearchForm extends AbstractSearchForm {
 	}
 
 	/**
-	 * Установить заголовок прайс-листа
-	 * @param priceListHead - заголовок прайс-листа
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ Р·Р°РіРѕР»РѕРІРѕРє РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
+	 * @param priceListHead - Р·Р°РіРѕР»РѕРІРѕРє РїСЂР°Р№СЃ-Р»РёСЃС‚Р°
 	 */
 	public void setPriceListHead(PriceListHead priceListHead) {
 		this.priceListHead = priceListHead;

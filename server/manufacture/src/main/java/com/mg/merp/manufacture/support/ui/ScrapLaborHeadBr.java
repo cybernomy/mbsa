@@ -27,7 +27,7 @@ import com.mg.merp.core.support.CoreUtils;
 import com.mg.merp.manufacture.ScrapLaborHeadServiceLocal;
 
 /**
- * Контроллеер формы списка актов на списание потерь времени, отработанного РС
+ * РљРѕРЅС‚СЂРѕР»Р»РµРµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РїРѕС‚РµСЂСЊ РІСЂРµРјРµРЅРё, РѕС‚СЂР°Р±РѕС‚Р°РЅРЅРѕРіРѕ Р РЎ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: ScrapLaborHeadBr.java,v 1.10 2009/02/10 14:34:19 safonov Exp $

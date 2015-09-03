@@ -24,7 +24,7 @@ import com.mg.merp.salary.CalcListSectionRefServiceLocal;
 import com.mg.merp.salary.model.CalcListSectionRef;
 
 /**
- * Бизнес-компонент "Разделы расчетных листков" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р Р°Р·РґРµР»С‹ СЂР°СЃС‡РµС‚РЅС‹С… Р»РёСЃС‚РєРѕРІ" 
  * 
  * @author leonova
  * @version $Id: CalcListSectionRefServiceBean.java,v 1.3 2006/08/31 11:37:58 leonova Exp $

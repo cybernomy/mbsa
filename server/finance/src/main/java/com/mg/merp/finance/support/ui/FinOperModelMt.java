@@ -49,7 +49,7 @@ import com.mg.merp.finance.model.SpecificationModel;
 import com.mg.merp.finance.support.Messages;
 
 /**
- * Контроллер формы поддержки образцов финансовых операций
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё РѕР±СЂР°Р·С†РѕРІ С„РёРЅР°РЅСЃРѕРІС‹С… РѕРїРµСЂР°С†РёР№
  *
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -299,15 +299,15 @@ public class FinOperModelMt extends DefaultMaintenanceForm implements MasterMode
 	}
 
 	/**
-	 * Возвращает код аналитики
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ РєРѕРґ Р°РЅР°Р»РёС‚РёРєРё
 	 * @param accountCode
-	 * 				- код счета
+	 * 				- РєРѕРґ СЃС‡РµС‚Р°
 	 * @param anlId
-	 * 				- идентификатор аналитики
+	 * 				- РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р°РЅР°Р»РёС‚РёРєРё
 	 * @param anlLevel
-	 * 				- уровень аналитики
+	 * 				- СѓСЂРѕРІРµРЅСЊ Р°РЅР°Р»РёС‚РёРєРё
 	 * @param anlClass
-	 * 				- класс аналитики
+	 * 				- РєР»Р°СЃСЃ Р°РЅР°Р»РёС‚РёРєРё
 	 * @return
 	 */
 	protected String getFieldName(String accountCode, Integer anlId, int anlLevel, String anlClass) {
@@ -328,24 +328,24 @@ public class FinOperModelMt extends DefaultMaintenanceForm implements MasterMode
 	}
 
 	/**
-	 * Обработчик просмотра документа-основания
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°-РѕСЃРЅРѕРІР°РЅРёСЏ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewBaseDocument(WidgetEvent event) {
 		DocumentUtils.viewDocument(((OperationModel) getEntity()).getBaseDoc());
 	}
 
 	/**
-	 * Обработчик просмотра документа
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР° РґРѕРєСѓРјРµРЅС‚Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewConfirmDocument(WidgetEvent event) {
 		DocumentUtils.viewDocument(((OperationModel) getEntity()).getConfirmDoc());
 	}
 
 	/**
-	 * Обработчик просмотра/выбора контракта
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСЂРѕСЃРјРѕС‚СЂР°/РІС‹Р±РѕСЂР° РєРѕРЅС‚СЂР°РєС‚Р°
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionViewOrChooseContract(WidgetEvent event) {
 		final OperationModel finOperModel = (OperationModel) getEntity();

@@ -31,7 +31,7 @@ import com.mg.merp.docflow.support.Messages;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * Контроллер формы диалога вызываемого при частичной отработке ЭДО
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РґРёР°Р»РѕРіР° РІС‹Р·С‹РІР°РµРјРѕРіРѕ РїСЂРё С‡Р°СЃС‚РёС‡РЅРѕР№ РѕС‚СЂР°Р±РѕС‚РєРµ Р­Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @author Konstantin S. Alikaev
@@ -180,9 +180,9 @@ public class ChooseDocumentSpecDialog extends DefaultWizardDialog {
 	}
 	
 	/**
-	 * Обработчик пункта КМ "Отметить все позиции к отработке"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РћС‚РјРµС‚РёС‚СЊ РІСЃРµ РїРѕР·РёС†РёРё Рє РѕС‚СЂР°Р±РѕС‚РєРµ"
 	 * 
-	 * @param event - событие
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionChooseAll(WidgetEvent event) {
 		DocSpecListModel tableModel = (DocSpecListModel) this.specList.getModel();
@@ -196,9 +196,9 @@ public class ChooseDocumentSpecDialog extends DefaultWizardDialog {
 	}
 	
 	/**
-	 * Обработчик пункта КМ "Отменить все позиции к отработке"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° РљРњ "РћС‚РјРµРЅРёС‚СЊ РІСЃРµ РїРѕР·РёС†РёРё Рє РѕС‚СЂР°Р±РѕС‚РєРµ"
 	 * 
-	 * @param event - событие
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionClearAll(WidgetEvent event) {
 		DocSpecListModel tableModel = (DocSpecListModel) this.specList.getModel();
@@ -212,7 +212,7 @@ public class ChooseDocumentSpecDialog extends DefaultWizardDialog {
 	}
 
 	/**
-	 * обработчик пункта "Отметить к отработке выделенные"
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РїСѓРЅРєС‚Р° "РћС‚РјРµС‚РёС‚СЊ Рє РѕС‚СЂР°Р±РѕС‚РєРµ РІС‹РґРµР»РµРЅРЅС‹Рµ"
 	 * 
 	 * @param event
 	 */
@@ -234,7 +234,7 @@ public class ChooseDocumentSpecDialog extends DefaultWizardDialog {
 	}
 
 	/**
-	 * обработчик распределения суммы
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ СЃСѓРјРјС‹
 	 * 
 	 * @param event
 	 */
@@ -268,11 +268,11 @@ public class ChooseDocumentSpecDialog extends DefaultWizardDialog {
 			allotedSum = allotedSum.add(item.getPerformedSum());
 		}
 
-		//могла появиться погрешность
+		//РјРѕРіР»Р° РїРѕСЏРІРёС‚СЊСЃСЏ РїРѕРіСЂРµС€РЅРѕСЃС‚СЊ
 		if (allotedSum.compareTo(userTotalSum) != 0) {
 			BigDecimal maxSum = BigDecimal.ZERO;
 			int maxIdx = -1;
-			//погрешность распределения скинем на спецификацию с макс. суммой
+			//РїРѕРіСЂРµС€РЅРѕСЃС‚СЊ СЂР°СЃРїСЂРµРґРµР»РµРЅРёСЏ СЃРєРёРЅРµРј РЅР° СЃРїРµС†РёС„РёРєР°С†РёСЋ СЃ РјР°РєСЃ. СЃСѓРјРјРѕР№
 			for (int i = 0; i < specListModel.size(); i++) {
 				BigDecimal sum = specListModel.get(i).getPerformedSum();
 				if (maxSum.compareTo(sum) == -1) {

@@ -27,30 +27,30 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.baiengine.BusinessAddinEngineLocator;
 
 /**
- * Запуск BAi планировщиком 
+ * Р—Р°РїСѓСЃРє BAi РїР»Р°РЅРёСЂРѕРІС‰РёРєРѕРј 
  * 
  * @author Oleg V. Safonov
  * @version $Id: BAiJob.java,v 1.2 2008/08/28 13:40:35 safonov Exp $
  */
 public class BAiJob implements Job {
 	/**
-	 * код BAi
+	 * РєРѕРґ BAi
 	 */
 	public static final String BAI_CODE = "MG_BAI_CODE";
 	/**
-	 * код задачи планировщика
+	 * РєРѕРґ Р·Р°РґР°С‡Рё РїР»Р°РЅРёСЂРѕРІС‰РёРєР°
 	 */
 	public static final String SCHEDULER_TASK_CODE = SchedulerTaskBusinessAddin.SCHEDULER_TASK_CODE;
 	/**
-	 * имя учетной записи под которой будет выполняться задание
+	 * РёРјСЏ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё РїРѕРґ РєРѕС‚РѕСЂРѕР№ Р±СѓРґРµС‚ РІС‹РїРѕР»РЅСЏС‚СЊСЃСЏ Р·Р°РґР°РЅРёРµ
 	 */
 	public static final String SCHEDULER_USER_NAME = "SCHEDULER_USER_NAME";
 	/**
-	 * пароль учетной записи под которой будет выполняться задание
+	 * РїР°СЂРѕР»СЊ СѓС‡РµС‚РЅРѕР№ Р·Р°РїРёСЃРё РїРѕРґ РєРѕС‚РѕСЂРѕР№ Р±СѓРґРµС‚ РІС‹РїРѕР»РЅСЏС‚СЊСЃСЏ Р·Р°РґР°РЅРёРµ
 	 */
 	public static final String SCHEDULER_PASSWORD = "SCHEDULER_PASSWORD";
 	/**
-	 * мандант для которого будет выполняться задание
+	 * РјР°РЅРґР°РЅС‚ РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ Р±СѓРґРµС‚ РІС‹РїРѕР»РЅСЏС‚СЊСЃСЏ Р·Р°РґР°РЅРёРµ
 	 */
 	public static final String SCHEDULER_JOB_TENANT = "SCHEDULER_JOB_TENANT";
 	

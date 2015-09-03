@@ -31,7 +31,7 @@ import com.mg.merp.document.model.DocSection;
 import com.mg.merp.document.support.DocumentUtils;
 
 /**
- * Форма поиска стандартных (унаследованных от {@link com.mg.merp.document.model.DocHeadModel DocHeadModel}) образов документов.
+ * Р¤РѕСЂРјР° РїРѕРёСЃРєР° СЃС‚Р°РЅРґР°СЂС‚РЅС‹С… (СѓРЅР°СЃР»РµРґРѕРІР°РЅРЅС‹С… РѕС‚ {@link com.mg.merp.document.model.DocHeadModel DocHeadModel}) РѕР±СЂР°Р·РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ.
  * 
  * @author Oleg V. Safonov
  * @version $Id: StandartDocModelSearchForm.java,v 1.5 2008/12/18 12:35:40 safonov Exp $
@@ -52,7 +52,7 @@ public class StandartDocModelSearchForm extends AbstractSearchForm {
 				List<Object> paramsValue = new ArrayList<Object>();
 				paramsName.add("docSection");
 				paramsValue.add(docSection);
-				//получим через сервис имя сущности и используем в запросе для исключения полиморфного запроса
+				//РїРѕР»СѓС‡РёРј С‡РµСЂРµР· СЃРµСЂРІРёСЃ РёРјСЏ СЃСѓС‰РЅРѕСЃС‚Рё Рё РёСЃРїРѕР»СЊР·СѓРµРј РІ Р·Р°РїСЂРѕСЃРµ РґР»СЏ РёСЃРєР»СЋС‡РµРЅРёСЏ РїРѕР»РёРјРѕСЂС„РЅРѕРіРѕ Р·Р°РїСЂРѕСЃР°
 				DocumentPattern<?, ?> pattern = DocumentUtils.getDocumentPatternService(docSection);
 				String whereClause = DatabaseUtils.formatEJBQLHierarchyRestriction(folder != null, "dhm.Folder", 0, "folder", folder, paramsName, paramsValue, true);
 				setEntityList(MiscUtils.convertUncheckedList(DocHeadModel.class, OrmTemplate.getInstance().findByNamedParam(String.format(LOAD_DOCMODEL_EJBQL, pattern.getEntityClass().getName(), whereClause), paramsName.toArray(new String[paramsName.size()]), paramsValue.toArray(new Object[paramsValue.size()]))), fieldList);

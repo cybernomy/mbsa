@@ -24,7 +24,7 @@ import com.mg.merp.salary.MinSalaryServiceLocal;
 import com.mg.merp.salary.model.MinSalary;
 
 /**
- * Бизнес-компонент "Размеры минимальных заработных плат" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р Р°Р·РјРµСЂС‹ РјРёРЅРёРјР°Р»СЊРЅС‹С… Р·Р°СЂР°Р±РѕС‚РЅС‹С… РїР»Р°С‚" 
  * 
  * @author leonova
  * @version $Id: MinSalaryServiceBean.java,v 1.3 2006/08/28 12:44:53 leonova Exp $

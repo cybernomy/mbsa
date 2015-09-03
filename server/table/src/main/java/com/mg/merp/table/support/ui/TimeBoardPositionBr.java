@@ -47,7 +47,7 @@ import com.mg.merp.table.model.TimeBoardPosition;
 
 
 /**
- * Контроллер браузера должностей в табеле
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° РґРѕР»Р¶РЅРѕСЃС‚РµР№ РІ С‚Р°Р±РµР»Рµ
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -112,7 +112,7 @@ public class TimeBoardPositionBr extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Добавить сотрудника в табель
+	 * Р”РѕР±Р°РІРёС‚СЊ СЃРѕС‚СЂСѓРґРЅРёРєР° РІ С‚Р°Р±РµР»СЊ
 	 */
 	private void addTimeBoardPositions() {
 		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.salary.support.ui.PositionFillInStaffListSearchHelp"); //$NON-NLS-1$

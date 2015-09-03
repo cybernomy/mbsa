@@ -16,7 +16,7 @@ package com.mg.merp.manufacture.support.ui;
 
 
 /**
- * Вспомогательный класс для отображения формы актов на списание
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ
  * 
  * @author leonova
  * @version $Id: InputDocumentMaintenanceEJBQLTableModel.java,v 1.1 2006/08/28 04:47:23 leonova Exp $ 

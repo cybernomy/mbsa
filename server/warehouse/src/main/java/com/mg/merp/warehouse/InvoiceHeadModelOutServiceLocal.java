@@ -26,7 +26,7 @@ public interface InvoiceHeadModelOutServiceLocal
    extends DocumentPattern<InvoiceHeadModel, Integer>
 {
 	/**
-	 * тип папки для образцов исходящий накладных
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ РёСЃС…РѕРґСЏС‰РёР№ РЅР°РєР»Р°РґРЅС‹С…
 	 */
 	final static short FOLDER_PART = 48;
 }

@@ -17,7 +17,7 @@ package com.mg.merp.account.support.ui;
 import com.mg.framework.generic.ui.DefaultMaintenanceForm;
 
 /**
- * Контроллер формы поддержки аналитического плана счетов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р°РЅР°Р»РёС‚РёС‡РµСЃРєРѕРіРѕ РїР»Р°РЅР° СЃС‡РµС‚РѕРІ
  * 
  * @author leonova
  * @version $Id: AnlPlanMt.java,v 1.2 2009/02/25 15:09:59 safonov Exp $

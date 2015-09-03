@@ -21,7 +21,7 @@ import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Условия отбора КСУ
+ * РЈСЃР»РѕРІРёСЏ РѕС‚Р±РѕСЂР° РљРЎРЈ
  * 
  * @author Valentin A. Poroxnenko
  * @version $$Id: WareCardRest.java,v 1.2 2007/03/28 13:59:22 poroxnenko Exp $$

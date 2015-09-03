@@ -17,32 +17,32 @@ package com.mg.framework.api;
 import com.mg.framework.api.orm.PersistentObject;
 
 /**
- * Менеджер управления блокировками объектов, используется пессимистический механизм блокировок
+ * РњРµРЅРµРґР¶РµСЂ СѓРїСЂР°РІР»РµРЅРёСЏ Р±Р»РѕРєРёСЂРѕРІРєР°РјРё РѕР±СЉРµРєС‚РѕРІ, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РїРµСЃСЃРёРјРёСЃС‚РёС‡РµСЃРєРёР№ РјРµС…Р°РЅРёР·Рј Р±Р»РѕРєРёСЂРѕРІРѕРє
  * 
  * @author Oleg V. Safonov
  * @version $Id: LockManager.java,v 1.1 2006/12/15 09:26:17 safonov Exp $
  */
 public interface LockManager {
 	/**
-	 * блокировка объекта
+	 * Р±Р»РѕРєРёСЂРѕРІРєР° РѕР±СЉРµРєС‚Р°
 	 * 
-	 * @param entity	объект
-	 * @throws LockingException если объект был заблокирован конкурирующей транзакцией
+	 * @param entity	РѕР±СЉРµРєС‚
+	 * @throws LockingException РµСЃР»Рё РѕР±СЉРµРєС‚ Р±С‹Р» Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ РєРѕРЅРєСѓСЂРёСЂСѓСЋС‰РµР№ С‚СЂР°РЅР·Р°РєС†РёРµР№
 	 */
 	void lock(PersistentObject entity) throws LockingException;
 	
 	/**
-	 * проверка блокировки объекта
+	 * РїСЂРѕРІРµСЂРєР° Р±Р»РѕРєРёСЂРѕРІРєРё РѕР±СЉРµРєС‚Р°
 	 * 
-	 * @param entity	объект
-	 * @return	<code>true</code> если объект удачно заблокирован, в противном случае <code>false</code>
+	 * @param entity	РѕР±СЉРµРєС‚
+	 * @return	<code>true</code> РµСЃР»Рё РѕР±СЉРµРєС‚ СѓРґР°С‡РЅРѕ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ, РІ РїСЂРѕС‚РёРІРЅРѕРј СЃР»СѓС‡Р°Рµ <code>false</code>
 	 */
 	boolean tryLock(PersistentObject entity);
 	
 	/**
-	 * снять блокировку объекта
+	 * СЃРЅСЏС‚СЊ Р±Р»РѕРєРёСЂРѕРІРєСѓ РѕР±СЉРµРєС‚Р°
 	 * 
-	 * @param entity	объект
+	 * @param entity	РѕР±СЉРµРєС‚
 	 */
 	void unlock(PersistentObject entity);
 	

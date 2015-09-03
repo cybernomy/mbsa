@@ -20,7 +20,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.utils.MathUtils;
 
 /**
- * Модель бизнес-компонента "Строки производственного плана"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎС‚СЂРѕРєРё РїСЂРѕРёР·РІРѕРґСЃС‚РІРµРЅРЅРѕРіРѕ РїР»Р°РЅР°"
  * 
  * @author hbm2java
  * @author Artem V. Sharapov
@@ -532,16 +532,16 @@ public class MpsLine extends com.mg.framework.service.PersistentObjectHibernate
 
 	/**
 	 * 
-	 * @param availableOnBeginBucket Остаток на начало бакета
+	 * @param availableOnBeginBucket РћСЃС‚Р°С‚РѕРє РЅР° РЅР°С‡Р°Р»Рѕ Р±Р°РєРµС‚Р°
 	 * @return
 	 */
 	public BigDecimal calculatePlannedQuantity(BigDecimal availableOnBeginBucket) {
-		BigDecimal result = getDemandQty().add(getDependantDemand()) //потребность
-				.subtract(getProductionQty()) //кол-во, которое будет произведено по запущенным в производство ЗНП
-				.subtract(getPurchaseQty()) //поступления от поставщиков
-				.subtract(getQtyAvailable()) //остаток в наличии
-				.subtract(availableOnBeginBucket) //остаток на начало бакета
-				.add(getSafetyLevelQty()); //страховой запас по товару
+		BigDecimal result = getDemandQty().add(getDependantDemand()) //РїРѕС‚СЂРµР±РЅРѕСЃС‚СЊ
+				.subtract(getProductionQty()) //РєРѕР»-РІРѕ, РєРѕС‚РѕСЂРѕРµ Р±СѓРґРµС‚ РїСЂРѕРёР·РІРµРґРµРЅРѕ РїРѕ Р·Р°РїСѓС‰РµРЅРЅС‹Рј РІ РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕ Р—РќРџ
+				.subtract(getPurchaseQty()) //РїРѕСЃС‚СѓРїР»РµРЅРёСЏ РѕС‚ РїРѕСЃС‚Р°РІС‰РёРєРѕРІ
+				.subtract(getQtyAvailable()) //РѕСЃС‚Р°С‚РѕРє РІ РЅР°Р»РёС‡РёРё
+				.subtract(availableOnBeginBucket) //РѕСЃС‚Р°С‚РѕРє РЅР° РЅР°С‡Р°Р»Рѕ Р±Р°РєРµС‚Р°
+				.add(getSafetyLevelQty()); //СЃС‚СЂР°С…РѕРІРѕР№ Р·Р°РїР°СЃ РїРѕ С‚РѕРІР°СЂСѓ
 		if (MathUtils.compareToZero(result) < 0)
 			return BigDecimal.ZERO;
 		else

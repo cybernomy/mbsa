@@ -31,7 +31,7 @@ import com.mg.merp.manufacture.model.InputDocumentSpec;
 import com.mg.merp.manufacture.model.JobMaterial;
 
 /**
- * Бизнес-компонент "Спецификация актов на списание материалов в НЗП" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РјР°С‚РµСЂРёР°Р»РѕРІ РІ РќР—Рџ" 
  * 
  * @author leonova
  * @version $Id: InputMaterialSpecServiceBean.java,v 1.6 2007/08/06 12:44:53 safonov Exp $

@@ -17,7 +17,7 @@ package com.mg.merp.warehouse.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * Поисковик сущностей "Входящие накладные"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "Р’С…РѕРґСЏС‰РёРµ РЅР°РєР»Р°РґРЅС‹Рµ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: InvoiceHeadInSearchHelp.java,v 1.3 2007/10/22 10:39:21 sharapov Exp $

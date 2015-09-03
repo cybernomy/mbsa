@@ -24,7 +24,7 @@ import com.mg.merp.reference.FamilyStatusKindServiceLocal;
 import com.mg.merp.reference.model.FamilyStatusKind;
 
 /**
- * Бизнес-компонент "Типы семейного положения" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРїС‹ СЃРµРјРµР№РЅРѕРіРѕ РїРѕР»РѕР¶РµРЅРёСЏ" 
  * 
  * @author leonova
  * @version $Id: FamilyStatusKindServiceBean.java,v 1.4 2006/10/20 05:44:45 leonova Exp $

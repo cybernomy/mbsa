@@ -20,7 +20,7 @@ import com.mg.framework.generic.AbstractEntityInterceptor;
 import com.mg.merp.finance.model.Specification;
 
 /**
- * Реализация перехватчика для модели проводки и признака финансовой операции
+ * Р РµР°Р»РёР·Р°С†РёСЏ РїРµСЂРµС…РІР°С‚С‡РёРєР° РґР»СЏ РјРѕРґРµР»Рё РїСЂРѕРІРѕРґРєРё Рё РїСЂРёР·РЅР°РєР° С„РёРЅР°РЅСЃРѕРІРѕР№ РѕРїРµСЂР°С†РёРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: FinSpecEntityInterceptorImpl.java,v 1.2 2007/12/17 09:14:41 safonov Exp $

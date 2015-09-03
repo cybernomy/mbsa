@@ -25,7 +25,7 @@ import com.mg.merp.manufacture.model.JobMaterial;
 import com.mg.merp.mfreference.support.ConfigurationHelper;
 
 /**
- * Бизнес-компонент "Материалы в ЗНП" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РњР°С‚РµСЂРёР°Р»С‹ РІ Р—РќРџ" 
  * 
  * @author leonova
  * @version $Id: JobMaterialServiceBean.java,v 1.5 2007/07/30 10:27:27 safonov Exp $

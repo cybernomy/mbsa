@@ -18,7 +18,7 @@ import com.mg.framework.api.BusinessException;
 import com.mg.merp.docflow.support.Messages;
 
 /**
- * Класс ИС отсутствия реализации этапа ДО
+ * РљР»Р°СЃСЃ РРЎ РѕС‚СЃСѓС‚СЃС‚РІРёСЏ СЂРµР°Р»РёР·Р°С†РёРё СЌС‚Р°РїР° Р”Рћ
  * 
  * @author Oleg V. Safonov
  * @version $Id: PluginNotImplementedException.java,v 1.2 2006/08/25 11:44:01 safonov Exp $

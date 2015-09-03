@@ -58,7 +58,7 @@ import com.mg.merp.warehouse.model.StockBatchHistoryKind;
 import com.mg.merp.warehouse.model.StockCard;
 
 /**
- * Реализация бизнес-компонента "Акты инвентаризации" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РђРєС‚С‹ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -175,16 +175,16 @@ public class InventoryActHeadServiceBean extends AbstractWarehouseDocument<Inven
 		BigDecimal qty2 = BigDecimal.ZERO;
 		RoundContext currencyPrecRoundContext = new RoundContext(getConfiguration().getCurrencyScale());
 		List<DocSpec> docSpecList = new ArrayList<DocSpec>();
-		//существующие на момент создания спецификаций
+		//СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёРµ РЅР° РјРѕРјРµРЅС‚ СЃРѕР·РґР°РЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёР№
 		if (paramInventory.isDeleteSpecList())
 			deleteSpecs(invActHead);
 		Contractor mol = paramInventory.getMol();
 		List<StockBatchItems> stockBatchList = getStockBatches(paramInventory.getStock(), mol
 				, paramInventory.getBeginCode(), paramInventory.getEndCode(), criteria);
 
-		// увеличиваем значение даты инвентаризации, для того чтобы учесть 
-		// все приходы за текущий день. Например при установке значения даты 23.11 значение часов, минут, секунд устанавливается 00:00:00
-		// а надо учесть все приходы на число 23.11. Поэтому устанавливаем значение 24.11 00:00:00 тем самым учтем все приходы за 23.11
+		// СѓРІРµР»РёС‡РёРІР°РµРј Р·РЅР°С‡РµРЅРёРµ РґР°С‚С‹ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё, РґР»СЏ С‚РѕРіРѕ С‡С‚РѕР±С‹ СѓС‡РµСЃС‚СЊ 
+		// РІСЃРµ РїСЂРёС…РѕРґС‹ Р·Р° С‚РµРєСѓС‰РёР№ РґРµРЅСЊ. РќР°РїСЂРёРјРµСЂ РїСЂРё СѓСЃС‚Р°РЅРѕРІРєРµ Р·РЅР°С‡РµРЅРёСЏ РґР°С‚С‹ 23.11 Р·РЅР°С‡РµРЅРёРµ С‡Р°СЃРѕРІ, РјРёРЅСѓС‚, СЃРµРєСѓРЅРґ СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ 00:00:00
+		// Р° РЅР°РґРѕ СѓС‡РµСЃС‚СЊ РІСЃРµ РїСЂРёС…РѕРґС‹ РЅР° С‡РёСЃР»Рѕ 23.11. РџРѕСЌС‚РѕРјСѓ СѓСЃС‚Р°РЅР°РІР»РёРІР°РµРј Р·РЅР°С‡РµРЅРёРµ 24.11 00:00:00 С‚РµРј СЃР°РјС‹Рј СѓС‡С‚РµРј РІСЃРµ РїСЂРёС…РѕРґС‹ Р·Р° 23.11
 		Date actualDate = DateTimeUtils.incDay(paramInventory.getEndDate(), 1);
 		for(StockBatchItems stockBatch : stockBatchList) {
 			StockCard stockCard = stockBatch.stockCard;//(StockCard) stockBatch[0];
@@ -214,9 +214,9 @@ public class InventoryActHeadServiceBean extends AbstractWarehouseDocument<Inven
 	}
 
 	/**
-	 * Подготовить позиции спецификации для массового добавления
-	 * @param docSpecList - список позиций спецификации акта инвентаризации
-	 * @return спецификация акта инвентаризации для массового добавления
+	 * РџРѕРґРіРѕС‚РѕРІРёС‚СЊ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РґР»СЏ РјР°СЃСЃРѕРІРѕРіРѕ РґРѕР±Р°РІР»РµРЅРёСЏ
+	 * @param docSpecList - СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё Р°РєС‚Р° РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @return СЃРїРµС†РёС„РёРєР°С†РёСЏ Р°РєС‚Р° РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё РґР»СЏ РјР°СЃСЃРѕРІРѕРіРѕ РґРѕР±Р°РІР»РµРЅРёСЏ
 	 */
 	private CreateInventoryActSpecInfo[] prepareSpecsForBulkCreate(List<DocSpec> docSpecList) {
 		CreateInventoryActSpecInfo[] inventoryActSpecList = new CreateInventoryActSpecInfo[docSpecList.size()];
@@ -234,16 +234,16 @@ public class InventoryActHeadServiceBean extends AbstractWarehouseDocument<Inven
 	}
 
 	/**
-	 * Объединяет спецификации по ценам или мол-ам
+	 * РћР±СЉРµРґРёРЅСЏРµС‚ СЃРїРµС†РёС„РёРєР°С†РёРё РїРѕ С†РµРЅР°Рј РёР»Рё РјРѕР»-Р°Рј
 	 * 
 	 * @param docSpecs
-	 * 		список спецификаций
+	 * 		СЃРїРёСЃРѕРє СЃРїРµС†РёС„РёРєР°С†РёР№
 	 * @param currencyPrecRoundContext
-	 * 		контекст округления
+	 * 		РєРѕРЅС‚РµРєСЃС‚ РѕРєСЂСѓРіР»РµРЅРёСЏ
 	 * @param molInventoryKind
-	 * 		объединять по мол-ам
+	 * 		РѕР±СЉРµРґРёРЅСЏС‚СЊ РїРѕ РјРѕР»-Р°Рј
 	 * @param priceInventoryKind
-	 * 		объединять по ценам
+	 * 		РѕР±СЉРµРґРёРЅСЏС‚СЊ РїРѕ С†РµРЅР°Рј
 	 */
 	private void agregateQuantities(List<DocSpec> docSpecs, RoundContext currencyPrecRoundContext, InventoryParametrs.MolInventoryKind molInventoryKind
 			, InventoryParametrs.StockInventoryKind priceInventoryKind) {
@@ -260,7 +260,7 @@ public class InventoryActHeadServiceBean extends AbstractWarehouseDocument<Inven
 				BigDecimal priceI = docSpecI.getPrice();
 				BigDecimal priceJ = docSpecJ.getPrice();
 				if(docSpecJ.getCatalog().getId() == docSpecI.getCatalog().getId() && docSpecJ.getMeasure1().getId() == docSpecI.getMeasure1().getId()) {
-					// одна строка по каждому МОЛ
+					// РѕРґРЅР° СЃС‚СЂРѕРєР° РїРѕ РєР°Р¶РґРѕРјСѓ РњРћР›
 					if (molInventoryKind == InventoryParametrs.MolInventoryKind.ONEMOLKIND 
 							&& priceInventoryKind == InventoryParametrs.StockInventoryKind.AGREGATEPRICEKIND) {
 						if (isEqualityMol(molI, molJ)) {
@@ -271,7 +271,7 @@ public class InventoryActHeadServiceBean extends AbstractWarehouseDocument<Inven
 								break;
 						} else
 							j++;
-						// одна строка по каждой цене прихода
+						// РѕРґРЅР° СЃС‚СЂРѕРєР° РїРѕ РєР°Р¶РґРѕР№ С†РµРЅРµ РїСЂРёС…РѕРґР°
 					} else if (molInventoryKind == InventoryParametrs.MolInventoryKind.AGREGATEMOLKIND 
 							&& priceInventoryKind == InventoryParametrs.StockInventoryKind.ONEPRICEKIND) {
 						if (isEqualityPrice(priceI, priceJ)) {
@@ -283,7 +283,7 @@ public class InventoryActHeadServiceBean extends AbstractWarehouseDocument<Inven
 						} else
 							j++;
 					} else {
-						// одна строка по всем МОЛ и всем ценам прихода
+						// РѕРґРЅР° СЃС‚СЂРѕРєР° РїРѕ РІСЃРµРј РњРћР› Рё РІСЃРµРј С†РµРЅР°Рј РїСЂРёС…РѕРґР°
 						ajustDocSpec(docSpecI, docSpecJ);
 						docSpecs.remove(j);
 						docSpecsSize--;
@@ -306,10 +306,10 @@ public class InventoryActHeadServiceBean extends AbstractWarehouseDocument<Inven
 	}
 
 	/**
-	 * Определяет равенство МОЛ
+	 * РћРїСЂРµРґРµР»СЏРµС‚ СЂР°РІРµРЅСЃС‚РІРѕ РњРћР›
 	 * @param molI
 	 * @param molJ
-	 * @return <code>true</code> - МОЛ равны
+	 * @return <code>true</code> - РњРћР› СЂР°РІРЅС‹
 	 */
 	private boolean isEqualityMol(Contractor molI, Contractor molJ) {
 		if (molI == null && molJ == null)
@@ -320,10 +320,10 @@ public class InventoryActHeadServiceBean extends AbstractWarehouseDocument<Inven
 	}
 
 	/**
-	 * Определяет равенство цен прихода 
+	 * РћРїСЂРµРґРµР»СЏРµС‚ СЂР°РІРµРЅСЃС‚РІРѕ С†РµРЅ РїСЂРёС…РѕРґР° 
 	 * @param priceI
 	 * @param priceJ
-	 * @return <code>true</code> - цены равны
+	 * @return <code>true</code> - С†РµРЅС‹ СЂР°РІРЅС‹
 	 */
 	private boolean isEqualityPrice(BigDecimal priceI, BigDecimal priceJ) {
 		if (priceI.compareTo(priceJ) == 0)
@@ -332,7 +332,7 @@ public class InventoryActHeadServiceBean extends AbstractWarehouseDocument<Inven
 	}
 
 	/**
-	 * Объединяем две спецификации
+	 * РћР±СЉРµРґРёРЅСЏРµРј РґРІРµ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 * 
 	 * @param docSpecI	
 	 * @param docSpecJ
@@ -362,13 +362,13 @@ public class InventoryActHeadServiceBean extends AbstractWarehouseDocument<Inven
 	}
 
 	/**
-	 * Возвращает  параметры складской партии
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚  РїР°СЂР°РјРµС‚СЂС‹ СЃРєР»Р°РґСЃРєРѕР№ РїР°СЂС‚РёРё
 	 * 
-	 * @param stock			- склад
-	 * @param mol			- мол склада
-	 * @param beginCode		- начало диапазона кодов позиций каталога
-	 * @param endCode		- конец диапазона кодов позиций каталога
-	 * @param criteria		- условие отбора партионной карточки
+	 * @param stock			- СЃРєР»Р°Рґ
+	 * @param mol			- РјРѕР» СЃРєР»Р°РґР°
+	 * @param beginCode		- РЅР°С‡Р°Р»Рѕ РґРёР°РїР°Р·РѕРЅР° РєРѕРґРѕРІ РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР°
+	 * @param endCode		- РєРѕРЅРµС† РґРёР°РїР°Р·РѕРЅР° РєРѕРґРѕРІ РїРѕР·РёС†РёР№ РєР°С‚Р°Р»РѕРіР°
+	 * @param criteria		- СѓСЃР»РѕРІРёРµ РѕС‚Р±РѕСЂР° РїР°СЂС‚РёРѕРЅРЅРѕР№ РєР°СЂС‚РѕС‡РєРё
 	 * @return
 	 */
 	protected List<StockBatchItems> getStockBatches(Contractor stock, Contractor mol, String beginCode, String endCode, Criteria criteria) {
@@ -416,17 +416,17 @@ public class InventoryActHeadServiceBean extends AbstractWarehouseDocument<Inven
 	}
 
 	/**
-	 * Выполнить массовое добавление позиций спецификации
-	 * @param inventoryActSpecInfo - информация о номеклатуре для создания спецификации акта инвентаризации
-	 * @param invActHead - акт инвентаризации
+	 * Р’С‹РїРѕР»РЅРёС‚СЊ РјР°СЃСЃРѕРІРѕРµ РґРѕР±Р°РІР»РµРЅРёРµ РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param inventoryActSpecInfo - РёРЅС„РѕСЂРјР°С†РёСЏ Рѕ РЅРѕРјРµРєР»Р°С‚СѓСЂРµ РґР»СЏ СЃРѕР·РґР°РЅРёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё Р°РєС‚Р° РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @param invActHead - Р°РєС‚ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
 	 */
 	private void bulkCreateDocSpecs(CreateInventoryActSpecInfo[] inventoryActSpecInfo, DocHead invActHead) {
 		getSpecificationService().bulkCreate(invActHead, inventoryActSpecInfo);
 	}
 
 	/**
-	 * Удалить спецификацию акта инвентаризации
-	 * @param invActHead - акт инвентаризации
+	 * РЈРґР°Р»РёС‚СЊ СЃРїРµС†РёС„РёРєР°С†РёСЋ Р°РєС‚Р° РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @param invActHead - Р°РєС‚ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
 	 */
 	private void deleteSpecs(InventoryActHead invActHead) {
 		List<InventoryActSpec> docSpecs = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(InventoryActSpec.class).add(Restrictions.eq("DocHead", invActHead))); //$NON-NLS-1$
@@ -542,10 +542,10 @@ public class InventoryActHeadServiceBean extends AbstractWarehouseDocument<Inven
 	}
 
 	/**
-	 * Расчитать суммы излишков/недостачи акта инвентаризации
-	 * @param inventoryActHead - акт инвентаризации
-	 * @param realDocSumCur - фактичекая сумма в валюте
-	 * @param realDocSumNat - фактичекая сумма в НДЕ
+	 * Р Р°СЃС‡РёС‚Р°С‚СЊ СЃСѓРјРјС‹ РёР·Р»РёС€РєРѕРІ/РЅРµРґРѕСЃС‚Р°С‡Рё Р°РєС‚Р° РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @param inventoryActHead - Р°РєС‚ РёРЅРІРµРЅС‚Р°СЂРёР·Р°С†РёРё
+	 * @param realDocSumCur - С„Р°РєС‚РёС‡РµРєР°СЏ СЃСѓРјРјР° РІ РІР°Р»СЋС‚Рµ
+	 * @param realDocSumNat - С„Р°РєС‚РёС‡РµРєР°СЏ СЃСѓРјРјР° РІ РќР”Р•
 	 */
 	private void computeInventoryActHeadShortageAndExsessSum(InventoryActHead inventoryActHead, BigDecimal realDocSumCur, BigDecimal realDocSumNat) {
 		if(inventoryActHead.getId() == null)

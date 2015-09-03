@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Род наименования валюты
+ * Р РѕРґ РЅР°РёРјРµРЅРѕРІР°РЅРёСЏ РІР°Р»СЋС‚С‹
  * 
  * @author leonova
  * @version $Id: CurrencyGender.java,v 1.1 2006/03/29 13:06:23 safonov Exp $
@@ -26,19 +26,19 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName ("Reference.Currency.CurrencyGender")
 public enum CurrencyGender {
 	/**
-	 * Женский
+	 * Р–РµРЅСЃРєРёР№
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#CurrencyGender.Female")
 	FEMALE,
 	
 	/**
-	 * Мужской
+	 * РњСѓР¶СЃРєРѕР№
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#CurrencyGender.Male")
 	MALE,
 	
 	/**
-	 * Средний
+	 * РЎСЂРµРґРЅРёР№
 	 */
 	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#CurrencyGender.Neuter")
 	NEUTER

@@ -38,7 +38,7 @@ import com.mg.merp.warehouse.model.Warehouse;
 import com.mg.merp.warehouse.support.ui.CurrentStockSituationForm;
 
 /**
- * Реализация сервиса рассчёта количества на складах
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° СЂР°СЃСЃС‡С‘С‚Р° РєРѕР»РёС‡РµСЃС‚РІР° РЅР° СЃРєР»Р°РґР°С…
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: CurrentStockSituationImpl.java,v 1.8 2008/09/09 12:27:55 sharapov Exp $
@@ -48,7 +48,7 @@ public class CurrentStockSituationImpl implements CurrentStockSituation {
 	private Logger logger = ServerUtils.getLogger(getClass()); 
 	
 	/**
-	 * реализация получения текущего состояния склада
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РїРѕР»СѓС‡РµРЅРёСЏ С‚РµРєСѓС‰РµРіРѕ СЃРѕСЃС‚РѕСЏРЅРёСЏ СЃРєР»Р°РґР°
 	 * 
 	 * @param warehouse
 	 * @param mol
@@ -61,7 +61,7 @@ public class CurrentStockSituationImpl implements CurrentStockSituation {
 		WareCardServiceLocal whbServ = (WareCardServiceLocal) ApplicationDictionaryLocator.locate()
 				.getBusinessService(WareCardServiceLocal.LOCAL_SERVICE_NAME);
 		StockCard stockCard = null;
-		//учитываем МОЛ
+		//СѓС‡РёС‚С‹РІР°РµРј РњРћР›
 		if (byContractor)
 			stockCard = whbServ.findStockCard(warehouse, mol, catalog, onlyAvailable);
 		else
@@ -84,11 +84,11 @@ public class CurrentStockSituationImpl implements CurrentStockSituation {
 	}
 	
 	/**
-	 * Рассчёт количества на всех складах
-	 * @return количество на складах (может быть <code>null</code>)
+	 * Р Р°СЃСЃС‡С‘С‚ РєРѕР»РёС‡РµСЃС‚РІР° РЅР° РІСЃРµС… СЃРєР»Р°РґР°С…
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ РЅР° СЃРєР»Р°РґР°С… (РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>)
 	 */
 	private List<StockSituationValues> internalGetSituation(Integer catalogId) {
-		//поиск всех КСУ, доступных пользователю, для данной позиции каталога
+		//РїРѕРёСЃРє РІСЃРµС… РљРЎРЈ, РґРѕСЃС‚СѓРїРЅС‹С… РїРѕР»СЊР·РѕРІР°С‚РµР»СЋ, РґР»СЏ РґР°РЅРЅРѕР№ РїРѕР·РёС†РёРё РєР°С‚Р°Р»РѕРіР°
 		StringBuilder query = new StringBuilder()
 				.append("select sc.Stock.Id, sum(sc.Quantity), sum(sc.Quantity2),")
 				.append(" sum(sc.PlanIn), sum(sc.PlanIn2),")
@@ -221,7 +221,7 @@ public class CurrentStockSituationImpl implements CurrentStockSituation {
 	}
 
 	/**
-	 * расчет текущего состояния по позиции склада
+	 * СЂР°СЃС‡РµС‚ С‚РµРєСѓС‰РµРіРѕ СЃРѕСЃС‚РѕСЏРЅРёСЏ РїРѕ РїРѕР·РёС†РёРё СЃРєР»Р°РґР°
 	 * 
 	 * @param stockCard
 	 * @return
@@ -233,14 +233,14 @@ public class CurrentStockSituationImpl implements CurrentStockSituation {
 		BigDecimal available = BigDecimal.ZERO;
 		BigDecimal available2 = BigDecimal.ZERO;
 
-		//фактическое количество
+		//С„Р°РєС‚РёС‡РµСЃРєРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ
 		BigDecimal fact = stockCard.getQuantity();
 		BigDecimal fact2 = stockCard.getQuantity2();
 		quan.setLocated1(fact);
 		quan.setLocated2(fact2);
-		//учитываем ли фактическое количество
+		//СѓС‡РёС‚С‹РІР°РµРј Р»Рё С„Р°РєС‚РёС‡РµСЃРєРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ
 		if (warehouse.getCalcFact()) {
-			//с каким знаком учитываем
+			//СЃ РєР°РєРёРј Р·РЅР°РєРѕРј СѓС‡РёС‚С‹РІР°РµРј
 			if (warehouse.getCalcFactSign()) {
 				available = fact != null ? fact.negate() : available;
 				available2 = fact2 != null ? fact2.negate() : available2;
@@ -250,14 +250,14 @@ public class CurrentStockSituationImpl implements CurrentStockSituation {
 			}
 		}
 
-		//плановый приход
+		//РїР»Р°РЅРѕРІС‹Р№ РїСЂРёС…РѕРґ
 		BigDecimal planArrival = stockCard.getPlanIn();
 		BigDecimal planArrival2 = stockCard.getPlanIn2();
 		quan.setPlanningReceipt1(planArrival);
 		quan.setPlanningReceipt2(planArrival2);
-		//учитываем ли плановый приход
+		//СѓС‡РёС‚С‹РІР°РµРј Р»Рё РїР»Р°РЅРѕРІС‹Р№ РїСЂРёС…РѕРґ
 		if (warehouse.getCalcPlanIn()) {
-			//с каким знаком учитываем
+			//СЃ РєР°РєРёРј Р·РЅР°РєРѕРј СѓС‡РёС‚С‹РІР°РµРј
 			if (warehouse.getCalcPlanInSign()) {
 				planArrival = planArrival != null ? planArrival.negate() : null;
 				planArrival2 = planArrival2 != null ? planArrival2.negate() : null;
@@ -268,14 +268,14 @@ public class CurrentStockSituationImpl implements CurrentStockSituation {
 				available2 = available2.add(planArrival2);
 		}
 
-		//плановый расход
+		//РїР»Р°РЅРѕРІС‹Р№ СЂР°СЃС…РѕРґ
 		BigDecimal planDisposal = stockCard.getPlanOut();
 		BigDecimal planDisposal2 = stockCard.getPlanOut2();
 		quan.setPlanningIssue1(planDisposal);
 		quan.setPlanningIssue2(planDisposal2);
-		//учитываем ли плановый расход
+		//СѓС‡РёС‚С‹РІР°РµРј Р»Рё РїР»Р°РЅРѕРІС‹Р№ СЂР°СЃС…РѕРґ
 		if (warehouse.getCalcPlanOut()) {
-			//с каким знаком учитываем
+			//СЃ РєР°РєРёРј Р·РЅР°РєРѕРј СѓС‡РёС‚С‹РІР°РµРј
 			if (warehouse.getCalcPlanOutSign()) {
 				planDisposal = planDisposal != null ? planDisposal.negate() : null;
 				planDisposal2 = planDisposal2 != null ? planDisposal2.negate() : null;
@@ -286,14 +286,14 @@ public class CurrentStockSituationImpl implements CurrentStockSituation {
 				available2 = available2.add(planDisposal2);
 		}
 
-		//зарезервировано
+		//Р·Р°СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРѕ
 		BigDecimal reserve = stockCard.getReserve();
 		BigDecimal reserve2 = stockCard.getReserve2();
 		quan.setReserved1(reserve);
 		quan.setReserved2(reserve2);
-		//учитываем ли зарезервировано
+		//СѓС‡РёС‚С‹РІР°РµРј Р»Рё Р·Р°СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРѕ
 		if (warehouse.getCalcReserve()) {
-			//с каким знаком учитываем
+			//СЃ РєР°РєРёРј Р·РЅР°РєРѕРј СѓС‡РёС‚С‹РІР°РµРј
 			if (warehouse.getCalcReserveSign()) {
 				reserve = reserve != null ? reserve.negate() : null;
 				reserve2 = reserve2 != null ? reserve2.negate() : null;

@@ -24,7 +24,7 @@ import com.mg.merp.humanresources.OrderItemParamServiceLocal;
 import com.mg.merp.humanresources.model.OrderItemParam;
 
 /**
- * Реализация бизнес-компонента "Параметр вида пункта приказа"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџР°СЂР°РјРµС‚СЂ РІРёРґР° РїСѓРЅРєС‚Р° РїСЂРёРєР°Р·Р°"
  * 
  * @author Artem V. Sharapov
  * @version $Id: OrderItemParamServiceBean.java,v 1.5 2007/08/27 13:34:01 sharapov Exp $

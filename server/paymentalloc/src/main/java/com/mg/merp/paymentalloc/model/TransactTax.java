@@ -17,7 +17,7 @@ package com.mg.merp.paymentalloc.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Налоги в спецификации связанных документов"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќР°Р»РѕРіРё РІ СЃРїРµС†РёС„РёРєР°С†РёРё СЃРІСЏР·Р°РЅРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: TransactTax.java,v 1.5 2007/05/31 14:10:30 sharapov Exp $

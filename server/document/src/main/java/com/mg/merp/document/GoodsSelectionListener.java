@@ -15,7 +15,7 @@
 package com.mg.merp.document;
 
 /**
- * Слушатель подбора номенклатуры
+ * РЎР»СѓС€Р°С‚РµР»СЊ РїРѕРґР±РѕСЂР° РЅРѕРјРµРЅРєР»Р°С‚СѓСЂС‹
  * 
  * @author Oleg V. Safonov
  * @version $Id: GoodsSelectionListener.java,v 1.1 2006/12/02 12:35:32 safonov Exp $
@@ -23,7 +23,7 @@ package com.mg.merp.document;
 public interface GoodsSelectionListener {
 	
 	/**
-	 * генерация события о выборе номенклатуры
+	 * РіРµРЅРµСЂР°С†РёСЏ СЃРѕР±С‹С‚РёСЏ Рѕ РІС‹Р±РѕСЂРµ РЅРѕРјРµРЅРєР»Р°С‚СѓСЂС‹
 	 * 
 	 * @param event
 	 */

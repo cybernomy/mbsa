@@ -31,7 +31,7 @@ import com.mg.merp.settlement.ContractorCardServiceLocal;
 import com.mg.merp.settlement.support.Messages;
 
 /**
- * Контроллер браузера бизнес-компонента "Центры учета"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р¦РµРЅС‚СЂС‹ СѓС‡РµС‚Р°"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -71,8 +71,8 @@ public class CompanyBr extends OrgUnitBr {
 	}
 
 	/**
-	 * Обработка события выбора пункта К.М. "Карточки расчетов с партнерами"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° РїСѓРЅРєС‚Р° Рљ.Рњ. "РљР°СЂС‚РѕС‡РєРё СЂР°СЃС‡РµС‚РѕРІ СЃ РїР°СЂС‚РЅРµСЂР°РјРё"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionShowContractorCard(WidgetEvent event) throws Exception {

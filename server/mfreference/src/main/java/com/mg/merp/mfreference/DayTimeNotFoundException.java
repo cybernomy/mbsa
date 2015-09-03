@@ -21,7 +21,7 @@ import com.mg.merp.mfreference.model.DayCalendar;
 import com.mg.merp.mfreference.support.Messages;
 
 /**
- * ИС генерируется если не найден сменный календарь
+ * РРЎ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ СЃРјРµРЅРЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DayTimeNotFoundException.java,v 1.1 2007/07/30 10:25:31 safonov Exp $

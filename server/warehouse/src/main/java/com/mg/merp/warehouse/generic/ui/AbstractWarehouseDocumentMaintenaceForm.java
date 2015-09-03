@@ -22,7 +22,7 @@ import com.mg.merp.document.model.DocHead;
 import com.mg.merp.warehouse.DiscountDocument;
 
 /**
- * Базовая реализация контроллера формы поддержки товарных документов
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ РєРѕРЅС‚СЂРѕР»Р»РµСЂР° С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё С‚РѕРІР°СЂРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractWarehouseDocumentMaintenaceForm.java,v 1.4 2009/01/22 06:53:18 sharapov Exp $
@@ -59,11 +59,11 @@ public abstract class AbstractWarehouseDocumentMaintenaceForm extends
 	}
 
 	/**
-	 * реализация применения скидок/наценок
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РїСЂРёРјРµРЅРµРЅРёСЏ СЃРєРёРґРѕРє/РЅР°С†РµРЅРѕРє
 	 */
 	protected void doApplyDiscount() {
 		DocHead docHead = (DocHead) getEntity();
-		if (docHead.getId() == null) //не обрабатываем не созданную запись
+		if (docHead.getId() == null) //РЅРµ РѕР±СЂР°Р±Р°С‚С‹РІР°РµРј РЅРµ СЃРѕР·РґР°РЅРЅСѓСЋ Р·Р°РїРёСЃСЊ
 			return;
 		
 		((DiscountDocument) getService()).applyDiscount(docHead, new ApplyDiscountListener() {
@@ -94,7 +94,7 @@ public abstract class AbstractWarehouseDocumentMaintenaceForm extends
 	}
 
 	/**
-	 * обработчик события "Применить скидку/наценку"
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє СЃРѕР±С‹С‚РёСЏ "РџСЂРёРјРµРЅРёС‚СЊ СЃРєРёРґРєСѓ/РЅР°С†РµРЅРєСѓ"
 	 * 
 	 * @param event
 	 */

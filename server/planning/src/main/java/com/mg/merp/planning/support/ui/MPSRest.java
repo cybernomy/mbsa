@@ -24,7 +24,7 @@ import com.mg.merp.planning.model.ForecastVersion;
 import com.mg.merp.planning.model.InventoryForecast;
 
 /**
- * Контроллер формы условий отбора ОПП
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° РћРџРџ
  * 
  * @author leonova
  * @version $Id: MPSRest.java,v 1.2 2006/08/25 10:17:24 leonova Exp $

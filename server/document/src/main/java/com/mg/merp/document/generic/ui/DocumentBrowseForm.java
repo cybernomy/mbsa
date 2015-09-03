@@ -56,7 +56,7 @@ import com.mg.merp.reference.AttachmentHandler;
 import com.mg.merp.reference.support.ui.AttachmentHelper;
 
 /**
- * Базовый класс контроллера формы списка документов
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ РєРѕРЅС‚СЂРѕР»Р»РµСЂР° С„РѕСЂРјС‹ СЃРїРёСЃРєР° РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -110,7 +110,7 @@ public class DocumentBrowseForm extends DefaultHierarchyBrowseForm {
 				.append(DatabaseUtils.formatEJBQLObjectRestriction("d.To", restDocument.getToCode(), "toCode", paramsName, paramsValue, false))		 //$NON-NLS-1$ //$NON-NLS-2$
 				.append(DatabaseUtils.formatEJBQLObjectRangeRestriction("d.SumCur", restDocument.getSumCurMin(), restDocument.getSumCurMax(), "sumCurMin", "sumCurMax", paramsName, paramsValue, false)) //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
 				.append(DatabaseUtils.formatEJBQLObjectRangeRestriction("d.SumNat", restDocument.getSumNatMin(), restDocument.getSumNatMax(), "sumNatMin", "sumNatMax", paramsName, paramsValue, false))		 //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$
-				.append(DatabaseUtils.formatEJBQLObjectRestriction("d.Currency", restDocument.getСurCode(), "сurCode", paramsName, paramsValue, false)) //$NON-NLS-1$ //$NON-NLS-2$
+				.append(DatabaseUtils.formatEJBQLObjectRestriction("d.Currency", restDocument.getРЎurCode(), "СЃurCode", paramsName, paramsValue, false)) //$NON-NLS-1$ //$NON-NLS-2$
 				.append(DatabaseUtils.formatEJBQLAddinFieldsRestriction(service, "d.Id", restDocument.getAddinFieldsRestriction(), false)); //$NON-NLS-1$
 		if(restDocument.getDocProcessStage() != null) {
 			paramsName.add("docProcessStage"); //$NON-NLS-1$
@@ -166,8 +166,8 @@ public class DocumentBrowseForm extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработка события добавления документа по образцу
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РґРѕР±Р°РІР»РµРЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
@@ -190,8 +190,8 @@ public class DocumentBrowseForm extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Создание документа по образцу и его редактирование
-	 * @param docHeadModel - образец документа
+	 * РЎРѕР·РґР°РЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° РїРѕ РѕР±СЂР°Р·С†Сѓ Рё РµРіРѕ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ
+	 * @param docHeadModel - РѕР±СЂР°Р·РµС† РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	private void internalInsertDocumentPattern(DocHeadModel docHeadModel) {
@@ -216,8 +216,8 @@ public class DocumentBrowseForm extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработка события КМ "Показать оригинал"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РљРњ "РџРѕРєР°Р·Р°С‚СЊ РѕСЂРёРіРёРЅР°Р»"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionShowOriginal(WidgetEvent event) throws Exception {
@@ -225,8 +225,8 @@ public class DocumentBrowseForm extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработка события КМ "Загрузить оригинал в систему"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РљРњ "Р—Р°РіСЂСѓР·РёС‚СЊ РѕСЂРёРіРёРЅР°Р» РІ СЃРёСЃС‚РµРјСѓ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionDownloadOriginal(WidgetEvent event) throws Exception {
@@ -234,8 +234,8 @@ public class DocumentBrowseForm extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработка события КМ "Сохранить оригинал как..."
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РљРњ "РЎРѕС…СЂР°РЅРёС‚СЊ РѕСЂРёРіРёРЅР°Р» РєР°Рє..."
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionUploadOriginal(WidgetEvent event) throws Exception {
@@ -243,8 +243,8 @@ public class DocumentBrowseForm extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработка события КМ "Удалить оригинал"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РљРњ "РЈРґР°Р»РёС‚СЊ РѕСЂРёРіРёРЅР°Р»"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 * @throws Exception
 	 */
 	public void onActionRemoveOriginal(WidgetEvent event) throws Exception {
@@ -252,24 +252,24 @@ public class DocumentBrowseForm extends DefaultHierarchyBrowseForm {
 	}
 	
 	/**
-	 * Обработка события КМ "Создать ГИО"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РљРњ "РЎРѕР·РґР°С‚СЊ Р“РРћ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionCreateLBSchedule(WidgetEvent event) {
 		getLBScheduleManager().createLBSchedule(getSearchedDocHead());
 	}
 	
 	/**
-	 * Обработка события КМ "Открыть ГИО"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РљРњ "РћС‚РєСЂС‹С‚СЊ Р“РРћ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionOpenLBSchedule(WidgetEvent event) {
 		getLBScheduleManager().openLBSchedule(getSearchedDocHead());
 	}
 	
 	/**
-	 * Обработка события КМ "Удалить ГИО"
-	 * @param event - событие
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ РљРњ "РЈРґР°Р»РёС‚СЊ Р“РРћ"
+	 * @param event - СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionRemoveLBSchedule(WidgetEvent event) {
 		final DocHead searchedDocHead = getSearchedDocHead();
@@ -289,9 +289,9 @@ public class DocumentBrowseForm extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработка события "Показать документ-основание"
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РџРѕРєР°Р·Р°С‚СЊ РґРѕРєСѓРјРµРЅС‚-РѕСЃРЅРѕРІР°РЅРёРµ"
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionShowBaseDocument(WidgetEvent event) {
 		Serializable[] docIds = ((MaintenanceTableModel) table.getModel()).getSelectedPrimaryKeys();
@@ -300,9 +300,9 @@ public class DocumentBrowseForm extends DefaultHierarchyBrowseForm {
 	}
 
 	/**
-	 * Обработка события "Показать контракт"
+	 * РћР±СЂР°Р±РѕС‚РєР° СЃРѕР±С‹С‚РёСЏ "РџРѕРєР°Р·Р°С‚СЊ РєРѕРЅС‚СЂР°РєС‚"
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	public void onActionShowContract(WidgetEvent event) {
 		Serializable[] docIds = ((MaintenanceTableModel) table.getModel()).getSelectedPrimaryKeys();

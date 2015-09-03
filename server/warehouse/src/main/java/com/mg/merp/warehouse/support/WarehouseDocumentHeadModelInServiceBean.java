@@ -23,7 +23,7 @@ import com.mg.merp.warehouse.WarehouseDocumentHeadModelInServiceLocal;
 import com.mg.merp.warehouse.model.StockDocumentHeadModel;
 
 /**
- * Бизнес-компонент "Образцы приходных ордеров" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћР±СЂР°Р·С†С‹ РїСЂРёС…РѕРґРЅС‹С… РѕСЂРґРµСЂРѕРІ" 
  * 
  * @author leonova
  * @version $Id: WarehouseDocumentHeadModelInServiceBean.java,v 1.3 2006/09/12 10:48:36 leonova Exp $

@@ -15,7 +15,7 @@
 package com.mg.framework.api.ui.widget;
 
 /**
- * Элемент "Элемент меню с переключателем CheckBox"
+ * Р­Р»РµРјРµРЅС‚ "Р­Р»РµРјРµРЅС‚ РјРµРЅСЋ СЃ РїРµСЂРµРєР»СЋС‡Р°С‚РµР»РµРј CheckBox"
  * 
  * @author Oleg V. Safonov
  * @version $Id: CheckBoxMenuItem.java,v 1.1 2008/06/07 09:11:49 safonov Exp $
@@ -23,16 +23,16 @@ package com.mg.framework.api.ui.widget;
 public interface CheckBoxMenuItem extends MenuItem {
 
 	/**
-	 * получить значение переключателя
+	 * РїРѕР»СѓС‡РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЏ
 	 * 
-	 * @return	значение переключателя, <code>true</code> если переключатель установлен
+	 * @return	Р·РЅР°С‡РµРЅРёРµ РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЏ, <code>true</code> РµСЃР»Рё РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЊ СѓСЃС‚Р°РЅРѕРІР»РµРЅ
 	 */
 	boolean isSelected();
 
 	/**
-	 * установить значение переключателя
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р·РЅР°С‡РµРЅРёРµ РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЏ
 	 * 
-	 * @param selected	значение переключателя, <code>true</code> для установки переключателя
+	 * @param selected	Р·РЅР°С‡РµРЅРёРµ РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЏ, <code>true</code> РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЏ
 	 */
 	void setSelected(boolean selected);
 

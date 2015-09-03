@@ -21,7 +21,7 @@ import com.mg.merp.wb.report.birt.data.oda.badi.util.DataTypes;
 import com.mg.merp.wb.report.birt.data.oda.badi.util.RelationInformation;
 
 /**
- * Реализация интерфейса {@link IResultSetMetaData}
+ * Р РµР°Р»РёР·Р°С†РёСЏ РёРЅС‚РµСЂС„РµР№СЃР° {@link IResultSetMetaData}
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: ResultSetMetaData.java,v 1.5 2006/12/05 13:43:33 poroxnenko Exp $
@@ -29,17 +29,17 @@ import com.mg.merp.wb.report.birt.data.oda.badi.util.RelationInformation;
 public class ResultSetMetaData implements IResultSetMetaData {
 
 	/**
-	 * Названия столбцов
+	 * РќР°Р·РІР°РЅРёСЏ СЃС‚РѕР»Р±С†РѕРІ
 	 */
 	private String[] columnNames;
 
 	/**
-	 * Вспомогательная информация
+	 * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ
 	 */
 	private RelationInformation ri;
 
 	/**
-	 * Конструктор
+	 * РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ
 	 * 
 	 * @param ri
 	 */

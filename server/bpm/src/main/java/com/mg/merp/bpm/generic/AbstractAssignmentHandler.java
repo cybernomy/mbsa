@@ -21,7 +21,7 @@ import org.jbpm.taskmgmt.exe.Assignable;
 import com.mg.framework.utils.StringUtils;
 
 /**
- * Базовый класс реализации назначения исполнителей для задач
+ * Р‘Р°Р·РѕРІС‹Р№ РєР»Р°СЃСЃ СЂРµР°Р»РёР·Р°С†РёРё РЅР°Р·РЅР°С‡РµРЅРёСЏ РёСЃРїРѕР»РЅРёС‚РµР»РµР№ РґР»СЏ Р·Р°РґР°С‡
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractAssignmentHandler.java,v 1.1 2007/05/28 13:05:48 safonov Exp $
@@ -33,27 +33,27 @@ public abstract class AbstractAssignmentHandler implements AssignmentHandler {
 	protected abstract void doAssign() throws Exception;
 	
 	/**
-	 * получить контекст выполнения JBPM
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРёСЏ JBPM
 	 * 
-	 * @return	контекст выполнения
+	 * @return	РєРѕРЅС‚РµРєСЃС‚ РІС‹РїРѕР»РЅРµРЅРёСЏ
 	 */
 	protected ExecutionContext getExecutionContext() {
 		return executionContext;
 	}
 
 	/**
-	 * получить объект управления назначениями
+	 * РїРѕР»СѓС‡РёС‚СЊ РѕР±СЉРµРєС‚ СѓРїСЂР°РІР»РµРЅРёСЏ РЅР°Р·РЅР°С‡РµРЅРёСЏРјРё
 	 * 
-	 * @return	объект управления назначениями
+	 * @return	РѕР±СЉРµРєС‚ СѓРїСЂР°РІР»РµРЅРёСЏ РЅР°Р·РЅР°С‡РµРЅРёСЏРјРё
 	 */
 	protected Assignable getAssignable() {
 		return assignable;
 	}
 
 	/**
-	 * установить исполнителя задачи
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РёСЃРїРѕР»РЅРёС‚РµР»СЏ Р·Р°РґР°С‡Рё
 	 * 
-	 * @param actorId	код исполнителя
+	 * @param actorId	РєРѕРґ РёСЃРїРѕР»РЅРёС‚РµР»СЏ
 	 */
 	protected void setAssignableActorId(String actorId) {
 		if (actorId != null)
@@ -61,9 +61,9 @@ public abstract class AbstractAssignmentHandler implements AssignmentHandler {
 	}
 	
 	/**
-	 * установить исполнителей задачи
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РёСЃРїРѕР»РЅРёС‚РµР»РµР№ Р·Р°РґР°С‡Рё
 	 * 
-	 * @param pooledActors	список исполнителей, для разделения кодов используется символ ','
+	 * @param pooledActors	СЃРїРёСЃРѕРє РёСЃРїРѕР»РЅРёС‚РµР»РµР№, РґР»СЏ СЂР°Р·РґРµР»РµРЅРёСЏ РєРѕРґРѕРІ РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ СЃРёРјРІРѕР» ','
 	 */
 	protected void setAssignablePooledActors(String pooledActors) {
 		if (pooledActors != null)

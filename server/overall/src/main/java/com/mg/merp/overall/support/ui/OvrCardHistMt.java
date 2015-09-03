@@ -32,7 +32,7 @@ import com.mg.merp.overall.CancellationServiceLocal;
 import com.mg.merp.overall.model.Cancellation;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "История выдачи"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РСЃС‚РѕСЂРёСЏ РІС‹РґР°С‡Рё"
  * 
  * @author leonova
  * @version $Id: OvrCardHistMt.java,v 1.2 2008/06/30 04:22:00 alikaev Exp $

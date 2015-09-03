@@ -25,7 +25,7 @@ import com.mg.merp.salary.TaxScaleServiceLocal;
 import com.mg.merp.salary.model.TaxScale;
 
 /**
- * Реализация бизнес-компонента "Налоговые шкалы" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РќР°Р»РѕРіРѕРІС‹Рµ С€РєР°Р»С‹" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

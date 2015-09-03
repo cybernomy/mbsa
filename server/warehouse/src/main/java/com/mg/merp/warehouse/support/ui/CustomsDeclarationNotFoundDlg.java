@@ -17,7 +17,7 @@ package com.mg.merp.warehouse.support.ui;
 import com.mg.framework.generic.ui.DefaultDialog;
 
 /**
- * Контроллер диалога "Номер ГТД и страна происхождения не найдены" 
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РґРёР°Р»РѕРіР° "РќРѕРјРµСЂ Р“РўР” Рё СЃС‚СЂР°РЅР° РїСЂРѕРёСЃС…РѕР¶РґРµРЅРёСЏ РЅРµ РЅР°Р№РґРµРЅС‹" 
  * 
  * @author Artem V. Sharapov
  * @version $Id: CustomsDeclarationNotFoundDlg.java,v 1.1 2008/08/27 09:44:07 sharapov Exp $

@@ -26,7 +26,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.reference.model.OrgUnit;
 
 /**
- * Контроллер браузера подразделений
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° РїРѕРґСЂР°Р·РґРµР»РµРЅРёР№
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov

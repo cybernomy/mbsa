@@ -17,7 +17,7 @@ package com.mg.merp.reference.support.ui;
 import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 
 /**
- * Контроллер формы условий отбора бизнес-компонента "Оригиналы документов"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЂРёРіРёРЅР°Р»С‹ РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: OriginalDocumentRest.java,v 1.1 2007/04/03 05:51:15 sharapov Exp $

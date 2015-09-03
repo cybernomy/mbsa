@@ -26,7 +26,7 @@ import com.mg.merp.salary.model.FeeModel;
 import com.mg.merp.salary.model.FeeModelParam;
 
 /**
- * Поисковик сущностей "Параметр начисления/удержания"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РџР°СЂР°РјРµС‚СЂ РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: FeeRefParamSearchHelp.java,v 1.1 2007/07/09 08:33:47 sharapov Exp $

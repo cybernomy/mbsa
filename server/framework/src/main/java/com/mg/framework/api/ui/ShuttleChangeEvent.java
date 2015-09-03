@@ -15,7 +15,7 @@
 package com.mg.framework.api.ui;
 
 /**
- * Событие элемента "Shuttle"
+ * РЎРѕР±С‹С‚РёРµ СЌР»РµРјРµРЅС‚Р° "Shuttle"
  * 
  * @author Oleg V. Safonov
  * @version $Id: ShuttleChangeEvent.java,v 1.1 2006/08/31 08:34:03 safonov Exp $
@@ -24,10 +24,10 @@ public class ShuttleChangeEvent extends UIEvent {
 	private Object[] contents;
 
 	/**
-	 * конструктор события
+	 * РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃРѕР±С‹С‚РёСЏ
 	 * 
-	 * @param source	источник события
-	 * @param contents	содержимое списка
+	 * @param source	РёСЃС‚РѕС‡РЅРёРє СЃРѕР±С‹С‚РёСЏ
+	 * @param contents	СЃРѕРґРµСЂР¶РёРјРѕРµ СЃРїРёСЃРєР°
 	 */
 	public ShuttleChangeEvent(Object source, Object[] contents) {
 		super(source);
@@ -35,7 +35,7 @@ public class ShuttleChangeEvent extends UIEvent {
 	}
 	
 	/**
-	 * возвращает содержимое списка
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ СЃРѕРґРµСЂР¶РёРјРѕРµ СЃРїРёСЃРєР°
 	 * 
 	 * @return
 	 */

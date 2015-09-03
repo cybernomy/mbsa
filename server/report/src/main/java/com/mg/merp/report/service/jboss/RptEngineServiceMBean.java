@@ -19,7 +19,7 @@ import org.jboss.system.ServiceMBean;
 import com.mg.framework.api.report.RptEngine;
 
 /**
- * Сервис MBIRT (Millennium BI and Report Tools) для AS JBoss
+ * РЎРµСЂРІРёСЃ MBIRT (Millennium BI and Report Tools) РґР»СЏ AS JBoss
  * 
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
@@ -27,72 +27,72 @@ import com.mg.framework.api.report.RptEngine;
  */
 public interface RptEngineServiceMBean extends RptEngine, ServiceMBean {
 	/**
-	 * получить расположение платформы
+	 * РїРѕР»СѓС‡РёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РїР»Р°С‚С„РѕСЂРјС‹
 	 * 
-	 * @return	абсолютный путь к платформе
+	 * @return	Р°Р±СЃРѕР»СЋС‚РЅС‹Р№ РїСѓС‚СЊ Рє РїР»Р°С‚С„РѕСЂРјРµ
 	 */
 	String getBIRTLocation();
 
 	/**
-	 * установить расположение платформы
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РїР»Р°С‚С„РѕСЂРјС‹
 	 * 
-	 * @param birtLocation	абсолютный путь к платформе
+	 * @param birtLocation	Р°Р±СЃРѕР»СЋС‚РЅС‹Р№ РїСѓС‚СЊ Рє РїР»Р°С‚С„РѕСЂРјРµ
 	 */
 	void setBIRTLocation(String birtLocation);
 
 	/**
-	 * получить формат вывода отчета по умолчанию
+	 * РїРѕР»СѓС‡РёС‚СЊ С„РѕСЂРјР°С‚ РІС‹РІРѕРґР° РѕС‚С‡РµС‚Р° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 * 
-	 * @return	формат вывода
+	 * @return	С„РѕСЂРјР°С‚ РІС‹РІРѕРґР°
 	 */
 	String getDefaultOutputFormat();
 	
 	/**
-	 * установить формат вывода отчета по умолчанию
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ С„РѕСЂРјР°С‚ РІС‹РІРѕРґР° РѕС‚С‡РµС‚Р° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 * 
-	 * @param outputFormat	формат вывода
+	 * @param outputFormat	С„РѕСЂРјР°С‚ РІС‹РІРѕРґР°
 	 */
 	void setDefaultOutputFormat(String outputFormat);
 	
 	/**
-	 * получить уровень логирования
+	 * РїРѕР»СѓС‡РёС‚СЊ СѓСЂРѕРІРµРЅСЊ Р»РѕРіРёСЂРѕРІР°РЅРёСЏ
 	 * 
-	 * @return	уровень логирования
+	 * @return	СѓСЂРѕРІРµРЅСЊ Р»РѕРіРёСЂРѕРІР°РЅРёСЏ
 	 */
 	String getLogLevel();
 	
 	/**
-	 * установить уровень логирования
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СѓСЂРѕРІРµРЅСЊ Р»РѕРіРёСЂРѕРІР°РЅРёСЏ
 	 * 
-	 * @param logLevel	уровень логирования
+	 * @param logLevel	СѓСЂРѕРІРµРЅСЊ Р»РѕРіРёСЂРѕРІР°РЅРёСЏ
 	 */
 	void setLogLevel(String logLevel);
 	
 	/**
-	 * получить имя приложения для просмотра отчетов
+	 * РїРѕР»СѓС‡РёС‚СЊ РёРјСЏ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР° РѕС‚С‡РµС‚РѕРІ
 	 * 
-	 * @return	имя приложения
+	 * @return	РёРјСЏ РїСЂРёР»РѕР¶РµРЅРёСЏ
 	 */
 	String getHTMLReportViewerApp();
 	
 	/**
-	 * установить имя приложения для просмотра отчетов
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РёРјСЏ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ РїСЂРѕСЃРјРѕС‚СЂР° РѕС‚С‡РµС‚РѕРІ
 	 * 
-	 * @param viwerApp	имя приложения
+	 * @param viwerApp	РёРјСЏ РїСЂРёР»РѕР¶РµРЅРёСЏ
 	 */
 	void setHTMLReportViewerApp(String viwerApp);
 	
 	/**
-	 * получить папку для хранения шаблонов отчетов
+	 * РїРѕР»СѓС‡РёС‚СЊ РїР°РїРєСѓ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ С€Р°Р±Р»РѕРЅРѕРІ РѕС‚С‡РµС‚РѕРІ
 	 * 
-	 * @return	папка хранения шаблонов
+	 * @return	РїР°РїРєР° С…СЂР°РЅРµРЅРёСЏ С€Р°Р±Р»РѕРЅРѕРІ
 	 */
 	String getReportFolder();
 	
 	/**
-	 * установить папку для хранения шаблонов отчетов
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РїР°РїРєСѓ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ С€Р°Р±Р»РѕРЅРѕРІ РѕС‚С‡РµС‚РѕРІ
 	 * 
-	 * @param reportFolder	папка хранения шаблонов
+	 * @param reportFolder	РїР°РїРєР° С…СЂР°РЅРµРЅРёСЏ С€Р°Р±Р»РѕРЅРѕРІ
 	 */
 	void setReportFolder(String reportFolder);
 

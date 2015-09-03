@@ -22,7 +22,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.settlement.model.ContractorCardHist;
 
 /**
- * Модель таблицы
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹
  * 
  * @author Artem V. Sharapov
  * @version $Id: CardHistTableModel.java,v 1.1 2007/03/19 15:05:29 sharapov Exp $

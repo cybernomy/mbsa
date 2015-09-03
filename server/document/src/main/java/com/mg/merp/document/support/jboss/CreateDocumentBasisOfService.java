@@ -30,7 +30,7 @@ import com.mg.merp.document.model.DocHeadModel;
 import com.mg.merp.document.support.CreateDocumentBasisOfImpl;
 
 /**
- * Реализация сервиса создания документа на основании другого для JBoss
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° СЃРѕР·РґР°РЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р° РЅР° РѕСЃРЅРѕРІР°РЅРёРё РґСЂСѓРіРѕРіРѕ РґР»СЏ JBoss
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: CreateDocumentBasisOfService.java,v 1.5 2007/09/28 12:27:16 safonov Exp $ 

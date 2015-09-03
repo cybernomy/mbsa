@@ -19,38 +19,38 @@ import java.util.List;
 import com.mg.framework.support.ui.widget.graph.GraphElement;
 
 /**
- * Адаптер визуального элемента Граф
+ * РђРґР°РїС‚РµСЂ РІРёР·СѓР°Р»СЊРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° Р“СЂР°С„
  * 
  * @author Oleg V. Safonov
  * @version $Id: GraphControllerAdapter.java,v 1.2 2006/11/21 15:39:15 safonov Exp $
  */
 public interface GraphControllerAdapter {
 	/**
-	 * получить список элементов графа
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє СЌР»РµРјРµРЅС‚РѕРІ РіСЂР°С„Р°
 	 * 
-	 * @return	список элементов
+	 * @return	СЃРїРёСЃРѕРє СЌР»РµРјРµРЅС‚РѕРІ
 	 */
 	List<? extends GraphElement> getElements();
 	
 	/**
-	 * установить слушатель модели графа
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ СЃР»СѓС€Р°С‚РµР»СЊ РјРѕРґРµР»Рё РіСЂР°С„Р°
 	 * 
-	 * @param listener	слушатель
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ
 	 */
 	void addGraphModelListener(GraphModelListener listener);
 	
 	/**
-	 * отметить элементы графа
+	 * РѕС‚РјРµС‚РёС‚СЊ СЌР»РµРјРµРЅС‚С‹ РіСЂР°С„Р°
 	 * 
-	 * @param cells	элементы графа
-	 * @param areNewRoots	признаки новых элементов
+	 * @param cells	СЌР»РµРјРµРЅС‚С‹ РіСЂР°С„Р°
+	 * @param areNewRoots	РїСЂРёР·РЅР°РєРё РЅРѕРІС‹С… СЌР»РµРјРµРЅС‚РѕРІ
 	 */
 	void selectCells(GraphElement[] cells, boolean[] areNewRoots);
 	
 	/**
-	 * отправка сообщения об изменении элемента графа
+	 * РѕС‚РїСЂР°РІРєР° СЃРѕРѕР±С‰РµРЅРёСЏ РѕР± РёР·РјРµРЅРµРЅРёРё СЌР»РµРјРµРЅС‚Р° РіСЂР°С„Р°
 	 * 
-	 * @param cell	элемент графа
+	 * @param cell	СЌР»РµРјРµРЅС‚ РіСЂР°С„Р°
 	 */
 	void cellChanged(GraphElement cell);
 }

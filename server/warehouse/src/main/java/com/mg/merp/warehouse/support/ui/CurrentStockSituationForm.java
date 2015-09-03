@@ -33,7 +33,7 @@ import com.mg.merp.warehouse.support.Messages;
 import com.mg.merp.warehouse.support.StockSituationValuesImpl;
 
 /**
- * Контроллер формы обзора количества на складах
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РѕР±Р·РѕСЂР° РєРѕР»РёС‡РµСЃС‚РІР° РЅР° СЃРєР»Р°РґР°С…
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: CurrentStockSituationForm.java,v 1.3 2008/01/14 15:04:52 safonov Exp $
@@ -51,7 +51,7 @@ public class CurrentStockSituationForm extends AbstractForm {
 	private Catalog catalog;
 
 	/**
-	 * Модель таблицы, отображающей количество на складах
+	 * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹, РѕС‚РѕР±СЂР°Р¶Р°СЋС‰РµР№ РєРѕР»РёС‡РµСЃС‚РІРѕ РЅР° СЃРєР»Р°РґР°С…
 	 */
 	private class AvailableInfoModel extends AbstractTableModel {
 
@@ -195,7 +195,7 @@ public class CurrentStockSituationForm extends AbstractForm {
 	}
 	
 	/**
-	 * обработчик обновления текущей ситуации на складе
+	 * РѕР±СЂР°Р±РѕС‚С‡РёРє РѕР±РЅРѕРІР»РµРЅРёСЏ С‚РµРєСѓС‰РµР№ СЃРёС‚СѓР°С†РёРё РЅР° СЃРєР»Р°РґРµ
 	 * 
 	 * @param event
 	 */

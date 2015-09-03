@@ -18,7 +18,7 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Отметка о снятии с учета
+ * РћС‚РјРµС‚РєР° Рѕ СЃРЅСЏС‚РёРё СЃ СѓС‡РµС‚Р°
  * 
  * @author leonova
  * @version $Id: MilitaryRegTakenOff.java,v 1.1 2006/04/13 10:23:53 safonov Exp $
@@ -26,19 +26,19 @@ import com.mg.framework.api.annotations.EnumConstantText;
 @DataItemName("PersonnelRef.Personnel.MilIsTakenOff")
 public enum MilitaryRegTakenOff {
 	/**
-	 * Не снят
+	 * РќРµ СЃРЅСЏС‚
 	 */
 	@EnumConstantText ("resource://com.mg.merp.personnelref.resources.dataitemlabels#MilitaryRegTakenOff.NotOff")
 	NOTOFF,
 	
 	/**
-	 * Снят с воинского учета по возрасту
+	 * РЎРЅСЏС‚ СЃ РІРѕРёРЅСЃРєРѕРіРѕ СѓС‡РµС‚Р° РїРѕ РІРѕР·СЂР°СЃС‚Сѓ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.personnelref.resources.dataitemlabels#MilitaryRegTakenOff.OffAge")
 	OFFAGE,
 	
 	/**
-	 * Снят с воинского учета по состоянию здоровья
+	 * РЎРЅСЏС‚ СЃ РІРѕРёРЅСЃРєРѕРіРѕ СѓС‡РµС‚Р° РїРѕ СЃРѕСЃС‚РѕСЏРЅРёСЋ Р·РґРѕСЂРѕРІСЊСЏ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.personnelref.resources.dataitemlabels#MilitaryRegTakenOff.OffHealth")
 	OFFHEALTH

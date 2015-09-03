@@ -18,7 +18,7 @@ import com.mg.merp.document.generic.GoodsDocumentSpecificationServiceBean;
 import com.mg.merp.warehouse.model.BaseStockDocumentSpec;
 
 /**
- * Базовая реализация спецификаций товарных документов
+ * Р‘Р°Р·РѕРІР°СЏ СЂРµР°Р»РёР·Р°С†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёР№ С‚РѕРІР°СЂРЅС‹С… РґРѕРєСѓРјРµРЅС‚РѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: AbstractWarehouseDocumentSpec.java,v 1.3 2008/02/05 10:06:59 safonov Exp $

@@ -19,7 +19,7 @@ import org.jboss.system.ServiceMBean;
 import com.mg.framework.api.LockManager;
 
 /**
- * Сервис менеджера блокировок
+ * РЎРµСЂРІРёСЃ РјРµРЅРµРґР¶РµСЂР° Р±Р»РѕРєРёСЂРѕРІРѕРє
  * 
  * @author Oleg V. Safonov
  * @version $Id: LockManagerServiceMBean.java,v 1.1 2006/12/15 09:30:39 safonov Exp $
@@ -27,21 +27,21 @@ import com.mg.framework.api.LockManager;
 public interface LockManagerServiceMBean extends ServiceMBean,
 		LockManager {
 	/**
-	 * наименование сервиса
+	 * РЅР°РёРјРµРЅРѕРІР°РЅРёРµ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME = "merp:service=LockManagerService";
 
 	/**
-	 * получить атрибут configFile
+	 * РїРѕР»СѓС‡РёС‚СЊ Р°С‚СЂРёР±СѓС‚ configFile
 	 * 
-	 * @return	полный путь к файлу конфигурации
+	 * @return	РїРѕР»РЅС‹Р№ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ РєРѕРЅС„РёРіСѓСЂР°С†РёРё
 	 */
 	public String getConfigFile();
 	
 	/**
-	 * установить атрибут configFile
+	 * СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р°С‚СЂРёР±СѓС‚ configFile
 	 * 
-	 * @param configFile	полный путь к файлу конфигурации
+	 * @param configFile	РїРѕР»РЅС‹Р№ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ РєРѕРЅС„РёРіСѓСЂР°С†РёРё
 	 */
 	public void setConfigFile(String configFile);
 

@@ -17,7 +17,7 @@ package com.mg.merp.paymentcontrol.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Средство платежа" 
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎСЂРµРґСЃС‚РІРѕ РїР»Р°С‚РµР¶Р°" 
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmcResource.java,v 1.9 2007/05/14 05:12:10 sharapov Exp $

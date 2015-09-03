@@ -18,7 +18,7 @@ import com.mg.merp.core.model.Folder;
 import com.mg.merp.paymentalloc.model.Payment;
 
 /**
- * Сервис бизнес-компонента "Журнал платежей"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р–СѓСЂРЅР°Р» РїР»Р°С‚РµР¶РµР№"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -27,26 +27,26 @@ import com.mg.merp.paymentalloc.model.Payment;
 public interface PaymentServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Payment, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String LOCAL_SERVICE_NAME= "merp/paymentalloc/Payment"; //$NON-NLS-1$
 
 	/**
-	 * Тип папки для журнала платажей
+	 * РўРёРї РїР°РїРєРё РґР»СЏ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚Р°Р¶РµР№
 	 */
 	final static short FOLDER_PART = 13300;
 
 	/**
-	 * Создать запись журнала платежей по образцу
-	 * @param pattern - образец записи
-	 * @param folder - папка-приемник
-	 * @return запись журнала платежей
+	 * РЎРѕР·РґР°С‚СЊ Р·Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№ РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param pattern - РѕР±СЂР°Р·РµС† Р·Р°РїРёСЃРё
+	 * @param folder - РїР°РїРєР°-РїСЂРёРµРјРЅРёРє
+	 * @return Р·Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№
 	 */
 	Payment createByPattern(Payment pattern, Folder folder);
 	
 	/**
-	 * Рассчитать курс и сумму в НДЕ
-	 * @param payment - запись журнала платежей
+	 * Р Р°СЃСЃС‡РёС‚Р°С‚СЊ РєСѓСЂСЃ Рё СЃСѓРјРјСѓ РІ РќР”Р•
+	 * @param payment - Р·Р°РїРёСЃСЊ Р¶СѓСЂРЅР°Р»Р° РїР»Р°С‚РµР¶РµР№
 	 */
 	void computeCurRateAndSumNat(Payment payment);
 

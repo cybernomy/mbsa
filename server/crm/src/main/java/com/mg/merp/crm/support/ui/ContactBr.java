@@ -26,7 +26,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.crm.model.Contact;
 
 /**
- * Контроллер формы списка контактных лиц
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РєРѕРЅС‚Р°РєС‚РЅС‹С… Р»РёС†
  * 
  * @author leonova
  * @version $Id: ContactBr.java,v 1.3 2006/10/16 06:49:27 leonova Exp $ 

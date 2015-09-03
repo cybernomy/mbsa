@@ -17,7 +17,7 @@ package com.mg.merp.crm.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * Поисковик бизнес-компонента "Решение"
+ * РџРѕРёСЃРєРѕРІРёРє Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р РµС€РµРЅРёРµ"
  *  
  * @author Artem V. Sharapov
  * @version $Id: SolutionSearchHelp.java,v 1.1 2007/02/07 07:02:41 sharapov Exp $

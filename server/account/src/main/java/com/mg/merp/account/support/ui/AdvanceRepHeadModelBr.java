@@ -30,7 +30,7 @@ import com.mg.merp.document.generic.ui.DocumentModelBrowseForm;
 import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
- * Браузер образцов авансовых отчетов
+ * Р‘СЂР°СѓР·РµСЂ РѕР±СЂР°Р·С†РѕРІ Р°РІР°РЅСЃРѕРІС‹С… РѕС‚С‡РµС‚РѕРІ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: AdvanceRepHeadModelBr.java,v 1.4 2006/09/12 11:24:05 leonova Exp $

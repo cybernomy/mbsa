@@ -22,7 +22,7 @@ import com.mg.merp.paymentcontrol.LiabilityModelServiceLocal;
 import com.mg.merp.paymentcontrol.model.Liability;
 
 /**
- * Реализация бизнес-компонента "Образцы реестра обязательств" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·С†С‹ СЂРµРµСЃС‚СЂР° РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -17,7 +17,7 @@ package com.mg.merp.reference.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Связи с типами цен"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРІСЏР·Рё СЃ С‚РёРїР°РјРё С†РµРЅ"
  * 
  * @author hbm2java
  * @author Artem V. Sharapov

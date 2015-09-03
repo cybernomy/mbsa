@@ -24,7 +24,7 @@ import com.mg.merp.paymentcontrol.model.Version;
 import com.mg.merp.security.model.SecUser;
 
 /**
- * Реализация бизнес-компонента "Версии планирования" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РµСЂСЃРёРё РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

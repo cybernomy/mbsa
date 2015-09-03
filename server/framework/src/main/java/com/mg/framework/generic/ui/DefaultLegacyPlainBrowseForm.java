@@ -72,9 +72,9 @@ public class DefaultLegacyPlainBrowseForm extends AbstractForm implements Mainte
 
 		super.doOnRun();
 		
-		//обработка SearchHelp, если используется в данном качестве, то откроем кнопку chooseButton
+		//РѕР±СЂР°Р±РѕС‚РєР° SearchHelp, РµСЃР»Рё РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІ РґР°РЅРЅРѕРј РєР°С‡РµСЃС‚РІРµ, С‚Рѕ РѕС‚РєСЂРѕРµРј РєРЅРѕРїРєСѓ chooseButton
 		if (listener != null) {
-			Widget chooseButton = view.getWidget("сhooseButton");
+			Widget chooseButton = view.getWidget("СЃhooseButton");
 			if (chooseButton != null)
 				chooseButton.setVisible(true);
 		}
@@ -88,7 +88,7 @@ public class DefaultLegacyPlainBrowseForm extends AbstractForm implements Mainte
 		if (service == null)
 			throw new IllegalStateException("Service cann't be null");
 
-		//обработаем условия отбора если существуют для данного браузера
+		//РѕР±СЂР°Р±РѕС‚Р°РµРј СѓСЃР»РѕРІРёСЏ РѕС‚Р±РѕСЂР° РµСЃР»Рё СЃСѓС‰РµСЃС‚РІСѓСЋС‚ РґР»СЏ РґР°РЅРЅРѕРіРѕ Р±СЂР°СѓР·РµСЂР°
 		if (restrictionFormName != null) {
 			if (restrictionForm == null)
 				restrictionForm = (DefaultLegacyRestrictionForm) UIProducer.produceForm(restrictionFormName);

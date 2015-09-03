@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.table.model.PatternHead;
 
 /**
- * Браузер шаблонов графиков
+ * Р‘СЂР°СѓР·РµСЂ С€Р°Р±Р»РѕРЅРѕРІ РіСЂР°С„РёРєРѕРІ
  * 
  * @author leonova
  * @version $Id: PatternHeadBr.java,v 1.1 2006/08/29 12:48:57 leonova Exp $ 

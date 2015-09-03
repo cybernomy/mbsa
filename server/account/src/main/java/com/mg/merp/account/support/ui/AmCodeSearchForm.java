@@ -23,7 +23,7 @@ import com.mg.framework.utils.MiscUtils;
 import com.mg.merp.account.model.AmCode;
 
 /**
- * Контроллер формы поиска бизнес-компонента "Шифры амортизации"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЁРёС„СЂС‹ Р°РјРѕСЂС‚РёР·Р°С†РёРё"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

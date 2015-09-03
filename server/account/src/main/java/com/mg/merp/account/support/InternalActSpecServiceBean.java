@@ -23,7 +23,7 @@ import com.mg.merp.document.generic.GoodsDocumentSpecificationServiceBean;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * Бизнес-компонент "Спецификация внутренних актов" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РІРЅСѓС‚СЂРµРЅРЅРёС… Р°РєС‚РѕРІ" 
  * 
  * @author leonova
  * @version $Id: InternalActSpecServiceBean.java,v 1.5 2007/02/06 16:57:17 safonov Exp $

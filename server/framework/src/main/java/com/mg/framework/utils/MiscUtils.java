@@ -48,12 +48,12 @@ public class MiscUtils {
 	private static Logger logger = ServerUtils.getLogger(MiscUtils.class);
 
 	/**
-	 * конвертация списка без родового типа в список с родовым типом
+	 * РєРѕРЅРІРµСЂС‚Р°С†РёСЏ СЃРїРёСЃРєР° Р±РµР· СЂРѕРґРѕРІРѕРіРѕ С‚РёРїР° РІ СЃРїРёСЃРѕРє СЃ СЂРѕРґРѕРІС‹Рј С‚РёРїРѕРј
 	 * 
-	 * @param <T>		родовой тип
-	 * @param itemClass	класс родового типа
-	 * @param list		список без родового типа
-	 * @return	список с родовым типом
+	 * @param <T>		СЂРѕРґРѕРІРѕР№ С‚РёРї
+	 * @param itemClass	РєР»Р°СЃСЃ СЂРѕРґРѕРІРѕРіРѕ С‚РёРїР°
+	 * @param list		СЃРїРёСЃРѕРє Р±РµР· СЂРѕРґРѕРІРѕРіРѕ С‚РёРїР°
+	 * @return	СЃРїРёСЃРѕРє СЃ СЂРѕРґРѕРІС‹Рј С‚РёРїРѕРј
 	 */
 	@SuppressWarnings("unchecked") //$NON-NLS-1$
 	public static <T> List<T> convertUncheckedList(Class<T> itemClass, List list) {
@@ -61,7 +61,7 @@ public class MiscUtils {
 	}
 
 	/**
-	 * получить текстовое представление атрибута объекта-сущности, используется локаль подключенного пользователя
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р° РѕР±СЉРµРєС‚Р°-СЃСѓС‰РЅРѕСЃС‚Рё, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ Р»РѕРєР°Р»СЊ РїРѕРґРєР»СЋС‡РµРЅРЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
 	 * @param value
 	 * @param metadata
@@ -72,17 +72,17 @@ public class MiscUtils {
 	}
 
 	/**
-	 * получить текстовое представление атрибута объекта-сущности
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р° РѕР±СЉРµРєС‚Р°-СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param value		значение атрибута
-	 * @param metadata	метаданные
-	 * @param locale	локаль
-	 * @return	текстовое представление или <code>value</code> если тип атрибута не имеет специфичных методов представления в UI
+	 * @param value		Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р°
+	 * @param metadata	РјРµС‚Р°РґР°РЅРЅС‹Рµ
+	 * @param locale	Р»РѕРєР°Р»СЊ
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РёР»Рё <code>value</code> РµСЃР»Рё С‚РёРї Р°С‚СЂРёР±СѓС‚Р° РЅРµ РёРјРµРµС‚ СЃРїРµС†РёС„РёС‡РЅС‹С… РјРµС‚РѕРґРѕРІ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ РІ UI
 	 */
 	@SuppressWarnings("unchecked")
 	public static Object getPropertyTextRepresentation(Object value, FieldMetadata metadata, Locale locale) {
 		if (metadata != null && metadata.getConversionRoutine() != null) {
-			//TODO добавить установку контекста импорта, вполне возможно что в данном случае установить его невозможно
+			//TODO РґРѕР±Р°РІРёС‚СЊ СѓСЃС‚Р°РЅРѕРІРєСѓ РєРѕРЅС‚РµРєСЃС‚Р° РёРјРїРѕСЂС‚Р°, РІРїРѕР»РЅРµ РІРѕР·РјРѕР¶РЅРѕ С‡С‚Рѕ РІ РґР°РЅРЅРѕРј СЃР»СѓС‡Р°Рµ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ РµРіРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ
 			return metadata.getConversionRoutine().outputConverse(value);
 		}
 		else if (value == null)
@@ -102,23 +102,23 @@ public class MiscUtils {
 	}
 
 	/**
-	 * получить текстовое представление массива пользовательских полей
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РјР°СЃСЃРёРІР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 * 
-	 * @param value	массив значений пользовательских полей
-	 * @param metadata	метаданные
-	 * @return	текстовое представление
+	 * @param value	РјР°СЃСЃРёРІ Р·РЅР°С‡РµРЅРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
+	 * @param metadata	РјРµС‚Р°РґР°РЅРЅС‹Рµ
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 */
 	public static String getArrayCustomFieldTextRepresentation(Object[] value, FieldMetadata metadata) {
 		return getArrayCustomFieldTextRepresentation(value, metadata, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * получить текстовое представление массива пользовательских полей
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РјР°СЃСЃРёРІР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
 	 * 
-	 * @param value	массив значений пользовательских полей
-	 * @param metadata	метаданные
-	 * @param locale	локаль
-	 * @return	текстовое представление
+	 * @param value	РјР°СЃСЃРёРІ Р·РЅР°С‡РµРЅРёР№ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
+	 * @param metadata	РјРµС‚Р°РґР°РЅРЅС‹Рµ
+	 * @param locale	Р»РѕРєР°Р»СЊ
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 */
 	public static String getArrayCustomFieldTextRepresentation(Object[] value, FieldMetadata metadata, Locale locale) {
 		if (metadata == null)
@@ -137,12 +137,12 @@ public class MiscUtils {
 	}
 
 	/**
-	 * получить текстовое представление константы перечислимого типа, используется локаль подключенного пользователя
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РєРѕРЅСЃС‚Р°РЅС‚С‹ РїРµСЂРµС‡РёСЃР»РёРјРѕРіРѕ С‚РёРїР°, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ Р»РѕРєР°Р»СЊ РїРѕРґРєР»СЋС‡РµРЅРЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @param value	константа перечислимого типа
-	 * @return	текстовое представление
+	 * @param value	РєРѕРЅСЃС‚Р°РЅС‚Р° РїРµСЂРµС‡РёСЃР»РёРјРѕРіРѕ С‚РёРїР°
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 * 
-	 * @throws NullPointerException если <code>value == null</code>
+	 * @throws NullPointerException РµСЃР»Рё <code>value == null</code>
 	 * 
 	 * @see #getEnumTextRepresentation(Enum, Locale)
 	 */
@@ -151,13 +151,13 @@ public class MiscUtils {
 	}
 
 	/**
-	 * получить текстовое представление константы перечислимого типа
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РєРѕРЅСЃС‚Р°РЅС‚С‹ РїРµСЂРµС‡РёСЃР»РёРјРѕРіРѕ С‚РёРїР°
 	 * 
-	 * @param value	константа перечислимого типа
-	 * @param locale локаль
-	 * @return	текстовое представление
+	 * @param value	РєРѕРЅСЃС‚Р°РЅС‚Р° РїРµСЂРµС‡РёСЃР»РёРјРѕРіРѕ С‚РёРїР°
+	 * @param locale Р»РѕРєР°Р»СЊ
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 * 
-	 * @throws NullPointerException если <code>value == null</code>
+	 * @throws NullPointerException РµСЃР»Рё <code>value == null</code>
 	 */
 	public static String getEnumTextRepresentation(Enum<?> value, Locale locale) {
 		if (value == null)
@@ -175,25 +175,25 @@ public class MiscUtils {
 	}
 
 	/**
-	 * получить текстовое представление объекта логического типа, используется локаль подключенного пользователя
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РѕР±СЉРµРєС‚Р° Р»РѕРіРёС‡РµСЃРєРѕРіРѕ С‚РёРїР°, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ Р»РѕРєР°Р»СЊ РїРѕРґРєР»СЋС‡РµРЅРЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @param value	значение
-	 * @return	текстовое представление
+	 * @param value	Р·РЅР°С‡РµРЅРёРµ
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 * 
-	 * @throws NullPointerException если <code>value == null</code>
+	 * @throws NullPointerException РµСЃР»Рё <code>value == null</code>
 	 */
 	public static String getBooleanTextRepresentation(Boolean value) {
 		return getBooleanTextRepresentation(value, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * получить текстовое представление объекта логического типа
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РѕР±СЉРµРєС‚Р° Р»РѕРіРёС‡РµСЃРєРѕРіРѕ С‚РёРїР°
 	 * 
-	 * @param value		значение
-	 * @param locale	локаль
-	 * @return			текстовое представление
+	 * @param value		Р·РЅР°С‡РµРЅРёРµ
+	 * @param locale	Р»РѕРєР°Р»СЊ
+	 * @return			С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 * 
-	 * @throws NullPointerException если <code>value == null</code>
+	 * @throws NullPointerException РµСЃР»Рё <code>value == null</code>
 	 */
 	public static String getBooleanTextRepresentation(Boolean value, Locale locale) {
 		if (value == null)
@@ -203,11 +203,11 @@ public class MiscUtils {
 	}
 
 	/**
-	 * генерация стандартного текстового представления объекта сущности, атрибуты сущности перечисляются
-	 * через символ <пробел>
+	 * РіРµРЅРµСЂР°С†РёСЏ СЃС‚Р°РЅРґР°СЂС‚РЅРѕРіРѕ С‚РµРєСЃС‚РѕРІРѕРіРѕ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёСЏ РѕР±СЉРµРєС‚Р° СЃСѓС‰РЅРѕСЃС‚Рё, Р°С‚СЂРёР±СѓС‚С‹ СЃСѓС‰РЅРѕСЃС‚Рё РїРµСЂРµС‡РёСЃР»СЏСЋС‚СЃСЏ
+	 * С‡РµСЂРµР· СЃРёРјРІРѕР» <РїСЂРѕР±РµР»>
 	 * 
-	 * @param values	значения атрибутов сущности
-	 * @return	текстовое представление
+	 * @param values	Р·РЅР°С‡РµРЅРёСЏ Р°С‚СЂРёР±СѓС‚РѕРІ СЃСѓС‰РЅРѕСЃС‚Рё
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 */
 	private static String generateDefaultText(Object[] values) {
 		StringBuilder sb = new StringBuilder();
@@ -217,13 +217,13 @@ public class MiscUtils {
 	}
 
 	/**
-	 * получить текстовое представление объекта сущности, используется локаль подключенного пользователя
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РѕР±СЉРµРєС‚Р° СЃСѓС‰РЅРѕСЃС‚Рё, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ Р»РѕРєР°Р»СЊ РїРѕРґРєР»СЋС‡РµРЅРЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @param persistentObject	сущность
-	 * @param metadata			метаданные
-	 * @return	текстовое представление
+	 * @param persistentObject	СЃСѓС‰РЅРѕСЃС‚СЊ
+	 * @param metadata			РјРµС‚Р°РґР°РЅРЅС‹Рµ
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 * 
-	 * @throws NullPointerException если <code>persistentObject == null</code> или <code>metadata == null</code>
+	 * @throws NullPointerException РµСЃР»Рё <code>persistentObject == null</code> РёР»Рё <code>metadata == null</code>
 	 * 
 	 * @see #getPersistentObjectTextRepresentation(PersistentObject, FieldMetadata, Locale)
 	 */
@@ -232,12 +232,12 @@ public class MiscUtils {
 	}
 
 	/**
-	 * получить текстовое представление объекта сущности
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РѕР±СЉРµРєС‚Р° СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param persistentObject	сущность
-	 * @param metadata			метаданные
-	 * @param locale			локаль
-	 * @return	текстовое представление
+	 * @param persistentObject	СЃСѓС‰РЅРѕСЃС‚СЊ
+	 * @param metadata			РјРµС‚Р°РґР°РЅРЅС‹Рµ
+	 * @param locale			Р»РѕРєР°Р»СЊ
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 */
 	public static String getPersistentObjectTextRepresentation(PersistentObject persistentObject, FieldMetadata metadata, Locale locale) {
 		if (metadata == null)
@@ -247,25 +247,25 @@ public class MiscUtils {
 	}
 
 	/**
-	 * получить текстовое представление объекта сущности
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РѕР±СЉРµРєС‚Р° СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param persistentObject			сущность
-	 * @param entityPropertyText		свойства для отображения
-	 * @param entityPropertyFormatText	формат отображения (должен быть совместим с форматом метода {@link String#format(String, Object[])})
-	 * @return	текстовое представление
+	 * @param persistentObject			СЃСѓС‰РЅРѕСЃС‚СЊ
+	 * @param entityPropertyText		СЃРІРѕР№СЃС‚РІР° РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ
+	 * @param entityPropertyFormatText	С„РѕСЂРјР°С‚ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ (РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ СЃРѕРІРјРµСЃС‚РёРј СЃ С„РѕСЂРјР°С‚РѕРј РјРµС‚РѕРґР° {@link String#format(String, Object[])})
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 */
 	public static String getPersistentObjectTextRepresentation(PersistentObject persistentObject, String[] entityPropertyText, String entityPropertyFormatText) {
 		return getPersistentObjectTextRepresentation(persistentObject, entityPropertyText, entityPropertyFormatText, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * получить текстовое представление объекта сущности
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РѕР±СЉРµРєС‚Р° СЃСѓС‰РЅРѕСЃС‚Рё
 	 * 
-	 * @param persistentObject			сущность
-	 * @param entityPropertyText		свойства для отображения
-	 * @param entityPropertyFormatText	формат отображения (должен быть совместим с форматом метода {@link String#format(String, Object[])})
-	 * @param locale					локаль
-	 * @return	текстовое представление
+	 * @param persistentObject			СЃСѓС‰РЅРѕСЃС‚СЊ
+	 * @param entityPropertyText		СЃРІРѕР№СЃС‚РІР° РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ
+	 * @param entityPropertyFormatText	С„РѕСЂРјР°С‚ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ (РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ СЃРѕРІРјРµСЃС‚РёРј СЃ С„РѕСЂРјР°С‚РѕРј РјРµС‚РѕРґР° {@link String#format(String, Object[])})
+	 * @param locale					Р»РѕРєР°Р»СЊ
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ
 	 */
 	public static String getPersistentObjectTextRepresentation(PersistentObject persistentObject, String[] entityPropertyText, String entityPropertyFormatText, Locale locale) {
 		if (persistentObject == null)
@@ -277,7 +277,7 @@ public class MiscUtils {
 				Object[] values = new Object[entityPropertyText.length];
 				for (int i = 0; i < entityPropertyText.length; i++) {
 					Object attrValue = persistentObject.getAttribute(entityPropertyText[i]);
-					//в строках удалим незначащие пробелы
+					//РІ СЃС‚СЂРѕРєР°С… СѓРґР°Р»РёРј РЅРµР·РЅР°С‡Р°С‰РёРµ РїСЂРѕР±РµР»С‹
 					if (attrValue instanceof String)
 						values[i] = ((String) attrValue).trim();
 					else
@@ -314,29 +314,29 @@ public class MiscUtils {
 	}
 
 	/**
-	 * получить текстовое представление атрибута сущности с типом <code>DATE, DATETIME, TIME</code>. Используется локаль подключенного пользователя
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р° СЃСѓС‰РЅРѕСЃС‚Рё СЃ С‚РёРїРѕРј <code>DATE, DATETIME, TIME</code>. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ Р»РѕРєР°Р»СЊ РїРѕРґРєР»СЋС‡РµРЅРЅРѕРіРѕ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
 	 * 
-	 * @param value		значение атрибута
-	 * @param metadata	метаданные
-	 * @return	текстовое представление или пустую строку если <code>value == null</code>
+	 * @param value		Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р°
+	 * @param metadata	РјРµС‚Р°РґР°РЅРЅС‹Рµ
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РёР»Рё РїСѓСЃС‚СѓСЋ СЃС‚СЂРѕРєСѓ РµСЃР»Рё <code>value == null</code>
 	 * 
 	 * @see #getDateTextRepresentation(Date, FieldMetadata, Locale)
 	 * 
-	 * @throws NullPointerException если <code>metadata == null</code>
+	 * @throws NullPointerException РµСЃР»Рё <code>metadata == null</code>
 	 */
 	public static String getDateTextRepresentation(Date value, FieldMetadata metadata) {
 		return getDateTextRepresentation(value, metadata, ServerUtils.getUserLocale());
 	}
 
 	/**
-	 * получить текстовое представление атрибута сущности с типом <code>DATE, DATETIME, TIME</code>
+	 * РїРѕР»СѓС‡РёС‚СЊ С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р° СЃСѓС‰РЅРѕСЃС‚Рё СЃ С‚РёРїРѕРј <code>DATE, DATETIME, TIME</code>
 	 * 
-	 * @param value		значение атрибута
-	 * @param metadata	метаданные
-	 * @param locale	локаль
-	 * @return	текстовое представление или пустую строку если <code>value == null</code>
+	 * @param value		Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р°
+	 * @param metadata	РјРµС‚Р°РґР°РЅРЅС‹Рµ
+	 * @param locale	Р»РѕРєР°Р»СЊ
+	 * @return	С‚РµРєСЃС‚РѕРІРѕРµ РїСЂРµРґСЃС‚Р°РІР»РµРЅРёРµ РёР»Рё РїСѓСЃС‚СѓСЋ СЃС‚СЂРѕРєСѓ РµСЃР»Рё <code>value == null</code>
 	 * 
-	 * @throws NullPointerException если <code>metadata == null</code>
+	 * @throws NullPointerException РµСЃР»Рё <code>metadata == null</code>
 	 */
 	public static String getDateTextRepresentation(Date value, FieldMetadata metadata, Locale locale) {
 		if (value == null || DateTimeUtils.isBoundDateValue(value))
@@ -370,10 +370,10 @@ public class MiscUtils {
 	}
 
 	/**
-	 * получить встроенный тип приложения на основании Java типа
+	 * РїРѕР»СѓС‡РёС‚СЊ РІСЃС‚СЂРѕРµРЅРЅС‹Р№ С‚РёРї РїСЂРёР»РѕР¶РµРЅРёСЏ РЅР° РѕСЃРЅРѕРІР°РЅРёРё Java С‚РёРїР°
 	 * 
-	 * @param clazz	класс Java типа
-	 * @return	встроенный тип
+	 * @param clazz	РєР»Р°СЃСЃ Java С‚РёРїР°
+	 * @return	РІСЃС‚СЂРѕРµРЅРЅС‹Р№ С‚РёРї
 	 */
 	public static BuiltInType javaTypeToBuiltInType(Class<?> clazz) {
 		return BuiltInType.fromJavaClass(clazz);

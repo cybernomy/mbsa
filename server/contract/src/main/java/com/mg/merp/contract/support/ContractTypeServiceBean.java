@@ -23,7 +23,7 @@ import com.mg.merp.contract.ContractTypeServiceLocal;
 import com.mg.merp.contract.model.ContractType;
 
 /**
- * Реализация бизнес-компонента "Вид договора" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РёРґ РґРѕРіРѕРІРѕСЂР°" 
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ContractTypeServiceBean.java,v 1.1 2007/09/17 12:16:22 alikaev Exp $

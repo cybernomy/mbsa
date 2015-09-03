@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.Widget;
 import com.mg.framework.api.ui.Window;
 
 /**
- * внутренний фрейм, используется для MDI интерфейса
+ * РІРЅСѓС‚СЂРµРЅРЅРёР№ С„СЂРµР№Рј, РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РґР»СЏ MDI РёРЅС‚РµСЂС„РµР№СЃР°
  * 
  * @author Oleg V. Safonov
  * @version $Id: InternalFrame.java,v 1.4 2006/11/21 15:34:06 safonov Exp $
@@ -26,15 +26,15 @@ import com.mg.framework.api.ui.Window;
 public interface InternalFrame extends Widget, Window {
 
 	/**
-	 * заголовок по умолчанию
+	 * Р·Р°РіРѕР»РѕРІРѕРє РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
 	final static String DEFAULT_TITLE = "InternalFrame";
 	
 	/**
-	 * установка размеров окна
+	 * СѓСЃС‚Р°РЅРѕРІРєР° СЂР°Р·РјРµСЂРѕРІ РѕРєРЅР°
 	 * 
-	 * @param width		ширина (в пикселах)
-	 * @param height	высота (в пикселах)
+	 * @param width		С€РёСЂРёРЅР° (РІ РїРёРєСЃРµР»Р°С…)
+	 * @param height	РІС‹СЃРѕС‚Р° (РІ РїРёРєСЃРµР»Р°С…)
 	 */
 	void setSize(int width, int height);
 }

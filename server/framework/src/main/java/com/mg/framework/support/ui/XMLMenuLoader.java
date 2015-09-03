@@ -36,59 +36,59 @@ import com.mg.framework.utils.MiscUtils;
 import com.mg.framework.utils.ServerUtils;
 
 /**
- * Загрузчик меню, обработка загрузки происходит в классе наследнике {@link #XMLMenuLoader.AbstractHandler}
+ * Р—Р°РіСЂСѓР·С‡РёРє РјРµРЅСЋ, РѕР±СЂР°Р±РѕС‚РєР° Р·Р°РіСЂСѓР·РєРё РїСЂРѕРёСЃС…РѕРґРёС‚ РІ РєР»Р°СЃСЃРµ РЅР°СЃР»РµРґРЅРёРєРµ {@link #XMLMenuLoader.AbstractHandler}
  * 
  * @author Oleg V. Safonov
  * @version $Id: XMLMenuLoader.java,v 1.4 2008/04/09 14:34:01 safonov Exp $
  */
 public class XMLMenuLoader {
 	/**
-	 * Ресурс хранящий глобальное меню поставляемое основным вендором продукта 
+	 * Р РµСЃСѓСЂСЃ С…СЂР°РЅСЏС‰РёР№ РіР»РѕР±Р°Р»СЊРЅРѕРµ РјРµРЅСЋ РїРѕСЃС‚Р°РІР»СЏРµРјРѕРµ РѕСЃРЅРѕРІРЅС‹Рј РІРµРЅРґРѕСЂРѕРј РїСЂРѕРґСѓРєС‚Р° 
 	 */
 	private static final String GLOBAL_MENU = "/conf/GlobalMenu.xml"; //$NON-NLS-1$
 	
 	/**
-	 * Наименование тэга действия
+	 * РќР°РёРјРµРЅРѕРІР°РЅРёРµ С‚СЌРіР° РґРµР№СЃС‚РІРёСЏ
 	 */
 	private static final String ACTION = "action"; //$NON-NLS-1$
 	
 	/**
-	 * Наименование тэга текста элемента
+	 * РќР°РёРјРµРЅРѕРІР°РЅРёРµ С‚СЌРіР° С‚РµРєСЃС‚Р° СЌР»РµРјРµРЅС‚Р°
 	 */
 	private static final String TEXT = "text"; //$NON-NLS-1$
 	
 	/**
-	 * Наименование тэга элемента меню
+	 * РќР°РёРјРµРЅРѕРІР°РЅРёРµ С‚СЌРіР° СЌР»РµРјРµРЅС‚Р° РјРµРЅСЋ
 	 */
 	private static final String MENU_ITEM = "menuItem"; //$NON-NLS-1$
 	
 	/**
-	 * Наименование тэга меню
+	 * РќР°РёРјРµРЅРѕРІР°РЅРёРµ С‚СЌРіР° РјРµРЅСЋ
 	 */
 	private static final String MENU = "menu"; //$NON-NLS-1$
 	
 	/**
-	 * Наименование тэга разделителя
+	 * РќР°РёРјРµРЅРѕРІР°РЅРёРµ С‚СЌРіР° СЂР°Р·РґРµР»РёС‚РµР»СЏ
 	 */
 	private static final String SEPARATOR = "separator"; //$NON-NLS-1$
 	
 	/**
-	 * Атрибут наименования элемента
+	 * РђС‚СЂРёР±СѓС‚ РЅР°РёРјРµРЅРѕРІР°РЅРёСЏ СЌР»РµРјРµРЅС‚Р°
 	 */
 	private static final String NAME_ATTR = "name"; //$NON-NLS-1$
 
 	/**
-	 * Локаль по умолчанию
+	 * Р›РѕРєР°Р»СЊ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 	 */
-	private static final String DEFAULT_LOCALE = "ru_RU"; //$NON-NLS-1$ не очень понятно какой язык брать по умолчанию
+	private static final String DEFAULT_LOCALE = "ru_RU"; //$NON-NLS-1$ РЅРµ РѕС‡РµРЅСЊ РїРѕРЅСЏС‚РЅРѕ РєР°РєРѕР№ СЏР·С‹Рє Р±СЂР°С‚СЊ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
 
 	/**
-	 * Наименование тэга параметра действия
+	 * РќР°РёРјРµРЅРѕРІР°РЅРёРµ С‚СЌРіР° РїР°СЂР°РјРµС‚СЂР° РґРµР№СЃС‚РІРёСЏ
 	 */
 	private static final String ACTION_PARAM = "param"; //$NON-NLS-1$
 	
 	/**
-	 * Атрибут наименования класса реализующего действие
+	 * РђС‚СЂРёР±СѓС‚ РЅР°РёРјРµРЅРѕРІР°РЅРёСЏ РєР»Р°СЃСЃР° СЂРµР°Р»РёР·СѓСЋС‰РµРіРѕ РґРµР№СЃС‚РІРёРµ
 	 */
 	private static final String ACTION_CODE = "code"; //$NON-NLS-1$
 
@@ -148,55 +148,55 @@ public class XMLMenuLoader {
 		private XMLMenuLoader loader;
 
 		/**
-		 * Создает меню
+		 * РЎРѕР·РґР°РµС‚ РјРµРЅСЋ
 		 * 
-		 * @return	меню
+		 * @return	РјРµРЅСЋ
 		 */
 		abstract protected Object createMenu();
 		
 		/**
-		 * Создает элемент меню
+		 * РЎРѕР·РґР°РµС‚ СЌР»РµРјРµРЅС‚ РјРµРЅСЋ
 		 * 
-		 * @return	элемент меню
+		 * @return	СЌР»РµРјРµРЅС‚ РјРµРЅСЋ
 		 */
 		abstract protected Object createMenuItem();
 		
 		/**
-		 * Устанавливает текст пункта меню
+		 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ С‚РµРєСЃС‚ РїСѓРЅРєС‚Р° РјРµРЅСЋ
 		 * 
-		 * @param menuItem	элемент меню
-		 * @param text		текст
+		 * @param menuItem	СЌР»РµРјРµРЅС‚ РјРµРЅСЋ
+		 * @param text		С‚РµРєСЃС‚
 		 */
 		abstract protected void adjustText(Object menuItem, String text);
 		
 		/**
-		 * Устанавливает действие для пункта меню
+		 * РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РґРµР№СЃС‚РІРёРµ РґР»СЏ РїСѓРЅРєС‚Р° РјРµРЅСЋ
 		 * 
-		 * @param menuItem	элемент меню
-		 * @param action	действие
+		 * @param menuItem	СЌР»РµРјРµРЅС‚ РјРµРЅСЋ
+		 * @param action	РґРµР№СЃС‚РІРёРµ
 		 */
 		abstract protected void adjustAction(Object menuItem, MenuCommand action);
 		
 		/**
-		 * Установка дополнительных свойств
+		 * РЈСЃС‚Р°РЅРѕРІРєР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… СЃРІРѕР№СЃС‚РІ
 		 * 
-		 * @param menuItem	элемент меню
-		 * @param element	элемент XML документа соответсвующий элементу меню
+		 * @param menuItem	СЌР»РµРјРµРЅС‚ РјРµРЅСЋ
+		 * @param element	СЌР»РµРјРµРЅС‚ XML РґРѕРєСѓРјРµРЅС‚Р° СЃРѕРѕС‚РІРµС‚СЃРІСѓСЋС‰РёР№ СЌР»РµРјРµРЅС‚Сѓ РјРµРЅСЋ
 		 */
 		abstract protected void adjustProperties(Object menuItem, Element element);
 		
 		/**
-		 * Добавляет элемент меню в меню
+		 * Р”РѕР±Р°РІР»СЏРµС‚ СЌР»РµРјРµРЅС‚ РјРµРЅСЋ РІ РјРµРЅСЋ
 		 * 
-		 * @param menu		меню
-		 * @param menuItem	элемент меню
+		 * @param menu		РјРµРЅСЋ
+		 * @param menuItem	СЌР»РµРјРµРЅС‚ РјРµРЅСЋ
 		 */
 		abstract protected void addMenuItem(Object menu, Object menuItem);
 		
 		/**
-		 * Добавляет разделитель в меню
+		 * Р”РѕР±Р°РІР»СЏРµС‚ СЂР°Р·РґРµР»РёС‚РµР»СЊ РІ РјРµРЅСЋ
 		 * 
-		 * @param menu	меню
+		 * @param menu	РјРµРЅСЋ
 		 */
 		abstract protected void addMenuSeparator(Object menu);
 		
@@ -206,7 +206,7 @@ public class XMLMenuLoader {
 				addMenuItem(loader.menus.peek(), menu);
 			loader.menus.push(menu);
 			
-			//установим самый первый элемент меню
+			//СѓСЃС‚Р°РЅРѕРІРёРј СЃР°РјС‹Р№ РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ РјРµРЅСЋ
 			if (loader.rootItem == null)
 				loader.rootItem = menu;
 		}
@@ -222,7 +222,7 @@ public class XMLMenuLoader {
 			addMenuItem(loader.menus.peek(), menuItem);
 			loader.currentMenuItem = menuItem;
 			
-			//установим самый первый элемент меню
+			//СѓСЃС‚Р°РЅРѕРІРёРј СЃР°РјС‹Р№ РїРµСЂРІС‹Р№ СЌР»РµРјРµРЅС‚ РјРµРЅСЋ
 			if (loader.rootItem == null)
 				loader.rootItem = menuItem;
 		}
@@ -231,7 +231,7 @@ public class XMLMenuLoader {
 			String text;
 			Element captionTextElement = (Element) element.selectSingleNode(loader.localeStr);
 			if (captionTextElement != null)
-				text = captionTextElement.getStringValue(); //меню локализовано в описателе
+				text = captionTextElement.getStringValue(); //РјРµРЅСЋ Р»РѕРєР°Р»РёР·РѕРІР°РЅРѕ РІ РѕРїРёСЃР°С‚РµР»Рµ
 			else {
 				Element parent = element.getParent();
 				text = parent != null ? parent.attributeValue("name") : element.getName();
@@ -244,7 +244,7 @@ public class XMLMenuLoader {
 		}
 		
 		private void parseAction(Element element) {
-			//действие можно установить только для конечных элементов
+			//РґРµР№СЃС‚РІРёРµ РјРѕР¶РЅРѕ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ С‚РѕР»СЊРєРѕ РґР»СЏ РєРѕРЅРµС‡РЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ
 			if (loader.currentMenuItem == null)
 				return;
 			

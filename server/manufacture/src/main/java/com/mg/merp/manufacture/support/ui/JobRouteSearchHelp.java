@@ -23,7 +23,7 @@ import com.mg.merp.manufacture.JobRouteServiceLocal;
 import com.mg.merp.manufacture.model.Job;
 
 /**
- * Механизм поиска операций ЗНП
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° РѕРїРµСЂР°С†РёР№ Р—РќРџ
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: JobRouteSearchHelp.java,v 1.3 2007/07/31 06:31:06 safonov Exp $
@@ -31,9 +31,9 @@ import com.mg.merp.manufacture.model.Job;
 public class JobRouteSearchHelp extends AbstractSearchHelp {
 
 	/**
-	 * получить наименование атрибута хранящего ссылку на ЗНП
+	 * РїРѕР»СѓС‡РёС‚СЊ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ Р°С‚СЂРёР±СѓС‚Р° С…СЂР°РЅСЏС‰РµРіРѕ СЃСЃС‹Р»РєСѓ РЅР° Р—РќРџ
 	 * 
-	 * @return	наименование атрибута
+	 * @return	РЅР°РёРјРµРЅРѕРІР°РЅРёРµ Р°С‚СЂРёР±СѓС‚Р°
 	 */
 	protected String getJobPropertyName() {
 		return "Job";

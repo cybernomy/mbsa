@@ -21,7 +21,7 @@ import com.mg.merp.reference.model.IdentDoc;
 import com.mg.merp.reference.model.NaturalPerson;
 
 /**
- * Механизм поиска сущностей "Адреса проживания"
+ * РњРµС…Р°РЅРёР·Рј РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РђРґСЂРµСЃР° РїСЂРѕР¶РёРІР°РЅРёСЏ"
  *  
  * @author leonova
  * @author Konstantin S. Alikaev

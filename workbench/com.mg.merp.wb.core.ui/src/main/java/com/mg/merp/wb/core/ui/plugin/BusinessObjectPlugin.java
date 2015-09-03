@@ -23,8 +23,8 @@ import com.mg.merp.wb.core.ui.editor.StandartEditorInput;
 import com.mg.merp.wb.core.ui.view.StandartBrowserView;
 
 /**
- * Класс-предок для плугинов управления бизнес объектами<br>
- * T-Класс наполнение бизнес объекта
+ * РљР»Р°СЃСЃ-РїСЂРµРґРѕРє РґР»СЏ РїР»СѓРіРёРЅРѕРІ СѓРїСЂР°РІР»РµРЅРёСЏ Р±РёР·РЅРµСЃ РѕР±СЉРµРєС‚Р°РјРё<br>
+ * T-РљР»Р°СЃСЃ РЅР°РїРѕР»РЅРµРЅРёРµ Р±РёР·РЅРµСЃ РѕР±СЉРµРєС‚Р°
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: BusinessObjectPlugin.java,v 1.2 2007/05/07 13:05:06 poroxnenko Exp $
@@ -32,54 +32,54 @@ import com.mg.merp.wb.core.ui.view.StandartBrowserView;
 public abstract class BusinessObjectPlugin<T> extends MerpUIPlugin {
 
 	/**
-	 * Удалённое добавление объекта в базу
+	 * РЈРґР°Р»С‘РЅРЅРѕРµ РґРѕР±Р°РІР»РµРЅРёРµ РѕР±СЉРµРєС‚Р° РІ Р±Р°Р·Сѓ
 	 * 
 	 * @param bo
-	 *            объекта
-	 * @return объект с новой временной меткой или NULL, в случае ошибки
+	 *            РѕР±СЉРµРєС‚Р°
+	 * @return РѕР±СЉРµРєС‚ СЃ РЅРѕРІРѕР№ РІСЂРµРјРµРЅРЅРѕР№ РјРµС‚РєРѕР№ РёР»Рё NULL, РІ СЃР»СѓС‡Р°Рµ РѕС€РёР±РєРё
 	 * @throws Exception
 	 */
 	abstract public T addBusinessObject(T bo) throws Exception;
 
 	/**
-	 * Удаление объектов из базы
+	 * РЈРґР°Р»РµРЅРёРµ РѕР±СЉРµРєС‚РѕРІ РёР· Р±Р°Р·С‹
 	 * 
 	 * @param keys
-	 *            список ключей объектов, подлежащих удалению
-	 * @return код выполнения. 0 - успешно. -1 - ошибка
+	 *            СЃРїРёСЃРѕРє РєР»СЋС‡РµР№ РѕР±СЉРµРєС‚РѕРІ, РїРѕРґР»РµР¶Р°С‰РёС… СѓРґР°Р»РµРЅРёСЋ
+	 * @return РєРѕРґ РІС‹РїРѕР»РЅРµРЅРёСЏ. 0 - СѓСЃРїРµС€РЅРѕ. -1 - РѕС€РёР±РєР°
 	 * @throws Exception
 	 */
 	abstract public void deleteBusinessObjectsList(Integer[] ids)
 			throws Exception;
 
 	/**
-	 * Удалённое изменение объекта
+	 * РЈРґР°Р»С‘РЅРЅРѕРµ РёР·РјРµРЅРµРЅРёРµ РѕР±СЉРµРєС‚Р°
 	 * 
 	 * @param bo
-	 *            объект
-	 * @return объект с новой временной меткой, NULL-в случае ошибки
+	 *            РѕР±СЉРµРєС‚
+	 * @return РѕР±СЉРµРєС‚ СЃ РЅРѕРІРѕР№ РІСЂРµРјРµРЅРЅРѕР№ РјРµС‚РєРѕР№, NULL-РІ СЃР»СѓС‡Р°Рµ РѕС€РёР±РєРё
 	 * @throws Exception
 	 */
 	abstract public T editBusinessObject(T bo) throws Exception;
 
 	/**
-	 * Удалённое получение списка объектов
+	 * РЈРґР°Р»С‘РЅРЅРѕРµ РїРѕР»СѓС‡РµРЅРёРµ СЃРїРёСЃРєР° РѕР±СЉРµРєС‚РѕРІ
 	 * 
 	 * @param query
-	 *            Маска. Формат допустимый для предложения "like" в
-	 *            EJBQL(Символы '*' автоматически заменяются на '%', а '?' на
+	 *            РњР°СЃРєР°. Р¤РѕСЂРјР°С‚ РґРѕРїСѓСЃС‚РёРјС‹Р№ РґР»СЏ РїСЂРµРґР»РѕР¶РµРЅРёСЏ "like" РІ
+	 *            EJBQL(РЎРёРјРІРѕР»С‹ '*' Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё Р·Р°РјРµРЅСЏСЋС‚СЃСЏ РЅР° '%', Р° '?' РЅР°
 	 *            '_')
-	 * @return список объектов или NULL, в случае ошибки
+	 * @return СЃРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ РёР»Рё NULL, РІ СЃР»СѓС‡Р°Рµ РѕС€РёР±РєРё
 	 * @throws Exception
 	 */
 	abstract public T[] synchronize(String query) throws Exception;
 
 	/**
-	 * Открывает форму редактирования бизнес-объекта
+	 * РћС‚РєСЂС‹РІР°РµС‚ С„РѕСЂРјСѓ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ Р±РёР·РЅРµСЃ-РѕР±СЉРµРєС‚Р°
 	 * 
 	 * @param input
-	 *            данные бизнес-объекта
-	 * @return Форма редактирования бизнес-объекта
+	 *            РґР°РЅРЅС‹Рµ Р±РёР·РЅРµСЃ-РѕР±СЉРµРєС‚Р°
+	 * @return Р¤РѕСЂРјР° СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ Р±РёР·РЅРµСЃ-РѕР±СЉРµРєС‚Р°
 	 */
 	public static <EI extends StandartEditorInput> StandartEditorForm openEditor(
 			EI input, String editorId) {
@@ -103,7 +103,7 @@ public abstract class BusinessObjectPlugin<T> extends MerpUIPlugin {
 
 	/**
 	 * 
-	 * @return ID вида бизнес-объекта
+	 * @return ID РІРёРґР° Р±РёР·РЅРµСЃ-РѕР±СЉРµРєС‚Р°
 	 */
 	public abstract String getViewId();
 

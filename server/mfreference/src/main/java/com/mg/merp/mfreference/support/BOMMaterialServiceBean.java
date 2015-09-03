@@ -25,7 +25,7 @@ import com.mg.merp.mfreference.model.BomMaterial;
 import com.mg.merp.mfreference.model.ManufactureConfig;
 
 /**
- * Бизнес-компонент "Операции / Материалы" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РћРїРµСЂР°С†РёРё / РњР°С‚РµСЂРёР°Р»С‹" 
  * 
  * @author leonova
  * @version $Id: BOMMaterialServiceBean.java,v 1.7 2009/03/05 12:36:48 safonov Exp $

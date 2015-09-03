@@ -26,8 +26,8 @@ import com.mg.merp.crm.model.Problem;
 import com.mg.merp.reference.model.NaturalPerson;
 
 /**
- * Модель таблицы "Проблемы"
- * Специализирована для диалога "Поиск решения"
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ "РџСЂРѕР±Р»РµРјС‹"
+ * РЎРїРµС†РёР°Р»РёР·РёСЂРѕРІР°РЅР° РґР»СЏ РґРёР°Р»РѕРіР° "РџРѕРёСЃРє СЂРµС€РµРЅРёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: SolutionSearchProblemTableModel.java,v 1.1 2007/05/16 06:21:43 sharapov Exp $
@@ -81,16 +81,16 @@ public class SolutionSearchProblemTableModel extends DefaultEJBQLTableModel {
 	}
 
 	/**
-	 * Установить список симптомов
-	 * @param symptoms - список симптомов
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ СЃРїРёСЃРѕРє СЃРёРјРїС‚РѕРјРѕРІ
+	 * @param symptoms - СЃРїРёСЃРѕРє СЃРёРјРїС‚РѕРјРѕРІ
 	 */
 	public void setSymptoms(List<Integer> symptoms) {
 		this.symptoms = symptoms;
 	}
 
 	/**
-	 * Удалить запись в таблицу "Проблемы"
-	 * @param problemRow - запись
+	 * РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ РІ С‚Р°Р±Р»РёС†Сѓ "РџСЂРѕР±Р»РµРјС‹"
+	 * @param problemRow - Р·Р°РїРёСЃСЊ
 	 */
 	public void removeRow(Object[] problemRow) {
 		rowList.remove(problemRow);
@@ -98,8 +98,8 @@ public class SolutionSearchProblemTableModel extends DefaultEJBQLTableModel {
 	}
 	
 	/**
-	 * Добавить запись в таблицу "Проблемы"
-	 * @param problemRow - запись
+	 * Р”РѕР±Р°РІРёС‚СЊ Р·Р°РїРёСЃСЊ РІ С‚Р°Р±Р»РёС†Сѓ "РџСЂРѕР±Р»РµРјС‹"
+	 * @param problemRow - Р·Р°РїРёСЃСЊ
 	 */
 	public void addRow(Problem problem) {
 		Object[] problemRow = createProblemRow(problem);
@@ -122,9 +122,9 @@ public class SolutionSearchProblemTableModel extends DefaultEJBQLTableModel {
 	}
 	
 	/**
-	 * Сформировать запись таблицы "Проблемы".
-	 * @param problem - проблема
-	 * @return запись
+	 * РЎС„РѕСЂРјРёСЂРѕРІР°С‚СЊ Р·Р°РїРёСЃСЊ С‚Р°Р±Р»РёС†С‹ "РџСЂРѕР±Р»РµРјС‹".
+	 * @param problem - РїСЂРѕР±Р»РµРјР°
+	 * @return Р·Р°РїРёСЃСЊ
 	 */
 	private Object[] createProblemRow(Problem problem) {
 		String problemTypeCode = null;

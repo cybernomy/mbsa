@@ -17,7 +17,7 @@ package com.mg.merp.document;
 import java.io.Serializable;
 
 /**
- * Стратегия изменения агрегирующих свойств документа
+ * РЎС‚СЂР°С‚РµРіРёСЏ РёР·РјРµРЅРµРЅРёСЏ Р°РіСЂРµРіРёСЂСѓСЋС‰РёС… СЃРІРѕР№СЃС‚РІ РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentAggregatePropertiesStrategy.java,v 1.1 2007/09/26 09:37:42 safonov Exp $
@@ -25,7 +25,7 @@ import java.io.Serializable;
 public interface DocumentAggregatePropertiesStrategy extends Serializable {
 
 	/**
-	 * вычислить и установить агрегирующие свойства
+	 * РІС‹С‡РёСЃР»РёС‚СЊ Рё СѓСЃС‚Р°РЅРѕРІРёС‚СЊ Р°РіСЂРµРіРёСЂСѓСЋС‰РёРµ СЃРІРѕР№СЃС‚РІР°
 	 */
 	void calculate();
 

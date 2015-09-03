@@ -18,7 +18,7 @@ import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.warehouse.model.WarehouseType;
 
 /**
- *  Сервис бизнес-компонент "Тип склада"
+ *  РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РўРёРї СЃРєР»Р°РґР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: WarehouseTypeServiceLocal.java,v 1.1 2007/09/17 12:44:56 alikaev Exp $
@@ -26,7 +26,7 @@ import com.mg.merp.warehouse.model.WarehouseType;
 public interface WarehouseTypeServiceLocal extends DataBusinessObjectService<WarehouseType, Integer> {
 	
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/warehouse/WarehouseType";
 	

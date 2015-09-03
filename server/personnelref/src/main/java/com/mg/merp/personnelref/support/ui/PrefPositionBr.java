@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.personnelref.model.PrefPosition;
 
 /**
- * Браузер должностей на предприятии
+ * Р‘СЂР°СѓР·РµСЂ РґРѕР»Р¶РЅРѕСЃС‚РµР№ РЅР° РїСЂРµРґРїСЂРёСЏС‚РёРё
  * 
  * @author leonova
  * @version $Id: PrefPositionBr.java,v 1.1 2006/08/03 11:25:05 leonova Exp $ 

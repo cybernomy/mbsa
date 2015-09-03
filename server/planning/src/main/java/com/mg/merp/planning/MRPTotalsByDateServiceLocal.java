@@ -17,7 +17,7 @@ package com.mg.merp.planning;
 import com.mg.merp.planning.model.MrpTotalsByDate;
 
 /**
- * Бизнес-компонент "Результаты расчета ППМ по дням"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р РµР·СѓР»СЊС‚Р°С‚С‹ СЂР°СЃС‡РµС‚Р° РџРџРњ РїРѕ РґРЅСЏРј"
  * 
  * @author leonova
  * @version $Id: MRPTotalsByDateServiceLocal.java,v 1.2 2007/07/30 10:37:51 safonov Exp $

@@ -25,7 +25,7 @@ import com.mg.merp.crm.SymptomServiceLocal;
 import com.mg.merp.crm.model.Symptom;
 
 /**
- * Бизнес-компонент "Симптомы" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРёРјРїС‚РѕРјС‹" 
  * 
  * @author leonova
  * @version $Id: SymptomServiceBean.java,v 1.3 2006/09/06 05:24:25 leonova Exp $

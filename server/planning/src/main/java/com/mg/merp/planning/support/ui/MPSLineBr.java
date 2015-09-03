@@ -127,7 +127,7 @@ public class MPSLineBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * показать форму итогов формирования MPS
+	 * РїРѕРєР°Р·Р°С‚СЊ С„РѕСЂРјСѓ РёС‚РѕРіРѕРІ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ MPS
 	 * 
 	 * @param mpsId The mpsId to set.
 	 */

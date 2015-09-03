@@ -34,7 +34,7 @@ import com.mg.merp.overall.model.OvrCardHist;
 import com.mg.merp.overall.model.Size;
 
 /**
- * Контроллер формы поддержки бизнес - компонента "Лицевые карточки сотрудников"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё Р±РёР·РЅРµСЃ - РєРѕРјРїРѕРЅРµРЅС‚Р° "Р›РёС†РµРІС‹Рµ РєР°СЂС‚РѕС‡РєРё СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

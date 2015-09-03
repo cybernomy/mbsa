@@ -25,7 +25,7 @@ import com.mg.merp.warehouse.WarehouseZoneServiceLocal;
 import com.mg.merp.warehouse.model.WarehouseZone;
 
 /**
- * Бизнес-компонент "Зоны хранения" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р—РѕРЅС‹ С…СЂР°РЅРµРЅРёСЏ" 
  * 
  * @author leonova
  * @version $Id: WarehouseZoneServiceBean.java,v 1.4 2006/10/03 05:53:40 leonova Exp $

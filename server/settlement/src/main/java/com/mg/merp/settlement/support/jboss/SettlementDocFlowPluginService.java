@@ -27,7 +27,7 @@ import com.mg.merp.settlement.support.ProcessContractorCardDocFlowPluginFactory;
 import com.mg.merp.settlement.support.UndoPlanContractorCardDocFlowPluginFactory;
 
 /**
- * Реализация сервиса дополнительных модулей подсистемы "Расчеты с партнерами"
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РјРѕРґСѓР»РµР№ РїРѕРґСЃРёСЃС‚РµРјС‹ "Р Р°СЃС‡РµС‚С‹ СЃ РїР°СЂС‚РЅРµСЂР°РјРё"
  * 
  * @author Artem V. Sharapov
  * @version $Id: SettlementDocFlowPluginService.java,v 1.1 2007/03/19 15:05:29 sharapov Exp $

@@ -25,7 +25,7 @@ import com.mg.framework.api.ui.MaintenanceFormActionListener;
 import com.mg.framework.service.ApplicationDictionaryLocator;
 
 /**
- * Класс помощник для интерактивных действий над бизнес-компонентом
+ * РљР»Р°СЃСЃ РїРѕРјРѕС‰РЅРёРє РґР»СЏ РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹С… РґРµР№СЃС‚РІРёР№ РЅР°Рґ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚РѕРј
  * 
  * @author Oleg V. Safonov
  * @version $Id: MaintenanceHelper.java,v 1.9 2007/08/10 13:11:27 safonov Exp $
@@ -33,14 +33,14 @@ import com.mg.framework.service.ApplicationDictionaryLocator;
 public class MaintenanceHelper implements Serializable {
 
 	/**
-	 * интерактивное добавление экземпляра бизнес-компонента
+	 * РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕРµ РґРѕР±Р°РІР»РµРЅРёРµ СЌРєР·РµРјРїР»СЏСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
-	 * @param <T>		тип бизнес-компонента
-	 * @param <ID>		тип идентификатора
-	 * @param service	бизнес-компонент
-	 * @param entity	объект сущность
-	 * @param formName	имя формы поддержки, может быть <code>null</code>, в этом случае берется форма по умолчанию
-	 * @param listener	слушатель событий формы поддержки, может быть <code>null</code>
+	 * @param <T>		С‚РёРї Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * @param <ID>		С‚РёРї РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР°
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param entity	РѕР±СЉРµРєС‚ СЃСѓС‰РЅРѕСЃС‚СЊ
+	 * @param formName	РёРјСЏ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>, РІ СЌС‚РѕРј СЃР»СѓС‡Р°Рµ Р±РµСЂРµС‚СЃСЏ С„РѕСЂРјР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>
 	 */
 	public static void add(final DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> service,
 			PersistentObject entity, final String formName, final MaintenanceFormActionListener listener) {
@@ -51,16 +51,16 @@ public class MaintenanceHelper implements Serializable {
 	}
 
 	/**
-	 * интерактивное добавление экземпляра бизнес-компонента
+	 * РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕРµ РґРѕР±Р°РІР»РµРЅРёРµ СЌРєР·РµРјРїР»СЏСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
-	 * @param <T>		тип бизнес-компонента
-	 * @param <ID>		тип идентификатора
-	 * @param service		бизнес-компонент
-	 * @param uiProperties	инициализирующие свойства, может быть <code>null</code>
-	 * @param formName		имя формы поддержки, может быть <code>null</code>, в этом случае берется форма по умолчанию
-	 * @param listener		слушатель событий формы поддержки, может быть <code>null</code>
+	 * @param <T>		С‚РёРї Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * @param <ID>		С‚РёРї РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР°
+	 * @param service		Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param uiProperties	РёРЅРёС†РёР°Р»РёР·РёСЂСѓСЋС‰РёРµ СЃРІРѕР№СЃС‚РІР°, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>
+	 * @param formName		РёРјСЏ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>, РІ СЌС‚РѕРј СЃР»СѓС‡Р°Рµ Р±РµСЂРµС‚СЃСЏ С„РѕСЂРјР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>
 	 * 
-	 * @throws IllegalArgumentException если сервис <code>null</code>
+	 * @throws IllegalArgumentException РµСЃР»Рё СЃРµСЂРІРёСЃ <code>null</code>
 	 */
 	public static void add(final DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> service,
 			final AttributeMap uiProperties, final String formName, final MaintenanceFormActionListener listener) {
@@ -68,16 +68,16 @@ public class MaintenanceHelper implements Serializable {
 	}
 	
 	/**
-	 * интерактивное изменение экземпляра бизнес-компонента
+	 * РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕРµ РёР·РјРµРЅРµРЅРёРµ СЌРєР·РµРјРїР»СЏСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
-	 * @param <T>		тип бизнес-компонента
-	 * @param <ID>		тип идентификатора
-	 * @param service		бизнес-компонент
-	 * @param primaryKey	первичный ключ экземпляра бизнес-компонента
-	 * @param formName		имя формы поддержки, может быть <code>null</code>, в этом случае берется форма по умолчанию
-	 * @param listener		слушатель событий формы поддержки, может быть <code>null</code>
+	 * @param <T>		С‚РёРї Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * @param <ID>		С‚РёРї РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР°
+	 * @param service		Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param primaryKey	РїРµСЂРІРёС‡РЅС‹Р№ РєР»СЋС‡ СЌРєР·РµРјРїР»СЏСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * @param formName		РёРјСЏ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>, РІ СЌС‚РѕРј СЃР»СѓС‡Р°Рµ Р±РµСЂРµС‚СЃСЏ С„РѕСЂРјР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>
 	 * 
-	 * @throws IllegalArgumentException если сервис <code>null</code>
+	 * @throws IllegalArgumentException РµСЃР»Рё СЃРµСЂРІРёСЃ <code>null</code>
 	 */
 	@SuppressWarnings("unchecked")
 	public static void edit(final DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> service,
@@ -90,12 +90,12 @@ public class MaintenanceHelper implements Serializable {
 	}
 
 	/**
-	 * интерактивное изменение экземпляра бизнес-компонента
+	 * РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕРµ РёР·РјРµРЅРµРЅРёРµ СЌРєР·РµРјРїР»СЏСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
-	 * @param service	бизнес-компонент
-	 * @param entity	первичный ключ экземпляра бизнес-компонента
-	 * @param formName	имя формы поддержки, может быть <code>null</code>, в этом случае берется форма по умолчанию
-	 * @param listener	слушатель событий формы поддержки, может быть <code>null</code>
+	 * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param entity	РїРµСЂРІРёС‡РЅС‹Р№ РєР»СЋС‡ СЌРєР·РµРјРїР»СЏСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * @param formName	РёРјСЏ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>, РІ СЌС‚РѕРј СЃР»СѓС‡Р°Рµ Р±РµСЂРµС‚СЃСЏ С„РѕСЂРјР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @param listener	СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>
 	 */
 	public static void edit(final DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> service,
 			PersistentObject entity, final String formName, final MaintenanceFormActionListener listener) {
@@ -106,13 +106,13 @@ public class MaintenanceHelper implements Serializable {
 	}
 
 	/**
-	 * интерактивное копирование экземпляра бизнес-компонента
+	 * РёРЅС‚РµСЂР°РєС‚РёРІРЅРѕРµ РєРѕРїРёСЂРѕРІР°РЅРёРµ СЌРєР·РµРјРїР»СЏСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
-	 * @param service		бизнес-компонент
-	 * @param primaryKey	первичный ключ экземпляра бизнес-компонента
-	 * @param deepClone		признак копирования с объектами деталями
-	 * @param formName		имя формы поддержки, может быть <code>null</code>, в этом случае берется форма по умолчанию
-	 * @param listener		слушатель событий формы поддержки, может быть <code>null</code>
+	 * @param service		Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param primaryKey	РїРµСЂРІРёС‡РЅС‹Р№ РєР»СЋС‡ СЌРєР·РµРјРїР»СЏСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * @param deepClone		РїСЂРёР·РЅР°Рє РєРѕРїРёСЂРѕРІР°РЅРёСЏ СЃ РѕР±СЉРµРєС‚Р°РјРё РґРµС‚Р°Р»СЏРјРё
+	 * @param formName		РёРјСЏ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>, РІ СЌС‚РѕРј СЃР»СѓС‡Р°Рµ Р±РµСЂРµС‚СЃСЏ С„РѕСЂРјР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>
 	 */
 	@SuppressWarnings("unchecked")
 	public static void clone(final DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> service,
@@ -125,16 +125,16 @@ public class MaintenanceHelper implements Serializable {
 	}
 
 	/**
-	 * интерактивный просмотр экземпляра бизнес-компонента
+	 * РёРЅС‚РµСЂР°РєС‚РёРІРЅС‹Р№ РїСЂРѕСЃРјРѕС‚СЂ СЌРєР·РµРјРїР»СЏСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
 	 * 
-	 * @param <T>		тип бизнес-компонента
-	 * @param <ID>		тип идентификатора
-	 * @param service		бизнес-компонент
-	 * @param primaryKey	первичный ключ экземпляра бизнес-компонента
-	 * @param formName		имя формы поддержки, может быть <code>null</code>, в этом случае берется форма по умолчанию
-	 * @param listener		слушатель событий формы поддержки, может быть <code>null</code>
+	 * @param <T>		С‚РёРї Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * @param <ID>		С‚РёРї РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР°
+	 * @param service		Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+	 * @param primaryKey	РїРµСЂРІРёС‡РЅС‹Р№ РєР»СЋС‡ СЌРєР·РµРјРїР»СЏСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
+	 * @param formName		РёРјСЏ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>, РІ СЌС‚РѕРј СЃР»СѓС‡Р°Рµ Р±РµСЂРµС‚СЃСЏ С„РѕСЂРјР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
+	 * @param listener		СЃР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code>
 	 * 
-	 * @throws IllegalArgumentException если сервис <code>null</code>
+	 * @throws IllegalArgumentException РµСЃР»Рё СЃРµСЂРІРёСЃ <code>null</code>
 	 */
 	@SuppressWarnings("unchecked")
 	public static void view(final DataBusinessObjectService<? extends PersistentObject, ? extends Serializable> service, 
@@ -147,7 +147,7 @@ public class MaintenanceHelper implements Serializable {
 	}
 	
 	/**
-	 * реализация запуска формы поддержки
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ Р·Р°РїСѓСЃРєР° С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё
 	 * 
 	 * @param service
 	 * @param entity

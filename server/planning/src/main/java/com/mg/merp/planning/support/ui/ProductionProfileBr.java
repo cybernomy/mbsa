@@ -24,7 +24,7 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.planning.model.ProductionProfile;
 
 /**
- * Браузер профилей производства
+ * Р‘СЂР°СѓР·РµСЂ РїСЂРѕС„РёР»РµР№ РїСЂРѕРёР·РІРѕРґСЃС‚РІР°
  * 
  * @author leonova
  * @author Artem V. Sharapov

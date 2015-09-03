@@ -20,7 +20,7 @@ import com.mg.framework.support.ui.widget.TableEJBQLFieldDef;
 import com.mg.merp.warehouse.model.OrderHead;
 
 /**
- * Вспомогательный класс для отображения формы списка заказов
+ * Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р·Р°РєР°Р·РѕРІ
  * 
  * @author leonova
  * @version $Id: OrderMaintenanceEJBQLTableModel.java,v 1.3 2009/02/10 14:29:13 safonov Exp $

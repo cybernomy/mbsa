@@ -96,7 +96,7 @@ public class BusinessObjectFactory {
 		}
 		catch (NamingException e) {
 			//TODO i18n
-			throw new ApplicationException(String.format(ServerUtils.getUserLocale(), "Сервис %s не поддерживается", name), e);
+			throw new ApplicationException(String.format(ServerUtils.getUserLocale(), "РЎРµСЂРІРёСЃ %s РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ", name), e);
 		}
 		catch (InvocationTargetException e) {
 			throw new ApplicationException(e.getTargetException());

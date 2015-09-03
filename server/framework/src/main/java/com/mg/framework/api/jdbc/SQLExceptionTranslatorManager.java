@@ -19,7 +19,7 @@ import java.sql.SQLException;
 import com.mg.framework.api.DataAccessException;
 
 /**
- * Менеджер трансляторов SQL ИС в пользовательские исключения
+ * РњРµРЅРµРґР¶РµСЂ С‚СЂР°РЅСЃР»СЏС‚РѕСЂРѕРІ SQL РРЎ РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РёСЃРєР»СЋС‡РµРЅРёСЏ
  * 
  * @author Oleg V. Safonov
  * @version $Id: SQLExceptionTranslatorManager.java,v 1.1 2006/11/17 14:13:38 safonov Exp $
@@ -27,25 +27,25 @@ import com.mg.framework.api.DataAccessException;
 public interface SQLExceptionTranslatorManager {
 
 	/**
-	 * регистрация траслятора, становится первым в списке обработчиков, т.о. возможно
-	 * переопределить поведение трасляторов добавив свой траслятор после инсталяции переопределяемого
+	 * СЂРµРіРёСЃС‚СЂР°С†РёСЏ С‚СЂР°СЃР»СЏС‚РѕСЂР°, СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РїРµСЂРІС‹Рј РІ СЃРїРёСЃРєРµ РѕР±СЂР°Р±РѕС‚С‡РёРєРѕРІ, С‚.Рѕ. РІРѕР·РјРѕР¶РЅРѕ
+	 * РїРµСЂРµРѕРїСЂРµРґРµР»РёС‚СЊ РїРѕРІРµРґРµРЅРёРµ С‚СЂР°СЃР»СЏС‚РѕСЂРѕРІ РґРѕР±Р°РІРёРІ СЃРІРѕР№ С‚СЂР°СЃР»СЏС‚РѕСЂ РїРѕСЃР»Рµ РёРЅСЃС‚Р°Р»СЏС†РёРё РїРµСЂРµРѕРїСЂРµРґРµР»СЏРµРјРѕРіРѕ
 	 * 
-	 * @param translator	траслятор
+	 * @param translator	С‚СЂР°СЃР»СЏС‚РѕСЂ
 	 */
 	void registerTranslator(SQLExceptionTranslator translator);
 	
 	/**
-	 * удаление траслятора из списка трансляторов
+	 * СѓРґР°Р»РµРЅРёРµ С‚СЂР°СЃР»СЏС‚РѕСЂР° РёР· СЃРїРёСЃРєР° С‚СЂР°РЅСЃР»СЏС‚РѕСЂРѕРІ
 	 * 
 	 * @param translator
 	 */
 	void unregisterTranslator(SQLExceptionTranslator translator);
 	
 	/**
-	 * перевести SQL ИС в пользовательское исключение
+	 * РїРµСЂРµРІРµСЃС‚Рё SQL РРЎ РІ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРµ РёСЃРєР»СЋС‡РµРЅРёРµ
 	 * 
-	 * @param sqlException	SQL ИС
-	 * @return	пользовательское исключение
+	 * @param sqlException	SQL РРЎ
+	 * @return	РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРѕРµ РёСЃРєР»СЋС‡РµРЅРёРµ
 	 */
 	DataAccessException translate(SQLException sqlException);
 	

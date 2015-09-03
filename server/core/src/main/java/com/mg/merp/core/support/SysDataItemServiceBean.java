@@ -25,7 +25,7 @@ import com.mg.merp.core.SysDataItemServiceLocal;
 import com.mg.merp.core.model.SysDataItem;
 
 /**
- * Реализация бизнес-компонента "Элементы данных системы"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р­Р»РµРјРµРЅС‚С‹ РґР°РЅРЅС‹С… СЃРёСЃС‚РµРјС‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: SysDataItemServiceBean.java,v 1.1 2008/03/03 12:57:32 safonov Exp $

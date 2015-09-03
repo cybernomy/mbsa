@@ -40,7 +40,7 @@ import com.mg.merp.reference.model.CurrencyRateAuthority;
 import com.mg.merp.reference.model.CurrencyRateType;
 
 /**
- * Реализация бизнес-компонента "Валюты"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’Р°Р»СЋС‚С‹"
  * 
  * @author leonova
  * @author Oleg V. Safonov
@@ -83,7 +83,7 @@ public class CurrencyServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 	}
 
 	/**
-	 * реализация конвертации валют, итоговый результат округляется либо до масштаба входящей суммы
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РєРѕРЅРІРµСЂС‚Р°С†РёРё РІР°Р»СЋС‚, РёС‚РѕРіРѕРІС‹Р№ СЂРµР·СѓР»СЊС‚Р°С‚ РѕРєСЂСѓРіР»СЏРµС‚СЃСЏ Р»РёР±Рѕ РґРѕ РјР°СЃС€С‚Р°Р±Р° РІС…РѕРґСЏС‰РµР№ СЃСѓРјРјС‹
 	 * 
 	 * @param currencyTo
 	 * @param currencyFrom

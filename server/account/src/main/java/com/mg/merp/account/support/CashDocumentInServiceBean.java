@@ -26,7 +26,7 @@ import com.mg.merp.document.Configuration;
 import com.mg.merp.document.generic.DocumentServiceBean;
 
 /**
- * Бизнес-компонент "Приходные кассовые документы" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РџСЂРёС…РѕРґРЅС‹Рµ РєР°СЃСЃРѕРІС‹Рµ РґРѕРєСѓРјРµРЅС‚С‹" 
  * 
  * @author leonova
  * @version $Id: CashDocumentInServiceBean.java,v 1.7 2008/03/12 11:21:40 alikaev Exp $

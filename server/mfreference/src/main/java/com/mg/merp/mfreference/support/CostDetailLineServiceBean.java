@@ -33,7 +33,7 @@ import com.mg.merp.mfreference.model.CostDetail;
 import com.mg.merp.mfreference.model.CostDetailLine;
 
 /**
- * Бизнес-компонент "Строки расшифровки стоимости" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎС‚СЂРѕРєРё СЂР°СЃС€РёС„СЂРѕРІРєРё СЃС‚РѕРёРјРѕСЃС‚Рё" 
  * 
  * @author leonova
  * @version $Id: CostDetailLineServiceBean.java,v 1.4 2007/07/30 10:24:41 safonov Exp $

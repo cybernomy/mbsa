@@ -30,7 +30,7 @@ import com.mg.merp.retail.InvoiceHeadModelServiceLocal;
 import com.mg.merp.retail.model.RtlInvoiceHeadModel;
 
 /**
- * Контроллер формы списка образцов документов на отпуск
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° РѕР±СЂР°Р·С†РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ РЅР° РѕС‚РїСѓСЃРє
  * 
  * @author leonova
  * @version $Id: RtlInvoiceHeadModelBr.java,v 1.4 2006/09/12 11:06:25 leonova Exp $

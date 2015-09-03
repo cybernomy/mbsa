@@ -39,7 +39,7 @@ import com.mg.merp.finance.model.TurnFeature;
 import com.mg.merp.finance.totals.FinanceTotalsGate;
 
 /**
- * Контроллер браузера бизнес-компонента "Остатки и обороты по признакам"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ РїСЂРёР·РЅР°РєР°Рј"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -66,7 +66,7 @@ public class FinTurnFeatFlatBr extends AbstractFinTurnBrowseForm { //DefaultHier
 		PopupMenu menu = view.getWidget("table").getPopupMenu(); //$NON-NLS-1$
 		menu.getMenuItem(MaintenanceTable.ADD_MENU_ITEM).setEnabled(false);
 		menu.getMenuItem(MaintenanceTable.EDIT_MENU_ITEM).setEnabled(false);
-		//TODO закрыть пункт "Копировать"
+		//TODO Р·Р°РєСЂС‹С‚СЊ РїСѓРЅРєС‚ "РљРѕРїРёСЂРѕРІР°С‚СЊ"
 	}
 
 	/* (non-Javadoc)
@@ -253,8 +253,8 @@ public class FinTurnFeatFlatBr extends AbstractFinTurnBrowseForm { //DefaultHier
 			 */
 			@Override
 			public FieldMetadata getColumnMetadata(int column) {
-				//для полей аналитик встроенные метаданные представляют целые значения,
-				//но требуется отображение строк
+				//РґР»СЏ РїРѕР»РµР№ Р°РЅР°Р»РёС‚РёРє РІСЃС‚СЂРѕРµРЅРЅС‹Рµ РјРµС‚Р°РґР°РЅРЅС‹Рµ РїСЂРµРґСЃС‚Р°РІР»СЏСЋС‚ С†РµР»С‹Рµ Р·РЅР°С‡РµРЅРёСЏ,
+				//РЅРѕ С‚СЂРµР±СѓРµС‚СЃСЏ РѕС‚РѕР±СЂР°Р¶РµРЅРёРµ СЃС‚СЂРѕРє
 				if (isAnalyticsColumn(getColumnName(column)))
 					return null;
 				else

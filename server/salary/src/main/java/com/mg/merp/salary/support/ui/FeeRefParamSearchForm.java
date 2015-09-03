@@ -29,7 +29,7 @@ import com.mg.merp.salary.model.FeeRef;
 import com.mg.merp.salary.model.FeeRefParam;
 
 /**
- * Контроллер формы поиска сущностей "Параметр начисления/удержания"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№ "РџР°СЂР°РјРµС‚СЂ РЅР°С‡РёСЃР»РµРЅРёСЏ/СѓРґРµСЂР¶Р°РЅРёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: FeeRefParamSearchForm.java,v 1.1 2007/07/09 08:33:47 sharapov Exp $
@@ -111,7 +111,7 @@ public class FeeRefParamSearchForm extends AbstractSearchForm {
 	}
 
 	/**
-	 * Установить начисление/удержание для поиска параметров
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РЅР°С‡РёСЃР»РµРЅРёРµ/СѓРґРµСЂР¶Р°РЅРёРµ РґР»СЏ РїРѕРёСЃРєР° РїР°СЂР°РјРµС‚СЂРѕРІ
 	 */
 	public void setFeeRef(FeeRef feeRef) {
 		paramsName.add("feeRef"); //$NON-NLS-1$

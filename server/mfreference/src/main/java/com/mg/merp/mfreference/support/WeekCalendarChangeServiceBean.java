@@ -33,7 +33,7 @@ import com.mg.merp.mfreference.model.WeekCalendar;
 import com.mg.merp.mfreference.model.WeekCalendarChange;
 
 /**
- * Бизнес-компонент "Недельный календарь" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РќРµРґРµР»СЊРЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ" 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev

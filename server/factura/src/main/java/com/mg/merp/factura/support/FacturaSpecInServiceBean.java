@@ -23,7 +23,7 @@ import com.mg.merp.factura.FacturaHeadInServiceLocal;
 import com.mg.merp.factura.FacturaSpecInServiceLocal;
 
 /**
- * Бизнес-компонент "Спецификация входящих счет - фактур" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РІС…РѕРґСЏС‰РёС… СЃС‡РµС‚ - С„Р°РєС‚СѓСЂ" 
  * 
  * @author leonova
  * @version $Id: FacturaSpecInServiceBean.java,v 1.6 2008/12/01 09:37:56 safonov Exp $

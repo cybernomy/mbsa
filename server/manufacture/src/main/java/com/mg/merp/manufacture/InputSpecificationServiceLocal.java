@@ -19,7 +19,7 @@ import com.mg.merp.manufacture.model.InputDocumentHead;
 import com.mg.merp.manufacture.model.InputDocumentSpec;
 
 /**
- * Базовый интерфейс актов на списание ресурсов
+ * Р‘Р°Р·РѕРІС‹Р№ РёРЅС‚РµСЂС„РµР№СЃ Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ СЂРµСЃСѓСЂСЃРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: InputSpecificationServiceLocal.java,v 1.1 2007/08/06 12:46:24 safonov Exp $
@@ -28,9 +28,9 @@ public interface InputSpecificationServiceLocal<T extends InputDocumentSpec> ext
 		GoodsDocumentSpecification<T, Integer> {
 
 	/**
-	 * создание спецификаций документа
+	 * СЃРѕР·РґР°РЅРёРµ СЃРїРµС†РёС„РёРєР°С†РёР№ РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @param docHead документ
+	 * @param docHead РґРѕРєСѓРјРµРЅС‚
 	 */
 	void createSpecifications(InputDocumentHead docHead);
 

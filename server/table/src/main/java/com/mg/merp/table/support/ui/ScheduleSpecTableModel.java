@@ -36,7 +36,7 @@ import com.mg.merp.table.model.TimeKind;
 import com.mg.merp.table.support.TimeBoardHelper;
 
 /**
- * Модель таблицы "Спецификация графика работ в табельном учете"
+ * РњРѕРґРµР»СЊ С‚Р°Р±Р»РёС†С‹ "РЎРїРµС†РёС„РёРєР°С†РёСЏ РіСЂР°С„РёРєР° СЂР°Р±РѕС‚ РІ С‚Р°Р±РµР»СЊРЅРѕРј СѓС‡РµС‚Рµ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ScheduleSpecTableModel.java,v 1.3 2008/08/13 12:06:51 sharapov Exp $
@@ -134,9 +134,9 @@ public class ScheduleSpecTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * Установить тип времени
-	 * @param timeKind - тип времени
-	 * @param columns - список колонок для которых нужно установить
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ С‚РёРї РІСЂРµРјРµРЅРё
+	 * @param timeKind - С‚РёРї РІСЂРµРјРµРЅРё
+	 * @param columns - СЃРїРёСЃРѕРє РєРѕР»РѕРЅРѕРє РґР»СЏ РєРѕС‚РѕСЂС‹С… РЅСѓР¶РЅРѕ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ
 	 */
 	public void setTimeKind(TimeKind timeKind, int[] columns) {
 		if(columns == null || columns.length == 0 || selectedRows == null || selectedRows.length == 0)
@@ -155,9 +155,9 @@ public class ScheduleSpecTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * Установить количество часов
-	 * @param hours - кол-во часов
-	 * @param columns - список колонок для которых нужно установить
+	 * РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ
+	 * @param hours - РєРѕР»-РІРѕ С‡Р°СЃРѕРІ
+	 * @param columns - СЃРїРёСЃРѕРє РєРѕР»РѕРЅРѕРє РґР»СЏ РєРѕС‚РѕСЂС‹С… РЅСѓР¶РЅРѕ СѓСЃС‚Р°РЅРѕРІРёС‚СЊ
 	 */
 	public void setHours(BigDecimal hours, int[] columns) {
 		int row = selectedRows[0];
@@ -175,9 +175,9 @@ public class ScheduleSpecTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * Получить количество часов
-	 * @param columns - список колонок для которых нужно получить
-	 * @return количество часов
+	 * РџРѕР»СѓС‡РёС‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ
+	 * @param columns - СЃРїРёСЃРѕРє РєРѕР»РѕРЅРѕРє РґР»СЏ РєРѕС‚РѕСЂС‹С… РЅСѓР¶РЅРѕ РїРѕР»СѓС‡РёС‚СЊ
+	 * @return РєРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃРѕРІ
 	 */
 	public BigDecimal getHours(int[] columns) {
 		int row = selectedRows[0];
@@ -191,8 +191,8 @@ public class ScheduleSpecTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * Сохранить позицию спецификации
-	 * @param specItem - позиция спецификации
+	 * РЎРѕС…СЂР°РЅРёС‚СЊ РїРѕР·РёС†РёСЋ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param specItem - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	private void updateSpec(ScheduleSpec specItem) {
 		if(specItem.getId() == null)
@@ -202,15 +202,15 @@ public class ScheduleSpecTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * Удалить позицию спецификации
-	 * @param specItem - позиция спецификации
+	 * РЈРґР°Р»РёС‚СЊ РїРѕР·РёС†РёСЋ СЃРїРµС†РёС„РёРєР°С†РёРё
+	 * @param specItem - РїРѕР·РёС†РёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	private void eraseSpec(ScheduleSpec specItem) {
 		scheduleSpecService.erase(specItem);
 	}
 
 	/**
-	 * Заполнить грид спецификации
+	 * Р—Р°РїРѕР»РЅРёС‚СЊ РіСЂРёРґ СЃРїРµС†РёС„РёРєР°С†РёРё
 	 */
 	public void fillGrid(ScheduleHead scheduleHead, Date dateFrom, Date dateTill, List<ScheduleSpec> scheduleSpecs, List<TimeKind> timeKinds) {
 		if(scheduleHead.getId() == null)
@@ -286,8 +286,8 @@ public class ScheduleSpecTableModel extends AbstractTableModel {
 	}
 
 	/**
-	 * Получить список позиций спецификации шаблона
-	 * @return список позиций спецификации шаблона
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё С€Р°Р±Р»РѕРЅР°
+	 * @return СЃРїРёСЃРѕРє РїРѕР·РёС†РёР№ СЃРїРµС†РёС„РёРєР°С†РёРё С€Р°Р±Р»РѕРЅР°
 	 */
 	public List<ScheduleSpec[]> getTableModelItemList() {
 		return this.tableModelItemList;

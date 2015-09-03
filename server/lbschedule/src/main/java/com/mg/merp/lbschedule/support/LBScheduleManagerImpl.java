@@ -33,7 +33,7 @@ import com.mg.merp.lbschedule.model.ScheduleConfig;
 import com.mg.merp.lbschedule.model.ScheduleDocHeadLink;
 
 /**
- * Реализация мененеджера управления "Графиками исполнения обязательств"
+ * Р РµР°Р»РёР·Р°С†РёСЏ РјРµРЅРµРЅРµРґР¶РµСЂР° СѓРїСЂР°РІР»РµРЅРёСЏ "Р“СЂР°С„РёРєР°РјРё РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: LBScheduleManagerImpl.java,v 1.3 2008/05/23 16:08:26 safonov Exp $

@@ -20,7 +20,7 @@ import com.mg.merp.core.model.Folder;
 import com.mg.merp.paymentcontrol.model.PmcResource;
 
 /**
- * Контроллер формы условий отбора позиций "планирования платежей"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СѓСЃР»РѕРІРёР№ РѕС‚Р±РѕСЂР° РїРѕР·РёС†РёР№ "РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ РїР»Р°С‚РµР¶РµР№"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PmcPlaningRest.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $

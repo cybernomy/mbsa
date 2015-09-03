@@ -17,7 +17,7 @@ package com.mg.merp.salary;
 import com.mg.merp.personnelref.model.PersonalAccount;
 
 /**
- * Сервис бизнес-компонента "Лицевой счет сотрудника" (плоский список?)
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р›РёС†РµРІРѕР№ СЃС‡РµС‚ СЃРѕС‚СЂСѓРґРЅРёРєР°" (РїР»РѕСЃРєРёР№ СЃРїРёСЃРѕРє?)
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.personnelref.model.PersonalAccount;
 public interface PersonalAccountServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PersonalAccount, Integer> {
 
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String LOCAL_SERVICE_NAME= "merp/salary/PersonalAccount"; //$NON-NLS-1$
 

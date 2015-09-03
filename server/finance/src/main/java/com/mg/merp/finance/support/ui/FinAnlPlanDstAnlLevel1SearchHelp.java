@@ -15,7 +15,7 @@
 package com.mg.merp.finance.support.ui;
 
 /**
- * SearchHelp для аналитики первого уровня счета по дебету
+ * SearchHelp РґР»СЏ Р°РЅР°Р»РёС‚РёРєРё РїРµСЂРІРѕРіРѕ СѓСЂРѕРІРЅСЏ СЃС‡РµС‚Р° РїРѕ РґРµР±РµС‚Сѓ
  * 
  * @author leonova
  * @version $Id: FinAnlPlanDstAnlLevel1SearchHelp.java,v 1.1 2006/10/30 13:50:17 leonova Exp $

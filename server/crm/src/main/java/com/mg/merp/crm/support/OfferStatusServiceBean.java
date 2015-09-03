@@ -24,7 +24,7 @@ import com.mg.merp.crm.OfferStatusServiceLocal;
 import com.mg.merp.crm.model.OfferStatus;
 
 /**
- * Бизнес-компонент "Статусы предложений" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎС‚Р°С‚СѓСЃС‹ РїСЂРµРґР»РѕР¶РµРЅРёР№" 
  * 
  * @author leonova
  * @version $Id: OfferStatusServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $

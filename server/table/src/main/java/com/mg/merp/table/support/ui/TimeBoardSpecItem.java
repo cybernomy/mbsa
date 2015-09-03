@@ -22,7 +22,7 @@ import com.mg.merp.table.model.TimeBoardPosition;
 import com.mg.merp.table.model.TimeBoardSpec;
 
 /**
- * Элемент данных позиции табеля
+ * Р­Р»РµРјРµРЅС‚ РґР°РЅРЅС‹С… РїРѕР·РёС†РёРё С‚Р°Р±РµР»СЏ
  * 
  * @author Artem V. Sharapov
  * @version $Id: TimeBoardSpecItem.java,v 1.1 2008/08/12 14:38:08 sharapov Exp $

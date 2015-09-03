@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.SolutionType;
 
 /**
- * Браузер типов решений
+ * Р‘СЂР°СѓР·РµСЂ С‚РёРїРѕРІ СЂРµС€РµРЅРёР№
  * 
  * @author leonova
  * @version $Id: SolutionTypeBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

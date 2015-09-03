@@ -40,7 +40,7 @@ import com.mg.merp.personnelref.model.StaffListUnit;
 import com.mg.merp.personnelref.support.ui.StaffListUnitTreeNode;
 
 /**
- * Контроллер браузера "Лицевые счета сотрудников"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ Р±СЂР°СѓР·РµСЂР° "Р›РёС†РµРІС‹Рµ СЃС‡РµС‚Р° СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov

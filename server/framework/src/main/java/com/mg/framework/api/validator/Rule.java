@@ -15,7 +15,7 @@
 package com.mg.framework.api.validator;
 
 /**
- * Правило контроля данных
+ * РџСЂР°РІРёР»Рѕ РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…
  * 
  * @author Oleg V. Safonov
  * @version $Id: Rule.java,v 1.1 2006/08/14 14:07:42 safonov Exp $
@@ -23,16 +23,16 @@ package com.mg.framework.api.validator;
 public interface Rule {
 	
 	/**
-	 * выполнить проверку
+	 * РІС‹РїРѕР»РЅРёС‚СЊ РїСЂРѕРІРµСЂРєСѓ
 	 * 
-	 * @param context	контекст контроля данных
+	 * @param context	РєРѕРЅС‚РµРєСЃС‚ РєРѕРЅС‚СЂРѕР»СЏ РґР°РЅРЅС‹С…
 	 */
 	void validate(ValidationContext context);
 	
 	/**
-	 * получить сообщение правила
+	 * РїРѕР»СѓС‡РёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ РїСЂР°РІРёР»Р°
 	 * 
-	 * @return	сообщение
+	 * @return	СЃРѕРѕР±С‰РµРЅРёРµ
 	 */
 	String getMessage();
 }

@@ -25,7 +25,7 @@ import com.mg.merp.personnelref.RiseScaleServiceLocal;
 import com.mg.merp.personnelref.model.RiseScale;
 
 /**
- * Поисковик сущностей "Шкала надбавки"
+ * РџРѕРёСЃРєРѕРІРёРє СЃСѓС‰РЅРѕСЃС‚РµР№ "РЁРєР°Р»Р° РЅР°РґР±Р°РІРєРё"
  * 
  * @author Julia 'Jetta' Konyashkina
  * @author Artem V. Sharapov

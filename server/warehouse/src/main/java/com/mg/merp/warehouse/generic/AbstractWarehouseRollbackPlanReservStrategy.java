@@ -23,8 +23,8 @@ import com.mg.merp.warehouse.WarehouseRollbackStrategy;
 import com.mg.merp.warehouse.model.StockPlanHistory;
 
 /**
- * Абстрактный класс-предок для классов-стратегий откатов операций складского планирования и
- * резервирования
+ * РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ РєР»Р°СЃСЃ-РїСЂРµРґРѕРє РґР»СЏ РєР»Р°СЃСЃРѕРІ-СЃС‚СЂР°С‚РµРіРёР№ РѕС‚РєР°С‚РѕРІ РѕРїРµСЂР°С†РёР№ СЃРєР»Р°РґСЃРєРѕРіРѕ РїР»Р°РЅРёСЂРѕРІР°РЅРёСЏ Рё
+ * СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРёСЏ
  * 
  * @author Valentin A. Poroxnenko
  * @version $Id: AbstractWarehouseRollbackPlanReservStrategy.java,v 1.7 2008/04/18 15:18:19 safonov Exp $ 
@@ -57,9 +57,9 @@ public abstract class AbstractWarehouseRollbackPlanReservStrategy implements
 	}
 
 	/**
-	 * реализация операции отката
+	 * СЂРµР°Р»РёР·Р°С†РёСЏ РѕРїРµСЂР°С†РёРё РѕС‚РєР°С‚Р°
 	 * 
-	 * @param history	история
+	 * @param history	РёСЃС‚РѕСЂРёСЏ
 	 */
 	protected abstract void rollbackOperation(StockPlanHistory history);
 

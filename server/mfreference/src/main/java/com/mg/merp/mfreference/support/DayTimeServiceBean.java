@@ -40,7 +40,7 @@ import com.mg.merp.mfreference.model.WeekCalendar;
 import com.mg.merp.reference.HolidaysServiceLocal;
 
 /**
- * Бизнес-компонент "Сменный календарь" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РЎРјРµРЅРЅС‹Р№ РєР°Р»РµРЅРґР°СЂСЊ" 
  * 
  * @author leonova
  * @version $Id: DayTimeServiceBean.java,v 1.4 2007/07/30 10:24:41 safonov Exp $
@@ -79,29 +79,29 @@ public class DayTimeServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 		switch (schedDirection) {
 		case BACKWARD:
 			Date curDate = DateTimeUtils.getDayStart(MfUtils.tickToDate(baseDateTime));
-			finishTime = baseDateTime - MfUtils.dateToTick(curDate); //фактически это кол-во тиков от начала дня, в который попадает baseDateTime
+			finishTime = baseDateTime - MfUtils.dateToTick(curDate); //С„Р°РєС‚РёС‡РµСЃРєРё СЌС‚Рѕ РєРѕР»-РІРѕ С‚РёРєРѕРІ РѕС‚ РЅР°С‡Р°Р»Р° РґРЅСЏ, РІ РєРѕС‚РѕСЂС‹Р№ РїРѕРїР°РґР°РµС‚ baseDateTime
 			
-			//Ищем точку финиша
+			//РС‰РµРј С‚РѕС‡РєСѓ С„РёРЅРёС€Р°
 			for (;;) {
 				DayTimes dayTimes = internalDayTimes(weekCal, curDate, schedDirection);
 				if (isDayHoliday(curDate)) {
-					DateTimeUtils.incDay(curDate, -1); //отступаем на 1 день назад
+					DateTimeUtils.incDay(curDate, -1); //РѕС‚СЃС‚СѓРїР°РµРј РЅР° 1 РґРµРЅСЊ РЅР°Р·Р°Рґ
 					finishTime = MfUtils.TICKS_PER_DAY;
 					finishDayTime -= MfUtils.TICKS_PER_DAY;
 				} else {
-					//день НЕ является праздничным
+					//РґРµРЅСЊ РќР• СЏРІР»СЏРµС‚СЃСЏ РїСЂР°Р·РґРЅРёС‡РЅС‹Рј
 					if (finishTime < dayTimes.getEndTicks()) {
 						if (finishTime < dayTimes.getStartDayTicks()) {
 							finishDayTime -= finishTime;
-							DateTimeUtils.incDay(curDate, -1); //отступаем на 1 день назад
+							DateTimeUtils.incDay(curDate, -1); //РѕС‚СЃС‚СѓРїР°РµРј РЅР° 1 РґРµРЅСЊ РЅР°Р·Р°Рґ
 							finishTime = MfUtils.TICKS_PER_DAY;
 						} else
 							break;
 					} else {
 						finishDayTime = finishDayTime - finishTime + dayTimes.getEndTicks();
 						if (dayTimes.isDayEmpty()) {
-							//это означает, что день пустой (нерабочий)
-							DateTimeUtils.incDay(curDate, -1); //отступаем на 1 день назад
+							//СЌС‚Рѕ РѕР·РЅР°С‡Р°РµС‚, С‡С‚Рѕ РґРµРЅСЊ РїСѓСЃС‚РѕР№ (РЅРµСЂР°Р±РѕС‡РёР№)
+							DateTimeUtils.incDay(curDate, -1); //РѕС‚СЃС‚СѓРїР°РµРј РЅР° 1 РґРµРЅСЊ РЅР°Р·Р°Рґ
 							finishTime = MfUtils.TICKS_PER_DAY;
 						} else {
 							finishTime = dayTimes.getEndTicks();
@@ -111,7 +111,7 @@ public class DayTimeServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 				}
 			}
 			
-			//Ищем временной интервал (внутри дня финиша), которому принадлежит FinishTime
+			//РС‰РµРј РІСЂРµРјРµРЅРЅРѕР№ РёРЅС‚РµСЂРІР°Р» (РІРЅСѓС‚СЂРё РґРЅСЏ С„РёРЅРёС€Р°), РєРѕС‚РѕСЂРѕРјСѓ РїСЂРёРЅР°РґР»РµР¶РёС‚ FinishTime
 			OrmTemplate ormTemplate = OrmTemplate.getInstance();
 			DayCalendar dayCal = MfUtils.getDayCalendar(weekCal.getId(), curDate);
 			List<DayTime> list = MiscUtils.convertUncheckedList(DayTime.class, ormTemplate.findByNamedQueryAndNamedParam("Manufacture.DayTime.loadRange", new String[] {"dayCal", "finishTime"}, new Object[] {dayCal, finishTime}));
@@ -119,7 +119,7 @@ public class DayTimeServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 				list = MiscUtils.convertUncheckedList(DayTime.class, ormTemplate.findByNamedQueryAndNamedParam("Manufacture.DayTime.loadNext", new String[] {"dayCal", "finishTime"}, new Object[] {dayCal, finishTime}));
 				if (list.isEmpty())
 					throw new DayTimeNotFoundException(dayCal);
-				//Взять ПОСЛЕДНЮЮ запись, то есть с датой окончания, ближайшей к FinishTime (слева от нее);
+				//Р’Р·СЏС‚СЊ РџРћРЎР›Р•Р”РќР®Р® Р·Р°РїРёСЃСЊ, С‚Рѕ РµСЃС‚СЊ СЃ РґР°С‚РѕР№ РѕРєРѕРЅС‡Р°РЅРёСЏ, Р±Р»РёР¶Р°Р№С€РµР№ Рє FinishTime (СЃР»РµРІР° РѕС‚ РЅРµРµ);
 				DayTime dayTime = list.get(list.size() - 1);
 				finishDayTime = finishDayTime - finishTime + dayTime.getStartTick() + dayTime.getTicks();
 				startTime = dayTime.getStartTick();
@@ -132,7 +132,7 @@ public class DayTimeServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 				lenLastBlock = dayTime.getTicks() - ((dayTime.getStartTick() + dayTime.getTicks()) - finishTime);
 			}
 			
-			//Вычисляем точку старта, путем отступления назад от точки FinishDayTime на величину runTime
+			//Р’С‹С‡РёСЃР»СЏРµРј С‚РѕС‡РєСѓ СЃС‚Р°СЂС‚Р°, РїСѓС‚РµРј РѕС‚СЃС‚СѓРїР»РµРЅРёСЏ РЅР°Р·Р°Рґ РѕС‚ С‚РѕС‡РєРё FinishDayTime РЅР° РІРµР»РёС‡РёРЅСѓ runTime
 			remainingTime = runTime;
 			timeOver = lenLastBlock - remainingTime;
 			if (timeOver < 0) {
@@ -153,9 +153,9 @@ public class DayTimeServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 					if (timeOver >= 0)
 						break;
 					else {
-						DateTimeUtils.incDay(curDate, -1); //отступаем на 1 день назад
+						DateTimeUtils.incDay(curDate, -1); //РѕС‚СЃС‚СѓРїР°РµРј РЅР° 1 РґРµРЅСЊ РЅР°Р·Р°Рґ
 						dayCal = MfUtils.getDayCalendar(weekCal.getId(), curDate);
-						lastProcessedInterval = MfUtils.TICKS_PER_DAY + 1; //чтобы загрузились все интервалы, + 1 для надежности:)
+						lastProcessedInterval = MfUtils.TICKS_PER_DAY + 1; //С‡С‚РѕР±С‹ Р·Р°РіСЂСѓР·РёР»РёСЃСЊ РІСЃРµ РёРЅС‚РµСЂРІР°Р»С‹, + 1 РґР»СЏ РЅР°РґРµР¶РЅРѕСЃС‚Рё:)
 					}
 				}
 			}
@@ -163,7 +163,7 @@ public class DayTimeServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 			startDayTime = MfUtils.dateToTick(curDate) + startTime + timeOver;
 			break;
 		case FORWARD:
-			//TODO все абсолютно аналогично, только двигаться надо вперед во времени
+			//TODO РІСЃРµ Р°Р±СЃРѕР»СЋС‚РЅРѕ Р°РЅР°Р»РѕРіРёС‡РЅРѕ, С‚РѕР»СЊРєРѕ РґРІРёРіР°С‚СЊСЃСЏ РЅР°РґРѕ РІРїРµСЂРµРґ РІРѕ РІСЂРµРјРµРЅРё
 			throw new IllegalArgumentException("Not implemented");
 		}
 		return new TimeRange(startDayTime, finishDayTime);

@@ -23,7 +23,7 @@ import com.mg.merp.mfreference.model.WeekCalendar;
 import com.mg.merp.mfreference.support.Messages;
 
 /**
- * ИС генерируется если не найден дневной календарь
+ * РРЎ РіРµРЅРµСЂРёСЂСѓРµС‚СЃСЏ РµСЃР»Рё РЅРµ РЅР°Р№РґРµРЅ РґРЅРµРІРЅРѕР№ РєР°Р»РµРЅРґР°СЂСЊ
  * 
  * @author Oleg V. Safonov
  * @version $Id: DayCalendarNotFoundException.java,v 1.1 2007/07/30 10:25:31 safonov Exp $

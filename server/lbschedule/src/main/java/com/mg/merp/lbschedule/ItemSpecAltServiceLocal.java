@@ -17,7 +17,7 @@ package com.mg.merp.lbschedule;
 import com.mg.merp.lbschedule.model.ItemSpecAlt;
 
 /**
- * Сервис бизнес-компонента "Возможные замены позиции спецификации пункта графика исполнения обязательств"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р’РѕР·РјРѕР¶РЅС‹Рµ Р·Р°РјРµРЅС‹ РїРѕР·РёС†РёРё СЃРїРµС†РёС„РёРєР°С†РёРё РїСѓРЅРєС‚Р° РіСЂР°С„РёРєР° РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -26,7 +26,7 @@ import com.mg.merp.lbschedule.model.ItemSpecAlt;
 public interface ItemSpecAltServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ItemSpecAlt, Integer> {
 
 	/**
-	 * Локальное имя сервиса
+	 * Р›РѕРєР°Р»СЊРЅРѕРµ РёРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	static final String LOCAL_SERVICE_NAME = "merp/lbschedule/ItemSpecAlt"; //$NON-NLS-1$
 

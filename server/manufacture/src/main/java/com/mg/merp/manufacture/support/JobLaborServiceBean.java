@@ -26,7 +26,7 @@ import com.mg.merp.mfreference.model.ManufactureConfig;
 import com.mg.merp.mfreference.support.ConfigurationHelper;
 
 /**
- * Бизнес-компонент "Рабочая сила в ЗНП" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р Р°Р±РѕС‡Р°СЏ СЃРёР»Р° РІ Р—РќРџ" 
  * 
  * @author leonova
  * @version $Id: JobLaborServiceBean.java,v 1.6 2009/03/05 12:32:15 safonov Exp $

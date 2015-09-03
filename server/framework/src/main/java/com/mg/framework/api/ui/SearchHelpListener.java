@@ -17,7 +17,7 @@ package com.mg.framework.api.ui;
 import java.util.EventListener;
 
 /**
- * Слушатель событий поиска сущностей
+ * РЎР»СѓС€Р°С‚РµР»СЊ СЃРѕР±С‹С‚РёР№ РїРѕРёСЃРєР° СЃСѓС‰РЅРѕСЃС‚РµР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: SearchHelpListener.java,v 1.3 2006/08/25 11:24:41 safonov Exp $
@@ -25,16 +25,16 @@ import java.util.EventListener;
 public interface SearchHelpListener extends EventListener {
 	
 	/**
-	 * выполняется если поиск был произведен
+	 * РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ РµСЃР»Рё РїРѕРёСЃРє Р±С‹Р» РїСЂРѕРёР·РІРµРґРµРЅ
 	 * 
-	 * @param event	событие поиска
+	 * @param event	СЃРѕР±С‹С‚РёРµ РїРѕРёСЃРєР°
 	 */
 	void searchPerformed(SearchHelpEvent event);
 	
 	/**
-	 * выполняется если поиск не был произведен
+	 * РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ РµСЃР»Рё РїРѕРёСЃРє РЅРµ Р±С‹Р» РїСЂРѕРёР·РІРµРґРµРЅ
 	 * 
-	 * @param event	событие
+	 * @param event	СЃРѕР±С‹С‚РёРµ
 	 */
 	void searchCanceled(SearchHelpEvent event);
 }

@@ -39,7 +39,7 @@ import com.mg.merp.bpm.support.BPMManagerLocator;
 import com.mg.merp.bpm.support.Messages;
 
 /**
- * Контроллер формы списка бизнес-процессов
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ
  * 
  * @author Oleg V. Safonov
  * @version $Id: ProcessBr.java,v 1.4 2008/03/11 08:26:03 sharapov Exp $

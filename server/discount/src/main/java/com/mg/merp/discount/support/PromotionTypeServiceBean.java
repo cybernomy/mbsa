@@ -24,7 +24,7 @@ import com.mg.merp.discount.PromotionTypeServiceLocal;
 import com.mg.merp.discount.model.PromotionType;
 
 /**
- * Реализация бизнес-компонента "Тип рекламного мероприятия"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РўРёРї СЂРµРєР»Р°РјРЅРѕРіРѕ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: PromotionTypeServiceBean.java,v 1.3 2007/11/16 10:18:49 sharapov Exp $

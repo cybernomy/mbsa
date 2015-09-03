@@ -28,7 +28,7 @@ import com.mg.merp.warehouse.model.StockBatch;
 import com.mg.merp.warehouse.support.BatchQuanTransfer;
 
 /**
- * Диалог выбора партий, с которых будет производиться списание
+ * Р”РёР°Р»РѕРі РІС‹Р±РѕСЂР° РїР°СЂС‚РёР№, СЃ РєРѕС‚РѕСЂС‹С… Р±СѓРґРµС‚ РїСЂРѕРёР·РІРѕРґРёС‚СЊСЃСЏ СЃРїРёСЃР°РЅРёРµ
  * 
  * @author Valentin A. Poroxnenko
  * @version $$Id: WarehouseBatchSelectionDialog.java,v 1.2 2007/03/01 09:24:16 poroxnenko Exp $$

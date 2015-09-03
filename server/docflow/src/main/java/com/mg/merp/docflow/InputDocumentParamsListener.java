@@ -19,7 +19,7 @@ import java.util.EventListener;
 import java.util.List;
 
 /**
- * Слушатель выбора параметров документа к отработке
+ * РЎР»СѓС€Р°С‚РµР»СЊ РІС‹Р±РѕСЂР° РїР°СЂР°РјРµС‚СЂРѕРІ РґРѕРєСѓРјРµРЅС‚Р° Рє РѕС‚СЂР°Р±РѕС‚РєРµ
  * 
  * @author Oleg V. Safonov
  * @version $Id: InputDocumentParamsListener.java,v 1.1 2006/12/12 15:23:33 safonov Exp $
@@ -27,15 +27,15 @@ import java.util.List;
 public interface InputDocumentParamsListener extends EventListener {
 
 	/**
-	 * параметры установлены
+	 * РїР°СЂР°РјРµС‚СЂС‹ СѓСЃС‚Р°РЅРѕРІР»РµРЅС‹
 	 * 
-	 * @param docSum	сумма к отработке
-	 * @param specList	спецификации к отработке
+	 * @param docSum	СЃСѓРјРјР° Рє РѕС‚СЂР°Р±РѕС‚РєРµ
+	 * @param specList	СЃРїРµС†РёС„РёРєР°С†РёРё Рє РѕС‚СЂР°Р±РѕС‚РєРµ
 	 */
 	void performed(BigDecimal docSum, List<DocumentSpecItem> specList);
 	
 	/**
-	 * установка параметров отменена
+	 * СѓСЃС‚Р°РЅРѕРІРєР° РїР°СЂР°РјРµС‚СЂРѕРІ РѕС‚РјРµРЅРµРЅР°
 	 *
 	 */
 	void canceled();	

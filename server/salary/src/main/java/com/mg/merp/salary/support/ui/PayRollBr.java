@@ -39,7 +39,7 @@ import com.mg.merp.salary.model.PayRoll;
 import com.mg.merp.salary.model.PaySheet;
 
 /**
- *  ÓÌÚÓÎÎÂ ·‡ÛÁÂ‡ ‡Ò˜ÂÚÌ˚ı ‚Â‰ÓÏÓÒÚÂÈ
+ * –ö–æ–Ω—Ç—Ä–æ–ª–ª–µ—Ä –±—Ä–∞—É–∑–µ—Ä–∞ —Ä–∞—Å—á–µ—Ç–Ω—ã—Ö –≤–µ–¥–æ–º–æ—Å—Ç–µ–π
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -138,8 +138,8 @@ public class PayRollBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Œ·‡·ÓÚ˜ËÍ ÔÛÌÍÚ‡  Ã "—ÓÁ‰‡Ú¸ ÔÎ‡ÚÂÊÌÛ˛ ‚Â‰ÓÏÓÒÚ¸"
-	 * @param event - ÒÓ·˚ÚËÂ
+	 * –û–±—Ä–∞–±–æ—Ç—á–∏–∫ –ø—É–Ω–∫—Ç–∞ –ö–ú "–°–æ–∑–¥–∞—Ç—å –ø–ª–∞—Ç–µ–∂–Ω—É—é –≤–µ–¥–æ–º–æ—Å—Ç—å"
+	 * @param event - —Å–æ–±—ã—Ç–∏–µ
 	 */
 	public void onActionCreatePaySheet(WidgetEvent event) {
 		Serializable[] selectedPayRollIds = getSelectedPrimaryKeys();
@@ -151,27 +151,27 @@ public class PayRollBr extends DefaultPlainBrowseForm {
 	}
 
 	/**
-	 * Œ·‡·ÓÚ˜ËÍ ÔÛÌÍÚ‡  Ã "—ÓÁ‰‡Ú¸ Ò‚Ó‰ Ì/Û ÔÓ ‡Ì‡ÎËÚËÍÂ"
-	 * @param event - ÒÓ·˚ÚËÂ
+	 * –û–±—Ä–∞–±–æ—Ç—á–∏–∫ –ø—É–Ω–∫—Ç–∞ –ö–ú "–°–æ–∑–¥–∞—Ç—å —Å–≤–æ–¥ –Ω/—É –ø–æ –∞–Ω–∞–ª–∏—Ç–∏–∫–µ"
+	 * @param event - —Å–æ–±—ã—Ç–∏–µ
 	 */
 	public void onActionCreateFeeSummary(WidgetEvent event) {
 		final Serializable[] selectedPayRollIds = getSelectedPrimaryKeys();
 		if(selectedPayRollIds != null && selectedPayRollIds.length > 0) {
 			final FeeSummaryHeadServiceLocal feeSummaryHeadService = (FeeSummaryHeadServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(FeeSummaryHeadServiceLocal.SERVICE_NAME);
-			final CreateFeeSummaryDlg ÒreateFeeSummaryDlg = (CreateFeeSummaryDlg) UIProducer.produceForm(CREATE_FEESUMARY_FORM_NAME);
-			ÒreateFeeSummaryDlg.addOkActionListener(new FormActionListener() {
+			final CreateFeeSummaryDlg —ÅreateFeeSummaryDlg = (CreateFeeSummaryDlg) UIProducer.produceForm(CREATE_FEESUMARY_FORM_NAME);
+			—ÅreateFeeSummaryDlg.addOkActionListener(new FormActionListener() {
 
 				/* (non-Javadoc)
 				 * @see com.mg.framework.api.ui.FormActionListener#actionPerformed(com.mg.framework.api.ui.FormEvent)
 				 */
 				public void actionPerformed(FormEvent event) {
-					FeeSummaryHead feeSummaryHead = payRollService.createFeeSummary(selectedPayRollIds, ÒreateFeeSummaryDlg.getFeeSummaryPattern());
-					if(feeSummaryHead != null && ÒreateFeeSummaryDlg.isShowCreatedDocument() ) 
+					FeeSummaryHead feeSummaryHead = payRollService.createFeeSummary(selectedPayRollIds, —ÅreateFeeSummaryDlg.getFeeSummaryPattern());
+					if(feeSummaryHead != null && —ÅreateFeeSummaryDlg.isShowCreatedDocument() ) 
 						MaintenanceHelper.edit(feeSummaryHeadService, feeSummaryHead.getId(), null, null);
 				}
 			});
-			ÒreateFeeSummaryDlg.setDocSection(feeSummaryHeadService.getDocSection());
-			ÒreateFeeSummaryDlg.execute();
+			—ÅreateFeeSummaryDlg.setDocSection(feeSummaryHeadService.getDocSection());
+			—ÅreateFeeSummaryDlg.execute();
 		}
 	}
 

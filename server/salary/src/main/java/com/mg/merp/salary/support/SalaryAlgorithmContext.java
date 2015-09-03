@@ -19,7 +19,7 @@ import java.util.Date;
 import com.mg.framework.api.ApplicationException;
 
 /**
- * Класс контекста выполнения расчета зарплаты 
+ * РљР»Р°СЃСЃ РєРѕРЅС‚РµРєСЃС‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ СЂР°СЃС‡РµС‚Р° Р·Р°СЂРїР»Р°С‚С‹ 
  * 
  * @author Oleg V. Safonov
  * @version $Id$
@@ -28,7 +28,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	идентификатор текущего ш/р
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµРєСѓС‰РµРіРѕ С€/СЂ
 	 * @throws ApplicationException
 	 */
 	final public int getStaffListId() throws ApplicationException {
@@ -39,7 +39,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	идентификатор образца н/у из л/с сотрудника
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕР±СЂР°Р·С†Р° РЅ/Сѓ РёР· Р»/СЃ СЃРѕС‚СЂСѓРґРЅРёРєР°
 	 * @throws ApplicationException
 	 */
 	final public int getFeeModelId() throws ApplicationException {
@@ -50,7 +50,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	идентификатор текущей р/в
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµРєСѓС‰РµР№ СЂ/РІ
 	 * @throws ApplicationException
 	 */
 	final public int getPayRollId() throws ApplicationException {
@@ -61,7 +61,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	идентификатор текущего р/л
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµРєСѓС‰РµРіРѕ СЂ/Р»
 	 * @throws ApplicationException
 	 */
 	final public int getCalcListId() throws ApplicationException {
@@ -72,7 +72,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	идентификатор текущего н/у
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РµРєСѓС‰РµРіРѕ РЅ/Сѓ
 	 * @throws ApplicationException
 	 */
 	final public int getCalcListFeeId() throws ApplicationException {
@@ -83,7 +83,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	идентификатор исполнения должности, по которой производится расчет
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РёСЃРїРѕР»РЅРµРЅРёСЏ РґРѕР»Р¶РЅРѕСЃС‚Рё, РїРѕ РєРѕС‚РѕСЂРѕР№ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ СЂР°СЃС‡РµС‚
 	 * @throws ApplicationException
 	 */
 	final public int getPositionFillId() throws ApplicationException {
@@ -94,7 +94,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	идентификатор л/с сотрудника
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р»/СЃ СЃРѕС‚СЂСѓРґРЅРёРєР°
 	 * @throws ApplicationException
 	 */
 	final public int getPersonalAccountId() throws ApplicationException {
@@ -105,7 +105,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	начислено с
+	 * @return	РЅР°С‡РёСЃР»РµРЅРѕ СЃ
 	 * @throws ApplicationException
 	 */
 	final public Date getBeginDate() throws ApplicationException {
@@ -116,7 +116,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	начислено по
+	 * @return	РЅР°С‡РёСЃР»РµРЅРѕ РїРѕ
 	 * @throws ApplicationException
 	 */
 	final public Date getEndDate() throws ApplicationException {
@@ -127,7 +127,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	за период с
+	 * @return	Р·Р° РїРµСЂРёРѕРґ СЃ
 	 * @throws ApplicationException
 	 */
 	final public Date getPeriodBeginDate() throws ApplicationException {
@@ -138,7 +138,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	за период по
+	 * @return	Р·Р° РїРµСЂРёРѕРґ РїРѕ
 	 * @throws ApplicationException
 	 */
 	final public Date getPeriodEndDate() throws ApplicationException {
@@ -149,7 +149,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	идентификатор аналитики состава затрат 1-го уровня
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р°РЅР°Р»РёС‚РёРєРё СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 1-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @throws ApplicationException
 	 */
 	final public int getCostsAnl1Id() throws ApplicationException {
@@ -160,7 +160,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	идентификатор аналитики состава затрат 2-го уровня
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р°РЅР°Р»РёС‚РёРєРё СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 2-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @throws ApplicationException
 	 */
 	final public int getCostsAnl2Id() throws ApplicationException {
@@ -171,7 +171,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	идентификатор аналитики состава затрат 3-го уровня
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р°РЅР°Р»РёС‚РёРєРё СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 3-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @throws ApplicationException
 	 */
 	final public int getCostsAnl3Id() throws ApplicationException {
@@ -182,7 +182,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	идентификатор аналитики состава затрат 4-го уровня
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р°РЅР°Р»РёС‚РёРєРё СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 4-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @throws ApplicationException
 	 */
 	final public int getCostsAnl4Id() throws ApplicationException {
@@ -193,7 +193,7 @@ public class SalaryAlgorithmContext {
 	
 	/**
 	 * 
-	 * @return	идентификатор аналитики состава затрат 5-го уровня
+	 * @return	РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р°РЅР°Р»РёС‚РёРєРё СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ 5-РіРѕ СѓСЂРѕРІРЅСЏ
 	 * @throws ApplicationException
 	 */
 	final public int getCostsAnl5Id() throws ApplicationException {
@@ -203,9 +203,9 @@ public class SalaryAlgorithmContext {
 	}
 	
 	/**
-	 * Проверка аналитики состава затрат
+	 * РџСЂРѕРІРµСЂРєР° Р°РЅР°Р»РёС‚РёРєРё СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚
 	 * 
-	 * @return	<code>true</code> если все поля аналитики состава затрат = 0
+	 * @return	<code>true</code> РµСЃР»Рё РІСЃРµ РїРѕР»СЏ Р°РЅР°Р»РёС‚РёРєРё СЃРѕСЃС‚Р°РІР° Р·Р°С‚СЂР°С‚ = 0
 	 * @throws ApplicationException
 	 */
 	final public boolean getIsEmptyCostsAnl() throws ApplicationException {

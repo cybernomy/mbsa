@@ -42,7 +42,7 @@ import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.reference.model.Currency;
 
 /**
- * Контроллер формы списка бизнес-компонента "Остатки и обороты по товарно-материальным ценностям"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ СЃРїРёСЃРєР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ С‚РѕРІР°СЂРЅРѕ-РјР°С‚РµСЂРёР°Р»СЊРЅС‹Рј С†РµРЅРЅРѕСЃС‚СЏРј"
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -111,13 +111,13 @@ public class RemnValBr extends AbstractPlainBrowseFormWithTurn {
 				paramsValue.add(anlplan.getCode());
 			}
 		}
-		//Контрагент
+		//РљРѕРЅС‚СЂР°РіРµРЅС‚
 		Contractor contractorCode = restForm.getContractorCode();
 		if (contractorCode != null) {
 			whereText.append("and (ra.CONTRACTORCODE = ?)"); //$NON-NLS-1$
 			paramsValue.add(contractorCode.getCode());			
 		} 
-		//КТУ
+		//РљРўРЈ
 		Catalog catalogCode = restForm.getCatalogName();
 		if (catalogCode != null) {
 			whereText.append("and (ra.CATCODE = ?)"); //$NON-NLS-1$
@@ -126,7 +126,7 @@ public class RemnValBr extends AbstractPlainBrowseFormWithTurn {
 			whereText.append("and (ra.catalogfolder_id in (select cf.folder_id from f_nested_catfolders(?) cf))"); //$NON-NLS-1$
 			paramsValue.add(restForm.getCatalogFolder().getId());						
 		}
-		//Вид сальдо
+		//Р’РёРґ СЃР°Р»СЊРґРѕ
 		switch (restForm.getBalanceKind()) {
 		case 1: whereText.append("and (ra.remnendnat > 0)"); //$NON-NLS-1$
 		break;
@@ -221,7 +221,7 @@ public class RemnValBr extends AbstractPlainBrowseFormWithTurn {
 	}
 
 	/**
-	 * Вызов сервиса бизнес-компонента "Остатки и обороты по счетам бух. учета"
+	 * Р’С‹Р·РѕРІ СЃРµСЂРІРёСЃР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ СЃС‡РµС‚Р°Рј Р±СѓС…. СѓС‡РµС‚Р°"
 	 * @return
 	 */
 	protected RemnValServiceLocal getRemnValService() {
@@ -231,7 +231,7 @@ public class RemnValBr extends AbstractPlainBrowseFormWithTurn {
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Удалить пустые строки"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РЈРґР°Р»РёС‚СЊ РїСѓСЃС‚С‹Рµ СЃС‚СЂРѕРєРё"
 	 * 
 	 * @param event
 	 * @throws ApplicationException
@@ -243,7 +243,7 @@ public class RemnValBr extends AbstractPlainBrowseFormWithTurn {
 	}
 
 	/**
-	 * Обработчик кнопки контекстного меню "Пересчитать цены списания"
+	 * РћР±СЂР°Р±РѕС‚С‡РёРє РєРЅРѕРїРєРё РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ "РџРµСЂРµСЃС‡РёС‚Р°С‚СЊ С†РµРЅС‹ СЃРїРёСЃР°РЅРёСЏ"
 	 * 
 	 * @param event
 	 * @throws ApplicationException

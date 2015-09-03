@@ -17,7 +17,7 @@ package com.mg.merp.personnelref.support;
 import com.mg.framework.generic.MessageSourceAccessor;
 
 /**
- * Класс пользовательских сообщений
+ * РљР»Р°СЃСЃ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… СЃРѕРѕР±С‰РµРЅРёР№
  * 
  * @author Artem V. Sharapov
  * @version $Id: Messages.java,v 1.5 2008/03/27 14:01:32 alikaev Exp $

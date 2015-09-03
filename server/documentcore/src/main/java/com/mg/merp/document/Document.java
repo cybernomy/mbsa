@@ -24,7 +24,7 @@ import com.mg.merp.document.model.DocSection;
 import com.mg.merp.reference.AttachmentHandler;
 
 /**
- * Сервис бизнес-компонента "Документ"
+ * РЎРµСЂРІРёСЃ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р”РѕРєСѓРјРµРЅС‚"
  * 
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
@@ -33,51 +33,51 @@ import com.mg.merp.reference.AttachmentHandler;
 public interface Document<T extends DocHead, ID extends Serializable, M extends DocumentPattern> extends DataBusinessObjectService<T, ID>, AttachmentHandler {
 
 	/**
-	 * получить раздел документа
+	 * РїРѕР»СѓС‡РёС‚СЊ СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
-	 * @return	раздел документа
+	 * @return	СЂР°Р·РґРµР» РґРѕРєСѓРјРµРЅС‚Р°
 	 */
 	DocSection getDocSection();
 
 	/**
-	 * получить конфигурацию модуля к которому принадлежит документ
+	 * РїРѕР»СѓС‡РёС‚СЊ РєРѕРЅС„РёРіСѓСЂР°С†РёСЋ РјРѕРґСѓР»СЏ Рє РєРѕС‚РѕСЂРѕРјСѓ РїСЂРёРЅР°РґР»РµР¶РёС‚ РґРѕРєСѓРјРµРЅС‚
 	 * 
-	 * @return	конфигурация
+	 * @return	РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ
 	 */
 	Configuration getConfiguration();
 
 	/**
-	 * получить бизнес-компонент образца документа
+	 * РїРѕР»СѓС‡РёС‚СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ РѕР±СЂР°Р·С†Р° РґРѕРєСѓРјРµРЅС‚Р°
 	 * 
 	 * @return
 	 */
 	M getPatternService();
 
 	/**
-	 * создать документ по образцу с использованием стандартной стратегии создания
+	 * СЃРѕР·РґР°С‚СЊ РґРѕРєСѓРјРµРЅС‚ РїРѕ РѕР±СЂР°Р·С†Сѓ СЃ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµРј СЃС‚Р°РЅРґР°СЂС‚РЅРѕР№ СЃС‚СЂР°С‚РµРіРёРё СЃРѕР·РґР°РЅРёСЏ
 	 * 
-	 * @param patern	образец
-	 * @param folder	папка-назначения документа
-	 * @return	документ
+	 * @param patern	РѕР±СЂР°Р·РµС†
+	 * @param folder	РїР°РїРєР°-РЅР°Р·РЅР°С‡РµРЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°
+	 * @return	РґРѕРєСѓРјРµРЅС‚
 	 */
 	DocHead createByPattern(DocHeadModel patern, Folder folder);
 
 	/**
-	 * создать документ по образцу
+	 * СЃРѕР·РґР°С‚СЊ РґРѕРєСѓРјРµРЅС‚ РїРѕ РѕР±СЂР°Р·С†Сѓ
 	 * 
-	 * @param patern	образец
-	 * @param createStrategy	стратегия создания
-	 * @return	документ
+	 * @param patern	РѕР±СЂР°Р·РµС†
+	 * @param createStrategy	СЃС‚СЂР°С‚РµРіРёСЏ СЃРѕР·РґР°РЅРёСЏ
+	 * @return	РґРѕРєСѓРјРµРЅС‚
 	 */
 	DocHead createByPatternUseStrategy(DocHeadModel pattern, CreateDocumentByPatternStrategy createStrategy);
 	
 	/**
-	 * расчет атрибутов документа, при использовании штатных методов создания и изменения
-	 * вызов данного метода не требуется, если атрибут {@link com.mg.merp.document.model.DocHead#isAdjusted() Adjusted}
-	 * установлен в <code>true</code>, то расчет производится не будет, т.о. возможно изменить
-	 * стандартное поведение системы
+	 * СЂР°СЃС‡РµС‚ Р°С‚СЂРёР±СѓС‚РѕРІ РґРѕРєСѓРјРµРЅС‚Р°, РїСЂРё РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРё С€С‚Р°С‚РЅС‹С… РјРµС‚РѕРґРѕРІ СЃРѕР·РґР°РЅРёСЏ Рё РёР·РјРµРЅРµРЅРёСЏ
+	 * РІС‹Р·РѕРІ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР° РЅРµ С‚СЂРµР±СѓРµС‚СЃСЏ, РµСЃР»Рё Р°С‚СЂРёР±СѓС‚ {@link com.mg.merp.document.model.DocHead#isAdjusted() Adjusted}
+	 * СѓСЃС‚Р°РЅРѕРІР»РµРЅ РІ <code>true</code>, С‚Рѕ СЂР°СЃС‡РµС‚ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ РЅРµ Р±СѓРґРµС‚, С‚.Рѕ. РІРѕР·РјРѕР¶РЅРѕ РёР·РјРµРЅРёС‚СЊ
+	 * СЃС‚Р°РЅРґР°СЂС‚РЅРѕРµ РїРѕРІРµРґРµРЅРёРµ СЃРёСЃС‚РµРјС‹
 	 * 
-	 * @param entity сущность
+	 * @param entity СЃСѓС‰РЅРѕСЃС‚СЊ
 	 */
 	void adjust(T entity);
 

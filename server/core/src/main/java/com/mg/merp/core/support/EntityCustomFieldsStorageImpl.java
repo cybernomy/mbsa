@@ -20,7 +20,7 @@ import java.util.Map;
 import com.mg.framework.api.metadata.CustomFieldsManager;
 
 /**
- * Реализация репозитария хранения пользовательских полей
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЂРµРїРѕР·РёС‚Р°СЂРёСЏ С…СЂР°РЅРµРЅРёСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёС… РїРѕР»РµР№
  * 
  * @author Oleg V. Safonov
  * @version $Id: EntityCustomFieldsStorageImpl.java,v 1.1 2007/01/25 15:40:57 safonov Exp $

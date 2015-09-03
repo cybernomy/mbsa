@@ -18,7 +18,7 @@ package com.mg.merp.overall;
 import com.mg.merp.overall.model.Size;
 
 /**
- * Бизнес- компонент "Размеры"
+ * Р‘РёР·РЅРµСЃ- РєРѕРјРїРѕРЅРµРЅС‚ "Р Р°Р·РјРµСЂС‹"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: SizeServiceLocal.java,v 1.1 2008/06/30 04:13:38 alikaev Exp $

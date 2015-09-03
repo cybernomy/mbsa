@@ -24,7 +24,7 @@ import com.mg.merp.salary.IncludedFeeServiceLocal;
 import com.mg.merp.salary.model.IncludedFee;
 
 /**
- * Бизнес-компонент "Входящие н/у" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р’С…РѕРґСЏС‰РёРµ РЅ/Сѓ" 
  * 
  * @author leonova
  * @version $Id: IncludedFeeServiceBean.java,v 1.5 2006/09/29 12:07:24 leonova Exp $

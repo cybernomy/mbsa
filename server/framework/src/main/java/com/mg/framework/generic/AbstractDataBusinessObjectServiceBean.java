@@ -70,7 +70,7 @@ public abstract class AbstractDataBusinessObjectServiceBean<T extends Persistent
 	@PermitAll
 	public T instantiateEntity() {
 		PersistentObject result = getDataDomain().make(null);
-        //TODO заполняем поле sys_client 1, необходимо заполнять текущим мандантом в который вошел пользователь
+        //TODO Р·Р°РїРѕР»РЅСЏРµРј РїРѕР»Рµ sys_client 1, РЅРµРѕР±С…РѕРґРёРјРѕ Р·Р°РїРѕР»РЅСЏС‚СЊ С‚РµРєСѓС‰РёРј РјР°РЅРґР°РЅС‚РѕРј РІ РєРѕС‚РѕСЂС‹Р№ РІРѕС€РµР» РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ
         try {
             result.setAttribute("SysClient", ServerUtils.getPersistentManager().find("com.mg.merp.core.model.SysClient", 1));
         }

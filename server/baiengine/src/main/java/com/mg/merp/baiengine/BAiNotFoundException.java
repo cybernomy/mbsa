@@ -17,7 +17,7 @@ package com.mg.merp.baiengine;
 import com.mg.merp.baiengine.support.Messages;
 
 /**
- * Класс ИС указывающий о проблеме обнаружения бизнес расширения в репозитарии
+ * РљР»Р°СЃСЃ РРЎ СѓРєР°Р·С‹РІР°СЋС‰РёР№ Рѕ РїСЂРѕР±Р»РµРјРµ РѕР±РЅР°СЂСѓР¶РµРЅРёСЏ Р±РёР·РЅРµСЃ СЂР°СЃС€РёСЂРµРЅРёСЏ РІ СЂРµРїРѕР·РёС‚Р°СЂРёРё
  * 
  * @author Oleg V. Safonov
  * @version $Id: BAiNotFoundException.java,v 1.1 2006/10/12 12:02:05 safonov Exp $

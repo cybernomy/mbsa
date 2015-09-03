@@ -24,7 +24,7 @@ import com.mg.merp.personnelref.PersonnelRewardServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelReward;
 
 /**
- * Реализация бизнес-компонента "Поощрения и награды" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РџРѕРѕС‰СЂРµРЅРёСЏ Рё РЅР°РіСЂР°РґС‹" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

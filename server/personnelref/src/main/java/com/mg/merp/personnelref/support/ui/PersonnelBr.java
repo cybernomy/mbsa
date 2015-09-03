@@ -34,7 +34,7 @@ import com.mg.merp.personnelref.model.Personnel;
 import com.mg.merp.personnelref.model.PersonnelGroup;
 
 /**
- * Браузер основных сведений о сотрудниках
+ * Р‘СЂР°СѓР·РµСЂ РѕСЃРЅРѕРІРЅС‹С… СЃРІРµРґРµРЅРёР№ Рѕ СЃРѕС‚СЂСѓРґРЅРёРєР°С…
  * 
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: PersonnelBr.java,v 1.9 2007/11/08 16:13:05 safonov Exp $

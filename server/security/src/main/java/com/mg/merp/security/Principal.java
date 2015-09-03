@@ -17,7 +17,7 @@ package com.mg.merp.security;
 import net.sf.jguard.core.principals.RolePrincipal;
 
 /**
- * Принципал представляющий понятие роль
+ * РџСЂРёРЅС†РёРїР°Р» РїСЂРµРґСЃС‚Р°РІР»СЏСЋС‰РёР№ РїРѕРЅСЏС‚РёРµ СЂРѕР»СЊ
  * 
  * @author Oleg V. Safonov
  * @version $Id$

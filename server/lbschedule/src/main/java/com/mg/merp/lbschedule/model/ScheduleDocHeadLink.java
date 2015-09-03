@@ -21,7 +21,7 @@ import com.mg.merp.core.model.SysClient;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * Модель бизнес-компонента "Связь документа с графиком исполнения обязательств"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РЎРІСЏР·СЊ РґРѕРєСѓРјРµРЅС‚Р° СЃ РіСЂР°С„РёРєРѕРј РёСЃРїРѕР»РЅРµРЅРёСЏ РѕР±СЏР·Р°С‚РµР»СЊСЃС‚РІ"
  * 
  * @author Artem V. Sharapov
  * @version $Id: ScheduleDocHeadLink.java,v 1.1 2007/04/21 11:49:33 sharapov Exp $

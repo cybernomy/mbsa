@@ -23,7 +23,7 @@ import com.mg.merp.manufacture.OutputProductModelServiceLocal;
 import com.mg.merp.manufacture.model.OutputProductModel;
 
 /**
- * Реализация бизнес-компонента "Образцы актов выпуска готовой продукции" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћР±СЂР°Р·С†С‹ Р°РєС‚РѕРІ РІС‹РїСѓСЃРєР° РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov

@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.PersonTitle;
 
 /**
- * Браузер обращений к человеку
+ * Р‘СЂР°СѓР·РµСЂ РѕР±СЂР°С‰РµРЅРёР№ Рє С‡РµР»РѕРІРµРєСѓ
  * 
  * @author leonova
  * @version $Id: PersonTitleBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

@@ -22,7 +22,7 @@ import com.mg.merp.baiengine.model.ConstantDataType;
 import com.mg.merp.baiengine.support.BusinessAddinUtils;
 
 /**
- * Конвертация атрибута Val объекта ConstantValue
+ * РљРѕРЅРІРµСЂС‚Р°С†РёСЏ Р°С‚СЂРёР±СѓС‚Р° Val РѕР±СЉРµРєС‚Р° ConstantValue
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ConstantValueConversionRoutine.java,v 1.1 2007/08/21 12:56:51 alikaev Exp $
@@ -37,9 +37,9 @@ public class ConstantValueConversionRoutine extends AbstractConversionRoutine<St
 	}
 
 	/**
-	 * возвращает тип константы
+	 * РІРѕР·РІСЂР°С‰Р°РµС‚ С‚РёРї РєРѕРЅСЃС‚Р°РЅС‚С‹
 	 * 
-	 * @return тип константы или {@link com.mg.merp.baiengine.model.ConstantDataType#STRING ConstantDataType.STRING} если не удается импортировать атрибут значения константы
+	 * @return С‚РёРї РєРѕРЅСЃС‚Р°РЅС‚С‹ РёР»Рё {@link com.mg.merp.baiengine.model.ConstantDataType#STRING ConstantDataType.STRING} РµСЃР»Рё РЅРµ СѓРґР°РµС‚СЃСЏ РёРјРїРѕСЂС‚РёСЂРѕРІР°С‚СЊ Р°С‚СЂРёР±СѓС‚ Р·РЅР°С‡РµРЅРёСЏ РєРѕРЅСЃС‚Р°РЅС‚С‹
 	 */ 
 	private ConstantDataType getConstantDataType() {
 		return getImportContextValue(CONST_ATRIBUTE_NAME) != null ? ((Constant) getImportContextValue(CONST_ATRIBUTE_NAME)).getDataType() : ConstantDataType.STRING;

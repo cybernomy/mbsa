@@ -17,7 +17,7 @@ package com.mg.merp.account.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Остатки и обороты по аналитическим счетам бух. учета"
+ * РњРѕРґРµР»СЊ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РћСЃС‚Р°С‚РєРё Рё РѕР±РѕСЂРѕС‚С‹ РїРѕ Р°РЅР°Р»РёС‚РёС‡РµСЃРєРёРј СЃС‡РµС‚Р°Рј Р±СѓС…. СѓС‡РµС‚Р°"
  * 
  * @author hbm2java
  * @author Artem V. Sharapov

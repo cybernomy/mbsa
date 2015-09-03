@@ -55,20 +55,20 @@ public class DefaultLegacyHierarchyBrowseForm extends DefaultLegacyPlainBrowseFo
 	}
 
 	/**
-	 * Метод устанавливает ссылку на объект мастер. Необходимо переопределить в
-	 * наследнике. Например: <code>uiProperties.put("FolderId", master)</code>
+	 * РњРµС‚РѕРґ СѓСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ СЃСЃС‹Р»РєСѓ РЅР° РѕР±СЉРµРєС‚ РјР°СЃС‚РµСЂ. РќРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРѕРїСЂРµРґРµР»РёС‚СЊ РІ
+	 * РЅР°СЃР»РµРґРЅРёРєРµ. РќР°РїСЂРёРјРµСЂ: <code>uiProperties.put("FolderId", master)</code>
 	 * 
-	 * @param master первичный ключ мастера
+	 * @param master РїРµСЂРІРёС‡РЅС‹Р№ РєР»СЋС‡ РјР°СЃС‚РµСЂР°
 	 */
 	protected void initializeMaster(Serializable master) {
 		
 	}
 	
 	/**
-	 * Загрузка списка папок текщего сервиса. Необходимо переопределить в наследнике
-	 * если сервис не реализует метод loadFolders()
+	 * Р—Р°РіСЂСѓР·РєР° СЃРїРёСЃРєР° РїР°РїРѕРє С‚РµРєС‰РµРіРѕ СЃРµСЂРІРёСЃР°. РќРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРѕРїСЂРµРґРµР»РёС‚СЊ РІ РЅР°СЃР»РµРґРЅРёРєРµ
+	 * РµСЃР»Рё СЃРµСЂРІРёСЃ РЅРµ СЂРµР°Р»РёР·СѓРµС‚ РјРµС‚РѕРґ loadFolders()
 	 * 
-	 * <p>Пример данного метода:
+	 * <p>РџСЂРёРјРµСЂ РґР°РЅРЅРѕРіРѕ РјРµС‚РѕРґР°:
 	 * <pre>
 	 *  protected Object loadFolders() throws ApplicationException {
 	 *  	LocalDataTransferObject restProps = new LocalDataTransferObject();

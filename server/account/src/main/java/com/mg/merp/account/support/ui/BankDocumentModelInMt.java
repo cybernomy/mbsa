@@ -18,7 +18,7 @@ import com.mg.merp.document.generic.ui.DocumentModelMaintenanceForm;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы поддержки "Образцов входящих банковских документов"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶РєРё "РћР±СЂР°Р·С†РѕРІ РІС…РѕРґСЏС‰РёС… Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ"
  * 
  * @author leonova
  * @version $Id: BankDocumentModelInMt.java,v 1.2 2007/05/22 07:42:30 sharapov Exp $

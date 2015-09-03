@@ -24,7 +24,7 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.crm.model.Market;
 
 /**
- * Браузер рынков
+ * Р‘СЂР°СѓР·РµСЂ СЂС‹РЅРєРѕРІ
  * 
  * @author leonova
  * @version $Id: MarketBr.java,v 1.1 2006/08/04 05:55:14 leonova Exp $ 

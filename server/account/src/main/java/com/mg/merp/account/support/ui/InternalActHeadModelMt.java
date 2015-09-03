@@ -18,7 +18,7 @@ import com.mg.merp.document.generic.ui.DocumentModelMaintenanceForm;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы поддержи "Образцов внутренних актов"
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ С„РѕСЂРјС‹ РїРѕРґРґРµСЂР¶Рё "РћР±СЂР°Р·С†РѕРІ РІРЅСѓС‚СЂРµРЅРЅРёС… Р°РєС‚РѕРІ"
  * 
  * @author leonova
  * @version $Id: InternalActHeadModelMt.java,v 1.2 2007/05/22 08:19:30 sharapov Exp $

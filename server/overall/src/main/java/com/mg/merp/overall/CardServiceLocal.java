@@ -17,7 +17,7 @@ package com.mg.merp.overall;
 import com.mg.merp.overall.model.OvrCard;
 
 /**
- * Бизнес-компонент "Лицевые карточки сотрудников"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р›РёС†РµРІС‹Рµ РєР°СЂС‚РѕС‡РєРё СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ"
  * 
  * @author leonova
  * @version $Id: CardServiceLocal.java,v 1.1 2008/06/30 04:13:38 alikaev Exp $

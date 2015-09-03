@@ -22,7 +22,7 @@ import com.mg.merp.reference.DistrictServiceLocal;
 import com.mg.merp.reference.model.District;
 
 /**
- * Бизнес-компонент "Районы"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р Р°Р№РѕРЅС‹"
  * 
  * @author leonova
  * @version $Id: DistrictServiceBean.java,v 1.3 2006/08/03 11:17:05 leonova Exp $

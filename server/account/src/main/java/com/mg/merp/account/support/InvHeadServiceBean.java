@@ -49,7 +49,7 @@ import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Contractor;
 
 /**
- * Бизнес-компонент "Инвентарная картотека" 
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "РРЅРІРµРЅС‚Р°СЂРЅР°СЏ РєР°СЂС‚РѕС‚РµРєР°" 
  * 
  * @author leonova
  * @author Konstantin S. Alikaev
@@ -136,14 +136,14 @@ public class InvHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 
 
 	/**
-	 * Начисление амортизации
+	 * РќР°С‡РёСЃР»РµРЅРёРµ Р°РјРѕСЂС‚РёР·Р°С†РёРё
 	 * 
 	 * @param month
-	 * 			- месяц начисления амортизации в абсолютном исчислении (год*12 + месяц)
+	 * 			- РјРµСЃСЏС† РЅР°С‡РёСЃР»РµРЅРёСЏ Р°РјРѕСЂС‚РёР·Р°С†РёРё РІ Р°Р±СЃРѕР»СЋС‚РЅРѕРј РёСЃС‡РёСЃР»РµРЅРёРё (РіРѕРґ*12 + РјРµСЃСЏС†)
 	 * @param invHead
-	 * 			- инвентарные карточки
+	 * 			- РёРЅРІРµРЅС‚Р°СЂРЅС‹Рµ РєР°СЂС‚РѕС‡РєРё
 	 * @param accKind
-	 * 			- вид учета основных средств и нематериальных активов
+	 * 			- РІРёРґ СѓС‡РµС‚Р° РѕСЃРЅРѕРІРЅС‹С… СЃСЂРµРґСЃС‚РІ Рё РЅРµРјР°С‚РµСЂРёР°Р»СЊРЅС‹С… Р°РєС‚РёРІРѕРІ
 	 * @return
 	 */
 	protected Integer doCalcAmortization(Short month, List<InvHead> invHeads, AccKind accKind) {
@@ -158,14 +158,14 @@ public class InvHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 
 	/**
-	 * Переоценка/дооценка
+	 * РџРµСЂРµРѕС†РµРЅРєР°/РґРѕРѕС†РµРЅРєР°
 	 * 
 	 * @param invHeads
-	 * 			- список инвентарных картотек
+	 * 			- СЃРїРёСЃРѕРє РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‚РµРє
 	 * @param accKind
-	 * 			- вид учета
+	 * 			- РІРёРґ СѓС‡РµС‚Р°
 	 * @param accRevaluateParams
-	 * 			- параметры для проведения переоценки
+	 * 			- РїР°СЂР°РјРµС‚СЂС‹ РґР»СЏ РїСЂРѕРІРµРґРµРЅРёСЏ РїРµСЂРµРѕС†РµРЅРєРё
 	 */
 	protected void doRevaluate(List<InvHead> invHeads, AccKind accKind, AccRevaluateParams accRevaluateParams) {
 		getInventoryService().revaluate(getInventoryList(invHeads, accKind), accRevaluateParams);
@@ -180,12 +180,12 @@ public class InvHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 
 	/**
-	 * Отменить последнее действие
+	 * РћС‚РјРµРЅРёС‚СЊ РїРѕСЃР»РµРґРЅРµРµ РґРµР№СЃС‚РІРёРµ
 	 * 
 	 * @param invHeads
-	 * 			- инвентарные картотеки
+	 * 			- РёРЅРІРµРЅС‚Р°СЂРЅС‹Рµ РєР°СЂС‚РѕС‚РµРєРё
 	 * @param accKind
-	 * 			- вид учета
+	 * 			- РІРёРґ СѓС‡РµС‚Р°
 	 */
 	protected void doRollback(List<InvHead> invHeads, List<AccKind> accKinds) {
 		checkRollback(invHeads, accKinds);
@@ -193,12 +193,12 @@ public class InvHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 
 	/**
-	 * Проверка возможности отката
+	 * РџСЂРѕРІРµСЂРєР° РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РѕС‚РєР°С‚Р°
 	 * 
 	 * @param invHeads
-	 * 				- список инвентарных картотек
+	 * 				- СЃРїРёСЃРѕРє РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‚РµРє
 	 * @param accKinds
-	 * 				- список видов учета
+	 * 				- СЃРїРёСЃРѕРє РІРёРґРѕРІ СѓС‡РµС‚Р°
 	 */
 	private void checkRollback(List<InvHead> invHeads, List<AccKind> accKinds) {
 		OrmTemplate ormTemplate = OrmTemplate.getInstance();
@@ -237,12 +237,12 @@ public class InvHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 
 	/**
-	 * Проверяет принадлежность вида учета к списку видов учета
+	 * РџСЂРѕРІРµСЂСЏРµС‚ РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚СЊ РІРёРґР° СѓС‡РµС‚Р° Рє СЃРїРёСЃРєСѓ РІРёРґРѕРІ СѓС‡РµС‚Р°
 	 * 
 	 * @param accKinds
-	 * 			- список видов учета
+	 * 			- СЃРїРёСЃРѕРє РІРёРґРѕРІ СѓС‡РµС‚Р°
 	 * @param accKind
-	 * 			- вид учета
+	 * 			- РІРёРґ СѓС‡РµС‚Р°
 	 * @return
 	 */
 	private boolean isContainsAccKindList(List<AccKind> accKinds, AccKind accKind) {
@@ -261,14 +261,14 @@ public class InvHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 	
 	/**
-	 * Перемещение
+	 * РџРµСЂРµРјРµС‰РµРЅРёРµ
 	 * 
 	 * @param invHeads
-	 * 			- список инвентарных картотек
+	 * 			- СЃРїРёСЃРѕРє РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‚РµРє
 	 * @param accKind
-	 * 			- вид учета
+	 * 			- РІРёРґ СѓС‡РµС‚Р°
 	 * @param params
-	 * 			- параметры для проведения операции перемещения инвентарных карточек
+	 * 			- РїР°СЂР°РјРµС‚СЂС‹ РґР»СЏ РїСЂРѕРІРµРґРµРЅРёСЏ РѕРїРµСЂР°С†РёРё РїРµСЂРµРјРµС‰РµРЅРёСЏ РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‡РµРє
 	 */
 	protected void doMoveInventory(List<InvHead> invHeads, AccKind accKind, AccInventoryMoveParams params) {
 		getInventoryService().moveInventory(getInventoryList(invHeads, accKind), params);
@@ -283,14 +283,14 @@ public class InvHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 
 	/**
-	 * Списание
+	 * РЎРїРёСЃР°РЅРёРµ
 	 * 
 	 * @param invHeads
-	 * 			- список инвентарных картотек
+	 * 			- СЃРїРёСЃРѕРє РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‚РµРє
 	 * @param accKind
-	 * 			- вид учета
+	 * 			- РІРёРґ СѓС‡РµС‚Р°
 	 * @param params
-	 * 			- параметры для проведения операции списания инвентарных карточек
+	 * 			- РїР°СЂР°РјРµС‚СЂС‹ РґР»СЏ РїСЂРѕРІРµРґРµРЅРёСЏ РѕРїРµСЂР°С†РёРё СЃРїРёСЃР°РЅРёСЏ РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‡РµРє
 	 */
 	protected void doRetire(List<InvHead> invHeads, AccKind accKind, AccInventoryRetireParams params) {
 		getInventoryService().retire(getInventoryList(invHeads, accKind), params);
@@ -305,14 +305,14 @@ public class InvHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 
 	/**
-	 * Консервация
+	 * РљРѕРЅСЃРµСЂРІР°С†РёСЏ
 	 * 
 	 * @param invHeads
-	 * 			- список инвентарных картотек
+	 * 			- СЃРїРёСЃРѕРє РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‚РµРє
 	 * @param accKind
-	 * 			- вид учета
+	 * 			- РІРёРґ СѓС‡РµС‚Р°
 	 * @param freezeDate
-	 * 			- дата по которую консервируем инвентарную карточку
+	 * 			- РґР°С‚Р° РїРѕ РєРѕС‚РѕСЂСѓСЋ РєРѕРЅСЃРµСЂРІРёСЂСѓРµРј РёРЅРІРµРЅС‚Р°СЂРЅСѓСЋ РєР°СЂС‚РѕС‡РєСѓ
 	 */
 	protected void doFreeze(List<InvHead> invHeads, AccKind accKind, Date freezeDate) {
 		getInventoryService().freeze(getInventoryList(invHeads, accKind), freezeDate);
@@ -327,26 +327,26 @@ public class InvHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 	
 	/**
-	 * Формирование остатков
+	 * Р¤РѕСЂРјРёСЂРѕРІР°РЅРёРµ РѕСЃС‚Р°С‚РєРѕРІ
 	 * 
 	 * @param invHeads
-	 * 				- список инвентарных картотек
+	 * 				- СЃРїРёСЃРѕРє РёРЅРІРµРЅС‚Р°СЂРЅС‹С… РєР°СЂС‚РѕС‚РµРє
 	 * @param accKind
-	 * 				- вид учета
+	 * 				- РІРёРґ СѓС‡РµС‚Р°
 	 * @param period
-	 * 				- учетный период
+	 * 				- СѓС‡РµС‚РЅС‹Р№ РїРµСЂРёРѕРґ
 	 */
 	protected void doMakeRemains(List<InvHead> invHeads, AccKind accKind, Period period) {
 		getInventoryService().makeRemains(getInventoryList(invHeads, accKind), period);
 	}
 
 	/**
-	 * Возвращает список данных по видам учета
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє РґР°РЅРЅС‹С… РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * 
 	 * @param invHead
-	 * 				- инвентарные карточки
+	 * 				- РёРЅРІРµРЅС‚Р°СЂРЅС‹Рµ РєР°СЂС‚РѕС‡РєРё
 	 * @param accKind
-	 * 				- вид учета основных средств и нематериальных активов
+	 * 				- РІРёРґ СѓС‡РµС‚Р° РѕСЃРЅРѕРІРЅС‹С… СЃСЂРµРґСЃС‚РІ Рё РЅРµРјР°С‚РµСЂРёР°Р»СЊРЅС‹С… Р°РєС‚РёРІРѕРІ
 	 * @return
 	 */
 	private List<Inventory> getInventoryList(List<InvHead> invHeads, AccKind accKind) {
@@ -362,12 +362,12 @@ public class InvHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 
 	/**
-	 * Возвращает список данных по видам учета
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ СЃРїРёСЃРѕРє РґР°РЅРЅС‹С… РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°
 	 * 
 	 * @param invHead
-	 * 				- инвентарные карточки
+	 * 				- РёРЅРІРµРЅС‚Р°СЂРЅС‹Рµ РєР°СЂС‚РѕС‡РєРё
 	 * @param accKind
-	 * 				- вид учета основных средств и нематериальных активов
+	 * 				- РІРёРґ СѓС‡РµС‚Р° РѕСЃРЅРѕРІРЅС‹С… СЃСЂРµРґСЃС‚РІ Рё РЅРµРјР°С‚РµСЂРёР°Р»СЊРЅС‹С… Р°РєС‚РёРІРѕРІ
 	 * @return
 	 */
 	private List<Inventory> getInventoryList(List<InvHead> invHeads, List<AccKind> accKinds) {
@@ -378,7 +378,7 @@ public class InvHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBea
 	}
 
 	/**
-	 * Возвращает бизнес-компонент "Данные по видам учета"
+	 * Р’РѕР·РІСЂР°С‰Р°РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”Р°РЅРЅС‹Рµ РїРѕ РІРёРґР°Рј СѓС‡РµС‚Р°"
 	 * 
 	 * @return
 	 */

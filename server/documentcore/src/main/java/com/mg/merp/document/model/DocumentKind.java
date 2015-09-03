@@ -15,29 +15,29 @@
 package com.mg.merp.document.model;
 
 /**
- * Вид документа
+ * Р’РёРґ РґРѕРєСѓРјРµРЅС‚Р°
  * 
  * @author Oleg V. Safonov
  * @version $Id: DocumentKind.java,v 1.1 2006/08/31 09:07:19 safonov Exp $
  */
 public enum DocumentKind {
 	/**
-	 * Документ
+	 * Р”РѕРєСѓРјРµРЅС‚
 	 */
 	DOCUMENT,
 	
 	/**
-	 * Документ подтверждение
+	 * Р”РѕРєСѓРјРµРЅС‚ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ
 	 */
 	CONFIRMATION,
 	
 	/**
-	 * Документ основание
+	 * Р”РѕРєСѓРјРµРЅС‚ РѕСЃРЅРѕРІР°РЅРёРµ
 	 */
 	BASE,
 	
 	/**
-	 * Контракт
+	 * РљРѕРЅС‚СЂР°РєС‚
 	 */
 	CONTRACT
 }

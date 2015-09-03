@@ -20,7 +20,7 @@ import com.mg.framework.api.metadata.ui.FieldMetadata;
 import com.mg.framework.api.orm.PersistentObject;
 
 /**
- * Репозитарий метаданных системы
+ * Р РµРїРѕР·РёС‚Р°СЂРёР№ РјРµС‚Р°РґР°РЅРЅС‹С… СЃРёСЃС‚РµРјС‹
  * 
  * @author Oleg V. Safonov
  * $Id: ApplicationDictionary.java,v 1.7 2008/03/03 13:11:02 safonov Exp $
@@ -28,74 +28,74 @@ import com.mg.framework.api.orm.PersistentObject;
 public interface ApplicationDictionary {
 	
 	/**
-	 * Получить домен по имени
+	 * РџРѕР»СѓС‡РёС‚СЊ РґРѕРјРµРЅ РїРѕ РёРјРµРЅРё
 	 * 
-	 * @param name	имя домена
-	 * @return		домен
+	 * @param name	РёРјСЏ РґРѕРјРµРЅР°
+	 * @return		РґРѕРјРµРЅ
 	 */
     Domain getDomain(String name);
     
     /**
-     * Получить элемент данных по имени
+     * РџРѕР»СѓС‡РёС‚СЊ СЌР»РµРјРµРЅС‚ РґР°РЅРЅС‹С… РїРѕ РёРјРµРЅРё
      * 
-     * @param name	имя элемента данных
-     * @return		элемент данных
+     * @param name	РёРјСЏ СЌР»РµРјРµРЅС‚Р° РґР°РЅРЅС‹С…
+     * @return		СЌР»РµРјРµРЅС‚ РґР°РЅРЅС‹С…
      */
     DataItem getDataItem(String name);
     
     /**
-     * Получить метаданные атрибута объекта-сущности
+     * РџРѕР»СѓС‡РёС‚СЊ РјРµС‚Р°РґР°РЅРЅС‹Рµ Р°С‚СЂРёР±СѓС‚Р° РѕР±СЉРµРєС‚Р°-СЃСѓС‰РЅРѕСЃС‚Рё
      * 
-     * @param entityClazz	класс объекта-сущности
-     * @param propertyName	имя атрибута
-     * @return				метаданные атрибута
+     * @param entityClazz	РєР»Р°СЃСЃ РѕР±СЉРµРєС‚Р°-СЃСѓС‰РЅРѕСЃС‚Рё
+     * @param propertyName	РёРјСЏ Р°С‚СЂРёР±СѓС‚Р°
+     * @return				РјРµС‚Р°РґР°РЅРЅС‹Рµ Р°С‚СЂРёР±СѓС‚Р°
      */
     FieldMetadata getFieldMetadata(Class<? extends PersistentObject> entityClazz, String propertyName);
     
     /**
-     * Получить метаданные атрибута
+     * РџРѕР»СѓС‡РёС‚СЊ РјРµС‚Р°РґР°РЅРЅС‹Рµ Р°С‚СЂРёР±СѓС‚Р°
      * 
-     * @param propertyMetadata	свойства атрибута
-     * @return					метаданные атрибута
+     * @param propertyMetadata	СЃРІРѕР№СЃС‚РІР° Р°С‚СЂРёР±СѓС‚Р°
+     * @return					РјРµС‚Р°РґР°РЅРЅС‹Рµ Р°С‚СЂРёР±СѓС‚Р°
      */
     FieldMetadata getFieldMetadata(ReflectionMetadata propertyMetadata);
 
     /**
-     * Создает форму сопровождения для бизнес-компонента
+     * РЎРѕР·РґР°РµС‚ С„РѕСЂРјСѓ СЃРѕРїСЂРѕРІРѕР¶РґРµРЅРёСЏ РґР»СЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
      * 
-     * @param service	бизнес-компонент
-     * @param formName	имя формы, может быть <code>null</code> или пустой строкой
-     * @return			форма
+     * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+     * @param formName	РёРјСЏ С„РѕСЂРјС‹, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code> РёР»Рё РїСѓСЃС‚РѕР№ СЃС‚СЂРѕРєРѕР№
+     * @return			С„РѕСЂРјР°
      */
     com.mg.framework.api.ui.Form getMaintenaceForm(DataBusinessObjectService<?, ?> service, String formName);
     
     /**
-     * Создает форму списка для бизнес-компонента
+     * РЎРѕР·РґР°РµС‚ С„РѕСЂРјСѓ СЃРїРёСЃРєР° РґР»СЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р°
      * 
-     * @param service	бизнес-компонент
-     * @param formName	имя формы, может быть <code>null</code> или пустой строкой
-     * @return			форма
+     * @param service	Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
+     * @param formName	РёРјСЏ С„РѕСЂРјС‹, РјРѕР¶РµС‚ Р±С‹С‚СЊ <code>null</code> РёР»Рё РїСѓСЃС‚РѕР№ СЃС‚СЂРѕРєРѕР№
+     * @return			С„РѕСЂРјР°
      */
     com.mg.framework.api.ui.Form getBrowseForm(DataBusinessObjectService<?, ?> service, String formName);
 
     /**
-     * Создает окно приложения
+     * РЎРѕР·РґР°РµС‚ РѕРєРЅРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ
      * 
-     * @param windowName	имя окна приложения
-     * @return	окно
+     * @param windowName	РёРјСЏ РѕРєРЅР° РїСЂРёР»РѕР¶РµРЅРёСЏ
+     * @return	РѕРєРЅРѕ
      */
     com.mg.framework.api.ui.Form getWindow(String windowName);
     
     /**
-     * Сбросить кэш окон приложения
+     * РЎР±СЂРѕСЃРёС‚СЊ РєСЌС€ РѕРєРѕРЅ РїСЂРёР»РѕР¶РµРЅРёСЏ
      */
     void invalidateWindowCache();
     
     /**
-     * Создает бизнес-компонент
+     * РЎРѕР·РґР°РµС‚ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚
      * 
-     * @param name	имя бизнес компонента
-     * @return		бизнес компонент
+     * @param name	РёРјСЏ Р±РёР·РЅРµСЃ РєРѕРјРїРѕРЅРµРЅС‚Р°
+     * @return		Р±РёР·РЅРµСЃ РєРѕРјРїРѕРЅРµРЅС‚
      */
     BusinessObjectService getBusinessService(String name);
 }

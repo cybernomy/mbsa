@@ -38,7 +38,7 @@ import com.mg.merp.finance.model.OperationModel;
 import com.mg.merp.finance.model.Specification;
 
 /**
- * Реализация бизнес-компонента "Финансовые операции" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р¤РёРЅР°РЅСЃРѕРІС‹Рµ РѕРїРµСЂР°С†РёРё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -94,15 +94,15 @@ public class OperationServiceBean extends AbstractPOJODataBusinessObjectServiceB
 	}
 
 	/**
-	 * Создание финансовой операции по образцу
-	 * @param pattern - образец
-	 * @param folder - папка назначения
-	 * @return финансовая операция
+	 * РЎРѕР·РґР°РЅРёРµ С„РёРЅР°РЅСЃРѕРІРѕР№ РѕРїРµСЂР°С†РёРё РїРѕ РѕР±СЂР°Р·С†Сѓ
+	 * @param pattern - РѕР±СЂР°Р·РµС†
+	 * @param folder - РїР°РїРєР° РЅР°Р·РЅР°С‡РµРЅРёСЏ
+	 * @return С„РёРЅР°РЅСЃРѕРІР°СЏ РѕРїРµСЂР°С†РёСЏ
 	 */
 	protected FinOperation doCreateByPattern(OperationModel pattern, Folder folder) {
 		FinOperation finOperation = initialize();
 		AttributeMap attributes = pattern.getAllAttributes();
-		//удаляем атрибуты образца, отсуствующие в самой фин. операции
+		//СѓРґР°Р»СЏРµРј Р°С‚СЂРёР±СѓС‚С‹ РѕР±СЂР°Р·С†Р°, РѕС‚СЃСѓСЃС‚РІСѓСЋС‰РёРµ РІ СЃР°РјРѕР№ С„РёРЅ. РѕРїРµСЂР°С†РёРё
 		attributes.remove("Id"); //$NON-NLS-1$
 		attributes.remove("SourceTo"); //$NON-NLS-1$
 		attributes.remove("ModelName"); //$NON-NLS-1$
@@ -112,7 +112,7 @@ public class OperationServiceBean extends AbstractPOJODataBusinessObjectServiceB
 		attributes.remove("Specifications"); //$NON-NLS-1$
 		
 		finOperation.setAttributes(attributes);
-		// если папка-приемник не указана в образце, то создаем в текущей папке
+		// РµСЃР»Рё РїР°РїРєР°-РїСЂРёРµРјРЅРёРє РЅРµ СѓРєР°Р·Р°РЅР° РІ РѕР±СЂР°Р·С†Рµ, С‚Рѕ СЃРѕР·РґР°РµРј РІ С‚РµРєСѓС‰РµР№ РїР°РїРєРµ
 		if(pattern.getModelDestFolder() != null)
 			finOperation.setFolder(pattern.getModelDestFolder());
 		else

@@ -22,8 +22,8 @@ import com.mg.merp.document.model.DocHeadModel;
 import com.mg.merp.document.model.DocumentKind;
 
 /**
- * Абстрактный класс для SearchHelp типов документов. Используется в формах поддержки документов
- * и образцов документов.
+ * РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ РєР»Р°СЃСЃ РґР»СЏ SearchHelp С‚РёРїРѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ. РСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ РІ С„РѕСЂРјР°С… РїРѕРґРґРµСЂР¶РєРё РґРѕРєСѓРјРµРЅС‚РѕРІ
+ * Рё РѕР±СЂР°Р·С†РѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ.
  * 
  * @author leonova
  * @version $Id: AbstractDocTypeSearchHelp.java,v 1.4 2007/12/11 14:04:36 safonov Exp $

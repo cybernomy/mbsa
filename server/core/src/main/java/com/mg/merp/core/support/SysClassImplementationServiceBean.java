@@ -25,7 +25,7 @@ import com.mg.merp.core.SysClassImplementationServiceLocal;
 import com.mg.merp.core.model.SysClassImplementation;
 
 /**
- * Реализация бизнес-компонента "Реализация бизнес-компонента системы"
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° СЃРёСЃС‚РµРјС‹"
  * 
  * @author Oleg V. Safonov
  * @version $Id: SysClassImplementationServiceBean.java,v 1.1 2008/03/03 12:57:32 safonov Exp $

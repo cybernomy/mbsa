@@ -20,7 +20,7 @@ import java.util.Date;
 import com.mg.merp.discount.model.Card;
 
 /**
- * Бизнес-компонент "Дисконтные карты"
+ * Р‘РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚ "Р”РёСЃРєРѕРЅС‚РЅС‹Рµ РєР°СЂС‚С‹"
  * 
  * @author leonova
  * @author Artem V. Sharapov
@@ -29,20 +29,20 @@ import com.mg.merp.discount.model.Card;
 public interface CardServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Card, Integer> {
 	
 	/**
-	 * Имя сервиса
+	 * РРјСЏ СЃРµСЂРІРёСЃР°
 	 */
 	final static String SERVICE_NAME= "merp/discount/Card"; //$NON-NLS-1$ 
 	
 	/**
-	 * тип папки для дисконтных карт
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РґРёСЃРєРѕРЅС‚РЅС‹С… РєР°СЂС‚
 	 */
 	final static short FOLDER_PART = 13100;
 	
 	/**
-	 * Получить скидку из истории дисконтной карты на дату
-	 * @param disCard - дисконтная карта
-	 * @param actualDate - дата актульности
-	 * @return скидка из истории дисконтной карты на дату
+	 * РџРѕР»СѓС‡РёС‚СЊ СЃРєРёРґРєСѓ РёР· РёСЃС‚РѕСЂРёРё РґРёСЃРєРѕРЅС‚РЅРѕР№ РєР°СЂС‚С‹ РЅР° РґР°С‚Сѓ
+	 * @param disCard - РґРёСЃРєРѕРЅС‚РЅР°СЏ РєР°СЂС‚Р°
+	 * @param actualDate - РґР°С‚Р° Р°РєС‚СѓР»СЊРЅРѕСЃС‚Рё
+	 * @return СЃРєРёРґРєР° РёР· РёСЃС‚РѕСЂРёРё РґРёСЃРєРѕРЅС‚РЅРѕР№ РєР°СЂС‚С‹ РЅР° РґР°С‚Сѓ
 	 */
 	BigDecimal getDiscountFromHistory(Card disCard, Date actualDate);
 

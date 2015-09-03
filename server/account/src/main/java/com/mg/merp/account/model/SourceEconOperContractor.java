@@ -17,7 +17,7 @@ package com.mg.merp.account.model;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип источника с образцах хозяйственных операций
+ * РўРёРї РёСЃС‚РѕС‡РЅРёРєР° СЃ РѕР±СЂР°Р·С†Р°С… С…РѕР·СЏР№СЃС‚РІРµРЅРЅС‹С… РѕРїРµСЂР°С†РёР№
  * 
  * @author leonova
  * @version $Id: SourceEconOperContractor.java,v 1.2 2008/03/13 06:19:46 alikaev Exp $
@@ -30,55 +30,55 @@ public enum SourceEconOperContractor {
 	NONE,
 	
 	/**
-	 * Поставщик
+	 * РџРѕСЃС‚Р°РІС‰РёРє
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#SourceEconOperContractor.Type.Provider")
 	PROVIDER,
 	
 	/**
-	 * Покупатель 
+	 * РџРѕРєСѓРїР°С‚РµР»СЊ 
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#SourceEconOperContractor.Type.Customer")
 	CUSTOMER,
 	
 	/**
-	 * Грузоотправитель 
+	 * Р“СЂСѓР·РѕРѕС‚РїСЂР°РІРёС‚РµР»СЊ 
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#SourceEconOperContractor.Type.Shipper")
 	SHIPPER,
 	
 	/**
-	 * Грузополучатель 
+	 * Р“СЂСѓР·РѕРїРѕР»СѓС‡Р°С‚РµР»СЊ 
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#SourceEconOperContractor.Type.Consignee")
 	CONSIGNEE,
 	
 	/**
-	 * Склад источник 
+	 * РЎРєР»Р°Рґ РёСЃС‚РѕС‡РЅРёРє 
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#SourceEconOperContractor.Type.StockSrc")
 	STOCKSRC,
 	
 	/**
-	 * Склад приемник 
+	 * РЎРєР»Р°Рґ РїСЂРёРµРјРЅРёРє 
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#SourceEconOperContractor.Type.StockDest")
 	STOCKDEST,
 	
 	/**
-	 * МОЛ источник 
+	 * РњРћР› РёСЃС‚РѕС‡РЅРёРє 
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#SourceEconOperContractor.Type.MOLSrc")
 	MOLSRC,
 	
 	/**
-	 * МОЛ приемник
+	 * РњРћР› РїСЂРёРµРјРЅРёРє
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#SourceEconOperContractor.Type.MOLDest")
 	MOLDEST,
 	
 	/**
-	 * Через кого
+	 * Р§РµСЂРµР· РєРѕРіРѕ
 	 */
 	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#SourceEconOperContractor.Type.Through")
 	THROUGH

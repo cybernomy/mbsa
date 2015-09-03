@@ -23,7 +23,7 @@ import com.mg.merp.contract.ContractCategoryServiceLocal;
 import com.mg.merp.contract.model.ContractCategory;
 
 /**
- * Реализация сервиса бизнес-компонента "Категория договора"
+ * Р РµР°Р»РёР·Р°С†РёСЏ СЃРµСЂРІРёСЃР° Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР°С‚РµРіРѕСЂРёСЏ РґРѕРіРѕРІРѕСЂР°"
  * 
  * @author Konstantin S. Alikaev
  * @version $Id: ContractCategoryServiceBean.java,v 1.1 2007/09/17 12:16:22 alikaev Exp $

@@ -26,7 +26,7 @@ public interface BankDocumentModelInServiceLocal
    extends DocumentPattern<BankDocumentModel, Integer>
 {
 	/**
-	 * тип папки для образцов входящих банковских документов
+	 * С‚РёРї РїР°РїРєРё РґР»СЏ РѕР±СЂР°Р·С†РѕРІ РІС…РѕРґСЏС‰РёС… Р±Р°РЅРєРѕРІСЃРєРёС… РґРѕРєСѓРјРµРЅС‚РѕРІ
 	 */
 	final static short FOLDER_PART = 14;
 }

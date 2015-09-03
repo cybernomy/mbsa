@@ -23,7 +23,7 @@ import com.mg.merp.reference.PackingServiceLocal;
 import com.mg.merp.reference.model.Packing;
 
 /**
- * Реализация бизнес-компонента "Каталог / Упаковки" 
+ * Р РµР°Р»РёР·Р°С†РёСЏ Р±РёР·РЅРµСЃ-РєРѕРјРїРѕРЅРµРЅС‚Р° "РљР°С‚Р°Р»РѕРі / РЈРїР°РєРѕРІРєРё" 
  * 
  * @author leonova
  * @author Artem V. Sharapov
