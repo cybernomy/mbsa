@@ -395,6 +395,42 @@
                 <version>${project.version}</version>
                 <type>jar</type>
             </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>reference</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>report</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>documentcore</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>docflow</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>document</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>discount</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
 
             <dependency>
                 <groupId>com.mg</groupId>

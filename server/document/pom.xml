@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>com.mg.server</groupId>
-    <artifactId>report</artifactId>
+    <artifactId>document</artifactId>
 
-    <name>MBSA::Server::Report</name>
+    <name>MBSA::Server::Document</name>
     <description/>
 
     <dependencies>
@@ -29,30 +29,19 @@
             <groupId>com.mg.server</groupId>
             <artifactId>baiengine</artifactId>
         </dependency>
-
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate</artifactId>
+            <groupId>com.mg.server</groupId>
+            <artifactId>reference</artifactId>
         </dependency>
         <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
+            <groupId>com.mg.server</groupId>
+            <artifactId>documentcore</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.ibm.icu</groupId>
-            <artifactId>icu4j</artifactId>
+            <groupId>com.mg.server</groupId>
+            <artifactId>docflow</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.eclipse.birt.runtime.3_7_1</groupId>
-            <artifactId>org.eclipse.birt.runtime</artifactId>
-            <version>3.7.1</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.eclipse.birt.runtime</groupId>
-                    <artifactId>com.ibm.icu</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+<!--
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-system</artifactId>
@@ -62,7 +51,7 @@
             <groupId>jboss</groupId>
             <artifactId>jboss-jmx</artifactId>
             <scope>provided</scope>
-        </dependency><!--
+        </dependency>
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-annotations-ejb3</artifactId>

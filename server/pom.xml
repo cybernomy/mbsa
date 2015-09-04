@@ -23,6 +23,12 @@
         <module>scheduler</module>
         <module>reference</module>
         <module>report</module>
+        <module>reportviewer</module>
+        <module>documentcore</module>
+        <module>docflow</module>
+        <module>document</module>
+        <module>discount</module>
+        <module>retail</module>
     </modules>
 
     <dependencies>
