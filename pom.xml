@@ -35,29 +35,32 @@
         <repository.name>mbsa.git</repository.name>
         <repository.url>${repository.server}/${repository.name}</repository.url>
 
-        <ci.server/>
-        <ci.server.port/>
+        <dev.server>quick.linkpc.net</dev.server>
 
-        <tracker.server/>
-        <tracker.port/>
-        <tracker.project.name/>
+        <ci.server>${dev.server}</ci.server>
+        <ci.server.port>8083</ci.server.port>
+
+        <tracker.server>${dev.server}</tracker.server>
+        <tracker.port>8080</tracker.port>
+        <tracker.project.name>MG</tracker.project.name>
 
         <wiki.server>${tracker.server}</wiki.server>
         <wiki.port/>
         <wiki.space/>
 
-        <maven.repo.server>${ci.server}/nexus</maven.repo.server>
+        <maven.repo.server>${dev.server}</maven.repo.server>
+        <maven.repo.server.port>8084</maven.repo.server.port>
         <maven.repo.path>content/repositories</maven.repo.path>
-        <maven.repo.url>${maven.repo.server}/${maven.repo.path}</maven.repo.url>
+        <maven.repo.url>http://${maven.repo.server}:${maven.repo.server.port}/${maven.repo.path}</maven.repo.url>
         <timestamp>${maven.build.timestamp}</timestamp>
         <maven.build.timestamp.format>dd.MM.yyyy' 'HH:mm:ss</maven.build.timestamp.format>
 
-       <!-- <src.dir>src/main/java</src.dir>
-        <res.dir>src/main/resources</res.dir>
-        <src.scripts.dir>src/main/scripts</src.scripts.dir>
-        <assembly.dir>src/assembly</assembly.dir>
-        <test.src.dir>src/test/java</test.src.dir>
-        <test.res.dir>src/test/resources</test.res.dir>-->
+        <!-- <src.dir>src/main/java</src.dir>
+         <res.dir>src/main/resources</res.dir>
+         <src.scripts.dir>src/main/scripts</src.scripts.dir>
+         <assembly.dir>src/assembly</assembly.dir>
+         <test.src.dir>src/test/java</test.src.dir>
+         <test.res.dir>src/test/resources</test.res.dir>-->
 
         <jboss.version>4.2.2.GA</jboss.version>
         <jboss.ejb.version>4.2.1.GA</jboss.ejb.version>
@@ -80,12 +83,12 @@
     </scm>
 
     <ciManagement>
-        <system/>
+        <system>Jenkins</system>
         <url>${ci.server}:${ci.server.port}</url>
     </ciManagement>
 
     <issueManagement>
-        <system/>
+        <system>JIRA</system>
         <url>http://${tracker.server}:${tracker.port}/projects/${tracker.project.name}</url>
     </issueManagement>
 
@@ -93,13 +96,13 @@
         <snapshotRepository>
             <id>snapshots</id>
             <name>Nexus snapshots internal repository</name>
-            <url>${maven.repo.url}/snapshots/</url>
+            <url>${maven.repo.url}/snapshots</url>
         </snapshotRepository>
 
         <repository>
-            <id>internal</id>
+            <id>releases</id>
             <name>Nexus releases internal repository</name>
-            <url>${maven.repo.url}/internal/</url>
+            <url>${maven.repo.url}/releases</url>
         </repository>
     </distributionManagement>
 
@@ -456,7 +459,7 @@
                 <version>${jboss.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.jboss</groupId>
+                <groupId>jboss</groupId>
                 <artifactId>jboss-hibernate</artifactId>
                 <version>${jboss.version}</version>
             </dependency>

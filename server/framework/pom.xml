@@ -38,7 +38,7 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.jboss</groupId>
+            <groupId>jboss</groupId>
             <artifactId>jboss-hibernate</artifactId>
             <scope>provided</scope>
         </dependency>
