@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: UserSessionInfoDetailForm.mfd.xml,v 1.3 2008/12/08 06:22:24 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.core.support.ui.UserSessionInfoDetailForm" width="600" height="250" title="resource://com.mg.merp.core.resources.formelements#UserSessionInfoDetailForm.Title" orientation="ver" verticalGap="5" helpTopic="core#user_session_detail_html" >
+
+	<jfd:toolBar id="toolBar" alignment="expand_top">
+		<jfd:button id="closeButton" text="resource://com.mg.framework.resources.messages#CloseButton" actionListener="Close" />
+		<jfd:button id="refreshButton" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="Refresh" />
+		<jfd:button id="invalidateButton" text="resource://com.mg.merp.core.resources.formelements#UserSessionInfoDetailForm.InvalidateSession" actionListener="InvalidateSession" />
+		<jfd:filler id="buttonsFiller" type="horizontalGlue" />
+		<jfd:button id="sendMessageButton" text="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.SendMessage" actionListener="SendMessage" />
+		<jfd:textField id="message" />
+	</jfd:toolBar>
+
+	<jfd:container id="detailInfo" layout="jfd:box" columns="4" alignment="expand_expand" >
+		<jfd:border/>
+		<jfd:label id="labelUserName" text="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.UserName" alignment="left_top" column="30" />
+		<jfd:textField id="userName" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelHttpSessionId" text="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.HTTPSessionId" alignment="left_top" />
+		<jfd:textField id="httpSessionId" readOnly="true" alignment="expand_top" column="30" />
+		<jfd:label id="labelRemoteHost" text="resource://com.mg.merp.core.resources.formelements#UserSessionInfoDetailForm.RemoteHost" alignment="left_top" />
+		<jfd:textField id="remoteHost" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelCreationTime" text="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.CreationTime" skip="2" alignment="left_top" />
+		<jfd:textField id="creationTime" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelLastAccessedTime" text="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.LastAccessedTime" alignment="left_top" />
+		<jfd:textField id="lastAccessedTime" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelUsedServerTime" text="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.UsedServerTime" alignment="left_top" />
+		<jfd:textField id="usedServerTime" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelIdleTime" text="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.IdleTime" alignment="left_top" />
+		<jfd:textField id="idleTime" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelLastUsedTime" text="resource://com.mg.merp.core.resources.formelements#UserSessionInfoDetailForm.LastUsedTime" alignment="left_top" />
+		<jfd:integerField id="lastUsedTime" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelTtl" text="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.TTL" alignment="left_top" />
+		<jfd:textField id="ttl" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelMinUsedTime" text="resource://com.mg.merp.core.resources.formelements#UserSessionInfoDetailForm.MinUsedTime" alignment="left_top" />
+		<jfd:integerField id="minUsedTime" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelMaxUsedTime" text="resource://com.mg.merp.core.resources.formelements#UserSessionInfoDetailForm.MaxUsedTime" alignment="left_top" />
+		<jfd:integerField id="maxUsedTime" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelHits" text="resource://com.mg.merp.core.resources.formelements#UserSessionInfoDetailForm.Hits" alignment="left_top" />
+		<jfd:integerField id="hits" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelSize" text="resource://com.mg.merp.core.resources.formelements#UserSessionInfoDetailForm.Size" alignment="left_top" />
+		<jfd:integerField id="size" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelLastRequestSize" text="resource://com.mg.merp.core.resources.formelements#UserSessionInfoDetailForm.LastRequestSize" alignment="left_top" />
+		<jfd:integerField id="lastRequestSize" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelLstResponseSize" text="resource://com.mg.merp.core.resources.formelements#UserSessionInfoDetailForm.LastResponseSize" alignment="left_top" />
+		<jfd:integerField id="lastResponseSize" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelTotalRequestSize" text="resource://com.mg.merp.core.resources.formelements#UserSessionInfoDetailForm.TotalRequestSize" alignment="left_top" />
+		<jfd:integerField id="totalRequestSize" readOnly="true" alignment="expand_top" />
+		<jfd:label id="labelTotalResponseSize" text="resource://com.mg.merp.core.resources.formelements#UserSessionInfoDetailForm.TotalResponseSize" alignment="left_top" />
+		<jfd:integerField id="totalResponseSize" readOnly="true" alignment="expand_top" />
+	</jfd:container>
+
+</jfd:form>

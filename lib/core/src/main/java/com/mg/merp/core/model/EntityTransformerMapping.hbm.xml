@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <typedef name="com.mg.framework.api.metadata.ApplicationLayer" class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.framework.api.metadata.ApplicationLayer</param>
+  </typedef>
+  <class name="com.mg.merp.core.model.EntityTransformerMapping" table="ENTITY_TRANSFORMER_MAPPING">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence"> ENTITY_TRANSFORMER_MPNG_ID_GEN</param>
+      </generator>
+    </id>
+    <version name="SysVersion" type="timestamp">
+      <column name="SYS_VERSION"/>
+    </version> 
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="true" />
+    </many-to-one>
+	<property name="ApplicationLayer" type="com.mg.framework.api.metadata.ApplicationLayer">
+      <column name="APP_LAYER" not-null="true" sql-type="SMALLINT"/>
+	</property>
+    <property name="ClassA" type="java.lang.String">
+      <column name="CLASS_A" length="256" not-null="true" sql-type="VARCHAR" />
+    </property>
+    <property name="ClassB" type="java.lang.String">
+      <column name="CLASS_B" length="256" not-null="true" sql-type="VARCHAR" />
+    </property>
+    <property name="MapId" type="java.lang.String">
+      <column name="MAP_ID" length="20" not-null="true" unique="true" sql-type="VARCHAR" />
+    </property>
+    <property name="HashAB" type="int">
+      <column name="HASHAB" not-null="true" sql-type="INTEGER"/>
+    </property>
+  </class>
+</hibernate-mapping>

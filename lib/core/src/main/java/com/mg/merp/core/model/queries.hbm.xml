@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+	Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.
+	All rights reserved
+
+	This program is the proprietary and confidential information
+	of BusinessTechnology, Ltd. and may be used and disclosed only
+	as authorized in a license agreement authorizing and
+	controlling such use and disclosure
+
+	Millennium Business Suite Anywhere System.
+
+	Queries of core subsystem
+
+	$Id: queries.hbm.xml,v 1.2 2007/12/14 13:35:23 safonov Exp $
+-->
+<hibernate-mapping>
+
+  <query name="Core.DatabaseAuditSetup.deletePropertyAuditModify">
+    <![CDATA[
+      delete from com.mg.merp.core.model.DatabaseAuditSetup das
+      where das.AuditedEntityName = :entityName and das.PropertyName is not null and das.AuditModify is not null
+    ]]>
+  </query>
+
+</hibernate-mapping>

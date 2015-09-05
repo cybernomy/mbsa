@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: MonitorUserSessionForm.mfd.xml,v 1.3 2008/12/08 06:22:24 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.core.support.ui.MonitorUserSessionForm" title="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.Title" orientation="ver" verticalGap="5" helpTopic="core#monitor_user_session_html" >
+
+	<jfd:toolBar id="toolBar" alignment="expand_top">
+		<jfd:button id="closeButton" text="resource://com.mg.framework.resources.messages#CloseButton" actionListener="Close" />
+		<jfd:button id="refreshButton" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="Refresh" />
+		<jfd:filler id="buttonsFiller" type="horizontalGlue" />
+		<jfd:button id="sendMessageButton" text="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.SendMessage" actionListener="SendMessage" />
+		<jfd:textField id="message" />
+	</jfd:toolBar>
+
+	<jfd:table id="userList" scroll="true"  alignment="expand_expand">
+	 	<jfd:popupMenu>
+	 		<jfd:menuItem id="showUserSessionInfoDetail" text="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.ShowUserSessionInfoDetail" actionListener="ShowUserSessionInfoDetail" />
+	 		<jfd:menuItem id="invalidateUserSessions" text="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.InvalidateSessions" actionListener="InvalidateSessions" />
+	 	</jfd:popupMenu>
+		<jfd:columns>
+			<jfd:column fieldName="UserName" title="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.UserName" />
+			<jfd:column fieldName="CreationTime" title="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.CreationTime" />
+			<jfd:column fieldName="LastAccessedTime" title="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.LastAccessedTime" />
+			<jfd:column fieldName="UsedServerTime" title="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.UsedServerTime" />
+			<jfd:column fieldName="IdleTime" title="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.IdleTime" />
+			<jfd:column fieldName="TTL" title="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.TTL" />
+			<jfd:column fieldName="HTTPSessionId" title="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.HTTPSessionId" />
+			<!-- jfd:column fieldName="Active" title="resource://com.mg.merp.core.resources.formelements#MonitorUserSessionForm.UserList.Active" /-->
+		</jfd:columns>
+	</jfd:table>
+
+</jfd:form>

@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.core.model.Folder" table="FOLDER">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">FOLDER_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="Folder" class="com.mg.merp.core.model.Folder">
+      <column name="PARENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <property name="FName" type="java.lang.String">
+      <column name="FNAME" length="80" not-null="true" sql-type="VARCHAR" />
+    </property>
+    <property name="FolderType" type="java.lang.Short">
+      <column name="FOLDERTYPE" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="Data" type="java.lang.Short">
+      <column name="DATA" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="FolderTag" type="java.lang.String">
+      <column name="FOLDER_TAG" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+  </class>
+</hibernate-mapping>
