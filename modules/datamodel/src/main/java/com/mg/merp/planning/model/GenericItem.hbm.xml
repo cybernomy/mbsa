@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.planning.model.GenericItem" table="PP_GENERIC_ITEM">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">PP_GENERIC_ITEM_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Catalog" class="com.mg.merp.reference.model.Catalog">
+      <column name="CATALOG_ID" not-null="false" />
+    </many-to-one>
+	<many-to-one name="Measure" class="com.mg.merp.reference.model.Measure">
+      <column name="MEASURE_ID" not-null="true" sql-type="INTEGER" />
+	</many-to-one>
+    <property name="GenericItemCode" type="java.lang.String">
+      <column name="GENERIC_ITEM_CODE" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="GenericItemName" type="java.lang.String">
+      <column name="GENERIC_ITEM_NAME" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="PlanningItemFlag" type="boolean">
+      <column name="PLANNING_ITEM_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="PlanningShelfLife" type="short">
+      <column name="PLANNING_SHELF_LIFE" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="DemandFenceDays" type="short">
+      <column name="DEMAND_FENCE_DAYS" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="DaysStockCover" type="short">
+      <column name="DAYS_STOCK_COVER" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="LowLevelCode" type="short">
+      <column name="LOW_LEVEL_CODE" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

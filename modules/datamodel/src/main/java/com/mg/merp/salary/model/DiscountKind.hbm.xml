@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.salary.model.DiscountKind" table="SAL_DISCOUNTKIND">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="int">
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">SAL_DISCOUNTKIND_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <property name="DCode" type="java.lang.String">
+      <column name="DCODE" length="20" not-null="true" sql-type="CHAR" />
+    </property>
+    <property name="DName" type="java.lang.String">
+      <column name="DNAME" length="80" not-null="true" sql-type="VARCHAR" />
+    </property>
+    <property name="MinSalaryNumber" type="java.math.BigDecimal">
+      <column name="MINSALARYNUMBER" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="FixedSum" type="java.math.BigDecimal">
+      <column name="FIXEDSUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="BeginDate" type="java.util.Date">
+      <column name="BEGINDATE" not-null="true" sql-type="TIMESTAMP" />
+    </property>
+    <property name="ActionPeriod" type="java.math.BigDecimal">
+      <column name="ACTIONPERIOD" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="IsAccumulating" type="boolean">
+      <column name="IS_ACCUMULATING" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <joined-subclass name="com.mg.merp.account.model.InternalInvoiceSpecModel" extends="com.mg.merp.document.model.DocSpecModel" table="INTERNALINVOICESPECMODEL">
+    <meta attribute="extends">com.mg.merp.document.model.DocSpecModel</meta>
+    <!-- <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      generator class="sequence">
+        <param name="sequence">INTERNALINVOICESPECMODEL_ID_GEN</param>
+      </generator
+    </id>-->
+    <key on-delete="cascade">
+      <column name="DOCSPEC_ID" not-null="true" />
+    </key>
+    <property name="RequestQuan" type="java.math.BigDecimal">
+      <column name="REQUESTQUAN" scale="3" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="RequestSumma" type="java.math.BigDecimal">
+      <column name="REQUESTSUMMA" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+  </joined-subclass>
+</hibernate-mapping>

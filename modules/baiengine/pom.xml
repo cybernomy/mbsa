@@ -6,25 +6,30 @@
 
     <parent>
         <groupId>com.mg</groupId>
-        <artifactId>lib</artifactId>
+        <artifactId>modules</artifactId>
         <version>4.0.8-SNAPSHOT</version>
     </parent>
-    git mv modules/baiengine/src/main/java/com/mg/merp/baiengine/model modules/datamodel/src/main/java/
-    <groupId>com.mg.lib</groupId>
+
+    <groupId>com.mg.modules</groupId>
     <artifactId>baiengine</artifactId>
 
-    <name>MBSA::Libraries::BAIEngine</name>
+    <name>MBSA::Modules::BAIEngine</name>
     <description/>
 
     <dependencies>
         <dependency>
-            <groupId>com.mg.lib</groupId>
+            <groupId>com.mg.modules</groupId>
             <artifactId>framework</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.mg.lib</groupId>
+            <groupId>com.mg.modules</groupId>
             <artifactId>core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mg.modules</groupId>
+            <artifactId>datamodel</artifactId>
             <scope>provided</scope>
         </dependency>
 

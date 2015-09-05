@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.finance.model.Account" table="FINACCOUNT">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">FINACCOUNT_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="Anl4Class" class="com.mg.merp.core.model.SysClass">
+      <column name="ANL4_CLASS_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Folder" class="com.mg.merp.core.model.Folder">
+      <column name="FOLDER_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Anl3Class" class="com.mg.merp.core.model.SysClass">
+      <column name="ANL3_CLASS_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Anl5Class" class="com.mg.merp.core.model.SysClass">
+      <column name="ANL5_CLASS_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Anl2Class" class="com.mg.merp.core.model.SysClass">
+      <column name="ANL2_CLASS_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Anl1Class" class="com.mg.merp.core.model.SysClass">
+      <column name="ANL1_CLASS_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CurrencyCode" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
+      <column name="CURRENCY_CODE" length="5" not-null="false" />
+    </many-to-one>
+    <property name="Code" type="java.lang.String">
+      <column name="CODE" length="20" not-null="true" sql-type="CHAR" />
+    </property>
+    <property name="UpCode" type="java.lang.String">
+      <column name="UPCODE" length="20" not-null="true" sql-type="CHAR" />
+    </property>
+    <property name="AccName" type="java.lang.String">
+      <column name="ACCNAME" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Kind" type="short">
+      <column name="KIND" not-null="true" sql-type="SMALLINT" />
+    </property>
+    <property name="Anl1Kind" type="boolean">
+      <column name="ANL1_KIND" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="Anl2Kind" type="boolean">
+      <column name="ANL2_KIND" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="Anl3Kind" type="boolean">
+      <column name="ANL3_KIND" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="Anl4Kind" type="boolean">
+      <column name="ANL4_KIND" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="Anl5Kind" type="boolean">
+      <column name="ANL5_KIND" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <set name="SetOfFinAnl" inverse="true">
+      <key on-delete="cascade">
+        <column name="FINACC_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.finance.model.Analytics" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

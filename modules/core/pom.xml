@@ -6,20 +6,25 @@
 
     <parent>
         <groupId>com.mg</groupId>
-        <artifactId>lib</artifactId>
+        <artifactId>modules</artifactId>
         <version>4.0.8-SNAPSHOT</version>
     </parent>
 
-    <groupId>com.mg.lib</groupId>
+    <groupId>com.mg.modules</groupId>
     <artifactId>core</artifactId>
 
-    <name>MBSA::Libraries::Core</name>
+    <name>MBSA::Modules::Core</name>
     <description/>
 
     <dependencies>
         <dependency>
-            <groupId>com.mg.lib</groupId>
+            <groupId>com.mg.modules</groupId>
             <artifactId>framework</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mg.modules</groupId>
+            <artifactId>datamodel</artifactId>
             <scope>provided</scope>
         </dependency>
 

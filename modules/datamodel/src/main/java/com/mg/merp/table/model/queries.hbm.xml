@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: queries.hbm.xml,v 1.2 2008/08/12 14:36:45 sharapov Exp $ -->
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  
+  <query name="Table.TimeBoardPositionServiceBean.loadPositionFromStaffList">
+    <![CDATA[
+		select sh, cp.BeginDate, cp.EndDate, pu.BeginDate, pu.EndDate, pf.BeginDate, pf.EndDate
+		from ScheduleHead sh, TimeBoardPosition tbp
+			join tbp.TimeBoardHead tbh
+			join tbh.CalcPeriod cp
+			join tbp.PositionFill pf
+			join pf.SlPositionUnique pu
+			join pu.StaffListUnit slu
+			join pu.WorkSchedule ws
+		where tbp = :timeBoardPosition
+			and sh.WorkSchedule = ws
+			and (slu.StaffList = cp.StaffList)
+			and ((pu.BeginDate between cp.BeginDate and cp.EndDate)
+			or (pu.EndDate between cp.BeginDate and cp.EndDate)
+			or (cp.BeginDate between pu.BeginDate and pu.EndDate))
+			and ((pf.BeginDate between cp.BeginDate and cp.EndDate)
+			or (pf.EndDate between cp.BeginDate and cp.EndDate)
+			or (cp.BeginDate between pf.BeginDate and pf.EndDate))
+	  ]]>
+  	</query>
+  	
+  	<query name="Table.ScheduleHeadServiceBean.deleteSpecsOverPeriod">
+    <![CDATA[
+    	DELETE FROM com.mg.merp.table.model.ScheduleSpec ss 
+    	WHERE ss.ScheduleHead = :scheduleHead AND ss.ScheduleDate BETWEEN :beginDate AND :endDate
+	  ]]>
+  	</query>
+  	
+  	<query name="Table.ScheduleHeadServiceBean.getHolidayDates">
+    <![CDATA[
+    	SELECT h.HDate 
+    	FROM com.mg.merp.reference.model.Holidays h 
+    	WHERE h.HDate BETWEEN :dateBegin AND :dateEnd
+	  ]]>
+  	</query>
+  	
+  	<query name="Table.TimeBoardHelper.loadTimeBoardSpecItems">
+    <![CDATA[
+		SELECT np.Surname, np.Name, np.Patronymic, pf.BeginDate, pf.EndDate, position.Name, tbp 
+		FROM com.mg.merp.table.model.TimeBoardPosition tbp 
+		LEFT JOIN tbp.PositionFill pf 
+		LEFT JOIN pf.Position position 
+		LEFT JOIN pf.PersonalAccount pa 
+		LEFT JOIN pa.Personnel p 
+		LEFT JOIN p.Person np 
+		WHERE tbp.TimeBoardHead.Id = :timeBoardHeadId AND tbp.StaffListUnit.Id = :staffListUnitId
+	  ]]>
+  	</query>
+  	
+  	<query name="Table.TimeBoardHelper.loadTimeBoardSpecs">
+    <![CDATA[
+		SELECT tbs 
+		FROM com.mg.merp.table.model.TimeBoardSpec tbs 
+		WHERE tbs.TimeBoardPosition = :timeBoardPosition
+      ]]>
+  	</query>
+  	
+  	<query name="Table.TimeBoardHeadServiceBean.getScheduleSpecs">
+    <![CDATA[
+		SELECT ss 
+		FROM com.mg.merp.table.model.ScheduleSpec ss 
+		WHERE ss.ScheduleHead = :scheduleHead AND ss.ScheduleDate BETWEEN :dateFrom AND :dateTill
+      ]]>
+  	</query>
+
+  	<query name="Table.TimeBoardHeadServiceBean.loadPositionsFromStaffList">
+    <![CDATA[
+		SELECT spf, slu, sh, slp.BeginDate, slp.EndDate, spf.BeginDate, spf.EndDate 
+		FROM com.mg.merp.personnelref.model.PositionFill spf, com.mg.merp.table.model.ScheduleHead sh 
+			JOIN spf.SlPositionUnique slp 
+			JOIN slp.StaffListUnit slu 
+			LEFT JOIN slp.WorkSchedule ws 
+		WHERE ws = sh.WorkSchedule AND slu.StaffList = :staffList 
+			AND ((slp.BeginDate BETWEEN :beginDate AND :endDate) OR (slp.EndDate BETWEEN :beginDate AND :endDate) OR (:beginDate BETWEEN slp.BeginDate AND slp.EndDate)) 
+			AND ((spf.BeginDate BETWEEN :beginDate AND :endDate) OR (spf.EndDate BETWEEN :beginDate AND :endDate) OR (:beginDate BETWEEN spf.BeginDate AND spf.EndDate)) 
+		ORDER BY spf.Id, sh.Id
+      ]]>
+  	</query>
+   
+</hibernate-mapping>

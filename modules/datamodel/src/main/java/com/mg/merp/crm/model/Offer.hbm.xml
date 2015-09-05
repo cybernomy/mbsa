@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.crm.model.Offer" table="CRM_OFFER">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="int">
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">CRM_OFFER_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="Status" class="com.mg.merp.crm.model.OfferStatus">
+      <column name="STATUS_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="FailReason" class="com.mg.merp.crm.model.OfferReason">
+      <column name="FAIL_REASON_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SuccessReason" class="com.mg.merp.crm.model.OfferReason">
+      <column name="SUCCESS_REASON_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Responsible" class="com.mg.merp.crm.model.User">
+      <column name="RESPONSIBLE_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Operation" class="com.mg.merp.crm.model.Operation">
+      <column name="OPERATION_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Forecast" class="com.mg.merp.crm.model.OfferForecast">
+      <column name="FORECAST_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Contact" class="com.mg.merp.crm.model.Contact">
+      <column name="CONTACT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Relation" class="com.mg.merp.crm.model.Relation">
+      <column name="RELATION_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Kind" class="com.mg.merp.crm.model.OfferKind">
+      <column name="KIND_ID" not-null="false" />
+    </many-to-one>
+    <property name="Code" type="java.lang.String">
+      <column name="CODE" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="Name" type="java.lang.String">
+      <column name="NAME" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="OfferDate" type="java.util.Date">
+      <column name="OFFER_DATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="ValidUntil" type="java.util.Date">
+      <column name="VALID_UNTIL" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="SwotS" type="java.lang.String">
+      <column name="SWOT_S" length="1024" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="SwotW" type="java.lang.String">
+      <column name="SWOT_W" length="1024" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="SwotO" type="java.lang.String">
+      <column name="SWOT_O" length="1024" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="SwotT" type="java.lang.String">
+      <column name="SWOT_T" length="1024" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <set name="LinkedDocs" inverse="true">
+      <key on-delete="cascade">
+        <column name="OFFER_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.crm.model.LinkedDocument" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

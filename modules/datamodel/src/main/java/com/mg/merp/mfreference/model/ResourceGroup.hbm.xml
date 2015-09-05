@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<typedef name="com.mg.merp.mfreference.model.ResourceGroupType" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.mfreference.model.ResourceGroupType</param>
+	</typedef>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.mfreference.model.ResourceGroup" table="MF_RESOURCE_GROUP">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">MF_RESOURCE_GROUP_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="Measure" class="com.mg.merp.reference.model.Measure">
+      <column name="MEASURE_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="PlanningLevel" class="com.mg.merp.mfreference.model.PlanningLevel">
+      <column name="CRITICAL_LEVEL_ID" not-null="false" />
+    </many-to-one>
+    <property name="ResourceGroupCode" type="java.lang.String">
+      <column name="RESOURCE_GROUP_CODE" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="Description" type="java.lang.String">
+      <column name="DESCRIPTION" length="40" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="ResourceType" type="com.mg.merp.mfreference.model.ResourceGroupType">
+      <column name="RESOURCE_TYPE" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="LimitedResourceFlag" type="boolean">
+      <column name="LIMITED_RESOURCE_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="Comment" type="java.lang.String">
+      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

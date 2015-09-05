@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.manufacture.model.JobRoute" table="MF_JOB_ROUTE">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">MF_JOB_ROUTE_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="ActCostDetail" class="com.mg.merp.mfreference.model.CostDetail">
+      <column name="ACT_COST_DETAIL_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SchedOffSetTimeUM" class="com.mg.merp.reference.model.Measure">
+      <column name="SCHED_OFFSET_TIME_UM" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SetupTimeUM" class="com.mg.merp.reference.model.Measure">
+      <column name="SETUP_TIME_UM" not-null="false" />
+    </many-to-one>
+    <many-to-one name="MoveTimeUM" class="com.mg.merp.reference.model.Measure">
+      <column name="MOVE_TIME_UM" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="StdCostDetail" class="com.mg.merp.mfreference.model.CostDetail">
+      <column name="STD_COST_DETAIL_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SchedTimeUM" class="com.mg.merp.reference.model.Measure">
+      <column name="SCHED_TIME_UM" not-null="false" />
+    </many-to-one>
+    <many-to-one name="WorkCenter" class="com.mg.merp.mfreference.model.WorkCenter">
+      <column name="WC_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="RunTimeUM" class="com.mg.merp.reference.model.Measure">
+      <column name="RUN_TIME_UM" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Job" class="com.mg.merp.manufacture.model.Job">
+      <column name="JOB_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="QueueTimeUM" class="com.mg.merp.reference.model.Measure">
+      <column name="QUEUE_TIME_UM" not-null="false" />
+    </many-to-one>
+    <property name="OperNum" type="java.lang.Integer">
+      <column name="OPER_NUM" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="Description" type="java.lang.String">
+      <column name="DESCRIPTION" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="EffOnDate" type="java.util.Date">
+      <column name="EFF_ON_DATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="EffOffDate" type="java.util.Date">
+      <column name="EFF_OFF_DATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="CompleteFlag" type="boolean">
+      <column name="COMPLETE_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="EfficiencyFactor" type="java.math.BigDecimal">
+      <column name="EFFICIENCY_FACTOR" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="StartDate" type="java.util.Date">
+      <column name="START_DATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="EndDate" type="java.util.Date">
+      <column name="END_DATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="StartTick" type="java.lang.Long">
+      <column name="START_TICK" scale="0" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="EndTick" type="java.lang.Long">
+      <column name="END_TICK" scale="0" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="MoveTicks" type="java.lang.Long">
+      <column name="MOVE_TICKS" scale="0" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="SetupTicks" type="java.lang.Long">
+      <column name="SETUP_TICKS" scale="0" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="RunTicks" type="java.lang.Long">
+      <column name="RUN_TICKS" scale="0" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="SchedTicks" type="java.lang.Long">
+      <column name="SCHED_TICKS" scale="0" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="SchedOffsetTicks" type="java.lang.Long">
+      <column name="SCHED_OFFSET_TICKS" scale="0" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="QueueTicks" type="java.lang.Long">
+      <column name="QUEUE_TICKS" scale="0" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="FreezeScheduleFlag" type="boolean">
+      <column name="FREEZE_SCHEDULE_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="QtyReceived" type="java.math.BigDecimal">
+      <column name="QTY_RECEIVED" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="QtyComplete" type="java.math.BigDecimal">
+      <column name="QTY_COMPLETE" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="QtyScrapped" type="java.math.BigDecimal">
+      <column name="QTY_SCRAPPED" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="QtyMoved" type="java.math.BigDecimal">
+      <column name="QTY_MOVED" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="ControlPointFlag" type="boolean">
+      <column name="CONTROL_POINT_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="Comment" type="java.lang.String">
+      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

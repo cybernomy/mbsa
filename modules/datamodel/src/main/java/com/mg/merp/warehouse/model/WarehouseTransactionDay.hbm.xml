@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+  <class name="com.mg.merp.warehouse.model.WarehouseTransactionDay" table="WH_WAREHOUSE_TRANSACTION_DAY">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">WH_WAREHOUSE_TR_DAY_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="Stock" class="com.mg.merp.warehouse.model.Warehouse">
+      <column name="STOCK" not-null="true" />
+    </many-to-one>    
+    <property name="ClosedDay" type="java.util.Date">
+      <column name="CLOSED_DAY" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="UserStockClosed" type="java.lang.String">
+      <column name="USER_STOCK_CLOSED" length="31" not-null="false" unique="true" sql-type="CHAR" />
+    </property>
+    <property name="OperationDate" type="java.util.Date">
+      <column name="OPERATION_DATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<typedef name="com.mg.merp.mfreference.model.BomType" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.mfreference.model.BomType</param>
+	</typedef>
+	<typedef name="com.mg.merp.mfreference.model.BomStatus" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.mfreference.model.BomStatus</param>
+	</typedef>
+	<typedef name="com.mg.merp.mfreference.model.ScheduleDirection" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.mfreference.model.ScheduleDirection</param>
+	</typedef>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.mfreference.model.Bom" table="MF_BOM">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">MF_BOM_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="Catalog" class="com.mg.merp.reference.model.Catalog">
+      <column name="CATALOG_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SetupTimeUM" class="com.mg.merp.reference.model.Measure">
+      <column name="SETUP_TIME_UM" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Folder" class="com.mg.merp.core.model.Folder">
+      <column name="FOLDER_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="StandartCostDetail" class="com.mg.merp.mfreference.model.CostDetail">
+      <column name="STD_COST_DETAIL_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Cell" class="com.mg.merp.mfreference.model.Cell">
+      <column name="CELL_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="RunTimeUM" class="com.mg.merp.reference.model.Measure">
+      <column name="RUN_TIME_UM" not-null="false" />
+    </many-to-one>
+    <property name="BomType" type="com.mg.merp.mfreference.model.BomType">
+      <column name="BOM_TYPE" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="BomStatus" type="com.mg.merp.mfreference.model.BomStatus">
+      <column name="BOM_STATUS" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <many-to-one name="DefSrcStock" class="com.mg.merp.warehouse.model.Warehouse">
+      <column name="DEF_SRC_STOCK_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="DefDstStock" class="com.mg.merp.warehouse.model.Warehouse">
+      <column name="DEF_DST_STOCK_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="DefSrcMol" class="com.mg.merp.reference.model.Employees">
+      <column name="DEF_SRC_MOL_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="DefDstMol" class="com.mg.merp.reference.model.Employees">
+      <column name="DEF_DST_MOL_ID" not-null="false" />
+    </many-to-one>
+    <property name="Revision" type="java.lang.Integer">
+      <column name="REVISION" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="RevisionDateTime" type="java.util.Date">
+      <column name="REVISION_DATETIME" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="RollUpDateTime" type="java.util.Date">
+      <column name="ROLLUP_DATETIME" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="SetupTicks" type="java.math.BigDecimal">
+      <column name="SETUP_TICKS" scale="0" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="RunTicks" type="java.math.BigDecimal">
+      <column name="RUN_TICKS" scale="0" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="ScheduleDirection" type="com.mg.merp.mfreference.model.ScheduleDirection">
+      <column name="SCHED_DIRECTION" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="UseMoveTimes" type="boolean">
+      <column name="USE_MOVE_TIMES" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="UseQueueTimes" type="boolean">
+      <column name="USE_QUEUE_TIMES" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="UseFiniteCapacity" type="boolean">
+      <column name="USE_FINITE_CAPACITY" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="Priority" type="java.math.BigDecimal">
+      <column name="PRIORITY" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="PriorityFreezeFlag" type="boolean">
+      <column name="PRIORITY_FREEZE_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="PcsPerHrCell" type="java.math.BigDecimal">
+      <column name="PCS_PER_HR_CELL" scale="0" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="ApprovedFlag" type="boolean">
+      <column name="APPROVED_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="BomVersionRequired" type="boolean">
+      <column name="BOM_VERSION_REQUIRED" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="CreateJobApproved" type="boolean">
+      <column name="CREATE_JOB_APPROVED" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="Comment" type="java.lang.String">
+      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="MinLotQty" type="java.math.BigDecimal">
+      <column name="MIN_LOT_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="MaxLotQty" type="java.math.BigDecimal">
+      <column name="MAX_LOT_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="LotIncrementQty" type="java.math.BigDecimal">
+      <column name="LOT_INCREMENT_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="PlanningLotQty" type="java.math.BigDecimal">
+      <column name="PLANNING_LOT_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <set name="BomRoutes" inverse="true">
+      <key on-delete="cascade">
+        <column name="BOM_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.mfreference.model.BomRoute" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

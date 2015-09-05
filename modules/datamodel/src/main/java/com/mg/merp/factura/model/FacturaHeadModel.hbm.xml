@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <joined-subclass name="com.mg.merp.factura.model.FacturaHeadModel" extends="com.mg.merp.document.model.DocHeadModel" table="FACTURAHEADMODEL">
+    <meta attribute="extends">com.mg.merp.document.model.DocHeadModel</meta>
+    <!-- <id name="Id" type="int">
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      generator class="sequence">
+        <param name="sequence">FACTURAHEADMODEL_ID_GEN</param>
+      </generator
+    </id>-->
+	<key>
+      <column name="DOCHEADMODEL_ID" not-null="false" />
+	</key>
+    <many-to-one name="PartnerToBankReq" class="com.mg.merp.reference.model.BankAccount">
+      <column name="PARTNERTO_BANKREQ" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Consignee" class="com.mg.merp.reference.model.Contractor">
+      <column name="CONSIGNEE" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Shipper" class="com.mg.merp.reference.model.Contractor">
+      <column name="SHIPPER" not-null="false" />
+    </many-to-one>
+    <many-to-one name="PartnerFromBankReq" class="com.mg.merp.reference.model.BankAccount">
+      <column name="PARTNERFROM_BANKREQ" not-null="false" />
+    </many-to-one>
+    <property name="InDate" type="java.util.Date">
+      <column name="INDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="StockDate" type="java.util.Date">
+      <column name="STOCKDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="PayDate" type="java.util.Date">
+      <column name="PAYDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="ToPayDocNumber" type="java.lang.String">
+      <column name="TOPAYDOCNUMBER" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="ToPayDocDate" type="java.util.Date">
+      <column name="TOPAYDOCDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="Comment" type="java.lang.String">
+      <column name="`COMMENT`" length="1024" not-null="false" sql-type="VARCHAR" />
+    </property>
+  </joined-subclass>
+</hibernate-mapping>

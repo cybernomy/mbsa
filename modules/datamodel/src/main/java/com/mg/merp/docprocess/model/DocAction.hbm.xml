@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<typedef name="com.mg.merp.docprocess.model.StageState" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.docprocess.model.StageState</param>
+	</typedef>
+	<typedef name="com.mg.merp.docprocess.model.ActionType" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.docprocess.model.ActionType</param>
+	</typedef>
+
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.docprocess.model.DocAction" table="DOCACTION">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">DOCACTION_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="DocHead" class="com.mg.merp.document.model.DocHead">
+      <column name="DOCUMENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <property name="ActionType" type="com.mg.merp.docprocess.model.ActionType">
+      <column name="ACTIONTYPE" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <many-to-one name="Stage" class="com.mg.merp.docprocess.model.DocProcessStage">
+      <column name="STAGE_ID" not-null="false" />
+    </many-to-one>
+    <property name="StageState" type="com.mg.merp.docprocess.model.StageState">
+      <column name="STAGESTATE" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <set name="DocHeadStates" inverse="true">
+      <key on-delete="cascade">
+        <column name="DOCACTION_ID" not-null="true" />
+      </key>
+      <one-to-many class="com.mg.merp.docprocess.model.DocHeadState" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

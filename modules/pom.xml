@@ -18,9 +18,10 @@
 
     <modules>
         <module>framework</module>
+        <module>datamodel</module>
         <module>core</module>
         <module>baiengine</module>
-        <module>datamodel</module>
+
     </modules>
 
 </project>

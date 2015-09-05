@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.salary.model.FeeModel" table="SAL_FEE_MODEL">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">SAL_FEE_MODEL_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="CostsAnl1" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL1_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CostsAnl3" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL3_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CostsAnl2" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL2_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CostsAnl4" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL4_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="PersonalAccount" class="com.mg.merp.personnelref.model.PersonalAccount">
+      <column name="PERSONALACCOUNT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="FeeRef" class="com.mg.merp.salary.model.FeeRef">
+      <column name="FEE_REF_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="PositionFill" class="com.mg.merp.personnelref.model.PositionFill">
+      <column name="POSITIONFILL_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CostsAnl5" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL5_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="RollKind" class="com.mg.merp.salary.model.RollKind">
+      <column name="ROLL_KIND_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CalcPeriod" class="com.mg.merp.personnelref.model.CalcPeriod">
+      <column name="CALC_PERIOD_ID" not-null="false" />
+    </many-to-one>
+    <property name="BeginDate" type="java.util.Date">
+      <column name="BEGINDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="EndDate" type="java.util.Date">
+      <column name="ENDDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="Summa" type="java.math.BigDecimal">
+      <column name="SUMMA" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="UseBasicPosition" type="boolean">
+      <column name="USE_BASIC_POSITION" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <set name="FeeModelParams" inverse="true">
+      <key on-delete="cascade">
+        <column name="FEE_MODEL_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.salary.model.FeeModelParam" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

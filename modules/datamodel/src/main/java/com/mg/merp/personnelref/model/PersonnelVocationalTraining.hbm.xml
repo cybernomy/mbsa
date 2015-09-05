@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.personnelref.model.PersonnelVocationalTraining" table="PREF_PERS_VOCATIONAL_TRAINING">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">PREF_PERS_VOCATNL_TRAIN_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="Speciality" class="com.mg.merp.personnelref.model.Speciality">
+      <column name="SPECIALITY_ID" not-null="true" />
+    </many-to-one>
+    <many-to-one name="Order" class="com.mg.merp.humanresources.model.Order">
+      <column name="ORDER_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Personnel" class="com.mg.merp.personnelref.model.Personnel">
+      <column name="PERSONNEL_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CertificateDocument" class="com.mg.merp.reference.model.OriginalDocument">
+      <column name="CERTIFICATE_DOCUMENT_ID" not-null="false" />
+    </many-to-one>
+    <property name="TrainingBeginDate" type="java.util.Date">
+      <column name="TRAINING_BEGINDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="TrainingEndDate" type="java.util.Date">
+      <column name="TRAINING_ENDDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

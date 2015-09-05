@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.finance.model.Specification" table="FINSPEC">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">FINSPEC_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="DstTurnFeat" class="com.mg.merp.finance.model.TurnFeature">
+      <column name="DSTTURNFEAT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="DstTurnAcc" class="com.mg.merp.finance.model.TurnAccount">
+      <column name="DSTTURNACC_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Parent" class="com.mg.merp.finance.model.Specification">
+      <column name="PARENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="FinOper" class="com.mg.merp.finance.model.FinOperation">
+      <column name="FINOPER_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SrcTurnAcc" class="com.mg.merp.finance.model.TurnAccount">
+      <column name="SRCTURNACC_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="DstAcc" class="com.mg.merp.finance.model.Account">
+      <column name="DSTACC_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SrcAcc" class="com.mg.merp.finance.model.Account">
+      <column name="SRCACC_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SrcTurnFeat" class="com.mg.merp.finance.model.TurnFeature">
+      <column name="SRCTURNFEAT_ID" not-null="false" />
+    </many-to-one>
+    <property name="SrcAnl1" type="java.lang.Integer">
+      <column name="SRCANL1_ID" not-null="false" sql-type="INTEGER"/>
+    </property>
+    <property name="SrcAnl2" type="java.lang.Integer">
+      <column name="SRCANL2_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="SrcAnl3" type="java.lang.Integer">
+      <column name="SRCANL3_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="SrcAnl4" type="java.lang.Integer">
+      <column name="SRCANL4_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="SrcAnl5" type="java.lang.Integer">
+      <column name="SRCANL5_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="DstAnl1" type="java.lang.Integer">
+      <column name="DSTANL1_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="DstAnl2" type="java.lang.Integer">
+      <column name="DSTANL2_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="DstAnl3" type="java.lang.Integer">
+      <column name="DSTANL3_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="DstAnl4" type="java.lang.Integer">
+      <column name="DSTANL4_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="DstAnl5" type="java.lang.Integer">
+      <column name="DSTANL5_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="SumNat" type="java.math.BigDecimal">
+      <column name="SUMNAT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="SumCur" type="java.math.BigDecimal">
+      <column name="SUMCUR" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="Planned" type="boolean">
+      <column name="PLANNED" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

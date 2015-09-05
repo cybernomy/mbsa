@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.account.model.AccBatch" table="ACCBATCH">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <!-- generator class="sequence">
+        <param name="sequence">ACCBATCH_ID_GEN</param>
+      </generator-->
+    </id>
+    <many-to-one name="AccPlan" class="com.mg.merp.account.model.AccPlan">
+      <column name="ACC_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Contractor" class="com.mg.merp.reference.model.Contractor">
+      <column name="CONTRACTOR_ID" not-null="false" />
+    </many-to-one>
+    <property name="InComeDate" type="java.util.Date">
+      <column name="INCOMEDATE" not-null="true" sql-type="TIMESTAMP" />
+    </property>
+    <property name="InComeCostNat" type="java.math.BigDecimal">
+      <column name="INCOMECOSTNAT" scale="6" precision="18" not-null="true" sql-type="NUMERIC" />
+    </property>
+    <property name="InComeCostCur" type="java.math.BigDecimal">
+      <column name="INCOMECOSTCUR" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="CatalogId" type="java.lang.Integer">
+      <column name="CATALOG_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="DocSection" type="java.lang.Short">
+      <column name="DOCSECTION" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="DocId" type="java.lang.Integer">
+      <column name="DOC_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="DocType" type="java.lang.String">
+      <column name="DOCTYPE" length="15" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="DocNumber" type="java.lang.String">
+      <column name="DOCNUMBER" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="DocDate" type="java.util.Date">
+      <column name="DOCDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="BeginQuan" type="java.math.BigDecimal">
+      <column name="BEGINQUAN" scale="3" precision="15" not-null="true" sql-type="NUMERIC" />
+    </property>
+    <property name="EndQuan" type="java.math.BigDecimal">
+      <column name="ENDQUAN" scale="3" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="AnlPlan1Id" type="java.lang.Integer">
+      <column name="ANLPLAN1_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="AnlPlan2Id" type="java.lang.Integer">
+      <column name="ANLPLAN2_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="AnlPlan3Id" type="java.lang.Integer">
+      <column name="ANLPLAN3_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="AnlPlan4Id" type="java.lang.Integer">
+      <column name="ANLPLAN4_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <property name="AnlPlan5Id" type="java.lang.Integer">
+      <column name="ANLPLAN5_ID" not-null="false" sql-type="INTEGER" />
+    </property>
+    <set name="SetOfAccBatchHistory" inverse="true">
+      <key on-delete="cascade">
+        <column name="ACCBATCH_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.account.model.AccBatchHistory" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

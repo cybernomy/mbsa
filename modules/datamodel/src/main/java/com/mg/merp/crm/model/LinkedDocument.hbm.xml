@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.crm.model.LinkedDocument" table="CRM_LINKED_DOC">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">CRM_LINKED_DOC_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="Solution" class="com.mg.merp.crm.model.Solution">
+      <column name="SOLUTION_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Offer" class="com.mg.merp.crm.model.Offer">
+      <column name="OFFER_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Problem" class="com.mg.merp.crm.model.Problem">
+      <column name="PROBLEM_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Operation" class="com.mg.merp.crm.model.Operation">
+      <column name="OPERATION_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Contact" class="com.mg.merp.crm.model.Contact">
+      <column name="CONTACT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Original" class="com.mg.merp.reference.model.OriginalDocument">
+      <column name="ORIGINAL_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Relation" class="com.mg.merp.crm.model.Relation">
+      <column name="RELATION_ID" not-null="false" />
+    </many-to-one>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

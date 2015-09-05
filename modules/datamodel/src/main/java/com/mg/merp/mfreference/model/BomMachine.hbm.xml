@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<typedef name="com.mg.merp.mfreference.model.MachineOverheadAllocationFlag" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.mfreference.model.MachineOverheadAllocationFlag</param>
+	</typedef>
+	<typedef name="com.mg.merp.mfreference.model.TimeRateFlag" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.mfreference.model.TimeRateFlag</param>
+	</typedef>
+	<typedef name="com.mg.merp.mfreference.model.MachineRecoveryFlag" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.mfreference.model.MachineRecoveryFlag</param>
+	</typedef>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <joined-subclass name="com.mg.merp.mfreference.model.BomMachine" extends="com.mg.merp.mfreference.model.BomRouteResource" table="MF_BOM_MACHINE">
+    <meta attribute="extends">com.mg.merp.mfreference.model.BomRouteResource</meta>
+    <!--id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">MF_BOM_MACHINE_ID_GEN</param>
+      </generator>
+    </id -->
+    <key on-delete="cascade">
+      <column name="BOM_ROUTE_RESOURCE_ID" not-null="true" />
+    </key>
+    <many-to-one name="MchOhRateCurrency" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
+      <column name="MCH_OH_RATE_CUR_CODE" length="5" not-null="false" />
+    </many-to-one>
+    <many-to-one name="MchRateCurrency" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
+      <column name="MCH_RATE_CUR_CODE" length="5" not-null="false" />
+    </many-to-one>
+    <many-to-one name="MchOhCostCategory" class="com.mg.merp.mfreference.model.CostCategories">
+      <column name="MCH_OH_COST_CATEGORY_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="RunTimeMchUm" class="com.mg.merp.reference.model.Measure">
+      <column name="RUN_TIME_MCH_UM" not-null="false" />
+    </many-to-one>
+    <many-to-one name="MchCostCategory" class="com.mg.merp.mfreference.model.CostCategories">
+      <column name="MCH_COST_CATEGORY_ID" not-null="false" />
+    </many-to-one>
+    <property name="TimeRateFlag" type="com.mg.merp.mfreference.model.TimeRateFlag">
+      <column name="TIME_RATE_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="RunTicksMch" type="long">
+      <column name="RUN_TICKS_MCH" scale="0" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="MchNumber" type="java.math.BigDecimal">
+      <column name="MCH_NUMBER" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="MchRecoveryFlag" type="com.mg.merp.mfreference.model.MachineRecoveryFlag">
+      <column name="MCH_RECOVERY_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="MchRate" type="java.math.BigDecimal">
+      <column name="MCH_RATE" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="MchBackflushFlag" type="boolean">
+      <column name="MCH_BACKFLUSH_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="MchOhAllocationFlag" type="com.mg.merp.mfreference.model.MachineOverheadAllocationFlag">
+      <column name="MCH_OH_ALLOCATION_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="MchOhRate" type="java.math.BigDecimal">
+      <column name="MCH_OH_RATE" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="MchOhRatio" type="java.math.BigDecimal">
+      <column name="MCH_OH_RATIO" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="MchOhBackflushFlag" type="boolean">
+      <column name="MCH_OH_BACKFLUSH_FLAG" not-null="false" sql-type="SMALLINT" />
+    </property>
+  </joined-subclass>
+</hibernate-mapping>

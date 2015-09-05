@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.reference.model.IdentDoc" table="REF_IDENT_DOC">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="int">
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">REF_IDENT_DOC_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="Nationality" class="com.mg.merp.reference.model.Nationality">
+      <column name="NATIONALITY_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="NaturalPerson" class="com.mg.merp.reference.model.NaturalPerson">
+      <column name="PERSON_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="IdentDocKind" class="com.mg.merp.reference.model.IdentDocKind">
+      <column name="IDENTDOCKIND_ID" not-null="true" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="PersonAddress" class="com.mg.merp.reference.model.PersonAddress">
+      <column name="ADDRESS_ID" not-null="false" />
+    </many-to-one>
+    <property name="IsBasic" type="boolean">
+      <column name="IS_BASIC" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="SeriesLeft" type="java.lang.String">
+      <column name="SERIES_LEFT" length="10" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="SeriesDivider" type="java.lang.String">
+      <column name="SERIES_DIVIDER" length="5" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="SeriesRight" type="java.lang.String">
+      <column name="SERIES_RIGHT" length="10" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="DocNumber" type="java.lang.String">
+      <column name="DOCNUMBER" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="WhoIssued" type="java.lang.String">
+      <column name="WHO_ISSUED" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="WhenIssued" type="java.util.Date">
+      <column name="WHEN_ISSUED" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="ActiveTill" type="java.util.Date">
+      <column name="ACTIVE_TILL" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="CitizenShip" type="java.lang.String">
+      <column name="CITIZENSHIP" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Birthdate" type="java.util.Date">
+      <column name="BIRTHDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="BirthPlaceCountry" type="java.lang.String">
+      <column name="BIRTHPLACE_COUNTRY" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="BirthPlaceRegion" type="java.lang.String">
+      <column name="BIRTHPLACE_REGION" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="BirthPlaceDistrict" type="java.lang.String">
+      <column name="BIRTHPLACE_DISTRICT" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="BirthPlaceCity" type="java.lang.String">
+      <column name="BIRTHPLACE_CITY" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="BirthPlaceOkato" type="java.lang.String">
+      <column name="BIRTHPLACE_OKATO" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

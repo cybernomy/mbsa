@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.paymentcontrol.model.Execution" table="PMC_EXECUTION">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">PMC_EXECUTION_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="CurRateAuthority" class="com.mg.merp.reference.model.CurrencyRateAuthority">
+      <column name="CURRATEAUTHORITY_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="ResourceFolder" class="com.mg.merp.core.model.Folder">
+      <column name="RESOURCEFOLDER_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="DocHead" class="com.mg.merp.document.model.DocHead">
+      <column name="DOC_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="VerStatus" class="com.mg.merp.paymentcontrol.model.VersionStatus">
+      <column name="VERSTATUS_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Liability" class="com.mg.merp.paymentcontrol.model.Liability">
+      <column name="LIABILITY_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CurRateType" class="com.mg.merp.reference.model.CurrencyRateType">
+      <column name="CURRATETYPE_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Payment" class="com.mg.merp.paymentalloc.model.Payment">
+      <column name="PAYMENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CurCode" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
+      <column name="CURCODE" length="5" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Version" class="com.mg.merp.paymentcontrol.model.Version">
+      <column name="VERSION_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Resource" class="com.mg.merp.paymentcontrol.model.PmcResource">
+      <column name="RESOURCE_ID" not-null="false" />
+    </many-to-one>
+    <property name="Receivable" type="boolean">
+      <column name="RECEIVABLE" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="PlanDate" type="java.util.Date">
+      <column name="PLANDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="FactDate" type="java.util.Date">
+      <column name="FACTDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="SumCur" type="java.math.BigDecimal">
+      <column name="SUMCUR" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="SumNat" type="java.math.BigDecimal">
+      <column name="SUMNAT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="TransferKind" type="java.lang.Short">
+      <column name="TRANSFERKIND" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="FixedPeriod" type="java.lang.Short">
+      <column name="FIXEDPERIOD" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="DocCreated" type="boolean">
+      <column name="DOCCREATED" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="DocProcessed" type="boolean">
+      <column name="DOCPROCESSED" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="Approved" type="boolean">
+      <column name="APPROVED" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

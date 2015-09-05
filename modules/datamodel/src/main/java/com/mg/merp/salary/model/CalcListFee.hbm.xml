@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.salary.model.CalcListFee" table="SAL_CALC_LIST_FEE">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">SAL_CALC_LIST_FEE_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="CostsAnl1" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL1_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CostsAnl2" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL2_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CostsAnl3" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL3_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CalcListSection" class="com.mg.merp.salary.model.CalcListSection">
+      <column name="CALC_LIST_SECTION_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CostsAnl4" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL4_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="FeeModel" class="com.mg.merp.salary.model.FeeModel">
+      <column name="FEE_MODEL_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CostsAnl5" class="com.mg.merp.personnelref.model.CostsAnl">
+      <column name="COSTS_ANL5_ID" not-null="false" />
+    </many-to-one>
+    <property name="BeginDate" type="java.util.Date">
+      <column name="BEGINDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="EndDate" type="java.util.Date">
+      <column name="ENDDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="PeriodBeginDate" type="java.util.Date">
+      <column name="PERIOD_BEGINDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="PeriodEndDate" type="java.util.Date">
+      <column name="PERIOD_ENDDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="Summa" type="java.math.BigDecimal">
+      <column name="SUMMA" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="NeedParams" type="boolean">
+      <column name="NEED_PARAMS" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="IsCalculated" type="boolean">
+      <column name="IS_CALCULATED" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="DontRecalc" type="boolean">
+      <column name="DONT_RECALC" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <set name="CalcListFeeParams" inverse="true">
+      <key on-delete="cascade">
+        <column name="CALC_LIST_FEE_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.salary.model.CalcListFeeParam" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

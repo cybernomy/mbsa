@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<typedef name="com.mg.merp.reference.model.GenderType" class="com.mg.framework.support.orm.EnumUserType">
+		<param name="enumClass">com.mg.merp.reference.model.GenderType</param>
+	</typedef>	
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.reference.model.NaturalPerson" table="REF_NATURAL_PERSON">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="int">
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">REF_NATURAL_PERSON_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="Folder" class="com.mg.merp.core.model.Folder">
+      <column name="FOLDER_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Users" class="com.mg.merp.security.model.SecUser">
+      <column name="USER_ID" not-null="false" />
+    </many-to-one>
+    <property name="ActDate" type="java.util.Date">
+      <column name="ACT_DATE" not-null="true" sql-type="TIMESTAMP" />
+    </property>
+    <property name="Surname" type="java.lang.String">
+      <column name="SURNAME" length="80" not-null="true" sql-type="VARCHAR" />
+    </property>
+    <property name="Name" type="java.lang.String">
+      <column name="NAME" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Patronymic" type="java.lang.String">
+      <column name="PATRONYMIC" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="BornDate" type="java.util.Date">
+      <column name="BORNDATE" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="Sex" type="com.mg.merp.reference.model.GenderType">
+      <column name="SEX" not-null="false" sql-type="INTEGER" />
+    </property>
+    <!-- property name="Photo" type="binary">
+      <column name="PHOTO" not-null="false" sql-type="BLOB SUB_TYPE 0" />
+    </property -->
+    <property name="Inn" type="java.lang.String">
+      <column name="INN" length="20" not-null="false" sql-type="CHAR" />
+    </property>
+    <property name="AdditionalInfo" type="java.lang.String">
+      <column name="ADDITIONAL_INFO" length="2048" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Code" type="java.lang.String">
+      <column name="CODE" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <set name="SetOfRefIdentDoc" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSON_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.reference.model.IdentDoc" />
+    </set>
+    <set name="SetOfRefFamilyStatus" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSON_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.reference.model.FamilyStatus" />
+    </set>
+    <set name="SetOfRefFamilyMember" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSON_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.reference.model.FamilyMember" />
+    </set>
+    <set name="SetOfRefPersonPhone" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSON_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.reference.model.PersonPhone" />
+    </set>
+    <set name="SetOfRefNaturalPersonHist" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSON_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.reference.model.NaturalPersonHist" />
+    </set>
+    <set name="SetOfRefPersonAddress" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSON_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.reference.model.PersonAddress" />
+    </set>
+    <set name="SetOfRefPersonEAddress" inverse="true">
+      <key on-delete="cascade">
+        <column name="PERSON_ID" not-null="false" />
+      </key>
+      <one-to-many class="com.mg.merp.reference.model.PersonElectronicAddress" />
+    </set>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

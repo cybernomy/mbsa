@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.reference.model.CatalogPrice" table="CATALOGPRICE">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">CATALOGPRICE_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="Catalog" class="com.mg.merp.reference.model.Catalog">
+      <column name="CATALOG_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CurrencyRateType" class="com.mg.merp.reference.model.CurrencyRateType">
+      <column name="CUR_RATE_TYPE_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="CurrencyRateAuthority" class="com.mg.merp.reference.model.CurrencyRateAuthority">
+      <column name="CUR_RATE_AUTHORITY_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Currency" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
+      <column name="CURRENCY_CODE" length="5" not-null="false" />
+    </many-to-one>
+    <property name="InAction" type="java.util.Date">
+      <column name="IN_ACTION" not-null="false" sql-type="TIMESTAMP" />
+    </property>
+    <property name="Price" type="java.math.BigDecimal">
+      <column name="PRICE" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <property name="EquivalentPrice" type="java.math.BigDecimal">
+      <column name="EQUIVALENT_PRICE" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>

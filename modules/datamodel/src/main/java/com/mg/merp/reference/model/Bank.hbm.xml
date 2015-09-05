@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<!-- 
+        Auto-generated mapping file from
+        the hibernate.org cfg2hbm engine
+-->
+  <class name="com.mg.merp.reference.model.Bank" table="REF_BANK">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Integer">
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <generator class="sequence">
+        <param name="sequence">REF_BANK_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="Currency" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
+      <column name="CORR_ACC_CURRENCY" length="5" not-null="false" />
+    </many-to-one>
+    <many-to-one name="Country" class="com.mg.merp.reference.model.Country">
+      <column name="COUNTRY_ID" not-null="false" />
+    </many-to-one>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false" />
+    </many-to-one>
+    <property name="BIK" type="java.lang.String">
+      <column name="BIK" length="30" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="BikUnique" type="boolean">
+      <column name="BIK_UNIQUE" not-null="false" sql-type="SMALLINT" />
+    </property>
+    <property name="Name" type="java.lang.String">
+      <column name="NAME" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Branch" type="java.lang.String">
+      <column name="BRANCH" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="CityType" type="java.lang.String">
+      <column name="CITY_TYPE" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="City" type="java.lang.String">
+      <column name="CITY" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Address" type="java.lang.String">
+      <column name="ADDRESS" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Zip" type="java.lang.String">
+      <column name="ZIP" length="20" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="CorrAcc" type="java.lang.String">
+      <column name="CORR_ACC" length="30" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="CorrName" type="java.lang.String">
+      <column name="CORR_NAME" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="CorrAddress" type="java.lang.String">
+      <column name="CORR_ADDRESS" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Swift" type="java.lang.String">
+      <column name="SWIFT" length="30" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Iban" type="java.lang.String">
+      <column name="IBAN" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Bsc" type="java.lang.String">
+      <column name="BSC" length="30" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Phone" type="java.lang.String">
+      <column name="PHONE" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Fax" type="java.lang.String">
+      <column name="FAX" length="80" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Email" type="java.lang.String">
+      <column name="EMAIL" length="50" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Www" type="java.lang.String">
+      <column name="WWW" length="50" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <property name="Comments" type="java.lang.String">
+      <column name="COMMENTS" length="256" not-null="false" sql-type="VARCHAR" />
+    </property>
+    <filter name="__mg_tenantFilter"/>
+  </class> 
+</hibernate-mapping>
