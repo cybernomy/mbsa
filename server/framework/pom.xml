@@ -25,42 +25,34 @@
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-system</artifactId>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-common</artifactId>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-jmx</artifactId>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-hibernate</artifactId>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-j2ee</artifactId>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-ejb3</artifactId>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-annotations-ejb3</artifactId>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-cache</artifactId>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>

@@ -24,6 +24,11 @@
         </dependency>
         <dependency>
             <groupId>com.mg.server</groupId>
+            <artifactId>core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mg.server</groupId>
             <artifactId>reference</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -45,6 +50,12 @@
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>warehouse</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate</artifactId>
             <scope>provided</scope>
         </dependency>
 

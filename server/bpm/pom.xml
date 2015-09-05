@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>com.mg.server</groupId>
-    <artifactId>report</artifactId>
+    <artifactId>bpm</artifactId>
 
-    <name>MBSA::Server::Report</name>
+    <name>MBSA::Server::BPM</name>
     <description/>
 
     <dependencies>
@@ -29,23 +29,7 @@
         </dependency>
         <dependency>
             <groupId>com.mg.server</groupId>
-            <artifactId>baiengine</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.ibm.icu</groupId>
-            <artifactId>icu4j</artifactId>
+            <artifactId>security</artifactId>
             <scope>provided</scope>
         </dependency>
 
@@ -59,23 +43,18 @@
         </dependency>
 
         <dependency>
-            <groupId>org.eclipse.birt.core</groupId>
-            <artifactId>api</artifactId>
+            <groupId>jboss</groupId>
+            <artifactId>jbpm-jpdl</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.birt.report.engine</groupId>
-            <artifactId>api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.birt.report.model</groupId>
-            <artifactId>api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.datatools.connectivity</groupId>
-            <artifactId>oda</artifactId>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>

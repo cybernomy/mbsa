@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>com.mg.server</groupId>
-    <artifactId>report</artifactId>
+    <artifactId>crm</artifactId>
 
-    <name>MBSA::Server::Report</name>
+    <name>MBSA::Server::CRM</name>
     <description/>
 
     <dependencies>
@@ -29,7 +29,27 @@
         </dependency>
         <dependency>
             <groupId>com.mg.server</groupId>
-            <artifactId>baiengine</artifactId>
+            <artifactId>reference</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mg.server</groupId>
+            <artifactId>documentcore</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mg.server</groupId>
+            <artifactId>docflow</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mg.server</groupId>
+            <artifactId>document</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mg.server</groupId>
+            <artifactId>settlement</artifactId>
             <scope>provided</scope>
         </dependency>
 
@@ -41,41 +61,6 @@
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.ibm.icu</groupId>
-            <artifactId>icu4j</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>jboss</groupId>
-            <artifactId>jboss-system</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>jboss</groupId>
-            <artifactId>jboss-jmx</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.eclipse.birt.core</groupId>
-            <artifactId>api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.birt.report.engine</groupId>
-            <artifactId>api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.birt.report.model</groupId>
-            <artifactId>api</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.datatools.connectivity</groupId>
-            <artifactId>oda</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>

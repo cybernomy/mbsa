@@ -382,19 +382,25 @@
         <dependencies>
             <dependency>
                 <groupId>com.mg.server</groupId>
-                <artifactId>core</artifactId>
-                <version>${project.version}</version>
-                <type>jar</type>
-            </dependency>
-            <dependency>
-                <groupId>com.mg.server</groupId>
                 <artifactId>framework</artifactId>
                 <version>${project.version}</version>
                 <type>jar</type>
             </dependency>
             <dependency>
                 <groupId>com.mg.server</groupId>
+                <artifactId>core</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
                 <artifactId>baiengine</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>scheduler</artifactId>
                 <version>${project.version}</version>
                 <type>jar</type>
             </dependency>
@@ -407,6 +413,12 @@
             <dependency>
                 <groupId>com.mg.server</groupId>
                 <artifactId>report</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>reportviewer</artifactId>
                 <version>${project.version}</version>
                 <type>jar</type>
             </dependency>
@@ -440,6 +452,144 @@
                 <version>${project.version}</version>
                 <type>jar</type>
             </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>retail</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>exchange</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>security</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>bpm</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>contract</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>qualitycontrol</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>mfreference</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>manufacture</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>paymentalloc</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>account</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>factura</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>paymentcontrol</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>lbschedule</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>hr</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>personnelref</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>overall</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>finance</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>planning</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>table</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>salary</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>settlement</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>crm</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>workbench</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
 
             <dependency>
                 <groupId>com.mg</groupId>
@@ -447,45 +597,60 @@
                 <version>1.0</version>
             </dependency>
 
+            <!-- jboss -->
             <dependency>
                 <groupId>jboss</groupId>
                 <artifactId>jboss-system</artifactId>
                 <version>${jboss.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>jboss</groupId>
                 <artifactId>jboss-common</artifactId>
                 <version>${jboss.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>jboss</groupId>
                 <artifactId>jboss-jmx</artifactId>
                 <version>${jboss.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>jboss</groupId>
                 <artifactId>jboss-hibernate</artifactId>
                 <version>${jboss.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>jboss</groupId>
                 <artifactId>jboss-j2ee</artifactId>
                 <version>${jboss.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>jboss</groupId>
                 <artifactId>jboss-ejb3</artifactId>
                 <version>${jboss.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>jboss</groupId>
                 <artifactId>jboss-annotations-ejb3</artifactId>
                 <version>${jboss.version}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>jboss</groupId>
                 <artifactId>jboss-cache</artifactId>
                 <version>1.4.1.GA</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>jboss</groupId>
+                <artifactId>jbpm-jpdl</artifactId>
+                <version>3.2.3</version>
+                <scope>provided</scope>
             </dependency>
 
             <dependency>
@@ -511,6 +676,7 @@
                 <groupId>com.sun</groupId>
                 <artifactId>javaee</artifactId>
                 <version>5.0.8</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>com.ibm.icu</groupId>
@@ -569,6 +735,12 @@
                 <version>1.7R2</version>
             </dependency>
 
+            <dependency>
+                <groupId>net.sf</groupId>
+                <artifactId>jguard</artifactId>
+                <version>1.0</version>
+            </dependency>
+
             <!-- birt -->
             <dependency>
                 <groupId>org.eclipse.birt.core</groupId>
@@ -611,6 +783,7 @@
                 <artifactId>viewservlets</artifactId>
                 <version>2.3.1</version>
             </dependency>
+
             <!-- test -->
             <dependency>
                 <groupId>junit</groupId>

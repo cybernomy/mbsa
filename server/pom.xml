@@ -22,6 +22,7 @@
         <module>baiengine</module>
         <module>scheduler</module>
         <module>reference</module>
+        <!--<module>datawarehouse</module>-->
         <module>report</module>
         <module>reportviewer</module>
         <module>documentcore</module>
@@ -30,6 +31,28 @@
         <module>discount</module>
         <module>warehouse</module>
         <module>retail</module>
+        <module>exchange</module>
+        <module>security</module>
+        <module>bpm</module>
+        <module>contract</module>
+        <module>qualitycontrol</module>
+        <module>mfreference</module>
+        <module>manufacture</module>
+        <module>paymentalloc</module>
+        <module>account</module>
+        <module>factura</module>
+        <module>paymentcontrol</module>
+        <module>lbschedule</module>
+        <module>hr</module>
+        <module>personnelref</module>
+        <module>overall</module>
+        <module>finance</module>
+        <module>planning</module>
+        <module>table</module>
+        <module>salary</module>
+        <module>settlement</module>
+        <module>crm</module>
+        <module>workbench</module>
     </modules>
 
     <dependencies>

@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>com.mg.server</groupId>
-    <artifactId>baiengine</artifactId>
+    <artifactId>security</artifactId>
 
-    <name>MBSA::Server::BAIEngine</name>
+    <name>MBSA::Server::Security</name>
     <description/>
 
     <dependencies>
@@ -38,8 +38,8 @@
         </dependency>
 
         <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
+            <groupId>net.sf</groupId>
+            <artifactId>jguard</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>

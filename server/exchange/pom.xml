@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>com.mg.server</groupId>
-    <artifactId>baiengine</artifactId>
+    <artifactId>exchange</artifactId>
 
-    <name>MBSA::Server::BAIEngine</name>
+    <name>MBSA::Server::Exchange</name>
     <description/>
 
     <dependencies>
@@ -25,21 +25,6 @@
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>core</artifactId>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>jboss</groupId>
-            <artifactId>jboss-system</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>jboss</groupId>
-            <artifactId>jboss-jmx</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>

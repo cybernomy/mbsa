@@ -46,12 +46,10 @@
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-system</artifactId>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-jmx</artifactId>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

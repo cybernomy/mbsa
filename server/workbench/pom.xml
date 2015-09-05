@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>com.mg.server</groupId>
-    <artifactId>baiengine</artifactId>
+    <artifactId>workbench</artifactId>
 
-    <name>MBSA::Server::BAIEngine</name>
+    <name>MBSA::Server::Workbench</name>
     <description/>
 
     <dependencies>
@@ -35,12 +35,6 @@
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-jmx</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

@@ -61,11 +61,19 @@
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-system</artifactId>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-jmx</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jboss</groupId>
+            <artifactId>jboss-annotations-ejb3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>
