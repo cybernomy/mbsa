@@ -6,14 +6,14 @@
 
     <parent>
         <groupId>com.mg</groupId>
-        <artifactId>server</artifactId>
+        <artifactId>modules</artifactId>
         <version>4.0.8-SNAPSHOT</version>
     </parent>
+<!--TODO: create shared resource bundle from core/src/META-INF for core and datamodel-->
+    <groupId>com.mg.modules</groupId>
+    <artifactId>datamodel</artifactId>
 
-    <groupId>com.mg.server</groupId>
-    <artifactId>hr</artifactId>
-
-    <name>MBSA::Server::HR</name>
+    <name>MBSA::Modules::DataModel</name>
     <description/>
 
     <dependencies>
@@ -23,9 +23,10 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>com.mg.modules</groupId>
-            <artifactId>core</artifactId>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>
+
 </project>

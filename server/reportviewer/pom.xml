@@ -18,7 +18,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.mg.server</groupId>
+            <groupId>com.mg.modules</groupId>
             <artifactId>framework</artifactId>
             <scope>provided</scope>
         </dependency>

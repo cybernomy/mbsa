@@ -17,9 +17,9 @@
     <description/>
 
     <modules>
-        <module>framework</module>
-        <module>core</module>
-        <module>baiengine</module>
+        <!--<module>framework</module>-->
+        <!--<module>core</module>-->
+        <!--<module>baiengine</module>-->
         <module>scheduler</module>
         <module>reference</module>
         <module>datawarehouse</module>
@@ -57,8 +57,8 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.sun</groupId>
-            <artifactId>javaee</artifactId>
+            <groupId>com.mg.modules</groupId>
+            <artifactId>datamodel</artifactId>
             <scope>provided</scope>
         </dependency>
     </dependencies>
