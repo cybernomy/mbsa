@@ -63,7 +63,7 @@
       debug="${debug}"
       target="1.5"
       source="1.5"
-      encoding="windows-1251"
+      encoding="utf-8"
       classpathref="project.class.path"
       debuglevel="${debuglevel}"
       sourcepath="${javac-sourcepath}"

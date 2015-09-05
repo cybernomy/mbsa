@@ -2,8 +2,8 @@
 <!-- $Id: build.xml,v 1.1 2006/03/27 11:39:58 safonov Exp $ -->
 
 <!DOCTYPE project [
-  <!ENTITY common SYSTEM "file:../../build/etc/common.xml">
-  <!ENTITY module SYSTEM "file:../../build/etc/module.xml">
+  <!ENTITY common SYSTEM "../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "../../build/etc/module.xml">
 ]>
 
 <project default="all" name="Common components">

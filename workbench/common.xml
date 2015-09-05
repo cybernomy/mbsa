@@ -16,9 +16,9 @@
 
 <target name="init" >
     <mkdir dir="output/classes" />
-    <native2ascii encoding="windows-1251" src="" dest="" ext=".properties" >
-    	<include name="**/*.windows1251"/>
-    </native2ascii>
+    <!--<native2ascii encoding="windows-1251" src="" dest="" ext=".properties" >-->
+    	<!--<include name="**/*.windows1251"/>-->
+    <!--</native2ascii>-->
     <copy todir="output/classes">  
     	<fileset dir="${src.folder}" includes="**/*.properties"/>
   	</copy>
@@ -38,7 +38,7 @@
       debug="${debug}"
       target="1.5"
       source="1.5"
-      encoding="windows-1251"
+      encoding="utf-8"
       classpathref="project.class.path"
       debuglevel="${debuglevel}"
       sourcepath="${javac-sourcepath}"
