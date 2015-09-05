@@ -22,7 +22,6 @@
         <!--<module>baiengine</module>-->
         <module>scheduler</module>
         <module>reference</module>
-        <module>datawarehouse</module>
         <module>report</module>
         <module>reportviewer</module>
         <module>documentcore</module>
