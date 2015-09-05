@@ -59,16 +59,16 @@ public interface DiscountProcessorServiceLocal extends BusinessObjectService {
 	/**
 	 * Применить скидки/наценки на документ
 	 * @param docHead - документ
-	 * @param аpplyDiscountListener - cлушатель применения скидки/наценки
+	 * @param applyDiscountListener - cлушатель применения скидки/наценки
 	 */
-	void applyDiscount(DocHead docHead, ApplyDiscountListener аpplyDiscountListener);
+	void applyDiscount(DocHead docHead, ApplyDiscountListener applyDiscountListener);
 	
 	/**
 	 * Применить скидки/наценки на документ для позиций спецификации
 	 * @param docHead - документ
 	 * @param specs - список позиций спецификации
-	 * @param аpplyDiscountListener - cлушатель применения скидки/наценки
+	 * @param applyDiscountListener - cлушатель применения скидки/наценки
 	 */
-	void applyDiscount(DocHead docHead, List<DocSpec> specs, ApplyDiscountListener аpplyDiscountListener);
+	void applyDiscount(DocHead docHead, List<DocSpec> specs, ApplyDiscountListener applyDiscountListener);
 	
 }
