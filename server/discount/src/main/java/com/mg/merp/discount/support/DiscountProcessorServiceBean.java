@@ -61,7 +61,7 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 	protected PromotionServiceLocal promotionService = (PromotionServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(PromotionServiceLocal.SERVICE_NAME);
 	protected Map<String, Object> processBAiContext = new HashMap<String, Object>();
 	protected OrmTemplate ormTemplate = OrmTemplate.getInstance();
-	protected ApplyDiscountListener аpplyDiscountListener;
+	protected ApplyDiscountListener applyDiscountListener;
 
 
 	private class RecursionBusinessAddinListenerImpl implements BusinessAddinListener<DiscountResult> {
@@ -434,8 +434,8 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 	 */
 	@PermitAll
 	@Remove
-	public void applyDiscount(DocHead docHead, ApplyDiscountListener аpplyDiscountListener) {
-		initApplyDiscountListener(аpplyDiscountListener);
+	public void applyDiscount(DocHead docHead, ApplyDiscountListener applyDiscountListener) {
+		initApplyDiscountListener(applyDiscountListener);
 		applyDiscount(docHead);
 	}
 
@@ -444,8 +444,8 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 	 */
 	@PermitAll
 	@Remove
-	public void applyDiscount(DocHead docHead, List<DocSpec> specs, ApplyDiscountListener аpplyDiscountListener) {
-		initApplyDiscountListener(аpplyDiscountListener);
+	public void applyDiscount(DocHead docHead, List<DocSpec> specs, ApplyDiscountListener applyDiscountListener) {
+		initApplyDiscountListener(applyDiscountListener);
 		doApplyDiscount(docHead, specs);
 	}
 			
@@ -460,26 +460,26 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 	
 	/**
 	 * Инициализировать слушателя применения скидки/наценки
-	 * @param аpplyDiscountListener - слушатель применения скидки/наценки
+	 * @param applyDiscountListener - слушатель применения скидки/наценки
 	 */
-	private void initApplyDiscountListener(ApplyDiscountListener аpplyDiscountListener) {
-		this.аpplyDiscountListener = аpplyDiscountListener;
+	private void initApplyDiscountListener(ApplyDiscountListener applyDiscountListener) {
+		this.applyDiscountListener = applyDiscountListener;
 	}
 	
 	/**
 	 * Успешно завершить применение скидки/наценки
 	 */
 	private void completeApplyDiscount() {
-		if (аpplyDiscountListener != null)
-			аpplyDiscountListener.completed();
+		if (applyDiscountListener != null)
+			applyDiscountListener.completed();
 	}
 	
 	/**
 	 * Отменить применение скидки/наценки
 	 */
 	private void abortApplyDiscount() {
-		if (аpplyDiscountListener != null)
-			аpplyDiscountListener.aborted();
+		if (applyDiscountListener != null)
+			applyDiscountListener.aborted();
 	}
 	
 	/**

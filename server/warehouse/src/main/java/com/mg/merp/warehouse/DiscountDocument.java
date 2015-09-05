@@ -33,8 +33,8 @@ public interface DiscountDocument {
 	/**
 	 * Применить скидку/неценку
 	 * @param docHead - документ
-	 * @param аpplyDiscountListener - слушатель применения скидки/наценки
+	 * @param applyDiscountListener - слушатель применения скидки/наценки
 	 */
-	void applyDiscount(DocHead docHead, ApplyDiscountListener аpplyDiscountListener);
+	void applyDiscount(DocHead docHead, ApplyDiscountListener applyDiscountListener);
 
 }
