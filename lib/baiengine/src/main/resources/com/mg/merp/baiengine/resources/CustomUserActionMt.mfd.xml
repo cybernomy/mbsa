@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: CustomUserActionMt.mfd.xml,v 1.1 2007/11/15 09:25:51 safonov Exp $ -->
+
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.baiengine.support.ui.CustomUserActionMt" title="resource://com.mg.merp.baiengine.resources.formelements#CustomUserAction.FormMt.Title" helpTopic="baiengine#custom_user_action_html" >
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+
+	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
+		<jfd:border style="bevel" type="raised" />
+
+		<jfd:field id="Code" />
+		<jfd:field id="Description" />		
+		<jfd:field id="Caption" />			
+		<jfd:field id="SysClass" />	
+		<jfd:field id="Hint" />		
+		<jfd:field id="BAi"/>			
+		<jfd:field id="KeyStroke" />			
+		<jfd:field id="Icon" />			
+		<jfd:field id="Priority" />	
+		<jfd:field id="Active" sameLine="true" />
+		<jfd:field id="FromMenu" />
+		<jfd:field id="FromToolbar" sameLine="true" />					
+		<jfd:field id="SeparatorBefore" />	
+		<jfd:field id="SeparatorAfter" sameLine="true" />				
+		<jfd:field id="ForceRefresh" />
+		
+		<jfd:table id="permissions" scroll="true" fieldGroup="resource://com.mg.merp.baiengine.resources.formelements#CustomUserAction.Permis" autoResize="subsequent_columns" >
+			<jfd:columns>
+				<jfd:column fieldName="SecGroup" />
+			</jfd:columns>
+ 			<jfd:popupMenu>
+ 				<jfd:menuItem id="grantPermission" text="resource://com.mg.merp.baiengine.resources.formelements#CustomUserAction.FormMt.GrantPermission" actionListener="GrantPermission" />
+ 				<jfd:menuItem id="revokePermission" text="resource://com.mg.merp.baiengine.resources.formelements#CustomUserAction.FormMt.RevokePermission" actionListener="RevokePermission" />
+ 			</jfd:popupMenu>
+		</jfd:table>
+
+		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 							
+	</jfd:container>
+
+	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+
+</jfd:form>
