@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.mg</groupId>
+        <artifactId>distribution</artifactId>
+        <version>4.0.8-SNAPSHOT</version>
+    </parent>
+
+    <groupId>com.mg.distribution</groupId>
+    <artifactId>release-notes</artifactId>
+    <packaging>pom</packaging>
+
+    <name>MBSA::Distribution::ReleaseNotes</name>
+    <description>Автоматическая генерация карточки версий</description>
+
+    <build>
+        <scriptSourceDirectory>${src.scripts.dir}</scriptSourceDirectory>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>release-notes</id>
+            <properties>
+                <target.path.pdf>${project.build.directory}/</target.path.pdf>
+                <wiki.username>${username}</wiki.username>
+                <wiki.password>${password}</wiki.password>
+                <wiki.baseUrl>http://${wiki.server}:${wiki.port}</wiki.baseUrl>
+
+                <wiki.target.space>${wiki.space}</wiki.target.space>
+                <wiki.template.space>${wiki.space}</wiki.template.space>
+                <wiki.template.title>ReleaseNotesTpl</wiki.template.title>
+                <wiki.target.parent.title>Карточки Версий</wiki.target.parent.title>
+                <wiki.target.title>КВ-${human.version}</wiki.target.title>
+
+                <content.tracker.project.name>${tracker.project.name}</content.tracker.project.name>
+                <content.hash>${buildNumber}</content.hash>
+                <content.branch>${scmBranch}</content.branch>
+                <content.human.version>${human.version}</content.human.version>
+                <content.buildDate>${timestamp}</content.buildDate>
+                <content.product.name>MBSA</content.product.name>
+                <content.jql.query.functional>
+                    project = ${tracker.project.name} AND
+                    issuetype = "Business requirement" AND
+                    fixVersion = ${human.version} AND
+                    statusCategory = Done AND
+                    resolution = Fixed
+                    ORDER BY issuekey
+                </content.jql.query.functional>
+                <content.jql.query.technical>
+                    project = ${tracker.project.name} AND
+                    issuetype != "Business requirement" AND
+                    fixVersion = ${human.version} AND
+                    statusCategory = Done AND
+                    resolution = Fixed
+                    ORDER BY issuekey
+                </content.jql.query.technical>
+            </properties>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>build-helper-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>human-version</id>
+                                <goals>
+                                    <goal>regex-property</goal>
+                                </goals>
+                                <phase>validate</phase>
+                                <configuration>
+                                    <name>human.version</name>
+                                    <value>${project.version}</value>
+                                    <regex>(_.*)|(-SNAP.*)</regex>
+                                    <replacement />
+                                    <failIfNoMatch>false</failIfNoMatch>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.codehaus.gmaven</groupId>
+                        <artifactId>groovy-maven-plugin</artifactId>
+                        <executions>
+                            <execution>
+                                <id>load-and-fill-version-card</id>
+                                <phase>generate-resources</phase>
+                                <goals>
+                                    <goal>execute</goal>
+                                </goals>
+                                <configuration>
+                                    <source>${project.build.scriptSourceDirectory}/ConfluencePageEditor.groovy</source>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+</project>
