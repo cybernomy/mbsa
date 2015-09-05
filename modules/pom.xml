@@ -10,14 +10,17 @@
         <version>4.0.8-SNAPSHOT</version>
     </parent>
 
-    <artifactId>lib</artifactId>
+    <artifactId>modules</artifactId>
     <packaging>pom</packaging>
 
-    <name>MBSA::Libraries</name>
+    <name>MBSA::Modules</name>
     <description/>
 
     <modules>
         <module>framework</module>
+        <module>core</module>
+        <module>baiengine</module>
+        <module>datamodel</module>
     </modules>
 
 </project>
