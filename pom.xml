@@ -439,8 +439,6 @@
                 <groupId>com.mg</groupId>
                 <artifactId>framework-aux</artifactId>
                 <version>1.0</version>
-                <scope>system</scope>
-                <systemPath>/home/axmet/workspace/mbsa/thirdparty/mg/framework/lib/mgframework-aux.jar</systemPath>
             </dependency>
 
             <dependency>
