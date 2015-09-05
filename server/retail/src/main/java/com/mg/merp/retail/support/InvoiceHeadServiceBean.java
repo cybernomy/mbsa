@@ -92,11 +92,11 @@ public class InvoiceHeadServiceBean extends GoodsDocumentServiceBean<RtlInvoiceH
 	 * @see com.mg.merp.retail.InvoiceHeadServiceLocal#applyDiscount(com.mg.merp.document.model.DocHead, java.util.List, com.mg.merp.discount.ApplyDiscountListener)
 	 */
 	@PermitAll
-	public void applyDiscount(DocHead docHead, List<DocSpec> specs, ApplyDiscountListener аpplyDiscountListener) {
-		internalApplyDiscount(docHead, аpplyDiscountListener, specs);
+	public void applyDiscount(DocHead docHead, List<DocSpec> specs, ApplyDiscountListener applyDiscountListener) {
+		internalApplyDiscount(docHead, applyDiscountListener, specs);
 	}
 
-	protected void internalApplyDiscount(DocHead docHead, ApplyDiscountListener аpplyDiscountListener, List<DocSpec> specs) {
+	protected void internalApplyDiscount(DocHead docHead, ApplyDiscountListener applyDiscountListener, List<DocSpec> specs) {
 		if (docHead == null)
 			throw new IllegalArgumentException("document is null");
 
@@ -121,24 +121,24 @@ public class InvoiceHeadServiceBean extends GoodsDocumentServiceBean<RtlInvoiceH
 		if (discountOnDoc != null)
 			docHead.setAttribute(DISCOUNT_ON_DOC, discountOnDoc);
 
-		doApplyDiscount(docHead, аpplyDiscountListener, specs);
+		doApplyDiscount(docHead, applyDiscountListener, specs);
 	}
 
 	/* (non-Javadoc)
 	 * @see com.mg.merp.retail.InvoiceHeadServiceLocal#applyDiscount(com.mg.merp.document.model.DocHead, com.mg.merp.discount.ApplyDiscountListener)
 	 */
 	@PermitAll
-	public void applyDiscount(DocHead docHead, ApplyDiscountListener аpplyDiscountListener) {
-		internalApplyDiscount(docHead, аpplyDiscountListener, null);
+	public void applyDiscount(DocHead docHead, ApplyDiscountListener applyDiscountListener) {
+		internalApplyDiscount(docHead, applyDiscountListener, null);
 	}
 
 	/**
   	 * Реализация применения скидок/наценок
 	 * @param docHead - документ
-	 * @param аpplyDiscountListener - cлушатель применения скидки/наценки
+	 * @param applyDiscountListener - cлушатель применения скидки/наценки
 	 * @param specList - список позиций спецификации
 	 */
-	protected void doApplyDiscount(DocHead docHead, ApplyDiscountListener аpplyDiscountListener, List<DocSpec> specList) {
+	protected void doApplyDiscount(DocHead docHead, ApplyDiscountListener applyDiscountListener, List<DocSpec> specList) {
 		InvoiceSpecServiceLocal specService = (InvoiceSpecServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(InvoiceSpecServiceLocal.SERVICE_NAME); 
 		DiscountProcessorServiceLocal discountProcessor = null;
 		try {
@@ -164,9 +164,9 @@ public class InvoiceHeadServiceBean extends GoodsDocumentServiceBean<RtlInvoiceH
 
 		} else {
 			if (specList == null)
-				discountProcessor.applyDiscount(docHead, аpplyDiscountListener);
+				discountProcessor.applyDiscount(docHead, applyDiscountListener);
 			else
-				discountProcessor.applyDiscount(docHead, specList, аpplyDiscountListener);
+				discountProcessor.applyDiscount(docHead, specList, applyDiscountListener);
 		}
 	}
 
