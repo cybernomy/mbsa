@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE project [
-  <!ENTITY common SYSTEM "file:../../build/etc/common.xml">
+  <!ENTITY common SYSTEM "../../build/etc/common.xml">
 ]>
 
 <project default="all" name="Workflow module">

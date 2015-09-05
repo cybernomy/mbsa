@@ -64,7 +64,7 @@ public abstract class AbstractWarehouseDocument<T extends com.mg.merp.document.m
 	 * 
 	 * @param docHead	документ
 	 */
-	protected void doApplyDiscount(DocHead docHead, ApplyDiscountListener аpplyDiscountListener) {
+	protected void doApplyDiscount(DocHead docHead, ApplyDiscountListener applyDiscountListener) {
 		S specService = getSpecificationService();
 		DiscountProcessorServiceLocal discountProcessor = null;
 		try {
@@ -89,14 +89,14 @@ public abstract class AbstractWarehouseDocument<T extends com.mg.merp.document.m
 			modifySpecifaction(specs.toArray(new DocSpec[specs.size()]));
 
 		} else {
-			discountProcessor.applyDiscount(docHead, аpplyDiscountListener);
+			discountProcessor.applyDiscount(docHead, applyDiscountListener);
 		}
 	}
 	
 	/**
 	 * применить скидку/неценку
 	 */
-	public void applyDiscount(DocHead docHead, ApplyDiscountListener аpplyDiscountListener) {
+	public void applyDiscount(DocHead docHead, ApplyDiscountListener applyDiscountListener) {
 		if (docHead == null)
 			throw new IllegalArgumentException("document is null");
 		
@@ -119,7 +119,7 @@ public abstract class AbstractWarehouseDocument<T extends com.mg.merp.document.m
 		if (discountOnDoc != null)
 			docHead.setAttribute(DISCOUNT_ON_DOC, discountOnDoc);
 		
-		doApplyDiscount(docHead, аpplyDiscountListener);
+		doApplyDiscount(docHead, applyDiscountListener);
 	}
 	
 	/**

@@ -45,9 +45,17 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 
+<<<<<<< HEAD
 ### Legacy ant
 output/
 *.MANIFEST.MF
 *.log
 *.build.number
 release/product/
+=======
+### Ant
+output/
+*.log
+*.MANIFEST.MF
+*.build.number
+>>>>>>> 974caa6066db45c45b457b42cca0ecd241053ffc

@@ -2,8 +2,8 @@
 <!-- $Id: build.xml,v 1.12 2006/11/23 19:13:21 poroxnenko Exp $ -->
 
 <!DOCTYPE project [
-  <!ENTITY common SYSTEM "file:../../build/etc/common.xml">
-  <!ENTITY module SYSTEM "file:../../build/etc/module.xml">
+  <!ENTITY common SYSTEM "../../build/etc/common.xml">
+  <!ENTITY module SYSTEM "../../build/etc/module.xml">
 ]>
 
 <project default="all" name="PaymentControl module">

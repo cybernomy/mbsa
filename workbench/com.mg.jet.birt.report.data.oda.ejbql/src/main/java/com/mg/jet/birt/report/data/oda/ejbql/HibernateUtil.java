@@ -23,6 +23,7 @@ import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.DriverPropertyInfo;
 import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
@@ -47,7 +48,7 @@ import org.osgi.framework.Bundle;
 
 /**
  * Утилиты хранилища данных
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: HibernateUtil.java,v 1.6 2009/03/04 10:15:25 safonov Exp $
  */
@@ -63,13 +64,13 @@ public class HibernateUtil {
 	public static List<URL> URLList = new ArrayList<URL>();
     public static ClassLoader changeLoader;
     public static ClassLoader pluginLoader;
-    
+
 
 	public static final ThreadLocal<Session> session = new ThreadLocal<Session>();
 
 	private static synchronized void initSessionFactory(String hibfile, String mapdir, String jndiName) throws HibernateException {
 		//ClassLoader cl1;
-		
+
 		if( sessionFactory == null) {
 
 			if (jndiName == null || jndiName.trim().length() == 0)
@@ -89,7 +90,7 @@ public class HibernateUtil {
 						//ignore
 					}
 			}
-			
+
 			Thread thread = Thread.currentThread();
 			try{
 				//Class.forName("org.hibernate.Configuration");
@@ -99,7 +100,7 @@ public class HibernateUtil {
 				oldloader = thread.getContextClassLoader();
 				//Class thwy = oldloader.loadClass("org.hibernate.cfg.Configuration");
 				//Class thwy2 = oldloader.loadClass("org.apache.commons.logging.LogFactory");
-				//refreshURLs();		
+				//refreshURLs();
 				//ClassLoader changeLoader = new URLClassLoader( (URL [])URLList.toArray(new URL[0]),HibernateUtil.class.getClassLoader());
 				ClassLoader testLoader = new URLClassLoader( (URL [])URLList.toArray(new URL[0]),pluginLoader);
 				//changeLoader = new URLClassLoader( (URL [])URLList.toArray(new URL[0]));
@@ -113,7 +114,7 @@ public class HibernateUtil {
 				//Object oo = cls.newInstance();
 				//Configuration cfg = (Configuration)oo;
 				Configuration cfg = new Configuration();
-				buildConfig(hibfile,mapdir, cfg);	
+				buildConfig(hibfile,mapdir, cfg);
 
 
 				Class<? extends Driver> driverClass = testLoader.loadClass(cfg.getProperty("connection.driver_class")).asSubclass(Driver.class);
@@ -130,7 +131,7 @@ public class HibernateUtil {
 							break;
 						}
 					}
-				}				
+				}
 				if( !foundDriver ){
 
 					DriverManager.registerDriver( wd  ) ;
@@ -151,7 +152,7 @@ public class HibernateUtil {
 			}
 		}
 	}
-	
+
 	public static boolean isSessionFactoryValid() {
 		if( sessionFactory != null){
 			return( true );
@@ -215,7 +216,7 @@ public class HibernateUtil {
 //				cfg.addJar(file);
 //		}
 //	}
-	
+
 	public static void constructSessionFactory( String hibfile, String mapdir, String jndiName) throws HibernateException {
 
 		if( hibfile == null){
@@ -223,7 +224,7 @@ public class HibernateUtil {
 		}
 		if( mapdir == null){
 			mapdir = "";
-		}    	
+		}
 		if( sessionFactory == null){
 
 			initSessionFactory(hibfile, mapdir, jndiName);
@@ -236,14 +237,14 @@ public class HibernateUtil {
 		}
 		System.out.println( "Session Configuration Changed, rebuilding");
 		//Configuration changed need a rebuild.
-		//Note this is very expensive      
+		//Note this is very expensive
 		synchronized(sessionFactory) {
 			Session s = (Session) session.get();
 			if (s != null) {
 				closeSession();
 			}
 			if (sessionFactory != null && !sessionFactory.isClosed()){
-				closeFactory();            	
+				closeFactory();
 			}
 			sessionFactory = null;
 			initSessionFactory(hibfile, mapdir, jndiName);
@@ -285,7 +286,7 @@ public class HibernateUtil {
 		String[] hibClassProps = sf.getClassMetadata(className).getPropertyNames();
 
 		return( hibClassProps);
-	}    
+	}
 
 	//Get type for given property
 	public static String  getHibernatePropTypes(String className, String propName){
@@ -295,7 +296,7 @@ public class HibernateUtil {
 		org.hibernate.type.Type hibClassProps = sf.getClassMetadata(className).getPropertyType(propName);
 		return(hibClassProps.getName());
 
-	}    
+	}
 
 	//Get type for given property
 	public static Object  getHibernatePropVal(Object instObj, String className, String propName){
@@ -305,7 +306,7 @@ public class HibernateUtil {
 		Object hibObj = sf.getClassMetadata(className).getPropertyValue(instObj, propName, EntityMode.POJO);
 		return(hibObj);
 
-	}    
+	}
 
 	private static class WrappedDriver implements Driver
 	{
@@ -325,7 +326,7 @@ public class HibernateUtil {
 		public boolean acceptsURL( String u ) throws SQLException
 		{
 			boolean res = this.driver.acceptsURL( u );
-			System.out.println( "WrappedDriver(" + driverClass + 
+			System.out.println( "WrappedDriver(" + driverClass +
 					").acceptsURL(" + u + ")returns: " + res);
 			return res;
 		}
@@ -386,6 +387,12 @@ public class HibernateUtil {
 		{
 			return driverClass;
 		}
+
+			@Override
+			public Logger getParentLogger()
+					throws SQLFeatureNotSupportedException {
+				return this.driver.getParentLogger();
+			}
 	}
 
 	@SuppressWarnings("unchecked")
@@ -415,7 +422,7 @@ public class HibernateUtil {
 						URL fileURL = jdbcbundle.getEntry( fileName );
 						URLList.add(fileURL);
 
-						System.out.println("JDBC Plugin: found JAR/Zip file: " + 
+						System.out.println("JDBC Plugin: found JAR/Zip file: " +
 								fileName + ": URL=" + fileURL );
 					}
 				}
@@ -427,19 +434,19 @@ public class HibernateUtil {
 			String fileName = tfiles.nextElement();
 			//if ( fileName.equals("commons-logging-api.jar") || fileName.equals("commons-collections.jar") ){
 			//	URL fileURL = tomcatPlgn.getEntry( fileName );
-			//	URLList.add(fileURL);				
+			//	URLList.add(fileURL);
 			//}
-				
+
 		}*/
-		
+
 //		URL jarURL = tomcatPlgn.getEntry( "commons-logging-api.jar" );
-//		System.out.println("Hibernate Plugin: Tomcat plugin: URL = " + jarURL );		
+//		System.out.println("Hibernate Plugin: Tomcat plugin: URL = " + jarURL );
 //		URLList.add(jarURL);
 //		jarURL = tomcatPlgn.getEntry( "commons-collections.jar" );
-//		System.out.println("Hibernate Plugin: Tomcat plugin: URL = " + jarURL );		
-//		URLList.add(jarURL);		
-		
-		
+//		System.out.println("Hibernate Plugin: Tomcat plugin: URL = " + jarURL );
+//		URLList.add(jarURL);
+
+
 		// List all files under "hibclassfiles" directory of this plugin
 		Enumeration<String> hibFiles = hibbundle.getEntryPaths(CommonConstant.HIBERNATE_CLASSES);
 		if (hibFiles != null)
@@ -455,15 +462,15 @@ public class HibernateUtil {
 						URL fileURL = hibbundle.getEntry( fileName );
 						URLList.add(fileURL);
 
-						System.out.println("Hibernate Plugin: found JAR/Zip file: " + 
+						System.out.println("Hibernate Plugin: found JAR/Zip file: " +
 								fileName + ": URL=" + fileURL );
 					}
 				}
 			}
-		
-		
+
+
 		// List all files under "hibclassfiles" directory of this plugin
-/*		Enumeration hiblibs = hibbundle.getEntryPaths( 
+/*		Enumeration hiblibs = hibbundle.getEntryPaths(
 				CommonConstant.HIBERNATE_LIBS );
 		while ( hiblibs.hasMoreElements() )
 		{
@@ -477,29 +484,29 @@ public class HibernateUtil {
 					URL fileURL = hibbundle.getEntry( fileName );
 					URLList.add(fileURL);
 
-					System.out.println("Hibernate Plugin: found JAR/Zip file: " + 
+					System.out.println("Hibernate Plugin: found JAR/Zip file: " +
 							fileName + ": URL=" + fileURL );
 				}
 			}
-		}		
-	*/	
-		
-		//load mgframework 
+		}
+	*/
+
+		//load mgframework
 		//URL mgFrm = mbsaSharedPlgn.getEntry(CommonConstant.MGFRAMEWORK);
 		//URLList.add(mgFrm);
-		
+
 		FileList.add( CommonConstant.HIBERNATE_CLASSES );
 		URL fileURL = hibbundle.getEntry( CommonConstant.HIBERNATE_CLASSES );
-		URLList.add(fileURL);	
-		System.out.println("Hibernate Plugin: add folder for standalone classes file: " + 
+		URLList.add(fileURL);
+		System.out.println("Hibernate Plugin: add folder for standalone classes file: " +
 				CommonConstant.HIBERNATE_CLASSES + ": URL=" + fileURL );
-	
+
 		return;
-	}   
+	}
 
 	private static boolean isDriverFile( String fileName ) {
 		String lcName = fileName.toLowerCase();
 		return lcName.endsWith(".jar") || lcName.endsWith(".zip");
-	}	
+	}
 
 }
