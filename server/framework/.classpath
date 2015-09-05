@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry kind="src" path="src/test/java"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/jacorb/lib/jacorb.jar"/>
 	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/jboss/lib/jboss-cache.jar"/>
@@ -20,7 +19,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/hibernate/lib/hibernate3.jar" sourcepath="/HIBERNATE3_SRC"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/uicomponent"/>
 	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/jaxen/lib/jaxen.jar"/>
 	<classpathentry exported="true" kind="con" path="org.jboss.ide.eclipse.jdt.ejb3.wizards.core.classpath.EJB3_CONTAINER/JBoss release (local)"/>
 	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/canoo/lib/ulc-servlet-server.jar" sourcepath="/MERP_THIRDPARTY_LIB/canoo/lib/ulc-servlet-server-src.jar"/>
@@ -29,5 +27,14 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/jboss/lib/jboss-hibernate.jar" sourcepath="/JBOSS_AS_SRC/hibernate-int/src/main"/>
 	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/dozer/lib/dozer-3.2.1.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/jboss/lib/jboss-ejb3.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/sun-javamail/lib/mail.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/sun-ejb/lib/ejb-api.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/jboss/lib/jboss-ejb3x.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/jboss/lib/jboss-remoting.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/apache-codec/lib/commons-codec.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/messadmin/lib/MessAdmin-Core.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/mg/framework/lib/mgframework-aux.jar"/>
+	<classpathentry kind="var" path="MERP_THIRDPARTY_LIB/icu/lib/icu4j_3_6_1.jar"/>
 	<classpathentry kind="output" path="output/classes"/>
 </classpath>
