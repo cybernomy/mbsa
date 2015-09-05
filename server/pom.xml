@@ -28,6 +28,7 @@
         <module>docflow</module>
         <module>document</module>
         <module>discount</module>
+        <module>warehouse</module>
         <module>retail</module>
     </modules>
 

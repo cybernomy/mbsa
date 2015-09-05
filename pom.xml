@@ -434,6 +434,12 @@
                 <version>${project.version}</version>
                 <type>jar</type>
             </dependency>
+            <dependency>
+                <groupId>com.mg.server</groupId>
+                <artifactId>warehouse</artifactId>
+                <version>${project.version}</version>
+                <type>jar</type>
+            </dependency>
 
             <dependency>
                 <groupId>com.mg</groupId>
@@ -557,6 +563,54 @@
                 <version>1.6.1</version>
             </dependency>
 
+            <dependency>
+                <groupId>org.mozilla</groupId>
+                <artifactId>rhino</artifactId>
+                <version>1.7R2</version>
+            </dependency>
+
+            <!-- birt -->
+            <dependency>
+                <groupId>org.eclipse.birt.core</groupId>
+                <artifactId>api</artifactId>
+                <version>2.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.birt.report.engine</groupId>
+                <artifactId>api</artifactId>
+                <version>2.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.birt.report.model</groupId>
+                <artifactId>api</artifactId>
+                <version>2.3.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.datatools.connectivity</groupId>
+                <artifactId>oda</artifactId>
+                <version>3.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.birt</groupId>
+                <artifactId>data</artifactId>
+                <version>2.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.birt.report.data</groupId>
+                <artifactId>adapter</artifactId>
+                <version>2.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.birt.report.engine</groupId>
+                <artifactId>dataextraction</artifactId>
+                <version>2.3.1</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.birt.report</groupId>
+                <artifactId>viewservlets</artifactId>
+                <version>2.3.1</version>
+            </dependency>
             <!-- test -->
             <dependency>
                 <groupId>junit</groupId>

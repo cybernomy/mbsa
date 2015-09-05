@@ -20,39 +20,35 @@
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>framework</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>core</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>baiengine</artifactId>
+            <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>commons-lang</groupId>
             <artifactId>commons-lang</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.ibm.icu</groupId>
             <artifactId>icu4j</artifactId>
+            <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.eclipse.birt.runtime.3_7_1</groupId>
-            <artifactId>org.eclipse.birt.runtime</artifactId>
-            <version>3.7.1</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.eclipse.birt.runtime</groupId>
-                    <artifactId>com.ibm.icu</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-system</artifactId>
@@ -62,20 +58,27 @@
             <groupId>jboss</groupId>
             <artifactId>jboss-jmx</artifactId>
             <scope>provided</scope>
-        </dependency><!--
-        <dependency>
-            <groupId>jboss</groupId>
-            <artifactId>jboss-annotations-ejb3</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate</artifactId>
+            <groupId>org.eclipse.birt.core</groupId>
+            <artifactId>api</artifactId>
+            <scope>provided</scope>
         </dependency>
-
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>-->
+            <groupId>org.eclipse.birt.report.engine</groupId>
+            <artifactId>api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.birt.report.model</groupId>
+            <artifactId>api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.datatools.connectivity</groupId>
+            <artifactId>oda</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 </project>

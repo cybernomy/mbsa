@@ -17,55 +17,57 @@
     <description/>
 
     <dependencies>
-        <!--  <dependency>
-              <groupId>com.mg.server</groupId>
-              <artifactId>framework</artifactId>
-          </dependency>
-          <dependency>
-              <groupId>com.mg.server</groupId>
-              <artifactId>core</artifactId>
-          </dependency>
-          <dependency>
-              <groupId>com.mg.server</groupId>
-              <artifactId>baiengine</artifactId>
-          </dependency>
+        <dependency>
+            <groupId>com.mg.server</groupId>
+            <artifactId>framework</artifactId>
+            <scope>provided</scope>
+        </dependency>
 
-          <dependency>
-              <groupId>org.hibernate</groupId>
-              <artifactId>hibernate</artifactId>
-          </dependency>
-          <dependency>
-              <groupId>commons-lang</groupId>
-              <artifactId>commons-lang</artifactId>
-          </dependency>
-          <dependency>
-              <groupId>com.ibm.icu</groupId>
-              <artifactId>icu4j</artifactId>
-          </dependency>
+        <dependency>
+            <groupId>org.eclipse.birt.core</groupId>
+            <artifactId>api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.birt.report.engine</groupId>
+            <artifactId>api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.birt</groupId>
+            <artifactId>data</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.birt.report.model</groupId>
+            <artifactId>api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.birt.report.data</groupId>
+            <artifactId>adapter</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.birt.report.engine</groupId>
+            <artifactId>dataextraction</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.birt.report</groupId>
+            <artifactId>viewservlets</artifactId>
+            <scope>provided</scope>
+        </dependency>
 
-          <dependency>
-              <groupId>jboss</groupId>
-              <artifactId>jboss-system</artifactId>
-              <scope>provided</scope>
-          </dependency>
-          <dependency>
-              <groupId>jboss</groupId>
-              <artifactId>jboss-jmx</artifactId>
-              <scope>provided</scope>
-          </dependency>
-          <dependency>
-              <groupId>jboss</groupId>
-              <artifactId>jboss-annotations-ejb3</artifactId>
-          </dependency>
-
-          <dependency>
-              <groupId>org.hibernate</groupId>
-              <artifactId>hibernate</artifactId>
-          </dependency>
-
-          <dependency>
-              <groupId>junit</groupId>
-              <artifactId>junit</artifactId>
-          </dependency>-->
+        <dependency>
+            <groupId>com.ibm.icu</groupId>
+            <artifactId>icu4j</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mozilla</groupId>
+            <artifactId>rhino</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 </project>

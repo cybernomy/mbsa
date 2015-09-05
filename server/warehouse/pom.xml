@@ -11,15 +11,25 @@
     </parent>
 
     <groupId>com.mg.server</groupId>
-    <artifactId>retail</artifactId>
+    <artifactId>warehouse</artifactId>
 
-    <name>MBSA::Server::Retail</name>
+    <name>MBSA::Server::Warehouse</name>
     <description/>
 
     <dependencies>
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>framework</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mg.server</groupId>
+            <artifactId>core</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mg.server</groupId>
+            <artifactId>baiengine</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -34,6 +44,11 @@
         </dependency>
         <dependency>
             <groupId>com.mg.server</groupId>
+            <artifactId>docflow</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mg.server</groupId>
             <artifactId>document</artifactId>
             <scope>provided</scope>
         </dependency>
@@ -42,15 +57,16 @@
             <artifactId>discount</artifactId>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>com.mg.server</groupId>
-            <artifactId>warehouse</artifactId>
-            <scope>provided</scope>
-        </dependency>
 
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
+            <groupId>jboss</groupId>
+            <artifactId>jboss-system</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>jboss</groupId>
+            <artifactId>jboss-jmx</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

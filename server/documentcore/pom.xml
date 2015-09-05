@@ -20,18 +20,27 @@
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>framework</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>core</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>baiengine</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>reference</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.mg.server</groupId>
+            <artifactId>report</artifactId>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>

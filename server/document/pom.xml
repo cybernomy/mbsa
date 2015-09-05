@@ -20,28 +20,34 @@
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>framework</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>core</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>baiengine</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>reference</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>documentcore</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.mg.server</groupId>
             <artifactId>docflow</artifactId>
+            <scope>provided</scope>
         </dependency>
-<!--
+
         <dependency>
             <groupId>jboss</groupId>
             <artifactId>jboss-system</artifactId>
@@ -52,19 +58,11 @@
             <artifactId>jboss-jmx</artifactId>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>jboss</groupId>
-            <artifactId>jboss-annotations-ejb3</artifactId>
-        </dependency>
 
         <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate</artifactId>
+            <groupId>net.sf.dozer</groupId>
+            <artifactId>dozer</artifactId>
+            <scope>provided</scope>
         </dependency>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>-->
     </dependencies>
 </project>
