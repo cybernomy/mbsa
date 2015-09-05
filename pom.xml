@@ -50,7 +50,7 @@
 
         <maven.repo.server>${dev.server}</maven.repo.server>
         <maven.repo.server.port>8084</maven.repo.server.port>
-        <maven.repo.path>content/repositories</maven.repo.path>
+        <maven.repo.path>content</maven.repo.path>
         <maven.repo.url>http://${maven.repo.server}:${maven.repo.server.port}/${maven.repo.path}</maven.repo.url>
         <timestamp>${maven.build.timestamp}</timestamp>
         <maven.build.timestamp.format>dd.MM.yyyy' 'HH:mm:ss</maven.build.timestamp.format>
@@ -84,7 +84,7 @@
 
     <ciManagement>
         <system>Jenkins</system>
-        <url>${ci.server}:${ci.server.port}</url>
+        <url>${ci.server}:${ci.server.port}/jenkins/job/mbsa/</url>
     </ciManagement>
 
     <issueManagement>
@@ -96,13 +96,13 @@
         <snapshotRepository>
             <id>snapshots</id>
             <name>Nexus snapshots internal repository</name>
-            <url>${maven.repo.url}/snapshots</url>
+            <url>${maven.repo.url}/repositories/snapshots</url>
         </snapshotRepository>
 
         <repository>
             <id>releases</id>
             <name>Nexus releases internal repository</name>
-            <url>${maven.repo.url}/releases</url>
+            <url>${maven.repo.url}/repositories/releases</url>
         </repository>
     </distributionManagement>
 
