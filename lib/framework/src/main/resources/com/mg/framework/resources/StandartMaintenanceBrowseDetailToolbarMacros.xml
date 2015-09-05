@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================================= -->
+<!-- Copyright (c) 1998 - 2008 BusinessTechnology, Ltd.                      -->
+<!-- All rights reserved                                                     -->
+<!--                                                                         -->
+<!-- This program is the proprietary and confidential information            -->
+<!-- of BusinessTechnology, Ltd. and may be used and disclosed only          -->
+<!-- as authorized in a license agreement authorizing and                    -->
+<!-- controlling such use and disclosure                                     -->
+<!--                                                                         -->
+<!-- Millennium Business Suite Anywhere System.                              -->
+<!-- ======================================================================= -->
+
+<!-- $Id: StandartMaintenanceBrowseDetailToolbarMacros.xml,v 1.2 2008/12/23 09:37:13 safonov Exp $ -->
+
+<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
+	<jfd:button id="addDetailButton" toolTip="resource://com.mg.framework.resources.messages#AddButton" icon="com/mg/framework/resources/addbuttonicon.png" actionListener="AddDetailEntity" />
+	<jfd:button id="editDetailButton" toolTip="resource://com.mg.framework.resources.messages#EditButton" icon="com/mg/framework/resources/editbuttonicon.png" actionListener="EditDetailEntity" />
+	<jfd:button id="eraseDetailButton" toolTip="resource://com.mg.framework.resources.messages#EraseButton" icon="com/mg/framework/resources/erasebuttonicon.png" actionListener="EraseDetailEntity" />
+	<jfd:button id="viewDetailButton" toolTip="resource://com.mg.framework.resources.messages#ViewButton" icon="com/mg/framework/resources/viewbuttonicon.png" actionListener="ViewDetailEntity" />
+	<jfd:button id="cloneDetailButton" toolTip="resource://com.mg.framework.resources.messages#CloneButton" icon="com/mg/framework/resources/clonebuttonicon.png" actionListener="CloneDetailEntity" />
+	<jfd:button id="deepCloneDetailButton" toolTip="resource://com.mg.framework.resources.messages#DeepCloneButton" icon="com/mg/framework/resources/deepclonebuttonicon.png" actionListener="DeepCloneDetailEntity" />
+	<jfd:separator id="maintenanceDetailSeparator" />
+	<jfd:button id="refreshDetailButton" toolTip="resource://com.mg.framework.resources.messages#RefreshButton" icon="com/mg/framework/resources/refreshbuttonicon.png" actionListener="RefreshDetailBrowse" />
+	<jfd:button id="restrictionDetailButton" toolTip="resource://com.mg.framework.resources.messages#RestrictionButton" icon="com/mg/framework/resources/restbuttonicon.png" actionListener="SetupRestrictionDetail" />
+	<jfd:button id="setupTableDetailButton" toolTip="resource://com.mg.framework.resources.messages#SetupTableButton" icon="com/mg/framework/resources/setuptablebuttonicon.png" actionListener="SetupTableDetail" />
+	<jfd:separator id="printDetailSeparator" />
+	<jfd:button id="printDetailButton" toolTip="resource://com.mg.framework.resources.messages#PrintButton" icon="com/mg/framework/resources/printbuttonicon.png" actionListener="PrintReportDetail" />
+</jfd:wrap-macros>
