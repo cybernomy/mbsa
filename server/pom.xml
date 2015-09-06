@@ -24,6 +24,7 @@
     <module>reference</module>
     <module>documentcore</module>
     <module>docflow</module>
+    <module>document</module>
 
     <!---->
     <!--<module>reference</module>-->

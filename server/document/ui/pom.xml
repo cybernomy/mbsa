@@ -5,37 +5,26 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.mg</groupId>
-    <artifactId>server</artifactId>
+    <groupId>com.mg.server</groupId>
+    <artifactId>document</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.server</groupId>
-  <artifactId>document</artifactId>
-  <packaging>pom</packaging>
+  <groupId>com.mg.server.document</groupId>
+  <artifactId>ui</artifactId>
 
-  <name>MBSA::Server::Document</name>
+  <name>MBSA::Server::Document::UI</name>
   <description/>
-
-  <modules>
-    <module>ejb</module>
-    <module>ui</module>
-  </modules>
 
   <dependencies>
     <dependency>
-      <groupId>com.mg.server.reference</groupId>
+      <groupId>com.mg.server.document</groupId>
       <artifactId>ejb</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>documentcore</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>docflow</artifactId>
+      <groupId>com.mg.server.reference</groupId>
+      <artifactId>ui</artifactId>
       <scope>provided</scope>
     </dependency>
   </dependencies>
