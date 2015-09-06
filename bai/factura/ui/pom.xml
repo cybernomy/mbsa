@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.mg.bai</groupId>
+    <artifactId>factura</artifactId>
+    <version>4.0.8-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.mg.bai.factura</groupId>
+  <artifactId>ui</artifactId>
+
+  <name>MBSA::BAI::Factura::UI</name>
+  <description/>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.mg.bai.factura</groupId>
+      <artifactId>ejb</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.modules.core</groupId>
+      <artifactId>ui</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.server.document</groupId>
+      <artifactId>ui</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.server.reference</groupId>
+      <artifactId>ui</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+</project>

@@ -26,6 +26,7 @@
     <module>manufacture</module>
     <module>payalloc</module>
     <module>retail</module>
+    <module>factura</module>
   </modules>
 
   <dependencies>

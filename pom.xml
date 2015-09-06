@@ -644,6 +644,18 @@
         <version>${project.version}</version>
         <type>jar</type>
       </dependency>
+      <dependency>
+        <groupId>com.mg.bai.factura</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.factura</groupId>
+        <artifactId>ui</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
       <!--<dependency>
         <groupId>com.mg.server</groupId>
         <artifactId>reportviewer</artifactId>
