@@ -11,21 +11,14 @@
   </parent>
 
   <groupId>com.mg.bai</groupId>
-  <artifactId>discount</artifactId>
+  <artifactId>qc</artifactId>
   <packaging>pom</packaging>
 
-  <name>MBSA::BAI::Discount</name>
+  <name>MBSA::BAI::QualityControl</name>
   <description/>
 
   <modules>
     <module>ejb</module>
     <module>ui</module>
   </modules>
-  <dependencies>
-    <dependency>
-      <groupId>com.mg.server.reference</groupId>
-      <artifactId>ejb</artifactId>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
 </project>

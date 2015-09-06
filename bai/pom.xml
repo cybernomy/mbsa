@@ -17,9 +17,12 @@
   <description>Business AddIns</description>
 
   <modules>
+    <module>qc</module>
     <module>account</module>
     <module>discount</module>
+    <module>contract</module>
     <module>warehouse</module>
+    <module>mfref</module>
     <module>retail</module>
   </modules>
 

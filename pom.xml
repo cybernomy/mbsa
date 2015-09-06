@@ -573,6 +573,18 @@
         <type>jar</type>
       </dependency>
       <dependency>
+        <groupId>com.mg.bai.mfref</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.mfref</groupId>
+        <artifactId>ui</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
         <groupId>com.mg.server</groupId>
         <artifactId>exchange</artifactId>
         <version>${project.version}</version>

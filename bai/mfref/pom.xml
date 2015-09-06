@@ -6,45 +6,31 @@
 
   <parent>
     <groupId>com.mg</groupId>
-    <artifactId>server</artifactId>
+    <artifactId>bai</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.server</groupId>
-  <artifactId>mfreference</artifactId>
+  <groupId>com.mg.bai</groupId>
+  <artifactId>mfref</artifactId>
+  <packaging>pom</packaging>
 
-  <name>MBSA::Server::MFReference</name>
+  <name>MBSA::BAI::MFReference</name>
   <description/>
+
+  <modules>
+    <module>ejb</module>
+    <module>ui</module>
+  </modules>
 
   <dependencies>
     <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>framework</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>core</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>baiengine</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>reference</artifactId>
+      <groupId>com.mg.server.reference</groupId>
+      <artifactId>ejb</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.server</groupId>
       <artifactId>documentcore</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>warehouse</artifactId>
       <scope>provided</scope>
     </dependency>
 
