@@ -41,6 +41,7 @@
     <dependency>
       <groupId>com.mg.server.document</groupId>
       <artifactId>ejb</artifactId>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.bai</groupId>

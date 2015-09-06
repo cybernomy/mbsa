@@ -633,6 +633,18 @@
         <type>jar</type>
       </dependency>
       <dependency>
+        <groupId>com.mg.bai.payctl</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.payctl</groupId>
+        <artifactId>ui</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
         <groupId>com.mg.bai.retail</groupId>
         <artifactId>ejb</artifactId>
         <version>${project.version}</version>
@@ -652,6 +664,18 @@
       </dependency>
       <dependency>
         <groupId>com.mg.bai.factura</groupId>
+        <artifactId>ui</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.lbschedule</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.lbschedule</groupId>
         <artifactId>ui</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
