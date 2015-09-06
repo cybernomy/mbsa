@@ -12,9 +12,16 @@
 
   <groupId>com.mg.modules</groupId>
   <artifactId>core</artifactId>
+  <packaging>pom</packaging>
 
   <name>MBSA::Modules::Core</name>
   <description/>
+
+  <modules>
+    <module>ejb</module>
+    <module>ui</module>
+
+  </modules>
 
   <dependencies>
     <dependency>
@@ -46,5 +53,4 @@
       <scope>provided</scope>
     </dependency>
   </dependencies>
-
 </project>

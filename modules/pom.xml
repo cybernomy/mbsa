@@ -21,7 +21,5 @@
     <module>datamodel</module>
     <module>core</module>
     <module>baiengine</module>
-
   </modules>
-
 </project>

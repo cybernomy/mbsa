@@ -10,7 +10,7 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>server</module>
+    <!--<module>server</module>-->
     <module>modules</module>
     <!--<module>distribution</module>-->
   </modules>
@@ -278,7 +278,7 @@
               <addMavenDescriptor>${add.maven.descriptor}</addMavenDescriptor>
             </archive>
           </configuration>
-          <executions>
+          <!--<executions>
             <execution>
               <id>ejb</id>
               <phase>package</phase>
@@ -333,7 +333,7 @@
                 </excludes>
               </configuration>
             </execution>
-          </executions>
+          </executions>-->
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -458,14 +458,26 @@
         <type>jar</type>
       </dependency>
       <dependency>
-        <groupId>com.mg.modules</groupId>
-        <artifactId>core</artifactId>
+        <groupId>com.mg.modules.core</groupId>
+        <artifactId>ejb</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
       </dependency>
       <dependency>
-        <groupId>com.mg.modules</groupId>
-        <artifactId>baiengine</artifactId>
+        <groupId>com.mg.modules.core</groupId>
+        <artifactId>ui</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.modules.baiengine</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.modules.baiengine</groupId>
+        <artifactId>ui</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
       </dependency>

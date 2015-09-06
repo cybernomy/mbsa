@@ -12,9 +12,15 @@
 
   <groupId>com.mg.modules</groupId>
   <artifactId>baiengine</artifactId>
+  <packaging>pom</packaging>
 
   <name>MBSA::Modules::BAIEngine</name>
   <description/>
+
+  <modules>
+    <module>ejb</module>
+    <module>ui</module>
+  </modules>
 
   <dependencies>
     <dependency>
