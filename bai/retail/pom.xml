@@ -26,12 +26,11 @@
     <dependency>
       <groupId>com.mg.server.reference</groupId>
       <artifactId>ejb</artifactId>
-      <type>jar</type>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.server.document</groupId>
       <artifactId>ejb</artifactId>
-      <type>jar</type>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -42,7 +41,6 @@
     <dependency>
       <groupId>com.mg.bai.discount</groupId>
       <artifactId>ejb</artifactId>
-      <type>jar</type>
       <scope>provided</scope>
     </dependency>
 

@@ -17,9 +17,6 @@
   <description/>
 
   <dependencies>
-
-
-
     <dependency>
       <groupId>com.mg.bai</groupId>
       <artifactId>warehouse</artifactId>

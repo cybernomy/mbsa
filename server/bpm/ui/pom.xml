@@ -5,27 +5,26 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.mg</groupId>
-    <artifactId>server</artifactId>
+    <groupId>com.mg.server</groupId>
+    <artifactId>bpm</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.server</groupId>
-  <artifactId>bpm</artifactId>
-  <packaging>pom</packaging>
+  <groupId>com.mg.server.bpm</groupId>
+  <artifactId>ui</artifactId>
 
-  <name>MBSA::Server::BPM</name>
+  <name>MBSA::Server::BPM::UI</name>
   <description/>
-
-  <modules>
-    <module>ejb</module>
-    <module>ui</module>
-  </modules>
 
   <dependencies>
     <dependency>
-      <groupId>jboss</groupId>
-      <artifactId>jbpm-jpdl</artifactId>
+      <groupId>com.mg.server.bpm</groupId>
+      <artifactId>ejb</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.server</groupId>
+      <artifactId>security</artifactId>
       <scope>provided</scope>
     </dependency>
   </dependencies>

@@ -28,10 +28,7 @@
     <module>document</module>
 
     <!--<module>reportviewer</module>-->
-    <!--<module>retail</module>-->
-    <!---->
-    <!--<module>security</module>-->
-    <!--<module>bpm</module>-->
+    <module>bpm</module>
     <!--<module>contract</module>-->
     <!--<module>qualitycontrol</module>-->
     <!--<module>mfreference</module>-->

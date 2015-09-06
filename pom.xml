@@ -585,8 +585,14 @@
         <type>jar</type>
       </dependency>
       <dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>bpm</artifactId>
+        <groupId>com.mg.server.bpm</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.server.bpm</groupId>
+        <artifactId>ui</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
       </dependency>
