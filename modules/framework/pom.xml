@@ -22,17 +22,10 @@
       <artifactId>framework-aux</artifactId>
     </dependency>
 
-    <dependency>
-      <groupId>jboss</groupId>
-      <artifactId>jboss-system</artifactId>
-    </dependency>
+
     <dependency>
       <groupId>jboss</groupId>
       <artifactId>jboss-common</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>jboss</groupId>
-      <artifactId>jboss-jmx</artifactId>
     </dependency>
     <dependency>
       <groupId>jboss</groupId>
@@ -45,10 +38,6 @@
     <dependency>
       <groupId>jboss</groupId>
       <artifactId>jboss-ejb3</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>jboss</groupId>
-      <artifactId>jboss-annotations-ejb3</artifactId>
     </dependency>
     <dependency>
       <groupId>jboss</groupId>
@@ -78,19 +67,8 @@
     </dependency>
 
     <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate</artifactId>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>commons-lang</groupId>
-      <artifactId>commons-lang</artifactId>
       <scope>provided</scope>
     </dependency>
 

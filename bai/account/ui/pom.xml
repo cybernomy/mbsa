@@ -3,21 +3,16 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <modules>
-    <module>account</module>
-  </modules>
 
   <parent>
-    <groupId>com.mg</groupId>
-    <artifactId>mbsa</artifactId>
+    <groupId>com.mg.bai</groupId>
+    <artifactId>account</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <artifactId>bai</artifactId>
-  <packaging>pom</packaging>
+  <groupId>com.mg.bai.account</groupId>
+  <artifactId>ui</artifactId>
 
-  <name>MBSA::BAI</name>
+  <name>MBSA::BAI::Account::UI</name>
   <description/>
-
-
 </project>

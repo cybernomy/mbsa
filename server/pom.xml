@@ -17,10 +17,8 @@
   <description/>
 
   <modules>
-    <!--<module>framework</module>-->
-    <!--<module>core</module>-->
-    <!--<module>baiengine</module>-->
-    <module>scheduler</module>
+
+    <!--<module>scheduler</module>-->
     <module>reference</module>
     <module>report</module>
     <module>reportviewer</module>

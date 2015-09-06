@@ -21,5 +21,9 @@
       <groupId>com.mg.modules.baiengine</groupId>
       <artifactId>ejb</artifactId>
     </dependency>
+    <dependency>
+      <groupId>com.mg.modules.core</groupId>
+      <artifactId>ui</artifactId>
+    </dependency>
   </dependencies>
 </project>

@@ -22,10 +22,5 @@
       <artifactId>framework</artifactId>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate</artifactId>
-      <scope>provided</scope>
-    </dependency>
   </dependencies>
 </project>

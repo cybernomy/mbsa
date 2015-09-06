@@ -6,32 +6,19 @@
 
   <parent>
     <groupId>com.mg</groupId>
-    <artifactId>modules</artifactId>
+    <artifactId>bai</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.modules</groupId>
-  <artifactId>core</artifactId>
+  <groupId>com.mg.bai</groupId>
+  <artifactId>account</artifactId>
   <packaging>pom</packaging>
 
-  <name>MBSA::Modules::Core</name>
+  <name>MBSA::BAI::Account</name>
   <description/>
 
   <modules>
     <module>ejb</module>
     <module>ui</module>
   </modules>
-
-  <dependencies>
-    <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>framework</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>datamodel</artifactId>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
 </project>
