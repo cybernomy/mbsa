@@ -573,7 +573,7 @@
         <type>jar</type>
       </dependency>
       <dependency>
-        <groupId>com.mg.server</groupId>
+        <groupId>com.mg.bai</groupId>
         <artifactId>account</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
@@ -623,6 +623,12 @@
       <dependency>
         <groupId>com.mg.bai.manufacture</groupId>
         <artifactId>ui</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai</groupId>
+        <artifactId>payalloc</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
       </dependency>
