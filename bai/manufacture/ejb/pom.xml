@@ -6,26 +6,13 @@
 
   <parent>
     <groupId>com.mg.bai</groupId>
-    <artifactId>discount</artifactId>
+    <artifactId>manufacture</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.bai.discount</groupId>
+  <groupId>com.mg.bai.manufacture</groupId>
   <artifactId>ejb</artifactId>
 
-  <name>MBSA::BAI::Discount::EJB</name>
+  <name>MBSA::BAI::Manufacture::EJB</name>
   <description/>
-
-  <dependencies>
-    <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>documentcore</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.server.document</groupId>
-      <artifactId>ejb</artifactId>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
 </project>

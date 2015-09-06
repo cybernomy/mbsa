@@ -23,6 +23,7 @@
     <module>contract</module>
     <module>warehouse</module>
     <module>mfref</module>
+    <module>manufacture</module>
     <module>retail</module>
   </modules>
 

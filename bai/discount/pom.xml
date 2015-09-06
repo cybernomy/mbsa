@@ -21,6 +21,7 @@
     <module>ejb</module>
     <module>ui</module>
   </modules>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.server.reference</groupId>
