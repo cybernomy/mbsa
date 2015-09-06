@@ -1,23 +1,20 @@
 /**
  * DatabaseAuditSetup.java
  *
- * Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.
- * All rights reserved
+ * Copyright (c) 1998 - 2007 BusinessTechnology, Ltd. All rights reserved
  *
- * This program is the proprietary and confidential information
- * of BusinessTechnology, Ltd. and may be used and disclosed only
- * as authorized in a license agreement authorizing and
- * controlling such use and disclosure
+ * This program is the proprietary and confidential information of BusinessTechnology, Ltd. and may
+ * be used and disclosed only as authorized in a license agreement authorizing and controlling such
+ * use and disclosure
  *
  * Millennium Business Suite Anywhere System.
- *
  */
 package com.mg.merp.core.model;
 
-import java.io.Serializable;
-
 import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.service.PersistentObjectHibernate;
+
+import java.io.Serializable;
 
 /**
  * @author Oleg V. Safonov
@@ -25,128 +22,132 @@ import com.mg.framework.service.PersistentObjectHibernate;
  */
 @DataItemName("Core.DatabaseAuditSetup")
 public class DatabaseAuditSetup extends PersistentObjectHibernate implements
-		Serializable {
-	private Integer id;
-	private SysClient sysClient;
-	private String auditedEntityName;
-	private String propertyName;
-	private Boolean auditCreate;
-	private Boolean auditModify;
-	private Boolean auditRemove;
-	
-	// Constructors
+    Serializable {
+  private Integer id;
+  private SysClient sysClient;
+  private String auditedEntityName;
+  private String propertyName;
+  private Boolean auditCreate;
+  private Boolean auditModify;
+  private Boolean auditRemove;
 
-	/** default constructor */
-	public DatabaseAuditSetup() {
-	}
+  // Constructors
 
-	/** constructor with id */
-	public DatabaseAuditSetup(Integer id) {
-		this.id = id;
-	}
+  /**
+   * default constructor
+   */
+  public DatabaseAuditSetup() {
+  }
 
-	/**
-	 * @return the id
-	 */
-	@DataItemName("ID")
-	public Integer getId() {
-		return id;
-	}
+  /**
+   * constructor with id
+   */
+  public DatabaseAuditSetup(Integer id) {
+    this.id = id;
+  }
 
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(Integer id) {
-		this.id = id;
-	}
+  /**
+   * @return the id
+   */
+  @DataItemName("ID")
+  public Integer getId() {
+    return id;
+  }
 
-	/**
-	 * @return the sysClient
-	 */
-	public SysClient getSysClient() {
-		return sysClient;
-	}
+  /**
+   * @param id the id to set
+   */
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
-	/**
-	 * @param sysClient the sysClient to set
-	 */
-	public void setSysClient(SysClient sysClient) {
-		this.sysClient = sysClient;
-	}
+  /**
+   * @return the sysClient
+   */
+  public SysClient getSysClient() {
+    return sysClient;
+  }
 
-	/**
-	 * @return the entityName
-	 */
-	@DataItemName("Core.EntityName")
-	public String getAuditedEntityName() {
-		return auditedEntityName;
-	}
+  /**
+   * @param sysClient the sysClient to set
+   */
+  public void setSysClient(SysClient sysClient) {
+    this.sysClient = sysClient;
+  }
 
-	/**
-	 * @param entityName the entityName to set
-	 */
-	public void setAuditedEntityName(String auditedEntityName) {
-		this.auditedEntityName = auditedEntityName;
-	}
+  /**
+   * @return the entityName
+   */
+  @DataItemName("Core.EntityName")
+  public String getAuditedEntityName() {
+    return auditedEntityName;
+  }
 
-	/**
-	 * @return the propertyName
-	 */
-	@DataItemName("Core.PropertyName")
-	public String getPropertyName() {
-		return propertyName;
-	}
+  /**
+   * @param entityName the entityName to set
+   */
+  public void setAuditedEntityName(String auditedEntityName) {
+    this.auditedEntityName = auditedEntityName;
+  }
 
-	/**
-	 * @param propertyName the propertyName to set
-	 */
-	public void setPropertyName(String propertyName) {
-		this.propertyName = propertyName;
-	}
+  /**
+   * @return the propertyName
+   */
+  @DataItemName("Core.PropertyName")
+  public String getPropertyName() {
+    return propertyName;
+  }
 
-	/**
-	 * @return the auditCreate
-	 */
-	@DataItemName("Core.DatabaseAuditSetup.AuditCreate")
-	public Boolean getAuditCreate() {
-		return auditCreate;
-	}
+  /**
+   * @param propertyName the propertyName to set
+   */
+  public void setPropertyName(String propertyName) {
+    this.propertyName = propertyName;
+  }
 
-	/**
-	 * @param auditCreate the auditCreate to set
-	 */
-	public void setAuditCreate(Boolean auditCreate) {
-		this.auditCreate = auditCreate;
-	}
+  /**
+   * @return the auditCreate
+   */
+  @DataItemName("Core.DatabaseAuditSetup.AuditCreate")
+  public Boolean getAuditCreate() {
+    return auditCreate;
+  }
 
-	/**
-	 * @return the auditModify
-	 */
-	@DataItemName("Core.DatabaseAuditSetup.AuditModify")
-	public Boolean getAuditModify() {
-		return auditModify;
-	}
+  /**
+   * @param auditCreate the auditCreate to set
+   */
+  public void setAuditCreate(Boolean auditCreate) {
+    this.auditCreate = auditCreate;
+  }
 
-	/**
-	 * @param auditModify the auditModify to set
-	 */
-	public void setAuditModify(Boolean auditModify) {
-		this.auditModify = auditModify;
-	}
+  /**
+   * @return the auditModify
+   */
+  @DataItemName("Core.DatabaseAuditSetup.AuditModify")
+  public Boolean getAuditModify() {
+    return auditModify;
+  }
 
-	/**
-	 * @return the auditRemove
-	 */
-	@DataItemName("Core.DatabaseAuditSetup.AuditRemove")
-	public Boolean getAuditRemove() {
-		return auditRemove;
-	}
+  /**
+   * @param auditModify the auditModify to set
+   */
+  public void setAuditModify(Boolean auditModify) {
+    this.auditModify = auditModify;
+  }
 
-	/**
-	 * @param auditRemove the auditRemove to set
-	 */
-	public void setAuditRemove(Boolean auditRemove) {
-		this.auditRemove = auditRemove;
-	}
+  /**
+   * @return the auditRemove
+   */
+  @DataItemName("Core.DatabaseAuditSetup.AuditRemove")
+  public Boolean getAuditRemove() {
+    return auditRemove;
+  }
+
+  /**
+   * @param auditRemove the auditRemove to set
+   */
+  public void setAuditRemove(Boolean auditRemove) {
+    this.auditRemove = auditRemove;
+  }
 
 }

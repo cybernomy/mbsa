@@ -17,12 +17,10 @@ package com.mg.merp.security;
 import com.mg.merp.security.model.SecUserProfile;
 
 /**
- * 
  * @author leonova
  * @version $Id: UserProfileServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface UserProfileServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<SecUserProfile, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<SecUserProfile, Integer> {
 
 }

@@ -1,34 +1,34 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.crm.model.ActivityKind" table="CRM_ACTIVITY_KIND">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">CRM_ACTIVITY_KIND_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <property name="Code" type="java.lang.String">
-      <column name="CODE" length="20" not-null="false" sql-type="CHAR" />
+      <column name="CODE" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="Name" type="java.lang.String">
-      <column name="NAME" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="NAME" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <set name="SetOfCrmRelation">
       <key>
-        <column name="ACTIVITY_KIND_ID" not-null="false" />
+        <column name="ACTIVITY_KIND_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.crm.model.Relation" />
+      <one-to-many class="com.mg.merp.crm.model.Relation"/>
     </set>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

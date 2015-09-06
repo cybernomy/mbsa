@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!--
 	Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.
 	All rights reserved
@@ -17,25 +17,25 @@
 	$Id: DatabaseAuditDetail.hbm.xml,v 1.1 2007/10/19 06:41:14 safonov Exp $
 -->
 <hibernate-mapping>
-	<class name="com.mg.merp.core.model.DatabaseAuditDetail" table="SYS_DB_AUDIT_DETAIL">
-		<meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
-		<id name="Id" type="java.lang.Long">
-			<column name="ID" not-null="false" unique="true" sql-type="NUMERIC" />
-			<generator class="sequence">
-				<param name="sequence">SYS_DB_AUDIT_DETAIL_ID_GEN</param>
-			</generator>
-		</id>
-		<many-to-one name="DatabaseAudit" class="com.mg.merp.core.model.DatabaseAudit">
-			<column name="DB_AUDIT_ID" not-null="true" />
-		</many-to-one>
-		<property name="PropertyName" type="java.lang.String">
-			<column name="PROPERTY_NAME" length="256" not-null="true" sql-type="VARCHAR" />
-		</property>
-		<property name="State" type="java.lang.String">
-			<column name="STATE" length="256" not-null="false" sql-type="VARCHAR" />
-		</property>
-		<property name="OldState" type="java.lang.String">
-			<column name="OLD_STATE" length="256" not-null="false" sql-type="VARCHAR" />
-		</property>
-	</class>
+  <class name="com.mg.merp.core.model.DatabaseAuditDetail" table="SYS_DB_AUDIT_DETAIL">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Long">
+      <column name="ID" not-null="false" unique="true" sql-type="NUMERIC"/>
+      <generator class="sequence">
+        <param name="sequence">SYS_DB_AUDIT_DETAIL_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="DatabaseAudit" class="com.mg.merp.core.model.DatabaseAudit">
+      <column name="DB_AUDIT_ID" not-null="true"/>
+    </many-to-one>
+    <property name="PropertyName" type="java.lang.String">
+      <column name="PROPERTY_NAME" length="256" not-null="true" sql-type="VARCHAR"/>
+    </property>
+    <property name="State" type="java.lang.String">
+      <column name="STATE" length="256" not-null="false" sql-type="VARCHAR"/>
+    </property>
+    <property name="OldState" type="java.lang.String">
+      <column name="OLD_STATE" length="256" not-null="false" sql-type="VARCHAR"/>
+    </property>
+  </class>
 </hibernate-mapping>

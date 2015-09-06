@@ -17,12 +17,10 @@ package com.mg.merp.crm;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * 
  * @author leonova
  * @version $Id: DocumentServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface DocumentServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<DocHead, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<DocHead, Integer> {
 
 }

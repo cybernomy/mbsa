@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.IdentDocKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: IdentDocKindServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface IdentDocKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<IdentDocKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<IdentDocKind, Integer> {
 
 }

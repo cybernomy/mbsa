@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.Okato;
 
 /**
- * 
  * @author leonova
  * @version $Id: OkatoServiceLocal.java,v 1.1 2006/03/14 11:49:50 safonov Exp $
  */
 public interface OkatoServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Okato, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Okato, Integer> {
 
 }

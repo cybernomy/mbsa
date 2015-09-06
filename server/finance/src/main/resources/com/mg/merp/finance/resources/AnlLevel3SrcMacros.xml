@@ -13,8 +13,12 @@
 
 <!-- $Id: AnlLevel3SrcMacros.xml,v 1.1 2006/11/02 05:38:55 leonova Exp $ -->
 
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="AnlLevel3SrcBox" layout="jfd:box" orientation="hor" sameLine="true" alignment="expand_expand">
-	<jfd:textField id="anlLevel3SrcName" readOnly="true" showLabel="false" alignment="expand_expand"/>
-	<jfd:button id="сlearAnlLevel3SrcButton" icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ClearAnlLevel3Src" alignment="right_expand" />
-	<jfd:button id="сhooseanlLevel3SrcButton" text="..." minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseAnlLevel3Src" alignment="right_expand" />
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="AnlLevel3SrcBox" layout="jfd:box"
+               orientation="hor" sameLine="true" alignment="expand_expand">
+  <jfd:textField id="anlLevel3SrcName" readOnly="true" showLabel="false" alignment="expand_expand"/>
+  <jfd:button id="сlearAnlLevel3SrcButton" icon="com/mg/framework/resources/erasebuttonicon.png"
+              minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+              actionListener="ClearAnlLevel3Src" alignment="right_expand"/>
+  <jfd:button id="сhooseanlLevel3SrcButton" text="..." minimumSize="22,0" maximumSize="22,0"
+              preferredSize="22,0" actionListener="ChooseAnlLevel3Src" alignment="right_expand"/>
 </jfd:container>

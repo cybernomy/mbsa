@@ -14,31 +14,29 @@
  */
 package com.mg.framework.api;
 
-import javax.ejb.Remove;
-
 import com.mg.framework.api.metadata.BusinessServiceMetadata;
+
+import javax.ejb.Remove;
 
 /**
  * Бизнес компонент
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: BusinessObjectService.java,v 1.5 2006/09/28 12:24:12 safonov Exp $
- * 
  */
 public interface BusinessObjectService {
-	
-	/**
-	 * Получение метаданных бизнес компонента
-	 * 
-	 * @return	метаданные
-	 */
-	BusinessServiceMetadata getBusinessServiceMetadata();
-	
-	/**
-	 * Удаляет сервис, используется только для Stateful сервисов
-	 *
-	 */
-	@Remove
-	public void destroy();
+
+  /**
+   * Получение метаданных бизнес компонента
+   *
+   * @return метаданные
+   */
+  BusinessServiceMetadata getBusinessServiceMetadata();
+
+  /**
+   * Удаляет сервис, используется только для Stateful сервисов
+   */
+  @Remove
+  public void destroy();
 
 }

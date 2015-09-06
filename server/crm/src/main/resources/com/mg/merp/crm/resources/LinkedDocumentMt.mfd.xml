@@ -13,15 +13,17 @@
 
 <!-- $Id: LinkedDocumentMt.mfd.xml,v 1.1 2006/09/06 05:19:43 leonova Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.crm.resources.formelements#LinkedDocument.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.crm.resources.formelements#LinkedDocument.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />		
-		<jfd:field id="Original"/>		
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Original"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

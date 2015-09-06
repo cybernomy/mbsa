@@ -22,59 +22,60 @@ import com.mg.merp.settlement.SettlementProcessorServiceLocal;
 
 /**
  * Реализация фабрики реализации этапа ДО "Отработать в расчетах"
- * 
+ *
  * @author Artem V. Sharapov
- * @version $Id: ProcessContractorCardDocFlowPluginFactory.java,v 1.1 2007/03/19 15:05:29 sharapov Exp $
+ * @version $Id: ProcessContractorCardDocFlowPluginFactory.java,v 1.1 2007/03/19 15:05:29 sharapov
+ *          Exp $
  */
 public class ProcessContractorCardDocFlowPluginFactory extends
-AbstractDocFlowPluginFactory {
+    AbstractDocFlowPluginFactory {
 
-	public final static int FACTORY_IDENTIFIER = 31;
+  public final static int FACTORY_IDENTIFIER = 31;
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
-	 */
-	@Override
-	protected DocFlowPlugin doCreatePlugin() {
-		return new AbstractDocFlowPlugin() {
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
+   */
+  @Override
+  protected DocFlowPlugin doCreatePlugin() {
+    return new AbstractDocFlowPlugin() {
 
-			SettlementProcessorServiceLocal settlementProcessorService = (SettlementProcessorServiceLocal) 
-			ApplicationDictionaryLocator.locate().getBusinessService(SettlementProcessorServiceLocal.LOCAL_SERVICE_NAME);
+      SettlementProcessorServiceLocal settlementProcessorService = (SettlementProcessorServiceLocal)
+          ApplicationDictionaryLocator.locate().getBusinessService(SettlementProcessorServiceLocal.LOCAL_SERVICE_NAME);
 
-			/* (non-Javadoc)
-			 * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doExecute()
-			 */
-			@Override
-			protected void doExecute() throws Exception {
-				settlementProcessorService.processInSettlement(getParams());
-				complete();
-			}
+      /* (non-Javadoc)
+       * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doExecute()
+       */
+      @Override
+      protected void doExecute() throws Exception {
+        settlementProcessorService.processInSettlement(getParams());
+        complete();
+      }
 
-			/* (non-Javadoc)
-			 * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doRoolback()
-			 */
-			@Override
-			protected void doRoolback() throws Exception {
-				settlementProcessorService.rollBackProcessInSettlement(getParams());
-				complete();
-			}
-		};
-	}
+      /* (non-Javadoc)
+       * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doRoolback()
+       */
+      @Override
+      protected void doRoolback() throws Exception {
+        settlementProcessorService.rollBackProcessInSettlement(getParams());
+        complete();
+      }
+    };
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
-	 */
-	@Override
-	public int getIdentifier() {
-		return FACTORY_IDENTIFIER;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
+   */
+  @Override
+  public int getIdentifier() {
+    return FACTORY_IDENTIFIER;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
-	 */
-	@Override
-	public String getName() {
-		return "Process contractor card in settlement"; //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
+   */
+  @Override
+  public String getName() {
+    return "Process contractor card in settlement"; //$NON-NLS-1$
+  }
 
 }

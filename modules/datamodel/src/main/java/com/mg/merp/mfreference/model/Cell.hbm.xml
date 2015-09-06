@@ -1,37 +1,37 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.mfreference.model.Cell" table="MF_CELL">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">MF_CELL_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="WeekCal" class="com.mg.merp.mfreference.model.WeekCalendar">
-      <column name="WEEK_CAL_ID" not-null="false" />
+      <column name="WEEK_CAL_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="WorkCenter" class="com.mg.merp.mfreference.model.WorkCenter">
-      <column name="BOTTLE_NECK_WC_ID" not-null="false" />
+      <column name="BOTTLE_NECK_WC_ID" not-null="false"/>
     </many-to-one>
     <property name="CellName" type="java.lang.String">
-      <column name="CELL_NAME" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="CELL_NAME" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="CapacityFactor" type="java.math.BigDecimal">
-      <column name="CAPACITY_FACTOR" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="CAPACITY_FACTOR" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="Comment" type="java.lang.String">
-      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

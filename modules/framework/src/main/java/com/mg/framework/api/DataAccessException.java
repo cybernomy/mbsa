@@ -16,23 +16,22 @@ package com.mg.framework.api;
 
 /**
  * @author Oleg V. Safonov
- *
  */
 @javax.ejb.ApplicationException
 public class DataAccessException extends ApplicationException {
-	public DataAccessException(String s, Throwable cause) {
-		super(s, cause);
-	}
-	
-	public DataAccessException(String s) {
-		super(s);
-	}	
+  public DataAccessException(String s, Throwable cause) {
+    super(s, cause);
+  }
 
-	public DataAccessException() {
-		super();
-	}	
+  public DataAccessException(String s) {
+    super(s);
+  }
 
-	public DataAccessException(Throwable cause) {
-		super(cause);
-	}
+  public DataAccessException() {
+    super();
+  }
+
+  public DataAccessException(Throwable cause) {
+    super(cause);
+  }
 }

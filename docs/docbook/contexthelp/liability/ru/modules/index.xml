@@ -16,12 +16,11 @@
 <index version="1.0">
 
   <indexitem text="Графики исполнения обязательств">
-    <indexentry text="Содержание графика" target="gio_html" />
-    <indexentry text="Пункты графика" target="items_html" />
-    <indexentry text="Сроки и суммы" target="summ_html" />
-     <indexentry text="Спецификации пункта" target="spec_html" />
+    <indexentry text="Содержание графика" target="gio_html"/>
+    <indexentry text="Пункты графика" target="items_html"/>
+    <indexentry text="Сроки и суммы" target="summ_html"/>
+    <indexentry text="Спецификации пункта" target="spec_html"/>
   </indexitem>
 
-   
-  
+
 </index>

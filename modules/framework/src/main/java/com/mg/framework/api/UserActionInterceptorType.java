@@ -19,7 +19,7 @@ package com.mg.framework.api;
  * @version $Id: UserActionInterceptorType.java,v 1.2 2005/06/01 12:39:50 safonov Exp $
  */
 public enum UserActionInterceptorType {
-    ADD,
-    EDIT,
-    CLONE
+  ADD,
+  EDIT,
+  CLONE
 }

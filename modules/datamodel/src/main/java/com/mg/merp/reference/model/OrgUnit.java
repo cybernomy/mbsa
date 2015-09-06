@@ -22,33 +22,35 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.OrgUnit")
 public class OrgUnit extends com.mg.merp.reference.model.Contractor implements
-		java.io.Serializable {
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	// private java.lang.Integer Id;
+  // private java.lang.Integer Id;
 //	private com.mg.merp.mfreference.model.ResourceGroup ResourceGroup;
 
-	private com.mg.merp.reference.model.Contractor Partner;
+  private com.mg.merp.reference.model.Contractor Partner;
 
-	private OrgUnitType OrgUnitKind;
+  private OrgUnitType OrgUnitKind;
 
-	private java.lang.Boolean IsOffice;
+  private java.lang.Boolean IsOffice;
 
-	private java.lang.Boolean IsStore;
+  private java.lang.Boolean IsStore;
 
-	private java.lang.String FolderTag;
+  private java.lang.String FolderTag;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public OrgUnit() {
-	}
+  /**
+   * default constructor
+   */
+  public OrgUnit() {
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
+  // Property accessors
+  /**
+   *
+   */
 //	@DataItemName("Reference.OrgUnit.ResourceGroup")
 //	public com.mg.merp.mfreference.model.ResourceGroup getResourceGroup() {
 //		return this.ResourceGroup;
@@ -59,64 +61,64 @@ public class OrgUnit extends com.mg.merp.reference.model.Contractor implements
 //		this.ResourceGroup = ResourceGroup;
 //	}
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.OrgUnit.Partner")
-	public com.mg.merp.reference.model.Contractor getPartner() {
-		return this.Partner;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.OrgUnit.Partner")
+  public com.mg.merp.reference.model.Contractor getPartner() {
+    return this.Partner;
+  }
 
-	public void setPartner(com.mg.merp.reference.model.Contractor Partner) {
-		this.Partner = Partner;
-	}
+  public void setPartner(com.mg.merp.reference.model.Contractor Partner) {
+    this.Partner = Partner;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public OrgUnitType getOrgUnitKind() {
-		return this.OrgUnitKind;
-	}
+  public OrgUnitType getOrgUnitKind() {
+    return this.OrgUnitKind;
+  }
 
-	public void setOrgUnitKind(OrgUnitType Kind) {
-		this.OrgUnitKind = Kind;
-	}
+  public void setOrgUnitKind(OrgUnitType Kind) {
+    this.OrgUnitKind = Kind;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.OrgUnit.IsOffice")
-	public java.lang.Boolean getIsOffice() {
-		return this.IsOffice;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.OrgUnit.IsOffice")
+  public java.lang.Boolean getIsOffice() {
+    return this.IsOffice;
+  }
 
-	public void setIsOffice(java.lang.Boolean IsOffice) {
-		this.IsOffice = IsOffice;
-	}
+  public void setIsOffice(java.lang.Boolean IsOffice) {
+    this.IsOffice = IsOffice;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.OrgUnit.IsStore")
-	public java.lang.Boolean getIsStore() {
-		return this.IsStore;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.OrgUnit.IsStore")
+  public java.lang.Boolean getIsStore() {
+    return this.IsStore;
+  }
 
-	public void setIsStore(java.lang.Boolean IsStore) {
-		this.IsStore = IsStore;
-	}
+  public void setIsStore(java.lang.Boolean IsStore) {
+    this.IsStore = IsStore;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.FolderTag")
-	public java.lang.String getFolderTag() {
-		return this.FolderTag;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.FolderTag")
+  public java.lang.String getFolderTag() {
+    return this.FolderTag;
+  }
 
-	public void setFolderTag(java.lang.String FolderTag) {
-		this.FolderTag = FolderTag;
-	}
+  public void setFolderTag(java.lang.String FolderTag) {
+    this.FolderTag = FolderTag;
+  }
 
 }

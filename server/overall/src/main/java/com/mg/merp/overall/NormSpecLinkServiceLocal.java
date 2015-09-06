@@ -18,7 +18,7 @@ import com.mg.merp.overall.model.NormSpecLink;
 
 /**
  * Бизнес-компонент "Связь спецификаций норм выдачи и КТУ"
- * 
+ *
  * @author leonova
  * @author Konstantin S. Alikaev
  * @version $Id: NormSpecLinkServiceLocal.java,v 1.1 2008/06/30 04:13:38 alikaev Exp $

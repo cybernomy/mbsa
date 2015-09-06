@@ -14,8 +14,6 @@
  */
 package com.mg.merp.account.support.ui;
 
-import java.util.Date;
-
 import com.mg.framework.api.BusinessException;
 import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.ui.WidgetEvent;
@@ -26,207 +24,209 @@ import com.mg.merp.account.model.AnlPlan;
 import com.mg.merp.account.support.Messages;
 import com.mg.merp.document.model.DocType;
 
+import java.util.Date;
+
 /**
  * Контроллер ввода данных для проведения операции списания инвентарных карточек
- *  
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: AccInventoryRetireDialog.java,v 1.1 2008/04/29 05:29:04 alikaev Exp $
  */
 public class AccInventoryRetireDialog extends DefaultWizardDialog {
 
-	/**
-	 * заголовок дилогового окна
-	 */
-	private String dialogTitle;
+  /**
+   * заголовок дилогового окна
+   */
+  private String dialogTitle;
 
-	/**
-	 * дата учета
-	 */
-	private Date revalDate;
-	
-	/**
-	 * тип документа
-	 */
-	private DocType docType;
-	
-	/**
-	 * номер документа
-	 */
-	private String docNumber;
-	
-	/**
-	 * дата документа
-	 */
-	private Date docDate;
-	
-	/**
-	 * тип документа основания
-	 */
-	private DocType baseDocType;
-	
-	/**
-	 * номер докумнта основания
-	 */
-	private String baseDocNumber;
-	
-	/**
-	 * дата документа основания
-	 */
-	private Date baseDocDate;
-	
-	/**
-	 * счет
-	 */
-	private AccPlan AccPlan;
-	
-	/**
-	 * аналитика 1-го уровня
-	 */
-	@DataItemName("Account.Inventory.Anl1")
-	private AnlPlan anl1;
-	
-	/**
-	 * аналитика 2-го уровня
-	 */
-	@DataItemName("Account.Inventory.Anl2")
-	private AnlPlan anl2;
-	/**
-	 * аналитика 3-го уровня
-	 */
-	@DataItemName("Account.Inventory.Anl3")
-	private AnlPlan anl3;
+  /**
+   * дата учета
+   */
+  private Date revalDate;
 
-	/**
-	 * аналитика 4-го уровня
-	 */
-	@DataItemName("Account.Inventory.Anl4")
-	private AnlPlan anl4;
-	
-	/**
-	 * аналитика 5-го уровня
-	 */
-	@DataItemName("Account.Inventory.Anl5")
-	private AnlPlan anl5;
+  /**
+   * тип документа
+   */
+  private DocType docType;
 
-	public AccInventoryRetireDialog() {
-	}
+  /**
+   * номер документа
+   */
+  private String docNumber;
 
-	public Date getRevalDate() {
-		return revalDate;
-	}
+  /**
+   * дата документа
+   */
+  private Date docDate;
 
-	public DocType getDocType() {
-		return docType;
-	}
+  /**
+   * тип документа основания
+   */
+  private DocType baseDocType;
 
-	public String getDocNumber() {
-		return docNumber;
-	}
+  /**
+   * номер докумнта основания
+   */
+  private String baseDocNumber;
 
-	public Date getDocDate() {
-		return docDate;
-	}
+  /**
+   * дата документа основания
+   */
+  private Date baseDocDate;
 
-	public DocType getBaseDocType() {
-		return baseDocType;
-	}
+  /**
+   * счет
+   */
+  private AccPlan AccPlan;
 
-	public String getBaseDocNumber() {
-		return baseDocNumber;
-	}
+  /**
+   * аналитика 1-го уровня
+   */
+  @DataItemName("Account.Inventory.Anl1")
+  private AnlPlan anl1;
 
-	public Date getBaseDocDate() {
-		return baseDocDate;
-	}
+  /**
+   * аналитика 2-го уровня
+   */
+  @DataItemName("Account.Inventory.Anl2")
+  private AnlPlan anl2;
+  /**
+   * аналитика 3-го уровня
+   */
+  @DataItemName("Account.Inventory.Anl3")
+  private AnlPlan anl3;
 
-	public AccPlan getAccPlan() {
-		return AccPlan;
-	}
+  /**
+   * аналитика 4-го уровня
+   */
+  @DataItemName("Account.Inventory.Anl4")
+  private AnlPlan anl4;
 
-	public AnlPlan getAnl1() {
-		return anl1;
-	}
+  /**
+   * аналитика 5-го уровня
+   */
+  @DataItemName("Account.Inventory.Anl5")
+  private AnlPlan anl5;
 
-	public AnlPlan getAnl2() {
-		return anl2;
-	}
+  public AccInventoryRetireDialog() {
+  }
 
-	public AnlPlan getAnl3() {
-		return anl3;
-	}
+  public Date getRevalDate() {
+    return revalDate;
+  }
 
-	public AnlPlan getAnl4() {
-		return anl4;
-	}
+  public void setRevalDate(Date revalDate) {
+    this.revalDate = revalDate;
+  }
 
-	public AnlPlan getAnl5() {
-		return anl5;
-	}
+  public DocType getDocType() {
+    return docType;
+  }
 
-	public void setDialogTitle(String dialogTitle) {
-		this.dialogTitle = dialogTitle;
-	}
+  public void setDocType(DocType docType) {
+    this.docType = docType;
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultDialog#onActionOk(com.mg.framework.api.ui.WidgetEvent)
-	 */
-	@Override
-	public void onActionOk(WidgetEvent event) {
-		if (this.revalDate == null || this.AccPlan == null || this.docType == null || StringUtils.stringNullOrEmpty(this.docNumber) || this.docDate == null)
-			throw new BusinessException(Messages.getInstance().getMessage(Messages.ACC_INVENTORY_RETIRE_DLG_CHECK));
-		else
-			super.onActionOk(event);
-	}
+  public String getDocNumber() {
+    return docNumber;
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractForm#doOnRun()
-	 */
-	@Override
-	protected void doOnRun() {
-		view.setTitle(this.dialogTitle);
-		super.doOnRun();
-	}
+  public void setDocNumber(String docNumber) {
+    this.docNumber = docNumber;
+  }
 
-	public void setRevalDate(Date revalDate) {
-		this.revalDate = revalDate;
-	}
+  public Date getDocDate() {
+    return docDate;
+  }
 
-	public void setDocType(DocType docType) {
-		this.docType = docType;
-	}
+  public void setDocDate(Date docDate) {
+    this.docDate = docDate;
+  }
 
-	public void setDocNumber(String docNumber) {
-		this.docNumber = docNumber;
-	}
+  public DocType getBaseDocType() {
+    return baseDocType;
+  }
 
-	public void setDocDate(Date docDate) {
-		this.docDate = docDate;
-	}
+  public String getBaseDocNumber() {
+    return baseDocNumber;
+  }
 
-	public void setAccPlan(AccPlan accPlan) {
-		AccPlan = accPlan;
-	}
+  public Date getBaseDocDate() {
+    return baseDocDate;
+  }
 
-	public void setAnl1(AnlPlan anl1) {
-		this.anl1 = anl1;
-	}
+  public AccPlan getAccPlan() {
+    return AccPlan;
+  }
 
-	public void setAnl2(AnlPlan anl2) {
-		this.anl2 = anl2;
-	}
+  public void setAccPlan(AccPlan accPlan) {
+    AccPlan = accPlan;
+  }
 
-	public void setAnl3(AnlPlan anl3) {
-		this.anl3 = anl3;
-	}
+  public AnlPlan getAnl1() {
+    return anl1;
+  }
 
-	public void setAnl4(AnlPlan anl4) {
-		this.anl4 = anl4;
-	}
+  public void setAnl1(AnlPlan anl1) {
+    this.anl1 = anl1;
+  }
 
-	public void setAnl5(AnlPlan anl5) {
-		this.anl5 = anl5;
-	}
-	
+  public AnlPlan getAnl2() {
+    return anl2;
+  }
+
+  public void setAnl2(AnlPlan anl2) {
+    this.anl2 = anl2;
+  }
+
+  public AnlPlan getAnl3() {
+    return anl3;
+  }
+
+  public void setAnl3(AnlPlan anl3) {
+    this.anl3 = anl3;
+  }
+
+  public AnlPlan getAnl4() {
+    return anl4;
+  }
+
+  public void setAnl4(AnlPlan anl4) {
+    this.anl4 = anl4;
+  }
+
+  public AnlPlan getAnl5() {
+    return anl5;
+  }
+
+  public void setAnl5(AnlPlan anl5) {
+    this.anl5 = anl5;
+  }
+
+  public void setDialogTitle(String dialogTitle) {
+    this.dialogTitle = dialogTitle;
+  }
+
+  /*
+   * (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultDialog#onActionOk(com.mg.framework.api.ui.WidgetEvent)
+   */
+  @Override
+  public void onActionOk(WidgetEvent event) {
+    if (this.revalDate == null || this.AccPlan == null || this.docType == null || StringUtils.stringNullOrEmpty(this.docNumber) || this.docDate == null)
+      throw new BusinessException(Messages.getInstance().getMessage(Messages.ACC_INVENTORY_RETIRE_DLG_CHECK));
+    else
+      super.onActionOk(event);
+  }
+
+  /*
+   * (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractForm#doOnRun()
+   */
+  @Override
+  protected void doOnRun() {
+    view.setTitle(this.dialogTitle);
+    super.doOnRun();
+  }
+
 }

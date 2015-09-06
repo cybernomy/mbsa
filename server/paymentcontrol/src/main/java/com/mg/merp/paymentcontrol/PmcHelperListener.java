@@ -18,12 +18,12 @@ import java.util.EventListener;
 
 /**
  * Слушатель класса помощника для работы с обязательствами
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: PmcHelperListener.java,v 1.1 2007/05/14 04:59:59 sharapov Exp $
  */
 public interface PmcHelperListener extends EventListener {
 
-	void complete();
-		
+  void complete();
+
 }

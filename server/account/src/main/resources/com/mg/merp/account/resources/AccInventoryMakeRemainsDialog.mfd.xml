@@ -13,11 +13,15 @@
 
 <!-- $Id: AccInventoryMakeRemainsDialog.mfd.xml,v 1.1 2008/04/29 05:30:03 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="10" controller="com.mg.merp.account.support.ui.AccInventoryMakeRemainsDialog" title="resource://com.mg.merp.account.resources.formelements#AccInventoryMakeRemainsDlg.Title" width="400" height="100">
-	<jfd:container id="mainBox" layout="jfd:defaultMtLayout" alignment="expand_expand">
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="period" text="resource://com.mg.merp.account.resources.formelements#AccInventoryMakeRemainsDlg.Period"/>
-	</jfd:container>
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
-	
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="10"
+          controller="com.mg.merp.account.support.ui.AccInventoryMakeRemainsDialog"
+          title="resource://com.mg.merp.account.resources.formelements#AccInventoryMakeRemainsDlg.Title"
+          width="400" height="100">
+  <jfd:container id="mainBox" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="period"
+               text="resource://com.mg.merp.account.resources.formelements#AccInventoryMakeRemainsDlg.Period"/>
+  </jfd:container>
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
+
 </jfd:form>

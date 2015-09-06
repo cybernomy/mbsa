@@ -14,16 +14,19 @@
 <!-- $Id: jboss-service.xml,v 1.4 2007/11/15 09:29:27 safonov Exp $ -->
 
 <server>
-    <mbean code="com.mg.merp.baiengine.support.jboss.BusinessAddinEngineService" name="merp:baiengine=BusinessAddinEngineService">
-        <depends>jboss:service=MERP</depends>
-        <depends>merp.har:service=MERPDataWarehouse</depends>
-    </mbean>
+  <mbean code="com.mg.merp.baiengine.support.jboss.BusinessAddinEngineService"
+         name="merp:baiengine=BusinessAddinEngineService">
+    <depends>jboss:service=MERP</depends>
+    <depends>merp.har:service=MERPDataWarehouse</depends>
+  </mbean>
 
-    <mbean code="com.mg.merp.baiengine.support.jboss.BusinessAddinWorkbenchService" name="merp:baiengine=BusinessAddinWorkbenchService">
-       <depends>merp:baiengine=BusinessAddinEngineService</depends>
-    </mbean>
+  <mbean code="com.mg.merp.baiengine.support.jboss.BusinessAddinWorkbenchService"
+         name="merp:baiengine=BusinessAddinWorkbenchService">
+    <depends>merp:baiengine=BusinessAddinEngineService</depends>
+  </mbean>
 
-    <mbean code="com.mg.merp.baiengine.support.jboss.CustomActionManagerService" name="merp:service=CustomActionManagerService">
-       <depends>merp:baiengine=BusinessAddinEngineService</depends>
-    </mbean>
+  <mbean code="com.mg.merp.baiengine.support.jboss.CustomActionManagerService"
+         name="merp:service=CustomActionManagerService">
+    <depends>merp:baiengine=BusinessAddinEngineService</depends>
+  </mbean>
 </server>

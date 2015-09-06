@@ -18,19 +18,19 @@ import com.mg.framework.api.ApplicationException;
 
 /**
  * Класс ИС машины бизнес расширений системы
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: BusinessAddinException.java,v 1.1 2006/10/12 12:02:05 safonov Exp $
  */
 @javax.ejb.ApplicationException
 public class BusinessAddinException extends ApplicationException {
 
-	public BusinessAddinException(String s) {
-		super(s);
-	}
+  public BusinessAddinException(String s) {
+    super(s);
+  }
 
-	public BusinessAddinException(String s, Throwable cause) {
-		super(s, cause);
-	}
-	
+  public BusinessAddinException(String s, Throwable cause) {
+    super(s, cause);
+  }
+
 }

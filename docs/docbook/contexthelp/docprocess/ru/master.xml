@@ -1,50 +1,51 @@
 ﻿<?xml version='1.0' encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
-                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
-[
-<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
-<!ENTITY chap_context SYSTEM "modules/context.xml">
-<!ENTITY chap_001dp SYSTEM "modules/001dp.xml">
-<!ENTITY chap_002dp SYSTEM "modules/002dp.xml">
-<!ENTITY chap_003dp SYSTEM "modules/003dp.xml">
-<!ENTITY chap_004dp SYSTEM "modules/004dp.xml">
-<!ENTITY chap_005dp SYSTEM "modules/005dp.xml">
-<!ENTITY chap_006dp SYSTEM "modules/006dp.xml">
-<!ENTITY chap_007dp SYSTEM "modules/007dp.xml">
-<!ENTITY chap_008dp SYSTEM "modules/008dp.xml">
-<!ENTITY chap_010dp SYSTEM "modules/010dp.xml">
-<!ENTITY chap_011dp SYSTEM "modules/011dp.xml">
-<!ENTITY chap_012dp SYSTEM "modules/012dp.xml">
-<!ENTITY chap_013dp SYSTEM "modules/013dp.xml"> 
-<!ENTITY dp "Документооборот">
-<!ENTITY td "Типы документов">
-<!ENTITY acc "Бухгалтерский учёт">
-<!ENTITY merp "Millennium Business Suite Anywhere">
-<!ENTITY cont_centr "Центр управления">
-]>
+    "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+    [
+        <!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+        <!ENTITY chap_context SYSTEM "modules/context.xml">
+        <!ENTITY chap_001dp SYSTEM "modules/001dp.xml">
+        <!ENTITY chap_002dp SYSTEM "modules/002dp.xml">
+        <!ENTITY chap_003dp SYSTEM "modules/003dp.xml">
+        <!ENTITY chap_004dp SYSTEM "modules/004dp.xml">
+        <!ENTITY chap_005dp SYSTEM "modules/005dp.xml">
+        <!ENTITY chap_006dp SYSTEM "modules/006dp.xml">
+        <!ENTITY chap_007dp SYSTEM "modules/007dp.xml">
+        <!ENTITY chap_008dp SYSTEM "modules/008dp.xml">
+        <!ENTITY chap_010dp SYSTEM "modules/010dp.xml">
+        <!ENTITY chap_011dp SYSTEM "modules/011dp.xml">
+        <!ENTITY chap_012dp SYSTEM "modules/012dp.xml">
+        <!ENTITY chap_013dp SYSTEM "modules/013dp.xml">
+        <!ENTITY dp "Документооборот">
+        <!ENTITY td "Типы документов">
+        <!ENTITY acc "Бухгалтерский учёт">
+        <!ENTITY merp "Millennium Business Suite Anywhere">
+        <!ENTITY cont_centr "Центр управления">
+        ]>
 
 <book lang="ru">
   <bookinfo>
-      <title> &dp; в системе &merp;. 
-      Руководство пользователя </title>
-      <releaseinfo>4.0.6</releaseinfo>
-      <copyright>
-	<year>1998</year>
-	<year>2008</year>
-	<holder>ООО &quot;Бизнестехнология&quot;</holder>
-      </copyright>    
+    <title> &dp; в системе &merp;.
+      Руководство пользователя
+    </title>
+    <releaseinfo>4.0.6</releaseinfo>
+    <copyright>
+      <year>1998</year>
+      <year>2008</year>
+      <holder>ООО &quot;Бизнестехнология&quot;</holder>
+    </copyright>
   </bookinfo>
-  
+
   <toc/>
-  
-<!-- <preface id="target" revision="1">
-      <title>Целевая аудитория</title>
 
-      <para>Данное руководство предназначено для пользователей, работающих  
-	с модулем &quot;&fin;&quot; системы &merp;. </para>
+  <!-- <preface id="target" revision="1">
+        <title>Целевая аудитория</title>
 
-  </preface>  -->
-  
+        <para>Данное руководство предназначено для пользователей, работающих
+    с модулем &quot;&fin;&quot; системы &merp;. </para>
+
+    </preface>  -->
+
   &chap_001dp;
   &chap_002dp;
   &chap_003dp;

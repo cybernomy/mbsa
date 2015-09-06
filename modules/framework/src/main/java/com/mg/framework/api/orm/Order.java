@@ -18,65 +18,59 @@ import java.io.Serializable;
 
 /**
  * Фабрика создания сортировки запроса
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: Order.java,v 1.2 2006/12/12 13:54:52 safonov Exp $
  */
 public class Order implements Serializable {
-	private String propertyName;
-	private boolean ascending;
-	private boolean ignoreCase;
-	
-	private Order(String propertyName, boolean ascending) {
-		super();
-		this.propertyName = propertyName;
-		this.ascending = ascending;
-	}
+  private String propertyName;
+  private boolean ascending;
+  private boolean ignoreCase;
 
-	/**
-	 * Ascending order
-	 * 
-	 * @param propertyName
-	 * @return
-	 */
-    public static Order asc(String propertyName) {
-        return new Order(propertyName, true);
-    }
-    
-    /**
-     * Descending order
-     * 
-     * @param propertyName
-     * @return
-     */
-    public static Order desc(String propertyName) {
-        return new Order(propertyName, false);
-    }
+  private Order(String propertyName, boolean ascending) {
+    super();
+    this.propertyName = propertyName;
+    this.ascending = ascending;
+  }
 
-    public Order ignoreCase() {
-    	ignoreCase = true;
-    	return this;
-    }
+  /**
+   * Ascending order
+   */
+  public static Order asc(String propertyName) {
+    return new Order(propertyName, true);
+  }
 
-	/**
-	 * @return the ascending
-	 */
-	public boolean isAscending() {
-		return ascending;
-	}
+  /**
+   * Descending order
+   */
+  public static Order desc(String propertyName) {
+    return new Order(propertyName, false);
+  }
 
-	/**
-	 * @return the ignoreCase
-	 */
-	public boolean isIgnoreCase() {
-		return ignoreCase;
-	}
+  public Order ignoreCase() {
+    ignoreCase = true;
+    return this;
+  }
 
-	/**
-	 * @return the propertyName
-	 */
-	public String getPropertyName() {
-		return propertyName;
-	}
-    
+  /**
+   * @return the ascending
+   */
+  public boolean isAscending() {
+    return ascending;
+  }
+
+  /**
+   * @return the ignoreCase
+   */
+  public boolean isIgnoreCase() {
+    return ignoreCase;
+  }
+
+  /**
+   * @return the propertyName
+   */
+  public String getPropertyName() {
+    return propertyName;
+  }
+
 }

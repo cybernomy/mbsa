@@ -8,31 +8,31 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 
 public class WorkflowPreferencePage extends PreferencePage implements
-		IWorkbenchPreferencePage {
+    IWorkbenchPreferencePage {
 
-	public WorkflowPreferencePage() {
-		// TODO Auto-generated constructor stub
-	}
+  public WorkflowPreferencePage() {
+    // TODO Auto-generated constructor stub
+  }
 
-	public WorkflowPreferencePage(String title) {
-		super(title);
-		// TODO Auto-generated constructor stub
-	}
+  public WorkflowPreferencePage(String title) {
+    super(title);
+    // TODO Auto-generated constructor stub
+  }
 
-	public WorkflowPreferencePage(String title, ImageDescriptor image) {
-		super(title, image);
-		// TODO Auto-generated constructor stub
-	}
+  public WorkflowPreferencePage(String title, ImageDescriptor image) {
+    super(title, image);
+    // TODO Auto-generated constructor stub
+  }
 
-	@Override
-	protected Control createContents(Composite parent) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+  @Override
+  protected Control createContents(Composite parent) {
+    // TODO Auto-generated method stub
+    return null;
+  }
 
-	public void init(IWorkbench workbench) {
-		// TODO Auto-generated method stub
+  public void init(IWorkbench workbench) {
+    // TODO Auto-generated method stub
 
-	}
+  }
 
 }

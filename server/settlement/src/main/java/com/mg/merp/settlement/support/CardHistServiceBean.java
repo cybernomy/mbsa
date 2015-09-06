@@ -20,13 +20,12 @@ import com.mg.merp.settlement.CardHistServiceLocal;
 import com.mg.merp.settlement.model.ContractorCardHist;
 
 /**
- * Бизнес-компонент "История фактического движения по картотеке" 
- * 
+ * Бизнес-компонент "История фактического движения по картотеке"
+ *
  * @author leonova
  * @version $Id: CardHistServiceBean.java,v 1.3 2006/09/14 08:55:18 leonova Exp $
  */
 public class CardHistServiceBean extends AbstractPOJODataBusinessObjectServiceBean<ContractorCardHist, Integer> implements CardHistServiceLocal {
-
 
 
 }

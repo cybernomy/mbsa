@@ -15,54 +15,57 @@
 package com.mg.merp.mfreference.model;
 
 
-
 /**
  * @author hbm2java
  * @version $Id: CostDetail.java,v 1.2 2005/07/18 13:57:09 safonov Exp $
  */
 public class CostDetail extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-    // Fields    
+  // Fields
 
- private java.lang.Integer Id;
- private com.mg.merp.core.model.SysClient SysClient;
+  private java.lang.Integer Id;
+  private com.mg.merp.core.model.SysClient SysClient;
 
 
-    // Constructors
+  // Constructors
 
-    /** default constructor */
-    public CostDetail() {
-    }
-    
-    /** constructor with id */
-    public CostDetail(java.lang.Integer Id) {
-        this.Id = Id;
-    }
-   
-    
-    
+  /**
+   * default constructor
+   */
+  public CostDetail() {
+  }
 
-    // Property accessors
-    /**
-    
-    */
-    
-    public java.lang.Integer getId () {
-        return this.Id;
-    }
-    
-   public void setId (java.lang.Integer Id) {
-        this.Id = Id;
-    }
-    /**
-    
-    */
-    
-    public com.mg.merp.core.model.SysClient getSysClient () {
-        return this.SysClient;
-    }
-    
-   public void setSysClient (com.mg.merp.core.model.SysClient SysClient) {
-        this.SysClient = SysClient;
-    }
+  /**
+   * constructor with id
+   */
+  public CostDetail(java.lang.Integer Id) {
+    this.Id = Id;
+  }
+
+
+  // Property accessors
+
+  /**
+
+   */
+
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
+
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
+
+  /**
+
+   */
+
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
+
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 }

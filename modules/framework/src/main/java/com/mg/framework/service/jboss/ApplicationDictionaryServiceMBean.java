@@ -14,15 +14,15 @@
  */
 package com.mg.framework.service.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.framework.api.metadata.ApplicationDictionary;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * @author Oleg V. Safonov
  * @version $Id: ApplicationDictionaryServiceMBean.java,v 1.1 2006/01/24 14:09:07 safonov Exp $
  */
 public interface ApplicationDictionaryServiceMBean extends
-		ApplicationDictionary, ServiceMBean {
+    ApplicationDictionary, ServiceMBean {
 
 }

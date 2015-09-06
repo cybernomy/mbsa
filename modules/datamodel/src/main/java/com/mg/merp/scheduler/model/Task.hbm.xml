@@ -1,44 +1,44 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!--
-  Scheduler task
+  <!--
+    Scheduler task
 
-  $Id: Task.hbm.xml,v 1.2 2008/08/25 08:29:11 sharapov Exp $ 
--->
+    $Id: Task.hbm.xml,v 1.2 2008/08/25 08:29:11 sharapov Exp $
+  -->
   <class name="com.mg.merp.scheduler.model.Task" table="SCH_TASK">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">SCH_TASK_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Folder" class="com.mg.merp.core.model.Folder">
-      <column name="FOLDER_ID" not-null="true" />
+      <column name="FOLDER_ID" not-null="true"/>
     </many-to-one>
     <many-to-one name="BAi" class="com.mg.merp.baiengine.model.Repository">
-      <column name="ALGORITHM_ID" not-null="true" />
+      <column name="ALGORITHM_ID" not-null="true"/>
     </many-to-one>
     <property name="Code" type="java.lang.String">
-      <column name="CODE" length="20" not-null="true" sql-type="VARCHAR" />
+      <column name="CODE" length="20" not-null="true" sql-type="VARCHAR"/>
     </property>
     <property name="Name" type="java.lang.String">
-      <column name="NAME" length="80" not-null="true" sql-type="VARCHAR" />
+      <column name="NAME" length="80" not-null="true" sql-type="VARCHAR"/>
     </property>
     <property name="Description" type="java.lang.String">
-      <column name="DESCRIPTION" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="DESCRIPTION" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="CronExpression" type="java.lang.String">
-      <column name="CRON_EXPRESSION" length="256" not-null="true" sql-type="VARCHAR" />
+      <column name="CRON_EXPRESSION" length="256" not-null="true" sql-type="VARCHAR"/>
     </property>
     <property name="Active" type="boolean">
-      <column name="IS_ACTIVE" not-null="false" sql-type="SMALLINT" />
+      <column name="IS_ACTIVE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

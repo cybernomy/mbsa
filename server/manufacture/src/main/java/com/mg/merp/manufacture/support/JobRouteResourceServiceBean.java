@@ -15,21 +15,20 @@
 
 package com.mg.merp.manufacture.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.manufacture.JobRouteResourceServiceLocal;
 import com.mg.merp.manufacture.model.JobRouteResource;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Ресурсы ЗНП" 
- * 
+ * Бизнес-компонент "Ресурсы ЗНП"
+ *
  * @author leonova
  * @version $Id: JobRouteResourceServiceBean.java,v 1.2 2006/09/09 09:36:56 leonova Exp $
  */
-@Stateless(name="merp/manufacture/JobRouteResourceService")
-public class JobRouteResourceServiceBean extends AbstractPOJODataBusinessObjectServiceBean<JobRouteResource, Integer> implements JobRouteResourceServiceLocal{
-
+@Stateless(name = "merp/manufacture/JobRouteResourceService")
+public class JobRouteResourceServiceBean extends AbstractPOJODataBusinessObjectServiceBean<JobRouteResource, Integer> implements JobRouteResourceServiceLocal {
 
 
 }

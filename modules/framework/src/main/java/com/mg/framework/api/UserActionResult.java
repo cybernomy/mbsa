@@ -21,11 +21,11 @@ import java.io.Serializable;
  * @version $Id: UserActionResult.java,v 1.1 2005/04/28 15:33:24 safonov Exp $
  */
 public class UserActionResult implements Serializable {
-    public String data;
-    public Object featureLinks;
-    
-    public UserActionResult(String data, Object featureLinks) {
-        this.data = data;
-        this.featureLinks = featureLinks;
-    }
+  public String data;
+  public Object featureLinks;
+
+  public UserActionResult(String data, Object featureLinks) {
+    this.data = data;
+    this.featureLinks = featureLinks;
+  }
 }

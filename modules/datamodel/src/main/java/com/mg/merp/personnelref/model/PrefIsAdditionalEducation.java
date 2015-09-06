@@ -19,22 +19,22 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Тип образования
- * 
+ *
  * @author leonova
  * @version $Id: PrefIsAdditionalEducation.java,v 1.1 2006/04/13 10:23:53 safonov Exp $
  */
-@DataItemName ("PersonnelRef.Personnel.PrefIsAdditionalEducation")
+@DataItemName("PersonnelRef.Personnel.PrefIsAdditionalEducation")
 public enum PrefIsAdditionalEducation {
-	/**
-	 * Основное
-	 */
-	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#PrefIsAdditionalEducation.Base")
-	BASE,
+  /**
+   * Основное
+   */
+  @EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#PrefIsAdditionalEducation.Base")
+  BASE,
 
-	/**
-	 * Послевузовское
-	 */
-	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#PrefIsAdditionalEducation.Grad")
-	GRAD
+  /**
+   * Послевузовское
+   */
+  @EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#PrefIsAdditionalEducation.Grad")
+  GRAD
 
 }

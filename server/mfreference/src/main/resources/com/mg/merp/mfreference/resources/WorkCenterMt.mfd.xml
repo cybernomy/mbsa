@@ -13,57 +13,68 @@
 
 <!-- $Id: WorkCenterMt.mfd.xml,v 1.4 2006/12/03 13:06:38 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.mfreference.support.ui.WorkCenterMt" title="resource://com.mg.merp.mfreference.resources.formelements#WorkCenter.FormMt.Title" helpTopic="mfreference#workcentr_html" > 
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.mfreference.support.ui.WorkCenterMt"
+          title="resource://com.mg.merp.mfreference.resources.formelements#WorkCenter.FormMt.Title"
+          helpTopic="mfreference#workcentr_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	 <jfd:container id="mainFields" layout="jfd:tabbed" alignment="expand_expand" >
-	 	
-	 	<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#WorkCenter.Tab.Title" helpTopic="mfreference#workcentr_html" >
-		 	<jfd:field id="WcCode" />
-			<jfd:field id="WcName" />
-		 	<jfd:field id="ResourceGroup" /> 
-			<jfd:field id="Comment" /> 
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />	
-		</jfd:container>     
+  <jfd:container id="mainFields" layout="jfd:tabbed" alignment="expand_expand">
 
-		<jfd:container id="wcPlanFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#WorkCenter.Planning" helpTopic="mfreference#wcplan_html" >
-		  	<jfd:field id="Cell" />  	 
-	  		<jfd:field id="WeekCal" />  
-	  		<jfd:field id="Efficiency" /> 
-	  		<jfd:field id="Utilization"/> 
-	  		<jfd:field id="SchTolerance" /> 
-	   		<jfd:field id="MchRunTotalHrs"/>  
-	  		<jfd:field id="MchNumber" /> 
-	  		<jfd:field id="LbrNumber" />
-	  	 	<jfd:field id="LbrRunTotalHrs" />
-	  		<jfd:field id="LbrSetupTotalHrs" />  
-	   		<jfd:field id="QueueTotalQty" /> 
-	   	 	<jfd:field id="QueueTicks" />
-	   		<jfd:field id="QueueAvgHrs" />  	  		
-	  		<jfd:field id="LbrFlag" /> 
-	  		<jfd:field id="CapacityPlan" />
-	  		<jfd:field id="CapacitySchedule" /> 
-	  		<jfd:field id="MchFlag" />  
-		</jfd:container> 
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.mfreference.resources.formelements#WorkCenter.Tab.Title"
+                   helpTopic="mfreference#workcentr_html">
+      <jfd:field id="WcCode"/>
+      <jfd:field id="WcName"/>
+      <jfd:field id="ResourceGroup"/>
+      <jfd:field id="Comment"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
 
-		<jfd:container id="wcСostFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#WorkCenter.Cost" helpTopic="mfreference#wccost_html" >
-		 	<jfd:field id="Contractor" />  
-		 	<jfd:field id="LbrSetupAvgRate" />
-		 	<jfd:field id="LbrRunAvgRate" />
-		 	<jfd:field id="OutsideFlag" />
-		 	<jfd:field id="MchBackflushFlag" />
-			<jfd:field id="MchBaseOhFlag" />
-		 	<jfd:field id="LbrBackflushFlag" />
-		  	<jfd:field id="LbrBaseOhFlag" />
-		 	<jfd:field id="MtlBaseOhFlag" />  	
-		 	<jfd:field id="ControlPointFlag" />  	
-		</jfd:container>   		
-		
-		<jfd:maintenanceTable id="workCenterRates" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#WorkCenter.NormRates" helpTopic="mfreference#wccostnorm_html" >
-	 	</jfd:maintenanceTable>  
-	</jfd:container> 
+    <jfd:container id="wcPlanFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.mfreference.resources.formelements#WorkCenter.Planning"
+                   helpTopic="mfreference#wcplan_html">
+      <jfd:field id="Cell"/>
+      <jfd:field id="WeekCal"/>
+      <jfd:field id="Efficiency"/>
+      <jfd:field id="Utilization"/>
+      <jfd:field id="SchTolerance"/>
+      <jfd:field id="MchRunTotalHrs"/>
+      <jfd:field id="MchNumber"/>
+      <jfd:field id="LbrNumber"/>
+      <jfd:field id="LbrRunTotalHrs"/>
+      <jfd:field id="LbrSetupTotalHrs"/>
+      <jfd:field id="QueueTotalQty"/>
+      <jfd:field id="QueueTicks"/>
+      <jfd:field id="QueueAvgHrs"/>
+      <jfd:field id="LbrFlag"/>
+      <jfd:field id="CapacityPlan"/>
+      <jfd:field id="CapacitySchedule"/>
+      <jfd:field id="MchFlag"/>
+    </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:container id="wcСostFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.mfreference.resources.formelements#WorkCenter.Cost"
+                   helpTopic="mfreference#wccost_html">
+      <jfd:field id="Contractor"/>
+      <jfd:field id="LbrSetupAvgRate"/>
+      <jfd:field id="LbrRunAvgRate"/>
+      <jfd:field id="OutsideFlag"/>
+      <jfd:field id="MchBackflushFlag"/>
+      <jfd:field id="MchBaseOhFlag"/>
+      <jfd:field id="LbrBackflushFlag"/>
+      <jfd:field id="LbrBaseOhFlag"/>
+      <jfd:field id="MtlBaseOhFlag"/>
+      <jfd:field id="ControlPointFlag"/>
+    </jfd:container>
+
+    <jfd:maintenanceTable id="workCenterRates" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.mfreference.resources.formelements#WorkCenter.NormRates"
+                          helpTopic="mfreference#wccostnorm_html">
+    </jfd:maintenanceTable>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

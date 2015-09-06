@@ -25,57 +25,56 @@ import com.mg.merp.account.model.AccPlan;
 
 /**
  * Базовый класс для SearchHelp аналитических счетов
- * 
+ *
  * @author leonova
  * @version $Id: AnlPlanSearchHelp.java,v 1.7 2009/02/25 15:09:59 safonov Exp $
  */
 public abstract class AnlPlanSearchHelp extends AbstractSearchHelp {
 
-	protected AccPlan accPlan;
-	
-	protected abstract String getAccPlanContextName();
-	
-	protected abstract short getAnalitikaLevel();
-	
-	@Override
-	protected String[] defineImportContext() {
-		return new String[] {getAccPlanContextName()};
-	}
+  protected AccPlan accPlan;
 
-	private AccPlan getAccPlan() {
-		return getAccPlanContextName() == null ? accPlan : (AccPlan) getImportContextValue(getAccPlanContextName());
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
-	 */
-	@Override
-	protected void doSearch() throws Exception {
-		AnlPlanSearchForm form = (AnlPlanSearchForm) UIProducer.produceForm("com/mg/merp/account/resources/AnlPlanSearchForm.mfd.xml");
-		form.addSearchHelpListener(this);
-		form.setSearchParams(getAccPlan(), getAnalitikaLevel());		
-		form.run(UIUtils.isModalMode());
-	}
+  protected abstract String getAccPlanContextName();
 
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doView(com.mg.framework.api.orm.PersistentObject)
-	 */
-	@Override
-	protected void doView(PersistentObject entity) {
-		AnlPlanServiceLocal service = (AnlPlanServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/account/AnlPlan");
-		MaintenanceHelper.view(service, (Integer) entity.getPrimaryKey(), null, null);
-	}
+  protected abstract short getAnalitikaLevel();
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.SearchHelp#isSupportView()
-	 */
-	@Override
-	public boolean isSupportView() {
-		return true;
-	}
+  @Override
+  protected String[] defineImportContext() {
+    return new String[]{getAccPlanContextName()};
+  }
 
-	public void setAccPlan(AccPlan accPlan) {
-		this.accPlan = accPlan;
-	}
+  private AccPlan getAccPlan() {
+    return getAccPlanContextName() == null ? accPlan : (AccPlan) getImportContextValue(getAccPlanContextName());
+  }
+
+  public void setAccPlan(AccPlan accPlan) {
+    this.accPlan = accPlan;
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
+   */
+  @Override
+  protected void doSearch() throws Exception {
+    AnlPlanSearchForm form = (AnlPlanSearchForm) UIProducer.produceForm("com/mg/merp/account/resources/AnlPlanSearchForm.mfd.xml");
+    form.addSearchHelpListener(this);
+    form.setSearchParams(getAccPlan(), getAnalitikaLevel());
+    form.run(UIUtils.isModalMode());
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doView(com.mg.framework.api.orm.PersistentObject)
+   */
+  @Override
+  protected void doView(PersistentObject entity) {
+    AnlPlanServiceLocal service = (AnlPlanServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/account/AnlPlan");
+    MaintenanceHelper.view(service, (Integer) entity.getPrimaryKey(), null, null);
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.SearchHelp#isSupportView()
+   */
+  @Override
+  public boolean isSupportView() {
+    return true;
+  }
 }

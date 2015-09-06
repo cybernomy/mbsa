@@ -12,12 +12,21 @@
 <!-- ======================================================================= -->
 
 <!-- $Id: DefaultDocMaintenanceFooterMacros.xml,v 1.7 2008/08/01 08:20:35 safonov Exp $ -->
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="buttonDoc" layout="jfd:box" alignment="expand_top">
-	<!--jfd:button id="Schedule" alignment="left_top" text="resource://com.mg.merp.document.resources.formelements#Document.Button.Schedule" /-->
-	<jfd:button id="History" alignment="left_top" text="resource://com.mg.merp.docflow.resources.formelements#DocFlowHistory" actionListener="ShowHistory" />
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="buttonDoc" layout="jfd:box"
+               alignment="expand_top">
+  <!--jfd:button id="Schedule" alignment="left_top" text="resource://com.mg.merp.document.resources.formelements#Document.Button.Schedule" /-->
+  <jfd:button id="History" alignment="left_top"
+              text="resource://com.mg.merp.docflow.resources.formelements#DocFlowHistory"
+              actionListener="ShowHistory"/>
 
-	<jfd:filler id="buttonsFiller" alignment="expand_top" text="horizontalGlue" />
-	<jfd:button id="LineMaintenanceButton" alignment="right_top" enabled="false" visible="false" text="resource://com.mg.merp.document.resources.formelements#LineMaintenanceButton" actionListener="LineMaintenance" ></jfd:button>
-	<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#OkButton" actionListener="Save" ></jfd:button>
-	<jfd:button id="CancelButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CloseButton" actionListener="Cancel" ></jfd:button>
+  <jfd:filler id="buttonsFiller" alignment="expand_top" text="horizontalGlue"/>
+  <jfd:button id="LineMaintenanceButton" alignment="right_top" enabled="false" visible="false"
+              text="resource://com.mg.merp.document.resources.formelements#LineMaintenanceButton"
+              actionListener="LineMaintenance"></jfd:button>
+  <jfd:button id="OkButton" alignment="right_top"
+              text="resource://com.mg.framework.resources.messages#OkButton"
+              actionListener="Save"></jfd:button>
+  <jfd:button id="CancelButton" alignment="right_top"
+              text="resource://com.mg.framework.resources.messages#CloseButton"
+              actionListener="Cancel"></jfd:button>
 </jfd:container> 

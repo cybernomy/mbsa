@@ -21,7 +21,7 @@ import java.util.EventObject;
  * @version $Id: UIEvent.java,v 1.1 2006/01/24 13:48:59 safonov Exp $
  */
 public class UIEvent extends EventObject {
-	public UIEvent(Object source) {
-		super(source);
-	}
+  public UIEvent(Object source) {
+    super(source);
+  }
 }

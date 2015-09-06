@@ -13,17 +13,20 @@
 
 <!-- $Id: AdvanceRepHeadModelBr.mfd.xml,v 1.5 2006/12/04 13:29:16 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.account.support.ui.AdvanceRepHeadModelBr" title="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadModel.FormBr.Title" helpTopic="account#advmodel_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver"
+          controller="com.mg.merp.account.support.ui.AdvanceRepHeadModelBr"
+          title="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadModel.FormBr.Title"
+          helpTopic="account#advmodel_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml"/>
 
-	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
-		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true" >
-		</jfd:maintenanceTree>
-		<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
-		</jfd:maintenanceTable>		
-	</jfd:container>
+  <jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+    <jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true">
+    </jfd:maintenanceTree>
+    <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+    </jfd:maintenanceTable>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml"/>
 
 </jfd:form>

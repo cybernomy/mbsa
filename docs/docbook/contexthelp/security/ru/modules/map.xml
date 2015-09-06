@@ -14,15 +14,15 @@
 <!-- $Id: map.xml,v 1.1 2006/12/17 14:29:42 konyashkina Exp $ -->
 
 <map version="1.0">
-  <mapID target="users_html" url="001security.html" />
-  <mapID target="groups_html" url="002security.html" />
-  <mapID target="modules_html" url="004security.html" />
-  <mapID target="bkaccess_html" url="003security.html" />
-  <mapID target="modlist_html" url="003security.html#003_02" />
-  <mapID target="bklist_html" url="003security.html#003_03" />
-  <mapID target="methodslist_html" url="003security.html#003_04" />
-  <mapID target="methods_html" url="006security.html" />
-  <mapID target="other_html" url="005security.html" />
-  <mapID target="auditlog_html" url="007security.html" />
-  <mapID target="folderaccess_html" url="009security.html" />
+  <mapID target="users_html" url="001security.html"/>
+  <mapID target="groups_html" url="002security.html"/>
+  <mapID target="modules_html" url="004security.html"/>
+  <mapID target="bkaccess_html" url="003security.html"/>
+  <mapID target="modlist_html" url="003security.html#003_02"/>
+  <mapID target="bklist_html" url="003security.html#003_03"/>
+  <mapID target="methodslist_html" url="003security.html#003_04"/>
+  <mapID target="methods_html" url="006security.html"/>
+  <mapID target="other_html" url="005security.html"/>
+  <mapID target="auditlog_html" url="007security.html"/>
+  <mapID target="folderaccess_html" url="009security.html"/>
 </map>

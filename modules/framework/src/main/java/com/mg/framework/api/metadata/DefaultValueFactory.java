@@ -16,17 +16,17 @@ package com.mg.framework.api.metadata;
 
 /**
  * Фабрика создания значений по умолчанию для доменов
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: DefaultValueFactory.java,v 1.1 2006/09/30 11:41:43 safonov Exp $
  */
 public interface DefaultValueFactory<T> {
 
-	/**
-	 * создание значения по умолчанию
-	 * 
-	 * @return	объект значение
-	 */
-	T createDefaultValue();
+  /**
+   * создание значения по умолчанию
+   *
+   * @return объект значение
+   */
+  T createDefaultValue();
 
 }

@@ -18,34 +18,31 @@ import com.mg.merp.reference.model.PriceListFolder;
 
 /**
  * Бизнес-компонент "Папки прайс-листов"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @author Konstantin S. Alikaev
  * @version $Id: PriceListFolderServiceLocal.java,v 1.4 2008/05/16 05:52:31 alikaev Exp $
  */
 public interface PriceListFolderServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PriceListFolder, Integer> {
-	
-	/**
-	 * тип раздела папок "Прайс-листов"
-	 */
-	final static short FOLDER_PART = 2;
-	
-	/**
-	 * Имя сервиса
-	 */
-	final static String SERVICE_NAME = "merp/reference/PriceListFolder"; //$NON-NLS-1$
-	
-	/**
-	 * Cоздать спецификации прайс-листа на основе каталога
-	 * 
-	 * @param catalogFolderId	
-	 * 					- папка каталога
-	 * @param priceListFolderId	
-	 * 					- папка прайс-листа
-	 * @param createSpec		
-	 * 					- признак создания спецификаций прайс-листа
-	 */
-	void addFromCatalog(int catalogFolderId, int priceListFolderId, boolean createSpec);
+
+  /**
+   * тип раздела папок "Прайс-листов"
+   */
+  final static short FOLDER_PART = 2;
+
+  /**
+   * Имя сервиса
+   */
+  final static String SERVICE_NAME = "merp/reference/PriceListFolder"; //$NON-NLS-1$
+
+  /**
+   * Cоздать спецификации прайс-листа на основе каталога
+   *
+   * @param catalogFolderId   - папка каталога
+   * @param priceListFolderId - папка прайс-листа
+   * @param createSpec        - признак создания спецификаций прайс-листа
+   */
+  void addFromCatalog(int catalogFolderId, int priceListFolderId, boolean createSpec);
 
 }

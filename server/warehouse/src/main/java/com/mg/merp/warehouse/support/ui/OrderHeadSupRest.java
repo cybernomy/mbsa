@@ -16,12 +16,10 @@ package com.mg.merp.warehouse.support.ui;
 
 
 /**
- * 
  * @author leonova
  * @version $Id: OrderHeadSupRest.java,v 1.1 2006/07/04 12:20:08 leonova Exp $
- *
  */
 public class OrderHeadSupRest extends OrderHeadRest {
 
-	
+
 }

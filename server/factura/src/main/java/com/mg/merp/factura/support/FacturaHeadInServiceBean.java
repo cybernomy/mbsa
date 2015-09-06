@@ -15,8 +15,6 @@
 
 package com.mg.merp.factura.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.support.validator.MandatoryAttribute;
 import com.mg.merp.account.support.ConfigurationHelper;
@@ -27,50 +25,52 @@ import com.mg.merp.factura.FacturaHeadModelInServiceLocal;
 import com.mg.merp.factura.FacturaSpecInServiceLocal;
 import com.mg.merp.factura.model.FacturaHead;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Входящие счета - фактуры" 
- * 
+ * Бизнес-компонент "Входящие счета - фактуры"
+ *
  * @author leonova
  * @version $Id: FacturaHeadInServiceBean.java,v 1.7 2008/11/24 12:54:40 safonov Exp $
  */
-@Stateless(name="merp/factura/FacturaHeadInService")
-public class FacturaHeadInServiceBean extends GoodsDocumentServiceBean<FacturaHead, Integer, FacturaHeadModelInServiceLocal, FacturaSpecInServiceLocal> implements FacturaHeadInServiceLocal{
+@Stateless(name = "merp/factura/FacturaHeadInService")
+public class FacturaHeadInServiceBean extends GoodsDocumentServiceBean<FacturaHead, Integer, FacturaHeadModelInServiceLocal, FacturaSpecInServiceLocal> implements FacturaHeadInServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.DocumentServiceBean#doAdjust(com.mg.merp.document.model.DocHead)
-	 */
-	@Override
-	protected void doAdjust(FacturaHead entity) {
-		super.doAdjust(entity);
-		entity.setSrcStock(null);
-		entity.setSrcMol(null);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.DocumentServiceBean#doAdjust(com.mg.merp.document.model.DocHead)
+   */
+  @Override
+  protected void doAdjust(FacturaHead entity) {
+    super.doAdjust(entity);
+    entity.setSrcStock(null);
+    entity.setSrcMol(null);
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.DocumentServiceBean#doGetConfiguration()
-	 */
-	@Override
-	protected Configuration doGetConfiguration() {
-		return ConfigurationHelper.getDocumentConfiguration();
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.DocumentServiceBean#doGetConfiguration()
+   */
+  @Override
+  protected Configuration doGetConfiguration() {
+    return ConfigurationHelper.getDocumentConfiguration();
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.GoodsDocumentServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, FacturaHead entity) {
-		super.onValidate(context, entity);
-		
-		context.addRule(new MandatoryAttribute(entity, "To"));
-		context.addRule(new MandatoryAttribute(entity, "From"));
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.GoodsDocumentServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, FacturaHead entity) {
+    super.onValidate(context, entity);
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.DocumentServiceBean#getDocSectionIdentifier()
-	 */
-	@Override
-	protected int getDocSectionIdentifier() {
-		return FacturaHeadInServiceLocal.DOCSECTION;
-	}
+    context.addRule(new MandatoryAttribute(entity, "To"));
+    context.addRule(new MandatoryAttribute(entity, "From"));
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.DocumentServiceBean#getDocSectionIdentifier()
+   */
+  @Override
+  protected int getDocSectionIdentifier() {
+    return FacturaHeadInServiceLocal.DOCSECTION;
+  }
 
 }

@@ -1,28 +1,28 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.overall.model.NormSpecLink" table="OVR_NORM_SPEC_LINK">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">OVR_NORM_SPEC_LINK_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Catalog" class="com.mg.merp.reference.model.Catalog">
-      <column name="CATALOG_ID" not-null="false" />
+      <column name="CATALOG_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="OvrNormSpec" class="com.mg.merp.overall.model.NormSpec">
-      <column name="OVR_NORM_SPEC_ID" not-null="false" />
+      <column name="OVR_NORM_SPEC_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

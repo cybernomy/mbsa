@@ -23,16 +23,16 @@ import com.mg.framework.utils.ServerUtils;
  * @version $Id: SearchHelpProcessor.java,v 1.1 2006/01/24 14:11:35 safonov Exp $
  */
 public class SearchHelpProcessor {
-	private static Logger logger = ServerUtils.getLogger(SearchHelpProcessor.class);
-	
-	public static SearchHelp createSearch(String name) {
-		if (name == null)
-			return null;
-		try {
-			return (SearchHelp) ServerUtils.loadClass(name).newInstance();
-		} catch (Throwable e) {
-			logger.error("SearchHelp instantiation error", e);
-			return null;
-		}
-	}
+  private static Logger logger = ServerUtils.getLogger(SearchHelpProcessor.class);
+
+  public static SearchHelp createSearch(String name) {
+    if (name == null)
+      return null;
+    try {
+      return (SearchHelp) ServerUtils.loadClass(name).newInstance();
+    } catch (Throwable e) {
+      logger.error("SearchHelp instantiation error", e);
+      return null;
+    }
+  }
 }

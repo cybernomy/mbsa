@@ -13,23 +13,23 @@
  */
 package com.mg.merp.warehouse.support;
 
-import javax.annotation.security.PermitAll;
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.warehouse.WarehouseBatchHistoryServiceLocal;
 import com.mg.merp.warehouse.model.StockBatchHistory;
 
+import javax.annotation.security.PermitAll;
+import javax.ejb.Stateless;
+
 /**
  * Реализация бизнес-компонента "История фактического движения по партии"
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseBatchHistoryServiceBean.java,v 1.3 2007/07/31 10:29:14 safonov Exp $
  */
 @Stateless(name = "merp/warehouse/WarehouseBatchHistoryService")
 @PermitAll
 public class WarehouseBatchHistoryServiceBean extends
-		AbstractPOJODataBusinessObjectServiceBean<StockBatchHistory, Integer>
-		implements WarehouseBatchHistoryServiceLocal {
+    AbstractPOJODataBusinessObjectServiceBean<StockBatchHistory, Integer>
+    implements WarehouseBatchHistoryServiceLocal {
 
 }

@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.AdditionalEducationKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: AdditionalEducationKindServiceLocal.java,v 1.1 2006/03/14 11:49:48 safonov Exp $
  */
 public interface AdditionalEducationKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<AdditionalEducationKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<AdditionalEducationKind, Integer> {
 
 }

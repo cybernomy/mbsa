@@ -17,12 +17,10 @@ package com.mg.merp.lbschedule;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * 
  * @author leonova
  * @version $Id: DocSpecServiceLocal.java,v 1.1 2006/03/14 11:49:48 safonov Exp $
  */
 public interface DocSpecServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<DocSpec, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<DocSpec, Integer> {
 
 }

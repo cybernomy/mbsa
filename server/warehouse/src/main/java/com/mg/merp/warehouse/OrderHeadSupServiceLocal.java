@@ -18,29 +18,28 @@ import com.mg.merp.warehouse.model.OrderHead;
 
 /**
  * Бизнес-компонент "Зазаз поставщикам"
- * 
+ *
  * @author leonova
  * @version $Id: OrderHeadSupServiceLocal.java,v 1.4 2007/07/27 11:59:29 safonov Exp $
  */
 public interface OrderHeadSupServiceLocal
-		extends com.mg.merp.document.GoodsDocument<OrderHead, Integer, OrderHeadModelSupServiceLocal, OrderSpecSupServiceLocal>
-{
-	/**
-	 * Имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/warehouse/OrderHeadSup";
-	
-	/**
-	 * тип папки для заказов поставщикам
-	 */
-	final static short FOLDER_PART = 41;
+    extends com.mg.merp.document.GoodsDocument<OrderHead, Integer, OrderHeadModelSupServiceLocal, OrderSpecSupServiceLocal> {
+  /**
+   * Имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/warehouse/OrderHeadSup";
 
-	/**
-	 * docsection для заказов поставщикам
-	 */
-	final static short DOCSECTION = 21;
+  /**
+   * тип папки для заказов поставщикам
+   */
+  final static short FOLDER_PART = 41;
 
-	@Deprecated
-	public int createDocument( int[] orderList,int docsumentSection,int modelId,int folderId ) throws com.mg.framework.api.ApplicationException;
+  /**
+   * docsection для заказов поставщикам
+   */
+  final static short DOCSECTION = 21;
+
+  @Deprecated
+  public int createDocument(int[] orderList, int docsumentSection, int modelId, int folderId) throws com.mg.framework.api.ApplicationException;
 
 }

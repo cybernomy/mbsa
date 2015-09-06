@@ -20,18 +20,18 @@ package com.mg.framework.service;
  */
 @javax.ejb.ApplicationException
 public class LicenseException extends com.mg.framework.api.SecurityException {
-	private static final long serialVersionUID = 671729530601555258L;
+  private static final long serialVersionUID = 671729530601555258L;
 
-	public LicenseException() {
-		super();
-	}
+  public LicenseException() {
+    super();
+  }
 
-	public LicenseException(String s) {
-		super(s);
-	}
+  public LicenseException(String s) {
+    super(s);
+  }
 
-	public LicenseException(String s, Throwable cause) {
-		super(s, cause);
-	}
+  public LicenseException(String s, Throwable cause) {
+    super(s, cause);
+  }
 
 }

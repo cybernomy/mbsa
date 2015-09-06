@@ -14,21 +14,22 @@
  */
 package com.mg.framework.service.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.framework.api.UserActionInterceptorManager;
 
+import org.jboss.system.ServiceMBean;
+
 /**
- * Сервис менеджера перехватчиков действий интерактивной поддержки (добавление, изменение, копирование, просмотр)
- * бизнес-компонентов
- * 
+ * Сервис менеджера перехватчиков действий интерактивной поддержки (добавление, изменение,
+ * копирование, просмотр) бизнес-компонентов
+ *
  * @author Oleg V. Safonov
- * @version $Id: UserActionInterceptorManagerServiceMBean.java,v 1.2 2006/10/26 13:27:52 safonov Exp $
+ * @version $Id: UserActionInterceptorManagerServiceMBean.java,v 1.2 2006/10/26 13:27:52 safonov Exp
+ *          $
  */
 public interface UserActionInterceptorManagerServiceMBean extends
-        UserActionInterceptorManager, ServiceMBean {
-	/**
-	 * наименование сервиса
-	 */
-	final static String SERVICE_NAME = "merp:service=UserActionInterceptorManagerService";
+    UserActionInterceptorManager, ServiceMBean {
+  /**
+   * наименование сервиса
+   */
+  final static String SERVICE_NAME = "merp:service=UserActionInterceptorManagerService";
 }

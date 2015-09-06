@@ -18,33 +18,36 @@ import com.mg.merp.document.model.DocHead;
 
 /**
  * Менеджер управления графиками исполнения обязательств
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: LBScheduleManager.java,v 1.1 2007/04/21 11:46:07 sharapov Exp $
  */
 public interface LBScheduleManager {
 
-	/**
-	 * Наименование сервиса
-	 */
-	final static String SERVICE_NAME = "merp:service=LBScheduleManagerService"; //$NON-NLS-1$
-	
-	/**
-	 * Создать график исполнения обязательств
-	 * @param docHead - документ, связанный с графиком
-	 */
-	void createLBSchedule(DocHead docHead);
-	
-	/**
-	 * Открыть график исполнения обязательств
-	 * @param docHead - документ, связанный с графиком
-	 */
-	void openLBSchedule(DocHead docHead);
-	
-	/**
-	 * Удалить график исполнения обязательств
-	 * @param docHead - документ, связанный с графиком
-	 */
-	void removeLBSchedule(DocHead docHead);
-	
+  /**
+   * Наименование сервиса
+   */
+  final static String SERVICE_NAME = "merp:service=LBScheduleManagerService"; //$NON-NLS-1$
+
+  /**
+   * Создать график исполнения обязательств
+   *
+   * @param docHead - документ, связанный с графиком
+   */
+  void createLBSchedule(DocHead docHead);
+
+  /**
+   * Открыть график исполнения обязательств
+   *
+   * @param docHead - документ, связанный с графиком
+   */
+  void openLBSchedule(DocHead docHead);
+
+  /**
+   * Удалить график исполнения обязательств
+   *
+   * @param docHead - документ, связанный с графиком
+   */
+  void removeLBSchedule(DocHead docHead);
+
 }

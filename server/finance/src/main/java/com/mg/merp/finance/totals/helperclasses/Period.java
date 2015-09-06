@@ -15,39 +15,37 @@
 package com.mg.merp.finance.totals.helperclasses;
 
 
-import com.mg.merp.finance.totals.*;
+import com.mg.merp.finance.totals.FinanceTotals;
 
 /**
  * @author Valentin A. Poroxnenko
  * @version $Id: Period.java,v 1.3 2006/07/05 09:03:17 poroxnenko Exp $
  */
-public class Period
-{
+public class Period {
   private int id;
   private FinanceTotals.DatePositionInPeriod datePosition;
-  
-  public Period(){}
-  public Period(int id, FinanceTotals.DatePositionInPeriod datePosition)
-  {
-	  this.id = id;
-	  this.datePosition = datePosition;
+
+  public Period() {
   }
-  
-  public int getId()
-  {
-	  return id;
+
+  public Period(int id, FinanceTotals.DatePositionInPeriod datePosition) {
+    this.id = id;
+    this.datePosition = datePosition;
   }
-  public FinanceTotals.DatePositionInPeriod getDatePosition()
-  {
-	  return datePosition;
+
+  public int getId() {
+    return id;
   }
-  
-  public void setId(int id)
-  {
-	  this.id = id;
+
+  public void setId(int id) {
+    this.id = id;
   }
-  public void setDatePosition(FinanceTotals.DatePositionInPeriod datePosition)
-  {
-	  this.datePosition = datePosition;
+
+  public FinanceTotals.DatePositionInPeriod getDatePosition() {
+    return datePosition;
+  }
+
+  public void setDatePosition(FinanceTotals.DatePositionInPeriod datePosition) {
+    this.datePosition = datePosition;
   }
 }

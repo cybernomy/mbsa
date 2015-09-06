@@ -20,34 +20,35 @@ import com.mg.framework.generic.validator.EntityBeanRule;
 import com.mg.framework.support.Messages;
 
 /**
- * Правило гарантирующее, что текстовый атрибут сущности не будет <code>null</code> и не будет пустым
- * 
+ * Правило гарантирующее, что текстовый атрибут сущности не будет <code>null</code> и не будет
+ * пустым
+ *
  * @author Oleg V. Safonov
  * @version $Id: MandatoryStringAttribute.java,v 1.1 2006/08/14 14:08:44 safonov Exp $
  */
 public class MandatoryStringAttribute extends EntityBeanRule {
 
-	/**
-	 * создает правило
-	 * 
-	 * @param entity		объект-сущность контроля
-	 * @param propertyName	наименование атрибута контроля
-	 */
-	public MandatoryStringAttribute(PersistentObject entity, String propertyName) {
-		super(Messages.getInstance().getMessage(Messages.MANDATORY_VALIDATOR), entity, propertyName);
-	}
+  /**
+   * создает правило
+   *
+   * @param entity       объект-сущность контроля
+   * @param propertyName наименование атрибута контроля
+   */
+  public MandatoryStringAttribute(PersistentObject entity, String propertyName) {
+    super(Messages.getInstance().getMessage(Messages.MANDATORY_VALIDATOR), entity, propertyName);
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.validator.AbstractRule#doValidate(com.mg.framework.api.validator.ValidationContext)
-	 */
-	@Override
-	protected void doValidate(ValidationContext context) {
-		Object toValidate = toValidate();
-		//проверка на null, если строка, то проверим на пустую строку
-		if (toValidate == null)
-			context.getStatus().error(this);
-		else if (toValidate instanceof String && "".equals(toValidate))
-			context.getStatus().error(this);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.validator.AbstractRule#doValidate(com.mg.framework.api.validator.ValidationContext)
+   */
+  @Override
+  protected void doValidate(ValidationContext context) {
+    Object toValidate = toValidate();
+    //проверка на null, если строка, то проверим на пустую строку
+    if (toValidate == null)
+      context.getStatus().error(this);
+    else if (toValidate instanceof String && "".equals(toValidate))
+      context.getStatus().error(this);
+  }
 
 }

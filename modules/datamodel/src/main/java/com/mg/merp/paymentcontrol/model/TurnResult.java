@@ -18,57 +18,57 @@ import java.math.BigDecimal;
 
 /**
  * Модель данных строки оборотки плана
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: TurnResult.java,v 1.1 2007/05/14 05:12:10 sharapov Exp $
  */
 public class TurnResult {
-	
-	private BigDecimal beginSaldo;
-	private BigDecimal income;
-	private BigDecimal expense;
-	private BigDecimal endSaldo;
-	
-	public TurnResult() {
-	}
 
-	public TurnResult(BigDecimal beginSaldo, BigDecimal income, BigDecimal expense, BigDecimal endSaldo) {
-		this.beginSaldo = beginSaldo;
-		this.income = income;
-		this.expense = expense;
-		this.endSaldo = endSaldo;
-	}
+  private BigDecimal beginSaldo;
+  private BigDecimal income;
+  private BigDecimal expense;
+  private BigDecimal endSaldo;
 
-	public BigDecimal getBeginSaldo() {
-		return beginSaldo;
-	}
+  public TurnResult() {
+  }
 
-	public void setBeginSaldo(BigDecimal beginSaldo) {
-		this.beginSaldo = beginSaldo;
-	}
+  public TurnResult(BigDecimal beginSaldo, BigDecimal income, BigDecimal expense, BigDecimal endSaldo) {
+    this.beginSaldo = beginSaldo;
+    this.income = income;
+    this.expense = expense;
+    this.endSaldo = endSaldo;
+  }
 
-	public BigDecimal getEndSaldo() {
-		return endSaldo;
-	}
+  public BigDecimal getBeginSaldo() {
+    return beginSaldo;
+  }
 
-	public void setEndSaldo(BigDecimal endSaldo) {
-		this.endSaldo = endSaldo;
-	}
+  public void setBeginSaldo(BigDecimal beginSaldo) {
+    this.beginSaldo = beginSaldo;
+  }
 
-	public BigDecimal getExpense() {
-		return expense;
-	}
+  public BigDecimal getEndSaldo() {
+    return endSaldo;
+  }
 
-	public void setExpense(BigDecimal expense) {
-		this.expense = expense;
-	}
+  public void setEndSaldo(BigDecimal endSaldo) {
+    this.endSaldo = endSaldo;
+  }
 
-	public BigDecimal getIncome() {
-		return income;
-	}
+  public BigDecimal getExpense() {
+    return expense;
+  }
 
-	public void setIncome(BigDecimal income) {
-		this.income = income;
-	}
+  public void setExpense(BigDecimal expense) {
+    this.expense = expense;
+  }
+
+  public BigDecimal getIncome() {
+    return income;
+  }
+
+  public void setIncome(BigDecimal income) {
+    this.income = income;
+  }
 
 }

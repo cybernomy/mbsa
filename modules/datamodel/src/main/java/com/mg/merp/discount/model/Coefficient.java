@@ -21,106 +21,111 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: Coefficient.java,v 1.4 2006/08/30 11:59:51 leonova Exp $
  */
 public class Coefficient extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.reference.model.Catalog Catalog;
+  private com.mg.merp.reference.model.Catalog Catalog;
 
-	private com.mg.merp.reference.model.CatalogFolder CatalogFolder;
+  private com.mg.merp.reference.model.CatalogFolder CatalogFolder;
 
-	private com.mg.merp.discount.model.Card Card;
+  private com.mg.merp.discount.model.Card Card;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.math.BigDecimal Coefficient;
+  private java.math.BigDecimal Coefficient;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public Coefficient() {
-	}
+  /**
+   * default constructor
+   */
+  public Coefficient() {
+  }
 
-	/** constructor with id */
-	public Coefficient(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public Coefficient(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Discount.GlobalCoeff.Catalog")
-	public com.mg.merp.reference.model.Catalog getCatalog() {
-		return this.Catalog;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public void setCatalog(com.mg.merp.reference.model.Catalog Catalog) {
-		this.Catalog = Catalog;
-	}
+  /**
+   *
+   */
+  @DataItemName("Discount.GlobalCoeff.Catalog")
+  public com.mg.merp.reference.model.Catalog getCatalog() {
+    return this.Catalog;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Discount.GlobalCoeff.CatalogFolder")
-	public com.mg.merp.reference.model.CatalogFolder getCatalogFolder() {
-		return this.CatalogFolder;
-	}
+  public void setCatalog(com.mg.merp.reference.model.Catalog Catalog) {
+    this.Catalog = Catalog;
+  }
 
-	public void setCatalogFolder(
-			com.mg.merp.reference.model.CatalogFolder Catalogfolder) {
-		this.CatalogFolder = Catalogfolder;
-	}
+  /**
+   *
+   */
+  @DataItemName("Discount.GlobalCoeff.CatalogFolder")
+  public com.mg.merp.reference.model.CatalogFolder getCatalogFolder() {
+    return this.CatalogFolder;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCatalogFolder(
+      com.mg.merp.reference.model.CatalogFolder Catalogfolder) {
+    this.CatalogFolder = Catalogfolder;
+  }
 
-	public com.mg.merp.discount.model.Card getCard() {
-		return this.Card;
-	}
+  /**
+   *
+   */
 
-	public void setCard(com.mg.merp.discount.model.Card DisCard) {
-		this.Card = DisCard;
-	}
+  public com.mg.merp.discount.model.Card getCard() {
+    return this.Card;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCard(com.mg.merp.discount.model.Card DisCard) {
+    this.Card = DisCard;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Discount.GlobalCoeff.Coefficient")
-	public java.math.BigDecimal getCoefficient() {
-		return this.Coefficient;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setCoefficient(java.math.BigDecimal Coefficient) {
-		this.Coefficient = Coefficient;
-	}
+  /**
+   *
+   */
+  @DataItemName("Discount.GlobalCoeff.Coefficient")
+  public java.math.BigDecimal getCoefficient() {
+    return this.Coefficient;
+  }
+
+  public void setCoefficient(java.math.BigDecimal Coefficient) {
+    this.Coefficient = Coefficient;
+  }
 
 }

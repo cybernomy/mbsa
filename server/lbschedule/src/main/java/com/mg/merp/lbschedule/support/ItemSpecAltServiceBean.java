@@ -15,20 +15,21 @@
 
 package com.mg.merp.lbschedule.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.lbschedule.ItemSpecAltServiceLocal;
 import com.mg.merp.lbschedule.model.ItemSpecAlt;
 
+import javax.ejb.Stateless;
+
 /**
- * Реализация бизнес-компонента "Возможные замены позиции спецификации пункта графика исполнения обязательств" 
- * 
+ * Реализация бизнес-компонента "Возможные замены позиции спецификации пункта графика исполнения
+ * обязательств"
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: ItemSpecAltServiceBean.java,v 1.3 2007/04/17 12:50:59 sharapov Exp $
  */
-@Stateless(name="merp/lbschedule/ItemSpecAltService") //$NON-NLS-1$
+@Stateless(name = "merp/lbschedule/ItemSpecAltService") //$NON-NLS-1$
 public class ItemSpecAltServiceBean extends AbstractPOJODataBusinessObjectServiceBean<ItemSpecAlt, Integer> implements ItemSpecAltServiceLocal {
 
 }

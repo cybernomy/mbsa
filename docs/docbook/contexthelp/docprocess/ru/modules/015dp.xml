@@ -9,76 +9,114 @@
 ]> -->
 <chapter id="015dp">
   <title>Свойства объекта</title>
-    
-    <para>Вы можете редактировать графические свойства объекта (узла или связи). 
-    Выделите объект, свойства которого Вы хотите изменить, и нажмите кнопку 
-    &quot;Свойства&quot; или клавишу <keycombo><keycap>Enter</keycap></keycombo>.  </para>
-    
-    <para>Примечание: если выделенных объектов в редакторе нет, будет вызвано окно 
-    &quot;<emphasis>Свойства дизайнера</emphasis>&quot;. </para>
-    
-    <para> </para>
-    <para><emphasis>Свойства объекта</emphasis></para>
-    
-    <para>Окно &quot;<emphasis>Свойства объекта</emphasis>&quot; появляется, если 
-    одновременно выделены и узлы (этапы), и связи.</para>
-    
-  <screenshot> 
-    <mediaobject><imageobject><imagedata fileref="images/object_kind.gif"/></imageobject></mediaobject>
-  </screenshot>
-    
-    <para>Вы можете задать цвет заполнения, цвет линии, параметры шрифта. Эти 
-    параметры будут применены ко всем выделенным объектам.</para> 
-    <para> </para>
-    <para><emphasis>Свойства узла</emphasis></para>
-    
-    <para>Вы можете настраивать следующие свойства узла:</para>
-    
-  <screenshot> 
-    <mediaobject><imageobject><imagedata fileref="images/uzel_kind.gif"/></imageobject></mediaobject>
-  </screenshot>
-    
-    <para><guibutton>Цвет тела и бордюра</guibutton>. Щёлкните левой кнопкой мыши 
-    на соответствующий прямоугольник справа. Появится системная палитра цветов. 
-    Выберите желаемый цвет и нажмите кнопку <guibutton>OK</guibutton>.</para>
-    
-    <para><guibutton>Выравнивание текста</guibutton>. Слева, справа или по центру.</para>
-    
-    <para><guibutton>Отступ текста</guibutton>. Задаётся отступ текста от края 
-    объекта. Может принимать значение от 0 до 100. Помните, что отступ задаётся 
-    как по горизонтали, так и по вертикали.</para>
-    
-    <para><guibutton>Изменить шрифт</guibutton>. Вы можете изменить используемый 
-    шрифт и его параметры.</para>
-    
-    <para><guibutton>Изменить фон</guibutton>. Вы можете использовать в качестве фоновой 
-    картинки файлы формата bmp или wmf.</para>
-    
-    <para><guibutton>Очистить фон</guibutton>. Убрать фоновую картинку.</para>
-    
-    <para> </para>
-    <para><emphasis>Свойства связи</emphasis></para>
-    
-  <screenshot> 
-    <mediaobject><imageobject><imagedata fileref="images/link_kind.gif"/></imageobject></mediaobject>
-  </screenshot>
-    
-    <para><guibutton>Изменить направление</guibutton>. Чтобы изменить направление 
-    связи на противоположное, отметьте этот пункт флагом и нажмите 
-    <guibutton>Применить</guibutton> или <guibutton>OK</guibutton>. 
-   <emphasis>Внимание</emphasis>: при повторном использовании этой функции направление 
-   изменится снова.</para>
 
-    <para><guibutton>Стиль</guibutton>. Вы можете задать желаемый стиль отображения 
-    линии: сплошной, пунктирный или точками.</para>
+  <para>Вы можете редактировать графические свойства объекта (узла или связи).
+    Выделите объект, свойства которого Вы хотите изменить, и нажмите кнопку
+    &quot;Свойства&quot; или клавишу
+    <keycombo>
+      <keycap>Enter</keycap>
+    </keycombo>
+    .
+  </para>
 
-    <para><guibutton>Цвет</guibutton>. Можно изменить цвет линии и стрелки. Для 
-    этого щёлкните левой кнопкой мыши на соответствующий прямоугольник справа. 
-    Появится системная палитра цветов. Выберите желаемый цвет и нажмите кнопку 
-    <guibutton>OK</guibutton>. </para>
+  <para>Примечание: если выделенных объектов в редакторе нет, будет вызвано окно
+    &quot;<emphasis>Свойства дизайнера</emphasis>&quot;.
+  </para>
 
-    <para> </para>
-    
-    <para>См. также: <link linkend="014dp">Свойства дизайнера</link></para>
-   
-  </chapter>
+  <para></para>
+  <para>
+    <emphasis>Свойства объекта</emphasis>
+  </para>
+
+  <para>Окно &quot;<emphasis>Свойства объекта</emphasis>&quot; появляется, если
+    одновременно выделены и узлы (этапы), и связи.
+  </para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/object_kind.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>Вы можете задать цвет заполнения, цвет линии, параметры шрифта. Эти
+    параметры будут применены ко всем выделенным объектам.
+  </para>
+  <para></para>
+  <para>
+    <emphasis>Свойства узла</emphasis>
+  </para>
+
+  <para>Вы можете настраивать следующие свойства узла:</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/uzel_kind.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para><guibutton>Цвет тела и бордюра</guibutton>. Щёлкните левой кнопкой мыши
+    на соответствующий прямоугольник справа. Появится системная палитра цветов.
+    Выберите желаемый цвет и нажмите кнопку<guibutton>OK</guibutton>.
+  </para>
+
+  <para><guibutton>Выравнивание текста</guibutton>. Слева, справа или по центру.
+  </para>
+
+  <para><guibutton>Отступ текста</guibutton>. Задаётся отступ текста от края
+    объекта. Может принимать значение от 0 до 100. Помните, что отступ задаётся
+    как по горизонтали, так и по вертикали.
+  </para>
+
+  <para><guibutton>Изменить шрифт</guibutton>. Вы можете изменить используемый
+    шрифт и его параметры.
+  </para>
+
+  <para><guibutton>Изменить фон</guibutton>. Вы можете использовать в качестве фоновой
+    картинки файлы формата bmp или wmf.
+  </para>
+
+  <para><guibutton>Очистить фон</guibutton>. Убрать фоновую картинку.
+  </para>
+
+  <para></para>
+  <para>
+    <emphasis>Свойства связи</emphasis>
+  </para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/link_kind.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para><guibutton>Изменить направление</guibutton>. Чтобы изменить направление
+    связи на противоположное, отметьте этот пункт флагом и нажмите
+    <guibutton>Применить</guibutton>
+    или<guibutton>OK</guibutton>.
+    <emphasis>Внимание</emphasis>: при повторном использовании этой функции направление
+    изменится снова.
+  </para>
+
+  <para><guibutton>Стиль</guibutton>. Вы можете задать желаемый стиль отображения
+    линии: сплошной, пунктирный или точками.
+  </para>
+
+  <para><guibutton>Цвет</guibutton>. Можно изменить цвет линии и стрелки. Для
+    этого щёлкните левой кнопкой мыши на соответствующий прямоугольник справа.
+    Появится системная палитра цветов. Выберите желаемый цвет и нажмите кнопку
+    <guibutton>OK</guibutton>.
+  </para>
+
+  <para></para>
+
+  <para>См. также:
+    <link linkend="014dp">Свойства дизайнера</link>
+  </para>
+
+</chapter>

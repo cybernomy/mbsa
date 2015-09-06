@@ -22,134 +22,139 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.NaturalPersonHist")
 public class NaturalPersonHist extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.reference.model.NaturalPerson NaturalPerson;
+  private com.mg.merp.reference.model.NaturalPerson NaturalPerson;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.util.Date ActDate;
+  private java.util.Date ActDate;
 
-	private java.lang.String Surname;
+  private java.lang.String Surname;
 
-	private java.lang.String Name;
+  private java.lang.String Name;
 
-	private java.lang.String Patronymic;
+  private java.lang.String Patronymic;
 
-	private java.lang.String Inn;
+  private java.lang.String Inn;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public NaturalPersonHist() {
-	}
+  /**
+   * default constructor
+   */
+  public NaturalPersonHist() {
+  }
 
-	/** constructor with id */
-	public NaturalPersonHist(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public NaturalPersonHist(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.reference.model.NaturalPerson getNaturalPerson() {
-		return this.NaturalPerson;
-	}
+  /**
+   *
+   */
 
-	public void setNaturalPerson(
-			com.mg.merp.reference.model.NaturalPerson NaturalPerson) {
-		this.NaturalPerson = NaturalPerson;
-	}
+  public com.mg.merp.reference.model.NaturalPerson getNaturalPerson() {
+    return this.NaturalPerson;
+  }
 
-	/**
-	 * 
-	 */
+  public void setNaturalPerson(
+      com.mg.merp.reference.model.NaturalPerson NaturalPerson) {
+    this.NaturalPerson = NaturalPerson;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.PersonHist.ActDate")
-	public java.util.Date getActDate() {
-		return this.ActDate;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setActDate(java.util.Date ActDate) {
-		this.ActDate = ActDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.PersonHist.ActDate")
+  public java.util.Date getActDate() {
+    return this.ActDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.NaturalPerson.Surname")
-	public java.lang.String getSurname() {
-		return this.Surname;
-	}
+  public void setActDate(java.util.Date ActDate) {
+    this.ActDate = ActDate;
+  }
 
-	public void setSurname(java.lang.String Surname) {
-		this.Surname = Surname;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.NaturalPerson.Surname")
+  public java.lang.String getSurname() {
+    return this.Surname;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.NaturalPerson.Name")
-	public java.lang.String getName() {
-		return this.Name;
-	}
+  public void setSurname(java.lang.String Surname) {
+    this.Surname = Surname;
+  }
 
-	public void setName(java.lang.String Name) {
-		this.Name = Name;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.NaturalPerson.Name")
+  public java.lang.String getName() {
+    return this.Name;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.NaturalPerson.Patronymic")
-	public java.lang.String getPatronymic() {
-		return this.Patronymic;
-	}
+  public void setName(java.lang.String Name) {
+    this.Name = Name;
+  }
 
-	public void setPatronymic(java.lang.String Patronymic) {
-		this.Patronymic = Patronymic;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.NaturalPerson.Patronymic")
+  public java.lang.String getPatronymic() {
+    return this.Patronymic;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.PersonHist.INN")
-	public java.lang.String getInn() {
-		return this.Inn;
-	}
+  public void setPatronymic(java.lang.String Patronymic) {
+    this.Patronymic = Patronymic;
+  }
 
-	public void setInn(java.lang.String Inn) {
-		this.Inn = Inn;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.PersonHist.INN")
+  public java.lang.String getInn() {
+    return this.Inn;
+  }
+
+  public void setInn(java.lang.String Inn) {
+    this.Inn = Inn;
+  }
 
 }

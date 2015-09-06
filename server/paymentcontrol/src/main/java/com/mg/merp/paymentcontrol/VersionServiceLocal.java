@@ -18,7 +18,7 @@ import com.mg.merp.paymentcontrol.model.Version;
 
 /**
  * Сервис бизнес-компонента "Версии планирования"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: VersionServiceLocal.java,v 1.2 2007/05/14 04:59:59 sharapov Exp $

@@ -19,23 +19,23 @@ import com.mg.framework.utils.ServerUtils;
 
 /**
  * Локатор сервиса трансформации сущностей
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @version $Id: EntityTransformerLocator.java,v 1.2 2007/09/21 09:50:49 safonov Exp $
  */
 public class EntityTransformerLocator {
 
-	private static volatile EntityTransformer instance = null;
+  private static volatile EntityTransformer instance = null;
 
-	@SuppressWarnings("unchecked")
-	public static EntityTransformer locate() throws ApplicationException {
-		if (instance == null)
-			try {
-				instance = (EntityTransformer) ServerUtils.createMBeanProxy(EntityTransformer.class, EntityTransformer.SERVICE_NAME);
-			} catch (Exception e) {
-				throw new ApplicationException(e);
-			}
-		return instance;
-	}
+  @SuppressWarnings("unchecked")
+  public static EntityTransformer locate() throws ApplicationException {
+    if (instance == null)
+      try {
+        instance = (EntityTransformer) ServerUtils.createMBeanProxy(EntityTransformer.class, EntityTransformer.SERVICE_NAME);
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 
 }

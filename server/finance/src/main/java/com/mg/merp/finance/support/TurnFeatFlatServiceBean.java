@@ -15,19 +15,17 @@
 
 package com.mg.merp.finance.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.finance.TurnFeatFlatServiceLocal;
 import com.mg.merp.finance.model.TurnFeature;
 
+import javax.ejb.Stateless;
+
 /**
- * 
  * @author leonova
  * @version $Id: TurnFeatFlatServiceBean.java,v 1.3 2006/10/23 12:12:53 leonova Exp $
  */
-@Stateless(name="merp/finance/TurnFeatFlatService")
+@Stateless(name = "merp/finance/TurnFeatFlatService")
 public class TurnFeatFlatServiceBean extends com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean<TurnFeature, Integer> implements TurnFeatFlatServiceLocal {
 
 
-
- }
+}

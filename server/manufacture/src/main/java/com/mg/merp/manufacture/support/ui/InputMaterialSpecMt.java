@@ -18,15 +18,15 @@ import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
  * Контроллер формы поддержки спецификации акта на списание материалов в ЗНП
- * 
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InputMaterialSpecMt.java,v 1.3 2006/08/28 04:33:30 leonova Exp $
  */
 public class InputMaterialSpecMt extends GoodsDocumentSpecMaintenanceForm {
 
-	public InputMaterialSpecMt() throws Exception {
-		super();
-	
-	}
+  public InputMaterialSpecMt() throws Exception {
+    super();
+
+  }
 
 }

@@ -18,20 +18,20 @@ import com.mg.merp.reference.support.ui.ContractorResponsibleSearchHelp;
 
 /**
  * SearchHelp для ответственного сотрудника нашей организации
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: ConrtRespSearchHelp.java,v 1.3 2007/04/16 05:34:17 sharapov Exp $
  */
 public class ConrtRespSearchHelp extends ContractorResponsibleSearchHelp {
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.merp.reference.support.ui.ContractorResponsibleSearchHelp#getContractorContextNames()
-	 */
-	@Override
-	protected String[] getContractorContextNames() {		
-		return new String[] {"fromCode", "From"}; //$NON-NLS-1$ //$NON-NLS-1$
-	}
+  /*
+   * (non-Javadoc)
+   * @see com.mg.merp.reference.support.ui.ContractorResponsibleSearchHelp#getContractorContextNames()
+   */
+  @Override
+  protected String[] getContractorContextNames() {
+    return new String[]{"fromCode", "From"}; //$NON-NLS-1$ //$NON-NLS-1$
+  }
 
 }

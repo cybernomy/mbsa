@@ -9,12 +9,18 @@
 ]> -->
 <chapter id="007security">
   <title>Журнал аудита</title>
-     
-    <para>Вход в &quot;Журнал аудита&quot; осуществляется через главное меню:
-     <menuchoice><guimenu>&cont_centr;</guimenu><guisubmenu>Администрирование</guisubmenu>
-    <guimenuitem>Журнал аудита</guimenuitem></menuchoice>.</para>
-    
-    <para>Подробнее о настройке аудита и просмотре журнала читайте в руководстве 
-    администратора в главе &quot;Настройка. Аудит&quot;. </para>
-    
-  </chapter>
+
+  <para>Вход в &quot;Журнал аудита&quot; осуществляется через главное меню:
+    <menuchoice>
+      <guimenu>&cont_centr;</guimenu>
+      <guisubmenu>Администрирование</guisubmenu>
+      <guimenuitem>Журнал аудита</guimenuitem>
+    </menuchoice>
+    .
+  </para>
+
+  <para>Подробнее о настройке аудита и просмотре журнала читайте в руководстве
+    администратора в главе &quot;Настройка. Аудит&quot;.
+  </para>
+
+</chapter>

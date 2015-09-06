@@ -15,8 +15,8 @@
 package com.mg.merp.overall;
 
 /**
- * Бизнес - компонент "Процессор модуля спецодежда" 
- * 
+ * Бизнес - компонент "Процессор модуля спецодежда"
+ *
  * @author leonova
  * @version $Id: OverallProcessorServiceLocal.java,v 1.2 2008/06/30 04:13:38 alikaev Exp $
  */

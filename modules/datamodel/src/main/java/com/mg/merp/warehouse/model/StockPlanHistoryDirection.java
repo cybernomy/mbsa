@@ -19,6 +19,6 @@ package com.mg.merp.warehouse.model;
  * @version $Id: StockPlanHistoryDirection.java,v 1.1 2007/09/04 11:08:20 safonov Exp $
  */
 public enum StockPlanHistoryDirection {
-	IN,
-	OUT
+  IN,
+  OUT
 }

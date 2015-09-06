@@ -18,28 +18,29 @@ import com.mg.framework.api.BusinessException;
 import com.mg.merp.docflow.support.Messages;
 
 /**
- * Класс ИС генерируемая при невозможности взаимодействия документооборота с пользовательским интерфейсом
- * 
+ * Класс ИС генерируемая при невозможности взаимодействия документооборота с пользовательским
+ * интерфейсом
+ *
  * @author Oleg V. Safonov
  * @version $Id: SilentException.java,v 1.2 2008/09/01 07:44:49 safonov Exp $
  */
 public class SilentException extends BusinessException {
 
-	public SilentException() {
-		super();
-	}
+  public SilentException() {
+    super();
+  }
 
-	public SilentException(String s) {
-		super(s);
-	}
+  public SilentException(String s) {
+    super(s);
+  }
 
-	/* (non-Javadoc)
-	 * @see java.lang.Throwable#getLocalizedMessage()
-	 */
-	@Override
-	public String getLocalizedMessage() {
-		String message = super.getLocalizedMessage();
-		return message != null ? message : Messages.getInstance().getMessage(Messages.SILENT_DOCFLOW_MESSAGE);
-	}
+  /* (non-Javadoc)
+   * @see java.lang.Throwable#getLocalizedMessage()
+   */
+  @Override
+  public String getLocalizedMessage() {
+    String message = super.getLocalizedMessage();
+    return message != null ? message : Messages.getInstance().getMessage(Messages.SILENT_DOCFLOW_MESSAGE);
+  }
 
 }

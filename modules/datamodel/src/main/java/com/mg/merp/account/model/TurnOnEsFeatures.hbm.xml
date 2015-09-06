@@ -1,91 +1,91 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.account.model.TurnOnEsFeatures" table="TURNONESFEATURES">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <!-- generator class="sequence">
         <param name="sequence">TURNONESFEATURES_ID_GEN</param>
       </generator-->
     </id>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <property name="UserName" type="java.lang.String">
-      <column name="USERNAME" length="31" not-null="false" sql-type="CHAR" />
+      <column name="USERNAME" length="31" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="AccDbCode" type="java.lang.String">
-      <column name="ACCDB_CODE" length="20" not-null="false" sql-type="CHAR" />
+      <column name="ACCDB_CODE" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="AccKtCode" type="java.lang.String">
-      <column name="ACCKT_CODE" length="20" not-null="false" sql-type="CHAR" />
+      <column name="ACCKT_CODE" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="AnlDb1Id" type="java.lang.Integer">
-      <column name="ANLDB1_ID" not-null="false" sql-type="INTEGER" />
+      <column name="ANLDB1_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="AnlDb2Id" type="java.lang.Integer">
-      <column name="ANLDB2_ID" not-null="false" sql-type="INTEGER" />
+      <column name="ANLDB2_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="AnlDb3Id" type="java.lang.Integer">
-      <column name="ANLDB3_ID" not-null="false" sql-type="INTEGER" />
+      <column name="ANLDB3_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="AnlDb4Id" type="java.lang.Integer">
-      <column name="ANLDB4_ID" not-null="false" sql-type="INTEGER" />
+      <column name="ANLDB4_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="AnlDb5Id" type="java.lang.Integer">
-      <column name="ANLDB5_ID" not-null="false" sql-type="INTEGER" />
+      <column name="ANLDB5_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="AnlKt1Id" type="java.lang.Integer">
-      <column name="ANLKT1_ID" not-null="false" sql-type="INTEGER" />
+      <column name="ANLKT1_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="AnlKt2Id" type="java.lang.Integer">
-      <column name="ANLKT2_ID" not-null="false" sql-type="INTEGER" />
+      <column name="ANLKT2_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="AnlKt3Id" type="java.lang.Integer">
-      <column name="ANLKT3_ID" not-null="false" sql-type="INTEGER" />
+      <column name="ANLKT3_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="AnlKt4Id" type="java.lang.Integer">
-      <column name="ANLKT4_ID" not-null="false" sql-type="INTEGER" />
+      <column name="ANLKT4_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="AnlKt5Id" type="java.lang.Integer">
-      <column name="ANLKT5_ID" not-null="false" sql-type="INTEGER" />
+      <column name="ANLKT5_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="Feature1Id" type="java.lang.Integer">
-      <column name="FEATURE1_ID" not-null="false" sql-type="INTEGER" />
+      <column name="FEATURE1_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="Feature2Id" type="java.lang.Integer">
-      <column name="FEATURE2_ID" not-null="false" sql-type="INTEGER" />
+      <column name="FEATURE2_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="Feature3Id" type="java.lang.Integer">
-      <column name="FEATURE3_ID" not-null="false" sql-type="INTEGER" />
+      <column name="FEATURE3_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="Feature4Id" type="java.lang.Integer">
-      <column name="FEATURE4_ID" not-null="false" sql-type="INTEGER" />
+      <column name="FEATURE4_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="Feature5Id" type="java.lang.Integer">
-      <column name="FEATURE5_ID" not-null="false" sql-type="INTEGER" />
+      <column name="FEATURE5_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="OrgUnitId" type="java.lang.Integer">
-      <column name="ORGUNIT_ID" not-null="false" sql-type="INTEGER" />
+      <column name="ORGUNIT_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="SummNat" type="java.math.BigDecimal">
-      <column name="SUMMNAT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="SUMMNAT" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="SummCur" type="java.math.BigDecimal">
-      <column name="SUMMCUR" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="SUMMCUR" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="OperDate" type="java.util.Date">
-      <column name="OPERDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="OPERDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="TotalSign" type="java.lang.Short">
-      <column name="TOTAL_SIGN" not-null="false" sql-type="SMALLINT" />
+      <column name="TOTAL_SIGN" not-null="false" sql-type="SMALLINT"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

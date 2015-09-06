@@ -18,183 +18,188 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Модель бизнес-компонента "Образование"
- * 
+ *
  * @author hbm2java
  * @author Artem V. Sharapov
  * @version $Id: PersonnelEducation.java,v 1.2 2005/06/28 10:03:40 pashistova
  */
 public class PersonnelEducation extends
-com.mg.framework.service.PersistentObjectHibernate implements
-java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.personnelref.model.AdditionalEducationKind AdditionalEducationKind;
+  private com.mg.merp.personnelref.model.AdditionalEducationKind AdditionalEducationKind;
 
-	private com.mg.merp.personnelref.model.Speciality Speciality;
+  private com.mg.merp.personnelref.model.Speciality Speciality;
 
-	private com.mg.merp.personnelref.model.Personnel Personnel;
+  private com.mg.merp.personnelref.model.Personnel Personnel;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String InstitutionName;
+  private java.lang.String InstitutionName;
 
-	private java.lang.String DiplomaQualification;
+  private java.lang.String DiplomaQualification;
 
-	private java.lang.String DiplomaNumber;
+  private java.lang.String DiplomaNumber;
 
-	private java.util.Date DiplomaDate;
+  private java.util.Date DiplomaDate;
 
-	private java.lang.Integer GraduationYear;
+  private java.lang.Integer GraduationYear;
 
-	private PrefIsAdditionalEducation IsAdditional;
+  private PrefIsAdditionalEducation IsAdditional;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public PersonnelEducation() {
-	}
+  /**
+   * default constructor
+   */
+  public PersonnelEducation() {
+  }
 
-	/** constructor with id */
-	public PersonnelEducation(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public PersonnelEducation(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID") //$NON-NLS-1$
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID") //$NON-NLS-1$
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.personnelref.model.AdditionalEducationKind getAdditionalEducationKind() {
-		return this.AdditionalEducationKind;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public void setAdditionalEducationKind(
-			com.mg.merp.personnelref.model.AdditionalEducationKind PrefAdditionalEducationKind) {
-		this.AdditionalEducationKind = PrefAdditionalEducationKind;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.personnelref.model.AdditionalEducationKind getAdditionalEducationKind() {
+    return this.AdditionalEducationKind;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.Personnel.Speciality") //$NON-NLS-1$
-	public com.mg.merp.personnelref.model.Speciality getSpeciality() {
-		return this.Speciality;
-	}
+  public void setAdditionalEducationKind(
+      com.mg.merp.personnelref.model.AdditionalEducationKind PrefAdditionalEducationKind) {
+    this.AdditionalEducationKind = PrefAdditionalEducationKind;
+  }
 
-	public void setSpeciality(
-			com.mg.merp.personnelref.model.Speciality PrefSpeciality) {
-		this.Speciality = PrefSpeciality;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.Personnel.Speciality") //$NON-NLS-1$
+  public com.mg.merp.personnelref.model.Speciality getSpeciality() {
+    return this.Speciality;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSpeciality(
+      com.mg.merp.personnelref.model.Speciality PrefSpeciality) {
+    this.Speciality = PrefSpeciality;
+  }
 
-	public com.mg.merp.personnelref.model.Personnel getPersonnel() {
-		return this.Personnel;
-	}
+  /**
+   *
+   */
 
-	public void setPersonnel(
-			com.mg.merp.personnelref.model.Personnel PrefPersonnel) {
-		this.Personnel = PrefPersonnel;
-	}
+  public com.mg.merp.personnelref.model.Personnel getPersonnel() {
+    return this.Personnel;
+  }
 
-	/**
-	 * 
-	 */
+  public void setPersonnel(
+      com.mg.merp.personnelref.model.Personnel PrefPersonnel) {
+    this.Personnel = PrefPersonnel;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.Personnel.InstitutionName") //$NON-NLS-1$
-	public java.lang.String getInstitutionName() {
-		return this.InstitutionName;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setInstitutionName(java.lang.String InstitutionName) {
-		this.InstitutionName = InstitutionName;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.Personnel.InstitutionName") //$NON-NLS-1$
+  public java.lang.String getInstitutionName() {
+    return this.InstitutionName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.Personnel.DiplomaQualification") //$NON-NLS-1$
-	public java.lang.String getDiplomaQualification() {
-		return this.DiplomaQualification;
-	}
+  public void setInstitutionName(java.lang.String InstitutionName) {
+    this.InstitutionName = InstitutionName;
+  }
 
-	public void setDiplomaQualification(java.lang.String DiplomaQualification) {
-		this.DiplomaQualification = DiplomaQualification;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.Personnel.DiplomaQualification") //$NON-NLS-1$
+  public java.lang.String getDiplomaQualification() {
+    return this.DiplomaQualification;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.Personnel.DiplomaNumber") //$NON-NLS-1$
-	public java.lang.String getDiplomaNumber() {
-		return this.DiplomaNumber;
-	}
+  public void setDiplomaQualification(java.lang.String DiplomaQualification) {
+    this.DiplomaQualification = DiplomaQualification;
+  }
 
-	public void setDiplomaNumber(java.lang.String DiplomaNumber) {
-		this.DiplomaNumber = DiplomaNumber;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.Personnel.DiplomaNumber") //$NON-NLS-1$
+  public java.lang.String getDiplomaNumber() {
+    return this.DiplomaNumber;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.Personnel.DiplomaDate") //$NON-NLS-1$
-	public java.util.Date getDiplomaDate() {
-		return this.DiplomaDate;
-	}
+  public void setDiplomaNumber(java.lang.String DiplomaNumber) {
+    this.DiplomaNumber = DiplomaNumber;
+  }
 
-	public void setDiplomaDate(java.util.Date DiplomaDate) {
-		this.DiplomaDate = DiplomaDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.Personnel.DiplomaDate") //$NON-NLS-1$
+  public java.util.Date getDiplomaDate() {
+    return this.DiplomaDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.Personnel.GraduationYear") //$NON-NLS-1$
-	public java.lang.Integer getGraduationYear() {
-		return this.GraduationYear;
-	}
+  public void setDiplomaDate(java.util.Date DiplomaDate) {
+    this.DiplomaDate = DiplomaDate;
+  }
 
-	public void setGraduationYear(java.lang.Integer GraduationYear) {
-		this.GraduationYear = GraduationYear;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.Personnel.GraduationYear") //$NON-NLS-1$
+  public java.lang.Integer getGraduationYear() {
+    return this.GraduationYear;
+  }
 
-	/**
-	 * 
-	 */
+  public void setGraduationYear(java.lang.Integer GraduationYear) {
+    this.GraduationYear = GraduationYear;
+  }
 
-	public PrefIsAdditionalEducation getIsAdditional() {
-		return this.IsAdditional;
-	}
+  /**
+   *
+   */
 
-	public void setIsAdditional(PrefIsAdditionalEducation IsAdditional) {
-		this.IsAdditional = IsAdditional;
-	}
+  public PrefIsAdditionalEducation getIsAdditional() {
+    return this.IsAdditional;
+  }
+
+  public void setIsAdditional(PrefIsAdditionalEducation IsAdditional) {
+    this.IsAdditional = IsAdditional;
+  }
 
 }

@@ -13,14 +13,14 @@
 */
 package com.mg.merp.workbench.service.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.merp.workbench.service.Workbench;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * @author Valentin A. Poroxnenko
- * @version $Id: WorkbenchServiceMBean.java,v 1.1 2006/10/09 06:20:20 poroxnenko Exp $ 
+ * @version $Id: WorkbenchServiceMBean.java,v 1.1 2006/10/09 06:20:20 poroxnenko Exp $
  */
-public interface WorkbenchServiceMBean extends ServiceMBean, Workbench{
+public interface WorkbenchServiceMBean extends ServiceMBean, Workbench {
 
 }

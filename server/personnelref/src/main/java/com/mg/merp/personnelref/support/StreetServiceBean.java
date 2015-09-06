@@ -15,31 +15,30 @@
 
 package com.mg.merp.personnelref.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.personnelref.StreetServiceLocal;
 import com.mg.merp.personnelref.model.Street;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Улицы" 
- * 
+ * Бизнес-компонент "Улицы"
+ *
  * @author leonova
  * @version $Id: StreetServiceBean.java,v 1.3 2006/09/06 12:49:54 leonova Exp $
  */
-@Stateless(name="merp/personnelref/StreetService")
+@Stateless(name = "merp/personnelref/StreetService")
 public class StreetServiceBean extends AbstractPOJODataBusinessObjectServiceBean<Street, Integer> implements StreetServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, Street entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "SName"));
-	}
-
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, Street entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "SName"));
+  }
 
 
 }

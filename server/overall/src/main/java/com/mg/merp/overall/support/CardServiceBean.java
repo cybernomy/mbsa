@@ -15,18 +15,18 @@
 
 package com.mg.merp.overall.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.overall.CardServiceLocal;
 import com.mg.merp.overall.model.OvrCard;
 
+import javax.ejb.Stateless;
+
 /**
  * Бизнес-компонент "Лицевые карточки сотрудников"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: CardServiceBean.java,v 1.1 2008/06/30 04:19:36 alikaev Exp $
  */
-@Stateless(name="merp/overall/CardService")
+@Stateless(name = "merp/overall/CardService")
 public class CardServiceBean extends com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean<OvrCard, Integer> implements CardServiceLocal {
 
 }

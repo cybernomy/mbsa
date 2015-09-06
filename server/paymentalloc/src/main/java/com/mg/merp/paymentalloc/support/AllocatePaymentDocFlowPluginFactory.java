@@ -22,70 +22,70 @@ import com.mg.merp.paymentalloc.PaymentallocProcessorServiceLocal;
 
 /**
  * Реализация фабрики реализации этапа ДО "Отработка в журнале платежей"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: AllocatePaymentDocFlowPluginFactory.java,v 1.1 2007/05/31 14:11:43 sharapov Exp $
  */
 public class AllocatePaymentDocFlowPluginFactory extends AbstractDocFlowPluginFactory {
 
-	public final static int FACTORY_IDENTIFIER = 13001;
+  public final static int FACTORY_IDENTIFIER = 13001;
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
-	 */
-	@Override
-	protected DocFlowPlugin doCreatePlugin() {
-		return new AbstractDocFlowPlugin(){
+  /*
+   * (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
+   */
+  @Override
+  protected DocFlowPlugin doCreatePlugin() {
+    return new AbstractDocFlowPlugin() {
 
-			/*
-			 * (non-Javadoc)
-			 * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doExecute()
-			 */
-			@Override
-			protected void doExecute() throws Exception {
-				PaymentallocProcessorServiceLocal service = (PaymentallocProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(PaymentallocProcessorServiceLocal.LOCAL_SERVICE_NAME);
-				service.allocatePayment(getParams(), new PaymentallocProcessorListener() {
+      /*
+       * (non-Javadoc)
+       * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doExecute()
+       */
+      @Override
+      protected void doExecute() throws Exception {
+        PaymentallocProcessorServiceLocal service = (PaymentallocProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(PaymentallocProcessorServiceLocal.LOCAL_SERVICE_NAME);
+        service.allocatePayment(getParams(), new PaymentallocProcessorListener() {
 
-					public void canceled() {
-						cancel();
-					}
+          public void canceled() {
+            cancel();
+          }
 
-					public void completed() {
-						complete();
-					}
-				});
-			}
+          public void completed() {
+            complete();
+          }
+        });
+      }
 
-			/*
-			 * (non-Javadoc)
-			 * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doRoolback()
-			 */
-			@Override
-			protected void doRoolback() throws Exception {
-				PaymentallocProcessorServiceLocal service = (PaymentallocProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(PaymentallocProcessorServiceLocal.LOCAL_SERVICE_NAME);
-				service.rollBackAllocatePayment(getParams());
-				complete();
-			}
-		};
-	}
+      /*
+       * (non-Javadoc)
+       * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doRoolback()
+       */
+      @Override
+      protected void doRoolback() throws Exception {
+        PaymentallocProcessorServiceLocal service = (PaymentallocProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(PaymentallocProcessorServiceLocal.LOCAL_SERVICE_NAME);
+        service.rollBackAllocatePayment(getParams());
+        complete();
+      }
+    };
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
-	 */
-	@Override
-	public int getIdentifier() {
-		return FACTORY_IDENTIFIER;
-	}
+  /*
+   * (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
+   */
+  @Override
+  public int getIdentifier() {
+    return FACTORY_IDENTIFIER;
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
-	 */
-	@Override
-	public String getName() {
-		return "Payment allocation"; //$NON-NLS-1$
-	}
+  /*
+   * (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
+   */
+  @Override
+  public String getName() {
+    return "Payment allocation"; //$NON-NLS-1$
+  }
 
 }

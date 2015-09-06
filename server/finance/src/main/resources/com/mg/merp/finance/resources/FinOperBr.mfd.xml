@@ -13,22 +13,29 @@
 
 <!-- $Id: FinOperBr.mfd.xml,v 1.7 2009/02/19 11:36:03 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.finance.support.ui.FinOperBr" title="resource://com.mg.merp.finance.resources.formelements#FinOper.FormBr.Title" helpTopic="finance#finoper_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver"
+          controller="com.mg.merp.finance.support.ui.FinOperBr"
+          title="resource://com.mg.merp.finance.resources.formelements#FinOper.FormBr.Title"
+          helpTopic="finance#finoper_html">
 
-	<jfd:include name="com/mg/merp/finance/resources/FinOperBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/merp/finance/resources/FinOperBrowseHeaderMacros.xml"/>
 
-	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
-		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true" >
-		</jfd:maintenanceTree>
-		<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
-			<jfd:popupMenu>
-				<jfd:separator />
-				<jfd:menuItem id="showFinOperItem" text="resource://com.mg.merp.finance.resources.formelements#FinOper.ShowFinOper" actionListener="ShowFinOper" />
-				<jfd:menuItem id="insertFinOperPattern" text="resource://com.mg.merp.finance.resources.formelements#FinOper.InsertFinOperPattern" actionListener="InsertFinOperPattern" />
-			</jfd:popupMenu>			
-		</jfd:maintenanceTable>
-	</jfd:container>
+  <jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+    <jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true">
+    </jfd:maintenanceTree>
+    <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+      <jfd:popupMenu>
+        <jfd:separator/>
+        <jfd:menuItem id="showFinOperItem"
+                      text="resource://com.mg.merp.finance.resources.formelements#FinOper.ShowFinOper"
+                      actionListener="ShowFinOper"/>
+        <jfd:menuItem id="insertFinOperPattern"
+                      text="resource://com.mg.merp.finance.resources.formelements#FinOper.InsertFinOperPattern"
+                      actionListener="InsertFinOperPattern"/>
+      </jfd:popupMenu>
+    </jfd:maintenanceTable>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml"/>
 
 </jfd:form>

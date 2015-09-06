@@ -14,12 +14,12 @@
  */
 package com.mg.merp.core.model;
 
-import java.io.Serializable;
-
 import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.metadata.ApplicationLayer;
 import com.mg.framework.api.metadata.BusinessServiceImplKind;
 import com.mg.framework.service.PersistentObjectHibernate;
+
+import java.io.Serializable;
 
 /**
  * @author Oleg V. Safonov
@@ -27,104 +27,104 @@ import com.mg.framework.service.PersistentObjectHibernate;
  */
 @DataItemName("Core.SysClassImplementation")
 public class SysClassImplementation extends PersistentObjectHibernate implements
-		Serializable {
-	private Integer id;
-	private com.mg.merp.core.model.SysClient sysClient;
-	private ApplicationLayer applicationLayer;
-	private SysClass sysClass;
-	private BusinessServiceImplKind kind;
-	private String name;
-	
-	public SysClassImplementation() {	
-	}
-	
-	public SysClassImplementation(Integer id) {
-		this.id = id;
-	}
+    Serializable {
+  private Integer id;
+  private com.mg.merp.core.model.SysClient sysClient;
+  private ApplicationLayer applicationLayer;
+  private SysClass sysClass;
+  private BusinessServiceImplKind kind;
+  private String name;
 
-	/**
-	 * @return Returns the applicationLayer.
-	 */
-	public ApplicationLayer getApplicationLayer() {
-		return applicationLayer;
-	}
+  public SysClassImplementation() {
+  }
 
-	/**
-	 * @param applicationLayer The applicationLayer to set.
-	 */
-	public void setApplicationLayer(ApplicationLayer applicationLayer) {
-		this.applicationLayer = applicationLayer;
-	}
+  public SysClassImplementation(Integer id) {
+    this.id = id;
+  }
 
-	/**
-	 * @return Returns the id.
-	 */
-	@DataItemName("ID")
-	public Integer getId() {
-		return id;
-	}
+  /**
+   * @return Returns the applicationLayer.
+   */
+  public ApplicationLayer getApplicationLayer() {
+    return applicationLayer;
+  }
 
-	/**
-	 * @param id The id to set.
-	 */
-	public void setId(Integer id) {
-		this.id = id;
-	}
+  /**
+   * @param applicationLayer The applicationLayer to set.
+   */
+  public void setApplicationLayer(ApplicationLayer applicationLayer) {
+    this.applicationLayer = applicationLayer;
+  }
 
-	/**
-	 * @return Returns the kind.
-	 */
-	public BusinessServiceImplKind getKind() {
-		return kind;
-	}
+  /**
+   * @return Returns the id.
+   */
+  @DataItemName("ID")
+  public Integer getId() {
+    return id;
+  }
 
-	/**
-	 * @param kind The kind to set.
-	 */
-	public void setKind(BusinessServiceImplKind kind) {
-		this.kind = kind;
-	}
+  /**
+   * @param id The id to set.
+   */
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
-	/**
-	 * @return Returns the name.
-	 */
-	@DataItemName("Core.SysClassImplementation.Name")
-	public String getName() {
-		return name;
-	}
+  /**
+   * @return Returns the kind.
+   */
+  public BusinessServiceImplKind getKind() {
+    return kind;
+  }
 
-	/**
-	 * @param name The name to set.
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
+  /**
+   * @param kind The kind to set.
+   */
+  public void setKind(BusinessServiceImplKind kind) {
+    this.kind = kind;
+  }
 
-	/**
-	 * @return Returns the sysClass.
-	 */
-	public SysClass getSysClass() {
-		return sysClass;
-	}
+  /**
+   * @return Returns the name.
+   */
+  @DataItemName("Core.SysClassImplementation.Name")
+  public String getName() {
+    return name;
+  }
 
-	/**
-	 * @param sysClass The sysClass to set.
-	 */
-	public void setSysClass(SysClass sysClass) {
-		this.sysClass = sysClass;
-	}
+  /**
+   * @param name The name to set.
+   */
+  public void setName(String name) {
+    this.name = name;
+  }
 
-	/**
-	 * @return Returns the sysClient.
-	 */
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return sysClient;
-	}
+  /**
+   * @return Returns the sysClass.
+   */
+  public SysClass getSysClass() {
+    return sysClass;
+  }
 
-	/**
-	 * @param sysClient The sysClient to set.
-	 */
-	public void setSysClient(com.mg.merp.core.model.SysClient sysClient) {
-		this.sysClient = sysClient;
-	}
+  /**
+   * @param sysClass The sysClass to set.
+   */
+  public void setSysClass(SysClass sysClass) {
+    this.sysClass = sysClass;
+  }
+
+  /**
+   * @return Returns the sysClient.
+   */
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return sysClient;
+  }
+
+  /**
+   * @param sysClient The sysClient to set.
+   */
+  public void setSysClient(com.mg.merp.core.model.SysClient sysClient) {
+    this.sysClient = sysClient;
+  }
 }

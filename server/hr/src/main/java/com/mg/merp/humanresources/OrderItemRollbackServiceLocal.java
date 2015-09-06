@@ -18,16 +18,16 @@ import com.mg.merp.humanresources.model.OrderItemRollback;
 
 /**
  * Сервис бизнес-компонента ""
- * 
+ *
  * @author Artem V. Sharapov
  * @author leonova
  * @version $Id: OrderItemRollbackServiceLocal.java,v 1.3 2007/08/27 12:16:04 sharapov Exp $
  */
 public interface OrderItemRollbackServiceLocal extends com.mg.framework.api.DataBusinessObjectService<OrderItemRollback, Integer> {
 
-	/**
-	 * Имя сервиса
-	 */
-	final static String SERVICE_NAME = "OrderItemRollback"; //$NON-NLS-1$
-	
+  /**
+   * Имя сервиса
+   */
+  final static String SERVICE_NAME = "OrderItemRollback"; //$NON-NLS-1$
+
 }

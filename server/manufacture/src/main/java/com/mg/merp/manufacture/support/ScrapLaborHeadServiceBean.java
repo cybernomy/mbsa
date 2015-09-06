@@ -15,8 +15,6 @@
 
 package com.mg.merp.manufacture.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.merp.manufacture.ScrapLaborHeadServiceLocal;
 import com.mg.merp.manufacture.ScrapLaborModelServiceLocal;
@@ -24,27 +22,29 @@ import com.mg.merp.manufacture.ScrapLaborSpecServiceLocal;
 import com.mg.merp.manufacture.generic.ScrapDocumentHeadServiceBean;
 import com.mg.merp.manufacture.model.ScrapDocumentHead;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Акты на списание потерь времени, отработанного РС" 
- * 
+ * Бизнес-компонент "Акты на списание потерь времени, отработанного РС"
+ *
  * @author leonova
  * @version $Id: ScrapLaborHeadServiceBean.java,v 1.7 2007/02/06 17:15:40 safonov Exp $
  */
-@Stateless(name="merp/manufacture/ScrapLaborHeadService")
- public class ScrapLaborHeadServiceBean extends ScrapDocumentHeadServiceBean<ScrapDocumentHead, Integer, ScrapLaborModelServiceLocal, ScrapLaborSpecServiceLocal> implements ScrapLaborHeadServiceLocal{
+@Stateless(name = "merp/manufacture/ScrapLaborHeadService")
+public class ScrapLaborHeadServiceBean extends ScrapDocumentHeadServiceBean<ScrapDocumentHead, Integer, ScrapLaborModelServiceLocal, ScrapLaborSpecServiceLocal> implements ScrapLaborHeadServiceLocal {
 
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.GoodsDocumentServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, ScrapDocumentHead entity) {
-		super.onValidate(context, entity);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.GoodsDocumentServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, ScrapDocumentHead entity) {
+    super.onValidate(context, entity);
+  }
 
-	@Override
-	protected int getDocSectionIdentifier() {
-		return ScrapLaborHeadServiceLocal.DOCSECTION;
-	}
+  @Override
+  protected int getDocSectionIdentifier() {
+    return ScrapLaborHeadServiceLocal.DOCSECTION;
+  }
 
- }
+}

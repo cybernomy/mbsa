@@ -18,10 +18,8 @@ package com.mg.merp.account.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentRest;
 
 /**
- * 
  * @author leonova
  * @version $Id: InternalInvoiceHeadRest.java,v 1.2 2006/09/07 05:20:03 leonova Exp $
- *
  */
 public class InternalInvoiceHeadRest extends GoodsDocumentRest {
 

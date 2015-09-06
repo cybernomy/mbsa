@@ -18,44 +18,45 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * @author hbm2java
- * @version $Id: InternalInvoiceSpec.java,v 1.4 2005/07/15 13:12:41 pashistova
- *          Exp $
+ * @version $Id: InternalInvoiceSpec.java,v 1.4 2005/07/15 13:12:41 pashistova Exp $
  */
 public class InternalInvoiceSpec extends com.mg.merp.document.model.DocSpec
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.math.BigDecimal RequestQuan;
+  private java.math.BigDecimal RequestQuan;
 
-	private java.math.BigDecimal RequestSumma;
+  private java.math.BigDecimal RequestSumma;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public InternalInvoiceSpec() {
-	}
+  /**
+   * default constructor
+   */
+  public InternalInvoiceSpec() {
+  }
 
-	// Property accessors
-	@DataItemName("Account.InvInvoice.RequestQuan")
-	public java.math.BigDecimal getRequestQuan() {
-		return this.RequestQuan;
-	}
+  // Property accessors
+  @DataItemName("Account.InvInvoice.RequestQuan")
+  public java.math.BigDecimal getRequestQuan() {
+    return this.RequestQuan;
+  }
 
-	public void setRequestQuan(java.math.BigDecimal Requestquan) {
-		this.RequestQuan = Requestquan;
-	}
+  public void setRequestQuan(java.math.BigDecimal Requestquan) {
+    this.RequestQuan = Requestquan;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.InvInvoice.RequestSumma")
-	public java.math.BigDecimal getRequestSumma() {
-		return this.RequestSumma;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.InvInvoice.RequestSumma")
+  public java.math.BigDecimal getRequestSumma() {
+    return this.RequestSumma;
+  }
 
-	public void setRequestSumma(java.math.BigDecimal Requestsumma) {
-		this.RequestSumma = Requestsumma;
-	}
+  public void setRequestSumma(java.math.BigDecimal Requestsumma) {
+    this.RequestSumma = Requestsumma;
+  }
 
 }

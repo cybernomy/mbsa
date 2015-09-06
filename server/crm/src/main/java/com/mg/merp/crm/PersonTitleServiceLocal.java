@@ -17,12 +17,10 @@ package com.mg.merp.crm;
 import com.mg.merp.crm.model.PersonTitle;
 
 /**
- * 
  * @author leonova
  * @version $Id: PersonTitleServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface PersonTitleServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<PersonTitle, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<PersonTitle, Integer> {
 
 }

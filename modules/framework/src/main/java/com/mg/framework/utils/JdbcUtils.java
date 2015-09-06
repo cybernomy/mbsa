@@ -25,71 +25,65 @@ import java.sql.Statement;
  * @author Oleg V. Safonov
  */
 public class JdbcUtils {
-	private static com.mg.framework.api.Logger logger = ServerUtils.getLogger(JdbcUtils.class.getName());
+  private static com.mg.framework.api.Logger logger = ServerUtils.getLogger(JdbcUtils.class.getName());
 
-	public static void closeResultSet(ResultSet rs) {
-		if (rs != null) {
-			try {
-				rs.close();
-			}
-			catch (SQLException ex) {
-				logger.warn("Could not close JDBC ResultSet", ex);
-			}
-		}
-	}
+  public static void closeResultSet(ResultSet rs) {
+    if (rs != null) {
+      try {
+        rs.close();
+      } catch (SQLException ex) {
+        logger.warn("Could not close JDBC ResultSet", ex);
+      }
+    }
+  }
 
-	public static void closeStatement(Statement stmt) {
-		if (stmt != null) {
-			try {
-				stmt.close();
-			}
-			catch (SQLException e) {
-				logger.warn("Could not close JDBC Statement", e);
-			}
-		}
-	}
+  public static void closeStatement(Statement stmt) {
+    if (stmt != null) {
+      try {
+        stmt.close();
+      } catch (SQLException e) {
+        logger.warn("Could not close JDBC Statement", e);
+      }
+    }
+  }
 
-	public static void closeConnection(Connection con) {
-		if (con != null) {
-			try {
-				con.close();
-			}
-			catch (SQLException e) {
-				logger.warn("Could not close JDBC connection", e);
-			}
-		}
-	}
+  public static void closeConnection(Connection con) {
+    if (con != null) {
+      try {
+        con.close();
+      } catch (SQLException e) {
+        logger.warn("Could not close JDBC connection", e);
+      }
+    }
+  }
 
-	/**
-     * Retrieves the value of the designated column in the current row
-     * of this <code>ResultSet</code> object as
-     * an <code>Integer</code> in the Java programming language.
-     *
-     * @param columnIndex the first column is 1, the second is 2, ...
-     * @return the column value; if the value is SQL <code>NULL</code>, the
-     * value returned is <code>null</code>
-     * @exception SQLException if the columnIndex is not valid;
-     * if a database access error occurs or this method is
-     *            called on a closed result set
-	 */
-	public static Integer getIntegerValue(ResultSet rs, int columnIndex) throws SQLException {
-		return rs.getObject(columnIndex) == null ? null : rs.getInt(columnIndex);
-	}
+  /**
+   * Retrieves the value of the designated column in the current row of this <code>ResultSet</code>
+   * object as an <code>Integer</code> in the Java programming language.
+   *
+   * @param columnIndex the first column is 1, the second is 2, ...
+   * @return the column value; if the value is SQL <code>NULL</code>, the value returned is
+   * <code>null</code>
+   * @throws SQLException if the columnIndex is not valid; if a database access error occurs or this
+   *                      method is called on a closed result set
+   */
+  public static Integer getIntegerValue(ResultSet rs, int columnIndex) throws SQLException {
+    return rs.getObject(columnIndex) == null ? null : rs.getInt(columnIndex);
+  }
 
-	/**
-     * Retrieves the value of the designated column in the current row
-     * of this <code>ResultSet</code> object as
-     * an <code>Integer</code> in the Java programming language.
-     *
-     * @param columnLabel the label for the column specified with the SQL AS clause.  If the SQL AS clause was not specified, then the label is the name of the column
-     * @return the column value; if the value is SQL <code>NULL</code>, the
-     * value returned is <code>null</code>
-     * @exception SQLException if the columnLabel is not valid;
-     * if a database access error occurs or this method is
-     *            called on a closed result set
-	 */
-	public static Integer getIntegerValue(ResultSet rs, String columnName) throws SQLException {
-		return rs.getObject(columnName) == null ? null : rs.getInt(columnName);
-	}
+  /**
+   * Retrieves the value of the designated column in the current row of this <code>ResultSet</code>
+   * object as an <code>Integer</code> in the Java programming language.
+   *
+   * @param columnLabel the label for the column specified with the SQL AS clause.  If the SQL AS
+   *                    clause was not specified, then the label is the name of the column
+   * @return the column value; if the value is SQL <code>NULL</code>, the value returned is
+   * <code>null</code>
+   * @throws SQLException if the columnLabel is not valid; if a database access error occurs or this
+   *                      method is called on a closed result set
+   */
+  public static Integer getIntegerValue(ResultSet rs, String columnName) throws SQLException {
+    return rs.getObject(columnName) == null ? null : rs.getInt(columnName);
+  }
 
 }

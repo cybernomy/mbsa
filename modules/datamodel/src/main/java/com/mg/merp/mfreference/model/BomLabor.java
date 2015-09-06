@@ -21,95 +21,97 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: BomLabor.java,v 1.5 2007/07/30 10:25:11 safonov Exp $
  */
 public class BomLabor extends com.mg.merp.mfreference.model.BomRouteResource
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private com.mg.merp.mfreference.model.LaborClass LaborClass;
+  private com.mg.merp.mfreference.model.LaborClass LaborClass;
 
-	private com.mg.merp.reference.model.Measure runTimeLbrUm;
+  private com.mg.merp.reference.model.Measure runTimeLbrUm;
 
-	private long RunTicksLbr;
+  private long RunTicksLbr;
 
-	private java.math.BigDecimal LbrNumber;
+  private java.math.BigDecimal LbrNumber;
 
-	private boolean LbrBackflushFlag;
+  private boolean LbrBackflushFlag;
 
-	private boolean LbrOhBackflushFlag;
+  private boolean LbrOhBackflushFlag;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public BomLabor() {
-	}
+  /**
+   * default constructor
+   */
+  public BomLabor() {
+  }
 
-	// Property accessors
+  // Property accessors
 
-	public com.mg.merp.mfreference.model.LaborClass getLaborClass() {
-		return this.LaborClass;
-	}
+  public com.mg.merp.mfreference.model.LaborClass getLaborClass() {
+    return this.LaborClass;
+  }
 
-	public void setLaborClass(
-			com.mg.merp.mfreference.model.LaborClass LaborClass) {
-		this.LaborClass = LaborClass;
-	}
+  public void setLaborClass(
+      com.mg.merp.mfreference.model.LaborClass LaborClass) {
+    this.LaborClass = LaborClass;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("MfReference.BomLabor.Measure")
-	public com.mg.merp.reference.model.Measure getRunTimeLbrUm() {
-		return this.runTimeLbrUm;
-	}
+  /**
+   *
+   */
+  @DataItemName("MfReference.BomLabor.Measure")
+  public com.mg.merp.reference.model.Measure getRunTimeLbrUm() {
+    return this.runTimeLbrUm;
+  }
 
-	public void setRunTimeLbrUm(com.mg.merp.reference.model.Measure Measure) {
-		this.runTimeLbrUm = Measure;
-	}
+  public void setRunTimeLbrUm(com.mg.merp.reference.model.Measure Measure) {
+    this.runTimeLbrUm = Measure;
+  }
 
-	@DataItemName("MfReference.BomLabor.RunTicksLbr")
-	public long getRunTicksLbr() {
-		return this.RunTicksLbr;
-	}
+  @DataItemName("MfReference.BomLabor.RunTicksLbr")
+  public long getRunTicksLbr() {
+    return this.RunTicksLbr;
+  }
 
-	public void setRunTicksLbr(long RunTicksLbr) {
-		this.RunTicksLbr = RunTicksLbr;
-	}
+  public void setRunTicksLbr(long RunTicksLbr) {
+    this.RunTicksLbr = RunTicksLbr;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("MfReference.BomLabor.LbrNumber")
-	public java.math.BigDecimal getLbrNumber() {
-		return this.LbrNumber;
-	}
+  /**
+   *
+   */
+  @DataItemName("MfReference.BomLabor.LbrNumber")
+  public java.math.BigDecimal getLbrNumber() {
+    return this.LbrNumber;
+  }
 
-	public void setLbrNumber(java.math.BigDecimal LbrNumber) {
-		this.LbrNumber = LbrNumber;
-	}
+  public void setLbrNumber(java.math.BigDecimal LbrNumber) {
+    this.LbrNumber = LbrNumber;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	@DataItemName("MfReference.BomLabor.LbrBackflushFlag")
-	public boolean isLbrBackflushFlag() {
-		return this.LbrBackflushFlag;
-	}
+  @DataItemName("MfReference.BomLabor.LbrBackflushFlag")
+  public boolean isLbrBackflushFlag() {
+    return this.LbrBackflushFlag;
+  }
 
-	public void setLbrBackflushFlag(boolean LbrBackflushFlag) {
-		this.LbrBackflushFlag = LbrBackflushFlag;
-	}
+  public void setLbrBackflushFlag(boolean LbrBackflushFlag) {
+    this.LbrBackflushFlag = LbrBackflushFlag;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("MfReference.BomLabor.LbrOhBackflushFlag")
-	public boolean isLbrOhBackflushFlag() {
-		return this.LbrOhBackflushFlag;
-	}
+  /**
+   *
+   */
+  @DataItemName("MfReference.BomLabor.LbrOhBackflushFlag")
+  public boolean isLbrOhBackflushFlag() {
+    return this.LbrOhBackflushFlag;
+  }
 
-	public void setLbrOhBackflushFlag(boolean LbrOhBackflushFlag) {
-		this.LbrOhBackflushFlag = LbrOhBackflushFlag;
-	}
+  public void setLbrOhBackflushFlag(boolean LbrOhBackflushFlag) {
+    this.LbrOhBackflushFlag = LbrOhBackflushFlag;
+  }
 
 }

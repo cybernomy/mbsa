@@ -13,67 +13,99 @@
 
 <!-- $Id: PartnerMt.mfd.xml,v 1.12 2008/09/10 06:27:29 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.reference.support.ui.PartnerMt" title="resource://com.mg.merp.reference.resources.formelements#Partner.FormMt.Title" helpTopic="reference#partner_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.reference.support.ui.PartnerMt"
+          title="resource://com.mg.merp.reference.resources.formelements#Partner.FormMt.Title"
+          helpTopic="reference#partner_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-	  	<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.Tab.Total.Title" >
-		 	<jfd:field id="Code" />
- 			<jfd:field id="INN" sameLine="true" />
-			<jfd:field id="FullName" />
- 			<jfd:field id="KPP" sameLine="true" />
- 			<jfd:field id="OKVED" longField="false"/>
- 			<jfd:field id="OKPO" sameLine="true" />
- 			<jfd:field id="OKONH" />
- 			<jfd:field id="INNUnique" sameLine="true" />
- 			<jfd:field id="Comment" />
-			<jfd:field id="NaturalPerson" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-		</jfd:container>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.Tab.Total.Title">
+      <jfd:field id="Code"/>
+      <jfd:field id="INN" sameLine="true"/>
+      <jfd:field id="FullName"/>
+      <jfd:field id="KPP" sameLine="true"/>
+      <jfd:field id="OKVED" longField="false"/>
+      <jfd:field id="OKPO" sameLine="true"/>
+      <jfd:field id="OKONH"/>
+      <jfd:field id="INNUnique" sameLine="true"/>
+      <jfd:field id="Comment"/>
+      <jfd:field id="NaturalPerson"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
 
-		<jfd:include name="com/mg/merp/reference/resources/AddressPostMacros.xml" helpTopic="reference#partnadr_html" />
+    <jfd:include name="com/mg/merp/reference/resources/AddressPostMacros.xml"
+                 helpTopic="reference#partnadr_html"/>
 
-		<jfd:include name="com/mg/merp/reference/resources/AddressLegalMacros.xml" helpTopic="reference#partnadr_html" />
+    <jfd:include name="com/mg/merp/reference/resources/AddressLegalMacros.xml"
+                 helpTopic="reference#partnadr_html"/>
 
-		<jfd:maintenanceTable id="email" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.Email.FormBr.Title" >
-		</jfd:maintenanceTable>
+    <jfd:maintenanceTable id="email" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.Email.FormBr.Title">
+    </jfd:maintenanceTable>
 
-		<jfd:maintenanceTable id="phone" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.Phone.FormBr.Title" >
-		</jfd:maintenanceTable>
+    <jfd:maintenanceTable id="phone" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.Phone.FormBr.Title">
+    </jfd:maintenanceTable>
 
- 		<jfd:maintenanceTable id="bankFields" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.Bank.FormBr.Title" helpTopic="reference#partnbank_html" >
-		</jfd:maintenanceTable>
+    <jfd:maintenanceTable id="bankFields" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.Bank.FormBr.Title"
+                          helpTopic="reference#partnbank_html">
+    </jfd:maintenanceTable>
 
- 		<jfd:maintenanceTable id="partnEmpl" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.ParntEmpl.Title" helpTopic="reference#partnempl_html" >
-		</jfd:maintenanceTable>
+    <jfd:maintenanceTable id="partnEmpl" scroll="true" alignment="expand_expand"
+                          autoResize="subsequent_columns"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.ParntEmpl.Title"
+                          helpTopic="reference#partnempl_html">
+    </jfd:maintenanceTable>
 
-		<jfd:maintenanceTable id="partnEmplLink" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.ParntEmplLink.Title" helpTopic="reference#partnlink_html" >
-		</jfd:maintenanceTable>
+    <jfd:maintenanceTable id="partnEmplLink" scroll="true" alignment="expand_expand"
+                          autoResize="subsequent_columns"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.ParntEmplLink.Title"
+                          helpTopic="reference#partnlink_html">
+    </jfd:maintenanceTable>
 
- <!--		<jfd:maintenanceTable id="confidentData" scroll="true" tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.ConfidentialData.Title" >
-  			<jfd:columns>
-				<jfd:column fieldName="ID" title="Ижентификатор" />
-				<jfd:column fieldName="DNAME" title="Название" />							
-			</jfd:columns> 
-		</jfd:maintenanceTable>			 -->
-	  	<jfd:container id="kredit" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.Tab.Kredit.Title" helpTopic="reference#partncred_html" >
-			
- 			<jfd:field id="MaxSupCredit" text="resource://com.mg.merp.reference.resources.formelements#Partner.Kredit" fieldGroup="resource://com.mg.merp.reference.resources.formelements#Partner.Kredit.SupKredit.Title" />
- 			<jfd:field id="MaxSupCreditCur" sameLine="true" showLabel="false" text="resource://com.mg.merp.reference.resources.formelements#Partner.Currency"/>
+    <!--		<jfd:maintenanceTable id="confidentData" scroll="true" tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.ConfidentialData.Title" >
+           <jfd:columns>
+           <jfd:column fieldName="ID" title="Ижентификатор" />
+           <jfd:column fieldName="DNAME" title="Название" />
+         </jfd:columns>
+       </jfd:maintenanceTable>			 -->
+    <jfd:container id="kredit" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.Tab.Kredit.Title"
+                   helpTopic="reference#partncred_html">
 
- 			<jfd:field id="TermSupCredit" text="resource://com.mg.merp.reference.resources.formelements#Partner.TermCredit" fieldGroup="resource://com.mg.merp.reference.resources.formelements#Partner.Kredit.SupPena.Title" />
- 			<jfd:field id="PenaltySup" sameLine="true" text="resource://com.mg.merp.reference.resources.formelements#Partner.Penalty"/>
+      <jfd:field id="MaxSupCredit"
+                 text="resource://com.mg.merp.reference.resources.formelements#Partner.Kredit"
+                 fieldGroup="resource://com.mg.merp.reference.resources.formelements#Partner.Kredit.SupKredit.Title"/>
+      <jfd:field id="MaxSupCreditCur" sameLine="true" showLabel="false"
+                 text="resource://com.mg.merp.reference.resources.formelements#Partner.Currency"/>
 
- 			<jfd:field id="MaxCusCredit" text="resource://com.mg.merp.reference.resources.formelements#Partner.Kredit" fieldGroup="resource://com.mg.merp.reference.resources.formelements#Partner.Kredit.CusKredit.Title" />
- 			<jfd:field id="MaxCusCreditCur" sameLine="true" showLabel="false" text="resource://com.mg.merp.reference.resources.formelements#Partner.Currency"/>
+      <jfd:field id="TermSupCredit"
+                 text="resource://com.mg.merp.reference.resources.formelements#Partner.TermCredit"
+                 fieldGroup="resource://com.mg.merp.reference.resources.formelements#Partner.Kredit.SupPena.Title"/>
+      <jfd:field id="PenaltySup" sameLine="true"
+                 text="resource://com.mg.merp.reference.resources.formelements#Partner.Penalty"/>
 
- 			<jfd:field id="TermCusCredit" text="resource://com.mg.merp.reference.resources.formelements#Partner.TermCredit" fieldGroup="resource://com.mg.merp.reference.resources.formelements#Partner.Kredit.CusPena.Title" />
- 			<jfd:field id="PenaltyCus" sameLine="true" text="resource://com.mg.merp.reference.resources.formelements#Partner.Penalty"/>
+      <jfd:field id="MaxCusCredit"
+                 text="resource://com.mg.merp.reference.resources.formelements#Partner.Kredit"
+                 fieldGroup="resource://com.mg.merp.reference.resources.formelements#Partner.Kredit.CusKredit.Title"/>
+      <jfd:field id="MaxCusCreditCur" sameLine="true" showLabel="false"
+                 text="resource://com.mg.merp.reference.resources.formelements#Partner.Currency"/>
 
-		</jfd:container>
-	</jfd:container>
+      <jfd:field id="TermCusCredit"
+                 text="resource://com.mg.merp.reference.resources.formelements#Partner.TermCredit"
+                 fieldGroup="resource://com.mg.merp.reference.resources.formelements#Partner.Kredit.CusPena.Title"/>
+      <jfd:field id="PenaltyCus" sameLine="true"
+                 text="resource://com.mg.merp.reference.resources.formelements#Partner.Penalty"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    </jfd:container>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

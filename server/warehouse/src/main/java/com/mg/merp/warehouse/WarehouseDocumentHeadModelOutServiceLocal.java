@@ -18,15 +18,14 @@ import com.mg.merp.document.DocumentPattern;
 import com.mg.merp.warehouse.model.StockDocumentHeadModel;
 
 /**
- * 
  * @author leonova
- * @version $Id: WarehouseDocumentHeadModelOutServiceLocal.java,v 1.3 2006/09/20 11:02:09 safonov Exp $
+ * @version $Id: WarehouseDocumentHeadModelOutServiceLocal.java,v 1.3 2006/09/20 11:02:09 safonov
+ *          Exp $
  */
 public interface WarehouseDocumentHeadModelOutServiceLocal
-   extends DocumentPattern<StockDocumentHeadModel, Integer>
-{
-	/**
-	 * тип папки для образцов расходных ордеров
-	 */
-	final static short FOLDER_PART = 33;
+    extends DocumentPattern<StockDocumentHeadModel, Integer> {
+  /**
+   * тип папки для образцов расходных ордеров
+   */
+  final static short FOLDER_PART = 33;
 }

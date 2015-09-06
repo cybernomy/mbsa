@@ -20,26 +20,25 @@ import com.mg.framework.utils.ServerUtils;
 
 /**
  * Локатор менеджера перехватчиков действий над объектами сущностями
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: EntityInterceptorManagerLocator.java,v 1.1 2006/08/04 12:33:51 safonov Exp $
  */
 public class EntityInterceptorManagerLocator {
-    private static volatile EntityInterceptorManager instance = null;
-    
-    /**
-     * получить менеджер
-     * 
-     * @return	менеджер
-     */
-    public static EntityInterceptorManager locate() {
-        if (instance == null)
-            try {
-                instance = (EntityInterceptorManager) ServerUtils.createMBeanProxy(EntityInterceptorManager.class, "merp:service=EntityInterceptorManagerService");
-            }
-            catch (Exception e) {
-                throw new ApplicationException(e);
-            }
-        return instance;
-    }
+  private static volatile EntityInterceptorManager instance = null;
+
+  /**
+   * получить менеджер
+   *
+   * @return менеджер
+   */
+  public static EntityInterceptorManager locate() {
+    if (instance == null)
+      try {
+        instance = (EntityInterceptorManager) ServerUtils.createMBeanProxy(EntityInterceptorManager.class, "merp:service=EntityInterceptorManagerService");
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 }

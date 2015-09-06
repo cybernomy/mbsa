@@ -20,5 +20,5 @@ package com.mg.framework.service;
  * @version $Id: HardwareKeyNotFound.java,v 1.2 2007/04/13 14:00:47 safonov Exp $
  */
 public class HardwareKeyNotFound extends LicenseException {
-	private static final long serialVersionUID = 1565425858706630985L;
+  private static final long serialVersionUID = 1565425858706630985L;
 }

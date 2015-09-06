@@ -14,53 +14,53 @@
  */
 package com.mg.merp.salary.model;
 
-import java.util.Date;
-
 import com.mg.merp.personnelref.model.StaffList;
+
+import java.util.Date;
 
 /**
  * Модель данных "Параметры расчета"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: CalculationParams.java,v 1.1 2007/07/09 08:21:56 sharapov Exp $
  */
 public class CalculationParams {
-		
-	Date periodBeginDate;
-	Date periodEndDate;
-	StaffList staffList;
-	
-	/**
-	 * @param periodBeginDate
-	 * @param periodEndDate
-	 * @param staffList
-	 */
-	public CalculationParams(Date periodBeginDate, Date periodEndDate, StaffList staffList) {
-		this.periodBeginDate = periodBeginDate;
-		this.periodEndDate = periodEndDate;
-		this.staffList = staffList;
-	}
-	
-	
-	/**
-	 * @return the periodBeginDate
-	 */
-	public Date getPeriodBeginDate() {
-		return this.periodBeginDate;
-	}
 
-	/**
-	 * @return the periodEndDate
-	 */
-	public Date getPeriodEndDate() {
-		return this.periodEndDate;
-	}
+  Date periodBeginDate;
+  Date periodEndDate;
+  StaffList staffList;
 
-	/**
-	 * @return the staffList
-	 */
-	public StaffList getStaffList() {
-		return this.staffList;
-	}
-	
+  /**
+   * @param periodBeginDate
+   * @param periodEndDate
+   * @param staffList
+   */
+  public CalculationParams(Date periodBeginDate, Date periodEndDate, StaffList staffList) {
+    this.periodBeginDate = periodBeginDate;
+    this.periodEndDate = periodEndDate;
+    this.staffList = staffList;
+  }
+
+
+  /**
+   * @return the periodBeginDate
+   */
+  public Date getPeriodBeginDate() {
+    return this.periodBeginDate;
+  }
+
+  /**
+   * @return the periodEndDate
+   */
+  public Date getPeriodEndDate() {
+    return this.periodEndDate;
+  }
+
+  /**
+   * @return the staffList
+   */
+  public StaffList getStaffList() {
+    return this.staffList;
+  }
+
 }

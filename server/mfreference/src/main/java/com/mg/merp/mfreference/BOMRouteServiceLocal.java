@@ -17,12 +17,10 @@ package com.mg.merp.mfreference;
 import com.mg.merp.mfreference.model.BomRoute;
 
 /**
- * 
  * @author leonova
  * @version $Id: BOMRouteServiceLocal.java,v 1.1 2006/03/14 11:49:48 safonov Exp $
  */
 public interface BOMRouteServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<BomRoute, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<BomRoute, Integer> {
 
 }

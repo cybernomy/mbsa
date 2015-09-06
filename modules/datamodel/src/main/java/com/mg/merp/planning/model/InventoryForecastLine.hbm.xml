@@ -1,43 +1,43 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.planning.model.InventoryForecastLine" table="PP_INVENTORY_FORECAST_LINE">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">PP_INV_FORECAST_LINE_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="InventoryForecast" class="com.mg.merp.planning.model.InventoryForecast">
-      <column name="INVENTORY_FORECAST_ID" not-null="false" />
+      <column name="INVENTORY_FORECAST_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="GenericItem" class="com.mg.merp.planning.model.GenericItem">
-      <column name="GENERIC_ITEM_ID" not-null="false" />
+      <column name="GENERIC_ITEM_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Warehouse" class="com.mg.merp.reference.model.Contractor">
-      <column name="WAREHOUSE_ID" not-null="false" />
+      <column name="WAREHOUSE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Measure" class="com.mg.merp.reference.model.Measure">
-      <column name="MEASURE_ID" not-null="false" />
+      <column name="MEASURE_ID" not-null="false"/>
     </many-to-one>
     <property name="EffOnDate" type="java.util.Date">
-      <column name="EFF_ON_DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="EFF_ON_DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="EffOffDate" type="java.util.Date">
-      <column name="EFF_OFF_DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="EFF_OFF_DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="QtyOnHand" type="java.math.BigDecimal">
-      <column name="QTY_ON_HAND" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="QTY_ON_HAND" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

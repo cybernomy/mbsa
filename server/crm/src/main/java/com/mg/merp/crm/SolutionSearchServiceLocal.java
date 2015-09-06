@@ -15,14 +15,12 @@
 package com.mg.merp.crm;
 
 /**
- * 
  * @author leonova
  * @version $Id: SolutionSearchServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface SolutionSearchServiceLocal
-   extends com.mg.framework.api.BusinessObjectService
-{
+    extends com.mg.framework.api.BusinessObjectService {
 
-   public void saveSearch( int[] symptoms,int[] problemsAdded,int[] problemsRemoved ) throws com.mg.framework.api.ApplicationException;
+  public void saveSearch(int[] symptoms, int[] problemsAdded, int[] problemsRemoved) throws com.mg.framework.api.ApplicationException;
 
 }

@@ -13,9 +13,13 @@
 
 <!-- $Id: AnlLevel2DstMacros.xml,v 1.1 2006/11/02 05:38:55 leonova Exp $ -->
 
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="AnlLevel2DstBox" layout="jfd:box" orientation="hor" sameLine="true" alignment="expand_expand">
-	<jfd:textField id="anlLevel2DstName" readOnly="true" showLabel="false" alignment="expand_expand"/>
-	<jfd:button id="сlearAnlLevel2DstButton" icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ClearAnlLevel2Dst" alignment="right_expand" />
-	<jfd:button id="сhooseanlLevel2DstButton" text="..." minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseAnlLevel2Dst" alignment="right_expand" />
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="AnlLevel2DstBox" layout="jfd:box"
+               orientation="hor" sameLine="true" alignment="expand_expand">
+  <jfd:textField id="anlLevel2DstName" readOnly="true" showLabel="false" alignment="expand_expand"/>
+  <jfd:button id="сlearAnlLevel2DstButton" icon="com/mg/framework/resources/erasebuttonicon.png"
+              minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+              actionListener="ClearAnlLevel2Dst" alignment="right_expand"/>
+  <jfd:button id="сhooseanlLevel2DstButton" text="..." minimumSize="22,0" maximumSize="22,0"
+              preferredSize="22,0" actionListener="ChooseAnlLevel2Dst" alignment="right_expand"/>
 </jfd:container>										
 

@@ -18,13 +18,14 @@ import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис регистрации стандартного обработчика SQL ИС
- * 
+ *
  * @author Oleg V. Safonov
- * @version $Id: DefaultSQLExceptionTranslatorServiceMBean.java,v 1.1 2006/11/17 14:31:44 safonov Exp $
+ * @version $Id: DefaultSQLExceptionTranslatorServiceMBean.java,v 1.1 2006/11/17 14:31:44 safonov
+ *          Exp $
  */
 public interface DefaultSQLExceptionTranslatorServiceMBean extends ServiceMBean {
-	/**
-	 * наименование сервиса
-	 */
-	final static String SERVICE_NAME = "merp:service=DefaultSQLExceptionTranslatorService";
+  /**
+   * наименование сервиса
+   */
+  final static String SERVICE_NAME = "merp:service=DefaultSQLExceptionTranslatorService";
 }

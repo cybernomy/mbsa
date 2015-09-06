@@ -17,21 +17,19 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.StockDocumentHead;
 
 /**
- * 
  * @author leonova
  * @version $Id: WarehouseDocumentHeadInServiceLocal.java,v 1.3 2006/09/20 11:02:09 safonov Exp $
  */
 public interface WarehouseDocumentHeadInServiceLocal
-   extends com.mg.merp.document.GoodsDocument<StockDocumentHead, Integer, WarehouseDocumentHeadModelInServiceLocal, WarehouseDocumentSpecInServiceLocal>
-{
+    extends com.mg.merp.document.GoodsDocument<StockDocumentHead, Integer, WarehouseDocumentHeadModelInServiceLocal, WarehouseDocumentSpecInServiceLocal> {
 
-	/**
-	 * тип папки для приходных ордеров
-	 */
-	final static short FOLDER_PART = 30;
-	
-	/**
-	 * docsection для приходных ордеров
-	 */
-	final static short DOCSECTION = 16;
+  /**
+   * тип папки для приходных ордеров
+   */
+  final static short FOLDER_PART = 30;
+
+  /**
+   * docsection для приходных ордеров
+   */
+  final static short DOCSECTION = 16;
 }

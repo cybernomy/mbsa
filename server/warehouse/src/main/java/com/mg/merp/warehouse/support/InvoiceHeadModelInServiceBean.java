@@ -15,29 +15,29 @@
 
 package com.mg.merp.warehouse.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.document.generic.DocumentModelServiceBean;
 import com.mg.merp.warehouse.InvoiceHeadInServiceLocal;
 import com.mg.merp.warehouse.InvoiceHeadModelInServiceLocal;
 import com.mg.merp.warehouse.model.InvoiceHeadModel;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Образцы входящих накладных" 
- * 
+ * Бизнес-компонент "Образцы входящих накладных"
+ *
  * @author leonova
  * @version $Id: InvoiceHeadModelInServiceBean.java,v 1.3 2006/09/12 10:48:36 leonova Exp $
  */
-@Stateless(name="merp/warehouse/InvoiceHeadModelInService") 
- public class InvoiceHeadModelInServiceBean extends DocumentModelServiceBean<InvoiceHeadModel, Integer> implements InvoiceHeadModelInServiceLocal {
+@Stateless(name = "merp/warehouse/InvoiceHeadModelInService")
+public class InvoiceHeadModelInServiceBean extends DocumentModelServiceBean<InvoiceHeadModel, Integer> implements InvoiceHeadModelInServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
-	 */
-	@Override
-	protected short getDocSectionIdentifier() {
-		return InvoiceHeadInServiceLocal.DOCSECTION;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
+   */
+  @Override
+  protected short getDocSectionIdentifier() {
+    return InvoiceHeadInServiceLocal.DOCSECTION;
+  }
 
 
- }
+}

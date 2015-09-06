@@ -23,17 +23,17 @@ import com.mg.framework.utils.ServerUtils;
  * @version $Id: ConversionProcessor.java,v 1.2 2008/03/03 13:13:18 safonov Exp $
  */
 public class ConversionProcessor {
-	private static Logger logger = ServerUtils.getLogger(ConversionProcessor.class);
-	
-	public static ConversionRoutine<?, ?> createConversion(String name) {
-		if (name == null)
-			return null;
-		try {
-			return (ConversionRoutine<?, ?>) ServerUtils.loadClass(name).newInstance();
-		} catch (Throwable e) {
-			logger.error("ConversionRoutine instantiation error", e);
-			return null;
-		}
-	}
+  private static Logger logger = ServerUtils.getLogger(ConversionProcessor.class);
+
+  public static ConversionRoutine<?, ?> createConversion(String name) {
+    if (name == null)
+      return null;
+    try {
+      return (ConversionRoutine<?, ?>) ServerUtils.loadClass(name).newInstance();
+    } catch (Throwable e) {
+      logger.error("ConversionRoutine instantiation error", e);
+      return null;
+    }
+  }
 
 }

@@ -17,15 +17,14 @@ package com.mg.merp.account.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * 
  * @author leonova
  * @version $Id: MetalSearchHelp.java,v 1.2 2006/07/10 12:15:42 leonova Exp $
  */
 public class MetalSearchHelp extends DefaultLegacySearchHelp {
-	
-	@Override
-	protected String getServiceName() {		
-		return "merp/account/Metal";
-	}
+
+  @Override
+  protected String getServiceName() {
+    return "merp/account/Metal";
+  }
 }
 

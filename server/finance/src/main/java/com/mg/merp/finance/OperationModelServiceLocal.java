@@ -18,18 +18,18 @@ import com.mg.merp.finance.model.OperationModel;
 
 /**
  * Бизнес-компонент "Образцы финансовых операций"
- * 
+ *
  * @author leonova
  * @version $Id: OperationModelServiceLocal.java,v 1.3 2007/10/08 14:24:15 safonov Exp $
  */
 public interface OperationModelServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<OperationModel, Integer> {
-	/**
-	 * имя сервиса
-	 */
-	final static String SERVICE_NAME = "merp/finance/OperationModel";
-	/**
-	 * тип папки для образцов финансовых операций
-	 */
-	final static short FOLDER_PART = 53;
+    extends com.mg.framework.api.DataBusinessObjectService<OperationModel, Integer> {
+  /**
+   * имя сервиса
+   */
+  final static String SERVICE_NAME = "merp/finance/OperationModel";
+  /**
+   * тип папки для образцов финансовых операций
+   */
+  final static short FOLDER_PART = 53;
 }

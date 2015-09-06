@@ -19,8 +19,8 @@ package com.mg.merp.warehouse.model;
  * @version $Id: StockPlanHistoryKind.java,v 1.1 2007/09/04 11:08:20 safonov Exp $
  */
 public enum StockPlanHistoryKind {
-	IN_PLAN,
-	OUT_PLAN,
-	IN_RESERVE,
-	OUT_RESERVE
+  IN_PLAN,
+  OUT_PLAN,
+  IN_RESERVE,
+  OUT_RESERVE
 }

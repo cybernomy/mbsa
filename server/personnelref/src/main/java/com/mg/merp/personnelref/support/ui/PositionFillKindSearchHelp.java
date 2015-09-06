@@ -22,10 +22,10 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class PositionFillKindSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/personnelref/PositionFillKind";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/PositionFillKind";
+  }
 
 }
 

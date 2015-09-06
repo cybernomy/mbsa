@@ -14,9 +14,9 @@
  */
 package com.mg.merp.reference.model;
 
-import org.hibernate.bytecode.javassist.FieldHandler;
-
 import com.mg.framework.api.annotations.DataItemName;
+
+import org.hibernate.bytecode.javassist.FieldHandler;
 
 /**
  * @author hbm2java
@@ -24,163 +24,168 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.OriginalDocument")
 public class OriginalDocument extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
 
-	private FieldHandler fieldHandler;
+  private FieldHandler fieldHandler;
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.Folder Folder;
+  private com.mg.merp.core.model.Folder Folder;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String DocNumber;
+  private java.lang.String DocNumber;
 
-	private java.util.Date DocDate;
+  private java.util.Date DocDate;
 
-	private java.lang.String DocName;
+  private java.lang.String DocName;
 
-	private java.util.Date CreateDate;
+  private java.util.Date CreateDate;
 
-	private java.lang.String Comments;
+  private java.lang.String Comments;
 
-	private byte[] Original;
+  private byte[] Original;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public OriginalDocument() {
-	}
+  /**
+   * default constructor
+   */
+  public OriginalDocument() {
+  }
 
-	/** constructor with id */
-	public OriginalDocument(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public OriginalDocument(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	/* (non-Javadoc)
-	 * @see org.hibernate.bytecode.javassist.FieldHandled#getFieldHandler()
-	 */
-	public FieldHandler getFieldHandler() {
-		return fieldHandler;
-	}
+  /* (non-Javadoc)
+   * @see org.hibernate.bytecode.javassist.FieldHandled#getFieldHandler()
+   */
+  public FieldHandler getFieldHandler() {
+    return fieldHandler;
+  }
 
-	/* (non-Javadoc)
-	 * @see org.hibernate.bytecode.javassist.FieldHandled#setFieldHandler(org.hibernate.bytecode.javassist.FieldHandler)
-	 */
-	public void setFieldHandler(FieldHandler handler) {
-		this.fieldHandler = handler;
-	}
+  /* (non-Javadoc)
+   * @see org.hibernate.bytecode.javassist.FieldHandled#setFieldHandler(org.hibernate.bytecode.javassist.FieldHandler)
+   */
+  public void setFieldHandler(FieldHandler handler) {
+    this.fieldHandler = handler;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.Folder getFolder() {
-		return this.Folder;
-	}
+  /**
+   *
+   */
 
-	public void setFolder(com.mg.merp.core.model.Folder Folder) {
-		this.Folder = Folder;
-	}
+  public com.mg.merp.core.model.Folder getFolder() {
+    return this.Folder;
+  }
 
-	/**
-	 * 
-	 */
+  public void setFolder(com.mg.merp.core.model.Folder Folder) {
+    this.Folder = Folder;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.OrigDoc.DocNumber")
-	public java.lang.String getDocNumber() {
-		return this.DocNumber;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setDocNumber(java.lang.String DocNumber) {
-		this.DocNumber = DocNumber;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.OrigDoc.DocNumber")
+  public java.lang.String getDocNumber() {
+    return this.DocNumber;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.OrigDoc.DocDate")
-	public java.util.Date getDocDate() {
-		return this.DocDate;
-	}
+  public void setDocNumber(java.lang.String DocNumber) {
+    this.DocNumber = DocNumber;
+  }
 
-	public void setDocDate(java.util.Date DocDate) {
-		this.DocDate = DocDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.OrigDoc.DocDate")
+  public java.util.Date getDocDate() {
+    return this.DocDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Name")
-	public java.lang.String getDocName() {
-		return this.DocName;
-	}
+  public void setDocDate(java.util.Date DocDate) {
+    this.DocDate = DocDate;
+  }
 
-	public void setDocName(java.lang.String DocName) {
-		this.DocName = DocName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Name")
+  public java.lang.String getDocName() {
+    return this.DocName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.OrigDoc.CreateDate")
-	public java.util.Date getCreateDate() {
-		return this.CreateDate;
-	}
+  public void setDocName(java.lang.String DocName) {
+    this.DocName = DocName;
+  }
 
-	public void setCreateDate(java.util.Date CreateDate) {
-		this.CreateDate = CreateDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.OrigDoc.CreateDate")
+  public java.util.Date getCreateDate() {
+    return this.CreateDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.OrigDoc.Comment")
-	public java.lang.String getComments() {
-		return this.Comments;
-	}
+  public void setCreateDate(java.util.Date CreateDate) {
+    this.CreateDate = CreateDate;
+  }
 
-	public void setComments(java.lang.String Comments) {
-		this.Comments = Comments;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.OrigDoc.Comment")
+  public java.lang.String getComments() {
+    return this.Comments;
+  }
 
-	/**
-	 * 
-	 */
-	public byte[] getOriginal() {
-		return fieldHandler != null ? (byte[]) fieldHandler.readObject(this, "Original", this.Original) : null;
-	}
+  public void setComments(java.lang.String Comments) {
+    this.Comments = Comments;
+  }
 
-	public void setOriginal(byte[] Original) {
-		if (fieldHandler != null)
-			fieldHandler.writeObject(this, "Original", this.Original, Original);
-		this.Original = Original;
-	}
+  /**
+   *
+   */
+  public byte[] getOriginal() {
+    return fieldHandler != null ? (byte[]) fieldHandler.readObject(this, "Original", this.Original) : null;
+  }
+
+  public void setOriginal(byte[] Original) {
+    if (fieldHandler != null)
+      fieldHandler.writeObject(this, "Original", this.Original, Original);
+    this.Original = Original;
+  }
 }

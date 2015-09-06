@@ -21,119 +21,122 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: InventoryActHead.java,v 1.6 2008/02/29 12:33:44 safonov Exp $
  */
 public class InventoryActHead extends com.mg.merp.document.model.DocHead
-		implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
 
-	// Fields
+  // Fields
 
-	private com.mg.merp.reference.model.Contractor Contractor;
+  private com.mg.merp.reference.model.Contractor Contractor;
 
-	private java.math.BigDecimal RealSummaNat;
+  private java.math.BigDecimal RealSummaNat;
 
-	private java.math.BigDecimal RealSummaCur;
+  private java.math.BigDecimal RealSummaCur;
 
-	private java.util.Date EndDate;
-	
-	private java.math.BigDecimal exsessSummaCur;
-	
-	private java.math.BigDecimal exsessSummaNat;
-	
-	private java.math.BigDecimal shortageSummaCur;
-	
-	private java.math.BigDecimal shortageSummaNat;
+  private java.util.Date EndDate;
 
-	// Constructors
+  private java.math.BigDecimal exsessSummaCur;
 
-	/** default constructor */
-	public InventoryActHead() {
-	}
+  private java.math.BigDecimal exsessSummaNat;
 
-	// Property accessors
-	/**
-	 * 
-	 */
+  private java.math.BigDecimal shortageSummaCur;
 
-	@DataItemName("Warehouse.InventoryActHead.Contractor")
-	public com.mg.merp.reference.model.Contractor getContractor() {
-		return this.Contractor;
-	}
+  private java.math.BigDecimal shortageSummaNat;
 
-	public void setContractor(com.mg.merp.reference.model.Contractor Contractor) {
-		this.Contractor = Contractor;
-	}
+  // Constructors
 
-	/**
-	 * 
-	 */
+  /**
+   * default constructor
+   */
+  public InventoryActHead() {
+  }
 
-	@DataItemName("Warehouse.InventoryActHead.RealSummaNat")
-	public java.math.BigDecimal getRealSummaNat() {
-		return this.RealSummaNat;
-	}
+  // Property accessors
 
-	public void setRealSummaNat(java.math.BigDecimal RealSummaNat) {
-		this.RealSummaNat = RealSummaNat;
-	}
+  /**
+   *
+   */
 
-	/**
-	 * 
-	 */
+  @DataItemName("Warehouse.InventoryActHead.Contractor")
+  public com.mg.merp.reference.model.Contractor getContractor() {
+    return this.Contractor;
+  }
 
-	@DataItemName("Warehouse.InventoryActHead.RealSummaCur")
-	public java.math.BigDecimal getRealSummaCur() {
-		return this.RealSummaCur;
-	}
+  public void setContractor(com.mg.merp.reference.model.Contractor Contractor) {
+    this.Contractor = Contractor;
+  }
 
-	public void setRealSummaCur(java.math.BigDecimal RealSummaCur) {
-		this.RealSummaCur = RealSummaCur;
-	}
+  /**
+   *
+   */
 
-	/**
-	 * 
-	 */
+  @DataItemName("Warehouse.InventoryActHead.RealSummaNat")
+  public java.math.BigDecimal getRealSummaNat() {
+    return this.RealSummaNat;
+  }
 
-	@DataItemName("Warehouse.InventoryActHead.EndDate")
-	public java.util.Date getEndDate() {
-		return this.EndDate;
-	}
+  public void setRealSummaNat(java.math.BigDecimal RealSummaNat) {
+    this.RealSummaNat = RealSummaNat;
+  }
 
-	public void setEndDate(java.util.Date EndDate) {
-		this.EndDate = EndDate;
-	}
+  /**
+   *
+   */
 
-	@DataItemName("Warehouse.InventoryActHead.ExsessSummaCur")
-	public java.math.BigDecimal getExsessSummaCur() {
-		return exsessSummaCur;
-	}
+  @DataItemName("Warehouse.InventoryActHead.RealSummaCur")
+  public java.math.BigDecimal getRealSummaCur() {
+    return this.RealSummaCur;
+  }
 
-	public void setExsessSummaCur(java.math.BigDecimal exsessSummaCur) {
-		this.exsessSummaCur = exsessSummaCur;
-	}
+  public void setRealSummaCur(java.math.BigDecimal RealSummaCur) {
+    this.RealSummaCur = RealSummaCur;
+  }
 
-	@DataItemName("Warehouse.InventoryActHead.ExsessSummaNat")
-	public java.math.BigDecimal getExsessSummaNat() {
-		return exsessSummaNat;
-	}
+  /**
+   *
+   */
 
-	public void setExsessSummaNat(java.math.BigDecimal exsessSummaNat) {
-		this.exsessSummaNat = exsessSummaNat;
-	}
+  @DataItemName("Warehouse.InventoryActHead.EndDate")
+  public java.util.Date getEndDate() {
+    return this.EndDate;
+  }
 
-	@DataItemName("Warehouse.InventoryActHead.ShortageSummaCur")
-	public java.math.BigDecimal getShortageSummaCur() {
-		return shortageSummaCur;
-	}
+  public void setEndDate(java.util.Date EndDate) {
+    this.EndDate = EndDate;
+  }
 
-	public void setShortageSummaCur(java.math.BigDecimal shortageSummaCur) {
-		this.shortageSummaCur = shortageSummaCur;
-	}
+  @DataItemName("Warehouse.InventoryActHead.ExsessSummaCur")
+  public java.math.BigDecimal getExsessSummaCur() {
+    return exsessSummaCur;
+  }
 
-	@DataItemName("Warehouse.InventoryActHead.ShortageSummaNat")
-	public java.math.BigDecimal getShortageSummaNat() {
-		return shortageSummaNat;
-	}
+  public void setExsessSummaCur(java.math.BigDecimal exsessSummaCur) {
+    this.exsessSummaCur = exsessSummaCur;
+  }
 
-	public void setShortageSummaNat(java.math.BigDecimal shortageSummaNat) {
-		this.shortageSummaNat = shortageSummaNat;
-	}
+  @DataItemName("Warehouse.InventoryActHead.ExsessSummaNat")
+  public java.math.BigDecimal getExsessSummaNat() {
+    return exsessSummaNat;
+  }
+
+  public void setExsessSummaNat(java.math.BigDecimal exsessSummaNat) {
+    this.exsessSummaNat = exsessSummaNat;
+  }
+
+  @DataItemName("Warehouse.InventoryActHead.ShortageSummaCur")
+  public java.math.BigDecimal getShortageSummaCur() {
+    return shortageSummaCur;
+  }
+
+  public void setShortageSummaCur(java.math.BigDecimal shortageSummaCur) {
+    this.shortageSummaCur = shortageSummaCur;
+  }
+
+  @DataItemName("Warehouse.InventoryActHead.ShortageSummaNat")
+  public java.math.BigDecimal getShortageSummaNat() {
+    return shortageSummaNat;
+  }
+
+  public void setShortageSummaNat(java.math.BigDecimal shortageSummaNat) {
+    this.shortageSummaNat = shortageSummaNat;
+  }
 
 }

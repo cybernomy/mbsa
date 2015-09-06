@@ -18,16 +18,16 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
  * @author leonova
- * @version $Id: FinPeriodSearchHelp.java,v 1.1 2006/07/13 05:25:23 leonova Exp $ 
+ * @version $Id: FinPeriodSearchHelp.java,v 1.1 2006/07/13 05:25:23 leonova Exp $
  */
 public class FinPeriodSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {
-		return "merp/finance/Period";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/finance/Period";
+  }
 
 }

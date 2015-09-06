@@ -15,19 +15,19 @@
 
 package com.mg.merp.reference.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.reference.PartnerEmplServiceLocal;
 import com.mg.merp.reference.model.PartnerEmpl;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Сотрудники партнера" 
- * 
+ * Бизнес-компонент "Сотрудники партнера"
+ *
  * @author leonova
  * @version $Id: PartnerEmplServiceBean.java,v 1.3 2006/08/16 04:56:01 leonova Exp $
  */
-@Stateless(name="merp/reference/PartnerEmplService")
+@Stateless(name = "merp/reference/PartnerEmplService")
 public class PartnerEmplServiceBean extends AbstractPOJODataBusinessObjectServiceBean<PartnerEmpl, Integer> implements PartnerEmplServiceLocal {
 
 

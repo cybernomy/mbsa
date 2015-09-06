@@ -19,22 +19,22 @@ import com.mg.framework.api.ui.Window;
 
 /**
  * внутренний фрейм, используется для MDI интерфейса
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: InternalFrame.java,v 1.4 2006/11/21 15:34:06 safonov Exp $
  */
 public interface InternalFrame extends Widget, Window {
 
-	/**
-	 * заголовок по умолчанию
-	 */
-	final static String DEFAULT_TITLE = "InternalFrame";
-	
-	/**
-	 * установка размеров окна
-	 * 
-	 * @param width		ширина (в пикселах)
-	 * @param height	высота (в пикселах)
-	 */
-	void setSize(int width, int height);
+  /**
+   * заголовок по умолчанию
+   */
+  final static String DEFAULT_TITLE = "InternalFrame";
+
+  /**
+   * установка размеров окна
+   *
+   * @param width  ширина (в пикселах)
+   * @param height высота (в пикселах)
+   */
+  void setSize(int width, int height);
 }

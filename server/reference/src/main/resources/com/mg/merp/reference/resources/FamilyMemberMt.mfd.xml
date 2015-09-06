@@ -13,21 +13,23 @@
 
 <!-- $Id: FamilyMemberMt.mfd.xml,v 1.4 2006/05/31 06:11:06 leonova Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.reference.resources.formelements#FamilyMember.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.reference.resources.formelements#FamilyMember.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		
-		<jfd:field id="Surname"/>
-		<jfd:field id="FName"/>
-		<jfd:field id="Patronymic"/>
- 		<jfd:field id="FamilyRelation" />
-		<jfd:field id="Birthdate" sameLine="true"/>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 							
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+
+    <jfd:field id="Surname"/>
+    <jfd:field id="FName"/>
+    <jfd:field id="Patronymic"/>
+    <jfd:field id="FamilyRelation"/>
+    <jfd:field id="Birthdate" sameLine="true"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

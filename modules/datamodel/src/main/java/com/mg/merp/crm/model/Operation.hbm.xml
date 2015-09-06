@@ -1,110 +1,112 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.crm.model.OperationStatusKind" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.crm.model.OperationStatusKind</param>
-	</typedef>
-	
-	<typedef name="com.mg.merp.crm.model.OperationState" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.crm.model.OperationState</param>
-	</typedef>	
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <typedef name="com.mg.merp.crm.model.OperationStatusKind"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.crm.model.OperationStatusKind</param>
+  </typedef>
+
+  <typedef name="com.mg.merp.crm.model.OperationState"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.crm.model.OperationState</param>
+  </typedef>
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.crm.model.Operation" table="CRM_OPERATION">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">CRM_OPERATION_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Priority" class="com.mg.merp.crm.model.OperationPriority">
-      <column name="PRIORITY_ID" not-null="false" />
+      <column name="PRIORITY_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Parent" class="com.mg.merp.crm.model.Operation">
-      <column name="PARENT_ID" not-null="false" />
+      <column name="PARENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Curator" class="com.mg.merp.crm.model.User">
-      <column name="CURATOR_ID" not-null="false" />
+      <column name="CURATOR_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Responsible" class="com.mg.merp.crm.model.User">
-      <column name="RESPONSIBLE_ID" not-null="false" />
+      <column name="RESPONSIBLE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Contact" class="com.mg.merp.crm.model.Contact">
-      <column name="CONTACT_ID" not-null="false" />
+      <column name="CONTACT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Relation" class="com.mg.merp.crm.model.Relation">
-      <column name="RELATION_ID" not-null="false" />
+      <column name="RELATION_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Kind" class="com.mg.merp.crm.model.OperationKind">
-      <column name="KIND_ID" not-null="false" />
+      <column name="KIND_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Purpose" class="com.mg.merp.crm.model.OperationPurpose">
-      <column name="PURPOSE_ID" not-null="false" />
+      <column name="PURPOSE_ID" not-null="false"/>
     </many-to-one>
     <property name="Code" type="java.lang.String">
-      <column name="CODE" length="20" not-null="false" sql-type="CHAR" />
+      <column name="CODE" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="IsPlan" type="boolean">
-      <column name="IS_PLAN" not-null="false" sql-type="SMALLINT" />
+      <column name="IS_PLAN" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="CreateDate" type="java.util.Date">
-      <column name="CREATE_DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="CREATE_DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="PlanDateFrom" type="java.util.Date">
-      <column name="PLAN_DATE_FROM" not-null="false" sql-type="TIMESTAMP" />
+      <column name="PLAN_DATE_FROM" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="PlanDateTill" type="java.util.Date">
-      <column name="PLAN_DATE_TILL" not-null="false" sql-type="TIMESTAMP" />
+      <column name="PLAN_DATE_TILL" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="FactDateFrom" type="java.util.Date">
-      <column name="FACT_DATE_FROM" not-null="false" sql-type="TIMESTAMP" />
+      <column name="FACT_DATE_FROM" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="FactDateTill" type="java.util.Date">
-      <column name="FACT_DATE_TILL" not-null="false" sql-type="TIMESTAMP" />
+      <column name="FACT_DATE_TILL" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="OperationPlan" type="java.lang.String">
-      <column name="OPERATION_PLAN" length="2048" not-null="false" sql-type="VARCHAR" />
+      <column name="OPERATION_PLAN" length="2048" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="OperationResult" type="java.lang.String">
-      <column name="OPERATION_RESULT" length="2048" not-null="false" sql-type="VARCHAR" />
+      <column name="OPERATION_RESULT" length="2048" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="OperationNext" type="java.lang.String">
-      <column name="NEXT_OPERATION" length="2048" not-null="false" sql-type="VARCHAR" />
-    </property>    
+      <column name="NEXT_OPERATION" length="2048" not-null="false" sql-type="VARCHAR"/>
+    </property>
     <property name="Status" type="com.mg.merp.crm.model.OperationStatusKind">
-      <column name="STATUS" not-null="false" sql-type="SMALLINT" />
+      <column name="STATUS" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="State" type="com.mg.merp.crm.model.OperationState">
-      <column name="STATE" not-null="false" sql-type="SMALLINT" />
+      <column name="STATE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="Notified" type="boolean">
-      <column name="NOTIFIED" not-null="false" sql-type="SMALLINT" />
+      <column name="NOTIFIED" not-null="false" sql-type="SMALLINT"/>
     </property>
     <set name="LinkedDocs" inverse="true">
       <key on-delete="cascade">
-        <column name="OPERATION_ID" not-null="false" />
+        <column name="OPERATION_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.crm.model.LinkedDocument" />
+      <one-to-many class="com.mg.merp.crm.model.LinkedDocument"/>
     </set>
     <set name="Offers" inverse="true">
       <key on-delete="cascade">
-        <column name="OPERATION_ID" not-null="false" />
+        <column name="OPERATION_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.crm.model.Offer" />
+      <one-to-many class="com.mg.merp.crm.model.Offer"/>
     </set>
     <set name="Operations" inverse="true">
       <key on-delete="cascade">
-        <column name="PARENT_ID" not-null="false" />
+        <column name="PARENT_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.crm.model.Operation" />
+      <one-to-many class="com.mg.merp.crm.model.Operation"/>
     </set>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

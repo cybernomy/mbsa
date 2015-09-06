@@ -14,6 +14,6 @@
 <!-- $Id: PartnerFromToMacros.xml,v 1.1 2006/06/06 10:42:57 leonova Exp $ -->
 
 <jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
- 	<jfd:field id="ContractorFrom" />
-	<jfd:field id="ContractorTo" sameLine="true"/>			
+  <jfd:field id="ContractorFrom"/>
+  <jfd:field id="ContractorTo" sameLine="true"/>
 </jfd:wrap-macros>

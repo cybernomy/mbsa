@@ -19,23 +19,23 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Направление планирования
- * 
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: ScheduleDirection.java,v 1.1 2007/07/30 10:25:11 safonov Exp $
  */
-@DataItemName ("MfReference.ScheduleDirection")
+@DataItemName("MfReference.ScheduleDirection")
 public enum ScheduleDirection {
-	
-	/**
-	 * Вперёд
-	 */
-	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SchedDirect.Forward")
-	FORWARD,
-	
-	/**
-	 * Назад
-	 */
-	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SchedDirect.Backward")
-	BACKWARD
+
+  /**
+   * Вперёд
+   */
+  @EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SchedDirect.Forward")
+  FORWARD,
+
+  /**
+   * Назад
+   */
+  @EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SchedDirect.Backward")
+  BACKWARD
 
 }

@@ -17,12 +17,10 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.StockKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: StockKindServiceLocal.java,v 1.1 2006/03/14 11:49:53 safonov Exp $
  */
 public interface StockKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<StockKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<StockKind, Integer> {
 
 }

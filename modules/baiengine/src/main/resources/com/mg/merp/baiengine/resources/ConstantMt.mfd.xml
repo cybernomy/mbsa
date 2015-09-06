@@ -13,25 +13,29 @@
 
 <!-- $Id: ConstantMt.mfd.xml,v 1.1 2007/08/21 12:57:37 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.baiengine.support.ui.ConstantMt" title="resource://com.mg.merp.baiengine.resources.formelements#Constant.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.baiengine.support.ui.ConstantMt"
+          title="resource://com.mg.merp.baiengine.resources.formelements#Constant.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:field id="Code" />
-		<jfd:field id="DataType" sameLine="true"/>
-		<jfd:field id="Description" />	
-		<jfd:container id="valueFields" layout="jfd:box" longField="true" label="resource://com.mg.merp.baiengine.resources.formelements#ConstantValue.Title">
- 			<jfd:maintenanceTable id="constantValueTable" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
- 				<!--jfd:popupMenu>
-	 				<jfd:menuItem id="actualValue" text="Поиск значения по дате актуальности" actionListener="FindActualValue"/>
-				</jfd:popupMenu--> 			
-			</jfd:maintenanceTable>			
-		</jfd:container>			
-	</jfd:container>
+    <jfd:field id="Code"/>
+    <jfd:field id="DataType" sameLine="true"/>
+    <jfd:field id="Description"/>
+    <jfd:container id="valueFields" layout="jfd:box" longField="true"
+                   label="resource://com.mg.merp.baiengine.resources.formelements#ConstantValue.Title">
+      <jfd:maintenanceTable id="constantValueTable" alignment="expand_expand" scroll="true"
+                            autoResize="subsequent_columns">
+        <!--jfd:popupMenu>
+          <jfd:menuItem id="actualValue" text="Поиск значения по дате актуальности" actionListener="FindActualValue"/>
+       </jfd:popupMenu-->
+      </jfd:maintenanceTable>
+    </jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

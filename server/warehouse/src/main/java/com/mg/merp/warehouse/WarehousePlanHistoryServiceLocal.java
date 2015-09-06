@@ -18,15 +18,15 @@ import com.mg.merp.warehouse.model.StockPlanHistory;
 
 /**
  * Сервис бизнес-компонента "История планового движения и резервирования по партии"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: WarehousePlanHistoryServiceLocal.java,v 1.1 2007/03/07 10:51:09 poroxnenko Exp $ 
+ * @version $Id: WarehousePlanHistoryServiceLocal.java,v 1.1 2007/03/07 10:51:09 poroxnenko Exp $
  */
 public interface WarehousePlanHistoryServiceLocal extends
-		DataBusinessObjectService<StockPlanHistory, Integer> {
+    DataBusinessObjectService<StockPlanHistory, Integer> {
 
-	/**
-	 * Локальное имя сервиса
-	 */
-	static final String LOCAL_SERVICE_NAME = "merp/warehouse/WarehousePlanHistory";
+  /**
+   * Локальное имя сервиса
+   */
+  static final String LOCAL_SERVICE_NAME = "merp/warehouse/WarehousePlanHistory";
 }

@@ -19,16 +19,16 @@ import com.mg.merp.reference.AttachmentHandler;
 
 /**
  * Сервис бизнес-компонента "Изменения контракта"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: ModifyDocumentServiceLocal.java,v 1.2 2007/03/29 09:47:05 sharapov Exp $
  */
 public interface ModifyDocumentServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ModifyDocument, Integer>, AttachmentHandler {
 
-	/**
-	 * Локальное имя сервиса
-	 */
-	static final String LOCAL_SERVICE_NAME = "merp/contract/ModifyDocument"; //$NON-NLS-1$
+  /**
+   * Локальное имя сервиса
+   */
+  static final String LOCAL_SERVICE_NAME = "merp/contract/ModifyDocument"; //$NON-NLS-1$
 
 }

@@ -21,77 +21,82 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: ReplacedFee.java,v 1.4 2006/09/08 07:12:28 leonova Exp $
  */
 public class ReplacedFee extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.salary.model.FeeRef FeeRef;
+  private com.mg.merp.salary.model.FeeRef FeeRef;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.salary.model.FeeRef ReplacedFee;
+  private com.mg.merp.salary.model.FeeRef ReplacedFee;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public ReplacedFee() {
-	}
+  /**
+   * default constructor
+   */
+  public ReplacedFee() {
+  }
 
-	/** constructor with id */
-	public ReplacedFee(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public ReplacedFee(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.FeeIncluded.FeeRef")
-	public com.mg.merp.salary.model.FeeRef getFeeRef() {
-		return this.FeeRef;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public void setFeeRef(com.mg.merp.salary.model.FeeRef SalFeeRef) {
-		this.FeeRef = SalFeeRef;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.FeeIncluded.FeeRef")
+  public com.mg.merp.salary.model.FeeRef getFeeRef() {
+    return this.FeeRef;
+  }
 
-	/**
-	 * 
-	 */
+  public void setFeeRef(com.mg.merp.salary.model.FeeRef SalFeeRef) {
+    this.FeeRef = SalFeeRef;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public com.mg.merp.salary.model.FeeRef getReplacedFee() {
-		return this.ReplacedFee;
-	}
+  /**
+   *
+   */
 
-	public void setReplacedFee(com.mg.merp.salary.model.FeeRef SalFeeRef_1) {
-		this.ReplacedFee = SalFeeRef_1;
-	}
+  public com.mg.merp.salary.model.FeeRef getReplacedFee() {
+    return this.ReplacedFee;
+  }
+
+  public void setReplacedFee(com.mg.merp.salary.model.FeeRef SalFeeRef_1) {
+    this.ReplacedFee = SalFeeRef_1;
+  }
 
 }

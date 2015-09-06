@@ -14,68 +14,70 @@
  */
 package com.mg.merp.paymentalloc.support.ui;
 
-import java.math.BigDecimal;
-
 import com.mg.framework.api.ui.WidgetEvent;
 import com.mg.framework.generic.ui.DefaultDialog;
 
+import java.math.BigDecimal;
+
 /**
  * Контроллер диалога "Параметры распределения"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: AllocationParamsDlg.java,v 1.1 2007/05/31 14:13:30 sharapov Exp $
  */
 public class AllocationParamsDlg extends DefaultDialog {
 
-	private BigDecimal allocationSum;
-	private BigDecimal allocationQty;
-	private BigDecimal price;
-	
-	public AllocationParamsDlg() {
-		
-	}
-	
-	/**
-	 * Обработчик кнопки "Рассчитать количество"
-	 * @param event - событие
-	 */
-	public void onActionComputeQty(WidgetEvent event) {
-		if(allocationSum != null && price != null)
-			if(BigDecimal.ZERO.compareTo(price) != 0)
-				allocationQty = allocationSum.divide(price);
-	}
+  private BigDecimal allocationSum;
+  private BigDecimal allocationQty;
+  private BigDecimal price;
 
-	/**
-	 * Обработчик кнопки "Рассчитать сумму"
-	 * @param event - событие
-	 */
-	public void onActionComputeSum(WidgetEvent event) {
-		if(allocationQty != null && price != null)
-			allocationSum = allocationQty.multiply(price);
-	}
+  public AllocationParamsDlg() {
 
-	public BigDecimal getAllocationQty() {
-		return this.allocationQty;
-	}
+  }
 
-	public void setAllocationQty(BigDecimal allocationQty) {
-		this.allocationQty = allocationQty;
-	}
+  /**
+   * Обработчик кнопки "Рассчитать количество"
+   *
+   * @param event - событие
+   */
+  public void onActionComputeQty(WidgetEvent event) {
+    if (allocationSum != null && price != null)
+      if (BigDecimal.ZERO.compareTo(price) != 0)
+        allocationQty = allocationSum.divide(price);
+  }
 
-	public BigDecimal getAllocationSum() {
-		return this.allocationSum;
-	}
+  /**
+   * Обработчик кнопки "Рассчитать сумму"
+   *
+   * @param event - событие
+   */
+  public void onActionComputeSum(WidgetEvent event) {
+    if (allocationQty != null && price != null)
+      allocationSum = allocationQty.multiply(price);
+  }
 
-	public void setAllocationSum(BigDecimal allocationSum) {
-		this.allocationSum = allocationSum;
-	}
+  public BigDecimal getAllocationQty() {
+    return this.allocationQty;
+  }
 
-	public BigDecimal getPrice() {
-		return this.price;
-	}
+  public void setAllocationQty(BigDecimal allocationQty) {
+    this.allocationQty = allocationQty;
+  }
 
-	public void setPrice(BigDecimal price) {
-		this.price = price;
-	}
-	
+  public BigDecimal getAllocationSum() {
+    return this.allocationSum;
+  }
+
+  public void setAllocationSum(BigDecimal allocationSum) {
+    this.allocationSum = allocationSum;
+  }
+
+  public BigDecimal getPrice() {
+    return this.price;
+  }
+
+  public void setPrice(BigDecimal price) {
+    this.price = price;
+  }
+
 }

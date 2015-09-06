@@ -19,30 +19,31 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Управление ЕИ
- * 
+ *
  * @author leonova
  * @author Oleg V. Safonov
  * @version $Id: MeasureControl.java,v 1.3 2006/12/12 14:22:15 safonov Exp $
  */
-@DataItemName ("Reference.Catalog.MControl.Type")
+@DataItemName("Reference.Catalog.MControl.Type")
 public enum MeasureControl {
 
-	/**
-	 * номенклатура с одной ЕИ
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#MControl.Type.Single")
-	SINGLE,
-	
-	/**
-	 * номенклатура с переменной эффективности (вторая единица измерения зависит от первой и расчитывается)
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#MControl.Type.Potency")
-	POTENCY,
-	
-	/**
-	 * номенклатура учетно-весовая (две единицы измерения не зависят друг от друга)
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#MControl.Type.Catchweight")
-	CATCHWEIGHT
+  /**
+   * номенклатура с одной ЕИ
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#MControl.Type.Single")
+  SINGLE,
+
+  /**
+   * номенклатура с переменной эффективности (вторая единица измерения зависит от первой и
+   * расчитывается)
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#MControl.Type.Potency")
+  POTENCY,
+
+  /**
+   * номенклатура учетно-весовая (две единицы измерения не зависят друг от друга)
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#MControl.Type.Catchweight")
+  CATCHWEIGHT
 }
 

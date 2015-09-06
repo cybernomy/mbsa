@@ -15,20 +15,20 @@
 
 package com.mg.merp.personnelref.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.personnelref.KladrServiceLocal;
 import com.mg.merp.personnelref.model.Kladr;
 
+import javax.ejb.Stateless;
+
 /**
- * Реализация бизнес-компонента "Классификатор адресов (КЛАДР)" 
- * 
+ * Реализация бизнес-компонента "Классификатор адресов (КЛАДР)"
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: KladrServiceBean.java,v 1.3 2007/07/16 13:18:14 sharapov Exp $
  */
-@Stateless(name="merp/personnelref/KladrService") //$NON-NLS-1$
+@Stateless(name = "merp/personnelref/KladrService") //$NON-NLS-1$
 public class KladrServiceBean extends AbstractPOJODataBusinessObjectServiceBean<Kladr, Integer> implements KladrServiceLocal {
 
 }

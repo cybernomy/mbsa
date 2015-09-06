@@ -17,12 +17,10 @@ package com.mg.merp.security;
 import com.mg.merp.core.model.SysMethod;
 
 /**
- * 
  * @author leonova
  * @version $Id: SysMethodServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface SysMethodServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<SysMethod, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<SysMethod, Integer> {
 
 }

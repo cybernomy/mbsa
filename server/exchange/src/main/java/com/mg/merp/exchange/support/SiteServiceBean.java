@@ -18,28 +18,18 @@ import com.mg.merp.exchange.SiteServiceLocal;
 import com.mg.merp.exchange.model.Site;
 
 /**
- * @ejb.bean name = "SiteService"
- *           type = "Stateless"
- *           view-type = "local"
- *           local-jndi-name = "merp/exchange/SiteService"
- *           description = "Site"
- *           display-name = "Site"
- *
- * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService"
- *
- * @ejb.home      local-extends = "javax.ejb.EJBLocalHome"
- *
- * @ejb.env-entry name = "DomainClassName"
- *                type = "java.lang.String"
- *                value = "com.mg.merp.exchange.support.SiteDomainImpl"
- *
- * @jboss.container-configuration name = "MERP Standard Stateless Service"
- *
  * @author krivopoustov
+ * @ejb.bean name = "SiteService" type = "Stateless" view-type = "local" local-jndi-name =
+ * "merp/exchange/SiteService" description = "Site" display-name = "Site"
+ * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService"
+ * @ejb.home local-extends = "javax.ejb.EJBLocalHome"
+ * @ejb.env-entry name = "DomainClassName" type = "java.lang.String" value =
+ * "com.mg.merp.exchange.support.SiteDomainImpl"
+ * @jboss.container-configuration name = "MERP Standard Stateless Service"
  */
 public class SiteServiceBean extends AbstractDataBusinessObjectServiceBean<Site, Integer> implements SiteServiceLocal {
 
- 	public void ejbCreate() throws javax.ejb.CreateException {
- 	}
+  public void ejbCreate() throws javax.ejb.CreateException {
+  }
 
 }

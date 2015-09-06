@@ -21,27 +21,27 @@ import com.mg.framework.api.annotations.EnumConstantText;
  * @version $Id: ContractorSource.java,v 1.1 2006/03/30 11:29:12 safonov Exp $
  */
 public enum ContractorSource {
-	/**
-	 * <> 
-	 */
-	@EnumConstantText ("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#ContractorSource.Type.None")
-	NONE,
-	
-	/**
-	 * От кого 
-	 */
-	@EnumConstantText ("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#ContractorSource.Type.From")
-	FROM,
-	
-	/**
-	 * Кому 
-	 */
-	@EnumConstantText ("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#ContractorSource.Type.To")
-	TO,
-	
-	/**
-	 * Через кого 
-	 */
-	@EnumConstantText ("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#ContractorSource.Type.Through")
-	THROUGH
+  /**
+   * <>
+   */
+  @EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#ContractorSource.Type.None")
+  NONE,
+
+  /**
+   * От кого
+   */
+  @EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#ContractorSource.Type.From")
+  FROM,
+
+  /**
+   * Кому
+   */
+  @EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#ContractorSource.Type.To")
+  TO,
+
+  /**
+   * Через кого
+   */
+  @EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#ContractorSource.Type.Through")
+  THROUGH
 }

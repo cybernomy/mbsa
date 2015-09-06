@@ -22,91 +22,96 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.FamilyStatus")
 public class FamilyStatus extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.reference.model.NaturalPerson NaturalPerson;
+  private com.mg.merp.reference.model.NaturalPerson NaturalPerson;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.reference.model.FamilyStatusKind FamilyStatusKind;
+  private com.mg.merp.reference.model.FamilyStatusKind FamilyStatusKind;
 
-	private java.util.Date BeginDate;
+  private java.util.Date BeginDate;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public FamilyStatus() {
-	}
+  /**
+   * default constructor
+   */
+  public FamilyStatus() {
+  }
 
-	/** constructor with id */
-	public FamilyStatus(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public FamilyStatus(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.reference.model.NaturalPerson getNaturalPerson() {
-		return this.NaturalPerson;
-	}
+  /**
+   *
+   */
 
-	public void setNaturalPerson(
-			com.mg.merp.reference.model.NaturalPerson NaturalPerson) {
-		this.NaturalPerson = NaturalPerson;
-	}
+  public com.mg.merp.reference.model.NaturalPerson getNaturalPerson() {
+    return this.NaturalPerson;
+  }
 
-	/**
-	 * 
-	 */
+  public void setNaturalPerson(
+      com.mg.merp.reference.model.NaturalPerson NaturalPerson) {
+    this.NaturalPerson = NaturalPerson;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */	
-	public com.mg.merp.reference.model.FamilyStatusKind getFamilyStatusKind() {
-		return this.FamilyStatusKind;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setFamilyStatusKind(
-			com.mg.merp.reference.model.FamilyStatusKind FamilyStatusKind) {
-		this.FamilyStatusKind = FamilyStatusKind;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.reference.model.FamilyStatusKind getFamilyStatusKind() {
+    return this.FamilyStatusKind;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.NaturalPerson.FStatus.BeginDate")
-	public java.util.Date getBeginDate() {
-		return this.BeginDate;
-	}
+  public void setFamilyStatusKind(
+      com.mg.merp.reference.model.FamilyStatusKind FamilyStatusKind) {
+    this.FamilyStatusKind = FamilyStatusKind;
+  }
 
-	public void setBeginDate(java.util.Date BeginDate) {
-		this.BeginDate = BeginDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.NaturalPerson.FStatus.BeginDate")
+  public java.util.Date getBeginDate() {
+    return this.BeginDate;
+  }
+
+  public void setBeginDate(java.util.Date BeginDate) {
+    this.BeginDate = BeginDate;
+  }
 }

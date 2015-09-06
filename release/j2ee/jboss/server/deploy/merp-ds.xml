@@ -28,10 +28,12 @@
   <tx-connection-factory>
     <jndi-name>MERPBackboneDS</jndi-name>
     <xa-transaction/>
-    <track-connection-by-tx/>    
+    <track-connection-by-tx/>
     <rar-name>jaybird.rar</rar-name>
-    <connection-definition>javax.sql.DataSource</connection-definition>    
-    <config-property name="Database" type="java.lang.String">localhost/3050:${jboss.server.data.dir}${/}firebird${/}MERP4.FDB</config-property>
+    <connection-definition>javax.sql.DataSource</connection-definition>
+    <config-property name="Database" type="java.lang.String">
+      localhost/3050:${jboss.server.data.dir}${/}firebird${/}MERP4.FDB
+    </config-property>
     <user-name>sysdba</user-name>
     <password>masterkey</password>
     <!--additional properties. only use one way of setting tx isolation, please
@@ -49,10 +51,10 @@
     -->
     <config-property name="CharSet">Cp1251</config-property>
     <config-property name="SqlDialect">3</config-property>
-    <!-- corresponding type-mapping in the standardjbosscmp-jdbc.xml (optional) -->    
+    <!-- corresponding type-mapping in the standardjbosscmp-jdbc.xml (optional) -->
     <!-- metadata>
       <type-mapping>Firebird</type-mapping>
     </metadata -->
   </tx-connection-factory>
-  
+
 </connection-factories>

@@ -13,18 +13,21 @@
 
 <!-- $Id: HolidaysMt.mfd.xml,v 1.5 2006/11/28 15:04:22 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.reference.resources.formelements#Holidays.FormMt.Title" helpTopic="reference#holydays_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.reference.resources.formelements#Holidays.FormMt.Title"
+          helpTopic="reference#holydays_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:field id="HDate" />
-		<jfd:field id="HName"/>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 					
-	</jfd:container>
+    <jfd:field id="HDate"/>
+    <jfd:field id="HName"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

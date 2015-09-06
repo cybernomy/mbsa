@@ -20,5 +20,5 @@ package com.mg.merp.finance.support.ui;
  * @version $Id: FinSpecModelMt.java,v 1.2 2006/12/19 06:54:26 leonova Exp $
  */
 public class FinSpecModelMt extends FinAnalytics {
-	
+
 }

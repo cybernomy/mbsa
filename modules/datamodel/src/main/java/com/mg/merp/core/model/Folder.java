@@ -22,119 +22,123 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.Folder")
 public class Folder extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.Folder Folder;
+  private com.mg.merp.core.model.Folder Folder;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String FName;
+  private java.lang.String FName;
 
-	private java.lang.Short FolderType;
+  private java.lang.Short FolderType;
 
-	private java.lang.Short Data;
+  private java.lang.Short Data;
 
-	private java.lang.String FolderTag;
+  private java.lang.String FolderTag;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public Folder() {
-	}
+  /**
+   * default constructor
+   */
+  public Folder() {
+  }
 
-	/** constructor with id */
-	public Folder(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public Folder(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
+  // Property accessors
 
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public com.mg.merp.core.model.Folder getFolder() {
-		return this.Folder;
-	}
+  public com.mg.merp.core.model.Folder getFolder() {
+    return this.Folder;
+  }
 
-	public void setFolder(com.mg.merp.core.model.Folder Folder) {
-		this.Folder = Folder;
-	}
+  public void setFolder(com.mg.merp.core.model.Folder Folder) {
+    this.Folder = Folder;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Folder.Name")
-	public java.lang.String getFName() {
-		return this.FName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Folder.Name")
+  public java.lang.String getFName() {
+    return this.FName;
+  }
 
-	public void setFName(java.lang.String FName) {
-		this.FName = FName;
-	}
+  public void setFName(java.lang.String FName) {
+    this.FName = FName;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public java.lang.Short getFolderType() {
-		return this.FolderType;
-	}
+  public java.lang.Short getFolderType() {
+    return this.FolderType;
+  }
 
-	public void setFolderType(java.lang.Short FolderType) {
-		this.FolderType = FolderType;
-	}
+  public void setFolderType(java.lang.Short FolderType) {
+    this.FolderType = FolderType;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public java.lang.Short getData() {
-		return this.Data;
-	}
+  public java.lang.Short getData() {
+    return this.Data;
+  }
 
-	public void setData(java.lang.Short Data) {
-		this.Data = Data;
-	}
+  public void setData(java.lang.Short Data) {
+    this.Data = Data;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.FolderTag")
-	public java.lang.String getFolderTag() {
-		return this.FolderTag;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.FolderTag")
+  public java.lang.String getFolderTag() {
+    return this.FolderTag;
+  }
 
-	public void setFolderTag(java.lang.String FolderTag) {
-		this.FolderTag = FolderTag;
-	}
+  public void setFolderTag(java.lang.String FolderTag) {
+    this.FolderTag = FolderTag;
+  }
 
 }

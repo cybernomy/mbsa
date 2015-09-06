@@ -7,11 +7,11 @@ import com.mg.merp.manufacture.model.VarianceDocumentSpec;
 
 /**
  * Local interface for VarianceDocumentSpecService.
- * @since 12.10.2004
+ *
  * @xdoclet-generated at 28-02-06
+ * @since 12.10.2004
  */
 public interface VarianceDocumentSpecServiceLocal
-   extends com.mg.merp.document.GoodsDocumentSpecification<VarianceDocumentSpec, Integer>
-{
+    extends com.mg.merp.document.GoodsDocumentSpecification<VarianceDocumentSpec, Integer> {
 
 }

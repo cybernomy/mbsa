@@ -18,16 +18,16 @@ import com.mg.merp.humanresources.model.OrderItem;
 
 /**
  * Сервис бизнес-компонента "Пункты приказа"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: OrderItemServiceLocal.java,v 1.4 2007/08/27 13:35:10 sharapov Exp $
  */
 public interface OrderItemServiceLocal extends com.mg.framework.api.DataBusinessObjectService<OrderItem, Integer> {
-	
-	/**
-	 * Имя сервиса
-	 */
-	final static String SERVICE_NAME = "merp/humanresources/OrderItem"; //$NON-NLS-1$
+
+  /**
+   * Имя сервиса
+   */
+  final static String SERVICE_NAME = "merp/humanresources/OrderItem"; //$NON-NLS-1$
 
 }

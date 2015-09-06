@@ -26,13 +26,13 @@ http://sourceforge.net/projects/jguard/
 
 -->
 
-<!-- jGuardAuthorization_1.00.dtd-->
-<!ELEMENT configuration (authorization)>
-<!ELEMENT name (#PCDATA)>
-<!ELEMENT option (name,value)>
-<!ELEMENT value (#PCDATA)>
-<!ELEMENT authorization (scope?,permissionResolutionCaching?,authorizationManager,authorizationManagerOptions)>
-<!ELEMENT scope (#PCDATA)>
-<!ELEMENT permissionResolutionCaching (#PCDATA)>
-<!ELEMENT authorizationManager (#PCDATA)>
-<!ELEMENT authorizationManagerOptions (option+)>
+    <!-- jGuardAuthorization_1.00.dtd-->
+    <!ELEMENT configuration (authorization)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT option (name,value)>
+    <!ELEMENT value (#PCDATA)>
+    <!ELEMENT authorization (scope?,permissionResolutionCaching?,authorizationManager,authorizationManagerOptions)>
+    <!ELEMENT scope (#PCDATA)>
+    <!ELEMENT permissionResolutionCaching (#PCDATA)>
+    <!ELEMENT authorizationManager (#PCDATA)>
+    <!ELEMENT authorizationManagerOptions (option+)>

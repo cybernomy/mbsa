@@ -13,19 +13,22 @@
 
 <!-- $Id: FinPeriodMt.mfd.xml,v 1.5 2007/04/04 12:08:07 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.finance.support.ui.FinPeriodMt" title="resource://com.mg.merp.finance.resources.formelements#Fin.Period.FormMt.Title" helpTopic="finance#finperiod_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.finance.support.ui.FinPeriodMt"
+          title="resource://com.mg.merp.finance.resources.formelements#Fin.Period.FormMt.Title"
+          helpTopic="finance#finperiod_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:field id="PName" />
-		<jfd:field id="DateFrom" />
-		<jfd:field id="DateTo" />
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />			
-	</jfd:container>
+    <jfd:field id="PName"/>
+    <jfd:field id="DateFrom"/>
+    <jfd:field id="DateTo"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

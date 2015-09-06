@@ -12,28 +12,31 @@
 <!-- ======================================================================= -->
 <!-- $Id: FirmPlannedOrderMt.mfd.xml,v 1.5 2007/08/06 14:11:32 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.planning.resources.formelements#FirmPlannedOrder.FormMt.Title" helpTopic="planning#firmorder_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.planning.resources.formelements#FirmPlannedOrder.FormMt.Title"
+          helpTopic="planning#firmorder_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		
-		<jfd:field id="MrpVersionControl" />	
-		<jfd:field id="Catalog" />		
-		<jfd:field id="Measure" />		
-		<jfd:field id="Warehouse" />		
-		<jfd:field id="SourceWarehouse" />		
-		<jfd:field id="Vendor" />					
-		<jfd:field id="RequiredDate" />											
-		<jfd:field id="OrderQty" />
-		<jfd:field id="OrderDate" />			
-		<jfd:field id="FixedInput" />		
-		<jfd:field id="RequisitionFlag" />
-		<jfd:field id="PurchaseOrTransfer" />
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />			
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+
+    <jfd:field id="MrpVersionControl"/>
+    <jfd:field id="Catalog"/>
+    <jfd:field id="Measure"/>
+    <jfd:field id="Warehouse"/>
+    <jfd:field id="SourceWarehouse"/>
+    <jfd:field id="Vendor"/>
+    <jfd:field id="RequiredDate"/>
+    <jfd:field id="OrderQty"/>
+    <jfd:field id="OrderDate"/>
+    <jfd:field id="FixedInput"/>
+    <jfd:field id="RequisitionFlag"/>
+    <jfd:field id="PurchaseOrTransfer"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

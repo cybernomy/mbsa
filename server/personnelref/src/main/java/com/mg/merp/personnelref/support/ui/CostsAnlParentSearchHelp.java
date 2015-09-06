@@ -15,37 +15,37 @@
 package com.mg.merp.personnelref.support.ui;
 
 /**
- * Поисковик сущностей "Аналитика состава затрат" (верхнего уровня) 
- * 
+ * Поисковик сущностей "Аналитика состава затрат" (верхнего уровня)
+ *
  * @author Artem V. Sharapov
  * @version $Id: CostsAnlParentSearchHelp.java,v 1.1 2007/07/18 05:14:53 sharapov Exp $
  */
 public class CostsAnlParentSearchHelp extends CostsAnlSearchHelp {
 
-	private final String ANALITICS_LEVEL_IMPORT = "AnlLevel"; //$NON-NLS-1$
+  private final String ANALITICS_LEVEL_IMPORT = "AnlLevel"; //$NON-NLS-1$
 
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.personnelref.support.ui.CostsAnlSearchHelp#getAnaliticsLevel()
-	 */
-	@Override
-	short getAnaliticsLevel() {
-		return getParentAnaliticsLevel();
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.personnelref.support.ui.CostsAnlSearchHelp#getAnaliticsLevel()
+   */
+  @Override
+  short getAnaliticsLevel() {
+    return getParentAnaliticsLevel();
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#defineImportContext()
-	 */
-	@Override
-	protected String[] defineImportContext() {
-		return new String[] {ANALITICS_LEVEL_IMPORT};
-	}
-	
-	/**
-	 * Получить верхний уровень аналитики состава затрат
-	 */
-	protected short getParentAnaliticsLevel() {
-		return new Short((short)((Short) getImportContextValue(ANALITICS_LEVEL_IMPORT) - 1));
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#defineImportContext()
+   */
+  @Override
+  protected String[] defineImportContext() {
+    return new String[]{ANALITICS_LEVEL_IMPORT};
+  }
+
+  /**
+   * Получить верхний уровень аналитики состава затрат
+   */
+  protected short getParentAnaliticsLevel() {
+    return new Short((short) ((Short) getImportContextValue(ANALITICS_LEVEL_IMPORT) - 1));
+  }
 
 }

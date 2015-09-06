@@ -16,17 +16,17 @@ package com.mg.framework.api.ui;
 
 /**
  * Форма ограничений (условий отбора)
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: RestrictionForm.java,v 1.2 2007/03/13 13:25:18 safonov Exp $
  */
 public interface RestrictionForm extends DialogForm {
 
-	/**
-	 * показывать при входе в раздел
-	 * 
-	 * @return	если <code>true</code> то форма будет открыта перед показом браузера
-	 */
-	boolean isShowOnEnter();
+  /**
+   * показывать при входе в раздел
+   *
+   * @return если <code>true</code> то форма будет открыта перед показом браузера
+   */
+  boolean isShowOnEnter();
 
 }

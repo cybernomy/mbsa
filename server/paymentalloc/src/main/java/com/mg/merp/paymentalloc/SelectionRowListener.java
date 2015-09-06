@@ -18,12 +18,12 @@ import java.util.EventListener;
 
 /**
  * Слушатель события изменения позиции курсора таблицы
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: SelectionRowListener.java,v 1.1 2007/06/05 12:44:31 sharapov Exp $
  */
 public interface SelectionRowListener extends EventListener {
 
-	public void selectedRowChange(Integer primaryKey);
-	
+  public void selectedRowChange(Integer primaryKey);
+
 }

@@ -13,28 +13,34 @@
 
 <!-- $Id: PriceListSpecMt.mfd.xml,v 1.11 2008/05/13 10:32:29 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.reference.support.ui.PriceListSpecMt" title="resource://com.mg.merp.reference.resources.formelements#PriceListSpec.FormMt.Title" helpTopic="reference#prclsspc_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.reference.support.ui.PriceListSpecMt"
+          title="resource://com.mg.merp.reference.resources.formelements#PriceListSpec.FormMt.Title"
+          helpTopic="reference#prclsspc_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:field id="Catalog" searchHelp="com.mg.merp.reference.support.ui.CatalogByPriceListSpecSearchHelp"/>
-		<jfd:field id="Catalog.FullName"  readOnly="true"/>
-		<jfd:field id="Catalog.TaxGroup" />
-		<jfd:field id="Catalog.Articul" />
-		<jfd:field id="SName" />
-		<jfd:field id="InternalCode" />
-		<jfd:field id="Price" />
-		<jfd:field id="LastCost" />
-		<jfd:field id="ActDate" />
-		<jfd:field id="Canceled" />
-		<jfd:table id="priceSpecTypeLink" longField="true" scroll="true" autoResize="subsequent_columns"  alignment="expand_expand" label="resource://com.mg.merp.reference.resources.formelements#PriceList.PriceSpecTypeLink.Title">
-		</jfd:table>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-	</jfd:container>
+    <jfd:field id="Catalog"
+               searchHelp="com.mg.merp.reference.support.ui.CatalogByPriceListSpecSearchHelp"/>
+    <jfd:field id="Catalog.FullName" readOnly="true"/>
+    <jfd:field id="Catalog.TaxGroup"/>
+    <jfd:field id="Catalog.Articul"/>
+    <jfd:field id="SName"/>
+    <jfd:field id="InternalCode"/>
+    <jfd:field id="Price"/>
+    <jfd:field id="LastCost"/>
+    <jfd:field id="ActDate"/>
+    <jfd:field id="Canceled"/>
+    <jfd:table id="priceSpecTypeLink" longField="true" scroll="true" autoResize="subsequent_columns"
+               alignment="expand_expand"
+               label="resource://com.mg.merp.reference.resources.formelements#PriceList.PriceSpecTypeLink.Title">
+    </jfd:table>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

@@ -19,22 +19,21 @@ import com.mg.merp.planning.model.MrpVersionControl;
 
 /**
  * Бизнес-компонент "Дефицит товаров по результатом MRP расчета"
- * 
+ *
  * @author leonova
  * @version $Id: MRPShortageServiceLocal.java,v 1.2 2007/07/30 10:37:51 safonov Exp $
  */
 public interface MRPShortageServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<MrpShortage, Integer>
-{
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/planning/MRPShortage";
-	
-	/**
-	 * очистить дефицит товаров
-	 * 
-	 * @param mrpVersion	версия ППМ
-	 */
-	void clear(MrpVersionControl mrpVersion);
+    extends com.mg.framework.api.DataBusinessObjectService<MrpShortage, Integer> {
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/planning/MRPShortage";
+
+  /**
+   * очистить дефицит товаров
+   *
+   * @param mrpVersion версия ППМ
+   */
+  void clear(MrpVersionControl mrpVersion);
 }

@@ -13,64 +13,77 @@
 
 <!-- $Id: BOMMt.mfd.xml,v 1.9 2009/03/05 11:22:54 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.mfreference.support.ui.BOMMt" title="resource://com.mg.merp.mfreference.resources.formelements#BOM.FormMt.Title" helpTopic="mfreference#bom_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.mfreference.support.ui.BOMMt"
+          title="resource://com.mg.merp.mfreference.resources.formelements#BOM.FormMt.Title"
+          helpTopic="mfreference#bom_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top" >
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top">
 
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#BOM.FormMt.TotalTitle" >
- 			<jfd:field id="Catalog" /> 	   
-			<jfd:field id="BomType" editorType="comboBox"/>
-			<jfd:field id="BomStatus" editorType="comboBox"  />
-			<jfd:field id="RevisionDateTime"/> 
-			<jfd:field id="Revision" longField="false"/>		
-	 		<jfd:field id="SetupTicks" />
-	 		<jfd:field id="SetupTimeUM"  />
-	 		<jfd:field id="RunTicks" />
-	 		<jfd:field id="RunTimeUM"   />			  
-			<jfd:field id="ApprovedFlag" />
-	 		<jfd:field id="BomVersionRequired" />
-	 		<jfd:field id="CreateJobApproved" />		 
-	   		<jfd:field id="RollUpDateTime" readOnly="true" />
-	 		<jfd:field id="Priority" /> 		 	
-		    <jfd:field id="ScheduleDirection" editorType="comboBox"/>
-			<jfd:field id="UseMoveTimes" />
-			<jfd:field id="UseQueueTimes" />
-			<jfd:field id="UseFiniteCapacity" /> 
-			<jfd:field id="Comment" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />									 
-	   </jfd:container>	   
- 	   <jfd:container id="prodFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#BOM.FormMt.ProdTitle" >
-		<jfd:field id="DefSrcStock" />
- 		<jfd:field id="DefSrcMol" />
-	 	<jfd:field id="DefDstStock" />
-	 	<jfd:field id="DefDstMol" />
- 		 <jfd:field id="Cell"/>
- 		 <jfd:field id="PriorityFreezeFlag" />
- 		 <jfd:field id="PcsPerHrCell" />
- 		 <jfd:field id="MaxLotQty" />
- 		 <jfd:field id="MinLotQty" />
- 		 <jfd:field id="LotIncrementQty" />
- 		 <jfd:field id="PlanningLotQty"  />	   
- 	   </jfd:container>
-	   <jfd:container id="split" layout="jfd:split" alignment="expand_expand" orientation="ver" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#BOM.FormMt.BOMRouteTitle" helpTopic="mfreference#bomroute_html" >
-		   <jfd:maintenanceTable id="bomRoute" scroll="true" alignment="expand_expand">
-		   </jfd:maintenanceTable>
-			<jfd:container id="compFields" layout="jfd:tabbed" alignment="expand_expand" >		   
-			   <jfd:maintenanceTable id="material" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#Material.FormMt.Title">
-			   </jfd:maintenanceTable>	
-			   <jfd:maintenanceTable id="machine" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#Machine.Tab.Title">
-			   </jfd:maintenanceTable>	
-			   <jfd:maintenanceTable id="labour" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#Labour.Tab.Title">
-			   </jfd:maintenanceTable>	
-			 </jfd:container>		    
-	   </jfd:container>
-		<jfd:table id="costDetailLine" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#CostDetailLineTitle" helpTopic="mfreference#costdetail_html" >
-   		</jfd:table>
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.mfreference.resources.formelements#BOM.FormMt.TotalTitle">
+      <jfd:field id="Catalog"/>
+      <jfd:field id="BomType" editorType="comboBox"/>
+      <jfd:field id="BomStatus" editorType="comboBox"/>
+      <jfd:field id="RevisionDateTime"/>
+      <jfd:field id="Revision" longField="false"/>
+      <jfd:field id="SetupTicks"/>
+      <jfd:field id="SetupTimeUM"/>
+      <jfd:field id="RunTicks"/>
+      <jfd:field id="RunTimeUM"/>
+      <jfd:field id="ApprovedFlag"/>
+      <jfd:field id="BomVersionRequired"/>
+      <jfd:field id="CreateJobApproved"/>
+      <jfd:field id="RollUpDateTime" readOnly="true"/>
+      <jfd:field id="Priority"/>
+      <jfd:field id="ScheduleDirection" editorType="comboBox"/>
+      <jfd:field id="UseMoveTimes"/>
+      <jfd:field id="UseQueueTimes"/>
+      <jfd:field id="UseFiniteCapacity"/>
+      <jfd:field id="Comment"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="prodFields" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.mfreference.resources.formelements#BOM.FormMt.ProdTitle">
+      <jfd:field id="DefSrcStock"/>
+      <jfd:field id="DefSrcMol"/>
+      <jfd:field id="DefDstStock"/>
+      <jfd:field id="DefDstMol"/>
+      <jfd:field id="Cell"/>
+      <jfd:field id="PriorityFreezeFlag"/>
+      <jfd:field id="PcsPerHrCell"/>
+      <jfd:field id="MaxLotQty"/>
+      <jfd:field id="MinLotQty"/>
+      <jfd:field id="LotIncrementQty"/>
+      <jfd:field id="PlanningLotQty"/>
+    </jfd:container>
+    <jfd:container id="split" layout="jfd:split" alignment="expand_expand" orientation="ver"
+                   tabTitle="resource://com.mg.merp.mfreference.resources.formelements#BOM.FormMt.BOMRouteTitle"
+                   helpTopic="mfreference#bomroute_html">
+      <jfd:maintenanceTable id="bomRoute" scroll="true" alignment="expand_expand">
+      </jfd:maintenanceTable>
+      <jfd:container id="compFields" layout="jfd:tabbed" alignment="expand_expand">
+        <jfd:maintenanceTable id="material" scroll="true" alignment="expand_expand"
+                              tabTitle="resource://com.mg.merp.mfreference.resources.formelements#Material.FormMt.Title">
+        </jfd:maintenanceTable>
+        <jfd:maintenanceTable id="machine" scroll="true" alignment="expand_expand"
+                              tabTitle="resource://com.mg.merp.mfreference.resources.formelements#Machine.Tab.Title">
+        </jfd:maintenanceTable>
+        <jfd:maintenanceTable id="labour" scroll="true" alignment="expand_expand"
+                              tabTitle="resource://com.mg.merp.mfreference.resources.formelements#Labour.Tab.Title">
+        </jfd:maintenanceTable>
+      </jfd:container>
+    </jfd:container>
+    <jfd:table id="costDetailLine" scroll="true" autoResize="subsequent_columns"
+               alignment="expand_expand"
+               tabTitle="resource://com.mg.merp.mfreference.resources.formelements#CostDetailLineTitle"
+               helpTopic="mfreference#costdetail_html">
+    </jfd:table>
 
-  	  </jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

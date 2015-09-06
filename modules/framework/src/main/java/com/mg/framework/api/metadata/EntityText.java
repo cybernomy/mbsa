@@ -19,6 +19,6 @@ package com.mg.framework.api.metadata;
  * @version $Id: EntityText.java,v 1.1 2006/01/24 13:45:28 safonov Exp $
  */
 public class EntityText {
-	public String[] propertyText = null;
-	public String textFormat = null;
+  public String[] propertyText = null;
+  public String textFormat = null;
 }

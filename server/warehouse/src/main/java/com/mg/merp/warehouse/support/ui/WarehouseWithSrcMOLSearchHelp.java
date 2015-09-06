@@ -15,22 +15,22 @@
 package com.mg.merp.warehouse.support.ui;
 
 /**
- * Поисковик склада-источника.
- * После выбора склада-источника осуществляется установка МОЛ(по умолчанию) для склада-источника 
- * 
+ * Поисковик склада-источника. После выбора склада-источника осуществляется установка МОЛ(по
+ * умолчанию) для склада-источника
+ *
  * @author Artem V. Sharapov
  * @version $Id: WarehouseWithSrcMOLSearchHelp.java,v 1.1 2007/11/12 10:32:45 sharapov Exp $
  */
 public class WarehouseWithSrcMOLSearchHelp extends WarehouseWithMOLSearchHelp {
 
-	private final String SRC_MOL_EXPORT = "SrcMol"; //$NON-NLS-1$
-		
-	/* (non-Javadoc)
-	 * @see com.mg.merp.warehouse.support.ui.WarehouseWithMOLSearchHelp#getMolExportAttribute()
-	 */
-	@Override
-	String getMolExportAttribute() {
-		return SRC_MOL_EXPORT;
-	}
+  private final String SRC_MOL_EXPORT = "SrcMol"; //$NON-NLS-1$
+
+  /* (non-Javadoc)
+   * @see com.mg.merp.warehouse.support.ui.WarehouseWithMOLSearchHelp#getMolExportAttribute()
+   */
+  @Override
+  String getMolExportAttribute() {
+    return SRC_MOL_EXPORT;
+  }
 
 }

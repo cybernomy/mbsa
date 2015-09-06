@@ -17,20 +17,18 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.BankDocument;
 
 /**
- * 
  * @author leonova
  * @version $Id: BankDocumentOtherServiceLocal.java,v 1.3 2006/09/20 10:43:40 safonov Exp $
  */
 public interface BankDocumentOtherServiceLocal
-   extends com.mg.merp.document.Document<BankDocument, Integer, BankDocumentModelOtherServiceLocal>
-{
-	/**
-	 * тип папки для прочих банковских документов
-	 */
-	final static short FOLDER_PART = 8;
-	
-	/**
-	 * docsection для прочих банковских документов
-	 */
-	final static short DOCSECTION = 4;
+    extends com.mg.merp.document.Document<BankDocument, Integer, BankDocumentModelOtherServiceLocal> {
+  /**
+   * тип папки для прочих банковских документов
+   */
+  final static short FOLDER_PART = 8;
+
+  /**
+   * docsection для прочих банковских документов
+   */
+  final static short DOCSECTION = 4;
 }

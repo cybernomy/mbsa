@@ -17,12 +17,10 @@ package com.mg.merp.account;
 import com.mg.merp.document.model.DocSpec;
 
 /**
- * 
  * @author leonova
  * @version $Id: InternalActSpecServiceLocal.java,v 1.2 2006/09/20 10:43:40 safonov Exp $
  */
 public interface InternalActSpecServiceLocal
-   extends com.mg.merp.document.GoodsDocumentSpecification<DocSpec, Integer>
-{
+    extends com.mg.merp.document.GoodsDocumentSpecification<DocSpec, Integer> {
 
 }

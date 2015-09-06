@@ -20,19 +20,19 @@ package com.mg.framework.api;
  */
 @javax.ejb.ApplicationException
 public class ReasonException extends ApplicationException {
-	private String reason;
-	
-	public ReasonException(String msg, String reason) {
-		super(msg);
-		this.reason = reason;
-	}
+  private String reason;
 
-    public ReasonException(String msg, String reason, Throwable cause) {
-        super(msg, cause);
-        this.reason = reason;
-    }
-    
-	public String getReason() {
-		return this.reason;
-	}
+  public ReasonException(String msg, String reason) {
+    super(msg);
+    this.reason = reason;
+  }
+
+  public ReasonException(String msg, String reason, Throwable cause) {
+    super(msg, cause);
+    this.reason = reason;
+  }
+
+  public String getReason() {
+    return this.reason;
+  }
 }

@@ -22,175 +22,180 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Planning.GenericItem")
 public class GenericItem extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer id;
+  private java.lang.Integer id;
 
-	private com.mg.merp.core.model.SysClient sysClient;
+  private com.mg.merp.core.model.SysClient sysClient;
 
-	private com.mg.merp.reference.model.Catalog catalog;
-	
-	private com.mg.merp.reference.model.Measure measure;
+  private com.mg.merp.reference.model.Catalog catalog;
 
-	private java.lang.String genericItemCode;
+  private com.mg.merp.reference.model.Measure measure;
 
-	private java.lang.String genericItemName;
+  private java.lang.String genericItemCode;
 
-	private boolean planningItemFlag;
+  private java.lang.String genericItemName;
 
-	private short planningShelfLife;
+  private boolean planningItemFlag;
 
-	private short demandFenceDays;
+  private short planningShelfLife;
 
-	private short daysStockCover;
+  private short demandFenceDays;
 
-	private short lowLevelCode;
+  private short daysStockCover;
 
-	// Constructors
+  private short lowLevelCode;
 
-	/** default constructor */
-	public GenericItem() {
-	}
+  // Constructors
 
-	/** constructor with id */
-	public GenericItem(java.lang.Integer Id) {
-		this.id = Id;
-	}
+  /**
+   * default constructor
+   */
+  public GenericItem() {
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.id;
-	}
+  /**
+   * constructor with id
+   */
+  public GenericItem(java.lang.Integer Id) {
+    this.id = Id;
+  }
 
-	public void setId(java.lang.Integer Id) {
-		this.id = Id;
-	}
+  // Property accessors
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.sysClient;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.id;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.sysClient = SysClient;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.id = Id;
+  }
 
-	/**
-	 * @return the catalog
-	 */
-	public com.mg.merp.reference.model.Catalog getCatalog() {
-		return catalog;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.sysClient;
+  }
 
-	/**
-	 * @param catalog the catalog to set
-	 */
-	public void setCatalog(com.mg.merp.reference.model.Catalog catalog) {
-		this.catalog = catalog;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.sysClient = SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Planning.GenericItem.Measure")
-	public com.mg.merp.reference.model.Measure getMeasure() {
-		return this.measure;
-	}
+  /**
+   * @return the catalog
+   */
+  public com.mg.merp.reference.model.Catalog getCatalog() {
+    return catalog;
+  }
 
-	public void setMeasure(com.mg.merp.reference.model.Measure Measure) {
-		this.measure = Measure;
-	}
+  /**
+   * @param catalog the catalog to set
+   */
+  public void setCatalog(com.mg.merp.reference.model.Catalog catalog) {
+    this.catalog = catalog;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Planning.Code")
-	public java.lang.String getGenericItemCode() {
-		return this.genericItemCode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Planning.GenericItem.Measure")
+  public com.mg.merp.reference.model.Measure getMeasure() {
+    return this.measure;
+  }
 
-	public void setGenericItemCode(java.lang.String GenericItemCode) {
-		this.genericItemCode = GenericItemCode;
-	}
+  public void setMeasure(com.mg.merp.reference.model.Measure Measure) {
+    this.measure = Measure;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Planning.Name")
-	public java.lang.String getGenericItemName() {
-		return this.genericItemName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Planning.Code")
+  public java.lang.String getGenericItemCode() {
+    return this.genericItemCode;
+  }
 
-	public void setGenericItemName(java.lang.String GenericItemName) {
-		this.genericItemName = GenericItemName;
-	}
+  public void setGenericItemCode(java.lang.String GenericItemCode) {
+    this.genericItemCode = GenericItemCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Planning.GenericItem.PlanningItemFlag")
-	public boolean getPlanningItemFlag() {
-		return this.planningItemFlag;
-	}
+  /**
+   *
+   */
+  @DataItemName("Planning.Name")
+  public java.lang.String getGenericItemName() {
+    return this.genericItemName;
+  }
 
-	public void setPlanningItemFlag(boolean PlanningItemFlag) {
-		this.planningItemFlag = PlanningItemFlag;
-	}
+  public void setGenericItemName(java.lang.String GenericItemName) {
+    this.genericItemName = GenericItemName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Planning.GenericItem.PlanningShelfLife")
-	public short getPlanningShelfLife() {
-		return this.planningShelfLife;
-	}
+  /**
+   *
+   */
+  @DataItemName("Planning.GenericItem.PlanningItemFlag")
+  public boolean getPlanningItemFlag() {
+    return this.planningItemFlag;
+  }
 
-	public void setPlanningShelfLife(short PlanningShelfLife) {
-		this.planningShelfLife = PlanningShelfLife;
-	}
+  public void setPlanningItemFlag(boolean PlanningItemFlag) {
+    this.planningItemFlag = PlanningItemFlag;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Planning.GenericItem.DemandFenceDays")
-	public short getDemandFenceDays() {
-		return this.demandFenceDays;
-	}
+  /**
+   *
+   */
+  @DataItemName("Planning.GenericItem.PlanningShelfLife")
+  public short getPlanningShelfLife() {
+    return this.planningShelfLife;
+  }
 
-	public void setDemandFenceDays(short DemandFenceDays) {
-		this.demandFenceDays = DemandFenceDays;
-	}
+  public void setPlanningShelfLife(short PlanningShelfLife) {
+    this.planningShelfLife = PlanningShelfLife;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Planning.GenericItem.DaysStockCover")
-	public short getDaysStockCover() {
-		return this.daysStockCover;
-	}
+  /**
+   *
+   */
+  @DataItemName("Planning.GenericItem.DemandFenceDays")
+  public short getDemandFenceDays() {
+    return this.demandFenceDays;
+  }
 
-	public void setDaysStockCover(short DaysStockCover) {
-		this.daysStockCover = DaysStockCover;
-	}
+  public void setDemandFenceDays(short DemandFenceDays) {
+    this.demandFenceDays = DemandFenceDays;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Planning.GenericItem.LowLevelCode")
-	public short getLowLevelCode() {
-		return this.lowLevelCode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Planning.GenericItem.DaysStockCover")
+  public short getDaysStockCover() {
+    return this.daysStockCover;
+  }
 
-	public void setLowLevelCode(short LowLevelCode) {
-		this.lowLevelCode = LowLevelCode;
-	}
+  public void setDaysStockCover(short DaysStockCover) {
+    this.daysStockCover = DaysStockCover;
+  }
+
+  /**
+   *
+   */
+  @DataItemName("Planning.GenericItem.LowLevelCode")
+  public short getLowLevelCode() {
+    return this.lowLevelCode;
+  }
+
+  public void setLowLevelCode(short LowLevelCode) {
+    this.lowLevelCode = LowLevelCode;
+  }
 }

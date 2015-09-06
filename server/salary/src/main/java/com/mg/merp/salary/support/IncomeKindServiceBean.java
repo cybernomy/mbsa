@@ -15,8 +15,6 @@
 
 package com.mg.merp.salary.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryAttribute;
@@ -24,24 +22,25 @@ import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.salary.IncomeKindServiceLocal;
 import com.mg.merp.salary.model.IncomeKind;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Виды доходов" 
- * 
+ * Бизнес-компонент "Виды доходов"
+ *
  * @author leonova
  * @version $Id: IncomeKindServiceBean.java,v 1.3 2006/08/31 11:37:58 leonova Exp $
  */
-@Stateless(name="merp/salary/IncomeKindService")
+@Stateless(name = "merp/salary/IncomeKindService")
 public class IncomeKindServiceBean extends AbstractPOJODataBusinessObjectServiceBean<IncomeKind, Integer> implements IncomeKindServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, IncomeKind entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "ICode"));
-		context.addRule(new MandatoryAttribute(entity, "BeginDate"));
-	}
-
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, IncomeKind entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "ICode"));
+    context.addRule(new MandatoryAttribute(entity, "BeginDate"));
+  }
 
 
 }

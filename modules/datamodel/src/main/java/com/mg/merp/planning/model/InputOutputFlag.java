@@ -19,21 +19,21 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Признак потребности/поступления
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: InputOutputFlag.java,v 1.1 2007/07/30 10:37:30 safonov Exp $
  */
-@DataItemName ("Planning.InputOutputFlag")
+@DataItemName("Planning.InputOutputFlag")
 public enum InputOutputFlag {
-	/**
-	 * Поступление
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#InputOutputFlag.InputDriven")
-	INPUT_DRIVEN,
-	
-	/**
-	 * Потребность
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#InputOutputFlag.OutputDriven")
-	OUTPUT_DRIVEN
+  /**
+   * Поступление
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#InputOutputFlag.InputDriven")
+  INPUT_DRIVEN,
+
+  /**
+   * Потребность
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#InputOutputFlag.OutputDriven")
+  OUTPUT_DRIVEN
 }

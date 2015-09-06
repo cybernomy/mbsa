@@ -18,18 +18,18 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
  * Поисковик сущностей "Средства платежа"
- * 
+ *
  * @author leonova
  * @version $Id: PmcResourceSearchHelp.java,v 1.3 2007/05/14 05:23:52 sharapov Exp $
  */
 public class PmcResourceSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {		
-		return "merp/paymentcontrol/Resource"; //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/paymentcontrol/Resource"; //$NON-NLS-1$
+  }
 
 }

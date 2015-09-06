@@ -22,56 +22,57 @@ import com.mg.merp.manufacture.ManufactureProcessorServiceLocal;
 
 /**
  * @author Oleg V. Safonov
- * @version $Id: UpdateJobFromScrapDocumentDocFlowPluginFactory.java,v 1.1 2007/08/06 12:44:54 safonov Exp $
+ * @version $Id: UpdateJobFromScrapDocumentDocFlowPluginFactory.java,v 1.1 2007/08/06 12:44:54
+ *          safonov Exp $
  */
 public class UpdateJobFromScrapDocumentDocFlowPluginFactory extends
-		AbstractDocFlowPluginFactory {
-	public final static int FACTORY_IDENTIFIER = 12004;
+    AbstractDocFlowPluginFactory {
+  public final static int FACTORY_IDENTIFIER = 12004;
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
-	 */
-	@Override
-	protected DocFlowPlugin doCreatePlugin() {
-		return new AbstractDocFlowPlugin() {
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
+   */
+  @Override
+  protected DocFlowPlugin doCreatePlugin() {
+    return new AbstractDocFlowPlugin() {
 
-			/* (non-Javadoc)
-			 * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doExecute()
-			 */
-			@Override
-			protected void doExecute() throws Exception {
-				((ManufactureProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(ManufactureProcessorServiceLocal.SERVICE_NAME))
-						.updateJobFromScrapDocument(getParams());
-				complete();
-			}
+      /* (non-Javadoc)
+       * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doExecute()
+       */
+      @Override
+      protected void doExecute() throws Exception {
+        ((ManufactureProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(ManufactureProcessorServiceLocal.SERVICE_NAME))
+            .updateJobFromScrapDocument(getParams());
+        complete();
+      }
 
-			/* (non-Javadoc)
-			 * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doRoolback()
-			 */
-			@Override
-			protected void doRoolback() throws Exception {
-				((ManufactureProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(ManufactureProcessorServiceLocal.SERVICE_NAME))
-						.rollbackUpdateJobFromScrapDocument(getParams());
-				complete();
-			}
+      /* (non-Javadoc)
+       * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doRoolback()
+       */
+      @Override
+      protected void doRoolback() throws Exception {
+        ((ManufactureProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(ManufactureProcessorServiceLocal.SERVICE_NAME))
+            .rollbackUpdateJobFromScrapDocument(getParams());
+        complete();
+      }
 
-		};
-	}
+    };
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
-	 */
-	@Override
-	public int getIdentifier() {
-		return FACTORY_IDENTIFIER;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
+   */
+  @Override
+  public int getIdentifier() {
+    return FACTORY_IDENTIFIER;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
-	 */
-	@Override
-	public String getName() {
-		return "Update job from scrap document";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
+   */
+  @Override
+  public String getName() {
+    return "Update job from scrap document";
+  }
 
 }

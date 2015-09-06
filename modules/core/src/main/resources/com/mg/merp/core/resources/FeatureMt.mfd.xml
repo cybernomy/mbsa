@@ -13,27 +13,34 @@
 
 <!-- $Id: FeatureMt.mfd.xml,v 1.9 2007/05/16 08:55:50 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.core.support.ui.FeatureMt" title="resource://com.mg.merp.core.resources.formelements#Feature.FormMt.Title" helpTopic="core#features_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.core.support.ui.FeatureMt"
+          title="resource://com.mg.merp.core.resources.formelements#Feature.FormMt.Title"
+          helpTopic="core#features_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="DataType" />
-		<jfd:field id="Priority" sameLine="true" />
-		<jfd:field id="Code" longField="true"/>
-		<jfd:field id="Name"/>
-		<jfd:field id="IsArray"/>
-		<jfd:field id="ArraySize" sameLine="true"/>
-		<!-- jfd:field id="NullValue"/-->
-		<jfd:field id="SysClass" longField="true"/>
-		<jfd:maintenanceTable id="value" longField="true" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" label="resource://com.mg.merp.core.resources.formelements#Feature.Value.Title">
-		</jfd:maintenanceTable>
-		<jfd:maintenanceTable id="featLink" longField="true" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" label="resource://com.mg.merp.core.resources.formelements#Feature.Link.Title">
-		</jfd:maintenanceTable>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="DataType"/>
+    <jfd:field id="Priority" sameLine="true"/>
+    <jfd:field id="Code" longField="true"/>
+    <jfd:field id="Name"/>
+    <jfd:field id="IsArray"/>
+    <jfd:field id="ArraySize" sameLine="true"/>
+    <!-- jfd:field id="NullValue"/-->
+    <jfd:field id="SysClass" longField="true"/>
+    <jfd:maintenanceTable id="value" longField="true" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          label="resource://com.mg.merp.core.resources.formelements#Feature.Value.Title">
+    </jfd:maintenanceTable>
+    <jfd:maintenanceTable id="featLink" longField="true" scroll="true"
+                          autoResize="subsequent_columns" alignment="expand_expand"
+                          label="resource://com.mg.merp.core.resources.formelements#Feature.Link.Title">
+    </jfd:maintenanceTable>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

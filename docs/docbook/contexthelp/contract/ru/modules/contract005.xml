@@ -8,31 +8,45 @@
 ]> -->
 <chapter id="summ">
   <title>Суммы</title>
-    
-    <figure>
-      <title>Закладка &quot;Суммы&quot;</title>
-      <mediaobject><imageobject><imagedata fileref="images/summ.gif"/></imageobject></mediaobject>
-    </figure>
-    
-    <para><guibutton>Сумма платежей контрагенту</guibutton>. По договору, по плану и фактически.</para>
-    
-    <para><guibutton>Сумма ТМЦ и услуг от контрагента</guibutton>. По договору, по плану и фактически.</para>
-    
-    <para><guibutton>Сумма платежей от контрагента</guibutton>. По договору, по плану и фактически.</para>
-    
-    <para><guibutton>Сумма ТМЦ и услуг контрагенту</guibutton>. По договору, по плану и фактически.</para>
-    
-    <para><guibutton>Остаток по договору</guibutton>. Остаток сумм платежей, 
-    товарно-материальных ценностей (ТМЦ) и услуг по договору. </para>
-    
-    <para><guibutton>Остаток по плану</guibutton>. Остаток сумм платежей, ТМЦ и услуг по планируемым 
-    показателям .</para>
-    
-    <para><guibutton>Остаток фактически</guibutton>. Остаток сумм платежей, ТМЦ и услуг по фактическим 
-    пунктам.</para>
-    
-    <para>Сумма договора может автоматически рассчитываться по этапам. Для этого 
-    в поле <guibutton>Расчёт суммы</guibutton> выберите значение &quot;Автоматически&quot; и 
-    нажмите кнопку &quot;Рассчитать&quot;. </para>
+
+  <figure>
+    <title>Закладка &quot;Суммы&quot;</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/summ.gif"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para><guibutton>Сумма платежей контрагенту</guibutton>. По договору, по плану и фактически.
+  </para>
+
+  <para><guibutton>Сумма ТМЦ и услуг от контрагента</guibutton>. По договору, по плану и фактически.
+  </para>
+
+  <para><guibutton>Сумма платежей от контрагента</guibutton>. По договору, по плану и фактически.
+  </para>
+
+  <para><guibutton>Сумма ТМЦ и услуг контрагенту</guibutton>. По договору, по плану и фактически.
+  </para>
+
+  <para><guibutton>Остаток по договору</guibutton>. Остаток сумм платежей,
+    товарно-материальных ценностей (ТМЦ) и услуг по договору.
+  </para>
+
+  <para><guibutton>Остаток по плану</guibutton>. Остаток сумм платежей, ТМЦ и услуг по планируемым
+    показателям .
+  </para>
+
+  <para><guibutton>Остаток фактически</guibutton>. Остаток сумм платежей, ТМЦ и услуг по фактическим
+    пунктам.
+  </para>
+
+  <para>Сумма договора может автоматически рассчитываться по этапам. Для этого
+    в поле
+    <guibutton>Расчёт суммы</guibutton>
+    выберите значение &quot;Автоматически&quot; и
+    нажмите кнопку &quot;Рассчитать&quot;.
+  </para>
 
 </chapter>

@@ -22,76 +22,81 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Planning.InventoryForecast")
 public class InventoryForecast extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String InventoryForecastCode;
+  private java.lang.String InventoryForecastCode;
 
-	private java.lang.String Description;
+  private java.lang.String Description;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public InventoryForecast() {
-	}
+  /**
+   * default constructor
+   */
+  public InventoryForecast() {
+  }
 
-	/** constructor with id */
-	public InventoryForecast(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public InventoryForecast(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Planning.Code")
-	public java.lang.String getInventoryForecastCode() {
-		return this.InventoryForecastCode;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setInventoryForecastCode(java.lang.String InventoryForecastCode) {
-		this.InventoryForecastCode = InventoryForecastCode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Planning.Code")
+  public java.lang.String getInventoryForecastCode() {
+    return this.InventoryForecastCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Planning.Description")
-	public java.lang.String getDescription() {
-		return this.Description;
-	}
+  public void setInventoryForecastCode(java.lang.String InventoryForecastCode) {
+    this.InventoryForecastCode = InventoryForecastCode;
+  }
 
-	public void setDescription(java.lang.String Description) {
-		this.Description = Description;
-	}
+  /**
+   *
+   */
+  @DataItemName("Planning.Description")
+  public java.lang.String getDescription() {
+    return this.Description;
+  }
+
+  public void setDescription(java.lang.String Description) {
+    this.Description = Description;
+  }
 }

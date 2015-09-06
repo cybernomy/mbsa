@@ -14,17 +14,17 @@
 <!-- $Id: link.xml,v 1.1 2006/12/03 13:44:31 konyashkina Exp $ -->
 
 <link version="1.0">
-   
+
   <linkitem topic="pmc_links">
-    <linkentry target="pmcperiod_html" text="Периоды планирования" />
-    <linkentry target="pmcresource_html" text="Средства платежа" />
-    <linkentry target="liability_html" text="Реестр обязательств" />
-    <linkentry target="liabmodel_html" text="Образцы обязательств" />
-    <linkentry target="version_html" text="Версии календаря" />
-    <linkentry target="status_html" text="Статус версии" />
-    <linkentry target="plan_html" text="Планирование обязательств" />
-    <linkentry target="move_html" text="Перемещение средств" />
-    <linkentry target="execution_html" text="Исполнения обязательств" />
+    <linkentry target="pmcperiod_html" text="Периоды планирования"/>
+    <linkentry target="pmcresource_html" text="Средства платежа"/>
+    <linkentry target="liability_html" text="Реестр обязательств"/>
+    <linkentry target="liabmodel_html" text="Образцы обязательств"/>
+    <linkentry target="version_html" text="Версии календаря"/>
+    <linkentry target="status_html" text="Статус версии"/>
+    <linkentry target="plan_html" text="Планирование обязательств"/>
+    <linkentry target="move_html" text="Перемещение средств"/>
+    <linkentry target="execution_html" text="Исполнения обязательств"/>
   </linkitem>
-  
+
 </link>

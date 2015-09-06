@@ -21,147 +21,152 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: DiscountKind.java,v 1.4 2006/08/28 12:47:15 leonova Exp $
  */
 public class DiscountKind extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String DCode;
+  private java.lang.String DCode;
 
-	private java.lang.String DName;
+  private java.lang.String DName;
 
-	private java.math.BigDecimal MinSalaryNumber;
+  private java.math.BigDecimal MinSalaryNumber;
 
-	private java.math.BigDecimal FixedSum;
+  private java.math.BigDecimal FixedSum;
 
-	private java.util.Date BeginDate;
+  private java.util.Date BeginDate;
 
-	private java.math.BigDecimal ActionPeriod;
+  private java.math.BigDecimal ActionPeriod;
 
-	private boolean IsAccumulating;
+  private boolean IsAccumulating;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public DiscountKind() {
-	}
+  /**
+   * default constructor
+   */
+  public DiscountKind() {
+  }
 
-	/** constructor with id */
-	public DiscountKind(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public DiscountKind(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.BigCode")
-	public java.lang.String getDCode() {
-		return this.DCode;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setDCode(java.lang.String Dcode) {
-		this.DCode = Dcode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.BigCode")
+  public java.lang.String getDCode() {
+    return this.DCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.Name")
-	public java.lang.String getDName() {
-		return this.DName;
-	}
+  public void setDCode(java.lang.String Dcode) {
+    this.DCode = Dcode;
+  }
 
-	public void setDName(java.lang.String Dname) {
-		this.DName = Dname;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.Name")
+  public java.lang.String getDName() {
+    return this.DName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.DiscountKind.MinSalaryNumber")
-	public java.math.BigDecimal getMinSalaryNumber() {
-		return this.MinSalaryNumber;
-	}
+  public void setDName(java.lang.String Dname) {
+    this.DName = Dname;
+  }
 
-	public void setMinSalaryNumber(java.math.BigDecimal Minsalarynumber) {
-		this.MinSalaryNumber = Minsalarynumber;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.DiscountKind.MinSalaryNumber")
+  public java.math.BigDecimal getMinSalaryNumber() {
+    return this.MinSalaryNumber;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.DiscountKind.FixedSum")
-	public java.math.BigDecimal getFixedSum() {
-		return this.FixedSum;
-	}
+  public void setMinSalaryNumber(java.math.BigDecimal Minsalarynumber) {
+    this.MinSalaryNumber = Minsalarynumber;
+  }
 
-	public void setFixedSum(java.math.BigDecimal Fixedsum) {
-		this.FixedSum = Fixedsum;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.DiscountKind.FixedSum")
+  public java.math.BigDecimal getFixedSum() {
+    return this.FixedSum;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.DiscountKind.BeginDate")
-	public java.util.Date getBeginDate() {
-		return this.BeginDate;
-	}
+  public void setFixedSum(java.math.BigDecimal Fixedsum) {
+    this.FixedSum = Fixedsum;
+  }
 
-	public void setBeginDate(java.util.Date Begindate) {
-		this.BeginDate = Begindate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.DiscountKind.BeginDate")
+  public java.util.Date getBeginDate() {
+    return this.BeginDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.DiscountKind.ActionPeriod")
-	public java.math.BigDecimal getActionPeriod() {
-		return this.ActionPeriod;
-	}
+  public void setBeginDate(java.util.Date Begindate) {
+    this.BeginDate = Begindate;
+  }
 
-	public void setActionPeriod(java.math.BigDecimal Actionperiod) {
-		this.ActionPeriod = Actionperiod;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.DiscountKind.ActionPeriod")
+  public java.math.BigDecimal getActionPeriod() {
+    return this.ActionPeriod;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.DiscountKind.IsAccumulating")
-	public boolean getIsAccumulating() {
-		return this.IsAccumulating;
-	}
+  public void setActionPeriod(java.math.BigDecimal Actionperiod) {
+    this.ActionPeriod = Actionperiod;
+  }
 
-	public void setIsAccumulating(boolean IsAccumulating) {
-		this.IsAccumulating = IsAccumulating;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.DiscountKind.IsAccumulating")
+  public boolean getIsAccumulating() {
+    return this.IsAccumulating;
+  }
+
+  public void setIsAccumulating(boolean IsAccumulating) {
+    this.IsAccumulating = IsAccumulating;
+  }
 
 }

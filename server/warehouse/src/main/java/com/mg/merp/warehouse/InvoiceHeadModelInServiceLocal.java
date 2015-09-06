@@ -18,15 +18,13 @@ import com.mg.merp.document.DocumentPattern;
 import com.mg.merp.warehouse.model.InvoiceHeadModel;
 
 /**
- * 
  * @author leonova
  * @version $Id: InvoiceHeadModelInServiceLocal.java,v 1.3 2006/09/20 11:02:09 safonov Exp $
  */
 public interface InvoiceHeadModelInServiceLocal
-   extends DocumentPattern<InvoiceHeadModel, Integer>
-{
-	/**
-	 * тип папки для образцов входящих накладных
-	 */
-	final static short FOLDER_PART = 47;
+    extends DocumentPattern<InvoiceHeadModel, Integer> {
+  /**
+   * тип папки для образцов входящих накладных
+   */
+  final static short FOLDER_PART = 47;
 }

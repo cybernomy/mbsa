@@ -17,12 +17,10 @@ package com.mg.merp.crm;
 import com.mg.merp.crm.model.DeliveryKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: DeliveryKindServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface DeliveryKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<DeliveryKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<DeliveryKind, Integer> {
 
 }

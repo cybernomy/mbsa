@@ -19,91 +19,96 @@ package com.mg.merp.document.model;
  * @version $Id: DocTypeDocSectionLink.java,v 1.3 2006/08/31 09:07:19 safonov Exp $
  */
 public class DocTypeDocSectionLink extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int id;
+  private int id;
 
-	private com.mg.merp.document.model.DocSection docSection;
+  private com.mg.merp.document.model.DocSection docSection;
 
-	private com.mg.merp.core.model.SysClient sysClient;
+  private com.mg.merp.core.model.SysClient sysClient;
 
-	private com.mg.merp.document.model.DocType docType;
+  private com.mg.merp.document.model.DocType docType;
 
-	private DocumentKind kind;
+  private DocumentKind kind;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public DocTypeDocSectionLink() {
-	}
+  /**
+   * default constructor
+   */
+  public DocTypeDocSectionLink() {
+  }
 
-	/** constructor with id */
-	public DocTypeDocSectionLink(int Id) {
-		this.id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public DocTypeDocSectionLink(int Id) {
+    this.id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
+  // Property accessors
 
-	public int getId() {
-		return this.id;
-	}
+  /**
+   *
+   */
 
-	public void setId(int Id) {
-		this.id = Id;
-	}
+  public int getId() {
+    return this.id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(int Id) {
+    this.id = Id;
+  }
 
-	public com.mg.merp.document.model.DocSection getDocSection() {
-		return this.docSection;
-	}
+  /**
+   *
+   */
 
-	public void setDocSection(com.mg.merp.document.model.DocSection Docsection) {
-		this.docSection = Docsection;
-	}
+  public com.mg.merp.document.model.DocSection getDocSection() {
+    return this.docSection;
+  }
 
-	/**
-	 * 
-	 */
+  public void setDocSection(com.mg.merp.document.model.DocSection Docsection) {
+    this.docSection = Docsection;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.sysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.sysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.sysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.sysClient = SysClient;
+  }
 
-	public com.mg.merp.document.model.DocType getDocType() {
-		return this.docType;
-	}
+  /**
+   *
+   */
 
-	public void setDocType(com.mg.merp.document.model.DocType Typedoc) {
-		this.docType = Typedoc;
-	}
+  public com.mg.merp.document.model.DocType getDocType() {
+    return this.docType;
+  }
 
-	/**
-	 * 
-	 */
+  public void setDocType(com.mg.merp.document.model.DocType Typedoc) {
+    this.docType = Typedoc;
+  }
 
-	public DocumentKind getKind() {
-		return this.kind;
-	}
+  /**
+   *
+   */
 
-	public void setKind(DocumentKind Kind) {
-		this.kind = Kind;
-	}
+  public DocumentKind getKind() {
+    return this.kind;
+  }
+
+  public void setKind(DocumentKind Kind) {
+    this.kind = Kind;
+  }
 
 }

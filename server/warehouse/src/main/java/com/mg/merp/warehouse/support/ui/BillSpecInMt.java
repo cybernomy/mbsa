@@ -18,15 +18,15 @@ import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
  * Контроллер формы поддержки спецификации входящих счетов
- * 
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: BillSpecInMt.java,v 1.3 2006/08/22 08:12:01 leonova Exp $
  */
 public class BillSpecInMt extends GoodsDocumentSpecMaintenanceForm {
 
-	public BillSpecInMt() throws Exception {
-		super();	
-		
-	}
-	
+  public BillSpecInMt() throws Exception {
+    super();
+
+  }
+
 }

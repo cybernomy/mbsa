@@ -14,17 +14,17 @@
  */
 package com.mg.merp.security.support.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.framework.api.ui.UIProfileManager;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * MBean менеджера профиля пользовательского интерфейса
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: UIProfileManagerServiceMBean.java,v 1.1 2007/03/13 13:47:30 safonov Exp $
  */
 public interface UIProfileManagerServiceMBean extends UIProfileManager,
-		ServiceMBean {
+    ServiceMBean {
 
 }

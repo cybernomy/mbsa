@@ -14,30 +14,30 @@
  */
 package com.mg.framework.support.ui.widget;
 
+import com.mg.framework.api.ui.ShuttleChangeEvent;
+
 import java.io.Serializable;
 import java.util.EventListener;
 
-import com.mg.framework.api.ui.ShuttleChangeEvent;
-
 /**
  * Слушатель модели элемента "Shuttle"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ShuttleModelListener.java,v 1.1 2006/08/31 08:36:41 safonov Exp $
  */
 public interface ShuttleModelListener extends EventListener, Serializable {
 
-	/**
-	 * происходит в момент изменения модели списка источника
-	 * 
-	 * @param event	событие
-	 */
-	void leadingChanged(ShuttleChangeEvent event);
-	
-	/**
-	 * происходит в момент изменения модели списка приемника
-	 * 
-	 * @param event	событие
-	 */
-	void trailingChanged(ShuttleChangeEvent event);
+  /**
+   * происходит в момент изменения модели списка источника
+   *
+   * @param event событие
+   */
+  void leadingChanged(ShuttleChangeEvent event);
+
+  /**
+   * происходит в момент изменения модели списка приемника
+   *
+   * @param event событие
+   */
+  void trailingChanged(ShuttleChangeEvent event);
 }

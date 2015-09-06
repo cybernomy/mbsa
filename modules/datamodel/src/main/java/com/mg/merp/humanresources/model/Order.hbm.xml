@@ -1,83 +1,83 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.humanresources.model.Order" table="HR_ORDER">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">HR_ORDER_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Folder" class="com.mg.merp.core.model.Folder">
-      <column name="FOLDER_ID" not-null="true" />
+      <column name="FOLDER_ID" not-null="true"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <property name="OrderNumber" type="java.lang.String">
-      <column name="ORDER_NUMBER" length="20" not-null="true" sql-type="CHAR" />
+      <column name="ORDER_NUMBER" length="20" not-null="true" sql-type="CHAR"/>
     </property>
     <property name="OrderDate" type="java.util.Date">
-      <column name="ORDER_DATE" not-null="true" sql-type="TIMESTAMP" />
+      <column name="ORDER_DATE" not-null="true" sql-type="TIMESTAMP"/>
     </property>
     <property name="Header" type="java.lang.String">
-      <column name="HEADER" length="2048" not-null="false" sql-type="VARCHAR" />
+      <column name="HEADER" length="2048" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Footer" type="java.lang.String">
-      <column name="FOOTER" length="2048" not-null="false" sql-type="VARCHAR" />
+      <column name="FOOTER" length="2048" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="OrderStatus" type="java.lang.Short">
-      <column name="ORDER_STATUS" not-null="false" sql-type="SMALLINT" />
+      <column name="ORDER_STATUS" not-null="false" sql-type="SMALLINT"/>
     </property>
     <set name="OrderItems" inverse="true">
       <key on-delete="cascade">
-        <column name="ORDER_ID" not-null="false" />
+        <column name="ORDER_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.humanresources.model.OrderItem" />
+      <one-to-many class="com.mg.merp.humanresources.model.OrderItem"/>
     </set>
-<!--    
-    <set name="PersonnelVocationalTrainingList" inverse="true">
-      <key on-delete="cascade">
-        <column name="ORDER_ID" not-null="false" />
-      </key>
-      <one-to-many class="com.mg.merp.personnelref.model.PersonnelVocationalTraining" />
-    </set>
-    <set name="PersonnelSkillRaisingList" inverse="true">
-      <key on-delete="cascade">
-        <column name="ORDER_ID" not-null="false" />
-      </key>
-      <one-to-many class="com.mg.merp.personnelref.model.PersonnelSkillRaising" />
-    </set>
-    <set name="PersonnelList" inverse="true">
-      <key on-delete="cascade">
-        <column name="RETIRE_ORDER_ID" not-null="false" />
-      </key>
-      <one-to-many class="com.mg.merp.personnelref.model.Personnel" />
-    </set>
-    <set name="PersonnelTransferList" inverse="true">
-      <key on-delete="cascade">
-        <column name="ORDER_ID" not-null="false" />
-      </key>
-      <one-to-many class="com.mg.merp.personnelref.model.PersonnelTransfer" />
-    </set>
-    <set name="PersonnelLeaveList" inverse="true">
-      <key on-delete="cascade">
-        <column name="ORDER_ID" not-null="false" />
-      </key>
-      <one-to-many class="com.mg.merp.personnelref.model.PersonnelLeave" />
-    </set>
-    <set name="PersonnelAttestationList" inverse="true">
-      <key on-delete="cascade">
-        <column name="ORDER_ID" not-null="false" />
-      </key>
-      <one-to-many class="com.mg.merp.personnelref.model.PersonnelAttestation" />
-    </set>
--->
+    <!--
+        <set name="PersonnelVocationalTrainingList" inverse="true">
+          <key on-delete="cascade">
+            <column name="ORDER_ID" not-null="false" />
+          </key>
+          <one-to-many class="com.mg.merp.personnelref.model.PersonnelVocationalTraining" />
+        </set>
+        <set name="PersonnelSkillRaisingList" inverse="true">
+          <key on-delete="cascade">
+            <column name="ORDER_ID" not-null="false" />
+          </key>
+          <one-to-many class="com.mg.merp.personnelref.model.PersonnelSkillRaising" />
+        </set>
+        <set name="PersonnelList" inverse="true">
+          <key on-delete="cascade">
+            <column name="RETIRE_ORDER_ID" not-null="false" />
+          </key>
+          <one-to-many class="com.mg.merp.personnelref.model.Personnel" />
+        </set>
+        <set name="PersonnelTransferList" inverse="true">
+          <key on-delete="cascade">
+            <column name="ORDER_ID" not-null="false" />
+          </key>
+          <one-to-many class="com.mg.merp.personnelref.model.PersonnelTransfer" />
+        </set>
+        <set name="PersonnelLeaveList" inverse="true">
+          <key on-delete="cascade">
+            <column name="ORDER_ID" not-null="false" />
+          </key>
+          <one-to-many class="com.mg.merp.personnelref.model.PersonnelLeave" />
+        </set>
+        <set name="PersonnelAttestationList" inverse="true">
+          <key on-delete="cascade">
+            <column name="ORDER_ID" not-null="false" />
+          </key>
+          <one-to-many class="com.mg.merp.personnelref.model.PersonnelAttestation" />
+        </set>
+    -->
   </class>
 </hibernate-mapping>

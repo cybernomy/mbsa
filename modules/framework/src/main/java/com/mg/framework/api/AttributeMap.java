@@ -17,11 +17,11 @@ package com.mg.framework.api;
 import java.util.Map;
 
 /**
- * Карта наименований свойств объекта и значений, используется для нетипизированного обращения к объектам
- * 
+ * Карта наименований свойств объекта и значений, используется для нетипизированного обращения к
+ * объектам
+ *
  * @author Oleg V. Safonov
  * @version $Id: AttributeMap.java,v 1.3 2006/09/28 12:45:54 safonov Exp $
- *
  */
 public interface AttributeMap extends Map<String, Object> {
 }

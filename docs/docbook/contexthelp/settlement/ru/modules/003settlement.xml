@@ -8,36 +8,52 @@
 <chapter id="cards">
   <title>Карточки расчётов с партнёрами</title>
 
-    <para>Вход в &quot;Картотеку расчётов с партнёрами&quot; осуществляется 
-    через главное меню системы: 
-       <menuchoice>
-        <guimenu>&cont_centr;</guimenu>
-        <guisubmenu>&liab;</guisubmenu>
-        <guimenuitem>Картотека расчётов с партнёрами</guimenuitem>
-    </menuchoice>    
-    </para>
-    
-    <para>Для того, чтобы посмотреть Карточки, выберите Подразделение (Центр учёта), 
-    вызовите контекстное меню и выберите пункт &quot;Карточки расчётов с партнёрами&quot;.</para>
-    
-    <para>Карточки расчётов с партнёрами представлены в системе &merp; 
-    структурированным списком, то есть разбиты на папки так же, как 
-    в справочнике &quot;Партнёры&quot;. </para>
-    
-    <screenshot>
-      <mediaobject><imageobject><imagedata fileref="images/card-index.gif"/></imageobject></mediaobject>
-    </screenshot>
-    
-    <para>На каждой карточке есть следующие закладки:  </para>
-    
-     <itemizedlist>
-        <listitem><para>Содержание карточки </para></listitem>
-	<listitem><para>По документам подтверждениям </para></listitem>
-	<listitem><para>По документам основаниям </para></listitem>
-	<listitem><para>По договорам </para></listitem>
-	<listitem><para>По плановым показателям </para></listitem>
-   </itemizedlist>
-   
-    <para>См. также: Условия отбора </para>
-    
-  </chapter>
+  <para>Вход в &quot;Картотеку расчётов с партнёрами&quot; осуществляется
+    через главное меню системы:
+    <menuchoice>
+      <guimenu>&cont_centr;</guimenu>
+      <guisubmenu>&liab;</guisubmenu>
+      <guimenuitem>Картотека расчётов с партнёрами</guimenuitem>
+    </menuchoice>
+  </para>
+
+  <para>Для того, чтобы посмотреть Карточки, выберите Подразделение (Центр учёта),
+    вызовите контекстное меню и выберите пункт &quot;Карточки расчётов с партнёрами&quot;.
+  </para>
+
+  <para>Карточки расчётов с партнёрами представлены в системе &merp;
+    структурированным списком, то есть разбиты на папки так же, как
+    в справочнике &quot;Партнёры&quot;.
+  </para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/card-index.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>На каждой карточке есть следующие закладки:</para>
+
+  <itemizedlist>
+    <listitem>
+      <para>Содержание карточки</para>
+    </listitem>
+    <listitem>
+      <para>По документам подтверждениям</para>
+    </listitem>
+    <listitem>
+      <para>По документам основаниям</para>
+    </listitem>
+    <listitem>
+      <para>По договорам</para>
+    </listitem>
+    <listitem>
+      <para>По плановым показателям</para>
+    </listitem>
+  </itemizedlist>
+
+  <para>См. также: Условия отбора</para>
+
+</chapter>

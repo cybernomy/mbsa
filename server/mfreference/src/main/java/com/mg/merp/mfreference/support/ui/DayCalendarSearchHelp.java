@@ -28,32 +28,32 @@ import com.mg.merp.mfreference.DayCalendarServiceLocal;
  * @version $Id: DayCalendarSearchHelp.java,v 1.3 2006/10/03 06:43:34 leonova Exp $
  */
 public class DayCalendarSearchHelp extends AbstractSearchHelp {
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
-	 */
-	@Override
-	protected void doSearch() throws Exception {
-		SearchHelpForm form = (SearchHelpForm) UIProducer.produceForm("com/mg/merp/mfreference/resources/DayCalendarSearchForm.mfd.xml");
-		form.addSearchHelpListener(this);
-		form.run(UIUtils.isModalMode());
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doView(com.mg.framework.api.orm.PersistentObject)
-	 */
-	@Override
-	protected void doView(PersistentObject entity) {
-		DayCalendarServiceLocal service = (DayCalendarServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/mfreference/DayCalendar");
-		MaintenanceHelper.view(service, (Integer) entity.getPrimaryKey(), null, null);
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#isSupportView()
-	 */
-	@Override
-	public boolean isSupportView() {
-		return true;
-	}
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
+   */
+  @Override
+  protected void doSearch() throws Exception {
+    SearchHelpForm form = (SearchHelpForm) UIProducer.produceForm("com/mg/merp/mfreference/resources/DayCalendarSearchForm.mfd.xml");
+    form.addSearchHelpListener(this);
+    form.run(UIUtils.isModalMode());
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doView(com.mg.framework.api.orm.PersistentObject)
+   */
+  @Override
+  protected void doView(PersistentObject entity) {
+    DayCalendarServiceLocal service = (DayCalendarServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/mfreference/DayCalendar");
+    MaintenanceHelper.view(service, (Integer) entity.getPrimaryKey(), null, null);
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#isSupportView()
+   */
+  @Override
+  public boolean isSupportView() {
+    return true;
+  }
 
 }

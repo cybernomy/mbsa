@@ -13,29 +13,32 @@
 
 <!-- $Id: JobRest.mfd.xml,v 1.2 2006/12/01 15:36:55 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.manufacture.support.ui.JobRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.manufacture.resources.formelements#Cond.Job" helpTopic="manufacture#job_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.manufacture.support.ui.JobRest" orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.manufacture.resources.formelements#Cond.Job"
+          helpTopic="manufacture#job_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:field id="jobDateFrom" />
-		<jfd:field id="jobDateTill" sameLine="true"/>
-		<jfd:field id="jobNumber" />
-		<jfd:field id="jobStatus" sameLine="true"/> 
-		<jfd:field id="catalogCode" />
-		<jfd:field id="srcStockCode" />		
-		<jfd:field id="srcMolCode" sameLine="true"/>		
-		<jfd:field id="dstStockCode" />
-		<jfd:field id="dstMolCode" sameLine="true"/>		
-		<jfd:field id="startDateFrom" />
-		<jfd:field id="startDateTill" sameLine="true"/>
-		<jfd:field id="endDateFrom" />
-		<jfd:field id="endDateTill" sameLine="true"/>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 																
-	</jfd:container>
+    <jfd:field id="jobDateFrom"/>
+    <jfd:field id="jobDateTill" sameLine="true"/>
+    <jfd:field id="jobNumber"/>
+    <jfd:field id="jobStatus" sameLine="true"/>
+    <jfd:field id="catalogCode"/>
+    <jfd:field id="srcStockCode"/>
+    <jfd:field id="srcMolCode" sameLine="true"/>
+    <jfd:field id="dstStockCode"/>
+    <jfd:field id="dstMolCode" sameLine="true"/>
+    <jfd:field id="startDateFrom"/>
+    <jfd:field id="startDateTill" sameLine="true"/>
+    <jfd:field id="endDateFrom"/>
+    <jfd:field id="endDateTill" sameLine="true"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml"/>
 
 </jfd:form>

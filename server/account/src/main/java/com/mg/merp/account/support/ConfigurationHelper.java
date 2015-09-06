@@ -22,29 +22,27 @@ import com.mg.merp.document.support.ConfigurationImpl;
 
 /**
  * Класс помощник конфигурации модуля "Бухгалтерия"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ConfigurationHelper.java,v 1.1 2007/03/23 16:11:41 safonov Exp $
  */
 public class ConfigurationHelper {
 
-	/**
-	 * получить конфигурацию модуля
-	 * 
-	 * @return	конфигурация
-	 */
-	public static AccConfig getConfiguration() {
-		return ServerUtils.getPersistentManager().find(AccConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
-	}
+  /**
+   * получить конфигурацию модуля
+   *
+   * @return конфигурация
+   */
+  public static AccConfig getConfiguration() {
+    return ServerUtils.getPersistentManager().find(AccConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
+  }
 
-	/**
-	 * получить конфигурацию документов данного модуля
-	 * 
-	 * @return
-	 */
-	public static Configuration getDocumentConfiguration() {
-		AccConfig cfg = getConfiguration();
-		return new ConfigurationImpl(cfg.getBaseCurrency(), cfg.getNatCurrency(), cfg.getCurrencyPrec(), cfg.getCurrencyRateAuthority(), cfg.getCurrencyRateType());
-	}
+  /**
+   * получить конфигурацию документов данного модуля
+   */
+  public static Configuration getDocumentConfiguration() {
+    AccConfig cfg = getConfiguration();
+    return new ConfigurationImpl(cfg.getBaseCurrency(), cfg.getNatCurrency(), cfg.getCurrencyPrec(), cfg.getCurrencyRateAuthority(), cfg.getCurrencyRateType());
+  }
 
 }

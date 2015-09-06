@@ -16,17 +16,17 @@ package com.mg.framework.api.ui;
 
 /**
  * Интерфейс указывающий на поддержку ограничений с иерархической структурой
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: HierarchyRestrictionSupport.java,v 1.1 2006/08/02 13:51:05 safonov Exp $
  */
 public interface HierarchyRestrictionSupport {
 
-	/**
-	 * признак отбора сущностей по иерархии
-	 * 
-	 * @return возвращает <code>true</code> если требуется отбирать сущности по иерархии
-	 */
-	boolean isUseHierarchy();
+  /**
+   * признак отбора сущностей по иерархии
+   *
+   * @return возвращает <code>true</code> если требуется отбирать сущности по иерархии
+   */
+  boolean isUseHierarchy();
 
 }

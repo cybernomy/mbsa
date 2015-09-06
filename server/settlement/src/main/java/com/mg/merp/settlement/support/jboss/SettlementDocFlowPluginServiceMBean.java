@@ -18,15 +18,15 @@ import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис дополнительных модулей подсистемы "Расчеты с партнерами"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: SettlementDocFlowPluginServiceMBean.java,v 1.1 2007/03/19 15:05:29 sharapov Exp $
  */
 public interface SettlementDocFlowPluginServiceMBean extends ServiceMBean {
 
-	/**
-	 * наименование сервиса
-	 */
-	final static String SERVICE_NAME = "merp:settlement=DocFlowPluginService"; //$NON-NLS-1$
+  /**
+   * наименование сервиса
+   */
+  final static String SERVICE_NAME = "merp:settlement=DocFlowPluginService"; //$NON-NLS-1$
 
 }

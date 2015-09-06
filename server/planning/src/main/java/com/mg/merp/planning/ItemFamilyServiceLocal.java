@@ -17,12 +17,10 @@ package com.mg.merp.planning;
 import com.mg.merp.planning.model.ItemFamily;
 
 /**
- * 
  * @author leonova
  * @version $Id: ItemFamilyServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface ItemFamilyServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<ItemFamily, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<ItemFamily, Integer> {
 
 }

@@ -16,21 +16,21 @@ package com.mg.merp.personnelref.support.ui;
 
 /**
  * Поисковик сущностей "Аналитика состава затрат 3-го уровня"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: CostsAnl3SearchHelp.java,v 1.1 2007/07/09 08:07:46 sharapov Exp $
  */
 public class CostsAnl3SearchHelp extends CostsAnlSearchHelp {
 
-	private final short analiticsLevel = 3;
-	
+  private final short analiticsLevel = 3;
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.personnelref.support.ui.CostsAnlSearchHelp#getAnaliticsLevel()
-	 */
-	@Override
-	short getAnaliticsLevel() {
-		return analiticsLevel;
-	}
-	
+
+  /* (non-Javadoc)
+   * @see com.mg.merp.personnelref.support.ui.CostsAnlSearchHelp#getAnaliticsLevel()
+   */
+  @Override
+  short getAnaliticsLevel() {
+    return analiticsLevel;
+  }
+
 }

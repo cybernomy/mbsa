@@ -17,15 +17,13 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.ServicePfCode;
 
 /**
- * 
  * @author leonova
  * @version $Id: ServicePFCodeServiceLocal.java,v 1.2 2006/09/06 12:50:50 leonova Exp $
  */
 public interface ServicePFCodeServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<ServicePfCode, Integer>
-{
-	/**
-	 * тип папки для видов кодов стажа для ПФ
-	 */
-	final static short FOLDER_PART = 3001;
+    extends com.mg.framework.api.DataBusinessObjectService<ServicePfCode, Integer> {
+  /**
+   * тип папки для видов кодов стажа для ПФ
+   */
+  final static short FOLDER_PART = 3001;
 }

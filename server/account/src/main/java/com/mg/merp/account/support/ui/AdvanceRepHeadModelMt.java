@@ -19,19 +19,19 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
  * Контроллер формы поддержки "Образцов авансовых отчетов"
- * 
+ *
  * @author leonova
  * @version $Id: AdvanceRepHeadModelMt.java,v 1.2 2007/05/22 08:51:54 sharapov Exp $
  */
 public class AdvanceRepHeadModelMt extends DocumentModelMaintenanceForm {
-	
-	protected String[] contractorFromKinds;
-	protected String[] contractorToKinds;
-	
-	public AdvanceRepHeadModelMt() {
-		super();
-		contractorFromKinds = new String[] {ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-		contractorToKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_ORGUNIT};
-	}
+
+  protected String[] contractorFromKinds;
+  protected String[] contractorToKinds;
+
+  public AdvanceRepHeadModelMt() {
+    super();
+    contractorFromKinds = new String[]{ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+    contractorToKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_ORGUNIT};
+  }
 
 }

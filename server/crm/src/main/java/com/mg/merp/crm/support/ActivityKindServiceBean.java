@@ -15,27 +15,27 @@
 
 package com.mg.merp.crm.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.crm.ActivityKindServiceLocal;
 import com.mg.merp.crm.model.ActivityKind;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Виды деятельности" 
- * 
+ * Бизнес-компонент "Виды деятельности"
+ *
  * @author leonova
  * @version $Id: ActivityKindServiceBean.java,v 1.5 2006/10/12 05:42:49 leonova Exp $
  */
-@Stateless(name="merp/crm/ActivityKindService")
+@Stateless(name = "merp/crm/ActivityKindService")
 public class ActivityKindServiceBean extends AbstractPOJODataBusinessObjectServiceBean<ActivityKind, Integer> implements ActivityKindServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, ActivityKind entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));
-	}
+  @Override
+  protected void onValidate(ValidationContext context, ActivityKind entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+  }
 
 
 }

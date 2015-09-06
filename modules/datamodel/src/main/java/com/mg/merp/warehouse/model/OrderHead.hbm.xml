@@ -1,18 +1,21 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.warehouse.model.OrderStatus" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.warehouse.model.OrderStatus</param>
-	</typedef>
-	<typedef name="com.mg.merp.warehouse.model.OrderDueDateKind" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.warehouse.model.OrderDueDateKind</param>
-	</typedef>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
-  <joined-subclass name="com.mg.merp.warehouse.model.OrderHead" extends="com.mg.merp.document.model.DocHead" table="ORDERHEAD">
+  <typedef name="com.mg.merp.warehouse.model.OrderStatus"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.warehouse.model.OrderStatus</param>
+  </typedef>
+  <typedef name="com.mg.merp.warehouse.model.OrderDueDateKind"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.warehouse.model.OrderDueDateKind</param>
+  </typedef>
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
+  <joined-subclass name="com.mg.merp.warehouse.model.OrderHead"
+                   extends="com.mg.merp.document.model.DocHead" table="ORDERHEAD">
     <meta attribute="extends">com.mg.merp.document.model.DocHead</meta>
     <!-- id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
@@ -21,52 +24,54 @@
       </generator>
     </id-->
     <key>
-      <column name="DOCHEAD_ID" not-null="true" />
+      <column name="DOCHEAD_ID" not-null="true"/>
     </key>
     <many-to-one name="Responsible" class="com.mg.merp.reference.model.Contractor">
-      <column name="RESPONSIBLE" not-null="false" />
+      <column name="RESPONSIBLE" not-null="false"/>
     </many-to-one>
     <many-to-one name="Consumer" class="com.mg.merp.reference.model.Contractor">
-      <column name="CONSUMER" not-null="false" />
+      <column name="CONSUMER" not-null="false"/>
     </many-to-one>
     <property name="SummaCurWithDiscount" type="java.math.BigDecimal">
-      <column name="SUMMACUR_WITH_DISCOUNT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="SUMMACUR_WITH_DISCOUNT" scale="4" precision="15" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="SummaNatWithDiscount" type="java.math.BigDecimal">
-      <column name="SUMMANAT_WITH_DISCOUNT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="SUMMANAT_WITH_DISCOUNT" scale="4" precision="15" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="AddExpenses" type="java.math.BigDecimal">
-      <column name="ADD_EXPENSES" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="ADD_EXPENSES" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="DiscountOnDoc" type="java.math.BigDecimal">
-      <column name="DISCOUNT_ON_DOC" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="DISCOUNT_ON_DOC" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="DiscountOnLine" type="java.math.BigDecimal">
-      <column name="DISCOUNT_ON_LINE" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="DISCOUNT_ON_LINE" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="DueDateKind" type="com.mg.merp.warehouse.model.OrderDueDateKind">
-      <column name="DUEDATE_KIND" not-null="false" sql-type="SMALLINT" />
+      <column name="DUEDATE_KIND" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="DueDateQuan" type="java.math.BigDecimal">
-      <column name="DUEDATE_QUAN" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="DUEDATE_QUAN" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="DueDate" type="java.util.Date">
-      <column name="DUEDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="DUEDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="CreditTerm" type="java.lang.Short">
-      <column name="CREDITTERM" not-null="false" sql-type="SMALLINT" />
+      <column name="CREDITTERM" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="Penalty" type="java.math.BigDecimal">
-      <column name="PENALTY" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="PENALTY" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="Comment" type="java.lang.String">
-      <column name="`COMMENT`" length="1024" not-null="false" sql-type="VARCHAR" />
+      <column name="`COMMENT`" length="1024" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="FixedInput" type="boolean">
-      <column name="FIXED_INPUT" not-null="false" sql-type="SMALLINT" />
+      <column name="FIXED_INPUT" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="Status" type="com.mg.merp.warehouse.model.OrderStatus">
-      <column name="STATUS" not-null="false" sql-type="SMALLINT" />
+      <column name="STATUS" not-null="false" sql-type="SMALLINT"/>
     </property>
   </joined-subclass>
 </hibernate-mapping>

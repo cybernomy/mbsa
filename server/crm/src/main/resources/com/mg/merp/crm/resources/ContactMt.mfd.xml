@@ -13,56 +13,82 @@
 
 <!-- $Id: ContactMt.mfd.xml,v 1.6 2007/05/16 11:47:54 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.crm.support.ui.ContactMt" title="resource://com.mg.merp.crm.resources.formelements#Contact.FormMt.Title" helpTopic="crm#contact_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.crm.support.ui.ContactMt"
+          title="resource://com.mg.merp.crm.resources.formelements#Contact.FormMt.Title"
+          helpTopic="crm#contact_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" alignment="expand_top" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.crm.resources.formelements#Contact.Tab.Total" >
-			<jfd:field id="Person" />
-			<jfd:field id="PersonTitle" sameLine="true"/>	
-			<jfd:field id="Contractor" />
-			<jfd:field id="Priority" />					
-			<jfd:field id="IsDefault" sameLine="true"/>								
-			<jfd:field id="ThePosition" />	
-			<jfd:field id="IsRetired" sameLine="true"/>					
-			<jfd:field id="NickName" longField="false"/>				
-			<jfd:field id="Responsible" />					
-			<jfd:field id="Curator" sameLine="true"/>		
-			<jfd:field id="Comments" />		
-		</jfd:container>
-		
-		<jfd:container id="addressFields" alignment="expand_top" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.crm.resources.formelements#Contact.Tab.Address" >
-			<jfd:field id="AddressSource" alignment="expand_top" editorType="comboBox" actionListener="RefreshAdressInfo" />
-			<jfd:button id="refreshButton" alignment="expand_expand" sameLine="true" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RefreshButton" actionListener="RefreshAdressInfo" />
-			<jfd:field id="index"  readOnly="true" alignment="expand_expand" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.IndexLabel" />
-			<jfd:field id="street" sameLine="true" readOnly="true" alignment="expand_expand" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.StreetLabel" />
-			<jfd:field id="country" readOnly="true" alignment="expand_expand" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.CountryLabel" />
-			<jfd:field id="house" sameLine="true" readOnly="true" alignment="expand_expand" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.HouseLabel" />
-			<jfd:field id="region" readOnly="true" alignment="expand_expand" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RegionLabel" />
-			<jfd:field id="building" sameLine="true" readOnly="true" alignment="expand_expand" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.BuildingLabel" />			
-			<jfd:field id="district" readOnly="true" alignment="expand_expand" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.DistrictLabel" />
-			<jfd:field id="room" sameLine="true" readOnly="true" alignment="expand_expand" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RoomLabel" />			
-			<jfd:field id="place" readOnly="true" alignment="expand_expand" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.PlaceLabel" />
-			<jfd:field id="fullAdress" sameLine="true" readOnly="true" alignment="expand_expand" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.FullAdressLabel" />
-		</jfd:container>
-		
-		<jfd:container id="contactInfoFields" alignment="expand_top" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.crm.resources.formelements#Contact.Tab.Contact" >
-		 	<jfd:container id="contPhone" layout="jfd:box" alignment="expand_expand" label="resource://com.mg.merp.crm.resources.formelements#Relation.Phone">						
-	 			<jfd:maintenanceTable id="phone" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" >		
-				</jfd:maintenanceTable>	
-			</jfd:container>							
-		 	<jfd:container id="contEmail" layout="jfd:box" alignment="expand_expand"  label="resource://com.mg.merp.crm.resources.formelements#Relation.Email">						
-				<jfd:maintenanceTable id="email" scroll="true" alignment="expand_expand" autoResize="subsequent_columns">		
-				</jfd:maintenanceTable>	 
-			</jfd:container> 		
-		</jfd:container>
-		<jfd:maintenanceTable id="original" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.crm.resources.formelements#Contact.Tab.Original">
-		</jfd:maintenanceTable>		
-		<jfd:maintenanceTable id="operation" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.crm.resources.formelements#Contact.Tab.Operation">
-		</jfd:maintenanceTable>				
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" alignment="expand_top" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.crm.resources.formelements#Contact.Tab.Total">
+      <jfd:field id="Person"/>
+      <jfd:field id="PersonTitle" sameLine="true"/>
+      <jfd:field id="Contractor"/>
+      <jfd:field id="Priority"/>
+      <jfd:field id="IsDefault" sameLine="true"/>
+      <jfd:field id="ThePosition"/>
+      <jfd:field id="IsRetired" sameLine="true"/>
+      <jfd:field id="NickName" longField="false"/>
+      <jfd:field id="Responsible"/>
+      <jfd:field id="Curator" sameLine="true"/>
+      <jfd:field id="Comments"/>
+    </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:container id="addressFields" alignment="expand_top" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.crm.resources.formelements#Contact.Tab.Address">
+      <jfd:field id="AddressSource" alignment="expand_top" editorType="comboBox"
+                 actionListener="RefreshAdressInfo"/>
+      <jfd:button id="refreshButton" alignment="expand_expand" sameLine="true"
+                  text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RefreshButton"
+                  actionListener="RefreshAdressInfo"/>
+      <jfd:field id="index" readOnly="true" alignment="expand_expand"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.IndexLabel"/>
+      <jfd:field id="street" sameLine="true" readOnly="true" alignment="expand_expand"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.StreetLabel"/>
+      <jfd:field id="country" readOnly="true" alignment="expand_expand"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.CountryLabel"/>
+      <jfd:field id="house" sameLine="true" readOnly="true" alignment="expand_expand"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.HouseLabel"/>
+      <jfd:field id="region" readOnly="true" alignment="expand_expand"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RegionLabel"/>
+      <jfd:field id="building" sameLine="true" readOnly="true" alignment="expand_expand"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.BuildingLabel"/>
+      <jfd:field id="district" readOnly="true" alignment="expand_expand"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.DistrictLabel"/>
+      <jfd:field id="room" sameLine="true" readOnly="true" alignment="expand_expand"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RoomLabel"/>
+      <jfd:field id="place" readOnly="true" alignment="expand_expand"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.PlaceLabel"/>
+      <jfd:field id="fullAdress" sameLine="true" readOnly="true" alignment="expand_expand"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.FullAdressLabel"/>
+    </jfd:container>
+
+    <jfd:container id="contactInfoFields" alignment="expand_top" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.crm.resources.formelements#Contact.Tab.Contact">
+      <jfd:container id="contPhone" layout="jfd:box" alignment="expand_expand"
+                     label="resource://com.mg.merp.crm.resources.formelements#Relation.Phone">
+        <jfd:maintenanceTable id="phone" scroll="true" alignment="expand_expand"
+                              autoResize="subsequent_columns">
+        </jfd:maintenanceTable>
+      </jfd:container>
+      <jfd:container id="contEmail" layout="jfd:box" alignment="expand_expand"
+                     label="resource://com.mg.merp.crm.resources.formelements#Relation.Email">
+        <jfd:maintenanceTable id="email" scroll="true" alignment="expand_expand"
+                              autoResize="subsequent_columns">
+        </jfd:maintenanceTable>
+      </jfd:container>
+    </jfd:container>
+    <jfd:maintenanceTable id="original" scroll="true" alignment="expand_expand"
+                          autoResize="subsequent_columns"
+                          tabTitle="resource://com.mg.merp.crm.resources.formelements#Contact.Tab.Original">
+    </jfd:maintenanceTable>
+    <jfd:maintenanceTable id="operation" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.crm.resources.formelements#Contact.Tab.Operation">
+    </jfd:maintenanceTable>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

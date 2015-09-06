@@ -13,15 +13,20 @@
 
 <!-- $Id: OverestimationDlg.mfd.xml,v 1.1 2009/02/11 14:40:08 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.reference.support.ui.OverestimationDlg" orientation="ver" verticalGap="5" title="resource://com.mg.merp.reference.resources.formelements#OverestimationDlg.Title">
-	
-	<jfd:container id="mainBox" layout="jfd:box" columns="2" alignment="expand_expand">
-		<jfd:border style="bevel" type="raised" />
-		<jfd:dateField id="actualDate" alignment="expand_expand" label="resource://com.mg.merp.reference.resources.formelements#OverestimationDlg.ActualDate" />
-		<jfd:field id="percent" alignment="expand_expand" />	
-		<jfd:integerField id="precision" alignment="expand_expand" label="resource://com.mg.merp.reference.resources.formelements#OverestimationDlg.Precision" />
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.reference.support.ui.OverestimationDlg" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.reference.resources.formelements#OverestimationDlg.Title">
+
+  <jfd:container id="mainBox" layout="jfd:box" columns="2" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:dateField id="actualDate" alignment="expand_expand"
+                   label="resource://com.mg.merp.reference.resources.formelements#OverestimationDlg.ActualDate"/>
+    <jfd:field id="percent" alignment="expand_expand"/>
+    <jfd:integerField id="precision" alignment="expand_expand"
+                      label="resource://com.mg.merp.reference.resources.formelements#OverestimationDlg.Precision"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
 
 </jfd:form>

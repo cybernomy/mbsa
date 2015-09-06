@@ -13,14 +13,18 @@
 
 <!-- $Id: WarehouseTypeSearchForm.mfd.xml,v 1.2 2009/02/09 07:21:07 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.warehouse.support.ui.WarehouseTypeSearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.warehouse.resources.formelements#WarehouseType.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.warehouse.support.ui.WarehouseTypeSearchForm" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.warehouse.resources.formelements#WarehouseType.FormMt.Title">
 
-	<jfd:toolBar id="toolBar" alignment="expand_top">
-		<jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton" actionListener="Choose" />
-	</jfd:toolBar>
+  <jfd:toolBar id="toolBar" alignment="expand_top">
+    <jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton"
+                actionListener="Choose"/>
+  </jfd:toolBar>
 
-	<jfd:table id="table" alignment="expand_expand" scroll="true">
-	</jfd:table>
+  <jfd:table id="table" alignment="expand_expand" scroll="true">
+  </jfd:table>
 
 </jfd:form>
 

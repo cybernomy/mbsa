@@ -18,40 +18,40 @@ import java.util.Map;
 
 /**
  * Репозитарий хранения пользовательских полей
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: EntityCustomFieldsStorage.java,v 1.1 2007/01/25 15:17:13 safonov Exp $
  */
 public interface EntityCustomFieldsStorage {
 
-	/**
-	 * получить значение
-	 * 
-	 * @param name	имя атрибута
-	 * @return	значение
-	 */
-	Object getValue(String name);
-	
-	/**
-	 * установить значение
-	 * 
-	 * @param name	имя атрибута
-	 * @param value	значение
-	 */
-	void setValue(String name, Object value);
-	
-	/**
-	 * получить значения всех атрибутов
-	 * 
-	 * @return	значения
-	 */
-	Map<String, Object> getValues();
-	
-	/**
-	 * установить значения
-	 * 
-	 * @param values	значения
-	 */
-	void setValues(Map<String, Object> values);
-	
+  /**
+   * получить значение
+   *
+   * @param name имя атрибута
+   * @return значение
+   */
+  Object getValue(String name);
+
+  /**
+   * установить значение
+   *
+   * @param name  имя атрибута
+   * @param value значение
+   */
+  void setValue(String name, Object value);
+
+  /**
+   * получить значения всех атрибутов
+   *
+   * @return значения
+   */
+  Map<String, Object> getValues();
+
+  /**
+   * установить значения
+   *
+   * @param values значения
+   */
+  void setValues(Map<String, Object> values);
+
 }

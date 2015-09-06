@@ -13,45 +13,58 @@
 
 <!-- $Id: TariffingMt.mfd.xml,v 1.6 2007/07/18 11:12:13 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.personnelref.support.ui.TariffingMt" title="resource://com.mg.merp.personnelref.resources.formelements#Tariffing.FormMt.Title" helpTopic="personnelref#tariff_html">
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.personnelref.support.ui.TariffingMt"
+          title="resource://com.mg.merp.personnelref.resources.formelements#Tariffing.FormMt.Title"
+          helpTopic="personnelref#tariff_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
-		<jfd:border style="bevel" type="raised" />			
- 		<jfd:field id="Category" />
-		<jfd:field id="BeginDate" />
- 		<jfd:field id="EndDate" />
-		<jfd:container id="analitFields" layout="jfd:box" columns="1" label="resource://com.mg.merp.personnelref.resources.formelements#FeeRef.Analit">
-			<jfd:field id="CostsAnl1" showLabel="false" />
-			<jfd:field id="CostsAnl2" showLabel="false" />
-			<jfd:field id="CostsAnl3" showLabel="false" />
-			<jfd:field id="CostsAnl4" showLabel="false" />
-			<jfd:field id="CostsAnl5" showLabel="false" />																
-		</jfd:container>	
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />			
-	</jfd:container>
-	<jfd:container id="addFields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="rateFields" layout="jfd:box" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Rate.Tab.Total">
-			<jfd:field id="RateOfSalary" />			
-		</jfd:container>
-		<jfd:container id="tariffFields" layout="jfd:box" alignment="expand_top" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Tarif.Tab.Total">
-	 		<jfd:field id="TariffScaleCode" alignment="expand_expand" />
-			<jfd:button id="clearTariffScale" alignment="right_expand" icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ClearTariffScale" />
-			<jfd:button id="chooseTariffScale" alignment="right_expand" text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseTariffScale" />
-			<jfd:field id="TariffClass" alignment="expand_expand" />
- 		</jfd:container>
-		<jfd:container id="riseFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Rise.Tab.Total">
-			<jfd:field id="RiseValue" />	
-			<jfd:field id="UseRiseReference" />	
-			<jfd:field id="Rise" readOnly="true" />							
-			<jfd:field id="RiseScale" />	
-		</jfd:container>	
-		<jfd:container id="minFields" layout="jfd:box" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Min.Tab.Total">
-			<jfd:field id="MinSalaryNumber" />				
-		</jfd:container>					
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Category"/>
+    <jfd:field id="BeginDate"/>
+    <jfd:field id="EndDate"/>
+    <jfd:container id="analitFields" layout="jfd:box" columns="1"
+                   label="resource://com.mg.merp.personnelref.resources.formelements#FeeRef.Analit">
+      <jfd:field id="CostsAnl1" showLabel="false"/>
+      <jfd:field id="CostsAnl2" showLabel="false"/>
+      <jfd:field id="CostsAnl3" showLabel="false"/>
+      <jfd:field id="CostsAnl4" showLabel="false"/>
+      <jfd:field id="CostsAnl5" showLabel="false"/>
+    </jfd:container>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+  <jfd:container id="addFields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="rateFields" layout="jfd:box"
+                   tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Rate.Tab.Total">
+      <jfd:field id="RateOfSalary"/>
+    </jfd:container>
+    <jfd:container id="tariffFields" layout="jfd:box" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Tarif.Tab.Total">
+      <jfd:field id="TariffScaleCode" alignment="expand_expand"/>
+      <jfd:button id="clearTariffScale" alignment="right_expand"
+                  icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0"
+                  maximumSize="22,0" preferredSize="22,0" actionListener="ClearTariffScale"/>
+      <jfd:button id="chooseTariffScale" alignment="right_expand"
+                  text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points"
+                  minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+                  actionListener="ChooseTariffScale"/>
+      <jfd:field id="TariffClass" alignment="expand_expand"/>
+    </jfd:container>
+    <jfd:container id="riseFields" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Rise.Tab.Total">
+      <jfd:field id="RiseValue"/>
+      <jfd:field id="UseRiseReference"/>
+      <jfd:field id="Rise" readOnly="true"/>
+      <jfd:field id="RiseScale"/>
+    </jfd:container>
+    <jfd:container id="minFields" layout="jfd:box"
+                   tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Min.Tab.Total">
+      <jfd:field id="MinSalaryNumber"/>
+    </jfd:container>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

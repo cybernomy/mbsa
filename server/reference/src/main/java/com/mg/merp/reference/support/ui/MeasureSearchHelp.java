@@ -22,11 +22,11 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class MeasureSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {		
-		return "merp/reference/Measure";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/reference/Measure";
+  }
 }

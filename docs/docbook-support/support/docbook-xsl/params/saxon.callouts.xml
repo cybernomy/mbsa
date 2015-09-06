@@ -1,23 +1,29 @@
 <refentry id="saxon.callouts">
-<refmeta>
-<refentrytitle>saxon.callouts</refentrytitle>
-<refmiscinfo role="type">boolean</refmiscinfo>
-</refmeta>
-<refnamediv>
-<refname>saxon.callouts</refname>
-<refpurpose>Enable the callout extension</refpurpose>
-</refnamediv>
+  <refmeta>
+    <refentrytitle>saxon.callouts</refentrytitle>
+    <refmiscinfo role="type">boolean</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>saxon.callouts</refname>
+    <refpurpose>Enable the callout extension</refpurpose>
+  </refnamediv>
 
-<refsynopsisdiv>
-<src:fragment id='saxon.callouts.frag'><xsl:param name="saxon.callouts" select="'1'"/></src:fragment>
-</refsynopsisdiv>
+  <refsynopsisdiv>
+    <src:fragment id='saxon.callouts.frag'>
+      <xsl:param name="saxon.callouts" select="'1'"/>
+    </src:fragment>
+  </refsynopsisdiv>
 
-<refsect1><title>Description</title>
+  <refsect1>
+    <title>Description</title>
 
-<para>The callouts extension processes <sgmltag>areaset</sgmltag>
-elements in <sgmltag>ProgramListingCO</sgmltag> and other text-based
-callout elements.
-</para>
+    <para>The callouts extension processes
+      <sgmltag>areaset</sgmltag>
+      elements in
+      <sgmltag>ProgramListingCO</sgmltag>
+      and other text-based
+      callout elements.
+    </para>
 
-</refsect1>
+  </refsect1>
 </refentry>

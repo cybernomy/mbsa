@@ -19,22 +19,22 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Расчет суммы
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: CalcSumKind.java,v 1.2 2007/03/23 15:20:52 sharapov Exp $
  */
-@DataItemName ("Contract.CalcSumKind") //$NON-NLS-1$
+@DataItemName("Contract.CalcSumKind") //$NON-NLS-1$
 public enum CalcSumKind {
-	/**
-	 * Не расчитывается
-	 */
-	@EnumConstantText ("resource://com.mg.merp.contract.resources.dataitemlabels#CalcSumKind.Manual") //$NON-NLS-1$
-	MANUAL,
+  /**
+   * Не расчитывается
+   */
+  @EnumConstantText("resource://com.mg.merp.contract.resources.dataitemlabels#CalcSumKind.Manual") //$NON-NLS-1$
+      MANUAL,
 
-	/**
-	 * Автоматически (по этапам/пунктам)
-	 */
-	@EnumConstantText ("resource://com.mg.merp.contract.resources.dataitemlabels#CalcSumKind.PhasesAggregate") //$NON-NLS-1$
-	PHASESAGGREGATE
+  /**
+   * Автоматически (по этапам/пунктам)
+   */
+  @EnumConstantText("resource://com.mg.merp.contract.resources.dataitemlabels#CalcSumKind.PhasesAggregate") //$NON-NLS-1$
+      PHASESAGGREGATE
 }

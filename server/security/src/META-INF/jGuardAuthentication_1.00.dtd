@@ -26,22 +26,22 @@ http://sourceforge.net/projects/jguard/
 
 -->
 
-<!-- jGuardAuthentication_1.00.dtd-->
-<!ELEMENT configuration (authentication)>
-<!ELEMENT authentication (scope,debug,includeOldConfig,includeConfigFromJavaParam,includePolicyFromJavaParam,salt?,digestAlgorithm?,authenticationManager,authenticationManagerOptions,loginModules)>
-<!ELEMENT includeOldConfig (#PCDATA)>
-<!ELEMENT includeConfigFromJavaParam (#PCDATA)>
-<!ELEMENT includePolicyFromJavaParam (#PCDATA)>
-<!ELEMENT scope (#PCDATA)>
-<!ELEMENT debug (#PCDATA)>
-<!ELEMENT loginModules (loginModule+)>
-<!ELEMENT loginModule (name,flag,loginModuleOptions*)>
-<!ELEMENT name (#PCDATA)>
-<!ELEMENT flag (#PCDATA)>
-<!ELEMENT loginModuleOptions (option+)>
-<!ELEMENT option (name,value)>
-<!ELEMENT value (#PCDATA)>
-<!ELEMENT salt (#PCDATA)>
-<!ELEMENT digestAlgorithm (#PCDATA)>
-<!ELEMENT authenticationManager (#PCDATA)>
-<!ELEMENT authenticationManagerOptions (option+)>
+    <!-- jGuardAuthentication_1.00.dtd-->
+    <!ELEMENT configuration (authentication)>
+    <!ELEMENT authentication (scope,debug,includeOldConfig,includeConfigFromJavaParam,includePolicyFromJavaParam,salt?,digestAlgorithm?,authenticationManager,authenticationManagerOptions,loginModules)>
+    <!ELEMENT includeOldConfig (#PCDATA)>
+    <!ELEMENT includeConfigFromJavaParam (#PCDATA)>
+    <!ELEMENT includePolicyFromJavaParam (#PCDATA)>
+    <!ELEMENT scope (#PCDATA)>
+    <!ELEMENT debug (#PCDATA)>
+    <!ELEMENT loginModules (loginModule+)>
+    <!ELEMENT loginModule (name,flag,loginModuleOptions*)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT flag (#PCDATA)>
+    <!ELEMENT loginModuleOptions (option+)>
+    <!ELEMENT option (name,value)>
+    <!ELEMENT value (#PCDATA)>
+    <!ELEMENT salt (#PCDATA)>
+    <!ELEMENT digestAlgorithm (#PCDATA)>
+    <!ELEMENT authenticationManager (#PCDATA)>
+    <!ELEMENT authenticationManagerOptions (option+)>

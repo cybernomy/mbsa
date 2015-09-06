@@ -17,12 +17,10 @@ package com.mg.merp.crm;
 import com.mg.merp.crm.model.OfferKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: OfferKindServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface OfferKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<OfferKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<OfferKind, Integer> {
 
 }

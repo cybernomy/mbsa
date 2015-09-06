@@ -7,33 +7,50 @@
 ]> -->
 <chapter id="004bpm">
   <title>Ресурсы</title>
-  
-     <para>Для выполнения действий в рамках бизнес-процесса 
-     требуется определить ресурсы, которые будут выполнять эти действия. </para>
-      
-     <para>Вход в раздел &quot;Ресурсы&quot; осуществляется через 
-	главное меню системы: <menuchoice>
-	   <guimenu>&cont_centr;</guimenu>
-	   <guisubmenu>&bpm;</guisubmenu>
-	   <guimenuitem>Ресурсы</guimenuitem></menuchoice>.</para>
-     
-     <screenshot><mediaobject><imageobject>
-     <imagedata fileref="images/resource.gif"/></imageobject>
-     </mediaobject> </screenshot>
-     
-     <para><guibutton>Код</guibutton>. Уникальный код ресурса в системе &merp;.</para>
-     
-     <para><guibutton>Наименование</guibutton>. Наименование ресурса.</para>
-     
-     <para><guibutton>Пользователь</guibutton>. Пользователь системы, назначенный для выполнений 
-     действий от имени данного ресурса. Если значение в этом поле не указано, действие сможет выполнить 
-     любой пользователь, принадлежащий у Группам, указанным в следующем поле.</para>
-     
-     <para><guibutton>Группы</guibutton>. Группа или несколько групп пользователей системы, 
-     назначенных для выполнений действий от имени данного ресурса. Если в предыдущем поле указан 
-     <guibutton>Пользователь</guibutton>, значение поля <guibutton>Группы</guibutton> 
-     игнорируется. </para>
-     
-     <para>См. также: <link linkend="005bpm">Назначения</link></para>
-    
-  </chapter>
+
+  <para>Для выполнения действий в рамках бизнес-процесса
+    требуется определить ресурсы, которые будут выполнять эти действия.
+  </para>
+
+  <para>Вход в раздел &quot;Ресурсы&quot; осуществляется через
+    главное меню системы:
+    <menuchoice>
+      <guimenu>&cont_centr;</guimenu>
+      <guisubmenu>&bpm;</guisubmenu>
+      <guimenuitem>Ресурсы</guimenuitem>
+    </menuchoice>
+    .
+  </para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/resource.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para><guibutton>Код</guibutton>. Уникальный код ресурса в системе &merp;.
+  </para>
+
+  <para><guibutton>Наименование</guibutton>. Наименование ресурса.
+  </para>
+
+  <para><guibutton>Пользователь</guibutton>. Пользователь системы, назначенный для выполнений
+    действий от имени данного ресурса. Если значение в этом поле не указано, действие сможет
+    выполнить
+    любой пользователь, принадлежащий у Группам, указанным в следующем поле.
+  </para>
+
+  <para><guibutton>Группы</guibutton>. Группа или несколько групп пользователей системы,
+    назначенных для выполнений действий от имени данного ресурса. Если в предыдущем поле указан
+    <guibutton>Пользователь</guibutton>, значение поля
+    <guibutton>Группы</guibutton>
+    игнорируется.
+  </para>
+
+  <para>См. также:
+    <link linkend="005bpm">Назначения</link>
+  </para>
+
+</chapter>

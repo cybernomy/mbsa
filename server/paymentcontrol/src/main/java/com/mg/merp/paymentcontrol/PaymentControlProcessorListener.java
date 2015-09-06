@@ -18,14 +18,14 @@ import java.util.EventListener;
 
 /**
  * Слушатель процессора модуля "Платежный календарь"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: PaymentControlProcessorListener.java,v 1.1 2007/05/14 04:59:59 sharapov Exp $
  */
 public interface PaymentControlProcessorListener extends EventListener {
 
-	public void completed();
+  public void completed();
 
-	public void canceled();
+  public void canceled();
 
 }

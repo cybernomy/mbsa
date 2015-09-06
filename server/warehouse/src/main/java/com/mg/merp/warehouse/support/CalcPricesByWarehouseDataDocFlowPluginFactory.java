@@ -23,69 +23,70 @@ import com.mg.merp.warehouse.WarehouseProcessorServiceLocal;
 
 /**
  * Реализация фабрики реализаций этапа ДО "Рассчитать цены в документе на основании данных склада"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: CalcPricesByWarehouseDataDocFlowPluginFactory.java,v 1.2 2007/03/29 13:42:10 poroxnenko Exp $
+ * @version $Id: CalcPricesByWarehouseDataDocFlowPluginFactory.java,v 1.2 2007/03/29 13:42:10
+ *          poroxnenko Exp $
  */
 public class CalcPricesByWarehouseDataDocFlowPluginFactory extends
-		AbstractDocFlowPluginFactory {
-	public final static int FACTORY_IDENTIFIER = 30;
+    AbstractDocFlowPluginFactory {
+  public final static int FACTORY_IDENTIFIER = 30;
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
-	 */
-	@Override
-	protected DocFlowPlugin doCreatePlugin() {
-		return new AbstractDocFlowPlugin() {
+  /*
+   * (non-Javadoc)
+   *
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
+   */
+  @Override
+  protected DocFlowPlugin doCreatePlugin() {
+    return new AbstractDocFlowPlugin() {
 
-			@Override
-			protected void doExecute() throws Exception {
-				WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
-						.getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
-				
-				service.processCalcPricesByWarehouseDataTransaction(getParams());
-				complete();
-			}
+      @Override
+      protected void doExecute() throws Exception {
+        WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
+            .getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
 
-			@Override
-			protected String doGetDocActionResultTextRepresentation(
-					DocHeadState docHeadState) {
-				// TODO: спросить консультантов
-				return StringUtils.BLANK_STRING;
-			}
+        service.processCalcPricesByWarehouseDataTransaction(getParams());
+        complete();
+      }
 
-			@Override
-			protected void doRoolback() throws Exception {
-				WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
-						.getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
-		
-				service.rollbackCalcPricesByWarehouseDataTransaction(getParams());
-				complete();
-			}
+      @Override
+      protected String doGetDocActionResultTextRepresentation(
+          DocHeadState docHeadState) {
+        // TODO: спросить консультантов
+        return StringUtils.BLANK_STRING;
+      }
 
-		};
-	}
+      @Override
+      protected void doRoolback() throws Exception {
+        WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
+            .getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
-	 */
-	@Override
-	public int getIdentifier() {
-		return FACTORY_IDENTIFIER;
-	}
+        service.rollbackCalcPricesByWarehouseDataTransaction(getParams());
+        complete();
+      }
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
-	 */
-	@Override
-	public String getName() {
-		return "Price calculation by warehouse data transaction";
-	}
+    };
+  }
+
+  /*
+   * (non-Javadoc)
+   *
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
+   */
+  @Override
+  public int getIdentifier() {
+    return FACTORY_IDENTIFIER;
+  }
+
+  /*
+   * (non-Javadoc)
+   *
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
+   */
+  @Override
+  public String getName() {
+    return "Price calculation by warehouse data transaction";
+  }
 
 }

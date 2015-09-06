@@ -17,12 +17,10 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.InventoryActCommission;
 
 /**
- * 
  * @author leonova
  * @version $Id: InventoryActCommissionServiceLocal.java,v 1.1 2006/03/14 11:49:53 safonov Exp $
  */
 public interface InventoryActCommissionServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<InventoryActCommission, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<InventoryActCommission, Integer> {
 
 }

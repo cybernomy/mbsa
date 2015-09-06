@@ -15,19 +15,19 @@
 
 package com.mg.merp.reference.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.reference.DistrictServiceLocal;
 import com.mg.merp.reference.model.District;
 
+import javax.ejb.Stateless;
+
 /**
  * Бизнес-компонент "Районы"
- * 
+ *
  * @author leonova
  * @version $Id: DistrictServiceBean.java,v 1.3 2006/08/03 11:17:05 leonova Exp $
  */
-@Stateless(name="merp/reference/DistrictService")
+@Stateless(name = "merp/reference/DistrictService")
 public class DistrictServiceBean extends AbstractPOJODataBusinessObjectServiceBean<District, Integer> implements DistrictServiceLocal {
 
 }

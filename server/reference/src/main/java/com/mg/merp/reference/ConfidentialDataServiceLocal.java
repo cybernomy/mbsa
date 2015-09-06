@@ -17,16 +17,14 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.ConfidentialData;
 
 /**
- * 
  * @author leonova
  * @version $Id: ConfidentialDataServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface ConfidentialDataServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<ConfidentialData, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<ConfidentialData, Integer> {
 
-   public byte[] getConfData( int id ) throws com.mg.framework.api.ApplicationException;
+  public byte[] getConfData(int id) throws com.mg.framework.api.ApplicationException;
 
-   public void setConfData( byte[] confData,int id ) throws com.mg.framework.api.ApplicationException;
+  public void setConfData(byte[] confData, int id) throws com.mg.framework.api.ApplicationException;
 
 }

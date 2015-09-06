@@ -9,11 +9,13 @@
 ]> -->
 <chapter id="object">
   <title>Предмет контракта</title>
-    
-    <para>На этой закладке может быть записан кратко или полностью текст контракта и примечание к нему.</para>
-    
-   <!-- <figure>
-      <mediaobject><imageobject><imagedata fileref="images/object.gif"/></imageobject></mediaobject>
-    </figure> --> 
-  
+
+  <para>На этой закладке может быть записан кратко или полностью текст контракта и примечание к
+    нему.
+  </para>
+
+  <!-- <figure>
+     <mediaobject><imageobject><imagedata fileref="images/object.gif"/></imageobject></mediaobject>
+   </figure> -->
+
 </chapter>

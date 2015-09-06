@@ -18,46 +18,46 @@ import com.mg.framework.api.ui.widget.Table;
 
 /**
  * Данные операции DnD с элементов "таблица"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: DnDTableData.java,v 1.1 2007/08/16 13:48:06 safonov Exp $
  */
 public class DnDTableData extends DnDData {
-	private int[] selectedColumns;
-	private int[] selectedRows;
-	private Table table;
+  private int[] selectedColumns;
+  private int[] selectedRows;
+  private Table table;
 
-	public DnDTableData(Table table, int[] selectedColumns, int[] selectedRows) {
-		this.selectedColumns = selectedColumns;
-		this.selectedRows = selectedRows;
-		this.table = table;
-	}
-	
-	/**
-	 * получить отмеченные столбцы
-	 * 
-	 * @return	список отмеченных столбцов
-	 */
-	public int[] getSelectedColumns() {
-		return selectedColumns;
-	}
+  public DnDTableData(Table table, int[] selectedColumns, int[] selectedRows) {
+    this.selectedColumns = selectedColumns;
+    this.selectedRows = selectedRows;
+    this.table = table;
+  }
 
-	/**
-	 * получить список отмеченных рядов
-	 * 
-	 * @return	отмеченные ряды
-	 */
-	public int[] getSelectedRows() {
-		return selectedRows;
-	}
+  /**
+   * получить отмеченные столбцы
+   *
+   * @return список отмеченных столбцов
+   */
+  public int[] getSelectedColumns() {
+    return selectedColumns;
+  }
 
-	/**
-	 * элемент таблица
-	 * 
-	 * @return	таблица
-	 */
-	public Table getTable() {
-		return table;
-	}
+  /**
+   * получить список отмеченных рядов
+   *
+   * @return отмеченные ряды
+   */
+  public int[] getSelectedRows() {
+    return selectedRows;
+  }
+
+  /**
+   * элемент таблица
+   *
+   * @return таблица
+   */
+  public Table getTable() {
+    return table;
+  }
 
 }

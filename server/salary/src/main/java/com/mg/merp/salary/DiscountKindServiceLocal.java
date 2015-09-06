@@ -17,12 +17,10 @@ package com.mg.merp.salary;
 import com.mg.merp.salary.model.DiscountKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: DiscountKindServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface DiscountKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<DiscountKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<DiscountKind, Integer> {
 
 }

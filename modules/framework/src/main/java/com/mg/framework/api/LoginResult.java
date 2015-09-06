@@ -18,11 +18,11 @@ import java.io.Serializable;
 
 /**
  * @author Oleg V. Safonov
- *
  */
 public class LoginResult implements Serializable {
-	public String locale;
-	public LoginResult(String locale) {
-		this.locale = locale;
-	}
+  public String locale;
+
+  public LoginResult(String locale) {
+    this.locale = locale;
+  }
 }

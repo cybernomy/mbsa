@@ -19,36 +19,34 @@ import com.mg.merp.document.model.DocTypeDocSectionLink;
 
 /**
  * Бизнес-компонент "Тип документа"
- * 
+ *
  * @author leonova
  * @version $Id: DocTypeServiceLocal.java,v 1.2 2006/08/31 09:09:30 safonov Exp $
  */
 public interface DocTypeServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<DocType, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<DocType, Integer> {
 
-	/**
-	 * загрузка связей типа документа с различными видами документов
-	 * 
-	 * @see com.mg.merp.document.model.DocumentKind
-	 * 
-	 * @param docType	тип документа
-	 * @return	двумерный массив связей с видами документов, первое измерение - виды документов
-	 */
-	DocTypeDocSectionLink[][] loadDocSectionLinks(DocType docType);
+  /**
+   * загрузка связей типа документа с различными видами документов
+   *
+   * @param docType тип документа
+   * @return двумерный массив связей с видами документов, первое измерение - виды документов
+   * @see com.mg.merp.document.model.DocumentKind
+   */
+  DocTypeDocSectionLink[][] loadDocSectionLinks(DocType docType);
 
-	/**
-	 * удаление связей типа документа с видами документов
-	 * 
-	 * @param links	связи типа документа
-	 */
-	void removeDocSectionLinks(DocTypeDocSectionLink[] links);
-	
-	/**
-	 * создание связей типа документа с видами документов
-	 * 
-	 * @param links	links	связи типа документа
-	 */
-	void createDocSectionLinks(DocTypeDocSectionLink[] links);
+  /**
+   * удаление связей типа документа с видами документов
+   *
+   * @param links связи типа документа
+   */
+  void removeDocSectionLinks(DocTypeDocSectionLink[] links);
+
+  /**
+   * создание связей типа документа с видами документов
+   *
+   * @param links links	связи типа документа
+   */
+  void createDocSectionLinks(DocTypeDocSectionLink[] links);
 
 }

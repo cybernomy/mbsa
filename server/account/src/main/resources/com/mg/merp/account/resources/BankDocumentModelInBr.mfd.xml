@@ -13,17 +13,20 @@
 
 <!-- $Id: BankDocumentModelInBr.mfd.xml,v 1.5 2006/11/30 11:54:59 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.account.support.ui.BankDocumentModelInBr" title="resource://com.mg.merp.account.resources.formelements#BankDocumentModelIn.FormBr.Title" helpTopic="account#bankmodelin_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver"
+          controller="com.mg.merp.account.support.ui.BankDocumentModelInBr"
+          title="resource://com.mg.merp.account.resources.formelements#BankDocumentModelIn.FormBr.Title"
+          helpTopic="account#bankmodelin_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml"/>
 
-	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
-		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true" >
-		</jfd:maintenanceTree>
-		<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
-		</jfd:maintenanceTable>
-	</jfd:container>
+  <jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+    <jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true">
+    </jfd:maintenanceTree>
+    <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+    </jfd:maintenanceTable>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml"/>
 
 </jfd:form>

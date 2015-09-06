@@ -15,47 +15,47 @@
 package com.mg.framework.api;
 
 /**
- * A Client is a company or a legal entity. You cannot share data between Clients.
- * Tenant is a synonym for Client.
- * 
+ * A Client is a company or a legal entity. You cannot share data between Clients. Tenant is a
+ * synonym for Client.
+ *
  * @author Oleg V. Safonov
  * @version $Id: SystemTenant.java,v 1.2 2009/02/18 12:18:19 safonov Exp $
  */
 public interface SystemTenant {
 
-	/**
-	 * идентификатор манданта
-	 * 
-	 * @return	идентификатор
-	 */
-	int getIdentifier();
+  /**
+   * идентификатор манданта
+   *
+   * @return идентификатор
+   */
+  int getIdentifier();
 
-	/**
-	 * код манданта
-	 * 
-	 * @return	код
-	 */
-	String getCode();
-	
-	/**
-	 * имя манданта
-	 * 
-	 * @return	имя
-	 */
-	String getName();
-	
-	/**
-	 * описание манданта
-	 * 
-	 * @return	описание
-	 */
-	String getDescription();
-	
-	/**
-	 * основной язык манданта
-	 * 
-	 * @return	язык
-	 */
-	String getLanguage();
-	
+  /**
+   * код манданта
+   *
+   * @return код
+   */
+  String getCode();
+
+  /**
+   * имя манданта
+   *
+   * @return имя
+   */
+  String getName();
+
+  /**
+   * описание манданта
+   *
+   * @return описание
+   */
+  String getDescription();
+
+  /**
+   * основной язык манданта
+   *
+   * @return язык
+   */
+  String getLanguage();
+
 }

@@ -21,90 +21,95 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: InvMetal.java,v 1.5 2006/06/08 13:04:53 leonova Exp $
  */
 public class InvMetal extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.account.model.Metal MetalCode;
+  private com.mg.merp.account.model.Metal MetalCode;
 
-	private com.mg.merp.account.model.InvHead InvHead;
+  private com.mg.merp.account.model.InvHead InvHead;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.Double Mass;
+  private java.lang.Double Mass;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public InvMetal() {
-	}
+  /**
+   * default constructor
+   */
+  public InvMetal() {
+  }
 
-	/** constructor with id */
-	public InvMetal(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public InvMetal(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */	
-	public com.mg.merp.account.model.Metal getMetalCode() {
-		return this.MetalCode;
-	}
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public void setMetalCode(com.mg.merp.account.model.Metal Metal) {
-		this.MetalCode = Metal;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.account.model.Metal getMetalCode() {
+    return this.MetalCode;
+  }
 
-	/**
-	 * 
-	 */
+  public void setMetalCode(com.mg.merp.account.model.Metal Metal) {
+    this.MetalCode = Metal;
+  }
 
-	public com.mg.merp.account.model.InvHead getInvHead() {
-		return this.InvHead;
-	}
+  /**
+   *
+   */
 
-	public void setInvHead(com.mg.merp.account.model.InvHead AccInvhead) {
-		this.InvHead = AccInvhead;
-	}
+  public com.mg.merp.account.model.InvHead getInvHead() {
+    return this.InvHead;
+  }
 
-	/**
-	 * 
-	 */
+  public void setInvHead(com.mg.merp.account.model.InvHead AccInvhead) {
+    this.InvHead = AccInvhead;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.InvHead.Mass")
-	public java.lang.Double getMass() {
-		return this.Mass;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setMass(java.lang.Double Mass) {
-		this.Mass = Mass;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.InvHead.Mass")
+  public java.lang.Double getMass() {
+    return this.Mass;
+  }
+
+  public void setMass(java.lang.Double Mass) {
+    this.Mass = Mass;
+  }
 
 }

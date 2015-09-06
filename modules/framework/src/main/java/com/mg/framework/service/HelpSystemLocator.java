@@ -20,27 +20,26 @@ import com.mg.framework.utils.ServerUtils;
 
 /**
  * Локатор сервиса системы помощи
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: HelpSystemLocator.java,v 1.1 2006/11/11 10:34:32 safonov Exp $
  */
 public class HelpSystemLocator {
-    private static volatile HelpSystem instance = null;
-    
-    /**
-     * поиск сервиса
-     * 
-     * @return	сервис
-     * @throws ApplicationException	при возникновении любых ошибок
-     */
-    public static HelpSystem locate() throws ApplicationException {
-        if (instance == null)
-            try {
-                instance = (HelpSystem) ServerUtils.createMBeanProxy(HelpSystem.class, HelpSystem.SERVICE_NAME);
-            }
-            catch (Exception e) {
-                throw new ApplicationException(e);
-            }
-        return instance;
-    }
+  private static volatile HelpSystem instance = null;
+
+  /**
+   * поиск сервиса
+   *
+   * @return сервис
+   * @throws ApplicationException при возникновении любых ошибок
+   */
+  public static HelpSystem locate() throws ApplicationException {
+    if (instance == null)
+      try {
+        instance = (HelpSystem) ServerUtils.createMBeanProxy(HelpSystem.class, HelpSystem.SERVICE_NAME);
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 }

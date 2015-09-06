@@ -15,17 +15,17 @@
 
 package com.mg.merp.report.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.report.RptRightServiceLocal;
 import com.mg.merp.report.model.RptRight;
+
+import javax.ejb.Stateless;
 
 /**
  * @author Valentin A. Poroxnenko
  * @version $Id: RptRightServiceBean.java,v 1.1 2007/04/11 06:46:06 poroxnenko Exp $
  */
-@Stateless(name="merp/report/RptRightService")
+@Stateless(name = "merp/report/RptRightService")
 public class RptRightServiceBean extends AbstractPOJODataBusinessObjectServiceBean<RptRight, Integer> implements RptRightServiceLocal {
 
- }
+}

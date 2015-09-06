@@ -1,40 +1,41 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.finance.model.TurnFeature" table="FINTURNFEAT">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">FINTURNFEAT_ID_GEN</param>
       </generator>
     </id>
-    <many-to-one name="Account" class="com.mg.merp.finance.model.Account" insert="false" update="false" />
+    <many-to-one name="Account" class="com.mg.merp.finance.model.Account" insert="false"
+                 update="false"/>
     <many-to-one name="Feature" class="com.mg.merp.finance.model.Account">
-      <column name="FEAT_ID" not-null="false" />
+      <column name="FEAT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="TurnAccount" class="com.mg.merp.finance.model.TurnAccount">
-      <column name="FINTURNACC_ID" not-null="false" />
+      <column name="FINTURNACC_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="CurCode" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
-      <column name="CURCODE" length="5" not-null="false" />
+      <column name="CURCODE" length="5" not-null="false"/>
     </many-to-one>
     <many-to-one name="Period" class="com.mg.merp.finance.model.FinPeriod">
-      <column name="PERIOD_ID" not-null="false" />
+      <column name="PERIOD_ID" not-null="false"/>
     </many-to-one>
-    <property name="Analytics1" type="java.lang.Integer" insert="false" update="false" />
-    <property name="Analytics2" type="java.lang.Integer" insert="false" update="false" />
-    <property name="Analytics3" type="java.lang.Integer" insert="false" update="false" />
-    <property name="Analytics4" type="java.lang.Integer" insert="false" update="false" />
-    <property name="Analytics5" type="java.lang.Integer" insert="false" update="false" />
+    <property name="Analytics1" type="java.lang.Integer" insert="false" update="false"/>
+    <property name="Analytics2" type="java.lang.Integer" insert="false" update="false"/>
+    <property name="Analytics3" type="java.lang.Integer" insert="false" update="false"/>
+    <property name="Analytics4" type="java.lang.Integer" insert="false" update="false"/>
+    <property name="Analytics5" type="java.lang.Integer" insert="false" update="false"/>
     <property name="FeatureAnalytics1" type="java.lang.Integer">
       <column name="FANL1_ID" not-null="false" sql-type="INTEGER"/>
     </property>
@@ -51,29 +52,29 @@
       <column name="FANL5_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="RemnBegCur" type="java.math.BigDecimal">
-      <column name="REMNBEGCUR" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="REMNBEGCUR" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="RemnBegNat" type="java.math.BigDecimal">
-      <column name="REMNBEGNAT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="REMNBEGNAT" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="RemnBegCurPlan" type="java.math.BigDecimal">
-      <column name="REMNBEGCURPLAN" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="REMNBEGCURPLAN" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="RemnBegNatPlan" type="java.math.BigDecimal">
-      <column name="REMNBEGNATPLAN" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="REMNBEGNATPLAN" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
-    <property name="IncomeNat" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="IncomeCur" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="OutcomeNat" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="OutcomeCur" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="RemnEndNat" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="RemnEndCur" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="IncomeNatPlan" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="IncomeCurPlan" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="OutcomeNatPlan" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="OutcomeCurPlan" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="RemnEndNatPlan" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="RemnEndCurPlan" type="java.math.BigDecimal" insert="false" update="false" />
+    <property name="IncomeNat" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="IncomeCur" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="OutcomeNat" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="OutcomeCur" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="RemnEndNat" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="RemnEndCur" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="IncomeNatPlan" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="IncomeCurPlan" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="OutcomeNatPlan" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="OutcomeCurPlan" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="RemnEndNatPlan" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="RemnEndCurPlan" type="java.math.BigDecimal" insert="false" update="false"/>
     <!-- property name="RemnBegNatDiff" type="java.math.BigDecimal" insert="false" update="false" />
     <property name="RemnBegCurDiff" type="java.math.BigDecimal" insert="false" update="false" />
     <property name="IncomeNatDiff" type="java.math.BigDecimal" insert="false" update="false" />
@@ -84,18 +85,25 @@
     <property name="RemnEndCurDiff" type="java.math.BigDecimal" insert="false" update="false" /-->
     <loader query-ref="load-turnfeature"/>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
   <sql-query name="load-turnfeature">
-  	<return alias="tf" class="com.mg.merp.finance.model.TurnFeature" />
-  	select ftl.turn_id as {tf.Id}, ftl.acc_id as {tf.Account}, ftl.feat_id {tf.Feature}, ftl.client_id as {tf.SysClient}, ftl.curcode as {tf.CurCode}, ftl.period_id as {tf.Period}, ftl.finturnacc_id as {tf.TurnAccount},
-      ftl.anl1_id as {tf.Analytics1}, ftl.anl2_id as {tf.Analytics2}, ftl.anl3_id as {tf.Analytics3}, ftl.anl4_id as {tf.Analytics4}, ftl.anl5_id as {tf.Analytics5},
-      ftl.fanl1_id as {tf.FeatureAnalytics1}, ftl.fanl2_id as {tf.FeatureAnalytics2}, ftl.fanl3_id as {tf.FeatureAnalytics3}, ftl.fanl4_id as {tf.FeatureAnalytics4}, ftl.fanl5_id as {tf.FeatureAnalytics5},
-      ftl.remnbegcur as {tf.RemnBegCur}, ftl.remnbegnat as {tf.RemnBegNat}, ftl.remnbegcurplan as {tf.RemnBegCurPlan}, ftl.remnbegnatplan as {tf.RemnBegNatPlan},
-      ftl.incomenat as {tf.IncomeNat}, ftl.incomecur as {tf.IncomeCur}, ftl.outcomenat as {tf.OutcomeNat}, ftl.outcomecur as {tf.OutcomeCur},
-      ftl.remnendnat as {tf.RemnEndNat}, ftl.remnendcur as {tf.RemnEndCur},
-      ftl.incomenatplan as {tf.IncomeNatPlan}, ftl.incomecurplan as {tf.IncomeCurPlan},
-      ftl.outcomenatplan as {tf.OutcomeNatPlan}, ftl.outcomecurplan as {tf.OutcomeCurPlan},
-      ftl.remnendnatplan as {tf.RemnEndNatPlan}, ftl.remnendcurplan as {tf.RemnEndCurPlan}
+    <return alias="tf" class="com.mg.merp.finance.model.TurnFeature"/>
+    select ftl.turn_id as {tf.Id}, ftl.acc_id as {tf.Account}, ftl.feat_id {tf.Feature},
+    ftl.client_id as {tf.SysClient}, ftl.curcode as {tf.CurCode}, ftl.period_id as {tf.Period},
+    ftl.finturnacc_id as {tf.TurnAccount},
+    ftl.anl1_id as {tf.Analytics1}, ftl.anl2_id as {tf.Analytics2}, ftl.anl3_id as {tf.Analytics3},
+    ftl.anl4_id as {tf.Analytics4}, ftl.anl5_id as {tf.Analytics5},
+    ftl.fanl1_id as {tf.FeatureAnalytics1}, ftl.fanl2_id as {tf.FeatureAnalytics2}, ftl.fanl3_id as
+    {tf.FeatureAnalytics3}, ftl.fanl4_id as {tf.FeatureAnalytics4}, ftl.fanl5_id as
+    {tf.FeatureAnalytics5},
+    ftl.remnbegcur as {tf.RemnBegCur}, ftl.remnbegnat as {tf.RemnBegNat}, ftl.remnbegcurplan as
+    {tf.RemnBegCurPlan}, ftl.remnbegnatplan as {tf.RemnBegNatPlan},
+    ftl.incomenat as {tf.IncomeNat}, ftl.incomecur as {tf.IncomeCur}, ftl.outcomenat as
+    {tf.OutcomeNat}, ftl.outcomecur as {tf.OutcomeCur},
+    ftl.remnendnat as {tf.RemnEndNat}, ftl.remnendcur as {tf.RemnEndCur},
+    ftl.incomenatplan as {tf.IncomeNatPlan}, ftl.incomecurplan as {tf.IncomeCurPlan},
+    ftl.outcomenatplan as {tf.OutcomeNatPlan}, ftl.outcomecurplan as {tf.OutcomeCurPlan},
+    ftl.remnendnatplan as {tf.RemnEndNatPlan}, ftl.remnendcurplan as {tf.RemnEndCurPlan}
     from fin_turnfeat_load(?) ftl
   </sql-query>
 </hibernate-mapping>

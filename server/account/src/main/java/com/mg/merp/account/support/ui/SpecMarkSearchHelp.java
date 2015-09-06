@@ -22,8 +22,8 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class SpecMarkSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/account/SpecMark";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/account/SpecMark";
+  }
 }

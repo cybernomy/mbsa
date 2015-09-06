@@ -1,41 +1,48 @@
 <refentry id="glossary.collection">
-<refmeta>
-<refentrytitle>glossary.collection</refentrytitle>
-<refmiscinfo role="type">string</refmiscinfo>
-</refmeta>
-<refnamediv>
-<refname>glossary.collection</refname>
-<refpurpose>Name of the glossary collection file</refpurpose>
-</refnamediv>
+  <refmeta>
+    <refentrytitle>glossary.collection</refentrytitle>
+    <refmiscinfo role="type">string</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>glossary.collection</refname>
+    <refpurpose>Name of the glossary collection file</refpurpose>
+  </refnamediv>
 
-<refsynopsisdiv>
-<src:fragment id='glossary.collection.frag'>
-<xsl:param name="glossary.collection" select="''"/>
-</src:fragment>
-</refsynopsisdiv>
+  <refsynopsisdiv>
+    <src:fragment id='glossary.collection.frag'>
+      <xsl:param name="glossary.collection" select="''"/>
+    </src:fragment>
+  </refsynopsisdiv>
 
-<refsect1><title>Description</title>
+  <refsect1>
+    <title>Description</title>
 
-<para>Glossaries maintained independently across a set of documents
-are likely to become inconsistent unless considerable effort is
-expended to keep them in sync. It makes much more sense, usually, to
-store all of the glossary entries in a single place and simply
-<quote>extract</quote> the ones you need in each document.</para>
+    <para>Glossaries maintained independently across a set of documents
+      are likely to become inconsistent unless considerable effort is
+      expended to keep them in sync. It makes much more sense, usually, to
+      store all of the glossary entries in a single place and simply
+      <quote>extract</quote>
+      the ones you need in each document.
+    </para>
 
-<para>That's the purpose of the
-<parameter>glossary.collection</parameter> parameter. To setup a global
-glossary <quote>database</quote>, follow these steps:</para>
+    <para>That's the purpose of the
+      <parameter>glossary.collection</parameter>
+      parameter. To setup a global
+      glossary<quote>database</quote>, follow these steps:
+    </para>
 
-<refsect2><title>Setting Up the Glossary Database</title>
+    <refsect2>
+      <title>Setting Up the Glossary Database</title>
 
-<para>First, create a stand-alone glossary document that contains all of
-the entries that you wish to reference. Make sure that each glossary
-entry has an ID.</para>
+      <para>First, create a stand-alone glossary document that contains all of
+        the entries that you wish to reference. Make sure that each glossary
+        entry has an ID.
+      </para>
 
-<para>Here's an example glossary:</para>
+      <para>Here's an example glossary:</para>
 
-<informalexample>
-<programlisting><![CDATA[
+      <informalexample>
+        <programlisting><![CDATA[
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE glossary
   PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
@@ -101,59 +108,84 @@ Are we sufficiently confused yet?</para>
 <!-- ... -->
 
 </glossary>]]></programlisting>
-</informalexample>
+      </informalexample>
 
-</refsect2>
+    </refsect2>
 
-<refsect2><title>Marking Up Glossary Terms</title>
+    <refsect2>
+      <title>Marking Up Glossary Terms</title>
 
-<para>That takes care of the glossary database, now you have to get the entries
-into your document. Unlike bibliography entries, which can be empty, creating
-<quote>placeholder</quote> glossary entries would be very tedious. So instead,
-support for <parameter>glossary.collection</parameter> relies on implicit linking.</para>
+      <para>That takes care of the glossary database, now you have to get the entries
+        into your document. Unlike bibliography entries, which can be empty, creating
+        <quote>placeholder</quote>
+        glossary entries would be very tedious. So instead,
+        support for
+        <parameter>glossary.collection</parameter>
+        relies on implicit linking.
+      </para>
 
-<para>In your source document, simply use <sgmltag>firstterm</sgmltag> and
-<sgmltag>glossterm</sgmltag> to identify the terms you wish to have included
-in the glossary. The stylesheets assume that you will either set the
-<sgmltag class="attribute">baseform</sgmltag> attribute correctly, or that the
-content of the element exactly matches a term in your glossary.</para>
+      <para>In your source document, simply use
+        <sgmltag>firstterm</sgmltag>
+        and
+        <sgmltag>glossterm</sgmltag>
+        to identify the terms you wish to have included
+        in the glossary. The stylesheets assume that you will either set the
+        <sgmltag class="attribute">baseform</sgmltag>
+        attribute correctly, or that the
+        content of the element exactly matches a term in your glossary.
+      </para>
 
-<para>If you're using a <parameter>glossary.collection</parameter>, don't
-make explicit links on the terms in your document.</para>
+      <para>If you're using a<parameter>glossary.collection</parameter>, don't
+        make explicit links on the terms in your document.
+      </para>
 
-<para>So, in your document, you might write things like this:</para>
+      <para>So, in your document, you might write things like this:</para>
 
-<informalexample>
-<programlisting><![CDATA[<para>This is dummy text, without any real meaning.
+      <informalexample>
+        <programlisting><![CDATA[<para>This is dummy text, without any real meaning.
 The point is simply to reference glossary terms like <glossterm>0</glossterm>
 and the <firstterm baseform="1TBS">One True Brace Style (1TBS)</firstterm>.
 The <glossterm>1TBS</glossterm>, as you can probably imagine, is a nearly
 religious issue.</para>]]></programlisting>
-</informalexample>
+      </informalexample>
 
-<para>If you set the <parameter>firstterm.only.link</parameter> parameter,
-only the terms marked with <sgmltag>firstterm</sgmltag> will be links.
-Otherwise, all the terms will be linked.</para>
+      <para>If you set the
+        <parameter>firstterm.only.link</parameter>
+        parameter,
+        only the terms marked with
+        <sgmltag>firstterm</sgmltag>
+        will be links.
+        Otherwise, all the terms will be linked.
+      </para>
 
-</refsect2>
+    </refsect2>
 
-<refsect2><title>Marking Up the Glossary</title>
+    <refsect2>
+      <title>Marking Up the Glossary</title>
 
-<para>The glossary itself has to be identified for the stylesheets. For lack
-of a better choice, the <sgmltag class="attribute">role</sgmltag> is used.
-To identify the glossary as the target for automatic processing, set
-the role to <quote><literal>auto</literal></quote>. The title of this
-glossary (and any other information from the <sgmltag>glossaryinfo</sgmltag>
-that's rendered by your stylesheet) will be displayed, but the entries will
-come from the database.
-</para>
+      <para>The glossary itself has to be identified for the stylesheets. For lack
+        of a better choice, the
+        <sgmltag class="attribute">role</sgmltag>
+        is used.
+        To identify the glossary as the target for automatic processing, set
+        the role to
+        <quote>
+          <literal>auto</literal>
+        </quote>
+        . The title of this
+        glossary (and any other information from the
+        <sgmltag>glossaryinfo</sgmltag>
+        that's rendered by your stylesheet) will be displayed, but the entries will
+        come from the database.
+      </para>
 
-<para>Unfortunately, the glossary can't be empty, so you must put in
-at least one <sgmltag>glossentry</sgmltag>. The content of this entry
-is irrelevant, it will not be rendered:</para>
+      <para>Unfortunately, the glossary can't be empty, so you must put in
+        at least one<sgmltag>glossentry</sgmltag>. The content of this entry
+        is irrelevant, it will not be rendered:
+      </para>
 
-<informalexample>
-<programlisting><![CDATA[<glossary role="auto">
+      <informalexample>
+        <programlisting><![CDATA[<glossary role="auto">
 <glossentry>
 <glossterm>Irrelevant</glossterm>
 <glossdef>
@@ -162,73 +194,97 @@ the <parameter>glossary.collection</parameter> parameter.</para>
 </glossdef>
 </glossentry>
 </glossary>]]></programlisting>
-</informalexample>
+      </informalexample>
 
-<para>What about glossary divisions? If your glossary database has glossary
-divisions <emphasis>and</emphasis> your automatic glossary contains at least
-one <sgmltag>glossdiv</sgmltag>, the automic glossary will have divisions.
-If the <sgmltag>glossdiv</sgmltag> is missing from either location, no divisions
-will be rendered.</para>
+      <para>What about glossary divisions? If your glossary database has glossary
+        divisions
+        <emphasis>and</emphasis>
+        your automatic glossary contains at least
+        one<sgmltag>glossdiv</sgmltag>, the automic glossary will have divisions.
+        If the
+        <sgmltag>glossdiv</sgmltag>
+        is missing from either location, no divisions
+        will be rendered.
+      </para>
 
-<para>Glossary entries (and divisions, if appropriate) in the glossary will
-occur in precisely the order they occur in your database.</para>
+      <para>Glossary entries (and divisions, if appropriate) in the glossary will
+        occur in precisely the order they occur in your database.
+      </para>
 
-</refsect2>
+    </refsect2>
 
-<refsect2><title>Formatting the Document</title>
+    <refsect2>
+      <title>Formatting the Document</title>
 
-<para>Finally, when you are ready to format your document, simply set the
-<parameter>glossary.collection</parameter> parameter (in either a
-customization layer or directly through your processor's interface) to
-point to your global glossary.</para>
+      <para>Finally, when you are ready to format your document, simply set the
+        <parameter>glossary.collection</parameter>
+        parameter (in either a
+        customization layer or directly through your processor's interface) to
+        point to your global glossary.
+      </para>
 
-<para>The stylesheets will format the glossary in your document as if
-all of the entries implicilty referenced appeared there literally.</para>
-</refsect2>
+      <para>The stylesheets will format the glossary in your document as if
+        all of the entries implicilty referenced appeared there literally.
+      </para>
+    </refsect2>
 
-<refsect2><title>Limitations</title>
+    <refsect2>
+      <title>Limitations</title>
 
-<para>Glossary cross-references <emphasis>within the glossary</emphasis> are
-not supported. For example, this <emphasis>will not</emphasis> work:</para>
+      <para>Glossary cross-references
+        <emphasis>within the glossary</emphasis>
+        are
+        not supported. For example, this
+        <emphasis>will not</emphasis>
+        work:
+      </para>
 
-<informalexample>
-<programlisting><![CDATA[<glossentry>
+      <informalexample>
+        <programlisting><![CDATA[<glossentry>
 <glossterm>gloss-1</glossterm>
 <glossdef><para>A description that references <glossterm>gloss-2</glossterm>.</para>
 <glossseealso>gloss-2</glossseealso>
 </glossdef>
 </glossentry>]]></programlisting>
-</informalexample>
+      </informalexample>
 
-<para>If you put glossary cross-references in your glossary that way,
-you'll get the cryptic error: <computeroutput>Warning:
-glossary.collection specified, but there are 0 automatic
-glossaries</computeroutput>.</para>
+      <para>If you put glossary cross-references in your glossary that way,
+        you'll get the cryptic error:<computeroutput>Warning:
+          glossary.collection specified, but there are 0 automatic
+          glossaries</computeroutput>.
+      </para>
 
-<para>Instead, you must do two things:</para>
+      <para>Instead, you must do two things:</para>
 
-<orderedlist>
-<listitem>
-<para>Markup your glossary using <sgmltag>glossseealso</sgmltag>:</para>
+      <orderedlist>
+        <listitem>
+          <para>Markup your glossary using<sgmltag>glossseealso</sgmltag>:
+          </para>
 
-<informalexample>
-<programlisting><![CDATA[<glossentry>
+          <informalexample>
+            <programlisting><![CDATA[<glossentry>
 <glossterm>gloss-1</glossterm>
 <glossdef><para>A description that references <glossterm>gloss-2</glossterm>.</para>
 <glossseealso>gloss-2</glossseealso>
 </glossdef>
 </glossentry>]]></programlisting>
-</informalexample>
-</listitem>
+          </informalexample>
+        </listitem>
 
-<listitem>
-<para>Make sure there is at least one <sgmltag>glossterm</sgmltag> reference to
-<glossterm>gloss-2</glossterm> <emphasis>in your document</emphasis>. The
-easiest way to do that is probably within a <sgmltag>remark</sgmltag> in your
-automatic glossary:</para>
+        <listitem>
+          <para>Make sure there is at least one
+            <sgmltag>glossterm</sgmltag>
+            reference to
+            <glossterm>gloss-2</glossterm>
+            <emphasis>in your document</emphasis>. The
+            easiest way to do that is probably within a
+            <sgmltag>remark</sgmltag>
+            in your
+            automatic glossary:
+          </para>
 
-<informalexample>
-<programlisting><![CDATA[<glossary role="auto">
+          <informalexample>
+            <programlisting><![CDATA[<glossary role="auto">
 <remark>Make sure there's a reference to <glossterm>gloss-2</glossterm>.</remark>
 <glossentry>
 <glossterm>Irrelevant</glossterm>
@@ -238,10 +294,10 @@ the <parameter>glossary.collection</parameter> parameter.</para>
 </glossdef>
 </glossentry>
 </glossary>]]></programlisting>
-</informalexample>
-</listitem>
-</orderedlist>
-</refsect2>
+          </informalexample>
+        </listitem>
+      </orderedlist>
+    </refsect2>
 
-</refsect1>
+  </refsect1>
 </refentry>

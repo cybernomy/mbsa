@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.StaffCategory;
 
 /**
- * 
  * @author leonova
  * @version $Id: StaffCategoryServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface StaffCategoryServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<StaffCategory, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<StaffCategory, Integer> {
 
 }

@@ -1,34 +1,34 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.security.model.SecUserProfileItem" table="SEC_USER_PROFILE_ITEM">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">SEC_USER_PROFILE_ITEM_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Profile" class="com.mg.merp.security.model.SecUserProfile">
-      <column name="PROFILE_ID" not-null="false" />
+      <column name="PROFILE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <property name="Code" type="java.lang.String">
-      <column name="CODE" length="80" not-null="true" sql-type="VARCHAR" />
+      <column name="CODE" length="80" not-null="true" sql-type="VARCHAR"/>
     </property>
     <property name="CheckSum" type="java.lang.Integer">
-      <column name="CHECK_SUM" not-null="false" sql-type="INTEGER" />
+      <column name="CHECK_SUM" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="Data" type="binary">
-      <column name="DATA" not-null="false" sql-type="BLOB SUB_TYPE 0" />
+      <column name="DATA" not-null="false" sql-type="BLOB SUB_TYPE 0"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

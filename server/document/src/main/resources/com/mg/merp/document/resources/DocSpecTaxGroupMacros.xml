@@ -13,8 +13,11 @@
 
 <!-- $Id: DocSpecTaxGroupMacros.xml,v 1.4 2006/12/02 13:16:13 safonov Exp $ -->
 
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="taxFields" layout="jfd:box" columns="2" alignment="expand_expand" tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Tax" >
-	<jfd:field id="TaxGroup" />	
- 	<jfd:table id="documentSpecTaxes" alignment="expand_expand" autoResize="subsequent_columns" horizontalSpan="2" scroll="true" >
-	</jfd:table>
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="taxFields" layout="jfd:box" columns="2"
+               alignment="expand_expand"
+               tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Tax">
+  <jfd:field id="TaxGroup"/>
+  <jfd:table id="documentSpecTaxes" alignment="expand_expand" autoResize="subsequent_columns"
+             horizontalSpan="2" scroll="true">
+  </jfd:table>
 </jfd:container>

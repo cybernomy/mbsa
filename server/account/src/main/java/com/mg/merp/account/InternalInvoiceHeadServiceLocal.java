@@ -17,21 +17,19 @@ package com.mg.merp.account;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * 
  * @author leonova
  * @version $Id: InternalInvoiceHeadServiceLocal.java,v 1.3 2006/09/20 10:43:40 safonov Exp $
  */
 public interface InternalInvoiceHeadServiceLocal
-   extends com.mg.merp.document.GoodsDocument<DocHead, Integer, InternalInvoiceHeadModelServiceLocal, InternalInvoiceSpecServiceLocal>
-{
+    extends com.mg.merp.document.GoodsDocument<DocHead, Integer, InternalInvoiceHeadModelServiceLocal, InternalInvoiceSpecServiceLocal> {
 
-	/**
-	 * тип папки для внутренних накладных
-	 */
-	final static short FOLDER_PART = 19;
-	
-	/**
-	 * docsection для внутренних накладных
-	 */
-	final static short DOCSECTION = 7;
+  /**
+   * тип папки для внутренних накладных
+   */
+  final static short FOLDER_PART = 19;
+
+  /**
+   * docsection для внутренних накладных
+   */
+  final static short DOCSECTION = 7;
 }

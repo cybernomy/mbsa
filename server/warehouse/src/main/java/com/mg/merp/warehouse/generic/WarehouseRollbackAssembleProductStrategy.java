@@ -23,46 +23,47 @@ import com.mg.merp.warehouse.model.StockBatchHistory;
 
 /**
  * Стратегия отката этапа ДО "Собрать комплект"
- * 
+ *
  * @author Konstantin S. Alikaev
- * @version $Id: WarehouseRollbackAssembleProductStrategy.java,v 1.2 2008/04/18 15:18:20 safonov Exp $
+ * @version $Id: WarehouseRollbackAssembleProductStrategy.java,v 1.2 2008/04/18 15:18:20 safonov Exp
+ *          $
  */
 public class WarehouseRollbackAssembleProductStrategy extends WarehouseRollbackFactStrategy {
 
-	/**
-	 * выпонение отката
-	 */
-	public void doRollback(DocumentSpecItem dsi) {
-		if (CatalogType.SET_OF_GOODS == dsi.getDocSpec().getCatalog().getGoodType()) {
-			PersistentManager pm = ServerUtils.getPersistentManager();
-			Integer[] historyIds = (Integer[]) dsi.getStateValue();
-			if (historyIds != null)
-				for (Integer historyId : historyIds) {
-					StockBatchHistory stockBatchHist = pm.find(StockBatchHistory.class, historyId);
-					performHistory(stockBatchHist);
-				}
-			
-			Integer id = dsi.getData1();
-			if (id != null)
-				performHistory(pm.find(StockBatchHistory.class, id));
-			id = dsi.getData2();
-			if (id != null)
-				performHistory(pm.find(StockBatchHistory.class, id));
-		}
-	}
+  /**
+   * выпонение отката
+   */
+  public void doRollback(DocumentSpecItem dsi) {
+    if (CatalogType.SET_OF_GOODS == dsi.getDocSpec().getCatalog().getGoodType()) {
+      PersistentManager pm = ServerUtils.getPersistentManager();
+      Integer[] historyIds = (Integer[]) dsi.getStateValue();
+      if (historyIds != null)
+        for (Integer historyId : historyIds) {
+          StockBatchHistory stockBatchHist = pm.find(StockBatchHistory.class, historyId);
+          performHistory(stockBatchHist);
+        }
 
-	private void performHistory(StockBatchHistory stockBatchHist) {
-		if (stockBatchHist == null)
-			throw new HistoryNotFoundException();
-		
-		switch (stockBatchHist.getKind()) {
-		case IN:
-			rollbackReceipt(stockBatchHist);
-			break;
-		case OUT:
-			rollbackIssue(stockBatchHist);
-			break;
-		}
-	}
-	
+      Integer id = dsi.getData1();
+      if (id != null)
+        performHistory(pm.find(StockBatchHistory.class, id));
+      id = dsi.getData2();
+      if (id != null)
+        performHistory(pm.find(StockBatchHistory.class, id));
+    }
+  }
+
+  private void performHistory(StockBatchHistory stockBatchHist) {
+    if (stockBatchHist == null)
+      throw new HistoryNotFoundException();
+
+    switch (stockBatchHist.getKind()) {
+      case IN:
+        rollbackReceipt(stockBatchHist);
+        break;
+      case OUT:
+        rollbackIssue(stockBatchHist);
+        break;
+    }
+  }
+
 }

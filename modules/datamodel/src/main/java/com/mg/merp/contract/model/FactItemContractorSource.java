@@ -19,23 +19,23 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Источник контрагента
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: FactItemContractorSource.java,v 1.1 2007/03/07 12:31:28 sharapov Exp $
  */
-@DataItemName ("Contract.FactItemContractorSource") //$NON-NLS-1$
+@DataItemName("Contract.FactItemContractorSource") //$NON-NLS-1$
 public enum FactItemContractorSource {
 
-	/**
-	 * От кого
-	 */	
-	@EnumConstantText ("resource://com.mg.merp.contract.resources.dataitemlabels#ItemContractorSource.From") //$NON-NLS-1$
-	FROM,
+  /**
+   * От кого
+   */
+  @EnumConstantText("resource://com.mg.merp.contract.resources.dataitemlabels#ItemContractorSource.From") //$NON-NLS-1$
+      FROM,
 
-	/**
-	 * Кому
-	 */
-	@EnumConstantText ("resource://com.mg.merp.contract.resources.dataitemlabels#ItemContractorSource.To") //$NON-NLS-1$
-	TO
+  /**
+   * Кому
+   */
+  @EnumConstantText("resource://com.mg.merp.contract.resources.dataitemlabels#ItemContractorSource.To") //$NON-NLS-1$
+      TO
 
 }

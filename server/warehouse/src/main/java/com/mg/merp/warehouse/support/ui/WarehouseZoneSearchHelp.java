@@ -21,9 +21,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  * @version $Id: WarehouseZoneSearchHelp.java,v 1.2 2006/07/10 11:55:47 leonova Exp $
  */
 public class WarehouseZoneSearchHelp extends DefaultLegacySearchHelp {
-	
-	@Override
-	protected String getServiceName() {		
-		return "merp/warehouse/WarehouseZone";
-	}
+
+  @Override
+  protected String getServiceName() {
+    return "merp/warehouse/WarehouseZone";
+  }
 }

@@ -17,18 +17,18 @@ package com.mg.merp.reference.support.ui;
 
 /**
  * Поиск типа цен из заголовка прайс-листа
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: PriceTypeFromPriceHeadSearchHelp.java,v 1.1 2007/05/10 07:31:12 safonov Exp $
  */
 public class PriceTypeFromPriceHeadSearchHelp extends PriceTypeBoundedSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.reference.support.ui.PriceTypeBoundedSearchHelp#getPriceHeadProperty()
-	 */
-	@Override
-	protected String getPriceHeadProperty() {
-		return "entity"; //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.reference.support.ui.PriceTypeBoundedSearchHelp#getPriceHeadProperty()
+   */
+  @Override
+  protected String getPriceHeadProperty() {
+    return "entity"; //$NON-NLS-1$
+  }
 
 }

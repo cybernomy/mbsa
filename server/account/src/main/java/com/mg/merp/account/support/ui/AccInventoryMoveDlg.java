@@ -14,8 +14,6 @@
  */
 package com.mg.merp.account.support.ui;
 
-import java.util.Date;
-
 import com.mg.framework.api.BusinessException;
 import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.ui.WidgetEvent;
@@ -27,177 +25,179 @@ import com.mg.merp.account.support.Messages;
 import com.mg.merp.document.model.DocType;
 import com.mg.merp.reference.model.Contractor;
 
+import java.util.Date;
+
 /**
  * Контроллер ввода данных для проведения операции перемещение инвентарной карточки
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: AccInventoryMoveDlg.java,v 1.1 2008/04/29 05:29:04 alikaev Exp $
  */
 public class AccInventoryMoveDlg extends DefaultWizardDialog {
 
-	private String dialogTitle;
-	
-	private Date revalDate;	
-	
-	private Contractor contractor;
-	
-	private Date inOperDate;
-	
-	private String inOperDocNum;
-	
-	private InvLocation invLocation;
+  private String dialogTitle;
 
-	private DocType docType;
-	
-	private String docNumber;
-	
-	private Date docDate;
+  private Date revalDate;
 
-	private AccPlan AccPlan;
+  private Contractor contractor;
 
-	@DataItemName("Account.Inventory.Anl1")
-	private AnlPlan anl1;
+  private Date inOperDate;
 
-	@DataItemName("Account.Inventory.Anl2")
-	private AnlPlan anl2;
-	
-	@DataItemName("Account.Inventory.Anl3")
-	private AnlPlan anl3;
-	
-	@DataItemName("Account.Inventory.Anl4")
-	private AnlPlan anl4;
-	
-	@DataItemName("Account.Inventory.Anl5")
-	private AnlPlan anl5;
+  private String inOperDocNum;
 
-	private AccPlan AccKt;
-	
-	@DataItemName("Account.EconSpec.AnlKt1")
-	private AnlPlan anlKt1;
+  private InvLocation invLocation;
 
-	@DataItemName("Account.EconSpec.AnlKt2")
-	private AnlPlan anlKt2;
-	
-	@DataItemName("Account.EconSpec.AnlKt3")
-	private AnlPlan anlKt3;
-	
-	@DataItemName("Account.EconSpec.AnlKt4")
-	private AnlPlan anlKt4;
-	
-	@DataItemName("Account.EconSpec.AnlKt5")
-	private AnlPlan anlKt5;
+  private DocType docType;
 
-	public AccInventoryMoveDlg() {
-	}
+  private String docNumber;
 
-	public Date getRevalDate() {
-		return revalDate;
-	}
+  private Date docDate;
 
-	public Contractor getContractor() {
-		return contractor;
-	}
+  private AccPlan AccPlan;
 
-	public Date getInOperDate() {
-		return inOperDate;
-	}
+  @DataItemName("Account.Inventory.Anl1")
+  private AnlPlan anl1;
 
-	public String getInOperDocNum() {
-		return inOperDocNum;
-	}
+  @DataItemName("Account.Inventory.Anl2")
+  private AnlPlan anl2;
 
-	public InvLocation getInvLocation() {
-		return invLocation;
-	}
+  @DataItemName("Account.Inventory.Anl3")
+  private AnlPlan anl3;
 
-	public DocType getDocType() {
-		return docType;
-	}
+  @DataItemName("Account.Inventory.Anl4")
+  private AnlPlan anl4;
 
-	public String getDocNumber() {
-		return docNumber;
-	}
+  @DataItemName("Account.Inventory.Anl5")
+  private AnlPlan anl5;
 
-	public Date getDocDate() {
-		return docDate;
-	}
+  private AccPlan AccKt;
 
-	public AccPlan getAccPlan() {
-		return AccPlan;
-	}
+  @DataItemName("Account.EconSpec.AnlKt1")
+  private AnlPlan anlKt1;
 
-	public AnlPlan getAnl1() {
-		return anl1;
-	}
+  @DataItemName("Account.EconSpec.AnlKt2")
+  private AnlPlan anlKt2;
 
-	public AnlPlan getAnl2() {
-		return anl2;
-	}
+  @DataItemName("Account.EconSpec.AnlKt3")
+  private AnlPlan anlKt3;
 
-	public AnlPlan getAnl3() {
-		return anl3;
-	}
+  @DataItemName("Account.EconSpec.AnlKt4")
+  private AnlPlan anlKt4;
 
-	public AnlPlan getAnl4() {
-		return anl4;
-	}
+  @DataItemName("Account.EconSpec.AnlKt5")
+  private AnlPlan anlKt5;
 
-	public AnlPlan getAnl5() {
-		return anl5;
-	}
+  public AccInventoryMoveDlg() {
+  }
 
-	public AccPlan getAccKt() {
-		return AccKt;
-	}
+  public Date getRevalDate() {
+    return revalDate;
+  }
 
-	public AnlPlan getAnlKt1() {
-		return anlKt1;
-	}
+  public Contractor getContractor() {
+    return contractor;
+  }
 
-	public AnlPlan getAnlKt2() {
-		return anlKt2;
-	}
+  public void setContractor(Contractor contractor) {
+    this.contractor = contractor;
+  }
 
-	public AnlPlan getAnlKt3() {
-		return anlKt3;
-	}
+  public Date getInOperDate() {
+    return inOperDate;
+  }
 
-	public AnlPlan getAnlKt4() {
-		return anlKt4;
-	}
+  public String getInOperDocNum() {
+    return inOperDocNum;
+  }
 
-	public AnlPlan getAnlKt5() {
-		return anlKt5;
-	}
+  public InvLocation getInvLocation() {
+    return invLocation;
+  }
 
-	public void setDialogTitle(String dialogTitle) {
-		this.dialogTitle = dialogTitle;
-	}
+  public DocType getDocType() {
+    return docType;
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractForm#doOnRun()
-	 */
-	@Override
-	protected void doOnRun() {
-		view.setTitle(this.dialogTitle);
-		super.doOnRun();
-	}
+  public String getDocNumber() {
+    return docNumber;
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultDialog#onActionOk(com.mg.framework.api.ui.WidgetEvent)
-	 */
-	@Override
-	public void onActionOk(WidgetEvent event) {
-		if (this.revalDate == null || this.contractor == null)
-			throw new BusinessException(Messages.getInstance().getMessage(Messages.ACC_INVENTORY_MOVE_CHOOSE_DATE_CONTRACTOR));
-		else
-			super.onActionOk(event);
-	}
+  public Date getDocDate() {
+    return docDate;
+  }
 
-	public void setContractor(Contractor contractor) {
-		this.contractor = contractor;
-	}
-	
+  public AccPlan getAccPlan() {
+    return AccPlan;
+  }
+
+  public AnlPlan getAnl1() {
+    return anl1;
+  }
+
+  public AnlPlan getAnl2() {
+    return anl2;
+  }
+
+  public AnlPlan getAnl3() {
+    return anl3;
+  }
+
+  public AnlPlan getAnl4() {
+    return anl4;
+  }
+
+  public AnlPlan getAnl5() {
+    return anl5;
+  }
+
+  public AccPlan getAccKt() {
+    return AccKt;
+  }
+
+  public AnlPlan getAnlKt1() {
+    return anlKt1;
+  }
+
+  public AnlPlan getAnlKt2() {
+    return anlKt2;
+  }
+
+  public AnlPlan getAnlKt3() {
+    return anlKt3;
+  }
+
+  public AnlPlan getAnlKt4() {
+    return anlKt4;
+  }
+
+  public AnlPlan getAnlKt5() {
+    return anlKt5;
+  }
+
+  public void setDialogTitle(String dialogTitle) {
+    this.dialogTitle = dialogTitle;
+  }
+
+  /*
+   * (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractForm#doOnRun()
+   */
+  @Override
+  protected void doOnRun() {
+    view.setTitle(this.dialogTitle);
+    super.doOnRun();
+  }
+
+  /*
+   * (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultDialog#onActionOk(com.mg.framework.api.ui.WidgetEvent)
+   */
+  @Override
+  public void onActionOk(WidgetEvent event) {
+    if (this.revalDate == null || this.contractor == null)
+      throw new BusinessException(Messages.getInstance().getMessage(Messages.ACC_INVENTORY_MOVE_CHOOSE_DATE_CONTRACTOR));
+    else
+      super.onActionOk(event);
+  }
+
 }

@@ -18,15 +18,15 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Вид реализации безнес-компонента
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: BusinessServiceImplKind.java,v 1.2 2008/03/03 13:11:02 safonov Exp $
  */
-@DataItemName ("Core.BusinessServiceImplKind")
+@DataItemName("Core.BusinessServiceImplKind")
 public enum BusinessServiceImplKind {
-	
-	/**
-	 * Бизнес-компонент реализован на EJB
-	 */
-	EJB
+
+  /**
+   * Бизнес-компонент реализован на EJB
+   */
+  EJB
 }

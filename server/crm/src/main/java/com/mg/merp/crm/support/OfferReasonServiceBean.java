@@ -15,27 +15,27 @@
 
 package com.mg.merp.crm.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.crm.OfferReasonServiceLocal;
 import com.mg.merp.crm.model.OfferReason;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Причины заключения и потерь предложений" 
- * 
+ * Бизнес-компонент "Причины заключения и потерь предложений"
+ *
  * @author leonova
  * @version $Id: OfferReasonServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $
  */
-@Stateless(name="merp/crm/OfferReasonService")
+@Stateless(name = "merp/crm/OfferReasonService")
 public class OfferReasonServiceBean extends AbstractPOJODataBusinessObjectServiceBean<OfferReason, Integer> implements OfferReasonServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, OfferReason entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));
-	}
+  @Override
+  protected void onValidate(ValidationContext context, OfferReason entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+  }
 
 
 }

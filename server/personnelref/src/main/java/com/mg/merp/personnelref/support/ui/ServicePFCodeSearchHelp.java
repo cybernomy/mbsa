@@ -22,9 +22,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class ServicePFCodeSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/personnelref/ServicePFCodeService";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/ServicePFCodeService";
+  }
 }
 

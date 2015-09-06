@@ -18,30 +18,29 @@ import com.mg.merp.planning.model.GenericItem;
 
 /**
  * Бизнес-компонент "Обобщенный товар"
- * 
+ *
  * @author leonova
  * @version $Id: GenericItemServiceLocal.java,v 1.2 2007/07/30 10:37:51 safonov Exp $
  */
 public interface GenericItemServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<GenericItem, Integer> {
+    extends com.mg.framework.api.DataBusinessObjectService<GenericItem, Integer> {
 
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/planning/GenericItem";
-	
-	/**
-	 * расчет кода нижнего уровня (Low level code)
-	 *
-	 */
-	void buildLowLevelCodes();
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/planning/GenericItem";
 
-	/**
-	 * поиск обобщенного товара по позиции каталога
-	 * 
-	 * @param catalogId	идентификатор позиции каталога
-	 * @return	обощенный товар или <code>null</code> если не найден
-	 */
-	GenericItem findByCatalog(int catalogId);
-	
+  /**
+   * расчет кода нижнего уровня (Low level code)
+   */
+  void buildLowLevelCodes();
+
+  /**
+   * поиск обобщенного товара по позиции каталога
+   *
+   * @param catalogId идентификатор позиции каталога
+   * @return обощенный товар или <code>null</code> если не найден
+   */
+  GenericItem findByCatalog(int catalogId);
+
 }

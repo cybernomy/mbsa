@@ -19,26 +19,27 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Тип приёмника товара
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: RouteDestType.java,v 1.2 2007/07/30 10:25:11 safonov Exp $
  */
 @DataItemName("MfReference.RouteDestType")
 public enum RouteDestType {
-	/**
-	 * Продажа
-	 */
-	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Sale")
-	SALE,
-	
-	/**
-	 * Производство
-	 */
-	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Manufacture")
-	MANUFACTURE,
-		
-	/**
-	 * Перемещение
-	 */
-	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Transfer")
-	TRANSFER
+  /**
+   * Продажа
+   */
+  @EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Sale")
+  SALE,
+
+  /**
+   * Производство
+   */
+  @EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Manufacture")
+  MANUFACTURE,
+
+  /**
+   * Перемещение
+   */
+  @EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Transfer")
+  TRANSFER
 }

@@ -6,36 +6,60 @@
 <!ENTITY chap_book SYSTEM "modules/book.xml">
 ]> -->
 <chapter id="book">
-<title>Формирование книги покупок и книги продаж</title>
+  <title>Формирование книги покупок и книги продаж</title>
 
-    <para>По записям журнала платежей в системе &merp; можно автоматически формировать
-    записи в книге покупок или книге продаж. Предварительно укажите параметры 
-    формирования книги в конфигурации бухгалтерского учёта. </para>
-    
-    <para>Для формирования книги нужно:</para>
-    
-    <para>1. Открыть соответствующий раздел - &quot;<emphasis>Книга покупок</emphasis>&quot; 
-    или &quot;<emphasis>Книга продаж</emphasis>&quot;.</para>
-    
-    <para>2. Нажать кнопку &quot;<guibutton>Сформировать</guibutton>&quot; на панели инструментов или выбрать
-    из контекстного меню пункт &quot;<guibutton>Сформировать</guibutton>&quot;.</para>
-    
+  <para>По записям журнала платежей в системе &merp; можно автоматически формировать
+    записи в книге покупок или книге продаж. Предварительно укажите параметры
+    формирования книги в конфигурации бухгалтерского учёта.
+  </para>
+
+  <para>Для формирования книги нужно:</para>
+
+  <para>1. Открыть соответствующий раздел - &quot;<emphasis>Книга покупок</emphasis>&quot;
+    или &quot;<emphasis>Книга продаж</emphasis>&quot;.
+  </para>
+
+  <para>2. Нажать кнопку &quot;<guibutton>Сформировать</guibutton>&quot; на панели инструментов или
+    выбрать
+    из контекстного меню пункт &quot;<guibutton>Сформировать</guibutton>&quot;.
+  </para>
+
   <screenshot>
-    <mediaobject><imageobject><imagedata fileref="images/params.gif"/></imageobject></mediaobject>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/params.gif"/>
+      </imageobject>
+    </mediaobject>
   </screenshot>
-    
-    <para>3. В появившемся окне нужно задать параметры формирования книги: </para>
-    
-      <itemizedlist> 
-        <listitem><para><guibutton>диапазон дат</guibutton>, за который будет сформирована книга.
-	Датой записи в книгу будет наиболее поздняя из двух дат документов:
-	&quot;дата оприходования&quot; и &quot;дата оплаты&quot;. </para></listitem>
-	<listitem><para><guibutton>код контрагента</guibutton> (выбирается из справочников 
-	&quot;Партнёры&quot;, &quot;Подразделения&quot; или &quot;Сотрудники&quot;). </para></listitem>
-	<listitem><para><guibutton>тип</guibutton> и/или <guibutton>номер</guibutton> документа.</para></listitem>
-   </itemizedlist>
-   
-    <para>и нажать &quot;<guibutton>ОК</guibutton>&quot;.</para>
-    
-     
+
+  <para>3. В появившемся окне нужно задать параметры формирования книги:</para>
+
+  <itemizedlist>
+    <listitem>
+      <para><guibutton>диапазон дат</guibutton>, за который будет сформирована книга.
+        Датой записи в книгу будет наиболее поздняя из двух дат документов:
+        &quot;дата оприходования&quot; и &quot;дата оплаты&quot;.
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <guibutton>код контрагента</guibutton>
+        (выбирается из справочников
+        &quot;Партнёры&quot;, &quot;Подразделения&quot; или &quot;Сотрудники&quot;).
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <guibutton>тип</guibutton>
+        и/или
+        <guibutton>номер</guibutton>
+        документа.
+      </para>
+    </listitem>
+  </itemizedlist>
+
+  <para>и нажать &quot;<guibutton>ОК</guibutton>&quot;.
+  </para>
+
+
 </chapter>

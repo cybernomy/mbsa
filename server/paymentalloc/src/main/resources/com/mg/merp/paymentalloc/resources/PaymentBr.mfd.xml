@@ -13,22 +13,29 @@
 
 <!-- $Id: PaymentBr.mfd.xml,v 1.7 2007/02/16 14:44:33 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.paymentalloc.support.ui.PaymentBr" title="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.FormBr.Title" helpTopic="paymentalloc#pml_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver"
+          controller="com.mg.merp.paymentalloc.support.ui.PaymentBr"
+          title="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.FormBr.Title"
+          helpTopic="paymentalloc#pml_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml"/>
 
-	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
- 		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true" >
-		</jfd:maintenanceTree>
- 		<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
-			<jfd:popupMenu>
-				<jfd:separator/>
-				<jfd:menuItem id="showModelItem" text="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.Model" actionListener="ShowModel" />
-				<jfd:menuItem id="InsertModelItem" text="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.InsertModel" actionListener="InsertModel" />
-			</jfd:popupMenu>		
-		</jfd:maintenanceTable>
-	</jfd:container>
+  <jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+    <jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true">
+    </jfd:maintenanceTree>
+    <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+      <jfd:popupMenu>
+        <jfd:separator/>
+        <jfd:menuItem id="showModelItem"
+                      text="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.Model"
+                      actionListener="ShowModel"/>
+        <jfd:menuItem id="InsertModelItem"
+                      text="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.InsertModel"
+                      actionListener="InsertModel"/>
+      </jfd:popupMenu>
+    </jfd:maintenanceTable>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml"/>
 
 </jfd:form>

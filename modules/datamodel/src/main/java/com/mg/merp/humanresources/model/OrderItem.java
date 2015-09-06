@@ -18,123 +18,127 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Модель бизнес-компонента "Пункты приказа"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: OrderItem.java,v 1.3 2007/08/27 12:05:53 sharapov Exp $
  */
 public class OrderItem extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields    
+  // Fields
 
-	private java.lang.Integer Id;
-	private com.mg.merp.humanresources.model.Order Order;
-	private com.mg.merp.humanresources.model.OrderItemKind OrderItemKind;
-	private com.mg.merp.core.model.SysClient SysClient;
-	private java.util.Set<OrderItemRollback> OrderRollbackItems;
-	private java.util.Set<OrderItemParam> OrderItemParams;
+  private java.lang.Integer Id;
+  private com.mg.merp.humanresources.model.Order Order;
+  private com.mg.merp.humanresources.model.OrderItemKind OrderItemKind;
+  private com.mg.merp.core.model.SysClient SysClient;
+  private java.util.Set<OrderItemRollback> OrderRollbackItems;
+  private java.util.Set<OrderItemParam> OrderItemParams;
 
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public OrderItem() {
-	}
+  /**
+   * default constructor
+   */
+  public OrderItem() {
+  }
 
-	/** constructor with id */
-	public OrderItem(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public OrderItem(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	
-	// Property accessors
 
-	@DataItemName("ID") //$NON-NLS-1$
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	/**
-	 * 
-	 * @param Id
-	 */
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public com.mg.merp.humanresources.model.Order getOrder() {
-		return this.Order;
-	}
+  @DataItemName("ID") //$NON-NLS-1$
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 * @param HrOrder
-	 */
-	public void setOrder(com.mg.merp.humanresources.model.Order HrOrder) {
-		this.Order = HrOrder;
-	}
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   * @param Id
+   */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 * @param SysClient
-	 */
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public com.mg.merp.humanresources.model.OrderItemKind getOrderItemKind() {
-		return this.OrderItemKind;
-	}
+  /**
+   *
+   * @return
+   */
+  public com.mg.merp.humanresources.model.Order getOrder() {
+    return this.Order;
+  }
 
-	/**
-	 * 
-	 * @param HrOrderItemKind
-	 */
-	public void setOrderItemKind(com.mg.merp.humanresources.model.OrderItemKind HrOrderItemKind) {
-		this.OrderItemKind = HrOrderItemKind;
-	}
+  /**
+   *
+   * @param HrOrder
+   */
+  public void setOrder(com.mg.merp.humanresources.model.Order HrOrder) {
+    this.Order = HrOrder;
+  }
 
-	/**
-	 * @return the orderItemParams
-	 */
-	public java.util.Set<OrderItemParam> getOrderItemParams() {
-		return this.OrderItemParams;
-	}
+  /**
+   *
+   * @return
+   */
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * @param orderItemParams the orderItemParams to set
-	 */
-	public void setOrderItemParams(java.util.Set<OrderItemParam> orderItemParams) {
-		this.OrderItemParams = orderItemParams;
-	}
+  /**
+   *
+   * @param SysClient
+   */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	/**
-	 * @return the orderRollbackItems
-	 */
-	public java.util.Set<OrderItemRollback> getOrderRollbackItems() {
-		return this.OrderRollbackItems;
-	}
+  /**
+   *
+   * @return
+   */
+  public com.mg.merp.humanresources.model.OrderItemKind getOrderItemKind() {
+    return this.OrderItemKind;
+  }
 
-	/**
-	 * @param orderRollbackItems the orderRollbackItems to set
-	 */
-	public void setOrderRollbackItems(java.util.Set<OrderItemRollback> orderRollbackItems) {
-		this.OrderRollbackItems = orderRollbackItems;
-	}
+  /**
+   *
+   * @param HrOrderItemKind
+   */
+  public void setOrderItemKind(com.mg.merp.humanresources.model.OrderItemKind HrOrderItemKind) {
+    this.OrderItemKind = HrOrderItemKind;
+  }
+
+  /**
+   * @return the orderItemParams
+   */
+  public java.util.Set<OrderItemParam> getOrderItemParams() {
+    return this.OrderItemParams;
+  }
+
+  /**
+   * @param orderItemParams the orderItemParams to set
+   */
+  public void setOrderItemParams(java.util.Set<OrderItemParam> orderItemParams) {
+    this.OrderItemParams = orderItemParams;
+  }
+
+  /**
+   * @return the orderRollbackItems
+   */
+  public java.util.Set<OrderItemRollback> getOrderRollbackItems() {
+    return this.OrderRollbackItems;
+  }
+
+  /**
+   * @param orderRollbackItems the orderRollbackItems to set
+   */
+  public void setOrderRollbackItems(java.util.Set<OrderItemRollback> orderRollbackItems) {
+    this.OrderRollbackItems = orderRollbackItems;
+  }
 
 }

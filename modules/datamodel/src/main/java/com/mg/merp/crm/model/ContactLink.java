@@ -21,39 +21,40 @@ package com.mg.merp.crm.model;
  */
 public class ContactLink extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-    // Fields    
+  // Fields
 
- private com.mg.merp.crm.model.ContactLinkId id;
-
-
-    // Constructors
-
-    /** default constructor */
-    public ContactLink() {
-    }
-    
-    /** constructor with id */
-    public ContactLink(com.mg.merp.crm.model.ContactLinkId id) {
-        this.id = id;
-    }
-   
-    
-    
-
-    // Property accessors
-    /**
-    
-    */
-    
-    public com.mg.merp.crm.model.ContactLinkId getId () {
-        return this.id;
-    }
-    
-   public void setId (com.mg.merp.crm.model.ContactLinkId id) {
-        this.id = id;
-    }
+  private com.mg.merp.crm.model.ContactLinkId id;
 
 
+  // Constructors
+
+  /**
+   * default constructor
+   */
+  public ContactLink() {
+  }
+
+  /**
+   * constructor with id
+   */
+  public ContactLink(com.mg.merp.crm.model.ContactLinkId id) {
+    this.id = id;
+  }
+
+
+  // Property accessors
+
+  /**
+
+   */
+
+  public com.mg.merp.crm.model.ContactLinkId getId() {
+    return this.id;
+  }
+
+  public void setId(com.mg.merp.crm.model.ContactLinkId id) {
+    this.id = id;
+  }
 
 
 }

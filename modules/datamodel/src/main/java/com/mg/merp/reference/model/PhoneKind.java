@@ -22,63 +22,67 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.PhoneKind")
 public class PhoneKind extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String KName;
+  private java.lang.String KName;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public PhoneKind() {
-	}
+  /**
+   * default constructor
+   */
+  public PhoneKind() {
+  }
 
-	/** constructor with id */
-	public PhoneKind(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public PhoneKind(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
+  // Property accessors
 
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Name")
-	public java.lang.String getKName() {
-		return this.KName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Name")
+  public java.lang.String getKName() {
+    return this.KName;
+  }
 
-	public void setKName(java.lang.String KName) {
-		this.KName = KName;
-	}
+  public void setKName(java.lang.String KName) {
+    this.KName = KName;
+  }
 }

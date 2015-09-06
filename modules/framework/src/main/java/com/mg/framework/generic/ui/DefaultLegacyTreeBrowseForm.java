@@ -31,75 +31,75 @@ import com.mg.framework.support.ui.widget.MaintenanceTreeController;
  */
 @Deprecated
 public class DefaultLegacyTreeBrowseForm extends AbstractForm implements MaintenanceBrowseForm, SearchHelpForm {
-	private SearchHelpListener listener = null;
-	protected DataBusinessObjectService folderService;
-	protected MaintenanceTreeController tree;
-	protected AttributeMap treeUIProperties = new LocalDataTransferObject();
+  protected DataBusinessObjectService folderService;
+  protected MaintenanceTreeController tree;
+  protected AttributeMap treeUIProperties = new LocalDataTransferObject();
+  private SearchHelpListener listener = null;
 
-	public DefaultLegacyTreeBrowseForm() {
-		tree = new MaintenanceTreeController(treeUIProperties, new DefaultTreeModel() {
-			@Override
-			protected void doLoad() {
-				//setRootNode(LegacyTreeNode.convertDataSetToTreeNode(loadFolders()));
-			}
-		});
-	}
+  public DefaultLegacyTreeBrowseForm() {
+    tree = new MaintenanceTreeController(treeUIProperties, new DefaultTreeModel() {
+      @Override
+      protected void doLoad() {
+        //setRootNode(LegacyTreeNode.convertDataSetToTreeNode(loadFolders()));
+      }
+    });
+  }
 
-	protected Object loadFolders() {
-		return null;
-	}
+  protected Object loadFolders() {
+    return null;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractForm#doOnRun()
-	 */
-	@Override
-	protected void doOnRun() {
-		if (folderService == null)
-			throw new IllegalStateException("Folder service cann't be null");
-		
-		tree.initController(folderService);
-		//tree.setData(loadFolders());
-		super.doOnRun();
-		
-		//обработка SearchHelp, если используется в данном качестве, то откроем кнопку chooseButton
-		if (listener != null) {
-			Widget chooseButton = view.getWidget("сhooseButton");
-			if (chooseButton != null)
-				chooseButton.setVisible(true);
-		}
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractForm#doOnRun()
+   */
+  @Override
+  protected void doOnRun() {
+    if (folderService == null)
+      throw new IllegalStateException("Folder service cann't be null");
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.MaintenanceBrowseForm#setService(com.mg.framework.api.DataBusinessObjectService)
-	 */
-	public void setService(DataBusinessObjectService service) throws ApplicationException {
-		folderService = service;
-	}
+    tree.initController(folderService);
+    //tree.setData(loadFolders());
+    super.doOnRun();
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.SearchHelpForm#addSearchHelpListener(com.mg.framework.api.ui.SearchHelpListener)
-	 */
-	public void addSearchHelpListener(SearchHelpListener listener) {
-		this.listener = listener;
-	}
+    //обработка SearchHelp, если используется в данном качестве, то откроем кнопку chooseButton
+    if (listener != null) {
+      Widget chooseButton = view.getWidget("сhooseButton");
+      if (chooseButton != null)
+        chooseButton.setVisible(true);
+    }
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.SearchHelpForm#getSearchHelpListeners()
-	 */
-	public SearchHelpListener[] getSearchHelpListeners() {
-		return null;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.MaintenanceBrowseForm#setService(com.mg.framework.api.DataBusinessObjectService)
+   */
+  public void setService(DataBusinessObjectService service) throws ApplicationException {
+    folderService = service;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.SearchHelpForm#removeSearchHelpListener(com.mg.framework.api.ui.SearchHelpListener)
-	 */
-	public void removeSearchHelpListener(SearchHelpListener listener) {
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.SearchHelpForm#addSearchHelpListener(com.mg.framework.api.ui.SearchHelpListener)
+   */
+  public void addSearchHelpListener(SearchHelpListener listener) {
+    this.listener = listener;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.SearchHelpForm#setEntity(com.mg.framework.api.orm.PersistentObject)
-	 */
-	public void setTargetEntity(PersistentObject entity) {
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.SearchHelpForm#getSearchHelpListeners()
+   */
+  public SearchHelpListener[] getSearchHelpListeners() {
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.SearchHelpForm#removeSearchHelpListener(com.mg.framework.api.ui.SearchHelpListener)
+   */
+  public void removeSearchHelpListener(SearchHelpListener listener) {
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.SearchHelpForm#setEntity(com.mg.framework.api.orm.PersistentObject)
+   */
+  public void setTargetEntity(PersistentObject entity) {
+  }
 
 }

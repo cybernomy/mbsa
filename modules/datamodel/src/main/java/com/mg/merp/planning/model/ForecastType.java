@@ -21,17 +21,17 @@ import com.mg.framework.api.annotations.EnumConstantText;
  * @author leonova
  * @version $Id: ForecastType.java,v 1.1 2007/07/30 10:37:30 safonov Exp $
  */
-@DataItemName ("Planning.ForecastType")
+@DataItemName("Planning.ForecastType")
 public enum ForecastType {
-	/**
-	 * Прогноз продаж
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Forecast.Type.Sale")
-	SALE,
-	
-	/**
-	 * Прогноз закупок
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Forecast.Type.Purchase")
-	PURCHASE
+  /**
+   * Прогноз продаж
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#Forecast.Type.Sale")
+  SALE,
+
+  /**
+   * Прогноз закупок
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#Forecast.Type.Purchase")
+  PURCHASE
 }

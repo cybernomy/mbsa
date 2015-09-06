@@ -1,39 +1,39 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.humanresources.model.OrderItem" table="HR_ORDER_ITEM">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">HR_ORDER_ITEM_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Order" class="com.mg.merp.humanresources.model.Order">
-      <column name="ORDER_ID" not-null="true" />
+      <column name="ORDER_ID" not-null="true"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="OrderItemKind" class="com.mg.merp.humanresources.model.OrderItemKind">
-      <column name="ITEM_KIND_ID" not-null="true" />
+      <column name="ITEM_KIND_ID" not-null="true"/>
     </many-to-one>
     <set name="OrderRollbackItems" inverse="true">
       <key on-delete="cascade">
-        <column name="ORDER_ITEM_ID" not-null="false" />
+        <column name="ORDER_ITEM_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.humanresources.model.OrderItemRollback" />
+      <one-to-many class="com.mg.merp.humanresources.model.OrderItemRollback"/>
     </set>
     <set name="OrderItemParams" inverse="true">
       <key on-delete="cascade">
-        <column name="ORDER_ITEM_ID" not-null="false" />
+        <column name="ORDER_ITEM_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.humanresources.model.OrderItemParam" />
+      <one-to-many class="com.mg.merp.humanresources.model.OrderItemParam"/>
     </set>
   </class>
 </hibernate-mapping>

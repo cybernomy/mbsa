@@ -20,42 +20,42 @@ import com.mg.merp.manufacture.model.Job;
 
 /**
  * Бизнес-компонет "Процессор производства"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ManufactureProcessorServiceLocal.java,v 1.1 2007/08/06 12:46:24 safonov Exp $
  */
 public interface ManufactureProcessorServiceLocal extends BusinessObjectService {
 
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/manufacture/ManufactureProcessor";
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/manufacture/ManufactureProcessor";
 
-	/**
-	 * создание документов на отклонения
-	 * 
-	 * @param job	ЗНП
-	 */
-	void createVarianceDocument(Job job);
-	
-	void updateJobFromOutputDocument(DocFlowPluginInvokeParams params);
-	
-	void rollbackUpdateJobFromOutputDocument(DocFlowPluginInvokeParams params);
+  /**
+   * создание документов на отклонения
+   *
+   * @param job ЗНП
+   */
+  void createVarianceDocument(Job job);
 
-	void updateJobFromScrapDocument(DocFlowPluginInvokeParams params);
-	
-	void rollbackUpdateJobFromScrapDocument(DocFlowPluginInvokeParams params);
+  void updateJobFromOutputDocument(DocFlowPluginInvokeParams params);
 
-	void performBackflush(DocFlowPluginInvokeParams params);
-	
-	void rollbackPerformBackflush(DocFlowPluginInvokeParams params);
-	
-	void postToWorkInProgress(DocFlowPluginInvokeParams params);
-	
-	void rollbackPostToWorkInProgress(DocFlowPluginInvokeParams params);
+  void rollbackUpdateJobFromOutputDocument(DocFlowPluginInvokeParams params);
 
-	void performScrap(DocFlowPluginInvokeParams params);
-	
-	void rollbackPerformScrap(DocFlowPluginInvokeParams params);
-	
+  void updateJobFromScrapDocument(DocFlowPluginInvokeParams params);
+
+  void rollbackUpdateJobFromScrapDocument(DocFlowPluginInvokeParams params);
+
+  void performBackflush(DocFlowPluginInvokeParams params);
+
+  void rollbackPerformBackflush(DocFlowPluginInvokeParams params);
+
+  void postToWorkInProgress(DocFlowPluginInvokeParams params);
+
+  void rollbackPostToWorkInProgress(DocFlowPluginInvokeParams params);
+
+  void performScrap(DocFlowPluginInvokeParams params);
+
+  void rollbackPerformScrap(DocFlowPluginInvokeParams params);
+
 }

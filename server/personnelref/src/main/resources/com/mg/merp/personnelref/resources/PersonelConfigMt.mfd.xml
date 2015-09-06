@@ -11,19 +11,27 @@
 <!-- Millennium Business Suite Anywhere System.                              -->
 <!-- ======================================================================= -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.personnelref.resources.formelements#PersonnelConfig.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.personnelref.resources.formelements#PersonnelConfig.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
-		<jfd:container id="allFields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >		
- 		<jfd:border style="bevel" type="raised" />
-	 		<jfd:field id="CostsAnl" fieldGroup="resource://com.mg.merp.personnelref.resources.formelements#PersonnelConfig.FormMt.CostsAnl" text=""/> 	  	
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
+  <jfd:container id="allFields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="CostsAnl"
+               fieldGroup="resource://com.mg.merp.personnelref.resources.formelements#PersonnelConfig.FormMt.CostsAnl"
+               text=""/>
 
-	  		<jfd:field id="BaseCurrency" fieldGroup="resource://com.mg.merp.personnelref.resources.formelements#PersonnelConfig.FormMt.СurrencyFields" text="resource://com.mg.merp.personnelref.resources.formelements#PersonnelConfig.FormMt.BaseCurrency" /> 
-	  		<jfd:field id="NatCurrency" text="resource://com.mg.merp.personnelref.resources.formelements#PersonnelConfig.FormMt.NatCurrency" /> 
- 	 		<jfd:field id="CurRateType" /> 
- 	  		<jfd:field id="CurRateAuthority" /> 
- 	  		<jfd:field id="CurrencyPrec" text="resource://com.mg.merp.personnelref.resources.formelements#PersonnelConfig.FormMt.CurrencyPrec" /> 
-		</jfd:container>
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:field id="BaseCurrency"
+               fieldGroup="resource://com.mg.merp.personnelref.resources.formelements#PersonnelConfig.FormMt.СurrencyFields"
+               text="resource://com.mg.merp.personnelref.resources.formelements#PersonnelConfig.FormMt.BaseCurrency"/>
+    <jfd:field id="NatCurrency"
+               text="resource://com.mg.merp.personnelref.resources.formelements#PersonnelConfig.FormMt.NatCurrency"/>
+    <jfd:field id="CurRateType"/>
+    <jfd:field id="CurRateAuthority"/>
+    <jfd:field id="CurrencyPrec"
+               text="resource://com.mg.merp.personnelref.resources.formelements#PersonnelConfig.FormMt.CurrencyPrec"/>
+  </jfd:container>
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

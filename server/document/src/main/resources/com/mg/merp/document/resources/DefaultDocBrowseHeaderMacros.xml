@@ -14,11 +14,12 @@
 <!-- $Id: DefaultDocBrowseHeaderMacros.xml,v 1.1 2008/12/24 14:15:51 safonov Exp $ -->
 
 <jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
-	<jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton" actionListener="Choose" visible="false" />
-	<jfd:include name="com/mg/framework/resources/StandartMaintenanceTreeToolbarMacros.xml" />
-	<jfd:filler id="toolbarFiller" alignment="expand_top" type="horizontalGlue" />
-	<jfd:include name="com/mg/framework/resources/StandartMaintenanceBrowseToolbarMacros.xml" />
-	<jfd:separator id="documentSeparator" />
-	<jfd:include name="com/mg/merp/document/resources/CommonDocBrowseToolbarItemsMacros.xml" />
-	<jfd:include runtime="com.mg.jet.ui.CustomActionsFormlet" />
+  <jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton"
+              actionListener="Choose" visible="false"/>
+  <jfd:include name="com/mg/framework/resources/StandartMaintenanceTreeToolbarMacros.xml"/>
+  <jfd:filler id="toolbarFiller" alignment="expand_top" type="horizontalGlue"/>
+  <jfd:include name="com/mg/framework/resources/StandartMaintenanceBrowseToolbarMacros.xml"/>
+  <jfd:separator id="documentSeparator"/>
+  <jfd:include name="com/mg/merp/document/resources/CommonDocBrowseToolbarItemsMacros.xml"/>
+  <jfd:include runtime="com.mg.jet.ui.CustomActionsFormlet"/>
 </jfd:toolBar>

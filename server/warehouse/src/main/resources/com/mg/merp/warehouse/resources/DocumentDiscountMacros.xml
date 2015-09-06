@@ -13,9 +13,11 @@
 
 <!-- $Id: DocumentDiscountMacros.xml,v 1.1 2007/09/07 12:30:12 safonov Exp $ -->
 
-<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
-	<jfd:field id="DiscountFolder" />		
-	<jfd:button id="ApplyDiscount" text="resource://com.mg.merp.warehouse.resources.dataitemlabels#Button.Assign" sameLine="true" actionListener="ApplyDiscount" /> 
-	<jfd:field id="DiscountOnDoc" alignment="expand_expand" /> 
-	<jfd:field id="DiscountOnLine" alignment="expand_expand" sameLine="true" readOnly="true" /> 
+<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
+  <jfd:field id="DiscountFolder"/>
+  <jfd:button id="ApplyDiscount"
+              text="resource://com.mg.merp.warehouse.resources.dataitemlabels#Button.Assign"
+              sameLine="true" actionListener="ApplyDiscount"/>
+  <jfd:field id="DiscountOnDoc" alignment="expand_expand"/>
+  <jfd:field id="DiscountOnLine" alignment="expand_expand" sameLine="true" readOnly="true"/>
 </jfd:wrap-macros>

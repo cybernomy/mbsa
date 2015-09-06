@@ -19,28 +19,28 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Периодичность начисления/удержания
- * 
+ *
  * @author leonova
  * @version $Id: FeePerioicity.java,v 1.1 2006/03/30 11:31:37 safonov Exp $
  */
-@DataItemName ("Salary.FeeRef.FeePerioicity")
+@DataItemName("Salary.FeeRef.FeePerioicity")
 public enum FeePerioicity {
-	/**
-	 * Постоянное
-	 */
-	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#FeePerioicity.Constant")
-	CONSTANT,
-	
-	/**
-	 * Ежеквартальное
-	 */
-	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#FeePerioicity.Quarterly")
-	QUARTERLY,
-	
-	/**
-	 * Ежегодное
-	 */
-	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#FeePerioicity.Yearly")
-	YEARLY
-	
+  /**
+   * Постоянное
+   */
+  @EnumConstantText("resource://com.mg.merp.salary.resources.dataitemlabels#FeePerioicity.Constant")
+  CONSTANT,
+
+  /**
+   * Ежеквартальное
+   */
+  @EnumConstantText("resource://com.mg.merp.salary.resources.dataitemlabels#FeePerioicity.Quarterly")
+  QUARTERLY,
+
+  /**
+   * Ежегодное
+   */
+  @EnumConstantText("resource://com.mg.merp.salary.resources.dataitemlabels#FeePerioicity.Yearly")
+  YEARLY
+
 }

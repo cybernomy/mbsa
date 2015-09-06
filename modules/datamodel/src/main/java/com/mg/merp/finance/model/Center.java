@@ -21,118 +21,123 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: Center.java,v 1.5 2006/10/28 07:42:00 leonova Exp $
  */
 public class Center extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.Integer Parent;
+  private java.lang.Integer Parent;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String UpCode;
+  private java.lang.String UpCode;
 
-	private java.lang.String Name;
+  private java.lang.String Name;
 
-	private CenterKind Kind;
+  private CenterKind Kind;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public Center() {
-	}
+  /**
+   * default constructor
+   */
+  public Center() {
+  }
 
-	/** constructor with id */
-	public Center(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public Center(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public java.lang.Integer getParent() {
-		return this.Parent;
-	}
+  /**
+   *
+   */
 
-	public void setParent(java.lang.Integer ParentId) {
-		this.Parent = ParentId;
-	}
+  public java.lang.Integer getParent() {
+    return this.Parent;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Finance.Center.Code")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  public void setParent(java.lang.Integer ParentId) {
+    this.Parent = ParentId;
+  }
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  /**
+   *
+   */
+  @DataItemName("Finance.Center.Code")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	public java.lang.String getUpCode() {
-		return this.UpCode;
-	}
+  /**
+   *
+   */
 
-	public void setUpCode(java.lang.String Upcode) {
-		this.UpCode = Upcode;
-	}
+  public java.lang.String getUpCode() {
+    return this.UpCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Finance.Center.Name")
-	public java.lang.String getName() {
-		return this.Name;
-	}
+  public void setUpCode(java.lang.String Upcode) {
+    this.UpCode = Upcode;
+  }
 
-	public void setName(java.lang.String Sname) {
-		this.Name = Sname;
-	}
+  /**
+   *
+   */
+  @DataItemName("Finance.Center.Name")
+  public java.lang.String getName() {
+    return this.Name;
+  }
 
-	/**
-	 * 
-	 */
+  public void setName(java.lang.String Sname) {
+    this.Name = Sname;
+  }
 
-	public CenterKind getKind() {
-		return this.Kind;
-	}
+  /**
+   *
+   */
 
-	public void setKind(CenterKind Kind) {
-		this.Kind = Kind;
-	}
+  public CenterKind getKind() {
+    return this.Kind;
+  }
+
+  public void setKind(CenterKind Kind) {
+    this.Kind = Kind;
+  }
 
 }

@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.WorkTimeNorm;
 
 /**
- * 
  * @author leonova
  * @version $Id: WorkTimeNormServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface WorkTimeNormServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<WorkTimeNorm, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<WorkTimeNorm, Integer> {
 
 }

@@ -22,9 +22,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class LaborClassSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/mfreference/LaborClass";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/mfreference/LaborClass";
+  }
 
 }

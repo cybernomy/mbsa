@@ -13,17 +13,23 @@
 
 <!-- $Id -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.personnelref.support.ui.StaffListPositionSearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.personnelref.resources.formelements#StaffListPositionSearchForm.Title" width="600" height="250">
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.personnelref.support.ui.StaffListPositionSearchForm"
+          orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.personnelref.resources.formelements#StaffListPositionSearchForm.Title"
+          width="600" height="250">
 
-	<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
-		<jfd:button id="сhooseButton" text="resource://com.mg.merp.personnelref.resources.formelements#Choose" actionListener="Choose" />
-	</jfd:toolBar>
-	
-	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
-		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true">
-		</jfd:maintenanceTree>
-		<jfd:table id="table" alignment="expand_expand" scroll="true">
-		</jfd:table>
-	</jfd:container>
+  <jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+    <jfd:button id="сhooseButton"
+                text="resource://com.mg.merp.personnelref.resources.formelements#Choose"
+                actionListener="Choose"/>
+  </jfd:toolBar>
+
+  <jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+    <jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true">
+    </jfd:maintenanceTree>
+    <jfd:table id="table" alignment="expand_expand" scroll="true">
+    </jfd:table>
+  </jfd:container>
 
 </jfd:form>

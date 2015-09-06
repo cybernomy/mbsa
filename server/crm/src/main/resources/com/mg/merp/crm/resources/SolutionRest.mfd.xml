@@ -13,17 +13,19 @@
 
 <!-- $Id: SolutionRest.mfd.xml,v 1.1 2007/08/17 08:50:07 alikaev Exp $-->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.crm.support.ui.SolutionRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.crm.resources.formelements#SolutionRest.Title"  >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.crm.support.ui.SolutionRest" orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.crm.resources.formelements#SolutionRest.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="name" />
-		<jfd:field id="problem"/>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />							
- 	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="name"/>
+    <jfd:field id="problem"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml"/>
 
 </jfd:form>

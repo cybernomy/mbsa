@@ -18,13 +18,13 @@ import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис перехватчика для добавления прав на элементы иерархии при создании
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: TreePermissionInterceptorServiceMBean.java,v 1.1 2006/12/29 07:43:06 safonov Exp $
  */
 public interface TreePermissionInterceptorServiceMBean extends ServiceMBean {
-	/**
-	 * имя сервиса
-	 */
-	final static String SERVICE_NAME = "merp:personnelref=TreePermissionInterceptorService";
+  /**
+   * имя сервиса
+   */
+  final static String SERVICE_NAME = "merp:personnelref=TreePermissionInterceptorService";
 }

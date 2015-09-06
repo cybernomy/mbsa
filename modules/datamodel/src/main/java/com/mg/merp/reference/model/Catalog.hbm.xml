@@ -1,148 +1,152 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.reference.model.CatalogType" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.reference.model.CatalogType</param>
-	</typedef>
-	
-	<typedef name="com.mg.merp.reference.model.TimePeriodKind" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.reference.model.TimePeriodKind</param>
-	</typedef>	
-	
-	<typedef name="com.mg.merp.reference.model.CatalogExpDate" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.reference.model.CatalogExpDate</param>
-	</typedef>	
+  <typedef name="com.mg.merp.reference.model.CatalogType"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.reference.model.CatalogType</param>
+  </typedef>
 
-	<typedef name="com.mg.merp.reference.model.MeasureControl" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.reference.model.MeasureControl</param>
-	</typedef>		
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <typedef name="com.mg.merp.reference.model.TimePeriodKind"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.reference.model.TimePeriodKind</param>
+  </typedef>
+
+  <typedef name="com.mg.merp.reference.model.CatalogExpDate"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.reference.model.CatalogExpDate</param>
+  </typedef>
+
+  <typedef name="com.mg.merp.reference.model.MeasureControl"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.reference.model.MeasureControl</param>
+  </typedef>
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.reference.model.Catalog" table="CATALOG">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="int">
-      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">CATALOG_ID_GEN</param>
       </generator>
     </id>
     <version name="SysVersion" type="timestamp">
       <column name="SYS_VERSION"/>
-    </version> 
+    </version>
     <many-to-one name="TaxGroup" class="com.mg.merp.reference.model.TaxGroup">
-      <column name="TAXGROUP_ID" not-null="false" />
+      <column name="TAXGROUP_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="WeightMeasure" class="com.mg.merp.reference.model.Measure">
-      <column name="WEIGHTMEASURE_ID" not-null="false" />
+      <column name="WEIGHTMEASURE_ID" not-null="false"/>
     </many-to-one>
-    <many-to-one name="Measure2"  class="com.mg.merp.reference.model.Measure">
-      <column name="MEASURE2_ID" not-null="false" />
+    <many-to-one name="Measure2" class="com.mg.merp.reference.model.Measure">
+      <column name="MEASURE2_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Folder" class="com.mg.merp.reference.model.CatalogFolder">
-      <column name="FOLDER_ID" not-null="false" />
+      <column name="FOLDER_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Okp" class="com.mg.merp.reference.model.Okp">
-      <column name="OKP_ID" not-null="false" />
+      <column name="OKP_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Measure1" class="com.mg.merp.reference.model.Measure">
-      <column name="MEASURE1_ID" not-null="false" />
+      <column name="MEASURE1_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Okdp" class="com.mg.merp.reference.model.Okdp">
-      <column name="OKDP_CODE" length="20" not-null="false" />
+      <column name="OKDP_CODE" length="20" not-null="false"/>
     </many-to-one>
     <many-to-one name="VolumeMeasure" class="com.mg.merp.reference.model.Measure">
-      <column name="VOLUMEMEASURE_ID" not-null="false" />
+      <column name="VOLUMEMEASURE_ID" not-null="false"/>
     </many-to-one>
     <property name="UpCode" type="java.lang.String">
-      <column name="UPCODE" length="20" not-null="true" unique="true" sql-type="CHAR" />
+      <column name="UPCODE" length="20" not-null="true" unique="true" sql-type="CHAR"/>
     </property>
     <property name="Code" type="java.lang.String">
-      <column name="CODE" length="20" not-null="true" sql-type="CHAR" />
+      <column name="CODE" length="20" not-null="true" sql-type="CHAR"/>
     </property>
     <property name="FullName" type="java.lang.String">
-      <column name="CNAME" length="80" not-null="true" sql-type="VARCHAR" />
+      <column name="CNAME" length="80" not-null="true" sql-type="VARCHAR"/>
     </property>
     <property name="GoodType" type="com.mg.merp.reference.model.CatalogType">
-      <column name="GOODTYPE" not-null="true" sql-type="SMALLINT" />
+      <column name="GOODTYPE" not-null="true" sql-type="SMALLINT"/>
     </property>
     <property name="BarCode" type="java.lang.String">
-      <column name="BARCODE" length="20" not-null="false" sql-type="CHAR" />
+      <column name="BARCODE" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="PluCode" type="java.lang.String">
-      <column name="PLUCODE" length="20" not-null="false" sql-type="CHAR" />
+      <column name="PLUCODE" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="IsHasWeight" type="boolean">
-      <column name="ISHASWEIGHT" not-null="false" sql-type="SMALLINT" />
+      <column name="ISHASWEIGHT" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="Weight" type="java.math.BigDecimal">
-      <column name="WEIGHT" scale="3" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="WEIGHT" scale="3" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="Volume" type="java.math.BigDecimal">
-      <column name="VOLUME" scale="3" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="VOLUME" scale="3" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="MarketingMargin" type="java.math.BigDecimal">
-      <column name="MARKETING_MARGIN" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="MARKETING_MARGIN" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="Validity" type="java.lang.Short">
-      <column name="VALIDITY" not-null="false" sql-type="SMALLINT" />
+      <column name="VALIDITY" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="IsNotInUse" type="boolean">
-      <column name="ISNOTINUSE" not-null="false" sql-type="SMALLINT" />
+      <column name="ISNOTINUSE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="ShelfLife" type="java.math.BigDecimal">
-      <column name="SHELFLIFE" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="SHELFLIFE" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="ShelfLifeMeas" type="com.mg.merp.reference.model.TimePeriodKind">
-      <column name="SHELFLIFE_MEAS" not-null="false" sql-type="SMALLINT" />
+      <column name="SHELFLIFE_MEAS" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="ExpDateCalcKind" type="com.mg.merp.reference.model.CatalogExpDate">
-      <column name="EXPDATE_CALC_KIND" not-null="false" sql-type="SMALLINT" />
+      <column name="EXPDATE_CALC_KIND" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="Articul" type="java.lang.String">
-      <column name="ARTICUL" length="20" not-null="false" sql-type="CHAR" />
+      <column name="ARTICUL" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="MeasureControl" type="com.mg.merp.reference.model.MeasureControl">
-      <column name="MEASURE_CONTROL" not-null="false" sql-type="SMALLINT" />
+      <column name="MEASURE_CONTROL" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="Packaged" type="boolean">
-      <column name="PACKAGED" not-null="true" sql-type="SMALLINT" />
+      <column name="PACKAGED" not-null="true" sql-type="SMALLINT"/>
     </property>
     <property name="UseSerialNum" type="boolean">
-      <column name="USE_SERIAL_NUM" not-null="false" sql-type="SMALLINT" />
+      <column name="USE_SERIAL_NUM" not-null="false" sql-type="SMALLINT"/>
     </property>
     <!-- many-to-one name="GenericItem" class="com.mg.merp.planning.model.GenericItem">
       <column name="GENERIC_ITEM_ID" not-null="false" />
     </many-to-one -->
     <many-to-one name="CustomsDeclaration" class="com.mg.merp.reference.model.CustomsDeclaration">
-      <column name="CUSTOMS_DECLARATION_ID" not-null="false" />
+      <column name="CUSTOMS_DECLARATION_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="CountryOfOrigin" class="com.mg.merp.reference.model.Country">
-      <column name="COUNTRY_OF_ORIGIN_ID" not-null="false" />
+      <column name="COUNTRY_OF_ORIGIN_ID" not-null="false"/>
     </many-to-one>
     <set name="SetOfCatalogPrice" inverse="true">
       <key on-delete="cascade">
-        <column name="CATALOG_ID" not-null="true" />
+        <column name="CATALOG_ID" not-null="true"/>
       </key>
-      <one-to-many class="com.mg.merp.reference.model.CatalogPrice" />
+      <one-to-many class="com.mg.merp.reference.model.CatalogPrice"/>
     </set>
     <set name="SetOfSetOfGood" inverse="true">
       <key on-delete="cascade">
-        <column name="GOOD_ID" not-null="true" />
+        <column name="GOOD_ID" not-null="true"/>
       </key>
-      <one-to-many class="com.mg.merp.reference.model.SetOfGood" />
+      <one-to-many class="com.mg.merp.reference.model.SetOfGood"/>
     </set>
     <set name="SetOfPacking" inverse="true">
-      <key  on-delete="cascade">
-        <column name="CATALOG_ID" not-null="true" />
+      <key on-delete="cascade">
+        <column name="CATALOG_ID" not-null="true"/>
       </key>
-      <one-to-many class="com.mg.merp.reference.model.Packing" />
+      <one-to-many class="com.mg.merp.reference.model.Packing"/>
     </set>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

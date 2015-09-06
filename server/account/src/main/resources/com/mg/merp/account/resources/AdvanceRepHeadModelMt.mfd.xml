@@ -13,31 +13,37 @@
 
 <!-- $Id: AdvanceRepHeadModelMt.mfd.xml,v 1.11 2008/03/17 14:37:25 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.AdvanceRepHeadModelMt" title="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadModel.FormMt.Title" helpTopic="account#advmodel_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.account.support.ui.AdvanceRepHeadModelMt"
+          title="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadModel.FormMt.Title"
+          helpTopic="account#advmodel_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title" >
- 			<jfd:border style="bevel" type="raised" />
- 	 	 	<jfd:include name="com/mg/merp/document/resources/ModelNameMacros.xml" /> 		
- 	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
-			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/CurrencyModelMacros.xml" />								
-			<jfd:field id="Company" />
-			<jfd:field id="To" sameLine="true" text="resource://com.mg.merp.account.resources.dataitemlabels#AdvanceRepHead.OrgUnit"/>	
-			<jfd:field id="From" text="resource://com.mg.merp.account.resources.dataitemlabels#AdvanceRepHead.Advance" />					
-			<jfd:field id="Acc" />		
-			<jfd:field id="CalcTaxesKind" sameLine="true"/>
- 			<jfd:field id="Purpose" />					 
-			<jfd:field id="AttachedDocs" />									
-			<jfd:field id="AttachedDocsSheets" sameLine="true"/>						 
-			<jfd:field id="Comments" />	
-			<jfd:field id="Description" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																													
-		</jfd:container>	
+  <jfd:container id="commonFields" layout="jfd:defaultMtLayout"
+                 tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:include name="com/mg/merp/document/resources/ModelNameMacros.xml"/>
+    <jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml"/>
+    <jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml"/>
+    <jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml"/>
+    <jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml"/>
+    <jfd:include name="com/mg/merp/document/resources/CurrencyModelMacros.xml"/>
+    <jfd:field id="Company"/>
+    <jfd:field id="To" sameLine="true"
+               text="resource://com.mg.merp.account.resources.dataitemlabels#AdvanceRepHead.OrgUnit"/>
+    <jfd:field id="From"
+               text="resource://com.mg.merp.account.resources.dataitemlabels#AdvanceRepHead.Advance"/>
+    <jfd:field id="Acc"/>
+    <jfd:field id="CalcTaxesKind" sameLine="true"/>
+    <jfd:field id="Purpose"/>
+    <jfd:field id="AttachedDocs"/>
+    <jfd:field id="AttachedDocsSheets" sameLine="true"/>
+    <jfd:field id="Comments"/>
+    <jfd:field id="Description"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/merp/document/resources/DefaultDocModelMaintenanceFooterMacros.xml" />
-	
+  <jfd:include name="com/mg/merp/document/resources/DefaultDocModelMaintenanceFooterMacros.xml"/>
+
 </jfd:form>

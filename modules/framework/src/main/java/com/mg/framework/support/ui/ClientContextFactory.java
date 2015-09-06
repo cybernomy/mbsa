@@ -19,30 +19,30 @@ import com.mg.framework.support.ui.ulc.ULCClientContext;
 
 /**
  * Фабрика среды пользовательского интерфейса
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ClientContextFactory.java,v 1.1 2006/11/11 10:36:20 safonov Exp $
  */
 public class ClientContextFactory {
-	private static ClientContextFactory instance = new ClientContextFactory();
-	private ClientContext defaultClientContext = new ULCClientContext();
-	
-	/**
-	 * получить объект-одиночку
-	 * 
-	 * @return	экземпляр фабрики
-	 */
-	public static ClientContextFactory getInstance() {
-		return instance;
-	}
-	
-	/**
-	 * получить среду пользовательского интерфейса
-	 * 
-	 * @return	среда пользовательского интерфейса
-	 */
-	public ClientContext getDefaultClientContext() {
-		return defaultClientContext;
-	}
-	
+  private static ClientContextFactory instance = new ClientContextFactory();
+  private ClientContext defaultClientContext = new ULCClientContext();
+
+  /**
+   * получить объект-одиночку
+   *
+   * @return экземпляр фабрики
+   */
+  public static ClientContextFactory getInstance() {
+    return instance;
+  }
+
+  /**
+   * получить среду пользовательского интерфейса
+   *
+   * @return среда пользовательского интерфейса
+   */
+  public ClientContext getDefaultClientContext() {
+    return defaultClientContext;
+  }
+
 }

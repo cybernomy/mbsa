@@ -1,34 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ===================================================================== -->
- <!--  Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.		   -->
- <!--  All rights reserved						   -->
- <!-- 									   -->
- <!--  This program is the proprietary and confidential information	   -->
- <!--  of BusinessTechnology, Ltd. and may be used and disclosed only	   -->
- <!--  as authorized in a license agreement authorizing and		   -->
- <!--  controlling such use and disclosure				   -->
- <!--									   -->
- <!--  Millennium Business Suite Anywhere System.			   -->
- <!-- ==================================================================== -->
+<!--  Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.		   -->
+<!--  All rights reserved						   -->
+<!-- 									   -->
+<!--  This program is the proprietary and confidential information	   -->
+<!--  of BusinessTechnology, Ltd. and may be used and disclosed only	   -->
+<!--  as authorized in a license agreement authorizing and		   -->
+<!--  controlling such use and disclosure				   -->
+<!--									   -->
+<!--  Millennium Business Suite Anywhere System.			   -->
+<!-- ==================================================================== -->
 
- <!-- $Id: WarehouseInventoryParamsDlg.mfd.xml,v 1.3 2007/11/15 13:05:47 konyashkina Exp $ -->
+<!-- $Id: WarehouseInventoryParamsDlg.mfd.xml,v 1.3 2007/11/15 13:05:47 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.warehouse.support.ui.WarehouseInventoryParamsDlg" title="resource://com.mg.merp.warehouse.resources.formelements#WarehouseInventoryParamsDlg.Title" width="340" height="540" helpTopic="warehouse#invactparam_html" >
-	
-	<jfd:container id="mainBox" layout="jfd:defaultMtLayout" alignment="expand_expand">
-	<jfd:border style="bevel" type="raised" />
-		<jfd:field id="catalogCodeFrom" text="resource://com.mg.merp.warehouse.resources.formelements#WarehouseInventoryParamsDlg.CatalogCodeFrom" fieldGroup="resource://com.mg.merp.warehouse.resources.formelements#WarehouseInventoryParamsDlg.CatalogCodeRange" />
-		<jfd:field id="catalogCodeTill" text="resource://com.mg.merp.warehouse.resources.formelements#WarehouseInventoryParamsDlg.CatalogCodeTill" alignment="expand_expand"/>
-		<jfd:container id="stockKinds" layout="jfd:defaultMtLayout" alignment="expand_expand" fieldGroup="resource://com.mg.merp.warehouse.resources.formelements#InventoryParams.StockInvKind">
-			<jfd:field id="stockInventoryKind" showLabel="false" orientation="ver"/>
-		</jfd:container>
-		<jfd:container id="molKinds" layout="jfd:defaultMtLayout" alignment="expand_expand" fieldGroup="resource://com.mg.merp.warehouse.resources.formelements#InventoryParams.MolInvKind">
-			<jfd:field id="molInventoryKind" showLabel="false" orientation="ver"/>
-		</jfd:container>
-		<jfd:field id="isIncludePositionsWithZeroRemn" text="resource://com.mg.merp.warehouse.resources.formelements#WarehouseInventoryParamsDlg.IsIncludePositionsWithZeroRemn" />
-		<jfd:field id="isDeleteSpecList" text="resource://com.mg.merp.warehouse.resources.formelements#WarehouseInventoryParamsDlg.IsDeleteSpecList" />
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
-	
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5"
+          controller="com.mg.merp.warehouse.support.ui.WarehouseInventoryParamsDlg"
+          title="resource://com.mg.merp.warehouse.resources.formelements#WarehouseInventoryParamsDlg.Title"
+          width="340" height="540" helpTopic="warehouse#invactparam_html">
+
+  <jfd:container id="mainBox" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="catalogCodeFrom"
+               text="resource://com.mg.merp.warehouse.resources.formelements#WarehouseInventoryParamsDlg.CatalogCodeFrom"
+               fieldGroup="resource://com.mg.merp.warehouse.resources.formelements#WarehouseInventoryParamsDlg.CatalogCodeRange"/>
+    <jfd:field id="catalogCodeTill"
+               text="resource://com.mg.merp.warehouse.resources.formelements#WarehouseInventoryParamsDlg.CatalogCodeTill"
+               alignment="expand_expand"/>
+    <jfd:container id="stockKinds" layout="jfd:defaultMtLayout" alignment="expand_expand"
+                   fieldGroup="resource://com.mg.merp.warehouse.resources.formelements#InventoryParams.StockInvKind">
+      <jfd:field id="stockInventoryKind" showLabel="false" orientation="ver"/>
+    </jfd:container>
+    <jfd:container id="molKinds" layout="jfd:defaultMtLayout" alignment="expand_expand"
+                   fieldGroup="resource://com.mg.merp.warehouse.resources.formelements#InventoryParams.MolInvKind">
+      <jfd:field id="molInventoryKind" showLabel="false" orientation="ver"/>
+    </jfd:container>
+    <jfd:field id="isIncludePositionsWithZeroRemn"
+               text="resource://com.mg.merp.warehouse.resources.formelements#WarehouseInventoryParamsDlg.IsIncludePositionsWithZeroRemn"/>
+    <jfd:field id="isDeleteSpecList"
+               text="resource://com.mg.merp.warehouse.resources.formelements#WarehouseInventoryParamsDlg.IsDeleteSpecList"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
+
 </jfd:form>

@@ -14,39 +14,41 @@
  */
 package com.mg.merp.account.support.ui;
 
-import java.util.Date;
-
 import com.mg.framework.generic.ui.DefaultDialog;
+
+import java.util.Date;
 
 /**
  * Контроллер диалога "Диапазон дат"
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: QueryDateRangeDlg.java,v 1.1 2008/03/27 10:40:42 alikaev Exp $
  */
 public class QueryDateRangeDlg extends DefaultDialog {
 
-	private Date beginDate;
-	
-	private Date endDate;
+  private Date beginDate;
 
-	public QueryDateRangeDlg() {
-	}
+  private Date endDate;
 
-	/**
-	 * С даты
-	 * @return beginDate
-	 */
-	public Date getBeginDate() {
-		return beginDate;
-	}
+  public QueryDateRangeDlg() {
+  }
 
-	/**
-	 * По дату
-	 * @return endDate
-	 */
-	public Date getEndDate() {
-		return endDate;
-	}
-	
+  /**
+   * С даты
+   *
+   * @return beginDate
+   */
+  public Date getBeginDate() {
+    return beginDate;
+  }
+
+  /**
+   * По дату
+   *
+   * @return endDate
+   */
+  public Date getEndDate() {
+    return endDate;
+  }
+
 }

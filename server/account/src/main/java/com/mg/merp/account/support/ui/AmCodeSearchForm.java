@@ -24,32 +24,32 @@ import com.mg.merp.account.model.AmCode;
 
 /**
  * Контроллер формы поиска бизнес-компонента "Шифры амортизации"
- * 
+ *
  * @author leonova
  * @author Konstantin S. Alikaev
  * @version $Id: AmCodeSearchForm.java,v 1.3 2009/02/09 09:25:16 safonov Exp $
  */
 public class AmCodeSearchForm extends AbstractSearchForm {
-	private final static String LOAD_AMCODE_EJBQL = "from AmCode"; //$NON-NLS-1$
-	private final static String[] fieldList = new String[] {"Code", "CName"}; //$NON-NLS-1$ $NON-NLS-2$ $NON-NLS-3$
-	private DefaultTableController amcodeList;
-	
-	public AmCodeSearchForm() {
-		amcodeList = new DefaultTableController(new DefaultEntityListTableModel<AmCode>() {
-			@Override
-			protected void doLoad() {
-				setEntityList(MiscUtils.convertUncheckedList(AmCode.class, OrmTemplate.getInstance().find(LOAD_AMCODE_EJBQL)), fieldList);
-			}
-		});
-		amcodeList.getModel().load();
-	}
+  private final static String LOAD_AMCODE_EJBQL = "from AmCode"; //$NON-NLS-1$
+  private final static String[] fieldList = new String[]{"Code", "CName"}; //$NON-NLS-1$ $NON-NLS-2$ $NON-NLS-3$
+  private DefaultTableController amcodeList;
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchForm#getSearchedEntities()
-	 */
-	@Override
-	protected PersistentObject[] getSearchedEntities() {
-		return ((DefaultEntityListTableModel<?>) amcodeList.getModel()).getSelectedEntities();
-	}
+  public AmCodeSearchForm() {
+    amcodeList = new DefaultTableController(new DefaultEntityListTableModel<AmCode>() {
+      @Override
+      protected void doLoad() {
+        setEntityList(MiscUtils.convertUncheckedList(AmCode.class, OrmTemplate.getInstance().find(LOAD_AMCODE_EJBQL)), fieldList);
+      }
+    });
+    amcodeList.getModel().load();
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchForm#getSearchedEntities()
+   */
+  @Override
+  protected PersistentObject[] getSearchedEntities() {
+    return ((DefaultEntityListTableModel<?>) amcodeList.getModel()).getSelectedEntities();
+  }
 
 }

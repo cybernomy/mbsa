@@ -23,73 +23,73 @@ import com.mg.merp.reference.model.Contractor;
 
 /**
  * Контроллер формы условий отбора акта выпуска готовой продукции
- * 
+ *
  * @author leonova
- * @version $Id: OutputProductHeadRest.java,v 1.3 2007/07/31 06:31:06 safonov Exp $ 
+ * @version $Id: OutputProductHeadRest.java,v 1.3 2007/07/31 06:31:06 safonov Exp $
  */
 public class OutputProductHeadRest extends ManufactureDocumentRest {
-	protected Crew crew = null;
-	@DataItemName("Manufacture.OutputProductHead.Oper")
-	protected JobRoute oper = null;
-	protected WorkCenter workCenter = null;
-	protected Job Job = null; //названо по JavaBean NC, чтобы работал SearchHelp
-	@DataItemName("Manufacture.OutputProductHead.Contractor")
-	protected Contractor contractor = null;
-	@DataItemName("Manufacture.OutputProductHead.Employee")
-	protected Contractor employee = null;
-	
-	@Override
-	protected void doClearRestrictionItem() {
-		super.doClearRestrictionItem();
-		this.crew = null;
-		this.oper = null;
-		this.workCenter = null;
-		this.Job = null;
-		this.contractor = null;
-		this.employee = null;
-	}
+  protected Crew crew = null;
+  @DataItemName("Manufacture.OutputProductHead.Oper")
+  protected JobRoute oper = null;
+  protected WorkCenter workCenter = null;
+  protected Job Job = null; //названо по JavaBean NC, чтобы работал SearchHelp
+  @DataItemName("Manufacture.OutputProductHead.Contractor")
+  protected Contractor contractor = null;
+  @DataItemName("Manufacture.OutputProductHead.Employee")
+  protected Contractor employee = null;
 
-	/**
-	 * @return Returns the contractor.
-	 */
-	public Contractor getContractor() {
-		return contractor;
-	}
+  @Override
+  protected void doClearRestrictionItem() {
+    super.doClearRestrictionItem();
+    this.crew = null;
+    this.oper = null;
+    this.workCenter = null;
+    this.Job = null;
+    this.contractor = null;
+    this.employee = null;
+  }
 
-	/**
-	 * @return Returns the crew.
-	 */
-	public Crew getCrew() {
-		return crew;
-	}
+  /**
+   * @return Returns the contractor.
+   */
+  public Contractor getContractor() {
+    return contractor;
+  }
 
-	/**
-	 * @return Returns the employee.
-	 */
-	public Contractor getEmployee() {
-		return employee;
-	}
+  /**
+   * @return Returns the crew.
+   */
+  public Crew getCrew() {
+    return crew;
+  }
 
-	/**
-	 * @return Returns the job.
-	 */
-	public Job getJob() {
-		return Job;
-	}
+  /**
+   * @return Returns the employee.
+   */
+  public Contractor getEmployee() {
+    return employee;
+  }
 
-	/**
-	 * @return Returns the oper.
-	 */
-	public JobRoute getOper() {
-		return oper;
-	}
+  /**
+   * @return Returns the job.
+   */
+  public Job getJob() {
+    return Job;
+  }
 
-	/**
-	 * @return Returns the workCenter.
-	 */
-	public WorkCenter getWorkCenter() {
-		return workCenter;
-	}
+  /**
+   * @return Returns the oper.
+   */
+  public JobRoute getOper() {
+    return oper;
+  }
+
+  /**
+   * @return Returns the workCenter.
+   */
+  public WorkCenter getWorkCenter() {
+    return workCenter;
+  }
 
 
 }

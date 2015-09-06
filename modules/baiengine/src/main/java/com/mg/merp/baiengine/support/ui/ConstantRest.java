@@ -19,29 +19,29 @@ import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 
 /**
  * Контроллер условий отбора для бизнес-компонента "Константы"
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: ConstantRest.java,v 1.1 2007/08/21 12:56:51 alikaev Exp $
  */
 public class ConstantRest extends DefaultHierarhyRestrictionForm {
-	@DataItemName("BAi.Code")
-	public java.lang.String code = null;
-	@DataItemName("BAi.ConstValue.StartDate")
-	public java.util.Date startDate = null;
+  @DataItemName("BAi.Code")
+  public java.lang.String code = null;
+  @DataItemName("BAi.ConstValue.StartDate")
+  public java.util.Date startDate = null;
 
-	@Override
-	protected void doClearRestrictionItem() {
-		super.doClearRestrictionItem();
-		this.code = null;
-		this.startDate = null;
-	}
+  @Override
+  protected void doClearRestrictionItem() {
+    super.doClearRestrictionItem();
+    this.code = null;
+    this.startDate = null;
+  }
 
-	public java.lang.String getCode() {
-		return code;
-	}
+  public java.lang.String getCode() {
+    return code;
+  }
 
-	public java.util.Date getStartDate() {
-		return startDate;
-	}
-	
+  public java.util.Date getStartDate() {
+    return startDate;
+  }
+
 }

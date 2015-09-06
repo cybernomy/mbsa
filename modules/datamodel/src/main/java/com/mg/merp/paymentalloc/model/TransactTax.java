@@ -18,129 +18,133 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Модель бизнес-компонента "Налоги в спецификации связанных документов"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: TransactTax.java,v 1.5 2007/05/31 14:10:30 sharapov Exp $
  */
 public class TransactTax extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields    
+  // Fields
 
-	private java.lang.Integer Id;
-	private com.mg.merp.document.model.DocumentSpecTax TaxSumm;
-	private com.mg.merp.paymentalloc.model.TransactSpec TrSpec;
-	private com.mg.merp.reference.model.Tax Tax;
-	private com.mg.merp.core.model.SysClient SysClient;
-	private java.math.BigDecimal TotalSum;
-	private java.math.BigDecimal AllocSum;
-
-
-	// Constructors
-
-	/** default constructor */
-	public TransactTax() {
-	}
-
-	/** constructor with id */
-	public TransactTax(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  private java.lang.Integer Id;
+  private com.mg.merp.document.model.DocumentSpecTax TaxSumm;
+  private com.mg.merp.paymentalloc.model.TransactSpec TrSpec;
+  private com.mg.merp.reference.model.Tax Tax;
+  private com.mg.merp.core.model.SysClient SysClient;
+  private java.math.BigDecimal TotalSum;
+  private java.math.BigDecimal AllocSum;
 
 
-	// Property accessors
+  // Constructors
 
-	/**
-	 * 
-	 */
-	@DataItemName("ID") //$NON-NLS-1$
-	public java.lang.Integer getId () {
-		return this.Id;
-	}
+  /**
+   * default constructor
+   */
+  public TransactTax() {
+  }
 
-	/**
-	 * 
-	 * @param Id
-	 */
-	public void setId (java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public TransactTax(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 * @return
-	 */
-	public com.mg.merp.document.model.DocumentSpecTax getTaxSumm () {
-		return this.TaxSumm;
-	}
 
-	public void setTaxSumm (com.mg.merp.document.model.DocumentSpecTax Taxsumm) {
-		this.TaxSumm = Taxsumm;
-	}
+  // Property accessors
 
-	/**
-	 * 
-	 * @return
-	 */
-	public com.mg.merp.paymentalloc.model.TransactSpec getTrSpec () {
-		return this.TrSpec;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID") //$NON-NLS-1$
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	public void setTrSpec (com.mg.merp.paymentalloc.model.TransactSpec PmaTrspec) {
-		this.TrSpec = PmaTrspec;
-	}
+  /**
+   *
+   * @param Id
+   */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 * @return
-	 */
-	public com.mg.merp.reference.model.Tax getTax () {
-		return this.Tax;
-	}
+  /**
+   *
+   * @return
+   */
+  public com.mg.merp.document.model.DocumentSpecTax getTaxSumm() {
+    return this.TaxSumm;
+  }
 
-	public void setTax (com.mg.merp.reference.model.Tax Tax) {
-		this.Tax = Tax;
-	}
+  public void setTaxSumm(com.mg.merp.document.model.DocumentSpecTax Taxsumm) {
+    this.TaxSumm = Taxsumm;
+  }
 
-	/**
-	 * 
-	 * @return
-	 */
-	public com.mg.merp.core.model.SysClient getSysClient () {
-		return this.SysClient;
-	}
+  /**
+   *
+   * @return
+   */
+  public com.mg.merp.paymentalloc.model.TransactSpec getTrSpec() {
+    return this.TrSpec;
+  }
 
-	public void setSysClient (com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public void setTrSpec(com.mg.merp.paymentalloc.model.TransactSpec PmaTrspec) {
+    this.TrSpec = PmaTrspec;
+  }
 
-	/**
-	 * 
-	 * @return
-	 */
-	@DataItemName("PaymentAlloc.TransactTax.TotalSum") //$NON-NLS-1$
-	public java.math.BigDecimal getTotalSum () {
-		return this.TotalSum;
-	}
+  /**
+   *
+   * @return
+   */
+  public com.mg.merp.reference.model.Tax getTax() {
+    return this.Tax;
+  }
 
-	public void setTotalSum (java.math.BigDecimal Totalsum) {
-		this.TotalSum = Totalsum;
-	}
+  public void setTax(com.mg.merp.reference.model.Tax Tax) {
+    this.Tax = Tax;
+  }
 
-	/**
-	 * 
-	 * @return
-	 */
-	@DataItemName("PaymentAlloc.TransactTax.AllocSum") //$NON-NLS-1$
-	public java.math.BigDecimal getAllocSum () {
-		return this.AllocSum;
-	}
+  /**
+   *
+   * @return
+   */
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 * @param Allocsum
-	 */
-	public void setAllocSum (java.math.BigDecimal Allocsum) {
-		this.AllocSum = Allocsum;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
+
+  /**
+   *
+   * @return
+   */
+  @DataItemName("PaymentAlloc.TransactTax.TotalSum") //$NON-NLS-1$
+  public java.math.BigDecimal getTotalSum() {
+    return this.TotalSum;
+  }
+
+  public void setTotalSum(java.math.BigDecimal Totalsum) {
+    this.TotalSum = Totalsum;
+  }
+
+  /**
+   *
+   * @return
+   */
+  @DataItemName("PaymentAlloc.TransactTax.AllocSum") //$NON-NLS-1$
+  public java.math.BigDecimal getAllocSum() {
+    return this.AllocSum;
+  }
+
+  /**
+   *
+   * @param Allocsum
+   */
+  public void setAllocSum(java.math.BigDecimal Allocsum) {
+    this.AllocSum = Allocsum;
+  }
 
 }

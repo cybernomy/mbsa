@@ -17,12 +17,10 @@ package com.mg.merp.salary;
 import com.mg.merp.salary.model.CalcListSectionRef;
 
 /**
- * 
  * @author leonova
  * @version $Id: CalcListSectionRefServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface CalcListSectionRefServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<CalcListSectionRef, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<CalcListSectionRef, Integer> {
 
 }

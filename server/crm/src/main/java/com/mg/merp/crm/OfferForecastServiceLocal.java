@@ -17,12 +17,10 @@ package com.mg.merp.crm;
 import com.mg.merp.crm.model.OfferForecast;
 
 /**
- * 
  * @author leonova
  * @version $Id: OfferForecastServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface OfferForecastServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<OfferForecast, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<OfferForecast, Integer> {
 
 }

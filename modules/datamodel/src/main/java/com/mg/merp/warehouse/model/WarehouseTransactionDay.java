@@ -14,96 +14,96 @@
  */
 package com.mg.merp.warehouse.model;
 
+import com.mg.framework.api.annotations.DataItemName;
+
 import java.io.Serializable;
 import java.util.Date;
-
-import com.mg.framework.api.annotations.DataItemName;
 
 
 /**
  * Модель бизнес-компонента "Операционные дни склада"
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: WarehouseTransactionDay.java,v 1.1 2007/11/29 08:38:53 alikaev Exp $
  */
 @DataItemName("Warehouse.WarehouseTransactionDay")
 public class WarehouseTransactionDay extends com.mg.framework.service.PersistentObjectHibernate implements Serializable {
-	/**
-	 * идентификатор
-	 */
-	private int id;
-	
-	/**
-	 * склад
-	 */
-	private Warehouse stock;
-	
-	/**
-	 * закрытый день
-	 */
-	private Date closedDay;
-	
-	/**
-	 * кто закрыл
-	 */
-	private String userStockClosed;
-	
-	/**
-	 * дата закрытия
-	 */
-	private Date operationDate;
+  /**
+   * идентификатор
+   */
+  private int id;
 
-	
-	public WarehouseTransactionDay() {
-	}
+  /**
+   * склад
+   */
+  private Warehouse stock;
 
-	public WarehouseTransactionDay(int id) {
-		this.id = id;
-	}
+  /**
+   * закрытый день
+   */
+  private Date closedDay;
 
-	@DataItemName("ID")
-	public int getId() {
-		return id;
-	}
+  /**
+   * кто закрыл
+   */
+  private String userStockClosed;
 
-	public void setId(int id) {
-		this.id = id;
-	}
+  /**
+   * дата закрытия
+   */
+  private Date operationDate;
 
-	@DataItemName("Warehouse.WarehouseTransactionDay.Stock")
-	public Warehouse getStock() {
-		return stock;
-	}
 
-	public void setStock(Warehouse stock) {
-		this.stock = stock;
-	}
+  public WarehouseTransactionDay() {
+  }
 
-	@DataItemName("Warehouse.WarehouseTransactionDay.ClosedDay")
-	public Date getClosedDay() {
-		return closedDay;
-	}
+  public WarehouseTransactionDay(int id) {
+    this.id = id;
+  }
 
-	public void setClosedDay(Date closedDay) {
-		this.closedDay = closedDay;
-	}
+  @DataItemName("ID")
+  public int getId() {
+    return id;
+  }
 
-	@DataItemName("Warehouse.WarehouseTransactionDay.UserStockClosed")
-	public String getUserStockClosed() {
-		return userStockClosed;
-	}
+  public void setId(int id) {
+    this.id = id;
+  }
 
-	public void setUserStockClosed(String userStockClosed) {
-		this.userStockClosed = userStockClosed;
-	}
+  @DataItemName("Warehouse.WarehouseTransactionDay.Stock")
+  public Warehouse getStock() {
+    return stock;
+  }
 
-	@DataItemName("Warehouse.WarehouseTransactionDay.OperationDate")
-	public Date getOperationDate() {
-		return operationDate;
-	}
+  public void setStock(Warehouse stock) {
+    this.stock = stock;
+  }
 
-	public void setOperationDate(Date operationDate) {
-		this.operationDate = operationDate;
-	}
+  @DataItemName("Warehouse.WarehouseTransactionDay.ClosedDay")
+  public Date getClosedDay() {
+    return closedDay;
+  }
+
+  public void setClosedDay(Date closedDay) {
+    this.closedDay = closedDay;
+  }
+
+  @DataItemName("Warehouse.WarehouseTransactionDay.UserStockClosed")
+  public String getUserStockClosed() {
+    return userStockClosed;
+  }
+
+  public void setUserStockClosed(String userStockClosed) {
+    this.userStockClosed = userStockClosed;
+  }
+
+  @DataItemName("Warehouse.WarehouseTransactionDay.OperationDate")
+  public Date getOperationDate() {
+    return operationDate;
+  }
+
+  public void setOperationDate(Date operationDate) {
+    this.operationDate = operationDate;
+  }
 
 }

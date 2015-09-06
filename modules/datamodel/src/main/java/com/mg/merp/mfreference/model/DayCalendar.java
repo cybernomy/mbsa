@@ -22,78 +22,83 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("MfReference.DayCalendar")
 public class DayCalendar extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String DayCalName;
+  private java.lang.String DayCalName;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public DayCalendar() {
-	}
+  /**
+   * default constructor
+   */
+  public DayCalendar() {
+  }
 
-	/** constructor with id */
-	public DayCalendar(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public DayCalendar(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	@DataItemName("MfReference.DayCalendar.Code")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  /**
+   *
+   */
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  @DataItemName("MfReference.DayCalendar.Code")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	@DataItemName("MfReference.DayCalendar.DayCalName")
-	public java.lang.String getDayCalName() {
-		return this.DayCalName;
-	}
+  /**
+   *
+   */
 
-	public void setDayCalName(java.lang.String DayCalName) {
-		this.DayCalName = DayCalName;
-	}
+  @DataItemName("MfReference.DayCalendar.DayCalName")
+  public java.lang.String getDayCalName() {
+    return this.DayCalName;
+  }
+
+  public void setDayCalName(java.lang.String DayCalName) {
+    this.DayCalName = DayCalName;
+  }
 }

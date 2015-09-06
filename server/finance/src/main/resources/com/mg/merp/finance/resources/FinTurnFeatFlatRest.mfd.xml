@@ -13,24 +13,28 @@
 
 <!-- $Id: FinTurnFeatFlatRest.mfd.xml,v 1.5 2007/09/19 05:03:33 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.finance.support.ui.FinTurnFeatFlatRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.finance.resources.formelements#Cond.FinTurnFeatFlat" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.finance.support.ui.FinTurnFeatFlatRest" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.finance.resources.formelements#Cond.FinTurnFeatFlat">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="periodBegin"  />	
-		<jfd:field id="periodEnd"  sameLine="true"/>	
-		<jfd:container id="finFeatFields" layout="jfd:box" columns="1" label="resource://com.mg.merp.finance.resources.formelements#TurnFeat.Acc">
-			<jfd:field id="featAccCode" showLabel="false"/>
-			<jfd:field id="featAnl1Code" showLabel="false"/>
-			<jfd:field id="featAnl2Code" showLabel="false"/>
-			<jfd:field id="featAnl3Code" showLabel="false"/>
-			<jfd:field id="featAnl4Code" showLabel="false"/>						
-			<jfd:field id="featAnl5Code" showLabel="false"/>		
-		</jfd:container>		
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="periodBegin"/>
+    <jfd:field id="periodEnd" sameLine="true"/>
+    <jfd:container id="finFeatFields" layout="jfd:box" columns="1"
+                   label="resource://com.mg.merp.finance.resources.formelements#TurnFeat.Acc">
+      <jfd:field id="featAccCode" showLabel="false"/>
+      <jfd:field id="featAnl1Code" showLabel="false"/>
+      <jfd:field id="featAnl2Code" showLabel="false"/>
+      <jfd:field id="featAnl3Code" showLabel="false"/>
+      <jfd:field id="featAnl4Code" showLabel="false"/>
+      <jfd:field id="featAnl5Code" showLabel="false"/>
+    </jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml"/>
 
 </jfd:form>

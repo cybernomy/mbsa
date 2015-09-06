@@ -19,33 +19,33 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Типы подразделений
- * 
+ *
  * @author leonova
  * @version $Id: OrgUnitType.java,v 1.1 2006/03/29 13:06:23 safonov Exp $
  */
-@DataItemName ("Reference.OrgUnit.OrgUnitType")
+@DataItemName("Reference.OrgUnit.OrgUnitType")
 public enum OrgUnitType {
-	/**
-	 * Головное предприятие
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#OrgUnit.Type.Organization")
-	ORGANIZATION,
-	
-	/**
-	 * Филиал
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#OrgUnit.Type.Branch")
-	BRANCH,
-	
-	/**
-	 * Подразделение
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#OrgUnit.Type.OrgUnit")
-	ORGUNIT,
-	
-	/**
-	 * Отдел, служба
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#OrgUnit.Type.Department")
-	DEPARTMENT
+  /**
+   * Головное предприятие
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#OrgUnit.Type.Organization")
+  ORGANIZATION,
+
+  /**
+   * Филиал
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#OrgUnit.Type.Branch")
+  BRANCH,
+
+  /**
+   * Подразделение
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#OrgUnit.Type.OrgUnit")
+  ORGUNIT,
+
+  /**
+   * Отдел, служба
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#OrgUnit.Type.Department")
+  DEPARTMENT
 }

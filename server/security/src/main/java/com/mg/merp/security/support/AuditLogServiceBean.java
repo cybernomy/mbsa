@@ -15,18 +15,18 @@
 
 package com.mg.merp.security.support;
 
+import com.mg.merp.core.model.SysAudit;
+import com.mg.merp.security.AuditLogServiceLocal;
+
 import java.math.BigDecimal;
 
 import javax.ejb.Stateless;
-
-import com.mg.merp.core.model.SysAudit;
-import com.mg.merp.security.AuditLogServiceLocal;
 
 /**
  * @author Oleg V. Safonov
  * @version $Id: AuditLogServiceBean.java,v 1.3 2007/02/24 14:20:52 safonov Exp $
  */
-@Stateless(name="merp/security/AuditLogService")
+@Stateless(name = "merp/security/AuditLogService")
 public class AuditLogServiceBean extends com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean<SysAudit, BigDecimal> implements AuditLogServiceLocal {
 
 }

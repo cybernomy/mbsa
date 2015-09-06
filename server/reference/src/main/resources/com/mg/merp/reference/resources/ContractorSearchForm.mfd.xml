@@ -13,15 +13,24 @@
 
 <!-- $Id: ContractorSearchForm.mfd.xml,v 1.1 2006/12/02 12:11:00 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.reference.support.ui.ContractorSearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.reference.resources.formelements#ContractorSearchHelp.Title" width="500" height="350" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.reference.support.ui.ContractorSearchForm" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.reference.resources.formelements#ContractorSearchHelp.Title"
+          width="500" height="350">
 
-	<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
-		<jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton" actionListener="Choose" />
-		<jfd:button id="refreshButton" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="Refresh" />
-	</jfd:toolBar>
+  <jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+    <jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton"
+                actionListener="Choose"/>
+    <jfd:button id="refreshButton"
+                text="resource://com.mg.framework.resources.messages#RefreshButton"
+                actionListener="Refresh"/>
+  </jfd:toolBar>
 
-	<jfd:radioButtonGroup id="contractorKind" alignment="expand_top" actionListener="Refresh" orientation="hor" />
+  <jfd:radioButtonGroup id="contractorKind" alignment="expand_top" actionListener="Refresh"
+                        orientation="hor"/>
 
-	<jfd:table id="contractorList" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" />
+  <jfd:table id="contractorList" alignment="expand_expand" scroll="true"
+             autoResize="subsequent_columns"/>
 
 </jfd:form>

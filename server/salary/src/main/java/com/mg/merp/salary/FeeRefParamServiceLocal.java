@@ -18,16 +18,16 @@ import com.mg.merp.salary.model.FeeRefParam;
 
 /**
  * Сервис бизнес-компонента "Параметр начисления/удержания"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: FeeRefParamServiceLocal.java,v 1.2 2007/07/09 08:20:19 sharapov Exp $
  */
 public interface FeeRefParamServiceLocal extends com.mg.framework.api.DataBusinessObjectService<FeeRefParam, Integer> {
 
-	/**
-	 * Имя сервиса
-	 */
-	final static String LOCAL_SERVICE_NAME= "merp/salary/FeeRefParam"; //$NON-NLS-1$
-	
+  /**
+   * Имя сервиса
+   */
+  final static String LOCAL_SERVICE_NAME = "merp/salary/FeeRefParam"; //$NON-NLS-1$
+
 }

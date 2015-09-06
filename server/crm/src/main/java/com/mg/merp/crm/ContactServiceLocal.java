@@ -18,25 +18,27 @@ import com.mg.merp.crm.model.Contact;
 import com.mg.merp.crm.model.Relation;
 
 /**
- * Сервис бизнес-компонента "Контактные лица" 
- * 
+ * Сервис бизнес-компонента "Контактные лица"
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: ContactServiceLocal.java,v 1.2 2007/02/07 06:58:56 sharapov Exp $
  */
 public interface ContactServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Contact, Integer> {
 
-	/**
-	 * Добавить связь "отношение - контактное лицо"
-	 * @param contact - контактное лицо
-	 * @param relation - отношение
-	 */
-	void linkRelation(Contact contact, Relation relation);
+  /**
+   * Добавить связь "отношение - контактное лицо"
+   *
+   * @param contact  - контактное лицо
+   * @param relation - отношение
+   */
+  void linkRelation(Contact contact, Relation relation);
 
-	/**
-	 * Удалить связь "отношение - контактное лицо"
-	 * @param contact - контактное лицо
-	 * @param relation - отношение
-	 */
-	void unLinkRelation(Contact contact, Relation relation);
+  /**
+   * Удалить связь "отношение - контактное лицо"
+   *
+   * @param contact  - контактное лицо
+   * @param relation - отношение
+   */
+  void unLinkRelation(Contact contact, Relation relation);
 }

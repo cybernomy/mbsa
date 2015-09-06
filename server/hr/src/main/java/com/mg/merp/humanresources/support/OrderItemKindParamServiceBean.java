@@ -14,29 +14,29 @@
  */
 package com.mg.merp.humanresources.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryAttribute;
 import com.mg.merp.humanresources.OrderItemKindParamServiceLocal;
 import com.mg.merp.humanresources.model.OrderItemKindParam;
 
+import javax.ejb.Stateless;
+
 /**
- * Реализация бизнес-компонента "Параметр вида пункта приказа" 
- * 
+ * Реализация бизнес-компонента "Параметр вида пункта приказа"
+ *
  * @author Artem V. Sharapov
  * @version $Id: OrderItemKindParamServiceBean.java,v 1.5 2007/08/27 13:34:01 sharapov Exp $
  */
-@Stateless(name="merp/humanresources/OrderItemKindParamService") //$NON-NLS-1$
+@Stateless(name = "merp/humanresources/OrderItemKindParamService") //$NON-NLS-1$
 public class OrderItemKindParamServiceBean extends AbstractPOJODataBusinessObjectServiceBean<OrderItemKindParam, Integer> implements OrderItemKindParamServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, com.mg.framework.api.orm.PersistentObject)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, OrderItemKindParam entity) {
-		context.addRule(new MandatoryAttribute(entity, "Name")); //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, com.mg.framework.api.orm.PersistentObject)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, OrderItemKindParam entity) {
+    context.addRule(new MandatoryAttribute(entity, "Name")); //$NON-NLS-1$
+  }
 
 }

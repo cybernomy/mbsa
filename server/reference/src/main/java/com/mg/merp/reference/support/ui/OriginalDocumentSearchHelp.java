@@ -18,13 +18,13 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
  * @author leonova
- * @version $Id: OriginalDocumentSearchHelp.java,v 1.1 2006/07/10 12:21:09 leonova Exp $ 
+ * @version $Id: OriginalDocumentSearchHelp.java,v 1.1 2006/07/10 12:21:09 leonova Exp $
  */
 public class OriginalDocumentSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/reference/OriginalDocument";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/reference/OriginalDocument";
+  }
 
 }

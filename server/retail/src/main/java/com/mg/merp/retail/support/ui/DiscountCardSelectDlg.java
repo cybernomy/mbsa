@@ -14,34 +14,34 @@
  */
 package com.mg.merp.retail.support.ui;
 
-import java.util.List;
-
 import com.mg.framework.generic.ui.DefaultDialog;
 import com.mg.framework.support.ui.widget.DefaultTableController;
 import com.mg.merp.discount.model.Card;
 
+import java.util.List;
+
 /**
  * Контроллер диалога "Выбор дисконтной карты"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: DiscountCardSelectDlg.java,v 1.1 2007/10/05 07:35:57 sharapov Exp $
  */
 public class DiscountCardSelectDlg extends DefaultDialog {
-	
-	private DefaultTableController table;
-	
-	
-	public DiscountCardSelectDlg() {
-		table = new DefaultTableController(new DisCardSelectTableModel());
-	}
-		
-	public void executeDlg(List<Card> cardsList) {
-		((DisCardSelectTableModel) table.getModel()).setTableList(cardsList);
-		this.execute();
-	}
-	
-	public Card getSelectedItem() {
-		return ((DisCardSelectTableModel) table.getModel()).getSelectedItem();
-	}
-	
+
+  private DefaultTableController table;
+
+
+  public DiscountCardSelectDlg() {
+    table = new DefaultTableController(new DisCardSelectTableModel());
+  }
+
+  public void executeDlg(List<Card> cardsList) {
+    ((DisCardSelectTableModel) table.getModel()).setTableList(cardsList);
+    this.execute();
+  }
+
+  public Card getSelectedItem() {
+    return ((DisCardSelectTableModel) table.getModel()).getSelectedItem();
+  }
+
 }

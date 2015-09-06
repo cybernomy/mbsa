@@ -22,220 +22,225 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Document.DocSection")
 public class DocSection extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.core.model.SysClass ModelSysClass;
+  private com.mg.merp.core.model.SysClass ModelSysClass;
 
-	private com.mg.merp.core.model.SysClass ModelSpecSysClass;
+  private com.mg.merp.core.model.SysClass ModelSpecSysClass;
 
-	private com.mg.merp.core.model.SysClass SysClass;
+  private com.mg.merp.core.model.SysClass SysClass;
 
-	private com.mg.merp.core.model.SysClass SpecSysClass;
+  private com.mg.merp.core.model.SysClass SpecSysClass;
 
-	private java.lang.String DSName;
+  private java.lang.String DSName;
 
-	private int FolderType;
+  private int FolderType;
 
-	private java.lang.Integer ModelFolderType;
+  private java.lang.Integer ModelFolderType;
 
-	private boolean withTaxes;
+  private boolean withTaxes;
 
-	private boolean withSpec;
+  private boolean withSpec;
 
-	private short Direction;
+  private short Direction;
 
-	private boolean dummy;
+  private boolean dummy;
 
-	private String documentSearchHelp;
-	
-	private String documentModelSearchHelp;
-	
-	// Constructors
+  private String documentSearchHelp;
 
-	/** default constructor */
-	public DocSection() {
-	}
+  private String documentModelSearchHelp;
 
-	/** constructor with id */
-	public DocSection(int Id) {
-		this.Id = Id;
-	}
+  // Constructors
 
-	// Property accessors
-	/**
-	 * 
-	 */
+  /**
+   * default constructor
+   */
+  public DocSection() {
+  }
 
-	public int getId() {
-		return this.Id;
-	}
+  /**
+   * constructor with id
+   */
+  public DocSection(int Id) {
+    this.Id = Id;
+  }
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  // Property accessors
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public com.mg.merp.core.model.SysClass getModelSysClass() {
-		return this.ModelSysClass;
-	}
+  public int getId() {
+    return this.Id;
+  }
 
-	public void setModelSysClass(com.mg.merp.core.model.SysClass SysClass) {
-		this.ModelSysClass = SysClass;
-	}
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public com.mg.merp.core.model.SysClass getModelSpecSysClass() {
-		return this.ModelSpecSysClass;
-	}
+  public com.mg.merp.core.model.SysClass getModelSysClass() {
+    return this.ModelSysClass;
+  }
 
-	public void setModelSpecSysClass(com.mg.merp.core.model.SysClass SysClass_1) {
-		this.ModelSpecSysClass = SysClass_1;
-	}
+  public void setModelSysClass(com.mg.merp.core.model.SysClass SysClass) {
+    this.ModelSysClass = SysClass;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public com.mg.merp.core.model.SysClass getSysClass() {
-		return this.SysClass;
-	}
+  public com.mg.merp.core.model.SysClass getModelSpecSysClass() {
+    return this.ModelSpecSysClass;
+  }
 
-	public void setSysClass(com.mg.merp.core.model.SysClass SysClass_2) {
-		this.SysClass = SysClass_2;
-	}
+  public void setModelSpecSysClass(com.mg.merp.core.model.SysClass SysClass_1) {
+    this.ModelSpecSysClass = SysClass_1;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public com.mg.merp.core.model.SysClass getSpecSysClass() {
-		return this.SpecSysClass;
-	}
+  public com.mg.merp.core.model.SysClass getSysClass() {
+    return this.SysClass;
+  }
 
-	public void setSpecSysClass(com.mg.merp.core.model.SysClass SysClass_3) {
-		this.SpecSysClass = SysClass_3;
-	}
+  public void setSysClass(com.mg.merp.core.model.SysClass SysClass_2) {
+    this.SysClass = SysClass_2;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Name")
-	public java.lang.String getDSName() {
-		return this.DSName;
-	}
+  /**
+   *
+   */
 
-	public void setDSName(java.lang.String Dsname) {
-		this.DSName = Dsname;
-	}
+  public com.mg.merp.core.model.SysClass getSpecSysClass() {
+    return this.SpecSysClass;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSpecSysClass(com.mg.merp.core.model.SysClass SysClass_3) {
+    this.SpecSysClass = SysClass_3;
+  }
 
-	public int getFolderType() {
-		return this.FolderType;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Name")
+  public java.lang.String getDSName() {
+    return this.DSName;
+  }
 
-	public void setFolderType(int Foldertype) {
-		this.FolderType = Foldertype;
-	}
+  public void setDSName(java.lang.String Dsname) {
+    this.DSName = Dsname;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public java.lang.Integer getModelFolderType() {
-		return this.ModelFolderType;
-	}
+  public int getFolderType() {
+    return this.FolderType;
+  }
 
-	public void setModelFolderType(java.lang.Integer ModelFoldertype) {
-		this.ModelFolderType = ModelFoldertype;
-	}
+  public void setFolderType(int Foldertype) {
+    this.FolderType = Foldertype;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public boolean isWithTaxes() {
-		return this.withTaxes;
-	}
+  public java.lang.Integer getModelFolderType() {
+    return this.ModelFolderType;
+  }
 
-	public void setWithTaxes(boolean WithTaxes) {
-		this.withTaxes = WithTaxes;
-	}
+  public void setModelFolderType(java.lang.Integer ModelFoldertype) {
+    this.ModelFolderType = ModelFoldertype;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public boolean isWithSpec() {
-		return this.withSpec;
-	}
+  public boolean isWithTaxes() {
+    return this.withTaxes;
+  }
 
-	public void setWithSpec(boolean WithSpec) {
-		this.withSpec = WithSpec;
-	}
+  public void setWithTaxes(boolean WithTaxes) {
+    this.withTaxes = WithTaxes;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public short getDirection() {
-		return this.Direction;
-	}
+  public boolean isWithSpec() {
+    return this.withSpec;
+  }
 
-	public void setDirection(short Direction) {
-		this.Direction = Direction;
-	}
+  public void setWithSpec(boolean WithSpec) {
+    this.withSpec = WithSpec;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public boolean isDummy() {
-		return this.dummy;
-	}
+  public short getDirection() {
+    return this.Direction;
+  }
 
-	public void setDummy(boolean Dummy) {
-		this.dummy = Dummy;
-	}
+  public void setDirection(short Direction) {
+    this.Direction = Direction;
+  }
 
-	/**
-	 * @return Returns the documentModelSearchHelp.
-	 */
-	public String getDocumentModelSearchHelp() {
-		return documentModelSearchHelp;
-	}
+  /**
+   *
+   */
 
-	/**
-	 * @param documentModelSearchHelp The documentModelSearchHelp to set.
-	 */
-	public void setDocumentModelSearchHelp(String documentModelSearchHelp) {
-		this.documentModelSearchHelp = documentModelSearchHelp;
-	}
+  public boolean isDummy() {
+    return this.dummy;
+  }
 
-	/**
-	 * @return Returns the documentSearchHelp.
-	 */
-	public String getDocumentSearchHelp() {
-		return documentSearchHelp;
-	}
+  public void setDummy(boolean Dummy) {
+    this.dummy = Dummy;
+  }
 
-	/**
-	 * @param documentSearchHelp The documentSearchHelp to set.
-	 */
-	public void setDocumentSearchHelp(String documentSearchHelp) {
-		this.documentSearchHelp = documentSearchHelp;
-	}
+  /**
+   * @return Returns the documentModelSearchHelp.
+   */
+  public String getDocumentModelSearchHelp() {
+    return documentModelSearchHelp;
+  }
+
+  /**
+   * @param documentModelSearchHelp The documentModelSearchHelp to set.
+   */
+  public void setDocumentModelSearchHelp(String documentModelSearchHelp) {
+    this.documentModelSearchHelp = documentModelSearchHelp;
+  }
+
+  /**
+   * @return Returns the documentSearchHelp.
+   */
+  public String getDocumentSearchHelp() {
+    return documentSearchHelp;
+  }
+
+  /**
+   * @param documentSearchHelp The documentSearchHelp to set.
+   */
+  public void setDocumentSearchHelp(String documentSearchHelp) {
+    this.documentSearchHelp = documentSearchHelp;
+  }
 }

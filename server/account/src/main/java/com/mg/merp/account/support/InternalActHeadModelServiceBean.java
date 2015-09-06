@@ -15,29 +15,29 @@
 
 package com.mg.merp.account.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.account.InternalActHeadModelServiceLocal;
 import com.mg.merp.account.InternalActHeadServiceLocal;
 import com.mg.merp.document.generic.DocumentModelServiceBean;
 import com.mg.merp.document.model.DocHeadModel;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Образцы внутренних актов" 
- * 
+ * Бизнес-компонент "Образцы внутренних актов"
+ *
  * @author leonova
  * @version $Id: InternalActHeadModelServiceBean.java,v 1.3 2006/09/12 11:16:43 leonova Exp $
  */
-@Stateless(name="merp/account/InternalActHeadModelService")
+@Stateless(name = "merp/account/InternalActHeadModelService")
 public class InternalActHeadModelServiceBean extends DocumentModelServiceBean<DocHeadModel, Integer> implements InternalActHeadModelServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
-	 */
-	@Override
-	protected short getDocSectionIdentifier() {
-		return InternalActHeadServiceLocal.DOCSECTION;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
+   */
+  @Override
+  protected short getDocSectionIdentifier() {
+    return InternalActHeadServiceLocal.DOCSECTION;
+  }
 
 
 }

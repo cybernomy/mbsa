@@ -13,60 +13,81 @@
 
 <!-- $Id: RtlInvoiceHeadMt.mfd.xml,v 1.11 2008/09/10 11:36:06 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.retail.support.ui.RtlInvoiceHeadMt" title="resource://com.mg.merp.retail.resources.formelements#InvoiceHead.FormMt.Title" helpTopic="retail#rtlhead_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.retail.support.ui.RtlInvoiceHeadMt"
+          title="resource://com.mg.merp.retail.resources.formelements#InvoiceHead.FormMt.Title"
+          helpTopic="retail#rtlhead_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top" >
- 		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.retail.resources.formelements#InvoiceHead.Tab.Title.Total" alignment="expand_expand">	
-			<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />
-			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
-			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" />			
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml" />		
-			<jfd:field id="To" searchHelp="com.mg.merp.retail.support.ui.PartnerWithDiscountCardSearchHelp" />
-			<!--
-			<jfd:field id="DiscountCard" searchHelp="com.mg.merp.retail.support.ui.CardWithCustomerSearchHelp" />
-			 -->
-			<jfd:container id="DiscountCardFields" layout="jfd:box" label="resource://com.mg.merp.retail.resources.formelements#InvoiceHeadMt.DiscountCard">
-	 			<jfd:field id="DiscountCard.CardNum" alignment="expand_expand" showLabel="false" readOnly="true" />
-				<jfd:button id="viewDisCard" alignment="right_expand" icon="com/mg/framework/resources/viewbuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ViewDisCard" />
-				<jfd:button id="clearDisCard" alignment="right_expand" icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ClearDisCard" />
-				<jfd:button id="chooseDisCard" alignment="right_expand" text="resource://com.mg.merp.retail.resources.formelements#Choose3points" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseDisCard" />
-			</jfd:container>
-			<jfd:field id="BaseDiscount" sameLine="true"/>	
-			<jfd:field id="ExtraDiscount" />
-			<jfd:field id="DiscountOnDoc" sameLine="true"/>
-			<jfd:button id="ApplyDiscount" text="resource://com.mg.merp.retail.resources.dataitemlabels#Retail.Button.Assign" actionListener="ApplyDiscount" /> 								
-			<jfd:field id="SumCurDiscount" alignment="expand_expand"/>			
-			<jfd:field id="SumCur" alignment="expand_expand"/>							
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />				
-		</jfd:container>		
-		<jfd:container id="extra" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.retail.resources.formelements#InvoiceHead.Tab.Title.Extra" alignment="expand_expand">
-			<jfd:include name="com/mg/merp/document/resources/PriceListMacros.xml" />	
-			<jfd:field id="CalcTaxesKind"/>			
-			<jfd:field id="DiscountFolder"/>
-			<jfd:field id="ApplyDisKind"/>									
-			<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />				
-			<jfd:field id="PlanPayDate"/>
-			<jfd:field id="PlanShipDate" sameLine="true"/>
-			<jfd:field id="PayDate" />
-			<jfd:field id="PaySum" sameLine="true"/>						
-			<jfd:field id="Description" />
-		</jfd:container>	
-		<jfd:container id="contractor" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.retail.resources.formelements#InvoiceHead.Tab.Title.Contractor" alignment="expand_top">
-			<jfd:field id="From"/>
-			<jfd:field id="Through" />
-			<jfd:field id="Responsible" sameLine="true"/>	
-			<jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml" />			
-			<jfd:field id="Shipper" />
-			<jfd:field id="Consignee" sameLine="true"/>
-		</jfd:container>				
-		</jfd:container>
-				
-		<jfd:container id="invoiceSpecName" layout="jfd:box" alignment="expand_expand" columns="1">
-			<jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand" horizontalSpan="1">
-			</jfd:maintenanceTable> 
-		</jfd:container> 	
-	<jfd:include name="com/mg/merp/document/resources/DefaultDocMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.retail.resources.formelements#InvoiceHead.Tab.Title.Total"
+                   alignment="expand_expand">
+      <jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml"/>
+      <jfd:field id="To"
+                 searchHelp="com.mg.merp.retail.support.ui.PartnerWithDiscountCardSearchHelp"/>
+      <!--
+      <jfd:field id="DiscountCard" searchHelp="com.mg.merp.retail.support.ui.CardWithCustomerSearchHelp" />
+       -->
+      <jfd:container id="DiscountCardFields" layout="jfd:box"
+                     label="resource://com.mg.merp.retail.resources.formelements#InvoiceHeadMt.DiscountCard">
+        <jfd:field id="DiscountCard.CardNum" alignment="expand_expand" showLabel="false"
+                   readOnly="true"/>
+        <jfd:button id="viewDisCard" alignment="right_expand"
+                    icon="com/mg/framework/resources/viewbuttonicon.png" minimumSize="22,0"
+                    maximumSize="22,0" preferredSize="22,0" actionListener="ViewDisCard"/>
+        <jfd:button id="clearDisCard" alignment="right_expand"
+                    icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0"
+                    maximumSize="22,0" preferredSize="22,0" actionListener="ClearDisCard"/>
+        <jfd:button id="chooseDisCard" alignment="right_expand"
+                    text="resource://com.mg.merp.retail.resources.formelements#Choose3points"
+                    minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+                    actionListener="ChooseDisCard"/>
+      </jfd:container>
+      <jfd:field id="BaseDiscount" sameLine="true"/>
+      <jfd:field id="ExtraDiscount"/>
+      <jfd:field id="DiscountOnDoc" sameLine="true"/>
+      <jfd:button id="ApplyDiscount"
+                  text="resource://com.mg.merp.retail.resources.dataitemlabels#Retail.Button.Assign"
+                  actionListener="ApplyDiscount"/>
+      <jfd:field id="SumCurDiscount" alignment="expand_expand"/>
+      <jfd:field id="SumCur" alignment="expand_expand"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="extra" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.retail.resources.formelements#InvoiceHead.Tab.Title.Extra"
+                   alignment="expand_expand">
+      <jfd:include name="com/mg/merp/document/resources/PriceListMacros.xml"/>
+      <jfd:field id="CalcTaxesKind"/>
+      <jfd:field id="DiscountFolder"/>
+      <jfd:field id="ApplyDisKind"/>
+      <jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml"/>
+      <jfd:field id="PlanPayDate"/>
+      <jfd:field id="PlanShipDate" sameLine="true"/>
+      <jfd:field id="PayDate"/>
+      <jfd:field id="PaySum" sameLine="true"/>
+      <jfd:field id="Description"/>
+    </jfd:container>
+    <jfd:container id="contractor" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.retail.resources.formelements#InvoiceHead.Tab.Title.Contractor"
+                   alignment="expand_top">
+      <jfd:field id="From"/>
+      <jfd:field id="Through"/>
+      <jfd:field id="Responsible" sameLine="true"/>
+      <jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml"/>
+      <jfd:field id="Shipper"/>
+      <jfd:field id="Consignee" sameLine="true"/>
+    </jfd:container>
+  </jfd:container>
+
+  <jfd:container id="invoiceSpecName" layout="jfd:box" alignment="expand_expand" columns="1">
+    <jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand" horizontalSpan="1">
+    </jfd:maintenanceTable>
+  </jfd:container>
+  <jfd:include name="com/mg/merp/document/resources/DefaultDocMaintenanceFooterMacros.xml"/>
 </jfd:form>

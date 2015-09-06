@@ -19,13 +19,15 @@ import java.io.Serializable;
 /**
  * @author Oleg V. Safonov
  * @version $Id: Domain.java,v 1.5 2006/09/28 12:24:12 safonov Exp $
- *
  */
 @Deprecated
 public interface Domain extends Serializable {
-    public String getDeploymentDescriptorName() throws ApplicationException;
-	//public BeanMetadata loadMetadata() throws ApplicationException;
-	public String translateDataAccessException(ApplicationException e) throws ApplicationException;
-	public void reloadMetadata() throws ApplicationException;
-	public void destroy() throws Throwable;
+  public String getDeploymentDescriptorName() throws ApplicationException;
+
+  //public BeanMetadata loadMetadata() throws ApplicationException;
+  public String translateDataAccessException(ApplicationException e) throws ApplicationException;
+
+  public void reloadMetadata() throws ApplicationException;
+
+  public void destroy() throws Throwable;
 }

@@ -2,22 +2,22 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.mg</groupId>
-        <artifactId>mbsa</artifactId>
-        <version>4.0.8-SNAPSHOT</version>
-    </parent>
+  <parent>
+    <groupId>com.mg</groupId>
+    <artifactId>mbsa</artifactId>
+    <version>4.0.8-SNAPSHOT</version>
+  </parent>
 
-    <artifactId>distribution</artifactId>
-    <packaging>pom</packaging>
+  <artifactId>distribution</artifactId>
+  <packaging>pom</packaging>
 
-    <name>MBSA::Distribution</name>
-    <description>Дистрибутивные модули</description>
+  <name>MBSA::Distribution</name>
+  <description>Дистрибутивные модули</description>
 
-    <modules>
-        <module>release-notes</module>
-        <module>assembly</module>
-    </modules>
+  <modules>
+    <module>release-notes</module>
+    <module>assembly</module>
+  </modules>
 </project>

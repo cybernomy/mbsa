@@ -18,18 +18,18 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
  * Поисковик бизнес-компонента "Контракты"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: ContractSearchHelp.java,v 1.1 2007/03/07 12:31:28 sharapov Exp $
  */
 public class ContractSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {
-		return "merp/contract/Contract"; //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/contract/Contract"; //$NON-NLS-1$
+  }
 
 }

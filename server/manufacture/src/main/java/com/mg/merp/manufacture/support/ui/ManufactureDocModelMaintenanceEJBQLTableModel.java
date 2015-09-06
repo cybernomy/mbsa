@@ -14,33 +14,34 @@
  */
 package com.mg.merp.manufacture.support.ui;
 
-import java.util.Set;
-
 import com.mg.framework.support.ui.widget.TableEJBQLFieldDef;
 import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.document.generic.ui.DocModelMaintenanceEJBQLTableModel;
 import com.mg.merp.document.model.DocHeadModel;
 
+import java.util.Set;
+
 /**
  * Вспомогательный класс для отображения формы списка образцов производственных документов
- * 
+ *
  * @author leonova
- * @version $Id: ManufactureDocModelMaintenanceEJBQLTableModel.java,v 1.1 2006/09/12 11:09:15 leonova Exp $ 
+ * @version $Id: ManufactureDocModelMaintenanceEJBQLTableModel.java,v 1.1 2006/09/12 11:09:15
+ *          leonova Exp $
  */
 public class ManufactureDocModelMaintenanceEJBQLTableModel extends
-		DocModelMaintenanceEJBQLTableModel {
+    DocModelMaintenanceEJBQLTableModel {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.support.ui.GoodDocumentMaintenanceEJBQLTableModel#getDefaultFieldDefsSet()
-	 */
-	@Override
-	protected Set<TableEJBQLFieldDef> getDefaultFieldDefsSet() {
-		super.getDefaultFieldDefsSet();
-		result.add(new TableEJBQLFieldDef(DocHeadModel.class, "ContractDate", "dhm.ContractDate", false));
-		result.add(new TableEJBQLFieldDef(DocHeadModel.class, "ContractType", "ct.Code", "left join dhm.ContractType as ct", false));
-		result.add(new TableEJBQLFieldDef(DocHeadModel.class, "ContractNumber", "dhm.ContractNumber", false));
-		return DatabaseUtils.embedAddinFieldsDefaultEJBQLFieldDefs(result, service);
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.support.ui.GoodDocumentMaintenanceEJBQLTableModel#getDefaultFieldDefsSet()
+   */
+  @Override
+  protected Set<TableEJBQLFieldDef> getDefaultFieldDefsSet() {
+    super.getDefaultFieldDefsSet();
+    result.add(new TableEJBQLFieldDef(DocHeadModel.class, "ContractDate", "dhm.ContractDate", false));
+    result.add(new TableEJBQLFieldDef(DocHeadModel.class, "ContractType", "ct.Code", "left join dhm.ContractType as ct", false));
+    result.add(new TableEJBQLFieldDef(DocHeadModel.class, "ContractNumber", "dhm.ContractNumber", false));
+    return DatabaseUtils.embedAddinFieldsDefaultEJBQLFieldDefs(result, service);
 
-	}
+  }
 
 }

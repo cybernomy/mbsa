@@ -14,10 +14,10 @@
 <!-- $Id: queries.hbm.xml,v 1.2 2008/08/12 14:36:45 sharapov Exp $ -->
 
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-  
+
   <query name="Table.TimeBoardPositionServiceBean.loadPositionFromStaffList">
     <![CDATA[
 		select sh, cp.BeginDate, cp.EndDate, pu.BeginDate, pu.EndDate, pf.BeginDate, pf.EndDate
@@ -38,24 +38,24 @@
 			or (pf.EndDate between cp.BeginDate and cp.EndDate)
 			or (cp.BeginDate between pf.BeginDate and pf.EndDate))
 	  ]]>
-  	</query>
-  	
-  	<query name="Table.ScheduleHeadServiceBean.deleteSpecsOverPeriod">
+  </query>
+
+  <query name="Table.ScheduleHeadServiceBean.deleteSpecsOverPeriod">
     <![CDATA[
     	DELETE FROM com.mg.merp.table.model.ScheduleSpec ss 
     	WHERE ss.ScheduleHead = :scheduleHead AND ss.ScheduleDate BETWEEN :beginDate AND :endDate
 	  ]]>
-  	</query>
-  	
-  	<query name="Table.ScheduleHeadServiceBean.getHolidayDates">
+  </query>
+
+  <query name="Table.ScheduleHeadServiceBean.getHolidayDates">
     <![CDATA[
     	SELECT h.HDate 
     	FROM com.mg.merp.reference.model.Holidays h 
     	WHERE h.HDate BETWEEN :dateBegin AND :dateEnd
 	  ]]>
-  	</query>
-  	
-  	<query name="Table.TimeBoardHelper.loadTimeBoardSpecItems">
+  </query>
+
+  <query name="Table.TimeBoardHelper.loadTimeBoardSpecItems">
     <![CDATA[
 		SELECT np.Surname, np.Name, np.Patronymic, pf.BeginDate, pf.EndDate, position.Name, tbp 
 		FROM com.mg.merp.table.model.TimeBoardPosition tbp 
@@ -66,25 +66,25 @@
 		LEFT JOIN p.Person np 
 		WHERE tbp.TimeBoardHead.Id = :timeBoardHeadId AND tbp.StaffListUnit.Id = :staffListUnitId
 	  ]]>
-  	</query>
-  	
-  	<query name="Table.TimeBoardHelper.loadTimeBoardSpecs">
+  </query>
+
+  <query name="Table.TimeBoardHelper.loadTimeBoardSpecs">
     <![CDATA[
 		SELECT tbs 
 		FROM com.mg.merp.table.model.TimeBoardSpec tbs 
 		WHERE tbs.TimeBoardPosition = :timeBoardPosition
       ]]>
-  	</query>
-  	
-  	<query name="Table.TimeBoardHeadServiceBean.getScheduleSpecs">
+  </query>
+
+  <query name="Table.TimeBoardHeadServiceBean.getScheduleSpecs">
     <![CDATA[
 		SELECT ss 
 		FROM com.mg.merp.table.model.ScheduleSpec ss 
 		WHERE ss.ScheduleHead = :scheduleHead AND ss.ScheduleDate BETWEEN :dateFrom AND :dateTill
       ]]>
-  	</query>
+  </query>
 
-  	<query name="Table.TimeBoardHeadServiceBean.loadPositionsFromStaffList">
+  <query name="Table.TimeBoardHeadServiceBean.loadPositionsFromStaffList">
     <![CDATA[
 		SELECT spf, slu, sh, slp.BeginDate, slp.EndDate, spf.BeginDate, spf.EndDate 
 		FROM com.mg.merp.personnelref.model.PositionFill spf, com.mg.merp.table.model.ScheduleHead sh 
@@ -96,6 +96,6 @@
 			AND ((spf.BeginDate BETWEEN :beginDate AND :endDate) OR (spf.EndDate BETWEEN :beginDate AND :endDate) OR (:beginDate BETWEEN spf.BeginDate AND spf.EndDate)) 
 		ORDER BY spf.Id, sh.Id
       ]]>
-  	</query>
-   
+  </query>
+
 </hibernate-mapping>

@@ -19,15 +19,15 @@ import com.mg.merp.lbschedule.model.ScheduleDocHeadLink;
 
 /**
  * Сервис бизнес-компонента "Связь графика исполнения обязательств с документом"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: ScheduleDocHeadLinkServiceLocal.java,v 1.1 2007/04/21 11:49:33 sharapov Exp $
  */
 public interface ScheduleDocHeadLinkServiceLocal extends DataBusinessObjectService<ScheduleDocHeadLink, Integer> {
-	
-	/**
-	 * Локальное имя сервиса
-	 */
-	static final String LOCAL_SERVICE_NAME = "merp/lbschedule/ScheduleDocHeadLink"; //$NON-NLS-1$
-	
+
+  /**
+   * Локальное имя сервиса
+   */
+  static final String LOCAL_SERVICE_NAME = "merp/lbschedule/ScheduleDocHeadLink"; //$NON-NLS-1$
+
 }

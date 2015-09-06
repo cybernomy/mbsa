@@ -18,15 +18,15 @@ import com.mg.merp.finance.model.SpecificationModel;
 
 /**
  * Бизнес-компонент "Спецификация образцов финансовых операций"
- * 
+ *
  * @author leonova
  * @version $Id: SpecificationModelServiceLocal.java,v 1.2 2007/10/08 14:24:15 safonov Exp $
  */
 public interface SpecificationModelServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<SpecificationModel, Integer> {
-	/**
-	 * имя сервиса
-	 */
-	final static String SERVICE_NAME = "merp/finance/SpecificationModel";
+    extends com.mg.framework.api.DataBusinessObjectService<SpecificationModel, Integer> {
+  /**
+   * имя сервиса
+   */
+  final static String SERVICE_NAME = "merp/finance/SpecificationModel";
 
 }

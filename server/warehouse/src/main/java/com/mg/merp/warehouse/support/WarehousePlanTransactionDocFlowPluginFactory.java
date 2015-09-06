@@ -23,69 +23,70 @@ import com.mg.merp.warehouse.WarehouseProcessorServiceLocal;
 
 /**
  * Реализация фабрики реализаций этапа ДО "Отработка планируемого движения по складу"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $$Id: WarehousePlanTransactionDocFlowPluginFactory.java,v 1.2 2007/03/29 08:46:39 poroxnenko Exp $$
+ * @version $$Id: WarehousePlanTransactionDocFlowPluginFactory.java,v 1.2 2007/03/29 08:46:39
+ *          poroxnenko Exp $$
  */
 public class WarehousePlanTransactionDocFlowPluginFactory extends
-		AbstractDocFlowPluginFactory {
-	public final static int FACTORY_IDENTIFIER = 21;
+    AbstractDocFlowPluginFactory {
+  public final static int FACTORY_IDENTIFIER = 21;
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
-	 */
-	@Override
-	protected DocFlowPlugin doCreatePlugin() {
-		return new AbstractDocFlowPlugin() {
+  /*
+   * (non-Javadoc)
+   *
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
+   */
+  @Override
+  protected DocFlowPlugin doCreatePlugin() {
+    return new AbstractDocFlowPlugin() {
 
-			@Override
-			protected void doExecute() throws Exception {
-				WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
-						.getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
-				
-				service.processWarehousePlanTransaction(getParams());
-				complete();
-			}
+      @Override
+      protected void doExecute() throws Exception {
+        WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
+            .getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
 
-			@Override
-			protected String doGetDocActionResultTextRepresentation(
-					DocHeadState docHeadState) {
-				// TODO: спросить консультантов
-				return StringUtils.BLANK_STRING;
-			}
+        service.processWarehousePlanTransaction(getParams());
+        complete();
+      }
 
-			@Override
-			protected void doRoolback() throws Exception {
-				WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
-						.getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
-		
-				service.rollbackWarehousePlanTransaction(getParams());
-				complete();
-			}
+      @Override
+      protected String doGetDocActionResultTextRepresentation(
+          DocHeadState docHeadState) {
+        // TODO: спросить консультантов
+        return StringUtils.BLANK_STRING;
+      }
 
-		};
-	}
+      @Override
+      protected void doRoolback() throws Exception {
+        WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
+            .getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
-	 */
-	@Override
-	public int getIdentifier() {
-		return FACTORY_IDENTIFIER;
-	}
+        service.rollbackWarehousePlanTransaction(getParams());
+        complete();
+      }
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
-	 */
-	@Override
-	public String getName() {
-		return "Warehouse plan transaction";
-	}
+    };
+  }
+
+  /*
+   * (non-Javadoc)
+   *
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
+   */
+  @Override
+  public int getIdentifier() {
+    return FACTORY_IDENTIFIER;
+  }
+
+  /*
+   * (non-Javadoc)
+   *
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
+   */
+  @Override
+  public String getName() {
+    return "Warehouse plan transaction";
+  }
 
 }

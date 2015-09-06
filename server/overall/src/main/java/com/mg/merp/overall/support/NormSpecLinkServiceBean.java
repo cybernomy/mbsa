@@ -15,18 +15,18 @@
 
 package com.mg.merp.overall.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.overall.NormSpecLinkServiceLocal;
 import com.mg.merp.overall.model.NormSpecLink;
 
+import javax.ejb.Stateless;
+
 /**
  * Реализация бизнес-компонента "Связь спецификаций норм выдачи и КТУ"
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: NormSpecLinkServiceBean.java,v 1.1 2008/06/30 04:19:36 alikaev Exp $
  */
-@Stateless(name="merp/overall/NormSpecLinkService")
+@Stateless(name = "merp/overall/NormSpecLinkService")
 public class NormSpecLinkServiceBean extends com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean<NormSpecLink, Integer> implements NormSpecLinkServiceLocal {
 
 }

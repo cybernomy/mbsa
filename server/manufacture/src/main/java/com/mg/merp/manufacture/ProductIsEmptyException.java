@@ -19,22 +19,22 @@ import com.mg.merp.manufacture.support.Messages;
 
 /**
  * ИС генерируется если в ЗНП не указан продукт для производства
- * 
+ *
  * @author safonov
  * @version $Id: ProductIsEmptyException.java,v 1.2 2007/07/30 10:28:17 safonov Exp $
  */
 public class ProductIsEmptyException extends BusinessException {
 
-	public ProductIsEmptyException() {
-		super("Product is empty");
-	}
+  public ProductIsEmptyException() {
+    super("Product is empty");
+  }
 
-	/* (non-Javadoc)
-	 * @see java.lang.Throwable#getLocalizedMessage()
-	 */
-	@Override
-	public String getLocalizedMessage() {
-		return Messages.getInstance().getMessage(Messages.JOB_PRODUCT_IS_EMPTY);
-	}
+  /* (non-Javadoc)
+   * @see java.lang.Throwable#getLocalizedMessage()
+   */
+  @Override
+  public String getLocalizedMessage() {
+    return Messages.getInstance().getMessage(Messages.JOB_PRODUCT_IS_EMPTY);
+  }
 
 }

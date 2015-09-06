@@ -17,12 +17,10 @@ package com.mg.merp.crm;
 import com.mg.merp.crm.model.ActivityKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: ActivityKindServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface ActivityKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<ActivityKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<ActivityKind, Integer> {
 
 }

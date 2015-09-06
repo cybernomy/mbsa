@@ -18,35 +18,31 @@ package com.mg.merp.finance.totals.helperclasses.jdbctemplates;
  * @author Valentin A. Poroxnenko
  * @version $Id: AccountItem.java,v 1.3 2006/07/05 09:06:30 poroxnenko Exp $
  */
-public class AccountItem 
-{
+public class AccountItem {
   private int id;
   private String upcode;
-  
-  public AccountItem(){}
-  public AccountItem(int id, String upcode)
-  {
-	this.id = id;
-	this.upcode = upcode;
+
+  public AccountItem() {
   }
-  
-  public int getId()
-  {
-	  return id;
+
+  public AccountItem(int id, String upcode) {
+    this.id = id;
+    this.upcode = upcode;
   }
-  
-  public String getUpCode()
-  {
-	  return upcode;
+
+  public int getId() {
+    return id;
   }
-  
-  public void setId(int id)
-  {
-	  this.id = id;
+
+  public void setId(int id) {
+    this.id = id;
   }
-  
-  public void setCode(String upcode)
-  {
-	  this.upcode = upcode;
-  }  
+
+  public String getUpCode() {
+    return upcode;
+  }
+
+  public void setCode(String upcode) {
+    this.upcode = upcode;
+  }
 }

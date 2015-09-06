@@ -1,36 +1,36 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.finance.model.SpecificationModel" table="FINSPECMODEL">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">FINSPECMODEL_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Alg" class="com.mg.merp.baiengine.model.Repository">
-      <column name="ALG_ID" not-null="false" />
+      <column name="ALG_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Parent" class="com.mg.merp.finance.model.SpecificationModel">
-      <column name="PARENT_ID" not-null="false" />
+      <column name="PARENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="FinOper" class="com.mg.merp.finance.model.OperationModel">
-      <column name="FINOPER_ID" not-null="false" />
+      <column name="FINOPER_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="DstAcc" class="com.mg.merp.finance.model.Account">
-      <column name="DSTACC_ID" not-null="false" />
+      <column name="DSTACC_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SrcAcc" class="com.mg.merp.finance.model.Account">
-      <column name="SRCACC_ID" not-null="false" />
+      <column name="SRCACC_ID" not-null="false"/>
     </many-to-one>
     <property name="SrcAnl1" type="java.lang.Integer">
       <column name="SRCANL1_ID" not-null="false" sql-type="INTEGER"/>
@@ -63,17 +63,17 @@
       <column name="DSTANL5_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="SumNat" type="java.math.BigDecimal">
-      <column name="SUMNAT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="SUMNAT" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="SumCur" type="java.math.BigDecimal">
-      <column name="SUMCUR" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="SUMCUR" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="Formula" type="java.lang.String">
-      <column name="FORMULA" length="2048" not-null="false" sql-type="VARCHAR" />
+      <column name="FORMULA" length="2048" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Planned" type="boolean">
-      <column name="PLANNED" not-null="false" sql-type="SMALLINT" />
+      <column name="PLANNED" not-null="false" sql-type="SMALLINT"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

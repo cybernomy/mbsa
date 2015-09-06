@@ -1,37 +1,37 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.planning.model.RccpHeader" table="PP_RCCP_HEADER">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">PP_RCCP_HEADER_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Mps" class="com.mg.merp.planning.model.Mps">
-      <column name="MPS_ID" not-null="false" />
+      <column name="MPS_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="WeekCal" class="com.mg.merp.mfreference.model.WeekCalendar">
-      <column name="WEEK_CAL_ID" not-null="false" />
+      <column name="WEEK_CAL_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <property name="Name" type="java.lang.String">
-      <column name="NAME" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="NAME" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="RccpVersion" type="java.lang.Integer">
-      <column name="RCCP_VERSION" not-null="false" sql-type="INTEGER" />
+      <column name="RCCP_VERSION" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="LastRunDateTime" type="java.util.Date">
-      <column name="LAST_RUN_DATETIME" not-null="false" sql-type="TIMESTAMP" />
+      <column name="LAST_RUN_DATETIME" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

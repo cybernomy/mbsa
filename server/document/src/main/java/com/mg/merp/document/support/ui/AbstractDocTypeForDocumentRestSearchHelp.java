@@ -22,39 +22,40 @@ import com.mg.merp.document.model.DocumentKind;
 
 /**
  * Абстрактный класс для SearchHelp типов документов. Используется в формах условий отбора
- * 
+ *
  * @author Konstantin S. Alikaev
- * @version $Id: AbstractDocTypeForDocumentRestSearchHelp.java,v 1.1 2008/02/12 08:10:11 alikaev Exp $
+ * @version $Id: AbstractDocTypeForDocumentRestSearchHelp.java,v 1.1 2008/02/12 08:10:11 alikaev Exp
+ *          $
  */
 public abstract class AbstractDocTypeForDocumentRestSearchHelp extends AbstractSearchHelp {
 
-	protected abstract DocumentKind getDocumentKind();
-	
-	protected String docSection = "docSection";
-	
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#defineImportContext()
-	 */
-	@Override
-	protected String[] defineImportContext() {
-		return new String[] {docSection};
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
-	 */
-	@Override
-	protected void doSearch() throws Exception {
-		DocTypeSearchForm form = (DocTypeSearchForm) UIProducer.produceForm("com/mg/merp/document/resources/DocTypeSearchForm.mfd.xml");
-		form.addSearchHelpListener(this);
-		Integer docId = 0;
-		DocSection documentSection = (DocSection) getImportContextValue(docSection);
-		if (documentSection != null)
-		docId = documentSection.getId();									
-		if (docId != 0) 				
-			form.setParam(docId, getDocumentKind());				
-		form.run(UIUtils.isModalMode());
-	}
+  protected String docSection = "docSection";
+
+  protected abstract DocumentKind getDocumentKind();
+
+  /*
+   * (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#defineImportContext()
+   */
+  @Override
+  protected String[] defineImportContext() {
+    return new String[]{docSection};
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
+   */
+  @Override
+  protected void doSearch() throws Exception {
+    DocTypeSearchForm form = (DocTypeSearchForm) UIProducer.produceForm("com/mg/merp/document/resources/DocTypeSearchForm.mfd.xml");
+    form.addSearchHelpListener(this);
+    Integer docId = 0;
+    DocSection documentSection = (DocSection) getImportContextValue(docSection);
+    if (documentSection != null)
+      docId = documentSection.getId();
+    if (docId != 0)
+      form.setParam(docId, getDocumentKind());
+    form.run(UIUtils.isModalMode());
+  }
 
 }

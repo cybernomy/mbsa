@@ -19,56 +19,56 @@ import java.security.Permission;
 
 /**
  * Разрешение на старт приложения
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id$
  */
 public class StartApplicationPermission extends Permission {
 
-	public StartApplicationPermission(String name) {
-		super(name);
-	}
-	
-	/* (non-Javadoc)
-	 * @see java.security.Permission#implies(java.security.Permission)
-	 */
-	@Override
-	public boolean implies(Permission permission) {
-		if (!(permission instanceof StartApplicationPermission))
-		    return false;
+  public StartApplicationPermission(String name) {
+    super(name);
+  }
 
-		StartApplicationPermission that = (StartApplicationPermission) permission;
+  /* (non-Javadoc)
+   * @see java.security.Permission#implies(java.security.Permission)
+   */
+  @Override
+  public boolean implies(Permission permission) {
+    if (!(permission instanceof StartApplicationPermission))
+      return false;
 
-		return getName().equals(that.getName());
-	}
+    StartApplicationPermission that = (StartApplicationPermission) permission;
 
-	/* (non-Javadoc)
-	 * @see java.security.Permission#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (!(obj instanceof StartApplicationPermission))
-		    return false;
+    return getName().equals(that.getName());
+  }
 
-		StartApplicationPermission that = (StartApplicationPermission) obj;
+  /* (non-Javadoc)
+   * @see java.security.Permission#equals(java.lang.Object)
+   */
+  @Override
+  public boolean equals(Object obj) {
+    if (!(obj instanceof StartApplicationPermission))
+      return false;
 
-		return getName().equals(that.getName());
-	}
+    StartApplicationPermission that = (StartApplicationPermission) obj;
 
-	/* (non-Javadoc)
-	 * @see java.security.Permission#hashCode()
-	 */
-	@Override
-	public int hashCode() {
-		return getName().hashCode();
-	}
+    return getName().equals(that.getName());
+  }
 
-	/* (non-Javadoc)
-	 * @see java.security.Permission#getActions()
-	 */
-	@Override
-	public String getActions() {
-		return "";
-	}
+  /* (non-Javadoc)
+   * @see java.security.Permission#hashCode()
+   */
+  @Override
+  public int hashCode() {
+    return getName().hashCode();
+  }
+
+  /* (non-Javadoc)
+   * @see java.security.Permission#getActions()
+   */
+  @Override
+  public String getActions() {
+    return "";
+  }
 
 }

@@ -17,12 +17,10 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.BillSpec;
 
 /**
- * 
  * @author leonova
  * @version $Id: BillSpecOutServiceLocal.java,v 1.2 2006/09/20 11:02:09 safonov Exp $
  */
 public interface BillSpecOutServiceLocal
-   extends com.mg.merp.document.GoodsDocumentSpecification<BillSpec, Integer>
-{
+    extends com.mg.merp.document.GoodsDocumentSpecification<BillSpec, Integer> {
 
 }

@@ -16,12 +16,12 @@ package com.mg.merp.warehouse.support.ui;
 
 /**
  * Контроллер формы списка заказов
- * 
+ *
  * @author leonova
- * @version $Id: OrderBr.java,v 1.2 2008/02/22 11:08:33 alikaev Exp $ 
+ * @version $Id: OrderBr.java,v 1.2 2008/02/22 11:08:33 alikaev Exp $
  */
 public class OrderBr extends WarehouseDocumentBr {
-	
-	protected final String INIT_QUERY_TEXT = "select %s from OrderHead d %s %s  order by d.DocDate, d.Id ";
+
+  protected final String INIT_QUERY_TEXT = "select %s from OrderHead d %s %s  order by d.DocDate, d.Id ";
 
 }

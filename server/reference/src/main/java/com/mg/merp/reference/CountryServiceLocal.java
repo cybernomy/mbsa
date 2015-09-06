@@ -21,28 +21,27 @@ import com.mg.merp.reference.model.Region;
 import com.mg.merp.reference.model.ZipCode;
 
 /**
- * 
  * @author leonova
  * @version $Id: CountryServiceLocal.java,v 1.2 2007/09/05 10:42:07 alikaev Exp $
  */
 public interface CountryServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Country, Integer> {
 
-	final  public static String SERVICE_NAME = "merp/reference/Country";
-	
-	/**
-	 * Формирует полный адрес
-	 * 
-	 * @param country	страна
-	 * @param region	регион
-	 * @param district	район
-	 * @param place		населенный пункт
-	 * @param street	улица
-	 * @param house		дом
-	 * @param building	строение
-	 * @param room		помещение
-	 * @param zipcode	индекс
-	 * @return			полный адрес проживания
-	 */
-	String getAddressText(Country country, Region region, District district, Place place, String street, String house, String building, String room, ZipCode zipcode);
+  final public static String SERVICE_NAME = "merp/reference/Country";
+
+  /**
+   * Формирует полный адрес
+   *
+   * @param country  страна
+   * @param region   регион
+   * @param district район
+   * @param place    населенный пункт
+   * @param street   улица
+   * @param house    дом
+   * @param building строение
+   * @param room     помещение
+   * @param zipcode  индекс
+   * @return полный адрес проживания
+   */
+  String getAddressText(Country country, Region region, District district, Place place, String street, String house, String building, String room, ZipCode zipcode);
 
 }

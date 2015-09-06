@@ -21,276 +21,281 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: ContractorCard.java,v 1.6 2006/10/27 07:21:36 leonova Exp $
  */
 public class ContractorCard extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.reference.model.Contractor Contractor;
+  private com.mg.merp.reference.model.Contractor Contractor;
 
-	private com.mg.merp.reference.model.Contractor OrgUnit;
+  private com.mg.merp.reference.model.Contractor OrgUnit;
 
-	private java.math.BigDecimal TotalIncome;
+  private java.math.BigDecimal TotalIncome;
 
-	private java.math.BigDecimal TotalExpenses;
+  private java.math.BigDecimal TotalExpenses;
 
-	private java.math.BigDecimal DebitorInDebLimit;
+  private java.math.BigDecimal DebitorInDebLimit;
 
-	private java.math.BigDecimal CreditorInDebLimit;
+  private java.math.BigDecimal CreditorInDebLimit;
 
-	private java.math.BigDecimal PlanIncome;
+  private java.math.BigDecimal PlanIncome;
 
-	private java.math.BigDecimal PlanExpenses;
+  private java.math.BigDecimal PlanExpenses;
 
-	private java.math.BigDecimal DebitorInDebSum;
+  private java.math.BigDecimal DebitorInDebSum;
 
-	private java.math.BigDecimal CreditorInDebSum;
+  private java.math.BigDecimal CreditorInDebSum;
 
-	private java.math.BigDecimal PlanDebitorInDebSum;
+  private java.math.BigDecimal PlanDebitorInDebSum;
 
-	private java.math.BigDecimal PlanCreditorInDebSum;
-	
-	private java.util.Date dateFrom;
-	
-	private java.util.Date dateTill;
-	
-	private com.mg.merp.reference.model.Currency curCode;
+  private java.math.BigDecimal PlanCreditorInDebSum;
 
-	private java.util.Set SetOfContractorcardplan;
+  private java.util.Date dateFrom;
 
-	private java.util.Set SetOfContractorcardhist;
+  private java.util.Date dateTill;
 
-	// Constructors
+  private com.mg.merp.reference.model.Currency curCode;
 
-	/** default constructor */
-	public ContractorCard() {
-	}
+  private java.util.Set SetOfContractorcardplan;
 
-	/** constructor with id */
-	public ContractorCard(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  private java.util.Set SetOfContractorcardhist;
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Constructors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * default constructor
+   */
+  public ContractorCard() {
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   * constructor with id
+   */
+  public ContractorCard(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  // Property accessors
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Settlement.Contractor")
-	public com.mg.merp.reference.model.Contractor getContractor() {
-		return this.Contractor;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public void setContractor(com.mg.merp.reference.model.Contractor Contractor) {
-		this.Contractor = Contractor;
-	}
+  /**
+   *
+   */
 
-	/**
-	 * 
-	 */
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	public com.mg.merp.reference.model.Contractor getOrgUnit() {
-		return this.OrgUnit;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setOrgUnit(com.mg.merp.reference.model.Contractor Contractor_1) {
-		this.OrgUnit = Contractor_1;
-	}
+  /**
+   *
+   */
+  @DataItemName("Settlement.Contractor")
+  public com.mg.merp.reference.model.Contractor getContractor() {
+    return this.Contractor;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Settlement.TotalIncome")
-	public java.math.BigDecimal getTotalIncome() {
-		return this.TotalIncome;
-	}
+  public void setContractor(com.mg.merp.reference.model.Contractor Contractor) {
+    this.Contractor = Contractor;
+  }
 
-	public void setTotalIncome(java.math.BigDecimal Totalincome) {
-		this.TotalIncome = Totalincome;
-	}
+  /**
+   *
+   */
 
-	/**
-	 * 
-	 */
-	@DataItemName("Settlement.TotalExpenses")
-	public java.math.BigDecimal getTotalExpenses() {
-		return this.TotalExpenses;
-	}
+  public com.mg.merp.reference.model.Contractor getOrgUnit() {
+    return this.OrgUnit;
+  }
 
-	public void setTotalExpenses(java.math.BigDecimal Totalexpenses) {
-		this.TotalExpenses = Totalexpenses;
-	}
+  public void setOrgUnit(com.mg.merp.reference.model.Contractor Contractor_1) {
+    this.OrgUnit = Contractor_1;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Settlement.DebitorInDebLimit")
-	public java.math.BigDecimal getDebitorInDebLimit() {
-		return this.DebitorInDebLimit;
-	}
+  /**
+   *
+   */
+  @DataItemName("Settlement.TotalIncome")
+  public java.math.BigDecimal getTotalIncome() {
+    return this.TotalIncome;
+  }
 
-	public void setDebitorInDebLimit(java.math.BigDecimal Debitorindeblimit) {
-		this.DebitorInDebLimit = Debitorindeblimit;
-	}
+  public void setTotalIncome(java.math.BigDecimal Totalincome) {
+    this.TotalIncome = Totalincome;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Settlement.CreditorInDebLimit")
-	public java.math.BigDecimal getCreditorInDebLimit() {
-		return this.CreditorInDebLimit;
-	}
+  /**
+   *
+   */
+  @DataItemName("Settlement.TotalExpenses")
+  public java.math.BigDecimal getTotalExpenses() {
+    return this.TotalExpenses;
+  }
 
-	public void setCreditorInDebLimit(java.math.BigDecimal Creditorindeblimit) {
-		this.CreditorInDebLimit = Creditorindeblimit;
-	}
+  public void setTotalExpenses(java.math.BigDecimal Totalexpenses) {
+    this.TotalExpenses = Totalexpenses;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Settlement.PlanIncome")
-	public java.math.BigDecimal getPlanIncome() {
-		return this.PlanIncome;
-	}
+  /**
+   *
+   */
+  @DataItemName("Settlement.DebitorInDebLimit")
+  public java.math.BigDecimal getDebitorInDebLimit() {
+    return this.DebitorInDebLimit;
+  }
 
-	public void setPlanIncome(java.math.BigDecimal Planincome) {
-		this.PlanIncome = Planincome;
-	}
+  public void setDebitorInDebLimit(java.math.BigDecimal Debitorindeblimit) {
+    this.DebitorInDebLimit = Debitorindeblimit;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Settlement.PlanExpenses")
-	public java.math.BigDecimal getPlanExpenses() {
-		return this.PlanExpenses;
-	}
+  /**
+   *
+   */
+  @DataItemName("Settlement.CreditorInDebLimit")
+  public java.math.BigDecimal getCreditorInDebLimit() {
+    return this.CreditorInDebLimit;
+  }
 
-	public void setPlanExpenses(java.math.BigDecimal Planexpenses) {
-		this.PlanExpenses = Planexpenses;
-	}
+  public void setCreditorInDebLimit(java.math.BigDecimal Creditorindeblimit) {
+    this.CreditorInDebLimit = Creditorindeblimit;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Settlement.DebitorInDebSum")
-	public java.math.BigDecimal getDebitorInDebSum() {
-		return this.DebitorInDebSum;
-	}
+  /**
+   *
+   */
+  @DataItemName("Settlement.PlanIncome")
+  public java.math.BigDecimal getPlanIncome() {
+    return this.PlanIncome;
+  }
 
-	public void setDebitorInDebSum(java.math.BigDecimal Debitorindebsum) {
-		this.DebitorInDebSum = Debitorindebsum;
-	}
+  public void setPlanIncome(java.math.BigDecimal Planincome) {
+    this.PlanIncome = Planincome;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Settlement.CreditorInDebSum")
-	public java.math.BigDecimal getCreditorInDebSum() {
-		return this.CreditorInDebSum;
-	}
+  /**
+   *
+   */
+  @DataItemName("Settlement.PlanExpenses")
+  public java.math.BigDecimal getPlanExpenses() {
+    return this.PlanExpenses;
+  }
 
-	public void setCreditorInDebSum(java.math.BigDecimal Creditorindebsum) {
-		this.CreditorInDebSum = Creditorindebsum;
-	}
+  public void setPlanExpenses(java.math.BigDecimal Planexpenses) {
+    this.PlanExpenses = Planexpenses;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Settlement.PlanDebitorInDebSum")
-	public java.math.BigDecimal getPlanDebitorInDebSum() {
-		return this.PlanDebitorInDebSum;
-	}
+  /**
+   *
+   */
+  @DataItemName("Settlement.DebitorInDebSum")
+  public java.math.BigDecimal getDebitorInDebSum() {
+    return this.DebitorInDebSum;
+  }
 
-	public void setPlanDebitorInDebSum(java.math.BigDecimal Plandebitorindebsum) {
-		this.PlanDebitorInDebSum = Plandebitorindebsum;
-	}
+  public void setDebitorInDebSum(java.math.BigDecimal Debitorindebsum) {
+    this.DebitorInDebSum = Debitorindebsum;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Settlement.PlanCreditorInDebSum")
-	public java.math.BigDecimal getPlanCreditorInDebSum() {
-		return this.PlanCreditorInDebSum;
-	}
+  /**
+   *
+   */
+  @DataItemName("Settlement.CreditorInDebSum")
+  public java.math.BigDecimal getCreditorInDebSum() {
+    return this.CreditorInDebSum;
+  }
 
-	public void setPlanCreditorInDebSum(
-			java.math.BigDecimal Plancreditorindebsum) {
-		this.PlanCreditorInDebSum = Plancreditorindebsum;
-	}
+  public void setCreditorInDebSum(java.math.BigDecimal Creditorindebsum) {
+    this.CreditorInDebSum = Creditorindebsum;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
+  @DataItemName("Settlement.PlanDebitorInDebSum")
+  public java.math.BigDecimal getPlanDebitorInDebSum() {
+    return this.PlanDebitorInDebSum;
+  }
 
-	public java.util.Set getSetOfContractorcardplan() {
-		return this.SetOfContractorcardplan;
-	}
+  public void setPlanDebitorInDebSum(java.math.BigDecimal Plandebitorindebsum) {
+    this.PlanDebitorInDebSum = Plandebitorindebsum;
+  }
 
-	public void setSetOfContractorcardplan(java.util.Set SetOfContractorcardplan) {
-		this.SetOfContractorcardplan = SetOfContractorcardplan;
-	}
+  /**
+   *
+   */
+  @DataItemName("Settlement.PlanCreditorInDebSum")
+  public java.math.BigDecimal getPlanCreditorInDebSum() {
+    return this.PlanCreditorInDebSum;
+  }
 
-	/**
-	 * 
-	 */
+  public void setPlanCreditorInDebSum(
+      java.math.BigDecimal Plancreditorindebsum) {
+    this.PlanCreditorInDebSum = Plancreditorindebsum;
+  }
 
-	public java.util.Set getSetOfContractorcardhist() {
-		return this.SetOfContractorcardhist;
-	}
+  /**
+   *
+   */
 
-	public void setSetOfContractorcardhist(java.util.Set SetOfContractorcardhist) {
-		this.SetOfContractorcardhist = SetOfContractorcardhist;
-	}
+  public java.util.Set getSetOfContractorcardplan() {
+    return this.SetOfContractorcardplan;
+  }
 
-	public com.mg.merp.reference.model.Currency getCurCode() {
-		return curCode;
-	}
+  public void setSetOfContractorcardplan(java.util.Set SetOfContractorcardplan) {
+    this.SetOfContractorcardplan = SetOfContractorcardplan;
+  }
 
-	public void setCurCode(com.mg.merp.reference.model.Currency curCode) {
-		this.curCode = curCode;
-	}
+  /**
+   *
+   */
 
-	public java.util.Date getDateFrom() {
-		return dateFrom;
-	}
+  public java.util.Set getSetOfContractorcardhist() {
+    return this.SetOfContractorcardhist;
+  }
 
-	public void setDateFrom(java.util.Date dateFrom) {
-		this.dateFrom = dateFrom;
-	}
+  public void setSetOfContractorcardhist(java.util.Set SetOfContractorcardhist) {
+    this.SetOfContractorcardhist = SetOfContractorcardhist;
+  }
 
-	public java.util.Date getDateTill() {
-		return dateTill;
-	}
+  public com.mg.merp.reference.model.Currency getCurCode() {
+    return curCode;
+  }
 
-	public void setDateTill(java.util.Date dateTill) {
-		this.dateTill = dateTill;
-	}
+  public void setCurCode(com.mg.merp.reference.model.Currency curCode) {
+    this.curCode = curCode;
+  }
+
+  public java.util.Date getDateFrom() {
+    return dateFrom;
+  }
+
+  public void setDateFrom(java.util.Date dateFrom) {
+    this.dateFrom = dateFrom;
+  }
+
+  public java.util.Date getDateTill() {
+    return dateTill;
+  }
+
+  public void setDateTill(java.util.Date dateTill) {
+    this.dateTill = dateTill;
+  }
 
 }

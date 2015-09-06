@@ -14,9 +14,9 @@
 <!-- $Id: index.xml,v 1.1 2007/11/19 10:05:42 konyashkina Exp $ -->
 
 <index version="1.0">
- 
-  <indexitem text="Бизнес-расширения"> 
-    <indexentry text="Настраиваемые действия пользователя" target="custom_user_action_html" />   
+
+  <indexitem text="Бизнес-расширения">
+    <indexentry text="Настраиваемые действия пользователя" target="custom_user_action_html"/>
   </indexitem>
- 
+
 </index>

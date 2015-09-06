@@ -22,11 +22,10 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class MPSSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/planning/MPS";
-	}
-
+  @Override
+  protected String getServiceName() {
+    return "merp/planning/MPS";
+  }
 
 
 }

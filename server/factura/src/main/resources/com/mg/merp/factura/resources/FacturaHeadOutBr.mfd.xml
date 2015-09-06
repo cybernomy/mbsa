@@ -13,21 +13,25 @@
 
 <!-- $Id: FacturaHeadOutBr.mfd.xml,v 1.9 2008/12/24 13:34:33 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.factura.support.ui.FacturaHeadOutBr" title="resource://com.mg.merp.factura.resources.formelements#FacturaHeadOut.FormBr.Title" helpTopic="account#facturaout_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver"
+          controller="com.mg.merp.factura.support.ui.FacturaHeadOutBr"
+          title="resource://com.mg.merp.factura.resources.formelements#FacturaHeadOut.FormBr.Title"
+          helpTopic="account#facturaout_html">
 
-	<jfd:include name="com/mg/merp/document/resources/DefaultDocWithSpecBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/merp/document/resources/DefaultDocWithSpecBrowseHeaderMacros.xml"/>
 
-	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
-		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true" >
-		</jfd:maintenanceTree>
-		<jfd:container id="tables" layout="jfd:split" alignment="expand_expand" orientation="ver">
-			<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >			
-	 			<jfd:include name="com/mg/merp/document/resources/DefaultDocWithSpecMaintenanceTablePopupMenuMacros.xml" />  			
-			</jfd:maintenanceTable>
-			<jfd:include name="com/mg/merp/document/resources/DocSpecListTableMacros.xml" />  			
-		</jfd:container>
-	</jfd:container>
+  <jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+    <jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true">
+    </jfd:maintenanceTree>
+    <jfd:container id="tables" layout="jfd:split" alignment="expand_expand" orientation="ver">
+      <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+        <jfd:include
+            name="com/mg/merp/document/resources/DefaultDocWithSpecMaintenanceTablePopupMenuMacros.xml"/>
+      </jfd:maintenanceTable>
+      <jfd:include name="com/mg/merp/document/resources/DocSpecListTableMacros.xml"/>
+    </jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml"/>
 
 </jfd:form>

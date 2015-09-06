@@ -17,12 +17,10 @@ package com.mg.merp.mfreference;
 import com.mg.merp.mfreference.model.CostDetail;
 
 /**
- * 
  * @author leonova
  * @version $Id: CostDetailServiceLocal.java,v 1.1 2006/03/14 11:49:48 safonov Exp $
  */
 public interface CostDetailServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<CostDetail, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<CostDetail, Integer> {
 
 }

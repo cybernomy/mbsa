@@ -13,46 +13,55 @@
 
 <!-- $Id: BomMaterialMt.mfd.xml,v 1.6 2008/02/13 08:45:24 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.mfreference.support.ui.BomMaterialMt" title="resource://com.mg.merp.mfreference.resources.formelements#BomMaterial.FormMt.Title" helpTopic="mfreference#bommaterial_html">
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.mfreference.support.ui.BomMaterialMt"
+          title="resource://com.mg.merp.mfreference.resources.formelements#BomMaterial.FormMt.Title"
+          helpTopic="mfreference#bommaterial_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
 
-	    <jfd:container id="commonFields" alignment="expand_top" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#Main.TotalTitle" >
- 			<jfd:field id="TimeSequence" />
-			<jfd:container id="dateFields" alignment="expand_top" layout="jfd:box" label="resource://com.mg.merp.mfreference.resources.formelements#BomMaterialMt.DateFrom">
-				<jfd:field id="EffOnDate" showLabel="false" />
-				<jfd:field id="EffOffDate" text="resource://com.mg.merp.mfreference.resources.formelements#BomMaterialMt.DateTill" />
-			</jfd:container>
-			<jfd:field id="Revision" />
-			<jfd:field id="ViewSequence" />
-			<jfd:field id="ReportSequence" />
-			<jfd:field id="Catalog" />
-			<jfd:field id="ResourceGroup" />
-			<jfd:field id="MtlQty" />
-			<jfd:field id="Measure" />
-			<jfd:field id="MtlOhRate" />
-			<jfd:field id="Currency"  />
-			<jfd:field id="MtlCostCategory" />
-			<jfd:field id="MtlOhCostCategory" />
-			<jfd:field id="QuantityRateFlag" editorType="comboBox" />
-			<jfd:field id="MtlOhAllocationFlag" editorType="comboBox" />
-			<jfd:field id="BackflushZone" />
-			<jfd:field id="MtlBackflushFlag" />
-			<jfd:field id="MtlOhBackflushFlag" />	
-			<jfd:field id="MtlOhRatio" />
-			<jfd:field id="ScrapFactor" />
-			<jfd:field id="Probable" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />									 			
-		</jfd:container>
-		
-		<jfd:field id="Comment" alignment="expand_expand" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#BomMaterialMt.Comments" />
-		
-	   <jfd:table id="costDetailLine" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.mfreference.resources.formelements#CostDetailLineTitle" >
-	   </jfd:table>
-	</jfd:container>
+    <jfd:container id="commonFields" alignment="expand_top" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.mfreference.resources.formelements#Main.TotalTitle">
+      <jfd:field id="TimeSequence"/>
+      <jfd:container id="dateFields" alignment="expand_top" layout="jfd:box"
+                     label="resource://com.mg.merp.mfreference.resources.formelements#BomMaterialMt.DateFrom">
+        <jfd:field id="EffOnDate" showLabel="false"/>
+        <jfd:field id="EffOffDate"
+                   text="resource://com.mg.merp.mfreference.resources.formelements#BomMaterialMt.DateTill"/>
+      </jfd:container>
+      <jfd:field id="Revision"/>
+      <jfd:field id="ViewSequence"/>
+      <jfd:field id="ReportSequence"/>
+      <jfd:field id="Catalog"/>
+      <jfd:field id="ResourceGroup"/>
+      <jfd:field id="MtlQty"/>
+      <jfd:field id="Measure"/>
+      <jfd:field id="MtlOhRate"/>
+      <jfd:field id="Currency"/>
+      <jfd:field id="MtlCostCategory"/>
+      <jfd:field id="MtlOhCostCategory"/>
+      <jfd:field id="QuantityRateFlag" editorType="comboBox"/>
+      <jfd:field id="MtlOhAllocationFlag" editorType="comboBox"/>
+      <jfd:field id="BackflushZone"/>
+      <jfd:field id="MtlBackflushFlag"/>
+      <jfd:field id="MtlOhBackflushFlag"/>
+      <jfd:field id="MtlOhRatio"/>
+      <jfd:field id="ScrapFactor"/>
+      <jfd:field id="Probable"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:field id="Comment" alignment="expand_expand"
+               tabTitle="resource://com.mg.merp.mfreference.resources.formelements#BomMaterialMt.Comments"/>
+
+    <jfd:table id="costDetailLine" scroll="true" autoResize="subsequent_columns"
+               alignment="expand_expand"
+               tabTitle="resource://com.mg.merp.mfreference.resources.formelements#CostDetailLineTitle">
+    </jfd:table>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

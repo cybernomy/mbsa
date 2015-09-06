@@ -15,8 +15,9 @@
 
 <server>
 
-    <mbean code="com.mg.merp.help.support.jboss.HelpSystemService" name="merp:service=HelpSystemService">
-        <depends>jboss:service=MERP</depends>
-    </mbean>
+  <mbean code="com.mg.merp.help.support.jboss.HelpSystemService"
+         name="merp:service=HelpSystemService">
+    <depends>jboss:service=MERP</depends>
+  </mbean>
 
 </server>

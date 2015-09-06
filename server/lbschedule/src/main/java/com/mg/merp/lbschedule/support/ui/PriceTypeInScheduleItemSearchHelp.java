@@ -18,19 +18,19 @@ import com.mg.merp.reference.support.ui.PriceTypeBoundedSearchHelp;
 
 /**
  * Поисковик "типов цен для прайс-листа"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: PriceTypeInScheduleItemSearchHelp.java,v 1.2 2007/05/10 07:32:15 safonov Exp $
  */
 public class PriceTypeInScheduleItemSearchHelp extends PriceTypeBoundedSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.reference.support.ui.PriceTypeBoundedSearchHelp#getPriceHeadProperty()
-	 */
-	@Override
-	protected String getPriceHeadProperty() {
-		return "PriceListHead"; //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.reference.support.ui.PriceTypeBoundedSearchHelp#getPriceHeadProperty()
+   */
+  @Override
+  protected String getPriceHeadProperty() {
+    return "PriceListHead"; //$NON-NLS-1$
+  }
 
 
 }

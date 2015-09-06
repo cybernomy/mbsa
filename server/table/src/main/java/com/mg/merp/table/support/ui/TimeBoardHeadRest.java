@@ -18,8 +18,8 @@ import com.mg.merp.personnelref.support.ui.ItemWithDateIntervalRest;
 
 /**
  * @author leonova
- * @version $Id: TimeBoardHeadRest.java,v 1.1 2006/07/04 06:37:47 leonova Exp $ 
+ * @version $Id: TimeBoardHeadRest.java,v 1.1 2006/07/04 06:37:47 leonova Exp $
  */
-public class TimeBoardHeadRest extends ItemWithDateIntervalRest{
+public class TimeBoardHeadRest extends ItemWithDateIntervalRest {
 
 }

@@ -18,23 +18,22 @@ import com.mg.framework.api.DataAccessException;
 
 /**
  * @author Oleg V. Safonov
- *
  */
 @javax.ejb.ApplicationException
 public class RemoveException extends DataAccessException {
-	public RemoveException(String s, Throwable cause) {
-		super(s, cause);
-	}
-	
-	public RemoveException(String s) {
-		super(s);
-	}	
+  public RemoveException(String s, Throwable cause) {
+    super(s, cause);
+  }
 
-	public RemoveException() {
-		super();
-	}	
+  public RemoveException(String s) {
+    super(s);
+  }
 
-	public RemoveException(Throwable cause) {
-		super(cause);
-	}
+  public RemoveException() {
+    super();
+  }
+
+  public RemoveException(Throwable cause) {
+    super(cause);
+  }
 }

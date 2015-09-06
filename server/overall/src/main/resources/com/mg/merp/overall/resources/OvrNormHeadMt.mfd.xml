@@ -13,35 +13,46 @@
 
 <!-- $Id: OvrNormHeadMt.mfd.xml,v 1.5 2006/12/21 07:14:24 leonova Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.overall.support.ui.OvrNormHeadMt" title="resource://com.mg.merp.overall.resources.formelements#OvrNormHead.FormMt.Title" helpTopic="overall#ovrnormhd_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.overall.support.ui.OvrNormHeadMt"
+          title="resource://com.mg.merp.overall.resources.formelements#OvrNormHead.FormMt.Title"
+          helpTopic="overall#ovrnormhd_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_expand" tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.Total.Tab" >			
-			<jfd:field id="OvrNormName" />	
-			<jfd:field id="StfPosition" />	
-			<jfd:field id="StfJob" />						
-	 		<jfd:field id="OvrNormBeginDate" />
-			<jfd:field id="OvrNormEndDate" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-		</jfd:container>	
-		<jfd:container id="specFields" layout="jfd:tabbed" alignment="expand_expand" tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.Spec.Tab" >			
- 			<jfd:maintenanceTable id="overall" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.Overall.Tab">
-			</jfd:maintenanceTable>			
-               <jfd:maintenanceTable id="form" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.Form.Tab">
-                </jfd:maintenanceTable>                                             
-               <jfd:maintenanceTable id="protect" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.Protect.Tab">
-                </jfd:maintenanceTable>                                             
-               <jfd:maintenanceTable id="instrument" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.Instrument.Tab">
-                </jfd:maintenanceTable>                                             
-               <jfd:maintenanceTable id="officeEq" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.OfficeEq.Tab">
-                </jfd:maintenanceTable>                                             
-               <jfd:maintenanceTable id="other" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.Other.Tab">
-                </jfd:maintenanceTable>   				
-		</jfd:container>									
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.Total.Tab">
+      <jfd:field id="OvrNormName"/>
+      <jfd:field id="StfPosition"/>
+      <jfd:field id="StfJob"/>
+      <jfd:field id="OvrNormBeginDate"/>
+      <jfd:field id="OvrNormEndDate"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="specFields" layout="jfd:tabbed" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.Spec.Tab">
+      <jfd:maintenanceTable id="overall" scroll="true" alignment="expand_expand"
+                            tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.Overall.Tab">
+      </jfd:maintenanceTable>
+      <jfd:maintenanceTable id="form" scroll="true" alignment="expand_expand"
+                            tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.Form.Tab">
+      </jfd:maintenanceTable>
+      <jfd:maintenanceTable id="protect" scroll="true" alignment="expand_expand"
+                            tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.Protect.Tab">
+      </jfd:maintenanceTable>
+      <jfd:maintenanceTable id="instrument" scroll="true" alignment="expand_expand"
+                            tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.Instrument.Tab">
+      </jfd:maintenanceTable>
+      <jfd:maintenanceTable id="officeEq" scroll="true" alignment="expand_expand"
+                            tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.OfficeEq.Tab">
+      </jfd:maintenanceTable>
+      <jfd:maintenanceTable id="other" scroll="true" alignment="expand_expand"
+                            tabTitle="resource://com.mg.merp.overall.resources.formelements#NormHead.Other.Tab">
+      </jfd:maintenanceTable>
+    </jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

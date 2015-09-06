@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.District;
 
 /**
- * 
  * @author leonova
  * @version $Id: DistrictServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface DistrictServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<District, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<District, Integer> {
 
 }

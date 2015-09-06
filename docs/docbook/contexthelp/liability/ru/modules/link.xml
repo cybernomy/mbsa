@@ -14,12 +14,12 @@
 <!-- $Id: link.xml,v 1.1 2006/11/30 17:12:50 konyashkina Exp $ -->
 
 <link version="1.0">
-   
+
   <linkitem topic="head_links">
-    <linkentry target="gio_html" text="Содержание графика" />
-    <linkentry target="items_html" text="Пункты графика" />
-    <linkentry target="summ_html" text="Сроки и суммы" />
-    <linkentry target="spec_html" text="Спецификации пункта" />
+    <linkentry target="gio_html" text="Содержание графика"/>
+    <linkentry target="items_html" text="Пункты графика"/>
+    <linkentry target="summ_html" text="Сроки и суммы"/>
+    <linkentry target="spec_html" text="Спецификации пункта"/>
   </linkitem>
-  
+
 </link>

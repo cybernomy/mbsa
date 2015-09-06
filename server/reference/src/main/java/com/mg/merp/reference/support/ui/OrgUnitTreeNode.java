@@ -14,13 +14,13 @@
  */
 package com.mg.merp.reference.support.ui;
 
+import com.mg.framework.support.ui.widget.tree.EntityTreeNode;
+import com.mg.merp.reference.model.OrgUnit;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.mg.framework.support.ui.widget.tree.EntityTreeNode;
-import com.mg.merp.reference.model.OrgUnit;
 
 /**
  * @author Oleg V. Safonov
@@ -28,49 +28,48 @@ import com.mg.merp.reference.model.OrgUnit;
  */
 public class OrgUnitTreeNode extends EntityTreeNode {
 
-	public OrgUnitTreeNode(OrgUnitTreeNode parent, OrgUnit entity) {
-		super(parent);
-		this.entity = entity;
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.support.ui.widget.tree.EntityTreeNode#doGetPrimaryKey()
-	 */
-	@Override
-	protected Serializable doGetPrimaryKey() {
-		return (Serializable) entity.getPrimaryKey();
-	}
+  public OrgUnitTreeNode(OrgUnitTreeNode parent, OrgUnit entity) {
+    super(parent);
+    this.entity = entity;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.support.ui.widget.tree.TreeNode#getText()
-	 */
-	@Override
-	public String getText() {
-		return ((OrgUnit) entity).getFullName();
-	}
+  public static OrgUnitTreeNode createTree(List<OrgUnit> folders) {
+    OrgUnitTreeNode root = null;
+    Map<Integer, OrgUnitTreeNode> nodeMap = new HashMap<Integer, OrgUnitTreeNode>();
+    for (OrgUnit folder : folders) {
+      if (folder.getFolderId() == null || folder.getFolderId().intValue() == 0) {
+        root = new OrgUnitTreeNode(null, folder);
+        nodeMap.put(folder.getId(), root);
+      } else {
+        OrgUnitTreeNode parentNode, node;
+        parentNode = nodeMap.get(folder.getFolderId());
+        if (parentNode != null) {
+          node = new OrgUnitTreeNode(parentNode, folder);
+          nodeMap.put(folder.getId(), node);
+          parentNode.addChild(node);
+        }
+      }
+    }
+    return root;
+  }
 
-	public void addChild(OrgUnitTreeNode child) {
-		children.add(child);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.support.ui.widget.tree.EntityTreeNode#doGetPrimaryKey()
+   */
+  @Override
+  protected Serializable doGetPrimaryKey() {
+    return (Serializable) entity.getPrimaryKey();
+  }
 
-	public static OrgUnitTreeNode createTree(List<OrgUnit> folders) {
-		OrgUnitTreeNode root = null;
-		Map<Integer, OrgUnitTreeNode> nodeMap = new HashMap<Integer, OrgUnitTreeNode>();
-		for (OrgUnit folder : folders) {
-			if (folder.getFolderId() == null || folder.getFolderId().intValue() == 0) {
-				root = new OrgUnitTreeNode(null, folder);
-				nodeMap.put(folder.getId(), root);
-			}
-			else {
-				OrgUnitTreeNode parentNode, node;
-				parentNode = nodeMap.get(folder.getFolderId());
-				if (parentNode != null) {
-					node = new OrgUnitTreeNode(parentNode, folder);
-					nodeMap.put(folder.getId(), node);
-					parentNode.addChild(node);
-				}
-			}
-		}
-		return root;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.support.ui.widget.tree.TreeNode#getText()
+   */
+  @Override
+  public String getText() {
+    return ((OrgUnit) entity).getFullName();
+  }
+
+  public void addChild(OrgUnitTreeNode child) {
+    children.add(child);
+  }
 }

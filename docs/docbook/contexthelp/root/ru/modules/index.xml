@@ -15,8 +15,8 @@
 
 <index version="1.0">
 
-	<indexitem text="Введение">
-		<indexentry text="Введение" target="introduction_html" />
-	</indexitem>
+  <indexitem text="Введение">
+    <indexentry text="Введение" target="introduction_html"/>
+  </indexitem>
 
 </index>

@@ -13,18 +13,26 @@
 
 <!-- $Id: UserBr.mfd.xml,v 1.6 2007/02/24 14:26:28 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.security.support.ui.UserBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.security.resources.formelements#User.FormBr.Title" helpTopic="security#users_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.security.support.ui.UserBr" orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.security.resources.formelements#User.FormBr.Title"
+          helpTopic="security#users_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
-		<jfd:popupMenu>
-			<jfd:separator />
-			<jfd:menuItem id="createUser" text="resource://com.mg.merp.security.resources.formelements#User.FormBr.CreateUser" actionListener="CreateUser" />
-			<jfd:menuItem id="changePassw" text="resource://com.mg.merp.security.resources.formelements#User.FormBr.ChangePassw" actionListener="ChangePassword" />
-		</jfd:popupMenu>
-	</jfd:maintenanceTable>
+  <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true"
+                        autoResize="subsequent_columns">
+    <jfd:popupMenu>
+      <jfd:separator/>
+      <jfd:menuItem id="createUser"
+                    text="resource://com.mg.merp.security.resources.formelements#User.FormBr.CreateUser"
+                    actionListener="CreateUser"/>
+      <jfd:menuItem id="changePassw"
+                    text="resource://com.mg.merp.security.resources.formelements#User.FormBr.ChangePassw"
+                    actionListener="ChangePassword"/>
+    </jfd:popupMenu>
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

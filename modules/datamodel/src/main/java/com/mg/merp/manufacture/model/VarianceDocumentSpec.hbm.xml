@@ -1,15 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.manufacture.model.VarianceType" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.manufacture.model.VarianceType</param>
-	</typedef>	
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
-  <joined-subclass name="com.mg.merp.manufacture.model.VarianceDocumentSpec" extends="com.mg.merp.document.model.DocSpec" table="MF_VARIANCE_DOC_SPEC">
+  <typedef name="com.mg.merp.manufacture.model.VarianceType"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.manufacture.model.VarianceType</param>
+  </typedef>
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
+  <joined-subclass name="com.mg.merp.manufacture.model.VarianceDocumentSpec"
+                   extends="com.mg.merp.document.model.DocSpec" table="MF_VARIANCE_DOC_SPEC">
     <meta attribute="extends">com.mg.merp.document.model.DocSpec</meta>
     <!-- <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
@@ -18,13 +20,13 @@
       </generator
     </id>-->
     <key on-delete="cascade">
-      <column name="DOCSPEC_ID" not-null="true" />
+      <column name="DOCSPEC_ID" not-null="true"/>
     </key>
     <many-to-one name="CostCategory" class="com.mg.merp.mfreference.model.CostCategories">
-      <column name="COST_CATEGORY_ID" not-null="false" />
+      <column name="COST_CATEGORY_ID" not-null="false"/>
     </many-to-one>
     <property name="VarianceType" type="com.mg.merp.manufacture.model.VarianceType">
-      <column name="VARIANCE_TYPE" not-null="true" sql-type="SMALLINT" />
+      <column name="VARIANCE_TYPE" not-null="true" sql-type="SMALLINT"/>
     </property>
   </joined-subclass>
 </hibernate-mapping>

@@ -13,24 +13,34 @@
 
 <!-- $Id: TaxGroupMt.mfd.xml,v 1.7 2008/10/25 12:30:42 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.reference.support.ui.TaxGroupMt" title="resource://com.mg.merp.reference.resources.formelements#TaxGroup.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.reference.support.ui.TaxGroupMt"
+          title="resource://com.mg.merp.reference.resources.formelements#TaxGroup.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />		
-		<jfd:field id="Code" />		
-		<jfd:field id="TgName" />
-	 	<jfd:table id="taxesTable" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" fieldGroup="resource://com.mg.merp.reference.resources.formelements#Taxes.Title" >
-	 		<jfd:popupMenu>
-	 			<jfd:menuItem id="includeTaxItem" text="resource://com.mg.merp.reference.resources.formelements#TaxGroup.FormMt.IncludeTax" actionListener="IncludeTax" />
-	 			<jfd:menuItem id="excludeTaxItem" text="resource://com.mg.merp.reference.resources.formelements#TaxGroup.FormMt.ExcludeTax" actionListener="ExcludeTax" />
-	 			<jfd:menuItem id="changeTaxItem" text="resource://com.mg.merp.reference.resources.formelements#TaxGroup.FormMt.ChangeFeeOrder" actionListener="ChangeFeeOrder" />
-	 		</jfd:popupMenu>
-		</jfd:table>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 		
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Code"/>
+    <jfd:field id="TgName"/>
+    <jfd:table id="taxesTable" scroll="true" autoResize="subsequent_columns"
+               alignment="expand_expand"
+               fieldGroup="resource://com.mg.merp.reference.resources.formelements#Taxes.Title">
+      <jfd:popupMenu>
+        <jfd:menuItem id="includeTaxItem"
+                      text="resource://com.mg.merp.reference.resources.formelements#TaxGroup.FormMt.IncludeTax"
+                      actionListener="IncludeTax"/>
+        <jfd:menuItem id="excludeTaxItem"
+                      text="resource://com.mg.merp.reference.resources.formelements#TaxGroup.FormMt.ExcludeTax"
+                      actionListener="ExcludeTax"/>
+        <jfd:menuItem id="changeTaxItem"
+                      text="resource://com.mg.merp.reference.resources.formelements#TaxGroup.FormMt.ChangeFeeOrder"
+                      actionListener="ChangeFeeOrder"/>
+      </jfd:popupMenu>
+    </jfd:table>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

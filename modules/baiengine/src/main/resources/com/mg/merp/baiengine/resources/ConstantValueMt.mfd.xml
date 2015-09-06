@@ -13,16 +13,18 @@
 
 <!-- $Id: ConstantValueMt.mfd.xml,v 1.1 2007/08/21 12:57:37 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.baiengine.support.ui.ConstantValueMt" title="resource://com.mg.merp.baiengine.resources.formelements#ConstantValue.FormMt.Title"  > 
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.baiengine.support.ui.ConstantValueMt"
+          title="resource://com.mg.merp.baiengine.resources.formelements#ConstantValue.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="Val" longField="false" />
-		<jfd:field id="StartDate" />
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Val" longField="false"/>
+    <jfd:field id="StartDate"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

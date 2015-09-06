@@ -1,3 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- $Id: DefaultMaintenanceHeaderMacros.xml,v 1.2 2006/04/24 10:56:57 safonov Exp $ -->
-<jfd:border xmlns:jfd="http://xmlns.m-g.ru/jet/ui" style="empty" top="5" left="5" bottom="5" right="5" />
+<jfd:border xmlns:jfd="http://xmlns.m-g.ru/jet/ui" style="empty" top="5" left="5" bottom="5"
+            right="5"/>

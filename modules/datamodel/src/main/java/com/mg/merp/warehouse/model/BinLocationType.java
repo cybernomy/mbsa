@@ -22,79 +22,84 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Warehouse.BinLocationType")
 public class BinLocationType extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String Name;
+  private java.lang.String Name;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public BinLocationType() {
-	}
+  /**
+   * default constructor
+   */
+  public BinLocationType() {
+  }
 
-	/** constructor with id */
-	public BinLocationType(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public BinLocationType(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	@DataItemName("Warehouse.BinLocationType.Code")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  /**
+   *
+   */
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  @DataItemName("Warehouse.BinLocationType.Code")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	@DataItemName("Warehouse.BinLocationType.Name")
-	public java.lang.String getName() {
-		return this.Name;
-	}
+  /**
+   *
+   */
 
-	public void setName(java.lang.String Name) {
-		this.Name = Name;
-	}
+  @DataItemName("Warehouse.BinLocationType.Name")
+  public java.lang.String getName() {
+    return this.Name;
+  }
+
+  public void setName(java.lang.String Name) {
+    this.Name = Name;
+  }
 
 }

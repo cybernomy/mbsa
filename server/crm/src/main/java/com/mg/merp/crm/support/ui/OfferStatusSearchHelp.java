@@ -18,13 +18,13 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
  * @author leonova
- * @version $Id: OfferStatusSearchHelp.java,v 1.1 2006/07/10 12:18:03 leonova Exp $ 
+ * @version $Id: OfferStatusSearchHelp.java,v 1.1 2006/07/10 12:18:03 leonova Exp $
  */
 public class OfferStatusSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/crm/OfferStatus";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/crm/OfferStatus";
+  }
 
 }

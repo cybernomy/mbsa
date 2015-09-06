@@ -16,11 +16,11 @@ package com.mg.merp.warehouse.support.ui;
 
 /**
  * Контроллер формы списка образцов накладных
- * 
+ *
  * @author leonova
- * @version $Id: InvoiceHeadModelBrowseForm.java,v 1.1 2006/09/12 10:58:56 leonova Exp $ 
+ * @version $Id: InvoiceHeadModelBrowseForm.java,v 1.1 2006/09/12 10:58:56 leonova Exp $
  */
 public class InvoiceHeadModelBrowseForm extends WarehouseDocumentModelBrowseForm {
-	
-	
+
+
 }

@@ -13,27 +13,40 @@
 
 <!-- $Id: ScheduleMt.mfd.xml,v 1.7 2007/09/10 13:30:55 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.lbschedule.support.ui.ScheduleMt" title="resource://com.mg.merp.lbschedule.resources.formelements#Schedule.FormMt.Title" helpTopic="liability#gio_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.lbschedule.support.ui.ScheduleMt"
+          title="resource://com.mg.merp.lbschedule.resources.formelements#Schedule.FormMt.Title"
+          helpTopic="liability#gio_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="documentFields" layout="jfd:defaultMtLayout"	tabTitle="resource://com.mg.merp.lbschedule.resources.formelements#Schedule.Information" >
-		 	<jfd:container id="documentFields1" layout="jfd:box" alignment="expand_expand" label="resource://com.mg.merp.lbschedule.resources.formelements#Schedule.Document" >
-		 		<jfd:field id="docType" showLabel="false" readOnly="true" alignment="expand_expand" />	
-		 		<jfd:field id="docNumber" sameLine="true" readOnly="true" showLabel="false" alignment="expand_expand"/>	
-		 		<jfd:field id="docDate" sameLine="true" readOnly="true" showLabel="false" alignment="right_expand" />	
-		 		<jfd:button id="viewDoc" alignment="right_expand" icon="com/mg/framework/resources/viewbuttonicon.png" toolTip="resource://com.mg.merp.lbschedule.resources.formelements#Schedule.ViewDocument" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ViewDocument" />
-	 		</jfd:container>	
-		 	<jfd:field id="Name" alignment="expand_expand" />	
-	 		<jfd:field id="Status" alignment="expand_expand"  sameLine="true" />
-	 		<jfd:field id="Comments" alignment="expand_bottom" />	
-	 	</jfd:container>	
-		<jfd:maintenanceTable id="items" tabTitle="resource://com.mg.merp.lbschedule.resources.formelements#Schedule.Items" scroll="true" alignment="expand_expand" >
-		</jfd:maintenanceTable>	 			 			 	
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="documentFields" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.lbschedule.resources.formelements#Schedule.Information">
+      <jfd:container id="documentFields1" layout="jfd:box" alignment="expand_expand"
+                     label="resource://com.mg.merp.lbschedule.resources.formelements#Schedule.Document">
+        <jfd:field id="docType" showLabel="false" readOnly="true" alignment="expand_expand"/>
+        <jfd:field id="docNumber" sameLine="true" readOnly="true" showLabel="false"
+                   alignment="expand_expand"/>
+        <jfd:field id="docDate" sameLine="true" readOnly="true" showLabel="false"
+                   alignment="right_expand"/>
+        <jfd:button id="viewDoc" alignment="right_expand"
+                    icon="com/mg/framework/resources/viewbuttonicon.png"
+                    toolTip="resource://com.mg.merp.lbschedule.resources.formelements#Schedule.ViewDocument"
+                    minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+                    actionListener="ViewDocument"/>
+      </jfd:container>
+      <jfd:field id="Name" alignment="expand_expand"/>
+      <jfd:field id="Status" alignment="expand_expand" sameLine="true"/>
+      <jfd:field id="Comments" alignment="expand_bottom"/>
+    </jfd:container>
+    <jfd:maintenanceTable id="items"
+                          tabTitle="resource://com.mg.merp.lbschedule.resources.formelements#Schedule.Items"
+                          scroll="true" alignment="expand_expand">
+    </jfd:maintenanceTable>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

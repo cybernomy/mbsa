@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.core.model.Folder;
 
 /**
- * 
  * @author leonova
  * @version $Id: FolderServiceLocal.java,v 1.2 2006/11/02 16:18:13 safonov Exp $
  */
 public interface FolderServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Folder, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Folder, Integer> {
 
 }

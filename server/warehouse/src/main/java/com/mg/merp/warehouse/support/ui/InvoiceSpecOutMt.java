@@ -17,14 +17,14 @@ import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
  * Контроллер формы поддержки спецификации исходящих накладных
- * 
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InvoiceSpecOutMt.java,v 1.3 2006/08/22 08:09:27 leonova Exp $
  */
 public class InvoiceSpecOutMt extends GoodsDocumentSpecMaintenanceForm {
-	  
-	public InvoiceSpecOutMt() throws Exception {
-		super();
-		
-	}
+
+  public InvoiceSpecOutMt() throws Exception {
+    super();
+
+  }
 }

@@ -23,22 +23,21 @@ import com.mg.merp.bpm.BPMManager;
  * @version $Id: BPMManagerLocator.java,v 1.1 2007/05/28 13:05:48 safonov Exp $
  */
 public class BPMManagerLocator {
-    private static volatile BPMManager instance = null;
-    
-    /**
-     * поиск сервиса
-     * 
-     * @return	сервис
-     */
-    public static BPMManager locate() {
-        if (instance == null)
-            try {
-                instance = (BPMManager) ServerUtils.createMBeanProxy(BPMManager.class, "merp:service=BPMManagerServiceService"); //$NON-NLS-1$
-            }
-            catch (Exception e) {
-                throw new ApplicationException(e);
-            }
-        return instance;
-    }
+  private static volatile BPMManager instance = null;
+
+  /**
+   * поиск сервиса
+   *
+   * @return сервис
+   */
+  public static BPMManager locate() {
+    if (instance == null)
+      try {
+        instance = (BPMManager) ServerUtils.createMBeanProxy(BPMManager.class, "merp:service=BPMManagerServiceService"); //$NON-NLS-1$
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 
 }

@@ -15,33 +15,32 @@
 package com.mg.framework.service;
 
 import com.mg.framework.api.ApplicationException;
-import com.mg.framework.utils.ServerUtils;
 import com.mg.framework.api.report.RptEngine;
+import com.mg.framework.utils.ServerUtils;
 
 /**
  * Локатор сервиса платформы MBIRT (Millennium BI and Report Tools)
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
  * @version $Id: RptEngineLocator.java,v 1.3 2007/08/30 14:13:42 safonov Exp $
  */
 public class RptEngineLocator {
-    private static volatile RptEngine instance = null;
+  private static volatile RptEngine instance = null;
 
-    /**
-     * поиск сервиса платформы MBIRT (Millennium BI and Report Tools)
-     * 
-     * @return	сервис
-     * @throws	ApplicationException	при любых ошибках
-     */
-    public static RptEngine locate() throws ApplicationException {
-        if (instance == null)
-            try {
-                instance = (RptEngine) ServerUtils.createMBeanProxy(RptEngine.class, RptEngine.SERVICE_NAME);
-            }
-            catch (Exception e) {
-                throw new ApplicationException(e);
-            }
-        return instance;
-    }
+  /**
+   * поиск сервиса платформы MBIRT (Millennium BI and Report Tools)
+   *
+   * @return сервис
+   * @throws ApplicationException при любых ошибках
+   */
+  public static RptEngine locate() throws ApplicationException {
+    if (instance == null)
+      try {
+        instance = (RptEngine) ServerUtils.createMBeanProxy(RptEngine.class, RptEngine.SERVICE_NAME);
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 }

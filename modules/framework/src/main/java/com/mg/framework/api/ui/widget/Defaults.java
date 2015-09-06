@@ -15,36 +15,36 @@
 package com.mg.framework.api.ui.widget;
 
 /**
- * Implements all static constants required by the UI Engine
- * that are visible to the application developer.
+ * Implements all static constants required by the UI Engine that are visible to the application
+ * developer.
  *
  * @author Oleg V. Safonov
  * @version $Id: Defaults.java,v 1.1 2006/04/24 08:42:35 safonov Exp $
  */
 public interface Defaults {
-	/**
-	 * 
-	 */
-	public final static String CENTER = "center"; //$NON-NLS-1$
-	
-	/**
-	 * 
-	 */
-	public final static String TOP = "top"; //$NON-NLS-1$
-	
-	/**
-	 * 
-	 */
-	public final static String LEFT = "left"; //$NON-NLS-1$
-	
-	/**
-	 * 
-	 */
-	public final static String BOTTOM = "bottom"; //$NON-NLS-1$
-	
-	/**
-	 * 
-	 */
-	public final static String RIGHT = "right"; //$NON-NLS-1$
-	
+  /**
+   *
+   */
+  public final static String CENTER = "center"; //$NON-NLS-1$
+
+  /**
+   *
+   */
+  public final static String TOP = "top"; //$NON-NLS-1$
+
+  /**
+   *
+   */
+  public final static String LEFT = "left"; //$NON-NLS-1$
+
+  /**
+   *
+   */
+  public final static String BOTTOM = "bottom"; //$NON-NLS-1$
+
+  /**
+   *
+   */
+  public final static String RIGHT = "right"; //$NON-NLS-1$
+
 }

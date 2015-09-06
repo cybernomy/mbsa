@@ -13,13 +13,17 @@
 
 <!-- $Id: AccKindBr.mfd.xml,v 1.5 2006/11/30 11:48:44 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.account.support.ui.AccKindBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.account.resources.formelements#AccKind.FormBr.Title" helpTopic="account#acckind_html" >  
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.account.support.ui.AccKindBr" orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.account.resources.formelements#AccKind.FormBr.Title"
+          helpTopic="account#acckind_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" autoResize="subsequent_columns" alignment="expand_expand" scroll="true" >
-	</jfd:maintenanceTable>
+  <jfd:maintenanceTable id="table" autoResize="subsequent_columns" alignment="expand_expand"
+                        scroll="true">
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

@@ -17,12 +17,10 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.OrderSpecModel;
 
 /**
- * 
  * @author leonova
  * @version $Id: OrderSpecModelCusServiceLocal.java,v 1.1 2006/03/14 11:49:53 safonov Exp $
  */
 public interface OrderSpecModelCusServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<OrderSpecModel, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<OrderSpecModel, Integer> {
 
 }

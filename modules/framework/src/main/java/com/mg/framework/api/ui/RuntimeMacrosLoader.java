@@ -17,18 +17,18 @@ package com.mg.framework.api.ui;
 /**
  * Загрузчик динамических макросов, используется при создании форм UI, реализация должна создавать
  * макрос удовлетворяющий требованиям статических макросов
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: RuntimeMacrosLoader.java,v 1.1 2007/01/25 14:38:28 safonov Exp $
  */
 public interface RuntimeMacrosLoader {
 
-	/**
-	 * загрузить макрос
-	 * 
-	 * @param name	имя макроса
-	 * @return	тело макроса
-	 */
-	String loadMacros(String name);
-	
+  /**
+   * загрузить макрос
+   *
+   * @param name имя макроса
+   * @return тело макроса
+   */
+  String loadMacros(String name);
+
 }

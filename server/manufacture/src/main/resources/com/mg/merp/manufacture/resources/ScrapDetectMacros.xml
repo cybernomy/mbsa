@@ -13,11 +13,12 @@
 
 <!-- $Id: ScrapDetectMacros.xml,v 1.3 2006/06/06 07:56:28 leonova Exp $ -->
 
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="scrapDetect" layout="jfd:box" columns="2" label="resource://com.mg.merp.manufacture.resources.formelements#ScrapDocHead.Detect">
-	<jfd:field id="DetectContractor"/>
-	<jfd:field id="DetectEmployee"/>
-	<jfd:field id="DetectWC"/>
-	<jfd:field id="DetectJob"/>
-	<jfd:field id="DetectOper"/>
-	<jfd:field id="DetectCrew" />  
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="scrapDetect" layout="jfd:box" columns="2"
+               label="resource://com.mg.merp.manufacture.resources.formelements#ScrapDocHead.Detect">
+  <jfd:field id="DetectContractor"/>
+  <jfd:field id="DetectEmployee"/>
+  <jfd:field id="DetectWC"/>
+  <jfd:field id="DetectJob"/>
+  <jfd:field id="DetectOper"/>
+  <jfd:field id="DetectCrew"/>
 </jfd:container>

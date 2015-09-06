@@ -14,9 +14,9 @@
  */
 package com.mg.merp.core.support.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.merp.core.EntityMapperWorkbench;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * @author Valentin A. Poroxnenko

@@ -16,13 +16,13 @@
 <index version="1.0">
 
   <indexitem text="Табельный учёт">
-    <indexentry text="Конфигурация модуля" target="tbconfig_html" />
-    <indexentry text="Типы времени" target="timekind_html" />
-    <indexentry text="Шаблоны графиков" target="patternhead_html" />
-    <indexentry text="Графики работы в табельном учёте" target="shdhead_html" />
-    <indexentry text="Заполнить по шаблону" target="fill_html" />
-    <indexentry text="Заполнение сетки" target="grid_html" />
-    <indexentry text="Табели" target="table_html" /> 
+    <indexentry text="Конфигурация модуля" target="tbconfig_html"/>
+    <indexentry text="Типы времени" target="timekind_html"/>
+    <indexentry text="Шаблоны графиков" target="patternhead_html"/>
+    <indexentry text="Графики работы в табельном учёте" target="shdhead_html"/>
+    <indexentry text="Заполнить по шаблону" target="fill_html"/>
+    <indexentry text="Заполнение сетки" target="grid_html"/>
+    <indexentry text="Табели" target="table_html"/>
   </indexitem>
 
 </index>

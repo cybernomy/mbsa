@@ -17,12 +17,10 @@ package com.mg.merp.crm;
 import com.mg.merp.crm.model.ClientType;
 
 /**
- * 
  * @author leonova
  * @version $Id: ClientTypeServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface ClientTypeServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<ClientType, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<ClientType, Integer> {
 
 }

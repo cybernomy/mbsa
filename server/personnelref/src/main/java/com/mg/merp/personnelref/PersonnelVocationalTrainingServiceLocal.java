@@ -17,12 +17,11 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.PersonnelVocationalTraining;
 
 /**
- * 
  * @author leonova
- * @version $Id: PersonnelVocationalTrainingServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
+ * @version $Id: PersonnelVocationalTrainingServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp
+ *          $
  */
 public interface PersonnelVocationalTrainingServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<PersonnelVocationalTraining, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<PersonnelVocationalTraining, Integer> {
 
 }

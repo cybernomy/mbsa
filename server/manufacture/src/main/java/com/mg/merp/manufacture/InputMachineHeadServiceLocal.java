@@ -18,25 +18,24 @@ import com.mg.merp.manufacture.model.InputDocumentHead;
 
 /**
  * Бизнес-компонент "Акт на списание времени, отработанного оборудованием в ЗНП"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: InputMachineHeadServiceLocal.java,v 1.5 2007/08/06 12:46:24 safonov Exp $
  */
 public interface InputMachineHeadServiceLocal
-   extends com.mg.merp.document.GoodsDocument<InputDocumentHead, Integer, InputMachineModelServiceLocal, InputMachineSpecServiceLocal>
-{
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/manufacture/InputMachineHead";
+    extends com.mg.merp.document.GoodsDocument<InputDocumentHead, Integer, InputMachineModelServiceLocal, InputMachineSpecServiceLocal> {
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/manufacture/InputMachineHead";
 
-	/**
-	 * тип папки для актов на списание времени, отработанного оборудование в НЗП
-	 */
-	final static short FOLDER_PART = 12505;
-	
-	/**
-	 * docsection для актов на списание времени, отработанного оборудование в НЗП
-	 */
-	final static short DOCSECTION = 12004;
+  /**
+   * тип папки для актов на списание времени, отработанного оборудование в НЗП
+   */
+  final static short FOLDER_PART = 12505;
+
+  /**
+   * docsection для актов на списание времени, отработанного оборудование в НЗП
+   */
+  final static short DOCSECTION = 12004;
 }

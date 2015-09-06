@@ -14,19 +14,19 @@
 <!-- $Id: toc.xml,v 1.2 2006/12/01 14:11:01 konyashkina Exp $ -->
 
 <toc version="1.0">
-  
-   <tocitem text="Центры учёта (подразделения)">
-      <tocitem text="Центры учёта" target="stlcntr_html" />
-   </tocitem>
-   
-   <tocitem text="Карточки расчётов с партнёрами">
-	<tocitem text="Карточки расчётов с партнёрами" target="stllist_html" />
-	<tocitem text="Содержание карточки" target="stlcard_html" />
-	<tocitem text="По документам-подтверждениям" target="stlconfirm_html" />
-	<tocitem text="По документам-основаниям" target="stlground_html" />
-	<tocitem text="По договорам" target="stlcontr_html" />
-	<tocitem text="По плановым показателям" target="stlplan_html" />
-	<tocitem text="Условия отбора карточек" target="stlcond_html" />
-   </tocitem>
-  
+
+  <tocitem text="Центры учёта (подразделения)">
+    <tocitem text="Центры учёта" target="stlcntr_html"/>
+  </tocitem>
+
+  <tocitem text="Карточки расчётов с партнёрами">
+    <tocitem text="Карточки расчётов с партнёрами" target="stllist_html"/>
+    <tocitem text="Содержание карточки" target="stlcard_html"/>
+    <tocitem text="По документам-подтверждениям" target="stlconfirm_html"/>
+    <tocitem text="По документам-основаниям" target="stlground_html"/>
+    <tocitem text="По договорам" target="stlcontr_html"/>
+    <tocitem text="По плановым показателям" target="stlplan_html"/>
+    <tocitem text="Условия отбора карточек" target="stlcond_html"/>
+  </tocitem>
+
 </toc>

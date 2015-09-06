@@ -23,16 +23,16 @@ import com.mg.framework.api.annotations.EnumConstantText;
  */
 @DataItemName("CRM.CrmAddressSource")
 public enum CrmAddressSource {
-	/**
-	 * Физ.лицо
-	 */
-	@EnumConstantText ("resource://com.mg.merp.crm.resources.dataitemlabels#CrmAddressSource.NaturalPerson")
-	NATURALPERSON,
-	
-	/**
-	 * Компания
-	 */
-	@EnumConstantText ("resource://com.mg.merp.crm.resources.dataitemlabels#CrmAddressSource.Company")
-	COMPANY
+  /**
+   * Физ.лицо
+   */
+  @EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#CrmAddressSource.NaturalPerson")
+  NATURALPERSON,
+
+  /**
+   * Компания
+   */
+  @EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#CrmAddressSource.Company")
+  COMPANY
 
 }

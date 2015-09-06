@@ -15,19 +15,19 @@
 
 package com.mg.merp.baiengine.support;
 
-import javax.ejb.Stateless;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.baiengine.ConstantValueServiceLocal;
 import com.mg.merp.baiengine.model.ConstantValue;
 
+import javax.ejb.Stateless;
+
 /**
  * Бизнес-компонент "Значение константы"
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: ConstantValueServiceBean.java,v 1.1 2007/08/21 12:56:51 alikaev Exp $
- *
  */
-@Stateless(name="merp/baiengine/ConstantValueService") //$NON-NLS-1$
+@Stateless(name = "merp/baiengine/ConstantValueService") //$NON-NLS-1$
 public class ConstantValueServiceBean extends AbstractPOJODataBusinessObjectServiceBean<ConstantValue, Integer> implements ConstantValueServiceLocal {
 
 }

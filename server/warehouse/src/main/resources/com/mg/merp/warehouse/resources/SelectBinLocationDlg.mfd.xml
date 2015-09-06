@@ -13,27 +13,33 @@
 
 <!-- $Id: SelectBinLocationDlg.mfd.xml,v 1.1 2008/05/30 13:12:41 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.warehouse.support.ui.SelectBinLocationDlg" orientation="ver" verticalGap="5" title="resource://com.mg.merp.warehouse.resources.formelements#SelectBinLocationDlg.Title">
-	
-	<jfd:container id="mainBox" layout="jfd:box" columns="1" alignment="expand_expand">
-		<jfd:border style="bevel" type="raised" />
-		<jfd:container id="topBox" layout="jfd:box" columns="2" alignment="expand_top">
-			<jfd:container id="catalogBox" layout="jfd:box" columns="2" alignment="expand_top" label="resource://com.mg.merp.warehouse.resources.formelements#CatalogCodeAndName">
-				<jfd:field id="catalogCode" readOnly="true" showLabel="false" alignment="left_expand" />
-				<jfd:field id="catalogName" readOnly="true" showLabel="false" alignment="expand_expand" />
-			</jfd:container>
-			<jfd:container id="lotNumbersBox" layout="jfd:box" columns="4" alignment="expand_top" label="resource://com.mg.merp.warehouse.resources.formelements#NumberLot">
-				<jfd:field id="numberLot" showLabel="false" readOnly="true" alignment="expand_expand" />
-				<jfd:field id="vendorLot" readOnly="true" alignment="expand_expand" />
-			</jfd:container>
-			<jfd:container id="numbersQuantityBox" layout="jfd:box" columns="2" alignment="expand_top" label="resource://com.mg.merp.warehouse.resources.formelements#SelectBinLocationDlg.TotalQuantity">
-				<jfd:integerField id="necessaryQuantity" readOnly="true"  alignment="expand_expand" />
-			</jfd:container>
-		</jfd:container>
-		<jfd:table id="table" scroll="true" autoResize="subsequent_columns" alignment="expand_expand">
-		</jfd:table>
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.warehouse.support.ui.SelectBinLocationDlg" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.warehouse.resources.formelements#SelectBinLocationDlg.Title">
+
+  <jfd:container id="mainBox" layout="jfd:box" columns="1" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:container id="topBox" layout="jfd:box" columns="2" alignment="expand_top">
+      <jfd:container id="catalogBox" layout="jfd:box" columns="2" alignment="expand_top"
+                     label="resource://com.mg.merp.warehouse.resources.formelements#CatalogCodeAndName">
+        <jfd:field id="catalogCode" readOnly="true" showLabel="false" alignment="left_expand"/>
+        <jfd:field id="catalogName" readOnly="true" showLabel="false" alignment="expand_expand"/>
+      </jfd:container>
+      <jfd:container id="lotNumbersBox" layout="jfd:box" columns="4" alignment="expand_top"
+                     label="resource://com.mg.merp.warehouse.resources.formelements#NumberLot">
+        <jfd:field id="numberLot" showLabel="false" readOnly="true" alignment="expand_expand"/>
+        <jfd:field id="vendorLot" readOnly="true" alignment="expand_expand"/>
+      </jfd:container>
+      <jfd:container id="numbersQuantityBox" layout="jfd:box" columns="2" alignment="expand_top"
+                     label="resource://com.mg.merp.warehouse.resources.formelements#SelectBinLocationDlg.TotalQuantity">
+        <jfd:integerField id="necessaryQuantity" readOnly="true" alignment="expand_expand"/>
+      </jfd:container>
+    </jfd:container>
+    <jfd:table id="table" scroll="true" autoResize="subsequent_columns" alignment="expand_expand">
+    </jfd:table>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
 
 </jfd:form>

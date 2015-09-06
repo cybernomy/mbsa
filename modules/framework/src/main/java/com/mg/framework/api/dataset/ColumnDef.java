@@ -20,32 +20,26 @@ import com.mg.framework.support.dataset.sohlman.ColumnInfo;
  * @author Valentin A. Poroxnenko
  * @version $Id: ColumnDef.java,v 1.2 2006/07/05 09:10:08 poroxnenko Exp $
  */
-public class ColumnDef 
-{
+public class ColumnDef {
   private ColumnInfo colInf;
-  
-  public ColumnDef(String fieldName, Class fieldType)
-  {
-	  colInf = new ColumnInfo(fieldName, fieldType);
+
+  public ColumnDef(String fieldName, Class fieldType) {
+    colInf = new ColumnInfo(fieldName, fieldType);
   }
-  
-  public ColumnDef(String fieldName, String fieldType) throws ClassNotFoundException
-  {
-	colInf = new ColumnInfo(fieldName, Class.forName(fieldType));
+
+  public ColumnDef(String fieldName, String fieldType) throws ClassNotFoundException {
+    colInf = new ColumnInfo(fieldName, Class.forName(fieldType));
   }
-  
-  public String getFieldName()
-  {
-	  return colInf.getName();
+
+  public String getFieldName() {
+    return colInf.getName();
   }
- 
-  public Class getFieldType()
-  {
-	  return colInf.getColumnClass();
+
+  public Class getFieldType() {
+    return colInf.getColumnClass();
   }
-  
-  public ColumnInfo getColumnInfo()
-  {
-	  return colInf;
+
+  public ColumnInfo getColumnInfo() {
+    return colInf;
   }
 }

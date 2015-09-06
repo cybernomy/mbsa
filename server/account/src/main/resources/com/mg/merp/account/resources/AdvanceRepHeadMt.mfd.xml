@@ -13,65 +13,97 @@
 
 <!-- $Id: AdvanceRepHeadMt.mfd.xml,v 1.13 2008/03/20 10:42:43 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.AdvanceRepHeadMt" title="resource://com.mg.merp.account.resources.formelements#AdvanceRepHead.FormMt.Title" helpTopic="account#advreport_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.account.support.ui.AdvanceRepHeadMt"
+          title="resource://com.mg.merp.account.resources.formelements#AdvanceRepHead.FormMt.Title"
+          helpTopic="account#advreport_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" alignment="expand_top" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title" >
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
-			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml" />								
-			<jfd:field id="ReceivedSum" readOnly="true" text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Receipt" fieldGroup="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Summa"/>			 							
-			<jfd:field id="SumCur" text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Expense"/>
- 			<jfd:field id="BalanceSum" readOnly="true" text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Balance" sameLine="true"/>
-			<jfd:field id="Company" />
-			<jfd:field id="To" sameLine="true" text="resource://com.mg.merp.account.resources.dataitemlabels#AdvanceRepHead.OrgUnit"/>	
-			<jfd:field id="From" text="resource://com.mg.merp.account.resources.dataitemlabels#AdvanceRepHead.Advance" />					
-			<jfd:field id="Acc"/>		
-			<jfd:field id="CalcTaxesKind" sameLine="true"/>
- 			<jfd:field id="Purpose" />	
-					 
-			<jfd:field id="AttachedDocs" />									
-			<jfd:field id="AttachedDocsSheets" sameLine="true"/>						 
-			<jfd:field id="Comments" />	
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																													
-		</jfd:container>		
-		<jfd:container id="cashFields" alignment="expand_top" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.account.resources.formelements#AdvanceRepHead.FormMt.Cash.Title" helpTopic="account#advreport_html" >		
-			<jfd:button id="CalcRec" text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Button.CalcRecivedSum" actionListener="CalcRec" fieldGroup="resource://com.mg.merp.account.resources.formelements#AdvanceRepHead.ReceivedSrc"/> 						 					 															
-			<jfd:field id="Received1Src" alignment="expand_expand" />	
-			<jfd:field id="Received1Date" showLabel="false" />										
-			<jfd:field id="Received1Sum" showLabel="false" sameLine="true"/>	
-			<jfd:field id="Received2Src" alignment="expand_expand" />									
-			<jfd:field id="Received2Date" showLabel="false" />
-			<jfd:field id="Received2Sum" showLabel="false" sameLine="true"/>		
-			<jfd:field id="Received3Src" alignment="expand_expand" />								
-			<jfd:field id="Received3Date" showLabel="false" />	
-			<jfd:field id="Received3Sum" showLabel="false" sameLine="true"/>
-		
-	 		<jfd:field id="PrevAdvanceSum" text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Summa" fieldGroup="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.PrevAdvance" />
-	 		<jfd:field id="RestDocKind"/>
-			<jfd:button id="CalcAdv" text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Button.CalcAdv" actionListener="CalcAdv"/> 						 					 		
-			<jfd:field id="RestSum" text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Summa" fieldGroup="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.RestKind" />	
-			<jfd:container id="docConfirm" layout="jfd:box" longField="true" label="resource://com.mg.merp.account.resources.formelements#AdvanceRepHead.DocConfirmRest" >
-				<jfd:field id="RestDocType" showLabel="false" alignment="left_expand"/>
-				<jfd:field id="RestDocNumber" showLabel="false" alignment="expand_expand"/>			
-				<jfd:field id="RestDocDate" showLabel="false" alignment="right_expand"/>				
-				<jfd:button id="ViewConfirmDocument" alignment="right_expand" icon="com/mg/framework/resources/viewbuttonicon.png" toolTip="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.ConfirmDoc.ToolTip" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ViewConfirmDocument" />
-			</jfd:container>	
-	 		<jfd:field id="BalanceOrOverRun" readOnly="true" text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.BalanceOrOverRun"/>
-			<jfd:button id="CalcAll" text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Button.CalcAll" actionListener="CalcAll"/> 						 					 		
-		</jfd:container>	
-			
-		<jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.account.resources.formelements#MainSpec.Tab.Title">
-		</jfd:maintenanceTable> 
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" alignment="expand_top" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title">
+      <jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml"/>
+      <jfd:field id="ReceivedSum" readOnly="true"
+                 text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Receipt"
+                 fieldGroup="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Summa"/>
+      <jfd:field id="SumCur"
+                 text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Expense"/>
+      <jfd:field id="BalanceSum" readOnly="true"
+                 text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Balance"
+                 sameLine="true"/>
+      <jfd:field id="Company"/>
+      <jfd:field id="To" sameLine="true"
+                 text="resource://com.mg.merp.account.resources.dataitemlabels#AdvanceRepHead.OrgUnit"/>
+      <jfd:field id="From"
+                 text="resource://com.mg.merp.account.resources.dataitemlabels#AdvanceRepHead.Advance"/>
+      <jfd:field id="Acc"/>
+      <jfd:field id="CalcTaxesKind" sameLine="true"/>
+      <jfd:field id="Purpose"/>
 
- 		<jfd:container id="extraFields" alignment="expand_top" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.account.resources.formelements#Extra.Tab.Title" >
-			<jfd:field id="Description" alignment="expand_expand"/>
-		</jfd:container>
-	</jfd:container>
-	
-	<jfd:include name="com/mg/merp/document/resources/DefaultDocMaintenanceFooterMacros.xml" />
+      <jfd:field id="AttachedDocs"/>
+      <jfd:field id="AttachedDocsSheets" sameLine="true"/>
+      <jfd:field id="Comments"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="cashFields" alignment="expand_top" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.account.resources.formelements#AdvanceRepHead.FormMt.Cash.Title"
+                   helpTopic="account#advreport_html">
+      <jfd:button id="CalcRec"
+                  text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Button.CalcRecivedSum"
+                  actionListener="CalcRec"
+                  fieldGroup="resource://com.mg.merp.account.resources.formelements#AdvanceRepHead.ReceivedSrc"/>
+      <jfd:field id="Received1Src" alignment="expand_expand"/>
+      <jfd:field id="Received1Date" showLabel="false"/>
+      <jfd:field id="Received1Sum" showLabel="false" sameLine="true"/>
+      <jfd:field id="Received2Src" alignment="expand_expand"/>
+      <jfd:field id="Received2Date" showLabel="false"/>
+      <jfd:field id="Received2Sum" showLabel="false" sameLine="true"/>
+      <jfd:field id="Received3Src" alignment="expand_expand"/>
+      <jfd:field id="Received3Date" showLabel="false"/>
+      <jfd:field id="Received3Sum" showLabel="false" sameLine="true"/>
+
+      <jfd:field id="PrevAdvanceSum"
+                 text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Summa"
+                 fieldGroup="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.PrevAdvance"/>
+      <jfd:field id="RestDocKind"/>
+      <jfd:button id="CalcAdv"
+                  text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Button.CalcAdv"
+                  actionListener="CalcAdv"/>
+      <jfd:field id="RestSum"
+                 text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Summa"
+                 fieldGroup="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.RestKind"/>
+      <jfd:container id="docConfirm" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.account.resources.formelements#AdvanceRepHead.DocConfirmRest">
+        <jfd:field id="RestDocType" showLabel="false" alignment="left_expand"/>
+        <jfd:field id="RestDocNumber" showLabel="false" alignment="expand_expand"/>
+        <jfd:field id="RestDocDate" showLabel="false" alignment="right_expand"/>
+        <jfd:button id="ViewConfirmDocument" alignment="right_expand"
+                    icon="com/mg/framework/resources/viewbuttonicon.png"
+                    toolTip="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.ConfirmDoc.ToolTip"
+                    minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+                    actionListener="ViewConfirmDocument"/>
+      </jfd:container>
+      <jfd:field id="BalanceOrOverRun" readOnly="true"
+                 text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.BalanceOrOverRun"/>
+      <jfd:button id="CalcAll"
+                  text="resource://com.mg.merp.account.resources.formelements#AdvanceRepHeadMt.Button.CalcAll"
+                  actionListener="CalcAll"/>
+    </jfd:container>
+
+    <jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.account.resources.formelements#MainSpec.Tab.Title">
+    </jfd:maintenanceTable>
+
+    <jfd:container id="extraFields" alignment="expand_top" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.account.resources.formelements#Extra.Tab.Title">
+      <jfd:field id="Description" alignment="expand_expand"/>
+    </jfd:container>
+  </jfd:container>
+
+  <jfd:include name="com/mg/merp/document/resources/DefaultDocMaintenanceFooterMacros.xml"/>
 </jfd:form>

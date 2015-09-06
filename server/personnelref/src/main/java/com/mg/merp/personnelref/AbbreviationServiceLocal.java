@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.Abbreviation;
 
 /**
- *
  * @author leonova
  * @version $Id: AbbreviationServiceLocal.java,v 1.1 2006/03/14 11:49:48 safonov Exp $
  */
 public interface AbbreviationServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Abbreviation, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Abbreviation, Integer> {
 
 }

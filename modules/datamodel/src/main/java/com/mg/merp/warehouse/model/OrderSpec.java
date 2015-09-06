@@ -21,182 +21,185 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: OrderSpec.java,v 1.6 2007/09/27 15:38:46 safonov Exp $
  */
 public class OrderSpec extends BaseStockDocumentSpec implements
-		java.io.Serializable {
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private com.mg.merp.reference.model.Contractor Warehouse;
+  private com.mg.merp.reference.model.Contractor Warehouse;
 
-	private java.util.Date RequiredDate;
+  private java.util.Date RequiredDate;
 
-	private java.util.Date PromisedDate;
+  private java.util.Date PromisedDate;
 
-	private java.lang.String VendorItemCode;
+  private java.lang.String VendorItemCode;
 
-	private java.math.BigDecimal QtyAccepted;
+  private java.math.BigDecimal QtyAccepted;
 
-	private java.math.BigDecimal QtyInvoiced;
+  private java.math.BigDecimal QtyInvoiced;
 
-	private java.math.BigDecimal QtyReturned;
+  private java.math.BigDecimal QtyReturned;
 
-	private java.math.BigDecimal QtyShipped;
+  private java.math.BigDecimal QtyShipped;
 
-	private java.math.BigDecimal QtyPicked;
+  private java.math.BigDecimal QtyPicked;
 
-	private java.math.BigDecimal QtyOutstanding;
+  private java.math.BigDecimal QtyOutstanding;
 
-	private boolean ClosedForPlanning;
+  private boolean ClosedForPlanning;
 
-	private OrderStatus Status;
+  private OrderStatus Status;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public OrderSpec() {
-	}
+  /**
+   * default constructor
+   */
+  public OrderSpec() {
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("Warehouse.OrderSpec.Warehouse")
-	public com.mg.merp.reference.model.Contractor getWarehouse() {
-		return this.Warehouse;
-	}
+  // Property accessors
 
-	public void setWarehouse(com.mg.merp.reference.model.Contractor Contractor) {
-		this.Warehouse = Contractor;
-	}
+  /**
+   *
+   */
+  @DataItemName("Warehouse.OrderSpec.Warehouse")
+  public com.mg.merp.reference.model.Contractor getWarehouse() {
+    return this.Warehouse;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Warehouse.OrderSpec.RequiredDate")
-	public java.util.Date getRequiredDate() {
-		return this.RequiredDate;
-	}
+  public void setWarehouse(com.mg.merp.reference.model.Contractor Contractor) {
+    this.Warehouse = Contractor;
+  }
 
-	public void setRequiredDate(java.util.Date RequiredDate) {
-		this.RequiredDate = RequiredDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Warehouse.OrderSpec.RequiredDate")
+  public java.util.Date getRequiredDate() {
+    return this.RequiredDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Warehouse.OrderSpec.PromisedDate")
-	public java.util.Date getPromisedDate() {
-		return this.PromisedDate;
-	}
+  public void setRequiredDate(java.util.Date RequiredDate) {
+    this.RequiredDate = RequiredDate;
+  }
 
-	public void setPromisedDate(java.util.Date PromisedDate) {
-		this.PromisedDate = PromisedDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Warehouse.OrderSpec.PromisedDate")
+  public java.util.Date getPromisedDate() {
+    return this.PromisedDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Warehouse.OrderSpec.VendorItemCode")
-	public java.lang.String getVendorItemCode() {
-		return this.VendorItemCode;
-	}
+  public void setPromisedDate(java.util.Date PromisedDate) {
+    this.PromisedDate = PromisedDate;
+  }
 
-	public void setVendorItemCode(java.lang.String VendorItemCode) {
-		this.VendorItemCode = VendorItemCode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Warehouse.OrderSpec.VendorItemCode")
+  public java.lang.String getVendorItemCode() {
+    return this.VendorItemCode;
+  }
 
-	/**
-	 * 
-	 */
+  public void setVendorItemCode(java.lang.String VendorItemCode) {
+    this.VendorItemCode = VendorItemCode;
+  }
 
-	public java.math.BigDecimal getQtyAccepted() {
-		return this.QtyAccepted;
-	}
+  /**
+   *
+   */
 
-	public void setQtyAccepted(java.math.BigDecimal QtyAccepted) {
-		this.QtyAccepted = QtyAccepted;
-	}
+  public java.math.BigDecimal getQtyAccepted() {
+    return this.QtyAccepted;
+  }
 
-	/**
-	 * 
-	 */
+  public void setQtyAccepted(java.math.BigDecimal QtyAccepted) {
+    this.QtyAccepted = QtyAccepted;
+  }
 
-	public java.math.BigDecimal getQtyInvoiced() {
-		return this.QtyInvoiced;
-	}
+  /**
+   *
+   */
 
-	public void setQtyInvoiced(java.math.BigDecimal QtyInvoiced) {
-		this.QtyInvoiced = QtyInvoiced;
-	}
+  public java.math.BigDecimal getQtyInvoiced() {
+    return this.QtyInvoiced;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Warehouse.OrderSpec.QtyReturned")
-	public java.math.BigDecimal getQtyReturned() {
-		return this.QtyReturned;
-	}
+  public void setQtyInvoiced(java.math.BigDecimal QtyInvoiced) {
+    this.QtyInvoiced = QtyInvoiced;
+  }
 
-	public void setQtyReturned(java.math.BigDecimal QtyReturned) {
-		this.QtyReturned = QtyReturned;
-	}
+  /**
+   *
+   */
+  @DataItemName("Warehouse.OrderSpec.QtyReturned")
+  public java.math.BigDecimal getQtyReturned() {
+    return this.QtyReturned;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Warehouse.OrderSpec.QtyShipped")
-	public java.math.BigDecimal getQtyShipped() {
-		return this.QtyShipped;
-	}
+  public void setQtyReturned(java.math.BigDecimal QtyReturned) {
+    this.QtyReturned = QtyReturned;
+  }
 
-	public void setQtyShipped(java.math.BigDecimal QtyShipped) {
-		this.QtyShipped = QtyShipped;
-	}
+  /**
+   *
+   */
+  @DataItemName("Warehouse.OrderSpec.QtyShipped")
+  public java.math.BigDecimal getQtyShipped() {
+    return this.QtyShipped;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Warehouse.OrderSpec.QtyPicked")
-	public java.math.BigDecimal getQtyPicked() {
-		return this.QtyPicked;
-	}
+  public void setQtyShipped(java.math.BigDecimal QtyShipped) {
+    this.QtyShipped = QtyShipped;
+  }
 
-	public void setQtyPicked(java.math.BigDecimal QtyPicked) {
-		this.QtyPicked = QtyPicked;
-	}
+  /**
+   *
+   */
+  @DataItemName("Warehouse.OrderSpec.QtyPicked")
+  public java.math.BigDecimal getQtyPicked() {
+    return this.QtyPicked;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Warehouse.OrderSpec.QtyOutstanding")
-	public java.math.BigDecimal getQtyOutstanding() {
-		return this.QtyOutstanding;
-	}
+  public void setQtyPicked(java.math.BigDecimal QtyPicked) {
+    this.QtyPicked = QtyPicked;
+  }
 
-	public void setQtyOutstanding(java.math.BigDecimal QtyOutstanding) {
-		this.QtyOutstanding = QtyOutstanding;
-	}
+  /**
+   *
+   */
+  @DataItemName("Warehouse.OrderSpec.QtyOutstanding")
+  public java.math.BigDecimal getQtyOutstanding() {
+    return this.QtyOutstanding;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Warehouse.OrderSpec.ClosedForPlanning")
-	public boolean getClosedForPlanning() {
-		return this.ClosedForPlanning;
-	}
+  public void setQtyOutstanding(java.math.BigDecimal QtyOutstanding) {
+    this.QtyOutstanding = QtyOutstanding;
+  }
 
-	public void setClosedForPlanning(boolean ClosedForPlanning) {
-		this.ClosedForPlanning = ClosedForPlanning;
-	}
+  /**
+   *
+   */
+  @DataItemName("Warehouse.OrderSpec.ClosedForPlanning")
+  public boolean getClosedForPlanning() {
+    return this.ClosedForPlanning;
+  }
 
-	/**
-	 * 
-	 */
-	public OrderStatus getStatus() {
-		return this.Status;
-	}
+  public void setClosedForPlanning(boolean ClosedForPlanning) {
+    this.ClosedForPlanning = ClosedForPlanning;
+  }
 
-	public void setStatus(OrderStatus Status) {
-		this.Status = Status;
-	}
+  /**
+   *
+   */
+  public OrderStatus getStatus() {
+    return this.Status;
+  }
+
+  public void setStatus(OrderStatus Status) {
+    this.Status = Status;
+  }
 
 }

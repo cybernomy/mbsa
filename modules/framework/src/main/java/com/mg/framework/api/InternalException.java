@@ -15,24 +15,23 @@
 package com.mg.framework.api;
 
 /**
- * @author Oleg V. Safonov
- * $Id: InternalException.java,v 1.2 2006/09/28 12:24:12 safonov Exp $
+ * @author Oleg V. Safonov $Id: InternalException.java,v 1.2 2006/09/28 12:24:12 safonov Exp $
  */
 @javax.ejb.ApplicationException
 public class InternalException extends ApplicationException {
-    public InternalException(String s, Throwable cause) {
-        super(s, cause);
-    }
-    
-    public InternalException(String s) {
-        super(s);
-    }   
+  public InternalException(String s, Throwable cause) {
+    super(s, cause);
+  }
 
-    public InternalException() {
-        super();
-    }   
+  public InternalException(String s) {
+    super(s);
+  }
 
-    public InternalException(Throwable cause) {
-        super(cause);
-    }
+  public InternalException() {
+    super();
+  }
+
+  public InternalException(Throwable cause) {
+    super(cause);
+  }
 }

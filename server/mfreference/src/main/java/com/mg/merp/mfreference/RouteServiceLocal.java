@@ -17,12 +17,10 @@ package com.mg.merp.mfreference;
 import com.mg.merp.mfreference.model.Route;
 
 /**
- * 
  * @author leonova
  * @version $Id: RouteServiceLocal.java,v 1.1 2006/03/14 11:49:48 safonov Exp $
  */
 public interface RouteServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Route, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Route, Integer> {
 
 }

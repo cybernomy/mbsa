@@ -15,8 +15,6 @@
 
 package com.mg.merp.salary.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryAttribute;
@@ -24,24 +22,25 @@ import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.salary.FeeModelParamServiceLocal;
 import com.mg.merp.salary.model.FeeModelParam;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Параметры в образцах начислений / удержаний" 
- * 
+ * Бизнес-компонент "Параметры в образцах начислений / удержаний"
+ *
  * @author leonova
  * @version $Id: FeeModelParamServiceBean.java,v 1.3 2006/09/15 11:14:16 leonova Exp $
  */
-@Stateless(name="merp/salary/FeeModelParamService")
+@Stateless(name = "merp/salary/FeeModelParamService")
 public class FeeModelParamServiceBean extends AbstractPOJODataBusinessObjectServiceBean<FeeModelParam, Integer> implements FeeModelParamServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, FeeModelParam entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "ParamValue"));
-		context.addRule(new MandatoryAttribute(entity, "FeeRefParam"));		
-	}
-
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, FeeModelParam entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "ParamValue"));
+    context.addRule(new MandatoryAttribute(entity, "FeeRefParam"));
+  }
 
 
 }

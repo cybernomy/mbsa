@@ -17,12 +17,10 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.OrderSpec;
 
 /**
- * 
  * @author leonova
  * @version $Id: OrderSpecCusServiceLocal.java,v 1.2 2006/09/20 11:02:09 safonov Exp $
  */
 public interface OrderSpecCusServiceLocal
-   extends com.mg.merp.document.GoodsDocumentSpecification<OrderSpec, Integer>
-{
+    extends com.mg.merp.document.GoodsDocumentSpecification<OrderSpec, Integer> {
 
 }

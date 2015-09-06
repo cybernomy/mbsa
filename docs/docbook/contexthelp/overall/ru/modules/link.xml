@@ -14,20 +14,20 @@
 <!-- $Id: link.xml,v 1.1 2006/12/17 13:25:07 konyashkina Exp $ -->
 
 <link version="1.0">
-   
+
   <linkitem topic="norm_links">
-     <linkentry target="ovrnormhd_html" text="Нормы выдачи спецодежды" />
-     <linkentry target="ovrnormsp_html" text="Спецификация" />
+    <linkentry target="ovrnormhd_html" text="Нормы выдачи спецодежды"/>
+    <linkentry target="ovrnormsp_html" text="Спецификация"/>
   </linkitem>
-  
+
   <linkitem topic="ovrcard_links">
-      <linkentry target="ovrcard_html" text="Лицевые карточки сотрудников" />
-      <linkentry target="ovrsize_html" text="Размеры" />
-      <linkentry target="ovrhist_html" text="История выдачи" />
-      <linkentry target="ovrchng_html" text="Изменения состояния" />
-      <linkentry target="cancellation_html" text="История погашений" />
-      <linkentry target="docrel_html" text="Создание документа на выдачу" />
-      <linkentry target="docend_html" text="Документ на списание" />
-  </linkitem> 
-  
+    <linkentry target="ovrcard_html" text="Лицевые карточки сотрудников"/>
+    <linkentry target="ovrsize_html" text="Размеры"/>
+    <linkentry target="ovrhist_html" text="История выдачи"/>
+    <linkentry target="ovrchng_html" text="Изменения состояния"/>
+    <linkentry target="cancellation_html" text="История погашений"/>
+    <linkentry target="docrel_html" text="Создание документа на выдачу"/>
+    <linkentry target="docend_html" text="Документ на списание"/>
+  </linkitem>
+
 </link>

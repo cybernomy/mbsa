@@ -21,19 +21,17 @@ import com.mg.framework.utils.ServerUtils;
 /**
  * @author Oleg V. Safonov
  * @version $Id: MetadataCacheLocator.java,v 1.2 2006/01/24 14:00:55 safonov Exp $
- *
  */
 public class MetadataCacheLocator {
-    private static volatile MetadataCache instance = null;
-    
-    public static MetadataCache locate() throws ApplicationException {
-        if (instance == null)
-            try {
-                instance = (MetadataCache) ServerUtils.createMBeanProxy(MetadataCache.class, "merp:service=MetadataCacheService");
-            }
-        	catch (Exception e) {
-        	    throw new ApplicationException(e);
-        	}
-        return instance;
-    }
+  private static volatile MetadataCache instance = null;
+
+  public static MetadataCache locate() throws ApplicationException {
+    if (instance == null)
+      try {
+        instance = (MetadataCache) ServerUtils.createMBeanProxy(MetadataCache.class, "merp:service=MetadataCacheService");
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 }

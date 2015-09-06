@@ -16,24 +16,24 @@ package com.mg.framework.api.validator;
 
 /**
  * Ошибка контроля данных
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ValidationError.java,v 1.1 2006/08/14 14:07:42 safonov Exp $
  */
 public class ValidationError {
-	private String message;
-	
-	public ValidationError(String message) {
-		this.message = message;
-	}
+  private String message;
 
-	/**
-	 * получить сообщение об ошибки контроля данных
-	 * 
-	 * @return Returns the message.
-	 */
-	public String getMessage() {
-		return message;
-	}
+  public ValidationError(String message) {
+    this.message = message;
+  }
+
+  /**
+   * получить сообщение об ошибки контроля данных
+   *
+   * @return Returns the message.
+   */
+  public String getMessage() {
+    return message;
+  }
 
 }

@@ -23,16 +23,16 @@ import com.mg.framework.utils.ServerUtils;
  * @version $Id$
  */
 public class SecuritySystemLocator {
-	private static volatile SecuritySystem instance = null;
+  private static volatile SecuritySystem instance = null;
 
-	public static SecuritySystem locate() {
-		if (instance == null) {
-			try {
-				instance = (SecuritySystem) ServerUtils.createMBeanProxy(SecuritySystem.class, "merp:service=SecuritySystemService");
-			} catch (Exception e) {
-				throw new ApplicationException(e);
-			}
-		}
-		return instance;
-	}
+  public static SecuritySystem locate() {
+    if (instance == null) {
+      try {
+        instance = (SecuritySystem) ServerUtils.createMBeanProxy(SecuritySystem.class, "merp:service=SecuritySystemService");
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    }
+    return instance;
+  }
 }

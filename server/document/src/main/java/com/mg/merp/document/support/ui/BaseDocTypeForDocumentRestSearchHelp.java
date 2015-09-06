@@ -18,18 +18,18 @@ import com.mg.merp.document.model.DocumentKind;
 
 /**
  * SearchHelp типов документов оснований для вызова в форме условия отбора
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: BaseDocTypeForDocumentRestSearchHelp.java,v 1.1 2008/02/12 08:10:11 alikaev Exp $
  */
 public class BaseDocTypeForDocumentRestSearchHelp extends AbstractDocTypeForDocumentRestSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.support.ui.AbstractDocTypeForDocumentRestSearchHelp#getDocumentKind()
-	 */
-	@Override
-	protected DocumentKind getDocumentKind() {
-		return DocumentKind.BASE;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.support.ui.AbstractDocTypeForDocumentRestSearchHelp#getDocumentKind()
+   */
+  @Override
+  protected DocumentKind getDocumentKind() {
+    return DocumentKind.BASE;
+  }
 
 }

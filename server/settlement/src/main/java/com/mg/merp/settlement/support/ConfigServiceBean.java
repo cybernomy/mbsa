@@ -15,20 +15,20 @@
 
 package com.mg.merp.settlement.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.settlement.ConfigServiceLocal;
 import com.mg.merp.settlement.model.StlConfig;
 
+import javax.ejb.Stateless;
+
 /**
  * Реализация бизнес-компонента "Конфигурация модуля <Расчеты с партнерами>"
- * 
+ *
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
  * @version $Id: ConfigServiceBean.java,v 1.1 2007/03/19 14:55:34 sharapov Exp $
  */
-@Stateless(name="merp/settlement/SettlementConfigService") //$NON-NLS-1$
+@Stateless(name = "merp/settlement/SettlementConfigService") //$NON-NLS-1$
 public class ConfigServiceBean extends AbstractPOJODataBusinessObjectServiceBean<StlConfig, Integer> implements ConfigServiceLocal {
 
 }

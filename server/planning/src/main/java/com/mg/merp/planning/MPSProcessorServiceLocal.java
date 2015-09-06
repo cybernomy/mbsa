@@ -16,30 +16,29 @@ package com.mg.merp.planning;
 
 /**
  * Бизнес-компонент "Процессор MPS"
- * 
+ *
  * @author leonova
  * @version $Id: MPSProcessorServiceLocal.java,v 1.2 2007/07/30 10:37:51 safonov Exp $
  */
-public interface MPSProcessorServiceLocal extends com.mg.framework.api.BusinessObjectService
-{
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/planning/MPSProcessor";
-	
-	/**
-	 * генерация ОПП
-	 * 
-	 * @param mpsId	ООП
-	 */
-	void generateMps(int mpsId);
+public interface MPSProcessorServiceLocal extends com.mg.framework.api.BusinessObjectService {
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/planning/MPSProcessor";
 
-	/**
-	 * перенос ОПП на другой уровень
-	 * 
-	 * @param mpsSrcId	ОПП источник
-	 * @param mpsDstId	ОПП приемник (на который переносится источник)
-	 */
-	void mpsLevelTransfer(int mpsSrcId, int mpsDstId);
+  /**
+   * генерация ОПП
+   *
+   * @param mpsId ООП
+   */
+  void generateMps(int mpsId);
+
+  /**
+   * перенос ОПП на другой уровень
+   *
+   * @param mpsSrcId ОПП источник
+   * @param mpsDstId ОПП приемник (на который переносится источник)
+   */
+  void mpsLevelTransfer(int mpsSrcId, int mpsDstId);
 
 }

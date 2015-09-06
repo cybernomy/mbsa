@@ -18,7 +18,7 @@ import com.mg.merp.document.generic.ui.GoodsDocumentRest;
 
 /**
  * @author leonova
- * @version $Id: ManufactureDocumentRest.java,v 1.2 2006/09/07 05:21:33 leonova Exp $ 
+ * @version $Id: ManufactureDocumentRest.java,v 1.2 2006/09/07 05:21:33 leonova Exp $
  */
 public class ManufactureDocumentRest extends GoodsDocumentRest {
 

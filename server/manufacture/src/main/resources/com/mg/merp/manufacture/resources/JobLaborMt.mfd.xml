@@ -13,43 +13,52 @@
 
 <!-- $Id: JobLaborMt.mfd.xml,v 1.6 2007/07/30 10:26:38 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.manufacture.support.ui.JobLaborMt" title="resource://com.mg.merp.manufacture.resources.formelements#JobLabor" helpTopic="manufacture#joblabor_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.manufacture.support.ui.JobLaborMt"
+          title="resource://com.mg.merp.manufacture.resources.formelements#JobLabor"
+          helpTopic="manufacture#joblabor_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_expand" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Job.MainTab.Title" >
-			<jfd:field id="TimeSequence" />
-		 	<jfd:field id="EffOnDate" /> 
-		 	<jfd:field id="EffOffDate" />
-		 	<jfd:field id="RunTicksLbr" />
-		 	<jfd:field id="RunTimeLbrUm" sameLine="true" showLabel="false" />
-		 	<jfd:field id="LbrRate" />
-		 	<jfd:field id="LbrRateCurrency" sameLine="true" showLabel="false"/>
-		 	<jfd:field id="LbrOhRate" />
-		 	<jfd:field id="LbrOhRateCurrency" sameLine="true" showLabel="false" />
-		 	<jfd:field id="LbrBackflushFlag" />
-		 	<jfd:field id="LbrOhBackflushFlag" />	
-		 	<jfd:field id="ResourceGroup" />
-		 	<jfd:field id="LbrCostCategory" />
-		 	<jfd:field id="LbrOhCostCategory" />
-		 	<jfd:field id="LbrNumber" />
-		 	<jfd:field id="LbrOhRatio" />
-		 	<jfd:field id="TimeRateFlag" editorType="comboBox" />
-		 	<jfd:field id="LbrOhAllocationFlag" editorType="comboBox" />
-			<jfd:field id="Comment" /> 
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 													
-		</jfd:container>
-		
-		<jfd:container id="laborJobRouteFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#CostDetailFields" >
-	 		<jfd:table id="stdDetailLine" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#StdCostDetailFields" >
-			</jfd:table> 
-			
-	 		<jfd:table id="actDetailLine" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#ActCostDetailFields" >
-			</jfd:table> 	
-		</jfd:container>
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Job.MainTab.Title">
+      <jfd:field id="TimeSequence"/>
+      <jfd:field id="EffOnDate"/>
+      <jfd:field id="EffOffDate"/>
+      <jfd:field id="RunTicksLbr"/>
+      <jfd:field id="RunTimeLbrUm" sameLine="true" showLabel="false"/>
+      <jfd:field id="LbrRate"/>
+      <jfd:field id="LbrRateCurrency" sameLine="true" showLabel="false"/>
+      <jfd:field id="LbrOhRate"/>
+      <jfd:field id="LbrOhRateCurrency" sameLine="true" showLabel="false"/>
+      <jfd:field id="LbrBackflushFlag"/>
+      <jfd:field id="LbrOhBackflushFlag"/>
+      <jfd:field id="ResourceGroup"/>
+      <jfd:field id="LbrCostCategory"/>
+      <jfd:field id="LbrOhCostCategory"/>
+      <jfd:field id="LbrNumber"/>
+      <jfd:field id="LbrOhRatio"/>
+      <jfd:field id="TimeRateFlag" editorType="comboBox"/>
+      <jfd:field id="LbrOhAllocationFlag" editorType="comboBox"/>
+      <jfd:field id="Comment"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:container id="laborJobRouteFields" layout="jfd:defaultMtLayout" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.manufacture.resources.formelements#CostDetailFields">
+      <jfd:table id="stdDetailLine" scroll="true" autoResize="subsequent_columns"
+                 alignment="expand_expand"
+                 fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#StdCostDetailFields">
+      </jfd:table>
+
+      <jfd:table id="actDetailLine" scroll="true" autoResize="subsequent_columns"
+                 alignment="expand_expand"
+                 fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#ActCostDetailFields">
+      </jfd:table>
+    </jfd:container>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

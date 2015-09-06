@@ -15,17 +15,16 @@
 
 package com.mg.merp.warehouse.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.warehouse.InventoryActCommissionServiceLocal;
 import com.mg.merp.warehouse.model.InventoryActCommission;
 
+import javax.ejb.Stateless;
+
 /**
- * 
  * @author Oleg V. Safonov
  * @version $Id: InventoryActCommissionServiceBean.java,v 1.3 2006/09/20 12:31:27 safonov Exp $
  */
-@Stateless(name="merp/warehouse/InventoryActCommissionService")
+@Stateless(name = "merp/warehouse/InventoryActCommissionService")
 public class InventoryActCommissionServiceBean extends com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean<InventoryActCommission, Integer> implements InventoryActCommissionServiceLocal {
 
 }

@@ -18,159 +18,163 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Модель бизнес-компонента "Образцы приказов"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: OrderModel.java,v 1.3 2007/08/27 12:05:53 sharapov Exp $
  */
 public class OrderModel extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields    
+  // Fields
 
-	private java.lang.Integer Id;
-	private com.mg.merp.core.model.Folder Folder;
-	private java.lang.String Code;
-	private java.lang.String Name;
-	private java.lang.String Header;
-	private java.lang.String Footer;
-	private com.mg.merp.core.model.SysClient SysClient;
-	private java.util.Set<OrderModelItem> OrderModelItems;
+  private java.lang.Integer Id;
+  private com.mg.merp.core.model.Folder Folder;
+  private java.lang.String Code;
+  private java.lang.String Name;
+  private java.lang.String Header;
+  private java.lang.String Footer;
+  private com.mg.merp.core.model.SysClient SysClient;
+  private java.util.Set<OrderModelItem> OrderModelItems;
 
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public OrderModel() {
-	}
+  /**
+   * default constructor
+   */
+  public OrderModel() {
+  }
 
-	/** constructor with id */
-	public OrderModel(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public OrderModel(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	
-	// Property accessors
-	
-	@DataItemName("ID") //$NON-NLS-1$
-	public java.lang.Integer getId () {
-		return this.Id;
-	}
 
-	/**
-	 * 
-	 * @param Id
-	 */
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public com.mg.merp.core.model.Folder getFolder() {
-		return this.Folder;
-	}
+  // Property accessors
 
-	/**
-	 * 
-	 * @param Folder
-	 */
-	public void setFolder(com.mg.merp.core.model.Folder Folder) {
-		this.Folder = Folder;
-	}
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  @DataItemName("ID") //$NON-NLS-1$
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 * @param SysClient
-	 */
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  /**
+   *
+   * @param Id
+   */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 * @return
-	 */
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  /**
+   *
+   * @return
+   */
+  public com.mg.merp.core.model.Folder getFolder() {
+    return this.Folder;
+  }
 
-	/**
-	 * 
-	 * @param Code
-	 */
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public java.lang.String getName() {
-		return this.Name;
-	}
+  /**
+   *
+   * @param Folder
+   */
+  public void setFolder(com.mg.merp.core.model.Folder Folder) {
+    this.Folder = Folder;
+  }
 
-	/**
-	 * 
-	 * @param Name
-	 */
-	public void setName(java.lang.String Name) {
-		this.Name = Name;
-	}
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public java.lang.String getHeader() {
-		return this.Header;
-	}
+  /**
+   *
+   * @return
+   */
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 * @param Header
-	 */
-	public void setHeader(java.lang.String Header) {
-		this.Header = Header;
-	}
-	
-	/**
-	 * 
-	 * @return
-	 */
-	public java.lang.String getFooter() {
-		return this.Footer;
-	}
+  /**
+   *
+   * @param SysClient
+   */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	/**
-	 * 
-	 * @param Footer
-	 */
-	public void setFooter(java.lang.String Footer) {
-		this.Footer = Footer;
-	}
+  /**
+   *
+   * @return
+   */
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * @return the orderModelItems
-	 */
-	public java.util.Set<OrderModelItem> getOrderModelItems() {
-		return this.OrderModelItems;
-	}
+  /**
+   *
+   * @param Code
+   */
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	/**
-	 * @param orderModelItems the orderModelItems to set
-	 */
-	public void setOrderModelItems(java.util.Set<OrderModelItem> orderModelItems) {
-		this.OrderModelItems = orderModelItems;
-	}
-	
+  /**
+   *
+   * @return
+   */
+  public java.lang.String getName() {
+    return this.Name;
+  }
+
+  /**
+   *
+   * @param Name
+   */
+  public void setName(java.lang.String Name) {
+    this.Name = Name;
+  }
+
+  /**
+   *
+   * @return
+   */
+  public java.lang.String getHeader() {
+    return this.Header;
+  }
+
+  /**
+   *
+   * @param Header
+   */
+  public void setHeader(java.lang.String Header) {
+    this.Header = Header;
+  }
+
+  /**
+   *
+   * @return
+   */
+  public java.lang.String getFooter() {
+    return this.Footer;
+  }
+
+  /**
+   *
+   * @param Footer
+   */
+  public void setFooter(java.lang.String Footer) {
+    this.Footer = Footer;
+  }
+
+  /**
+   * @return the orderModelItems
+   */
+  public java.util.Set<OrderModelItem> getOrderModelItems() {
+    return this.OrderModelItems;
+  }
+
+  /**
+   * @param orderModelItems the orderModelItems to set
+   */
+  public void setOrderModelItems(java.util.Set<OrderModelItem> orderModelItems) {
+    this.OrderModelItems = orderModelItems;
+  }
+
 }

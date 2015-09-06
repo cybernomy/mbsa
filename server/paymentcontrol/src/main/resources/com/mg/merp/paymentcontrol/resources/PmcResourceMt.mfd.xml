@@ -13,31 +13,37 @@
 
 <!-- $Id: PmcResourceMt.mfd.xml,v 1.8 2007/05/14 05:25:37 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcResource.FormMt.Title" helpTopic="paymentcontrol#pmcresource_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcResource.FormMt.Title"
+          helpTopic="paymentcontrol#pmcresource_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcResource.Total.Tab" >
-			<jfd:field id="OrgUnit" />
-			<jfd:field id="ActDateFrom" />	
-			<jfd:field id="ActDateTill" sameLine="true"/>
-			<jfd:field id="Catalog" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcResource.CatalogPosition" />				
-			<jfd:field id="Name" />	
-			<jfd:field id="Description" />	
-			<jfd:field id="CurCode" />	
-			<jfd:field id="CurRateType" />	
-			<jfd:field id="CurRateAuthority" sameLine="true"/>	
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																						
-		</jfd:container>	
-		<jfd:container id="paramFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcResource.Param.Tab" >
-			<jfd:field id="InDocModel1" />			
-			<jfd:field id="OutDocModel1" />	
-			<jfd:field id="InDocModel2" />	
-			<jfd:field id="OutDocModel2" />									
-		</jfd:container>						
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcResource.Total.Tab">
+      <jfd:field id="OrgUnit"/>
+      <jfd:field id="ActDateFrom"/>
+      <jfd:field id="ActDateTill" sameLine="true"/>
+      <jfd:field id="Catalog"
+                 text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcResource.CatalogPosition"/>
+      <jfd:field id="Name"/>
+      <jfd:field id="Description"/>
+      <jfd:field id="CurCode"/>
+      <jfd:field id="CurRateType"/>
+      <jfd:field id="CurRateAuthority" sameLine="true"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="paramFields" layout="jfd:defaultMtLayout" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcResource.Param.Tab">
+      <jfd:field id="InDocModel1"/>
+      <jfd:field id="OutDocModel1"/>
+      <jfd:field id="InDocModel2"/>
+      <jfd:field id="OutDocModel2"/>
+    </jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

@@ -7,31 +7,49 @@
 ]> -->
 <chapter id="003bpm">
   <title>Экземпляры бизнес-процесса</title>
-  
-	<para>Для каждого выполнения процесса необходимо создать его экземпляр. Нажмите кнопку 
-	<guibutton>Создать экземпляр</guibutton> или выберите аналогичный пункт из контекстного 
-	меню. Затем нажмите кнопку <guibutton>Экземпляры процесса</guibutton>, чтобы увидеть список 
-	экземпляров. </para>
-	
-	    <screenshot><mediaobject><imageobject>
-	    <imagedata fileref="images/picture2.gif"/></imageobject>
-	    </mediaobject> </screenshot>
-	
-	<para>Этот экземпляр создан, но ещё не стартован. Установите курсор на строку и нажмите 
-	кнопку <guibutton>Запустить экземпляр процесса</guibutton> (или выберите аналогичный пункт 
-	контекстного меню). </para>
 
-	<para>Вы можете удалить экземпляр процесса. При этом автоматически будут удалены 
-	<link linkend="005bpm">Назначения</link>, созданные этим экземпляром. </para>
-	
-	<para>Используйте кнопку <guibutton>Обновить</guibutton>, чтобы видеть актуальный список 
-	экземпляров процесса. </para>
-	
-	<para><guibutton>Монитор выполнения</guibutton> позволит отслеживать выполнение бизнес-процесса по 
-	 каждому экземпляру.</para>
-	    
-	<screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/monitor.gif"/></imageobject>
-	</mediaobject> </screenshot>
-    
-  </chapter>
+  <para>Для каждого выполнения процесса необходимо создать его экземпляр. Нажмите кнопку
+    <guibutton>Создать экземпляр</guibutton>
+    или выберите аналогичный пункт из контекстного
+    меню. Затем нажмите кнопку<guibutton>Экземпляры процесса</guibutton>, чтобы увидеть список
+    экземпляров.
+  </para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/picture2.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>Этот экземпляр создан, но ещё не стартован. Установите курсор на строку и нажмите
+    кнопку
+    <guibutton>Запустить экземпляр процесса</guibutton>
+    (или выберите аналогичный пункт
+    контекстного меню).
+  </para>
+
+  <para>Вы можете удалить экземпляр процесса. При этом автоматически будут удалены
+    <link linkend="005bpm">Назначения</link>, созданные этим экземпляром.
+  </para>
+
+  <para>Используйте кнопку<guibutton>Обновить</guibutton>, чтобы видеть актуальный список
+    экземпляров процесса.
+  </para>
+
+  <para>
+    <guibutton>Монитор выполнения</guibutton>
+    позволит отслеживать выполнение бизнес-процесса по
+    каждому экземпляру.
+  </para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/monitor.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+</chapter>

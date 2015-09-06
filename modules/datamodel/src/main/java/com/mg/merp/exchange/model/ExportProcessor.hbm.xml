@@ -1,42 +1,42 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.exchange.model.ExportProcessor" table="EXCH_EXPORT">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <!-- generator class="sequence">
         <param name="sequence">EXCH_EXPORT_ID_GEN</param>
       </generator-->
     </id>
     <many-to-one name="ExchSite" class="com.mg.merp.exchange.model.Site">
-      <column name="SITE_ID" not-null="false" />
+      <column name="SITE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <property name="BeanName" type="java.lang.String">
-      <column name="BEAN_NAME" length="128" not-null="false" sql-type="VARCHAR" />
+      <column name="BEAN_NAME" length="128" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Origin" type="java.lang.String">
-      <column name="ORIGIN" length="31" not-null="false" sql-type="CHAR" />
+      <column name="ORIGIN" length="31" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="RecId" type="java.lang.Integer">
-      <column name="REC_ID" not-null="false" sql-type="INTEGER" />
+      <column name="REC_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="Packet" type="java.lang.Integer">
-      <column name="PACKET" not-null="false" sql-type="INTEGER" />
+      <column name="PACKET" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="Status" type="java.lang.Short">
-      <column name="STATUS" not-null="false" sql-type="SMALLINT" />
+      <column name="STATUS" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="PacketTime" type="java.util.Date">
-      <column name="PACKET_TIME" not-null="false" sql-type="TIMESTAMP" />
+      <column name="PACKET_TIME" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <filter name="__mg_tenantFilter"/>
   </class>

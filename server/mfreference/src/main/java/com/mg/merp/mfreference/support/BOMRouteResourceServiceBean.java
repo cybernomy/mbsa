@@ -15,21 +15,20 @@
 
 package com.mg.merp.mfreference.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.mfreference.BOMRouteResourceServiceLocal;
 import com.mg.merp.mfreference.model.BomRouteResource;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Ресурсы" 
- * 
+ * Бизнес-компонент "Ресурсы"
+ *
  * @author leonova
  * @version $Id: BOMRouteResourceServiceBean.java,v 1.3 2006/09/07 10:57:04 leonova Exp $
  */
-@Stateless(name="merp/mfreference/BOMRouteResourceService")
+@Stateless(name = "merp/mfreference/BOMRouteResourceService")
 public class BOMRouteResourceServiceBean extends AbstractPOJODataBusinessObjectServiceBean<BomRouteResource, Integer> implements BOMRouteResourceServiceLocal {
-
 
 
 }

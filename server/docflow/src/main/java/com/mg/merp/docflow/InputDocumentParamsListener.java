@@ -20,24 +20,23 @@ import java.util.List;
 
 /**
  * Слушатель выбора параметров документа к отработке
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: InputDocumentParamsListener.java,v 1.1 2006/12/12 15:23:33 safonov Exp $
  */
 public interface InputDocumentParamsListener extends EventListener {
 
-	/**
-	 * параметры установлены
-	 * 
-	 * @param docSum	сумма к отработке
-	 * @param specList	спецификации к отработке
-	 */
-	void performed(BigDecimal docSum, List<DocumentSpecItem> specList);
-	
-	/**
-	 * установка параметров отменена
-	 *
-	 */
-	void canceled();	
+  /**
+   * параметры установлены
+   *
+   * @param docSum   сумма к отработке
+   * @param specList спецификации к отработке
+   */
+  void performed(BigDecimal docSum, List<DocumentSpecItem> specList);
+
+  /**
+   * установка параметров отменена
+   */
+  void canceled();
 
 }

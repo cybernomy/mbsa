@@ -19,32 +19,31 @@ import com.mg.framework.api.ApplicationException;
 /**
  * @author Oleg V. Safonov
  * @version $Id: MERPJBossServiceMBean.java,v 1.4 2005/04/05 15:46:29 safonov Exp $
- *
  */
 public interface MERPJBossServiceMBean extends org.jboss.system.ServiceMBean {
-	/**
-	 * getMERPLocation
-	 *
-	 * @return String
-	 */
-	public String getMERPLocation();
+  /**
+   * getMERPLocation
+   *
+   * @return String
+   */
+  public String getMERPLocation();
 
-	/**
-	 * setMERPLocation
-	 *
-	 * @param systemLocation String
-	 */
-	public void setMERPLocation(String systemLocation);
+  /**
+   * setMERPLocation
+   *
+   * @param systemLocation String
+   */
+  public void setMERPLocation(String systemLocation);
 
-    public boolean isUseBiDirGIOP();
-    
-    public void setUseBiDirGIOP(boolean useBiDirGIOP);
-    
-	public void setBusinessComponent(String component);
-	
-	public void convertDataSource() throws ApplicationException;
-    
-    public void delpoyLocalFile(String name) throws ApplicationException;
-    
-    public void delpoyRemoteFile(String name, byte[] file) throws ApplicationException;    
+  public boolean isUseBiDirGIOP();
+
+  public void setUseBiDirGIOP(boolean useBiDirGIOP);
+
+  public void setBusinessComponent(String component);
+
+  public void convertDataSource() throws ApplicationException;
+
+  public void delpoyLocalFile(String name) throws ApplicationException;
+
+  public void delpoyRemoteFile(String name, byte[] file) throws ApplicationException;
 }

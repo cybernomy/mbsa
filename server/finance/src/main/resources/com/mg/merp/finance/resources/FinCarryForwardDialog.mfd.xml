@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
- <!-- ===================================================================== -->
- <!--  Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.					-->
- <!--  All rights reserved													-->
- <!-- 																		-->
- <!--  This program is the proprietary and confidential information			-->
- <!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
- <!--  as authorized in a license agreement authorizing and					-->
- <!--  controlling such use and disclosure									-->
- <!--																		-->
- <!--  Millennium Business Suite Anywhere System.							-->
- <!-- ===================================================================== -->
+<!-- ===================================================================== -->
+<!--  Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.					-->
+<!--  All rights reserved													-->
+<!-- 																		-->
+<!--  This program is the proprietary and confidential information			-->
+<!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
+<!--  as authorized in a license agreement authorizing and					-->
+<!--  controlling such use and disclosure									-->
+<!--																		-->
+<!--  Millennium Business Suite Anywhere System.							-->
+<!-- ===================================================================== -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.finance.support.ui.FinCarryForwardDialog" title="resource://com.mg.merp.finance.resources.formelements#FinCarryForward.Dialog.Title" width="370" height="159">
-	<jfd:container id="centralBox" layout="jfd:box"  columns="2" alignment="expand_expand">
-		<jfd:border style="bevel" type="raised" />
-		<jfd:container id="leftBox" layout="jfd:box"  orientation="ver" verticalGap="5">
-			<jfd:border style="etched" type="raised" />
-			<jfd:field id="finPeriodFrom" text="resource://com.mg.merp.finance.resources.formelements#FinCarryForward.Dialog.FinPeriodFrom" />
-			<jfd:field id="finPeriodTill" text="resource://com.mg.merp.finance.resources.formelements#FinCarryForward.Dialog.FinPeriodTill" />
-		</jfd:container>
-		
-		<jfd:container id="rightBox" layout="jfd:box"  orientation="ver" verticalGap="14">
-			<jfd:field id="allAcc" text="resource://com.mg.merp.finance.resources.formelements#FinCarryForward.Dialog.AllAcc"/>
-			<jfd:button id="selectButton" alignment="expand_expand" text="resource://com.mg.merp.finance.resources.formelements#FinCarryForward.Dialog.ChooseAcounts" actionListener="ChooseAccounts"/>
-			<jfd:label id="selectedAmountLabel"  text="" alignment="expand_expand" />
-		</jfd:container>
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5"
+          controller="com.mg.merp.finance.support.ui.FinCarryForwardDialog"
+          title="resource://com.mg.merp.finance.resources.formelements#FinCarryForward.Dialog.Title"
+          width="370" height="159">
+  <jfd:container id="centralBox" layout="jfd:box" columns="2" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:container id="leftBox" layout="jfd:box" orientation="ver" verticalGap="5">
+      <jfd:border style="etched" type="raised"/>
+      <jfd:field id="finPeriodFrom"
+                 text="resource://com.mg.merp.finance.resources.formelements#FinCarryForward.Dialog.FinPeriodFrom"/>
+      <jfd:field id="finPeriodTill"
+                 text="resource://com.mg.merp.finance.resources.formelements#FinCarryForward.Dialog.FinPeriodTill"/>
+    </jfd:container>
+
+    <jfd:container id="rightBox" layout="jfd:box" orientation="ver" verticalGap="14">
+      <jfd:field id="allAcc"
+                 text="resource://com.mg.merp.finance.resources.formelements#FinCarryForward.Dialog.AllAcc"/>
+      <jfd:button id="selectButton" alignment="expand_expand"
+                  text="resource://com.mg.merp.finance.resources.formelements#FinCarryForward.Dialog.ChooseAcounts"
+                  actionListener="ChooseAccounts"/>
+      <jfd:label id="selectedAmountLabel" text="" alignment="expand_expand"/>
+    </jfd:container>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
 </jfd:form>

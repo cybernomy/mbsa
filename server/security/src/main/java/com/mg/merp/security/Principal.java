@@ -18,22 +18,22 @@ import net.sf.jguard.core.principals.RolePrincipal;
 
 /**
  * Принципал представляющий понятие роль
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id$
  */
 public class Principal extends RolePrincipal {
 
-	public Principal() {
-		super();
-	}
-	
-	public Principal(String name) {
-		super(name);
-	}
-	
-	public Principal(String name,String  applicationName) {
-		super(name, applicationName);
-	}
+  public Principal() {
+    super();
+  }
+
+  public Principal(String name) {
+    super(name);
+  }
+
+  public Principal(String name, String applicationName) {
+    super(name, applicationName);
+  }
 
 }

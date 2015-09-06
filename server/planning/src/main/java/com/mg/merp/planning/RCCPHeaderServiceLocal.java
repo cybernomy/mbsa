@@ -17,12 +17,10 @@ package com.mg.merp.planning;
 import com.mg.merp.planning.model.RccpHeader;
 
 /**
- * 
  * @author leonova
  * @version $Id: RCCPHeaderServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface RCCPHeaderServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<RccpHeader, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<RccpHeader, Integer> {
 
 }

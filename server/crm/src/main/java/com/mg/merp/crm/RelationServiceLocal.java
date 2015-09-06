@@ -17,15 +17,13 @@ package com.mg.merp.crm;
 import com.mg.merp.crm.model.Relation;
 
 /**
- * 
  * @author leonova
  * @version $Id: RelationServiceLocal.java,v 1.2 2006/09/06 05:25:06 leonova Exp $
  */
 public interface RelationServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Relation, Integer>
-{
-	/**
-	 * тип папки для деловых отношений
-	 */
-	final static short FOLDER_PART = 13500;
+    extends com.mg.framework.api.DataBusinessObjectService<Relation, Integer> {
+  /**
+   * тип папки для деловых отношений
+   */
+  final static short FOLDER_PART = 13500;
 }

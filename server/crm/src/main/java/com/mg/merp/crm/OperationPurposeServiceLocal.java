@@ -17,12 +17,10 @@ package com.mg.merp.crm;
 import com.mg.merp.crm.model.OperationPurpose;
 
 /**
- * 
  * @author leonova
  * @version $Id: OperationPurposeServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface OperationPurposeServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<OperationPurpose, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<OperationPurpose, Integer> {
 
 }

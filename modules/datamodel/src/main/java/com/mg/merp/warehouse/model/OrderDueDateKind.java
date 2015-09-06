@@ -23,33 +23,33 @@ import com.mg.framework.api.annotations.EnumConstantText;
  */
 @DataItemName("Warehouse.OrderHead.DueDateKind")
 public enum OrderDueDateKind {
-	/**
-	 * нет
-	 */
-	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.None")
-	NONE,
-	
-	/**
-	 * час
-	 */
-	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.Hour")
-	HOUR,
+  /**
+   * нет
+   */
+  @EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.None")
+  NONE,
 
-	/**
-	 * день
-	 */
-	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.Day")
-	DAY,	
+  /**
+   * час
+   */
+  @EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.Hour")
+  HOUR,
 
-	/**
-	 * месяц
-	 */
-	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.Month")
-	MONTH,	
-	
-	/**
-	 * год
-	 */
-	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.Year")
-	YEAR		
+  /**
+   * день
+   */
+  @EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.Day")
+  DAY,
+
+  /**
+   * месяц
+   */
+  @EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.Month")
+  MONTH,
+
+  /**
+   * год
+   */
+  @EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#DateKind.Year")
+  YEAR
 }

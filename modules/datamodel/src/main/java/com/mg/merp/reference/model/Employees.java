@@ -22,67 +22,70 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.Employees")
 public class Employees extends com.mg.merp.reference.model.Contractor implements
-		java.io.Serializable {
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private com.mg.merp.reference.model.NaturalPerson NaturalPerson;
+  private com.mg.merp.reference.model.NaturalPerson NaturalPerson;
 
-	private java.lang.String Office;
+  private java.lang.String Office;
 
-	private java.lang.String TabNum;
+  private java.lang.String TabNum;
 
-	private boolean IsDefault;
+  private boolean IsDefault;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public Employees() {
-	}
+  /**
+   * default constructor
+   */
+  public Employees() {
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */	
-	public com.mg.merp.reference.model.NaturalPerson getNaturalPerson() {
-		return this.NaturalPerson;
-	}
+  // Property accessors
 
-	public void setNaturalPerson(
-			com.mg.merp.reference.model.NaturalPerson NaturalPerson) {
-		this.NaturalPerson = NaturalPerson;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.reference.model.NaturalPerson getNaturalPerson() {
+    return this.NaturalPerson;
+  }
 
-	@DataItemName("Reference.Employee.Office")
-	public java.lang.String getOffice() {
-		return this.Office;
-	}
+  public void setNaturalPerson(
+      com.mg.merp.reference.model.NaturalPerson NaturalPerson) {
+    this.NaturalPerson = NaturalPerson;
+  }
 
-	public void setOffice(java.lang.String Office) {
-		this.Office = Office;
-	}
+  @DataItemName("Reference.Employee.Office")
+  public java.lang.String getOffice() {
+    return this.Office;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Employee.TabNum")
-	public java.lang.String getTabNum() {
-		return this.TabNum;
-	}
+  public void setOffice(java.lang.String Office) {
+    this.Office = Office;
+  }
 
-	public void setTabNum(java.lang.String TabNum) {
-		this.TabNum = TabNum;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Employee.TabNum")
+  public java.lang.String getTabNum() {
+    return this.TabNum;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Employee.IsDefault")
-	public boolean getIsDefault() {
-		return this.IsDefault;
-	}
+  public void setTabNum(java.lang.String TabNum) {
+    this.TabNum = TabNum;
+  }
 
-	public void setIsDefault(boolean IsDefault) {
-		this.IsDefault = IsDefault;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Employee.IsDefault")
+  public boolean getIsDefault() {
+    return this.IsDefault;
+  }
+
+  public void setIsDefault(boolean IsDefault) {
+    this.IsDefault = IsDefault;
+  }
 }

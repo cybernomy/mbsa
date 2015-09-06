@@ -14,9 +14,9 @@
  */
 package com.mg.merp.manufacture;
 
-import javax.ejb.ApplicationException;
-
 import com.mg.framework.api.BusinessException;
+
+import javax.ejb.ApplicationException;
 
 /**
  * @author Oleg V. Safonov

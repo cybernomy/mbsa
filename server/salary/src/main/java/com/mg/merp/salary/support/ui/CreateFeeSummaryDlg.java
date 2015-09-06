@@ -22,61 +22,61 @@ import com.mg.merp.document.model.DocSection;
 
 /**
  * Контроллер диалога "Создание свода н/у по аналитике"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: CreateFeeSummaryDlg.java,v 1.1 2007/08/27 06:21:48 sharapov Exp $
  */
 public class CreateFeeSummaryDlg extends DefaultDialog {
-	
-	@DataItemName("Salary.FeeSummaryPattern") //$NON-NLS-1$
-	private DocHeadModel feeSummaryPattern;
 
-	private boolean isShowCreatedDocument;
-	
-	private DocSection DocSection;
-	
-	// Default constructor
-	public CreateFeeSummaryDlg() {
- 	}
-	
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultDialog#onActionOk(com.mg.framework.api.ui.WidgetEvent)
-	 */
-	@Override
-	public void onActionOk(WidgetEvent event) {
-		if(feeSummaryPattern != null)
-			super.onActionOk(event);
-	}
+  @DataItemName("Salary.FeeSummaryPattern") //$NON-NLS-1$
+  private DocHeadModel feeSummaryPattern;
 
-	// Property accessors
-	
-	/**
-	 * @return the feeSummaryPattern
-	 */
-	public DocHeadModel getFeeSummaryPattern() {
-		return this.feeSummaryPattern;
-	}
+  private boolean isShowCreatedDocument;
 
-	/**
-	 * @return the isShowCreatedDocument
-	 */
-	public boolean isShowCreatedDocument() {
-		return this.isShowCreatedDocument;
-	}
+  private DocSection DocSection;
 
-	/**
-	 * @return the docSection
-	 */
-	public DocSection getDocSection() {
-		return this.DocSection;
-	}
+  // Default constructor
+  public CreateFeeSummaryDlg() {
+  }
 
-	/**
-	 * @param docSection the docSection to set
-	 */
-	public void setDocSection(DocSection docSection) {
-		this.DocSection = docSection;
-	}
-	
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultDialog#onActionOk(com.mg.framework.api.ui.WidgetEvent)
+   */
+  @Override
+  public void onActionOk(WidgetEvent event) {
+    if (feeSummaryPattern != null)
+      super.onActionOk(event);
+  }
+
+  // Property accessors
+
+  /**
+   * @return the feeSummaryPattern
+   */
+  public DocHeadModel getFeeSummaryPattern() {
+    return this.feeSummaryPattern;
+  }
+
+  /**
+   * @return the isShowCreatedDocument
+   */
+  public boolean isShowCreatedDocument() {
+    return this.isShowCreatedDocument;
+  }
+
+  /**
+   * @return the docSection
+   */
+  public DocSection getDocSection() {
+    return this.DocSection;
+  }
+
+  /**
+   * @param docSection the docSection to set
+   */
+  public void setDocSection(DocSection docSection) {
+    this.DocSection = docSection;
+  }
+
 }

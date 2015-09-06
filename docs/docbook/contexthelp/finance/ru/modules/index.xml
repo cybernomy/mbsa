@@ -16,40 +16,40 @@
 <index version="1.0">
 
   <indexitem text="Периоды финансового учёта">
-    <indexentry text="Периоды финансового учёта" target="finperiod_html" />
-    <indexentry text="Закрыть период" target="finperiod_html" />
-    <indexentry text="Открыть период" target="finperiod_html" />
+    <indexentry text="Периоды финансового учёта" target="finperiod_html"/>
+    <indexentry text="Закрыть период" target="finperiod_html"/>
+    <indexentry text="Открыть период" target="finperiod_html"/>
   </indexitem>
-  
-   <indexitem text="Счета финансового учёта">
-    <indexentry text="Счета финансового учёта" target="finacc_html" />
-    <indexentry text="Аналитика финансового учёта" target="finan_html" />
+
+  <indexitem text="Счета финансового учёта">
+    <indexentry text="Счета финансового учёта" target="finacc_html"/>
+    <indexentry text="Аналитика финансового учёта" target="finan_html"/>
   </indexitem>
-  
+
   <indexitem text="Признаки финансового учёта">
-    <indexentry text="Признаки финансового учёта" target="finfeat_html" />
-    <indexentry text="Аналитика финансового учёта" target="finan_html" />
+    <indexentry text="Признаки финансового учёта" target="finfeat_html"/>
+    <indexentry text="Аналитика финансового учёта" target="finan_html"/>
   </indexitem>
-  
+
   <indexitem text="Центры финансового учёта">
-     <indexentry text="Центры финансового учёта" target="fincenter_html" />
+    <indexentry text="Центры финансового учёта" target="fincenter_html"/>
   </indexitem>
-  
+
   <indexitem text="Финансовые операции">
-     <indexentry text="Финансовая операция" target="finoper_html" />
-     <indexentry text="План или факт" target="finoper_html" />
-     <indexentry text="Валюта операции" target="finoper_html" />
-     <indexentry text="Спецификации (проводки) операции" target="finspec_html" />
-     <indexentry text="Образцы финансовых операций" target="temp_html" />
+    <indexentry text="Финансовая операция" target="finoper_html"/>
+    <indexentry text="План или факт" target="finoper_html"/>
+    <indexentry text="Валюта операции" target="finoper_html"/>
+    <indexentry text="Спецификации (проводки) операции" target="finspec_html"/>
+    <indexentry text="Образцы финансовых операций" target="temp_html"/>
   </indexitem>
-  
-   <indexitem text="Оборотные ведомости финансового учёта">
-     <indexentry text="Остатки и обороты по счетам (плоские)" target="finturnacc_html" />
-     <indexentry text="Остатки и обороты по признакам (плоские)" target="finturnfeat_html" />
+
+  <indexitem text="Оборотные ведомости финансового учёта">
+    <indexentry text="Остатки и обороты по счетам (плоские)" target="finturnacc_html"/>
+    <indexentry text="Остатки и обороты по признакам (плоские)" target="finturnfeat_html"/>
   </indexitem>
-  
-   <indexitem text="Перенос остатков">
-     <indexentry text="Перенос остатков" target="finperenos_html" />
+
+  <indexitem text="Перенос остатков">
+    <indexentry text="Перенос остатков" target="finperenos_html"/>
   </indexitem>
 
 </index>

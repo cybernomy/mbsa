@@ -17,12 +17,10 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.Okof;
 
 /**
- * 
  * @author leonova
  * @version $Id: OkofServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface OkofServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Okof, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Okof, Integer> {
 
 }

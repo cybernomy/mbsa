@@ -18,7 +18,7 @@ import java.io.Serializable;
 
 /**
  * Данные операции DnD
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: DnDData.java,v 1.1 2007/08/16 13:48:06 safonov Exp $
  */

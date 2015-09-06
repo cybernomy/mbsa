@@ -21,30 +21,30 @@ import com.mg.framework.api.annotations.EnumConstantText;
  * @author leonova
  * @version $Id: ProtokolKind.java,v 1.1 2006/03/29 13:06:23 safonov Exp $
  */
-@DataItemName ("Reference.Partner.Email.ProtokolKind")
+@DataItemName("Reference.Partner.Email.ProtokolKind")
 public enum ProtokolKind {
-	/**
-	 * 
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#Email.ProtokolKind.Empty")
-	EMPTY,
-	
-	/**
-	 * e-mail
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#Email.ProtokolKind.Email")
-	EMAIL,
+  /**
+   *
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Email.ProtokolKind.Empty")
+  EMPTY,
 
-	/**
-	 * http
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#Email.ProtokolKind.Http")
-	HTTP,
-	
-	/**
-	 * icq
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#Email.ProtokolKind.Icq")
-	ICQ
+  /**
+   * e-mail
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Email.ProtokolKind.Email")
+  EMAIL,
+
+  /**
+   * http
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Email.ProtokolKind.Http")
+  HTTP,
+
+  /**
+   * icq
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Email.ProtokolKind.Icq")
+  ICQ
 }
 

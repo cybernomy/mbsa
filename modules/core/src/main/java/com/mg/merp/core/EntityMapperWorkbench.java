@@ -20,13 +20,13 @@ import com.mg.merp.core.model.EntityTransformerMapping;
  * @version $Id: EntityMapperWorkbench.java,v 1.1 2007/05/10 05:39:55 poroxnenko Exp $
  */
 public interface EntityMapperWorkbench {
-	String SERVICE_NAME = "merp:service=EntityMapperWorkbenchService";
+  String SERVICE_NAME = "merp:service=EntityMapperWorkbenchService";
 
-	EntityTransformerMapping[] getEntityMappers(String query) throws Exception;
+  EntityTransformerMapping[] getEntityMappers(String query) throws Exception;
 
-	EntityTransformerMapping editEntityMapper(EntityTransformerMapping mapping) throws Exception;
-	                         
-	EntityTransformerMapping addEntityMapper(EntityTransformerMapping mapping) throws Exception;
+  EntityTransformerMapping editEntityMapper(EntityTransformerMapping mapping) throws Exception;
 
-	void deleteEntityMappersList(Integer[] ids) throws Exception;
+  EntityTransformerMapping addEntityMapper(EntityTransformerMapping mapping) throws Exception;
+
+  void deleteEntityMappersList(Integer[] ids) throws Exception;
 }

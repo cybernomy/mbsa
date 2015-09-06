@@ -21,26 +21,28 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: FeeSummaryHead.java,v 1.5 2008/02/29 12:33:10 safonov Exp $
  */
 public class FeeSummaryHead extends com.mg.merp.document.model.DocHead
-		implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
 
-	// Fields
+  // Fields
 
-	private com.mg.merp.salary.model.PayRoll PayRoll;
+  private com.mg.merp.salary.model.PayRoll PayRoll;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public FeeSummaryHead() {
-	}
+  /**
+   * default constructor
+   */
+  public FeeSummaryHead() {
+  }
 
-	// Property accessors
-	@DataItemName("Salary.FeeSummaryHead.PayRoll")
-	public com.mg.merp.salary.model.PayRoll getPayRoll() {
-		return this.PayRoll;
-	}
+  // Property accessors
+  @DataItemName("Salary.FeeSummaryHead.PayRoll")
+  public com.mg.merp.salary.model.PayRoll getPayRoll() {
+    return this.PayRoll;
+  }
 
-	public void setPayRoll(com.mg.merp.salary.model.PayRoll SalPayRoll) {
-		this.PayRoll = SalPayRoll;
-	}
+  public void setPayRoll(com.mg.merp.salary.model.PayRoll SalPayRoll) {
+    this.PayRoll = SalPayRoll;
+  }
 
 }

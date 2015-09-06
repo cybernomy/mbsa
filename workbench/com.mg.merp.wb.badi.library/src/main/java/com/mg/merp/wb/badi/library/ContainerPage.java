@@ -14,11 +14,7 @@
  */
 package com.mg.merp.wb.badi.library;
 
-import static com.mg.merp.wb.badi.library.util.Constants.DESCRIPTION;
-import static com.mg.merp.wb.badi.library.util.Constants.WIZARD_DESC;
-
-import java.util.LinkedList;
-import java.util.List;
+import com.mg.merp.wb.badi.library.util.ContainerPageController;
 
 import org.eclipse.core.runtime.Path;
 import org.eclipse.jdt.core.IClasspathContainer;
@@ -35,114 +31,114 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
-import com.mg.merp.wb.badi.library.util.ContainerPageController;
+import java.util.LinkedList;
+import java.util.List;
+
+import static com.mg.merp.wb.badi.library.util.Constants.DESCRIPTION;
+import static com.mg.merp.wb.badi.library.util.Constants.WIZARD_DESC;
 
 /**
  * Страница выбора наполнения для библиотеки
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @version $Id: ContainerPage.java,v 1.5 2007/07/11 07:31:29 poroxnenko Exp $
  */
 public class ContainerPage extends WizardPage implements
-		IClasspathContainerPage, IClasspathContainerPageExtension {
-	private IClasspathEntry entry;
+    IClasspathContainerPage, IClasspathContainerPageExtension {
+  private static final Path containerPath = new Path(BadiLibraryPlugin
+      .getDefault().getContainerID());
+  private IClasspathEntry entry;
+  private CheckboxTableViewer tableViewer;
+  private ContainerPageController controller;
+  private IJavaProject curProj;
 
-	private CheckboxTableViewer tableViewer;
+  public ContainerPage() {
+    super(BadiLibraryPlugin.getDefault().getString(DESCRIPTION));
+    setDescription(BadiLibraryPlugin.getDefault().getString(WIZARD_DESC));
 
-	private ContainerPageController controller;
+    controller = new ContainerPageController(this);
+  }
 
-	private IJavaProject curProj;
+  public void createControl(Composite parent) {
+    initializeDialogUnits(parent);
 
-	private static final Path containerPath = new Path(BadiLibraryPlugin
-			.getDefault().getContainerID());
+    Table tableLibArchives = new Table(parent, SWT.MULTI | SWT.CHECK);
+    tableLibArchives.setHeaderVisible(true);
+    tableLibArchives.setLinesVisible(true);
+    TableColumn checker = new TableColumn(tableLibArchives, SWT.CHECK);
+    checker.setWidth(20);
+    checker.setAlignment(SWT.LEFT);
 
-	public ContainerPage() {
-		super(BadiLibraryPlugin.getDefault().getString(DESCRIPTION));
-		setDescription(BadiLibraryPlugin.getDefault().getString(WIZARD_DESC));
+    TableColumn colName = new TableColumn(tableLibArchives, SWT.NONE);
+    colName.setWidth(170);
+    colName.setAlignment(SWT.LEFT);
+    colName.setText(BadiLibraryPlugin.getDefault().getString(
+        "wizard.table.column2"));
 
-		controller = new ContainerPageController(this);
-	}
+    TableColumn colVersion = new TableColumn(tableLibArchives, SWT.NONE);
+    colVersion.setWidth(50);
+    colVersion.setAlignment(SWT.CENTER);
+    colVersion.setText(BadiLibraryPlugin.getDefault().getString(
+        "wizard.table.column3"));
 
-	public void createControl(Composite parent) {
-		initializeDialogUnits(parent);
+    TableColumn colProvider = new TableColumn(tableLibArchives, SWT.NONE);
+    colProvider.setWidth(190);
+    colProvider.setAlignment(SWT.LEFT);
+    colProvider.setText(BadiLibraryPlugin.getDefault().getString(
+        "wizard.table.column4"));
 
-		Table tableLibArchives = new Table(parent, SWT.MULTI | SWT.CHECK);
-		tableLibArchives.setHeaderVisible(true);
-		tableLibArchives.setLinesVisible(true);
-		TableColumn checker = new TableColumn(tableLibArchives, SWT.CHECK);
-		checker.setWidth(20);
-		checker.setAlignment(SWT.LEFT);
+    setControl(tableLibArchives);
 
-		TableColumn colName = new TableColumn(tableLibArchives, SWT.NONE);
-		colName.setWidth(170);
-		colName.setAlignment(SWT.LEFT);
-		colName.setText(BadiLibraryPlugin.getDefault().getString(
-				"wizard.table.column2"));
+    tableViewer = new CheckboxTableViewer(tableLibArchives);
+    tableViewer.setContentProvider(controller);
+    tableViewer.setLabelProvider(controller);
+    tableViewer.setInput(BadiLibraryPlugin.getLibs());
+    tableViewer.addCheckStateListener(controller);
 
-		TableColumn colVersion = new TableColumn(tableLibArchives, SWT.NONE);
-		colVersion.setWidth(50);
-		colVersion.setAlignment(SWT.CENTER);
-		colVersion.setText(BadiLibraryPlugin.getDefault().getString(
-				"wizard.table.column3"));
+    controller.setCheckedElements();
+  }
 
-		TableColumn colProvider = new TableColumn(tableLibArchives, SWT.NONE);
-		colProvider.setWidth(190);
-		colProvider.setAlignment(SWT.LEFT);
-		colProvider.setText(BadiLibraryPlugin.getDefault().getString(
-				"wizard.table.column4"));
+  public boolean finish() {
+    List<String> lst = new LinkedList<String>(controller.getLibs());
+    lst.removeAll(BadiLibraryPlugin.getThirdLibs());
 
-		setControl(tableLibArchives);
+    BadiLibraryPlugin.storeLibsInPropFile(curProj, lst);
 
-		tableViewer = new CheckboxTableViewer(tableLibArchives);
-		tableViewer.setContentProvider(controller);
-		tableViewer.setLabelProvider(controller);
-		tableViewer.setInput(BadiLibraryPlugin.getLibs());
-		tableViewer.addCheckStateListener(controller);
+    try {
+      IClasspathContainer container = new Container(containerPath,
+          curProj);
+      JavaCore.setClasspathContainer(containerPath,
+          new IJavaProject[]{curProj},
+          new IClasspathContainer[]{container}, null);
+    } catch (JavaModelException e) {
+    }
 
-		controller.setCheckedElements();
-	}
+    return true;
+  }
 
-	public boolean finish() {
-		List<String> lst = new LinkedList<String>(controller.getLibs());
-		lst.removeAll(BadiLibraryPlugin.getThirdLibs());
+  public IClasspathEntry getSelection() {
+    return entry;
+  }
 
-		BadiLibraryPlugin.storeLibsInPropFile(curProj, lst);
+  public void setSelection(IClasspathEntry containerEntry) {
+    if (containerEntry == null) {
+      entry = JavaCore.newContainerEntry(containerPath);
+    } else {
+      entry = containerEntry;
+      controller.initLibs(curProj);
+    }
+  }
 
-		try {
-			IClasspathContainer container = new Container(containerPath,
-					curProj);
-			JavaCore.setClasspathContainer(containerPath,
-					new IJavaProject[] { curProj },
-					new IClasspathContainer[] { container }, null);
-		} catch (JavaModelException e) {
-		}
+  public boolean isPageComplete() {
+    return controller.getLibs().size() > 0;
+  }
 
-		return true;
-	}
+  public CheckboxTableViewer getTableViewer() {
+    return tableViewer;
+  }
 
-	public IClasspathEntry getSelection() {
-		return entry;
-	}
-
-	public void setSelection(IClasspathEntry containerEntry) {
-		if (containerEntry == null) {
-			entry = JavaCore.newContainerEntry(containerPath);
-		} else {
-			entry = containerEntry;
-			controller.initLibs(curProj);
-		}
-	}
-
-	public boolean isPageComplete() {
-		return controller.getLibs().size() > 0;
-	}
-
-	public CheckboxTableViewer getTableViewer() {
-		return tableViewer;
-	}
-
-	public void initialize(IJavaProject project,
-			IClasspathEntry[] currentEntries) {
-		curProj = project;
-	}
+  public void initialize(IJavaProject project,
+                         IClasspathEntry[] currentEntries) {
+    curProj = project;
+  }
 }

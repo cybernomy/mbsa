@@ -19,31 +19,31 @@ import com.mg.merp.reference.model.Measure;
 
 /**
  * Конвертация атрибута MoveTime объекта JobRoute
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: JobRouteMoveTickConversion.java,v 1.1 2006/07/07 10:11:14 leonova Exp $
  */
 public class JobRouteMoveTickConversion extends TimeTickConversion {
 
-	/**
-	 * Move time UM
-	 */
-	private static final String MOVE_TIME_UM = "MoveTimeUM"; //$NON-NLS-1$
+  /**
+   * Move time UM
+   */
+  private static final String MOVE_TIME_UM = "MoveTimeUM"; //$NON-NLS-1$
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractConversionRoutine#defineImportContext()
-	 */
-	@Override
-	protected String[] defineImportContext() {
-		return new String[] {MOVE_TIME_UM};
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractConversionRoutine#defineImportContext()
+   */
+  @Override
+  protected String[] defineImportContext() {
+    return new String[]{MOVE_TIME_UM};
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.mfreference.support.ui.TimeTickConversion#getTimeUM()
-	 */
-	@Override
-	protected Measure getTimeUM() {
-		return (Measure) getImportContextValue(MOVE_TIME_UM);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.mfreference.support.ui.TimeTickConversion#getTimeUM()
+   */
+  @Override
+  protected Measure getTimeUM() {
+    return (Measure) getImportContextValue(MOVE_TIME_UM);
+  }
 
 }

@@ -1,9 +1,9 @@
 <?xml version = '1.0' encoding = 'windows-1252'?>
 <web-app
-	 xmlns="http://java.sun.com/xml/ns/j2ee"
-	 version="2.4"
-	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	 xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://java.sun.com/xml/ns/j2ee"
+    version="2.4"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
   <display-name>Oracle Help for the Web</display-name>
   <description>Oracle Help for the Web</description>
@@ -12,12 +12,12 @@
     <servlet-name>MBSAHelp</servlet-name>
     <servlet-class>oracle.help.web.OHWController</servlet-class>
 
-    <!-- This init param provides the context-relative path to the config file -->    
+    <!-- This init param provides the context-relative path to the config file -->
     <init-param>
       <param-name>ohwConfigFileURL</param-name>
       <param-value>/helpsets/mbsahelpconfig.xml</param-value>
     </init-param>
-    
+
     <load-on-startup>1</load-on-startup>
   </servlet>
 

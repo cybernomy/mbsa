@@ -14,45 +14,47 @@
  */
 package com.mg.merp.salary;
 
-import java.io.Serializable;
-
 import com.mg.merp.document.model.DocHeadModel;
 import com.mg.merp.salary.model.FeeSummaryHead;
 import com.mg.merp.salary.model.PayRoll;
 import com.mg.merp.salary.model.PaySheet;
 
+import java.io.Serializable;
+
 /**
  * Сервис бизнес-компонента "Расчетные ведомости"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: PayRollServiceLocal.java,v 1.2 2007/08/27 06:16:11 sharapov Exp $
  */
 public interface PayRollServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PayRoll, Integer> {
 
-	/**
-	 * Имя сервиса
-	 */
-	final static String SERVICE_NAME= "merp/salary/PayRoll"; //$NON-NLS-1$ 
-	
-	/**
-	 * Создать платежную ведомость на основе рассчетной
-	 * @param payRollId - идентификатор рассчетной ведомости
-	 * @return платежная ведомость
-	 */
-	PaySheet createPaySheet(Integer payRollId);
+  /**
+   * Имя сервиса
+   */
+  final static String SERVICE_NAME = "merp/salary/PayRoll"; //$NON-NLS-1$
 
-	/**
-	 * Создать свод начислений/удержаний по аналитике 
-	 * @param payRollIds - список идентификаторов расчетных ведомостей
-	 * @param feeSummaryPattern - образец свода начислений/удержаний по аналитике
-	 * @return свод начислений/удержаний по аналитике
-	 */
-	FeeSummaryHead createFeeSummary(Serializable[] payRollIds, DocHeadModel feeSummaryPattern);
-	
-	
-	public void clearAndRecalc( int payRollId ) throws com.mg.framework.api.ApplicationException;
+  /**
+   * Создать платежную ведомость на основе рассчетной
+   *
+   * @param payRollId - идентификатор рассчетной ведомости
+   * @return платежная ведомость
+   */
+  PaySheet createPaySheet(Integer payRollId);
 
-	public void recalc( int payRollId ) throws com.mg.framework.api.ApplicationException;
+  /**
+   * Создать свод начислений/удержаний по аналитике
+   *
+   * @param payRollIds        - список идентификаторов расчетных ведомостей
+   * @param feeSummaryPattern - образец свода начислений/удержаний по аналитике
+   * @return свод начислений/удержаний по аналитике
+   */
+  FeeSummaryHead createFeeSummary(Serializable[] payRollIds, DocHeadModel feeSummaryPattern);
+
+
+  public void clearAndRecalc(int payRollId) throws com.mg.framework.api.ApplicationException;
+
+  public void recalc(int payRollId) throws com.mg.framework.api.ApplicationException;
 
 }

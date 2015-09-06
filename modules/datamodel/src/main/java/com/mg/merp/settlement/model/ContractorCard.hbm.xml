@@ -1,70 +1,74 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.settlement.model.ContractorCard" table="CONTRACTORCARD">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">CONTRACTORCARD_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Contractor" class="com.mg.merp.reference.model.Contractor">
-      <column name="CONTRACTOR_ID" not-null="false" />
+      <column name="CONTRACTOR_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="OrgUnit" class="com.mg.merp.reference.model.Contractor">
-      <column name="ORGUNIT_ID" not-null="false" />
+      <column name="ORGUNIT_ID" not-null="false"/>
     </many-to-one>
     <property name="TotalIncome" type="java.math.BigDecimal">
-      <column name="TOTALINCOME" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="TOTALINCOME" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="TotalExpenses" type="java.math.BigDecimal">
-      <column name="TOTALEXPENSES" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="TOTALEXPENSES" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="DebitorInDebLimit" type="java.math.BigDecimal">
-      <column name="DEBITORINDEBLIMIT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="DEBITORINDEBLIMIT" scale="4" precision="15" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="CreditorInDebLimit" type="java.math.BigDecimal">
-      <column name="CREDITORINDEBLIMIT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="CREDITORINDEBLIMIT" scale="4" precision="15" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="PlanIncome" type="java.math.BigDecimal">
-      <column name="PLANINCOME" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="PLANINCOME" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="PlanExpenses" type="java.math.BigDecimal">
-      <column name="PLANEXPENSES" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="PLANEXPENSES" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
-    <property name="DebitorInDebSum" type="java.math.BigDecimal" insert="false" update="false" >
-      <column name="DEBITORINDEBSUM" scale="4" precision="18" not-null="false" sql-type="NUMERIC" />
+    <property name="DebitorInDebSum" type="java.math.BigDecimal" insert="false" update="false">
+      <column name="DEBITORINDEBSUM" scale="4" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
-    <property name="CreditorInDebSum" type="java.math.BigDecimal" insert="false" update="false" >
-      <column name="CREDITORINDEBSUM" scale="4" precision="18" not-null="false" sql-type="NUMERIC" />
+    <property name="CreditorInDebSum" type="java.math.BigDecimal" insert="false" update="false">
+      <column name="CREDITORINDEBSUM" scale="4" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
-    <property name="PlanDebitorInDebSum" type="java.math.BigDecimal" insert="false" update="false" >
-      <column name="PLANDEBITORINDEBSUM" scale="4" precision="18" not-null="false" sql-type="NUMERIC" />
+    <property name="PlanDebitorInDebSum" type="java.math.BigDecimal" insert="false" update="false">
+      <column name="PLANDEBITORINDEBSUM" scale="4" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
-    <property name="PlanCreditorInDebSum" type="java.math.BigDecimal" insert="false" update="false" >
-      <column name="PLANCREDITORINDEBSUM" scale="4" precision="18" not-null="false" sql-type="NUMERIC" />
+    <property name="PlanCreditorInDebSum" type="java.math.BigDecimal" insert="false" update="false">
+      <column name="PLANCREDITORINDEBSUM" scale="4" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <set name="SetOfContractorcardplan">
       <key>
-        <column name="CONTRACTORCARD_ID" not-null="false" />
+        <column name="CONTRACTORCARD_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.settlement.model.ContractorCardPlan" />
+      <one-to-many class="com.mg.merp.settlement.model.ContractorCardPlan"/>
     </set>
     <set name="SetOfContractorcardhist">
       <key>
-        <column name="CONTRACTORCARD_ID" not-null="false" />
+        <column name="CONTRACTORCARD_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.settlement.model.ContractorCardHist" />
+      <one-to-many class="com.mg.merp.settlement.model.ContractorCardHist"/>
     </set>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

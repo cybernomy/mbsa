@@ -23,40 +23,45 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 public class PriceListSpecPrice extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields    
-	private com.mg.merp.reference.model.PriceListSpecPriceId id;
-	private java.math.BigDecimal price;
+  // Fields
+  private com.mg.merp.reference.model.PriceListSpecPriceId id;
+  private java.math.BigDecimal price;
 
-	// Constructors
-	@DataItemName("Reference.PriceListSpec.Price") //$NON-NLS-1$
-	public java.math.BigDecimal getPrice() {
-		return price;
-	}
+  /**
+   * default constructor
+   */
+  public PriceListSpecPrice() {
+  }
 
-	public void setPrice(java.math.BigDecimal price) {
-		this.price = price;
-	}
+  /**
+   * constructor with id
+   */
+  public PriceListSpecPrice(com.mg.merp.reference.model.PriceListSpecPriceId id) {
+    this.id = id;
+  }
 
-	/** default constructor */
-	public PriceListSpecPrice() {
-	}
+  // Constructors
+  @DataItemName("Reference.PriceListSpec.Price") //$NON-NLS-1$
+  public java.math.BigDecimal getPrice() {
+    return price;
+  }
 
-	/** constructor with id */
-	public PriceListSpecPrice(com.mg.merp.reference.model.PriceListSpecPriceId id) {
-		this.id = id;
-	}
+  public void setPrice(java.math.BigDecimal price) {
+    this.price = price;
+  }
 
 
-	// Property accessors
-	/**
+  // Property accessors
 
-	 */
-	public com.mg.merp.reference.model.PriceListSpecPriceId getId () {
-		return this.id;
-	}
+  /**
 
-	public void setId (com.mg.merp.reference.model.PriceListSpecPriceId id) {
-		this.id = id;
-	}
+   */
+  public com.mg.merp.reference.model.PriceListSpecPriceId getId() {
+    return this.id;
+  }
+
+  public void setId(com.mg.merp.reference.model.PriceListSpecPriceId id) {
+    this.id = id;
+  }
 
 }

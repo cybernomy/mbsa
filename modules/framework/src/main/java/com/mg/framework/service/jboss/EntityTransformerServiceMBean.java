@@ -13,15 +13,15 @@
 */
 package com.mg.framework.service.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.framework.api.EntityTransformer;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис преобразования сущностей для контейнера JBoss
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: EntityTransformerServiceMBean.java,v 1.2 2007/09/21 09:52:05 safonov Exp $ 
+ * @version $Id: EntityTransformerServiceMBean.java,v 1.2 2007/09/21 09:52:05 safonov Exp $
  */
 public interface EntityTransformerServiceMBean extends ServiceMBean, EntityTransformer {
 

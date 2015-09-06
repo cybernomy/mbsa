@@ -21,15 +21,15 @@ import java.math.BigDecimal;
  * @version $Id: ReadyDocSpec.java,v 1.1 2006/03/01 15:03:50 safonov Exp $
  */
 public class ReadyDocSpec {
-	public Integer docSpecId;
-	public BigDecimal readySum;
-	public BigDecimal readyQuantity1;
-	public BigDecimal readyQuantity2;
-	
-	public ReadyDocSpec(Integer docSpecId, BigDecimal readySum, BigDecimal readyQuantity1, BigDecimal readyQuantity2) {
-		this.docSpecId = docSpecId;
-		this.readySum = readySum;
-		this.readyQuantity1 = readyQuantity1;
-		this.readyQuantity2 = readyQuantity2;
-	}
+  public Integer docSpecId;
+  public BigDecimal readySum;
+  public BigDecimal readyQuantity1;
+  public BigDecimal readyQuantity2;
+
+  public ReadyDocSpec(Integer docSpecId, BigDecimal readySum, BigDecimal readyQuantity1, BigDecimal readyQuantity2) {
+    this.docSpecId = docSpecId;
+    this.readySum = readySum;
+    this.readyQuantity1 = readyQuantity1;
+    this.readyQuantity2 = readyQuantity2;
+  }
 }

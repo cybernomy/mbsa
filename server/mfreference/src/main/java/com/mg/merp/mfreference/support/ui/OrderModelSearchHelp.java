@@ -18,18 +18,18 @@ import com.mg.merp.warehouse.OrderHeadSupServiceLocal;
 
 /**
  * Поисковик "Образцов актов заказа поставщику"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: OrderModelSearchHelp.java,v 1.1 2007/01/13 13:23:13 sharapov Exp $
  */
 public class OrderModelSearchHelp extends ModelSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.mfreference.support.ui.ModelSearchHelp#getDocSectionPrimaryKey()
-	 */
-	@Override
-	protected short getDocSectionPrimaryKey() {
-		return OrderHeadSupServiceLocal.DOCSECTION;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.mfreference.support.ui.ModelSearchHelp#getDocSectionPrimaryKey()
+   */
+  @Override
+  protected short getDocSectionPrimaryKey() {
+    return OrderHeadSupServiceLocal.DOCSECTION;
+  }
 
 }

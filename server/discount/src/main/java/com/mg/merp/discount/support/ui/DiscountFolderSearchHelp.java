@@ -23,9 +23,9 @@ import com.mg.merp.reference.support.ui.FolderByTypeSearchHelp;
  */
 public class DiscountFolderSearchHelp extends FolderByTypeSearchHelp {
 
-	@Override
-	protected short getFolderType() {
-		return DiscountServiceLocal.FOLDER_PART;
-	}
+  @Override
+  protected short getFolderType() {
+    return DiscountServiceLocal.FOLDER_PART;
+  }
 
 }

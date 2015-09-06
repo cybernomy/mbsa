@@ -10,55 +10,90 @@
 <!ENTITY chap_pml SYSTEM "modules/pml.xml">
 ]> -->
 <chapter id="pml">
-<title>&payment;</title>
+  <title>&payment;</title>
 
-    <para>&payment; предназначен для просмотра записей о платежах.  </para>
-    
-    <para>Вход в раздел &quot;&payment;&quot; осуществляется через главное меню системы: 
-      <menuchoice><guimenu>&cont_centr;</guimenu>
-        <guisubmenu>&cash;</guisubmenu>
-        <guimenuitem>&payment;</guimenuitem>
-	</menuchoice>.</para>
-    
-    <para>Записи в Журнале можно создать этапом документооборота или используя 
-    стандартные методы системы &merp;. </para>
-    
-    <para>Рассмотрим запись о платеже: </para>
-    
-  <screenshot> 
-    <mediaobject><imageobject><imagedata fileref="images/pml00.gif"/> </imageobject></mediaobject>
+  <para>&payment; предназначен для просмотра записей о платежах.</para>
+
+  <para>Вход в раздел &quot;&payment;&quot; осуществляется через главное меню системы:
+    <menuchoice>
+      <guimenu>&cont_centr;</guimenu>
+      <guisubmenu>&cash;</guisubmenu>
+      <guimenuitem>&payment;</guimenuitem>
+    </menuchoice>
+    .
+  </para>
+
+  <para>Записи в Журнале можно создать этапом документооборота или используя
+    стандартные методы системы &merp;.
+  </para>
+
+  <para>Рассмотрим запись о платеже:</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/pml00.gif"/>
+      </imageobject>
+    </mediaobject>
   </screenshot>
-    
-    <para><guibutton>План. </guibutton> Плановый платёж или фактический. </para>
-    
-    <para><guibutton>Дата.</guibutton> Дата записи. </para>
-    
-    <para><guibutton>Валюта.</guibutton> Код валюты, тип и источник курса.</para>
-    
-    <para><guibutton>Наименование.</guibutton> Наименование платежа.</para>
-    
-    <para><guibutton>Сумма платежа.</guibutton> В валюте, в которой производится 
-    платёж, и в национальной валюте. </para>
-    
-    <para><guibutton>Назначение платежа.</guibutton> Текстовая информация о назначении платежа. 
-    Вводится пользователем или - при создании записи на основании банковского документа - 
-    переносится из аналогичного поля в документе.</para>
-    
-    <para><guibutton>Комментарии.</guibutton> В этом поле Вы можете записать текстовый комментарий. </para>
-    
-    <para>Все <link linkend="docs">документы, связанные с платежом, отображаются на 
-    соответствующей закладке</link>.  </para>
 
-    <para>На панели инструментов Вы видите выпадающее меню, значение которого по умолчанию - 
+  <para>
+    <guibutton>План.</guibutton>
+    Плановый платёж или фактический.
+  </para>
+
+  <para>
+    <guibutton>Дата.</guibutton>
+    Дата записи.
+  </para>
+
+  <para>
+    <guibutton>Валюта.</guibutton>
+    Код валюты, тип и источник курса.
+  </para>
+
+  <para>
+    <guibutton>Наименование.</guibutton>
+    Наименование платежа.
+  </para>
+
+  <para>
+    <guibutton>Сумма платежа.</guibutton>
+    В валюте, в которой производится
+    платёж, и в национальной валюте.
+  </para>
+
+  <para>
+    <guibutton>Назначение платежа.</guibutton>
+    Текстовая информация о назначении платежа.
+    Вводится пользователем или - при создании записи на основании банковского документа -
+    переносится из аналогичного поля в документе.
+  </para>
+
+  <para>
+    <guibutton>Комментарии.</guibutton>
+    В этом поле Вы можете записать текстовый комментарий.
+  </para>
+
+  <para>Все<link linkend="docs">документы, связанные с платежом, отображаются на
+    соответствующей закладке</link>.
+  </para>
+
+  <para>На панели инструментов Вы видите выпадающее меню, значение которого по умолчанию -
     &quot;Вся организация&quot;. В нём отображаются подразделения с типом &quot;Филиал&quot; или
     &quot;Головное предприятие&quot;. Выбрав одно из подразделений в выпадающем меню, Вы увидите
-    в списке только те записи о платежах, в которых данное подразделение является плательщиком 
-    или получателем. </para>
+    в списке только те записи о платежах, в которых данное подразделение является плательщиком
+    или получателем.
+  </para>
 
-  <screenshot> 
-    <mediaobject><imageobject><imagedata fileref="images/pml02.gif"/> </imageobject></mediaobject>
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/pml02.gif"/>
+      </imageobject>
+    </mediaobject>
   </screenshot>
-    
-    <para>Для удобства просмотра записей Вы также можете использовать условия отбора. </para>
+
+  <para>Для удобства просмотра записей Вы также можете использовать условия отбора.</para>
 
 </chapter>

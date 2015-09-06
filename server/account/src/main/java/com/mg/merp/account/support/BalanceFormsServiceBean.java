@@ -18,30 +18,19 @@ package com.mg.merp.account.support;
 import com.mg.merp.account.BalanceFormsServiceLocal;
 
 /**
- * @ejb.bean name = "BalanceFormsService"
- *           type = "Stateless"
- *           view-type = "local"
- *           local-jndi-name = "merp/account/BalanceFormsService"
- *           description = "BalanceForms"
- *           display-name = "BalanceForms"
- *
- * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService"
- *
- * @ejb.home      local-extends = "javax.ejb.EJBLocalHome"
- *
- * @ejb.env-entry name = "DomainClassName"
- *                type = "java.lang.String"
- *                value = "com.mg.merp.account.support.BalanceFormsDomainImpl"
- *
- * @jboss.container-configuration name = "MERP Standard Stateless Service"
- *
  * @author java generator
+ * @ejb.bean name = "BalanceFormsService" type = "Stateless" view-type = "local" local-jndi-name =
+ * "merp/account/BalanceFormsService" description = "BalanceForms" display-name = "BalanceForms"
+ * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService"
+ * @ejb.home local-extends = "javax.ejb.EJBLocalHome"
+ * @ejb.env-entry name = "DomainClassName" type = "java.lang.String" value =
+ * "com.mg.merp.account.support.BalanceFormsDomainImpl"
+ * @jboss.container-configuration name = "MERP Standard Stateless Service"
  * @since 12.10.2004
- *
  */
- public class BalanceFormsServiceBean extends com.mg.framework.generic.AbstractDataBusinessObjectServiceBean implements BalanceFormsServiceLocal {
+public class BalanceFormsServiceBean extends com.mg.framework.generic.AbstractDataBusinessObjectServiceBean implements BalanceFormsServiceLocal {
 
- 	public void ejbCreate() throws javax.ejb.CreateException {
- 	}
+  public void ejbCreate() throws javax.ejb.CreateException {
+  }
 
- }
+}

@@ -13,33 +13,45 @@
 
 <!-- $Id: DisCardMt.mfd.xml,v 1.6 2007/10/05 07:19:23 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.discount.support.ui.DiscCardMt" title="resource://com.mg.merp.discount.resources.formelements#DiscCard.FormMt.Title" helpTopic="discount#discard_html">
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.discount.support.ui.DiscCardMt"
+          title="resource://com.mg.merp.discount.resources.formelements#DiscCard.FormMt.Title"
+          helpTopic="discount#discard_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.discount.resources.formelements#DiscCard.Total.Tab" >
-			<jfd:field id="CardNum" />
- 			<jfd:field id="Owner" sameLine="true" /> 
-			<jfd:field id="Discount" readOnly="true" />
-			<jfd:field id="IsActive" sameLine="true" />	
-			<jfd:field id="CreditLimit" />
-			<jfd:field id="CreditDepth" sameLine="true" />			
-			<jfd:maintenanceTable id="users" scroll="true" autoResize="subsequent_columns" longField="true" label="resource://com.mg.merp.discount.resources.formelements#Card.Users">
-			</jfd:maintenanceTable>				
-			<jfd:field id="Comments" />			
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																						
-		</jfd:container>
-		<jfd:maintenanceTable id="history" alignment="expand_expand" autoResize="subsequent_columns" scroll="true" tabTitle="resource://com.mg.merp.discount.resources.formelements#DiscCard.History.Tab">
-		</jfd:maintenanceTable>			
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.discount.resources.formelements#DiscCard.Total.Tab">
+      <jfd:field id="CardNum"/>
+      <jfd:field id="Owner" sameLine="true"/>
+      <jfd:field id="Discount" readOnly="true"/>
+      <jfd:field id="IsActive" sameLine="true"/>
+      <jfd:field id="CreditLimit"/>
+      <jfd:field id="CreditDepth" sameLine="true"/>
+      <jfd:maintenanceTable id="users" scroll="true" autoResize="subsequent_columns"
+                            longField="true"
+                            label="resource://com.mg.merp.discount.resources.formelements#Card.Users">
+      </jfd:maintenanceTable>
+      <jfd:field id="Comments"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:maintenanceTable id="history" alignment="expand_expand" autoResize="subsequent_columns"
+                          scroll="true"
+                          tabTitle="resource://com.mg.merp.discount.resources.formelements#DiscCard.History.Tab">
+    </jfd:maintenanceTable>
 
-		<jfd:maintenanceTable id="coeff" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.discount.resources.formelements#DiscCard.Coeff.Tab">
-		</jfd:maintenanceTable>			
+    <jfd:maintenanceTable id="coeff" alignment="expand_expand" scroll="true"
+                          autoResize="subsequent_columns"
+                          tabTitle="resource://com.mg.merp.discount.resources.formelements#DiscCard.Coeff.Tab">
+    </jfd:maintenanceTable>
 
-		<jfd:maintenanceTable id="extra" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.discount.resources.formelements#DiscCard.Extra.Tab">
-		</jfd:maintenanceTable>		
-	</jfd:container>
+    <jfd:maintenanceTable id="extra" alignment="expand_expand" scroll="true"
+                          autoResize="subsequent_columns"
+                          tabTitle="resource://com.mg.merp.discount.resources.formelements#DiscCard.Extra.Tab">
+    </jfd:maintenanceTable>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

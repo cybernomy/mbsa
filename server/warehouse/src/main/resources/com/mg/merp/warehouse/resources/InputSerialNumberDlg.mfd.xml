@@ -13,33 +13,47 @@
 
 <!-- $Id: InputSerialNumberDlg.mfd.xml,v 1.1 2008/05/30 13:12:41 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.warehouse.support.ui.InputSerialNumberDlg" orientation="ver" verticalGap="5" title="resource://com.mg.merp.warehouse.resources.formelements#InputSerialNumberDlg.Title">
-	
-	<jfd:container id="mainBox" layout="jfd:box" columns="1" alignment="expand_expand">
-		<jfd:border style="bevel" type="raised" />
-		<jfd:container id="topBox" layout="jfd:box" columns="2" alignment="expand_top">
-			<jfd:container id="catalogBox" layout="jfd:box" columns="2" alignment="expand_top" label="resource://com.mg.merp.warehouse.resources.formelements#CatalogCodeAndName">
-				<jfd:field id="catalogCode" readOnly="true" showLabel="false" alignment="left_expand" />
-				<jfd:field id="catalogName" readOnly="true" showLabel="false" alignment="expand_expand" />
-			</jfd:container>
-			<jfd:container id="lotNumbersBox" layout="jfd:box" columns="4" alignment="expand_top" label="resource://com.mg.merp.warehouse.resources.formelements#NumberLot">
-				<jfd:field id="numberLot" showLabel="false" readOnly="true" alignment="expand_expand" />
-				<jfd:field id="vendorLot" readOnly="true" alignment="expand_expand" />
-			</jfd:container>
-			<jfd:container id="serialNumberBox" layout="jfd:box" columns="2" alignment="expand_top" label="resource://com.mg.merp.warehouse.resources.formelements#InputSerialNumberDlg.SerialNumber">
-				<jfd:field id="newSerialNumber" alignment="expand_expand" showLabel="false" />
-				<jfd:button id="addSerialNumber" text="resource://com.mg.merp.warehouse.resources.formelements#InputSerialNumberDlg.AddSerialNumber" actionListener="AddSerialNumber" />
-			</jfd:container>
-			<jfd:container id="numbersQuantityBox" layout="jfd:box" columns="5" alignment="expand_top" label="resource://com.mg.merp.warehouse.resources.formelements#InputSerialNumberDlg.SerialNumbersQuantity">
-				<jfd:integerField id="necessarySerialNumbersQuantity" readOnly="true" alignment="expand_expand" />
-				<jfd:integerField id="newSerialNumbersQuantity" readOnly="true" alignment="expand_expand" label="resource://com.mg.merp.warehouse.resources.formelements#InputSerialNumberDlg.AddedSerialNumbersQuantity" />
-				<jfd:button id="removeSerialNumber" alignment="right_top" text="resource://com.mg.merp.warehouse.resources.formelements#InputSerialNumberDlg.RemoveSerialNumber" actionListener="RemoveSerialNumber" />
-			</jfd:container>
-		</jfd:container>
-		<jfd:table id="serialNumberTable" scroll="true" autoResize="subsequent_columns" alignment="expand_expand">
-		</jfd:table>
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.warehouse.support.ui.InputSerialNumberDlg" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.warehouse.resources.formelements#InputSerialNumberDlg.Title">
+
+  <jfd:container id="mainBox" layout="jfd:box" columns="1" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:container id="topBox" layout="jfd:box" columns="2" alignment="expand_top">
+      <jfd:container id="catalogBox" layout="jfd:box" columns="2" alignment="expand_top"
+                     label="resource://com.mg.merp.warehouse.resources.formelements#CatalogCodeAndName">
+        <jfd:field id="catalogCode" readOnly="true" showLabel="false" alignment="left_expand"/>
+        <jfd:field id="catalogName" readOnly="true" showLabel="false" alignment="expand_expand"/>
+      </jfd:container>
+      <jfd:container id="lotNumbersBox" layout="jfd:box" columns="4" alignment="expand_top"
+                     label="resource://com.mg.merp.warehouse.resources.formelements#NumberLot">
+        <jfd:field id="numberLot" showLabel="false" readOnly="true" alignment="expand_expand"/>
+        <jfd:field id="vendorLot" readOnly="true" alignment="expand_expand"/>
+      </jfd:container>
+      <jfd:container id="serialNumberBox" layout="jfd:box" columns="2" alignment="expand_top"
+                     label="resource://com.mg.merp.warehouse.resources.formelements#InputSerialNumberDlg.SerialNumber">
+        <jfd:field id="newSerialNumber" alignment="expand_expand" showLabel="false"/>
+        <jfd:button id="addSerialNumber"
+                    text="resource://com.mg.merp.warehouse.resources.formelements#InputSerialNumberDlg.AddSerialNumber"
+                    actionListener="AddSerialNumber"/>
+      </jfd:container>
+      <jfd:container id="numbersQuantityBox" layout="jfd:box" columns="5" alignment="expand_top"
+                     label="resource://com.mg.merp.warehouse.resources.formelements#InputSerialNumberDlg.SerialNumbersQuantity">
+        <jfd:integerField id="necessarySerialNumbersQuantity" readOnly="true"
+                          alignment="expand_expand"/>
+        <jfd:integerField id="newSerialNumbersQuantity" readOnly="true" alignment="expand_expand"
+                          label="resource://com.mg.merp.warehouse.resources.formelements#InputSerialNumberDlg.AddedSerialNumbersQuantity"/>
+        <jfd:button id="removeSerialNumber" alignment="right_top"
+                    text="resource://com.mg.merp.warehouse.resources.formelements#InputSerialNumberDlg.RemoveSerialNumber"
+                    actionListener="RemoveSerialNumber"/>
+      </jfd:container>
+    </jfd:container>
+    <jfd:table id="serialNumberTable" scroll="true" autoResize="subsequent_columns"
+               alignment="expand_expand">
+    </jfd:table>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
 
 </jfd:form>

@@ -18,29 +18,29 @@ import java.math.BigDecimal;
 
 /**
  * Результат конвертации валют
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: CurrencyConversionResult.java,v 1.2 2007/04/13 11:37:25 safonov Exp $
  */
 public interface CurrencyConversionResult {
-	/**
-	 * получить конвертированную сумму
-	 * 
-	 * @return конвертированная сумма
-	 */
-	BigDecimal getAmount();
-	
-	/**
-	 * получить признак прямой или обратный курс
-	 * 
-	 * @return	если <code>true</code>, то курс прямой, иначе обратный
-	 */
-	boolean isDirect();
-	
-	/**
-	 * получить значение курса по которому была произведена конвертация
-	 * 
-	 * @return	значение курса
-	 */
-	BigDecimal getRate();
+  /**
+   * получить конвертированную сумму
+   *
+   * @return конвертированная сумма
+   */
+  BigDecimal getAmount();
+
+  /**
+   * получить признак прямой или обратный курс
+   *
+   * @return если <code>true</code>, то курс прямой, иначе обратный
+   */
+  boolean isDirect();
+
+  /**
+   * получить значение курса по которому была произведена конвертация
+   *
+   * @return значение курса
+   */
+  BigDecimal getRate();
 }

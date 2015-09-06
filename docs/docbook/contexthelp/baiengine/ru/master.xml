@@ -1,34 +1,36 @@
 ﻿<?xml version='1.0' encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
-                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
-[
-<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
-<!ENTITY chap_001bai SYSTEM "modules/001bai.xml">
-<!ENTITY bai "Бизнес-расширения"> 
-<!ENTITY merp "Millennium Business Suite Anywhere">
-<!ENTITY cont_centr "Центр управления"> 
-]>
+    "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+    [
+        <!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+        <!ENTITY chap_001bai SYSTEM "modules/001bai.xml">
+        <!ENTITY bai "Бизнес-расширения">
+        <!ENTITY merp "Millennium Business Suite Anywhere">
+        <!ENTITY cont_centr "Центр управления">
+        ]>
 <book lang="ru">
   <bookinfo>
-      <title>&bai; в системе &merp; 
-      Руководство пользователя.</title>
-      <releaseinfo>4.0.6</releaseinfo>
-      <copyright>
-	<year>1998</year>
-	<year>2008</year>
-	<holder>ООО &quot;Бизнестехнология&quot;</holder>
-      </copyright>    
+    <title>&bai; в системе &merp;
+      Руководство пользователя.
+    </title>
+    <releaseinfo>4.0.6</releaseinfo>
+    <copyright>
+      <year>1998</year>
+      <year>2008</year>
+      <holder>ООО &quot;Бизнестехнология&quot;</holder>
+    </copyright>
   </bookinfo>
-  
+
   <toc/>
-  
+
   <preface id="target" revision="1">
-      <title>Целевая аудитория </title>
-      <para>Данное руководство предназначено для опытных пользователей, работающих  
-	с модулем &quot;&bai;&quot; системы &merp;.</para>
+    <title>Целевая аудитория</title>
+    <para>Данное руководство предназначено для опытных пользователей, работающих
+      с модулем &quot;&bai;&quot; системы &merp;.
+    </para>
   </preface>
-    
-  &chap_001bai; 
+
+  &chap_001bai;
   &chap_copyright;
 
 </book>

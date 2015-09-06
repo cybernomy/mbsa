@@ -15,42 +15,44 @@
 
 <server>
 
-	<mbean code="com.mg.merp.scheduler.support.jboss.SchedulerManagerService" name="merp:service=SchedulerManagerService">
-		<depends>merp.har:service=MERPDataWarehouse</depends>
-		<attribute name="SubscriptionList">
-			<subscription-list>
-				<mbean name="jboss.system:type=Server">
-					<notification type="org.jboss.system.server.started"/>
-				</mbean>
-			</subscription-list>
-		</attribute>
-		<attribute name="Properties">
-# Default Properties file for use by StdSchedulerFactory
-# to create a Quartz Scheduler Instance, if a different
-# properties file is not explicitly specified.
+  <mbean code="com.mg.merp.scheduler.support.jboss.SchedulerManagerService"
+         name="merp:service=SchedulerManagerService">
+    <depends>merp.har:service=MERPDataWarehouse</depends>
+    <attribute name="SubscriptionList">
+      <subscription-list>
+        <mbean name="jboss.system:type=Server">
+          <notification type="org.jboss.system.server.started"/>
+        </mbean>
+      </subscription-list>
+    </attribute>
+    <attribute name="Properties">
+      # Default Properties file for use by StdSchedulerFactory
+      # to create a Quartz Scheduler Instance, if a different
+      # properties file is not explicitly specified.
 
-org.quartz.scheduler.instanceName = MBSAQuartzScheduler
-org.quartz.scheduler.rmi.export = false
-org.quartz.scheduler.rmi.proxy = false
-org.quartz.scheduler.userTransactionURL=UserTransaction
-org.quartz.scheduler.wrapJobExecutionInUserTransaction = true
+      org.quartz.scheduler.instanceName = MBSAQuartzScheduler
+      org.quartz.scheduler.rmi.export = false
+      org.quartz.scheduler.rmi.proxy = false
+      org.quartz.scheduler.userTransactionURL=UserTransaction
+      org.quartz.scheduler.wrapJobExecutionInUserTransaction = true
 
-org.quartz.threadPool.class = org.quartz.simpl.SimpleThreadPool
-org.quartz.threadPool.threadCount = 5
-org.quartz.threadPool.threadPriority = 4
-org.quartz.threadPool.threadsInheritContextClassLoaderOfInitializingThread = true
+      org.quartz.threadPool.class = org.quartz.simpl.SimpleThreadPool
+      org.quartz.threadPool.threadCount = 5
+      org.quartz.threadPool.threadPriority = 4
+      org.quartz.threadPool.threadsInheritContextClassLoaderOfInitializingThread = true
 
-org.quartz.jobStore.misfireThreshold = 60000
+      org.quartz.jobStore.misfireThreshold = 60000
 
-org.quartz.jobStore.class = org.quartz.simpl.RAMJobStore
-    	</attribute>
-		<attribute name="SchedulerUserName">scheduler</attribute>
-		<attribute name="SchedulerPassword">scheduler</attribute>
-	</mbean>
+      org.quartz.jobStore.class = org.quartz.simpl.RAMJobStore
+    </attribute>
+    <attribute name="SchedulerUserName">scheduler</attribute>
+    <attribute name="SchedulerPassword">scheduler</attribute>
+  </mbean>
 
-	<mbean code="com.mg.merp.scheduler.support.jboss.TaskInterceptorService" name="merp:scheduler=TaskInterceptorService">
-		<depends>merp.har:service=MERPDataWarehouse</depends>
-		<depends>merp:service=EntityInterceptorManagerService</depends>
-	</mbean>
+  <mbean code="com.mg.merp.scheduler.support.jboss.TaskInterceptorService"
+         name="merp:scheduler=TaskInterceptorService">
+    <depends>merp.har:service=MERPDataWarehouse</depends>
+    <depends>merp:service=EntityInterceptorManagerService</depends>
+  </mbean>
 
 </server>

@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.TaxCalcKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: TaxCalcKindServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface TaxCalcKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<TaxCalcKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<TaxCalcKind, Integer> {
 
 }

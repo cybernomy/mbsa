@@ -19,25 +19,24 @@ import java.util.EventListener;
 
 /**
  * Слушатель формы поддержки бизнес-компонента
- * 
- * @see MaintenanceHelper
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: MaintenanceFormActionListener.java,v 1.2 2006/08/31 09:01:06 safonov Exp $
+ * @see MaintenanceHelper
  */
 public interface MaintenanceFormActionListener extends EventListener, Serializable {
-	
-	/**
-	 * выполнены действия по поддержке сущности
-	 * 
-	 * @param event	событие
-	 */
-	void performed(MaintenanceFormEvent event);
-	
-	/**
-	 * действия по поддержке отменены
-	 * 
-	 * @param event	событие
-	 */
-	void canceled(MaintenanceFormEvent event);
+
+  /**
+   * выполнены действия по поддержке сущности
+   *
+   * @param event событие
+   */
+  void performed(MaintenanceFormEvent event);
+
+  /**
+   * действия по поддержке отменены
+   *
+   * @param event событие
+   */
+  void canceled(MaintenanceFormEvent event);
 }

@@ -1,235 +1,235 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mappings PUBLIC "-//DOZER//DTD MAPPINGS//EN"
-   "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
+    "http://dozer.sourceforge.net/dtd/dozerbeanmapping.dtd">
 
 <!-- $$Id: doc2SuperDoc.map.xml,v 1.6 2009/01/05 09:37:04 safonov Exp $$ -->
 
 <mappings>
-    <!-- до решения по запросу 
-    https://sourceforge.net/tracker/?func=detail&atid=727368&aid=1709116&group_id=133517
-    использовать класс com.mg.merp.document.support.MapToDocumentCustomConverter для получения
-    документа из "супер документа", вариант с разметкой не работает
-     -->
-	<!-- все сущности системы представляют собой образ БД, соответственно,
-	их копирование  должно происходить по ссылкам-->
-	<configuration>
-		<!-- Пример разметки с помощью конвертера -->
-		<custom-converters>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.document.model.DocHead</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.warehouse.model.BillHead</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.account.model.BankDocument</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.warehouse.model.OrderHead</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.warehouse.model.InvoiceHead</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.warehouse.model.StockDocumentHead</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.account.model.CashDocument</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.account.model.AdvanceRepHead</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.manufacture.model.InputDocumentHead</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.manufacture.model.OutputProductHead</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.manufacture.model.ScrapDocumentHead</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.manufacture.model.VarianceDocumentHead</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.salary.model.FeeSummaryHead</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.warehouse.model.InventoryActHead</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.factura.model.FacturaHead</class-b>
-      		</converter>
-      		<converter type="com.mg.merp.document.support.MapToDocumentCustomConverter" >
-        		<class-a>java.util.HashMap</class-a>
-        		<class-b>com.mg.merp.retail.model.RtlInvoiceHead</class-b>
-      		</converter>
-    	</custom-converters> 
- 		<copy-by-references>
- 			<!-- тут должны быть перечислены все классы-сущности системы.
- 			Список уменьшится при решении запроса
- 			https://sourceforge.net/tracker/?func=detail&atid=727371&aid=1708511&group_id=133517
- 			 -->
-	 		<copy-by-reference>com.mg.merp.reference.model.BankAccount</copy-by-reference>
- 	 		<copy-by-reference>com.mg.merp.reference.model.Contractor</copy-by-reference>
-			<copy-by-reference>com.mg.merp.reference.model.Kbk</copy-by-reference>
-			<copy-by-reference>com.mg.merp.reference.model.Okato</copy-by-reference>
-			<copy-by-reference>com.mg.merp.baiengine.model.Repository</copy-by-reference>
-			<copy-by-reference>com.mg.merp.reference.model.CurrencyRateAuthority</copy-by-reference>
-			<copy-by-reference>com.mg.merp.reference.model.CurrencyRateType</copy-by-reference>
-			<copy-by-reference>com.mg.merp.reference.model.PriceListHead</copy-by-reference>
-			<copy-by-reference>com.mg.merp.reference.model.PriceType</copy-by-reference>
-			<copy-by-reference>com.mg.merp.core.model.Folder</copy-by-reference>
-			<copy-by-reference>com.mg.merp.document.model.DocType</copy-by-reference>
-			<copy-by-reference>com.mg.merp.document.model.DocHead</copy-by-reference>
-			<copy-by-reference>com.mg.merp.reference.model.Currency</copy-by-reference>
-			<copy-by-reference>com.mg.merp.core.model.SysClient</copy-by-reference>
-			<copy-by-reference>com.mg.merp.reference.model.CalcTaxesKind</copy-by-reference>
-			<copy-by-reference>com.mg.merp.document.model.DocSection</copy-by-reference>
-			<copy-by-reference>com.mg.merp.reference.model.Contractor</copy-by-reference>
-			<copy-by-reference>com.mg.merp.reference.model.Partner</copy-by-reference>
-			<copy-by-reference>com.mg.merp.reference.model.Employees</copy-by-reference>
-			<copy-by-reference>com.mg.merp.reference.model.OrgUnit</copy-by-reference>
-		</copy-by-references>
-	</configuration>
+  <!-- до решения по запросу
+  https://sourceforge.net/tracker/?func=detail&atid=727368&aid=1709116&group_id=133517
+  использовать класс com.mg.merp.document.support.MapToDocumentCustomConverter для получения
+  документа из "супер документа", вариант с разметкой не работает
+   -->
+  <!-- все сущности системы представляют собой образ БД, соответственно,
+  их копирование  должно происходить по ссылкам-->
+  <configuration>
+    <!-- Пример разметки с помощью конвертера -->
+    <custom-converters>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.document.model.DocHead</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.warehouse.model.BillHead</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.account.model.BankDocument</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.warehouse.model.OrderHead</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.warehouse.model.InvoiceHead</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.warehouse.model.StockDocumentHead</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.account.model.CashDocument</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.account.model.AdvanceRepHead</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.manufacture.model.InputDocumentHead</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.manufacture.model.OutputProductHead</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.manufacture.model.ScrapDocumentHead</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.manufacture.model.VarianceDocumentHead</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.salary.model.FeeSummaryHead</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.warehouse.model.InventoryActHead</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.factura.model.FacturaHead</class-b>
+      </converter>
+      <converter type="com.mg.merp.document.support.MapToDocumentCustomConverter">
+        <class-a>java.util.HashMap</class-a>
+        <class-b>com.mg.merp.retail.model.RtlInvoiceHead</class-b>
+      </converter>
+    </custom-converters>
+    <copy-by-references>
+      <!-- тут должны быть перечислены все классы-сущности системы.
+      Список уменьшится при решении запроса
+      https://sourceforge.net/tracker/?func=detail&atid=727371&aid=1708511&group_id=133517
+       -->
+      <copy-by-reference>com.mg.merp.reference.model.BankAccount</copy-by-reference>
+      <copy-by-reference>com.mg.merp.reference.model.Contractor</copy-by-reference>
+      <copy-by-reference>com.mg.merp.reference.model.Kbk</copy-by-reference>
+      <copy-by-reference>com.mg.merp.reference.model.Okato</copy-by-reference>
+      <copy-by-reference>com.mg.merp.baiengine.model.Repository</copy-by-reference>
+      <copy-by-reference>com.mg.merp.reference.model.CurrencyRateAuthority</copy-by-reference>
+      <copy-by-reference>com.mg.merp.reference.model.CurrencyRateType</copy-by-reference>
+      <copy-by-reference>com.mg.merp.reference.model.PriceListHead</copy-by-reference>
+      <copy-by-reference>com.mg.merp.reference.model.PriceType</copy-by-reference>
+      <copy-by-reference>com.mg.merp.core.model.Folder</copy-by-reference>
+      <copy-by-reference>com.mg.merp.document.model.DocType</copy-by-reference>
+      <copy-by-reference>com.mg.merp.document.model.DocHead</copy-by-reference>
+      <copy-by-reference>com.mg.merp.reference.model.Currency</copy-by-reference>
+      <copy-by-reference>com.mg.merp.core.model.SysClient</copy-by-reference>
+      <copy-by-reference>com.mg.merp.reference.model.CalcTaxesKind</copy-by-reference>
+      <copy-by-reference>com.mg.merp.document.model.DocSection</copy-by-reference>
+      <copy-by-reference>com.mg.merp.reference.model.Contractor</copy-by-reference>
+      <copy-by-reference>com.mg.merp.reference.model.Partner</copy-by-reference>
+      <copy-by-reference>com.mg.merp.reference.model.Employees</copy-by-reference>
+      <copy-by-reference>com.mg.merp.reference.model.OrgUnit</copy-by-reference>
+    </copy-by-references>
+  </configuration>
 
-	<!--  Пример использования встроенного механизма разметки -->
-	<!--mapping map-id="BankDocument2Map" map-null="false">
-		<class-a>com.mg.merp.account.model.BankDocument</class-a>
-		<class-b>java.util.HashMap</class-b>
-		<field-exclude>
-			<a>id</a>
-			<b>id</b>
-		</field-exclude>
-		<field-exclude>
-			<a>primaryKey</a>
-			<b>primaryKey</b>
-		</field-exclude>
-		<field-exclude>
-			<a>allAttributes</a>
-			<b>allAttributes</b>
-		</field-exclude>
-		<field-exclude>
-			<a>attributes</a>
-			<b>attributes</b>
-		</field-exclude>
-		<field-exclude>
-			<a>entityName</a>
-			<b>entityName</b>
-		</field-exclude>
-		<field-exclude>
-			<a>storage</a>
-			<b>storage</b>
-		</field-exclude>
-	</mapping>
-	
-	<mapping map-id="BillHead2Map" map-null="false">
-		<class-a>com.mg.merp.warehouse.model.BillHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-		<field-exclude>
-			<a>id</a>
-			<b>id</b>
-		</field-exclude>
-		<field-exclude>
-			<a>primaryKey</a>
-			<b>primaryKey</b>
-		</field-exclude>
-		<field-exclude>
-			<a>allAttributes</a>
-			<b>allAttributes</b>
-		</field-exclude>
-		<field-exclude>
-			<a>attributes</a>
-			<b>attributes</b>
-		</field-exclude>
-		<field-exclude>
-			<a>entityName</a>
-			<b>entityName</b>
-		</field-exclude>
-		<field-exclude>
-			<a>storage</a>
-			<b>storage</b>
-		</field-exclude>
-	</mapping-->
-	
-	<!-- Пример разметки с помощью конвертера -->
-	<mapping map-id="Document2Map" map-null="false">
-		<class-a>com.mg.merp.document.model.DocHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
-	<mapping map-id="BankDocument2Map" map-null="false">
-		<class-a>com.mg.merp.account.model.BankDocument</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>	
-	<mapping map-id="BillHead2Map" map-null="false">
-		<class-a>com.mg.merp.warehouse.model.BillHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
-	<mapping map-id="OrderHead2Map" map-null="false">
-		<class-a>com.mg.merp.warehouse.model.OrderHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
-	<mapping map-id="InvoiceHead2Map" map-null="false">
-		<class-a>com.mg.merp.warehouse.model.InvoiceHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
-	<mapping map-id="StockDocument2Map" map-null="false">
-		<class-a>com.mg.merp.warehouse.model.StockDocumentHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
-	<mapping map-id="CashDocument2Map" map-null="false">
-		<class-a>com.mg.merp.account.model.CashDocument</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
-	<mapping map-id="AdvRepHead2Map" map-null="false">
-		<class-a>com.mg.merp.account.model.AdvanceRepHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
-	<mapping map-id="InpDocHead2Map" map-null="false">
-		<class-a>com.mg.merp.manufacture.model.InputDocumentHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
-	<mapping map-id="OutProductHead2Map" map-null="false">
-		<class-a>com.mg.merp.manufacture.model.OutputProductHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
-	<mapping map-id="ScrapDocHead2Map" map-null="false">
-		<class-a>com.mg.merp.manufacture.model.ScrapDocumentHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
-	<mapping map-id="VarianceDocHead2Map" map-null="false">
-		<class-a>com.mg.merp.manufacture.model.VarianceDocumentHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
-	<mapping map-id="FeeSumHead2Map" map-null="false">
-		<class-a>com.mg.merp.salary.model.FeeSummaryHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
-	<mapping map-id="InvActHead2Map" map-null="false">
-		<class-a>com.mg.merp.warehouse.model.InventoryActHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
-	<mapping map-id="FacturaHead2Map" map-null="false">
-		<class-a>com.mg.merp.factura.model.FacturaHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
-	<mapping map-id="RtlInvHead2Map" map-null="false">
-		<class-a>com.mg.merp.retail.model.RtlInvoiceHead</class-a>
-		<class-b>java.util.HashMap</class-b>
-	</mapping>
+  <!--  Пример использования встроенного механизма разметки -->
+  <!--mapping map-id="BankDocument2Map" map-null="false">
+    <class-a>com.mg.merp.account.model.BankDocument</class-a>
+    <class-b>java.util.HashMap</class-b>
+    <field-exclude>
+      <a>id</a>
+      <b>id</b>
+    </field-exclude>
+    <field-exclude>
+      <a>primaryKey</a>
+      <b>primaryKey</b>
+    </field-exclude>
+    <field-exclude>
+      <a>allAttributes</a>
+      <b>allAttributes</b>
+    </field-exclude>
+    <field-exclude>
+      <a>attributes</a>
+      <b>attributes</b>
+    </field-exclude>
+    <field-exclude>
+      <a>entityName</a>
+      <b>entityName</b>
+    </field-exclude>
+    <field-exclude>
+      <a>storage</a>
+      <b>storage</b>
+    </field-exclude>
+  </mapping>
+
+  <mapping map-id="BillHead2Map" map-null="false">
+    <class-a>com.mg.merp.warehouse.model.BillHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+    <field-exclude>
+      <a>id</a>
+      <b>id</b>
+    </field-exclude>
+    <field-exclude>
+      <a>primaryKey</a>
+      <b>primaryKey</b>
+    </field-exclude>
+    <field-exclude>
+      <a>allAttributes</a>
+      <b>allAttributes</b>
+    </field-exclude>
+    <field-exclude>
+      <a>attributes</a>
+      <b>attributes</b>
+    </field-exclude>
+    <field-exclude>
+      <a>entityName</a>
+      <b>entityName</b>
+    </field-exclude>
+    <field-exclude>
+      <a>storage</a>
+      <b>storage</b>
+    </field-exclude>
+  </mapping-->
+
+  <!-- Пример разметки с помощью конвертера -->
+  <mapping map-id="Document2Map" map-null="false">
+    <class-a>com.mg.merp.document.model.DocHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="BankDocument2Map" map-null="false">
+    <class-a>com.mg.merp.account.model.BankDocument</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="BillHead2Map" map-null="false">
+    <class-a>com.mg.merp.warehouse.model.BillHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="OrderHead2Map" map-null="false">
+    <class-a>com.mg.merp.warehouse.model.OrderHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="InvoiceHead2Map" map-null="false">
+    <class-a>com.mg.merp.warehouse.model.InvoiceHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="StockDocument2Map" map-null="false">
+    <class-a>com.mg.merp.warehouse.model.StockDocumentHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="CashDocument2Map" map-null="false">
+    <class-a>com.mg.merp.account.model.CashDocument</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="AdvRepHead2Map" map-null="false">
+    <class-a>com.mg.merp.account.model.AdvanceRepHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="InpDocHead2Map" map-null="false">
+    <class-a>com.mg.merp.manufacture.model.InputDocumentHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="OutProductHead2Map" map-null="false">
+    <class-a>com.mg.merp.manufacture.model.OutputProductHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="ScrapDocHead2Map" map-null="false">
+    <class-a>com.mg.merp.manufacture.model.ScrapDocumentHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="VarianceDocHead2Map" map-null="false">
+    <class-a>com.mg.merp.manufacture.model.VarianceDocumentHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="FeeSumHead2Map" map-null="false">
+    <class-a>com.mg.merp.salary.model.FeeSummaryHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="InvActHead2Map" map-null="false">
+    <class-a>com.mg.merp.warehouse.model.InventoryActHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="FacturaHead2Map" map-null="false">
+    <class-a>com.mg.merp.factura.model.FacturaHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
+  <mapping map-id="RtlInvHead2Map" map-null="false">
+    <class-a>com.mg.merp.retail.model.RtlInvoiceHead</class-a>
+    <class-b>java.util.HashMap</class-b>
+  </mapping>
 </mappings>

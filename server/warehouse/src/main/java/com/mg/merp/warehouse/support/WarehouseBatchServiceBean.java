@@ -15,20 +15,20 @@
 
 package com.mg.merp.warehouse.support;
 
-import javax.annotation.security.PermitAll;
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.warehouse.WarehouseBatchServiceLocal;
 import com.mg.merp.warehouse.model.StockBatch;
 
+import javax.annotation.security.PermitAll;
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Партии" 
- * 
+ * Бизнес-компонент "Партии"
+ *
  * @author leonova
  * @version $Id: WarehouseBatchServiceBean.java,v 1.4 2007/07/30 11:07:32 safonov Exp $
  */
-@Stateless(name="merp/warehouse/WarehouseBatchService")
+@Stateless(name = "merp/warehouse/WarehouseBatchService")
 @PermitAll
 public class WarehouseBatchServiceBean extends AbstractPOJODataBusinessObjectServiceBean<StockBatch, Integer> implements WarehouseBatchServiceLocal {
 

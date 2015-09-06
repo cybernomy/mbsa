@@ -18,68 +18,73 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Виды этапов документооборота
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: StageAction.java,v 1.6 2007/03/14 08:15:54 safonov Exp $
  */
 @DataItemName("DocFlow.StageAction")
 public class StageAction extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private java.lang.String Name;
+  private java.lang.String Name;
 
-	private boolean createDoc;
+  private boolean createDoc;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public StageAction() {
-	}
+  /**
+   * default constructor
+   */
+  public StageAction() {
+  }
 
-	/** constructor with id */
-	public StageAction(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public StageAction(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("DocFlow.StageAction.Name")
-	public java.lang.String getName() {
-		return this.Name;
-	}
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public void setName(java.lang.String Name) {
-		this.Name = Name;
-	}
+  /**
+   *
+   */
+  @DataItemName("DocFlow.StageAction.Name")
+  public java.lang.String getName() {
+    return this.Name;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("DocFlow.StageAction.CreateDoc")
-	public boolean isCreateDoc() {
-		return this.createDoc;
-	}
+  public void setName(java.lang.String Name) {
+    this.Name = Name;
+  }
 
-	public void setCreateDoc(boolean CreatedocFlag) {
-		this.createDoc = CreatedocFlag;
-	}
+  /**
+   *
+   */
+  @DataItemName("DocFlow.StageAction.CreateDoc")
+  public boolean isCreateDoc() {
+    return this.createDoc;
+  }
+
+  public void setCreateDoc(boolean CreatedocFlag) {
+    this.createDoc = CreatedocFlag;
+  }
 }

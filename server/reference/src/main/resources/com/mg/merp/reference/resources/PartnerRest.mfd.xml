@@ -13,33 +13,37 @@
 
 <!-- $Id: PartnerRest.mfd.xml,v 1.3 2006/11/29 08:19:25 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.reference.support.ui.PartnerRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.reference.resources.formelements#Cond.Partner" helpTopic="reference#partner_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.reference.support.ui.PartnerRest" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.reference.resources.formelements#Cond.Partner"
+          helpTopic="reference#partner_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:field id="code" />
- 		<jfd:field id="inn" sameLine="true"/> 		
- 		<jfd:field id="fullName" />	
- 		<jfd:field id="bankAcc" />	
- 		<jfd:field id="bik" sameLine="true"/>	
- 		<jfd:field id="corrAcc" />
-<!--   		<jfd:field id="supCreditLow" />
- 		<jfd:field id="supCreditHigh" sameLine="true"/>
- 		<jfd:field id="supCreditCur" />
- 		<jfd:field id="termSupCreditLow" />		
-  		<jfd:field id="termSupCreditHigh" sameLine="true"/>
-		<jfd:field id="cusCreditLow" />
- 		<jfd:field id="cusCreditHigh" sameLine="true"/> 		 		 		 		
- 		<jfd:field id="cusCreditCur" />
- 		<jfd:field id="termCusCreditLow" />
- 		<jfd:field id="termCusCreditHigh" sameLine="true"/>   -->
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 			 					 		
- 				 		 		 		
-	</jfd:container>
+    <jfd:field id="code"/>
+    <jfd:field id="inn" sameLine="true"/>
+    <jfd:field id="fullName"/>
+    <jfd:field id="bankAcc"/>
+    <jfd:field id="bik" sameLine="true"/>
+    <jfd:field id="corrAcc"/>
+    <!--   		<jfd:field id="supCreditLow" />
+         <jfd:field id="supCreditHigh" sameLine="true"/>
+         <jfd:field id="supCreditCur" />
+         <jfd:field id="termSupCreditLow" />
+          <jfd:field id="termSupCreditHigh" sameLine="true"/>
+        <jfd:field id="cusCreditLow" />
+         <jfd:field id="cusCreditHigh" sameLine="true"/>
+         <jfd:field id="cusCreditCur" />
+         <jfd:field id="termCusCreditLow" />
+         <jfd:field id="termCusCreditHigh" sameLine="true"/>   -->
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml"/>
 
 </jfd:form>

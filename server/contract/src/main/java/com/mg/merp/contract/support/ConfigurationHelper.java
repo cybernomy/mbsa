@@ -22,29 +22,25 @@ import com.mg.merp.document.support.ConfigurationImpl;
 
 /**
  * Класс помощник конфигурации модуля "Контракты"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ConfigurationHelper.java,v 1.1 2007/03/26 11:59:30 safonov Exp $
  */
 public class ConfigurationHelper {
 
-	/**
-	 * получить конфигурацию модуля
-	 * 
-	 * @return
-	 */
-	public static ContractConfig getConfiguration() {
-		return ServerUtils.getPersistentManager().find(ContractConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
-	}
+  /**
+   * получить конфигурацию модуля
+   */
+  public static ContractConfig getConfiguration() {
+    return ServerUtils.getPersistentManager().find(ContractConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
+  }
 
-	/**
-	 * получить конфигурацию документов данного модуля
-	 * 
-	 * @return
-	 */
-	public static Configuration getDocumentConfiguration() {
-		ContractConfig cfg = getConfiguration();
-		return new ConfigurationImpl(cfg.getBaseCurrency(), cfg.getNatCurrency(), cfg.getCurrencyPrec(), cfg.getRefCurrencyRateAuthority(), cfg.getRefCurrencyRateType());
-	}
+  /**
+   * получить конфигурацию документов данного модуля
+   */
+  public static Configuration getDocumentConfiguration() {
+    ContractConfig cfg = getConfiguration();
+    return new ConfigurationImpl(cfg.getBaseCurrency(), cfg.getNatCurrency(), cfg.getCurrencyPrec(), cfg.getRefCurrencyRateAuthority(), cfg.getRefCurrencyRateType());
+  }
 
 }

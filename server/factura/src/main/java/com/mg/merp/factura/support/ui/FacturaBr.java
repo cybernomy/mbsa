@@ -19,23 +19,23 @@ import com.mg.merp.document.generic.ui.GoodsDocumentBrowseForm;
 
 /**
  * Контроллер формы списка счет - фактур
- * 
+ *
  * @author leonova
- * @version $Id: FacturaBr.java,v 1.6 2008/02/21 12:20:40 alikaev Exp $ 
+ * @version $Id: FacturaBr.java,v 1.6 2008/02/21 12:20:40 alikaev Exp $
  */
 public class FacturaBr extends GoodsDocumentBrowseForm {
-	
-	protected final String INIT_QUERY_TEXT = "select %s from FacturaHead d %s %s order by d.DocDate, d.Id ";
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.ui.GoodsDocumentBrowseForm#createQueryText()
-	 */
-	@Override
-	protected String createQueryText() {
-		super.createQueryText();
-		whereText.append(DatabaseUtils.formatEJBQLObjectRestriction("d.Through", restGoodDocument.getThroughCode(), "throughCode", paramsName, paramsValue, false));
+  protected final String INIT_QUERY_TEXT = "select %s from FacturaHead d %s %s order by d.DocDate, d.Id ";
 
-		return String.format(INIT_QUERY_TEXT, fieldsList, fromList, whereText);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.ui.GoodsDocumentBrowseForm#createQueryText()
+   */
+  @Override
+  protected String createQueryText() {
+    super.createQueryText();
+    whereText.append(DatabaseUtils.formatEJBQLObjectRestriction("d.Through", restGoodDocument.getThroughCode(), "throughCode", paramsName, paramsValue, false));
+
+    return String.format(INIT_QUERY_TEXT, fieldsList, fromList, whereText);
+  }
 
 }

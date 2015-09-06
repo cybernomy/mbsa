@@ -26,15 +26,15 @@ import com.mg.merp.finance.model.TurnAccount;
  * @version $Id: TurnAccFlatServiceLocal.java,v 1.2 2006/12/26 13:15:40 sharapov Exp $
  */
 public interface TurnAccFlatServiceLocal
-extends com.mg.framework.api.DataBusinessObjectService<TurnAccount, Integer>
-{
-	/**
-	 * Перенос остатков финансового учета
-	 * @param periodFrom - с фин.периода
-	 * @param periodTo - по фин.период
-	 * @param allAcc - по всем счетам
-	 * @param accList - список выбранных счетов
-	 */
-	void carryForward(FinPeriod periodFrom, FinPeriod periodTo, boolean allAcc, Account[] accList);
+    extends com.mg.framework.api.DataBusinessObjectService<TurnAccount, Integer> {
+  /**
+   * Перенос остатков финансового учета
+   *
+   * @param periodFrom - с фин.периода
+   * @param periodTo   - по фин.период
+   * @param allAcc     - по всем счетам
+   * @param accList    - список выбранных счетов
+   */
+  void carryForward(FinPeriod periodFrom, FinPeriod periodTo, boolean allAcc, Account[] accList);
 
 }

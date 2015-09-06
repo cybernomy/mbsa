@@ -17,25 +17,25 @@ package com.mg.merp.account.support.ui;
 
 /**
  * Контроллер формы условий отбора книги покупок
- * 
+ *
  * @author leonova
- * @version $Id: BuyBookRest.java,v 1.2 2006/08/23 10:26:15 leonova Exp $ 
+ * @version $Id: BuyBookRest.java,v 1.2 2006/08/23 10:26:15 leonova Exp $
  */
 public class BuyBookRest extends AccountBookRest {
-	
-	private int approved = 0;
 
-	@Override
-	protected void doClearRestrictionItem() {
-		super.doClearRestrictionItem();
-		this.approved = 0;
-	}
+  private int approved = 0;
 
-	/**
-	 * @return Returns the approved.
-	 */
-	protected int getApproved() {
-		return approved;
-	}
+  @Override
+  protected void doClearRestrictionItem() {
+    super.doClearRestrictionItem();
+    this.approved = 0;
+  }
+
+  /**
+   * @return Returns the approved.
+   */
+  protected int getApproved() {
+    return approved;
+  }
 
 }

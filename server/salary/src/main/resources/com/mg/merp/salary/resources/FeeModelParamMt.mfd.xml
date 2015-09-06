@@ -13,19 +13,22 @@
 
 <!-- $Id: FeeModelParamMt.mfd.xml,v 1.3 2007/07/09 08:35:35 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.salary.support.ui.FeeModelParamMt" title="resource://com.mg.merp.salary.resources.formelements#FeeModelParamMt.Title" helpTopic="salary#feemodparam_html">
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.salary.support.ui.FeeModelParamMt"
+          title="resource://com.mg.merp.salary.resources.formelements#FeeModelParamMt.Title"
+          helpTopic="salary#feemodparam_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
- 		<jfd:border style="bevel" type="raised" />
- 		<jfd:field id="FeeRefParam" />								 	 					
- 		<jfd:field id="ParamValue" />	
- 		<jfd:field id="FeeRefParam.ParamType" editorType="comboBox" readOnly="true" />								 	 					
- 		<jfd:field id="FeeRefParam.CalcAlg" readOnly="true" />
- 		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
-	
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="FeeRefParam"/>
+    <jfd:field id="ParamValue"/>
+    <jfd:field id="FeeRefParam.ParamType" editorType="comboBox" readOnly="true"/>
+    <jfd:field id="FeeRefParam.CalcAlg" readOnly="true"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
+
 </jfd:form>

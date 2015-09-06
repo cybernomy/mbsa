@@ -15,11 +15,11 @@
 
 package com.mg.merp.manufacture.generic;
 
-import java.io.Serializable;
-
 import com.mg.merp.document.DocumentPattern;
 import com.mg.merp.document.GoodsDocumentSpecification;
 
-public abstract class InputDocumentHeadServiceBean<T extends com.mg.merp.manufacture.model.InputDocumentHead, ID extends Serializable, P extends DocumentPattern, S extends GoodsDocumentSpecification> 
-		extends com.mg.merp.manufacture.generic.ManufactureDocumentHeadServiceBean<T, ID, P, S> {
+import java.io.Serializable;
+
+public abstract class InputDocumentHeadServiceBean<T extends com.mg.merp.manufacture.model.InputDocumentHead, ID extends Serializable, P extends DocumentPattern, S extends GoodsDocumentSpecification>
+    extends com.mg.merp.manufacture.generic.ManufactureDocumentHeadServiceBean<T, ID, P, S> {
 }

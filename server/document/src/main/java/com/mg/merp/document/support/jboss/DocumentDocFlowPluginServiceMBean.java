@@ -18,14 +18,14 @@ import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис дополнительных модулей подсистемы "Документы"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: DocumentDocFlowPluginServiceMBean.java,v 1.1 2006/10/21 10:56:26 safonov Exp $
  */
 public interface DocumentDocFlowPluginServiceMBean extends ServiceMBean {
-	/**
-	 * наименование сервиса
-	 */
-	final static String SERVICE_NAME = "merp:document=DocFlowPluginService"; //$NON-NLS-1$
+  /**
+   * наименование сервиса
+   */
+  final static String SERVICE_NAME = "merp:document=DocFlowPluginService"; //$NON-NLS-1$
 
 }

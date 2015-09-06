@@ -15,19 +15,19 @@
 
 package com.mg.merp.reference.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.reference.BankServiceLocal;
 import com.mg.merp.reference.model.Bank;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Банки" 
- * 
+ * Бизнес-компонент "Банки"
+ *
  * @author leonova
  * @version $Id: BankServiceBean.java,v 1.3 2006/08/02 12:13:42 leonova Exp $
  */
-@Stateless(name="merp/reference/BankService")
+@Stateless(name = "merp/reference/BankService")
 public class BankServiceBean extends AbstractPOJODataBusinessObjectServiceBean<Bank, Integer> implements BankServiceLocal {
 
- }
+}

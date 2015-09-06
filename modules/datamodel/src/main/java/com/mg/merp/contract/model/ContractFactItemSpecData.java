@@ -14,92 +14,92 @@
  */
 package com.mg.merp.contract.model;
 
-import java.math.BigDecimal;
-
 import com.mg.merp.reference.model.Catalog;
+
+import java.math.BigDecimal;
 
 /**
  * Структура данных для создания спецификации фактического пункта контракта
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: ContractFactItemSpecData.java,v 1.1 2007/03/07 12:31:28 sharapov Exp $
  */
 public class ContractFactItemSpecData {
 
-	// Fields
+  // Fields
 
-	private com.mg.merp.reference.model.Catalog catalog;
-	private java.math.BigDecimal quantity;
-	private java.math.BigDecimal price;
-	private java.math.BigDecimal summa;
+  private com.mg.merp.reference.model.Catalog catalog;
+  private java.math.BigDecimal quantity;
+  private java.math.BigDecimal price;
+  private java.math.BigDecimal summa;
 
-	/* Default constractor */
-	public ContractFactItemSpecData() {
-	}
+  /* Default constractor */
+  public ContractFactItemSpecData() {
+  }
 
-	public ContractFactItemSpecData(Catalog catalog, BigDecimal quantity, BigDecimal price, BigDecimal summa) {
-		this.catalog = catalog;
-		this.quantity = quantity;
-		this.price = price;
-		this.summa = summa;
-	}
+  public ContractFactItemSpecData(Catalog catalog, BigDecimal quantity, BigDecimal price, BigDecimal summa) {
+    this.catalog = catalog;
+    this.quantity = quantity;
+    this.price = price;
+    this.summa = summa;
+  }
 
-	// Property accessors
+  // Property accessors
 
-	/**
-	 * @return the catalog
-	 */
-	public com.mg.merp.reference.model.Catalog getCatalog() {
-		return catalog;
-	}
+  /**
+   * @return the catalog
+   */
+  public com.mg.merp.reference.model.Catalog getCatalog() {
+    return catalog;
+  }
 
-	/**
-	 * @param catalog the catalog to set
-	 */
-	public void setCatalog(com.mg.merp.reference.model.Catalog catalog) {
-		this.catalog = catalog;
-	}
+  /**
+   * @param catalog the catalog to set
+   */
+  public void setCatalog(com.mg.merp.reference.model.Catalog catalog) {
+    this.catalog = catalog;
+  }
 
-	/**
-	 * @return the price
-	 */
-	public java.math.BigDecimal getPrice() {
-		return price;
-	}
+  /**
+   * @return the price
+   */
+  public java.math.BigDecimal getPrice() {
+    return price;
+  }
 
-	/**
-	 * @param price the price to set
-	 */
-	public void setPrice(java.math.BigDecimal price) {
-		this.price = price;
-	}
+  /**
+   * @param price the price to set
+   */
+  public void setPrice(java.math.BigDecimal price) {
+    this.price = price;
+  }
 
-	/**
-	 * @return the quantity
-	 */
-	public java.math.BigDecimal getQuantity() {
-		return quantity;
-	}
+  /**
+   * @return the quantity
+   */
+  public java.math.BigDecimal getQuantity() {
+    return quantity;
+  }
 
-	/**
-	 * @param quantity the quantity to set
-	 */
-	public void setQuantity(java.math.BigDecimal quantity) {
-		this.quantity = quantity;
-	}
+  /**
+   * @param quantity the quantity to set
+   */
+  public void setQuantity(java.math.BigDecimal quantity) {
+    this.quantity = quantity;
+  }
 
-	/**
-	 * @return the summa
-	 */
-	public java.math.BigDecimal getSumma() {
-		return summa;
-	}
+  /**
+   * @return the summa
+   */
+  public java.math.BigDecimal getSumma() {
+    return summa;
+  }
 
-	/**
-	 * @param summa the summa to set
-	 */
-	public void setSumma(java.math.BigDecimal summa) {
-		this.summa = summa;
-	}
+  /**
+   * @param summa the summa to set
+   */
+  public void setSumma(java.math.BigDecimal summa) {
+    this.summa = summa;
+  }
 
 }

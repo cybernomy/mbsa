@@ -25,47 +25,47 @@ import com.mg.merp.manufacture.ManufactureProcessorServiceLocal;
  * @version $Id: PerformBackflushDocFlowPluginFactory.java,v 1.1 2007/08/06 12:44:53 safonov Exp $
  */
 public class PerformBackflushDocFlowPluginFactory extends
-		AbstractDocFlowPluginFactory {
-	public final static int FACTORY_IDENTIFIER = 12002;
+    AbstractDocFlowPluginFactory {
+  public final static int FACTORY_IDENTIFIER = 12002;
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
-	 */
-	@Override
-	protected DocFlowPlugin doCreatePlugin() {
-		return new AbstractDocFlowPlugin() {
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
+   */
+  @Override
+  protected DocFlowPlugin doCreatePlugin() {
+    return new AbstractDocFlowPlugin() {
 
-			@Override
-			protected void doExecute() throws Exception {
-				((ManufactureProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(ManufactureProcessorServiceLocal.SERVICE_NAME))
-						.performBackflush(getParams());
-				complete();
-			}
+      @Override
+      protected void doExecute() throws Exception {
+        ((ManufactureProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(ManufactureProcessorServiceLocal.SERVICE_NAME))
+            .performBackflush(getParams());
+        complete();
+      }
 
-			@Override
-			protected void doRoolback() throws Exception {
-				((ManufactureProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(ManufactureProcessorServiceLocal.SERVICE_NAME))
-						.rollbackPerformBackflush(getParams());
-				complete();
-			}
-			
-		};
-	}
+      @Override
+      protected void doRoolback() throws Exception {
+        ((ManufactureProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(ManufactureProcessorServiceLocal.SERVICE_NAME))
+            .rollbackPerformBackflush(getParams());
+        complete();
+      }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
-	 */
-	@Override
-	public int getIdentifier() {
-		return FACTORY_IDENTIFIER;
-	}
+    };
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
-	 */
-	@Override
-	public String getName() {
-		return "Perform backflush";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
+   */
+  @Override
+  public int getIdentifier() {
+    return FACTORY_IDENTIFIER;
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
+   */
+  @Override
+  public String getName() {
+    return "Perform backflush";
+  }
 
 }

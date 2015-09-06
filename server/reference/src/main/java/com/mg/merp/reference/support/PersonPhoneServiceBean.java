@@ -14,20 +14,20 @@
  */
 package com.mg.merp.reference.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.reference.PersonPhoneServiceLocal;
 import com.mg.merp.reference.model.PersonPhone;
 
+import javax.ejb.Stateless;
+
 /**
  * Бизнес - компонент "Телефоны физических лиц"
- * 
+ *
  * @author leonova
  * @version $Id: PersonPhoneServiceBean.java,v 1.3 2006/08/11 07:31:41 leonova Exp $
  */
-@Stateless(name="merp/reference/PersonPhoneService")
+@Stateless(name = "merp/reference/PersonPhoneService")
 public class PersonPhoneServiceBean extends AbstractPOJODataBusinessObjectServiceBean<PersonPhone, Integer> implements PersonPhoneServiceLocal {
 
-	
+
 }

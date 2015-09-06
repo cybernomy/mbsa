@@ -20,15 +20,15 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  * @author leonova
  * @version $Id: FamilyMembersSearchHelp.java,v 1.3 2006/07/12 05:29:50 leonova Exp $
  */
-public class FamilyMembersSearchHelp extends DefaultLegacySearchHelp{
+public class FamilyMembersSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {		
-		return "merp/reference/FamilyMember";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/reference/FamilyMember";
+  }
 }
 
                                  

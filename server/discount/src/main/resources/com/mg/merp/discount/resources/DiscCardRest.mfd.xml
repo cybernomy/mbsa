@@ -13,21 +13,29 @@
 
 <!-- $Id: DiscCardRest.mfd.xml,v 1.1 2007/12/04 15:01:49 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.discount.support.ui.DiscCardRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.discount.resources.formelements#DiscCardRest.Title">
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.discount.support.ui.DiscCardRest" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.discount.resources.formelements#DiscCardRest.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="disCardNumber" />
-	 	<jfd:field id="activity" editorType="comboBox" sameLine="true" useIndex="false" text="resource://com.mg.merp.discount.resources.formelements#DiscCardRest.Activity" />
-		<jfd:field id="disCardOwner" />
-		<jfd:field id="disCardUser" sameLine="true" text="resource://com.mg.merp.discount.resources.formelements#DiscCardRest.DisCardUser" />
-		<jfd:field id="creditLimitFrom" text="resource://com.mg.merp.discount.resources.formelements#DiscCardRest.СreditLimitFrom" />
-		<jfd:field id="creditLimitTill" sameLine="true" text="resource://com.mg.merp.discount.resources.formelements#DiscCardRest.СreditLimitTill" />
-		<jfd:field id="actDate" text="resource://com.mg.merp.discount.resources.formelements#DiscCardRest.ActDate" />
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="disCardNumber"/>
+    <jfd:field id="activity" editorType="comboBox" sameLine="true" useIndex="false"
+               text="resource://com.mg.merp.discount.resources.formelements#DiscCardRest.Activity"/>
+    <jfd:field id="disCardOwner"/>
+    <jfd:field id="disCardUser" sameLine="true"
+               text="resource://com.mg.merp.discount.resources.formelements#DiscCardRest.DisCardUser"/>
+    <jfd:field id="creditLimitFrom"
+               text="resource://com.mg.merp.discount.resources.formelements#DiscCardRest.СreditLimitFrom"/>
+    <jfd:field id="creditLimitTill" sameLine="true"
+               text="resource://com.mg.merp.discount.resources.formelements#DiscCardRest.СreditLimitTill"/>
+    <jfd:field id="actDate"
+               text="resource://com.mg.merp.discount.resources.formelements#DiscCardRest.ActDate"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml"/>
 
 </jfd:form>

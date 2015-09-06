@@ -13,14 +13,17 @@
 
 <!-- $Id: FeeRefBr.mfd.xml,v 1.4 2006/12/17 12:42:26 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.salary.support.ui.FeeRefBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.salary.resources.formelements#FeeRef.FormBr.Title" helpTopic="salary#fee_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.salary.support.ui.FeeRefBr" orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.salary.resources.formelements#FeeRef.FormBr.Title"
+          helpTopic="salary#fee_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
+  <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
 
-	</jfd:maintenanceTable>
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

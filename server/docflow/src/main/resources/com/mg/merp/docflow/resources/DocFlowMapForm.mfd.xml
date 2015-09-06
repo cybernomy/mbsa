@@ -13,15 +13,25 @@
 
 <!-- $Id: DocFlowMapForm.mfd.xml,v 1.5 2007/05/16 09:01:19 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.docflow.support.ui.DocFlowMapForm" orientation="ver" verticalGap="5" helpTopic="docprocess#docprtune_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.docflow.support.ui.DocFlowMapForm" orientation="ver"
+          verticalGap="5" helpTopic="docprocess#docprtune_html">
 
-	<jfd:toolBar id="toolBar" alignment="expand_top">
-		<jfd:button id="addVertex" text="resource://com.mg.merp.docflow.resources.formelements#DocFlowMap.AddVertex" actionListener="AddVertex" />
-		<jfd:button id="addEdge" text="resource://com.mg.merp.docflow.resources.formelements#DocFlowMap.AddEdge" actionListener="AddEdge" />
-		<jfd:button id="edit" text="resource://com.mg.merp.docflow.resources.formelements#DocFlowMap.Edit" actionListener="Edit" />
-		<jfd:button id="remove" text="resource://com.mg.merp.docflow.resources.formelements#DocFlowMap.Remove" actionListener="Remove" />
-	</jfd:toolBar>
-	<jfd:graph id="map" alignment="expand_expand">
-	</jfd:graph>
+  <jfd:toolBar id="toolBar" alignment="expand_top">
+    <jfd:button id="addVertex"
+                text="resource://com.mg.merp.docflow.resources.formelements#DocFlowMap.AddVertex"
+                actionListener="AddVertex"/>
+    <jfd:button id="addEdge"
+                text="resource://com.mg.merp.docflow.resources.formelements#DocFlowMap.AddEdge"
+                actionListener="AddEdge"/>
+    <jfd:button id="edit"
+                text="resource://com.mg.merp.docflow.resources.formelements#DocFlowMap.Edit"
+                actionListener="Edit"/>
+    <jfd:button id="remove"
+                text="resource://com.mg.merp.docflow.resources.formelements#DocFlowMap.Remove"
+                actionListener="Remove"/>
+  </jfd:toolBar>
+  <jfd:graph id="map" alignment="expand_expand">
+  </jfd:graph>
 
 </jfd:form>

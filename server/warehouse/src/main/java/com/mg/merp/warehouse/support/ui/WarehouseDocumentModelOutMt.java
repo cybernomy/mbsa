@@ -19,17 +19,17 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
  * Контроллер формы поддержки "Образцов расходных ордеров"
- * 
+ *
  * @author leonova
  * @version $Id: WarehouseDocumentModelOutMt.java,v 1.2 2007/05/22 05:34:25 sharapov Exp $
  */
 public class WarehouseDocumentModelOutMt extends DocumentModelMaintenanceForm {
-	
-	protected String[] contractorThroughKinds;
-	
-	public WarehouseDocumentModelOutMt() {
-		super();
-		contractorThroughKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-	}
-	
+
+  protected String[] contractorThroughKinds;
+
+  public WarehouseDocumentModelOutMt() {
+    super();
+    contractorThroughKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+  }
+
 }

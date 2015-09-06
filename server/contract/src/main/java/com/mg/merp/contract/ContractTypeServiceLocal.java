@@ -19,15 +19,15 @@ import com.mg.merp.contract.model.ContractType;
 
 /**
  * Сервис бизнес-компонента "Вид договора"
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: ContractTypeServiceLocal.java,v 1.1 2007/09/17 12:14:48 alikaev Exp $
  */
 public interface ContractTypeServiceLocal extends DataBusinessObjectService<ContractType, Integer> {
-	
-	/**
-	 * Локальное имя сервиса
-	 */
-	static final String LOCAL_SERVICE_NAME = "merp/contract/ContractType";
+
+  /**
+   * Локальное имя сервиса
+   */
+  static final String LOCAL_SERVICE_NAME = "merp/contract/ContractType";
 
 }

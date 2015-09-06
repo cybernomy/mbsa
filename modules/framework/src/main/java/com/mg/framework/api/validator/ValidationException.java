@@ -18,16 +18,16 @@ import com.mg.framework.api.ApplicationException;
 
 /**
  * ИС контроля данных, возбуждается в случае нарушения контроля данных
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ValidationException.java,v 1.1 2006/08/14 14:07:42 safonov Exp $
  */
 @javax.ejb.ApplicationException
 public class ValidationException extends ApplicationException {
-	private Status status;
-	
-	public ValidationException(Status status) {
-		super(status.getMessage());
-		this.status = status;
-	}
+  private Status status;
+
+  public ValidationException(Status status) {
+    super(status.getMessage());
+    this.status = status;
+  }
 }

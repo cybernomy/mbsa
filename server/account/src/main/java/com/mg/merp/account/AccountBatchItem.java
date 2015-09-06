@@ -19,16 +19,16 @@ import java.io.Serializable;
  * @author krivopoustov
  */
 public class AccountBatchItem implements Serializable {
-	public int key;
-	public double quan;
-	
-	public AccountBatchItem() {
-		super();
-	}
-	
-	public AccountBatchItem(int key, double quan) {
-		super();
-		this.key = key;
-		this.quan = quan;
-	}
+  public int key;
+  public double quan;
+
+  public AccountBatchItem() {
+    super();
+  }
+
+  public AccountBatchItem(int key, double quan) {
+    super();
+    this.key = key;
+    this.quan = quan;
+  }
 }

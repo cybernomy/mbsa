@@ -23,39 +23,39 @@ import java.util.List;
  * @version $Id: TreeNode.java,v 1.2 2006/08/31 08:45:45 safonov Exp $
  */
 public class TreeNode implements Serializable {
-	protected TreeNode parent = null;
-	protected List<TreeNode> children = new ArrayList<TreeNode>();
+  protected TreeNode parent = null;
+  protected List<TreeNode> children = new ArrayList<TreeNode>();
 
-	public TreeNode(TreeNode parent) {
-		this.parent = parent;
-	}
-	
-	/**
-	 * 
-	 * @param index
-	 * @return
-	 */
-	public TreeNode getChildAt(int index) {
-		return children.get(index);
-	}
+  public TreeNode(TreeNode parent) {
+    this.parent = parent;
+  }
 
-	public int getChildCount() {
-		return children.size();
-	}
-	
-	public TreeNode getParent() {
-		return parent;
-	}
-	
-	public int getIndex(TreeNode child) {
-		return child.getIndex(child);
-	}
-	
-	public boolean isLeaf() {
-		return children.size() == 0;
-	}
-	
-	public String getText() {
-		return toString();
-	}
+  /**
+   *
+   * @param index
+   * @return
+   */
+  public TreeNode getChildAt(int index) {
+    return children.get(index);
+  }
+
+  public int getChildCount() {
+    return children.size();
+  }
+
+  public TreeNode getParent() {
+    return parent;
+  }
+
+  public int getIndex(TreeNode child) {
+    return child.getIndex(child);
+  }
+
+  public boolean isLeaf() {
+    return children.size() == 0;
+  }
+
+  public String getText() {
+    return toString();
+  }
 }

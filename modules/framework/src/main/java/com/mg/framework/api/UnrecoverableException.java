@@ -16,27 +16,27 @@ package com.mg.framework.api;
 
 /**
  * Exceptions that are not expected to be recoverable by a client.
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: UnrecoverableException.java,v 1.2 2007/04/13 13:36:02 safonov Exp $
  */
 public class UnrecoverableException extends RuntimeException {
-	private static final long serialVersionUID = -8110370893228861537L;
+  private static final long serialVersionUID = -8110370893228861537L;
 
-	public UnrecoverableException(String s, Throwable cause) {
-		super(s, cause);
-	}
+  public UnrecoverableException(String s, Throwable cause) {
+    super(s, cause);
+  }
 
-	public UnrecoverableException(String s) {
-		super(s);
-	}
+  public UnrecoverableException(String s) {
+    super(s);
+  }
 
-	public UnrecoverableException() {
-		super();
-	}
+  public UnrecoverableException() {
+    super();
+  }
 
-	public UnrecoverableException(Throwable cause) {
-		super(cause);
-	}
+  public UnrecoverableException(Throwable cause) {
+    super(cause);
+  }
 
 }

@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
-  <joined-subclass name="com.mg.merp.manufacture.model.InputDocumentSpec" extends="com.mg.merp.document.model.DocSpec" table="MF_INPUT_DOC_SPEC">
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
+  <joined-subclass name="com.mg.merp.manufacture.model.InputDocumentSpec"
+                   extends="com.mg.merp.document.model.DocSpec" table="MF_INPUT_DOC_SPEC">
     <meta attribute="extends">com.mg.merp.document.model.DocSpec</meta>
     <!-- <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
@@ -15,13 +16,13 @@
       </generator
     </id>-->
     <key on-delete="cascade">
-      <column name="DOCSPEC_ID" not-null="true" />
+      <column name="DOCSPEC_ID" not-null="true"/>
     </key>
     <many-to-one name="JobRouteResource" class="com.mg.merp.manufacture.model.JobRouteResource">
-      <column name="JOB_ROUTE_RESOURCE_ID" not-null="false" />      
+      <column name="JOB_ROUTE_RESOURCE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="CostCategory" class="com.mg.merp.mfreference.model.CostCategories">
-      <column name="COST_CATEGORY_ID" not-null="false" />
+      <column name="COST_CATEGORY_ID" not-null="false"/>
     </many-to-one>
   </joined-subclass>
 </hibernate-mapping>

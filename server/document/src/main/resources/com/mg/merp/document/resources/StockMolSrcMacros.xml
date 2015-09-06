@@ -14,6 +14,6 @@
 <!-- $Id: StockMolSrcMacros.xml,v 1.3 2006/06/02 10:56:24 leonova Exp $ -->
 
 <jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
- 	<jfd:field id="SrcStock"  />
-	<jfd:field id="SrcMol" sameLine="true"/>						
+  <jfd:field id="SrcStock"/>
+  <jfd:field id="SrcMol" sameLine="true"/>
 </jfd:wrap-macros>

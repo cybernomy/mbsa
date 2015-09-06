@@ -13,21 +13,24 @@
 
 <!-- $Id: WindowMt.mfd.xml,v 1.1 2008/03/03 13:07:52 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.core.resources.formelements#Window.FormMt.Title" helpTopic="core#window_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.core.resources.formelements#Window.FormMt.Title"
+          helpTopic="core#window_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="Name" />
-		<jfd:field id="ApplicationLayer" sameLine="true" />
-		<jfd:field id="Role"/>
-		<jfd:field id="User" sameLine="true" />
-		<jfd:field id="Implementation"/>
-		<jfd:field id="Description"/>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Name"/>
+    <jfd:field id="ApplicationLayer" sameLine="true"/>
+    <jfd:field id="Role"/>
+    <jfd:field id="User" sameLine="true"/>
+    <jfd:field id="Implementation"/>
+    <jfd:field id="Description"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

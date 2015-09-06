@@ -19,15 +19,14 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 /**
  * @author leonova
  * @version $Id: CountrySearchHelp.java,v 1.2 2006/07/10 12:31:01 leonova Exp $
- * 
  */
 public class CountrySearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {
-		return "merp/reference/Country";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/reference/Country";
+  }
 }

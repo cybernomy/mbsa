@@ -12,17 +12,21 @@
 
 <!-- $Id: ConfidentialDataMt.mfd.xml,v 1.2 2006/04/24 08:32:43 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.reference.support.ui.ConfidentialDataMt" title="resource://com.mg.merp.reference.resources.formelements#Partner.ConfidentialData.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.reference.support.ui.ConfidentialDataMt"
+          title="resource://com.mg.merp.reference.resources.formelements#Partner.ConfidentialData.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		
-		<jfd:field id="DName" />
-		<jfd:button id="Password" text="resource://com.mg.merp.reference.resources.dataitemlabels#Partner.ConidData.Button.Password" sameLine="true"/> 								
-	 	<jfd:field id="ConfData" showLabel="false" />  
-	</jfd:container>
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+
+    <jfd:field id="DName"/>
+    <jfd:button id="Password"
+                text="resource://com.mg.merp.reference.resources.dataitemlabels#Partner.ConidData.Button.Password"
+                sameLine="true"/>
+    <jfd:field id="ConfData" showLabel="false"/>
+  </jfd:container>
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

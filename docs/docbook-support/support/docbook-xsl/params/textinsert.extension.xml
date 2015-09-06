@@ -1,22 +1,25 @@
 <refentry id="textinsert.extension">
-<refmeta>
-<refentrytitle>textinsert.extension</refentrytitle>
-<refmiscinfo role="type">boolean</refmiscinfo>
-</refmeta>
-<refnamediv>
-<refname>textinsert.extension</refname>
-<refpurpose>Enable the textinsert extension element</refpurpose>
-</refnamediv>
+  <refmeta>
+    <refentrytitle>textinsert.extension</refentrytitle>
+    <refmiscinfo role="type">boolean</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>textinsert.extension</refname>
+    <refpurpose>Enable the textinsert extension element</refpurpose>
+  </refnamediv>
 
-<refsynopsisdiv>
-<src:fragment id='textinsert.extension.frag'><xsl:param name="textinsert.extension" select="'1'"/></src:fragment>
-</refsynopsisdiv>
+  <refsynopsisdiv>
+    <src:fragment id='textinsert.extension.frag'>
+      <xsl:param name="textinsert.extension" select="'1'"/>
+    </src:fragment>
+  </refsynopsisdiv>
 
-<refsect1><title>Description</title>
+  <refsect1>
+    <title>Description</title>
 
-<para>The textinsert extension element inserts the contents of a
-a file into the result tree (as text).
-</para>
+    <para>The textinsert extension element inserts the contents of a
+      a file into the result tree (as text).
+    </para>
 
-</refsect1>
+  </refsect1>
 </refentry>

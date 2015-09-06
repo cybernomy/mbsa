@@ -14,26 +14,26 @@
  */
 package com.mg.merp.help.support.jboss;
 
-import org.jboss.system.ServiceMBeanSupport;
-
 import com.mg.framework.api.help.HelpSystem;
 import com.mg.merp.help.support.HelpSystemImpl;
 
+import org.jboss.system.ServiceMBeanSupport;
+
 /**
  * Реализация сервиса системы помощи для сервера JBoss
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: HelpSystemService.java,v 1.1 2006/11/14 15:29:39 safonov Exp $
  */
 public class HelpSystemService extends ServiceMBeanSupport implements
-		HelpSystemServiceMBean {
-	private HelpSystem delegate = new HelpSystemImpl();
+    HelpSystemServiceMBean {
+  private HelpSystem delegate = new HelpSystemImpl();
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.help.HelpSystem#showContextHelp(java.lang.String)
-	 */
-	public void showContextHelp(String helpTopic) {
-		this.delegate.showContextHelp(helpTopic);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.help.HelpSystem#showContextHelp(java.lang.String)
+   */
+  public void showContextHelp(String helpTopic) {
+    this.delegate.showContextHelp(helpTopic);
+  }
 
 }

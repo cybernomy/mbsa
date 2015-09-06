@@ -13,33 +13,46 @@
 
 <!-- $Id: SolutionMt.mfd.xml,v 1.10 2007/08/22 12:00:07 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.crm.support.ui.SolutionMt" title="resource://com.mg.merp.crm.resources.formelements#Solution.FormMt.Title" helpTopic="crm#solution_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.crm.support.ui.SolutionMt"
+          title="resource://com.mg.merp.crm.resources.formelements#Solution.FormMt.Title"
+          helpTopic="crm#solution_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
- 		<jfd:container id="commonFields" alignment="expand_top" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Total" >
-	 		<jfd:field id="Name"/> 	
- 	 		<jfd:field id="SolutionType"/>	 			
- 	 		<jfd:field id="Creator" /> 	
-	 		<jfd:field id="ValidFrom"/> 		 		
-	 		<jfd:field id="ValidTo" sameLine="true"/> 	
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />				 				 		
-		</jfd:container>
- 		<jfd:container id="explanationFields" alignment="expand_top" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Explanation" >
- 	 		<jfd:field id="Info" showLabel="false" /> 		
-		</jfd:container>	
- 		<jfd:maintenanceTable id="original" scroll="true" alignment="expand_top" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Original">
-		</jfd:maintenanceTable>
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" alignment="expand_top" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Total">
+      <jfd:field id="Name"/>
+      <jfd:field id="SolutionType"/>
+      <jfd:field id="Creator"/>
+      <jfd:field id="ValidFrom"/>
+      <jfd:field id="ValidTo" sameLine="true"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="explanationFields" alignment="expand_top" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Explanation">
+      <jfd:field id="Info" showLabel="false"/>
+    </jfd:container>
+    <jfd:maintenanceTable id="original" scroll="true" alignment="expand_top"
+                          autoResize="subsequent_columns"
+                          tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Original">
+    </jfd:maintenanceTable>
+  </jfd:container>
 
-	<jfd:maintenanceTable id="problem" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" label="resource://com.mg.merp.crm.resources.formelements#Solution.Problem">
-		<jfd:popupMenu>
-			<jfd:menuItem id="includeProblem" text="resource://com.mg.merp.crm.resources.formelements#SolutionMt.MenuItem.IncludeProblem" actionListener="IncludeProblem" />
-			<jfd:menuItem id="excludeProblem" text="resource://com.mg.merp.crm.resources.formelements#SolutionMt.MenuItem.ExcludeProblem" actionListener="ExcludeProblem" />
-		</jfd:popupMenu>
-	</jfd:maintenanceTable>	
+  <jfd:maintenanceTable id="problem" scroll="true" alignment="expand_expand"
+                        autoResize="subsequent_columns"
+                        label="resource://com.mg.merp.crm.resources.formelements#Solution.Problem">
+    <jfd:popupMenu>
+      <jfd:menuItem id="includeProblem"
+                    text="resource://com.mg.merp.crm.resources.formelements#SolutionMt.MenuItem.IncludeProblem"
+                    actionListener="IncludeProblem"/>
+      <jfd:menuItem id="excludeProblem"
+                    text="resource://com.mg.merp.crm.resources.formelements#SolutionMt.MenuItem.ExcludeProblem"
+                    actionListener="ExcludeProblem"/>
+    </jfd:popupMenu>
+  </jfd:maintenanceTable>
 
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />	
-	
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
+
 </jfd:form>

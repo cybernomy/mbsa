@@ -19,24 +19,22 @@ import com.mg.framework.support.ui.widget.graph.GraphElement;
 
 /**
  * Событие на изменение модели графа
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: GraphModelEvent.java,v 1.2 2006/11/21 15:39:15 safonov Exp $
  */
 public class GraphModelEvent extends UIEvent {
-	private GraphElement cell;
+  private GraphElement cell;
 
-	public GraphModelEvent(GraphControllerAdapter source, GraphElement cell) {
-		super(source);
-		this.cell = cell;
-	}
+  public GraphModelEvent(GraphControllerAdapter source, GraphElement cell) {
+    super(source);
+    this.cell = cell;
+  }
 
-	/**
-	 * получить измененный элемент графа
-	 * 
-	 * @return
-	 */
-	public GraphElement getCell() {
-		return cell;
-	}
+  /**
+   * получить измененный элемент графа
+   */
+  public GraphElement getCell() {
+    return cell;
+  }
 }

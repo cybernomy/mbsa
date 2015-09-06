@@ -1,118 +1,129 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.planning.model.MpsLine" table="PP_MPS_LINE">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">PP_MPS_LINE_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="InventoryForecast" class="com.mg.merp.planning.model.InventoryForecast">
-      <column name="INVENTORY_FORECAST_ID" not-null="false" />
+      <column name="INVENTORY_FORECAST_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Mps" class="com.mg.merp.planning.model.Mps">
-      <column name="MPS_ID" not-null="false" />
+      <column name="MPS_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="ForecastVersion" class="com.mg.merp.planning.model.ForecastVersion">
-      <column name="FORECAST_VERSION_ID" not-null="false" />
+      <column name="FORECAST_VERSION_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="PlanningItem" class="com.mg.merp.planning.model.GenericItem">
-      <column name="PLANNING_ITEM_ID" not-null="false" />
+      <column name="PLANNING_ITEM_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Measure" class="com.mg.merp.reference.model.Measure">
-      <column name="MEASURE_ID" not-null="false" />
+      <column name="MEASURE_ID" not-null="false"/>
     </many-to-one>
     <property name="AdjustmentQty" type="java.math.BigDecimal">
-      <column name="ADJUSTMENT_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="ADJUSTMENT_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="BucketOffset" type="java.lang.Short">
-      <column name="BUCKET_OFFSET" not-null="false" sql-type="SMALLINT" />
+      <column name="BUCKET_OFFSET" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="BucketOffsetDate" type="java.util.Date">
-      <column name="BUCKET_OFFSET_DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="BUCKET_OFFSET_DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="DemandFenceDate" type="java.util.Date">
-      <column name="DEMAND_FENCE_DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="DEMAND_FENCE_DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="DemandQty" type="java.math.BigDecimal">
-      <column name="DEMAND_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="DEMAND_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="MpsSequence" type="java.lang.Integer">
-      <column name="MPS_SEQUENCE" not-null="false" sql-type="INTEGER" />
+      <column name="MPS_SEQUENCE" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="OutputMpsSequence" type="java.lang.Integer">
-      <column name="OUTPUT_MPS_SEQUENCE" not-null="false" sql-type="INTEGER" />
+      <column name="OUTPUT_MPS_SEQUENCE" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="PlannedQty" type="java.math.BigDecimal">
-      <column name="PLANNED_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="PLANNED_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="DependantDemand" type="java.math.BigDecimal">
-      <column name="PP_DEPENDANT_DEMAND" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="PP_DEPENDANT_DEMAND" scale="3" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="LevelCode" type="java.lang.Short">
-      <column name="PP_LEVEL_CODE" not-null="false" sql-type="SMALLINT" />
+      <column name="PP_LEVEL_CODE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="ProductionDemandQty" type="java.math.BigDecimal">
-      <column name="PRODUCTION_DEMAND_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="PRODUCTION_DEMAND_QTY" scale="3" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="ProductionProfileQty" type="java.math.BigDecimal">
-      <column name="PRODUCTION_PROFILE_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="PRODUCTION_PROFILE_QTY" scale="3" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="ProductionQty" type="java.math.BigDecimal">
-      <column name="PRODUCTION_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="PRODUCTION_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="PurchaseForecastQty" type="java.math.BigDecimal">
-      <column name="PURCHASE_FORECAST_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="PURCHASE_FORECAST_QTY" scale="3" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="PurchaseOrderQty" type="java.math.BigDecimal">
-      <column name="PURCHASE_ORDER_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="PURCHASE_ORDER_QTY" scale="3" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="PurchaseQty" type="java.math.BigDecimal">
-      <column name="PURCHASE_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="PURCHASE_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="QtyAvailable" type="java.math.BigDecimal">
-      <column name="QTY_AVAILABLE" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="QTY_AVAILABLE" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="SalesForecastQty" type="java.math.BigDecimal">
-      <column name="SALES_FORECAST_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="SALES_FORECAST_QTY" scale="3" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="SalesOrderQty" type="java.math.BigDecimal">
-      <column name="SALES_ORDER_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="SALES_ORDER_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="SalesQty" type="java.math.BigDecimal">
-      <column name="SALES_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="SALES_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="TransfersInQty" type="java.math.BigDecimal">
-      <column name="TRANSFERS_IN_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="TRANSFERS_IN_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="TransfersOutQty" type="java.math.BigDecimal">
-      <column name="TRANSFERS_OUT_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="TRANSFERS_OUT_QTY" scale="3" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="LiveProductionDemand" type="java.math.BigDecimal">
-      <column name="LIVE_PRODUCTION_DEMAND" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="LIVE_PRODUCTION_DEMAND" scale="3" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="SafetyLevelQty" type="java.math.BigDecimal">
-      <column name="SAFETY_LEVEL_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="SAFETY_LEVEL_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="FirmPlanSuggested" type="boolean">
-      <column name="FIRM_PLAN_SUGGESTED" not-null="false" sql-type="SMALLINT" />
+      <column name="FIRM_PLAN_SUGGESTED" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="MpsOrdered" type="boolean">
-      <column name="MPS_ORDERED" not-null="false" sql-type="SMALLINT" />
+      <column name="MPS_ORDERED" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="BucketEndDate" type="java.util.Date">
-      <formula>(select b.end_date from  pp_mps mps left join pp_planning_level_bucket b on mps.planning_level_id = b.planning_level_id and b.bucket_offset = BUCKET_OFFSET where mps.id = MPS_ID)</formula>
+      <formula>(select b.end_date from pp_mps mps left join pp_planning_level_bucket b on
+        mps.planning_level_id = b.planning_level_id and b.bucket_offset = BUCKET_OFFSET where mps.id
+        = MPS_ID)
+      </formula>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

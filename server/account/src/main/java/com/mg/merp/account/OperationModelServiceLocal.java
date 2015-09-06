@@ -17,17 +17,16 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.EconomicOperModel;
 
 /**
- * 
  * @author leonova
  * @version $Id: OperationModelServiceLocal.java,v 1.3 2008/04/29 08:19:34 safonov Exp $
  */
-public interface OperationModelServiceLocal	extends com.mg.framework.api.DataBusinessObjectService<EconomicOperModel, Integer> {
-	/**
-	 * имя сервиса
-	 */
-	final static String SERVICE_NAME = "merp/account/OperationModel";
-	/**
-	 * тип папки для образцов хозяйственных операций
-	 */
-	final static short FOLDER_PART = 18;
+public interface OperationModelServiceLocal extends com.mg.framework.api.DataBusinessObjectService<EconomicOperModel, Integer> {
+  /**
+   * имя сервиса
+   */
+  final static String SERVICE_NAME = "merp/account/OperationModel";
+  /**
+   * тип папки для образцов хозяйственных операций
+   */
+  final static short FOLDER_PART = 18;
 }

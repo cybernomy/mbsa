@@ -13,32 +13,36 @@
 
 <!-- $Id: WarehouseDocumentModelInMt.mfd.xml,v 1.8 2007/09/20 13:19:29 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.warehouse.support.ui.WarehouseDocumentModelInMt" title="resource://com.mg.merp.warehouse.resources.formelements#WarehouseDocumentModelIn.FormMt.Title" helpTopic="warehouse#waremodelin_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.warehouse.support.ui.WarehouseDocumentModelInMt"
+          title="resource://com.mg.merp.warehouse.resources.formelements#WarehouseDocumentModelIn.FormMt.Title"
+          helpTopic="warehouse#waremodelin_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
-	
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
- 		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#Main.Tab.Title" >
-	 	 	<jfd:include name="com/mg/merp/document/resources/ModelNameMacros.xml" />
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			 			 	 	
-			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
-			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/CurrencyModelMacros.xml" />					
-		 	<jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml" /> 
-	 	 	<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />	
-	 	 	<jfd:include name="com/mg/merp/document/resources/PartnerFromToMacros.xml" />			
-	 	 	<jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml" />  			
-			<jfd:field id="Through" />
-			<jfd:field id="CalcTaxesKind" sameLine="true"/>
-	 	 	<jfd:include name="com/mg/merp/document/resources/PriceListMacros.xml" />
-			<jfd:field id="AddExpenses" />		 		
-			<jfd:field id="Description" />
- 			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 			 													
- 		</jfd:container>
-	</jfd:container>	
-	
-	<jfd:include name="com/mg/merp/document/resources/DefaultDocModelMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
+
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.warehouse.resources.formelements#Main.Tab.Title">
+      <jfd:include name="com/mg/merp/document/resources/ModelNameMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/CurrencyModelMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/PartnerFromToMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml"/>
+      <jfd:field id="Through"/>
+      <jfd:field id="CalcTaxesKind" sameLine="true"/>
+      <jfd:include name="com/mg/merp/document/resources/PriceListMacros.xml"/>
+      <jfd:field id="AddExpenses"/>
+      <jfd:field id="Description"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+  </jfd:container>
+
+  <jfd:include name="com/mg/merp/document/resources/DefaultDocModelMaintenanceFooterMacros.xml"/>
 </jfd:form>	
 
 	

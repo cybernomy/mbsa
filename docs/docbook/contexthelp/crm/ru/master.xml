@@ -1,44 +1,45 @@
 ﻿<?xml version='1.0' encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
-                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
-[
-<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
-<!ENTITY chap_000crm SYSTEM "modules/000crm.xml">
-<!ENTITY chap_001crm SYSTEM "modules/001crm.xml">
-<!ENTITY chap_002crm SYSTEM "modules/002crm.xml">
-<!ENTITY chap_003crm SYSTEM "modules/003crm.xml">
-<!ENTITY chap_004crm SYSTEM "modules/004crm.xml">
-<!ENTITY chap_005crm SYSTEM "modules/005crm.xml">
-<!ENTITY chap_006crm SYSTEM "modules/006crm.xml">
-<!ENTITY merp "Millennium Business Suite Anywhere">
-]>
+    "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+    [
+        <!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+        <!ENTITY chap_000crm SYSTEM "modules/000crm.xml">
+        <!ENTITY chap_001crm SYSTEM "modules/001crm.xml">
+        <!ENTITY chap_002crm SYSTEM "modules/002crm.xml">
+        <!ENTITY chap_003crm SYSTEM "modules/003crm.xml">
+        <!ENTITY chap_004crm SYSTEM "modules/004crm.xml">
+        <!ENTITY chap_005crm SYSTEM "modules/005crm.xml">
+        <!ENTITY chap_006crm SYSTEM "modules/006crm.xml">
+        <!ENTITY merp "Millennium Business Suite Anywhere">
+        ]>
 <book lang="ru">
   <bookinfo>
-      <title>Управление взаимоотношениями с клиентами в системе &merp;
-      Руководство пользователя </title>
-      <releaseinfo>4.0.6</releaseinfo>
-      <copyright>
-	<year>1998</year>
-	<year>2008</year>
-	<holder>ООО &quot;Бизнестехнология&quot;</holder>
-      </copyright>    
+    <title>Управление взаимоотношениями с клиентами в системе &merp;
+      Руководство пользователя
+    </title>
+    <releaseinfo>4.0.6</releaseinfo>
+    <copyright>
+      <year>1998</year>
+      <year>2008</year>
+      <holder>ООО &quot;Бизнестехнология&quot;</holder>
+    </copyright>
   </bookinfo>
-  
+
   <toc/>
-  
- <!-- <preface id="target" revision="1">
-      <title>Целевая аудитория</title>
-      <para>Данное руководство предназначено для пользователей
-	 системы &merp;. </para> 
-  </preface> -->
-    
-&chap_000crm;
-&chap_001crm;
-&chap_002crm;
-&chap_003crm;
-&chap_004crm;
-&chap_005crm;
-&chap_006crm;
-&chap_copyright;
+
+  <!-- <preface id="target" revision="1">
+       <title>Целевая аудитория</title>
+       <para>Данное руководство предназначено для пользователей
+    системы &merp;. </para>
+   </preface> -->
+
+  &chap_000crm;
+  &chap_001crm;
+  &chap_002crm;
+  &chap_003crm;
+  &chap_004crm;
+  &chap_005crm;
+  &chap_006crm;
+  &chap_copyright;
 
 </book>

@@ -13,13 +13,18 @@
 
 <!-- $Id: OperationPriorityBr.mfd.xml,v 1.6 2006/12/15 10:23:05 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.crm.support.ui.OperationPriorityBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.crm.resources.formelements#OperationPriority.FormBr.Title" helpTopic="crm#operprior_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.crm.support.ui.OperationPriorityBr" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.crm.resources.formelements#OperationPriority.FormBr.Title"
+          helpTopic="crm#operprior_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
-	</jfd:maintenanceTable>
+  <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true"
+                        autoResize="subsequent_columns">
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

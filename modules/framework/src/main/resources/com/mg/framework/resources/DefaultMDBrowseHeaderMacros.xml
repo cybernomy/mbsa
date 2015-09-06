@@ -14,7 +14,7 @@
 <!-- $Id: DefaultMDBrowseHeaderMacros.xml,v 1.3 2008/11/01 09:00:25 safonov Exp $ -->
 
 <jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
-	<jfd:include name="com/mg/framework/resources/StandartMaintenanceBrowseToolbarMacros.xml" />
-	<jfd:filler id="toolbarFiller" alignment="expand_top" type="horizontalGlue" />
-	<jfd:include name="com/mg/framework/resources/StandartMaintenanceBrowseDetailToolbarMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/StandartMaintenanceBrowseToolbarMacros.xml"/>
+  <jfd:filler id="toolbarFiller" alignment="expand_top" type="horizontalGlue"/>
+  <jfd:include name="com/mg/framework/resources/StandartMaintenanceBrowseDetailToolbarMacros.xml"/>
 </jfd:toolBar>

@@ -22,160 +22,165 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Account.AnlPlan")
 public class AnlPlan extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.account.model.AnlPlan parent;
+  private com.mg.merp.account.model.AnlPlan parent;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.account.model.AccPlan AccPlan;
+  private com.mg.merp.account.model.AccPlan AccPlan;
 
-	private java.lang.String UpCode;
+  private java.lang.String UpCode;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String AnlName;
+  private java.lang.String AnlName;
 
-	private short AnlLevel;
+  private short AnlLevel;
 
-	private boolean UseStdForm;
+  private boolean UseStdForm;
 
-	private AnlStdForm StdForm;
+  private AnlStdForm StdForm;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public AnlPlan() {
-	}
+  /**
+   * default constructor
+   */
+  public AnlPlan() {
+  }
 
-	/** constructor with id */
-	public AnlPlan(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public AnlPlan(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.Plan.Parent")
-	public com.mg.merp.account.model.AnlPlan getParent() {
-		return this.parent;
-	}
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public void setParent(com.mg.merp.account.model.AnlPlan AnlPlan) {
-		this.parent = AnlPlan;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.Plan.Parent")
+  public com.mg.merp.account.model.AnlPlan getParent() {
+    return this.parent;
+  }
 
-	/**
-	 * 
-	 */
+  public void setParent(com.mg.merp.account.model.AnlPlan AnlPlan) {
+    this.parent = AnlPlan;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public com.mg.merp.account.model.AccPlan getAccPlan() {
-		return this.AccPlan;
-	}
+  /**
+   *
+   */
 
-	public void setAccPlan(com.mg.merp.account.model.AccPlan AccPlan) {
-		this.AccPlan = AccPlan;
-	}
+  public com.mg.merp.account.model.AccPlan getAccPlan() {
+    return this.AccPlan;
+  }
 
-	/**
-	 * 
-	 */
+  public void setAccPlan(com.mg.merp.account.model.AccPlan AccPlan) {
+    this.AccPlan = AccPlan;
+  }
 
-	public java.lang.String getUpCode() {
-		return this.UpCode;
-	}
+  /**
+   *
+   */
 
-	public void setUpCode(java.lang.String UpCode) {
-		this.UpCode = UpCode;
-	}
+  public java.lang.String getUpCode() {
+    return this.UpCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.BigCode")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  public void setUpCode(java.lang.String UpCode) {
+    this.UpCode = UpCode;
+  }
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.BigCode")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.Name")
-	public java.lang.String getAnlName() {
-		return this.AnlName;
-	}
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	public void setAnlName(java.lang.String AnlName) {
-		this.AnlName = AnlName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.Name")
+  public java.lang.String getAnlName() {
+    return this.AnlName;
+  }
 
-	/**
-	 * 
-	 */
+  public void setAnlName(java.lang.String AnlName) {
+    this.AnlName = AnlName;
+  }
 
-	public short getAnlLevel() {
-		return this.AnlLevel;
-	}
+  /**
+   *
+   */
 
-	public void setAnlLevel(short AnlLevel) {
-		this.AnlLevel = AnlLevel;
-	}
+  public short getAnlLevel() {
+    return this.AnlLevel;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.Plan.UseStdForm")
-	public boolean getUseStdForm() {
-		return this.UseStdForm;
-	}
+  public void setAnlLevel(short AnlLevel) {
+    this.AnlLevel = AnlLevel;
+  }
 
-	public void setUseStdForm(boolean UseStdForm) {
-		this.UseStdForm = UseStdForm;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.Plan.UseStdForm")
+  public boolean getUseStdForm() {
+    return this.UseStdForm;
+  }
 
-	/**
-	 * 
-	 */
+  public void setUseStdForm(boolean UseStdForm) {
+    this.UseStdForm = UseStdForm;
+  }
 
-	public AnlStdForm getStdForm() {
-		return this.StdForm;
-	}
+  /**
+   *
+   */
 
-	public void setStdForm(AnlStdForm Stdform) {
-		this.StdForm = Stdform;
-	}
+  public AnlStdForm getStdForm() {
+    return this.StdForm;
+  }
+
+  public void setStdForm(AnlStdForm Stdform) {
+    this.StdForm = Stdform;
+  }
 
 }

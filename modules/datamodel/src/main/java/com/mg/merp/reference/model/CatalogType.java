@@ -19,70 +19,70 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Тип позиции каталога
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: CatalogType.java,v 1.1 2006/03/29 13:06:23 safonov Exp $
  */
 @DataItemName("Reference.Catalog.Type")
 public enum CatalogType {
-	
-	/**
-	 * Товар
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Goods")
-	GOODS,
-	
-	/**
-	 * Комплект товаров
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.SetOfGoods")
-	SET_OF_GOODS,
-	
-	/**
-	 * Тара
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Package")
-	PACKAGE,
-	
-	/**
-	 * Услуга нормированная
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.ServiceFixed")
-	SERVICE_FIXED,
-	
-	/**
-	 * Услуга не нормированная
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.ServiceNotFixed")
-	SERVICE_NOT_FIXED,
-	
-	/**
-	 * Налог
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Tax")
-	TAX,
-	
-	/**
-	 * Тариф
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Tariff")
-	TARIFF,
-	
-	/**
-	 * Вексель
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.BillOfCredit")
-	BILL_OF_CREDIT,
-	
-	/**
-	 * Акция
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Share")
-	SHARE,
-	
-	/**
-	 * Облигация
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Bond")
-	BOND
+
+  /**
+   * Товар
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Goods")
+  GOODS,
+
+  /**
+   * Комплект товаров
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.SetOfGoods")
+  SET_OF_GOODS,
+
+  /**
+   * Тара
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Package")
+  PACKAGE,
+
+  /**
+   * Услуга нормированная
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.ServiceFixed")
+  SERVICE_FIXED,
+
+  /**
+   * Услуга не нормированная
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.ServiceNotFixed")
+  SERVICE_NOT_FIXED,
+
+  /**
+   * Налог
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Tax")
+  TAX,
+
+  /**
+   * Тариф
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Tariff")
+  TARIFF,
+
+  /**
+   * Вексель
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.BillOfCredit")
+  BILL_OF_CREDIT,
+
+  /**
+   * Акция
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Share")
+  SHARE,
+
+  /**
+   * Облигация
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Catalog.Type.Bond")
+  BOND
 }

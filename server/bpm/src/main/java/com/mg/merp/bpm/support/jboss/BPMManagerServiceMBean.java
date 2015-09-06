@@ -14,9 +14,9 @@
  */
 package com.mg.merp.bpm.support.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.merp.bpm.BPMManager;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * @author Oleg V. Safonov

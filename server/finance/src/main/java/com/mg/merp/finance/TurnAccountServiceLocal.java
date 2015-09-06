@@ -17,12 +17,10 @@ package com.mg.merp.finance;
 import com.mg.merp.finance.model.TurnAccount;
 
 /**
- * 
  * @author leonova
  * @version $Id: TurnAccountServiceLocal.java,v 1.2 2006/10/23 12:08:15 leonova Exp $
  */
 public interface TurnAccountServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<TurnAccount, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<TurnAccount, Integer> {
 
 }

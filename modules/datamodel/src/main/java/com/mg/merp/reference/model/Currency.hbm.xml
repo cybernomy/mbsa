@@ -1,70 +1,71 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.reference.model.CurrencyGender" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.reference.model.CurrencyGender</param>
-	</typedef>	
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <typedef name="com.mg.merp.reference.model.CurrencyGender"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.reference.model.CurrencyGender</param>
+  </typedef>
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.reference.model.Currency" table="CURRENCY">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">CURRENCY_ID_GEN</param>
       </generator>
     </id>
     <property name="UpCode" type="java.lang.String">
-      <column name="UPCODE" length="5" not-null="true" unique="true" sql-type="CHAR" />
+      <column name="UPCODE" length="5" not-null="true" unique="true" sql-type="CHAR"/>
     </property>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <property name="Code" type="java.lang.String">
-      <column name="CODE" length="5" not-null="true" sql-type="CHAR" />
+      <column name="CODE" length="5" not-null="true" sql-type="CHAR"/>
     </property>
     <property name="Iso" type="java.lang.String">
-      <column name="ISO" length="5" not-null="true" unique="true" sql-type="CHAR" />
+      <column name="ISO" length="5" not-null="true" unique="true" sql-type="CHAR"/>
     </property>
     <property name="BankCode" type="java.lang.String">
-      <column name="BANK_CODE" length="5" not-null="true" unique="true" sql-type="CHAR" />
+      <column name="BANK_CODE" length="5" not-null="true" unique="true" sql-type="CHAR"/>
     </property>
     <property name="FullName" type="java.lang.String">
-      <column name="CNAME" length="40" not-null="false" sql-type="VARCHAR" />
+      <column name="CNAME" length="40" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Gender" type="com.mg.merp.reference.model.CurrencyGender">
-      <column name="MEN" not-null="true" sql-type="SMALLINT" />
+      <column name="MEN" not-null="true" sql-type="SMALLINT"/>
     </property>
     <property name="AltName1" type="java.lang.String">
-      <column name="ALTNAME1" length="20" not-null="true" sql-type="CHAR" />
+      <column name="ALTNAME1" length="20" not-null="true" sql-type="CHAR"/>
     </property>
     <property name="AltName2" type="java.lang.String">
-      <column name="ALTNAME2" length="20" not-null="true" sql-type="CHAR" />
+      <column name="ALTNAME2" length="20" not-null="true" sql-type="CHAR"/>
     </property>
     <property name="AltName3" type="java.lang.String">
-      <column name="ALTNAME3" length="20" not-null="true" sql-type="CHAR" />
+      <column name="ALTNAME3" length="20" not-null="true" sql-type="CHAR"/>
     </property>
     <property name="AltUnitName1" type="java.lang.String">
-      <column name="ALTUNITNAME1" length="20" not-null="true" sql-type="CHAR" />
+      <column name="ALTUNITNAME1" length="20" not-null="true" sql-type="CHAR"/>
     </property>
     <property name="AltUnitName2" type="java.lang.String">
-      <column name="ALTUNITNAME2" length="20" not-null="true" sql-type="CHAR" />
+      <column name="ALTUNITNAME2" length="20" not-null="true" sql-type="CHAR"/>
     </property>
     <property name="AltUnitName3" type="java.lang.String">
-      <column name="ALTUNITNAME3" length="20" not-null="true" sql-type="CHAR" />
+      <column name="ALTUNITNAME3" length="20" not-null="true" sql-type="CHAR"/>
     </property>
     <property name="RoundPrice" type="java.math.BigDecimal">
-      <column name="ROUNDPRICE" scale="6" precision="18" not-null="true" sql-type="NUMERIC" />
+      <column name="ROUNDPRICE" scale="6" precision="18" not-null="true" sql-type="NUMERIC"/>
     </property>
     <property name="RoundSum" type="java.math.BigDecimal">
-      <column name="ROUNDSUM" scale="6" precision="18" not-null="true" sql-type="NUMERIC" />
+      <column name="ROUNDSUM" scale="6" precision="18" not-null="true" sql-type="NUMERIC"/>
     </property>
     <property name="ViewPriority" type="java.lang.Integer">
-      <column name="VIEWPRIORITY" not-null="false" sql-type="INTEGER" />
+      <column name="VIEWPRIORITY" not-null="false" sql-type="INTEGER"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

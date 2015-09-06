@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
-  <joined-subclass name="com.mg.merp.account.model.CashDocument" extends="com.mg.merp.document.model.DocHead" table="CASHDOCUMENT">
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
+  <joined-subclass name="com.mg.merp.account.model.CashDocument"
+                   extends="com.mg.merp.document.model.DocHead" table="CASHDOCUMENT">
     <meta attribute="extends">com.mg.merp.document.model.DocHead</meta>
     <!-- <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
@@ -14,44 +15,44 @@
         <param name="sequence">CASHDOCUMENT_ID_GEN</param>
       </generator
     </id>-->
-	<key>
-      <column name="DOCHEAD_ID" not-null="true" />
+    <key>
+      <column name="DOCHEAD_ID" not-null="true"/>
     </key>
     <many-to-one name="Bookkeeper" class="com.mg.merp.reference.model.Contractor">
-      <column name="BOOKKEEPER" not-null="false" />
+      <column name="BOOKKEEPER" not-null="false"/>
     </many-to-one>
     <many-to-one name="Chief" class="com.mg.merp.reference.model.Contractor">
-      <column name="CHIEF" not-null="false" />
+      <column name="CHIEF" not-null="false"/>
     </many-to-one>
     <many-to-one name="Acc" class="com.mg.merp.account.model.AccPlan">
-      <column name="ACC_ID" not-null="false" />
+      <column name="ACC_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Company" class="com.mg.merp.reference.model.Contractor">
-      <column name="COMPANY" not-null="false" />
+      <column name="COMPANY" not-null="false"/>
     </many-to-one>
     <many-to-one name="Cashier" class="com.mg.merp.reference.model.Contractor">
-      <column name="CASHIER" not-null="false" />
+      <column name="CASHIER" not-null="false"/>
     </many-to-one>
     <property name="AnlCode" type="java.lang.String">
-      <column name="ANLCODE" length="15" not-null="false" sql-type="CHAR" />
+      <column name="ANLCODE" length="15" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="TargetCode" type="java.lang.String">
-      <column name="TARGETCODE" length="15" not-null="false" sql-type="CHAR" />
+      <column name="TARGETCODE" length="15" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="Base" type="java.lang.String">
-      <column name="BASE" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="BASE" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Comment" type="java.lang.String">
-      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="GetDate" type="java.util.Date">
-      <column name="GETDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="GETDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="GetDocument" type="java.lang.String">
-      <column name="GETDOCUMENT" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="GETDOCUMENT" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Comment1" type="java.lang.String">
-      <column name="COMMENT1" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="COMMENT1" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
   </joined-subclass>
 </hibernate-mapping>

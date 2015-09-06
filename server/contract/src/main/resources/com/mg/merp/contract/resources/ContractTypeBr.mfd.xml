@@ -13,13 +13,18 @@
 
 <!-- $Id: ContractTypeBr.mfd.xml,v 1.2 2007/09/26 15:54:03 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.contract.support.ui.ContractTypeBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.contract.resources.formelements#ContractType.FormBr.Title" helpTopic="contract#category_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.contract.support.ui.ContractTypeBr" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.contract.resources.formelements#ContractType.FormBr.Title"
+          helpTopic="contract#category_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
-	</jfd:maintenanceTable>
+  <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true"
+                        autoResize="subsequent_columns">
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

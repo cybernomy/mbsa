@@ -21,9 +21,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  * @version $Id: PeriodSearchHelp.java,v 1.2 2006/07/10 12:15:23 leonova Exp $
  */
 public class PeriodSearchHelp extends DefaultLegacySearchHelp {
-	
-	@Override
-	protected String getServiceName() {		
-		return "merp/account/Period";
-	}
+
+  @Override
+  protected String getServiceName() {
+    return "merp/account/Period";
+  }
 }

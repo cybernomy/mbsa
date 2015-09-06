@@ -13,19 +13,27 @@
 
 <!-- $Id: WarehouseTransactionDayBr.mfd.xml,v 1.1 2007/11/29 08:46:13 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.warehouse.support.ui.WarehouseTransactionDayBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.warehouse.resources.formelements#WarehouseTransactionDay.FormBr.Title">
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.warehouse.support.ui.WarehouseTransactionDayBr" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.warehouse.resources.formelements#WarehouseTransactionDay.FormBr.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
-		<jfd:popupMenu>
-			<jfd:separator />
-			<jfd:menuItem id="closeDay" text="resource://com.mg.merp.warehouse.resources.formelements#WarehouseTransactionDay.CloseDay" actionListener="CloseDay" />
-			<jfd:separator />
-			<jfd:menuItem id="openDay" text="resource://com.mg.merp.warehouse.resources.formelements#WarehouseTransactionDay.OpenDay" actionListener="OpenDay" />			
-		</jfd:popupMenu>			
-	</jfd:maintenanceTable>
+  <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true"
+                        autoResize="subsequent_columns">
+    <jfd:popupMenu>
+      <jfd:separator/>
+      <jfd:menuItem id="closeDay"
+                    text="resource://com.mg.merp.warehouse.resources.formelements#WarehouseTransactionDay.CloseDay"
+                    actionListener="CloseDay"/>
+      <jfd:separator/>
+      <jfd:menuItem id="openDay"
+                    text="resource://com.mg.merp.warehouse.resources.formelements#WarehouseTransactionDay.OpenDay"
+                    actionListener="OpenDay"/>
+    </jfd:popupMenu>
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

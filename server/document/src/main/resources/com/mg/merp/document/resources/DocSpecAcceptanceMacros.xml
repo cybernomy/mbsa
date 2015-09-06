@@ -13,8 +13,9 @@
 
 <!-- $Id: DocSpecAcceptanceMacros.xml,v 1.2 2008/03/05 09:30:15 alikaev Exp $ -->
 
-<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
-	<jfd:field id="AcceptanceSum" fieldGroup="resource://com.mg.merp.document.resources.formelements#AcceptanceMacros.Title"/>
-	<jfd:field id="AcceptanceQuan" />			
-	<jfd:field id="AcceptancePackingQuan" sameLine="true"/>				
+<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
+  <jfd:field id="AcceptanceSum"
+             fieldGroup="resource://com.mg.merp.document.resources.formelements#AcceptanceMacros.Title"/>
+  <jfd:field id="AcceptanceQuan"/>
+  <jfd:field id="AcceptancePackingQuan" sameLine="true"/>
 </jfd:wrap-macros>

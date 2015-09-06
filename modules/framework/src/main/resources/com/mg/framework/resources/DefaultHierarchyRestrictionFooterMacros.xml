@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- $Id: DefaultHierarchyRestrictionFooterMacros.xml,v 1.5 2008/10/09 06:52:57 safonov Exp $ -->
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="buttons" layout="jfd:box" alignment="expand_bottom">
-	<jfd:checkBox id="isUseHierarchy" text="resource://com.mg.framework.resources.messages#RestrictionForm.IsUseHierarchy" />
-	<jfd:checkBox id="isShowOnEnter" text="resource://com.mg.framework.resources.messages#RestrictionForm.IsShowOnEnter" />
-	<jfd:filler id="buttonsFiller" alignment="expand_top"
-		type="horizontalGlue" />
-	<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#OkButton"
-		actionListener="Ok" />
-	<jfd:button id="CancelButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CancelButton"
-		actionListener="Cancel" />
-	<jfd:button id="ClearButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#ClearButton"
-		actionListener="Clear" />
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="buttons" layout="jfd:box"
+               alignment="expand_bottom">
+  <jfd:checkBox id="isUseHierarchy"
+                text="resource://com.mg.framework.resources.messages#RestrictionForm.IsUseHierarchy"/>
+  <jfd:checkBox id="isShowOnEnter"
+                text="resource://com.mg.framework.resources.messages#RestrictionForm.IsShowOnEnter"/>
+  <jfd:filler id="buttonsFiller" alignment="expand_top"
+              type="horizontalGlue"/>
+  <jfd:button id="OkButton" alignment="right_top"
+              text="resource://com.mg.framework.resources.messages#OkButton"
+              actionListener="Ok"/>
+  <jfd:button id="CancelButton" alignment="right_top"
+              text="resource://com.mg.framework.resources.messages#CancelButton"
+              actionListener="Cancel"/>
+  <jfd:button id="ClearButton" alignment="right_top"
+              text="resource://com.mg.framework.resources.messages#ClearButton"
+              actionListener="Clear"/>
 </jfd:container>

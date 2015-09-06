@@ -13,38 +13,47 @@
 
 <!-- $Id: InternalInvoiceSpecMt.mfd.xml,v 1.5 2009/02/05 09:19:09 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.InternalInvoiceSpecMt" title="resource://com.mg.merp.account.resources.formelements#InternalInvoiceSpec.FormMt.Title" helpTopic="account#intinvspec_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.account.support.ui.InternalInvoiceSpecMt"
+          title="resource://com.mg.merp.account.resources.formelements#InternalInvoiceSpec.FormMt.Title"
+          helpTopic="account#intinvspec_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Main" >	
-			<jfd:field id="Catalog" longField="true"/>
-			<jfd:field id="RequestQuan" />						
-			<jfd:field id="Quantity" text="resource://com.mg.merp.account.resources.dataitemlabels#IntInvoice.Fact1"/>
-			<jfd:field id="Measure1" sameLine="true"/>
-			<jfd:field id="Quantity2" text="resource://com.mg.merp.account.resources.dataitemlabels#IntInvoice.Fact2"/>	
-			<jfd:field id="Measure2" sameLine="true"/>	
-	 	 	<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />		 	 	
-			<jfd:field id="Price" text="resource://com.mg.merp.account.resources.dataitemlabels#IntInvoice.Price"/>
-			<jfd:field id="RequestSumma"/>		
-			<jfd:field id="Summa" sameLine="true" text="resource://com.mg.merp.account.resources.dataitemlabels#InvInvoice.FactSumma"/>				
-			<jfd:field id="ProductionDate" />		
-			<jfd:field id="BestBefore" sameLine="true"/>
-			<jfd:include name="com/mg/merp/document/resources/ShelfLifeMacros.xml" />
-			<jfd:field id="CountryOfOrigin" />
-			<jfd:field id="CustomsDeclaration" sameLine="true" />				
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />	
-	 	</jfd:container>
- 		<jfd:container id="extraFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Extra" >
-			<jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml" /> 				
-			<jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml" /> 				 					 		
-			<jfd:field id="Contractor" />	
-			<jfd:field id="Comment" />	 
-		</jfd:container>		 		
-		<jfd:include name="com/mg/merp/document/resources/DocSpecPackingMacros.xml" /> 		 
-	 	<jfd:include name="com/mg/merp/document/resources/DocSpecSerialNumMacros.xml" />  		 	 	 
-	</jfd:container>
-	
-	<jfd:include name="com/mg/merp/document/resources/DefaultDocSpecMaintenanceFooterMacros.xml" />		
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Main">
+      <jfd:field id="Catalog" longField="true"/>
+      <jfd:field id="RequestQuan"/>
+      <jfd:field id="Quantity"
+                 text="resource://com.mg.merp.account.resources.dataitemlabels#IntInvoice.Fact1"/>
+      <jfd:field id="Measure1" sameLine="true"/>
+      <jfd:field id="Quantity2"
+                 text="resource://com.mg.merp.account.resources.dataitemlabels#IntInvoice.Fact2"/>
+      <jfd:field id="Measure2" sameLine="true"/>
+      <jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml"/>
+      <jfd:field id="Price"
+                 text="resource://com.mg.merp.account.resources.dataitemlabels#IntInvoice.Price"/>
+      <jfd:field id="RequestSumma"/>
+      <jfd:field id="Summa" sameLine="true"
+                 text="resource://com.mg.merp.account.resources.dataitemlabels#InvInvoice.FactSumma"/>
+      <jfd:field id="ProductionDate"/>
+      <jfd:field id="BestBefore" sameLine="true"/>
+      <jfd:include name="com/mg/merp/document/resources/ShelfLifeMacros.xml"/>
+      <jfd:field id="CountryOfOrigin"/>
+      <jfd:field id="CustomsDeclaration" sameLine="true"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="extraFields" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Extra">
+      <jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml"/>
+      <jfd:field id="Contractor"/>
+      <jfd:field id="Comment"/>
+    </jfd:container>
+    <jfd:include name="com/mg/merp/document/resources/DocSpecPackingMacros.xml"/>
+    <jfd:include name="com/mg/merp/document/resources/DocSpecSerialNumMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/merp/document/resources/DefaultDocSpecMaintenanceFooterMacros.xml"/>
 </jfd:form>

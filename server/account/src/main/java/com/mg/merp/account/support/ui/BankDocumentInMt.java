@@ -22,32 +22,34 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
  * Контроллер формы поддержки "Входящих банковских документов"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: BankDocumentInMt.java,v 1.3 2007/11/08 12:18:48 sharapov Exp $
  */
 public class BankDocumentInMt extends DocumentMaintenanceForm {
-	
-	public BankDocumentInMt() {
-		contractorFromKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
-		contractorToKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
-	}
-	
-	/**
-	 * Обработчик кнопки "Рассчитать суммы НДС"
-	 * @param event - событие
-	 */
-	public void onActionCalculateNdsSum(WidgetEvent event) {
-		((BankDocumentInServiceLocal) this.getService()).calculateNdsSum((BankDocument) getEntity());
-	}
-	
-	/**
-	 * Обработчик кнопки "Рассчитать сумму документа"
-	 * @param event - событие
-	 */
-	public void onActionCalculateDocSum(WidgetEvent event) {
-		((BankDocumentInServiceLocal) this.getService()).calculateDocSum((BankDocument) getEntity());
-	}
-	
+
+  public BankDocumentInMt() {
+    contractorFromKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+    contractorToKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+  }
+
+  /**
+   * Обработчик кнопки "Рассчитать суммы НДС"
+   *
+   * @param event - событие
+   */
+  public void onActionCalculateNdsSum(WidgetEvent event) {
+    ((BankDocumentInServiceLocal) this.getService()).calculateNdsSum((BankDocument) getEntity());
+  }
+
+  /**
+   * Обработчик кнопки "Рассчитать сумму документа"
+   *
+   * @param event - событие
+   */
+  public void onActionCalculateDocSum(WidgetEvent event) {
+    ((BankDocumentInServiceLocal) this.getService()).calculateDocSum((BankDocument) getEntity());
+  }
+
 }

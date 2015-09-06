@@ -15,20 +15,20 @@
 
 <toc version="1.0">
 
-   <tocitem text="Управление правами пользователей">
-	<tocitem text="Пользователи" target="users_html" />
-	<tocitem text="Группы пользователей" target="groups_html" />
-	<tocitem text="Права на модули" target="modules_html" />
-	<tocitem text="Права на бизнес-компоненты">
-	    <tocitem text="Права на бизнес-компоненты" target="bkaccess_html" />
-	    <tocitem text="Модуль" target="modlist_html" />
-	    <tocitem text="Бизнес-компонент" target="bklist_html" />
-	    <tocitem text="Методы" target="methodslist_html" /> 
-	</tocitem>
-	<tocitem text="Методы" target="methods_html" />
-   	<tocitem text="Другие права" target="other_html" />
-        <tocitem text="Журнал аудита" target="auditlog_html" />
-	<tocitem text="Права на папки" target="folderaccess_html" />
-  </tocitem> 
-  
+  <tocitem text="Управление правами пользователей">
+    <tocitem text="Пользователи" target="users_html"/>
+    <tocitem text="Группы пользователей" target="groups_html"/>
+    <tocitem text="Права на модули" target="modules_html"/>
+    <tocitem text="Права на бизнес-компоненты">
+      <tocitem text="Права на бизнес-компоненты" target="bkaccess_html"/>
+      <tocitem text="Модуль" target="modlist_html"/>
+      <tocitem text="Бизнес-компонент" target="bklist_html"/>
+      <tocitem text="Методы" target="methodslist_html"/>
+    </tocitem>
+    <tocitem text="Методы" target="methods_html"/>
+    <tocitem text="Другие права" target="other_html"/>
+    <tocitem text="Журнал аудита" target="auditlog_html"/>
+    <tocitem text="Права на папки" target="folderaccess_html"/>
+  </tocitem>
+
 </toc>

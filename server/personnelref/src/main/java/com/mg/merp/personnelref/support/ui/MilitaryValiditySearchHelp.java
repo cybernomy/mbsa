@@ -17,18 +17,17 @@ package com.mg.merp.personnelref.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * 
  * @author leonova
  * @version $Id: MilitaryValiditySearchHelp.java,v 1.2 2006/07/10 11:57:48 leonova Exp $
  */
 public class MilitaryValiditySearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {
-		return "merp/personnelref/MilitaryValidity";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/MilitaryValidity";
+  }
 }
 

@@ -19,15 +19,15 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 @DataItemName("Reference.Tax.Type")
 public enum TaxType {
-	/**
-	 * Процентный
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Tax.Type.Percent")
-	PERCENT,
-	
-	/**
-	 * Суммовой
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Tax.Type.Sum")
-	SUM
+  /**
+   * Процентный
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Tax.Type.Percent")
+  PERCENT,
+
+  /**
+   * Суммовой
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Tax.Type.Sum")
+  SUM
 }

@@ -15,27 +15,27 @@
 
 package com.mg.merp.crm.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.crm.ClientRankServiceLocal;
 import com.mg.merp.crm.model.ClientRank;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Ранги клиентов" 
- * 
+ * Бизнес-компонент "Ранги клиентов"
+ *
  * @author leonova
  * @version $Id: ClientRankServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $
  */
-@Stateless(name="merp/crm/ClientRankService")
+@Stateless(name = "merp/crm/ClientRankService")
 public class ClientRankServiceBean extends AbstractPOJODataBusinessObjectServiceBean<ClientRank, Integer> implements ClientRankServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, ClientRank entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));
-	}
+  @Override
+  protected void onValidate(ValidationContext context, ClientRank entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+  }
 
 
 }

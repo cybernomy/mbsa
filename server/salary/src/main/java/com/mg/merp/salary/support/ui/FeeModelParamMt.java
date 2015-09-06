@@ -20,18 +20,18 @@ import com.mg.framework.generic.ui.DefaultMaintenanceForm;
 
 /**
  * Контроллер формы поддержки "Параметр образца начислений/удержаний"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: FeeModelParamMt.java,v 1.1 2007/07/09 08:33:47 sharapov Exp $
  */
 public class FeeModelParamMt extends DefaultMaintenanceForm implements MasterModelListener {
 
-		
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.MasterModelListener#masterChange(com.mg.framework.api.ui.ModelChangeEvent)
-	 */
-	public void masterChange(ModelChangeEvent event) {
-		// TODO Auto-generated method stub
-	}
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.MasterModelListener#masterChange(com.mg.framework.api.ui.ModelChangeEvent)
+   */
+  public void masterChange(ModelChangeEvent event) {
+    // TODO Auto-generated method stub
+  }
 
 }

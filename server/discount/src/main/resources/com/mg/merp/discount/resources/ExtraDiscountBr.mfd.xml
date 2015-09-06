@@ -12,13 +12,17 @@
 
 <!-- $Id: ExtraDiscountBr.mfd.xml,v 1.3 2006/11/22 13:29:26 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.framework.generic.ui.DefaultLegacyPlainBrowseForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.discount.resources.formelements#ExtraDiscount.FormBr.Title" helpTopic="discount#extradisc_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.framework.generic.ui.DefaultLegacyPlainBrowseForm" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.discount.resources.formelements#ExtraDiscount.FormBr.Title"
+          helpTopic="discount#extradisc_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
-	</jfd:maintenanceTable>
+  <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

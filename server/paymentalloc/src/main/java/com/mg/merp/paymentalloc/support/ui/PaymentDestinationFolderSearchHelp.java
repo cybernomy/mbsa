@@ -18,18 +18,18 @@ import com.mg.merp.paymentalloc.PaymentServiceLocal;
 
 /**
  * Поисковик сущностей "Папки-приемника записи журнала платежа"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: PaymentDestinationFolderSearchHelp.java,v 1.1 2007/05/25 08:42:43 sharapov Exp $
  */
 public class PaymentDestinationFolderSearchHelp extends PmaFolderSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.paymentalloc.support.ui.PmaFolderSearchHelp#getFolderPart()
-	 */
-	@Override
-	public short getFolderPart() {
-		return PaymentServiceLocal.FOLDER_PART;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.paymentalloc.support.ui.PmaFolderSearchHelp#getFolderPart()
+   */
+  @Override
+  public short getFolderPart() {
+    return PaymentServiceLocal.FOLDER_PART;
+  }
 
 }

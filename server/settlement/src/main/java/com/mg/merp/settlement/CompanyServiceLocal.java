@@ -18,7 +18,7 @@ import com.mg.merp.reference.model.OrgUnit;
 
 /**
  * Сервис бизнес-компонента "Центры учета"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: CompanyServiceLocal.java,v 1.2 2007/03/20 10:32:25 sharapov Exp $

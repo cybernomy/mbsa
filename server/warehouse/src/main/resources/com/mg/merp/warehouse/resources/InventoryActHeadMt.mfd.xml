@@ -13,52 +13,73 @@
 
 <!-- $Id: InventoryActHeadMt.mfd.xml,v 1.13 2007/11/15 13:05:27 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.warehouse.support.ui.InventoryActHeadMt" title="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.FormMt.Title" helpTopic="warehouse#invacthd_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.warehouse.support.ui.InventoryActHeadMt"
+          title="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.FormMt.Title"
+          helpTopic="warehouse#invacthd_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
-	
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top" >
- 		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#Main.Tab.Title" >
- 			<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
-			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml" />					
-	 		<jfd:field id="EndDate" />
-		 	<jfd:field id="SrcStock" text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.Warehouse" />
-			<jfd:field id="SrcMol" text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.MolWarehouse" sameLine="true"/> 
-			<jfd:field id="Weight" />
-			<jfd:field id="Volume" sameLine="true" />
-			<jfd:field id="SumNat" fieldGroup="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.Summa" text="resource://com.mg.merp.warehouse.resources.dataitemlabels#InvActHead.SummaNat"/>
-			<jfd:field id="SumCur" sameLine="true" text="resource://com.mg.merp.warehouse.resources.dataitemlabels#InvActHead.SummaCur"/>
-			<jfd:field id="RealSummaNat" readOnly="true" />
-			<jfd:field id="RealSummaCur" sameLine="true" readOnly="true" />
- 			<jfd:field id="ExsessSummaNat" readOnly="true" />
-			<jfd:field id="ExsessSummaCur" sameLine="true" readOnly="true" />
-			<jfd:field id="ShortageSummaNat" readOnly="true" />
-			<jfd:field id="ShortageSummaCur" sameLine="true" readOnly="true" />	
-			<jfd:field id="Description" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />						
-	 	</jfd:container> 	
-		<jfd:container id="committeeFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.Committee.Title" >	 	
-	 		<jfd:field id="Contractor" />	
-			<jfd:container id="committee" layout="jfd:box" alignment="expand_expand" label="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.Committee">
-		 		<jfd:table id="taxesTable" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" >
-		 			<jfd:popupMenu>
-		 				<jfd:menuItem id="includeItem" text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.Add" actionListener="Include" />
-		 				<jfd:menuItem id="excludeItem" text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.Remote" actionListener="Exclude" />		 		
-		 			</jfd:popupMenu>
-				</jfd:table>
-			</jfd:container> 			
-		</jfd:container>
-	 	<jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#SpecFields" helpTopic="warehouse#invactspc_html" >
-	 		<jfd:popupMenu>
-		 		<jfd:separator/>
-		 		<jfd:menuItem id="executeInventory" text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHeadMt.ExecuteInventory" actionListener="ExecuteInventarization" />
-		 	</jfd:popupMenu>
-		</jfd:maintenanceTable>
-	</jfd:container>
-		
-	<jfd:include name="com/mg/merp/document/resources/DefaultDocMaintenanceFooterMacros.xml" />
-	
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
+
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.warehouse.resources.formelements#Main.Tab.Title">
+      <jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml"/>
+      <jfd:field id="EndDate"/>
+      <jfd:field id="SrcStock"
+                 text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.Warehouse"/>
+      <jfd:field id="SrcMol"
+                 text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.MolWarehouse"
+                 sameLine="true"/>
+      <jfd:field id="Weight"/>
+      <jfd:field id="Volume" sameLine="true"/>
+      <jfd:field id="SumNat"
+                 fieldGroup="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.Summa"
+                 text="resource://com.mg.merp.warehouse.resources.dataitemlabels#InvActHead.SummaNat"/>
+      <jfd:field id="SumCur" sameLine="true"
+                 text="resource://com.mg.merp.warehouse.resources.dataitemlabels#InvActHead.SummaCur"/>
+      <jfd:field id="RealSummaNat" readOnly="true"/>
+      <jfd:field id="RealSummaCur" sameLine="true" readOnly="true"/>
+      <jfd:field id="ExsessSummaNat" readOnly="true"/>
+      <jfd:field id="ExsessSummaCur" sameLine="true" readOnly="true"/>
+      <jfd:field id="ShortageSummaNat" readOnly="true"/>
+      <jfd:field id="ShortageSummaCur" sameLine="true" readOnly="true"/>
+      <jfd:field id="Description"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="committeeFields" layout="jfd:defaultMtLayout" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.Committee.Title">
+      <jfd:field id="Contractor"/>
+      <jfd:container id="committee" layout="jfd:box" alignment="expand_expand"
+                     label="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.Committee">
+        <jfd:table id="taxesTable" scroll="true" autoResize="subsequent_columns"
+                   alignment="expand_expand">
+          <jfd:popupMenu>
+            <jfd:menuItem id="includeItem"
+                          text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.Add"
+                          actionListener="Include"/>
+            <jfd:menuItem id="excludeItem"
+                          text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHead.Remote"
+                          actionListener="Exclude"/>
+          </jfd:popupMenu>
+        </jfd:table>
+      </jfd:container>
+    </jfd:container>
+    <jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.warehouse.resources.formelements#SpecFields"
+                          helpTopic="warehouse#invactspc_html">
+      <jfd:popupMenu>
+        <jfd:separator/>
+        <jfd:menuItem id="executeInventory"
+                      text="resource://com.mg.merp.warehouse.resources.formelements#InventoryActHeadMt.ExecuteInventory"
+                      actionListener="ExecuteInventarization"/>
+      </jfd:popupMenu>
+    </jfd:maintenanceTable>
+  </jfd:container>
+
+  <jfd:include name="com/mg/merp/document/resources/DefaultDocMaintenanceFooterMacros.xml"/>
+
 </jfd:form>		

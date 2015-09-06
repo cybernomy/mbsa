@@ -17,19 +17,18 @@ import com.mg.framework.api.orm.PersistentObject;
 
 /**
  * @author Valentin A. Poroxnenko
- * @version $Id: BusinessAddinWorkbench.java,v 1.1 2006/12/29 14:46:33
- *          poroxnenko Exp $
+ * @version $Id: BusinessAddinWorkbench.java,v 1.1 2006/12/29 14:46:33 poroxnenko Exp $
  */
 public interface BusinessAddinWorkbench {
-	String SERVICE_NAME = "merp:baiengine=BusinessAddinWorkbenchService";
+  String SERVICE_NAME = "merp:baiengine=BusinessAddinWorkbenchService";
 
-	//Используем PersistentObject вместо Repository, т.к. сервис живёт 
-	//в mbaiengine.sar и ему не доступны модели из datawarehouse
-	PersistentObject[] getBais(String query) throws Exception;
+  //Используем PersistentObject вместо Repository, т.к. сервис живёт
+  //в mbaiengine.sar и ему не доступны модели из datawarehouse
+  PersistentObject[] getBais(String query) throws Exception;
 
-	PersistentObject editBai(PersistentObject repository) throws Exception;
+  PersistentObject editBai(PersistentObject repository) throws Exception;
 
-	PersistentObject addBai(PersistentObject repository) throws Exception;
+  PersistentObject addBai(PersistentObject repository) throws Exception;
 
-	void deleteBaiList(Integer[] ids) throws Exception;
+  void deleteBaiList(Integer[] ids) throws Exception;
 }

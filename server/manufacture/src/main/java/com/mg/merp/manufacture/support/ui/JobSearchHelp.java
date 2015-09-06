@@ -22,8 +22,8 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class JobSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/manufacture/Job";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/manufacture/Job";
+  }
 }

@@ -21,7 +21,9 @@ import com.mg.framework.api.ApplicationException;
  * @version $Id: EntityAttribute.java,v 1.1 2006/01/24 13:45:28 safonov Exp $
  */
 public interface EntityAttribute {
-    public String getName() throws ApplicationException;
-    public String getDescription() throws ApplicationException;
-    public DataItem getDataItem() throws ApplicationException;
+  public String getName() throws ApplicationException;
+
+  public String getDescription() throws ApplicationException;
+
+  public DataItem getDataItem() throws ApplicationException;
 }

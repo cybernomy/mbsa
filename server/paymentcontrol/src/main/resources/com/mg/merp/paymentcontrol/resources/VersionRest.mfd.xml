@@ -13,18 +13,22 @@
 
 <!-- $Id: VersionRest.mfd.xml,v 1.2 2006/12/03 13:50:24 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.paymentcontrol.support.ui.VersionRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.paymentcontrol.resources.formelements#Cond.Version" helpTopic="paymentcontrol#version_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.paymentcontrol.support.ui.VersionRest" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.paymentcontrol.resources.formelements#Cond.Version"
+          helpTopic="paymentcontrol#version_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:field id="availableOnly" />
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 												 	
+    <jfd:field id="availableOnly"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
 
-	</jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultRestrictionFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultRestrictionFooterMacros.xml"/>
 
 </jfd:form>

@@ -13,33 +13,58 @@
 
 <!-- $Id: ProcessBr.mfd.xml,v 1.2 2007/06/01 17:04:32 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.bpm.support.ui.ProcessBr" title="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.Title" orientation="ver" width="500" height="350" helpTopic="bpm#bpm_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.bpm.support.ui.ProcessBr"
+          title="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.Title"
+          orientation="ver" width="500" height="350" helpTopic="bpm#bpm_html">
 
-	<jfd:toolBar id="toolBar" alignment="expand_top">
-		<jfd:button id="deployButton" text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.DeployProcessArchive" actionListener="DeployProcessArchive" />
-		<jfd:button id="refreshButton" text="resource://com.mg.merp.bpm.resources.formelements#Refresh" actionListener="Refresh" />
-		<jfd:button id="createProcessInstanceButton" text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.CreateProcessInstance" actionListener="CreateProcessInstance" />
-		<jfd:button id="showProcessInstancesButton" text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.ProcessInstances" actionListener="ShowProcessInstances" />
-	</jfd:toolBar>
+  <jfd:toolBar id="toolBar" alignment="expand_top">
+    <jfd:button id="deployButton"
+                text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.DeployProcessArchive"
+                actionListener="DeployProcessArchive"/>
+    <jfd:button id="refreshButton" text="resource://com.mg.merp.bpm.resources.formelements#Refresh"
+                actionListener="Refresh"/>
+    <jfd:button id="createProcessInstanceButton"
+                text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.CreateProcessInstance"
+                actionListener="CreateProcessInstance"/>
+    <jfd:button id="showProcessInstancesButton"
+                text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.ProcessInstances"
+                actionListener="ShowProcessInstances"/>
+  </jfd:toolBar>
 
-	<jfd:table id="table" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
-		<jfd:columns>
-			<jfd:column fieldName="Id" title="resource://com.mg.merp.bpm.resources.formelements#Id" />
-			<jfd:column fieldName="Name" title="resource://com.mg.merp.bpm.resources.formelements#Processes.Name" />
-			<jfd:column fieldName="Version" title="resource://com.mg.merp.bpm.resources.formelements#Processes.Version" />
-			<jfd:column fieldName="Description" title="resource://com.mg.merp.bpm.resources.formelements#Processes.Description" />
-		</jfd:columns>
-		<jfd:popupMenu>
-			<jfd:menuItem id="deployProcess" text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.DeployProcessArchive" actionListener="DeployProcessArchive" />
-			<jfd:separator />
-			<jfd:menuItem id="createProcessInstance" text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.CreateProcessInstance" actionListener="CreateProcessInstance" />
-			<jfd:menuItem id="deleteProcess" text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.DeleteProcess" actionListener="DeleteProcess" />
-			<jfd:menuItem id="refresh" text="resource://com.mg.merp.bpm.resources.formelements#Refresh" actionListener="Refresh" />
-			<jfd:separator />
-			<jfd:menuItem id="showProcessInstances" text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.ProcessInstances" actionListener="ShowProcessInstances" />
-			<jfd:menuItem id="showProcessVersions" text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.ProcessVersions" actionListener="ShowProcessVersions" />
-			<jfd:menuItem id="showImage" text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.ProcessImage" actionListener="ShowImage" />
-		</jfd:popupMenu>
-	</jfd:table>
+  <jfd:table id="table" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
+    <jfd:columns>
+      <jfd:column fieldName="Id" title="resource://com.mg.merp.bpm.resources.formelements#Id"/>
+      <jfd:column fieldName="Name"
+                  title="resource://com.mg.merp.bpm.resources.formelements#Processes.Name"/>
+      <jfd:column fieldName="Version"
+                  title="resource://com.mg.merp.bpm.resources.formelements#Processes.Version"/>
+      <jfd:column fieldName="Description"
+                  title="resource://com.mg.merp.bpm.resources.formelements#Processes.Description"/>
+    </jfd:columns>
+    <jfd:popupMenu>
+      <jfd:menuItem id="deployProcess"
+                    text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.DeployProcessArchive"
+                    actionListener="DeployProcessArchive"/>
+      <jfd:separator/>
+      <jfd:menuItem id="createProcessInstance"
+                    text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.CreateProcessInstance"
+                    actionListener="CreateProcessInstance"/>
+      <jfd:menuItem id="deleteProcess"
+                    text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.DeleteProcess"
+                    actionListener="DeleteProcess"/>
+      <jfd:menuItem id="refresh" text="resource://com.mg.merp.bpm.resources.formelements#Refresh"
+                    actionListener="Refresh"/>
+      <jfd:separator/>
+      <jfd:menuItem id="showProcessInstances"
+                    text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.ProcessInstances"
+                    actionListener="ShowProcessInstances"/>
+      <jfd:menuItem id="showProcessVersions"
+                    text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.ProcessVersions"
+                    actionListener="ShowProcessVersions"/>
+      <jfd:menuItem id="showImage"
+                    text="resource://com.mg.merp.bpm.resources.formelements#ProcessBr.ProcessImage"
+                    actionListener="ShowImage"/>
+    </jfd:popupMenu>
+  </jfd:table>
 
 </jfd:form>

@@ -15,17 +15,17 @@
 
 package com.mg.merp.paymentcontrol.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.paymentcontrol.PlanServiceLocal;
+
+import javax.ejb.Stateless;
 
 /**
  * Реализация бизнес-компонента "Планирование платежей"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: PlanServiceBean.java,v 1.5 2008/01/29 13:31:45 safonov Exp $
  */
-@Stateless(name="merp/paymentcontrol/PlanService")
+@Stateless(name = "merp/paymentcontrol/PlanService")
 public class PlanServiceBean extends com.mg.framework.generic.AbstractPOJOBusinessObjectStatelessServiceBean implements PlanServiceLocal {
 
 }

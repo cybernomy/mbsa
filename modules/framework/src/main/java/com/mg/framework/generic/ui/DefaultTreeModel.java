@@ -21,21 +21,21 @@ import com.mg.framework.support.ui.widget.tree.TreeNode;
  * @version $Id: DefaultTreeModel.java,v 1.1 2006/06/26 11:58:56 safonov Exp $
  */
 public class DefaultTreeModel extends AbstractTreeModel {
-	private TreeNode rootNode;
+  private TreeNode rootNode;
 
-	protected void setRootNode(TreeNode rootNode) {
-		this.rootNode = rootNode;
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.support.ui.widget.TreeModel#getRootNode()
-	 */
-	public TreeNode getRootNode() {
-		if (rootNode == null)
-			load();
-		if (rootNode == null)
-			throw new IllegalStateException("Model is not load");
-		return rootNode;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.support.ui.widget.TreeModel#getRootNode()
+   */
+  public TreeNode getRootNode() {
+    if (rootNode == null)
+      load();
+    if (rootNode == null)
+      throw new IllegalStateException("Model is not load");
+    return rootNode;
+  }
+
+  protected void setRootNode(TreeNode rootNode) {
+    this.rootNode = rootNode;
+  }
 
 }

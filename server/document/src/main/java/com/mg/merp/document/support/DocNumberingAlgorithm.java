@@ -16,17 +16,17 @@ package com.mg.merp.document.support;
 
 
 /**
- * Базовый класс BAi формирования номера документа. Класс алгоритма должен
- * реализовывать следующий метод <code>protected String doPerform() throws Exception</code>.
- * Данный метод возвращает сформированный номер документа.
- * 
+ * Базовый класс BAi формирования номера документа. Класс алгоритма должен реализовывать следующий
+ * метод <code>protected String doPerform() throws Exception</code>. Данный метод возвращает
+ * сформированный номер документа.
+ *
  * <p>Пример данного метода:
  * <pre>
  *  protected String doPerform() throws Exception {
  *  	complete("My number");
  *  }
  * </pre>
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: DocNumberingAlgorithm.java,v 1.5 2007/03/23 14:32:35 safonov Exp $
  * @deprecated use {@link DocumentNumberBusinessAddin} instead

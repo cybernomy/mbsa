@@ -21,38 +21,38 @@ import com.mg.framework.api.annotations.EnumConstantText;
  * @author leonova
  * @version $Id: TimePeriodKind.java,v 1.1 2006/03/29 13:06:23 safonov Exp $
  */
-@DataItemName ("Reference.Catalog.ShelfLifeMeas")
+@DataItemName("Reference.Catalog.ShelfLifeMeas")
 public enum TimePeriodKind {
 
-	/**
-	 * нет
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.None")
-	NONE,
-	
-	/**
-	 * час
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.Hour")
-	HOUR,
+  /**
+   * нет
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.None")
+  NONE,
 
-	/**
-	 * день
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.Day")
-	DAY,	
+  /**
+   * час
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.Hour")
+  HOUR,
 
-	/**
-	 * месяц
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.Month")
-	MONTH,	
-	
-	/**
-	 * год
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.Year")
-	YEAR		
+  /**
+   * день
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.Day")
+  DAY,
+
+  /**
+   * месяц
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.Month")
+  MONTH,
+
+  /**
+   * год
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#TimePeriod.Kind.Year")
+  YEAR
 }
 
 

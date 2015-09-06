@@ -17,15 +17,13 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.StockBatch;
 
 /**
- * 
  * @author leonova
- * @version $Id: WarehouseBatchServiceLocal.java,v 1.1 2006/03/14 11:49:53
- *          safonov Exp $
+ * @version $Id: WarehouseBatchServiceLocal.java,v 1.1 2006/03/14 11:49:53 safonov Exp $
  */
 public interface WarehouseBatchServiceLocal extends
-		com.mg.framework.api.DataBusinessObjectService<StockBatch, Integer> {
-	/**
-	 * Локальное имя сервиса
-	 */
-	static final String LOCAL_SERVICE_NAME = "merp/warehouse/WarehouseBatch";
+    com.mg.framework.api.DataBusinessObjectService<StockBatch, Integer> {
+  /**
+   * Локальное имя сервиса
+   */
+  static final String LOCAL_SERVICE_NAME = "merp/warehouse/WarehouseBatch";
 }

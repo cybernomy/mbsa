@@ -22,12 +22,12 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class OperationPrioritySearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {
-		return "merp/crm/OperationPriority";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/crm/OperationPriority";
+  }
 
 }

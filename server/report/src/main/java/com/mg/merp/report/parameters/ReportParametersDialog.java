@@ -13,30 +13,30 @@
  */
 package com.mg.merp.report.parameters;
 
-import java.util.Map;
-
 import com.mg.framework.api.ui.DialogForm;
+
+import java.util.Map;
 
 /**
  * Интерфейс формы запроса параметров отчёта
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @version $Id: ReportParametersDialog.java,v 1.2 2008/03/27 08:12:15 safonov Exp $
  */
 public interface ReportParametersDialog extends DialogForm {
 
-	/**
-	 * установить параметры отчета
-	 * 
-	 * @param params	список параметров отчета
-	 */
-	void setParameters(Map<String, ReportParameter> params);
-	
-	/**
-	 * получить парамтеры отчета
-	 * 
-	 * @return	список параметров отчета
-	 */
-	Map<String, ReportParameter> getParameters();
+  /**
+   * получить парамтеры отчета
+   *
+   * @return список параметров отчета
+   */
+  Map<String, ReportParameter> getParameters();
+
+  /**
+   * установить параметры отчета
+   *
+   * @param params список параметров отчета
+   */
+  void setParameters(Map<String, ReportParameter> params);
 
 }

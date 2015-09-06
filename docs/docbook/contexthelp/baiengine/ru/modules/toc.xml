@@ -15,8 +15,8 @@
 
 <toc version="1.0">
 
-   <tocitem text="Бизнес-расширения">
-	<tocitem text="Настраиваемые действия пользователя" target="custom_user_action_html" />
-   </tocitem>
-  
+  <tocitem text="Бизнес-расширения">
+    <tocitem text="Настраиваемые действия пользователя" target="custom_user_action_html"/>
+  </tocitem>
+
 </toc>

@@ -17,12 +17,10 @@ package com.mg.merp.warehouse;
 import com.mg.merp.discount.model.Discount;
 
 /**
- * 
  * @author leonova
  * @version $Id: DiscountServiceLocal.java,v 1.1 2006/03/14 11:49:53 safonov Exp $
  */
 public interface DiscountServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Discount, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Discount, Integer> {
 
 }

@@ -17,12 +17,10 @@ package com.mg.merp.mfreference;
 import com.mg.merp.mfreference.model.BomMaterial;
 
 /**
- * 
  * @author leonova
  * @version $Id: BOMMaterialServiceLocal.java,v 1.1 2006/03/14 11:49:48 safonov Exp $
  */
 public interface BOMMaterialServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<BomMaterial, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<BomMaterial, Integer> {
 
 }

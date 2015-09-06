@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.PartnEmplEmail;
 
 /**
- * 
  * @author leonova
  * @version $Id: PartnEmplEmailServiceLocal.java,v 1.1 2006/03/14 11:49:50 safonov Exp $
  */
 public interface PartnEmplEmailServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<PartnEmplEmail, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<PartnEmplEmail, Integer> {
 
 }

@@ -20,6 +20,6 @@ import com.mg.framework.generic.ui.DefaultPlainBrowseForm;
  * @author leonova
  * @version $Id: PlanBr.java,v 1.2 2006/10/04 07:09:35 leonova Exp $
  */
-public class PlanBr extends DefaultPlainBrowseForm{
+public class PlanBr extends DefaultPlainBrowseForm {
 
 }

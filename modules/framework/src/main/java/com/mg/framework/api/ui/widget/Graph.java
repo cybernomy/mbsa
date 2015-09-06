@@ -20,7 +20,7 @@ import com.mg.framework.support.ui.widget.GraphModelListener;
 
 /**
  * Элемент "Граф", предназначен для отображения графов
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: Graph.java,v 1.2 2006/11/21 15:34:06 safonov Exp $
  */

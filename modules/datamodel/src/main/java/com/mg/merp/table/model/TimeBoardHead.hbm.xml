@@ -1,37 +1,37 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.table.model.TimeBoardHead" table="TAB_TIME_BOARD_HEAD">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">TAB_TIME_BOARD_HEAD_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="CalcPeriod" class="com.mg.merp.personnelref.model.CalcPeriod">
-      <column name="CALC_PERIOD_ID" not-null="false" unique="true" />
+      <column name="CALC_PERIOD_ID" not-null="false" unique="true"/>
     </many-to-one>
     <property name="BNumber" type="java.lang.String">
-      <column name="BNUMBER" length="20" not-null="false" sql-type="CHAR" />
+      <column name="BNUMBER" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="Comments" type="java.lang.String">
-      <column name="COMMENTS" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="COMMENTS" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <set name="TimeBoardPositions" inverse="true">
-       <key on-delete="cascade">
-        <column name="TIME_BOARD_HEAD_ID" not-null="false" />
+      <key on-delete="cascade">
+        <column name="TIME_BOARD_HEAD_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.table.model.TimeBoardPosition" />
+      <one-to-many class="com.mg.merp.table.model.TimeBoardPosition"/>
     </set>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

@@ -13,27 +13,36 @@
 
 <!-- $Id: PriceListSpecBr.mfd.xml,v 1.7 2008/05/16 05:56:33 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.reference.support.ui.PriceListSpecBr" title="resource://com.mg.merp.reference.resources.formelements#PriceListSpec.FormBr.Title" helpTopic="reference#prclsspc_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver"
+          controller="com.mg.merp.reference.support.ui.PriceListSpecBr"
+          title="resource://com.mg.merp.reference.resources.formelements#PriceListSpec.FormBr.Title"
+          helpTopic="reference#prclsspc_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml"/>
 
-	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
- 		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true" >
-			<jfd:popupMenu>
-				<jfd:separator/>
-				<jfd:menuItem id="addFromCatalogFolder" text="resource://com.mg.merp.reference.resources.formelements#PriceListSpec.Button.AddFromCatalog" actionListener="AddFromCatalogFolder" />
-			</jfd:popupMenu>
-		</jfd:maintenanceTree> 
-		<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
-			<jfd:popupMenu>
-				<jfd:separator/>
-				<jfd:menuItem id="CalculatePrice" text="resource://com.mg.merp.reference.resources.formelements#PriceListSpec.Button.Calculate" actionListener="CalculatePrice" />
-				<jfd:separator/>
-				<jfd:menuItem id="addFromCatalog" text="resource://com.mg.merp.reference.resources.formelements#PriceListSpec.Button.AddFromCatalog" actionListener="AddFromCatalog" />
-			</jfd:popupMenu>
-		</jfd:maintenanceTable>
-	</jfd:container>
+  <jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+    <jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true">
+      <jfd:popupMenu>
+        <jfd:separator/>
+        <jfd:menuItem id="addFromCatalogFolder"
+                      text="resource://com.mg.merp.reference.resources.formelements#PriceListSpec.Button.AddFromCatalog"
+                      actionListener="AddFromCatalogFolder"/>
+      </jfd:popupMenu>
+    </jfd:maintenanceTree>
+    <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+      <jfd:popupMenu>
+        <jfd:separator/>
+        <jfd:menuItem id="CalculatePrice"
+                      text="resource://com.mg.merp.reference.resources.formelements#PriceListSpec.Button.Calculate"
+                      actionListener="CalculatePrice"/>
+        <jfd:separator/>
+        <jfd:menuItem id="addFromCatalog"
+                      text="resource://com.mg.merp.reference.resources.formelements#PriceListSpec.Button.AddFromCatalog"
+                      actionListener="AddFromCatalog"/>
+      </jfd:popupMenu>
+    </jfd:maintenanceTable>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml"/>
 
 </jfd:form>

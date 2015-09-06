@@ -16,12 +16,12 @@
 <index version="1.0">
 
   <indexitem text="Документы на отпуск">
-    <indexentry text="Содержание документа" target="rtlhead_html" />
-    <indexentry text="Закладка Дополнительно" target="rtladd_html" />
-    <indexentry text="Контрагенты" target="rtlcntr_html" />
-    <indexentry text="Спецификации" target="rtlspec_html" />
-    <indexentry text="Дополнительные сведения о спецификации" target="rtlspecadd_html" />
-    <indexentry text="Налоги спецификации" target="rtlspectax_html" />
+    <indexentry text="Содержание документа" target="rtlhead_html"/>
+    <indexentry text="Закладка Дополнительно" target="rtladd_html"/>
+    <indexentry text="Контрагенты" target="rtlcntr_html"/>
+    <indexentry text="Спецификации" target="rtlspec_html"/>
+    <indexentry text="Дополнительные сведения о спецификации" target="rtlspecadd_html"/>
+    <indexentry text="Налоги спецификации" target="rtlspectax_html"/>
   </indexitem>
 
 </index>

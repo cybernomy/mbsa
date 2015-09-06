@@ -17,12 +17,10 @@ package com.mg.merp.mfreference;
 import com.mg.merp.mfreference.model.Cell;
 
 /**
- * 
  * @author leonova
  * @version $Id: CellServiceLocal.java,v 1.1 2006/03/14 11:49:48 safonov Exp $
  */
 public interface CellServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Cell, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Cell, Integer> {
 
 }

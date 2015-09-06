@@ -24,12 +24,12 @@ import com.mg.framework.generic.ui.DefaultMaintenanceForm;
  */
 public class ConfidentialDataMt extends DefaultMaintenanceForm implements MasterModelListener {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.MasterModelListener#masterChange(com.mg.framework.api.ui.ModelChangeEvent)
-	 */
-	public void masterChange(ModelChangeEvent event) {
-		// TODO Auto-generated method stub
-		
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.MasterModelListener#masterChange(com.mg.framework.api.ui.ModelChangeEvent)
+   */
+  public void masterChange(ModelChangeEvent event) {
+    // TODO Auto-generated method stub
+
+  }
 
 }

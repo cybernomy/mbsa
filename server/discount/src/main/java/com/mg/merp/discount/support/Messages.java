@@ -22,17 +22,16 @@ import com.mg.framework.generic.MessageSourceAccessor;
  */
 public class Messages extends MessageSourceAccessor {
 
-	private static final String BUNDLE_NAME = "com.mg.merp.discount.resources.messages"; //$NON-NLS-1$
-	private static Messages instance;
+  public static final String SEARCHED_FILD_CATALOG_OR_CATALOGFOLDER = "SearchedFildCatalogOrCatalogFolder";
+  private static final String BUNDLE_NAME = "com.mg.merp.discount.resources.messages"; //$NON-NLS-1$
+  private static Messages instance;
 
-	public static final String SEARCHED_FILD_CATALOG_OR_CATALOGFOLDER = "SearchedFildCatalogOrCatalogFolder";	
-	
-	public static Messages getInstance() {
-		return instance;
-	}
-	
-	static {
-		MessageSourceAccessor.initializeMessages(BUNDLE_NAME, Messages.class);
-	}
+  static {
+    MessageSourceAccessor.initializeMessages(BUNDLE_NAME, Messages.class);
+  }
+
+  public static Messages getInstance() {
+    return instance;
+  }
 
 }

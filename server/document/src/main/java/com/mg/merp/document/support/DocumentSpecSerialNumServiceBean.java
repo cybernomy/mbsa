@@ -15,19 +15,19 @@
 
 package com.mg.merp.document.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.document.DocumentSpecSerialNumServiceLocal;
 import com.mg.merp.document.model.DocumentSpecSerialNum;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Серийные номера" 
- * 
+ * Бизнес-компонент "Серийные номера"
+ *
  * @author leonova
  * @version $Id: DocumentSpecSerialNumServiceBean.java,v 1.3 2006/08/22 07:13:46 leonova Exp $
  */
-@Stateless(name="merp/document/DocumentSpecSerialNumService")
+@Stateless(name = "merp/document/DocumentSpecSerialNumService")
 public class DocumentSpecSerialNumServiceBean extends AbstractPOJODataBusinessObjectServiceBean<DocumentSpecSerialNum, Integer> implements DocumentSpecSerialNumServiceLocal {
 
 

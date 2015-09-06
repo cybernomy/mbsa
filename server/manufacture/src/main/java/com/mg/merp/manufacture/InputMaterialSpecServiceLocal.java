@@ -19,15 +19,15 @@ import com.mg.merp.manufacture.model.InputDocumentSpec;
 
 /**
  * Бизнес-компонент "Спецификация актов на списание материалов в НЗП"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: InputMaterialSpecServiceLocal.java,v 1.4 2007/08/06 12:46:24 safonov Exp $
  */
 public interface InputMaterialSpecServiceLocal extends InputSpecificationServiceLocal<InputDocumentSpec> {
 
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/manufacture/InputMaterialSpec";
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/manufacture/InputMaterialSpec";
 
 }

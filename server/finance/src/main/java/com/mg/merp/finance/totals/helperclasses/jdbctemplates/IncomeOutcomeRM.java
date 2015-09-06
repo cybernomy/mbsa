@@ -14,31 +14,30 @@
  */
 package com.mg.merp.finance.totals.helperclasses.jdbctemplates;
 
+import com.mg.framework.api.jdbc.RowMapper;
+
 import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
-import com.mg.framework.api.jdbc.RowMapper;
 
 /**
  * @author Valentin A. Poroxnenko
  * @version $Id: IncomeOutcomeRM.java,v 1.4 2006/07/05 09:06:30 poroxnenko Exp $
  */
-public class IncomeOutcomeRM implements RowMapper<IncomeOutcomeItem>
-{
+public class IncomeOutcomeRM implements RowMapper<IncomeOutcomeItem> {
 
-	public IncomeOutcomeItem mapRow(ResultSet rs, int rowNum) throws SQLException {
-		BigDecimal sumnat=null;
-		BigDecimal sumcur=null;
-		try
-		{
-			sumnat = rs.getBigDecimal("sumnat");
-		}catch (SQLException ex){}
-		try
-		{
-			sumcur = rs.getBigDecimal("sumcur");
-		}catch (SQLException ex){}
-		return new IncomeOutcomeItem(sumnat, sumcur);
-	}
+  public IncomeOutcomeItem mapRow(ResultSet rs, int rowNum) throws SQLException {
+    BigDecimal sumnat = null;
+    BigDecimal sumcur = null;
+    try {
+      sumnat = rs.getBigDecimal("sumnat");
+    } catch (SQLException ex) {
+    }
+    try {
+      sumcur = rs.getBigDecimal("sumcur");
+    } catch (SQLException ex) {
+    }
+    return new IncomeOutcomeItem(sumnat, sumcur);
+  }
 
 }

@@ -1,31 +1,31 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.personnelref.model.PersonnelReward" table="PREF_PERSONNEL_REWARD">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">PREF_PERSONNEL_REWARD_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Personnel" class="com.mg.merp.personnelref.model.Personnel">
-      <column name="PERSONNEL_ID" not-null="false" />
+      <column name="PERSONNEL_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="OriginalDocument" class="com.mg.merp.reference.model.OriginalDocument">
-      <column name="ORIGINAL_DOCUMENT_ID" not-null="false" />
+      <column name="ORIGINAL_DOCUMENT_ID" not-null="false"/>
     </many-to-one>
     <property name="RewardName" type="java.lang.String">
-      <column name="REWARD_NAME" length="80" not-null="true" sql-type="VARCHAR" />
+      <column name="REWARD_NAME" length="80" not-null="true" sql-type="VARCHAR"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

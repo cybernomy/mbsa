@@ -14,13 +14,12 @@
  */
 package com.mg.framework.service.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.framework.api.metadata.MetadataCache;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * @author Oleg V. Safonov
- *
  */
 public interface MetadataCacheServiceMBean extends ServiceMBean, MetadataCache {
 

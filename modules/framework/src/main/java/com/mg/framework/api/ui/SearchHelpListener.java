@@ -18,23 +18,23 @@ import java.util.EventListener;
 
 /**
  * Слушатель событий поиска сущностей
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: SearchHelpListener.java,v 1.3 2006/08/25 11:24:41 safonov Exp $
  */
 public interface SearchHelpListener extends EventListener {
-	
-	/**
-	 * выполняется если поиск был произведен
-	 * 
-	 * @param event	событие поиска
-	 */
-	void searchPerformed(SearchHelpEvent event);
-	
-	/**
-	 * выполняется если поиск не был произведен
-	 * 
-	 * @param event	событие
-	 */
-	void searchCanceled(SearchHelpEvent event);
+
+  /**
+   * выполняется если поиск был произведен
+   *
+   * @param event событие поиска
+   */
+  void searchPerformed(SearchHelpEvent event);
+
+  /**
+   * выполняется если поиск не был произведен
+   *
+   * @param event событие
+   */
+  void searchCanceled(SearchHelpEvent event);
 }

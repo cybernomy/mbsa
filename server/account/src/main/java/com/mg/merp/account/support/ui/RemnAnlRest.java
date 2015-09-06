@@ -24,86 +24,86 @@ import com.mg.merp.reference.model.Currency;
 
 /**
  * @author leonova
- * @version $Id: RemnAnlRest.java,v 1.4 2008/02/21 10:20:28 alikaev Exp $ 
+ * @version $Id: RemnAnlRest.java,v 1.4 2008/02/21 10:20:28 alikaev Exp $
  */
 public class RemnAnlRest extends DefaultHierarhyRestrictionForm {
-		
-	@DataItemName("Account.RemnAnl.AnlPlan1")
-	private AnlPlan anlCode1 = null;
-	@DataItemName("Account.RemnAnl.AnlPlan2")
-	private AnlPlan anlCode2 = null;
-	@DataItemName("Account.RemnAnl.AnlPlan3")
-	private AnlPlan anlCode3 = null;
-	@DataItemName("Account.RemnAnl.AnlPlan4")
-	private AnlPlan anlCode4 = null;
-	@DataItemName("Account.RemnAnl.AnlPlan5")
-	private AnlPlan anlCode5 = null;
-	private AccPlan AccPlan = null;
-	private Currency currencyCode = null;	
-	private Period period1 = null;
-	private Period period2 = null;
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm#doClearRestrictionItem()
-	 */
-	@Override
-	protected void doClearRestrictionItem() {
-		super.doClearRestrictionItem();
-		this.AccPlan = null;	
-		this.anlCode1 = null;
-		this.anlCode2 = null;
-		this.anlCode3 = null;
-		this.anlCode4 = null;
-		this.anlCode5 = null;
-		this.currencyCode = null;
-		this.period1 = null;
-		this.period2 = null;
-	}
+  @DataItemName("Account.RemnAnl.AnlPlan1")
+  private AnlPlan anlCode1 = null;
+  @DataItemName("Account.RemnAnl.AnlPlan2")
+  private AnlPlan anlCode2 = null;
+  @DataItemName("Account.RemnAnl.AnlPlan3")
+  private AnlPlan anlCode3 = null;
+  @DataItemName("Account.RemnAnl.AnlPlan4")
+  private AnlPlan anlCode4 = null;
+  @DataItemName("Account.RemnAnl.AnlPlan5")
+  private AnlPlan anlCode5 = null;
+  private AccPlan AccPlan = null;
+  private Currency currencyCode = null;
+  private Period period1 = null;
+  private Period period2 = null;
 
-
-	public AnlPlan getAnlCode1() {
-		return anlCode1;
-	}
+  /*
+   * (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm#doClearRestrictionItem()
+   */
+  @Override
+  protected void doClearRestrictionItem() {
+    super.doClearRestrictionItem();
+    this.AccPlan = null;
+    this.anlCode1 = null;
+    this.anlCode2 = null;
+    this.anlCode3 = null;
+    this.anlCode4 = null;
+    this.anlCode5 = null;
+    this.currencyCode = null;
+    this.period1 = null;
+    this.period2 = null;
+  }
 
 
-	public AnlPlan getAnlCode2() {
-		return anlCode2;
-	}
+  public AnlPlan getAnlCode1() {
+    return anlCode1;
+  }
 
 
-	public AnlPlan getAnlCode3() {
-		return anlCode3;
-	}
+  public AnlPlan getAnlCode2() {
+    return anlCode2;
+  }
 
 
-	public AnlPlan getAnlCode4() {
-		return anlCode4;
-	}
+  public AnlPlan getAnlCode3() {
+    return anlCode3;
+  }
 
 
-	public AnlPlan getAnlCode5() {
-		return anlCode5;
-	}
+  public AnlPlan getAnlCode4() {
+    return anlCode4;
+  }
 
 
-	public AccPlan getAccCode() {
-		return AccPlan;
-	}
+  public AnlPlan getAnlCode5() {
+    return anlCode5;
+  }
 
 
-	public Currency getCurrencyCode() {
-		return currencyCode;
-	}
+  public AccPlan getAccCode() {
+    return AccPlan;
+  }
 
 
-	public Period getPeriod1() {
-		return period1;
-	}
+  public Currency getCurrencyCode() {
+    return currencyCode;
+  }
 
 
-	public Period getPeriod2() {
-		return period2;
-	}
+  public Period getPeriod1() {
+    return period1;
+  }
+
+
+  public Period getPeriod2() {
+    return period2;
+  }
 
 }

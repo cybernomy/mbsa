@@ -19,19 +19,19 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
  * Контроллер формы поддержки "Образцов прочих банковских документов"
- * 
+ *
  * @author leonova
  * @version $Id: BankDocumentModelOtherMt.java,v 1.2 2007/05/22 07:53:31 sharapov Exp $
  */
 public class BankDocumentModelOtherMt extends DocumentModelMaintenanceForm {
-	
-	protected String[] contractorToKinds;
-	protected String[] contractorFromKinds;
-	
-	public BankDocumentModelOtherMt() {
-		super();
-		contractorFromKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
-		contractorToKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
-	}
-	
+
+  protected String[] contractorToKinds;
+  protected String[] contractorFromKinds;
+
+  public BankDocumentModelOtherMt() {
+    super();
+    contractorFromKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+    contractorToKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+  }
+
 }

@@ -8,14 +8,14 @@ import com.mg.merp.manufacture.model.InputDocumentModel;
 
 /**
  * Local interface for InputMachineModelService.
- * @since 12.10.2004
+ *
  * @xdoclet-generated at 28-02-06
+ * @since 12.10.2004
  */
 public interface InputMachineModelServiceLocal
-   extends DocumentPattern<InputDocumentModel, Integer>
-{
-	/**
-	 * тип папки для образцов актов на списание времени, отработанного РС в НЗП
-	 */
-	final static short FOLDER_PART = 12513;
+    extends DocumentPattern<InputDocumentModel, Integer> {
+  /**
+   * тип папки для образцов актов на списание времени, отработанного РС в НЗП
+   */
+  final static short FOLDER_PART = 12513;
 }

@@ -22,8 +22,8 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class PlanningLevelSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/mfreference/PlanningLevel";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/mfreference/PlanningLevel";
+  }
 }

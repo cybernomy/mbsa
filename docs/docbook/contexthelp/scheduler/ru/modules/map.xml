@@ -14,7 +14,7 @@
 <!-- $Id: map.xml,v 1.1 2008/05/06 10:41:48 safonov Exp $ -->
 
 <map version="1.0">
-  <mapID target="scheduler_html" url="scheduler.html" /> 
-  <mapID target="schtask_html" url="schtask.html" />
-  <mapID target="cron_html" url="cron.html" />
+  <mapID target="scheduler_html" url="scheduler.html"/>
+  <mapID target="schtask_html" url="schtask.html"/>
+  <mapID target="cron_html" url="cron.html"/>
 </map> 

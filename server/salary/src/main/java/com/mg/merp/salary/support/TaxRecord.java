@@ -18,75 +18,68 @@ import java.util.Date;
 
 /**
  * Запись о налоге
- * 
- * @see SalaryHelper#getTaxByIncome(String, Date, int, double)
- * @see SalaryHelper#getTaxByNumber(String, Date, int, int)
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id$
+ * @see SalaryHelper#getTaxByIncome(String, Date, int, double)
+ * @see SalaryHelper#getTaxByNumber(String, Date, int, int)
  */
 public class TaxRecord {
-	private final int rateNumber;
-	private final double minIncome;
-	private final double maxIncome;
-	private final double percent;
-	private final double constValue;
-	private final double privilegeRatio;
-	
-	public TaxRecord(int rateNumber, double minIncome, double maxIncome, double percent, double constValue, double privilegeRatio) {
-		this.rateNumber = rateNumber;
-		this.minIncome = minIncome;
-		this.maxIncome = maxIncome;
-		this.percent = percent;
-		this.constValue = constValue;
-		this.privilegeRatio = privilegeRatio;
-	}
+  private final int rateNumber;
+  private final double minIncome;
+  private final double maxIncome;
+  private final double percent;
+  private final double constValue;
+  private final double privilegeRatio;
 
-	/**
-	 * 
-	 * @return фиксированная сумма
-	 */
-	public double getConstValue() {
-		return constValue;
-	}
+  public TaxRecord(int rateNumber, double minIncome, double maxIncome, double percent, double constValue, double privilegeRatio) {
+    this.rateNumber = rateNumber;
+    this.minIncome = minIncome;
+    this.maxIncome = maxIncome;
+    this.percent = percent;
+    this.constValue = constValue;
+    this.privilegeRatio = privilegeRatio;
+  }
 
-	/**
-	 * 
-	 * @return максимальный доход, до которого действует данная ставка
-	 */
-	public double getMaxIncome() {
-		return maxIncome;
-	}
+  /**
+   * @return фиксированная сумма
+   */
+  public double getConstValue() {
+    return constValue;
+  }
 
-	/**
-	 * 
-	 * @return минимальный доход, начиная с которого действует данная ставка
-	 */
-	public double getMinIncome() {
-		return minIncome;
-	}
+  /**
+   * @return максимальный доход, до которого действует данная ставка
+   */
+  public double getMaxIncome() {
+    return maxIncome;
+  }
 
-	/**
-	 * 
-	 * @return процент ставки
-	 */
-	public double getPercent() {
-		return percent;
-	}
+  /**
+   * @return минимальный доход, начиная с которого действует данная ставка
+   */
+  public double getMinIncome() {
+    return minIncome;
+  }
 
-	/**
-	 * 
-	 * @return коэффициент для льгот
-	 */
-	public double getPrivilegeRatio() {
-		return privilegeRatio;
-	}
+  /**
+   * @return процент ставки
+   */
+  public double getPercent() {
+    return percent;
+  }
 
-	/**
-	 * 
-	 * @return номер ставки
-	 */
-	public int getRateNumber() {
-		return rateNumber;
-	}
+  /**
+   * @return коэффициент для льгот
+   */
+  public double getPrivilegeRatio() {
+    return privilegeRatio;
+  }
+
+  /**
+   * @return номер ставки
+   */
+  public int getRateNumber() {
+    return rateNumber;
+  }
 }

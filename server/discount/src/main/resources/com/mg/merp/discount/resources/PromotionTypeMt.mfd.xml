@@ -13,18 +13,21 @@
 
 <!-- $Id: PromotionTypeMt.mfd.xml,v 1.3 2007/11/14 13:48:58 konyashkina Exp $ -->
 
-<jfd:form  xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.discount.resources.formelements#PromotionTypeMt.Title" helpTopic="discount#promotype_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.discount.resources.formelements#PromotionTypeMt.Title"
+          helpTopic="discount#promotype_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
-		
-		<jfd:container id="allFields" layout="jfd:defaultMtLayout" >		
- 			<jfd:border style="bevel" type="raised" />
-	  		<jfd:field id="Name" /> 
-	  		<jfd:field id="Code" />
-	  		<jfd:field id="Bai" sameLine="true" />
-	  		<jfd:field id="Description" />
-		</jfd:container>
-		
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
+
+  <jfd:container id="allFields" layout="jfd:defaultMtLayout">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Name"/>
+    <jfd:field id="Code"/>
+    <jfd:field id="Bai" sameLine="true"/>
+    <jfd:field id="Description"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

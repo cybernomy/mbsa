@@ -25,42 +25,43 @@ import com.mg.merp.warehouse.model.StockPlanHistory;
 /**
  * Абстрактный класс-предок для классов-стратегий откатов операций складского планирования и
  * резервирования
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: AbstractWarehouseRollbackPlanReservStrategy.java,v 1.7 2008/04/18 15:18:19 safonov Exp $ 
+ * @version $Id: AbstractWarehouseRollbackPlanReservStrategy.java,v 1.7 2008/04/18 15:18:19 safonov
+ *          Exp $
  */
 public abstract class AbstractWarehouseRollbackPlanReservStrategy implements
-		WarehouseRollbackStrategy {
+    WarehouseRollbackStrategy {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.warehouse.generic.WarehouseRollbackStrategy#doRollback(com.mg.merp.document.model.DocSpec)
-	 */
-	public void rollback(WarehouseProcessDocumentLineData docLineData) {
-		PersistentManager pm = ServerUtils.getPersistentManager();
-		
-		Integer id = docLineData.getDocumentSpecItem().getData2();
-		if (id != null)
-			doRollback(pm.find(StockPlanHistory.class, id));
-		id = docLineData.getDocumentSpecItem().getData1();
-		if (id != null)
-			doRollback(pm.find(StockPlanHistory.class, id));
-	}
-	
-	private void doRollback(StockPlanHistory history) {
-		if (history == null)
-			throw new HistoryNotFoundException();
+  /* (non-Javadoc)
+   * @see com.mg.merp.warehouse.generic.WarehouseRollbackStrategy#doRollback(com.mg.merp.document.model.DocSpec)
+   */
+  public void rollback(WarehouseProcessDocumentLineData docLineData) {
+    PersistentManager pm = ServerUtils.getPersistentManager();
 
-		WarehousePlanHistoryServiceLocal wphServ = (WarehousePlanHistoryServiceLocal) ApplicationDictionaryLocator.locate()
-				.getBusinessService(WarehousePlanHistoryServiceLocal.LOCAL_SERVICE_NAME);
-		wphServ.erase(history);
-		rollbackOperation(history);
-	}
+    Integer id = docLineData.getDocumentSpecItem().getData2();
+    if (id != null)
+      doRollback(pm.find(StockPlanHistory.class, id));
+    id = docLineData.getDocumentSpecItem().getData1();
+    if (id != null)
+      doRollback(pm.find(StockPlanHistory.class, id));
+  }
 
-	/**
-	 * реализация операции отката
-	 * 
-	 * @param history	история
-	 */
-	protected abstract void rollbackOperation(StockPlanHistory history);
+  private void doRollback(StockPlanHistory history) {
+    if (history == null)
+      throw new HistoryNotFoundException();
+
+    WarehousePlanHistoryServiceLocal wphServ = (WarehousePlanHistoryServiceLocal) ApplicationDictionaryLocator.locate()
+        .getBusinessService(WarehousePlanHistoryServiceLocal.LOCAL_SERVICE_NAME);
+    wphServ.erase(history);
+    rollbackOperation(history);
+  }
+
+  /**
+   * реализация операции отката
+   *
+   * @param history история
+   */
+  protected abstract void rollbackOperation(StockPlanHistory history);
 
 }

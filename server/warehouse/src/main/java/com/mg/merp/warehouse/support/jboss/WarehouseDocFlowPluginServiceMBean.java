@@ -17,13 +17,13 @@ import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис дополнительных модулей подсистемы "Склад"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: WarehouseDocFlowPluginServiceMBean.java,v 1.1 2007/02/22 10:18:23 poroxnenko Exp $ 
+ * @version $Id: WarehouseDocFlowPluginServiceMBean.java,v 1.1 2007/02/22 10:18:23 poroxnenko Exp $
  */
 public interface WarehouseDocFlowPluginServiceMBean extends ServiceMBean {
-	/**
-	 * наименование сервиса
-	 */
-	final static String SERVICE_NAME = "merp:warehouse=DocFlowPluginService"; //$NON-NLS-1$
+  /**
+   * наименование сервиса
+   */
+  final static String SERVICE_NAME = "merp:warehouse=DocFlowPluginService"; //$NON-NLS-1$
 }

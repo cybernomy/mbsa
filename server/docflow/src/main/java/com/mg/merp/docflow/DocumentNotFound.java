@@ -19,14 +19,14 @@ import com.mg.merp.docflow.support.Messages;
 
 /**
  * Класс ИС документ не найден
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: DocumentNotFound.java,v 1.2 2006/08/25 11:44:01 safonov Exp $
  */
 @javax.ejb.ApplicationException
 public class DocumentNotFound extends BusinessException {
 
-	public DocumentNotFound() {
-		super(Messages.getInstance().getMessage(Messages.DOCUMENT_NOT_FOUND_MESSAGE));
-	}
+  public DocumentNotFound() {
+    super(Messages.getInstance().getMessage(Messages.DOCUMENT_NOT_FOUND_MESSAGE));
+  }
 }

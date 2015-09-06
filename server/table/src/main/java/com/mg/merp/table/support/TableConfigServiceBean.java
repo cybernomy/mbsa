@@ -15,20 +15,20 @@
 
 package com.mg.merp.table.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.table.TableConfigServiceLocal;
 import com.mg.merp.table.model.TableConfig;
 
+import javax.ejb.Stateless;
+
 /**
  * Реализация бизнес-компонента "Конфигурация модуля <Табельный учет>"
- * 
+ *
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
  * @version $Id: TableConfigServiceBean.java,v 1.5 2007/01/13 13:33:04 sharapov Exp $
  */
-@Stateless(name="merp/table/TableConfigService") //$NON-NLS-1$
+@Stateless(name = "merp/table/TableConfigService") //$NON-NLS-1$
 public class TableConfigServiceBean extends AbstractPOJODataBusinessObjectServiceBean<TableConfig, Integer> implements TableConfigServiceLocal {
 
 }

@@ -15,8 +15,6 @@
 
 package com.mg.merp.reference.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
@@ -24,33 +22,35 @@ import com.mg.framework.utils.StringUtils;
 import com.mg.merp.reference.OkdpServiceLocal;
 import com.mg.merp.reference.model.Okdp;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Коды ОКР" 
- * 
+ * Бизнес-компонент "Коды ОКР"
+ *
  * @author leonova
  * @version $Id: OkdpServiceBean.java,v 1.4 2006/10/19 04:27:51 leonova Exp $
  */
-@Stateless(name="merp/reference/OkdpService")
- public class OkdpServiceBean extends AbstractPOJODataBusinessObjectServiceBean<Okdp, String> implements OkdpServiceLocal {
+@Stateless(name = "merp/reference/OkdpService")
+public class OkdpServiceBean extends AbstractPOJODataBusinessObjectServiceBean<Okdp, String> implements OkdpServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, Okdp entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));
-		context.addRule(new MandatoryStringAttribute(entity, "OName"));		
-	}
+  @Override
+  protected void onValidate(ValidationContext context, Okdp entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+    context.addRule(new MandatoryStringAttribute(entity, "OName"));
+  }
 
-	private void adjustOkdp(Okdp entity) {
-		entity.setUpCode(StringUtils.toUpperCase(entity.getCode()));
-	}
-	
-	@Override
-	protected void onCreate(Okdp entity) {
-		adjustOkdp(entity);
-	}
+  private void adjustOkdp(Okdp entity) {
+    entity.setUpCode(StringUtils.toUpperCase(entity.getCode()));
+  }
 
-	@Override
-	protected void onStore(Okdp entity) {
-		adjustOkdp(entity);
-	}
-	
- }
+  @Override
+  protected void onCreate(Okdp entity) {
+    adjustOkdp(entity);
+  }
+
+  @Override
+  protected void onStore(Okdp entity) {
+    adjustOkdp(entity);
+  }
+
+}

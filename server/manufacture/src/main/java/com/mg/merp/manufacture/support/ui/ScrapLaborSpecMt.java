@@ -17,16 +17,17 @@ package com.mg.merp.manufacture.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы поддержки спецификации актов на списание потерь времени, отработанного рабочей силой"
- * 
+ * Контроллер формы поддержки спецификации актов на списание потерь времени, отработанного рабочей
+ * силой"
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: ScrapLaborSpecMt.java,v 1.3 2006/08/28 04:32:12 leonova Exp $
  */
 public class ScrapLaborSpecMt extends GoodsDocumentSpecMaintenanceForm {
 
-	public ScrapLaborSpecMt() throws Exception {
-		super();
+  public ScrapLaborSpecMt() throws Exception {
+    super();
 
-	}
+  }
 
 }

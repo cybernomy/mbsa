@@ -15,27 +15,27 @@
 
 package com.mg.merp.crm.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.crm.DeliveryKindServiceLocal;
 import com.mg.merp.crm.model.DeliveryKind;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Виды доставки" 
- * 
+ * Бизнес-компонент "Виды доставки"
+ *
  * @author leonova
  * @version $Id: DeliveryKindServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $
  */
-@Stateless(name="merp/crm/DeliveryKindService")
+@Stateless(name = "merp/crm/DeliveryKindService")
 public class DeliveryKindServiceBean extends AbstractPOJODataBusinessObjectServiceBean<DeliveryKind, Integer> implements DeliveryKindServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, DeliveryKind entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));
-	}
+  @Override
+  protected void onValidate(ValidationContext context, DeliveryKind entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+  }
 
 
 }

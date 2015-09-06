@@ -30,27 +30,27 @@ import com.mg.merp.reference.model.OrgUnit;
  */
 public class FinCenterMt extends DefaultMaintenanceForm {
 
-	public void onActionAddOrgUnit(WidgetEvent event) throws Exception {
-		final OrgUnitServiceLocal service = (OrgUnitServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/OrgUnit");
-		final SearchHelpForm searchHelp = (SearchHelpForm) ApplicationDictionaryLocator.locate().getBrowseForm(service, null);
-		
-		searchHelp.addSearchHelpListener(new SearchHelpListener(){
-			
-			public void searchCanceled(SearchHelpEvent event) {
-				
-			}
+  public void onActionAddOrgUnit(WidgetEvent event) throws Exception {
+    final OrgUnitServiceLocal service = (OrgUnitServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/OrgUnit");
+    final SearchHelpForm searchHelp = (SearchHelpForm) ApplicationDictionaryLocator.locate().getBrowseForm(service, null);
 
-			public void searchPerformed(SearchHelpEvent event) {
-				final OrgUnit orgUnit = ((OrgUnit) event.getItems()[0]);
-				Center center = (Center)getEntity();
-				center.setCode(orgUnit.getCode());
-				center.setName(orgUnit.getFullName());
-				center.setUpCode(orgUnit.getUpCode());
-				view.flushModel();
-			}
-			
-		});
-		searchHelp.run();
-	}
-	
+    searchHelp.addSearchHelpListener(new SearchHelpListener() {
+
+      public void searchCanceled(SearchHelpEvent event) {
+
+      }
+
+      public void searchPerformed(SearchHelpEvent event) {
+        final OrgUnit orgUnit = ((OrgUnit) event.getItems()[0]);
+        Center center = (Center) getEntity();
+        center.setCode(orgUnit.getCode());
+        center.setName(orgUnit.getFullName());
+        center.setUpCode(orgUnit.getUpCode());
+        view.flushModel();
+      }
+
+    });
+    searchHelp.run();
+  }
+
 }

@@ -20,9 +20,9 @@ package com.mg.merp.mfreference.support.ui;
  */
 public class BucketBeginSearchHelp extends BucketSearchHelp {
 
-	@Override
-	protected boolean isBegin() {
-		return true;
-	}
+  @Override
+  protected boolean isBegin() {
+    return true;
+  }
 
 }

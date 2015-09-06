@@ -18,10 +18,8 @@ import com.mg.merp.document.generic.ui.GoodsDocumentRest;
 
 
 /**
- * 
  * @author leonova
  * @version $Id: InventoryActHeadRest.java,v 1.2 2006/09/07 05:22:23 leonova Exp $
- *
  */
 public class InventoryActHeadRest extends GoodsDocumentRest {
 

@@ -22,58 +22,59 @@ import com.mg.merp.factura.FacturaProcessorServiceLocal;
 
 /**
  * Реализация фабрики реализаций этапа ДО "Регистрация даты оприходования"
- * 
+ *
  * @author Artem V. Sharapov
- * @version $Id: RegisterStockDateDocFlowPluginFactory.java,v 1.1 2009/03/16 14:30:34 sharapov Exp $
+ * @version $Id: RegisterStockDateDocFlowPluginFactory.java,v 1.1 2009/03/16 14:30:34 sharapov Exp
+ *          $
  */
 public class RegisterStockDateDocFlowPluginFactory extends AbstractDocFlowPluginFactory {
-	
-	public final static int FACTORY_IDENTIFIER = 15;
-	
-	
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
-	 */
-	@Override
-	protected DocFlowPlugin doCreatePlugin() {
-		return new AbstractDocFlowPlugin() {
-			
-			private FacturaProcessorServiceLocal facturaProcessorService = (FacturaProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(FacturaProcessorServiceLocal.SERVICE_NAME);
-			
-			/* (non-Javadoc)
-			 * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doExecute()
-			 */
-			@Override
-			protected void doExecute() throws Exception {
-				facturaProcessorService.registerStockDate(getParams());
-				complete();
-			}
 
-			/* (non-Javadoc)
-			 * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doRoolback()
-			 */
-			@Override
-			protected void doRoolback() throws Exception {
-				facturaProcessorService.rollBackRegisterStockDate(getParams());
-				complete();
-			}
-		};
-	}
+  public final static int FACTORY_IDENTIFIER = 15;
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
-	 */
-	@Override
-	public int getIdentifier() {
-		return FACTORY_IDENTIFIER;
-	}
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
-	 */
-	@Override
-	public String getName() {
-		return "Register stock date"; //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
+   */
+  @Override
+  protected DocFlowPlugin doCreatePlugin() {
+    return new AbstractDocFlowPlugin() {
+
+      private FacturaProcessorServiceLocal facturaProcessorService = (FacturaProcessorServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(FacturaProcessorServiceLocal.SERVICE_NAME);
+
+      /* (non-Javadoc)
+       * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doExecute()
+       */
+      @Override
+      protected void doExecute() throws Exception {
+        facturaProcessorService.registerStockDate(getParams());
+        complete();
+      }
+
+      /* (non-Javadoc)
+       * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doRoolback()
+       */
+      @Override
+      protected void doRoolback() throws Exception {
+        facturaProcessorService.rollBackRegisterStockDate(getParams());
+        complete();
+      }
+    };
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
+   */
+  @Override
+  public int getIdentifier() {
+    return FACTORY_IDENTIFIER;
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
+   */
+  @Override
+  public String getName() {
+    return "Register stock date"; //$NON-NLS-1$
+  }
 
 }

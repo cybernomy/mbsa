@@ -13,77 +13,130 @@
 
 <!-- $Id: AddressMt.mfd.xml,v 1.5 2007/07/16 13:23:57 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.personnelref.support.ui.AddressMt" title="resource://com.mg.merp.personnelref.resources.formelements#Address.FormMt.Title" helpTopic="personnelref#address_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.personnelref.support.ui.AddressMt"
+          title="resource://com.mg.merp.personnelref.resources.formelements#Address.FormMt.Title"
+          helpTopic="personnelref#address_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		
-		<jfd:container id="CommonFields" layout="jfd:box" alignment="expand_expand" label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.ActFrom">
-	 		<jfd:field id="BeginDate" alignment="left_expand" showLabel="false" />
-	 		<jfd:field id="AddressKind" editorType="comboBox" alignment="expand_expand" />
-		</jfd:container>
-		<jfd:field id="FullAddress" readOnly="true" />
-		<jfd:button id="refreshFullAddress" alignment="expand_expand" text="resource://com.mg.merp.personnelref.resources.formelements#Refresh" actionListener="RefreshFullAddress" />
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
- 		<jfd:container id="AddressCountry" layout="jfd:box" label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.Country">
-	 		<jfd:field id="Country" alignment="expand_expand" showLabel="false" readOnly="true" />
-			<jfd:button id="clearCountry" alignment="right_expand" icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ClearCountry" />
-			<jfd:button id="chooseCountry" alignment="right_expand" text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseCountry" />
-			<jfd:field id="PostIndex" />
- 		</jfd:container>
-		
-		<jfd:container id="AddressRegion" layout="jfd:box" label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.Region">
-			<jfd:field id="Region" alignment="expand_expand" showLabel="false" readOnly="true" />
-			<jfd:button id="clearRegion" alignment="right_expand" icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ClearRegion" />
-			<jfd:button id="chooseRegion" alignment="right_expand" text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseRegion" />
-			<jfd:field id="RegionType" />
-			<jfd:button id="chooseRegionType" text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points" actionListener="ChooseRegionType" />
-		</jfd:container>
-		
-		<jfd:container id="AddressDistict" layout="jfd:box" label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.District">
-			<jfd:field id="District" alignment="expand_expand" showLabel="false" />
-			<jfd:button id="clearDistrict" alignment="right_expand" icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ClearDistrict" />
-			<jfd:button id="chooseDistrict" alignment="right_expand" text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseDistrict" />
-			<jfd:field id="DistrictType" />
-			<jfd:button id="chooseDistrictType" text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points" actionListener="ChooseDistrictType" />
-		</jfd:container>
-		
+    <jfd:container id="CommonFields" layout="jfd:box" alignment="expand_expand"
+                   label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.ActFrom">
+      <jfd:field id="BeginDate" alignment="left_expand" showLabel="false"/>
+      <jfd:field id="AddressKind" editorType="comboBox" alignment="expand_expand"/>
+    </jfd:container>
+    <jfd:field id="FullAddress" readOnly="true"/>
+    <jfd:button id="refreshFullAddress" alignment="expand_expand"
+                text="resource://com.mg.merp.personnelref.resources.formelements#Refresh"
+                actionListener="RefreshFullAddress"/>
 
-		<jfd:container id="AddressCity" layout="jfd:box" label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.City">
-			<jfd:field id="City" alignment="expand_expand" showLabel="false" />
-			<jfd:button id="clearCity" alignment="right_expand" icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ClearCity" />
-			<jfd:button id="chooseCity" alignment="right_expand" text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseCity" />
-			<jfd:field id="CityType" />
-			<jfd:button id="chooseCityType" sameLine="true" text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points" actionListener="ChooseCityType" />
-		</jfd:container>
-		
-		<jfd:container id="AddressArea" layout="jfd:box" label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.Area">
-			<jfd:field id="Area" alignment="expand_expand" showLabel="false" />
-			<jfd:button id="clearArea" alignment="right_expand" icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ClearArea" />
-			<jfd:button id="chooseArea" alignment="right_expand" text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseArea" />
-			<jfd:field id="AreaType" />
-			<jfd:button id="chooseAreaType" sameLine="true" text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points" actionListener="ChooseAreaType" />
-		</jfd:container>
-		
-		<jfd:container id="AddressStreet" layout="jfd:box" label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.Street">
-			<jfd:field id="Street" alignment="expand_expand" showLabel="false" />
-			<jfd:button id="clearStreet" alignment="right_expand" icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ClearStreet" />
-			<jfd:button id="chooseStreet" alignment="right_expand" text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseStreet" />
-			<jfd:field id="StreetType" />
-			<jfd:button id="chooseStreetType" sameLine="true" text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points" actionListener="ChooseStreetType" />
-		</jfd:container>
+    <jfd:container id="AddressCountry" layout="jfd:box"
+                   label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.Country">
+      <jfd:field id="Country" alignment="expand_expand" showLabel="false" readOnly="true"/>
+      <jfd:button id="clearCountry" alignment="right_expand"
+                  icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0"
+                  maximumSize="22,0" preferredSize="22,0" actionListener="ClearCountry"/>
+      <jfd:button id="chooseCountry" alignment="right_expand"
+                  text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points"
+                  minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+                  actionListener="ChooseCountry"/>
+      <jfd:field id="PostIndex"/>
+    </jfd:container>
 
-		<jfd:container id="AddressFullHouse" layout="jfd:box" label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.FullHouse">
-			<jfd:field id="House" showLabel="false" alignment="left_expand" /> 
-			<jfd:field id="Block" alignment="expand_expand" /> 			
-			<jfd:field id="Flat" alignment="expand_expand" /> 
-		</jfd:container>
-			
-		<jfd:field id="KladrCode" readOnly="true" /> 							
-	</jfd:container>
+    <jfd:container id="AddressRegion" layout="jfd:box"
+                   label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.Region">
+      <jfd:field id="Region" alignment="expand_expand" showLabel="false" readOnly="true"/>
+      <jfd:button id="clearRegion" alignment="right_expand"
+                  icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0"
+                  maximumSize="22,0" preferredSize="22,0" actionListener="ClearRegion"/>
+      <jfd:button id="chooseRegion" alignment="right_expand"
+                  text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points"
+                  minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+                  actionListener="ChooseRegion"/>
+      <jfd:field id="RegionType"/>
+      <jfd:button id="chooseRegionType"
+                  text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points"
+                  actionListener="ChooseRegionType"/>
+    </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:container id="AddressDistict" layout="jfd:box"
+                   label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.District">
+      <jfd:field id="District" alignment="expand_expand" showLabel="false"/>
+      <jfd:button id="clearDistrict" alignment="right_expand"
+                  icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0"
+                  maximumSize="22,0" preferredSize="22,0" actionListener="ClearDistrict"/>
+      <jfd:button id="chooseDistrict" alignment="right_expand"
+                  text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points"
+                  minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+                  actionListener="ChooseDistrict"/>
+      <jfd:field id="DistrictType"/>
+      <jfd:button id="chooseDistrictType"
+                  text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points"
+                  actionListener="ChooseDistrictType"/>
+    </jfd:container>
+
+
+    <jfd:container id="AddressCity" layout="jfd:box"
+                   label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.City">
+      <jfd:field id="City" alignment="expand_expand" showLabel="false"/>
+      <jfd:button id="clearCity" alignment="right_expand"
+                  icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0"
+                  maximumSize="22,0" preferredSize="22,0" actionListener="ClearCity"/>
+      <jfd:button id="chooseCity" alignment="right_expand"
+                  text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points"
+                  minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+                  actionListener="ChooseCity"/>
+      <jfd:field id="CityType"/>
+      <jfd:button id="chooseCityType" sameLine="true"
+                  text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points"
+                  actionListener="ChooseCityType"/>
+    </jfd:container>
+
+    <jfd:container id="AddressArea" layout="jfd:box"
+                   label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.Area">
+      <jfd:field id="Area" alignment="expand_expand" showLabel="false"/>
+      <jfd:button id="clearArea" alignment="right_expand"
+                  icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0"
+                  maximumSize="22,0" preferredSize="22,0" actionListener="ClearArea"/>
+      <jfd:button id="chooseArea" alignment="right_expand"
+                  text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points"
+                  minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+                  actionListener="ChooseArea"/>
+      <jfd:field id="AreaType"/>
+      <jfd:button id="chooseAreaType" sameLine="true"
+                  text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points"
+                  actionListener="ChooseAreaType"/>
+    </jfd:container>
+
+    <jfd:container id="AddressStreet" layout="jfd:box"
+                   label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.Street">
+      <jfd:field id="Street" alignment="expand_expand" showLabel="false"/>
+      <jfd:button id="clearStreet" alignment="right_expand"
+                  icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0"
+                  maximumSize="22,0" preferredSize="22,0" actionListener="ClearStreet"/>
+      <jfd:button id="chooseStreet" alignment="right_expand"
+                  text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points"
+                  minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+                  actionListener="ChooseStreet"/>
+      <jfd:field id="StreetType"/>
+      <jfd:button id="chooseStreetType" sameLine="true"
+                  text="resource://com.mg.merp.personnelref.resources.formelements#Choose3points"
+                  actionListener="ChooseStreetType"/>
+    </jfd:container>
+
+    <jfd:container id="AddressFullHouse" layout="jfd:box"
+                   label="resource://com.mg.merp.personnelref.resources.formelements#AddressMt.FullHouse">
+      <jfd:field id="House" showLabel="false" alignment="left_expand"/>
+      <jfd:field id="Block" alignment="expand_expand"/>
+      <jfd:field id="Flat" alignment="expand_expand"/>
+    </jfd:container>
+
+    <jfd:field id="KladrCode" readOnly="true"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

@@ -29,40 +29,40 @@ import com.mg.merp.account.model.AccKind;
  */
 public class AccGroupSearchHelp extends AbstractSearchHelp {
 
-	protected String accKindContextName = "AccKind";
-	
-	@Override
-	protected String[] defineImportContext() {
-		return new String[] {accKindContextName};
-	}
+  protected String accKindContextName = "AccKind";
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
-	 */
-	@Override
-	protected void doSearch() throws Exception {		
-		AccGroupSearchForm form = (AccGroupSearchForm) UIProducer.produceForm("com/mg/merp/account/resources/AccGroupSearchForm.mfd.xml");
-		form.addSearchHelpListener(this);
-		form.setAccKind((AccKind) getImportContextValue(accKindContextName));
-		form.run(UIUtils.isModalMode());
-	}
+  @Override
+  protected String[] defineImportContext() {
+    return new String[]{accKindContextName};
+  }
 
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doView(com.mg.framework.api.orm.PersistentObject)
-	 */
-	@Override
-	protected void doView(PersistentObject entity) {
-		AccGroupServiceLocal service = (AccGroupServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/account/AccGroup");
-		MaintenanceHelper.view(service, (Integer) entity.getPrimaryKey(), null, null);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
+   */
+  @Override
+  protected void doSearch() throws Exception {
+    AccGroupSearchForm form = (AccGroupSearchForm) UIProducer.produceForm("com/mg/merp/account/resources/AccGroupSearchForm.mfd.xml");
+    form.addSearchHelpListener(this);
+    form.setAccKind((AccKind) getImportContextValue(accKindContextName));
+    form.run(UIUtils.isModalMode());
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.SearchHelp#isSupportView()
-	 */
-	@Override
-	public boolean isSupportView() {
-		return true;
-	}
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doView(com.mg.framework.api.orm.PersistentObject)
+   */
+  @Override
+  protected void doView(PersistentObject entity) {
+    AccGroupServiceLocal service = (AccGroupServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/account/AccGroup");
+    MaintenanceHelper.view(service, (Integer) entity.getPrimaryKey(), null, null);
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.SearchHelp#isSupportView()
+   */
+  @Override
+  public boolean isSupportView() {
+    return true;
+  }
 
 }

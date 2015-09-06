@@ -18,13 +18,13 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
  * @author leonova
- * @version $Id: NationalitySearchHelp.java,v 1.1 2006/07/11 06:51:34 leonova Exp $ 
+ * @version $Id: NationalitySearchHelp.java,v 1.1 2006/07/11 06:51:34 leonova Exp $
  */
-public class NationalitySearchHelp extends DefaultLegacySearchHelp{
+public class NationalitySearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/reference/Nationality";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/reference/Nationality";
+  }
 
 }

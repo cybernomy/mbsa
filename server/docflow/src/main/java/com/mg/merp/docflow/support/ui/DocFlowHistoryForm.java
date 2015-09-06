@@ -14,9 +14,6 @@
  */
 package com.mg.merp.docflow.support.ui;
 
-import java.io.Serializable;
-import java.util.List;
-
 import com.mg.framework.api.orm.OrmTemplate;
 import com.mg.framework.api.ui.WidgetEvent;
 import com.mg.framework.generic.ui.AbstractForm;
@@ -32,145 +29,144 @@ import com.mg.merp.docflow.support.Messages;
 import com.mg.merp.docprocess.model.DocHeadState;
 import com.mg.merp.document.model.DocHead;
 
+import java.io.Serializable;
+import java.util.List;
+
 /**
  * Форма истории выполнения ДО
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: DocFlowHistoryForm.java,v 1.11 2006/12/12 14:54:37 safonov Exp $
  */
 public class DocFlowHistoryForm extends AbstractForm {
-	private final static String LOAD_DOCUMENT_HISTORY_EJBQL = "select new com.mg.merp.docflow.support.ui.DocHistory(da.Id, da.ActionType, stdSt.Name, st.Name, da.StageState, (select sum(dhs.ReadySum) from da.DocHeadStates dhs)) from DocAction da left join da.Stage st left join st.Stage stdSt where da.DocHead.Id = :docId order by da";
-	private final static String LOAD_DOCHEAD_STATE_BROWSE_EJBQL = "from DocHeadState dhs where dhs.DocAction.Id = :docActionId order by dhs.Id";
+  private final static String LOAD_DOCUMENT_HISTORY_EJBQL = "select new com.mg.merp.docflow.support.ui.DocHistory(da.Id, da.ActionType, stdSt.Name, st.Name, da.StageState, (select sum(dhs.ReadySum) from da.DocHeadStates dhs)) from DocAction da left join da.Stage st left join st.Stage stdSt where da.DocHead.Id = :docId order by da";
+  private final static String LOAD_DOCHEAD_STATE_BROWSE_EJBQL = "from DocHeadState dhs where dhs.DocAction.Id = :docActionId order by dhs.Id";
+  protected DefaultTableController docHistory;
+  protected DefaultTableController docActionHistory;
+  private DocHeadState currentDocHeadState;
 
-	private DocHeadState currentDocHeadState;
-	
-	protected DefaultTableController docHistory;
-	protected DefaultTableController docActionHistory;
-	
-	public DocFlowHistoryForm() {
-		this.docHistory = new DefaultTableController(new DocHistoryController());
-		this.docActionHistory = new DefaultTableController(new DocHeadStateController());
-	}
-	
-	private class DocHistoryController extends AbstractTableModel {
-		private List<DocHistory> docHistoryModel;
-		private String[] columnsName;
-		
-		/* (non-Javadoc)
-		 * @see com.mg.framework.generic.ui.AbstractTableModel#doSetColumns(com.mg.framework.support.ui.widget.TableColumnModel[])
-		 */
-		@Override
-		protected void doSetColumns(TableColumnModel[] columns) {
-			this.columnsName = new String[columns.length];
-			for (int i = 0; i < columns.length; i++)
-				this.columnsName[i] = columns[i].getTitle();
-		}
+  public DocFlowHistoryForm() {
+    this.docHistory = new DefaultTableController(new DocHistoryController());
+    this.docActionHistory = new DefaultTableController(new DocHeadStateController());
+  }
 
-		/* (non-Javadoc)
-		 * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getColumnName(int)
-		 */
-		public String getColumnName(int column) {
-			return columnsName[column];
-		}
+  private List<DocHeadState> loadDocHeadStateBrowse(Integer actionId) {
+    List<DocHeadState> result = MiscUtils.convertUncheckedList(DocHeadState.class, OrmTemplate.getInstance().findByNamedParam(LOAD_DOCHEAD_STATE_BROWSE_EJBQL, "docActionId", actionId));
+    //stupid approach for resolve lazy initialize exception
+    for (DocHeadState docHeadState : result) {
+      docHeadState.getUser().getName();
+      if (docHeadState.getDocAction().getStage() != null)
+        docHeadState.getDocAction().getStage().getStage().getId();
+    }
+    return result;
+  }
 
-		/* (non-Javadoc)
-		 * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getValueAt(int, int)
-		 */
-		public Object getValueAt(int row, int column) {
-			DocHistory history = docHistoryModel.get(row);
-			switch (column) {
-			case 0: return MiscUtils.getEnumTextRepresentation(history.getActionType());
-			case 1: return history.getName();
-			case 2: return MiscUtils.getEnumTextRepresentation(history.getStageState());
-			case 3: return history.getReadyAmount();
-			default:
-				return "";
-			}
-		}
+  /**
+   * Обработчик события "Закрыть форму"
+   */
+  public void onActionOk(WidgetEvent event) {
+    close();
+  }
 
-		/* (non-Javadoc)
-		 * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getColumnCount()
-		 */
-		public int getColumnCount() {
-			return columnsName.length;
-		}
+  /**
+   * обработчик события "Показать результат выполнения ДО"
+   */
+  public void onActionShowDocActionResult(WidgetEvent event) {
+    DocFlowPlugin plugin = ((DocHeadStateController) docActionHistory.getModel()).getDocFlowPlugin(currentDocHeadState);
+    if (plugin != null)
+      plugin.showDocActionResult(currentDocHeadState);
+  }
 
-		/* (non-Javadoc)
-		 * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getRowCount()
-		 */
-		public int getRowCount() {
-			return docHistoryModel.size();
-		}
+  /**
+   * показать форму
+   */
+  public void execute(Serializable documentId) {
+    DocHead docHead = ServerUtils.getPersistentManager().find(DocHead.class, documentId);
+    setTitle(String.format(ServerUtils.getUserLocale(), Messages.getInstance().getMessage(Messages.DOCFLOW_HISTORY_TITLE), DocumentUtils.generateDocumentTitle(docHead)));
 
-		/* (non-Javadoc)
-		 * @see com.mg.framework.support.ui.widget.TableControllerAdapter#setCurrentRow(int)
-		 */
-		public void setSelectedRows(int[] rows) {
-			if (rows.length != 0) {
-				DocHeadStateController history = (DocHeadStateController) docActionHistory.getModel();
-				history.setStatesModel(loadDocHeadStateBrowse(docHistoryModel.get(rows[0]).getId()));
-				history.fireModelChange();
-			}
-		}
+    ((DocHistoryController) docHistory.getModel()).docHistoryModel = MiscUtils.convertUncheckedList(DocHistory.class, OrmTemplate.getInstance().findByNamedParam(LOAD_DOCUMENT_HISTORY_EJBQL, "docId", documentId));
 
-	}
-	
-	private class DocHeadStateController extends DocActionHistoryController {
+    run(UIUtils.isModalMode());
+  }
 
-		/* (non-Javadoc)
-		 * @see com.mg.framework.generic.ui.AbstractTableModel#setSelectedRows(int[])
-		 */
-		@Override
-		public void setSelectedRows(int[] rows) {
-			if (rows.length != 0) {
-				currentDocHeadState = statesModel.get(rows[0]);
-			}
-		}
+  private class DocHistoryController extends AbstractTableModel {
+    private List<DocHistory> docHistoryModel;
+    private String[] columnsName;
 
-	}
+    /* (non-Javadoc)
+     * @see com.mg.framework.generic.ui.AbstractTableModel#doSetColumns(com.mg.framework.support.ui.widget.TableColumnModel[])
+     */
+    @Override
+    protected void doSetColumns(TableColumnModel[] columns) {
+      this.columnsName = new String[columns.length];
+      for (int i = 0; i < columns.length; i++)
+        this.columnsName[i] = columns[i].getTitle();
+    }
 
-	private List<DocHeadState> loadDocHeadStateBrowse(Integer actionId) {
-		List<DocHeadState> result = MiscUtils.convertUncheckedList(DocHeadState.class, OrmTemplate.getInstance().findByNamedParam(LOAD_DOCHEAD_STATE_BROWSE_EJBQL, "docActionId", actionId));
-		//stupid approach for resolve lazy initialize exception
-		for (DocHeadState docHeadState : result) {
-			docHeadState.getUser().getName();
-			if (docHeadState.getDocAction().getStage() != null)
-				docHeadState.getDocAction().getStage().getStage().getId();
-		}
-		return result;
-	}
+    /* (non-Javadoc)
+     * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getColumnName(int)
+     */
+    public String getColumnName(int column) {
+      return columnsName[column];
+    }
 
-	/**
-	 * Обработчик события "Закрыть форму"
-	 * 
-	 * @param event
-	 */
-	public void onActionOk(WidgetEvent event) {
-		close();
-	}
+    /* (non-Javadoc)
+     * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getValueAt(int, int)
+     */
+    public Object getValueAt(int row, int column) {
+      DocHistory history = docHistoryModel.get(row);
+      switch (column) {
+        case 0:
+          return MiscUtils.getEnumTextRepresentation(history.getActionType());
+        case 1:
+          return history.getName();
+        case 2:
+          return MiscUtils.getEnumTextRepresentation(history.getStageState());
+        case 3:
+          return history.getReadyAmount();
+        default:
+          return "";
+      }
+    }
 
-	/**
-	 * обработчик события "Показать результат выполнения ДО"
-	 * 
-	 * @param event
-	 */
-	public void onActionShowDocActionResult(WidgetEvent event) {
-		DocFlowPlugin plugin = ((DocHeadStateController) docActionHistory.getModel()).getDocFlowPlugin(currentDocHeadState);
-		if (plugin != null)
-			plugin.showDocActionResult(currentDocHeadState);		
-	}
+    /* (non-Javadoc)
+     * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getColumnCount()
+     */
+    public int getColumnCount() {
+      return columnsName.length;
+    }
 
-	/**
-	 * показать форму
-	 * 
-	 * @param documentId
-	 */
-	public void execute(Serializable documentId) {
-		DocHead docHead = ServerUtils.getPersistentManager().find(DocHead.class, documentId);
-		setTitle(String.format(ServerUtils.getUserLocale(), Messages.getInstance().getMessage(Messages.DOCFLOW_HISTORY_TITLE), DocumentUtils.generateDocumentTitle(docHead)));
-		
-		((DocHistoryController) docHistory.getModel()).docHistoryModel = MiscUtils.convertUncheckedList(DocHistory.class, OrmTemplate.getInstance().findByNamedParam(LOAD_DOCUMENT_HISTORY_EJBQL, "docId", documentId));
-		
-		run(UIUtils.isModalMode());
-	}
+    /* (non-Javadoc)
+     * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getRowCount()
+     */
+    public int getRowCount() {
+      return docHistoryModel.size();
+    }
+
+    /* (non-Javadoc)
+     * @see com.mg.framework.support.ui.widget.TableControllerAdapter#setCurrentRow(int)
+     */
+    public void setSelectedRows(int[] rows) {
+      if (rows.length != 0) {
+        DocHeadStateController history = (DocHeadStateController) docActionHistory.getModel();
+        history.setStatesModel(loadDocHeadStateBrowse(docHistoryModel.get(rows[0]).getId()));
+        history.fireModelChange();
+      }
+    }
+
+  }
+
+  private class DocHeadStateController extends DocActionHistoryController {
+
+    /* (non-Javadoc)
+     * @see com.mg.framework.generic.ui.AbstractTableModel#setSelectedRows(int[])
+     */
+    @Override
+    public void setSelectedRows(int[] rows) {
+      if (rows.length != 0) {
+        currentDocHeadState = statesModel.get(rows[0]);
+      }
+    }
+
+  }
 }

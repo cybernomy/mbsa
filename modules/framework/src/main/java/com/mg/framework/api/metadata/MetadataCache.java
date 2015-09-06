@@ -18,9 +18,9 @@ import com.mg.framework.api.ApplicationException;
 
 /**
  * @author Oleg V. Safonov
- *
  */
 public interface MetadataCache {
-    public void invalidate(int classId) throws ApplicationException;
-    public boolean isInvalidated(int classId, long timeStamp) throws ApplicationException;
+  public void invalidate(int classId) throws ApplicationException;
+
+  public boolean isInvalidated(int classId, long timeStamp) throws ApplicationException;
 }

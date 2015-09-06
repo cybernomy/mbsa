@@ -19,27 +19,27 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Тип параметра начисления/удержания
- * 
+ *
  * @author leonova
  * @version $Id: FeeParamType.java,v 1.1 2006/03/30 11:31:37 safonov Exp $
  */
-@DataItemName ("Salary.FeeParam.FeeParamType")
+@DataItemName("Salary.FeeParam.FeeParamType")
 public enum FeeParamType {
-	/**
-	 * Число
-	 */
-	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#FeeParamType.Number")
-	NUMBER,
-	
-	/**
-	 * Дата
-	 */
-	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#FeeParamType.Date")
-	DATE,
-	
-	/**
-	 * Строка
-	 */
-	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#FeeParamType.String")
-	STRING
+  /**
+   * Число
+   */
+  @EnumConstantText("resource://com.mg.merp.salary.resources.dataitemlabels#FeeParamType.Number")
+  NUMBER,
+
+  /**
+   * Дата
+   */
+  @EnumConstantText("resource://com.mg.merp.salary.resources.dataitemlabels#FeeParamType.Date")
+  DATE,
+
+  /**
+   * Строка
+   */
+  @EnumConstantText("resource://com.mg.merp.salary.resources.dataitemlabels#FeeParamType.String")
+  STRING
 }

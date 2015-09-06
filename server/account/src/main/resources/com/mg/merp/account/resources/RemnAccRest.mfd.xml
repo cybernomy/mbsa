@@ -13,25 +13,28 @@
 
 <!-- $Id: RemnAccRest.mfd.xml,v 1.4 2007/01/25 06:30:51 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.account.support.ui.RemnAccRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.account.resources.formelements#Cond.RemnAcc" helpTopic="account#remnacc1_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.account.support.ui.RemnAccRest" orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.account.resources.formelements#Cond.RemnAcc"
+          helpTopic="account#remnacc1_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
- 		<jfd:field id="periodFrom" />
-		<jfd:field id="periodTo" sameLine="true"/>   
-<!-- 
-		<jfd:field id="byDates" />
-		<jfd:field id="date1" />
-		<jfd:field id="date2" sameLine="true"/>   		     
--->
-		<jfd:field id="accCode" />
-		<jfd:field id="currencyCode" sameLine="true" />
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										
-	</jfd:container>
+    <jfd:field id="periodFrom"/>
+    <jfd:field id="periodTo" sameLine="true"/>
+    <!--
+        <jfd:field id="byDates" />
+        <jfd:field id="date1" />
+        <jfd:field id="date2" sameLine="true"/>
+    -->
+    <jfd:field id="accCode"/>
+    <jfd:field id="currencyCode" sameLine="true"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml"/>
 
 </jfd:form>

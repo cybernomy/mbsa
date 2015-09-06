@@ -1,58 +1,58 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.salary.model.PayRoll" table="SAL_PAY_ROLL">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">SAL_PAY_ROLL_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="CalcPeriod" class="com.mg.merp.personnelref.model.CalcPeriod">
-      <column name="CALC_PERIOD_ID" not-null="false" />
+      <column name="CALC_PERIOD_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="RollKind" class="com.mg.merp.salary.model.RollKind">
-      <column name="ROLL_KIND_ID" not-null="false" />
+      <column name="ROLL_KIND_ID" not-null="false"/>
     </many-to-one>
     <property name="Number" type="java.lang.String">
-      <column name="RNUMBER" length="20" not-null="true" sql-type="CHAR" />
+      <column name="RNUMBER" length="20" not-null="true" sql-type="CHAR"/>
     </property>
     <property name="Name" type="java.lang.String">
-      <column name="RNAME" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="RNAME" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="DocType" type="java.lang.String">
-      <column name="DOCTYPE" length="15" not-null="false" sql-type="CHAR" />
+      <column name="DOCTYPE" length="15" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="DocNumber" type="java.lang.String">
-      <column name="DOCNUMBER" length="20" not-null="false" sql-type="CHAR" />
+      <column name="DOCNUMBER" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="DocDate" type="java.util.Date">
-      <column name="DOCDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="DOCDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="Comments" type="java.lang.String">
-      <column name="COMMENTS" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="COMMENTS" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="CalcBeginDate" type="java.util.Date">
-      <column name="CALC_BEGINDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="CALC_BEGINDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="CalcEndDate" type="java.util.Date">
-      <column name="CALC_ENDDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="CALC_ENDDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <set name="SetOfSalCalcList" inverse="true">
       <key on-delete="cascade">
-        <column name="PAY_ROLL_ID" not-null="false" />
+        <column name="PAY_ROLL_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.salary.model.CalcList" />
+      <one-to-many class="com.mg.merp.salary.model.CalcList"/>
     </set>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

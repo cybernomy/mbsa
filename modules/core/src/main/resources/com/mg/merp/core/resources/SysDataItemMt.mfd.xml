@@ -13,29 +13,32 @@
 
 <!-- $Id: SysDataItemMt.mfd.xml,v 1.1 2008/03/03 13:07:52 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.core.resources.formelements#SysDataItem.FormMt.Title" helpTopic="core#sysdataitem_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.core.resources.formelements#SysDataItem.FormMt.Title"
+          helpTopic="core#sysdataitem_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="Name" />
-		<jfd:field id="ApplicationLayer" />
-		<jfd:field id="Kind" sameLine="true" />
-		<jfd:field id="SysDomain" />
-		<jfd:field id="ReferenceDataItemName" sameLine="true" />
-		<jfd:field id="ShortLabel" />
-		<jfd:field id="MediumLabel" sameLine="true" />
-		<jfd:field id="LongLabel" longField="false" />
-		<jfd:field id="Header" sameLine="true" />
-		<jfd:field id="SearchHelpName" />
-		<jfd:field id="ReadOnly" sameLine="true" />
-		<jfd:field id="EntityPropertyText"/>
-		<jfd:field id="EntityTextFormat" sameLine="true" />
-		<jfd:field id="Description"/>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Name"/>
+    <jfd:field id="ApplicationLayer"/>
+    <jfd:field id="Kind" sameLine="true"/>
+    <jfd:field id="SysDomain"/>
+    <jfd:field id="ReferenceDataItemName" sameLine="true"/>
+    <jfd:field id="ShortLabel"/>
+    <jfd:field id="MediumLabel" sameLine="true"/>
+    <jfd:field id="LongLabel" longField="false"/>
+    <jfd:field id="Header" sameLine="true"/>
+    <jfd:field id="SearchHelpName"/>
+    <jfd:field id="ReadOnly" sameLine="true"/>
+    <jfd:field id="EntityPropertyText"/>
+    <jfd:field id="EntityTextFormat" sameLine="true"/>
+    <jfd:field id="Description"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

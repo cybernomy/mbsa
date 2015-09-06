@@ -13,32 +13,37 @@
 
 <!-- $Id: FeeSummaryHeadRest.mfd.xml,v 1.3 2008/03/26 10:12:26 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.salary.support.ui.FeeSummaryHeadRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.salary.resources.formelements#Cond.FeeSummaryHead" helpTopic="salary#feesumm_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.salary.support.ui.FeeSummaryHeadRest" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.salary.resources.formelements#Cond.FeeSummaryHead"
+          helpTopic="salary#feesumm_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-        
-		<jfd:field id="docDateFrom" />
-		<jfd:field id="docDateTill" sameLine="true"/>
-		<jfd:field id="docNumber" />
-		<jfd:field id="docType" sameLine="true"/> 
-		<jfd:field id="sysCompany" />
-		<jfd:field id="sumCurMin" />
-		<jfd:field id="sumCurMax" sameLine="true"/>	
-		<jfd:field id="payRollNumber" />
-		<jfd:field id="calcPeriod" sameLine="true"/>
-		<jfd:container id="analitFields" layout="jfd:box" orientation="ver" label="resource://com.mg.merp.salary.resources.formelements#FeeRef.Analit">
-			<jfd:field id="anlCode1" showLabel="false" alignment="expand_expand"/>
-			<jfd:field id="anlCode2" showLabel="false" alignment="expand_expand"/>
-			<jfd:field id="anlCode3" showLabel="false" alignment="expand_expand"/>
-			<jfd:field id="anlCode4" showLabel="false" alignment="expand_expand"/>
-			<jfd:field id="anlCode5" showLabel="false" alignment="expand_expand"/>																
-		</jfd:container>						
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-	</jfd:container>
+    <jfd:field id="docDateFrom"/>
+    <jfd:field id="docDateTill" sameLine="true"/>
+    <jfd:field id="docNumber"/>
+    <jfd:field id="docType" sameLine="true"/>
+    <jfd:field id="sysCompany"/>
+    <jfd:field id="sumCurMin"/>
+    <jfd:field id="sumCurMax" sameLine="true"/>
+    <jfd:field id="payRollNumber"/>
+    <jfd:field id="calcPeriod" sameLine="true"/>
+    <jfd:container id="analitFields" layout="jfd:box" orientation="ver"
+                   label="resource://com.mg.merp.salary.resources.formelements#FeeRef.Analit">
+      <jfd:field id="anlCode1" showLabel="false" alignment="expand_expand"/>
+      <jfd:field id="anlCode2" showLabel="false" alignment="expand_expand"/>
+      <jfd:field id="anlCode3" showLabel="false" alignment="expand_expand"/>
+      <jfd:field id="anlCode4" showLabel="false" alignment="expand_expand"/>
+      <jfd:field id="anlCode5" showLabel="false" alignment="expand_expand"/>
+    </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml"/>
 
 </jfd:form>

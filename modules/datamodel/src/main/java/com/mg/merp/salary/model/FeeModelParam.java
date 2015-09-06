@@ -18,90 +18,95 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Модель бизнес-компонента "Параметр образца начислений/удержаний"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: FeeModelParam.java,v 1.4 2007/07/09 08:21:56 sharapov Exp $
  */
 public class FeeModelParam extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields    
+  // Fields
 
-	private java.lang.Integer Id;
-	private com.mg.merp.salary.model.FeeModel FeeModel;
-	private com.mg.merp.salary.model.FeeRefParam FeeRefParam;
-	private java.lang.String ParamValue;
-	private com.mg.merp.core.model.SysClient SysClient;
+  private java.lang.Integer Id;
+  private com.mg.merp.salary.model.FeeModel FeeModel;
+  private com.mg.merp.salary.model.FeeRefParam FeeRefParam;
+  private java.lang.String ParamValue;
+  private com.mg.merp.core.model.SysClient SysClient;
 
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public FeeModelParam() {
-	}
+  /**
+   * default constructor
+   */
+  public FeeModelParam() {
+  }
 
-	/** constructor with id */
-	public FeeModelParam(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public FeeModelParam(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	
-	// Property accessors
-	/**
 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId () {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId (java.lang.Integer Id) {
-		this.Id = Id;
-	}
-	
-	/**
+  /**
 
-	 */
-	public com.mg.merp.salary.model.FeeModel getFeeModel () {
-		return this.FeeModel;
-	}
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	public void setFeeModel (com.mg.merp.salary.model.FeeModel SalFeeModel) {
-		this.FeeModel = SalFeeModel;
-	}
-	
-	/**
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	 */
-	public com.mg.merp.core.model.SysClient getSysClient () {
-		return this.SysClient;
-	}
+  /**
 
-	public void setSysClient (com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
-	
-	/**
+   */
+  public com.mg.merp.salary.model.FeeModel getFeeModel() {
+    return this.FeeModel;
+  }
 
-	 */
-	//@DataItemName("Salary.FeeModelParam.FeeRefParam")
-	public com.mg.merp.salary.model.FeeRefParam getFeeRefParam () {
-		return this.FeeRefParam;
-	}
+  public void setFeeModel(com.mg.merp.salary.model.FeeModel SalFeeModel) {
+    this.FeeModel = SalFeeModel;
+  }
 
-	public void setFeeRefParam (com.mg.merp.salary.model.FeeRefParam SalFeeRefParam) {
-		this.FeeRefParam = SalFeeRefParam;
-	}
-	
-	/**
+  /**
 
-	 */
-	@DataItemName("Salary.FeeModelParam.ParamValue")    
-	public java.lang.String getParamValue () {
-		return this.ParamValue;
-	}
+   */
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	public void setParamValue (java.lang.String ParamValue) {
-		this.ParamValue = ParamValue;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
+
+  /**
+
+   */
+  //@DataItemName("Salary.FeeModelParam.FeeRefParam")
+  public com.mg.merp.salary.model.FeeRefParam getFeeRefParam() {
+    return this.FeeRefParam;
+  }
+
+  public void setFeeRefParam(com.mg.merp.salary.model.FeeRefParam SalFeeRefParam) {
+    this.FeeRefParam = SalFeeRefParam;
+  }
+
+  /**
+
+   */
+  @DataItemName("Salary.FeeModelParam.ParamValue")
+  public java.lang.String getParamValue() {
+    return this.ParamValue;
+  }
+
+  public void setParamValue(java.lang.String ParamValue) {
+    this.ParamValue = ParamValue;
+  }
 
 }

@@ -15,29 +15,29 @@
 
 package com.mg.merp.settlement.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryAttribute;
 import com.mg.merp.settlement.ContractorCardServiceLocal;
 import com.mg.merp.settlement.model.ContractorCard;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Карточки расчетов с партнерами" 
- * 
+ * Бизнес-компонент "Карточки расчетов с партнерами"
+ *
  * @author leonova
  * @version $Id: ContractorCardServiceBean.java,v 1.5 2008/02/01 11:33:54 safonov Exp $
  */
-@Stateless(name="merp/settlement/ContractorCardService")
+@Stateless(name = "merp/settlement/ContractorCardService")
 public class ContractorCardServiceBean extends AbstractPOJODataBusinessObjectServiceBean<ContractorCard, Integer> implements ContractorCardServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, ContractorCard entity) {
-		context.addRule(new MandatoryAttribute(entity, "Contractor"));
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, ContractorCard entity) {
+    context.addRule(new MandatoryAttribute(entity, "Contractor"));
+  }
 
 }

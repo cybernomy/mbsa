@@ -23,12 +23,12 @@ import com.mg.framework.service.ApplicationDictionaryLocator;
  * @version $Id: ExecutionBr.java,v 1.4 2006/10/04 07:10:24 leonova Exp $
  */
 public class ExecutionBr extends DefaultHierarchyBrowseForm {
-	
-	public ExecutionBr() throws Exception{
-		super();		
-		folderService =  (DataBusinessObjectService) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/Folder");
-		treeUIProperties.put("FolderType", new Integer(13400));
-	}
+
+  public ExecutionBr() throws Exception {
+    super();
+    folderService = (DataBusinessObjectService) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/Folder");
+    treeUIProperties.put("FolderType", new Integer(13400));
+  }
 
 
 }

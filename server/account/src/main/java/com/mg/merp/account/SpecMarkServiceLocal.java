@@ -17,12 +17,10 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.SpecMark;
 
 /**
- * 
  * @author leonova
  * @version $Id: SpecMarkServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface SpecMarkServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<SpecMark, String>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<SpecMark, String> {
 
 }

@@ -23,252 +23,255 @@ import com.mg.merp.mfreference.model.QuantityRateFlag;
  * @version $Id: JobMaterial.java,v 1.6 2006/11/02 16:10:13 safonov Exp $
  */
 public class JobMaterial extends com.mg.merp.manufacture.model.JobRouteResource
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private com.mg.merp.mfreference.model.CostCategories MtlCostCategory;
+  private com.mg.merp.mfreference.model.CostCategories MtlCostCategory;
 
-	private com.mg.merp.reference.model.Measure Measure;
+  private com.mg.merp.reference.model.Measure Measure;
 
-	private com.mg.merp.reference.model.Catalog Catalog;
+  private com.mg.merp.reference.model.Catalog Catalog;
 
-	private com.mg.merp.warehouse.model.WarehouseZone BackflushZone;
+  private com.mg.merp.warehouse.model.WarehouseZone BackflushZone;
 
-	private com.mg.merp.mfreference.model.CostCategories MtlOhCostCategory;
+  private com.mg.merp.mfreference.model.CostCategories MtlOhCostCategory;
 
-	private com.mg.merp.reference.model.Currency Currency;
+  private com.mg.merp.reference.model.Currency Currency;
 
-	private java.lang.Integer Revision;
+  private java.lang.Integer Revision;
 
-	private int ViewSequence;
+  private int ViewSequence;
 
-	private java.lang.Integer ReportSequence;
+  private java.lang.Integer ReportSequence;
 
-	private QuantityRateFlag QuantityRateFlag;
+  private QuantityRateFlag QuantityRateFlag;
 
-	private java.math.BigDecimal MtlQty;
+  private java.math.BigDecimal MtlQty;
 
-	private java.math.BigDecimal ScrapFactor;
+  private java.math.BigDecimal ScrapFactor;
 
-	private boolean MtlBackflushFlag;
+  private boolean MtlBackflushFlag;
 
-	private MaterialOverheadAllocationFlag MtlOhAllocationFlag;
+  private MaterialOverheadAllocationFlag MtlOhAllocationFlag;
 
-	private java.math.BigDecimal MtlOhRate;
+  private java.math.BigDecimal MtlOhRate;
 
-	private java.math.BigDecimal MtlOhRatio;
+  private java.math.BigDecimal MtlOhRatio;
 
-	private boolean MtlOhBackflushFlag;
+  private boolean MtlOhBackflushFlag;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public JobMaterial() {
-	}
+  /**
+   * default constructor
+   */
+  public JobMaterial() {
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
+  // Property accessors
 
-	@DataItemName("Manufacture.JobMaterial.MtlCostCategory")
-	public com.mg.merp.mfreference.model.CostCategories getMtlCostCategory() {
-		return this.MtlCostCategory;
-	}
+  /**
+   *
+   */
 
-	public void setMtlCostCategory(
-			com.mg.merp.mfreference.model.CostCategories MfCostCategories) {
-		this.MtlCostCategory = MfCostCategories;
-	}
+  @DataItemName("Manufacture.JobMaterial.MtlCostCategory")
+  public com.mg.merp.mfreference.model.CostCategories getMtlCostCategory() {
+    return this.MtlCostCategory;
+  }
 
-	/**
-	 * 
-	 */	
-	public com.mg.merp.reference.model.Measure getMeasure() {
-		return this.Measure;
-	}
+  public void setMtlCostCategory(
+      com.mg.merp.mfreference.model.CostCategories MfCostCategories) {
+    this.MtlCostCategory = MfCostCategories;
+  }
 
-	public void setMeasure(com.mg.merp.reference.model.Measure Measure) {
-		this.Measure = Measure;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.reference.model.Measure getMeasure() {
+    return this.Measure;
+  }
 
-	/**
-	 * 
-	 */	
-	public com.mg.merp.reference.model.Catalog getCatalog() {
-		return this.Catalog;
-	}
+  public void setMeasure(com.mg.merp.reference.model.Measure Measure) {
+    this.Measure = Measure;
+  }
 
-	public void setCatalog(com.mg.merp.reference.model.Catalog Catalog) {
-		this.Catalog = Catalog;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.reference.model.Catalog getCatalog() {
+    return this.Catalog;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.JobMaterial.BackflushZone")
-	public com.mg.merp.warehouse.model.WarehouseZone getBackflushZone() {
-		return this.BackflushZone;
-	}
+  public void setCatalog(com.mg.merp.reference.model.Catalog Catalog) {
+    this.Catalog = Catalog;
+  }
 
-	public void setBackflushZone(
-			com.mg.merp.warehouse.model.WarehouseZone WhZone) {
-		this.BackflushZone = WhZone;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.JobMaterial.BackflushZone")
+  public com.mg.merp.warehouse.model.WarehouseZone getBackflushZone() {
+    return this.BackflushZone;
+  }
 
-	@DataItemName("MfReference.JobMaterial.MtlOhCostCategory")
-	public com.mg.merp.mfreference.model.CostCategories getMtlOhCostCategory() {
-		return this.MtlOhCostCategory;
-	}
+  public void setBackflushZone(
+      com.mg.merp.warehouse.model.WarehouseZone WhZone) {
+    this.BackflushZone = WhZone;
+  }
 
-	public void setMtlOhCostCategory(
-			com.mg.merp.mfreference.model.CostCategories MfCostCategories_1) {
-		this.MtlOhCostCategory = MfCostCategories_1;
-	}
+  @DataItemName("MfReference.JobMaterial.MtlOhCostCategory")
+  public com.mg.merp.mfreference.model.CostCategories getMtlOhCostCategory() {
+    return this.MtlOhCostCategory;
+  }
 
-	/**
-	 * 
-	 */	
-	public com.mg.merp.reference.model.Currency getCurrency() {
-		return this.Currency;
-	}
+  public void setMtlOhCostCategory(
+      com.mg.merp.mfreference.model.CostCategories MfCostCategories_1) {
+    this.MtlOhCostCategory = MfCostCategories_1;
+  }
 
-	public void setCurrency(com.mg.merp.reference.model.Currency Currency) {
-		this.Currency = Currency;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.reference.model.Currency getCurrency() {
+    return this.Currency;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.JobMaterial.Revision")
-	public java.lang.Integer getRevision() {
-		return this.Revision;
-	}
+  public void setCurrency(com.mg.merp.reference.model.Currency Currency) {
+    this.Currency = Currency;
+  }
 
-	public void setRevision(java.lang.Integer Revision) {
-		this.Revision = Revision;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.JobMaterial.Revision")
+  public java.lang.Integer getRevision() {
+    return this.Revision;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.JobMaterial.ViewSequence")
-	public int getViewSequence() {
-		return this.ViewSequence;
-	}
+  public void setRevision(java.lang.Integer Revision) {
+    this.Revision = Revision;
+  }
 
-	public void setViewSequence(int ViewSequence) {
-		this.ViewSequence = ViewSequence;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.JobMaterial.ViewSequence")
+  public int getViewSequence() {
+    return this.ViewSequence;
+  }
 
-	/**
-	 * 
-	 */
+  public void setViewSequence(int ViewSequence) {
+    this.ViewSequence = ViewSequence;
+  }
 
-	@DataItemName("Manufacture.JobMaterial.ReportSequence")
-	public java.lang.Integer getReportSequence() {
-		return this.ReportSequence;
-	}
+  /**
+   *
+   */
 
-	public void setReportSequence(java.lang.Integer ReportSequence) {
-		this.ReportSequence = ReportSequence;
-	}
+  @DataItemName("Manufacture.JobMaterial.ReportSequence")
+  public java.lang.Integer getReportSequence() {
+    return this.ReportSequence;
+  }
 
-	/**
-	 * 
-	 */
+  public void setReportSequence(java.lang.Integer ReportSequence) {
+    this.ReportSequence = ReportSequence;
+  }
 
-	public QuantityRateFlag getQuantityRateFlag() {
-		return this.QuantityRateFlag;
-	}
+  /**
+   *
+   */
 
-	public void setQuantityRateFlag(QuantityRateFlag QuantityRateFlag) {
-		this.QuantityRateFlag = QuantityRateFlag;
-	}
+  public QuantityRateFlag getQuantityRateFlag() {
+    return this.QuantityRateFlag;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.JobMaterial.MtlQty")
-	public java.math.BigDecimal getMtlQty() {
-		return this.MtlQty;
-	}
+  public void setQuantityRateFlag(QuantityRateFlag QuantityRateFlag) {
+    this.QuantityRateFlag = QuantityRateFlag;
+  }
 
-	public void setMtlQty(java.math.BigDecimal MtlQty) {
-		this.MtlQty = MtlQty;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.JobMaterial.MtlQty")
+  public java.math.BigDecimal getMtlQty() {
+    return this.MtlQty;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.JobMaterial.ScrapFactor")
-	public java.math.BigDecimal getScrapFactor() {
-		return this.ScrapFactor;
-	}
+  public void setMtlQty(java.math.BigDecimal MtlQty) {
+    this.MtlQty = MtlQty;
+  }
 
-	public void setScrapFactor(java.math.BigDecimal ScrapFactor) {
-		this.ScrapFactor = ScrapFactor;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.JobMaterial.ScrapFactor")
+  public java.math.BigDecimal getScrapFactor() {
+    return this.ScrapFactor;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.JobMaterial.MtlBackflushFlag")
-	public boolean getMtlBackflushFlag() {
-		return this.MtlBackflushFlag;
-	}
+  public void setScrapFactor(java.math.BigDecimal ScrapFactor) {
+    this.ScrapFactor = ScrapFactor;
+  }
 
-	public void setMtlBackflushFlag(boolean MtlBackflushFlag) {
-		this.MtlBackflushFlag = MtlBackflushFlag;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.JobMaterial.MtlBackflushFlag")
+  public boolean getMtlBackflushFlag() {
+    return this.MtlBackflushFlag;
+  }
 
-	/**
-	 * 
-	 */
+  public void setMtlBackflushFlag(boolean MtlBackflushFlag) {
+    this.MtlBackflushFlag = MtlBackflushFlag;
+  }
 
-	public MaterialOverheadAllocationFlag getMtlOhAllocationFlag() {
-		return this.MtlOhAllocationFlag;
-	}
+  /**
+   *
+   */
 
-	public void setMtlOhAllocationFlag(MaterialOverheadAllocationFlag MtlOhAllocationFlag) {
-		this.MtlOhAllocationFlag = MtlOhAllocationFlag;
-	}
+  public MaterialOverheadAllocationFlag getMtlOhAllocationFlag() {
+    return this.MtlOhAllocationFlag;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.JobMaterial.MtlOhRate")
-	public java.math.BigDecimal getMtlOhRate() {
-		return this.MtlOhRate;
-	}
+  public void setMtlOhAllocationFlag(MaterialOverheadAllocationFlag MtlOhAllocationFlag) {
+    this.MtlOhAllocationFlag = MtlOhAllocationFlag;
+  }
 
-	public void setMtlOhRate(java.math.BigDecimal MtlOhRate) {
-		this.MtlOhRate = MtlOhRate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.JobMaterial.MtlOhRate")
+  public java.math.BigDecimal getMtlOhRate() {
+    return this.MtlOhRate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.JobMaterial.MtlOhRatio")
-	public java.math.BigDecimal getMtlOhRatio() {
-		return this.MtlOhRatio;
-	}
+  public void setMtlOhRate(java.math.BigDecimal MtlOhRate) {
+    this.MtlOhRate = MtlOhRate;
+  }
 
-	public void setMtlOhRatio(java.math.BigDecimal MtlOhRatio) {
-		this.MtlOhRatio = MtlOhRatio;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.JobMaterial.MtlOhRatio")
+  public java.math.BigDecimal getMtlOhRatio() {
+    return this.MtlOhRatio;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.JobMaterial.MtlOhBackflushFlag")
-	public boolean getMtlOhBackflushFlag() {
-		return this.MtlOhBackflushFlag;
-	}
+  public void setMtlOhRatio(java.math.BigDecimal MtlOhRatio) {
+    this.MtlOhRatio = MtlOhRatio;
+  }
 
-	public void setMtlOhBackflushFlag(boolean MtlOhBackflushFlag) {
-		this.MtlOhBackflushFlag = MtlOhBackflushFlag;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.JobMaterial.MtlOhBackflushFlag")
+  public boolean getMtlOhBackflushFlag() {
+    return this.MtlOhBackflushFlag;
+  }
+
+  public void setMtlOhBackflushFlag(boolean MtlOhBackflushFlag) {
+    this.MtlOhBackflushFlag = MtlOhBackflushFlag;
+  }
 
 }

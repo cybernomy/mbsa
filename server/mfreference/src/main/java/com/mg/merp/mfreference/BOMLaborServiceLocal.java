@@ -17,12 +17,10 @@ package com.mg.merp.mfreference;
 import com.mg.merp.mfreference.model.BomLabor;
 
 /**
- * 
  * @author leonova
  * @version $Id: BOMLaborServiceLocal.java,v 1.1 2006/03/14 11:49:48 safonov Exp $
  */
 public interface BOMLaborServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<BomLabor, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<BomLabor, Integer> {
 
 }

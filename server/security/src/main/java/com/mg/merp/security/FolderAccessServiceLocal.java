@@ -14,43 +14,42 @@
  */
 package com.mg.merp.security;
 
-import java.util.List;
-
 import com.mg.merp.core.model.FolderRights;
+
+import java.util.List;
 
 /**
  * Бизнес-компонент "Права на папки"
- * 
+ *
  * @author leonova
  * @version $Id: FolderAccessServiceLocal.java,v 1.3 2007/02/24 14:16:36 safonov Exp $
  */
 public interface FolderAccessServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<FolderRights, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<FolderRights, Integer> {
 
-	/**
-	 * загрузка прав на папки
-	 * 
-	 * @param folderPart	вид папок
-	 * @param folderId		идентификатор папки
-	 * @return	список прав
-	 */
-	List<FolderPermission> loadFolderPermission(int folderPart, int folderId);
-	
-	/**
-	 * предоставить права на папки
-	 * 
-	 * @param perm			права
-	 * @param folderPart	вид папок
-	 * @param folderId		идентификатор папки
-	 */
-	void grantPermission(FolderPermission perm, int folderPart, int folderId);
-	
-	/**
-	 * отменить права на папки
-	 * 
-	 * @param perm	права
-	 */
-	void revokePermission(FolderPermission perm);
-	
+  /**
+   * загрузка прав на папки
+   *
+   * @param folderPart вид папок
+   * @param folderId   идентификатор папки
+   * @return список прав
+   */
+  List<FolderPermission> loadFolderPermission(int folderPart, int folderId);
+
+  /**
+   * предоставить права на папки
+   *
+   * @param perm       права
+   * @param folderPart вид папок
+   * @param folderId   идентификатор папки
+   */
+  void grantPermission(FolderPermission perm, int folderPart, int folderId);
+
+  /**
+   * отменить права на папки
+   *
+   * @param perm права
+   */
+  void revokePermission(FolderPermission perm);
+
 }

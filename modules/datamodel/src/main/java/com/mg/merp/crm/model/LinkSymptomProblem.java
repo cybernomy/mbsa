@@ -21,39 +21,40 @@ package com.mg.merp.crm.model;
  */
 public class LinkSymptomProblem extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-    // Fields    
+  // Fields
 
- private com.mg.merp.crm.model.LinkSymptomProblemId Id;
-
-
-    // Constructors
-
-    /** default constructor */
-    public LinkSymptomProblem() {
-    }
-    
-    /** constructor with Id */
-    public LinkSymptomProblem(com.mg.merp.crm.model.LinkSymptomProblemId Id) {
-        this.Id = Id;
-    }
-   
-    
-    
-
-    // Property accessors
-    /**
-    
-    */
-    
-    public com.mg.merp.crm.model.LinkSymptomProblemId getId () {
-        return this.Id;
-    }
-    
-   public void setId (com.mg.merp.crm.model.LinkSymptomProblemId Id) {
-        this.Id = Id;
-    }
+  private com.mg.merp.crm.model.LinkSymptomProblemId Id;
 
 
+  // Constructors
+
+  /**
+   * default constructor
+   */
+  public LinkSymptomProblem() {
+  }
+
+  /**
+   * constructor with Id
+   */
+  public LinkSymptomProblem(com.mg.merp.crm.model.LinkSymptomProblemId Id) {
+    this.Id = Id;
+  }
+
+
+  // Property accessors
+
+  /**
+
+   */
+
+  public com.mg.merp.crm.model.LinkSymptomProblemId getId() {
+    return this.Id;
+  }
+
+  public void setId(com.mg.merp.crm.model.LinkSymptomProblemId Id) {
+    this.Id = Id;
+  }
 
 
 }

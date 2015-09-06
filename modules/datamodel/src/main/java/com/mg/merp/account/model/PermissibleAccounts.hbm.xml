@@ -1,58 +1,58 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.account.model.PermissibleAccounts" table="PERMISSIBLEACCOUNTS">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">PERMISSIBLEACCOUNTS_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="AnlKt2" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLKT2_ID" not-null="false" />
+      <column name="ANLKT2_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AccKt" class="com.mg.merp.account.model.AccPlan">
-      <column name="ACCKT_ID" not-null="false" />
+      <column name="ACCKT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlDb2" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLDB2_ID" not-null="false" />
+      <column name="ANLDB2_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlKt3" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLKT3_ID" not-null="false" />
+      <column name="ANLKT3_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlDb3" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLDB3_ID" not-null="false" />
+      <column name="ANLDB3_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlDb4" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLDB4_ID" not-null="false" />
+      <column name="ANLDB4_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlDb1" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLDB1_ID" not-null="false" />
+      <column name="ANLDB1_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlKt5" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLKT5_ID" not-null="false" />
+      <column name="ANLKT5_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AccDb" class="com.mg.merp.account.model.AccPlan">
-      <column name="ACCDB_ID" not-null="false" />
+      <column name="ACCDB_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlDb5" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLDB5_ID" not-null="false" />
+      <column name="ANLDB5_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlKt1" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLKT1_ID" not-null="false" />
+      <column name="ANLKT1_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlKt4" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLKT4_ID" not-null="false" />
+      <column name="ANLKT4_ID" not-null="false"/>
     </many-to-one>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

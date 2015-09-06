@@ -15,27 +15,27 @@
 
 package com.mg.merp.reference.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.reference.PriceTypeServiceLocal;
 import com.mg.merp.reference.model.PriceType;
 
+import javax.ejb.Stateless;
+
 /**
  * Бизнес-компонент "Типы цен"
- * 
+ *
  * @author leonova
  * @version $Id: PriceTypeServiceBean.java,v 1.4 2006/10/20 07:20:57 leonova Exp $
  */
-@Stateless(name="merp/reference/PriceTypeService")
+@Stateless(name = "merp/reference/PriceTypeService")
 public class PriceTypeServiceBean extends AbstractPOJODataBusinessObjectServiceBean<PriceType, Integer> implements PriceTypeServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, PriceType entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));
-		context.addRule(new MandatoryStringAttribute(entity, "PName"));		
-	}
+  @Override
+  protected void onValidate(ValidationContext context, PriceType entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+    context.addRule(new MandatoryStringAttribute(entity, "PName"));
+  }
 
 }

@@ -13,30 +13,34 @@
 
 <!-- $Id: ScrapProductHeadMt.mfd.xml,v 1.5 2007/09/21 11:23:11 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.manufacture.support.ui.ScrapProductHeadMt" title="resource://com.mg.merp.manufacture.resources.formelements#ScrapProductHead.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.manufacture.support.ui.ScrapProductHeadMt"
+          title="resource://com.mg.merp.manufacture.resources.formelements#ScrapProductHead.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="mainFields" layout="jfd:tabbed" alignment="expand_top" >
-	
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Main.Tab.Title" >
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			 			 	 	
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
-	 		<jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml" />					
-		 	<jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml" /> 
-	 	 	<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />			
-	 	 	<jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml" />  			
-			<jfd:include name="com/mg/merp/manufacture/resources/ScrapDetectMacros.xml" />	
-			<jfd:include name="com/mg/merp/manufacture/resources/ScrapCauseMacros.xml" />			
-			<jfd:field id="ScrapType" />
-			<jfd:field id="ScrapReason" sameLine="true" />
-			<jfd:field id="Description" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />		  
-		</jfd:container> 
+  <jfd:container id="mainFields" layout="jfd:tabbed" alignment="expand_top">
 
- 		<jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Doc.SpecTab.Title" >
- 	    </jfd:maintenanceTable> 	  
- 	 </jfd:container>
- 	 
-	<jfd:include name="com/mg/merp/manufacture/resources/DefaultMFDocMaintenanceFooterMacros.xml" />
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Main.Tab.Title">
+      <jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml"/>
+      <jfd:include name="com/mg/merp/manufacture/resources/ScrapDetectMacros.xml"/>
+      <jfd:include name="com/mg/merp/manufacture/resources/ScrapCauseMacros.xml"/>
+      <jfd:field id="ScrapType"/>
+      <jfd:field id="ScrapReason" sameLine="true"/>
+      <jfd:field id="Description"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+
+    <jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Doc.SpecTab.Title">
+    </jfd:maintenanceTable>
+  </jfd:container>
+
+  <jfd:include name="com/mg/merp/manufacture/resources/DefaultMFDocMaintenanceFooterMacros.xml"/>
 </jfd:form>	

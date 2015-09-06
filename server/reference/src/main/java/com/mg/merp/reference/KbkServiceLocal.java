@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.Kbk;
 
 /**
- * 
  * @author leonova
  * @version $Id: KbkServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface KbkServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Kbk, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Kbk, Integer> {
 
 }

@@ -21,51 +21,53 @@ package com.mg.merp.core.model;
  */
 public class Strings extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-    // Fields    
+  // Fields
 
- private com.mg.merp.core.model.StringsId id;
- private java.lang.String Text;
-
-
-    // Constructors
-
-    /** default constructor */
-    public Strings() {
-    }
-    
-    /** constructor with id */
-    public Strings(com.mg.merp.core.model.StringsId id) {
-        this.id = id;
-    }
-   
-    
-    
-
-    // Property accessors
-    /**
-    
-    */
-    
-    public com.mg.merp.core.model.StringsId getId () {
-        return this.id;
-    }
-    
-   public void setId (com.mg.merp.core.model.StringsId id) {
-        this.id = id;
-    }
-    /**
-    
-    */
-    
-    public java.lang.String getText () {
-        return this.Text;
-    }
-    
-   public void setText (java.lang.String Text) {
-        this.Text = Text;
-    }
+  private com.mg.merp.core.model.StringsId id;
+  private java.lang.String Text;
 
 
+  // Constructors
+
+  /**
+   * default constructor
+   */
+  public Strings() {
+  }
+
+  /**
+   * constructor with id
+   */
+  public Strings(com.mg.merp.core.model.StringsId id) {
+    this.id = id;
+  }
+
+
+  // Property accessors
+
+  /**
+
+   */
+
+  public com.mg.merp.core.model.StringsId getId() {
+    return this.id;
+  }
+
+  public void setId(com.mg.merp.core.model.StringsId id) {
+    this.id = id;
+  }
+
+  /**
+
+   */
+
+  public java.lang.String getText() {
+    return this.Text;
+  }
+
+  public void setText(java.lang.String Text) {
+    this.Text = Text;
+  }
 
 
 }

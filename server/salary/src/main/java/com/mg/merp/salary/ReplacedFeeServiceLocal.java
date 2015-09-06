@@ -17,12 +17,10 @@ package com.mg.merp.salary;
 import com.mg.merp.salary.model.ReplacedFee;
 
 /**
- * 
  * @author leonova
  * @version $Id: ReplacedFeeServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface ReplacedFeeServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<ReplacedFee, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<ReplacedFee, Integer> {
 
 }

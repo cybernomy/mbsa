@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.Rise;
 
 /**
- * 
  * @author leonova
  * @version $Id: RiseServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface RiseServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Rise, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Rise, Integer> {
 
 }

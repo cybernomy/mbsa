@@ -17,15 +17,12 @@ package com.mg.framework.api.jdbc;
 /**
  * Interface to be implemented by objects that can provide SQL strings.
  *
- * <p>Typically implemented by statement creators that want to expose the
- * SQL they use to create their statements, to allow for better contextual
- * information in case of exceptions.
- * 
+ * <p>Typically implemented by statement creators that want to expose the SQL they use to create
+ * their statements, to allow for better contextual information in case of exceptions.
+ *
  * @author Oleg V. Safonov
  * @author Juergen Hoeller
- * @version
- *
  */
 public interface SqlProvider {
-    String getSql();
+  String getSql();
 }

@@ -19,30 +19,20 @@ import com.mg.merp.planning.RCCPResourceLoadServiceLocal;
 import com.mg.merp.planning.model.RccpResourceLoad;
 
 /**
- * @ejb.bean name = "RCCPResourceLoadService"
- *           type = "Stateless"
- *           view-type = "local"
- *           local-jndi-name = "merp/planning/RCCPResourceLoadService"
- *           description = "RCCPResourceLoad"
- *           display-name = "RCCPResourceLoad"
- *
- * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService"
- *
- * @ejb.home      local-extends = "javax.ejb.EJBLocalHome"
- *
- * @ejb.env-entry name = "DomainClassName"
- *                type = "java.lang.String"
- *                value = "com.mg.merp.planning.support.RCCPResourceLoadDomainImpl"
- *
- * @jboss.container-configuration name = "MERP Standard Stateless Service"
- *
  * @author java generator
+ * @ejb.bean name = "RCCPResourceLoadService" type = "Stateless" view-type = "local" local-jndi-name
+ * = "merp/planning/RCCPResourceLoadService" description = "RCCPResourceLoad" display-name =
+ * "RCCPResourceLoad"
+ * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService"
+ * @ejb.home local-extends = "javax.ejb.EJBLocalHome"
+ * @ejb.env-entry name = "DomainClassName" type = "java.lang.String" value =
+ * "com.mg.merp.planning.support.RCCPResourceLoadDomainImpl"
+ * @jboss.container-configuration name = "MERP Standard Stateless Service"
  * @since 12.10.2004
- *
  */
- public class RCCPResourceLoadServiceBean extends com.mg.framework.generic.AbstractDataBusinessObjectServiceBean<RccpResourceLoad, Integer> implements RCCPResourceLoadServiceLocal {
+public class RCCPResourceLoadServiceBean extends com.mg.framework.generic.AbstractDataBusinessObjectServiceBean<RccpResourceLoad, Integer> implements RCCPResourceLoadServiceLocal {
 
- 	public void ejbCreate() throws javax.ejb.CreateException {
- 	}
+  public void ejbCreate() throws javax.ejb.CreateException {
+  }
 
- }
+}

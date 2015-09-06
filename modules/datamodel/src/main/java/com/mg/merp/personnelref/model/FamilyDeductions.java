@@ -17,147 +17,152 @@ package com.mg.merp.personnelref.model;
 import com.mg.framework.api.annotations.DataItemName;
 
 /**
- * Модель бизнес-компонента "Вычеты на членов семьи" 
- * 
+ * Модель бизнес-компонента "Вычеты на членов семьи"
+ *
  * @author hbm2java
  * @author Artem V. Sharapov
  * @version $Id: FamilyDeductions.java,v 1.6 2007/01/24 11:28:59 sharapov Exp $
  */
 public class FamilyDeductions extends com.mg.framework.service.PersistentObjectHibernate implements
-java.io.Serializable {
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.personnelref.model.DeductionKind DeductionKind;
+  private com.mg.merp.personnelref.model.DeductionKind DeductionKind;
 
-	private com.mg.merp.reference.model.FamilyMember FamilyMember;
+  private com.mg.merp.reference.model.FamilyMember FamilyMember;
 
-	private java.util.Date BeginDate;
+  private java.util.Date BeginDate;
 
-	private java.util.Date EndDate;
+  private java.util.Date EndDate;
 
-	private java.math.BigDecimal Ratio;
-	
-	/**
-	 * person - объект-сущность "Сотрудник"
-	 * Служит для реализации механизма поиска членов семьи сотрудника
-	 */
-	private com.mg.merp.reference.model.NaturalPerson person;
+  private java.math.BigDecimal Ratio;
 
-	// Constructors
+  /**
+   * person - объект-сущность "Сотрудник" Служит для реализации механизма поиска членов семьи
+   * сотрудника
+   */
+  private com.mg.merp.reference.model.NaturalPerson person;
 
-	/** default constructor */
-	public FamilyDeductions() {
-	}
+  // Constructors
 
-	/** constructor with id */
-	public FamilyDeductions(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * default constructor
+   */
+  public FamilyDeductions() {
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID") //$NON-NLS-1$
-	public int getId() {
-		return this.Id;
-	}
+  /**
+   * constructor with id
+   */
+  public FamilyDeductions(int Id) {
+    this.Id = Id;
+  }
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  // Property accessors
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
+  @DataItemName("ID") //$NON-NLS-1$
+  public int getId() {
+    return this.Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  /**
+   *
+   */
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.FamilyDed.DeductionKind") //$NON-NLS-1$
-	public com.mg.merp.personnelref.model.DeductionKind getDeductionKind() {
-		return this.DeductionKind;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	public void setDeductionKind(
-			com.mg.merp.personnelref.model.DeductionKind PrefDeductionKind) {
-		this.DeductionKind = PrefDeductionKind;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.FamilyDed.FamilyMembers") //$NON-NLS-1$
-	public com.mg.merp.reference.model.FamilyMember getFamilyMember() {
-		return this.FamilyMember;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.FamilyDed.DeductionKind") //$NON-NLS-1$
+  public com.mg.merp.personnelref.model.DeductionKind getDeductionKind() {
+    return this.DeductionKind;
+  }
 
-	public void setFamilyMember(
-			com.mg.merp.reference.model.FamilyMember RefFamilyMember) {
-		this.FamilyMember = RefFamilyMember;
-	}
+  public void setDeductionKind(
+      com.mg.merp.personnelref.model.DeductionKind PrefDeductionKind) {
+    this.DeductionKind = PrefDeductionKind;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.FamilyDed.BeginDate") //$NON-NLS-1$
-	public java.util.Date getBeginDate() {
-		return this.BeginDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.FamilyDed.FamilyMembers") //$NON-NLS-1$
+  public com.mg.merp.reference.model.FamilyMember getFamilyMember() {
+    return this.FamilyMember;
+  }
 
-	public void setBeginDate(java.util.Date Begindate) {
-		this.BeginDate = Begindate;
-	}
+  public void setFamilyMember(
+      com.mg.merp.reference.model.FamilyMember RefFamilyMember) {
+    this.FamilyMember = RefFamilyMember;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.FamilyDed.EndDate") //$NON-NLS-1$
-	public java.util.Date getEndDate() {
-		return this.EndDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.FamilyDed.BeginDate") //$NON-NLS-1$
+  public java.util.Date getBeginDate() {
+    return this.BeginDate;
+  }
 
-	public void setEndDate(java.util.Date Enddate) {
-		this.EndDate = Enddate;
-	}
+  public void setBeginDate(java.util.Date Begindate) {
+    this.BeginDate = Begindate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.FamilyDed.Ratio") //$NON-NLS-1$
-	public java.math.BigDecimal getRatio() {
-		return this.Ratio;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.FamilyDed.EndDate") //$NON-NLS-1$
+  public java.util.Date getEndDate() {
+    return this.EndDate;
+  }
 
-	public void setRatio(java.math.BigDecimal Ratio) {
-		this.Ratio = Ratio;
-	}
+  public void setEndDate(java.util.Date Enddate) {
+    this.EndDate = Enddate;
+  }
 
-	/**
-	 * @return the person
-	 */
-	public com.mg.merp.reference.model.NaturalPerson getPerson() {
-		return person;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.FamilyDed.Ratio") //$NON-NLS-1$
+  public java.math.BigDecimal getRatio() {
+    return this.Ratio;
+  }
 
-	/**
-	 * @param person the person to set
-	 */
-	public void setPerson(com.mg.merp.reference.model.NaturalPerson person) {
-		this.person = person;
-	}
+  public void setRatio(java.math.BigDecimal Ratio) {
+    this.Ratio = Ratio;
+  }
+
+  /**
+   * @return the person
+   */
+  public com.mg.merp.reference.model.NaturalPerson getPerson() {
+    return person;
+  }
+
+  /**
+   * @param person the person to set
+   */
+  public void setPerson(com.mg.merp.reference.model.NaturalPerson person) {
+    this.person = person;
+  }
 
 }

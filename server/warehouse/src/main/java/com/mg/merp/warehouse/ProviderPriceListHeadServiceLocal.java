@@ -5,11 +5,11 @@ package com.mg.merp.warehouse;
 
 /**
  * Local interface for ProviderPriceListHeadService.
- * @since 12.10.2004
+ *
  * @xdoclet-generated at 28-02-06
+ * @since 12.10.2004
  */
 public interface ProviderPriceListHeadServiceLocal
-   extends javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService
-{
+    extends javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService {
 
 }

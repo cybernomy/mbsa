@@ -15,15 +15,17 @@
 
 <server>
 
-	<mbean code="com.mg.merp.report.service.jboss.RptEngineService" name="merp:service=RptEngineService">
-		<depends>merp:baiengine=BusinessAddinEngineService</depends>
-		<attribute name="BIRTLocation">${jboss.server.home.dir}/mbirt-platform</attribute>
-		<attribute name="DefaultOutputFormat">html</attribute>
-		<attribute name="LogLevel">INFO</attribute>
-		<attribute name="HTMLReportViewerApp">mreportviewer</attribute>
-		<attribute name="ReportFolder">report</attribute>
-	</mbean>
-	
-	<mbean code="com.mg.merp.report.service.jboss.RptBIRTDeployerService" name="merp:service=RptBIRTDeployerService"/>
+  <mbean code="com.mg.merp.report.service.jboss.RptEngineService"
+         name="merp:service=RptEngineService">
+    <depends>merp:baiengine=BusinessAddinEngineService</depends>
+    <attribute name="BIRTLocation">${jboss.server.home.dir}/mbirt-platform</attribute>
+    <attribute name="DefaultOutputFormat">html</attribute>
+    <attribute name="LogLevel">INFO</attribute>
+    <attribute name="HTMLReportViewerApp">mreportviewer</attribute>
+    <attribute name="ReportFolder">report</attribute>
+  </mbean>
+
+  <mbean code="com.mg.merp.report.service.jboss.RptBIRTDeployerService"
+         name="merp:service=RptBIRTDeployerService"/>
 
 </server>

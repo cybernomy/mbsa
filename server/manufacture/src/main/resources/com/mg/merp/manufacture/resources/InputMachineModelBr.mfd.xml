@@ -13,17 +13,19 @@
 
 <!-- $Id: InputMachineModelBr.mfd.xml,v 1.5 2006/09/12 11:07:32 leonova Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.manufacture.support.ui.InputMachineModelBr" title="resource://com.mg.merp.manufacture.resources.formelements#InputMachineModel.FormBr.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver"
+          controller="com.mg.merp.manufacture.support.ui.InputMachineModelBr"
+          title="resource://com.mg.merp.manufacture.resources.formelements#InputMachineModel.FormBr.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml"/>
 
-	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
-		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true" >
-		</jfd:maintenanceTree>
-		<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
-		</jfd:maintenanceTable>		
-	</jfd:container>
+  <jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+    <jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true">
+    </jfd:maintenanceTree>
+    <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+    </jfd:maintenanceTable>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml"/>
 
 </jfd:form>

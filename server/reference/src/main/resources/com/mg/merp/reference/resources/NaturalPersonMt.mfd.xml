@@ -13,59 +13,78 @@
 
 <!-- $Id: NaturalPersonMt.mfd.xml,v 1.12 2008/09/10 06:27:29 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.reference.support.ui.NaturalPersonMt" title="resource://com.mg.merp.reference.resources.formelements#NaturalPerson.FormMt.Title" helpTopic="reference#person_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.reference.support.ui.NaturalPersonMt"
+          title="resource://com.mg.merp.reference.resources.formelements#NaturalPerson.FormMt.Title"
+          helpTopic="reference#person_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#NatutalPerson.Tab.Total.Title" >		
-			<jfd:field id="Surname" />
-			<jfd:field id="Name" />
-			<jfd:field id="Patronymic" />
-	 		<jfd:field id="Inn"  />
-			<jfd:field id="ActDate" sameLine="true" />
-			<jfd:field id="BornDate" />
-	  	 	<jfd:field id="Sex" editorType="comboBox" sameLine="true" />
-			<jfd:field id="Users" />
-			<jfd:button id="picture" text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Photo"  sameLine="true" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 							
-			<jfd:maintenanceTable id="personHist" scroll="true" alignment="expand_expand" fieldGroup="resource://com.mg.merp.reference.resources.formelements#NaturalPersonHist.FormBr.Title" >
-			</jfd:maintenanceTable>
-		</jfd:container>	
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.reference.resources.formelements#NatutalPerson.Tab.Total.Title">
+      <jfd:field id="Surname"/>
+      <jfd:field id="Name"/>
+      <jfd:field id="Patronymic"/>
+      <jfd:field id="Inn"/>
+      <jfd:field id="ActDate" sameLine="true"/>
+      <jfd:field id="BornDate"/>
+      <jfd:field id="Sex" editorType="comboBox" sameLine="true"/>
+      <jfd:field id="Users"/>
+      <jfd:button id="picture"
+                  text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Photo"
+                  sameLine="true"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+      <jfd:maintenanceTable id="personHist" scroll="true" alignment="expand_expand"
+                            fieldGroup="resource://com.mg.merp.reference.resources.formelements#NaturalPersonHist.FormBr.Title">
+      </jfd:maintenanceTable>
+    </jfd:container>
 
-		<jfd:maintenanceTable id="familyStatus" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#FamilyStatus.FormBr.Title" >		
-		</jfd:maintenanceTable>		
-		
-		<jfd:maintenanceTable id="familyMembers" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#FamilyMembers.FormBr.Title" >
-		</jfd:maintenanceTable> 
+    <jfd:maintenanceTable id="familyStatus" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#FamilyStatus.FormBr.Title">
+    </jfd:maintenanceTable>
 
-		<jfd:maintenanceTable id="addressPerson" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#AddressPerson.FormBr.Title" >
-		</jfd:maintenanceTable> 				
+    <jfd:maintenanceTable id="familyMembers" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#FamilyMembers.FormBr.Title">
+    </jfd:maintenanceTable>
 
- 		<jfd:maintenanceTable id="identDoc" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#IdentDoc.FormBr.Title" >
-		</jfd:maintenanceTable>  
-		
-	 	<!--jfd:container id="extra" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.reference.resources.formelements#Exrta.FormBr.Title" >
-			<jfd:field id="AdditionalInfo" />							
-		 	<jfd:container id="extraPhone" layout="jfd:box" label="resource://com.mg.merp.reference.resources.formelements#NaturalPerson.Phone.FormBr.Title" >
-	 			<jfd:maintenanceTable id="phone" scroll="true" autoResize="subsequent_columns" alignment="expand_expand">
-				</jfd:maintenanceTable>	
-			</jfd:container>							
-		 	<jfd:container id="extraEmail" layout="jfd:box" label="resource://com.mg.merp.reference.resources.formelements#NaturalPerson.Email.FormBr.Title" >
- 				<jfd:maintenanceTable id="email" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" >		
-				</jfd:maintenanceTable>	 
-			</jfd:container>			
-		</jfd:container--> 
-	
-		<jfd:field id="AdditionalInfo" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#Exrta.FormBr.Title" />							
-		
-		<jfd:maintenanceTable id="phone" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#NaturalPerson.Phone.FormBr.Title">
-		</jfd:maintenanceTable>	
+    <jfd:maintenanceTable id="addressPerson" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#AddressPerson.FormBr.Title">
+    </jfd:maintenanceTable>
 
-		<jfd:maintenanceTable id="email" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#NaturalPerson.Email.FormBr.Title">		
-		</jfd:maintenanceTable>	 
-	</jfd:container>	
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:maintenanceTable id="identDoc" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#IdentDoc.FormBr.Title">
+    </jfd:maintenanceTable>
+
+    <!--jfd:container id="extra" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.reference.resources.formelements#Exrta.FormBr.Title" >
+     <jfd:field id="AdditionalInfo" />
+      <jfd:container id="extraPhone" layout="jfd:box" label="resource://com.mg.merp.reference.resources.formelements#NaturalPerson.Phone.FormBr.Title" >
+        <jfd:maintenanceTable id="phone" scroll="true" autoResize="subsequent_columns" alignment="expand_expand">
+       </jfd:maintenanceTable>
+     </jfd:container>
+      <jfd:container id="extraEmail" layout="jfd:box" label="resource://com.mg.merp.reference.resources.formelements#NaturalPerson.Email.FormBr.Title" >
+        <jfd:maintenanceTable id="email" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" >
+       </jfd:maintenanceTable>
+     </jfd:container>
+   </jfd:container-->
+
+    <jfd:field id="AdditionalInfo" alignment="expand_expand"
+               tabTitle="resource://com.mg.merp.reference.resources.formelements#Exrta.FormBr.Title"/>
+
+    <jfd:maintenanceTable id="phone" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#NaturalPerson.Phone.FormBr.Title">
+    </jfd:maintenanceTable>
+
+    <jfd:maintenanceTable id="email" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#NaturalPerson.Email.FormBr.Title">
+    </jfd:maintenanceTable>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

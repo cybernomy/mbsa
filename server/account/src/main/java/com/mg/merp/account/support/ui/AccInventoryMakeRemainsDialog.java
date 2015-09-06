@@ -19,22 +19,22 @@ import com.mg.merp.account.model.Period;
 
 /**
  * Контроллер формы ввода параметров для операции формирование остатков инвентарных карточек
- *  
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: AccInventoryMakeRemainsDialog.java,v 1.1 2008/04/29 05:29:04 alikaev Exp $
  */
 public class AccInventoryMakeRemainsDialog extends DefaultWizardDialog {
-	
-	/**
-	 * период бугалтерского учета
-	 */
-	private Period period;
 
-	public AccInventoryMakeRemainsDialog() {
-	}
+  /**
+   * период бугалтерского учета
+   */
+  private Period period;
 
-	public Period getPeriod() {
-		return period;
-	}
-	
+  public AccInventoryMakeRemainsDialog() {
+  }
+
+  public Period getPeriod() {
+    return period;
+  }
+
 }

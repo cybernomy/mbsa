@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.core.model.SysModule;
 
 /**
- * 
  * @author leonova
  * @version $Id: SysModuleServiceLocal.java,v 1.1 2006/03/14 11:49:50 safonov Exp $
  */
 public interface SysModuleServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<SysModule, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<SysModule, Integer> {
 
 }

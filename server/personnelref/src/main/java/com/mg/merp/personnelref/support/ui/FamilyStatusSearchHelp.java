@@ -22,10 +22,10 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class FamilyStatusSearchHelp extends DefaultLegacySearchHelp {
 
-	
-	@Override
-	protected String getServiceName() {
-		return "merp/personnelref/FamilyStatus";
-	}
+
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/FamilyStatus";
+  }
 
 }

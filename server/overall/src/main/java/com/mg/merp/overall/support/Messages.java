@@ -22,18 +22,17 @@ import com.mg.framework.generic.MessageSourceAccessor;
  */
 public class Messages extends MessageSourceAccessor {
 
-	private static final String BUNDLE_NAME = "com.mg.merp.overall.resources.messages"; //$NON-NLS-1$
-	private static Messages instance;
+  //message keys
+  public static final String ATTRIBUTE_NOT_UNIQUE = "AttributeNotUnique"; //$NON-NLS-1$
+  private static final String BUNDLE_NAME = "com.mg.merp.overall.resources.messages"; //$NON-NLS-1$
+  private static Messages instance;
 
-	//message keys
-	public static final String ATTRIBUTE_NOT_UNIQUE = "AttributeNotUnique"; //$NON-NLS-1$
+  static {
+    MessageSourceAccessor.initializeMessages(BUNDLE_NAME, Messages.class);
+  }
 
-	public static Messages getInstance() {
-		return instance;
-	}
-	
-	static {
-		MessageSourceAccessor.initializeMessages(BUNDLE_NAME, Messages.class);
-	}
+  public static Messages getInstance() {
+    return instance;
+  }
 
 }

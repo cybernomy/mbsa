@@ -15,31 +15,30 @@
 
 package com.mg.merp.salary.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryAttribute;
 import com.mg.merp.salary.TariffingInFeeServiceLocal;
 import com.mg.merp.salary.model.TariffingInFee;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Используемые тарифы" 
- * 
+ * Бизнес-компонент "Используемые тарифы"
+ *
  * @author leonova
  * @version $Id: TariffingInFeeServiceBean.java,v 1.3 2006/08/31 11:37:58 leonova Exp $
  */
-@Stateless(name="merp/salary/TariffingInFeeService")
+@Stateless(name = "merp/salary/TariffingInFeeService")
 public class TariffingInFeeServiceBean extends AbstractPOJODataBusinessObjectServiceBean<TariffingInFee, Integer> implements TariffingInFeeServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, TariffingInFee entity) {
-		context.addRule(new MandatoryAttribute(entity, "TariffingCategory"));
-	}
-
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, TariffingInFee entity) {
+    context.addRule(new MandatoryAttribute(entity, "TariffingCategory"));
+  }
 
 
 }

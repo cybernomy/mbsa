@@ -19,48 +19,48 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Тип выбытия из эксплуатации 
- * 
+ * Тип выбытия из эксплуатации
+ *
  * @author Anna V. Leonova
  * @version $Id: RemoveType.java,v 1.2 2008/06/30 04:15:16 alikaev Exp $
  */
 @DataItemName("Overall.RemoveType")
 public enum RemoveType {
-	
-	/**
-	 * <>
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.None")
-	NONE,
-	
-	/**
-	 * Выдано
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.GivenOut")
-	GIVENOUT,
-	
-	/**
-	 * В эксплуатации
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.InExpl")
-	INEXPL,
-	
-	/**
-	 * Возвращено
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.Returned")
-	RETURNED,
-	
-	/**
-	 * Утеряно
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.Lost")
-	LOST,
-	
-	/**
-	 * Списано
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.WrittenOff")
-	WRITTENOFF	
-	
+
+  /**
+   * <>
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.None")
+  NONE,
+
+  /**
+   * Выдано
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.GivenOut")
+  GIVENOUT,
+
+  /**
+   * В эксплуатации
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.InExpl")
+  INEXPL,
+
+  /**
+   * Возвращено
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.Returned")
+  RETURNED,
+
+  /**
+   * Утеряно
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.Lost")
+  LOST,
+
+  /**
+   * Списано
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#RemoveType.WrittenOff")
+  WRITTENOFF
+
 }

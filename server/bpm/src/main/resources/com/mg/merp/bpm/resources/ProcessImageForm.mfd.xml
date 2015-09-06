@@ -13,9 +13,11 @@
 
 <!-- $Id: ProcessImageForm.mfd.xml,v 1.2 2007/06/01 17:04:32 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.bpm.support.ui.ProcessImageForm" title="Image" orientation="ver" helpTopic="bpm#bpm_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.bpm.support.ui.ProcessImageForm" title="Image" orientation="ver"
+          helpTopic="bpm#bpm_html">
 
-	<jfd:image id="processImage" alignment="expand_expand">
-	</jfd:image>
+  <jfd:image id="processImage" alignment="expand_expand">
+  </jfd:image>
 
 </jfd:form>

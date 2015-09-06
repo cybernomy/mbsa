@@ -13,19 +13,24 @@
 
 <!-- $Id: BinLocationTypeMt.mfd.xml,v 1.8 2007/07/12 13:57:53 poroxnenko Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.warehouse.support.ui.BinLocationTypeMt" title="resource://com.mg.merp.warehouse.resources.formelements#BinLocationType.FormMt.Title" helpTopic="warehouse#binloctype_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.warehouse.support.ui.BinLocationTypeMt"
+          title="resource://com.mg.merp.warehouse.resources.formelements#BinLocationType.FormMt.Title"
+          helpTopic="warehouse#binloctype_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		
-		<jfd:field id="Code" />
-		<jfd:field id="Name" />	
-		
-		<jfd:maintenanceTable id="binTypeCapacityByProduct" scroll="true" autoResize="subsequent_columns" label="resource://com.mg.merp.warehouse.resources.formelements#BinTypeCapacityByProduct"/>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 			 														
-	</jfd:container>
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+
+    <jfd:field id="Code"/>
+    <jfd:field id="Name"/>
+
+    <jfd:maintenanceTable id="binTypeCapacityByProduct" scroll="true"
+                          autoResize="subsequent_columns"
+                          label="resource://com.mg.merp.warehouse.resources.formelements#BinTypeCapacityByProduct"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

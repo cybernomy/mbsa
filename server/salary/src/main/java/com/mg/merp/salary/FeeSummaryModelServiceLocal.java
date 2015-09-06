@@ -18,15 +18,13 @@ import com.mg.merp.document.DocumentPattern;
 import com.mg.merp.document.model.DocHeadModel;
 
 /**
- * 
  * @author leonova
  * @version $Id: FeeSummaryModelServiceLocal.java,v 1.3 2006/09/20 10:59:59 safonov Exp $
  */
 public interface FeeSummaryModelServiceLocal
-   extends DocumentPattern<DocHeadModel, Integer>
-{
-	/**
-	 * тип папки для образцов сводов н/у
-	 */
-	final static short FOLDER_PART = 10502;
+    extends DocumentPattern<DocHeadModel, Integer> {
+  /**
+   * тип папки для образцов сводов н/у
+   */
+  final static short FOLDER_PART = 10502;
 }

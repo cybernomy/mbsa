@@ -14,13 +14,13 @@
  */
 package com.mg.merp.help.support.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.framework.api.help.HelpSystem;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис системы помощи для сервера JBoss
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: HelpSystemServiceMBean.java,v 1.1 2006/11/14 15:29:39 safonov Exp $
  */

@@ -13,46 +13,52 @@
 
 <!-- $Id: OrderSpecSupMt.mfd.xml,v 1.5 2009/02/05 10:05:12 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.warehouse.support.ui.OrderSpecSupMt" title="resource://com.mg.merp.warehouse.resources.formelements#OrderSpecSup.FormMt.Title" helpTopic="warehouse#orderspecsup_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.warehouse.support.ui.OrderSpecSupMt"
+          title="resource://com.mg.merp.warehouse.resources.formelements#OrderSpecSup.FormMt.Title"
+          helpTopic="warehouse#orderspecsup_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Main" >	
-			<jfd:field id="Catalog" longField="true"/>			
-			<jfd:include name="com/mg/merp/document/resources/DocSpecQuantityMacros.xml" /> 				
-	 	 	<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />	
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocSpecPriceInMacros.xml" />
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocSpecSummaInMacros.xml" />
-			<jfd:field id="Cost"  />
-			<jfd:field id="ProductionDate" />		
-			<jfd:field id="BestBefore" sameLine="true"/>
-			<jfd:include name="com/mg/merp/document/resources/ShelfLifeMacros.xml" />
-			<jfd:field id="CountryOfOrigin" />
-			<jfd:field id="CustomsDeclaration" sameLine="true" />				
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 							
-		</jfd:container>
-		<jfd:container id="extraFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Extra" >		
-	 	 	<jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml" />  			
-	 	 	<jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml" />  
-			<jfd:field id="Contractor" alignment="expand_expand"/>			
-		 	<jfd:field id="Comment" />	 
-		</jfd:container>			
-		<jfd:include name="com/mg/merp/document/resources/DocSpecTaxGroupMacros.xml" /> 				 					 		 				 					 								
-		<jfd:include name="com/mg/merp/document/resources/DocSpecPackingMacros.xml" /> 		 
-	 	<jfd:include name="com/mg/merp/document/resources/DocSpecSerialNumMacros.xml" />  		 	 
-		
-		<jfd:container id="orderSpecSupPlanFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#OrderSpec.Plan.TabTitle" >
-			<jfd:field id="RequiredDate" />
-			<jfd:field id="PromisedDate" />
-			<jfd:field id="VendorItemCode" />
-			<jfd:field id="Warehouse" />
-			<jfd:field id="QtyShipped" />
-			<jfd:field id="QtyPicked" />
-			<jfd:field id="QtyReturned" />
-			<jfd:field id="QtyOutstanding" />
-			<jfd:field id="ClosedForPlanning" />
-		 	<jfd:field id="Status" editorType="comboBox" /> 
-		</jfd:container>
-	</jfd:container>
-	<jfd:include name="com/mg/merp/document/resources/DefaultDocSpecMaintenanceFooterMacros.xml" />		
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Main">
+      <jfd:field id="Catalog" longField="true"/>
+      <jfd:include name="com/mg/merp/document/resources/DocSpecQuantityMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocSpecPriceInMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocSpecSummaInMacros.xml"/>
+      <jfd:field id="Cost"/>
+      <jfd:field id="ProductionDate"/>
+      <jfd:field id="BestBefore" sameLine="true"/>
+      <jfd:include name="com/mg/merp/document/resources/ShelfLifeMacros.xml"/>
+      <jfd:field id="CountryOfOrigin"/>
+      <jfd:field id="CustomsDeclaration" sameLine="true"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="extraFields" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Extra">
+      <jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml"/>
+      <jfd:field id="Contractor" alignment="expand_expand"/>
+      <jfd:field id="Comment"/>
+    </jfd:container>
+    <jfd:include name="com/mg/merp/document/resources/DocSpecTaxGroupMacros.xml"/>
+    <jfd:include name="com/mg/merp/document/resources/DocSpecPackingMacros.xml"/>
+    <jfd:include name="com/mg/merp/document/resources/DocSpecSerialNumMacros.xml"/>
+
+    <jfd:container id="orderSpecSupPlanFields" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.warehouse.resources.formelements#OrderSpec.Plan.TabTitle">
+      <jfd:field id="RequiredDate"/>
+      <jfd:field id="PromisedDate"/>
+      <jfd:field id="VendorItemCode"/>
+      <jfd:field id="Warehouse"/>
+      <jfd:field id="QtyShipped"/>
+      <jfd:field id="QtyPicked"/>
+      <jfd:field id="QtyReturned"/>
+      <jfd:field id="QtyOutstanding"/>
+      <jfd:field id="ClosedForPlanning"/>
+      <jfd:field id="Status" editorType="comboBox"/>
+    </jfd:container>
+  </jfd:container>
+  <jfd:include name="com/mg/merp/document/resources/DefaultDocSpecMaintenanceFooterMacros.xml"/>
 </jfd:form>

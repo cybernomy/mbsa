@@ -14,32 +14,33 @@
  */
 package com.mg.framework.service;
 
-import java.sql.SQLException;
-
 import org.hibernate.exception.JDBCExceptionHelper;
 import org.hibernate.exception.TemplatedViolatedConstraintNameExtracter;
 
+import java.sql.SQLException;
+
 /**
  * Класс извлечения имен конструкций из специфичных ИС СУБД Interbase и Firebird
- * 
+ *
  * @author Oleg V. Safonov
- * @version $Id: InterbaseFirebirdViolatedConstraintNameExtracter.java,v 1.1 2006/12/15 10:02:51 safonov Exp $
+ * @version $Id: InterbaseFirebirdViolatedConstraintNameExtracter.java,v 1.1 2006/12/15 10:02:51
+ *          safonov Exp $
  */
 public class InterbaseFirebirdViolatedConstraintNameExtracter extends
-		TemplatedViolatedConstraintNameExtracter {
+    TemplatedViolatedConstraintNameExtracter {
 
-	/* (non-Javadoc)
-	 * @see org.hibernate.exception.ViolatedConstraintNameExtracter#extractConstraintName(java.sql.SQLException)
-	 */
-	public String extractConstraintName(SQLException sqle) {
-        int errorCode = JDBCExceptionHelper.extractErrorCode(sqle);
-        if ( errorCode == 335544665 )
-            return extractUsingTemplate( "violation of PRIMARY or UNIQUE KEY constraint: ", "\n", sqle.getMessage());
-        else if ( errorCode == 335544466 )
-        	return extractUsingTemplate( "violation of FOREIGN KEY constraint: ", "\n", sqle.getMessage());
-        else {
-            return null;
-        }
-	}
+  /* (non-Javadoc)
+   * @see org.hibernate.exception.ViolatedConstraintNameExtracter#extractConstraintName(java.sql.SQLException)
+   */
+  public String extractConstraintName(SQLException sqle) {
+    int errorCode = JDBCExceptionHelper.extractErrorCode(sqle);
+    if (errorCode == 335544665)
+      return extractUsingTemplate("violation of PRIMARY or UNIQUE KEY constraint: ", "\n", sqle.getMessage());
+    else if (errorCode == 335544466)
+      return extractUsingTemplate("violation of FOREIGN KEY constraint: ", "\n", sqle.getMessage());
+    else {
+      return null;
+    }
+  }
 
 }

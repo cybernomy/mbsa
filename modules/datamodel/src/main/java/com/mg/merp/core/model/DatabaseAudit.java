@@ -1,25 +1,22 @@
 /**
  * DatabaseAudit.java
  *
- * Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.
- * All rights reserved
+ * Copyright (c) 1998 - 2007 BusinessTechnology, Ltd. All rights reserved
  *
- * This program is the proprietary and confidential information
- * of BusinessTechnology, Ltd. and may be used and disclosed only
- * as authorized in a license agreement authorizing and
- * controlling such use and disclosure
+ * This program is the proprietary and confidential information of BusinessTechnology, Ltd. and may
+ * be used and disclosed only as authorized in a license agreement authorizing and controlling such
+ * use and disclosure
  *
  * Millennium Business Suite Anywhere System.
- *
  */
 package com.mg.merp.core.model;
-
-import java.io.Serializable;
-import java.util.Date;
 
 import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.orm.DatabaseAuditType;
 import com.mg.framework.service.PersistentObjectHibernate;
+
+import java.io.Serializable;
+import java.util.Date;
 
 /**
  * @author Oleg V. Safonov
@@ -27,111 +24,115 @@ import com.mg.framework.service.PersistentObjectHibernate;
  */
 @DataItemName("Core.DatabaseAudit")
 public class DatabaseAudit extends PersistentObjectHibernate implements
-		Serializable {
-	private Long id;
-	private SysClient sysClient;
-	private String userName;
-	private Date eventDateTime;
-	private DatabaseAuditType auditType;
-	private String auditedEntityName;
-	
-	// Constructors
+    Serializable {
+  private Long id;
+  private SysClient sysClient;
+  private String userName;
+  private Date eventDateTime;
+  private DatabaseAuditType auditType;
+  private String auditedEntityName;
 
-	/** default constructor */
-	public DatabaseAudit() {
-	}
+  // Constructors
 
-	/** constructor with id */
-	public DatabaseAudit(Long id) {
-		this.id = id;
-	}
+  /**
+   * default constructor
+   */
+  public DatabaseAudit() {
+  }
 
-	/**
-	 * @return the id
-	 */
-	@DataItemName("ID")
-	public Long getId() {
-		return id;
-	}
+  /**
+   * constructor with id
+   */
+  public DatabaseAudit(Long id) {
+    this.id = id;
+  }
 
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(Long id) {
-		this.id = id;
-	}
+  /**
+   * @return the id
+   */
+  @DataItemName("ID")
+  public Long getId() {
+    return id;
+  }
 
-	/**
-	 * @return the sysClient
-	 */
-	public SysClient getSysClient() {
-		return sysClient;
-	}
+  /**
+   * @param id the id to set
+   */
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-	/**
-	 * @param sysClient the sysClient to set
-	 */
-	public void setSysClient(SysClient sysClient) {
-		this.sysClient = sysClient;
-	}
+  /**
+   * @return the sysClient
+   */
+  public SysClient getSysClient() {
+    return sysClient;
+  }
 
-	/**
-	 * @return the userName
-	 */
-	@DataItemName ("Security.User.Name")
-	public String getUserName() {
-		return userName;
-	}
+  /**
+   * @param sysClient the sysClient to set
+   */
+  public void setSysClient(SysClient sysClient) {
+    this.sysClient = sysClient;
+  }
 
-	/**
-	 * @param userName the userName to set
-	 */
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+  /**
+   * @return the userName
+   */
+  @DataItemName("Security.User.Name")
+  public String getUserName() {
+    return userName;
+  }
 
-	/**
-	 * @return the eventDateTime
-	 */
-	@DataItemName("Core.DatabaseAudit.EventDateTime")
-	public Date getEventDateTime() {
-		return eventDateTime;
-	}
+  /**
+   * @param userName the userName to set
+   */
+  public void setUserName(String userName) {
+    this.userName = userName;
+  }
 
-	/**
-	 * @param eventDateTime the eventDateTime to set
-	 */
-	public void setEventDateTime(Date eventDateTime) {
-		this.eventDateTime = eventDateTime;
-	}
+  /**
+   * @return the eventDateTime
+   */
+  @DataItemName("Core.DatabaseAudit.EventDateTime")
+  public Date getEventDateTime() {
+    return eventDateTime;
+  }
 
-	/**
-	 * @return the auditType
-	 */
-	public DatabaseAuditType getAuditType() {
-		return auditType;
-	}
+  /**
+   * @param eventDateTime the eventDateTime to set
+   */
+  public void setEventDateTime(Date eventDateTime) {
+    this.eventDateTime = eventDateTime;
+  }
 
-	/**
-	 * @param auditType the auditType to set
-	 */
-	public void setAuditType(DatabaseAuditType auditType) {
-		this.auditType = auditType;
-	}
+  /**
+   * @return the auditType
+   */
+  public DatabaseAuditType getAuditType() {
+    return auditType;
+  }
 
-	/**
-	 * @return the entityName
-	 */
-	@DataItemName("Core.EntityName")
-	public String getAuditedEntityName() {
-		return auditedEntityName;
-	}
+  /**
+   * @param auditType the auditType to set
+   */
+  public void setAuditType(DatabaseAuditType auditType) {
+    this.auditType = auditType;
+  }
 
-	/**
-	 * @param entityName the entityName to set
-	 */
-	public void setAuditedEntityName(String auditedEntityName) {
-		this.auditedEntityName = auditedEntityName;
-	}
+  /**
+   * @return the entityName
+   */
+  @DataItemName("Core.EntityName")
+  public String getAuditedEntityName() {
+    return auditedEntityName;
+  }
+
+  /**
+   * @param entityName the entityName to set
+   */
+  public void setAuditedEntityName(String auditedEntityName) {
+    this.auditedEntityName = auditedEntityName;
+  }
 
 }

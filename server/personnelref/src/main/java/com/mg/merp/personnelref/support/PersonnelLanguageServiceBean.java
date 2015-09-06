@@ -15,30 +15,30 @@
 
 package com.mg.merp.personnelref.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.personnelref.PersonnelLanguageServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelLanguage;
 
+import javax.ejb.Stateless;
+
 /**
- * Реализация бизнес-компонента "Знание иностранных языков" 
- * 
+ * Реализация бизнес-компонента "Знание иностранных языков"
+ *
  * @author Artem V.Sharapov
  * @author leonova
  * @version $Id: PersonnelLanguageServiceBean.java,v 1.4 2007/01/16 08:01:39 sharapov Exp $
  */
-@Stateless(name="merp/personnelref/PersonnelLanguageService") //$NON-NLS-1$
+@Stateless(name = "merp/personnelref/PersonnelLanguageService") //$NON-NLS-1$
 public class PersonnelLanguageServiceBean extends AbstractPOJODataBusinessObjectServiceBean<PersonnelLanguage, Integer> implements PersonnelLanguageServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, com.mg.framework.api.orm.PersistentObject)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, PersonnelLanguage entity) {
-		context.addRule(new MandatoryStringAttribute(entity,"ForeignLanguage")); //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, com.mg.framework.api.orm.PersistentObject)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, PersonnelLanguage entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "ForeignLanguage")); //$NON-NLS-1$
+  }
 
 }

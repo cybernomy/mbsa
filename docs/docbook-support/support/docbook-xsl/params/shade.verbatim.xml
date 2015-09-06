@@ -1,20 +1,23 @@
 <refentry id="shade.verbatim">
-<refmeta>
-<refentrytitle>shade.verbatim</refentrytitle>
-<refmiscinfo role="type">boolean</refmiscinfo>
-</refmeta>
-<refnamediv>
-<refname>shade.verbatim</refname>
-<refpurpose>Should verbatim environments be shaded?</refpurpose>
-</refnamediv>
+  <refmeta>
+    <refentrytitle>shade.verbatim</refentrytitle>
+    <refmiscinfo role="type">boolean</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>shade.verbatim</refname>
+    <refpurpose>Should verbatim environments be shaded?</refpurpose>
+  </refnamediv>
 
-<refsynopsisdiv>
-<src:fragment id='shade.verbatim.frag'><xsl:param name="shade.verbatim" select="0"/></src:fragment>
-</refsynopsisdiv>
+  <refsynopsisdiv>
+    <src:fragment id='shade.verbatim.frag'>
+      <xsl:param name="shade.verbatim" select="0"/>
+    </src:fragment>
+  </refsynopsisdiv>
 
-<refsect1><title>Description</title>
+  <refsect1>
+    <title>Description</title>
 
-<para>FIXME:</para>
+    <para>FIXME:</para>
 
-</refsect1>
+  </refsect1>
 </refentry>

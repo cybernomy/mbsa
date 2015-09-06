@@ -20,8 +20,8 @@ import com.mg.merp.settlement.CardPlanHistServiceLocal;
 import com.mg.merp.settlement.model.ContractorCardPlan;
 
 /**
- * Бизнес-компонент "История планируемого движения по картотеке" 
- * 
+ * Бизнес-компонент "История планируемого движения по картотеке"
+ *
  * @author leonova
  * @version $Id: CardPlanHistServiceBean.java,v 1.3 2006/09/14 08:55:18 leonova Exp $
  */

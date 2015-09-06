@@ -1,42 +1,42 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.docprocess.model.DocSpecState" table="DOCSPECSTATE">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">DOCSPECSTATE_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="DocHeadState" class="com.mg.merp.docprocess.model.DocHeadState">
-      <column name="DOCHEADSTATE_ID" not-null="false" />
+      <column name="DOCHEADSTATE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="DocSpec" class="com.mg.merp.document.model.DocSpec">
-      <column name="DOCSPEC_ID" not-null="false" />
+      <column name="DOCSPEC_ID" not-null="false"/>
     </many-to-one>
     <property name="ReadyQuantity1" type="java.math.BigDecimal">
-      <column name="READYQUANTITY" scale="3" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="READYQUANTITY" scale="3" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="ReadySum" type="java.math.BigDecimal">
-      <column name="READYSUMMA" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="READYSUMMA" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="Data1" type="java.lang.Integer">
-      <column name="DATA1" not-null="false" sql-type="INTEGER" />
+      <column name="DATA1" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="ReadyQuantity2" type="java.math.BigDecimal">
-      <column name="READYQUANTITY2" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="READYQUANTITY2" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="Data2" type="java.lang.Integer">
-      <column name="DATA2" not-null="false" sql-type="INTEGER" />
+      <column name="DATA2" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="StateValue" type="serializable">
-      <column name="STATE_VALUE" not-null="false" sql-type="BLOB" />
+      <column name="STATE_VALUE" not-null="false" sql-type="BLOB"/>
     </property>
   </class>
 </hibernate-mapping>

@@ -21,90 +21,95 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: EconomicSpecFeature.java,v 1.4 2006/03/30 11:22:13 safonov Exp $
  */
 public class EconomicSpecFeature extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String UpCode;
+  private java.lang.String UpCode;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String name;
+  private java.lang.String name;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public EconomicSpecFeature() {
-	}
+  /**
+   * default constructor
+   */
+  public EconomicSpecFeature() {
+  }
 
-	/** constructor with id */
-	public EconomicSpecFeature(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public EconomicSpecFeature(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
+  // Property accessors
 
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  /**
+   *
+   */
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public java.lang.String getUpCode() {
-		return this.UpCode;
-	}
+  /**
+   *
+   */
 
-	public void setUpCode(java.lang.String Upcode) {
-		this.UpCode = Upcode;
-	}
+  public java.lang.String getUpCode() {
+    return this.UpCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.EconSpecFeat.Code")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  public void setUpCode(java.lang.String Upcode) {
+    this.UpCode = Upcode;
+  }
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.EconSpecFeat.Code")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.EconSpecFeat.Name")
-	public java.lang.String getName() {
-		return this.name;
-	}
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	public void setName(java.lang.String Fname) {
-		this.name = Fname;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.EconSpecFeat.Name")
+  public java.lang.String getName() {
+    return this.name;
+  }
+
+  public void setName(java.lang.String Fname) {
+    this.name = Fname;
+  }
 }

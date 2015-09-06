@@ -17,20 +17,18 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.CashDocument;
 
 /**
- * 
  * @author leonova
  * @version $Id: CashDocumentOutServiceLocal.java,v 1.3 2006/09/20 10:43:40 safonov Exp $
  */
 public interface CashDocumentOutServiceLocal
-   extends com.mg.merp.document.Document<CashDocument, Integer, CashDocumentModelOutServiceLocal>
-{
-	/**
-	 * тип папки для расходных кассовых документов
-	 */
-	final static short FOLDER_PART = 12;
-	
-	/**
-	 * docsection для расходных кассовых документов
-	 */
-	final static short DOCSECTION = 6;
+    extends com.mg.merp.document.Document<CashDocument, Integer, CashDocumentModelOutServiceLocal> {
+  /**
+   * тип папки для расходных кассовых документов
+   */
+  final static short FOLDER_PART = 12;
+
+  /**
+   * docsection для расходных кассовых документов
+   */
+  final static short DOCSECTION = 6;
 }

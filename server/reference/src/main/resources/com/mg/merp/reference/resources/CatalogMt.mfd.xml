@@ -13,65 +13,82 @@
 
 <!-- $Id: CatalogMt.mfd.xml,v 1.8 2008/08/27 09:34:59 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.reference.support.ui.CatalogMt" title="resource://com.mg.merp.reference.resources.formelements#Catalog.FormMt.Title" helpTopic="reference#catalog_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.reference.support.ui.CatalogMt"
+          title="resource://com.mg.merp.reference.resources.formelements#Catalog.FormMt.Title"
+          helpTopic="reference#catalog_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtLayout"  alignment="expand_top" tabTitle="resource://com.mg.merp.reference.resources.formelements#Catalog.Tab.Total.Title" >
-		 	<jfd:field id="Code" />
-		 	<jfd:field id="GoodType" sameLine="true" />
-			<jfd:field id="FullName" />
-			
- 			<jfd:field id="BarCode" />
-			<jfd:field id="PluCode" sameLine="true"/>
-			<jfd:field id="Articul" />	
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.reference.resources.formelements#Catalog.Tab.Total.Title">
+      <jfd:field id="Code"/>
+      <jfd:field id="GoodType" sameLine="true"/>
+      <jfd:field id="FullName"/>
 
-			<jfd:field id="Measure1" />	
-			<jfd:field id="MeasureControl" editorType="comboBox" sameLine="true" />	
-			<jfd:field id="Measure2" />
+      <jfd:field id="BarCode"/>
+      <jfd:field id="PluCode" sameLine="true"/>
+      <jfd:field id="Articul"/>
 
-			<jfd:field id="Packaged" alignment="left_expand" sameLine="true" />
-			<jfd:field id="IsHasWeight" alignment="expand_expand" />
-			<jfd:field id="UseSerialNum" alignment="right_expand" sameLine="true" />
+      <jfd:field id="Measure1"/>
+      <jfd:field id="MeasureControl" editorType="comboBox" sameLine="true"/>
+      <jfd:field id="Measure2"/>
 
-			<jfd:container id="weightFields" layout="jfd:box" label="resource://com.mg.merp.reference.resources.formelements#Catalog.Weight" >
-				<jfd:field id="Weight" showLabel="false" alignment="expand_expand"/>	
-				<jfd:field id="WeightMeasure" showLabel="false" alignment="expand_expand" />				
-			</jfd:container>
-			<jfd:container id="volumeFields" layout="jfd:box" label="resource://com.mg.merp.reference.resources.formelements#Catalog.Volume" sameLine="true">
-				<jfd:field id="Volume" showLabel="false" alignment="expand_expand"/>	
-				<jfd:field id="VolumeMeasure" showLabel="false" alignment="expand_expand" />				
-			</jfd:container>
-		
-			<jfd:field id="Okdp" />				
-			<jfd:field id="Okp" sameLine="true" />				
-			<jfd:field id="MarketingMargin" />	
-			<jfd:field id="TaxGroup" sameLine="true" />		
+      <jfd:field id="Packaged" alignment="left_expand" sameLine="true"/>
+      <jfd:field id="IsHasWeight" alignment="expand_expand"/>
+      <jfd:field id="UseSerialNum" alignment="right_expand" sameLine="true"/>
 
-			<jfd:container id="shelfLife" layout="jfd:box" label="resource://com.mg.merp.reference.resources.formelements#Catalog.ShelfLife" >
-				<jfd:field id="ShelfLife" showLabel="false" alignment="expand_expand"/>
-				<jfd:field id="ShelfLifeMeas" showLabel="false" />					
-			</jfd:container>
-				
-			<jfd:field id="ExpDateCalcKind" editorType="radioButton" vertical="true" />
-			<jfd:field id="IsNotInUse" sameLine="true" />
-			
-			<jfd:field id="CountryOfOrigin" />
-			<jfd:field id="CustomsDeclaration" sameLine="true" />				
-			  
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 			 			
-		</jfd:container>
-  		<jfd:maintenanceTable id="standartCost" scroll="true" autoResize="subsequent_columns"  alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#Catalog.Price.Title" helpTopic="reference#normprice_html" >
-		</jfd:maintenanceTable>
-		
-		<jfd:maintenanceTable id="setOfGood" scroll="true" autoResize="subsequent_columns"  alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#Catalog.SetOfGood.Title" helpTopic="reference#setofgood_html" >
-		</jfd:maintenanceTable>
-	
- 		<jfd:maintenanceTable id="packing" scroll="true" autoResize="subsequent_columns"  alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#Catalog.Paking.Title" helpTopic="reference#packing_html" >
-		</jfd:maintenanceTable>	 
-	</jfd:container>
+      <jfd:container id="weightFields" layout="jfd:box"
+                     label="resource://com.mg.merp.reference.resources.formelements#Catalog.Weight">
+        <jfd:field id="Weight" showLabel="false" alignment="expand_expand"/>
+        <jfd:field id="WeightMeasure" showLabel="false" alignment="expand_expand"/>
+      </jfd:container>
+      <jfd:container id="volumeFields" layout="jfd:box"
+                     label="resource://com.mg.merp.reference.resources.formelements#Catalog.Volume"
+                     sameLine="true">
+        <jfd:field id="Volume" showLabel="false" alignment="expand_expand"/>
+        <jfd:field id="VolumeMeasure" showLabel="false" alignment="expand_expand"/>
+      </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+      <jfd:field id="Okdp"/>
+      <jfd:field id="Okp" sameLine="true"/>
+      <jfd:field id="MarketingMargin"/>
+      <jfd:field id="TaxGroup" sameLine="true"/>
+
+      <jfd:container id="shelfLife" layout="jfd:box"
+                     label="resource://com.mg.merp.reference.resources.formelements#Catalog.ShelfLife">
+        <jfd:field id="ShelfLife" showLabel="false" alignment="expand_expand"/>
+        <jfd:field id="ShelfLifeMeas" showLabel="false"/>
+      </jfd:container>
+
+      <jfd:field id="ExpDateCalcKind" editorType="radioButton" vertical="true"/>
+      <jfd:field id="IsNotInUse" sameLine="true"/>
+
+      <jfd:field id="CountryOfOrigin"/>
+      <jfd:field id="CustomsDeclaration" sameLine="true"/>
+
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:maintenanceTable id="standartCost" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#Catalog.Price.Title"
+                          helpTopic="reference#normprice_html">
+    </jfd:maintenanceTable>
+
+    <jfd:maintenanceTable id="setOfGood" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#Catalog.SetOfGood.Title"
+                          helpTopic="reference#setofgood_html">
+    </jfd:maintenanceTable>
+
+    <jfd:maintenanceTable id="packing" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#Catalog.Paking.Title"
+                          helpTopic="reference#packing_html">
+    </jfd:maintenanceTable>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

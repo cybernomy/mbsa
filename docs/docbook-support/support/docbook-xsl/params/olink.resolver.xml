@@ -1,20 +1,23 @@
 <refentry id="olink.resolver">
-<refmeta>
-<refentrytitle>olink.resolver</refentrytitle>
-<refmiscinfo role="type"></refmiscinfo>
-</refmeta>
-<refnamediv>
-<refname>olink.resolver</refname>
-<refpurpose>The root name of the OLink resolver (usually a script)</refpurpose>
-</refnamediv>
+  <refmeta>
+    <refentrytitle>olink.resolver</refentrytitle>
+    <refmiscinfo role="type"></refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>olink.resolver</refname>
+    <refpurpose>The root name of the OLink resolver (usually a script)</refpurpose>
+  </refnamediv>
 
-<refsynopsisdiv>
-<src:fragment id='olink.resolver.frag'><xsl:param name="olink.resolver" select="'/cgi-bin/olink'"/></src:fragment>
-</refsynopsisdiv>
+  <refsynopsisdiv>
+    <src:fragment id='olink.resolver.frag'>
+      <xsl:param name="olink.resolver" select="'/cgi-bin/olink'"/>
+    </src:fragment>
+  </refsynopsisdiv>
 
-<refsect1><title>Description</title>
+  <refsect1>
+    <title>Description</title>
 
-<para>FIXME:</para>
+    <para>FIXME:</para>
 
-</refsect1>
+  </refsect1>
 </refentry>

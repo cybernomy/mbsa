@@ -18,14 +18,14 @@ import com.mg.framework.api.ui.Container;
 
 /**
  * Toolbar widget
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ToolBar.java,v 1.2 2006/11/21 15:34:06 safonov Exp $
  */
 public interface ToolBar extends Container {
 
-	/**
-	 * Атрибут признака "всплывающая панель", имеет тип <code>boolean</code>
-	 */
-	final static String FLOATABLE = "floatable";
+  /**
+   * Атрибут признака "всплывающая панель", имеет тип <code>boolean</code>
+   */
+  final static String FLOATABLE = "floatable";
 }

@@ -17,12 +17,10 @@ package com.mg.merp.qualitycontrol;
 import com.mg.merp.qualitycontrol.model.ScrapType;
 
 /**
- * 
  * @author leonova
  * @version $Id: ScrapTypeServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface ScrapTypeServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<ScrapType, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<ScrapType, Integer> {
 
 }

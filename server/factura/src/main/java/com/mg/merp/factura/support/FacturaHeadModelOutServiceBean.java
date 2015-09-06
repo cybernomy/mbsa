@@ -15,30 +15,29 @@
 
 package com.mg.merp.factura.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.document.generic.DocumentModelServiceBean;
 import com.mg.merp.factura.FacturaHeadModelOutServiceLocal;
 import com.mg.merp.factura.FacturaHeadOutServiceLocal;
 import com.mg.merp.factura.model.FacturaHeadModel;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Образцы исходящих счет - фактур" 
- * 
+ * Бизнес-компонент "Образцы исходящих счет - фактур"
+ *
  * @author leonova
  * @version $Id: FacturaHeadModelOutServiceBean.java,v 1.3 2006/09/12 11:11:21 leonova Exp $
  */
-@Stateless(name="merp/factura/FacturaHeadModelOutService")
+@Stateless(name = "merp/factura/FacturaHeadModelOutService")
 public class FacturaHeadModelOutServiceBean extends DocumentModelServiceBean<FacturaHeadModel, Integer> implements FacturaHeadModelOutServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
-	 */
-	@Override
-	protected short getDocSectionIdentifier() {
-		return FacturaHeadOutServiceLocal.DOCSECTION;
-	}
-
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
+   */
+  @Override
+  protected short getDocSectionIdentifier() {
+    return FacturaHeadOutServiceLocal.DOCSECTION;
+  }
 
 
 }

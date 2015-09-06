@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.FamilyRelation;
 
 /**
- * 
  * @author leonova
  * @version $Id: FamilyRelationServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface FamilyRelationServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<FamilyRelation, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<FamilyRelation, Integer> {
 
 }

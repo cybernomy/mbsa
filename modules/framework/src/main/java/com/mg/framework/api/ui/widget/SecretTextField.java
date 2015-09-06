@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.FieldEditor;
 
 /**
  * Элемент "Ввод пароля"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: SecretTextField.java,v 1.2 2006/11/21 15:34:06 safonov Exp $
  */

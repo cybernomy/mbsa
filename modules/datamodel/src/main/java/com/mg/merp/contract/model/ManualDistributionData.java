@@ -18,54 +18,54 @@ import java.math.BigDecimal;
 
 /**
  * Структура данных для распределения фактичекой суммы
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: ManualDistributionData.java,v 1.1 2007/03/07 12:31:28 sharapov Exp $
  */
 public class ManualDistributionData {
-	
-	// Fields
-	
-	private Integer planItemId;
-	private BigDecimal distSum;
-	
-	/* Default constructor*/
-	public ManualDistributionData() {
-	}
 
-	public ManualDistributionData(Integer planItemId, BigDecimal distSum) {
-		this.planItemId = planItemId;
-		this.distSum = distSum;
-	}
+  // Fields
 
-	// Property accessors
-	
-	/**
-	 * @return the distSum
-	 */
-	public BigDecimal getDistSum() {
-		return distSum;
-	}
+  private Integer planItemId;
+  private BigDecimal distSum;
 
-	/**
-	 * @param distSum the distSum to set
-	 */
-	public void setDistSum(BigDecimal distSum) {
-		this.distSum = distSum;
-	}
+  /* Default constructor*/
+  public ManualDistributionData() {
+  }
 
-	/**
-	 * @return the planItemId
-	 */
-	public Integer getPlanItemId() {
-		return planItemId;
-	}
+  public ManualDistributionData(Integer planItemId, BigDecimal distSum) {
+    this.planItemId = planItemId;
+    this.distSum = distSum;
+  }
 
-	/**
-	 * @param planItemId the planItemId to set
-	 */
-	public void setPlanItemId(Integer planItemId) {
-		this.planItemId = planItemId;
-	}
+  // Property accessors
+
+  /**
+   * @return the distSum
+   */
+  public BigDecimal getDistSum() {
+    return distSum;
+  }
+
+  /**
+   * @param distSum the distSum to set
+   */
+  public void setDistSum(BigDecimal distSum) {
+    this.distSum = distSum;
+  }
+
+  /**
+   * @return the planItemId
+   */
+  public Integer getPlanItemId() {
+    return planItemId;
+  }
+
+  /**
+   * @param planItemId the planItemId to set
+   */
+  public void setPlanItemId(Integer planItemId) {
+    this.planItemId = planItemId;
+  }
 
 }

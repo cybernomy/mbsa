@@ -17,17 +17,17 @@ package com.mg.merp.paymentalloc;
 import com.mg.merp.paymentalloc.model.TransactHead;
 
 /**
- * Сервис бизнес-компонент "Связанные документы" 
- * 
+ * Сервис бизнес-компонент "Связанные документы"
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: TransactHeadServiceLocal.java,v 1.2 2007/05/31 14:08:57 sharapov Exp $
  */
 public interface TransactHeadServiceLocal extends com.mg.framework.api.DataBusinessObjectService<TransactHead, Integer> {
 
-	/**
-	 * Локальное имя сервиса
-	 */
-	static final String LOCAL_SERVICE_NAME = "merp/paymentalloc/TransactHead"; //$NON-NLS-1$
-	
+  /**
+   * Локальное имя сервиса
+   */
+  static final String LOCAL_SERVICE_NAME = "merp/paymentalloc/TransactHead"; //$NON-NLS-1$
+
 }

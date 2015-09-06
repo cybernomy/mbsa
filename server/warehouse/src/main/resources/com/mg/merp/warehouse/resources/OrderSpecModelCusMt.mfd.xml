@@ -12,25 +12,27 @@
 
 <!-- $Id: OrderSpecModelCusMt.mfd.xml,v 1.3 2006/06/02 10:47:29 leonova Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.warehouse.resources.formelements#OrderSpecModelCus.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.warehouse.resources.formelements#OrderSpecModelCus.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
-	 <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >	 
- 		<jfd:field id="Catalog" longField="true"/>			
-		<jfd:field id="TaxGroup" />
-		<jfd:include name="com/mg/merp/document/resources/DocSpecQuantityMacros.xml" /> 				
-	 	 	<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />			
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocSpecPriceOutMacros.xml" />
-		<jfd:field id="Summa1"  />
-		<jfd:field id="SummaWithDiscount" sameLine="true"/>
-		<jfd:field id="Summa" />				
-		<jfd:field id="ProductionDate" />		
-		<jfd:field id="BestBefore" sameLine="true"/>
-		<jfd:include name="com/mg/merp/document/resources/ShelfLifeMacros.xml" /> 	
-		<jfd:field id="Contractor" />			
-	 	<jfd:field id="Comment" />	 
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />		
-	</jfd:container>
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
-	
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:field id="Catalog" longField="true"/>
+    <jfd:field id="TaxGroup"/>
+    <jfd:include name="com/mg/merp/document/resources/DocSpecQuantityMacros.xml"/>
+    <jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml"/>
+    <jfd:include name="com/mg/merp/document/resources/DocSpecPriceOutMacros.xml"/>
+    <jfd:field id="Summa1"/>
+    <jfd:field id="SummaWithDiscount" sameLine="true"/>
+    <jfd:field id="Summa"/>
+    <jfd:field id="ProductionDate"/>
+    <jfd:field id="BestBefore" sameLine="true"/>
+    <jfd:include name="com/mg/merp/document/resources/ShelfLifeMacros.xml"/>
+    <jfd:field id="Contractor"/>
+    <jfd:field id="Comment"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
+
 </jfd:form>

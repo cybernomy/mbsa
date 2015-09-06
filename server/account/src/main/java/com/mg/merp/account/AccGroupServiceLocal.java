@@ -17,12 +17,10 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.AccGroup;
 
 /**
- * 
  * @author leonova
  * @version $Id: AccGroupServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface AccGroupServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<AccGroup, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<AccGroup, Integer> {
 
 }

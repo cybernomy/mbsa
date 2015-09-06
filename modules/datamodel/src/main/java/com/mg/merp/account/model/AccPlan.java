@@ -21,229 +21,234 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: AccPlan.java,v 1.7 2008/03/13 06:19:46 alikaev Exp $
  */
 @DataItemName("Account.AccPlan")
-public class AccPlan extends com.mg.framework.service.PersistentObjectHibernate	implements java.io.Serializable {
+public class AccPlan extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.Folder Folder;
+  private com.mg.merp.core.model.Folder Folder;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.reference.model.Currency Currency;
+  private com.mg.merp.reference.model.Currency Currency;
 
-	private java.lang.String UpAcc;
+  private java.lang.String UpAcc;
 
-	private java.lang.String Acc;
+  private java.lang.String Acc;
 
-	private java.lang.String AccName;
+  private java.lang.String AccName;
 
-	private boolean IsAnl;
+  private boolean IsAnl;
 
-	private boolean IsBal;
+  private boolean IsBal;
 
-	private boolean IsWork;
+  private boolean IsWork;
 
-	private AnlForm anlForm;
+  private AnlForm anlForm;
 
-	private AccType AccType;
+  private AccType AccType;
 
-	private java.util.Set<com.mg.merp.account.model.AnlPlan> anlPlans;
-	
-	private boolean isMaterialAcc;
-	
-	private boolean isRealisationAcc;
+  private java.util.Set<com.mg.merp.account.model.AnlPlan> anlPlans;
 
-	// Constructors
+  private boolean isMaterialAcc;
 
-	/** default constructor */
-	public AccPlan() {
-	}
+  private boolean isRealisationAcc;
 
-	/** constructor with id */
-	public AccPlan(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  // Constructors
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  /**
+   * default constructor
+   */
+  public AccPlan() {
+  }
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public AccPlan(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 */
+  // Property accessors
 
-	public com.mg.merp.core.model.Folder getFolder() {
-		return this.Folder;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	public void setFolder(com.mg.merp.core.model.Folder Folder) {
-		this.Folder = Folder;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  public com.mg.merp.core.model.Folder getFolder() {
+    return this.Folder;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public void setFolder(com.mg.merp.core.model.Folder Folder) {
+    this.Folder = Folder;
+  }
 
-	/**
-	 * 
-	 */	
-	public com.mg.merp.reference.model.Currency getCurrency() {
-		return this.Currency;
-	}
+  /**
+   *
+   */
 
-	public void setCurrency(com.mg.merp.reference.model.Currency Currency) {
-		this.Currency = Currency;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public java.lang.String getUpAcc() {
-		return this.UpAcc;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.reference.model.Currency getCurrency() {
+    return this.Currency;
+  }
 
-	public void setUpAcc(java.lang.String UpAcc) {
-		this.UpAcc = UpAcc;
-	}
+  public void setCurrency(com.mg.merp.reference.model.Currency Currency) {
+    this.Currency = Currency;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.BigCode")
-	public java.lang.String getAcc() {
-		return this.Acc;
-	}
+  /**
+   *
+   */
 
-	public void setAcc(java.lang.String Acc) {
-		this.Acc = Acc;
-	}
+  public java.lang.String getUpAcc() {
+    return this.UpAcc;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.Name")
-	public java.lang.String getAccName() {
-		return this.AccName;
-	}
+  public void setUpAcc(java.lang.String UpAcc) {
+    this.UpAcc = UpAcc;
+  }
 
-	public void setAccName(java.lang.String AccName) {
-		this.AccName = AccName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.BigCode")
+  public java.lang.String getAcc() {
+    return this.Acc;
+  }
 
-	/**
-	 * 
-	 */
+  public void setAcc(java.lang.String Acc) {
+    this.Acc = Acc;
+  }
 
-	public boolean getIsAnl() {
-		return this.IsAnl;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.Name")
+  public java.lang.String getAccName() {
+    return this.AccName;
+  }
 
-	public void setIsAnl(boolean IsAnl) {
-		this.IsAnl = IsAnl;
-	}
+  public void setAccName(java.lang.String AccName) {
+    this.AccName = AccName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.Plan.IsBal")
-	public boolean getIsBal() {
-		return this.IsBal;
-	}
+  /**
+   *
+   */
 
-	public void setIsBal(boolean IsBal) {
-		this.IsBal = IsBal;
-	}
+  public boolean getIsAnl() {
+    return this.IsAnl;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.Plan.IsWork")
-	public boolean getIsWork() {
-		return this.IsWork;
-	}
+  public void setIsAnl(boolean IsAnl) {
+    this.IsAnl = IsAnl;
+  }
 
-	public void setIsWork(boolean IsWork) {
-		this.IsWork = IsWork;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.Plan.IsBal")
+  public boolean getIsBal() {
+    return this.IsBal;
+  }
 
-	/**
-	 * 
-	 */
+  public void setIsBal(boolean IsBal) {
+    this.IsBal = IsBal;
+  }
 
-	public AnlForm getAnlForm() {
-		return this.anlForm;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.Plan.IsWork")
+  public boolean getIsWork() {
+    return this.IsWork;
+  }
 
-	public void setAnlForm(AnlForm anlForm) {
-		this.anlForm = anlForm;
-	}
+  public void setIsWork(boolean IsWork) {
+    this.IsWork = IsWork;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public AccType getAccType() {
-		return this.AccType;
-	}
+  public AnlForm getAnlForm() {
+    return this.anlForm;
+  }
 
-	public void setAccType(AccType AccType) {
-		this.AccType = AccType;
-	}
+  public void setAnlForm(AnlForm anlForm) {
+    this.anlForm = anlForm;
+  }
 
-	public java.util.Set<com.mg.merp.account.model.AnlPlan> getAnlPlans() {
-		return this.anlPlans;
-	}
+  /**
+   *
+   */
 
-	public void setAnlPlans(java.util.Set<com.mg.merp.account.model.AnlPlan> anlPlans) {
-		this.anlPlans = anlPlans;
-	}
+  public AccType getAccType() {
+    return this.AccType;
+  }
 
-	public String getAmountAnl() {
-		int[] amount = new int[5];
-		java.util.Set<com.mg.merp.account.model.AnlPlan> list = getAnlPlans();
-		if (list == null)
-			return "";
-		for (com.mg.merp.account.model.AnlPlan anlPlan : list)
-			amount[anlPlan.getAnlLevel() - 1] += 1;
-		return String.valueOf(amount[0]) + ";" + String.valueOf(amount[1])
-				+ ";" + String.valueOf(amount[2]) + ";"
-				+ String.valueOf(amount[3]) + ";" + String.valueOf(amount[4])
-				+ ";";
-	}
+  public void setAccType(AccType AccType) {
+    this.AccType = AccType;
+  }
 
-	public void setAmountAnl(String amountAnl) {
-		// read only property
-	}
+  public java.util.Set<com.mg.merp.account.model.AnlPlan> getAnlPlans() {
+    return this.anlPlans;
+  }
 
-	public boolean isMaterialAcc() {
-		AnlForm anlForm = this.getAnlForm();
-		return anlForm != null && (anlForm == AnlForm.BASEMEANS || anlForm == AnlForm.CALCCOST || anlForm == AnlForm.BATCHCALC || 
-				anlForm == AnlForm.AVERAGECOST || anlForm == AnlForm.FIFO || anlForm == AnlForm.LIFO || 
-				anlForm == AnlForm.MBP);	
-	}
+  public void setAnlPlans(java.util.Set<com.mg.merp.account.model.AnlPlan> anlPlans) {
+    this.anlPlans = anlPlans;
+  }
 
-	public boolean isRealisationAcc() {
-		return this.getAnlForm() != null && this.getAnlForm() == AnlForm.REALISARION;
-	}
-	
+  public String getAmountAnl() {
+    int[] amount = new int[5];
+    java.util.Set<com.mg.merp.account.model.AnlPlan> list = getAnlPlans();
+    if (list == null)
+      return "";
+    for (com.mg.merp.account.model.AnlPlan anlPlan : list)
+      amount[anlPlan.getAnlLevel() - 1] += 1;
+    return String.valueOf(amount[0]) + ";" + String.valueOf(amount[1])
+        + ";" + String.valueOf(amount[2]) + ";"
+        + String.valueOf(amount[3]) + ";" + String.valueOf(amount[4])
+        + ";";
+  }
+
+  public void setAmountAnl(String amountAnl) {
+    // read only property
+  }
+
+  public boolean isMaterialAcc() {
+    AnlForm anlForm = this.getAnlForm();
+    return anlForm != null && (anlForm == AnlForm.BASEMEANS || anlForm == AnlForm.CALCCOST || anlForm == AnlForm.BATCHCALC ||
+        anlForm == AnlForm.AVERAGECOST || anlForm == AnlForm.FIFO || anlForm == AnlForm.LIFO ||
+        anlForm == AnlForm.MBP);
+  }
+
+  public boolean isRealisationAcc() {
+    return this.getAnlForm() != null && this.getAnlForm() == AnlForm.REALISARION;
+  }
+
 }

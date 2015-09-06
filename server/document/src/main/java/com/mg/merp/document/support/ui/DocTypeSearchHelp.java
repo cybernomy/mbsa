@@ -18,25 +18,25 @@ import com.mg.merp.document.model.DocumentKind;
 
 /**
  * SearchHelp для всех типов контрактов по DocSection документа
- * 
+ *
  * @author leonova
  * @version $Id: DocTypeSearchHelp.java,v 1.4 2006/10/16 06:28:00 leonova Exp $
  */
 public class DocTypeSearchHelp extends AbstractDocTypeSearchHelp {
 
-	@Override
-	protected boolean isDocument() {
-		return false;
-	}
+  @Override
+  protected boolean isDocument() {
+    return false;
+  }
 
-	@Override
-	protected DocumentKind getDocumentKind() {
-		return null;
-	}
+  @Override
+  protected DocumentKind getDocumentKind() {
+    return null;
+  }
 
-	@Override
-	protected boolean isDocModel() {
-		return false;
-	}
+  @Override
+  protected boolean isDocModel() {
+    return false;
+  }
 
 }

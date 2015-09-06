@@ -13,15 +13,16 @@
 
 <!-- $Id: InputQueryDialog.mfd.xml,v 1.3 2006/08/10 14:53:06 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.framework.support.ui.InputQueryDialog" orientation="ver" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.framework.support.ui.InputQueryDialog" orientation="ver">
 
-	<jfd:container id="fields" layout="jfd:box" orientation="ver" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:box" orientation="ver" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:label id="prompt" alignment="expand_top" />
-		<jfd:field id="value" alignment="expand_expand" />
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+    <jfd:label id="prompt" alignment="expand_top"/>
+    <jfd:field id="value" alignment="expand_expand"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
 
 </jfd:form>

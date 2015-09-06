@@ -21,42 +21,42 @@ package com.mg.merp.exchange.model;
  */
 public class Config extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-    // Fields    
+  // Fields
 
-private com.mg.merp.core.model.SysClient SysClient;
-private java.lang.String SiteCode;
+  private com.mg.merp.core.model.SysClient SysClient;
+  private java.lang.String SiteCode;
 
 
-    // Constructors
+  // Constructors
 
-    /** default constructor */
-    public Config() {
-    }
-    
-    /** constructor with id */
-    public Config(com.mg.merp.core.model.SysClient SysClient) {
-        this.SysClient = SysClient;
-    }
+  /**
+   * default constructor
+   */
+  public Config() {
+  }
 
-	public java.lang.String getSiteCode() {
-		return SiteCode;
-	}
+  /**
+   * constructor with id
+   */
+  public Config(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setSiteCode(java.lang.String siteCode) {
-		SiteCode = siteCode;
-	}
+  public java.lang.String getSiteCode() {
+    return SiteCode;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return SysClient;
-	}
+  public void setSiteCode(java.lang.String siteCode) {
+    SiteCode = siteCode;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient sysClient) {
-		SysClient = sysClient;
-	}
-   
-    
-    
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return SysClient;
+  }
 
- 
+  public void setSysClient(com.mg.merp.core.model.SysClient sysClient) {
+    SysClient = sysClient;
+  }
+
 
 }

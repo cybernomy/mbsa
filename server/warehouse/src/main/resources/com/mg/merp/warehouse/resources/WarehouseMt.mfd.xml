@@ -13,34 +13,40 @@
 
 <!-- $Id: WarehouseMt.mfd.xml,v 1.13 2008/06/05 12:26:19 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.warehouse.resources.formelements#Warehouse.FormMt.Title" helpTopic="warehouse#whadd_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.warehouse.resources.formelements#Warehouse.FormMt.Title"
+          helpTopic="warehouse#whadd_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />		
-		<jfd:field id="Code" enabled="false"/>
-		<jfd:field id="FullName" enabled="false" />
-		<jfd:field id="WarehouseType" searchHelp="com.mg.merp.warehouse.support.ui.WarehouseTypeSearchHelp"/>
-		<jfd:field id="StockPolicy" editorType="comboBox"/>	
-		<jfd:field id="UseBinLocation" />
-		<jfd:field id="BinSizing" />			
-		<jfd:field id="BatchPriceBAi" alignment="expand_expand" />
-		<jfd:field id="CheckTransactionDay" />			
-		<jfd:container id="availableQuan" layout="jfd:box" columns="3" fieldGroup="resource://com.mg.merp.warehouse.resources.formelements#AvailableQuan" >
-		 	<jfd:field id="CalcFact" alignment="expand_expand" /> 
-		 	<jfd:field id="CalcFactSign" alignment="expand_expand" /> 
-		 	<jfd:label id="catalogCodeLabel" alignment="expand_expand" text="resource://com.mg.merp.warehouse.resources.formelements#WareCard.Sign"/>
-	 		<jfd:field id="CalcPlanIn" alignment="expand_expand" />
-	 		<jfd:field id="CalcPlanInSign" alignment="expand_expand" horizontalSpan="2"/> 
-	 		<jfd:field id="CalcPlanOut" alignment="expand_expand" />
-	 		<jfd:field id="CalcPlanOutSign" alignment="expand_expand" horizontalSpan="2"/> 
-	 		<jfd:field id="CalcReserve" alignment="expand_expand" />	
-	 		<jfd:field id="CalcReserveSign" alignment="expand_expand" horizontalSpan="2"/> 			 			
-		</jfd:container>		
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Code" enabled="false"/>
+    <jfd:field id="FullName" enabled="false"/>
+    <jfd:field id="WarehouseType"
+               searchHelp="com.mg.merp.warehouse.support.ui.WarehouseTypeSearchHelp"/>
+    <jfd:field id="StockPolicy" editorType="comboBox"/>
+    <jfd:field id="UseBinLocation"/>
+    <jfd:field id="BinSizing"/>
+    <jfd:field id="BatchPriceBAi" alignment="expand_expand"/>
+    <jfd:field id="CheckTransactionDay"/>
+    <jfd:container id="availableQuan" layout="jfd:box" columns="3"
+                   fieldGroup="resource://com.mg.merp.warehouse.resources.formelements#AvailableQuan">
+      <jfd:field id="CalcFact" alignment="expand_expand"/>
+      <jfd:field id="CalcFactSign" alignment="expand_expand"/>
+      <jfd:label id="catalogCodeLabel" alignment="expand_expand"
+                 text="resource://com.mg.merp.warehouse.resources.formelements#WareCard.Sign"/>
+      <jfd:field id="CalcPlanIn" alignment="expand_expand"/>
+      <jfd:field id="CalcPlanInSign" alignment="expand_expand" horizontalSpan="2"/>
+      <jfd:field id="CalcPlanOut" alignment="expand_expand"/>
+      <jfd:field id="CalcPlanOutSign" alignment="expand_expand" horizontalSpan="2"/>
+      <jfd:field id="CalcReserve" alignment="expand_expand"/>
+      <jfd:field id="CalcReserveSign" alignment="expand_expand" horizontalSpan="2"/>
+    </jfd:container>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

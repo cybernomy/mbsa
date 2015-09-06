@@ -19,28 +19,28 @@ import com.mg.framework.generic.ui.DefaultRestrictionForm;
 
 /**
  * Контроллер формы условий отбора праздничных дней
- * 
+ *
  * @author leonova
- * @version $Id: HolidaysRest.java,v 1.3 2006/10/03 05:36:17 leonova Exp $ 
+ * @version $Id: HolidaysRest.java,v 1.3 2006/10/03 05:36:17 leonova Exp $
  */
 public class HolidaysRest extends DefaultRestrictionForm {
 
-	@DataItemName("Reference.Holidays.HYear")
-	private Integer year = null;
+  @DataItemName("Reference.Holidays.HYear")
+  private Integer year = null;
 
 
-	@Override
-	protected void doClearRestrictionItem() {
-		this.year = null;
-	}
+  @Override
+  protected void doClearRestrictionItem() {
+    this.year = null;
+  }
 
 
-	/**
-	 * @return Returns the year.
-	 */
-	protected Integer getYear() {
-		return year;
-	}
+  /**
+   * @return Returns the year.
+   */
+  protected Integer getYear() {
+    return year;
+  }
 
 
 }

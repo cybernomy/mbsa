@@ -13,20 +13,27 @@
 
 <!-- $Id: DocFlowStageRightsDialog.mfd.xml,v 1.2 2007/06/09 11:29:41 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.docflow.support.ui.DocFlowStageRightsDialog" orientation="ver" verticalGap="5" title="resource://com.mg.merp.docflow.resources.formelements#DocProcessStageRightsDialog.Title" width="200" height="150" helpTopic="docprocess#permissions_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.docflow.support.ui.DocFlowStageRightsDialog" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.docflow.resources.formelements#DocProcessStageRightsDialog.Title"
+          width="200" height="150" helpTopic="docprocess#permissions_html">
 
-	<jfd:container id="grantsBox" layout="jfd:box" alignment="expand_expand">
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="grants" alignment="expand_expand" editorType="radioButton" showLabel="false" vertical="true" />
-	</jfd:container>
+  <jfd:container id="grantsBox" layout="jfd:box" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="grants" alignment="expand_expand" editorType="radioButton" showLabel="false"
+               vertical="true"/>
+  </jfd:container>
 
-	<jfd:container id="buttons" layout="jfd:box" alignment="expand_top">
-		<jfd:filler id="buttonsFiller" alignment="expand_top"
-			type="horizontalGlue" />
-		<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#OkButton"
-			actionListener="Ok" />
-		<jfd:button id="CancelButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CancelButton"
-			actionListener="Cancel" />
-	</jfd:container>
+  <jfd:container id="buttons" layout="jfd:box" alignment="expand_top">
+    <jfd:filler id="buttonsFiller" alignment="expand_top"
+                type="horizontalGlue"/>
+    <jfd:button id="OkButton" alignment="right_top"
+                text="resource://com.mg.framework.resources.messages#OkButton"
+                actionListener="Ok"/>
+    <jfd:button id="CancelButton" alignment="right_top"
+                text="resource://com.mg.framework.resources.messages#CancelButton"
+                actionListener="Cancel"/>
+  </jfd:container>
 
 </jfd:form>

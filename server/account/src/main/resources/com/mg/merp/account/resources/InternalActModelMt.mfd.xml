@@ -13,30 +13,34 @@
 
 <!-- $Id: InternalActModelMt.mfd.xml,v 1.8 2007/09/20 09:50:20 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.InternalActHeadModelMt" title="resource://com.mg.merp.account.resources.formelements#InternalActHeadModel.FormMt.Title" helpTopic="account#intactmodel_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.account.support.ui.InternalActHeadModelMt"
+          title="resource://com.mg.merp.account.resources.formelements#InternalActHeadModel.FormMt.Title"
+          helpTopic="account#intactmodel_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title" >
-	 	 	<jfd:include name="com/mg/merp/document/resources/ModelNameMacros.xml" />		
-  	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			 			 	 	
-			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
-			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/CurrencyModelMacros.xml" />					
-		 	<jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml" /> 
-	 	 	<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />	
-	 	 	<jfd:include name="com/mg/merp/document/resources/PartnerFromToMacros.xml" />		
-	 	 	<jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml" />  				
-	 	 	<jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml" />  			
- 			<jfd:field id="Through" />
-	 	 	<jfd:include name="com/mg/merp/document/resources/PriceListMacros.xml" />	
-			<jfd:field id="Description" />
- 			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 									
-		</jfd:container>
-	</jfd:container>
-	
-	<jfd:include name="com/mg/merp/document/resources/DefaultDocModelMaintenanceFooterMacros.xml" />
-	
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title">
+      <jfd:include name="com/mg/merp/document/resources/ModelNameMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/CurrencyModelMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/PartnerFromToMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml"/>
+      <jfd:field id="Through"/>
+      <jfd:include name="com/mg/merp/document/resources/PriceListMacros.xml"/>
+      <jfd:field id="Description"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+  </jfd:container>
+
+  <jfd:include name="com/mg/merp/document/resources/DefaultDocModelMaintenanceFooterMacros.xml"/>
+
 </jfd:form>

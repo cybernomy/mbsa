@@ -1,26 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ===================================================================== -->
- <!--  Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.					-->
- <!--  All rights reserved													-->
- <!-- 																		-->
- <!--  This program is the proprietary and confidential information			-->
- <!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
- <!--  as authorized in a license agreement authorizing and					-->
- <!--  controlling such use and disclosure									-->
- <!--																		-->
- <!--  Millennium Business Suite Anywhere System.							-->
- <!-- ===================================================================== -->
+<!--  Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.					-->
+<!--  All rights reserved													-->
+<!-- 																		-->
+<!--  This program is the proprietary and confidential information			-->
+<!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
+<!--  as authorized in a license agreement authorizing and					-->
+<!--  controlling such use and disclosure									-->
+<!--																		-->
+<!--  Millennium Business Suite Anywhere System.							-->
+<!-- ===================================================================== -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.paymentcontrol.support.ui.ExecutionDlg" title="resource://com.mg.merp.paymentcontrol.resources.formelements#ExecutionDlg.Title" width="360" height="184">
-	
-	<jfd:container id="mainBox" layout="jfd:defaultMtLayout" alignment="expand_expand">
-	<jfd:border style="bevel" type="raised" />
-		<jfd:field id="resourceName" readOnly="true" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Resource" />
-		<jfd:field id="sumToExecute" text="resource://com.mg.merp.paymentcontrol.resources.formelements#ExecutionDlg.SumToExecute" />
-		<jfd:field id="executionCur"  readOnly="true" />
-		<jfd:field id="executionDate" text="resource://com.mg.merp.paymentcontrol.resources.formelements#ExecutionDlg.ExecutionDate" />
-		<jfd:field id="dateToExecute" text="resource://com.mg.merp.paymentcontrol.resources.formelements#ExecutionDlg.DateToExecute" readOnly="true" />
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5"
+          controller="com.mg.merp.paymentcontrol.support.ui.ExecutionDlg"
+          title="resource://com.mg.merp.paymentcontrol.resources.formelements#ExecutionDlg.Title"
+          width="360" height="184">
+
+  <jfd:container id="mainBox" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="resourceName" readOnly="true"
+               text="resource://com.mg.merp.paymentcontrol.resources.formelements#Resource"/>
+    <jfd:field id="sumToExecute"
+               text="resource://com.mg.merp.paymentcontrol.resources.formelements#ExecutionDlg.SumToExecute"/>
+    <jfd:field id="executionCur" readOnly="true"/>
+    <jfd:field id="executionDate"
+               text="resource://com.mg.merp.paymentcontrol.resources.formelements#ExecutionDlg.ExecutionDate"/>
+    <jfd:field id="dateToExecute"
+               text="resource://com.mg.merp.paymentcontrol.resources.formelements#ExecutionDlg.DateToExecute"
+               readOnly="true"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
 </jfd:form>

@@ -12,12 +12,19 @@
 <!-- ======================================================================= -->
 
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.personnelref.support.ui.FamilyMemberSearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.personnelref.resources.formelements#FamilyMemberSearchForm.Title" width="600" height="250" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.personnelref.support.ui.FamilyMemberSearchForm" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.personnelref.resources.formelements#FamilyMemberSearchForm.Title"
+          width="600" height="250">
 
-	<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
-		<jfd:button id="сhooseButton" text="resource://com.mg.merp.personnelref.resources.formelements#FamilyMemberSearchForm.ChooseButton" actionListener="Choose" />
-	</jfd:toolBar>
+  <jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+    <jfd:button id="сhooseButton"
+                text="resource://com.mg.merp.personnelref.resources.formelements#FamilyMemberSearchForm.ChooseButton"
+                actionListener="Choose"/>
+  </jfd:toolBar>
 
-	<jfd:table id="familyMembersTable" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" />
+  <jfd:table id="familyMembersTable" alignment="expand_expand" scroll="true"
+             autoResize="subsequent_columns"/>
 
 </jfd:form>

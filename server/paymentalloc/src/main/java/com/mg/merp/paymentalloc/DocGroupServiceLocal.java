@@ -17,12 +17,10 @@ package com.mg.merp.paymentalloc;
 import com.mg.merp.paymentalloc.model.DocGroup;
 
 /**
- * 
  * @author leonova
  * @version $Id: DocGroupServiceLocal.java,v 1.1 2006/03/14 11:49:48 safonov Exp $
  */
 public interface DocGroupServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<DocGroup, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<DocGroup, Integer> {
 
 }

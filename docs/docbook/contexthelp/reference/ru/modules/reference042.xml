@@ -8,116 +8,160 @@
 <!ENTITY ref "Прикладные справочники">
 ]> -->
 <chapter id="ref042">
-   <title>Общероссийские справочники</title>
-   
-   	<para>В системе &merp; используются общероссийские справочники и классификаторы:</para>
-	
-	<itemizedlist>
-        	<listitem><para><link linkend="ref042_01">Коды КБК</link></para></listitem>
-		<listitem><para><link linkend="ref042_02">Коды ОКАТО</link></para></listitem>
-		<listitem><para><link linkend="ref042_03">Коды ОКДП</link></para></listitem>
-		<listitem><para><link linkend="ref042_04">Коды ОКП</link></para></listitem>
-	</itemizedlist>
+  <title>Общероссийские справочники</title>
 
-	<section id="ref042_01">
-	   <title>Коды КБК</title>
-	 
-		<para>КБК - общероссийские коды бюджетной классификации 
-		в соответствии с классификацией доходов бюджетов Российской Федерации.</para>
-		
-		<para>В системе &merp; вход в справочник &quot;Коды КБК&quot; осуществляется через 
-		главное меню:<menuchoice>
-		<guimenu>&ref;</guimenu>
-		<guisubmenu>Общероссийские справочники</guisubmenu>
-		<guimenuitem>Коды КБК</guimenuitem>
-		</menuchoice>. </para>
-		
-		<para>Каждая запись этого справочника включает в себя 
-		цифровой код (обязательно) и наименование (по желанию пользователя):</para>
-		
-		<para><guibutton>Код</guibutton>. Цифровое обозначение.</para>
-		
-		<para><guibutton>Наименование</guibutton>. Текстовое наименование позиции КБК.</para>
-		
-		<para>В системе &merp; коды КБК указываются, например, в Исходящих банковских документах. </para>
-	</section>
-	
-	
-	<section id="ref042_02">
-	   <title>Коды ОКАТО</title>
-	   
-		<para>ОКАТО - Общероссийский классификатор объектов административно-территориального 
-		деления.</para>
-		
-		<para>В системе &merp; вход в справочник &quot;Коды ОКАТО&quot; 
-		осуществляется через главное меню:
-		<menuchoice>
-		<guimenu>&ref;</guimenu>
-		<guisubmenu>Общероссийские справочники</guisubmenu>
-		<guimenuitem>Коды ОКАТО</guimenuitem>
-		</menuchoice>. </para>
-		
-		<para>Каждая запись этого справочника включает в себя цифровой 
-		код (обязательно) и наименование (по желанию пользователя):</para>
-		
-		<para><guibutton>Код</guibutton>. Цифровое обозначение.</para>
-		
-		<para><guibutton>Наименование</guibutton>. Текстовое наименование позиции ОКАТО.</para>
-		
-		<para>В системе &merp; коды ОКАТО указываются, например, в Исходящих банковских документах,
-		в данных <link linkend="ref046">физических лиц</link>.</para>
-		
-	</section>
-	
-	
-	<section id="ref042_03">
-	   <title>Коды ОКДП</title>
-	   
-		<para>ОКДП - Общероссийский классификатор видов экономической 
-		деятельности, продукции и услуг.</para>
-		
-		<para>В системе &merp; вход в справочник &quot;Коды 
-		ОКДП&quot; осуществляется через главное меню:
-		<menuchoice>
-		<guimenu>&ref;</guimenu>
-		<guisubmenu>Общероссийские справочники</guisubmenu>
-		<guimenuitem>Коды ОКДП</guimenuitem>
-		</menuchoice>. </para>
-		
-		<para>Каждая запись этого справочника включает в себя цифровой 
-		код (обязательно) и наименование (по желанию пользователя):</para>
-		
-		<para><guibutton>Код</guibutton>. Цифровое обозначение.</para>
-		
-		<para><guibutton>Наименование</guibutton>. Текстовое наименование позиции ОКДП.</para>
-		
-		<para>В системе &merp; коды ОКДП указываются, например, 
-		в <link linkend="ref015_01">Позициях Каталога</link>. </para>
-	
-	</section>
-	
-	
-	<section id="ref042_04">
-	   <title>Коды ОКП</title>
-	   
-		<para>ОКП - Общероссийский классификатор продукции.</para>
-		
-		<para>В системе &merp; вход в справочник &quot;Коды 
-		ОКП&quot; осуществляется через главное меню:<menuchoice>
-		<guimenu>&ref;</guimenu>
-		<guisubmenu>Общероссийские справочники</guisubmenu>
-		<guimenuitem>Коды ОКП</guimenuitem>
-		</menuchoice>. </para>
-		
-		<para>Каждая запись этого справочника включает в себя цифровой 
-		код (обязательно) и наименование (по желанию пользователя):</para>
-		
-		<para><guibutton>Код</guibutton>. Цифровое обозначение продукции.</para>
-		
-		<para><guibutton>Наименование</guibutton>. Текстовое наименование позиции ОКП.</para>
-		
-		<para>В системе &merp; коды ОКП указываются, например, в 
-		<link linkend="ref015_01">Позициях Каталога</link>. </para>
-	
-	</section>
+  <para>В системе &merp; используются общероссийские справочники и классификаторы:</para>
+
+  <itemizedlist>
+    <listitem>
+      <para>
+        <link linkend="ref042_01">Коды КБК</link>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <link linkend="ref042_02">Коды ОКАТО</link>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <link linkend="ref042_03">Коды ОКДП</link>
+      </para>
+    </listitem>
+    <listitem>
+      <para>
+        <link linkend="ref042_04">Коды ОКП</link>
+      </para>
+    </listitem>
+  </itemizedlist>
+
+  <section id="ref042_01">
+    <title>Коды КБК</title>
+
+    <para>КБК - общероссийские коды бюджетной классификации
+      в соответствии с классификацией доходов бюджетов Российской Федерации.
+    </para>
+
+    <para>В системе &merp; вход в справочник &quot;Коды КБК&quot; осуществляется через
+      главное меню:
+      <menuchoice>
+        <guimenu>&ref;</guimenu>
+        <guisubmenu>Общероссийские справочники</guisubmenu>
+        <guimenuitem>Коды КБК</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+
+    <para>Каждая запись этого справочника включает в себя
+      цифровой код (обязательно) и наименование (по желанию пользователя):
+    </para>
+
+    <para><guibutton>Код</guibutton>. Цифровое обозначение.
+    </para>
+
+    <para><guibutton>Наименование</guibutton>. Текстовое наименование позиции КБК.
+    </para>
+
+    <para>В системе &merp; коды КБК указываются, например, в Исходящих банковских документах.</para>
+  </section>
+
+
+  <section id="ref042_02">
+    <title>Коды ОКАТО</title>
+
+    <para>ОКАТО - Общероссийский классификатор объектов административно-территориального
+      деления.
+    </para>
+
+    <para>В системе &merp; вход в справочник &quot;Коды ОКАТО&quot;
+      осуществляется через главное меню:
+      <menuchoice>
+        <guimenu>&ref;</guimenu>
+        <guisubmenu>Общероссийские справочники</guisubmenu>
+        <guimenuitem>Коды ОКАТО</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+
+    <para>Каждая запись этого справочника включает в себя цифровой
+      код (обязательно) и наименование (по желанию пользователя):
+    </para>
+
+    <para><guibutton>Код</guibutton>. Цифровое обозначение.
+    </para>
+
+    <para><guibutton>Наименование</guibutton>. Текстовое наименование позиции ОКАТО.
+    </para>
+
+    <para>В системе &merp; коды ОКАТО указываются, например, в Исходящих банковских документах,
+      в данных<link linkend="ref046">физических лиц</link>.
+    </para>
+
+  </section>
+
+
+  <section id="ref042_03">
+    <title>Коды ОКДП</title>
+
+    <para>ОКДП - Общероссийский классификатор видов экономической
+      деятельности, продукции и услуг.
+    </para>
+
+    <para>В системе &merp; вход в справочник &quot;Коды
+      ОКДП&quot; осуществляется через главное меню:
+      <menuchoice>
+        <guimenu>&ref;</guimenu>
+        <guisubmenu>Общероссийские справочники</guisubmenu>
+        <guimenuitem>Коды ОКДП</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+
+    <para>Каждая запись этого справочника включает в себя цифровой
+      код (обязательно) и наименование (по желанию пользователя):
+    </para>
+
+    <para><guibutton>Код</guibutton>. Цифровое обозначение.
+    </para>
+
+    <para><guibutton>Наименование</guibutton>. Текстовое наименование позиции ОКДП.
+    </para>
+
+    <para>В системе &merp; коды ОКДП указываются, например,
+      в<link linkend="ref015_01">Позициях Каталога</link>.
+    </para>
+
+  </section>
+
+
+  <section id="ref042_04">
+    <title>Коды ОКП</title>
+
+    <para>ОКП - Общероссийский классификатор продукции.</para>
+
+    <para>В системе &merp; вход в справочник &quot;Коды
+      ОКП&quot; осуществляется через главное меню:
+      <menuchoice>
+        <guimenu>&ref;</guimenu>
+        <guisubmenu>Общероссийские справочники</guisubmenu>
+        <guimenuitem>Коды ОКП</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+
+    <para>Каждая запись этого справочника включает в себя цифровой
+      код (обязательно) и наименование (по желанию пользователя):
+    </para>
+
+    <para><guibutton>Код</guibutton>. Цифровое обозначение продукции.
+    </para>
+
+    <para><guibutton>Наименование</guibutton>. Текстовое наименование позиции ОКП.
+    </para>
+
+    <para>В системе &merp; коды ОКП указываются, например, в
+      <link linkend="ref015_01">Позициях Каталога</link>.
+    </para>
+
+  </section>
 </chapter>

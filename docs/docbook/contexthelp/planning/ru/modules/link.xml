@@ -14,45 +14,45 @@
 <!-- $Id: link.xml,v 1.1 2006/12/15 10:39:02 konyashkina Exp $ -->
 
 <link version="1.0">
-   
+
   <linkitem topic="forecast_links">
-     <linkentry target="forecastver_html" text="Версии прогнозов" />
-     <linkentry target="invforecast_html" text="Прогнозы складских запасов" />
+    <linkentry target="forecastver_html" text="Версии прогнозов"/>
+    <linkentry target="invforecast_html" text="Прогнозы складских запасов"/>
   </linkitem>
-  
+
   <linkitem topic="generic_links">
-     <linkentry target="genericitem_html" text="Обобщённые товары" />
-     <linkentry target="itemfamily_html" text="Семейства обобщенных продуктов" />
-  </linkitem>   
-     
-   <linkitem topic="profile_links">
-     <linkentry target="prodprof_html" text="Профили производства" />
-   </linkitem>
-   
-   <linkitem topic="wareh_links">
-     <linkentry target="catalogwh_html" text="Склады хранения товаров" />
-   </linkitem>
-   
+    <linkentry target="genericitem_html" text="Обобщённые товары"/>
+    <linkentry target="itemfamily_html" text="Семейства обобщенных продуктов"/>
+  </linkitem>
+
+  <linkitem topic="profile_links">
+    <linkentry target="prodprof_html" text="Профили производства"/>
+  </linkitem>
+
+  <linkitem topic="wareh_links">
+    <linkentry target="catalogwh_html" text="Склады хранения товаров"/>
+  </linkitem>
+
   <linkitem topic="mps_links">
-     <linkentry target="mps_html" text="Основные производственные планы" />
-     <linkentry target="mpsline_html" text="Итоги формирования ОПП" />
-     <linkentry target="perenos_html" text="Перенос ОПП" />
-    </linkitem>
-   
-   <linkitem topic="firmorder_links">
-     <linkentry target="firmorder_html" text="Подтверждённые заказы" />
+    <linkentry target="mps_html" text="Основные производственные планы"/>
+    <linkentry target="mpsline_html" text="Итоги формирования ОПП"/>
+    <linkentry target="perenos_html" text="Перенос ОПП"/>
   </linkitem>
-   
-    <linkitem topic="mrp_links">
-     <linkentry target="mrpvers_html" text="Версии ППМ" />
-     <linkentry target="mrpproc_html" text="Генерация ППМ" />
-     <linkentry target="mrprecom_html" text="Рекомендации ППМ" />
-     <linkentry target="mrpreport_html" text="Итоги расчёта ППМ" />
+
+  <linkitem topic="firmorder_links">
+    <linkentry target="firmorder_html" text="Подтверждённые заказы"/>
   </linkitem>
-   
+
+  <linkitem topic="mrp_links">
+    <linkentry target="mrpvers_html" text="Версии ППМ"/>
+    <linkentry target="mrpproc_html" text="Генерация ППМ"/>
+    <linkentry target="mrprecom_html" text="Рекомендации ППМ"/>
+    <linkentry target="mrpreport_html" text="Итоги расчёта ППМ"/>
+  </linkitem>
+
   <linkitem topic="rccp_links">
-     <linkentry target="rccphead_html" text="УППМ" />
-     <linkentry target="rccpdetail_html" text="График загрузки мощностей" /> 
+    <linkentry target="rccphead_html" text="УППМ"/>
+    <linkentry target="rccpdetail_html" text="График загрузки мощностей"/>
   </linkitem>
-  
+
 </link>

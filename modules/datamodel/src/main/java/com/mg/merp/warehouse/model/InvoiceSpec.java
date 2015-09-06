@@ -20,12 +20,14 @@ package com.mg.merp.warehouse.model;
  * @version $Id: InvoiceSpec.java,v 1.6 2007/09/27 15:38:46 safonov Exp $
  */
 public class InvoiceSpec extends BaseStockDocumentSpec implements
-		java.io.Serializable {
+    java.io.Serializable {
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public InvoiceSpec() {
-	}
+  /**
+   * default constructor
+   */
+  public InvoiceSpec() {
+  }
 
 }

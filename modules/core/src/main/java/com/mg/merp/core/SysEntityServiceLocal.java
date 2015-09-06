@@ -5,10 +5,10 @@ package com.mg.merp.core;
 
 /**
  * Local interface for SysEntityService.
+ *
  * @xdoclet-generated at 2-03-06
  */
 public interface SysEntityServiceLocal
-   extends javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService
-{
+    extends javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService {
 
 }

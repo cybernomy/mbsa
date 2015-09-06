@@ -13,13 +13,17 @@
 
 <!-- $Id: FeatureBr.mfd.xml,v 1.6 2007/05/16 08:55:50 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.core.support.ui.FeatureBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.core.resources.formelements#Feature.FormBr.Title" helpTopic="core#features_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.core.support.ui.FeatureBr" orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.core.resources.formelements#Feature.FormBr.Title"
+          helpTopic="core#features_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" alignment="expand_expand" autoResize="subsequent_columns" scroll="true" >
-	</jfd:maintenanceTable>
+  <jfd:maintenanceTable id="table" alignment="expand_expand" autoResize="subsequent_columns"
+                        scroll="true">
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

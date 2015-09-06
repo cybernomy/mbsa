@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
-  <joined-subclass name="com.mg.merp.account.model.AdvanceRepHead" extends="com.mg.merp.document.model.DocHead" table="ACC_ADVANCEREPHEAD">
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
+  <joined-subclass name="com.mg.merp.account.model.AdvanceRepHead"
+                   extends="com.mg.merp.document.model.DocHead" table="ACC_ADVANCEREPHEAD">
     <meta attribute="extends">com.mg.merp.document.model.DocHead</meta>
     <!-- <id name="Id" type="int">
       <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
@@ -15,94 +16,101 @@
       </generator
     </id>-->
     <key>
-      <column name="DOCHEAD_ID" not-null="true" />
+      <column name="DOCHEAD_ID" not-null="true"/>
     </key>
     <many-to-one name="Acc" class="com.mg.merp.account.model.AccPlan">
-      <column name="ACC_ID" not-null="false" />
+      <column name="ACC_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AccountAnt" class="com.mg.merp.reference.model.Contractor">
-      <column name="ACCOUNTANT_ID" not-null="false" />
+      <column name="ACCOUNTANT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Chief" class="com.mg.merp.reference.model.Contractor">
-      <column name="CHIEF_ID" not-null="false" />
+      <column name="CHIEF_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Company" class="com.mg.merp.reference.model.Contractor">
-      <column name="COMPANY_ID" not-null="false" />
+      <column name="COMPANY_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="RestDoc" class="com.mg.merp.document.model.DocHead">
-      <column name="RESTDOC_ID" not-null="false" />
+      <column name="RESTDOC_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="ChiefAccountAnt" class="com.mg.merp.reference.model.Contractor">
-      <column name="CHIEFACCOUNTANT_ID" not-null="false" />
+      <column name="CHIEFACCOUNTANT_ID" not-null="false"/>
     </many-to-one>
     <property name="Purpose" type="java.lang.String">
-      <column name="PURPOSE" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="PURPOSE" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="PrevAdvanceSum" type="java.math.BigDecimal">
-      <column name="PREVADVANCESUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="PREVADVANCESUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="Received1Src" type="java.lang.String">
-      <column name="RECEIVED1SRC" length="40" not-null="false" sql-type="VARCHAR" />
+      <column name="RECEIVED1SRC" length="40" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Received1Date" type="java.util.Date">
-      <column name="RECEIVED1DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="RECEIVED1DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="Received1Sum" type="java.math.BigDecimal">
-      <column name="RECEIVED1SUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="RECEIVED1SUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="Received2Src" type="java.lang.String">
-      <column name="RECEIVED2SRC" length="40" not-null="false" sql-type="VARCHAR" />
+      <column name="RECEIVED2SRC" length="40" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Received2Date" type="java.util.Date">
-      <column name="RECEIVED2DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="RECEIVED2DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="Received2Sum" type="java.math.BigDecimal">
-      <column name="RECEIVED2SUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="RECEIVED2SUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="Received3Src" type="java.lang.String">
-      <column name="RECEIVED3SRC" length="40" not-null="false" sql-type="VARCHAR" />
+      <column name="RECEIVED3SRC" length="40" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Received3Date" type="java.util.Date">
-      <column name="RECEIVED3DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="RECEIVED3DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="Received3Sum" type="java.math.BigDecimal">
-      <column name="RECEIVED3SUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="RECEIVED3SUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="RestDocKind" type="boolean">
-      <column name="RESTDOCKIND" not-null="false" sql-type="SMALLINT" />
+      <column name="RESTDOCKIND" not-null="false" sql-type="SMALLINT"/>
     </property>
-    <many-to-one name="RestDocType" class="com.mg.merp.document.model.DocType" property-ref="UpCode">
-      <column name="RESTDOCTYPE" not-null="false" />
+    <many-to-one name="RestDocType" class="com.mg.merp.document.model.DocType"
+                 property-ref="UpCode">
+      <column name="RESTDOCTYPE" not-null="false"/>
     </many-to-one>
     <property name="RestDocNumber" type="java.lang.String">
-      <column name="RESTDOCNUMBER" length="20" not-null="false" sql-type="CHAR" />
+      <column name="RESTDOCNUMBER" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="RestDocDate" type="java.util.Date">
-      <column name="RESTDOCDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="RESTDOCDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="RestSum" type="java.math.BigDecimal">
-      <column name="RESTSUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="RESTSUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="AttachedDocs" type="java.lang.Integer">
-      <column name="ATTACHEDDOCS" not-null="false" sql-type="INTEGER" />
+      <column name="ATTACHEDDOCS" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="AttachedDocsSheets" type="java.lang.Integer">
-      <column name="ATTACHEDDOCSSHEETS" not-null="false" sql-type="INTEGER" />
+      <column name="ATTACHEDDOCSSHEETS" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="Comments" type="java.lang.String">
-      <column name="COMMENTS" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="COMMENTS" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Office" type="java.lang.String">
-      <formula>(select emp.office from dochead d left join acc_advancerephead a on a.dochead_id = d.id left join contractor c on c.id = a.company_id left join employees emp on emp.contractor_id = d.from_id where d.id = DOCHEAD_ID)</formula>
+      <formula>(select emp.office from dochead d left join acc_advancerephead a on a.dochead_id =
+        d.id left join contractor c on c.id = a.company_id left join employees emp on
+        emp.contractor_id = d.from_id where d.id = DOCHEAD_ID)
+      </formula>
     </property>
     <property name="TabNum" type="java.lang.String">
-      <formula>(select emp.tabnum from dochead d left join acc_advancerephead a on a.dochead_id = d.id left join contractor c on c.id = a.company_id left join employees emp on emp.contractor_id = d.from_id where d.id = DOCHEAD_ID)</formula>
+      <formula>(select emp.tabnum from dochead d left join acc_advancerephead a on a.dochead_id =
+        d.id left join contractor c on c.id = a.company_id left join employees emp on
+        emp.contractor_id = d.from_id where d.id = DOCHEAD_ID)
+      </formula>
     </property>
     <property name="ReceivedSum" type="java.math.BigDecimal">
-     <column name="RECEIVEDSUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="RECEIVEDSUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="BalanceOrOverRun" type="boolean">
-      <column name="BALANCEOROVERRUN" not-null="false" sql-type="SMALLINT" />
+      <column name="BALANCEOROVERRUN" not-null="false" sql-type="SMALLINT"/>
     </property>
   </joined-subclass>
 </hibernate-mapping>

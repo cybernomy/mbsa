@@ -21,90 +21,95 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: DayTime.java,v 1.4 2006/09/04 05:54:46 leonova Exp $
  */
 public class DayTime extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.mfreference.model.DayCalendar DayCal;
+  private com.mg.merp.mfreference.model.DayCalendar DayCal;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.Long startTick;
+  private java.lang.Long startTick;
 
-	private java.lang.Long ticks;
+  private java.lang.Long ticks;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public DayTime() {
-	}
+  /**
+   * default constructor
+   */
+  public DayTime() {
+  }
 
-	/** constructor with id */
-	public DayTime(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public DayTime(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.mfreference.model.DayCalendar getDayCal() {
-		return this.DayCal;
-	}
+  /**
+   *
+   */
 
-	public void setDayCal(com.mg.merp.mfreference.model.DayCalendar DayCal) {
-		this.DayCal = DayCal;
-	}
+  public com.mg.merp.mfreference.model.DayCalendar getDayCal() {
+    return this.DayCal;
+  }
 
-	/**
-	 * 
-	 */
+  public void setDayCal(com.mg.merp.mfreference.model.DayCalendar DayCal) {
+    this.DayCal = DayCal;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("MfReference.DayTime.StartTick")
-	public java.lang.Long getStartTick() {
-		return this.startTick;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setStartTick(java.lang.Long StartTick) {
-		this.startTick = StartTick;
-	}
+  /**
+   *
+   */
+  @DataItemName("MfReference.DayTime.StartTick")
+  public java.lang.Long getStartTick() {
+    return this.startTick;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("MfReference.DayTime.Ticks")
-	public java.lang.Long getTicks() {
-		return this.ticks;
-	}
+  public void setStartTick(java.lang.Long StartTick) {
+    this.startTick = StartTick;
+  }
 
-	public void setTicks(java.lang.Long Ticks) {
-		this.ticks = Ticks;
-	}
+  /**
+   *
+   */
+  @DataItemName("MfReference.DayTime.Ticks")
+  public java.lang.Long getTicks() {
+    return this.ticks;
+  }
+
+  public void setTicks(java.lang.Long Ticks) {
+    this.ticks = Ticks;
+  }
 
 }

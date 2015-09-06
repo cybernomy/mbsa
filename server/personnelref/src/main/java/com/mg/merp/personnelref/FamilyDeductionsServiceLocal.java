@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.FamilyDeductions;
 
 /**
- * 
  * @author leonova
  * @version $Id: FamilyDeductionsServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface FamilyDeductionsServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<FamilyDeductions, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<FamilyDeductions, Integer> {
 
 }

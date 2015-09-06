@@ -14,29 +14,28 @@
  */
 package com.mg.merp.docflow;
 
-import java.util.EventListener;
-
 import com.mg.merp.core.model.Folder;
+
+import java.util.EventListener;
 
 /**
  * Слушатель выбора папки назначения
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ChooseFolderListener.java,v 1.1 2006/12/12 15:23:33 safonov Exp $
  */
 public interface ChooseFolderListener extends EventListener {
 
-	/**
-	 * папка выбрана
-	 * 
-	 * @param folder	папка
-	 */
-	void performed(Folder folder);
-	
-	/**
-	 * выбор папки отменен
-	 *
-	 */
-	void canceled();	
-	
+  /**
+   * папка выбрана
+   *
+   * @param folder папка
+   */
+  void performed(Folder folder);
+
+  /**
+   * выбор папки отменен
+   */
+  void canceled();
+
 }

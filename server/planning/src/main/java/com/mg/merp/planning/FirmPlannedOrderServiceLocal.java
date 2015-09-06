@@ -18,24 +18,23 @@ import com.mg.merp.planning.model.FirmPlannedOrder;
 
 /**
  * Бизнес-компонент "Подтвержденные заказы"
- * 
+ *
  * @author Oleg V. Safonov
  * @author leonova
  * @version $Id: FirmPlannedOrderServiceLocal.java,v 1.2 2007/07/30 10:37:51 safonov Exp $
  */
 public interface FirmPlannedOrderServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<FirmPlannedOrder, Integer>
-{
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/planning/FirmPlannedOrder";
+    extends com.mg.framework.api.DataBusinessObjectService<FirmPlannedOrder, Integer> {
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/planning/FirmPlannedOrder";
 
-	/**
-	 * создание заказов по рекомендациям ППМ
-	 * 
-	 * @param mrpVersionId	версия ППМ
-	 */
-	void createByMrpRecommendation(int mrpVersionId);
+  /**
+   * создание заказов по рекомендациям ППМ
+   *
+   * @param mrpVersionId версия ППМ
+   */
+  void createByMrpRecommendation(int mrpVersionId);
 
 }

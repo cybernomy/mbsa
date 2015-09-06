@@ -17,15 +17,14 @@ package com.mg.merp.document;
 import com.mg.framework.api.BusinessObjectService;
 
 /**
- * 
  * @author Valentin A. Poroxnenko
  * @version $Id: DocumentProcessorServiceLocal.java,v 1.2 2007/06/14 10:58:02 poroxnenko Exp $
  */
-public interface DocumentProcessorServiceLocal extends BusinessObjectService, DocumentProcessor{
+public interface DocumentProcessorServiceLocal extends BusinessObjectService, DocumentProcessor {
 
-	/**
-	 * Локальное имя сервиса
-	 */
-	static final String LOCAL_SERVICE_NAME = "merp/document/DocumentProcessor";
+  /**
+   * Локальное имя сервиса
+   */
+  static final String LOCAL_SERVICE_NAME = "merp/document/DocumentProcessor";
 
 }

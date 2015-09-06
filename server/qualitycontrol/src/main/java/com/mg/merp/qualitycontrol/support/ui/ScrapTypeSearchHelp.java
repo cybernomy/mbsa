@@ -22,12 +22,12 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class ScrapTypeSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {
-		return "merp/qualitycontrol/ScrapType";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/qualitycontrol/ScrapType";
+  }
 
 }

@@ -6,73 +6,99 @@
 <!ENTITY ref "Прикладные справочники">
 ]> -->
 <chapter id="ref021">
-    <title>Единицы измерения</title>
-	
-    	<para>Справочник &quot;Единицы измерения&quot; предназначен для хранения 
-	и использования информации обо всех единицах измерения, используемых в системе 
-	&merp;. </para>
-	
-	<para>Вход в справочник &quot;Единицы измерения&quot; осуществляется через 
-	главное меню системы:
-	<menuchoice>
-		<guimenu> &ref;</guimenu>
-		<guisubmenu>Каталог</guisubmenu>
-		<guimenuitem>Единицы измерения</guimenuitem>
-	</menuchoice>.</para>
-	
-	<screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/ed_izm.gif"/>
-	</imageobject></mediaobject></screenshot>
+  <title>Единицы измерения</title>
 
-	<para>Каждая запись может содержать следующие параметры:</para>
-	
-	<para><guibutton>Код</guibutton>. Краткое уникальное наименование единицы измерения в системе. </para>
-	
-	<para><guibutton>Международный код</guibutton>. Данное поле может использоваться для внесения кода 
-	по ОКЕИ или кода Европейской экономической комиссии Организации Объединенных Наций 
-	(ЕЭК ООН). </para>
+  <para>Справочник &quot;Единицы измерения&quot; предназначен для хранения
+    и использования информации обо всех единицах измерения, используемых в системе
+    &merp;.
+  </para>
 
-	<para><guibutton>Наименование.</guibutton> Полное наименование единицы измерения.</para>
-	
-	<para><guibutton>Делимая единица.</guibutton> Признак определяет, использовать ли дробную часть 
-	количества при регистрации спецификации документа. Например, для единицы измерения 
-	&quot;штуки&quot; дробной части количества быть не может, а у единицы 
-	измерения &quot;килограммы&quot; дробная часть количества может быть. </para>
-	
-	
-	<section id="ref021_01">
-	<title>Преобразования единиц измерения</title>
-	
-		<screenshot><mediaobject><imageobject>
-		<imagedata fileref="images/measure_transform.gif"/>
-		</imageobject></mediaobject></screenshot>
-	
-		<para>В системе каждый вид товара может измеряться в двух 
-		<link linkend="ref021">единицах измерения</link> (ЕИ). 
-		Для пересчёта из одной ЕИ в другую предназначен справочник 
-		&quot;Преобразование ЕИ&quot;. Вы можете задавать пары ЕИ и алгоритм пересчёта.</para>
-		
-	<!--	<para>В алгоритме пересчёта существует встроенная функция <literal>ValueFrom</literal> 
-		- это количество в первой ЕИ. Напимер можно написать следующее преобразование для товара 
-		&quot;Бензин&quot;, который измеряется в литрах и тоннах:</para> -->
-		
-		<screenshot><mediaobject><imageobject>
-		<imagedata fileref="images/measure_transform_add.gif"/>
-		</imageobject></mediaobject></screenshot>
-		
-	<!--	<para>С помощью функции <literal>CATALOG</literal> в алгоритме пересчёта ЕИ можно получить 
-		ID позиции Каталога. Если позиция Каталога для данного пересчёта не установлена, 
-		то данная функция возвращает Null. Для проверки состояния результата можно воспользоваться 
-		функцией <literal>VarIsNull(const V: Variant): Boolean</literal>. Например:</para> 
-		
-		<programlisting>
-		res := Catalog;
-		if VarIsNull(res) then
-		... //обрабатываем ситуацию, когда позиция Каталога не установлена
-		else
-		...;</programlisting>  -->
-		
-		<para>Подробнее о функциях, используемых в алгоритмах, читайте в руководстве
-		администратора к системе &merp;.</para>
-	</section>
+  <para>Вход в справочник &quot;Единицы измерения&quot; осуществляется через
+    главное меню системы:
+    <menuchoice>
+      <guimenu> &ref;</guimenu>
+      <guisubmenu>Каталог</guisubmenu>
+      <guimenuitem>Единицы измерения</guimenuitem>
+    </menuchoice>
+    .
+  </para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/ed_izm.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>Каждая запись может содержать следующие параметры:</para>
+
+  <para><guibutton>Код</guibutton>. Краткое уникальное наименование единицы измерения в системе.
+  </para>
+
+  <para><guibutton>Международный код</guibutton>. Данное поле может использоваться для внесения кода
+    по ОКЕИ или кода Европейской экономической комиссии Организации Объединенных Наций
+    (ЕЭК ООН).
+  </para>
+
+  <para>
+    <guibutton>Наименование.</guibutton>
+    Полное наименование единицы измерения.
+  </para>
+
+  <para>
+    <guibutton>Делимая единица.</guibutton>
+    Признак определяет, использовать ли дробную часть
+    количества при регистрации спецификации документа. Например, для единицы измерения
+    &quot;штуки&quot; дробной части количества быть не может, а у единицы
+    измерения &quot;килограммы&quot; дробная часть количества может быть.
+  </para>
+
+
+  <section id="ref021_01">
+    <title>Преобразования единиц измерения</title>
+
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/measure_transform.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <para>В системе каждый вид товара может измеряться в двух
+      <link linkend="ref021">единицах измерения</link>
+      (ЕИ).
+      Для пересчёта из одной ЕИ в другую предназначен справочник
+      &quot;Преобразование ЕИ&quot;. Вы можете задавать пары ЕИ и алгоритм пересчёта.
+    </para>
+
+    <!--	<para>В алгоритме пересчёта существует встроенная функция <literal>ValueFrom</literal>
+      - это количество в первой ЕИ. Напимер можно написать следующее преобразование для товара
+      &quot;Бензин&quot;, который измеряется в литрах и тоннах:</para> -->
+
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/measure_transform_add.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <!--	<para>С помощью функции <literal>CATALOG</literal> в алгоритме пересчёта ЕИ можно получить
+      ID позиции Каталога. Если позиция Каталога для данного пересчёта не установлена,
+      то данная функция возвращает Null. Для проверки состояния результата можно воспользоваться
+      функцией <literal>VarIsNull(const V: Variant): Boolean</literal>. Например:</para>
+
+      <programlisting>
+      res := Catalog;
+      if VarIsNull(res) then
+      ... //обрабатываем ситуацию, когда позиция Каталога не установлена
+      else
+      ...;</programlisting>  -->
+
+    <para>Подробнее о функциях, используемых в алгоритмах, читайте в руководстве
+      администратора к системе &merp;.
+    </para>
+  </section>
 </chapter>

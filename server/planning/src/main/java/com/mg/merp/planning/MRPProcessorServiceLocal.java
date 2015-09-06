@@ -16,22 +16,21 @@ package com.mg.merp.planning;
 
 /**
  * Бизнес-компонент "Процессор MRP"
- * 
+ *
  * @author leonova
  * @version $Id: MRPProcessorServiceLocal.java,v 1.2 2007/07/30 10:37:51 safonov Exp $
  */
-public interface MRPProcessorServiceLocal extends com.mg.framework.api.BusinessObjectService
-{
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/planning/MRPProcessor";
-	
-	/**
-	 * генерация ППМ
-	 * 
-	 * @param mrpVersionId	версия ППМ
-	 */
-	void generateMrp(int mrpVersionId);
+public interface MRPProcessorServiceLocal extends com.mg.framework.api.BusinessObjectService {
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/planning/MRPProcessor";
+
+  /**
+   * генерация ППМ
+   *
+   * @param mrpVersionId версия ППМ
+   */
+  void generateMrp(int mrpVersionId);
 
 }

@@ -22,43 +22,43 @@ import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
  * Форма для выбора папок, загружает список папок по установленному типу папки
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: FolderSearchForm.java,v 1.1 2006/08/23 11:40:49 safonov Exp $
  */
 public class FolderSearchForm extends DefaultTreeBrowseForm {
-	protected short folderType;
+  protected short folderType;
 
-	public FolderSearchForm() {
-		super();
-		folderService = (DataBusinessObjectService) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/Folder");
-		tree.setParentPropertyName("Folder.Id");
-	}
+  public FolderSearchForm() {
+    super();
+    folderService = (DataBusinessObjectService) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/Folder");
+    tree.setParentPropertyName("Folder.Id");
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultTreeBrowseForm#loadFolders()
-	 */
-	@Override
-	protected TreeNode loadFolders() {
-		return ReferenceUtils.loadFolderHierarchy(folderType);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultTreeBrowseForm#loadFolders()
+   */
+  @Override
+  protected TreeNode loadFolders() {
+    return ReferenceUtils.loadFolderHierarchy(folderType);
+  }
 
-	/**
-	 * получить тип папки
-	 * 
-	 * @return Returns the folderType.
-	 */
-	public short getFolderType() {
-		return folderType;
-	}
+  /**
+   * получить тип папки
+   *
+   * @return Returns the folderType.
+   */
+  public short getFolderType() {
+    return folderType;
+  }
 
-	/**
-	 * установить тип папки
-	 * 
-	 * @param folderType The folderType to set.
-	 */
-	public void setFolderType(short folderType) {
-		this.folderType = folderType;
-	}
+  /**
+   * установить тип папки
+   *
+   * @param folderType The folderType to set.
+   */
+  public void setFolderType(short folderType) {
+    this.folderType = folderType;
+  }
 
 }

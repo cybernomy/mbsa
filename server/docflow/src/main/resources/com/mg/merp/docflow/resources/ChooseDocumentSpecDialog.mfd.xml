@@ -13,26 +13,38 @@
 
 <!-- $Id: ChooseDocumentSpecDialog.mfd.xml,v 1.7 2009/01/26 16:41:11 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.docflow.support.ui.ChooseDocumentSpecDialog" orientation="ver" verticalGap="5" title="resource://com.mg.merp.docflow.resources.formelements#ChooseDocumentSpecDialog.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.docflow.support.ui.ChooseDocumentSpecDialog" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.docflow.resources.formelements#ChooseDocumentSpecDialog.Title">
 
-	<jfd:table id="specList" alignment="expand_expand" scroll="true" >
-		<jfd:popupMenu>
-			<jfd:menuItem id="chooseSelected" text="resource://com.mg.merp.docflow.resources.formelements#ChooseDocumentSpecDialog.ChooseSelected" actionListener="ChooseSelected" keyStroke="SPACE"/>
-			<jfd:menuItem id="chooseAll" text="resource://com.mg.merp.docflow.resources.formelements#ChooseDocumentSpecDialog.ChooseAll" actionListener="ChooseAll" keyStroke="ADD"/>
-			<jfd:menuItem id="clearAll" text="resource://com.mg.merp.docflow.resources.formelements#ChooseDocumentSpecDialog.ClearAll" actionListener="ClearAll" keyStroke="SUBTRACT"/>
-		</jfd:popupMenu>
-	</jfd:table>
+  <jfd:table id="specList" alignment="expand_expand" scroll="true">
+    <jfd:popupMenu>
+      <jfd:menuItem id="chooseSelected"
+                    text="resource://com.mg.merp.docflow.resources.formelements#ChooseDocumentSpecDialog.ChooseSelected"
+                    actionListener="ChooseSelected" keyStroke="SPACE"/>
+      <jfd:menuItem id="chooseAll"
+                    text="resource://com.mg.merp.docflow.resources.formelements#ChooseDocumentSpecDialog.ChooseAll"
+                    actionListener="ChooseAll" keyStroke="ADD"/>
+      <jfd:menuItem id="clearAll"
+                    text="resource://com.mg.merp.docflow.resources.formelements#ChooseDocumentSpecDialog.ClearAll"
+                    actionListener="ClearAll" keyStroke="SUBTRACT"/>
+    </jfd:popupMenu>
+  </jfd:table>
 
-	<jfd:container id="buttons" layout="jfd:box" alignment="expand_top">
-		<jfd:monetaryAmountField id="userTotalSum" alignment="left_top" />
-		<jfd:button id="AllotSumButton" alignment="left_top" text="resource://com.mg.merp.docflow.resources.formelements#ChooseDocumentSpecDialog.AllotSum"
-			actionListener="AllotSum" />
-		<jfd:filler id="buttonsFiller" alignment="expand_top"
-			type="horizontalGlue" />
-		<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#OkButton"
-			actionListener="Ok" />
-		<jfd:button id="CancelButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CancelButton"
-			actionListener="Cancel" />
-	</jfd:container>
+  <jfd:container id="buttons" layout="jfd:box" alignment="expand_top">
+    <jfd:monetaryAmountField id="userTotalSum" alignment="left_top"/>
+    <jfd:button id="AllotSumButton" alignment="left_top"
+                text="resource://com.mg.merp.docflow.resources.formelements#ChooseDocumentSpecDialog.AllotSum"
+                actionListener="AllotSum"/>
+    <jfd:filler id="buttonsFiller" alignment="expand_top"
+                type="horizontalGlue"/>
+    <jfd:button id="OkButton" alignment="right_top"
+                text="resource://com.mg.framework.resources.messages#OkButton"
+                actionListener="Ok"/>
+    <jfd:button id="CancelButton" alignment="right_top"
+                text="resource://com.mg.framework.resources.messages#CancelButton"
+                actionListener="Cancel"/>
+  </jfd:container>
 
 </jfd:form>

@@ -17,15 +17,13 @@ package com.mg.merp.finance;
 import com.mg.merp.finance.model.Account;
 
 /**
- * 
  * @author leonova
  * @version $Id: FeatureServiceLocal.java,v 1.2 2006/08/28 12:48:15 leonova Exp $
  */
 public interface FeatureServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Account, Integer>
-{
-	/**
-	 * тип папки для признаков финансового учета
-	 */
-	final static short FOLDER_PART = 39;
+    extends com.mg.framework.api.DataBusinessObjectService<Account, Integer> {
+  /**
+   * тип папки для признаков финансового учета
+   */
+  final static short FOLDER_PART = 39;
 }

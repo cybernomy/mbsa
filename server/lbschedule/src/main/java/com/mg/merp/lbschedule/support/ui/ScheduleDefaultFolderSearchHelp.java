@@ -19,18 +19,18 @@ import com.mg.merp.reference.support.ui.FolderByTypeSearchHelp;
 
 /**
  * Поисковик "Образца папки по-умолчанию для создания графика исполнения обязательств"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: ScheduleDefaultFolderSearchHelp.java,v 1.1 2007/01/13 13:19:33 sharapov Exp $
  */
 public class ScheduleDefaultFolderSearchHelp extends FolderByTypeSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.reference.support.ui.FolderByTypeSearchHelp#getFolderType()
-	 */
-	@Override
-	protected short getFolderType() {
-		return ScheduleServiceLocal.FOLDER_PART;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.reference.support.ui.FolderByTypeSearchHelp#getFolderType()
+   */
+  @Override
+  protected short getFolderType() {
+    return ScheduleServiceLocal.FOLDER_PART;
+  }
 
 }

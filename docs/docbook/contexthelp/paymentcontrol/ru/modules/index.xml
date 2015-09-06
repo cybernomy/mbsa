@@ -16,16 +16,16 @@
 <index version="1.0">
 
   <indexitem text="Платёжный календарь">
-    <indexentry text="Периоды планирования" target="pmcperiod_html" />
-    <indexentry text="Средства платежа" target="pmcresource_html" />
-    <indexentry text="Параметры создания документов" target="pmcresource_html" />
-    <indexentry text="Реестр обязательств" target="liability_html" />
-    <indexentry text="Образцы обязательств" target="liabmodel_html" />
-    <indexentry text="Версии календаря" target="version_html" />
-    <indexentry text="Статус версии" target="status_html" />
-    <indexentry text="Планирование обязательств" target="plan_html" />
-    <indexentry text="Перемещение средств" target="move_html" />
-    <indexentry text="Исполнения обязательств" target="execution_html" />
-  </indexitem>   
-  
+    <indexentry text="Периоды планирования" target="pmcperiod_html"/>
+    <indexentry text="Средства платежа" target="pmcresource_html"/>
+    <indexentry text="Параметры создания документов" target="pmcresource_html"/>
+    <indexentry text="Реестр обязательств" target="liability_html"/>
+    <indexentry text="Образцы обязательств" target="liabmodel_html"/>
+    <indexentry text="Версии календаря" target="version_html"/>
+    <indexentry text="Статус версии" target="status_html"/>
+    <indexentry text="Планирование обязательств" target="plan_html"/>
+    <indexentry text="Перемещение средств" target="move_html"/>
+    <indexentry text="Исполнения обязательств" target="execution_html"/>
+  </indexitem>
+
 </index>

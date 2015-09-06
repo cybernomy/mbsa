@@ -18,14 +18,13 @@ import java.io.Serializable;
 
 /**
  * @author pashistova
- *
  */
 public class ContractorCardResult implements Serializable {
-	public byte[] valueIn;
-	public byte[] valueOut;
+  public byte[] valueIn;
+  public byte[] valueOut;
 
-	public ContractorCardResult(byte[] valueIn, byte[] valueOut) {
-		this.valueIn = valueIn;
-		this.valueOut = valueOut;
-	}
+  public ContractorCardResult(byte[] valueIn, byte[] valueOut) {
+    this.valueIn = valueIn;
+    this.valueOut = valueOut;
+  }
 }

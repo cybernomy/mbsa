@@ -1,58 +1,61 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.account.model.RemnAcc" table="REMNACC">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">REMNACC_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="AccPlan" class="com.mg.merp.account.model.AccPlan" update="false">
-      <column name="ACC_ID" not-null="false" />
+      <column name="ACC_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Period" class="com.mg.merp.account.model.Period" update="false">
-      <column name="PERIOD_ID" not-null="false" />
+      <column name="PERIOD_ID" not-null="false"/>
     </many-to-one>
     <property name="RemnBeginNatDb" type="java.math.BigDecimal">
-      <column name="REMNBEGINNATDB" scale="4" precision="15" not-null="true" sql-type="NUMERIC" />
+      <column name="REMNBEGINNATDB" scale="4" precision="15" not-null="true" sql-type="NUMERIC"/>
     </property>
     <property name="RemnBeginNatKt" type="java.math.BigDecimal">
-      <column name="REMNBEGINNATKT" scale="4" precision="15" not-null="true" sql-type="NUMERIC" />
+      <column name="REMNBEGINNATKT" scale="4" precision="15" not-null="true" sql-type="NUMERIC"/>
     </property>
     <property name="RemnBeginCurDb" type="java.math.BigDecimal">
-      <column name="REMNBEGINCURDB" scale="4" precision="15" not-null="true" sql-type="NUMERIC" />
+      <column name="REMNBEGINCURDB" scale="4" precision="15" not-null="true" sql-type="NUMERIC"/>
     </property>
     <property name="RemnBeginCurKt" type="java.math.BigDecimal">
-      <column name="REMNBEGINCURKT" scale="4" precision="15" not-null="true" sql-type="NUMERIC" />
+      <column name="REMNBEGINCURKT" scale="4" precision="15" not-null="true" sql-type="NUMERIC"/>
     </property>
-    <property name="RemnEndNatDb" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="RemnEndNatKt" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="RemnEndCurKt" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="RemnEndCurDb" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="TurnNatKt" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="TurnNatDb" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="TurnCurDb" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="TurnCurKt" type="java.math.BigDecimal" insert="false" update="false" />
+    <property name="RemnEndNatDb" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="RemnEndNatKt" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="RemnEndCurKt" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="RemnEndCurDb" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="TurnNatKt" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="TurnNatDb" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="TurnCurDb" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="TurnCurKt" type="java.math.BigDecimal" insert="false" update="false"/>
     <loader query-ref="load-remnacc"/>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
   <sql-query name="load-remnacc">
-    <return alias="ra" class="com.mg.merp.account.model.RemnAcc" />
-    select r.id as {ra.Id}, r.period_id as {ra.Period}, r.acc_id  as {ra.AccPlan}, r.client_id as {ra.SysClient},
-      r.remnbeginnatdb  as {ra.RemnBeginNatDb}, r.remnbeginnatkt as {ra.RemnBeginNatKt},
-      r.remnbegincurdb  as {ra.RemnBeginCurDb}, r.remnbegincurkt as {ra.RemnBeginCurKt},
-      r.remnendnatdb as {ra.RemnEndNatDb}, r.remnendnatkt as {ra.RemnEndNatKt}, r.remnendcurdb as {ra.RemnEndCurDb}, r.remnendcurkt as {ra.RemnEndCurKt},
-      r.turnnatdb as {ra.TurnNatDb}, r.turnnatkt as {ra.TurnNatKt}, r.turncurdb as {ra.TurnCurDb}, r.turncurkt as {ra.TurnCurKt}
+    <return alias="ra" class="com.mg.merp.account.model.RemnAcc"/>
+    select r.id as {ra.Id}, r.period_id as {ra.Period}, r.acc_id as {ra.AccPlan}, r.client_id as
+    {ra.SysClient},
+    r.remnbeginnatdb as {ra.RemnBeginNatDb}, r.remnbeginnatkt as {ra.RemnBeginNatKt},
+    r.remnbegincurdb as {ra.RemnBeginCurDb}, r.remnbegincurkt as {ra.RemnBeginCurKt},
+    r.remnendnatdb as {ra.RemnEndNatDb}, r.remnendnatkt as {ra.RemnEndNatKt}, r.remnendcurdb as
+    {ra.RemnEndCurDb}, r.remnendcurkt as {ra.RemnEndCurKt},
+    r.turnnatdb as {ra.TurnNatDb}, r.turnnatkt as {ra.TurnNatKt}, r.turncurdb as {ra.TurnCurDb},
+    r.turncurkt as {ra.TurnCurKt}
     from acc_remnacc_load(?) r
   </sql-query>
 </hibernate-mapping>

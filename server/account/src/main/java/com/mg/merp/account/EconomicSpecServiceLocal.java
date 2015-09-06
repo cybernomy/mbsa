@@ -18,10 +18,10 @@ import com.mg.merp.account.model.EconomicSpec;
 
 /**
  * Бизнес-компонент "Спецификация хозяйственных операций"
- * 
+ *
  * @author leonova
  * @version $Id: EconomicSpecServiceLocal.java,v 1.2 2008/01/29 13:01:46 safonov Exp $
  */
 public interface EconomicSpecServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<EconomicSpec, Integer> {
+    extends com.mg.framework.api.DataBusinessObjectService<EconomicSpec, Integer> {
 }

@@ -16,28 +16,28 @@ package com.mg.merp.document.model;
 
 /**
  * Вид документа
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: DocumentKind.java,v 1.1 2006/08/31 09:07:19 safonov Exp $
  */
 public enum DocumentKind {
-	/**
-	 * Документ
-	 */
-	DOCUMENT,
-	
-	/**
-	 * Документ подтверждение
-	 */
-	CONFIRMATION,
-	
-	/**
-	 * Документ основание
-	 */
-	BASE,
-	
-	/**
-	 * Контракт
-	 */
-	CONTRACT
+  /**
+   * Документ
+   */
+  DOCUMENT,
+
+  /**
+   * Документ подтверждение
+   */
+  CONFIRMATION,
+
+  /**
+   * Документ основание
+   */
+  BASE,
+
+  /**
+   * Контракт
+   */
+  CONTRACT
 }

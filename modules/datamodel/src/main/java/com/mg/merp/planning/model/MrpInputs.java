@@ -19,204 +19,209 @@ package com.mg.merp.planning.model;
  * @version $Id: MrpInputs.java,v 1.2 2007/07/30 10:37:30 safonov Exp $
  */
 public class MrpInputs extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.planning.model.MrpVersionControl MrpVersionControl;
+  private com.mg.merp.planning.model.MrpVersionControl MrpVersionControl;
 
-	private java.lang.String PpReference;
+  private java.lang.String PpReference;
 
-	private java.lang.Integer ReferenceId;
+  private java.lang.Integer ReferenceId;
 
-	private java.util.Date RequiredDate;
+  private java.util.Date RequiredDate;
 
-	private java.math.BigDecimal MrpQuantity;
+  private java.math.BigDecimal MrpQuantity;
 
-	private MRPOrderType MrpOrderType;
+  private MRPOrderType MrpOrderType;
 
-	private MRPSource MrpSource;
+  private MRPSource MrpSource;
 
-	private boolean FixedInput;
+  private boolean FixedInput;
 
-	private java.util.Date BatchDate;
+  private java.util.Date BatchDate;
 
-	private java.lang.Integer WarehouseId;
+  private java.lang.Integer WarehouseId;
 
-	private java.lang.Integer CatalogId;
+  private java.lang.Integer CatalogId;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public MrpInputs() {
-	}
+  /**
+   * default constructor
+   */
+  public MrpInputs() {
+  }
 
-	/** constructor with id */
-	public MrpInputs(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public MrpInputs(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
+  // Property accessors
 
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  /**
+   *
+   */
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public com.mg.merp.planning.model.MrpVersionControl getMrpVersionControl() {
-		return this.MrpVersionControl;
-	}
+  /**
+   *
+   */
 
-	public void setMrpVersionControl(
-			com.mg.merp.planning.model.MrpVersionControl MrpVersionControl) {
-		this.MrpVersionControl = MrpVersionControl;
-	}
+  public com.mg.merp.planning.model.MrpVersionControl getMrpVersionControl() {
+    return this.MrpVersionControl;
+  }
 
-	/**
-	 * 
-	 */
+  public void setMrpVersionControl(
+      com.mg.merp.planning.model.MrpVersionControl MrpVersionControl) {
+    this.MrpVersionControl = MrpVersionControl;
+  }
 
-	public java.lang.String getPpReference() {
-		return this.PpReference;
-	}
+  /**
+   *
+   */
 
-	public void setPpReference(java.lang.String PpReference) {
-		this.PpReference = PpReference;
-	}
+  public java.lang.String getPpReference() {
+    return this.PpReference;
+  }
 
-	/**
-	 * 
-	 */
+  public void setPpReference(java.lang.String PpReference) {
+    this.PpReference = PpReference;
+  }
 
-	public java.lang.Integer getReferenceId() {
-		return this.ReferenceId;
-	}
+  /**
+   *
+   */
 
-	public void setReferenceId(java.lang.Integer ReferenceId) {
-		this.ReferenceId = ReferenceId;
-	}
+  public java.lang.Integer getReferenceId() {
+    return this.ReferenceId;
+  }
 
-	/**
-	 * 
-	 */
+  public void setReferenceId(java.lang.Integer ReferenceId) {
+    this.ReferenceId = ReferenceId;
+  }
 
-	public java.util.Date getRequiredDate() {
-		return this.RequiredDate;
-	}
+  /**
+   *
+   */
 
-	public void setRequiredDate(java.util.Date RequiredDate) {
-		this.RequiredDate = RequiredDate;
-	}
+  public java.util.Date getRequiredDate() {
+    return this.RequiredDate;
+  }
 
-	/**
-	 * 
-	 */
+  public void setRequiredDate(java.util.Date RequiredDate) {
+    this.RequiredDate = RequiredDate;
+  }
 
-	public java.math.BigDecimal getMrpQuantity() {
-		return this.MrpQuantity;
-	}
+  /**
+   *
+   */
 
-	public void setMrpQuantity(java.math.BigDecimal MrpQuantity) {
-		this.MrpQuantity = MrpQuantity;
-	}
+  public java.math.BigDecimal getMrpQuantity() {
+    return this.MrpQuantity;
+  }
 
-	/**
-	 * 
-	 */
+  public void setMrpQuantity(java.math.BigDecimal MrpQuantity) {
+    this.MrpQuantity = MrpQuantity;
+  }
 
-	public MRPOrderType getMrpOrderType() {
-		return this.MrpOrderType;
-	}
+  /**
+   *
+   */
 
-	public void setMrpOrderType(MRPOrderType MrpOrderType) {
-		this.MrpOrderType = MrpOrderType;
-	}
+  public MRPOrderType getMrpOrderType() {
+    return this.MrpOrderType;
+  }
 
-	/**
-	 * 
-	 */
+  public void setMrpOrderType(MRPOrderType MrpOrderType) {
+    this.MrpOrderType = MrpOrderType;
+  }
 
-	public MRPSource getMrpSource() {
-		return this.MrpSource;
-	}
+  /**
+   *
+   */
 
-	public void setMrpSource(MRPSource MrpSource) {
-		this.MrpSource = MrpSource;
-	}
+  public MRPSource getMrpSource() {
+    return this.MrpSource;
+  }
 
-	/**
-	 * 
-	 */
+  public void setMrpSource(MRPSource MrpSource) {
+    this.MrpSource = MrpSource;
+  }
 
-	public boolean getFixedInput() {
-		return this.FixedInput;
-	}
+  /**
+   *
+   */
 
-	public void setFixedInput(boolean FixedInput) {
-		this.FixedInput = FixedInput;
-	}
+  public boolean getFixedInput() {
+    return this.FixedInput;
+  }
 
-	/**
-	 * 
-	 */
+  public void setFixedInput(boolean FixedInput) {
+    this.FixedInput = FixedInput;
+  }
 
-	public java.util.Date getBatchDate() {
-		return this.BatchDate;
-	}
+  /**
+   *
+   */
 
-	public void setBatchDate(java.util.Date BatchDate) {
-		this.BatchDate = BatchDate;
-	}
+  public java.util.Date getBatchDate() {
+    return this.BatchDate;
+  }
 
-	/**
-	 * 
-	 */
+  public void setBatchDate(java.util.Date BatchDate) {
+    this.BatchDate = BatchDate;
+  }
 
-	public java.lang.Integer getWarehouseId() {
-		return this.WarehouseId;
-	}
+  /**
+   *
+   */
 
-	public void setWarehouseId(java.lang.Integer WarehouseId) {
-		this.WarehouseId = WarehouseId;
-	}
+  public java.lang.Integer getWarehouseId() {
+    return this.WarehouseId;
+  }
 
-	/**
-	 * 
-	 */
+  public void setWarehouseId(java.lang.Integer WarehouseId) {
+    this.WarehouseId = WarehouseId;
+  }
 
-	public java.lang.Integer getCatalogId() {
-		return this.CatalogId;
-	}
+  /**
+   *
+   */
 
-	public void setCatalogId(java.lang.Integer CatalogId) {
-		this.CatalogId = CatalogId;
-	}
+  public java.lang.Integer getCatalogId() {
+    return this.CatalogId;
+  }
+
+  public void setCatalogId(java.lang.Integer CatalogId) {
+    this.CatalogId = CatalogId;
+  }
 
 }

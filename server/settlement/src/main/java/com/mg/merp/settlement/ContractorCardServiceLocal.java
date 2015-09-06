@@ -18,11 +18,11 @@ import com.mg.merp.settlement.model.ContractorCard;
 
 /**
  * Бизнес-компонент "Карточки расчетов с партнерами"
- * 
+ *
  * @author leonova
  * @version $Id: ContractorCardServiceLocal.java,v 1.2 2008/02/01 11:33:54 safonov Exp $
  */
 public interface ContractorCardServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<ContractorCard, Integer> {
+    extends com.mg.framework.api.DataBusinessObjectService<ContractorCard, Integer> {
 
 }

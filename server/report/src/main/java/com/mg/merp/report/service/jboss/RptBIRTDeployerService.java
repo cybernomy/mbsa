@@ -14,40 +14,40 @@
  */
 package com.mg.merp.report.service.jboss;
 
-import org.jboss.system.ServiceMBeanSupport;
-
 import com.mg.merp.report.RptMainTransfer;
 import com.mg.merp.report.support.RptBIRTDeployerImpl;
 
+import org.jboss.system.ServiceMBeanSupport;
+
 /**
- * Сервис интерфейса связи сервера приложений и редактора отчётов<br>
- * Реализует интерфейс {@link RptBIRTDeployer)
- * 
+ * Сервис интерфейса связи сервера приложений и редактора отчётов<br> Реализует интерфейс {@link
+ * RptBIRTDeployer)
+ *
  * @author Valentin A. Poroxnenko
  * @version $Id:
  */
 public class RptBIRTDeployerService extends ServiceMBeanSupport implements
-		RptBIRTDeployerServiceMBean {
-	private RptBIRTDeployerImpl delegate = new RptBIRTDeployerImpl();
+    RptBIRTDeployerServiceMBean {
+  private RptBIRTDeployerImpl delegate = new RptBIRTDeployerImpl();
 
-	public RptMainTransfer persistTemplate(RptMainTransfer rmt)
-			throws Exception {
-		return delegate.persistTemplate(rmt);
-	}
+  public RptMainTransfer persistTemplate(RptMainTransfer rmt)
+      throws Exception {
+    return delegate.persistTemplate(rmt);
+  }
 
-	public RptMainTransfer[] getReports(String likeSentence) throws Exception {
-		return delegate.getReports(likeSentence);
-	}
+  public RptMainTransfer[] getReports(String likeSentence) throws Exception {
+    return delegate.getReports(likeSentence);
+  }
 
-	public RptMainTransfer addReport(RptMainTransfer rmt) throws Exception {
-		return delegate.addReport(rmt);
-	}
+  public RptMainTransfer addReport(RptMainTransfer rmt) throws Exception {
+    return delegate.addReport(rmt);
+  }
 
-	public void deleteReportList(Integer[] ids) throws Exception {
-		delegate.deleteReportList(ids);
-	}
+  public void deleteReportList(Integer[] ids) throws Exception {
+    delegate.deleteReportList(ids);
+  }
 
-	public RptMainTransfer editReport(RptMainTransfer rmt) throws Exception {
-		return delegate.editReport(rmt);
-	}
+  public RptMainTransfer editReport(RptMainTransfer rmt) throws Exception {
+    return delegate.editReport(rmt);
+  }
 }

@@ -20,41 +20,36 @@ import javax.ejb.PrePassivate;
 /**
  * @author Oleg V. Safonov
  * @version $Id: AbstractStatefulSessionBean.java,v 1.3 2006/03/01 15:26:36 safonov Exp $
- *
  */
 public abstract class AbstractStatefulSessionBean extends AbstractSessionBean {
 
-	@PostActivate
-	public void postActivateCallback() {
-		try {
-			getLogger().debug("postActivateCallback");
-			doActivate();
-		}
-		catch (RuntimeException re) {
-			throw re;
-		}
-		catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-	}
+  @PostActivate
+  public void postActivateCallback() {
+    try {
+      getLogger().debug("postActivateCallback");
+      doActivate();
+    } catch (RuntimeException re) {
+      throw re;
+    } catch (Exception e) {
+      throw new RuntimeException(e);
+    }
+  }
 
-	@PrePassivate
-	public void prePassivateCallback() {
-		try {
-			getLogger().debug("prePassivateCallback");
-			doPassivate();
-		}
-		catch (RuntimeException re) {
-			throw re;
-		}
-		catch (Exception e) {
-			throw new RuntimeException(e);
-		}
-	}
+  @PrePassivate
+  public void prePassivateCallback() {
+    try {
+      getLogger().debug("prePassivateCallback");
+      doPassivate();
+    } catch (RuntimeException re) {
+      throw re;
+    } catch (Exception e) {
+      throw new RuntimeException(e);
+    }
+  }
 
-	protected void doActivate() {
-	}
+  protected void doActivate() {
+  }
 
-	protected void doPassivate() {
-	}
+  protected void doPassivate() {
+  }
 }

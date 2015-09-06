@@ -14,6 +14,6 @@
 <!-- $Id: ModelNameMacros.xml,v 1.1 2006/06/02 11:05:57 leonova Exp $ -->
 
 <jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
-	<jfd:field id="ModelName" />
-	<jfd:field id="ModelDestFolder" />
+  <jfd:field id="ModelName"/>
+  <jfd:field id="ModelDestFolder"/>
 </jfd:wrap-macros>

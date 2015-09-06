@@ -22,91 +22,96 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.FamilyRelation")
 public class FamilyRelation extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String RCode;
+  private java.lang.String RCode;
 
-	private java.lang.Integer Priority;
+  private java.lang.Integer Priority;
 
-	private java.lang.String Okin;
+  private java.lang.String Okin;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public FamilyRelation() {
-	}
+  /**
+   * default constructor
+   */
+  public FamilyRelation() {
+  }
 
-	/** constructor with id */
-	public FamilyRelation(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public FamilyRelation(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.BigCode")
-	public java.lang.String getRCode() {
-		return this.RCode;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setRCode(java.lang.String RCode) {
-		this.RCode = RCode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.BigCode")
+  public java.lang.String getRCode() {
+    return this.RCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Priority")
-	public java.lang.Integer getPriority() {
-		return this.Priority;
-	}
+  public void setRCode(java.lang.String RCode) {
+    this.RCode = RCode;
+  }
 
-	public void setPriority(java.lang.Integer Priority) {
-		this.Priority = Priority;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Priority")
+  public java.lang.Integer getPriority() {
+    return this.Priority;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Okin")
-	public java.lang.String getOkin() {
-		return this.Okin;
-	}
+  public void setPriority(java.lang.Integer Priority) {
+    this.Priority = Priority;
+  }
 
-	public void setOkin(java.lang.String Okin) {
-		this.Okin = Okin;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Okin")
+  public java.lang.String getOkin() {
+    return this.Okin;
+  }
+
+  public void setOkin(java.lang.String Okin) {
+    this.Okin = Okin;
+  }
 
 }

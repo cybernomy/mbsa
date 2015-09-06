@@ -12,63 +12,65 @@
 <!-- ======================================================================= -->
 
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
-                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
-[
-<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
-<!ENTITY chap_contract001 SYSTEM "modules/contract001.xml">
-<!ENTITY chap_contract002 SYSTEM "modules/contract002.xml">
-<!ENTITY chap_contract003 SYSTEM "modules/contract003.xml">
-<!ENTITY chap_contract004 SYSTEM "modules/contract004.xml">
-<!ENTITY chap_contract005 SYSTEM "modules/contract005.xml">
-<!ENTITY chap_contract007 SYSTEM "modules/contract007.xml">
-<!ENTITY chap_contract008 SYSTEM "modules/contract008.xml">
-<!ENTITY chap_contract009 SYSTEM "modules/contract009.xml">
-<!ENTITY chap_contract010 SYSTEM "modules/contract010.xml">
-<!ENTITY chap_contract011 SYSTEM "modules/contract011.xml">
-<!ENTITY chap_contract012 SYSTEM "modules/contract012.xml">
-<!ENTITY chap_contract013 SYSTEM "modules/contract013.xml">
-<!ENTITY chap_contract014 SYSTEM "modules/contract014.xml">
-<!ENTITY chap_contract015 SYSTEM "modules/contract015.xml">
-<!ENTITY merp "Millennium Business Suite Anywhere">
-<!ENTITY cont_centr "Центр управления">
-<!ENTITY liab "Обязательства">
-<!ENTITY contr "Контракты">
+    "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+    [
+        <!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+        <!ENTITY chap_contract001 SYSTEM "modules/contract001.xml">
+        <!ENTITY chap_contract002 SYSTEM "modules/contract002.xml">
+        <!ENTITY chap_contract003 SYSTEM "modules/contract003.xml">
+        <!ENTITY chap_contract004 SYSTEM "modules/contract004.xml">
+        <!ENTITY chap_contract005 SYSTEM "modules/contract005.xml">
+        <!ENTITY chap_contract007 SYSTEM "modules/contract007.xml">
+        <!ENTITY chap_contract008 SYSTEM "modules/contract008.xml">
+        <!ENTITY chap_contract009 SYSTEM "modules/contract009.xml">
+        <!ENTITY chap_contract010 SYSTEM "modules/contract010.xml">
+        <!ENTITY chap_contract011 SYSTEM "modules/contract011.xml">
+        <!ENTITY chap_contract012 SYSTEM "modules/contract012.xml">
+        <!ENTITY chap_contract013 SYSTEM "modules/contract013.xml">
+        <!ENTITY chap_contract014 SYSTEM "modules/contract014.xml">
+        <!ENTITY chap_contract015 SYSTEM "modules/contract015.xml">
+        <!ENTITY merp "Millennium Business Suite Anywhere">
+        <!ENTITY cont_centr "Центр управления">
+        <!ENTITY liab "Обязательства">
+        <!ENTITY contr "Контракты">
 
-]>
+        ]>
 <book lang="ru">
   <bookinfo>
-      <title>Управление договорными отношениями в системе &merp; 
-      Руководство пользователя.</title>
-      <releaseinfo>4.0.6</releaseinfo>
-      <copyright>
-	<year>1998</year>
-	<year>2008</year>
-	<holder>ООО &quot;Бизнестехнология&quot;</holder>
-      </copyright>    
+    <title>Управление договорными отношениями в системе &merp;
+      Руководство пользователя.
+    </title>
+    <releaseinfo>4.0.6</releaseinfo>
+    <copyright>
+      <year>1998</year>
+      <year>2008</year>
+      <holder>ООО &quot;Бизнестехнология&quot;</holder>
+    </copyright>
   </bookinfo>
-  
+
   <toc/>
-  
+
   <preface id="target" revision="1">
-      <title>Целевая аудитория </title>
-      <para>Данное руководство предназначено для пользователей, работающих  
-	с модулем &quot;&contr;&quot; системы &merp;.</para>
+    <title>Целевая аудитория</title>
+    <para>Данное руководство предназначено для пользователей, работающих
+      с модулем &quot;&contr;&quot; системы &merp;.
+    </para>
   </preface>
-    
-&chap_contract001;
-&chap_contract002;
-&chap_contract003;
-&chap_contract004;
-&chap_contract005;
-&chap_contract007;
-&chap_contract008;
-&chap_contract009;
-&chap_contract010;
-&chap_contract011;
-&chap_contract012;
-&chap_contract013;
-&chap_contract014;
-&chap_contract015;
-&chap_copyright;
+
+  &chap_contract001;
+  &chap_contract002;
+  &chap_contract003;
+  &chap_contract004;
+  &chap_contract005;
+  &chap_contract007;
+  &chap_contract008;
+  &chap_contract009;
+  &chap_contract010;
+  &chap_contract011;
+  &chap_contract012;
+  &chap_contract013;
+  &chap_contract014;
+  &chap_contract015;
+  &chap_copyright;
 
 </book>

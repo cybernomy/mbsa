@@ -17,9 +17,8 @@ package com.mg.merp.overall;
 import com.mg.merp.overall.model.OvrCardHist;
 
 /**
-/**
- * Бизнес - компонент "История выдачи"
- * 
+ * /** Бизнес - компонент "История выдачи"
+ *
  * @author leonova
  * @author Konstantin S. Alikaev
  * @version $Id: CardHistServiceLocal.java,v 1.1 2008/06/30 04:13:38 alikaev Exp $

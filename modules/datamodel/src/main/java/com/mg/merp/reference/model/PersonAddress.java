@@ -22,266 +22,270 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.PersonAddress")
 public class PersonAddress extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.reference.model.District District;
+  private com.mg.merp.reference.model.District District;
 
-	private com.mg.merp.reference.model.Country Country;
+  private com.mg.merp.reference.model.Country Country;
 
-	private com.mg.merp.reference.model.NaturalPerson NaturalPerson;
+  private com.mg.merp.reference.model.NaturalPerson NaturalPerson;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.reference.model.Place Place;
+  private com.mg.merp.reference.model.Place Place;
 
-	private com.mg.merp.reference.model.ZipCode ZipCode;
+  private com.mg.merp.reference.model.ZipCode ZipCode;
 
-	private com.mg.merp.reference.model.Region Region;
+  private com.mg.merp.reference.model.Region Region;
 
-	private PersonAddressKind AddressKind;
+  private PersonAddressKind AddressKind;
 
-	private java.util.Date BeginDate;
+  private java.util.Date BeginDate;
 
-	private java.lang.String PostIndex;
+  private java.lang.String PostIndex;
 
-	private java.lang.String RegionName;
+  private java.lang.String RegionName;
 
-	private java.lang.String City;
+  private java.lang.String City;
 
-	private java.lang.String Street;
+  private java.lang.String Street;
 
-	private java.lang.String House;
+  private java.lang.String House;
 
-	private java.lang.String FullAddress;
+  private java.lang.String FullAddress;
 
-	private java.lang.String Building;
+  private java.lang.String Building;
 
-	private java.lang.String Room;
+  private java.lang.String Room;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public PersonAddress() {
-	}
+  /**
+   * default constructor
+   */
+  public PersonAddress() {
+  }
 
-	/** constructor with id */
-	public PersonAddress(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public PersonAddress(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
+  // Property accessors
 
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.District")
-	public com.mg.merp.reference.model.District getDistrict() {
-		return this.District;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.District")
+  public com.mg.merp.reference.model.District getDistrict() {
+    return this.District;
+  }
 
-	public void setDistrict(com.mg.merp.reference.model.District District) {
-		this.District = District;
-	}
+  public void setDistrict(com.mg.merp.reference.model.District District) {
+    this.District = District;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Country")
-	public com.mg.merp.reference.model.Country getCountry() {
-		return this.Country;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Country")
+  public com.mg.merp.reference.model.Country getCountry() {
+    return this.Country;
+  }
 
-	public void setCountry(com.mg.merp.reference.model.Country Country) {
-		this.Country = Country;
-	}
+  public void setCountry(com.mg.merp.reference.model.Country Country) {
+    this.Country = Country;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.reference.model.NaturalPerson getNaturalPerson() {
-		return this.NaturalPerson;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.reference.model.NaturalPerson getNaturalPerson() {
+    return this.NaturalPerson;
+  }
 
-	public void setNaturalPerson(
-			com.mg.merp.reference.model.NaturalPerson NaturalPerson) {
-		this.NaturalPerson = NaturalPerson;
-	}
+  public void setNaturalPerson(
+      com.mg.merp.reference.model.NaturalPerson NaturalPerson) {
+    this.NaturalPerson = NaturalPerson;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Place")
-	public com.mg.merp.reference.model.Place getPlace() {
-		return this.Place;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Place")
+  public com.mg.merp.reference.model.Place getPlace() {
+    return this.Place;
+  }
 
-	public void setPlace(com.mg.merp.reference.model.Place Place) {
-		this.Place = Place;
-	}
+  public void setPlace(com.mg.merp.reference.model.Place Place) {
+    this.Place = Place;
+  }
 
-	/**
-	 * 
-	 */	
-	public com.mg.merp.reference.model.ZipCode getZipCode() {
-		return this.ZipCode;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.reference.model.ZipCode getZipCode() {
+    return this.ZipCode;
+  }
 
-	public void setZipCode(com.mg.merp.reference.model.ZipCode ZipCode) {
-		this.ZipCode = ZipCode;
-	}
+  public void setZipCode(com.mg.merp.reference.model.ZipCode ZipCode) {
+    this.ZipCode = ZipCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Region")
-	public com.mg.merp.reference.model.Region getRegion() {
-		return this.Region;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Region")
+  public com.mg.merp.reference.model.Region getRegion() {
+    return this.Region;
+  }
 
-	public void setRegion(com.mg.merp.reference.model.Region Region) {
-		this.Region = Region;
-	}
+  public void setRegion(com.mg.merp.reference.model.Region Region) {
+    this.Region = Region;
+  }
 
-	/**
-	 * 
-	 */
-	public PersonAddressKind getAddressKind() {
-		return this.AddressKind;
-	}
+  /**
+   *
+   */
+  public PersonAddressKind getAddressKind() {
+    return this.AddressKind;
+  }
 
-	public void setAddressKind(PersonAddressKind AddressKind) {
-		this.AddressKind = AddressKind;
-	}
+  public void setAddressKind(PersonAddressKind AddressKind) {
+    this.AddressKind = AddressKind;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.NPerson.Address.BeginDate")
-	public java.util.Date getBeginDate() {
-		return this.BeginDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.NPerson.Address.BeginDate")
+  public java.util.Date getBeginDate() {
+    return this.BeginDate;
+  }
 
-	public void setBeginDate(java.util.Date BeginDate) {
-		this.BeginDate = BeginDate;
-	}
+  public void setBeginDate(java.util.Date BeginDate) {
+    this.BeginDate = BeginDate;
+  }
 
-	/**
-	 * 
-	 */
-	public java.lang.String getPostIndex() {
-		return this.PostIndex;
-	}
+  /**
+   *
+   */
+  public java.lang.String getPostIndex() {
+    return this.PostIndex;
+  }
 
-	public void setPostIndex(java.lang.String PostIndex) {
-		this.PostIndex = PostIndex;
-	}
+  public void setPostIndex(java.lang.String PostIndex) {
+    this.PostIndex = PostIndex;
+  }
 
-	/**
-	 * 
-	 */
-	public java.lang.String getRegionName() {
-		return this.RegionName;
-	}
+  /**
+   *
+   */
+  public java.lang.String getRegionName() {
+    return this.RegionName;
+  }
 
-	public void setRegionName(java.lang.String RegionName) {
-		this.RegionName = RegionName;
-	}
+  public void setRegionName(java.lang.String RegionName) {
+    this.RegionName = RegionName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.City")
-	public java.lang.String getCity() {
-		return this.City;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.City")
+  public java.lang.String getCity() {
+    return this.City;
+  }
 
-	public void setCity(java.lang.String City) {
-		this.City = City;
-	}
+  public void setCity(java.lang.String City) {
+    this.City = City;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Street")
-	public java.lang.String getStreet() {
-		return this.Street;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Street")
+  public java.lang.String getStreet() {
+    return this.Street;
+  }
 
-	public void setStreet(java.lang.String Street) {
-		this.Street = Street;
-	}
+  public void setStreet(java.lang.String Street) {
+    this.Street = Street;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.House")
-	public java.lang.String getHouse() {
-		return this.House;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.House")
+  public java.lang.String getHouse() {
+    return this.House;
+  }
 
-	public void setHouse(java.lang.String House) {
-		this.House = House;
-	}
+  public void setHouse(java.lang.String House) {
+    this.House = House;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.NaturalPerson.PersonAddress.FullAddress")
-	public java.lang.String getFullAddress() {
-		return this.FullAddress;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.NaturalPerson.PersonAddress.FullAddress")
+  public java.lang.String getFullAddress() {
+    return this.FullAddress;
+  }
 
-	public void setFullAddress(java.lang.String FullAddress) {
-		this.FullAddress = FullAddress;
-	}
+  public void setFullAddress(java.lang.String FullAddress) {
+    this.FullAddress = FullAddress;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Block")
-	public java.lang.String getBuilding() {
-		return this.Building;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Block")
+  public java.lang.String getBuilding() {
+    return this.Building;
+  }
 
-	public void setBuilding(java.lang.String Building) {
-		this.Building = Building;
-	}
+  public void setBuilding(java.lang.String Building) {
+    this.Building = Building;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Flat")
-	public java.lang.String getRoom() {
-		return this.Room;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Flat")
+  public java.lang.String getRoom() {
+    return this.Room;
+  }
 
-	public void setRoom(java.lang.String Room) {
-		this.Room = Room;
-	}
+  public void setRoom(java.lang.String Room) {
+    this.Room = Room;
+  }
 
 }

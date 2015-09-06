@@ -21,39 +21,40 @@ package com.mg.merp.reference.model;
  */
 public class TaxSumBuf extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-    // Fields    
+  // Fields
 
- private com.mg.merp.reference.model.TaxSumBufId id;
-
-
-    // Constructors
-
-    /** default constructor */
-    public TaxSumBuf() {
-    }
-    
-    /** constructor with id */
-    public TaxSumBuf(com.mg.merp.reference.model.TaxSumBufId id) {
-        this.id = id;
-    }
-   
-    
-    
-
-    // Property accessors
-    /**
-    
-    */
-    
-    public com.mg.merp.reference.model.TaxSumBufId getId () {
-        return this.id;
-    }
-    
-   public void setId (com.mg.merp.reference.model.TaxSumBufId id) {
-        this.id = id;
-    }
+  private com.mg.merp.reference.model.TaxSumBufId id;
 
 
+  // Constructors
+
+  /**
+   * default constructor
+   */
+  public TaxSumBuf() {
+  }
+
+  /**
+   * constructor with id
+   */
+  public TaxSumBuf(com.mg.merp.reference.model.TaxSumBufId id) {
+    this.id = id;
+  }
+
+
+  // Property accessors
+
+  /**
+
+   */
+
+  public com.mg.merp.reference.model.TaxSumBufId getId() {
+    return this.id;
+  }
+
+  public void setId(com.mg.merp.reference.model.TaxSumBufId id) {
+    this.id = id;
+  }
 
 
 }

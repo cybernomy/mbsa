@@ -13,19 +13,22 @@
 
 <!-- $Id: DisCardHistMt.mfd.xml,v 1.5 2007/10/03 05:26:39 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.discount.resources.formelements#CardHist.FormMt.Title" helpTopic="discount#cardhist_html">
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.discount.resources.formelements#CardHist.FormMt.Title"
+          helpTopic="discount#cardhist_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
-		<jfd:border style="bevel" type="raised" />
- 		<jfd:field id="Discount" />
-		<jfd:field id="TimeStamp" sameLine="true"/>
-		<jfd:field id="User" readOnly="true" />			
-		<jfd:field id="Comments" />			
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 									
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Discount"/>
+    <jfd:field id="TimeStamp" sameLine="true"/>
+    <jfd:field id="User" readOnly="true"/>
+    <jfd:field id="Comments"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

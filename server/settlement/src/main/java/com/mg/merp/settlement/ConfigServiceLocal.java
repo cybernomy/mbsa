@@ -18,7 +18,7 @@ import com.mg.merp.settlement.model.StlConfig;
 
 /**
  * Сервис бизнес-компонента "Конфигурация модуля <Расчеты с партнерами>"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: ConfigServiceLocal.java,v 1.1 2007/03/19 14:55:34 sharapov Exp $

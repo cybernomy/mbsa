@@ -15,11 +15,10 @@
 package com.mg.merp.finance.support.ui;
 
 
-
 /**
  * @author leonova
  * @version $Id: FinSpecMt.java,v 1.5 2006/12/19 06:54:35 leonova Exp $
  */
-public class FinSpecMt extends FinAnalytics {	
-	
+public class FinSpecMt extends FinAnalytics {
+
 }

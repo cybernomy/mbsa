@@ -7,46 +7,66 @@
 ]> -->
 <chapter id="002bpm">
   <title>Бизнес-процессы</title>
-    
-    	<para>Вход в раздел &quot;Бизнес-процессы&quot; осуществляется через 
-	главное меню системы:
-	  <menuchoice>
-	   <guimenu>&cont_centr;</guimenu>
-	   <guisubmenu>&bpm;</guisubmenu>
-	   <guimenuitem>Бизнес-процессы</guimenuitem></menuchoice>.</para>
-	
-	<screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/bp1.gif"/></imageobject>
-	</mediaobject> </screenshot>
-	
-	<para>Чтобы добавить новый бизнес-процесс в список, установите курсор на строку и нажмите кнопку 
-	<guibutton>Развернуть процесс</guibutton>. Система предложит выбрать на локальном 
-	диске компьютера пользователя файл, содержащий описание процесса. Укажите этот файл и 
-	нажмите <guibutton>Open</guibutton>. </para>
-	
-	<screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/spread.gif"/></imageobject>
-	</mediaobject> </screenshot>
-	
-	<para>Новый процесс появится в списке. (Если Вы его не видите, нажмите кнопку 
-	<guibutton>Обновить</guibutton>.) </para>
-	
-	<para><guibutton>Наименование</guibutton>. Наименование бизнес-процесса в системе. Автоматически 
-	формируется при разворачивании процесса. </para>
 
-	<para><guibutton>Версия</guibutton>. При первом добавлении процесса версии присваивается номер 1. 
-	При последующих добавлениях процесса с таким же именем, у уже существующего номер версии 
-	будет увеличиваться. Список всех версий можно вызвать через пункт контекстного меню 
-	<guibutton>Версии процесса</guibutton>. </para>
+  <para>Вход в раздел &quot;Бизнес-процессы&quot; осуществляется через
+    главное меню системы:
+    <menuchoice>
+      <guimenu>&cont_centr;</guimenu>
+      <guisubmenu>&bpm;</guisubmenu>
+      <guimenuitem>Бизнес-процессы</guimenuitem>
+    </menuchoice>
+    .
+  </para>
 
-	<para><guibutton>Описание</guibutton>. Описание процесса. Автоматически формируется при 
-	разворачивании процесса. </para>
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/bp1.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
 
-	<para>Данный бизнес-процесс - это сценарий, который может быть выполнен много раз. 
-	 Для каждого выполнения процесса необходимо создать его 
-	 <link linkend="003bpm">экземпляр</link>.</para>
+  <para>Чтобы добавить новый бизнес-процесс в список, установите курсор на строку и нажмите кнопку
+    <guibutton>Развернуть процесс</guibutton>. Система предложит выбрать на локальном
+    диске компьютера пользователя файл, содержащий описание процесса. Укажите этот файл и
+    нажмите<guibutton>Open</guibutton>.
+  </para>
 
-	<para>Через пункт контекстного меню <guibutton>Схема процесса </guibutton> можно увидеть 
-	основные пункты процесса в схематическом виде.</para>
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/spread.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
 
-  </chapter>
+  <para>Новый процесс появится в списке. (Если Вы его не видите, нажмите кнопку
+    <guibutton>Обновить</guibutton>.)
+  </para>
+
+  <para><guibutton>Наименование</guibutton>. Наименование бизнес-процесса в системе. Автоматически
+    формируется при разворачивании процесса.
+  </para>
+
+  <para><guibutton>Версия</guibutton>. При первом добавлении процесса версии присваивается номер 1.
+    При последующих добавлениях процесса с таким же именем, у уже существующего номер версии
+    будет увеличиваться. Список всех версий можно вызвать через пункт контекстного меню
+    <guibutton>Версии процесса</guibutton>.
+  </para>
+
+  <para><guibutton>Описание</guibutton>. Описание процесса. Автоматически формируется при
+    разворачивании процесса.
+  </para>
+
+  <para>Данный бизнес-процесс - это сценарий, который может быть выполнен много раз.
+    Для каждого выполнения процесса необходимо создать его
+    <link linkend="003bpm">экземпляр</link>.
+  </para>
+
+  <para>Через пункт контекстного меню
+    <guibutton>Схема процесса</guibutton>
+    можно увидеть
+    основные пункты процесса в схематическом виде.
+  </para>
+
+</chapter>

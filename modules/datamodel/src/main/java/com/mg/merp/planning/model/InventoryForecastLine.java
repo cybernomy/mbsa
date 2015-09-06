@@ -18,154 +18,158 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * @author hbm2java
- * @version $Id: InventoryForecastLine.java,v 1.2 2005/07/29 12:47:27 pashistova
- *          Exp $
+ * @version $Id: InventoryForecastLine.java,v 1.2 2005/07/29 12:47:27 pashistova Exp $
  */
 public class InventoryForecastLine extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.planning.model.InventoryForecast InventoryForecast;
+  private com.mg.merp.planning.model.InventoryForecast InventoryForecast;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.planning.model.GenericItem GenericItem;
+  private com.mg.merp.planning.model.GenericItem GenericItem;
 
-	private com.mg.merp.reference.model.Contractor Warehouse;
+  private com.mg.merp.reference.model.Contractor Warehouse;
 
-	private com.mg.merp.reference.model.Measure Measure;
+  private com.mg.merp.reference.model.Measure Measure;
 
-	private java.util.Date EffOnDate;
+  private java.util.Date EffOnDate;
 
-	private java.util.Date EffOffDate;
+  private java.util.Date EffOffDate;
 
-	private java.math.BigDecimal QtyOnHand;
+  private java.math.BigDecimal QtyOnHand;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public InventoryForecastLine() {
-	}
+  /**
+   * default constructor
+   */
+  public InventoryForecastLine() {
+  }
 
-	/** constructor with id */
-	public InventoryForecastLine(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public InventoryForecastLine(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.planning.model.InventoryForecast getInventoryForecast() {
-		return this.InventoryForecast;
-	}
+  /**
+   *
+   */
 
-	public void setInventoryForecast(
-			com.mg.merp.planning.model.InventoryForecast InventoryForecast) {
-		this.InventoryForecast = InventoryForecast;
-	}
+  public com.mg.merp.planning.model.InventoryForecast getInventoryForecast() {
+    return this.InventoryForecast;
+  }
 
-	/**
-	 * 
-	 */
+  public void setInventoryForecast(
+      com.mg.merp.planning.model.InventoryForecast InventoryForecast) {
+    this.InventoryForecast = InventoryForecast;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.planning.model.GenericItem getGenericItem() {
-		return this.GenericItem;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setGenericItem(
-			com.mg.merp.planning.model.GenericItem GenericItem) {
-		this.GenericItem = GenericItem;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.planning.model.GenericItem getGenericItem() {
+    return this.GenericItem;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Planning.InvForecast.Warehouse")
-	public com.mg.merp.reference.model.Contractor getWarehouse() {
-		return this.Warehouse;
-	}
+  public void setGenericItem(
+      com.mg.merp.planning.model.GenericItem GenericItem) {
+    this.GenericItem = GenericItem;
+  }
 
-	public void setWarehouse(com.mg.merp.reference.model.Contractor Warehouse) {
-		this.Warehouse = Warehouse;
-	}
+  /**
+   *
+   */
+  @DataItemName("Planning.InvForecast.Warehouse")
+  public com.mg.merp.reference.model.Contractor getWarehouse() {
+    return this.Warehouse;
+  }
 
-	/**
-	 * 
-	 */	
-	public com.mg.merp.reference.model.Measure getMeasure() {
-		return this.Measure;
-	}
+  public void setWarehouse(com.mg.merp.reference.model.Contractor Warehouse) {
+    this.Warehouse = Warehouse;
+  }
 
-	public void setMeasure(com.mg.merp.reference.model.Measure Measure) {
-		this.Measure = Measure;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.reference.model.Measure getMeasure() {
+    return this.Measure;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Planning.InvForecast.EffOnDate")
-	public java.util.Date getEffOnDate() {
-		return this.EffOnDate;
-	}
+  public void setMeasure(com.mg.merp.reference.model.Measure Measure) {
+    this.Measure = Measure;
+  }
 
-	public void setEffOnDate(java.util.Date EffOnDate) {
-		this.EffOnDate = EffOnDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Planning.InvForecast.EffOnDate")
+  public java.util.Date getEffOnDate() {
+    return this.EffOnDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Planning.InvForecast.EffOffDate")
-	public java.util.Date getEffOffDate() {
-		return this.EffOffDate;
-	}
+  public void setEffOnDate(java.util.Date EffOnDate) {
+    this.EffOnDate = EffOnDate;
+  }
 
-	public void setEffOffDate(java.util.Date EffOffDate) {
-		this.EffOffDate = EffOffDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Planning.InvForecast.EffOffDate")
+  public java.util.Date getEffOffDate() {
+    return this.EffOffDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Planning.InvForecast.QtyOnHand")
-	public java.math.BigDecimal getQtyOnHand() {
-		return this.QtyOnHand;
-	}
+  public void setEffOffDate(java.util.Date EffOffDate) {
+    this.EffOffDate = EffOffDate;
+  }
 
-	public void setQtyOnHand(java.math.BigDecimal QtyOnHand) {
-		this.QtyOnHand = QtyOnHand;
-	}
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
+  @DataItemName("Planning.InvForecast.QtyOnHand")
+  public java.math.BigDecimal getQtyOnHand() {
+    return this.QtyOnHand;
+  }
+
+  public void setQtyOnHand(java.math.BigDecimal QtyOnHand) {
+    this.QtyOnHand = QtyOnHand;
+  }
+  /**
+   *
+   */
 
 }

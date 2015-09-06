@@ -19,14 +19,12 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 
 /**
- * 
  * @author leonova
  * @version $Id: InvoiceHeadInRest.java,v 1.3 2006/12/20 13:15:51 leonova Exp $
- *
  */
 public class InvoiceHeadInRest extends GoodsDocumentRest {
 
-	public InvoiceHeadInRest() {
-		contractorThroughKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-	}
+  public InvoiceHeadInRest() {
+    contractorThroughKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+  }
 }

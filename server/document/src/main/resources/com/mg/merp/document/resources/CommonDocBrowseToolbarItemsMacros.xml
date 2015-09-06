@@ -13,9 +13,21 @@
 
 <!-- $Id: CommonDocBrowseToolbarItemsMacros.xml,v 1.1 2008/12/24 14:15:51 safonov Exp $ -->
 
-<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
-	<jfd:button id="insertDocumentPatternButton" toolTip="resource://com.mg.merp.document.resources.formelements#Document.InsertDocumentPattern" icon="com/mg/merp/document/resources/insertdocpatternicon.png" actionListener="InsertDocumentPattern" />
-	<jfd:button id="executeDocFlowButton" toolTip="resource://com.mg.merp.docflow.resources.formelements#ExecuteDocFlow" icon="com/mg/merp/docflow/resources/executedocflowicon.png" actionListener="ExecuteDocFlow" />
-	<jfd:button id="rollbackDocFlowButton" toolTip="resource://com.mg.merp.docflow.resources.formelements#RollbackDocFlow" icon="com/mg/merp/docflow/resources/rollbackdocflowicon.png" actionListener="RollbackDocFlow" />
-	<jfd:button id="showDocumentHistoryButton" toolTip="resource://com.mg.merp.docflow.resources.formelements#DocFlowHistory" icon="com/mg/merp/docflow/resources/docflowhistoryicon.png" actionListener="DocFlowHistory" />
+<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
+  <jfd:button id="insertDocumentPatternButton"
+              toolTip="resource://com.mg.merp.document.resources.formelements#Document.InsertDocumentPattern"
+              icon="com/mg/merp/document/resources/insertdocpatternicon.png"
+              actionListener="InsertDocumentPattern"/>
+  <jfd:button id="executeDocFlowButton"
+              toolTip="resource://com.mg.merp.docflow.resources.formelements#ExecuteDocFlow"
+              icon="com/mg/merp/docflow/resources/executedocflowicon.png"
+              actionListener="ExecuteDocFlow"/>
+  <jfd:button id="rollbackDocFlowButton"
+              toolTip="resource://com.mg.merp.docflow.resources.formelements#RollbackDocFlow"
+              icon="com/mg/merp/docflow/resources/rollbackdocflowicon.png"
+              actionListener="RollbackDocFlow"/>
+  <jfd:button id="showDocumentHistoryButton"
+              toolTip="resource://com.mg.merp.docflow.resources.formelements#DocFlowHistory"
+              icon="com/mg/merp/docflow/resources/docflowhistoryicon.png"
+              actionListener="DocFlowHistory"/>
 </jfd:wrap-macros>

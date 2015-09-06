@@ -17,12 +17,10 @@ package com.mg.merp.planning;
 import com.mg.merp.planning.model.RccpDetail;
 
 /**
- * 
  * @author leonova
  * @version $Id: RCCPDetailServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface RCCPDetailServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<RccpDetail, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<RccpDetail, Integer> {
 
 }

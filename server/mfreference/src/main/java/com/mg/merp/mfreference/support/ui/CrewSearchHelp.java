@@ -22,9 +22,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class CrewSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/mfreference/Crew";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/mfreference/Crew";
+  }
 
 }

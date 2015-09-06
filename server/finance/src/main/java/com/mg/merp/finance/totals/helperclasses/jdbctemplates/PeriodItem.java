@@ -14,53 +14,47 @@
  */
 package com.mg.merp.finance.totals.helperclasses.jdbctemplates;
 
-import java.util.*;
+import java.util.Date;
 
 /**
  * @author Valentin A. Poroxnenko
  * @version $Id: PeriodItem.java,v 1.3 2006/07/05 09:06:30 poroxnenko Exp $
  */
-public class PeriodItem 
-{
+public class PeriodItem {
   private int id;
   private Date beginDate;
   private Date endDate;
-  
-  public PeriodItem(){}
-  public PeriodItem(int id, Date beginDate, Date endDate)
-  {
-	this.id = id;
-	this.beginDate = beginDate;
-	this.endDate = endDate;
+
+  public PeriodItem() {
   }
-  
-  public int getId()
-  {
-	  return id;
+
+  public PeriodItem(int id, Date beginDate, Date endDate) {
+    this.id = id;
+    this.beginDate = beginDate;
+    this.endDate = endDate;
   }
-  
-  public Date getBeginDate()
-  {
-	  return beginDate;
+
+  public int getId() {
+    return id;
   }
-  
-  public Date getEndDate()
-  {
-	  return endDate;
+
+  public void setId(int id) {
+    this.id = id;
   }
-  
-  public void setId(int id)
-  {
-	  this.id = id;
+
+  public Date getBeginDate() {
+    return beginDate;
   }
-  
-  public void setBeginDate(Date beginDate)
-  {
-	  this.beginDate = beginDate;
+
+  public void setBeginDate(Date beginDate) {
+    this.beginDate = beginDate;
   }
-  
-  public void setEndDate(Date endDate)
-  {
-	  this.endDate = endDate;
+
+  public Date getEndDate() {
+    return endDate;
+  }
+
+  public void setEndDate(Date endDate) {
+    this.endDate = endDate;
   }
 }

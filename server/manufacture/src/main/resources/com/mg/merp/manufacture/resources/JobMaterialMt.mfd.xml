@@ -13,47 +13,55 @@
 
 <!-- $Id: JobMaterialMt.mfd.xml,v 1.5 2007/07/30 10:26:38 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.manufacture.support.ui.JobMaterialMt" title="resource://com.mg.merp.manufacture.resources.formelements#JobMaterial" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.manufacture.support.ui.JobMaterialMt"
+          title="resource://com.mg.merp.manufacture.resources.formelements#JobMaterial">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_expand" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Job.MainTab.Title" >
-		
-		   	<jfd:field id="TimeSequence" />	
-			<jfd:field id="ViewSequence" sameLine="true"/>	
-		 	<jfd:field id="EffOnDate" />	  
-		 	<jfd:field id="EffOffDate" sameLine="true"/>
-			<jfd:field id="ReportSequence" />	
-			<jfd:field id="Revision" sameLine="true"/>	
-			<jfd:field id="Catalog" />	
- 			<jfd:field id="ResourceGroup" />
-			<jfd:field id="MtlQty" />	
-			<jfd:field id="Measure" sameLine="true"/>				
-			<jfd:field id="MtlOhRate" />			
-			<jfd:field id="Currency" sameLine="true" />	
-			<jfd:field id="MtlBackflushFlag"/>	
-			<jfd:field id="MtlOhBackflushFlag" sameLine="true"/>
-			<jfd:field id="MtlOhRatio" />
-			<jfd:field id="ScrapFactor" sameLine="true"/>	
-			<jfd:field id="MtlCostCategory" />
-			<jfd:field id="MtlOhCostCategory" sameLine="true"/>			
-			<jfd:field id="QuantityRateFlag" editorType="comboBox" />
-			<jfd:field id="MtlOhAllocationFlag" editorType="comboBox" sameLine="true"/>
-			<jfd:field id="BackflushZone" />   
-		 	<jfd:field id="Comment" />     
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 									 	
-		</jfd:container>
-		
-		<jfd:container id="materialJobRouteFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#CostDetailFields" >
-	 		<jfd:table id="stdDetailLine" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#StdCostDetailFields" >
-			</jfd:table> 
-			
-	 		<jfd:table id="actDetailLine" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#ActCostDetailFields" >
-			</jfd:table> 	
-		</jfd:container>
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Job.MainTab.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+      <jfd:field id="TimeSequence"/>
+      <jfd:field id="ViewSequence" sameLine="true"/>
+      <jfd:field id="EffOnDate"/>
+      <jfd:field id="EffOffDate" sameLine="true"/>
+      <jfd:field id="ReportSequence"/>
+      <jfd:field id="Revision" sameLine="true"/>
+      <jfd:field id="Catalog"/>
+      <jfd:field id="ResourceGroup"/>
+      <jfd:field id="MtlQty"/>
+      <jfd:field id="Measure" sameLine="true"/>
+      <jfd:field id="MtlOhRate"/>
+      <jfd:field id="Currency" sameLine="true"/>
+      <jfd:field id="MtlBackflushFlag"/>
+      <jfd:field id="MtlOhBackflushFlag" sameLine="true"/>
+      <jfd:field id="MtlOhRatio"/>
+      <jfd:field id="ScrapFactor" sameLine="true"/>
+      <jfd:field id="MtlCostCategory"/>
+      <jfd:field id="MtlOhCostCategory" sameLine="true"/>
+      <jfd:field id="QuantityRateFlag" editorType="comboBox"/>
+      <jfd:field id="MtlOhAllocationFlag" editorType="comboBox" sameLine="true"/>
+      <jfd:field id="BackflushZone"/>
+      <jfd:field id="Comment"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+
+    <jfd:container id="materialJobRouteFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.manufacture.resources.formelements#CostDetailFields">
+      <jfd:table id="stdDetailLine" scroll="true" autoResize="subsequent_columns"
+                 alignment="expand_expand"
+                 fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#StdCostDetailFields">
+      </jfd:table>
+
+      <jfd:table id="actDetailLine" scroll="true" autoResize="subsequent_columns"
+                 alignment="expand_expand"
+                 fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#ActCostDetailFields">
+      </jfd:table>
+    </jfd:container>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>	

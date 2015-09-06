@@ -18,11 +18,11 @@ import com.mg.merp.mfreference.model.ManufactureConfig;
 
 /**
  * Сервис бизнес-компонента "Конфигурация модуля <Производство>"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: ManufactureConfigServiceLocal.java,v 1.2 2007/01/13 13:23:13 sharapov Exp $
  */
 public interface ManufactureConfigServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ManufactureConfig, Integer> {
-	
+
 }

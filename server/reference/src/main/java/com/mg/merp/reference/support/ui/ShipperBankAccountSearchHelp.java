@@ -17,18 +17,18 @@ package com.mg.merp.reference.support.ui;
 
 /**
  * SearchHelp для банка получателя банковских документов
- * 
+ *
  * @author leonova
  * @version $Id: ShipperBankAccountSearchHelp.java,v 1.1 2006/10/07 10:11:00 leonova Exp $
  */
 public class ShipperBankAccountSearchHelp extends BankAccountSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.account.support.ui.BankAccountSearchHelp#getContractorContextName()
-	 */
-	@Override
-	protected String getContractorContextName() {
-		return "Shipper";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.account.support.ui.BankAccountSearchHelp#getContractorContextName()
+   */
+  @Override
+  protected String getContractorContextName() {
+    return "Shipper";
+  }
 
 }

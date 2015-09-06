@@ -13,10 +13,10 @@
 
 <!-- $Id: DocSpecPriceOutMacros.xml,v 1.4 2007/09/07 12:19:49 safonov Exp $ -->
 
-<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
-	<jfd:field id="Price1" />
-	<jfd:field id="Discount" />
-	<jfd:field id="DocDiscount" sameLine="true" readOnly="true" />
-	<jfd:field id="PriceWithDiscount" />		
-	<jfd:field id="Price" sameLine="true" readOnly="true" />	
+<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
+  <jfd:field id="Price1"/>
+  <jfd:field id="Discount"/>
+  <jfd:field id="DocDiscount" sameLine="true" readOnly="true"/>
+  <jfd:field id="PriceWithDiscount"/>
+  <jfd:field id="Price" sameLine="true" readOnly="true"/>
 </jfd:wrap-macros>

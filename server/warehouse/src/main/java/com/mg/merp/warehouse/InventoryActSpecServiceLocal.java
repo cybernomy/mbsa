@@ -17,12 +17,10 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.InventoryActSpec;
 
 /**
- * 
  * @author leonova
  * @version $Id: InventoryActSpecServiceLocal.java,v 1.2 2006/09/20 11:02:09 safonov Exp $
  */
 public interface InventoryActSpecServiceLocal
-   extends com.mg.merp.document.GoodsDocumentSpecification<InventoryActSpec, Integer>
-{
+    extends com.mg.merp.document.GoodsDocumentSpecification<InventoryActSpec, Integer> {
 
 }

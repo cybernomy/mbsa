@@ -9,136 +9,186 @@
 ]> -->
 <chapter id="ref003">
   <title>Валюты</title>
-  
-     <para> В справочнике &quot;Валюты&quot; пользователь может задать все возможные 
-     виды валют и истории курсов валют, которые он будет использовать, например, 
-     при выписке документов.</para>
-     
-     <para>Вход в справочник &quot;Валюты&quot; осуществляется через главное меню системы:
-     <menuchoice>
+
+  <para>В справочнике &quot;Валюты&quot; пользователь может задать все возможные
+    виды валют и истории курсов валют, которые он будет использовать, например,
+    при выписке документов.
+  </para>
+
+  <para>Вход в справочник &quot;Валюты&quot; осуществляется через главное меню системы:
+    <menuchoice>
+      <guimenu>&ref;</guimenu>
+      <guisubmenu>Валюты</guisubmenu>
+      <guimenuitem>Курсы валют</guimenuitem>
+    </menuchoice>
+    .
+    На экране появляется список валют и историй курсов валют.
+  </para>
+
+  <figure>
+    <title>Список валют</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/currency.gif"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para>В окне просмотра списков валют слева показываются типы валют, а
+    справа - соответствующие им истории изменения курса.
+  </para>
+
+  <para>Система позволяет вести учёт как финансовых, так и материальных средств
+    в различных валютах. Число валют, одновременно используемых в расчётах, не ограничено.
+  </para>
+
+  <para>В системе &merp; можно добавлять валюты и редактировать их параметры.</para>
+
+  <figure>
+    <title>Параметры валюты</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/currency2.gif"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para>Каждая запись может содержать следующие параметры:</para>
+
+  <para><guibutton>Мнемокод</guibutton>. Краткое уникальное наименование валюты в системе.
+  </para>
+
+  <para><guibutton>Код ИСО</guibutton>. Код валюты в соответствии с Международным
+    стандартом ИСО 4217 &quot;Коды для представления валют и фондов&quot;.
+  </para>
+
+  <para><guibutton>Код</guibutton>. Банковский код валюты.
+  </para>
+
+  <para><guibutton>Род наименования валюты для печати</guibutton>. Мужской, женский или средний.
+  </para>
+
+  <para><guibutton>Падежи наименования валюты</guibutton>. Используется для правильного
+    формирования сумм прописью. Указываются падежи для одной, двух и десяти единиц валюты,
+    а также разменной монеты.
+  </para>
+
+  <para><guibutton>Цены в валюте округлять до</guibutton>. Указывается количество
+    знаков после запятой для округления цен.
+  </para>
+
+  <para><guibutton>Суммы в валюте округлять до</guibutton>. Указывается количество знаков после
+    запятой для округления сумм.
+  </para>
+
+  <para>Для каждой валюты ведётся история курсов валют. Для каждой записи в истории курсов валюты
+    пользователем задаются следующие параметры.
+  </para>
+
+  <figure>
+    <title>Изменение курса валюты</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/currency_change.gif"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para>
+    <guibutton>Валюта.</guibutton>
+    По отношению к какой валюте устанавливается курс.
+  </para>
+
+  <para>
+    <guibutton>Источник.</guibutton>
+    <link linkend="ref003_01">Источник информации о курсе
+      валюты</link>.
+  </para>
+
+  <para><guibutton>Тип курса</guibutton>.
+    <link linkend="ref003_02">Тип курса валюты</link>
+    (например &quot;внутренний&quot;, &quot;курс Центрального банка&quot;, &quot;ММВБ&quot; и др.)
+  </para>
+
+  <para><guibutton>Дата вступления в силу</guibutton>. Дата, на которую задан курс.
+  </para>
+
+  <para><guibutton>Курс</guibutton>. Указывается количество валюты, для которой устанавливается
+    курс, за единицу валюты, указанной выше.
+  </para>
+
+
+  <section id="ref003_01">
+    <title>Источники курсов валют</title>
+
+    <para>В данном справочнике хранятся названия источников, из которых система
+      берёт информацию о курсах валют.
+    </para>
+
+    <para>Вход в справочник &quot;Источники курсов валют&quot; осуществляется через главное меню
+      системы:
+      <menuchoice>
         <guimenu>&ref;</guimenu>
         <guisubmenu>Валюты</guisubmenu>
-        <guimenuitem>Курсы валют</guimenuitem>
-     </menuchoice>. 
-     На экране появляется список валют и историй курсов валют.</para>
-     
-     <figure>
-	<title>Список валют</title>
-	<mediaobject><imageobject>
-	<imagedata fileref="images/currency.gif"/>
-	</imageobject></mediaobject>
-     </figure>
-	
-    <para>В окне просмотра списков валют слева показываются типы валют, а 
-    справа - соответствующие им истории изменения курса.</para>
-    
-    <para>Система позволяет вести учёт как финансовых, так и материальных средств 
-    в различных валютах. Число валют, одновременно используемых в расчётах, не ограничено.</para>
-    
-    <para>В системе &merp; можно добавлять валюты и редактировать их параметры.</para>
-    
-    <figure>
-	<title>Параметры валюты</title>
-	<mediaobject><imageobject>
-	<imagedata fileref="images/currency2.gif"/>
-	</imageobject></mediaobject>
-    </figure>
-    
-    <para>Каждая запись может содержать следующие параметры:</para>
-    
-    <para><guibutton>Мнемокод</guibutton>. Краткое уникальное наименование валюты в системе.</para>
-    
-    <para><guibutton>Код ИСО</guibutton>. Код валюты в соответствии с Международным 
-    стандартом ИСО 4217 &quot;Коды для представления валют и фондов&quot;. </para>
-    
-    <para><guibutton>Код</guibutton>. Банковский код валюты.</para>
-    
-    <para><guibutton>Род наименования валюты для печати</guibutton>. Мужской, женский или средний.</para>
-    
-    <para><guibutton>Падежи наименования валюты</guibutton>. Используется для правильного
-    формирования сумм прописью. Указываются падежи для одной, двух и десяти единиц валюты, 
-    а также разменной монеты.</para>
-    
-    <para><guibutton>Цены в валюте округлять до</guibutton>. Указывается количество
-    знаков после запятой для округления цен.</para>
-    
-    <para><guibutton>Суммы в валюте округлять до</guibutton>. Указывается количество знаков после 
-    запятой для округления сумм.</para>
-    
-    <para>Для каждой валюты ведётся история курсов валют. Для каждой записи в истории курсов валюты 
-    пользователем задаются следующие параметры.</para>
-    
-    <figure>
-	<title>Изменение курса валюты</title>
-	<mediaobject><imageobject>
-	<imagedata fileref="images/currency_change.gif"/>
-	</imageobject></mediaobject>
-    </figure>
-    
-    <para><guibutton>Валюта.</guibutton> По отношению к какой валюте устанавливается курс.</para>
-    
-    <para><guibutton>Источник.</guibutton> <link linkend="ref003_01">Источник информации о курсе 
-    валюты</link>.</para>
-    
-    <para><guibutton>Тип курса</guibutton>. <link linkend="ref003_02">Тип курса валюты</link> 
-    (например &quot;внутренний&quot;, &quot;курс Центрального банка&quot;, &quot;ММВБ&quot; и др.)</para>
+        <guimenuitem>Источники курсов валют</guimenuitem>
+      </menuchoice>
+      .
+    </para>
 
-    <para><guibutton>Дата вступления в силу</guibutton>. Дата, на которую задан курс. </para>
-    
-    <para><guibutton>Курс</guibutton>. Указывается количество валюты, для которой устанавливается 
-    курс, за единицу валюты, указанной выше. </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/cur_rate_auth.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
 
+    <para><guibutton>Код</guibutton>. Краткое наименование источника.
+    </para>
 
-    <section id="ref003_01">
-        <title>Источники курсов валют</title>
-	
-	  <para>В данном справочнике хранятся названия источников, из которых система
-	  берёт информацию о курсах валют.</para>
-	  
-	  <para>Вход в справочник &quot;Источники курсов валют&quot; осуществляется через главное меню системы:
-	  <menuchoice>
-	  <guimenu>&ref;</guimenu>
-	  <guisubmenu>Валюты</guisubmenu>
-	  <guimenuitem>Источники курсов валют</guimenuitem>
-	  </menuchoice>. </para>
-	  
-	  <screenshot><mediaobject><imageobject>
-	  <imagedata fileref="images/cur_rate_auth.gif"/>
-	  </imageobject></mediaobject></screenshot>
-	  
-	  <para><guibutton>Код</guibutton>. Краткое наименование источника.</para>
-	  
-	  <para><guibutton>Наименование</guibutton>. Полное название источника.</para>
-	  
-	  <para>См. также: <link linkend="ref003">Курсы валют</link>, 
-	  <link linkend="ref003_02">Типы курсов валют</link>. </para>
-	    
-    </section>
-    
-    <section id="ref003_02">
-       <title>Типы курсов валют</title>
-       
-          <para>В данном справочнике хранятся типы источников для курсов валют, по которым система
-	  различает информацию о курсах валют.</para>
-	  
-	  <para>Вход в справочник &quot;Типы курсов валют&quot; осуществляется через главное меню системы:
-	  <menuchoice>
-	  <guimenu>&ref;</guimenu>
-	  <guisubmenu>Валюты</guisubmenu>
-	  <guimenuitem>Типы курсов валют</guimenuitem>
-	  </menuchoice>. </para>
-	  
-	  <screenshot><mediaobject><imageobject>
-	  <imagedata fileref="images/cur_rate_type.gif"/>
-	  </imageobject></mediaobject></screenshot>
-	  
-	  <para><guibutton>Код</guibutton>. Краткое наименование типа.</para>
-	  
-	  <para><guibutton>Наименование</guibutton>. Полное название типа.</para>
- 
-	  <para>См. также: <link linkend="ref003">Курсы валют</link>, 
-	  <link linkend="ref003_01">Источники курсов валют</link>. </para>
-	
-    </section>
-    
+    <para><guibutton>Наименование</guibutton>. Полное название источника.
+    </para>
+
+    <para>См. также:<link linkend="ref003">Курсы валют</link>,
+      <link linkend="ref003_02">Типы курсов валют</link>.
+    </para>
+
+  </section>
+
+  <section id="ref003_02">
+    <title>Типы курсов валют</title>
+
+    <para>В данном справочнике хранятся типы источников для курсов валют, по которым система
+      различает информацию о курсах валют.
+    </para>
+
+    <para>Вход в справочник &quot;Типы курсов валют&quot; осуществляется через главное меню системы:
+      <menuchoice>
+        <guimenu>&ref;</guimenu>
+        <guisubmenu>Валюты</guisubmenu>
+        <guimenuitem>Типы курсов валют</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/cur_rate_type.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <para><guibutton>Код</guibutton>. Краткое наименование типа.
+    </para>
+
+    <para><guibutton>Наименование</guibutton>. Полное название типа.
+    </para>
+
+    <para>См. также:<link linkend="ref003">Курсы валют</link>,
+      <link linkend="ref003_01">Источники курсов валют</link>.
+    </para>
+
+  </section>
+
 </chapter>

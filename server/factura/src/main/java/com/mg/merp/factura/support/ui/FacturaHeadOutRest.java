@@ -19,13 +19,11 @@ import com.mg.merp.document.generic.ui.GoodsDocumentRest;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * 
  * @author leonova
  * @version $Id: FacturaHeadOutRest.java,v 1.3 2006/12/20 12:30:33 leonova Exp $
- *
  */
 public class FacturaHeadOutRest extends GoodsDocumentRest {
-	public FacturaHeadOutRest() {
-		contractorToKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};		
-	}
+  public FacturaHeadOutRest() {
+    contractorToKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+  }
 }

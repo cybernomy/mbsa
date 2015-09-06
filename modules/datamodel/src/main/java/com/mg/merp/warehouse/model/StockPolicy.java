@@ -19,28 +19,29 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Политика списания со склада
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: StockPolicy.java,v 1.1 2006/04/13 10:28:32 safonov Exp $
  */
 @DataItemName("Warehouse.Warehouse.StockPolicy")
 public enum StockPolicy {
-	/**
-	 * FIFO
-	 */
-	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#STPolicy.Fifo")
-	SPFIFO,
-	
-	/**
-	 * LIFO
-	 */
-	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#STPolicy.Lifo")
-	SPLIFO,
-	
-	/**
-	 * Партионный учёт
-	 */
-	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#STPolicy.Batch")
-	SPBATCH
-	
+  /**
+   * FIFO
+   */
+  @EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#STPolicy.Fifo")
+  SPFIFO,
+
+  /**
+   * LIFO
+   */
+  @EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#STPolicy.Lifo")
+  SPLIFO,
+
+  /**
+   * Партионный учёт
+   */
+  @EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#STPolicy.Batch")
+  SPBATCH
+
 }
 

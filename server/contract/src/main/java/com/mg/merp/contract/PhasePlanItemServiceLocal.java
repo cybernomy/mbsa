@@ -18,22 +18,23 @@ import com.mg.merp.contract.model.PhasePlanItem;
 
 /**
  * Бизнес-компонент "Пункты плана"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: PhasePlanItemServiceLocal.java,v 1.2 2008/03/11 08:54:50 sharapov Exp $
  */
 public interface PhasePlanItemServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PhasePlanItem, Integer> {
 
-	/**
-	 * Имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/contract/PhasePlanItem"; //$NON-NLS-1$
+  /**
+   * Имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/contract/PhasePlanItem"; //$NON-NLS-1$
 
-	/**
-	 * Рассчитать аттрибуты пункта плана контракта
-	 * @param phasePlanItem - пункт плана
-	 */
-	void adjust(PhasePlanItem phasePlanItem);
+  /**
+   * Рассчитать аттрибуты пункта плана контракта
+   *
+   * @param phasePlanItem - пункт плана
+   */
+  void adjust(PhasePlanItem phasePlanItem);
 
 }

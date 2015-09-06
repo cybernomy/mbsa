@@ -22,9 +22,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class ReserveCategorySearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/personnelref/ReserveCategory";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/ReserveCategory";
+  }
 
 }

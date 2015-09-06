@@ -14,8 +14,6 @@
  */
 package com.mg.merp.warehouse.support.ui;
 
-import java.util.Set;
-
 import com.mg.framework.api.ApplicationException;
 import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.framework.service.ApplicationDictionaryLocator;
@@ -26,76 +24,78 @@ import com.mg.framework.utils.DatabaseUtils;
 import com.mg.merp.reference.support.ReferenceUtils;
 import com.mg.merp.warehouse.BillHeadModelInServiceLocal;
 
+import java.util.Set;
+
 /**
  * Контроллер формы списка образцов входящих счетов
- * 
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: BillHeadModelInBr.java,v 1.4 2006/09/12 10:49:56 leonova Exp $
  */
 public class BillHeadModelInBr extends BillHeadModelBrowseForm {
-	private final String INIT_QUERY_TEXT = "select %s from BillHeadModel dhm %s %s";
-	
-	public BillHeadModelInBr() throws Exception {
-		super();
-		folderService =  (DataBusinessObjectService) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/Folder");
-		treeUIProperties.put("FolderType", BillHeadModelInServiceLocal.FOLDER_PART);
-	}
+  private final String INIT_QUERY_TEXT = "select %s from BillHeadModel dhm %s %s";
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultHierarchyBrowseForm#loadFolders()
-	 */
-	@Override
-	protected TreeNode loadFolders() throws ApplicationException {
-		return ReferenceUtils.loadFolderHierarchy(BillHeadModelInServiceLocal.FOLDER_PART);
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultPlainBrowseForm#createQueryText()
-	 */
-	@Override
-	protected String createQueryText() {
-		super.createQueryText();		
-		fieldDefs = ((BillHeadModelMaintenanceEJBQLTableModel) table.getModel()).getFieldDefsSet();
-		String fieldsList = DatabaseUtils.generateEJBQLSelectClause(fieldDefs);
-		String fromList = DatabaseUtils.generateEJBQLFromClause(fieldDefs);
+  public BillHeadModelInBr() throws Exception {
+    super();
+    folderService = (DataBusinessObjectService) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/Folder");
+    treeUIProperties.put("FolderType", BillHeadModelInServiceLocal.FOLDER_PART);
+  }
 
-		return String.format(INIT_QUERY_TEXT, fieldsList, fromList, whereText);	
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultHierarchyBrowseForm#loadFolders()
+   */
+  @Override
+  protected TreeNode loadFolders() throws ApplicationException {
+    return ReferenceUtils.loadFolderHierarchy(BillHeadModelInServiceLocal.FOLDER_PART);
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultPlainBrowseForm#createModel()
-	 */
-	@Override
-	protected MaintenanceTableModel createModel() {
-		return new BillHeadModelMaintenanceEJBQLTableModel() {
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultPlainBrowseForm#createQueryText()
+   */
+  @Override
+  protected String createQueryText() {
+    super.createQueryText();
+    fieldDefs = ((BillHeadModelMaintenanceEJBQLTableModel) table.getModel()).getFieldDefsSet();
+    String fieldsList = DatabaseUtils.generateEJBQLSelectClause(fieldDefs);
+    String fromList = DatabaseUtils.generateEJBQLFromClause(fieldDefs);
 
-			/* (non-Javadoc)
-			 * @see com.mg.framework.generic.ui.DefaultEJBQLTableModel#getDefaultFieldDefsSet()
+    return String.format(INIT_QUERY_TEXT, fieldsList, fromList, whereText);
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultPlainBrowseForm#createModel()
+   */
+  @Override
+  protected MaintenanceTableModel createModel() {
+    return new BillHeadModelMaintenanceEJBQLTableModel() {
+
+      /* (non-Javadoc)
+       * @see com.mg.framework.generic.ui.DefaultEJBQLTableModel#getDefaultFieldDefsSet()
+       */
+      @Override
+      protected Set<TableEJBQLFieldDef> getDefaultFieldDefsSet() {
+        super.getDefaultFieldDefsSet();
+
+        return DatabaseUtils.embedAddinFieldsDefaultEJBQLFieldDefs(result, service);
+      }
+
+      /* (non-Javadoc)
+       * @see com.mg.framework.generic.ui.DefaultEJBQLTableModel#setQuery(java.lang.String)
+       */
+      @Override
+      protected void doLoad() {
+        setQuery(createQueryText(), paramsName.toArray(new String[paramsName.size()]), paramsValue.toArray(new Object[paramsValue.size()]));
+      }
+            /* (non-Javadoc)
+       * @see com.mg.framework.generic.ui.DefaultMaintenanceEJBQLTableModel#getPrimaryKeyFieldIndex()
 			 */
-			@Override
-			protected Set<TableEJBQLFieldDef> getDefaultFieldDefsSet() {
-				super.getDefaultFieldDefsSet();
 
-				return DatabaseUtils.embedAddinFieldsDefaultEJBQLFieldDefs(result, service);
-			}
+      @Override
+      protected int getPrimaryKeyFieldIndex() {
+        return 0;
+      }
+    };
 
-			/* (non-Javadoc)
-			 * @see com.mg.framework.generic.ui.DefaultEJBQLTableModel#setQuery(java.lang.String)
-			 */
-			@Override
-			protected void doLoad() {
-				setQuery(createQueryText(), paramsName.toArray(new String[paramsName.size()]), paramsValue.toArray(new Object[paramsValue.size()]));				
-			}
-			/* (non-Javadoc)
-			 * @see com.mg.framework.generic.ui.DefaultMaintenanceEJBQLTableModel#getPrimaryKeyFieldIndex()
-			 */
-			
-			@Override
-			protected int getPrimaryKeyFieldIndex() {
-				return 0;
-			}
-		};
-	
-	}	
+  }
 
 }

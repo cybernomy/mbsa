@@ -13,56 +13,65 @@
 
 <!-- $Id: ContractRest.mfd.xml,v 1.7 2008/09/22 10:11:39 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.contract.support.ui.ContractRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.contract.resources.formelements#Cond.Contract" helpTopic="contract#contractrest_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.contract.support.ui.ContractRest" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.contract.resources.formelements#Cond.Contract"
+          helpTopic="contract#contractrest_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-        
-		<jfd:field id="docDateFrom" />
-		<jfd:field id="docDateTill" sameLine="true"/>
-		<jfd:field id="docNumber" />
-		<jfd:field id="docType" sameLine="true"/> 
-		<jfd:container id="baseDocument" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.BaseDocAttribute" >
-			<jfd:field id="baseDocType" showLabel="false" alignment="left_expand"/>
-			<jfd:field id="baseDocNumber" showLabel="false" alignment="expand_expand"/>			
-			<jfd:field id="baseDocDate" showLabel="false" alignment="right_expand"/>				
-		</jfd:container>
-		<jfd:field id="sysCompany" />
-		<jfd:field id="fromCode" text="resource://com.mg.merp.contract.resources.dataitemlabels#Contract.ContrFrom" />
-		<jfd:field id="toCode" sameLine="true" text="resource://com.mg.merp.contract.resources.dataitemlabels#Contract.To" />
-		<jfd:field id="contrResponsible" />
-		<jfd:field id="responsible" sameLine="true"/>	
-	 	<jfd:comboBox id="incoming" selectedIndex="0" label="resource://com.mg.merp.contract.resources.formelements#Cond.AllContract">
-			<jfd:items>
-				<jfd:item value="Все" />
-				<jfd:item value="Входящие" />
-				<jfd:item value="Исходящие" />
-			</jfd:items>
-		</jfd:comboBox> 		
- 		<jfd:field id="sumNatMin" />
-		<jfd:field id="sumNatMax" sameLine="true"/>					
-		<jfd:field id="sumCurMin" />
-		<jfd:field id="sumCurMax" sameLine="true"/>	 
-		<jfd:field id="сurCode" /> 
-		<jfd:field id="status" editorType="comboBox"/>
-		<jfd:field id="incomingNumber" sameLine="true"/>
-		<jfd:container id="docModifyFields" layout="jfd:box" longField="true" label="resource://com.mg.merp.contract.resources.formelements#Cond.Document.Modify" >
-			<jfd:field id="docModifyType" showLabel="false" alignment="left_expand"/>
-			<jfd:field id="docModifyNumber" showLabel="false" alignment="expand_expand"/>			
-			<jfd:field id="docModifyDate" showLabel="false" alignment="right_expand"/>				
-		</jfd:container>		
-		<jfd:field id="factKind" />
-		<jfd:field id="beginActionFact" />
-		<jfd:field id="endActionFact" sameLine="true"/>	 
-		<jfd:field id="planKind" />
-		<jfd:field id="beginActionPlan" />
-		<jfd:field id="endActionPlan" sameLine="true"/>
-		<jfd:include name="com/mg/merp/document/resources/DocProcessStageRestMacros.xml" />
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 											
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+    <jfd:field id="docDateFrom"/>
+    <jfd:field id="docDateTill" sameLine="true"/>
+    <jfd:field id="docNumber"/>
+    <jfd:field id="docType" sameLine="true"/>
+    <jfd:container id="baseDocument" layout="jfd:box" longField="true"
+                   label="resource://com.mg.merp.document.resources.formelements#Document.BaseDocAttribute">
+      <jfd:field id="baseDocType" showLabel="false" alignment="left_expand"/>
+      <jfd:field id="baseDocNumber" showLabel="false" alignment="expand_expand"/>
+      <jfd:field id="baseDocDate" showLabel="false" alignment="right_expand"/>
+    </jfd:container>
+    <jfd:field id="sysCompany"/>
+    <jfd:field id="fromCode"
+               text="resource://com.mg.merp.contract.resources.dataitemlabels#Contract.ContrFrom"/>
+    <jfd:field id="toCode" sameLine="true"
+               text="resource://com.mg.merp.contract.resources.dataitemlabels#Contract.To"/>
+    <jfd:field id="contrResponsible"/>
+    <jfd:field id="responsible" sameLine="true"/>
+    <jfd:comboBox id="incoming" selectedIndex="0"
+                  label="resource://com.mg.merp.contract.resources.formelements#Cond.AllContract">
+      <jfd:items>
+        <jfd:item value="Все"/>
+        <jfd:item value="Входящие"/>
+        <jfd:item value="Исходящие"/>
+      </jfd:items>
+    </jfd:comboBox>
+    <jfd:field id="sumNatMin"/>
+    <jfd:field id="sumNatMax" sameLine="true"/>
+    <jfd:field id="sumCurMin"/>
+    <jfd:field id="sumCurMax" sameLine="true"/>
+    <jfd:field id="сurCode"/>
+    <jfd:field id="status" editorType="comboBox"/>
+    <jfd:field id="incomingNumber" sameLine="true"/>
+    <jfd:container id="docModifyFields" layout="jfd:box" longField="true"
+                   label="resource://com.mg.merp.contract.resources.formelements#Cond.Document.Modify">
+      <jfd:field id="docModifyType" showLabel="false" alignment="left_expand"/>
+      <jfd:field id="docModifyNumber" showLabel="false" alignment="expand_expand"/>
+      <jfd:field id="docModifyDate" showLabel="false" alignment="right_expand"/>
+    </jfd:container>
+    <jfd:field id="factKind"/>
+    <jfd:field id="beginActionFact"/>
+    <jfd:field id="endActionFact" sameLine="true"/>
+    <jfd:field id="planKind"/>
+    <jfd:field id="beginActionPlan"/>
+    <jfd:field id="endActionPlan" sameLine="true"/>
+    <jfd:include name="com/mg/merp/document/resources/DocProcessStageRestMacros.xml"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml"/>
 
 </jfd:form>

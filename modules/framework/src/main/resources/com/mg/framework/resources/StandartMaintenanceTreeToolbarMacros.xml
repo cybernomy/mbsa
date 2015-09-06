@@ -13,13 +13,26 @@
 
 <!-- $Id: StandartMaintenanceTreeToolbarMacros.xml,v 1.1 2008/11/01 09:00:26 safonov Exp $ -->
 
-<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
-	<jfd:button id="addFolderButton" toolTip="resource://com.mg.framework.resources.messages#AddButton" icon="com/mg/framework/resources/addbuttonicon.png" actionListener="AddFolder" />
-	<jfd:button id="editFolderButton" toolTip="resource://com.mg.framework.resources.messages#EditButton" icon="com/mg/framework/resources/editbuttonicon.png" actionListener="EditFolder" />
-	<jfd:button id="eraseFolderButton" toolTip="resource://com.mg.framework.resources.messages#EraseButton" icon="com/mg/framework/resources/erasebuttonicon.png" actionListener="EraseFolder" />
-	<jfd:button id="viewFolderButton" toolTip="resource://com.mg.framework.resources.messages#ViewButton" icon="com/mg/framework/resources/viewbuttonicon.png" actionListener="ViewFolder" />
-	<jfd:separator id="maintenanceFolderSeparator" />
-	<jfd:button id="refreshFolderButton" toolTip="resource://com.mg.framework.resources.messages#RefreshButton" icon="com/mg/framework/resources/refreshbuttonicon.png" actionListener="RefreshTree" />
-	<jfd:separator id="permissionFolderSeparator" />
-	<jfd:button id="permissionFolderButton" toolTip="resource://com.mg.framework.resources.messages#PermissionButton" icon="com/mg/framework/resources/permissionbuttonicon.png" actionListener="SetupFolderPermission" />
+<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
+  <jfd:button id="addFolderButton"
+              toolTip="resource://com.mg.framework.resources.messages#AddButton"
+              icon="com/mg/framework/resources/addbuttonicon.png" actionListener="AddFolder"/>
+  <jfd:button id="editFolderButton"
+              toolTip="resource://com.mg.framework.resources.messages#EditButton"
+              icon="com/mg/framework/resources/editbuttonicon.png" actionListener="EditFolder"/>
+  <jfd:button id="eraseFolderButton"
+              toolTip="resource://com.mg.framework.resources.messages#EraseButton"
+              icon="com/mg/framework/resources/erasebuttonicon.png" actionListener="EraseFolder"/>
+  <jfd:button id="viewFolderButton"
+              toolTip="resource://com.mg.framework.resources.messages#ViewButton"
+              icon="com/mg/framework/resources/viewbuttonicon.png" actionListener="ViewFolder"/>
+  <jfd:separator id="maintenanceFolderSeparator"/>
+  <jfd:button id="refreshFolderButton"
+              toolTip="resource://com.mg.framework.resources.messages#RefreshButton"
+              icon="com/mg/framework/resources/refreshbuttonicon.png" actionListener="RefreshTree"/>
+  <jfd:separator id="permissionFolderSeparator"/>
+  <jfd:button id="permissionFolderButton"
+              toolTip="resource://com.mg.framework.resources.messages#PermissionButton"
+              icon="com/mg/framework/resources/permissionbuttonicon.png"
+              actionListener="SetupFolderPermission"/>
 </jfd:wrap-macros>

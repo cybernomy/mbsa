@@ -13,30 +13,40 @@
 
 <!-- $Id: DocFlowStageLinkMt.mfd.xml,v 1.4 2007/06/09 11:29:41 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.docflow.support.ui.DocFlowStageLinkMt" orientation="ver" verticalGap="5" title="resource://com.mg.merp.docflow.resources.formelements#DocFlowStageLinkMt.Title" helpTopic="docprocess#addlink_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.docflow.support.ui.DocFlowStageLinkMt" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.docflow.resources.formelements#DocFlowStageLinkMt.Title"
+          helpTopic="docprocess#addlink_html">
 
-	<jfd:container id="fields" layout="jfd:box" orientation="ver" alignment="expand_expand">
-		<jfd:border style="bevel" type="raised" />
-		<jfd:container id="source" layout="jfd:box" orientation="ver" alignment="expand_top">
-			<jfd:border style="etched" title="resource://com.mg.merp.docflow.resources.formelements#DocFlowStageLinkMt.SourceStage" />
-			<jfd:textField id="sourceInternalName" alignment="expand_top" />
-			<jfd:textField id="sourceName" alignment="expand_expand" />
-		</jfd:container>
-		<jfd:container id="target" layout="jfd:box" orientation="ver" alignment="expand_top">
-			<jfd:border style="etched" title="resource://com.mg.merp.docflow.resources.formelements#DocFlowStageLinkMt.TargetStage" />
-			<jfd:textField id="targetInternalName" alignment="expand_top" />
-			<jfd:textField id="targetName" alignment="expand_expand" />
-		</jfd:container>
-		<jfd:checkBox id="directly" text="resource://com.mg.merp.docflow.resources.formelements#DocFlowStageLinkMt.Directly" alignment="expand_top" />
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:box" orientation="ver" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:container id="source" layout="jfd:box" orientation="ver" alignment="expand_top">
+      <jfd:border style="etched"
+                  title="resource://com.mg.merp.docflow.resources.formelements#DocFlowStageLinkMt.SourceStage"/>
+      <jfd:textField id="sourceInternalName" alignment="expand_top"/>
+      <jfd:textField id="sourceName" alignment="expand_expand"/>
+    </jfd:container>
+    <jfd:container id="target" layout="jfd:box" orientation="ver" alignment="expand_top">
+      <jfd:border style="etched"
+                  title="resource://com.mg.merp.docflow.resources.formelements#DocFlowStageLinkMt.TargetStage"/>
+      <jfd:textField id="targetInternalName" alignment="expand_top"/>
+      <jfd:textField id="targetName" alignment="expand_expand"/>
+    </jfd:container>
+    <jfd:checkBox id="directly"
+                  text="resource://com.mg.merp.docflow.resources.formelements#DocFlowStageLinkMt.Directly"
+                  alignment="expand_top"/>
+  </jfd:container>
 
-	<jfd:container id="buttons" layout="jfd:box" alignment="expand_bottom">
-		<jfd:filler id="buttonsFiller" alignment="expand_top"
-			type="horizontalGlue" />
-		<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#OkButton"
-			actionListener="Ok" />
-		<jfd:button id="CancelButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CancelButton"
-			actionListener="Cancel" />
-	</jfd:container>
+  <jfd:container id="buttons" layout="jfd:box" alignment="expand_bottom">
+    <jfd:filler id="buttonsFiller" alignment="expand_top"
+                type="horizontalGlue"/>
+    <jfd:button id="OkButton" alignment="right_top"
+                text="resource://com.mg.framework.resources.messages#OkButton"
+                actionListener="Ok"/>
+    <jfd:button id="CancelButton" alignment="right_top"
+                text="resource://com.mg.framework.resources.messages#CancelButton"
+                actionListener="Cancel"/>
+  </jfd:container>
 
 </jfd:form>

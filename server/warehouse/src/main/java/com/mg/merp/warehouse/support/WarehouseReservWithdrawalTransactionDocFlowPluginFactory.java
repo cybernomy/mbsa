@@ -23,69 +23,70 @@ import com.mg.merp.warehouse.WarehouseProcessorServiceLocal;
 
 /**
  * Реализация фабрики реализаций этапа ДО "Снятие с резерва по складу"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $$Id: WarehouseReservWithdrawalTransactionDocFlowPluginFactory.java,v 1.2 2007/03/29 08:49:08 poroxnenko Exp $$
+ * @version $$Id: WarehouseReservWithdrawalTransactionDocFlowPluginFactory.java,v 1.2 2007/03/29
+ *          08:49:08 poroxnenko Exp $$
  */
 public class WarehouseReservWithdrawalTransactionDocFlowPluginFactory extends
-		AbstractDocFlowPluginFactory {
-	public final static int FACTORY_IDENTIFIER = 24;
+    AbstractDocFlowPluginFactory {
+  public final static int FACTORY_IDENTIFIER = 24;
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
-	 */
-	@Override
-	protected DocFlowPlugin doCreatePlugin() {
-		return new AbstractDocFlowPlugin() {
+  /*
+   * (non-Javadoc)
+   *
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
+   */
+  @Override
+  protected DocFlowPlugin doCreatePlugin() {
+    return new AbstractDocFlowPlugin() {
 
-			@Override
-			protected void doExecute() throws Exception {
-				WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
-						.getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
-				
-				service.processWarehouseReservWithdrawalTransaction(getParams());
-				complete();
-			}
+      @Override
+      protected void doExecute() throws Exception {
+        WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
+            .getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
 
-			@Override
-			protected String doGetDocActionResultTextRepresentation(
-					DocHeadState docHeadState) {
-				// TODO: спросить консультантов
-				return StringUtils.BLANK_STRING;
-			}
+        service.processWarehouseReservWithdrawalTransaction(getParams());
+        complete();
+      }
 
-			@Override
-			protected void doRoolback() throws Exception {
-				WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
-						.getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
-		
-				service.rollbackWarehouseReservWithdrawalTransaction(getParams());
-				complete();
-			}
+      @Override
+      protected String doGetDocActionResultTextRepresentation(
+          DocHeadState docHeadState) {
+        // TODO: спросить консультантов
+        return StringUtils.BLANK_STRING;
+      }
 
-		};
-	}
+      @Override
+      protected void doRoolback() throws Exception {
+        WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
+            .getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
-	 */
-	@Override
-	public int getIdentifier() {
-		return FACTORY_IDENTIFIER;
-	}
+        service.rollbackWarehouseReservWithdrawalTransaction(getParams());
+        complete();
+      }
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
-	 */
-	@Override
-	public String getName() {
-		return "Warehouse reserv withdrawal transaction";
-	}
+    };
+  }
+
+  /*
+   * (non-Javadoc)
+   *
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
+   */
+  @Override
+  public int getIdentifier() {
+    return FACTORY_IDENTIFIER;
+  }
+
+  /*
+   * (non-Javadoc)
+   *
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
+   */
+  @Override
+  public String getName() {
+    return "Warehouse reserv withdrawal transaction";
+  }
 
 }

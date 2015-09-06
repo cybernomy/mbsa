@@ -15,18 +15,18 @@
 
 <index version="1.0">
 
-  <indexitem text="Типы документов"> 
-    <indexentry text="Типы документов" target="doctype_html" />
-    <indexentry text="Параметры типа документа" target="doctypeparam_html" />
-    <indexentry text="История документооборота" target="history_html" />
+  <indexitem text="Типы документов">
+    <indexentry text="Типы документов" target="doctype_html"/>
+    <indexentry text="Параметры типа документа" target="doctypeparam_html"/>
+    <indexentry text="История документооборота" target="history_html"/>
   </indexitem>
-    
+
   <indexitem text="Настройка документооборота">
-    <indexentry text="Карта документооборота" target="docprtune_html" />
-    <indexentry text="Добавление этапа" target="add_html" />
-    <indexentry text="Добавление связи" target="addlink_html" />
-    <indexentry text="Права доступа" target="permissions_html" />
-    <indexentry text="Параметры этапа" target="etapparam_html" />    
-  </indexitem> 
-  
+    <indexentry text="Карта документооборота" target="docprtune_html"/>
+    <indexentry text="Добавление этапа" target="add_html"/>
+    <indexentry text="Добавление связи" target="addlink_html"/>
+    <indexentry text="Права доступа" target="permissions_html"/>
+    <indexentry text="Параметры этапа" target="etapparam_html"/>
+  </indexitem>
+
 </index>

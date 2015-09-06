@@ -23,38 +23,38 @@ import com.mg.framework.api.ui.HierarchyRestrictionSupport;
  */
 @Deprecated
 public abstract class DefaultLegacyHierarhyRestrictionForm extends
-		DefaultLegacyRestrictionForm implements HierarchyRestrictionSupport {
-	private boolean byFolder = true;
+    DefaultLegacyRestrictionForm implements HierarchyRestrictionSupport {
+  private boolean byFolder = true;
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacyRestrictionForm#collectRestrictionItem()
-	 */
-	@Override
-	protected void collectRestrictionItem() {
-		restrictionItem.put(BrowseCond.BY_FOLDER_ATTRIBUTE, byFolder);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacyRestrictionForm#collectRestrictionItem()
+   */
+  @Override
+  protected void collectRestrictionItem() {
+    restrictionItem.put(BrowseCond.BY_FOLDER_ATTRIBUTE, byFolder);
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacyRestrictionForm#extractRestrictionItem()
-	 */
-	@Override
-	protected void extractRestrictionItem() {
-		byFolder = (Boolean) restrictionItem.get(BrowseCond.BY_FOLDER_ATTRIBUTE);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacyRestrictionForm#extractRestrictionItem()
+   */
+  @Override
+  protected void extractRestrictionItem() {
+    byFolder = (Boolean) restrictionItem.get(BrowseCond.BY_FOLDER_ATTRIBUTE);
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultRestrictionForm#doClearRestrictionItem()
-	 */
-	@Override
-	protected void doClearRestrictionItem() {
-		byFolder = true;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultRestrictionForm#doClearRestrictionItem()
+   */
+  @Override
+  protected void doClearRestrictionItem() {
+    byFolder = true;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.HierarchyRestrictionSupport#isUseHierarchy()
-	 */
-	public boolean isUseHierarchy() {
-		return byFolder;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.HierarchyRestrictionSupport#isUseHierarchy()
+   */
+  public boolean isUseHierarchy() {
+    return byFolder;
+  }
 
 }

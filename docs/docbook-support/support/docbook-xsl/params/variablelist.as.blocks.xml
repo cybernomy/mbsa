@@ -1,34 +1,44 @@
 <refentry id="variablelist.as.blocks">
-<refmeta>
-<refentrytitle>variablelist.as.blocks</refentrytitle>
-<refmiscinfo role="type">boolean</refmiscinfo>
-</refmeta>
-<refnamediv>
-<refname>variablelist.as.blocks</refname>
-<refpurpose>Format <sgmltag>variablelist</sgmltag>s lists as blocks?</refpurpose>
-</refnamediv>
+  <refmeta>
+    <refentrytitle>variablelist.as.blocks</refentrytitle>
+    <refmiscinfo role="type">boolean</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>variablelist.as.blocks</refname>
+    <refpurpose>Format<sgmltag>variablelist</sgmltag>s lists as blocks?
+    </refpurpose>
+  </refnamediv>
 
-<refsynopsisdiv>
-<src:fragment id='variablelist.as.blocks.frag'>
-<xsl:param name="variablelist.as.blocks" select="0"/>
-</src:fragment>
-</refsynopsisdiv>
+  <refsynopsisdiv>
+    <src:fragment id='variablelist.as.blocks.frag'>
+      <xsl:param name="variablelist.as.blocks" select="0"/>
+    </src:fragment>
+  </refsynopsisdiv>
 
-<refsect1><title>Description</title>
+  <refsect1>
+    <title>Description</title>
 
-<para>If non-zero, <sgmltag>variablelist</sgmltag>s will be formatted as
-blocks.</para>
+    <para>If non-zero,<sgmltag>variablelist</sgmltag>s will be formatted as
+      blocks.
+    </para>
 
-<para>If you have long terms, proper list markup in the FO case may produce
-unattractive lists. By setting this parameter, you can force the stylesheets
-to produce block markup instead of proper lists.</para>
+    <para>If you have long terms, proper list markup in the FO case may produce
+      unattractive lists. By setting this parameter, you can force the stylesheets
+      to produce block markup instead of proper lists.
+    </para>
 
-<para>You can override this setting with a processing instruction as the
-child of <sgmltag>variablelist</sgmltag>: <sgmltag class="pi">dbfo
-list-presentation="blocks"</sgmltag> or <sgmltag class="pi">dbfo
-list-presentation="list"</sgmltag></para>
+    <para>You can override this setting with a processing instruction as the
+      child of<sgmltag>variablelist</sgmltag>:
+      <sgmltag class="pi">dbfo
+        list-presentation="blocks"
+      </sgmltag>
+      or
+      <sgmltag class="pi">dbfo
+        list-presentation="list"
+      </sgmltag>
+    </para>
 
-<programlisting><![CDATA[  <variablelist>
+    <programlisting><![CDATA[  <variablelist>
         <?dbfo list-presentation="list"?>
         <section>
           <term>list</term>
@@ -39,6 +49,6 @@ list-presentation="list"</sgmltag></para>
           </listitem>
         </section>
   </variablelist>]]></programlisting>
-</refsect1>
+  </refsect1>
 
 </refentry>

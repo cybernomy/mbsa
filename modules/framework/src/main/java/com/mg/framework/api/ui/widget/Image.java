@@ -14,30 +14,30 @@
  */
 package com.mg.framework.api.ui.widget;
 
-import java.net.URL;
-
 import com.mg.framework.api.ui.Widget;
+
+import java.net.URL;
 
 /**
  * Элемент "Изображение", предназначен для отображения форматов PNG, JPG
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: Image.java,v 1.1 2007/05/28 13:40:21 safonov Exp $
  */
 public interface Image extends Widget {
 
-	/**
-	 * установить изображение
-	 * 
-	 * @param data	изображение
-	 */
-	void setData(byte[] data);
-	
-	/**
-	 * показать изображение из указанного расположения
-	 * 
-	 * @param location	расположение изображения
-	 */
-	void setLocation(URL location);
-	
+  /**
+   * установить изображение
+   *
+   * @param data изображение
+   */
+  void setData(byte[] data);
+
+  /**
+   * показать изображение из указанного расположения
+   *
+   * @param location расположение изображения
+   */
+  void setLocation(URL location);
+
 }

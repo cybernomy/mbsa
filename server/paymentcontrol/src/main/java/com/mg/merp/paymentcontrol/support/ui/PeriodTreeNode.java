@@ -14,13 +14,13 @@
  */
 package com.mg.merp.paymentcontrol.support.ui;
 
+import com.mg.framework.support.ui.widget.tree.EntityTreeNode;
+import com.mg.merp.paymentcontrol.model.PmcPeriod;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.mg.framework.support.ui.widget.tree.EntityTreeNode;
-import com.mg.merp.paymentcontrol.model.PmcPeriod;
 
 /**
  * @author leonova
@@ -28,49 +28,48 @@ import com.mg.merp.paymentcontrol.model.PmcPeriod;
  */
 public class PeriodTreeNode extends EntityTreeNode {
 
-	public PeriodTreeNode(PeriodTreeNode parent, PmcPeriod entity) {
-		super(parent);
-		this.entity = entity;
-	}
-	
-	public void addChild(PeriodTreeNode child) {
-		children.add(child);
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.support.ui.widget.tree.EntityTreeNode#doGetPrimaryKey()
-	 */
-	@Override
-	protected Serializable doGetPrimaryKey() {
-		return (Serializable) entity.getPrimaryKey();
-	}
+  public PeriodTreeNode(PeriodTreeNode parent, PmcPeriod entity) {
+    super(parent);
+    this.entity = entity;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.support.ui.widget.tree.TreeNode#getText()
-	 */
-	@Override
-	public String getText() {
-		return ((PmcPeriod) entity).getName();
-	}
+  public static PeriodTreeNode createTree(List<PmcPeriod> folders) {
+    PeriodTreeNode root = null;
+    Map<PmcPeriod, PeriodTreeNode> nodeMap = new HashMap<PmcPeriod, PeriodTreeNode>();
+    for (PmcPeriod folder : folders) {
+      if (folder.getParent() == null) {
+        root = new PeriodTreeNode(null, folder);
+        nodeMap.put(folder, root);
+      } else {
+        PeriodTreeNode parentNode, node;
+        parentNode = nodeMap.get(folder.getParent());
+        if (parentNode != null) {
+          node = new PeriodTreeNode(parentNode, folder);
+          nodeMap.put(folder, node);
+          parentNode.addChild(node);
+        }
+      }
+    }
+    return root;
+  }
 
-	public static PeriodTreeNode createTree(List<PmcPeriod> folders) {
-		PeriodTreeNode root = null;
-		Map<PmcPeriod, PeriodTreeNode> nodeMap = new HashMap<PmcPeriod, PeriodTreeNode>();
-		for (PmcPeriod folder : folders) {
-			if (folder.getParent() == null) {
-				root = new PeriodTreeNode(null, folder);
-				nodeMap.put(folder, root);
-			}
-			else {
-				PeriodTreeNode parentNode, node;
-				parentNode = nodeMap.get(folder.getParent());
-				if (parentNode != null) {
-					node = new PeriodTreeNode(parentNode, folder);
-					nodeMap.put(folder, node);
-					parentNode.addChild(node);
-				}
-			}
-		}
-		return root;
-	}
+  public void addChild(PeriodTreeNode child) {
+    children.add(child);
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.support.ui.widget.tree.EntityTreeNode#doGetPrimaryKey()
+   */
+  @Override
+  protected Serializable doGetPrimaryKey() {
+    return (Serializable) entity.getPrimaryKey();
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.support.ui.widget.tree.TreeNode#getText()
+   */
+  @Override
+  public String getText() {
+    return ((PmcPeriod) entity).getName();
+  }
 }

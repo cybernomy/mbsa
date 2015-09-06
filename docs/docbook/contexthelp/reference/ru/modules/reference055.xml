@@ -9,24 +9,33 @@
 ]> -->
 <chapter id="ref055">
   <title>Виды телефонных номеров</title>
-  
-  	<para>Виды телефонных номеров могут использоваться в модуле CRM или в других модулях системы, по 
-	желанию пользователя.</para>
-	
-	<para>Вход в справочник осуществляется через главное меню: 
-	<menuchoice><guimenu> &ref;</guimenu>
-	<guimenuitem>Виды телефонных номеров</guimenuitem>
-	</menuchoice>. </para>
-	
-	<para>Содержит следующие атрибуты:</para>
-	
-	<screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/phonekind.gif"/>
-	</imageobject></mediaobject></screenshot>
-	  
-	<para><guibutton>Наименование</guibutton>. Наименование вида телефонного номера. Например: 
-	&quot;рабочий&quot;, &quot;личный&quot;, &quot;домашний&quot;, &quot;секретарь&quot; и т.п. </para>
 
-	<para> 	</para>
+  <para>Виды телефонных номеров могут использоваться в модуле CRM или в других модулях системы, по
+    желанию пользователя.
+  </para>
+
+  <para>Вход в справочник осуществляется через главное меню:
+    <menuchoice>
+      <guimenu> &ref;</guimenu>
+      <guimenuitem>Виды телефонных номеров</guimenuitem>
+    </menuchoice>
+    .
+  </para>
+
+  <para>Содержит следующие атрибуты:</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/phonekind.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para><guibutton>Наименование</guibutton>. Наименование вида телефонного номера. Например:
+    &quot;рабочий&quot;, &quot;личный&quot;, &quot;домашний&quot;, &quot;секретарь&quot; и т.п.
+  </para>
+
+  <para></para>
 
 </chapter>

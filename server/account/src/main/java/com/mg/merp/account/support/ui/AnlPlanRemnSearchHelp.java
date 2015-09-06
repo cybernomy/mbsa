@@ -20,13 +20,13 @@ package com.mg.merp.account.support.ui;
  */
 public abstract class AnlPlanRemnSearchHelp extends AnlPlanSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAccPlanContextName()
-	 */
-	@Override
-	protected String getAccPlanContextName() {
-		return "AccPlan";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAccPlanContextName()
+   */
+  @Override
+  protected String getAccPlanContextName() {
+    return "AccPlan";
+  }
 
 
 }

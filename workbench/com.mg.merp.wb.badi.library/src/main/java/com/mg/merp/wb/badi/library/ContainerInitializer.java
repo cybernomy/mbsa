@@ -22,28 +22,26 @@ import org.eclipse.jdt.core.JavaCore;
 
 /**
  * Инициализатор библиотеки .MBAi
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: ContainerInitializer.java,v 1.1 2006/11/22 13:03:19 poroxnenko
- *          Exp $
+ * @version $Id: ContainerInitializer.java,v 1.1 2006/11/22 13:03:19 poroxnenko Exp $
  */
 public class ContainerInitializer extends ClasspathContainerInitializer {
 
-	/**
-	 * Если библиотека подключена к проекту, то при старте платформы её
-	 * необходимо инициализировать.
-	 */
-	@Override
-	public void initialize(IPath containerPath, IJavaProject project)
-			throws CoreException {
-		if (containerPath.segment(0).equals(
-				BadiLibraryPlugin.getDefault().getContainerID())) {
-			IClasspathContainer container = new Container(containerPath,
-					project);
-			JavaCore.setClasspathContainer(containerPath,
-					new IJavaProject[] { project },
-					new IClasspathContainer[] { container }, null);
-		}
-	}
+  /**
+   * Если библиотека подключена к проекту, то при старте платформы её необходимо инициализировать.
+   */
+  @Override
+  public void initialize(IPath containerPath, IJavaProject project)
+      throws CoreException {
+    if (containerPath.segment(0).equals(
+        BadiLibraryPlugin.getDefault().getContainerID())) {
+      IClasspathContainer container = new Container(containerPath,
+          project);
+      JavaCore.setClasspathContainer(containerPath,
+          new IJavaProject[]{project},
+          new IClasspathContainer[]{container}, null);
+    }
+  }
 
 }

@@ -16,10 +16,8 @@ package com.mg.merp.warehouse.support.ui;
 
 
 /**
- * 
  * @author leonova
  * @version $Id: OrderHeadCusRest.java,v 1.1 2006/07/04 12:18:39 leonova Exp $
- *
  */
 public class OrderHeadCusRest extends OrderHeadRest {
 

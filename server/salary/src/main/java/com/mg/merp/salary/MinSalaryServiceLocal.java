@@ -17,12 +17,10 @@ package com.mg.merp.salary;
 import com.mg.merp.salary.model.MinSalary;
 
 /**
- * 
  * @author leonova
  * @version $Id: MinSalaryServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface MinSalaryServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<MinSalary, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<MinSalary, Integer> {
 
 }

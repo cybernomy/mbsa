@@ -21,13 +21,13 @@ import com.mg.framework.api.orm.Criterion;
  * @version $Id: SimpleExpression.java,v 1.1 2006/01/24 14:14:25 safonov Exp $
  */
 public class SimpleExpression implements Criterion {
-    private org.hibernate.criterion.Criterion hibernateCriterion;
+  private org.hibernate.criterion.Criterion hibernateCriterion;
 
-    public SimpleExpression(org.hibernate.criterion.Criterion hibernateCriterion) {
-        this.hibernateCriterion = hibernateCriterion;
-    }
-    
-    public org.hibernate.criterion.Criterion getHibernateCriterion() {
-        return hibernateCriterion;
-    }
+  public SimpleExpression(org.hibernate.criterion.Criterion hibernateCriterion) {
+    this.hibernateCriterion = hibernateCriterion;
+  }
+
+  public org.hibernate.criterion.Criterion getHibernateCriterion() {
+    return hibernateCriterion;
+  }
 }

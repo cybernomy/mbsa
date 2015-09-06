@@ -15,27 +15,27 @@
 
 package com.mg.merp.crm.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.crm.OperationPurposeServiceLocal;
 import com.mg.merp.crm.model.OperationPurpose;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Цели действий" 
- * 
+ * Бизнес-компонент "Цели действий"
+ *
  * @author leonova
  * @version $Id: OperationPurposeServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $
  */
-@Stateless(name="merp/crm/OperationPurposeService")
+@Stateless(name = "merp/crm/OperationPurposeService")
 public class OperationPurposeServiceBean extends AbstractPOJODataBusinessObjectServiceBean<OperationPurpose, Integer> implements OperationPurposeServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, OperationPurpose entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));
-	}
+  @Override
+  protected void onValidate(ValidationContext context, OperationPurpose entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+  }
 
 
 }

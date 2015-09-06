@@ -1,46 +1,48 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.table.model.HolidayAccountKind" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.table.model.HolidayAccountKind</param>
-	</typedef>	
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <typedef name="com.mg.merp.table.model.HolidayAccountKind"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.table.model.HolidayAccountKind</param>
+  </typedef>
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.table.model.ScheduleHead" table="TAB_SCHEDULE_HEAD">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">TAB_SCHEDULE_HEAD_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="DefaultPatternHead" class="com.mg.merp.table.model.PatternHead">
-      <column name="DEFAULT_PATTERN_HEAD_ID" not-null="false" />
+      <column name="DEFAULT_PATTERN_HEAD_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="HolidayWorkTimeKind" class="com.mg.merp.table.model.TimeKind">
-      <column name="HOLIDAY_WORK_TIME_KIND_ID" not-null="false" />
+      <column name="HOLIDAY_WORK_TIME_KIND_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="WorkSchedule" class="com.mg.merp.personnelref.model.WorkSchedule">
-      <column name="WORK_SCHEDULE_ID" not-null="false" unique="true" />
+      <column name="WORK_SCHEDULE_ID" not-null="false" unique="true"/>
     </many-to-one>
     <property name="HolidayAccountKind" type="com.mg.merp.table.model.HolidayAccountKind">
-      <column name="HOLIDAY_ACCOUNT_KIND" not-null="false" sql-type="SMALLINT" />
+      <column name="HOLIDAY_ACCOUNT_KIND" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="PreHolidayReduction" type="java.math.BigDecimal">
-      <column name="PREHOLIDAY_REDUCTION" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="PREHOLIDAY_REDUCTION" scale="3" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <set name="scheduleSpecs" inverse="true">
       <key on-delete="cascade">
-        <column name="SCHEDULE_HEAD_ID" not-null="false" />
+        <column name="SCHEDULE_HEAD_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.table.model.ScheduleSpec" />
+      <one-to-many class="com.mg.merp.table.model.ScheduleSpec"/>
     </set>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

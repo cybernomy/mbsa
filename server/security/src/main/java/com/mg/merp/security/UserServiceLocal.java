@@ -17,19 +17,17 @@ package com.mg.merp.security;
 import com.mg.merp.security.model.SecUser;
 
 /**
- * 
  * @author leonova
  * @author Oleg V. Safonov
  * @version $Id: UserServiceLocal.java,v 1.2 2007/02/24 14:16:36 safonov Exp $
  */
 public interface UserServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<SecUser, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<SecUser, Integer> {
 
-   void addRole(int userId, int roleId);
+  void addRole(int userId, int roleId);
 
-   void removeRole(int userId, int roleId);
+  void removeRole(int userId, int roleId);
 
-   SecUser findUser(String name);
-   
+  SecUser findUser(String name);
+
 }

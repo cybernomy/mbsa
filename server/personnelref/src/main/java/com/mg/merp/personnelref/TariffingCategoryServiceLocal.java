@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.TariffingCategory;
 
 /**
- * 
  * @author leonova
  * @version $Id: TariffingCategoryServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface TariffingCategoryServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<TariffingCategory, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<TariffingCategory, Integer> {
 
 }

@@ -17,12 +17,10 @@ package com.mg.merp.table;
 import com.mg.merp.table.model.TimeBoardHead;
 
 /**
- * 
  * @author leonova
  * @version $Id: TimeBoardHeadServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface TimeBoardHeadServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<TimeBoardHead, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<TimeBoardHead, Integer> {
 
 }

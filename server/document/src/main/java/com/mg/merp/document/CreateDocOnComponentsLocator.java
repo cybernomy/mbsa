@@ -25,17 +25,17 @@ import com.mg.merp.document.model.DocHeadModel;
  */
 public class CreateDocOnComponentsLocator {
 
-	private static volatile  CreateDocOnComponents instance = null;
+  private static volatile CreateDocOnComponents instance = null;
 
-	@SuppressWarnings("unchecked")
-	public static <S extends DocHead, D extends DocHead, P extends DocHeadModel>  CreateDocOnComponents<S, D, P> locate() throws ApplicationException {
-		if (instance == null)
-			try {
-				instance = (CreateDocOnComponents<S, D, P>) ServerUtils.createMBeanProxy(CreateDocOnComponents.class, CreateDocOnComponents.SERVICE_NAME);
-			} catch (Exception e) {
-				throw new ApplicationException(e);
-			}
-		return instance;
-	}
+  @SuppressWarnings("unchecked")
+  public static <S extends DocHead, D extends DocHead, P extends DocHeadModel> CreateDocOnComponents<S, D, P> locate() throws ApplicationException {
+    if (instance == null)
+      try {
+        instance = (CreateDocOnComponents<S, D, P>) ServerUtils.createMBeanProxy(CreateDocOnComponents.class, CreateDocOnComponents.SERVICE_NAME);
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 
 }

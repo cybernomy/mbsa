@@ -11,33 +11,43 @@
 ]> -->
 <chapter id="config">
   <title>Конфигурация модуля</title>
-   
-    <para>Настройка модуля &contr; доступна через главное меню 
-   <menuchoice>
-    <guimenu>&cont_centr;</guimenu>
-     <guisubmenu>Администрирование</guisubmenu>
-     <guisubmenu>Конфигурация</guisubmenu>
-    <guimenuitem>&contr;</guimenuitem>
-   </menuchoice>
-   .</para>
-  
-   <figure>
-      <mediaobject><imageobject><imagedata fileref="images/config.gif"/></imageobject></mediaobject>
-    </figure>
-    
-    <para><guibutton>Базовая валюта</guibutton>. Валюта, которая устанавливается
-    как базовая для расчётов в данном модуле.</para>
-    
-    <para><guibutton>Национальная валюта</guibutton>. Валюта, которая 
-    устанавливается как национальная.</para>
-    
-    <para><guibutton>Тип курса</guibutton>. Из соответствующего справочника
-    выбирается тип курса валюты.</para>
-    
-    <para><guibutton>Источник курса</guibutton>. Из соответствующего 
-    справочника выбирается источник курса валюты.</para>
-    
-    <para><guibutton>Точность денежных величин, знаков после запятой</guibutton>. 
-    До какого знака после запятой округляются денежные величины.</para>    
+
+  <para>Настройка модуля &contr; доступна через главное меню
+    <menuchoice>
+      <guimenu>&cont_centr;</guimenu>
+      <guisubmenu>Администрирование</guisubmenu>
+      <guisubmenu>Конфигурация</guisubmenu>
+      <guimenuitem>&contr;</guimenuitem>
+    </menuchoice>
+    .
+  </para>
+
+  <figure>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/config.gif"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para><guibutton>Базовая валюта</guibutton>. Валюта, которая устанавливается
+    как базовая для расчётов в данном модуле.
+  </para>
+
+  <para><guibutton>Национальная валюта</guibutton>. Валюта, которая
+    устанавливается как национальная.
+  </para>
+
+  <para><guibutton>Тип курса</guibutton>. Из соответствующего справочника
+    выбирается тип курса валюты.
+  </para>
+
+  <para><guibutton>Источник курса</guibutton>. Из соответствующего
+    справочника выбирается источник курса валюты.
+  </para>
+
+  <para><guibutton>Точность денежных величин, знаков после запятой</guibutton>.
+    До какого знака после запятой округляются денежные величины.
+  </para>
 
 </chapter>

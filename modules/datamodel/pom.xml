@@ -2,31 +2,31 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.mg</groupId>
-        <artifactId>modules</artifactId>
-        <version>4.0.8-SNAPSHOT</version>
-    </parent>
-<!--TODO: create shared resource bundle from core/src/META-INF for core and datamodel-->
-    <groupId>com.mg.modules</groupId>
-    <artifactId>datamodel</artifactId>
+  <parent>
+    <groupId>com.mg</groupId>
+    <artifactId>modules</artifactId>
+    <version>4.0.8-SNAPSHOT</version>
+  </parent>
+  <!--TODO: create shared resource bundle from core/src/META-INF for core and datamodel-->
+  <groupId>com.mg.modules</groupId>
+  <artifactId>datamodel</artifactId>
 
-    <name>MBSA::Modules::DataModel</name>
-    <description/>
+  <name>MBSA::Modules::DataModel</name>
+  <description/>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.mg.modules</groupId>
-            <artifactId>framework</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate</artifactId>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
+  <dependencies>
+    <dependency>
+      <groupId>com.mg.modules</groupId>
+      <artifactId>framework</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 
 </project>

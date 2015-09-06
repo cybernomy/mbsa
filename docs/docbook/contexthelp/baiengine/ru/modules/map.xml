@@ -14,5 +14,5 @@
 <!-- $Id: map.xml,v 1.1 2007/11/19 10:05:42 konyashkina Exp $ -->
 
 <map version="1.0">
-  <mapID target="custom_user_action_html" url="001bai.html" />  
+  <mapID target="custom_user_action_html" url="001bai.html"/>
 </map> 

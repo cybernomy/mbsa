@@ -13,37 +13,42 @@
 
 <!-- $Id: CashDocumentModelInMt.mfd.xml,v 1.8 2008/03/05 06:32:28 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.CashDocumentModelInMt" title="resource://com.mg.merp.account.resources.formelements#CashDocumentModelIn.FormMt.Title" helpTopic="account#cashmodelin_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.account.support.ui.CashDocumentModelInMt"
+          title="resource://com.mg.merp.account.resources.formelements#CashDocumentModelIn.FormMt.Title"
+          helpTopic="account#cashmodelin_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top" >
- 		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title" >
-	 	 	<jfd:include name="com/mg/merp/document/resources/ModelNameMacros.xml" /> 		
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
-			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/CurrencyModelMacros.xml" />					
-		 	<jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml" /> 
-			<jfd:field id="Company"/>
-			<jfd:field id="From" sameLine="true"/> 
-			<jfd:field id="Acc"  />	 	 	 		 
-			<jfd:field id="AnlCode"  />	 	 		
-			<jfd:field id="TargetCode" sameLine="true" />	 	 	 		
-			<jfd:field id="Base"  />
-			<jfd:field id="Comment1"  />				  		
-			<jfd:field id="Comment"  /> 			
-			<jfd:field id="Cashier"  />	
-			<jfd:field id="Bookkeeper" sameLine="true" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																								 			
-		</jfd:container> 	
-		<jfd:container id="extraFields" alignment="expand_top" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.account.resources.formelements#Extra.Tab.Title" >
-			<jfd:field id="Description" alignment="expand_expand" />
-		</jfd:container>			 	
-	</jfd:container> 	
-	
-	<jfd:include name="com/mg/merp/document/resources/DefaultDocModelMaintenanceFooterMacros.xml" />
-	
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title">
+      <jfd:include name="com/mg/merp/document/resources/ModelNameMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/CurrencyModelMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml"/>
+      <jfd:field id="Company"/>
+      <jfd:field id="From" sameLine="true"/>
+      <jfd:field id="Acc"/>
+      <jfd:field id="AnlCode"/>
+      <jfd:field id="TargetCode" sameLine="true"/>
+      <jfd:field id="Base"/>
+      <jfd:field id="Comment1"/>
+      <jfd:field id="Comment"/>
+      <jfd:field id="Cashier"/>
+      <jfd:field id="Bookkeeper" sameLine="true"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="extraFields" alignment="expand_top" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.account.resources.formelements#Extra.Tab.Title">
+      <jfd:field id="Description" alignment="expand_expand"/>
+    </jfd:container>
+  </jfd:container>
+
+  <jfd:include name="com/mg/merp/document/resources/DefaultDocModelMaintenanceFooterMacros.xml"/>
+
 </jfd:form>
 		

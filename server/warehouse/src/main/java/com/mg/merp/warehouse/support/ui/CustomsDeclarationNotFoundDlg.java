@@ -17,36 +17,36 @@ package com.mg.merp.warehouse.support.ui;
 import com.mg.framework.generic.ui.DefaultDialog;
 
 /**
- * Контроллер диалога "Номер ГТД и страна происхождения не найдены" 
- * 
+ * Контроллер диалога "Номер ГТД и страна происхождения не найдены"
+ *
  * @author Artem V. Sharapov
  * @version $Id: CustomsDeclarationNotFoundDlg.java,v 1.1 2008/08/27 09:44:07 sharapov Exp $
  */
 public class CustomsDeclarationNotFoundDlg extends DefaultDialog {
 
-	public static final String WINDOW_NAME = "com.mg.merp.warehouse.CustomsDeclarationNotFoundDlg"; //$NON-NLS-1$
-	private String message;
+  public static final String WINDOW_NAME = "com.mg.merp.warehouse.CustomsDeclarationNotFoundDlg"; //$NON-NLS-1$
+  private String message;
 
-	public CustomsDeclarationNotFoundDlg() {
-	}
+  public CustomsDeclarationNotFoundDlg() {
+  }
 
-	public void execute(String message) {
-		this.message = message;
-		execute();
-	}
+  public void execute(String message) {
+    this.message = message;
+    execute();
+  }
 
-	/**
-	 * @return the message
-	 */
-	public String getMessage() {
-		return this.message;
-	}
+  /**
+   * @return the message
+   */
+  public String getMessage() {
+    return this.message;
+  }
 
-	/**
-	 * @param message the message to set
-	 */
-	public void setMessage(String message) {
-		this.message = message;
-	}
+  /**
+   * @param message the message to set
+   */
+  public void setMessage(String message) {
+    this.message = message;
+  }
 
 }

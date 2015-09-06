@@ -15,21 +15,21 @@
 
 package com.mg.merp.paymentalloc.support;
 
-import javax.annotation.security.PermitAll;
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.paymentalloc.TransactHeadServiceLocal;
 import com.mg.merp.paymentalloc.model.TransactHead;
 
+import javax.annotation.security.PermitAll;
+import javax.ejb.Stateless;
+
 /**
- * Реализация бизнес-компонента "Связанные документы" 
- * 
+ * Реализация бизнес-компонента "Связанные документы"
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: TransactHeadServiceBean.java,v 1.4 2007/07/31 06:21:17 sharapov Exp $
  */
-@Stateless(name="merp/paymentalloc/TransactHeadService") //$NON-NLS-1$
+@Stateless(name = "merp/paymentalloc/TransactHeadService") //$NON-NLS-1$
 @PermitAll
 public class TransactHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBean<TransactHead, Integer> implements TransactHeadServiceLocal {
 

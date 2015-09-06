@@ -14,43 +14,44 @@
  */
 package com.mg.framework.generic.ui;
 
-import java.io.Serializable;
-
 import com.mg.framework.support.ui.widget.MaintenanceTableModel;
+
+import java.io.Serializable;
 
 /**
  * @author Oleg V. Safonov
  * @version $Id: AbstractMaintenanceTableModel.java,v 1.2 2006/08/29 09:00:05 safonov Exp $
  */
 public abstract class AbstractMaintenanceTableModel extends AbstractTableModel implements MaintenanceTableModel {
-	/**
-	 * идентификатор мастера
-	 */
-	private Serializable masterKey;
-	protected abstract Serializable[] doGetSelectedPrimaryKeys();
-	
-	/**
-	 * получить идентификатор мастера, значение будет доступно после срабатывания слушателя
-	 * таблицы мастера
-	 * 
-	 * @return	идентификатор мастера
-	 */
-	protected Serializable getMasterKey() {
-		return masterKey;
-	}
+  /**
+   * идентификатор мастера
+   */
+  private Serializable masterKey;
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.framework.support.ui.widget.MaintenanceTableModel#getCurrentPrimaryKey()
-	 */
-	public Serializable[] getSelectedPrimaryKeys() {
-		return doGetSelectedPrimaryKeys();
-	}
+  protected abstract Serializable[] doGetSelectedPrimaryKeys();
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.support.ui.widget.MaintenanceTableModel#setCurrentMaster(java.io.Serializable)
-	 */
-	public void setCurrentMaster(Serializable masterKey) {
-	}
+  /**
+   * получить идентификатор мастера, значение будет доступно после срабатывания слушателя таблицы
+   * мастера
+   *
+   * @return идентификатор мастера
+   */
+  protected Serializable getMasterKey() {
+    return masterKey;
+  }
+
+  /*
+   * (non-Javadoc)
+   * @see com.mg.framework.support.ui.widget.MaintenanceTableModel#getCurrentPrimaryKey()
+   */
+  public Serializable[] getSelectedPrimaryKeys() {
+    return doGetSelectedPrimaryKeys();
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.support.ui.widget.MaintenanceTableModel#setCurrentMaster(java.io.Serializable)
+   */
+  public void setCurrentMaster(Serializable masterKey) {
+  }
 
 }

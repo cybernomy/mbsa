@@ -14,13 +14,13 @@
  */
 package com.mg.merp.finance.support.ui;
 
+import com.mg.framework.support.ui.widget.tree.EntityTreeNode;
+import com.mg.merp.finance.model.Center;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.mg.framework.support.ui.widget.tree.EntityTreeNode;
-import com.mg.merp.finance.model.Center;
 
 /**
  * @author leonova
@@ -28,49 +28,48 @@ import com.mg.merp.finance.model.Center;
  */
 public class CenterTreeNode extends EntityTreeNode {
 
-	public CenterTreeNode(CenterTreeNode parent, Center entity) {
-		super(parent);
-		this.entity = entity;
-	}
-	
-	public void addChild(CenterTreeNode child) {
-		children.add(child);
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.support.ui.widget.tree.EntityTreeNode#doGetPrimaryKey()
-	 */
-	@Override
-	protected Serializable doGetPrimaryKey() {
-		return (Serializable) entity.getPrimaryKey();
-	}
+  public CenterTreeNode(CenterTreeNode parent, Center entity) {
+    super(parent);
+    this.entity = entity;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.support.ui.widget.tree.TreeNode#getText()
-	 */
-	@Override
-	public String getText() {
-		return ((Center) entity).getName();
-	}
+  public static CenterTreeNode createTree(List<Center> folders) {
+    CenterTreeNode root = null;
+    Map<Integer, CenterTreeNode> nodeMap = new HashMap<Integer, CenterTreeNode>();
+    for (Center folder : folders) {
+      if (folder.getParent() == null || folder.getParent() == 0) { //проверим на 0, т.к. в некоторых базах корневой parent не null
+        root = new CenterTreeNode(null, folder);
+        nodeMap.put(folder.getId(), root);
+      } else {
+        CenterTreeNode parentNode, node;
+        parentNode = nodeMap.get(folder.getParent());
+        if (parentNode != null) {
+          node = new CenterTreeNode(parentNode, folder);
+          nodeMap.put(folder.getId(), node);
+          parentNode.addChild(node);
+        }
+      }
+    }
+    return root;
+  }
 
-	public static CenterTreeNode createTree(List<Center> folders) {
-		CenterTreeNode root = null;
-		Map<Integer, CenterTreeNode> nodeMap = new HashMap<Integer, CenterTreeNode>();
-		for (Center folder : folders) {
-			if (folder.getParent() == null || folder.getParent() == 0) { //проверим на 0, т.к. в некоторых базах корневой parent не null
-				root = new CenterTreeNode(null, folder);
-				nodeMap.put(folder.getId(), root);
-			}
-			else {
-				CenterTreeNode parentNode, node;
-				parentNode = nodeMap.get(folder.getParent());
-				if (parentNode != null) {
-					node = new CenterTreeNode(parentNode, folder);
-					nodeMap.put(folder.getId(), node);
-					parentNode.addChild(node);
-				}
-			}
-		}
-		return root;
-	}
+  public void addChild(CenterTreeNode child) {
+    children.add(child);
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.support.ui.widget.tree.EntityTreeNode#doGetPrimaryKey()
+   */
+  @Override
+  protected Serializable doGetPrimaryKey() {
+    return (Serializable) entity.getPrimaryKey();
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.support.ui.widget.tree.TreeNode#getText()
+   */
+  @Override
+  public String getText() {
+    return ((Center) entity).getName();
+  }
 }

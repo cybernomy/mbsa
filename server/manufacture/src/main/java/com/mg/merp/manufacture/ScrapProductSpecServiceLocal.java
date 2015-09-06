@@ -19,23 +19,23 @@ import com.mg.merp.manufacture.model.ScrapDocumentHead;
 
 /**
  * Бизнес-компонент "Спецификация актов на списание потерь с операции
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ScrapProductSpecServiceLocal.java,v 1.4 2007/08/06 12:46:24 safonov Exp $
  */
 public interface ScrapProductSpecServiceLocal
-		extends com.mg.merp.document.GoodsDocumentSpecification<DocSpec, Integer> {
-	
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/manufacture/ScrapProductSpec";
+    extends com.mg.merp.document.GoodsDocumentSpecification<DocSpec, Integer> {
 
-	/**
-	 * создание спецификаций
-	 * 
-	 * @param docHead	документ
-	 */
-	void createSpecifications(ScrapDocumentHead docHead);
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/manufacture/ScrapProductSpec";
+
+  /**
+   * создание спецификаций
+   *
+   * @param docHead документ
+   */
+  void createSpecifications(ScrapDocumentHead docHead);
 
 }

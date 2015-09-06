@@ -13,14 +13,18 @@
 
 <!-- $Id: CreateFeeSummaryDlg.mfd.xml,v 1.1 2007/08/27 06:24:00 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.salary.support.ui.CreateFeeSummaryDlg" title="resource://com.mg.merp.salary.resources.formelements#CreateFeeSummaryDlg.Title" width="360" height="140">
-	
-	<jfd:container id="mainBox" layout="jfd:box" columns="1" alignment="expand_expand">
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="feeSummaryPattern" alignment="expand_top" />
-		<jfd:field id="isShowCreatedDocument" text="resource://com.mg.merp.salary.resources.formelements#CreateFeeSummaryDlg.IsShowCreatedDocument" />
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
-	
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5"
+          controller="com.mg.merp.salary.support.ui.CreateFeeSummaryDlg"
+          title="resource://com.mg.merp.salary.resources.formelements#CreateFeeSummaryDlg.Title"
+          width="360" height="140">
+
+  <jfd:container id="mainBox" layout="jfd:box" columns="1" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="feeSummaryPattern" alignment="expand_top"/>
+    <jfd:field id="isShowCreatedDocument"
+               text="resource://com.mg.merp.salary.resources.formelements#CreateFeeSummaryDlg.IsShowCreatedDocument"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
+
 </jfd:form>

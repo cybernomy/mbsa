@@ -1,145 +1,149 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.lbschedule.model.ScheduleStatus" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.lbschedule.model.ScheduleStatus</param>
-	</typedef>
-	<typedef name="com.mg.merp.lbschedule.model.SpecSource" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.lbschedule.model.SpecSource</param>
-	</typedef>	
-	<typedef name="com.mg.merp.lbschedule.model.DateOffSetKind" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.lbschedule.model.DateOffSetKind</param>
-	</typedef>	
-	<typedef name="com.mg.merp.lbschedule.model.ItemContractorSource" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.lbschedule.model.ItemContractorSource</param>
-	</typedef>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <typedef name="com.mg.merp.lbschedule.model.ScheduleStatus"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.lbschedule.model.ScheduleStatus</param>
+  </typedef>
+  <typedef name="com.mg.merp.lbschedule.model.SpecSource"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.lbschedule.model.SpecSource</param>
+  </typedef>
+  <typedef name="com.mg.merp.lbschedule.model.DateOffSetKind"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.lbschedule.model.DateOffSetKind</param>
+  </typedef>
+  <typedef name="com.mg.merp.lbschedule.model.ItemContractorSource"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.lbschedule.model.ItemContractorSource</param>
+  </typedef>
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.lbschedule.model.Item" table="LS_ITEM">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">LS_ITEM_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="From" class="com.mg.merp.reference.model.Contractor">
-      <column name="FROM_ID" not-null="false" />
+      <column name="FROM_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="CurRateAuthority" class="com.mg.merp.reference.model.CurrencyRateAuthority">
-      <column name="CURRATEAUTHORITY_ID" not-null="false" />
+      <column name="CURRATEAUTHORITY_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="PriceType" class="com.mg.merp.reference.model.PriceType">
-      <column name="PRICETYPE_ID" not-null="false" />
+      <column name="PRICETYPE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="DateRelItem" class="com.mg.merp.lbschedule.model.Item">
-      <column name="DATERELITEM_ID" not-null="false" />
+      <column name="DATERELITEM_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="ItemKind" class="com.mg.merp.lbschedule.model.ItemKind">
-      <column name="ITEMKIND_ID" not-null="false" />
+      <column name="ITEMKIND_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="To" class="com.mg.merp.reference.model.Contractor">
-      <column name="TO_ID" not-null="false" />
+      <column name="TO_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="PriceListHead" class="com.mg.merp.reference.model.PriceListHead">
-      <column name="PRICELISTHEAD_ID" not-null="false" />
+      <column name="PRICELISTHEAD_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SumRelItem" class="com.mg.merp.lbschedule.model.Item">
-      <column name="SUMRELITEM_ID" not-null="false" />
+      <column name="SUMRELITEM_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Schedule" class="com.mg.merp.lbschedule.model.Schedule">
-      <column name="SCHEDULE_ID" not-null="false" />
+      <column name="SCHEDULE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="ResourceTo" class="com.mg.merp.paymentcontrol.model.PmcResource">
-      <column name="RESOURCETO_ID" not-null="false" />
+      <column name="RESOURCETO_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="ResourceFrom" class="com.mg.merp.paymentcontrol.model.PmcResource">
-      <column name="RESOURCEFROM_ID" not-null="false" />
+      <column name="RESOURCEFROM_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="CurRateType" class="com.mg.merp.reference.model.CurrencyRateType">
-      <column name="CURRATETYPE_ID" not-null="false" />
+      <column name="CURRATETYPE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="CurCode" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
-      <column name="CURCODE" length="5" not-null="false" />
+      <column name="CURCODE" length="5" not-null="false"/>
     </many-to-one>
     <property name="Comments" type="java.lang.String">
-      <column name="COMMENTS" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="COMMENTS" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Num" type="java.lang.Short">
-      <column name="NUM" not-null="false" sql-type="SMALLINT" />
+      <column name="NUM" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="Status" type="com.mg.merp.lbschedule.model.ScheduleStatus">
-      <column name="STATUS" not-null="false" sql-type="SMALLINT" />
+      <column name="STATUS" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="ToSource" type="com.mg.merp.lbschedule.model.ItemContractorSource">
-      <column name="TOSOURCE" not-null="false" sql-type="SMALLINT" />
+      <column name="TOSOURCE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="FromSource" type="com.mg.merp.lbschedule.model.ItemContractorSource">
-      <column name="FROMSOURCE" not-null="false" sql-type="SMALLINT" />
+      <column name="FROMSOURCE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="SpecSource" type="com.mg.merp.lbschedule.model.SpecSource">
-      <column name="SPECSOURCE" not-null="false" sql-type="SMALLINT" />
+      <column name="SPECSOURCE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="HasSpec" type="boolean">
-      <column name="HAS_SPEC" not-null="false" sql-type="SMALLINT" />
+      <column name="HAS_SPEC" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="AbsDate" type="java.util.Date">
-      <column name="ABS_DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="ABS_DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="IsAbsDate" type="boolean">
-      <column name="IS_ABS_DATE" not-null="false" sql-type="SMALLINT" />
+      <column name="IS_ABS_DATE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="DateOffSetKind" type="com.mg.merp.lbschedule.model.DateOffSetKind">
-      <column name="DATEOFFSETKIND" not-null="false" sql-type="SMALLINT" />
+      <column name="DATEOFFSETKIND" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="DateOffSet" type="java.lang.Integer">
-      <column name="DATEOFFSET" not-null="false" sql-type="INTEGER" />
+      <column name="DATEOFFSET" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="AbsSum" type="java.math.BigDecimal">
-      <column name="ABS_SUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="ABS_SUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="IsAbsSum" type="boolean">
-      <column name="IS_ABS_SUM" not-null="false" sql-type="SMALLINT" />
+      <column name="IS_ABS_SUM" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="ResultDate" type="java.util.Date">
-      <column name="RESULTDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="RESULTDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="IsRelFact" type="boolean">
-      <column name="IS_RELFACT" not-null="false" sql-type="SMALLINT" />
+      <column name="IS_RELFACT" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="FactSum" type="java.math.BigDecimal">
-      <column name="FACTSUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="FACTSUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="ResultSum" type="java.math.BigDecimal">
-      <column name="RESULTSUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="RESULTSUM" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="IsDateRelDoc" type="boolean">
-      <column name="IS_DATERELDOC" not-null="false" sql-type="SMALLINT" />
+      <column name="IS_DATERELDOC" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="IsSumRelDoc" type="boolean">
-      <column name="IS_SUMRELDOC" not-null="false" sql-type="SMALLINT" />
+      <column name="IS_SUMRELDOC" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="Perc" type="java.math.BigDecimal">
-      <column name="PERC" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="PERC" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="ResultDateEnd" type="java.util.Date">
-      <column name="RESULTDATEEND" not-null="false" sql-type="TIMESTAMP" />
+      <column name="RESULTDATEEND" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="IsDateRelEnd" type="boolean">
-      <column name="IS_DATERELEND" not-null="false" sql-type="SMALLINT" />
+      <column name="IS_DATERELEND" not-null="false" sql-type="SMALLINT"/>
     </property>
     <set name="LsItemSpecs" inverse="true">
       <key on-delete="cascade">
-        <column name="ITEM_ID" not-null="false" />
+        <column name="ITEM_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.lbschedule.model.ItemSpec" />
+      <one-to-many class="com.mg.merp.lbschedule.model.ItemSpec"/>
     </set>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

@@ -22,10 +22,10 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class ForeignLanguageSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/personnelref/ForeignLanguage";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/ForeignLanguage";
+  }
 
 }
 

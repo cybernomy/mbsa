@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.Bank;
 
 /**
- * 
  * @author leonova
  * @version $Id: BankServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface BankServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Bank, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Bank, Integer> {
 
 }

@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.Nationality;
 
 /**
- * 
  * @author leonova
  * @version $Id: NationalityServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface NationalityServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Nationality, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Nationality, Integer> {
 
 }

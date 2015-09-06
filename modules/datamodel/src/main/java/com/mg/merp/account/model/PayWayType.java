@@ -19,51 +19,51 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * тип вида проведения платежа
- * 
+ *
  * @author leonova
  * @version $Id: PayWayType.java,v 1.1 2006/03/30 11:22:13 safonov Exp $
  */
-@DataItemName ("Account.BankOut.PayWayType")
+@DataItemName("Account.BankOut.PayWayType")
 public enum PayWayType {
-	/**
-	 * <>
-	 */
-	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.None")
-	NONE,
-	
-	/**
-	 * Почта
-	 */
-	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.Post")
-	POST,
-	
-	/**
-	 * Электронно
-	 */
-	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.Electronic")
-	ELECTRONIC,
-	
-	/**
-	 * Телеграф
-	 */
-	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.Telegraph")
-	TELEGRAPH,
-	
-	/**
-	 * Клиринг
-	 */
-	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.Clearing")
-	CLEARING,
-	
-	/**
-	 * Внутри региона
-	 */
-	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.InsideRegion")
-	INSIDEREGION,
-	
-	/**
-	 * Расч.сист.СБ
-	 */
-	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.SberBank")
-	SBERBANK	
+  /**
+   * <>
+   */
+  @EnumConstantText("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.None")
+  NONE,
+
+  /**
+   * Почта
+   */
+  @EnumConstantText("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.Post")
+  POST,
+
+  /**
+   * Электронно
+   */
+  @EnumConstantText("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.Electronic")
+  ELECTRONIC,
+
+  /**
+   * Телеграф
+   */
+  @EnumConstantText("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.Telegraph")
+  TELEGRAPH,
+
+  /**
+   * Клиринг
+   */
+  @EnumConstantText("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.Clearing")
+  CLEARING,
+
+  /**
+   * Внутри региона
+   */
+  @EnumConstantText("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.InsideRegion")
+  INSIDEREGION,
+
+  /**
+   * Расч.сист.СБ
+   */
+  @EnumConstantText("resource://com.mg.merp.account.resources.dataitemlabels#PayWayType.SberBank")
+  SBERBANK
 }

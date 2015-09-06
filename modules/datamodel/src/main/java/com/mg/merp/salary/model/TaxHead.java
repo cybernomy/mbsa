@@ -21,90 +21,95 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: TaxHead.java,v 1.5 2006/09/08 07:12:28 leonova Exp $
  */
 public class TaxHead extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String TName;
+  private java.lang.String TName;
 
-	private java.lang.String TCode;
+  private java.lang.String TCode;
 
-	private java.util.Set SetOfSalTaxScale;
+  private java.util.Set SetOfSalTaxScale;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public TaxHead() {
-	}
+  /**
+   * default constructor
+   */
+  public TaxHead() {
+  }
 
-	/** constructor with id */
-	public TaxHead(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public TaxHead(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.Name")
-	public java.lang.String getTName() {
-		return this.TName;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setTName(java.lang.String Tname) {
-		this.TName = Tname;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.Name")
+  public java.lang.String getTName() {
+    return this.TName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.BigCode")
-	public java.lang.String getTCode() {
-		return this.TCode;
-	}
+  public void setTName(java.lang.String Tname) {
+    this.TName = Tname;
+  }
 
-	public void setTCode(java.lang.String Tcode) {
-		this.TCode = Tcode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.BigCode")
+  public java.lang.String getTCode() {
+    return this.TCode;
+  }
 
-	/**
-	 * 
-	 */
+  public void setTCode(java.lang.String Tcode) {
+    this.TCode = Tcode;
+  }
 
-	public java.util.Set getSetOfSalTaxScale() {
-		return this.SetOfSalTaxScale;
-	}
+  /**
+   *
+   */
 
-	public void setSetOfSalTaxScale(java.util.Set SetOfSalTaxScale) {
-		this.SetOfSalTaxScale = SetOfSalTaxScale;
-	}
+  public java.util.Set getSetOfSalTaxScale() {
+    return this.SetOfSalTaxScale;
+  }
+
+  public void setSetOfSalTaxScale(java.util.Set SetOfSalTaxScale) {
+    this.SetOfSalTaxScale = SetOfSalTaxScale;
+  }
 
 }

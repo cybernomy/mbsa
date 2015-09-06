@@ -18,51 +18,55 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Модель бизнес-компонента "Конфигурация модуля <Графики исполнения обязательств>"
- * 
+ *
  * @author hbm2java
  * @author Artem V. Sharapov
  * @version $Id: ScheduleConfig.java,v 1.5 2007/01/13 13:19:33 sharapov Exp $
  */
 public class ScheduleConfig extends com.mg.framework.service.PersistentObjectHibernate implements
-java.io.Serializable {
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int sysClientId;
-	private com.mg.merp.core.model.Folder Folder;
+  private int sysClientId;
+  private com.mg.merp.core.model.Folder Folder;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public ScheduleConfig() {
-	}
+  /**
+   * default constructor
+   */
+  public ScheduleConfig() {
+  }
 
-	/** constructor with id */
-	public ScheduleConfig(int sysClientId) {
-		this.sysClientId = sysClientId;
-	}
-	
-	@DataItemName("Lbschedule.FolderModel.Folder")
-	public com.mg.merp.core.model.Folder getFolder() {
-		return Folder;
-	}
+  /**
+   * constructor with id
+   */
+  public ScheduleConfig(int sysClientId) {
+    this.sysClientId = sysClientId;
+  }
 
-	public void setFolder(com.mg.merp.core.model.Folder folder) {
-		Folder = folder;
-	}
+  @DataItemName("Lbschedule.FolderModel.Folder")
+  public com.mg.merp.core.model.Folder getFolder() {
+    return Folder;
+  }
 
-	/**
-	 * @return the sysClientId
-	 */
-	public int getSysClientId() {
-		return sysClientId;
-	}
+  public void setFolder(com.mg.merp.core.model.Folder folder) {
+    Folder = folder;
+  }
 
-	/**
-	 * @param sysClientId the sysClientId to set
-	 */
-	public void setSysClientId(int sysClientId) {
-		this.sysClientId = sysClientId;
-	}
+  /**
+   * @return the sysClientId
+   */
+  public int getSysClientId() {
+    return sysClientId;
+  }
+
+  /**
+   * @param sysClientId the sysClientId to set
+   */
+  public void setSysClientId(int sysClientId) {
+    this.sysClientId = sysClientId;
+  }
 
 }

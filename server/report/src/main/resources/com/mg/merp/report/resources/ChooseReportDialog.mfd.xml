@@ -13,16 +13,23 @@
 
 <!-- $Id: ChooseReportDialog.mfd.xml,v 1.4 2008/05/13 15:20:26 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.report.support.ui.ChooseReportDialog" orientation="ver" verticalGap="5" title="resource://com.mg.merp.report.resources.formelements#ChooseReportDialog.Title" width="300" height="150" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.report.support.ui.ChooseReportDialog" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.report.resources.formelements#ChooseReportDialog.Title"
+          width="300" height="150">
 
-	<jfd:container id="reportsBox" layout="jfd:box" alignment="expand_expand">
-		<jfd:table id="reportsList" alignment="expand_expand" scroll="true" />
-	</jfd:container>
+  <jfd:container id="reportsBox" layout="jfd:box" alignment="expand_expand">
+    <jfd:table id="reportsList" alignment="expand_expand" scroll="true"/>
+  </jfd:container>
 
-	<jfd:container id="buttons" layout="jfd:box" alignment="expand_top">
-		<jfd:filler id="buttonsFiller" alignment="expand_top" type="horizontalGlue" />
-		<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#OkButton" actionListener="Ok" />
-		<jfd:button id="CancelButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CancelButton" actionListener="Cancel" />
-	</jfd:container>
+  <jfd:container id="buttons" layout="jfd:box" alignment="expand_top">
+    <jfd:filler id="buttonsFiller" alignment="expand_top" type="horizontalGlue"/>
+    <jfd:button id="OkButton" alignment="right_top"
+                text="resource://com.mg.framework.resources.messages#OkButton" actionListener="Ok"/>
+    <jfd:button id="CancelButton" alignment="right_top"
+                text="resource://com.mg.framework.resources.messages#CancelButton"
+                actionListener="Cancel"/>
+  </jfd:container>
 
 </jfd:form>

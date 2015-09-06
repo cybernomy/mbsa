@@ -16,10 +16,9 @@ package com.mg.framework.api.jdbc;
 
 /**
  * @author Oleg V. Safonov
- *
  */
 public class InvalidDataAccessApiUsageException extends DataAccessException {
-    public InvalidDataAccessApiUsageException(String s) {
-        super(s);
-    }
+  public InvalidDataAccessApiUsageException(String s) {
+    super(s);
+  }
 }

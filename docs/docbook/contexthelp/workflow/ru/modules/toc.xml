@@ -15,20 +15,20 @@
 
 <toc version="1.0">
 
-   <tocitem text="Подготовка потоков">
-	<tocitem text="Менеджеры потоков" target="wfmanager_html" />
-	<tocitem text="Конструктор потоков">
-	    <tocitem text="Конструктор потоков" target="wfconsrt_html" />
-	    <tocitem text="Модель действия" target="wfmodel_html" />
-	    <tocitem text="Связь действий" target="wflink_html" /> 
-	</tocitem>    
-   </tocitem>	
-  
-   <tocitem text="Обеспечение и процесс">
-   	<tocitem text="Ресурсы" target="wfresource_html" />
-        <tocitem text="Потоки" target="workflow_html" />
-	<tocitem text="Назначения" target="wfassign_html" />
-	<tocitem text="Сегменты отката" target="wfsegment_html" />
-  </tocitem> 
-  
+  <tocitem text="Подготовка потоков">
+    <tocitem text="Менеджеры потоков" target="wfmanager_html"/>
+    <tocitem text="Конструктор потоков">
+      <tocitem text="Конструктор потоков" target="wfconsrt_html"/>
+      <tocitem text="Модель действия" target="wfmodel_html"/>
+      <tocitem text="Связь действий" target="wflink_html"/>
+    </tocitem>
+  </tocitem>
+
+  <tocitem text="Обеспечение и процесс">
+    <tocitem text="Ресурсы" target="wfresource_html"/>
+    <tocitem text="Потоки" target="workflow_html"/>
+    <tocitem text="Назначения" target="wfassign_html"/>
+    <tocitem text="Сегменты отката" target="wfsegment_html"/>
+  </tocitem>
+
 </toc>

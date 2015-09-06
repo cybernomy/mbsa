@@ -19,34 +19,34 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Алгоритм расчета амортизации
- * 
+ *
  * @author leonova
  * @version $Id: AmortAlgorithmType.java,v 1.1 2006/03/30 11:22:12 safonov Exp $
  */
-@DataItemName ("Account.Inventory.AmortAlgorithmType")
+@DataItemName("Account.Inventory.AmortAlgorithmType")
 public enum AmortAlgorithmType {
-	/**
-	 * Линейный
-	 */
-	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AmortAlgorithmType.Linear")
-	LINEAR,
-	
-	/**
-	 * Пропорционально остаточной стоимости
-	 */
-	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AmortAlgorithmType.ByEndCost")
-	BYENDCOST,
-	
-	/**
-	 * По сроку полезного использования (кол-во лет)
-	 */
-	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AmortAlgorithmType.ByExplPeriod")
-	BYEXPLPERIOD,
-	
-	/**
-	 * Пропорционально объему продукции
-	 */
-	@EnumConstantText ("resource://com.mg.merp.account.resources.dataitemlabels#AmortAlgorithmType.ByProduction")
-	BYPRODUCTION
+  /**
+   * Линейный
+   */
+  @EnumConstantText("resource://com.mg.merp.account.resources.dataitemlabels#AmortAlgorithmType.Linear")
+  LINEAR,
+
+  /**
+   * Пропорционально остаточной стоимости
+   */
+  @EnumConstantText("resource://com.mg.merp.account.resources.dataitemlabels#AmortAlgorithmType.ByEndCost")
+  BYENDCOST,
+
+  /**
+   * По сроку полезного использования (кол-во лет)
+   */
+  @EnumConstantText("resource://com.mg.merp.account.resources.dataitemlabels#AmortAlgorithmType.ByExplPeriod")
+  BYEXPLPERIOD,
+
+  /**
+   * Пропорционально объему продукции
+   */
+  @EnumConstantText("resource://com.mg.merp.account.resources.dataitemlabels#AmortAlgorithmType.ByProduction")
+  BYPRODUCTION
 
 }

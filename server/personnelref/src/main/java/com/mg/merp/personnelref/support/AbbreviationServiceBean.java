@@ -15,21 +15,20 @@
 
 package com.mg.merp.personnelref.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.personnelref.AbbreviationServiceLocal;
 import com.mg.merp.personnelref.model.Abbreviation;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Сокращения" 
- * 
+ * Бизнес-компонент "Сокращения"
+ *
  * @author leonova
  * @version $Id: AbbreviationServiceBean.java,v 1.3 2006/09/04 13:02:21 leonova Exp $
  */
-@Stateless(name="merp/personnelref/AbbreviationService")
+@Stateless(name = "merp/personnelref/AbbreviationService")
 public class AbbreviationServiceBean extends AbstractPOJODataBusinessObjectServiceBean<Abbreviation, Integer> implements AbbreviationServiceLocal {
-
 
 
 }

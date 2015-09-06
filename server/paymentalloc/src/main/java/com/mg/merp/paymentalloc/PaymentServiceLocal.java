@@ -19,35 +19,37 @@ import com.mg.merp.paymentalloc.model.Payment;
 
 /**
  * Сервис бизнес-компонента "Журнал платежей"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: PaymentServiceLocal.java,v 1.6 2007/06/04 05:13:36 sharapov Exp $
  */
 public interface PaymentServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Payment, Integer> {
 
-	/**
-	 * Имя сервиса
-	 */
-	final static String LOCAL_SERVICE_NAME= "merp/paymentalloc/Payment"; //$NON-NLS-1$
+  /**
+   * Имя сервиса
+   */
+  final static String LOCAL_SERVICE_NAME = "merp/paymentalloc/Payment"; //$NON-NLS-1$
 
-	/**
-	 * Тип папки для журнала платажей
-	 */
-	final static short FOLDER_PART = 13300;
+  /**
+   * Тип папки для журнала платажей
+   */
+  final static short FOLDER_PART = 13300;
 
-	/**
-	 * Создать запись журнала платежей по образцу
-	 * @param pattern - образец записи
-	 * @param folder - папка-приемник
-	 * @return запись журнала платежей
-	 */
-	Payment createByPattern(Payment pattern, Folder folder);
-	
-	/**
-	 * Рассчитать курс и сумму в НДЕ
-	 * @param payment - запись журнала платежей
-	 */
-	void computeCurRateAndSumNat(Payment payment);
+  /**
+   * Создать запись журнала платежей по образцу
+   *
+   * @param pattern - образец записи
+   * @param folder  - папка-приемник
+   * @return запись журнала платежей
+   */
+  Payment createByPattern(Payment pattern, Folder folder);
+
+  /**
+   * Рассчитать курс и сумму в НДЕ
+   *
+   * @param payment - запись журнала платежей
+   */
+  void computeCurRateAndSumNat(Payment payment);
 
 }

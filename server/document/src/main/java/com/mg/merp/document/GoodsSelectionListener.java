@@ -16,16 +16,14 @@ package com.mg.merp.document;
 
 /**
  * Слушатель подбора номенклатуры
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: GoodsSelectionListener.java,v 1.1 2006/12/02 12:35:32 safonov Exp $
  */
 public interface GoodsSelectionListener {
-	
-	/**
-	 * генерация события о выборе номенклатуры
-	 * 
-	 * @param event
-	 */
-	void doSelect(GoodsSelectionEvent event);
+
+  /**
+   * генерация события о выборе номенклатуры
+   */
+  void doSelect(GoodsSelectionEvent event);
 }

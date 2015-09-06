@@ -15,27 +15,27 @@
 
 package com.mg.merp.crm.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.crm.PaymentCondServiceLocal;
 import com.mg.merp.crm.model.PaymentCond;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Условия оплаты" 
- * 
+ * Бизнес-компонент "Условия оплаты"
+ *
  * @author leonova
  * @version $Id: PaymentCondServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $
  */
-@Stateless(name="merp/crm/PaymentCondService")
+@Stateless(name = "merp/crm/PaymentCondService")
 public class PaymentCondServiceBean extends AbstractPOJODataBusinessObjectServiceBean<PaymentCond, Integer> implements PaymentCondServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, PaymentCond entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));
-	}
+  @Override
+  protected void onValidate(ValidationContext context, PaymentCond entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+  }
 
 
 }

@@ -16,9 +16,9 @@
 <index version="1.0">
 
   <indexitem text="Управление налогами">
-    <indexentry text="Справочник налогов" target="taxref_html" />
-    <indexentry text="Группы налогов" target="taxgroup_html" />
-    <indexentry text="Виды начисления налогов" target="taxkind_html" />
+    <indexentry text="Справочник налогов" target="taxref_html"/>
+    <indexentry text="Группы налогов" target="taxgroup_html"/>
+    <indexentry text="Виды начисления налогов" target="taxkind_html"/>
   </indexitem>
 
 </index>

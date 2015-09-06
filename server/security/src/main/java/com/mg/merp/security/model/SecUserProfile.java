@@ -19,76 +19,81 @@ package com.mg.merp.security.model;
  * @version $Id: SecUserProfile.java,v 1.3 2005/07/22 07:06:22 safonov Exp $
  */
 public class SecUserProfile extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.security.model.SecUser User;
+  private com.mg.merp.security.model.SecUser User;
 
-	private short ProfileType;
+  private short ProfileType;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public SecUserProfile() {
-	}
+  /**
+   * default constructor
+   */
+  public SecUserProfile() {
+  }
 
-	/** constructor with id */
-	public SecUserProfile(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public SecUserProfile(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
+  // Property accessors
 
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  /**
+   *
+   */
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public com.mg.merp.security.model.SecUser getUser() {
-		return this.User;
-	}
+  /**
+   *
+   */
 
-	public void setUser(com.mg.merp.security.model.SecUser SecUsers) {
-		this.User = SecUsers;
-	}
+  public com.mg.merp.security.model.SecUser getUser() {
+    return this.User;
+  }
 
-	/**
-	 * 
-	 */
+  public void setUser(com.mg.merp.security.model.SecUser SecUsers) {
+    this.User = SecUsers;
+  }
 
-	public short getProfileType() {
-		return this.ProfileType;
-	}
+  /**
+   *
+   */
 
-	public void setProfileType(short ProfileType) {
-		this.ProfileType = ProfileType;
-	}
+  public short getProfileType() {
+    return this.ProfileType;
+  }
+
+  public void setProfileType(short ProfileType) {
+    this.ProfileType = ProfileType;
+  }
 }

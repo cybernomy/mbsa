@@ -15,27 +15,27 @@
 
 package com.mg.merp.crm.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.crm.PersonTitleServiceLocal;
 import com.mg.merp.crm.model.PersonTitle;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Обращения к человеку" 
- * 
+ * Бизнес-компонент "Обращения к человеку"
+ *
  * @author leonova
  * @version $Id: PersonTitleServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $
  */
-@Stateless(name="merp/crm/PersonTitleService")
+@Stateless(name = "merp/crm/PersonTitleService")
 public class PersonTitleServiceBean extends AbstractPOJODataBusinessObjectServiceBean<PersonTitle, Integer> implements PersonTitleServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, PersonTitle entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));
-	}
+  @Override
+  protected void onValidate(ValidationContext context, PersonTitle entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+  }
 
 
 }

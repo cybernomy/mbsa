@@ -14,16 +14,16 @@
 <!-- $Id: link.xml,v 1.1 2006/12/17 14:29:42 konyashkina Exp $ -->
 
 <link version="1.0">
-   
-  <linkitem topic="security_links"> 
-     <linkentry target="users_html" text="Пользователи" />
-     <linkentry target="groups_html" text="Группы пользователей" />
-     <linkentry target="modules_html" text="Права на модули" />
-     <linkentry target="bkaccess_html" text="Права на бизнес-компоненты" />
-     <linkentry target="methods_html" text="Методы" />
-     <linkentry target="other_html" text="Другие права" />
-     <linkentry target="auditlog_html" text="Журнал аудита" />
-     <linkentry target="folderaccess_html" text="Права на папки" /> 
-  </linkitem> 
-  
+
+  <linkitem topic="security_links">
+    <linkentry target="users_html" text="Пользователи"/>
+    <linkentry target="groups_html" text="Группы пользователей"/>
+    <linkentry target="modules_html" text="Права на модули"/>
+    <linkentry target="bkaccess_html" text="Права на бизнес-компоненты"/>
+    <linkentry target="methods_html" text="Методы"/>
+    <linkentry target="other_html" text="Другие права"/>
+    <linkentry target="auditlog_html" text="Журнал аудита"/>
+    <linkentry target="folderaccess_html" text="Права на папки"/>
+  </linkitem>
+
 </link> 

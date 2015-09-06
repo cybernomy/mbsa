@@ -18,22 +18,23 @@ import com.mg.merp.contract.model.ContractSpec;
 
 /**
  * Бизнес-компонент "Спецификация контракта"
- * 
+ *
  * @author leonova
  * @author Artem V Sharapov
  * @version $Id: ContractSpecServiceLocal.java,v 1.2 2008/03/11 08:53:11 sharapov Exp $
  */
 public interface ContractSpecServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ContractSpec, Integer> {
 
-	/**
-	 * Имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/contract/ContractSpec"; //$NON-NLS-1$
+  /**
+   * Имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/contract/ContractSpec"; //$NON-NLS-1$
 
-	/**
-	 * Рассчитать аттрибуты позиции спецификации контракта
-	 * @param contractSpec - позиция спецификации контракта
-	 */
-	void adjust(ContractSpec contractSpec);	
+  /**
+   * Рассчитать аттрибуты позиции спецификации контракта
+   *
+   * @param contractSpec - позиция спецификации контракта
+   */
+  void adjust(ContractSpec contractSpec);
 
 }

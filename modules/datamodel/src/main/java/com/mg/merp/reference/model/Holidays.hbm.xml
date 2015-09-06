@@ -1,37 +1,37 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.reference.model.Holidays" table="REF_HOLIDAYS">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">REF_HOLIDAYS_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <property name="HName" type="java.lang.String">
-      <column name="HNAME" length="80" not-null="true" sql-type="VARCHAR" />
+      <column name="HNAME" length="80" not-null="true" sql-type="VARCHAR"/>
     </property>
     <property name="HDate" type="java.util.Date">
-      <column name="HDATE" not-null="false" unique="true" sql-type="TIMESTAMP" />
+      <column name="HDATE" not-null="false" unique="true" sql-type="TIMESTAMP"/>
     </property>
     <property name="HDay" type="java.lang.Integer">
-      <column name="HDAY" not-null="false" sql-type="INTEGER" />
+      <column name="HDAY" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="HMonth" type="java.lang.Integer">
-      <column name="HMONTH" not-null="false" sql-type="INTEGER" />
+      <column name="HMONTH" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="HYear" type="java.lang.Integer">
-      <column name="HYEAR" not-null="false" sql-type="INTEGER" />
+      <column name="HYEAR" not-null="false" sql-type="INTEGER"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

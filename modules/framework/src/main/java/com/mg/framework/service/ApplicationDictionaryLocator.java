@@ -23,16 +23,15 @@ import com.mg.framework.utils.ServerUtils;
  * @version $Id: ApplicationDictionaryLocator.java,v 1.1 2006/01/24 13:58:46 safonov Exp $
  */
 public class ApplicationDictionaryLocator {
-    private static volatile ApplicationDictionary instance = null;
-    
-    public static ApplicationDictionary locate() throws ApplicationException {
-        if (instance == null)
-            try {
-                instance = (ApplicationDictionary) ServerUtils.createMBeanProxy(ApplicationDictionary.class, "merp:service=ApplicationDictionaryService");
-            }
-            catch (Exception e) {
-                throw new ApplicationException(e);
-            }
-        return instance;
-    }
+  private static volatile ApplicationDictionary instance = null;
+
+  public static ApplicationDictionary locate() throws ApplicationException {
+    if (instance == null)
+      try {
+        instance = (ApplicationDictionary) ServerUtils.createMBeanProxy(ApplicationDictionary.class, "merp:service=ApplicationDictionaryService");
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 }

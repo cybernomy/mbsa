@@ -14,19 +14,19 @@
  */
 package com.mg.merp.lbschedule.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.lbschedule.ScheduleDocHeadLinkServiceLocal;
 import com.mg.merp.lbschedule.model.ScheduleDocHeadLink;
 
+import javax.ejb.Stateless;
+
 /**
  * Реализация бизнес-компонента "Связь графика исполнения обязательств с документом"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: ScheduleDocHeadLinkServiceBean.java,v 1.1 2007/04/21 11:49:33 sharapov Exp $
  */
-@Stateless(name="merp/lbschedule/ScheduleDocHeadLinkService") //$NON-NLS-1$
+@Stateless(name = "merp/lbschedule/ScheduleDocHeadLinkService") //$NON-NLS-1$
 public class ScheduleDocHeadLinkServiceBean extends AbstractPOJODataBusinessObjectServiceBean<ScheduleDocHeadLink, Integer> implements ScheduleDocHeadLinkServiceLocal {
 
 }

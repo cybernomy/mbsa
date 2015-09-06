@@ -19,53 +19,49 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * This interface is implemented by classes that provide different representations of a web resource.
- * <p/>
- * Note: This interface is meant to be used for downloading/printing documents from within an MBSA application.
- * 
+ * This interface is implemented by classes that provide different representations of a web
+ * resource. <p/> Note: This interface is meant to be used for downloading/printing documents from
+ * within an MBSA application.
+ *
  * @author Oleg V. Safonov
  * @author Etienne.Studer@canoo.com
  * @version $Id: WebResourceProvider.java,v 1.1 2007/03/19 11:24:38 safonov Exp $
  */
 public interface WebResourceProvider {
 
-	/**
-	 * get MIME type
-	 * 
-	 * @return	MIME type
-	 */
-	public String getMimeType();
+  /**
+   * get MIME type
+   *
+   * @return MIME type
+   */
+  public String getMimeType();
 
-	/**
-	 * get resources size
-	 * 
-	 * @return	size
-	 * @throws IOException
-	 */
-	public int getLength() throws IOException;
+  /**
+   * get resources size
+   *
+   * @return size
+   */
+  public int getLength() throws IOException;
 
-	/**
-	 * get input stream
-	 * 
-	 * @return	input stream
-	 * @throws IOException
-	 */
-	public InputStream getInputStream() throws IOException;
+  /**
+   * get input stream
+   *
+   * @return input stream
+   */
+  public InputStream getInputStream() throws IOException;
 
-	/**
-	 * get file representation of resource
-	 * 
-	 * @return	file
-	 * @throws IOException
-	 */
-	public File getFile() throws IOException;
+  /**
+   * get file representation of resource
+   *
+   * @return file
+   */
+  public File getFile() throws IOException;
 
-	/**
-	 * get contents of resource
-	 * 
-	 * @return	contents
-	 * @throws IOException
-	 */
-	public byte[] getBytes() throws IOException;
+  /**
+   * get contents of resource
+   *
+   * @return contents
+   */
+  public byte[] getBytes() throws IOException;
 
 }

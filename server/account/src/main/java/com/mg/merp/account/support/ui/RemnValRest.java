@@ -22,73 +22,73 @@ import com.mg.merp.reference.model.Contractor;
 
 /**
  * @author leonova
- * @version $Id: RemnValRest.java,v 1.3 2006/10/18 06:12:11 leonova Exp $ 
+ * @version $Id: RemnValRest.java,v 1.3 2006/10/18 06:12:11 leonova Exp $
  */
 public class RemnValRest extends RemnPlainRest {
-	@DataItemName("Account.RemnAnl.AnlPlan1")
-	private AnlPlan anlCode1 = null;
-	@DataItemName("Account.RemnAnl.AnlPlan2")	
-	private AnlPlan anlCode2 = null;
-	@DataItemName("Account.RemnAnl.AnlPlan3")	
-	private AnlPlan anlCode3 = null;
-	@DataItemName("Account.RemnAnl.AnlPlan4")	
-	private AnlPlan anlCode4 = null;
-	@DataItemName("Account.RemnAnl.AnlPlan5")
-	private AnlPlan anlCode5 = null;
-	private Catalog catalogName = null;
-	private int balanceKind = 0;
-	private CatalogFolder catalogFolder = null;	
-	private Contractor contractorCode = null;
-	
-	@Override
-	protected void doClearRestrictionItem() {
-		super.doClearRestrictionItem();
-		this.anlCode1 = null;
-		this.anlCode2 = null;
-		this.anlCode3 = null;
-		this.anlCode4 = null;
-		this.anlCode5 = null;	
-		this.catalogName = null;
-		this.catalogFolder = null;
-		this.contractorCode = null;
-		this.balanceKind = 0;
-	}
+  @DataItemName("Account.RemnAnl.AnlPlan1")
+  private AnlPlan anlCode1 = null;
+  @DataItemName("Account.RemnAnl.AnlPlan2")
+  private AnlPlan anlCode2 = null;
+  @DataItemName("Account.RemnAnl.AnlPlan3")
+  private AnlPlan anlCode3 = null;
+  @DataItemName("Account.RemnAnl.AnlPlan4")
+  private AnlPlan anlCode4 = null;
+  @DataItemName("Account.RemnAnl.AnlPlan5")
+  private AnlPlan anlCode5 = null;
+  private Catalog catalogName = null;
+  private int balanceKind = 0;
+  private CatalogFolder catalogFolder = null;
+  private Contractor contractorCode = null;
 
-	public AnlPlan getAnlCode1() {
-		return anlCode1;
-	}
+  @Override
+  protected void doClearRestrictionItem() {
+    super.doClearRestrictionItem();
+    this.anlCode1 = null;
+    this.anlCode2 = null;
+    this.anlCode3 = null;
+    this.anlCode4 = null;
+    this.anlCode5 = null;
+    this.catalogName = null;
+    this.catalogFolder = null;
+    this.contractorCode = null;
+    this.balanceKind = 0;
+  }
 
-	public AnlPlan getAnlCode2() {
-		return anlCode2;
-	}
+  public AnlPlan getAnlCode1() {
+    return anlCode1;
+  }
 
-	public AnlPlan getAnlCode3() {
-		return anlCode3;
-	}
+  public AnlPlan getAnlCode2() {
+    return anlCode2;
+  }
 
-	public AnlPlan getAnlCode4() {
-		return anlCode4;
-	}
+  public AnlPlan getAnlCode3() {
+    return anlCode3;
+  }
 
-	public AnlPlan getAnlCode5() {
-		return anlCode5;
-	}
+  public AnlPlan getAnlCode4() {
+    return anlCode4;
+  }
 
-	public int getBalanceKind() {
-		return balanceKind;
-	}
+  public AnlPlan getAnlCode5() {
+    return anlCode5;
+  }
 
-	public CatalogFolder getCatalogFolder() {
-		return catalogFolder;
-	}
+  public int getBalanceKind() {
+    return balanceKind;
+  }
 
-	public Catalog getCatalogName() {
-		return catalogName;
-	}
+  public CatalogFolder getCatalogFolder() {
+    return catalogFolder;
+  }
 
-	public Contractor getContractorCode() {
-		return contractorCode;
-	}
+  public Catalog getCatalogName() {
+    return catalogName;
+  }
+
+  public Contractor getContractorCode() {
+    return contractorCode;
+  }
 
 
 }

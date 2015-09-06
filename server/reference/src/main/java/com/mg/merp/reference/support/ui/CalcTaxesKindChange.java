@@ -24,39 +24,45 @@ import com.mg.merp.reference.model.Tax;
  * @version $Id: CalcTaxesKindChange.java,v 1.1 2006/10/24 10:30:54 leonova Exp $
  */
 public class CalcTaxesKindChange extends DefaultDialog {
-	
-	private Tax tax;
-    @DataItemName("Reference.TaxLink.FeeOrder")
-	private Short feeOrder;
-	private CalcTaxesSubject subject;
-    @DataItemName("Reference.CalcTaxLink.Included")	
-	private boolean included;
-    
-	public Short getFeeOrder() {
-		return feeOrder;
-	}
-	public void setFeeOrder(Short feeOrder) {
-		this.feeOrder = feeOrder;
-	}
-	public boolean isIncluded() {
-		return included;
-	}
-	public void setIncluded(boolean included) {
-		this.included = included;
-	}
-	public CalcTaxesSubject getSubject() {
-		return subject;
-	}
-	public void setSubject(CalcTaxesSubject subject) {
-		this.subject = subject;
-	}
-	public Tax getTax() {
-		return tax;
-	}
-	public void setTax(Tax tax) {
-		this.tax = tax;
-	}	
 
-	
+  private Tax tax;
+  @DataItemName("Reference.TaxLink.FeeOrder")
+  private Short feeOrder;
+  private CalcTaxesSubject subject;
+  @DataItemName("Reference.CalcTaxLink.Included")
+  private boolean included;
+
+  public Short getFeeOrder() {
+    return feeOrder;
+  }
+
+  public void setFeeOrder(Short feeOrder) {
+    this.feeOrder = feeOrder;
+  }
+
+  public boolean isIncluded() {
+    return included;
+  }
+
+  public void setIncluded(boolean included) {
+    this.included = included;
+  }
+
+  public CalcTaxesSubject getSubject() {
+    return subject;
+  }
+
+  public void setSubject(CalcTaxesSubject subject) {
+    this.subject = subject;
+  }
+
+  public Tax getTax() {
+    return tax;
+  }
+
+  public void setTax(Tax tax) {
+    this.tax = tax;
+  }
+
 
 }

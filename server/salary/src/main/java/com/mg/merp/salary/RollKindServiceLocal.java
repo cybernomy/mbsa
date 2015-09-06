@@ -17,12 +17,10 @@ package com.mg.merp.salary;
 import com.mg.merp.salary.model.RollKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: RollKindServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface RollKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<RollKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<RollKind, Integer> {
 
 }

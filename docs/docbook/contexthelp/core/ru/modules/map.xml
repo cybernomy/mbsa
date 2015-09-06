@@ -14,17 +14,17 @@
 <!-- $Id: map.xml,v 1.4 2008/03/05 14:01:29 konyashkina Exp $ -->
 
 <map version="1.4">
-  <mapID target="features_html" url="features002.html" />
-  <mapID target="syscompany_html" url="syscompany001.html" />
-  <mapID target="entity_audit_setup_wizard_html" url="audit.html#db_audit_setup" />
-  <mapID target="entity_audit_html" url="audit.html#db_audit.html" />
-  <mapID target="security_audit_html" url="audit.html#security_audit" />
-  <mapID target="system_audit_html" url="audit.html#system_audit" />
-  <mapID target="bc_html" url="appdict.html#bc" />
-  <mapID target="sysclassimplementation_html" url="appdict.html#rbc" />
-  <mapID target="sysdomain_html" url="appdict.html#sysdomain" />
-  <mapID target="sysdataitem_html" url="appdict.html#sysdataitem" />
-  <mapID target="form_html" url="appdict.html#sysform" />
-  <mapID target="window_html" url="appdict.html#syswindows" />
-  <mapID target="applayers_html" url="appdict.html#applayers" />
+  <mapID target="features_html" url="features002.html"/>
+  <mapID target="syscompany_html" url="syscompany001.html"/>
+  <mapID target="entity_audit_setup_wizard_html" url="audit.html#db_audit_setup"/>
+  <mapID target="entity_audit_html" url="audit.html#db_audit.html"/>
+  <mapID target="security_audit_html" url="audit.html#security_audit"/>
+  <mapID target="system_audit_html" url="audit.html#system_audit"/>
+  <mapID target="bc_html" url="appdict.html#bc"/>
+  <mapID target="sysclassimplementation_html" url="appdict.html#rbc"/>
+  <mapID target="sysdomain_html" url="appdict.html#sysdomain"/>
+  <mapID target="sysdataitem_html" url="appdict.html#sysdataitem"/>
+  <mapID target="form_html" url="appdict.html#sysform"/>
+  <mapID target="window_html" url="appdict.html#syswindows"/>
+  <mapID target="applayers_html" url="appdict.html#applayers"/>
 </map>

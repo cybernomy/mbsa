@@ -25,50 +25,50 @@ import com.mg.merp.finance.model.Account;
 
 /**
  * Базовый класс для SearchHelp аналитических счетов финансового учета
- * 
+ *
  * @author leonova
  * @version $Id: FinAnlPlanSearchHelp.java,v 1.1 2006/10/30 13:50:17 leonova Exp $
  */
 public abstract class FinAnlPlanSearchHelp extends AbstractSearchHelp {
 
-	protected Account accPlanName;
-	
-	protected abstract short getAnalitikaLevel();
+  protected Account accPlanName;
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
-	 */	
-	@Override
-	protected void doSearch() throws Exception {
-		FinAnlPlanSearchForm form = (FinAnlPlanSearchForm) UIProducer.produceForm("com/mg/merp/finance/resources/FinAnlPlanSearchForm.mfd.xml");
-		form.addSearchHelpListener(this);
-		form.setSearchParams(getAccPlanName(), getAnalitikaLevel());
-		form.run(UIUtils.isModalMode());
-	}
+  protected abstract short getAnalitikaLevel();
 
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doView(com.mg.framework.api.orm.PersistentObject)
-	 */
-	@Override
-	protected void doView(PersistentObject entity) {
-		AnalyticsServiceLocal service = (AnalyticsServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/finance/Analytics");
-		MaintenanceHelper.view(service, (Integer) entity.getPrimaryKey(), null, null);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
+   */
+  @Override
+  protected void doSearch() throws Exception {
+    FinAnlPlanSearchForm form = (FinAnlPlanSearchForm) UIProducer.produceForm("com/mg/merp/finance/resources/FinAnlPlanSearchForm.mfd.xml");
+    form.addSearchHelpListener(this);
+    form.setSearchParams(getAccPlanName(), getAnalitikaLevel());
+    form.run(UIUtils.isModalMode());
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.SearchHelp#isSupportView()
-	 */
-	@Override
-	public boolean isSupportView() {
-		return true;
-	}
 
-	public void setAccPlanName(Account accPlanName) {
-		this.accPlanName = accPlanName;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doView(com.mg.framework.api.orm.PersistentObject)
+   */
+  @Override
+  protected void doView(PersistentObject entity) {
+    AnalyticsServiceLocal service = (AnalyticsServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/finance/Analytics");
+    MaintenanceHelper.view(service, (Integer) entity.getPrimaryKey(), null, null);
+  }
 
-	public Account getAccPlanName() {
-		return accPlanName;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.SearchHelp#isSupportView()
+   */
+  @Override
+  public boolean isSupportView() {
+    return true;
+  }
+
+  public Account getAccPlanName() {
+    return accPlanName;
+  }
+
+  public void setAccPlanName(Account accPlanName) {
+    this.accPlanName = accPlanName;
+  }
 }

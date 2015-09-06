@@ -13,25 +13,22 @@
  */
 package com.mg.merp.warehouse;
 
-import java.math.BigDecimal;
-
 import com.mg.merp.document.model.DocSpec;
+
+import java.math.BigDecimal;
 
 /**
  * Интерфейс стратегии рассчёта цены складской партии
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @version $Id: BatchPriceStrategy.java,v 1.1 2007/02/22 09:44:57 poroxnenko Exp $
  */
 public interface BatchPriceStrategy {
 
-	/**
-	 * Метод рассчитывает цену складской партии
-	 * 
-	 * @param docSpec
-	 *            спецификации документа, на основании которого производится
-	 *            рассчёт
-	 * @return
-	 */
-	BigDecimal doCalculate(DocSpec docSpec);
+  /**
+   * Метод рассчитывает цену складской партии
+   *
+   * @param docSpec спецификации документа, на основании которого производится рассчёт
+   */
+  BigDecimal doCalculate(DocSpec docSpec);
 }

@@ -18,15 +18,15 @@ import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис транслятора SQL ИС модуля бухгалтерия
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: SQLExceptionTranslatorServiceMBean.java,v 1.1 2009/03/04 12:38:48 sharapov Exp $
  */
 public interface SQLExceptionTranslatorServiceMBean extends ServiceMBean {
-	
-	/**
-	 * имя сервиса
-	 */
-	final static String SERVICE_NAME = "merp:account=SQLExceptionTranslator";
-	
+
+  /**
+   * имя сервиса
+   */
+  final static String SERVICE_NAME = "merp:account=SQLExceptionTranslator";
+
 }

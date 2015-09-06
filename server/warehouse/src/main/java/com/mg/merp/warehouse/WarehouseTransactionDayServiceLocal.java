@@ -14,33 +14,33 @@
  */
 package com.mg.merp.warehouse;
 
-import java.io.Serializable;
-
 import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.warehouse.model.WarehouseTransactionDay;
 
+import java.io.Serializable;
+
 /**
  * Сервис бизнес-компонента "Операционные дни"
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: WarehouseTransactionDayServiceLocal.java,v 1.1 2007/11/29 08:37:13 alikaev Exp $
  */
 public interface WarehouseTransactionDayServiceLocal extends DataBusinessObjectService<WarehouseTransactionDay, Integer> {
 
-	final static String SERVICE_NAME = "merp/warehouse/WarehouseTransactionDay";
-	
-	/**
-	 * Открыть операционные дни
-	 * 
-	 * @param periods - набор операционных дней
-	 */
-	void openTransactionDay(Serializable[] dayIds);
+  final static String SERVICE_NAME = "merp/warehouse/WarehouseTransactionDay";
 
-	/**
-	 * Закрыть операционные дни
-	 * 
-	 * @param periods - набор операционных дней
-	 */
-	void closeTransactionDay(Serializable[] dayIds);
+  /**
+   * Открыть операционные дни
+   *
+   * @param periods - набор операционных дней
+   */
+  void openTransactionDay(Serializable[] dayIds);
+
+  /**
+   * Закрыть операционные дни
+   *
+   * @param periods - набор операционных дней
+   */
+  void closeTransactionDay(Serializable[] dayIds);
 
 }

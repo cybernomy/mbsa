@@ -13,30 +13,36 @@
 
 <!-- $Id: PriceListHeadMt.mfd.xml,v 1.5 2006/11/29 08:17:53 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.reference.support.ui.PriceListHeadMt" title="resource://com.mg.merp.reference.resources.formelements#PriceList.FormMt.Title" helpTopic="reference#pricelist_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.reference.support.ui.PriceListHeadMt"
+          title="resource://com.mg.merp.reference.resources.formelements#PriceList.FormMt.Title"
+          helpTopic="reference#pricelist_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
- 	 		<jfd:field id="PrName" longField="true"/>
-			<jfd:container id="currencyField" longField="true" layout="jfd:box" label="resource://com.mg.merp.reference.resources.dataitemlabels#Ref.PrList.Currency">	 	
-				<jfd:field id="Currency" alignment="left_expand" showLabel="false"/>
-				<jfd:field id="CurrencyRateType" showLabel="false" alignment="expand_expand"/>		
-				<jfd:field id="CurrencyRateAuthority" showLabel="false" alignment="right_expand"/>			 	
-			</jfd:container>	
-			
-			<jfd:field id="PricePrecision" />	
-		 	<jfd:field id="CreateDate" sameLine="true"/>	
-	  		<jfd:field id="IsCurrent" />
- 	 		<jfd:field id="Contractor" />
-	 		<jfd:field id="BasePriceType" />
-			<jfd:maintenanceTable id="priceTypeLink" longField="true" scroll="true" autoResize="subsequent_columns"  alignment="expand_expand" label="resource://com.mg.merp.reference.resources.formelements#PriceList.PriceTypeLink.Title"> 	 		
-			</jfd:maintenanceTable>
-	 	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 							
-	</jfd:container>
+    <jfd:field id="PrName" longField="true"/>
+    <jfd:container id="currencyField" longField="true" layout="jfd:box"
+                   label="resource://com.mg.merp.reference.resources.dataitemlabels#Ref.PrList.Currency">
+      <jfd:field id="Currency" alignment="left_expand" showLabel="false"/>
+      <jfd:field id="CurrencyRateType" showLabel="false" alignment="expand_expand"/>
+      <jfd:field id="CurrencyRateAuthority" showLabel="false" alignment="right_expand"/>
+    </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:field id="PricePrecision"/>
+    <jfd:field id="CreateDate" sameLine="true"/>
+    <jfd:field id="IsCurrent"/>
+    <jfd:field id="Contractor"/>
+    <jfd:field id="BasePriceType"/>
+    <jfd:maintenanceTable id="priceTypeLink" longField="true" scroll="true"
+                          autoResize="subsequent_columns" alignment="expand_expand"
+                          label="resource://com.mg.merp.reference.resources.formelements#PriceList.PriceTypeLink.Title">
+    </jfd:maintenanceTable>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

@@ -13,13 +13,19 @@
 
 <!-- $Id: PmaFolderSearchForm.mfd.xml,v 1.1 2007/05/25 08:43:59 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.paymentalloc.support.ui.PmaFolderSearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.paymentalloc.resources.formelements#PmaFolderSearchForm.Title" width="400" height="250" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.paymentalloc.support.ui.PmaFolderSearchForm" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.paymentalloc.resources.formelements#PmaFolderSearchForm.Title"
+          width="400" height="250">
 
-	<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
-		<jfd:button id="сhooseButton" text="resource://com.mg.merp.paymentalloc.resources.formelements#Choose" actionListener="Choose" />
-	</jfd:toolBar>
+  <jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+    <jfd:button id="сhooseButton"
+                text="resource://com.mg.merp.paymentalloc.resources.formelements#Choose"
+                actionListener="Choose"/>
+  </jfd:toolBar>
 
-	<jfd:maintenanceTree id="tree" alignment="expand_expand" scroll="true" >
-	</jfd:maintenanceTree> 
+  <jfd:maintenanceTree id="tree" alignment="expand_expand" scroll="true">
+  </jfd:maintenanceTree>
 
 </jfd:form>

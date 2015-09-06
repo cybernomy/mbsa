@@ -14,17 +14,17 @@
 <!-- $Id: link.xml,v 1.1 2006/12/03 13:24:11 konyashkina Exp $ -->
 
 <link version="1.0">
-  
+
   <linkitem topic="docgroup_links">
-     <linkentry target="docgroup_html" text="Группы документов" />
+    <linkentry target="docgroup_html" text="Группы документов"/>
   </linkitem>
-  
+
   <linkitem topic="pml_links">
-     <linkentry target="pml_html" text="Журнал платежей" />
-     <linkentry target="patterns_html" text="Образцы записей" />
-     <linkentry target="docs_html" text="Документы, связанные с платежом" />
-     <linkentry target="cond_html" text="Условия отбора" />
- </linkitem>
+    <linkentry target="pml_html" text="Журнал платежей"/>
+    <linkentry target="patterns_html" text="Образцы записей"/>
+    <linkentry target="docs_html" text="Документы, связанные с платежом"/>
+    <linkentry target="cond_html" text="Условия отбора"/>
+  </linkitem>
 
 </link>
 	

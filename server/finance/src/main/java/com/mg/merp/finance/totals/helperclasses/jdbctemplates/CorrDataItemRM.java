@@ -14,31 +14,29 @@
  */
 package com.mg.merp.finance.totals.helperclasses.jdbctemplates;
 
-import java.sql.*;
 import com.mg.framework.api.jdbc.RowMapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  * @author Valentin A. Poroxnenko
  * @version $Id: CorrDataItemRM.java,v 1.3 2006/07/05 09:06:30 poroxnenko Exp $
  */
-public class CorrDataItemRM implements RowMapper<CorrDataItem>
-{
-	public CorrDataItem mapRow(ResultSet rs, int rowNum) throws SQLException
-	{
-		CorrDataItem cdi = new CorrDataItem();
-		
-		try
-		{
-		  cdi.accId = rs.getInt("SRCACC_ID");
-		}catch (Exception ex)
-		 {
-			cdi.accId = rs.getInt("DSTACC_ID");
-		 }
-		
-		cdi.accCode = rs.getString("ACC_CODE").trim();
-		
-		cdi.sumCur_Nat = new IncomeOutcomeItem(rs.getBigDecimal("sumnat"), rs.getBigDecimal("sumcur"));
-		return cdi;
-	}
+public class CorrDataItemRM implements RowMapper<CorrDataItem> {
+  public CorrDataItem mapRow(ResultSet rs, int rowNum) throws SQLException {
+    CorrDataItem cdi = new CorrDataItem();
+
+    try {
+      cdi.accId = rs.getInt("SRCACC_ID");
+    } catch (Exception ex) {
+      cdi.accId = rs.getInt("DSTACC_ID");
+    }
+
+    cdi.accCode = rs.getString("ACC_CODE").trim();
+
+    cdi.sumCur_Nat = new IncomeOutcomeItem(rs.getBigDecimal("sumnat"), rs.getBigDecimal("sumcur"));
+    return cdi;
+  }
 
 }

@@ -14,8 +14,6 @@
  */
 package com.mg.merp.warehouse.support.ui;
 
-import java.util.Set;
-
 import com.mg.framework.service.ApplicationDictionaryLocator;
 import com.mg.framework.support.ui.widget.TableEJBQLFieldDef;
 import com.mg.framework.utils.DatabaseUtils;
@@ -23,39 +21,41 @@ import com.mg.merp.document.generic.ui.GoodsDocumentMaintenanceForm;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 import com.mg.merp.warehouse.OrderSpecSupServiceLocal;
 
+import java.util.Set;
+
 /**
  * Контроллер формы поддержки заказов постащикам
- * 
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: OrderHeadSupMt.java,v 1.8 2008/12/25 10:26:25 safonov Exp $
  */
 public class OrderHeadSupMt extends GoodsDocumentMaintenanceForm {
-	/**
-	 * контекст импорта для SearchHelp поля "Ответственный"
-	 */
-	protected String[] contractorResponsibleKinds;
-	
-	public OrderHeadSupMt() throws Exception {
-		super();
-		contractorThroughKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-		contractorResponsibleKinds = new String[] {ContractorSearchForm.CONTRACTOR_EMPLOYEE, ContractorSearchForm.CONTRACTOR_ORGUNIT};
-		
-		specService = ((OrderSpecSupServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/warehouse/OrderSpecSup"));
+  /**
+   * контекст импорта для SearchHelp поля "Ответственный"
+   */
+  protected String[] contractorResponsibleKinds;
 
-		spec.initController(specService, new OrderDocSpecMaintenanceEJBQLTableModel() {			
-			
-			/* (non-Javadoc)
-			 * @see com.mg.merp.warehouse.support.ui.GoodsDocMaintenanceEJBQLTableModel#getDefaultFieldDefsSet()
-			 */			
-			@Override
-			protected Set<TableEJBQLFieldDef> getDefaultFieldDefsSet() {
-				return DatabaseUtils.embedAddinFieldsDefaultEJBQLFieldDefs(super.getDefaultFieldDefsSet(), service);
-			}
+  public OrderHeadSupMt() throws Exception {
+    super();
+    contractorThroughKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+    contractorResponsibleKinds = new String[]{ContractorSearchForm.CONTRACTOR_EMPLOYEE, ContractorSearchForm.CONTRACTOR_ORGUNIT};
 
-		});
+    specService = ((OrderSpecSupServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/warehouse/OrderSpecSup"));
 
-		addMasterModelListener(spec);
-	}
+    spec.initController(specService, new OrderDocSpecMaintenanceEJBQLTableModel() {
+
+      /* (non-Javadoc)
+       * @see com.mg.merp.warehouse.support.ui.GoodsDocMaintenanceEJBQLTableModel#getDefaultFieldDefsSet()
+       */
+      @Override
+      protected Set<TableEJBQLFieldDef> getDefaultFieldDefsSet() {
+        return DatabaseUtils.embedAddinFieldsDefaultEJBQLFieldDefs(super.getDefaultFieldDefsSet(), service);
+      }
+
+    });
+
+    addMasterModelListener(spec);
+  }
 
 }
 

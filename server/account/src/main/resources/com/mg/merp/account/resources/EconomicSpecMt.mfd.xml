@@ -13,33 +13,40 @@
 
 <!-- $Id: EconomicSpecMt.mfd.xml,v 1.6 2008/10/31 11:39:24 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.EconomicSpecMt" title="resource://com.mg.merp.account.resources.formelements#EconomicSpec.FormMt.Title" helpTopic="account#econospec_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.account.support.ui.EconomicSpecMt"
+          title="resource://com.mg.merp.account.resources.formelements#EconomicSpec.FormMt.Title"
+          helpTopic="account#econospec_html">
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" alignment="expand_top" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title" >		
-			<jfd:include name="com/mg/merp/account/resources/AccDebetMacros.mfd.xml" />		
-			<jfd:include name="com/mg/merp/account/resources/AccKreditMacros.mfd.xml" />			
-			<jfd:field id="AccBatchDb" />
-			<jfd:field id="AccBatchKt" sameLine="true" />
-			<jfd:field id="Catalog" />	
-			<jfd:field id="Catalog.Measure1" sameLine="true"/>	
-			<jfd:field id="Quantity" />													
-			<jfd:button id="CalcDb" text="resource://com.mg.merp.account.resources.formelements#EconSpec.Calc.Button" sameLine="true" actionListener="CalculateOutCost" /> 									
-			<jfd:field id="AccDb.Currency" />	
-			<jfd:field id="CurCource" sameLine="true"/>													
-			<jfd:field id="SummaCur" />														
-			<jfd:field id="SummaNat" sameLine="true"/>
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />		
-		</jfd:container>
-		<jfd:container id="featureFields" alignment="expand_top" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.account.resources.formelements#EconSpec.Feature" >		
-			<jfd:field id="Feature1" />
-			<jfd:field id="Feature2"/>
-			<jfd:field id="Feature3"/>
-			<jfd:field id="Feature4" />
-			<jfd:field id="Feature5"/>		
-		</jfd:container>
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" alignment="expand_top" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title">
+      <jfd:include name="com/mg/merp/account/resources/AccDebetMacros.mfd.xml"/>
+      <jfd:include name="com/mg/merp/account/resources/AccKreditMacros.mfd.xml"/>
+      <jfd:field id="AccBatchDb"/>
+      <jfd:field id="AccBatchKt" sameLine="true"/>
+      <jfd:field id="Catalog"/>
+      <jfd:field id="Catalog.Measure1" sameLine="true"/>
+      <jfd:field id="Quantity"/>
+      <jfd:button id="CalcDb"
+                  text="resource://com.mg.merp.account.resources.formelements#EconSpec.Calc.Button"
+                  sameLine="true" actionListener="CalculateOutCost"/>
+      <jfd:field id="AccDb.Currency"/>
+      <jfd:field id="CurCource" sameLine="true"/>
+      <jfd:field id="SummaCur"/>
+      <jfd:field id="SummaNat" sameLine="true"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="featureFields" alignment="expand_top" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.account.resources.formelements#EconSpec.Feature">
+      <jfd:field id="Feature1"/>
+      <jfd:field id="Feature2"/>
+      <jfd:field id="Feature3"/>
+      <jfd:field id="Feature4"/>
+      <jfd:field id="Feature5"/>
+    </jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

@@ -14,16 +14,16 @@
  */
 package com.mg.merp.core.support.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.framework.api.metadata.CustomFieldsManager;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис менеджера управления пользовательскими полями
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: CustomFieldsManagerServiceMBean.java,v 1.1 2007/01/25 15:44:35 safonov Exp $
  */
 public interface CustomFieldsManagerServiceMBean extends CustomFieldsManager,
-		ServiceMBean {
+    ServiceMBean {
 }

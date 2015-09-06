@@ -19,24 +19,25 @@ import com.mg.framework.generic.ui.DefaultMaintenanceForm;
 import com.mg.merp.document.support.DocumentUtils;
 
 /**
- * Контроллер формы поддержки "Изменение контракта" 
- * 
+ * Контроллер формы поддержки "Изменение контракта"
+ *
  * @author Artem V. Sharapov
  * @version $Id: ContractModifyDocumentMt.java,v 1.1 2007/11/22 15:59:26 sharapov Exp $
  */
 public class ContractModifyDocumentMt extends DefaultMaintenanceForm {
-	
-	private final static String DOCUMENT_ATTRIBUTE_NAME = "Document"; //$NON-NLS-1$
-	
-	public ContractModifyDocumentMt() {
-	}
-	
-	/**
-	 * Обработчик просмотра документа
-	 * @param event - событие
-	 */
-	public void onActionViewDocument(WidgetEvent event) {
-		DocumentUtils.viewDocument(getEntity(), DOCUMENT_ATTRIBUTE_NAME);
-	}
+
+  private final static String DOCUMENT_ATTRIBUTE_NAME = "Document"; //$NON-NLS-1$
+
+  public ContractModifyDocumentMt() {
+  }
+
+  /**
+   * Обработчик просмотра документа
+   *
+   * @param event - событие
+   */
+  public void onActionViewDocument(WidgetEvent event) {
+    DocumentUtils.viewDocument(getEntity(), DOCUMENT_ATTRIBUTE_NAME);
+  }
 
 }

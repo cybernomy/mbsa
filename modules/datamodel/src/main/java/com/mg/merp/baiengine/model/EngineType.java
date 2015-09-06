@@ -21,31 +21,31 @@ import com.mg.framework.api.annotations.EnumConstantText;
  * @author leonova
  * @version $Id: EngineType.java,v 1.1 2006/10/12 11:41:37 safonov Exp $
  */
-@DataItemName ("BAi.EngineType")
+@DataItemName("BAi.EngineType")
 public enum EngineType {
-	/**
-	 * Java
-	 * 
-	 * @since 3.0
-	 */
-	@EnumConstantText ("resource://com.mg.merp.baiengine.resources.dataitemlabels#EngineType.JavaEngine")
-	JAVA_ENGINE,
-	
-	/**
-	 * BeanShell
-	 * 
-	 * Не поддерживается в текущей реализации
-	 */
-	@EnumConstantText ("resource://com.mg.merp.baiengine.resources.dataitemlabels#EngineType.BeanShellEngine")
-	BEANSHELL_ENDINE,
-	
-	/**
-	 * Pascal
-	 * 
-	 * @deprecated не поддерживается начиная в версии 4.x
-	 */
-	@EnumConstantText ("resource://com.mg.merp.baiengine.resources.dataitemlabels#EngineType.PascalEngine")
-	@Deprecated
-	PASCAL_ENGINE,
+  /**
+   * Java
+   *
+   * @since 3.0
+   */
+  @EnumConstantText("resource://com.mg.merp.baiengine.resources.dataitemlabels#EngineType.JavaEngine")
+  JAVA_ENGINE,
+
+  /**
+   * BeanShell
+   *
+   * Не поддерживается в текущей реализации
+   */
+  @EnumConstantText("resource://com.mg.merp.baiengine.resources.dataitemlabels#EngineType.BeanShellEngine")
+  BEANSHELL_ENDINE,
+
+  /**
+   * Pascal
+   *
+   * @deprecated не поддерживается начиная в версии 4.x
+   */
+  @EnumConstantText("resource://com.mg.merp.baiengine.resources.dataitemlabels#EngineType.PascalEngine")
+  @Deprecated
+  PASCAL_ENGINE,
 
 }

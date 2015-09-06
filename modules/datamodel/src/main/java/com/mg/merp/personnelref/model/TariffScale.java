@@ -21,135 +21,140 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: TariffScale.java,v 1.4 2006/10/12 11:50:17 safonov Exp $
  */
 public class TariffScale extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.baiengine.model.Repository FirstClassAlg;
+  private com.mg.merp.baiengine.model.Repository FirstClassAlg;
 
-	private java.lang.String SCode;
+  private java.lang.String SCode;
 
-	private java.lang.String SName;
+  private java.lang.String SName;
 
-	private TariffingScaleType SType;
+  private TariffingScaleType SType;
 
-	private java.util.Date BeginDate;
+  private java.util.Date BeginDate;
 
-	private java.util.Set SetOfPrefTariffScaleClass;
+  private java.util.Set SetOfPrefTariffScaleClass;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public TariffScale() {
-	}
+  /**
+   * default constructor
+   */
+  public TariffScale() {
+  }
 
-	/** constructor with id */
-	public TariffScale(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public TariffScale(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
+  // Property accessors
 
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  /**
+   *
+   */
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.TariffScale.FirstClassAlg")
-	public com.mg.merp.baiengine.model.Repository getFirstClassAlg() {
-		return this.FirstClassAlg;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setFirstClassAlg(
-			com.mg.merp.baiengine.model.Repository AlgRepository) {
-		this.FirstClassAlg = AlgRepository;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.TariffScale.FirstClassAlg")
+  public com.mg.merp.baiengine.model.Repository getFirstClassAlg() {
+    return this.FirstClassAlg;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.TariffScale.Code")
-	public java.lang.String getSCode() {
-		return this.SCode;
-	}
+  public void setFirstClassAlg(
+      com.mg.merp.baiengine.model.Repository AlgRepository) {
+    this.FirstClassAlg = AlgRepository;
+  }
 
-	public void setSCode(java.lang.String Scode) {
-		this.SCode = Scode;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.TariffScale.Code")
+  public java.lang.String getSCode() {
+    return this.SCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.TariffScale.Name")
-	public java.lang.String getSName() {
-		return this.SName;
-	}
+  public void setSCode(java.lang.String Scode) {
+    this.SCode = Scode;
+  }
 
-	public void setSName(java.lang.String Sname) {
-		this.SName = Sname;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.TariffScale.Name")
+  public java.lang.String getSName() {
+    return this.SName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.TariffingScale.TariffingScaleType")
-	public TariffingScaleType getSType() {
-		return this.SType;
-	}
+  public void setSName(java.lang.String Sname) {
+    this.SName = Sname;
+  }
 
-	public void setSType(TariffingScaleType Stype) {
-		this.SType = Stype;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.TariffingScale.TariffingScaleType")
+  public TariffingScaleType getSType() {
+    return this.SType;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.TariffScale.BeginDate")
-	public java.util.Date getBeginDate() {
-		return this.BeginDate;
-	}
+  public void setSType(TariffingScaleType Stype) {
+    this.SType = Stype;
+  }
 
-	public void setBeginDate(java.util.Date Begindate) {
-		this.BeginDate = Begindate;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.TariffScale.BeginDate")
+  public java.util.Date getBeginDate() {
+    return this.BeginDate;
+  }
 
-	/**
-	 * 
-	 */
+  public void setBeginDate(java.util.Date Begindate) {
+    this.BeginDate = Begindate;
+  }
 
-	public java.util.Set getSetOfPrefTariffScaleClass() {
-		return this.SetOfPrefTariffScaleClass;
-	}
+  /**
+   *
+   */
 
-	public void setSetOfPrefTariffScaleClass(
-			java.util.Set SetOfPrefTariffScaleClass) {
-		this.SetOfPrefTariffScaleClass = SetOfPrefTariffScaleClass;
-	}
+  public java.util.Set getSetOfPrefTariffScaleClass() {
+    return this.SetOfPrefTariffScaleClass;
+  }
+
+  public void setSetOfPrefTariffScaleClass(
+      java.util.Set SetOfPrefTariffScaleClass) {
+    this.SetOfPrefTariffScaleClass = SetOfPrefTariffScaleClass;
+  }
 
 }

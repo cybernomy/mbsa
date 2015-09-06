@@ -17,21 +17,21 @@ package com.mg.framework.api;
 import com.mg.framework.support.Messages;
 
 /**
- * ИС блокировки объекта, генерируется в случае попытки блокировки объекта,
- * заблокированного другой транзакцией
- * 
+ * ИС блокировки объекта, генерируется в случае попытки блокировки объекта, заблокированного другой
+ * транзакцией
+ *
  * @author Oleg V. Safonov
  * @version $Id: LockingException.java,v 1.1 2006/12/15 09:26:17 safonov Exp $
  */
 @javax.ejb.ApplicationException
 public class LockingException extends ApplicationException {
 
-	public LockingException() {
-		super(Messages.getInstance().getMessage(Messages.LOCK_FAILED));
-	}
-	
-	public LockingException(Throwable cause) {
-		super(Messages.getInstance().getMessage(Messages.LOCK_FAILED), cause);
-	}
-	
+  public LockingException() {
+    super(Messages.getInstance().getMessage(Messages.LOCK_FAILED));
+  }
+
+  public LockingException(Throwable cause) {
+    super(Messages.getInstance().getMessage(Messages.LOCK_FAILED), cause);
+  }
+
 }

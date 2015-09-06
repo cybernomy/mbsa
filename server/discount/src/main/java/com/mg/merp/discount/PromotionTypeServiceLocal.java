@@ -19,15 +19,15 @@ import com.mg.merp.discount.model.PromotionType;
 
 /**
  * Бизнес-компонент "Тип рекламного мероприятия"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: PromotionTypeServiceLocal.java,v 1.1 2007/10/30 13:55:56 sharapov Exp $
  */
 public interface PromotionTypeServiceLocal extends DataBusinessObjectService<PromotionType, Integer> {
-	
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/discount/PromotionType"; //$NON-NLS-1$
-	
+
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/discount/PromotionType"; //$NON-NLS-1$
+
 }

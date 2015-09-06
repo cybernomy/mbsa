@@ -14,42 +14,42 @@
  */
 package com.mg.merp.manufacture.generic;
 
-import java.io.Serializable;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.manufacture.model.JobRouteResource;
 import com.mg.merp.mfreference.support.MfUtils;
 
+import java.io.Serializable;
+
 /**
  * Базовый класс сервисов ресурсов операций ЗНП
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: AbstractJobResource.java,v 1.2 2007/08/21 15:27:26 safonov Exp $
  */
 public abstract class AbstractJobResource<T extends JobRouteResource, ID extends Serializable> extends
-		AbstractPOJODataBusinessObjectServiceBean<T, ID> {
+    AbstractPOJODataBusinessObjectServiceBean<T, ID> {
 
-	protected void doAdjust(T entity) {
-		MfUtils.adjustEffectiveDate(entity);
-	}
+  protected void doAdjust(T entity) {
+    MfUtils.adjustEffectiveDate(entity);
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onInitialize(T)
-	 */
-	@Override
-	protected void onInitialize(T entity) {
-		entity.setStdCostDetail(MfUtils.createCostDetail());
-		entity.setActCostDetail(MfUtils.createCostDetail());
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onInitialize(T)
+   */
+  @Override
+  protected void onInitialize(T entity) {
+    entity.setStdCostDetail(MfUtils.createCostDetail());
+    entity.setActCostDetail(MfUtils.createCostDetail());
+  }
 
-	@Override
-	protected void onCreate(T entity) {
-		doAdjust(entity);
-	}
+  @Override
+  protected void onCreate(T entity) {
+    doAdjust(entity);
+  }
 
-	@Override
-	protected void onStore(T entity) {
-		doAdjust(entity);
-	}
+  @Override
+  protected void onStore(T entity) {
+    doAdjust(entity);
+  }
 
 }

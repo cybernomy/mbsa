@@ -23,78 +23,79 @@ import com.mg.merp.document.generic.AbstractCreateDocumentDocFlowPlugin;
 
 /**
  * Реализация фабрики реализаций этапа ДО "Создать документ на комплектующие"
- * 
+ *
  * @author Konstantin S. Alikaev
- * @version $Id: CreateDocOnComponentsDocFlowPluginFactory.java,v 1.2 2009/02/04 09:35:26 safonov Exp $
+ * @version $Id: CreateDocOnComponentsDocFlowPluginFactory.java,v 1.2 2009/02/04 09:35:26 safonov
+ *          Exp $
  */
 public class CreateDocOnComponentsDocFlowPluginFactory extends AbstractDocFlowPluginFactory {
 
-	public final static int FACTORY_IDENTIFIER = 29;
+  public final static int FACTORY_IDENTIFIER = 29;
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
-	 */
-	@Override
-	protected DocFlowPlugin doCreatePlugin() {
-		return new AbstractCreateDocumentDocFlowPlugin() {
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
+   */
+  @Override
+  protected DocFlowPlugin doCreatePlugin() {
+    return new AbstractCreateDocumentDocFlowPlugin() {
 
-			/*
-			 * (non-Javadoc)
-			 * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doExecute()
-			 */
-			@Override
-			protected void doExecute() throws Exception {
-				DocumentProcessorServiceLocal service = (DocumentProcessorServiceLocal) ApplicationDictionaryLocator.locate()
-					.getBusinessService(DocumentProcessorServiceLocal.LOCAL_SERVICE_NAME);
-				service.processCreateDocOnComponents(getParams(), new CreateDocumentDocFlowListener() {
+      /*
+       * (non-Javadoc)
+       * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doExecute()
+       */
+      @Override
+      protected void doExecute() throws Exception {
+        DocumentProcessorServiceLocal service = (DocumentProcessorServiceLocal) ApplicationDictionaryLocator.locate()
+            .getBusinessService(DocumentProcessorServiceLocal.LOCAL_SERVICE_NAME);
+        service.processCreateDocOnComponents(getParams(), new CreateDocumentDocFlowListener() {
 
-					public void canceled() {
-						cancel();
-					}
+          public void canceled() {
+            cancel();
+          }
 
-					public void completed() {
-						complete();
-					}
-				});
-			}
+          public void completed() {
+            complete();
+          }
+        });
+      }
 
-			/*
-			 * (non-Javadoc)
-			 * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doRoolback()
-			 */
-			@Override
-			protected void doRoolback() throws Exception {
-				DocumentProcessorServiceLocal service = (DocumentProcessorServiceLocal) ApplicationDictionaryLocator.locate()
-					.getBusinessService(DocumentProcessorServiceLocal.LOCAL_SERVICE_NAME);
-				service.rollbackCreateDocOnComponents(getParams(), new CreateDocumentDocFlowListener() {
+      /*
+       * (non-Javadoc)
+       * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doRoolback()
+       */
+      @Override
+      protected void doRoolback() throws Exception {
+        DocumentProcessorServiceLocal service = (DocumentProcessorServiceLocal) ApplicationDictionaryLocator.locate()
+            .getBusinessService(DocumentProcessorServiceLocal.LOCAL_SERVICE_NAME);
+        service.rollbackCreateDocOnComponents(getParams(), new CreateDocumentDocFlowListener() {
 
-					public void canceled() {
-						cancel();
-					}
+          public void canceled() {
+            cancel();
+          }
 
-					public void completed() {
-						complete();
-					}
-				});
-			}
+          public void completed() {
+            complete();
+          }
+        });
+      }
 
-		};
-	}
+    };
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
-	 */
-	@Override
-	public int getIdentifier() {
-		return FACTORY_IDENTIFIER;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
+   */
+  @Override
+  public int getIdentifier() {
+    return FACTORY_IDENTIFIER;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
-	 */
-	@Override
-	public String getName() {
-		return "Create document on components";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
+   */
+  @Override
+  public String getName() {
+    return "Create document on components";
+  }
 
 }

@@ -12,9 +12,11 @@
 <!-- ======================================================================= -->
 
 <!-- $Id: AllocDocumentAttributeMacros.xml,v 1.1 2007/05/04 06:31:27 arychkov Exp $ -->
-	
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="document" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.DocAttribute" >
-	<jfd:field id="DocType" showLabel="false" alignment="left_expand"/>
-	<jfd:field id="DocNumber" showLabel="false" alignment="expand_expand"/>
-	<jfd:field id="DocDate" showLabel="false" alignment="right_expand" />
+
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="document" layout="jfd:box"
+               longField="true"
+               label="resource://com.mg.merp.document.resources.formelements#Document.DocAttribute">
+  <jfd:field id="DocType" showLabel="false" alignment="left_expand"/>
+  <jfd:field id="DocNumber" showLabel="false" alignment="expand_expand"/>
+  <jfd:field id="DocDate" showLabel="false" alignment="right_expand"/>
 </jfd:container>

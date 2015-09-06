@@ -1,18 +1,19 @@
 <refentry id="equation.properties">
-<refnamediv>
-<refname>equation.properties</refname>
-<refpurpose>Properties associated with a equation</refpurpose>
-</refnamediv>
+  <refnamediv>
+    <refname>equation.properties</refname>
+    <refpurpose>Properties associated with a equation</refpurpose>
+  </refnamediv>
 
-<refsynopsisdiv>
-<src:fragment id='equation.properties.frag'>
-<xsl:attribute-set name="equation.properties" use-attribute-sets="formal.object.properties"/>
-</src:fragment>
-</refsynopsisdiv>
+  <refsynopsisdiv>
+    <src:fragment id='equation.properties.frag'>
+      <xsl:attribute-set name="equation.properties" use-attribute-sets="formal.object.properties"/>
+    </src:fragment>
+  </refsynopsisdiv>
 
-<refsect1><title>Description</title>
+  <refsect1>
+    <title>Description</title>
 
-<para>The styling for equations.</para>
+    <para>The styling for equations.</para>
 
-</refsect1>
+  </refsect1>
 </refentry>

@@ -17,12 +17,10 @@ package com.mg.merp.crm;
 import com.mg.merp.crm.model.OperationKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: OperationKindServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface OperationKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<OperationKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<OperationKind, Integer> {
 
 }

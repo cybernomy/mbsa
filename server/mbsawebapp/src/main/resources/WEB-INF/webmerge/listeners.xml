@@ -1,10 +1,10 @@
-	<listener>
-		<!-- MessAdmin listener -->
-		<listener-class>clime.messadmin.core.MessAdminListener</listener-class>
-	</listener>
+<listener>
+  <!-- MessAdmin listener -->
+  <listener-class>clime.messadmin.core.MessAdminListener</listener-class>
+</listener>
 
-	<listener>
-		<listener-class>
-			com.ulcjava.container.servlet.server.HttpSessionListener
-		</listener-class>
-	</listener>	
+<listener>
+<listener-class>
+  com.ulcjava.container.servlet.server.HttpSessionListener
+</listener-class>
+</listener>

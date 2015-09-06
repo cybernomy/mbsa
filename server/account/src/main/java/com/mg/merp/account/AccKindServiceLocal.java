@@ -17,12 +17,10 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.AccKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: AccKindServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface AccKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<AccKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<AccKind, Integer> {
 
 }

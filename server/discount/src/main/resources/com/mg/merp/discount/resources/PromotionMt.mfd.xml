@@ -13,31 +13,36 @@
 
 <!-- $Id: PromotionMt.mfd.xml,v 1.2 2007/11/14 13:48:58 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.discount.support.ui.PromotionMt" title="resource://com.mg.merp.discount.resources.formelements#PromotionMt.Title" helpTopic="discount#promomain_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.discount.support.ui.PromotionMt"
+          title="resource://com.mg.merp.discount.resources.formelements#PromotionMt.Title"
+          helpTopic="discount#promomain_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.discount.resources.formelements#Common">
-			<jfd:field id="PromotionType" />
-			<jfd:field id="Number" sameLine="true" />
-			<jfd:field id="Code" />
-			<jfd:field id="DateApprove" sameLine="true" />
- 			<jfd:field id="Name" />
- 			<jfd:field id="DateFrom" />
- 			<jfd:field id="DateTill" sameLine="true"/>
-			<jfd:field id="IsActive" />
-			<jfd:field id="Priority" sameLine="true" />
-			<jfd:field id="IsApplyDiscountGroup" />
-			<jfd:field id="IsApplyDiscountOnDoc" sameLine="true" />
-			<jfd:field id="Comment" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																						
-		</jfd:container>
-		
-		<jfd:maintenanceTable id="promotionLineTable" alignment="expand_expand" scroll="true" tabTitle="resource://com.mg.merp.discount.resources.formelements#PromotionMt.Positions">
-		</jfd:maintenanceTable>			
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.discount.resources.formelements#Common">
+      <jfd:field id="PromotionType"/>
+      <jfd:field id="Number" sameLine="true"/>
+      <jfd:field id="Code"/>
+      <jfd:field id="DateApprove" sameLine="true"/>
+      <jfd:field id="Name"/>
+      <jfd:field id="DateFrom"/>
+      <jfd:field id="DateTill" sameLine="true"/>
+      <jfd:field id="IsActive"/>
+      <jfd:field id="Priority" sameLine="true"/>
+      <jfd:field id="IsApplyDiscountGroup"/>
+      <jfd:field id="IsApplyDiscountOnDoc" sameLine="true"/>
+      <jfd:field id="Comment"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:maintenanceTable id="promotionLineTable" alignment="expand_expand" scroll="true"
+                          tabTitle="resource://com.mg.merp.discount.resources.formelements#PromotionMt.Positions">
+    </jfd:maintenanceTable>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

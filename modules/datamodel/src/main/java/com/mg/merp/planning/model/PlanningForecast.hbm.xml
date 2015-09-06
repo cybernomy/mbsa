@@ -1,68 +1,75 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.planning.model.ForecastType" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.planning.model.ForecastType</param>
-	</typedef>
-	<typedef name="com.mg.merp.planning.model.ForecastMethod" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.planning.model.ForecastMethod</param>
-	</typedef>	
-	
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <typedef name="com.mg.merp.planning.model.ForecastType"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.planning.model.ForecastType</param>
+  </typedef>
+  <typedef name="com.mg.merp.planning.model.ForecastMethod"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.planning.model.ForecastMethod</param>
+  </typedef>
+
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.planning.model.PlanningForecast" table="PP_PLANNING_FORECAST">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">PP_PLANNING_FORECAST_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Measure" class="com.mg.merp.reference.model.Measure">
-      <column name="MEASURE_ID" not-null="false" />
+      <column name="MEASURE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="PlanningLevel" class="com.mg.merp.mfreference.model.PlanningLevel">
-      <column name="PLANNING_LEVEL_ID" not-null="false" />
+      <column name="PLANNING_LEVEL_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Contractor" class="com.mg.merp.reference.model.Contractor">
-      <column name="WAREHOUSE_ID" not-null="false" />
+      <column name="WAREHOUSE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="ForecastVersion" class="com.mg.merp.planning.model.ForecastVersion">
-      <column name="FORECAST_VERSION_ID" not-null="false" />
+      <column name="FORECAST_VERSION_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="PlanningItem" class="com.mg.merp.planning.model.GenericItem">
-      <column name="PLANNING_ITEM_ID" not-null="false" />
+      <column name="PLANNING_ITEM_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Catalog" class="com.mg.merp.reference.model.Catalog">
-      <column name="CATALOG_ID" not-null="false" />
+      <column name="CATALOG_ID" not-null="false"/>
     </many-to-one>
     <property name="ForecastType" type="com.mg.merp.planning.model.ForecastType">
-      <column name="FORECAST_TYPE" not-null="false" sql-type="SMALLINT" />
+      <column name="FORECAST_TYPE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="ForecastMethod" type="com.mg.merp.planning.model.ForecastMethod">
-      <column name="FORECAST_METHOD" not-null="false" sql-type="SMALLINT" />
+      <column name="FORECAST_METHOD" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="BucketOffset" type="java.lang.Short">
-      <column name="BUCKET_OFFSET" not-null="false" sql-type="SMALLINT" />
+      <column name="BUCKET_OFFSET" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="RequiredDate" type="java.util.Date">
-      <column name="REQUIRED_DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="REQUIRED_DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="ForecastQuantity" type="java.math.BigDecimal">
-      <column name="FORECAST_QUANTITY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="FORECAST_QUANTITY" scale="3" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="BucketStartDate" type="java.util.Date">
-      <formula>(select plb.start_date from pp_planning_level_bucket plb where (plb.planning_level_id = PLANNING_LEVEL_ID) and (plb.bucket_offset = BUCKET_OFFSET))</formula>
+      <formula>(select plb.start_date from pp_planning_level_bucket plb where (plb.planning_level_id
+        = PLANNING_LEVEL_ID) and (plb.bucket_offset = BUCKET_OFFSET))
+      </formula>
     </property>
     <property name="BucketEndDate" type="java.util.Date">
-      <formula>(select plb.end_date from pp_planning_level_bucket plb where (plb.planning_level_id = PLANNING_LEVEL_ID) and (plb.bucket_offset = BUCKET_OFFSET))</formula>
+      <formula>(select plb.end_date from pp_planning_level_bucket plb where (plb.planning_level_id =
+        PLANNING_LEVEL_ID) and (plb.bucket_offset = BUCKET_OFFSET))
+      </formula>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

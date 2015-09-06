@@ -18,15 +18,15 @@ import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
  * Контроллер формы поддержки спецификации приходных ордеров
- * 
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: WarehouseDocumentSpecInMt.java,v 1.3 2006/08/22 08:07:44 leonova Exp $
  */
 public class WarehouseDocumentSpecInMt extends GoodsDocumentSpecMaintenanceForm {
 
-	public WarehouseDocumentSpecInMt() throws Exception {
-		super();
+  public WarehouseDocumentSpecInMt() throws Exception {
+    super();
 
-	}
-	
+  }
+
 }

@@ -16,10 +16,10 @@ package com.mg.merp.paymentcontrol;
 
 /**
  * Бизнес-компонент "Планирование платежей"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: PlanServiceLocal.java,v 1.3 2008/01/29 13:31:45 safonov Exp $
  */
 public interface PlanServiceLocal
-		extends com.mg.framework.api.BusinessObjectService {
+    extends com.mg.framework.api.BusinessObjectService {
 }

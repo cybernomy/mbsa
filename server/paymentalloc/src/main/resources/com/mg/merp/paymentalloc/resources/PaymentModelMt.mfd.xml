@@ -13,28 +13,32 @@
 
 <!-- $Id: PaymentModelMt.mfd.xml,v 1.8 2007/06/04 05:13:36 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentModel.FormMt.Title" helpTopic="paymentalloc#patterns_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentModel.FormMt.Title"
+          helpTopic="paymentalloc#patterns_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="commonFields" layout="jfd:defaultMtLayout" title="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.Total.Tab" >			
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="ModelName" />
-		<jfd:field id="DestFolder" />
-	 	<jfd:field id="PDate" />	
-	 	<jfd:field id="Planned" sameLine="true" />
-	 	<jfd:field id="Name" />		 	
-		<jfd:include name="com/mg/merp/paymentalloc/resources/CurrencyModelMacros.xml" />							 	
-	 	<jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml" /> 
-	 	<jfd:field id="Description" />			
-	 	<jfd:field id="Comments"/>				 	
- 	 	<jfd:include name="com/mg/merp/paymentalloc/resources/AllocDocumentAttributeMacros.xml" />  			
-		<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
-		<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
- 	 	<jfd:include name="com/mg/merp/paymentalloc/resources/PartnerFromToMacros.xml" />  					 	
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 												 	
- 	</jfd:container>
+  <jfd:container id="commonFields" layout="jfd:defaultMtLayout"
+                 title="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.Total.Tab">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="ModelName"/>
+    <jfd:field id="DestFolder"/>
+    <jfd:field id="PDate"/>
+    <jfd:field id="Planned" sameLine="true"/>
+    <jfd:field id="Name"/>
+    <jfd:include name="com/mg/merp/paymentalloc/resources/CurrencyModelMacros.xml"/>
+    <jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml"/>
+    <jfd:field id="Description"/>
+    <jfd:field id="Comments"/>
+    <jfd:include name="com/mg/merp/paymentalloc/resources/AllocDocumentAttributeMacros.xml"/>
+    <jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml"/>
+    <jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml"/>
+    <jfd:include name="com/mg/merp/paymentalloc/resources/PartnerFromToMacros.xml"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

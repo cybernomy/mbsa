@@ -14,13 +14,13 @@
  */
 package com.mg.merp.personnelref.support.ui;
 
+import com.mg.framework.support.ui.widget.tree.EntityTreeNode;
+import com.mg.merp.personnelref.model.StaffListUnit;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.mg.framework.support.ui.widget.tree.EntityTreeNode;
-import com.mg.merp.personnelref.model.StaffListUnit;
 
 /**
  * @author Oleg V. Safonov
@@ -28,49 +28,48 @@ import com.mg.merp.personnelref.model.StaffListUnit;
  */
 public class StaffListUnitTreeNode extends EntityTreeNode {
 
-	public StaffListUnitTreeNode(StaffListUnitTreeNode parent, StaffListUnit entity) {
-		super(parent);
-		this.entity = entity;
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.support.ui.widget.tree.EntityTreeNode#doGetPrimaryKey()
-	 */
-	@Override
-	protected Serializable doGetPrimaryKey() {
-		return (Serializable) entity.getPrimaryKey();
-	}
+  public StaffListUnitTreeNode(StaffListUnitTreeNode parent, StaffListUnit entity) {
+    super(parent);
+    this.entity = entity;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.support.ui.widget.tree.TreeNode#getText()
-	 */
-	@Override
-	public String getText() {
-		return ((StaffListUnit) entity).getUName();
-	}
+  public static StaffListUnitTreeNode createTree(List<StaffListUnit> folders) {
+    StaffListUnitTreeNode root = null;
+    Map<Integer, StaffListUnitTreeNode> nodeMap = new HashMap<Integer, StaffListUnitTreeNode>();
+    for (StaffListUnit folder : folders) {
+      if (folder.getParent() == null) {
+        root = new StaffListUnitTreeNode(null, folder);
+        nodeMap.put(folder.getId(), root);
+      } else {
+        StaffListUnitTreeNode parentNode, node;
+        parentNode = nodeMap.get(folder.getParent().getId());
+        if (parentNode != null) {
+          node = new StaffListUnitTreeNode(parentNode, folder);
+          nodeMap.put(folder.getId(), node);
+          parentNode.addChild(node);
+        }
+      }
+    }
+    return root;
+  }
 
-	public void addChild(StaffListUnitTreeNode child) {
-		children.add(child);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.support.ui.widget.tree.EntityTreeNode#doGetPrimaryKey()
+   */
+  @Override
+  protected Serializable doGetPrimaryKey() {
+    return (Serializable) entity.getPrimaryKey();
+  }
 
-	public static StaffListUnitTreeNode createTree(List<StaffListUnit> folders) {
-		StaffListUnitTreeNode root = null;
-		Map<Integer, StaffListUnitTreeNode> nodeMap = new HashMap<Integer, StaffListUnitTreeNode>();
-		for (StaffListUnit folder : folders) {
-			if (folder.getParent() == null) {
-				root = new StaffListUnitTreeNode(null, folder);
-				nodeMap.put(folder.getId(), root);
-			}
-			else {
-				StaffListUnitTreeNode parentNode, node;
-				parentNode = nodeMap.get(folder.getParent().getId());
-				if (parentNode != null) {
-					node = new StaffListUnitTreeNode(parentNode, folder);
-					nodeMap.put(folder.getId(), node);
-					parentNode.addChild(node);
-				}
-			}
-		}
-		return root;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.support.ui.widget.tree.TreeNode#getText()
+   */
+  @Override
+  public String getText() {
+    return ((StaffListUnit) entity).getUName();
+  }
+
+  public void addChild(StaffListUnitTreeNode child) {
+    children.add(child);
+  }
 }

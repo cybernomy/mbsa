@@ -16,23 +16,23 @@ package com.mg.framework.api;
 
 /**
  * Базовый класс прикладных ИС
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: BusinessException.java,v 1.2 2006/08/25 11:26:10 safonov Exp $
  */
 @javax.ejb.ApplicationException
 public class BusinessException extends ApplicationException {
 
-	public BusinessException(String s, Throwable cause) {
-		super(s, cause);
-	}
-	
-	public BusinessException(String s) {
-		super(s);
-	}	
+  public BusinessException(String s, Throwable cause) {
+    super(s, cause);
+  }
 
-	public BusinessException() {
-		super();
-	}	
+  public BusinessException(String s) {
+    super(s);
+  }
+
+  public BusinessException() {
+    super();
+  }
 
 }

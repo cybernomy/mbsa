@@ -21,119 +21,124 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: DocumentSpecPackage.java,v 1.3 2007/08/10 13:21:31 safonov Exp $
  */
 public class DocumentSpecPackage extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.reference.model.Packing Packing;
+  private com.mg.merp.reference.model.Packing Packing;
 
-	private com.mg.merp.document.model.DocSpec docSpec;
+  private com.mg.merp.document.model.DocSpec docSpec;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.math.BigDecimal Quantity;
+  private java.math.BigDecimal Quantity;
 
-	private java.math.BigDecimal Weight;
+  private java.math.BigDecimal Weight;
 
-	private java.math.BigDecimal Volume;
+  private java.math.BigDecimal Volume;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public DocumentSpecPackage() {
-	}
+  /**
+   * default constructor
+   */
+  public DocumentSpecPackage() {
+  }
 
-	/** constructor with id */
-	public DocumentSpecPackage(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public DocumentSpecPackage(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.reference.model.Packing getPacking() {
-		return this.Packing;
-	}
+  /**
+   *
+   */
 
-	public void setPacking(com.mg.merp.reference.model.Packing Packing) {
-		this.Packing = Packing;
-	}
+  public com.mg.merp.reference.model.Packing getPacking() {
+    return this.Packing;
+  }
 
-	/**
-	 * 
-	 */
+  public void setPacking(com.mg.merp.reference.model.Packing Packing) {
+    this.Packing = Packing;
+  }
 
-	public com.mg.merp.document.model.DocSpec getDocSpec() {
-		return this.docSpec;
-	}
+  /**
+   *
+   */
 
-	public void setDocSpec(com.mg.merp.document.model.DocSpec Docspec) {
-		this.docSpec = Docspec;
-	}
+  public com.mg.merp.document.model.DocSpec getDocSpec() {
+    return this.docSpec;
+  }
 
-	/**
-	 * 
-	 */
+  public void setDocSpec(com.mg.merp.document.model.DocSpec Docspec) {
+    this.docSpec = Docspec;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.DocSpec.Packing.Quantity")
-	public java.math.BigDecimal getQuantity() {
-		return this.Quantity;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setQuantity(java.math.BigDecimal Quantity) {
-		this.Quantity = Quantity;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.DocSpec.Packing.Quantity")
+  public java.math.BigDecimal getQuantity() {
+    return this.Quantity;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Packing.Weight")
-	public java.math.BigDecimal getWeight() {
-		return this.Weight;
-	}
+  public void setQuantity(java.math.BigDecimal Quantity) {
+    this.Quantity = Quantity;
+  }
 
-	public void setWeight(java.math.BigDecimal Weight) {
-		this.Weight = Weight;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Packing.Weight")
+  public java.math.BigDecimal getWeight() {
+    return this.Weight;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Packing.Volume")
-	public java.math.BigDecimal getVolume() {
-		return this.Volume;
-	}
+  public void setWeight(java.math.BigDecimal Weight) {
+    this.Weight = Weight;
+  }
 
-	public void setVolume(java.math.BigDecimal Volume) {
-		this.Volume = Volume;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Packing.Volume")
+  public java.math.BigDecimal getVolume() {
+    return this.Volume;
+  }
+
+  public void setVolume(java.math.BigDecimal Volume) {
+    this.Volume = Volume;
+  }
 
 }

@@ -18,15 +18,13 @@ import com.mg.merp.account.model.AdvanceRepHeadModel;
 import com.mg.merp.document.DocumentPattern;
 
 /**
- * 
  * @author leonova
  * @version $Id: AdvanceRepHeadModelServiceLocal.java,v 1.3 2006/09/20 10:43:40 safonov Exp $
  */
 public interface AdvanceRepHeadModelServiceLocal
-   extends DocumentPattern<AdvanceRepHeadModel, Integer>
-{
-	/**
-	 * тип папки для образцов авансовых отчетов
-	 */
-	final static short FOLDER_PART = 6002;
+    extends DocumentPattern<AdvanceRepHeadModel, Integer> {
+  /**
+   * тип папки для образцов авансовых отчетов
+   */
+  final static short FOLDER_PART = 6002;
 }

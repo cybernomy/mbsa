@@ -20,11 +20,11 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  * @author leonova
  * @version $Id: TaxSearchHelp.java,v 1.1 2006/10/24 10:31:19 leonova Exp $
  */
-public class TaxSearchHelp extends DefaultLegacySearchHelp{
+public class TaxSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/reference/Tax";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/reference/Tax";
+  }
 
 }

@@ -1,51 +1,51 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.security.model.SecUser" table="SEC_USERS">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="int">
-      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">SEC_USER_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <property name="Name" type="java.lang.String">
-      <column name="NAME" length="31" not-null="true" unique="true" sql-type="CHAR" />
+      <column name="NAME" length="31" not-null="true" unique="true" sql-type="CHAR"/>
     </property>
     <property name="FullName" type="java.lang.String">
-      <column name="FULLNAME" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="FULLNAME" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Passw" type="java.lang.String">
-      <column name="PASSW" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="PASSW" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="ActiveFlag" type="boolean">
-      <column name="ACTIVE_FLAG" not-null="false" sql-type="SMALLINT" />
+      <column name="ACTIVE_FLAG" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="SmartCardOnly" type="boolean">
-      <column name="SMART_CARD_ONLY" not-null="false" sql-type="SMALLINT" />
+      <column name="SMART_CARD_ONLY" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="Email" type="java.lang.String">
-      <column name="EMAIL" length="50" not-null="false" sql-type="VARCHAR" />
+      <column name="EMAIL" length="50" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Mobile" type="java.lang.String">
-      <column name="MOBILE" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="MOBILE" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Pager" type="java.lang.String">
-      <column name="PAGER" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="PAGER" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="UseRemoteProfile" type="boolean">
-      <column name="USE_REMOTE_PROFILE" not-null="false" sql-type="SMALLINT" />
+      <column name="USE_REMOTE_PROFILE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="UserType" type="java.lang.Short">
-      <column name="USER_TYPE" not-null="false" sql-type="SMALLINT" />
+      <column name="USER_TYPE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <!-- set name="SecUserProfiles" inverse="true">
       <key on-delete="cascade">
@@ -55,9 +55,9 @@
     </set -->
     <set name="SecLinkUsersGroups" inverse="true">
       <key on-delete="cascade">
-        <column name="USER_ID" not-null="false" />
+        <column name="USER_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.security.model.LinkUsersGroups" />
+      <one-to-many class="com.mg.merp.security.model.LinkUsersGroups"/>
     </set>
   </class>
 </hibernate-mapping>

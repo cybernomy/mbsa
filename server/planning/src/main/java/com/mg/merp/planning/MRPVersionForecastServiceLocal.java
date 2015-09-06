@@ -17,12 +17,10 @@ package com.mg.merp.planning;
 import com.mg.merp.planning.model.MrpVersionForecast;
 
 /**
- * 
  * @author leonova
  * @version $Id: MRPVersionForecastServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface MRPVersionForecastServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<MrpVersionForecast, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<MrpVersionForecast, Integer> {
 
 }

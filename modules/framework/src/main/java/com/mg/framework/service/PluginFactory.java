@@ -14,10 +14,10 @@
  */
 package com.mg.framework.service;
 
-import java.util.Properties;
-
 import com.mg.framework.api.orm.PersistentManager;
 import com.mg.framework.utils.ServerUtils;
+
+import java.util.Properties;
 
 /**
  * @author Oleg V. Safonov
@@ -25,24 +25,23 @@ import com.mg.framework.utils.ServerUtils;
  */
 @Deprecated
 public class PluginFactory {
-	private static Properties props = new Properties();
-	
-	static {
-		// TODO load from config file
-		//props.setProperty(PersistentManager.class.getName(), PersistentManagerEJBImpl.class.getName());
-		props.setProperty(PersistentManager.class.getName(), /*PersistentManagerLegacyImpl.class.getName()*/null);
-	}
-	
-	public static Object getPlugin(Class iface) {
-		String implName = props.getProperty(iface.getName());
-		if (implName == null) {
-			throw new RuntimeException("Implementation not specified for " + iface.getName() + " in PluginFactory properties.");
-		}
-		try {
-			return ServerUtils.loadClass(implName).newInstance();
-		}
-		catch (Exception e) {
-			throw new RuntimeException("Factory unable to construct instance of " + iface.getName());
-		}
-	}
+  private static Properties props = new Properties();
+
+  static {
+    // TODO load from config file
+    //props.setProperty(PersistentManager.class.getName(), PersistentManagerEJBImpl.class.getName());
+    props.setProperty(PersistentManager.class.getName(), /*PersistentManagerLegacyImpl.class.getName()*/null);
+  }
+
+  public static Object getPlugin(Class iface) {
+    String implName = props.getProperty(iface.getName());
+    if (implName == null) {
+      throw new RuntimeException("Implementation not specified for " + iface.getName() + " in PluginFactory properties.");
+    }
+    try {
+      return ServerUtils.loadClass(implName).newInstance();
+    } catch (Exception e) {
+      throw new RuntimeException("Factory unable to construct instance of " + iface.getName());
+    }
+  }
 }

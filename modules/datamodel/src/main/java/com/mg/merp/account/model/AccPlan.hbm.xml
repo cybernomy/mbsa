@@ -1,65 +1,67 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.account.model.AccType" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.account.model.AccType</param>
-	</typedef>	
-	<typedef name="com.mg.merp.account.model.AnlForm" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.account.model.AnlForm</param>
-	</typedef>	
-		
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <typedef name="com.mg.merp.account.model.AccType"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.account.model.AccType</param>
+  </typedef>
+  <typedef name="com.mg.merp.account.model.AnlForm"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.account.model.AnlForm</param>
+  </typedef>
+
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.account.model.AccPlan" table="ACCPLAN">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">ACCPLAN_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Folder" class="com.mg.merp.core.model.Folder">
-      <column name="FOLDER_ID" not-null="false" />
+      <column name="FOLDER_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Currency" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
-      <column name="CURRENCY_CODE" length="5" not-null="false" />
+      <column name="CURRENCY_CODE" length="5" not-null="false"/>
     </many-to-one>
     <property name="UpAcc" type="java.lang.String">
-      <column name="UPACC" length="20" not-null="true" unique="true" sql-type="CHAR" />
+      <column name="UPACC" length="20" not-null="true" unique="true" sql-type="CHAR"/>
     </property>
     <property name="Acc" type="java.lang.String">
-      <column name="ACC" length="20" not-null="true" sql-type="CHAR" />
+      <column name="ACC" length="20" not-null="true" sql-type="CHAR"/>
     </property>
     <property name="AccName" type="java.lang.String">
-      <column name="ACCNAME" length="80" not-null="true" sql-type="VARCHAR" />
+      <column name="ACCNAME" length="80" not-null="true" sql-type="VARCHAR"/>
     </property>
     <property name="IsAnl" type="boolean">
-      <column name="ISANL" not-null="true" sql-type="SMALLINT" />
+      <column name="ISANL" not-null="true" sql-type="SMALLINT"/>
     </property>
     <property name="IsBal" type="boolean">
-      <column name="ISBAL" not-null="true" sql-type="SMALLINT" />
+      <column name="ISBAL" not-null="true" sql-type="SMALLINT"/>
     </property>
     <property name="IsWork" type="boolean">
-      <column name="ISWORK" not-null="true" sql-type="SMALLINT" />
+      <column name="ISWORK" not-null="true" sql-type="SMALLINT"/>
     </property>
     <property name="AnlForm" type="com.mg.merp.account.model.AnlForm">
-      <column name="ANLFORM" not-null="true" sql-type="SMALLINT" />
+      <column name="ANLFORM" not-null="true" sql-type="SMALLINT"/>
     </property>
     <property name="AccType" type="com.mg.merp.account.model.AccType">
-      <column name="ACCTYPE" not-null="true" sql-type="SMALLINT" />
+      <column name="ACCTYPE" not-null="true" sql-type="SMALLINT"/>
     </property>
     <set name="AnlPlans" inverse="true">
       <key on-delete="cascade">
-        <column name="ACCPLAN_ID" not-null="false" />
+        <column name="ACCPLAN_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.account.model.AnlPlan" />
+      <one-to-many class="com.mg.merp.account.model.AnlPlan"/>
     </set>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

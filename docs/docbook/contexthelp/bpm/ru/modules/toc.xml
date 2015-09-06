@@ -15,20 +15,20 @@
 
 <toc version="1.0">
 
-   <tocitem text="Бизнес-процессы">
-	<tocitem text="Бизнес-процессы" target="bpm_html" />
-	<tocitem text="Схема процесса" target="bpm_html" />
-   </tocitem>
-   
-   <tocitem text="Экземпляры процессов">
-	<tocitem text="Запустить экземпляр процесса" target="pr_instance_html" />
-	<tocitem text="Удалить экземпляр процесса" target="pr_instance_html" />
-	<tocitem text="Монитор выполнения" target="pr_instance_html" /> 
-   </tocitem>    
-  
-   <tocitem text="Обеспечение и процесс">
-   	<tocitem text="Ресурсы" target="resource_html" />
-	<tocitem text="Назначения" target="task_html" />
-  </tocitem> 
-  
+  <tocitem text="Бизнес-процессы">
+    <tocitem text="Бизнес-процессы" target="bpm_html"/>
+    <tocitem text="Схема процесса" target="bpm_html"/>
+  </tocitem>
+
+  <tocitem text="Экземпляры процессов">
+    <tocitem text="Запустить экземпляр процесса" target="pr_instance_html"/>
+    <tocitem text="Удалить экземпляр процесса" target="pr_instance_html"/>
+    <tocitem text="Монитор выполнения" target="pr_instance_html"/>
+  </tocitem>
+
+  <tocitem text="Обеспечение и процесс">
+    <tocitem text="Ресурсы" target="resource_html"/>
+    <tocitem text="Назначения" target="task_html"/>
+  </tocitem>
+
 </toc>

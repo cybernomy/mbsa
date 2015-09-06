@@ -24,32 +24,32 @@ import com.mg.merp.document.model.DocSection;
 
 /**
  * Форма поиска объектов-сущностей {@link com.mg.merp.document.model.DocSection DocSection}
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: DocSectionSearchForm.java,v 1.1 2006/08/23 13:27:52 safonov Exp $
  */
 public class DocSectionSearchForm extends AbstractSearchForm {
-	private final static String LOAD_CURRENCY_EJBQL = "from DocSection"; //$NON-NLS-1$
-	private final static String[] fieldList = new String[] {"DSName"}; //$NON-NLS-1$
-	
-	private DefaultTableController docSectionList;
+  private final static String LOAD_CURRENCY_EJBQL = "from DocSection"; //$NON-NLS-1$
+  private final static String[] fieldList = new String[]{"DSName"}; //$NON-NLS-1$
 
-	public DocSectionSearchForm() {
-		docSectionList = new DefaultTableController(new DefaultEntityListTableModel<DocSection>() {
-			@Override
-			protected void doLoad() {
-				setEntityList(MiscUtils.convertUncheckedList(DocSection.class, OrmTemplate.getInstance().find(LOAD_CURRENCY_EJBQL)), fieldList);
-			}
-		});
-		docSectionList.getModel().load();
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchForm#getSearchedEntities()
-	 */
-	@Override
-	protected PersistentObject[] getSearchedEntities() {
-		return ((DefaultEntityListTableModel<DocSection>) docSectionList.getModel()).getSelectedEntities();
-	}
+  private DefaultTableController docSectionList;
+
+  public DocSectionSearchForm() {
+    docSectionList = new DefaultTableController(new DefaultEntityListTableModel<DocSection>() {
+      @Override
+      protected void doLoad() {
+        setEntityList(MiscUtils.convertUncheckedList(DocSection.class, OrmTemplate.getInstance().find(LOAD_CURRENCY_EJBQL)), fieldList);
+      }
+    });
+    docSectionList.getModel().load();
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchForm#getSearchedEntities()
+   */
+  @Override
+  protected PersistentObject[] getSearchedEntities() {
+    return ((DefaultEntityListTableModel<DocSection>) docSectionList.getModel()).getSelectedEntities();
+  }
 
 }

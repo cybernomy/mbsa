@@ -22,92 +22,97 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Warehouse.WarehouseZone")
 public class WarehouseZone extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.warehouse.model.Warehouse Warehouse;
+  private com.mg.merp.warehouse.model.Warehouse Warehouse;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String Name;
+  private java.lang.String Name;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public WarehouseZone() {
-	}
+  /**
+   * default constructor
+   */
+  public WarehouseZone() {
+  }
 
-	/** constructor with id */
-	public WarehouseZone(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public WarehouseZone(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.warehouse.model.Warehouse getWarehouse() {
-		return this.Warehouse;
-	}
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public void setWarehouse(com.mg.merp.warehouse.model.Warehouse Warehouse) {
-		this.Warehouse = Warehouse;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.warehouse.model.Warehouse getWarehouse() {
+    return this.Warehouse;
+  }
 
-	/**
-	 * 
-	 */
+  public void setWarehouse(com.mg.merp.warehouse.model.Warehouse Warehouse) {
+    this.Warehouse = Warehouse;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	@DataItemName("Warehouse.WarehouseZone.Code")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  /**
+   *
+   */
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  @DataItemName("Warehouse.WarehouseZone.Code")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	@DataItemName("Warehouse.WarehouseZone.Name")
-	public java.lang.String getName() {
-		return this.Name;
-	}
+  /**
+   *
+   */
 
-	public void setName(java.lang.String Name) {
-		this.Name = Name;
-	}
+  @DataItemName("Warehouse.WarehouseZone.Name")
+  public java.lang.String getName() {
+    return this.Name;
+  }
+
+  public void setName(java.lang.String Name) {
+    this.Name = Name;
+  }
 
 }

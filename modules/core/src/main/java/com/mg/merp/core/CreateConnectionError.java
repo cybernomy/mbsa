@@ -11,11 +11,11 @@ import com.mg.framework.api.FatalExeption;
 /**
  * @author safonov
  *
- * To change the template for this generated type comment go to
- * Window>Preferences>Java>Code Generation>Code and Comments
+ *         To change the template for this generated type comment go to Window>Preferences>Java>Code
+ *         Generation>Code and Comments
  */
 public class CreateConnectionError extends FatalExeption {
-	public CreateConnectionError(String s, Throwable ex) {
-		super(s, ex);
-	}
+  public CreateConnectionError(String s, Throwable ex) {
+    super(s, ex);
+  }
 }

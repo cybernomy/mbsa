@@ -1,25 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- ===================================================================== -->
- <!--  Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.					-->
- <!--  All rights reserved													-->
- <!-- 																		-->
- <!--  This program is the proprietary and confidential information			-->
- <!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
- <!--  as authorized in a license agreement authorizing and					-->
- <!--  controlling such use and disclosure									-->
- <!--																		-->
- <!--  Millennium Business Suite Anywhere System.							-->
- <!-- ===================================================================== -->
+<!--  Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.					-->
+<!--  All rights reserved													-->
+<!-- 																		-->
+<!--  This program is the proprietary and confidential information			-->
+<!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
+<!--  as authorized in a license agreement authorizing and					-->
+<!--  controlling such use and disclosure									-->
+<!--																		-->
+<!--  Millennium Business Suite Anywhere System.							-->
+<!-- ===================================================================== -->
 
- <!-- $Id: CustomerSelectDlg.mfd.xml,v 1.1 2007/10/05 07:42:29 sharapov Exp $ -->
+<!-- $Id: CustomerSelectDlg.mfd.xml,v 1.1 2007/10/05 07:42:29 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.retail.support.ui.CustomerSelectDlg" title="resource://com.mg.merp.retail.resources.formelements#CustomerSelectDlg.Title" width="400" height="200">
-	
-	<jfd:container id="mainBox" layout="jfd:box" columns="1" alignment="expand_expand">
-	<jfd:border style="bevel" type="raised" />
-		<jfd:table id="table" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
-		</jfd:table>
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5"
+          controller="com.mg.merp.retail.support.ui.CustomerSelectDlg"
+          title="resource://com.mg.merp.retail.resources.formelements#CustomerSelectDlg.Title"
+          width="400" height="200">
+
+  <jfd:container id="mainBox" layout="jfd:box" columns="1" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:table id="table" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
+    </jfd:table>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
 </jfd:form>

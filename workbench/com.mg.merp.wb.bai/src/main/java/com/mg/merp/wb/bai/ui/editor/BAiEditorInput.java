@@ -19,32 +19,32 @@ import com.mg.merp.wb.core.ui.editor.StandartEditorInput;
 
 /**
  * Входные данные для формы редактирования BAi
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @version $Id: BAiEditorInput.java,v 1.2 2007/04/11 06:48:20 poroxnenko Exp $
  */
 public class BAiEditorInput extends StandartEditorInput<Repository> {
 
-	public static final String FORM_PART = "bai.form.edit.part";
+  public static final String FORM_PART = "bai.form.edit.part";
 
-	public BAiEditorInput(Repository object, boolean createNew) {
-		super(object, createNew);
-	}
+  public BAiEditorInput(Repository object, boolean createNew) {
+    super(object, createNew);
+  }
 
-	@Override
-	public String getEditorName() {
-		return String.format(BAiPlugin.getDefault().getString(FORM_PART),
-				object.getCode().trim());
-	}
+  @Override
+  public String getEditorName() {
+    return String.format(BAiPlugin.getDefault().getString(FORM_PART),
+        object.getCode().trim());
+  }
 
-	@Override
-	public String getToolTip() {
-		return object.getCode().trim();
-	}
+  @Override
+  public String getToolTip() {
+    return object.getCode().trim();
+  }
 
-	@Override
-	public boolean isMatch(Repository obj) {
-		return object.getId()==obj.getId();
-	}
+  @Override
+  public boolean isMatch(Repository obj) {
+    return object.getId() == obj.getId();
+  }
 
 }

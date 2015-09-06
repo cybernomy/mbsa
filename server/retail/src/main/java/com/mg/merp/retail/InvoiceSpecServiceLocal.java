@@ -18,16 +18,16 @@ import com.mg.merp.retail.model.RtlInvoiceSpec;
 
 /**
  * Бизнес-компонент "Спецификация документа на отпуск"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: InvoiceSpecServiceLocal.java,v 1.3 2007/10/30 14:54:00 sharapov Exp $
  */
 public interface InvoiceSpecServiceLocal extends com.mg.merp.document.GoodsDocumentSpecification<RtlInvoiceSpec, Integer> {
-	
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/retail/InvoiceSpec"; //$NON-NLS-1$
-	
+
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/retail/InvoiceSpec"; //$NON-NLS-1$
+
 }

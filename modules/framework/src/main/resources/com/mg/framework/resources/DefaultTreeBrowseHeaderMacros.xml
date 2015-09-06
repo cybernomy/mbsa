@@ -14,7 +14,8 @@
 <!-- $Id: DefaultTreeBrowseHeaderMacros.xml,v 1.5 2008/11/01 09:00:26 safonov Exp $ -->
 
 <jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
-	<jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton" actionListener="Choose" visible="false" />
-	<jfd:include name="com/mg/framework/resources/StandartMaintenanceTreeToolbarMacros.xml" />
-	<jfd:include runtime="com.mg.jet.ui.CustomActionsFormlet" />
+  <jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton"
+              actionListener="Choose" visible="false"/>
+  <jfd:include name="com/mg/framework/resources/StandartMaintenanceTreeToolbarMacros.xml"/>
+  <jfd:include runtime="com.mg.jet.ui.CustomActionsFormlet"/>
 </jfd:toolBar>

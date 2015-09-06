@@ -14,15 +14,15 @@
 <!-- $Id: toc.xml,v 1.1 2006/12/19 11:57:37 konyashkina Exp $ -->
 
 <toc version="1.0">
-  
-   <tocitem text="Табельный учёт">
-       <tocitem text="Конфигурация модуля" target="tbconfig_html" />
-       <tocitem text="Типы времени" target="timekind_html" />
-       <tocitem text="Шаблоны графиков" target="patternhead_html" />
-       <tocitem text="Графики работы в табельном учёте" target="shdhead_html" />
-       <tocitem text="Заполнить по шаблону" target="fill_html" />
-       <tocitem text="Заполнение сетки" target="grid_html" />
-       <tocitem text="Табели" target="table_html" /> 
-   </tocitem>
-  
+
+  <tocitem text="Табельный учёт">
+    <tocitem text="Конфигурация модуля" target="tbconfig_html"/>
+    <tocitem text="Типы времени" target="timekind_html"/>
+    <tocitem text="Шаблоны графиков" target="patternhead_html"/>
+    <tocitem text="Графики работы в табельном учёте" target="shdhead_html"/>
+    <tocitem text="Заполнить по шаблону" target="fill_html"/>
+    <tocitem text="Заполнение сетки" target="grid_html"/>
+    <tocitem text="Табели" target="table_html"/>
+  </tocitem>
+
 </toc>

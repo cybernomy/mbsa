@@ -19,18 +19,18 @@ import java.io.Serializable;
  * @author krivopoustov
  */
 public class BatchItem implements Serializable {
-	public int key;
-	public double qty;
-	public double qty2;
-	
-	public BatchItem() {
-		super();
-	}
-	
-	public BatchItem(int key, double qty, double qty2) {
-		super();
-		this.key = key;
-		this.qty = qty;
-		this.qty2 = qty2;
-	}
+  public int key;
+  public double qty;
+  public double qty2;
+
+  public BatchItem() {
+    super();
+  }
+
+  public BatchItem(int key, double qty, double qty2) {
+    super();
+    this.key = key;
+    this.qty = qty;
+    this.qty2 = qty2;
+  }
 }

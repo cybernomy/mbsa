@@ -15,30 +15,26 @@
 
 package com.mg.merp.planning.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.ApplicationException;
 import com.mg.merp.planning.RCCPProcessorServiceLocal;
 
+import javax.ejb.Stateless;
+
 /**
- * 
  * @author Oleg V. Safonov
  * @version $Id: RCCPProcessorServiceBean.java,v 1.4 2006/09/21 11:21:52 safonov Exp $
  */
-@Stateless(name="merp/planning/RCCPProcessorService")
+@Stateless(name = "merp/planning/RCCPProcessorService")
 public class RCCPProcessorServiceBean extends com.mg.framework.generic.AbstractPOJOBusinessObjectStatelessServiceBean implements RCCPProcessorServiceLocal {
 
-	public void ejbCreate() throws javax.ejb.CreateException {
-	}
+  public void ejbCreate() throws javax.ejb.CreateException {
+  }
 
-	/**
-	 * @ejb.interface-method view-type = "local"
-	 * 
-	 * @param rccpVersionId
-	 * @throws ApplicationException
-	 */
-	public void generateRccp(int rccpVersionId) throws ApplicationException {
-		//TODO
-		//((RCCPProcessorDomainImpl) getDomain()).generateRccp(rccpVersionId);
-	}
+  /**
+   * @ejb.interface-method view-type = "local"
+   */
+  public void generateRccp(int rccpVersionId) throws ApplicationException {
+    //TODO
+    //((RCCPProcessorDomainImpl) getDomain()).generateRccp(rccpVersionId);
+  }
 }

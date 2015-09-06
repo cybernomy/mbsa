@@ -1,214 +1,215 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.account.model.AmortAlgorithmType" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.account.model.AmortAlgorithmType</param>
-	</typedef>	
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <typedef name="com.mg.merp.account.model.AmortAlgorithmType"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.account.model.AmortAlgorithmType</param>
+  </typedef>
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.account.model.Inventory" table="INVENTORY">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">INVENTORY_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="InvLocation" class="com.mg.merp.account.model.InvLocation">
-      <column name="INVLOCATION_ID" not-null="false" />
+      <column name="INVLOCATION_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AccKt" class="com.mg.merp.account.model.AccPlan">
-      <column name="ACCKT_ID" not-null="false" />
+      <column name="ACCKT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Contractor" class="com.mg.merp.reference.model.Contractor">
-      <column name="CONTRACTOR_ID" not-null="false" />
+      <column name="CONTRACTOR_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Anl3" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANL3_ID" not-null="false" />
+      <column name="ANL3_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Anl1" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANL1_ID" not-null="false" />
+      <column name="ANL1_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AccPlan" class="com.mg.merp.account.model.AccPlan">
-      <column name="ACC_ID" not-null="false" />
+      <column name="ACC_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Anl2" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANL2_ID" not-null="false" />
+      <column name="ANL2_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlKt3" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLKT3_ID" not-null="false" />
+      <column name="ANLKT3_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlDb5" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLDB5_ID" not-null="false" />
+      <column name="ANLDB5_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlKt1" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLKT1_ID" not-null="false" />
+      <column name="ANLKT1_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Catalog" class="com.mg.merp.reference.model.Catalog">
-      <column name="CATALOG_ID" not-null="false" />
+      <column name="CATALOG_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="InvHead" class="com.mg.merp.account.model.InvHead">
-      <column name="INVHEAD_ID" not-null="false" />
+      <column name="INVHEAD_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Anl4" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANL4_ID" not-null="false" />
+      <column name="ANL4_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Folder" class="com.mg.merp.core.model.Folder">
-      <column name="FOLDER_ID" not-null="false" />
+      <column name="FOLDER_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlKt2" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLKT2_ID" not-null="false" />
+      <column name="ANLKT2_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlDb2" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLDB2_ID" not-null="false" />
+      <column name="ANLDB2_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AccKind" class="com.mg.merp.account.model.AccKind">
-      <column name="ACCKIND_ID" not-null="false" />
+      <column name="ACCKIND_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Anl5" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANL5_ID" not-null="false" />
+      <column name="ANL5_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Okof" class="com.mg.merp.account.model.Okof">
-      <column name="OKOF_ID" not-null="false" />
+      <column name="OKOF_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Inventory" class="com.mg.merp.account.model.Inventory">
-      <column name="PARENT_ID" not-null="false" />
+      <column name="PARENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlDb3" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLDB3_ID" not-null="false" />
+      <column name="ANLDB3_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlDb1" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLDB1_ID" not-null="false" />
+      <column name="ANLDB1_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlKt5" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLKT5_ID" not-null="false" />
+      <column name="ANLKT5_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlDb4" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLDB4_ID" not-null="false" />
+      <column name="ANLDB4_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AccGroup" class="com.mg.merp.account.model.AccGroup">
-      <column name="ACCGROUP_ID" not-null="false" />
+      <column name="ACCGROUP_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AccDb" class="com.mg.merp.account.model.AccPlan">
-      <column name="ACCDB_ID" not-null="false" />
+      <column name="ACCDB_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlKt4" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLKT4_ID" not-null="false" />
+      <column name="ANLKT4_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AmCode" class="com.mg.merp.account.model.AmCode">
-      <column name="AMCODE_ID" not-null="false" />
+      <column name="AMCODE_ID" not-null="false"/>
     </many-to-one>
     <property name="GroupNum" type="java.lang.String">
-      <column name="GROUPNUM" length="15" not-null="false" sql-type="CHAR" />
+      <column name="GROUPNUM" length="15" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="CardNum" type="java.lang.String">
-      <column name="CARDNUM" length="15" not-null="false" sql-type="CHAR" />
+      <column name="CARDNUM" length="15" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="ObjNum" type="java.lang.String">
-      <column name="OBJNUM" length="30" not-null="false" sql-type="CHAR" />
+      <column name="OBJNUM" length="30" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="Manufacturer" type="java.lang.String">
-      <column name="MANUFACTURER" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="MANUFACTURER" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Model" type="java.lang.String">
-      <column name="MODEL" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="MODEL" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="SerialNum" type="java.lang.String">
-      <column name="SERIALNUM" length="15" not-null="false" sql-type="CHAR" />
+      <column name="SERIALNUM" length="15" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="PasspNum" type="java.lang.String">
-      <column name="PASSPNUM" length="15" not-null="false" sql-type="CHAR" />
+      <column name="PASSPNUM" length="15" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="InOperDocNum" type="java.lang.String">
-      <column name="INOPERDOCNUM" length="20" not-null="false" sql-type="CHAR" />
+      <column name="INOPERDOCNUM" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="InOperDate" type="java.util.Date">
-      <column name="INOPERDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="INOPERDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="OutOperDocNum" type="java.lang.String">
-      <column name="OUTOPERDOCNUM" length="20" not-null="false" sql-type="CHAR" />
+      <column name="OUTOPERDOCNUM" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="OutOperDate" type="java.util.Date">
-      <column name="OUTOPERDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="OUTOPERDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="BalanceCost" type="java.math.BigDecimal">
-      <column name="BALANCECOST" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="BALANCECOST" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="BeginCost" type="java.math.BigDecimal">
-      <column name="BEGINCOST" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="BEGINCOST" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="BeginLoss" type="java.math.BigDecimal">
-      <column name="BEGINLOSS" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="BEGINLOSS" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="Amort" type="java.math.BigDecimal">
-      <column name="AMORT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="AMORT" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="EndCost" type="java.math.BigDecimal">
-      <column name="ENDCOST" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="ENDCOST" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="BeginLossDate" type="java.util.Date">
-      <column name="BEGINLOSSDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="BEGINLOSSDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="AmortDate" type="java.util.Date">
-      <column name="AMORTDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="AMORTDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="IsComplex" type="boolean">
-      <column name="ISCOMPLEX" not-null="false" sql-type="SMALLINT" />
+      <column name="ISCOMPLEX" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="IsCommon" type="boolean">
-      <column name="ISCOMMON" not-null="false" sql-type="SMALLINT" />
+      <column name="ISCOMMON" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="Factor" type="java.lang.Float">
-      <column name="FACTOR" not-null="false" sql-type="FLOAT" />
+      <column name="FACTOR" not-null="false" sql-type="FLOAT"/>
     </property>
     <property name="Algorithm" type="com.mg.merp.account.model.AmortAlgorithmType">
-      <column name="ALGORITHM" not-null="false" sql-type="SMALLINT" />
+      <column name="ALGORITHM" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="YearAmortRate" type="java.math.BigDecimal">
-      <column name="YEARAMORTRATE" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="YEARAMORTRATE" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="ExplPeriodY" type="java.lang.Float">
-      <column name="EXPLPERIOD_Y" not-null="false" sql-type="FLOAT" />
+      <column name="EXPLPERIOD_Y" not-null="false" sql-type="FLOAT"/>
     </property>
     <property name="ExplPeriodM" type="java.lang.Float">
-      <column name="EXPLPERIOD_M" not-null="false" sql-type="FLOAT" />
+      <column name="EXPLPERIOD_M" not-null="false" sql-type="FLOAT"/>
     </property>
     <property name="Production" type="java.lang.Double">
-      <column name="PRODUCTION" not-null="false" sql-type="FLOAT" />
+      <column name="PRODUCTION" not-null="false" sql-type="FLOAT"/>
     </property>
     <property name="Comment" type="java.lang.String">
-      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Initialloss" type="java.math.BigDecimal">
-      <column name="INITIALLOSS" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="INITIALLOSS" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="IncomeDocNum" type="java.lang.String">
-      <column name="INCOMEDOCNUM" length="20" not-null="false" sql-type="CHAR" />
+      <column name="INCOMEDOCNUM" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="IncomeDate" type="java.util.Date">
-      <column name="INCOMEDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="INCOMEDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="InvName" type="java.lang.String">
-      <column name="INVNAME" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="INVNAME" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <set name="Amortizations" inverse="true">
       <key on-delete="cascade">
-        <column name="INVENTORY_ID" not-null="false" />
+        <column name="INVENTORY_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.account.model.Amortization" />
+      <one-to-many class="com.mg.merp.account.model.Amortization"/>
     </set>
     <set name="InvHistories" inverse="true">
       <key on-delete="cascade">
-        <column name="INVENTORY_ID" not-null="false" />
+        <column name="INVENTORY_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.account.model.InvHistory" />
+      <one-to-many class="com.mg.merp.account.model.InvHistory"/>
     </set>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

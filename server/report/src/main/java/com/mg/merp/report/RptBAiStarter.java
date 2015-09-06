@@ -13,32 +13,32 @@
  */
 package com.mg.merp.report;
 
-import java.util.Map;
-
 import com.mg.framework.api.dataset.DataSet;
+
+import java.util.Map;
 
 /**
  * Интерфейс запуска BAi генератора отчётов
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
  * @version $Id: RptBAiStarter.java,v 1.2 2007/08/30 14:20:50 safonov Exp $
  */
 public interface RptBAiStarter {
 
-	/**
-	 * выполнить BAi
-	 * 
-	 * @param code		код BAi
-	 * @param params	параметры
-	 */
-	void perform(String code, Map<String, Object> params);
+  /**
+   * выполнить BAi
+   *
+   * @param code   код BAi
+   * @param params параметры
+   */
+  void perform(String code, Map<String, Object> params);
 
-	/**
-	 * получить сформированный набор данных
-	 * 
-	 * @return	набор данных
-	 */
-	DataSet getDataSet();
+  /**
+   * получить сформированный набор данных
+   *
+   * @return набор данных
+   */
+  DataSet getDataSet();
 
 }

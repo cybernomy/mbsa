@@ -13,51 +13,55 @@
 
 <!-- $Id: FinTurnAccFlatMt.mfd.xml,v 1.9 2009/02/16 07:47:27 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.finance.support.ui.FinTurnAccFlatMt" title="resource://com.mg.merp.finance.resources.formelements#FinTurnAcc.FormMt.Title" helpTopic="finance#finturnacc_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.finance.support.ui.FinTurnAccFlatMt"
+          title="resource://com.mg.merp.finance.resources.formelements#FinTurnAcc.FormMt.Title"
+          helpTopic="finance#finturnacc_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		
-		<jfd:container id="finAccFields" layout="jfd:box" columns="1" label="resource://com.mg.merp.finance.resources.formelements#TurnAcc.Acc">
-			<jfd:field id="Account" alignment="expand_expand" showLabel="false"/>
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel1SrcMacros.xml" />		  			  			  	  			  			  			
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel2SrcMacros.xml" />		  			  			  	  			  			  			
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel3SrcMacros.xml" />		  			  			  	  			  			  			
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel4SrcMacros.xml" />		  			  			  	  			  			  			
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel5SrcMacros.xml" />		  			  			  	  			  			  			
-		</jfd:container>
-  		<jfd:field id="Period" sameLine="true"/>
- 		
- 		<jfd:field id="RemnBegNat" />		
- 		<jfd:field id="RemnBegCur" sameLine="true"/>	
- 		<jfd:field id="IncomeNat" />
- 		<jfd:field id="IncomeCur" sameLine="true"/>
- 		<jfd:field id="OutcomeNat" />
- 		<jfd:field id="OutcomeCur" sameLine="true"/>
- 		<jfd:field id="RemnEndNat" /> 		 				
- 		<jfd:field id="RemnEndCur" sameLine="true"/> 	
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
- 		<jfd:field id="RemnBegNatPlan" /> 
- 		<jfd:field id="RemnBegCurPlan" sameLine="true"/> 
- 		<jfd:field id="IncomeNatPlan" /> 
- 		<jfd:field id="IncomeCurPlan" sameLine="true"/> 
- 		<jfd:field id="OutcomeNatPlan" /> 
- 		<jfd:field id="OutcomeCurPlan" sameLine="true"/> 
- 		<jfd:field id="RemnEndNatPlan" /> 
- 		<jfd:field id="RemnEndCurPlan" sameLine="true"/> 
- 		
-  		<jfd:field id="RemnBegNatDiff" />		
- 		<jfd:field id="RemnBegCurDiff" sameLine="true"/>	
- 		<jfd:field id="IncomeNatDiff" />
- 		<jfd:field id="IncomeCurDiff" sameLine="true"/>
- 		<jfd:field id="OutcomeNatDiff" />
- 		<jfd:field id="OutcomeCurDiff" sameLine="true"/>
- 		<jfd:field id="RemnEndNatDiff" /> 		 				
- 		<jfd:field id="RemnEndCurDiff" sameLine="true"/> 	
-	</jfd:container>
+    <jfd:container id="finAccFields" layout="jfd:box" columns="1"
+                   label="resource://com.mg.merp.finance.resources.formelements#TurnAcc.Acc">
+      <jfd:field id="Account" alignment="expand_expand" showLabel="false"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel1SrcMacros.xml"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel2SrcMacros.xml"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel3SrcMacros.xml"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel4SrcMacros.xml"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel5SrcMacros.xml"/>
+    </jfd:container>
+    <jfd:field id="Period" sameLine="true"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:field id="RemnBegNat"/>
+    <jfd:field id="RemnBegCur" sameLine="true"/>
+    <jfd:field id="IncomeNat"/>
+    <jfd:field id="IncomeCur" sameLine="true"/>
+    <jfd:field id="OutcomeNat"/>
+    <jfd:field id="OutcomeCur" sameLine="true"/>
+    <jfd:field id="RemnEndNat"/>
+    <jfd:field id="RemnEndCur" sameLine="true"/>
+
+    <jfd:field id="RemnBegNatPlan"/>
+    <jfd:field id="RemnBegCurPlan" sameLine="true"/>
+    <jfd:field id="IncomeNatPlan"/>
+    <jfd:field id="IncomeCurPlan" sameLine="true"/>
+    <jfd:field id="OutcomeNatPlan"/>
+    <jfd:field id="OutcomeCurPlan" sameLine="true"/>
+    <jfd:field id="RemnEndNatPlan"/>
+    <jfd:field id="RemnEndCurPlan" sameLine="true"/>
+
+    <jfd:field id="RemnBegNatDiff"/>
+    <jfd:field id="RemnBegCurDiff" sameLine="true"/>
+    <jfd:field id="IncomeNatDiff"/>
+    <jfd:field id="IncomeCurDiff" sameLine="true"/>
+    <jfd:field id="OutcomeNatDiff"/>
+    <jfd:field id="OutcomeCurDiff" sameLine="true"/>
+    <jfd:field id="RemnEndNatDiff"/>
+    <jfd:field id="RemnEndCurDiff" sameLine="true"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

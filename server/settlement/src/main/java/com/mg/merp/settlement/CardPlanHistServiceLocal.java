@@ -17,12 +17,10 @@ package com.mg.merp.settlement;
 import com.mg.merp.settlement.model.ContractorCardPlan;
 
 /**
- * 
  * @author leonova
  * @version $Id: CardPlanHistServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface CardPlanHistServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<ContractorCardPlan, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<ContractorCardPlan, Integer> {
 
 }

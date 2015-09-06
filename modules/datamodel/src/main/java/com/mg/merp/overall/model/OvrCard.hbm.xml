@@ -1,64 +1,65 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.overall.model.OvrCard" table="OVR_CARD">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">OVR_CARD_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="StfPosition" class="com.mg.merp.personnelref.model.PrefPosition">
-      <column name="STF_POSITION_ID" not-null="false" />
+      <column name="STF_POSITION_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="StfJob" class="com.mg.merp.personnelref.model.PrefJob">
-      <column name="STF_JOB_ID" not-null="false" />
+      <column name="STF_JOB_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="RefPersonnel" class="com.mg.merp.personnelref.model.Personnel">
-      <column name="REF_PERSONNEL_ID" not-null="false" />
+      <column name="REF_PERSONNEL_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="OrgUnit" class="com.mg.merp.reference.model.Contractor">
-      <column name="ORGUNIT_ID" not-null="true" sql-type="INTEGER" />
+      <column name="ORGUNIT_ID" not-null="true" sql-type="INTEGER"/>
     </many-to-one>
     <property name="ActDateFrom" type="java.util.Date">
-      <column name="ACTDATE_FROM" not-null="false" sql-type="TIMESTAMP" />
+      <column name="ACTDATE_FROM" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="ActDateTo" type="java.util.Date">
-      <column name="ACTDATE_TO" not-null="false" sql-type="TIMESTAMP" />
+      <column name="ACTDATE_TO" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="OvrCardNumber" type="java.lang.String">
-      <column name="OVR_CARD_NUMBER" length="20" not-null="false" sql-type="CHAR" />
+      <column name="OVR_CARD_NUMBER" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="OvrNormHeadId" type="java.lang.Integer">
-      <formula>(select och.ovr_norm_head_id from ovr_card_hist och where och.ovr_card_id = Id)</formula>
+      <formula>(select och.ovr_norm_head_id from ovr_card_hist och where och.ovr_card_id = Id)
+      </formula>
     </property>
     <set name="cardHistories" inverse="true">
       <key on-delete="cascade">
-        <column name="OVR_CARD_ID" not-null="false" />
+        <column name="OVR_CARD_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.overall.model.OvrCardHist" />
+      <one-to-many class="com.mg.merp.overall.model.OvrCardHist"/>
     </set>
     <set name="sizes" inverse="true">
       <key on-delete="cascade">
-        <column name="OVR_CARD_ID" not-null="false" />
+        <column name="OVR_CARD_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.overall.model.Size" />
+      <one-to-many class="com.mg.merp.overall.model.Size"/>
     </set>
     <set name="cardDocumentLinks" inverse="true">
       <key on-delete="cascade">
-        <column name="OVR_CARD_ID" not-null="false" />
+        <column name="OVR_CARD_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.overall.model.OvrCardDocumentLink" />
+      <one-to-many class="com.mg.merp.overall.model.OvrCardDocumentLink"/>
     </set>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

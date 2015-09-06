@@ -14,21 +14,21 @@
 <!-- $Id: index.xml,v 1.1 2006/12/17 13:51:49 konyashkina Exp $ -->
 
 <index version="1.0">
- 
-  <indexitem text="Подготовка потоков"> 
-    <indexentry text="Менеджеры потоков" target="wfmanager_html" />
+
+  <indexitem text="Подготовка потоков">
+    <indexentry text="Менеджеры потоков" target="wfmanager_html"/>
     <indexitem text="Конструктор потоков">
-   	 <indexentry text="Конструктор потоков" target="wfconsrt_html" />
-	 <indexentry text="Модель действия" target="wfmodel_html" />
-	 <indexentry text="Связь действий" target="wflink_html" />
-     </indexitem>
+      <indexentry text="Конструктор потоков" target="wfconsrt_html"/>
+      <indexentry text="Модель действия" target="wfmodel_html"/>
+      <indexentry text="Связь действий" target="wflink_html"/>
+    </indexitem>
   </indexitem>
 
   <indexitem text="Обеспечение и работа потока">
-     <indexentry text="Ресурсы" target="wfresource_html" />
-     <indexentry text="Потоки" target="workflow_html" />
-     <indexentry text="Назначения" target="wfassign_html" />
-     <indexentry text="Сегменты отката" target="wfsegment_html" />
-  </indexitem> 
-  
+    <indexentry text="Ресурсы" target="wfresource_html"/>
+    <indexentry text="Потоки" target="workflow_html"/>
+    <indexentry text="Назначения" target="wfassign_html"/>
+    <indexentry text="Сегменты отката" target="wfsegment_html"/>
+  </indexitem>
+
 </index>

@@ -20,25 +20,25 @@ import com.mg.framework.support.ui.UIUtils;
 
 /**
  * Абстрактный класс, отбирает папки по типу папок
- * 
+ *
  * @author leonova
  * @version $Id: FolderByTypeSearchHelp.java,v 1.1 2006/10/10 06:28:13 leonova Exp $
  */
 public abstract class FolderByTypeSearchHelp extends AbstractSearchHelp {
-	
-	protected abstract short getFolderType();
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
-	 */
-	@Override
-	protected void doSearch() throws Exception {
-		FolderSearchForm form = (FolderSearchForm) UIProducer.produceForm("com/mg/merp/reference/resources/FolderSearchForm.mfd.xml");
-		form.addSearchHelpListener(this);
-		if (getFolderType() != 0) {
-			form.setFolderType(getFolderType());
-			form.run(UIUtils.isModalMode());
-		}
-	}
+
+  protected abstract short getFolderType();
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
+   */
+  @Override
+  protected void doSearch() throws Exception {
+    FolderSearchForm form = (FolderSearchForm) UIProducer.produceForm("com/mg/merp/reference/resources/FolderSearchForm.mfd.xml");
+    form.addSearchHelpListener(this);
+    if (getFolderType() != 0) {
+      form.setFolderType(getFolderType());
+      form.run(UIUtils.isModalMode());
+    }
+  }
 
 }

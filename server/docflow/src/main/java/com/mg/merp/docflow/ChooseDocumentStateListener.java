@@ -18,23 +18,22 @@ import java.util.EventListener;
 
 /**
  * Слушатель выбора состояния документа для отработки отката
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ChooseDocumentStateListener.java,v 1.1 2006/12/12 15:23:33 safonov Exp $
  */
 public interface ChooseDocumentStateListener extends EventListener {
 
-	/**
-	 * состояние выбрано
-	 * 
-	 * @param stateId	идентификатор состояния
-	 */
-	void performed(Integer stateId);
-	
-	/**
-	 * выбор состояния отменен
-	 *
-	 */
-	void canceled();	
+  /**
+   * состояние выбрано
+   *
+   * @param stateId идентификатор состояния
+   */
+  void performed(Integer stateId);
+
+  /**
+   * выбор состояния отменен
+   */
+  void canceled();
 
 }

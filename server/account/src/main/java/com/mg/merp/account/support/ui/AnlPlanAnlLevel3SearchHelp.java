@@ -20,12 +20,12 @@ package com.mg.merp.account.support.ui;
  */
 public class AnlPlanAnlLevel3SearchHelp extends AnlPlanRemnSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAnalitikaLevel()
-	 */
-	@Override
-	protected short getAnalitikaLevel() {
-		return 3;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAnalitikaLevel()
+   */
+  @Override
+  protected short getAnalitikaLevel() {
+    return 3;
+  }
 
 }

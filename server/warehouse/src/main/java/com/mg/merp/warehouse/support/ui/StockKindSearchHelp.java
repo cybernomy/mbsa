@@ -22,8 +22,8 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class StockKindSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/warehouse/StockKind";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/warehouse/StockKind";
+  }
 }

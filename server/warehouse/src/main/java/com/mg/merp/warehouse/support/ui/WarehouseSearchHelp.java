@@ -21,10 +21,10 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  * @version $Id: WarehouseSearchHelp.java,v 1.2 2006/07/10 11:55:40 leonova Exp $
  */
 public class WarehouseSearchHelp extends DefaultLegacySearchHelp {
-	
-	@Override
-	protected String getServiceName() {		
-		return "merp/warehouse/Warehouse";
-	}
+
+  @Override
+  protected String getServiceName() {
+    return "merp/warehouse/Warehouse";
+  }
 
 }

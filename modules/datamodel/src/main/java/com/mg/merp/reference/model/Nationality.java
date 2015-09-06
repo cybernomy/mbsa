@@ -22,64 +22,68 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.Nationality")
 public class Nationality extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String NName;
+  private java.lang.String NName;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public Nationality() {
-	}
+  /**
+   * default constructor
+   */
+  public Nationality() {
+  }
 
-	/** constructor with id */
-	public Nationality(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public Nationality(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
+  // Property accessors
 
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.ShortName")
-	public java.lang.String getNName() {
-		return this.NName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.ShortName")
+  public java.lang.String getNName() {
+    return this.NName;
+  }
 
-	public void setNName(java.lang.String NName) {
-		this.NName = NName;
-	}
+  public void setNName(java.lang.String NName) {
+    this.NName = NName;
+  }
 
 }

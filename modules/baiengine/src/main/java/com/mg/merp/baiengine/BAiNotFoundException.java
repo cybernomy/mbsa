@@ -18,15 +18,15 @@ import com.mg.merp.baiengine.support.Messages;
 
 /**
  * Класс ИС указывающий о проблеме обнаружения бизнес расширения в репозитарии
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: BAiNotFoundException.java,v 1.1 2006/10/12 12:02:05 safonov Exp $
  */
 @javax.ejb.ApplicationException
 public class BAiNotFoundException extends BusinessAddinException {
 
-	public BAiNotFoundException(String name) {
-		super(Messages.getInstance().getMessage(Messages.BAI_NOT_FOUND, new Object[] {name}));
-	}
+  public BAiNotFoundException(String name) {
+    super(Messages.getInstance().getMessage(Messages.BAI_NOT_FOUND, new Object[]{name}));
+  }
 
 }

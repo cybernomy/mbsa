@@ -17,12 +17,10 @@ package com.mg.merp.salary;
 import com.mg.merp.salary.model.IncludedFee;
 
 /**
- * 
  * @author leonova
  * @version $Id: IncludedFeeServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface IncludedFeeServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<IncludedFee, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<IncludedFee, Integer> {
 
 }

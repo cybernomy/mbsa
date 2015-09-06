@@ -14,14 +14,14 @@
 <!-- $Id: link.xml,v 1.1 2008/05/06 10:41:48 safonov Exp $ -->
 
 <link version="1.0">
-   
-  <linkitem topic="prepare_links"> 
-    <linkentry target="scheduler_html" text="Планировщик заданий" />
+
+  <linkitem topic="prepare_links">
+    <linkentry target="scheduler_html" text="Планировщик заданий"/>
   </linkitem>
-  
+
   <linkitem topic="work_links">
-    <linkentry target="schtask_html" text="Задания планировщика" />
-    <linkentry target="cron_html" text="Cron-формат" />
-  </linkitem> 
-  
+    <linkentry target="schtask_html" text="Задания планировщика"/>
+    <linkentry target="cron_html" text="Cron-формат"/>
+  </linkitem>
+
 </link>

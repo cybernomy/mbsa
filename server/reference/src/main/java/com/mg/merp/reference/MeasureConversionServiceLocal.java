@@ -14,47 +14,40 @@
  */
 package com.mg.merp.reference;
 
-import java.math.BigDecimal;
-
 import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Measure;
 import com.mg.merp.reference.model.MeasureConversion;
 
+import java.math.BigDecimal;
+
 /**
  * Сервис бизнес-компонета преобразования ЕИ
- * 
+ *
  * @author leonova
- * @version $Id: MeasureConversionServiceLocal.java,v 1.2 2006/12/02 13:32:40
- *          safonov Exp $
+ * @version $Id: MeasureConversionServiceLocal.java,v 1.2 2006/12/02 13:32:40 safonov Exp $
  */
 public interface MeasureConversionServiceLocal
-		extends
-		com.mg.framework.api.DataBusinessObjectService<MeasureConversion, Integer> {
+    extends
+    com.mg.framework.api.DataBusinessObjectService<MeasureConversion, Integer> {
 
-	/**
-	 * Локальное имя сервиса
-	 */
-	static final String LOCAL_SERVICE_NAME = "merp/reference/MeasureConversion";
+  /**
+   * Локальное имя сервиса
+   */
+  static final String LOCAL_SERVICE_NAME = "merp/reference/MeasureConversion";
 
-	/**
-	 * преобразование ЕИ
-	 * 
-	 * @param measureFrom
-	 *            ЕИ источник
-	 * @param measureTo
-	 *            ЕИ приемник
-	 * @param catalog
-	 *            позиция каталога для которой происходит преобразование
-	 * @param convTime
-	 *            время на которое происходит преобразование
-	 * @param valueFrom
-	 *            количество в базовой ЕИ
-	 * @return количество в дополнительной ЕИ
-	 * @throws InvalidMeasureConversion
-	 *             в случае ошибок преобразования
-	 */
-	BigDecimal conversion(Measure measureFrom, Measure measureTo,
-			Catalog catalog, java.util.Date convTime, BigDecimal valueFrom)
-			throws InvalidMeasureConversion;
+  /**
+   * преобразование ЕИ
+   *
+   * @param measureFrom ЕИ источник
+   * @param measureTo   ЕИ приемник
+   * @param catalog     позиция каталога для которой происходит преобразование
+   * @param convTime    время на которое происходит преобразование
+   * @param valueFrom   количество в базовой ЕИ
+   * @return количество в дополнительной ЕИ
+   * @throws InvalidMeasureConversion в случае ошибок преобразования
+   */
+  BigDecimal conversion(Measure measureFrom, Measure measureTo,
+                        Catalog catalog, java.util.Date convTime, BigDecimal valueFrom)
+      throws InvalidMeasureConversion;
 
 }

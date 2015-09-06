@@ -14,12 +14,12 @@
 <!-- $Id: map.xml,v 1.1 2007/04/28 07:08:02 konyashkina Exp $ -->
 
 <map version="1.0">
-  <mapID target="doctype_html" url="001dp.html" />
-  <mapID target="doctypeparam_html" url="002dp.html" />
-  <mapID target="docprtune_html" url="003dp.html" />
-  <mapID target="add_html" url="003dp.html#003dp_01" />
-  <mapID target="addlink_html" url="003dp.html#003dp_03" />
-  <mapID target="permissions_html" url="004dp.html" />
-  <mapID target="etapparam_html" url="005dp.html" />
-  <mapID target="history_html" url="011dp.html" />
+  <mapID target="doctype_html" url="001dp.html"/>
+  <mapID target="doctypeparam_html" url="002dp.html"/>
+  <mapID target="docprtune_html" url="003dp.html"/>
+  <mapID target="add_html" url="003dp.html#003dp_01"/>
+  <mapID target="addlink_html" url="003dp.html#003dp_03"/>
+  <mapID target="permissions_html" url="004dp.html"/>
+  <mapID target="etapparam_html" url="005dp.html"/>
+  <mapID target="history_html" url="011dp.html"/>
 </map>

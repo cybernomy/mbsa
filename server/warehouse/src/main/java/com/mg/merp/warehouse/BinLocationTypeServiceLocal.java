@@ -17,12 +17,10 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.BinLocationType;
 
 /**
- * 
  * @author leonova
  * @version $Id: BinLocationTypeServiceLocal.java,v 1.1 2006/03/14 11:49:53 safonov Exp $
  */
 public interface BinLocationTypeServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<BinLocationType, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<BinLocationType, Integer> {
 
 }

@@ -18,18 +18,18 @@ import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
  * Контроллер формы спецификации сводов по н/у
- * 
+ *
  * @author leonova
  * @version $Id: FeeSummarySpecMt.java,v 1.3 2006/08/22 07:46:01 leonova Exp $
  */
-public class FeeSummarySpecMt extends GoodsDocumentSpecMaintenanceForm{
+public class FeeSummarySpecMt extends GoodsDocumentSpecMaintenanceForm {
 
-	/**
-	 * @throws Exception
-	 */
-	public FeeSummarySpecMt() throws Exception {
-		super();
-	
-	}
+  /**
+   * @throws Exception
+   */
+  public FeeSummarySpecMt() throws Exception {
+    super();
+
+  }
 
 }

@@ -18,18 +18,18 @@ import com.mg.merp.document.model.DocHead;
 
 /**
  * Стратегия формирования номера документа
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: DocumentNumberStrategy.java,v 1.1 2007/03/23 13:52:02 safonov Exp $
  */
 public interface DocumentNumberStrategy {
 
-	/**
-	 * формирование номера документа
-	 * 
-	 * @param docHead	сущность документа
-	 * @return	номер документа
-	 */
-	String generateNumber(DocHead docHead);
+  /**
+   * формирование номера документа
+   *
+   * @param docHead сущность документа
+   * @return номер документа
+   */
+  String generateNumber(DocHead docHead);
 
 }

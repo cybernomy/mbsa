@@ -13,27 +13,39 @@
 
 <!-- $Id: OriginalDocumentMt.mfd.xml,v 1.7 2008/05/19 15:32:56 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.reference.support.ui.OriginalDocumentMt" title="resource://com.mg.merp.reference.resources.formelements#OriginalDocument.FormMt.Title" helpTopic="reference#origdoc_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.reference.support.ui.OriginalDocumentMt"
+          title="resource://com.mg.merp.reference.resources.formelements#OriginalDocument.FormMt.Title"
+          helpTopic="reference#origdoc_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:field id="DocNumber" />
-		<jfd:field id="DocDate" sameLine="true" />
-		<jfd:field id="DocName" />
-		<jfd:field id="Comments" />
-		<jfd:field id="CreateDate" />
-		<jfd:comboMenuBar id="originalFunctions" sameLine="true" text="resource://com.mg.merp.reference.resources.formelements#OriginalDocument.FormMt.OriginalFunctions" >
-	 		<jfd:menuItem id="showOriginal" text="resource://com.mg.merp.reference.resources.formelements#OriginalDocument.FormBr.ShowOriginal" actionListener="ShowOriginal" />
-	 		<jfd:menuItem id="downloadOriginal" text="resource://com.mg.merp.reference.resources.formelements#OriginalDocument.FormBr.DownloadOriginal" actionListener="DownloadOriginal" />
-	 		<jfd:menuItem id="uploadOriginal" text="resource://com.mg.merp.reference.resources.formelements#OriginalDocument.FormBr.UploadOriginal" actionListener="UploadOriginal" />
-	 		<jfd:menuItem id="removeOriginal" text="resource://com.mg.merp.reference.resources.formelements#OriginalDocument.FormBr.RemoveOriginal" actionListener="RemoveOriginal" />
-		</jfd:comboMenuBar>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 			 					
-	</jfd:container>
+    <jfd:field id="DocNumber"/>
+    <jfd:field id="DocDate" sameLine="true"/>
+    <jfd:field id="DocName"/>
+    <jfd:field id="Comments"/>
+    <jfd:field id="CreateDate"/>
+    <jfd:comboMenuBar id="originalFunctions" sameLine="true"
+                      text="resource://com.mg.merp.reference.resources.formelements#OriginalDocument.FormMt.OriginalFunctions">
+      <jfd:menuItem id="showOriginal"
+                    text="resource://com.mg.merp.reference.resources.formelements#OriginalDocument.FormBr.ShowOriginal"
+                    actionListener="ShowOriginal"/>
+      <jfd:menuItem id="downloadOriginal"
+                    text="resource://com.mg.merp.reference.resources.formelements#OriginalDocument.FormBr.DownloadOriginal"
+                    actionListener="DownloadOriginal"/>
+      <jfd:menuItem id="uploadOriginal"
+                    text="resource://com.mg.merp.reference.resources.formelements#OriginalDocument.FormBr.UploadOriginal"
+                    actionListener="UploadOriginal"/>
+      <jfd:menuItem id="removeOriginal"
+                    text="resource://com.mg.merp.reference.resources.formelements#OriginalDocument.FormBr.RemoveOriginal"
+                    actionListener="RemoveOriginal"/>
+    </jfd:comboMenuBar>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

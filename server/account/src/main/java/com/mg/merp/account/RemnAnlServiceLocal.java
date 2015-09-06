@@ -7,11 +7,11 @@ import com.mg.merp.account.model.RemnAnl;
 
 /**
  * Local interface for RemnAnlService.
- * @since 12.10.2004
+ *
  * @xdoclet-generated at 28-02-06
+ * @since 12.10.2004
  */
 public interface RemnAnlServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<RemnAnl, Integer>, com.mg.merp.account.Remn
-{
+    extends com.mg.framework.api.DataBusinessObjectService<RemnAnl, Integer>, com.mg.merp.account.Remn {
 
 }

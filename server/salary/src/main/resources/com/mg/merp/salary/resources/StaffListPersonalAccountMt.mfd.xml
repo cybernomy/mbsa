@@ -13,28 +13,34 @@
 
 <!-- $Id: StaffListPersonalAccountMt.mfd.xml,v 1.6 2007/07/09 08:35:35 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.salary.support.ui.StaffListPersonalAccountMt" title="resource://com.mg.merp.salary.resources.formelements#PersonalAccount.FormMt.Title" helpTopic="salary#staffacc_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.salary.support.ui.StaffListPersonalAccountMt"
+          title="resource://com.mg.merp.salary.resources.formelements#PersonalAccount.FormMt.Title"
+          helpTopic="salary#staffacc_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="tabFields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.salary.resources.formelements#PersonAcc.Tab.Total">
-			<jfd:field id="Personnel" />		
-			<jfd:field id="Personnel.TableNumber" enabled="false" sameLine="true"/>				
-			<jfd:field id="BeginDate" />
-			<jfd:field id="EndDate" sameLine="true"/>				
-			<jfd:field id="ANumber"/>					
-		</jfd:container>	
-		<jfd:container id="split" layout="jfd:split" alignment="expand_expand" orientation="ver" tabTitle="resource://com.mg.merp.salary.resources.formelements#PersonAcc.PositionAndTariffing">
-			<jfd:maintenanceTable id="positionFill" scroll="true" alignment="expand_expand">
-			</jfd:maintenanceTable>	 
-			<jfd:maintenanceTable id="tariff" scroll="true" alignment="expand_expand">
-			</jfd:maintenanceTable>	
-		</jfd:container>
-		<jfd:maintenanceTable id="fee" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.salary.resources.formelements#PersonAcc.Tab.Fee">
-		</jfd:maintenanceTable>			
-	</jfd:container>
+  <jfd:container id="tabFields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.salary.resources.formelements#PersonAcc.Tab.Total">
+      <jfd:field id="Personnel"/>
+      <jfd:field id="Personnel.TableNumber" enabled="false" sameLine="true"/>
+      <jfd:field id="BeginDate"/>
+      <jfd:field id="EndDate" sameLine="true"/>
+      <jfd:field id="ANumber"/>
+    </jfd:container>
+    <jfd:container id="split" layout="jfd:split" alignment="expand_expand" orientation="ver"
+                   tabTitle="resource://com.mg.merp.salary.resources.formelements#PersonAcc.PositionAndTariffing">
+      <jfd:maintenanceTable id="positionFill" scroll="true" alignment="expand_expand">
+      </jfd:maintenanceTable>
+      <jfd:maintenanceTable id="tariff" scroll="true" alignment="expand_expand">
+      </jfd:maintenanceTable>
+    </jfd:container>
+    <jfd:maintenanceTable id="fee" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.salary.resources.formelements#PersonAcc.Tab.Fee">
+    </jfd:maintenanceTable>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

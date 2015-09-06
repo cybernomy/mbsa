@@ -20,11 +20,11 @@ package com.mg.framework.api.ui;
  * @version $Id: FormEvent.java,v 1.1 2006/01/24 13:48:59 safonov Exp $
  */
 public class FormEvent extends UIEvent {
-	public FormEvent(Form source) {
-		super(source);
-	}
-	
-	public Form getForm() {
-		return (Form) getSource();
-	}
+  public FormEvent(Form source) {
+    super(source);
+  }
+
+  public Form getForm() {
+    return (Form) getSource();
+  }
 }

@@ -17,12 +17,10 @@ package com.mg.merp.planning;
 import com.mg.merp.planning.model.RccpResourceLoad;
 
 /**
- * 
  * @author leonova
  * @version $Id: RCCPResourceLoadServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface RCCPResourceLoadServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<RccpResourceLoad, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<RccpResourceLoad, Integer> {
 
 }

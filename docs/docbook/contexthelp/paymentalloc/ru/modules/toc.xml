@@ -14,17 +14,17 @@
 <!-- $Id: toc.xml,v 1.1 2006/12/03 13:24:11 konyashkina Exp $ -->
 
 <toc version="1.0">
-  
-    <tocitem text="Группы документов">
-	<tocitem text="Группы документов" target="docgroup_html" />
-    </tocitem>
-     
-     <tocitem text="Журнал платежей">
-        <tocitem text="Журнал платежей" target="pml_html" />
-	<tocitem text="Образцы записей" target="patterns_html" />
-	<tocitem text="Документы, связанные с платежом" target="docs_html" />
-    	<tocitem text="Условия отбора" target="cond_html" />
-    </tocitem>
-      
-    
+
+  <tocitem text="Группы документов">
+    <tocitem text="Группы документов" target="docgroup_html"/>
+  </tocitem>
+
+  <tocitem text="Журнал платежей">
+    <tocitem text="Журнал платежей" target="pml_html"/>
+    <tocitem text="Образцы записей" target="patterns_html"/>
+    <tocitem text="Документы, связанные с платежом" target="docs_html"/>
+    <tocitem text="Условия отбора" target="cond_html"/>
+  </tocitem>
+
+
 </toc>

@@ -19,15 +19,15 @@ import java.io.Serializable;
  * @author krivopoustov
  */
 public class RecomputeTaxesResult implements Serializable {
-	public double taxPrice;
-	public double taxSum;
+  public double taxPrice;
+  public double taxSum;
 
-	/**
-	 * @param taxPrice
-	 * @param taxSum
-	 */
-	public RecomputeTaxesResult(double taxPrice, double taxSum) {
-		this.taxPrice = taxPrice;
-		this.taxSum = taxSum;
-	}
+  /**
+   * @param taxPrice
+   * @param taxSum
+   */
+  public RecomputeTaxesResult(double taxPrice, double taxSum) {
+    this.taxPrice = taxPrice;
+    this.taxSum = taxSum;
+  }
 }

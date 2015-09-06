@@ -22,122 +22,127 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Account.AccGroup")
 public class AccGroup extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.account.model.AccKind AccKind;
+  private com.mg.merp.account.model.AccKind AccKind;
 
-	private java.lang.String GCode;
+  private java.lang.String GCode;
 
-	private java.lang.String GName;
+  private java.lang.String GName;
 
-	private java.lang.Integer MinUsagePeriod;
+  private java.lang.Integer MinUsagePeriod;
 
-	private java.lang.Integer MaxUsagePeriod;
+  private java.lang.Integer MaxUsagePeriod;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public AccGroup() {
-	}
+  /**
+   * default constructor
+   */
+  public AccGroup() {
+  }
 
-	/** constructor with id */
-	public AccGroup(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public AccGroup(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public com.mg.merp.account.model.AccKind getAccKind() {
-		return this.AccKind;
-	}
+  /**
+   *
+   */
 
-	public void setAccKind(com.mg.merp.account.model.AccKind AccAcckind) {
-		this.AccKind = AccAcckind;
-	}
+  public com.mg.merp.account.model.AccKind getAccKind() {
+    return this.AccKind;
+  }
 
-	/**
-	 * 
-	 */
+  public void setAccKind(com.mg.merp.account.model.AccKind AccAcckind) {
+    this.AccKind = AccAcckind;
+  }
 
-	@DataItemName("Account.AccGroup.GCode")
-	public java.lang.String getGCode() {
-		return this.GCode;
-	}
+  /**
+   *
+   */
 
-	public void setGCode(java.lang.String Gcode) {
-		this.GCode = Gcode;
-	}
+  @DataItemName("Account.AccGroup.GCode")
+  public java.lang.String getGCode() {
+    return this.GCode;
+  }
 
-	/**
-	 * 
-	 */
+  public void setGCode(java.lang.String Gcode) {
+    this.GCode = Gcode;
+  }
 
-	@DataItemName("Account.AccGroup.GName")
-	public java.lang.String getGName() {
-		return this.GName;
-	}
+  /**
+   *
+   */
 
-	public void setGName(java.lang.String Gname) {
-		this.GName = Gname;
-	}
+  @DataItemName("Account.AccGroup.GName")
+  public java.lang.String getGName() {
+    return this.GName;
+  }
 
-	/**
-	 * 
-	 */
+  public void setGName(java.lang.String Gname) {
+    this.GName = Gname;
+  }
 
-	@DataItemName("Account.AccGroup.MinUsagePeriod")
-	public java.lang.Integer getMinUsagePeriod() {
-		return this.MinUsagePeriod;
-	}
+  /**
+   *
+   */
 
-	public void setMinUsagePeriod(java.lang.Integer MinUsageperiod) {
-		this.MinUsagePeriod = MinUsageperiod;
-	}
+  @DataItemName("Account.AccGroup.MinUsagePeriod")
+  public java.lang.Integer getMinUsagePeriod() {
+    return this.MinUsagePeriod;
+  }
 
-	/**
-	 * 
-	 */
+  public void setMinUsagePeriod(java.lang.Integer MinUsageperiod) {
+    this.MinUsagePeriod = MinUsageperiod;
+  }
 
-	@DataItemName("Account.AccGroup.MaxUsagePeriod")
-	public java.lang.Integer getMaxUsagePeriod() {
-		return this.MaxUsagePeriod;
-	}
+  /**
+   *
+   */
 
-	public void setMaxUsagePeriod(java.lang.Integer MaxUsageperiod) {
-		this.MaxUsagePeriod = MaxUsageperiod;
-	}
+  @DataItemName("Account.AccGroup.MaxUsagePeriod")
+  public java.lang.Integer getMaxUsagePeriod() {
+    return this.MaxUsagePeriod;
+  }
+
+  public void setMaxUsagePeriod(java.lang.Integer MaxUsageperiod) {
+    this.MaxUsagePeriod = MaxUsageperiod;
+  }
 }

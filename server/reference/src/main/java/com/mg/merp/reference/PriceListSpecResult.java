@@ -19,17 +19,17 @@ import java.io.Serializable;
 /**
  * @author pashistova
  *
- * TODO To change the template for this generated type comment go to
- * Window - Preferences - Java - Code Style - Code Templates
+ *         TODO To change the template for this generated type comment go to Window - Preferences -
+ *         Java - Code Style - Code Templates
  */
 public class PriceListSpecResult implements Serializable {
-	public int catalogId;
-	public int priceListSpecId;
-	public double price;
-			
-	public PriceListSpecResult(int catalogId, int priceListSpecId, double price) {
-		this.catalogId = catalogId;
-		this.priceListSpecId = priceListSpecId;
-		this.price = price;
-	}
+  public int catalogId;
+  public int priceListSpecId;
+  public double price;
+
+  public PriceListSpecResult(int catalogId, int priceListSpecId, double price) {
+    this.catalogId = catalogId;
+    this.priceListSpecId = priceListSpecId;
+    this.price = price;
+  }
 }

@@ -20,7 +20,6 @@ package com.mg.framework.utils;
  *
  * @author Oleg V. Safonov
  * @version $Id: StringUtil.java,v 1.5 2006/06/23 13:07:48 safonov Exp $
- *
  * @deprecated
  */
 public class StringUtil extends StringUtils {

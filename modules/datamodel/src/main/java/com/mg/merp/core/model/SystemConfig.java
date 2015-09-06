@@ -21,39 +21,40 @@ package com.mg.merp.core.model;
  */
 public class SystemConfig extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-    // Fields    
+  // Fields
 
- private com.mg.merp.core.model.SystemConfigId id;
-
-
-    // Constructors
-
-    /** default constructor */
-    public SystemConfig() {
-    }
-    
-    /** constructor with id */
-    public SystemConfig(com.mg.merp.core.model.SystemConfigId id) {
-        this.id = id;
-    }
-   
-    
-    
-
-    // Property accessors
-    /**
-    
-    */
-    
-    public com.mg.merp.core.model.SystemConfigId getId () {
-        return this.id;
-    }
-    
-   public void setId (com.mg.merp.core.model.SystemConfigId id) {
-        this.id = id;
-    }
+  private com.mg.merp.core.model.SystemConfigId id;
 
 
+  // Constructors
+
+  /**
+   * default constructor
+   */
+  public SystemConfig() {
+  }
+
+  /**
+   * constructor with id
+   */
+  public SystemConfig(com.mg.merp.core.model.SystemConfigId id) {
+    this.id = id;
+  }
+
+
+  // Property accessors
+
+  /**
+
+   */
+
+  public com.mg.merp.core.model.SystemConfigId getId() {
+    return this.id;
+  }
+
+  public void setId(com.mg.merp.core.model.SystemConfigId id) {
+    this.id = id;
+  }
 
 
 }

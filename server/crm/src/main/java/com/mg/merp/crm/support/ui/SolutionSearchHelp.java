@@ -18,18 +18,18 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
  * Поисковик бизнес-компонента "Решение"
- *  
+ *
  * @author Artem V. Sharapov
  * @version $Id: SolutionSearchHelp.java,v 1.1 2007/02/07 07:02:41 sharapov Exp $
  */
 public class SolutionSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {
-		return "merp/crm/Solution"; //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/crm/Solution"; //$NON-NLS-1$
+  }
 
 }

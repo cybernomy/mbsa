@@ -19,29 +19,26 @@ import com.mg.merp.core.model.Folder;
 
 /**
  * Бизнес-компонент "Ведомость начисления амортизации"
- * 
+ *
  * @author leonova
  * @author Konstantin S. Alikaev
  * @version $Id: AmortizationServiceLocal.java,v 1.2 2008/04/28 10:09:51 alikaev Exp $
  */
 public interface AmortizationServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Amortization, Integer> {
 
-	/**
-	 * Создание хоз. операций по партии амортизаций
-	 * 
-	 * @param batch
-	 * 			- служебное поле у амортизации(номер партии)
-	 * @param folder
-	 * 			- папка для создания хоз. операции
-	 */
-   void commitAmortization(Integer batch, Folder folder);
+  /**
+   * Создание хоз. операций по партии амортизаций
+   *
+   * @param batch  - служебное поле у амортизации(номер партии)
+   * @param folder - папка для создания хоз. операции
+   */
+  void commitAmortization(Integer batch, Folder folder);
 
-   /**
-    * Откат создания хоз. операций по партиям амортизаций
-    * 
-    * @param batch
-	* 	    	- служебное поле у амортизации(номер партии)
-    */
-   void rollbackAmortization(Integer batch);
+  /**
+   * Откат создания хоз. операций по партиям амортизаций
+   *
+   * @param batch - служебное поле у амортизации(номер партии)
+   */
+  void rollbackAmortization(Integer batch);
 
 }

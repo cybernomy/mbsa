@@ -13,19 +13,29 @@
 
 <!-- $Id: VersionBr.mfd.xml,v 1.7 2006/12/03 13:50:24 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" verticalGap="5" controller="com.mg.merp.paymentcontrol.support.ui.VersionBr" title="resource://com.mg.merp.paymentcontrol.resources.formelements#Version.FormBr.Title" helpTopic="paymentcontrol#version_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" verticalGap="5"
+          controller="com.mg.merp.paymentcontrol.support.ui.VersionBr"
+          title="resource://com.mg.merp.paymentcontrol.resources.formelements#Version.FormBr.Title"
+          helpTopic="paymentcontrol#version_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" alignment="expand_expand" autoResize="subsequent_columns" scroll="true" >
-		<jfd:popupMenu>
-			<jfd:separator />
-			<jfd:menuItem id="showPlanPaymentItem" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Version.ShowPlanPayment" actionListener="ShowPlanPayment" />
-			<jfd:menuItem id="setStatusItem" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Version.SetStatus" actionListener="SetStatus" />
-			<jfd:menuItem id="showStatusItem" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Version.ShowStatus" actionListener="ShowStatus" />						
-		</jfd:popupMenu>		
-	</jfd:maintenanceTable>
+  <jfd:maintenanceTable id="table" alignment="expand_expand" autoResize="subsequent_columns"
+                        scroll="true">
+    <jfd:popupMenu>
+      <jfd:separator/>
+      <jfd:menuItem id="showPlanPaymentItem"
+                    text="resource://com.mg.merp.paymentcontrol.resources.formelements#Version.ShowPlanPayment"
+                    actionListener="ShowPlanPayment"/>
+      <jfd:menuItem id="setStatusItem"
+                    text="resource://com.mg.merp.paymentcontrol.resources.formelements#Version.SetStatus"
+                    actionListener="SetStatus"/>
+      <jfd:menuItem id="showStatusItem"
+                    text="resource://com.mg.merp.paymentcontrol.resources.formelements#Version.ShowStatus"
+                    actionListener="ShowStatus"/>
+    </jfd:popupMenu>
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

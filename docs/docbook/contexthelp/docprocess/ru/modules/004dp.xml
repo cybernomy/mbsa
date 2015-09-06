@@ -9,47 +9,75 @@
 ]> -->
 <chapter id="004dp">
   <title>Права доступа</title>
-    
-    <para>В данной закладке находится список групп пользователей, которым разрешено
-    выполнение данного этапа. Если пользователь принадлежит к одной из указанных 
-    групп, то этап документооборота будет доступен для выполнения данному пользователю.  </para>
-    
-    <para>Добавить группу пользователей в этот список можно клавишей
-    <keycombo><keycap>Ins</keycap></keycombo>, удалить из списка - клавишей
-    <keycombo><keycap>Del</keycap></keycombo>, или с помощью 
-    <link linkend="context">контекстного меню</link>.</para>
-    
-    <para>При добавлении группы пользователей нужно указать, выполнение каких 
-    действий по данному этапу ДО будет доступно этой группе: </para>
-    
+
+  <para>В данной закладке находится список групп пользователей, которым разрешено
+    выполнение данного этапа. Если пользователь принадлежит к одной из указанных
+    групп, то этап документооборота будет доступен для выполнения данному пользователю.
+  </para>
+
+  <para>Добавить группу пользователей в этот список можно клавишей
+    <keycombo>
+      <keycap>Ins</keycap>
+    </keycombo>
+    , удалить из списка - клавишей
+    <keycombo>
+      <keycap>Del</keycap>
+    </keycombo>
+    , или с помощью
+    <link linkend="context">контекстного меню</link>.
+  </para>
+
+  <para>При добавлении группы пользователей нужно указать, выполнение каких
+    действий по данному этапу ДО будет доступно этой группе:
+  </para>
+
   <screenshot>
-    <mediaobject><imageobject><imagedata fileref="images/access_rights.gif"/></imageobject></mediaobject>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/access_rights.gif"/>
+      </imageobject>
+    </mediaobject>
   </screenshot>
-  
-  <itemizedlist> 
-        <listitem><para><guibutton>Выполнение этапа</guibutton>. Пользователи,
-	принадлежащие к данной группе, получают права только на выполнение 
-	данного этапа.</para></listitem>
-	
-	<listitem><para><guibutton>Откат этапа</guibutton>. Пользователи, 
-	принадлежащие к данной группе, получают права только на откат 
-	данного этапа. </para></listitem>
-	
-	<listitem><para><guibutton>Полный доступ</guibutton>. Пользователи, 
-	принадлежащие к данной группе, получают права и на выполнение данного
-	этапа, и на его откат. </para></listitem>
-   </itemizedlist>
-   
+
+  <itemizedlist>
+    <listitem>
+      <para><guibutton>Выполнение этапа</guibutton>. Пользователи,
+        принадлежащие к данной группе, получают права только на выполнение
+        данного этапа.
+      </para>
+    </listitem>
+
+    <listitem>
+      <para><guibutton>Откат этапа</guibutton>. Пользователи,
+        принадлежащие к данной группе, получают права только на откат
+        данного этапа.
+      </para>
+    </listitem>
+
+    <listitem>
+      <para><guibutton>Полный доступ</guibutton>. Пользователи,
+        принадлежащие к данной группе, получают права и на выполнение данного
+        этапа, и на его откат.
+      </para>
+    </listitem>
+  </itemizedlist>
+
   <screenshot>
-    <mediaobject><imageobject><imagedata fileref="images/access.gif"/></imageobject></mediaobject>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/access.gif"/>
+      </imageobject>
+    </mediaobject>
   </screenshot>
-    
-    <para>Если пользователь не принадлежит ни к одной из указанных групп, то система 
-    при попытке выполнить этот этап выдаст сообщение: &quot;<emphasis>Документооборот 
-    выполнен</emphasis>&quot;, даже в том случае, если этап ещё не выполнен. </para>
-    
-    <para>См. также: 
-    <link linkend="003dp">Настройка документооборота</link> </para>
-    
-    
-  </chapter>
+
+  <para>Если пользователь не принадлежит ни к одной из указанных групп, то система
+    при попытке выполнить этот этап выдаст сообщение: &quot;<emphasis>Документооборот
+      выполнен</emphasis>&quot;, даже в том случае, если этап ещё не выполнен.
+  </para>
+
+  <para>См. также:
+    <link linkend="003dp">Настройка документооборота</link>
+  </para>
+
+
+</chapter>

@@ -19,32 +19,32 @@ import java.io.Serializable;
  * @author krivopoustov
  */
 public class CreateFactItemCond implements Serializable {
-	public int docId;
-	public int docSection;
-	public String docType;
-	public String docNumber;
-	public long docDate;
-	public int src;
-	public int kind;
-	public boolean useSpec;
-	public boolean createSpec;
-	
-	public CreateFactItemCond() {
-		super();
-	}
-	
-	public CreateFactItemCond(int docId, int docSection, String docType,
-			String docNumber, long docDate, int src, int kind, boolean useSpec,
-			boolean createSpec) {
-		super();
-		this.docId = docId;
-		this.docSection = docSection;
-		this.docType = docType;
-		this.docNumber = docNumber;
-		this.docDate = docDate;
-		this.src = src;
-		this.kind = kind;
-		this.useSpec = useSpec;
-		this.createSpec = createSpec;
-	}
+  public int docId;
+  public int docSection;
+  public String docType;
+  public String docNumber;
+  public long docDate;
+  public int src;
+  public int kind;
+  public boolean useSpec;
+  public boolean createSpec;
+
+  public CreateFactItemCond() {
+    super();
+  }
+
+  public CreateFactItemCond(int docId, int docSection, String docType,
+                            String docNumber, long docDate, int src, int kind, boolean useSpec,
+                            boolean createSpec) {
+    super();
+    this.docId = docId;
+    this.docSection = docSection;
+    this.docType = docType;
+    this.docNumber = docNumber;
+    this.docDate = docDate;
+    this.src = src;
+    this.kind = kind;
+    this.useSpec = useSpec;
+    this.createSpec = createSpec;
+  }
 }

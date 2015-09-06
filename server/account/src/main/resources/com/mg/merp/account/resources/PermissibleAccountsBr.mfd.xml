@@ -8,22 +8,28 @@
 <!-- as authorized in a license agreement authorizing and                    -->
 <!-- controlling such use and disclosure                                     -->
 <!--                                                                         -->
- <!--  Millennium Business Suite Anywhere System.			                 -->
+<!--  Millennium Business Suite Anywhere System.			                 -->
 <!-- ======================================================================= -->
 
 <!-- $Id: PermissibleAccountsBr.mfd.xml,v 1.7 2008/03/27 10:37:07 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.account.support.ui.PermissibleAccountsBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.account.resources.formelements#PermissibleAccounts.FormBr.Title" helpTopic="account#permacc_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.account.support.ui.PermissibleAccountsBr" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.account.resources.formelements#PermissibleAccounts.FormBr.Title"
+          helpTopic="account#permacc_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
-		<jfd:popupMenu>
-			<jfd:separator />
-			<jfd:menuItem id="createFromEconomicOper" text="resource://com.mg.merp.account.resources.formelements#PermissibleAccounts.FormBr.MenuItem.CreateFromEconomicOper" actionListener="CreateFromEconomicOper" />
-		</jfd:popupMenu>
-	</jfd:maintenanceTable>
+  <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+    <jfd:popupMenu>
+      <jfd:separator/>
+      <jfd:menuItem id="createFromEconomicOper"
+                    text="resource://com.mg.merp.account.resources.formelements#PermissibleAccounts.FormBr.MenuItem.CreateFromEconomicOper"
+                    actionListener="CreateFromEconomicOper"/>
+    </jfd:popupMenu>
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

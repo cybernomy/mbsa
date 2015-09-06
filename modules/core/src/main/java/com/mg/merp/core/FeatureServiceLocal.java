@@ -18,19 +18,18 @@ import com.mg.merp.core.model.Feature;
 
 /**
  * Бизнес-компонент "Пользовательские поля"
- * 
+ *
  * @author leonova
  * @author Oleg V. Safonov
  * @version $Id: FeatureServiceLocal.java,v 1.3 2007/01/25 15:40:10 safonov Exp $
  */
 public interface FeatureServiceLocal
-   extends  com.mg.framework.api.DataBusinessObjectService<Feature, Integer>
-{
-	/**
-	 * поиск описателя пользовательского поля по коду
-	 * 
-	 * @param code	код
-	 * @return	описатель пользовательского поля
-	 */
-	Feature findByCode(String code);
+    extends com.mg.framework.api.DataBusinessObjectService<Feature, Integer> {
+  /**
+   * поиск описателя пользовательского поля по коду
+   *
+   * @param code код
+   * @return описатель пользовательского поля
+   */
+  Feature findByCode(String code);
 }

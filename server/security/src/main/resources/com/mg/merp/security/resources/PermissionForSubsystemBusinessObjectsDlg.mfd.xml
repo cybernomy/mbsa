@@ -13,23 +13,31 @@
 
 <!-- $Id: PermissionForSubsystemBusinessObjectsDlg.mfd.xml,v 1.1 2008/06/10 06:19:53 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.security.support.ui.PermissionForSubsystemBusinessObjectsDlg" orientation="ver" verticalGap="5" title="resource://com.mg.merp.security.resources.formelements#PermissionForSubsystemBusinessObjectsDlg.Title">
-	
-	<jfd:container id="mainBox" layout="jfd:box" columns="1" alignment="expand_expand">
-		<jfd:border style="bevel" type="raised" />
-		<jfd:container id="topBox" layout="jfd:box" columns="3" alignment="expand_top">
-			<jfd:field id="moduleName" readOnly="true" text="resource://com.mg.merp.security.resources.formelements#PermissionForSubsystemBusinessObjectsDlg.ModuleName" alignment="expand_expand" />
-			<jfd:comboBox id="permissionAction" selectedIndex="0" >
-				<jfd:items>
-					<jfd:item value="resource://com.mg.merp.security.resources.formelements#PermissionForSubsystemBusinessObjectsDlg.GrantPermission" />
-					<jfd:item value="resource://com.mg.merp.security.resources.formelements#PermissionForSubsystemBusinessObjectsDlg.RevokePermission" />
-				</jfd:items>
-			</jfd:comboBox>
-		</jfd:container>
-		<jfd:table id="methodsTable" scroll="true" autoResize="subsequent_columns" alignment="expand_expand">
-		</jfd:table>
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.security.support.ui.PermissionForSubsystemBusinessObjectsDlg"
+          orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.security.resources.formelements#PermissionForSubsystemBusinessObjectsDlg.Title">
+
+  <jfd:container id="mainBox" layout="jfd:box" columns="1" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:container id="topBox" layout="jfd:box" columns="3" alignment="expand_top">
+      <jfd:field id="moduleName" readOnly="true"
+                 text="resource://com.mg.merp.security.resources.formelements#PermissionForSubsystemBusinessObjectsDlg.ModuleName"
+                 alignment="expand_expand"/>
+      <jfd:comboBox id="permissionAction" selectedIndex="0">
+        <jfd:items>
+          <jfd:item
+              value="resource://com.mg.merp.security.resources.formelements#PermissionForSubsystemBusinessObjectsDlg.GrantPermission"/>
+          <jfd:item
+              value="resource://com.mg.merp.security.resources.formelements#PermissionForSubsystemBusinessObjectsDlg.RevokePermission"/>
+        </jfd:items>
+      </jfd:comboBox>
+    </jfd:container>
+    <jfd:table id="methodsTable" scroll="true" autoResize="subsequent_columns"
+               alignment="expand_expand">
+    </jfd:table>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
 
 </jfd:form>

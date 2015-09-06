@@ -19,16 +19,16 @@ package com.mg.framework.service;
  * @version $Id: ModuleLicenseSurcharge.java,v 1.2 2007/04/13 14:02:03 safonov Exp $
  */
 public class ModuleLicenseSurcharge extends LicenseException {
-	private static final long serialVersionUID = -2641016019317012600L;
+  private static final long serialVersionUID = -2641016019317012600L;
 
-	private String subsystemName;
+  private String subsystemName;
 
-	public ModuleLicenseSurcharge(String subsystemName) {
-		super();
-		this.subsystemName = subsystemName;
-	}
+  public ModuleLicenseSurcharge(String subsystemName) {
+    super();
+    this.subsystemName = subsystemName;
+  }
 
-	public String getSubsystemName() {
-		return subsystemName;
-	}
+  public String getSubsystemName() {
+    return subsystemName;
+  }
 }

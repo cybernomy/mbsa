@@ -1,62 +1,64 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.planning.model.MRPOrderType" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.planning.model.MRPOrderType</param>
-	</typedef>
+  <typedef name="com.mg.merp.planning.model.MRPOrderType"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.planning.model.MRPOrderType</param>
+  </typedef>
 
-	<typedef name="com.mg.merp.planning.model.MRPSource" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.planning.model.MRPSource</param>
-	</typedef>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <typedef name="com.mg.merp.planning.model.MRPSource"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.planning.model.MRPSource</param>
+  </typedef>
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.planning.model.MrpInputs" table="PP_MRP_INPUTS">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">PP_MRP_INPUTS_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="MrpVersionControl" class="com.mg.merp.planning.model.MrpVersionControl">
-      <column name="MRP_VERSION_CONTROL_ID" not-null="false" />
+      <column name="MRP_VERSION_CONTROL_ID" not-null="false"/>
     </many-to-one>
     <property name="PpReference" type="java.lang.String">
-      <column name="PP_REFERENCE" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="PP_REFERENCE" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="ReferenceId" type="java.lang.Integer">
-      <column name="REFERENCE_ID" not-null="false" sql-type="INTEGER" />
+      <column name="REFERENCE_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="RequiredDate" type="java.util.Date">
-      <column name="REQUIRED_DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="REQUIRED_DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="MrpQuantity" type="java.math.BigDecimal">
-      <column name="MRP_QUANTITY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="MRP_QUANTITY" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="MrpOrderType" type="com.mg.merp.planning.model.MRPOrderType">
-      <column name="MRP_ORDER_TYPE" not-null="false" sql-type="SMALLINT" />
+      <column name="MRP_ORDER_TYPE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="MrpSource" type="com.mg.merp.planning.model.MRPSource">
-      <column name="MRP_SOURCE" not-null="false" sql-type="SMALLINT" />
+      <column name="MRP_SOURCE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="FixedInput" type="boolean">
-      <column name="FIXED_INPUT" not-null="false" sql-type="SMALLINT" />
+      <column name="FIXED_INPUT" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="BatchDate" type="java.util.Date">
-      <column name="BATCH_DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="BATCH_DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="WarehouseId" type="java.lang.Integer">
-      <column name="WAREHOUSE_ID" not-null="false" sql-type="INTEGER" />
+      <column name="WAREHOUSE_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="CatalogId" type="java.lang.Integer">
-      <column name="CATALOG_ID" not-null="false" sql-type="INTEGER" />
+      <column name="CATALOG_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

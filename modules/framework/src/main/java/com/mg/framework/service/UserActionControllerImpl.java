@@ -14,10 +14,10 @@
  */
 package com.mg.framework.service;
 
-import java.io.Serializable;
-
 import com.mg.framework.api.Logger;
 import com.mg.framework.utils.ServerUtils;
+
+import java.io.Serializable;
 
 /**
  * @author Oleg V. Safonov
@@ -26,5 +26,5 @@ import com.mg.framework.utils.ServerUtils;
 @Deprecated
 @SuppressWarnings("unchecked")
 public class UserActionControllerImpl implements Serializable {
-    private Logger log = ServerUtils.getLogger(getClass());
+  private Logger log = ServerUtils.getLogger(getClass());
 }

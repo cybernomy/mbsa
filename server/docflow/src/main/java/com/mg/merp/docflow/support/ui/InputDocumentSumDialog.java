@@ -14,22 +14,22 @@
  */
 package com.mg.merp.docflow.support.ui;
 
-import java.math.BigDecimal;
-
 import com.mg.framework.generic.ui.DefaultWizardDialog;
+
+import java.math.BigDecimal;
 
 /**
  * @author Oleg V. Safonov
  * @version $Id: InputDocumentSumDialog.java,v 1.2 2006/09/11 09:29:40 safonov Exp $
  */
 public class InputDocumentSumDialog extends DefaultWizardDialog {
-	private BigDecimal docSum;
-	
-	public BigDecimal getDocSum() {
-		return docSum;
-	}
-	
-	public void setDocSum(BigDecimal docSum) {
-		this.docSum = docSum;
-	}
+  private BigDecimal docSum;
+
+  public BigDecimal getDocSum() {
+    return docSum;
+  }
+
+  public void setDocSum(BigDecimal docSum) {
+    this.docSum = docSum;
+  }
 }

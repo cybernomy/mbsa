@@ -18,15 +18,15 @@ import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис транслятора SQL ИС модуля платежный календарь
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: SQLExceptionTranslatorServiceMBean.java,v 1.1 2007/05/23 06:02:59 sharapov Exp $
  */
 public interface SQLExceptionTranslatorServiceMBean extends ServiceMBean {
 
-	/**
-	 * имя сервиса
-	 */
-	final static String SERVICE_NAME = "merp:paymentcontrol=SQLExceptionTranslator"; //$NON-NLS-1$
+  /**
+   * имя сервиса
+   */
+  final static String SERVICE_NAME = "merp:paymentcontrol=SQLExceptionTranslator"; //$NON-NLS-1$
 
 }

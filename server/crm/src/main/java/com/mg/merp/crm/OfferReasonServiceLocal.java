@@ -17,12 +17,10 @@ package com.mg.merp.crm;
 import com.mg.merp.crm.model.OfferReason;
 
 /**
- * 
  * @author leonova
  * @version $Id: OfferReasonServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface OfferReasonServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<OfferReason, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<OfferReason, Integer> {
 
 }

@@ -19,18 +19,18 @@ import java.io.Serializable;
  * @author krivopoustov
  */
 public class CatalogItemInfo implements Serializable {
-	public int catalogId;
-	public int pricelistspecId;
-	double price;
+  public int catalogId;
+  public int pricelistspecId;
+  double price;
 
-	public CatalogItemInfo() {
-		super();
-	}
-	
-	public CatalogItemInfo(int catalogId, int pricelistspecId, double price) {
-		super();
-		this.catalogId = catalogId;
-		this.pricelistspecId = pricelistspecId;
-		this.price = price;
-	}
+  public CatalogItemInfo() {
+    super();
+  }
+
+  public CatalogItemInfo(int catalogId, int pricelistspecId, double price) {
+    super();
+    this.catalogId = catalogId;
+    this.pricelistspecId = pricelistspecId;
+    this.price = price;
+  }
 }

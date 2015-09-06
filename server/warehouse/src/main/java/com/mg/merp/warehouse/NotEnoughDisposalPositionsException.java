@@ -18,20 +18,21 @@ import com.mg.merp.warehouse.support.Messages;
 
 /**
  * ИС "Недостаточно позиций для списания со склада"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: NotEnoughDisposalPositionsException.java,v 1.2 2007/03/26 13:31:18 poroxnenko Exp $ 
+ * @version $Id: NotEnoughDisposalPositionsException.java,v 1.2 2007/03/26 13:31:18 poroxnenko Exp
+ *          $
  */
 @javax.ejb.ApplicationException
 public class NotEnoughDisposalPositionsException extends
-		BusinessException {
-	
-	public NotEnoughDisposalPositionsException(String code, Throwable cause) {
-		super(Messages.getInstance().getMessage(Messages.NOTENOUGH_DISPOSAL_POSITIONS, new Object[]{code}), cause);
-	}
-	
-	public NotEnoughDisposalPositionsException(String code) {
-		super(Messages.getInstance().getMessage(Messages.NOTENOUGH_DISPOSAL_POSITIONS, new Object[]{code}));
-	}
+    BusinessException {
+
+  public NotEnoughDisposalPositionsException(String code, Throwable cause) {
+    super(Messages.getInstance().getMessage(Messages.NOTENOUGH_DISPOSAL_POSITIONS, new Object[]{code}), cause);
+  }
+
+  public NotEnoughDisposalPositionsException(String code) {
+    super(Messages.getInstance().getMessage(Messages.NOTENOUGH_DISPOSAL_POSITIONS, new Object[]{code}));
+  }
 
 }

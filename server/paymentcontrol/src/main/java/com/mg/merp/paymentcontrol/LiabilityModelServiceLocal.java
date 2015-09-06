@@ -18,15 +18,15 @@ import com.mg.merp.paymentcontrol.model.Liability;
 
 /**
  * Сервис бизнес-компонента "Образцы реестра обязательств"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: LiabilityModelServiceLocal.java,v 1.3 2007/05/14 04:59:59 sharapov Exp $
  */
 public interface LiabilityModelServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Liability, Integer> {
-	
-	/**
-	 * тип папки для образцов реестра обязательств
-	 */
-	final static short FOLDER_PART = 13402;
+
+  /**
+   * тип папки для образцов реестра обязательств
+   */
+  final static short FOLDER_PART = 13402;
 }

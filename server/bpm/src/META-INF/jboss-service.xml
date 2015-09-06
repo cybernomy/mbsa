@@ -15,9 +15,10 @@
 
 <server>
 
-    <mbean code="com.mg.merp.bpm.support.jboss.BPMManagerService" name="merp:service=BPMManagerServiceService">
-        <depends>jboss:service=MERP</depends>
-        <depends>merp.har:service=MERPDataWarehouse</depends>
-    </mbean>
+  <mbean code="com.mg.merp.bpm.support.jboss.BPMManagerService"
+         name="merp:service=BPMManagerServiceService">
+    <depends>jboss:service=MERP</depends>
+    <depends>merp.har:service=MERPDataWarehouse</depends>
+  </mbean>
 
 </server>

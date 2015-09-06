@@ -13,26 +13,25 @@
 */
 package com.mg.merp.report.parameters;
 
-import java.util.Map;
-
 import com.mg.framework.api.ui.UIEvent;
+
+import java.util.Map;
 
 /**
  * @author Valentin A. Poroxnenko
  * @version $Id: ReportParametersEvent.java,v 1.2 2008/03/27 08:12:15 safonov Exp $
- * 
  * @deprecated
  */
 @Deprecated
 public class ReportParametersEvent extends UIEvent {
 
-	public ReportParametersEvent(Map<String, ReportParameter> source) {
-		super(source);
-	}
-	
-	@SuppressWarnings("unchecked")
-	public Map<String, ReportParameter> getParameters(){
-		return (Map<String, ReportParameter>)getSource();
-	}
+  public ReportParametersEvent(Map<String, ReportParameter> source) {
+    super(source);
+  }
+
+  @SuppressWarnings("unchecked")
+  public Map<String, ReportParameter> getParameters() {
+    return (Map<String, ReportParameter>) getSource();
+  }
 
 }

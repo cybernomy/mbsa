@@ -18,37 +18,37 @@ import com.mg.framework.api.annotations.DataItemName;
 
 
 /**
- *  Контроллер формы условий отбора сотрудников
- *  
- *  @author Artem V. Sharapov
+ * Контроллер формы условий отбора сотрудников
+ *
+ * @author Artem V. Sharapov
  */
 public class EmployeesRest extends NaturalPersonRest {
 
-	@DataItemName("Reference.Cond.Employees.TableNumber") //$NON-NLS-1$
-	private String tableNumber = null;
+  @DataItemName("Reference.Cond.Employees.TableNumber") //$NON-NLS-1$
+  private String tableNumber = null;
 
-	@DataItemName("Reference.Cond.Employees.PersonCode") //$NON-NLS-1$
-	private String personCode = null;
+  @DataItemName("Reference.Cond.Employees.PersonCode") //$NON-NLS-1$
+  private String personCode = null;
 
-	@Override
-	protected void doClearRestrictionItem() {
-		super.doClearRestrictionItem();
-		this.tableNumber = null;
-		this.personCode = null;
-	}
+  @Override
+  protected void doClearRestrictionItem() {
+    super.doClearRestrictionItem();
+    this.tableNumber = null;
+    this.personCode = null;
+  }
 
-	/**
-	 * @return табельный номер
-	 */
-	public String getTableNumber() {
-		return tableNumber;
-	}
+  /**
+   * @return табельный номер
+   */
+  public String getTableNumber() {
+    return tableNumber;
+  }
 
-	/**
-	 * @return Код(ФИО)
-	 */
-	public String getPersonCode() { 
-		return personCode;
-	}
+  /**
+   * @return Код(ФИО)
+   */
+  public String getPersonCode() {
+    return personCode;
+  }
 
 }

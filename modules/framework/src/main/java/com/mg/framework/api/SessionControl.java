@@ -16,31 +16,30 @@ package com.mg.framework.api;
 
 /**
  * Менеджер сессий
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: SessionControl.java,v 1.3 2006/09/22 08:42:17 safonov Exp $
  */
 public interface SessionControl {
-	
-	/**
-	 * установить текущую сессию, текущий поток будет ассоциирован с сессией, если передан <code>null</code>
-	 * то ассоциация будет снята 
-	 * 
-	 * @param session	сессия
-	 */
-	void setCurrentSession(Session session);
-	
-	/**
-	 * получить текущую сессию
-	 * 
-	 * @return	текущая сессия или <code>null</code> если текущий поток не ассоциирован с сессией
-	 */
-	Session getCurrentSession();
-	
-	/**
-	 * очистить менеджер сессий
-	 *
-	 */
-	void clear();
+
+  /**
+   * получить текущую сессию
+   *
+   * @return текущая сессия или <code>null</code> если текущий поток не ассоциирован с сессией
+   */
+  Session getCurrentSession();
+
+  /**
+   * установить текущую сессию, текущий поток будет ассоциирован с сессией, если передан
+   * <code>null</code> то ассоциация будет снята
+   *
+   * @param session сессия
+   */
+  void setCurrentSession(Session session);
+
+  /**
+   * очистить менеджер сессий
+   */
+  void clear();
 
 }

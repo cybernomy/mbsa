@@ -21,19 +21,20 @@ import com.mg.merp.document.model.DocumentSpecPackage;
 
 /**
  * Контроллер формы поддержки "Упаковки товара позиции спецификации документа"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: DocumentSpecPackageMt.java,v 1.1 2007/06/21 11:59:42 sharapov Exp $
  */
 public class DocumentSpecPackageMt extends DefaultMaintenanceForm {
 
-	
-	/**
-	 * Обработчик кнопки "Рассчитать вес и объем"
-	 * @param event - событие
-	 */
-	public void onActionComputeWeightAndVolume(WidgetEvent event) {
-		((DocumentSpecPackageServiceLocal) getService()).computeWeightAndVolume((DocumentSpecPackage) getEntity());
-	}
+
+  /**
+   * Обработчик кнопки "Рассчитать вес и объем"
+   *
+   * @param event - событие
+   */
+  public void onActionComputeWeightAndVolume(WidgetEvent event) {
+    ((DocumentSpecPackageServiceLocal) getService()).computeWeightAndVolume((DocumentSpecPackage) getEntity());
+  }
 
 }

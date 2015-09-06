@@ -22,26 +22,26 @@ import com.mg.framework.api.ui.SearchHelpEvent;
  */
 public class AccountKreditSearchHelp extends AccountSearchHelp {
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#defineExportContext()
-	 */
-	@Override
-	protected String[] defineExportContext() {
-		return new String[] {"AnlKt1", "AnlKt2", "AnlKt3", "AnlKt4", "AnlKt5"};
-	}
+  /*
+   * (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#defineExportContext()
+   */
+  @Override
+  protected String[] defineExportContext() {
+    return new String[]{"AnlKt1", "AnlKt2", "AnlKt3", "AnlKt4", "AnlKt5"};
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doOnSearchPerformed(com.mg.framework.api.ui.SearchHelpEvent)
-	 */
-	@Override
-	protected void doOnSearchPerformed(SearchHelpEvent event) {
-		setExportContextValue("AnlKt1", null);
-		setExportContextValue("AnlKt2", null);
-		setExportContextValue("AnlKt3", null);
-		setExportContextValue("AnlKt4", null);
-		setExportContextValue("AnlKt5", null);
-	}
+  /*
+   * (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doOnSearchPerformed(com.mg.framework.api.ui.SearchHelpEvent)
+   */
+  @Override
+  protected void doOnSearchPerformed(SearchHelpEvent event) {
+    setExportContextValue("AnlKt1", null);
+    setExportContextValue("AnlKt2", null);
+    setExportContextValue("AnlKt3", null);
+    setExportContextValue("AnlKt4", null);
+    setExportContextValue("AnlKt5", null);
+  }
 
 }

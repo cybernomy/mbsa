@@ -13,13 +13,16 @@
 
 <!-- $Id: RouteBr.mfd.xml,v 1.4 2006/12/03 13:06:38 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.mfreference.support.ui.RouteBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.mfreference.resources.formelements#Route.FormBr.Title" helpTopic="mfreference#route_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.mfreference.support.ui.RouteBr" orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.mfreference.resources.formelements#Route.FormBr.Title"
+          helpTopic="mfreference#route_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
-	</jfd:maintenanceTable>
+  <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

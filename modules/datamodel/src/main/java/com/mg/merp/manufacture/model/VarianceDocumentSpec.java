@@ -15,50 +15,51 @@
 package com.mg.merp.manufacture.model;
 
 
-
 /**
  * @author hbm2java
  * @version $Id: VarianceDocumentSpec.java,v 1.4 2006/06/06 07:58:18 leonova Exp $
  */
 public class VarianceDocumentSpec extends com.mg.merp.document.model.DocSpec implements java.io.Serializable {
 
-    // Fields    
- private com.mg.merp.mfreference.model.CostCategories CostCategory;
- private VarianceType VarianceType;
+  // Fields
+  private com.mg.merp.mfreference.model.CostCategories CostCategory;
+  private VarianceType VarianceType;
 
 
-    // Constructors
+  // Constructors
 
-    /** default constructor */
-    public VarianceDocumentSpec() {
-    }
-    
-
-    // Property accessors
-    /**
-    
-    */
-    
-    public com.mg.merp.mfreference.model.CostCategories getCostCategory () {
-        return this.CostCategory;
-    }
-    
-   public void setCostCategory (com.mg.merp.mfreference.model.CostCategories MfCostCategories) {
-        this.CostCategory = MfCostCategories;
-    }
-    /**
-    
-    */
-    
-    public VarianceType getVarianceType () {
-        return this.VarianceType;
-    }
-    
-   public void setVarianceType (VarianceType VarianceType) {
-        this.VarianceType = VarianceType;
-    }
+  /**
+   * default constructor
+   */
+  public VarianceDocumentSpec() {
+  }
 
 
+  // Property accessors
+
+  /**
+
+   */
+
+  public com.mg.merp.mfreference.model.CostCategories getCostCategory() {
+    return this.CostCategory;
+  }
+
+  public void setCostCategory(com.mg.merp.mfreference.model.CostCategories MfCostCategories) {
+    this.CostCategory = MfCostCategories;
+  }
+
+  /**
+
+   */
+
+  public VarianceType getVarianceType() {
+    return this.VarianceType;
+  }
+
+  public void setVarianceType(VarianceType VarianceType) {
+    this.VarianceType = VarianceType;
+  }
 
 
 }

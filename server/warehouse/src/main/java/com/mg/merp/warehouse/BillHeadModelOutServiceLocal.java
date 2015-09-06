@@ -18,15 +18,13 @@ import com.mg.merp.document.DocumentPattern;
 import com.mg.merp.warehouse.model.BillHeadModel;
 
 /**
- * 
  * @author leonova
  * @version $Id: BillHeadModelOutServiceLocal.java,v 1.3 2006/09/20 11:02:09 safonov Exp $
  */
 public interface BillHeadModelOutServiceLocal
-   extends DocumentPattern<BillHeadModel, Integer>
-{
-	/**
-	 * тип папки для образцов исходящих счетов
-	 */
-	final static short FOLDER_PART = 52;
+    extends DocumentPattern<BillHeadModel, Integer> {
+  /**
+   * тип папки для образцов исходящих счетов
+   */
+  final static short FOLDER_PART = 52;
 }

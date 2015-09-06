@@ -21,72 +21,76 @@ package com.mg.merp.reference.model;
  */
 public class PriceListSpecPriceId extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields    
-	private com.mg.merp.reference.model.PriceListSpec PriceListSpec;
-	private com.mg.merp.reference.model.PriceType PriceType;
-	private com.mg.merp.core.model.SysClient SysClient;
+  // Fields
+  private com.mg.merp.reference.model.PriceListSpec PriceListSpec;
+  private com.mg.merp.reference.model.PriceType PriceType;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	// Constructors
-	/** default constructor */
-	public PriceListSpecPriceId() {
-	}
+  // Constructors
 
-	// Property accessors
-	/**
+  /**
+   * default constructor
+   */
+  public PriceListSpecPriceId() {
+  }
 
-	 */
-	public com.mg.merp.reference.model.PriceListSpec getPriceListSpec () {
-		return this.PriceListSpec;
-	}
+  // Property accessors
 
-	public void setPriceListSpec (com.mg.merp.reference.model.PriceListSpec PriceListSpec) {
-		this.PriceListSpec = PriceListSpec;
-	}
+  /**
 
-	/**
+   */
+  public com.mg.merp.reference.model.PriceListSpec getPriceListSpec() {
+    return this.PriceListSpec;
+  }
 
-	 */
-	public com.mg.merp.reference.model.PriceType getPriceType () {
-		return this.PriceType;
-	}
+  public void setPriceListSpec(com.mg.merp.reference.model.PriceListSpec PriceListSpec) {
+    this.PriceListSpec = PriceListSpec;
+  }
 
-	public void setPriceType (com.mg.merp.reference.model.PriceType PriceType) {
-		this.PriceType = PriceType;
-	}
+  /**
 
-	/**
+   */
+  public com.mg.merp.reference.model.PriceType getPriceType() {
+    return this.PriceType;
+  }
 
-	 */
-	public com.mg.merp.core.model.SysClient getSysClient () {
-		return this.SysClient;
-	}
+  public void setPriceType(com.mg.merp.reference.model.PriceType PriceType) {
+    this.PriceType = PriceType;
+  }
 
-	public void setSysClient (com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  /**
 
-	/**
+   */
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	 */
-	public boolean equals(Object other) {
-		if ( (this == other ) ) return true;
-		if ( (other == null ) ) return false;
-		if ( !(other instanceof PriceListSpecPriceId) ) return false;
-		PriceListSpecPriceId castOther = ( PriceListSpecPriceId ) other; 
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-		return (this.getPriceListSpec()==castOther.getPriceListSpec()) || (this.getPriceListSpec()==null ? false : (castOther.getPriceListSpec()==null ? false : this.getPriceListSpec().equals(castOther.getPriceListSpec())))
-		&& (this.getPriceType()==castOther.getPriceType()) || (this.getPriceType()==null ? false : (castOther.getPriceType()==null ? false : this.getPriceType().equals(castOther.getPriceType())))
-		&& (this.getSysClient()==castOther.getSysClient()) || (this.getSysClient()==null ? false : (castOther.getSysClient()==null ? false : this.getSysClient().equals(castOther.getSysClient())));
-	}
+  /**
 
-	public int hashCode() {
-		int result = 17;
+   */
+  public boolean equals(Object other) {
+    if ((this == other)) return true;
+    if ((other == null)) return false;
+    if (!(other instanceof PriceListSpecPriceId)) return false;
+    PriceListSpecPriceId castOther = (PriceListSpecPriceId) other;
 
-		result = 37 * result + this.getPriceListSpec().hashCode();
-		result = 37 * result + this.getPriceType().hashCode();
-		result = 37 * result + this.getSysClient().hashCode();
+    return (this.getPriceListSpec() == castOther.getPriceListSpec()) || (this.getPriceListSpec() == null ? false : (castOther.getPriceListSpec() == null ? false : this.getPriceListSpec().equals(castOther.getPriceListSpec())))
+        && (this.getPriceType() == castOther.getPriceType()) || (this.getPriceType() == null ? false : (castOther.getPriceType() == null ? false : this.getPriceType().equals(castOther.getPriceType())))
+        && (this.getSysClient() == castOther.getSysClient()) || (this.getSysClient() == null ? false : (castOther.getSysClient() == null ? false : this.getSysClient().equals(castOther.getSysClient())));
+  }
 
-		return result;
-	}   
+  public int hashCode() {
+    int result = 17;
+
+    result = 37 * result + this.getPriceListSpec().hashCode();
+    result = 37 * result + this.getPriceType().hashCode();
+    result = 37 * result + this.getSysClient().hashCode();
+
+    return result;
+  }
 
 }

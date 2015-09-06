@@ -10,213 +10,247 @@
 <chapter id="003dp">
   <title>Настройка документооборота</title>
 
-    <para>При нажатии данной кнопки на экран выводится окно визуального отображения 
-    документооборота:  </para>
-    
-  <screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/tune_do.gif"/>
-  </imageobject></mediaobject></screenshot>
-    
-   <para>На панели инструментов редактора документооборота расположены кнопки управления: 
-   <guibutton>Добавить этап</guibutton>, <guibutton>Добавить связь</guibutton>, 
-   <guibutton>Изменить</guibutton>, <guibutton>Удалить</guibutton>.</para>  
-    
- <!--  <screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/toolbar.gif"/>
-  </imageobject></mediaobject></screenshot> -->
-  
-<!--  <para>Выделение</para>
- <para><link linkend="003dp_01">Добавление этапа</link></para>
- <para><link linkend="003dp_05">Добавление связи</link></para>
- <para><link linkend="003dp_07">Печать</link></para>
- <para><link linkend="003dp_08">Выделить все</link></para>
- <para><link linkend="003dp_09">На передний план</link></para>
- <para><link linkend="003dp_10">На задний план</link></para>
- <para><link linkend="003dp_11">Свойства</link></para> -->
-  
+  <para>При нажатии данной кнопки на экран выводится окно визуального отображения
+    документооборота:
+  </para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/tune_do.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>На панели инструментов редактора документооборота расположены кнопки управления:
+    <guibutton>Добавить этап</guibutton>,<guibutton>Добавить связь</guibutton>,
+    <guibutton>Изменить</guibutton>,<guibutton>Удалить</guibutton>.
+  </para>
+
+  <!--  <screenshot><mediaobject><imageobject>
+   <imagedata fileref="images/toolbar.gif"/>
+   </imageobject></mediaobject></screenshot> -->
+
+  <!--  <para>Выделение</para>
+   <para><link linkend="003dp_01">Добавление этапа</link></para>
+   <para><link linkend="003dp_05">Добавление связи</link></para>
+   <para><link linkend="003dp_07">Печать</link></para>
+   <para><link linkend="003dp_08">Выделить все</link></para>
+   <para><link linkend="003dp_09">На передний план</link></para>
+   <para><link linkend="003dp_10">На задний план</link></para>
+   <para><link linkend="003dp_11">Свойства</link></para> -->
+
   <section id="003dp_01">
-  
-  <title>Добавление этапа</title>
-  
-    <para>Для выбора функции добавления этапа нужно нажать кнопку <guibutton>Добавить 
-    этап</guibutton>, которая расположена слева на панели инструментов 
-    в верхней части окна &quot;<emphasis>Карта документооборота</emphasis>&quot;. 
-    Затем в любом месте окна редактирования документооборота нажмите левую кнопку 
-    мыши. При добавлении нового этапа документооборота появляется окно списка всех
-    этапов документооборота, возможных в системе.</para>
-    
-    <screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/DO.gif"/>
-    </imageobject></mediaobject></screenshot>
-  
-    <para>Вы выбираете этап, который необходимо добавить. </para>
-    
-    <para>Для каждого этапа необходимо определить <link linkend="005dp">Параметры этапа</link>
-    и <link linkend="004dp">Права доступа</link>.  </para>
-    
-    <para>Вы можете расположить графическое представление этапов так, как Вам будет удобно, 
-    перемещая мышью элементы карты документооборота.  </para>
-    
+
+    <title>Добавление этапа</title>
+
+    <para>Для выбора функции добавления этапа нужно нажать кнопку<guibutton>Добавить
+      этап</guibutton>, которая расположена слева на панели инструментов
+      в верхней части окна &quot;<emphasis>Карта документооборота</emphasis>&quot;.
+      Затем в любом месте окна редактирования документооборота нажмите левую кнопку
+      мыши. При добавлении нового этапа документооборота появляется окно списка всех
+      этапов документооборота, возможных в системе.
+    </para>
+
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/DO.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <para>Вы выбираете этап, который необходимо добавить.</para>
+
+    <para>Для каждого этапа необходимо определить
+      <link linkend="005dp">Параметры этапа</link>
+      и<link linkend="004dp">Права доступа</link>.
+    </para>
+
+    <para>Вы можете расположить графическое представление этапов так, как Вам будет удобно,
+      перемещая мышью элементы карты документооборота.
+    </para>
+
     <!-- <screenshot><mediaobject><imageobject>
     <imagedata fileref="images/tune_hand.gif"/>
     </imageobject></mediaobject></screenshot> -->
-    
-   </section>
-   
+
+  </section>
+
   <section id="003dp_02">
-  <title>Исправление этапа</title>
-  
-   <para>Для исправления этапа 1) выделите этап, который Вы хотите изменить (щёлкните мышью на 
-   прямоугольнике с названием); 2) нажмите кнопку <guibutton>Изменить</guibutton>. </para>
-   
-   <!--  <para>Для исправления этапа подведите курсор мыши к значку-стрелке, расположенному
-    с левого края панели инструментов, и нажмите левую клавишу мыши. Наведите курсор 
-    на этап, который Вы хотите изменить (курсор примет вид ладони), и нажмите правую
-    клавишу мыши. В контекстном меню выберите пункт <guibutton>Изменить</guibutton>. </para>  -->
-    
-   <!--  <para>Исправление (вариант два).
-    Для исправления этапа подведите курсор мыши к значку-стрелке, расположенному
-    с левого края панели инструментов, и нажмите левую клавишу мыши. Наведите курсор на
-    этап, который Вы хотите изменить, и нажмите клавишу <keycombo><keycap>F2</keycap></keycombo>.</para>  -->
+    <title>Исправление этапа</title>
+
+    <para>Для исправления этапа 1) выделите этап, который Вы хотите изменить (щёлкните мышью на
+      прямоугольнике с названием); 2) нажмите кнопку<guibutton>Изменить</guibutton>.
+    </para>
+
+    <!--  <para>Для исправления этапа подведите курсор мыши к значку-стрелке, расположенному
+     с левого края панели инструментов, и нажмите левую клавишу мыши. Наведите курсор
+     на этап, который Вы хотите изменить (курсор примет вид ладони), и нажмите правую
+     клавишу мыши. В контекстном меню выберите пункт <guibutton>Изменить</guibutton>. </para>  -->
+
+    <!--  <para>Исправление (вариант два).
+     Для исправления этапа подведите курсор мыши к значку-стрелке, расположенному
+     с левого края панели инструментов, и нажмите левую клавишу мыши. Наведите курсор на
+     этап, который Вы хотите изменить, и нажмите клавишу <keycombo><keycap>F2</keycap></keycombo>.</para>  -->
 
   </section>
-  
- <!-- <section id="003dp_03">
-  <title>Просмотр</title>
 
-  <para>Для исправления этапа подведите курсор мыши к значку-стрелке, расположенному
-  с левого края панели инструментов, и нажмите левую клавишу мыши. Наведите курсор на
-    этап, который Вы хотите изменить, и нажмите сочетание клавиш 
-    <keycombo><keycap>Ctrl</keycap><keycap>F2</keycap></keycombo>
-   или в контекстном меню выберите пункт <guibutton>Просмотреть</guibutton>.</para>
-  
-  </section> -->
-     
+  <!-- <section id="003dp_03">
+   <title>Просмотр</title>
+
+   <para>Для исправления этапа подведите курсор мыши к значку-стрелке, расположенному
+   с левого края панели инструментов, и нажмите левую клавишу мыши. Наведите курсор на
+     этап, который Вы хотите изменить, и нажмите сочетание клавиш
+     <keycombo><keycap>Ctrl</keycap><keycap>F2</keycap></keycombo>
+    или в контекстном меню выберите пункт <guibutton>Просмотреть</guibutton>.</para>
+
+   </section> -->
+
   <section id="003dp_04">
-  <title>Удаление этапа</title>
-  
-  <para>Для исправления этапа подведите курсор мыши к этапу и нажмите левую 
-  клавишу мыши. Выделится этап, который Вы хотите изменить. Затем нажмите кнопку 
-   <guibutton>Удалить</guibutton> (вверху на карте документооборота). </para>
-  
- <!--  <para>Для исправления этапа подведите курсор мыши к значку  и нажмите левую 
-  клавишу мыши. Выделите этап, который Вы хотите изменить, и нажмите клавишу 
-  <keycombo><keycap>Del</keycap></keycombo>
-  или в контекстном меню выберите пункт <guibutton>Удалить</guibutton>. </para> -->
-  
-  </section>
-  
-  <section id="003dp_05">
-  <title>Добавление связи между этапами.</title>
+    <title>Удаление этапа</title>
 
-  <para>Для выбора функции добавления связи между этапами нужно 
-  1) левой кнопкой мыши выделить этап, от которого должна идти связь, 
-  2) нажать клавишу Shift и, удерживая её,  
-  3) левой кнопкой мыши выделить этап, к которому должна идти связь, 
-  4) нажать кнопку <guibutton>Добавить связь</guibutton>, которая расположена на панели инструментов  
-   в верхней части окна &quot;<emphasis>Карта документооборота</emphasis>&quot;.  </para>
-  
- <!--  <para>Чтобы изменить параметры связи, выделите эту связь, а затем нажмите клавишу 
-  <keycombo><keycap>F2</keycap></keycombo> (или вызовите из контекстного меню 
-  пункт <guibutton>Изменить</guibutton>) </para> -->
-  
-   <para>Чтобы изменить параметры связи, выделите эту связь, а затем нажмите  
-    кнопку <guibutton>Изменить</guibutton> в верхней части окна &quot;<emphasis>Карта 
-    документооборота</emphasis>&quot;.  </para>
+    <para>Для исправления этапа подведите курсор мыши к этапу и нажмите левую
+      клавишу мыши. Выделится этап, который Вы хотите изменить. Затем нажмите кнопку
+      <guibutton>Удалить</guibutton>
+      (вверху на карте документооборота).
+    </para>
+
+    <!--  <para>Для исправления этапа подведите курсор мыши к значку  и нажмите левую
+     клавишу мыши. Выделите этап, который Вы хотите изменить, и нажмите клавишу
+     <keycombo><keycap>Del</keycap></keycombo>
+     или в контекстном меню выберите пункт <guibutton>Удалить</guibutton>. </para> -->
+
+  </section>
+
+  <section id="003dp_05">
+    <title>Добавление связи между этапами.</title>
+
+    <para>Для выбора функции добавления связи между этапами нужно
+      1) левой кнопкой мыши выделить этап, от которого должна идти связь,
+      2) нажать клавишу Shift и, удерживая её,
+      3) левой кнопкой мыши выделить этап, к которому должна идти связь,
+      4) нажать кнопку<guibutton>Добавить связь</guibutton>, которая расположена на панели
+      инструментов
+      в верхней части окна &quot;<emphasis>Карта документооборота</emphasis>&quot;.
+    </para>
+
+    <!--  <para>Чтобы изменить параметры связи, выделите эту связь, а затем нажмите клавишу
+     <keycombo><keycap>F2</keycap></keycombo> (или вызовите из контекстного меню
+     пункт <guibutton>Изменить</guibutton>) </para> -->
+
+    <para>Чтобы изменить параметры связи, выделите эту связь, а затем нажмите
+      кнопку
+      <guibutton>Изменить</guibutton>
+      в верхней части окна &quot;<emphasis>Карта
+        документооборота</emphasis>&quot;.
+    </para>
+
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/linkto.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <para>В возникшем окне отображаются названия связываемых этапов. Если отметить
+      флажком пункт<guibutton>Следует непосредственно</guibutton>, то следующий этап
+      документооборота будет выполняться сразу после предыдущего.
+    </para>
+
+    <para>
+      <emphasis>Внимание!</emphasis>
+      При
+      <link linkend="009dp">массовой
+        отработке
+      </link>
+      не выполняются этапы, следующие непосредственно, а будет
+      выполнен только тот этап, который был указан пользователем.
+    </para>
+
+    <!-- <para>Также Вы можете редактировать <link linkend="015dp">свойства связи</link>. </para> -->
+
+  </section>
+
+
+  <section id="003dp_06">
+    <title>Удаление связи между этапами</title>
+
+    <para>Выделите связь, которую нужно удалить, (подведите курсор точно к изображению
+      связи, нажмите левую кнопку мыши) и нажмите кнопку<guibutton>Удалить</guibutton>)
+      в верхней части окна &quot;<emphasis>Карта документооборота</emphasis>&quot;.
+    </para>
+
+    <!--  <para>Выделите связь, которую нужно удалить, (подведите курсор точно к изображению
+     связи, нажмите левую кнопку мыши) и нажмите клавишу <keycombo><keycap>Del</keycap></keycombo>
+     (или воспользуйтесь пунктом контекстного меню <guibutton>Удалить</guibutton>).</para> -->
+
+  </section>
+
+
+  <!--  <section id="003dp_07">
+   <title>Печать</title>
+
+   <screenshot><mediaobject><imageobject>
+   <imagedata fileref="images/print.gif"/>
+   </imageobject></mediaobject></screenshot>
+
+   <para>Вы можете распечатать на принтере графическое изображение настройки документооборота.</para>
+
+ </section> -->
+
+  <!-- <section id="003dp_08">
+    <title>Выделить все</title>
 
     <screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/linkto.gif"/>
-    </imageobject></mediaobject></screenshot>
-    
-  <para>В возникшем окне отображаются названия связываемых этапов. Если отметить 
-  флажком пункт <guibutton>Следует непосредственно</guibutton>, то следующий этап
-  документооборота будет выполняться сразу после предыдущего.  </para>
-  
-  <para><emphasis>Внимание!</emphasis> При <link linkend="009dp">массовой 
-  отработке</link> не выполняются этапы, следующие непосредственно, а будет 
-  выполнен только тот этап, который был указан пользователем. </para>
-  
- <!-- <para>Также Вы можете редактировать <link linkend="015dp">свойства связи</link>. </para> --> 
-  
-  </section>
-  
-  
-  <section id="003dp_06">
-  <title>Удаление связи между этапами</title>
-  
-    <para>Выделите связь, которую нужно удалить, (подведите курсор точно к изображению
-  связи, нажмите левую кнопку мыши) и нажмите кнопку  <guibutton>Удалить</guibutton>) 
-  в верхней части окна &quot;<emphasis>Карта документооборота</emphasis>&quot;. </para>
-  
- <!--  <para>Выделите связь, которую нужно удалить, (подведите курсор точно к изображению
-  связи, нажмите левую кнопку мыши) и нажмите клавишу <keycombo><keycap>Del</keycap></keycombo>
-  (или воспользуйтесь пунктом контекстного меню <guibutton>Удалить</guibutton>).</para> --> 
-  
-  </section>
+    <imagedata fileref="images/select_all.gif"/>
+      </imageobject></mediaobject></screenshot>
 
-  
- <!--  <section id="003dp_07">
-  <title>Печать</title>
-  
-  <screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/print.gif"/>
-  </imageobject></mediaobject></screenshot>
-    
-  <para>Вы можете распечатать на принтере графическое изображение настройки документооборота.</para>
-  
-</section> --> 
-   
-<!-- <section id="003dp_08">  
-  <title>Выделить все</title>
-  
-  <screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/select_all.gif"/>
-    </imageobject></mediaobject></screenshot>
-    
-   <para>Нажав на эту кнопку, Вы выделите все объекты (узлы и связи) в редакторе 
-   настройки. </para>
-  
-</section> --> 
+     <para>Нажав на эту кнопку, Вы выделите все объекты (узлы и связи) в редакторе
+     настройки. </para>
+
+  </section> -->
 
 
-<!-- <section id="003dp_09">
-  <title>На передний план</title>
-  
-  <screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/to_front.gif"/>
-    </imageobject></mediaobject></screenshot>
-    
-    <para>Выделенные объекты перемещаются на передний план. Будьте внимательны - 
-    они могут закрывать собой другие объекты. </para>
-    
-</section>--> 
+  <!-- <section id="003dp_09">
+    <title>На передний план</title>
+
+    <screenshot><mediaobject><imageobject>
+    <imagedata fileref="images/to_front.gif"/>
+      </imageobject></mediaobject></screenshot>
+
+      <para>Выделенные объекты перемещаются на передний план. Будьте внимательны -
+      они могут закрывать собой другие объекты. </para>
+
+  </section>-->
 
 
- <!-- <section id="003dp_10">
-  <title>На задний план</title>
-  
-  <screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/to_back.gif"/>
-    </imageobject></mediaobject></screenshot>
-    
-      <para>Выделенные объекты перемещаются на задний план. Будьте внимательны - 
-      они могут оказаться скрытыми под другими объектами. </para>
-</section> --> 
+  <!-- <section id="003dp_10">
+   <title>На задний план</title>
+
+   <screenshot><mediaobject><imageobject>
+   <imagedata fileref="images/to_back.gif"/>
+     </imageobject></mediaobject></screenshot>
+
+       <para>Выделенные объекты перемещаются на задний план. Будьте внимательны -
+       они могут оказаться скрытыми под другими объектами. </para>
+ </section> -->
 
 
- <!-- <section id="003dp_11">
-  <title>Свойства</title>
-  
-  <screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/designer.gif"/>
-    </imageobject></mediaobject></screenshot>
-    
-      <para>Если в редакторе нет выделенных объектов, вызывается окно 
-      &quot;<link linkend="014dp"><emphasis>Свойства дизайнера</emphasis></link>&quot;. 
-      Если выделенные объекты есть, вызывается окно 
-      &quot;<link linkend="015dp"><emphasis>Свойства объектов</emphasis></link>&quot;. </para>
-      <para> </para>
-    
-  </section> --> 
-    
-  </chapter>
+  <!-- <section id="003dp_11">
+   <title>Свойства</title>
+
+   <screenshot><mediaobject><imageobject>
+   <imagedata fileref="images/designer.gif"/>
+     </imageobject></mediaobject></screenshot>
+
+       <para>Если в редакторе нет выделенных объектов, вызывается окно
+       &quot;<link linkend="014dp"><emphasis>Свойства дизайнера</emphasis></link>&quot;.
+       Если выделенные объекты есть, вызывается окно
+       &quot;<link linkend="015dp"><emphasis>Свойства объектов</emphasis></link>&quot;. </para>
+       <para> </para>
+
+   </section> -->
+
+</chapter>

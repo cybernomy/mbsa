@@ -18,15 +18,15 @@ import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
  * Контроллер формы поддержки спецификации акта на списание  времени, отработанного РС в ЗНП
- * 
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: InputLaborSpecMt.java,v 1.3 2006/08/28 04:32:54 leonova Exp $
  */
 public class InputLaborSpecMt extends GoodsDocumentSpecMaintenanceForm {
-	   
-	public InputLaborSpecMt() throws Exception {
-		super();
-		
-	}
-	
+
+  public InputLaborSpecMt() throws Exception {
+    super();
+
+  }
+
 }

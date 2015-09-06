@@ -19,32 +19,33 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Статус ЗНП
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: JobStatus.java,v 1.2 2007/07/30 10:27:49 safonov Exp $
  */
 @DataItemName("Manufacture.JobStatus")
 public enum JobStatus {
-	/**
-	 * Новый
-	 */
-	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#JobStatus.Created")
-	CREATED,
-	
-	/**
-	 * Запущен
-	 */
-	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#JobStatus.Running")
-	RUNNING,
-	
-	/**
-	 * Остановлен
-	 */
-	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#JobStatus.Stopped")
-	STOPPED,
-	
-	/**
-	 * Завершён
-	 */
-	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#JobStatus.Completed")
-	COMPLETED
+  /**
+   * Новый
+   */
+  @EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#JobStatus.Created")
+  CREATED,
+
+  /**
+   * Запущен
+   */
+  @EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#JobStatus.Running")
+  RUNNING,
+
+  /**
+   * Остановлен
+   */
+  @EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#JobStatus.Stopped")
+  STOPPED,
+
+  /**
+   * Завершён
+   */
+  @EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#JobStatus.Completed")
+  COMPLETED
 }

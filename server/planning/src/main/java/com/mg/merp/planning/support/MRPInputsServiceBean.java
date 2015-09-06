@@ -15,29 +15,29 @@
 
 package com.mg.merp.planning.support;
 
-import javax.annotation.security.PermitAll;
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.orm.OrmTemplate;
 import com.mg.merp.planning.MRPInputsServiceLocal;
 import com.mg.merp.planning.model.MrpInputs;
 import com.mg.merp.planning.model.MrpVersionControl;
 
+import javax.annotation.security.PermitAll;
+import javax.ejb.Stateless;
+
 /**
  * Бизнес-компонент "Поступление товаров для расчета ППМ"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: MRPInputsServiceBean.java,v 1.3 2007/07/30 10:36:48 safonov Exp $
  */
-@Stateless(name="merp/planning/MRPInputsService")
+@Stateless(name = "merp/planning/MRPInputsService")
 @PermitAll
 public class MRPInputsServiceBean extends com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean<MrpInputs, Integer> implements MRPInputsServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.planning.MRPInputsServiceLocal#clear(com.mg.merp.planning.model.MrpVersionControl)
-	 */
-	public void clear(MrpVersionControl mrpVersion) {
-		OrmTemplate.getInstance().bulkUpdateByNamedQuery("Planing.MRPInputs.clear", "mrpVersionControl", mrpVersion);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.planning.MRPInputsServiceLocal#clear(com.mg.merp.planning.model.MrpVersionControl)
+   */
+  public void clear(MrpVersionControl mrpVersion) {
+    OrmTemplate.getInstance().bulkUpdateByNamedQuery("Planing.MRPInputs.clear", "mrpVersionControl", mrpVersion);
+  }
 
 }

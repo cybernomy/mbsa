@@ -22,76 +22,81 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Salary.GnsCode")
 public class GnsCode extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String Description;
+  private java.lang.String Description;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public GnsCode() {
-	}
+  /**
+   * default constructor
+   */
+  public GnsCode() {
+  }
 
-	/** constructor with id */
-	public GnsCode(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public GnsCode(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.MediumCode")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.MediumCode")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.Description")
-	public java.lang.String getDescription() {
-		return this.Description;
-	}
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	public void setDescription(java.lang.String Description) {
-		this.Description = Description;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.Description")
+  public java.lang.String getDescription() {
+    return this.Description;
+  }
+
+  public void setDescription(java.lang.String Description) {
+    this.Description = Description;
+  }
 
 }

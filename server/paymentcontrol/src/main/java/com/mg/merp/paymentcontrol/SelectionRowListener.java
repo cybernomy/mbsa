@@ -14,22 +14,23 @@
  */
 package com.mg.merp.paymentcontrol;
 
-import java.util.EventListener;
-
 import com.mg.merp.paymentcontrol.model.PlanPaymentItem;
+
+import java.util.EventListener;
 
 /**
  * Слушатель изменения позиции курсора таблицы "Планирование платежей"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: SelectionRowListener.java,v 1.1 2007/05/14 04:59:59 sharapov Exp $
  */
 public interface SelectionRowListener extends EventListener {
 
-	/**
-	 * Cобытие "Изменение позиции курсора таблицы"
-	 * @param selectedItem - текущая позиция курсора таблицы
-	 */
-	public void selectedRowChange(PlanPaymentItem selectedItem);
-	
+  /**
+   * Cобытие "Изменение позиции курсора таблицы"
+   *
+   * @param selectedItem - текущая позиция курсора таблицы
+   */
+  public void selectedRowChange(PlanPaymentItem selectedItem);
+
 }

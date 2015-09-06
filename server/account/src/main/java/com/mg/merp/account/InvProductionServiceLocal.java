@@ -17,12 +17,10 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.InvProduction;
 
 /**
- * 
  * @author leonova
  * @version $Id: InvProductionServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface InvProductionServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<InvProduction, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<InvProduction, Integer> {
 
 }

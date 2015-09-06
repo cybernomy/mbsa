@@ -14,29 +14,27 @@
  */
 package com.mg.merp.reference;
 
-import java.util.List;
-
 import com.mg.merp.reference.model.CalcTaxesKind;
 import com.mg.merp.reference.model.CalcTaxesLink;
 import com.mg.merp.reference.model.CalcTaxesSubject;
 import com.mg.merp.reference.model.Tax;
 
+import java.util.List;
+
 /**
- * 
  * @author leonova
  * @version $Id: CalcTaxesKindServiceLocal.java,v 1.3 2006/10/24 10:29:59 leonova Exp $
  */
 public interface CalcTaxesKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<CalcTaxesKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<CalcTaxesKind, Integer> {
 
-	   public CalcTaxesLink includeTax(CalcTaxesKind calcTaxKind, Tax tax, Short feeOrder, boolean included, CalcTaxesSubject subject) throws com.mg.framework.api.ApplicationException;
+  public CalcTaxesLink includeTax(CalcTaxesKind calcTaxKind, Tax tax, Short feeOrder, boolean included, CalcTaxesSubject subject) throws com.mg.framework.api.ApplicationException;
 
-	   public void excludeTax(CalcTaxesLink taxLink) throws com.mg.framework.api.ApplicationException;
+  public void excludeTax(CalcTaxesLink taxLink) throws com.mg.framework.api.ApplicationException;
 
-	   public void editTax(CalcTaxesLink taxLink, Tax tax, Short feeOrder, boolean included, CalcTaxesSubject subject) throws com.mg.framework.api.ApplicationException;
+  public void editTax(CalcTaxesLink taxLink, Tax tax, Short feeOrder, boolean included, CalcTaxesSubject subject) throws com.mg.framework.api.ApplicationException;
 
-	   public List<CalcTaxesLink> loadTaxesLink(CalcTaxesKind calcTaxKind) throws com.mg.framework.api.ApplicationException;
+  public List<CalcTaxesLink> loadTaxesLink(CalcTaxesKind calcTaxKind) throws com.mg.framework.api.ApplicationException;
 
 	
 	

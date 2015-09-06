@@ -16,23 +16,24 @@
 <index version="1.0">
 
   <indexitem text="Планирование">
-    <indexentry text="Версии прогнозов" target="forecastver_html" />
-    <indexentry text="Прогнозы складских запасов" target="invforecast_html" />
-    <indexentry text="Обобщённые товары" target="genericitem_html" />
-    <indexentry text="Семейства обобщенных продуктов" target="itemfamily_html" />
-    <indexentry text="Профили производства" target="prodprof_html" />
-    <indexentry text="Склады хранения товаров" target="catalogwh_html" />
-    <indexentry text="Основные производственные планы" target="mps_html" /> 
-    <indexentry text="Итоги формирования ОПП" target="mpsline_html" />
-    <indexentry text="Перенос ОПП" target="perenos_html" />
-    <indexentry text="Подтверждённые заказы" target="firmorder_html" /> 
-    <indexentry text="Версии ППМ" target="mrpvers_html" />
-    <indexentry text="Генерация ППМ" target="mrpproc_html" />
-    <indexentry text="Рекомендации ППМ" target="mrprecom_html" /> 
-    <indexentry text="Итоги расчёта ППМ" target="mrpreport_html" />
-    <indexentry text="Укрупнённые планы загрузки производственных мощностей" target="rccphead_html" />
-    <indexentry text="УППМ" target="rccphead_html" />
-    <indexentry text="График загрузки мощностей" target="rccpdetail_html" /> 
+    <indexentry text="Версии прогнозов" target="forecastver_html"/>
+    <indexentry text="Прогнозы складских запасов" target="invforecast_html"/>
+    <indexentry text="Обобщённые товары" target="genericitem_html"/>
+    <indexentry text="Семейства обобщенных продуктов" target="itemfamily_html"/>
+    <indexentry text="Профили производства" target="prodprof_html"/>
+    <indexentry text="Склады хранения товаров" target="catalogwh_html"/>
+    <indexentry text="Основные производственные планы" target="mps_html"/>
+    <indexentry text="Итоги формирования ОПП" target="mpsline_html"/>
+    <indexentry text="Перенос ОПП" target="perenos_html"/>
+    <indexentry text="Подтверждённые заказы" target="firmorder_html"/>
+    <indexentry text="Версии ППМ" target="mrpvers_html"/>
+    <indexentry text="Генерация ППМ" target="mrpproc_html"/>
+    <indexentry text="Рекомендации ППМ" target="mrprecom_html"/>
+    <indexentry text="Итоги расчёта ППМ" target="mrpreport_html"/>
+    <indexentry text="Укрупнённые планы загрузки производственных мощностей"
+                target="rccphead_html"/>
+    <indexentry text="УППМ" target="rccphead_html"/>
+    <indexentry text="График загрузки мощностей" target="rccpdetail_html"/>
   </indexitem>
-  
+
 </index>

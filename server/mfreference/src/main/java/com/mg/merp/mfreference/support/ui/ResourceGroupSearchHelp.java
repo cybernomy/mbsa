@@ -24,9 +24,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 public class ResourceGroupSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/mfreference/ResourceGroup";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/mfreference/ResourceGroup";
+  }
 
 }

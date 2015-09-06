@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.core.model.SystemConfig" table="SYSTEMCONFIG">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <composite-id name="id" class="com.mg.merp.core.model.SystemConfigId">
@@ -16,46 +16,46 @@
         <column name="NATIONAL_CURRENCY" length="5" not-null="false" />
       </key-many-to-one -->
       <key-property name="MajorVersion" type="short">
-        <column name="MAJOR_VERSION" not-null="true" sql-type="SMALLINT" />
+        <column name="MAJOR_VERSION" not-null="true" sql-type="SMALLINT"/>
       </key-property>
       <key-property name="MinorVersion" type="short">
-        <column name="MINOR_VERSION" not-null="true" sql-type="SMALLINT" />
+        <column name="MINOR_VERSION" not-null="true" sql-type="SMALLINT"/>
       </key-property>
       <key-property name="Release" type="short">
-        <column name="RELEASE" not-null="true" sql-type="SMALLINT" />
+        <column name="RELEASE" not-null="true" sql-type="SMALLINT"/>
       </key-property>
       <key-property name="UseAnaliticLink" type="java.lang.Short">
-        <column name="USE_ANALITIC_LINK" not-null="false" sql-type="SMALLINT" />
+        <column name="USE_ANALITIC_LINK" not-null="false" sql-type="SMALLINT"/>
       </key-property>
       <key-property name="RecurseFolder" type="java.lang.Short">
-        <column name="RECURSE_FOLDER" not-null="false" sql-type="SMALLINT" />
+        <column name="RECURSE_FOLDER" not-null="false" sql-type="SMALLINT"/>
       </key-property>
       <key-property name="RecurseCatfolder" type="java.lang.Short">
-        <column name="RECURSE_CATFOLDER" not-null="false" sql-type="SMALLINT" />
+        <column name="RECURSE_CATFOLDER" not-null="false" sql-type="SMALLINT"/>
       </key-property>
       <key-property name="RecurseOrgunit" type="java.lang.Short">
-        <column name="RECURSE_ORGUNIT" not-null="false" sql-type="SMALLINT" />
+        <column name="RECURSE_ORGUNIT" not-null="false" sql-type="SMALLINT"/>
       </key-property>
       <key-property name="DelaysOn" type="java.lang.Short">
-        <column name="DELAYS_ON" not-null="false" sql-type="SMALLINT" />
+        <column name="DELAYS_ON" not-null="false" sql-type="SMALLINT"/>
       </key-property>
       <key-property name="CurrencyPrec" type="java.lang.Short">
-        <column name="CURRENCY_PREC" not-null="false" sql-type="SMALLINT" />
+        <column name="CURRENCY_PREC" not-null="false" sql-type="SMALLINT"/>
       </key-property>
       <key-property name="DeferRemnacc" type="short">
-        <column name="DEFER_REMNACC" not-null="true" sql-type="SMALLINT" />
+        <column name="DEFER_REMNACC" not-null="true" sql-type="SMALLINT"/>
       </key-property>
       <key-property name="LogV1DocDel" type="short">
-        <column name="LOG_V1_DOC_DEL" not-null="true" sql-type="SMALLINT" />
+        <column name="LOG_V1_DOC_DEL" not-null="true" sql-type="SMALLINT"/>
       </key-property>
       <key-property name="LogV1Rollback" type="short">
-        <column name="LOG_V1_ROLLBACK" not-null="true" sql-type="SMALLINT" />
+        <column name="LOG_V1_ROLLBACK" not-null="true" sql-type="SMALLINT"/>
       </key-property>
       <key-property name="LogV1Partner" type="java.lang.Short">
-        <column name="LOG_V1_PARTNER" not-null="false" sql-type="SMALLINT" />
+        <column name="LOG_V1_PARTNER" not-null="false" sql-type="SMALLINT"/>
       </key-property>
       <key-property name="LogV1Catalog" type="java.lang.Short">
-        <column name="LOG_V1_CATALOG" not-null="false" sql-type="SMALLINT" />
+        <column name="LOG_V1_CATALOG" not-null="false" sql-type="SMALLINT"/>
       </key-property>
     </composite-id>
   </class>

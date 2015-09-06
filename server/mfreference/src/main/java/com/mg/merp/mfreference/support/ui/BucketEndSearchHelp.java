@@ -20,12 +20,12 @@ package com.mg.merp.mfreference.support.ui;
  */
 public class BucketEndSearchHelp extends BucketSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.mfreference.support.ui.BucketSearchHelp#isBegin()
-	 */
-	@Override
-	protected boolean isBegin() {
-		return false;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.mfreference.support.ui.BucketSearchHelp#isBegin()
+   */
+  @Override
+  protected boolean isBegin() {
+    return false;
+  }
 
 }

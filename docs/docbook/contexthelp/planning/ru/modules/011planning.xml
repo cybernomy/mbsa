@@ -9,34 +9,73 @@
 <!ENTITY manuf "Планирование и управление производством">
 ]> -->
 <chapter id="011plan">
-  <title>Использованные сокращения </title>
- 
-  	<para><emphasis>MPS</emphasis> - manufacture production sheduler (также ООП) </para>
+  <title>Использованные сокращения</title>
 
-	<para><emphasis>MRP</emphasis> - material requirments planning (также ППМ) </para>
-	
-	<para><emphasis>MRP II</emphasis> - manufacturing resource planning </para>
-	
-	<para><emphasis>ЕИ </emphasis> - единица измерения </para>
-	
-	<para><emphasis>ЗНП </emphasis> - заказ-наряд на производство </para>
-	
-	<para><emphasis>НОМ </emphasis> - набор операций и материалов (также &quot;состав изделия&quot;)</para>
-	
-	<para><emphasis>НР </emphasis> - накладные расходы </para>
-	
-	<para><emphasis>ОПП </emphasis> - основной производственный план (также MPS)  </para>
-	
-	<para><emphasis>ППМ </emphasis> - планирование потребности в материалах (также MRP) </para>
-	
-	<para><emphasis>РС </emphasis> - рабочая сила </para>
-	
-	<para><emphasis>РЦ </emphasis> - рабочий центр </para>
-	
-	<para><emphasis>СИ </emphasis> - состав изделия (также НОМ) </para>
-	
-	<para><emphasis>УППМ </emphasis> - укрупнённый план загрузки производственных мощностей. </para>
- 
-	<para> </para>
-  
+  <para>
+    <emphasis>MPS</emphasis>
+    - manufacture production sheduler (также ООП)
+  </para>
+
+  <para>
+    <emphasis>MRP</emphasis>
+    - material requirments planning (также ППМ)
+  </para>
+
+  <para>
+    <emphasis>MRP II</emphasis>
+    - manufacturing resource planning
+  </para>
+
+  <para>
+    <emphasis>ЕИ</emphasis>
+    - единица измерения
+  </para>
+
+  <para>
+    <emphasis>ЗНП</emphasis>
+    - заказ-наряд на производство
+  </para>
+
+  <para>
+    <emphasis>НОМ</emphasis>
+    - набор операций и материалов (также &quot;состав изделия&quot;)
+  </para>
+
+  <para>
+    <emphasis>НР</emphasis>
+    - накладные расходы
+  </para>
+
+  <para>
+    <emphasis>ОПП</emphasis>
+    - основной производственный план (также MPS)
+  </para>
+
+  <para>
+    <emphasis>ППМ</emphasis>
+    - планирование потребности в материалах (также MRP)
+  </para>
+
+  <para>
+    <emphasis>РС</emphasis>
+    - рабочая сила
+  </para>
+
+  <para>
+    <emphasis>РЦ</emphasis>
+    - рабочий центр
+  </para>
+
+  <para>
+    <emphasis>СИ</emphasis>
+    - состав изделия (также НОМ)
+  </para>
+
+  <para>
+    <emphasis>УППМ</emphasis>
+    - укрупнённый план загрузки производственных мощностей.
+  </para>
+
+  <para></para>
+
 </chapter>

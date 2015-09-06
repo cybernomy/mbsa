@@ -18,155 +18,157 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Модель бизнес-компонента "Конфигурация модуля <Бух.учет>"
- * 
+ *
  * @author hbm2java
  * @author Artem V. Sharapov
  * @version $Id: AccConfig.java,v 1.4 2007/01/13 13:11:17 sharapov Exp $
  */
 public class AccConfig extends com.mg.framework.service.PersistentObjectHibernate implements
-java.io.Serializable {
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private com.mg.merp.paymentalloc.model.DocGroup SaleBookDelivDocGroup;
+  private com.mg.merp.paymentalloc.model.DocGroup SaleBookDelivDocGroup;
 
-	private com.mg.merp.paymentalloc.model.DocGroup SaleBookInvoiceDocGroup;
+  private com.mg.merp.paymentalloc.model.DocGroup SaleBookInvoiceDocGroup;
 
-	private com.mg.merp.reference.model.Currency BaseCurrency;
+  private com.mg.merp.reference.model.Currency BaseCurrency;
 
-	private com.mg.merp.paymentalloc.model.DocGroup SaleBookAvaninvDocGroup;
+  private com.mg.merp.paymentalloc.model.DocGroup SaleBookAvaninvDocGroup;
 
-	private int sysClientId;
+  private int sysClientId;
 
-	private com.mg.merp.paymentalloc.model.DocGroup BuyBookDelivDocGroup;
+  private com.mg.merp.paymentalloc.model.DocGroup BuyBookDelivDocGroup;
 
-	private com.mg.merp.paymentalloc.model.DocGroup BuyBookInvoiceDocGroup;
+  private com.mg.merp.paymentalloc.model.DocGroup BuyBookInvoiceDocGroup;
 
-	private com.mg.merp.reference.model.Currency NatCurrency;
+  private com.mg.merp.reference.model.Currency NatCurrency;
 
-	private com.mg.merp.reference.model.CurrencyRateType CurrencyRateType;
+  private com.mg.merp.reference.model.CurrencyRateType CurrencyRateType;
 
-	private com.mg.merp.reference.model.CurrencyRateAuthority CurrencyRateAuthority;
+  private com.mg.merp.reference.model.CurrencyRateAuthority CurrencyRateAuthority;
 
-	private java.lang.Integer CurrencyPrec;
+  private java.lang.Integer CurrencyPrec;
 
-	private java.lang.Short SaleBookKind;
+  private java.lang.Short SaleBookKind;
 
-	public AccConfig() {
-	}
+  public AccConfig() {
+  }
 
-	/** constructor with id */
-	public AccConfig(int sysClientId) {
-		this.sysClientId = sysClientId;
-	}
+  /**
+   * constructor with id
+   */
+  public AccConfig(int sysClientId) {
+    this.sysClientId = sysClientId;
+  }
 
-	public com.mg.merp.reference.model.Currency getBaseCurrency() {
-		return BaseCurrency;
-	}
+  public com.mg.merp.reference.model.Currency getBaseCurrency() {
+    return BaseCurrency;
+  }
 
-	public void setBaseCurrency(
-			com.mg.merp.reference.model.Currency baseCurrency) {
-		BaseCurrency = baseCurrency;
-	}
+  public void setBaseCurrency(
+      com.mg.merp.reference.model.Currency baseCurrency) {
+    BaseCurrency = baseCurrency;
+  }
 
-	@DataItemName("AccountConfig.DocGroup.BuyBookDeliv")
-	public com.mg.merp.paymentalloc.model.DocGroup getBuyBookDelivDocGroup() {
-		return BuyBookDelivDocGroup;
-	}
+  @DataItemName("AccountConfig.DocGroup.BuyBookDeliv")
+  public com.mg.merp.paymentalloc.model.DocGroup getBuyBookDelivDocGroup() {
+    return BuyBookDelivDocGroup;
+  }
 
-	public void setBuyBookDelivDocGroup(
-			com.mg.merp.paymentalloc.model.DocGroup buyBookDelivDocGroup) {
-		BuyBookDelivDocGroup = buyBookDelivDocGroup;
-	}
-	
-	@DataItemName("AccountConfig.DocGroup.BuyBookInvoice")
-	public com.mg.merp.paymentalloc.model.DocGroup getBuyBookInvoiceDocGroup() {
-		return BuyBookInvoiceDocGroup;
-	}
+  public void setBuyBookDelivDocGroup(
+      com.mg.merp.paymentalloc.model.DocGroup buyBookDelivDocGroup) {
+    BuyBookDelivDocGroup = buyBookDelivDocGroup;
+  }
 
-	public void setBuyBookInvoiceDocGroup(
-			com.mg.merp.paymentalloc.model.DocGroup buyBookInvoiceDocGroup) {
-		BuyBookInvoiceDocGroup = buyBookInvoiceDocGroup;
-	}
+  @DataItemName("AccountConfig.DocGroup.BuyBookInvoice")
+  public com.mg.merp.paymentalloc.model.DocGroup getBuyBookInvoiceDocGroup() {
+    return BuyBookInvoiceDocGroup;
+  }
 
-	public java.lang.Integer getCurrencyPrec() {
-		return CurrencyPrec;
-	}
+  public void setBuyBookInvoiceDocGroup(
+      com.mg.merp.paymentalloc.model.DocGroup buyBookInvoiceDocGroup) {
+    BuyBookInvoiceDocGroup = buyBookInvoiceDocGroup;
+  }
 
-	public void setCurrencyPrec(java.lang.Integer currencyPrec) {
-		CurrencyPrec = currencyPrec;
-	}
+  public java.lang.Integer getCurrencyPrec() {
+    return CurrencyPrec;
+  }
 
-	public com.mg.merp.reference.model.CurrencyRateAuthority getCurrencyRateAuthority() {
-		return CurrencyRateAuthority;
-	}
+  public void setCurrencyPrec(java.lang.Integer currencyPrec) {
+    CurrencyPrec = currencyPrec;
+  }
 
-	public void setCurrencyRateAuthority(
-			com.mg.merp.reference.model.CurrencyRateAuthority currencyRateAuthority) {
-		CurrencyRateAuthority = currencyRateAuthority;
-	}
+  public com.mg.merp.reference.model.CurrencyRateAuthority getCurrencyRateAuthority() {
+    return CurrencyRateAuthority;
+  }
 
-	public com.mg.merp.reference.model.CurrencyRateType getCurrencyRateType() {
-		return CurrencyRateType;
-	}
+  public void setCurrencyRateAuthority(
+      com.mg.merp.reference.model.CurrencyRateAuthority currencyRateAuthority) {
+    CurrencyRateAuthority = currencyRateAuthority;
+  }
 
-	public void setCurrencyRateType(
-			com.mg.merp.reference.model.CurrencyRateType currencyRateType) {
-		CurrencyRateType = currencyRateType;
-	}
+  public com.mg.merp.reference.model.CurrencyRateType getCurrencyRateType() {
+    return CurrencyRateType;
+  }
 
-	public com.mg.merp.reference.model.Currency getNatCurrency() {
-		return NatCurrency;
-	}
+  public void setCurrencyRateType(
+      com.mg.merp.reference.model.CurrencyRateType currencyRateType) {
+    CurrencyRateType = currencyRateType;
+  }
 
-	public void setNatCurrency(com.mg.merp.reference.model.Currency natCurrency) {
-		NatCurrency = natCurrency;
-	}
-	
-	@DataItemName("AccountConfig.DocGroup.SaleBookAvaninv")
-	public com.mg.merp.paymentalloc.model.DocGroup getSaleBookAvaninvDocGroup() {
-		return SaleBookAvaninvDocGroup;
-	}
+  public com.mg.merp.reference.model.Currency getNatCurrency() {
+    return NatCurrency;
+  }
 
-	public void setSaleBookAvaninvDocGroup(
-			com.mg.merp.paymentalloc.model.DocGroup saleBookAvaninvDocGroup) {
-		SaleBookAvaninvDocGroup = saleBookAvaninvDocGroup;
-	}
-	
-	@DataItemName("AccountConfig.DocGroup.SaleBookDeliv")
-	public com.mg.merp.paymentalloc.model.DocGroup getSaleBookDelivDocGroup() {
-		return SaleBookDelivDocGroup;
-	}
+  public void setNatCurrency(com.mg.merp.reference.model.Currency natCurrency) {
+    NatCurrency = natCurrency;
+  }
 
-	public void setSaleBookDelivDocGroup(
-			com.mg.merp.paymentalloc.model.DocGroup saleBookDelivDocGroup) {
-		SaleBookDelivDocGroup = saleBookDelivDocGroup;
-	}
+  @DataItemName("AccountConfig.DocGroup.SaleBookAvaninv")
+  public com.mg.merp.paymentalloc.model.DocGroup getSaleBookAvaninvDocGroup() {
+    return SaleBookAvaninvDocGroup;
+  }
 
-	@DataItemName("AccountConfig.DocGroup.SaleBookInvoice")
-	public com.mg.merp.paymentalloc.model.DocGroup getSaleBookInvoiceDocGroup() {
-		return SaleBookInvoiceDocGroup;
-	}
+  public void setSaleBookAvaninvDocGroup(
+      com.mg.merp.paymentalloc.model.DocGroup saleBookAvaninvDocGroup) {
+    SaleBookAvaninvDocGroup = saleBookAvaninvDocGroup;
+  }
 
-	public void setSaleBookInvoiceDocGroup(
-			com.mg.merp.paymentalloc.model.DocGroup saleBookInvoiceDocGroup) {
-		SaleBookInvoiceDocGroup = saleBookInvoiceDocGroup;
-	}
+  @DataItemName("AccountConfig.DocGroup.SaleBookDeliv")
+  public com.mg.merp.paymentalloc.model.DocGroup getSaleBookDelivDocGroup() {
+    return SaleBookDelivDocGroup;
+  }
 
-	public java.lang.Short getSaleBookKind() {
-		return SaleBookKind;
-	}
+  public void setSaleBookDelivDocGroup(
+      com.mg.merp.paymentalloc.model.DocGroup saleBookDelivDocGroup) {
+    SaleBookDelivDocGroup = saleBookDelivDocGroup;
+  }
 
-	public void setSaleBookKind(java.lang.Short saleBookKind) {
-		SaleBookKind = saleBookKind;
-	}
+  @DataItemName("AccountConfig.DocGroup.SaleBookInvoice")
+  public com.mg.merp.paymentalloc.model.DocGroup getSaleBookInvoiceDocGroup() {
+    return SaleBookInvoiceDocGroup;
+  }
 
-	public int getSysClientId() {
-		return sysClientId;
-	}
+  public void setSaleBookInvoiceDocGroup(
+      com.mg.merp.paymentalloc.model.DocGroup saleBookInvoiceDocGroup) {
+    SaleBookInvoiceDocGroup = saleBookInvoiceDocGroup;
+  }
 
-	public void setSysClientId(int sysClientId) {
-		this.sysClientId = sysClientId;
-	}
+  public java.lang.Short getSaleBookKind() {
+    return SaleBookKind;
+  }
+
+  public void setSaleBookKind(java.lang.Short saleBookKind) {
+    SaleBookKind = saleBookKind;
+  }
+
+  public int getSysClientId() {
+    return sysClientId;
+  }
+
+  public void setSysClientId(int sysClientId) {
+    this.sysClientId = sysClientId;
+  }
 
 }

@@ -17,14 +17,12 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.RemnAcc;
 
 /**
- * 
  * @author leonova
  * @version $Id: RemnAccServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface RemnAccServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<RemnAcc, Integer>, com.mg.merp.account.Remn
-{
+    extends com.mg.framework.api.DataBusinessObjectService<RemnAcc, Integer>, com.mg.merp.account.Remn {
 
-   public void overestimationCurAcc( com.mg.framework.api.AttributeMap rec ) throws com.mg.framework.api.ApplicationException;
+  public void overestimationCurAcc(com.mg.framework.api.AttributeMap rec) throws com.mg.framework.api.ApplicationException;
 
 }

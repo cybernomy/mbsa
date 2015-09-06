@@ -13,27 +13,31 @@
 
 <!-- $Id: PriceListSpecRest.mfd.xml,v 1.4 2008/10/13 05:52:07 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.reference.support.ui.PriceListSpecRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.reference.resources.formelements#PriceListSpecRest.Title">
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.reference.support.ui.PriceListSpecRest" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.reference.resources.formelements#PriceListSpecRest.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-			<jfd:field id="code" /> 
- 			<jfd:field id="goodType" sameLine="true"/> 
- 			<jfd:field id="specName" /> 
- 			<jfd:field id="specFullName" /> 
- 			<jfd:field id="articul" /> 
- 			<jfd:field id="internalCode" /> 
- 			<jfd:field id="dateTill" />
-			<jfd:field id="notInUsePriceType"/> 
- 			<jfd:field id="priceType" searchHelp="com.mg.merp.reference.support.ui.PriceTypeFromPriceListSpecRestSearchHelp" /> 			 
- 			<jfd:field id="notInUse"/> 
-			<jfd:field id="showInUse"/>
-			
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />			 		 		
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="code"/>
+    <jfd:field id="goodType" sameLine="true"/>
+    <jfd:field id="specName"/>
+    <jfd:field id="specFullName"/>
+    <jfd:field id="articul"/>
+    <jfd:field id="internalCode"/>
+    <jfd:field id="dateTill"/>
+    <jfd:field id="notInUsePriceType"/>
+    <jfd:field id="priceType"
+               searchHelp="com.mg.merp.reference.support.ui.PriceTypeFromPriceListSpecRestSearchHelp"/>
+    <jfd:field id="notInUse"/>
+    <jfd:field id="showInUse"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml"/>
 
 </jfd:form>

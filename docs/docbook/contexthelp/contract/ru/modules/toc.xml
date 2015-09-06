@@ -14,22 +14,22 @@
 <!-- $Id: toc.xml,v 1.3 2007/09/27 11:53:37 konyashkina Exp $ -->
 
 <toc version="1.0">
-  
-   <tocitem text="Основные сведения">
-	<tocitem text="Содержание контракта" target="conthead_html" /> 
-	<tocitem text="Контрагенты" target="contractors_html" />
-	<tocitem text="Суммы" target="summ_html" />
-	<tocitem text="Предмет контракта" target="object_html" />
-	<tocitem text="Изменения контракта" target="changes_html" />
-	<tocitem text="Условия отбора" target="contractrest_html" />
-	<tocitem text="Виды и категории контрактов" target="category_html" />
+
+  <tocitem text="Основные сведения">
+    <tocitem text="Содержание контракта" target="conthead_html"/>
+    <tocitem text="Контрагенты" target="contractors_html"/>
+    <tocitem text="Суммы" target="summ_html"/>
+    <tocitem text="Предмет контракта" target="object_html"/>
+    <tocitem text="Изменения контракта" target="changes_html"/>
+    <tocitem text="Условия отбора" target="contractrest_html"/>
+    <tocitem text="Виды и категории контрактов" target="category_html"/>
   </tocitem>
-  
-   <tocitem text="Этапы и пункты">
-	<tocitem text="Этапы" target="phase_html" />
-	<tocitem text="Пункты планируемые" target="planitem_html" />
-	<tocitem text="Пункты фактические" target="factitem_html" />
-	<tocitem text="Спецификации пунктов" target="spec_html" />
-    </tocitem>
-  
+
+  <tocitem text="Этапы и пункты">
+    <tocitem text="Этапы" target="phase_html"/>
+    <tocitem text="Пункты планируемые" target="planitem_html"/>
+    <tocitem text="Пункты фактические" target="factitem_html"/>
+    <tocitem text="Спецификации пунктов" target="spec_html"/>
+  </tocitem>
+
 </toc>

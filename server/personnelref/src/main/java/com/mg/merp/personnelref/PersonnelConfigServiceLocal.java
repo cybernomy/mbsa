@@ -19,7 +19,7 @@ import com.mg.merp.personnelref.model.PersonnelConfig;
 
 /**
  * Сервис бизнес-компонента "Конфигурация модуля <Управление персоналом>"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: PersonnelConfigServiceLocal.java,v 1.2 2007/01/13 13:31:16 sharapov Exp $

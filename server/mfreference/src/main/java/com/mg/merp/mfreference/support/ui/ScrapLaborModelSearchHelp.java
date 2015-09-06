@@ -17,22 +17,22 @@ package com.mg.merp.mfreference.support.ui;
 
 /**
  * Поисковик "Образцов актов по списанию потерь рабочей силы"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: ScrapLaborModelSearchHelp.java,v 1.2 2007/01/13 15:44:06 sharapov Exp $
  */
 public class ScrapLaborModelSearchHelp extends ModelSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.mfreference.support.ui.ModelSearchHelp#getDocSectionPrimaryKey()
-	 */
-	@Override
-	protected short getDocSectionPrimaryKey() {
-		//return ScrapLaborHeadServiceLocal.DOCSECTION;
-		/**
-		 * docsection для актов на списание потерь времени, отработанного РС
-		 */
-		return 12007;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.mfreference.support.ui.ModelSearchHelp#getDocSectionPrimaryKey()
+   */
+  @Override
+  protected short getDocSectionPrimaryKey() {
+    //return ScrapLaborHeadServiceLocal.DOCSECTION;
+    /**
+     * docsection для актов на списание потерь времени, отработанного РС
+     */
+    return 12007;
+  }
 
 }

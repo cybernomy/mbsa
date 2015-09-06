@@ -23,27 +23,27 @@ import com.mg.framework.api.annotations.EnumConstantText;
  */
 @DataItemName("PersonnelRef.DeductionKind.Class")
 public enum DeductionClass {
-	/**
-	 * Нет 
-	 */
-	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#DeducClass.None")
-	NONE,
-	
-	/**
-	 * На себя
-	 */
-	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#DeducClass.Oneself")
-	ONESELF,
-	
-	/**
-	 * На детей
-	 */
-	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#DeducClass.Children")
-	CHILDREN,
-	
-	/**
-	 * На иждивенцев
-	 */
-	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#DeducClass.Dependant")
-	DEPENDANT,
+  /**
+   * Нет
+   */
+  @EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#DeducClass.None")
+  NONE,
+
+  /**
+   * На себя
+   */
+  @EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#DeducClass.Oneself")
+  ONESELF,
+
+  /**
+   * На детей
+   */
+  @EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#DeducClass.Children")
+  CHILDREN,
+
+  /**
+   * На иждивенцев
+   */
+  @EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#DeducClass.Dependant")
+  DEPENDANT,
 }

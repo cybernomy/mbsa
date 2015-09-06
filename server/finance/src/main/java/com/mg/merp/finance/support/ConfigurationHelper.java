@@ -20,19 +20,19 @@ import com.mg.merp.finance.model.FinConfig;
 
 /**
  * Класс помощник конфигурации модуля "Финансы"
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: ConfigurationHelper.java,v 1.1 2007/08/17 09:09:18 alikaev Exp $
  */
 public class ConfigurationHelper {
-	/**
-	 * получить конфигурацию модуля
-	 * 
-	 * @return	конфигурация
-	 */
-	public static FinConfig getConfiguration() {
-		return ServerUtils.getPersistentManager().find(FinConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
-	}
-	
+  /**
+   * получить конфигурацию модуля
+   *
+   * @return конфигурация
+   */
+  public static FinConfig getConfiguration() {
+    return ServerUtils.getPersistentManager().find(FinConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
+  }
+
 
 }

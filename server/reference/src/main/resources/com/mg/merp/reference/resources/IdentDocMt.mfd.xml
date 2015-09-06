@@ -13,39 +13,45 @@
 
 <!-- $Id: IdentDocMt.mfd.xml,v 1.4 2008/09/18 07:32:42 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.reference.resources.formelements#IdentDoc.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.reference.resources.formelements#IdentDoc.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
-	
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.reference.resources.formelements#IdentDoc.Info.Title" >
-			<jfd:field id="IdentDocKind" />	
-			<jfd:field id="ActiveTill" sameLine="true"/>	
-			<jfd:container id="seriesFields" layout="jfd:box" longField="true" label="resource://com.mg.merp.reference.resources.formelements#IdentDoc.Series">			
-				<jfd:field id="SeriesLeft" showLabel="false" alignment="expand_expand"/>	
-				<jfd:field id="IdentDocKind.SeriesDivider" showLabel="false" enabled="false"/>	
-				<jfd:field id="SeriesRight" showLabel="false"/>	
-				<jfd:field id="DocNumber" alignment="right_expand"/>						
-			</jfd:container>
-			<jfd:field id="WhoIssued" />				
-			<jfd:field id="WhenIssued" />				
- 			<jfd:field id="PersonAddress" longField="true" />				 
-			<jfd:field id="IsBasic" />
-		</jfd:container>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 			 					
-		<jfd:container id="docFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.reference.resources.formelements#IdentDoc.InfoFromDoc.Title" >
-			<jfd:container id="birthFields" columns="2" layout="jfd:box" longField="true" label="resource://com.mg.merp.reference.resources.formelements#IdentDoc.Born">			
-				<jfd:field id="BirthPlaceCountry" alignment="expand_top" />	
-				<jfd:field id="BirthPlaceRegion" alignment="expand_top" />				
-				<jfd:field id="BirthPlaceDistrict" alignment="expand_top" />		
-				<jfd:field id="BirthPlaceCity" alignment="expand_top" />	
-				<jfd:field id="BirthPlaceOkato" alignment="expand_top" />							
-			</jfd:container>
-		 	<jfd:field id="Nationality" /> 
-			<jfd:field id="CitizenShip" sameLine="true"/>			
-		 	<jfd:field id="Birthdate" /> 			
-		</jfd:container>		
-	</jfd:container>
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
+
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.reference.resources.formelements#IdentDoc.Info.Title">
+      <jfd:field id="IdentDocKind"/>
+      <jfd:field id="ActiveTill" sameLine="true"/>
+      <jfd:container id="seriesFields" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.reference.resources.formelements#IdentDoc.Series">
+        <jfd:field id="SeriesLeft" showLabel="false" alignment="expand_expand"/>
+        <jfd:field id="IdentDocKind.SeriesDivider" showLabel="false" enabled="false"/>
+        <jfd:field id="SeriesRight" showLabel="false"/>
+        <jfd:field id="DocNumber" alignment="right_expand"/>
+      </jfd:container>
+      <jfd:field id="WhoIssued"/>
+      <jfd:field id="WhenIssued"/>
+      <jfd:field id="PersonAddress" longField="true"/>
+      <jfd:field id="IsBasic"/>
+    </jfd:container>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    <jfd:container id="docFields" layout="jfd:defaultMtLayout" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.reference.resources.formelements#IdentDoc.InfoFromDoc.Title">
+      <jfd:container id="birthFields" columns="2" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.reference.resources.formelements#IdentDoc.Born">
+        <jfd:field id="BirthPlaceCountry" alignment="expand_top"/>
+        <jfd:field id="BirthPlaceRegion" alignment="expand_top"/>
+        <jfd:field id="BirthPlaceDistrict" alignment="expand_top"/>
+        <jfd:field id="BirthPlaceCity" alignment="expand_top"/>
+        <jfd:field id="BirthPlaceOkato" alignment="expand_top"/>
+      </jfd:container>
+      <jfd:field id="Nationality"/>
+      <jfd:field id="CitizenShip" sameLine="true"/>
+      <jfd:field id="Birthdate"/>
+    </jfd:container>
+  </jfd:container>
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

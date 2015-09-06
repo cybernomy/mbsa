@@ -17,10 +17,9 @@ package com.mg.framework.utils;
 
 /**
  * Utilities methods to simplify dealing with JAXP & DOM XML parsing
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: UtilXml.java,v 1.3 2006/06/27 12:03:35 safonov Exp $
- *
  * @deprecated use com.mg.framework.utils.XMLUtils instead
  */
 public class UtilXml extends XMLUtils {

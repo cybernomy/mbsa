@@ -20,47 +20,46 @@ import com.mg.merp.salary.model.RollKind;
 
 /**
  * Контроллер формы условий отбора расчетных ведомостей
- * 
+ *
  * @author leonova
- * @version $Id: PayRollRest.java,v 1.4 2006/08/28 12:42:47 leonova Exp $ 
+ * @version $Id: PayRollRest.java,v 1.4 2006/08/28 12:42:47 leonova Exp $
  */
 public class PayRollRest extends ItemWithDateIntervalRest {
 
-	private RollKind rollKindName = null;
-	@DataItemName("Salary.PayRoll.Number")
-	private String rNumber = "";
-	@DataItemName("Salary.Name")
-	private String rName = "";
-	
-	@Override
-	protected void doClearRestrictionItem() {
-		super.doClearRestrictionItem();
-		this.rollKindName = null;
-		this.rNumber = "";
-		this.rName = "";
-	}
+  private RollKind rollKindName = null;
+  @DataItemName("Salary.PayRoll.Number")
+  private String rNumber = "";
+  @DataItemName("Salary.Name")
+  private String rName = "";
 
-	/**
-	 * @return Returns the rName.
-	 */
-	protected String getRName() {
-		return rName;
-	}
+  @Override
+  protected void doClearRestrictionItem() {
+    super.doClearRestrictionItem();
+    this.rollKindName = null;
+    this.rNumber = "";
+    this.rName = "";
+  }
 
-	/**
-	 * @return Returns the rNumber.
-	 */
-	protected String getRNumber() {
-		return rNumber;
-	}
+  /**
+   * @return Returns the rName.
+   */
+  protected String getRName() {
+    return rName;
+  }
 
-	/**
-	 * @return Returns the rollKindName.
-	 */
-	protected RollKind getRollKindName() {
-		return rollKindName;
-	}
+  /**
+   * @return Returns the rNumber.
+   */
+  protected String getRNumber() {
+    return rNumber;
+  }
 
+  /**
+   * @return Returns the rollKindName.
+   */
+  protected RollKind getRollKindName() {
+    return rollKindName;
+  }
 
 
 }

@@ -24,34 +24,34 @@ import com.mg.merp.reference.model.ZipCode;
  */
 public class ZipCodeSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {		
-		return "merp/reference/ZipCode"; //$NON-NLS-1$
-	}
-	
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doOnSearchPerformed(com.mg.framework.api.ui.SearchHelpEvent)
-	 */
-	@Override
-	protected void doOnSearchPerformed(SearchHelpEvent event) {
-		ZipCode zipCode = (ZipCode)event.getItems()[0];
-		setExportContextValue("Country", zipCode.getCountry()); //$NON-NLS-1$
-		setExportContextValue("Region", zipCode.getRegion()); //$NON-NLS-1$
-		setExportContextValue("Place", zipCode.getPlace()); //$NON-NLS-1$
-		setExportContextValue("District", zipCode.getDistrict()); //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/reference/ZipCode"; //$NON-NLS-1$
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#defineExportContext()
-	 */
-	@Override
-	protected String[] defineExportContext() {
-		return new String []{"Country", "Region", "Place", "District"}; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-	}
-		
+  /*
+   * (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doOnSearchPerformed(com.mg.framework.api.ui.SearchHelpEvent)
+   */
+  @Override
+  protected void doOnSearchPerformed(SearchHelpEvent event) {
+    ZipCode zipCode = (ZipCode) event.getItems()[0];
+    setExportContextValue("Country", zipCode.getCountry()); //$NON-NLS-1$
+    setExportContextValue("Region", zipCode.getRegion()); //$NON-NLS-1$
+    setExportContextValue("Place", zipCode.getPlace()); //$NON-NLS-1$
+    setExportContextValue("District", zipCode.getDistrict()); //$NON-NLS-1$
+  }
+
+  /*
+   * (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#defineExportContext()
+   */
+  @Override
+  protected String[] defineExportContext() {
+    return new String[]{"Country", "Region", "Place", "District"}; //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
+  }
+
 }

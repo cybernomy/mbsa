@@ -14,191 +14,191 @@
  */
 package com.mg.merp.contract.model;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocType;
 
+import java.math.BigDecimal;
+import java.util.Date;
+
 /**
  * Структура данных для создания фактического пункта контракта
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: FactItemData.java,v 1.1 2007/03/07 12:31:28 sharapov Exp $
  */
 public class FactItemData {
 
-	// Fields
+  // Fields
 
-	private DocHead docHead;
-	private Date processDate;
-	private BigDecimal performedSum;
-	private ItemKind itemKind;
-	private FactItemContractorSource contractorSource;
-	private boolean isCreateSpec;
-	private com.mg.merp.document.model.DocType сontractType;
-	private String сontractNumber;
-	private Date contractDate;
-	private DocHead contract;
-	
+  private DocHead docHead;
+  private Date processDate;
+  private BigDecimal performedSum;
+  private ItemKind itemKind;
+  private FactItemContractorSource contractorSource;
+  private boolean isCreateSpec;
+  private com.mg.merp.document.model.DocType сontractType;
+  private String сontractNumber;
+  private Date contractDate;
+  private DocHead contract;
 
-	/* Default consractor */
-	public FactItemData() {
-	}
 
-	public FactItemData(DocHead docHead, Date processDate, BigDecimal performedSum, ItemKind itemKind, FactItemContractorSource contractorSource, boolean isCreateSpec, DocType сontractType, String сontractNumber, Date contractDate, DocHead contract) {
-		this.docHead = docHead;
-		this.processDate = processDate;
-		this.performedSum = performedSum;
-		this.itemKind = itemKind;
-		this.contractorSource = contractorSource;
-		this.isCreateSpec = isCreateSpec;
-		this.сontractType = сontractType;
-		this.сontractNumber = сontractNumber;
-		this.contractDate = contractDate;
-		this.contract = contract;
-	}
+  /* Default consractor */
+  public FactItemData() {
+  }
 
-	// Property accessors
+  public FactItemData(DocHead docHead, Date processDate, BigDecimal performedSum, ItemKind itemKind, FactItemContractorSource contractorSource, boolean isCreateSpec, DocType сontractType, String сontractNumber, Date contractDate, DocHead contract) {
+    this.docHead = docHead;
+    this.processDate = processDate;
+    this.performedSum = performedSum;
+    this.itemKind = itemKind;
+    this.contractorSource = contractorSource;
+    this.isCreateSpec = isCreateSpec;
+    this.сontractType = сontractType;
+    this.сontractNumber = сontractNumber;
+    this.contractDate = contractDate;
+    this.contract = contract;
+  }
 
-	/**
-	 * @return the contractorSource
-	 */
-	public FactItemContractorSource getContractorSource() {
-		return contractorSource;
-	}
+  // Property accessors
 
-	/**
-	 * @param contractorSource the contractorSource to set
-	 */
-	public void setContractorSource(FactItemContractorSource contractorSource) {
-		this.contractorSource = contractorSource;
-	}
+  /**
+   * @return the contractorSource
+   */
+  public FactItemContractorSource getContractorSource() {
+    return contractorSource;
+  }
 
-	/**
-	 * @return the docHead
-	 */
-	public DocHead getDocHead() {
-		return docHead;
-	}
+  /**
+   * @param contractorSource the contractorSource to set
+   */
+  public void setContractorSource(FactItemContractorSource contractorSource) {
+    this.contractorSource = contractorSource;
+  }
 
-	/**
-	 * @param docHead the docHead to set
-	 */
-	public void setDocHead(DocHead docHead) {
-		this.docHead = docHead;
-	}
+  /**
+   * @return the docHead
+   */
+  public DocHead getDocHead() {
+    return docHead;
+  }
 
-	/**
-	 * @return the isCreateSpec
-	 */
-	public boolean isCreateSpec() {
-		return isCreateSpec;
-	}
+  /**
+   * @param docHead the docHead to set
+   */
+  public void setDocHead(DocHead docHead) {
+    this.docHead = docHead;
+  }
 
-	/**
-	 * @param isCreateSpec the isCreateSpec to set
-	 */
-	public void setCreateSpec(boolean isCreateSpec) {
-		this.isCreateSpec = isCreateSpec;
-	}
+  /**
+   * @return the isCreateSpec
+   */
+  public boolean isCreateSpec() {
+    return isCreateSpec;
+  }
 
-	/**
-	 * @return the itemKind
-	 */
-	public ItemKind getItemKind() {
-		return itemKind;
-	}
+  /**
+   * @param isCreateSpec the isCreateSpec to set
+   */
+  public void setCreateSpec(boolean isCreateSpec) {
+    this.isCreateSpec = isCreateSpec;
+  }
 
-	/**
-	 * @param itemKind the itemKind to set
-	 */
-	public void setItemKind(ItemKind itemKind) {
-		this.itemKind = itemKind;
-	}
+  /**
+   * @return the itemKind
+   */
+  public ItemKind getItemKind() {
+    return itemKind;
+  }
 
-	/**
-	 * @return the performedSum
-	 */
-	public BigDecimal getPerformedSum() {
-		return performedSum;
-	}
+  /**
+   * @param itemKind the itemKind to set
+   */
+  public void setItemKind(ItemKind itemKind) {
+    this.itemKind = itemKind;
+  }
 
-	/**
-	 * @param performedSum the performedSum to set
-	 */
-	public void setPerformedSum(BigDecimal performedSum) {
-		this.performedSum = performedSum;
-	}
+  /**
+   * @return the performedSum
+   */
+  public BigDecimal getPerformedSum() {
+    return performedSum;
+  }
 
-	/**
-	 * @return the processDate
-	 */
-	public Date getProcessDate() {
-		return processDate;
-	}
+  /**
+   * @param performedSum the performedSum to set
+   */
+  public void setPerformedSum(BigDecimal performedSum) {
+    this.performedSum = performedSum;
+  }
 
-	/**
-	 * @param processDate the processDate to set
-	 */
-	public void setProcessDate(Date processDate) {
-		this.processDate = processDate;
-	}
+  /**
+   * @return the processDate
+   */
+  public Date getProcessDate() {
+    return processDate;
+  }
 
-	/**
-	 * @return the contractDate
-	 */
-	public Date getContractDate() {
-		return contractDate;
-	}
+  /**
+   * @param processDate the processDate to set
+   */
+  public void setProcessDate(Date processDate) {
+    this.processDate = processDate;
+  }
 
-	/**
-	 * @param contractDate the contractDate to set
-	 */
-	public void setContractDate(Date contractDate) {
-		this.contractDate = contractDate;
-	}
+  /**
+   * @return the contractDate
+   */
+  public Date getContractDate() {
+    return contractDate;
+  }
 
-	/**
-	 * @return the сontractNumber
-	 */
-	public String getсontractNumber() {
-		return сontractNumber;
-	}
+  /**
+   * @param contractDate the contractDate to set
+   */
+  public void setContractDate(Date contractDate) {
+    this.contractDate = contractDate;
+  }
 
-	/**
-	 * @param сontractNumber the сontractNumber to set
-	 */
-	public void setсontractNumber(String сontractNumber) {
-		this.сontractNumber = сontractNumber;
-	}
+  /**
+   * @return the сontractNumber
+   */
+  public String getсontractNumber() {
+    return сontractNumber;
+  }
 
-	/**
-	 * @return the сontractType
-	 */
-	public com.mg.merp.document.model.DocType getсontractType() {
-		return сontractType;
-	}
+  /**
+   * @param сontractNumber the сontractNumber to set
+   */
+  public void setсontractNumber(String сontractNumber) {
+    this.сontractNumber = сontractNumber;
+  }
 
-	/**
-	 * @param сontractType the сontractType to set
-	 */
-	public void setсontractType(com.mg.merp.document.model.DocType сontractType) {
-		this.сontractType = сontractType;
-	}
+  /**
+   * @return the сontractType
+   */
+  public com.mg.merp.document.model.DocType getсontractType() {
+    return сontractType;
+  }
 
-	/**
-	 * @return the contract
-	 */
-	public DocHead getContract() {
-		return contract;
-	}
+  /**
+   * @param сontractType the сontractType to set
+   */
+  public void setсontractType(com.mg.merp.document.model.DocType сontractType) {
+    this.сontractType = сontractType;
+  }
 
-	/**
-	 * @param contract the contract to set
-	 */
-	public void setContract(DocHead contract) {
-		this.contract = contract;
-	}
+  /**
+   * @return the contract
+   */
+  public DocHead getContract() {
+    return contract;
+  }
+
+  /**
+   * @param contract the contract to set
+   */
+  public void setContract(DocHead contract) {
+    this.contract = contract;
+  }
 
 }

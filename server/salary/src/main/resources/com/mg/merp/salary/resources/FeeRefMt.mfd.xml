@@ -13,50 +13,66 @@
 
 <!-- $Id: FeeRefMt.mfd.xml,v 1.5 2006/12/17 12:42:26 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.salary.support.ui.FeeRefMt" title="resource://com.mg.merp.salary.resources.formelements#FeeRef.FormMt.Title" helpTopic="salary#fee_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.salary.support.ui.FeeRefMt"
+          title="resource://com.mg.merp.salary.resources.formelements#FeeRef.FormMt.Title"
+          helpTopic="salary#fee_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag"  alignment="expand_top" tabTitle="resource://com.mg.merp.salary.resources.formelements#FeeRef.Tab.Total" >
-  			<jfd:field id="FCode" />		
-			<jfd:field id="FName" /> 
- 			<jfd:field id="CalcListSectionRef" />				
-			<jfd:field id="FeeType" editorType="comboBox" sameLine="true"/>	
-			<jfd:field id="CalcAlg" />						
-			<jfd:field id="SumSign" editorType="comboBox" sameLine="true"/>				
-			<jfd:field id="GnsCode" />	
-			<jfd:field id="Priority" sameLine="true"/>											
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.salary.resources.formelements#FeeRef.Tab.Total">
+      <jfd:field id="FCode"/>
+      <jfd:field id="FName"/>
+      <jfd:field id="CalcListSectionRef"/>
+      <jfd:field id="FeeType" editorType="comboBox" sameLine="true"/>
+      <jfd:field id="CalcAlg"/>
+      <jfd:field id="SumSign" editorType="comboBox" sameLine="true"/>
+      <jfd:field id="GnsCode"/>
+      <jfd:field id="Priority" sameLine="true"/>
 
- 	 		<jfd:container id="analitFields" layout="jfd:box" orientation="ver" label="resource://com.mg.merp.salary.resources.formelements#FeeRef.Analit">
-				<jfd:field id="CostsAnl1" showLabel="false" />
-				<jfd:field id="CostsAnl2" showLabel="false" />
-				<jfd:field id="CostsAnl3" showLabel="false" />
-				<jfd:field id="CostsAnl4" showLabel="false" />
-				<jfd:field id="CostsAnl5" showLabel="false" />																
-			</jfd:container>			
-			<jfd:field id="BeginDate" />	
-			<jfd:field id="EndDate" sameLine="true"/>								
-			<jfd:field id="PeriodiCity" editorType="comboBox"/>		
-			<jfd:field id="RollKind" sameLine="true"/>						
-			<jfd:field id="IncomeKind" />				
-			<jfd:field id="IsZeroIncluded" sameLine="true"/> 	   	
-		</jfd:container>
+      <jfd:container id="analitFields" layout="jfd:box" orientation="ver"
+                     label="resource://com.mg.merp.salary.resources.formelements#FeeRef.Analit">
+        <jfd:field id="CostsAnl1" showLabel="false"/>
+        <jfd:field id="CostsAnl2" showLabel="false"/>
+        <jfd:field id="CostsAnl3" showLabel="false"/>
+        <jfd:field id="CostsAnl4" showLabel="false"/>
+        <jfd:field id="CostsAnl5" showLabel="false"/>
+      </jfd:container>
+      <jfd:field id="BeginDate"/>
+      <jfd:field id="EndDate" sameLine="true"/>
+      <jfd:field id="PeriodiCity" editorType="comboBox"/>
+      <jfd:field id="RollKind" sameLine="true"/>
+      <jfd:field id="IncomeKind"/>
+      <jfd:field id="IsZeroIncluded" sameLine="true"/>
+    </jfd:container>
 
-		<jfd:maintenanceTable id="param" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.salary.resources.formelements#FeeRef.Tab.Param" helpTopic="salary#feeparam_html" >
-		</jfd:maintenanceTable>			
+    <jfd:maintenanceTable id="param" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.salary.resources.formelements#FeeRef.Tab.Param"
+                          helpTopic="salary#feeparam_html">
+    </jfd:maintenanceTable>
 
-		<jfd:maintenanceTable id="tariffingInFee" scroll="true"  autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.salary.resources.formelements#FeeRef.Tab.Tariff" helpTopic="salary#tariffuse_html" >
-		</jfd:maintenanceTable>
-		
-		<jfd:maintenanceTable id="replaced" scroll="true"  autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.salary.resources.formelements#FeeRef.Tab.Replaced" helpTopic="salary#replfee_html" >
-		</jfd:maintenanceTable>		
-		
-		<jfd:maintenanceTable id="included" scroll="true"  autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.salary.resources.formelements#FeeRef.Tab.Included" helpTopic="salary#inclfee_html" >
-		</jfd:maintenanceTable>	
-		
-	</jfd:container>
+    <jfd:maintenanceTable id="tariffingInFee" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.salary.resources.formelements#FeeRef.Tab.Tariff"
+                          helpTopic="salary#tariffuse_html">
+    </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:maintenanceTable id="replaced" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.salary.resources.formelements#FeeRef.Tab.Replaced"
+                          helpTopic="salary#replfee_html">
+    </jfd:maintenanceTable>
+
+    <jfd:maintenanceTable id="included" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.salary.resources.formelements#FeeRef.Tab.Included"
+                          helpTopic="salary#inclfee_html">
+    </jfd:maintenanceTable>
+
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

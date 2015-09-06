@@ -17,22 +17,22 @@ package com.mg.merp.mfreference.support.ui;
 
 /**
  * Поисковик "Образцов актов по обратному списанию рабочей силы"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: InputLaborModelSearchHelp.java,v 1.2 2007/01/13 15:44:06 sharapov Exp $
  */
 public class InputLaborModelSearchHelp extends ModelSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.mfreference.support.ui.InputModelSearchHelp#getDocSectionPrimaryKey()
-	 */
-	@Override
-	protected short getDocSectionPrimaryKey() {
-		/**
-		 * docsection для актов на списание времени, отработанного РС в НЗП
-		 */
-		return 12003;
-		//return InputLaborHeadServiceLocal.DOCSECTION;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.mfreference.support.ui.InputModelSearchHelp#getDocSectionPrimaryKey()
+   */
+  @Override
+  protected short getDocSectionPrimaryKey() {
+    /**
+     * docsection для актов на списание времени, отработанного РС в НЗП
+     */
+    return 12003;
+    //return InputLaborHeadServiceLocal.DOCSECTION;
+  }
 
 }

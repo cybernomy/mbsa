@@ -21,28 +21,27 @@ import com.mg.framework.utils.ServerUtils;
 
 /**
  * Локатор менеджера трансляторов SQL ИС в пользовательские исключения
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: SQLExceptionTranslatorManagerLocator.java,v 1.1 2006/11/17 14:28:55 safonov Exp $
  */
 public class SQLExceptionTranslatorManagerLocator {
-	private static volatile SQLExceptionTranslatorManager instance = null;
+  private static volatile SQLExceptionTranslatorManager instance = null;
 
-	/**
-	 * найти сервис менеджера трансляторов
-	 * 
-	 * @return	сервис
-	 * @throws ApplicationException	при любых ошибках
-	 */
-	public static SQLExceptionTranslatorManager locate() throws ApplicationException {
-		if (instance == null)
-			try {
-				instance = (SQLExceptionTranslatorManager) ServerUtils.createMBeanProxy(SQLExceptionTranslatorManager.class, SQLExceptionTranslatorManagerServiceMBean.SERVICE_NAME); //$NON-NLS-1$
-			}
-		catch (Exception e) {
-			throw new ApplicationException(e);
-		}
-		return instance;
-	}
+  /**
+   * найти сервис менеджера трансляторов
+   *
+   * @return сервис
+   * @throws ApplicationException при любых ошибках
+   */
+  public static SQLExceptionTranslatorManager locate() throws ApplicationException {
+    if (instance == null)
+      try {
+        instance = (SQLExceptionTranslatorManager) ServerUtils.createMBeanProxy(SQLExceptionTranslatorManager.class, SQLExceptionTranslatorManagerServiceMBean.SERVICE_NAME); //$NON-NLS-1$
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 
 }

@@ -9,13 +9,20 @@
 ]> -->
 <chapter id="005security">
   <title>Другие права</title>
-    
-    <para>На закладке <emphasis>Другие права</emphasis> определяются некоторые
+
+  <para>На закладке
+    <emphasis>Другие права</emphasis>
+    определяются некоторые
     права группы пользователей в зависимости от уже установленных прав на модули
-    и бизнес-компоненты. </para>
-    
-   <screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/others.gif"/>
-      </imageobject></mediaobject></screenshot>
-    
-  </chapter>
+    и бизнес-компоненты.
+  </para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/others.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+</chapter>

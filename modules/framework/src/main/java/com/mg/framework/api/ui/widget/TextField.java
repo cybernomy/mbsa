@@ -18,18 +18,19 @@ import com.mg.framework.api.ui.FieldEditor;
 
 /**
  * Элемент "Редактор текста однострочный"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: TextField.java,v 1.2 2006/11/21 15:34:06 safonov Exp $
  */
 public interface TextField extends FieldEditor {
-	/**
-	 * атрибут указывающий длину строки в символах, имеет тип <code>Integer</code>
-	 */
-	final static String LENGTH = "length";
-	
-	/**
-	 * атрибут признак указывающий на возможность введения символов в нижнем регистре, имеет тип <code>Boolean</code>
-	 */
-	final static String IS_LOWERCASE = "lowercase";
+  /**
+   * атрибут указывающий длину строки в символах, имеет тип <code>Integer</code>
+   */
+  final static String LENGTH = "length";
+
+  /**
+   * атрибут признак указывающий на возможность введения символов в нижнем регистре, имеет тип
+   * <code>Boolean</code>
+   */
+  final static String IS_LOWERCASE = "lowercase";
 }

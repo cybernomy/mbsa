@@ -19,24 +19,24 @@ import com.mg.merp.document.generic.ui.DocumentBrowseForm;
 
 /**
  * Контроллер формы списка кассовых документов
- * 
+ *
  * @author leonova
- * @version $Id: CashDocumentBr.java,v 1.5 2008/02/21 12:19:40 alikaev Exp $ 
+ * @version $Id: CashDocumentBr.java,v 1.5 2008/02/21 12:19:40 alikaev Exp $
  */
 public class CashDocumentBr extends DocumentBrowseForm {
-	protected final String INIT_QUERY_TEXT = "select %s from CashDocument d %s %s order by d.DocDate, d.Id "; //$NON-NLS-1$
+  protected final String INIT_QUERY_TEXT = "select %s from CashDocument d %s %s order by d.DocDate, d.Id "; //$NON-NLS-1$
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.ui.DocumentBr#createQueryText()
-	 */
-	@Override
-	protected String createQueryText() {
-		super.createQueryText();
-		CashDocumentRest restDocument = (CashDocumentRest) getRestrictionForm();
-		whereText.append(DatabaseUtils.formatEJBQLStringRestriction("d.ContractNumber", restDocument.getContractNumber(), "contractDocNumber", paramsName, paramsValue, false)). //$NON-NLS-1$ //$NON-NLS-2$
-		append(DatabaseUtils.formatEJBQLObjectRestriction("d.ContractType", restDocument.getContractType(), "contractDocType", paramsName, paramsValue, false)). //$NON-NLS-1$ //$NON-NLS-2$
-		append(DatabaseUtils.formatEJBQLObjectRestriction("d.ContractDate", restDocument.getContractDate(), "contractDocDate", paramsName, paramsValue, false)). //$NON-NLS-1$ //$NON-NLS-2$
-		append(DatabaseUtils.formatEJBQLObjectRestriction("d.Acc", restDocument.getAccount(), "account", paramsName, paramsValue, false)); //$NON-NLS-1$ //$NON-NLS-2$
-		return String.format(INIT_QUERY_TEXT, fieldsList, fromList, whereText.toString());
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.ui.DocumentBr#createQueryText()
+   */
+  @Override
+  protected String createQueryText() {
+    super.createQueryText();
+    CashDocumentRest restDocument = (CashDocumentRest) getRestrictionForm();
+    whereText.append(DatabaseUtils.formatEJBQLStringRestriction("d.ContractNumber", restDocument.getContractNumber(), "contractDocNumber", paramsName, paramsValue, false)). //$NON-NLS-1$ //$NON-NLS-2$
+        append(DatabaseUtils.formatEJBQLObjectRestriction("d.ContractType", restDocument.getContractType(), "contractDocType", paramsName, paramsValue, false)). //$NON-NLS-1$ //$NON-NLS-2$
+        append(DatabaseUtils.formatEJBQLObjectRestriction("d.ContractDate", restDocument.getContractDate(), "contractDocDate", paramsName, paramsValue, false)). //$NON-NLS-1$ //$NON-NLS-2$
+        append(DatabaseUtils.formatEJBQLObjectRestriction("d.Acc", restDocument.getAccount(), "account", paramsName, paramsValue, false)); //$NON-NLS-1$ //$NON-NLS-2$
+    return String.format(INIT_QUERY_TEXT, fieldsList, fromList, whereText.toString());
+  }
 }

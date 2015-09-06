@@ -17,12 +17,10 @@ package com.mg.merp.crm;
 import com.mg.merp.crm.model.ActivitySphere;
 
 /**
- * 
  * @author leonova
  * @version $Id: ActivitySphereServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface ActivitySphereServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<ActivitySphere, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<ActivitySphere, Integer> {
 
 }

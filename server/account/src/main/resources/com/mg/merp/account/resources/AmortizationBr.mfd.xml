@@ -13,23 +13,30 @@
 
 <!-- $Id: AmortizationBr.mfd.xml,v 1.1 2008/04/29 05:30:03 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.account.support.ui.AmortizationBr" title="" orientation="ver" verticalGap="5">
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.account.support.ui.AmortizationBr" title="" orientation="ver"
+          verticalGap="5">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:box" columns="1" alignment="expand_expand" orientation="ver" verticalGap="10">
+  <jfd:container id="fields" layout="jfd:box" columns="1" alignment="expand_expand"
+                 orientation="ver" verticalGap="10">
 
-		<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
-		</jfd:maintenanceTable>
-	
-		<jfd:container id="buttons" layout="jfd:box" alignment="expand_top">
-			<jfd:filler id="buttonsFiller" alignment="expand_top" type="horizontalGlue" />
-			<jfd:button id="Commit" alignment="right_top" text="resource://com.mg.merp.account.resources.formelements#AmortizationBr.Button.Commit" actionListener="Commit" />
-			<jfd:button id="Rollback" alignment="right_top" text="resource://com.mg.merp.account.resources.formelements#AmortizationBr.Button.Rollback" actionListener="Rollback" />
-		</jfd:container>
-	
-	</jfd:container>
+    <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+    </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+    <jfd:container id="buttons" layout="jfd:box" alignment="expand_top">
+      <jfd:filler id="buttonsFiller" alignment="expand_top" type="horizontalGlue"/>
+      <jfd:button id="Commit" alignment="right_top"
+                  text="resource://com.mg.merp.account.resources.formelements#AmortizationBr.Button.Commit"
+                  actionListener="Commit"/>
+      <jfd:button id="Rollback" alignment="right_top"
+                  text="resource://com.mg.merp.account.resources.formelements#AmortizationBr.Button.Rollback"
+                  actionListener="Rollback"/>
+    </jfd:container>
+
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

@@ -15,27 +15,27 @@
 
 package com.mg.merp.crm.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.crm.ProblemTypeServiceLocal;
 import com.mg.merp.crm.model.ProblemType;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Типы проблем" 
- * 
+ * Бизнес-компонент "Типы проблем"
+ *
  * @author leonova
  * @version $Id: ProblemTypeServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $
  */
-@Stateless(name="merp/crm/ProblemTypeService")
+@Stateless(name = "merp/crm/ProblemTypeService")
 public class ProblemTypeServiceBean extends AbstractPOJODataBusinessObjectServiceBean<ProblemType, Integer> implements ProblemTypeServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, ProblemType entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));
-	}
+  @Override
+  protected void onValidate(ValidationContext context, ProblemType entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+  }
 
 
 }

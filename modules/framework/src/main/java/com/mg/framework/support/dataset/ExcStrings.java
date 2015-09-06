@@ -18,8 +18,7 @@ package com.mg.framework.support.dataset;
  * @author Valentin A. Poroxnenko
  * @version $Id: ExcStrings.java,v 1.2 2006/07/05 09:21:38 poroxnenko Exp $
  */
-public class ExcStrings 
-{
+public class ExcStrings {
   public static final String SROW_INFO_NOT_EXIST = "Нет информации о столбцах";
   public static final String SEOF = "Достигнут конец набора данных";
   public static final String S_INDEX_NOT_EXIST = "Нет информации об индексах";

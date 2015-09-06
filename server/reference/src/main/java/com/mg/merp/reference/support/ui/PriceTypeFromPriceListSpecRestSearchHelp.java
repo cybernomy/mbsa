@@ -15,20 +15,21 @@
 package com.mg.merp.reference.support.ui;
 
 /**
- * Поиск типов цен из списка связей с прайс-листом.<br>
- * Специализирован для формы условий отбора позиций прайс-листа
- * 
+ * Поиск типов цен из списка связей с прайс-листом.<br> Специализирован для формы условий отбора
+ * позиций прайс-листа
+ *
  * @author Artem V. Sharapov
- * @version $Id: PriceTypeFromPriceListSpecRestSearchHelp.java,v 1.1 2008/10/13 05:50:58 sharapov Exp $
+ * @version $Id: PriceTypeFromPriceListSpecRestSearchHelp.java,v 1.1 2008/10/13 05:50:58 sharapov
+ *          Exp $
  */
 public class PriceTypeFromPriceListSpecRestSearchHelp extends PriceTypeByPriceListHeadIdSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.reference.support.ui.PriceTypeByPriceListHeadIdSearchHelp#getPriceListHeadIdProperty()
-	 */
-	@Override
-	protected String getPriceListHeadIdAttribute() {
-		return "priceListHeadId"; //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.reference.support.ui.PriceTypeByPriceListHeadIdSearchHelp#getPriceListHeadIdProperty()
+   */
+  @Override
+  protected String getPriceListHeadIdAttribute() {
+    return "priceListHeadId"; //$NON-NLS-1$
+  }
 
 }

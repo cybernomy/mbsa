@@ -18,15 +18,15 @@ import com.mg.merp.overall.model.NormHead;
 
 /**
  * Бизнес - компонент "Нормы выдачи спецодежды"
- * 
+ *
  * @author leonova
  * @version $Id: NormHeadServiceLocal.java,v 1.1 2008/06/30 04:13:38 alikaev Exp $
  */
 public interface NormHeadServiceLocal extends com.mg.framework.api.DataBusinessObjectService<NormHead, Integer> {
-	
-	/**
-	 * тип папки для норм выдачи одежды
-	 */
-	final static short FOLDER_PART = 55;
-	
+
+  /**
+   * тип папки для норм выдачи одежды
+   */
+  final static short FOLDER_PART = 55;
+
 }

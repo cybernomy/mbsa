@@ -22,9 +22,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class PersonnelGroupTypeSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/personnelref/PersonnelGroupType";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/PersonnelGroupType";
+  }
 }
 

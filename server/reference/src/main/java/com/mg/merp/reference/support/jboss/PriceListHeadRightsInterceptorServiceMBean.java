@@ -18,15 +18,16 @@ import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис перехватчика для обслуживания прайс-листов
- * 
+ *
  * @author Konstantin S. Alikaev
- * @version $Id: PriceListHeadRightsInterceptorServiceMBean.java,v 1.1 2008/05/13 09:54:17 alikaev Exp $
+ * @version $Id: PriceListHeadRightsInterceptorServiceMBean.java,v 1.1 2008/05/13 09:54:17 alikaev
+ *          Exp $
  */
-public interface PriceListHeadRightsInterceptorServiceMBean extends	ServiceMBean {
+public interface PriceListHeadRightsInterceptorServiceMBean extends ServiceMBean {
 
-	/**
-	 * наименование сервиса
-	 */
-	final static String SERVICE_NAME = "merp:reference=PriceListHeadRightsInterceptorService"; //$NON-NLS-1$
+  /**
+   * наименование сервиса
+   */
+  final static String SERVICE_NAME = "merp:reference=PriceListHeadRightsInterceptorService"; //$NON-NLS-1$
 
 }

@@ -23,60 +23,60 @@ import com.mg.framework.service.ApplicationDictionaryLocator;
 /**
  * Контроллер формы запроса одиночного параметра, отображает диалог с редактором значения, редактор
  * зависит от типа значения
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: InputQueryDialog.java,v 1.5 2008/03/13 07:32:05 safonov Exp $
  */
 public class InputQueryDialog<T> extends DefaultDialog {
-	protected T value;
-	protected String prompt;
-	
-	/**
-	 * установить начальное значение
-	 * 
-	 * @param value	значение, не может быть <code>null</code>
-	 */
-	public void setValue(T value) {
-		if (value == null)
-			throw new IllegalArgumentException("value is null");
-		
-		this.value = value;
-	}
-	
-	/**
-	 * получить значений
-	 * 
-	 * @return	введенное значение
-	 */
-	public T getValue() {
-		return value;
-	}
+  protected T value;
+  protected String prompt;
 
-	/**
-	 * установить подсказку
-	 * 
-	 * @param prompt	подсказка
-	 */
-	public void setPrompt(String prompt) {
-		this.prompt = prompt;
-	}
+  /**
+   * получить значений
+   *
+   * @return введенное значение
+   */
+  public T getValue() {
+    return value;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractForm#doGetFieldMetadata(java.lang.String)
-	 */
-	@Override
-	protected FieldMetadata doGetFieldMetadata(String name) {
-		//сгенерируем метаданные по значению, поскольку тип значения до установки неизвестен
-		return ApplicationDictionaryLocator.locate().getFieldMetadata(new ReflectionMetadata((String) null, value.getClass()));
-	}
+  /**
+   * установить начальное значение
+   *
+   * @param value значение, не может быть <code>null</code>
+   */
+  public void setValue(T value) {
+    if (value == null)
+      throw new IllegalArgumentException("value is null");
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractForm#doOnRun()
-	 */
-	@Override
-	protected void doOnRun() {
-		view.pack();
-		super.doOnRun();
-		((Label) view.getWidget("prompt")).setText(prompt);
-	}
+    this.value = value;
+  }
+
+  /**
+   * установить подсказку
+   *
+   * @param prompt подсказка
+   */
+  public void setPrompt(String prompt) {
+    this.prompt = prompt;
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractForm#doGetFieldMetadata(java.lang.String)
+   */
+  @Override
+  protected FieldMetadata doGetFieldMetadata(String name) {
+    //сгенерируем метаданные по значению, поскольку тип значения до установки неизвестен
+    return ApplicationDictionaryLocator.locate().getFieldMetadata(new ReflectionMetadata((String) null, value.getClass()));
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractForm#doOnRun()
+   */
+  @Override
+  protected void doOnRun() {
+    view.pack();
+    super.doOnRun();
+    ((Label) view.getWidget("prompt")).setText(prompt);
+  }
 }

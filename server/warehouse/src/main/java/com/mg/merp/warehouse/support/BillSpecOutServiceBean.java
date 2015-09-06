@@ -15,28 +15,28 @@
 
 package com.mg.merp.warehouse.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.warehouse.BillHeadOutServiceLocal;
 import com.mg.merp.warehouse.BillSpecOutServiceLocal;
 import com.mg.merp.warehouse.generic.AbstractWarehouseDocumentSpec;
 import com.mg.merp.warehouse.model.BillSpec;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Спецификация исходящих счетов" 
- * 
+ * Бизнес-компонент "Спецификация исходящих счетов"
+ *
  * @author leonova
  * @version $Id: BillSpecOutServiceBean.java,v 1.6 2007/09/07 12:27:13 safonov Exp $
  */
-@Stateless(name="merp/warehouse/BillSpecOutService")
+@Stateless(name = "merp/warehouse/BillSpecOutService")
 public class BillSpecOutServiceBean extends AbstractWarehouseDocumentSpec<BillSpec> implements BillSpecOutServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.GoodsDocumentSpecificationServiceBean#getDocSectionIdentifier()
-	 */
-	@Override
-	protected int getDocSectionIdentifier() {
-		return BillHeadOutServiceLocal.DOCSECTION;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.GoodsDocumentSpecificationServiceBean#getDocSectionIdentifier()
+   */
+  @Override
+  protected int getDocSectionIdentifier() {
+    return BillHeadOutServiceLocal.DOCSECTION;
+  }
 
 }

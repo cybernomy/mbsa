@@ -21,32 +21,32 @@ import com.mg.merp.account.model.AnlPlan;
  * @version $Id: AnlPlanParentSearchHelp.java,v 1.2 2009/02/25 15:09:59 safonov Exp $
  */
 public class AnlPlanParentSearchHelp extends AnlPlanSearchHelp {
-	private static final String ENTITY_FIELD_NAME = "entity";
-	private short anlLevel = 0;
+  private static final String ENTITY_FIELD_NAME = "entity";
+  private short anlLevel = 0;
 
-	@Override
-	protected String[] defineImportContext() {
-		return new String[] {ENTITY_FIELD_NAME};
-	}
+  @Override
+  protected String[] defineImportContext() {
+    return new String[]{ENTITY_FIELD_NAME};
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAccPlanContextName()
-	 */
-	@Override
-	protected String getAccPlanContextName() {
-		AnlPlan anlPlan = (AnlPlan) getImportContextValue(ENTITY_FIELD_NAME);
-		anlLevel = anlPlan.getAnlLevel();
-		anlLevel--;
-		setAccPlan(anlPlan.getAccPlan());			 
-		return null;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAccPlanContextName()
+   */
+  @Override
+  protected String getAccPlanContextName() {
+    AnlPlan anlPlan = (AnlPlan) getImportContextValue(ENTITY_FIELD_NAME);
+    anlLevel = anlPlan.getAnlLevel();
+    anlLevel--;
+    setAccPlan(anlPlan.getAccPlan());
+    return null;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAnalitikaLevel()
-	 */
-	@Override
-	protected short getAnalitikaLevel() {
-		return anlLevel;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAnalitikaLevel()
+   */
+  @Override
+  protected short getAnalitikaLevel() {
+    return anlLevel;
+  }
 
 }

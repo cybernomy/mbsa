@@ -14,11 +14,12 @@
 
 <!-- $Id: AccDebetMacros.mfd.xml,v 1.2 2006/06/08 13:06:57 leonova Exp $ -->
 
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="accDebetFields" layout="jfd:box" columns="1" label="resource://com.mg.merp.account.resources.formelements#AccDebet">
-	<jfd:field id="AccDb" showLabel="false" />
-	<jfd:field id="AnlDb1" showLabel="false" />
-	<jfd:field id="AnlDb2" showLabel="false"/>
- 	<jfd:field id="AnlDb3" showLabel="false" />
-	<jfd:field id="AnlDb4" showLabel="false" />
-	<jfd:field id="AnlDb5" showLabel="false" />								
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="accDebetFields" layout="jfd:box"
+               columns="1" label="resource://com.mg.merp.account.resources.formelements#AccDebet">
+  <jfd:field id="AccDb" showLabel="false"/>
+  <jfd:field id="AnlDb1" showLabel="false"/>
+  <jfd:field id="AnlDb2" showLabel="false"/>
+  <jfd:field id="AnlDb3" showLabel="false"/>
+  <jfd:field id="AnlDb4" showLabel="false"/>
+  <jfd:field id="AnlDb5" showLabel="false"/>
 </jfd:container>

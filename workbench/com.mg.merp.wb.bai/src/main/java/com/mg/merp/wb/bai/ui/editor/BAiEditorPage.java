@@ -13,6 +13,13 @@
  */
 package com.mg.merp.wb.bai.ui.editor;
 
+import com.mg.merp.baiengine.model.Repository;
+import com.mg.merp.wb.bai.BAiPlugin;
+import com.mg.merp.wb.core.support.CoreUtils;
+import com.mg.merp.wb.core.ui.UiPlugin;
+import com.mg.merp.wb.core.ui.editor.StandartEditorInput;
+import com.mg.merp.wb.core.ui.editor.StandartEditorPage;
+
 import org.eclipse.jdt.core.IType;
 import org.eclipse.jdt.core.JavaModelException;
 import org.eclipse.jdt.core.search.IJavaSearchScope;
@@ -36,232 +43,217 @@ import org.eclipse.ui.forms.widgets.ExpandableComposite;
 import org.eclipse.ui.forms.widgets.FormText;
 import org.eclipse.ui.forms.widgets.Section;
 
-import com.mg.merp.baiengine.model.Repository;
-import com.mg.merp.wb.bai.BAiPlugin;
-import com.mg.merp.wb.core.support.CoreUtils;
-import com.mg.merp.wb.core.ui.UiPlugin;
-import com.mg.merp.wb.core.ui.editor.StandartEditorInput;
-import com.mg.merp.wb.core.ui.editor.StandartEditorPage;
-
 /**
  * Содержание формы редактирования BAi
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @version $Id: BAiEditorPage.java,v 1.3 2007/05/04 10:48:42 poroxnenko Exp $
  */
 public class BAiEditorPage extends StandartEditorPage<Repository> {
 
-	/**
-	 * Данные BAi
-	 */
-	private Repository repository;
+  private static final String FIELD_CODE = "bai.form.edit.code";
+  private static final String FIELD_NAME = "bai.form.edit.name";
+  private static final String FIELD_IMPL = "bai.form.edit.impl";
+  private static final String BROWSE_FORM = "bai.form.edit.browse.form.text";
+  private static final String BROWSE_DIALOG_TITLE = "bai.form.edit.browse.dialog.title";
+  private static final int IMPL_FIELD_WIDTH = 435;
+  private static final int CODE_FIELD_WIDTH = 220;
+  /**
+   * Данные BAi
+   */
+  private Repository repository;
+  /**
+   * Текстовое поле, содержащее код BAi
+   */
+  private Text tCode = null;
 
-	private static final String FIELD_CODE = "bai.form.edit.code";
+  /**
+   * Текстовое поле, содержащее наименование BAi
+   */
+  private Text tName = null;
 
-	private static final String FIELD_NAME = "bai.form.edit.name";
+  /**
+   * Текстовое поле, содержащее имя класса, реализующего BAi
+   */
+  private Text tImplName = null;
 
-	private static final String FIELD_IMPL = "bai.form.edit.impl";
+  private boolean isNew;
 
-	private static final String BROWSE_FORM = "bai.form.edit.browse.form.text";
+  public BAiEditorPage(FormEditor editor) {
+    super(editor);
+  }
 
-	private static final String BROWSE_DIALOG_TITLE = "bai.form.edit.browse.dialog.title";
+  @Override
+  public void createEditorArea(Composite parent) {
+    this.repository = ((StandartEditorInput<Repository>) getEditorInput())
+        .getData();
+    this.isNew = ((StandartEditorInput<Repository>) getEditorInput())
+        .isCreateNew();
+    Section section = toolkit.createSection(parent,
+        ExpandableComposite.TITLE_BAR);
+    section.setLayout(new GridLayout());
+    section.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
 
-	private static final int IMPL_FIELD_WIDTH = 435;
+    form.setText(String.format(BAiPlugin.getDefault().getString(
+        BAiEditorInput.FORM_PART), repository.getCode()));
 
-	private static final int CODE_FIELD_WIDTH = 220;
+    Composite sectionClient = toolkit.createComposite(section);
+    section.setClient(sectionClient);
 
-	/**
-	 * Текстовое поле, содержащее код BAi
-	 */
-	private Text tCode = null;
+    GridLayout gridLayout = new GridLayout();
+    gridLayout.verticalSpacing = 1;
+    gridLayout.marginWidth = 1;
+    gridLayout.marginHeight = 1;
+    gridLayout.horizontalSpacing = 1;
+    gridLayout.numColumns = 1;
 
-	/**
-	 * Текстовое поле, содержащее наименование BAi
-	 */
-	private Text tName = null;
+    sectionClient.setLayout(gridLayout);
 
-	/**
-	 * Текстовое поле, содержащее имя класса, реализующего BAi
-	 */
-	private Text tImplName = null;
+    createCmpz1(sectionClient);
+    createCmpz2(sectionClient);
 
-	private boolean isNew;
+    toolkit.paintBordersFor(sectionClient);
+  }
 
-	public BAiEditorPage(FormEditor editor) {
-		super(editor);
-	}
+  @Override
+  public void doOnSaveClick() {
+    String code = tCode.getText();
+    String impl = tImplName.getText();
+    if ((code.length() > 0) && (impl.length() > 0)) {
+      repository.setCode(code);
+      repository
+          .setName(tName.getText() != null ? tName.getText() : null);
+      repository.setImplementationName(tImplName.getText());
+      editor.doSave(null);
+    } else if (code.length() == 0)
+      tCode.setFocus();
+    else if (impl.length() == 0)
+      tImplName.setFocus();
+  }
 
-	@Override
-	public void createEditorArea(Composite parent) {
-		this.repository = ((StandartEditorInput<Repository>) getEditorInput())
-				.getData();
-		this.isNew = ((StandartEditorInput<Repository>) getEditorInput())
-				.isCreateNew();
-		Section section = toolkit.createSection(parent,
-				ExpandableComposite.TITLE_BAR);
-		section.setLayout(new GridLayout());
-		section.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
+  private void createCmpz1(Composite parent) {
+    Composite cmpz1 = toolkit.createComposite(parent);
+    cmpz1.setLayout(commonGridLayout);
+    cmpz1.setLayoutData(commonGridData);
 
-		form.setText(String.format(BAiPlugin.getDefault().getString(
-				BAiEditorInput.FORM_PART), repository.getCode()));
+    Label label = toolkit.createLabel(cmpz1, BAiPlugin.getDefault()
+        .getString(FIELD_CODE));
+    label.setForeground(toolkit.getColors().getColor(REQUIRED_FIELD_COLOR));
 
-		Composite sectionClient = toolkit.createComposite(section);
-		section.setClient(sectionClient);
+    // 1 Blank column
+    toolkit.createLabel(cmpz1, "");
 
-		GridLayout gridLayout = new GridLayout();
-		gridLayout.verticalSpacing = 1;
-		gridLayout.marginWidth = 1;
-		gridLayout.marginHeight = 1;
-		gridLayout.horizontalSpacing = 1;
-		gridLayout.numColumns = 1;
+    label = toolkit.createLabel(cmpz1, BAiPlugin.getDefault().getString(
+        FIELD_NAME));
+    // Code
+    tCode = toolkit.createText(cmpz1, isNew ? "" : repository.getCode()
+        .trim(), SWT.BORDER);
+    GridData tCodeDataLayout = new GridData();
+    tCodeDataLayout.widthHint = CODE_FIELD_WIDTH;
+    tCode.setLayoutData(tCodeDataLayout);
 
-		sectionClient.setLayout(gridLayout);
+    // 1 Blank column
+    Label dummy = toolkit.createLabel(cmpz1, "");
+    GridData dummyLabelDataLayout = new GridData(
+        GridData.HORIZONTAL_ALIGN_CENTER);
+    dummyLabelDataLayout.horizontalSpan = 1;
+    dummyLabelDataLayout.widthHint = 50;
+    dummy.setLayoutData(dummyLabelDataLayout);
 
-		createCmpz1(sectionClient);
-		createCmpz2(sectionClient);
+    // Name
+    tName = toolkit
+        .createText(cmpz1, repository.getName() != null ? repository
+            .getName().trim() : "", SWT.BORDER);
+    tName.setLayoutData(tCodeDataLayout);
+  }
 
-		toolkit.paintBordersFor(sectionClient);
-	}
+  private void createCmpz2(Composite parent) {
+    Composite cmpz2 = toolkit.createComposite(parent);
+    cmpz2.setLayout(commonGridLayout);
+    cmpz2.setLayoutData(commonGridData);
 
-	@Override
-	public void doOnSaveClick() {
-		String code = tCode.getText();
-		String impl = tImplName.getText();
-		if ((code.length() > 0) && (impl.length() > 0)) {
-			repository.setCode(code);
-			repository
-					.setName(tName.getText() != null ? tName.getText() : null);
-			repository.setImplementationName(tImplName.getText());
-			editor.doSave(null);
-		} else if (code.length() == 0)
-			tCode.setFocus();
-		else if (impl.length() == 0)
-			tImplName.setFocus();
-	}
+    Label label = toolkit.createLabel(cmpz2, BAiPlugin.getDefault()
+        .getString(FIELD_IMPL));
+    label.setForeground(toolkit.getColors().getColor(REQUIRED_FIELD_COLOR));
+    // 2 Blank column
+    toolkit.createLabel(cmpz2, "");
+    toolkit.createLabel(cmpz2, "");
 
-	private void createCmpz1(Composite parent) {
-		Composite cmpz1 = toolkit.createComposite(parent);
-		cmpz1.setLayout(commonGridLayout);
-		cmpz1.setLayoutData(commonGridData);
+    // ImplementationName
+    GridData tImplNameDataLayout = new GridData();
+    tImplNameDataLayout.widthHint = IMPL_FIELD_WIDTH;
+    tImplName = toolkit.createText(cmpz2, repository
+        .getImplementationName() != null ? repository
+        .getImplementationName().trim() : "", SWT.BORDER);
+    tImplName.setLayoutData(tImplNameDataLayout);
 
-		Label label = toolkit.createLabel(cmpz1, BAiPlugin.getDefault()
-				.getString(FIELD_CODE));
-		label.setForeground(toolkit.getColors().getColor(REQUIRED_FIELD_COLOR));
+    Label dummy = toolkit.createLabel(cmpz2, "");
+    GridData dummyLabelDataLayout = new GridData(
+        GridData.HORIZONTAL_ALIGN_CENTER);
+    dummyLabelDataLayout.horizontalSpan = 1;
+    dummyLabelDataLayout.widthHint = 10;
+    dummy.setLayoutData(dummyLabelDataLayout);
 
-		// 1 Blank column
-		toolkit.createLabel(cmpz1, "");
+    FormText ftBrowse = toolkit.createFormText(cmpz2, true);
+    ftBrowse.setText(String.format(BAiPlugin.getDefault().getString(
+        BROWSE_FORM), UiPlugin.getDefault().getString(
+        UiPlugin.BUTT_BROWSE_TEXT)), true, false);
+    ftBrowse.setImage("browse", UiPlugin.getImageDescriptor(
+        UiPlugin.VIEW_ICO).createImage());
+    ftBrowse.addHyperlinkListener(new IHyperlinkListener() {
 
-		label = toolkit.createLabel(cmpz1, BAiPlugin.getDefault().getString(
-				FIELD_NAME));
-		// Code
-		tCode = toolkit.createText(cmpz1, isNew ? "" : repository.getCode()
-				.trim(), SWT.BORDER);
-		GridData tCodeDataLayout = new GridData();
-		tCodeDataLayout.widthHint = CODE_FIELD_WIDTH;
-		tCode.setLayoutData(tCodeDataLayout);
+      public void linkActivated(HyperlinkEvent e) {
+        String res = selectBAiImpl();
+        if (res.length() > 0)
+          tImplName.setText(res);
+      }
 
-		// 1 Blank column
-		Label dummy = toolkit.createLabel(cmpz1, "");
-		GridData dummyLabelDataLayout = new GridData(
-				GridData.HORIZONTAL_ALIGN_CENTER);
-		dummyLabelDataLayout.horizontalSpan = 1;
-		dummyLabelDataLayout.widthHint = 50;
-		dummy.setLayoutData(dummyLabelDataLayout);
+      public void linkEntered(HyperlinkEvent e) {
+        // TODO Auto-generated method stub
 
-		// Name
-		tName = toolkit
-				.createText(cmpz1, repository.getName() != null ? repository
-						.getName().trim() : "", SWT.BORDER);
-		tName.setLayoutData(tCodeDataLayout);
-	}
+      }
 
-	private void createCmpz2(Composite parent) {
-		Composite cmpz2 = toolkit.createComposite(parent);
-		cmpz2.setLayout(commonGridLayout);
-		cmpz2.setLayoutData(commonGridData);
+      public void linkExited(HyperlinkEvent e) {
+        // TODO Auto-generated method stub
 
-		Label label = toolkit.createLabel(cmpz2, BAiPlugin.getDefault()
-				.getString(FIELD_IMPL));
-		label.setForeground(toolkit.getColors().getColor(REQUIRED_FIELD_COLOR));
-		// 2 Blank column
-		toolkit.createLabel(cmpz2, "");
-		toolkit.createLabel(cmpz2, "");
+      }
 
-		// ImplementationName
-		GridData tImplNameDataLayout = new GridData();
-		tImplNameDataLayout.widthHint = IMPL_FIELD_WIDTH;
-		tImplName = toolkit.createText(cmpz2, repository
-				.getImplementationName() != null ? repository
-				.getImplementationName().trim() : "", SWT.BORDER);
-		tImplName.setLayoutData(tImplNameDataLayout);
+    });
+  }
 
-		Label dummy = toolkit.createLabel(cmpz2, "");
-		GridData dummyLabelDataLayout = new GridData(
-				GridData.HORIZONTAL_ALIGN_CENTER);
-		dummyLabelDataLayout.horizontalSpan = 1;
-		dummyLabelDataLayout.widthHint = 10;
-		dummy.setLayoutData(dummyLabelDataLayout);
+  private String selectBAiImpl() {
+    IJavaSearchScope scope = null;
+    IType type = BAiPlugin.getBusinessAddinType();
+    try {
+      if (type == null)
+        scope = SearchEngine.createWorkspaceScope();
+      else
+        scope = SearchEngine.createHierarchyScope(type);
 
-		FormText ftBrowse = toolkit.createFormText(cmpz2, true);
-		ftBrowse.setText(String.format(BAiPlugin.getDefault().getString(
-				BROWSE_FORM), UiPlugin.getDefault().getString(
-				UiPlugin.BUTT_BROWSE_TEXT)), true, false);
-		ftBrowse.setImage("browse", UiPlugin.getImageDescriptor(
-				UiPlugin.VIEW_ICO).createImage());
-		ftBrowse.addHyperlinkListener(new IHyperlinkListener() {
+      Shell sh = CoreUtils.getMainShell();
+      SelectionDialog dialog = JavaUI.createTypeDialog(sh,
+          new ProgressMonitorDialog(sh), scope,
+          IJavaElementSearchConstants.CONSIDER_CLASSES, false);
 
-			public void linkActivated(HyperlinkEvent e) {
-				String res = selectBAiImpl();
-				if (res.length() > 0)
-					tImplName.setText(res);
-			}
+      dialog.setTitle(BAiPlugin.getDefault().getString(
+          BROWSE_DIALOG_TITLE));
+      if (dialog.open() == Window.OK)
+        return ((IType) dialog.getResult()[0]).getFullyQualifiedName();
+      else
+        return "";
+    } catch (JavaModelException e1) {
+      return "";
+    }
+  }
 
-			public void linkEntered(HyperlinkEvent e) {
-				// TODO Auto-generated method stub
+  @Override
+  public String getEditorText() {
+    return repository.getCode();
+  }
 
-			}
-
-			public void linkExited(HyperlinkEvent e) {
-				// TODO Auto-generated method stub
-
-			}
-
-		});
-	}
-
-	private String selectBAiImpl() {
-		IJavaSearchScope scope = null;
-		IType type = BAiPlugin.getBusinessAddinType();
-		try {
-			if (type == null)
-				scope = SearchEngine.createWorkspaceScope();
-			else
-				scope = SearchEngine.createHierarchyScope(type);
-
-			Shell sh = CoreUtils.getMainShell();
-			SelectionDialog dialog = JavaUI.createTypeDialog(sh,
-					new ProgressMonitorDialog(sh), scope,
-					IJavaElementSearchConstants.CONSIDER_CLASSES, false);
-
-			dialog.setTitle(BAiPlugin.getDefault().getString(
-					BROWSE_DIALOG_TITLE));
-			if (dialog.open() == Window.OK)
-				return ((IType) dialog.getResult()[0]).getFullyQualifiedName();
-			else
-				return "";
-		} catch (JavaModelException e1) {
-			return "";
-		}
-	}
-
-	@Override
-	public String getEditorText() {
-		return repository.getCode();
-	}
-
-	@Override
-	public void formContentPrecreating(Repository object) {
-		this.repository = object;
-	}
+  @Override
+  public void formContentPrecreating(Repository object) {
+    this.repository = object;
+  }
 
 }

@@ -19,45 +19,45 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Количество на складах
- * 
+ *
  * @author leonova
- * @version $Id: QuantityKind.java,v 1.1 2006/07/03 12:51:13 leonova Exp $ 
+ * @version $Id: QuantityKind.java,v 1.1 2006/07/03 12:51:13 leonova Exp $
  */
 @DataItemName("Reference.QuantityKind")
 public enum QuantityKind {
-	/**
-	 * 
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.Empty")
-	EMPTY,
-	
-	/**
-	 * Фактическое количество
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.FactQuan")
-	FACTQUAN,
-	
-	/**
-	 * Планируемый приход
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.PlanQuanIn")
-	PLANQUANIN,
-	
-	/**
-	 * Планируемый приход
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.PlanQuanOut")
-	PLANQUANOUT,
-	
-	/**
-	 * Зарезервировано
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.Reserve")
-	RESERVE,
-	
-	/**
-	 * Доступное количество
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.AccessQuan")
-	ACCESSQUAN
+  /**
+   *
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.Empty")
+  EMPTY,
+
+  /**
+   * Фактическое количество
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.FactQuan")
+  FACTQUAN,
+
+  /**
+   * Планируемый приход
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.PlanQuanIn")
+  PLANQUANIN,
+
+  /**
+   * Планируемый приход
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.PlanQuanOut")
+  PLANQUANOUT,
+
+  /**
+   * Зарезервировано
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.Reserve")
+  RESERVE,
+
+  /**
+   * Доступное количество
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#QuantityKind.AccessQuan")
+  ACCESSQUAN
 }

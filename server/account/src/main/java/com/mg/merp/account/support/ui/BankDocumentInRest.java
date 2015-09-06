@@ -19,15 +19,15 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
  * Контроллер формы условий отбора "Входящих банковских документов"
- * 
+ *
  * @author leonova
  * @version $Id: BankDocumentInRest.java,v 1.4 2007/11/12 06:51:28 sharapov Exp $
  */
 public class BankDocumentInRest extends BankDocumentRest {
-	
-	public BankDocumentInRest() {
-		contractorFromKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
-		contractorToKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
-	}
+
+  public BankDocumentInRest() {
+    contractorFromKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+    contractorToKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+  }
 
 }

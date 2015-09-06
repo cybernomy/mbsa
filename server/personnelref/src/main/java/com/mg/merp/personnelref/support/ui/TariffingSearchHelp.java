@@ -22,10 +22,10 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class TariffingSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/personnelref/Tariffing";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/Tariffing";
+  }
 
 }
 

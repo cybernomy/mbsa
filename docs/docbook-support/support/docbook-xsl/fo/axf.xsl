@@ -1,14 +1,13 @@
 <?xml version='1.0'?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:fo="http://www.w3.org/1999/XSL/Format"
                 xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions"
                 version='1.0'>
 
-<!-- ********************************************************************
-     $Id: axf.xsl,v 1.1 2005/02/05 11:59:02 krivopoustov Exp $
-     ******************************************************************** -->
+  <!-- ********************************************************************
+       $Id: axf.xsl,v 1.1 2005/02/05 11:59:02 krivopoustov Exp $
+       ******************************************************************** -->
 
-<xsl:template name="axf-document-information">
+  <xsl:template name="axf-document-information">
 
     <xsl:if test="//author[1]">
       <xsl:element name="axf:document-info">
@@ -56,6 +55,6 @@
       </xsl:element>
     </xsl:if>
 
-</xsl:template>
+  </xsl:template>
 
 </xsl:stylesheet>

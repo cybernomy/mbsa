@@ -15,12 +15,14 @@
 
 <server>
 
-    <mbean code="com.mg.merp.docflow.support.jboss.DocFlowPluginFactoryService" name="merp:service=DocFlowPluginFactoryManagerService">
-        <depends>jboss:service=MERP</depends>
-    </mbean>
+  <mbean code="com.mg.merp.docflow.support.jboss.DocFlowPluginFactoryService"
+         name="merp:service=DocFlowPluginFactoryManagerService">
+    <depends>jboss:service=MERP</depends>
+  </mbean>
 
-    <mbean code="com.mg.merp.docflow.support.jboss.DocFlowPluginService" name="merp:documentflow=DocFlowPluginService">
-        <depends>merp:service=DocFlowPluginFactoryManagerService</depends>
-    </mbean>
+  <mbean code="com.mg.merp.docflow.support.jboss.DocFlowPluginService"
+         name="merp:documentflow=DocFlowPluginService">
+    <depends>merp:service=DocFlowPluginFactoryManagerService</depends>
+  </mbean>
 
 </server>

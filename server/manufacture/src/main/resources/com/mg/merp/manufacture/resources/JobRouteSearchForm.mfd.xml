@@ -13,12 +13,18 @@
 
 <!-- $Id: JobRouteSearchForm.mfd.xml,v 1.1 2007/07/30 14:46:58 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.manufacture.support.ui.JobRouteSearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.manufacture.resources.formelements#JobRoute.SearchForm.Title" width="400" height="250" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.manufacture.support.ui.JobRouteSearchForm" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.manufacture.resources.formelements#JobRoute.SearchForm.Title"
+          width="400" height="250">
 
-	<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
-		<jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton" actionListener="Choose" />
-	</jfd:toolBar>
+  <jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+    <jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton"
+                actionListener="Choose"/>
+  </jfd:toolBar>
 
-	<jfd:table id="jobRoutes" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" />
+  <jfd:table id="jobRoutes" alignment="expand_expand" scroll="true"
+             autoResize="subsequent_columns"/>
 
 </jfd:form>

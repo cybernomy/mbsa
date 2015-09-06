@@ -14,31 +14,31 @@
  */
 package com.mg.merp.bpm.support;
 
+import com.mg.merp.bpm.BPMManager;
+
 import org.jbpm.JbpmConfiguration;
 import org.jbpm.JbpmContext;
-
-import com.mg.merp.bpm.BPMManager;
 
 /**
  * @author Oleg V. Safonov
  * @version $Id: BPMManagerServiceImpl.java,v 1.2 2007/10/03 11:08:17 safonov Exp $
  */
 public class BPMManagerServiceImpl implements BPMManager {
-	private JbpmConfiguration jbpmConfiguration;
+  private JbpmConfiguration jbpmConfiguration;
 
-	public void startService() throws Exception {
-		jbpmConfiguration = JbpmConfiguration.parseResource("META-INF/jbpm.cfg.xml");
-	}
+  public void startService() throws Exception {
+    jbpmConfiguration = JbpmConfiguration.parseResource("META-INF/jbpm.cfg.xml");
+  }
 
-	public void stopService() throws Exception {
-		jbpmConfiguration = null;
-	}
+  public void stopService() throws Exception {
+    jbpmConfiguration = null;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.bpm.BPMManager#getCurrentBpmContext()
-	 */
-	public JbpmContext getCurrentBpmContext() {
-		return jbpmConfiguration.createJbpmContext("merp.jbpm-context");
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.bpm.BPMManager#getCurrentBpmContext()
+   */
+  public JbpmContext getCurrentBpmContext() {
+    return jbpmConfiguration.createJbpmContext("merp.jbpm-context");
+  }
 
 }

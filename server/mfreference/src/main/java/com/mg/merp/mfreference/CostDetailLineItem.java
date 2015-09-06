@@ -14,60 +14,60 @@
  */
 package com.mg.merp.mfreference;
 
-import java.math.BigDecimal;
-
 import com.mg.merp.mfreference.model.CostCategories;
+
+import java.math.BigDecimal;
 
 /**
  * Спецификация себестоимости
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: CostDetailLineItem.java,v 1.1 2007/07/30 10:25:31 safonov Exp $
  */
 public class CostDetailLineItem {
-	private CostCategories costCategory;
-	private BigDecimal cost;
-	
-	public CostDetailLineItem(CostCategories costCategory, BigDecimal cost) {
-		super();
-		this.costCategory = costCategory;
-		this.cost = cost;
-	}
+  private CostCategories costCategory;
+  private BigDecimal cost;
 
-	/**
-	 * получить себестоимость
-	 * 
-	 * @return the cost
-	 */
-	public BigDecimal getCost() {
-		return cost;
-	}
+  public CostDetailLineItem(CostCategories costCategory, BigDecimal cost) {
+    super();
+    this.costCategory = costCategory;
+    this.cost = cost;
+  }
 
-	/**
-	 * получить категорию затрат
-	 * 
-	 * @return the costCategory
-	 */
-	public CostCategories getCostCategory() {
-		return costCategory;
-	}
+  /**
+   * получить себестоимость
+   *
+   * @return the cost
+   */
+  public BigDecimal getCost() {
+    return cost;
+  }
 
-	/**
-	 * установить себестоимость
-	 * 
-	 * @param cost the cost to set
-	 */
-	public void setCost(BigDecimal cost) {
-		this.cost = cost;
-	}
+  /**
+   * установить себестоимость
+   *
+   * @param cost the cost to set
+   */
+  public void setCost(BigDecimal cost) {
+    this.cost = cost;
+  }
 
-	/**
-	 * установить категорию затрат
-	 * 
-	 * @param costCategory the costCategory to set
-	 */
-	public void setCostCategory(CostCategories costCategory) {
-		this.costCategory = costCategory;
-	}
+  /**
+   * получить категорию затрат
+   *
+   * @return the costCategory
+   */
+  public CostCategories getCostCategory() {
+    return costCategory;
+  }
+
+  /**
+   * установить категорию затрат
+   *
+   * @param costCategory the costCategory to set
+   */
+  public void setCostCategory(CostCategories costCategory) {
+    this.costCategory = costCategory;
+  }
 
 }

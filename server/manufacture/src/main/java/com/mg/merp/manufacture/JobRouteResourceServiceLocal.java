@@ -7,11 +7,11 @@ import com.mg.merp.manufacture.model.JobRouteResource;
 
 /**
  * Local interface for JobRouteResourceService.
- * @since 12.10.2004
+ *
  * @xdoclet-generated at 28-02-06
+ * @since 12.10.2004
  */
 public interface JobRouteResourceServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<JobRouteResource, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<JobRouteResource, Integer> {
 
 }

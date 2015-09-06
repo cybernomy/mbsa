@@ -1,4 +1,4 @@
-	<filter-mapping>
-		<filter-name>MessAdminFilter</filter-name>
-		<url-pattern>/*</url-pattern>
-	</filter-mapping>
+<filter-mapping>
+  <filter-name>MessAdminFilter</filter-name>
+  <url-pattern>/*</url-pattern>
+</filter-mapping>

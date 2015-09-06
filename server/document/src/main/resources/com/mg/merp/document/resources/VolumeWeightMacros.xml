@@ -14,6 +14,6 @@
 <!-- $Id: VolumeWeightMacros.xml,v 1.3 2006/06/02 10:55:52 leonova Exp $ -->
 
 <jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
-	<jfd:field id="Weight" />
-	<jfd:field id="Volume" sameLine="true"/>						
+  <jfd:field id="Weight"/>
+  <jfd:field id="Volume" sameLine="true"/>
 </jfd:wrap-macros>

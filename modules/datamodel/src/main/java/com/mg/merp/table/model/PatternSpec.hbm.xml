@@ -1,34 +1,34 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.table.model.PatternSpec" table="TAB_PATTERN_SPEC">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">TAB_PATTERN_SPEC_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="TimeKind" class="com.mg.merp.table.model.TimeKind">
-      <column name="TIME_KIND_ID" not-null="false" />
+      <column name="TIME_KIND_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="PatternHead" class="com.mg.merp.table.model.PatternHead">
-      <column name="PATTERN_HEAD_ID" not-null="false" />
+      <column name="PATTERN_HEAD_ID" not-null="false"/>
     </many-to-one>
     <property name="DayNumber" type="java.lang.Integer">
-      <column name="DAY_NUMBER" not-null="false" sql-type="INTEGER" />
+      <column name="DAY_NUMBER" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="HoursQuantity" type="java.math.BigDecimal">
-      <column name="HOURS_QUANTITY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="HOURS_QUANTITY" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

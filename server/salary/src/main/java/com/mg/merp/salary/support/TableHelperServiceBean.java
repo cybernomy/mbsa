@@ -18,30 +18,19 @@ package com.mg.merp.salary.support;
 import com.mg.merp.salary.TableHelperServiceLocal;
 
 /**
- * @ejb.bean name = "TableHelperService"
- *           type = "Stateless"
- *           view-type = "local"
- *           local-jndi-name = "merp/salary/TableHelperService"
- *           description = "TableHelper"
- *           display-name = "TableHelper"
- *
- * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.BusinessObjectService"
- *
- * @ejb.home      local-extends = "javax.ejb.EJBLocalHome"
- *
- * @ejb.env-entry name = "DomainClassName"
- *                type = "java.lang.String"
- *                value = "com.mg.merp.account.support.TableHelperDomainImpl"
- *
- * @jboss.container-configuration name = "MERP Standard Stateless Service"
- *
  * @author java generator
+ * @ejb.bean name = "TableHelperService" type = "Stateless" view-type = "local" local-jndi-name =
+ * "merp/salary/TableHelperService" description = "TableHelper" display-name = "TableHelper"
+ * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.BusinessObjectService"
+ * @ejb.home local-extends = "javax.ejb.EJBLocalHome"
+ * @ejb.env-entry name = "DomainClassName" type = "java.lang.String" value =
+ * "com.mg.merp.account.support.TableHelperDomainImpl"
+ * @jboss.container-configuration name = "MERP Standard Stateless Service"
  * @since 12.10.2004
- *
  */
- public class TableHelperServiceBean extends com.mg.framework.generic.AbstractBusinessObjectStatelessServiceBean implements TableHelperServiceLocal {
+public class TableHelperServiceBean extends com.mg.framework.generic.AbstractBusinessObjectStatelessServiceBean implements TableHelperServiceLocal {
 
- 	public void ejbCreate() throws javax.ejb.CreateException {
- 	}
+  public void ejbCreate() throws javax.ejb.CreateException {
+  }
 
- }
+}

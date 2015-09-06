@@ -15,30 +15,29 @@
 
 package com.mg.merp.account.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.account.InternalInvoiceHeadModelServiceLocal;
 import com.mg.merp.account.InternalInvoiceHeadServiceLocal;
 import com.mg.merp.document.generic.DocumentModelServiceBean;
 import com.mg.merp.document.model.DocHeadModel;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Образцы внутренних накладных" 
- * 
+ * Бизнес-компонент "Образцы внутренних накладных"
+ *
  * @author leonova
  * @version $Id: InternalInvoiceHeadModelServiceBean.java,v 1.3 2006/09/12 11:16:43 leonova Exp $
  */
-@Stateless(name="merp/account/InternalInvoiceHeadModelService")
+@Stateless(name = "merp/account/InternalInvoiceHeadModelService")
 public class InternalInvoiceHeadModelServiceBean extends DocumentModelServiceBean<DocHeadModel, Integer> implements InternalInvoiceHeadModelServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
-	 */
-	@Override
-	protected short getDocSectionIdentifier() {
-		return InternalInvoiceHeadServiceLocal.DOCSECTION;
-	}
-
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
+   */
+  @Override
+  protected short getDocSectionIdentifier() {
+    return InternalInvoiceHeadServiceLocal.DOCSECTION;
+  }
 
 
 }

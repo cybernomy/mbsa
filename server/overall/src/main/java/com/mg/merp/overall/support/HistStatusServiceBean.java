@@ -15,17 +15,18 @@
 
 package com.mg.merp.overall.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.overall.HistStatusServiceLocal;
 import com.mg.merp.overall.model.HistStatus;
+
+import javax.ejb.Stateless;
+
 /**
  * Реализация бизнес-компонента ""
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: HistStatusServiceBean.java,v 1.1 2008/06/30 04:19:36 alikaev Exp $
  */
-@Stateless(name="merp/overall/HistStatusService")
+@Stateless(name = "merp/overall/HistStatusService")
 public class HistStatusServiceBean extends com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean<HistStatus, Integer> implements HistStatusServiceLocal {
 
 }

@@ -17,12 +17,10 @@ package com.mg.merp.mfreference;
 import com.mg.merp.mfreference.model.ResourceGroupCapacity;
 
 /**
- * 
  * @author leonova
  * @version $Id: ResourceGroupCapacityServiceLocal.java,v 1.1 2006/03/14 11:49:48 safonov Exp $
  */
 public interface ResourceGroupCapacityServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<ResourceGroupCapacity, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<ResourceGroupCapacity, Integer> {
 
 }

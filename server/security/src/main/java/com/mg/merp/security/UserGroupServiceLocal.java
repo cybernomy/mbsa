@@ -18,10 +18,10 @@ import com.mg.merp.security.model.Groups;
 
 /**
  * Бизнес-компонент "Группы пользователей"
- * 
+ *
  * @author leonova
  * @version $Id: UserGroupServiceLocal.java,v 1.2 2008/01/28 13:11:39 safonov Exp $
  */
 public interface UserGroupServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<Groups, Integer> {
+    extends com.mg.framework.api.DataBusinessObjectService<Groups, Integer> {
 }

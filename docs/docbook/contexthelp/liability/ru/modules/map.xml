@@ -14,8 +14,8 @@
 <!-- $Id: map.xml,v 1.1 2006/11/30 17:12:50 konyashkina Exp $ -->
 
 <map version="1.0">
-  <mapID target="gio_html" url="edit.html" />
-  <mapID target="items_html" url="punkt.html" />
-  <mapID target="summ_html" url="amount.html" /> 
-  <mapID target="spec_html" url="spec.html" /> 
+  <mapID target="gio_html" url="edit.html"/>
+  <mapID target="items_html" url="punkt.html"/>
+  <mapID target="summ_html" url="amount.html"/>
+  <mapID target="spec_html" url="spec.html"/>
 </map>

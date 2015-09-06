@@ -1,44 +1,46 @@
 ﻿<?xml version='1.0' encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
-                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
-[
-<!ENTITY chap_001sal SYSTEM "modules/001sal.xml">
-<!ENTITY chap_002sal SYSTEM "modules/002sal.xml">
-<!ENTITY chap_003sal SYSTEM "modules/003sal.xml">
-<!ENTITY chap_004sal SYSTEM "modules/004sal.xml">
-<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
-<!ENTITY merp "Millennium Business Suite Anywhere">
-<!ENTITY acc "Бухгалтерский учёт">
-<!ENTITY pers "Управление персоналом">
-<!ENTITY sal "Зарплата">
-<!ENTITY td "Типы документов">
+    "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+    [
+        <!ENTITY chap_001sal SYSTEM "modules/001sal.xml">
+        <!ENTITY chap_002sal SYSTEM "modules/002sal.xml">
+        <!ENTITY chap_003sal SYSTEM "modules/003sal.xml">
+        <!ENTITY chap_004sal SYSTEM "modules/004sal.xml">
+        <!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+        <!ENTITY merp "Millennium Business Suite Anywhere">
+        <!ENTITY acc "Бухгалтерский учёт">
+        <!ENTITY pers "Управление персоналом">
+        <!ENTITY sal "Зарплата">
+        <!ENTITY td "Типы документов">
 
-]>
+        ]>
 <book lang="ru">
   <bookinfo>
-      <title>Расчёт заработной платы в системе &merp;. 
-      Руководство пользователя </title>
-      <releaseinfo>4.0.6</releaseinfo>
-      <copyright>
-	<year>1998</year>
-	<year>2008</year>
-	<holder>ООО &quot;Бизнестехнология&quot;</holder>
-      </copyright>    
+    <title>Расчёт заработной платы в системе &merp;.
+      Руководство пользователя
+    </title>
+    <releaseinfo>4.0.6</releaseinfo>
+    <copyright>
+      <year>1998</year>
+      <year>2008</year>
+      <holder>ООО &quot;Бизнестехнология&quot;</holder>
+    </copyright>
   </bookinfo>
-  
-  <toc/>
-  
-<preface id="target" revision="1">
-      <title>Целевая аудитория</title>
 
-      <para>Данное руководство предназначено для пользователей, работающих  
-	с модулем &quot;&sal;&quot; системы &merp;. </para>
+  <toc/>
+
+  <preface id="target" revision="1">
+    <title>Целевая аудитория</title>
+
+    <para>Данное руководство предназначено для пользователей, работающих
+      с модулем &quot;&sal;&quot; системы &merp;.
+    </para>
   </preface>
 
   &chap_001sal;
   &chap_002sal;
   &chap_003sal;
-  &chap_004sal; 
+  &chap_004sal;
   &chap_copyright;
 
 </book>

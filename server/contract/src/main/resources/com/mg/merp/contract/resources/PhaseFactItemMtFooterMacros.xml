@@ -13,10 +13,16 @@
 
 <!-- $Id: PhaseFactItemMtFooterMacros.xml,v 1.1 2008/03/11 10:18:59 sharapov Exp $ -->
 
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="calcQuantity" layout="jfd:box" alignment="expand_top">
-	<jfd:button id="adjustButton" alignment="left_top" text="resource://com.mg.merp.contract.resources.formelements#Contract.PhaseFactItem.Adjust" actionListener="Adjust" />
-	
-	<jfd:filler id="buttonsFiller" alignment="expand_top" text="horizontalGlue" />
-	<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#OkButton" actionListener="Save" />
-	<jfd:button id="CancelButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CloseButton" actionListener="Cancel" />
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="calcQuantity" layout="jfd:box"
+               alignment="expand_top">
+  <jfd:button id="adjustButton" alignment="left_top"
+              text="resource://com.mg.merp.contract.resources.formelements#Contract.PhaseFactItem.Adjust"
+              actionListener="Adjust"/>
+
+  <jfd:filler id="buttonsFiller" alignment="expand_top" text="horizontalGlue"/>
+  <jfd:button id="OkButton" alignment="right_top"
+              text="resource://com.mg.framework.resources.messages#OkButton" actionListener="Save"/>
+  <jfd:button id="CancelButton" alignment="right_top"
+              text="resource://com.mg.framework.resources.messages#CloseButton"
+              actionListener="Cancel"/>
 </jfd:container>

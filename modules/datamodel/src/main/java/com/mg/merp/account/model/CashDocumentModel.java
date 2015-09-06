@@ -21,177 +21,180 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: CashDocumentModel.java,v 1.4 2006/03/30 11:22:12 safonov Exp $
  */
 public class CashDocumentModel extends com.mg.merp.document.model.DocHeadModel
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private com.mg.merp.reference.model.Contractor Bookkeeper;
+  private com.mg.merp.reference.model.Contractor Bookkeeper;
 
-	private com.mg.merp.reference.model.Contractor Chief;
+  private com.mg.merp.reference.model.Contractor Chief;
 
-	private com.mg.merp.account.model.AccPlan Acc;
+  private com.mg.merp.account.model.AccPlan Acc;
 
-	private com.mg.merp.reference.model.Contractor Company;
+  private com.mg.merp.reference.model.Contractor Company;
 
-	private com.mg.merp.reference.model.Contractor Cashier;
+  private com.mg.merp.reference.model.Contractor Cashier;
 
-	private java.lang.String AnlCode;
+  private java.lang.String AnlCode;
 
-	private java.lang.String TargetCode;
+  private java.lang.String TargetCode;
 
-	private java.lang.String Base;
+  private java.lang.String Base;
 
-	private java.lang.String Comment;
+  private java.lang.String Comment;
 
-	private java.util.Date GetDate;
+  private java.util.Date GetDate;
 
-	private java.lang.String GetDocument;
+  private java.lang.String GetDocument;
 
-	private java.lang.String Comment1;
+  private java.lang.String Comment1;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public CashDocumentModel() {
-	}
+  /**
+   * default constructor
+   */
+  public CashDocumentModel() {
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("Account.CashIn.Bookkeeper")
-	public com.mg.merp.reference.model.Contractor getBookkeeper() {
-		return this.Bookkeeper;
-	}
+  // Property accessors
 
-	public void setBookkeeper(com.mg.merp.reference.model.Contractor Bookkeeper) {
-		this.Bookkeeper = Bookkeeper;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.CashIn.Bookkeeper")
+  public com.mg.merp.reference.model.Contractor getBookkeeper() {
+    return this.Bookkeeper;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.CashIn.Chief")
-	public com.mg.merp.reference.model.Contractor getChief() {
-		return this.Chief;
-	}
+  public void setBookkeeper(com.mg.merp.reference.model.Contractor Bookkeeper) {
+    this.Bookkeeper = Bookkeeper;
+  }
 
-	public void setChief(com.mg.merp.reference.model.Contractor Chief) {
-		this.Chief = Chief;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.CashIn.Chief")
+  public com.mg.merp.reference.model.Contractor getChief() {
+    return this.Chief;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.CashIn.Acc")
-	public com.mg.merp.account.model.AccPlan getAcc() {
-		return this.Acc;
-	}
+  public void setChief(com.mg.merp.reference.model.Contractor Chief) {
+    this.Chief = Chief;
+  }
 
-	public void setAcc(com.mg.merp.account.model.AccPlan AccPlan) {
-		this.Acc = AccPlan;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.CashIn.Acc")
+  public com.mg.merp.account.model.AccPlan getAcc() {
+    return this.Acc;
+  }
 
-	@DataItemName("Account.CashIn.Company")
-	public com.mg.merp.reference.model.Contractor getCompany() {
-		return this.Company;
-	}
+  public void setAcc(com.mg.merp.account.model.AccPlan AccPlan) {
+    this.Acc = AccPlan;
+  }
 
-	public void setCompany(com.mg.merp.reference.model.Contractor Company) {
-		this.Company = Company;
-	}
+  @DataItemName("Account.CashIn.Company")
+  public com.mg.merp.reference.model.Contractor getCompany() {
+    return this.Company;
+  }
 
-	@DataItemName("Account.CashIn.Cashier")
-	public com.mg.merp.reference.model.Contractor getCashier() {
-		return this.Cashier;
-	}
+  public void setCompany(com.mg.merp.reference.model.Contractor Company) {
+    this.Company = Company;
+  }
 
-	public void setCashier(com.mg.merp.reference.model.Contractor Cashier) {
-		this.Cashier = Cashier;
-	}
+  @DataItemName("Account.CashIn.Cashier")
+  public com.mg.merp.reference.model.Contractor getCashier() {
+    return this.Cashier;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.CashIn.AnlCode")
-	public java.lang.String getAnlCode() {
-		return this.AnlCode;
-	}
+  public void setCashier(com.mg.merp.reference.model.Contractor Cashier) {
+    this.Cashier = Cashier;
+  }
 
-	public void setAnlCode(java.lang.String AnlCode) {
-		this.AnlCode = AnlCode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.CashIn.AnlCode")
+  public java.lang.String getAnlCode() {
+    return this.AnlCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.CashIn.TargetCode")
-	public java.lang.String getTargetCode() {
-		return this.TargetCode;
-	}
+  public void setAnlCode(java.lang.String AnlCode) {
+    this.AnlCode = AnlCode;
+  }
 
-	public void setTargetCode(java.lang.String TargetCode) {
-		this.TargetCode = TargetCode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.CashIn.TargetCode")
+  public java.lang.String getTargetCode() {
+    return this.TargetCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.CashIn.Base")
-	public java.lang.String getBase() {
-		return this.Base;
-	}
+  public void setTargetCode(java.lang.String TargetCode) {
+    this.TargetCode = TargetCode;
+  }
 
-	public void setBase(java.lang.String Base) {
-		this.Base = Base;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.CashIn.Base")
+  public java.lang.String getBase() {
+    return this.Base;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.CashIn.Comment")
-	public java.lang.String getComment() {
-		return this.Comment;
-	}
+  public void setBase(java.lang.String Base) {
+    this.Base = Base;
+  }
 
-	public void setComment(java.lang.String Comment) {
-		this.Comment = Comment;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.CashIn.Comment")
+  public java.lang.String getComment() {
+    return this.Comment;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.CashOut.GetDate")
-	public java.util.Date getGetDate() {
-		return this.GetDate;
-	}
+  public void setComment(java.lang.String Comment) {
+    this.Comment = Comment;
+  }
 
-	public void setGetDate(java.util.Date GetDate) {
-		this.GetDate = GetDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.CashOut.GetDate")
+  public java.util.Date getGetDate() {
+    return this.GetDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.CashOut.GetDocument")
-	public java.lang.String getGetDocument() {
-		return this.GetDocument;
-	}
+  public void setGetDate(java.util.Date GetDate) {
+    this.GetDate = GetDate;
+  }
 
-	public void setGetDocument(java.lang.String GetDocument) {
-		this.GetDocument = GetDocument;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.CashOut.GetDocument")
+  public java.lang.String getGetDocument() {
+    return this.GetDocument;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.CashIn.Comment1")
-	public java.lang.String getComment1() {
-		return this.Comment1;
-	}
+  public void setGetDocument(java.lang.String GetDocument) {
+    this.GetDocument = GetDocument;
+  }
 
-	public void setComment1(java.lang.String Comment1) {
-		this.Comment1 = Comment1;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.CashIn.Comment1")
+  public java.lang.String getComment1() {
+    return this.Comment1;
+  }
+
+  public void setComment1(java.lang.String Comment1) {
+    this.Comment1 = Comment1;
+  }
 
 }

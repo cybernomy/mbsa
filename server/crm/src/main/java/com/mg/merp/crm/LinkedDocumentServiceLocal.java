@@ -19,25 +19,26 @@ import com.mg.merp.crm.model.Operation;
 import com.mg.merp.reference.model.OriginalDocument;
 
 /**
- * Бизнес-компонент "Связанные документы" 
- * 
+ * Бизнес-компонент "Связанные документы"
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: LinkedDocumentServiceLocal.java,v 1.2 2008/06/17 11:31:40 sharapov Exp $
  */
 public interface LinkedDocumentServiceLocal extends com.mg.framework.api.DataBusinessObjectService<LinkedDocument, Integer> {
 
-	/**
-	 * Имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/crm/LinkedDocument";  //$NON-NLS-1$
-	
-	/**
-	 * Создать связанный документ с оригиналом для действия
-	 * @param operation - действие
-	 * @param originalDocument - оригинал
-	 * @return связанный документ
-	 */
-	LinkedDocument createForOperationWithOriginal(Operation operation, OriginalDocument originalDocument);
+  /**
+   * Имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/crm/LinkedDocument";  //$NON-NLS-1$
+
+  /**
+   * Создать связанный документ с оригиналом для действия
+   *
+   * @param operation        - действие
+   * @param originalDocument - оригинал
+   * @return связанный документ
+   */
+  LinkedDocument createForOperationWithOriginal(Operation operation, OriginalDocument originalDocument);
 
 }

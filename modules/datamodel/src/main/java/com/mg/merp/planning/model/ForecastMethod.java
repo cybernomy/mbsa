@@ -19,21 +19,21 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Метод прогноза
- * 
+ *
  * @author leonova
  * @version $Id: ForecastMethod.java,v 1.2 2007/07/30 10:37:30 safonov Exp $
  */
-@DataItemName ("Planning.ForecastMethod")
+@DataItemName("Planning.ForecastMethod")
 public enum ForecastMethod {
-	/**
-	 * Прогнозируемое количество задается на период
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Forecast.Method.ForecastByPeriod")
-	BY_PERIOD,
+  /**
+   * Прогнозируемое количество задается на период
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#Forecast.Method.ForecastByPeriod")
+  BY_PERIOD,
 
-	/**
-	 * Прогнозируемое количество задается на дату
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Forecast.Method.ForecastByDate")
-	BY_DATE
+  /**
+   * Прогнозируемое количество задается на дату
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#Forecast.Method.ForecastByDate")
+  BY_DATE
 }

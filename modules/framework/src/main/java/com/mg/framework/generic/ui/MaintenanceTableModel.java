@@ -22,25 +22,24 @@ import java.io.Serializable;
  */
 public abstract class MaintenanceTableModel extends AbstractTableModel {
 
-	protected abstract void doRefresh();
-	
-	protected abstract Serializable doGetCurrentPrimaryKey();
-	
-	/**
-	 * Return primary key of current row
-	 * 
-	 * @return	primary key
-	 */
-	public Serializable getCurrentPrimaryKey() {
-		return doGetCurrentPrimaryKey();
-	}
-	
-	/**
-	 * Refresh model
-	 *
-	 */
-	public void refresh() {
-		doRefresh();
-	}
-	
+  protected abstract void doRefresh();
+
+  protected abstract Serializable doGetCurrentPrimaryKey();
+
+  /**
+   * Return primary key of current row
+   *
+   * @return primary key
+   */
+  public Serializable getCurrentPrimaryKey() {
+    return doGetCurrentPrimaryKey();
+  }
+
+  /**
+   * Refresh model
+   */
+  public void refresh() {
+    doRefresh();
+  }
+
 }

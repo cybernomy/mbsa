@@ -22,117 +22,122 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Account.Period")
 public class Period extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Name;
+  private java.lang.String Name;
 
-	private java.util.Date DateFrom;
+  private java.util.Date DateFrom;
 
-	private java.util.Date DateTo;
+  private java.util.Date DateTo;
 
-	private java.lang.String WhoClosed;
+  private java.lang.String WhoClosed;
 
-	private java.util.Date DateClose;
+  private java.util.Date DateClose;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public Period() {
-	}
+  /**
+   * default constructor
+   */
+  public Period() {
+  }
 
-	/** constructor with id */
-	public Period(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public Period(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.Period.Name")
-	public java.lang.String getName() {
-		return this.Name;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setName(java.lang.String Pname) {
-		this.Name = Pname;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.Period.Name")
+  public java.lang.String getName() {
+    return this.Name;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.Period.DateFrom")
-	public java.util.Date getDateFrom() {
-		return this.DateFrom;
-	}
+  public void setName(java.lang.String Pname) {
+    this.Name = Pname;
+  }
 
-	public void setDateFrom(java.util.Date Datefrom) {
-		this.DateFrom = Datefrom;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.Period.DateFrom")
+  public java.util.Date getDateFrom() {
+    return this.DateFrom;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.Period.DateTo")
-	public java.util.Date getDateTo() {
-		return this.DateTo;
-	}
+  public void setDateFrom(java.util.Date Datefrom) {
+    this.DateFrom = Datefrom;
+  }
 
-	public void setDateTo(java.util.Date Dateto) {
-		this.DateTo = Dateto;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.Period.DateTo")
+  public java.util.Date getDateTo() {
+    return this.DateTo;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.Period.WhoClosed")
-	public java.lang.String getWhoClosed() {
-		return this.WhoClosed;
-	}
+  public void setDateTo(java.util.Date Dateto) {
+    this.DateTo = Dateto;
+  }
 
-	public void setWhoClosed(java.lang.String Whoclosed) {
-		this.WhoClosed = Whoclosed;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.Period.WhoClosed")
+  public java.lang.String getWhoClosed() {
+    return this.WhoClosed;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.Period.DateClose")
-	public java.util.Date getDateClose() {
-		return this.DateClose;
-	}
+  public void setWhoClosed(java.lang.String Whoclosed) {
+    this.WhoClosed = Whoclosed;
+  }
 
-	public void setDateClose(java.util.Date Dateclose) {
-		this.DateClose = Dateclose;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.Period.DateClose")
+  public java.util.Date getDateClose() {
+    return this.DateClose;
+  }
+
+  public void setDateClose(java.util.Date Dateclose) {
+    this.DateClose = Dateclose;
+  }
 }

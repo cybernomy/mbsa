@@ -17,13 +17,13 @@ import com.mg.merp.baiengine.model.Repository;
 
 /**
  * @author Valentin A. Poroxnenko
- * @version $Id: RepositoryServiceLocal.java,v 1.1 2006/12/29 14:46:33 poroxnenko Exp $ 
+ * @version $Id: RepositoryServiceLocal.java,v 1.1 2006/12/29 14:46:33 poroxnenko Exp $
  */
 public interface RepositoryServiceLocal extends
-		com.mg.framework.api.DataBusinessObjectService<Repository, Integer> {
-	/**
-	 * Локальное имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/algorithmengine/AlgorithmRepository";
+    com.mg.framework.api.DataBusinessObjectService<Repository, Integer> {
+  /**
+   * Локальное имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/algorithmengine/AlgorithmRepository";
 
 }

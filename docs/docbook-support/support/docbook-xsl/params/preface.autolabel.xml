@@ -1,21 +1,24 @@
 <refentry id="preface.autolabel">
-<refmeta>
-<refentrytitle>preface.autolabel</refentrytitle>
-<refmiscinfo role="type">boolean</refmiscinfo>
-</refmeta>
-<refnamediv>
-<refname>preface.autolabel</refname>
-<refpurpose>Are prefaces enumerated?</refpurpose>
-</refnamediv>
+  <refmeta>
+    <refentrytitle>preface.autolabel</refentrytitle>
+    <refmiscinfo role="type">boolean</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>preface.autolabel</refname>
+    <refpurpose>Are prefaces enumerated?</refpurpose>
+  </refnamediv>
 
-<refsynopsisdiv>
-<src:fragment id='preface.autolabel.frag'><xsl:param name="preface.autolabel" select="0"/></src:fragment>
-</refsynopsisdiv>
+  <refsynopsisdiv>
+    <src:fragment id='preface.autolabel.frag'>
+      <xsl:param name="preface.autolabel" select="0"/>
+    </src:fragment>
+  </refsynopsisdiv>
 
-<refsect1><title>Description</title>
+  <refsect1>
+    <title>Description</title>
 
-<para>If true (non-zero), unlabeled prefaces will be enumerated.
-</para>
+    <para>If true (non-zero), unlabeled prefaces will be enumerated.
+    </para>
 
-</refsect1>
+  </refsect1>
 </refentry>

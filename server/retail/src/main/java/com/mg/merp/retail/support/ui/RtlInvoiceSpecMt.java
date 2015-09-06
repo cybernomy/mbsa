@@ -18,15 +18,15 @@ import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
  * Контроллер формы спецификаций документов на отпуск
- * 
+ *
  * @author leonova
  * @version $Id: RtlInvoiceSpecMt.java,v 1.3 2006/08/22 07:41:45 leonova Exp $
  */
 public class RtlInvoiceSpecMt extends GoodsDocumentSpecMaintenanceForm {
 
-	public RtlInvoiceSpecMt() throws Exception {
-		super();
-	
-	}	
+  public RtlInvoiceSpecMt() throws Exception {
+    super();
+
+  }
 
 }

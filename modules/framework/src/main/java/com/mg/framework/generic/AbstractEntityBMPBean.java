@@ -9,26 +9,23 @@ package com.mg.framework.generic;
 /**
  * @author safonov
  *
- * To change the template for this generated type comment go to
- * Window>Preferences>Java>Code Generation>Code and Comments
+ *         To change the template for this generated type comment go to Window>Preferences>Java>Code
+ *         Generation>Code and Comments
  */
 public abstract class AbstractEntityBMPBean extends AbstractEntityBean {
 
-	public boolean isModified()
-	{
-	   return dirty;
-	}
+  private boolean dirty = false;
 
-	protected void makeDirty()
-	{
-	   dirty = true;
-	}
+  public boolean isModified() {
+    return dirty;
+  }
 
-	protected void makeClean()
-	{
-	   dirty = false;
-	}
+  protected void makeDirty() {
+    dirty = true;
+  }
 
-	private boolean dirty = false;
+  protected void makeClean() {
+    dirty = false;
+  }
 
 }

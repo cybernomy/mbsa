@@ -19,101 +19,99 @@ import com.mg.framework.api.annotations.SearchHelpName;
 
 /**
  * Метаданные свойства модели
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ReflectionMetadata.java,v 1.3 2008/03/13 07:30:00 safonov Exp $
  */
 public class ReflectionMetadata {
-	private String dataItemName;
-	private String searchHelpName;
-	private Class<?> propertyType;
-	
-	public ReflectionMetadata() {
-		super();
-	}
-	
-	public ReflectionMetadata(DataItemName dataItem, Class<?> propertyType) {
-		this();
-		this.dataItemName = dataItem != null ? dataItem.value() : null;
-		this.propertyType = propertyType;
-	}
+  private String dataItemName;
+  private String searchHelpName;
+  private Class<?> propertyType;
 
-	public ReflectionMetadata(String dataItemName, Class<?> propertyType) {
-		this();
-		this.dataItemName = dataItemName;
-		this.propertyType = propertyType;
-	}
+  public ReflectionMetadata() {
+    super();
+  }
 
-	/**
-	 * Получить элемент данных
-	 * 
-	 * @return Returns the dataItemName.
-	 */
-	public String getDataItemName() {
-		return dataItemName;
-	}
+  public ReflectionMetadata(DataItemName dataItem, Class<?> propertyType) {
+    this();
+    this.dataItemName = dataItem != null ? dataItem.value() : null;
+    this.propertyType = propertyType;
+  }
 
-	/**
-	 * Установить имя элемента данных
-	 * 
-	 * @param dataItemName The dataItemName to set.
-	 */
-	public void setDataItemName(DataItemName dataItem) {
-		this.dataItemName = dataItem != null ? dataItem.value() : null;
-	}
+  public ReflectionMetadata(String dataItemName, Class<?> propertyType) {
+    this();
+    this.dataItemName = dataItemName;
+    this.propertyType = propertyType;
+  }
 
-	/**
-	 * Установить имя элемента данных
-	 * 
-	 * @param dataItemName
-	 */
-	public void setDataItemName(String dataItemName) {
-		this.dataItemName = dataItemName;
-	}
+  /**
+   * Получить элемент данных
+   *
+   * @return Returns the dataItemName.
+   */
+  public String getDataItemName() {
+    return dataItemName;
+  }
 
-	/**
-	 * Получить тип свойства
-	 * 
-	 * @return Returns the propertyType.
-	 */
-	public Class<?> getPropertyType() {
-		return propertyType;
-	}
+  /**
+   * Установить имя элемента данных
+   *
+   * @param dataItemName The dataItemName to set.
+   */
+  public void setDataItemName(DataItemName dataItem) {
+    this.dataItemName = dataItem != null ? dataItem.value() : null;
+  }
 
-	/**
-	 * Установить тип свойства
-	 * 
-	 * @param propertyType The propertyType to set.
-	 */
-	public void setPropertyType(Class<?> propertyClass) {
-		this.propertyType = propertyClass;
-	}
+  /**
+   * Установить имя элемента данных
+   */
+  public void setDataItemName(String dataItemName) {
+    this.dataItemName = dataItemName;
+  }
 
-	/**
-	 * Получить механизм поиска
-	 * 
-	 * @return the searchHelpName
-	 */
-	public String getSearchHelpName() {
-		return searchHelpName;
-	}
+  /**
+   * Получить тип свойства
+   *
+   * @return Returns the propertyType.
+   */
+  public Class<?> getPropertyType() {
+    return propertyType;
+  }
 
-	/**
-	 * Установить механизм поиска
-	 * 
-	 * @param searchHelpName the searchHelpName to set
-	 */
-	public void setSearchHelpName(SearchHelpName searchHelpName) {
-		this.searchHelpName = searchHelpName != null ? searchHelpName.value() : null;
-	}
+  /**
+   * Установить тип свойства
+   *
+   * @param propertyType The propertyType to set.
+   */
+  public void setPropertyType(Class<?> propertyClass) {
+    this.propertyType = propertyClass;
+  }
 
-	/**
-	 * Установить механизм поиска
-	 * 
-	 * @param searchHelpName	имя механизма поиска
-	 */
-	public void setSearchHelpName(String searchHelpName) {
-		this.searchHelpName = searchHelpName;
-	}
+  /**
+   * Получить механизм поиска
+   *
+   * @return the searchHelpName
+   */
+  public String getSearchHelpName() {
+    return searchHelpName;
+  }
+
+  /**
+   * Установить механизм поиска
+   *
+   * @param searchHelpName the searchHelpName to set
+   */
+  public void setSearchHelpName(SearchHelpName searchHelpName) {
+    this.searchHelpName = searchHelpName != null ? searchHelpName.value() : null;
+  }
+
+  /**
+   * Установить механизм поиска
+   *
+   * @param searchHelpName имя механизма поиска
+   */
+  public void setSearchHelpName(String searchHelpName) {
+    this.searchHelpName = searchHelpName;
+  }
 
 }

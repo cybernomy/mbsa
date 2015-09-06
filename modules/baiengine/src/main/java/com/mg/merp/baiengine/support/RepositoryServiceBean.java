@@ -13,11 +13,11 @@
  */
 package com.mg.merp.baiengine.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.baiengine.RepositoryServiceLocal;
 import com.mg.merp.baiengine.model.Repository;
+
+import javax.ejb.Stateless;
 
 /**
  * @author Valentin A. Poroxnenko
@@ -25,7 +25,7 @@ import com.mg.merp.baiengine.model.Repository;
  */
 @Stateless(name = "merp/algorithmengine/AlgorithmRepositoryService")
 public class RepositoryServiceBean extends
-		AbstractPOJODataBusinessObjectServiceBean<Repository, Integer>
-		implements RepositoryServiceLocal {
+    AbstractPOJODataBusinessObjectServiceBean<Repository, Integer>
+    implements RepositoryServiceLocal {
 
 }

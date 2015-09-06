@@ -17,15 +17,14 @@ package com.mg.merp.personnelref.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * 
  * @author leonova
  * @version $Id: DeductionKindSearchHelp.java,v 1.2 2006/07/10 12:06:24 leonova Exp $
  */
 public class DeductionKindSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/personnelref/DeductionKind";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/DeductionKind";
+  }
 }
 

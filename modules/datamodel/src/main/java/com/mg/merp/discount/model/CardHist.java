@@ -21,119 +21,124 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: CardHist.java,v 1.4 2006/08/30 11:59:50 leonova Exp $
  */
 public class CardHist extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.discount.model.Card Card;
+  private com.mg.merp.discount.model.Card Card;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.security.model.SecUser User;
+  private com.mg.merp.security.model.SecUser User;
 
-	private java.util.Date TimeStamp;
+  private java.util.Date TimeStamp;
 
-	private java.math.BigDecimal Discount;
+  private java.math.BigDecimal Discount;
 
-	private java.lang.String Comments;
+  private java.lang.String Comments;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public CardHist() {
-	}
+  /**
+   * default constructor
+   */
+  public CardHist() {
+  }
 
-	/** constructor with id */
-	public CardHist(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public CardHist(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.discount.model.Card getCard() {
-		return this.Card;
-	}
+  /**
+   *
+   */
 
-	public void setCard(com.mg.merp.discount.model.Card DisCard) {
-		this.Card = DisCard;
-	}
+  public com.mg.merp.discount.model.Card getCard() {
+    return this.Card;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCard(com.mg.merp.discount.model.Card DisCard) {
+    this.Card = DisCard;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Discount.CardHist.User")
-	public com.mg.merp.security.model.SecUser getUser() {
-		return this.User;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setUser(com.mg.merp.security.model.SecUser SecUsers) {
-		this.User = SecUsers;
-	}
+  /**
+   *
+   */
+  @DataItemName("Discount.CardHist.User")
+  public com.mg.merp.security.model.SecUser getUser() {
+    return this.User;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Discount.CardHist.TimeStamp")
-	public java.util.Date getTimeStamp() {
-		return this.TimeStamp;
-	}
+  public void setUser(com.mg.merp.security.model.SecUser SecUsers) {
+    this.User = SecUsers;
+  }
 
-	public void setTimeStamp(java.util.Date TimeStamp) {
-		this.TimeStamp = TimeStamp;
-	}
+  /**
+   *
+   */
+  @DataItemName("Discount.CardHist.TimeStamp")
+  public java.util.Date getTimeStamp() {
+    return this.TimeStamp;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Discount.CardHist.Discount")
-	public java.math.BigDecimal getDiscount() {
-		return this.Discount;
-	}
+  public void setTimeStamp(java.util.Date TimeStamp) {
+    this.TimeStamp = TimeStamp;
+  }
 
-	public void setDiscount(java.math.BigDecimal Discount) {
-		this.Discount = Discount;
-	}
+  /**
+   *
+   */
+  @DataItemName("Discount.CardHist.Discount")
+  public java.math.BigDecimal getDiscount() {
+    return this.Discount;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Discount.CardHist.Comments")
-	public java.lang.String getComments() {
-		return this.Comments;
-	}
+  public void setDiscount(java.math.BigDecimal Discount) {
+    this.Discount = Discount;
+  }
 
-	public void setComments(java.lang.String Comments) {
-		this.Comments = Comments;
-	}
+  /**
+   *
+   */
+  @DataItemName("Discount.CardHist.Comments")
+  public java.lang.String getComments() {
+    return this.Comments;
+  }
+
+  public void setComments(java.lang.String Comments) {
+    this.Comments = Comments;
+  }
 
 }

@@ -22,10 +22,10 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class FinAccountSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/finance/Account";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/finance/Account";
+  }
 
 
 }

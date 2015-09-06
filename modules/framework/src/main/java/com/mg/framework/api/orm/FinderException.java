@@ -18,23 +18,22 @@ import com.mg.framework.api.DataAccessException;
 
 /**
  * @author Oleg V. Safonov
- *
  */
 @javax.ejb.ApplicationException
 public class FinderException extends DataAccessException {
-	public FinderException(String s, Throwable cause) {
-		super(s, cause);
-	}
-	
-	public FinderException(String s) {
-		super(s);
-	}	
+  public FinderException(String s, Throwable cause) {
+    super(s, cause);
+  }
 
-	public FinderException() {
-		super();
-	}	
+  public FinderException(String s) {
+    super(s);
+  }
 
-	public FinderException(Throwable cause) {
-		super(cause);
-	}
+  public FinderException() {
+    super();
+  }
+
+  public FinderException(Throwable cause) {
+    super(cause);
+  }
 }

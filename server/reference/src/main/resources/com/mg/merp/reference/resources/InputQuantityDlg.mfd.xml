@@ -13,24 +13,30 @@
 
 <!-- $Id: InputQuantityDlg.mfd.xml,v 1.2 2008/09/10 07:35:30 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.reference.support.ui.InputQuantityDlg" orientation="ver" verticalGap="5" title="resource://com.mg.merp.reference.resources.formelements#InputQuantityDlg.Title">
-	
-	<jfd:container id="quantityBox" layout="jfd:box" columns="3" alignment="expand_expand">
-		<jfd:border style="bevel" type="raised" />
-		
-		<jfd:label id="quantity1Label" alignment="left_center" text="resource://com.mg.merp.reference.resources.formelements#InputQuantityDlg.Quantity1Label" />
-		<jfd:field id="quantity1" alignment="left_top" showLabel="false" />
-		<jfd:textField id="measure1Code" alignment="expand_top" readOnly="true" />
-			
-		<jfd:label id="quantity2Label" alignment="left_center" text="resource://com.mg.merp.reference.resources.formelements#InputQuantityDlg.Quantity2Label" />	
-		<jfd:field id="quantity2" alignment="left_top" showLabel="false" />
-		<jfd:textField id="measure2Code" alignment="expand_top" readOnly="true" />
-			
-		<jfd:label id="priceLabel" alignment="left_center" text="resource://com.mg.merp.reference.resources.formelements#InputQuantityDlg.PriceLabel" />	
-		<jfd:field id="price" alignment="left_top" showLabel="false" />
-		<jfd:textField id="currency" alignment="expand_top" showLabel="false" readOnly="true" />
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.reference.support.ui.InputQuantityDlg" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.reference.resources.formelements#InputQuantityDlg.Title">
+
+  <jfd:container id="quantityBox" layout="jfd:box" columns="3" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+
+    <jfd:label id="quantity1Label" alignment="left_center"
+               text="resource://com.mg.merp.reference.resources.formelements#InputQuantityDlg.Quantity1Label"/>
+    <jfd:field id="quantity1" alignment="left_top" showLabel="false"/>
+    <jfd:textField id="measure1Code" alignment="expand_top" readOnly="true"/>
+
+    <jfd:label id="quantity2Label" alignment="left_center"
+               text="resource://com.mg.merp.reference.resources.formelements#InputQuantityDlg.Quantity2Label"/>
+    <jfd:field id="quantity2" alignment="left_top" showLabel="false"/>
+    <jfd:textField id="measure2Code" alignment="expand_top" readOnly="true"/>
+
+    <jfd:label id="priceLabel" alignment="left_center"
+               text="resource://com.mg.merp.reference.resources.formelements#InputQuantityDlg.PriceLabel"/>
+    <jfd:field id="price" alignment="left_top" showLabel="false"/>
+    <jfd:textField id="currency" alignment="expand_top" showLabel="false" readOnly="true"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
 
 </jfd:form>

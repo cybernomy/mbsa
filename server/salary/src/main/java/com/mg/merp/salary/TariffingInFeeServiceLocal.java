@@ -17,12 +17,10 @@ package com.mg.merp.salary;
 import com.mg.merp.salary.model.TariffingInFee;
 
 /**
- * 
  * @author leonova
  * @version $Id: TariffingInFeeServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface TariffingInFeeServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<TariffingInFee, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<TariffingInFee, Integer> {
 
 }

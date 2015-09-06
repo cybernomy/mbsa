@@ -19,20 +19,20 @@ package com.mg.framework.support.ui.widget.graph;
  * @version $Id: GraphElement.java,v 1.1 2006/03/27 10:43:34 safonov Exp $
  */
 public class GraphElement {
-	private Object port;
+  private Object port;
 
-	/**
-	 * @return Returns the port.
-	 */
-	public Object getPort() {
-		return port;
-	}
+  /**
+   * @return Returns the port.
+   */
+  public Object getPort() {
+    return port;
+  }
 
-	/**
-	 * @param port The port to set.
-	 */
-	public void setPort(Object port) {
-		this.port = port;
-	}
+  /**
+   * @param port The port to set.
+   */
+  public void setPort(Object port) {
+    this.port = port;
+  }
 
 }

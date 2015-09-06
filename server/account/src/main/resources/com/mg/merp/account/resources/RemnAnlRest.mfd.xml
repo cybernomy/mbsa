@@ -13,30 +13,34 @@
 
 <!-- $Id: RemnAnlRest.mfd.xml,v 1.6 2008/02/21 10:22:39 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.account.support.ui.RemnAnlRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.account.resources.formelements#Cond.RemnAcc" helpTopic="account#remnanl_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.account.support.ui.RemnAnlRest" orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.account.resources.formelements#Cond.RemnAcc"
+          helpTopic="account#remnanl_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
- 		<jfd:field id="period1" />
-		<jfd:field id="period2" sameLine="true"/>   
-<!--		<jfd:field id="byDates" />
-		<jfd:field id="date1" />
-		<jfd:field id="date2" sameLine="true"/>   		     -->
-		<jfd:container id="accPlanFields" layout="jfd:box" columns="1" label="resource://com.mg.merp.account.resources.formelements#Remn.Acc">
-			<jfd:field id="AccPlan" showLabel="false"/>
-			<jfd:field id="anlCode1" showLabel="false"/>
-			<jfd:field id="anlCode2" showLabel="false"/>
-			<jfd:field id="anlCode3" showLabel="false"/>
-			<jfd:field id="anlCode4" showLabel="false"/>						
-			<jfd:field id="anlCode5" showLabel="false"/>		
-		</jfd:container>
-		<jfd:field id="currencyCode"/>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										
-	</jfd:container>
+    <jfd:field id="period1"/>
+    <jfd:field id="period2" sameLine="true"/>
+    <!--		<jfd:field id="byDates" />
+        <jfd:field id="date1" />
+        <jfd:field id="date2" sameLine="true"/>   		     -->
+    <jfd:container id="accPlanFields" layout="jfd:box" columns="1"
+                   label="resource://com.mg.merp.account.resources.formelements#Remn.Acc">
+      <jfd:field id="AccPlan" showLabel="false"/>
+      <jfd:field id="anlCode1" showLabel="false"/>
+      <jfd:field id="anlCode2" showLabel="false"/>
+      <jfd:field id="anlCode3" showLabel="false"/>
+      <jfd:field id="anlCode4" showLabel="false"/>
+      <jfd:field id="anlCode5" showLabel="false"/>
+    </jfd:container>
+    <jfd:field id="currencyCode"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml"/>
 
 </jfd:form>

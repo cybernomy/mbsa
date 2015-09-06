@@ -7,11 +7,11 @@ import com.mg.merp.account.model.AdvanceRepSpec;
 
 /**
  * Local interface for AdvanceRepSpecService.
- * @since 12.10.2004
+ *
  * @xdoclet-generated at 28-02-06
+ * @since 12.10.2004
  */
 public interface AdvanceRepSpecServiceLocal
-   extends com.mg.merp.document.GoodsDocumentSpecification<AdvanceRepSpec, Integer>
-{
+    extends com.mg.merp.document.GoodsDocumentSpecification<AdvanceRepSpec, Integer> {
 
 }

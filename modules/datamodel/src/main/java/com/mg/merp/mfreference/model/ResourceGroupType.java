@@ -19,38 +19,39 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Тип группы ресурсов
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: ResourceGroupType.java,v 1.1 2006/04/13 10:20:42 safonov Exp $
  */
 @DataItemName("MfReference.ResourGroup.ResType")
 public enum ResourceGroupType {
-	/**
-	 * Материалы
-	 */
-	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.Materials")
-	MATERIALS,
-	
-	/**
-	 * Оборудование
-	 */
-	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.Machine")
-	MACHINE,
-	
-	/**
-	 * Рабочая сила
-	 */
-	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.Labor")
-	LABOR,
-	
-	/**
-	 * Рабочий центр
-	 */
-	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.WorkCenter")
-	WORKCENTER,
-	
-	/**
-	 * Подразделение
-	 */
-	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.OrgUnit")
-	ORGUNIT
+  /**
+   * Материалы
+   */
+  @EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.Materials")
+  MATERIALS,
+
+  /**
+   * Оборудование
+   */
+  @EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.Machine")
+  MACHINE,
+
+  /**
+   * Рабочая сила
+   */
+  @EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.Labor")
+  LABOR,
+
+  /**
+   * Рабочий центр
+   */
+  @EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.WorkCenter")
+  WORKCENTER,
+
+  /**
+   * Подразделение
+   */
+  @EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#ResGrType.OrgUnit")
+  ORGUNIT
 }

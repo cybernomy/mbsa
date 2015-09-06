@@ -14,10 +14,10 @@
  */
 package com.mg.merp.wb.report.birt.data.oda.badi.ui.wizards;
 
+import com.mg.merp.wb.report.birt.data.oda.badi.ui.OdaUiPlugin;
+
 import org.eclipse.birt.report.designer.ui.odadatasource.wizards.DefaultExtendedDataSetWizard;
 import org.eclipse.jface.wizard.IWizardPage;
-
-import com.mg.merp.wb.report.birt.data.oda.badi.ui.OdaUiPlugin;
 
 /**
  * @author Valentin A. Poroxnenko
@@ -25,35 +25,35 @@ import com.mg.merp.wb.report.birt.data.oda.badi.ui.OdaUiPlugin;
  */
 public class BadiDataSetWizard extends DefaultExtendedDataSetWizard {
 
-	ColumnMappingPage merpBadiDataSetPage = null;
+  ColumnMappingPage merpBadiDataSetPage = null;
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.jface.wizard.Wizard#addPages()
-	 */
-	public void addPages() {
-		super.addPages();
-		merpBadiDataSetPage = new ColumnMappingPage(OdaUiPlugin.getDefault()
-				.getString("wizard.title.selectMerpBadi")); //$NON-NLS-1$
-		merpBadiDataSetPage.setDataSet(getDataSet());
-		addPage(merpBadiDataSetPage);
-	}
+  /* (non-Javadoc)
+   * @see org.eclipse.jface.wizard.Wizard#addPages()
+   */
+  public void addPages() {
+    super.addPages();
+    merpBadiDataSetPage = new ColumnMappingPage(OdaUiPlugin.getDefault()
+        .getString("wizard.title.selectMerpBadi")); //$NON-NLS-1$
+    merpBadiDataSetPage.setDataSet(getDataSet());
+    addPage(merpBadiDataSetPage);
+  }
 
-	public boolean doCancel() {
-		return true;
-	}
+  public boolean doCancel() {
+    return true;
+  }
 
-	public boolean doFinish() {
-		return merpBadiDataSetPage.performOk();
-	}
+  public boolean doFinish() {
+    return merpBadiDataSetPage.performOk();
+  }
 
-	/* (non-Javadoc)
-	 * @see org.eclipse.jface.wizard.Wizard#getStartingPage()
-	 */
-	public IWizardPage getStartingPage() {
-		String wizardTitle = OdaUiPlugin.getDefault().getString("dataset.new");//$NON-NLS-1$
-		this.setWindowTitle(wizardTitle);
+  /* (non-Javadoc)
+   * @see org.eclipse.jface.wizard.Wizard#getStartingPage()
+   */
+  public IWizardPage getStartingPage() {
+    String wizardTitle = OdaUiPlugin.getDefault().getString("dataset.new");//$NON-NLS-1$
+    this.setWindowTitle(wizardTitle);
 
-		merpBadiDataSetPage.setDataSet(getDataSet());
-		return super.getStartingPage();
-	}
+    merpBadiDataSetPage.setDataSet(getDataSet());
+    return super.getStartingPage();
+  }
 }

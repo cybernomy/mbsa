@@ -15,27 +15,27 @@
 
 package com.mg.merp.reference.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.reference.IdentDocKindServiceLocal;
 import com.mg.merp.reference.model.IdentDocKind;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Виды документов, удостоверяющих личность" 
- * 
+ * Бизнес-компонент "Виды документов, удостоверяющих личность"
+ *
  * @author leonova
  * @version $Id: IdentDocKindServiceBean.java,v 1.4 2006/10/20 05:40:26 leonova Exp $
  */
-@Stateless(name="merp/reference/IdentDocKindService")
+@Stateless(name = "merp/reference/IdentDocKindService")
 public class IdentDocKindServiceBean extends AbstractPOJODataBusinessObjectServiceBean<IdentDocKind, Integer> implements IdentDocKindServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, IdentDocKind entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "KCode"));
-		context.addRule(new MandatoryStringAttribute(entity, "KName"));		
-	}
+  @Override
+  protected void onValidate(ValidationContext context, IdentDocKind entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "KCode"));
+    context.addRule(new MandatoryStringAttribute(entity, "KName"));
+  }
 
 }

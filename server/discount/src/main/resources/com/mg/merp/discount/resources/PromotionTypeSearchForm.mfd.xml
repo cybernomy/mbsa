@@ -13,13 +13,19 @@
 
 <!-- $Id: PromotionTypeSearchForm.mfd.xml,v 1.2 2007/11/14 13:48:58 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.discount.support.ui.PromotionTypeSearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.discount.resources.formelements#PromotionTypeBr.Title" helpTopic="discount#promotype_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.discount.support.ui.PromotionTypeSearchForm" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.discount.resources.formelements#PromotionTypeBr.Title"
+          helpTopic="discount#promotype_html">
 
-	<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
-		<jfd:button id="сhooseButton" text="resource://com.mg.merp.discount.resources.formelements#Choose" actionListener="Choose" />
-	</jfd:toolBar>
-	
-	<jfd:table id="table" alignment="expand_expand" scroll="true">
-	</jfd:table>
+  <jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+    <jfd:button id="сhooseButton"
+                text="resource://com.mg.merp.discount.resources.formelements#Choose"
+                actionListener="Choose"/>
+  </jfd:toolBar>
+
+  <jfd:table id="table" alignment="expand_expand" scroll="true">
+  </jfd:table>
 
 </jfd:form>

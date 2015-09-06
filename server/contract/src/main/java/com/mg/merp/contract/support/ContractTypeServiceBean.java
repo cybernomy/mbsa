@@ -14,31 +14,31 @@
  */
 package com.mg.merp.contract.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.contract.ContractTypeServiceLocal;
 import com.mg.merp.contract.model.ContractType;
 
+import javax.ejb.Stateless;
+
 /**
- * Реализация бизнес-компонента "Вид договора" 
- * 
+ * Реализация бизнес-компонента "Вид договора"
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: ContractTypeServiceBean.java,v 1.1 2007/09/17 12:16:22 alikaev Exp $
  */
-@Stateless(name="merp/contract/ContractTypeService")
+@Stateless(name = "merp/contract/ContractTypeService")
 public class ContractTypeServiceBean extends AbstractPOJODataBusinessObjectServiceBean<ContractType, Integer> implements ContractTypeServiceLocal {
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, com.mg.framework.api.orm.PersistentObject)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, ContractType entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));
-		context.addRule(new MandatoryStringAttribute(entity, "Name"));
-	}
-	
+  /*
+   * (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, com.mg.framework.api.orm.PersistentObject)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, ContractType entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+    context.addRule(new MandatoryStringAttribute(entity, "Name"));
+  }
+
 }

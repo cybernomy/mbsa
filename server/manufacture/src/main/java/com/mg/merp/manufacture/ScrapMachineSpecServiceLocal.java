@@ -18,14 +18,13 @@ import com.mg.merp.manufacture.model.ScrapDocumentSpec;
 
 /**
  * Бизнес-компонент "Спецификации актов на списание потерь времени, отработанного оборудованием"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ScrapMachineSpecServiceLocal.java,v 1.4 2007/08/06 12:46:24 safonov Exp $
  */
-public interface ScrapMachineSpecServiceLocal extends ScrapSpecificationServiceLocal<ScrapDocumentSpec>
-{
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/manufacture/ScrapMachineSpec";
+public interface ScrapMachineSpecServiceLocal extends ScrapSpecificationServiceLocal<ScrapDocumentSpec> {
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/manufacture/ScrapMachineSpec";
 }

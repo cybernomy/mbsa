@@ -18,7 +18,7 @@ import com.mg.framework.api.ui.FieldEditor;
 
 /**
  * Элемент "Редактор значения целого числа"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: IntegerField.java,v 1.2 2006/11/21 15:34:06 safonov Exp $
  */

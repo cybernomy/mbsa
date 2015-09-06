@@ -7,31 +7,40 @@
 ]> -->
 <chapter id="tableconfig">
   <title>Конфигурация модуля</title>
-    
-    <para>Настройка модуля &quot;&tbl;&quot; доступна через главное меню 
-      <menuchoice>
-        <guimenu>Центр управления</guimenu>
-        <guisubmenu>Администрирование</guisubmenu>
-        <guisubmenu>Конфигурация</guisubmenu>
-        <guimenuitem>&tbl;</guimenuitem>
-      </menuchoice>.
-    </para>
-    
-    <figure>
-      <title>Конфигурация модуля</title>
-      <mediaobject><imageobject><imagedata fileref="images/config.gif"/></imageobject></mediaobject>
-    </figure>
-    
-    <para>Для заполнения основных параметров модуля используется 
-    справочник &quot;<link linkend="timekind">Типы времени</link>&quot;.</para>
-    
-    <para><guibutton>Рабочее время</guibutton>. Тип времени, которым учитывается 
-    основное рабочее время. Для заполнения этого поля укажите тип времени с учётом по часам.</para>
-    
-    <para>В Табеле рабочее время отображается в строке напротив фамилии 
-    сотрудника (вместе с типами времени с учётом по дням).</para>
-    
-    <para><guibutton>Выходные и праздники</guibutton>. Тип времени, которым учитываются 
-    выходные и праздничные дни. Укажите тип времени с учётом по дням.</para>
-    
+
+  <para>Настройка модуля &quot;&tbl;&quot; доступна через главное меню
+    <menuchoice>
+      <guimenu>Центр управления</guimenu>
+      <guisubmenu>Администрирование</guisubmenu>
+      <guisubmenu>Конфигурация</guisubmenu>
+      <guimenuitem>&tbl;</guimenuitem>
+    </menuchoice>
+    .
+  </para>
+
+  <figure>
+    <title>Конфигурация модуля</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/config.gif"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para>Для заполнения основных параметров модуля используется
+    справочник &quot;<link linkend="timekind">Типы времени</link>&quot;.
+  </para>
+
+  <para><guibutton>Рабочее время</guibutton>. Тип времени, которым учитывается
+    основное рабочее время. Для заполнения этого поля укажите тип времени с учётом по часам.
+  </para>
+
+  <para>В Табеле рабочее время отображается в строке напротив фамилии
+    сотрудника (вместе с типами времени с учётом по дням).
+  </para>
+
+  <para><guibutton>Выходные и праздники</guibutton>. Тип времени, которым учитываются
+    выходные и праздничные дни. Укажите тип времени с учётом по дням.
+  </para>
+
 </chapter>

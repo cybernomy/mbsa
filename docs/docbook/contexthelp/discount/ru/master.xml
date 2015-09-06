@@ -1,50 +1,52 @@
 ﻿<?xml version='1.0' encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
-                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
-[
-<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
-<!ENTITY chap_card SYSTEM "modules/card.xml">
-<!ENTITY chap_cardusers SYSTEM "modules/cardusers.xml">
-<!ENTITY chap_cardhist SYSTEM "modules/cardhist.xml">
-<!ENTITY chap_coefficient SYSTEM "modules/coefficient.xml">
-<!ENTITY chap_extradiscount SYSTEM "modules/extradiscount.xml">
-<!ENTITY chap_features SYSTEM "modules/features.xml">
-<!ENTITY chap_discount SYSTEM "modules/discount.xml">
-<!ENTITY chap_globalcoeff SYSTEM "modules/globalcoeff.xml">
-<!ENTITY chap_promotion SYSTEM "modules/promotion.xml">
-<!ENTITY logis "Логистика">
-<!ENTITY merp "Millennium Business Suite Anywhere">
-]>
+    "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+    [
+        <!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+        <!ENTITY chap_card SYSTEM "modules/card.xml">
+        <!ENTITY chap_cardusers SYSTEM "modules/cardusers.xml">
+        <!ENTITY chap_cardhist SYSTEM "modules/cardhist.xml">
+        <!ENTITY chap_coefficient SYSTEM "modules/coefficient.xml">
+        <!ENTITY chap_extradiscount SYSTEM "modules/extradiscount.xml">
+        <!ENTITY chap_features SYSTEM "modules/features.xml">
+        <!ENTITY chap_discount SYSTEM "modules/discount.xml">
+        <!ENTITY chap_globalcoeff SYSTEM "modules/globalcoeff.xml">
+        <!ENTITY chap_promotion SYSTEM "modules/promotion.xml">
+        <!ENTITY logis "Логистика">
+        <!ENTITY merp "Millennium Business Suite Anywhere">
+        ]>
 <book lang="ru">
   <bookinfo>
-      <title>Дисконтные карты. Скидки и наценки в системе &merp;. 
-      Руководство пользователя </title>
-      <releaseinfo>4.0.6</releaseinfo>
-      <copyright>
-	<year>1998</year>
-	<year>2008</year>
-	<holder>ООО &quot;Бизнестехнология&quot;</holder>
-      </copyright>    
+    <title>Дисконтные карты. Скидки и наценки в системе &merp;.
+      Руководство пользователя
+    </title>
+    <releaseinfo>4.0.6</releaseinfo>
+    <copyright>
+      <year>1998</year>
+      <year>2008</year>
+      <holder>ООО &quot;Бизнестехнология&quot;</holder>
+    </copyright>
   </bookinfo>
-  
+
   <toc/>
-  
-   <preface id="target" revision="2">
-      <title>Целевая аудитория</title>
-      <para>Данное руководство предназначено для пользователей
-	 системы &merp;, имеющих право применять скидки и наценки на документы, 
-	 работающих с дисконтными картами, рекламными акциями и пр. </para> 
-  </preface>  
-    
-&chap_card;
-&chap_cardusers;
-&chap_cardhist;
-&chap_coefficient;
-&chap_extradiscount;
-&chap_features;
-&chap_discount;
-&chap_globalcoeff;
-&chap_promotion;
-&chap_copyright;
+
+  <preface id="target" revision="2">
+    <title>Целевая аудитория</title>
+    <para>Данное руководство предназначено для пользователей
+      системы &merp;, имеющих право применять скидки и наценки на документы,
+      работающих с дисконтными картами, рекламными акциями и пр.
+    </para>
+  </preface>
+
+  &chap_card;
+  &chap_cardusers;
+  &chap_cardhist;
+  &chap_coefficient;
+  &chap_extradiscount;
+  &chap_features;
+  &chap_discount;
+  &chap_globalcoeff;
+  &chap_promotion;
+  &chap_copyright;
 
 </book>

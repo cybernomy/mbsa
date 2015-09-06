@@ -19,6 +19,6 @@ package com.mg.merp.warehouse.model;
  * @version $Id: StockBatchHistoryKind.java,v 1.1 2007/09/04 11:08:20 safonov Exp $
  */
 public enum StockBatchHistoryKind {
-	IN,
-	OUT
+  IN,
+  OUT
 }

@@ -1,67 +1,67 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.crm.model.Problem" table="CRM_PROBLEM">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">CRM_PROBLEM_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Folder" class="com.mg.merp.core.model.Folder">
-      <column name="FOLDER_ID" not-null="false" />
+      <column name="FOLDER_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="ProblemType" class="com.mg.merp.crm.model.ProblemType">
-      <column name="PROBLEM_TYPE_ID" not-null="false" />
+      <column name="PROBLEM_TYPE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Creator" class="com.mg.merp.crm.model.User">
-      <column name="CREATOR_ID" not-null="false" />
+      <column name="CREATOR_ID" not-null="false"/>
     </many-to-one>
     <property name="Name" type="java.lang.String">
-      <column name="NAME" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="NAME" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Info" type="java.lang.String">
-      <column name="INFO" length="2048" not-null="false" sql-type="VARCHAR" />
+      <column name="INFO" length="2048" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Keywords" type="java.lang.String">
-      <column name="KEYWORDS" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="KEYWORDS" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Priority" type="java.lang.Integer">
-      <column name="PRIORITY" not-null="false" sql-type="INTEGER" />
+      <column name="PRIORITY" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="ValidFrom" type="java.util.Date">
-      <column name="VALID_FROM" not-null="false" sql-type="TIMESTAMP" />
+      <column name="VALID_FROM" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="ValidTo" type="java.util.Date">
-      <column name="VALID_TO" not-null="false" sql-type="TIMESTAMP" />
+      <column name="VALID_TO" not-null="false" sql-type="TIMESTAMP"/>
     </property>
-    <set name="LinkSymptomProblems" inverse="true" >
+    <set name="LinkSymptomProblems" inverse="true">
       <key on-delete="cascade">
-        <column name="PROBLEM_ID" not-null="false" />
+        <column name="PROBLEM_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.crm.model.LinkSymptomProblem" />
+      <one-to-many class="com.mg.merp.crm.model.LinkSymptomProblem"/>
     </set>
-    <set name="LinkProblemSolutions" inverse="true" >
+    <set name="LinkProblemSolutions" inverse="true">
       <key on-delete="cascade">
-        <column name="PROBLEM_ID" not-null="false" />
+        <column name="PROBLEM_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.crm.model.LinkProblemSolution" />
+      <one-to-many class="com.mg.merp.crm.model.LinkProblemSolution"/>
     </set>
     <set name="LinkedDocs" inverse="true">
       <key on-delete="cascade">
-        <column name="PROBLEM_ID" not-null="false" />
+        <column name="PROBLEM_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.crm.model.LinkedDocument" />
+      <one-to-many class="com.mg.merp.crm.model.LinkedDocument"/>
     </set>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

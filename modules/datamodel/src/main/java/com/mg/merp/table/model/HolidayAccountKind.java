@@ -19,29 +19,29 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Тип учета праздничных дней
- * 
+ *
  * @author leonova
  * @version $Id: HolidayAccountKind.java,v 1.1 2006/03/30 11:32:49 safonov Exp $
  */
-@DataItemName ("Table.Schedule.HolidayAccountKind")
+@DataItemName("Table.Schedule.HolidayAccountKind")
 public enum HolidayAccountKind {
-	/**
-	 * Не учитывать
-	 */
-	@EnumConstantText ("resource://com.mg.merp.table.resources.dataitemlabels#HolidayAccountKind.DontAccount")
-	DontAccount,
-	
-	/**
-	 * Учитывать как выходной
-	 */
-	@EnumConstantText ("resource://com.mg.merp.table.resources.dataitemlabels#HolidayAccountKind.AsHoliday")
-	AsHoliday,
-	
-	/**
-	 * Учитывать другим типом времени
-	 */
-	@EnumConstantText ("resource://com.mg.merp.table.resources.dataitemlabels#HolidayAccountKind.AnotherTimeKind")
-	AnotherTimeKind
+  /**
+   * Не учитывать
+   */
+  @EnumConstantText("resource://com.mg.merp.table.resources.dataitemlabels#HolidayAccountKind.DontAccount")
+  DontAccount,
+
+  /**
+   * Учитывать как выходной
+   */
+  @EnumConstantText("resource://com.mg.merp.table.resources.dataitemlabels#HolidayAccountKind.AsHoliday")
+  AsHoliday,
+
+  /**
+   * Учитывать другим типом времени
+   */
+  @EnumConstantText("resource://com.mg.merp.table.resources.dataitemlabels#HolidayAccountKind.AnotherTimeKind")
+  AnotherTimeKind
 }
 
 

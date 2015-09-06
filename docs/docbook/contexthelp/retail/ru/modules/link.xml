@@ -14,16 +14,16 @@
 <!-- $Id: link.xml,v 1.1 2006/11/24 13:10:06 konyashkina Exp $ -->
 
 <link version="1.0">
-  
-  <linkitem topic="rtldocum_links"> 
-    <linkentry target="rtlhead_html" text="Содержание документа" />
-    <linkentry target="rtladd_html" text="Дополнительно" />
-    <linkentry target="rtlcntr_html" text="Контрагенты" />
+
+  <linkitem topic="rtldocum_links">
+    <linkentry target="rtlhead_html" text="Содержание документа"/>
+    <linkentry target="rtladd_html" text="Дополнительно"/>
+    <linkentry target="rtlcntr_html" text="Контрагенты"/>
   </linkitem>
-  
-  <linkitem topic="rtlspec_links"> 
-    <linkentry target="rtlspec_html" text="Спецификации" />
-    <linkentry target="rtlspecadd_html" text="Дополнительные сведения о спецификации" />
-    <linkentry target="rtlspectax_html" text="Налоги на спецификацию" />
+
+  <linkitem topic="rtlspec_links">
+    <linkentry target="rtlspec_html" text="Спецификации"/>
+    <linkentry target="rtlspecadd_html" text="Дополнительные сведения о спецификации"/>
+    <linkentry target="rtlspectax_html" text="Налоги на спецификацию"/>
   </linkitem>
 </link>

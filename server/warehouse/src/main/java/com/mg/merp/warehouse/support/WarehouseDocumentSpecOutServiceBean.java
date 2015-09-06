@@ -15,28 +15,28 @@
 
 package com.mg.merp.warehouse.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.warehouse.WarehouseDocumentHeadOutServiceLocal;
 import com.mg.merp.warehouse.WarehouseDocumentSpecOutServiceLocal;
 import com.mg.merp.warehouse.generic.AbstractWarehouseDocumentSpec;
 import com.mg.merp.warehouse.model.StockDocumentSpec;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Спецификация расходных ордеров" 
- * 
+ * Бизнес-компонент "Спецификация расходных ордеров"
+ *
  * @author leonova
  * @version $Id: WarehouseDocumentSpecOutServiceBean.java,v 1.6 2007/09/07 12:27:13 safonov Exp $
  */
-@Stateless(name="merp/warehouse/WarehouseDocumentSpecOutService")
+@Stateless(name = "merp/warehouse/WarehouseDocumentSpecOutService")
 public class WarehouseDocumentSpecOutServiceBean extends AbstractWarehouseDocumentSpec<StockDocumentSpec> implements WarehouseDocumentSpecOutServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.GoodsDocumentSpecificationServiceBean#getDocSectionIdentifier()
-	 */
-	@Override
-	protected int getDocSectionIdentifier() {
-		return WarehouseDocumentHeadOutServiceLocal.DOCSECTION;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.GoodsDocumentSpecificationServiceBean#getDocSectionIdentifier()
+   */
+  @Override
+  protected int getDocSectionIdentifier() {
+    return WarehouseDocumentHeadOutServiceLocal.DOCSECTION;
+  }
 
 }

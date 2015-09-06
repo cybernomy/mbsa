@@ -13,9 +13,16 @@
 
 <!-- $Id: DocumentMacros.xml,v 1.1 2007/11/22 16:02:09 sharapov Exp $ -->
 
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="documentFields" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.DocumentFields" >
-	<jfd:field id="DocType" searchHelp="com.mg.merp.document.support.ui.DocTypeSearchHelp" showLabel="false" alignment="left_expand"/>
-	<jfd:field id="DocNumber" showLabel="false" alignment="expand_expand"/>			
-	<jfd:field id="DocDate" showLabel="false" alignment="right_expand"/>
-	<jfd:button id="ViewDocument" alignment="right_expand" icon="com/mg/framework/resources/viewbuttonicon.png" toolTip="resource://com.mg.merp.document.resources.formelements#ViewDocument.ToolTip" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ViewDocument" />				
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="documentFields" layout="jfd:box"
+               longField="true"
+               label="resource://com.mg.merp.document.resources.formelements#Document.DocumentFields">
+  <jfd:field id="DocType" searchHelp="com.mg.merp.document.support.ui.DocTypeSearchHelp"
+             showLabel="false" alignment="left_expand"/>
+  <jfd:field id="DocNumber" showLabel="false" alignment="expand_expand"/>
+  <jfd:field id="DocDate" showLabel="false" alignment="right_expand"/>
+  <jfd:button id="ViewDocument" alignment="right_expand"
+              icon="com/mg/framework/resources/viewbuttonicon.png"
+              toolTip="resource://com.mg.merp.document.resources.formelements#ViewDocument.ToolTip"
+              minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+              actionListener="ViewDocument"/>
 </jfd:container>

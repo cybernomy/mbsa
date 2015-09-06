@@ -17,12 +17,10 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.AnlPlan;
 
 /**
- * 
  * @author leonova
  * @version $Id: AnlPlanServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface AnlPlanServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<AnlPlan, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<AnlPlan, Integer> {
 
 }

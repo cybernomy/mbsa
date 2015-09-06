@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.PersonnelService;
 
 /**
- * 
  * @author leonova
  * @version $Id: PersonnelServiceServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface PersonnelServiceServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<PersonnelService, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<PersonnelService, Integer> {
 
 }

@@ -19,16 +19,16 @@ import java.io.Serializable;
  * @author krivopoustov
  */
 public class InitImportResult implements Serializable {
-	public int packet;
-	public String requests;
-	
-	public InitImportResult() {
-		super();
-	}
-	
-	public InitImportResult(int packet, String requests) {
-		super();
-		this.packet = packet;
-		this.requests = requests;
-	}
+  public int packet;
+  public String requests;
+
+  public InitImportResult() {
+    super();
+  }
+
+  public InitImportResult(int packet, String requests) {
+    super();
+    this.packet = packet;
+    this.requests = requests;
+  }
 }

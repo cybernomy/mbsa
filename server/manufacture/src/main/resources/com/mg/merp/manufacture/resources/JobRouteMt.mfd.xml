@@ -13,56 +13,65 @@
 
 <!-- $Id: JobRouteMt.mfd.xml,v 1.6 2007/07/30 10:26:38 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.manufacture.support.ui.JobRouteMt" title="resource://com.mg.merp.manufacture.resources.formelements#JobRoute.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.manufacture.support.ui.JobRouteMt"
+          title="resource://com.mg.merp.manufacture.resources.formelements#JobRoute.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#JobRoute.MainFields" >
- 			<jfd:field id="OperNum" />
-			<jfd:field id="Description" />
- 	 		<jfd:field id="EffOnDate" />
- 			<jfd:field id="EffOffDate" sameLine="true"/>
-			<jfd:field id="StartDate" />			
-			<jfd:field id="EndDate" sameLine="true"/>			
- 			<jfd:field id="WorkCenter" />
-		 	<jfd:field id="EfficiencyFactor" />
-			<jfd:field id="CompleteFlag" />	
-	 		<jfd:field id="StartTick"/>		
-			<jfd:field id="EndTick" sameLine="true"/>				
-			<jfd:field id="QtyComplete" />
-			<jfd:field id="QtyScrapped" sameLine="true"/>
-			<jfd:field id="QtyReceived" />
-			<jfd:field id="QtyMoved" sameLine="true"/>  	
-			<jfd:field id="FreezeScheduleFlag" /> 
-			<jfd:field id="ControlPointFlag" sameLine="true"/> 
-			<jfd:field id="Comment" />	 
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 										
-		</jfd:container>	
-		<jfd:container id="timeFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#JobRoute.TimeFields" >
- 		 	<jfd:field id="MoveTicks" />	
-		 	<jfd:field id="MoveTimeUM"/>	 			
- 			<jfd:field id="SetupTicks" />	
-			<jfd:field id="SetupTimeUM"/> 	
-			<jfd:field id="RunTicks" />	
-		 	<jfd:field id="RunTimeUM"/>
-			<jfd:field id="SchedTicks" />	
-		 	<jfd:field id="SchedTimeUM"/>
-		 	<jfd:field id="SchedOffsetTicks"/>	
-	 		<jfd:field id="SchedOffSetTimeUM"/>	
-			<jfd:field id="QueueTicks" />	
-			<jfd:field id="QueueTimeUM"/>  
-		</jfd:container>	
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.manufacture.resources.formelements#JobRoute.MainFields">
+      <jfd:field id="OperNum"/>
+      <jfd:field id="Description"/>
+      <jfd:field id="EffOnDate"/>
+      <jfd:field id="EffOffDate" sameLine="true"/>
+      <jfd:field id="StartDate"/>
+      <jfd:field id="EndDate" sameLine="true"/>
+      <jfd:field id="WorkCenter"/>
+      <jfd:field id="EfficiencyFactor"/>
+      <jfd:field id="CompleteFlag"/>
+      <jfd:field id="StartTick"/>
+      <jfd:field id="EndTick" sameLine="true"/>
+      <jfd:field id="QtyComplete"/>
+      <jfd:field id="QtyScrapped" sameLine="true"/>
+      <jfd:field id="QtyReceived"/>
+      <jfd:field id="QtyMoved" sameLine="true"/>
+      <jfd:field id="FreezeScheduleFlag"/>
+      <jfd:field id="ControlPointFlag" sameLine="true"/>
+      <jfd:field id="Comment"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="timeFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.manufacture.resources.formelements#JobRoute.TimeFields">
+      <jfd:field id="MoveTicks"/>
+      <jfd:field id="MoveTimeUM"/>
+      <jfd:field id="SetupTicks"/>
+      <jfd:field id="SetupTimeUM"/>
+      <jfd:field id="RunTicks"/>
+      <jfd:field id="RunTimeUM"/>
+      <jfd:field id="SchedTicks"/>
+      <jfd:field id="SchedTimeUM"/>
+      <jfd:field id="SchedOffsetTicks"/>
+      <jfd:field id="SchedOffSetTimeUM"/>
+      <jfd:field id="QueueTicks"/>
+      <jfd:field id="QueueTimeUM"/>
+    </jfd:container>
 
-		<jfd:container id="costJobRouteFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#CostDetailFields" >
-	 		<jfd:table id="stdDetailLine" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#StdCostDetailFields" >
-			</jfd:table> 
-			
-	 		<jfd:table id="actDetailLine" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#ActCostDetailFields" >
-			</jfd:table> 	
-		</jfd:container>
-	</jfd:container>
+    <jfd:container id="costJobRouteFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.manufacture.resources.formelements#CostDetailFields">
+      <jfd:table id="stdDetailLine" scroll="true" autoResize="subsequent_columns"
+                 alignment="expand_expand"
+                 fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#StdCostDetailFields">
+      </jfd:table>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+      <jfd:table id="actDetailLine" scroll="true" autoResize="subsequent_columns"
+                 alignment="expand_expand"
+                 fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#ActCostDetailFields">
+      </jfd:table>
+    </jfd:container>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

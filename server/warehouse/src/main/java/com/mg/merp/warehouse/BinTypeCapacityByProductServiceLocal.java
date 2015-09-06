@@ -17,12 +17,10 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.BinTypeCapacityByProduct;
 
 /**
- * 
  * @author leonova
  * @version $Id: BinTypeCapacityByProductServiceLocal.java,v 1.1 2006/03/14 11:49:53 safonov Exp $
  */
 public interface BinTypeCapacityByProductServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<BinTypeCapacityByProduct, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<BinTypeCapacityByProduct, Integer> {
 
 }

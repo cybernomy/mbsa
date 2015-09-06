@@ -19,18 +19,18 @@ import com.mg.merp.paymentcontrol.ResourceServiceLocal;
 
 /**
  * Поисковик сущностей "Папки для средства платежа"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: ResourceFolderSearchHelp.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $
  */
 public class ResourceFolderSearchHelp extends PmcFolderSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.paymentcontrol.support.ui.PmcFolderSearchHelp#getFolderPart()
-	 */
-	@Override
-	public short getFolderPart() {
-		return ResourceServiceLocal.FOLDER_PART;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.paymentcontrol.support.ui.PmcFolderSearchHelp#getFolderPart()
+   */
+  @Override
+  public short getFolderPart() {
+    return ResourceServiceLocal.FOLDER_PART;
+  }
 
 }

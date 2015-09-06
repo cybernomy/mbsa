@@ -2,37 +2,37 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.mg</groupId>
-        <artifactId>distribution</artifactId>
-        <version>4.0.8-SNAPSHOT</version>
-    </parent>
+  <parent>
+    <groupId>com.mg</groupId>
+    <artifactId>distribution</artifactId>
+    <version>4.0.8-SNAPSHOT</version>
+  </parent>
 
-    <groupId>com.mg.distribution</groupId>
-    <artifactId>assembly</artifactId>
-    <packaging>pom</packaging>
+  <groupId>com.mg.distribution</groupId>
+  <artifactId>assembly</artifactId>
+  <packaging>pom</packaging>
 
-    <name>MBSA::Distribution::Assembly</name>
-    <description>Сборка артефактов в архив</description>
+  <name>MBSA::Distribution::Assembly</name>
+  <description>Сборка артефактов в архив</description>
 
-    <build>
-        <finalName>MBSA-${project.version}</finalName>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <configuration>
-                    <descriptors>
-                        <descriptor>${assembly.dir}/distribution.xml</descriptor>
-                    </descriptors>
-                    <appendAssemblyId>false</appendAssemblyId>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-    <dependencies>
+  <build>
+    <finalName>MBSA-${project.version}</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-assembly-plugin</artifactId>
+        <configuration>
+          <descriptors>
+            <descriptor>${assembly.dir}/distribution.xml</descriptor>
+          </descriptors>
+          <appendAssemblyId>false</appendAssemblyId>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
 
-    </dependencies>
+  </dependencies>
 </project>

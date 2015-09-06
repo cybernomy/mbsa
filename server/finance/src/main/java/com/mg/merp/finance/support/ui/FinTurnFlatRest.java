@@ -17,7 +17,7 @@ package com.mg.merp.finance.support.ui;
 
 /**
  * @author leonova
- * @version $Id: FinTurnFlatRest.java,v 1.4 2006/12/19 06:53:59 leonova Exp $ 
+ * @version $Id: FinTurnFlatRest.java,v 1.4 2006/12/19 06:53:59 leonova Exp $
  */
 public class FinTurnFlatRest extends FinRest {
 

@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.CurrencyRateAuthority;
 
 /**
- * 
  * @author leonova
  * @version $Id: CurrencyRateAuthorityServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface CurrencyRateAuthorityServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<CurrencyRateAuthority, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<CurrencyRateAuthority, Integer> {
 
 }

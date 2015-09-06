@@ -14,22 +14,21 @@
  */
 package com.mg.merp.salary.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.salary.StaffListCalcListServiceLocal;
 import com.mg.merp.salary.model.CalcList;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Лицевые счета сотрудников" 
- * 
+ * Бизнес-компонент "Лицевые счета сотрудников"
+ *
  * @author leonova
  * @version $Id: StaffListCalcListServiceBean.java,v 1.4 2006/09/08 07:10:10 leonova Exp $
  */
-@Stateless(name="merp/salary/StaffListCalcListService")
+@Stateless(name = "merp/salary/StaffListCalcListService")
 public class StaffListCalcListServiceBean extends
-        AbstractPOJODataBusinessObjectServiceBean<CalcList, Integer> implements StaffListCalcListServiceLocal {
-    
+    AbstractPOJODataBusinessObjectServiceBean<CalcList, Integer> implements StaffListCalcListServiceLocal {
 
 
 }

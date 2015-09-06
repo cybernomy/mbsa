@@ -15,30 +15,29 @@
 
 package com.mg.merp.manufacture.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.document.generic.DocumentModelServiceBean;
 import com.mg.merp.manufacture.ScrapMachineHeadServiceLocal;
 import com.mg.merp.manufacture.ScrapMachineModelServiceLocal;
 import com.mg.merp.manufacture.model.ScrapDocumentModel;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Образцы актов на списание потерь времени, отработанного оборудование" 
- * 
+ * Бизнес-компонент "Образцы актов на списание потерь времени, отработанного оборудование"
+ *
  * @author leonova
  * @version $Id: ScrapMachineModelServiceBean.java,v 1.3 2006/09/12 11:08:13 leonova Exp $
  */
-@Stateless(name="merp/manufacture/ScrapMachineModelService")
-public class ScrapMachineModelServiceBean extends DocumentModelServiceBean<ScrapDocumentModel, Integer> implements ScrapMachineModelServiceLocal{
+@Stateless(name = "merp/manufacture/ScrapMachineModelService")
+public class ScrapMachineModelServiceBean extends DocumentModelServiceBean<ScrapDocumentModel, Integer> implements ScrapMachineModelServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
-	 */
-	@Override
-	protected short getDocSectionIdentifier() {
-		return ScrapMachineHeadServiceLocal.FOLDER_PART;
-	}
-
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
+   */
+  @Override
+  protected short getDocSectionIdentifier() {
+    return ScrapMachineHeadServiceLocal.FOLDER_PART;
+  }
 
 
 }

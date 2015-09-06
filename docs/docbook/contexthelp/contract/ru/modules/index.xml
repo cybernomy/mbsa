@@ -16,20 +16,20 @@
 <index version="1.0">
 
   <indexitem text="Основные сведения">
-    <indexentry text="Содержание контракта" target="conthead_html" />
-    <indexentry text="Контрагенты" target="contractors_html" />
-    <indexentry text="Суммы" target="summ_html" />
-    <indexentry text="Предмет контракта" target="object_html" /> 
-    <indexentry text="Изменения контракта" target="changes_html" /> 
-    <indexentry text="Условия отбора" target="contractrest_html" />
-    <indexentry text="Виды и категории контрактов" target="category_html" />
+    <indexentry text="Содержание контракта" target="conthead_html"/>
+    <indexentry text="Контрагенты" target="contractors_html"/>
+    <indexentry text="Суммы" target="summ_html"/>
+    <indexentry text="Предмет контракта" target="object_html"/>
+    <indexentry text="Изменения контракта" target="changes_html"/>
+    <indexentry text="Условия отбора" target="contractrest_html"/>
+    <indexentry text="Виды и категории контрактов" target="category_html"/>
   </indexitem>
 
   <indexitem text="Этапы и пункты">
-    <indexentry text="Этапы" target="phase_html" />
-    <indexentry text="Пункты планируемые" target="planitem_html" />
-    <indexentry text="Пункты фактические" target="factitem_html" />
-    <indexentry text="Спецификации пунктов" target="spec_html" /> 
-  </indexitem> 
-  
+    <indexentry text="Этапы" target="phase_html"/>
+    <indexentry text="Пункты планируемые" target="planitem_html"/>
+    <indexentry text="Пункты фактические" target="factitem_html"/>
+    <indexentry text="Спецификации пунктов" target="spec_html"/>
+  </indexitem>
+
 </index>

@@ -23,90 +23,94 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.Place")
 public class Place extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.reference.model.District District;
+  private com.mg.merp.reference.model.District District;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Prefix;
+  private java.lang.String Prefix;
 
-	private java.lang.String Name;
+  private java.lang.String Name;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public Place() {
-	}
+  /**
+   * default constructor
+   */
+  public Place() {
+  }
 
-	/** constructor with id */
-	public Place(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public Place(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
+  // Property accessors
 
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 */	
-	public com.mg.merp.reference.model.District getDistrict() {
-		return this.District;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.reference.model.District getDistrict() {
+    return this.District;
+  }
 
-	public void setDistrict(com.mg.merp.reference.model.District District) {
-		this.District = District;
-	}
+  public void setDistrict(com.mg.merp.reference.model.District District) {
+    this.District = District;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Address.Prefix")
-	public java.lang.String getPrefix() {
-		return this.Prefix;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Address.Prefix")
+  public java.lang.String getPrefix() {
+    return this.Prefix;
+  }
 
-	public void setPrefix(java.lang.String Prefix) {
-		this.Prefix = Prefix;
-	}
+  public void setPrefix(java.lang.String Prefix) {
+    this.Prefix = Prefix;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Address.Place")
-	public java.lang.String getName() {
-		return this.Name;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Address.Place")
+  public java.lang.String getName() {
+    return this.Name;
+  }
 
-	public void setName(java.lang.String Name) {
-		this.Name = Name;
-	}
+  public void setName(java.lang.String Name) {
+    this.Name = Name;
+  }
 
 }

@@ -14,15 +14,15 @@
  */
 package com.mg.merp.baiengine.support.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.merp.baiengine.BusinessAddinEngine;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * @author Oleg V. Safonov
  * @version $Id: BusinessAddinEngineServiceMBean.java,v 1.1 2006/06/08 11:39:47 safonov Exp $
  */
 public interface BusinessAddinEngineServiceMBean extends BusinessAddinEngine,
-		ServiceMBean {
+    ServiceMBean {
 
 }

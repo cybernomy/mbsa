@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.PositionFillKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: PositionFillKindServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface PositionFillKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<PositionFillKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<PositionFillKind, Integer> {
 
 }

@@ -18,18 +18,18 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
  * Поисковик бизнес-компонента "Образцы хоз. операций"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: EconomicModelSearchHelp.java,v 1.1 2007/02/16 14:15:40 sharapov Exp $
  */
 public class EconomicModelSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {
-		return "merp/account/OperationModel"; //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/account/OperationModel"; //$NON-NLS-1$
+  }
 
 }

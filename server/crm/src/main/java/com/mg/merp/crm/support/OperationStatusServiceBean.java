@@ -19,30 +19,20 @@ import com.mg.merp.crm.OperationStatusServiceLocal;
 import com.mg.merp.crm.model.OperationStatus;
 
 /**
- * @ejb.bean name = "OperationStatusService"
- *           type = "Stateless"
- *           view-type = "local"
- *           local-jndi-name = "merp/crm/OperationStatusService"
- *           description = "OperationStatus"
- *           display-name = "OperationStatus"
- *
- * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService"
- *
- * @ejb.home      local-extends = "javax.ejb.EJBLocalHome"
- *
- * @ejb.env-entry name = "DomainClassName"
- *                type = "java.lang.String"
- *                value = "com.mg.merp.crm.support.OperationStatusDomainImpl"
- *
- * @jboss.container-configuration name = "MERP Standard Stateless Service"
- *
  * @author java generator
+ * @ejb.bean name = "OperationStatusService" type = "Stateless" view-type = "local" local-jndi-name
+ * = "merp/crm/OperationStatusService" description = "OperationStatus" display-name =
+ * "OperationStatus"
+ * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService"
+ * @ejb.home local-extends = "javax.ejb.EJBLocalHome"
+ * @ejb.env-entry name = "DomainClassName" type = "java.lang.String" value =
+ * "com.mg.merp.crm.support.OperationStatusDomainImpl"
+ * @jboss.container-configuration name = "MERP Standard Stateless Service"
  * @since 12.10.2004
- *
  */
- public class OperationStatusServiceBean extends com.mg.framework.generic.AbstractDataBusinessObjectServiceBean<OperationStatus, Integer> implements OperationStatusServiceLocal {
+public class OperationStatusServiceBean extends com.mg.framework.generic.AbstractDataBusinessObjectServiceBean<OperationStatus, Integer> implements OperationStatusServiceLocal {
 
- 	public void ejbCreate() throws javax.ejb.CreateException {
- 	}
+  public void ejbCreate() throws javax.ejb.CreateException {
+  }
 
- }
+}

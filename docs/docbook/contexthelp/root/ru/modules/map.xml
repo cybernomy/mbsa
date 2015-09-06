@@ -13,6 +13,6 @@
 
 <!-- $Id: map.xml,v 1.1 2007/12/19 16:33:15 safonov Exp $ -->
 
-<map version="1.3"> 
-	<mapID target="introduction_html" url="introduction.html" />
+<map version="1.3">
+  <mapID target="introduction_html" url="introduction.html"/>
 </map>

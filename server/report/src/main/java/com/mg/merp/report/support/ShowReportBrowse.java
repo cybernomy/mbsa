@@ -14,13 +14,13 @@
  */
 package com.mg.merp.report.support;
 
-import java.io.Serializable;
-import java.util.Map;
-
 import com.mg.framework.api.ui.MenuCommand;
 import com.mg.framework.generic.ui.AbstractForm;
 import com.mg.framework.support.ui.UIProducer;
 import com.mg.framework.utils.ServerUtils;
+
+import java.io.Serializable;
+import java.util.Map;
 
 /**
  * @author leonova
@@ -28,25 +28,25 @@ import com.mg.framework.utils.ServerUtils;
  */
 public class ShowReportBrowse implements MenuCommand, Serializable {
 
-	private static final String REPORT_FORM = "com/mg/merp/report/resources/Report.mfd.xml";
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.MenuCommand#execute()
-	 */
-	public void execute() throws Exception {
-		final AbstractForm form = (AbstractForm) UIProducer.produceForm(REPORT_FORM);
-		form.run();
-	}
+  private static final String REPORT_FORM = "com/mg/merp/report/resources/Report.mfd.xml";
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.MenuCommand#isPermitted()
-	 */
-	public boolean isPermitted() {
-		return ServerUtils.getUserProfile().getGroups().length != 0;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.MenuCommand#execute()
+   */
+  public void execute() throws Exception {
+    final AbstractForm form = (AbstractForm) UIProducer.produceForm(REPORT_FORM);
+    form.run();
+  }
 
-	public void init(Map<String, String> params) {
-		
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.MenuCommand#isPermitted()
+   */
+  public boolean isPermitted() {
+    return ServerUtils.getUserProfile().getGroups().length != 0;
+  }
+
+  public void init(Map<String, String> params) {
+
+  }
 
 }

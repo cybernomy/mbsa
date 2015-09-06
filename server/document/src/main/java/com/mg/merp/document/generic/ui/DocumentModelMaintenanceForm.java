@@ -18,11 +18,11 @@ import com.mg.framework.generic.ui.DefaultMaintenanceForm;
 
 /**
  * Базовый класс контроллера формы поддержки образцов документов
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: DocumentModelMaintenanceForm.java,v 1.3 2007/05/22 04:52:00 sharapov Exp $
  */
 public class DocumentModelMaintenanceForm extends DefaultMaintenanceForm {
-	
+
 }

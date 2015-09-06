@@ -20,17 +20,17 @@ import com.mg.merp.warehouse.model.WarehouseConfig;
 
 /**
  * Реализация конфигурации модуля "Управление запасами"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ConfigurationServiceImpl.java,v 1.1 2006/12/12 15:33:03 safonov Exp $
  */
 public class ConfigurationServiceImpl implements ConfigurationService {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.warehouse.ConfigurationService#load()
-	 */
-	public WarehouseConfig load() {
-		return ServerUtils.getPersistentManager().find(WarehouseConfig.class, 1);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.warehouse.ConfigurationService#load()
+   */
+  public WarehouseConfig load() {
+    return ServerUtils.getPersistentManager().find(WarehouseConfig.class, 1);
+  }
 
 }

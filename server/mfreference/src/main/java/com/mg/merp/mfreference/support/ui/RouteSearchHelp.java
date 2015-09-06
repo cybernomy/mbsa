@@ -22,9 +22,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class RouteSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/mfreference/Route";
-	}	
+  @Override
+  protected String getServiceName() {
+    return "merp/mfreference/Route";
+  }
 
 }

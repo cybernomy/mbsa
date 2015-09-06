@@ -19,18 +19,18 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
  * Контроллер формы поддержки "Образцов входящих накладных"
- * 
+ *
  * @author leonova
  * @version $Id: InvoiceHeadModelInMt.java,v 1.2 2007/05/22 05:16:41 sharapov Exp $
  */
 public class InvoiceHeadModelInMt extends DocumentModelMaintenanceForm {
 
-	protected String[] contractorThroughKinds;
-	protected String[] contractorResponsibleKinds;
-	
-	public InvoiceHeadModelInMt() {
-		super();
-		contractorThroughKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-		contractorResponsibleKinds = new String[] {ContractorSearchForm.CONTRACTOR_EMPLOYEE, ContractorSearchForm.CONTRACTOR_ORGUNIT};
-	}
+  protected String[] contractorThroughKinds;
+  protected String[] contractorResponsibleKinds;
+
+  public InvoiceHeadModelInMt() {
+    super();
+    contractorThroughKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+    contractorResponsibleKinds = new String[]{ContractorSearchForm.CONTRACTOR_EMPLOYEE, ContractorSearchForm.CONTRACTOR_ORGUNIT};
+  }
 }

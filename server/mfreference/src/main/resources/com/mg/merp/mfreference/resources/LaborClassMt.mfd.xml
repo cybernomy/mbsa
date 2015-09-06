@@ -13,28 +13,31 @@
 
 <!-- $Id: LaborClassMt.mfd.xml,v 1.5 2007/07/30 10:23:51 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.mfreference.resources.formelements#LaborClass.FormMt.Title" helpTopic="mfreference#labclass_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.mfreference.resources.formelements#LaborClass.FormMt.Title"
+          helpTopic="mfreference#labclass_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:field id="TimeRateFlag" editorType="comboBox"/> 
-		<jfd:field id="LbrRate" /> 
-		<jfd:field id="LbrRateCurrency" /> 
-		<jfd:field id="LbrTimeUm" />
-		<jfd:field id="LbrOhAllocationFlag" />  
-		<jfd:field id="LbrOhRate" />
-		<jfd:field id="LbrOhRateCurrency" />
-		<jfd:field id="LbrOhTimeUm" /> 
-		<jfd:field id="LbrOhRatio" /> 
-		<jfd:field id="LbrCostCategory" /> 
-		<jfd:field id="LbrOhCostCategory" />
-		<jfd:field id="Description" />
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />	
-	</jfd:container>
+    <jfd:field id="TimeRateFlag" editorType="comboBox"/>
+    <jfd:field id="LbrRate"/>
+    <jfd:field id="LbrRateCurrency"/>
+    <jfd:field id="LbrTimeUm"/>
+    <jfd:field id="LbrOhAllocationFlag"/>
+    <jfd:field id="LbrOhRate"/>
+    <jfd:field id="LbrOhRateCurrency"/>
+    <jfd:field id="LbrOhTimeUm"/>
+    <jfd:field id="LbrOhRatio"/>
+    <jfd:field id="LbrCostCategory"/>
+    <jfd:field id="LbrOhCostCategory"/>
+    <jfd:field id="Description"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

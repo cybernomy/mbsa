@@ -14,17 +14,17 @@
  */
 package com.mg.framework.service.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.framework.api.EntityInterceptorManager;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис менеджера перехватчиков действий над объектами сущностями
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: EntityInterceptorManagerServiceMBean.java,v 1.2 2006/08/04 13:27:52 safonov Exp $
  */
 public interface EntityInterceptorManagerServiceMBean extends
-        EntityInterceptorManager, ServiceMBean {
-	final static String SERVICE_NAME = "merp:service=EntityInterceptorManagerService";
+    EntityInterceptorManager, ServiceMBean {
+  final static String SERVICE_NAME = "merp:service=EntityInterceptorManagerService";
 }

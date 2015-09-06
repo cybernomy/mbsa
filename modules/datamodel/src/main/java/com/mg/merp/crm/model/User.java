@@ -20,111 +20,116 @@ import com.mg.framework.api.annotations.DataItemName;
  * @author hbm2java
  * @version $Id: User.java,v 1.5 2006/06/14 07:51:53 leonova Exp $
  */
-@DataItemName("CRM.User") 
+@DataItemName("CRM.User")
 public class User extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.reference.model.NaturalPerson Person;
+  private com.mg.merp.reference.model.NaturalPerson Person;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String ThePosition;
+  private java.lang.String ThePosition;
 
-	private boolean Busy;
+  private boolean Busy;
 
-	private boolean IsAdmin;
+  private boolean IsAdmin;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public User() {
-	}
+  /**
+   * default constructor
+   */
+  public User() {
+  }
 
-	/** constructor with id */
-	public User(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public User(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	@DataItemName("CRM.User.Person")
-	public com.mg.merp.reference.model.NaturalPerson getPerson() {
-		return this.Person;
-	}
+  /**
+   *
+   */
 
-	public void setPerson(
-			com.mg.merp.reference.model.NaturalPerson RefNaturalPerson) {
-		this.Person = RefNaturalPerson;
-	}
+  @DataItemName("CRM.User.Person")
+  public com.mg.merp.reference.model.NaturalPerson getPerson() {
+    return this.Person;
+  }
 
-	/**
-	 * 
-	 */
+  public void setPerson(
+      com.mg.merp.reference.model.NaturalPerson RefNaturalPerson) {
+    this.Person = RefNaturalPerson;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	@DataItemName("CRM.User.ThePosition")
-	public java.lang.String getThePosition() {
-		return this.ThePosition;
-	}
+  /**
+   *
+   */
 
-	public void setThePosition(java.lang.String ThePosition) {
-		this.ThePosition = ThePosition;
-	}
+  @DataItemName("CRM.User.ThePosition")
+  public java.lang.String getThePosition() {
+    return this.ThePosition;
+  }
 
-	/**
-	 * 
-	 */
+  public void setThePosition(java.lang.String ThePosition) {
+    this.ThePosition = ThePosition;
+  }
 
-	@DataItemName("CRM.User.Busy")
-	public boolean getBusy() {
-		return this.Busy;
-	}
+  /**
+   *
+   */
 
-	public void setBusy(boolean Busy) {
-		this.Busy = Busy;
-	}
+  @DataItemName("CRM.User.Busy")
+  public boolean getBusy() {
+    return this.Busy;
+  }
 
-	/**
-	 * 
-	 */
+  public void setBusy(boolean Busy) {
+    this.Busy = Busy;
+  }
 
-	@DataItemName("CRM.User.IsAdmin")
-	public boolean getIsAdmin() {
-		return this.IsAdmin;
-	}
+  /**
+   *
+   */
 
-	public void setIsAdmin(boolean IsAdmin) {
-		this.IsAdmin = IsAdmin;
-	}
+  @DataItemName("CRM.User.IsAdmin")
+  public boolean getIsAdmin() {
+    return this.IsAdmin;
+  }
+
+  public void setIsAdmin(boolean IsAdmin) {
+    this.IsAdmin = IsAdmin;
+  }
 
 }

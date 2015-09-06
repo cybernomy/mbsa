@@ -24,34 +24,34 @@ import com.mg.merp.document.model.DocHead;
 
 /**
  * Стратегия формирования номера через BAi
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: BAiDocumentNumberStrategy.java,v 1.2 2007/03/23 14:33:23 safonov Exp $
  */
 public class BAiDocumentNumberStrategy extends AbstractDocumentNumberStrategy {
-	private String docNumber = null;
-	private Repository repository;
+  private String docNumber = null;
+  private Repository repository;
 
-	public BAiDocumentNumberStrategy(Repository repository) {
-		this.repository = repository;
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.AbstractDocumentNumberStrategy#doGenerateNumber(com.mg.merp.document.model.DocHead)
-	 */
-	@Override
-	protected String doGenerateNumber(DocHead docHead) {
-		BusinessAddinEngineLocator.locate().perform(repository, MiscUtils.toMap(DocumentNumberBusinessAddin.DOCHEAD_PARAM, docHead), new BusinessAddinListener<String>() {
+  public BAiDocumentNumberStrategy(Repository repository) {
+    this.repository = repository;
+  }
 
-			public void aborted(BusinessAddinEvent<String> event) {
-			}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.AbstractDocumentNumberStrategy#doGenerateNumber(com.mg.merp.document.model.DocHead)
+   */
+  @Override
+  protected String doGenerateNumber(DocHead docHead) {
+    BusinessAddinEngineLocator.locate().perform(repository, MiscUtils.toMap(DocumentNumberBusinessAddin.DOCHEAD_PARAM, docHead), new BusinessAddinListener<String>() {
 
-			public void completed(BusinessAddinEvent<String> event) {
-				docNumber = event.getResult();
-			}
+      public void aborted(BusinessAddinEvent<String> event) {
+      }
 
-		});
-		return docNumber;
-	}
+      public void completed(BusinessAddinEvent<String> event) {
+        docNumber = event.getResult();
+      }
+
+    });
+    return docNumber;
+  }
 
 }

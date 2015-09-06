@@ -15,19 +15,19 @@
 
 package com.mg.merp.mfreference.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.mfreference.WorkCenterRatesServiceLocal;
 import com.mg.merp.mfreference.model.WorkCenterRates;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Нормы стоимости" 
- * 
+ * Бизнес-компонент "Нормы стоимости"
+ *
  * @author leonova
  * @version $Id: WorkCenterRatesServiceBean.java,v 1.3 2006/08/24 12:31:25 leonova Exp $
  */
-@Stateless(name="merp/mfreference/WorkCenterRatesService")
+@Stateless(name = "merp/mfreference/WorkCenterRatesService")
 public class WorkCenterRatesServiceBean extends AbstractPOJODataBusinessObjectServiceBean<WorkCenterRates, Integer> implements WorkCenterRatesServiceLocal {
 
 

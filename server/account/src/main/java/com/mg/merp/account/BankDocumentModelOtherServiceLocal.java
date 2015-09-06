@@ -18,15 +18,13 @@ import com.mg.merp.account.model.BankDocumentModel;
 import com.mg.merp.document.DocumentPattern;
 
 /**
- * 
  * @author leonova
  * @version $Id: BankDocumentModelOtherServiceLocal.java,v 1.3 2006/09/20 10:43:40 safonov Exp $
  */
 public interface BankDocumentModelOtherServiceLocal
-   extends DocumentPattern<BankDocumentModel, Integer>
-{
-	/**
-	 * тип папки для образцов прочих банковских документов
-	 */
-	final static short FOLDER_PART = 13;
+    extends DocumentPattern<BankDocumentModel, Integer> {
+  /**
+   * тип папки для образцов прочих банковских документов
+   */
+  final static short FOLDER_PART = 13;
 }

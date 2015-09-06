@@ -15,8 +15,6 @@
 
 package com.mg.merp.warehouse.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.support.validator.MandatoryAttribute;
 import com.mg.merp.warehouse.WarehouseDocumentHeadModelOutServiceLocal;
@@ -25,30 +23,32 @@ import com.mg.merp.warehouse.WarehouseDocumentSpecOutServiceLocal;
 import com.mg.merp.warehouse.generic.AbstractWarehouseDocument;
 import com.mg.merp.warehouse.model.StockDocumentHead;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Расходные ордера" 
- * 
+ * Бизнес-компонент "Расходные ордера"
+ *
  * @author leonova
  * @version $Id: WarehouseDocumentHeadOutServiceBean.java,v 1.6 2007/04/18 12:07:31 safonov Exp $
  */
-@Stateless(name="merp/warehouse/WarehouseDocumentHeadOutService")
+@Stateless(name = "merp/warehouse/WarehouseDocumentHeadOutService")
 public class WarehouseDocumentHeadOutServiceBean extends AbstractWarehouseDocument<StockDocumentHead, Integer, WarehouseDocumentHeadModelOutServiceLocal, WarehouseDocumentSpecOutServiceLocal> implements WarehouseDocumentHeadOutServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.GoodsDocumentServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, StockDocumentHead entity) {
-		super.onValidate(context, entity);
-		
-		context.addRule(new MandatoryAttribute(entity, "To"));
-		context.addRule(new MandatoryAttribute(entity, "From"));
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.GoodsDocumentServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, StockDocumentHead entity) {
+    super.onValidate(context, entity);
 
-	@Override
-	protected int getDocSectionIdentifier() {
-		return WarehouseDocumentHeadOutServiceLocal.DOCSECTION;
-	}
+    context.addRule(new MandatoryAttribute(entity, "To"));
+    context.addRule(new MandatoryAttribute(entity, "From"));
+  }
+
+  @Override
+  protected int getDocSectionIdentifier() {
+    return WarehouseDocumentHeadOutServiceLocal.DOCSECTION;
+  }
 
 
 }

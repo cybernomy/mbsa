@@ -17,18 +17,15 @@ package com.mg.merp.reference;
 
 /**
  * Базовый интерфейс бизнес-компонентов "Контрагенты"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: Contractor.java,v 1.2 2007/08/16 14:14:04 safonov Exp $
  */
 public interface Contractor<T extends com.mg.merp.reference.model.Contractor> extends com.mg.framework.api.DataBusinessObjectService<T, Integer> {
-	
-	/**
-	 * поиск контрагента по коду
-	 * 
-	 * @param code
-	 * @return
-	 */
-	T findFromCode(String code);
+
+  /**
+   * поиск контрагента по коду
+   */
+  T findFromCode(String code);
 
 }

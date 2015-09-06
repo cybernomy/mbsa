@@ -1,48 +1,48 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.core.model.DataKind" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.core.model.DataKind</param>
-	</typedef>	
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <typedef name="com.mg.merp.core.model.DataKind" class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.core.model.DataKind</param>
+  </typedef>
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.core.model.Feature" table="FEATURE">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="int">
-      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">FEATURE_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="SysClass" class="com.mg.merp.core.model.SysClass">
-      <column name="ENTITY_CLASS_ID" not-null="false" />
+      <column name="ENTITY_CLASS_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <property name="Name" type="java.lang.String">
-      <column name="NAME" length="80" not-null="true" unique="true" sql-type="VARCHAR" />
+      <column name="NAME" length="80" not-null="true" unique="true" sql-type="VARCHAR"/>
     </property>
     <property name="DataType" type="com.mg.merp.core.model.DataKind">
-      <column name="DATATYPE" not-null="false" sql-type="SMALLINT" />
+      <column name="DATATYPE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="Priority" type="java.lang.Integer">
-      <column name="PRIORITY" not-null="false" sql-type="INTEGER" />
+      <column name="PRIORITY" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="NullValue" type="java.lang.String">
-      <column name="NULL_VALUE" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="NULL_VALUE" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Code" type="java.lang.String">
-      <column name="CODE" length="20" not-null="true" unique="true" sql-type="CHAR" />
+      <column name="CODE" length="20" not-null="true" unique="true" sql-type="CHAR"/>
     </property>
     <property name="IsArray" type="boolean">
-      <column name="IS_ARRAY" not-null="false" sql-type="SMALLINT" />
+      <column name="IS_ARRAY" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="ArraySize" type="java.lang.Short">
-      <column name="ARRAY_SIZE" not-null="false" sql-type="SMALLINT" />
+      <column name="ARRAY_SIZE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <!-- 
     <set name="SetOfFeatureLink" cascade="all,delete-orphan" where="REC_ID is null">
@@ -52,17 +52,17 @@
       <one-to-many class="com.mg.merp.core.model.FeatureLink" />
     </set>
      -->
-     <set name="FeatureLinks" inverse="true" where="REC_ID is null">
+    <set name="FeatureLinks" inverse="true" where="REC_ID is null">
       <key>
-        <column name="FEATURE_ID" not-null="false" />
+        <column name="FEATURE_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.core.model.FeatureLink" />
+      <one-to-many class="com.mg.merp.core.model.FeatureLink"/>
     </set>
     <set name="FeatureValues" inverse="true">
       <key on-delete="cascade">
-        <column name="FEATURE_ID" not-null="false" />
+        <column name="FEATURE_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.core.model.FeatureVal" />
+      <one-to-many class="com.mg.merp.core.model.FeatureVal"/>
     </set>
   </class>
 </hibernate-mapping>

@@ -14,34 +14,35 @@
  */
 package com.mg.merp.paymentcontrol;
 
-import java.util.Date;
-
 import com.mg.merp.paymentcontrol.model.Version;
 import com.mg.merp.paymentcontrol.model.VersionStatus;
 import com.mg.merp.paymentcontrol.model.VersionStatusKind;
 
+import java.util.Date;
+
 /**
  * Сервис бизнес-компонента "Статус версии планирования"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: VersionStatusServiceLocal.java,v 1.2 2007/05/14 04:59:59 sharapov Exp $
  */
 public interface VersionStatusServiceLocal extends com.mg.framework.api.DataBusinessObjectService<VersionStatus, Integer> {
 
-	/**
-	 * Локальное имя сервиса
-	 */
-	static final String LOCAL_SERVICE_NAME = "merp/paymentcontrol/VersionStatus"; //$NON-NLS-1$
-	
-	/**
-	 * Добавить статус версии
-	 * @param version - версия планирования
-	 * @param kind - статус
-	 * @param createDate - дата создания
-	 * @param dateFrom - дата с 
-	 * @param dateTill - дата по
-	 */
-	void addVersionStatus(Version version, VersionStatusKind kind, Date createDate, Date dateFrom, Date dateTill);
-	
+  /**
+   * Локальное имя сервиса
+   */
+  static final String LOCAL_SERVICE_NAME = "merp/paymentcontrol/VersionStatus"; //$NON-NLS-1$
+
+  /**
+   * Добавить статус версии
+   *
+   * @param version    - версия планирования
+   * @param kind       - статус
+   * @param createDate - дата создания
+   * @param dateFrom   - дата с
+   * @param dateTill   - дата по
+   */
+  void addVersionStatus(Version version, VersionStatusKind kind, Date createDate, Date dateFrom, Date dateTill);
+
 }

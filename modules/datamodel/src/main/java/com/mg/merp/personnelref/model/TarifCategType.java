@@ -19,34 +19,34 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Тип категории тарификации должности
- * 
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: TarifCategType.java,v 1.1 2006/04/13 10:23:53 safonov Exp $
  */
 @DataItemName("PersonnelRef.TariffingCategory.Type")
 public enum TarifCategType {
-	/**
-	 * Оклад
-	 */
-	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TarifCategType.Rate")
-	RATE,
+  /**
+   * Оклад
+   */
+  @EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TarifCategType.Rate")
+  RATE,
 
-	/**
-	 * Ставка по тарифной сетке
-	 */
-	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TarifCategType.Tariff")
-	TARIFF,
-	
-	/**
-	 * Процент надбавки
-	 */
-	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TarifCategType.Rise")
-	RISE,
-	
-	/**
-	 * Количество минимальных окладов
-	 */
-	@EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TarifCategType.Min")
-	MIN
+  /**
+   * Ставка по тарифной сетке
+   */
+  @EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TarifCategType.Tariff")
+  TARIFF,
+
+  /**
+   * Процент надбавки
+   */
+  @EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TarifCategType.Rise")
+  RISE,
+
+  /**
+   * Количество минимальных окладов
+   */
+  @EnumConstantText("resource://com.mg.merp.personnelref.resources.dataitemlabels#TarifCategType.Min")
+  MIN
 
 }

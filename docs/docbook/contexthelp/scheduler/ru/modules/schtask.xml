@@ -7,31 +7,46 @@
 ]> -->
 <chapter id="schtask">
   <title>Задания планировщика</title>
-    
- 	<para>Вход в раздел &quot;Задания планировщика&quot; осуществляется через 
-	  главное меню системы: <menuchoice><guimenu>&cont_centr;</guimenu><guisubmenu>&scheduler;</guisubmenu><guimenuitem>Задания планировщика</guimenuitem></menuchoice>.
-	</para>
-	
-	<screenshot>
-	  <mediaobject>
-	    <imageobject>
-	      <imagedata fileref="images/task_mt.gif"/>
-	    </imageobject>
-	  </mediaobject>
-	</screenshot>
 
-  <para><guibutton>Код</guibutton>. Уникальный код задания планировщика в системе &merp;.</para>
-
-  <para><guibutton>Бизнес-расширение</guibutton>. Ссылка на бизнес-расширение которое будет выполнено при срабатывании задания.</para>
-
-  <para><guibutton>Наименование</guibutton>. Наименование задания.</para>
-  
-  <para><guibutton>Описание</guibutton>. Описание задания.</para>
-  
-  <para><guibutton>Выражение cron</guibutton>. Выражение предназначенное для описания времени и периодов старта заданий. В разделе
-    <link linkend="cron">описание формата</link> находится подробная информация.
+  <para>Вход в раздел &quot;Задания планировщика&quot; осуществляется через
+    главное меню системы:
+    <menuchoice>
+      <guimenu>&cont_centr;</guimenu>
+      <guisubmenu>&scheduler;</guisubmenu>
+      <guimenuitem>Задания планировщика</guimenuitem>
+    </menuchoice>
+    .
   </para>
-  
-  <para><guibutton>Активное</guibutton>. Признак активности задания, если задание не активно, то планировщик не будет учитывать его при планировании запуска.</para>
-  
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/task_mt.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para><guibutton>Код</guibutton>. Уникальный код задания планировщика в системе &merp;.
+  </para>
+
+  <para><guibutton>Бизнес-расширение</guibutton>. Ссылка на бизнес-расширение которое будет
+    выполнено при срабатывании задания.
+  </para>
+
+  <para><guibutton>Наименование</guibutton>. Наименование задания.
+  </para>
+
+  <para><guibutton>Описание</guibutton>. Описание задания.
+  </para>
+
+  <para><guibutton>Выражение cron</guibutton>. Выражение предназначенное для описания времени и
+    периодов старта заданий. В разделе
+    <link linkend="cron">описание формата</link>
+    находится подробная информация.
+  </para>
+
+  <para><guibutton>Активное</guibutton>. Признак активности задания, если задание не активно, то
+    планировщик не будет учитывать его при планировании запуска.
+  </para>
+
 </chapter>

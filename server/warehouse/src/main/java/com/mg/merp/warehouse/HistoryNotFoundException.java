@@ -18,18 +18,18 @@ import com.mg.merp.warehouse.support.Messages;
 
 /**
  * ИС "Невозможно откатить документ - не найдена история"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: HistoryNotFoundException.java,v 1.2 2007/03/26 13:31:18 poroxnenko Exp $ 
+ * @version $Id: HistoryNotFoundException.java,v 1.2 2007/03/26 13:31:18 poroxnenko Exp $
  */
 @javax.ejb.ApplicationException
 public class HistoryNotFoundException extends InternalException {
 
-	public HistoryNotFoundException(Throwable cause) {
-		super(Messages.getInstance().getMessage(Messages.HISTORY_NOT_FOUND), cause);
-	}
-	
-	public HistoryNotFoundException() {
-		super(Messages.getInstance().getMessage(Messages.HISTORY_NOT_FOUND));
-	}
+  public HistoryNotFoundException(Throwable cause) {
+    super(Messages.getInstance().getMessage(Messages.HISTORY_NOT_FOUND), cause);
+  }
+
+  public HistoryNotFoundException() {
+    super(Messages.getInstance().getMessage(Messages.HISTORY_NOT_FOUND));
+  }
 }

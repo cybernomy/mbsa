@@ -17,12 +17,10 @@ package com.mg.merp.finance;
 import com.mg.merp.finance.model.Analytics;
 
 /**
- * 
  * @author leonova
  * @version $Id: FeatAnalyticsServiceLocal.java,v 1.1 2006/03/14 11:49:48 safonov Exp $
  */
 public interface FeatAnalyticsServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Analytics, Integer> 
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Analytics, Integer> {
 
 }

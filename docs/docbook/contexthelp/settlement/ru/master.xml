@@ -1,51 +1,52 @@
 ﻿<?xml version='1.0' encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
-                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
-[
-<!ENTITY chap_intro SYSTEM "modules/001settlement.xml">
-<!ENTITY chap_company SYSTEM "modules/002settlement.xml">
-<!ENTITY chap_cards SYSTEM "modules/003settlement.xml">
-<!ENTITY chap_main SYSTEM "modules/004settlement.xml">
-<!ENTITY chap_confirmation SYSTEM "modules/005settlement.xml">
-<!ENTITY chap_ground SYSTEM "modules/006settlement.xml">
-<!ENTITY chap_contract SYSTEM "modules/007settlement.xml">
-<!ENTITY chap_plan SYSTEM "modules/008settlement.xml">
-<!ENTITY chap_conditions SYSTEM "modules/009settlement.xml">
-<!ENTITY merp "Millennium Business Suite Anywhere">
-<!ENTITY liab "Обязательства">
-<!ENTITY cont_centr "Центр управления">
-<!ENTITY ref "Прикладные справочники">
-<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
-]>
+    "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+    [
+        <!ENTITY chap_intro SYSTEM "modules/001settlement.xml">
+        <!ENTITY chap_company SYSTEM "modules/002settlement.xml">
+        <!ENTITY chap_cards SYSTEM "modules/003settlement.xml">
+        <!ENTITY chap_main SYSTEM "modules/004settlement.xml">
+        <!ENTITY chap_confirmation SYSTEM "modules/005settlement.xml">
+        <!ENTITY chap_ground SYSTEM "modules/006settlement.xml">
+        <!ENTITY chap_contract SYSTEM "modules/007settlement.xml">
+        <!ENTITY chap_plan SYSTEM "modules/008settlement.xml">
+        <!ENTITY chap_conditions SYSTEM "modules/009settlement.xml">
+        <!ENTITY merp "Millennium Business Suite Anywhere">
+        <!ENTITY liab "Обязательства">
+        <!ENTITY cont_centr "Центр управления">
+        <!ENTITY ref "Прикладные справочники">
+        <!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+        ]>
 <book lang="ru">
   <bookinfo>
-      <title>Управление расчётами с партнёрами в системе &merp;.
-      Руководство пользователя</title>
-      <releaseinfo>4.0.6</releaseinfo>
-      <copyright>
-	<year>1998</year>
-	<year>2008</year>
-	<holder>ООО &quot;Бизнестехнология&quot;</holder>
-      </copyright>    
+    <title>Управление расчётами с партнёрами в системе &merp;.
+      Руководство пользователя
+    </title>
+    <releaseinfo>4.0.6</releaseinfo>
+    <copyright>
+      <year>1998</year>
+      <year>2008</year>
+      <holder>ООО &quot;Бизнестехнология&quot;</holder>
+    </copyright>
   </bookinfo>
-  
+
   <toc/>
-  
+
   <!--
  <preface id="target">
       <title>Целевая аудитория</title>
       <para>Данное руководство предназначено для пользователей системы &merp;.</para>
   </preface> 
   -->
- &chap_intro;
- &chap_company;
- &chap_cards;
- &chap_main;
- &chap_confirmation;
- &chap_ground;
- &chap_contract;
- &chap_plan;
- &chap_conditions;
- &chap_copyright;
+  &chap_intro;
+  &chap_company;
+  &chap_cards;
+  &chap_main;
+  &chap_confirmation;
+  &chap_ground;
+  &chap_contract;
+  &chap_plan;
+  &chap_conditions;
+  &chap_copyright;
 
 </book>

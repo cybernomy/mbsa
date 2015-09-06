@@ -13,13 +13,19 @@
 
 <!-- $Id: CostsAnlSearchForm.mfd.xml,v 1.1 2007/07/09 08:09:21 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.personnelref.support.ui.CostsAnlSearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.personnelref.resources.formelements#CostsAnlSearchForm.Titel" width="600" height="250">
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.personnelref.support.ui.CostsAnlSearchForm" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.personnelref.resources.formelements#CostsAnlSearchForm.Titel"
+          width="600" height="250">
 
-	<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
-		<jfd:button id="сhooseButton" text="resource://com.mg.merp.personnelref.resources.formelements#Choose" actionListener="Choose" />
-	</jfd:toolBar>
-	
-	<jfd:table id="table" alignment="expand_expand" scroll="true">
-	</jfd:table>
+  <jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+    <jfd:button id="сhooseButton"
+                text="resource://com.mg.merp.personnelref.resources.formelements#Choose"
+                actionListener="Choose"/>
+  </jfd:toolBar>
+
+  <jfd:table id="table" alignment="expand_expand" scroll="true">
+  </jfd:table>
 
 </jfd:form>

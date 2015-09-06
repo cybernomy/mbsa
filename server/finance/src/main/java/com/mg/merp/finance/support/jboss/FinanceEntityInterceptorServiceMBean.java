@@ -18,14 +18,14 @@ import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис регистрации перхватчиков моделей подсистемы "Финансы"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: FinanceEntityInterceptorServiceMBean.java,v 1.1 2007/01/16 14:44:05 safonov Exp $
  */
 public interface FinanceEntityInterceptorServiceMBean extends ServiceMBean {
-	/**
-	 * наименование сервиса
-	 */
-	final static String SERVICE_NAME = "merp:finance=EntityInterceptorService"; //$NON-NLS-1$
+  /**
+   * наименование сервиса
+   */
+  final static String SERVICE_NAME = "merp:finance=EntityInterceptorService"; //$NON-NLS-1$
 
 }

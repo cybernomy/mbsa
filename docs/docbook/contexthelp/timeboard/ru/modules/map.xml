@@ -14,11 +14,11 @@
 <!-- $Id: map.xml,v 1.1 2006/12/19 11:57:37 konyashkina Exp $ -->
 
 <map version="1.0">
-  <mapID target="tbconfig_html" url="tableconfig.html" />
-  <mapID target="timekind_html" url="timekind.html" />
-  <mapID target="patternhead_html" url="patternhead.html" />
-  <mapID target="shdhead_html" url="schedulehead.html" />
-  <mapID target="fill_html" url="fill.html" />
-  <mapID target="grid_html" url="grid.html" /> 
-  <mapID target="table_html" url="timeboard.html" />
+  <mapID target="tbconfig_html" url="tableconfig.html"/>
+  <mapID target="timekind_html" url="timekind.html"/>
+  <mapID target="patternhead_html" url="patternhead.html"/>
+  <mapID target="shdhead_html" url="schedulehead.html"/>
+  <mapID target="fill_html" url="fill.html"/>
+  <mapID target="grid_html" url="grid.html"/>
+  <mapID target="table_html" url="timeboard.html"/>
 </map>

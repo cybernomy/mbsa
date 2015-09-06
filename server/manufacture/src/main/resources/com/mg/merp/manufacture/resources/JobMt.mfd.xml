@@ -13,75 +13,89 @@
 
 <!-- $Id: JobMt.mfd.xml,v 1.11 2007/08/13 11:18:41 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.manufacture.support.ui.JobMt" title="resource://com.mg.merp.manufacture.resources.formelements#Job.FormMt.Title" helpTopic="manufacture#job_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.manufacture.support.ui.JobMt"
+          title="resource://com.mg.merp.manufacture.resources.formelements#Job.FormMt.Title"
+          helpTopic="manufacture#job_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-	
-	 	<jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Job.MainTab.Title" >
-		  	<jfd:field id="JobNumber" />  
-			<jfd:field id="JobDate" sameLine="true" />
-  			<jfd:field id="JobStatus" /> 
-			<jfd:field id="ParentJob"/>	  
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
 
-			<jfd:field id="RootJob" sameLine="true"/>	  
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Job.MainTab.Title">
+      <jfd:field id="JobNumber"/>
+      <jfd:field id="JobDate" sameLine="true"/>
+      <jfd:field id="JobStatus"/>
+      <jfd:field id="ParentJob"/>
 
-		 	<jfd:field id="DefSrcStock" />	  
-			<jfd:field id="DefSrcMol" sameLine="true"/>	
-		 	<jfd:field id="DefDstStock" />	  
-			<jfd:field id="DefDstMol" sameLine="true"/>			
-		   	<jfd:field id="Catalog" />  
-			<jfd:field id="QtyScrapped" />
-			<jfd:field id="QtyReleased" sameLine="true"/>	
-			<jfd:field id="QtyComplete" /> 
-		  	<jfd:field id="RollUpDateTime" /> 
-		  	<jfd:field id="ChangeJobApproved" sameLine="true"/>  
-			<jfd:field id="Comment" />	 
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 												
-		</jfd:container>
-		
-		<jfd:container id="planFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Job.PlanTab.Title" helpTopic="manufacture#planjob_html" >
-			<jfd:field id="StartDate" />
-			<jfd:field id="StartJob" sameLine="true"/>
-			<jfd:field id="EndDate" />
-			<jfd:field id="FinishJob" sameLine="true"/>
-			<jfd:field id="Cell" />
-			<jfd:field id="MrpEndDate" sameLine="true"/>
-			<jfd:field id="Priority" />
-			<jfd:field id="PriorityFreezeFlag" sameLine="true"/>
-			<jfd:field id="SchedDirection" editorType="comboBox" /> 
-			<jfd:field id="UseMoveTimes" />
-			<jfd:field id="UseQueueTimes" />
-			<jfd:field id="UseFiniteCapacity" />	
-		</jfd:container>
-		
-		
-		<jfd:container id="split" layout="jfd:split" orientation="ver" alignment="expand_expand" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#JobRouteFields" helpTopic="manufacture#jobroute_html" >
- 			<jfd:maintenanceTable id="jobRoute" scroll="true" alignment="expand_top" >
-			</jfd:maintenanceTable>
+      <jfd:field id="RootJob" sameLine="true"/>
 
-			<jfd:container id="jobResources" layout="jfd:tabbed" alignment="expand_expand" >
- 			 	<jfd:maintenanceTable id="jobMaterial" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#JobMaterial" >
-				</jfd:maintenanceTable>
-				 
-				<jfd:maintenanceTable id="jobMachine" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#JobMachine" >
-				</jfd:maintenanceTable>
-				 
-				<jfd:maintenanceTable id="jobLabor" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#JobLabor"  >
-				</jfd:maintenanceTable>   
-			</jfd:container>
-		</jfd:container>
-		<jfd:container id="costDetailFields" layout="jfd:defaultMtLayout" alignment="expand_top"  tabTitle="resource://com.mg.merp.manufacture.resources.formelements#CostDetailLine">
-	 		<jfd:table id="stdDetailLine" scroll="true" autoResize="subsequent_columns" fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#StdCostDetailFields" >
-			</jfd:table> 
-			
-	 		<jfd:table id="actDetailLine" scroll="true" autoResize="subsequent_columns" fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#ActCostDetailFields" >
-			</jfd:table> 	
-		 
-		 </jfd:container>
+      <jfd:field id="DefSrcStock"/>
+      <jfd:field id="DefSrcMol" sameLine="true"/>
+      <jfd:field id="DefDstStock"/>
+      <jfd:field id="DefDstMol" sameLine="true"/>
+      <jfd:field id="Catalog"/>
+      <jfd:field id="QtyScrapped"/>
+      <jfd:field id="QtyReleased" sameLine="true"/>
+      <jfd:field id="QtyComplete"/>
+      <jfd:field id="RollUpDateTime"/>
+      <jfd:field id="ChangeJobApproved" sameLine="true"/>
+      <jfd:field id="Comment"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
 
-	</jfd:container>
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:container id="planFields" layout="jfd:defaultMtLayout" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Job.PlanTab.Title"
+                   helpTopic="manufacture#planjob_html">
+      <jfd:field id="StartDate"/>
+      <jfd:field id="StartJob" sameLine="true"/>
+      <jfd:field id="EndDate"/>
+      <jfd:field id="FinishJob" sameLine="true"/>
+      <jfd:field id="Cell"/>
+      <jfd:field id="MrpEndDate" sameLine="true"/>
+      <jfd:field id="Priority"/>
+      <jfd:field id="PriorityFreezeFlag" sameLine="true"/>
+      <jfd:field id="SchedDirection" editorType="comboBox"/>
+      <jfd:field id="UseMoveTimes"/>
+      <jfd:field id="UseQueueTimes"/>
+      <jfd:field id="UseFiniteCapacity"/>
+    </jfd:container>
+
+
+    <jfd:container id="split" layout="jfd:split" orientation="ver" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.manufacture.resources.formelements#JobRouteFields"
+                   helpTopic="manufacture#jobroute_html">
+      <jfd:maintenanceTable id="jobRoute" scroll="true" alignment="expand_top">
+      </jfd:maintenanceTable>
+
+      <jfd:container id="jobResources" layout="jfd:tabbed" alignment="expand_expand">
+        <jfd:maintenanceTable id="jobMaterial" scroll="true" alignment="expand_expand"
+                              tabTitle="resource://com.mg.merp.manufacture.resources.formelements#JobMaterial">
+        </jfd:maintenanceTable>
+
+        <jfd:maintenanceTable id="jobMachine" scroll="true" alignment="expand_expand"
+                              tabTitle="resource://com.mg.merp.manufacture.resources.formelements#JobMachine">
+        </jfd:maintenanceTable>
+
+        <jfd:maintenanceTable id="jobLabor" scroll="true" alignment="expand_expand"
+                              tabTitle="resource://com.mg.merp.manufacture.resources.formelements#JobLabor">
+        </jfd:maintenanceTable>
+      </jfd:container>
+    </jfd:container>
+    <jfd:container id="costDetailFields" layout="jfd:defaultMtLayout" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.manufacture.resources.formelements#CostDetailLine">
+      <jfd:table id="stdDetailLine" scroll="true" autoResize="subsequent_columns"
+                 fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#StdCostDetailFields">
+      </jfd:table>
+
+      <jfd:table id="actDetailLine" scroll="true" autoResize="subsequent_columns"
+                 fieldGroup="resource://com.mg.merp.manufacture.resources.formelements#ActCostDetailFields">
+      </jfd:table>
+
+    </jfd:container>
+
+  </jfd:container>
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

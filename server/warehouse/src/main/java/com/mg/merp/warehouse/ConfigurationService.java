@@ -18,10 +18,10 @@ import com.mg.merp.warehouse.model.WarehouseConfig;
 
 /**
  * Конфигурация модуля "Управление запасами"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ConfigurationService.java,v 1.1 2006/12/12 15:29:33 safonov Exp $
  */
 public interface ConfigurationService {
-	WarehouseConfig load();
+  WarehouseConfig load();
 }

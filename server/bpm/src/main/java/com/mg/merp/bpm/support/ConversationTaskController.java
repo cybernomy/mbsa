@@ -24,38 +24,38 @@ import org.jbpm.taskmgmt.exe.TaskInstance;
  * @version $Id: ConversationTaskController.java,v 1.1 2007/05/28 13:05:48 safonov Exp $
  */
 public class ConversationTaskController implements TaskControllerHandler {
-	private String taskConversation;
+  private String taskConversation;
 
-	/* (non-Javadoc)
-	 * @see org.jbpm.taskmgmt.def.TaskControllerHandler#initializeTaskVariables(org.jbpm.taskmgmt.exe.TaskInstance, org.jbpm.context.exe.ContextInstance, org.jbpm.graph.exe.Token)
-	 */
-	public void initializeTaskVariables(TaskInstance taskInstance,
-			ContextInstance contextInstance, Token token) {
-		// TODO Auto-generated method stub
+  /* (non-Javadoc)
+   * @see org.jbpm.taskmgmt.def.TaskControllerHandler#initializeTaskVariables(org.jbpm.taskmgmt.exe.TaskInstance, org.jbpm.context.exe.ContextInstance, org.jbpm.graph.exe.Token)
+   */
+  public void initializeTaskVariables(TaskInstance taskInstance,
+                                      ContextInstance contextInstance, Token token) {
+    // TODO Auto-generated method stub
 
-	}
+  }
 
-	/* (non-Javadoc)
-	 * @see org.jbpm.taskmgmt.def.TaskControllerHandler#submitTaskVariables(org.jbpm.taskmgmt.exe.TaskInstance, org.jbpm.context.exe.ContextInstance, org.jbpm.graph.exe.Token)
-	 */
-	public void submitTaskVariables(TaskInstance taskInstance,
-			ContextInstance contextInstance, Token token) {
-		// TODO Auto-generated method stub
+  /* (non-Javadoc)
+   * @see org.jbpm.taskmgmt.def.TaskControllerHandler#submitTaskVariables(org.jbpm.taskmgmt.exe.TaskInstance, org.jbpm.context.exe.ContextInstance, org.jbpm.graph.exe.Token)
+   */
+  public void submitTaskVariables(TaskInstance taskInstance,
+                                  ContextInstance contextInstance, Token token) {
+    // TODO Auto-generated method stub
 
-	}
+  }
 
-	/**
-	 * @return the taskConversation
-	 */
-	public String getTaskConversation() {
-		return taskConversation;
-	}
+  /**
+   * @return the taskConversation
+   */
+  public String getTaskConversation() {
+    return taskConversation;
+  }
 
-	/**
-	 * @param taskConversation the taskConversation to set
-	 */
-	public void setTaskConversation(String formController) {
-		this.taskConversation = formController;
-	}
+  /**
+   * @param taskConversation the taskConversation to set
+   */
+  public void setTaskConversation(String formController) {
+    this.taskConversation = formController;
+  }
 
 }

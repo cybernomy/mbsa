@@ -14,27 +14,27 @@
 <!-- $Id: toc.xml,v 1.2 2007/11/14 13:48:15 konyashkina Exp $ -->
 
 <toc version="1.3">
-  
-   <tocitem text="Дисконтные карты">
-      	<tocitem text="Сведения о карте" target="discard_html" />
-	<tocitem text="Пользователи карты" target="carduser_html" />
-	<tocitem text="История дисконтной карты" target="cardhist_html" />
-	<tocitem text="Коэффициенты" target="discoeff_html" />
-	<tocitem text="Дополнительные скидки" target="extradisc_html" />
-   </tocitem>
-  
-    <tocitem text="Скидки/Наценки">
-	<tocitem text="Скидки/Наценки" target="discount_html" />
-    </tocitem>
-    
-     <tocitem text="Глобальные коэффициенты">
-	<tocitem text="Коэффициенты скидок/наценок" target="globalcoeff_html" />
-    </tocitem>
-    
-    <tocitem text="Рекламные мероприятия">
-	<tocitem text="Типы рекламных мероприятий" target="promotype_html" />
-	<tocitem text="Рекламные мероприятия" target="promomain_html" />
-	<tocitem text="Позиции рекламных мероприятий" target="promoline_html" />
-    </tocitem>
-  
+
+  <tocitem text="Дисконтные карты">
+    <tocitem text="Сведения о карте" target="discard_html"/>
+    <tocitem text="Пользователи карты" target="carduser_html"/>
+    <tocitem text="История дисконтной карты" target="cardhist_html"/>
+    <tocitem text="Коэффициенты" target="discoeff_html"/>
+    <tocitem text="Дополнительные скидки" target="extradisc_html"/>
+  </tocitem>
+
+  <tocitem text="Скидки/Наценки">
+    <tocitem text="Скидки/Наценки" target="discount_html"/>
+  </tocitem>
+
+  <tocitem text="Глобальные коэффициенты">
+    <tocitem text="Коэффициенты скидок/наценок" target="globalcoeff_html"/>
+  </tocitem>
+
+  <tocitem text="Рекламные мероприятия">
+    <tocitem text="Типы рекламных мероприятий" target="promotype_html"/>
+    <tocitem text="Рекламные мероприятия" target="promomain_html"/>
+    <tocitem text="Позиции рекламных мероприятий" target="promoline_html"/>
+  </tocitem>
+
 </toc>

@@ -20,21 +20,22 @@ import com.mg.merp.warehouse.model.StockPlanHistory;
 
 /**
  * Стратегия отката этапа ДО "Снятие с резерва по складу"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: WarehouseRollbackReservWithdrawalStrategy.java,v 1.4 2008/04/18 15:18:19 safonov Exp $ 
+ * @version $Id: WarehouseRollbackReservWithdrawalStrategy.java,v 1.4 2008/04/18 15:18:19 safonov
+ *          Exp $
  */
 public class WarehouseRollbackReservWithdrawalStrategy extends
-		AbstractWarehouseRollbackPlanReservStrategy {
+    AbstractWarehouseRollbackPlanReservStrategy {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.warehouse.generic.AbstractWarehouseRollbackPlanReservStrategy#rollbackOperation(com.mg.merp.warehouse.model.StockPlanHistory)
-	 */
-	@Override
-	public void rollbackOperation(StockPlanHistory history) {
-		StockCard stockCard = history.getStockCard();
-		stockCard.setReserve(MathUtils.addNullable(stockCard.getReserve(), history.getQuantity(), Constants.QUANTITY_ROUND_CONTEXT));
-		stockCard.setReserve2(MathUtils.addNullable(stockCard.getReserve2(), history.getQuantity2(), Constants.QUANTITY_ROUND_CONTEXT));
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.warehouse.generic.AbstractWarehouseRollbackPlanReservStrategy#rollbackOperation(com.mg.merp.warehouse.model.StockPlanHistory)
+   */
+  @Override
+  public void rollbackOperation(StockPlanHistory history) {
+    StockCard stockCard = history.getStockCard();
+    stockCard.setReserve(MathUtils.addNullable(stockCard.getReserve(), history.getQuantity(), Constants.QUANTITY_ROUND_CONTEXT));
+    stockCard.setReserve2(MathUtils.addNullable(stockCard.getReserve2(), history.getQuantity2(), Constants.QUANTITY_ROUND_CONTEXT));
+  }
 
 }

@@ -14,27 +14,27 @@
 <!-- $Id: map.xml,v 1.1 2006/12/03 12:45:57 konyashkina Exp $ -->
 
 <map version="1.0">
-  <mapID target="bom_html" url="002mfref.html" />
-  <mapID target="bomroute_html" url="002mfref.html#002mfref_02" />
-  <mapID target="bommaterial_html" url="002mfref.html#002mfref_02_01" />
-  <mapID target="bommachine_html" url="002mfref.html#002mfref_02_02" />
-  <mapID target="bomlabor_html" url="002mfref.html#002mfref_02_03" />
-  <mapID target="costdetail_html" url="002mfref.html#002mfref_03" />
-  <mapID target="route_html" url="007mfref.html" />
-  <mapID target="cell_html" url="003mfref.html#003mfref_01" />
-  <mapID target="labclass_html" url="006mfref.html#006mfref_01" />
-  <mapID target="crew_html" url="006mfref.html#006mfref_02" />
-  <mapID target="costcateg_html" url="005mfref.html#005mfref_01" />
-  <mapID target="resourgroup_html" url="005mfref.html#005mfref_02" />
-  <mapID target="resourfamily_html" url="005mfref.html#005mfref_03" />
-  <mapID target="planlevel_html" url="008mfref.html" />
-  <mapID target="pllevbucket_html" url="008mfref.html#008mfref_01" />
-  <mapID target="workcentr_html" url="003mfref.html#003mfref_02" />
-  <mapID target="wcplan_html" url="003mfref.html#003mfref_02_01" />
-  <mapID target="wccost_html" url="003mfref.html#003mfref_02_02" />
-  <mapID target="wccostnorm_html" url="003mfref.html#003mfref_02_03" />
-  <mapID target="daycalend_html" url="004mfref.html#004mfref_01" />
-  <mapID target="daytime_html" url="004mfref.html#004mfref_01" />
-  <mapID target="weekcalend_html" url="004mfref.html#004mfref_02" />
-  <mapID target="weekchange_html" url="004mfref.html#004mfref_02" />
+  <mapID target="bom_html" url="002mfref.html"/>
+  <mapID target="bomroute_html" url="002mfref.html#002mfref_02"/>
+  <mapID target="bommaterial_html" url="002mfref.html#002mfref_02_01"/>
+  <mapID target="bommachine_html" url="002mfref.html#002mfref_02_02"/>
+  <mapID target="bomlabor_html" url="002mfref.html#002mfref_02_03"/>
+  <mapID target="costdetail_html" url="002mfref.html#002mfref_03"/>
+  <mapID target="route_html" url="007mfref.html"/>
+  <mapID target="cell_html" url="003mfref.html#003mfref_01"/>
+  <mapID target="labclass_html" url="006mfref.html#006mfref_01"/>
+  <mapID target="crew_html" url="006mfref.html#006mfref_02"/>
+  <mapID target="costcateg_html" url="005mfref.html#005mfref_01"/>
+  <mapID target="resourgroup_html" url="005mfref.html#005mfref_02"/>
+  <mapID target="resourfamily_html" url="005mfref.html#005mfref_03"/>
+  <mapID target="planlevel_html" url="008mfref.html"/>
+  <mapID target="pllevbucket_html" url="008mfref.html#008mfref_01"/>
+  <mapID target="workcentr_html" url="003mfref.html#003mfref_02"/>
+  <mapID target="wcplan_html" url="003mfref.html#003mfref_02_01"/>
+  <mapID target="wccost_html" url="003mfref.html#003mfref_02_02"/>
+  <mapID target="wccostnorm_html" url="003mfref.html#003mfref_02_03"/>
+  <mapID target="daycalend_html" url="004mfref.html#004mfref_01"/>
+  <mapID target="daytime_html" url="004mfref.html#004mfref_01"/>
+  <mapID target="weekcalend_html" url="004mfref.html#004mfref_02"/>
+  <mapID target="weekchange_html" url="004mfref.html#004mfref_02"/>
 </map>

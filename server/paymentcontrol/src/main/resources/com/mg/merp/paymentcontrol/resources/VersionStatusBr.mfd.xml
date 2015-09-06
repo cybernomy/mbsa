@@ -13,13 +13,17 @@
 
 <!-- $Id: VersionStatusBr.mfd.xml,v 1.5 2006/12/03 13:50:24 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" verticalGap="5" controller="com.mg.merp.paymentcontrol.support.ui.VersionStatusBr" title="resource://com.mg.merp.paymentcontrol.resources.formelements#VersionStatus.FormBr.Title" helpTopic="paymentcontrol#status_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" verticalGap="5"
+          controller="com.mg.merp.paymentcontrol.support.ui.VersionStatusBr"
+          title="resource://com.mg.merp.paymentcontrol.resources.formelements#VersionStatus.FormBr.Title"
+          helpTopic="paymentcontrol#status_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" alignment="expand_expand" autoResize="subsequent_columns" scroll="true" >
-	</jfd:maintenanceTable>
+  <jfd:maintenanceTable id="table" alignment="expand_expand" autoResize="subsequent_columns"
+                        scroll="true">
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

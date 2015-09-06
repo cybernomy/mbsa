@@ -21,9 +21,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  * @version $Id: CellSearchHelp.java,v 1.2 2006/07/10 12:10:39 leonova Exp $
  */
 public class CellSearchHelp extends DefaultLegacySearchHelp {
-	
-	@Override
-	protected String getServiceName() {		
-		return "merp/mfreference/Cell";
-	}
+
+  @Override
+  protected String getServiceName() {
+    return "merp/mfreference/Cell";
+  }
 }

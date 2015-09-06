@@ -11,57 +11,85 @@
 <chapter id="002dp">
   <title>Параметры типа документа</title>
 
-    <para>В справочнике &quot;&td;&quot; определяются основные параметры типа документа: </para>
-    
-    <screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/doc_add.gif"/></imageobject>
-    </mediaobject></screenshot>
-    
-    <para><guibutton>Код</guibutton>. Краткое уникальное наименование документа в системе.  </para>
-    
-    <para><guibutton>Наименование</guibutton>. Полное наименование документа.  </para>
-    
-    <para><link linkend="003dp"><guibutton>Документооборот</guibutton></link>. 
+  <para>В справочнике &quot;&td;&quot; определяются основные параметры типа документа:</para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/doc_add.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para><guibutton>Код</guibutton>. Краткое уникальное наименование документа в системе.
+  </para>
+
+  <para><guibutton>Наименование</guibutton>. Полное наименование документа.
+  </para>
+
+  <para>
+    <link linkend="003dp">
+      <guibutton>Документооборот</guibutton>
+    </link>
+    .
     Настройка документооборота для данного типа документа, а также прав доступа
-    к этапам документооборота.  </para>
-    
-    <para><guibutton>Выполнить документооборот непрерывно.</guibutton> Если этот
+    к этапам документооборота.
+  </para>
+
+  <para>
+    <guibutton>Выполнить документооборот непрерывно.</guibutton>
+    Если этот
     пункт отмечен флагом, будут выполняться непрерывно все этапы документооборота,
-    согласно <link linkend="003dp">настройке</link>.  </para>
-    
-    <para><guibutton>Алгоритм автонумерации</guibutton>. С помощью справочника 
+    согласно<link linkend="003dp">настройке</link>.
+  </para>
+
+  <para><guibutton>Алгоритм автонумерации</guibutton>. С помощью справочника
     &quot;Репозиторий алгоритмов&quot; можно задать алгоритм для автоматической
-    нумерации документов этого типа. </para>
-    
-    <para><guibutton>Шаблон по умолчанию</guibutton>. Шаблон, используемый по 
-    умолчанию для печати документа, можно выбрать из справочника &quot;Генератор 
-    отчётов&quot;. </para>
-    
-   <para>На закладках <guibutton>Разделы  документов</guibutton>, 
-   <guibutton>Разделы подтверждений</guibutton>,  <guibutton>Разделы оснований</guibutton>, 
-   <guibutton>Разделы контрактов</guibutton>, с помощью 
-   кнопок-стрелок Вы можете выбрать, в каких разделах системы будет использоваться
-   данный тип документа.</para>   
-    
-    <screenshot><mediaobject><imageobject>
-	<imagedata fileref="images/doc_link.gif"/></imageobject>
-    </mediaobject></screenshot>
-    
-     <itemizedlist>
-        <listitem><para><guibutton>Не используется в разделах</guibutton>. Список
-	разделов системы, в котором не используется данный тип документа. </para></listitem>
-	
-	<listitem><para><guibutton>Используется в разделах</guibutton>. Список
-	разделов системы, в которых используется данный тип документа. 
-	Этот список зависит от того, как используется документ в разделе (как документ, как 
-	документ-подтверждение, как документ-основание или как контракт - на 
-	соответствующих закладках).  </para></listitem>
-	
-	<!-- <listitem><para>После того, как Вы выбрали разделы системы, необходимо
-	нажать кнопку <guibutton>Сохранить связи</guibutton>.</para></listitem>  -->
-    </itemizedlist>   
-    
-    <para>После того, как указаны основные параметры типа документа, необходимо 
-    настроить его <link linkend="003dp">документооборот</link>.</para>
-    
-  </chapter>
+    нумерации документов этого типа.
+  </para>
+
+  <para><guibutton>Шаблон по умолчанию</guibutton>. Шаблон, используемый по
+    умолчанию для печати документа, можно выбрать из справочника &quot;Генератор
+    отчётов&quot;.
+  </para>
+
+  <para>На закладках<guibutton>Разделы документов</guibutton>,
+    <guibutton>Разделы подтверждений</guibutton>,<guibutton>Разделы оснований</guibutton>,
+    <guibutton>Разделы контрактов</guibutton>, с помощью
+    кнопок-стрелок Вы можете выбрать, в каких разделах системы будет использоваться
+    данный тип документа.
+  </para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/doc_link.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <itemizedlist>
+    <listitem>
+      <para><guibutton>Не используется в разделах</guibutton>. Список
+        разделов системы, в котором не используется данный тип документа.
+      </para>
+    </listitem>
+
+    <listitem>
+      <para><guibutton>Используется в разделах</guibutton>. Список
+        разделов системы, в которых используется данный тип документа.
+        Этот список зависит от того, как используется документ в разделе (как документ, как
+        документ-подтверждение, как документ-основание или как контракт - на
+        соответствующих закладках).
+      </para>
+    </listitem>
+
+    <!-- <listitem><para>После того, как Вы выбрали разделы системы, необходимо
+    нажать кнопку <guibutton>Сохранить связи</guibutton>.</para></listitem>  -->
+  </itemizedlist>
+
+  <para>После того, как указаны основные параметры типа документа, необходимо
+    настроить его<link linkend="003dp">документооборот</link>.
+  </para>
+
+</chapter>

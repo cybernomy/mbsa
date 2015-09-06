@@ -18,15 +18,16 @@ import com.mg.merp.baiengine.support.Messages;
 
 /**
  * Класс ИС указывающий о проблемах создания реализации BAi
- * 
+ *
  * @author Oleg V. Safonov
- * @version $Id: BAiImplementationInstantiationException.java,v 1.2 2008/10/28 13:13:57 safonov Exp $
+ * @version $Id: BAiImplementationInstantiationException.java,v 1.2 2008/10/28 13:13:57 safonov Exp
+ *          $
  */
 @javax.ejb.ApplicationException
 public class BAiImplementationInstantiationException extends BusinessAddinException {
 
-	public BAiImplementationInstantiationException(Throwable cause) {
-		super(Messages.getInstance().getMessage(Messages.BAI_IMPLEMENTATION_INSTANTIATIAN_ERROR), cause);
-	}
+  public BAiImplementationInstantiationException(Throwable cause) {
+    super(Messages.getInstance().getMessage(Messages.BAI_IMPLEMENTATION_INSTANTIATIAN_ERROR), cause);
+  }
 
 }

@@ -13,15 +13,16 @@
 <!-- $Id: OvrNormSpecMacros.xml,v 1.2 2006/04/24 08:28:08 safonov Exp $ -->
 
 <jfd:columns xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
-	<jfd:column fieldName="ID" title="Идентификатор" />
-	<jfd:column fieldName="OVR_NORM_SPEC_NAME" title="Наименование позиции спецификации нормы выдачи" />
-	<jfd:column fieldName="SHELFLIFE" title="Срок использования" />
-	<jfd:column fieldName="SHELFLIFE_MEAS" title="ЕИ срока использования" />
-	<jfd:column fieldName="QUANTITY" title="Количество" />
-	<jfd:column fieldName="MEASURE_UPCODE" title="ЕИ" />
-	<jfd:column fieldName="ISDINCH" title="Подлежит погашению" />
-	<jfd:column fieldName="ISPERIODIC" title="Периодичность выдачи" />
-	<jfd:column fieldName="ISBASIC" title="Тип выдачи" />
-	<jfd:column fieldName="DOC_NAME" title="Каким документом предусмотрено" />
-	<jfd:column fieldName="DINCH_FORMULA" title="Формула для расчета суммы погашения" />			
+  <jfd:column fieldName="ID" title="Идентификатор"/>
+  <jfd:column fieldName="OVR_NORM_SPEC_NAME"
+              title="Наименование позиции спецификации нормы выдачи"/>
+  <jfd:column fieldName="SHELFLIFE" title="Срок использования"/>
+  <jfd:column fieldName="SHELFLIFE_MEAS" title="ЕИ срока использования"/>
+  <jfd:column fieldName="QUANTITY" title="Количество"/>
+  <jfd:column fieldName="MEASURE_UPCODE" title="ЕИ"/>
+  <jfd:column fieldName="ISDINCH" title="Подлежит погашению"/>
+  <jfd:column fieldName="ISPERIODIC" title="Периодичность выдачи"/>
+  <jfd:column fieldName="ISBASIC" title="Тип выдачи"/>
+  <jfd:column fieldName="DOC_NAME" title="Каким документом предусмотрено"/>
+  <jfd:column fieldName="DINCH_FORMULA" title="Формула для расчета суммы погашения"/>
 </jfd:columns>

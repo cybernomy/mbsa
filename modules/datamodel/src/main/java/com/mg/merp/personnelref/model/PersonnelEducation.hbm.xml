@@ -1,52 +1,54 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.personnelref.model.PrefIsAdditionalEducation" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.personnelref.model.PrefIsAdditionalEducation</param>
-	</typedef>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <typedef name="com.mg.merp.personnelref.model.PrefIsAdditionalEducation"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.personnelref.model.PrefIsAdditionalEducation</param>
+  </typedef>
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.personnelref.model.PersonnelEducation" table="PREF_PERSONNEL_EDUCATION">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">PREF_PERS_EDUCATION_ID_GEN</param>
       </generator>
     </id>
-    <many-to-one name="AdditionalEducationKind" class="com.mg.merp.personnelref.model.AdditionalEducationKind">
-      <column name="ADDITIONAL_EDUCATION_KIND_ID" not-null="false" />
+    <many-to-one name="AdditionalEducationKind"
+                 class="com.mg.merp.personnelref.model.AdditionalEducationKind">
+      <column name="ADDITIONAL_EDUCATION_KIND_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Speciality" class="com.mg.merp.personnelref.model.Speciality">
-      <column name="SPECIALITY_ID" not-null="false" />
+      <column name="SPECIALITY_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Personnel" class="com.mg.merp.personnelref.model.Personnel">
-      <column name="PERSONNEL_ID" not-null="false" />
+      <column name="PERSONNEL_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <property name="InstitutionName" type="java.lang.String">
-      <column name="INSTITUTION_NAME" length="80" not-null="true" sql-type="VARCHAR" />
+      <column name="INSTITUTION_NAME" length="80" not-null="true" sql-type="VARCHAR"/>
     </property>
     <property name="DiplomaQualification" type="java.lang.String">
-      <column name="DIPLOMA_QUALIFICATION" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="DIPLOMA_QUALIFICATION" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="DiplomaNumber" type="java.lang.String">
-      <column name="DIPLOMA_NUMBER" length="20" not-null="false" sql-type="CHAR" />
+      <column name="DIPLOMA_NUMBER" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="DiplomaDate" type="java.util.Date">
-      <column name="DIPLOMA_DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="DIPLOMA_DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="GraduationYear" type="java.lang.Integer">
-      <column name="GRADUATION_YEAR" not-null="false" sql-type="INTEGER" />
+      <column name="GRADUATION_YEAR" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="IsAdditional" type="com.mg.merp.personnelref.model.PrefIsAdditionalEducation">
-      <column name="IS_ADDITIONAL" not-null="false" sql-type="SMALLINT" />
+      <column name="IS_ADDITIONAL" not-null="false" sql-type="SMALLINT"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

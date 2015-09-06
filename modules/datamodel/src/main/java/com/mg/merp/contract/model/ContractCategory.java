@@ -14,68 +14,68 @@
  */
 package com.mg.merp.contract.model;
 
-import java.io.Serializable;
-
 import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.service.PersistentObjectHibernate;
 
+import java.io.Serializable;
+
 /**
  * Бизнес-компонент "Категория договора"
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: ContractCategory.java,v 1.1 2007/09/17 12:15:48 alikaev Exp $
  */
 @DataItemName("Contract.ContractCategory")
 public class ContractCategory extends PersistentObjectHibernate implements Serializable {
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private String Code;
-	
-	private String Name;
+  private String Code;
 
-	public ContractCategory() {
-	}
+  private String Name;
 
-	public ContractCategory(int id) {
-		Id = id;
-	}
+  public ContractCategory() {
+  }
 
-	@DataItemName("Contract.Code")
-	public String getCode() {
-		return Code;
-	}
+  public ContractCategory(int id) {
+    Id = id;
+  }
 
-	public void setCode(String code) {
-		Code = code;
-	}
+  @DataItemName("Contract.Code")
+  public String getCode() {
+    return Code;
+  }
 
-	@DataItemName("ID")
-	public int getId() {
-		return Id;
-	}
+  public void setCode(String code) {
+    Code = code;
+  }
 
-	public void setId(int id) {
-		Id = id;
-	}
+  @DataItemName("ID")
+  public int getId() {
+    return Id;
+  }
 
-	@DataItemName("Contract.Name")
-	public String getName() {
-		return Name;
-	}
+  public void setId(int id) {
+    Id = id;
+  }
 
-	public void setName(String name) {
-		Name = name;
-	}
+  @DataItemName("Contract.Name")
+  public String getName() {
+    return Name;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return SysClient;
-	}
+  public void setName(String name) {
+    Name = name;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient sysClient) {
-		SysClient = sysClient;
-	}
-	
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return SysClient;
+  }
+
+  public void setSysClient(com.mg.merp.core.model.SysClient sysClient) {
+    SysClient = sysClient;
+  }
+
 }

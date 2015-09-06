@@ -22,34 +22,33 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
  * Контроллер формы условий отбора авансовых отчетов
- * 
+ *
  * @author leonova
  * @version $Id: AdvanceRepHeadRest.java,v 1.4 2006/12/19 12:43:33 leonova Exp $
- *
  */
 public class AdvanceRepHeadRest extends GoodsDocumentRest {
 
-	public AdvanceRepHeadRest() {
-		contractorFromKinds = new String[] {ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-		contractorToKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_ORGUNIT};
+  @DataItemName("Account.Adv.Company")
+  protected Contractor companyCode = null;
 
-	}
+  public AdvanceRepHeadRest() {
+    contractorFromKinds = new String[]{ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+    contractorToKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_ORGUNIT};
 
-	@DataItemName("Account.Adv.Company")
-	protected Contractor companyCode = null;
-		
-	@Override
-	protected void doClearRestrictionItem() {
-		super.doClearRestrictionItem();
-		this.companyCode = null;
-	}
+  }
 
-	/**
-	 * @return Returns the companyCode.
-	 */
-	protected Contractor getCompanyCode() {
-		return companyCode;
-	}
+  @Override
+  protected void doClearRestrictionItem() {
+    super.doClearRestrictionItem();
+    this.companyCode = null;
+  }
+
+  /**
+   * @return Returns the companyCode.
+   */
+  protected Contractor getCompanyCode() {
+    return companyCode;
+  }
 
 
 }

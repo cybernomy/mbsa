@@ -21,13 +21,13 @@ import java.util.Date;
  * @version $Id: DocHeadStateBrowseItem.java,v 1.1 2006/03/01 15:03:50 safonov Exp $
  */
 public class DocHeadStateBrowseItem {
-	public int id;
-	public double readySum;
-	public String docSection;
-	public String document;
-	public Date dateTime;
-	public String userName;
-	public Integer data1;
-	public Integer data2;
-	public boolean createDoc;
+  public int id;
+  public double readySum;
+  public String docSection;
+  public String document;
+  public Date dateTime;
+  public String userName;
+  public Integer data1;
+  public Integer data2;
+  public boolean createDoc;
 }

@@ -13,8 +13,12 @@
 
 <!-- $Id: DefaultMaintenanceFooterMacros.xml,v 1.4 2007/03/01 14:47:34 safonov Exp $ -->
 
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="buttons" layout="jfd:box" alignment="expand_top">
-	<jfd:filler id="buttonsFiller" alignment="expand_top" type="horizontalGlue" />
-	<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#OkButton" actionListener="Save" />
-	<jfd:button id="CancelButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CloseButton" actionListener="Cancel" />
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="buttons" layout="jfd:box"
+               alignment="expand_top">
+  <jfd:filler id="buttonsFiller" alignment="expand_top" type="horizontalGlue"/>
+  <jfd:button id="OkButton" alignment="right_top"
+              text="resource://com.mg.framework.resources.messages#OkButton" actionListener="Save"/>
+  <jfd:button id="CancelButton" alignment="right_top"
+              text="resource://com.mg.framework.resources.messages#CloseButton"
+              actionListener="Cancel"/>
 </jfd:container>

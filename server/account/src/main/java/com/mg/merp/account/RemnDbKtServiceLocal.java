@@ -17,12 +17,10 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.RemnDbKt;
 
 /**
- * 
  * @author leonova
  * @version $Id: RemnDbKtServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface RemnDbKtServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<RemnDbKt, Integer>, com.mg.merp.account.Remn
-{
+    extends com.mg.framework.api.DataBusinessObjectService<RemnDbKt, Integer>, com.mg.merp.account.Remn {
 
 }

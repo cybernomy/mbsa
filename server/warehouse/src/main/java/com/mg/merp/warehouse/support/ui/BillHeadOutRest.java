@@ -19,15 +19,13 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 
 /**
- * 
  * @author leonova
  * @version $Id: BillHeadOutRest.java,v 1.4 2006/12/20 13:15:50 leonova Exp $
- *
  */
-public class BillHeadOutRest extends GoodsDocumentRest {	
-	
-	public BillHeadOutRest() {
-		contractorThroughKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-	}
+public class BillHeadOutRest extends GoodsDocumentRest {
+
+  public BillHeadOutRest() {
+    contractorThroughKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+  }
 
 }

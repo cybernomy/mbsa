@@ -13,7 +13,9 @@
 
 <!-- $Id: ShowModelDocumentMacros.xml,v 1.2 2006/09/20 10:53:10 safonov Exp $ -->
 
-<jfd:popupMenu xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
-	<jfd:separator />
-	<jfd:menuItem id="showDocumentPattern" text="resource://com.mg.merp.document.resources.formelements#Document.ShowDocumentPattern" actionListener="ShowDocumentPattern" />
+<jfd:popupMenu xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
+  <jfd:separator/>
+  <jfd:menuItem id="showDocumentPattern"
+                text="resource://com.mg.merp.document.resources.formelements#Document.ShowDocumentPattern"
+                actionListener="ShowDocumentPattern"/>
 </jfd:popupMenu>	

@@ -17,12 +17,10 @@ package com.mg.merp.finance;
 import com.mg.merp.finance.model.TurnFeature;
 
 /**
- * 
  * @author leonova
  * @version $Id: TurnFeatFlatServiceLocal.java,v 1.1 2006/03/14 11:49:48 safonov Exp $
  */
 public interface TurnFeatFlatServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<TurnFeature, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<TurnFeature, Integer> {
 
 }

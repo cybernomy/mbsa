@@ -22,29 +22,25 @@ import com.mg.merp.personnelref.model.PersonnelConfig;
 
 /**
  * Класс помощник конфигурации модуля "Управление персоналом"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ConfigurationHelper.java,v 1.1 2007/03/26 10:46:27 safonov Exp $
  */
 public class ConfigurationHelper {
 
-	/**
-	 * получить конфигурацию модуля
-	 * 
-	 * @return
-	 */
-	public static PersonnelConfig getConfiguration() {
-		return ServerUtils.getPersistentManager().find(PersonnelConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
-	}
-	
-	/**
-	 * получить конфигурацию документов данного модуля
-	 * 
-	 * @return
-	 */
-	public static Configuration getDocumentConfiguration() {
-		PersonnelConfig cfg = getConfiguration();
-		return new ConfigurationImpl(cfg.getBaseCurrency(), cfg.getNatCurrency(), cfg.getCurrencyPrec(), cfg.getCurRateAuthority(), cfg.getCurRateType());
-	}
+  /**
+   * получить конфигурацию модуля
+   */
+  public static PersonnelConfig getConfiguration() {
+    return ServerUtils.getPersistentManager().find(PersonnelConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
+  }
+
+  /**
+   * получить конфигурацию документов данного модуля
+   */
+  public static Configuration getDocumentConfiguration() {
+    PersonnelConfig cfg = getConfiguration();
+    return new ConfigurationImpl(cfg.getBaseCurrency(), cfg.getNatCurrency(), cfg.getCurrencyPrec(), cfg.getCurRateAuthority(), cfg.getCurRateType());
+  }
 
 }

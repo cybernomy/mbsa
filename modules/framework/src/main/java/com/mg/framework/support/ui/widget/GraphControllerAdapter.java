@@ -14,43 +14,43 @@
  */
 package com.mg.framework.support.ui.widget;
 
-import java.util.List;
-
 import com.mg.framework.support.ui.widget.graph.GraphElement;
+
+import java.util.List;
 
 /**
  * Адаптер визуального элемента Граф
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: GraphControllerAdapter.java,v 1.2 2006/11/21 15:39:15 safonov Exp $
  */
 public interface GraphControllerAdapter {
-	/**
-	 * получить список элементов графа
-	 * 
-	 * @return	список элементов
-	 */
-	List<? extends GraphElement> getElements();
-	
-	/**
-	 * установить слушатель модели графа
-	 * 
-	 * @param listener	слушатель
-	 */
-	void addGraphModelListener(GraphModelListener listener);
-	
-	/**
-	 * отметить элементы графа
-	 * 
-	 * @param cells	элементы графа
-	 * @param areNewRoots	признаки новых элементов
-	 */
-	void selectCells(GraphElement[] cells, boolean[] areNewRoots);
-	
-	/**
-	 * отправка сообщения об изменении элемента графа
-	 * 
-	 * @param cell	элемент графа
-	 */
-	void cellChanged(GraphElement cell);
+  /**
+   * получить список элементов графа
+   *
+   * @return список элементов
+   */
+  List<? extends GraphElement> getElements();
+
+  /**
+   * установить слушатель модели графа
+   *
+   * @param listener слушатель
+   */
+  void addGraphModelListener(GraphModelListener listener);
+
+  /**
+   * отметить элементы графа
+   *
+   * @param cells       элементы графа
+   * @param areNewRoots признаки новых элементов
+   */
+  void selectCells(GraphElement[] cells, boolean[] areNewRoots);
+
+  /**
+   * отправка сообщения об изменении элемента графа
+   *
+   * @param cell элемент графа
+   */
+  void cellChanged(GraphElement cell);
 }

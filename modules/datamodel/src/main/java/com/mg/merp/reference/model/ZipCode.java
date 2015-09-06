@@ -22,117 +22,122 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.ZipCode")
 public class ZipCode extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.reference.model.District District;
+  private com.mg.merp.reference.model.District District;
 
-	private com.mg.merp.reference.model.Country Country;
+  private com.mg.merp.reference.model.Country Country;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.reference.model.Place Place;
+  private com.mg.merp.reference.model.Place Place;
 
-	private com.mg.merp.reference.model.Region Region;
+  private com.mg.merp.reference.model.Region Region;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public ZipCode() {
-	}
+  /**
+   * default constructor
+   */
+  public ZipCode() {
+  }
 
-	/** constructor with id */
-	public ZipCode(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public ZipCode(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.reference.model.District getDistrict() {
-		return this.District;
-	}
+  /**
+   *
+   */
 
-	public void setDistrict(com.mg.merp.reference.model.District District) {
-		this.District = District;
-	}
+  public com.mg.merp.reference.model.District getDistrict() {
+    return this.District;
+  }
 
-	/**
-	 * 
-	 */
+  public void setDistrict(com.mg.merp.reference.model.District District) {
+    this.District = District;
+  }
 
-	public com.mg.merp.reference.model.Country getCountry() {
-		return this.Country;
-	}
+  /**
+   *
+   */
 
-	public void setCountry(com.mg.merp.reference.model.Country Country) {
-		this.Country = Country;
-	}
+  public com.mg.merp.reference.model.Country getCountry() {
+    return this.Country;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCountry(com.mg.merp.reference.model.Country Country) {
+    this.Country = Country;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public com.mg.merp.reference.model.Place getPlace() {
-		return this.Place;
-	}
+  /**
+   *
+   */
 
-	public void setPlace(com.mg.merp.reference.model.Place Place) {
-		this.Place = Place;
-	}
+  public com.mg.merp.reference.model.Place getPlace() {
+    return this.Place;
+  }
 
-	/**
-	 * 
-	 */
+  public void setPlace(com.mg.merp.reference.model.Place Place) {
+    this.Place = Place;
+  }
 
-	public com.mg.merp.reference.model.Region getRegion() {
-		return this.Region;
-	}
+  /**
+   *
+   */
 
-	public void setRegion(com.mg.merp.reference.model.Region Region) {
-		this.Region = Region;
-	}
+  public com.mg.merp.reference.model.Region getRegion() {
+    return this.Region;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Address.ZipCode")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  public void setRegion(com.mg.merp.reference.model.Region Region) {
+    this.Region = Region;
+  }
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Address.ZipCode")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
+
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 }

@@ -13,9 +13,15 @@
 
 <!-- $Id: ContractDocumentAttributeMacros.xml,v 1.4 2007/11/16 14:42:37 sharapov Exp $ -->
 
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="contractDocument" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.ContractDocAttribute" >
-	<jfd:field id="ContractType" showLabel="false" alignment="left_expand"/>
-	<jfd:field id="ContractNumber" showLabel="false" alignment="expand_expand"/>			
-	<jfd:field id="ContractDate" showLabel="false" alignment="right_expand"/>
-	<jfd:button id="ViewOrChooseContract" alignment="right_expand" icon="com/mg/framework/resources/viewbuttonicon.png" toolTip="resource://com.mg.merp.document.resources.formelements#ViewOrChooseContract.ToolTip" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ViewOrChooseContract" />
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="contractDocument" layout="jfd:box"
+               longField="true"
+               label="resource://com.mg.merp.document.resources.formelements#Document.ContractDocAttribute">
+  <jfd:field id="ContractType" showLabel="false" alignment="left_expand"/>
+  <jfd:field id="ContractNumber" showLabel="false" alignment="expand_expand"/>
+  <jfd:field id="ContractDate" showLabel="false" alignment="right_expand"/>
+  <jfd:button id="ViewOrChooseContract" alignment="right_expand"
+              icon="com/mg/framework/resources/viewbuttonicon.png"
+              toolTip="resource://com.mg.merp.document.resources.formelements#ViewOrChooseContract.ToolTip"
+              minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+              actionListener="ViewOrChooseContract"/>
 </jfd:container>

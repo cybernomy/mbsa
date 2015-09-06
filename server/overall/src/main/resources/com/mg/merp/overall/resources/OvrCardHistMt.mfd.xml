@@ -12,61 +12,81 @@
 
 <!-- $Id: OvrCardHistMt.mfd.xml,v 1.5 2008/06/30 04:23:06 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.overall.support.ui.OvrCardHistMt" title="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.FormMt.Title" helpTopic="overall#ovrhist_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.overall.support.ui.OvrCardHistMt"
+          title="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.FormMt.Title"
+          helpTopic="overall#ovrhist_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
- 		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_expand" tabTitle="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Total.Tab" >			
- 			<jfd:border style="bevel" type="raised" />
- 			<jfd:field id="CatalogGroupsType" />
- 			<jfd:field id="Catalog" />
- 			<jfd:field id="IsPeriodic" />
- 			<jfd:field id="IsBasic" sameLine="true" /> 			 			
- 			<jfd:field id="Returnable" />		
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Total.Tab">
+      <jfd:border style="bevel" type="raised"/>
+      <jfd:field id="CatalogGroupsType"/>
+      <jfd:field id="Catalog"/>
+      <jfd:field id="IsPeriodic"/>
+      <jfd:field id="IsBasic" sameLine="true"/>
+      <jfd:field id="Returnable"/>
 
-			<jfd:field id="ShelfLife" showLabel="false"  fieldGroup="resource://com.mg.merp.overall.resources.formelements#OvrCard.Term"/>
-			<jfd:field id="ShelfLifeMeas" showLabel="false" sameLine="true" />
- 			<jfd:field id="Quantity" fieldGroup=" "/>
- 			<jfd:field id="NdeCost" />
- 			<jfd:field id="NdeSumma" sameLine="true"/> 			
- 			<jfd:field id="Deterioration" /> 		
- 			<jfd:field id="DepreciableValue" sameLine="true"/>
- 			<jfd:field id="CommonSummaForDinch" />	
- 			<jfd:field id="DinchedSumma" sameLine="true"/>	
- 			<jfd:field id="RestOfDinchSumma" />	
- 			<jfd:field id="ArrearSumma" sameLine="true"/>	
-		</jfd:container>
-		<jfd:container id="extraFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.ExtraFields.Tab" >						
-			<jfd:field id="GiveDate" alignment="left_top" text="resource://com.mg.merp.overall.resources.formelements#OvrCardHistMt.Date" fieldGroup="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Give"/> 		
-			<jfd:container id="giveDocument" layout="jfd:box" longField="true" alignment="expand_top" label="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Document.DocAttribute" >
-				<jfd:field id="GiveDocType" showLabel="false" alignment="left_expand" readOnly="true"/>
-				<jfd:field id="GiveDocNumber" showLabel="false" alignment="expand_expand" readOnly="true" longField="true"/>			
-				<jfd:field id="GiveDocDate" showLabel="false" alignment="right_expand" readOnly="true"/>				
-			</jfd:container>		
-			<jfd:field id="ReadOutDate" alignment="left_top" text="resource://com.mg.merp.overall.resources.formelements#OvrCardHistMt.Date" fieldGroup="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Expl"/> 		
-			<jfd:container id="explDocument" layout="jfd:box" longField="true" alignment="expand_top" label="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Document.DocAttribute" >
-				<jfd:field id="ExplDocType" showLabel="false" alignment="left_expand" readOnly="true"/>
-				<jfd:field id="ExplDocNumber" showLabel="false" alignment="expand_expand" readOnly="true" longField="true"/>			
-				<jfd:field id="ExplDocDate" showLabel="false" alignment="right_expand" readOnly="true" />				
-			</jfd:container>
- 			<jfd:field id="RemoveType" fieldGroup="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Remove"/>	
-			<jfd:container id="removeDates" layout="jfd:defaultMtLayout" alignment="expand_expand">
-				<jfd:field id="RemoveDate" text="resource://com.mg.merp.overall.resources.formelements#OvrCardHistMt.Date" /> 		
-				<jfd:field id="PlanRemoveDate" sameLine="true" readOnly="true" text="resource://com.mg.merp.overall.resources.formelements#OvrCardHistMt.PlanRemoveDate" />
-			</jfd:container>		
-			<jfd:container id="removeDocument" layout="jfd:box" longField="true" alignment="expand_top" label="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Document.DocAttribute" >
-				<jfd:field id="RemoveDocType" showLabel="false" alignment="left_expand" readOnly="true"/>
-				<jfd:field id="RemoveDocNumber" showLabel="false" alignment="expand_expand" readOnly="true" longField="true"/>			
-				<jfd:field id="RemoveDocDate" showLabel="false" alignment="right_expand" readOnly="true"/>				
-			</jfd:container>			
-		</jfd:container>
+      <jfd:field id="ShelfLife" showLabel="false"
+                 fieldGroup="resource://com.mg.merp.overall.resources.formelements#OvrCard.Term"/>
+      <jfd:field id="ShelfLifeMeas" showLabel="false" sameLine="true"/>
+      <jfd:field id="Quantity" fieldGroup=" "/>
+      <jfd:field id="NdeCost"/>
+      <jfd:field id="NdeSumma" sameLine="true"/>
+      <jfd:field id="Deterioration"/>
+      <jfd:field id="DepreciableValue" sameLine="true"/>
+      <jfd:field id="CommonSummaForDinch"/>
+      <jfd:field id="DinchedSumma" sameLine="true"/>
+      <jfd:field id="RestOfDinchSumma"/>
+      <jfd:field id="ArrearSumma" sameLine="true"/>
+    </jfd:container>
+    <jfd:container id="extraFields" layout="jfd:defaultMtLayout" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.ExtraFields.Tab">
+      <jfd:field id="GiveDate" alignment="left_top"
+                 text="resource://com.mg.merp.overall.resources.formelements#OvrCardHistMt.Date"
+                 fieldGroup="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Give"/>
+      <jfd:container id="giveDocument" layout="jfd:box" longField="true" alignment="expand_top"
+                     label="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Document.DocAttribute">
+        <jfd:field id="GiveDocType" showLabel="false" alignment="left_expand" readOnly="true"/>
+        <jfd:field id="GiveDocNumber" showLabel="false" alignment="expand_expand" readOnly="true"
+                   longField="true"/>
+        <jfd:field id="GiveDocDate" showLabel="false" alignment="right_expand" readOnly="true"/>
+      </jfd:container>
+      <jfd:field id="ReadOutDate" alignment="left_top"
+                 text="resource://com.mg.merp.overall.resources.formelements#OvrCardHistMt.Date"
+                 fieldGroup="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Expl"/>
+      <jfd:container id="explDocument" layout="jfd:box" longField="true" alignment="expand_top"
+                     label="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Document.DocAttribute">
+        <jfd:field id="ExplDocType" showLabel="false" alignment="left_expand" readOnly="true"/>
+        <jfd:field id="ExplDocNumber" showLabel="false" alignment="expand_expand" readOnly="true"
+                   longField="true"/>
+        <jfd:field id="ExplDocDate" showLabel="false" alignment="right_expand" readOnly="true"/>
+      </jfd:container>
+      <jfd:field id="RemoveType"
+                 fieldGroup="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Remove"/>
+      <jfd:container id="removeDates" layout="jfd:defaultMtLayout" alignment="expand_expand">
+        <jfd:field id="RemoveDate"
+                   text="resource://com.mg.merp.overall.resources.formelements#OvrCardHistMt.Date"/>
+        <jfd:field id="PlanRemoveDate" sameLine="true" readOnly="true"
+                   text="resource://com.mg.merp.overall.resources.formelements#OvrCardHistMt.PlanRemoveDate"/>
+      </jfd:container>
+      <jfd:container id="removeDocument" layout="jfd:box" longField="true" alignment="expand_top"
+                     label="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Document.DocAttribute">
+        <jfd:field id="RemoveDocType" showLabel="false" alignment="left_expand" readOnly="true"/>
+        <jfd:field id="RemoveDocNumber" showLabel="false" alignment="expand_expand" readOnly="true"
+                   longField="true"/>
+        <jfd:field id="RemoveDocDate" showLabel="false" alignment="right_expand" readOnly="true"/>
+      </jfd:container>
+    </jfd:container>
 
-		<jfd:maintenanceTable id="cancellation" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Cancellation.Tab">
-		</jfd:maintenanceTable>	
-			
-	</jfd:container>
+    <jfd:maintenanceTable id="cancellation" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.overall.resources.formelements#OvrCardHist.Cancellation.Tab">
+    </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

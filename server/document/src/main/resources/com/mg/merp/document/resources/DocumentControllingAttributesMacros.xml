@@ -13,6 +13,6 @@
 
 <!-- $Id: DocumentControllingAttributesMacros.xml,v 1.1 2007/09/20 14:54:44 safonov Exp $ -->
 
-<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
-	<jfd:field id="SysCompany" />
+<jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
+  <jfd:field id="SysCompany"/>
 </jfd:wrap-macros>

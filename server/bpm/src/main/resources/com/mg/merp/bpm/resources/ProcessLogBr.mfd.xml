@@ -13,24 +13,31 @@
 
 <!-- $Id: ProcessLogBr.mfd.xml,v 1.2 2007/06/01 17:04:32 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.bpm.support.ui.ProcessLogBr" title="Process Logs" orientation="ver" helpTopic="bpm#pr_instance_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.bpm.support.ui.ProcessLogBr" title="Process Logs"
+          orientation="ver" helpTopic="bpm#pr_instance_html">
 
-	<jfd:toolBar id="toolBar" alignment="expand_top">
-		<jfd:button id="refreshButton" text="resource://com.mg.merp.bpm.resources.formelements#Refresh" actionListener="Refresh" />
-	</jfd:toolBar>
+  <jfd:toolBar id="toolBar" alignment="expand_top">
+    <jfd:button id="refreshButton" text="resource://com.mg.merp.bpm.resources.formelements#Refresh"
+                actionListener="Refresh"/>
+  </jfd:toolBar>
 
-	<jfd:table id="table" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
-		<jfd:columns>
-			<jfd:column fieldName="Id" title="resource://com.mg.merp.bpm.resources.formelements#Id" />
-			<jfd:column fieldName="Name" title="resource://com.mg.merp.bpm.resources.formelements#Processes.Name" />
-			<jfd:column fieldName="Date" title="resource://com.mg.merp.bpm.resources.formelements#ProcessesLogs.Date" />
-			<jfd:column fieldName="Start" title="resource://com.mg.merp.bpm.resources.formelements#ProcessesInstance.Start" />
-			<jfd:column fieldName="End" title="resource://com.mg.merp.bpm.resources.formelements#ProcessesInstance.End" />
-		</jfd:columns>
-		<!-- jfd:popupMenu>
-			<jfd:menuItem id="startTask" text="Start Task" actionListener="StartTask" />
-			<jfd:menuItem id="endTask" text="End Task" actionListener="EndTask" />
-		</jfd:popupMenu-->
-	</jfd:table>
+  <jfd:table id="table" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
+    <jfd:columns>
+      <jfd:column fieldName="Id" title="resource://com.mg.merp.bpm.resources.formelements#Id"/>
+      <jfd:column fieldName="Name"
+                  title="resource://com.mg.merp.bpm.resources.formelements#Processes.Name"/>
+      <jfd:column fieldName="Date"
+                  title="resource://com.mg.merp.bpm.resources.formelements#ProcessesLogs.Date"/>
+      <jfd:column fieldName="Start"
+                  title="resource://com.mg.merp.bpm.resources.formelements#ProcessesInstance.Start"/>
+      <jfd:column fieldName="End"
+                  title="resource://com.mg.merp.bpm.resources.formelements#ProcessesInstance.End"/>
+    </jfd:columns>
+    <!-- jfd:popupMenu>
+      <jfd:menuItem id="startTask" text="Start Task" actionListener="StartTask" />
+      <jfd:menuItem id="endTask" text="End Task" actionListener="EndTask" />
+    </jfd:popupMenu-->
+  </jfd:table>
 
 </jfd:form>

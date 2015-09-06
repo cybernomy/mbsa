@@ -22,93 +22,98 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("CRM.ActivityKind")
 public class ActivityKind extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String Name;
+  private java.lang.String Name;
 
-	private java.util.Set SetOfCrmRelation;
+  private java.util.Set SetOfCrmRelation;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public ActivityKind() {
-	}
+  /**
+   * default constructor
+   */
+  public ActivityKind() {
+  }
 
-	/** constructor with id */
-	public ActivityKind(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public ActivityKind(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	@DataItemName("CRM.Code")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  /**
+   *
+   */
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  @DataItemName("CRM.Code")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	@DataItemName("CRM.Name")
-	public java.lang.String getName() {
-		return this.Name;
-	}
+  /**
+   *
+   */
 
-	public void setName(java.lang.String Name) {
-		this.Name = Name;
-	}
+  @DataItemName("CRM.Name")
+  public java.lang.String getName() {
+    return this.Name;
+  }
 
-	/**
-	 * 
-	 */
+  public void setName(java.lang.String Name) {
+    this.Name = Name;
+  }
 
-	public java.util.Set getSetOfCrmRelation() {
-		return this.SetOfCrmRelation;
-	}
+  /**
+   *
+   */
 
-	public void setSetOfCrmRelation(java.util.Set SetOfCrmRelation) {
-		this.SetOfCrmRelation = SetOfCrmRelation;
-	}
+  public java.util.Set getSetOfCrmRelation() {
+    return this.SetOfCrmRelation;
+  }
+
+  public void setSetOfCrmRelation(java.util.Set SetOfCrmRelation) {
+    this.SetOfCrmRelation = SetOfCrmRelation;
+  }
 
 }

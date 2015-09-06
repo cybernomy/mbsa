@@ -22,9 +22,9 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
  * @version $Id: CashDocumentOutMt.java,v 1.2 2007/01/13 10:44:42 safonov Exp $
  */
 public class CashDocumentOutMt extends DocumentMaintenanceForm {
-	
-	public CashDocumentOutMt() {
-		contractorToKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-		contractorFromKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
-	}
+
+  public CashDocumentOutMt() {
+    contractorToKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+    contractorFromKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+  }
 }

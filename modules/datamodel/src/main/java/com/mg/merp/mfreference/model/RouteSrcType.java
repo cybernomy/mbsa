@@ -19,27 +19,28 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Тип источника товара
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: RouteSrcType.java,v 1.2 2007/07/30 10:25:11 safonov Exp $
  */
 @DataItemName("MfReference.RouteSrcType")
 public enum RouteSrcType {
-	/**
-	 * Закупка
-	 */
-	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Purchase")
-	PURCHASE,
-	
-	/**
-	 * Производство
-	 */
-	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Manufacture")
-	MANUFACTURE,
-		
-	/**
-	 * Перемещение
-	 */
-	@EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Transfer")
-	TRANSFER
+  /**
+   * Закупка
+   */
+  @EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Purchase")
+  PURCHASE,
+
+  /**
+   * Производство
+   */
+  @EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Manufacture")
+  MANUFACTURE,
+
+  /**
+   * Перемещение
+   */
+  @EnumConstantText("resource://com.mg.merp.mfreference.resources.dataitemlabels#SrcType.Transfer")
+  TRANSFER
 
 }

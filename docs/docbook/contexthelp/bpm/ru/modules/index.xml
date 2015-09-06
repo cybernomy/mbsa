@@ -14,15 +14,15 @@
 <!-- $Id: index.xml,v 1.1 2007/06/01 16:53:35 konyashkina Exp $ -->
 
 <index version="1.0">
- 
-  <indexitem text="Бизнес-процессы"> 
-    <indexentry text="Бизнес-процессы" target="bpm_html" />   
+
+  <indexitem text="Бизнес-процессы">
+    <indexentry text="Бизнес-процессы" target="bpm_html"/>
   </indexitem>
 
   <indexitem text="Обеспечение и работа процесса">
-     <indexentry text="Ресурсы" target="resource_html" />
-     <indexentry text="Экземпляры процессов" target="pr_instance_html" />
-     <indexentry text="Назначения" target="task_html" /> 
-  </indexitem> 
-  
+    <indexentry text="Ресурсы" target="resource_html"/>
+    <indexentry text="Экземпляры процессов" target="pr_instance_html"/>
+    <indexentry text="Назначения" target="task_html"/>
+  </indexitem>
+
 </index>

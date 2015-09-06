@@ -14,14 +14,14 @@
 <!-- $Id: toc.xml,v 1.1 2006/11/24 13:10:06 konyashkina Exp $ -->
 
 <toc version="1.0">
-  
-   <tocitem text="Документы на отпуск">
-	<tocitem text="Содержание документа" target="rtlhead_html" />
-	<tocitem text="Закладка Дополнительно" target="rtladd_html" />
-	<tocitem text="Контрагенты" target="rtlcntr_html" />
-	<tocitem text="Спецификации документа на отпуск" target="rtlspec_html" />
-	<tocitem text="Дополнительные сведения о спецификации" target="rtlspecadd_html" />
-	<tocitem text="Налоги спецификации" target="rtlspectax_html" />
-   </tocitem>
-  
+
+  <tocitem text="Документы на отпуск">
+    <tocitem text="Содержание документа" target="rtlhead_html"/>
+    <tocitem text="Закладка Дополнительно" target="rtladd_html"/>
+    <tocitem text="Контрагенты" target="rtlcntr_html"/>
+    <tocitem text="Спецификации документа на отпуск" target="rtlspec_html"/>
+    <tocitem text="Дополнительные сведения о спецификации" target="rtlspecadd_html"/>
+    <tocitem text="Налоги спецификации" target="rtlspectax_html"/>
+  </tocitem>
+
 </toc>

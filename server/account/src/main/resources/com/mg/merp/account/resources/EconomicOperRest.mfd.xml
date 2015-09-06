@@ -13,90 +13,133 @@
 
 <!-- $Id: EconomicOperRest.mfd.xml,v 1.6 2009/03/11 13:39:50 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.account.support.ui.EconomicOperRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.account.resources.formelements#Cond.EconomicOper" helpTopic="account#econoper_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.account.support.ui.EconomicOperRest" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.account.resources.formelements#Cond.EconomicOper"
+          helpTopic="account#econoper_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" alignment="expand_top" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title" >		
-	        <jfd:field id="dateFrom" />
-			<jfd:field id="dateTill" sameLine="true"/>
-			<jfd:field id="specMark" />
-			<jfd:container id="baseDocument" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.BaseDocAttribute" >
-				<jfd:field id="baseDocType" showLabel="false" alignment="left_expand"/>
-				<jfd:field id="baseDocNumber" showLabel="false" alignment="expand_expand"/>			
-				<jfd:field id="baseDocDate" showLabel="false" alignment="right_expand"/>				
-			</jfd:container>
-			<jfd:container id="document" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.Document" >
-				<jfd:field id="docType" showLabel="false" alignment="left_expand"/>
-				<jfd:field id="docNumber" showLabel="false" alignment="expand_expand"/>			
-				<jfd:field id="docDate" showLabel="false" alignment="right_expand" />				
-			</jfd:container>		
-			<jfd:container id="contractDocument" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.ContractDocAttribute" >
-				<jfd:field id="contractType" showLabel="false" alignment="left_expand"/>
-				<jfd:field id="contractNumber" showLabel="false" alignment="expand_expand"/>			
-				<jfd:field id="contractDate" showLabel="false" alignment="right_expand"/>				
-			</jfd:container>
-			<jfd:field id="fromSum" />
-			<jfd:field id="toSum" sameLine="true"/>				
-			<jfd:field id="fromCode" />
-			<jfd:field id="toCode" sameLine="true"/>			
-			<jfd:field id="catalogCode" />
-			<jfd:field id="catalogFolder" sameLine="true"/>			
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 													
-		</jfd:container>
- 		
-		<jfd:container id="split" layout="jfd:split" alignment="expand_expand" orientation="ver" tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperModel.Spec.Tab">
-			<jfd:container id="splitAcc" layout="jfd:split" alignment="expand_expand" orientation="hor">
-				<jfd:container id="tableDbBox" layout="jfd:box" columns="2" alignment="expand_expand">
-					<jfd:label id="labelDb" text="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.LabelDb" alignment="left_top" />
-					<jfd:button id="clearDb" text="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Clear" alignment="right_top" actionListener="ClearDb" />
-					<jfd:table id="tableDb" alignment="expand_expand" scroll="true" horizontalSpan="2" autoResize="subsequent_columns">
-					</jfd:table>
-				</jfd:container>
-				<jfd:container id="tableKtBox" layout="jfd:box" columns="2" alignment="expand_expand">
-					<jfd:label id="labelKt" text="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.LabelKt" alignment="left_top"/>
-					<jfd:button id="clearKt" text="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Clear" alignment="right_top" actionListener="ClearKt" />
-					<jfd:table id="tableKt" alignment="expand_expand" scroll="true" horizontalSpan="2" autoResize="subsequent_columns">
-					</jfd:table>
-				</jfd:container>
-			</jfd:container>
-			<jfd:container id="splitAnl" layout="jfd:split" alignment="expand_expand" orientation="hor">
-				<jfd:container id="anlDbBox" layout="jfd:box" columns="1" alignment="expand_expand">
-					<jfd:label id="labelAnlDb" text="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.LabelAnlDb"/>
-					<jfd:container id="anlDb" layout="jfd:tabbed" alignment="expand_expand" tabPlacement="top">
-						<jfd:table id="tableAnlDb1" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl1">
-						</jfd:table>
-						<jfd:table id="tableAnlDb2" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl2">
-						</jfd:table>
-						<jfd:table id="tableAnlDb3" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl3">
-						</jfd:table>
-						<jfd:table id="tableAnlDb4" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl4">
-						</jfd:table>
-						<jfd:table id="tableAnlDb5" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl5">
-						</jfd:table>
-					</jfd:container>
-				</jfd:container>
-				<jfd:container id="anlKtBox" layout="jfd:box" columns="1" alignment="expand_expand">
-					<jfd:label id="labelAnlKt" text="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.LabelAnlKt"/>
-					<jfd:container id="anlKt" layout="jfd:tabbed" alignment="expand_expand" tabPlacement="top">
-						<jfd:table id="tableAnlKt1" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl1">
-						</jfd:table>
-						<jfd:table id="tableAnlKt2" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl2">
-						</jfd:table>
-						<jfd:table id="tableAnlKt3" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl3">
-						</jfd:table>
-						<jfd:table id="tableAnlKt4" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl4">
-						</jfd:table>
-						<jfd:table id="tableAnlKt5" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl5">
-						</jfd:table>
-					</jfd:container>
-				</jfd:container>
-			</jfd:container>
-		</jfd:container>
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" alignment="expand_top" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title">
+      <jfd:field id="dateFrom"/>
+      <jfd:field id="dateTill" sameLine="true"/>
+      <jfd:field id="specMark"/>
+      <jfd:container id="baseDocument" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.document.resources.formelements#Document.BaseDocAttribute">
+        <jfd:field id="baseDocType" showLabel="false" alignment="left_expand"/>
+        <jfd:field id="baseDocNumber" showLabel="false" alignment="expand_expand"/>
+        <jfd:field id="baseDocDate" showLabel="false" alignment="right_expand"/>
+      </jfd:container>
+      <jfd:container id="document" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.document.resources.formelements#Document.Document">
+        <jfd:field id="docType" showLabel="false" alignment="left_expand"/>
+        <jfd:field id="docNumber" showLabel="false" alignment="expand_expand"/>
+        <jfd:field id="docDate" showLabel="false" alignment="right_expand"/>
+      </jfd:container>
+      <jfd:container id="contractDocument" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.document.resources.formelements#Document.ContractDocAttribute">
+        <jfd:field id="contractType" showLabel="false" alignment="left_expand"/>
+        <jfd:field id="contractNumber" showLabel="false" alignment="expand_expand"/>
+        <jfd:field id="contractDate" showLabel="false" alignment="right_expand"/>
+      </jfd:container>
+      <jfd:field id="fromSum"/>
+      <jfd:field id="toSum" sameLine="true"/>
+      <jfd:field id="fromCode"/>
+      <jfd:field id="toCode" sameLine="true"/>
+      <jfd:field id="catalogCode"/>
+      <jfd:field id="catalogFolder" sameLine="true"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+    <jfd:container id="split" layout="jfd:split" alignment="expand_expand" orientation="ver"
+                   tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperModel.Spec.Tab">
+      <jfd:container id="splitAcc" layout="jfd:split" alignment="expand_expand" orientation="hor">
+        <jfd:container id="tableDbBox" layout="jfd:box" columns="2" alignment="expand_expand">
+          <jfd:label id="labelDb"
+                     text="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.LabelDb"
+                     alignment="left_top"/>
+          <jfd:button id="clearDb"
+                      text="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Clear"
+                      alignment="right_top" actionListener="ClearDb"/>
+          <jfd:table id="tableDb" alignment="expand_expand" scroll="true" horizontalSpan="2"
+                     autoResize="subsequent_columns">
+          </jfd:table>
+        </jfd:container>
+        <jfd:container id="tableKtBox" layout="jfd:box" columns="2" alignment="expand_expand">
+          <jfd:label id="labelKt"
+                     text="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.LabelKt"
+                     alignment="left_top"/>
+          <jfd:button id="clearKt"
+                      text="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Clear"
+                      alignment="right_top" actionListener="ClearKt"/>
+          <jfd:table id="tableKt" alignment="expand_expand" scroll="true" horizontalSpan="2"
+                     autoResize="subsequent_columns">
+          </jfd:table>
+        </jfd:container>
+      </jfd:container>
+      <jfd:container id="splitAnl" layout="jfd:split" alignment="expand_expand" orientation="hor">
+        <jfd:container id="anlDbBox" layout="jfd:box" columns="1" alignment="expand_expand">
+          <jfd:label id="labelAnlDb"
+                     text="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.LabelAnlDb"/>
+          <jfd:container id="anlDb" layout="jfd:tabbed" alignment="expand_expand"
+                         tabPlacement="top">
+            <jfd:table id="tableAnlDb1" alignment="expand_expand" scroll="true"
+                       autoResize="subsequent_columns"
+                       tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl1">
+            </jfd:table>
+            <jfd:table id="tableAnlDb2" alignment="expand_expand" scroll="true"
+                       autoResize="subsequent_columns"
+                       tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl2">
+            </jfd:table>
+            <jfd:table id="tableAnlDb3" alignment="expand_expand" scroll="true"
+                       autoResize="subsequent_columns"
+                       tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl3">
+            </jfd:table>
+            <jfd:table id="tableAnlDb4" alignment="expand_expand" scroll="true"
+                       autoResize="subsequent_columns"
+                       tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl4">
+            </jfd:table>
+            <jfd:table id="tableAnlDb5" alignment="expand_expand" scroll="true"
+                       autoResize="subsequent_columns"
+                       tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl5">
+            </jfd:table>
+          </jfd:container>
+        </jfd:container>
+        <jfd:container id="anlKtBox" layout="jfd:box" columns="1" alignment="expand_expand">
+          <jfd:label id="labelAnlKt"
+                     text="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.LabelAnlKt"/>
+          <jfd:container id="anlKt" layout="jfd:tabbed" alignment="expand_expand"
+                         tabPlacement="top">
+            <jfd:table id="tableAnlKt1" alignment="expand_expand" scroll="true"
+                       autoResize="subsequent_columns"
+                       tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl1">
+            </jfd:table>
+            <jfd:table id="tableAnlKt2" alignment="expand_expand" scroll="true"
+                       autoResize="subsequent_columns"
+                       tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl2">
+            </jfd:table>
+            <jfd:table id="tableAnlKt3" alignment="expand_expand" scroll="true"
+                       autoResize="subsequent_columns"
+                       tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl3">
+            </jfd:table>
+            <jfd:table id="tableAnlKt4" alignment="expand_expand" scroll="true"
+                       autoResize="subsequent_columns"
+                       tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl4">
+            </jfd:table>
+            <jfd:table id="tableAnlKt5" alignment="expand_expand" scroll="true"
+                       autoResize="subsequent_columns"
+                       tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperRest.Anl5">
+            </jfd:table>
+          </jfd:container>
+        </jfd:container>
+      </jfd:container>
+    </jfd:container>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml"/>
 
 </jfd:form>

@@ -16,27 +16,27 @@
 <index version="1.0">
 
   <indexitem text="Склады">
-    <indexentry text="Склад" target="whadd_html" />
-    <indexentry text="Типы складов" target="whtype_html" />
-    <indexentry text="Типы секций хранения" target="binloctype_html" />
-    <indexentry text="Зоны хранения" target="whzone_html" />
-    <indexentry text="Карточки складского учёта" target="ksu_html" />
-    <indexentry text="Партии КСУ" target="lots_html" />
-    <indexentry text="Фактическое движение по КСУ" target="factmov_html" />
-    <indexentry text="Планируемое движение по КСУ" target="planmov_html" />
-    <indexentry text="Резервирование по КСУ" target="reserv_html" />
+    <indexentry text="Склад" target="whadd_html"/>
+    <indexentry text="Типы складов" target="whtype_html"/>
+    <indexentry text="Типы секций хранения" target="binloctype_html"/>
+    <indexentry text="Зоны хранения" target="whzone_html"/>
+    <indexentry text="Карточки складского учёта" target="ksu_html"/>
+    <indexentry text="Партии КСУ" target="lots_html"/>
+    <indexentry text="Фактическое движение по КСУ" target="factmov_html"/>
+    <indexentry text="Планируемое движение по КСУ" target="planmov_html"/>
+    <indexentry text="Резервирование по КСУ" target="reserv_html"/>
   </indexitem>
 
-   <indexitem text="Документы">
-    <indexentry text="Заказы поставщикам" target="ordersup_html" />
-    <indexentry text="Заказы покупателей" target="ordercus_html" />
-    <indexentry text="Входящие счета" target="billheadinbr_html" />
-    <indexentry text="Исходящие счета" target="billheadoutbr_html" />
-    <indexentry text="Входящие накладные" target="invoiceheadin_html" />
-    <indexentry text="Исходящие накладные" target="invoiceheadout_html" />
-    <indexentry text="Приходные ордера" target="waredocbrin_html" />
-    <indexentry text="Расходные ордера" target="waredocbrout_html" />
-    <indexentry text="Акты инвентаризации" target="invacthd_html" />
+  <indexitem text="Документы">
+    <indexentry text="Заказы поставщикам" target="ordersup_html"/>
+    <indexentry text="Заказы покупателей" target="ordercus_html"/>
+    <indexentry text="Входящие счета" target="billheadinbr_html"/>
+    <indexentry text="Исходящие счета" target="billheadoutbr_html"/>
+    <indexentry text="Входящие накладные" target="invoiceheadin_html"/>
+    <indexentry text="Исходящие накладные" target="invoiceheadout_html"/>
+    <indexentry text="Приходные ордера" target="waredocbrin_html"/>
+    <indexentry text="Расходные ордера" target="waredocbrout_html"/>
+    <indexentry text="Акты инвентаризации" target="invacthd_html"/>
   </indexitem>
-   
+
 </index>

@@ -19,40 +19,40 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Способ перепланирования
- * 
+ *
  * @author leonova
  * @version $Id: RescheduleFlag.java,v 1.1 2007/07/30 10:37:30 safonov Exp $
  */
-@DataItemName ("Planning.RescheduleFlag")
+@DataItemName("Planning.RescheduleFlag")
 public enum RescheduleFlag {
-	/**
-	 * Предложено расчетом ППМ
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPRescheduleSuggested")
-	SUGGESTED,
-	
-	/**
-	 * Перепланировано
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPReschedule")
-	RESCHEDULE,
-	
-	/**
-	 * Предупреждение. Запланированный приход не нужен
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPRescheduleWarning")	
-	WARNING,
-	
-	/**
-	 * Отменено
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPRescheduleCancel")	
-	CANCEL,
-	
-	/**
-	 * Просрочено
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPRescheduleUnusedExpired")	
-	UNUSED_EXPIRED
+  /**
+   * Предложено расчетом ППМ
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPRescheduleSuggested")
+  SUGGESTED,
+
+  /**
+   * Перепланировано
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPReschedule")
+  RESCHEDULE,
+
+  /**
+   * Предупреждение. Запланированный приход не нужен
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPRescheduleWarning")
+  WARNING,
+
+  /**
+   * Отменено
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPRescheduleCancel")
+  CANCEL,
+
+  /**
+   * Просрочено
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#Plan.MRPRec.RescheduleKind.MRPRescheduleUnusedExpired")
+  UNUSED_EXPIRED
 
 }

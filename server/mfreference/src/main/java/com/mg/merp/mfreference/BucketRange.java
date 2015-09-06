@@ -18,36 +18,36 @@ import java.util.Date;
 
 /**
  * Диапазон бакета
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: BucketRange.java,v 1.1 2007/07/30 10:25:31 safonov Exp $
  */
 public class BucketRange {
-	private Date bucketStart;
-	private Date bucketEnd;
-	
-	public BucketRange(Date bucketStart, Date bucketEnd) {
-		super();
-		this.bucketStart = bucketStart;
-		this.bucketEnd = bucketEnd;
-	}
+  private Date bucketStart;
+  private Date bucketEnd;
 
-	/**
-	 * получить дату завершения бакета
-	 * 
-	 * @return the bucketEnd
-	 */
-	public Date getBucketEnd() {
-		return bucketEnd;
-	}
+  public BucketRange(Date bucketStart, Date bucketEnd) {
+    super();
+    this.bucketStart = bucketStart;
+    this.bucketEnd = bucketEnd;
+  }
 
-	/**
-	 * получить дату старта бакета
-	 * 
-	 * @return the bucketStart
-	 */
-	public Date getBucketStart() {
-		return bucketStart;
-	}
+  /**
+   * получить дату завершения бакета
+   *
+   * @return the bucketEnd
+   */
+  public Date getBucketEnd() {
+    return bucketEnd;
+  }
+
+  /**
+   * получить дату старта бакета
+   *
+   * @return the bucketStart
+   */
+  public Date getBucketStart() {
+    return bucketStart;
+  }
 
 }

@@ -1,55 +1,55 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.document.model.DocType" table="TYPEDOC">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">TYPEDOC_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Report" class="com.mg.merp.report.model.RptMain">
-      <column name="RPT_ID" not-null="false" />
+      <column name="RPT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="NumberingAlgorithm" class="com.mg.merp.baiengine.model.Repository">
-      <column name="NUMBERING_ALG_ID" not-null="false" />
+      <column name="NUMBERING_ALG_ID" not-null="false"/>
     </many-to-one>
     <property name="UpCode" type="java.lang.String">
-      <column name="UPCODE" length="15" not-null="true" unique="true" sql-type="CHAR" />
+      <column name="UPCODE" length="15" not-null="true" unique="true" sql-type="CHAR"/>
     </property>
     <property name="Code" type="java.lang.String">
-      <column name="CODE" length="15" not-null="false" sql-type="CHAR" />
+      <column name="CODE" length="15" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="Name" type="java.lang.String">
-      <column name="TDNAME" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="TDNAME" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <!-- property name="DocProcessGraph" type="binary" lazy="true">
       <column name="DOC_PROCESS_GRAPH" not-null="false" sql-type="BLOB SUB_TYPE 0" />
     </property -->
     <property name="SolidDocProcess" type="boolean">
-      <column name="SOLID_DOC_PROCESS" not-null="false" sql-type="SMALLINT" />
+      <column name="SOLID_DOC_PROCESS" not-null="false" sql-type="SMALLINT"/>
     </property>
     <set name="SetOfDocTypeRights" inverse="true" cascade="delete">
       <key on-delete="cascade">
-        <column name="REC_ID" not-null="true" />
+        <column name="REC_ID" not-null="true"/>
       </key>
-      <one-to-many class="com.mg.merp.document.model.DocTypeRights" />
+      <one-to-many class="com.mg.merp.document.model.DocTypeRights"/>
     </set>
     <set name="SetOfDocTypeDocSectionLink" inverse="true" cascade="delete">
       <key on-delete="cascade">
-        <column name="DOCTYPE_ID" not-null="true" />
+        <column name="DOCTYPE_ID" not-null="true"/>
       </key>
-      <one-to-many class="com.mg.merp.document.model.DocTypeDocSectionLink" />
+      <one-to-many class="com.mg.merp.document.model.DocTypeDocSectionLink"/>
     </set>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

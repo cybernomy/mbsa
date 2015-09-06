@@ -14,18 +14,18 @@
  */
 package com.mg.framework.api.annotations;
 
-import static java.lang.annotation.ElementType.TYPE;
-import static java.lang.annotation.RetentionPolicy.RUNTIME;
-
 import java.lang.annotation.Documented;
 import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
+import static java.lang.annotation.ElementType.TYPE;
+import static java.lang.annotation.RetentionPolicy.RUNTIME;
+
 /**
- * Содержит информацию об атрибутах и формате для вывода в пользовательском интерфейсе
- * ссылки на объект
- * 
+ * Содержит информацию об атрибутах и формате для вывода в пользовательском интерфейсе ссылки на
+ * объект
+ *
  * @author Oleg V. Safonov
  * @version $Id: EntityPropertyText.java,v 1.1 2006/01/24 13:27:54 safonov Exp $
  */
@@ -34,19 +34,16 @@ import java.lang.annotation.Target;
 @Documented
 @Inherited
 public @interface EntityPropertyText {
-	
-	/**
-	 * Список наименований атрибутов
-	 * 
-	 * @return
-	 */
-	String[] value() default {};
-	
-	/**
-	 * Формат для вывода
-	 * 
-	 * @see  java.util.Formatter
-	 * @return
-	 */
-	String format() default "";
+
+  /**
+   * Список наименований атрибутов
+   */
+  String[] value() default {};
+
+  /**
+   * Формат для вывода
+   *
+   * @see java.util.Formatter
+   */
+  String format() default "";
 }

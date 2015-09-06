@@ -1,21 +1,24 @@
 <refentry id="biblioentry.item.separator">
-<refmeta>
-<refentrytitle>biblioentry.item.separator</refentrytitle>
-<refmiscinfo role="type">string</refmiscinfo>
-</refmeta>
-<refnamediv>
-<refname>biblioentry.item.separator</refname>
-<refpurpose>Text to separate bibliography entries</refpurpose>
-</refnamediv>
+  <refmeta>
+    <refentrytitle>biblioentry.item.separator</refentrytitle>
+    <refmiscinfo role="type">string</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>biblioentry.item.separator</refname>
+    <refpurpose>Text to separate bibliography entries</refpurpose>
+  </refnamediv>
 
-<refsynopsisdiv>
-<src:fragment id='biblioentry.item.separator.frag'><xsl:param name="biblioentry.item.separator">. </xsl:param></src:fragment>
-</refsynopsisdiv>
+  <refsynopsisdiv>
+    <src:fragment id='biblioentry.item.separator.frag'>
+      <xsl:param name="biblioentry.item.separator">.</xsl:param>
+    </src:fragment>
+  </refsynopsisdiv>
 
-<refsect1><title>Description</title>
+  <refsect1>
+    <title>Description</title>
 
-<para>Text to separate bibliography entries
-</para>
+    <para>Text to separate bibliography entries
+    </para>
 
-</refsect1>
+  </refsect1>
 </refentry>

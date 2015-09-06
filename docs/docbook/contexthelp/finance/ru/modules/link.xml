@@ -14,22 +14,20 @@
 <!-- $Id: link.xml,v 1.1 2006/11/23 14:53:22 konyashkina Exp $ -->
 
 <link version="1.0">
-  
+
   <linkitem topic="finance_links">
-    <linkentry target="finperiod_html" text="Периоды финансового учёта" />
-     <linkentry target="finacc_html" text="Счета финансового учёта" />
-     <linkentry target="finan_html" text="Аналитика финансового учёта" />
-     <linkentry target="finfeat_html" text="Признаки финансового учёта" />
-     <linkentry target="fincenter_html" text="Центры финансового учёта" />
-     <linkentry target="finoper_html" text="Финансовые операции" />
-     <linkentry target="finspec_html" text="Спецификации финансовых операций" />
-     <linkentry target="temp_html" text="Образцы финансовых операций" />
-     <linkentry target="finturnacc_html" text="Остатки и обороты по счетам" />
-     <linkentry target="finturnfeat_html" text="Остатки и обороты по признакам " />
-     <linkentry target="finperenos_html" text="Перенос остатков" />
+    <linkentry target="finperiod_html" text="Периоды финансового учёта"/>
+    <linkentry target="finacc_html" text="Счета финансового учёта"/>
+    <linkentry target="finan_html" text="Аналитика финансового учёта"/>
+    <linkentry target="finfeat_html" text="Признаки финансового учёта"/>
+    <linkentry target="fincenter_html" text="Центры финансового учёта"/>
+    <linkentry target="finoper_html" text="Финансовые операции"/>
+    <linkentry target="finspec_html" text="Спецификации финансовых операций"/>
+    <linkentry target="temp_html" text="Образцы финансовых операций"/>
+    <linkentry target="finturnacc_html" text="Остатки и обороты по счетам"/>
+    <linkentry target="finturnfeat_html" text="Остатки и обороты по признакам "/>
+    <linkentry target="finperenos_html" text="Перенос остатков"/>
   </linkitem>
-  
-   
 
 
 </link>

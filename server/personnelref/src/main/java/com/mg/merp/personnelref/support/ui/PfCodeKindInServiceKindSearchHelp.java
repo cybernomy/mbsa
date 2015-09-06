@@ -23,11 +23,10 @@ import com.mg.merp.reference.support.ui.FolderByTypeSearchHelp;
  */
 public class PfCodeKindInServiceKindSearchHelp extends FolderByTypeSearchHelp {
 
-	@Override
-	protected short getFolderType() {
-		return ServicePFCodeServiceLocal.FOLDER_PART;
-	}
-
+  @Override
+  protected short getFolderType() {
+    return ServicePFCodeServiceLocal.FOLDER_PART;
+  }
 
 
 }

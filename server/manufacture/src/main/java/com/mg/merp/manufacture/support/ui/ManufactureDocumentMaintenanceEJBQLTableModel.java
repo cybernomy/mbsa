@@ -18,11 +18,12 @@ import com.mg.merp.document.generic.ui.DocumentMaintenanceEJBQLTableModel;
 
 /**
  * Вспомогательный класс для отображения формы производственных документов
- * 
+ *
  * @author leonova
- * @version $Id: ManufactureDocumentMaintenanceEJBQLTableModel.java,v 1.1 2006/08/28 04:40:58 leonova Exp $ 
+ * @version $Id: ManufactureDocumentMaintenanceEJBQLTableModel.java,v 1.1 2006/08/28 04:40:58
+ *          leonova Exp $
  */
 public class ManufactureDocumentMaintenanceEJBQLTableModel extends
-		DocumentMaintenanceEJBQLTableModel {
+    DocumentMaintenanceEJBQLTableModel {
 
 }

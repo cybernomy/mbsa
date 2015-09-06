@@ -1,23 +1,25 @@
 <refentry id="htmlhelp.hhc">
-<refmeta>
-<refentrytitle>htmlhelp.hhc</refentrytitle>
-<refmiscinfo role="type">string</refmiscinfo>
-</refmeta>
-<refnamediv>
-<refname>htmlhelp.hhc</refname>
-<refpurpose>Filename of TOC file.</refpurpose>
-</refnamediv>
+  <refmeta>
+    <refentrytitle>htmlhelp.hhc</refentrytitle>
+    <refmiscinfo role="type">string</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>htmlhelp.hhc</refname>
+    <refpurpose>Filename of TOC file.</refpurpose>
+  </refnamediv>
 
-<refsynopsisdiv>
-<src:fragment id='htmlhelp.hhc.frag'>
-<xsl:param name="htmlhelp.hhc" select="'toc.hhc'"/>
-</src:fragment>
-</refsynopsisdiv>
+  <refsynopsisdiv>
+    <src:fragment id='htmlhelp.hhc.frag'>
+      <xsl:param name="htmlhelp.hhc" select="'toc.hhc'"/>
+    </src:fragment>
+  </refsynopsisdiv>
 
-<refsect1><title>Description</title>
+  <refsect1>
+    <title>Description</title>
 
-<para>Change this parameter if you want different name of TOC file
-than toc.hhc.</para>
+    <para>Change this parameter if you want different name of TOC file
+      than toc.hhc.
+    </para>
 
-</refsect1>
+  </refsect1>
 </refentry>

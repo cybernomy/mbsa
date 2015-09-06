@@ -1,51 +1,53 @@
 ﻿<?xml version='1.0' encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
-                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
-[
-<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
-<!ENTITY chap_001mfref SYSTEM "modules/001mfreference.xml">
-<!ENTITY chap_002mfref SYSTEM "modules/002mfreference.xml">
-<!ENTITY chap_003mfref SYSTEM "modules/003mfreference.xml">
-<!ENTITY chap_004mfref SYSTEM "modules/004mfreference.xml">
-<!ENTITY chap_005mfref SYSTEM "modules/005mfreference.xml">
-<!ENTITY chap_006mfref SYSTEM "modules/006mfreference.xml">
-<!ENTITY chap_007mfref SYSTEM "modules/007mfreference.xml">
-<!ENTITY chap_008mfref SYSTEM "modules/008mfreference.xml">
-<!ENTITY merp "Millennium Business Suite Anywhere">
-<!ENTITY mref "Справочники планирования и производства">
-<!ENTITY manuf "Планирование и управление производством">
-<!ENTITY cont_centr "Центр управления">
-<!ENTITY liab "Обязательства">
-<!ENTITY contr "Контракты">
-]> 
+    "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+    [
+        <!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+        <!ENTITY chap_001mfref SYSTEM "modules/001mfreference.xml">
+        <!ENTITY chap_002mfref SYSTEM "modules/002mfreference.xml">
+        <!ENTITY chap_003mfref SYSTEM "modules/003mfreference.xml">
+        <!ENTITY chap_004mfref SYSTEM "modules/004mfreference.xml">
+        <!ENTITY chap_005mfref SYSTEM "modules/005mfreference.xml">
+        <!ENTITY chap_006mfref SYSTEM "modules/006mfreference.xml">
+        <!ENTITY chap_007mfref SYSTEM "modules/007mfreference.xml">
+        <!ENTITY chap_008mfref SYSTEM "modules/008mfreference.xml">
+        <!ENTITY merp "Millennium Business Suite Anywhere">
+        <!ENTITY mref "Справочники планирования и производства">
+        <!ENTITY manuf "Планирование и управление производством">
+        <!ENTITY cont_centr "Центр управления">
+        <!ENTITY liab "Обязательства">
+        <!ENTITY contr "Контракты">
+        ]>
 <book lang="ru">
   <bookinfo>
-      <title>&mref; в системе &merp; 
-      Руководство пользователя.</title>
-      <releaseinfo>4.0.6</releaseinfo>
-      <copyright>
-	<year>1998</year>
-	<year>2008</year>
-	<holder>ООО &quot;Бизнестехнология&quot;</holder>
-      </copyright>    
+    <title>&mref; в системе &merp;
+      Руководство пользователя.
+    </title>
+    <releaseinfo>4.0.6</releaseinfo>
+    <copyright>
+      <year>1998</year>
+      <year>2008</year>
+      <holder>ООО &quot;Бизнестехнология&quot;</holder>
+    </copyright>
   </bookinfo>
-  
+
   <toc/>
-  
+
   <preface id="target" revision="1">
-      <title>Целевая аудитория </title>
-      <para>Данное руководство предназначено для пользователей, работающих  
-	с модулем &quot;&manuf;&quot; системы &merp;.</para>
+    <title>Целевая аудитория</title>
+    <para>Данное руководство предназначено для пользователей, работающих
+      с модулем &quot;&manuf;&quot; системы &merp;.
+    </para>
   </preface>
-    
-&chap_001mfref;
-&chap_002mfref;
-&chap_003mfref;
-&chap_004mfref;
-&chap_005mfref;
-&chap_006mfref;
-&chap_007mfref;
-&chap_008mfref;
-&chap_copyright;
+
+  &chap_001mfref;
+  &chap_002mfref;
+  &chap_003mfref;
+  &chap_004mfref;
+  &chap_005mfref;
+  &chap_006mfref;
+  &chap_007mfref;
+  &chap_008mfref;
+  &chap_copyright;
 
 </book>

@@ -22,25 +22,25 @@ import com.mg.merp.warehouse.model.StockPlanHistory;
 
 /**
  * Стратегия отката этапа ДО "Резервирование по складу"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: WarehouseRollbackReservStrategy.java,v 1.5 2008/04/18 15:18:20 safonov Exp $ 
+ * @version $Id: WarehouseRollbackReservStrategy.java,v 1.5 2008/04/18 15:18:20 safonov Exp $
  */
 public class WarehouseRollbackReservStrategy extends
-		AbstractWarehouseRollbackPlanReservStrategy {
+    AbstractWarehouseRollbackPlanReservStrategy {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.warehouse.generic.AbstractWarehouseRollbackPlanReservStrategy#rollbackOperation(com.mg.merp.warehouse.model.StockPlanHistory)
-	 */
-	@Override
-	public void rollbackOperation(StockPlanHistory history) {
-		StockCard stockCard = history.getStockCard();
-		stockCard.setReserve(MathUtils.subtractNullable(stockCard.getReserve(), history.getQuantity(), Constants.QUANTITY_ROUND_CONTEXT));
-		stockCard.setReserve2(MathUtils.subtractNullable(stockCard.getReserve2(), history.getQuantity2(), Constants.QUANTITY_ROUND_CONTEXT));
+  /* (non-Javadoc)
+   * @see com.mg.merp.warehouse.generic.AbstractWarehouseRollbackPlanReservStrategy#rollbackOperation(com.mg.merp.warehouse.model.StockPlanHistory)
+   */
+  @Override
+  public void rollbackOperation(StockPlanHistory history) {
+    StockCard stockCard = history.getStockCard();
+    stockCard.setReserve(MathUtils.subtractNullable(stockCard.getReserve(), history.getQuantity(), Constants.QUANTITY_ROUND_CONTEXT));
+    stockCard.setReserve2(MathUtils.subtractNullable(stockCard.getReserve2(), history.getQuantity2(), Constants.QUANTITY_ROUND_CONTEXT));
 
-		WareCardServiceLocal wcServ = (WareCardServiceLocal) ApplicationDictionaryLocator.locate()
-				.getBusinessService(WareCardServiceLocal.LOCAL_SERVICE_NAME);
-		wcServ.deleteStockCards(stockCard);
-	}
+    WareCardServiceLocal wcServ = (WareCardServiceLocal) ApplicationDictionaryLocator.locate()
+        .getBusinessService(WareCardServiceLocal.LOCAL_SERVICE_NAME);
+    wcServ.deleteStockCards(stockCard);
+  }
 
 }

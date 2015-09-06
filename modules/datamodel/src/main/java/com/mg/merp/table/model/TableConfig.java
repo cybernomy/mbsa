@@ -18,68 +18,72 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Модель бизнес-компонента "Конфигурация модуля <Табельный учет>"
- * 
+ *
  * @author hbm2java
  * @author Artem V. Sharapov
  * @version $Id: TableConfig.java,v 1.3 2007/01/13 13:33:04 sharapov Exp $
  */
 public class TableConfig extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields    
+  // Fields
 
-	private int sysClientId;
-	private com.mg.merp.table.model.TimeKind HolidayTimeKind;
-	private com.mg.merp.table.model.TimeKind WorkTimeKind;
+  private int sysClientId;
+  private com.mg.merp.table.model.TimeKind HolidayTimeKind;
+  private com.mg.merp.table.model.TimeKind WorkTimeKind;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public TableConfig() {
-	}
+  /**
+   * default constructor
+   */
+  public TableConfig() {
+  }
 
-	/** constructor with id */
-	public TableConfig(int sysClientId) {
-		this.sysClientId = sysClientId;
-	}
+  /**
+   * constructor with id
+   */
+  public TableConfig(int sysClientId) {
+    this.sysClientId = sysClientId;
+  }
 
-	// Property accessors
+  // Property accessors
 
-	/**
+  /**
 
-	 */
-	@DataItemName("TableConfig.TimeKind.HolidayTime")
-	public com.mg.merp.table.model.TimeKind getHolidayTimeKind () {
-		return this.HolidayTimeKind;
-	}
+   */
+  @DataItemName("TableConfig.TimeKind.HolidayTime")
+  public com.mg.merp.table.model.TimeKind getHolidayTimeKind() {
+    return this.HolidayTimeKind;
+  }
 
-	public void setHolidayTimeKind (com.mg.merp.table.model.TimeKind TabTimeKind) {
-		this.HolidayTimeKind = TabTimeKind;
-	}
+  public void setHolidayTimeKind(com.mg.merp.table.model.TimeKind TabTimeKind) {
+    this.HolidayTimeKind = TabTimeKind;
+  }
 
-	/**
+  /**
 
-	 */
-	@DataItemName("TableConfig.TimeKind.WorkTime")
-	public com.mg.merp.table.model.TimeKind getWorkTimeKind () {
-		return this.WorkTimeKind;
-	}
+   */
+  @DataItemName("TableConfig.TimeKind.WorkTime")
+  public com.mg.merp.table.model.TimeKind getWorkTimeKind() {
+    return this.WorkTimeKind;
+  }
 
-	public void setWorkTimeKind (com.mg.merp.table.model.TimeKind TabTimeKind_1) {
-		this.WorkTimeKind = TabTimeKind_1;
-	}
+  public void setWorkTimeKind(com.mg.merp.table.model.TimeKind TabTimeKind_1) {
+    this.WorkTimeKind = TabTimeKind_1;
+  }
 
-	/**
-	 * @return the sysClientId
-	 */
-	public int getSysClientId() {
-		return sysClientId;
-	}
+  /**
+   * @return the sysClientId
+   */
+  public int getSysClientId() {
+    return sysClientId;
+  }
 
-	/**
-	 * @param sysClientId the sysClientId to set
-	 */
-	public void setSysClientId(int sysClientId) {
-		this.sysClientId = sysClientId;
-	}
+  /**
+   * @param sysClientId the sysClientId to set
+   */
+  public void setSysClientId(int sysClientId) {
+    this.sysClientId = sysClientId;
+  }
 
 }

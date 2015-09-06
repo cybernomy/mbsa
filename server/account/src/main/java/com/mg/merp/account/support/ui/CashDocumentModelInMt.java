@@ -19,20 +19,20 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
  * Контроллер формы поддержки "Образцов приходных кассовых ордеров"
- * 
+ *
  * @author leonova
  * @version $Id: CashDocumentModelInMt.java,v 1.2 2007/05/22 08:00:12 sharapov Exp $
  */
 public class CashDocumentModelInMt extends DocumentModelMaintenanceForm {
-	
-	protected String[] contractorFromKinds;
-	protected String[] contractorToKinds;
-	
-	public CashDocumentModelInMt() {
-		super();
-		contractorFromKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-		contractorToKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
 
-	}
-	
+  protected String[] contractorFromKinds;
+  protected String[] contractorToKinds;
+
+  public CashDocumentModelInMt() {
+    super();
+    contractorFromKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+    contractorToKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+
+  }
+
 }

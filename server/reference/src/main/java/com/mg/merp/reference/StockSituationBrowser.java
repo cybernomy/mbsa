@@ -16,19 +16,15 @@ package com.mg.merp.reference;
 import com.mg.framework.api.ui.WidgetEvent;
 
 /**
- * Браузеры, наследующие этот интерфейс могут вызывать стандартную
- * форму "Количество на складах"
- * 
+ * Браузеры, наследующие этот интерфейс могут вызывать стандартную форму "Количество на складах"
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: StockSituationBrowser.java,v 1.1 2007/04/05 12:25:41 poroxnenko Exp $ 
+ * @version $Id: StockSituationBrowser.java,v 1.1 2007/04/05 12:25:41 poroxnenko Exp $
  */
 public interface StockSituationBrowser {
 
-	/**
-	 * Вызов формы "Количество на складах"
-	 * 
-	 * @param event
-	 * @throws Exception
-	 */
-	void onActionShowStockSituation(WidgetEvent event) throws Exception;
+  /**
+   * Вызов формы "Количество на складах"
+   */
+  void onActionShowStockSituation(WidgetEvent event) throws Exception;
 }

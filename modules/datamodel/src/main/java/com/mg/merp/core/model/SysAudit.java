@@ -22,112 +22,117 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Core.SystemAudit")
 public class SysAudit extends com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private Long Id;
-	private com.mg.merp.core.model.SysClient SysClient;
-	private String userName;
-	private java.util.Date eventDateTime;
-	private java.lang.String auditBean;
-	private java.lang.String operation;
-	private java.lang.String details;
+  private Long Id;
+  private com.mg.merp.core.model.SysClient SysClient;
+  private String userName;
+  private java.util.Date eventDateTime;
+  private java.lang.String auditBean;
+  private java.lang.String operation;
+  private java.lang.String details;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public SysAudit() {
-	}
+  /**
+   * default constructor
+   */
+  public SysAudit() {
+  }
 
-	/** constructor with id */
-	public SysAudit(Long Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public SysAudit(Long Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public Long getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(Long id) {
-		this.Id = id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public Long getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(Long id) {
+    this.Id = id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName ("Security.User.Name")
-	public String getUserName() {
-		return this.userName;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Security.User.Name")
+  public String getUserName() {
+    return this.userName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Core.DatabaseAudit.EventDateTime")
-	public java.util.Date getEventDateTime() {
-		return this.eventDateTime;
-	}
+  public void setUserName(String userName) {
+    this.userName = userName;
+  }
 
-	public void setEventDateTime(java.util.Date eventDateTime) {
-		this.eventDateTime = eventDateTime;
-	}
+  /**
+   *
+   */
+  @DataItemName("Core.DatabaseAudit.EventDateTime")
+  public java.util.Date getEventDateTime() {
+    return this.eventDateTime;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Core.SecurityAudit.AuditBean")
-	public java.lang.String getAuditBean() {
-		return this.auditBean;
-	}
+  public void setEventDateTime(java.util.Date eventDateTime) {
+    this.eventDateTime = eventDateTime;
+  }
 
-	public void setAuditBean(java.lang.String auditBean) {
-		this.auditBean = auditBean;
-	}
+  /**
+   *
+   */
+  @DataItemName("Core.SecurityAudit.AuditBean")
+  public java.lang.String getAuditBean() {
+    return this.auditBean;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Core.SystemAudit.Operation")
-	public java.lang.String getOperation() {
-		return this.operation;
-	}
+  public void setAuditBean(java.lang.String auditBean) {
+    this.auditBean = auditBean;
+  }
 
-	public void setOperation(java.lang.String operation) {
-		this.operation = operation;
-	}
+  /**
+   *
+   */
+  @DataItemName("Core.SystemAudit.Operation")
+  public java.lang.String getOperation() {
+    return this.operation;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Core.Audit.Details")
-	public java.lang.String getDetails() {
-		return this.details;
-	}
+  public void setOperation(java.lang.String operation) {
+    this.operation = operation;
+  }
 
-	public void setDetails(java.lang.String details) {
-		this.details = details;
-	}
+  /**
+   *
+   */
+  @DataItemName("Core.Audit.Details")
+  public java.lang.String getDetails() {
+    return this.details;
+  }
+
+  public void setDetails(java.lang.String details) {
+    this.details = details;
+  }
 
 }

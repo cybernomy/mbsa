@@ -14,30 +14,31 @@
  */
 package com.mg.merp.table;
 
-import java.util.List;
-
 import com.mg.merp.table.model.ScheduleHead;
 import com.mg.merp.table.model.ScheduleSpec;
 
+import java.util.List;
+
 /**
  * Бизнес-компонент "Спецификация графика работ в табельном учете"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: ScheduleSpecServiceLocal.java,v 1.3 2008/08/12 14:08:13 sharapov Exp $
  */
 public interface ScheduleSpecServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ScheduleSpec, Integer> {
 
-	/**
-	 * Имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/table/ScheduleSpec"; //$NON-NLS-1$
+  /**
+   * Имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/table/ScheduleSpec"; //$NON-NLS-1$
 
-	/**
-	 * Загрузить спецификацию
-	 * @param scheduleHead - заголовок
-	 * @return спецификация
-	 */
-	List<ScheduleSpec> loadSpecs(ScheduleHead scheduleHead);
+  /**
+   * Загрузить спецификацию
+   *
+   * @param scheduleHead - заголовок
+   * @return спецификация
+   */
+  List<ScheduleSpec> loadSpecs(ScheduleHead scheduleHead);
 
 }

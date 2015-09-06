@@ -19,23 +19,23 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Тип шаблона
- * 
+ *
  * @author leonova
  * @version $Id: PatternKind.java,v 1.1 2006/03/30 11:32:49 safonov Exp $
  */
-@DataItemName ("Table.PatternHead.PatternKind")
+@DataItemName("Table.PatternHead.PatternKind")
 public enum PatternKind {
-	/**
-	 * Недельный
-	 */
-	@EnumConstantText ("resource://com.mg.merp.table.resources.dataitemlabels#PatternKind.Weekly")
-	WEEKLY,
+  /**
+   * Недельный
+   */
+  @EnumConstantText("resource://com.mg.merp.table.resources.dataitemlabels#PatternKind.Weekly")
+  WEEKLY,
 
-	/**
-	 * Сменный
-	 */
-	@EnumConstantText ("resource://com.mg.merp.table.resources.dataitemlabels#PatternKind.Shifting")
-	SHIFTING
+  /**
+   * Сменный
+   */
+  @EnumConstantText("resource://com.mg.merp.table.resources.dataitemlabels#PatternKind.Shifting")
+  SHIFTING
 
 }
 

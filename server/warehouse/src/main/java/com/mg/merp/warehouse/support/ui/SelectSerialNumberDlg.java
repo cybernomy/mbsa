@@ -14,9 +14,6 @@
  */
 package com.mg.merp.warehouse.support.ui;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.ui.WidgetEvent;
 import com.mg.framework.generic.ui.AbstractTableModel;
@@ -25,259 +22,265 @@ import com.mg.framework.support.ui.widget.DefaultTableController;
 import com.mg.framework.utils.StringUtils;
 import com.mg.merp.warehouse.support.Messages;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Контроллер диалога выбора серийных номеров
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: SelectSerialNumberDlg.java,v 1.1 2008/05/30 13:03:56 sharapov Exp $
  */
 public class SelectSerialNumberDlg extends DefaultWizardDialog {
 
-	@DataItemName("Reference.Code") //$NON-NLS-1$
-	private String catalogCode;
-
-	@DataItemName("Reference.Name") //$NON-NLS-1$
-	private String catalogName;
-
-	@DataItemName("Warehouse.StockBatch.NumberLot") //$NON-NLS-1$
-	private String numberLot;
-
-	@DataItemName("Warehouse.StockBatch.VendorLot") //$NON-NLS-1$
-	private String vendorLot;
-
-	private Integer necessarySerialNumbersQuantity;
-	protected DefaultTableController serialNumberTable;
-	private List<SerialNumberModelItem> serialNumberItemList = new ArrayList<SerialNumberModelItem>();
-	private List<String> selectedSerialNumbers = new ArrayList<String>();
+  protected DefaultTableController serialNumberTable;
+  @DataItemName("Reference.Code") //$NON-NLS-1$
+  private String catalogCode;
+  @DataItemName("Reference.Name") //$NON-NLS-1$
+  private String catalogName;
+  @DataItemName("Warehouse.StockBatch.NumberLot") //$NON-NLS-1$
+  private String numberLot;
+  @DataItemName("Warehouse.StockBatch.VendorLot") //$NON-NLS-1$
+  private String vendorLot;
+  private Integer necessarySerialNumbersQuantity;
+  private List<SerialNumberModelItem> serialNumberItemList = new ArrayList<SerialNumberModelItem>();
+  private List<String> selectedSerialNumbers = new ArrayList<String>();
 
 
-	public SelectSerialNumberDlg() {
-		serialNumberTable = new DefaultTableController(new SerialNumberTableModel());
-		necessarySerialNumbersQuantity = 0;
-	}
+  public SelectSerialNumberDlg() {
+    serialNumberTable = new DefaultTableController(new SerialNumberTableModel());
+    necessarySerialNumbersQuantity = 0;
+  }
 
-	private class SerialNumberTableModel extends AbstractTableModel {
-		private String[] columnsNames = null;
+  /**
+   * Запустить диалог ввода серийных номеров
+   *
+   * @param necessarySerialNumbersQuantity - кол-во номеров для выбора
+   * @param catalogCode                    - код позиции каталога
+   * @param catalogName                    - наименование позиции каталога
+   * @param numberLot                      - номер партии
+   * @param vendorLot                      - номер партии поставщика
+   */
+  public void execute(Integer necessarySerialNumbersQuantity, List<SerialNumberModelItem> serialNumberItemList, String catalogCode, String catalogName, String numberLot, String vendorLot) {
+    this.necessarySerialNumbersQuantity = necessarySerialNumbersQuantity;
+    this.catalogCode = catalogCode;
+    this.catalogName = catalogName;
+    this.serialNumberItemList = serialNumberItemList;
+    this.numberLot = numberLot;
+    this.vendorLot = vendorLot;
+    execute();
+  }
 
-		public SerialNumberTableModel() {
-			initializeColumnsNames();
-		}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultDialog#onActionOk(com.mg.framework.api.ui.WidgetEvent)
+   */
+  @Override
+  public void onActionOk(WidgetEvent event) {
+    if (isSelectionValid())
+      super.onActionOk(event);
+  }
 
-		private void initializeColumnsNames() {
-			Messages msg = Messages.getInstance();
-			columnsNames = new String[] {msg.getMessage(Messages.SERIAL_NUMBER_SELECTED), msg.getMessage(Messages.SERIAL_NUMBER)};
-		}
+  /**
+   * Выполнить проверку корректности кол-ва выбранных серийных номеров
+   *
+   * @return <code>true</code> - если кол-во выбранных номеров равно требуемому кол-ву номеров для
+   * выбора<br> <code>false</code> - во всех остальных случаях
+   */
+  private boolean isSelectionValid() {
+    return getSelectionResult() == necessarySerialNumbersQuantity;
+  }
 
-		/* (non-Javadoc)
-		 * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getColumnName(int)
-		 */
-		public String getColumnName(int column) {
-			return columnsNames[column];
-		}
+  /**
+   * Получить кол-во выбранных серийных номеров
+   *
+   * @return кол-во выбранных серийных номеров
+   */
+  private int getSelectionResult() {
+    selectedSerialNumbers.clear();
+    for (SerialNumberModelItem item : serialNumberItemList) {
+      if (item.getIsChecked())
+        selectedSerialNumbers.add(item.getNumber());
+    }
+    return selectedSerialNumbers.size();
+  }
 
-		/* (non-Javadoc)
-		 * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getValueAt(int, int)
-		 */
-		public Object getValueAt(int row, int column) {
-			SerialNumberModelItem item = serialNumberItemList.get(row);
-			switch (column) {
-			case 0: return item.getIsChecked();
-			case 1: return item.getNumber();
-			default: return StringUtils.EMPTY_STRING;
-			}
-		}
+  /**
+   * Получить список выбранных серийных номеров
+   *
+   * @return список серийных номеров
+   */
+  public List<String> getSelectedSerialNumbers() {
+    return selectedSerialNumbers;
+  }
 
-		/* (non-Javadoc)
-		 * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getColumnCount()
-		 */
-		public int getColumnCount() {
-			return columnsNames.length;
-		}
+  /**
+   * @param selectedSerialNumbers the selectedSerialNumbers to set
+   */
+  public void setSelectedSerialNumbers(List<String> selectedSerialNumbers) {
+    this.selectedSerialNumbers = selectedSerialNumbers;
+  }
 
-		/* (non-Javadoc)
-		 * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getRowCount()
-		 */
-		public int getRowCount() {
-			return serialNumberItemList.size();
-		}
+  /**
+   * @return the catalogCode
+   */
+  public String getCatalogCode() {
+    return this.catalogCode;
+  }
 
-		/* (non-Javadoc)
-		 * @see com.mg.framework.support.ui.widget.TableControllerAdapter#isCellEditable(int, int)
-		 */
-		public boolean isCellEditable(int rowIndex, int columnIndex) {
-			return columnIndex == 0;
-		}
+  /**
+   * @param catalogCode the catalogCode to set
+   */
+  public void setCatalogCode(String catalogCode) {
+    this.catalogCode = catalogCode;
+  }
 
-		/* (non-Javadoc)
-		 * @see com.mg.framework.support.ui.widget.TableControllerAdapter#setValueAt(java.lang.Object, int, int)
-		 */
-		public void setValueAt(Object value, int rowIndex, int columnIndex) {
-			SerialNumberModelItem item = serialNumberItemList.get(rowIndex);
-			switch (columnIndex) {
-			case 0:
-				item.setChecked((Boolean) value);
-				break;
-			}
-		}
+  /**
+   * @return the catalogName
+   */
+  public String getCatalogName() {
+    return this.catalogName;
+  }
 
-		/* (non-Javadoc)
-		 * @see com.mg.framework.generic.ui.AbstractTableModel#getColumnClass(int)
-		 */
-		@Override
-		public Class<?> getColumnClass(int column) {
-			if (column == 0)
-				return Boolean.class;
-			else
-				return null;
-		}
-	}
+  /**
+   * @param catalogName the catalogName to set
+   */
+  public void setCatalogName(String catalogName) {
+    this.catalogName = catalogName;
+  }
 
-	/**
-	 * Запустить диалог ввода серийных номеров
-	 * @param necessarySerialNumbersQuantity - кол-во номеров для выбора
-	 * @param catalogCode - код позиции каталога
-	 * @param catalogName - наименование позиции каталога
-	 * @param numberLot - номер партии
-	 * @param vendorLot - номер партии поставщика
-	 */
-	public void execute(Integer necessarySerialNumbersQuantity, List<SerialNumberModelItem> serialNumberItemList, String catalogCode, String catalogName, String numberLot, String vendorLot) {
-		this.necessarySerialNumbersQuantity = necessarySerialNumbersQuantity;
-		this.catalogCode = catalogCode;
-		this.catalogName = catalogName;
-		this.serialNumberItemList = serialNumberItemList;
-		this.numberLot = numberLot;
-		this.vendorLot = vendorLot;
-		execute();
-	}
+  /**
+   * @return the numberLot
+   */
+  public String getNumberLot() {
+    return this.numberLot;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultDialog#onActionOk(com.mg.framework.api.ui.WidgetEvent)
-	 */
-	@Override
-	public void onActionOk(WidgetEvent event) {
-		if(isSelectionValid())
-			super.onActionOk(event);
-	}
+  /**
+   * @param numberLot the numberLot to set
+   */
+  public void setNumberLot(String numberLot) {
+    this.numberLot = numberLot;
+  }
 
-	/**
-	 * Выполнить проверку корректности кол-ва выбранных серийных номеров
-	 * @return <code>true</code> - если кол-во выбранных номеров равно требуемому кол-ву номеров для выбора<br>
-	 * <code>false</code> - во всех остальных случаях
-	 */
-	private boolean isSelectionValid() {
-		return getSelectionResult() == necessarySerialNumbersQuantity;
-	}
+  /**
+   * @return the vendorLot
+   */
+  public String getVendorLot() {
+    return this.vendorLot;
+  }
 
-	/**
-	 * Получить кол-во выбранных серийных номеров
-	 * @return кол-во выбранных серийных номеров
-	 */
-	private int getSelectionResult() {
-		selectedSerialNumbers.clear();
-		for (SerialNumberModelItem item : serialNumberItemList) {
-			if(item.getIsChecked())
-				selectedSerialNumbers.add(item.getNumber());
-		}
-		return selectedSerialNumbers.size();
-	}
+  /**
+   * @param vendorLot the vendorLot to set
+   */
+  public void setVendorLot(String vendorLot) {
+    this.vendorLot = vendorLot;
+  }
 
-	/**
-	 * Получить список выбранных серийных номеров
-	 * @return список серийных номеров
-	 */
-	public List<String> getSelectedSerialNumbers() {
-		return selectedSerialNumbers;
-	}
+  /**
+   * @return the necessarySerialNumbersQuantity
+   */
+  public Integer getNecessarySerialNumbersQuantity() {
+    return this.necessarySerialNumbersQuantity;
+  }
 
-	/**
-	 * @return the catalogCode
-	 */
-	public String getCatalogCode() {
-		return this.catalogCode;
-	}
+  /**
+   * @param necessarySerialNumbersQuantity the necessarySerialNumbersQuantity to set
+   */
+  public void setNecessarySerialNumbersQuantity(Integer necessarySerialNumbersQuantity) {
+    this.necessarySerialNumbersQuantity = necessarySerialNumbersQuantity;
+  }
 
-	/**
-	 * @param catalogCode the catalogCode to set
-	 */
-	public void setCatalogCode(String catalogCode) {
-		this.catalogCode = catalogCode;
-	}
+  /**
+   * @return the serialNumberItemList
+   */
+  public List<SerialNumberModelItem> getSerialNumberItemList() {
+    return this.serialNumberItemList;
+  }
 
-	/**
-	 * @return the catalogName
-	 */
-	public String getCatalogName() {
-		return this.catalogName;
-	}
+  /**
+   * @param serialNumberItemList the serialNumberItemList to set
+   */
+  public void setSerialNumberItemList(List<SerialNumberModelItem> serialNumberItemList) {
+    this.serialNumberItemList = serialNumberItemList;
+  }
 
-	/**
-	 * @param catalogName the catalogName to set
-	 */
-	public void setCatalogName(String catalogName) {
-		this.catalogName = catalogName;
-	}
+  private class SerialNumberTableModel extends AbstractTableModel {
+    private String[] columnsNames = null;
 
-	/**
-	 * @return the numberLot
-	 */
-	public String getNumberLot() {
-		return this.numberLot;
-	}
+    public SerialNumberTableModel() {
+      initializeColumnsNames();
+    }
 
-	/**
-	 * @param numberLot the numberLot to set
-	 */
-	public void setNumberLot(String numberLot) {
-		this.numberLot = numberLot;
-	}
+    private void initializeColumnsNames() {
+      Messages msg = Messages.getInstance();
+      columnsNames = new String[]{msg.getMessage(Messages.SERIAL_NUMBER_SELECTED), msg.getMessage(Messages.SERIAL_NUMBER)};
+    }
 
-	/**
-	 * @return the vendorLot
-	 */
-	public String getVendorLot() {
-		return this.vendorLot;
-	}
+    /* (non-Javadoc)
+     * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getColumnName(int)
+     */
+    public String getColumnName(int column) {
+      return columnsNames[column];
+    }
 
-	/**
-	 * @param vendorLot the vendorLot to set
-	 */
-	public void setVendorLot(String vendorLot) {
-		this.vendorLot = vendorLot;
-	}
+    /* (non-Javadoc)
+     * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getValueAt(int, int)
+     */
+    public Object getValueAt(int row, int column) {
+      SerialNumberModelItem item = serialNumberItemList.get(row);
+      switch (column) {
+        case 0:
+          return item.getIsChecked();
+        case 1:
+          return item.getNumber();
+        default:
+          return StringUtils.EMPTY_STRING;
+      }
+    }
 
-	/**
-	 * @return the necessarySerialNumbersQuantity
-	 */
-	public Integer getNecessarySerialNumbersQuantity() {
-		return this.necessarySerialNumbersQuantity;
-	}
+    /* (non-Javadoc)
+     * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getColumnCount()
+     */
+    public int getColumnCount() {
+      return columnsNames.length;
+    }
 
-	/**
-	 * @param necessarySerialNumbersQuantity the necessarySerialNumbersQuantity to set
-	 */
-	public void setNecessarySerialNumbersQuantity(Integer necessarySerialNumbersQuantity) {
-		this.necessarySerialNumbersQuantity = necessarySerialNumbersQuantity;
-	}
+    /* (non-Javadoc)
+     * @see com.mg.framework.support.ui.widget.TableControllerAdapter#getRowCount()
+     */
+    public int getRowCount() {
+      return serialNumberItemList.size();
+    }
 
-	/**
-	 * @return the serialNumberItemList
-	 */
-	public List<SerialNumberModelItem> getSerialNumberItemList() {
-		return this.serialNumberItemList;
-	}
+    /* (non-Javadoc)
+     * @see com.mg.framework.support.ui.widget.TableControllerAdapter#isCellEditable(int, int)
+     */
+    public boolean isCellEditable(int rowIndex, int columnIndex) {
+      return columnIndex == 0;
+    }
 
-	/**
-	 * @param serialNumberItemList the serialNumberItemList to set
-	 */
-	public void setSerialNumberItemList(List<SerialNumberModelItem> serialNumberItemList) {
-		this.serialNumberItemList = serialNumberItemList;
-	}
+    /* (non-Javadoc)
+     * @see com.mg.framework.support.ui.widget.TableControllerAdapter#setValueAt(java.lang.Object, int, int)
+     */
+    public void setValueAt(Object value, int rowIndex, int columnIndex) {
+      SerialNumberModelItem item = serialNumberItemList.get(rowIndex);
+      switch (columnIndex) {
+        case 0:
+          item.setChecked((Boolean) value);
+          break;
+      }
+    }
 
-	/**
-	 * @param selectedSerialNumbers the selectedSerialNumbers to set
-	 */
-	public void setSelectedSerialNumbers(List<String> selectedSerialNumbers) {
-		this.selectedSerialNumbers = selectedSerialNumbers;
-	}
+    /* (non-Javadoc)
+     * @see com.mg.framework.generic.ui.AbstractTableModel#getColumnClass(int)
+     */
+    @Override
+    public Class<?> getColumnClass(int column) {
+      if (column == 0)
+        return Boolean.class;
+      else
+        return null;
+    }
+  }
 
 }

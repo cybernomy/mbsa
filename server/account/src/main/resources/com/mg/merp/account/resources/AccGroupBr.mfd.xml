@@ -13,20 +13,27 @@
 
 <!-- $Id: AccGroupBr.mfd.xml,v 1.2 2006/11/30 11:48:44 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.framework.generic.ui.DefaultLegacyPlainBrowseForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.account.resources.formelements#AccGroup.FormBr.Title" helpTopic="account#acckind_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.framework.generic.ui.DefaultLegacyPlainBrowseForm" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.account.resources.formelements#AccGroup.FormBr.Title"
+          helpTopic="account#acckind_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" alignment="expand_expand" autoResize="subsequent_columns" scroll="true" >
-		<jfd:columns>
-			<jfd:column fieldName="ID" title="Идентификатор" />
-			<jfd:column fieldName="GCODE" title="Код" />
-			<jfd:column fieldName="GNAME" title="Наименование" />
-			<jfd:column fieldName="MINUSAGEPERIOD" title="Минимальный срок полезного использования, летresource://com.mg.merp.account.resources.dataitemlabels#AccGroup.MinUsagePeriod" />
-			<jfd:column fieldName="MAXUSAGEPERIOD" title="Максимальный срок полезного использования, лет" />
-		</jfd:columns>		
-	</jfd:maintenanceTable>
+  <jfd:maintenanceTable id="table" alignment="expand_expand" autoResize="subsequent_columns"
+                        scroll="true">
+    <jfd:columns>
+      <jfd:column fieldName="ID" title="Идентификатор"/>
+      <jfd:column fieldName="GCODE" title="Код"/>
+      <jfd:column fieldName="GNAME" title="Наименование"/>
+      <jfd:column fieldName="MINUSAGEPERIOD"
+                  title="Минимальный срок полезного использования, летresource://com.mg.merp.account.resources.dataitemlabels#AccGroup.MinUsagePeriod"/>
+      <jfd:column fieldName="MAXUSAGEPERIOD"
+                  title="Максимальный срок полезного использования, лет"/>
+    </jfd:columns>
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

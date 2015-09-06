@@ -14,16 +14,16 @@
 <!-- $Id: link.xml,v 1.1 2007/04/28 07:08:02 konyashkina Exp $ -->
 
 <link version="1.0">
-   
+
   <linkitem topic="doctype_links">
-    <linkentry target="doctype_html" text="Типы документов" />
-    <linkentry target="doctypeparam_html" text="Параметры типа документа" />
-    <linkentry target="docprtune_html" text="Настройка документооборота" />
-    <linkentry target="add_html" text="Добавление этапа" />
-    <linkentry target="addlink_html" text="Добавление связи" />
-    <linkentry target="permissions_html" text="Права доступа" />
-    <linkentry target="etapparam_html" text="Параметры этапа" />
-    <linkentry target="history_html" text="История документооборота" />
+    <linkentry target="doctype_html" text="Типы документов"/>
+    <linkentry target="doctypeparam_html" text="Параметры типа документа"/>
+    <linkentry target="docprtune_html" text="Настройка документооборота"/>
+    <linkentry target="add_html" text="Добавление этапа"/>
+    <linkentry target="addlink_html" text="Добавление связи"/>
+    <linkentry target="permissions_html" text="Права доступа"/>
+    <linkentry target="etapparam_html" text="Параметры этапа"/>
+    <linkentry target="history_html" text="История документооборота"/>
   </linkitem>
-  
+
 </link>

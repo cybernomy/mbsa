@@ -15,20 +15,20 @@
 
 package com.mg.merp.mfreference.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.mfreference.ManufactureConfigServiceLocal;
 import com.mg.merp.mfreference.model.ManufactureConfig;
 
+import javax.ejb.Stateless;
+
 /**
  * Реализация бизнес-компонента "Конфигурация модуля <Производство>"
- * 
+ *
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
  * @version $Id: ManufactureConfigServiceBean.java,v 1.5 2007/01/13 13:23:13 sharapov Exp $
  */
-@Stateless(name="merp/mfreference/ManufactureConfigService") //$NON-NLS-1$
+@Stateless(name = "merp/mfreference/ManufactureConfigService") //$NON-NLS-1$
 public class ManufactureConfigServiceBean extends AbstractPOJODataBusinessObjectServiceBean<ManufactureConfig, Integer> implements ManufactureConfigServiceLocal {
 
 }

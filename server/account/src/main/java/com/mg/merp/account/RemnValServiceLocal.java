@@ -17,16 +17,14 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.RemnVal;
 
 /**
- * 
  * @author leonova
  * @version $Id: RemnValServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface RemnValServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<RemnVal, Integer>, com.mg.merp.account.Remn
-{
+    extends com.mg.framework.api.DataBusinessObjectService<RemnVal, Integer>, com.mg.merp.account.Remn {
 
-   public byte[] loadBatchBrowse( int remnId ) throws com.mg.framework.api.ApplicationException;
+  public byte[] loadBatchBrowse(int remnId) throws com.mg.framework.api.ApplicationException;
 
-   public void evaluateOutCost( int[] keys ) throws com.mg.framework.api.ApplicationException;
+  public void evaluateOutCost(int[] keys) throws com.mg.framework.api.ApplicationException;
 
 }

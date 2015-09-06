@@ -14,11 +14,11 @@
  */
 package com.mg.merp.document.support.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.merp.document.CreateDocOnComponents;
 import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocHeadModel;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * @author Konstantin S. Alikaev

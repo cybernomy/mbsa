@@ -19,24 +19,24 @@ import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 
 /**
  * Форма условий отбора партнеров
- * 
+ *
  * @author leonova
- * @version $Id: PartnerRest.java,v 1.3 2006/10/18 10:50:12 leonova Exp $ 
+ * @version $Id: PartnerRest.java,v 1.3 2006/10/18 10:50:12 leonova Exp $
  */
 public class PartnerRest extends DefaultHierarhyRestrictionForm {
 
-	@DataItemName("Reference.Contractor.Code")
-	private String code = "";
-	@DataItemName("Reference.Contractor.Name")
-	private String fullName = "";
-	@DataItemName("Reference.Partner.Inn")
-	private String inn = "";
-	@DataItemName("Reference.Cond.Partner.Account")
-	private String bankAcc = "";
-	@DataItemName("Reference.Bank.CorrAcc")
-	private String corrAcc = "";
-	@DataItemName("Reference.Bank.BIK.Name")
-	private String bik = "";
+  @DataItemName("Reference.Contractor.Code")
+  private String code = "";
+  @DataItemName("Reference.Contractor.Name")
+  private String fullName = "";
+  @DataItemName("Reference.Partner.Inn")
+  private String inn = "";
+  @DataItemName("Reference.Cond.Partner.Account")
+  private String bankAcc = "";
+  @DataItemName("Reference.Bank.CorrAcc")
+  private String corrAcc = "";
+  @DataItemName("Reference.Bank.BIK.Name")
+  private String bik = "";
 //	@DataItemName("Reference.Cond.Partner.SupCreditHigh")
 //	private BigDecimal supCreditHigh = BigDecimal.ZERO;
 //	@DataItemName("Reference.Cond.Partner.CusCreditLow")
@@ -58,15 +58,15 @@ public class PartnerRest extends DefaultHierarhyRestrictionForm {
 //	@DataItemName("Reference.Cond.Partner.TermSupCreditLow")
 //	private int termSupCreditLow = 0;
 
-	@Override
-	protected void doClearRestrictionItem() {
-		super.doClearRestrictionItem();
-		this.code = "";
-		this.fullName = "";
-		this.inn = "";
-		this.bankAcc = "";
-		this.corrAcc = "";
-		this.bik = "";
+  @Override
+  protected void doClearRestrictionItem() {
+    super.doClearRestrictionItem();
+    this.code = "";
+    this.fullName = "";
+    this.inn = "";
+    this.bankAcc = "";
+    this.corrAcc = "";
+    this.bik = "";
 //		this.supCreditHigh = BigDecimal.ZERO;
 //		this.cusCreditLow = BigDecimal.ZERO;
 //		this.cusCreditHigh = BigDecimal.ZERO;
@@ -77,43 +77,49 @@ public class PartnerRest extends DefaultHierarhyRestrictionForm {
 //		this.termSupCreditHigh = 0;
 //		this.termSupCreditLow = 0;
 //		this.termCusCreditHigh = 0;		
-	}
-	/**
-	 * @return Returns the bankAcc.
-	 */
-	public String getBankAcc() {
-		return bankAcc;
-	}
-	/**
-	 * @return Returns the bik.
-	 */
-	public String getBik() {
-		return bik;
-	}
-	/**
-	 * @return Returns the code.
-	 */
-	public String getCode() {
-		return code;
-	}
-	/**
-	 * @return Returns the corrAcc.
-	 */
-	public String getCorrAcc() {
-		return corrAcc;
-	}
-	/**
-	 * @return Returns the fullName.
-	 */
-	public String getFullName() {
-		return fullName;
-	}
-	/**
-	 * @return Returns the inn.
-	 */
-	public String getInn() {
-		return inn;
-	}
+  }
+
+  /**
+   * @return Returns the bankAcc.
+   */
+  public String getBankAcc() {
+    return bankAcc;
+  }
+
+  /**
+   * @return Returns the bik.
+   */
+  public String getBik() {
+    return bik;
+  }
+
+  /**
+   * @return Returns the code.
+   */
+  public String getCode() {
+    return code;
+  }
+
+  /**
+   * @return Returns the corrAcc.
+   */
+  public String getCorrAcc() {
+    return corrAcc;
+  }
+
+  /**
+   * @return Returns the fullName.
+   */
+  public String getFullName() {
+    return fullName;
+  }
+
+  /**
+   * @return Returns the inn.
+   */
+  public String getInn() {
+    return inn;
+  }
 
 
 }

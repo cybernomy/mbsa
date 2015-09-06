@@ -14,22 +14,23 @@
  */
 package com.mg.merp.settlement;
 
-import java.util.EventListener;
-
 import com.mg.merp.settlement.support.ui.ContractorCardMt.DocListItem;
+
+import java.util.EventListener;
 
 /**
  * Слушатель события "Изменения позиции курсора таблицы"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: SelectionRowListener.java,v 1.1 2007/03/19 15:05:29 sharapov Exp $
  */
 public interface SelectionRowListener extends EventListener {
 
-	/**
-	 * Cобытие "Изменение позиции курсора таблицы"
-	 * @param selectedItem - данные текущей позиции курсора таблицы
-	 */
-	public void selectedRowChange(DocListItem selectedItem);
+  /**
+   * Cобытие "Изменение позиции курсора таблицы"
+   *
+   * @param selectedItem - данные текущей позиции курсора таблицы
+   */
+  public void selectedRowChange(DocListItem selectedItem);
 
 }

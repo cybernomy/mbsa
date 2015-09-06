@@ -15,19 +15,19 @@
 
 package com.mg.merp.personnelref.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.personnelref.PersonnelAttestationServiceLocal;
 import com.mg.merp.personnelref.model.PersonnelAttestation;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Аттестация сотрудников" 
- * 
+ * Бизнес-компонент "Аттестация сотрудников"
+ *
  * @author leonova
  * @version $Id: PersonnelAttestationServiceBean.java,v 1.3 2006/08/14 12:50:04 leonova Exp $
  */
-@Stateless(name="merp/personnelref/PersonnelAttestationService")
+@Stateless(name = "merp/personnelref/PersonnelAttestationService")
 public class PersonnelAttestationServiceBean extends AbstractPOJODataBusinessObjectServiceBean<PersonnelAttestation, Integer> implements PersonnelAttestationServiceLocal {
 
 

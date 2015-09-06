@@ -14,24 +14,24 @@
  */
 package com.mg.framework.service;
 
-import java.io.Serializable;
-
 import org.hibernate.CallbackException;
 import org.hibernate.EmptyInterceptor;
 import org.hibernate.type.Type;
 
+import java.io.Serializable;
+
 /**
  * Перехватчик событий системы персистенции Hibernate
- * @see org.hibernate.Interceptor
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: HibernateInterceptorImpl.java,v 1.2 2006/10/17 14:27:25 safonov Exp $
+ * @see org.hibernate.Interceptor
  */
 public class HibernateInterceptorImpl extends EmptyInterceptor {
 
-    public boolean onFlushDirty(Object entity, Serializable id,
-            Object[] currentState, Object[] previousState,
-            String[] propertyNames, Type[] types) throws CallbackException {
+  public boolean onFlushDirty(Object entity, Serializable id,
+                              Object[] currentState, Object[] previousState,
+                              String[] propertyNames, Type[] types) throws CallbackException {
 //        if (!(entity instanceof PersistentObject))
 //            return false;
 //        
@@ -49,11 +49,11 @@ public class HibernateInterceptorImpl extends EmptyInterceptor {
 //        } catch (Exception e) {
 //            throw new CallbackException(e);
 //        }
-    	return false;
-    }
+    return false;
+  }
 
-    public boolean onSave(Object entity, Serializable id, Object[] state,
-            String[] propertyNames, Type[] types) throws CallbackException {
+  public boolean onSave(Object entity, Serializable id, Object[] state,
+                        String[] propertyNames, Type[] types) throws CallbackException {
 //        if (!(entity instanceof PersistentObject))
 //            return false;
 //        
@@ -74,11 +74,11 @@ public class HibernateInterceptorImpl extends EmptyInterceptor {
 //        } catch (Exception e) {
 //            throw new CallbackException(e);
 //        }
-    	return false;
-    }
+    return false;
+  }
 
-    public void onDelete(Object entity, Serializable id, Object[] state,
-            String[] propertyNames, Type[] types) throws CallbackException {
+  public void onDelete(Object entity, Serializable id, Object[] state,
+                       String[] propertyNames, Type[] types) throws CallbackException {
 //        if (!(entity instanceof PersistentObject))
 //            return;
 //        
@@ -91,6 +91,6 @@ public class HibernateInterceptorImpl extends EmptyInterceptor {
 //        } catch (Exception e) {
 //            throw new CallbackException(e);
 //        }
-    }
+  }
 
 }

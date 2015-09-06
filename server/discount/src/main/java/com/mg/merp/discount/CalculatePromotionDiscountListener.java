@@ -14,27 +14,28 @@
  */
 package com.mg.merp.discount;
 
-import java.io.Serializable;
-
 import com.mg.merp.discount.support.PromotionDiscountResult;
+
+import java.io.Serializable;
 
 /**
  * Слушатель расчета скидки/наценки по рекламному мероприятию
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: CalculatePromotionDiscountListener.java,v 1.1 2007/10/30 13:55:56 sharapov Exp $
  */
 public interface CalculatePromotionDiscountListener extends Serializable {
 
-	/**
-	 * Расчет выполнен
-	 * @param result - результат расчета
-	 */
-	void completed(PromotionDiscountResult result);
-	
-	/**
-	 * Расчет прерван
-	 */
-	void aborted();
+  /**
+   * Расчет выполнен
+   *
+   * @param result - результат расчета
+   */
+  void completed(PromotionDiscountResult result);
+
+  /**
+   * Расчет прерван
+   */
+  void aborted();
 
 }

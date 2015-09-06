@@ -13,13 +13,17 @@
 
 <!-- $Id: ClientRankBr.mfd.xml,v 1.6 2006/12/15 10:22:49 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.crm.support.ui.ClientRankBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.crm.resources.formelements#ClientRank.FormBr.Title" helpTopic="crm#clientrank_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.crm.support.ui.ClientRankBr" orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.crm.resources.formelements#ClientRank.FormBr.Title"
+          helpTopic="crm#clientrank_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
-	</jfd:maintenanceTable>
+  <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true"
+                        autoResize="subsequent_columns">
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

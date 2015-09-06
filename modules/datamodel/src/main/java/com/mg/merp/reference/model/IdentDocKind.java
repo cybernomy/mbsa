@@ -22,134 +22,138 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.IdentDocKind")
 public class IdentDocKind extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String KCode;
+  private java.lang.String KCode;
 
-	private java.lang.String KName;
+  private java.lang.String KName;
 
-	private java.lang.Integer LSeriesLength;
+  private java.lang.Integer LSeriesLength;
 
-	private java.lang.Integer RSeriesLength;
+  private java.lang.Integer RSeriesLength;
 
-	private java.lang.String SeriesDivider;
+  private java.lang.String SeriesDivider;
 
-	private java.lang.Integer NumberLength;
+  private java.lang.Integer NumberLength;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public IdentDocKind() {
-	}
+  /**
+   * default constructor
+   */
+  public IdentDocKind() {
+  }
 
-	/** constructor with id */
-	public IdentDocKind(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public IdentDocKind(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
+  // Property accessors
 
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.BigCode")
-	public java.lang.String getKCode() {
-		return this.KCode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.BigCode")
+  public java.lang.String getKCode() {
+    return this.KCode;
+  }
 
-	public void setKCode(java.lang.String KCode) {
-		this.KCode = KCode;
-	}
+  public void setKCode(java.lang.String KCode) {
+    this.KCode = KCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Name")
-	public java.lang.String getKName() {
-		return this.KName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Name")
+  public java.lang.String getKName() {
+    return this.KName;
+  }
 
-	public void setKName(java.lang.String KName) {
-		this.KName = KName;
-	}
+  public void setKName(java.lang.String KName) {
+    this.KName = KName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.IdentKind.LSeriesLength")
-	public java.lang.Integer getLSeriesLength() {
-		return this.LSeriesLength;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.IdentKind.LSeriesLength")
+  public java.lang.Integer getLSeriesLength() {
+    return this.LSeriesLength;
+  }
 
-	public void setLSeriesLength(java.lang.Integer LSeriesLength) {
-		this.LSeriesLength = LSeriesLength;
-	}
+  public void setLSeriesLength(java.lang.Integer LSeriesLength) {
+    this.LSeriesLength = LSeriesLength;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.IdentKind.RSeriesLength")
-	public java.lang.Integer getRSeriesLength() {
-		return this.RSeriesLength;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.IdentKind.RSeriesLength")
+  public java.lang.Integer getRSeriesLength() {
+    return this.RSeriesLength;
+  }
 
-	public void setRSeriesLength(java.lang.Integer RSeriesLength) {
-		this.RSeriesLength = RSeriesLength;
-	}
+  public void setRSeriesLength(java.lang.Integer RSeriesLength) {
+    this.RSeriesLength = RSeriesLength;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.IdentKind.SeriesDivider")
-	public java.lang.String getSeriesDivider() {
-		return this.SeriesDivider;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.IdentKind.SeriesDivider")
+  public java.lang.String getSeriesDivider() {
+    return this.SeriesDivider;
+  }
 
-	public void setSeriesDivider(java.lang.String SeriesDivider) {
-		this.SeriesDivider = SeriesDivider;
-	}
+  public void setSeriesDivider(java.lang.String SeriesDivider) {
+    this.SeriesDivider = SeriesDivider;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.IdentKind.NumberLength")
-	public java.lang.Integer getNumberLength() {
-		return this.NumberLength;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.IdentKind.NumberLength")
+  public java.lang.Integer getNumberLength() {
+    return this.NumberLength;
+  }
 
-	public void setNumberLength(java.lang.Integer NumberLength) {
-		this.NumberLength = NumberLength;
-	}
+  public void setNumberLength(java.lang.Integer NumberLength) {
+    this.NumberLength = NumberLength;
+  }
 
 }

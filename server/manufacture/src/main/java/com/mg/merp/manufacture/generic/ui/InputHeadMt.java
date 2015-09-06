@@ -20,24 +20,24 @@ import com.mg.merp.manufacture.model.InputDocumentHead;
 
 /**
  * Базовая реализация котроллера формы поддержки документов на списание ресурсов
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: InputHeadMt.java,v 1.1 2007/08/06 12:45:50 safonov Exp $
  */
 public abstract class InputHeadMt extends GoodsDocumentMaintenanceForm {
 
-	public InputHeadMt() throws Exception {
-		super();
-	}
+  public InputHeadMt() throws Exception {
+    super();
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.ui.GoodsDocumentMaintenanceForm#doAddSpecification()
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	protected void doAddSpecification() {
-		((InputSpecificationServiceLocal) specService).createSpecifications((InputDocumentHead) getEntity());
-		spec.refresh();
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.ui.GoodsDocumentMaintenanceForm#doAddSpecification()
+   */
+  @SuppressWarnings("unchecked")
+  @Override
+  protected void doAddSpecification() {
+    ((InputSpecificationServiceLocal) specService).createSpecifications((InputDocumentHead) getEntity());
+    spec.refresh();
+  }
 
 }

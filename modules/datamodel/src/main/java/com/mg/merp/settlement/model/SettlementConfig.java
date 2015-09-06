@@ -19,82 +19,86 @@ package com.mg.merp.settlement.model;
  * @version $Id: SettlementConfig.java,v 1.3 2006/03/30 11:32:21 safonov Exp $
  */
 public class SettlementConfig extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private com.mg.merp.reference.model.Currency Currency;
+  private com.mg.merp.reference.model.Currency Currency;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.reference.model.Currency NarCurrency;
+  private com.mg.merp.reference.model.Currency NarCurrency;
 
-	private com.mg.merp.reference.model.CurrencyRateType RefCurrencyRateType;
+  private com.mg.merp.reference.model.CurrencyRateType RefCurrencyRateType;
 
-	private com.mg.merp.reference.model.CurrencyRateAuthority RefCurrencyRateAuthority;
+  private com.mg.merp.reference.model.CurrencyRateAuthority RefCurrencyRateAuthority;
 
-	private java.lang.Integer CurrencyPrec;
+  private java.lang.Integer CurrencyPrec;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public SettlementConfig() {
-	}
+  /**
+   * default constructor
+   */
+  public SettlementConfig() {
+  }
 
-	/** constructor with id */
-	public SettlementConfig(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  /**
+   * constructor with id
+   */
+  public SettlementConfig(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public com.mg.merp.reference.model.Currency getCurrency() {
-		return Currency;
-	}
+  public com.mg.merp.reference.model.Currency getCurrency() {
+    return Currency;
+  }
 
-	public void setCurrency(com.mg.merp.reference.model.Currency currency) {
-		Currency = currency;
-	}
+  public void setCurrency(com.mg.merp.reference.model.Currency currency) {
+    Currency = currency;
+  }
 
-	public java.lang.Integer getCurrencyPrec() {
-		return CurrencyPrec;
-	}
+  public java.lang.Integer getCurrencyPrec() {
+    return CurrencyPrec;
+  }
 
-	public void setCurrencyPrec(java.lang.Integer currencyPrec) {
-		CurrencyPrec = currencyPrec;
-	}
+  public void setCurrencyPrec(java.lang.Integer currencyPrec) {
+    CurrencyPrec = currencyPrec;
+  }
 
-	public com.mg.merp.reference.model.Currency getNarCurrency() {
-		return NarCurrency;
-	}
+  public com.mg.merp.reference.model.Currency getNarCurrency() {
+    return NarCurrency;
+  }
 
-	public void setNarCurrency(com.mg.merp.reference.model.Currency narCurrency) {
-		NarCurrency = narCurrency;
-	}
+  public void setNarCurrency(com.mg.merp.reference.model.Currency narCurrency) {
+    NarCurrency = narCurrency;
+  }
 
-	public com.mg.merp.reference.model.CurrencyRateAuthority getRefCurrencyRateAuthority() {
-		return RefCurrencyRateAuthority;
-	}
+  public com.mg.merp.reference.model.CurrencyRateAuthority getRefCurrencyRateAuthority() {
+    return RefCurrencyRateAuthority;
+  }
 
-	public void setRefCurrencyRateAuthority(
-			com.mg.merp.reference.model.CurrencyRateAuthority refCurrencyRateAuthority) {
-		RefCurrencyRateAuthority = refCurrencyRateAuthority;
-	}
+  public void setRefCurrencyRateAuthority(
+      com.mg.merp.reference.model.CurrencyRateAuthority refCurrencyRateAuthority) {
+    RefCurrencyRateAuthority = refCurrencyRateAuthority;
+  }
 
-	public com.mg.merp.reference.model.CurrencyRateType getRefCurrencyRateType() {
-		return RefCurrencyRateType;
-	}
+  public com.mg.merp.reference.model.CurrencyRateType getRefCurrencyRateType() {
+    return RefCurrencyRateType;
+  }
 
-	public void setRefCurrencyRateType(
-			com.mg.merp.reference.model.CurrencyRateType refCurrencyRateType) {
-		RefCurrencyRateType = refCurrencyRateType;
-	}
+  public void setRefCurrencyRateType(
+      com.mg.merp.reference.model.CurrencyRateType refCurrencyRateType) {
+    RefCurrencyRateType = refCurrencyRateType;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return SysClient;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient sysClient) {
-		SysClient = sysClient;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient sysClient) {
+    SysClient = sysClient;
+  }
 
 }

@@ -21,29 +21,29 @@ import com.mg.framework.api.annotations.EnumConstantText;
  * @author leonova
  * @version $Id: ScheduleStatus.java,v 1.1 2006/03/30 11:27:50 safonov Exp $
  */
-@DataItemName ("LbSchedule.Schedule.ScheduleStatus")
+@DataItemName("LbSchedule.Schedule.ScheduleStatus")
 public enum ScheduleStatus {
-	/**
-	 * Запланировано
-	 */
-	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Status.Planned")
-	PLANNED,
-	
-	/**
-	 * В работе
-	 */
-	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Status.InWork")
-	INWORK,
-	
-	/**
-	 * Выполнено
-	 */
-	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Status.Executed")
-	EXECUTED,
-	
-	/**
-	 * Не используется
-	 */
-	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Status.NotInUse")
-	NOTINUSE
+  /**
+   * Запланировано
+   */
+  @EnumConstantText("resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Status.Planned")
+  PLANNED,
+
+  /**
+   * В работе
+   */
+  @EnumConstantText("resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Status.InWork")
+  INWORK,
+
+  /**
+   * Выполнено
+   */
+  @EnumConstantText("resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Status.Executed")
+  EXECUTED,
+
+  /**
+   * Не используется
+   */
+  @EnumConstantText("resource://com.mg.merp.lbschedule.resources.dataitemlabels#Schedule.Status.NotInUse")
+  NOTINUSE
 }

@@ -13,7 +13,9 @@
 
 <!-- $Id: DocSpecPackingMacros.xml,v 1.4 2006/08/22 07:08:54 leonova Exp $ -->
 
-<jfd:maintenanceTable xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="packing" autoResize="subsequent_columns" alignment="expand_expand" scroll="true" tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Packing">
+<jfd:maintenanceTable xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="packing"
+                      autoResize="subsequent_columns" alignment="expand_expand" scroll="true"
+                      tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Packing">
 </jfd:maintenanceTable>	 	
 
 

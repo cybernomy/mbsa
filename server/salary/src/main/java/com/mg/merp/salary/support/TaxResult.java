@@ -18,88 +18,83 @@ import java.math.BigDecimal;
 
 /**
  * Класс-результат: информация о налоге
- * 
+ *
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
  * @version $Id: TaxResult.java,v 1.1 2007/08/21 05:33:09 sharapov Exp $
  */
 public class TaxResult {
 
-	private Integer rateNumber;
-	private BigDecimal minIncome;
-	private BigDecimal maxIncome;
-	private BigDecimal percent;
-	private BigDecimal constValue;
-	private BigDecimal privilegeRatio;
+  private Integer rateNumber;
+  private BigDecimal minIncome;
+  private BigDecimal maxIncome;
+  private BigDecimal percent;
+  private BigDecimal constValue;
+  private BigDecimal privilegeRatio;
 
 
-	public TaxResult() {
-	}
-	
-	/**
-	 * Создать информацию о налоге
-	 * @param rateNumber - номер ставки
-	 * @param minIncome - минимальный доход, начиная с которого действует данная ставка
-	 * @param maxIncome - максимальный доход, до которого действует данная ставка
-	 * @param percent - процент ставки
-	 * @param constValue - фиксированная сумма
-	 * @param privilegeRatio - коэффициент для льгот
-	 */
-	public TaxResult(Integer rateNumber, BigDecimal minIncome, BigDecimal maxIncome, BigDecimal percent, BigDecimal constValue, BigDecimal privilegeRatio) {
-		this.rateNumber = rateNumber;
-		this.minIncome = minIncome;
-		this.maxIncome = maxIncome;
-		this.percent = percent;
-		this.constValue = constValue;
-		this.privilegeRatio = privilegeRatio;
-	}
+  public TaxResult() {
+  }
 
-	/**
-	 * 
-	 * @return фиксированная сумма
-	 */
-	public BigDecimal getConstValue() {
-		return constValue;
-	}
+  /**
+   * Создать информацию о налоге
+   *
+   * @param rateNumber     - номер ставки
+   * @param minIncome      - минимальный доход, начиная с которого действует данная ставка
+   * @param maxIncome      - максимальный доход, до которого действует данная ставка
+   * @param percent        - процент ставки
+   * @param constValue     - фиксированная сумма
+   * @param privilegeRatio - коэффициент для льгот
+   */
+  public TaxResult(Integer rateNumber, BigDecimal minIncome, BigDecimal maxIncome, BigDecimal percent, BigDecimal constValue, BigDecimal privilegeRatio) {
+    this.rateNumber = rateNumber;
+    this.minIncome = minIncome;
+    this.maxIncome = maxIncome;
+    this.percent = percent;
+    this.constValue = constValue;
+    this.privilegeRatio = privilegeRatio;
+  }
 
-	/**
-	 * 
-	 * @return максимальный доход, до которого действует данная ставка
-	 */
-	public BigDecimal getMaxIncome() {
-		return maxIncome;
-	}
+  /**
+   * @return фиксированная сумма
+   */
+  public BigDecimal getConstValue() {
+    return constValue;
+  }
 
-	/**
-	 * 
-	 * @return минимальный доход, начиная с которого действует данная ставка
-	 */
-	public BigDecimal getMinIncome() {
-		return minIncome;
-	}
+  /**
+   * @return максимальный доход, до которого действует данная ставка
+   */
+  public BigDecimal getMaxIncome() {
+    return maxIncome;
+  }
 
-	/**
-	 * 
-	 * @return процент ставки
-	 */
-	public BigDecimal getPercent() {
-		return percent;
-	}
+  /**
+   * @return минимальный доход, начиная с которого действует данная ставка
+   */
+  public BigDecimal getMinIncome() {
+    return minIncome;
+  }
 
-	/**
-	 * 
-	 * @return коэффициент для льгот
-	 */
-	public BigDecimal getPrivilegeRatio() {
-		return privilegeRatio;
-	}
+  /**
+   * @return процент ставки
+   */
+  public BigDecimal getPercent() {
+    return percent;
+  }
 
-	/**
-	 * 
-	 * @return номер ставки
-	 */
-	public Integer getRateNumber() {
-		return rateNumber;
-	}
+  /**
+   * @return коэффициент для льгот
+   */
+  public BigDecimal getPrivilegeRatio() {
+    return privilegeRatio;
+  }
+
+  /**
+   * @return номер ставки
+   */
+  public Integer getRateNumber() {
+    return rateNumber;
+  }
 
 }

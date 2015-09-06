@@ -11,15 +11,17 @@
 <!-- Millennium Business Suite Anywhere System.                              -->
 <!-- ======================================================================= -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.table.resources.formelements#TableConfig.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.table.resources.formelements#TableConfig.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
-		<jfd:container id="allFields" layout="jfd:defaultMtLayout" alignment="expand_expand" >		
- 		<jfd:border style="bevel" type="raised" />
-			<jfd:field id="WorkTimeKind" /> 
-			<jfd:field id="HolidayTimeKind" /> 
-		</jfd:container>
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
+  <jfd:container id="allFields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="WorkTimeKind"/>
+    <jfd:field id="HolidayTimeKind"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

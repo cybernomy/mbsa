@@ -13,28 +13,32 @@
 
 <!-- $Id: ForecastVersionRest.mfd.xml,v 1.2 2006/12/15 10:38:23 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.planning.support.ui.ForecastVersionRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.planning.resources.formelements#Cond.PlanningForecast" helpTopic="planning#forecastver_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.planning.support.ui.ForecastVersionRest" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.planning.resources.formelements#Cond.PlanningForecast"
+          helpTopic="planning#forecastver_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
- 		<jfd:field id="code" />
-		<jfd:field id="description" />
-		<jfd:field id="planningItemCode" />
-		<jfd:field id="catalogCode" sameLine="true"/>
-		<jfd:field id="warehouseCode" />
-		<jfd:field id="forecastMethod" editorType="comboBox"/>
-		<jfd:field id="forecastType" editorType="comboBox" sameLine="true"/>				
-		<jfd:field id="requiredDateFrom" />
-		<jfd:field id="requiredDateTill" sameLine="true"/>	
-		<jfd:field id="planningLevelCode" />
-		<jfd:field id="bucketOffset" sameLine="true"/> 
-		<jfd:field id="bucketStartDate" />						
-		<jfd:field id="bucketEndDate" sameLine="true"/>	
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" /> 		
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="code"/>
+    <jfd:field id="description"/>
+    <jfd:field id="planningItemCode"/>
+    <jfd:field id="catalogCode" sameLine="true"/>
+    <jfd:field id="warehouseCode"/>
+    <jfd:field id="forecastMethod" editorType="comboBox"/>
+    <jfd:field id="forecastType" editorType="comboBox" sameLine="true"/>
+    <jfd:field id="requiredDateFrom"/>
+    <jfd:field id="requiredDateTill" sameLine="true"/>
+    <jfd:field id="planningLevelCode"/>
+    <jfd:field id="bucketOffset" sameLine="true"/>
+    <jfd:field id="bucketStartDate"/>
+    <jfd:field id="bucketEndDate" sameLine="true"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultRestrictionFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultRestrictionFooterMacros.xml"/>
 
 </jfd:form>

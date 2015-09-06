@@ -24,32 +24,32 @@ import com.mg.merp.personnelref.model.TariffScale;
 
 /**
  * Форма поиска бизнес-компонента "Тарифные сетки"
- * 
+ *
  * @author leonova
  * @version $Id: TariffingScaleSearchForm.java,v 1.3 2009/02/09 12:11:17 safonov Exp $
  */
 public class TariffingScaleSearchForm extends AbstractSearchForm {
-	private final static String LOAD_TARIFFING_SCALE_EJBQL = "from TariffScale"; //$NON-NLS-1$
-	private final static String[] fieldList = new String[] {"SCode", "SName", "SType", "BeginDate", "FirstClassAlg"}; //$NON-NLS-1$ $NON-NLS-2$ $NON-NLS-3$
-	
-	private DefaultTableController tariffinhScalerist;
-	
-	public TariffingScaleSearchForm() {
-		tariffinhScalerist = new DefaultTableController(new DefaultEntityListTableModel<TariffScale>() {
-			@Override
-			protected void doLoad() {
-				setEntityList(MiscUtils.convertUncheckedList(TariffScale.class, OrmTemplate.getInstance().find(LOAD_TARIFFING_SCALE_EJBQL)), fieldList);
-			}
-		});
-		tariffinhScalerist.getModel().load();
-	}
+  private final static String LOAD_TARIFFING_SCALE_EJBQL = "from TariffScale"; //$NON-NLS-1$
+  private final static String[] fieldList = new String[]{"SCode", "SName", "SType", "BeginDate", "FirstClassAlg"}; //$NON-NLS-1$ $NON-NLS-2$ $NON-NLS-3$
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchForm#getSearchedEntities()
-	 */
-	@Override
-	protected PersistentObject[] getSearchedEntities() {
-		return ((DefaultEntityListTableModel<?>) tariffinhScalerist.getModel()).getSelectedEntities();
-	}
+  private DefaultTableController tariffinhScalerist;
+
+  public TariffingScaleSearchForm() {
+    tariffinhScalerist = new DefaultTableController(new DefaultEntityListTableModel<TariffScale>() {
+      @Override
+      protected void doLoad() {
+        setEntityList(MiscUtils.convertUncheckedList(TariffScale.class, OrmTemplate.getInstance().find(LOAD_TARIFFING_SCALE_EJBQL)), fieldList);
+      }
+    });
+    tariffinhScalerist.getModel().load();
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchForm#getSearchedEntities()
+   */
+  @Override
+  protected PersistentObject[] getSearchedEntities() {
+    return ((DefaultEntityListTableModel<?>) tariffinhScalerist.getModel()).getSelectedEntities();
+  }
 
 }

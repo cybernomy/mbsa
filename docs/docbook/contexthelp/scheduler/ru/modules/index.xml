@@ -14,14 +14,14 @@
 <!-- $Id: index.xml,v 1.1 2008/05/06 10:41:48 safonov Exp $ -->
 
 <index version="1.0">
- 
-  <indexitem text="Планировщик заданий"> 
-    <indexentry text="Планировщик заданий" target="scheduler_html" />
+
+  <indexitem text="Планировщик заданий">
+    <indexentry text="Планировщик заданий" target="scheduler_html"/>
   </indexitem>
 
   <indexitem text="Настройка планировщика заданий">
-     <indexentry text="Задания планировщика" target="schtask_html" />
-     <indexentry text="Cron-формат" target="cron_html" />
+    <indexentry text="Задания планировщика" target="schtask_html"/>
+    <indexentry text="Cron-формат" target="cron_html"/>
   </indexitem>
 
 </index>

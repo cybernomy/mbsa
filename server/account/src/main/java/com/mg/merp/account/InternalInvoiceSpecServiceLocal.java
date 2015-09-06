@@ -17,12 +17,10 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.InternalInvoiceSpec;
 
 /**
- * 
  * @author leonova
  * @version $Id: InternalInvoiceSpecServiceLocal.java,v 1.2 2006/09/20 10:43:40 safonov Exp $
  */
 public interface InternalInvoiceSpecServiceLocal
-   extends com.mg.merp.document.GoodsDocumentSpecification<InternalInvoiceSpec, Integer>
-{
+    extends com.mg.merp.document.GoodsDocumentSpecification<InternalInvoiceSpec, Integer> {
 
 }

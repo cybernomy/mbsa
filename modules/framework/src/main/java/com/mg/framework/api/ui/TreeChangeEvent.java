@@ -17,14 +17,14 @@ package com.mg.framework.api.ui;
 import com.mg.framework.support.ui.widget.tree.TreeNode;
 
 public class TreeChangeEvent extends UIEvent {
-	TreeNode node;
-	
-	public TreeChangeEvent(Object source, TreeNode node) {
-		super(source);
-		this.node = node;
-	}
-	
-	public TreeNode getNode() {
-		return node;
-	}
+  TreeNode node;
+
+  public TreeChangeEvent(Object source, TreeNode node) {
+    super(source);
+    this.node = node;
+  }
+
+  public TreeNode getNode() {
+    return node;
+  }
 }

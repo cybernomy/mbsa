@@ -19,27 +19,27 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Состояние этапа документооборота
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: StageState.java,v 1.2 2006/10/21 11:37:32 safonov Exp $
  */
 @DataItemName("DocFlow.DocFlowStage.State")
 public enum StageState {
-	/**
-	 * Не выполнен
-	 */
-	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#DocFlowStage.State.None")
-	NONE,
-	
-	/**
-	 * Выполнен частично
-	 */
-	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#DocFlowStage.State.Partition")
-	PARTITION,
-	
-	/**
-	 * Выполнен полностью
-	 */
-	@EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#DocFlowStage.State.Complete")
-	COMPLETE
+  /**
+   * Не выполнен
+   */
+  @EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#DocFlowStage.State.None")
+  NONE,
+
+  /**
+   * Выполнен частично
+   */
+  @EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#DocFlowStage.State.Partition")
+  PARTITION,
+
+  /**
+   * Выполнен полностью
+   */
+  @EnumConstantText("resource://com.mg.merp.docflow.resources.dataitemlabels#DocFlowStage.State.Complete")
+  COMPLETE
 }

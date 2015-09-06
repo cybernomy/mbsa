@@ -18,19 +18,19 @@ import java.io.Serializable;
 
 /**
  * Can be used to provide data for a drag and drop transfer operation between widgets
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: Transferable.java,v 1.2 2008/05/14 10:39:28 safonov Exp $
  */
 public interface Transferable extends Serializable {
 
-	/**
-	 * Returns the data to be transferred represented as an object. The
-	 * representationclass of the flavor defines the returned object's class.
-	 * 
-	 * @param flavor	the specified flavor for the data
-	 * @return			the object representing the data
-	 */
-	DnDData getTransferData(DataFlavor flavor);
+  /**
+   * Returns the data to be transferred represented as an object. The representationclass of the
+   * flavor defines the returned object's class.
+   *
+   * @param flavor the specified flavor for the data
+   * @return the object representing the data
+   */
+  DnDData getTransferData(DataFlavor flavor);
 
 }

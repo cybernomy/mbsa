@@ -20,24 +20,24 @@ import com.mg.merp.manufacture.model.ScrapDocumentHead;
 
 /**
  * Базовая реализация формы поддержки документов на списание потерь
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ScrapHeadMt.java,v 1.1 2007/08/06 12:45:50 safonov Exp $
  */
 public class ScrapHeadMt extends GoodsDocumentMaintenanceForm {
 
-	public ScrapHeadMt() throws Exception {
-		super();
-	}
+  public ScrapHeadMt() throws Exception {
+    super();
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.ui.GoodsDocumentMaintenanceForm#doAddSpecification()
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	protected void doAddSpecification() {
-		((ScrapSpecificationServiceLocal) specService).createSpecifications((ScrapDocumentHead) getEntity());
-		spec.refresh();
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.ui.GoodsDocumentMaintenanceForm#doAddSpecification()
+   */
+  @SuppressWarnings("unchecked")
+  @Override
+  protected void doAddSpecification() {
+    ((ScrapSpecificationServiceLocal) specService).createSpecifications((ScrapDocumentHead) getEntity());
+    spec.refresh();
+  }
 
 }

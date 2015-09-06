@@ -18,18 +18,18 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
  * Поисковик бизнес-компонента "Образцы реестра обязательств"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: LiabilityModelSearchHelp.java,v 1.1 2007/02/16 14:55:07 sharapov Exp $
  */
 public class LiabilityModelSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {
-		return "merp/paymentcontrol/LiabilityModel"; //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/paymentcontrol/LiabilityModel"; //$NON-NLS-1$
+  }
 
 }

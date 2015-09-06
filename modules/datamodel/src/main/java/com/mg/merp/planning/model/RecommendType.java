@@ -23,15 +23,15 @@ import com.mg.framework.api.annotations.EnumConstantText;
  */
 @DataItemName("Planning.RecommendType")
 public enum RecommendType {
-	/**
-	 * закупка
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#FirmOrder.Purchase")
-	PURCHASE,
-	
-	/**
-	 * перемещение
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#FirmOrder.Transfer")
-	TRANSFER
+  /**
+   * закупка
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#FirmOrder.Purchase")
+  PURCHASE,
+
+  /**
+   * перемещение
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#FirmOrder.Transfer")
+  TRANSFER
 }

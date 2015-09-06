@@ -15,30 +15,30 @@
 
 package com.mg.merp.salary.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.salary.RollKindServiceLocal;
 import com.mg.merp.salary.model.RollKind;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Типы расчетных ведомостей" 
- * 
+ * Бизнес-компонент "Типы расчетных ведомостей"
+ *
  * @author leonova
  * @version $Id: RollKindServiceBean.java,v 1.3 2006/08/28 12:44:53 leonova Exp $
  */
-@Stateless(name="merp/salary/RollKindService")
+@Stateless(name = "merp/salary/RollKindService")
 public class RollKindServiceBean extends AbstractPOJODataBusinessObjectServiceBean<RollKind, Integer> implements RollKindServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, RollKind entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Name"));
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, RollKind entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Name"));
+  }
 
 
 }

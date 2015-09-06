@@ -14,7 +14,7 @@
 <!-- $Id: CurrencyModelMacros.xml,v 1.1 2007/05/22 04:52:00 sharapov Exp $ -->
 
 <jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
-	<jfd:field id="Currency" />
-	<jfd:field id="CurrencyRateType" />
-	<jfd:field id="CurrencyRateAuthority" sameLine="true"/>
+  <jfd:field id="Currency"/>
+  <jfd:field id="CurrencyRateType"/>
+  <jfd:field id="CurrencyRateAuthority" sameLine="true"/>
 </jfd:wrap-macros>

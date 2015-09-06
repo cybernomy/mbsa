@@ -16,19 +16,19 @@ package com.mg.merp.account.support.ui;
 
 /**
  * Базовый класс для SearchHelp аналитических счетов по кредиту
- * 
+ *
  * @author leonova
  * @version $Id: AnlPlanAccKtSearchHelp.java,v 1.1 2006/10/04 06:20:19 leonova Exp $
  */
 public abstract class AnlPlanAccKtSearchHelp extends AnlPlanSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAccPlanContextName()
-	 */
-	@Override
-	protected String getAccPlanContextName() {		
-		return "AccKt";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAccPlanContextName()
+   */
+  @Override
+  protected String getAccPlanContextName() {
+    return "AccKt";
+  }
 
 
 }

@@ -14,39 +14,39 @@
  */
 package com.mg.merp.docflow;
 
-import java.util.Date;
-
 import com.mg.framework.api.BusinessException;
 import com.mg.merp.docflow.support.Messages;
 import com.mg.merp.document.model.DocHead;
 
+import java.util.Date;
+
 /**
  * Класс ИС ДО выполнен
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: AlreadyCompletedException.java,v 1.4 2007/08/06 13:19:45 safonov Exp $
  */
 @javax.ejb.ApplicationException(rollback = true)
 public class AlreadyCompletedException extends BusinessException {
-	private String docSectionName;
-	private String docTypeCode;
-	private String docNumber;
-	private Date docDate;
+  private String docSectionName;
+  private String docTypeCode;
+  private String docNumber;
+  private Date docDate;
 
-	public AlreadyCompletedException(DocHead docHead) {
-		super("already completed");
-		this.docSectionName = docHead.getDocSection().getDSName().trim();
-		this.docTypeCode = docHead.getDocType().getCode().trim();
-		this.docNumber = docHead.getDocNumber();
-		this.docDate = docHead.getDocDate();
-	}
+  public AlreadyCompletedException(DocHead docHead) {
+    super("already completed");
+    this.docSectionName = docHead.getDocSection().getDSName().trim();
+    this.docTypeCode = docHead.getDocType().getCode().trim();
+    this.docNumber = docHead.getDocNumber();
+    this.docDate = docHead.getDocDate();
+  }
 
-	/* (non-Javadoc)
-	 * @see java.lang.Throwable#getLocalizedMessage()
-	 */
-	@Override
-	public String getLocalizedMessage() {
-		return Messages.getInstance().getMessage(Messages.ALREADY_COMPLETED_MESSAGE, new Object[] {docSectionName, docTypeCode, docNumber, docDate});
-	}
+  /* (non-Javadoc)
+   * @see java.lang.Throwable#getLocalizedMessage()
+   */
+  @Override
+  public String getLocalizedMessage() {
+    return Messages.getInstance().getMessage(Messages.ALREADY_COMPLETED_MESSAGE, new Object[]{docSectionName, docTypeCode, docNumber, docDate});
+  }
 
 }

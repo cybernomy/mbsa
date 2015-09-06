@@ -14,15 +14,15 @@
  */
 package com.mg.merp.warehouse.support.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.merp.reference.CurrentStockSituation;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * @author Valentin A. Poroxnenko
  * @version $Id: CurrentStockSituationServiceMBean.java,v 1.2 2007/05/03 12:43:11 poroxnenko Exp $
  */
 public interface CurrentStockSituationServiceMBean extends CurrentStockSituation,
-		ServiceMBean {
+    ServiceMBean {
 
 }

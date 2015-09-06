@@ -13,12 +13,15 @@
 
 <!-- $Id: ContractCategorySearchForm.mfd.xml,v 1.1 2007/09/17 12:31:13 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.contract.support.ui.ContractCategorySearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.contract.resources.formelements#ContractCategory.FormBr.Title" >
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
-	
-	<jfd:table id="table" alignment="expand_expand" scroll="true">
-	</jfd:table>
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.contract.support.ui.ContractCategorySearchForm" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.contract.resources.formelements#ContractCategory.FormBr.Title">
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:table id="table" alignment="expand_expand" scroll="true">
+  </jfd:table>
+
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 </jfd:form>
 

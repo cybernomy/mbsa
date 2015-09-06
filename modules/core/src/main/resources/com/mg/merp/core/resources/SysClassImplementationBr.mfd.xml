@@ -13,13 +13,17 @@
 
 <!-- $Id: SysClassImplementationBr.mfd.xml,v 1.1 2008/03/03 13:07:52 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.core.support.ui.SysClassImplementationBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.core.resources.formelements#SysClassImplementation.FormBr.Title" helpTopic="core#sysclassimplementation_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.core.support.ui.SysClassImplementationBr" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.core.resources.formelements#SysClassImplementation.FormBr.Title"
+          helpTopic="core#sysclassimplementation_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
-	</jfd:maintenanceTable>
+  <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+  </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

@@ -22,9 +22,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class WorkCenterSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/mfreference/WorkCenter";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/mfreference/WorkCenter";
+  }
 
 }

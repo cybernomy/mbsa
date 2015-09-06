@@ -18,7 +18,7 @@ import com.mg.merp.overall.model.Cancellation;
 
 /**
  * Бизнес - компонент "Погашение"
- * 
+ *
  * @author leonova
  * @author Konstantin S. Alikaev
  * @version $Id: CancellationServiceLocal.java,v 1.1 2008/06/30 04:13:38 alikaev Exp $

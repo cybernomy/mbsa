@@ -13,49 +13,56 @@
 
 <!-- $Id: BillHeadModelOutMt.mfd.xml,v 1.7 2007/09/20 13:19:29 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.warehouse.support.ui.BillHeadModelOutMt" title="resource://com.mg.merp.warehouse.resources.formelements#BillHeadModelOut.FormMt.Title" helpTopic="warehouse#billmodelout_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.warehouse.support.ui.BillHeadModelOutMt"
+          title="resource://com.mg.merp.warehouse.resources.formelements#BillHeadModelOut.FormMt.Title"
+          helpTopic="warehouse#billmodelout_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
-	
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
- 		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#Main.Tab.Title" >
-	 	 	<jfd:include name="com/mg/merp/document/resources/ModelNameMacros.xml" />
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			 			 	 	
-			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
-			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/CurrencyModelMacros.xml" />					
-		 	<jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml" /> 
-	 	 	<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />	
-	 	 	<jfd:include name="com/mg/merp/document/resources/PartnerFromToMacros.xml" />		
-	 	 	<jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml" />  			
-	 	 	<jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml" />  			
-			<jfd:field id="Through" />
-			<jfd:field id="CalcTaxesKind" sameLine="true"/>
-	 	 	<jfd:include name="com/mg/merp/document/resources/PriceListMacros.xml" />	
-			<jfd:field id="DiscountFolder" />		
-			<jfd:button id="Assign" text="resource://com.mg.merp.warehouse.resources.dataitemlabels#Button.Assign" sameLine="true"/> 
-	 		<jfd:field id="DiscountOnDoc" alignment="expand_expand" /> 
-			<jfd:field id="DiscountOnLine" alignment="expand_expand" sameLine="true"/> 			
-			<jfd:field id="PaymentTerm"/>
-			<jfd:field id="PaymentSum" sameLine="true"/>
-			<jfd:field id="PaymentDate"/>
-			<jfd:field id="PlanPaymentDateDoc" sameLine="true"/> 			
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 									
-		</jfd:container>
-		
-		<jfd:container id="extraFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.warehouse.resources.formelements#Extra.Tab.Title" >
-	 		<jfd:include name="com/mg/merp/warehouse/resources/InfoCustomerMacros.mfd.xml" />
-	 		<jfd:include name="com/mg/merp/warehouse/resources/InfoProviderMacros.mfd.xml" />
-			<jfd:field id="Shipper"  />
-			<jfd:field id="Consignee" sameLine="true" />	 
-			<jfd:field id="ToPayDocNumber"/>
-			<jfd:field id="ToPayDocDate" sameLine="true" />
-			<jfd:field id="Responsible" />			
-			<jfd:field id="Comment"  />
-			<jfd:field id="Description" />
-		</jfd:container>	
-	 
-	</jfd:container>	
-	<jfd:include name="com/mg/merp/document/resources/DefaultDocModelMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
+
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.warehouse.resources.formelements#Main.Tab.Title">
+      <jfd:include name="com/mg/merp/document/resources/ModelNameMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/CurrencyModelMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/PartnerFromToMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/StockMolSrcMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml"/>
+      <jfd:field id="Through"/>
+      <jfd:field id="CalcTaxesKind" sameLine="true"/>
+      <jfd:include name="com/mg/merp/document/resources/PriceListMacros.xml"/>
+      <jfd:field id="DiscountFolder"/>
+      <jfd:button id="Assign"
+                  text="resource://com.mg.merp.warehouse.resources.dataitemlabels#Button.Assign"
+                  sameLine="true"/>
+      <jfd:field id="DiscountOnDoc" alignment="expand_expand"/>
+      <jfd:field id="DiscountOnLine" alignment="expand_expand" sameLine="true"/>
+      <jfd:field id="PaymentTerm"/>
+      <jfd:field id="PaymentSum" sameLine="true"/>
+      <jfd:field id="PaymentDate"/>
+      <jfd:field id="PlanPaymentDateDoc" sameLine="true"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+
+    <jfd:container id="extraFields" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.warehouse.resources.formelements#Extra.Tab.Title">
+      <jfd:include name="com/mg/merp/warehouse/resources/InfoCustomerMacros.mfd.xml"/>
+      <jfd:include name="com/mg/merp/warehouse/resources/InfoProviderMacros.mfd.xml"/>
+      <jfd:field id="Shipper"/>
+      <jfd:field id="Consignee" sameLine="true"/>
+      <jfd:field id="ToPayDocNumber"/>
+      <jfd:field id="ToPayDocDate" sameLine="true"/>
+      <jfd:field id="Responsible"/>
+      <jfd:field id="Comment"/>
+      <jfd:field id="Description"/>
+    </jfd:container>
+
+  </jfd:container>
+  <jfd:include name="com/mg/merp/document/resources/DefaultDocModelMaintenanceFooterMacros.xml"/>
 </jfd:form>	

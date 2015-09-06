@@ -21,28 +21,27 @@ import com.mg.merp.warehouse.support.jboss.ConfigurationServiceMBean;
 
 /**
  * Локатор сервиса реализации конфигурации модуля "Управление запасами"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ConfigurationServiceLocator.java,v 1.1 2006/12/12 15:33:03 safonov Exp $
  */
 public class ConfigurationServiceLocator {
-	private static volatile ConfigurationService instance = null;
+  private static volatile ConfigurationService instance = null;
 
-	/**
-	 * найти сервис конфигурации
-	 * 
-	 * @return	сервис
-	 * @throws ApplicationException	при любых ошибках
-	 */
-	public static ConfigurationService locate() throws ApplicationException {
-		if (instance == null)
-			try {
-				instance = (ConfigurationService) ServerUtils.createMBeanProxy(ConfigurationService.class, ConfigurationServiceMBean.SERVICE_NAME); //$NON-NLS-1$
-			}
-		catch (Exception e) {
-			throw new ApplicationException(e);
-		}
-		return instance;
-	}
+  /**
+   * найти сервис конфигурации
+   *
+   * @return сервис
+   * @throws ApplicationException при любых ошибках
+   */
+  public static ConfigurationService locate() throws ApplicationException {
+    if (instance == null)
+      try {
+        instance = (ConfigurationService) ServerUtils.createMBeanProxy(ConfigurationService.class, ConfigurationServiceMBean.SERVICE_NAME); //$NON-NLS-1$
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 
 }

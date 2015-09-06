@@ -90,9 +90,9 @@ def runScript(def log) {
 
     page = [
             parentId: parent.id,
-            space:properties['confluence.target.space'],
-            title:properties['confluence.target.title'],
-            content: fillIn(template.content as String)
+            space   : properties['confluence.target.space'],
+            title   : properties['confluence.target.title'],
+            content : fillIn(template.content as String)
     ]
 
     def existingPage = null

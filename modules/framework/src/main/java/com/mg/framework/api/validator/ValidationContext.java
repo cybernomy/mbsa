@@ -19,47 +19,45 @@ import java.util.List;
 
 /**
  * Контекст контроля данных
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ValidationContext.java,v 1.1 2006/08/14 14:07:42 safonov Exp $
  */
 public class ValidationContext {
-	private List<Rule> rules = new ArrayList<Rule>();
-	private Status status;
-	
-	public ValidationContext() {
-		status = new Status();
-	}
+  private List<Rule> rules = new ArrayList<Rule>();
+  private Status status;
 
-	/**
-	 * добавить правило контроля в контекст
-	 * 
-	 * @param rule
-	 */
-	public void addRule(Rule rule) {
-		rules.add(rule);
-	}
+  public ValidationContext() {
+    status = new Status();
+  }
 
-	/**
-	 * выполнить контроль всех правил содержащихся в данном контексте
-	 * 
-	 * @throws ValidationException если есть нарушения в контроле данных
-	 */
-	public void validate() throws ValidationException {
-		for (Rule rule : rules)
-			rule.validate(this);
-		
-		if (status.isError())
-			throw new ValidationException(status);
-	}
-	
-	/**
-	 * получить статус контроля данных
-	 * 
-	 * @return Returns the status.
-	 */
-	public Status getStatus() {
-		return status;
-	}
+  /**
+   * добавить правило контроля в контекст
+   */
+  public void addRule(Rule rule) {
+    rules.add(rule);
+  }
+
+  /**
+   * выполнить контроль всех правил содержащихся в данном контексте
+   *
+   * @throws ValidationException если есть нарушения в контроле данных
+   */
+  public void validate() throws ValidationException {
+    for (Rule rule : rules)
+      rule.validate(this);
+
+    if (status.isError())
+      throw new ValidationException(status);
+  }
+
+  /**
+   * получить статус контроля данных
+   *
+   * @return Returns the status.
+   */
+  public Status getStatus() {
+    return status;
+  }
 
 }

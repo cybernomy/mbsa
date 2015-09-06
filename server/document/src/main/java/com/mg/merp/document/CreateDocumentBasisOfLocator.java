@@ -24,16 +24,16 @@ import com.mg.merp.document.model.DocHeadModel;
  */
 public class CreateDocumentBasisOfLocator {
 
-	private static volatile  CreateDocumentBasisOf instance = null;
+  private static volatile CreateDocumentBasisOf instance = null;
 
-	@SuppressWarnings("unchecked")
-	public static <T1 extends DocHead, T2 extends DocHead, T3 extends DocHeadModel>  CreateDocumentBasisOf<T1, T2, T3> locate() throws ApplicationException {
-		if (instance == null)
-			try {
-				instance = (CreateDocumentBasisOf<T1, T2, T3>) ServerUtils.createMBeanProxy(CreateDocumentBasisOf.class, CreateDocumentBasisOf.SERVICE_NAME);
-			} catch (Exception e) {
-				throw new ApplicationException(e);
-			}
-		return instance;
-	}
+  @SuppressWarnings("unchecked")
+  public static <T1 extends DocHead, T2 extends DocHead, T3 extends DocHeadModel> CreateDocumentBasisOf<T1, T2, T3> locate() throws ApplicationException {
+    if (instance == null)
+      try {
+        instance = (CreateDocumentBasisOf<T1, T2, T3>) ServerUtils.createMBeanProxy(CreateDocumentBasisOf.class, CreateDocumentBasisOf.SERVICE_NAME);
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 }

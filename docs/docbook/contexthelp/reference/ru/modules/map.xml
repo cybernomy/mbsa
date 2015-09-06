@@ -14,47 +14,47 @@
 <!-- $Id: map.xml,v 1.5 2006/11/30 07:43:36 konyashkina Exp $ -->
 
 <map version="1.0">
-  <mapID target="curref_html" url="ref003.html" />
-  <mapID target="curauth_html" url="ref003.html#ref003_01" />
-  <mapID target="curtype_html" url="ref003.html#ref003_02" />
-  <mapID target="units_html" url="ref004.html#ref004_01" />
-  <mapID target="empl_html" url="ref004.html#ref004_02" />
-  <mapID target="catalog_html" url="ref015.html#ref015_01" />
-  <mapID target="normprice_html" url="ref015.html#ref015_02" />
-  <mapID target="catplan_html" url="ref015.html#ref015_05" />
-  <mapID target="packing_html" url="ref015.html#ref015_03" />
-  <mapID target="setofgood_html" url="ref015.html#ref015_08" />
-  <mapID target="measure_html" url="ref021.html" />
-  <mapID target="convers_html" url="ref021.html#ref021_01" />
-  <mapID target="taxref_html" url="ref023.html#ref023_01" />
-  <mapID target="taxgroup_html" url="ref023.html#ref023_02" />
-  <mapID target="taxkind_html" url="ref023.html#ref023_03" />
-  <mapID target="partner_html" url="ref005.html#ref005_01" />
-  <mapID target="partnadr_html" url="ref005.html#ref005_03" />
-  <mapID target="partnbank_html" url="ref005.html#ref005_04" />
-  <mapID target="partncred_html" url="ref005.html#ref005_02" />
-  <mapID target="partnempl_html" url="ref005.html#ref005_05" />
-  <mapID target="partnlink_html" url="ref005.html#ref005_06" />
-  <mapID target="person_html" url="ref046.html#ref046_01" />
-  <mapID target="personfam_html" url="ref046.html#ref046_02" />
-  <mapID target="familrelation_html" url="ref046.html#ref046_03" />
-  <mapID target="iddockind_html" url="ref046.html#ref046_04" />
-  <mapID target="personnat_html" url="ref046.html#ref046_05" />
-  <mapID target="banks_html" url="ref052.html#ref052_01" />
-  <mapID target="bankstype_html" url="ref052.html#ref052_01" />
-  <mapID target="pricelist_html" url="ref033.html#ref033_01" />
-  <mapID target="prclsspc_html" url="ref033.html#ref033_01_01" />
-  <mapID target="pricecond_html" url="ref033.html#ref033_01_03" />
-  <mapID target="pricetype_html" url="ref033.html#ref033_02" />
-  <mapID target="country_html" url="ref051.html#ref051_01" />
-  <mapID target="region_html" url="ref051.html#ref051_02" />
-  <mapID target="district_html" url="ref051.html#ref051_03" />
-  <mapID target="place_html" url="ref051.html#ref051_04" />
-  <mapID target="zipcode_html" url="ref051.html#ref051_05" />
-  <mapID target="origdoc_html" url="ref006.html" />
-  <mapID target="kbk_html" url="ref042.html#ref042_01" />
-  <mapID target="okato_html" url="ref042.html#ref042_02" />
-  <mapID target="okdp_html" url="ref042.html#ref042_03" />
-  <mapID target="okp_html" url="ref042.html#ref042_04" />
-  <mapID target="holydays_html" url="ref041.html" />
+  <mapID target="curref_html" url="ref003.html"/>
+  <mapID target="curauth_html" url="ref003.html#ref003_01"/>
+  <mapID target="curtype_html" url="ref003.html#ref003_02"/>
+  <mapID target="units_html" url="ref004.html#ref004_01"/>
+  <mapID target="empl_html" url="ref004.html#ref004_02"/>
+  <mapID target="catalog_html" url="ref015.html#ref015_01"/>
+  <mapID target="normprice_html" url="ref015.html#ref015_02"/>
+  <mapID target="catplan_html" url="ref015.html#ref015_05"/>
+  <mapID target="packing_html" url="ref015.html#ref015_03"/>
+  <mapID target="setofgood_html" url="ref015.html#ref015_08"/>
+  <mapID target="measure_html" url="ref021.html"/>
+  <mapID target="convers_html" url="ref021.html#ref021_01"/>
+  <mapID target="taxref_html" url="ref023.html#ref023_01"/>
+  <mapID target="taxgroup_html" url="ref023.html#ref023_02"/>
+  <mapID target="taxkind_html" url="ref023.html#ref023_03"/>
+  <mapID target="partner_html" url="ref005.html#ref005_01"/>
+  <mapID target="partnadr_html" url="ref005.html#ref005_03"/>
+  <mapID target="partnbank_html" url="ref005.html#ref005_04"/>
+  <mapID target="partncred_html" url="ref005.html#ref005_02"/>
+  <mapID target="partnempl_html" url="ref005.html#ref005_05"/>
+  <mapID target="partnlink_html" url="ref005.html#ref005_06"/>
+  <mapID target="person_html" url="ref046.html#ref046_01"/>
+  <mapID target="personfam_html" url="ref046.html#ref046_02"/>
+  <mapID target="familrelation_html" url="ref046.html#ref046_03"/>
+  <mapID target="iddockind_html" url="ref046.html#ref046_04"/>
+  <mapID target="personnat_html" url="ref046.html#ref046_05"/>
+  <mapID target="banks_html" url="ref052.html#ref052_01"/>
+  <mapID target="bankstype_html" url="ref052.html#ref052_01"/>
+  <mapID target="pricelist_html" url="ref033.html#ref033_01"/>
+  <mapID target="prclsspc_html" url="ref033.html#ref033_01_01"/>
+  <mapID target="pricecond_html" url="ref033.html#ref033_01_03"/>
+  <mapID target="pricetype_html" url="ref033.html#ref033_02"/>
+  <mapID target="country_html" url="ref051.html#ref051_01"/>
+  <mapID target="region_html" url="ref051.html#ref051_02"/>
+  <mapID target="district_html" url="ref051.html#ref051_03"/>
+  <mapID target="place_html" url="ref051.html#ref051_04"/>
+  <mapID target="zipcode_html" url="ref051.html#ref051_05"/>
+  <mapID target="origdoc_html" url="ref006.html"/>
+  <mapID target="kbk_html" url="ref042.html#ref042_01"/>
+  <mapID target="okato_html" url="ref042.html#ref042_02"/>
+  <mapID target="okdp_html" url="ref042.html#ref042_03"/>
+  <mapID target="okp_html" url="ref042.html#ref042_04"/>
+  <mapID target="holydays_html" url="ref041.html"/>
 </map>

@@ -18,16 +18,14 @@ package com.mg.merp.account.support.ui;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * 
  * @author leonova
  * @version $Id: CashDocumentOutRest.java,v 1.2 2006/12/03 13:13:16 safonov Exp $
- *
  */
 public class CashDocumentOutRest extends CashDocumentRest {
 
-	public CashDocumentOutRest() {
-		contractorToKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-		contractorFromKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
-	}
+  public CashDocumentOutRest() {
+    contractorToKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+    contractorFromKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+  }
 
 }

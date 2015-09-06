@@ -13,23 +13,23 @@
  */
 package com.mg.merp.warehouse.support;
 
-import javax.annotation.security.PermitAll;
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.warehouse.WarehousePlanHistoryServiceLocal;
 import com.mg.merp.warehouse.model.StockPlanHistory;
 
+import javax.annotation.security.PermitAll;
+import javax.ejb.Stateless;
+
 /**
  * Реализация бизнес-компонента "История планового движения и резервирования по партии"
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehousePlanHistoryServiceBean.java,v 1.2 2007/09/25 09:31:34 safonov Exp $
  */
 @Stateless(name = "merp/warehouse/WarehousePlanHistoryService")
 @PermitAll
 public class WarehousePlanHistoryServiceBean extends
-		AbstractPOJODataBusinessObjectServiceBean<StockPlanHistory, Integer>
-		implements WarehousePlanHistoryServiceLocal {
+    AbstractPOJODataBusinessObjectServiceBean<StockPlanHistory, Integer>
+    implements WarehousePlanHistoryServiceLocal {
 
 }

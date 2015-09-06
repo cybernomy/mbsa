@@ -17,20 +17,18 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.InvoiceHead;
 
 /**
- * 
  * @author leonova
  * @version $Id: InvoiceHeadInServiceLocal.java,v 1.3 2006/09/20 11:02:09 safonov Exp $
  */
 public interface InvoiceHeadInServiceLocal
-   extends com.mg.merp.document.GoodsDocument<InvoiceHead, Integer, InvoiceHeadModelInServiceLocal, InvoiceSpecInServiceLocal>
-{
-	/**
-	 * тип папки для входящих накладных
-	 */
-	final static short FOLDER_PART = 45;
-	
-	/**
-	 * docsection для входящих накладных
-	 */
-	final static short DOCSECTION = 23;
+    extends com.mg.merp.document.GoodsDocument<InvoiceHead, Integer, InvoiceHeadModelInServiceLocal, InvoiceSpecInServiceLocal> {
+  /**
+   * тип папки для входящих накладных
+   */
+  final static short FOLDER_PART = 45;
+
+  /**
+   * docsection для входящих накладных
+   */
+  final static short DOCSECTION = 23;
 }

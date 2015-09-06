@@ -18,7 +18,7 @@ import com.mg.merp.document.generic.ui.GoodsDocumentRest;
 
 /**
  * @author leonova
- * @version $Id: RtlInvoiceHeadRest.java,v 1.2 2006/09/07 05:21:46 leonova Exp $ 
+ * @version $Id: RtlInvoiceHeadRest.java,v 1.2 2006/09/07 05:21:46 leonova Exp $
  */
 public class RtlInvoiceHeadRest extends GoodsDocumentRest {
 

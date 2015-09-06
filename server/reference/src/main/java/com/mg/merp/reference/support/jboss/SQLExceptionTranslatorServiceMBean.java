@@ -18,13 +18,13 @@ import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис транслятора SQL ИС модуля справочники
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: SQLExceptionTranslatorServiceMBean.java,v 1.1 2006/11/17 16:28:19 safonov Exp $
  */
 public interface SQLExceptionTranslatorServiceMBean extends ServiceMBean {
-	/**
-	 * имя сервиса
-	 */
-	final static String SERVICE_NAME = "merp:reference=SQLExceptionTranslator";
+  /**
+   * имя сервиса
+   */
+  final static String SERVICE_NAME = "merp:reference=SQLExceptionTranslator";
 }

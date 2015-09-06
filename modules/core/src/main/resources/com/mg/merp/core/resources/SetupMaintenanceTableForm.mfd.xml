@@ -13,21 +13,31 @@
 
 <!-- $Id: SetupMaintenanceTableForm.mfd.xml,v 1.1 2008/12/23 09:38:29 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.core.support.ui.SetupMaintenanceTableFormImpl" title="resource://com.mg.merp.core.resources.formelements#SetupMaintenanceTableForm.Title" orientation="ver" verticalGap="5" helpTopic="core#setup_maintenance_table_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.core.support.ui.SetupMaintenanceTableFormImpl"
+          title="resource://com.mg.merp.core.resources.formelements#SetupMaintenanceTableForm.Title"
+          orientation="ver" verticalGap="5" helpTopic="core#setup_maintenance_table_html">
 
-	<jfd:container id="topBox" layout="jfd:box" orientation="hor" alignment="expand_expand" >
-		<jfd:table id="tableFields" scroll="true"  alignment="expand_expand" autoResize="subsequent_columns">
-			<jfd:columns>
-				<jfd:column fieldName="Title" title="resource://com.mg.merp.core.resources.formelements#SetupMaintenanceTableForm.Fields.Title" />
-				<jfd:column fieldName="Visible" title="resource://com.mg.merp.core.resources.formelements#SetupMaintenanceTableForm.Fields.Visible" />
-			</jfd:columns>
-		</jfd:table>
-		<jfd:container id="buttonBox" layout="jfd:box" orientation="ver" alignment="right_top" >
-			<jfd:button id="selectAll" text="resource://com.mg.merp.core.resources.formelements#SetupMaintenanceTableForm.SelectAll" actionListener="SelectAll" alignment="expand_top" />
-			<jfd:button id="deselectAll" text="resource://com.mg.merp.core.resources.formelements#SetupMaintenanceTableForm.DeselectAll" actionListener="DeselectAll" alignment="expand_top" />
-		</jfd:container>
-	</jfd:container>
+  <jfd:container id="topBox" layout="jfd:box" orientation="hor" alignment="expand_expand">
+    <jfd:table id="tableFields" scroll="true" alignment="expand_expand"
+               autoResize="subsequent_columns">
+      <jfd:columns>
+        <jfd:column fieldName="Title"
+                    title="resource://com.mg.merp.core.resources.formelements#SetupMaintenanceTableForm.Fields.Title"/>
+        <jfd:column fieldName="Visible"
+                    title="resource://com.mg.merp.core.resources.formelements#SetupMaintenanceTableForm.Fields.Visible"/>
+      </jfd:columns>
+    </jfd:table>
+    <jfd:container id="buttonBox" layout="jfd:box" orientation="ver" alignment="right_top">
+      <jfd:button id="selectAll"
+                  text="resource://com.mg.merp.core.resources.formelements#SetupMaintenanceTableForm.SelectAll"
+                  actionListener="SelectAll" alignment="expand_top"/>
+      <jfd:button id="deselectAll"
+                  text="resource://com.mg.merp.core.resources.formelements#SetupMaintenanceTableForm.DeselectAll"
+                  actionListener="DeselectAll" alignment="expand_top"/>
+    </jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
 
 </jfd:form>

@@ -17,12 +17,10 @@ package com.mg.merp.salary;
 import com.mg.merp.salary.model.FeeSummarySpec;
 
 /**
- * 
  * @author leonova
  * @version $Id: FeeSummarySpecServiceLocal.java,v 1.2 2006/09/20 10:59:59 safonov Exp $
  */
 public interface FeeSummarySpecServiceLocal
-   extends com.mg.merp.document.GoodsDocumentSpecification<FeeSummarySpec, Integer>
-{
+    extends com.mg.merp.document.GoodsDocumentSpecification<FeeSummarySpec, Integer> {
 
 }

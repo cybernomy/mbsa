@@ -22,204 +22,209 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Salary.PositionFill")
 public class PositionFill extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.personnelref.model.PersonalAccount PersonalAccount;
+  private com.mg.merp.personnelref.model.PersonalAccount PersonalAccount;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.personnelref.model.PositionFillKind PositionFillKind;
+  private com.mg.merp.personnelref.model.PositionFillKind PositionFillKind;
 
-	private com.mg.merp.personnelref.model.PrefPosition Position;
+  private com.mg.merp.personnelref.model.PrefPosition Position;
 
-	private com.mg.merp.personnelref.model.StaffListPosition SlPositionUnique;
+  private com.mg.merp.personnelref.model.StaffListPosition SlPositionUnique;
 
-	private java.util.Date BeginDate;
+  private java.util.Date BeginDate;
 
-	private java.util.Date EndDate;
+  private java.util.Date EndDate;
 
-	private java.lang.String DocType;
+  private java.lang.String DocType;
 
-	private java.lang.String DocNumber;
+  private java.lang.String DocNumber;
 
-	private java.util.Date DocDate;
+  private java.util.Date DocDate;
 
-	private java.math.BigDecimal RateNumber;
+  private java.math.BigDecimal RateNumber;
 
-	private boolean IsBasic;
+  private boolean IsBasic;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public PositionFill() {
-	}
+  /**
+   * default constructor
+   */
+  public PositionFill() {
+  }
 
-	/** constructor with id */
-	public PositionFill(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public PositionFill(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.personnelref.model.PersonalAccount getPersonalAccount() {
-		return this.PersonalAccount;
-	}
+  /**
+   *
+   */
 
-	public void setPersonalAccount(
-			com.mg.merp.personnelref.model.PersonalAccount SalPersonalAccount) {
-		this.PersonalAccount = SalPersonalAccount;
-	}
+  public com.mg.merp.personnelref.model.PersonalAccount getPersonalAccount() {
+    return this.PersonalAccount;
+  }
 
-	/**
-	 * 
-	 */
+  public void setPersonalAccount(
+      com.mg.merp.personnelref.model.PersonalAccount SalPersonalAccount) {
+    this.PersonalAccount = SalPersonalAccount;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PosFill.PosFillKind")
-	public com.mg.merp.personnelref.model.PositionFillKind getPositionFillKind() {
-		return this.PositionFillKind;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setPositionFillKind(
-			com.mg.merp.personnelref.model.PositionFillKind PrefPositionFillKind) {
-		this.PositionFillKind = PrefPositionFillKind;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PosFill.PosFillKind")
+  public com.mg.merp.personnelref.model.PositionFillKind getPositionFillKind() {
+    return this.PositionFillKind;
+  }
 
-	/**
-	 * 
-	 */	
-	public com.mg.merp.personnelref.model.PrefPosition getPosition() {
-		return this.Position;
-	}
+  public void setPositionFillKind(
+      com.mg.merp.personnelref.model.PositionFillKind PrefPositionFillKind) {
+    this.PositionFillKind = PrefPositionFillKind;
+  }
 
-	public void setPosition(
-			com.mg.merp.personnelref.model.PrefPosition PrefPosition) {
-		this.Position = PrefPosition;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.personnelref.model.PrefPosition getPosition() {
+    return this.Position;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.personnelref.model.StaffListPosition getSlPositionUnique() {
-		return this.SlPositionUnique;
-	}
+  public void setPosition(
+      com.mg.merp.personnelref.model.PrefPosition PrefPosition) {
+    this.Position = PrefPosition;
+  }
 
-	public void setSlPositionUnique(com.mg.merp.personnelref.model.StaffListPosition SlPositionUnique) {
-		this.SlPositionUnique = SlPositionUnique;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.personnelref.model.StaffListPosition getSlPositionUnique() {
+    return this.SlPositionUnique;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PosFill.BeginDate")
-	public java.util.Date getBeginDate() {
-		return this.BeginDate;
-	}
+  public void setSlPositionUnique(com.mg.merp.personnelref.model.StaffListPosition SlPositionUnique) {
+    this.SlPositionUnique = SlPositionUnique;
+  }
 
-	public void setBeginDate(java.util.Date Begindate) {
-		this.BeginDate = Begindate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PosFill.BeginDate")
+  public java.util.Date getBeginDate() {
+    return this.BeginDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PosFill.EndDate")
-	public java.util.Date getEndDate() {
-		return this.EndDate;
-	}
+  public void setBeginDate(java.util.Date Begindate) {
+    this.BeginDate = Begindate;
+  }
 
-	public void setEndDate(java.util.Date Enddate) {
-		this.EndDate = Enddate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PosFill.EndDate")
+  public java.util.Date getEndDate() {
+    return this.EndDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PosFill.DocType")
-	public java.lang.String getDocType() {
-		return this.DocType;
-	}
+  public void setEndDate(java.util.Date Enddate) {
+    this.EndDate = Enddate;
+  }
 
-	public void setDocType(java.lang.String Doctype) {
-		this.DocType = Doctype;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PosFill.DocType")
+  public java.lang.String getDocType() {
+    return this.DocType;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PosFill.DateNumber")
-	public java.lang.String getDocNumber() {
-		return this.DocNumber;
-	}
+  public void setDocType(java.lang.String Doctype) {
+    this.DocType = Doctype;
+  }
 
-	public void setDocNumber(java.lang.String Docnumber) {
-		this.DocNumber = Docnumber;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PosFill.DateNumber")
+  public java.lang.String getDocNumber() {
+    return this.DocNumber;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PosFill.DateDate")
-	public java.util.Date getDocDate() {
-		return this.DocDate;
-	}
+  public void setDocNumber(java.lang.String Docnumber) {
+    this.DocNumber = Docnumber;
+  }
 
-	public void setDocDate(java.util.Date Docdate) {
-		this.DocDate = Docdate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PosFill.DateDate")
+  public java.util.Date getDocDate() {
+    return this.DocDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PosFill.RateNumber")
-	public java.math.BigDecimal getRateNumber() {
-		return this.RateNumber;
-	}
+  public void setDocDate(java.util.Date Docdate) {
+    this.DocDate = Docdate;
+  }
 
-	public void setRateNumber(java.math.BigDecimal RateNumber) {
-		this.RateNumber = RateNumber;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PosFill.RateNumber")
+  public java.math.BigDecimal getRateNumber() {
+    return this.RateNumber;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PosFill.IsBasic")
-	public boolean getIsBasic() {
-		return this.IsBasic;
-	}
+  public void setRateNumber(java.math.BigDecimal RateNumber) {
+    this.RateNumber = RateNumber;
+  }
 
-	public void setIsBasic(boolean IsBasic) {
-		this.IsBasic = IsBasic;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PosFill.IsBasic")
+  public boolean getIsBasic() {
+    return this.IsBasic;
+  }
+
+  public void setIsBasic(boolean IsBasic) {
+    this.IsBasic = IsBasic;
+  }
 
 }

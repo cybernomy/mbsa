@@ -18,13 +18,13 @@ import java.util.EventListener;
 
 /**
  * Слушатель отработки по складу
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseTransactionListener.java,v 1.1 2007/02/22 09:44:57 poroxnenko Exp $
  */
 public interface WarehouseTransactionListener extends EventListener {
 
-	public void completed();
+  public void completed();
 
-	public void aborted();
+  public void aborted();
 }

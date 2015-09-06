@@ -14,13 +14,13 @@
  */
 package com.mg.merp.reference.support.ui;
 
+import com.mg.framework.support.ui.widget.tree.EntityTreeNode;
+import com.mg.merp.reference.model.PriceListFolder;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.mg.framework.support.ui.widget.tree.EntityTreeNode;
-import com.mg.merp.reference.model.PriceListFolder;
 
 /**
  * @author Oleg V. Safonov
@@ -28,49 +28,48 @@ import com.mg.merp.reference.model.PriceListFolder;
  */
 public class PriceListFolderTreeNode extends EntityTreeNode {
 
-	public PriceListFolderTreeNode(PriceListFolderTreeNode parent, PriceListFolder entity) {
-		super(parent);
-		this.entity = entity;
-	}
-	
-	public void addChild(PriceListFolderTreeNode child) {
-		children.add(child);
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.support.ui.widget.tree.EntityTreeNode#doGetPrimaryKey()
-	 */
-	@Override
-	protected Serializable doGetPrimaryKey() {
-		return (Serializable) entity.getPrimaryKey();
-	}
+  public PriceListFolderTreeNode(PriceListFolderTreeNode parent, PriceListFolder entity) {
+    super(parent);
+    this.entity = entity;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.support.ui.widget.tree.TreeNode#getText()
-	 */
-	@Override
-	public String getText() {
-		return ((PriceListFolder) entity).getFName();
-	}
+  public static PriceListFolderTreeNode createTree(List<PriceListFolder> folders) {
+    PriceListFolderTreeNode root = null;
+    Map<Integer, PriceListFolderTreeNode> nodeMap = new HashMap<Integer, PriceListFolderTreeNode>();
+    for (PriceListFolder folder : folders) {
+      if (folder.getParent() == null) {
+        root = new PriceListFolderTreeNode(null, folder);
+        nodeMap.put(folder.getId(), root);
+      } else {
+        PriceListFolderTreeNode parentNode, node;
+        parentNode = nodeMap.get(folder.getParent().getId());
+        if (parentNode != null) {
+          node = new PriceListFolderTreeNode(parentNode, folder);
+          nodeMap.put(folder.getId(), node);
+          parentNode.addChild(node);
+        }
+      }
+    }
+    return root;
+  }
 
-	public static PriceListFolderTreeNode createTree(List<PriceListFolder> folders) {
-		PriceListFolderTreeNode root = null;
-		Map<Integer, PriceListFolderTreeNode> nodeMap = new HashMap<Integer, PriceListFolderTreeNode>();
-		for (PriceListFolder folder : folders) {
-			if (folder.getParent() == null) {
-				root = new PriceListFolderTreeNode(null, folder);
-				nodeMap.put(folder.getId(), root);
-			}
-			else {
-				PriceListFolderTreeNode parentNode, node;
-				parentNode = nodeMap.get(folder.getParent().getId());
-				if (parentNode != null) {
-					node = new PriceListFolderTreeNode(parentNode, folder);
-					nodeMap.put(folder.getId(), node);
-					parentNode.addChild(node);
-				}
-			}
-		}
-		return root;
-	}
+  public void addChild(PriceListFolderTreeNode child) {
+    children.add(child);
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.support.ui.widget.tree.EntityTreeNode#doGetPrimaryKey()
+   */
+  @Override
+  protected Serializable doGetPrimaryKey() {
+    return (Serializable) entity.getPrimaryKey();
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.support.ui.widget.tree.TreeNode#getText()
+   */
+  @Override
+  public String getText() {
+    return ((PriceListFolder) entity).getFName();
+  }
 }

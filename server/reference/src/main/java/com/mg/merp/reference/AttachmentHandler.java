@@ -18,42 +18,42 @@ import java.io.Serializable;
 
 /**
  * Сервис, обеспечивающий основную функциональность работы с вложениями
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: AttachmentHandler.java,v 1.2 2007/04/02 10:44:27 sharapov Exp $
  */
-public interface AttachmentHandler { 
-	
-	/**
-	 * загрузка содержимого вложения
-	 * 
-	 * @param entitylId - идентификатор сущности, содержащей вложение
-	 * @return	содержимое вложения
-	 */
-	byte[] loadAttachmentBody(Integer entitylId);
+public interface AttachmentHandler {
 
-	/**
-	 * загрузка имени вложения
-	 * 
-	 * @param entitylId	- идентификатор сущности, содержащей вложение
-	 * @return	имя вложения
-	 */
-	String loadAttachmentName(Integer entitylId);
+  /**
+   * загрузка содержимого вложения
+   *
+   * @param entitylId - идентификатор сущности, содержащей вложение
+   * @return содержимое вложения
+   */
+  byte[] loadAttachmentBody(Integer entitylId);
 
-	/**
-	 * сохранение вложения
-	 * 
-	 * @param body - содержимое вложения
-	 * @param name - имя вложения
-	 * @param entitylId - идентификатор сущности, содержащей вложение
-	 */
-	void storeAttachment(byte[] body, String name, Integer entitylId);
-	
-	/**
-	 * удаление содержимого вложений
-	 * 
-	 * @param entitylIds - идентификаторы сущностей, содержащих вложения
-	 */
-	void removeAttachment(Serializable[] entitylIds);
+  /**
+   * загрузка имени вложения
+   *
+   * @param entitylId - идентификатор сущности, содержащей вложение
+   * @return имя вложения
+   */
+  String loadAttachmentName(Integer entitylId);
+
+  /**
+   * сохранение вложения
+   *
+   * @param body      - содержимое вложения
+   * @param name      - имя вложения
+   * @param entitylId - идентификатор сущности, содержащей вложение
+   */
+  void storeAttachment(byte[] body, String name, Integer entitylId);
+
+  /**
+   * удаление содержимого вложений
+   *
+   * @param entitylIds - идентификаторы сущностей, содержащих вложения
+   */
+  void removeAttachment(Serializable[] entitylIds);
 
 }

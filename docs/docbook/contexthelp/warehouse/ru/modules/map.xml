@@ -14,75 +14,75 @@
 <!-- $Id: map.xml,v 1.4 2007/11/15 14:25:28 konyashkina Exp $ -->
 
 <map version="1.0">
-  <mapID target="whadd_html" url="006wh.html#006wh_01" />
-  <mapID target="binloctype_html" url="006wh.html#006wh_02" />
-  <mapID target="whtype_html" url="006wh.html#006wh_06" />  
-  <mapID target="whzone_html" url="006wh.html#006wh_03" />
-  <mapID target="ksu_html" url="007wh.html#007wh_01" />
-  <mapID target="lots_html" url="007wh.html#007wh_02" />
-  <mapID target="factmov_html" url="007wh.html#007wh_03" />
-  <mapID target="planmov_html" url="007wh.html#007wh_04" />
-  <mapID target="reserv_html" url="007wh.html#007wh_05" />
-  
-  <mapID target="ordersup_html" url="002wh.html#002wh_01" />
-  <mapID target="orderhdsup_html" url="002wh.html#002wh_01_01" />
-  <mapID target="orderaddsup_html" url="002wh.html#002wh_01_02" />
-  <mapID target="orderspecsup_html" url="002wh.html#002wh_01_03" />
-  <mapID target="ordermodelsup_html" url="002wh.html#002wh_01_04" />
-  <mapID target="specaddsup_html" url="002wh.html#003wh_04_02" />
-  <mapID target="spectaxsup_html" url="002wh.html#003wh_04_03" />
-  <mapID target="ordermodelsup_html" url="002wh.html#002wh_01_04" />
-  
-  <mapID target="ordercus_html" url="002wh.html#002wh_02" />
-  <mapID target="orderhdcus_html" url="002wh.html#002wh_02_01" />
-  <mapID target="orderaddcus_html" url="002wh.html#002wh_02_02" />
-  <mapID target="orderspecsuc_html" url="002wh.html#002wh_02_03" />
-  <mapID target="specaddcus_html" url="002wh.html#002wh_02_03_02" />
-  <mapID target="spectaxcus_html" url="002wh.html#002wh_02_03_03" />
-  <mapID target="ordermodelcus_html" url="002wh.html#002wh_03" />
-  
-  <mapID target="billheadinbr_html" url="003wh.html#003wh_01" />
-  <mapID target="billheadin_html" url="003wh.html#003wh_01_01" />
-  <mapID target="billhdin_html" url="003wh.html#003wh_01_02" />
-  <mapID target="billspecin_html" url="003wh.html#003wh_01_03" />
-  <mapID target="billspectaxin_html" url="003wh.html#003wh_01_03_03" />
-  <mapID target="billmodelin_html" url="003wh.html#003wh_01_04" />
-  
-  <mapID target="billheadoutbr_html" url="003wh.html#003wh_02" />
-  <mapID target="billheadout_html" url="003wh.html#003wh_02_01" />
-  <mapID target="billhdout_html" url="003wh.html#003wh_02_02" />
-  <mapID target="billspecout_html" url="003wh.html#003wh_02_03" />
-  <mapID target="billspectaxout_html" url="003wh.html#003wh_02_03_03" />
-  <mapID target="billmodelout_html" url="003wh.html#003wh_03" />
-  
-  <mapID target="invoiceheadin_html" url="004wh.html#004wh_01" />
-  <mapID target="invoicehdin_html" url="004wh.html#004wh_01_01" />
-  <mapID target="invoiceaddin_html" url="004wh.html#004wh_01_02" />
-  <mapID target="invspecin_html" url="004wh.html#004wh_01_03" />
-  <mapID target="invspectaxin_html" url="004wh.html#004wh_01_03_03" />
-  <mapID target="invmodelin_html" url="004wh.html#004wh_01_04" />
-  
-  <mapID target="invoiceheadout_html" url="004wh.html#004wh_02" />
-  <mapID target="invoicehdout_html" url="004wh.html#004wh_02_01" />
-  <mapID target="invoiceaddout_html" url="004wh.html#004wh_02_02" />
-  <mapID target="invspecout_html" url="004wh.html#004wh_02_03" />
-  <mapID target="invspectaxout_html" url="004wh.html#004wh_02_03_03" />
-  <mapID target="invmodelout_html" url="004wh.html#004wh_02_04" />
-  
-  <mapID target="waredocbrin_html" url="005wh.html#005wh_01" />
-  <mapID target="waredocin_html" url="005wh.html#005wh_01_01" />
-  <mapID target="warespecin_html" url="005wh.html#005wh_01_02" />
-  <mapID target="warespectaxin_html" url="005wh.html#005wh_01_02_03" />
-  <mapID target="waremodelin_html" url="005wh.html#005wh_01_03" />
-  
-  <mapID target="waredocbrout_html" url="005wh.html#005wh_02" />
-  <mapID target="waredocout_html" url="005wh.html#005wh_02_01" />
-  <mapID target="warespecout_html" url="005wh.html#005wh_02_02" />
-  <mapID target="warespectaxout_html" url="005wh.html#005wh_02_02_03" />
-  <mapID target="waremodelout_html" url="005wh.html#005wh_02_03" />
-  
-  <mapID target="invacthd_html" url="008wh.html" />
-  <mapID target="invactspc_html" url="008wh.html#008wh_01" />
-  <mapID target="invactparam_html" url="008wh.html#008wh_01" />
-  <mapID target="invactcond_html" url="008wh.html#008wh_03" />
+  <mapID target="whadd_html" url="006wh.html#006wh_01"/>
+  <mapID target="binloctype_html" url="006wh.html#006wh_02"/>
+  <mapID target="whtype_html" url="006wh.html#006wh_06"/>
+  <mapID target="whzone_html" url="006wh.html#006wh_03"/>
+  <mapID target="ksu_html" url="007wh.html#007wh_01"/>
+  <mapID target="lots_html" url="007wh.html#007wh_02"/>
+  <mapID target="factmov_html" url="007wh.html#007wh_03"/>
+  <mapID target="planmov_html" url="007wh.html#007wh_04"/>
+  <mapID target="reserv_html" url="007wh.html#007wh_05"/>
+
+  <mapID target="ordersup_html" url="002wh.html#002wh_01"/>
+  <mapID target="orderhdsup_html" url="002wh.html#002wh_01_01"/>
+  <mapID target="orderaddsup_html" url="002wh.html#002wh_01_02"/>
+  <mapID target="orderspecsup_html" url="002wh.html#002wh_01_03"/>
+  <mapID target="ordermodelsup_html" url="002wh.html#002wh_01_04"/>
+  <mapID target="specaddsup_html" url="002wh.html#003wh_04_02"/>
+  <mapID target="spectaxsup_html" url="002wh.html#003wh_04_03"/>
+  <mapID target="ordermodelsup_html" url="002wh.html#002wh_01_04"/>
+
+  <mapID target="ordercus_html" url="002wh.html#002wh_02"/>
+  <mapID target="orderhdcus_html" url="002wh.html#002wh_02_01"/>
+  <mapID target="orderaddcus_html" url="002wh.html#002wh_02_02"/>
+  <mapID target="orderspecsuc_html" url="002wh.html#002wh_02_03"/>
+  <mapID target="specaddcus_html" url="002wh.html#002wh_02_03_02"/>
+  <mapID target="spectaxcus_html" url="002wh.html#002wh_02_03_03"/>
+  <mapID target="ordermodelcus_html" url="002wh.html#002wh_03"/>
+
+  <mapID target="billheadinbr_html" url="003wh.html#003wh_01"/>
+  <mapID target="billheadin_html" url="003wh.html#003wh_01_01"/>
+  <mapID target="billhdin_html" url="003wh.html#003wh_01_02"/>
+  <mapID target="billspecin_html" url="003wh.html#003wh_01_03"/>
+  <mapID target="billspectaxin_html" url="003wh.html#003wh_01_03_03"/>
+  <mapID target="billmodelin_html" url="003wh.html#003wh_01_04"/>
+
+  <mapID target="billheadoutbr_html" url="003wh.html#003wh_02"/>
+  <mapID target="billheadout_html" url="003wh.html#003wh_02_01"/>
+  <mapID target="billhdout_html" url="003wh.html#003wh_02_02"/>
+  <mapID target="billspecout_html" url="003wh.html#003wh_02_03"/>
+  <mapID target="billspectaxout_html" url="003wh.html#003wh_02_03_03"/>
+  <mapID target="billmodelout_html" url="003wh.html#003wh_03"/>
+
+  <mapID target="invoiceheadin_html" url="004wh.html#004wh_01"/>
+  <mapID target="invoicehdin_html" url="004wh.html#004wh_01_01"/>
+  <mapID target="invoiceaddin_html" url="004wh.html#004wh_01_02"/>
+  <mapID target="invspecin_html" url="004wh.html#004wh_01_03"/>
+  <mapID target="invspectaxin_html" url="004wh.html#004wh_01_03_03"/>
+  <mapID target="invmodelin_html" url="004wh.html#004wh_01_04"/>
+
+  <mapID target="invoiceheadout_html" url="004wh.html#004wh_02"/>
+  <mapID target="invoicehdout_html" url="004wh.html#004wh_02_01"/>
+  <mapID target="invoiceaddout_html" url="004wh.html#004wh_02_02"/>
+  <mapID target="invspecout_html" url="004wh.html#004wh_02_03"/>
+  <mapID target="invspectaxout_html" url="004wh.html#004wh_02_03_03"/>
+  <mapID target="invmodelout_html" url="004wh.html#004wh_02_04"/>
+
+  <mapID target="waredocbrin_html" url="005wh.html#005wh_01"/>
+  <mapID target="waredocin_html" url="005wh.html#005wh_01_01"/>
+  <mapID target="warespecin_html" url="005wh.html#005wh_01_02"/>
+  <mapID target="warespectaxin_html" url="005wh.html#005wh_01_02_03"/>
+  <mapID target="waremodelin_html" url="005wh.html#005wh_01_03"/>
+
+  <mapID target="waredocbrout_html" url="005wh.html#005wh_02"/>
+  <mapID target="waredocout_html" url="005wh.html#005wh_02_01"/>
+  <mapID target="warespecout_html" url="005wh.html#005wh_02_02"/>
+  <mapID target="warespectaxout_html" url="005wh.html#005wh_02_02_03"/>
+  <mapID target="waremodelout_html" url="005wh.html#005wh_02_03"/>
+
+  <mapID target="invacthd_html" url="008wh.html"/>
+  <mapID target="invactspc_html" url="008wh.html#008wh_01"/>
+  <mapID target="invactparam_html" url="008wh.html#008wh_01"/>
+  <mapID target="invactcond_html" url="008wh.html#008wh_03"/>
 </map>

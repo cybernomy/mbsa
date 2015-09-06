@@ -13,34 +13,38 @@
 
 <!-- $Id: OutputProductHeadMt.mfd.xml,v 1.6 2008/02/13 14:52:59 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.manufacture.support.ui.OutputProductHeadMt" title="resource://com.mg.merp.manufacture.resources.formelements#OutputProductHead.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.manufacture.support.ui.OutputProductHeadMt"
+          title="resource://com.mg.merp.manufacture.resources.formelements#OutputProductHead.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="mainFields" layout="jfd:tabbed" alignment="expand_top" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Main.Tab.Title" >
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			 			 	 	
-			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml" />					
-		 	<jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml" /> 
-	 	 	<jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml" />	
-	 	 	<jfd:include name="com/mg/merp/document/resources/PartnerFromToMacros.xml" />		
-	 	 	<jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml" />  			
-			<jfd:field id="Contractor" />
-			<jfd:field id="Employee" sameLine="true"/>
-			<jfd:field id="WC" />
-		 	<jfd:field id="Job" sameLine="true" />	 
-   		 	<jfd:field id="Crew" /> 
-		 	<jfd:field id="Oper" sameLine="true" /> 
-			<jfd:field id="Description" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />		 	
-		</jfd:container>
+  <jfd:container id="mainFields" layout="jfd:tabbed" alignment="expand_top">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Main.Tab.Title">
+      <jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/CurrencyDocumentMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/VolumeWeightMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/PartnerFromToMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/StockMolDstMacros.xml"/>
+      <jfd:field id="Contractor"/>
+      <jfd:field id="Employee" sameLine="true"/>
+      <jfd:field id="WC"/>
+      <jfd:field id="Job" sameLine="true"/>
+      <jfd:field id="Crew"/>
+      <jfd:field id="Oper" sameLine="true"/>
+      <jfd:field id="Description"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
 
- 		 <jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Doc.SpecTab.Title" >
-		</jfd:maintenanceTable>
- 	  
- 	</jfd:container>
+    <jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.manufacture.resources.formelements#Doc.SpecTab.Title">
+    </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/merp/manufacture/resources/DefaultMFDocMaintenanceFooterMacros.xml" />
+  </jfd:container>
+
+  <jfd:include name="com/mg/merp/manufacture/resources/DefaultMFDocMaintenanceFooterMacros.xml"/>
 </jfd:form>	

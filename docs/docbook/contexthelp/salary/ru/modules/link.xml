@@ -14,57 +14,57 @@
 <!-- $Id: link.xml,v 1.1 2006/12/17 12:40:52 konyashkina Exp $ -->
 
 <link version="1.0">
-   
+
   <linkitem topic="calclist_links">
-     <linkentry target="calclistsecref_html" text="Разделы расчётных листков" />
-     <linkentry target="calclist_html" text="Расчётные листки" />
-     <linkentry target="calc_html" text="Расчёт листка" />
-     <linkentry target="clear_html" text="Очистить и рассчитать" />
+    <linkentry target="calclistsecref_html" text="Разделы расчётных листков"/>
+    <linkentry target="calclist_html" text="Расчётные листки"/>
+    <linkentry target="calc_html" text="Расчёт листка"/>
+    <linkentry target="clear_html" text="Очистить и рассчитать"/>
   </linkitem>
-  
+
   <linkitem topic="payroll_links">
-     <linkentry target="payroll_html" text="Расчётные ведомости" />
-     <linkentry target="rest_html" text="Условия отбора расчётных ведомостей" />
-     <linkentry target="rollkind_html" text="Типы ведомостей" />
-    </linkitem>   
-     
-   <linkitem topic="paysheet_links">   
-     <linkentry target="paysheet_html" text="Платёжные ведомости" />
-     <linkentry target="paysheetspec_html" text="Спецификации (записи)" />
-     <linkentry target="careaterko_html" text="Создание РКО" />
-     <linkentry target="careatepko_html" text="Создание ПКО" />
-  </linkitem>   
-     
-   <linkitem topic="feesumm_links">
-     <linkentry target="feesumm_html" text="Своды начислений/удержаний по аналитике" />
-     <linkentry target="feesummspec_html" text="Спецификации свода н/у по аналитике" />
-  </linkitem>   
-  
+    <linkentry target="payroll_html" text="Расчётные ведомости"/>
+    <linkentry target="rest_html" text="Условия отбора расчётных ведомостей"/>
+    <linkentry target="rollkind_html" text="Типы ведомостей"/>
+  </linkitem>
+
+  <linkitem topic="paysheet_links">
+    <linkentry target="paysheet_html" text="Платёжные ведомости"/>
+    <linkentry target="paysheetspec_html" text="Спецификации (записи)"/>
+    <linkentry target="careaterko_html" text="Создание РКО"/>
+    <linkentry target="careatepko_html" text="Создание ПКО"/>
+  </linkitem>
+
+  <linkitem topic="feesumm_links">
+    <linkentry target="feesumm_html" text="Своды начислений/удержаний по аналитике"/>
+    <linkentry target="feesummspec_html" text="Спецификации свода н/у по аналитике"/>
+  </linkitem>
+
   <linkitem topic="salref_links">
-     <linkentry target="mnscode_html" text="Коды МНС для видов оплаты" />
-     <linkentry target="taxhead_html" text="Налоговые сетки" />
-     <linkentry target="minsal_html" text="Размеры минимальных зарплат" />
-     <linkentry target="incomekind_html" text="Виды доходов" />
-     <linkentry target="diskind_html" text="Виды скидок и расходов" />
-   </linkitem>   
-  
-   <linkitem topic="fee_links">     
-     <linkentry target="fee_html" text="Начисления и удержания" />
-     <linkentry target="feehead_html" text="Сведения" />
-     <linkentry target="feeparam_html" text="Параметры" />
-     <linkentry target="tariffuse_html" text="Используемые тарифы" />
-     <linkentry target="replfee_html" text="Вытесняемые начисления/удержания" />
-     <linkentry target="inclfee_html" text="Входящие начисления/удержания" /> 
-     <linkentry target="feemodparam_html" text="Образцы н/у в лицевых счетах" />
-  </linkitem>   
-  
-    <linkitem topic="staffacc_links">
-     <linkentry target="staffacc_html" text="Лицевые счета сотрудников" />
-     <linkentry target="peracchead_html" text="Сведения" />
-     <linkentry target="feemodparam_html" text="Образцы н/у в лицевых счетах" />
-     <linkentry target="posfill_html" text="Занимаемые должности" />
-     <linkentry target="tariff_html" text="Тарифы" />
-     <linkentry target="personacc_html" text="Лицевые счета - плоский список" />
-  </linkitem>    
-    
+    <linkentry target="mnscode_html" text="Коды МНС для видов оплаты"/>
+    <linkentry target="taxhead_html" text="Налоговые сетки"/>
+    <linkentry target="minsal_html" text="Размеры минимальных зарплат"/>
+    <linkentry target="incomekind_html" text="Виды доходов"/>
+    <linkentry target="diskind_html" text="Виды скидок и расходов"/>
+  </linkitem>
+
+  <linkitem topic="fee_links">
+    <linkentry target="fee_html" text="Начисления и удержания"/>
+    <linkentry target="feehead_html" text="Сведения"/>
+    <linkentry target="feeparam_html" text="Параметры"/>
+    <linkentry target="tariffuse_html" text="Используемые тарифы"/>
+    <linkentry target="replfee_html" text="Вытесняемые начисления/удержания"/>
+    <linkentry target="inclfee_html" text="Входящие начисления/удержания"/>
+    <linkentry target="feemodparam_html" text="Образцы н/у в лицевых счетах"/>
+  </linkitem>
+
+  <linkitem topic="staffacc_links">
+    <linkentry target="staffacc_html" text="Лицевые счета сотрудников"/>
+    <linkentry target="peracchead_html" text="Сведения"/>
+    <linkentry target="feemodparam_html" text="Образцы н/у в лицевых счетах"/>
+    <linkentry target="posfill_html" text="Занимаемые должности"/>
+    <linkentry target="tariff_html" text="Тарифы"/>
+    <linkentry target="personacc_html" text="Лицевые счета - плоский список"/>
+  </linkitem>
+
 </link>

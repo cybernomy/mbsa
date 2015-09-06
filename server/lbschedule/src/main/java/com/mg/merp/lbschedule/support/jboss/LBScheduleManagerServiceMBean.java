@@ -14,13 +14,13 @@
  */
 package com.mg.merp.lbschedule.support.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.merp.document.LBScheduleManager;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис менеджера управления графиками исполнения обязательств
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: LBScheduleManagerServiceMBean.java,v 1.1 2007/04/21 11:49:33 sharapov Exp $
  */

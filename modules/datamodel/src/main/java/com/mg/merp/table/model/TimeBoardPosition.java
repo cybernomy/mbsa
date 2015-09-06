@@ -18,104 +18,109 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Модель бизнес-компонента "Список сотрудников в табеле"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: TimeBoardPosition.java,v 1.5 2008/08/12 14:11:44 sharapov Exp $
  */
 public class TimeBoardPosition extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields    
+  // Fields
 
-	private java.lang.Integer Id;
-	private com.mg.merp.personnelref.model.StaffListUnit StaffListUnit;
-	private com.mg.merp.table.model.TimeBoardHead TimeBoardHead;
-	private com.mg.merp.personnelref.model.PositionFill PositionFill;
-	private com.mg.merp.core.model.SysClient SysClient;
-	private java.util.Set<TimeBoardSpec> TimeBoardSpecs;
-
-
-	// Constructors
-
-	/** default constructor */
-	public TimeBoardPosition() {
-	}
-
-	/** constructor with id */
-	public TimeBoardPosition(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  private java.lang.Integer Id;
+  private com.mg.merp.personnelref.model.StaffListUnit StaffListUnit;
+  private com.mg.merp.table.model.TimeBoardHead TimeBoardHead;
+  private com.mg.merp.personnelref.model.PositionFill PositionFill;
+  private com.mg.merp.core.model.SysClient SysClient;
+  private java.util.Set<TimeBoardSpec> TimeBoardSpecs;
 
 
-	// Property accessors
-	/**
+  // Constructors
 
-	 */
-	@DataItemName("ID") //$NON-NLS-1$
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  /**
+   * default constructor
+   */
+  public TimeBoardPosition() {
+  }
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public TimeBoardPosition(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	/**
 
-	 */
-	public com.mg.merp.personnelref.model.StaffListUnit getStaffListUnit() {
-		return this.StaffListUnit;
-	}
+  // Property accessors
 
-	public void setStaffListUnit(com.mg.merp.personnelref.model.StaffListUnit PrefStaffListUnit) {
-		this.StaffListUnit = PrefStaffListUnit;
-	}
+  /**
 
-	/**
+   */
+  @DataItemName("ID") //$NON-NLS-1$
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	 */
-	public com.mg.merp.table.model.TimeBoardHead getTimeBoardHead() {
-		return this.TimeBoardHead;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public void setTimeBoardHead(com.mg.merp.table.model.TimeBoardHead TabTimeBoardHead) {
-		this.TimeBoardHead = TabTimeBoardHead;
-	}
+  /**
 
-	/**
+   */
+  public com.mg.merp.personnelref.model.StaffListUnit getStaffListUnit() {
+    return this.StaffListUnit;
+  }
 
-	 */
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  public void setStaffListUnit(com.mg.merp.personnelref.model.StaffListUnit PrefStaffListUnit) {
+    this.StaffListUnit = PrefStaffListUnit;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  /**
 
-	/**
+   */
+  public com.mg.merp.table.model.TimeBoardHead getTimeBoardHead() {
+    return this.TimeBoardHead;
+  }
 
-	 */
-	@DataItemName("Table.TimeBoardPosision.PositionFill") //$NON-NLS-1$
-	public com.mg.merp.personnelref.model.PositionFill getPositionFill() {
-		return this.PositionFill;
-	}
+  public void setTimeBoardHead(com.mg.merp.table.model.TimeBoardHead TabTimeBoardHead) {
+    this.TimeBoardHead = TabTimeBoardHead;
+  }
 
-	public void setPositionFill(com.mg.merp.personnelref.model.PositionFill SalPositionFill) {
-		this.PositionFill = SalPositionFill;
-	}
+  /**
 
-	/**
-	 * @return the timeBoardSpecs
-	 */
-	public java.util.Set<TimeBoardSpec> getTimeBoardSpecs() {
-		return this.TimeBoardSpecs;
-	}
+   */
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * @param timeBoardSpecs the timeBoardSpecs to set
-	 */
-	public void setTimeBoardSpecs(java.util.Set<TimeBoardSpec> timeBoardSpecs) {
-		this.TimeBoardSpecs = timeBoardSpecs;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
+
+  /**
+
+   */
+  @DataItemName("Table.TimeBoardPosision.PositionFill") //$NON-NLS-1$
+  public com.mg.merp.personnelref.model.PositionFill getPositionFill() {
+    return this.PositionFill;
+  }
+
+  public void setPositionFill(com.mg.merp.personnelref.model.PositionFill SalPositionFill) {
+    this.PositionFill = SalPositionFill;
+  }
+
+  /**
+   * @return the timeBoardSpecs
+   */
+  public java.util.Set<TimeBoardSpec> getTimeBoardSpecs() {
+    return this.TimeBoardSpecs;
+  }
+
+  /**
+   * @param timeBoardSpecs the timeBoardSpecs to set
+   */
+  public void setTimeBoardSpecs(java.util.Set<TimeBoardSpec> timeBoardSpecs) {
+    this.TimeBoardSpecs = timeBoardSpecs;
+  }
 
 }

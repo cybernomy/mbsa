@@ -19,30 +19,19 @@ import com.mg.merp.planning.RCCPDetailServiceLocal;
 import com.mg.merp.planning.model.RccpDetail;
 
 /**
- * @ejb.bean name = "RCCPDetailService"
- *           type = "Stateless"
- *           view-type = "local"
- *           local-jndi-name = "merp/planning/RCCPDetailService"
- *           description = "RCCPDetail"
- *           display-name = "RCCPDetail"
- *
- * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService"
- *
- * @ejb.home      local-extends = "javax.ejb.EJBLocalHome"
- *
- * @ejb.env-entry name = "DomainClassName"
- *                type = "java.lang.String"
- *                value = "com.mg.merp.planning.support.RCCPDetailDomainImpl"
- *
- * @jboss.container-configuration name = "MERP Standard Stateless Service"
- *
  * @author java generator
+ * @ejb.bean name = "RCCPDetailService" type = "Stateless" view-type = "local" local-jndi-name =
+ * "merp/planning/RCCPDetailService" description = "RCCPDetail" display-name = "RCCPDetail"
+ * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService"
+ * @ejb.home local-extends = "javax.ejb.EJBLocalHome"
+ * @ejb.env-entry name = "DomainClassName" type = "java.lang.String" value =
+ * "com.mg.merp.planning.support.RCCPDetailDomainImpl"
+ * @jboss.container-configuration name = "MERP Standard Stateless Service"
  * @since 12.10.2004
- *
  */
- public class RCCPDetailServiceBean extends com.mg.framework.generic.AbstractDataBusinessObjectServiceBean<RccpDetail, Integer> implements RCCPDetailServiceLocal {
+public class RCCPDetailServiceBean extends com.mg.framework.generic.AbstractDataBusinessObjectServiceBean<RccpDetail, Integer> implements RCCPDetailServiceLocal {
 
- 	public void ejbCreate() throws javax.ejb.CreateException {
- 	}
+  public void ejbCreate() throws javax.ejb.CreateException {
+  }
 
- }
+}

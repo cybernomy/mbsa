@@ -13,28 +13,34 @@
 
 <!-- $Id: OvrCardMt.mfd.xml,v 1.6 2008/03/25 14:07:55 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.overall.support.ui.OvrCardMt" title="resource://com.mg.merp.overall.resources.formelements#OvrCard.FormMt.Title" helpTopic="overall#ovrcard_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.overall.support.ui.OvrCardMt"
+          title="resource://com.mg.merp.overall.resources.formelements#OvrCard.FormMt.Title"
+          helpTopic="overall#ovrcard_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
- 		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_expand" tabTitle="resource://com.mg.merp.overall.resources.formelements#OvrCard.Total.Tab" >			
-			<jfd:field id="OvrCardNumber" />
-			<jfd:field id="RefPersonnel" />
-			<jfd:field id="StfPosition" />
-			<jfd:field id="StfJob" />						
-			<jfd:field id="ActDateFrom" />	
-			<jfd:field id="ActDateTo" />	 				
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-		</jfd:container>	
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.overall.resources.formelements#OvrCard.Total.Tab">
+      <jfd:field id="OvrCardNumber"/>
+      <jfd:field id="RefPersonnel"/>
+      <jfd:field id="StfPosition"/>
+      <jfd:field id="StfJob"/>
+      <jfd:field id="ActDateFrom"/>
+      <jfd:field id="ActDateTo"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
 
-		<jfd:maintenanceTable id="size" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.overall.resources.formelements#OvrCard.Size.Tab">
-		</jfd:maintenanceTable>			
-		<jfd:maintenanceTable id="history" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.overall.resources.formelements#OvrCard.History.Tab">
-		</jfd:maintenanceTable>	
+    <jfd:maintenanceTable id="size" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.overall.resources.formelements#OvrCard.Size.Tab">
+    </jfd:maintenanceTable>
+    <jfd:maintenanceTable id="history" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.overall.resources.formelements#OvrCard.History.Tab">
+    </jfd:maintenanceTable>
 
-	</jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

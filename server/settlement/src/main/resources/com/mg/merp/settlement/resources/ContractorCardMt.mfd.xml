@@ -13,102 +13,154 @@
 
 <!-- $Id: ContractorCardMt.mfd.xml,v 1.11 2007/03/28 11:17:39 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.settlement.support.ui.ContractorCardMt" title="resource://com.mg.merp.settlement.resources.formelements#ContractorCard.FormMt.Title" helpTopic="settlement#stlcard_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.settlement.support.ui.ContractorCardMt"
+          title="resource://com.mg.merp.settlement.resources.formelements#ContractorCard.FormMt.Title"
+          helpTopic="settlement#stlcard_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="tabFields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.Total.Tab" >
-			<jfd:field id="Contractor" longField="true"/>
-			<jfd:field id="TotalIncome" readOnly="true" />
-			<jfd:field id="TotalExpenses" readOnly="true" sameLine="true"/>				
-			<jfd:field id="DebitorInDebSum" readOnly="true" />
-			<jfd:field id="CreditorInDebSum" readOnly="true" sameLine="true"/>	
-			<jfd:field id="PlanIncome" readOnly="true" />
-			<jfd:field id="PlanExpenses" readOnly="true" sameLine="true"/>	
-			<jfd:field id="PlanDebitorInDebSum" readOnly="true" />
-			<jfd:field id="PlanCreditorInDebSum" readOnly="true" sameLine="true"/>	
-			<jfd:field id="DebitorInDebLimit" />
-			<jfd:field id="CreditorInDebLimit" sameLine="true"/>	
-			
-			<jfd:field id="DateFrom" text="resource://com.mg.merp.settlement.resources.formelements#Cond.Settlement.DateFrom" fieldGroup="resource://com.mg.merp.settlement.resources.formelements#Cond.Settlement.Document"/>	
-			<jfd:field id="DateTill" text="resource://com.mg.merp.settlement.resources.formelements#Cond.Settlement.DateTill" sameLine="true"/>	
-			<jfd:field id="CurCode" />							
-			<jfd:button id="Apply" text="resource://com.mg.merp.settlement.resources.formelements#Settl.Button.Apply" actionListener="Apply"/> 							
-			<jfd:button id="Clear" text="resource://com.mg.merp.settlement.resources.formelements#Settl.Button.Clear" sameLine="true" actionListener="Clear"/> 							
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																									
-		</jfd:container>
+  <jfd:container id="tabFields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.Total.Tab">
+      <jfd:field id="Contractor" longField="true"/>
+      <jfd:field id="TotalIncome" readOnly="true"/>
+      <jfd:field id="TotalExpenses" readOnly="true" sameLine="true"/>
+      <jfd:field id="DebitorInDebSum" readOnly="true"/>
+      <jfd:field id="CreditorInDebSum" readOnly="true" sameLine="true"/>
+      <jfd:field id="PlanIncome" readOnly="true"/>
+      <jfd:field id="PlanExpenses" readOnly="true" sameLine="true"/>
+      <jfd:field id="PlanDebitorInDebSum" readOnly="true"/>
+      <jfd:field id="PlanCreditorInDebSum" readOnly="true" sameLine="true"/>
+      <jfd:field id="DebitorInDebLimit"/>
+      <jfd:field id="CreditorInDebLimit" sameLine="true"/>
 
-		<jfd:container id="confirmSplit" layout="jfd:split" orientation="ver" alignment="expand_expand" tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.Confirm.Tab" helpTopic="settlement#stlconfirm_html" >
-			<jfd:container id="confirmDocIncomeBox" layout="jfd:box" columns="1" alignment="expand_expand" >
-				<jfd:table id="confirmDocIncomeTable" longField="true" scroll="true" alignment="expand_expand" label="resource://com.mg.merp.settlement.resources.formelements#Settlement.In"> 	 		
-					<jfd:popupMenu>
-						<jfd:menuItem id="confirmDocIncomeShowDoc" text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument" actionListener="ConfirmDocIncomeShowDocument" />
-					</jfd:popupMenu>
-				</jfd:table>
-			</jfd:container>		
-			<jfd:container id="confirmDocExpenseBox" layout="jfd:box" columns="1" alignment="expand_expand" >
-				<jfd:table id="confirmDocExpenseTable" longField="true" scroll="true" alignment="expand_expand" label="resource://com.mg.merp.settlement.resources.formelements#Settlement.Out"> 	 		
-					<jfd:popupMenu>
-						<jfd:menuItem id="confirmDocExpenseShowDoc" text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument" actionListener="ConfirmDocExpenseShowDocument" />
-					</jfd:popupMenu>
-				</jfd:table>								
-			</jfd:container>
-		</jfd:container>
+      <jfd:field id="DateFrom"
+                 text="resource://com.mg.merp.settlement.resources.formelements#Cond.Settlement.DateFrom"
+                 fieldGroup="resource://com.mg.merp.settlement.resources.formelements#Cond.Settlement.Document"/>
+      <jfd:field id="DateTill"
+                 text="resource://com.mg.merp.settlement.resources.formelements#Cond.Settlement.DateTill"
+                 sameLine="true"/>
+      <jfd:field id="CurCode"/>
+      <jfd:button id="Apply"
+                  text="resource://com.mg.merp.settlement.resources.formelements#Settl.Button.Apply"
+                  actionListener="Apply"/>
+      <jfd:button id="Clear"
+                  text="resource://com.mg.merp.settlement.resources.formelements#Settl.Button.Clear"
+                  sameLine="true" actionListener="Clear"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
 
- 		<jfd:container id="baseDocSplit" layout="jfd:split" orientation="ver" alignment="expand_expand" tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.Base.Tab" helpTopic="settlement#stlground_html">
-			<jfd:table id="baseDocTable" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" label="resource://com.mg.merp.settlement.resources.formelements#Settlement.Base"> 	 		
-			</jfd:table>
-			<jfd:container id="baseIncomeExpenseTabs" layout="jfd:tabbed" alignment="expand_expand" >
-				<jfd:table id="baseDocIncomeTable" alignment="expand_expand" scroll="true" tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.In"> 	 		
-					<jfd:popupMenu>
-						<jfd:menuItem id="baseDocIncomeShowDoc" text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument" actionListener="BaseDocIncomeShowDocument" />
-					</jfd:popupMenu>
-				</jfd:table>
-				<jfd:table id="baseDocExpenseTable" alignment="expand_expand" longField="true" scroll="true" tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.Out"> 	 		
-					<jfd:popupMenu>
-						<jfd:menuItem id="baseDocExpenseShowDoc" text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument" actionListener="BaseDocExpenseShowDocument" />
-					</jfd:popupMenu>
-				</jfd:table>
-			</jfd:container>
- 		</jfd:container>
-		
-		<jfd:container id="contractSplit" layout="jfd:split" orientation="ver" alignment="expand_expand" tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.Contract.Tab" helpTopic="settlement#stlcontr_html" >
-			<jfd:table id="contractTable" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" label="resource://com.mg.merp.settlement.resources.formelements#Settlement.Contract"> 	 		
-			</jfd:table>	
-			<jfd:container id="contractIncomeExpenseTabs" layout="jfd:tabbed" alignment="expand_expand" >
-				<jfd:table id="contractIncomeTable" scroll="true"  alignment="expand_expand" tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.In"> 	 		
-					<jfd:popupMenu>
-						<jfd:menuItem id="contractIncomeShowDoc" text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument" actionListener="ContractIncomeShowDocument" />
-					</jfd:popupMenu>
-				</jfd:table>	
-				<jfd:table id="contractExpenseTable"  scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.Out"> 	 		
-					<jfd:popupMenu>
-						<jfd:menuItem id="contractExpenseShowDoc" text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument" actionListener="ContractExpenseShowDocument" />
-					</jfd:popupMenu>
-				</jfd:table>				
-			</jfd:container>
-		</jfd:container>
-				
-		<jfd:container id="planSplit" layout="jfd:split" orientation="ver" alignment="expand_expand" tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.Plan.Tab" helpTopic="settlement#stlplan_html" >	
-			<jfd:container id="planIncomeBox" layout="jfd:box" columns="1" alignment="expand_expand" >
-				<jfd:table id="planIncomeTable" longField="true" scroll="true" alignment="expand_expand" label="resource://com.mg.merp.settlement.resources.formelements#Settlement.In"> 	 		
-					<jfd:popupMenu>
-						<jfd:menuItem id="planIncomeShowDoc" text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument" actionListener="PlanIncomeShowDocument" />
-					</jfd:popupMenu>
-				</jfd:table>
-			</jfd:container>
-			<jfd:container id="planExpenseBox" layout="jfd:box" columns="1" alignment="expand_expand" >				
-				<jfd:table id="planExpenseTable" longField="true" scroll="true" alignment="expand_expand" label="resource://com.mg.merp.settlement.resources.formelements#Settlement.Out"> 	 		
-					<jfd:popupMenu>
-						<jfd:menuItem id="planExpenseShowDoc" text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument" actionListener="PlanExpenseShowDocument" />
-					</jfd:popupMenu>
-				</jfd:table>
-			</jfd:container>
-		</jfd:container>
-														
-	</jfd:container>
+    <jfd:container id="confirmSplit" layout="jfd:split" orientation="ver" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.Confirm.Tab"
+                   helpTopic="settlement#stlconfirm_html">
+      <jfd:container id="confirmDocIncomeBox" layout="jfd:box" columns="1"
+                     alignment="expand_expand">
+        <jfd:table id="confirmDocIncomeTable" longField="true" scroll="true"
+                   alignment="expand_expand"
+                   label="resource://com.mg.merp.settlement.resources.formelements#Settlement.In">
+          <jfd:popupMenu>
+            <jfd:menuItem id="confirmDocIncomeShowDoc"
+                          text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument"
+                          actionListener="ConfirmDocIncomeShowDocument"/>
+          </jfd:popupMenu>
+        </jfd:table>
+      </jfd:container>
+      <jfd:container id="confirmDocExpenseBox" layout="jfd:box" columns="1"
+                     alignment="expand_expand">
+        <jfd:table id="confirmDocExpenseTable" longField="true" scroll="true"
+                   alignment="expand_expand"
+                   label="resource://com.mg.merp.settlement.resources.formelements#Settlement.Out">
+          <jfd:popupMenu>
+            <jfd:menuItem id="confirmDocExpenseShowDoc"
+                          text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument"
+                          actionListener="ConfirmDocExpenseShowDocument"/>
+          </jfd:popupMenu>
+        </jfd:table>
+      </jfd:container>
+    </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:container id="baseDocSplit" layout="jfd:split" orientation="ver" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.Base.Tab"
+                   helpTopic="settlement#stlground_html">
+      <jfd:table id="baseDocTable" alignment="expand_expand" scroll="true"
+                 autoResize="subsequent_columns"
+                 label="resource://com.mg.merp.settlement.resources.formelements#Settlement.Base">
+      </jfd:table>
+      <jfd:container id="baseIncomeExpenseTabs" layout="jfd:tabbed" alignment="expand_expand">
+        <jfd:table id="baseDocIncomeTable" alignment="expand_expand" scroll="true"
+                   tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.In">
+          <jfd:popupMenu>
+            <jfd:menuItem id="baseDocIncomeShowDoc"
+                          text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument"
+                          actionListener="BaseDocIncomeShowDocument"/>
+          </jfd:popupMenu>
+        </jfd:table>
+        <jfd:table id="baseDocExpenseTable" alignment="expand_expand" longField="true" scroll="true"
+                   tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.Out">
+          <jfd:popupMenu>
+            <jfd:menuItem id="baseDocExpenseShowDoc"
+                          text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument"
+                          actionListener="BaseDocExpenseShowDocument"/>
+          </jfd:popupMenu>
+        </jfd:table>
+      </jfd:container>
+    </jfd:container>
+
+    <jfd:container id="contractSplit" layout="jfd:split" orientation="ver" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.Contract.Tab"
+                   helpTopic="settlement#stlcontr_html">
+      <jfd:table id="contractTable" alignment="expand_expand" scroll="true"
+                 autoResize="subsequent_columns"
+                 label="resource://com.mg.merp.settlement.resources.formelements#Settlement.Contract">
+      </jfd:table>
+      <jfd:container id="contractIncomeExpenseTabs" layout="jfd:tabbed" alignment="expand_expand">
+        <jfd:table id="contractIncomeTable" scroll="true" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.In">
+          <jfd:popupMenu>
+            <jfd:menuItem id="contractIncomeShowDoc"
+                          text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument"
+                          actionListener="ContractIncomeShowDocument"/>
+          </jfd:popupMenu>
+        </jfd:table>
+        <jfd:table id="contractExpenseTable" scroll="true" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.Out">
+          <jfd:popupMenu>
+            <jfd:menuItem id="contractExpenseShowDoc"
+                          text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument"
+                          actionListener="ContractExpenseShowDocument"/>
+          </jfd:popupMenu>
+        </jfd:table>
+      </jfd:container>
+    </jfd:container>
+
+    <jfd:container id="planSplit" layout="jfd:split" orientation="ver" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.settlement.resources.formelements#Settlement.Plan.Tab"
+                   helpTopic="settlement#stlplan_html">
+      <jfd:container id="planIncomeBox" layout="jfd:box" columns="1" alignment="expand_expand">
+        <jfd:table id="planIncomeTable" longField="true" scroll="true" alignment="expand_expand"
+                   label="resource://com.mg.merp.settlement.resources.formelements#Settlement.In">
+          <jfd:popupMenu>
+            <jfd:menuItem id="planIncomeShowDoc"
+                          text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument"
+                          actionListener="PlanIncomeShowDocument"/>
+          </jfd:popupMenu>
+        </jfd:table>
+      </jfd:container>
+      <jfd:container id="planExpenseBox" layout="jfd:box" columns="1" alignment="expand_expand">
+        <jfd:table id="planExpenseTable" longField="true" scroll="true" alignment="expand_expand"
+                   label="resource://com.mg.merp.settlement.resources.formelements#Settlement.Out">
+          <jfd:popupMenu>
+            <jfd:menuItem id="planExpenseShowDoc"
+                          text="resource://com.mg.merp.settlement.resources.formelements#Settl.ShowDocument"
+                          actionListener="PlanExpenseShowDocument"/>
+          </jfd:popupMenu>
+        </jfd:table>
+      </jfd:container>
+    </jfd:container>
+
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

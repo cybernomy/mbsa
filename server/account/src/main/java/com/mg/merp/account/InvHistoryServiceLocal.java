@@ -18,18 +18,17 @@ import com.mg.merp.account.model.InvHistory;
 
 /**
  * Бизнес-компонент "История инвентарной карточки"
- *  
+ *
  * @author leonova
  * @version $Id: InvHistoryServiceLocal.java,v 1.2 2008/04/28 10:09:51 alikaev Exp $
  */
 public interface InvHistoryServiceLocal extends com.mg.framework.api.DataBusinessObjectService<InvHistory, Integer> {
 
-	/**
-	 * Откат истории инв.объекта
-	 * 
-	 * @param invHistory
-	 * 			- история инвентарной карточки
-	 */
-	void rollbackInvHistory(InvHistory invHistory);
-	
+  /**
+   * Откат истории инв.объекта
+   *
+   * @param invHistory - история инвентарной карточки
+   */
+  void rollbackInvHistory(InvHistory invHistory);
+
 }

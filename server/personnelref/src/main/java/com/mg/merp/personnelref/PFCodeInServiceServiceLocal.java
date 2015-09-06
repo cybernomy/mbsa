@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.PfCodeInService;
 
 /**
- * 
  * @author leonova
  * @version $Id: PFCodeInServiceServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface PFCodeInServiceServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<PfCodeInService, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<PfCodeInService, Integer> {
 
 }

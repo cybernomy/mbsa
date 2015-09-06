@@ -19,18 +19,18 @@ import java.io.Serializable;
  * @author krivopoustov
  */
 public class BinLocationInfo implements Serializable {
-	public String code;
-	public double quan;
-	public int batchId;
-	
-	public BinLocationInfo() {
-		super();
-	}
-	
-	public BinLocationInfo(String code, double quan, int batchId) {
-		super();
-		this.code = code;
-		this.quan = quan;
-		this.batchId = batchId;
-	}
+  public String code;
+  public double quan;
+  public int batchId;
+
+  public BinLocationInfo() {
+    super();
+  }
+
+  public BinLocationInfo(String code, double quan, int batchId) {
+    super();
+    this.code = code;
+    this.quan = quan;
+    this.batchId = batchId;
+  }
 }

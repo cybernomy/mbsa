@@ -18,23 +18,22 @@ import com.mg.framework.api.DataAccessException;
 
 /**
  * @author Oleg V. Safonov
- *
  */
 @javax.ejb.ApplicationException
 public class CreateException extends DataAccessException {
-	public CreateException(String s, Throwable cause) {
-		super(s, cause);
-	}
-	
-	public CreateException(String s) {
-		super(s);
-	}	
+  public CreateException(String s, Throwable cause) {
+    super(s, cause);
+  }
 
-	public CreateException() {
-		super();
-	}	
+  public CreateException(String s) {
+    super(s);
+  }
 
-	public CreateException(Throwable cause) {
-		super(cause);
-	}
+  public CreateException() {
+    super();
+  }
+
+  public CreateException(Throwable cause) {
+    super(cause);
+  }
 }

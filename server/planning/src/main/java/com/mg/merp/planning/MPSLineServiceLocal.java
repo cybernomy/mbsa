@@ -18,30 +18,29 @@ import com.mg.merp.planning.model.MpsLine;
 
 /**
  * Бизнес-компонент "Строки MPS"
- * 
+ *
  * @author leonova
  * @version $Id: MPSLineServiceLocal.java,v 1.2 2007/07/30 10:37:51 safonov Exp $
  */
-public interface MPSLineServiceLocal extends com.mg.framework.api.DataBusinessObjectService<MpsLine, Integer>
-{
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/planning/MPSLine";
-	
-	/**
-	 * подтверждение строки MPS
-	 * 
-	 * @param list	список строк MPS
-	 */
-	void firm(int[] list);
+public interface MPSLineServiceLocal extends com.mg.framework.api.DataBusinessObjectService<MpsLine, Integer> {
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/planning/MPSLine";
 
-	/**
-	 * создание ЗНП на основании результатов формирования MPS
-	 * 
-	 * @param folderId	папка приемник для ЗНП
-	 * @param mpsId	идентификатор MPS
-	 */
-	void createJob(int folderId, int mpsId);
+  /**
+   * подтверждение строки MPS
+   *
+   * @param list список строк MPS
+   */
+  void firm(int[] list);
+
+  /**
+   * создание ЗНП на основании результатов формирования MPS
+   *
+   * @param folderId папка приемник для ЗНП
+   * @param mpsId    идентификатор MPS
+   */
+  void createJob(int folderId, int mpsId);
 
 }

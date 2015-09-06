@@ -13,40 +13,44 @@
 
 <!-- $Id: RemnValMt.mfd.xml,v 1.4 2006/12/04 14:32:36 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.account.resources.formelements#RemnVal.FormMt.Title" helpTopic="account#remnval_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.account.resources.formelements#RemnVal.FormMt.Title"
+          helpTopic="account#remnval_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="Period" />
-		<jfd:field id="AccPlan.Currency" enabled="false" sameLine="true"/>
-		<jfd:field id="Catalog" />		
-		<jfd:field id="Contractor" sameLine="true"/>
-		<jfd:container id="accPlanFields" layout="jfd:box" columns="1" label="resource://com.mg.merp.account.resources.formelements#Remn.Acc">
-			<jfd:field id="AccPlan" showLabel="false"/>
-			<jfd:field id="AnlPlan1" showLabel="false"/>
-			<jfd:field id="AnlPlan2" showLabel="false"/>
-			<jfd:field id="AnlPlan3" showLabel="false"/>
-			<jfd:field id="AnlPlan4" showLabel="false"/>						
-			<jfd:field id="AnlPlan5" showLabel="false"/>		
-		</jfd:container>
- 		<jfd:field id="BeginQuan" />
-		<jfd:field id="QuantityDb" />
-		<jfd:field id="QuantityKt" />
-		<jfd:field id="EndQuan" />			
-		<jfd:field id="RemnBeginNat" />
-		<jfd:field id="RemnBeginCur" sameLine="true"/>		
- 		<jfd:field id="TurnNatDb" />
- 		<jfd:field id="TurnCurDb" sameLine="true"/>
-  		<jfd:field id="TurnNatKt" />
- 		<jfd:field id="TurnCurKt" sameLine="true"/>		
-		<jfd:field id="RemnEndNat" />
-		<jfd:field id="RemnEndCur" sameLine="true"/>	
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																								 																			
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Period"/>
+    <jfd:field id="AccPlan.Currency" enabled="false" sameLine="true"/>
+    <jfd:field id="Catalog"/>
+    <jfd:field id="Contractor" sameLine="true"/>
+    <jfd:container id="accPlanFields" layout="jfd:box" columns="1"
+                   label="resource://com.mg.merp.account.resources.formelements#Remn.Acc">
+      <jfd:field id="AccPlan" showLabel="false"/>
+      <jfd:field id="AnlPlan1" showLabel="false"/>
+      <jfd:field id="AnlPlan2" showLabel="false"/>
+      <jfd:field id="AnlPlan3" showLabel="false"/>
+      <jfd:field id="AnlPlan4" showLabel="false"/>
+      <jfd:field id="AnlPlan5" showLabel="false"/>
+    </jfd:container>
+    <jfd:field id="BeginQuan"/>
+    <jfd:field id="QuantityDb"/>
+    <jfd:field id="QuantityKt"/>
+    <jfd:field id="EndQuan"/>
+    <jfd:field id="RemnBeginNat"/>
+    <jfd:field id="RemnBeginCur" sameLine="true"/>
+    <jfd:field id="TurnNatDb"/>
+    <jfd:field id="TurnCurDb" sameLine="true"/>
+    <jfd:field id="TurnNatKt"/>
+    <jfd:field id="TurnCurKt" sameLine="true"/>
+    <jfd:field id="RemnEndNat"/>
+    <jfd:field id="RemnEndCur" sameLine="true"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
 
-	</jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

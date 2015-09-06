@@ -14,9 +14,6 @@
  */
 package com.mg.merp.crm.support.ui;
 
-import java.io.Serializable;
-import java.util.Set;
-
 import com.mg.framework.api.AttributeMap;
 import com.mg.framework.api.ui.MaintenanceFormActionListener;
 import com.mg.framework.api.ui.MaintenanceFormEvent;
@@ -43,206 +40,214 @@ import com.mg.merp.reference.OriginalDocumentServiceLocal;
 import com.mg.merp.reference.model.OriginalDocument;
 import com.mg.merp.reference.support.ui.OriginalDocumentFolderSearchHelp;
 
+import java.io.Serializable;
+import java.util.Set;
+
 /**
  * Контроллер формы поддержки действий
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: OperationMt.java,v 1.7 2008/06/17 11:33:52 sharapov Exp $
  */
 public class OperationMt extends DefaultCompoundMaintenanceForm implements MasterModelListener {
-	private MaintenanceTableController original;
-	private LinkedDocumentServiceLocal originalService;
-	private OriginalDocumentServiceLocal originalDocumentService = (OriginalDocumentServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(OriginalDocumentServiceLocal.SERVICE_NAME);
-	protected AttributeMap originalProperties = new LocalDataTransferObject();
+  protected AttributeMap originalProperties = new LocalDataTransferObject();
+  private MaintenanceTableController original;
+  private LinkedDocumentServiceLocal originalService;
+  private OriginalDocumentServiceLocal originalDocumentService = (OriginalDocumentServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(OriginalDocumentServiceLocal.SERVICE_NAME);
 
-	public OperationMt() throws Exception {
-		super();
-		addMasterModelListener(this);
+  public OperationMt() throws Exception {
+    super();
+    addMasterModelListener(this);
 
-		originalService = (LinkedDocumentServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(LinkedDocumentServiceLocal.SERVICE_NAME);
-		original = new MaintenanceTableController(originalProperties) {
+    originalService = (LinkedDocumentServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(LinkedDocumentServiceLocal.SERVICE_NAME);
+    original = new MaintenanceTableController(originalProperties) {
 
-			/* (non-Javadoc)
-			 * @see com.mg.framework.support.ui.widget.MaintenanceTableController#doAdd()
-			 */
-			@Override
-			protected void doAdd() {
-				SearchHelp searchHelp = SearchHelpProcessor.createSearch(OriginalDocumentFolderSearchHelp.SEARCH_HELP_NAME);
-				searchHelp.addSearchHelpListener(new SearchHelpListener() {
+      /* (non-Javadoc)
+       * @see com.mg.framework.support.ui.widget.MaintenanceTableController#doAdd()
+       */
+      @Override
+      protected void doAdd() {
+        SearchHelp searchHelp = SearchHelpProcessor.createSearch(OriginalDocumentFolderSearchHelp.SEARCH_HELP_NAME);
+        searchHelp.addSearchHelpListener(new SearchHelpListener() {
 
-					public void searchPerformed(SearchHelpEvent event) {
-						doAddOriginalDocumentOfLinkedDocument((Folder) event.getItems()[0]);
-					}
+          public void searchPerformed(SearchHelpEvent event) {
+            doAddOriginalDocumentOfLinkedDocument((Folder) event.getItems()[0]);
+          }
 
-					public void searchCanceled(SearchHelpEvent event) {
-						//do nothing
-					}
-				});
-				searchHelp.search();
+          public void searchCanceled(SearchHelpEvent event) {
+            //do nothing
+          }
+        });
+        searchHelp.search();
 
-			}
+      }
 
-			/* (non-Javadoc)
-			 * @see com.mg.framework.support.ui.widget.MaintenanceTableController#doView()
-			 */
-			@Override
-			protected void doView() {
-				doViewOriginalDocumentOfLinkedDocument();
-			}
+      /* (non-Javadoc)
+       * @see com.mg.framework.support.ui.widget.MaintenanceTableController#doView()
+       */
+      @Override
+      protected void doView() {
+        doViewOriginalDocumentOfLinkedDocument();
+      }
 
-			/* (non-Javadoc)
-			 * @see com.mg.framework.support.ui.widget.MaintenanceTableController#doEdit()
-			 */
-			@Override
-			protected void doEdit() {
-				doEditOriginalDocumentOfLinkedDocument();
-			}
-		};
+      /* (non-Javadoc)
+       * @see com.mg.framework.support.ui.widget.MaintenanceTableController#doEdit()
+       */
+      @Override
+      protected void doEdit() {
+        doEditOriginalDocumentOfLinkedDocument();
+      }
+    };
 
-		original.initController(originalService, new LinkedDocumentMaintenanceEJBQLTableModel() {
-			protected final String INIT_QUERY_TEXT = "select %s from LinkedDocument ld %s where ld.Operation = :operation"; //$NON-NLS-1$
-			protected String createQueryText() {
-				Set<TableEJBQLFieldDef> fieldDefs = getFieldDefsSet();
-				String fieldsList = DatabaseUtils.generateEJBQLSelectClause(fieldDefs);
-				String fromList = DatabaseUtils.generateEJBQLFromClause(fieldDefs);
-				paramsName.clear();
-				paramsValue.clear();
-				paramsName.add("operation"); //$NON-NLS-1$
-				paramsValue.add(getEntity());					
-				return String.format(INIT_QUERY_TEXT, fieldsList, fromList);		
-			}
+    original.initController(originalService, new LinkedDocumentMaintenanceEJBQLTableModel() {
+      protected final String INIT_QUERY_TEXT = "select %s from LinkedDocument ld %s where ld.Operation = :operation"; //$NON-NLS-1$
 
-			/* (non-Javadoc)
-			 * @see com.mg.framework.generic.ui.DefaultMaintenanceEJBQLTableModel#getPrimaryKeyFieldIndex()
-			 */
-			@Override
-			protected int getPrimaryKeyFieldIndex() {
-				return 0;
-			}
+      protected String createQueryText() {
+        Set<TableEJBQLFieldDef> fieldDefs = getFieldDefsSet();
+        String fieldsList = DatabaseUtils.generateEJBQLSelectClause(fieldDefs);
+        String fromList = DatabaseUtils.generateEJBQLFromClause(fieldDefs);
+        paramsName.clear();
+        paramsValue.clear();
+        paramsName.add("operation"); //$NON-NLS-1$
+        paramsValue.add(getEntity());
+        return String.format(INIT_QUERY_TEXT, fieldsList, fromList);
+      }
 
-			/*
-			 * (non-Javadoc)
-			 * @see com.mg.merp.crm.support.ui.LinkedDocumentMaintenanceEJBQLTableModel#doLoad()
-			 */
-			@Override
-			protected void doLoad() {
-				setQuery(createQueryText(), paramsName.toArray(new String[paramsName.size()]), paramsValue.toArray(new Object[paramsValue.size()]));
-			}
+      /* (non-Javadoc)
+       * @see com.mg.framework.generic.ui.DefaultMaintenanceEJBQLTableModel#getPrimaryKeyFieldIndex()
+       */
+      @Override
+      protected int getPrimaryKeyFieldIndex() {
+        return 0;
+      }
 
-		});
-		addMasterModelListener(original);		
-		addMasterModelListener(this);
-	}
+      /*
+       * (non-Javadoc)
+       * @see com.mg.merp.crm.support.ui.LinkedDocumentMaintenanceEJBQLTableModel#doLoad()
+       */
+      @Override
+      protected void doLoad() {
+        setQuery(createQueryText(), paramsName.toArray(new String[paramsName.size()]), paramsValue.toArray(new Object[paramsValue.size()]));
+      }
 
-	public void masterChange(ModelChangeEvent event) {
-		originalProperties.put("Operation", event.getEntity());	 //$NON-NLS-1$
-	}
+    });
+    addMasterModelListener(original);
+    addMasterModelListener(this);
+  }
 
-	/**
-	 * Добавить связанный документ с оригиналом
-	 * @param originalDocument - оригинал
-	 */
-	protected void doAddLinkedDocumentWithOriginalDocument(OriginalDocument originalDocument) {
-		originalService.createForOperationWithOriginal((Operation) getEntity(), originalDocument);
-		original.refresh();
-	}
+  public void masterChange(ModelChangeEvent event) {
+    originalProperties.put("Operation", event.getEntity());     //$NON-NLS-1$
+  }
 
-	/**
-	 * Просмотр оригинала связанного документа
-	 */
-	protected void doViewOriginalDocumentOfLinkedDocument() {
-		OriginalDocument originalDocument = getOriginalDocumentOfCurrentLinkedDocument();
-		if(originalDocument != null)
-			MaintenanceHelper.view(originalDocumentService, originalDocument.getId(), null, null);
-	}
+  /**
+   * Добавить связанный документ с оригиналом
+   *
+   * @param originalDocument - оригинал
+   */
+  protected void doAddLinkedDocumentWithOriginalDocument(OriginalDocument originalDocument) {
+    originalService.createForOperationWithOriginal((Operation) getEntity(), originalDocument);
+    original.refresh();
+  }
 
-	/**
-	 * Редактирование оригинала связанного документа
-	 */
-	protected void doEditOriginalDocumentOfLinkedDocument() {
-		OriginalDocument originalDocument = getOriginalDocumentOfCurrentLinkedDocument();
-		if(originalDocument != null) {
-			MaintenanceHelper.edit(originalDocumentService, originalDocument.getId(), null, new MaintenanceFormActionListener() {
+  /**
+   * Просмотр оригинала связанного документа
+   */
+  protected void doViewOriginalDocumentOfLinkedDocument() {
+    OriginalDocument originalDocument = getOriginalDocumentOfCurrentLinkedDocument();
+    if (originalDocument != null)
+      MaintenanceHelper.view(originalDocumentService, originalDocument.getId(), null, null);
+  }
 
-				/* (non-Javadoc)
-				 * @see com.mg.framework.api.ui.MaintenanceFormActionListener#canceled(com.mg.framework.api.ui.MaintenanceFormEvent)
-				 */
-				public void canceled(MaintenanceFormEvent event) {
-					// do nothing
-				}
+  /**
+   * Редактирование оригинала связанного документа
+   */
+  protected void doEditOriginalDocumentOfLinkedDocument() {
+    OriginalDocument originalDocument = getOriginalDocumentOfCurrentLinkedDocument();
+    if (originalDocument != null) {
+      MaintenanceHelper.edit(originalDocumentService, originalDocument.getId(), null, new MaintenanceFormActionListener() {
 
-				/* (non-Javadoc)
-				 * @see com.mg.framework.api.ui.MaintenanceFormActionListener#performed(com.mg.framework.api.ui.MaintenanceFormEvent)
-				 */
-				public void performed(MaintenanceFormEvent event) {
-					original.refresh();
-				}
-			});
-		}
-	}
+        /* (non-Javadoc)
+         * @see com.mg.framework.api.ui.MaintenanceFormActionListener#canceled(com.mg.framework.api.ui.MaintenanceFormEvent)
+         */
+        public void canceled(MaintenanceFormEvent event) {
+          // do nothing
+        }
 
-	/**
-	 * Обработчик пункта КМ "Выбрать документ"
-	 * @param event - событие
-	 */
-	public void onActionSelectOriginalDocumnet(WidgetEvent event) {
-		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.reference.support.ui.OriginalDocumentSearchHelp"); //$NON-NLS-1$
-		searchHelp.addSearchHelpListener(new SearchHelpListener() {
+        /* (non-Javadoc)
+         * @see com.mg.framework.api.ui.MaintenanceFormActionListener#performed(com.mg.framework.api.ui.MaintenanceFormEvent)
+         */
+        public void performed(MaintenanceFormEvent event) {
+          original.refresh();
+        }
+      });
+    }
+  }
 
-			public void searchPerformed(SearchHelpEvent event) {
-				doAddLinkedDocumentWithOriginalDocument((OriginalDocument) event.getItems()[0]);
-			}
+  /**
+   * Обработчик пункта КМ "Выбрать документ"
+   *
+   * @param event - событие
+   */
+  public void onActionSelectOriginalDocumnet(WidgetEvent event) {
+    SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.reference.support.ui.OriginalDocumentSearchHelp"); //$NON-NLS-1$
+    searchHelp.addSearchHelpListener(new SearchHelpListener() {
 
-			public void searchCanceled(SearchHelpEvent event) {
-				//do nothing
-			}
-		});
-		searchHelp.search();
-	}
+      public void searchPerformed(SearchHelpEvent event) {
+        doAddLinkedDocumentWithOriginalDocument((OriginalDocument) event.getItems()[0]);
+      }
 
-	/**
-	 * Добавить оригинал со связанным документом
-	 * @param originalDocumentDstFolder - папка-приемник документа оригинала связанного документа
-	 */
-	protected void doAddOriginalDocumentOfLinkedDocument(Folder originalDocumentDstFolder) {
-		if(originalDocumentDstFolder != null) {
-			final OriginalDocument originalDocument = originalDocumentService.initialize();
-			originalDocument.setFolder(originalDocumentDstFolder);
-			MaintenanceHelper.add(originalDocumentService, originalDocument, null, new MaintenanceFormActionListener() {
+      public void searchCanceled(SearchHelpEvent event) {
+        //do nothing
+      }
+    });
+    searchHelp.search();
+  }
 
-				/* (non-Javadoc)
-				 * @see com.mg.framework.api.ui.MaintenanceFormActionListener#canceled(com.mg.framework.api.ui.MaintenanceFormEvent)
-				 */
-				public void canceled(MaintenanceFormEvent event) {
-					// do nothing
-				}
+  /**
+   * Добавить оригинал со связанным документом
+   *
+   * @param originalDocumentDstFolder - папка-приемник документа оригинала связанного документа
+   */
+  protected void doAddOriginalDocumentOfLinkedDocument(Folder originalDocumentDstFolder) {
+    if (originalDocumentDstFolder != null) {
+      final OriginalDocument originalDocument = originalDocumentService.initialize();
+      originalDocument.setFolder(originalDocumentDstFolder);
+      MaintenanceHelper.add(originalDocumentService, originalDocument, null, new MaintenanceFormActionListener() {
 
-				/* (non-Javadoc)
-				 * @see com.mg.framework.api.ui.MaintenanceFormActionListener#performed(com.mg.framework.api.ui.MaintenanceFormEvent)
-				 */
-				public void performed(MaintenanceFormEvent event) {
-					doAddLinkedDocumentWithOriginalDocument(originalDocument);
-				}
-			});
-		}
-	}
+        /* (non-Javadoc)
+         * @see com.mg.framework.api.ui.MaintenanceFormActionListener#canceled(com.mg.framework.api.ui.MaintenanceFormEvent)
+         */
+        public void canceled(MaintenanceFormEvent event) {
+          // do nothing
+        }
 
-	/**
-	 * Получить оригинал текущего связанного документа
-	 * @return оригинал связанного документа или <code>null</code> если не найден
-	 */
-	private OriginalDocument getOriginalDocumentOfCurrentLinkedDocument() {
-		Serializable[] selectedIds = ((DefaultEJBQLTableModel) original.getModel()).getSelectedPrimaryKeys();
-		if(selectedIds == null || selectedIds.length == 0)
-			return null;
-		else {
-			LinkedDocument linkedDocument = originalService.load((Integer) selectedIds[0]);
-			if(linkedDocument != null)
-				return linkedDocument.getOriginal();
-			else
-				return null;
-		}
-	}
+        /* (non-Javadoc)
+         * @see com.mg.framework.api.ui.MaintenanceFormActionListener#performed(com.mg.framework.api.ui.MaintenanceFormEvent)
+         */
+        public void performed(MaintenanceFormEvent event) {
+          doAddLinkedDocumentWithOriginalDocument(originalDocument);
+        }
+      });
+    }
+  }
+
+  /**
+   * Получить оригинал текущего связанного документа
+   *
+   * @return оригинал связанного документа или <code>null</code> если не найден
+   */
+  private OriginalDocument getOriginalDocumentOfCurrentLinkedDocument() {
+    Serializable[] selectedIds = ((DefaultEJBQLTableModel) original.getModel()).getSelectedPrimaryKeys();
+    if (selectedIds == null || selectedIds.length == 0)
+      return null;
+    else {
+      LinkedDocument linkedDocument = originalService.load((Integer) selectedIds[0]);
+      if (linkedDocument != null)
+        return linkedDocument.getOriginal();
+      else
+        return null;
+    }
+  }
 
 }

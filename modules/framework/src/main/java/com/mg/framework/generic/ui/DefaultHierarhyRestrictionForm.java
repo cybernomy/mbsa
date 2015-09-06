@@ -21,20 +21,20 @@ import com.mg.framework.api.ui.HierarchyRestrictionSupport;
  * @version $Id: DefaultHierarhyRestrictionForm.java,v 1.3 2008/10/09 06:51:44 safonov Exp $
  */
 public abstract class DefaultHierarhyRestrictionForm extends
-		DefaultRestrictionForm implements HierarchyRestrictionSupport {
-	private static final String BY_FOLDER_ATTR_NAME = "isUseHierarchy"; //$NON-NLS-1$
-	private boolean isUseHierarchy = true;
+    DefaultRestrictionForm implements HierarchyRestrictionSupport {
+  private static final String BY_FOLDER_ATTR_NAME = "isUseHierarchy"; //$NON-NLS-1$
+  private boolean isUseHierarchy = true;
 
-	public DefaultHierarhyRestrictionForm() {
-		super();
-		registerRestrictionItem(BY_FOLDER_ATTR_NAME, true, true);
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.HierarchyRestrictionSupport#isUseHierarchy()
-	 */
-	public boolean isUseHierarchy() {
-		return isUseHierarchy;
-	}
+  public DefaultHierarhyRestrictionForm() {
+    super();
+    registerRestrictionItem(BY_FOLDER_ATTR_NAME, true, true);
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.HierarchyRestrictionSupport#isUseHierarchy()
+   */
+  public boolean isUseHierarchy() {
+    return isUseHierarchy;
+  }
 
 }

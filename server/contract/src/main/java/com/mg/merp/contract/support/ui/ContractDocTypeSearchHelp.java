@@ -22,23 +22,23 @@ import com.mg.merp.document.support.ui.DocTypeSearchForm;
 
 /**
  * Поисковик сущностей "Тип контракта"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: ContractDocTypeSearchHelp.java,v 1.1 2007/11/30 14:29:04 sharapov Exp $
  */
 public class ContractDocTypeSearchHelp extends ContractDocTypeByDocSectionSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.support.ui.AbstractDocTypeSearchHelp#doSearch()
-	 */
-	@Override
-	protected void doSearch() throws Exception {
-		DocTypeSearchForm form = (DocTypeSearchForm) UIProducer.produceForm("com/mg/merp/document/resources/DocTypeSearchForm.mfd.xml"); //$NON-NLS-1$
-		form.addSearchHelpListener(this);
-		if (isDocument()) {
-			form.setParam(new Integer(ContractServiceLocal.DOCSECTION), getDocumentKind());
-			form.run(UIUtils.isModalMode());
-		}
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.support.ui.AbstractDocTypeSearchHelp#doSearch()
+   */
+  @Override
+  protected void doSearch() throws Exception {
+    DocTypeSearchForm form = (DocTypeSearchForm) UIProducer.produceForm("com/mg/merp/document/resources/DocTypeSearchForm.mfd.xml"); //$NON-NLS-1$
+    form.addSearchHelpListener(this);
+    if (isDocument()) {
+      form.setParam(new Integer(ContractServiceLocal.DOCSECTION), getDocumentKind());
+      form.run(UIUtils.isModalMode());
+    }
+  }
 
 }

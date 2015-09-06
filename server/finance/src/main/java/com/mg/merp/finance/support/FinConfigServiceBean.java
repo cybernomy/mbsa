@@ -15,20 +15,20 @@
 
 package com.mg.merp.finance.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.finance.FinConfigServiceLocal;
 import com.mg.merp.finance.model.FinConfig;
 
+import javax.ejb.Stateless;
+
 /**
  * Реализация бизнес-компонента "Конфигурация модуля <Фин.учет>"
- * 
+ *
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
  * @version $Id: FinConfigServiceBean.java,v 1.6 2008/01/31 09:06:12 safonov Exp $
  */
-@Stateless(name="merp/finance/FinConfigService") //$NON-NLS-1$
+@Stateless(name = "merp/finance/FinConfigService") //$NON-NLS-1$
 public class FinConfigServiceBean extends AbstractPOJODataBusinessObjectServiceBean<FinConfig, Integer> implements FinConfigServiceLocal {
 
 }

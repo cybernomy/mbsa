@@ -14,8 +14,8 @@
 <!-- $Id: map.xml,v 1.2 2007/06/01 16:54:29 konyashkina Exp $ -->
 
 <map version="1.0">
-  <mapID target="bpm_html" url="002bpm.html" /> 
-  <mapID target="pr_instance_html" url="003bpm.html" />
-  <mapID target="resource_html" url="004bpm.html" />
-  <mapID target="task_html" url="005bpm.html" />
+  <mapID target="bpm_html" url="002bpm.html"/>
+  <mapID target="pr_instance_html" url="003bpm.html"/>
+  <mapID target="resource_html" url="004bpm.html"/>
+  <mapID target="task_html" url="005bpm.html"/>
 </map> 

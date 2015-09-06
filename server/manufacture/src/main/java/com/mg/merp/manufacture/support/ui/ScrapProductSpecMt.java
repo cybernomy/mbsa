@@ -18,15 +18,15 @@ import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
  * Контроллер формы поддержки спецификации актов на списание потерь с операции
- * 
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: ScrapProductSpecMt.java,v 1.3 2006/08/28 04:32:26 leonova Exp $
  */
 public class ScrapProductSpecMt extends GoodsDocumentSpecMaintenanceForm {
 
-	public ScrapProductSpecMt() throws Exception {
-		super();
-		
-	}
+  public ScrapProductSpecMt() throws Exception {
+    super();
+
+  }
 
 }

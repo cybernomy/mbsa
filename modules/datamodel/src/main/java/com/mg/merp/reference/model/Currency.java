@@ -22,258 +22,263 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.Currency")
 public class Currency extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.String UpCode;
+  private java.lang.String UpCode;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String Iso;
+  private java.lang.String Iso;
 
-	private java.lang.String BankCode;
+  private java.lang.String BankCode;
 
-	private java.lang.String FullName;
+  private java.lang.String FullName;
 
-	private CurrencyGender Gender;
+  private CurrencyGender Gender;
 
-	private java.lang.String AltName1;
+  private java.lang.String AltName1;
 
-	private java.lang.String AltName2;
+  private java.lang.String AltName2;
 
-	private java.lang.String AltName3;
+  private java.lang.String AltName3;
 
-	private java.lang.String AltUnitName1;
+  private java.lang.String AltUnitName1;
 
-	private java.lang.String AltUnitName2;
+  private java.lang.String AltUnitName2;
 
-	private java.lang.String AltUnitName3;
+  private java.lang.String AltUnitName3;
 
-	private java.math.BigDecimal RoundPrice;
+  private java.math.BigDecimal RoundPrice;
 
-	private java.math.BigDecimal RoundSum;
+  private java.math.BigDecimal RoundSum;
 
-	private java.lang.Integer ViewPriority;
+  private java.lang.Integer ViewPriority;
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public Currency() {
-	}
+  /**
+   * default constructor
+   */
+  public Currency() {
+  }
 
-	/** constructor with id */
-	public Currency(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public Currency(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
+  // Property accessors
 
-	public java.lang.String getUpCode() {
-		return this.UpCode;
-	}
+  /**
+   *
+   */
 
-	public void setUpCode(java.lang.String UpCode) {
-		this.UpCode = UpCode;
-	}
+  public java.lang.String getUpCode() {
+    return this.UpCode;
+  }
 
-	/**
-	 * 
-	 */
+  public void setUpCode(java.lang.String UpCode) {
+    this.UpCode = UpCode;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Currency.Code")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Currency.Code")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Currency.ISO")
-	public java.lang.String getIso() {
-		return this.Iso;
-	}
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	public void setIso(java.lang.String Iso) {
-		this.Iso = Iso;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Currency.ISO")
+  public java.lang.String getIso() {
+    return this.Iso;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Currency.BankCode")
-	public java.lang.String getBankCode() {
-		return this.BankCode;
-	}
+  public void setIso(java.lang.String Iso) {
+    this.Iso = Iso;
+  }
 
-	public void setBankCode(java.lang.String BankCode) {
-		this.BankCode = BankCode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Currency.BankCode")
+  public java.lang.String getBankCode() {
+    return this.BankCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Currency.FullName")
-	public java.lang.String getFullName() {
-		return this.FullName;
-	}
+  public void setBankCode(java.lang.String BankCode) {
+    this.BankCode = BankCode;
+  }
 
-	public void setFullName(java.lang.String CName) {
-		this.FullName = CName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Currency.FullName")
+  public java.lang.String getFullName() {
+    return this.FullName;
+  }
 
-	/**
-	 * 
-	 */
+  public void setFullName(java.lang.String CName) {
+    this.FullName = CName;
+  }
 
-	public CurrencyGender getGender() {
-		return this.Gender;
-	}
+  /**
+   *
+   */
 
-	public void setGender(CurrencyGender Men) {
-		this.Gender = Men;
-	}
+  public CurrencyGender getGender() {
+    return this.Gender;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Currency.AltName1")
-	public java.lang.String getAltName1() {
-		return this.AltName1;
-	}
+  public void setGender(CurrencyGender Men) {
+    this.Gender = Men;
+  }
 
-	public void setAltName1(java.lang.String AltName1) {
-		this.AltName1 = AltName1;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Currency.AltName1")
+  public java.lang.String getAltName1() {
+    return this.AltName1;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Currency.AltName2")
-	public java.lang.String getAltName2() {
-		return this.AltName2;
-	}
+  public void setAltName1(java.lang.String AltName1) {
+    this.AltName1 = AltName1;
+  }
 
-	public void setAltName2(java.lang.String AltName2) {
-		this.AltName2 = AltName2;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Currency.AltName2")
+  public java.lang.String getAltName2() {
+    return this.AltName2;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Currency.AltName3")
-	public java.lang.String getAltName3() {
-		return this.AltName3;
-	}
+  public void setAltName2(java.lang.String AltName2) {
+    this.AltName2 = AltName2;
+  }
 
-	public void setAltName3(java.lang.String AltName3) {
-		this.AltName3 = AltName3;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Currency.AltName3")
+  public java.lang.String getAltName3() {
+    return this.AltName3;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Currency.AltName1")
-	public java.lang.String getAltUnitName1() {
-		return this.AltUnitName1;
-	}
+  public void setAltName3(java.lang.String AltName3) {
+    this.AltName3 = AltName3;
+  }
 
-	public void setAltUnitName1(java.lang.String AltunitName1) {
-		this.AltUnitName1 = AltunitName1;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Currency.AltName1")
+  public java.lang.String getAltUnitName1() {
+    return this.AltUnitName1;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Currency.AltName2")
-	public java.lang.String getAltUnitName2() {
-		return this.AltUnitName2;
-	}
+  public void setAltUnitName1(java.lang.String AltunitName1) {
+    this.AltUnitName1 = AltunitName1;
+  }
 
-	public void setAltUnitName2(java.lang.String AltunitName2) {
-		this.AltUnitName2 = AltunitName2;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Currency.AltName2")
+  public java.lang.String getAltUnitName2() {
+    return this.AltUnitName2;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Currency.AltName3")
-	public java.lang.String getAltUnitName3() {
-		return this.AltUnitName3;
-	}
+  public void setAltUnitName2(java.lang.String AltunitName2) {
+    this.AltUnitName2 = AltunitName2;
+  }
 
-	public void setAltUnitName3(java.lang.String AltunitName3) {
-		this.AltUnitName3 = AltunitName3;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Currency.AltName3")
+  public java.lang.String getAltUnitName3() {
+    return this.AltUnitName3;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Currency.RoundPrice")
-	public java.math.BigDecimal getRoundPrice() {
-		return this.RoundPrice;
-	}
+  public void setAltUnitName3(java.lang.String AltunitName3) {
+    this.AltUnitName3 = AltunitName3;
+  }
 
-	public void setRoundPrice(java.math.BigDecimal RoundPrice) {
-		this.RoundPrice = RoundPrice;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Currency.RoundPrice")
+  public java.math.BigDecimal getRoundPrice() {
+    return this.RoundPrice;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Currency.RoundSum")
-	public java.math.BigDecimal getRoundSum() {
-		return this.RoundSum;
-	}
+  public void setRoundPrice(java.math.BigDecimal RoundPrice) {
+    this.RoundPrice = RoundPrice;
+  }
 
-	public void setRoundSum(java.math.BigDecimal RoundSum) {
-		this.RoundSum = RoundSum;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Currency.RoundSum")
+  public java.math.BigDecimal getRoundSum() {
+    return this.RoundSum;
+  }
 
-	/**
-	 * 
-	 */
+  public void setRoundSum(java.math.BigDecimal RoundSum) {
+    this.RoundSum = RoundSum;
+  }
 
-	public java.lang.Integer getViewPriority() {
-		return this.ViewPriority;
-	}
+  /**
+   *
+   */
 
-	public void setViewPriority(java.lang.Integer ViewPriority) {
-		this.ViewPriority = ViewPriority;
-	}
+  public java.lang.Integer getViewPriority() {
+    return this.ViewPriority;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  public void setViewPriority(java.lang.Integer ViewPriority) {
+    this.ViewPriority = ViewPriority;
+  }
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
+
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 }

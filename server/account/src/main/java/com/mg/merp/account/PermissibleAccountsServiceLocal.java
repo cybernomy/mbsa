@@ -19,7 +19,7 @@ import com.mg.merp.account.model.PermissibleAccounts;
 
 /**
  * Бизнес-компонент "Допустимая корреспонденция счетов"
- * 
+ *
  * @author leonova
  * @author Konstantin S. Alikaev
  * @author Artem V. Sharapov
@@ -27,20 +27,19 @@ import com.mg.merp.account.model.PermissibleAccounts;
  */
 public interface PermissibleAccountsServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PermissibleAccounts, Integer> {
 
-	/**
-	 * Создание на основе хоз. операций
-	 * 
-	 * @param beginDate
-	 * 				- с даты
-	 * @param endDate
-	 * 				- по дату
-	 */
-   public void createFromEconomicOper(java.util.Date beginDate,java.util.Date endDate);
+  /**
+   * Создание на основе хоз. операций
+   *
+   * @param beginDate - с даты
+   * @param endDate   - по дату
+   */
+  public void createFromEconomicOper(java.util.Date beginDate, java.util.Date endDate);
 
-   /**
-    * Выполнить проверку корректности корреспонденции счетов
-    * @param economicSpec - проводка хоз.операции
-    */
-   void ckeckPermissibleCorrespondance(EconomicSpec economicSpec);
-   
+  /**
+   * Выполнить проверку корректности корреспонденции счетов
+   *
+   * @param economicSpec - проводка хоз.операции
+   */
+  void ckeckPermissibleCorrespondance(EconomicSpec economicSpec);
+
 }

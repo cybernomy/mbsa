@@ -23,60 +23,61 @@ import com.mg.merp.warehouse.model.StockPlanHistoryKind;
 
 /**
  * Стратегия реализации этапа ДО "Снятие с плана движения по складу"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: WarehouseProcessPlanWithdrawalStrategy.java,v 1.5 2008/04/18 15:18:20 safonov Exp $
+ * @version $Id: WarehouseProcessPlanWithdrawalStrategy.java,v 1.5 2008/04/18 15:18:20 safonov Exp
+ *          $
  */
 public class WarehouseProcessPlanWithdrawalStrategy extends
-		AbstractWarehouseProcessPlanReservStrategy {
+    AbstractWarehouseProcessPlanReservStrategy {
 
-	public WarehouseProcessPlanWithdrawalStrategy(
-			DocFlowPluginInvokeParams params) {
-		super(params);
-	}
+  public WarehouseProcessPlanWithdrawalStrategy(
+      DocFlowPluginInvokeParams params) {
+    super(params);
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.warehouse.generic.AbstractWarehouseProcessPlanReservStrategy#doProcess(com.mg.merp.warehouse.WarehouseProcessDocumentLineData)
-	 */
-	@Override
-	protected void doProcess(WarehouseProcessDocumentLineData docLineData) {
-		//receipt
-		if (docLineData.getDstStock() != null)
-			makeHistory(docLineData, StockPlanHistoryKind.OUT_PLAN, MathUtils.compareToZero(docLineData.getQuantity1()) < 0 ? StockPlanHistoryDirection.OUT : StockPlanHistoryDirection.IN);
-		
-		//issue
-		if (docLineData.getSrcStock() != null)
-			makeHistory(docLineData, StockPlanHistoryKind.OUT_PLAN, MathUtils.compareToZero(docLineData.getQuantity1()) < 0 ? StockPlanHistoryDirection.IN : StockPlanHistoryDirection.OUT);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.warehouse.generic.AbstractWarehouseProcessPlanReservStrategy#doProcess(com.mg.merp.warehouse.WarehouseProcessDocumentLineData)
+   */
+  @Override
+  protected void doProcess(WarehouseProcessDocumentLineData docLineData) {
+    //receipt
+    if (docLineData.getDstStock() != null)
+      makeHistory(docLineData, StockPlanHistoryKind.OUT_PLAN, MathUtils.compareToZero(docLineData.getQuantity1()) < 0 ? StockPlanHistoryDirection.OUT : StockPlanHistoryDirection.IN);
 
-	@Override
-	protected void updateQuanAttribute(StockCard stockCard, WarehouseProcessDocumentLineData docLineData,
-			StockPlanHistoryDirection direction) {
-		switch (direction) {
-		case IN:
-			stockCard.setPlanIn(MathUtils.subtractNullable(stockCard.getPlanIn(), docLineData.getQuantity1(), Constants.QUANTITY_ROUND_CONTEXT)); 
-			stockCard.setPlanIn2(MathUtils.subtractNullable(stockCard.getPlanIn2(), docLineData.getQuantity2(), Constants.QUANTITY_ROUND_CONTEXT));
-			break;
-		case OUT:
-			stockCard.setPlanOut(MathUtils.subtractNullable(stockCard.getPlanOut(), docLineData.getQuantity1(), Constants.QUANTITY_ROUND_CONTEXT)); 
-			stockCard.setPlanOut2(MathUtils.subtractNullable(stockCard.getPlanOut2(), docLineData.getQuantity2(), Constants.QUANTITY_ROUND_CONTEXT));
-			break;
-		}
-	}
+    //issue
+    if (docLineData.getSrcStock() != null)
+      makeHistory(docLineData, StockPlanHistoryKind.OUT_PLAN, MathUtils.compareToZero(docLineData.getQuantity1()) < 0 ? StockPlanHistoryDirection.IN : StockPlanHistoryDirection.OUT);
+  }
 
-	@Override
-	protected void createQuanAttribute(StockCard stockCard, WarehouseProcessDocumentLineData docLineData,
-			StockPlanHistoryDirection direction) {
-		switch (direction) {
-		case IN:
-			stockCard.setPlanIn(docLineData.getQuantity1());
-			stockCard.setPlanIn2(docLineData.getQuantity2());
-			break;
-		case OUT:
-			stockCard.setPlanOut(docLineData.getQuantity1());
-			stockCard.setPlanOut2(docLineData.getQuantity2());
-			break;
-		}
-	}
+  @Override
+  protected void updateQuanAttribute(StockCard stockCard, WarehouseProcessDocumentLineData docLineData,
+                                     StockPlanHistoryDirection direction) {
+    switch (direction) {
+      case IN:
+        stockCard.setPlanIn(MathUtils.subtractNullable(stockCard.getPlanIn(), docLineData.getQuantity1(), Constants.QUANTITY_ROUND_CONTEXT));
+        stockCard.setPlanIn2(MathUtils.subtractNullable(stockCard.getPlanIn2(), docLineData.getQuantity2(), Constants.QUANTITY_ROUND_CONTEXT));
+        break;
+      case OUT:
+        stockCard.setPlanOut(MathUtils.subtractNullable(stockCard.getPlanOut(), docLineData.getQuantity1(), Constants.QUANTITY_ROUND_CONTEXT));
+        stockCard.setPlanOut2(MathUtils.subtractNullable(stockCard.getPlanOut2(), docLineData.getQuantity2(), Constants.QUANTITY_ROUND_CONTEXT));
+        break;
+    }
+  }
+
+  @Override
+  protected void createQuanAttribute(StockCard stockCard, WarehouseProcessDocumentLineData docLineData,
+                                     StockPlanHistoryDirection direction) {
+    switch (direction) {
+      case IN:
+        stockCard.setPlanIn(docLineData.getQuantity1());
+        stockCard.setPlanIn2(docLineData.getQuantity2());
+        break;
+      case OUT:
+        stockCard.setPlanOut(docLineData.getQuantity1());
+        stockCard.setPlanOut2(docLineData.getQuantity2());
+        break;
+    }
+  }
 
 }

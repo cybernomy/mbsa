@@ -13,25 +13,31 @@
 
 <!-- $Id: EmplMt.mfd.xml,v 1.7 2006/11/28 14:50:02 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.reference.support.ui.EmplMt" title="resource://com.mg.merp.reference.resources.formelements#Empl.FormMt.Title" helpTopic="reference#empl_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.reference.support.ui.EmplMt"
+          title="resource://com.mg.merp.reference.resources.formelements#Empl.FormMt.Title"
+          helpTopic="reference#empl_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#Employees.Tab.Total.Title" >
-			<jfd:field id="NaturalPerson" />
-			<jfd:field id="Code" />  
-			<jfd:field id="Office" />  	
-			<jfd:field id="TabNum" />  			
-			<jfd:field id="IsDefault" /> 			
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 											
-		</jfd:container>	
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.reference.resources.formelements#Employees.Tab.Total.Title">
+      <jfd:field id="NaturalPerson"/>
+      <jfd:field id="Code"/>
+      <jfd:field id="Office"/>
+      <jfd:field id="TabNum"/>
+      <jfd:field id="IsDefault"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
 
- 		<jfd:maintenanceTable id="linkPartner" scroll="true" autoResize="subsequent_columns"  alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#Employees.Tab.Link.Title" >
-		</jfd:maintenanceTable>  
+    <jfd:maintenanceTable id="linkPartner" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.reference.resources.formelements#Employees.Tab.Link.Title">
+    </jfd:maintenanceTable>
 
-	</jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

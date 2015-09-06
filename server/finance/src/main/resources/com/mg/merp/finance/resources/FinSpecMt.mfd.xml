@@ -13,33 +13,39 @@
 
 <!-- $Id: FinSpecMt.mfd.xml,v 1.6 2006/11/23 14:51:28 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.finance.support.ui.FinSpecMt" title="resource://com.mg.merp.finance.resources.formelements#Fin.Oper.Spec.FormMt.Title" helpTopic="finance#finspec_html">
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.finance.support.ui.FinSpecMt"
+          title="resource://com.mg.merp.finance.resources.formelements#Fin.Oper.Spec.FormMt.Title"
+          helpTopic="finance#finspec_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:container id="srcAccFields" columns="1" layout="jfd:box" alignment="expand_expand"  label="resource://com.mg.merp.finance.resources.formelements#Fin.Oper.Spec.SrcAcc">
-			<jfd:field id="SrcAcc" showLabel="false" />	
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel1SrcMacros.xml" />		  			  			  	  			  			  			
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel2SrcMacros.xml" />		  			  			  	  			  			  			
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel3SrcMacros.xml" />		  			  			  	  			  			  			
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel4SrcMacros.xml" />		  			  			  	  			  			  			
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel5SrcMacros.xml" />		  			  			  	  			  			  			
-		</jfd:container>	
-		<jfd:container id="dstAccFields" columns="1" layout="jfd:box" alignment="expand_expand" sameLine="true" label="resource://com.mg.merp.finance.resources.formelements#Fin.Oper.Spec.DstAcc">
-			<jfd:field id="DstAcc" showLabel="false" />			
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel1DstMacros.xml" />
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel2DstMacros.xml" />
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel3DstMacros.xml" />
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel4DstMacros.xml" />						
-			<jfd:include name="com/mg/merp/finance/resources/AnlLevel5DstMacros.xml" />
-		</jfd:container>
-		<jfd:field id="SumCur"/>
-		<jfd:field id="SumNat" sameLine="true"/>				
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:container id="srcAccFields" columns="1" layout="jfd:box" alignment="expand_expand"
+                   label="resource://com.mg.merp.finance.resources.formelements#Fin.Oper.Spec.SrcAcc">
+      <jfd:field id="SrcAcc" showLabel="false"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel1SrcMacros.xml"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel2SrcMacros.xml"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel3SrcMacros.xml"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel4SrcMacros.xml"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel5SrcMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="dstAccFields" columns="1" layout="jfd:box" alignment="expand_expand"
+                   sameLine="true"
+                   label="resource://com.mg.merp.finance.resources.formelements#Fin.Oper.Spec.DstAcc">
+      <jfd:field id="DstAcc" showLabel="false"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel1DstMacros.xml"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel2DstMacros.xml"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel3DstMacros.xml"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel4DstMacros.xml"/>
+      <jfd:include name="com/mg/merp/finance/resources/AnlLevel5DstMacros.xml"/>
+    </jfd:container>
+    <jfd:field id="SumCur"/>
+    <jfd:field id="SumNat" sameLine="true"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

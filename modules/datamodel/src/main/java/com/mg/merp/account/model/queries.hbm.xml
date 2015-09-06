@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
   <query name="Account.RemnAcc.removeEmptyRecords">
@@ -29,7 +29,7 @@
         	where (s.RemnValDb = r.Id) or (s.RemnValKt = r.Id) ))    
     ]]>
   </query>
-  
+
   <query name="Account.RemnAnl.removeEmptyRecords">
     <![CDATA[
   	delete from com.mg.merp.account.model.RemnAnl r
@@ -43,7 +43,7 @@
         	where (s.RemnAnlDb = r.Id) or (s.RemnAnlKt = r.Id) ))    
     ]]>
   </query>
-  
+
   <query name="Account.RemnDbKt.removeEmptyRecords">
     <![CDATA[
   	delete from com.mg.merp.account.model.RemnDbKt r

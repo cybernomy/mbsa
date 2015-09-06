@@ -14,22 +14,21 @@
  */
 package com.mg.merp.security.support.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.framework.api.security.SecuritySystem;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * MBean для системы безопасности функционирующий в среде JBoss
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id$
  */
 public interface SecuritySystemServiceMBean extends SecuritySystem, ServiceMBean {
 
-	/**
-	 * обновить права из хранилища
-	 *
-	 */
-	void refreshPermissions();
+  /**
+   * обновить права из хранилища
+   */
+  void refreshPermissions();
 
 }

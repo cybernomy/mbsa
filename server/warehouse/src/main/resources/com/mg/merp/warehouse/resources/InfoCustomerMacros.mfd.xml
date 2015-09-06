@@ -14,6 +14,6 @@
 <!-- $Id: InfoCustomerMacros.mfd.xml,v 1.2 2007/06/20 12:11:56 sharapov Exp $ -->
 
 <jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
-	<jfd:field id="PartnerToBankReq" /> 	
-	<jfd:field id="PartnerToBankReq.Account" sameLine="true" readOnly="true" /> 	
+  <jfd:field id="PartnerToBankReq"/>
+  <jfd:field id="PartnerToBankReq.Account" sameLine="true" readOnly="true"/>
 </jfd:wrap-macros>

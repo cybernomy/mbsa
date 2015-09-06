@@ -18,18 +18,18 @@ import com.mg.merp.reference.model.ZipCode;
 
 /**
  * Сервис бизнес-компонента "Индекс"
- * 
+ *
  * @author leonova
  * @version $Id: ZipCodeServiceLocal.java,v 1.3 2008/09/23 09:16:56 safonov Exp $
  */
 public interface ZipCodeServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ZipCode, Integer> {
 
-	/**
-	 * поиск по коду
-	 * 
-	 * @param code	код
-	 * @return	индекс или <code>null</code> если не найден
-	 */
-	public ZipCode findByCode(String code);
+  /**
+   * поиск по коду
+   *
+   * @param code код
+   * @return индекс или <code>null</code> если не найден
+   */
+  public ZipCode findByCode(String code);
 
 }

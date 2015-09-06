@@ -15,15 +15,17 @@
 
 <server>
 
-    <mbean code="com.mg.merp.security.support.jboss.SecuritySystemService" name="merp:service=SecuritySystemService">
-        <depends>jboss:service=MERP</depends>
-        <depends>merp.har:service=MERPDataWarehouse</depends>
-    </mbean>
+  <mbean code="com.mg.merp.security.support.jboss.SecuritySystemService"
+         name="merp:service=SecuritySystemService">
+    <depends>jboss:service=MERP</depends>
+    <depends>merp.har:service=MERPDataWarehouse</depends>
+  </mbean>
 
 
-    <mbean code="com.mg.merp.security.support.jboss.UIProfileManagerService" name="merp:service=UIProfileManager">
-        <depends>jboss:service=MERP</depends>
-        <depends>merp.har:service=MERPDataWarehouse</depends>
-    </mbean>
+  <mbean code="com.mg.merp.security.support.jboss.UIProfileManagerService"
+         name="merp:service=UIProfileManager">
+    <depends>jboss:service=MERP</depends>
+    <depends>merp.har:service=MERPDataWarehouse</depends>
+  </mbean>
 
 </server>

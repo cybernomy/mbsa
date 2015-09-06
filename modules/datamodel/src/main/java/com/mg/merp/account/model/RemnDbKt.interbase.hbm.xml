@@ -1,108 +1,113 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.account.model.RemnDbKt" table="REMNDBKT">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="int">
-      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">REMNDBKT_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="AccPlan" class="com.mg.merp.account.model.AccPlan">
-      <column name="ACC_ID" not-null="false" />
+      <column name="ACC_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlPlan4" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLPLAN4_ID" not-null="false" />
+      <column name="ANLPLAN4_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlPlan1" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLPLAN1_ID" not-null="false" />
+      <column name="ANLPLAN1_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlPlan2" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLPLAN2_ID" not-null="false" />
+      <column name="ANLPLAN2_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Contractor" class="com.mg.merp.reference.model.Contractor">
-      <column name="CONTRACTOR_ID" not-null="false" />
+      <column name="CONTRACTOR_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlPlan3" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLPLAN3_ID" not-null="false" />
+      <column name="ANLPLAN3_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="AnlPlan5" class="com.mg.merp.account.model.AnlPlan">
-      <column name="ANLPLAN5_ID" not-null="false" />
+      <column name="ANLPLAN5_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Period" class="com.mg.merp.account.model.Period">
-      <column name="PERIOD_ID" not-null="false" />
+      <column name="PERIOD_ID" not-null="false"/>
     </many-to-one>
     <property name="RemnBeginNatDb" type="java.math.BigDecimal">
-      <column name="REMNBEGINNATDB" scale="4" precision="15" not-null="true" sql-type="NUMERIC" />
+      <column name="REMNBEGINNATDB" scale="4" precision="15" not-null="true" sql-type="NUMERIC"/>
     </property>
     <property name="RemnBeginNatKt" type="java.math.BigDecimal">
-      <column name="REMNBEGINNATKT" scale="4" precision="15" not-null="true" sql-type="NUMERIC" />
+      <column name="REMNBEGINNATKT" scale="4" precision="15" not-null="true" sql-type="NUMERIC"/>
     </property>
     <property name="RemnBeginCurDb" type="java.math.BigDecimal">
-      <column name="REMNBEGINCURDB" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="REMNBEGINCURDB" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="RemnBeginCurKt" type="java.math.BigDecimal">
-      <column name="REMNBEGINCURKT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="REMNBEGINCURKT" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="RiseDebts" type="java.util.Date">
-      <column name="RISEDEBTS" not-null="false" sql-type="TIMESTAMP" />
+      <column name="RISEDEBTS" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="ClearDebts" type="java.util.Date">
-      <column name="CLEARDEBTS" not-null="false" sql-type="TIMESTAMP" />
+      <column name="CLEARDEBTS" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="Comment" type="java.lang.String">
-      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <many-to-one name="DocBaseType" class="com.mg.merp.document.model.DocType" property-ref="Code">
-      <column name="DOCBASETYPE" length="15" not-null="false" />
+      <column name="DOCBASETYPE" length="15" not-null="false"/>
     </many-to-one>
     <property name="DocBaseNumber" type="java.lang.String">
-      <column name="DOCBASENUMBER" length="20" not-null="false" sql-type="CHAR" />
+      <column name="DOCBASENUMBER" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="DocBaseDate" type="java.util.Date">
-      <column name="DOCBASEDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="DOCBASEDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <many-to-one name="DocType" class="com.mg.merp.document.model.DocType" property-ref="Code">
       <column name="DOCTYPE" length="15" not-null="false"/>
     </many-to-one>
     <property name="DocNumber" type="java.lang.String">
-      <column name="DOCNUMBER" length="20" not-null="false" sql-type="CHAR" />
+      <column name="DOCNUMBER" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="DocDate" type="java.util.Date">
-      <column name="DOCDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="DOCDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
-    <property name="RemnEndNatDb" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="RemnEndNatKt" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="RemnEndCurKt" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="RemnEndCurDb" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="TurnNatKt" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="TurnNatDb" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="TurnCurDb" type="java.math.BigDecimal" insert="false" update="false" />
-    <property name="TurnCurKt" type="java.math.BigDecimal" insert="false" update="false" />
+    <property name="RemnEndNatDb" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="RemnEndNatKt" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="RemnEndCurKt" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="RemnEndCurDb" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="TurnNatKt" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="TurnNatDb" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="TurnCurDb" type="java.math.BigDecimal" insert="false" update="false"/>
+    <property name="TurnCurKt" type="java.math.BigDecimal" insert="false" update="false"/>
     <loader query-ref="load-remndbkt"/>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
   <sql-query name="load-remndbkt">
-    <return alias="ra" class="com.mg.merp.account.model.RemnDbKt" />
-    select r.id as {ra.Id}, r.period_id as {ra.Period}, r.acc_id  as {ra.AccPlan}, r.client_id as {ra.SysClient},
-      r.anl1_id as {ra.AnlPlan1}, r.anl2_id as {ra.AnlPlan2}, r.anl3_id as {ra.AnlPlan3}, r.anl4_id as {ra.AnlPlan4}, r.anl5_id as {ra.AnlPlan5},
-      r.remnbeginnatdb  as {ra.RemnBeginNatDb}, r.remnbeginnatkt as {ra.RemnBeginNatKt},
-      r.remnbegincurdb  as {ra.RemnBeginCurDb}, r.remnbegincurkt as {ra.RemnBeginCurKt},
-      r.remnendnatdb as {ra.RemnEndNatDb}, r.remnendnatkt as {ra.RemnEndNatKt}, r.remnendcurdb as {ra.RemnEndCurDb}, r.remnendcurkt as {ra.RemnEndCurKt},
-      r.turnnatdb as {ra.TurnNatDb}, r.turnnatkt as {ra.TurnNatKt}, r.turncurdb as {ra.TurnCurDb}, r.turncurkt as {ra.TurnCurKt},
-      r.contractor_id as {ra.Contractor},
-      r.risedebts as {ra.RiseDebts}, r.cleardebts as {ra.ClearDebts}, r.comment as {ra.Comment},
-      r.docbasetype as {ra.DocBaseType}, r.docbasenumber as {ra.DocBaseNumber}, r.docbasedate as {ra.DocBaseDate},
-      r.doctype as {ra.DocType}, r.docnumber as {ra.DocNumber}, r.docdate as {ra.DocDate}
+    <return alias="ra" class="com.mg.merp.account.model.RemnDbKt"/>
+    select r.id as {ra.Id}, r.period_id as {ra.Period}, r.acc_id as {ra.AccPlan}, r.client_id as
+    {ra.SysClient},
+    r.anl1_id as {ra.AnlPlan1}, r.anl2_id as {ra.AnlPlan2}, r.anl3_id as {ra.AnlPlan3}, r.anl4_id as
+    {ra.AnlPlan4}, r.anl5_id as {ra.AnlPlan5},
+    r.remnbeginnatdb as {ra.RemnBeginNatDb}, r.remnbeginnatkt as {ra.RemnBeginNatKt},
+    r.remnbegincurdb as {ra.RemnBeginCurDb}, r.remnbegincurkt as {ra.RemnBeginCurKt},
+    r.remnendnatdb as {ra.RemnEndNatDb}, r.remnendnatkt as {ra.RemnEndNatKt}, r.remnendcurdb as
+    {ra.RemnEndCurDb}, r.remnendcurkt as {ra.RemnEndCurKt},
+    r.turnnatdb as {ra.TurnNatDb}, r.turnnatkt as {ra.TurnNatKt}, r.turncurdb as {ra.TurnCurDb},
+    r.turncurkt as {ra.TurnCurKt},
+    r.contractor_id as {ra.Contractor},
+    r.risedebts as {ra.RiseDebts}, r.cleardebts as {ra.ClearDebts}, r.comment as {ra.Comment},
+    r.docbasetype as {ra.DocBaseType}, r.docbasenumber as {ra.DocBaseNumber}, r.docbasedate as
+    {ra.DocBaseDate},
+    r.doctype as {ra.DocType}, r.docnumber as {ra.DocNumber}, r.docdate as {ra.DocDate}
     from acc_remndbkt_load(?) r
   </sql-query>
 </hibernate-mapping>

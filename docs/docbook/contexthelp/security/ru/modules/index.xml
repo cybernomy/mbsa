@@ -14,21 +14,21 @@
 <!-- $Id: index.xml,v 1.1 2006/12/17 14:29:42 konyashkina Exp $ -->
 
 <index version="1.0">
- 
-  <indexitem text="Управление правами пользователей"> 
-    <indexentry text="Пользователи" target="users_html" />
-    <indexentry text="Группы пользователей" target="groups_html" />
-    <indexentry text="Права на модули" target="modules_html" /> 
+
+  <indexitem text="Управление правами пользователей">
+    <indexentry text="Пользователи" target="users_html"/>
+    <indexentry text="Группы пользователей" target="groups_html"/>
+    <indexentry text="Права на модули" target="modules_html"/>
     <indexitem text="Права на бизнес-компоненты">
-   	  <indexentry text="Права на бизнес-компоненты" target="bkaccess_html" /> 
-	  <indexentry text="Модуль" target="modlist_html" /> 
-	  <indexentry text="Бизнес-компонент" target="bklist_html" /> 
-	  <indexentry text="Методы" target="methodslist_html" /> 
+      <indexentry text="Права на бизнес-компоненты" target="bkaccess_html"/>
+      <indexentry text="Модуль" target="modlist_html"/>
+      <indexentry text="Бизнес-компонент" target="bklist_html"/>
+      <indexentry text="Методы" target="methodslist_html"/>
     </indexitem>
-    <indexentry text="Методы" target="methods_html" /> 
-    <indexentry text="Другие права" target="other_html" /> 
-    <indexentry text="Журнал аудита" target="auditlog_html" />
-    <indexentry text="Права на папки" target="folderaccess_html" /> 
-  </indexitem> 
-  
+    <indexentry text="Методы" target="methods_html"/>
+    <indexentry text="Другие права" target="other_html"/>
+    <indexentry text="Журнал аудита" target="auditlog_html"/>
+    <indexentry text="Права на папки" target="folderaccess_html"/>
+  </indexitem>
+
 </index> 

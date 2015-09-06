@@ -14,10 +14,10 @@
  */
 package com.mg.merp.manufacture;
 
-import javax.ejb.ApplicationException;
-
 import com.mg.framework.api.BusinessException;
 import com.mg.merp.mfreference.model.BomMaterial;
+
+import javax.ejb.ApplicationException;
 
 /**
  * @author Oleg V. Safonov
@@ -26,8 +26,8 @@ import com.mg.merp.mfreference.model.BomMaterial;
 @ApplicationException
 public class BOMMaterialCostCategoryEmptyException extends BusinessException {
 
-	public BOMMaterialCostCategoryEmptyException(BomMaterial material) {
-		
-	}
+  public BOMMaterialCostCategoryEmptyException(BomMaterial material) {
+
+  }
 
 }

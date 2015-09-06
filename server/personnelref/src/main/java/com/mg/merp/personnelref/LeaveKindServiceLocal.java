@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.LeaveKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: LeaveKindServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface LeaveKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<LeaveKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<LeaveKind, Integer> {
 
 }

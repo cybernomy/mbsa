@@ -16,23 +16,23 @@
 <index version="1.0">
 
   <indexitem text="Нормы выдачи">
-    <indexentry text="Нормы выдачи спецодежды" target="ovrnormhd_html" />
-    <indexentry text="Спецификация" target="ovrnormsp_html" />
+    <indexentry text="Нормы выдачи спецодежды" target="ovrnormhd_html"/>
+    <indexentry text="Спецификация" target="ovrnormsp_html"/>
   </indexitem>
-  
+
   <indexitem text="Лицевые карточки сотрудников">
-    <indexentry text="Лицевые карточки сотрудников" target="ovrcard_html" />
-    <indexentry text="Размеры" target="ovrsize_html" /> 
-    <indexentry text="История выдачи" target="ovrhist_html" />
-    <indexentry text="Изменения состояния" target="ovrchng_html" />
-    <indexentry text="История погашений" target="cancellation_html" />
+    <indexentry text="Лицевые карточки сотрудников" target="ovrcard_html"/>
+    <indexentry text="Размеры" target="ovrsize_html"/>
+    <indexentry text="История выдачи" target="ovrhist_html"/>
+    <indexentry text="Изменения состояния" target="ovrchng_html"/>
+    <indexentry text="История погашений" target="cancellation_html"/>
   </indexitem>
-   
+
   <indexitem text="Создание документов">
-     <indexentry text="Создание документа на выдачу. Этап 1" target="doc1_html" />     
-     <indexentry text="Создание документа на выдачу. Этап 2" target="doc2_html" />
-     <indexentry text="Документ на списание. Этап 1" target="end1_html" />
-     <indexentry text="Документ на списание. Этап 2" target="end2_html" />
-  </indexitem> 
-  
+    <indexentry text="Создание документа на выдачу. Этап 1" target="doc1_html"/>
+    <indexentry text="Создание документа на выдачу. Этап 2" target="doc2_html"/>
+    <indexentry text="Документ на списание. Этап 1" target="end1_html"/>
+    <indexentry text="Документ на списание. Этап 2" target="end2_html"/>
+  </indexitem>
+
 </index>

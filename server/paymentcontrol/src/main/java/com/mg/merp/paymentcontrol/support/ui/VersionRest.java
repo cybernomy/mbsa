@@ -19,26 +19,26 @@ import com.mg.framework.generic.ui.DefaultRestrictionForm;
 
 /**
  * Контроллер формы условий отбора версий планирования платежей
- * 
+ *
  * @author leonova
- * @version $Id: VersionRest.java,v 1.2 2006/09/01 08:04:34 leonova Exp $ 
+ * @version $Id: VersionRest.java,v 1.2 2006/09/01 08:04:34 leonova Exp $
  */
 public class VersionRest extends DefaultRestrictionForm {
 
-	@DataItemName("PaymentControl.Cond.Version.AvailableOnly")
-	private boolean availableOnly = false;
+  @DataItemName("PaymentControl.Cond.Version.AvailableOnly")
+  private boolean availableOnly = false;
 
-	@Override
-	protected void doClearRestrictionItem() {
-		this.availableOnly = false;
-	}
+  @Override
+  protected void doClearRestrictionItem() {
+    this.availableOnly = false;
+  }
 
-	/**
-	 * @return Returns the availableOnly.
-	 */
-	protected boolean isAvailableOnly() {
-		return availableOnly;
-	}
+  /**
+   * @return Returns the availableOnly.
+   */
+  protected boolean isAvailableOnly() {
+    return availableOnly;
+  }
 
 
 }

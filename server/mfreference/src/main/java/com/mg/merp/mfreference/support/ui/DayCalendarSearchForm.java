@@ -24,32 +24,32 @@ import com.mg.merp.mfreference.model.DayCalendar;
 
 /**
  * Форма поиска бизнес-компонента "Недельный календар"
- * 
+ *
  * @author leonova
  * @version $Id: DayCalendarSearchForm.java,v 1.2 2009/02/09 11:58:46 safonov Exp $
  */
 public class DayCalendarSearchForm extends AbstractSearchForm {
-	private final static String LOAD_DAY_CALENDAR_EJBQL = "from DayCalendar"; //$NON-NLS-1$
-	private final static String[] fieldList = new String[] {"Code", "DayCalName"}; //$NON-NLS-1$ $NON-NLS-2$ $NON-NLS-3$
-	
-	private DefaultTableController dayCalendarList;
-	
-	public DayCalendarSearchForm() {
-		dayCalendarList = new DefaultTableController(new DefaultEntityListTableModel<DayCalendar>() {
-			@Override
-			protected void doLoad() {
-				setEntityList(MiscUtils.convertUncheckedList(DayCalendar.class, OrmTemplate.getInstance().find(LOAD_DAY_CALENDAR_EJBQL)), fieldList);
-			}
-		});
-		dayCalendarList.getModel().load();
-	}
+  private final static String LOAD_DAY_CALENDAR_EJBQL = "from DayCalendar"; //$NON-NLS-1$
+  private final static String[] fieldList = new String[]{"Code", "DayCalName"}; //$NON-NLS-1$ $NON-NLS-2$ $NON-NLS-3$
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchForm#getSearchedEntities()
-	 */
-	@Override
-	protected PersistentObject[] getSearchedEntities() {
-		return ((DefaultEntityListTableModel<?>) dayCalendarList.getModel()).getSelectedEntities();
-	}
+  private DefaultTableController dayCalendarList;
+
+  public DayCalendarSearchForm() {
+    dayCalendarList = new DefaultTableController(new DefaultEntityListTableModel<DayCalendar>() {
+      @Override
+      protected void doLoad() {
+        setEntityList(MiscUtils.convertUncheckedList(DayCalendar.class, OrmTemplate.getInstance().find(LOAD_DAY_CALENDAR_EJBQL)), fieldList);
+      }
+    });
+    dayCalendarList.getModel().load();
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchForm#getSearchedEntities()
+   */
+  @Override
+  protected PersistentObject[] getSearchedEntities() {
+    return ((DefaultEntityListTableModel<?>) dayCalendarList.getModel()).getSelectedEntities();
+  }
 
 }

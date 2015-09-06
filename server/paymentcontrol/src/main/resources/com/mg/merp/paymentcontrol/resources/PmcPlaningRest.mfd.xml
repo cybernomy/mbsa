@@ -13,21 +13,28 @@
 
 <!-- $Id: PmcPlaningRest.mfd.xml,v 1.1 2007/05/14 05:25:37 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.paymentcontrol.support.ui.PmcPlaningRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcPlaningRest.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.paymentcontrol.support.ui.PmcPlaningRest" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcPlaningRest.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:field id="resourceFolder" text="resource://com.mg.merp.paymentcontrol.resources.formelements#ResourceFolder" searchHelp="com.mg.merp.paymentcontrol.support.ui.ResourceFolderSearchHelp"/>
-		<jfd:field id="resource" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Resource" />
-		<jfd:field id="isExclude" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcPlaningRest.IsExclude" />
-		
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 												 	
+    <jfd:field id="resourceFolder"
+               text="resource://com.mg.merp.paymentcontrol.resources.formelements#ResourceFolder"
+               searchHelp="com.mg.merp.paymentcontrol.support.ui.ResourceFolderSearchHelp"/>
+    <jfd:field id="resource"
+               text="resource://com.mg.merp.paymentcontrol.resources.formelements#Resource"/>
+    <jfd:field id="isExclude"
+               text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcPlaningRest.IsExclude"/>
 
-	</jfd:container>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultRestrictionFooterMacros.xml" />
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultRestrictionFooterMacros.xml"/>
 
 </jfd:form>

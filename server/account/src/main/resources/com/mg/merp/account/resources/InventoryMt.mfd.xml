@@ -13,64 +13,80 @@
 
 <!-- $Id: InventoryMt.mfd.xml,v 1.8 2009/03/25 06:50:45 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.InventoryMt" title="resource://com.mg.merp.account.resources.formelements#Inventory.FormMt.Title" helpTopic="account#invdata_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.account.support.ui.InventoryMt"
+          title="resource://com.mg.merp.account.resources.formelements#Inventory.FormMt.Title"
+          helpTopic="account#invdata_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
- 		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.account.resources.formelements#InvHead.Total.Tab" >
-		 	<jfd:field id="AccKind" /> 
-		 	<jfd:field id="AccGroup" /> 			
-		 	<jfd:field id="BeginCost" /> 	
-		 	<jfd:field id="Initialloss" /> 	
-		 	<jfd:field id="BeginLoss" /> 		
-		 	<jfd:field id="BeginLossDate" /> 			
-		 	<jfd:field id="BalanceCost" readOnly="true"/> 			
-		 	<jfd:field id="Amort" readOnly="true"/> 			
-		 	<jfd:field id="AmortDate" readOnly="true"/> 	
-		 	<jfd:field id="EndCost" readOnly="true"/> 	
-			<jfd:container id="accFields" layout="jfd:box" columns="1" label="resource://com.mg.merp.account.resources.formelements#Inventory.Account">
-			 	<jfd:field id="AccPlan" showLabel="false"/> 
-			 	<jfd:field id="Anl1" showLabel="false"/> 
-			 	<jfd:field id="Anl2" showLabel="false"/> 
-			 	<jfd:field id="Anl3" showLabel="false"/> 
-			 	<jfd:field id="Anl4" showLabel="false"/> 
-			 	<jfd:field id="Anl5" showLabel="false"/> 		 				 				 				 				 	
-		 	</jfd:container>		
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 	 	 			 	
-		</jfd:container>	
-		<jfd:container id="inventoryFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.account.resources.formelements#InvHead.Inventory.Tab" >		 			 	
-			<jfd:field id="AmCode"/> 
-			<jfd:field id="Algorithm" editorType="comboBox"/> 	
-			<jfd:field id="Factor" /> 
-			<jfd:field id="ExplPeriodY" /> 
-			<jfd:field id="ExplPeriodM" /> 									
-			<jfd:container id="accDBFields" layout="jfd:box" columns="1" label="resource://com.mg.merp.account.resources.formelements#Inventory.AccountDB">
-		 	 	<jfd:field id="AccDb" showLabel="false"/> 
-			 	<jfd:field id="AnlDb1" showLabel="false"/> 
-			 	<jfd:field id="AnlDb2" showLabel="false"/> 
-			 	<jfd:field id="AnlDb3" showLabel="false"/> 
-			 	<jfd:field id="AnlDb4" showLabel="false"/> 
-			 	<jfd:field id="AnlDb5" showLabel="false"/>  				 				 				 				 	
-		 	</jfd:container>	
- 			<jfd:container id="accKTFields" layout="jfd:box" columns="1" label="resource://com.mg.merp.account.resources.formelements#Inventory.AccountKT">
-		 	 	<jfd:field id="AccKt" showLabel="false"/> 
-			 	<jfd:field id="AnlKt1" showLabel="false"/> 
-			 	<jfd:field id="AnlKt2" showLabel="false"/> 
-			 	<jfd:field id="AnlKt3" showLabel="false"/> 
-			 	<jfd:field id="AnlKt4" showLabel="false"/> 
-			 	<jfd:field id="AnlKt5" showLabel="false"/> 	 				 				 				 				 	
-		 	</jfd:container>		 						
-		</jfd:container>
-		<jfd:maintenanceTable id="history" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#InvHead.History.Tab">
-		</jfd:maintenanceTable>	 	
-	</jfd:container>
-	<jfd:container  id="buttons" layout="jfd:box" alignment="expand_top">
-		<jfd:button id="refreshButton" alignment="left_top" text="resource://com.mg.merp.account.resources.formelements#Inventory.RefreshButton" actionListener="Refresh" />	
-		<jfd:filler id="buttonsFiller" alignment="expand_top" text="horizontalGlue" />
-		<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#OkButton" actionListener="Save" />
-		<jfd:button id="CancelButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CloseButton" actionListener="Cancel" />	
-	</jfd:container>
-	<!-- jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" /-->
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.account.resources.formelements#InvHead.Total.Tab">
+      <jfd:field id="AccKind"/>
+      <jfd:field id="AccGroup"/>
+      <jfd:field id="BeginCost"/>
+      <jfd:field id="Initialloss"/>
+      <jfd:field id="BeginLoss"/>
+      <jfd:field id="BeginLossDate"/>
+      <jfd:field id="BalanceCost" readOnly="true"/>
+      <jfd:field id="Amort" readOnly="true"/>
+      <jfd:field id="AmortDate" readOnly="true"/>
+      <jfd:field id="EndCost" readOnly="true"/>
+      <jfd:container id="accFields" layout="jfd:box" columns="1"
+                     label="resource://com.mg.merp.account.resources.formelements#Inventory.Account">
+        <jfd:field id="AccPlan" showLabel="false"/>
+        <jfd:field id="Anl1" showLabel="false"/>
+        <jfd:field id="Anl2" showLabel="false"/>
+        <jfd:field id="Anl3" showLabel="false"/>
+        <jfd:field id="Anl4" showLabel="false"/>
+        <jfd:field id="Anl5" showLabel="false"/>
+      </jfd:container>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="inventoryFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.account.resources.formelements#InvHead.Inventory.Tab">
+      <jfd:field id="AmCode"/>
+      <jfd:field id="Algorithm" editorType="comboBox"/>
+      <jfd:field id="Factor"/>
+      <jfd:field id="ExplPeriodY"/>
+      <jfd:field id="ExplPeriodM"/>
+      <jfd:container id="accDBFields" layout="jfd:box" columns="1"
+                     label="resource://com.mg.merp.account.resources.formelements#Inventory.AccountDB">
+        <jfd:field id="AccDb" showLabel="false"/>
+        <jfd:field id="AnlDb1" showLabel="false"/>
+        <jfd:field id="AnlDb2" showLabel="false"/>
+        <jfd:field id="AnlDb3" showLabel="false"/>
+        <jfd:field id="AnlDb4" showLabel="false"/>
+        <jfd:field id="AnlDb5" showLabel="false"/>
+      </jfd:container>
+      <jfd:container id="accKTFields" layout="jfd:box" columns="1"
+                     label="resource://com.mg.merp.account.resources.formelements#Inventory.AccountKT">
+        <jfd:field id="AccKt" showLabel="false"/>
+        <jfd:field id="AnlKt1" showLabel="false"/>
+        <jfd:field id="AnlKt2" showLabel="false"/>
+        <jfd:field id="AnlKt3" showLabel="false"/>
+        <jfd:field id="AnlKt4" showLabel="false"/>
+        <jfd:field id="AnlKt5" showLabel="false"/>
+      </jfd:container>
+    </jfd:container>
+    <jfd:maintenanceTable id="history" scroll="true" alignment="expand_expand"
+                          autoResize="subsequent_columns"
+                          tabTitle="resource://com.mg.merp.account.resources.formelements#InvHead.History.Tab">
+    </jfd:maintenanceTable>
+  </jfd:container>
+  <jfd:container id="buttons" layout="jfd:box" alignment="expand_top">
+    <jfd:button id="refreshButton" alignment="left_top"
+                text="resource://com.mg.merp.account.resources.formelements#Inventory.RefreshButton"
+                actionListener="Refresh"/>
+    <jfd:filler id="buttonsFiller" alignment="expand_top" text="horizontalGlue"/>
+    <jfd:button id="OkButton" alignment="right_top"
+                text="resource://com.mg.framework.resources.messages#OkButton"
+                actionListener="Save"/>
+    <jfd:button id="CancelButton" alignment="right_top"
+                text="resource://com.mg.framework.resources.messages#CloseButton"
+                actionListener="Cancel"/>
+  </jfd:container>
+  <!-- jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" /-->
 
 </jfd:form>

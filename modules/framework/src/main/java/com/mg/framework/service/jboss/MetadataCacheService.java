@@ -14,42 +14,41 @@
  */
 package com.mg.framework.service.jboss;
 
-import org.jboss.system.ServiceMBeanSupport;
-
 import com.mg.framework.api.ApplicationException;
 import com.mg.framework.api.metadata.MetadataCache;
 import com.mg.framework.service.MetadataCacheImpl;
 
+import org.jboss.system.ServiceMBeanSupport;
+
 /**
  * @author Oleg V. Safonov
- *
  */
 public class MetadataCacheService
-	extends ServiceMBeanSupport
-	implements MetadataCacheServiceMBean {
-    
-    private MetadataCache delegate;
-    
-    public MetadataCacheService() {
-        delegate = new MetadataCacheImpl();
-    }
-    
-	protected void createService() throws Exception {
-	    ((MetadataCacheImpl) delegate).create();
-	    ((MetadataCacheImpl) delegate).start();
-	}
+    extends ServiceMBeanSupport
+    implements MetadataCacheServiceMBean {
 
-	protected void destroyService() throws Exception {
-	    ((MetadataCacheImpl) delegate).stop();
-	    ((MetadataCacheImpl) delegate).destroy();
-	}
+  private MetadataCache delegate;
 
-    public void invalidate(int classId) throws ApplicationException {
-        delegate.invalidate(classId);
-    }
-    
-    public boolean isInvalidated(int classId, long timeStamp) throws ApplicationException {
-        return delegate.isInvalidated(classId, timeStamp);
-    }
+  public MetadataCacheService() {
+    delegate = new MetadataCacheImpl();
+  }
+
+  protected void createService() throws Exception {
+    ((MetadataCacheImpl) delegate).create();
+    ((MetadataCacheImpl) delegate).start();
+  }
+
+  protected void destroyService() throws Exception {
+    ((MetadataCacheImpl) delegate).stop();
+    ((MetadataCacheImpl) delegate).destroy();
+  }
+
+  public void invalidate(int classId) throws ApplicationException {
+    delegate.invalidate(classId);
+  }
+
+  public boolean isInvalidated(int classId, long timeStamp) throws ApplicationException {
+    return delegate.isInvalidated(classId, timeStamp);
+  }
 
 }

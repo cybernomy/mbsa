@@ -1,102 +1,102 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.account.model.InvHead" table="ACC_INVHEAD">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">ACC_INVHEAD_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Catalog" class="com.mg.merp.reference.model.Catalog">
-      <column name="CATALOG_ID" not-null="false" />
+      <column name="CATALOG_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Okof" class="com.mg.merp.account.model.Okof">
-      <column name="OKOF_ID" not-null="false" />
+      <column name="OKOF_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Parent" class="com.mg.merp.account.model.Inventory">
-      <column name="PARENT_ID" not-null="false" />
+      <column name="PARENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Folder" class="com.mg.merp.core.model.Folder">
-      <column name="FOLDER_ID" not-null="false" />
+      <column name="FOLDER_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="InvLocation" class="com.mg.merp.account.model.InvLocation">
-      <column name="INVLOCATION_ID" not-null="false" />
+      <column name="INVLOCATION_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Contractor" class="com.mg.merp.reference.model.Contractor">
-      <column name="CONTRACTOR_ID" not-null="false" />
+      <column name="CONTRACTOR_ID" not-null="false"/>
     </many-to-one>
     <property name="GroupNum" type="java.lang.String">
-      <column name="GROUPNUM" length="15" not-null="false" sql-type="CHAR" />
+      <column name="GROUPNUM" length="15" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="CardNum" type="java.lang.String">
-      <column name="CARDNUM" length="15" not-null="false" sql-type="CHAR" />
+      <column name="CARDNUM" length="15" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="ObjNum" type="java.lang.String">
-      <column name="OBJNUM" length="30" not-null="false" sql-type="CHAR" />
+      <column name="OBJNUM" length="30" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="Manufacturer" type="java.lang.String">
-      <column name="MANUFACTURER" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="MANUFACTURER" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Model" type="java.lang.String">
-      <column name="MODEL" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="MODEL" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="SerialNum" type="java.lang.String">
-      <column name="SERIALNUM" length="15" not-null="false" sql-type="CHAR" />
+      <column name="SERIALNUM" length="15" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="PasspNum" type="java.lang.String">
-      <column name="PASSPNUM" length="15" not-null="false" sql-type="CHAR" />
+      <column name="PASSPNUM" length="15" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="InOperDocNum" type="java.lang.String">
-      <column name="INOPERDOCNUM" length="20" not-null="false" sql-type="CHAR" />
+      <column name="INOPERDOCNUM" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="InOperDate" type="java.util.Date">
-      <column name="INOPERDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="INOPERDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="OutOperDocNum" type="java.lang.String">
-      <column name="OUTOPERDOCNUM" length="20" not-null="false" sql-type="CHAR" />
+      <column name="OUTOPERDOCNUM" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="OutOperDate" type="java.util.Date">
-      <column name="OUTOPERDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="OUTOPERDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="IsComplex" type="boolean">
-      <column name="ISCOMPLEX" not-null="false" sql-type="SMALLINT" />
+      <column name="ISCOMPLEX" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="IsCommon" type="boolean">
-      <column name="ISCOMMON" not-null="false" sql-type="SMALLINT" />
+      <column name="ISCOMMON" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="Comment" type="java.lang.String">
-      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="InvName" type="java.lang.String">
-      <column name="INVNAME" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="INVNAME" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="IncomeDocNum" type="java.lang.String">
-      <column name="INCOMEDOCNUM" length="20" not-null="false" sql-type="CHAR" />
+      <column name="INCOMEDOCNUM" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="IncomeDate" type="java.util.Date">
-      <column name="INCOMEDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="INCOMEDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="ProductDate" type="java.util.Date">
-      <column name="PRODUCTDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="PRODUCTDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <set name="SetOfInventory" inverse="true">
       <key on-delete="cascade">
-        <column name="INVHEAD_ID" not-null="false" />
+        <column name="INVHEAD_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.account.model.Inventory" />
+      <one-to-many class="com.mg.merp.account.model.Inventory"/>
     </set>
     <set name="SetOfAccInvProduction" inverse="true">
       <key on-delete="cascade">
-        <column name="INVHEAD_ID" not-null="false" />
+        <column name="INVHEAD_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.account.model.InvProduction" />
+      <one-to-many class="com.mg.merp.account.model.InvProduction"/>
     </set>
   </class>
 </hibernate-mapping>

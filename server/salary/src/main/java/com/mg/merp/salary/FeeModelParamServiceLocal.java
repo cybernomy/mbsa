@@ -17,12 +17,10 @@ package com.mg.merp.salary;
 import com.mg.merp.salary.model.FeeModelParam;
 
 /**
- * 
  * @author leonova
  * @version $Id: FeeModelParamServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface FeeModelParamServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<FeeModelParam, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<FeeModelParam, Integer> {
 
 }

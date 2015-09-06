@@ -14,20 +14,20 @@
 <!-- $Id: link.xml,v 1.1 2006/12/01 15:36:05 konyashkina Exp $ -->
 
 <link version="1.0">
-  
+
   <linkitem topic="job_links">
-     <linkentry target="job_html" text="Заказ-наряды на производство" />
-     <linkentry target="planjob_html" text="Планирование" />
-     <linkentry target="jobroute_html" text="Операции" />
-     <linkentry target="jobmaterial_html" text="Материалы операции ЗНП" />
-     <linkentry target="jobmachine_html" text="Оборудование операции ЗНП" />
-     <linkentry target="joblabor_html" text="Рабочая сила операции ЗНП" />
-     <linkentry target="costdetail_html" text="Расшифровка стоимости" />
+    <linkentry target="job_html" text="Заказ-наряды на производство"/>
+    <linkentry target="planjob_html" text="Планирование"/>
+    <linkentry target="jobroute_html" text="Операции"/>
+    <linkentry target="jobmaterial_html" text="Материалы операции ЗНП"/>
+    <linkentry target="jobmachine_html" text="Оборудование операции ЗНП"/>
+    <linkentry target="joblabor_html" text="Рабочая сила операции ЗНП"/>
+    <linkentry target="costdetail_html" text="Расшифровка стоимости"/>
   </linkitem>
-  
-   <linkitem topic="mnfdocs_links">
-       <linkentry target="outprodhead_html" text="Акты выпуска продукции" />
-       <linkentry target="vardochead_html" text="Документы по отклонениям" />
+
+  <linkitem topic="mnfdocs_links">
+    <linkentry target="outprodhead_html" text="Акты выпуска продукции"/>
+    <linkentry target="vardochead_html" text="Документы по отклонениям"/>
   </linkitem>
 
 </link>

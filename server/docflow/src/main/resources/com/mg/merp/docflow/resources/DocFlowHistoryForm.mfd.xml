@@ -13,35 +13,48 @@
 
 <!-- $Id: DocFlowHistoryForm.mfd.xml,v 1.5 2007/06/09 11:29:41 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.docflow.support.ui.DocFlowHistoryForm" orientation="ver" verticalGap="5" helpTopic="docprocess#history_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.docflow.support.ui.DocFlowHistoryForm" orientation="ver"
+          verticalGap="5" helpTopic="docprocess#history_html">
 
-	<jfd:container id="split" layout="jfd:split" orientation="ver" alignment="expand_expand">
-		<jfd:table id="docHistory" scroll="true" autoResize="subsequent_columns" >
-			<jfd:columns>
-				<jfd:column fieldName="ActionType" title="resource://com.mg.merp.docflow.resources.dataitemlabels#DocAction.Type" />
-				<jfd:column fieldName="StageName" title="resource://com.mg.merp.docflow.resources.formelements#DocHistoryTable.StageName.Title" />
-				<jfd:column fieldName="StageState" title="resource://com.mg.merp.docflow.resources.dataitemlabels#DocFlowStage.State" />
-				<jfd:column fieldName="ReadyAmount" title="resource://com.mg.merp.docflow.resources.formelements#DocHistoryTable.ReadyAmount.Title" />
-			</jfd:columns>
-		</jfd:table>
-		<jfd:table id="docActionHistory" scroll="true" autoResize="subsequent_columns" >
-			<jfd:columns>
-				<jfd:column fieldName="ReadyAmount" title="resource://com.mg.merp.docflow.resources.formelements#DocActionHistoryTable.ReadyAmount.Title" />
-				<jfd:column fieldName="DateTime" title="resource://com.mg.merp.docflow.resources.formelements#DocActionHistoryTable.DateTime.Title" />
-				<jfd:column fieldName="UserName" title="resource://com.mg.merp.docflow.resources.formelements#DocActionHistoryTable.UserName.Title" />
-				<jfd:column fieldName="StageResult" title="resource://com.mg.merp.docflow.resources.formelements#DocActionHistoryTable.StageResult.Title" />
-			</jfd:columns>
- 			<jfd:popupMenu>
- 				<jfd:menuItem id="showDocActionResult" text="resource://com.mg.merp.docflow.resources.formelements#DocActionHistoryTable.PopupMenu.ShowDocActionResult" actionListener="ShowDocActionResult" />
- 			</jfd:popupMenu>
-		</jfd:table>
-	</jfd:container>
+  <jfd:container id="split" layout="jfd:split" orientation="ver" alignment="expand_expand">
+    <jfd:table id="docHistory" scroll="true" autoResize="subsequent_columns">
+      <jfd:columns>
+        <jfd:column fieldName="ActionType"
+                    title="resource://com.mg.merp.docflow.resources.dataitemlabels#DocAction.Type"/>
+        <jfd:column fieldName="StageName"
+                    title="resource://com.mg.merp.docflow.resources.formelements#DocHistoryTable.StageName.Title"/>
+        <jfd:column fieldName="StageState"
+                    title="resource://com.mg.merp.docflow.resources.dataitemlabels#DocFlowStage.State"/>
+        <jfd:column fieldName="ReadyAmount"
+                    title="resource://com.mg.merp.docflow.resources.formelements#DocHistoryTable.ReadyAmount.Title"/>
+      </jfd:columns>
+    </jfd:table>
+    <jfd:table id="docActionHistory" scroll="true" autoResize="subsequent_columns">
+      <jfd:columns>
+        <jfd:column fieldName="ReadyAmount"
+                    title="resource://com.mg.merp.docflow.resources.formelements#DocActionHistoryTable.ReadyAmount.Title"/>
+        <jfd:column fieldName="DateTime"
+                    title="resource://com.mg.merp.docflow.resources.formelements#DocActionHistoryTable.DateTime.Title"/>
+        <jfd:column fieldName="UserName"
+                    title="resource://com.mg.merp.docflow.resources.formelements#DocActionHistoryTable.UserName.Title"/>
+        <jfd:column fieldName="StageResult"
+                    title="resource://com.mg.merp.docflow.resources.formelements#DocActionHistoryTable.StageResult.Title"/>
+      </jfd:columns>
+      <jfd:popupMenu>
+        <jfd:menuItem id="showDocActionResult"
+                      text="resource://com.mg.merp.docflow.resources.formelements#DocActionHistoryTable.PopupMenu.ShowDocActionResult"
+                      actionListener="ShowDocActionResult"/>
+      </jfd:popupMenu>
+    </jfd:table>
+  </jfd:container>
 
-	<jfd:container id="buttons" layout="jfd:box" alignment="expand_bottom">
-		<jfd:filler id="buttonsFiller" alignment="expand_top"
-			type="horizontalGlue" />
-		<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CloseButton"
-			actionListener="Ok" />
-	</jfd:container>
+  <jfd:container id="buttons" layout="jfd:box" alignment="expand_bottom">
+    <jfd:filler id="buttonsFiller" alignment="expand_top"
+                type="horizontalGlue"/>
+    <jfd:button id="OkButton" alignment="right_top"
+                text="resource://com.mg.framework.resources.messages#CloseButton"
+                actionListener="Ok"/>
+  </jfd:container>
 
 </jfd:form>

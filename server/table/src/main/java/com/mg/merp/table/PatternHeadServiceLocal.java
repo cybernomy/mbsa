@@ -17,12 +17,10 @@ package com.mg.merp.table;
 import com.mg.merp.table.model.PatternHead;
 
 /**
- * 
  * @author leonova
  * @version $Id: PatternHeadServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface PatternHeadServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<PatternHead, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<PatternHead, Integer> {
 
 }

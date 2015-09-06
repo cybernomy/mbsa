@@ -13,22 +13,31 @@
 
 <!-- $Id: RolePermissionsForm.mfd.xml,v 1.3 2008/06/10 06:19:53 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.security.support.ui.RolePermissionsForm" title="resource://com.mg.merp.security.resources.formelements#RolePermissionsForm.Title" helpTopic="security#rolepermission_html" >
-	<jfd:container id="split" layout="jfd:split" orientation="ver" alignment="expand_expand">
-		<jfd:table id="subsystems" scroll="true" autoResize="subsequent_columns" label="resource://com.mg.merp.security.resources.formelements#RolePermissionsForm.Subsystem" >
-		<jfd:popupMenu>
-			<jfd:menuItem id="permissionForSubsystemBusinessObjects" text="resource://com.mg.merp.security.resources.formelements#RolePermissionsForm.PermissionForSubsystemBusinessObjects" actionListener="PermissionForSubsystemBusinessObjects" />
-		</jfd:popupMenu>
-		</jfd:table>
-		<jfd:table id="beans" scroll="true" autoResize="subsequent_columns" label="resource://com.mg.merp.security.resources.formelements#RolePermissionsForm.Bean" >
-		</jfd:table>
-	</jfd:container>
-	<jfd:shuttle id="methods" alignment="expand_bottom"
-		leadingHeader="resource://com.mg.merp.security.resources.formelements#RolePermissionsForm.Method" trailingHeader="resource://com.mg.merp.security.resources.formelements#RolePermissionsForm.MethodPerm" />
-	<jfd:container id="buttons" layout="jfd:box" alignment="expand_bottom">
-		<jfd:filler id="buttonsFiller" alignment="expand_top"
-			type="horizontalGlue" />
-		<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CloseButton"
-			actionListener="Ok" />
-	</jfd:container>
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5"
+          controller="com.mg.merp.security.support.ui.RolePermissionsForm"
+          title="resource://com.mg.merp.security.resources.formelements#RolePermissionsForm.Title"
+          helpTopic="security#rolepermission_html">
+  <jfd:container id="split" layout="jfd:split" orientation="ver" alignment="expand_expand">
+    <jfd:table id="subsystems" scroll="true" autoResize="subsequent_columns"
+               label="resource://com.mg.merp.security.resources.formelements#RolePermissionsForm.Subsystem">
+      <jfd:popupMenu>
+        <jfd:menuItem id="permissionForSubsystemBusinessObjects"
+                      text="resource://com.mg.merp.security.resources.formelements#RolePermissionsForm.PermissionForSubsystemBusinessObjects"
+                      actionListener="PermissionForSubsystemBusinessObjects"/>
+      </jfd:popupMenu>
+    </jfd:table>
+    <jfd:table id="beans" scroll="true" autoResize="subsequent_columns"
+               label="resource://com.mg.merp.security.resources.formelements#RolePermissionsForm.Bean">
+    </jfd:table>
+  </jfd:container>
+  <jfd:shuttle id="methods" alignment="expand_bottom"
+               leadingHeader="resource://com.mg.merp.security.resources.formelements#RolePermissionsForm.Method"
+               trailingHeader="resource://com.mg.merp.security.resources.formelements#RolePermissionsForm.MethodPerm"/>
+  <jfd:container id="buttons" layout="jfd:box" alignment="expand_bottom">
+    <jfd:filler id="buttonsFiller" alignment="expand_top"
+                type="horizontalGlue"/>
+    <jfd:button id="OkButton" alignment="right_top"
+                text="resource://com.mg.framework.resources.messages#CloseButton"
+                actionListener="Ok"/>
+  </jfd:container>
 </jfd:form>

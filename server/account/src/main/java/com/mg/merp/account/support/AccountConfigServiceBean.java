@@ -15,20 +15,20 @@
 
 package com.mg.merp.account.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.account.AccountConfigServiceLocal;
 import com.mg.merp.account.model.AccConfig;
 
+import javax.ejb.Stateless;
+
 /**
  * Реализация бизнес-компонента "Конфигурация модуля <Бух.учет>"
- * 
+ *
  * @author Oleg V. Safonov
  * @author Artem V. Sharapov
  * @version $Id: AccountConfigServiceBean.java,v 1.5 2007/01/13 13:11:17 sharapov Exp $
  */
-@Stateless(name="merp/account/AccountConfigService") //$NON-NLS-1$
+@Stateless(name = "merp/account/AccountConfigService") //$NON-NLS-1$
 public class AccountConfigServiceBean extends AbstractPOJODataBusinessObjectServiceBean<AccConfig, Integer> implements AccountConfigServiceLocal {
 
 }

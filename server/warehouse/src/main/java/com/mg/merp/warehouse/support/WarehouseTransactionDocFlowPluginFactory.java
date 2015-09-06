@@ -17,48 +17,49 @@ import com.mg.merp.warehouse.generic.AbstractWarehouseTransactionDocFlowPluginFa
 
 /**
  * Реализация фабрики реализаций этапа ДО "Отработка по складу"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: WarehouseTransactionDocFlowPluginFactory.java,v 1.3 2008/04/18 15:22:11 safonov Exp $
+ * @version $Id: WarehouseTransactionDocFlowPluginFactory.java,v 1.3 2008/04/18 15:22:11 safonov Exp
+ *          $
  */
 public class WarehouseTransactionDocFlowPluginFactory extends
-		AbstractWarehouseTransactionDocFlowPluginFactory {
-	public final static int FACTORY_IDENTIFIER = 19;
+    AbstractWarehouseTransactionDocFlowPluginFactory {
+  public final static int FACTORY_IDENTIFIER = 19;
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.warehouse.generic.AbstractWarehouseTransactionDocFlowPluginFactory#isCalculateCost()
-	 */
-	@Override
-	protected boolean isCalculateCost() {
-		return false;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.warehouse.generic.AbstractWarehouseTransactionDocFlowPluginFactory#isCalculateCost()
+   */
+  @Override
+  protected boolean isCalculateCost() {
+    return false;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.warehouse.generic.AbstractWarehouseTransactionDocFlowPluginFactory#isInteractive()
-	 */
-	@Override
-	protected boolean isInteractive() {
-		return false;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.warehouse.generic.AbstractWarehouseTransactionDocFlowPluginFactory#isInteractive()
+   */
+  @Override
+  protected boolean isInteractive() {
+    return false;
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
-	 */
-	@Override
-	public int getIdentifier() {
-		return FACTORY_IDENTIFIER;
-	}
+  /*
+   * (non-Javadoc)
+   *
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
+   */
+  @Override
+  public int getIdentifier() {
+    return FACTORY_IDENTIFIER;
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
-	 */
-	@Override
-	public String getName() {
-		return "Warehouse transaction";
-	}
+  /*
+   * (non-Javadoc)
+   *
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
+   */
+  @Override
+  public String getName() {
+    return "Warehouse transaction";
+  }
 
 }

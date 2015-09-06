@@ -18,145 +18,149 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Модель бизнес-компонента "Шаблон графика"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: PatternHead.java,v 1.7 2008/08/12 14:11:44 sharapov Exp $
  */
 public class PatternHead extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String Name;
+  private java.lang.String Name;
 
-	private java.lang.Integer Duration;
+  private java.lang.Integer Duration;
 
-	private PatternKind PatternKind;
+  private PatternKind PatternKind;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.util.Set<ScheduleHead> ScheduleHeads;
+  private java.util.Set<ScheduleHead> ScheduleHeads;
 
-	private java.util.Set<PatternSpec> PatternSpecs;
+  private java.util.Set<PatternSpec> PatternSpecs;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public PatternHead() {
-	}
+  /**
+   * default constructor
+   */
+  public PatternHead() {
+  }
 
-	/** constructor with id */
-	public PatternHead(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public PatternHead(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
+  // Property accessors
 
-	/**
-	 * 
-	 */
-	@DataItemName("ID") //$NON-NLS-1$
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID") //$NON-NLS-1$
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Table.BigCode") //$NON-NLS-1$
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  /**
+   *
+   */
+  @DataItemName("Table.BigCode") //$NON-NLS-1$
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	public void setCode(java.lang.String Pcode) {
-		this.Code = Pcode;
-	}
+  public void setCode(java.lang.String Pcode) {
+    this.Code = Pcode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Table.NameN") //$NON-NLS-1$
-	public java.lang.String getName() {
-		return this.Name;
-	}
+  /**
+   *
+   */
+  @DataItemName("Table.NameN") //$NON-NLS-1$
+  public java.lang.String getName() {
+    return this.Name;
+  }
 
-	public void setName(java.lang.String Pname) {
-		this.Name = Pname;
-	}
+  public void setName(java.lang.String Pname) {
+    this.Name = Pname;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Table.PatternHead.Duration") //$NON-NLS-1$
-	public java.lang.Integer getDuration() {
-		return this.Duration;
-	}
+  /**
+   *
+   */
+  @DataItemName("Table.PatternHead.Duration") //$NON-NLS-1$
+  public java.lang.Integer getDuration() {
+    return this.Duration;
+  }
 
-	public void setDuration(java.lang.Integer Duration) {
-		this.Duration = Duration;
-		if (PatternKind != null && PatternKind.equals(com.mg.merp.table.model.PatternKind.WEEKLY)) {
-			this.Duration = 7;
-		}
-	}
+  public void setDuration(java.lang.Integer Duration) {
+    this.Duration = Duration;
+    if (PatternKind != null && PatternKind.equals(com.mg.merp.table.model.PatternKind.WEEKLY)) {
+      this.Duration = 7;
+    }
+  }
 
-	/**
-	 * 
-	 */
-	public PatternKind getPatternKind() {
-		return this.PatternKind;
-	}
+  /**
+   *
+   */
+  public PatternKind getPatternKind() {
+    return this.PatternKind;
+  }
 
-	public void setPatternKind(PatternKind PatternKind) {
-		this.PatternKind = PatternKind;	
-		if (PatternKind != null && PatternKind.equals(com.mg.merp.table.model.PatternKind.WEEKLY)) {
-			this.Duration = 7;
-		}
-	}
+  public void setPatternKind(PatternKind PatternKind) {
+    this.PatternKind = PatternKind;
+    if (PatternKind != null && PatternKind.equals(com.mg.merp.table.model.PatternKind.WEEKLY)) {
+      this.Duration = 7;
+    }
+  }
 
-	/**
-	 * @return the patternSpecs
-	 */
-	public java.util.Set<PatternSpec> getPatternSpecs() {
-		return this.PatternSpecs;
-	}
+  /**
+   * @return the patternSpecs
+   */
+  public java.util.Set<PatternSpec> getPatternSpecs() {
+    return this.PatternSpecs;
+  }
 
-	/**
-	 * @param patternSpecs the patternSpecs to set
-	 */
-	public void setPatternSpecs(java.util.Set<PatternSpec> patternSpecs) {
-		this.PatternSpecs = patternSpecs;
-	}
+  /**
+   * @param patternSpecs the patternSpecs to set
+   */
+  public void setPatternSpecs(java.util.Set<PatternSpec> patternSpecs) {
+    this.PatternSpecs = patternSpecs;
+  }
 
-	/**
-	 * @return the scheduleHeads
-	 */
-	public java.util.Set<ScheduleHead> getScheduleHeads() {
-		return this.ScheduleHeads;
-	}
+  /**
+   * @return the scheduleHeads
+   */
+  public java.util.Set<ScheduleHead> getScheduleHeads() {
+    return this.ScheduleHeads;
+  }
 
-	/**
-	 * @param scheduleHeads the scheduleHeads to set
-	 */
-	public void setScheduleHeads(java.util.Set<ScheduleHead> scheduleHeads) {
-		this.ScheduleHeads = scheduleHeads;
-	}
+  /**
+   * @param scheduleHeads the scheduleHeads to set
+   */
+  public void setScheduleHeads(java.util.Set<ScheduleHead> scheduleHeads) {
+    this.ScheduleHeads = scheduleHeads;
+  }
 
 }

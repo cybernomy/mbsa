@@ -14,17 +14,15 @@
  */
 package com.mg.merp.security;
 
-import java.math.BigDecimal;
-
 import com.mg.merp.core.model.SysAudit;
 
+import java.math.BigDecimal;
+
 /**
- * 
  * @author leonova
  * @version $Id: AuditLogServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface AuditLogServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<SysAudit, BigDecimal>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<SysAudit, BigDecimal> {
 
 }

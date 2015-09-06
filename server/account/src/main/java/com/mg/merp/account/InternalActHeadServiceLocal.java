@@ -17,20 +17,18 @@ package com.mg.merp.account;
 import com.mg.merp.document.model.DocHead;
 
 /**
- * 
  * @author leonova
  * @version $Id: InternalActHeadServiceLocal.java,v 1.3 2006/09/20 10:43:40 safonov Exp $
  */
 public interface InternalActHeadServiceLocal
-   extends com.mg.merp.document.GoodsDocument<DocHead, Integer, InternalActHeadModelServiceLocal, InternalActSpecServiceLocal>
-{
-	/**
-	 * тип папки для внутренних актов
-	 */
-	final static short FOLDER_PART = 28;
-	
-	/**
-	 * docsection для внутренних актов
-	 */
-	final static short DOCSECTION = 8;
+    extends com.mg.merp.document.GoodsDocument<DocHead, Integer, InternalActHeadModelServiceLocal, InternalActSpecServiceLocal> {
+  /**
+   * тип папки для внутренних актов
+   */
+  final static short FOLDER_PART = 28;
+
+  /**
+   * docsection для внутренних актов
+   */
+  final static short DOCSECTION = 8;
 }

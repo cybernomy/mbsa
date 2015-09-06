@@ -13,17 +13,22 @@
 
 <!-- $Id: CompanyBr.mfd.xml,v 1.6 2006/11/27 12:28:33 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.settlement.support.ui.CompanyBr" title="resource://com.mg.merp.settlement.resources.formelements#Company.Center.FormBr.Title" helpTopic="settlement#stlcntr_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver"
+          controller="com.mg.merp.settlement.support.ui.CompanyBr"
+          title="resource://com.mg.merp.settlement.resources.formelements#Company.Center.FormBr.Title"
+          helpTopic="settlement#stlcntr_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultTreeBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultTreeBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTree id="tree" alignment="expand_expand" scroll="true" >
-		<jfd:popupMenu>
-			<jfd:separator/>
-			<jfd:menuItem id="showContractorCardItem" text="resource://com.mg.merp.settlement.resources.formelements#Settlement.ShowContractorCard" actionListener="ShowContractorCard" />
-		</jfd:popupMenu>	
-	</jfd:maintenanceTree>
+  <jfd:maintenanceTree id="tree" alignment="expand_expand" scroll="true">
+    <jfd:popupMenu>
+      <jfd:separator/>
+      <jfd:menuItem id="showContractorCardItem"
+                    text="resource://com.mg.merp.settlement.resources.formelements#Settlement.ShowContractorCard"
+                    actionListener="ShowContractorCard"/>
+    </jfd:popupMenu>
+  </jfd:maintenanceTree>
 
-	<jfd:include name="com/mg/framework/resources/DefaultTreeBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultTreeBrowseFooterMacros.xml"/>
 
 </jfd:form>

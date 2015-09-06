@@ -12,10 +12,13 @@
 <!-- ======================================================================= -->
 
 <!-- $Id: DocumentAttributeMacros.xml,v 1.4 2007/03/23 14:01:29 safonov Exp $ -->
-	
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="document" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.DocAttribute" >
-	<jfd:field id="DocType" showLabel="false" alignment="left_expand"/>
-	<jfd:field id="DocNumber" showLabel="false" alignment="expand_expand"/>
-	<jfd:field id="ManualDocNumber" showLabel="false" toolTip="resource://com.mg.merp.document.resources.formelements#ManualDocNumberButton.ToolTip"/>
-	<jfd:field id="DocDate" showLabel="false" alignment="right_expand" />
+
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="document" layout="jfd:box"
+               longField="true"
+               label="resource://com.mg.merp.document.resources.formelements#Document.DocAttribute">
+  <jfd:field id="DocType" showLabel="false" alignment="left_expand"/>
+  <jfd:field id="DocNumber" showLabel="false" alignment="expand_expand"/>
+  <jfd:field id="ManualDocNumber" showLabel="false"
+             toolTip="resource://com.mg.merp.document.resources.formelements#ManualDocNumberButton.ToolTip"/>
+  <jfd:field id="DocDate" showLabel="false" alignment="right_expand"/>
 </jfd:container>

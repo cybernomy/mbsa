@@ -18,58 +18,58 @@ import java.util.Date;
 
 /**
  * Результат выполнения расчета
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id$
  */
 public class FeeRefAlgorithmResult {
-	/**
-	 * сумма н/у
-	 */
-	public double value;
-	
-	/**
-	 * начислено с
-	 */
-	public Date beginDate;
-	
-	/**
-	 * начислено по
-	 */
-	public Date endDate;
-	
-	/**
-	 * за период с
-	 */
-	public Date periodBeginDate;
-	
-	/**
-	 * за период по
-	 */
-	public Date periodEndDate;
-	
-	/**
-	 * идентификатор аналитики состава затрат 1-го уровня
-	 */
-	public int costsAnl1Id;
-	
-	/**
-	 * идентификатор аналитики состава затрат 2-го уровня
-	 */
-	public int costsAnl2Id;
-	
-	/**
-	 * идентификатор аналитики состава затрат 3-го уровня
-	 */
-	public int costsAnl3Id;
-	
-	/**
-	 * идентификатор аналитики состава затрат 4-го уровня
-	 */
-	public int costsAnl4Id;
-	
-	/**
-	 * идентификатор аналитики состава затрат 5-го уровня
-	 */
-	public int costsAnl5Id;
+  /**
+   * сумма н/у
+   */
+  public double value;
+
+  /**
+   * начислено с
+   */
+  public Date beginDate;
+
+  /**
+   * начислено по
+   */
+  public Date endDate;
+
+  /**
+   * за период с
+   */
+  public Date periodBeginDate;
+
+  /**
+   * за период по
+   */
+  public Date periodEndDate;
+
+  /**
+   * идентификатор аналитики состава затрат 1-го уровня
+   */
+  public int costsAnl1Id;
+
+  /**
+   * идентификатор аналитики состава затрат 2-го уровня
+   */
+  public int costsAnl2Id;
+
+  /**
+   * идентификатор аналитики состава затрат 3-го уровня
+   */
+  public int costsAnl3Id;
+
+  /**
+   * идентификатор аналитики состава затрат 4-го уровня
+   */
+  public int costsAnl4Id;
+
+  /**
+   * идентификатор аналитики состава затрат 5-го уровня
+   */
+  public int costsAnl5Id;
 }

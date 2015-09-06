@@ -21,25 +21,25 @@ import com.mg.framework.api.annotations.EnumConstantText;
  * @author leonova
  * @version $Id: SpecSource.java,v 1.1 2006/03/30 11:27:50 safonov Exp $
  */
-@DataItemName ("LbSchedule.Item.SpecSource")
+@DataItemName("LbSchedule.Item.SpecSource")
 public enum SpecSource {
-	/**
-	 * Документ
-	 */
-	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#SpecSource.Document")
-	DOCUMENT,
+  /**
+   * Документ
+   */
+  @EnumConstantText("resource://com.mg.merp.lbschedule.resources.dataitemlabels#SpecSource.Document")
+  DOCUMENT,
 
-	/**
-	 * Каталог
-	 */
-	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#SpecSource.Catalog")
-	CATALOG,
-	
-	/**
-	 * Прайс-лист
-	 */
-	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#SpecSource.PriceList")
-	PRICELIST	
+  /**
+   * Каталог
+   */
+  @EnumConstantText("resource://com.mg.merp.lbschedule.resources.dataitemlabels#SpecSource.Catalog")
+  CATALOG,
+
+  /**
+   * Прайс-лист
+   */
+  @EnumConstantText("resource://com.mg.merp.lbschedule.resources.dataitemlabels#SpecSource.PriceList")
+  PRICELIST
 
 }
 

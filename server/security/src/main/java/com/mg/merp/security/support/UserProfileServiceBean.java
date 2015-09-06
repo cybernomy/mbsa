@@ -15,16 +15,16 @@
 
 package com.mg.merp.security.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.security.UserProfileServiceLocal;
 import com.mg.merp.security.model.SecUserProfile;
+
+import javax.ejb.Stateless;
 
 /**
  * @author Oleg V. Safonov
  * @version $Id: UserProfileServiceBean.java,v 1.3 2007/02/24 14:20:52 safonov Exp $
  */
-@Stateless(name="merp/security/UserProfileService")
+@Stateless(name = "merp/security/UserProfileService")
 public class UserProfileServiceBean extends com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean<SecUserProfile, Integer> implements UserProfileServiceLocal {
 
 }

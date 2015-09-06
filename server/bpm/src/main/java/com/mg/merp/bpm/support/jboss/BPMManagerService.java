@@ -14,53 +14,53 @@
  */
 package com.mg.merp.bpm.support.jboss;
 
+import com.mg.merp.bpm.support.BPMManagerServiceImpl;
+
 import org.jboss.system.ServiceMBeanSupport;
 import org.jbpm.JbpmContext;
-
-import com.mg.merp.bpm.support.BPMManagerServiceImpl;
 
 /**
  * @author Oleg V. Safonov
  * @version $Id: BPMManagerService.java,v 1.1 2007/05/28 13:05:48 safonov Exp $
  */
 public class BPMManagerService extends ServiceMBeanSupport implements
-		BPMManagerServiceMBean {
-	private BPMManagerServiceImpl delegate;
-	
-	/* (non-Javadoc)
-	 * @see org.jboss.system.ServiceMBeanSupport#createService()
-	 */
-	@Override
-	protected void createService() throws Exception {
-		delegate = new BPMManagerServiceImpl();
-	}
+    BPMManagerServiceMBean {
+  private BPMManagerServiceImpl delegate;
 
-	@Override
-	protected void startService() throws Exception {
-		delegate.startService();
-	}
+  /* (non-Javadoc)
+   * @see org.jboss.system.ServiceMBeanSupport#createService()
+   */
+  @Override
+  protected void createService() throws Exception {
+    delegate = new BPMManagerServiceImpl();
+  }
 
-	/* (non-Javadoc)
-	 * @see org.jboss.system.ServiceMBeanSupport#stopService()
-	 */
-	@Override
-	protected void stopService() throws Exception {
-		delegate.stopService();
-	}
+  @Override
+  protected void startService() throws Exception {
+    delegate.startService();
+  }
 
-	/* (non-Javadoc)
-	 * @see org.jboss.system.ServiceMBeanSupport#destroyService()
-	 */
-	@Override
-	protected void destroyService() throws Exception {
-		delegate = null;
-	}
+  /* (non-Javadoc)
+   * @see org.jboss.system.ServiceMBeanSupport#stopService()
+   */
+  @Override
+  protected void stopService() throws Exception {
+    delegate.stopService();
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.bpm.BPMManager#getCurrentBpmContext()
-	 */
-	public JbpmContext getCurrentBpmContext() {
-		return delegate.getCurrentBpmContext();
-	}
-	
+  /* (non-Javadoc)
+   * @see org.jboss.system.ServiceMBeanSupport#destroyService()
+   */
+  @Override
+  protected void destroyService() throws Exception {
+    delegate = null;
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.merp.bpm.BPMManager#getCurrentBpmContext()
+   */
+  public JbpmContext getCurrentBpmContext() {
+    return delegate.getCurrentBpmContext();
+  }
+
 }

@@ -13,19 +13,23 @@
 
 <!-- $Id: DocumentSpecPackageMt.mfd.xml,v 1.5 2007/06/21 12:02:28 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.document.support.ui.DocumentSpecPackageMt" title="resource://com.mg.merp.document.resources.formelements#DocumentSpecPackageMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.document.support.ui.DocumentSpecPackageMt"
+          title="resource://com.mg.merp.document.resources.formelements#DocumentSpecPackageMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >		
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="Packing" />
-		<jfd:field id="Quantity" />
-		<jfd:field id="Weight" />
-		<jfd:field id="Volume" />
-		<jfd:button id="compute" text="resource://com.mg.merp.document.resources.formelements#DocumentSpecPackageMt.ComputeWeightAndVolume" actionListener="ComputeWeightAndVolume" />
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Packing"/>
+    <jfd:field id="Quantity"/>
+    <jfd:field id="Weight"/>
+    <jfd:field id="Volume"/>
+    <jfd:button id="compute"
+                text="resource://com.mg.merp.document.resources.formelements#DocumentSpecPackageMt.ComputeWeightAndVolume"
+                actionListener="ComputeWeightAndVolume"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

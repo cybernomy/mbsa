@@ -18,9 +18,9 @@ import com.mg.merp.document.generic.ui.DocumentModelBrowseForm;
 
 /**
  * Контроллер формы списка производственных документов
- * 
+ *
  * @author leonova
- * @version $Id: ManufactureModelBrowseForm.java,v 1.1 2006/09/12 11:09:44 leonova Exp $ 
+ * @version $Id: ManufactureModelBrowseForm.java,v 1.1 2006/09/12 11:09:44 leonova Exp $
  */
 public class ManufactureModelBrowseForm extends DocumentModelBrowseForm {
 

@@ -15,26 +15,26 @@
 
 package com.mg.merp.reference.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.reference.FamilyStatusKindServiceLocal;
 import com.mg.merp.reference.model.FamilyStatusKind;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Типы семейного положения" 
- * 
+ * Бизнес-компонент "Типы семейного положения"
+ *
  * @author leonova
  * @version $Id: FamilyStatusKindServiceBean.java,v 1.4 2006/10/20 05:44:45 leonova Exp $
  */
-@Stateless(name="merp/reference/FamilyStatusKindService")
+@Stateless(name = "merp/reference/FamilyStatusKindService")
 public class FamilyStatusKindServiceBean extends AbstractPOJODataBusinessObjectServiceBean<FamilyStatusKind, Integer> implements FamilyStatusKindServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, FamilyStatusKind entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "KCode"));
-	}
+  @Override
+  protected void onValidate(ValidationContext context, FamilyStatusKind entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "KCode"));
+  }
 
 }

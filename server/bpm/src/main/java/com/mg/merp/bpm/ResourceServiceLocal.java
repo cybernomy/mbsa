@@ -23,8 +23,8 @@ import com.mg.merp.bpm.model.Resource;
  */
 public interface ResourceServiceLocal extends DataBusinessObjectService<Resource, Integer> {
 
-	void addMember(int resourceId, int roleId);
-	
-	void removeMember(int resourceId, int roleId);
-	
+  void addMember(int resourceId, int roleId);
+
+  void removeMember(int resourceId, int roleId);
+
 }

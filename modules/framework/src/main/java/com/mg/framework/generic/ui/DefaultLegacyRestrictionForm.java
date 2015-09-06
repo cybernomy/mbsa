@@ -23,16 +23,16 @@ import com.mg.framework.support.LocalDataTransferObject;
  */
 @Deprecated
 public abstract class DefaultLegacyRestrictionForm extends DefaultRestrictionForm {
-	protected AttributeMap restrictionItem = new LocalDataTransferObject();
+  protected AttributeMap restrictionItem = new LocalDataTransferObject();
 
-	protected abstract void collectRestrictionItem();
-	
-	protected abstract void extractRestrictionItem();
-	
-	public AttributeMap getRestrictionItem() {
-		restrictionItem.clear();
-		collectRestrictionItem();
-		return restrictionItem;
-	}
-	
+  protected abstract void collectRestrictionItem();
+
+  protected abstract void extractRestrictionItem();
+
+  public AttributeMap getRestrictionItem() {
+    restrictionItem.clear();
+    collectRestrictionItem();
+    return restrictionItem;
+  }
+
 }

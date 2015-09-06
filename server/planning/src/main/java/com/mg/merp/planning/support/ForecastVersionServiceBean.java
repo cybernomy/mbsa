@@ -15,36 +15,35 @@
 
 package com.mg.merp.planning.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.planning.ForecastVersionServiceLocal;
 import com.mg.merp.planning.model.ForecastVersion;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Версии прогнозов" 
- * 
+ * Бизнес-компонент "Версии прогнозов"
+ *
  * @author leonova
  * @version $Id: ForecastVersionServiceBean.java,v 1.4 2006/10/16 07:41:44 leonova Exp $
  */
-@Stateless(name="merp/planning/ForecastVersionService")
+@Stateless(name = "merp/planning/ForecastVersionService")
 public class ForecastVersionServiceBean extends AbstractPOJODataBusinessObjectServiceBean<ForecastVersion, Integer> implements ForecastVersionServiceLocal {
 
-	@Override
-	protected void onInitialize(ForecastVersion entity) {
-		entity.setDescription("");
-	}
+  @Override
+  protected void onInitialize(ForecastVersion entity) {
+    entity.setDescription("");
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, ForecastVersion entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));				
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, ForecastVersion entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+  }
 
- 
 
 }

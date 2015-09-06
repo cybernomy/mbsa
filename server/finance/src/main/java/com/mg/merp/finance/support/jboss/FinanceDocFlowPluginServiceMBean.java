@@ -18,14 +18,14 @@ import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис дополнительных модулей подсистемы "Финансы"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: FinanceDocFlowPluginServiceMBean.java,v 1.1 2006/10/21 10:59:21 safonov Exp $
  */
 public interface FinanceDocFlowPluginServiceMBean extends ServiceMBean {
-	/**
-	 * наименование сервиса
-	 */
-	final static String SERVICE_NAME = "merp:finance=DocFlowPluginService"; //$NON-NLS-1$
+  /**
+   * наименование сервиса
+   */
+  final static String SERVICE_NAME = "merp:finance=DocFlowPluginService"; //$NON-NLS-1$
 
 }

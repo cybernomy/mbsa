@@ -13,11 +13,13 @@
 
 <!-- $Id: ScrapCauseMacros.xml,v 1.3 2006/06/06 07:56:06 leonova Exp $ -->
 
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="scrapCause" layout="jfd:box" sameLine="true" columns="2" label="resource://com.mg.merp.manufacture.resources.formelements#ScrapDocHead.Cause">
-	<jfd:field id="CauseContractor"/>
-	<jfd:field id="CauseEmployee" />
-	<jfd:field id="CauseWC"/>				
-	<jfd:field id="CauseJob"/>
-	<jfd:field id="CauseOper" />
-	<jfd:field id="CauseCrew"/>  
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="scrapCause" layout="jfd:box"
+               sameLine="true" columns="2"
+               label="resource://com.mg.merp.manufacture.resources.formelements#ScrapDocHead.Cause">
+  <jfd:field id="CauseContractor"/>
+  <jfd:field id="CauseEmployee"/>
+  <jfd:field id="CauseWC"/>
+  <jfd:field id="CauseJob"/>
+  <jfd:field id="CauseOper"/>
+  <jfd:field id="CauseCrew"/>
 </jfd:container>	

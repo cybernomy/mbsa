@@ -16,23 +16,22 @@ package com.mg.framework.api.jdbc;
 
 /**
  * @author Oleg V. Safonov
- *
  */
 public class DataAccessException extends
-        com.mg.framework.api.DataAccessException {
-	public DataAccessException(String s, Throwable cause) {
-		super(s, cause);
-	}
-	
-	public DataAccessException(String s) {
-		super(s);
-	}	
+    com.mg.framework.api.DataAccessException {
+  public DataAccessException(String s, Throwable cause) {
+    super(s, cause);
+  }
 
-	public DataAccessException() {
-		super();
-	}	
+  public DataAccessException(String s) {
+    super(s);
+  }
 
-	public DataAccessException(Throwable cause) {
-		super(cause);
-	}
+  public DataAccessException() {
+    super();
+  }
+
+  public DataAccessException(Throwable cause) {
+    super(cause);
+  }
 }

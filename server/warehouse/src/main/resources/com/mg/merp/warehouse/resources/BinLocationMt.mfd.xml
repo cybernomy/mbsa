@@ -13,33 +13,38 @@
 
 <!-- $Id: BinLocationMt.mfd.xml,v 1.3 2006/06/02 07:43:12 leonova Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.warehouse.resources.formelements#BinLocation.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.warehouse.resources.formelements#BinLocation.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-	 	<jfd:field id="Code" />
-		<jfd:field id="Description" />
-		<jfd:field id="Type" />
-		<jfd:field id="Zone" />   
-		<jfd:container id="binLocVolume" columns="4" layout="jfd:box" label="resource://com.mg.merp.warehouse.resources.formelements#BinLoc.Volume">			
-	 		<jfd:field id="InfiniteVolume" horizontalSpan="4"/>
-			<jfd:field id="MaximumVolume" alignment="expand_expand"/>
-			<jfd:field id="VolumeMeasure" alignment="right_expand"/>   
-		</jfd:container>			
-		<jfd:container id="binLocWeight" columns="4" layout="jfd:box" label="resource://com.mg.merp.warehouse.resources.formelements#BinLoc.Weight">
-		 	<jfd:field id="InfiniteWeight" horizontalSpan="4"/>
-			<jfd:field id="MaximumWeight" alignment="expand_expand"/>
-			<jfd:field id="WeightMeasure" alignment="right_expand"/>  
-		</jfd:container>			
-		<jfd:container id="binLocQuan" columns="4" layout="jfd:box" label="resource://com.mg.merp.warehouse.resources.formelements#BinLoc.Quan">
-		 	<jfd:field id="InfiniteQuan" horizontalSpan="4"/>
-			<jfd:field id="MaximumQuan" alignment="expand_expand"/>
-			<jfd:field id="QuanMeasure" alignment="right_expand"/>  
-		</jfd:container>
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Code"/>
+    <jfd:field id="Description"/>
+    <jfd:field id="Type"/>
+    <jfd:field id="Zone"/>
+    <jfd:container id="binLocVolume" columns="4" layout="jfd:box"
+                   label="resource://com.mg.merp.warehouse.resources.formelements#BinLoc.Volume">
+      <jfd:field id="InfiniteVolume" horizontalSpan="4"/>
+      <jfd:field id="MaximumVolume" alignment="expand_expand"/>
+      <jfd:field id="VolumeMeasure" alignment="right_expand"/>
+    </jfd:container>
+    <jfd:container id="binLocWeight" columns="4" layout="jfd:box"
+                   label="resource://com.mg.merp.warehouse.resources.formelements#BinLoc.Weight">
+      <jfd:field id="InfiniteWeight" horizontalSpan="4"/>
+      <jfd:field id="MaximumWeight" alignment="expand_expand"/>
+      <jfd:field id="WeightMeasure" alignment="right_expand"/>
+    </jfd:container>
+    <jfd:container id="binLocQuan" columns="4" layout="jfd:box"
+                   label="resource://com.mg.merp.warehouse.resources.formelements#BinLoc.Quan">
+      <jfd:field id="InfiniteQuan" horizontalSpan="4"/>
+      <jfd:field id="MaximumQuan" alignment="expand_expand"/>
+      <jfd:field id="QuanMeasure" alignment="right_expand"/>
+    </jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

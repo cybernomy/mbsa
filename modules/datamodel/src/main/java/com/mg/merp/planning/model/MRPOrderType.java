@@ -19,39 +19,39 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Тип заказа ППМ
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: MRPOrderType.java,v 1.1 2007/07/30 10:37:30 safonov Exp $
  */
-@DataItemName ("Planning.MRPOrderType")
+@DataItemName("Planning.MRPOrderType")
 public enum MRPOrderType {
-	/**
-	 * Действительный
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.Actual")
-	ACTUAL,
-	
-	/**
-	 * Закупка
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.Purchase")
-	PURCHASE,
-	
-	/**
-	 * Прогноз
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.Forecast")
-	FORECAST,
-	
-	/**
-	 * Запланировано
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.FirmPlanned")
-	FIRM_PLANNED,
-	
-	/**
-	 * Предлагаемый
-	 */
-	@EnumConstantText ("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.RescheduleSuggested")
-	RESCHEDULE_SUGGESTED
+  /**
+   * Действительный
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.Actual")
+  ACTUAL,
+
+  /**
+   * Закупка
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.Purchase")
+  PURCHASE,
+
+  /**
+   * Прогноз
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.Forecast")
+  FORECAST,
+
+  /**
+   * Запланировано
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.FirmPlanned")
+  FIRM_PLANNED,
+
+  /**
+   * Предлагаемый
+   */
+  @EnumConstantText("resource://com.mg.merp.planning.resources.dataitemlabels#MRPOrderType.RescheduleSuggested")
+  RESCHEDULE_SUGGESTED
 }

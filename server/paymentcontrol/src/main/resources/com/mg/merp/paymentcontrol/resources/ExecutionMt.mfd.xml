@@ -13,29 +13,33 @@
 
 <!-- $Id: ExecutionMt.mfd.xml,v 1.2 2007/06/04 13:42:26 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.paymentcontrol.support.ui.ExecutionMt" title="resource://com.mg.merp.paymentcontrol.resources.formelements#ExecutionMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.paymentcontrol.support.ui.ExecutionMt"
+          title="resource://com.mg.merp.paymentcontrol.resources.formelements#ExecutionMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-	<jfd:border style="bevel" type="raised" />
-		<jfd:field id="PlanDate" />
-		<jfd:field id="FactDate" readOnly="true" />
-		<jfd:field id="SumCur" />
-		<jfd:field id="CurCode" />
-		<jfd:field id="CurRateType" />
-		<jfd:field id="CurRateAuthority" />
-		<jfd:field id="SumNat" text="resource://com.mg.merp.paymentcontrol.resources.formelements#ExecutionMt.SumModuleCur" />		
-		<jfd:field id="Liability" />
-		<jfd:field id="ResourceFolder" />
-		<jfd:field id="Resource" />
-		<jfd:field id="Approved" enabled="false" fieldGroup="resource://com.mg.merp.paymentcontrol.resources.formelements#ExecutionMt.Status" />
-		<jfd:field id="DocCreated" enabled="false" />
-		<jfd:field id="DocProcessed" enabled="false" />
-		
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="PlanDate"/>
+    <jfd:field id="FactDate" readOnly="true"/>
+    <jfd:field id="SumCur"/>
+    <jfd:field id="CurCode"/>
+    <jfd:field id="CurRateType"/>
+    <jfd:field id="CurRateAuthority"/>
+    <jfd:field id="SumNat"
+               text="resource://com.mg.merp.paymentcontrol.resources.formelements#ExecutionMt.SumModuleCur"/>
+    <jfd:field id="Liability"/>
+    <jfd:field id="ResourceFolder"/>
+    <jfd:field id="Resource"/>
+    <jfd:field id="Approved" enabled="false"
+               fieldGroup="resource://com.mg.merp.paymentcontrol.resources.formelements#ExecutionMt.Status"/>
+    <jfd:field id="DocCreated" enabled="false"/>
+    <jfd:field id="DocProcessed" enabled="false"/>
+
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

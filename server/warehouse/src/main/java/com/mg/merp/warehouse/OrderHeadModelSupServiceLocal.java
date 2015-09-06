@@ -18,15 +18,13 @@ import com.mg.merp.document.DocumentPattern;
 import com.mg.merp.warehouse.model.OrderHeadModel;
 
 /**
- * 
  * @author leonova
  * @version $Id: OrderHeadModelSupServiceLocal.java,v 1.3 2006/09/20 11:02:09 safonov Exp $
  */
 public interface OrderHeadModelSupServiceLocal
-   extends DocumentPattern<OrderHeadModel, Integer>
-{
-	/**
-	 * тип папки для образцов заказов поставщикам
-	 */
-	final static short FOLDER_PART = 43;
+    extends DocumentPattern<OrderHeadModel, Integer> {
+  /**
+   * тип папки для образцов заказов поставщикам
+   */
+  final static short FOLDER_PART = 43;
 }

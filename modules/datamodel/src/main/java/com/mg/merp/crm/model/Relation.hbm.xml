@@ -1,91 +1,91 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.crm.model.Relation" table="CRM_RELATION">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">CRM_RELATION_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Status" class="com.mg.merp.crm.model.RelationStatus">
-      <column name="STATUS_ID" not-null="false" />
+      <column name="STATUS_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="OwnershipForm" class="com.mg.merp.crm.model.OwnershipForm">
-      <column name="OWNERSHIP_FORM_ID" not-null="false" />
+      <column name="OWNERSHIP_FORM_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Folder" class="com.mg.merp.core.model.Folder">
-      <column name="FOLDER_ID" not-null="false" />
+      <column name="FOLDER_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="ClientType" class="com.mg.merp.crm.model.ClientType">
-      <column name="CLIENT_TYPE_ID" not-null="false" />
+      <column name="CLIENT_TYPE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Market" class="com.mg.merp.crm.model.Market">
-      <column name="MARKET_ID" not-null="false" />
+      <column name="MARKET_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Parent" class="com.mg.merp.crm.model.Relation">
-      <column name="PARENT_ID" not-null="false" />
+      <column name="PARENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="NaturalPerson" class="com.mg.merp.reference.model.NaturalPerson">
-      <column name="NATURAL_PERSON_ID" not-null="false" />
+      <column name="NATURAL_PERSON_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Curator" class="com.mg.merp.crm.model.User">
-      <column name="CURATOR_ID" not-null="false" />
+      <column name="CURATOR_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Responsible" class="com.mg.merp.crm.model.User">
-      <column name="RESPONSIBLE_ID" not-null="false" />
+      <column name="RESPONSIBLE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="ActivityKind" class="com.mg.merp.crm.model.ActivityKind">
-      <column name="ACTIVITY_KIND_ID" not-null="false" />
+      <column name="ACTIVITY_KIND_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="PersonTitle" class="com.mg.merp.crm.model.PersonTitle">
-      <column name="PERSON_TITLE_ID" not-null="false" />
+      <column name="PERSON_TITLE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="ClientRank" class="com.mg.merp.crm.model.ClientRank">
-      <column name="CLIENT_RANK_ID" not-null="false" />
+      <column name="CLIENT_RANK_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="LegalPerson" class="com.mg.merp.reference.model.Contractor">
-      <column name="LEGAL_PERSON_ID" not-null="false" />
+      <column name="LEGAL_PERSON_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="ActivitySphere" class="com.mg.merp.crm.model.ActivitySphere">
-      <column name="ACTIVITY_SPHERE_ID" not-null="false" />
+      <column name="ACTIVITY_SPHERE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Branch" class="com.mg.merp.crm.model.Branch">
-      <column name="BRANCH_ID" not-null="false" />
+      <column name="BRANCH_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="DeliveryKind" class="com.mg.merp.crm.model.DeliveryKind">
-      <column name="DELIVERY_KIND_ID" not-null="false" />
+      <column name="DELIVERY_KIND_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="PaymentCond" class="com.mg.merp.crm.model.PaymentCond">
-      <column name="PAYMENT_COND_ID" not-null="false" />
+      <column name="PAYMENT_COND_ID" not-null="false"/>
     </many-to-one>
     <property name="Code" type="java.lang.String">
-      <column name="CODE" length="20" not-null="false" sql-type="CHAR" />
+      <column name="CODE" length="20" not-null="false" sql-type="CHAR"/>
     </property>
     <property name="Name" type="java.lang.String">
-      <column name="NAME" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="NAME" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="IsLegalPerson" type="boolean">
-      <column name="IS_LEGAL_PERSON" not-null="false" sql-type="SMALLINT" />
+      <column name="IS_LEGAL_PERSON" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="Info" type="java.lang.String">
-      <column name="INFO" length="2048" not-null="false" sql-type="VARCHAR" />
+      <column name="INFO" length="2048" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="NickName" type="java.lang.String">
-      <column name="NICKNAME" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="NICKNAME" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Uin" type="java.lang.String">
-      <column name="UIN" length="50" not-null="false" sql-type="VARCHAR" />
+      <column name="UIN" length="50" not-null="false" sql-type="VARCHAR"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

@@ -24,75 +24,76 @@ import com.mg.merp.warehouse.WarehouseProcessorServiceLocal;
 
 /**
  * Реализация фабрики реализаций этапа ДО "Разобрать комплект"
- * 
+ *
  * @author Konstantin S. Alikaev
- * @version $Id: WarehouseDisAssembleProductDocFlowPluginFactory.java,v 1.1 2007/10/23 14:05:19 alikaev Exp $
+ * @version $Id: WarehouseDisAssembleProductDocFlowPluginFactory.java,v 1.1 2007/10/23 14:05:19
+ *          alikaev Exp $
  */
 public class WarehouseDisAssembleProductDocFlowPluginFactory extends AbstractDocFlowPluginFactory {
 
-	/**
-	 * Идентификатор фабрики
-	 */
-	public final static int FACTORY_IDENTIFIER = 28;
+  /**
+   * Идентификатор фабрики
+   */
+  public final static int FACTORY_IDENTIFIER = 28;
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
-	 */
-	@Override
-	protected DocFlowPlugin doCreatePlugin() {
-		return new AbstractDocFlowPlugin() {
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#doCreatePlugin()
+   */
+  @Override
+  protected DocFlowPlugin doCreatePlugin() {
+    return new AbstractDocFlowPlugin() {
 
-			/*
-			 * (non-Javadoc)
-			 * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doExecute()
-			 */
-			@Override
-			protected void doExecute() throws Exception {
-				WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
-						.getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
+      /*
+       * (non-Javadoc)
+       * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doExecute()
+       */
+      @Override
+      protected void doExecute() throws Exception {
+        WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
+            .getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
 
-				service.processDisAssembleProductTransaction(getParams());
-				complete();
-			}
+        service.processDisAssembleProductTransaction(getParams());
+        complete();
+      }
 
-			/*
-			 * (non-Javadoc)
-			 * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doGetDocActionResultTextRepresentation(com.mg.merp.docprocess.model.DocHeadState)
-			 */
-			@Override
-			protected String doGetDocActionResultTextRepresentation(DocHeadState docHeadState) {
-				return StringUtils.BLANK_STRING;
-			}
+      /*
+       * (non-Javadoc)
+       * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doGetDocActionResultTextRepresentation(com.mg.merp.docprocess.model.DocHeadState)
+       */
+      @Override
+      protected String doGetDocActionResultTextRepresentation(DocHeadState docHeadState) {
+        return StringUtils.BLANK_STRING;
+      }
 
-			/*
-			 * (non-Javadoc)
-			 * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doRoolback()
-			 */
-			@Override
-			protected void doRoolback() throws Exception {
-				WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
-						.getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
+      /*
+       * (non-Javadoc)
+       * @see com.mg.merp.docflow.generic.AbstractDocFlowPlugin#doRoolback()
+       */
+      @Override
+      protected void doRoolback() throws Exception {
+        WarehouseProcessorServiceLocal service = (WarehouseProcessorServiceLocal) ApplicationDictionaryLocator.locate()
+            .getBusinessService(WarehouseProcessorServiceLocal.LOCAL_SERVICE_NAME);
 
-				service.rollbackAssembleProductTransaction(getParams());
-				complete();
-			}
-		}; 
-	}
+        service.rollbackAssembleProductTransaction(getParams());
+        complete();
+      }
+    };
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
-	 */
-	@Override
-	public int getIdentifier() {
-		return FACTORY_IDENTIFIER;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
+   */
+  @Override
+  public int getIdentifier() {
+    return FACTORY_IDENTIFIER;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
-	 */
-	@Override
-	public String getName() {
-		return "DisAssemble product";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
+   */
+  @Override
+  public String getName() {
+    return "DisAssemble product";
+  }
 
 }

@@ -21,39 +21,37 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 import com.mg.merp.warehouse.model.OrderStatus;
 
 /**
- * 
  * @author leonova
  * @version $Id: OrderHeadRest.java,v 1.6 2006/12/20 11:59:45 leonova Exp $
- *
  */
 public class OrderHeadRest extends GoodsDocumentRest {
 
-	private OrderStatus status = null;
-	@DataItemName("Warehouse.OrderHead.Responsible")
-	private Contractor responsibleCode = null;	
-	protected String[] contractorResponsibleKinds;
-	
-	public OrderHeadRest() {
-		contractorThroughKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-		contractorResponsibleKinds = new String[] {ContractorSearchForm.CONTRACTOR_EMPLOYEE, ContractorSearchForm.CONTRACTOR_ORGUNIT};		
-	}
+  protected String[] contractorResponsibleKinds;
+  private OrderStatus status = null;
+  @DataItemName("Warehouse.OrderHead.Responsible")
+  private Contractor responsibleCode = null;
 
-	@Override
-	protected void doClearRestrictionItem() {
-		super.doClearRestrictionItem();
-		this.status = null;
-		this.responsibleCode = null;	
-	}
+  public OrderHeadRest() {
+    contractorThroughKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+    contractorResponsibleKinds = new String[]{ContractorSearchForm.CONTRACTOR_EMPLOYEE, ContractorSearchForm.CONTRACTOR_ORGUNIT};
+  }
 
-
-	public Contractor getResponsibleCode() {
-		return responsibleCode;
-	}
+  @Override
+  protected void doClearRestrictionItem() {
+    super.doClearRestrictionItem();
+    this.status = null;
+    this.responsibleCode = null;
+  }
 
 
-	public OrderStatus getStatus() {
-		return status;
-	}
+  public Contractor getResponsibleCode() {
+    return responsibleCode;
+  }
+
+
+  public OrderStatus getStatus() {
+    return status;
+  }
 
 
 }

@@ -20,8 +20,7 @@ package com.mg.framework.utils;
  *
  * @author Oleg V. Safonov
  * @version $Id: UtilMisc.java,v 1.4 2006/06/23 13:17:15 safonov Exp $
- * 
- * @deprecated	use com.mg.framework.utils.MiscUtils instead
+ * @deprecated use com.mg.framework.utils.MiscUtils instead
  */
 public class UtilMisc extends MiscUtils {
 

@@ -1,20 +1,23 @@
 <refentry id="admon.graphics.extension">
-<refmeta>
-<refentrytitle>admon.graphics.extension</refentrytitle>
-<refmiscinfo role="type">string</refmiscinfo>
-</refmeta>
-<refnamediv>
-<refname>admon.graphics.extension</refname>
-<refpurpose>Extension for admonition graphics</refpurpose>
-</refnamediv>
+  <refmeta>
+    <refentrytitle>admon.graphics.extension</refentrytitle>
+    <refmiscinfo role="type">string</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>admon.graphics.extension</refname>
+    <refpurpose>Extension for admonition graphics</refpurpose>
+  </refnamediv>
 
-<refsynopsisdiv>
-<src:fragment id='admon.graphics.extension.frag'><xsl:param name="admon.graphics.extension" select="'.png'"/></src:fragment>
-</refsynopsisdiv>
+  <refsynopsisdiv>
+    <src:fragment id='admon.graphics.extension.frag'>
+      <xsl:param name="admon.graphics.extension" select="'.png'"/>
+    </src:fragment>
+  </refsynopsisdiv>
 
-<refsect1><title>Description</title>
+  <refsect1>
+    <title>Description</title>
 
-<para>Sets the extension to use on admonition graphics.</para>
+    <para>Sets the extension to use on admonition graphics.</para>
 
-</refsect1>
+  </refsect1>
 </refentry>

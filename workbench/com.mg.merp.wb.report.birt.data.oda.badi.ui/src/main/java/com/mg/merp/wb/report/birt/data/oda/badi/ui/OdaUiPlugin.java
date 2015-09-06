@@ -14,11 +14,11 @@
  */
 package com.mg.merp.wb.report.birt.data.oda.badi.ui;
 
-import java.util.ResourceBundle;
+import com.mg.merp.wb.core.ui.plugin.MerpUIPlugin;
 
 import org.osgi.framework.BundleContext;
 
-import com.mg.merp.wb.core.ui.plugin.MerpUIPlugin;
+import java.util.ResourceBundle;
 
 /**
  * @author Valentin A. Poroxnenko
@@ -26,45 +26,44 @@ import com.mg.merp.wb.core.ui.plugin.MerpUIPlugin;
  */
 public class OdaUiPlugin extends MerpUIPlugin {
 
-	private static final String RESOURCE_NAME = "com.mg.merp.wb.report.birt.data.oda.badi.ui.messages";
-	// The plug-in ID
-	public static final String PLUGIN_ID = "com.mg.merp.wb.report.birt.data.oda.badi.ui";
+  // The plug-in ID
+  public static final String PLUGIN_ID = "com.mg.merp.wb.report.birt.data.oda.badi.ui";
+  private static final String RESOURCE_NAME = "com.mg.merp.wb.report.birt.data.oda.badi.ui.messages";
+  // The shared instance
+  private static OdaUiPlugin plugin;
 
-	// The shared instance
-	private static OdaUiPlugin plugin;
-	
-	/**
-	 * The constructor
-	 */
-	public OdaUiPlugin() {
-		plugin = this;
-	}
+  /**
+   * The constructor
+   */
+  public OdaUiPlugin() {
+    plugin = this;
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * @see org.eclipse.ui.plugin.AbstractUIPlugin#start(org.osgi.framework.BundleContext)
-	 */
-	public void start(BundleContext context) throws Exception {
-		super.start(context);
-		resourceBundle = ResourceBundle.getBundle(RESOURCE_NAME);
-	}
+  /**
+   * Returns the shared instance
+   *
+   * @return the shared instance
+   */
+  public static OdaUiPlugin getDefault() {
+    return plugin;
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * @see org.eclipse.ui.plugin.AbstractUIPlugin#stop(org.osgi.framework.BundleContext)
-	 */
-	public void stop(BundleContext context) throws Exception {
-		plugin = null;
-		super.stop(context);
-	}
+  /*
+   * (non-Javadoc)
+   * @see org.eclipse.ui.plugin.AbstractUIPlugin#start(org.osgi.framework.BundleContext)
+   */
+  public void start(BundleContext context) throws Exception {
+    super.start(context);
+    resourceBundle = ResourceBundle.getBundle(RESOURCE_NAME);
+  }
 
-	/**
-	 * Returns the shared instance
-	 *
-	 * @return the shared instance
-	 */
-	public static OdaUiPlugin getDefault() {
-		return plugin;
-	}
+  /*
+   * (non-Javadoc)
+   * @see org.eclipse.ui.plugin.AbstractUIPlugin#stop(org.osgi.framework.BundleContext)
+   */
+  public void stop(BundleContext context) throws Exception {
+    plugin = null;
+    super.stop(context);
+  }
 
 }

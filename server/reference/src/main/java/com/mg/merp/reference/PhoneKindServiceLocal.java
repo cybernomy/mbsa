@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.PhoneKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: PhoneKindServiceLocal.java,v 1.1 2006/03/14 11:49:50 safonov Exp $
  */
 public interface PhoneKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<PhoneKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<PhoneKind, Integer> {
 
 }

@@ -13,7 +13,8 @@
 
 <!-- $Id: ShelfLifeMacros.xml,v 1.3 2006/06/02 10:57:34 leonova Exp $ -->
 
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="shelfLifeFields" layout="jfd:box" label="resource://com.mg.merp.document.resources.formelements#DocSpec.ShelfLife" >
-	<jfd:field id="ShelfLife" showLabel="false" alignment="expand_expand"/>
-	<jfd:field id="ShelfLifeMeas" showLabel="false" />					
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="shelfLifeFields" layout="jfd:box"
+               label="resource://com.mg.merp.document.resources.formelements#DocSpec.ShelfLife">
+  <jfd:field id="ShelfLife" showLabel="false" alignment="expand_expand"/>
+  <jfd:field id="ShelfLifeMeas" showLabel="false"/>
 </jfd:container>

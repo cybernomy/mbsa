@@ -13,74 +13,86 @@
 
 <!-- $Id: FinOperRest.mfd.xml,v 1.2 2006/12/19 06:53:05 leonova Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.finance.support.ui.FinOperRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.finance.resources.formelements#Cond.FinOper" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.finance.support.ui.FinOperRest" orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.finance.resources.formelements#Cond.FinOper">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.finance.resources.formelements#FinTurnAcc.FormMt.Tab.Total" >		
-		    <jfd:field id="dateFrom" />
-			<jfd:field id="dateTill" sameLine="true"/>
-		 	<jfd:comboBox id="kind" selectedIndex="0" label="resource://com.mg.merp.finance.resources.formelements#Cond.FinOper.Kind" >
-				<jfd:items>
-					<jfd:item value="Все" />
-					<jfd:item value="Факт" />
-					<jfd:item value="План" />
-				</jfd:items>
-			</jfd:comboBox> 
-			<jfd:container id="baseDocument" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.BaseDocAttribute" >
-				<jfd:field id="baseDocType" showLabel="false" alignment="left_expand"/>
-				<jfd:field id="baseDocNumber" showLabel="false" alignment="expand_expand"/>			
-				<jfd:field id="baseDocDate" showLabel="false" alignment="right_expand"/>				
-			</jfd:container>
-			<jfd:container id="document" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.Document" >
-				<jfd:field id="docType" showLabel="false" alignment="left_expand"/>
-				<jfd:field id="docNumber" showLabel="false" alignment="expand_expand"/>			
-				<jfd:field id="docDate" showLabel="false" alignment="right_expand" />				
-			</jfd:container>		
-			<jfd:container id="contractDocument" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.ContractDocAttribute" >
-				<jfd:field id="contractType" showLabel="false" alignment="left_expand"/>
-				<jfd:field id="contractNumber" showLabel="false" alignment="expand_expand"/>			
-				<jfd:field id="contractDate" showLabel="false" alignment="right_expand"/>				
-			</jfd:container>
-			<jfd:field id="fromSumNat" />
-			<jfd:field id="toSumNat" sameLine="true"/>	
-			<jfd:field id="fromSumCur" />
-			<jfd:field id="toSumCur" sameLine="true"/>	
-			<jfd:field id="curCode" />
-			<jfd:field id="fromCode" />
-			<jfd:field id="toCode" sameLine="true"/>
-			<jfd:field id="responsibleCode" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />			
-		</jfd:container>
-		<jfd:container id="specFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.finance.resources.formelements#FinTurnAcc.FormMt.Tab.Spec" >		
-			<jfd:container id="srcAccFields" columns="1" layout="jfd:box" alignment="expand_expand"  label="resource://com.mg.merp.finance.resources.formelements#Fin.Oper.Spec.SrcAcc">
-				<jfd:field id="srcAcc" showLabel="false" />	
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel1SrcMacros.xml" />		  			  			  	  			  			  			
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel2SrcMacros.xml" />		  			  			  	  			  			  			
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel3SrcMacros.xml" />		  			  			  	  			  			  			
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel4SrcMacros.xml" />		  			  			  	  			  			  			
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel5SrcMacros.xml" />		  			  			  	  			  			  			
-			</jfd:container>	
-			<jfd:container id="dstAccFields" columns="1" layout="jfd:box" alignment="expand_expand" sameLine="true" label="resource://com.mg.merp.finance.resources.formelements#Fin.Oper.Spec.DstAcc">
-				<jfd:field id="dstAcc" showLabel="false" />			
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel1DstMacros.xml" />
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel2DstMacros.xml" />
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel3DstMacros.xml" />
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel4DstMacros.xml" />						
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel5DstMacros.xml" />
-			</jfd:container>			
-			<jfd:container id="featureFields" layout="jfd:box" columns="1" alignment="expand_expand" label="resource://com.mg.merp.finance.resources.formelements#Fin.Oper.Spec.Feature">
-				<jfd:field id="featAcc" showLabel="false" />
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel1FeatMacros.xml" />		  			  			  	  			  			  			
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel2FeatMacros.xml" />		  			  			  	  			  			  			
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel3FeatMacros.xml" />		  			  			  	  			  			  			
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel4FeatMacros.xml" />		  			  			  	  			  			  			
-				<jfd:include name="com/mg/merp/finance/resources/AnlLevel5FeatMacros.xml" />		  			  			  	  			  			  			
-			</jfd:container>			
-		</jfd:container>		
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.finance.resources.formelements#FinTurnAcc.FormMt.Tab.Total">
+      <jfd:field id="dateFrom"/>
+      <jfd:field id="dateTill" sameLine="true"/>
+      <jfd:comboBox id="kind" selectedIndex="0"
+                    label="resource://com.mg.merp.finance.resources.formelements#Cond.FinOper.Kind">
+        <jfd:items>
+          <jfd:item value="Все"/>
+          <jfd:item value="Факт"/>
+          <jfd:item value="План"/>
+        </jfd:items>
+      </jfd:comboBox>
+      <jfd:container id="baseDocument" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.document.resources.formelements#Document.BaseDocAttribute">
+        <jfd:field id="baseDocType" showLabel="false" alignment="left_expand"/>
+        <jfd:field id="baseDocNumber" showLabel="false" alignment="expand_expand"/>
+        <jfd:field id="baseDocDate" showLabel="false" alignment="right_expand"/>
+      </jfd:container>
+      <jfd:container id="document" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.document.resources.formelements#Document.Document">
+        <jfd:field id="docType" showLabel="false" alignment="left_expand"/>
+        <jfd:field id="docNumber" showLabel="false" alignment="expand_expand"/>
+        <jfd:field id="docDate" showLabel="false" alignment="right_expand"/>
+      </jfd:container>
+      <jfd:container id="contractDocument" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.document.resources.formelements#Document.ContractDocAttribute">
+        <jfd:field id="contractType" showLabel="false" alignment="left_expand"/>
+        <jfd:field id="contractNumber" showLabel="false" alignment="expand_expand"/>
+        <jfd:field id="contractDate" showLabel="false" alignment="right_expand"/>
+      </jfd:container>
+      <jfd:field id="fromSumNat"/>
+      <jfd:field id="toSumNat" sameLine="true"/>
+      <jfd:field id="fromSumCur"/>
+      <jfd:field id="toSumCur" sameLine="true"/>
+      <jfd:field id="curCode"/>
+      <jfd:field id="fromCode"/>
+      <jfd:field id="toCode" sameLine="true"/>
+      <jfd:field id="responsibleCode"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="specFields" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.finance.resources.formelements#FinTurnAcc.FormMt.Tab.Spec">
+      <jfd:container id="srcAccFields" columns="1" layout="jfd:box" alignment="expand_expand"
+                     label="resource://com.mg.merp.finance.resources.formelements#Fin.Oper.Spec.SrcAcc">
+        <jfd:field id="srcAcc" showLabel="false"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel1SrcMacros.xml"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel2SrcMacros.xml"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel3SrcMacros.xml"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel4SrcMacros.xml"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel5SrcMacros.xml"/>
+      </jfd:container>
+      <jfd:container id="dstAccFields" columns="1" layout="jfd:box" alignment="expand_expand"
+                     sameLine="true"
+                     label="resource://com.mg.merp.finance.resources.formelements#Fin.Oper.Spec.DstAcc">
+        <jfd:field id="dstAcc" showLabel="false"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel1DstMacros.xml"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel2DstMacros.xml"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel3DstMacros.xml"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel4DstMacros.xml"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel5DstMacros.xml"/>
+      </jfd:container>
+      <jfd:container id="featureFields" layout="jfd:box" columns="1" alignment="expand_expand"
+                     label="resource://com.mg.merp.finance.resources.formelements#Fin.Oper.Spec.Feature">
+        <jfd:field id="featAcc" showLabel="false"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel1FeatMacros.xml"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel2FeatMacros.xml"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel3FeatMacros.xml"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel4FeatMacros.xml"/>
+        <jfd:include name="com/mg/merp/finance/resources/AnlLevel5FeatMacros.xml"/>
+      </jfd:container>
+    </jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml"/>
 
 </jfd:form>

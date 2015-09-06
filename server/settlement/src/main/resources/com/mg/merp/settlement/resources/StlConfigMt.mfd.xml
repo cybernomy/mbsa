@@ -11,17 +11,22 @@
 <!-- Millennium Business Suite Anywhere System.                              -->
 <!-- ======================================================================= -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentallocConfig.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentallocConfig.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
-		<jfd:container id="allFields" layout="jfd:defaultMtGridBag" >		
- 		<jfd:border style="bevel" type="raised" />
-	  		<jfd:field id="BaseCurrency" text="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentallocConfig.FormMt.BaseCurrency" /> 
-	  		<jfd:field id="NatCurrency" text="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentallocConfig.FormMt.NatCurrency" /> 
-	  		<jfd:field id="CurrencyRateType" /> 
-	  		<jfd:field id="CurrencyRateAuthority" /> 
-	  		<jfd:field id="CurrencyPrec" text="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentallocConfig.FormMt.CurrencyPrec" /> 
-		</jfd:container>
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
+  <jfd:container id="allFields" layout="jfd:defaultMtGridBag">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="BaseCurrency"
+               text="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentallocConfig.FormMt.BaseCurrency"/>
+    <jfd:field id="NatCurrency"
+               text="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentallocConfig.FormMt.NatCurrency"/>
+    <jfd:field id="CurrencyRateType"/>
+    <jfd:field id="CurrencyRateAuthority"/>
+    <jfd:field id="CurrencyPrec"
+               text="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentallocConfig.FormMt.CurrencyPrec"/>
+  </jfd:container>
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

@@ -17,12 +17,10 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.InvLocation;
 
 /**
- * 
  * @author leonova
  * @version $Id: InvLocationServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface InvLocationServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<InvLocation, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<InvLocation, Integer> {
 
 }

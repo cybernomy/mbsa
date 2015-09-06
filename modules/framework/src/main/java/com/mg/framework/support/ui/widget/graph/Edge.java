@@ -19,55 +19,55 @@ package com.mg.framework.support.ui.widget.graph;
  * @version $Id: Edge.java,v 1.1 2006/03/27 10:43:34 safonov Exp $
  */
 public class Edge extends GraphElement {
-	private String label;
-	private Vertex source;
-	private Vertex target;
+  private String label;
+  private Vertex source;
+  private Vertex target;
 
-	public Edge(Vertex source, Vertex target) {
-		this.source = source;
-		this.target = target;
-	}
-	
-	/**
-	 * @return Returns the label.
-	 */
-	public String getLabel() {
-		return label;
-	}
+  public Edge(Vertex source, Vertex target) {
+    this.source = source;
+    this.target = target;
+  }
 
-	/**
-	 * @param label The label to set.
-	 */
-	public void setLabel(String label) {
-		this.label = label;
-	}
+  /**
+   * @return Returns the label.
+   */
+  public String getLabel() {
+    return label;
+  }
 
-	/**
-	 * @return Returns the source.
-	 */
-	public Vertex getSource() {
-		return source;
-	}
+  /**
+   * @param label The label to set.
+   */
+  public void setLabel(String label) {
+    this.label = label;
+  }
 
-	/**
-	 * @param source The source to set.
-	 */
-	public void setSource(Vertex source) {
-		this.source = source;
-	}
+  /**
+   * @return Returns the source.
+   */
+  public Vertex getSource() {
+    return source;
+  }
 
-	/**
-	 * @return Returns the target.
-	 */
-	public Vertex getTarget() {
-		return target;
-	}
+  /**
+   * @param source The source to set.
+   */
+  public void setSource(Vertex source) {
+    this.source = source;
+  }
 
-	/**
-	 * @param target The target to set.
-	 */
-	public void setTarget(Vertex target) {
-		this.target = target;
-	}
+  /**
+   * @return Returns the target.
+   */
+  public Vertex getTarget() {
+    return target;
+  }
+
+  /**
+   * @param target The target to set.
+   */
+  public void setTarget(Vertex target) {
+    this.target = target;
+  }
 
 }

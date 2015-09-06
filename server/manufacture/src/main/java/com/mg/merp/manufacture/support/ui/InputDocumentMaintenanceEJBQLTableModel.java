@@ -17,11 +17,12 @@ package com.mg.merp.manufacture.support.ui;
 
 /**
  * Вспомогательный класс для отображения формы актов на списание
- * 
+ *
  * @author leonova
- * @version $Id: InputDocumentMaintenanceEJBQLTableModel.java,v 1.1 2006/08/28 04:47:23 leonova Exp $ 
+ * @version $Id: InputDocumentMaintenanceEJBQLTableModel.java,v 1.1 2006/08/28 04:47:23 leonova Exp
+ *          $
  */
 public class InputDocumentMaintenanceEJBQLTableModel extends
-	ManufactureDocumentMaintenanceEJBQLTableModel {
+    ManufactureDocumentMaintenanceEJBQLTableModel {
 
 }

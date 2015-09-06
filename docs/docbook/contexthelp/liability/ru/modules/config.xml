@@ -9,20 +9,26 @@
 ]> -->
 <chapter id="config_lia">
   <title>Конфигурация</title>
-    
-    <para>Настройка модуля &graph; доступна через главное меню
-     <menuchoice>
-    <guimenu>Администрирование</guimenu>
-    <guimenuitem>Конфигурация</guimenuitem>
-    <guimenuitem>&graph;</guimenuitem>
-    </menuchoice>.
-    </para>
-    
-      <screenshot><mediaobject><imageobject>
-      <imagedata fileref="images/config.gif"/> 
-      </imageobject> </mediaobject> </screenshot>
-    
+
+  <para>Настройка модуля &graph; доступна через главное меню
+    <menuchoice>
+      <guimenu>Администрирование</guimenu>
+      <guimenuitem>Конфигурация</guimenuitem>
+      <guimenuitem>&graph;</guimenuitem>
+    </menuchoice>
+    .
+  </para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/config.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
   <para>В конфигурации указывается папка, в которую по умолчанию помещаются все создаваемые графики,
-  если иное не предусмотрено триггером или алгоритмом. </para>
+    если иное не предусмотрено триггером или алгоритмом.
+  </para>
 
 </chapter>

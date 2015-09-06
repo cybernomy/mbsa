@@ -17,17 +17,16 @@ package com.mg.merp.personnelref.support.ui;
 import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
- * 
  * @author leonova
  * @version $Id: MilitaryRankSearchHelp.java,v 1.2 2006/07/10 11:57:56 leonova Exp $
  */
 public class MilitaryRankSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {
-		return "merp/personnelref/MilitaryRank";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/MilitaryRank";
+  }
 }

@@ -17,12 +17,10 @@ package com.mg.merp.crm;
 import com.mg.merp.crm.model.OfferStatus;
 
 /**
- * 
  * @author leonova
  * @version $Id: OfferStatusServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface OfferStatusServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<OfferStatus, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<OfferStatus, Integer> {
 
 }

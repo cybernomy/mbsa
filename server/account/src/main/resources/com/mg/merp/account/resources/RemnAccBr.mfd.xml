@@ -13,32 +13,42 @@
 
 <!-- $Id: RemnAccBr.mfd.xml,v 1.9 2009/02/26 08:29:18 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.account.support.ui.RemnAccBr" verticalGap="5" title="resource://com.mg.merp.account.resources.formelements#RemnAcc.FormBr.Title" helpTopic="account#remnacc_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver"
+          controller="com.mg.merp.account.support.ui.RemnAccBr" verticalGap="5"
+          title="resource://com.mg.merp.account.resources.formelements#RemnAcc.FormBr.Title"
+          helpTopic="account#remnacc_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml" />
-		
-	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
-		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true" >
-		</jfd:maintenanceTree>
-		<jfd:container id="turnSplit" layout="jfd:split" orientation="ver" alignment="expand_top">
-			<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
-				<jfd:popupMenu>
-					<jfd:separator />
-					<jfd:menuItem id="viewTurns" text="resource://com.mg.merp.account.resources.formelements#MenuItem.ViewTurns" actionListener="ViewTurns" toggle="checkBox" keyStroke="control S"/>
-					<jfd:menuItem id="deleteEmptyStrings" text="resource://com.mg.merp.account.resources.formelements#Remn.FormBr.MenuItem.DeleteEmptyString" actionListener="DeleteEmptyStrings" />
-				</jfd:popupMenu>
-			</jfd:maintenanceTable>
-			<jfd:container id="turnFields" layout="jfd:tabbed" alignment="expand_top" >		
-				<jfd:maintenanceTable id="turnDb" alignment="expand_expand" scroll="true" tabTitle="resource://com.mg.merp.account.resources.formelements#ViewTurns.TurnDb">
-				</jfd:maintenanceTable>
-				<jfd:maintenanceTable id="turnKt" alignment="expand_expand" scroll="true" tabTitle="resource://com.mg.merp.account.resources.formelements#ViewTurns.TurnKt">
-				</jfd:maintenanceTable>
-				<jfd:maintenanceTable id="turn" alignment="expand_expand" scroll="true" tabTitle="resource://com.mg.merp.account.resources.formelements#ViewTurns.Turn">
-				</jfd:maintenanceTable>
-			</jfd:container>
-		</jfd:container>
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml"/>
+
+  <jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+    <jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true">
+    </jfd:maintenanceTree>
+    <jfd:container id="turnSplit" layout="jfd:split" orientation="ver" alignment="expand_top">
+      <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+        <jfd:popupMenu>
+          <jfd:separator/>
+          <jfd:menuItem id="viewTurns"
+                        text="resource://com.mg.merp.account.resources.formelements#MenuItem.ViewTurns"
+                        actionListener="ViewTurns" toggle="checkBox" keyStroke="control S"/>
+          <jfd:menuItem id="deleteEmptyStrings"
+                        text="resource://com.mg.merp.account.resources.formelements#Remn.FormBr.MenuItem.DeleteEmptyString"
+                        actionListener="DeleteEmptyStrings"/>
+        </jfd:popupMenu>
+      </jfd:maintenanceTable>
+      <jfd:container id="turnFields" layout="jfd:tabbed" alignment="expand_top">
+        <jfd:maintenanceTable id="turnDb" alignment="expand_expand" scroll="true"
+                              tabTitle="resource://com.mg.merp.account.resources.formelements#ViewTurns.TurnDb">
+        </jfd:maintenanceTable>
+        <jfd:maintenanceTable id="turnKt" alignment="expand_expand" scroll="true"
+                              tabTitle="resource://com.mg.merp.account.resources.formelements#ViewTurns.TurnKt">
+        </jfd:maintenanceTable>
+        <jfd:maintenanceTable id="turn" alignment="expand_expand" scroll="true"
+                              tabTitle="resource://com.mg.merp.account.resources.formelements#ViewTurns.Turn">
+        </jfd:maintenanceTable>
+      </jfd:container>
+    </jfd:container>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml"/>
 
 </jfd:form>

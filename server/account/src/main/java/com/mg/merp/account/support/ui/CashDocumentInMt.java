@@ -22,12 +22,12 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
  * @version $Id: CashDocumentInMt.java,v 1.2 2007/01/13 10:44:41 safonov Exp $
  */
 public class CashDocumentInMt extends DocumentMaintenanceForm {
-	
-	public CashDocumentInMt() {
-		super();
-		contractorFromKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-		contractorToKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
 
-	}
+  public CashDocumentInMt() {
+    super();
+    contractorFromKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+    contractorToKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+
+  }
 
 }

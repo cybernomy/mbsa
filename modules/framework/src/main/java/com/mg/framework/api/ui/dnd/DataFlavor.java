@@ -17,17 +17,17 @@ package com.mg.framework.api.ui.dnd;
 
 /**
  * Вид данных операции DnD
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: DataFlavor.java,v 1.1 2007/08/16 13:48:06 safonov Exp $
  */
 public enum DataFlavor {
-	/**
-	 * перетаскиваемые данные
-	 */
-	DRAG_FLAVOR,
-	/**
-	 * данные при отпускании
-	 */
-	DROP_FLAVOR
+  /**
+   * перетаскиваемые данные
+   */
+  DRAG_FLAVOR,
+  /**
+   * данные при отпускании
+   */
+  DROP_FLAVOR
 }

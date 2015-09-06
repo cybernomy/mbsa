@@ -14,27 +14,25 @@
  */
 package com.mg.merp.reference;
 
-import java.util.List;
-
 import com.mg.merp.reference.model.Tax;
 import com.mg.merp.reference.model.TaxGroup;
 import com.mg.merp.reference.model.TaxLink;
 
+import java.util.List;
+
 /**
- * 
  * @author leonova
  * @version $Id: TaxGroupServiceLocal.java,v 1.2 2006/04/24 08:59:58 safonov Exp $
  */
 public interface TaxGroupServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<TaxGroup, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<TaxGroup, Integer> {
 
-   public TaxLink includeTax(TaxGroup taxGroup, Tax tax, short feeOrder) throws com.mg.framework.api.ApplicationException;
+  public TaxLink includeTax(TaxGroup taxGroup, Tax tax, short feeOrder) throws com.mg.framework.api.ApplicationException;
 
-   public void excludeTax(TaxLink taxLink) throws com.mg.framework.api.ApplicationException;
+  public void excludeTax(TaxLink taxLink) throws com.mg.framework.api.ApplicationException;
 
-   public void editTax(TaxLink taxKink, short feeOrder) throws com.mg.framework.api.ApplicationException;
+  public void editTax(TaxLink taxKink, short feeOrder) throws com.mg.framework.api.ApplicationException;
 
-   public List<TaxLink> loadTaxesLink(TaxGroup taxGroup) throws com.mg.framework.api.ApplicationException;
+  public List<TaxLink> loadTaxesLink(TaxGroup taxGroup) throws com.mg.framework.api.ApplicationException;
 
 }

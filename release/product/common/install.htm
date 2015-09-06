@@ -1,70 +1,86 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>Millennium Business Suite Anywhere :: Инсталляция сервера</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Millennium Business Suite Anywhere :: Инсталляция сервера</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 
 <body>
 <h1>Инсталляция сервера Millennium Business Suite Anywhere 2007</h1>
+
 <h2>Системные требования</h2>
-<blockquote> 
-  <p> Для функционирования сервера Millennium Business Suite Anywhere 2007 необходимо наличие одной из 
-    следующих операционных систем:</p>
-  <ul>
-    <li>Linux</li>
-    <li>Solaris</li>
-    <li>Windows XP SP2</li>
-    <li>Windows Server 2003 SP1</li>
-    <li>Windows Vista</li>
-  </ul>
+<blockquote>
+    <p> Для функционирования сервера Millennium Business Suite Anywhere 2007 необходимо наличие
+        одной из
+        следующих операционных систем:</p>
+    <ul>
+        <li>Linux</li>
+        <li>Solaris</li>
+        <li>Windows XP SP2</li>
+        <li>Windows Server 2003 SP1</li>
+        <li>Windows Vista</li>
+    </ul>
 </blockquote>
 <h2>Инсталляция платформы Java</h2>
-<blockquote> 
-  <p>До инсталляции сервера Millennium Business Suite Anywhere 2007 на компьютер необходимо установить 
-    <a href="http://java.sun.com/javase/downloads/index.jsp">Java SDK</a> версии не ниже 5.0.</p>
-  <p>Далее приведен пример для установки на операционную систему Microsoft Windows, за более подробной информацией
-  	об установке платформы Java SDK необходимо обратиться на <a href="http://java.sun.com/j2se/1.5.0/install.html">http://java.sun.com/j2se/1.5.0/install.html</a></p>
-  <p>Запустите инсталлятор Java SDK (например, <code>jdk-1_5_0_09-windows-i586-p.exe</code>) 
-    и установите его в каталог, не содержащий в пути пробелов (например, <code>C:\j2sdk1.5.0_09</code>).</p>
-  <p>Установите переменную окружения <code>JAVA_HOME</code> в значение, соответствующее 
-    пути к установленному Java SDK. Сделать это можно следующим образом:</p>
-  <ol>
+<blockquote>
+    <p>До инсталляции сервера Millennium Business Suite Anywhere 2007 на компьютер необходимо
+        установить
+        <a href="http://java.sun.com/javase/downloads/index.jsp">Java SDK</a> версии не ниже 5.0.
+    </p>
+
+    <p>Далее приведен пример для установки на операционную систему Microsoft Windows, за более
+        подробной информацией
+        об установке платформы Java SDK необходимо обратиться на <a
+                href="http://java.sun.com/j2se/1.5.0/install.html">http://java.sun.com/j2se/1.5.0/install.html</a>
+    </p>
+
+    <p>Запустите инсталлятор Java SDK (например, <code>jdk-1_5_0_09-windows-i586-p.exe</code>)
+        и установите его в каталог, не содержащий в пути пробелов (например,
+        <code>C:\j2sdk1.5.0_09</code>).</p>
+
+    <p>Установите переменную окружения <code>JAVA_HOME</code> в значение, соответствующее
+        пути к установленному Java SDK. Сделать это можно следующим образом:</p>
     <ol>
-      <li>Запустить ярлык панели управления &quot;Система&quot;.</li>
-      <li>На закладке &quot;Дополнительно&quot; нажать кнопку &quot;Переменные 
-        среды&quot;.</li>
-      <li>В списке &quot;Системные переменные&quot; нажать кнопку &quot;Создать&quot;.</li>
-      <li>Ввести имя переменной: <code>JAVA_HOME</code> и значение: <code>C:\j2sdk1.5.0_09</code></li>
+        <ol>
+            <li>Запустить ярлык панели управления &quot;Система&quot;.</li>
+            <li>На закладке &quot;Дополнительно&quot; нажать кнопку &quot;Переменные
+                среды&quot;.
+            </li>
+            <li>В списке &quot;Системные переменные&quot; нажать кнопку &quot;Создать&quot;.</li>
+            <li>Ввести имя переменной: <code>JAVA_HOME</code> и значение:
+                <code>C:\j2sdk1.5.0_09</code></li>
+        </ol>
     </ol>
-  </ol>
-  <p>Чтобы убедиться в том, что среда Java успешно установлена, откройте командную 
-    строку и выполните команду: <code>java -version</code><br>
-    В ответ команда выдаст информацию о версии установленной среды Java.</p>
+    <p>Чтобы убедиться в том, что среда Java успешно установлена, откройте командную
+        строку и выполните команду: <code>java -version</code><br>
+        В ответ команда выдаст информацию о версии установленной среды Java.</p>
 </blockquote>
 <h2>Запуск инсталлятора сервера Millennium Business Suite Anywhere 2007</h2>
-<blockquote> 
-  <p>Запустить инсталлятор сервера <code>MillenniumERP-server-4.x.x.jar</code> 
-    можно двумя способами:</p>
-  <ol>
+<blockquote>
+    <p>Запустить инсталлятор сервера <code>MillenniumERP-server-4.x.x.jar</code>
+        можно двумя способами:</p>
     <ol>
-      <li>Из проводника двойным щелчком на файле инсталлятора.</li>
-      <li>Из командной строки, с помощью команды: <code>javaw -jar MillenniumERP-server-4.x.x.jar</code></li>
+        <ol>
+            <li>Из проводника двойным щелчком на файле инсталлятора.</li>
+            <li>Из командной строки, с помощью команды: <code>javaw -jar
+                MillenniumERP-server-4.x.x.jar</code></li>
+        </ol>
     </ol>
-  </ol>
-  <p>Рекомендуется установить все компоненты, предложенные инсталлятором, в путь, 
-    не содержащий пробелов.</p>
-  <p>После инсталляции используйте файле <code>readme.htm</code> для получения 
-    инструкции по запуску установленного сервера Millennium Business Suite Anywhere 2007.</p>
-  <p>&nbsp;</p>
-  </blockquote>
+    <p>Рекомендуется установить все компоненты, предложенные инсталлятором, в путь,
+        не содержащий пробелов.</p>
+
+    <p>После инсталляции используйте файле <code>readme.htm</code> для получения
+        инструкции по запуску установленного сервера Millennium Business Suite Anywhere 2007.</p>
+
+    <p>&nbsp;</p>
+</blockquote>
 <h2>Контактная информация</h2>
-<blockquote> 
-  <p>ООО &quot;Бизнестехнология&quot;<br>
-    телефон: 7 846 270 7027 (Россия, Самара), 7 846 270 7029 (Россия, Самара)<br>
-    <a href="mailto:info@m-g.ru">mailto:info@m-g.ru</a><br>
-    <a href="http://www.m-g.ru">http://www.m-g.ru</a><br>
-  </p>
+<blockquote>
+    <p>ООО &quot;Бизнестехнология&quot;<br>
+        телефон: 7 846 270 7027 (Россия, Самара), 7 846 270 7029 (Россия, Самара)<br>
+        <a href="mailto:info@m-g.ru">mailto:info@m-g.ru</a><br>
+        <a href="http://www.m-g.ru">http://www.m-g.ru</a><br>
+    </p>
 </blockquote>
 </body>
 </html>

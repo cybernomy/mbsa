@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!--
 	Copyright (c) 1998 - 2007 BusinessTechnology, Ltd.
 	All rights reserved
@@ -17,35 +17,36 @@
 	$Id: SecurityAudit.hbm.xml,v 1.1 2007/10/19 06:41:14 safonov Exp $
 -->
 <hibernate-mapping>
-	<typedef name="com.mg.framework.api.security.SecurityAuditType" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.framework.api.security.SecurityAuditType</param>
-	</typedef>
+  <typedef name="com.mg.framework.api.security.SecurityAuditType"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.framework.api.security.SecurityAuditType</param>
+  </typedef>
 
-	<class name="com.mg.merp.core.model.SecurityAudit" table="SYS_SECURITY_AUDIT">
-		<meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
-		<id name="Id" type="java.lang.Long">
-			<column name="ID" not-null="false" unique="true" sql-type="NUMERIC" />
-			<generator class="sequence">
-				<param name="sequence">SYS_SECURITY_AUDIT_ID_GEN</param>
-			</generator>
-		</id>
-		<many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-			<column name="CLIENT_ID" not-null="false" />
-		</many-to-one>
-		<property name="UserName" type="java.lang.String">
-			<column name="USER_NAME" length="31" not-null="true" sql-type="CHAR" />
-		</property>
-		<property name="EventDateTime" type="java.util.Date">
-			<column name="EVENT_DATETIME" not-null="true" sql-type="TIMESTAMP" />
-		</property>
-		<property name="AuditType" type="com.mg.framework.api.security.SecurityAuditType">
-			<column name="AUDIT_TYPE" not-null="true" sql-type="SMALLINT" />
-		</property>
-		<property name="AuditBean" type="java.lang.String">
-			<column name="AUDIT_BEAN" length="256" not-null="true" sql-type="VARCHAR" />
-		</property>
-		<property name="Details" type="java.lang.String">
-			<column name="DETAILS" length="1024" not-null="false" sql-type="VARCHAR" />
-		</property>
-	</class>
+  <class name="com.mg.merp.core.model.SecurityAudit" table="SYS_SECURITY_AUDIT">
+    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <id name="Id" type="java.lang.Long">
+      <column name="ID" not-null="false" unique="true" sql-type="NUMERIC"/>
+      <generator class="sequence">
+        <param name="sequence">SYS_SECURITY_AUDIT_ID_GEN</param>
+      </generator>
+    </id>
+    <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
+      <column name="CLIENT_ID" not-null="false"/>
+    </many-to-one>
+    <property name="UserName" type="java.lang.String">
+      <column name="USER_NAME" length="31" not-null="true" sql-type="CHAR"/>
+    </property>
+    <property name="EventDateTime" type="java.util.Date">
+      <column name="EVENT_DATETIME" not-null="true" sql-type="TIMESTAMP"/>
+    </property>
+    <property name="AuditType" type="com.mg.framework.api.security.SecurityAuditType">
+      <column name="AUDIT_TYPE" not-null="true" sql-type="SMALLINT"/>
+    </property>
+    <property name="AuditBean" type="java.lang.String">
+      <column name="AUDIT_BEAN" length="256" not-null="true" sql-type="VARCHAR"/>
+    </property>
+    <property name="Details" type="java.lang.String">
+      <column name="DETAILS" length="1024" not-null="false" sql-type="VARCHAR"/>
+    </property>
+  </class>
 </hibernate-mapping>

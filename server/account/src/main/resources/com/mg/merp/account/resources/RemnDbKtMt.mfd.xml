@@ -13,49 +13,55 @@
 
 <!-- $Id: RemnDbKtMt.mfd.xml,v 1.6 2006/12/19 12:14:37 leonova Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.account.resources.formelements#RemnDbKt.FormMt.Title" helpTopic="account#remndbkt_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.account.resources.formelements#RemnDbKt.FormMt.Title"
+          helpTopic="account#remndbkt_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="Period" />
-		<jfd:field id="AccPlan.Currency" enabled="false" sameLine="true"/>
-		<jfd:field id="Contractor"/>
-		<jfd:container id="accPlanFields" layout="jfd:box" columns="1" label="resource://com.mg.merp.account.resources.formelements#Remn.Acc">
-			<jfd:field id="AccPlan" showLabel="false"/>
-			<jfd:field id="AnlPlan1" showLabel="false"/>
-			<jfd:field id="AnlPlan2" showLabel="false"/>
-			<jfd:field id="AnlPlan3" showLabel="false"/>
-			<jfd:field id="AnlPlan4" showLabel="false"/>						
-			<jfd:field id="AnlPlan5" showLabel="false"/>		
-		</jfd:container>
-		<jfd:container id="docBase" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.BaseDocAttribute" >
-			<jfd:field id="DocBaseType" showLabel="false" alignment="left_expand"/>
-			<jfd:field id="DocBaseNumber" showLabel="false" alignment="expand_expand"/>			
-			<jfd:field id="DocBaseDate" showLabel="false" alignment="right_expand" />				
-		</jfd:container>	
-		<jfd:container id="document" layout="jfd:box" longField="true" label="resource://com.mg.merp.document.resources.formelements#Document.Contract" >
-			<jfd:field id="DocType" showLabel="false" alignment="left_expand"/>
-			<jfd:field id="DocNumber" showLabel="false" alignment="expand_expand"/>			
-			<jfd:field id="DocDate" showLabel="false" alignment="right_expand" />				
-		</jfd:container>		
-		<jfd:field id="RemnBeginNatDb" />
-		<jfd:field id="RemnBeginNatKt" sameLine="true"/>		
- 		<jfd:field id="TurnNatDb" />
-		<jfd:field id="TurnNatKt" sameLine="true"/>		
-		<jfd:field id="RemnEndNatDb" />
-		<jfd:field id="RemnEndNatKt" sameLine="true"/>		
-		<jfd:field id="RemnBeginCurDb" />
-		<jfd:field id="RemnBeginCurKt" sameLine="true"/>		
- 		<jfd:field id="TurnCurDb" />
-		<jfd:field id="TurnCurKt" sameLine="true"/>		 
-		<jfd:field id="RemnEndCurDb" />
-		<jfd:field id="RemnEndCurKt" sameLine="true"/>
-		<jfd:field id="Comment" longField="true"/>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																								 																			
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Period"/>
+    <jfd:field id="AccPlan.Currency" enabled="false" sameLine="true"/>
+    <jfd:field id="Contractor"/>
+    <jfd:container id="accPlanFields" layout="jfd:box" columns="1"
+                   label="resource://com.mg.merp.account.resources.formelements#Remn.Acc">
+      <jfd:field id="AccPlan" showLabel="false"/>
+      <jfd:field id="AnlPlan1" showLabel="false"/>
+      <jfd:field id="AnlPlan2" showLabel="false"/>
+      <jfd:field id="AnlPlan3" showLabel="false"/>
+      <jfd:field id="AnlPlan4" showLabel="false"/>
+      <jfd:field id="AnlPlan5" showLabel="false"/>
+    </jfd:container>
+    <jfd:container id="docBase" layout="jfd:box" longField="true"
+                   label="resource://com.mg.merp.document.resources.formelements#Document.BaseDocAttribute">
+      <jfd:field id="DocBaseType" showLabel="false" alignment="left_expand"/>
+      <jfd:field id="DocBaseNumber" showLabel="false" alignment="expand_expand"/>
+      <jfd:field id="DocBaseDate" showLabel="false" alignment="right_expand"/>
+    </jfd:container>
+    <jfd:container id="document" layout="jfd:box" longField="true"
+                   label="resource://com.mg.merp.document.resources.formelements#Document.Contract">
+      <jfd:field id="DocType" showLabel="false" alignment="left_expand"/>
+      <jfd:field id="DocNumber" showLabel="false" alignment="expand_expand"/>
+      <jfd:field id="DocDate" showLabel="false" alignment="right_expand"/>
+    </jfd:container>
+    <jfd:field id="RemnBeginNatDb"/>
+    <jfd:field id="RemnBeginNatKt" sameLine="true"/>
+    <jfd:field id="TurnNatDb"/>
+    <jfd:field id="TurnNatKt" sameLine="true"/>
+    <jfd:field id="RemnEndNatDb"/>
+    <jfd:field id="RemnEndNatKt" sameLine="true"/>
+    <jfd:field id="RemnBeginCurDb"/>
+    <jfd:field id="RemnBeginCurKt" sameLine="true"/>
+    <jfd:field id="TurnCurDb"/>
+    <jfd:field id="TurnCurKt" sameLine="true"/>
+    <jfd:field id="RemnEndCurDb"/>
+    <jfd:field id="RemnEndCurKt" sameLine="true"/>
+    <jfd:field id="Comment" longField="true"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

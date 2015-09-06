@@ -16,26 +16,26 @@
 
 package com.mg.merp.reference.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.reference.FamilyRelationServiceLocal;
 import com.mg.merp.reference.model.FamilyRelation;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Степени родства" 
- * 
+ * Бизнес-компонент "Степени родства"
+ *
  * @author leonova
  * @version $Id: FamilyRelationServiceBean.java,v 1.4 2006/10/20 05:44:57 leonova Exp $
  */
-@Stateless(name="merp/reference/FamilyRelationService")
+@Stateless(name = "merp/reference/FamilyRelationService")
 public class FamilyRelationServiceBean extends AbstractPOJODataBusinessObjectServiceBean<FamilyRelation, Integer> implements FamilyRelationServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, FamilyRelation entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "RCode"));
-	}
+  @Override
+  protected void onValidate(ValidationContext context, FamilyRelation entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "RCode"));
+  }
 
 }

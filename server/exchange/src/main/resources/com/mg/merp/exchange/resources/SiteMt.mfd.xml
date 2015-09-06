@@ -12,26 +12,28 @@
 <!-- ======================================================================= -->
 <!-- $Id: SiteMt.mfd.xml,v 1.1 2006/06/20 04:42:08 leonova Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.exchange.resources.formelements#Site.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.exchange.resources.formelements#Site.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="Code" />	
-		<jfd:field id="Name" />	
-		<jfd:field id="PathIn" />	
-		<jfd:field id="PathOut" />				
-		<jfd:field id="ExportCmd" />			
-		<jfd:field id="ImportCmd" />
-		<jfd:field id="PacketIn" />												
-		<jfd:field id="PacketInTime" />	
-		<jfd:field id="PacketOut" />
-		<jfd:field id="PacketOutTime" />	
-		<jfd:field id="RequestDone" />					
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Code"/>
+    <jfd:field id="Name"/>
+    <jfd:field id="PathIn"/>
+    <jfd:field id="PathOut"/>
+    <jfd:field id="ExportCmd"/>
+    <jfd:field id="ImportCmd"/>
+    <jfd:field id="PacketIn"/>
+    <jfd:field id="PacketInTime"/>
+    <jfd:field id="PacketOut"/>
+    <jfd:field id="PacketOutTime"/>
+    <jfd:field id="RequestDone"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

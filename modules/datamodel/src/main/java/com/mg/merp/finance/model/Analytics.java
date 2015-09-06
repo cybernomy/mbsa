@@ -22,132 +22,137 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Finance.Analytics")
 public class Analytics extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.finance.model.Account FinAcc;
+  private com.mg.merp.finance.model.Account FinAcc;
 
-	private com.mg.merp.finance.model.Analytics Parent;
+  private com.mg.merp.finance.model.Analytics Parent;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String UpCode;
+  private java.lang.String UpCode;
 
-	private java.lang.String AnlName;
+  private java.lang.String AnlName;
 
-	private short AnlLevel;
+  private short AnlLevel;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public Analytics() {
-	}
+  /**
+   * default constructor
+   */
+  public Analytics() {
+  }
 
-	/** constructor with id */
-	public Analytics(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public Analytics(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.finance.model.Account getFinAcc() {
-		return this.FinAcc;
-	}
+  /**
+   *
+   */
 
-	public void setFinAcc(com.mg.merp.finance.model.Account Finaccount) {
-		this.FinAcc = Finaccount;
-	}
+  public com.mg.merp.finance.model.Account getFinAcc() {
+    return this.FinAcc;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Finance.AccAnl.Parent")
-	public com.mg.merp.finance.model.Analytics getParent() {
-		return this.Parent;
-	}
+  public void setFinAcc(com.mg.merp.finance.model.Account Finaccount) {
+    this.FinAcc = Finaccount;
+  }
 
-	public void setParent(com.mg.merp.finance.model.Analytics Finanl) {
-		this.Parent = Finanl;
-	}
+  /**
+   *
+   */
+  @DataItemName("Finance.AccAnl.Parent")
+  public com.mg.merp.finance.model.Analytics getParent() {
+    return this.Parent;
+  }
 
-	/**
-	 * 
-	 */
+  public void setParent(com.mg.merp.finance.model.Analytics Finanl) {
+    this.Parent = Finanl;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Finance.AccAnl.Code")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  /**
+   *
+   */
+  @DataItemName("Finance.AccAnl.Code")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	public java.lang.String getUpCode() {
-		return this.UpCode;
-	}
+  /**
+   *
+   */
 
-	public void setUpCode(java.lang.String Upcode) {
-		this.UpCode = Upcode;
-	}
+  public java.lang.String getUpCode() {
+    return this.UpCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Finance.AccAnl.AnlName")
-	public java.lang.String getAnlName() {
-		return this.AnlName;
-	}
+  public void setUpCode(java.lang.String Upcode) {
+    this.UpCode = Upcode;
+  }
 
-	public void setAnlName(java.lang.String Anlname) {
-		this.AnlName = Anlname;
-	}
+  /**
+   *
+   */
+  @DataItemName("Finance.AccAnl.AnlName")
+  public java.lang.String getAnlName() {
+    return this.AnlName;
+  }
 
-	/**
-	 * 
-	 */
+  public void setAnlName(java.lang.String Anlname) {
+    this.AnlName = Anlname;
+  }
 
-	public short getAnlLevel() {
-		return this.AnlLevel;
-	}
+  /**
+   *
+   */
 
-	public void setAnlLevel(short Anllevel) {
-		this.AnlLevel = Anllevel;
-	}
+  public short getAnlLevel() {
+    return this.AnlLevel;
+  }
+
+  public void setAnlLevel(short Anllevel) {
+    this.AnlLevel = Anllevel;
+  }
 }

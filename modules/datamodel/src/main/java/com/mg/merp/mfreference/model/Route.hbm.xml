@@ -1,77 +1,79 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.mfreference.model.RouteSrcType" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.mfreference.model.RouteSrcType</param>
-	</typedef>
-	
-	<typedef name="com.mg.merp.mfreference.model.RouteDestType" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.mfreference.model.RouteDestType</param>
-	</typedef>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <typedef name="com.mg.merp.mfreference.model.RouteSrcType"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.mfreference.model.RouteSrcType</param>
+  </typedef>
+
+  <typedef name="com.mg.merp.mfreference.model.RouteDestType"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.mfreference.model.RouteDestType</param>
+  </typedef>
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.mfreference.model.Route" table="MF_ROUTE">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">MF_ROUTE_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Vendor" class="com.mg.merp.reference.model.Contractor">
-      <column name="VENDOR_ID" not-null="false" />
+      <column name="VENDOR_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Catalog" class="com.mg.merp.reference.model.Catalog">
-      <column name="CATALOG_ID" not-null="false" />
+      <column name="CATALOG_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Customer" class="com.mg.merp.reference.model.Contractor">
-      <column name="CUSTOMER_ID" not-null="false" />
+      <column name="CUSTOMER_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SrcWarehouse" class="com.mg.merp.warehouse.model.Warehouse">
-      <column name="SRC_WAREHOUSE_ID" not-null="false" />
+      <column name="SRC_WAREHOUSE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="DestWarehouse" class="com.mg.merp.warehouse.model.Warehouse">
-      <column name="DEST_WAREHOUSE_ID" not-null="false" />
+      <column name="DEST_WAREHOUSE_ID" not-null="false"/>
     </many-to-one>
     <property name="SrcType" type="com.mg.merp.mfreference.model.RouteSrcType">
-      <column name="SRC_TYPE" not-null="true" sql-type="SMALLINT" />
+      <column name="SRC_TYPE" not-null="true" sql-type="SMALLINT"/>
     </property>
     <property name="SrcCycle" type="java.lang.Integer">
-      <column name="SRC_CYCLE" not-null="false" sql-type="INTEGER" />
+      <column name="SRC_CYCLE" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="SrcRank" type="java.lang.Short">
-      <column name="SRC_RANK" not-null="false" sql-type="SMALLINT" />
+      <column name="SRC_RANK" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="SupplyPercent" type="java.math.BigDecimal">
-      <column name="SUPPLY_PERCENT" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="SUPPLY_PERCENT" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="DestType" type="com.mg.merp.mfreference.model.RouteDestType">
-      <column name="DEST_TYPE" not-null="true" sql-type="SMALLINT" />
+      <column name="DEST_TYPE" not-null="true" sql-type="SMALLINT"/>
     </property>
     <property name="ReorderMinQty" type="java.math.BigDecimal">
-      <column name="REORDER_MIN_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="REORDER_MIN_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="ReorderLotSize" type="java.math.BigDecimal">
-      <column name="REORDER_LOT_SIZE" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="REORDER_LOT_SIZE" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="DestCycle" type="java.lang.Integer">
-      <column name="DEST_CYCLE" not-null="false" sql-type="INTEGER" />
+      <column name="DEST_CYCLE" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="QcReceivingDays" type="java.lang.Short">
-      <column name="QC_RECEIVING_DAYS" not-null="false" sql-type="SMALLINT" />
+      <column name="QC_RECEIVING_DAYS" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="LeadTime" type="java.lang.Short">
-      <column name="LEAD_TIME" not-null="false" sql-type="SMALLINT" />
+      <column name="LEAD_TIME" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="SafetyDays" type="java.lang.Short">
-      <column name="SAFETY_DAYS" not-null="false" sql-type="SMALLINT" />
+      <column name="SAFETY_DAYS" not-null="false" sql-type="SMALLINT"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

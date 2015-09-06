@@ -1,18 +1,21 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.mfreference.model.QuantityRateFlag" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.mfreference.model.QuantityRateFlag</param>
-	</typedef>
-	<typedef name="com.mg.merp.mfreference.model.MaterialOverheadAllocationFlag" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.mfreference.model.MaterialOverheadAllocationFlag</param>
-	</typedef>	
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
-  <joined-subclass name="com.mg.merp.mfreference.model.BomMaterial" extends="com.mg.merp.mfreference.model.BomRouteResource" table="MF_BOM_MATERIAL">
+  <typedef name="com.mg.merp.mfreference.model.QuantityRateFlag"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.mfreference.model.QuantityRateFlag</param>
+  </typedef>
+  <typedef name="com.mg.merp.mfreference.model.MaterialOverheadAllocationFlag"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.mfreference.model.MaterialOverheadAllocationFlag</param>
+  </typedef>
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
+  <joined-subclass name="com.mg.merp.mfreference.model.BomMaterial"
+                   extends="com.mg.merp.mfreference.model.BomRouteResource" table="MF_BOM_MATERIAL">
     <meta attribute="extends">com.mg.merp.mfreference.model.BomRouteResource</meta>
     <!--  id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
@@ -21,61 +24,62 @@
       </generator>
     </id> -->
     <key on-delete="cascade">
-      <column name="BOM_ROUTE_RESOURCE_ID" not-null="true" />
+      <column name="BOM_ROUTE_RESOURCE_ID" not-null="true"/>
     </key>
     <many-to-one name="MtlCostCategory" class="com.mg.merp.mfreference.model.CostCategories">
-      <column name="MTL_COST_CATEGORY_ID" not-null="false" />
+      <column name="MTL_COST_CATEGORY_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Measure" class="com.mg.merp.reference.model.Measure">
-      <column name="MEASURE_ID" not-null="false" />
+      <column name="MEASURE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Catalog" class="com.mg.merp.reference.model.Catalog">
-      <column name="CATALOG_ID" not-null="false" />
+      <column name="CATALOG_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="BackflushZone" class="com.mg.merp.warehouse.model.WarehouseZone">
-      <column name="BACKFLUSH_ZONE_ID" not-null="false" />
+      <column name="BACKFLUSH_ZONE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="MtlOhCostCategory" class="com.mg.merp.mfreference.model.CostCategories">
-      <column name="MTL_OH_COST_CATEGORY_ID" not-null="false" />
+      <column name="MTL_OH_COST_CATEGORY_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Currency" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
-      <column name="CURRENCY_CODE" length="5" not-null="false" />
+      <column name="CURRENCY_CODE" length="5" not-null="false"/>
     </many-to-one>
     <property name="Revision" type="java.lang.Integer">
-      <column name="REVISION" not-null="false" sql-type="INTEGER" />
+      <column name="REVISION" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="ViewSequence" type="int">
-      <column name="VIEW_SEQUENCE" not-null="true" sql-type="INTEGER" />
+      <column name="VIEW_SEQUENCE" not-null="true" sql-type="INTEGER"/>
     </property>
     <property name="ReportSequence" type="java.lang.Integer">
-      <column name="REPORT_SEQUENCE" not-null="false" sql-type="INTEGER" />
+      <column name="REPORT_SEQUENCE" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="Probable" type="java.math.BigDecimal">
-      <column name="PROBABLE" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="PROBABLE" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="QuantityRateFlag" type="com.mg.merp.mfreference.model.QuantityRateFlag">
-      <column name="QUANTITY_RATE_FLAG" not-null="false" sql-type="SMALLINT" />
+      <column name="QUANTITY_RATE_FLAG" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="MtlQty" type="java.math.BigDecimal">
-      <column name="MTL_QTY" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="MTL_QTY" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="ScrapFactor" type="java.math.BigDecimal">
-      <column name="SCRAP_FACTOR" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="SCRAP_FACTOR" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="MtlBackflushFlag" type="boolean">
-      <column name="MTL_BACKFLUSH_FLAG" not-null="false" sql-type="SMALLINT" />
+      <column name="MTL_BACKFLUSH_FLAG" not-null="false" sql-type="SMALLINT"/>
     </property>
-    <property name="MtlOhAllocationFlag" type="com.mg.merp.mfreference.model.MaterialOverheadAllocationFlag">
-      <column name="MTL_OH_ALLOCATION_FLAG" not-null="false" sql-type="SMALLINT" />
+    <property name="MtlOhAllocationFlag"
+              type="com.mg.merp.mfreference.model.MaterialOverheadAllocationFlag">
+      <column name="MTL_OH_ALLOCATION_FLAG" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="MtlOhRate" type="java.math.BigDecimal">
-      <column name="MTL_OH_RATE" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="MTL_OH_RATE" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="MtlOhRatio" type="java.math.BigDecimal">
-      <column name="MTL_OH_RATIO" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="MTL_OH_RATIO" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="MtlOhBackflushFlag" type="boolean">
-      <column name="MTL_OH_BACKFLUSH_FLAG" not-null="false" sql-type="SMALLINT" />
+      <column name="MTL_OH_BACKFLUSH_FLAG" not-null="false" sql-type="SMALLINT"/>
     </property>
   </joined-subclass>
 </hibernate-mapping>

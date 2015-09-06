@@ -1,61 +1,62 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.reference.model.PriceListSpec" table="PRICELISTSPEC">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">PRICELISTSPEC_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="Catalog" class="com.mg.merp.reference.model.Catalog">
-      <column name="CATALOG_ID" not-null="false" />
+      <column name="CATALOG_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Folder" class="com.mg.merp.reference.model.PriceListFolder">
-      <column name="FOLDER_ID" not-null="false" />
+      <column name="FOLDER_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <property name="Price" type="java.math.BigDecimal">
-      <column name="PRICE" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="PRICE" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="LastCost" type="java.math.BigDecimal">
-      <column name="LASTCOST" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="LASTCOST" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="SName" type="java.lang.String">
-      <column name="SNAME" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="SNAME" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Canceled" type="boolean">
-      <column name="CANCELED" not-null="false" sql-type="SMALLINT" />
+      <column name="CANCELED" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="Unid" type="java.lang.String" update="false">
-      <column name="UNID" length="32" not-null="false" unique="true" sql-type="VARCHAR" />
+      <column name="UNID" length="32" not-null="false" unique="true" sql-type="VARCHAR"/>
     </property>
     <property name="PriceListHeadId" type="java.lang.Integer">
-      <column name="PRICELISTHEAD_ID" not-null="false" sql-type="INTEGER" />
+      <column name="PRICELISTHEAD_ID" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="ActDate" type="java.util.Date">
-      <column name="ACTDATE" not-null="true" sql-type="TIMESTAMP" />
+      <column name="ACTDATE" not-null="true" sql-type="TIMESTAMP"/>
     </property>
     <property name="ActDateTill" type="java.util.Date">
-      <column name="ACTDATETILL" not-null="true" sql-type="TIMESTAMP" />
+      <column name="ACTDATETILL" not-null="true" sql-type="TIMESTAMP"/>
     </property>
     <property name="InternalCode" type="java.lang.String">
-      <column name="INTERNALCODE" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="INTERNALCODE" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
-	<bag name="PriceListSpecPrice" table="PRICELISTSPEC_PRICE" inverse="true" cascade="persist,merge">
+    <bag name="PriceListSpecPrice" table="PRICELISTSPEC_PRICE" inverse="true"
+         cascade="persist,merge">
       <key>
-	      <column name="PRICELISTSPEC_ID" not-null="true" />
+        <column name="PRICELISTSPEC_ID" not-null="true"/>
       </key>
-      <one-to-many class="com.mg.merp.reference.model.PriceListSpecPrice" />
+      <one-to-many class="com.mg.merp.reference.model.PriceListSpecPrice"/>
     </bag>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

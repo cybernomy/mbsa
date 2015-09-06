@@ -13,30 +13,44 @@
 
 <!-- $Id: DocTypeMt.mfd.xml,v 1.6 2007/09/09 05:31:10 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.document.support.ui.DocTypeMt" title="resource://com.mg.merp.document.resources.formelements#DocType.FormMt.Title" helpTopic="docprocess#doctype_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.document.support.ui.DocTypeMt"
+          title="resource://com.mg.merp.document.resources.formelements#DocType.FormMt.Title"
+          helpTopic="docprocess#doctype_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.document.resources.formelements#DocType.FormMt.ComminFields.Title" >
-			<jfd:field id="Code" />
-			<jfd:field id="Name" />	
-			<jfd:button id="docFlowMap" text="resource://com.mg.merp.document.resources.formelements#DocType.Button.DocProcess" actionListener="ShowDocFlowMap" />
-			<jfd:field id="SolidDocProcess" />		
-			<jfd:field id="NumberingAlgorithm" />
-			<!-- jfd:field id="Report" /-->
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-		</jfd:container>
-		<jfd:shuttle id="documentLink" alignment="expand_expand" tabTitle="resource://com.mg.merp.document.resources.formelements#DocType.DocumentLink"
-			leadingHeader="resource://com.mg.merp.document.resources.formelements#DocType.NotUsedDocSections" trailingHeader="resource://com.mg.merp.document.resources.formelements#DocType.UsedDocSections" />
-		<jfd:shuttle id="docConfirmLink" alignment="expand_expand" tabTitle="resource://com.mg.merp.document.resources.formelements#DocType.DocConfirmLink"
-			leadingHeader="resource://com.mg.merp.document.resources.formelements#DocType.NotUsedDocSections" trailingHeader="resource://com.mg.merp.document.resources.formelements#DocType.UsedDocSections" />
-		<jfd:shuttle id="docBaseLink" alignment="expand_expand" tabTitle="resource://com.mg.merp.document.resources.formelements#DocType.DocBaseLink"
-			leadingHeader="resource://com.mg.merp.document.resources.formelements#DocType.NotUsedDocSections" trailingHeader="resource://com.mg.merp.document.resources.formelements#DocType.UsedDocSections" />
-		<jfd:shuttle id="docContractLink" alignment="expand_expand" tabTitle="resource://com.mg.merp.document.resources.formelements#DocType.DocContractLink"
-			leadingHeader="resource://com.mg.merp.document.resources.formelements#DocType.NotUsedDocSections" trailingHeader="resource://com.mg.merp.document.resources.formelements#DocType.UsedDocSections" />
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.document.resources.formelements#DocType.FormMt.ComminFields.Title">
+      <jfd:field id="Code"/>
+      <jfd:field id="Name"/>
+      <jfd:button id="docFlowMap"
+                  text="resource://com.mg.merp.document.resources.formelements#DocType.Button.DocProcess"
+                  actionListener="ShowDocFlowMap"/>
+      <jfd:field id="SolidDocProcess"/>
+      <jfd:field id="NumberingAlgorithm"/>
+      <!-- jfd:field id="Report" /-->
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:shuttle id="documentLink" alignment="expand_expand"
+                 tabTitle="resource://com.mg.merp.document.resources.formelements#DocType.DocumentLink"
+                 leadingHeader="resource://com.mg.merp.document.resources.formelements#DocType.NotUsedDocSections"
+                 trailingHeader="resource://com.mg.merp.document.resources.formelements#DocType.UsedDocSections"/>
+    <jfd:shuttle id="docConfirmLink" alignment="expand_expand"
+                 tabTitle="resource://com.mg.merp.document.resources.formelements#DocType.DocConfirmLink"
+                 leadingHeader="resource://com.mg.merp.document.resources.formelements#DocType.NotUsedDocSections"
+                 trailingHeader="resource://com.mg.merp.document.resources.formelements#DocType.UsedDocSections"/>
+    <jfd:shuttle id="docBaseLink" alignment="expand_expand"
+                 tabTitle="resource://com.mg.merp.document.resources.formelements#DocType.DocBaseLink"
+                 leadingHeader="resource://com.mg.merp.document.resources.formelements#DocType.NotUsedDocSections"
+                 trailingHeader="resource://com.mg.merp.document.resources.formelements#DocType.UsedDocSections"/>
+    <jfd:shuttle id="docContractLink" alignment="expand_expand"
+                 tabTitle="resource://com.mg.merp.document.resources.formelements#DocType.DocContractLink"
+                 leadingHeader="resource://com.mg.merp.document.resources.formelements#DocType.NotUsedDocSections"
+                 trailingHeader="resource://com.mg.merp.document.resources.formelements#DocType.UsedDocSections"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

@@ -20,41 +20,44 @@ package com.mg.merp.manufacture.model;
  * @version $Id: VarianceDocumentHead.java,v 1.6 2008/02/29 12:35:31 safonov Exp $
  */
 public class VarianceDocumentHead extends com.mg.merp.document.model.DocHead
-		implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
 
-	// Fields
+  // Fields
 
-	private com.mg.merp.mfreference.model.WorkCenter workCenter;
+  private com.mg.merp.mfreference.model.WorkCenter workCenter;
 
-	private com.mg.merp.manufacture.model.Job job;
+  private com.mg.merp.manufacture.model.Job job;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public VarianceDocumentHead() {
-	}
+  /**
+   * default constructor
+   */
+  public VarianceDocumentHead() {
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	public com.mg.merp.mfreference.model.WorkCenter getWC() {
-		return this.workCenter;
-	}
+  // Property accessors
 
-	public void setWC(com.mg.merp.mfreference.model.WorkCenter MfWorkCenter) {
-		this.workCenter = MfWorkCenter;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.mfreference.model.WorkCenter getWC() {
+    return this.workCenter;
+  }
 
-	/**
-	 * 
-	 */	
-	public com.mg.merp.manufacture.model.Job getJob() {
-		return this.job;
-	}
+  public void setWC(com.mg.merp.mfreference.model.WorkCenter MfWorkCenter) {
+    this.workCenter = MfWorkCenter;
+  }
 
-	public void setJob(com.mg.merp.manufacture.model.Job MfJob) {
-		this.job = MfJob;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.manufacture.model.Job getJob() {
+    return this.job;
+  }
+
+  public void setJob(com.mg.merp.manufacture.model.Job MfJob) {
+    this.job = MfJob;
+  }
 
 }

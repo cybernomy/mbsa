@@ -1,57 +1,59 @@
 ﻿<?xml version='1.0' encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
-                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
-[
-<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
-<!ENTITY chap_001plan SYSTEM "modules/001planning.xml">
-<!ENTITY chap_002plan SYSTEM "modules/002planning.xml">
-<!ENTITY chap_003plan SYSTEM "modules/003planning.xml">
-<!ENTITY chap_004plan SYSTEM "modules/004planning.xml">
-<!ENTITY chap_005plan SYSTEM "modules/005planning.xml">
-<!ENTITY chap_006plan SYSTEM "modules/006planning.xml">
-<!ENTITY chap_007plan SYSTEM "modules/007planning.xml">
-<!ENTITY chap_008plan SYSTEM "modules/008planning.xml">
-<!ENTITY chap_009plan SYSTEM "modules/009planning.xml">
-<!ENTITY chap_010plan SYSTEM "modules/010planning.xml">
-<!ENTITY chap_011plan SYSTEM "modules/011planning.xml">
-<!ENTITY merp "Millennium Business Suite Anywhere">
-<!ENTITY mref "Справочники производства">
-<!ENTITY manuf "Планирование и управление производством">
-<!ENTITY cont_centr "Центр управления">
-<!ENTITY contr "Контракты">
+    "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+    [
+        <!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+        <!ENTITY chap_001plan SYSTEM "modules/001planning.xml">
+        <!ENTITY chap_002plan SYSTEM "modules/002planning.xml">
+        <!ENTITY chap_003plan SYSTEM "modules/003planning.xml">
+        <!ENTITY chap_004plan SYSTEM "modules/004planning.xml">
+        <!ENTITY chap_005plan SYSTEM "modules/005planning.xml">
+        <!ENTITY chap_006plan SYSTEM "modules/006planning.xml">
+        <!ENTITY chap_007plan SYSTEM "modules/007planning.xml">
+        <!ENTITY chap_008plan SYSTEM "modules/008planning.xml">
+        <!ENTITY chap_009plan SYSTEM "modules/009planning.xml">
+        <!ENTITY chap_010plan SYSTEM "modules/010planning.xml">
+        <!ENTITY chap_011plan SYSTEM "modules/011planning.xml">
+        <!ENTITY merp "Millennium Business Suite Anywhere">
+        <!ENTITY mref "Справочники производства">
+        <!ENTITY manuf "Планирование и управление производством">
+        <!ENTITY cont_centr "Центр управления">
+        <!ENTITY contr "Контракты">
 
-]>
+        ]>
 <book lang="ru">
   <bookinfo>
-      <title>&manuf; в системе &merp; 
-      Руководство пользователя.</title>
-      <releaseinfo>4.0.6</releaseinfo>
-      <copyright>
-	<year>1998</year>
-	<year>2008</year>
-	<holder>ООО &quot;Бизнестехнология&quot;</holder>
-      </copyright>    
+    <title>&manuf; в системе &merp;
+      Руководство пользователя.
+    </title>
+    <releaseinfo>4.0.6</releaseinfo>
+    <copyright>
+      <year>1998</year>
+      <year>2008</year>
+      <holder>ООО &quot;Бизнестехнология&quot;</holder>
+    </copyright>
   </bookinfo>
-  
+
   <toc/>
-  
+
   <preface id="target" revision="1">
-      <title>Целевая аудитория </title>
-      <para>Данное руководство предназначено для пользователей, работающих  
-	с модулем &quot;&manuf;&quot; системы &merp;.</para>
+    <title>Целевая аудитория</title>
+    <para>Данное руководство предназначено для пользователей, работающих
+      с модулем &quot;&manuf;&quot; системы &merp;.
+    </para>
   </preface>
-    
-&chap_001plan;
-&chap_002plan;
-&chap_003plan;
-&chap_004plan;
-&chap_005plan;
-&chap_006plan;
-&chap_007plan;
-&chap_008plan;
-&chap_009plan;
-&chap_010plan;
-&chap_011plan;
-&chap_copyright;
+
+  &chap_001plan;
+  &chap_002plan;
+  &chap_003plan;
+  &chap_004plan;
+  &chap_005plan;
+  &chap_006plan;
+  &chap_007plan;
+  &chap_008plan;
+  &chap_009plan;
+  &chap_010plan;
+  &chap_011plan;
+  &chap_copyright;
 
 </book>

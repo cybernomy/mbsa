@@ -19,21 +19,21 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Тип выдачи
- * 
+ *
  * @author leonova
  * @version $Id: BasicNormKind.java,v 1.2 2008/06/30 04:15:16 alikaev Exp $
  */
-@DataItemName ("Overall.Spec.BasicNormKind")
+@DataItemName("Overall.Spec.BasicNormKind")
 public enum BasicNormKind {
-	/**
-	 * основная
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#BasicNormKind.Basic")
-	BASIC,
-	
-	/**
-	 * дополнительная
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#BasicNormKind.Extra")
-	EXTRA
+  /**
+   * основная
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#BasicNormKind.Basic")
+  BASIC,
+
+  /**
+   * дополнительная
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#BasicNormKind.Extra")
+  EXTRA
 }

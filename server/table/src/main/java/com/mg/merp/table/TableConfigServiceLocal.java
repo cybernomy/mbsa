@@ -18,12 +18,12 @@ import com.mg.merp.table.model.TableConfig;
 
 /**
  * Сервис бизнес-компонента "Конфигурация модуля <Табельный учет>"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: TableConfigServiceLocal.java,v 1.2 2007/01/13 13:33:04 sharapov Exp $
  */
 public interface TableConfigServiceLocal extends com.mg.framework.api.DataBusinessObjectService<TableConfig, Integer> {
-   //public com.mg.merp.table.Config load() throws com.mg.framework.api.ApplicationException;
-   
+  //public com.mg.merp.table.Config load() throws com.mg.framework.api.ApplicationException;
+
 }

@@ -13,19 +13,22 @@
 
 <!-- $Id: ContactRest.mfd.xml,v 1.4 2006/12/15 10:22:49 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.crm.support.ui.ContactRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.crm.resources.formelements#Cond.Contact" helpTopic="crm#contact_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.crm.support.ui.ContactRest"
+          orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.crm.resources.formelements#Cond.Contact"
+          helpTopic="crm#contact_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:field id="code" />
-		<jfd:field id="contractorCode"/>
-<!--  		<jfd:field id="relationName" />-->
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />																	
- 	</jfd:container>
+    <jfd:field id="code"/>
+    <jfd:field id="contractorCode"/>
+    <!--  		<jfd:field id="relationName" />-->
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultRestrictionFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultRestrictionFooterMacros.xml"/>
 
 </jfd:form>

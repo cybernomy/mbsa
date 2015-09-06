@@ -18,24 +18,24 @@ package com.mg.framework.api.metadata;
 /**
  * Интерфейс доступа для установки репозитария хранения пользовательских полей, сущность должна
  * реализовывать данный интерфейс для поддержки пользовательских полей
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: EntityCustomFieldsStorageAccessor.java,v 1.1 2007/01/25 15:17:13 safonov Exp $
  */
 public interface EntityCustomFieldsStorageAccessor {
 
-	/**
-	 * получить репозитарий
-	 * 
-	 * @return	репозитарий
-	 */
-	EntityCustomFieldsStorage getStorage();
-	
-	/**
-	 * установить репозитарий
-	 * 
-	 * @param storage	репозитарий
-	 */
-	void setStorage(EntityCustomFieldsStorage storage);
-	
+  /**
+   * получить репозитарий
+   *
+   * @return репозитарий
+   */
+  EntityCustomFieldsStorage getStorage();
+
+  /**
+   * установить репозитарий
+   *
+   * @param storage репозитарий
+   */
+  void setStorage(EntityCustomFieldsStorage storage);
+
 }

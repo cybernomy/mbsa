@@ -18,20 +18,20 @@ import com.mg.framework.generic.ui.DefaultMaintenanceForm;
 
 /**
  * Контроллер формы поддержки бизнес-компонента "Периоды финансового учета"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: FinPeriodMt.java,v 1.1 2007/04/04 12:08:07 sharapov Exp $
  */
 public class FinPeriodMt extends DefaultMaintenanceForm {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultMaintenanceForm#doOnEdit()
-	 */
-	@Override
-	protected void doOnEdit() {
-		super.doOnEdit();
-		view.getWidget("DateFrom").setReadOnly(true); //$NON-NLS-1$
-		view.getWidget("DateTo").setReadOnly(true); //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultMaintenanceForm#doOnEdit()
+   */
+  @Override
+  protected void doOnEdit() {
+    super.doOnEdit();
+    view.getWidget("DateFrom").setReadOnly(true); //$NON-NLS-1$
+    view.getWidget("DateTo").setReadOnly(true); //$NON-NLS-1$
+  }
 
 }

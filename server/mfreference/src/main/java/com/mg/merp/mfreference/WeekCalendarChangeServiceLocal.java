@@ -14,31 +14,30 @@
  */
 package com.mg.merp.mfreference;
 
-import java.util.Date;
-
 import com.mg.merp.mfreference.model.DayCalendar;
 import com.mg.merp.mfreference.model.WeekCalendarChange;
 
+import java.util.Date;
+
 /**
  * Бизнес-компонент "Изменения недельного календаря"
- * 
+ *
  * @author leonova
  * @version $Id: WeekCalendarChangeServiceLocal.java,v 1.2 2007/07/30 10:25:31 safonov Exp $
  */
 public interface WeekCalendarChangeServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<WeekCalendarChange, Integer>
-{
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/mfreference/WeekCalendarChange";
+    extends com.mg.framework.api.DataBusinessObjectService<WeekCalendarChange, Integer> {
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/mfreference/WeekCalendarChange";
 
-	/**
-	 * получение дневного календаря
-	 * 
-	 * @param weekCalId		недельный календарь
-	 * @param searchDate	дата
-	 * @return	дневной календарь или <code>null</code> если не найден
-	 */
-	DayCalendar getDayCalendar(int weekCalId, Date searchDate);
+  /**
+   * получение дневного календаря
+   *
+   * @param weekCalId  недельный календарь
+   * @param searchDate дата
+   * @return дневной календарь или <code>null</code> если не найден
+   */
+  DayCalendar getDayCalendar(int weekCalId, Date searchDate);
 }

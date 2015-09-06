@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.Place;
 
 /**
- * 
  * @author leonova
  * @version $Id: PlaceServiceLocal.java,v 1.1 2006/03/14 11:49:50 safonov Exp $
  */
 public interface PlaceServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Place, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Place, Integer> {
 
 }

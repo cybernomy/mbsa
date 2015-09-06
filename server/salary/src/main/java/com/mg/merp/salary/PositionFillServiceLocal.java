@@ -17,16 +17,14 @@ package com.mg.merp.salary;
 import com.mg.merp.personnelref.model.PositionFill;
 
 /**
- * 
  * @author leonova
  * @version $Id: PositionFillServiceLocal.java,v 1.2 2006/11/02 16:23:57 safonov Exp $
  */
 public interface PositionFillServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<PositionFill, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<PositionFill, Integer> {
 
-   public void setBasicPosition( int personalAccountId,int positionFillId ) throws com.mg.framework.api.ApplicationException;
+  public void setBasicPosition(int personalAccountId, int positionFillId) throws com.mg.framework.api.ApplicationException;
 
-   public int getCurrentSlPositionId( int staffListId,int positionFillId,java.util.Date actualDate ) throws com.mg.framework.api.ApplicationException;
+  public int getCurrentSlPositionId(int staffListId, int positionFillId, java.util.Date actualDate) throws com.mg.framework.api.ApplicationException;
 
 }

@@ -34,90 +34,87 @@ import org.eclipse.ui.dialogs.SelectionDialog;
 
 /**
  * Диалог выбора проекта из открытых проектов студии разработки
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: ProjectSelectionDialog.java,v 1.3 2006/12/12 08:20:07
- *          poroxnenko Exp $
+ * @version $Id: ProjectSelectionDialog.java,v 1.3 2006/12/12 08:20:07 poroxnenko Exp $
  */
 public class ProjectSelectionDialog extends SelectionDialog {
 
-	// the visual selection widget group
-	private TableViewer fTableViewer;
+  // sizing constants
+  private final static int SIZING_SELECTION_WIDGET_HEIGHT = 250;
+  private final static int SIZING_SELECTION_WIDGET_WIDTH = 200;
+  // the visual selection widget group
+  private TableViewer fTableViewer;
 
-	// sizing constants
-	private final static int SIZING_SELECTION_WIDGET_HEIGHT = 250;
+  public ProjectSelectionDialog(Shell parentShell, String title) {
+    super(parentShell);
+    setTitle(title);
 
-	private final static int SIZING_SELECTION_WIDGET_WIDTH = 200;
+    int shellStyle = getShellStyle();
+    setShellStyle(shellStyle | SWT.MAX | SWT.RESIZE);
+  }
 
-	public ProjectSelectionDialog(Shell parentShell, String title) {
-		super(parentShell);
-		setTitle(title);
+  /*
+   * (non-Javadoc) Method declared on Dialog.
+   */
+  protected Control createDialogArea(Composite parent) {
+    // page group
+    Composite composite = (Composite) super.createDialogArea(parent);
 
-		int shellStyle = getShellStyle();
-		setShellStyle(shellStyle | SWT.MAX | SWT.RESIZE);
-	}
+    Font font = parent.getFont();
+    composite.setFont(font);
 
-	/*
-	 * (non-Javadoc) Method declared on Dialog.
-	 */
-	protected Control createDialogArea(Composite parent) {
-		// page group
-		Composite composite = (Composite) super.createDialogArea(parent);
+    createMessageArea(composite);
 
-		Font font = parent.getFont();
-		composite.setFont(font);
+    fTableViewer = new TableViewer(composite, SWT.H_SCROLL | SWT.V_SCROLL
+        | SWT.BORDER);
+    fTableViewer
+        .addSelectionChangedListener(new ISelectionChangedListener() {
+          public void selectionChanged(SelectionChangedEvent event) {
+            setSelectionResult(((IStructuredSelection) event
+                .getSelection()).toArray());
+          }
+        });
+    fTableViewer.addDoubleClickListener(new IDoubleClickListener() {
+      public void doubleClick(DoubleClickEvent event) {
+        okPressed();
+      }
+    });
+    GridData data = new GridData(SWT.FILL, SWT.FILL, true, true);
+    data.heightHint = SIZING_SELECTION_WIDGET_HEIGHT;
+    data.widthHint = SIZING_SELECTION_WIDGET_WIDTH;
+    fTableViewer.getTable().setLayoutData(data);
 
-		createMessageArea(composite);
+    fTableViewer.setLabelProvider(new JavaElementLabelProvider());
+    fTableViewer.setContentProvider(new IStructuredContentProvider() {
 
-		fTableViewer = new TableViewer(composite, SWT.H_SCROLL | SWT.V_SCROLL
-				| SWT.BORDER);
-		fTableViewer
-				.addSelectionChangedListener(new ISelectionChangedListener() {
-					public void selectionChanged(SelectionChangedEvent event) {
-						setSelectionResult(((IStructuredSelection) event
-								.getSelection()).toArray());
-					}
-				});
-		fTableViewer.addDoubleClickListener(new IDoubleClickListener() {
-			public void doubleClick(DoubleClickEvent event) {
-				okPressed();
-			}
-		});
-		GridData data = new GridData(SWT.FILL, SWT.FILL, true, true);
-		data.heightHint = SIZING_SELECTION_WIDGET_HEIGHT;
-		data.widthHint = SIZING_SELECTION_WIDGET_WIDTH;
-		fTableViewer.getTable().setLayoutData(data);
+      public Object[] getElements(Object inputElement) {
+        return (IProject[]) inputElement;
+      }
 
-		fTableViewer.setLabelProvider(new JavaElementLabelProvider());
-		fTableViewer.setContentProvider(new IStructuredContentProvider() {
+      public void dispose() {
+      }
 
-			public Object[] getElements(Object inputElement) {
-				return (IProject[]) inputElement;
-			}
+      public void inputChanged(Viewer viewer, Object oldInput,
+                               Object newInput) {
+      }
 
-			public void dispose() {
-			}
+    });
+    fTableViewer.getControl().setFont(font);
 
-			public void inputChanged(Viewer viewer, Object oldInput,
-					Object newInput) {
-			}
+    IProject[] input = ResourcesPlugin.getWorkspace().getRoot()
+        .getProjects();
+    fTableViewer.setInput(input);
 
-		});
-		fTableViewer.getControl().setFont(font);
+    return composite;
+  }
 
-		IProject[] input = ResourcesPlugin.getWorkspace().getRoot()
-				.getProjects();
-		fTableViewer.setInput(input);
-
-		return composite;
-	}
-
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see org.eclipse.ui.dialogs.SelectionStatusDialog#computeResult()
-	 */
-	protected void computeResult() {
-	}
+  /*
+   * (non-Javadoc)
+   *
+   * @see org.eclipse.ui.dialogs.SelectionStatusDialog#computeResult()
+   */
+  protected void computeResult() {
+  }
 
 }

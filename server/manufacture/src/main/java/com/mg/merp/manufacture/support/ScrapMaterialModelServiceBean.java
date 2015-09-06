@@ -15,30 +15,29 @@
 
 package com.mg.merp.manufacture.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.document.generic.DocumentModelServiceBean;
 import com.mg.merp.manufacture.ScrapMaterialHeadServiceLocal;
 import com.mg.merp.manufacture.ScrapMaterialModelServiceLocal;
 import com.mg.merp.manufacture.model.ScrapDocumentModel;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Образцы актов на списание потарь материалов" 
- * 
+ * Бизнес-компонент "Образцы актов на списание потарь материалов"
+ *
  * @author leonova
  * @version $Id: ScrapMaterialModelServiceBean.java,v 1.3 2006/09/12 11:08:13 leonova Exp $
  */
-@Stateless(name="merp/manufacture/ScrapMaterialModelService")
-public class ScrapMaterialModelServiceBean extends DocumentModelServiceBean<ScrapDocumentModel, Integer> implements ScrapMaterialModelServiceLocal{
+@Stateless(name = "merp/manufacture/ScrapMaterialModelService")
+public class ScrapMaterialModelServiceBean extends DocumentModelServiceBean<ScrapDocumentModel, Integer> implements ScrapMaterialModelServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
-	 */
-	@Override
-	protected short getDocSectionIdentifier() {
-		return ScrapMaterialHeadServiceLocal.FOLDER_PART;
-	}
-
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
+   */
+  @Override
+  protected short getDocSectionIdentifier() {
+    return ScrapMaterialHeadServiceLocal.FOLDER_PART;
+  }
 
 
 }

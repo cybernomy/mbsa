@@ -18,23 +18,22 @@ import java.util.EventListener;
 
 /**
  * Слушатель выбора образца документа
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ChooseDocumentPatternListener.java,v 1.1 2006/12/12 15:23:33 safonov Exp $
  */
 public interface ChooseDocumentPatternListener extends EventListener {
 
-	/**
-	 * образец выбран 
-	 * 
-	 * @param patternId	идентификатор образца
-	 */
-	void performed(Integer patternId);
-	
-	/**
-	 * выбор образца отменен
-	 *
-	 */
-	void canceled();	
+  /**
+   * образец выбран
+   *
+   * @param patternId идентификатор образца
+   */
+  void performed(Integer patternId);
+
+  /**
+   * выбор образца отменен
+   */
+  void canceled();
 
 }

@@ -1,50 +1,53 @@
 ﻿<?xml version='1.0' encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
-                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
-[
-<!ENTITY chap_retail SYSTEM "modules/retail.xml">
-<!ENTITY chap_retail_head SYSTEM "modules/001retail.xml">
-<!ENTITY chap_additional SYSTEM "modules/002retail.xml">
-<!ENTITY chap_contractors SYSTEM "modules/003retail.xml">
-<!ENTITY chap_features SYSTEM "modules/004retail.xml">
-<!ENTITY chap_retail_spec SYSTEM "modules/005retail.xml">
-<!ENTITY chap_spec_additon SYSTEM "modules/006retail.xml">
-<!ENTITY chap_tax SYSTEM "modules/007retail.xml">
-<!ENTITY chap_spec_features SYSTEM "modules/008retail.xml">
-<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
-<!ENTITY merp "Millennium Business Suite Anywhere">
-<!ENTITY logis "Логистика">
+    "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+    [
+        <!ENTITY chap_retail SYSTEM "modules/retail.xml">
+        <!ENTITY chap_retail_head SYSTEM "modules/001retail.xml">
+        <!ENTITY chap_additional SYSTEM "modules/002retail.xml">
+        <!ENTITY chap_contractors SYSTEM "modules/003retail.xml">
+        <!ENTITY chap_features SYSTEM "modules/004retail.xml">
+        <!ENTITY chap_retail_spec SYSTEM "modules/005retail.xml">
+        <!ENTITY chap_spec_additon SYSTEM "modules/006retail.xml">
+        <!ENTITY chap_tax SYSTEM "modules/007retail.xml">
+        <!ENTITY chap_spec_features SYSTEM "modules/008retail.xml">
+        <!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+        <!ENTITY merp "Millennium Business Suite Anywhere">
+        <!ENTITY logis "Логистика">
 
-]>
+        ]>
 <book lang="ru">
   <bookinfo>
-      <title>Розничная торговля в системе &merp;. 
-      Руководство пользователя </title>
-      <releaseinfo>4.0.6</releaseinfo>
-      <copyright>
-	<year>1998</year>
-	<year>2008</year>
-	<holder>ООО &quot;Бизнестехнология&quot;</holder>
-      </copyright>    
+    <title>Розничная торговля в системе &merp;.
+      Руководство пользователя
+    </title>
+    <releaseinfo>4.0.6</releaseinfo>
+    <copyright>
+      <year>1998</year>
+      <year>2008</year>
+      <holder>ООО &quot;Бизнестехнология&quot;</holder>
+    </copyright>
   </bookinfo>
-  
+
   <toc/>
-  
-<preface id="target" revision="1">
-      <title>Целевая аудитория</title>
 
-      <para>Данное руководство предназначено для пользователей, работающих  
-	с модулем &quot;Розничная торговля&quot; системы &merp;. </para>
+  <preface id="target" revision="1">
+    <title>Целевая аудитория</title>
 
-      <para>Данное руководство предназначено для пользователей 
-	системы &merp;. </para>
+    <para>Данное руководство предназначено для пользователей, работающих
+      с модулем &quot;Розничная торговля&quot; системы &merp;.
+    </para>
+
+    <para>Данное руководство предназначено для пользователей
+      системы &merp;.
+    </para>
   </preface>
 
   &chap_retail;
   &chap_retail_head;
   &chap_additional;
-  &chap_contractors; 
-  &chap_features; 
+  &chap_contractors;
+  &chap_features;
   &chap_retail_spec;
   &chap_spec_additon;
   &chap_tax;

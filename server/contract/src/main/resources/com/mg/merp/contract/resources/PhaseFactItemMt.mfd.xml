@@ -13,24 +13,30 @@
 
 <!-- $Id: PhaseFactItemMt.mfd.xml,v 1.8 2008/03/11 10:18:59 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.contract.support.ui.PhaseFactItemMt" title="resource://com.mg.merp.contract.resources.formelements#Contract.ItemFact.FormMt.Title" helpTopic="contract#factitem_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.contract.support.ui.PhaseFactItemMt"
+          title="resource://com.mg.merp.contract.resources.formelements#Contract.ItemFact.FormMt.Title"
+          helpTopic="contract#factitem_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Item.Tab.Total.Title" >		
-	 		<jfd:field id="RegDate" />			 			 		
-	 		<jfd:field id="Kind" sameLine="true" />
-			<jfd:include name="com/mg/merp/document/resources/DocumentMacros.xml" />
-			<jfd:field id="Contractor" longField="true" />
-	 		<jfd:field id="FactSum"  />
-	 		<jfd:field id="DistSum" sameLine="true" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 								 		
-		</jfd:container>	
-	 	<jfd:maintenanceTable id="specFact" alignment="expand_expand" autoResize="subsequent_columns" scroll="true" tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Item.Tab.Spec.Title" >
-		</jfd:maintenanceTable>		
-	</jfd:container>						
- 	
- 	<jfd:include name="com/mg/merp/contract/resources/PhaseFactItemMtFooterMacros.xml" />
- 	
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Item.Tab.Total.Title">
+      <jfd:field id="RegDate"/>
+      <jfd:field id="Kind" sameLine="true"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentMacros.xml"/>
+      <jfd:field id="Contractor" longField="true"/>
+      <jfd:field id="FactSum"/>
+      <jfd:field id="DistSum" sameLine="true"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:maintenanceTable id="specFact" alignment="expand_expand" autoResize="subsequent_columns"
+                          scroll="true"
+                          tabTitle="resource://com.mg.merp.contract.resources.formelements#Contract.Item.Tab.Spec.Title">
+    </jfd:maintenanceTable>
+  </jfd:container>
+
+  <jfd:include name="com/mg/merp/contract/resources/PhaseFactItemMtFooterMacros.xml"/>
+
 </jfd:form>

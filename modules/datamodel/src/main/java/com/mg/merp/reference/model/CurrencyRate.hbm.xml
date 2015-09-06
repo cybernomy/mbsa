@@ -1,40 +1,43 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.reference.model.CurrencyRate" table="REF_CURRENCY_RATE">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">REF_CUR_RATE_ID_GEN</param>
       </generator>
     </id>
-    <many-to-one name="Currency2" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
-      <column name="CURRENCY_CODE2" length="5" not-null="false" />
+    <many-to-one name="Currency2" class="com.mg.merp.reference.model.Currency"
+                 property-ref="UpCode">
+      <column name="CURRENCY_CODE2" length="5" not-null="false"/>
     </many-to-one>
-    <many-to-one name="Currency1" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
-      <column name="CURRENCY_CODE1" length="5" not-null="false" />
+    <many-to-one name="Currency1" class="com.mg.merp.reference.model.Currency"
+                 property-ref="UpCode">
+      <column name="CURRENCY_CODE1" length="5" not-null="false"/>
     </many-to-one>
     <many-to-one name="CurrencyRateType" class="com.mg.merp.reference.model.CurrencyRateType">
-      <column name="RATE_TYPE_ID" not-null="false" />
+      <column name="RATE_TYPE_ID" not-null="false"/>
     </many-to-one>
-    <many-to-one name="CurrencyRateAuthority" class="com.mg.merp.reference.model.CurrencyRateAuthority">
-      <column name="RATE_AUTHORITY_ID" not-null="false" />
+    <many-to-one name="CurrencyRateAuthority"
+                 class="com.mg.merp.reference.model.CurrencyRateAuthority">
+      <column name="RATE_AUTHORITY_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <property name="Rate" type="java.math.BigDecimal">
-      <column name="RATE" scale="6" precision="18" not-null="true" sql-type="NUMERIC" />
+      <column name="RATE" scale="6" precision="18" not-null="true" sql-type="NUMERIC"/>
     </property>
     <property name="EffectiveDate" type="java.util.Date">
-      <column name="EFFECTIVE_DATE" not-null="true" sql-type="TIMESTAMP" />
+      <column name="EFFECTIVE_DATE" not-null="true" sql-type="TIMESTAMP"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

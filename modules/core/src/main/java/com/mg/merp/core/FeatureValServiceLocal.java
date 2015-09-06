@@ -18,21 +18,20 @@ import com.mg.merp.core.model.FeatureVal;
 
 /**
  * Бизнес-компонент "Значения пользовательских полей"
- * 
+ *
  * @author leonova
  * @author Oleg V. Safonov
  * @version $Id: FeatureValServiceLocal.java,v 1.3 2007/01/25 15:40:10 safonov Exp $
  */
 public interface FeatureValServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<FeatureVal, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<FeatureVal, Integer> {
 
-	/**
-	 * загрузка значений перечислимого типа
-	 * 
-	 * @param featureId	идентификатор описателя пользовательского поля
-	 * @return	значения
-	 */
-	String[] loadEnumValues(int featureId);
+  /**
+   * загрузка значений перечислимого типа
+   *
+   * @param featureId идентификатор описателя пользовательского поля
+   * @return значения
+   */
+  String[] loadEnumValues(int featureId);
 
 }

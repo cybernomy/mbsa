@@ -13,25 +13,31 @@
 
 <!-- $Id: WorkScheduleMt.mfd.xml,v 1.4 2006/12/29 09:28:36 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.personnelref.support.ui.WorkScheduleMt" title="resource://com.mg.merp.personnelref.resources.formelements#WorkSchedule.FormMt.Title" helpTopic="personnelref#workshedule_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.personnelref.support.ui.WorkScheduleMt"
+          title="resource://com.mg.merp.personnelref.resources.formelements#WorkSchedule.FormMt.Title"
+          helpTopic="personnelref#workshedule_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		
-    	<jfd:field id="SCode" />
-		<jfd:field id="SName" />  
- 		<jfd:field id="BeginDate" />
-		<jfd:field id="EndDate" />
-		<jfd:field id="LeaveSchedule" />  	
-		<jfd:container id="workTimeNormKindFields" layout="jfd:box" alignment="expand_expand" label="resource://com.mg.merp.personnelref.resources.formelements#WorkTimeNorm.Title">			
-			<jfd:maintenanceTable id="workTimeNormKind" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#WorkTimeNorm.Title" >
-			</jfd:maintenanceTable> 
-		</jfd:container>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />	
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:field id="SCode"/>
+    <jfd:field id="SName"/>
+    <jfd:field id="BeginDate"/>
+    <jfd:field id="EndDate"/>
+    <jfd:field id="LeaveSchedule"/>
+    <jfd:container id="workTimeNormKindFields" layout="jfd:box" alignment="expand_expand"
+                   label="resource://com.mg.merp.personnelref.resources.formelements#WorkTimeNorm.Title">
+      <jfd:maintenanceTable id="workTimeNormKind" scroll="true" alignment="expand_expand"
+                            autoResize="subsequent_columns"
+                            tabTitle="resource://com.mg.merp.personnelref.resources.formelements#WorkTimeNorm.Title">
+      </jfd:maintenanceTable>
+    </jfd:container>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

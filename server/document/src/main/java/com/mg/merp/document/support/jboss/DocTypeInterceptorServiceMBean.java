@@ -18,13 +18,13 @@ import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис перехватчика для обслуживания типов документов
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: DocTypeInterceptorServiceMBean.java,v 1.1 2006/10/18 10:31:46 safonov Exp $
  */
 public interface DocTypeInterceptorServiceMBean extends ServiceMBean {
-	/**
-	 * наименование сервиса
-	 */
-	final static String SERVICE_NAME = "merp:document=DocTypeInterceptorService"; //$NON-NLS-1$
+  /**
+   * наименование сервиса
+   */
+  final static String SERVICE_NAME = "merp:document=DocTypeInterceptorService"; //$NON-NLS-1$
 }

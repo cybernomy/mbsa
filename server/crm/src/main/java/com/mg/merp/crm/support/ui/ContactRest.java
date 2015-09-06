@@ -22,43 +22,42 @@ import com.mg.merp.reference.model.NaturalPerson;
 
 /**
  * @author leonova
- * @version $Id: ContactRest.java,v 1.2 2006/09/06 05:23:16 leonova Exp $ 
+ * @version $Id: ContactRest.java,v 1.2 2006/09/06 05:23:16 leonova Exp $
  */
 public class ContactRest extends DefaultRestrictionForm {
-	@DataItemName("CRM.Contact.Contractor")
-	private Contractor contractorCode = null;
-	private Relation relationName = null;
-	@DataItemName("CRM.Contact.Person")
-	private NaturalPerson code = null;
-	
-	@Override
-	protected void doClearRestrictionItem() {
-		this.contractorCode = null;
-		this.relationName = null;
-		this.code = null;
-	}
+  @DataItemName("CRM.Contact.Contractor")
+  private Contractor contractorCode = null;
+  private Relation relationName = null;
+  @DataItemName("CRM.Contact.Person")
+  private NaturalPerson code = null;
 
-	/**
-	 * @return Returns the code.
-	 */
-	protected NaturalPerson getCode() {
-		return code;
-	}
+  @Override
+  protected void doClearRestrictionItem() {
+    this.contractorCode = null;
+    this.relationName = null;
+    this.code = null;
+  }
 
-	/**
-	 * @return Returns the contractorCode.
-	 */
-	protected Contractor getContractorCode() {
-		return contractorCode;
-	}
+  /**
+   * @return Returns the code.
+   */
+  protected NaturalPerson getCode() {
+    return code;
+  }
 
-	/**
-	 * @return Returns the relationName.
-	 */
-	protected Relation getRelationName() {
-		return relationName;
-	}
+  /**
+   * @return Returns the contractorCode.
+   */
+  protected Contractor getContractorCode() {
+    return contractorCode;
+  }
 
+  /**
+   * @return Returns the relationName.
+   */
+  protected Relation getRelationName() {
+    return relationName;
+  }
 
 
 }

@@ -20,26 +20,26 @@ import com.mg.merp.docflow.DocFlowPluginFactoryManager;
 
 /**
  * Локатор менеджера фабрик реализаций этапов ДО
- * 
+ *
  * @author Oleg V. Safonov
- * @version $Id: DocFlowPluginFactoryManagerServiceLocator.java,v 1.2 2007/01/29 14:09:17 safonov Exp $
+ * @version $Id: DocFlowPluginFactoryManagerServiceLocator.java,v 1.2 2007/01/29 14:09:17 safonov
+ *          Exp $
  */
 public class DocFlowPluginFactoryManagerServiceLocator {
-    private static volatile DocFlowPluginFactoryManager instance = null;
-    
-    /**
-     * поиск сервиса
-     * 
-     * @return	сервис
-     */
-    public static DocFlowPluginFactoryManager locate() {
-        if (instance == null)
-            try {
-                instance = (DocFlowPluginFactoryManager) ServerUtils.createMBeanProxy(DocFlowPluginFactoryManager.class, "merp:service=DocFlowPluginFactoryManagerService"); //$NON-NLS-1$
-            }
-            catch (Exception e) {
-                throw new ApplicationException(e);
-            }
-        return instance;
-    }
+  private static volatile DocFlowPluginFactoryManager instance = null;
+
+  /**
+   * поиск сервиса
+   *
+   * @return сервис
+   */
+  public static DocFlowPluginFactoryManager locate() {
+    if (instance == null)
+      try {
+        instance = (DocFlowPluginFactoryManager) ServerUtils.createMBeanProxy(DocFlowPluginFactoryManager.class, "merp:service=DocFlowPluginFactoryManagerService"); //$NON-NLS-1$
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 }

@@ -18,11 +18,11 @@ import com.mg.merp.finance.model.Center;
 
 /**
  * Бизнес-компонент "Центры финансового учета"
- * 
+ *
  * @author leonova
  * @version $Id: CenterServiceLocal.java,v 1.2 2007/08/16 14:05:29 safonov Exp $
  */
 public interface CenterServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<Center, Integer> {
+    extends com.mg.framework.api.DataBusinessObjectService<Center, Integer> {
 
 }

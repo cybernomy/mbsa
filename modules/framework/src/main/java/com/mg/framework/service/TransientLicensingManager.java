@@ -20,8 +20,8 @@ package com.mg.framework.service;
  */
 public class TransientLicensingManager extends LicenseException {
 
-	public TransientLicensingManager(String msg) {
-		super(msg);
-	}
-	
+  public TransientLicensingManager(String msg) {
+    super(msg);
+  }
+
 }

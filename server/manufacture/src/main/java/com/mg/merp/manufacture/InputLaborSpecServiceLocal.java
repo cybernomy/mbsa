@@ -19,16 +19,16 @@ import com.mg.merp.manufacture.model.InputDocumentSpec;
 
 /**
  * Бизнес-компонент "Спецификации актов на списание времени РС"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: InputLaborSpecServiceLocal.java,v 1.4 2007/08/06 12:46:24 safonov Exp $
  */
 public interface InputLaborSpecServiceLocal
-		extends InputSpecificationServiceLocal<InputDocumentSpec> {
+    extends InputSpecificationServiceLocal<InputDocumentSpec> {
 
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/manufacture/InputLaborSpec";
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/manufacture/InputLaborSpec";
 
 }

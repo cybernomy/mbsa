@@ -20,23 +20,23 @@ import com.mg.merp.manufacture.model.OutputProductHead;
 
 /**
  * Бизнес-компонент "Спецификация актов выпкуска готовой продукции"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: OutputProductSpecServiceLocal.java,v 1.4 2007/08/06 12:46:24 safonov Exp $
  */
 public interface OutputProductSpecServiceLocal
-		extends com.mg.merp.document.GoodsDocumentSpecification<DocSpec, Integer> {
+    extends com.mg.merp.document.GoodsDocumentSpecification<DocSpec, Integer> {
 
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/manufacture/OutputProductSpec";
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/manufacture/OutputProductSpec";
 
-	/**
-	 * создание спецификаций
-	 * 
-	 * @param docHead	документ
-	 */
-	void createSpecifications(OutputProductHead docHead);
+  /**
+   * создание спецификаций
+   *
+   * @param docHead документ
+   */
+  void createSpecifications(OutputProductHead docHead);
 
 }

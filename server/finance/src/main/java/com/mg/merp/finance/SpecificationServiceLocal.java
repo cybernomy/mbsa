@@ -19,26 +19,25 @@ import com.mg.merp.finance.model.OperationModel;
 import com.mg.merp.finance.model.Specification;
 
 /**
- * Сервис бизнес-компонента "Спецификации фин. операции" 
- * 
+ * Сервис бизнес-компонента "Спецификации фин. операции"
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: SpecificationServiceLocal.java,v 1.2 2007/03/12 07:39:36 sharapov Exp $
  */
 public interface SpecificationServiceLocal extends com.mg.framework.api.DataBusinessObjectService<Specification, Integer> {
 
-	/**
-	 * Создать спецификацию фин. операции по образцу
-	 * @param pattern - образец
-	 * @param finOperation - фин. операция
-	 */
-	void createSpecificationByPattern(OperationModel pattern, FinOperation finOperation);
+  /**
+   * Создать спецификацию фин. операции по образцу
+   *
+   * @param pattern      - образец
+   * @param finOperation - фин. операция
+   */
+  void createSpecificationByPattern(OperationModel pattern, FinOperation finOperation);
 
-	/**
-	 * Не реализована
-	 * @param finoperId
-	 * @param curRate
-	 */
-	void recalcSum(int finoperId,double curRate);
+  /**
+   * Не реализована
+   */
+  void recalcSum(int finoperId, double curRate);
 
 }

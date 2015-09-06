@@ -14,138 +14,141 @@
  */
 package com.mg.framework.api.report;
 
+import com.mg.framework.api.BusinessObjectService;
+
 import java.io.Serializable;
 import java.util.Locale;
 
-import com.mg.framework.api.BusinessObjectService;
-
 /**
  * Параметры запуска платформы MBIRT (Millennium BI and Report Tools)
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
  * @version $Id: RptProperties.java,v 1.8 2008/10/24 13:59:13 safonov Exp $
  */
 public interface RptProperties {
 
-	/**
-	 * зарезервированное имя параметра отчета для передачи идентификаторов сущностей
-	 * отмеченных пользователем или переданных в отчет
-	 */
-	final static String ENTITY_IDS_DATASET_PARAMETER = "__mg_entityIds";
-	
-	/**
-	 * зарезервированное имя параметра отчета для передачи имя бизнес-компонента
-	 * для которого выполняется отчет
-	 */
-	final static String BUSINESS_SERVICE_DATASET_PARAMETER = "__mg_businessService";
-	
-	/**
-	 * Формат представления отчёта
-	 */
-	enum OutputFormat {
-		HTML,
-		PDF,
-		XLS,
-		DOC,
-		PPT
-	}
+  /**
+   * зарезервированное имя параметра отчета для передачи идентификаторов сущностей отмеченных
+   * пользователем или переданных в отчет
+   */
+  final static String ENTITY_IDS_DATASET_PARAMETER = "__mg_entityIds";
 
-	/**
-	 * установка формата вывода, если не установлен то используется {@link OutputFormat#HTML}
-	 * 
-	 * @param outputFormat	формат вывода
-	 */
-	void setOutputFormat(OutputFormat outputFormat);
+  /**
+   * зарезервированное имя параметра отчета для передачи имя бизнес-компонента для которого
+   * выполняется отчет
+   */
+  final static String BUSINESS_SERVICE_DATASET_PARAMETER = "__mg_businessService";
 
-	/**
-	 * получить формат вывода
-	 * 
-	 * @return	формат вывода или <code>null</code> если не установлен
-	 */
-	OutputFormat getOutputFormat();
+  /**
+   * получить формат вывода
+   *
+   * @return формат вывода или <code>null</code> если не установлен
+   */
+  OutputFormat getOutputFormat();
 
-	/**
-	 * установка идентификаторов сущностей для которых выполняется генерация отчета
-	 * 
-	 * @see	#setBusinessService(Integer)
-	 * 
-	 * @param entityIds	идентификаторы сущностей, может быть <code>null</code>
-	 */
-	void setEntityIds(final Serializable[] entityIds);
+  /**
+   * установка формата вывода, если не установлен то используется {@link OutputFormat#HTML}
+   *
+   * @param outputFormat формат вывода
+   */
+  void setOutputFormat(OutputFormat outputFormat);
 
-	/**
-	 * получить идентификаторы сущностей для которых выполняется генерация отчета
-	 * 
-	 * @return идентификаторы сущностей или <code>null</code> если не установлены
-	 */
-	Serializable[] getEntityIds();
+  /**
+   * получить идентификаторы сущностей для которых выполняется генерация отчета
+   *
+   * @return идентификаторы сущностей или <code>null</code> если не установлены
+   */
+  Serializable[] getEntityIds();
 
-	/**
-	 * установка бизнес-компонента для которого выполняется генерация отчета 
-	 * 
-	 * @param businessService	бизнес-компонент, может быть <code>null</code>
-	 */
-	void setBusinessService(final BusinessObjectService businessService);
+  /**
+   * установка идентификаторов сущностей для которых выполняется генерация отчета
+   *
+   * @param entityIds идентификаторы сущностей, может быть <code>null</code>
+   * @see #setBusinessService(Integer)
+   */
+  void setEntityIds(final Serializable[] entityIds);
 
-	/**
-	 * получить бизнес-компонент для которого выполняется генерация отчета
-	 * 
-	 * @return	бизнес-компонент или <code>null</code> если не установлен
-	 */
-	BusinessObjectService getBusinessService();
+  /**
+   * получить бизнес-компонент для которого выполняется генерация отчета
+   *
+   * @return бизнес-компонент или <code>null</code> если не установлен
+   */
+  BusinessObjectService getBusinessService();
 
-	/**
-	 * установить локаль генерации отчета
-	 * 
-	 * @param locale	локаль
-	 */
-	void setLocale(Locale locale);
-	
-	/**
-	 * получить локаль генерации отчета
-	 * 
-	 * @return	локаль
-	 */
-	Locale getLocale();
+  /**
+   * установка бизнес-компонента для которого выполняется генерация отчета
+   *
+   * @param businessService бизнес-компонент, может быть <code>null</code>
+   */
+  void setBusinessService(final BusinessObjectService businessService);
 
-	/**
-	 * установить значение параметра отчета
-	 * 
-	 * @param name	имя параметра, если параметр с данным именем не описан в щаблоне, то значение будет игнорировано
-	 * @param value	значение параметра, тип значения должен совпадать с типом описанном в шаблоне отчета
-	 */
-	void setParameterValue(String name, Object value);
+  /**
+   * получить локаль генерации отчета
+   *
+   * @return локаль
+   */
+  Locale getLocale();
 
-	/**
-	 * получить значение параметра отчета установленного с помощью {@link #setParameterValue(String, Object)}
-	 * 
-	 * @param name	имя параметра
-	 * @return	значение параметра
-	 */
-	Object getParameterValue(String name);
+  /**
+   * установить локаль генерации отчета
+   *
+   * @param locale локаль
+   */
+  void setLocale(Locale locale);
 
-	/**
-	 * получить признак установки параметра отчета
-	 * 
-	 * @param name	имя параметра
-	 * @return	<code>true</code> если параметр был установлен с помощью {@link #setParameterValue(String, Object)}
-	 */
-	boolean hasParameterValue(String name);
+  /**
+   * установить значение параметра отчета
+   *
+   * @param name  имя параметра, если параметр с данным именем не описан в щаблоне, то значение
+   *              будет игнорировано
+   * @param value значение параметра, тип значения должен совпадать с типом описанном в шаблоне
+   *              отчета
+   */
+  void setParameterValue(String name, Object value);
 
-	/**
-	 * установить признак показа диалога запроса параметров, в случае если признак имеет значение <code>false</code>
-	 * то диалог не будет показан
-	 * 
-	 * @param show	признак показа диалога
-	 */
-	void setShowParametersDialog(boolean show);
+  /**
+   * получить значение параметра отчета установленного с помощью {@link #setParameterValue(String,
+   * Object)}
+   *
+   * @param name имя параметра
+   * @return значение параметра
+   */
+  Object getParameterValue(String name);
 
-	/**
-	 * получить признак показа диалога запроса параметров
-	 * 
-	 * @return	признак показа диалога
-	 */
-	boolean isShowParametersDialog();
+  /**
+   * получить признак установки параметра отчета
+   *
+   * @param name имя параметра
+   * @return <code>true</code> если параметр был установлен с помощью {@link
+   * #setParameterValue(String, Object)}
+   */
+  boolean hasParameterValue(String name);
+
+  /**
+   * получить признак показа диалога запроса параметров
+   *
+   * @return признак показа диалога
+   */
+  boolean isShowParametersDialog();
+
+  /**
+   * установить признак показа диалога запроса параметров, в случае если признак имеет значение
+   * <code>false</code> то диалог не будет показан
+   *
+   * @param show признак показа диалога
+   */
+  void setShowParametersDialog(boolean show);
+
+  /**
+   * Формат представления отчёта
+   */
+  enum OutputFormat {
+    HTML,
+    PDF,
+    XLS,
+    DOC,
+    PPT
+  }
 
 }

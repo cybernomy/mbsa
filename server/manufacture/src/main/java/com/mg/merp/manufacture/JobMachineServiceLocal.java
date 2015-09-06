@@ -18,15 +18,14 @@ import com.mg.merp.manufacture.model.JobMachine;
 
 /**
  * Бизнес-компонент "Оборудование ЗНП"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: JobMachineServiceLocal.java,v 1.3 2007/07/30 10:28:17 safonov Exp $
  */
 public interface JobMachineServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<JobMachine, Integer>
-{
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/manufacture/JobMachine";
+    extends com.mg.framework.api.DataBusinessObjectService<JobMachine, Integer> {
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/manufacture/JobMachine";
 }

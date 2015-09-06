@@ -20,13 +20,13 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  * @author leonova
  * @version $Id: FamilyStatusKindSearchHelp.java,v 1.2 2006/07/10 12:33:33 leonova Exp $
  */
-public class FamilyStatusKindSearchHelp extends DefaultLegacySearchHelp{
+public class FamilyStatusKindSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {		
-		return "merp/reference/FamilyStatusKind";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/reference/FamilyStatusKind";
+  }
 }

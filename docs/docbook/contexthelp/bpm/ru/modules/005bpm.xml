@@ -7,31 +7,49 @@
 ]> -->
 <chapter id="005bpm">
   <title>Назначения</title>
-    
-    <para>Запущенный <link linkend="003bpm">экземпляр</link> генерирует назначения 
-    согласно <link linkend="002bpm">сценарию бизнес-процесса</link>. </para>
-    
-    <para>Вход в раздел &quot;Назначения&quot; осуществляется через 
-	  главное меню системы: <menuchoice>
-	  <guimenu>&cont_centr;</guimenu>
-	  <guisubmenu>&bpm;</guisubmenu>
-	  <guimenuitem>Назначения</guimenuitem></menuchoice>.</para>
-    
-	  <screenshot><mediaobject><imageobject>
-	  <imagedata fileref="images/assignment.gif"/></imageobject>
-	  </mediaobject> </screenshot>
-	    
-    <para>Пользователь системы, явно указанный в каких-либо <link linkend="004bpm">ресурсах</link>, или 
-    принадлежащий к Группам, указанным в ресурсах, в этом списке увидит записи о задачах, в выполнении 
-    которых он может принять участие. </para>
-    
-    <para>Для выполнения Назначения нужно установить курсор на строку и нажать кнопку 
-    <guibutton>Запустить</guibutton> (или выбрать аналогичный пункт в контекстном меню). Начнётся 
-    выполнение процесса. </para>
-    
-    <para>Пункт контекстного меню <guibutton>Завершить</guibutton> позволяет завершить назначение 
-    без его выполнения. </para>
-    
-    <para>После выполнения назначение исчезает из списка назначений. </para>
 
-  </chapter>
+  <para>Запущенный
+    <link linkend="003bpm">экземпляр</link>
+    генерирует назначения
+    согласно<link linkend="002bpm">сценарию бизнес-процесса</link>.
+  </para>
+
+  <para>Вход в раздел &quot;Назначения&quot; осуществляется через
+    главное меню системы:
+    <menuchoice>
+      <guimenu>&cont_centr;</guimenu>
+      <guisubmenu>&bpm;</guisubmenu>
+      <guimenuitem>Назначения</guimenuitem>
+    </menuchoice>
+    .
+  </para>
+
+  <screenshot>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/assignment.gif"/>
+      </imageobject>
+    </mediaobject>
+  </screenshot>
+
+  <para>Пользователь системы, явно указанный в каких-либо<link linkend="004bpm">ресурсах</link>, или
+    принадлежащий к Группам, указанным в ресурсах, в этом списке увидит записи о задачах, в
+    выполнении
+    которых он может принять участие.
+  </para>
+
+  <para>Для выполнения Назначения нужно установить курсор на строку и нажать кнопку
+    <guibutton>Запустить</guibutton>
+    (или выбрать аналогичный пункт в контекстном меню). Начнётся
+    выполнение процесса.
+  </para>
+
+  <para>Пункт контекстного меню
+    <guibutton>Завершить</guibutton>
+    позволяет завершить назначение
+    без его выполнения.
+  </para>
+
+  <para>После выполнения назначение исчезает из списка назначений.</para>
+
+</chapter>

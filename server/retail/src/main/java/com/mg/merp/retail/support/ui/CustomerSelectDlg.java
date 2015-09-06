@@ -14,33 +14,33 @@
  */
 package com.mg.merp.retail.support.ui;
 
-import java.util.List;
-
 import com.mg.framework.generic.ui.DefaultDialog;
 import com.mg.framework.support.ui.widget.DefaultTableController;
 import com.mg.merp.reference.model.Contractor;
 
+import java.util.List;
+
 /**
  * Контроллер диалога "Выбор покупателя"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: CustomerSelectDlg.java,v 1.1 2007/10/05 07:35:57 sharapov Exp $
  */
 public class CustomerSelectDlg extends DefaultDialog {
-	
-	private DefaultTableController table;
-	
-	public CustomerSelectDlg() {
-		table = new DefaultTableController(new CustomerSelectTableModel());
-	}
-	
-	public void executeDlg(List<CustomerSelectTableModelItem> tableModelItems) {
-		((CustomerSelectTableModel) table.getModel()).setTableList(tableModelItems);
-		this.execute();
-	}
-	
-	public Contractor getSelectedCustomer() {
-		return ((CustomerSelectTableModel) table.getModel()).getSelectedCustomer();
-	}
-	
+
+  private DefaultTableController table;
+
+  public CustomerSelectDlg() {
+    table = new DefaultTableController(new CustomerSelectTableModel());
+  }
+
+  public void executeDlg(List<CustomerSelectTableModelItem> tableModelItems) {
+    ((CustomerSelectTableModel) table.getModel()).setTableList(tableModelItems);
+    this.execute();
+  }
+
+  public Contractor getSelectedCustomer() {
+    return ((CustomerSelectTableModel) table.getModel()).getSelectedCustomer();
+  }
+
 }

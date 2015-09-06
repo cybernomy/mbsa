@@ -1,46 +1,46 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.reference.model.BankRequis" table="BANKREQUIS">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <composite-id name="id" class="com.mg.merp.reference.model.BankRequisId">
       <key-property name="Id" type="java.lang.Integer">
-        <column name="ID" not-null="false" sql-type="INTEGER" />
+        <column name="ID" not-null="false" sql-type="INTEGER"/>
       </key-property>
       <key-property name="Partner" type="java.lang.Integer">
-        <column name="PARTNER_ID" not-null="false" sql-type="INTEGER" />
+        <column name="PARTNER_ID" not-null="false" sql-type="INTEGER"/>
       </key-property>
       <key-property name="Bank" type="java.lang.String">
-        <column name="BANK" length="256" not-null="false" sql-type="VARCHAR" />
+        <column name="BANK" length="256" not-null="false" sql-type="VARCHAR"/>
       </key-property>
       <key-property name="BankAcc" type="java.lang.String">
-        <column name="BANK_ACC" length="30" not-null="false" sql-type="VARCHAR" />
+        <column name="BANK_ACC" length="30" not-null="false" sql-type="VARCHAR"/>
       </key-property>
       <key-property name="CorrAcc" type="java.lang.String">
-        <column name="CORR_ACC" length="30" not-null="false" sql-type="VARCHAR" />
+        <column name="CORR_ACC" length="30" not-null="false" sql-type="VARCHAR"/>
       </key-property>
       <key-property name="BankAddr" type="java.lang.String">
-        <column name="BANK_ADDR" length="256" not-null="false" sql-type="VARCHAR" />
+        <column name="BANK_ADDR" length="256" not-null="false" sql-type="VARCHAR"/>
       </key-property>
       <key-property name="BankCity" type="java.lang.String">
-        <column name="BANK_CITY" length="256" not-null="false" sql-type="VARCHAR" />
+        <column name="BANK_CITY" length="256" not-null="false" sql-type="VARCHAR"/>
       </key-property>
       <key-property name="BankIdent" type="java.lang.String">
-        <column name="BANK_IDENT" length="30" not-null="false" sql-type="VARCHAR" />
+        <column name="BANK_IDENT" length="30" not-null="false" sql-type="VARCHAR"/>
       </key-property>
       <key-property name="IsDefault" type="boolean">
-        <column name="IS_DEFAULT" not-null="false" sql-type="SMALLINT" />
+        <column name="IS_DEFAULT" not-null="false" sql-type="SMALLINT"/>
       </key-property>
       <key-property name="BankBranch" type="java.lang.String">
-        <column name="BANK_BRANCH" length="256" not-null="false" sql-type="VARCHAR" />
+        <column name="BANK_BRANCH" length="256" not-null="false" sql-type="VARCHAR"/>
       </key-property>
       <key-property name="Unid" type="java.lang.String">
-        <column name="UNID" length="32" not-null="false" sql-type="VARCHAR" />
+        <column name="UNID" length="32" not-null="false" sql-type="VARCHAR"/>
       </key-property>
     </composite-id>
   </class>

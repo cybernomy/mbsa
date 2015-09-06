@@ -13,27 +13,30 @@
 
 <!-- $Id: SysDomainMt.mfd.xml,v 1.1 2008/03/03 13:07:52 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.core.resources.formelements#SysDomain.FormMt.Title" helpTopic="core#sysdomain_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.core.resources.formelements#SysDomain.FormMt.Title"
+          helpTopic="core#sysdomain_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="Name" />
-		<jfd:field id="BuiltInType" sameLine="true" />
-		<jfd:field id="Length" />
-		<jfd:field id="Lowercase" sameLine="true" />
-		<jfd:field id="NumberOfPlaces" />
-		<jfd:field id="NumberOfDecimalPlaces" sameLine="true" />
-		<jfd:field id="Mandatory" />
-		<jfd:field id="Sign" sameLine="true" />
-		<jfd:field id="ConversionRoutine" />
-		<jfd:field id="FixedValuesImpl" />
-		<jfd:field id="DefaultValueImpl"/>
-		<jfd:field id="Description"/>
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Name"/>
+    <jfd:field id="BuiltInType" sameLine="true"/>
+    <jfd:field id="Length"/>
+    <jfd:field id="Lowercase" sameLine="true"/>
+    <jfd:field id="NumberOfPlaces"/>
+    <jfd:field id="NumberOfDecimalPlaces" sameLine="true"/>
+    <jfd:field id="Mandatory"/>
+    <jfd:field id="Sign" sameLine="true"/>
+    <jfd:field id="ConversionRoutine"/>
+    <jfd:field id="FixedValuesImpl"/>
+    <jfd:field id="DefaultValueImpl"/>
+    <jfd:field id="Description"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

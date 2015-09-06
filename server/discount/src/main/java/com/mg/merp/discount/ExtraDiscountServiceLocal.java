@@ -18,16 +18,16 @@ import com.mg.merp.discount.model.ExtraDiscount;
 
 /**
  * Бизнес-компонент "Дополнительные скидки дисконтной карты"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: ExtraDiscountServiceLocal.java,v 1.3 2007/10/30 13:55:56 sharapov Exp $
  */
 public interface ExtraDiscountServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ExtraDiscount, Integer> {
-	
-	/**
-	 * имя сервиса
-	 */
-	final static String SERVICE_NAME = "merp/discount/ExtraDiscount"; //$NON-NLS-1$
-	
+
+  /**
+   * имя сервиса
+   */
+  final static String SERVICE_NAME = "merp/discount/ExtraDiscount"; //$NON-NLS-1$
+
 }

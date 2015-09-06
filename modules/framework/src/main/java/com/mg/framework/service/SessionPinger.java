@@ -19,9 +19,9 @@ import com.mg.framework.api.Session;
 
 /**
  * @author Oleg V. Safonov
- *
  */
 public interface SessionPinger {
-    public void ping() throws ApplicationException;
-    public void setSession(Session session);
+  public void ping() throws ApplicationException;
+
+  public void setSession(Session session);
 }

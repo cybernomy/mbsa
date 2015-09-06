@@ -13,21 +13,35 @@
 
 <!-- $Id: GoodsSelectionForm.mfd.xml,v 1.3 2008/09/02 06:41:15 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.document.support.ui.GoodsSelectionForm" orientation="ver" width="500" height="350" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.document.support.ui.GoodsSelectionForm" orientation="ver"
+          width="500" height="350">
 
-	<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
-		<jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton" actionListener="Choose" />
-		<jfd:button id="closeButton" text="resource://com.mg.framework.resources.messages#CloseButton" actionListener="Close" />
-		<jfd:button id="refreshButton" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="Refresh" />
-		<jfd:button id="showStockSituationButton" text="resource://com.mg.merp.reference.resources.formelements#Warehouse.ShowStockSituation" actionListener="ShowStockSituation" />
-	</jfd:toolBar>
+  <jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+    <jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton"
+                actionListener="Choose"/>
+    <jfd:button id="closeButton" text="resource://com.mg.framework.resources.messages#CloseButton"
+                actionListener="Close"/>
+    <jfd:button id="refreshButton"
+                text="resource://com.mg.framework.resources.messages#RefreshButton"
+                actionListener="Refresh"/>
+    <jfd:button id="showStockSituationButton"
+                text="resource://com.mg.merp.reference.resources.formelements#Warehouse.ShowStockSituation"
+                actionListener="ShowStockSituation"/>
+  </jfd:toolBar>
 
-	<jfd:table id="goodsTable" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
-		<jfd:popupMenu>
-			<jfd:menuItem id="showStockSituationItem" text="resource://com.mg.merp.reference.resources.formelements#Warehouse.ShowStockSituation" keyStroke="F3" actionListener="ShowStockSituation" />
-			<jfd:separator/>
-			<jfd:menuItem id="refreshItem" text="resource://com.mg.framework.resources.messages#RefreshButton" icon="com/mg/framework/resources/refreshbuttonicon.png" keyStroke="F5" actionListener="Refresh"/>
-		</jfd:popupMenu>
-	</jfd:table>
+  <jfd:table id="goodsTable" alignment="expand_expand" scroll="true"
+             autoResize="subsequent_columns">
+    <jfd:popupMenu>
+      <jfd:menuItem id="showStockSituationItem"
+                    text="resource://com.mg.merp.reference.resources.formelements#Warehouse.ShowStockSituation"
+                    keyStroke="F3" actionListener="ShowStockSituation"/>
+      <jfd:separator/>
+      <jfd:menuItem id="refreshItem"
+                    text="resource://com.mg.framework.resources.messages#RefreshButton"
+                    icon="com/mg/framework/resources/refreshbuttonicon.png" keyStroke="F5"
+                    actionListener="Refresh"/>
+    </jfd:popupMenu>
+  </jfd:table>
 
 </jfd:form>

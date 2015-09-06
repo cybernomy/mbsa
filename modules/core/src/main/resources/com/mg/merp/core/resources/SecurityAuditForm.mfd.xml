@@ -13,31 +13,43 @@
 
 <!-- $Id: SecurityAuditForm.mfd.xml,v 1.1 2007/10/19 06:51:33 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.core.support.ui.SecurityAuditForm" title="resource://com.mg.merp.core.resources.formelements#SecurityAuditForm.Title" orientation="ver" verticalGap="5" helpTopic="core#security_audit_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.core.support.ui.SecurityAuditForm"
+          title="resource://com.mg.merp.core.resources.formelements#SecurityAuditForm.Title"
+          orientation="ver" verticalGap="5" helpTopic="core#security_audit_html">
 
-	<jfd:toolBar id="toolBar" alignment="expand_top">
-		<jfd:button id="closeButton" text="resource://com.mg.framework.resources.messages#CloseButton" actionListener="Close" />
-		<jfd:button id="refreshButton" text="resource://com.mg.framework.resources.messages#RefreshButton" actionListener="Refresh" />
-		<jfd:filler id="buttonsFiller" type="horizontalGlue" />
-		<jfd:label id="eventDateFromLabel" text="resource://com.mg.merp.core.resources.formelements#EntityAuditForm.EventFromDate" />
-		<jfd:dateTimeField id="eventDateFrom" />
-		<jfd:label id="eventDateTillLabel" text="resource://com.mg.merp.core.resources.formelements#EntityAuditForm.EventTillDate" />
-		<jfd:dateTimeField id="eventDateTill" />
-		<jfd:label id="userNameLabel" text="resource://com.mg.merp.core.resources.formelements#EntityAuditForm.UserName" />
-		<jfd:textField id="userName" length="31" />
-		<jfd:checkBox id="auditTypeError" text="resource://com.mg.merp.core.resources.dataitemlabels#SecurityAuditType.Error" />
-		<jfd:checkBox id="auditTypeWarning" text="resource://com.mg.merp.core.resources.dataitemlabels#SecurityAuditType.Warning" />
-		<jfd:checkBox id="auditTypeInformation" text="resource://com.mg.merp.core.resources.dataitemlabels#SecurityAuditType.Information" />
-	</jfd:toolBar>
+  <jfd:toolBar id="toolBar" alignment="expand_top">
+    <jfd:button id="closeButton" text="resource://com.mg.framework.resources.messages#CloseButton"
+                actionListener="Close"/>
+    <jfd:button id="refreshButton"
+                text="resource://com.mg.framework.resources.messages#RefreshButton"
+                actionListener="Refresh"/>
+    <jfd:filler id="buttonsFiller" type="horizontalGlue"/>
+    <jfd:label id="eventDateFromLabel"
+               text="resource://com.mg.merp.core.resources.formelements#EntityAuditForm.EventFromDate"/>
+    <jfd:dateTimeField id="eventDateFrom"/>
+    <jfd:label id="eventDateTillLabel"
+               text="resource://com.mg.merp.core.resources.formelements#EntityAuditForm.EventTillDate"/>
+    <jfd:dateTimeField id="eventDateTill"/>
+    <jfd:label id="userNameLabel"
+               text="resource://com.mg.merp.core.resources.formelements#EntityAuditForm.UserName"/>
+    <jfd:textField id="userName" length="31"/>
+    <jfd:checkBox id="auditTypeError"
+                  text="resource://com.mg.merp.core.resources.dataitemlabels#SecurityAuditType.Error"/>
+    <jfd:checkBox id="auditTypeWarning"
+                  text="resource://com.mg.merp.core.resources.dataitemlabels#SecurityAuditType.Warning"/>
+    <jfd:checkBox id="auditTypeInformation"
+                  text="resource://com.mg.merp.core.resources.dataitemlabels#SecurityAuditType.Information"/>
+  </jfd:toolBar>
 
-	<jfd:table id="securityAudit" scroll="true"  alignment="expand_expand">
-		<jfd:columns>
-			<jfd:column fieldName="UserName" />
-			<jfd:column fieldName="EventDateTime" />
-			<jfd:column fieldName="AuditBean" />
-			<jfd:column fieldName="AuditType" />
-			<jfd:column fieldName="Details" />
-		</jfd:columns>
-	</jfd:table>
+  <jfd:table id="securityAudit" scroll="true" alignment="expand_expand">
+    <jfd:columns>
+      <jfd:column fieldName="UserName"/>
+      <jfd:column fieldName="EventDateTime"/>
+      <jfd:column fieldName="AuditBean"/>
+      <jfd:column fieldName="AuditType"/>
+      <jfd:column fieldName="Details"/>
+    </jfd:columns>
+  </jfd:table>
 
 </jfd:form>

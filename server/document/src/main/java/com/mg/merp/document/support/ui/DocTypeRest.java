@@ -20,40 +20,39 @@ import com.mg.merp.document.model.DocSection;
 
 /**
  * Контроллер формы условий отбора типов документов
- * 
+ *
  * @author leonova
- * @version $Id: DocTypeRest.java,v 1.2 2006/10/17 12:31:41 leonova Exp $ 
+ * @version $Id: DocTypeRest.java,v 1.2 2006/10/17 12:31:41 leonova Exp $
  */
 public class DocTypeRest extends DefaultRestrictionForm {
 
-	@DataItemName("Document.DocType.Code")
-	private String code = "";
-	private DocSection docSection = null;
+  @DataItemName("Document.DocType.Code")
+  private String code = "";
+  private DocSection docSection = null;
 
 
-	@Override
-	protected void doClearRestrictionItem() {
-		this.code = "";
-		this.docSection = null;
-		
-	}
+  @Override
+  protected void doClearRestrictionItem() {
+    this.code = "";
+    this.docSection = null;
+
+  }
 
 
-	/**
-	 * @return Returns the code.
-	 */
-	protected String getCode() {
-		return code;
-	}
+  /**
+   * @return Returns the code.
+   */
+  protected String getCode() {
+    return code;
+  }
 
 
-	/**
-	 * @return Returns the docSection.
-	 */
-	protected DocSection getDocSection() {
-		return docSection;
-	}
-
+  /**
+   * @return Returns the docSection.
+   */
+  protected DocSection getDocSection() {
+    return docSection;
+  }
 
 
 }

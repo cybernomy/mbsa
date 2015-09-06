@@ -14,15 +14,15 @@
  */
 package com.mg.merp.report.service.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.merp.report.service.RptBIRTDeployer;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * @author Valentin A. Poroxnenko
  * @version $Id:
  */
 public interface RptBIRTDeployerServiceMBean extends ServiceMBean,
-		RptBIRTDeployer {
+    RptBIRTDeployer {
 
 }

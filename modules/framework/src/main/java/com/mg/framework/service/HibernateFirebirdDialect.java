@@ -20,21 +20,21 @@ import org.hibernate.exception.ViolatedConstraintNameExtracter;
 
 /**
  * Диалект СУБД Firebird
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: HibernateFirebirdDialect.java,v 1.2 2007/04/03 14:41:15 safonov Exp $
  */
 public class HibernateFirebirdDialect extends FirebirdDialect {
-	private static ViolatedConstraintNameExtracter EXTRACTER = new InterbaseFirebirdViolatedConstraintNameExtracter();
+  private static ViolatedConstraintNameExtracter EXTRACTER = new InterbaseFirebirdViolatedConstraintNameExtracter();
 
-	public HibernateFirebirdDialect() {
-		super();
-		
-		registerFunction("nvl", new StandardSQLFunction("COALESCE"));
-	}
-	
-	public ViolatedConstraintNameExtracter getViolatedConstraintNameExtracter() {
-		return EXTRACTER;
-	}
+  public HibernateFirebirdDialect() {
+    super();
+
+    registerFunction("nvl", new StandardSQLFunction("COALESCE"));
+  }
+
+  public ViolatedConstraintNameExtracter getViolatedConstraintNameExtracter() {
+    return EXTRACTER;
+  }
 
 }

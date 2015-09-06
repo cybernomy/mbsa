@@ -23,24 +23,24 @@ import com.mg.merp.mfreference.model.CostDetail;
  * @version $Id: CostDetailTableController.java,v 1.1 2007/07/30 10:24:19 safonov Exp $
  */
 public class CostDetailTableController extends DefaultTableController {
-	private String propertyName = "StandartCostDetail";
+  private String propertyName = "StandartCostDetail";
 
-	public CostDetailTableController() {
-		super(new CostDetailMaintenanceEJBQLTableModel());
-	}
+  public CostDetailTableController() {
+    super(new CostDetailMaintenanceEJBQLTableModel());
+  }
 
-	public CostDetailTableController(String propertyName) {
-		super(new CostDetailMaintenanceEJBQLTableModel());
-		this.propertyName = propertyName;
-	}
+  public CostDetailTableController(String propertyName) {
+    super(new CostDetailMaintenanceEJBQLTableModel());
+    this.propertyName = propertyName;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.support.ui.widget.DefaultTableController#fireMasterChange(com.mg.framework.api.ui.ModelChangeEvent)
-	 */
-	@Override
-	public void fireMasterChange(ModelChangeEvent event) {
-		((CostDetailMaintenanceEJBQLTableModel) tableModel).setCostDetail((CostDetail) event.getEntity().getAttribute(propertyName));
-		super.fireMasterChange(event);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.support.ui.widget.DefaultTableController#fireMasterChange(com.mg.framework.api.ui.ModelChangeEvent)
+   */
+  @Override
+  public void fireMasterChange(ModelChangeEvent event) {
+    ((CostDetailMaintenanceEJBQLTableModel) tableModel).setCostDetail((CostDetail) event.getEntity().getAttribute(propertyName));
+    super.fireMasterChange(event);
+  }
 
 }

@@ -22,90 +22,95 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Core.SysClass")
 public class SysClass extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysModule SysModule;
+  private com.mg.merp.core.model.SysModule SysModule;
 
-	private java.lang.String BeanName;
+  private java.lang.String BeanName;
 
-	private java.lang.String Description;
+  private java.lang.String Description;
 
-	private java.util.Set<SysMethod> methods;
+  private java.util.Set<SysMethod> methods;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public SysClass() {
-	}
+  /**
+   * default constructor
+   */
+  public SysClass() {
+  }
 
-	/** constructor with id */
-	public SysClass(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public SysClass(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysModule getSysModule() {
-		return this.SysModule;
-	}
+  /**
+   *
+   */
 
-	public void setSysModule(com.mg.merp.core.model.SysModule SysModule) {
-		this.SysModule = SysModule;
-	}
+  public com.mg.merp.core.model.SysModule getSysModule() {
+    return this.SysModule;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Core.BeanName")
-	public java.lang.String getBeanName() {
-		return this.BeanName;
-	}
+  public void setSysModule(com.mg.merp.core.model.SysModule SysModule) {
+    this.SysModule = SysModule;
+  }
 
-	public void setBeanName(java.lang.String BeanName) {
-		this.BeanName = BeanName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Core.BeanName")
+  public java.lang.String getBeanName() {
+    return this.BeanName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Core.Description")
-	public java.lang.String getDescription() {
-		return this.Description;
-	}
+  public void setBeanName(java.lang.String BeanName) {
+    this.BeanName = BeanName;
+  }
 
-	public void setDescription(java.lang.String Description) {
-		this.Description = Description;
-	}
+  /**
+   *
+   */
+  @DataItemName("Core.Description")
+  public java.lang.String getDescription() {
+    return this.Description;
+  }
 
-	/**
-	 * 
-	 */
+  public void setDescription(java.lang.String Description) {
+    this.Description = Description;
+  }
 
-	public java.util.Set<SysMethod> getMethods() {
-		return this.methods;
-	}
+  /**
+   *
+   */
 
-	public void setMethods(java.util.Set<SysMethod> methods) {
-		this.methods = methods;
-	}
+  public java.util.Set<SysMethod> getMethods() {
+    return this.methods;
+  }
+
+  public void setMethods(java.util.Set<SysMethod> methods) {
+    this.methods = methods;
+  }
 }

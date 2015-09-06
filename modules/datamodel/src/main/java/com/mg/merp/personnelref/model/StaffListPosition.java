@@ -18,266 +18,271 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Модель бизнес-компонента "Должности в штатном расписании"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: StaffListPosition.java,v 1.7 2007/07/09 07:47:11 sharapov Exp $
  */
 @DataItemName("PersonnelRef.StaffListPosition") //$NON-NLS-1$
 public class StaffListPosition extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.personnelref.model.PrefPosition Position;
-	private java.lang.String SlPositionUniqueId;
+  private com.mg.merp.personnelref.model.PrefPosition Position;
+  private java.lang.String SlPositionUniqueId;
 
-	private com.mg.merp.personnelref.model.WorkSchedule WorkSchedule;
+  private com.mg.merp.personnelref.model.WorkSchedule WorkSchedule;
 
-	private com.mg.merp.personnelref.model.TaxCalcKind TaxCalcKind;
+  private com.mg.merp.personnelref.model.TaxCalcKind TaxCalcKind;
 
-	private com.mg.merp.personnelref.model.StaffCategory StaffCategory;
+  private com.mg.merp.personnelref.model.StaffCategory StaffCategory;
 
-	private com.mg.merp.personnelref.model.WorkCondition WorkCondition;
+  private com.mg.merp.personnelref.model.WorkCondition WorkCondition;
 
-	private com.mg.merp.personnelref.model.StaffListUnit StaffListUnit;
+  private com.mg.merp.personnelref.model.StaffListUnit StaffListUnit;
 
-	private com.mg.merp.personnelref.model.CostsAnl CostsAnl1;
-	private com.mg.merp.personnelref.model.CostsAnl CostsAnl2;
-	private com.mg.merp.personnelref.model.CostsAnl CostsAnl3;
-	private com.mg.merp.personnelref.model.CostsAnl CostsAnl4;
-	private com.mg.merp.personnelref.model.CostsAnl CostsAnl5;
+  private com.mg.merp.personnelref.model.CostsAnl CostsAnl1;
+  private com.mg.merp.personnelref.model.CostsAnl CostsAnl2;
+  private com.mg.merp.personnelref.model.CostsAnl CostsAnl3;
+  private com.mg.merp.personnelref.model.CostsAnl CostsAnl4;
+  private com.mg.merp.personnelref.model.CostsAnl CostsAnl5;
 
-	private java.util.Date BeginDate;
-	private java.util.Date EndDate;
+  private java.util.Date BeginDate;
+  private java.util.Date EndDate;
 
-	private java.math.BigDecimal RateNumber;
-	private java.lang.Integer HolidayNumber;
+  private java.math.BigDecimal RateNumber;
+  private java.lang.Integer HolidayNumber;
 
-	private com.mg.merp.core.model.SysClient SysClient;
-
-
-	// Constructors
-
-	/** default constructor */
-	public StaffListPosition() {
-	}
-
-	/** constructor with id */
-	public StaffListPosition(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  private com.mg.merp.core.model.SysClient SysClient;
 
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID") //$NON-NLS-1$
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Constructors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * default constructor
+   */
+  public StaffListPosition() {
+  }
 
-	/**
-	 * 
-	 */
-	//@DataItemName("PersonnelRef.Position.CostsAnl")
-	@DataItemName("Personnelref.CostsAnl1") //$NON-NLS-1$
-	public com.mg.merp.personnelref.model.CostsAnl getCostsAnl1() {
-		return this.CostsAnl1;
-	}
+  /**
+   * constructor with id
+   */
+  public StaffListPosition(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public void setCostsAnl1(com.mg.merp.personnelref.model.CostsAnl PrefCostsAnl) {
-		this.CostsAnl1 = PrefCostsAnl;
-	}
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.personnelref.model.WorkCondition getWorkCondition() {
-		return this.WorkCondition;
-	}
+  // Property accessors
 
-	public void setWorkCondition(com.mg.merp.personnelref.model.WorkCondition PrefWorkCondition) {
-		this.WorkCondition = PrefWorkCondition;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID") //$NON-NLS-1$
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Personnelref.CostsAnl3") //$NON-NLS-1$
-	public com.mg.merp.personnelref.model.CostsAnl getCostsAnl3() {
-		return this.CostsAnl3;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public void setCostsAnl3(com.mg.merp.personnelref.model.CostsAnl PrefCostsAnl_1) {
-		this.CostsAnl3 = PrefCostsAnl_1;
-	}
+  /**
+   *
+   */
+  //@DataItemName("PersonnelRef.Position.CostsAnl")
+  @DataItemName("Personnelref.CostsAnl1") //$NON-NLS-1$
+  public com.mg.merp.personnelref.model.CostsAnl getCostsAnl1() {
+    return this.CostsAnl1;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Personnelref.CostsAnl2") //$NON-NLS-1$
-	public com.mg.merp.personnelref.model.CostsAnl getCostsAnl2() {
-		return this.CostsAnl2;
-	}
+  public void setCostsAnl1(com.mg.merp.personnelref.model.CostsAnl PrefCostsAnl) {
+    this.CostsAnl1 = PrefCostsAnl;
+  }
 
-	public void setCostsAnl2(com.mg.merp.personnelref.model.CostsAnl PrefCostsAnl_2) {
-		this.CostsAnl2 = PrefCostsAnl_2;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.personnelref.model.WorkCondition getWorkCondition() {
+    return this.WorkCondition;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.personnelref.model.StaffCategory getStaffCategory() {
-		return this.StaffCategory;
-	}
+  public void setWorkCondition(com.mg.merp.personnelref.model.WorkCondition PrefWorkCondition) {
+    this.WorkCondition = PrefWorkCondition;
+  }
 
-	public void setStaffCategory(com.mg.merp.personnelref.model.StaffCategory PrefStaffCategory) {
-		this.StaffCategory = PrefStaffCategory;
-	}
+  /**
+   *
+   */
+  @DataItemName("Personnelref.CostsAnl3") //$NON-NLS-1$
+  public com.mg.merp.personnelref.model.CostsAnl getCostsAnl3() {
+    return this.CostsAnl3;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Personnelref.CostsAnl4") //$NON-NLS-1$
-	public com.mg.merp.personnelref.model.CostsAnl getCostsAnl4() {
-		return this.CostsAnl4;
-	}
+  public void setCostsAnl3(com.mg.merp.personnelref.model.CostsAnl PrefCostsAnl_1) {
+    this.CostsAnl3 = PrefCostsAnl_1;
+  }
 
-	public void setCostsAnl4(com.mg.merp.personnelref.model.CostsAnl PrefCostsAnl_3) {
-		this.CostsAnl4 = PrefCostsAnl_3;
-	}
+  /**
+   *
+   */
+  @DataItemName("Personnelref.CostsAnl2") //$NON-NLS-1$
+  public com.mg.merp.personnelref.model.CostsAnl getCostsAnl2() {
+    return this.CostsAnl2;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  public void setCostsAnl2(com.mg.merp.personnelref.model.CostsAnl PrefCostsAnl_2) {
+    this.CostsAnl2 = PrefCostsAnl_2;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.personnelref.model.StaffCategory getStaffCategory() {
+    return this.StaffCategory;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.personnelref.model.TaxCalcKind getTaxCalcKind() {
-		return this.TaxCalcKind;
-	}
+  public void setStaffCategory(com.mg.merp.personnelref.model.StaffCategory PrefStaffCategory) {
+    this.StaffCategory = PrefStaffCategory;
+  }
 
-	public void setTaxCalcKind(com.mg.merp.personnelref.model.TaxCalcKind PrefTaxCalcKind) {
-		this.TaxCalcKind = PrefTaxCalcKind;
-	}
+  /**
+   *
+   */
+  @DataItemName("Personnelref.CostsAnl4") //$NON-NLS-1$
+  public com.mg.merp.personnelref.model.CostsAnl getCostsAnl4() {
+    return this.CostsAnl4;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.personnelref.model.PrefPosition getPosition() {
-		return this.Position;
-	}
+  public void setCostsAnl4(com.mg.merp.personnelref.model.CostsAnl PrefCostsAnl_3) {
+    this.CostsAnl4 = PrefCostsAnl_3;
+  }
 
-	public void setPosition(com.mg.merp.personnelref.model.PrefPosition PrefPosition) {
-		this.Position = PrefPosition;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Personnelref.CostsAnl5") //$NON-NLS-1$
-	public com.mg.merp.personnelref.model.CostsAnl getCostsAnl5() {
-		return this.CostsAnl5;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setCostsAnl5(com.mg.merp.personnelref.model.CostsAnl PrefCostsAnl_4) {
-		this.CostsAnl5 = PrefCostsAnl_4;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.personnelref.model.TaxCalcKind getTaxCalcKind() {
+    return this.TaxCalcKind;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.personnelref.model.WorkSchedule getWorkSchedule() {
-		return this.WorkSchedule;
-	}
+  public void setTaxCalcKind(com.mg.merp.personnelref.model.TaxCalcKind PrefTaxCalcKind) {
+    this.TaxCalcKind = PrefTaxCalcKind;
+  }
 
-	public void setWorkSchedule(com.mg.merp.personnelref.model.WorkSchedule PrefWorkSchedule) {
-		this.WorkSchedule = PrefWorkSchedule;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.personnelref.model.PrefPosition getPosition() {
+    return this.Position;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.personnelref.model.StaffListUnit getStaffListUnit() {
-		return this.StaffListUnit;
-	}
+  public void setPosition(com.mg.merp.personnelref.model.PrefPosition PrefPosition) {
+    this.Position = PrefPosition;
+  }
 
-	public void setStaffListUnit(com.mg.merp.personnelref.model.StaffListUnit PrefStaffListUnit) {
-		this.StaffListUnit = PrefStaffListUnit;
-	}
+  /**
+   *
+   */
+  @DataItemName("Personnelref.CostsAnl5") //$NON-NLS-1$
+  public com.mg.merp.personnelref.model.CostsAnl getCostsAnl5() {
+    return this.CostsAnl5;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.Position.SlPositionUniqueId") //$NON-NLS-1$
-	public java.lang.String getSlPositionUniqueId() {
-		return this.SlPositionUniqueId;
-	}
+  public void setCostsAnl5(com.mg.merp.personnelref.model.CostsAnl PrefCostsAnl_4) {
+    this.CostsAnl5 = PrefCostsAnl_4;
+  }
 
-	public void setSlPositionUniqueId(java.lang.String SlPositionUniqueId) {
-		this.SlPositionUniqueId = SlPositionUniqueId;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.personnelref.model.WorkSchedule getWorkSchedule() {
+    return this.WorkSchedule;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.Position.BeginDate") //$NON-NLS-1$
-	public java.util.Date getBeginDate() {
-		return this.BeginDate;
-	}
+  public void setWorkSchedule(com.mg.merp.personnelref.model.WorkSchedule PrefWorkSchedule) {
+    this.WorkSchedule = PrefWorkSchedule;
+  }
 
-	public void setBeginDate(java.util.Date Begindate) {
-		this.BeginDate = Begindate;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.personnelref.model.StaffListUnit getStaffListUnit() {
+    return this.StaffListUnit;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.Position.EndDate") //$NON-NLS-1$
-	public java.util.Date getEndDate() {
-		return this.EndDate;
-	}
+  public void setStaffListUnit(com.mg.merp.personnelref.model.StaffListUnit PrefStaffListUnit) {
+    this.StaffListUnit = PrefStaffListUnit;
+  }
 
-	public void setEndDate(java.util.Date Enddate) {
-		this.EndDate = Enddate;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.Position.SlPositionUniqueId") //$NON-NLS-1$
+  public java.lang.String getSlPositionUniqueId() {
+    return this.SlPositionUniqueId;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.Position.RateNumber") //$NON-NLS-1$
-	public java.math.BigDecimal getRateNumber() {
-		return this.RateNumber;
-	}
+  public void setSlPositionUniqueId(java.lang.String SlPositionUniqueId) {
+    this.SlPositionUniqueId = SlPositionUniqueId;
+  }
 
-	public void setRateNumber(java.math.BigDecimal RateNumber) {
-		this.RateNumber = RateNumber;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.Position.BeginDate") //$NON-NLS-1$
+  public java.util.Date getBeginDate() {
+    return this.BeginDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.Position.HolidayNumber") //$NON-NLS-1$
-	public java.lang.Integer getHolidayNumber() {
-		return this.HolidayNumber;
-	}
+  public void setBeginDate(java.util.Date Begindate) {
+    this.BeginDate = Begindate;
+  }
 
-	public void setHolidayNumber(java.lang.Integer HolidayNumber) {
-		this.HolidayNumber = HolidayNumber;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.Position.EndDate") //$NON-NLS-1$
+  public java.util.Date getEndDate() {
+    return this.EndDate;
+  }
+
+  public void setEndDate(java.util.Date Enddate) {
+    this.EndDate = Enddate;
+  }
+
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.Position.RateNumber") //$NON-NLS-1$
+  public java.math.BigDecimal getRateNumber() {
+    return this.RateNumber;
+  }
+
+  public void setRateNumber(java.math.BigDecimal RateNumber) {
+    this.RateNumber = RateNumber;
+  }
+
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.Position.HolidayNumber") //$NON-NLS-1$
+  public java.lang.Integer getHolidayNumber() {
+    return this.HolidayNumber;
+  }
+
+  public void setHolidayNumber(java.lang.Integer HolidayNumber) {
+    this.HolidayNumber = HolidayNumber;
+  }
 
 }

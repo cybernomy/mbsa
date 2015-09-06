@@ -31,69 +31,68 @@ import com.mg.merp.reference.support.ReferenceUtils;
 
 /**
  * Контроллер формы поиска сущностей "Папки" модуля <Платежный календарь>
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: PmcFolderSearchForm.java,v 1.1 2007/05/14 05:23:52 sharapov Exp $
  */
 public class PmcFolderSearchForm extends AbstractSearchForm {
-		
-	private PersistentObject folderEntity = null;
-	private MaintenanceTreeController tree;
-	private AttributeMap treeUIProperties = new LocalDataTransferObject();
-	private DataBusinessObjectService folderService = (DataBusinessObjectService) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/Folder"); //$NON-NLS-1$
 
-	private short folderPart;
-	private final String TREE_WIDGET_NAME = "tree"; //$NON-NLS-1$
+  private final String TREE_WIDGET_NAME = "tree"; //$NON-NLS-1$
+  private PersistentObject folderEntity = null;
+  private MaintenanceTreeController tree;
+  private AttributeMap treeUIProperties = new LocalDataTransferObject();
+  private DataBusinessObjectService folderService = (DataBusinessObjectService) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/Folder"); //$NON-NLS-1$
+  private short folderPart;
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchForm#doOnRun()
-	 */
-	@Override
-	protected void doOnRun() {
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchForm#doOnRun()
+   */
+  @Override
+  protected void doOnRun() {
 
-		tree = new MaintenanceTreeController(treeUIProperties, new DefaultTreeModel() {
-			/* (non-Javadoc)
-			 * @see com.mg.framework.generic.ui.DefaultTreeModel#getRootNode()
-			 */
-			@Override
-			public TreeNode getRootNode() {
-				return ReferenceUtils.loadFolderHierarchy(folderPart);
-			}
-		});
+    tree = new MaintenanceTreeController(treeUIProperties, new DefaultTreeModel() {
+      /* (non-Javadoc)
+       * @see com.mg.framework.generic.ui.DefaultTreeModel#getRootNode()
+       */
+      @Override
+      public TreeNode getRootNode() {
+        return ReferenceUtils.loadFolderHierarchy(folderPart);
+      }
+    });
 
-		tree.initController(folderService);
-		treeUIProperties.put("FolderType", folderPart); //$NON-NLS-1$
-		tree.setParentPropertyName("Folder.Id"); //$NON-NLS-1$
-		tree.addTreeSelectionListener(new TreeSelectionListener(){
-			public void valueChanged(TreeChangeEvent event) {
-				folderEntity = ((EntityTreeNode) event.getNode()).getEntity();
-			}
-		});
-		super.doOnRun();
-		view.getWidget(TREE_WIDGET_NAME).setReadOnly(true);
-		view.getWidget(TREE_WIDGET_NAME).getPopupMenu().getMenuItem(MaintenanceTree.PERMISSION_MENU_ITEM).setEnabled(false);
-	}
+    tree.initController(folderService);
+    treeUIProperties.put("FolderType", folderPart); //$NON-NLS-1$
+    tree.setParentPropertyName("Folder.Id"); //$NON-NLS-1$
+    tree.addTreeSelectionListener(new TreeSelectionListener() {
+      public void valueChanged(TreeChangeEvent event) {
+        folderEntity = ((EntityTreeNode) event.getNode()).getEntity();
+      }
+    });
+    super.doOnRun();
+    view.getWidget(TREE_WIDGET_NAME).setReadOnly(true);
+    view.getWidget(TREE_WIDGET_NAME).getPopupMenu().getMenuItem(MaintenanceTree.PERMISSION_MENU_ITEM).setEnabled(false);
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchForm#getSearchedEntities()
-	 */
-	@Override
-	protected PersistentObject[] getSearchedEntities() {
-		return new PersistentObject[]{folderEntity};
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchForm#getSearchedEntities()
+   */
+  @Override
+  protected PersistentObject[] getSearchedEntities() {
+    return new PersistentObject[]{folderEntity};
+  }
 
-	/**
-	 * @return the folderPart
-	 */
-	public short getFolderPart() {
-		return folderPart;
-	}
+  /**
+   * @return the folderPart
+   */
+  public short getFolderPart() {
+    return folderPart;
+  }
 
-	/**
-	 * @param folderPart the folderPart to set
-	 */
-	public void setFolderPart(short folderPart) {
-		this.folderPart = folderPart;
-	}
+  /**
+   * @param folderPart the folderPart to set
+   */
+  public void setFolderPart(short folderPart) {
+    this.folderPart = folderPart;
+  }
 
 }

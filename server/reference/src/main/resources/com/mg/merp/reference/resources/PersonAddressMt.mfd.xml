@@ -13,36 +13,41 @@
 
 <!-- $Id: PersonAddressMt.mfd.xml,v 1.5 2007/09/05 10:35:43 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.reference.support.ui.PersonAddressMt" title="resource://com.mg.merp.reference.resources.formelements#PersonAddress.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.reference.support.ui.PersonAddressMt"
+          title="resource://com.mg.merp.reference.resources.formelements#PersonAddress.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:container id="commonFields" layout="jfd:box" columns="4" >
-			<jfd:field id="AddressKind" editorType="comboBox" alignment="expand_expand"/>		 
-			<jfd:field id="BeginDate" alignment="expand_expand"/>		
-		</jfd:container>		
-		<jfd:container id="zipFields" layout="jfd:box" columns="4" >
-			<jfd:field id="ZipCode" alignment="expand_expand" searchHelp="com.mg.merp.reference.support.ui.ZipCodeSearchHelp"/>
-			<!--jfd:button id="Find" text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.Find"/> 				
-			<jfd:button id="New" sameLine="true" text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.New"/--> 				
-			<jfd:field id="Country" horizontalSpan="3" alignment="expand_expand"/>
-			<jfd:field id="District" horizontalSpan="3" alignment="expand_expand"/>
-			<jfd:field id="Region" horizontalSpan="3" alignment="expand_expand"/>
-			<jfd:field id="Place" horizontalSpan="3" alignment="expand_expand"/>	 
-		</jfd:container>	
-		<jfd:container id="placePostFields" layout="jfd:box"  columns="4" >
-			<jfd:field id="Street" alignment="expand_top" horizontalSpan="3" />		
-			<jfd:field id="House" />			
-			<jfd:field id="Building" alignment="expand_expand"/>			
-			<jfd:field id="Room" />	
-			<jfd:button id="RefreshPost" alignment="expand_top" horizontalSpan="3" text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.Refresh" actionListener="BuildFullAddress"/> 				
-		</jfd:container>		
-		<jfd:field id="FullAddress" alignment="expand_expand" readOnly="true"/>		
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 					
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:container id="commonFields" layout="jfd:box" columns="4">
+      <jfd:field id="AddressKind" editorType="comboBox" alignment="expand_expand"/>
+      <jfd:field id="BeginDate" alignment="expand_expand"/>
+    </jfd:container>
+    <jfd:container id="zipFields" layout="jfd:box" columns="4">
+      <jfd:field id="ZipCode" alignment="expand_expand"
+                 searchHelp="com.mg.merp.reference.support.ui.ZipCodeSearchHelp"/>
+      <!--jfd:button id="Find" text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.Find"/>
+      <jfd:button id="New" sameLine="true" text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.New"/-->
+      <jfd:field id="Country" horizontalSpan="3" alignment="expand_expand"/>
+      <jfd:field id="District" horizontalSpan="3" alignment="expand_expand"/>
+      <jfd:field id="Region" horizontalSpan="3" alignment="expand_expand"/>
+      <jfd:field id="Place" horizontalSpan="3" alignment="expand_expand"/>
+    </jfd:container>
+    <jfd:container id="placePostFields" layout="jfd:box" columns="4">
+      <jfd:field id="Street" alignment="expand_top" horizontalSpan="3"/>
+      <jfd:field id="House"/>
+      <jfd:field id="Building" alignment="expand_expand"/>
+      <jfd:field id="Room"/>
+      <jfd:button id="RefreshPost" alignment="expand_top" horizontalSpan="3"
+                  text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.Refresh"
+                  actionListener="BuildFullAddress"/>
+    </jfd:container>
+    <jfd:field id="FullAddress" alignment="expand_expand" readOnly="true"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

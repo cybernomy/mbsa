@@ -13,38 +13,50 @@
 
 <!-- $$Id: WarehouseBatchSelectionDialog.mfd.xml,v 1.3 2008/06/04 12:55:06 sharapov Exp $$ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.warehouse.support.ui.WarehouseBatchSelectionDialog" orientation="ver" title="resource://com.mg.merp.warehouse.resources.formelements#WarehouseBatchSelectionDialog.Title" width="800" height="250">
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.warehouse.support.ui.WarehouseBatchSelectionDialog"
+          orientation="ver"
+          title="resource://com.mg.merp.warehouse.resources.formelements#WarehouseBatchSelectionDialog.Title"
+          width="800" height="250">
 
-	<jfd:container id="warehouseBatchesBox" layout="jfd:box" alignment="expand_expand">
-		<jfd:table id="warehouseBatchesTable" alignment="expand_expand" scroll="true" />
-	</jfd:container>
+  <jfd:container id="warehouseBatchesBox" layout="jfd:box" alignment="expand_expand">
+    <jfd:table id="warehouseBatchesTable" alignment="expand_expand" scroll="true"/>
+  </jfd:container>
 
-	<jfd:container id="batchSelectorFooterBox" layout="jfd:box" alignment="expand_top">
-		<jfd:container id="catalogBox" layout="jfd:box" alignment="left_top" columns="2" horizontalGap="10">
-			<jfd:label id="catalogCodeLabel" alignment="left_center" text="resource://com.mg.merp.warehouse.resources.dataitemlabels#Code" />
-			<jfd:textField id="catalogCodeValue" readOnly="true" alignment="expand_center" />
-			<jfd:label id="catalogNameLabel" alignment="left_center" text="resource://com.mg.merp.warehouse.resources.dataitemlabels#Name" />
-			<jfd:textField id="catalogNameValue" readOnly="true" alignment="expand_center" />
-		</jfd:container>
+  <jfd:container id="batchSelectorFooterBox" layout="jfd:box" alignment="expand_top">
+    <jfd:container id="catalogBox" layout="jfd:box" alignment="left_top" columns="2"
+                   horizontalGap="10">
+      <jfd:label id="catalogCodeLabel" alignment="left_center"
+                 text="resource://com.mg.merp.warehouse.resources.dataitemlabels#Code"/>
+      <jfd:textField id="catalogCodeValue" readOnly="true" alignment="expand_center"/>
+      <jfd:label id="catalogNameLabel" alignment="left_center"
+                 text="resource://com.mg.merp.warehouse.resources.dataitemlabels#Name"/>
+      <jfd:textField id="catalogNameValue" readOnly="true" alignment="expand_center"/>
+    </jfd:container>
 
-		<jfd:filler id="batchSelectorFooterFiller" alignment="expand_top" text="horizontalGlue" />
+    <jfd:filler id="batchSelectorFooterFiller" alignment="expand_top" text="horizontalGlue"/>
 
-		<jfd:container id="quanBox" layout="jfd:box" columns="3" alignment="right_top" horizontalGap="5">
-			<!-- первая строка -->
-			<jfd:filler id="captionFiller" alignment="expand_top" text="horizontalGlue" />
-			<jfd:label id="InMeasure1Label" alignment="expand_top" text="resource://com.mg.merp.warehouse.resources.formelements#Warehouse.BatchSelectionDialog.InMeasure1" />			
-			<jfd:label id="InMeasure2Label" alignment="expand_top" text="resource://com.mg.merp.warehouse.resources.formelements#Warehouse.BatchSelectionDialog.InMeasure2" />			
-			<!-- вторая строка -->
-			<jfd:label id="speqQuanLabel" alignment="left_center" text="resource://com.mg.merp.warehouse.resources.formelements#Warehouse.BatchSelectionDialog.SpecQuan" />
-			<jfd:numberField id="specQuan1" readOnly="true" alignment="expand_center" />
-			<jfd:numberField id="specQuan2" readOnly="true" alignment="expand_center" />
-			<!-- третья строка -->
-			<jfd:label id="markQuanLabel" alignment="left_center" text="resource://com.mg.merp.warehouse.resources.formelements#Warehouse.BatchSelectionDialog.MarkQuan" />
-			<jfd:numberField id="markQuan1" readOnly="true" alignment="expand_center" />
-			<jfd:numberField id="markQuan2" readOnly="true" alignment="expand_center" />
-		</jfd:container>
-	</jfd:container>
+    <jfd:container id="quanBox" layout="jfd:box" columns="3" alignment="right_top"
+                   horizontalGap="5">
+      <!-- первая строка -->
+      <jfd:filler id="captionFiller" alignment="expand_top" text="horizontalGlue"/>
+      <jfd:label id="InMeasure1Label" alignment="expand_top"
+                 text="resource://com.mg.merp.warehouse.resources.formelements#Warehouse.BatchSelectionDialog.InMeasure1"/>
+      <jfd:label id="InMeasure2Label" alignment="expand_top"
+                 text="resource://com.mg.merp.warehouse.resources.formelements#Warehouse.BatchSelectionDialog.InMeasure2"/>
+      <!-- вторая строка -->
+      <jfd:label id="speqQuanLabel" alignment="left_center"
+                 text="resource://com.mg.merp.warehouse.resources.formelements#Warehouse.BatchSelectionDialog.SpecQuan"/>
+      <jfd:numberField id="specQuan1" readOnly="true" alignment="expand_center"/>
+      <jfd:numberField id="specQuan2" readOnly="true" alignment="expand_center"/>
+      <!-- третья строка -->
+      <jfd:label id="markQuanLabel" alignment="left_center"
+                 text="resource://com.mg.merp.warehouse.resources.formelements#Warehouse.BatchSelectionDialog.MarkQuan"/>
+      <jfd:numberField id="markQuan1" readOnly="true" alignment="expand_center"/>
+      <jfd:numberField id="markQuan2" readOnly="true" alignment="expand_center"/>
+    </jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
 
 </jfd:form>

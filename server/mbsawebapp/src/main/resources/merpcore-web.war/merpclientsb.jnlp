@@ -15,36 +15,40 @@
 
 <jnlp spec="1.0+" codebase="$$context" href="merpclientsb.jnlp">
 
-    <information>
-        <title>Millennium Business Suite Anywhere 2007</title>
-        <vendor>BusinessTechnology, Ltd.</vendor>
-        <homepage href="http://www.m-g.ru"/>
-        <icon href="images/logo.gif" width="64" height="64"/>
-        <icon kind="splash" href="images/splash.gif"/>
-        <shortcut>
-            <desktop/>
-            <menu/>
-        </shortcut>
-    </information>
+  <information>
+    <title>Millennium Business Suite Anywhere 2007</title>
+    <vendor>BusinessTechnology, Ltd.</vendor>
+    <homepage href="http://www.m-g.ru"/>
+    <icon href="images/logo.gif" width="64" height="64"/>
+    <icon kind="splash" href="images/splash.gif"/>
+    <shortcut>
+      <desktop/>
+      <menu/>
+    </shortcut>
+  </information>
 
-    <resources>
-        <j2se version="1.6+" initial-heap-size="64m" max-heap-size="256m" href="http://java.sun.com/products/autodl/j2se"/>
-        <jar href="lib/merp-applet-client.jar" version="4.0.6.0"/>
-        <jar href="lib/ulc-all5-client.jar" version="2008.2"/>
-        <jar href="lib/merp-ulccomponent-client.jar" version="4.0.6.0"/>
-        <jar href="lib/jgraph.jar" version="5.0.0" download="lazy"/>
-        <jar href="lib/substance-lite-feel.jar" version="5.0" download="lazy"/>
-    </resources>
+  <resources>
+    <j2se version="1.6+" initial-heap-size="64m" max-heap-size="256m"
+          href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="lib/merp-applet-client.jar" version="4.0.6.0"/>
+    <jar href="lib/ulc-all5-client.jar" version="2008.2"/>
+    <jar href="lib/merp-ulccomponent-client.jar" version="4.0.6.0"/>
+    <jar href="lib/jgraph.jar" version="5.0.0" download="lazy"/>
+    <jar href="lib/substance-lite-feel.jar" version="5.0" download="lazy"/>
+  </resources>
 
-    <application-desc main-class="com.mg.merp.core.client.jnlp.ClientJNLPLauncher">
-        <argument>url-string=$$context/merp</argument>
-        <argument>keep-alive-interval=900</argument>
-        <argument>log-level=WARNING</argument>
-        <argument>client-coder-registry-provider=com.mg.merp.core.support.ui.ClientCoderRegistryProvider</argument>
-        <argument>look-and-feel=org.jvnet.substance.skin.SubstanceBusinessBlackSteelLookAndFeel</argument>
-    </application-desc>
+  <application-desc main-class="com.mg.merp.core.client.jnlp.ClientJNLPLauncher">
+    <argument>url-string=$$context/merp</argument>
+    <argument>keep-alive-interval=900</argument>
+    <argument>log-level=WARNING</argument>
+    <argument>
+      client-coder-registry-provider=com.mg.merp.core.support.ui.ClientCoderRegistryProvider
+    </argument>
+    <argument>look-and-feel=org.jvnet.substance.skin.SubstanceBusinessBlackSteelLookAndFeel
+    </argument>
+  </application-desc>
 
-	<security>
-        <all-permissions/>
-    </security>
+  <security>
+    <all-permissions/>
+  </security>
 </jnlp> 

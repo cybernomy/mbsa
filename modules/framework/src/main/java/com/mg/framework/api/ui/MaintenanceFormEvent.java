@@ -18,33 +18,33 @@ import com.mg.framework.api.orm.PersistentObject;
 
 /**
  * событие формы поддержки
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: MaintenanceFormEvent.java,v 1.1 2006/05/10 13:19:49 safonov Exp $
  */
 public class MaintenanceFormEvent extends FormEvent {
-	private PersistentObject entity;
-	
-	/**
-	 * создание события формы поддержки
-	 * 
-	 * @param source	форма
-	 * @param entity	объект сущность
-	 */
-	public MaintenanceFormEvent(Form source, PersistentObject entity) {
-		super(source);
-		this.entity = entity;
-	}
-	
-	/**
-	 * возвращает объект сущность обрабатываемый в форме поддержки
-	 * 
-	 * @return	объект сущность
-	 * @throws	IllegalStateException если объект сущность <code>null</code>
-	 */
-	public PersistentObject getEntity() {
-		if (entity == null)
-			throw new IllegalStateException("Entity is null");
-		return entity;
-	}
+  private PersistentObject entity;
+
+  /**
+   * создание события формы поддержки
+   *
+   * @param source форма
+   * @param entity объект сущность
+   */
+  public MaintenanceFormEvent(Form source, PersistentObject entity) {
+    super(source);
+    this.entity = entity;
+  }
+
+  /**
+   * возвращает объект сущность обрабатываемый в форме поддержки
+   *
+   * @return объект сущность
+   * @throws IllegalStateException если объект сущность <code>null</code>
+   */
+  public PersistentObject getEntity() {
+    if (entity == null)
+      throw new IllegalStateException("Entity is null");
+    return entity;
+  }
 }

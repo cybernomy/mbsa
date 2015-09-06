@@ -14,11 +14,17 @@
 <!-- $Id: CurrencyMacros.xml,v 1.5 2007/06/04 05:13:36 sharapov Exp $ -->
 
 <jfd:wrap-macros xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
-	<jfd:field id="CurCode" />
-	<jfd:container id="CurrencyRateBox" layout="jfd:box" label="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentMt.CurRate" orientation="hor" sameLine="true">
-		<jfd:field id="CurRate" showLabel="false" alignment="expand_expand" readOnly="true" />
-		<jfd:button id="сhooseCurrencyRate" text="resource://com.mg.merp.paymentalloc.resources.formelements#ChooseCurrencyRate" toolTip="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentMt.ChooseCurrencyRate" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseCurrencyRate" alignment="right_expand" />
-	</jfd:container>
-	<jfd:field id="CurRateType" />
-	<jfd:field id="CurRateAuthority" sameLine="true"/>
+  <jfd:field id="CurCode"/>
+  <jfd:container id="CurrencyRateBox" layout="jfd:box"
+                 label="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentMt.CurRate"
+                 orientation="hor" sameLine="true">
+    <jfd:field id="CurRate" showLabel="false" alignment="expand_expand" readOnly="true"/>
+    <jfd:button id="сhooseCurrencyRate"
+                text="resource://com.mg.merp.paymentalloc.resources.formelements#ChooseCurrencyRate"
+                toolTip="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentMt.ChooseCurrencyRate"
+                minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+                actionListener="ChooseCurrencyRate" alignment="right_expand"/>
+  </jfd:container>
+  <jfd:field id="CurRateType"/>
+  <jfd:field id="CurRateAuthority" sameLine="true"/>
 </jfd:wrap-macros>

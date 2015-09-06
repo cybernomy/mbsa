@@ -22,75 +22,80 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("BAi.CustomUserActionPermiss")
 public class CustomUserActionPermiss extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer id;
-	private com.mg.merp.baiengine.model.CustomUserAction customUserAction;
-	private com.mg.merp.core.model.SysClient sysClient;
-	private com.mg.merp.security.model.Groups secGroup;
+  private java.lang.Integer id;
+  private com.mg.merp.baiengine.model.CustomUserAction customUserAction;
+  private com.mg.merp.core.model.SysClient sysClient;
+  private com.mg.merp.security.model.Groups secGroup;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public CustomUserActionPermiss() {
-	}
+  /**
+   * default constructor
+   */
+  public CustomUserActionPermiss() {
+  }
 
-	/** constructor with id */
-	public CustomUserActionPermiss(java.lang.Integer Id) {
-		this.id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public CustomUserActionPermiss(java.lang.Integer Id) {
+    this.id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
+  // Property accessors
 
-	public java.lang.Integer getId() {
-		return this.id;
-	}
+  /**
+   *
+   */
 
-	public void setId(java.lang.Integer Id) {
-		this.id = Id;
-	}
+  public java.lang.Integer getId() {
+    return this.id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.id = Id;
+  }
 
-	public com.mg.merp.baiengine.model.CustomUserAction getCustomUserAction() {
-		return this.customUserAction;
-	}
+  /**
+   *
+   */
 
-	public void setCustomUserAction(
-			com.mg.merp.baiengine.model.CustomUserAction customUserAction) {
-		this.customUserAction = customUserAction;
-	}
+  public com.mg.merp.baiengine.model.CustomUserAction getCustomUserAction() {
+    return this.customUserAction;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCustomUserAction(
+      com.mg.merp.baiengine.model.CustomUserAction customUserAction) {
+    this.customUserAction = customUserAction;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.sysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.sysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.sysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.sysClient = SysClient;
+  }
 
-	public com.mg.merp.security.model.Groups getSecGroup() {
-		return this.secGroup;
-	}
+  /**
+   *
+   */
 
-	public void setSecGroup(com.mg.merp.security.model.Groups SecGroups) {
-		this.secGroup = SecGroups;
-	}
+  public com.mg.merp.security.model.Groups getSecGroup() {
+    return this.secGroup;
+  }
+
+  public void setSecGroup(com.mg.merp.security.model.Groups SecGroups) {
+    this.secGroup = SecGroups;
+  }
 
 }

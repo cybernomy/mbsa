@@ -11,37 +11,56 @@
 <!-- Millennium Business Suite Anywhere System.                              -->
 <!-- ======================================================================= -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
-		<jfd:container id="allFields" layout="jfd:defaultMtLayout" alignment="expand_expand" >		
- 		<jfd:border style="bevel" type="raised" />
-	  		<jfd:field id="BaseCurrency" alignment="expand_expand" fieldGroup="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.CurrencyFields" text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.BaseCurrency" /> 
-	  		<jfd:field id="CurrencyRateType" sameLine="true"/> 
-	  		<jfd:field id="NatCurrency"  text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.NatCurrency" /> 
-	  		<jfd:field id="CurrencyRateAuthority" sameLine="true"/> 
-	  		<jfd:field id="CurrencyPrec" text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.CurrencyPrec" /> 
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
+  <jfd:container id="allFields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="BaseCurrency" alignment="expand_expand"
+               fieldGroup="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.CurrencyFields"
+               text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.BaseCurrency"/>
+    <jfd:field id="CurrencyRateType" sameLine="true"/>
+    <jfd:field id="NatCurrency"
+               text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.NatCurrency"/>
+    <jfd:field id="CurrencyRateAuthority" sameLine="true"/>
+    <jfd:field id="CurrencyPrec"
+               text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.CurrencyPrec"/>
 
-		  	<jfd:field id="TickUM" fieldGroup="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.MeasureGroupFields" sameLine="true" text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.Measure" /> 
-			<jfd:field id="LaborTime" sameLine="true" text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.LaborTime" /> 
- 		  	<jfd:field id="MainTimeUM" text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.MainTimeUm" /> 
- 		  	<jfd:field id="MachineTime" sameLine="true" text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.MachineTime" /> 
+    <jfd:field id="TickUM"
+               fieldGroup="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.MeasureGroupFields"
+               sameLine="true"
+               text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.Measure"/>
+    <jfd:field id="LaborTime" sameLine="true"
+               text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.LaborTime"/>
+    <jfd:field id="MainTimeUM"
+               text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.MainTimeUm"/>
+    <jfd:field id="MachineTime" sameLine="true"
+               text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.MachineTime"/>
 
-			<jfd:field id="ScrapMaterialModel" fieldGroup="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.ScrapDocumentModelFields" /> 
-			<jfd:field id="ScrapLaborModel" sameLine="true"/> 
-			<jfd:field id="ScrapMachineModel" /> 
+    <jfd:field id="ScrapMaterialModel"
+               fieldGroup="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.ScrapDocumentModelFields"/>
+    <jfd:field id="ScrapLaborModel" sameLine="true"/>
+    <jfd:field id="ScrapMachineModel"/>
 
-			<jfd:field id="MaterialOverhead" fieldGroup="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.OverheadFields" text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.MaterialOverhead" /> 
-			<jfd:field id="LaborOverhead" sameLine="true" text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.LaborOverhead" /> 
-			<jfd:field id="MachineOverhead" text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.MachineOverhead" /> 
-		
-			<jfd:field id="InputMaterialModelBf" fieldGroup="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.InputDocumentModelFields" /> 
-			<jfd:field id="InputLaborModelBf" sameLine="true"/> 
-			<jfd:field id="InputMachineModelBf" /> 
+    <jfd:field id="MaterialOverhead"
+               fieldGroup="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.OverheadFields"
+               text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.MaterialOverhead"/>
+    <jfd:field id="LaborOverhead" sameLine="true"
+               text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.LaborOverhead"/>
+    <jfd:field id="MachineOverhead"
+               text="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.MachineOverhead"/>
 
-			<jfd:field id="PurchaseOrderModelMrpRec" fieldGroup="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.OtherGroupFields"/> 			
-			<jfd:field id="VarianceDocumentModel" sameLine="true" /> 			
-		</jfd:container>
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:field id="InputMaterialModelBf"
+               fieldGroup="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.InputDocumentModelFields"/>
+    <jfd:field id="InputLaborModelBf" sameLine="true"/>
+    <jfd:field id="InputMachineModelBf"/>
+
+    <jfd:field id="PurchaseOrderModelMrpRec"
+               fieldGroup="resource://com.mg.merp.mfreference.resources.formelements#ManufactureConfig.FormMt.OtherGroupFields"/>
+    <jfd:field id="VarianceDocumentModel" sameLine="true"/>
+  </jfd:container>
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

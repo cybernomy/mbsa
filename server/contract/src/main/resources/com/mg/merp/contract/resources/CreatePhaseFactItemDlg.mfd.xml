@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
- <!-- ===================================================================== -->
- <!--  Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.					-->
- <!--  All rights reserved													-->
- <!-- 																		-->
- <!--  This program is the proprietary and confidential information			-->
- <!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
- <!--  as authorized in a license agreement authorizing and					-->
- <!--  controlling such use and disclosure									-->
- <!--																		-->
- <!--  Millennium Business Suite Anywhere System.							-->
- <!-- ===================================================================== -->
+<!-- ===================================================================== -->
+<!--  Copyright (c) 1998 - 2006 BusinessTechnology, Ltd.					-->
+<!--  All rights reserved													-->
+<!-- 																		-->
+<!--  This program is the proprietary and confidential information			-->
+<!--  of BusinessTechnology, Ltd. and may be used and disclosed only		-->
+<!--  as authorized in a license agreement authorizing and					-->
+<!--  controlling such use and disclosure									-->
+<!--																		-->
+<!--  Millennium Business Suite Anywhere System.							-->
+<!-- ===================================================================== -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.contract.support.ui.CreatePhaseFactItemDlg" title="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.Title" width="320" height="270">
-	<jfd:container id="mainBox" layout="jfd:defaultMtLayout" alignment="expand_expand">
-	<jfd:border style="bevel" type="raised" />
-		<jfd:field id="сontractType" fieldGroup="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.ContractGroup" />
-		<jfd:field id="сontractNumber" alignment="expand_expand" text="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.ContractNumber"/>
-		<jfd:field id="contractDate" alignment="expand_expand" text="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.ContractDate"/>
-		<jfd:button id="chooseContract" alignment="expand_expand" text="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.ChooseContract" actionListener="ChooseContract"/>
-		<jfd:field id="itemKind" alignment="expand_expand" text="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.ItemKind" fieldGroup="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.OptionsGroup" />
-		<jfd:field id="contractorSource" editorType="comboBox" alignment="expand_expand" />
-		<jfd:field id="isCreateSpec" alignment="expand_expand" text="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.CreateSpec" />
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5"
+          controller="com.mg.merp.contract.support.ui.CreatePhaseFactItemDlg"
+          title="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.Title"
+          width="320" height="270">
+  <jfd:container id="mainBox" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="сontractType"
+               fieldGroup="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.ContractGroup"/>
+    <jfd:field id="сontractNumber" alignment="expand_expand"
+               text="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.ContractNumber"/>
+    <jfd:field id="contractDate" alignment="expand_expand"
+               text="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.ContractDate"/>
+    <jfd:button id="chooseContract" alignment="expand_expand"
+                text="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.ChooseContract"
+                actionListener="ChooseContract"/>
+    <jfd:field id="itemKind" alignment="expand_expand"
+               text="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.ItemKind"
+               fieldGroup="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.OptionsGroup"/>
+    <jfd:field id="contractorSource" editorType="comboBox" alignment="expand_expand"/>
+    <jfd:field id="isCreateSpec" alignment="expand_expand"
+               text="resource://com.mg.merp.contract.resources.formelements#CreatePhaseFactItemDlg.CreateSpec"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
 </jfd:form>

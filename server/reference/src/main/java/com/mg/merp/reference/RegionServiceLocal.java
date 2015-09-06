@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.Region;
 
 /**
- * 
  * @author leonova
  * @version $Id: RegionServiceLocal.java,v 1.1 2006/03/14 11:49:50 safonov Exp $
  */
 public interface RegionServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Region, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Region, Integer> {
 
 }

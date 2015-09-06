@@ -11,20 +11,31 @@
 <!--  Millennium Business Suite Anywhere System.                             -->
 <!-- ======================================================================= -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.reference.support.ui.OriginalDocumentRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.reference.resources.formelements#OriginalDocumentRest.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.reference.support.ui.OriginalDocumentRest" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.reference.resources.formelements#OriginalDocumentRest.Title">
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="docDateFrom" text="resource://com.mg.merp.reference.resources.formelements#OriginalDocumentRest.From" fieldGroup="resource://com.mg.merp.reference.resources.formelements#OriginalDocumentRest.DocDateGroup" />
-	 	<jfd:field id="docDateTo" text="resource://com.mg.merp.reference.resources.formelements#OriginalDocumentRest.To" sameLine="true" />
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="docDateFrom"
+               text="resource://com.mg.merp.reference.resources.formelements#OriginalDocumentRest.From"
+               fieldGroup="resource://com.mg.merp.reference.resources.formelements#OriginalDocumentRest.DocDateGroup"/>
+    <jfd:field id="docDateTo"
+               text="resource://com.mg.merp.reference.resources.formelements#OriginalDocumentRest.To"
+               sameLine="true"/>
 
-		<jfd:field id="createDateFrom" text="resource://com.mg.merp.reference.resources.formelements#OriginalDocumentRest.From" fieldGroup="resource://com.mg.merp.reference.resources.formelements#OriginalDocumentRest.СreateDateGroup" />
-	 	<jfd:field id="createDateTo" text="resource://com.mg.merp.reference.resources.formelements#OriginalDocumentRest.To" sameLine="true" />
+    <jfd:field id="createDateFrom"
+               text="resource://com.mg.merp.reference.resources.formelements#OriginalDocumentRest.From"
+               fieldGroup="resource://com.mg.merp.reference.resources.formelements#OriginalDocumentRest.СreateDateGroup"/>
+    <jfd:field id="createDateTo"
+               text="resource://com.mg.merp.reference.resources.formelements#OriginalDocumentRest.To"
+               sameLine="true"/>
 
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-		
-	</jfd:container>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml" />
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionFooterMacros.xml"/>
 
 </jfd:form>

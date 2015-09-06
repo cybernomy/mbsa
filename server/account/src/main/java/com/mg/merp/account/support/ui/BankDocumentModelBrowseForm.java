@@ -18,9 +18,9 @@ import com.mg.merp.document.generic.ui.DocumentModelBrowseForm;
 
 /**
  * Контроллер формы списка образцов банковских документов
- * 
+ *
  * @author leonova
- * @version $Id: BankDocumentModelBrowseForm.java,v 1.1 2006/09/12 11:23:25 leonova Exp $ 
+ * @version $Id: BankDocumentModelBrowseForm.java,v 1.1 2006/09/12 11:23:25 leonova Exp $
  */
 public class BankDocumentModelBrowseForm extends DocumentModelBrowseForm {
 

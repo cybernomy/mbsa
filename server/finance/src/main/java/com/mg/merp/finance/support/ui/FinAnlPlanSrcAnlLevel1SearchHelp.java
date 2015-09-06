@@ -16,18 +16,18 @@ package com.mg.merp.finance.support.ui;
 
 /**
  * SearchHelp для аналитики первого уровня счета по кредиту
- * 
+ *
  * @author leonova
  * @version $Id: FinAnlPlanSrcAnlLevel1SearchHelp.java,v 1.1 2006/10/30 13:50:17 leonova Exp $
  */
 public class FinAnlPlanSrcAnlLevel1SearchHelp extends FinAnlPlanSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAnalitikaLevel()
-	 */
-	@Override
-	protected short getAnalitikaLevel() {
-		return 1;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAnalitikaLevel()
+   */
+  @Override
+  protected short getAnalitikaLevel() {
+    return 1;
+  }
 
 }

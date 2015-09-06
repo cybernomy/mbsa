@@ -11,16 +11,20 @@
 <!-- Millennium Business Suite Anywhere System.                              -->
 <!-- ======================================================================= -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcConfig.FormMt.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcConfig.FormMt.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
-		<jfd:container id="allFields" layout="jfd:defaultMtGridBag" >		
- 		<jfd:border style="bevel" type="raised" />
- 			<jfd:field id="Currency" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcConfig.FormMt.Currency" /> 
- 			<jfd:field id="CurRateType" /> 
- 			<jfd:field id="CurRateAuthority" /> 
- 			<jfd:field id="CurrencyPrec" text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcConfig.FormMt.CurrencyPrec" /> 
-		</jfd:container>
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
+  <jfd:container id="allFields" layout="jfd:defaultMtGridBag">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="Currency"
+               text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcConfig.FormMt.Currency"/>
+    <jfd:field id="CurRateType"/>
+    <jfd:field id="CurRateAuthority"/>
+    <jfd:field id="CurrencyPrec"
+               text="resource://com.mg.merp.paymentcontrol.resources.formelements#PmcConfig.FormMt.CurrencyPrec"/>
+  </jfd:container>
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

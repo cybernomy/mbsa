@@ -15,8 +15,6 @@
 
 package com.mg.merp.table.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryAttribute;
@@ -25,30 +23,32 @@ import com.mg.merp.table.PatternHeadServiceLocal;
 import com.mg.merp.table.model.PatternHead;
 import com.mg.merp.table.model.PatternKind;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Шаблоны графиков" 
- * 
+ * Бизнес-компонент "Шаблоны графиков"
+ *
  * @author leonova
  * @version $Id: PatternHeadServiceBean.java,v 1.4 2006/10/12 07:12:47 leonova Exp $
  */
-@Stateless(name="merp/table/PatternHeadService")
+@Stateless(name = "merp/table/PatternHeadService")
 public class PatternHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBean<PatternHead, Integer> implements PatternHeadServiceLocal {
 
-	@Override
-	protected void onInitialize(PatternHead entity) {
-		entity.setPatternKind(PatternKind.WEEKLY);
-	}
+  @Override
+  protected void onInitialize(PatternHead entity) {
+    entity.setPatternKind(PatternKind.WEEKLY);
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, PatternHead entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));
-		context.addRule(new MandatoryStringAttribute(entity, "Name"));
-		context.addRule(new MandatoryAttribute(entity, "Duration"));		
-	
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, PatternHead entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+    context.addRule(new MandatoryStringAttribute(entity, "Name"));
+    context.addRule(new MandatoryAttribute(entity, "Duration"));
+
+  }
 
 
 }

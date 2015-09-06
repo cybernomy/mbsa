@@ -13,144 +13,234 @@
 
 <!-- $Id: RelationMt.mfd.xml,v 1.10 2008/03/24 15:08:39 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.crm.support.ui.RelationMt" title="resource://com.mg.merp.crm.resources.formelements#Relation.FormMt.Title" helpTopic="crm#relation_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.crm.support.ui.RelationMt"
+          title="resource://com.mg.merp.crm.resources.formelements#Relation.FormMt.Title"
+          helpTopic="crm#relation_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
-	
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top" >
- 		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top" tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Tab.Totlal" >
-	 		<jfd:field id="Code" />
-	 		<jfd:field id="Name" />	
-	 		<jfd:field id="IsLegalPerson" actionListener="PersonTypeChanged" fieldGroup="resource://com.mg.merp.crm.resources.formelements#RelationMt.Contractor"/>
-	 		<jfd:field id="NaturalPerson" />
-	 		<jfd:field id="LegalPerson" sameLine="true" />
-	 		<jfd:field id="PersonTitle" />		 		
-	 		<jfd:field id="NickName" logField="false"/>	
- 		 	<jfd:field id="Responsible" fieldGroup=" "/>				
-	 		<jfd:field id="Curator" sameLine="true"/>						 	
-	 		<jfd:field id="Status" />				 		
-	 		<jfd:field id="ClientType" sameLine="true"/>			 		
-	 		<jfd:field id="ClientRank" />	
- 		</jfd:container>
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
- 		<jfd:container id="addressFields" alignment="expand_top" layout="jfd:box"  columns="2" tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Tab.Address" >
-	 		<jfd:label id="dummyLabel" text="" />
-			<jfd:button id="refreshButton" alignment="expand_expand" sameLine="true" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RefreshButton" actionListener="PersonTypeChanged" />
-	 		<jfd:label id="indexLabel" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.IndexLabel" />
-			<jfd:textField id="index" sameLine="true" readOnly="true" alignment="expand_expand" />
-	 		<jfd:label id="countryLabel" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.CountryLabel"/>
-			<jfd:textField id="country" sameLine="true" readOnly="true" alignment="expand_expand" />
-			<jfd:label id="regionLabel" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RegionLabel"/>
-			<jfd:textField id="region" sameLine="true" readOnly="true" alignment="expand_expand" />
-			<jfd:label id="districtLabel" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.DistrictLabel"/>
-			<jfd:textField id="district" sameLine="true" readOnly="true" alignment="expand_expand" />
-			<jfd:label id="placeLabel" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.PlaceLabel"/>
-			<jfd:textField id="place" sameLine="true" readOnly="true" alignment="expand_expand" />
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Tab.Totlal">
+      <jfd:field id="Code"/>
+      <jfd:field id="Name"/>
+      <jfd:field id="IsLegalPerson" actionListener="PersonTypeChanged"
+                 fieldGroup="resource://com.mg.merp.crm.resources.formelements#RelationMt.Contractor"/>
+      <jfd:field id="NaturalPerson"/>
+      <jfd:field id="LegalPerson" sameLine="true"/>
+      <jfd:field id="PersonTitle"/>
+      <jfd:field id="NickName" logField="false"/>
+      <jfd:field id="Responsible" fieldGroup=" "/>
+      <jfd:field id="Curator" sameLine="true"/>
+      <jfd:field id="Status"/>
+      <jfd:field id="ClientType" sameLine="true"/>
+      <jfd:field id="ClientRank"/>
+    </jfd:container>
 
-			<jfd:label id="streetLabel" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.StreetLabel"/>
-			<jfd:textField id="street" sameLine="true" readOnly="true" alignment="expand_expand" />
-			<jfd:label id="houseLabel" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.HouseLabel"/>
-			<jfd:textField id="house" sameLine="true" readOnly="true" alignment="expand_expand" />
-			<jfd:label id="buildingLabel" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.BuildingLabel"/>
-			<jfd:textField id="building" sameLine="true" readOnly="true" alignment="expand_expand" />
-			<jfd:label id="roomLabel" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RoomLabel"/>
-			<jfd:textField id="room" sameLine="true" readOnly="true" alignment="expand_expand" />
-			<jfd:label id="fullAdressLabel" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.FullAdressLabel"/>
-			<jfd:textField id="fullAdress" sameLine="true" readOnly="true" alignment="expand_expand" />
- 		</jfd:container>
- 		
-		 <jfd:container id="contInfoFields" layout="jfd:box" orientation="ver" alignment="expand_expand"  tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Tab.ContInfo">						
-			<jfd:button id="refreshContactButton" alignment="expand_top" sameLine="true" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RefreshButton" actionListener="RefreshContact" /> 	 			
- 	 		<jfd:container id="contactSplit" layout="jfd:split" alignment="expand_expand" orientation="ver" tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Tab.ContInfo" >
-				<jfd:table id="phoneTable" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" label="resource://com.mg.merp.crm.resources.formelements#Relation.Phone" >		
- 	 				<jfd:popupMenu>
-						<jfd:menuItem id="addPhone" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemAdd" actionListener="AddPhone" />
-						<jfd:menuItem id="removePhone" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemRemove" actionListener="RemovePhone" />
-						<jfd:menuItem id="showPhone" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemShow" actionListener="ShowPhone" />
-						<jfd:menuItem id="editPhone" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemEdit" actionListener="EditPhone" />
-						<jfd:separator/>
-						<jfd:menuItem id="refreshPhoneTable" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RefreshButton" actionListener="RefreshContact" />
-					</jfd:popupMenu>
- 	 			</jfd:table>
- 	 			<jfd:table id="eAdressTable" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" label="resource://com.mg.merp.crm.resources.formelements#Relation.Email" >		
-					<jfd:popupMenu>
-						<jfd:menuItem id="addEAdress" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemAdd" actionListener="AddEAdress" />
-						<jfd:menuItem id="removeEAdress" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemRemove" actionListener="RemoveEAdress" />
-						<jfd:menuItem id="showEAdress" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemShow" actionListener="ShowEAdress" />
-						<jfd:menuItem id="editEAdress" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemEdit" actionListener="EditEAdress" />
-						<jfd:separator/>
-						<jfd:menuItem id="eAdressTable" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RefreshButton" actionListener="RefreshContact" />
-					</jfd:popupMenu>
-				</jfd:table>
- 			</jfd:container>
-		</jfd:container>
+    <jfd:container id="addressFields" alignment="expand_top" layout="jfd:box" columns="2"
+                   tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Tab.Address">
+      <jfd:label id="dummyLabel" text=""/>
+      <jfd:button id="refreshButton" alignment="expand_expand" sameLine="true"
+                  text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RefreshButton"
+                  actionListener="PersonTypeChanged"/>
+      <jfd:label id="indexLabel"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.IndexLabel"/>
+      <jfd:textField id="index" sameLine="true" readOnly="true" alignment="expand_expand"/>
+      <jfd:label id="countryLabel"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.CountryLabel"/>
+      <jfd:textField id="country" sameLine="true" readOnly="true" alignment="expand_expand"/>
+      <jfd:label id="regionLabel"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RegionLabel"/>
+      <jfd:textField id="region" sameLine="true" readOnly="true" alignment="expand_expand"/>
+      <jfd:label id="districtLabel"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.DistrictLabel"/>
+      <jfd:textField id="district" sameLine="true" readOnly="true" alignment="expand_expand"/>
+      <jfd:label id="placeLabel"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.PlaceLabel"/>
+      <jfd:textField id="place" sameLine="true" readOnly="true" alignment="expand_expand"/>
 
- 		<jfd:container id="extraFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Tab.Extra" >
-			<jfd:field id="Branch" />	 		
-			<jfd:field id="Market" sameLine="true"/>	
-			<jfd:field id="OwnershipForm" />	
-			<jfd:field id="ActivityKind" sameLine="true"/>
-			<jfd:field id="PaymentCond" />			
-			<jfd:field id="ActivitySphere" sameLine="true"/>	
-			<jfd:field id="DeliveryKind" /> 	 		
-	 		<jfd:field id="Info" />
- 		</jfd:container> 		 		 			
-	</jfd:container>
+      <jfd:label id="streetLabel"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.StreetLabel"/>
+      <jfd:textField id="street" sameLine="true" readOnly="true" alignment="expand_expand"/>
+      <jfd:label id="houseLabel"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.HouseLabel"/>
+      <jfd:textField id="house" sameLine="true" readOnly="true" alignment="expand_expand"/>
+      <jfd:label id="buildingLabel"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.BuildingLabel"/>
+      <jfd:textField id="building" sameLine="true" readOnly="true" alignment="expand_expand"/>
+      <jfd:label id="roomLabel"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RoomLabel"/>
+      <jfd:textField id="room" sameLine="true" readOnly="true" alignment="expand_expand"/>
+      <jfd:label id="fullAdressLabel"
+                 text="resource://com.mg.merp.crm.resources.formelements#RelationMt.FullAdressLabel"/>
+      <jfd:textField id="fullAdress" sameLine="true" readOnly="true" alignment="expand_expand"/>
+    </jfd:container>
 
-	<jfd:container id="fieldsOfRelation" layout="jfd:tabbed" alignment="expand_expand" >
-	<jfd:table id="contact" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Contact">
-			<jfd:popupMenu>
-				<jfd:menuItem id="addContactPerson" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemAdd" actionListener="AddContactPerson" />
-				<jfd:menuItem id="removeContactPerson" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemRemove" actionListener="RemoveContactPerson" />
-				<jfd:menuItem id="showContactPerson" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemShow" actionListener="ShowContactPerson" />
-				<jfd:menuItem id="editContactPerson" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemEdit" actionListener="EditContactPerson" />
-			</jfd:popupMenu>
- 		</jfd:table>	
-		
-		<jfd:maintenanceTable id="operation" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Operation">
-		</jfd:maintenanceTable>			
+    <jfd:container id="contInfoFields" layout="jfd:box" orientation="ver" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Tab.ContInfo">
+      <jfd:button id="refreshContactButton" alignment="expand_top" sameLine="true"
+                  text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RefreshButton"
+                  actionListener="RefreshContact"/>
+      <jfd:container id="contactSplit" layout="jfd:split" alignment="expand_expand"
+                     orientation="ver"
+                     tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Tab.ContInfo">
+        <jfd:table id="phoneTable" scroll="true" autoResize="subsequent_columns"
+                   alignment="expand_expand"
+                   label="resource://com.mg.merp.crm.resources.formelements#Relation.Phone">
+          <jfd:popupMenu>
+            <jfd:menuItem id="addPhone"
+                          text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemAdd"
+                          actionListener="AddPhone"/>
+            <jfd:menuItem id="removePhone"
+                          text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemRemove"
+                          actionListener="RemovePhone"/>
+            <jfd:menuItem id="showPhone"
+                          text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemShow"
+                          actionListener="ShowPhone"/>
+            <jfd:menuItem id="editPhone"
+                          text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemEdit"
+                          actionListener="EditPhone"/>
+            <jfd:separator/>
+            <jfd:menuItem id="refreshPhoneTable"
+                          text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RefreshButton"
+                          actionListener="RefreshContact"/>
+          </jfd:popupMenu>
+        </jfd:table>
+        <jfd:table id="eAdressTable" scroll="true" autoResize="subsequent_columns"
+                   alignment="expand_expand"
+                   label="resource://com.mg.merp.crm.resources.formelements#Relation.Email">
+          <jfd:popupMenu>
+            <jfd:menuItem id="addEAdress"
+                          text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemAdd"
+                          actionListener="AddEAdress"/>
+            <jfd:menuItem id="removeEAdress"
+                          text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemRemove"
+                          actionListener="RemoveEAdress"/>
+            <jfd:menuItem id="showEAdress"
+                          text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemShow"
+                          actionListener="ShowEAdress"/>
+            <jfd:menuItem id="editEAdress"
+                          text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemEdit"
+                          actionListener="EditEAdress"/>
+            <jfd:separator/>
+            <jfd:menuItem id="eAdressTable"
+                          text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RefreshButton"
+                          actionListener="RefreshContact"/>
+          </jfd:popupMenu>
+        </jfd:table>
+      </jfd:container>
+    </jfd:container>
 
-		<jfd:maintenanceTable id="offer" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Propos">					
-		</jfd:maintenanceTable>		
+    <jfd:container id="extraFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Tab.Extra">
+      <jfd:field id="Branch"/>
+      <jfd:field id="Market" sameLine="true"/>
+      <jfd:field id="OwnershipForm"/>
+      <jfd:field id="ActivityKind" sameLine="true"/>
+      <jfd:field id="PaymentCond"/>
+      <jfd:field id="ActivitySphere" sameLine="true"/>
+      <jfd:field id="DeliveryKind"/>
+      <jfd:field id="Info"/>
+    </jfd:container>
+  </jfd:container>
 
-		<jfd:container id="relationRel" layout="jfd:box" columns="2" alignment="expand_expand"  tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Relation" >
-			<jfd:field id="Parent" alignment="expand_top" />
-			<jfd:maintenanceTable id="relationIssue"  alignment="expand_expand" autoResize="subsequent_columns" scroll="true" label="resource://com.mg.merp.crm.resources.formelements#Relation.Issue">					
-			</jfd:maintenanceTable>	
-		</jfd:container>	
+  <jfd:container id="fieldsOfRelation" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:table id="contact" scroll="true" alignment="expand_expand"
+               tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Contact">
+      <jfd:popupMenu>
+        <jfd:menuItem id="addContactPerson"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemAdd"
+                      actionListener="AddContactPerson"/>
+        <jfd:menuItem id="removeContactPerson"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemRemove"
+                      actionListener="RemoveContactPerson"/>
+        <jfd:menuItem id="showContactPerson"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemShow"
+                      actionListener="ShowContactPerson"/>
+        <jfd:menuItem id="editContactPerson"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemEdit"
+                      actionListener="EditContactPerson"/>
+      </jfd:popupMenu>
+    </jfd:table>
 
-		<jfd:table id="documents" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Document">					
-			<jfd:popupMenu>
-				<jfd:menuItem id="addDocument" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemAdd" actionListener="AddDocument" />
-				<jfd:menuItem id="editDocument" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemEdit" actionListener="EditDocument" />
-				<jfd:menuItem id="deleteDocument" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemRemove" actionListener="DeleteDocument" />
-				<jfd:menuItem id="viewDocument" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemShow" actionListener="ViewDocument" />
-				<jfd:separator/>
-				<jfd:menuItem id="refreshDocument" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RefreshButton" actionListener="RefreshDocument" />
-				<!--jfd:menuItem id="restDocument" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemRest" actionListener="RestDocument" /-->
-				<jfd:separator/>
-				<jfd:menuItem id="editSpecification" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemEditSpec" actionListener="EditSpecification" />
-				<jfd:separator/>
-				<jfd:menuItem id="executeDocFlow" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemExecuteDocFlow" actionListener="ExecuteDocFlow" />
-				<jfd:menuItem id="rollBackDocFlow" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemRollBackDocFlow" actionListener="RollBackDocFlow" />
-				<jfd:menuItem id="docFlowHistory" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemDocFlowHistory" actionListener="DocFlowHistory" />
-			</jfd:popupMenu>
-		</jfd:table>			
-		
-		<jfd:table id="contractorCardTable" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Card" >		
- 	 		<jfd:popupMenu>
-				<jfd:menuItem id="showContractorCard" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemShow" actionListener="ShowContractorCard" />
-				<jfd:menuItem id="editContractorCard" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemEdit" actionListener="EditContractorCard" />
-				<jfd:separator/>
-				<jfd:menuItem id="refreshContractorCard" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RefreshButton" actionListener="RefreshContractorCard" />
-			</jfd:popupMenu>
-		</jfd:table>
+    <jfd:maintenanceTable id="operation" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Operation">
+    </jfd:maintenanceTable>
 
-		<jfd:maintenanceTable id="original" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Original">
-		</jfd:maintenanceTable>		
+    <jfd:maintenanceTable id="offer" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Propos">
+    </jfd:maintenanceTable>
 
-	</jfd:container>
+    <jfd:container id="relationRel" layout="jfd:box" columns="2" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Relation">
+      <jfd:field id="Parent" alignment="expand_top"/>
+      <jfd:maintenanceTable id="relationIssue" alignment="expand_expand"
+                            autoResize="subsequent_columns" scroll="true"
+                            label="resource://com.mg.merp.crm.resources.formelements#Relation.Issue">
+      </jfd:maintenanceTable>
+    </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:table id="documents" scroll="true" alignment="expand_expand"
+               tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Document">
+      <jfd:popupMenu>
+        <jfd:menuItem id="addDocument"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemAdd"
+                      actionListener="AddDocument"/>
+        <jfd:menuItem id="editDocument"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemEdit"
+                      actionListener="EditDocument"/>
+        <jfd:menuItem id="deleteDocument"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemRemove"
+                      actionListener="DeleteDocument"/>
+        <jfd:menuItem id="viewDocument"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemShow"
+                      actionListener="ViewDocument"/>
+        <jfd:separator/>
+        <jfd:menuItem id="refreshDocument"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RefreshButton"
+                      actionListener="RefreshDocument"/>
+        <!--jfd:menuItem id="restDocument" text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemRest" actionListener="RestDocument" /-->
+        <jfd:separator/>
+        <jfd:menuItem id="editSpecification"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemEditSpec"
+                      actionListener="EditSpecification"/>
+        <jfd:separator/>
+        <jfd:menuItem id="executeDocFlow"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemExecuteDocFlow"
+                      actionListener="ExecuteDocFlow"/>
+        <jfd:menuItem id="rollBackDocFlow"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemRollBackDocFlow"
+                      actionListener="RollBackDocFlow"/>
+        <jfd:menuItem id="docFlowHistory"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemDocFlowHistory"
+                      actionListener="DocFlowHistory"/>
+      </jfd:popupMenu>
+    </jfd:table>
+
+    <jfd:table id="contractorCardTable" scroll="true" alignment="expand_expand"
+               tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Card">
+      <jfd:popupMenu>
+        <jfd:menuItem id="showContractorCard"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemShow"
+                      actionListener="ShowContractorCard"/>
+        <jfd:menuItem id="editContractorCard"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.ItemEdit"
+                      actionListener="EditContractorCard"/>
+        <jfd:separator/>
+        <jfd:menuItem id="refreshContractorCard"
+                      text="resource://com.mg.merp.crm.resources.formelements#RelationMt.RefreshButton"
+                      actionListener="RefreshContractorCard"/>
+      </jfd:popupMenu>
+    </jfd:table>
+
+    <jfd:maintenanceTable id="original" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.crm.resources.formelements#Relation.Original">
+    </jfd:maintenanceTable>
+
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

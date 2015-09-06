@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.TariffScale;
 
 /**
- * 
  * @author leonova
  * @version $Id: TariffScaleServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface TariffScaleServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<TariffScale, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<TariffScale, Integer> {
 
 }

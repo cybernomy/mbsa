@@ -22,8 +22,8 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class OkofSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/account/Okof";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/account/Okof";
+  }
 }

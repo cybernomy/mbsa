@@ -18,7 +18,7 @@ import com.mg.merp.warehouse.model.WarehouseConfig;
 
 /**
  * Сервис бизнес-компонента "Конфигурация модуля <Склады, снабжение, сбыт>"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: WarehouseConfigServiceLocal.java,v 1.2 2007/01/13 13:35:22 sharapov Exp $

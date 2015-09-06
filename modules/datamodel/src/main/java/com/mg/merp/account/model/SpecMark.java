@@ -18,97 +18,102 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Модель бизнес-компонента "Особые отметки"
- * 
+ *
  * @author hbm2java
  * @author Artem V. Sharapov
  * @version $Id: SpecMark.java,v 1.6 2007/01/16 11:42:46 sharapov Exp $
  */
 @DataItemName("Account.SpecMark") //$NON-NLS-1$
 public class SpecMark extends com.mg.framework.service.PersistentObjectHibernate implements
-java.io.Serializable {
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer id; 	
+  private java.lang.Integer id;
 
-	private java.lang.String UpCode;
+  private java.lang.String UpCode;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String SmName;
+  private java.lang.String SmName;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public SpecMark() {
-	}
+  /**
+   * default constructor
+   */
+  public SpecMark() {
+  }
 
-	/** constructor with id */
-	public SpecMark(java.lang.Integer Id) {
-		this.id=Id;
-	}
+  /**
+   * constructor with id
+   */
+  public SpecMark(java.lang.Integer Id) {
+    this.id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	public java.lang.String getUpCode() {
-		return this.UpCode;
-	}
+  // Property accessors
 
-	public void setUpCode(java.lang.String Upcode) {
-		this.UpCode = Upcode;
-	}
+  /**
+   *
+   */
+  public java.lang.String getUpCode() {
+    return this.UpCode;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  public void setUpCode(java.lang.String Upcode) {
+    this.UpCode = Upcode;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.SpecMark.Code") //$NON-NLS-1$
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.SpecMark.Code") //$NON-NLS-1$
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.SpecMark.Name") //$NON-NLS-1$
-	public java.lang.String getSmName() {
-		return this.SmName;
-	}
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	public void setSmName(java.lang.String Smname) {
-		this.SmName = Smname;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.SpecMark.Name") //$NON-NLS-1$
+  public java.lang.String getSmName() {
+    return this.SmName;
+  }
 
-	/**
-	 * @return Идентификатор
-	 */
-	@DataItemName("ID") //$NON-NLS-1$
-	public java.lang.Integer getId() {
-		return this.id;
-	}
+  public void setSmName(java.lang.String Smname) {
+    this.SmName = Smname;
+  }
 
-	/**
-	 * @param id - Идентификатор
-	 */
-	public void setId(java.lang.Integer id) {
-		this.id = id;
-	}
+  /**
+   * @return Идентификатор
+   */
+  @DataItemName("ID") //$NON-NLS-1$
+  public java.lang.Integer getId() {
+    return this.id;
+  }
+
+  /**
+   * @param id - Идентификатор
+   */
+  public void setId(java.lang.Integer id) {
+    this.id = id;
+  }
 }

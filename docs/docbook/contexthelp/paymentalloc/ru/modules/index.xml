@@ -16,10 +16,10 @@
 <index version="1.0">
 
   <indexitem text="Журнал платежей">
-     <indexentry text="Журнал платежей" target="pml_html" />
-     <indexentry text="Группы документов" target="docgroup_html" />
-     <indexentry text="Образцы" target="patterns_html" />
-     <indexentry text="Документы, связанные с платежом" target="docs_html" />
-   </indexitem>
-  
+    <indexentry text="Журнал платежей" target="pml_html"/>
+    <indexentry text="Группы документов" target="docgroup_html"/>
+    <indexentry text="Образцы" target="patterns_html"/>
+    <indexentry text="Документы, связанные с платежом" target="docs_html"/>
+  </indexitem>
+
 </index>

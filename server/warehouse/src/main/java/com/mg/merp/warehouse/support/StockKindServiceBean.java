@@ -15,19 +15,19 @@
 
 package com.mg.merp.warehouse.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.warehouse.StockKindServiceLocal;
 import com.mg.merp.warehouse.model.StockKind;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Вид запаса" 
- * 
+ * Бизнес-компонент "Вид запаса"
+ *
  * @author leonova
  * @version $Id: StockKindServiceBean.java,v 1.4 2006/09/14 12:48:21 leonova Exp $
  */
-@Stateless(name="merp/warehouse/StockKindService")
+@Stateless(name = "merp/warehouse/StockKindService")
 public class StockKindServiceBean extends AbstractPOJODataBusinessObjectServiceBean<StockKind, Integer> implements StockKindServiceLocal {
 
 

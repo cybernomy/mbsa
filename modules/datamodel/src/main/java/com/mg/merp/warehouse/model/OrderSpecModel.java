@@ -21,85 +21,88 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: OrderSpecModel.java,v 1.3 2006/04/13 10:28:32 safonov Exp $
  */
 public class OrderSpecModel extends com.mg.merp.document.model.DocSpecModel
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.math.BigDecimal Discount;
+  private java.math.BigDecimal Discount;
 
-	private java.math.BigDecimal PriceWithDiscount;
+  private java.math.BigDecimal PriceWithDiscount;
 
-	private java.math.BigDecimal SummaWithDiscount;
+  private java.math.BigDecimal SummaWithDiscount;
 
-	private java.math.BigDecimal Cost;
+  private java.math.BigDecimal Cost;
 
-	private java.math.BigDecimal DocDiscount;
+  private java.math.BigDecimal DocDiscount;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public OrderSpecModel() {
-	}
+  /**
+   * default constructor
+   */
+  public OrderSpecModel() {
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("Warehouse.OrderSpecModel.Discount")
-	public java.math.BigDecimal getDiscount() {
-		return this.Discount;
-	}
+  // Property accessors
 
-	public void setDiscount(java.math.BigDecimal Discount) {
-		this.Discount = Discount;
-	}
+  /**
+   *
+   */
+  @DataItemName("Warehouse.OrderSpecModel.Discount")
+  public java.math.BigDecimal getDiscount() {
+    return this.Discount;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Warehouse.OrderSpecModel.PriceWithDiscount")
-	public java.math.BigDecimal getPriceWithDiscount() {
-		return this.PriceWithDiscount;
-	}
+  public void setDiscount(java.math.BigDecimal Discount) {
+    this.Discount = Discount;
+  }
 
-	public void setPriceWithDiscount(java.math.BigDecimal PriceWithDiscount) {
-		this.PriceWithDiscount = PriceWithDiscount;
-	}
+  /**
+   *
+   */
+  @DataItemName("Warehouse.OrderSpecModel.PriceWithDiscount")
+  public java.math.BigDecimal getPriceWithDiscount() {
+    return this.PriceWithDiscount;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Warehouse.OrderSpecModel.SummaWithDiscount")
-	public java.math.BigDecimal getSummaWithDiscount() {
-		return this.SummaWithDiscount;
-	}
+  public void setPriceWithDiscount(java.math.BigDecimal PriceWithDiscount) {
+    this.PriceWithDiscount = PriceWithDiscount;
+  }
 
-	public void setSummaWithDiscount(java.math.BigDecimal SummaWithDiscount) {
-		this.SummaWithDiscount = SummaWithDiscount;
-	}
+  /**
+   *
+   */
+  @DataItemName("Warehouse.OrderSpecModel.SummaWithDiscount")
+  public java.math.BigDecimal getSummaWithDiscount() {
+    return this.SummaWithDiscount;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Warehouse.OrderSpecModel.Cost")
-	public java.math.BigDecimal getCost() {
-		return this.Cost;
-	}
+  public void setSummaWithDiscount(java.math.BigDecimal SummaWithDiscount) {
+    this.SummaWithDiscount = SummaWithDiscount;
+  }
 
-	public void setCost(java.math.BigDecimal Cost) {
-		this.Cost = Cost;
-	}
+  /**
+   *
+   */
+  @DataItemName("Warehouse.OrderSpecModel.Cost")
+  public java.math.BigDecimal getCost() {
+    return this.Cost;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Warehouse.OrderSpecModel.DocDiscount")
-	public java.math.BigDecimal getDocDiscount() {
-		return this.DocDiscount;
-	}
+  public void setCost(java.math.BigDecimal Cost) {
+    this.Cost = Cost;
+  }
 
-	public void setDocDiscount(java.math.BigDecimal DocDiscount) {
-		this.DocDiscount = DocDiscount;
-	}
+  /**
+   *
+   */
+  @DataItemName("Warehouse.OrderSpecModel.DocDiscount")
+  public java.math.BigDecimal getDocDiscount() {
+    return this.DocDiscount;
+  }
+
+  public void setDocDiscount(java.math.BigDecimal DocDiscount) {
+    this.DocDiscount = DocDiscount;
+  }
 
 }

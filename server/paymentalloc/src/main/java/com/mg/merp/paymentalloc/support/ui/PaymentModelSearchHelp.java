@@ -18,18 +18,18 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
  * Поисковик бизнес-компонента "Образцы записей журнала платежей"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: PaymentModelSearchHelp.java,v 1.1 2007/02/16 14:44:32 sharapov Exp $
  */
 public class PaymentModelSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {
-		return "merp/paymentalloc/PaymentModel"; //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/paymentalloc/PaymentModel"; //$NON-NLS-1$
+  }
 
 }

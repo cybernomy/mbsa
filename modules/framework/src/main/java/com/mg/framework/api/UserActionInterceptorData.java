@@ -21,18 +21,18 @@ import com.mg.framework.api.orm.PersistentObject;
  * @version $Id: UserActionInterceptorData.java,v 1.1 2005/04/28 15:33:24 safonov Exp $
  */
 public class UserActionInterceptorData {
-    public BusinessObjectService service;
-    public PersistentObject entity;
-    public AttributeMap oldEntity;
-    public AttributeMap featureValues;
-    public AttributeMap oldFeatureValues;
-    
-    public UserActionInterceptorData(BusinessObjectService service, PersistentObject entity,
-            AttributeMap oldEntity, AttributeMap featureValues, AttributeMap oldFeatureValues) {
-        this.service = service;
-        this.entity = entity;
-        this.oldEntity = oldEntity;
-        this.featureValues = featureValues;
-        this.oldFeatureValues = oldFeatureValues;
-    }
+  public BusinessObjectService service;
+  public PersistentObject entity;
+  public AttributeMap oldEntity;
+  public AttributeMap featureValues;
+  public AttributeMap oldFeatureValues;
+
+  public UserActionInterceptorData(BusinessObjectService service, PersistentObject entity,
+                                   AttributeMap oldEntity, AttributeMap featureValues, AttributeMap oldFeatureValues) {
+    this.service = service;
+    this.entity = entity;
+    this.oldEntity = oldEntity;
+    this.featureValues = featureValues;
+    this.oldFeatureValues = oldFeatureValues;
+  }
 }

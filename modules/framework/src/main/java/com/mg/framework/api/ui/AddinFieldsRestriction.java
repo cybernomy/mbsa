@@ -16,7 +16,7 @@ package com.mg.framework.api.ui;
 
 /**
  * Ограничения по пользовательским полям
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: AddinFieldsRestriction.java,v 1.1 2006/08/03 08:32:23 safonov Exp $
  */

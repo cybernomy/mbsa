@@ -19,6 +19,6 @@ package com.mg.framework.api.ui;
  * @version $Id: FormActionType.java,v 1.1 2005/06/01 12:45:02 safonov Exp $
  */
 public enum FormActionType {
-    BEFORE_OUTPUT,
-    AFTER_INPUT
+  BEFORE_OUTPUT,
+  AFTER_INPUT
 }

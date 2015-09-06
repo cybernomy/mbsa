@@ -18,15 +18,13 @@ import com.mg.merp.account.model.CashDocumentModel;
 import com.mg.merp.document.DocumentPattern;
 
 /**
- * 
  * @author leonova
  * @version $Id: CashDocumentModelOutServiceLocal.java,v 1.3 2006/09/20 10:43:40 safonov Exp $
  */
 public interface CashDocumentModelOutServiceLocal
-   extends DocumentPattern<CashDocumentModel, Integer>
-{
-	/**
-	 * тип папки для образцов расходных кассовых ордеров
-	 */
-	final static short FOLDER_PART = 17;
+    extends DocumentPattern<CashDocumentModel, Integer> {
+  /**
+   * тип папки для образцов расходных кассовых ордеров
+   */
+  final static short FOLDER_PART = 17;
 }

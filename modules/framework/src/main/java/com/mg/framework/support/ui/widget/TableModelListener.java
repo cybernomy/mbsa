@@ -19,53 +19,39 @@ import java.util.EventListener;
 
 /**
  * Table model listener
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: TableModelListener.java,v 1.3 2006/08/31 08:49:30 safonov Exp $
  */
 public interface TableModelListener extends EventListener, Serializable {
-	
-	/**
-	 * Notify when all cells have been changed
-	 *
-	 */
-	void tableChanged();
-	
-	/**
-	 * Notify when a range of rows has been removed
-	 * 
-	 * @param firstRow
-	 * @param lastRow
-	 */
-	void tableRowsDeleted(int firstRow, int lastRow);
-	
-	/**
-	 * Notify when a range of rows has been updated 
-	 * 
-	 * @param firstRow
-	 * @param lastRow
-	 */
-	void tableRowsUpdated(int firstRow, int lastRow);
-	
-	/**
-	 * Notify when a range of rows has been inserted
-	 * 
-	 * @param firstRow
-	 * @param lastRow
-	 */
-	void tableRowsInserted(int firstRow, int lastRow);
-	
-	/**
-	 * Notify wher structure of table have been changed
-	 *
-	 */
-	void tableStructureChanged();
-	
-	/**
-	 * Notify when a single cell has been updated
-	 *  
-	 * @param row		
-	 * @param column
-	 */
-	void tableCellUpdated(int row, int column);
+
+  /**
+   * Notify when all cells have been changed
+   */
+  void tableChanged();
+
+  /**
+   * Notify when a range of rows has been removed
+   */
+  void tableRowsDeleted(int firstRow, int lastRow);
+
+  /**
+   * Notify when a range of rows has been updated
+   */
+  void tableRowsUpdated(int firstRow, int lastRow);
+
+  /**
+   * Notify when a range of rows has been inserted
+   */
+  void tableRowsInserted(int firstRow, int lastRow);
+
+  /**
+   * Notify wher structure of table have been changed
+   */
+  void tableStructureChanged();
+
+  /**
+   * Notify when a single cell has been updated
+   */
+  void tableCellUpdated(int row, int column);
 }

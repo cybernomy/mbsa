@@ -17,7 +17,7 @@ package com.mg.framework.api.ui.widget;
 
 /**
  * Элемент "Редактор раскрывающийся список перечислимого типа"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: EnumComboBoxField.java,v 1.2 2006/11/21 15:34:06 safonov Exp $
  */

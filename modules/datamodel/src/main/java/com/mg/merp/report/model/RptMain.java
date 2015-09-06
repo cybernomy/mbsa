@@ -14,12 +14,6 @@
  */
 package com.mg.merp.report.model;
 
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
-
-import org.hibernate.bytecode.javassist.FieldHandler;
-
 import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.orm.OrmTemplate;
 import com.mg.framework.api.orm.PersistentManager;
@@ -28,224 +22,235 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.framework.utils.StringUtils;
 import com.mg.merp.core.model.SysClass;
 
+import org.hibernate.bytecode.javassist.FieldHandler;
+
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+
 /**
  * @author hbm2java
  * @version $Id: RptMain.java,v 1.20 2008/03/28 06:26:43 safonov Exp $
  */
 public class RptMain extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
 
-	private FieldHandler fieldHandler;
+  private FieldHandler fieldHandler;
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String RptName;
+  private java.lang.String RptName;
 
-	private boolean AskParams;
+  private boolean AskParams;
 
-	private boolean DirectPrint;
+  private boolean DirectPrint;
 
-	private java.lang.String Comment;
+  private java.lang.String Comment;
 
-	private boolean InvokeFromEdit;
+  private boolean InvokeFromEdit;
 
 //	private java.lang.String ClassIds;
 
-	private java.lang.String ClassNames;
+  private java.lang.String ClassNames;
 
-	private byte[] template;
+  private byte[] template;
 
-	private java.lang.Integer Priority;
+  private java.lang.Integer Priority;
 
-	private java.util.Date SysVersion;
+  private java.util.Date SysVersion;
 
-	private java.util.Set<com.mg.merp.report.model.RptRight> permissions;
+  private java.util.Set<com.mg.merp.report.model.RptRight> permissions;
 
-	private java.util.Set<com.mg.merp.report.model.ClassLink> classLinks;
-	
-	private java.lang.String ParamsFormName;
+  private java.util.Set<com.mg.merp.report.model.ClassLink> classLinks;
 
-	private java.lang.String outputFormat;
-	
-	// Constructors
+  private java.lang.String ParamsFormName;
 
-	/** default constructor */
-	public RptMain() {
-	}
+  private java.lang.String outputFormat;
 
-	/** constructor with id */
-	public RptMain(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  // Constructors
 
-	/* (non-Javadoc)
-	 * @see org.hibernate.bytecode.javassist.FieldHandled#getFieldHandler()
-	 */
-	public FieldHandler getFieldHandler() {
-		return fieldHandler;
-	}
+  /**
+   * default constructor
+   */
+  public RptMain() {
+  }
 
-	/* (non-Javadoc)
-	 * @see org.hibernate.bytecode.javassist.FieldHandled#setFieldHandler(org.hibernate.bytecode.javassist.FieldHandler)
-	 */
-	public void setFieldHandler(FieldHandler handler) {
-		this.fieldHandler = handler;
-	}
+  /**
+   * constructor with id
+   */
+  public RptMain(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  /* (non-Javadoc)
+   * @see org.hibernate.bytecode.javassist.FieldHandled#getFieldHandler()
+   */
+  public FieldHandler getFieldHandler() {
+    return fieldHandler;
+  }
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /* (non-Javadoc)
+   * @see org.hibernate.bytecode.javassist.FieldHandled#setFieldHandler(org.hibernate.bytecode.javassist.FieldHandler)
+   */
+  public void setFieldHandler(FieldHandler handler) {
+    this.fieldHandler = handler;
+  }
 
-	/**
-	 * 
-	 */
+  // Property accessors
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.BigCode")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  /**
+   *
+   */
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Name")
-	public java.lang.String getRptName() {
-		return this.RptName;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setRptName(java.lang.String Rptname) {
-		this.RptName = Rptname;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.BigCode")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	public boolean isAskParams() {
-		return this.AskParams;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Name")
+  public java.lang.String getRptName() {
+    return this.RptName;
+  }
 
-	public void setAskParams(boolean Askparams) {
-		this.AskParams = Askparams;
-	}
+  public void setRptName(java.lang.String Rptname) {
+    this.RptName = Rptname;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public boolean isDirectPrint() {
-		return this.DirectPrint;
-	}
+  public boolean isAskParams() {
+    return this.AskParams;
+  }
 
-	public void setDirectPrint(boolean DirectPrint) {
-		this.DirectPrint = DirectPrint;
-	}
+  public void setAskParams(boolean Askparams) {
+    this.AskParams = Askparams;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Report.Comment")
-	public java.lang.String getComment() {
-		return this.Comment;
-	}
+  /**
+   *
+   */
 
-	public void setComment(java.lang.String Comment) {
-		this.Comment = Comment;
-	}
+  public boolean isDirectPrint() {
+    return this.DirectPrint;
+  }
 
-	/**
-	 * 
-	 */
+  public void setDirectPrint(boolean DirectPrint) {
+    this.DirectPrint = DirectPrint;
+  }
 
-	public boolean isInvokeFromEdit() {
-		return this.InvokeFromEdit;
-	}
+  /**
+   *
+   */
+  @DataItemName("Report.Comment")
+  public java.lang.String getComment() {
+    return this.Comment;
+  }
 
-	public void setInvokeFromEdit(boolean InvokeFromEdit) {
-		this.InvokeFromEdit = InvokeFromEdit;
-	}
+  public void setComment(java.lang.String Comment) {
+    this.Comment = Comment;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public byte[] getTemplate() {
-		return fieldHandler != null ? (byte[]) fieldHandler.readObject(this, "Template", this.template) : null;
-	}
+  public boolean isInvokeFromEdit() {
+    return this.InvokeFromEdit;
+  }
 
-	public void setTemplate(byte[] template) {
-		if (fieldHandler != null)
-			fieldHandler.writeObject(this, "Template", this.template, template);
-		this.template = template;
-	}
+  public void setInvokeFromEdit(boolean InvokeFromEdit) {
+    this.InvokeFromEdit = InvokeFromEdit;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public java.lang.Integer getPriority() {
-		return this.Priority;
-	}
+  public byte[] getTemplate() {
+    return fieldHandler != null ? (byte[]) fieldHandler.readObject(this, "Template", this.template) : null;
+  }
 
-	public void setPriority(java.lang.Integer Priority) {
-		this.Priority = Priority;
-	}
+  public void setTemplate(byte[] template) {
+    if (fieldHandler != null)
+      fieldHandler.writeObject(this, "Template", this.template, template);
+    this.template = template;
+  }
 
-	/**
-	 * 
-	 */
-	public java.util.Date getSysVersion() {
-		return SysVersion;
-	}
+  /**
+   *
+   */
 
-	public void setSysVersion(java.util.Date version) {
-		SysVersion = version;
-	}
+  public java.lang.Integer getPriority() {
+    return this.Priority;
+  }
 
-	public java.lang.String getOutputFormat() {
-		return outputFormat;
-	}
+  public void setPriority(java.lang.Integer Priority) {
+    this.Priority = Priority;
+  }
 
-	public void setOutputFormat(java.lang.String outputFormat) {
-		this.outputFormat = outputFormat;
-	}
+  /**
+   *
+   */
+  public java.util.Date getSysVersion() {
+    return SysVersion;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysVersion(java.util.Date version) {
+    SysVersion = version;
+  }
+
+  public java.lang.String getOutputFormat() {
+    return outputFormat;
+  }
+
+  public void setOutputFormat(java.lang.String outputFormat) {
+    this.outputFormat = outputFormat;
+  }
+
+  /**
+   *
+   */
 
 	/*public java.lang.String getClassIds() {
-		if (this.ClassIds == null) {
+        if (this.ClassIds == null) {
 			java.util.Set<com.mg.merp.report.model.ClassLink> links = getClassLinks();
 			if (links != null) {
 				this.ClassIds = "";
@@ -259,7 +264,7 @@ public class RptMain extends com.mg.framework.service.PersistentObjectHibernate
 	}*/
 
 	/*public void setClassIds(java.lang.String classIds) {
-		this.ClassIds = classIds;
+    this.ClassIds = classIds;
 		if (classIds != null) {
 			java.util.Set<ClassLink> links = getClassLinks();
 
@@ -304,115 +309,115 @@ public class RptMain extends com.mg.framework.service.PersistentObjectHibernate
 		}
 	}*/
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
 
-	public java.lang.String getClassNames() {
-		if (this.ClassNames == null) {
-			java.util.Set<com.mg.merp.report.model.ClassLink> links = getClassLinks();
-			if (links != null) {
-				StringBuffer sb = new StringBuffer();
-				for (com.mg.merp.report.model.ClassLink link : links)
-					sb.append(link.getSysClass().getSysModule().getName())
-							.append("(")
-							.append(link.getSysClass().getSysModule().getDescription())
-							.append(")")
-							.append("->")
-							.append(link.getSysClass().getBeanName())
-							.append("(")
-							.append(link.getSysClass().getDescription())
-							.append(");");
-				this.ClassNames = new String(sb);
-			}
-		}
-		return this.ClassNames;
-	}
+  public java.lang.String getClassNames() {
+    if (this.ClassNames == null) {
+      java.util.Set<com.mg.merp.report.model.ClassLink> links = getClassLinks();
+      if (links != null) {
+        StringBuffer sb = new StringBuffer();
+        for (com.mg.merp.report.model.ClassLink link : links)
+          sb.append(link.getSysClass().getSysModule().getName())
+              .append("(")
+              .append(link.getSysClass().getSysModule().getDescription())
+              .append(")")
+              .append("->")
+              .append(link.getSysClass().getBeanName())
+              .append("(")
+              .append(link.getSysClass().getDescription())
+              .append(");");
+        this.ClassNames = new String(sb);
+      }
+    }
+    return this.ClassNames;
+  }
 
-	public void setClassNames(java.lang.String ClassNames) {
-		this.ClassNames = ClassNames;
-		java.util.Set<ClassLink> links = getClassLinks();
-		if (ClassNames != null && ClassNames.length() > 0) {
-			List<String> newNames = StringUtils.split(ClassNames, ";");
-			List<String> names = new LinkedList<String>();
-			//получаем список БК, которые необходимо прикрутить
-			for (String nm : newNames) {
-				int pos = nm.indexOf("->");
-				names.add(nm.substring(pos + 2, nm.indexOf("(", pos)));
-			}
+  public void setClassNames(java.lang.String ClassNames) {
+    this.ClassNames = ClassNames;
+    java.util.Set<ClassLink> links = getClassLinks();
+    if (ClassNames != null && ClassNames.length() > 0) {
+      List<String> newNames = StringUtils.split(ClassNames, ";");
+      List<String> names = new LinkedList<String>();
+      //получаем список БК, которые необходимо прикрутить
+      for (String nm : newNames) {
+        int pos = nm.indexOf("->");
+        names.add(nm.substring(pos + 2, nm.indexOf("(", pos)));
+      }
 
-			if (links == null) {
-				links = new HashSet<ClassLink>();
-				setClassLinks(links);
-			}
+      if (links == null) {
+        links = new HashSet<ClassLink>();
+        setClassLinks(links);
+      }
 
-			//БК, которых нет в списке удаляем из classLinks()
-			java.util.Set<ClassLink> removedLink = new HashSet<ClassLink>();
-			for (ClassLink link : links) {
-				String ss = link.getSysClass().getBeanName().toString();
-				if (!names.contains(ss))
-					removedLink.add(link);
-				else
-					names.remove(ss);
-			}
-			links.removeAll(removedLink);
+      //БК, которых нет в списке удаляем из classLinks()
+      java.util.Set<ClassLink> removedLink = new HashSet<ClassLink>();
+      for (ClassLink link : links) {
+        String ss = link.getSysClass().getBeanName().toString();
+        if (!names.contains(ss))
+          removedLink.add(link);
+        else
+          names.remove(ss);
+      }
+      links.removeAll(removedLink);
 
-			//если необходимо добавить новые БК
-			if (names.size() > 0) {
-				PersistentManager pm = ServerUtils.getPersistentManager();
+      //если необходимо добавить новые БК
+      if (names.size() > 0) {
+        PersistentManager pm = ServerUtils.getPersistentManager();
 
-				List<SysClass> scL = MiscUtils.convertUncheckedList(SysClass.class,
-						OrmTemplate.getInstance().findByNamedParam("select sc from SysClass sc where sc.BeanName in (:beans)", "beans", names));
+        List<SysClass> scL = MiscUtils.convertUncheckedList(SysClass.class,
+            OrmTemplate.getInstance().findByNamedParam("select sc from SysClass sc where sc.BeanName in (:beans)", "beans", names));
 
-				for (SysClass sc : scL) {
-					ClassLink cl = new ClassLink();
+        for (SysClass sc : scL) {
+          ClassLink cl = new ClassLink();
 
-					cl.setSysClass(sc);
-					cl.setReport(this);
-					//XXX: поле SysClient автоматически устанавливается только в рабочем контексте.
-					//А для RptBIRTDeployerImpl его нет 
-					cl.setSysClient(getSysClient());
-					
-					links.add(cl);
-					pm.persist(cl);
-				}
-			}
-		} else if (links != null)
-			links.clear();
-	}
+          cl.setSysClass(sc);
+          cl.setReport(this);
+          //XXX: поле SysClient автоматически устанавливается только в рабочем контексте.
+          //А для RptBIRTDeployerImpl его нет
+          cl.setSysClient(getSysClient());
 
-	/**
-	 * 
-	 */
+          links.add(cl);
+          pm.persist(cl);
+        }
+      }
+    } else if (links != null)
+      links.clear();
+  }
 
-	public java.util.Set<com.mg.merp.report.model.RptRight> getPermissions() {
-		return this.permissions;
-	}
+  /**
+   *
+   */
 
-	public void setPermissions(
-			java.util.Set<com.mg.merp.report.model.RptRight> SetOfRptRights) {
-		this.permissions = SetOfRptRights;
-	}
+  public java.util.Set<com.mg.merp.report.model.RptRight> getPermissions() {
+    return this.permissions;
+  }
 
-	/**
-	 * 
-	 */
+  public void setPermissions(
+      java.util.Set<com.mg.merp.report.model.RptRight> SetOfRptRights) {
+    this.permissions = SetOfRptRights;
+  }
 
-	public java.util.Set<com.mg.merp.report.model.ClassLink> getClassLinks() {
-		return this.classLinks;
-	}
+  /**
+   *
+   */
 
-	public void setClassLinks(
-			java.util.Set<com.mg.merp.report.model.ClassLink> SetOfRptClassLink) {
-		this.classLinks = SetOfRptClassLink;
-	}
+  public java.util.Set<com.mg.merp.report.model.ClassLink> getClassLinks() {
+    return this.classLinks;
+  }
 
-	public java.lang.String getParamsFormName() {
-		return ParamsFormName;
-	}
+  public void setClassLinks(
+      java.util.Set<com.mg.merp.report.model.ClassLink> SetOfRptClassLink) {
+    this.classLinks = SetOfRptClassLink;
+  }
 
-	public void setParamsFormName(java.lang.String paramsFormName) {
-		ParamsFormName = paramsFormName;
-	}
+  public java.lang.String getParamsFormName() {
+    return ParamsFormName;
+  }
+
+  public void setParamsFormName(java.lang.String paramsFormName) {
+    ParamsFormName = paramsFormName;
+  }
 
 }

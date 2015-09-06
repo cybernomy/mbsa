@@ -14,9 +14,9 @@
 <!-- $Id: map.xml,v 1.1 2006/12/03 13:24:11 konyashkina Exp $ -->
 
 <map version="1.0">
-  <mapID target="docgroup_html" url="groups.html" />
-  <mapID target="pml_html" url="pml.html" />
-  <mapID target="patterns_html" url="patterns.html" />
-  <mapID target="docs_html" url="docs.html" />
-  <mapID target="cond_html" url="uo.html" />
+  <mapID target="docgroup_html" url="groups.html"/>
+  <mapID target="pml_html" url="pml.html"/>
+  <mapID target="patterns_html" url="patterns.html"/>
+  <mapID target="docs_html" url="docs.html"/>
+  <mapID target="cond_html" url="uo.html"/>
 </map>

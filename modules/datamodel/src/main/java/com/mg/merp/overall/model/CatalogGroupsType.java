@@ -19,47 +19,47 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Тип группы позиции КТУ
- * 
+ *
  * @author leonova
  * @author Konstantin S. Alikaev
  * @version $Id: CatalogGroupsType.java,v 1.2 2008/06/30 04:15:16 alikaev Exp $
  */
-@DataItemName ("Overall.Spec.CatalogGroupsType")
+@DataItemName("Overall.Spec.CatalogGroupsType")
 public enum CatalogGroupsType {
-	/**
-	 * специальная одежда
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.Overall")
-	OVERALL,
-	
-	/**
-	 * форменная одежда
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.FromClothes")
-	FORMCLOTHES,
-	
-	/**
-	 * индивидуальные средства защита
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.Protection")
-	PROTECTION,
-	
-	/**
-	 * инструменты
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.Instrument")
-	INSTRUMENT,
-	
-	/**
-	 * оргтехника, мебель
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.OfficeEquip")
-	OFFICEEQUIP,
-	
-	/**
-	 * прочие ТМЦ
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.Other")
-	OTHER	
-	
+  /**
+   * специальная одежда
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.Overall")
+  OVERALL,
+
+  /**
+   * форменная одежда
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.FromClothes")
+  FORMCLOTHES,
+
+  /**
+   * индивидуальные средства защита
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.Protection")
+  PROTECTION,
+
+  /**
+   * инструменты
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.Instrument")
+  INSTRUMENT,
+
+  /**
+   * оргтехника, мебель
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.OfficeEquip")
+  OFFICEEQUIP,
+
+  /**
+   * прочие ТМЦ
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#CatalogGroupsType.Other")
+  OTHER
+
 }

@@ -18,7 +18,7 @@ import com.mg.merp.finance.model.FinConfig;
 
 /**
  * Сервис бизнес-компонента "Конфигурация модуля <Фин.учет>"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: FinConfigServiceLocal.java,v 1.3 2008/01/31 09:06:12 safonov Exp $

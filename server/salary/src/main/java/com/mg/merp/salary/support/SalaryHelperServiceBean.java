@@ -18,30 +18,19 @@ package com.mg.merp.salary.support;
 import com.mg.merp.salary.SalaryHelperServiceLocal;
 
 /**
- * @ejb.bean name = "SalaryHelperService"
- *           type = "Stateless"
- *           view-type = "local"
- *           local-jndi-name = "merp/salary/SalaryHelperService"
- *           description = "SalaryHelper"
- *           display-name = "SalaryHelper"
- *
- * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.BusinessObjectService"
- *
- * @ejb.home      local-extends = "javax.ejb.EJBLocalHome"
- *
- * @ejb.env-entry name = "DomainClassName"
- *                type = "java.lang.String"
- *                value = "com.mg.merp.account.support.SalaryHelperDomainImpl"
- *
- * @jboss.container-configuration name = "MERP Standard Stateless Service"
- *
  * @author Tatyana V. Pashistova
+ * @ejb.bean name = "SalaryHelperService" type = "Stateless" view-type = "local" local-jndi-name =
+ * "merp/salary/SalaryHelperService" description = "SalaryHelper" display-name = "SalaryHelper"
+ * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.BusinessObjectService"
+ * @ejb.home local-extends = "javax.ejb.EJBLocalHome"
+ * @ejb.env-entry name = "DomainClassName" type = "java.lang.String" value =
+ * "com.mg.merp.account.support.SalaryHelperDomainImpl"
+ * @jboss.container-configuration name = "MERP Standard Stateless Service"
  * @since 19.11.2004
- *
  */
- public class SalaryHelperServiceBean extends com.mg.framework.generic.AbstractBusinessObjectStatelessServiceBean implements SalaryHelperServiceLocal {
+public class SalaryHelperServiceBean extends com.mg.framework.generic.AbstractBusinessObjectStatelessServiceBean implements SalaryHelperServiceLocal {
 
- 	public void ejbCreate() throws javax.ejb.CreateException {
- 	}
+  public void ejbCreate() throws javax.ejb.CreateException {
+  }
 
- }
+}

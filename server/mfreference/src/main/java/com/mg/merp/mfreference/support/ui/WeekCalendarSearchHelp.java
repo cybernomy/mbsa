@@ -29,32 +29,32 @@ import com.mg.merp.mfreference.WeekCalendarServiceLocal;
  */
 public class WeekCalendarSearchHelp extends AbstractSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
-	 */
-	@Override
-	protected void doSearch() throws Exception {
-		SearchHelpForm form = (SearchHelpForm) UIProducer.produceForm("com/mg/merp/mfreference/resources/WeekCalendarSearchForm.mfd.xml");
-		form.addSearchHelpListener(this);
-		form.run(UIUtils.isModalMode());
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doView(com.mg.framework.api.orm.PersistentObject)
-	 */
-	@Override
-	protected void doView(PersistentObject entity) {
-		WeekCalendarServiceLocal service = (WeekCalendarServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/mfreference/WeekCalendar");
-		MaintenanceHelper.view(service, (Integer) entity.getPrimaryKey(), null, null);
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#isSupportView()
-	 */
-	@Override
-	public boolean isSupportView() {
-		return true;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
+   */
+  @Override
+  protected void doSearch() throws Exception {
+    SearchHelpForm form = (SearchHelpForm) UIProducer.produceForm("com/mg/merp/mfreference/resources/WeekCalendarSearchForm.mfd.xml");
+    form.addSearchHelpListener(this);
+    form.run(UIUtils.isModalMode());
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doView(com.mg.framework.api.orm.PersistentObject)
+   */
+  @Override
+  protected void doView(PersistentObject entity) {
+    WeekCalendarServiceLocal service = (WeekCalendarServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/mfreference/WeekCalendar");
+    MaintenanceHelper.view(service, (Integer) entity.getPrimaryKey(), null, null);
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#isSupportView()
+   */
+  @Override
+  public boolean isSupportView() {
+    return true;
+  }
 
 
 }

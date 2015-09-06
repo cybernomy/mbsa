@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.PersonPhone;
 
 /**
- * 
  * @author leonova
  * @version $Id: PersonPhoneServiceLocal.java,v 1.1 2006/03/14 11:49:50 safonov Exp $
  */
 public interface PersonPhoneServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<PersonPhone, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<PersonPhone, Integer> {
 
 }

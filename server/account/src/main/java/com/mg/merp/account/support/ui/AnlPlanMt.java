@@ -18,14 +18,14 @@ import com.mg.framework.generic.ui.DefaultMaintenanceForm;
 
 /**
  * Контроллер формы поддержки аналитического плана счетов
- * 
+ *
  * @author leonova
  * @version $Id: AnlPlanMt.java,v 1.2 2009/02/25 15:09:59 safonov Exp $
  */
 public class AnlPlanMt extends DefaultMaintenanceForm {
 
-	public AnlPlanMt() {
-		super();
-	}
+  public AnlPlanMt() {
+    super();
+  }
 
 }

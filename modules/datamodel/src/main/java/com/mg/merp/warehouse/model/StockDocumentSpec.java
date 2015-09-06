@@ -20,12 +20,14 @@ package com.mg.merp.warehouse.model;
  * @version $Id: StockDocumentSpec.java,v 1.6 2007/09/27 15:38:46 safonov Exp $
  */
 public class StockDocumentSpec extends BaseStockDocumentSpec
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public StockDocumentSpec() {
-	}
+  /**
+   * default constructor
+   */
+  public StockDocumentSpec() {
+  }
 
 }

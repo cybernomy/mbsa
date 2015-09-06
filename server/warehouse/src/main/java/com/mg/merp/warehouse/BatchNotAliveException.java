@@ -18,18 +18,18 @@ import com.mg.merp.warehouse.support.Messages;
 
 /**
  * ИС "Невозможно откатить документ - было списание с партии"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: BatchNotAliveException.java,v 1.2 2007/03/26 13:31:18 poroxnenko Exp $ 
+ * @version $Id: BatchNotAliveException.java,v 1.2 2007/03/26 13:31:18 poroxnenko Exp $
  */
 @javax.ejb.ApplicationException
 public class BatchNotAliveException extends BusinessException {
 
-	public BatchNotAliveException(Throwable cause) {
-		super(Messages.getInstance().getMessage(Messages.BATCH_NOT_ALIVE), cause);
-	}
-	
-	public BatchNotAliveException() {
-		super(Messages.getInstance().getMessage(Messages.BATCH_NOT_ALIVE));
-	}
+  public BatchNotAliveException(Throwable cause) {
+    super(Messages.getInstance().getMessage(Messages.BATCH_NOT_ALIVE), cause);
+  }
+
+  public BatchNotAliveException() {
+    super(Messages.getInstance().getMessage(Messages.BATCH_NOT_ALIVE));
+  }
 }

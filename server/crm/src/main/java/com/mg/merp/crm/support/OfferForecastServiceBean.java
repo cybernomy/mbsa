@@ -15,27 +15,27 @@
 
 package com.mg.merp.crm.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.crm.OfferForecastServiceLocal;
 import com.mg.merp.crm.model.OfferForecast;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Прогнозы предложений" 
- * 
+ * Бизнес-компонент "Прогнозы предложений"
+ *
  * @author leonova
  * @version $Id: OfferForecastServiceBean.java,v 1.5 2006/10/12 05:57:42 leonova Exp $
  */
-@Stateless(name="merp/crm/OfferForecastService")
+@Stateless(name = "merp/crm/OfferForecastService")
 public class OfferForecastServiceBean extends AbstractPOJODataBusinessObjectServiceBean<OfferForecast, Integer> implements OfferForecastServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, OfferForecast entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));
-	}
+  @Override
+  protected void onValidate(ValidationContext context, OfferForecast entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+  }
 
 
 }

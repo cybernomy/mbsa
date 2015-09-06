@@ -28,120 +28,116 @@ import com.mg.merp.account.model.AccPlan;
 
 /**
  * Контроллер формы поддержки плана счетов
- * 
+ *
  * @author leonova
  * @version $Id: AccountMt.java,v 1.7 2009/02/25 15:09:59 safonov Exp $
  */
 public class AccountMt extends DefaultCompoundMaintenanceForm implements MasterModelListener {
-	private MaintenanceTableController analitFirst;
-	private AnlPlanServiceLocal analitService;	
-	protected AttributeMap analitFirstProperties = new LocalDataTransferObject();
+  protected AttributeMap analitFirstProperties = new LocalDataTransferObject();
+  protected AttributeMap analitSecondProperties = new LocalDataTransferObject();
+  protected AttributeMap analitThirdProperties = new LocalDataTransferObject();
+  protected AttributeMap analitFourthProperties = new LocalDataTransferObject();
+  protected AttributeMap analitFifthProperties = new LocalDataTransferObject();
+  private MaintenanceTableController analitFirst;
+  private AnlPlanServiceLocal analitService;
+  private MaintenanceTableController analitSecond;
+  private MaintenanceTableController analitThird;
+  private MaintenanceTableController analitFourth;
+  private MaintenanceTableController analitFifth;
 
-	private MaintenanceTableController analitSecond;	
-	protected AttributeMap analitSecondProperties = new LocalDataTransferObject();
+  public AccountMt() throws Exception {
+    addMasterModelListener(this);
+    analitService = (AnlPlanServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/account/AnlPlan");
 
-	private MaintenanceTableController analitThird;	
-	protected AttributeMap analitThirdProperties = new LocalDataTransferObject();
+    analitFirstProperties.put("AnlLevel", 1);
+    analitFirst = new MaintenanceTableController(analitFirstProperties);
+    analitFirst.initController(analitService, new AnlPlanMaintenanceEJBQLTableModel() {
 
-	private MaintenanceTableController analitFourth;
-	protected AttributeMap analitFourthProperties = new LocalDataTransferObject();
+      /* (non-Javadoc)
+       * @see com.mg.merp.account.support.ui.AnlPlanMaintenanceEJBQLTableModel#getAnalitikaLevel()
+       */
+      @Override
+      protected short getAnalitikaLevel() {
+        return 1;
+      }
 
-	private MaintenanceTableController analitFifth;	
-	protected AttributeMap analitFifthProperties = new LocalDataTransferObject();
+    });
+    addMasterModelListener(analitFirst);
 
-	public AccountMt() throws Exception {
-		addMasterModelListener(this);
-		analitService = (AnlPlanServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/account/AnlPlan");
-		
-		analitFirstProperties.put("AnlLevel", 1);		
-		analitFirst = new MaintenanceTableController(analitFirstProperties);
-		analitFirst.initController(analitService, new AnlPlanMaintenanceEJBQLTableModel() {
+    analitSecondProperties.put("AnlLevel", 2);
+    analitSecond = new MaintenanceTableController(analitSecondProperties);
+    analitSecond.initController(analitService, new AnlPlanMaintenanceEJBQLTableModel() {
 
-			/* (non-Javadoc)
-			 * @see com.mg.merp.account.support.ui.AnlPlanMaintenanceEJBQLTableModel#getAnalitikaLevel()
-			 */
-			@Override
-			protected short getAnalitikaLevel() {
-				return 1;
-			}
+      /* (non-Javadoc)
+       * @see com.mg.merp.account.support.ui.AnlPlanMaintenanceEJBQLTableModel#getAnalitikaLevel()
+       */
+      @Override
+      protected short getAnalitikaLevel() {
+        return 2;
+      }
 
-		});
-		addMasterModelListener(analitFirst);
-			
-		analitSecondProperties.put("AnlLevel", 2);
-		analitSecond = new MaintenanceTableController(analitSecondProperties);
-		analitSecond.initController(analitService, new AnlPlanMaintenanceEJBQLTableModel() {
+    });
 
-			/* (non-Javadoc)
-			 * @see com.mg.merp.account.support.ui.AnlPlanMaintenanceEJBQLTableModel#getAnalitikaLevel()
-			 */
-			@Override
-			protected short getAnalitikaLevel() {
-				return 2;
-			}
+    addMasterModelListener(analitSecond);
 
-		});
+    analitThirdProperties.put("AnlLevel", 3);
+    analitThird = new MaintenanceTableController(analitThirdProperties);
+    analitThird.initController(analitService, new AnlPlanMaintenanceEJBQLTableModel() {
 
-		addMasterModelListener(analitSecond);
+      /* (non-Javadoc)
+       * @see com.mg.merp.account.support.ui.AnlPlanMaintenanceEJBQLTableModel#getAnalitikaLevel()
+       */
+      @Override
+      protected short getAnalitikaLevel() {
+        return 3;
+      }
 
-		analitThirdProperties.put("AnlLevel", 3);	
-		analitThird = new MaintenanceTableController(analitThirdProperties);
-		analitThird.initController(analitService, new AnlPlanMaintenanceEJBQLTableModel() {
-			
-			/* (non-Javadoc)
-			 * @see com.mg.merp.account.support.ui.AnlPlanMaintenanceEJBQLTableModel#getAnalitikaLevel()
-			 */
-			@Override
-			protected short getAnalitikaLevel() {
-				return 3;
-			}
+    });
+    addMasterModelListener(analitThird);
 
-		});
-		addMasterModelListener(analitThird);
-		
-		analitFourthProperties.put("AnlLevel", 4);
-		analitFourth = new MaintenanceTableController(analitFourthProperties);
-		analitFourth.initController(analitService, new AnlPlanMaintenanceEJBQLTableModel() {
+    analitFourthProperties.put("AnlLevel", 4);
+    analitFourth = new MaintenanceTableController(analitFourthProperties);
+    analitFourth.initController(analitService, new AnlPlanMaintenanceEJBQLTableModel() {
 
-			/* (non-Javadoc)
-			 * @see com.mg.merp.account.support.ui.AnlPlanMaintenanceEJBQLTableModel#getAnalitikaLevel()
-			 */
-			@Override
-			protected short getAnalitikaLevel() {
-				return 4;
-			}
+      /* (non-Javadoc)
+       * @see com.mg.merp.account.support.ui.AnlPlanMaintenanceEJBQLTableModel#getAnalitikaLevel()
+       */
+      @Override
+      protected short getAnalitikaLevel() {
+        return 4;
+      }
 
-		});
-		addMasterModelListener(analitFourth);
-		
-		analitFifthProperties.put("AnlLevel", 5);	
-		analitFifth = new MaintenanceTableController(analitFifthProperties);
-		analitFifth.initController(analitService, new AnlPlanMaintenanceEJBQLTableModel() {
-			
-			/* (non-Javadoc)
-			 * @see com.mg.merp.account.support.ui.AnlPlanMaintenanceEJBQLTableModel#getAnalitikaLevel()
-			 */
-			@Override
-			protected short getAnalitikaLevel() {
-				return 5;
-			}
+    });
+    addMasterModelListener(analitFourth);
 
-		});
-		addMasterModelListener(analitFifth);
-	}
+    analitFifthProperties.put("AnlLevel", 5);
+    analitFifth = new MaintenanceTableController(analitFifthProperties);
+    analitFifth.initController(analitService, new AnlPlanMaintenanceEJBQLTableModel() {
 
-	private void initMaster(PersistentObject master, AttributeMap analitikaProp, TableModel tableModel) {
-		analitikaProp.put("AccPlan", master);
-		((AnlPlanMaintenanceEJBQLTableModel) tableModel).setAccPlan((AccPlan) master);
-	}
+      /* (non-Javadoc)
+       * @see com.mg.merp.account.support.ui.AnlPlanMaintenanceEJBQLTableModel#getAnalitikaLevel()
+       */
+      @Override
+      protected short getAnalitikaLevel() {
+        return 5;
+      }
 
-	public void masterChange(ModelChangeEvent event) {
-		PersistentObject master = event.getEntity();
-		initMaster(master, analitFirstProperties, analitFirst.getModel());
-		initMaster(master, analitSecondProperties, analitSecond.getModel());
-		initMaster(master, analitThirdProperties, analitThird.getModel());
-		initMaster(master, analitFourthProperties, analitFourth.getModel());
-		initMaster(master, analitFifthProperties, analitFifth.getModel());
-	}
+    });
+    addMasterModelListener(analitFifth);
+  }
+
+  private void initMaster(PersistentObject master, AttributeMap analitikaProp, TableModel tableModel) {
+    analitikaProp.put("AccPlan", master);
+    ((AnlPlanMaintenanceEJBQLTableModel) tableModel).setAccPlan((AccPlan) master);
+  }
+
+  public void masterChange(ModelChangeEvent event) {
+    PersistentObject master = event.getEntity();
+    initMaster(master, analitFirstProperties, analitFirst.getModel());
+    initMaster(master, analitSecondProperties, analitSecond.getModel());
+    initMaster(master, analitThirdProperties, analitThird.getModel());
+    initMaster(master, analitFourthProperties, analitFourth.getModel());
+    initMaster(master, analitFifthProperties, analitFifth.getModel());
+  }
 
 }

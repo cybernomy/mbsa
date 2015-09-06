@@ -21,189 +21,194 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: WeekCalendarChange.java,v 1.3 2006/09/04 05:54:46 leonova Exp $
  */
 public class WeekCalendarChange extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.mfreference.model.DayCalendar DayCalThu;
+  private com.mg.merp.mfreference.model.DayCalendar DayCalThu;
 
-	private com.mg.merp.mfreference.model.DayCalendar DayCalSat;
+  private com.mg.merp.mfreference.model.DayCalendar DayCalSat;
 
-	private com.mg.merp.mfreference.model.WeekCalendar WeekCal;
+  private com.mg.merp.mfreference.model.WeekCalendar WeekCal;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.mfreference.model.DayCalendar DayCalMon;
+  private com.mg.merp.mfreference.model.DayCalendar DayCalMon;
 
-	private com.mg.merp.mfreference.model.DayCalendar DayCalWed;
+  private com.mg.merp.mfreference.model.DayCalendar DayCalWed;
 
-	private com.mg.merp.mfreference.model.DayCalendar DayCalSun;
+  private com.mg.merp.mfreference.model.DayCalendar DayCalSun;
 
-	private com.mg.merp.mfreference.model.DayCalendar DayCalTue;
+  private com.mg.merp.mfreference.model.DayCalendar DayCalTue;
 
-	private com.mg.merp.mfreference.model.DayCalendar DayCalFri;
+  private com.mg.merp.mfreference.model.DayCalendar DayCalFri;
 
-	private java.util.Date EffOnDate;
+  private java.util.Date EffOnDate;
 
-	private java.util.Date EffOffDate;
+  private java.util.Date EffOffDate;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public WeekCalendarChange() {
-	}
+  /**
+   * default constructor
+   */
+  public WeekCalendarChange() {
+  }
 
-	/** constructor with id */
-	public WeekCalendarChange(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public WeekCalendarChange(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("MfReference.WeekCalendarChange.DayCalThu")
-	public com.mg.merp.mfreference.model.DayCalendar getDayCalThu() {
-		return this.DayCalThu;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public void setDayCalThu(com.mg.merp.mfreference.model.DayCalendar DayCalThu) {
-		this.DayCalThu = DayCalThu;
-	}
+  /**
+   *
+   */
+  @DataItemName("MfReference.WeekCalendarChange.DayCalThu")
+  public com.mg.merp.mfreference.model.DayCalendar getDayCalThu() {
+    return this.DayCalThu;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("MfReference.WeekCalendarChange.DayCalSat")
-	public com.mg.merp.mfreference.model.DayCalendar getDayCalSat() {
-		return this.DayCalSat;
-	}
+  public void setDayCalThu(com.mg.merp.mfreference.model.DayCalendar DayCalThu) {
+    this.DayCalThu = DayCalThu;
+  }
 
-	public void setDayCalSat(com.mg.merp.mfreference.model.DayCalendar DayCalSat) {
-		this.DayCalSat = DayCalSat;
-	}
+  /**
+   *
+   */
+  @DataItemName("MfReference.WeekCalendarChange.DayCalSat")
+  public com.mg.merp.mfreference.model.DayCalendar getDayCalSat() {
+    return this.DayCalSat;
+  }
 
-	/**
-	 * 
-	 */
+  public void setDayCalSat(com.mg.merp.mfreference.model.DayCalendar DayCalSat) {
+    this.DayCalSat = DayCalSat;
+  }
 
-	public com.mg.merp.mfreference.model.WeekCalendar getWeekCal() {
-		return this.WeekCal;
-	}
+  /**
+   *
+   */
 
-	public void setWeekCal(com.mg.merp.mfreference.model.WeekCalendar WeekCal) {
-		this.WeekCal = WeekCal;
-	}
+  public com.mg.merp.mfreference.model.WeekCalendar getWeekCal() {
+    return this.WeekCal;
+  }
 
-	/**
-	 * 
-	 */
+  public void setWeekCal(com.mg.merp.mfreference.model.WeekCalendar WeekCal) {
+    this.WeekCal = WeekCal;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("MfReference.WeekCalendarChange.DayCalMon")
-	public com.mg.merp.mfreference.model.DayCalendar getDayCalMon() {
-		return this.DayCalMon;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setDayCalMon(com.mg.merp.mfreference.model.DayCalendar DayCalMon) {
-		this.DayCalMon = DayCalMon;
-	}
+  /**
+   *
+   */
+  @DataItemName("MfReference.WeekCalendarChange.DayCalMon")
+  public com.mg.merp.mfreference.model.DayCalendar getDayCalMon() {
+    return this.DayCalMon;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("MfReference.WeekCalendarChange.DayCalWed")
-	public com.mg.merp.mfreference.model.DayCalendar getDayCalWed() {
-		return this.DayCalWed;
-	}
+  public void setDayCalMon(com.mg.merp.mfreference.model.DayCalendar DayCalMon) {
+    this.DayCalMon = DayCalMon;
+  }
 
-	public void setDayCalWed(com.mg.merp.mfreference.model.DayCalendar DayCalWed) {
-		this.DayCalWed = DayCalWed;
-	}
+  /**
+   *
+   */
+  @DataItemName("MfReference.WeekCalendarChange.DayCalWed")
+  public com.mg.merp.mfreference.model.DayCalendar getDayCalWed() {
+    return this.DayCalWed;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("MfReference.WeekCalendarChange.DayCalSun")
-	public com.mg.merp.mfreference.model.DayCalendar getDayCalSun() {
-		return this.DayCalSun;
-	}
+  public void setDayCalWed(com.mg.merp.mfreference.model.DayCalendar DayCalWed) {
+    this.DayCalWed = DayCalWed;
+  }
 
-	public void setDayCalSun(com.mg.merp.mfreference.model.DayCalendar DayCalSun) {
-		this.DayCalSun = DayCalSun;
-	}
+  /**
+   *
+   */
+  @DataItemName("MfReference.WeekCalendarChange.DayCalSun")
+  public com.mg.merp.mfreference.model.DayCalendar getDayCalSun() {
+    return this.DayCalSun;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("MfReference.WeekCalendarChange.DayCalTue")
-	public com.mg.merp.mfreference.model.DayCalendar getDayCalTue() {
-		return this.DayCalTue;
-	}
+  public void setDayCalSun(com.mg.merp.mfreference.model.DayCalendar DayCalSun) {
+    this.DayCalSun = DayCalSun;
+  }
 
-	public void setDayCalTue(com.mg.merp.mfreference.model.DayCalendar DayCalTue) {
-		this.DayCalTue = DayCalTue;
-	}
+  /**
+   *
+   */
+  @DataItemName("MfReference.WeekCalendarChange.DayCalTue")
+  public com.mg.merp.mfreference.model.DayCalendar getDayCalTue() {
+    return this.DayCalTue;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("MfReference.WeekCalendarChange.DayCalFri")
-	public com.mg.merp.mfreference.model.DayCalendar getDayCalFri() {
-		return this.DayCalFri;
-	}
+  public void setDayCalTue(com.mg.merp.mfreference.model.DayCalendar DayCalTue) {
+    this.DayCalTue = DayCalTue;
+  }
 
-	public void setDayCalFri(com.mg.merp.mfreference.model.DayCalendar DayCalFri) {
-		this.DayCalFri = DayCalFri;
-	}
+  /**
+   *
+   */
+  @DataItemName("MfReference.WeekCalendarChange.DayCalFri")
+  public com.mg.merp.mfreference.model.DayCalendar getDayCalFri() {
+    return this.DayCalFri;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("MfReference.WeekCalendarChange.EffOnDate")
-	public java.util.Date getEffOnDate() {
-		return this.EffOnDate;
-	}
+  public void setDayCalFri(com.mg.merp.mfreference.model.DayCalendar DayCalFri) {
+    this.DayCalFri = DayCalFri;
+  }
 
-	public void setEffOnDate(java.util.Date EffOnDate) {
-		this.EffOnDate = EffOnDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("MfReference.WeekCalendarChange.EffOnDate")
+  public java.util.Date getEffOnDate() {
+    return this.EffOnDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("MfReference.WeekCalendarChange.EffOffDate")
-	public java.util.Date getEffOffDate() {
-		return this.EffOffDate;
-	}
+  public void setEffOnDate(java.util.Date EffOnDate) {
+    this.EffOnDate = EffOnDate;
+  }
 
-	public void setEffOffDate(java.util.Date EffOffDate) {
-		this.EffOffDate = EffOffDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("MfReference.WeekCalendarChange.EffOffDate")
+  public java.util.Date getEffOffDate() {
+    return this.EffOffDate;
+  }
+
+  public void setEffOffDate(java.util.Date EffOffDate) {
+    this.EffOffDate = EffOffDate;
+  }
 
 }

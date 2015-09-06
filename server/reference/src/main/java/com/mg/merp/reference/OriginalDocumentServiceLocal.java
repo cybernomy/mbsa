@@ -18,21 +18,21 @@ import com.mg.merp.reference.model.OriginalDocument;
 
 /**
  * Сервис бизнес-компонента "Оригиналы документов"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: OriginalDocumentServiceLocal.java,v 1.5 2008/05/19 14:39:38 safonov Exp $
  */
 public interface OriginalDocumentServiceLocal extends com.mg.framework.api.DataBusinessObjectService<OriginalDocument, Integer>, AttachmentHandler {
 
-	/**
-	 * имя сервиса
-	 */
-	final static String SERVICE_NAME = "merp/reference/OriginalDocument"; //$NON-NLS-1$
-	
-	/**
-	 * тип папки для Оригиналов документов
-	 */
-	final static short FOLDER_PART = 2501;
+  /**
+   * имя сервиса
+   */
+  final static String SERVICE_NAME = "merp/reference/OriginalDocument"; //$NON-NLS-1$
+
+  /**
+   * тип папки для Оригиналов документов
+   */
+  final static short FOLDER_PART = 2501;
 
 }

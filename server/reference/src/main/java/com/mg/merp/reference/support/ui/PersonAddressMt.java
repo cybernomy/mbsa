@@ -21,19 +21,19 @@ import com.mg.merp.reference.PersonAddressServiceLocal;
 import com.mg.merp.reference.model.PersonAddress;
 
 /**
- * Контроллер формы поддержки бизнес-компонента "Адрес физического лица" 
+ * Контроллер формы поддержки бизнес-компонента "Адрес физического лица"
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: PersonAddressMt.java,v 1.1 2007/09/05 11:07:23 alikaev Exp $
  */
 public class PersonAddressMt extends DefaultMaintenanceForm {
-	
-	/**
-	 * действие на  событие обновить
-	 * @param event
-	 */
-	public void onActionBuildFullAddress(WidgetEvent event){
-		PersonAddressServiceLocal servicePersonAddress = (PersonAddressServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/PersonAddress");
-		servicePersonAddress.getFullAddress((PersonAddress)getEntity());	
-	}
+
+  /**
+   * действие на  событие обновить
+   */
+  public void onActionBuildFullAddress(WidgetEvent event) {
+    PersonAddressServiceLocal servicePersonAddress = (PersonAddressServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/reference/PersonAddress");
+    servicePersonAddress.getFullAddress((PersonAddress) getEntity());
+  }
 
 }

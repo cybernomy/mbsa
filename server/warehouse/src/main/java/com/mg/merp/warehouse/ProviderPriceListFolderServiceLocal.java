@@ -5,15 +5,15 @@ package com.mg.merp.warehouse;
 
 /**
  * Local interface for ProviderPriceListFolderService.
- * @since 12.10.2004
+ *
  * @xdoclet-generated at 28-02-06
+ * @since 12.10.2004
  */
 public interface ProviderPriceListFolderServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService
-{
+    extends com.mg.framework.api.DataBusinessObjectService {
 
-   public java.lang.String getTag( int id ) throws com.mg.framework.api.ApplicationException;
+  public java.lang.String getTag(int id) throws com.mg.framework.api.ApplicationException;
 
-   public void setTag( int id,java.lang.String tag ) throws com.mg.framework.api.ApplicationException;
+  public void setTag(int id, java.lang.String tag) throws com.mg.framework.api.ApplicationException;
 
 }

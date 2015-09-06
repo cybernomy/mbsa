@@ -26,37 +26,37 @@ import com.mg.merp.baiengine.model.Repository;
  * @version $Id: BusinessAddinRepositorySearchForm.java,v 1.2 2008/12/17 13:35:58 safonov Exp $
  */
 public class BusinessAddinRepositorySearchForm extends AbstractSearchForm {
-	private final static String LOAD_BAI_REPOSITORY_EJBQL = "from Repository r where r.Engine <> com.mg.merp.baiengine.model.EngineType.PASCAL_ENGINE order by r.Code";
-	private DefaultTableController repositoryModelList;
-	private final static String[] fieldList = new String[] {"Code", "Name", "Engine", "ImplementationName"};
+  private final static String LOAD_BAI_REPOSITORY_EJBQL = "from Repository r where r.Engine <> com.mg.merp.baiengine.model.EngineType.PASCAL_ENGINE order by r.Code";
+  private final static String[] fieldList = new String[]{"Code", "Name", "Engine", "ImplementationName"};
+  private DefaultTableController repositoryModelList;
 
-	public BusinessAddinRepositorySearchForm() {
-		repositoryModelList = new DefaultTableController(new DefaultEntityListTableModel<Repository>() {
+  public BusinessAddinRepositorySearchForm() {
+    repositoryModelList = new DefaultTableController(new DefaultEntityListTableModel<Repository>() {
 
-			@Override
-			protected void doLoad() {
-				setEntityList(OrmTemplate.getInstance().find(Repository.class, LOAD_BAI_REPOSITORY_EJBQL), fieldList);
-			}
-			
-		});
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchForm#doOnRun()
-	 */
-	@Override
-	protected void doOnRun() {
-		repositoryModelList.getModel().load();
-		super.doOnRun();
-	}
+      @Override
+      protected void doLoad() {
+        setEntityList(OrmTemplate.getInstance().find(Repository.class, LOAD_BAI_REPOSITORY_EJBQL), fieldList);
+      }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchForm#getSearchedEntities()
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	protected PersistentObject[] getSearchedEntities() {
-		return ((DefaultEntityListTableModel<Repository>) repositoryModelList.getModel()).getSelectedEntities();
-	}
+    });
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchForm#doOnRun()
+   */
+  @Override
+  protected void doOnRun() {
+    repositoryModelList.getModel().load();
+    super.doOnRun();
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchForm#getSearchedEntities()
+   */
+  @SuppressWarnings("unchecked")
+  @Override
+  protected PersistentObject[] getSearchedEntities() {
+    return ((DefaultEntityListTableModel<Repository>) repositoryModelList.getModel()).getSelectedEntities();
+  }
 
 }

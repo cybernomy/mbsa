@@ -21,86 +21,86 @@ import com.mg.merp.reference.model.BankAccount;
 
 /**
  * Базовый класс контроллера формы условий отбора "Банковских документов"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: BankDocumentRest.java,v 1.1 2007/11/12 06:51:28 sharapov Exp $
  */
 public class BankDocumentRest extends DocumentRest {
 
-	@DataItemName("Account.BankIn.PayerBankReq") //$NON-NLS-1$
-	private BankAccount payerBank;
-	private String payerBankAccount;
-	
-	@DataItemName("Account.BankIn.RecipientBankReq") //$NON-NLS-1$
-	private BankAccount recipientBank;
-	private String recipientBankAccount;
-	
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.ui.DocumentRest#doClearRestrictionItem()
-	 */
-	@Override
-	protected void doClearRestrictionItem() {
-		super.doClearRestrictionItem();
-		this.payerBank = null;
-		this.payerBankAccount = StringUtils.EMPTY_STRING;
-		this.recipientBank = null;
-		this.recipientBankAccount = StringUtils.EMPTY_STRING;
-	}
+  @DataItemName("Account.BankIn.PayerBankReq") //$NON-NLS-1$
+  private BankAccount payerBank;
+  private String payerBankAccount;
 
-	/**
-	 * @return the payerBankReq
-	 */
-	public BankAccount getPayerBank() {
-		return this.payerBank;
-	}
+  @DataItemName("Account.BankIn.RecipientBankReq") //$NON-NLS-1$
+  private BankAccount recipientBank;
+  private String recipientBankAccount;
 
-	/**
-	 * @param payerBankReq the payerBankReq to set
-	 */
-	public void setPayerBank(BankAccount payerBank) {
-		this.payerBank = payerBank;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.ui.DocumentRest#doClearRestrictionItem()
+   */
+  @Override
+  protected void doClearRestrictionItem() {
+    super.doClearRestrictionItem();
+    this.payerBank = null;
+    this.payerBankAccount = StringUtils.EMPTY_STRING;
+    this.recipientBank = null;
+    this.recipientBankAccount = StringUtils.EMPTY_STRING;
+  }
 
-	/**
-	 * @return the payerBankAccount
-	 */
-	public String getPayerBankAccount() {
-		return this.payerBankAccount;
-	}
+  /**
+   * @return the payerBankReq
+   */
+  public BankAccount getPayerBank() {
+    return this.payerBank;
+  }
 
-	/**
-	 * @param payerBankAccount the payerBankAccount to set
-	 */
-	public void setPayerBankAccount(String payerBankAccount) {
-		this.payerBankAccount = payerBankAccount;
-	}
+  /**
+   * @param payerBankReq the payerBankReq to set
+   */
+  public void setPayerBank(BankAccount payerBank) {
+    this.payerBank = payerBank;
+  }
 
-	/**
-	 * @return the recipientBank
-	 */
-	public BankAccount getRecipientBank() {
-		return this.recipientBank;
-	}
+  /**
+   * @return the payerBankAccount
+   */
+  public String getPayerBankAccount() {
+    return this.payerBankAccount;
+  }
 
-	/**
-	 * @param recipientBank the recipientBank to set
-	 */
-	public void setRecipientBank(BankAccount recipientBank) {
-		this.recipientBank = recipientBank;
-	}
+  /**
+   * @param payerBankAccount the payerBankAccount to set
+   */
+  public void setPayerBankAccount(String payerBankAccount) {
+    this.payerBankAccount = payerBankAccount;
+  }
 
-	/**
-	 * @return the recipientBankAccount
-	 */
-	public String getRecipientBankAccount() {
-		return this.recipientBankAccount;
-	}
+  /**
+   * @return the recipientBank
+   */
+  public BankAccount getRecipientBank() {
+    return this.recipientBank;
+  }
 
-	/**
-	 * @param recipientBankAccount the recipientBankAccount to set
-	 */
-	public void setRecipientBankAccount(String recipientBankAccount) {
-		this.recipientBankAccount = recipientBankAccount;
-	}
+  /**
+   * @param recipientBank the recipientBank to set
+   */
+  public void setRecipientBank(BankAccount recipientBank) {
+    this.recipientBank = recipientBank;
+  }
+
+  /**
+   * @return the recipientBankAccount
+   */
+  public String getRecipientBankAccount() {
+    return this.recipientBankAccount;
+  }
+
+  /**
+   * @param recipientBankAccount the recipientBankAccount to set
+   */
+  public void setRecipientBankAccount(String recipientBankAccount) {
+    this.recipientBankAccount = recipientBankAccount;
+  }
 
 }

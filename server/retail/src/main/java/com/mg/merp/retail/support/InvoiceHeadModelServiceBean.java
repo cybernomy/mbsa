@@ -15,30 +15,29 @@
 
 package com.mg.merp.retail.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.document.generic.DocumentModelServiceBean;
 import com.mg.merp.retail.InvoiceHeadModelServiceLocal;
 import com.mg.merp.retail.InvoiceHeadServiceLocal;
 import com.mg.merp.retail.model.RtlInvoiceHeadModel;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Образцы документов на отпуск" 
- * 
+ * Бизнес-компонент "Образцы документов на отпуск"
+ *
  * @author leonova
  * @version $Id: InvoiceHeadModelServiceBean.java,v 1.3 2006/09/12 11:05:41 leonova Exp $
  */
-@Stateless(name="merp/retail/InvoiceHeadModelService")
+@Stateless(name = "merp/retail/InvoiceHeadModelService")
 public class InvoiceHeadModelServiceBean extends DocumentModelServiceBean<RtlInvoiceHeadModel, Integer> implements InvoiceHeadModelServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
-	 */
-	@Override
-	protected short getDocSectionIdentifier() {
-		return InvoiceHeadServiceLocal.DOCSECTION;
-	}
-
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
+   */
+  @Override
+  protected short getDocSectionIdentifier() {
+    return InvoiceHeadServiceLocal.DOCSECTION;
+  }
 
 
 }

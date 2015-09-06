@@ -18,14 +18,14 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
  * SearchHelp для Проблем
- * 
+ *
  * @author leonova
  * @version $Id: ProblemSearchHelp.java,v 1.1 2006/10/16 11:02:50 leonova Exp $
  */
 public class ProblemSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/crm/Problem";
-	}	
+  @Override
+  protected String getServiceName() {
+    return "merp/crm/Problem";
+  }
 }

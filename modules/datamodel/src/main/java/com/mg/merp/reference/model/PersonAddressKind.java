@@ -19,23 +19,23 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Тип адреса
- * 
+ *
  * @author leonova
  * @version $Id: PersonAddressKind.java,v 1.2 2006/05/02 12:32:28 safonov Exp $
  */
-@DataItemName ("Reference.Person.AddressKind")
+@DataItemName("Reference.Person.AddressKind")
 public enum PersonAddressKind {
-	/**
-	 * Фактический
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#Person.Actual")
-	ACTUAL,
-	
-	/**
-	 * Прописка
-	 */
-	@EnumConstantText ("resource://com.mg.merp.reference.resources.dataitemlabels#Person.Register")
-	REGISTER
+  /**
+   * Фактический
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Person.Actual")
+  ACTUAL,
+
+  /**
+   * Прописка
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Person.Register")
+  REGISTER
 }
 
 

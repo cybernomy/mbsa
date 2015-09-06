@@ -17,19 +17,18 @@ import java.io.Serializable;
 
 /**
  * Слушатель для запроса параметров отчёта
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @version $Id: ReportParametersListener.java,v 1.2 2008/03/27 08:12:15 safonov Exp $
- * 
  * @deprecated
  */
 @Deprecated
 public interface ReportParametersListener extends Serializable {
 
-	/**
-	 * Получить параметры отчёта
-	 * 
-	 * @param event событие, содержащее результат ввода параметров
-	 */
-	void getParameters(ReportParametersEvent event);
+  /**
+   * Получить параметры отчёта
+   *
+   * @param event событие, содержащее результат ввода параметров
+   */
+  void getParameters(ReportParametersEvent event);
 }

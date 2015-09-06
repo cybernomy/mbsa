@@ -18,9 +18,9 @@ import com.mg.merp.document.generic.ui.GoodsDocumentBrowseForm;
 
 /**
  * Контроллер формы списка производственных документов
- * 
+ *
  * @author leonova
- * @version $Id: ManufactureDocumentBr.java,v 1.3 2007/08/06 12:43:54 safonov Exp $ 
+ * @version $Id: ManufactureDocumentBr.java,v 1.3 2007/08/06 12:43:54 safonov Exp $
  */
 public class ManufactureDocumentBr extends GoodsDocumentBrowseForm {
 //	protected String INIT_QUERY_TEXT = "select distinct %s from DocHead d %s %s";
@@ -30,9 +30,9 @@ public class ManufactureDocumentBr extends GoodsDocumentBrowseForm {
 //	protected String fromList;
 //	protected Set<TableEJBQLFieldDef> fieldDefs;
 //	protected ManufactureDocumentRest restDocument;	
-	
+
 	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultHierarchyBrowseForm#initializeMaster(com.mg.framework.api.orm.PersistentObject)
+   * @see com.mg.framework.generic.ui.DefaultHierarchyBrowseForm#initializeMaster(com.mg.framework.api.orm.PersistentObject)
 	 */
 //	@Override
 //	protected void initializeMaster(PersistentObject master) {

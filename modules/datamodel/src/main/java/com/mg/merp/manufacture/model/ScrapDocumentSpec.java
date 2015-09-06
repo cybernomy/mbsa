@@ -15,51 +15,52 @@
 package com.mg.merp.manufacture.model;
 
 
-
 /**
  * @author hbm2java
  * @version $Id: ScrapDocumentSpec.java,v 1.3 2005/07/13 13:53:00 safonov Exp $
  */
 public class ScrapDocumentSpec extends com.mg.merp.document.model.DocSpec implements java.io.Serializable {
 
-    // Fields    
+  // Fields
 
- private com.mg.merp.manufacture.model.JobRouteResource JobRouteResource;
- private com.mg.merp.mfreference.model.CostCategories CostCategory;
-
-
-    // Constructors
-
-    /** default constructor */
-    public ScrapDocumentSpec() {
-    }
-    
-    
-    // Property accessors
-    /**
-    
-    */
-    
-    public com.mg.merp.manufacture.model.JobRouteResource getJobRouteResource () {
-        return this.JobRouteResource;
-    }
-    
-   public void setJobRouteResource (com.mg.merp.manufacture.model.JobRouteResource MfJobRouteResource) {
-        this.JobRouteResource = MfJobRouteResource;
-    }
-    /**
-    
-    */
-    
-    public com.mg.merp.mfreference.model.CostCategories getCostCategory () {
-        return this.CostCategory;
-    }
-    
-   public void setCostCategory (com.mg.merp.mfreference.model.CostCategories MfCostCategories) {
-        this.CostCategory = MfCostCategories;
-    }
+  private com.mg.merp.manufacture.model.JobRouteResource JobRouteResource;
+  private com.mg.merp.mfreference.model.CostCategories CostCategory;
 
 
+  // Constructors
+
+  /**
+   * default constructor
+   */
+  public ScrapDocumentSpec() {
+  }
+
+
+  // Property accessors
+
+  /**
+
+   */
+
+  public com.mg.merp.manufacture.model.JobRouteResource getJobRouteResource() {
+    return this.JobRouteResource;
+  }
+
+  public void setJobRouteResource(com.mg.merp.manufacture.model.JobRouteResource MfJobRouteResource) {
+    this.JobRouteResource = MfJobRouteResource;
+  }
+
+  /**
+
+   */
+
+  public com.mg.merp.mfreference.model.CostCategories getCostCategory() {
+    return this.CostCategory;
+  }
+
+  public void setCostCategory(com.mg.merp.mfreference.model.CostCategories MfCostCategories) {
+    this.CostCategory = MfCostCategories;
+  }
 
 
 }

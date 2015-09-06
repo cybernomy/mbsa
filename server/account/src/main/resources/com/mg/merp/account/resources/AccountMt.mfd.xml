@@ -13,35 +13,49 @@
 
 <!-- $Id: AccountMt.mfd.xml,v 1.5 2006/11/30 11:51:30 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.AccountMt" title="resource://com.mg.merp.account.resources.formelements#Account.FormMt.Title" helpTopic="account#accplan_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.account.support.ui.AccountMt"
+          title="resource://com.mg.merp.account.resources.formelements#Account.FormMt.Title"
+          helpTopic="account#accplan_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:field id="Acc"/>
-		<jfd:field id="AccName" />		
-		<jfd:field id="Currency"/>
-		<jfd:field id="AnlForm" />
-		<jfd:field id="AccType"/>
-		<jfd:field id="IsWork"/>
-		<jfd:field id="IsBal"/>			
-	</jfd:container>
-		<jfd:container id="analiFields" layout="jfd:tabbed" alignment="expand_bottom" title="resource://com.mg.merp.account.resources.formelements#Account.Analit.Title" >
-			<jfd:maintenanceTable id="analitFirst" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.account.resources.formelements#Account.FirstAnalit.Title">
-			</jfd:maintenanceTable>			
-			<jfd:maintenanceTable id="analitSecond" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#Account.SecondAnalit.Title">
-			</jfd:maintenanceTable>				
-			<jfd:maintenanceTable id="analitThird" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#Account.ThirdAnalit.Title">
-			</jfd:maintenanceTable>				
-			<jfd:maintenanceTable id="analitFourth" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#Account.FourthAnalit.Title">
-			</jfd:maintenanceTable>				
-			<jfd:maintenanceTable id="analitFifth" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.account.resources.formelements#Account.FifthAnalit.Title">
-			</jfd:maintenanceTable>		
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />				
-		</jfd:container>	
+    <jfd:field id="Acc"/>
+    <jfd:field id="AccName"/>
+    <jfd:field id="Currency"/>
+    <jfd:field id="AnlForm"/>
+    <jfd:field id="AccType"/>
+    <jfd:field id="IsWork"/>
+    <jfd:field id="IsBal"/>
+  </jfd:container>
+  <jfd:container id="analiFields" layout="jfd:tabbed" alignment="expand_bottom"
+                 title="resource://com.mg.merp.account.resources.formelements#Account.Analit.Title">
+    <jfd:maintenanceTable id="analitFirst" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.account.resources.formelements#Account.FirstAnalit.Title">
+    </jfd:maintenanceTable>
+    <jfd:maintenanceTable id="analitSecond" scroll="true" alignment="expand_expand"
+                          autoResize="subsequent_columns"
+                          tabTitle="resource://com.mg.merp.account.resources.formelements#Account.SecondAnalit.Title">
+    </jfd:maintenanceTable>
+    <jfd:maintenanceTable id="analitThird" scroll="true" alignment="expand_expand"
+                          autoResize="subsequent_columns"
+                          tabTitle="resource://com.mg.merp.account.resources.formelements#Account.ThirdAnalit.Title">
+    </jfd:maintenanceTable>
+    <jfd:maintenanceTable id="analitFourth" scroll="true" alignment="expand_expand"
+                          autoResize="subsequent_columns"
+                          tabTitle="resource://com.mg.merp.account.resources.formelements#Account.FourthAnalit.Title">
+    </jfd:maintenanceTable>
+    <jfd:maintenanceTable id="analitFifth" scroll="true" alignment="expand_expand"
+                          autoResize="subsequent_columns"
+                          tabTitle="resource://com.mg.merp.account.resources.formelements#Account.FifthAnalit.Title">
+    </jfd:maintenanceTable>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

@@ -15,21 +15,20 @@
 
 package com.mg.merp.paymentalloc.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.paymentalloc.DocGroupLinkServiceLocal;
 import com.mg.merp.paymentalloc.model.DocGroupLink;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Типы документов в группах" 
- * 
+ * Бизнес-компонент "Типы документов в группах"
+ *
  * @author leonova
  * @version $Id: DocGroupLinkServiceBean.java,v 1.3 2006/08/29 13:36:50 leonova Exp $
  */
-@Stateless(name="merp/paymentalloc/DocGroupLinkService")
+@Stateless(name = "merp/paymentalloc/DocGroupLinkService")
 public class DocGroupLinkServiceBean extends AbstractPOJODataBusinessObjectServiceBean<DocGroupLink, Integer> implements DocGroupLinkServiceLocal {
-
 
 
 }

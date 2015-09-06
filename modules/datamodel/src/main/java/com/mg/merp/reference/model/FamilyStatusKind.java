@@ -22,91 +22,96 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.FamilyStatusKind")
 public class FamilyStatusKind extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String KCode;
+  private java.lang.String KCode;
 
-	private java.lang.Integer Priority;
+  private java.lang.Integer Priority;
 
-	private java.lang.String Okin;
+  private java.lang.String Okin;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public FamilyStatusKind() {
-	}
+  /**
+   * default constructor
+   */
+  public FamilyStatusKind() {
+  }
 
-	/** constructor with id */
-	public FamilyStatusKind(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public FamilyStatusKind(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Code")
-	public java.lang.String getKCode() {
-		return this.KCode;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setKCode(java.lang.String KCode) {
-		this.KCode = KCode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Code")
+  public java.lang.String getKCode() {
+    return this.KCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Priority")
-	public java.lang.Integer getPriority() {
-		return this.Priority;
-	}
+  public void setKCode(java.lang.String KCode) {
+    this.KCode = KCode;
+  }
 
-	public void setPriority(java.lang.Integer Priority) {
-		this.Priority = Priority;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Priority")
+  public java.lang.Integer getPriority() {
+    return this.Priority;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Okin")
-	public java.lang.String getOkin() {
-		return this.Okin;
-	}
+  public void setPriority(java.lang.Integer Priority) {
+    this.Priority = Priority;
+  }
 
-	public void setOkin(java.lang.String Okin) {
-		this.Okin = Okin;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Okin")
+  public java.lang.String getOkin() {
+    return this.Okin;
+  }
+
+  public void setOkin(java.lang.String Okin) {
+    this.Okin = Okin;
+  }
 
 }

@@ -14,12 +14,12 @@
 <!-- $Id: map.xml,v 1.1 2006/11/27 12:39:50 konyashkina Exp $ -->
 
 <map version="1.0">
-  <mapID target="stlcntr_html" url="company.html" />
-  <mapID target="stllist_html" url="cards.html" />
-  <mapID target="stlcard_html" url="main.html" />
-  <mapID target="stlconfirm_html" url="confirmation.html" /> 
-  <mapID target="stlground_html" url="ground.html" /> 
-  <mapID target="stlcontr_html" url="contract.html" /> 
-  <mapID target="stlplan_html" url="plan.html" /> 
-  <mapID target="stlcond_html" url="conditions.html" /> 
+  <mapID target="stlcntr_html" url="company.html"/>
+  <mapID target="stllist_html" url="cards.html"/>
+  <mapID target="stlcard_html" url="main.html"/>
+  <mapID target="stlconfirm_html" url="confirmation.html"/>
+  <mapID target="stlground_html" url="ground.html"/>
+  <mapID target="stlcontr_html" url="contract.html"/>
+  <mapID target="stlplan_html" url="plan.html"/>
+  <mapID target="stlcond_html" url="conditions.html"/>
 </map>

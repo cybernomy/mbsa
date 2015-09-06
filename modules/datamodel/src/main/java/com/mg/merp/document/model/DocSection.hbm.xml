@@ -1,58 +1,58 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.document.model.DocSection" table="DOCSECTION" mutable="false">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <cache usage="read-only"/>
     <id name="Id" type="int">
-      <column name="ID" not-null="true" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="true" unique="true" sql-type="INTEGER"/>
       <!-- generator class="sequence">
         <param name="sequence">DOCSECTION_ID_GEN</param>
       </generator-->
     </id>
     <many-to-one name="ModelSysClass" class="com.mg.merp.core.model.SysClass">
-      <column name="MODEL_CLASS_ID" not-null="false" />
+      <column name="MODEL_CLASS_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="ModelSpecSysClass" class="com.mg.merp.core.model.SysClass">
-      <column name="MODEL_SPEC_CLASS_ID" not-null="false" />
+      <column name="MODEL_SPEC_CLASS_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClass" class="com.mg.merp.core.model.SysClass">
-      <column name="CLASS_ID" not-null="false" />
+      <column name="CLASS_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SpecSysClass" class="com.mg.merp.core.model.SysClass">
-      <column name="SPEC_CLASS_ID" not-null="false" />
+      <column name="SPEC_CLASS_ID" not-null="false"/>
     </many-to-one>
     <property name="DSName" type="java.lang.String">
-      <column name="DSNAME" length="80" not-null="true" sql-type="VARCHAR" />
+      <column name="DSNAME" length="80" not-null="true" sql-type="VARCHAR"/>
     </property>
     <property name="FolderType" type="int">
-      <column name="FOLDERTYPE" not-null="true" sql-type="INTEGER" />
+      <column name="FOLDERTYPE" not-null="true" sql-type="INTEGER"/>
     </property>
     <property name="ModelFolderType" type="java.lang.Integer">
-      <column name="MODEL_FOLDERTYPE" not-null="false" sql-type="INTEGER" />
+      <column name="MODEL_FOLDERTYPE" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="WithTaxes" type="boolean">
-      <column name="WITH_TAXES" not-null="true" sql-type="SMALLINT" />
+      <column name="WITH_TAXES" not-null="true" sql-type="SMALLINT"/>
     </property>
     <property name="WithSpec" type="boolean">
-      <column name="WITH_SPEC" not-null="true" sql-type="SMALLINT" />
+      <column name="WITH_SPEC" not-null="true" sql-type="SMALLINT"/>
     </property>
     <property name="Direction" type="short">
-      <column name="DIRECTION" not-null="true" sql-type="SMALLINT" />
+      <column name="DIRECTION" not-null="true" sql-type="SMALLINT"/>
     </property>
     <property name="Dummy" type="boolean">
-      <column name="DUMMY" not-null="true" sql-type="SMALLINT" />
+      <column name="DUMMY" not-null="true" sql-type="SMALLINT"/>
     </property>
     <property name="DocumentSearchHelp" type="java.lang.String">
-      <column name="DOC_SEARCH_HELP" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="DOC_SEARCH_HELP" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="DocumentModelSearchHelp" type="java.lang.String">
-      <column name="DOCMODEL_SEARCH_HELP" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="DOCMODEL_SEARCH_HELP" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
   </class>
 </hibernate-mapping>

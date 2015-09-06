@@ -19,20 +19,20 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
  * Контроллер формы поддержки "Образцов исходящих счетов"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: BillHeadModelOutMt.java,v 1.2 2007/05/22 04:54:03 sharapov Exp $
  */
 public class BillHeadModelOutMt extends DocumentModelMaintenanceForm {
-	
-	protected String[] contractorThroughKinds;
-	protected String[] contractorResponsibleKinds;
-	
-	public BillHeadModelOutMt() {
-		super();
-		contractorThroughKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-		contractorResponsibleKinds = new String[] {ContractorSearchForm.CONTRACTOR_EMPLOYEE, ContractorSearchForm.CONTRACTOR_ORGUNIT};
-	}
+
+  protected String[] contractorThroughKinds;
+  protected String[] contractorResponsibleKinds;
+
+  public BillHeadModelOutMt() {
+    super();
+    contractorThroughKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+    contractorResponsibleKinds = new String[]{ContractorSearchForm.CONTRACTOR_EMPLOYEE, ContractorSearchForm.CONTRACTOR_ORGUNIT};
+  }
 
 }

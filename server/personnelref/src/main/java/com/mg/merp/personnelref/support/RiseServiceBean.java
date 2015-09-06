@@ -15,29 +15,29 @@
 
 package com.mg.merp.personnelref.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.personnelref.RiseServiceLocal;
 import com.mg.merp.personnelref.model.Rise;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Надбавки" 
- * 
+ * Бизнес-компонент "Надбавки"
+ *
  * @author leonova
  * @version $Id: RiseServiceBean.java,v 1.3 2006/09/04 13:02:21 leonova Exp $
  */
-@Stateless(name="merp/personnelref/RiseService")
-public class RiseServiceBean extends AbstractPOJODataBusinessObjectServiceBean<Rise, Integer> implements RiseServiceLocal{
+@Stateless(name = "merp/personnelref/RiseService")
+public class RiseServiceBean extends AbstractPOJODataBusinessObjectServiceBean<Rise, Integer> implements RiseServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, Rise entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "RCode"));
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, Rise entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "RCode"));
+  }
 
 }

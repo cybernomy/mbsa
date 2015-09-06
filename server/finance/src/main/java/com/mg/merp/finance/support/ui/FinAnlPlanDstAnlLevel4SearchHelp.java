@@ -16,18 +16,18 @@ package com.mg.merp.finance.support.ui;
 
 /**
  * SearchHelp для аналитики четвертого уровня счета по дебету
- * 
+ *
  * @author leonova
  * @version $Id: FinAnlPlanDstAnlLevel4SearchHelp.java,v 1.1 2006/10/30 13:50:17 leonova Exp $
  */
 public class FinAnlPlanDstAnlLevel4SearchHelp extends FinAnlPlanSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAnalitikaLevel()
-	 */
-	@Override
-	protected short getAnalitikaLevel() {
-		return 4;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAnalitikaLevel()
+   */
+  @Override
+  protected short getAnalitikaLevel() {
+    return 4;
+  }
 
 }

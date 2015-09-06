@@ -22,81 +22,82 @@ package com.mg.merp.crm.support.ui;
  */
 public class PhoneItem {
 
-	// Fields
-	
-	private java.lang.Integer id;
-	private java.lang.String areaCode;
-	private java.lang.String phone;
-	private java.lang.String phoneKind;
+  // Fields
 
-	public PhoneItem() {
-	}
+  private java.lang.Integer id;
+  private java.lang.String areaCode;
+  private java.lang.String phone;
+  private java.lang.String phoneKind;
 
-	public PhoneItem(Integer id, String areaCode, String phone, java.lang.String phoneKind) {
-		this.id = id;
-		this.areaCode = areaCode;
-		this.phone = phone;
-		this.phoneKind = phoneKind;
-	}		
+  public PhoneItem() {
+  }
 
-	public PhoneItem(java.lang.Integer id) {
-		this.id = id;
-	}
+  public PhoneItem(Integer id, String areaCode, String phone, java.lang.String phoneKind) {
+    this.id = id;
+    this.areaCode = areaCode;
+    this.phone = phone;
+    this.phoneKind = phoneKind;
+  }
 
-	// Property accessors
-	/**
-	 * @return the areaCode
-	 */
-	public java.lang.String getAreaCode() {
-		return areaCode;
-	}
+  public PhoneItem(java.lang.Integer id) {
+    this.id = id;
+  }
 
-	/**
-	 * @param areaCode the areaCode to set
-	 */
-	public void setAreaCode(java.lang.String areaCode) {
-		this.areaCode = areaCode;
-	}
+  // Property accessors
 
-	/**
-	 * @return the id
-	 */
-	public java.lang.Integer getId() {
-		return id;
-	}
+  /**
+   * @return the areaCode
+   */
+  public java.lang.String getAreaCode() {
+    return areaCode;
+  }
 
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(java.lang.Integer id) {
-		this.id = id;
-	}
+  /**
+   * @param areaCode the areaCode to set
+   */
+  public void setAreaCode(java.lang.String areaCode) {
+    this.areaCode = areaCode;
+  }
 
-	/**
-	 * @return the phone
-	 */
-	public java.lang.String getPhone() {
-		return phone;
-	}
+  /**
+   * @return the id
+   */
+  public java.lang.Integer getId() {
+    return id;
+  }
 
-	/**
-	 * @param phone the phone to set
-	 */
-	public void setPhone(java.lang.String phone) {
-		this.phone = phone;
-	}
+  /**
+   * @param id the id to set
+   */
+  public void setId(java.lang.Integer id) {
+    this.id = id;
+  }
 
-	/**
-	 * @return the phoneKind
-	 */
-	public String getPhoneKind() {
-		return phoneKind;
-	}
+  /**
+   * @return the phone
+   */
+  public java.lang.String getPhone() {
+    return phone;
+  }
 
-	/**
-	 * @param phoneKind the phoneKind to set
-	 */
-	public void setPhoneKind(String phoneKind) {
-		this.phoneKind = phoneKind;
-	}
+  /**
+   * @param phone the phone to set
+   */
+  public void setPhone(java.lang.String phone) {
+    this.phone = phone;
+  }
+
+  /**
+   * @return the phoneKind
+   */
+  public String getPhoneKind() {
+    return phoneKind;
+  }
+
+  /**
+   * @param phoneKind the phoneKind to set
+   */
+  public void setPhoneKind(String phoneKind) {
+    this.phoneKind = phoneKind;
+  }
 }

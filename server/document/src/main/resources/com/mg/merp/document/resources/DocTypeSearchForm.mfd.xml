@@ -13,12 +13,18 @@
 
 <!-- $Id: DocTypeSearchForm.mfd.xml,v 1.1 2006/10/16 05:41:57 leonova Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.document.support.ui.DocTypeSearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.document.resources.formelements#DocType.FormMt.Title" width="400" height="250" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.document.support.ui.DocTypeSearchForm" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.document.resources.formelements#DocType.FormMt.Title"
+          width="400" height="250">
 
-	<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
-		<jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton" actionListener="Choose" />
-	</jfd:toolBar>
+  <jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+    <jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton"
+                actionListener="Choose"/>
+  </jfd:toolBar>
 
-	<jfd:table id="docTypeList" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" />
+  <jfd:table id="docTypeList" alignment="expand_expand" scroll="true"
+             autoResize="subsequent_columns"/>
 
 </jfd:form>

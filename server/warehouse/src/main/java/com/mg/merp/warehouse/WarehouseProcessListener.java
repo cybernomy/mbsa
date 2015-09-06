@@ -18,21 +18,21 @@ import java.util.EventListener;
 
 /**
  * Слушатель складского процессора
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
  * @version $Id: WarehouseProcessListener.java,v 1.1 2008/04/18 15:15:53 safonov Exp $
  */
 public interface WarehouseProcessListener extends EventListener {
 
-	/**
-	 * завершение складской операции
-	 */
-	void completed();
+  /**
+   * завершение складской операции
+   */
+  void completed();
 
-	/**
-	 * отмена складской операции
-	 */
-	void aborted();
-	
+  /**
+   * отмена складской операции
+   */
+  void aborted();
+
 }

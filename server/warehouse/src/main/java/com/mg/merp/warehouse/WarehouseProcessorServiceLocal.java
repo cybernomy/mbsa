@@ -13,22 +13,21 @@
  */
 package com.mg.merp.warehouse;
 
-import org.jboss.annotation.ejb.Local;
-
 import com.mg.framework.api.BusinessObjectService;
+
+import org.jboss.annotation.ejb.Local;
 
 /**
  * Сервис "Процессор управления запасами"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: WarehouseProcessorServiceLocal.java,v 1.2 2007/02/22 09:49:26
- *          poroxnenko Exp $
+ * @version $Id: WarehouseProcessorServiceLocal.java,v 1.2 2007/02/22 09:49:26 poroxnenko Exp $
  */
 @Local
 public interface WarehouseProcessorServiceLocal extends BusinessObjectService, WarehouseProcessor {
 
-	/**
-	 * Локальное имя сервиса
-	 */
-	static final String LOCAL_SERVICE_NAME = "merp/warehouse/WarehouseProcessor";
+  /**
+   * Локальное имя сервиса
+   */
+  static final String LOCAL_SERVICE_NAME = "merp/warehouse/WarehouseProcessor";
 }

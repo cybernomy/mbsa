@@ -17,9 +17,9 @@ package com.mg.merp.account.support.ui;
 
 /**
  * @author leonova
- * @version $Id: SaleBookRest.java,v 1.1 2006/07/05 06:40:15 leonova Exp $ 
+ * @version $Id: SaleBookRest.java,v 1.1 2006/07/05 06:40:15 leonova Exp $
  */
 public class SaleBookRest extends AccountBookRest {
 
-	
+
 }

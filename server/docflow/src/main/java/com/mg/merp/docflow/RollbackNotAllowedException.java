@@ -24,7 +24,7 @@ import com.mg.merp.docflow.support.Messages;
 @javax.ejb.ApplicationException
 public class RollbackNotAllowedException extends BusinessException {
 
-	public RollbackNotAllowedException() {
-		super(Messages.getInstance().getMessage(Messages.ROLLBACK_NOT_ALLOWED_MESSAGE));
-	}
+  public RollbackNotAllowedException() {
+    super(Messages.getInstance().getMessage(Messages.ROLLBACK_NOT_ALLOWED_MESSAGE));
+  }
 }

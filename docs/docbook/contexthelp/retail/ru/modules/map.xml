@@ -14,10 +14,10 @@
 <!-- $Id: map.xml,v 1.1 2006/11/24 13:10:06 konyashkina Exp $ -->
 
 <map version="1.0">
-  <mapID target="rtlhead_html" url="retail_head.html" />
-  <mapID target="rtladd_html" url="additional.html" />
-  <mapID target="rtlcntr_html" url="contractors.html" />
-  <mapID target="rtlspec_html" url="retail_spec.html" />
-  <mapID target="rtlspecadd_html" url="retail_spec.html#retail_spec_02" />
-  <mapID target="rtlspectax_html" url="retail_spec.html#retail_spec_03" />
+  <mapID target="rtlhead_html" url="retail_head.html"/>
+  <mapID target="rtladd_html" url="additional.html"/>
+  <mapID target="rtlcntr_html" url="contractors.html"/>
+  <mapID target="rtlspec_html" url="retail_spec.html"/>
+  <mapID target="rtlspecadd_html" url="retail_spec.html#retail_spec_02"/>
+  <mapID target="rtlspectax_html" url="retail_spec.html#retail_spec_03"/>
 </map>

@@ -13,30 +13,36 @@
 
 <!-- $Id: EconomicOperModelMt.mfd.xml,v 1.5 2006/12/04 13:52:16 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.EconomicOperModelMt" title="resource://com.mg.merp.account.resources.formelements#EconomicOperModel.FormMt.Title" helpTopic="account#econmodel_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.account.support.ui.EconomicOperModelMt"
+          title="resource://com.mg.merp.account.resources.formelements#EconomicOperModel.FormMt.Title"
+          helpTopic="account#econmodel_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="econFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperModel.Total.Tab" >
-			<jfd:field id="ModelName" />
-			<jfd:field id="ModelDestFolder"/>		
-			<jfd:field id="KeepDate" />
-			<jfd:field id="SpecMark" sameLine="true"/>	
-			<jfd:field id="Comment" />									
- 			<jfd:include name="com/mg/merp/account/resources/EconBaseDocMacros.xml" />
- 		 	<jfd:include name="com/mg/merp/account/resources/EconDocMacros.xml" />
-			<jfd:include name="com/mg/merp/account/resources/EconContractMacros.xml" />	
-	 	 	<jfd:field id="Summa" />
-			<jfd:field id="SourceFrom"  />
-			<jfd:field id="SourceTo" sameLine="true" />
-			<jfd:field id="From" />	
-			<jfd:field id="To" sameLine="true"/>		
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />											
-		</jfd:container> 
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="econFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperModel.Total.Tab">
+      <jfd:field id="ModelName"/>
+      <jfd:field id="ModelDestFolder"/>
+      <jfd:field id="KeepDate"/>
+      <jfd:field id="SpecMark" sameLine="true"/>
+      <jfd:field id="Comment"/>
+      <jfd:include name="com/mg/merp/account/resources/EconBaseDocMacros.xml"/>
+      <jfd:include name="com/mg/merp/account/resources/EconDocMacros.xml"/>
+      <jfd:include name="com/mg/merp/account/resources/EconContractMacros.xml"/>
+      <jfd:field id="Summa"/>
+      <jfd:field id="SourceFrom"/>
+      <jfd:field id="SourceTo" sameLine="true"/>
+      <jfd:field id="From"/>
+      <jfd:field id="To" sameLine="true"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
 
-	 	<jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperModel.Spec.Tab" helpTopic="account#econospec_html" >
-		</jfd:maintenanceTable>	
-	</jfd:container>
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:maintenanceTable id="spec" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.account.resources.formelements#EconomicOperModel.Spec.Tab"
+                          helpTopic="account#econospec_html">
+    </jfd:maintenanceTable>
+  </jfd:container>
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

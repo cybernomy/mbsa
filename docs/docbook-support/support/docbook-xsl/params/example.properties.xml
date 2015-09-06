@@ -1,18 +1,19 @@
 <refentry id="example.properties">
-<refnamediv>
-<refname>example.properties</refname>
-<refpurpose>Properties associated with a example</refpurpose>
-</refnamediv>
+  <refnamediv>
+    <refname>example.properties</refname>
+    <refpurpose>Properties associated with a example</refpurpose>
+  </refnamediv>
 
-<refsynopsisdiv>
-<src:fragment id='example.properties.frag'>
-<xsl:attribute-set name="example.properties" use-attribute-sets="formal.object.properties"/>
-</src:fragment>
-</refsynopsisdiv>
+  <refsynopsisdiv>
+    <src:fragment id='example.properties.frag'>
+      <xsl:attribute-set name="example.properties" use-attribute-sets="formal.object.properties"/>
+    </src:fragment>
+  </refsynopsisdiv>
 
-<refsect1><title>Description</title>
+  <refsect1>
+    <title>Description</title>
 
-<para>The styling for examples.</para>
+    <para>The styling for examples.</para>
 
-</refsect1>
+  </refsect1>
 </refentry>

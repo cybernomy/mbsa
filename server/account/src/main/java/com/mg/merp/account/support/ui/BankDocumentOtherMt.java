@@ -22,9 +22,9 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
  * @version $Id: BankDocumentOtherMt.java,v 1.2 2007/01/13 10:44:42 safonov Exp $
  */
 public class BankDocumentOtherMt extends DocumentMaintenanceForm {
-	
-	public BankDocumentOtherMt() {
-		contractorFromKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
-		contractorToKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
-	}
+
+  public BankDocumentOtherMt() {
+    contractorFromKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+    contractorToKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+  }
 }

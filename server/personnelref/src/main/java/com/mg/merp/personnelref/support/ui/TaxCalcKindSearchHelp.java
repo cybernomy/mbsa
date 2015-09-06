@@ -22,9 +22,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class TaxCalcKindSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/personnelref/TaxCalcKind";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/TaxCalcKind";
+  }
 
 }

@@ -16,12 +16,11 @@ package com.mg.merp.security;
 
 /**
  * Local interface for SecuritySystem.
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: SecuritySystemLocal.java,v 1.1 2006/03/15 12:55:47 safonov Exp $
  */
 public interface SecuritySystemLocal
-   extends com.mg.framework.api.security.SecuritySystem
-{
+    extends com.mg.framework.api.security.SecuritySystem {
 
 }

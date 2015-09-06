@@ -16,23 +16,23 @@ package com.mg.framework.api.metadata;
 
 /**
  * Метаданные бизнес-компонента
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: BusinessServiceMetadata.java,v 1.2 2006/07/27 15:35:14 safonov Exp $
  */
 public interface BusinessServiceMetadata {
-	
-	/**
-	 * получить идентификатор сервиса из хранилища
-	 * 
-	 * @return	идентификатор
-	 */
-	int getIdentificator();
-	
-	/**
-	 * получить имя бизнес-компонента
-	 * 
-	 * @return	имя
-	 */
-	String getName();
+
+  /**
+   * получить идентификатор сервиса из хранилища
+   *
+   * @return идентификатор
+   */
+  int getIdentificator();
+
+  /**
+   * получить имя бизнес-компонента
+   *
+   * @return имя
+   */
+  String getName();
 }

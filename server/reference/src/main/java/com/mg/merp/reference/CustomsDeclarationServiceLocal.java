@@ -19,10 +19,10 @@ import com.mg.merp.reference.model.CustomsDeclaration;
 
 /**
  * Сервис бизнес-компонента "Грузовые таможенные декларации"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: CustomsDeclarationServiceLocal.java,v 1.1 2007/01/17 11:50:58 sharapov Exp $
  */
-public interface CustomsDeclarationServiceLocal extends	DataBusinessObjectService<CustomsDeclaration, Integer> {
+public interface CustomsDeclarationServiceLocal extends DataBusinessObjectService<CustomsDeclaration, Integer> {
 
 }

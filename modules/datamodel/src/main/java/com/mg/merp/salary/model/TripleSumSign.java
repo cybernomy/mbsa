@@ -18,26 +18,26 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Знак начсления/удержания
- * 
+ *
  * @author leonova
  * @version $Id: TripleSumSign.java,v 1.1 2006/03/30 11:31:37 safonov Exp $
  */
 public enum TripleSumSign {
-	/**
-	 * Не влияет
-	 */
-	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#TripleSumSign.None")
-	NONE,
+  /**
+   * Не влияет
+   */
+  @EnumConstantText("resource://com.mg.merp.salary.resources.dataitemlabels#TripleSumSign.None")
+  NONE,
 
-	/**
-	 * Плюс
-	 */
-	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#TripleSumSign.Plus")
-	Plus,
-	
-	/**
-	 * Минус
-	 */
-	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#TripleSumSign.Minus")
-	Minus
+  /**
+   * Плюс
+   */
+  @EnumConstantText("resource://com.mg.merp.salary.resources.dataitemlabels#TripleSumSign.Plus")
+  Plus,
+
+  /**
+   * Минус
+   */
+  @EnumConstantText("resource://com.mg.merp.salary.resources.dataitemlabels#TripleSumSign.Minus")
+  Minus
 }

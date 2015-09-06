@@ -15,29 +15,26 @@
 package com.mg.framework.api.orm;
 
 /**
- * Represents an association fetching strategy. This is used
- * together with the <tt>Criteria</tt> API to specify runtime
- * fetching strategies.<br>
- * <br>
- * For HQL queries, use the <tt>FETCH</tt> keyword instead.
- * 
+ * Represents an association fetching strategy. This is used together with the <tt>Criteria</tt> API
+ * to specify runtime fetching strategies.<br> <br> For HQL queries, use the <tt>FETCH</tt> keyword
+ * instead.
+ *
  * @author Oleg V. Safonov
  * @version $Id: FetchMode.java,v 1.1 2006/12/12 13:54:52 safonov Exp $
  */
 public enum FetchMode {
-	/**
-	 * Default to the setting configured in the mapping file.
-	 */
-	DEFAULT,
-	
-	/**
-	 * Fetch using an outer join. Equivalent to <tt>fetch="join"</tt>.
-	 */
-	JOIN,
+  /**
+   * Default to the setting configured in the mapping file.
+   */
+  DEFAULT,
 
-	/**
-	 * Fetch eagerly, using a separate select. Equivalent to
-	 * <tt>fetch="select"</tt>.
-	 */
-	SELECT
+  /**
+   * Fetch using an outer join. Equivalent to <tt>fetch="join"</tt>.
+   */
+  JOIN,
+
+  /**
+   * Fetch eagerly, using a separate select. Equivalent to <tt>fetch="select"</tt>.
+   */
+  SELECT
 }

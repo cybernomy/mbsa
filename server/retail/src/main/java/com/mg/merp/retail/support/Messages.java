@@ -18,31 +18,27 @@ import com.mg.framework.generic.MessageSourceAccessor;
 
 /**
  * Класс пользовательских сообщений
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: Messages.java,v 1.1 2007/10/05 07:35:57 sharapov Exp $
  */
 public class Messages extends MessageSourceAccessor {
-	private static final String BUNDLE_NAME = "com.mg.merp.retail.resources.messages"; //$NON-NLS-1$
-	private static Messages instance;
+  //message keys
+  public static final String CUSTOM_SELECT_DIS_CARD_OWNER = "CustomSelectDisCardOwner"; //$NON-NLS-1$
+  public static final String CUSTOM_SELECT_DIS_CARD_USER = "CustomSelectDisCardUser"; //$NON-NLS-1$
+  public static final String CUSTOM_SELECT_PARTNER = "CustomSelectPartner"; //$NON-NLS-1$
+  public static final String CUSTOM_SELECT_STATUS = "CustomSelectStatus"; //$NON-NLS-1$
+  public static final String DIS_CARD_SELECT_NUMBER = "DisCardSelectNumber"; //$NON-NLS-1$
+  public static final String DIS_CARD_SELECT_OWNER = "DisCardSelectOwner"; //$NON-NLS-1$
+  private static final String BUNDLE_NAME = "com.mg.merp.retail.resources.messages"; //$NON-NLS-1$
+  private static Messages instance;
 
-	//message keys
-	public static final String CUSTOM_SELECT_DIS_CARD_OWNER = "CustomSelectDisCardOwner"; //$NON-NLS-1$
-	public static final String CUSTOM_SELECT_DIS_CARD_USER = "CustomSelectDisCardUser"; //$NON-NLS-1$
-	public static final String CUSTOM_SELECT_PARTNER = "CustomSelectPartner"; //$NON-NLS-1$
-	public static final String CUSTOM_SELECT_STATUS = "CustomSelectStatus"; //$NON-NLS-1$
-	
-	public static final String DIS_CARD_SELECT_NUMBER = "DisCardSelectNumber"; //$NON-NLS-1$
-	public static final String DIS_CARD_SELECT_OWNER = "DisCardSelectOwner"; //$NON-NLS-1$
-	
+  static {
+    MessageSourceAccessor.initializeMessages(BUNDLE_NAME, Messages.class);
+  }
 
+  public static Messages getInstance() {
+    return instance;
+  }
 
-	public static Messages getInstance() {
-		return instance;
-	}
-
-	static {
-		MessageSourceAccessor.initializeMessages(BUNDLE_NAME, Messages.class);
-	}
-	
 }

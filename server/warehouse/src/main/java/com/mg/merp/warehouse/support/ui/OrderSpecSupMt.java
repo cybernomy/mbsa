@@ -18,15 +18,15 @@ import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
  * Контроллер формы поддержки спецификации заказов поставщикам
- * 
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: OrderSpecSupMt.java,v 1.3 2006/08/22 08:08:51 leonova Exp $
  */
 public class OrderSpecSupMt extends GoodsDocumentSpecMaintenanceForm {
 
-	public OrderSpecSupMt() throws Exception {
-		super();
+  public OrderSpecSupMt() throws Exception {
+    super();
 
-	}
+  }
 }
 

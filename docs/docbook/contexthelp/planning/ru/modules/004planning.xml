@@ -10,40 +10,49 @@
 ]> -->
 <chapter id="004plan">
   <title>Ресурсы</title>
-  
+
   <section id="004plan_01">
-  <title>Группы ресурсов</title>
- 
-  	<para>Вход в справочник &quot;Группы ресурсов&quot; через главное меню 
-	<menuchoice>
-	<guimenu>&manuf;</guimenu>
-    	<guisubmenu>&mref;</guisubmenu>
-	<guisubmenu>Планирование</guisubmenu>
-	<guimenuitem>Группы ресурсов</guimenuitem>
-	</menuchoice>.</para>
-	
-	<para>Подробно этот справочник описан в руководстве пользователя &quot;Справочники 
-	производства&quot;. </para>
-	
-	<para>См. также: <link linkend="004plan_02">Семейства ресурсов</link> </para>
+    <title>Группы ресурсов</title>
+
+    <para>Вход в справочник &quot;Группы ресурсов&quot; через главное меню
+      <menuchoice>
+        <guimenu>&manuf;</guimenu>
+        <guisubmenu>&mref;</guisubmenu>
+        <guisubmenu>Планирование</guisubmenu>
+        <guimenuitem>Группы ресурсов</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+
+    <para>Подробно этот справочник описан в руководстве пользователя &quot;Справочники
+      производства&quot;.
+    </para>
+
+    <para>См. также:
+      <link linkend="004plan_02">Семейства ресурсов</link>
+    </para>
   </section>
-  
-  
-   <section id="004plan_02">
-  <title>Семейства ресурсов</title>
-  
-	<para>Вход в справочник &quot;Семейства ресурсов&quot; через главное меню 
-	<menuchoice>
-	<guimenu>&manuf;</guimenu>
-    	<guisubmenu>&mref;</guisubmenu>
-	<guisubmenu>Планирование</guisubmenu>
-	<guimenuitem>Семейства ресурсов</guimenuitem>
-	</menuchoice>.</para> 
-	
-	<para>Подробно этот справочник описан в руководстве пользователя &quot;Справочники производства&quot;.</para>
-	
-	<para> См. также: <link linkend="004plan_01">Группы ресурсов</link>  </para>
-	 
- </section>
-  
+
+
+  <section id="004plan_02">
+    <title>Семейства ресурсов</title>
+
+    <para>Вход в справочник &quot;Семейства ресурсов&quot; через главное меню
+      <menuchoice>
+        <guimenu>&manuf;</guimenu>
+        <guisubmenu>&mref;</guisubmenu>
+        <guisubmenu>Планирование</guisubmenu>
+        <guimenuitem>Семейства ресурсов</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+
+    <para>Подробно этот справочник описан в руководстве пользователя &quot;Справочники производства&quot;.</para>
+
+    <para>См. также:
+      <link linkend="004plan_01">Группы ресурсов</link>
+    </para>
+
+  </section>
+
 </chapter>

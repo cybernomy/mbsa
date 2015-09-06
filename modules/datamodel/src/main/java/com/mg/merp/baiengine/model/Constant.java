@@ -18,112 +18,114 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.merp.core.model.Folder;
 
 /**
- * 
- * 
  * @author hbm2java
  * @version $Id: Constant.java,v 1.1 2007/08/17 09:19:21 alikaev Exp $
  */
 public class Constant extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private Folder Folder;
+  private Folder Folder;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String Description;
+  private java.lang.String Description;
 
-	private ConstantDataType DataType;
+  private ConstantDataType DataType;
 
-	private java.util.Set<ConstantValue> ConstValues;
+  private java.util.Set<ConstantValue> ConstValues;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public Constant() {
-	}
+  /**
+   * default constructor
+   */
+  public Constant() {
+  }
 
-	/** constructor with id */
-	public Constant(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public Constant(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID") //$NON-NLS-1$
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID") //$NON-NLS-1$
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
+
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
 
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  /**
+   *
+   */
+  @DataItemName("BAi.Code") //$NON-NLS-1$
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("BAi.Code") //$NON-NLS-1$
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  /**
+   *
+   */
+  @DataItemName("BAi.BigName") //$NON-NLS-1$
+  public java.lang.String getDescription() {
+    return this.Description;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("BAi.BigName") //$NON-NLS-1$
-	public java.lang.String getDescription() {
-		return this.Description;
-	}
+  public void setDescription(java.lang.String Description) {
+    this.Description = Description;
+  }
 
-	public void setDescription(java.lang.String Description) {
-		this.Description = Description;
-	}
+  /**
+   *
+   */
+  public ConstantDataType getDataType() {
+    return this.DataType;
+  }
 
-	/**
-	 * 
-	 */
-	public ConstantDataType getDataType() {
-		return this.DataType;
-	}
+  public void setDataType(ConstantDataType Datatype) {
+    this.DataType = Datatype;
+  }
 
-	public void setDataType(ConstantDataType Datatype) {
-		this.DataType = Datatype;
-	}
+  public Folder getFolder() {
+    return Folder;
+  }
 
-	public Folder getFolder() {
-		return Folder;
-	}
+  public void setFolder(Folder folder) {
+    Folder = folder;
+  }
 
-	public void setFolder(Folder folder) {
-		Folder = folder;
-	}
+  public java.util.Set<ConstantValue> getConstValues() {
+    return ConstValues;
+  }
 
-	public java.util.Set<ConstantValue> getConstValues() {
-		return ConstValues;
-	}
-
-	public void setConstValues(java.util.Set<ConstantValue> constValues) {
-		ConstValues = constValues;
-	}
+  public void setConstValues(java.util.Set<ConstantValue> constValues) {
+    ConstValues = constValues;
+  }
 
 }

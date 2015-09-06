@@ -19,16 +19,14 @@ import java.util.EventListener;
 
 /**
  * Слушатель события смены объекта мастера в модели
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: MasterModelListener.java,v 1.2 2006/08/31 09:01:06 safonov Exp $
  */
 public interface MasterModelListener extends EventListener, Serializable {
-	
-	/**
-	 * вызов происходит в момент смены текущего объекта мастера в модели
-	 * 
-	 * @param event
-	 */
-	void masterChange(ModelChangeEvent event);
+
+  /**
+   * вызов происходит в момент смены текущего объекта мастера в модели
+   */
+  void masterChange(ModelChangeEvent event);
 }

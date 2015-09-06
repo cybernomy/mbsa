@@ -21,29 +21,29 @@ import com.mg.framework.api.annotations.EnumConstantText;
  * @author leonova
  * @version $Id: DateOffSetKind.java,v 1.1 2006/03/30 11:27:50 safonov Exp $
  */
-@DataItemName ("LbSchedule.Item.DateOffSetKind")
+@DataItemName("LbSchedule.Item.DateOffSetKind")
 public enum DateOffSetKind {
-	/**
-	 * рабочих дней
-	 */
-	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#DateOffSetKind.Workday")
-	WORKDAY,
+  /**
+   * рабочих дней
+   */
+  @EnumConstantText("resource://com.mg.merp.lbschedule.resources.dataitemlabels#DateOffSetKind.Workday")
+  WORKDAY,
 
-	/**
-	 * календарных дней
-	 */
-	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#DateOffSetKind.Day")
-	DAY,
-	
-	/**
-	 * месяцев
-	 */
-	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#DateOffSetKind.Month")
-	MONTH,
-	
-	/**
-	 * лет
-	 */
-	@EnumConstantText ("resource://com.mg.merp.lbschedule.resources.dataitemlabels#DateOffSetKind.Year")
-	YEAR
+  /**
+   * календарных дней
+   */
+  @EnumConstantText("resource://com.mg.merp.lbschedule.resources.dataitemlabels#DateOffSetKind.Day")
+  DAY,
+
+  /**
+   * месяцев
+   */
+  @EnumConstantText("resource://com.mg.merp.lbschedule.resources.dataitemlabels#DateOffSetKind.Month")
+  MONTH,
+
+  /**
+   * лет
+   */
+  @EnumConstantText("resource://com.mg.merp.lbschedule.resources.dataitemlabels#DateOffSetKind.Year")
+  YEAR
 }

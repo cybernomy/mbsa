@@ -22,11 +22,11 @@ import java.util.EventObject;
  */
 public class DocFlowEvent extends EventObject {
 
-	public DocFlowEvent(DocFlowManager source) {
-		super(source);
-	}
-	
-	public DocFlowManager getDocFlowManager() {
-		return (DocFlowManager) getSource();
-	}
+  public DocFlowEvent(DocFlowManager source) {
+    super(source);
+  }
+
+  public DocFlowManager getDocFlowManager() {
+    return (DocFlowManager) getSource();
+  }
 }

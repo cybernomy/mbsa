@@ -14,109 +14,103 @@
  */
 package com.mg.merp.account.support.ui;
 
-import java.util.Date;
-
 import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm;
 import com.mg.merp.account.model.AccPlan;
 import com.mg.merp.account.model.Period;
 import com.mg.merp.reference.model.Currency;
 
+import java.util.Date;
+
 
 /**
  * Контроллер формы условий отбора бизнес-компонента "Остатки и обороты по счетам"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
- * @version $Id: RemnAccRest.java,v 1.3 2007/01/25 06:30:51 sharapov Exp $ 
+ * @version $Id: RemnAccRest.java,v 1.3 2007/01/25 06:30:51 sharapov Exp $
  */
 public class RemnAccRest extends DefaultHierarhyRestrictionForm {
 
-	// Fields
+  // Fields
 
-	@DataItemName("Account.Cond.RemnAcc.Period1") //$NON-NLS-1$
-	private Period periodFrom = null;
+  @DataItemName("Account.Cobd.RemnAcc.ByDates") //$NON-NLS-1$
+      boolean byDates = false;
+  @DataItemName("Account.Cond.RemnAcc.Period1") //$NON-NLS-1$
+  private Period periodFrom = null;
+  @DataItemName("Account.Cond.RemnAcc.Period2") //$NON-NLS-1$
+  private Period periodTo = null;
+  private Currency currencyCode = null;
+  @DataItemName("Reference.Cond.DateFrom") //$NON-NLS-1$
+  private Date date1 = null;
+  @DataItemName("Reference.Cond.DateTill") //$NON-NLS-1$
+  private Date date2 = null;
+  private AccPlan accCode = null;
 
-	@DataItemName("Account.Cond.RemnAcc.Period2") //$NON-NLS-1$
-	private Period periodTo = null;
+  // Methods
 
-	private Currency currencyCode = null;
+  /*
+   * (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm#doClearRestrictionItem()
+   */
+  @Override
+  protected void doClearRestrictionItem() {
+    super.doClearRestrictionItem();
+    this.periodFrom = null;
+    this.periodTo = null;
+    this.currencyCode = null;
+    this.date1 = null;
+    this.date2 = null;
+    this.byDates = false;
+    this.accCode = null;
+  }
 
-	@DataItemName("Reference.Cond.DateFrom") //$NON-NLS-1$
-	private Date date1 = null;
+  public AccPlan getAccCode() {
+    return accCode;
+  }
 
-	@DataItemName("Reference.Cond.DateTill") //$NON-NLS-1$
-	private Date date2 = null;
+  public boolean isByDates() {
+    return byDates;
+  }
 
-	@DataItemName("Account.Cobd.RemnAcc.ByDates") //$NON-NLS-1$
-	boolean byDates = false;
+  public Currency getCurrencyCode() {
+    return currencyCode;
+  }
 
-	private AccPlan accCode = null;
+  public Date getDate1() {
+    return date1;
+  }
 
-	// Methods
+  public Date getDate2() {
+    return date2;
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultHierarhyRestrictionForm#doClearRestrictionItem()
-	 */
-	@Override
-	protected void doClearRestrictionItem() {
-		super.doClearRestrictionItem();		
-		this.periodFrom = null;
-		this.periodTo = null;
-		this.currencyCode = null;
-		this.date1 = null;
-		this.date2 = null;
-		this.byDates = false;
-		this.accCode = null;
-	}
+  /**
+   * @return the periodFrom
+   */
+  public Period getPeriodFrom() {
+    return periodFrom;
+  }
 
-	public AccPlan getAccCode() {
-		return accCode;
-	}
+  /**
+   * @param periodFrom the periodFrom to set
+   */
+  public void setPeriodFrom(Period periodFrom) {
+    this.periodFrom = periodFrom;
+  }
 
-	public boolean isByDates() {
-		return byDates;
-	}
+  /**
+   * @return the periodTo
+   */
+  public Period getPeriodTo() {
+    return periodTo;
+  }
 
-	public Currency getCurrencyCode() {
-		return currencyCode;
-	}
-
-	public Date getDate1() {
-		return date1;
-	}
-
-	public Date getDate2() {
-		return date2;
-	}
-
-	/**
-	 * @return the periodFrom
-	 */
-	public Period getPeriodFrom() {
-		return periodFrom;
-	}
-
-	/**
-	 * @param periodFrom the periodFrom to set
-	 */
-	public void setPeriodFrom(Period periodFrom) {
-		this.periodFrom = periodFrom;
-	}
-
-	/**
-	 * @return the periodTo
-	 */
-	public Period getPeriodTo() {
-		return periodTo;
-	}
-
-	/**
-	 * @param periodTo the periodTo to set
-	 */
-	public void setPeriodTo(Period periodTo) {
-		this.periodTo = periodTo;
-	}
+  /**
+   * @param periodTo the periodTo to set
+   */
+  public void setPeriodTo(Period periodTo) {
+    this.periodTo = periodTo;
+  }
 
 }

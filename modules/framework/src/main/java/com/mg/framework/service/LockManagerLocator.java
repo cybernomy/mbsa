@@ -21,27 +21,26 @@ import com.mg.framework.utils.ServerUtils;
 
 /**
  * Локатор сервиса менеджера блокировок
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: LockManagerLocator.java,v 1.1 2006/12/15 09:28:45 safonov Exp $
  */
 public class LockManagerLocator {
-    private static volatile LockManager instance = null;
-    
-    /**
-     * получить менеджер
-     * 
-     * @return	менеджер
-     */
-    public static LockManager locate() {
-        if (instance == null)
-            try {
-                instance = (LockManager) ServerUtils.createMBeanProxy(LockManager.class, LockManagerServiceMBean.SERVICE_NAME);
-            }
-            catch (Exception e) {
-                throw new ApplicationException(e);
-            }
-        return instance;
-    }
+  private static volatile LockManager instance = null;
+
+  /**
+   * получить менеджер
+   *
+   * @return менеджер
+   */
+  public static LockManager locate() {
+    if (instance == null)
+      try {
+        instance = (LockManager) ServerUtils.createMBeanProxy(LockManager.class, LockManagerServiceMBean.SERVICE_NAME);
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 
 }

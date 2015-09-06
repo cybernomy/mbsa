@@ -17,29 +17,21 @@ package com.mg.merp.wb.badi.library.util;
 import java.util.Set;
 
 /**
- * Структура для хранения информации об архиве, подлежащим помещению в
- * библиотеку
- * 
+ * Структура для хранения информации об архиве, подлежащим помещению в библиотеку
+ *
  * @author Valentin A. Poroxnenko
  * @version $Id: LibInfo.java,v 1.2 2007/07/11 07:31:40 poroxnenko Exp $
  */
 public class LibInfo {
-	public LibInfo() {
-	}
+  public String jarPath = null;
+  public String srcPath = null;
+  public String libName = null;
+  public String libVersion;
+  public String libTitle = null;
+  public String libDesc = null;
+  public String libVendor = null;
+  public Set<String> libDepends = null;
 
-	public String jarPath = null;
-
-	public String srcPath = null;
-
-	public String libName = null;
-
-	public String libVersion;
-
-	public String libTitle = null;
-
-	public String libDesc = null;
-
-	public String libVendor = null;
-
-	public Set<String> libDepends = null;
+  public LibInfo() {
+  }
 }

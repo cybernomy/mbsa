@@ -22,134 +22,139 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.FamilyMember")
 public class FamilyMember extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.reference.model.NaturalPerson NaturalPerson;
+  private com.mg.merp.reference.model.NaturalPerson NaturalPerson;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.reference.model.FamilyRelation FamilyRelation;
+  private com.mg.merp.reference.model.FamilyRelation FamilyRelation;
 
-	private java.lang.String FName;
+  private java.lang.String FName;
 
-	private java.lang.String Patronymic;
+  private java.lang.String Patronymic;
 
-	private java.lang.String Surname;
+  private java.lang.String Surname;
 
-	private java.util.Date Birthdate;
+  private java.util.Date Birthdate;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public FamilyMember() {
-	}
+  /**
+   * default constructor
+   */
+  public FamilyMember() {
+  }
 
-	/** constructor with id */
-	public FamilyMember(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public FamilyMember(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.reference.model.NaturalPerson getNaturalPerson() {
-		return this.NaturalPerson;
-	}
+  /**
+   *
+   */
 
-	public void setNaturalPerson(
-			com.mg.merp.reference.model.NaturalPerson NaturalPerson) {
-		this.NaturalPerson = NaturalPerson;
-	}
+  public com.mg.merp.reference.model.NaturalPerson getNaturalPerson() {
+    return this.NaturalPerson;
+  }
 
-	/**
-	 * 
-	 */
+  public void setNaturalPerson(
+      com.mg.merp.reference.model.NaturalPerson NaturalPerson) {
+    this.NaturalPerson = NaturalPerson;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */	
-	public com.mg.merp.reference.model.FamilyRelation getFamilyRelation() {
-		return this.FamilyRelation;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setFamilyRelation(
-			com.mg.merp.reference.model.FamilyRelation FamilyRelation) {
-		this.FamilyRelation = FamilyRelation;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.reference.model.FamilyRelation getFamilyRelation() {
+    return this.FamilyRelation;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.NaturalPerson.Name")
-	public java.lang.String getFName() {
-		return this.FName;
-	}
+  public void setFamilyRelation(
+      com.mg.merp.reference.model.FamilyRelation FamilyRelation) {
+    this.FamilyRelation = FamilyRelation;
+  }
 
-	public void setFName(java.lang.String FName) {
-		this.FName = FName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.NaturalPerson.Name")
+  public java.lang.String getFName() {
+    return this.FName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.NaturalPerson.Patronymic")
-	public java.lang.String getPatronymic() {
-		return this.Patronymic;
-	}
+  public void setFName(java.lang.String FName) {
+    this.FName = FName;
+  }
 
-	public void setPatronymic(java.lang.String Patronymic) {
-		this.Patronymic = Patronymic;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.NaturalPerson.Patronymic")
+  public java.lang.String getPatronymic() {
+    return this.Patronymic;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.NaturalPerson.Surname")
-	public java.lang.String getSurname() {
-		return this.Surname;
-	}
+  public void setPatronymic(java.lang.String Patronymic) {
+    this.Patronymic = Patronymic;
+  }
 
-	public void setSurname(java.lang.String Surname) {
-		this.Surname = Surname;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.NaturalPerson.Surname")
+  public java.lang.String getSurname() {
+    return this.Surname;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.NaturalPerson.BornDate")
-	public java.util.Date getBirthdate() {
-		return this.Birthdate;
-	}
+  public void setSurname(java.lang.String Surname) {
+    this.Surname = Surname;
+  }
 
-	public void setBirthdate(java.util.Date Birthdate) {
-		this.Birthdate = Birthdate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.NaturalPerson.BornDate")
+  public java.util.Date getBirthdate() {
+    return this.Birthdate;
+  }
+
+  public void setBirthdate(java.util.Date Birthdate) {
+    this.Birthdate = Birthdate;
+  }
 
 }

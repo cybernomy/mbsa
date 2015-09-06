@@ -12,9 +12,13 @@
 <!-- ======================================================================= -->
 
 <!-- $Id: DefaultGoodsDocSpecMTPopupMenuMacros.xml,v 1.1 2007/04/05 12:27:53 poroxnenko Exp $ -->
-<jfd:maintenanceTable xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="spec" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.reference.resources.formelements#SpecFields">
-	<jfd:popupMenu>
-		<jfd:separator />
-		<jfd:menuItem id="showStockSituationItem" text="resource://com.mg.merp.reference.resources.formelements#Warehouse.ShowStockSituation" actionListener="ShowStockSituation" />
-	</jfd:popupMenu>	
+<jfd:maintenanceTable xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="spec" scroll="true"
+                      alignment="expand_expand"
+                      tabTitle="resource://com.mg.merp.reference.resources.formelements#SpecFields">
+  <jfd:popupMenu>
+    <jfd:separator/>
+    <jfd:menuItem id="showStockSituationItem"
+                  text="resource://com.mg.merp.reference.resources.formelements#Warehouse.ShowStockSituation"
+                  actionListener="ShowStockSituation"/>
+  </jfd:popupMenu>
 </jfd:maintenanceTable>

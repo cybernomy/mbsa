@@ -16,22 +16,22 @@ package com.mg.framework.api.help;
 
 /**
  * Система помощи
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: HelpSystem.java,v 1.1 2006/11/11 09:44:57 safonov Exp $
  */
 public interface HelpSystem {
-	
-	/**
-	 * имя сервиса системы помощи
-	 */
-	String SERVICE_NAME = "merp:service=HelpSystemService";
 
-	/**
-	 * показать контекстную помощь
-	 * 
-	 * @param helpTopic	тематический раздел помощи
-	 */
-	void showContextHelp(String helpTopic);
+  /**
+   * имя сервиса системы помощи
+   */
+  String SERVICE_NAME = "merp:service=HelpSystemService";
+
+  /**
+   * показать контекстную помощь
+   *
+   * @param helpTopic тематический раздел помощи
+   */
+  void showContextHelp(String helpTopic);
 
 }

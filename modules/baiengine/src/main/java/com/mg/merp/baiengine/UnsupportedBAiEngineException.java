@@ -20,25 +20,25 @@ import com.mg.merp.baiengine.support.Messages;
 
 /**
  * Класс ИС не поддерживаемого механизма выполнения бизнес расширений
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: UnsupportedBAiEngineException.java,v 1.2 2007/11/15 13:12:08 safonov Exp $
  */
 @javax.ejb.ApplicationException
 public class UnsupportedBAiEngineException extends BusinessAddinException {
-	private EngineType engineType;
+  private EngineType engineType;
 
-	public UnsupportedBAiEngineException(EngineType engineType) {
-		super("Unsupported BAi engine");
-		this.engineType = engineType;
-	}
+  public UnsupportedBAiEngineException(EngineType engineType) {
+    super("Unsupported BAi engine");
+    this.engineType = engineType;
+  }
 
-	/* (non-Javadoc)
-	 * @see java.lang.Throwable#getLocalizedMessage()
-	 */
-	@Override
-	public String getLocalizedMessage() {
-		return Messages.getInstance().getMessage(Messages.BAI_UNSUPPORTED_ENGINE, new Object[] {MiscUtils.getEnumTextRepresentation(engineType)});
-	}
+  /* (non-Javadoc)
+   * @see java.lang.Throwable#getLocalizedMessage()
+   */
+  @Override
+  public String getLocalizedMessage() {
+    return Messages.getInstance().getMessage(Messages.BAI_UNSUPPORTED_ENGINE, new Object[]{MiscUtils.getEnumTextRepresentation(engineType)});
+  }
 
 }

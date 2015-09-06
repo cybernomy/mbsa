@@ -22,6 +22,6 @@ import org.jbpm.JbpmContext;
  */
 public interface BPMManager {
 
-	JbpmContext getCurrentBpmContext();
+  JbpmContext getCurrentBpmContext();
 
 }

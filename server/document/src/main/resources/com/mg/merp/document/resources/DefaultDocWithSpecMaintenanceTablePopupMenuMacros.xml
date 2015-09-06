@@ -13,11 +13,17 @@
 
 <!-- $Id: DefaultDocWithSpecMaintenanceTablePopupMenuMacros.xml,v 1.11 2008/12/24 14:15:51 safonov Exp $ -->
 
-<jfd:popupMenu xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
-	<jfd:separator />
-	<jfd:menuItem id="editSpecification" text="resource://com.mg.merp.document.resources.formelements#Document.EditSpecification" icon="com/mg/merp/document/resources/editdocpecificationicon.png" keyStroke="shift F2" actionListener="EditSpecification" />
-	<jfd:separator />
-	<jfd:include name="com/mg/merp/document/resources/CommonDocMaintenanceTablePopupMenuItemsMacros.xml" />
-	<jfd:menuItem id="viewDocumentLineList" text="resource://com.mg.merp.document.resources.formelements#DocumentLineList.View" actionListener="ViewDocumentLineList" toggle="checkBox" keyStroke="control S"/>
-	
+<jfd:popupMenu xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
+  <jfd:separator/>
+  <jfd:menuItem id="editSpecification"
+                text="resource://com.mg.merp.document.resources.formelements#Document.EditSpecification"
+                icon="com/mg/merp/document/resources/editdocpecificationicon.png"
+                keyStroke="shift F2" actionListener="EditSpecification"/>
+  <jfd:separator/>
+  <jfd:include
+      name="com/mg/merp/document/resources/CommonDocMaintenanceTablePopupMenuItemsMacros.xml"/>
+  <jfd:menuItem id="viewDocumentLineList"
+                text="resource://com.mg.merp.document.resources.formelements#DocumentLineList.View"
+                actionListener="ViewDocumentLineList" toggle="checkBox" keyStroke="control S"/>
+
 </jfd:popupMenu>

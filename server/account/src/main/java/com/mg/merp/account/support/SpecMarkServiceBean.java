@@ -15,40 +15,40 @@
 
 package com.mg.merp.account.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.utils.StringUtils;
 import com.mg.merp.account.SpecMarkServiceLocal;
 import com.mg.merp.account.model.SpecMark;
 
+import javax.ejb.Stateless;
+
 /**
- * Реализация бизнес-компонента "Особые отметки" 
- * 
+ * Реализация бизнес-компонента "Особые отметки"
+ *
  * @author leonova
  * @version $Id: SpecMarkServiceBean.java,v 1.4 2007/01/16 11:42:46 sharapov Exp $
  */
-@Stateless(name="merp/account/SpecMarkService") //$NON-NLS-1$
+@Stateless(name = "merp/account/SpecMarkService") //$NON-NLS-1$
 public class SpecMarkServiceBean extends AbstractPOJODataBusinessObjectServiceBean<SpecMark, String> implements SpecMarkServiceLocal {
 
-	private void adjustSpecMark(SpecMark entity) {
-		entity.setUpCode(StringUtils.toUpperCase(entity.getCode()));
-	}
+  private void adjustSpecMark(SpecMark entity) {
+    entity.setUpCode(StringUtils.toUpperCase(entity.getCode()));
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onCreate(T)
-	 */
-	@Override
-	protected void onCreate(SpecMark entity) {
-		adjustSpecMark(entity);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onCreate(T)
+   */
+  @Override
+  protected void onCreate(SpecMark entity) {
+    adjustSpecMark(entity);
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onStore(T)
-	 */
-	@Override
-	protected void onStore(SpecMark entity) {
-		adjustSpecMark(entity);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onStore(T)
+   */
+  @Override
+  protected void onStore(SpecMark entity) {
+    adjustSpecMark(entity);
+  }
 
 }

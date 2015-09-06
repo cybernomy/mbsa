@@ -15,20 +15,20 @@
 
 package com.mg.merp.settlement.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.reference.model.OrgUnit;
 import com.mg.merp.settlement.CompanyServiceLocal;
 
+import javax.ejb.Stateless;
+
 /**
- * Реализация бизнес-компонента "Центры учета" 
- * 
+ * Реализация бизнес-компонента "Центры учета"
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: CompanyServiceBean.java,v 1.4 2007/03/20 10:32:25 sharapov Exp $
  */
-@Stateless(name="merp/settlement/CompanyService") //$NON-NLS-1$
+@Stateless(name = "merp/settlement/CompanyService") //$NON-NLS-1$
 public class CompanyServiceBean extends AbstractPOJODataBusinessObjectServiceBean<OrgUnit, Integer> implements CompanyServiceLocal {
 
 }

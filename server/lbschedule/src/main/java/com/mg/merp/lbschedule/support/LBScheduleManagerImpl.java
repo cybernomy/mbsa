@@ -34,114 +34,113 @@ import com.mg.merp.lbschedule.model.ScheduleDocHeadLink;
 
 /**
  * Реализация мененеджера управления "Графиками исполнения обязательств"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: LBScheduleManagerImpl.java,v 1.3 2008/05/23 16:08:26 safonov Exp $
  */
 public class LBScheduleManagerImpl implements LBScheduleManager {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.LBScheduleManager#createLBSchedule(com.mg.merp.document.model.DocHead)
-	 */
-	public void createLBSchedule(DocHead docHead) {
-		doCreateLBSchedule(docHead);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.LBScheduleManager#createLBSchedule(com.mg.merp.document.model.DocHead)
+   */
+  public void createLBSchedule(DocHead docHead) {
+    doCreateLBSchedule(docHead);
+  }
 
-	protected void doCreateLBSchedule(final DocHead docHead) {
-		if(docHead == null)
-			return;
+  protected void doCreateLBSchedule(final DocHead docHead) {
+    if (docHead == null)
+      return;
 
-		if(getScheduleDocHeadLink(docHead) != null)
-			return;
+    if (getScheduleDocHeadLink(docHead) != null)
+      return;
 
-		Folder lbScheduleFolder = getLbScheduleDefaultFolder();
-		if(lbScheduleFolder == null) {
-			SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.lbschedule.support.ui.ScheduleDefaultFolderSearchHelp"); //$NON-NLS-1$
-			searchHelp.addSearchHelpListener(new SearchHelpListener() {
-				public void searchPerformed(SearchHelpEvent event) {
-					doInternalCreateLBSchedule(docHead, (Folder) event.getItems()[0]);
-				}
+    Folder lbScheduleFolder = getLbScheduleDefaultFolder();
+    if (lbScheduleFolder == null) {
+      SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.lbschedule.support.ui.ScheduleDefaultFolderSearchHelp"); //$NON-NLS-1$
+      searchHelp.addSearchHelpListener(new SearchHelpListener() {
+        public void searchPerformed(SearchHelpEvent event) {
+          doInternalCreateLBSchedule(docHead, (Folder) event.getItems()[0]);
+        }
 
-				public void searchCanceled(SearchHelpEvent event) {
-					//do nothing
-				}
-			});
-			searchHelp.search();
-		}
-		else
-			doInternalCreateLBSchedule(docHead, lbScheduleFolder);
-	}
+        public void searchCanceled(SearchHelpEvent event) {
+          //do nothing
+        }
+      });
+      searchHelp.search();
+    } else
+      doInternalCreateLBSchedule(docHead, lbScheduleFolder);
+  }
 
-	protected void doInternalCreateLBSchedule(DocHead docHead, Folder folder) {
-		SysClient sysClient = (SysClient) ServerUtils.getCurrentSession().getSystemTenant();
+  protected void doInternalCreateLBSchedule(DocHead docHead, Folder folder) {
+    SysClient sysClient = (SysClient) ServerUtils.getCurrentSession().getSystemTenant();
 
-		Schedule schedule = initializeLbSchedule(folder);
-		ServerUtils.getPersistentManager().persist(schedule);
+    Schedule schedule = initializeLbSchedule(folder);
+    ServerUtils.getPersistentManager().persist(schedule);
 
-		ScheduleDocHeadLink scheduleDocHeadLink = intializeScheduleDocHeadLink(docHead, schedule, sysClient);
-		ServerUtils.getPersistentManager().persist(scheduleDocHeadLink);
+    ScheduleDocHeadLink scheduleDocHeadLink = intializeScheduleDocHeadLink(docHead, schedule, sysClient);
+    ServerUtils.getPersistentManager().persist(scheduleDocHeadLink);
 
-		showLbSchedule(schedule);
-	}
+    showLbSchedule(schedule);
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.LBScheduleManager#openLBSchedule(com.mg.merp.document.model.DocHead)
-	 */
-	public void openLBSchedule(DocHead docHead) {
-		ScheduleDocHeadLink scheduleDocHeadLink = getScheduleDocHeadLink(docHead);
-		if(scheduleDocHeadLink == null)
-			return;
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.LBScheduleManager#openLBSchedule(com.mg.merp.document.model.DocHead)
+   */
+  public void openLBSchedule(DocHead docHead) {
+    ScheduleDocHeadLink scheduleDocHeadLink = getScheduleDocHeadLink(docHead);
+    if (scheduleDocHeadLink == null)
+      return;
 
-		Schedule schedule = scheduleDocHeadLink.getSchedule();
-		showLbSchedule(schedule);
-	}
+    Schedule schedule = scheduleDocHeadLink.getSchedule();
+    showLbSchedule(schedule);
+  }
 
-	private Schedule initializeLbSchedule(Folder folder) {
-		Schedule schedule = getScheduleService().initialize();
-		schedule.setFolder(folder);
-		return schedule;
-	}
+  private Schedule initializeLbSchedule(Folder folder) {
+    Schedule schedule = getScheduleService().initialize();
+    schedule.setFolder(folder);
+    return schedule;
+  }
 
-	private ScheduleDocHeadLink intializeScheduleDocHeadLink(DocHead docHead, Schedule schedule, SysClient sysClient) {
-		ScheduleDocHeadLink scheduleDocHeadLink = new ScheduleDocHeadLink();
-		scheduleDocHeadLink.setDocHead(docHead);
-		scheduleDocHeadLink.setSchedule(schedule);
-		scheduleDocHeadLink.setSysClient(sysClient);
-		return scheduleDocHeadLink;
-	}
+  private ScheduleDocHeadLink intializeScheduleDocHeadLink(DocHead docHead, Schedule schedule, SysClient sysClient) {
+    ScheduleDocHeadLink scheduleDocHeadLink = new ScheduleDocHeadLink();
+    scheduleDocHeadLink.setDocHead(docHead);
+    scheduleDocHeadLink.setSchedule(schedule);
+    scheduleDocHeadLink.setSysClient(sysClient);
+    return scheduleDocHeadLink;
+  }
 
-	private Folder getLbScheduleDefaultFolder() {
-		ScheduleConfig scheduleConfig = ServerUtils.getPersistentManager().find(ScheduleConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
-		if(scheduleConfig != null)
-			return scheduleConfig.getFolder();
-		else
-			return null;
-	}
+  private Folder getLbScheduleDefaultFolder() {
+    ScheduleConfig scheduleConfig = ServerUtils.getPersistentManager().find(ScheduleConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
+    if (scheduleConfig != null)
+      return scheduleConfig.getFolder();
+    else
+      return null;
+  }
 
-	private ScheduleServiceLocal getScheduleService() {
-		return (ScheduleServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(ScheduleServiceLocal.LOCAL_SERVICE_NAME);
-	}
+  private ScheduleServiceLocal getScheduleService() {
+    return (ScheduleServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(ScheduleServiceLocal.LOCAL_SERVICE_NAME);
+  }
 
-	private ScheduleDocHeadLink getScheduleDocHeadLink(DocHead docHead) {
-		return OrmTemplate.getInstance().findUniqueByCriteria(OrmTemplate.createCriteria(ScheduleDocHeadLink.class)
-				.add(Restrictions.eq("DocHead", docHead))); //$NON-NLS-1$
-	}
+  private ScheduleDocHeadLink getScheduleDocHeadLink(DocHead docHead) {
+    return OrmTemplate.getInstance().findUniqueByCriteria(OrmTemplate.createCriteria(ScheduleDocHeadLink.class)
+        .add(Restrictions.eq("DocHead", docHead))); //$NON-NLS-1$
+  }
 
-	private void showLbSchedule(Schedule schedule) {
-		ScheduleServiceLocal scheduleService = getScheduleService();
-		MaintenanceHelper.edit(scheduleService, schedule.getId(), null, null);
-	}
+  private void showLbSchedule(Schedule schedule) {
+    ScheduleServiceLocal scheduleService = getScheduleService();
+    MaintenanceHelper.edit(scheduleService, schedule.getId(), null, null);
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.LBScheduleManager#removeLBSchedule(com.mg.merp.document.model.DocHead)
-	 */
-	public void removeLBSchedule(final DocHead docHead) {
-		if(docHead == null)
-			return;
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.LBScheduleManager#removeLBSchedule(com.mg.merp.document.model.DocHead)
+   */
+  public void removeLBSchedule(final DocHead docHead) {
+    if (docHead == null)
+      return;
 
-		final ScheduleDocHeadLink  scheduleDocHeadLink = getScheduleDocHeadLink(docHead);
-		if(scheduleDocHeadLink != null)
-			ServerUtils.getPersistentManager().remove(scheduleDocHeadLink.getSchedule());
-	}
+    final ScheduleDocHeadLink scheduleDocHeadLink = getScheduleDocHeadLink(docHead);
+    if (scheduleDocHeadLink != null)
+      ServerUtils.getPersistentManager().remove(scheduleDocHeadLink.getSchedule());
+  }
 
 }

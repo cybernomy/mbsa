@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.Okdp;
 
 /**
- * 
  * @author leonova
  * @version $Id: OkdpServiceLocal.java,v 1.1 2006/03/14 11:49:50 safonov Exp $
  */
 public interface OkdpServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Okdp, String>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Okdp, String> {
 
 }

@@ -15,27 +15,27 @@
 
 package com.mg.merp.personnelref.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.validator.ValidationContext;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.support.validator.MandatoryStringAttribute;
 import com.mg.merp.personnelref.MilitaryRankKindServiceLocal;
 import com.mg.merp.personnelref.model.MilitaryRankKind;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Составы воинских званий" 
- * 
+ * Бизнес-компонент "Составы воинских званий"
+ *
  * @author leonova
  * @version $Id: MilitaryRankKindServiceBean.java,v 1.4 2006/10/20 05:55:13 leonova Exp $
  */
-@Stateless(name="merp/personnelref/MilitaryRankKindService")
+@Stateless(name = "merp/personnelref/MilitaryRankKindService")
 public class MilitaryRankKindServiceBean extends AbstractPOJODataBusinessObjectServiceBean<MilitaryRankKind, Integer> implements MilitaryRankKindServiceLocal {
 
-	@Override
-	protected void onValidate(ValidationContext context, MilitaryRankKind entity) {
-		context.addRule(new MandatoryStringAttribute(entity, "Code"));
-	}
+  @Override
+  protected void onValidate(ValidationContext context, MilitaryRankKind entity) {
+    context.addRule(new MandatoryStringAttribute(entity, "Code"));
+  }
 
 
 }

@@ -22,119 +22,124 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.Holidays")
 public class Holidays extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String HName;
+  private java.lang.String HName;
 
-	private java.util.Date HDate;
+  private java.util.Date HDate;
 
-	private java.lang.Integer HDay;
+  private java.lang.Integer HDay;
 
-	private java.lang.Integer HMonth;
+  private java.lang.Integer HMonth;
 
-	private java.lang.Integer HYear;
+  private java.lang.Integer HYear;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public Holidays() {
-	}
+  /**
+   * default constructor
+   */
+  public Holidays() {
+  }
 
-	/** constructor with id */
-	public Holidays(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public Holidays(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Name")
-	public java.lang.String getHName() {
-		return this.HName;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setHName(java.lang.String HName) {
-		this.HName = HName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Name")
+  public java.lang.String getHName() {
+    return this.HName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Holidays.Date")
-	public java.util.Date getHDate() {
-		return this.HDate;
-	}
+  public void setHName(java.lang.String HName) {
+    this.HName = HName;
+  }
 
-	public void setHDate(java.util.Date HDate) {
-		this.HDate = HDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Holidays.Date")
+  public java.util.Date getHDate() {
+    return this.HDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Holidays.HDay")
-	public java.lang.Integer getHDay() {
-		return this.HDay;
-	}
+  public void setHDate(java.util.Date HDate) {
+    this.HDate = HDate;
+  }
 
-	public void setHDay(java.lang.Integer HDay) {
-		this.HDay = HDay;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Holidays.HDay")
+  public java.lang.Integer getHDay() {
+    return this.HDay;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Holidays.HMonth")
-	public java.lang.Integer getHMonth() {
-		return this.HMonth;
-	}
+  public void setHDay(java.lang.Integer HDay) {
+    this.HDay = HDay;
+  }
 
-	public void setHMonth(java.lang.Integer HMonth) {
-		this.HMonth = HMonth;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Holidays.HMonth")
+  public java.lang.Integer getHMonth() {
+    return this.HMonth;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Holidays.HYear")
-	public java.lang.Integer getHYear() {
-		return this.HYear;
-	}
+  public void setHMonth(java.lang.Integer HMonth) {
+    this.HMonth = HMonth;
+  }
 
-	public void setHYear(java.lang.Integer HYear) {
-		this.HYear = HYear;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Holidays.HYear")
+  public java.lang.Integer getHYear() {
+    return this.HYear;
+  }
+
+  public void setHYear(java.lang.Integer HYear) {
+    this.HYear = HYear;
+  }
 
 }

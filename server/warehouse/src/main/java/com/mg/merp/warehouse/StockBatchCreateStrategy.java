@@ -18,20 +18,20 @@ import com.mg.merp.warehouse.model.StockCard;
 
 /**
  * Интерфейс стратегии создания складской партии
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @author Oleg V. Safonov
  * @version $Id: StockBatchCreateStrategy.java,v 1.4 2008/04/18 15:15:53 safonov Exp $
  */
 public interface StockBatchCreateStrategy {
 
-	/**
-	 * Создание складской партии
-	 * 
-	 * @param docLineData	данные о спецификации
-	 * @param stockCard КСУ
-	 * @param params параметры этапа документо-оборота
-	 */
-	void createStockBatch(WarehouseProcessDocumentLineData docLineData, StockCard stockCard, DocFlowPluginInvokeParams params);
+  /**
+   * Создание складской партии
+   *
+   * @param docLineData данные о спецификации
+   * @param stockCard   КСУ
+   * @param params      параметры этапа документо-оборота
+   */
+  void createStockBatch(WarehouseProcessDocumentLineData docLineData, StockCard stockCard, DocFlowPluginInvokeParams params);
 
 }

@@ -17,17 +17,17 @@ package com.mg.merp.account.support.ui;
 import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
- * Контроллер формы поддержки спецификации 
- * 
+ * Контроллер формы поддержки спецификации
+ *
  * @author leonova
  * @version $Id: InternalActSpecMt.java,v 1.3 2006/08/22 06:55:55 leonova Exp $
  */
 public class InternalActSpecMt extends GoodsDocumentSpecMaintenanceForm {
 
-	public InternalActSpecMt() throws Exception {
-		super();
+  public InternalActSpecMt() throws Exception {
+    super();
 
-	}
+  }
 
 
 }

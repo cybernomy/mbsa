@@ -18,106 +18,106 @@ import java.math.BigDecimal;
 
 /**
  * Модель данных для распределения платежа по спецификации документа
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: SpecInfo.java,v 1.1 2007/05/31 14:10:30 sharapov Exp $
  */
 public class SpecInfo {
 
-	private com.mg.merp.document.model.DocSpec docSpec;
-	private String code;
-	private String cName;
-	private String mCode;
-	private BigDecimal summa;
-	private BigDecimal qty;
-	private BigDecimal aSumma;
-	private BigDecimal aQty;
-	private BigDecimal cSumma;
-	private BigDecimal cQty;
-	
-	public SpecInfo() {
-		
-	}
-	
+  private com.mg.merp.document.model.DocSpec docSpec;
+  private String code;
+  private String cName;
+  private String mCode;
+  private BigDecimal summa;
+  private BigDecimal qty;
+  private BigDecimal aSumma;
+  private BigDecimal aQty;
+  private BigDecimal cSumma;
+  private BigDecimal cQty;
 
-	public BigDecimal getAQty() {
-		return this.aQty;
-	}
+  public SpecInfo() {
 
-	public void setAQty(BigDecimal qty) {
-		this.aQty = qty;
-	}
+  }
 
-	public BigDecimal getASumma() {
-		return this.aSumma;
-	}
 
-	public void setASumma(BigDecimal summa) {
-		this.aSumma = summa;
-	}
+  public BigDecimal getAQty() {
+    return this.aQty;
+  }
 
-	public String getCName() {
-		return this.cName;
-	}
+  public void setAQty(BigDecimal qty) {
+    this.aQty = qty;
+  }
 
-	public void setCName(String name) {
-		this.cName = name;
-	}
+  public BigDecimal getASumma() {
+    return this.aSumma;
+  }
 
-	public String getCode() {
-		return this.code;
-	}
+  public void setASumma(BigDecimal summa) {
+    this.aSumma = summa;
+  }
 
-	public void setCode(String code) {
-		this.code = code;
-	}
+  public String getCName() {
+    return this.cName;
+  }
 
-	public BigDecimal getCQty() {
-		return this.cQty;
-	}
+  public void setCName(String name) {
+    this.cName = name;
+  }
 
-	public void setCQty(BigDecimal qty) {
-		this.cQty = qty;
-	}
+  public String getCode() {
+    return this.code;
+  }
 
-	public BigDecimal getCSumma() {
-		return this.cSumma;
-	}
+  public void setCode(String code) {
+    this.code = code;
+  }
 
-	public void setCSumma(BigDecimal summa) {
-		this.cSumma = summa;
-	}
+  public BigDecimal getCQty() {
+    return this.cQty;
+  }
 
-	public String getMCode() {
-		return this.mCode;
-	}
+  public void setCQty(BigDecimal qty) {
+    this.cQty = qty;
+  }
 
-	public void setMCode(String code) {
-		this.mCode = code;
-	}
+  public BigDecimal getCSumma() {
+    return this.cSumma;
+  }
 
-	public BigDecimal getQty() {
-		return this.qty;
-	}
+  public void setCSumma(BigDecimal summa) {
+    this.cSumma = summa;
+  }
 
-	public void setQty(BigDecimal qty) {
-		this.qty = qty;
-	}
+  public String getMCode() {
+    return this.mCode;
+  }
 
-	public BigDecimal getSumma() {
-		return this.summa;
-	}
+  public void setMCode(String code) {
+    this.mCode = code;
+  }
 
-	public void setSumma(BigDecimal summa) {
-		this.summa = summa;
-	}
+  public BigDecimal getQty() {
+    return this.qty;
+  }
 
-	public com.mg.merp.document.model.DocSpec getDocSpec() {
-		return this.docSpec;
-	}
+  public void setQty(BigDecimal qty) {
+    this.qty = qty;
+  }
 
-	public void setDocSpec(com.mg.merp.document.model.DocSpec docSpec) {
-		this.docSpec = docSpec;
-	}
-	
+  public BigDecimal getSumma() {
+    return this.summa;
+  }
+
+  public void setSumma(BigDecimal summa) {
+    this.summa = summa;
+  }
+
+  public com.mg.merp.document.model.DocSpec getDocSpec() {
+    return this.docSpec;
+  }
+
+  public void setDocSpec(com.mg.merp.document.model.DocSpec docSpec) {
+    this.docSpec = docSpec;
+  }
+
 }

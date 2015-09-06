@@ -22,10 +22,10 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class ResourceFamilySearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/mfreference/ResourceFamily";
-	}
-	
+  @Override
+  protected String getServiceName() {
+    return "merp/mfreference/ResourceFamily";
+  }
+
 
 }

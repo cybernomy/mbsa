@@ -19,27 +19,25 @@ import com.mg.merp.document.CreateDocumentDocFlowListener;
 
 /**
  * Бизнес-компонент "Процессор финансовых операций"
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: FinOperProcessor.java,v 1.1 2007/11/30 12:55:41 alikaev Exp $
  */
 public interface FinOperProcessor {
-	
-	/**
-	 * Отработка этапа документооборота "Создать ФО"
-	 * 
-	 * @param params
-	 * 				- параметры документооборота
-	 * @param listener
-	 * 				- слушатель на событие открыть созданную ФО
-	 */
-	void processCreateFinOper(DocFlowPluginInvokeParams params, CreateDocumentDocFlowListener listener);
-	
-	/**
-	 * Откат этапа документооборота "Создать ФО"
-	 * @param params
-	 * 				- параметры документооборота
-	 */
-	void rollbackCreateFinOper(DocFlowPluginInvokeParams params);
-	
+
+  /**
+   * Отработка этапа документооборота "Создать ФО"
+   *
+   * @param params   - параметры документооборота
+   * @param listener - слушатель на событие открыть созданную ФО
+   */
+  void processCreateFinOper(DocFlowPluginInvokeParams params, CreateDocumentDocFlowListener listener);
+
+  /**
+   * Откат этапа документооборота "Создать ФО"
+   *
+   * @param params - параметры документооборота
+   */
+  void rollbackCreateFinOper(DocFlowPluginInvokeParams params);
+
 }

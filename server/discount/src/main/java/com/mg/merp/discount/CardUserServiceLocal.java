@@ -18,16 +18,16 @@ import com.mg.merp.discount.model.CardUser;
 
 /**
  * Бизнес-компонент "Пользователи дисконтной карты"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: CardUserServiceLocal.java,v 1.3 2007/11/08 06:38:06 sharapov Exp $
  */
 public interface CardUserServiceLocal extends com.mg.framework.api.DataBusinessObjectService<CardUser, Integer> {
-	
-	/**
-	 * имя сервиса
-	 */
-	final static String SERVICE_NAME = "merp/discount/CardUser"; //$NON-NLS-1$
-	
+
+  /**
+   * имя сервиса
+   */
+  final static String SERVICE_NAME = "merp/discount/CardUser"; //$NON-NLS-1$
+
 }

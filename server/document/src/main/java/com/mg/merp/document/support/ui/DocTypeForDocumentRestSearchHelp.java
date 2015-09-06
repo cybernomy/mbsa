@@ -18,18 +18,18 @@ import com.mg.merp.document.model.DocumentKind;
 
 /**
  * SearchHelp типов документов для вызова в форме условия отбора
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: DocTypeForDocumentRestSearchHelp.java,v 1.1 2008/02/12 08:10:11 alikaev Exp $
  */
 public class DocTypeForDocumentRestSearchHelp extends AbstractDocTypeForDocumentRestSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.support.ui.AbstractDocTypeForDocumentRestSearchHelp#getDocumentKind()
-	 */
-	@Override
-	protected DocumentKind getDocumentKind() {
-		return DocumentKind.DOCUMENT;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.support.ui.AbstractDocTypeForDocumentRestSearchHelp#getDocumentKind()
+   */
+  @Override
+  protected DocumentKind getDocumentKind() {
+    return DocumentKind.DOCUMENT;
+  }
 
 }

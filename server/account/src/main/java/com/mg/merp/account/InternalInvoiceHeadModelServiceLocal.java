@@ -18,15 +18,13 @@ import com.mg.merp.document.DocumentPattern;
 import com.mg.merp.document.model.DocHeadModel;
 
 /**
- * 
  * @author leonova
  * @version $Id: InternalInvoiceHeadModelServiceLocal.java,v 1.3 2006/09/20 10:43:40 safonov Exp $
  */
 public interface InternalInvoiceHeadModelServiceLocal
-   extends DocumentPattern<DocHeadModel, Integer>
-{
-	/**
-	 * тип папки для образцов внутренних накладных
-	 */
-	final static short FOLDER_PART = 20;
+    extends DocumentPattern<DocHeadModel, Integer> {
+  /**
+   * тип папки для образцов внутренних накладных
+   */
+  final static short FOLDER_PART = 20;
 }

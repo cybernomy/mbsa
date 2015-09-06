@@ -13,50 +13,65 @@
 
 <!-- $Id: PaymentMt.mfd.xml,v 1.8 2007/06/05 12:51:45 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.paymentalloc.support.ui.PaymentMt" title="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.FormMt.Title" helpTopic="paymentalloc#pml_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.paymentalloc.support.ui.PaymentMt"
+          title="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.FormMt.Title"
+          helpTopic="paymentalloc#pml_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
-  		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.Total.Tab" >		
-		 	<jfd:field id="PDate" />	
-		 	<jfd:field id="Planned" sameLine="true" />
-		 	<jfd:field id="Name" />		 	
-			<jfd:include name="com/mg/merp/paymentalloc/resources/CurrencyMacros.xml" />							 	
-		 	<jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml" /> 
-		 	<jfd:field id="Description" />			
-		 	<jfd:field id="Comments" />				 	
-	 	 	<jfd:include name="com/mg/merp/paymentalloc/resources/AllocDocumentAttributeMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
-			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
-	 	 	<jfd:include name="com/mg/merp/paymentalloc/resources/PartnerFromToMacros.xml" />  					 	
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 												 	
-	 	</jfd:container>
-		<jfd:container id="documentsSplit" layout="jfd:split" alignment="expand_expand" orientation="ver" tabTitle="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.Documents.Tab" helpTopic="paymentalloc#docs_html" >
-			<jfd:container id="allDocuments" layout="jfd:box" columns="1" >
-				<jfd:container id="docGroupBox" layout="jfd:defaultMtLayout" columns="2" alignment="expand_top">
-					<jfd:field id="docGroup" />
-					<jfd:button id="refreshButton" text="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentMt.Refresh" actionListener="Refresh" alignment="expand_top" sameLine="true"/>
-				</jfd:container>
-				<jfd:table id="documentsHead" scroll="true" alignment="expand_expand" >
-					<jfd:popupMenu>
-						<jfd:menuItem id="viewDocHead" text="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentMt.ViewDoc" actionListener="ViewDocHead" />
-					</jfd:popupMenu>
-				</jfd:table>			
-			</jfd:container>	
-			<jfd:container id="allTaxSplit" layout="jfd:split" alignment="expand_expand" orientation="hor">
-				<jfd:container id="allSpec" layout="jfd:box" columns="1" >
-					<jfd:table id="specDoc" scroll="true" alignment="expand_expand" label="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.DocumentSpec.Tab" >
-					</jfd:table>			
-				</jfd:container>
-				<jfd:container id="allTax" layout="jfd:box" columns="1" >
-					<jfd:table id="taxDoc" scroll="true" alignment="expand_expand" label="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.DocumentTax.Tab" >
-					</jfd:table>			
-				</jfd:container>
-			</jfd:container>
-		</jfd:container>
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.Total.Tab">
+      <jfd:field id="PDate"/>
+      <jfd:field id="Planned" sameLine="true"/>
+      <jfd:field id="Name"/>
+      <jfd:include name="com/mg/merp/paymentalloc/resources/CurrencyMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml"/>
+      <jfd:field id="Description"/>
+      <jfd:field id="Comments"/>
+      <jfd:include name="com/mg/merp/paymentalloc/resources/AllocDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/paymentalloc/resources/PartnerFromToMacros.xml"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="documentsSplit" layout="jfd:split" alignment="expand_expand"
+                   orientation="ver"
+                   tabTitle="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.Documents.Tab"
+                   helpTopic="paymentalloc#docs_html">
+      <jfd:container id="allDocuments" layout="jfd:box" columns="1">
+        <jfd:container id="docGroupBox" layout="jfd:defaultMtLayout" columns="2"
+                       alignment="expand_top">
+          <jfd:field id="docGroup"/>
+          <jfd:button id="refreshButton"
+                      text="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentMt.Refresh"
+                      actionListener="Refresh" alignment="expand_top" sameLine="true"/>
+        </jfd:container>
+        <jfd:table id="documentsHead" scroll="true" alignment="expand_expand">
+          <jfd:popupMenu>
+            <jfd:menuItem id="viewDocHead"
+                          text="resource://com.mg.merp.paymentalloc.resources.formelements#PaymentMt.ViewDoc"
+                          actionListener="ViewDocHead"/>
+          </jfd:popupMenu>
+        </jfd:table>
+      </jfd:container>
+      <jfd:container id="allTaxSplit" layout="jfd:split" alignment="expand_expand"
+                     orientation="hor">
+        <jfd:container id="allSpec" layout="jfd:box" columns="1">
+          <jfd:table id="specDoc" scroll="true" alignment="expand_expand"
+                     label="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.DocumentSpec.Tab">
+          </jfd:table>
+        </jfd:container>
+        <jfd:container id="allTax" layout="jfd:box" columns="1">
+          <jfd:table id="taxDoc" scroll="true" alignment="expand_expand"
+                     label="resource://com.mg.merp.paymentalloc.resources.formelements#Payment.DocumentTax.Tab">
+          </jfd:table>
+        </jfd:container>
+      </jfd:container>
+    </jfd:container>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

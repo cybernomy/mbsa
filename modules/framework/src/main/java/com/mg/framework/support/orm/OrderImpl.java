@@ -19,13 +19,13 @@ package com.mg.framework.support.orm;
  * @version $Id: OrderImpl.java,v 1.1 2006/01/24 14:14:25 safonov Exp $
  */
 public class OrderImpl {
-    private org.hibernate.criterion.Order hibernateOrder;
+  private org.hibernate.criterion.Order hibernateOrder;
 
-    public OrderImpl(org.hibernate.criterion.Order hibernateOrder) {
-        this.hibernateOrder = hibernateOrder;
-    }
-    
-    public org.hibernate.criterion.Order getHibernateOrder() {
-        return hibernateOrder;
-    }
+  public OrderImpl(org.hibernate.criterion.Order hibernateOrder) {
+    this.hibernateOrder = hibernateOrder;
+  }
+
+  public org.hibernate.criterion.Order getHibernateOrder() {
+    return hibernateOrder;
+  }
 }

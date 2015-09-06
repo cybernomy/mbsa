@@ -27,27 +27,27 @@ import javax.security.auth.callback.UnsupportedCallbackException;
  * @version $Id$
  */
 public class DefaultCallbackHandler implements CallbackHandler {
-	private String login = null;
-	private char[] password = null;
+  private String login = null;
+  private char[] password = null;
 
-	public DefaultCallbackHandler(String login, String password) {
-		this.login = login;
-		if (password != null)
-			this.password = password.toCharArray();
-	}
-	
-	/* (non-Javadoc)
-	 * @see javax.security.auth.callback.CallbackHandler#handle(javax.security.auth.callback.Callback[])
-	 */
-	public void handle(Callback[] callbacks) throws IOException,
-			UnsupportedCallbackException {
-		// TODO Auto-generated method stub
-		for (Callback callback : callbacks) {
-			if (callback instanceof NameCallback)
-				((NameCallback) callback).setName(login);
-			else if (callback instanceof PasswordCallback)
-				((PasswordCallback) callback).setPassword(password);
-		}
-	}
+  public DefaultCallbackHandler(String login, String password) {
+    this.login = login;
+    if (password != null)
+      this.password = password.toCharArray();
+  }
+
+  /* (non-Javadoc)
+   * @see javax.security.auth.callback.CallbackHandler#handle(javax.security.auth.callback.Callback[])
+   */
+  public void handle(Callback[] callbacks) throws IOException,
+      UnsupportedCallbackException {
+    // TODO Auto-generated method stub
+    for (Callback callback : callbacks) {
+      if (callback instanceof NameCallback)
+        ((NameCallback) callback).setName(login);
+      else if (callback instanceof PasswordCallback)
+        ((PasswordCallback) callback).setPassword(password);
+    }
+  }
 
 }

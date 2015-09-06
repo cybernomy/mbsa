@@ -13,42 +13,49 @@
 
 <!-- $Id: LiabilityModelMt.mfd.xml,v 1.5 2007/05/14 05:25:37 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.paymentcontrol.resources.formelements#LiabilityModel.FormMt.Title" helpTopic="paymentcontrol#liabmodel_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.paymentcontrol.resources.formelements#LiabilityModel.FormMt.Title"
+          helpTopic="paymentcontrol#liabmodel_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:field id="ModelName" />	
-		<jfd:field id="DestFolder" />			
- 		<jfd:field id="SumCur" />	
-		<jfd:field id="Receivable" sameLine="true"/> 
-		<jfd:field id="CurCode" />	
-		<jfd:field id="CurRateType" />	
-		<jfd:field id="CurRateAuthority" sameLine="true"/>	
-		<jfd:field id="Num" />	
-		<jfd:field id="RegDate" />	
-		<jfd:field id="DateToExecute" sameLine="true" />			
-		<jfd:field id="PaymentDelay" />		
-		<jfd:field id="Priority" sameLine="true" />	
-		<jfd:field id="From" />		
-		<jfd:field id="To" sameLine="true" />		
-		<jfd:field id="FromBankAcc" />	
-		<jfd:field id="ToBankAcc" sameLine="true" />	
-		<jfd:field id="FromSource" />	
-		<jfd:field id="ToSource" sameLine="true"  />				
-		<jfd:include name="com/mg/merp/paymentcontrol/resources/DocumentMacros.xml" />
-		<jfd:include name="com/mg/merp/paymentcontrol/resources/BaseDocumentMacros.xml" />
-		<jfd:include name="com/mg/merp/paymentcontrol/resources/ContractMacros.xml" />	
-		<jfd:field id="Comments"/>	 
-		<jfd:field id="PrefResourceFolder" text="resource://com.mg.merp.paymentcontrol.resources.formelements#ResourceFolder" fieldGroup="resource://com.mg.merp.paymentcontrol.resources.formelements#Liability.PreferencedResource" />	
-		<jfd:field id="PrefResource" text="resource://com.mg.merp.paymentcontrol.resources.formelements#Resource" sameLine="true"/>	
-		<jfd:field id="PrefOnly" />	
-		
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																									
-	</jfd:container>
+    <jfd:field id="ModelName"/>
+    <jfd:field id="DestFolder"/>
+    <jfd:field id="SumCur"/>
+    <jfd:field id="Receivable" sameLine="true"/>
+    <jfd:field id="CurCode"/>
+    <jfd:field id="CurRateType"/>
+    <jfd:field id="CurRateAuthority" sameLine="true"/>
+    <jfd:field id="Num"/>
+    <jfd:field id="RegDate"/>
+    <jfd:field id="DateToExecute" sameLine="true"/>
+    <jfd:field id="PaymentDelay"/>
+    <jfd:field id="Priority" sameLine="true"/>
+    <jfd:field id="From"/>
+    <jfd:field id="To" sameLine="true"/>
+    <jfd:field id="FromBankAcc"/>
+    <jfd:field id="ToBankAcc" sameLine="true"/>
+    <jfd:field id="FromSource"/>
+    <jfd:field id="ToSource" sameLine="true"/>
+    <jfd:include name="com/mg/merp/paymentcontrol/resources/DocumentMacros.xml"/>
+    <jfd:include name="com/mg/merp/paymentcontrol/resources/BaseDocumentMacros.xml"/>
+    <jfd:include name="com/mg/merp/paymentcontrol/resources/ContractMacros.xml"/>
+    <jfd:field id="Comments"/>
+    <jfd:field id="PrefResourceFolder"
+               text="resource://com.mg.merp.paymentcontrol.resources.formelements#ResourceFolder"
+               fieldGroup="resource://com.mg.merp.paymentcontrol.resources.formelements#Liability.PreferencedResource"/>
+    <jfd:field id="PrefResource"
+               text="resource://com.mg.merp.paymentcontrol.resources.formelements#Resource"
+               sameLine="true"/>
+    <jfd:field id="PrefOnly"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

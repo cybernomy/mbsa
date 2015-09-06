@@ -15,12 +15,10 @@
 package com.mg.merp.account;
 
 /**
- * 
  * @author leonova
  * @version $Id: BalanceFormsServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface BalanceFormsServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService
-{
+    extends com.mg.framework.api.DataBusinessObjectService {
 
 }

@@ -17,99 +17,104 @@ package com.mg.merp.table.model;
 
 /**
  * Модель бизнес-компонента "Спецификация шаблона графика"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: PatternSpec.java,v 1.3 2008/08/12 14:11:44 sharapov Exp $
  */
 public class PatternSpec extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields    
+  // Fields
 
-	private java.lang.Integer Id;
-	private com.mg.merp.table.model.TimeKind TimeKind;
-	private com.mg.merp.core.model.SysClient SysClient;
-	private com.mg.merp.table.model.PatternHead PatternHead;
-	private java.lang.Integer DayNumber;
-	private java.math.BigDecimal HoursQuantity;
-
-
-	// Constructors
-
-	/** default constructor */
-	public PatternSpec() {
-	}
-
-	/** constructor with id */
-	public PatternSpec(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  private java.lang.Integer Id;
+  private com.mg.merp.table.model.TimeKind TimeKind;
+  private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.table.model.PatternHead PatternHead;
+  private java.lang.Integer DayNumber;
+  private java.math.BigDecimal HoursQuantity;
 
 
-	// Property accessors
-	/**
+  // Constructors
 
-	 */
-	public java.lang.Integer getId () {
-		return this.Id;
-	}
+  /**
+   * default constructor
+   */
+  public PatternSpec() {
+  }
 
-	public void setId (java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public PatternSpec(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	/**
 
-	 */
-	public com.mg.merp.table.model.TimeKind getTimeKind () {
-		return this.TimeKind;
-	}
+  // Property accessors
 
-	public void setTimeKind (com.mg.merp.table.model.TimeKind TabTimeKind) {
-		this.TimeKind = TabTimeKind;
-	}
+  /**
 
-	/**
+   */
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	 */
-	public com.mg.merp.core.model.SysClient getSysClient () {
-		return this.SysClient;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public void setSysClient (com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  /**
 
-	/**
+   */
+  public com.mg.merp.table.model.TimeKind getTimeKind() {
+    return this.TimeKind;
+  }
 
-	 */
-	public com.mg.merp.table.model.PatternHead getPatternHead () {
-		return this.PatternHead;
-	}
+  public void setTimeKind(com.mg.merp.table.model.TimeKind TabTimeKind) {
+    this.TimeKind = TabTimeKind;
+  }
 
-	public void setPatternHead (com.mg.merp.table.model.PatternHead TabPatternHead) {
-		this.PatternHead = TabPatternHead;
-	}
+  /**
 
-	/**
+   */
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	 */
-	public java.lang.Integer getDayNumber () {
-		return this.DayNumber;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setDayNumber (java.lang.Integer DayNumber) {
-		this.DayNumber = DayNumber;
-	}
+  /**
 
-	/**
+   */
+  public com.mg.merp.table.model.PatternHead getPatternHead() {
+    return this.PatternHead;
+  }
 
-	 */
-	public java.math.BigDecimal getHoursQuantity () {
-		return this.HoursQuantity;
-	}
+  public void setPatternHead(com.mg.merp.table.model.PatternHead TabPatternHead) {
+    this.PatternHead = TabPatternHead;
+  }
 
-	public void setHoursQuantity (java.math.BigDecimal HoursQuantity) {
-		this.HoursQuantity = HoursQuantity;
-	}
+  /**
+
+   */
+  public java.lang.Integer getDayNumber() {
+    return this.DayNumber;
+  }
+
+  public void setDayNumber(java.lang.Integer DayNumber) {
+    this.DayNumber = DayNumber;
+  }
+
+  /**
+
+   */
+  public java.math.BigDecimal getHoursQuantity() {
+    return this.HoursQuantity;
+  }
+
+  public void setHoursQuantity(java.math.BigDecimal HoursQuantity) {
+    this.HoursQuantity = HoursQuantity;
+  }
 
 }

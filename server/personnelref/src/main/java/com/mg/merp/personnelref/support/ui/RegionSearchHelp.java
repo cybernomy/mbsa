@@ -22,10 +22,10 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class RegionSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/personnelref/Region";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/Region";
+  }
 
 }
 

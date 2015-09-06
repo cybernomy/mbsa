@@ -14,262 +14,262 @@
  */
 package com.mg.merp.core.model;
 
-import java.util.List;
-
 import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.metadata.BuiltInType;
 import com.mg.framework.api.metadata.ConversionRoutine;
 import com.mg.framework.api.metadata.FixedValue;
 import com.mg.framework.service.PersistentObjectHibernate;
 
+import java.util.List;
+
 /**
  * @author Oleg V. Safonov
  * @version $Id: SysDomain.java,v 1.4 2008/03/03 12:56:35 safonov Exp $
  */
-@DataItemName ("Core.SysDomain")
+@DataItemName("Core.SysDomain")
 public class SysDomain extends PersistentObjectHibernate implements java.io.Serializable, com.mg.framework.api.metadata.Domain {
-	private Integer id;
-	private String name;
-	private String description;
-	private BuiltInType builtInType;
-	private int length;
-	private int numberOfPlaces;
-	private int numberOfDecimalPlaces;
-	private boolean isLowercase;
-	private boolean isMandatory;
-	private boolean isSign;
-	private String conversionRoutine;
-	private String fixedValuesImpl;
-	private String defaultValueImpl;
-	
-	public SysDomain() {
-	}
-	
-	public SysDomain(Integer id) {
-		this.id = id;
-	}
+  private Integer id;
+  private String name;
+  private String description;
+  private BuiltInType builtInType;
+  private int length;
+  private int numberOfPlaces;
+  private int numberOfDecimalPlaces;
+  private boolean isLowercase;
+  private boolean isMandatory;
+  private boolean isSign;
+  private String conversionRoutine;
+  private String fixedValuesImpl;
+  private String defaultValueImpl;
 
-	/**
-	 * @return Returns the builtInType.
-	 */
-	public BuiltInType getBuiltInType() {
-		return builtInType;
-	}
+  public SysDomain() {
+  }
 
-	/**
-	 * @param builtInType The builtInType to set.
-	 */
-	public void setBuiltInType(BuiltInType builtInType) {
-		this.builtInType = builtInType;
-	}
+  public SysDomain(Integer id) {
+    this.id = id;
+  }
 
-	/**
-	 * @return Returns the description.
-	 */
-	@DataItemName ("Core.Description")
-	public String getDescription() {
-		return description;
-	}
+  /**
+   * @return Returns the builtInType.
+   */
+  public BuiltInType getBuiltInType() {
+    return builtInType;
+  }
 
-	/**
-	 * @param description The description to set.
-	 */
-	public void setDescription(String description) {
-		this.description = description;
-	}
+  /**
+   * @param builtInType The builtInType to set.
+   */
+  public void setBuiltInType(BuiltInType builtInType) {
+    this.builtInType = builtInType;
+  }
 
-	/**
-	 * @return Returns the id.
-	 */
-	@DataItemName("ID")
-	public Integer getId() {
-		return id;
-	}
+  /**
+   * @return Returns the description.
+   */
+  @DataItemName("Core.Description")
+  public String getDescription() {
+    return description;
+  }
 
-	/**
-	 * @param id The id to set.
-	 */
-	public void setId(Integer id) {
-		this.id = id;
-	}
+  /**
+   * @param description The description to set.
+   */
+  public void setDescription(String description) {
+    this.description = description;
+  }
 
-	/**
-	 * @return Returns the isLowercase.
-	 */
-	@DataItemName ("Core.SysDomain.LowerCase")
-	public boolean isLowercase() {
-		return isLowercase;
-	}
+  /**
+   * @return Returns the id.
+   */
+  @DataItemName("ID")
+  public Integer getId() {
+    return id;
+  }
 
-	/**
-	 * @param isLowercase The isLowercase to set.
-	 */
-	public void setLowercase(boolean isLowercase) {
-		this.isLowercase = isLowercase;
-	}
+  /**
+   * @param id The id to set.
+   */
+  public void setId(Integer id) {
+    this.id = id;
+  }
 
-	/**
-	 * @return Returns the isNotNull.
-	 */
-	@DataItemName ("Core.SysDomain.Mandatory")
-	public boolean isMandatory() {
-		return isMandatory;
-	}
+  /**
+   * @return Returns the isLowercase.
+   */
+  @DataItemName("Core.SysDomain.LowerCase")
+  public boolean isLowercase() {
+    return isLowercase;
+  }
 
-	/**
-	 * @param isMandatory The isNotNull to set.
-	 */
-	public void setMandatory(boolean isMandatory) {
-		this.isMandatory = isMandatory;
-	}
+  /**
+   * @param isLowercase The isLowercase to set.
+   */
+  public void setLowercase(boolean isLowercase) {
+    this.isLowercase = isLowercase;
+  }
 
-	/**
-	 * @return Returns the isSign.
-	 */
-	@DataItemName ("Core.SysDomain.Sign")
-	public boolean isSign() {
-		return isSign;
-	}
+  /**
+   * @return Returns the isNotNull.
+   */
+  @DataItemName("Core.SysDomain.Mandatory")
+  public boolean isMandatory() {
+    return isMandatory;
+  }
 
-	/**
-	 * @param isSign The isSign to set.
-	 */
-	public void setSign(boolean isSign) {
-		this.isSign = isSign;
-	}
+  /**
+   * @param isMandatory The isNotNull to set.
+   */
+  public void setMandatory(boolean isMandatory) {
+    this.isMandatory = isMandatory;
+  }
 
-	/**
-	 * @return Returns the length.
-	 */
-	@DataItemName ("Core.SysDomain.Length")
-	public int getLength() {
-		return length;
-	}
+  /**
+   * @return Returns the isSign.
+   */
+  @DataItemName("Core.SysDomain.Sign")
+  public boolean isSign() {
+    return isSign;
+  }
 
-	/**
-	 * @param length The length to set.
-	 */
-	public void setLength(int length) {
-		this.length = length;
-	}
+  /**
+   * @param isSign The isSign to set.
+   */
+  public void setSign(boolean isSign) {
+    this.isSign = isSign;
+  }
 
-	/**
-	 * @return Returns the name.
-	 */
-	@DataItemName ("Core.SysDomain.Name")
-	public String getName() {
-		return name;
-	}
+  /**
+   * @return Returns the length.
+   */
+  @DataItemName("Core.SysDomain.Length")
+  public int getLength() {
+    return length;
+  }
 
-	/**
-	 * @param name The name to set.
-	 */
-	public void setName(String name) {
-		this.name = name;
-	}
+  /**
+   * @param length The length to set.
+   */
+  public void setLength(int length) {
+    this.length = length;
+  }
 
-	/**
-	 * @return Returns the numberOfDecimalPlaces.
-	 */
-	@DataItemName ("Core.SysDomain.NumberOfDecimalPlaces")
-	public int getNumberOfDecimalPlaces() {
-		return numberOfDecimalPlaces;
-	}
+  /**
+   * @return Returns the name.
+   */
+  @DataItemName("Core.SysDomain.Name")
+  public String getName() {
+    return name;
+  }
 
-	/**
-	 * @param numberOfDecimalPlaces The numberOfDecimalPlaces to set.
-	 */
-	public void setNumberOfDecimalPlaces(int numberOfDecimalPlaces) {
-		this.numberOfDecimalPlaces = numberOfDecimalPlaces;
-	}
+  /**
+   * @param name The name to set.
+   */
+  public void setName(String name) {
+    this.name = name;
+  }
 
-	/**
-	 * @return Returns the numberOfPlaces.
-	 */
-	@DataItemName ("Core.SysDomain.NumberOfPlaces")
-	public int getNumberOfPlaces() {
-		return numberOfPlaces;
-	}
+  /**
+   * @return Returns the numberOfDecimalPlaces.
+   */
+  @DataItemName("Core.SysDomain.NumberOfDecimalPlaces")
+  public int getNumberOfDecimalPlaces() {
+    return numberOfDecimalPlaces;
+  }
 
-	/**
-	 * @param numberOfPlaces The numberOfPlaces to set.
-	 */
-	public void setNumberOfPlaces(int numberOfPlaces) {
-		this.numberOfPlaces = numberOfPlaces;
-	}
+  /**
+   * @param numberOfDecimalPlaces The numberOfDecimalPlaces to set.
+   */
+  public void setNumberOfDecimalPlaces(int numberOfDecimalPlaces) {
+    this.numberOfDecimalPlaces = numberOfDecimalPlaces;
+  }
 
-	/**
-	 * @return Returns the conversionRoutine.
-	 */
-	@DataItemName ("Core.SysDomain.ConversionRoutine")
-	public String getConversionRoutine() {
-		return conversionRoutine;
-	}
+  /**
+   * @return Returns the numberOfPlaces.
+   */
+  @DataItemName("Core.SysDomain.NumberOfPlaces")
+  public int getNumberOfPlaces() {
+    return numberOfPlaces;
+  }
 
-	/**
-	 * @param conversionRoutine The conversionRoutine to set.
-	 */
-	public void setConversionRoutine(String conversionRoutine) {
-		this.conversionRoutine = conversionRoutine;
-	}
+  /**
+   * @param numberOfPlaces The numberOfPlaces to set.
+   */
+  public void setNumberOfPlaces(int numberOfPlaces) {
+    this.numberOfPlaces = numberOfPlaces;
+  }
 
-	/**
-	 * @return the defaultValueImpl
-	 */
-	@DataItemName ("Core.SysDomain.DefaultValueImpl")
-	public String getDefaultValueImpl() {
-		return defaultValueImpl;
-	}
+  /**
+   * @return Returns the conversionRoutine.
+   */
+  @DataItemName("Core.SysDomain.ConversionRoutine")
+  public String getConversionRoutine() {
+    return conversionRoutine;
+  }
 
-	/**
-	 * @param defaultValueImpl the defaultValueImpl to set
-	 */
-	public void setDefaultValueImpl(String defaultValueImpl) {
-		this.defaultValueImpl = defaultValueImpl;
-	}
+  /**
+   * @param conversionRoutine The conversionRoutine to set.
+   */
+  public void setConversionRoutine(String conversionRoutine) {
+    this.conversionRoutine = conversionRoutine;
+  }
 
-	/**
-	 * @return the fixedValuesImpl
-	 */
-	@DataItemName ("Core.SysDomain.FixedValueImpl")
-	public String getFixedValuesImpl() {
-		return fixedValuesImpl;
-	}
+  /**
+   * @return the defaultValueImpl
+   */
+  @DataItemName("Core.SysDomain.DefaultValueImpl")
+  public String getDefaultValueImpl() {
+    return defaultValueImpl;
+  }
 
-	/**
-	 * @param fixedValuesImpl the fixedValuesImpl to set
-	 */
-	public void setFixedValuesImpl(String fixedValuesImpl) {
-		this.fixedValuesImpl = fixedValuesImpl;
-	}
+  /**
+   * @param defaultValueImpl the defaultValueImpl to set
+   */
+  public void setDefaultValueImpl(String defaultValueImpl) {
+    this.defaultValueImpl = defaultValueImpl;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.metadata.Domain#getFixedValues()
-	 */
-	public List<FixedValue<?>> getFixedValues() {
-		throw new UnsupportedOperationException();
-	}
+  /**
+   * @return the fixedValuesImpl
+   */
+  @DataItemName("Core.SysDomain.FixedValueImpl")
+  public String getFixedValuesImpl() {
+    return fixedValuesImpl;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.metadata.Domain#getDefaultValue()
-	 */
-	public Object getDefaultValue() {
-		throw new UnsupportedOperationException();
-	}
+  /**
+   * @param fixedValuesImpl the fixedValuesImpl to set
+   */
+  public void setFixedValuesImpl(String fixedValuesImpl) {
+    this.fixedValuesImpl = fixedValuesImpl;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.metadata.Domain#getDocumentation()
-	 */
-	public String getDocumentation() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.metadata.Domain#getFixedValues()
+   */
+  public List<FixedValue<?>> getFixedValues() {
+    throw new UnsupportedOperationException();
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.metadata.Domain#getConversion()
-	 */
-	public ConversionRoutine<?, ?> getConversion() {
-		throw new UnsupportedOperationException();
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.metadata.Domain#getDefaultValue()
+   */
+  public Object getDefaultValue() {
+    throw new UnsupportedOperationException();
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.metadata.Domain#getDocumentation()
+   */
+  public String getDocumentation() {
+    // TODO Auto-generated method stub
+    return null;
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.metadata.Domain#getConversion()
+   */
+  public ConversionRoutine<?, ?> getConversion() {
+    throw new UnsupportedOperationException();
+  }
 
 }

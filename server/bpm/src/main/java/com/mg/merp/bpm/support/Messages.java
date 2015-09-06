@@ -21,23 +21,22 @@ import com.mg.framework.generic.MessageSourceAccessor;
  * @version $Id: Messages.java,v 1.2 2007/09/10 15:09:53 alikaev Exp $
  */
 public class Messages extends MessageSourceAccessor {
-	private static final String BUNDLE_NAME = "com.mg.merp.bpm.resources.messages"; //$NON-NLS-1$
-	private static Messages instance;
+  //message keys
+  public static final String PROCESS_IMAGE_TITLE = "ProcessImageTitle"; //$NON-NLS-1$
+  public static final String PROCESS_INSTANCES_TITLE = "ProcessInstancesTitle"; //$NON-NLS-1$
+  public static final String PROCESS_LOGS_TITLE = "ProcessLogsTitle"; //$NON-NLS-1$
+  public static final String PROCESS_VERSIONS_TITLE = "ProcessVersionsTitle"; //$NON-NLS-1$
+  public static final String PROCESS_NOT_FOUND = "ProcessNotFound"; //$NON-NLS-1$
+  private static final String BUNDLE_NAME = "com.mg.merp.bpm.resources.messages"; //$NON-NLS-1$
+  private static Messages instance;
 
-	//message keys
-	public static final String PROCESS_IMAGE_TITLE = "ProcessImageTitle"; //$NON-NLS-1$
-	public static final String PROCESS_INSTANCES_TITLE = "ProcessInstancesTitle"; //$NON-NLS-1$
-	public static final String PROCESS_LOGS_TITLE = "ProcessLogsTitle"; //$NON-NLS-1$
-	public static final String PROCESS_VERSIONS_TITLE = "ProcessVersionsTitle"; //$NON-NLS-1$
-	public static final String PROCESS_NOT_FOUND = "ProcessNotFound"; //$NON-NLS-1$
+  static {
+    MessageSourceAccessor.initializeMessages(BUNDLE_NAME, Messages.class);
+  }
 
-	public static Messages getInstance() {
-		return instance;
-	}
-	
-	static {
-		MessageSourceAccessor.initializeMessages(BUNDLE_NAME, Messages.class);
-	}
+  public static Messages getInstance() {
+    return instance;
+  }
 
 
 }

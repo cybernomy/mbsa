@@ -26,21 +26,21 @@ import com.mg.framework.support.ui.widget.DefaultTableController;
  * @version $Id: BomMachineMt.java,v 1.5 2007/07/30 10:24:19 safonov Exp $
  */
 public class BomMachineMt extends DefaultMaintenanceForm implements MasterModelListener {
-	private DefaultTableController costDetailLine;
-	protected AttributeMap costDetailLineProperties = new LocalDataTransferObject();
-	
-	public BomMachineMt() throws Exception {
-		costDetailLine = new CostDetailTableController();
-		addMasterModelListener(costDetailLine);
+  protected AttributeMap costDetailLineProperties = new LocalDataTransferObject();
+  private DefaultTableController costDetailLine;
 
-		addMasterModelListener(this);
-	}
+  public BomMachineMt() throws Exception {
+    costDetailLine = new CostDetailTableController();
+    addMasterModelListener(costDetailLine);
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.MasterModelListener#masterChange(com.mg.framework.api.ui.ModelChangeEvent)
-	 */
-	public void masterChange(ModelChangeEvent event) {
-		costDetailLineProperties.put("BomRoute", event.getEntity());
-	}	
+    addMasterModelListener(this);
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.MasterModelListener#masterChange(com.mg.framework.api.ui.ModelChangeEvent)
+   */
+  public void masterChange(ModelChangeEvent event) {
+    costDetailLineProperties.put("BomRoute", event.getEntity());
+  }
 
 }

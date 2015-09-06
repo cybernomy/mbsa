@@ -22,148 +22,153 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.CatalogFolder")
 public class CatalogFolder extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.reference.model.CatalogFolder CatalogFolder;
+  private com.mg.merp.reference.model.CatalogFolder CatalogFolder;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.baiengine.model.Repository AlgRepository;
+  private com.mg.merp.baiengine.model.Repository AlgRepository;
 
-	private java.lang.String FName;
+  private java.lang.String FName;
 
-	private java.lang.String GroupCode;
+  private java.lang.String GroupCode;
 
-	private java.lang.String BarCode;
+  private java.lang.String BarCode;
 
-	private java.lang.String PluCode;
+  private java.lang.String PluCode;
 
-	private java.lang.String FolderTag;
+  private java.lang.String FolderTag;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public CatalogFolder() {
-	}
+  /**
+   * default constructor
+   */
+  public CatalogFolder() {
+  }
 
-	/** constructor with id */
-	public CatalogFolder(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public CatalogFolder(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.reference.model.CatalogFolder getCatalogFolder() {
-		return this.CatalogFolder;
-	}
+  /**
+   *
+   */
 
-	public void setCatalogFolder(
-			com.mg.merp.reference.model.CatalogFolder CatalogFolder) {
-		this.CatalogFolder = CatalogFolder;
-	}
+  public com.mg.merp.reference.model.CatalogFolder getCatalogFolder() {
+    return this.CatalogFolder;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCatalogFolder(
+      com.mg.merp.reference.model.CatalogFolder CatalogFolder) {
+    this.CatalogFolder = CatalogFolder;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.CatFolder.AlgRepository")
-	public com.mg.merp.baiengine.model.Repository getAlgRepository() {
-		return this.AlgRepository;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setAlgRepository(
-			com.mg.merp.baiengine.model.Repository AlgRepository) {
-		this.AlgRepository = AlgRepository;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.CatFolder.AlgRepository")
+  public com.mg.merp.baiengine.model.Repository getAlgRepository() {
+    return this.AlgRepository;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.CatFolder.Name")
-	public java.lang.String getFName() {
-		return this.FName;
-	}
+  public void setAlgRepository(
+      com.mg.merp.baiengine.model.Repository AlgRepository) {
+    this.AlgRepository = AlgRepository;
+  }
 
-	public void setFName(java.lang.String FName) {
-		this.FName = FName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.CatFolder.Name")
+  public java.lang.String getFName() {
+    return this.FName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.CatFolder.Code")
-	public java.lang.String getGroupCode() {
-		return this.GroupCode;
-	}
+  public void setFName(java.lang.String FName) {
+    this.FName = FName;
+  }
 
-	public void setGroupCode(java.lang.String GroupCode) {
-		this.GroupCode = GroupCode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.CatFolder.Code")
+  public java.lang.String getGroupCode() {
+    return this.GroupCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.CatFolder.BarCode")
-	public java.lang.String getBarCode() {
-		return this.BarCode;
-	}
+  public void setGroupCode(java.lang.String GroupCode) {
+    this.GroupCode = GroupCode;
+  }
 
-	public void setBarCode(java.lang.String BarCode) {
-		this.BarCode = BarCode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.CatFolder.BarCode")
+  public java.lang.String getBarCode() {
+    return this.BarCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.CatFolder.PluCode")
-	public java.lang.String getPluCode() {
-		return this.PluCode;
-	}
+  public void setBarCode(java.lang.String BarCode) {
+    this.BarCode = BarCode;
+  }
 
-	public void setPluCode(java.lang.String PluCode) {
-		this.PluCode = PluCode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.CatFolder.PluCode")
+  public java.lang.String getPluCode() {
+    return this.PluCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.FolderTag")
-	public java.lang.String getFolderTag() {
-		return this.FolderTag;
-	}
+  public void setPluCode(java.lang.String PluCode) {
+    this.PluCode = PluCode;
+  }
 
-	public void setFolderTag(java.lang.String FolderTag) {
-		this.FolderTag = FolderTag;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.FolderTag")
+  public java.lang.String getFolderTag() {
+    return this.FolderTag;
+  }
+
+  public void setFolderTag(java.lang.String FolderTag) {
+    this.FolderTag = FolderTag;
+  }
 }

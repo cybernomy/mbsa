@@ -20,29 +20,28 @@ import com.mg.framework.utils.ServerUtils;
 
 /**
  * Локатор менеджера пользовательских полей
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: CustomFieldsManagerLocator.java,v 1.1 2007/01/25 15:25:33 safonov Exp $
  */
 public class CustomFieldsManagerLocator {
 
-	private static volatile CustomFieldsManager instance = null;
+  private static volatile CustomFieldsManager instance = null;
 
-	/**
-	 * найти сервис менеджера пользовательских полей
-	 * 
-	 * @return	сервис
-	 * @throws ApplicationException	при любых ошибках
-	 */
-	public static CustomFieldsManager locate() {
-		if (instance == null)
-			try {
-				instance = (CustomFieldsManager) ServerUtils.createMBeanProxy(CustomFieldsManager.class, CustomFieldsManager.SERVICE_NAME); //$NON-NLS-1$
-			}
-		catch (Exception e) {
-			throw new ApplicationException(e);
-		}
-		return instance;
-	}
+  /**
+   * найти сервис менеджера пользовательских полей
+   *
+   * @return сервис
+   * @throws ApplicationException при любых ошибках
+   */
+  public static CustomFieldsManager locate() {
+    if (instance == null)
+      try {
+        instance = (CustomFieldsManager) ServerUtils.createMBeanProxy(CustomFieldsManager.class, CustomFieldsManager.SERVICE_NAME); //$NON-NLS-1$
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 
 }

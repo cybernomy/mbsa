@@ -22,24 +22,24 @@ import com.mg.merp.warehouse.model.WarehouseConfig;
 
 /**
  * Класс помощник конфигурации модуля "Управление запасами"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ConfigurationHelper.java,v 1.2 2007/03/26 10:53:35 safonov Exp $
  */
 public class ConfigurationHelper {
 
-	/**
-	 * получить конфигурацию модуля
-	 * 
-	 * @return	конфигурация
-	 */
-	public static WarehouseConfig getConfiguration() {
-		return ServerUtils.getPersistentManager().find(WarehouseConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
-	}
+  /**
+   * получить конфигурацию модуля
+   *
+   * @return конфигурация
+   */
+  public static WarehouseConfig getConfiguration() {
+    return ServerUtils.getPersistentManager().find(WarehouseConfig.class, ((SysClient) ServerUtils.getCurrentSession().getSystemTenant()).getId());
+  }
 
-	public static Configuration getDocumentConfiguration() {
-		WarehouseConfig cfg = getConfiguration();
-		return new ConfigurationImpl(cfg.getBaseCurrency(), cfg.getNatCurrency(), cfg.getCurrencyPrec(), cfg.getCurrencyRateAuthority(), cfg.getCurrencyRateType());
-	}
+  public static Configuration getDocumentConfiguration() {
+    WarehouseConfig cfg = getConfiguration();
+    return new ConfigurationImpl(cfg.getBaseCurrency(), cfg.getNatCurrency(), cfg.getCurrencyPrec(), cfg.getCurrencyRateAuthority(), cfg.getCurrencyRateType());
+  }
 
 }

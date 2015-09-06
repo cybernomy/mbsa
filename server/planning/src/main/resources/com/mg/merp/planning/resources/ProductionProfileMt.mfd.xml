@@ -13,28 +13,35 @@
 
 <!-- $Id: ProductionProfileMt.mfd.xml,v 1.5 2007/01/15 08:09:27 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.planning.support.ui.ProductionProfileMt" title="resource://com.mg.merp.planning.resources.formelements#ProdFrofole.FormMt.Title" helpTopic="planning#prodprof_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.planning.support.ui.ProductionProfileMt"
+          title="resource://com.mg.merp.planning.resources.formelements#ProdFrofole.FormMt.Title"
+          helpTopic="planning#prodprof_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-	<jfd:border style="bevel" type="raised" />
- 		<jfd:field id="PlanningLevel" />							
- 		<jfd:field id="GenericItem" />							 		
- 		<jfd:field id="ProductionRatio" /> 		
- 		<jfd:field id="BucketProductionRatio" /> 
- 		<jfd:field id="StartBucketOffset" readOnly="true" /> 
- 		<jfd:button id="selectStartBucketOffsetButton" alignment="expand_expand" text="resource://com.mg.merp.planning.resources.formelements#ProdFrofole.FormMt.SelectButton" actionListener="ChooseStartBucketOffset" sameLine="true"/>
- 		<jfd:field id="StartBucketStartDate" readOnly="true" /> 
- 		<jfd:field id="StartBucketEndDate" readOnly="true" /> 
- 		<jfd:field id="EndBucketOffset" readOnly="true" />
- 		<jfd:button id="selectEndBucketOffsetButton" alignment="expand_expand" text="resource://com.mg.merp.planning.resources.formelements#ProdFrofole.FormMt.SelectButton" actionListener="ChooseEndBucketOffset" sameLine="true"/>
- 		<jfd:field id="EndBucketStartDate" readOnly="true" /> 
- 		<jfd:field id="EndBucketEndDate" readOnly="true" /> 
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="PlanningLevel"/>
+    <jfd:field id="GenericItem"/>
+    <jfd:field id="ProductionRatio"/>
+    <jfd:field id="BucketProductionRatio"/>
+    <jfd:field id="StartBucketOffset" readOnly="true"/>
+    <jfd:button id="selectStartBucketOffsetButton" alignment="expand_expand"
+                text="resource://com.mg.merp.planning.resources.formelements#ProdFrofole.FormMt.SelectButton"
+                actionListener="ChooseStartBucketOffset" sameLine="true"/>
+    <jfd:field id="StartBucketStartDate" readOnly="true"/>
+    <jfd:field id="StartBucketEndDate" readOnly="true"/>
+    <jfd:field id="EndBucketOffset" readOnly="true"/>
+    <jfd:button id="selectEndBucketOffsetButton" alignment="expand_expand"
+                text="resource://com.mg.merp.planning.resources.formelements#ProdFrofole.FormMt.SelectButton"
+                actionListener="ChooseEndBucketOffset" sameLine="true"/>
+    <jfd:field id="EndBucketStartDate" readOnly="true"/>
+    <jfd:field id="EndBucketEndDate" readOnly="true"/>
 
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />	
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

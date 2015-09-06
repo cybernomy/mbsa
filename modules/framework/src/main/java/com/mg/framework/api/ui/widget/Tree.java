@@ -20,31 +20,31 @@ import com.mg.framework.support.ui.widget.tree.TreeNode;
 
 /**
  * Элемент пользовательского интерфейса "Дерево"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: Tree.java,v 1.4 2009/02/09 13:17:47 safonov Exp $
  */
 public interface Tree extends Widget, ControllableWidget {
 
-	/**
-	 * выделяет узел на указанном ряду
-	 * 
-	 * @param row	ряд, нумерация начинается с <code>0</code>
-	 */
-	void setSelectionRow(int row);
+  /**
+   * выделяет узел на указанном ряду
+   *
+   * @param row ряд, нумерация начинается с <code>0</code>
+   */
+  void setSelectionRow(int row);
 
-	/**
-	 * получить список выделенных рядов
-	 * 
-	 * @return	список выделенных рядов
-	 */
-	int[] getSelectionRows();
+  /**
+   * получить список выделенных рядов
+   *
+   * @return список выделенных рядов
+   */
+  int[] getSelectionRows();
 
-	/**
-	 * выделить узел по указанному маршруту
-	 * 
-	 * @param nodes	маршрут узлов начиная с корневого
-	 */
-	void setSelectionPath(TreeNode nodes[]);
+  /**
+   * выделить узел по указанному маршруту
+   *
+   * @param nodes маршрут узлов начиная с корневого
+   */
+  void setSelectionPath(TreeNode nodes[]);
 
 }

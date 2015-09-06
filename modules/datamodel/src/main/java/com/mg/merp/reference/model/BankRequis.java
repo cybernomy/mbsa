@@ -21,39 +21,40 @@ package com.mg.merp.reference.model;
  */
 public class BankRequis extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-    // Fields    
+  // Fields
 
- private com.mg.merp.reference.model.BankRequisId id;
-
-
-    // Constructors
-
-    /** default constructor */
-    public BankRequis() {
-    }
-    
-    /** constructor with id */
-    public BankRequis(com.mg.merp.reference.model.BankRequisId id) {
-        this.id = id;
-    }
-   
-    
-    
-
-    // Property accessors
-    /**
-    
-    */
-    
-    public com.mg.merp.reference.model.BankRequisId getId () {
-        return this.id;
-    }
-    
-   public void setId (com.mg.merp.reference.model.BankRequisId id) {
-        this.id = id;
-    }
+  private com.mg.merp.reference.model.BankRequisId id;
 
 
+  // Constructors
+
+  /**
+   * default constructor
+   */
+  public BankRequis() {
+  }
+
+  /**
+   * constructor with id
+   */
+  public BankRequis(com.mg.merp.reference.model.BankRequisId id) {
+    this.id = id;
+  }
+
+
+  // Property accessors
+
+  /**
+
+   */
+
+  public com.mg.merp.reference.model.BankRequisId getId() {
+    return this.id;
+  }
+
+  public void setId(com.mg.merp.reference.model.BankRequisId id) {
+    this.id = id;
+  }
 
 
 }

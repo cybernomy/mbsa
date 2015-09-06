@@ -22,9 +22,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class MilitaryRankKindSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/personnelref/MilitaryRankKind";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/MilitaryRankKind";
+  }
 
 }

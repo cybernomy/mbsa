@@ -3,17 +3,19 @@
 <chapter id="cron">
   <title>Cron-формат</title>
 
-  <para>Cron-формат это простой, но мощный и гибкий способ описания времени и периодичности действий.
+  <para>Cron-формат это простой, но мощный и гибкий способ описания времени и периодичности
+    действий.
     &merp; использует cron-формат при указании временных интервалов в заданиях планировщика.
   </para>
 
   <para>Cron-формат состоит из нескольких полей, разделенных пробелами:</para>
-  <programlisting><![CDATA[<Секунды> <Минуты> <Часы> <Дни_месяца> <Месяцы> <Дни_недели> <Годы>]]></programlisting>
+  <programlisting>
+    <![CDATA[<Секунды> <Минуты> <Часы> <Дни_месяца> <Месяцы> <Дни_недели> <Годы>]]></programlisting>
 
   <table>
     <title>Описание полей</title>
     <tgroup cols="4">
-     <thead>
+      <thead>
         <row>
           <entry>Имя поля</entry>
           <entry>Обязательное</entry>
@@ -26,63 +28,73 @@
           <entry>Секунды</entry>
           <entry>Да</entry>
           <entry>0-59</entry>
-          <entry>, - * /</entry>								
+          <entry>, - * /</entry>
         </row>
         <row>
           <entry>Минуты</entry>
           <entry>Да</entry>
           <entry>0-59</entry>
-          <entry>, - * /</entry>								
+          <entry>, - * /</entry>
         </row>
         <row>
           <entry>Часы</entry>
           <entry>Да</entry>
           <entry>0-23</entry>
-          <entry>, - * /</entry>								
+          <entry>, - * /</entry>
         </row>
         <row>
           <entry>Дни месяца</entry>
           <entry>Да</entry>
           <entry>1-31</entry>
-          <entry>, - * ? / L W</entry>								
+          <entry>, - * ? / L W</entry>
         </row>
         <row>
           <entry>Месяцы</entry>
           <entry>Да</entry>
           <entry>1-12 или JAN-DEC</entry>
-          <entry>, - * /</entry>								
+          <entry>, - * /</entry>
         </row>
         <row>
           <entry>Дни недели</entry>
           <entry>Да</entry>
           <entry>1-7 или SUN-SAT</entry>
-          <entry>, - * ? / L #</entry>								
+          <entry>, - * ? / L #</entry>
         </row>
         <row>
           <entry>Годы</entry>
           <entry>Нет</entry>
           <entry>пусто или 1970-2099</entry>
-          <entry>, - * /</entry>								
+          <entry>, - * /</entry>
         </row>
       </tbody>
     </tgroup>
   </table>
 
 
-  <para><guibutton>*</guibutton>. Это означает полный диапазон возможных значений, например, каждая минута, каждый час и т. д.</para>
+  <para><guibutton>*</guibutton>. Это означает полный диапазон возможных значений, например, каждая
+    минута, каждый час и т. д.
+  </para>
 
-  <para><guibutton>?</guibutton>. Нет специфического значения.</para>
+  <para><guibutton>?</guibutton>. Нет специфического значения.
+  </para>
 
-  <para><guibutton>-</guibutton>. Задает диапазон значений.</para>
+  <para><guibutton>-</guibutton>. Задает диапазон значений.
+  </para>
 
-  <para><guibutton>/</guibutton>. Задает шаг изменения значения, например каждые два часа.</para>
+  <para><guibutton>/</guibutton>. Задает шаг изменения значения, например каждые два часа.
+  </para>
 
-  <para><guibutton>L</guibutton>. Последнее значение, например, последний день месяца.</para>
+  <para><guibutton>L</guibutton>. Последнее значение, например, последний день месяца.
+  </para>
 
-  <para><guibutton>W</guibutton>. Ближайший рабочий день недели, например, если указать 15W, а 15е число месяца суббота, то событие
-    произойдет 14го в пятницу.</para>
+  <para><guibutton>W</guibutton>. Ближайший рабочий день недели, например, если указать 15W, а 15е
+    число месяца суббота, то событие
+    произойдет 14го в пятницу.
+  </para>
 
-  <para><guibutton>#</guibutton>. Очередность дня, например, значение 6#3 указывает на то, что необходимо выполнять каждую 3ю пятницу месяца.</para>
+  <para><guibutton>#</guibutton>. Очередность дня, например, значение 6#3 указывает на то, что
+    необходимо выполнять каждую 3ю пятницу месяца.
+  </para>
 
   <para>Примеры:</para>
   <programlisting><![CDATA[

@@ -19,27 +19,27 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Статус заказа
- * 
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: OrderStatus.java,v 1.2 2007/07/27 12:00:23 safonov Exp $
  */
 @DataItemName("Warehouse.OrderHead.Status")
 public enum OrderStatus {
-	/**
-	 * Запланировано
-	 */
-	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#OrderStatus.Planned")
-	PLANNED,
+  /**
+   * Запланировано
+   */
+  @EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#OrderStatus.Planned")
+  PLANNED,
 
-	/**
-	 * Заказано
-	 */
-	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#OrderStatus.Ordered")
-	ORDERED,
+  /**
+   * Заказано
+   */
+  @EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#OrderStatus.Ordered")
+  ORDERED,
 
-	/**
-	 * Выполнено
-	 */
-	@EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#OrderStatus.Completed")
-	COMPLETED
+  /**
+   * Выполнено
+   */
+  @EnumConstantText("resource://com.mg.merp.warehouse.resources.dataitemlabels#OrderStatus.Completed")
+  COMPLETED
 }

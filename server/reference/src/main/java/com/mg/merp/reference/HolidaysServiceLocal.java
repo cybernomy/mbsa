@@ -14,39 +14,36 @@
  */
 package com.mg.merp.reference;
 
+import com.mg.merp.reference.model.Holidays;
+
 import java.io.Serializable;
 import java.util.Date;
 
-import com.mg.merp.reference.model.Holidays;
-
 /**
  * Бизнес-компонент "Праздничные дни"
- * 
+ *
  * @author leonova
  * @version $Id: HolidaysServiceLocal.java,v 1.2 2007/07/30 06:27:42 safonov Exp $
  */
 public interface HolidaysServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<Holidays,Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Holidays, Integer> {
 
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/reference/Holidays";
-	
-	/**
-	 * является ли дата праздничным днем
-	 * 
-	 * @param date	дата
-	 * @return	<code>true</code> если дата праздничный день
-	 */
-	boolean isDayHoliday(Date date);
-	
-	/**
-	 * копирование праздничных дней на следующий год
-	 * 
-	 * @param keys
-	 */
-	void copyHolidays(Serializable[] keys);
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/reference/Holidays";
+
+  /**
+   * является ли дата праздничным днем
+   *
+   * @param date дата
+   * @return <code>true</code> если дата праздничный день
+   */
+  boolean isDayHoliday(Date date);
+
+  /**
+   * копирование праздничных дней на следующий год
+   */
+  void copyHolidays(Serializable[] keys);
 
 }

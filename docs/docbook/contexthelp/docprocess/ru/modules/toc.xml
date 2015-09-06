@@ -14,16 +14,16 @@
 <!-- $Id: toc.xml,v 1.1 2007/04/28 07:08:02 konyashkina Exp $ -->
 
 <toc version="1.0">
-  
-   <tocitem text="Типы документов">
-	<tocitem text="Типы документов" target="doctype_html" />
-	<tocitem text="Параметры типа документа" target="doctypeparam_html" />
-	<tocitem text="Настройка документооборота" target="docprtune_html" />
-	<tocitem text="Добавление этапа" target="add_html" />
-	<tocitem text="Добавление связи" target="addlink_html" />
-	<tocitem text="Права доступа" target="permissions_html" />
-	<tocitem text="Параметры этапа" target="etapparam_html" />
-	<tocitem text="История документооборота" target="history_html" />
-  </tocitem> 
-  
+
+  <tocitem text="Типы документов">
+    <tocitem text="Типы документов" target="doctype_html"/>
+    <tocitem text="Параметры типа документа" target="doctypeparam_html"/>
+    <tocitem text="Настройка документооборота" target="docprtune_html"/>
+    <tocitem text="Добавление этапа" target="add_html"/>
+    <tocitem text="Добавление связи" target="addlink_html"/>
+    <tocitem text="Права доступа" target="permissions_html"/>
+    <tocitem text="Параметры этапа" target="etapparam_html"/>
+    <tocitem text="История документооборота" target="history_html"/>
+  </tocitem>
+
 </toc>

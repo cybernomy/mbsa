@@ -15,30 +15,30 @@
 
 package com.mg.merp.planning.support;
 
-import javax.annotation.security.PermitAll;
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.orm.OrmTemplate;
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.planning.MRPReportServiceLocal;
 import com.mg.merp.planning.model.MrpReport;
 import com.mg.merp.planning.model.MrpVersionControl;
 
+import javax.annotation.security.PermitAll;
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Итоги расчета ППМ" 
- * 
+ * Бизнес-компонент "Итоги расчета ППМ"
+ *
  * @author leonova
  * @version $Id: MRPReportServiceBean.java,v 1.4 2007/07/30 10:36:48 safonov Exp $
  */
-@Stateless(name="merp/planning/MRPReportService")
+@Stateless(name = "merp/planning/MRPReportService")
 @PermitAll
 public class MRPReportServiceBean extends AbstractPOJODataBusinessObjectServiceBean<MrpReport, Integer> implements MRPReportServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.planning.MRPReportServiceLocal#clear(com.mg.merp.planning.model.MrpVersionControl)
-	 */
-	public void clear(MrpVersionControl mrpVersion) {
-		OrmTemplate.getInstance().bulkUpdateByNamedQuery("Planing.MRPReport.clear", "mrpVersionControl", mrpVersion);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.planning.MRPReportServiceLocal#clear(com.mg.merp.planning.model.MrpVersionControl)
+   */
+  public void clear(MrpVersionControl mrpVersion) {
+    OrmTemplate.getInstance().bulkUpdateByNamedQuery("Planing.MRPReport.clear", "mrpVersionControl", mrpVersion);
+  }
 
 }

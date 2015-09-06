@@ -18,13 +18,13 @@ import com.mg.framework.api.ApplicationException;
 
 /**
  * Invalid user name or password exception
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: InvalidUserNameOrPassword.java,v 1.2 2006/06/26 12:02:09 safonov Exp $
  */
 @javax.ejb.ApplicationException
 public class InvalidUserNameOrPassword extends ApplicationException {
-	public InvalidUserNameOrPassword() {
-		super();
-	}
+  public InvalidUserNameOrPassword() {
+    super();
+  }
 }

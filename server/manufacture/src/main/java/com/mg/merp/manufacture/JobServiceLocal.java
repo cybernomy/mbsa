@@ -14,82 +14,81 @@
  */
 package com.mg.merp.manufacture;
 
-import java.util.Date;
-import java.util.EnumSet;
-
 import com.mg.merp.manufacture.model.Job;
 import com.mg.merp.manufacture.model.JobStatus;
 
+import java.util.Date;
+import java.util.EnumSet;
+
 /**
  * Бизнес-компонент "ЗНП"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: JobServiceLocal.java,v 1.5 2007/08/06 12:46:24 safonov Exp $
  */
 public interface JobServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<Job, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Job, Integer> {
 
-	/**
-	 * имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/manufacture/Job";
-	
-	/**
-	 * тип папки для заказ-нарядов на производство
-	 */
-	final static short FOLDER_PART = 12501;
+  /**
+   * имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/manufacture/Job";
 
-	/**
-	 * копирование БОМа в ЗНП
-	 * 
-	 * @param jobId	идентификатор ЗНП
-	 */
-	void copyBOM(int jobId);
+  /**
+   * тип папки для заказ-нарядов на производство
+   */
+  final static short FOLDER_PART = 12501;
 
-	/**
-	 * копирование БОМа в ЗНП
-	 * 
-	 * @param job	ЗНП
-	 */
-	void copyBOM(Job job);
+  /**
+   * копирование БОМа в ЗНП
+   *
+   * @param jobId идентификатор ЗНП
+   */
+  void copyBOM(int jobId);
 
-	/**
-	 * запустить ЗНП
-	 * 
-	 * @param jobId	идентификатор ЗНП
-	 */
-	void run(int jobId);
+  /**
+   * копирование БОМа в ЗНП
+   *
+   * @param job ЗНП
+   */
+  void copyBOM(Job job);
 
-	/**
-	 * остановить ЗНП
-	 * 
-	 * @param jobId	идентификатор ЗНП
-	 */
-	void stop(int jobId);
+  /**
+   * запустить ЗНП
+   *
+   * @param jobId идентификатор ЗНП
+   */
+  void run(int jobId);
 
-	/**
-	 * завершить ЗНП
-	 * 
-	 * @param jobId	идентификатор ЗНП
-	 */
-	void complete(int jobId);
+  /**
+   * остановить ЗНП
+   *
+   * @param jobId идентификатор ЗНП
+   */
+  void stop(int jobId);
 
-	/**
-	 * изменение даты расчета нормативной себестоимости
-	 * 
-	 * @param job	ЗНП
-	 * @param date	дата расчета
-	 */
-	void updateRollupDateTime(Job job, Date date);
+  /**
+   * завершить ЗНП
+   *
+   * @param jobId идентификатор ЗНП
+   */
+  void complete(int jobId);
 
-	/**
-	 * проверка статуса ЗНП
-	 * 
-	 * @param job		ЗНП
-	 * @param jobStatus	множество проверяемых статусов
-	 * @throws InvalidJobStatusException если статус ЗНП не соответствует проверяемым статусам
-	 */
-	void checkStatus(Job job, EnumSet<JobStatus> jobStatus) throws InvalidJobStatusException;
-	
+  /**
+   * изменение даты расчета нормативной себестоимости
+   *
+   * @param job  ЗНП
+   * @param date дата расчета
+   */
+  void updateRollupDateTime(Job job, Date date);
+
+  /**
+   * проверка статуса ЗНП
+   *
+   * @param job       ЗНП
+   * @param jobStatus множество проверяемых статусов
+   * @throws InvalidJobStatusException если статус ЗНП не соответствует проверяемым статусам
+   */
+  void checkStatus(Job job, EnumSet<JobStatus> jobStatus) throws InvalidJobStatusException;
+
 }

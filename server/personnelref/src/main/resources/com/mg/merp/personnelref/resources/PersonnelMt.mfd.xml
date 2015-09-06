@@ -13,97 +13,135 @@
 
 <!-- $Id: PersonnelMt.mfd.xml,v 1.7 2006/12/29 09:28:35 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.personnelref.support.ui.PersonnelMt" title="resource://com.mg.merp.personnelref.resources.formelements#Personnel.FormMt.Title" helpTopic="personnelref#person_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.personnelref.support.ui.PersonnelMt"
+          title="resource://com.mg.merp.personnelref.resources.formelements#Personnel.FormMt.Title"
+          helpTopic="personnelref#person_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
 
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#PersCommonFields" >
-			<jfd:field id="Person" />  
-			<jfd:field id="Person.BornDate" />  
-			<jfd:field id="TableNumber" />  
-			<jfd:field id="Stature" />  
-			<jfd:field id="MeasureUpCode" /> 			
-			<jfd:field id="PensionNumber" /> 
-			<jfd:field id="InsuredClass" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />			
-		</jfd:container>
-		<jfd:maintenanceTable id="personnelService" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Service">
-	
-		</jfd:maintenanceTable>
-		<jfd:maintenanceTable id="personnelAddress" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Address">
-		</jfd:maintenanceTable>
-		<jfd:container id="educationFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#EducationFields" >
-			<jfd:field id="EducationDegree" />   
-			<jfd:container id="language" layout="jfd:box" longField="true"  label="resource://com.mg.merp.personnelref.resources.formelements#LanguageKnowledge">
-				<jfd:maintenanceTable id="personnelLanguage" scroll="true" autoResize="subsequent_columns" alignment="expand_expand">
-				</jfd:maintenanceTable>
-			</jfd:container>
-			<jfd:container id="education" layout="jfd:box" longField="true" label="resource://com.mg.merp.personnelref.resources.formelements#Pers.Education">
-				<jfd:maintenanceTable id="personnelEducation" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" >
-				</jfd:maintenanceTable>
-			</jfd:container> 
-		 	<jfd:container id="profession" layout="jfd:box" longField="true" label="resource://com.mg.merp.personnelref.resources.formelements#Pers.Profession">
-				<jfd:maintenanceTable id="personnelProfession" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" >
-				</jfd:maintenanceTable>
-			</jfd:container>  
-		</jfd:container>		
-		<jfd:container id="labrContrFields" layout="jfd:defaultMtGridBag"  alignment="expand_top" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#LabrContrFields" >
-		  	<jfd:field id="LabourContractNumber" />  
-			<jfd:field id="LabourContractDate" sameLine="true"/>  	 		 
-			<jfd:container id="docLabrContract" layout="jfd:box" longField="true" label="resource://com.mg.merp.personnelref.resources.formelements#docLabrContract">
-				<jfd:maintenanceTable id="persLabourContract" scroll="true" autoResize="subsequent_columns" alignment="expand_expand">
-				</jfd:maintenanceTable>
-			</jfd:container>	
-			<jfd:field id="RetireReason" />
- 			<jfd:field id="RetireDate" sameLine="true"/>	 
-		</jfd:container>
-		<jfd:maintenanceTable id="personnelTransfer" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#PersTransferFields">
-		</jfd:maintenanceTable>	
-	 	<jfd:container id="persMilFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#persMilFields" >
-			<jfd:field id="MilReserveCategory" />
-			<jfd:field id="MilRank" />
-			<jfd:field id="MilRankKind" sameLine="true"/>				
-			<jfd:field id="MilSpeciality" /> 
-			<jfd:field id="MilValidity" sameLine="true"/>	
-			<jfd:field id="MilCommissariat"/> 
-			<jfd:field id="MilRegPartyNumber" /> 
-			<jfd:field id="MilRegSpecial"/> 
-			<jfd:field id="MilIsTakenOff" editorType="comboBox"/>		
-		</jfd:container>		
-	 	<jfd:container id="qualificationFields" layout="jfd:defaultMtGridBag" alignment="expand_expand" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Qualification" >
-		 	<jfd:container id="attestationFields" layout="jfd:box" longField="true" label="resource://com.mg.merp.personnelref.resources.formelements#Attestation">
-				<jfd:maintenanceTable id="personnelAttestation" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" >
-				</jfd:maintenanceTable>
-			</jfd:container> 
-		 	<jfd:container id="skillRaisingFields" layout="jfd:box" longField="true" label="resource://com.mg.merp.personnelref.resources.formelements#SkillRaising">
-				<jfd:maintenanceTable id="personnelSkillRaising" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" >
-				</jfd:maintenanceTable>
-			</jfd:container> 	
-		 	<jfd:container id="vocationalFields" layout="jfd:box" longField="true" label="resource://com.mg.merp.personnelref.resources.formelements#Vocational">
-				<jfd:maintenanceTable id="personnelVocational" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" >
-				</jfd:maintenanceTable>
-			</jfd:container> 					
-		</jfd:container>		
-		<jfd:maintenanceTable id="personnelReward" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Reward">
-		</jfd:maintenanceTable>
-		<jfd:maintenanceTable id="personnelLeave" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Leave">
-		</jfd:maintenanceTable>
-		<jfd:container id="socialBenefitFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#SocialBenefit" >
-		 	<jfd:container id="familyDeductionsFields" layout="jfd:box" longField="true" label="resource://com.mg.merp.personnelref.resources.formelements#FamilyDeductions">
-				<jfd:maintenanceTable id="familyDeductions" scroll="true" alignment="expand_top" autoResize="subsequent_columns" >
-				</jfd:maintenanceTable>
-			</jfd:container> 
-		 	<jfd:container id="persSocialBenefitFields" layout="jfd:box" longField="true" label="resource://com.mg.merp.personnelref.resources.formelements#PersSocialBenefit">
-				<jfd:maintenanceTable id="persSocialBenefit" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" >
-				</jfd:maintenanceTable>
-			</jfd:container> 				
-		</jfd:container>	
-		<jfd:maintenanceTable id="personnelRecord" scroll="true" alignment="expand_expand" autoResize="subsequent_columns" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Record" >
-		</jfd:maintenanceTable>
-	</jfd:container>
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.personnelref.resources.formelements#PersCommonFields">
+      <jfd:field id="Person"/>
+      <jfd:field id="Person.BornDate"/>
+      <jfd:field id="TableNumber"/>
+      <jfd:field id="Stature"/>
+      <jfd:field id="MeasureUpCode"/>
+      <jfd:field id="PensionNumber"/>
+      <jfd:field id="InsuredClass"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:maintenanceTable id="personnelService" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Service">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    </jfd:maintenanceTable>
+    <jfd:maintenanceTable id="personnelAddress" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Address">
+    </jfd:maintenanceTable>
+    <jfd:container id="educationFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.personnelref.resources.formelements#EducationFields">
+      <jfd:field id="EducationDegree"/>
+      <jfd:container id="language" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.personnelref.resources.formelements#LanguageKnowledge">
+        <jfd:maintenanceTable id="personnelLanguage" scroll="true" autoResize="subsequent_columns"
+                              alignment="expand_expand">
+        </jfd:maintenanceTable>
+      </jfd:container>
+      <jfd:container id="education" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.personnelref.resources.formelements#Pers.Education">
+        <jfd:maintenanceTable id="personnelEducation" scroll="true" alignment="expand_expand"
+                              autoResize="subsequent_columns">
+        </jfd:maintenanceTable>
+      </jfd:container>
+      <jfd:container id="profession" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.personnelref.resources.formelements#Pers.Profession">
+        <jfd:maintenanceTable id="personnelProfession" scroll="true" alignment="expand_expand"
+                              autoResize="subsequent_columns">
+        </jfd:maintenanceTable>
+      </jfd:container>
+    </jfd:container>
+    <jfd:container id="labrContrFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.personnelref.resources.formelements#LabrContrFields">
+      <jfd:field id="LabourContractNumber"/>
+      <jfd:field id="LabourContractDate" sameLine="true"/>
+      <jfd:container id="docLabrContract" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.personnelref.resources.formelements#docLabrContract">
+        <jfd:maintenanceTable id="persLabourContract" scroll="true" autoResize="subsequent_columns"
+                              alignment="expand_expand">
+        </jfd:maintenanceTable>
+      </jfd:container>
+      <jfd:field id="RetireReason"/>
+      <jfd:field id="RetireDate" sameLine="true"/>
+    </jfd:container>
+    <jfd:maintenanceTable id="personnelTransfer" scroll="true" alignment="expand_expand"
+                          autoResize="subsequent_columns"
+                          tabTitle="resource://com.mg.merp.personnelref.resources.formelements#PersTransferFields">
+    </jfd:maintenanceTable>
+    <jfd:container id="persMilFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.personnelref.resources.formelements#persMilFields">
+      <jfd:field id="MilReserveCategory"/>
+      <jfd:field id="MilRank"/>
+      <jfd:field id="MilRankKind" sameLine="true"/>
+      <jfd:field id="MilSpeciality"/>
+      <jfd:field id="MilValidity" sameLine="true"/>
+      <jfd:field id="MilCommissariat"/>
+      <jfd:field id="MilRegPartyNumber"/>
+      <jfd:field id="MilRegSpecial"/>
+      <jfd:field id="MilIsTakenOff" editorType="comboBox"/>
+    </jfd:container>
+    <jfd:container id="qualificationFields" layout="jfd:defaultMtGridBag" alignment="expand_expand"
+                   tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Qualification">
+      <jfd:container id="attestationFields" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.personnelref.resources.formelements#Attestation">
+        <jfd:maintenanceTable id="personnelAttestation" scroll="true" alignment="expand_expand"
+                              autoResize="subsequent_columns">
+        </jfd:maintenanceTable>
+      </jfd:container>
+      <jfd:container id="skillRaisingFields" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.personnelref.resources.formelements#SkillRaising">
+        <jfd:maintenanceTable id="personnelSkillRaising" scroll="true" alignment="expand_expand"
+                              autoResize="subsequent_columns">
+        </jfd:maintenanceTable>
+      </jfd:container>
+      <jfd:container id="vocationalFields" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.personnelref.resources.formelements#Vocational">
+        <jfd:maintenanceTable id="personnelVocational" scroll="true" alignment="expand_expand"
+                              autoResize="subsequent_columns">
+        </jfd:maintenanceTable>
+      </jfd:container>
+    </jfd:container>
+    <jfd:maintenanceTable id="personnelReward" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Reward">
+    </jfd:maintenanceTable>
+    <jfd:maintenanceTable id="personnelLeave" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Leave">
+    </jfd:maintenanceTable>
+    <jfd:container id="socialBenefitFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.personnelref.resources.formelements#SocialBenefit">
+      <jfd:container id="familyDeductionsFields" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.personnelref.resources.formelements#FamilyDeductions">
+        <jfd:maintenanceTable id="familyDeductions" scroll="true" alignment="expand_top"
+                              autoResize="subsequent_columns">
+        </jfd:maintenanceTable>
+      </jfd:container>
+      <jfd:container id="persSocialBenefitFields" layout="jfd:box" longField="true"
+                     label="resource://com.mg.merp.personnelref.resources.formelements#PersSocialBenefit">
+        <jfd:maintenanceTable id="persSocialBenefit" scroll="true" alignment="expand_expand"
+                              autoResize="subsequent_columns">
+        </jfd:maintenanceTable>
+      </jfd:container>
+    </jfd:container>
+    <jfd:maintenanceTable id="personnelRecord" scroll="true" alignment="expand_expand"
+                          autoResize="subsequent_columns"
+                          tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Record">
+    </jfd:maintenanceTable>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

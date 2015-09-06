@@ -18,47 +18,49 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * @author hbm2java
- * @version $Id: VarianceDocumentModel.java,v 1.3 2005/07/13 13:52:46 safonov
- *          Exp $
+ * @version $Id: VarianceDocumentModel.java,v 1.3 2005/07/13 13:52:46 safonov Exp $
  */
 public class VarianceDocumentModel extends
-		com.mg.merp.document.model.DocHeadModel implements java.io.Serializable {
+    com.mg.merp.document.model.DocHeadModel implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private com.mg.merp.mfreference.model.WorkCenter workCenter;
+  private com.mg.merp.mfreference.model.WorkCenter workCenter;
 
-	private com.mg.merp.manufacture.model.Job job;
+  private com.mg.merp.manufacture.model.Job job;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public VarianceDocumentModel() {
-	}
+  /**
+   * default constructor
+   */
+  public VarianceDocumentModel() {
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.VarDocModel.WC")
-	public com.mg.merp.mfreference.model.WorkCenter getWC() {
-		return this.workCenter;
-	}
+  // Property accessors
 
-	public void setWC(com.mg.merp.mfreference.model.WorkCenter MfWorkCenter) {
-		this.workCenter = MfWorkCenter;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.VarDocModel.WC")
+  public com.mg.merp.mfreference.model.WorkCenter getWC() {
+    return this.workCenter;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.VarDocModel.Job")
-	public com.mg.merp.manufacture.model.Job getJob() {
-		return this.job;
-	}
+  public void setWC(com.mg.merp.mfreference.model.WorkCenter MfWorkCenter) {
+    this.workCenter = MfWorkCenter;
+  }
 
-	public void setJob(com.mg.merp.manufacture.model.Job MfJob) {
-		this.job = MfJob;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.VarDocModel.Job")
+  public com.mg.merp.manufacture.model.Job getJob() {
+    return this.job;
+  }
+
+  public void setJob(com.mg.merp.manufacture.model.Job MfJob) {
+    this.job = MfJob;
+  }
 
 }

@@ -15,46 +15,47 @@
 
 package com.mg.merp.discount.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.framework.utils.ServerUtils;
 import com.mg.merp.discount.ExtraDiscountServiceLocal;
 import com.mg.merp.discount.model.ExtraDiscount;
 import com.mg.merp.security.model.SecUser;
 
+import javax.ejb.Stateless;
+
 /**
- * Реализация бизнес-компонента "Дополнительные скидки дисконтной карты" 
- * 
+ * Реализация бизнес-компонента "Дополнительные скидки дисконтной карты"
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: ExtraDiscountServiceBean.java,v 1.4 2007/10/30 14:13:48 sharapov Exp $
  */
-@Stateless(name="merp/discount/ExtraDiscountService")
+@Stateless(name = "merp/discount/ExtraDiscountService")
 public class ExtraDiscountServiceBean extends AbstractPOJODataBusinessObjectServiceBean<ExtraDiscount, Integer> implements ExtraDiscountServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onInitialize(com.mg.framework.api.orm.PersistentObject)
-	 */
-	@Override
-	protected void onInitialize(ExtraDiscount entity) {
-		adjustUser(entity);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onInitialize(com.mg.framework.api.orm.PersistentObject)
+   */
+  @Override
+  protected void onInitialize(ExtraDiscount entity) {
+    adjustUser(entity);
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onStore(com.mg.framework.api.orm.PersistentObject)
-	 */
-	@Override
-	protected void onStore(ExtraDiscount entity) {
-		adjustUser(entity);
-	}
-	
-	/**
-	 * Установить текущего пользователя системы
-	 * @param extraDiscount - доп. скидка 
-	 */
-	protected void adjustUser(ExtraDiscount extraDiscount) {
-		extraDiscount.setUser(ServerUtils.getPersistentManager().find(SecUser.class, ServerUtils.getUserProfile().getIdentificator()));		
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onStore(com.mg.framework.api.orm.PersistentObject)
+   */
+  @Override
+  protected void onStore(ExtraDiscount entity) {
+    adjustUser(entity);
+  }
+
+  /**
+   * Установить текущего пользователя системы
+   *
+   * @param extraDiscount - доп. скидка
+   */
+  protected void adjustUser(ExtraDiscount extraDiscount) {
+    extraDiscount.setUser(ServerUtils.getPersistentManager().find(SecUser.class, ServerUtils.getUserProfile().getIdentificator()));
+  }
 
 }

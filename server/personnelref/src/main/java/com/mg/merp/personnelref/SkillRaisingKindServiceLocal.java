@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.SkillRaisingKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: SkillRaisingKindServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface SkillRaisingKindServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<SkillRaisingKind, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<SkillRaisingKind, Integer> {
 
 }

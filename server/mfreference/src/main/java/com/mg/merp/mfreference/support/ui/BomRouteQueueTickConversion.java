@@ -14,36 +14,35 @@
  */
 package com.mg.merp.mfreference.support.ui;
 
-import com.mg.merp.mfreference.support.ui.TimeTickConversion;
 import com.mg.merp.reference.model.Measure;
 
 /**
  * Конвертация атрибута QueueTime объекта JobRoute
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: BomRouteQueueTickConversion.java,v 1.1 2006/07/07 10:20:33 leonova Exp $
  */
 public class BomRouteQueueTickConversion extends TimeTickConversion {
 
-	/**
-	 * Move time UM
-	 */
-	private static final String QUEUE_TIME_UM = "QueueTimeUM"; //$NON-NLS-1$
+  /**
+   * Move time UM
+   */
+  private static final String QUEUE_TIME_UM = "QueueTimeUM"; //$NON-NLS-1$
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractConversionRoutine#defineImportContext()
-	 */
-	@Override
-	protected String[] defineImportContext() {
-		return new String[] {QUEUE_TIME_UM};
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractConversionRoutine#defineImportContext()
+   */
+  @Override
+  protected String[] defineImportContext() {
+    return new String[]{QUEUE_TIME_UM};
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.mfreference.support.ui.TimeTickConversion#getTimeUM()
-	 */
-	@Override
-	protected Measure getTimeUM() {
-		return (Measure) getImportContextValue(QUEUE_TIME_UM);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.mfreference.support.ui.TimeTickConversion#getTimeUM()
+   */
+  @Override
+  protected Measure getTimeUM() {
+    return (Measure) getImportContextValue(QUEUE_TIME_UM);
+  }
 
 }

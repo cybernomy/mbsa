@@ -22,91 +22,96 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Account.AmCode")
 public class AmCode extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String CName;
+  private java.lang.String CName;
 
-	private java.util.Set setOfAccAmRate;
+  private java.util.Set setOfAccAmRate;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public AmCode() {
-	}
+  /**
+   * default constructor
+   */
+  public AmCode() {
+  }
 
-	/** constructor with id */
-	public AmCode(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public AmCode(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	@DataItemName("Account.AmCode.Code")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  /**
+   *
+   */
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  @DataItemName("Account.AmCode.Code")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Account.AmCode.CName")
-	public java.lang.String getCName() {
-		return this.CName;
-	}
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	public void setCName(java.lang.String CName) {
-		this.CName = CName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Account.AmCode.CName")
+  public java.lang.String getCName() {
+    return this.CName;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCName(java.lang.String CName) {
+    this.CName = CName;
+  }
 
-	public java.util.Set getSetOfAccAmRate() {
-		return this.setOfAccAmRate;
-	}
+  /**
+   *
+   */
 
-	public void setSetOfAccAmRate(java.util.Set SetOfAccAmrate) {
-		this.setOfAccAmRate = SetOfAccAmrate;
-	}
+  public java.util.Set getSetOfAccAmRate() {
+    return this.setOfAccAmRate;
+  }
+
+  public void setSetOfAccAmRate(java.util.Set SetOfAccAmrate) {
+    this.setOfAccAmRate = SetOfAccAmrate;
+  }
 
 }

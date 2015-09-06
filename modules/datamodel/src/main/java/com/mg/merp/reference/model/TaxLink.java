@@ -21,90 +21,95 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: TaxLink.java,v 1.2 2006/09/25 13:49:27 safonov Exp $
  */
 public class TaxLink extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.reference.model.TaxGroup TaxGroup;
+  private com.mg.merp.reference.model.TaxGroup TaxGroup;
 
-	private com.mg.merp.reference.model.Tax Tax;
+  private com.mg.merp.reference.model.Tax Tax;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private short FeeOrder;
+  private short FeeOrder;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public TaxLink() {
-	}
+  /**
+   * default constructor
+   */
+  public TaxLink() {
+  }
 
-	/** constructor with id */
-	public TaxLink(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public TaxLink(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.reference.model.TaxGroup getTaxGroup() {
-		return this.TaxGroup;
-	}
+  /**
+   *
+   */
 
-	public void setTaxGroup(com.mg.merp.reference.model.TaxGroup TaxGroup) {
-		this.TaxGroup = TaxGroup;
-	}
+  public com.mg.merp.reference.model.TaxGroup getTaxGroup() {
+    return this.TaxGroup;
+  }
 
-	/**
-	 * 
-	 */
+  public void setTaxGroup(com.mg.merp.reference.model.TaxGroup TaxGroup) {
+    this.TaxGroup = TaxGroup;
+  }
 
-	public com.mg.merp.reference.model.Tax getTax() {
-		return this.Tax;
-	}
+  /**
+   *
+   */
 
-	public void setTax(com.mg.merp.reference.model.Tax Tax) {
-		this.Tax = Tax;
-	}
+  public com.mg.merp.reference.model.Tax getTax() {
+    return this.Tax;
+  }
 
-	/**
-	 * 
-	 */
+  public void setTax(com.mg.merp.reference.model.Tax Tax) {
+    this.Tax = Tax;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.TaxLink.FeeOrder")
-	public short getFeeOrder() {
-		return this.FeeOrder;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setFeeOrder(short FeeOrder) {
-		this.FeeOrder = FeeOrder;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.TaxLink.FeeOrder")
+  public short getFeeOrder() {
+    return this.FeeOrder;
+  }
+
+  public void setFeeOrder(short FeeOrder) {
+    this.FeeOrder = FeeOrder;
+  }
 
 }

@@ -17,12 +17,10 @@ package com.mg.merp.exchange;
 import com.mg.merp.exchange.model.Site;
 
 /**
- * 
  * @author leonova
  * @version $Id: SiteServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface SiteServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Site, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Site, Integer> {
 
 }

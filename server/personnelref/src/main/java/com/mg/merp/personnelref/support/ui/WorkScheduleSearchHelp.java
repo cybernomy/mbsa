@@ -22,9 +22,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class WorkScheduleSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/personnelref/WorkSchedule";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/WorkSchedule";
+  }
 
 }

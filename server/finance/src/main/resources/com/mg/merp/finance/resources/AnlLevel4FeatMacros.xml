@@ -13,8 +13,13 @@
 
 <!-- $Id: AnlLevel4FeatMacros.xml,v 1.2 2007/09/03 04:51:00 alikaev Exp $ -->
 
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="AnlLevel4FeatBox" layout="jfd:box" orientation="hor" sameLine="true" alignment="expand_expand">
-	<jfd:textField id="anlLevel4FeatName" readOnly="true" showLabel="false" alignment="expand_expand"/>
-	<jfd:button id="сlearAnlLevel4FeatButton" icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ClearAnlLevel4Feat" alignment="right_expand" />
-	<jfd:button id="сhooseanlLevel4FeatButton" text="..." minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseAnlLevel4Feat" alignment="right_expand" />
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="AnlLevel4FeatBox" layout="jfd:box"
+               orientation="hor" sameLine="true" alignment="expand_expand">
+  <jfd:textField id="anlLevel4FeatName" readOnly="true" showLabel="false"
+                 alignment="expand_expand"/>
+  <jfd:button id="сlearAnlLevel4FeatButton" icon="com/mg/framework/resources/erasebuttonicon.png"
+              minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+              actionListener="ClearAnlLevel4Feat" alignment="right_expand"/>
+  <jfd:button id="сhooseanlLevel4FeatButton" text="..." minimumSize="22,0" maximumSize="22,0"
+              preferredSize="22,0" actionListener="ChooseAnlLevel4Feat" alignment="right_expand"/>
 </jfd:container>

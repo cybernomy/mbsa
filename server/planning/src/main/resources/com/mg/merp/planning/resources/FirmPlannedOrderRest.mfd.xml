@@ -13,33 +13,40 @@
 
 <!-- $Id: FirmPlannedOrderRest.mfd.xml,v 1.3 2007/08/06 14:28:55 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.planning.support.ui.FirmPlannedOrderRest" orientation="ver" verticalGap="5" title="resource://com.mg.merp.planning.resources.formelements#Cond.FirmPlannedOrder" helpTopic="planning#firmorder_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.planning.support.ui.FirmPlannedOrderRest" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.planning.resources.formelements#Cond.FirmPlannedOrder"
+          helpTopic="planning#firmorder_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyRestrictionHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-		<jfd:field id="warehouseCode" />
-		<jfd:field id="catalogCode" />
-		<jfd:field id="mrpVersionControlCode" />
-		<jfd:field id="sourceWarehouseCode" /> 
-		<jfd:field id="vendorCode" />		
-	 	<jfd:comboBox id="purchaseOrTransfer" selectedIndex="0" label="resource://com.mg.merp.planning.resources.formelements#Cond.FirmPlannedOrder.PurchaseOrTransfer" >
-			<jfd:items>
-				<jfd:item value="" />
-				<jfd:item value="resource://com.mg.merp.planning.resources.dataitemlabels#FirmOrder.Purchase" />
-				<jfd:item value="resource://com.mg.merp.planning.resources.dataitemlabels#FirmOrder.Transfer" />
-			</jfd:items>
-		</jfd:comboBox> 	 			
-		<jfd:field id="requiredDateFrom" />
-		<jfd:field id="requiredDateTill" sameLine="true" />
- 		<jfd:field id="orderDateFrom" />
-		<jfd:field id="orderDateTill" sameLine="true" />
-		
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />			
-	</jfd:container>
+    <jfd:field id="warehouseCode"/>
+    <jfd:field id="catalogCode"/>
+    <jfd:field id="mrpVersionControlCode"/>
+    <jfd:field id="sourceWarehouseCode"/>
+    <jfd:field id="vendorCode"/>
+    <jfd:comboBox id="purchaseOrTransfer" selectedIndex="0"
+                  label="resource://com.mg.merp.planning.resources.formelements#Cond.FirmPlannedOrder.PurchaseOrTransfer">
+      <jfd:items>
+        <jfd:item value=""/>
+        <jfd:item
+            value="resource://com.mg.merp.planning.resources.dataitemlabels#FirmOrder.Purchase"/>
+        <jfd:item
+            value="resource://com.mg.merp.planning.resources.dataitemlabels#FirmOrder.Transfer"/>
+      </jfd:items>
+    </jfd:comboBox>
+    <jfd:field id="requiredDateFrom"/>
+    <jfd:field id="requiredDateTill" sameLine="true"/>
+    <jfd:field id="orderDateFrom"/>
+    <jfd:field id="orderDateTill" sameLine="true"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultRestrictionFooterMacros.xml" />
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultRestrictionFooterMacros.xml"/>
 
 </jfd:form>

@@ -13,8 +13,10 @@
 
 <!-- $Id: OutputProductAttributeMacros.xml,v 1.1 2006/06/06 07:55:11 leonova Exp $ -->
 
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="outputProduct" layout="jfd:box" longField="true" label="resource://com.mg.merp.manufacture.resources.formelements#Document.OutputProduct" >
-	<jfd:field id="OutputDocHead.DocType" showLabel="false" alignment="left_expand"/>
-	<jfd:field id="OutputDocHead.DocNumber" showLabel="false" alignment="expand_expand"/>			
-	<jfd:field id="OutputDocHead.DocDate" showLabel="false" alignment="right_expand"/>				
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="outputProduct" layout="jfd:box"
+               longField="true"
+               label="resource://com.mg.merp.manufacture.resources.formelements#Document.OutputProduct">
+  <jfd:field id="OutputDocHead.DocType" showLabel="false" alignment="left_expand"/>
+  <jfd:field id="OutputDocHead.DocNumber" showLabel="false" alignment="expand_expand"/>
+  <jfd:field id="OutputDocHead.DocDate" showLabel="false" alignment="right_expand"/>
 </jfd:container>

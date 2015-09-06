@@ -15,28 +15,28 @@
 
 package com.mg.merp.factura.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.document.generic.GoodsDocumentSpecificationServiceBean;
 import com.mg.merp.document.model.DocSpec;
 import com.mg.merp.factura.FacturaHeadOutServiceLocal;
 import com.mg.merp.factura.FacturaSpecOutServiceLocal;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Спецификация исходящих счет - фактур" 
- * 
+ * Бизнес-компонент "Спецификация исходящих счет - фактур"
+ *
  * @author leonova
  * @version $Id: FacturaSpecOutServiceBean.java,v 1.5 2007/02/06 17:01:02 safonov Exp $
  */
-@Stateless(name="merp/factura/FacturaSpecOutService")
+@Stateless(name = "merp/factura/FacturaSpecOutService")
 public class FacturaSpecOutServiceBean extends GoodsDocumentSpecificationServiceBean<DocSpec, Integer> implements FacturaSpecOutServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.GoodsDocumentSpecificationServiceBean#getDocSectionIdentifier()
-	 */
-	@Override
-	protected int getDocSectionIdentifier() {
-		return FacturaHeadOutServiceLocal.DOCSECTION;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.GoodsDocumentSpecificationServiceBean#getDocSectionIdentifier()
+   */
+  @Override
+  protected int getDocSectionIdentifier() {
+    return FacturaHeadOutServiceLocal.DOCSECTION;
+  }
 
 }

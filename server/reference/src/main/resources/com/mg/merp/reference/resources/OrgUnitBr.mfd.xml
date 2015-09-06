@@ -13,13 +13,16 @@
 
 <!-- $Id: OrgUnitBr.mfd.xml,v 1.5 2006/11/28 15:16:47 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.reference.support.ui.OrgUnitBr" title="resource://com.mg.merp.reference.resources.formelements#OrgUnit.FormBr.Title" helpTopic="reference#units_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver"
+          controller="com.mg.merp.reference.support.ui.OrgUnitBr"
+          title="resource://com.mg.merp.reference.resources.formelements#OrgUnit.FormBr.Title"
+          helpTopic="reference#units_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultTreeBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultTreeBrowseHeaderMacros.xml"/>
 
-	<jfd:maintenanceTree id="tree" alignment="expand_expand" scroll="true" >
-	</jfd:maintenanceTree>
+  <jfd:maintenanceTree id="tree" alignment="expand_expand" scroll="true">
+  </jfd:maintenanceTree>
 
-	<jfd:include name="com/mg/framework/resources/DefaultTreeBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultTreeBrowseFooterMacros.xml"/>
 
 </jfd:form>

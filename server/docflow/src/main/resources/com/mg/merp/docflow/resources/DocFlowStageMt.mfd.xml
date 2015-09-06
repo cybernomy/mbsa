@@ -13,59 +13,79 @@
 
 <!-- $Id: DocFlowStageMt.mfd.xml,v 1.6 2007/12/14 08:50:00 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.docflow.support.ui.DocFlowStageMt" title="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.Title" helpTopic="docprocess#etapparam_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.docflow.support.ui.DocFlowStageMt"
+          title="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.Title"
+          helpTopic="docprocess#etapparam_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.CommonFields.TabTitle" >
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.CommonFields.TabTitle">
 
-			<jfd:field id="Stage.Name"/>
-			<jfd:field id="Code"/>
-			<jfd:field id="Priority" sameLine="true"/>
-			<jfd:field id="Name" longField="true"/>
+      <jfd:field id="Stage.Name"/>
+      <jfd:field id="Code"/>
+      <jfd:field id="Priority" sameLine="true"/>
+      <jfd:field id="Name" longField="true"/>
 
-			<jfd:field id="JoinFlow"/>
-			<jfd:field id="ForkFlow" sameLine="true"/>
-			<jfd:field id="PrevComplete"/>
-			<jfd:field id="Dependent" sameLine="true"/>
-			<jfd:field id="Partial"/>
-			<jfd:field id="ValueOutOfBound" sameLine="true"/>
-			<jfd:field id="UseCurrentDate"/>
+      <jfd:field id="JoinFlow"/>
+      <jfd:field id="ForkFlow" sameLine="true"/>
+      <jfd:field id="PrevComplete"/>
+      <jfd:field id="Dependent" sameLine="true"/>
+      <jfd:field id="Partial"/>
+      <jfd:field id="ValueOutOfBound" sameLine="true"/>
+      <jfd:field id="UseCurrentDate"/>
 
-			<jfd:field id="Comment"/>
+      <jfd:field id="Comment"/>
 
-			<jfd:field id="PrePerformBusinessAddin"/>
-			<jfd:field id="PreRollbackBusinessAddin" sameLine="true"/>
+      <jfd:field id="PrePerformBusinessAddin"/>
+      <jfd:field id="PreRollbackBusinessAddin" sameLine="true"/>
 
-			<jfd:field id="PerformBusinessAddin"/>
-			<jfd:field id="RollbackBusinessAddin" sameLine="true"/>
+      <jfd:field id="PerformBusinessAddin"/>
+      <jfd:field id="RollbackBusinessAddin" sameLine="true"/>
 
-			<jfd:field id="LinkDocSection" fieldGroup="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.LinkDocumentGroup" />
-			<jfd:field id="LinkDocType" sameLine="true"/>
-			<jfd:field id="LinkDocModelFolder"/>
-			<jfd:container id="LinkDocModelBox" layout="jfd:box" label="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.LinkDocModel" orientation="hor" sameLine="true">
-				<jfd:textField id="linkDocModelName" readOnly="true" showLabel="false" alignment="expand_expand"/>
-				<jfd:button id="сlearDocModelButton" icon="com/mg/framework/resources/erasebuttonicon.png" minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ClearDocumentModel" alignment="right_expand" />
-				<jfd:button id="сhooseDocModelButton" text="..." minimumSize="22,0" maximumSize="22,0" preferredSize="22,0" actionListener="ChooseDocumentModel" alignment="right_expand" />
-			</jfd:container>
-			<jfd:field id="LinkDocDestFolder"/>
-			<jfd:field id="ShowNewDocument" sameLine="true"/>
-			<jfd:field id="LinkDocRollback"/>
-			<jfd:field id="LinkDocRollbackInteractive" orientation="ver" sameLine="true"/>
-			
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
+      <jfd:field id="LinkDocSection"
+                 fieldGroup="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.LinkDocumentGroup"/>
+      <jfd:field id="LinkDocType" sameLine="true"/>
+      <jfd:field id="LinkDocModelFolder"/>
+      <jfd:container id="LinkDocModelBox" layout="jfd:box"
+                     label="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.LinkDocModel"
+                     orientation="hor" sameLine="true">
+        <jfd:textField id="linkDocModelName" readOnly="true" showLabel="false"
+                       alignment="expand_expand"/>
+        <jfd:button id="сlearDocModelButton" icon="com/mg/framework/resources/erasebuttonicon.png"
+                    minimumSize="22,0" maximumSize="22,0" preferredSize="22,0"
+                    actionListener="ClearDocumentModel" alignment="right_expand"/>
+        <jfd:button id="сhooseDocModelButton" text="..." minimumSize="22,0" maximumSize="22,0"
+                    preferredSize="22,0" actionListener="ChooseDocumentModel"
+                    alignment="right_expand"/>
+      </jfd:container>
+      <jfd:field id="LinkDocDestFolder"/>
+      <jfd:field id="ShowNewDocument" sameLine="true"/>
+      <jfd:field id="LinkDocRollback"/>
+      <jfd:field id="LinkDocRollbackInteractive" orientation="ver" sameLine="true"/>
 
-		</jfd:container>
-		<jfd:table id="grantsTable" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.GrantsTable.TabTitle" >
-			<jfd:popupMenu>
-				<jfd:menuItem id="grantRightsForGroups" text="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.GrantRightsForGroups" actionListener="GrantRightsForGroups" />
-				<jfd:menuItem id="grantRights" text="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.GrantRights" actionListener="GrantRights" />
-				<jfd:menuItem id="revokeRights" text="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.RevokeRights" actionListener="RevokeRights" />
-			</jfd:popupMenu>
-		</jfd:table>
-	</jfd:container>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    </jfd:container>
+    <jfd:table id="grantsTable" scroll="true" autoResize="subsequent_columns"
+               alignment="expand_expand"
+               tabTitle="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.GrantsTable.TabTitle">
+      <jfd:popupMenu>
+        <jfd:menuItem id="grantRightsForGroups"
+                      text="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.GrantRightsForGroups"
+                      actionListener="GrantRightsForGroups"/>
+        <jfd:menuItem id="grantRights"
+                      text="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.GrantRights"
+                      actionListener="GrantRights"/>
+        <jfd:menuItem id="revokeRights"
+                      text="resource://com.mg.merp.docflow.resources.formelements#DocProcessStage.FormMt.RevokeRights"
+                      actionListener="RevokeRights"/>
+      </jfd:popupMenu>
+    </jfd:table>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

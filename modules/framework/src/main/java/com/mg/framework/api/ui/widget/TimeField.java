@@ -18,30 +18,28 @@ import com.mg.framework.api.ui.FieldEditor;
 
 /**
  * Элемент "Редактор времени"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: TimeField.java,v 1.1 2007/06/20 10:52:48 safonov Exp $
  */
 public interface TimeField extends FieldEditor {
-	
-	/**
-	 * атрибут формат времени, может иметь следующие значения:
-	 * </br>medium
-	 * </br>short
-	 * 
-	 * @see #TIME_MEDIUM
-	 * @see #TIME_SHORT
-	 */
-	final static String TIME_FORMAT = "timeFormat";
-	
-	/**
-	 * средний формат, поведение совпадает с форматом {@link java.text.DateFormat#MEDIUM}
-	 */
-	final static String TIME_MEDIUM = "medium";
-	
-	/**
-	 * короткий формат, поведение совпадает с форматом {@link java.text.DateFormat#SHORT}
-	 */
-	final static String TIME_SHORT = "short";
+
+  /**
+   * атрибут формат времени, может иметь следующие значения: </br>medium </br>short
+   *
+   * @see #TIME_MEDIUM
+   * @see #TIME_SHORT
+   */
+  final static String TIME_FORMAT = "timeFormat";
+
+  /**
+   * средний формат, поведение совпадает с форматом {@link java.text.DateFormat#MEDIUM}
+   */
+  final static String TIME_MEDIUM = "medium";
+
+  /**
+   * короткий формат, поведение совпадает с форматом {@link java.text.DateFormat#SHORT}
+   */
+  final static String TIME_SHORT = "short";
 
 }

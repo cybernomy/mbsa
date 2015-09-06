@@ -1,30 +1,32 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.finance.model.FinConfig" table="FIN_CONFIG">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="SysClientId" type="int">
       <column name="CLIENT_ID" not-null="false" unique="true" sql-type="INTEGER"/>
-    </id>  
-    <many-to-one name="BaseCurrency" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
-      <column name="BASE_CURRENCY" length="5" not-null="false" />
+    </id>
+    <many-to-one name="BaseCurrency" class="com.mg.merp.reference.model.Currency"
+                 property-ref="UpCode">
+      <column name="BASE_CURRENCY" length="5" not-null="false"/>
     </many-to-one>
-    <many-to-one name="NatCurrency" class="com.mg.merp.reference.model.Currency" property-ref="UpCode">
-      <column name="NAT_CURRENCY" length="5" not-null="false" />
+    <many-to-one name="NatCurrency" class="com.mg.merp.reference.model.Currency"
+                 property-ref="UpCode">
+      <column name="NAT_CURRENCY" length="5" not-null="false"/>
     </many-to-one>
     <many-to-one name="CurRateType" class="com.mg.merp.reference.model.CurrencyRateType">
-      <column name="CUR_RATE_TYPE_ID" not-null="false" />
+      <column name="CUR_RATE_TYPE_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="CurRateAuthority" class="com.mg.merp.reference.model.CurrencyRateAuthority">
-      <column name="CUR_RATE_AUTHORITY_ID" not-null="false" />
+      <column name="CUR_RATE_AUTHORITY_ID" not-null="false"/>
     </many-to-one>
     <property name="CurrencyPrec" type="java.lang.Integer">
-      <column name="CURRENCY_PREC" not-null="false" sql-type="INTEGER" />
+      <column name="CURRENCY_PREC" not-null="false" sql-type="INTEGER"/>
     </property>
     <filter name="__mg_tenantFilter"/>
   </class>

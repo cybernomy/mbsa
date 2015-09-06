@@ -14,17 +14,17 @@
  */
 package com.mg.merp.document;
 
-import java.io.Serializable;
-
 import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.merp.document.model.DocHeadModel;
 
+import java.io.Serializable;
+
 /**
  * Бизнес-компонент "Образец документа"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: DocumentPattern.java,v 1.1 2006/09/20 10:40:51 safonov Exp $
  */
 public interface DocumentPattern<T extends DocHeadModel, ID extends Serializable> extends DataBusinessObjectService<T, ID> {
-	
+
 }

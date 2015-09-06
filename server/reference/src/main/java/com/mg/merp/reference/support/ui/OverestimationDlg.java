@@ -14,79 +14,79 @@
  */
 package com.mg.merp.reference.support.ui;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.generic.ui.DefaultDialog;
 
+import java.math.BigDecimal;
+import java.util.Date;
+
 /**
  * Контроллер диалога "Переоценка"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: OverestimationDlg.java,v 1.2 2009/02/12 07:59:01 sharapov Exp $
  */
 public class OverestimationDlg extends DefaultDialog {
-	
-	public static final String WINDOW_NAME = "com.mg.merp.reference.OverestimationDlg";
-	
-	@DataItemName("Reference.OverestimationDlg.Percent")
-	private BigDecimal percent;
-	private Date actualDate;
-	private Integer precision;
-	
-	public OverestimationDlg() {
-	}
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractForm#doOnRun()
-	 */
-	@Override
-	protected void doOnRun() {
-		view.pack();
-		super.doOnRun();
-	}
-	
-	/**
-	 * @return the actualDate
-	 */
-	public Date getActualDate() {
-		return this.actualDate;
-	}
+  public static final String WINDOW_NAME = "com.mg.merp.reference.OverestimationDlg";
 
-	/**
-	 * @param actualDate the actualDate to set
-	 */
-	public void setActualDate(Date actualDate) {
-		this.actualDate = actualDate;
-	}
+  @DataItemName("Reference.OverestimationDlg.Percent")
+  private BigDecimal percent;
+  private Date actualDate;
+  private Integer precision;
 
-	/**
-	 * @return the percent
-	 */
-	public BigDecimal getPercent() {
-		return this.percent;
-	}
+  public OverestimationDlg() {
+  }
 
-	/**
-	 * @param percent the percent to set
-	 */
-	public void setPercent(BigDecimal percent) {
-		this.percent = percent;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractForm#doOnRun()
+   */
+  @Override
+  protected void doOnRun() {
+    view.pack();
+    super.doOnRun();
+  }
 
-	/**
-	 * @return the precision
-	 */
-	public Integer getPrecision() {
-		return this.precision;
-	}
+  /**
+   * @return the actualDate
+   */
+  public Date getActualDate() {
+    return this.actualDate;
+  }
 
-	/**
-	 * @param precision the precision to set
-	 */
-	public void setPrecision(Integer precision) {
-		this.precision = precision;
-	}
-	
+  /**
+   * @param actualDate the actualDate to set
+   */
+  public void setActualDate(Date actualDate) {
+    this.actualDate = actualDate;
+  }
+
+  /**
+   * @return the percent
+   */
+  public BigDecimal getPercent() {
+    return this.percent;
+  }
+
+  /**
+   * @param percent the percent to set
+   */
+  public void setPercent(BigDecimal percent) {
+    this.percent = percent;
+  }
+
+  /**
+   * @return the precision
+   */
+  public Integer getPrecision() {
+    return this.precision;
+  }
+
+  /**
+   * @param precision the precision to set
+   */
+  public void setPrecision(Integer precision) {
+    this.precision = precision;
+  }
+
 }

@@ -13,18 +13,21 @@
 
 <!-- $Id: ContractModifyDocMt.mfd.xml,v 1.7 2007/11/22 16:00:04 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.contract.support.ui.ContractModifyDocumentMt" title="resource://com.mg.merp.contract.resources.formelements#Contract.ModifyDocument.FormMt.Title" helpTopic="contract#changes_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.contract.support.ui.ContractModifyDocumentMt"
+          title="resource://com.mg.merp.contract.resources.formelements#Contract.ModifyDocument.FormMt.Title"
+          helpTopic="contract#changes_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		<jfd:include name="com/mg/merp/document/resources/DocumentMacros.xml" />
-		<jfd:field id="ModifyDesc" />	
-		<jfd:field id="Comment" />		
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 										 									
-	</jfd:container>
-	
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:include name="com/mg/merp/document/resources/DocumentMacros.xml"/>
+    <jfd:field id="ModifyDesc"/>
+    <jfd:field id="Comment"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

@@ -21,18 +21,18 @@ import com.mg.framework.api.annotations.EnumConstantText;
  * @author leonova
  * @version $Id: TaxPayer.java,v 1.1 2006/03/30 11:31:37 safonov Exp $
  */
-@DataItemName ("Salary.TaxScale.TaxPayer")
+@DataItemName("Salary.TaxScale.TaxPayer")
 public enum TaxPayer {
-	/**
-	 * Сотрудник
-	 */	
-	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#TaxPayer.Employee")
-	Employee,
-	
-	/**
-	 * Предприятие
-	 */	
-	@EnumConstantText ("resource://com.mg.merp.salary.resources.dataitemlabels#TaxPayer.Company")
-	Company
+  /**
+   * Сотрудник
+   */
+  @EnumConstantText("resource://com.mg.merp.salary.resources.dataitemlabels#TaxPayer.Employee")
+  Employee,
+
+  /**
+   * Предприятие
+   */
+  @EnumConstantText("resource://com.mg.merp.salary.resources.dataitemlabels#TaxPayer.Company")
+  Company
 
 }

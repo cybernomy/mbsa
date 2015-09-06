@@ -22,27 +22,27 @@ import com.mg.merp.personnelref.CalcPeriodServiceLocal;
 
 /**
  * Поисковик сущностей "Занимаемые должности в ШР"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: PositionFillInStaffListSearchHelp.java,v 1.1 2007/07/09 08:33:47 sharapov Exp $
  */
 public class PositionFillInStaffListSearchHelp extends AbstractSearchHelp {
 
-	private final String FORM_NAME = "com/mg/merp/salary/resources/PositionFillInStaffListSearchForm.mfd.xml"; //$NON-NLS-1$
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
-	 */
-	@Override
-	protected void doSearch() throws Exception {
-		PositionFillInStaffListSearchForm searchForm = (PositionFillInStaffListSearchForm) UIProducer.produceForm(FORM_NAME);
-		searchForm.addSearchHelpListener(this);
-		searchForm.setStaffListId(getCalcPeriodService().getCurrentCalcPeriod().getStaffList().getId());
-		searchForm.run(UIUtils.isModalMode());
-	}
+  private final String FORM_NAME = "com/mg/merp/salary/resources/PositionFillInStaffListSearchForm.mfd.xml"; //$NON-NLS-1$
 
-	private CalcPeriodServiceLocal getCalcPeriodService() {
-		return (CalcPeriodServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CalcPeriodServiceLocal.LOCAL_SERVICE_NAME);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.AbstractSearchHelp#doSearch()
+   */
+  @Override
+  protected void doSearch() throws Exception {
+    PositionFillInStaffListSearchForm searchForm = (PositionFillInStaffListSearchForm) UIProducer.produceForm(FORM_NAME);
+    searchForm.addSearchHelpListener(this);
+    searchForm.setStaffListId(getCalcPeriodService().getCurrentCalcPeriod().getStaffList().getId());
+    searchForm.run(UIUtils.isModalMode());
+  }
+
+  private CalcPeriodServiceLocal getCalcPeriodService() {
+    return (CalcPeriodServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CalcPeriodServiceLocal.LOCAL_SERVICE_NAME);
+  }
 
 }

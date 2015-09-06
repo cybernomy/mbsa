@@ -13,5 +13,7 @@
 
 <!-- $Id: DocSpecSerialNumMacros.xml,v 1.4 2006/08/22 07:08:54 leonova Exp $ -->
 
-<jfd:maintenanceTable xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="serialNum" alignment="expand_expand" autoResize="subsequent_columns" scroll="true" tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Serial">
+<jfd:maintenanceTable xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="serialNum"
+                      alignment="expand_expand" autoResize="subsequent_columns" scroll="true"
+                      tabTitle="resource://com.mg.merp.document.resources.formelements#DocSpec.Serial">
 </jfd:maintenanceTable>	 	

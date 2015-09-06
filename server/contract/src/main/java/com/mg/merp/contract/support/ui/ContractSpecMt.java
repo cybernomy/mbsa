@@ -21,22 +21,23 @@ import com.mg.merp.contract.model.ContractSpec;
 
 /**
  * Контроллер формы поддержки "Спецификации контракта"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: ContractSpecMt.java,v 1.1 2008/03/11 09:53:15 sharapov Exp $
  */
 public class ContractSpecMt extends DefaultMaintenanceForm {
-	
-	public ContractSpecMt() {
-		super();
-	}
-	
-	/**
-	 * Обработчик кнопки "Рассчитать"
-	 * @param event - событие
-	 */
-	public void onActionAdjust(WidgetEvent event) {
-		((ContractSpecServiceLocal) getService()).adjust((ContractSpec) getEntity());
-	}
-	
+
+  public ContractSpecMt() {
+    super();
+  }
+
+  /**
+   * Обработчик кнопки "Рассчитать"
+   *
+   * @param event - событие
+   */
+  public void onActionAdjust(WidgetEvent event) {
+    ((ContractSpecServiceLocal) getService()).adjust((ContractSpec) getEntity());
+  }
+
 }

@@ -15,20 +15,19 @@
 package com.mg.merp.salary.support;
 
 /**
- * Базовый класс расчета параметров н/у. Класс алгоритма должен
- * реализовывать следующий метод <code>protected Double internalExecute() throws Exception</code>.
- * 
+ * Базовый класс расчета параметров н/у. Класс алгоритма должен реализовывать следующий метод
+ * <code>protected Double internalExecute() throws Exception</code>.
+ *
  * <p>Пример данного метода:
- * 	<pre>
+ * <pre>
  * 		protected Double internalExecute() throws Exception {
  * 			return 100.0;
- * 		}
+ *        }
  * 	</pre>
- * 
- * @see SalaryAlgorithm
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id$
+ * @see SalaryAlgorithm
  */
 public abstract class FeeRefParamAlgorithm extends SalaryAlgorithm<Double> {
 

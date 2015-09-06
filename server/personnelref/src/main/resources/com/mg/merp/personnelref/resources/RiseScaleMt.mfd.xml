@@ -13,23 +13,29 @@
 
 <!-- $Id: RiseScaleMt.mfd.xml,v 1.4 2006/12/29 09:28:35 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.personnelref.support.ui.RiseScaleMt" title="resource://com.mg.merp.personnelref.resources.formelements#RiseScale.FormMt.Title" helpTopic="personnelref#rise_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.personnelref.support.ui.RiseScaleMt"
+          title="resource://com.mg.merp.personnelref.resources.formelements#RiseScale.FormMt.Title"
+          helpTopic="personnelref#rise_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Main.Tab.Title" >
-		
-			 <jfd:field id="ScaleNumber" /> 
-			 <jfd:field id="SName" />
-			 <jfd:field id="BeginDate" /> 
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />			 
-		</jfd:container>
-  
-		<jfd:maintenanceTable id="risePercent" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#RisePercent.Tab.Title" >
-		</jfd:maintenanceTable>
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Main.Tab.Title">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+      <jfd:field id="ScaleNumber"/>
+      <jfd:field id="SName"/>
+      <jfd:field id="BeginDate"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+
+    <jfd:maintenanceTable id="risePercent" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.personnelref.resources.formelements#RisePercent.Tab.Title">
+    </jfd:maintenanceTable>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

@@ -13,12 +13,17 @@
 
 <!-- $Id: BusinessAddinRepositorySearchForm.mfd.xml,v 1.1 2006/10/12 12:03:00 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" controller="com.mg.merp.baiengine.support.ui.BusinessAddinRepositorySearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.baiengine.resources.formelements#BusinessAddinRepositorySearchForm.Title" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui"
+          controller="com.mg.merp.baiengine.support.ui.BusinessAddinRepositorySearchForm"
+          orientation="ver" verticalGap="5"
+          title="resource://com.mg.merp.baiengine.resources.formelements#BusinessAddinRepositorySearchForm.Title">
 
-	<jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
-		<jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton" actionListener="Choose" />
-	</jfd:toolBar>
+  <jfd:toolBar xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="toolBar" alignment="expand_top">
+    <jfd:button id="сhooseButton" text="resource://com.mg.framework.resources.messages#ChooseButton"
+                actionListener="Choose"/>
+  </jfd:toolBar>
 
-	<jfd:table id="repositoryModelList" alignment="expand_expand" scroll="true" autoResize="subsequent_columns" />
+  <jfd:table id="repositoryModelList" alignment="expand_expand" scroll="true"
+             autoResize="subsequent_columns"/>
 
 </jfd:form>

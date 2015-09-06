@@ -17,12 +17,10 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.InvoiceSpec;
 
 /**
- * 
  * @author leonova
  * @version $Id: InvoiceSpecInServiceLocal.java,v 1.2 2006/09/20 11:02:09 safonov Exp $
  */
 public interface InvoiceSpecInServiceLocal
-		extends com.mg.merp.document.GoodsDocumentSpecification<InvoiceSpec, Integer>
-{
+    extends com.mg.merp.document.GoodsDocumentSpecification<InvoiceSpec, Integer> {
 
 }

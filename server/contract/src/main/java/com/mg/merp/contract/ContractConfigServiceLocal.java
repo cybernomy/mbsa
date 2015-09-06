@@ -18,7 +18,7 @@ import com.mg.merp.contract.model.ContractConfig;
 
 /**
  * Сервис бизнес-компонента "Конфигурация модуля <Контракты>"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: ContractConfigServiceLocal.java,v 1.2 2007/01/13 13:14:09 sharapov Exp $

@@ -20,10 +20,10 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: BinLocationTypeSearchHelp.java,v 1.2 2006/07/10 11:55:59 leonova Exp $
  */
-public class BinLocationTypeSearchHelp extends DefaultLegacySearchHelp{
+public class BinLocationTypeSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/warehouse/BinLocationType";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/warehouse/BinLocationType";
+  }
 }

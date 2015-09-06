@@ -15,11 +15,6 @@
 
 package com.mg.merp.planning.support;
 
-import java.math.BigDecimal;
-
-import javax.annotation.security.PermitAll;
-import javax.ejb.Stateless;
-
 import com.mg.framework.api.orm.OrmTemplate;
 import com.mg.framework.api.orm.Projections;
 import com.mg.framework.api.orm.ResultTransformer;
@@ -33,47 +28,52 @@ import com.mg.merp.planning.SafetyLevel;
 import com.mg.merp.planning.model.CatalogWarehouse;
 import com.mg.merp.reference.model.Catalog;
 
+import java.math.BigDecimal;
+
+import javax.annotation.security.PermitAll;
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Склады хранения товаров" 
- * 
+ * Бизнес-компонент "Склады хранения товаров"
+ *
  * @author leonova
  * @version $Id: CatalogWarehouseServiceBean.java,v 1.4 2007/07/30 10:36:48 safonov Exp $
  */
-@Stateless(name="merp/planning/CatalogWarehouseService")
+@Stateless(name = "merp/planning/CatalogWarehouseService")
 public class CatalogWarehouseServiceBean extends AbstractPOJODataBusinessObjectServiceBean<CatalogWarehouse, Integer> implements CatalogWarehouseServiceLocal {
 
-	private SafetyLevel[] internalGetSafetyLevel() {
-		final GenericItemServiceLocal genericItemService = (GenericItemServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(GenericItemServiceLocal.SERVICE_NAME);
-		return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(CatalogWarehouse.class)
-				.setProjection(Projections.projectionList(
-						Projections.sum("SafetyLevel"),
-						Projections.property("Catalog"),
-						Projections.groupProperty("Catalog")))
-				.setResultTransformer(new ResultTransformer<SafetyLevel>() {
+  private SafetyLevel[] internalGetSafetyLevel() {
+    final GenericItemServiceLocal genericItemService = (GenericItemServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(GenericItemServiceLocal.SERVICE_NAME);
+    return OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(CatalogWarehouse.class)
+        .setProjection(Projections.projectionList(
+            Projections.sum("SafetyLevel"),
+            Projections.property("Catalog"),
+            Projections.groupProperty("Catalog")))
+        .setResultTransformer(new ResultTransformer<SafetyLevel>() {
 
-					public SafetyLevel transformTuple(Object[] tuple, String[] aliases) {
-						Catalog catalog = (Catalog) tuple[1];
-						return new SafetyLevel((BigDecimal) tuple[0], catalog, genericItemService.findByCatalog(catalog.getId()));
-					}
-					
-				})).toArray(new SafetyLevel[0]);
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
-	 */
-	@Override
-	protected void onValidate(ValidationContext context, CatalogWarehouse entity) {
-		context.addRule(new MandatoryAttribute(entity, "Warehouse"));
-		context.addRule(new MandatoryAttribute(entity, "Catalog"));
-	}
+          public SafetyLevel transformTuple(Object[] tuple, String[] aliases) {
+            Catalog catalog = (Catalog) tuple[1];
+            return new SafetyLevel((BigDecimal) tuple[0], catalog, genericItemService.findByCatalog(catalog.getId()));
+          }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.planning.CatalogWarehouseServiceLocal#getSafetyLevel()
-	 */
-	@PermitAll
-	public SafetyLevel[] getSafetyLevel() {
-		return internalGetSafetyLevel();
-	}
+        })).toArray(new SafetyLevel[0]);
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean#onValidate(com.mg.framework.api.validator.ValidationContext, T)
+   */
+  @Override
+  protected void onValidate(ValidationContext context, CatalogWarehouse entity) {
+    context.addRule(new MandatoryAttribute(entity, "Warehouse"));
+    context.addRule(new MandatoryAttribute(entity, "Catalog"));
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.merp.planning.CatalogWarehouseServiceLocal#getSafetyLevel()
+   */
+  @PermitAll
+  public SafetyLevel[] getSafetyLevel() {
+    return internalGetSafetyLevel();
+  }
 
 }

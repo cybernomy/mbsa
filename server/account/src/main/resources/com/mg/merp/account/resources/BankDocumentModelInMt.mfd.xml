@@ -13,38 +13,42 @@
 
 <!-- $Id: BankDocumentModelInMt.mfd.xml,v 1.7 2007/09/20 09:36:56 safonov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.account.support.ui.BankDocumentModelInMt" title="resource://com.mg.merp.account.resources.formelements#BankDocumentModelIn.FormMt.Title" helpTopic="account#bankmodelin_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.account.support.ui.BankDocumentModelInMt"
+          title="resource://com.mg.merp.account.resources.formelements#BankDocumentModelIn.FormMt.Title"
+          helpTopic="account#bankmodelin_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title" >
-	 	 	<jfd:include name="com/mg/merp/document/resources/ModelNameMacros.xml" />
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml" />
-			<jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml" /> 
-	 	 	<jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml" />  			
-			<jfd:include name="com/mg/merp/document/resources/CurrencyModelMacros.xml" />					
-		 	<jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml" /> 
-			<jfd:field id="From" />	
-			<jfd:field id="PayerBankReq" />			
-			<jfd:field id="PayerBankReq.Account" sameLine="true" enabled="false"/>						
-			<jfd:field id="To" />	
-			<jfd:field id="RecipientBankReq"  />
-			<jfd:field id="RecipientBankReq.Account" sameLine="true" enabled="false"/>							
-			<jfd:field id="Nds1Rate" />						
-			<jfd:field id="Nds2Rate" sameLine="true"/>			
-			<jfd:field id="Nds1Summa" />					
-			<jfd:field id="Nds2Summa" sameLine="true"/>					
-			<jfd:field id="SummaWithNds1"/>
-			<jfd:field id="SummaWithNds2" sameLine="true"/>					
-			<jfd:field id="ClearSumma" />	
-			<jfd:field id="Comment"  />			
-			<jfd:field id="Description" />
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />					 																	
-		</jfd:container> 	
-	</jfd:container> 	
-	
-	<jfd:include name="com/mg/merp/document/resources/DefaultDocModelMaintenanceFooterMacros.xml" />
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_top">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.account.resources.formelements#MainDoc.Tab.Title">
+      <jfd:include name="com/mg/merp/document/resources/ModelNameMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/BaseDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/ContractDocumentAttributeMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/DocumentControllingAttributesMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/CurrencyModelMacros.xml"/>
+      <jfd:include name="com/mg/merp/document/resources/SummaDocMacros.xml"/>
+      <jfd:field id="From"/>
+      <jfd:field id="PayerBankReq"/>
+      <jfd:field id="PayerBankReq.Account" sameLine="true" enabled="false"/>
+      <jfd:field id="To"/>
+      <jfd:field id="RecipientBankReq"/>
+      <jfd:field id="RecipientBankReq.Account" sameLine="true" enabled="false"/>
+      <jfd:field id="Nds1Rate"/>
+      <jfd:field id="Nds2Rate" sameLine="true"/>
+      <jfd:field id="Nds1Summa"/>
+      <jfd:field id="Nds2Summa" sameLine="true"/>
+      <jfd:field id="SummaWithNds1"/>
+      <jfd:field id="SummaWithNds2" sameLine="true"/>
+      <jfd:field id="ClearSumma"/>
+      <jfd:field id="Comment"/>
+      <jfd:field id="Description"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+  </jfd:container>
+
+  <jfd:include name="com/mg/merp/document/resources/DefaultDocModelMaintenanceFooterMacros.xml"/>
 </jfd:form>
 		

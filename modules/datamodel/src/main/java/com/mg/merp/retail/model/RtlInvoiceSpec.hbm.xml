@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
-  <joined-subclass name="com.mg.merp.retail.model.RtlInvoiceSpec" extends="com.mg.merp.document.model.DocSpec" table="RTL_INVOICESPEC">
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
+  <joined-subclass name="com.mg.merp.retail.model.RtlInvoiceSpec"
+                   extends="com.mg.merp.document.model.DocSpec" table="RTL_INVOICESPEC">
     <meta attribute="extends">com.mg.merp.document.model.DocSpec</meta>
     <!-- <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
@@ -15,19 +16,19 @@
       </generator
     </id>-->
     <key on-delete="cascade">
-      <column name="DOCSPEC_ID" not-null="false" />
+      <column name="DOCSPEC_ID" not-null="false"/>
     </key>
     <property name="Discount" type="java.math.BigDecimal">
-      <column name="DISCOUNT" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="DISCOUNT" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="PriceWithDiscount" type="java.math.BigDecimal">
-      <column name="PRICE_DISCOUNT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="PRICE_DISCOUNT" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="SummaWithDiscount" type="java.math.BigDecimal">
-      <column name="SUM_DISCOUNT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="SUM_DISCOUNT" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="DocDiscount" type="java.math.BigDecimal">
-      <column name="DOC_DISCOUNT" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="DOC_DISCOUNT" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
   </joined-subclass>
 </hibernate-mapping>

@@ -18,16 +18,16 @@ import com.mg.merp.paymentalloc.model.TransactSpec;
 
 /**
  * Сервис бизнес-компонента "Спецификации связанных документов"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: TransactSpecServiceLocal.java,v 1.2 2007/05/31 14:08:57 sharapov Exp $
  */
 public interface TransactSpecServiceLocal extends com.mg.framework.api.DataBusinessObjectService<TransactSpec, Integer> {
 
-	/**
-	 * Локальное имя сервиса
-	 */
-	static final String LOCAL_SERVICE_NAME = "merp/paymentalloc/TransactSpec"; //$NON-NLS-1$
-	
+  /**
+   * Локальное имя сервиса
+   */
+  static final String LOCAL_SERVICE_NAME = "merp/paymentalloc/TransactSpec"; //$NON-NLS-1$
+
 }

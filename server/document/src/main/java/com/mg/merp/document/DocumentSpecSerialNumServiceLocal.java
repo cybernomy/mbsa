@@ -18,15 +18,15 @@ import com.mg.merp.document.model.DocumentSpecSerialNum;
 
 /**
  * Бизнес-компонент "Серийные номера спецификаций"
- * 
+ *
  * @author leonova
  * @version $Id: DocumentSpecSerialNumServiceLocal.java,v 1.2 2007/08/10 13:29:19 safonov Exp $
  */
 public interface DocumentSpecSerialNumServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<DocumentSpecSerialNum, Integer> {
-	/**
-	 * имя сервиса
-	 */
-	final static String SERVICE_NAME = "merp/document/DocumentSpecSerialNum";
+    extends com.mg.framework.api.DataBusinessObjectService<DocumentSpecSerialNum, Integer> {
+  /**
+   * имя сервиса
+   */
+  final static String SERVICE_NAME = "merp/document/DocumentSpecSerialNum";
 
 }

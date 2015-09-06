@@ -14,35 +14,35 @@
  */
 package com.mg.framework.service.jboss;
 
-import org.jboss.system.ServiceMBean;
-
 import com.mg.framework.api.LockManager;
+
+import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис менеджера блокировок
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: LockManagerServiceMBean.java,v 1.1 2006/12/15 09:30:39 safonov Exp $
  */
 public interface LockManagerServiceMBean extends ServiceMBean,
-		LockManager {
-	/**
-	 * наименование сервиса
-	 */
-	final static String SERVICE_NAME = "merp:service=LockManagerService";
+    LockManager {
+  /**
+   * наименование сервиса
+   */
+  final static String SERVICE_NAME = "merp:service=LockManagerService";
 
-	/**
-	 * получить атрибут configFile
-	 * 
-	 * @return	полный путь к файлу конфигурации
-	 */
-	public String getConfigFile();
-	
-	/**
-	 * установить атрибут configFile
-	 * 
-	 * @param configFile	полный путь к файлу конфигурации
-	 */
-	public void setConfigFile(String configFile);
+  /**
+   * получить атрибут configFile
+   *
+   * @return полный путь к файлу конфигурации
+   */
+  public String getConfigFile();
+
+  /**
+   * установить атрибут configFile
+   *
+   * @param configFile полный путь к файлу конфигурации
+   */
+  public void setConfigFile(String configFile);
 
 }

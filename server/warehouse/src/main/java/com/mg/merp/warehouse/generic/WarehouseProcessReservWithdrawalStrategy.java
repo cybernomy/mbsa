@@ -23,37 +23,38 @@ import com.mg.merp.warehouse.model.StockPlanHistoryKind;
 
 /**
  * Стратегия реализации этапа ДО "Снятие с резерва по складу"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: WarehouseProcessReservWithdrawalStrategy.java,v 1.6 2008/04/18 15:18:20 safonov Exp $
+ * @version $Id: WarehouseProcessReservWithdrawalStrategy.java,v 1.6 2008/04/18 15:18:20 safonov Exp
+ *          $
  */
 public class WarehouseProcessReservWithdrawalStrategy extends
-		AbstractWarehouseProcessPlanReservStrategy {
+    AbstractWarehouseProcessPlanReservStrategy {
 
-	public WarehouseProcessReservWithdrawalStrategy(
-			DocFlowPluginInvokeParams params) {
-		super(params);
-	}
+  public WarehouseProcessReservWithdrawalStrategy(
+      DocFlowPluginInvokeParams params) {
+    super(params);
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.warehouse.generic.AbstractWarehouseProcessPlanReservStrategy#doProcess(com.mg.merp.warehouse.WarehouseProcessDocumentLineData)
-	 */
-	@Override
-	protected void doProcess(WarehouseProcessDocumentLineData docLineData) {
-		if (docLineData.getSrcStock() != null)
-			makeHistory(docLineData, StockPlanHistoryKind.OUT_RESERVE, StockPlanHistoryDirection.IN);
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.warehouse.generic.AbstractWarehouseProcessPlanReservStrategy#doProcess(com.mg.merp.warehouse.WarehouseProcessDocumentLineData)
+   */
+  @Override
+  protected void doProcess(WarehouseProcessDocumentLineData docLineData) {
+    if (docLineData.getSrcStock() != null)
+      makeHistory(docLineData, StockPlanHistoryKind.OUT_RESERVE, StockPlanHistoryDirection.IN);
+  }
 
-	@Override
-	protected void updateQuanAttribute(StockCard stockCard, WarehouseProcessDocumentLineData docLineData, StockPlanHistoryDirection direction) {
-		stockCard.setReserve(MathUtils.subtractNullable(stockCard.getReserve(), docLineData.getQuantity1(), Constants.QUANTITY_ROUND_CONTEXT));
-		stockCard.setReserve2(MathUtils.subtractNullable(stockCard.getReserve2(), docLineData.getQuantity2(), Constants.QUANTITY_ROUND_CONTEXT));
-	}
+  @Override
+  protected void updateQuanAttribute(StockCard stockCard, WarehouseProcessDocumentLineData docLineData, StockPlanHistoryDirection direction) {
+    stockCard.setReserve(MathUtils.subtractNullable(stockCard.getReserve(), docLineData.getQuantity1(), Constants.QUANTITY_ROUND_CONTEXT));
+    stockCard.setReserve2(MathUtils.subtractNullable(stockCard.getReserve2(), docLineData.getQuantity2(), Constants.QUANTITY_ROUND_CONTEXT));
+  }
 
-	@Override
-	protected void createQuanAttribute(StockCard stockCard, WarehouseProcessDocumentLineData docLineData, StockPlanHistoryDirection direction) {
-		stockCard.setReserve(MathUtils.negate(docLineData.getQuantity1()));
-		stockCard.setReserve2(MathUtils.negate(docLineData.getQuantity2()));
-	}
+  @Override
+  protected void createQuanAttribute(StockCard stockCard, WarehouseProcessDocumentLineData docLineData, StockPlanHistoryDirection direction) {
+    stockCard.setReserve(MathUtils.negate(docLineData.getQuantity1()));
+    stockCard.setReserve2(MathUtils.negate(docLineData.getQuantity2()));
+  }
 
 }

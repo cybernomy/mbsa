@@ -22,106 +22,111 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Discount.Discount")
 public class Discount extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.baiengine.model.Repository Alg;
+  private com.mg.merp.baiengine.model.Repository Alg;
 
-	private com.mg.merp.core.model.Folder Folder;
+  private com.mg.merp.core.model.Folder Folder;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String DName;
+  private java.lang.String DName;
 
-	private java.lang.String Formula;
+  private java.lang.String Formula;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public Discount() {
-	}
+  /**
+   * default constructor
+   */
+  public Discount() {
+  }
 
-	/** constructor with id */
-	public Discount(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public Discount(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Discount.Disc.Alg")
-	public com.mg.merp.baiengine.model.Repository getAlg() {
-		return this.Alg;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public void setAlg(
-			com.mg.merp.baiengine.model.Repository AlgRepository) {
-		this.Alg = AlgRepository;
-	}
+  /**
+   *
+   */
+  @DataItemName("Discount.Disc.Alg")
+  public com.mg.merp.baiengine.model.Repository getAlg() {
+    return this.Alg;
+  }
 
-	/**
-	 * 
-	 */
+  public void setAlg(
+      com.mg.merp.baiengine.model.Repository AlgRepository) {
+    this.Alg = AlgRepository;
+  }
 
-	public com.mg.merp.core.model.Folder getFolder() {
-		return this.Folder;
-	}
+  /**
+   *
+   */
 
-	public void setFolder(com.mg.merp.core.model.Folder Folder) {
-		this.Folder = Folder;
-	}
+  public com.mg.merp.core.model.Folder getFolder() {
+    return this.Folder;
+  }
 
-	/**
-	 * 
-	 */
+  public void setFolder(com.mg.merp.core.model.Folder Folder) {
+    this.Folder = Folder;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Discount.Name")
-	public java.lang.String getDName() {
-		return this.DName;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setDName(java.lang.String Dname) {
-		this.DName = Dname;
-	}
+  /**
+   *
+   */
+  @DataItemName("Discount.Name")
+  public java.lang.String getDName() {
+    return this.DName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Discount.Disc.Formula")
-	public java.lang.String getFormula() {
-		return this.Formula;
-	}
+  public void setDName(java.lang.String Dname) {
+    this.DName = Dname;
+  }
 
-	public void setFormula(java.lang.String Formula) {
-		this.Formula = Formula;
-	}
+  /**
+   *
+   */
+  @DataItemName("Discount.Disc.Formula")
+  public java.lang.String getFormula() {
+    return this.Formula;
+  }
+
+  public void setFormula(java.lang.String Formula) {
+    this.Formula = Formula;
+  }
 
 }

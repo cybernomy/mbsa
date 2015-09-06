@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 
 <!DOCTYPE hibernate-mapping PUBLIC
-      "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-      "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
 
-	<filter-def name="__mg_tenantFilter" condition="CLIENT_ID = :sysClientId" >
-		<filter-param name="sysClientId" type="integer"/>
-	</filter-def>
+  <filter-def name="__mg_tenantFilter" condition="CLIENT_ID = :sysClientId">
+    <filter-param name="sysClientId" type="integer"/>
+  </filter-def>
 
 </hibernate-mapping>

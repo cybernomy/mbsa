@@ -21,29 +21,29 @@ import com.mg.framework.api.annotations.EnumConstantText;
  * @author leonova
  * @version $Id: CenterKind.java,v 1.1 2006/03/30 11:26:56 safonov Exp $
  */
-@DataItemName ("Finance.Center.Kind")
+@DataItemName("Finance.Center.Kind")
 public enum CenterKind {
-	/**
-	 * Центр финансового учета
-	 */
-	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinCenter.Kind.CFU")
-	CFU,
-	
-	/**
-	 * Центр финансовой ответственности
-	 */
-	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinCenter.Kind.CFO")
-	CFO,
-	
-	/**
-	 * Венчур-центр
-	 */
-	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinCenter.Kind.Venture")
-	VENCHURE,
-	
-	/**
-	 * Профит-центр
-	 */
-	@EnumConstantText ("resource://com.mg.merp.finance.resources.dataitemlabels#FinCenter.Kind.Profit")
-	PROFIT
+  /**
+   * Центр финансового учета
+   */
+  @EnumConstantText("resource://com.mg.merp.finance.resources.dataitemlabels#FinCenter.Kind.CFU")
+  CFU,
+
+  /**
+   * Центр финансовой ответственности
+   */
+  @EnumConstantText("resource://com.mg.merp.finance.resources.dataitemlabels#FinCenter.Kind.CFO")
+  CFO,
+
+  /**
+   * Венчур-центр
+   */
+  @EnumConstantText("resource://com.mg.merp.finance.resources.dataitemlabels#FinCenter.Kind.Venture")
+  VENCHURE,
+
+  /**
+   * Профит-центр
+   */
+  @EnumConstantText("resource://com.mg.merp.finance.resources.dataitemlabels#FinCenter.Kind.Profit")
+  PROFIT
 }

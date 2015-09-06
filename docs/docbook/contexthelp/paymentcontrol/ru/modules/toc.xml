@@ -14,26 +14,26 @@
 <!-- $Id: toc.xml,v 1.1 2006/12/03 13:44:31 konyashkina Exp $ -->
 
 <toc version="1.0">
-   
-   <tocitem text="Справочники платёжного календаря">
-	<tocitem text="Периоды планирования" target="pmcperiod_html" /> 
-  	<tocitem text="Средства платежа" target="pmcresource_html" />
-  </tocitem>	
-	
-  <tocitem text="Реестр обязательств">
-	<tocitem text="Реестр обязательств" target="liability_html" />
-	<tocitem text="Образцы обязательств" target="liabmodel_html" />
+
+  <tocitem text="Справочники платёжного календаря">
+    <tocitem text="Периоды планирования" target="pmcperiod_html"/>
+    <tocitem text="Средства платежа" target="pmcresource_html"/>
   </tocitem>
-  
+
+  <tocitem text="Реестр обязательств">
+    <tocitem text="Реестр обязательств" target="liability_html"/>
+    <tocitem text="Образцы обязательств" target="liabmodel_html"/>
+  </tocitem>
+
   <tocitem text="Планирование платежей">
-	<tocitem text="Версии календаря" target="version_html" />
-	<tocitem text="Статус версии" target="status_html" /> 
-	<tocitem text="Планирование обязательств" target="plan_html" />
-	<tocitem text="Перемещение средств" target="move_html" />
-    </tocitem>  
-  
+    <tocitem text="Версии календаря" target="version_html"/>
+    <tocitem text="Статус версии" target="status_html"/>
+    <tocitem text="Планирование обязательств" target="plan_html"/>
+    <tocitem text="Перемещение средств" target="move_html"/>
+  </tocitem>
+
   <tocitem text="Оперативное управление платежами">
-	<tocitem text="Исполнения обязательств" target="execution_html" /> 
-    </tocitem>
-    
+    <tocitem text="Исполнения обязательств" target="execution_html"/>
+  </tocitem>
+
 </toc>

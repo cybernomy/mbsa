@@ -13,7 +13,8 @@
 
 <!-- $Id: DefaultDocMaintenanceTablePopupMenuMacros.xml,v 1.8 2008/08/04 07:38:22 safonov Exp $ -->
 
-<jfd:popupMenu xmlns:jfd="http://xmlns.m-g.ru/jet/ui" >
-	<jfd:separator />
-	<jfd:include name="com/mg/merp/document/resources/CommonDocMaintenanceTablePopupMenuItemsMacros.xml" />
+<jfd:popupMenu xmlns:jfd="http://xmlns.m-g.ru/jet/ui">
+  <jfd:separator/>
+  <jfd:include
+      name="com/mg/merp/document/resources/CommonDocMaintenanceTablePopupMenuItemsMacros.xml"/>
 </jfd:popupMenu>

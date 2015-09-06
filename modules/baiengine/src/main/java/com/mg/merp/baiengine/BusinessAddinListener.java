@@ -18,22 +18,18 @@ import java.util.EventListener;
 
 /**
  * Слушатель событий в BAi
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: BusinessAddinListener.java,v 1.1 2006/06/08 11:39:47 safonov Exp $
  */
 public interface BusinessAddinListener<T> extends EventListener {
-	/**
-	 * Обработка успешного завершения BAi
-	 * 
-	 * @param event
-	 */
-	public void completed(BusinessAddinEvent<T> event);
-	
-	/**
-	 * Обработка прерывания выполнения BAi
-	 * 
-	 * @param event
-	 */
-	public void aborted(BusinessAddinEvent<T> event);
+  /**
+   * Обработка успешного завершения BAi
+   */
+  public void completed(BusinessAddinEvent<T> event);
+
+  /**
+   * Обработка прерывания выполнения BAi
+   */
+  public void aborted(BusinessAddinEvent<T> event);
 }

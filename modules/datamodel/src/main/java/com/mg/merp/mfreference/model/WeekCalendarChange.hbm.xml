@@ -1,52 +1,52 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.mfreference.model.WeekCalendarChange" table="MF_WEEK_CAL_CHANGE">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">MF_WEEK_CAL_CHANGE_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="DayCalThu" class="com.mg.merp.mfreference.model.DayCalendar">
-      <column name="DAY_CAL_THU" not-null="true" />
+      <column name="DAY_CAL_THU" not-null="true"/>
     </many-to-one>
     <many-to-one name="DayCalSat" class="com.mg.merp.mfreference.model.DayCalendar">
-      <column name="DAY_CAL_SAT" not-null="true" />
+      <column name="DAY_CAL_SAT" not-null="true"/>
     </many-to-one>
     <many-to-one name="WeekCal" class="com.mg.merp.mfreference.model.WeekCalendar">
-      <column name="WEEK_CAL_ID" not-null="true" />
+      <column name="WEEK_CAL_ID" not-null="true"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="DayCalMon" class="com.mg.merp.mfreference.model.DayCalendar">
-      <column name="DAY_CAL_MON" not-null="true" />
+      <column name="DAY_CAL_MON" not-null="true"/>
     </many-to-one>
     <many-to-one name="DayCalWed" class="com.mg.merp.mfreference.model.DayCalendar">
-      <column name="DAY_CAL_WED" not-null="true" />
+      <column name="DAY_CAL_WED" not-null="true"/>
     </many-to-one>
     <many-to-one name="DayCalSun" class="com.mg.merp.mfreference.model.DayCalendar">
-      <column name="DAY_CAL_SUN" not-null="true" />
+      <column name="DAY_CAL_SUN" not-null="true"/>
     </many-to-one>
     <many-to-one name="DayCalTue" class="com.mg.merp.mfreference.model.DayCalendar">
-      <column name="DAY_CAL_TUE" not-null="true" />
+      <column name="DAY_CAL_TUE" not-null="true"/>
     </many-to-one>
     <many-to-one name="DayCalFri" class="com.mg.merp.mfreference.model.DayCalendar">
-      <column name="DAY_CAL_FRI" not-null="true" />
+      <column name="DAY_CAL_FRI" not-null="true"/>
     </many-to-one>
     <property name="EffOnDate" type="java.util.Date">
-      <column name="EFF_ON_DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="EFF_ON_DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="EffOffDate" type="java.util.Date">
-      <column name="EFF_OFF_DATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="EFF_OFF_DATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

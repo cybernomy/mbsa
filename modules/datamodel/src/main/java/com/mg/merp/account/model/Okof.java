@@ -22,91 +22,96 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Account.Okof")
 public class Okof extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String UpCode;
+  private java.lang.String UpCode;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String OkofName;
+  private java.lang.String OkofName;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public Okof() {
-	}
+  /**
+   * default constructor
+   */
+  public Okof() {
+  }
 
-	/** constructor with id */
-	public Okof(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public Okof(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public java.lang.String getUpCode() {
-		return this.UpCode;
-	}
+  /**
+   *
+   */
 
-	public void setUpCode(java.lang.String Upcode) {
-		this.UpCode = Upcode;
-	}
+  public java.lang.String getUpCode() {
+    return this.UpCode;
+  }
 
-	/**
-	 * 
-	 */
+  public void setUpCode(java.lang.String Upcode) {
+    this.UpCode = Upcode;
+  }
 
-	@DataItemName("Account.Okof.Code")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  /**
+   *
+   */
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  @DataItemName("Account.Okof.Code")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	@DataItemName("Account.Okof.OkofName")
-	public java.lang.String getOkofName() {
-		return this.OkofName;
-	}
+  /**
+   *
+   */
 
-	public void setOkofName(java.lang.String Okofname) {
-		this.OkofName = Okofname;
-	}
+  @DataItemName("Account.Okof.OkofName")
+  public java.lang.String getOkofName() {
+    return this.OkofName;
+  }
+
+  public void setOkofName(java.lang.String Okofname) {
+    this.OkofName = Okofname;
+  }
 }

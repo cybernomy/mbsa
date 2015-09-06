@@ -24,58 +24,60 @@ import com.mg.merp.paymentcontrol.model.Liability;
 
 /**
  * Контроллер формы поддержки бизнес-компонента
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: LiabilityMt.java,v 1.1 2008/04/01 05:24:40 alikaev Exp $
  */
 public class LiabilityMt extends DefaultMaintenanceForm {
-	
-	/**
-	 * Обработчик просмотра документа-основания
-	 * @param event - событие
-	 */
-	public void onActionViewBaseDocument(WidgetEvent event) {
-		DocumentUtils.viewDocument(((Liability) getEntity()).getBaseDoc());
-	}
-	
-	/**
-	 * Обработчик просмотра документа
-	 * @param event - событие
-	 */
-	public void onActionViewConfirmDocument(WidgetEvent event) {
-		DocumentUtils.viewDocument(((Liability) getEntity()).getDocHead());
-	}
 
-	/**
-	 * Обработчик просмотра/выбора контракта
-	 * @param event - событие
-	 */
-	public void onActionViewOrChooseContract(WidgetEvent event) {
-		final Liability liability = (Liability) getEntity();
-		if(liability.getContract() != null) {
-			DocumentUtils.viewDocument(liability.getContract());
-		}
-		else
-			DocumentUtils.chooseContract(new SearchHelpListener() {
+  /**
+   * Обработчик просмотра документа-основания
+   *
+   * @param event - событие
+   */
+  public void onActionViewBaseDocument(WidgetEvent event) {
+    DocumentUtils.viewDocument(((Liability) getEntity()).getBaseDoc());
+  }
 
-				/* (non-Javadoc)
-				 * @see com.mg.framework.api.ui.SearchHelpListener#searchCanceled(com.mg.framework.api.ui.SearchHelpEvent)
-				 */
-				public void searchCanceled(SearchHelpEvent event) {
-					// do nothing
-				}
+  /**
+   * Обработчик просмотра документа
+   *
+   * @param event - событие
+   */
+  public void onActionViewConfirmDocument(WidgetEvent event) {
+    DocumentUtils.viewDocument(((Liability) getEntity()).getDocHead());
+  }
 
-				/* (non-Javadoc)
-				 * @see com.mg.framework.api.ui.SearchHelpListener#searchPerformed(com.mg.framework.api.ui.SearchHelpEvent)
-				 */
-				public void searchPerformed(SearchHelpEvent event) {
-					DocHead contract = (DocHead) event.getItems()[0];
-					liability.setContractType(contract.getDocType());
-					liability.setContractNumber(contract.getDocNumber().trim());
-					liability.setContractDate(contract.getDocDate());
-					view.flushModel();
-				}
-			});
-	}
+  /**
+   * Обработчик просмотра/выбора контракта
+   *
+   * @param event - событие
+   */
+  public void onActionViewOrChooseContract(WidgetEvent event) {
+    final Liability liability = (Liability) getEntity();
+    if (liability.getContract() != null) {
+      DocumentUtils.viewDocument(liability.getContract());
+    } else
+      DocumentUtils.chooseContract(new SearchHelpListener() {
+
+        /* (non-Javadoc)
+         * @see com.mg.framework.api.ui.SearchHelpListener#searchCanceled(com.mg.framework.api.ui.SearchHelpEvent)
+         */
+        public void searchCanceled(SearchHelpEvent event) {
+          // do nothing
+        }
+
+        /* (non-Javadoc)
+         * @see com.mg.framework.api.ui.SearchHelpListener#searchPerformed(com.mg.framework.api.ui.SearchHelpEvent)
+         */
+        public void searchPerformed(SearchHelpEvent event) {
+          DocHead contract = (DocHead) event.getItems()[0];
+          liability.setContractType(contract.getDocType());
+          liability.setContractNumber(contract.getDocNumber().trim());
+          liability.setContractDate(contract.getDocDate());
+          view.flushModel();
+        }
+      });
+  }
 
 }

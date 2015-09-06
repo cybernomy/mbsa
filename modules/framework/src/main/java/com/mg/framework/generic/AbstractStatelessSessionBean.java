@@ -18,18 +18,17 @@ package com.mg.framework.generic;
 /**
  * @author Oleg V. Safonov
  * @version $Id: AbstractStatelessSessionBean.java,v 1.4 2006/03/01 15:26:36 safonov Exp $
- *
  */
 public abstract class AbstractStatelessSessionBean extends AbstractSessionBean {
 
-	/** 
-	 * This is declared abstract to ensure that subclasses implement this. 
-	 * Otherwise it isn't required by the compiler, but will
-	 * fail on deployment.
-	 * <br/>The BeanFactory is available at this point
-	 */
-	/*public void ejbCreate() throws CreateException {
-	    
+  /**
+   * This is declared abstract to ensure that subclasses implement this.
+   * Otherwise it isn't required by the compiler, but will
+   * fail on deployment.
+   * <br/>The BeanFactory is available at this point
+   */
+    /*public void ejbCreate() throws CreateException {
+
 	}*/
 
 	/* (non-Javadoc)

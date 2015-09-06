@@ -22,148 +22,153 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Salary.FeeRefParam")
 public class FeeRefParam extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.salary.model.FeeRef FeeRef;
+  private com.mg.merp.salary.model.FeeRef FeeRef;
 
-	private com.mg.merp.baiengine.model.Repository CalcAlg;
+  private com.mg.merp.baiengine.model.Repository CalcAlg;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String PCode;
+  private java.lang.String PCode;
 
-	private java.lang.String PName;
+  private java.lang.String PName;
 
-	private java.lang.Integer Priority;
+  private java.lang.Integer Priority;
 
-	private FeeParamType ParamType;
+  private FeeParamType ParamType;
 
-	private boolean CalcOnce;
+  private boolean CalcOnce;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public FeeRefParam() {
-	}
+  /**
+   * default constructor
+   */
+  public FeeRefParam() {
+  }
 
-	/** constructor with id */
-	public FeeRefParam(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public FeeRefParam(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.salary.model.FeeRef getFeeRef() {
-		return this.FeeRef;
-	}
+  /**
+   *
+   */
 
-	public void setFeeRef(com.mg.merp.salary.model.FeeRef SalFeeRef) {
-		this.FeeRef = SalFeeRef;
-	}
+  public com.mg.merp.salary.model.FeeRef getFeeRef() {
+    return this.FeeRef;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.FeeRefParam.CalcAlg")
-	public com.mg.merp.baiengine.model.Repository getCalcAlg() {
-		return this.CalcAlg;
-	}
+  public void setFeeRef(com.mg.merp.salary.model.FeeRef SalFeeRef) {
+    this.FeeRef = SalFeeRef;
+  }
 
-	public void setCalcAlg(
-			com.mg.merp.baiengine.model.Repository AlgRepository) {
-		this.CalcAlg = AlgRepository;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.FeeRefParam.CalcAlg")
+  public com.mg.merp.baiengine.model.Repository getCalcAlg() {
+    return this.CalcAlg;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCalcAlg(
+      com.mg.merp.baiengine.model.Repository AlgRepository) {
+    this.CalcAlg = AlgRepository;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.BigCode")
-	public java.lang.String getPCode() {
-		return this.PCode;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setPCode(java.lang.String Pcode) {
-		this.PCode = Pcode;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.BigCode")
+  public java.lang.String getPCode() {
+    return this.PCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.Name")
-	public java.lang.String getPName() {
-		return this.PName;
-	}
+  public void setPCode(java.lang.String Pcode) {
+    this.PCode = Pcode;
+  }
 
-	public void setPName(java.lang.String Pname) {
-		this.PName = Pname;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.Name")
+  public java.lang.String getPName() {
+    return this.PName;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.FeeRefParam.Priority")
-	public java.lang.Integer getPriority() {
-		return this.Priority;
-	}
+  public void setPName(java.lang.String Pname) {
+    this.PName = Pname;
+  }
 
-	public void setPriority(java.lang.Integer Priority) {
-		this.Priority = Priority;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.FeeRefParam.Priority")
+  public java.lang.Integer getPriority() {
+    return this.Priority;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.FeeRefParam.ParamType")
-	public FeeParamType getParamType() {
-		return this.ParamType;
-	}
+  public void setPriority(java.lang.Integer Priority) {
+    this.Priority = Priority;
+  }
 
-	public void setParamType(FeeParamType ParamType) {
-		this.ParamType = ParamType;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.FeeRefParam.ParamType")
+  public FeeParamType getParamType() {
+    return this.ParamType;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.FeeRefParam.CalcOnce")
-	public boolean getCalcOnce() {
-		return this.CalcOnce;
-	}
+  public void setParamType(FeeParamType ParamType) {
+    this.ParamType = ParamType;
+  }
 
-	public void setCalcOnce(boolean CalcOnce) {
-		this.CalcOnce = CalcOnce;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.FeeRefParam.CalcOnce")
+  public boolean getCalcOnce() {
+    return this.CalcOnce;
+  }
+
+  public void setCalcOnce(boolean CalcOnce) {
+    this.CalcOnce = CalcOnce;
+  }
 
 }

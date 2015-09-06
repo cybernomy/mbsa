@@ -1,47 +1,49 @@
 ﻿<?xml version='1.0' encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
-                      "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
-[
-<!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
-<!ENTITY chap_001acc SYSTEM "modules/001acc.xml">
-<!ENTITY chap_002acc SYSTEM "modules/002acc.xml">
-<!ENTITY chap_003acc SYSTEM "modules/003acc.xml">
-<!ENTITY chap_004acc SYSTEM "modules/004acc.xml">
-<!ENTITY chap_005acc SYSTEM "modules/005acc.xml">
-<!ENTITY chap_006acc SYSTEM "modules/006acc.xml">
-<!ENTITY chap_007acc SYSTEM "modules/007acc.xml">
-<!ENTITY chap_008acc SYSTEM "modules/008acc.xml">
-<!ENTITY chap_009acc SYSTEM "modules/009acc.xml">
-<!ENTITY chap_010acc SYSTEM "modules/010acc.xml">
-<!ENTITY acc "Бухгалтерский учёт">
-<!ENTITY merp "Millennium Business Suite Anywhere">
-<!ENTITY td "Типы документов">
-<!ENTITY ref "Прикладные справочники">
-<!ENTITY cont_centr "Центр управления">
-<!ENTITY liab "Обязательства">
-<!ENTITY contr "Контракты">
+    "../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+    [
+        <!ENTITY chap_copyright SYSTEM "modules/copyright.xml">
+        <!ENTITY chap_001acc SYSTEM "modules/001acc.xml">
+        <!ENTITY chap_002acc SYSTEM "modules/002acc.xml">
+        <!ENTITY chap_003acc SYSTEM "modules/003acc.xml">
+        <!ENTITY chap_004acc SYSTEM "modules/004acc.xml">
+        <!ENTITY chap_005acc SYSTEM "modules/005acc.xml">
+        <!ENTITY chap_006acc SYSTEM "modules/006acc.xml">
+        <!ENTITY chap_007acc SYSTEM "modules/007acc.xml">
+        <!ENTITY chap_008acc SYSTEM "modules/008acc.xml">
+        <!ENTITY chap_009acc SYSTEM "modules/009acc.xml">
+        <!ENTITY chap_010acc SYSTEM "modules/010acc.xml">
+        <!ENTITY acc "Бухгалтерский учёт">
+        <!ENTITY merp "Millennium Business Suite Anywhere">
+        <!ENTITY td "Типы документов">
+        <!ENTITY ref "Прикладные справочники">
+        <!ENTITY cont_centr "Центр управления">
+        <!ENTITY liab "Обязательства">
+        <!ENTITY contr "Контракты">
 
-]>
+        ]>
 <book lang="ru">
   <bookinfo>
-      <title>&acc; в системе &merp; 
-      Руководство пользователя.</title>
-      <releaseinfo>4.0.6</releaseinfo>
-      <copyright>
-	<year>1998</year>
-	<year>2008</year>
-	<holder>ООО &quot;Бизнестехнология&quot;</holder>
-      </copyright>    
+    <title>&acc; в системе &merp;
+      Руководство пользователя.
+    </title>
+    <releaseinfo>4.0.6</releaseinfo>
+    <copyright>
+      <year>1998</year>
+      <year>2008</year>
+      <holder>ООО &quot;Бизнестехнология&quot;</holder>
+    </copyright>
   </bookinfo>
-  
+
   <toc/>
-  
+
   <preface id="target" revision="1">
-      <title>Целевая аудитория </title>
-      <para>Данное руководство предназначено для пользователей, работающих  
-	с модулем &quot;&acc;&quot; системы &merp;.</para>
+    <title>Целевая аудитория</title>
+    <para>Данное руководство предназначено для пользователей, работающих
+      с модулем &quot;&acc;&quot; системы &merp;.
+    </para>
   </preface>
-    
+
   &chap_001acc;
   &chap_002acc;
   &chap_003acc;

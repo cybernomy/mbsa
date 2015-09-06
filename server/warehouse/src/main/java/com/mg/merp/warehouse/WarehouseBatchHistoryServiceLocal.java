@@ -18,15 +18,15 @@ import com.mg.merp.warehouse.model.StockBatchHistory;
 
 /**
  * Сервис бизнес-компонента "История фактического движения по партии"
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @version $Id: WarehouseBatchHistoryServiceLocal.java,v 1.2 2007/03/07 10:51:51 poroxnenko Exp $
  */
 public interface WarehouseBatchHistoryServiceLocal extends
-		DataBusinessObjectService<StockBatchHistory, Integer> {
+    DataBusinessObjectService<StockBatchHistory, Integer> {
 
-	/**
-	 * Локальное имя сервиса
-	 */
-	static final String LOCAL_SERVICE_NAME = "merp/warehouse/WarehouseBatchHistory";
+  /**
+   * Локальное имя сервиса
+   */
+  static final String LOCAL_SERVICE_NAME = "merp/warehouse/WarehouseBatchHistory";
 }

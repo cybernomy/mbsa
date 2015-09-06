@@ -18,18 +18,18 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
  * Поисковик "Групп документов"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $Id: DocGroupSearchHelp.java,v 1.1 2007/01/13 13:26:39 sharapov Exp $
  */
 public class DocGroupSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {
-		return "merp/paymentalloc/DocGroup"; //$NON-NLS-1$
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/paymentalloc/DocGroup"; //$NON-NLS-1$
+  }
 
 }

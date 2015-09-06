@@ -19,17 +19,17 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
  * Контроллер формы поддержи "Образцов внутренних актов"
- * 
+ *
  * @author leonova
  * @version $Id: InternalActHeadModelMt.java,v 1.2 2007/05/22 08:19:30 sharapov Exp $
  */
 public class InternalActHeadModelMt extends DocumentModelMaintenanceForm {
-	
-	protected String[] contractorThroughKinds;
-	
-	public InternalActHeadModelMt() {
-		super();
-		contractorThroughKinds = new String[] {ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-	}
+
+  protected String[] contractorThroughKinds;
+
+  public InternalActHeadModelMt() {
+    super();
+    contractorThroughKinds = new String[]{ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+  }
 
 }

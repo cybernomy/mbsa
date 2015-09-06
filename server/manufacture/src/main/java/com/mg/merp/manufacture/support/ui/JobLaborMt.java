@@ -27,25 +27,25 @@ import com.mg.merp.mfreference.support.ui.CostDetailTableController;
  * @version $Id: JobLaborMt.java,v 1.5 2007/07/30 10:27:10 safonov Exp $
  */
 public class JobLaborMt extends DefaultMaintenanceForm implements MasterModelListener {
-	
-	private DefaultTableController stdDetailLine;
-	protected AttributeMap stdDetailLineProperties = new LocalDataTransferObject();
-	
-	private DefaultTableController actDetailLine;
-	protected AttributeMap actDetailLineProperties = new LocalDataTransferObject();
-	
-	public JobLaborMt() throws Exception {
-		stdDetailLine = new CostDetailTableController("StdCostDetail");
-		addMasterModelListener(stdDetailLine);
-		
-		actDetailLine = new CostDetailTableController("ActCostDetail");
-		addMasterModelListener(actDetailLine);
 
-		
-		addMasterModelListener(this);
-	}
-	public void masterChange(ModelChangeEvent event) {
-		stdDetailLineProperties.put("JobRoute", event.getEntity());
-		actDetailLineProperties.put("JobRoute", event.getEntity());		
-	}
+  protected AttributeMap stdDetailLineProperties = new LocalDataTransferObject();
+  protected AttributeMap actDetailLineProperties = new LocalDataTransferObject();
+  private DefaultTableController stdDetailLine;
+  private DefaultTableController actDetailLine;
+
+  public JobLaborMt() throws Exception {
+    stdDetailLine = new CostDetailTableController("StdCostDetail");
+    addMasterModelListener(stdDetailLine);
+
+    actDetailLine = new CostDetailTableController("ActCostDetail");
+    addMasterModelListener(actDetailLine);
+
+
+    addMasterModelListener(this);
+  }
+
+  public void masterChange(ModelChangeEvent event) {
+    stdDetailLineProperties.put("JobRoute", event.getEntity());
+    actDetailLineProperties.put("JobRoute", event.getEntity());
+  }
 }

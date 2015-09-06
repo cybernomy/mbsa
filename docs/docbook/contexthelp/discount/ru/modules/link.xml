@@ -14,27 +14,27 @@
 <!-- $Id: link.xml,v 1.2 2007/11/14 13:48:15 konyashkina Exp $ -->
 
 <link version="1.0">
-  
+
   <linkitem topic="card_links">
-    <linkentry target="discard_html" text="Сведения о карте" />
-    <linkentry target="carduser_html" text="Пользователи карты" />
-    <linkentry target="cardhist_html" text="История дисконтной карты" />
-    <linkentry target="discoeff_html" text="Коэффициенты" />
-    <linkentry target="extradisc_html" text="Дополнительные скидки" />
+    <linkentry target="discard_html" text="Сведения о карте"/>
+    <linkentry target="carduser_html" text="Пользователи карты"/>
+    <linkentry target="cardhist_html" text="История дисконтной карты"/>
+    <linkentry target="discoeff_html" text="Коэффициенты"/>
+    <linkentry target="extradisc_html" text="Дополнительные скидки"/>
   </linkitem>
-  
+
   <linkitem topic="discount_links">
-    <linkentry target="discount_html" text="Скидки/Наценки" />
+    <linkentry target="discount_html" text="Скидки/Наценки"/>
   </linkitem>
-  
+
   <linkitem topic="tax_links">
-    <linkentry target="globalcoeff_html" text="Коэффициенты скидок/наценок" />
+    <linkentry target="globalcoeff_html" text="Коэффициенты скидок/наценок"/>
   </linkitem>
-  
+
   <linkitem topic="promo_links">
-     <linkentry target="promotype_html" text="Типы рекламных мероприятий" />
-     <linkentry target="promomain_html" text="Рекламные мероприятия" />
-     <linkentry target="promoline_html" text="Позиции рекламных мероприятий" />
+    <linkentry target="promotype_html" text="Типы рекламных мероприятий"/>
+    <linkentry target="promomain_html" text="Рекламные мероприятия"/>
+    <linkentry target="promoline_html" text="Позиции рекламных мероприятий"/>
   </linkitem>
 
 </link>

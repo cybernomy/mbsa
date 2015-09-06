@@ -14,8 +14,6 @@
  */
 package com.mg.merp.baiengine.support.ui;
 
-import java.util.List;
-
 import com.mg.framework.api.orm.OrmTemplate;
 import com.mg.framework.api.orm.Restrictions;
 import com.mg.framework.api.ui.MasterModelListener;
@@ -35,86 +33,83 @@ import com.mg.merp.baiengine.model.CustomUserAction;
 import com.mg.merp.baiengine.model.CustomUserActionPermiss;
 import com.mg.merp.security.model.Groups;
 
+import java.util.List;
+
 /**
  * Контроллер формы поддержки настраиваемых действий
- * 
+ *
  * @author leonova
  * @version $Id: CustomUserActionMt.java,v 1.2 2007/11/15 09:57:04 safonov Exp $
  */
 public class CustomUserActionMt extends DefaultMaintenanceForm implements MasterModelListener {
-	private DefaultTableController permissions;
+  private DefaultTableController permissions;
 
-	public CustomUserActionMt() throws Exception {
-		setMasterDetail(true);
-		permissions = new DefaultTableController(new PermissionsModel());
-		addMasterModelListener(this);
-	}
+  public CustomUserActionMt() throws Exception {
+    setMasterDetail(true);
+    permissions = new DefaultTableController(new PermissionsModel());
+    addMasterModelListener(this);
+  }
 
-	private class PermissionsModel extends DefaultEntityListTableModel<CustomUserActionPermiss> {
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultMaintenanceForm#doSetDependentReadOnly(boolean)
+   */
+  @Override
+  protected void doSetDependentReadOnly(boolean readOnly) {
+    super.doSetDependentReadOnly(readOnly);
+    PopupMenu pm = view.getWidget("permissions").getPopupMenu();
+    pm.getMenuItem("grantPermission").setReadOnly(readOnly);
+    pm.getMenuItem("revokePermission").setReadOnly(readOnly);
+  }
 
-		/* (non-Javadoc)
-		 * @see com.mg.framework.generic.ui.AbstractTableModel#doLoad()
-		 */
-		@Override
-		protected void doLoad() {
-			List<CustomUserActionPermiss> list = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(CustomUserActionPermiss.class)
-					.add(Restrictions.eq("CustomUserAction", getEntity())));
-			setEntityList(list);
-		}
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.ui.MasterModelListener#masterChange(com.mg.framework.api.ui.ModelChangeEvent)
+   */
+  public void masterChange(ModelChangeEvent event) {
+    permissions.getModel().load();
+  }
 
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultMaintenanceForm#doSetDependentReadOnly(boolean)
-	 */
-	@Override
-	protected void doSetDependentReadOnly(boolean readOnly) {
-		super.doSetDependentReadOnly(readOnly);
-		PopupMenu pm = view.getWidget("permissions").getPopupMenu();
-		pm.getMenuItem("grantPermission").setReadOnly(readOnly);
-		pm.getMenuItem("revokePermission").setReadOnly(readOnly);
-	}
+  /**
+   * обработчик добавления прав на действие
+   */
+  public void onActionGrantPermission(WidgetEvent event) throws Exception {
+    SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.security.support.ui.SecGroupSearchHelp");
+    searchHelp.addSearchHelpListener(new SearchHelpListener() {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.ui.MasterModelListener#masterChange(com.mg.framework.api.ui.ModelChangeEvent)
-	 */
-	public void masterChange(ModelChangeEvent event) {
-		permissions.getModel().load();
-	}
+      public void searchCanceled(SearchHelpEvent event) {
+      }
 
-	/**
-	 * обработчик добавления прав на действие
-	 * 
-	 * @param event
-	 * @throws Exception
-	 */
-	public void onActionGrantPermission(WidgetEvent event) throws Exception {
-		SearchHelp searchHelp = SearchHelpProcessor.createSearch("com.mg.merp.security.support.ui.SecGroupSearchHelp");
-		searchHelp.addSearchHelpListener(new SearchHelpListener() {
+      public void searchPerformed(SearchHelpEvent event) {
+        ((CustomUserActionServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CustomUserActionServiceLocal.SERVICE_NAME))
+            .grantPermission(((CustomUserAction) getEntity()).getId(), ((Groups) event.getItems()[0]).getId());
+        permissions.getModel().load();
+      }
 
-			public void searchCanceled(SearchHelpEvent event) {
-			}
+    });
+    searchHelp.search();
+  }
 
-			public void searchPerformed(SearchHelpEvent event) {
-				((CustomUserActionServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CustomUserActionServiceLocal.SERVICE_NAME))
-						.grantPermission(((CustomUserAction) getEntity()).getId(), ((Groups) event.getItems()[0]).getId());
-				permissions.getModel().load();
-			}
-			
-		});
-		searchHelp.search();
-	}
+  /**
+   * обработчик удаления прав на действие
+   */
+  public void onActionRevokePermission(WidgetEvent event) {
+    CustomUserActionPermiss[] perms = ((PermissionsModel) permissions.getModel()).getSelectedEntities();
+    ((CustomUserActionServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CustomUserActionServiceLocal.SERVICE_NAME))
+        .revokePermission(perms);
+    permissions.getModel().load();
+  }
 
-	/**
-	 * обработчик удаления прав на действие
-	 * 
-	 * @param event
-	 */
-	public void onActionRevokePermission(WidgetEvent event) {
-		CustomUserActionPermiss[] perms = ((PermissionsModel) permissions.getModel()).getSelectedEntities();		
-		((CustomUserActionServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CustomUserActionServiceLocal.SERVICE_NAME))
-				.revokePermission(perms);
-		permissions.getModel().load();
-	}
+  private class PermissionsModel extends DefaultEntityListTableModel<CustomUserActionPermiss> {
+
+    /* (non-Javadoc)
+     * @see com.mg.framework.generic.ui.AbstractTableModel#doLoad()
+     */
+    @Override
+    protected void doLoad() {
+      List<CustomUserActionPermiss> list = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(CustomUserActionPermiss.class)
+          .add(Restrictions.eq("CustomUserAction", getEntity())));
+      setEntityList(list);
+    }
+
+  }
 
 }

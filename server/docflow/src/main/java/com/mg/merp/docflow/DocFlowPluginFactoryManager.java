@@ -16,32 +16,32 @@ package com.mg.merp.docflow;
 
 /**
  * Менеджер фабрик реализаций этапов ДО
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: DocFlowPluginFactoryManager.java,v 1.2 2007/01/29 13:55:40 safonov Exp $
  */
 public interface DocFlowPluginFactoryManager {
-	
-	/**
-	 * регистрация фабрики
-	 * 
-	 * @param pluginFactory	фабрика
-	 */
-	void registerPluginFactory(DocFlowPluginFactory pluginFactory);
-	
-	/**
-	 * удаление фабрики
-	 * 
-	 * @param pluginFactory	фабрика
-	 */
-	void unregisterPluginFactory(DocFlowPluginFactory pluginFactory);
-	
-	/**
-	 * поиск фабрики по идентификатору
-	 * 
-	 * @param identifier	идентификатор
-	 * @return	фабрика
-	 * @throws PluginNotImplementedException	если фабрика не найдена
-	 */
-	DocFlowPluginFactory findPluginFactory(int identifier) throws PluginNotImplementedException;
+
+  /**
+   * регистрация фабрики
+   *
+   * @param pluginFactory фабрика
+   */
+  void registerPluginFactory(DocFlowPluginFactory pluginFactory);
+
+  /**
+   * удаление фабрики
+   *
+   * @param pluginFactory фабрика
+   */
+  void unregisterPluginFactory(DocFlowPluginFactory pluginFactory);
+
+  /**
+   * поиск фабрики по идентификатору
+   *
+   * @param identifier идентификатор
+   * @return фабрика
+   * @throws PluginNotImplementedException если фабрика не найдена
+   */
+  DocFlowPluginFactory findPluginFactory(int identifier) throws PluginNotImplementedException;
 }

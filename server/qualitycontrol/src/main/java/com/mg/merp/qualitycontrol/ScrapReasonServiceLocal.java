@@ -17,12 +17,10 @@ package com.mg.merp.qualitycontrol;
 import com.mg.merp.qualitycontrol.model.ScrapReason;
 
 /**
- * 
  * @author leonova
  * @version $Id: ScrapReasonServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface ScrapReasonServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<ScrapReason, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<ScrapReason, Integer> {
 
 }

@@ -1,49 +1,49 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.paymentalloc.model.TransactHead" table="PMA_TRHEAD">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">PMA_TRHEAD_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="DocHead" class="com.mg.merp.document.model.DocHead">
-      <column name="DOCHEAD_ID" not-null="false" />
+      <column name="DOCHEAD_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Payment" class="com.mg.merp.paymentalloc.model.Payment">
-      <column name="PAYMENT_ID" not-null="false" />
+      <column name="PAYMENT_ID" not-null="false"/>
     </many-to-one>
     <property name="PDate" type="java.util.Date">
-      <column name="PDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="PDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="TotalSumCur" type="java.math.BigDecimal">
-      <column name="TOTALSUMCUR" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="TOTALSUMCUR" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="TotalSumNat" type="java.math.BigDecimal">
-      <column name="TOTALSUMNAT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="TOTALSUMNAT" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="AllocSumCur" type="java.math.BigDecimal">
-      <column name="ALLOCSUMCUR" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="ALLOCSUMCUR" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="AllocSumNat" type="java.math.BigDecimal">
-      <column name="ALLOCSUMNAT" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="ALLOCSUMNAT" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <set name="SetOfPmaTrspec">
       <key>
-        <column name="TRHEAD_ID" not-null="false" />
+        <column name="TRHEAD_ID" not-null="false"/>
       </key>
-      <one-to-many class="com.mg.merp.paymentalloc.model.TransactSpec" />
+      <one-to-many class="com.mg.merp.paymentalloc.model.TransactSpec"/>
     </set>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

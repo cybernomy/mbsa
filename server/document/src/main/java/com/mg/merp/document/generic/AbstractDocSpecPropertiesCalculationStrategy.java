@@ -18,28 +18,29 @@ import com.mg.merp.document.DocSpecPropertiesCalculationStrategy;
 
 /**
  * Базовая реализация стратегии расчета свойств спецификации документа
- * 
+ *
  * @author Artem V. Sharapov
- * @version $Id: AbstractDocSpecPropertiesCalculationStrategy.java,v 1.1 2007/10/30 14:26:47 sharapov Exp $
+ * @version $Id: AbstractDocSpecPropertiesCalculationStrategy.java,v 1.1 2007/10/30 14:26:47
+ *          sharapov Exp $
  */
 public abstract class AbstractDocSpecPropertiesCalculationStrategy implements DocSpecPropertiesCalculationStrategy {
-	
-	/**
-	 * реализация вычисления цен и сумм
-	 */
-	protected abstract void doAdjust();
-	
-	/**
-	 * реализация вычисления налогов
-	 */
-	protected abstract void doCalculateTaxes();
-	
-	/* (non-Javadoc)
-	 * @see com.mg.merp.retail.DocSpecPropertiesCalculationStrategy#adjust()
-	 */
-	public final void adjust() {
-		doAdjust();
-		doCalculateTaxes();
-	}
+
+  /**
+   * реализация вычисления цен и сумм
+   */
+  protected abstract void doAdjust();
+
+  /**
+   * реализация вычисления налогов
+   */
+  protected abstract void doCalculateTaxes();
+
+  /* (non-Javadoc)
+   * @see com.mg.merp.retail.DocSpecPropertiesCalculationStrategy#adjust()
+   */
+  public final void adjust() {
+    doAdjust();
+    doCalculateTaxes();
+  }
 
 }

@@ -13,24 +13,27 @@
 
 <!-- $Id: WorkCenterRatesMt.mfd.xml,v 1.5 2006/12/03 13:06:38 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.mfreference.resources.formelements#WorkCenter.NormRates" helpTopic="mfreference#wccostnorm_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.mfreference.resources.formelements#WorkCenter.NormRates"
+          helpTopic="mfreference#wccostnorm_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand" >
-		<jfd:border style="bevel" type="raised" />
-		
-		<jfd:field id="EffOnDate" /> 
-		<jfd:field id="EffOffDate" /> 
-		<jfd:field id="MchFohRate" /> 
-		<jfd:field id="MchVohRate" /> 
-	 	<jfd:field id="LbrRunRate" /> 
-		<jfd:field id="LbrSetupRate" />
-		<jfd:field id="LbrFohRate" />
-		<jfd:field id="LbrVohRate" />		
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />	
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtGridBag" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+    <jfd:field id="EffOnDate"/>
+    <jfd:field id="EffOffDate"/>
+    <jfd:field id="MchFohRate"/>
+    <jfd:field id="MchVohRate"/>
+    <jfd:field id="LbrRunRate"/>
+    <jfd:field id="LbrSetupRate"/>
+    <jfd:field id="LbrFohRate"/>
+    <jfd:field id="LbrVohRate"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

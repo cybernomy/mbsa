@@ -17,12 +17,10 @@ package com.mg.merp.reference;
 import com.mg.merp.reference.model.PriceType;
 
 /**
- * 
  * @author leonova
  * @version $Id: PriceTypeServiceLocal.java,v 1.1 2006/03/14 11:49:50 safonov Exp $
  */
 public interface PriceTypeServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<PriceType, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<PriceType, Integer> {
 
 }

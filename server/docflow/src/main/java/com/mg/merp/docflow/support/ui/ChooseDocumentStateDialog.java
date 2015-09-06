@@ -14,51 +14,51 @@
  */
 package com.mg.merp.docflow.support.ui;
 
-import java.util.List;
-
 import com.mg.framework.generic.ui.DefaultWizardDialog;
 import com.mg.framework.support.ui.widget.DefaultTableController;
 import com.mg.merp.docprocess.model.DocHeadState;
 
+import java.util.List;
+
 /**
  * TODO i18n
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ChooseDocumentStateDialog.java,v 1.5 2006/10/21 12:30:44 safonov Exp $
  */
 public class ChooseDocumentStateDialog extends DefaultWizardDialog {
-	private DefaultTableController statesList;
-	private int stateId;
+  private DefaultTableController statesList;
+  private int stateId;
 
-	public ChooseDocumentStateDialog() {
-		statesList = new DefaultTableController(new StateListModel());
-	}
-	
-	private class StateListModel extends DocActionHistoryController {
-		
-		/* (non-Javadoc)
-		 * @see com.mg.framework.support.ui.widget.TableControllerAdapter#setCurrentRow(int)
-		 */
-		public void setSelectedRows(int[] rows) {
-			if (rows.length != 0)
-				stateId = statesModel.get(rows[0]).getId();
-			else
-				stateId = 0;
-		}
-		
-	}
+  public ChooseDocumentStateDialog() {
+    statesList = new DefaultTableController(new StateListModel());
+  }
 
-	/**
-	 * @param statesList The statesList to set.
-	 */
-	public void setStatesList(List<DocHeadState> statesList) {
-		((StateListModel) this.statesList.getModel()).setStatesModel(statesList);
-	}
+  /**
+   * @param statesList The statesList to set.
+   */
+  public void setStatesList(List<DocHeadState> statesList) {
+    ((StateListModel) this.statesList.getModel()).setStatesModel(statesList);
+  }
 
-	/**
-	 * @return Returns the stateId.
-	 */
-	public int getStateId() {
-		return stateId;
-	}
+  /**
+   * @return Returns the stateId.
+   */
+  public int getStateId() {
+    return stateId;
+  }
+
+  private class StateListModel extends DocActionHistoryController {
+
+    /* (non-Javadoc)
+     * @see com.mg.framework.support.ui.widget.TableControllerAdapter#setCurrentRow(int)
+     */
+    public void setSelectedRows(int[] rows) {
+      if (rows.length != 0)
+        stateId = statesModel.get(rows[0]).getId();
+      else
+        stateId = 0;
+    }
+
+  }
 }

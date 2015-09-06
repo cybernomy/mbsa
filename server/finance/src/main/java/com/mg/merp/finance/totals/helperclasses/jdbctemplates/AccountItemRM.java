@@ -14,18 +14,19 @@
  */
 package com.mg.merp.finance.totals.helperclasses.jdbctemplates;
 
-import java.sql.*;
 import com.mg.framework.api.jdbc.RowMapper;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  * @author Valentin A. Poroxnenko
  * @version $Id: AccountItemRM.java,v 1.3 2006/07/05 09:06:30 poroxnenko Exp $
  */
-public class AccountItemRM implements RowMapper<AccountItem>
-{
+public class AccountItemRM implements RowMapper<AccountItem> {
 
-	public AccountItem mapRow(ResultSet rs, int rowNum) throws SQLException {
-		return new AccountItem(rs.getInt("id"), (rs.getString("upcode")).trim());
-	}
+  public AccountItem mapRow(ResultSet rs, int rowNum) throws SQLException {
+    return new AccountItem(rs.getInt("id"), (rs.getString("upcode")).trim());
+  }
 
 }

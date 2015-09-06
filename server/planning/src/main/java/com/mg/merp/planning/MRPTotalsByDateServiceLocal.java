@@ -18,12 +18,11 @@ import com.mg.merp.planning.model.MrpTotalsByDate;
 
 /**
  * Бизнес-компонент "Результаты расчета ППМ по дням"
- * 
+ *
  * @author leonova
  * @version $Id: MRPTotalsByDateServiceLocal.java,v 1.2 2007/07/30 10:37:51 safonov Exp $
  */
 public interface MRPTotalsByDateServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<MrpTotalsByDate, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<MrpTotalsByDate, Integer> {
 
 }

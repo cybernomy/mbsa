@@ -17,12 +17,10 @@ package com.mg.merp.crm;
 import com.mg.merp.crm.model.Branch;
 
 /**
- * 
  * @author leonova
  * @version $Id: BranchServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface BranchServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Branch, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Branch, Integer> {
 
 }

@@ -18,13 +18,13 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
  * @author leonova
- * @version $Id: PayRollSearchHelp.java,v 1.2 2006/07/10 12:03:43 leonova Exp $ 
+ * @version $Id: PayRollSearchHelp.java,v 1.2 2006/07/10 12:03:43 leonova Exp $
  */
 public class PayRollSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/salary/PayRoll";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/salary/PayRoll";
+  }
 
 }

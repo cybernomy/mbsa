@@ -11,10 +11,11 @@
 <!-- Millennium ERP system.                                                  -->
 
 <!-- $Id: OutputProductDocumentAttributeMacros.xml,v 1.2 2006/04/24 08:25:09 safonov Exp $ -->
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="outputProductDocument" layout="jfd:box" >
- 	<jfd:border style="etched"  title="resource://com.mg.merp.manufacture.resources.formelements#OutProdDoc.Attribute" /> 
-		<jfd:field id="DocType" showLabel="false" />
-<!--	<jfd:field id="DocType" showLabel="false" alignment="expand_expand"/>
-	<jfd:field id="DocNumber" showLabel="false" />			
-	<jfd:field id="DocDate" showLabel="false" alignment="expand_expand"/>	-->			
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="outputProductDocument" layout="jfd:box">
+  <jfd:border style="etched"
+              title="resource://com.mg.merp.manufacture.resources.formelements#OutProdDoc.Attribute"/>
+  <jfd:field id="DocType" showLabel="false"/>
+  <!--	<jfd:field id="DocType" showLabel="false" alignment="expand_expand"/>
+    <jfd:field id="DocNumber" showLabel="false" />
+    <jfd:field id="DocDate" showLabel="false" alignment="expand_expand"/>	-->
 </jfd:container>

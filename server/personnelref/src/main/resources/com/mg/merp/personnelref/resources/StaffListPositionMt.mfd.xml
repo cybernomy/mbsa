@@ -13,43 +13,51 @@
 
 <!-- $Id: StaffListPositionMt.mfd.xml,v 1.8 2007/08/31 14:37:36 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.personnelref.support.ui.StaffListPositionMt" title="resource://com.mg.merp.personnelref.resources.formelements#StaffListPosition.FormBr.Title" helpTopic="personnelref#staffpos_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.personnelref.support.ui.StaffListPositionMt"
+          title="resource://com.mg.merp.personnelref.resources.formelements#StaffListPosition.FormBr.Title"
+          helpTopic="personnelref#staffpos_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
-		<jfd:container id="commonFields" layout="jfd:defaultMtLayout" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Position.Tab.Total" >
-			<jfd:field id="Position" />		
-			<jfd:field id="SlPositionUniqueId" sameLine="true"/>						
-			<jfd:field id="BeginDate" />
-			<jfd:field id="EndDate" sameLine="true"/>	
-			<jfd:field id="WorkSchedule"/>							
-			<jfd:field id="TaxCalcKind" sameLine="true"/>					
-			<jfd:field id="StaffCategory"/>		
-			<jfd:field id="WorkCondition" sameLine="true"/>
-			<jfd:field id="RateNumber" text="resource://com.mg.merp.personnelref.resources.formelements#StaffListPosition.RateNumber"/>						
-			<jfd:field id="HolidayNumber" sameLine="true"/>	
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtLayout"
+                   tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Position.Tab.Total">
+      <jfd:field id="Position"/>
+      <jfd:field id="SlPositionUniqueId" sameLine="true"/>
+      <jfd:field id="BeginDate"/>
+      <jfd:field id="EndDate" sameLine="true"/>
+      <jfd:field id="WorkSchedule"/>
+      <jfd:field id="TaxCalcKind" sameLine="true"/>
+      <jfd:field id="StaffCategory"/>
+      <jfd:field id="WorkCondition" sameLine="true"/>
+      <jfd:field id="RateNumber"
+                 text="resource://com.mg.merp.personnelref.resources.formelements#StaffListPosition.RateNumber"/>
+      <jfd:field id="HolidayNumber" sameLine="true"/>
 
-			<jfd:container id="analitFields" layout="jfd:box" columns="1" label="resource://com.mg.merp.personnelref.resources.formelements#FeeRef.Analit">
-				<jfd:field id="CostsAnl1" showLabel="false"/>
-				<jfd:field id="CostsAnl2" showLabel="false"/>
-				<jfd:field id="CostsAnl3" showLabel="false"/>
-				<jfd:field id="CostsAnl4" showLabel="false"/>
-				<jfd:field id="CostsAnl5" showLabel="false"/>																
-			</jfd:container>				
+      <jfd:container id="analitFields" layout="jfd:box" columns="1"
+                     label="resource://com.mg.merp.personnelref.resources.formelements#FeeRef.Analit">
+        <jfd:field id="CostsAnl1" showLabel="false"/>
+        <jfd:field id="CostsAnl2" showLabel="false"/>
+        <jfd:field id="CostsAnl3" showLabel="false"/>
+        <jfd:field id="CostsAnl4" showLabel="false"/>
+        <jfd:field id="CostsAnl5" showLabel="false"/>
+      </jfd:container>
 
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-		
-		</jfd:container>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
 
-		<jfd:maintenanceTable id="positionFill" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Employees">
-		</jfd:maintenanceTable>
+    </jfd:container>
 
-		<jfd:maintenanceTable id="tariff" scroll="true" alignment="expand_expand" tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Position.Tab.Tariff">
-		</jfd:maintenanceTable>
+    <jfd:maintenanceTable id="positionFill" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Employees">
+    </jfd:maintenanceTable>
 
-	</jfd:container>
+    <jfd:maintenanceTable id="tariff" scroll="true" alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.personnelref.resources.formelements#Position.Tab.Tariff">
+    </jfd:maintenanceTable>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

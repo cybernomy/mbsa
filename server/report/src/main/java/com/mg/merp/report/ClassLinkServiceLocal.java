@@ -20,6 +20,6 @@ import com.mg.merp.report.model.ClassLink;
  * @author Valentin A. Poroxnenko
  * @version $Id: ClassLinkServiceLocal.java,v 1.2 2006/07/05 09:37:58 poroxnenko Exp $
  */
-public interface ClassLinkServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ClassLink, Integer>{
+public interface ClassLinkServiceLocal extends com.mg.framework.api.DataBusinessObjectService<ClassLink, Integer> {
 
 }

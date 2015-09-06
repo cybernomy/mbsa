@@ -18,16 +18,16 @@ import com.mg.merp.humanresources.model.OrderModel;
 
 /**
  * Сервис бизнес-компонента "Образцы приказов"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: OrderModelServiceLocal.java,v 1.3 2007/08/27 12:16:04 sharapov Exp $
  */
 public interface OrderModelServiceLocal extends com.mg.framework.api.DataBusinessObjectService<OrderModel, Integer> {
-	
-	/**
-	 * Имя сервиса
-	 */
-	final static String SERVICE_NAME = "merp/humanresources/OrderModel"; //$NON-NLS-1$
+
+  /**
+   * Имя сервиса
+   */
+  final static String SERVICE_NAME = "merp/humanresources/OrderModel"; //$NON-NLS-1$
 
 }

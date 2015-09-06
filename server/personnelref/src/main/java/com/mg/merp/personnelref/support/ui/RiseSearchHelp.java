@@ -22,9 +22,9 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class RiseSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {
-		return "merp/personnelref/Rise";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/personnelref/Rise";
+  }
 
 }

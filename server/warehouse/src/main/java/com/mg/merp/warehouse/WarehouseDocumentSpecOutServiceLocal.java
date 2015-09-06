@@ -17,12 +17,10 @@ package com.mg.merp.warehouse;
 import com.mg.merp.warehouse.model.StockDocumentSpec;
 
 /**
- * 
  * @author leonova
  * @version $Id: WarehouseDocumentSpecOutServiceLocal.java,v 1.2 2006/09/20 11:02:09 safonov Exp $
  */
 public interface WarehouseDocumentSpecOutServiceLocal
-   extends com.mg.merp.document.GoodsDocumentSpecification<StockDocumentSpec, Integer>
-{
+    extends com.mg.merp.document.GoodsDocumentSpecification<StockDocumentSpec, Integer> {
 
 }

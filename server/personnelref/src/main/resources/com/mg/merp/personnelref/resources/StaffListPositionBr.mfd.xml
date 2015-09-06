@@ -13,20 +13,22 @@
 
 <!-- $Id: StaffListPositionBr.mfd.xml,v 1.5 2006/12/29 09:28:35 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" type="browse" controller="com.mg.merp.personnelref.support.ui.StaffListPositionBr" title="resource://com.mg.merp.personnelref.resources.formelements#StaffListPosition.FormBr.Title" helpTopic="personnelref#staffpos_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" type="browse"
+          controller="com.mg.merp.personnelref.support.ui.StaffListPositionBr"
+          title="resource://com.mg.merp.personnelref.resources.formelements#StaffListPosition.FormBr.Title"
+          helpTopic="personnelref#staffpos_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml"/>
 
-	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
-		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true" >
-		</jfd:maintenanceTree>
-		<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
+  <jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+    <jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true">
+    </jfd:maintenanceTree>
+    <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
 
-		</jfd:maintenanceTable>
-	</jfd:container>
-	
+    </jfd:maintenanceTable>
+  </jfd:container>
 
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml"/>
 
 </jfd:form>

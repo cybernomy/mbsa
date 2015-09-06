@@ -1,52 +1,53 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-	<typedef name="com.mg.merp.warehouse.model.StockBatchHistoryKind" class="com.mg.framework.support.orm.EnumUserType">
-		<param name="enumClass">com.mg.merp.warehouse.model.StockBatchHistoryKind</param>
-	</typedef>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <typedef name="com.mg.merp.warehouse.model.StockBatchHistoryKind"
+           class="com.mg.framework.support.orm.EnumUserType">
+    <param name="enumClass">com.mg.merp.warehouse.model.StockBatchHistoryKind</param>
+  </typedef>
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.warehouse.model.StockBatchHistory" table="STOCKBATCHHISTORY">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">STOCKBATCHHISTORY_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="DocHead" class="com.mg.merp.document.model.DocHead">
-      <column name="DOCUMENT_ID" not-null="false" />
+      <column name="DOCUMENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="StockBatchHistory" class="com.mg.merp.warehouse.model.StockBatchHistory">
-      <column name="PREV_STOCKBATCHHIST_ID" not-null="false" />
+      <column name="PREV_STOCKBATCHHIST_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="DocSpec" class="com.mg.merp.document.model.DocSpec">
-      <column name="DOCUMENTSPEC_ID" not-null="false" />
+      <column name="DOCUMENTSPEC_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="StockBatch" class="com.mg.merp.warehouse.model.StockBatch">
-      <column name="STOCKBATCH_ID" not-null="false" />
+      <column name="STOCKBATCH_ID" not-null="false"/>
     </many-to-one>
     <property name="DateTime" type="java.util.Date">
-      <column name="DATETIME" not-null="false" sql-type="TIMESTAMP" />
+      <column name="DATETIME" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="Kind" type="com.mg.merp.warehouse.model.StockBatchHistoryKind">
-      <column name="KIND" not-null="true" sql-type="SMALLINT" />
+      <column name="KIND" not-null="true" sql-type="SMALLINT"/>
     </property>
     <property name="Quantity" type="java.math.BigDecimal">
-      <column name="QUANTITY" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="QUANTITY" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="ProcessDate" type="java.util.Date">
-      <column name="PROCESSDATE" not-null="false" sql-type="TIMESTAMP" />
+      <column name="PROCESSDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
     <property name="Quantity2" type="java.math.BigDecimal">
-      <column name="QUANTITY2" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="QUANTITY2" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

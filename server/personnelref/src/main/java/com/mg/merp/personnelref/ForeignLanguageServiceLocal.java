@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.ForeignLanguage;
 
 /**
- * 
  * @author leonova
  * @version $Id: ForeignLanguageServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface ForeignLanguageServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<ForeignLanguage, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<ForeignLanguage, Integer> {
 
 }

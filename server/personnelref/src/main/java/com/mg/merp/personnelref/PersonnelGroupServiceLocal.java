@@ -18,11 +18,11 @@ import com.mg.merp.personnelref.model.PersonnelGroup;
 
 /**
  * Бизнес-компонент "Папки анкетных данных сотрудников"
- * 
+ *
  * @author leonova
  * @version $Id: PersonnelGroupServiceLocal.java,v 1.2 2007/08/16 14:09:44 safonov Exp $
  */
 public interface PersonnelGroupServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<PersonnelGroup, Integer> {
+    extends com.mg.framework.api.DataBusinessObjectService<PersonnelGroup, Integer> {
 
 }

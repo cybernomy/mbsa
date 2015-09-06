@@ -18,19 +18,18 @@ import java.io.Serializable;
 
 /**
  * @author pashistova
- *
  */
 public class GroupItem implements Serializable {
-	public int key;
-	public String name;
-	
-	GroupItem() {
-		super();
-	}
-	
-	GroupItem(int key, String name) {
-		super();
-		this.key = key;
-		this.name = name;
-	}
+  public int key;
+  public String name;
+
+  GroupItem() {
+    super();
+  }
+
+  GroupItem(int key, String name) {
+    super();
+    this.key = key;
+    this.name = name;
+  }
 }

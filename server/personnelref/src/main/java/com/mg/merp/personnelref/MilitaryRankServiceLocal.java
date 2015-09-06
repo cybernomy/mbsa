@@ -17,12 +17,10 @@ package com.mg.merp.personnelref;
 import com.mg.merp.personnelref.model.MilitaryRank;
 
 /**
- * 
  * @author leonova
  * @version $Id: MilitaryRankServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface MilitaryRankServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<MilitaryRank, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<MilitaryRank, Integer> {
 
 }

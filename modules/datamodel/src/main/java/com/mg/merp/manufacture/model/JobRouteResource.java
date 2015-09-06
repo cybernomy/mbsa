@@ -21,177 +21,182 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: JobRouteResource.java,v 1.5 2006/09/09 09:36:29 leonova Exp $
  */
 public class JobRouteResource extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.mfreference.model.ResourceGroup ResourceGroup;
+  private com.mg.merp.mfreference.model.ResourceGroup ResourceGroup;
 
-	private com.mg.merp.mfreference.model.CostDetail ActCostDetail;
+  private com.mg.merp.mfreference.model.CostDetail ActCostDetail;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.mfreference.model.CostDetail StdCostDetail;
+  private com.mg.merp.mfreference.model.CostDetail StdCostDetail;
 
-	private com.mg.merp.manufacture.model.JobRoute Oper;
+  private com.mg.merp.manufacture.model.JobRoute Oper;
 
-	private java.lang.Short ResourceType;
+  private java.lang.Short ResourceType;
 
-	private java.lang.Integer TimeSequence;
+  private java.lang.Integer TimeSequence;
 
-	private java.util.Date EffOnDate;
+  private java.util.Date EffOnDate;
 
-	private java.util.Date EffOffDate;
+  private java.util.Date EffOffDate;
 
-	private java.lang.String Comment;
+  private java.lang.String Comment;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public JobRouteResource() {
-	}
+  /**
+   * default constructor
+   */
+  public JobRouteResource() {
+  }
 
-	/** constructor with id */
-	public JobRouteResource(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public JobRouteResource(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.JobRouteResource.ResourceGroup")
-	public com.mg.merp.mfreference.model.ResourceGroup getResourceGroup() {
-		return this.ResourceGroup;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public void setResourceGroup(
-			com.mg.merp.mfreference.model.ResourceGroup MfResourceGroup) {
-		this.ResourceGroup = MfResourceGroup;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.JobRouteResource.ResourceGroup")
+  public com.mg.merp.mfreference.model.ResourceGroup getResourceGroup() {
+    return this.ResourceGroup;
+  }
 
-	/**
-	 * 
-	 */
+  public void setResourceGroup(
+      com.mg.merp.mfreference.model.ResourceGroup MfResourceGroup) {
+    this.ResourceGroup = MfResourceGroup;
+  }
 
-	public com.mg.merp.mfreference.model.CostDetail getActCostDetail() {
-		return this.ActCostDetail;
-	}
+  /**
+   *
+   */
 
-	public void setActCostDetail(
-			com.mg.merp.mfreference.model.CostDetail MfCostDetail) {
-		this.ActCostDetail = MfCostDetail;
-	}
+  public com.mg.merp.mfreference.model.CostDetail getActCostDetail() {
+    return this.ActCostDetail;
+  }
 
-	/**
-	 * 
-	 */
+  public void setActCostDetail(
+      com.mg.merp.mfreference.model.CostDetail MfCostDetail) {
+    this.ActCostDetail = MfCostDetail;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public com.mg.merp.mfreference.model.CostDetail getStdCostDetail() {
-		return this.StdCostDetail;
-	}
+  /**
+   *
+   */
 
-	public void setStdCostDetail(
-			com.mg.merp.mfreference.model.CostDetail MfCostDetail_1) {
-		this.StdCostDetail = MfCostDetail_1;
-	}
+  public com.mg.merp.mfreference.model.CostDetail getStdCostDetail() {
+    return this.StdCostDetail;
+  }
 
-	/**
-	 * 
-	 */
+  public void setStdCostDetail(
+      com.mg.merp.mfreference.model.CostDetail MfCostDetail_1) {
+    this.StdCostDetail = MfCostDetail_1;
+  }
 
-	public com.mg.merp.manufacture.model.JobRoute getOper() {
-		return this.Oper;
-	}
+  /**
+   *
+   */
 
-	public void setOper(com.mg.merp.manufacture.model.JobRoute MfJobRoute) {
-		this.Oper = MfJobRoute;
-	}
+  public com.mg.merp.manufacture.model.JobRoute getOper() {
+    return this.Oper;
+  }
 
-	/**
-	 * 
-	 */
+  public void setOper(com.mg.merp.manufacture.model.JobRoute MfJobRoute) {
+    this.Oper = MfJobRoute;
+  }
 
-	public java.lang.Short getResourceType() {
-		return this.ResourceType;
-	}
+  /**
+   *
+   */
 
-	public void setResourceType(java.lang.Short ResourceType) {
-		this.ResourceType = ResourceType;
-	}
+  public java.lang.Short getResourceType() {
+    return this.ResourceType;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.JobRouteResource.TimeSequence")
-	public java.lang.Integer getTimeSequence() {
-		return this.TimeSequence;
-	}
+  public void setResourceType(java.lang.Short ResourceType) {
+    this.ResourceType = ResourceType;
+  }
 
-	public void setTimeSequence(java.lang.Integer TimeSequence) {
-		this.TimeSequence = TimeSequence;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.JobRouteResource.TimeSequence")
+  public java.lang.Integer getTimeSequence() {
+    return this.TimeSequence;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.JobRouteResource.EffOnDate")
-	public java.util.Date getEffOnDate() {
-		return this.EffOnDate;
-	}
+  public void setTimeSequence(java.lang.Integer TimeSequence) {
+    this.TimeSequence = TimeSequence;
+  }
 
-	public void setEffOnDate(java.util.Date EffOnDate) {
-		this.EffOnDate = EffOnDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.JobRouteResource.EffOnDate")
+  public java.util.Date getEffOnDate() {
+    return this.EffOnDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.JobRouteResource.EffOffDate")
-	public java.util.Date getEffOffDate() {
-		return this.EffOffDate;
-	}
+  public void setEffOnDate(java.util.Date EffOnDate) {
+    this.EffOnDate = EffOnDate;
+  }
 
-	public void setEffOffDate(java.util.Date EffOffDate) {
-		this.EffOffDate = EffOffDate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.JobRouteResource.EffOffDate")
+  public java.util.Date getEffOffDate() {
+    return this.EffOffDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Manufacture.JobRouteResource.Comment")
-	public java.lang.String getComment() {
-		return this.Comment;
-	}
+  public void setEffOffDate(java.util.Date EffOffDate) {
+    this.EffOffDate = EffOffDate;
+  }
 
-	public void setComment(java.lang.String Comment) {
-		this.Comment = Comment;
-	}
+  /**
+   *
+   */
+  @DataItemName("Manufacture.JobRouteResource.Comment")
+  public java.lang.String getComment() {
+    return this.Comment;
+  }
+
+  public void setComment(java.lang.String Comment) {
+    this.Comment = Comment;
+  }
 }

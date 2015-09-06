@@ -22,8 +22,8 @@ import java.util.EventListener;
  */
 public interface DocFlowListener extends EventListener {
 
-	public void performed(/*DocFlowEvent event*/);
-	
-	public void canceled(/*DocFlowEvent event*/);
-	
+  public void performed(/*DocFlowEvent event*/);
+
+  public void canceled(/*DocFlowEvent event*/);
+
 }

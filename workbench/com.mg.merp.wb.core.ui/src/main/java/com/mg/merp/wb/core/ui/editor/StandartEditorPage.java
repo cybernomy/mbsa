@@ -13,6 +13,8 @@
  */
 package com.mg.merp.wb.core.ui.editor;
 
+import com.mg.merp.wb.core.ui.UiPlugin;
+
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
@@ -30,138 +32,129 @@ import org.eclipse.ui.forms.widgets.FormToolkit;
 import org.eclipse.ui.forms.widgets.ScrolledForm;
 import org.eclipse.ui.forms.widgets.Section;
 
-import com.mg.merp.wb.core.ui.UiPlugin;
-
 /**
  * Содержание формы редактирования бизнес объекта
- * 
+ *
  * @author Valentin A. Poroxnenko
  * @version $Id: StandartEditorPage.java,v 1.2 2007/07/11 06:00:05 poroxnenko Exp $
  */
 public abstract class StandartEditorPage<T> extends FormPage {
 
-	protected FormToolkit toolkit;
+  public static final String REQUIRED_FIELD_COLOR = "requiredFieldColor";
+  protected static GridData commonGridData = new GridData();
+  protected static GridLayout commonGridLayout = new GridLayout();
 
-	protected ScrolledForm form;
+  static {
+    commonGridData.horizontalAlignment = GridData.FILL;
+    commonGridData.grabExcessHorizontalSpace = true;
+    commonGridData.verticalAlignment = GridData.CENTER;
 
-	/**
-	 * Форма редактирования
-	 */
-	protected FormEditor editor;
+    commonGridLayout.marginWidth = 1;
+    commonGridLayout.marginHeight = 1;
+    commonGridLayout.numColumns = 3;
+  }
 
-	protected static GridData commonGridData = new GridData();
+  protected FormToolkit toolkit;
+  protected ScrolledForm form;
+  /**
+   * Форма редактирования
+   */
+  protected FormEditor editor;
 
-	protected static GridLayout commonGridLayout = new GridLayout();
-	static {
-		commonGridData.horizontalAlignment = GridData.FILL;
-		commonGridData.grabExcessHorizontalSpace = true;
-		commonGridData.verticalAlignment = GridData.CENTER;
+  public StandartEditorPage(FormEditor editor) {
+    super(editor, "", "");
+    this.editor = editor;
+  }
 
-		commonGridLayout.marginWidth = 1;
-		commonGridLayout.marginHeight = 1;
-		commonGridLayout.numColumns = 3;
-	}
+  protected void createFormContent(IManagedForm managedForm) {
+    super.createFormContent(managedForm);
 
-	public static final String REQUIRED_FIELD_COLOR = "requiredFieldColor";
+    formContentPrecreating(((StandartEditorInput<T>) getEditorInput()).getData());
 
-	public StandartEditorPage(FormEditor editor) {
-		super(editor, "", "");
-		this.editor = editor;
-	}
+    form = managedForm.getForm();
+    toolkit = managedForm.getToolkit();
 
-	protected void createFormContent(IManagedForm managedForm) {
-		super.createFormContent(managedForm);
-		
-		formContentPrecreating(((StandartEditorInput<T>)getEditorInput()).getData());
-		
-		form = managedForm.getForm();
-		toolkit = managedForm.getToolkit();
+    toolkit.getColors().createColor(REQUIRED_FIELD_COLOR,
+        new RGB(255, 0, 0));
 
-		toolkit.getColors().createColor(REQUIRED_FIELD_COLOR,
-				new RGB(255, 0, 0));
+    form.setText(getEditorText());
 
-		form.setText(getEditorText());
+    Composite editorComposite = form.getBody();
+    editorComposite.setLayout(new GridLayout());
+    editorComposite.setLayoutData(new GridData(GridData.FILL_BOTH));
 
-		Composite editorComposite = form.getBody();
-		editorComposite.setLayout(new GridLayout());
-		editorComposite.setLayoutData(new GridData(GridData.FILL_BOTH));
+    createEditorArea(editorComposite);
+    createButtonSection(editorComposite);
+  }
 
-		createEditorArea(editorComposite);
-		createButtonSection(editorComposite);
-	}
+  private void createButtonSection(Composite parent) {
+    Section section = toolkit.createSection(parent,
+        ExpandableComposite.COMPACT);
+    section.setLayout(new GridLayout());
+    section.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
 
-	private void createButtonSection(Composite parent) {
-		Section section = toolkit.createSection(parent,
-				ExpandableComposite.COMPACT);
-		section.setLayout(new GridLayout());
-		section.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
+    Composite sectionClient = toolkit.createComposite(section);
+    section.setClient(sectionClient);
 
-		Composite sectionClient = toolkit.createComposite(section);
-		section.setClient(sectionClient);
+    GridLayout gridLayout = new GridLayout();
+    gridLayout.verticalSpacing = 1;
+    gridLayout.marginWidth = 7;
+    gridLayout.marginHeight = 1;
+    gridLayout.horizontalSpacing = 1;
+    gridLayout.numColumns = 3;
 
-		GridLayout gridLayout = new GridLayout();
-		gridLayout.verticalSpacing = 1;
-		gridLayout.marginWidth = 7;
-		gridLayout.marginHeight = 1;
-		gridLayout.horizontalSpacing = 1;
-		gridLayout.numColumns = 3;
+    sectionClient.setLayout(gridLayout);
 
-		sectionClient.setLayout(gridLayout);
+    Button bSave = toolkit.createButton(sectionClient, UiPlugin
+        .getDefault().getString(UiPlugin.BUTT_SAVE_TEXT), SWT.PUSH
+        | SWT.CENTER);
+    bSave.addSelectionListener(new SelectionAdapter() {
+      @Override
+      public void widgetSelected(SelectionEvent e) {
+        doOnSaveClick();
+      }
+    });
 
-		Button bSave = toolkit.createButton(sectionClient, UiPlugin
-				.getDefault().getString(UiPlugin.BUTT_SAVE_TEXT), SWT.PUSH
-				| SWT.CENTER);
-		bSave.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				doOnSaveClick();
-			}
-		});
+    // 1 Blank column
+    Label dummy = toolkit.createLabel(sectionClient, "");
+    GridData dummyLabelDataLayout = new GridData(
+        GridData.HORIZONTAL_ALIGN_CENTER);
+    dummyLabelDataLayout.horizontalSpan = 1;
+    dummyLabelDataLayout.widthHint = 30;
+    dummy.setLayoutData(dummyLabelDataLayout);
 
-		// 1 Blank column
-		Label dummy = toolkit.createLabel(sectionClient, "");
-		GridData dummyLabelDataLayout = new GridData(
-				GridData.HORIZONTAL_ALIGN_CENTER);
-		dummyLabelDataLayout.horizontalSpan = 1;
-		dummyLabelDataLayout.widthHint = 30;
-		dummy.setLayoutData(dummyLabelDataLayout);
+    Button bCancel = toolkit.createButton(sectionClient, UiPlugin
+        .getDefault().getString(UiPlugin.BUTT_CANCEL_TEXT), SWT.PUSH
+        | SWT.CENTER);
+    bCancel.addSelectionListener(new SelectionAdapter() {
+      @Override
+      public void widgetSelected(SelectionEvent e) {
+        editor.close(false);
+      }
+    });
 
-		Button bCancel = toolkit.createButton(sectionClient, UiPlugin
-				.getDefault().getString(UiPlugin.BUTT_CANCEL_TEXT), SWT.PUSH
-				| SWT.CENTER);
-		bCancel.addSelectionListener(new SelectionAdapter() {
-			@Override
-			public void widgetSelected(SelectionEvent e) {
-				editor.close(false);
-			}
-		});
+    toolkit.paintBordersFor(sectionClient);
+  }
 
-		toolkit.paintBordersFor(sectionClient);
-	}
+  /**
+   * Создание зоны редактировани
+   */
+  public abstract void createEditorArea(Composite parent);
 
-	/**
-	 * Создание зоны редактировани
-	 * 
-	 * @param parent
-	 */
-	public abstract void createEditorArea(Composite parent);
+  /**
+   * Обработчик события нажатия кнопки "Save"
+   */
+  public abstract void doOnSaveClick();
 
-	/**
-	 * Обработчик события нажатия кнопки "Save"
-	 * 
-	 */
-	public abstract void doOnSaveClick();
+  /**
+   * Заголовок формы редактирования
+   */
+  public abstract String getEditorText();
 
-	/**
-	 * Заголовок формы редактирования
-	 */
-	public abstract String getEditorText();
-	
-	/**
-	 * Инициализация формы редактирования
-	 * 
-	 * @param object
-	 * 			БК
-	 */
-	public abstract void formContentPrecreating(T object);
+  /**
+   * Инициализация формы редактирования
+   *
+   * @param object БК
+   */
+  public abstract void formContentPrecreating(T object);
 }

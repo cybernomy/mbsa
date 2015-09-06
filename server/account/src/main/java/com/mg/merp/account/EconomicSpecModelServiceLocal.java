@@ -17,12 +17,10 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.EconomicSpecModel;
 
 /**
- * 
  * @author leonova
  * @version $Id: EconomicSpecModelServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface EconomicSpecModelServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<EconomicSpecModel, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<EconomicSpecModel, Integer> {
 
 }

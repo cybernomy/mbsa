@@ -17,12 +17,10 @@ package com.mg.merp.salary;
 import com.mg.merp.personnelref.model.PersonalAccount;
 
 /**
- * 
  * @author leonova
  * @version $Id: StaffListPersonalAccountServiceLocal.java,v 1.2 2006/11/02 16:23:57 safonov Exp $
  */
 public interface StaffListPersonalAccountServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<PersonalAccount, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<PersonalAccount, Integer> {
 
 }

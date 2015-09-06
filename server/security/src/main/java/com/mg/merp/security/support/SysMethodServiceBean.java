@@ -15,18 +15,18 @@
 
 package com.mg.merp.security.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.core.model.SysMethod;
 import com.mg.merp.security.SysMethodServiceLocal;
+
+import javax.ejb.Stateless;
 
 /**
  * @author Oleg V. Safonov
  * @version $Id: SysMethodServiceBean.java,v 1.4 2007/02/24 14:20:52 safonov Exp $
  */
-@Stateless(name="merp/security/SysMethodService")
+@Stateless(name = "merp/security/SysMethodService")
 public class SysMethodServiceBean
-	extends AbstractPOJODataBusinessObjectServiceBean<SysMethod, Integer> implements SysMethodServiceLocal {
-	
+    extends AbstractPOJODataBusinessObjectServiceBean<SysMethod, Integer> implements SysMethodServiceLocal {
+
 }

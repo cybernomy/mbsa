@@ -18,15 +18,13 @@ import com.mg.merp.document.generic.ui.GoodsDocumentRest;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * 
  * @author leonova
  * @version $Id: WarehouseDocumentHeadOutRest.java,v 1.3 2006/12/20 13:15:51 leonova Exp $
- *
  */
-public class WarehouseDocumentHeadOutRest extends GoodsDocumentRest{
+public class WarehouseDocumentHeadOutRest extends GoodsDocumentRest {
 
-	public WarehouseDocumentHeadOutRest() {
-		contractorThroughKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
-	}
+  public WarehouseDocumentHeadOutRest() {
+    contractorThroughKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER, ContractorSearchForm.CONTRACTOR_EMPLOYEE};
+  }
 
 }

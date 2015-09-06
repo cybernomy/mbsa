@@ -16,81 +16,85 @@ package com.mg.merp.warehouse.model;
 
 /**
  * Модель бизнес-компонента "Конфигурация модуля <Склады, снабжение, сбыт>"
- * 
+ *
  * @author hbm2java
  * @author Artem V. Sharapov
  * @version $Id: WarehouseConfig.java,v 1.4 2007/01/13 13:35:22 sharapov Exp $
  */
 public class WarehouseConfig extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields    
+  // Fields
 
-	private int sysClientId;
-	private com.mg.merp.reference.model.Currency baseCurrency;
-	private com.mg.merp.reference.model.Currency natCurrency;
-	private com.mg.merp.reference.model.CurrencyRateType currencyRateType;
-	private com.mg.merp.reference.model.CurrencyRateAuthority currencyRateAuthority;
-	private java.lang.Integer currencyPrec;
+  private int sysClientId;
+  private com.mg.merp.reference.model.Currency baseCurrency;
+  private com.mg.merp.reference.model.Currency natCurrency;
+  private com.mg.merp.reference.model.CurrencyRateType currencyRateType;
+  private com.mg.merp.reference.model.CurrencyRateAuthority currencyRateAuthority;
+  private java.lang.Integer currencyPrec;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public WarehouseConfig() {
-	}
+  /**
+   * default constructor
+   */
+  public WarehouseConfig() {
+  }
 
-	/** constructor with id */
-	public WarehouseConfig(int sysClientId) {
-		this.sysClientId = sysClientId;
-	}
+  /**
+   * constructor with id
+   */
+  public WarehouseConfig(int sysClientId) {
+    this.sysClientId = sysClientId;
+  }
 
-	public com.mg.merp.reference.model.Currency getBaseCurrency() {
-		return baseCurrency;
-	}
+  public com.mg.merp.reference.model.Currency getBaseCurrency() {
+    return baseCurrency;
+  }
 
-	public void setBaseCurrency(com.mg.merp.reference.model.Currency baseCurrency) {
-		this.baseCurrency = baseCurrency;
-	}
+  public void setBaseCurrency(com.mg.merp.reference.model.Currency baseCurrency) {
+    this.baseCurrency = baseCurrency;
+  }
 
-	public java.lang.Integer getCurrencyPrec() {
-		return currencyPrec;
-	}
+  public java.lang.Integer getCurrencyPrec() {
+    return currencyPrec;
+  }
 
-	public void setCurrencyPrec(java.lang.Integer currencyPrec) {
-		this.currencyPrec = currencyPrec;
-	}
+  public void setCurrencyPrec(java.lang.Integer currencyPrec) {
+    this.currencyPrec = currencyPrec;
+  }
 
-	public com.mg.merp.reference.model.CurrencyRateAuthority getCurrencyRateAuthority() {
-		return currencyRateAuthority;
-	}
+  public com.mg.merp.reference.model.CurrencyRateAuthority getCurrencyRateAuthority() {
+    return currencyRateAuthority;
+  }
 
-	public void setCurrencyRateAuthority(
-			com.mg.merp.reference.model.CurrencyRateAuthority currencyRateAuthority) {
-		this.currencyRateAuthority = currencyRateAuthority;
-	}
+  public void setCurrencyRateAuthority(
+      com.mg.merp.reference.model.CurrencyRateAuthority currencyRateAuthority) {
+    this.currencyRateAuthority = currencyRateAuthority;
+  }
 
-	public com.mg.merp.reference.model.CurrencyRateType getCurrencyRateType() {
-		return currencyRateType;
-	}
+  public com.mg.merp.reference.model.CurrencyRateType getCurrencyRateType() {
+    return currencyRateType;
+  }
 
-	public void setCurrencyRateType(
-			com.mg.merp.reference.model.CurrencyRateType currencyRateType) {
-		this.currencyRateType = currencyRateType;
-	}
+  public void setCurrencyRateType(
+      com.mg.merp.reference.model.CurrencyRateType currencyRateType) {
+    this.currencyRateType = currencyRateType;
+  }
 
-	public com.mg.merp.reference.model.Currency getNatCurrency() {
-		return natCurrency;
-	}
+  public com.mg.merp.reference.model.Currency getNatCurrency() {
+    return natCurrency;
+  }
 
-	public void setNatCurrency(com.mg.merp.reference.model.Currency natCurrency) {
-		this.natCurrency = natCurrency;
-	}
+  public void setNatCurrency(com.mg.merp.reference.model.Currency natCurrency) {
+    this.natCurrency = natCurrency;
+  }
 
-	public int getSysClientId() {
-		return sysClientId;
-	}
+  public int getSysClientId() {
+    return sysClientId;
+  }
 
-	public void setSysClientId(int sysClientId) {
-		this.sysClientId = sysClientId;
-	}
+  public void setSysClientId(int sysClientId) {
+    this.sysClientId = sysClientId;
+  }
 
 }

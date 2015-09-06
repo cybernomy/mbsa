@@ -10,241 +10,332 @@
 <chapter id="ref005">
   <title>Партнёры</title>
 
-  	<para>Справочник &quot;Партнёры&quot; предназначен для хранения и использовании 
-	информации о  юридических и физических лицах, являющихся внешними для Вашей организации.</para>
-	
-	<para>Вход в справочник &quot;Партнёры&quot; осуществляется через главное 
-	меню системы:
-	<menuchoice>
-		<guimenu>&ref;</guimenu>
-		<guimenuitem>Партнёры</guimenuitem>
-	</menuchoice>.</para>
-	
-	<para>На экране появляется структурированный список партнёров.</para>
-	
-	<figure><title>Партнёры</title>
-	<mediaobject><imageobject>
-	<imagedata fileref="images/partners.gif"/>
-	</imageobject></mediaobject>
-	</figure>
-	
-	<para>Каждая запись о партнёре может содержать следующие данные: </para>
-	
-	<itemizedlist> 
-        	<listitem><link linkend="ref005_01">Основные данные</link></listitem>
-		<listitem><link linkend="ref005_02">Кредит</link></listitem>
-		<listitem><link linkend="ref005_03">Адрес</link></listitem>
-		<listitem><link linkend="ref005_04">Банковские счета</link></listitem>
-		<listitem><link linkend="ref005_05">Сотрудники партнёра</link></listitem>
-		<listitem><link linkend="ref005_06">Связи с сотрудниками</link></listitem> 
-	</itemizedlist>
+  <para>Справочник &quot;Партнёры&quot; предназначен для хранения и использовании
+    информации о юридических и физических лицах, являющихся внешними для Вашей организации.
+  </para>
 
-	<section id="ref005_01">
-	   <title>Закладка Партнёр</title>
-		
-		<screenshot><mediaobject><imageobject>
-		<imagedata fileref="images/partner_add.gif"/>
-		</imageobject></mediaobject></screenshot>
-		
-		<para><guibutton>Код</guibutton>. Краткое уникальное наименование партнёра 
-		в системе  (до 20 знаков).</para>
-		
-		<para><guibutton>Наименование</guibutton>. Полное наименование партнёра 
-		(это поле может содержать до 256 символов, включая пробелы).</para>
-		
-		<para><guibutton>ИНН</guibutton>. Идентификационный номер налогоплательщика.</para>
-		
-		<para><guibutton>КПП</guibutton>.  Код причины постановки на налоговый учёт. </para>
-		
-		<para><guibutton>ОКВЭД</guibutton>. Код из общероссийского  
-		классификатора видов экономической деятельности. </para>
-		
-		<para><guibutton>ОКПО</guibutton>. Код из общероссийского классификатора 
-		предприятий и организаций.</para>
-		
-		<para><guibutton>ОКОНХ</guibutton>. Код из общероссийского классификатора 
-		областей народного хозяйства (использовался до 2002 года). </para>
-		
-		<para><guibutton>Телефоны</guibutton>. В этом поле может быть список телефонов, с указанием 
-		кодов и видов телефонов. Вид телефона и код города можно не указывать, если  Вы уверены, 
-		что сможете без них обойтись.</para>
-		
-		<para><guibutton>Электронные адреса</guibutton>.  В этом поле может быть список электронных 
-		адресов с указанием вида протокола: e-mail, http, ftp, icq. 
-		При желании, вид адреса и протокол можно не указывать.</para>
-		
-		<para>В поле <guibutton>Комментарий</guibutton> может быть записана дополнительная 
-		информация  о партнёре. </para>
-		
-		<para><guibutton>Физическое лицо</guibutton>. Если партнёром является физическое лицо, 
-		то Вы можете выбрать данные этого человека из справочника 
-		&quot;<link linkend="ref046">Физические лица</link>&quot;.</para>
-	</section>
-	
-	<section id="ref005_02">
-	   <title>Закладка Кредит</title>
-		
-		<para><guibutton>Товарный кредит поставщика</guibutton>. В случае, если партнёр выступает 
-		в качестве поставщика для предприятия, для него можно указать: <guibutton>сумму</guibutton> 
-		товарного кредита, <guibutton>валюту</guibutton> расчётов по товарному кредиту, 
-		<guibutton>срок консигнации</guibutton> (в днях), <guibutton>процент пени</guibutton> 
-		или штрафа. </para>
-		
-		<para><guibutton>Товарный кредит покупателя</guibutton>. В случае, если партнёр выступает 
-		в качестве покупателя для предприятия, для него можно указать: <guibutton>сумму</guibutton> 
-		товарного кредита, <guibutton>валюту</guibutton> расчётов по товарному кредиту, 
-		<guibutton>срок консигнации</guibutton> (в днях), <guibutton>процент пени</guibutton> 
-		или штрафа.</para>
-		
-	</section>
-	
-	<section id="ref005_03">
-	   <title>Адрес партнёра</title>
-	   
-		<para>Юридический и почтовый адреса партнёра записываются на соответствующих закладках. </para>
-		
-		<screenshot><mediaobject><imageobject>
-		<imagedata fileref="images/partner_address.gif"/>
-		</imageobject></mediaobject></screenshot>
-		
-		<para><guibutton>Почтовый адрес</guibutton>.</para>
-		
-		<para><guibutton>Индекс</guibutton>. Из справочника &quot;<link linkend="ref051_05">Почтовые 
-		индексы</link>&quot; выбирается нужный индекс. Поскольку каждому индексу соответствуют страна, 
-		регион, район и населённый пункт, - эти поля заполняются автоматически.</para>
-		
-		<para>Рядом находятся кнопки &quot;<guibutton>Найти</guibutton>&quot; и 
-		&quot;<guibutton>Новый</guibutton>&quot;. Они становятся активными, когда Вы установили 
-		курсор в поле <guibutton>Индекс</guibutton> и начали набирать значение (первые цифры 
-		или буквы индекса).
-		Кнопка &quot;<guibutton>Найти</guibutton>&quot; поможет найти среди уже существующих 
-		значений индекс, содержащий набранные Вами символы.
-		Кнопка &quot;<guibutton>Новый</guibutton>&quot; запишет 
-		<link linkend="ref051_05">новый индекс</link>, состоящий из 
-		набранных Вами символов; но для этого необходимо заполнить расположенные ниже поля: 
-		&quot;<guibutton>Страна</guibutton>&quot;, &quot;<guibutton>Регион</guibutton>&quot;, 
-		&quot;<guibutton>Район</guibutton>&quot;, &quot;<guibutton>Населённый пункт</guibutton>&quot;. 
-		Значения этих полей будут соответствовать записанному новому индексу. </para>
-		
-		<para>Если индекс не указан, то значения 
-		полей &quot;<link linkend="ref051_01">Страна</link>&quot;, 
-		&quot;<link linkend="ref051_02">Регион</link>&quot;, 
-		&quot;<link linkend="ref051_03">Район</link>&quot; 
-		и &quot;<link linkend="ref051_04">Населённый пункт</link>&quot; выбираются 
-		из соответствующих справочников.</para>
-		
-		<para>Поля &quot;<guibutton>Улица</guibutton>&quot;, &quot;<guibutton>Дом</guibutton>&quot;, 
-		&quot;<guibutton>Строение</guibutton>&quot;, 
-		&quot;<guibutton>Помещение</guibutton>&quot; заполняются вручную.</para>
-		
-		<para>После заполнения нужных полей нажмите кнопку 
-		&quot;<guibutton>Обновить</guibutton>&quot;.</para>
-		
-		<para>Юридический адрес заполняется аналогично почтовому.</para>
-		
-	</section>
-	
-	<section id="ref005_04">
-	   <title>Банковские счета партнёра</title>
-	 
-		<para>У каждого партнёра может быть несколько расчётных счетов, открытых 
-		в разных банках. Поэтому в системе &merp; у каждого партнёра может быть 
-		несколько банковских счетов. </para>
-		
-		<para>На одном из банковских счетов устанавливается признак &quot;По умолчанию&quot;. 
-		Банковский счёт, имеющий такой признак, всегда по умолчанию вносится в документ. 
-		При необходимости, в документе можно проставить другой банковский счёт. </para>
-		
-		<figure>
-		<title>Банковский счёт</title>
-		<mediaobject><imageobject>
-		<imagedata fileref="images/bankaccount.gif"/>
-		</imageobject></mediaobject>
-		</figure>
-		
-		<para><guibutton>Наименование</guibutton>. Наименование данного счёта партнёра.</para>
-		
-		<para><guibutton>Тип счёта</guibutton>. Тип счёта (расчётный, депозит и пр.). 
-		Выбирается из справочника 
-		&quot;<link linkend="ref052_02">Типы счетов</link>&quot; </para>
-		    
-		<para><guibutton>Номер счёта </guibutton>. Номер счёта в указанном ниже банке.</para>
-		
-		<para><guibutton>Валюта счёта</guibutton>. Валюта данного счёта. </para>
-		
-		<para><guibutton>По умолчанию</guibutton>. Данный признак может быть установлен только 
-		для одной записи на этой закладке. Счёт, для которого установлен этот признак, будет 
-		автоматически подставляться в документы при выборе этого партнёра. При необходимости, 
-		в документе Вы сможете выбрать другие банковские счета этого партнёра.</para>
-		
-		<para><guibutton>Банк</guibutton>. Наименование банка выбирается из справочника 
-		&quot;<link linkend="ref052_01">Банки</link>&quot;. 
-		Автоматически при установлении этого значения подставляются значения и в остальные 
-		поля: Отделение, БИК, SWIFT, IBAN, BSC, Корреспондентский счёт, Валюта корр. счёта.</para>
-		 
-	</section>
-	
-	<section id="ref005_05">
-	   <title>Сотрудники партнёра</title>
-	   
-	   	<para>В этом окне представлен список сотрудников партнёра, которые участвуют 
-		или будут участвовать в расчётах с данным партнёрам. Данные по сотрудникам партнёра 
-		можно использовать при выписке документов и при печати отчётов. </para>
-		
-		<screenshot><mediaobject><imageobject>
-		<imagedata fileref="images/partner_empl.gif"/>
-		</imageobject></mediaobject></screenshot>
-		
-	<!--	<para><guibutton>Код (ФИО)</guibutton>. Код сотрудника партнёра. Обычно это 
-		фамилия и инициалы.</para> -->
-		
-		<para><guibutton>Физическое лицо</guibutton>. Данные из справочника &quot;Физические лица&quot;. 
-		В поле отображаются фамилия, имя, отчество сотрудника партнёра.</para>
-		
-		<para><guibutton>Должность.</guibutton> Должность сотрудника партнёра.</para>
-	   
-	</section>
-	
-	<section id="ref005_06">
-	   <title>Связи с сотрудниками</title>
-	 
-		<para>В этой закладке представлен список сотрудников Вашего предприятия, 
-		которые отвечают за связи с этим партнёром. </para>
-		
-		<figure>
-		<title>Связь с сотрудниками</title>
-		<mediaobject><imageobject>
-		<imagedata fileref="images/partner_relation.gif"/>
-		</imageobject></mediaobject>
-		</figure>
-		
-		<para><guibutton>Ответственный сотрудник</guibutton>. Выберите запись из 
-		справочника &quot;<link linkend="ref004_02">Сотрудники</link>&quot;. </para>
-		
-		<para>Можно указать <guibutton>даты начала</guibutton> и <guibutton>окончания 
-		работы</guibutton> каждого ответственного сотрудника с этим партнёром. </para>
-		
-		<para>Если сотрудник является ответственным за связь с каким-либо партнёром 
-		предприятия, это также можно записать на закладке &quot;<guibutton>Связи с 
-		партнёрами</guibutton>&quot; 
-		в справочнике &quot;<link linkend="ref004_02">Сотрудники</link>&quot;.
-		Запись, сделанная из справочника &quot;Партнёры&quot;, будет видна и в справочнике 
-		&quot;<link linkend="ref004_02">Сотрудники</link>&quot;, и наоборот.</para>
-	   
-	</section>
-	
-  	<section id="ref005_07">
-	   <title>Пользовательские поля</title>
-	   
-	   <para>Кроме описанных полей, могут быть так называемые &quot;пользовательские поля&quot;, 
-	   которые настраиваются администратором системы. Пользовательские поля могут использоваться для 
-	   классификации, отличной от задаваемой папками; могут использоваться при написании отчётов. </para>
-		
-	   <para>Например, необходимо проанализировать сектор сбыта продукции в разрезе 
-	   организаций, занимающихся различными видами деятельности. В этом случае 
-	   поле будет называться &quot;Вид деятельности&quot; и при записи выбранного вида 
-	   деятельности будет предлагаться список возможных вариантов, например: &quot;Строительство&quot;, 
-	   &quot;Оптовая торговля&quot;, &quot;Производство&quot; и т.д.</para>
-		
-	</section>   
+  <para>Вход в справочник &quot;Партнёры&quot; осуществляется через главное
+    меню системы:
+    <menuchoice>
+      <guimenu>&ref;</guimenu>
+      <guimenuitem>Партнёры</guimenuitem>
+    </menuchoice>
+    .
+  </para>
+
+  <para>На экране появляется структурированный список партнёров.</para>
+
+  <figure>
+    <title>Партнёры</title>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/partners.gif"/>
+      </imageobject>
+    </mediaobject>
+  </figure>
+
+  <para>Каждая запись о партнёре может содержать следующие данные:</para>
+
+  <itemizedlist>
+    <listitem>
+      <link linkend="ref005_01">Основные данные</link>
+    </listitem>
+    <listitem>
+      <link linkend="ref005_02">Кредит</link>
+    </listitem>
+    <listitem>
+      <link linkend="ref005_03">Адрес</link>
+    </listitem>
+    <listitem>
+      <link linkend="ref005_04">Банковские счета</link>
+    </listitem>
+    <listitem>
+      <link linkend="ref005_05">Сотрудники партнёра</link>
+    </listitem>
+    <listitem>
+      <link linkend="ref005_06">Связи с сотрудниками</link>
+    </listitem>
+  </itemizedlist>
+
+  <section id="ref005_01">
+    <title>Закладка Партнёр</title>
+
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/partner_add.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <para><guibutton>Код</guibutton>. Краткое уникальное наименование партнёра
+      в системе (до 20 знаков).
+    </para>
+
+    <para><guibutton>Наименование</guibutton>. Полное наименование партнёра
+      (это поле может содержать до 256 символов, включая пробелы).
+    </para>
+
+    <para><guibutton>ИНН</guibutton>. Идентификационный номер налогоплательщика.
+    </para>
+
+    <para><guibutton>КПП</guibutton>. Код причины постановки на налоговый учёт.
+    </para>
+
+    <para><guibutton>ОКВЭД</guibutton>. Код из общероссийского
+      классификатора видов экономической деятельности.
+    </para>
+
+    <para><guibutton>ОКПО</guibutton>. Код из общероссийского классификатора
+      предприятий и организаций.
+    </para>
+
+    <para><guibutton>ОКОНХ</guibutton>. Код из общероссийского классификатора
+      областей народного хозяйства (использовался до 2002 года).
+    </para>
+
+    <para><guibutton>Телефоны</guibutton>. В этом поле может быть список телефонов, с указанием
+      кодов и видов телефонов. Вид телефона и код города можно не указывать, если Вы уверены,
+      что сможете без них обойтись.
+    </para>
+
+    <para><guibutton>Электронные адреса</guibutton>. В этом поле может быть список электронных
+      адресов с указанием вида протокола: e-mail, http, ftp, icq.
+      При желании, вид адреса и протокол можно не указывать.
+    </para>
+
+    <para>В поле
+      <guibutton>Комментарий</guibutton>
+      может быть записана дополнительная
+      информация о партнёре.
+    </para>
+
+    <para><guibutton>Физическое лицо</guibutton>. Если партнёром является физическое лицо,
+      то Вы можете выбрать данные этого человека из справочника
+      &quot;<link linkend="ref046">Физические лица</link>&quot;.
+    </para>
+  </section>
+
+  <section id="ref005_02">
+    <title>Закладка Кредит</title>
+
+    <para><guibutton>Товарный кредит поставщика</guibutton>. В случае, если партнёр выступает
+      в качестве поставщика для предприятия, для него можно указать:
+      <guibutton>сумму</guibutton>
+      товарного кредита,
+      <guibutton>валюту</guibutton>
+      расчётов по товарному кредиту,
+      <guibutton>срок консигнации</guibutton>
+      (в днях),
+      <guibutton>процент пени</guibutton>
+      или штрафа.
+    </para>
+
+    <para><guibutton>Товарный кредит покупателя</guibutton>. В случае, если партнёр выступает
+      в качестве покупателя для предприятия, для него можно указать:
+      <guibutton>сумму</guibutton>
+      товарного кредита,
+      <guibutton>валюту</guibutton>
+      расчётов по товарному кредиту,
+      <guibutton>срок консигнации</guibutton>
+      (в днях),
+      <guibutton>процент пени</guibutton>
+      или штрафа.
+    </para>
+
+  </section>
+
+  <section id="ref005_03">
+    <title>Адрес партнёра</title>
+
+    <para>Юридический и почтовый адреса партнёра записываются на соответствующих закладках.</para>
+
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/partner_address.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <para><guibutton>Почтовый адрес</guibutton>.
+    </para>
+
+    <para><guibutton>Индекс</guibutton>. Из справочника &quot;<link linkend="ref051_05">Почтовые
+      индексы</link>&quot; выбирается нужный индекс. Поскольку каждому индексу соответствуют страна,
+      регион, район и населённый пункт, - эти поля заполняются автоматически.
+    </para>
+
+    <para>Рядом находятся кнопки &quot;<guibutton>Найти</guibutton>&quot; и
+      &quot;<guibutton>Новый</guibutton>&quot;. Они становятся активными, когда Вы установили
+      курсор в поле
+      <guibutton>Индекс</guibutton>
+      и начали набирать значение (первые цифры
+      или буквы индекса).
+      Кнопка &quot;<guibutton>Найти</guibutton>&quot; поможет найти среди уже существующих
+      значений индекс, содержащий набранные Вами символы.
+      Кнопка &quot;<guibutton>Новый</guibutton>&quot; запишет
+      <link linkend="ref051_05">новый индекс</link>, состоящий из
+      набранных Вами символов; но для этого необходимо заполнить расположенные ниже поля:
+      &quot;<guibutton>Страна</guibutton>&quot;, &quot;<guibutton>Регион</guibutton>&quot;,
+      &quot;<guibutton>Район</guibutton>&quot;, &quot;<guibutton>Населённый пункт</guibutton>&quot;.
+      Значения этих полей будут соответствовать записанному новому индексу.
+    </para>
+
+    <para>Если индекс не указан, то значения
+      полей &quot;<link linkend="ref051_01">Страна</link>&quot;,
+      &quot;<link linkend="ref051_02">Регион</link>&quot;,
+      &quot;<link linkend="ref051_03">Район</link>&quot;
+      и &quot;<link linkend="ref051_04">Населённый пункт</link>&quot; выбираются
+      из соответствующих справочников.
+    </para>
+
+    <para>Поля &quot;<guibutton>Улица</guibutton>&quot;, &quot;<guibutton>Дом</guibutton>&quot;,
+      &quot;<guibutton>Строение</guibutton>&quot;,
+      &quot;<guibutton>Помещение</guibutton>&quot; заполняются вручную.
+    </para>
+
+    <para>После заполнения нужных полей нажмите кнопку
+      &quot;<guibutton>Обновить</guibutton>&quot;.
+    </para>
+
+    <para>Юридический адрес заполняется аналогично почтовому.</para>
+
+  </section>
+
+  <section id="ref005_04">
+    <title>Банковские счета партнёра</title>
+
+    <para>У каждого партнёра может быть несколько расчётных счетов, открытых
+      в разных банках. Поэтому в системе &merp; у каждого партнёра может быть
+      несколько банковских счетов.
+    </para>
+
+    <para>На одном из банковских счетов устанавливается признак &quot;По умолчанию&quot;.
+      Банковский счёт, имеющий такой признак, всегда по умолчанию вносится в документ.
+      При необходимости, в документе можно проставить другой банковский счёт.
+    </para>
+
+    <figure>
+      <title>Банковский счёт</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/bankaccount.gif"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <para><guibutton>Наименование</guibutton>. Наименование данного счёта партнёра.
+    </para>
+
+    <para><guibutton>Тип счёта</guibutton>. Тип счёта (расчётный, депозит и пр.).
+      Выбирается из справочника
+      &quot;<link linkend="ref052_02">Типы счетов</link>&quot;
+    </para>
+
+    <para><guibutton>Номер счёта</guibutton>. Номер счёта в указанном ниже банке.
+    </para>
+
+    <para><guibutton>Валюта счёта</guibutton>. Валюта данного счёта.
+    </para>
+
+    <para><guibutton>По умолчанию</guibutton>. Данный признак может быть установлен только
+      для одной записи на этой закладке. Счёт, для которого установлен этот признак, будет
+      автоматически подставляться в документы при выборе этого партнёра. При необходимости,
+      в документе Вы сможете выбрать другие банковские счета этого партнёра.
+    </para>
+
+    <para><guibutton>Банк</guibutton>. Наименование банка выбирается из справочника
+      &quot;<link linkend="ref052_01">Банки</link>&quot;.
+      Автоматически при установлении этого значения подставляются значения и в остальные
+      поля: Отделение, БИК, SWIFT, IBAN, BSC, Корреспондентский счёт, Валюта корр. счёта.
+    </para>
+
+  </section>
+
+  <section id="ref005_05">
+    <title>Сотрудники партнёра</title>
+
+    <para>В этом окне представлен список сотрудников партнёра, которые участвуют
+      или будут участвовать в расчётах с данным партнёрам. Данные по сотрудникам партнёра
+      можно использовать при выписке документов и при печати отчётов.
+    </para>
+
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/partner_empl.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+
+    <!--	<para><guibutton>Код (ФИО)</guibutton>. Код сотрудника партнёра. Обычно это
+      фамилия и инициалы.</para> -->
+
+    <para><guibutton>Физическое лицо</guibutton>. Данные из справочника &quot;Физические лица&quot;.
+      В поле отображаются фамилия, имя, отчество сотрудника партнёра.
+    </para>
+
+    <para>
+      <guibutton>Должность.</guibutton>
+      Должность сотрудника партнёра.
+    </para>
+
+  </section>
+
+  <section id="ref005_06">
+    <title>Связи с сотрудниками</title>
+
+    <para>В этой закладке представлен список сотрудников Вашего предприятия,
+      которые отвечают за связи с этим партнёром.
+    </para>
+
+    <figure>
+      <title>Связь с сотрудниками</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/partner_relation.gif"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+
+    <para><guibutton>Ответственный сотрудник</guibutton>. Выберите запись из
+      справочника &quot;<link linkend="ref004_02">Сотрудники</link>&quot;.
+    </para>
+
+    <para>Можно указать
+      <guibutton>даты начала</guibutton>
+      и
+      <guibutton>окончания
+        работы
+      </guibutton>
+      каждого ответственного сотрудника с этим партнёром.
+    </para>
+
+    <para>Если сотрудник является ответственным за связь с каким-либо партнёром
+      предприятия, это также можно записать на закладке &quot;<guibutton>Связи с
+        партнёрами</guibutton>&quot;
+      в справочнике &quot;<link linkend="ref004_02">Сотрудники</link>&quot;.
+      Запись, сделанная из справочника &quot;Партнёры&quot;, будет видна и в справочнике
+      &quot;<link linkend="ref004_02">Сотрудники</link>&quot;, и наоборот.
+    </para>
+
+  </section>
+
+  <section id="ref005_07">
+    <title>Пользовательские поля</title>
+
+    <para>Кроме описанных полей, могут быть так называемые &quot;пользовательские поля&quot;,
+      которые настраиваются администратором системы. Пользовательские поля могут использоваться для
+      классификации, отличной от задаваемой папками; могут использоваться при написании отчётов.
+    </para>
+
+    <para>Например, необходимо проанализировать сектор сбыта продукции в разрезе
+      организаций, занимающихся различными видами деятельности. В этом случае
+      поле будет называться &quot;Вид деятельности&quot; и при записи выбранного вида
+      деятельности будет предлагаться список возможных вариантов, например: &quot;Строительство&quot;,
+      &quot;Оптовая торговля&quot;, &quot;Производство&quot; и т.д.
+    </para>
+
+  </section>
 </chapter>

@@ -14,20 +14,26 @@
  */
 package com.mg.framework.api.metadata;
 
-import java.util.List;
-
 import com.mg.framework.api.ApplicationException;
+
+import java.util.List;
 
 /**
  * @author Oleg V. Safonov
  * @version $Id: Entity.java,v 1.1 2006/01/24 13:45:28 safonov Exp $
  */
 public interface Entity {
-    public String getName() throws ApplicationException;
-    public String getDescription() throws ApplicationException;
-    public String getPersistentName() throws ApplicationException;
-    public Entity getSuperEntity() throws ApplicationException;
-    public EntityAttribute getAttribute(String name) throws ApplicationException;
-    public List<EntityAttribute> getAttributes(List<String> names) throws ApplicationException;
-    public List<EntityAttribute> getAllAttributes() throws ApplicationException;
+  public String getName() throws ApplicationException;
+
+  public String getDescription() throws ApplicationException;
+
+  public String getPersistentName() throws ApplicationException;
+
+  public Entity getSuperEntity() throws ApplicationException;
+
+  public EntityAttribute getAttribute(String name) throws ApplicationException;
+
+  public List<EntityAttribute> getAttributes(List<String> names) throws ApplicationException;
+
+  public List<EntityAttribute> getAllAttributes() throws ApplicationException;
 }

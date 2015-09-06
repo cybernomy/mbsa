@@ -18,15 +18,14 @@ import java.util.EventListener;
 
 /**
  * слушатель модели дерева
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: TreeModelListener.java,v 1.3 2006/06/26 11:47:21 safonov Exp $
  */
 public interface TreeModelListener extends EventListener {
-	
-	/**
-	 * срабатывает в случае радикального изменения структуры модели дерева
-	 *
-	 */
-	void treeStructureChanged();
+
+  /**
+   * срабатывает в случае радикального изменения структуры модели дерева
+   */
+  void treeStructureChanged();
 }

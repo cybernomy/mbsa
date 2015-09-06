@@ -13,23 +13,28 @@
 
 <!-- $Id: AddressLegalMacros.xml,v 1.6 2007/09/05 14:12:32 alikaev Exp $ -->
 
-<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="zipLegalFields" alignment="expand_top" layout="jfd:box" columns="1" tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.Address.Legal.Title" >
-	<jfd:container id="zipFields1" layout="jfd:box" columns="4" alignment="expand_expand" >
-		<jfd:field id="ZipCode1" alignment="expand_expand" searchHelp="com.mg.merp.reference.support.ui.ZipCodePartnerSearchHelp"/>
-		<!--jfd:button id="FindPost" text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.Find"/> 				
-		<jfd:button id="NewPost" sameLine="true" text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.New"/--> 				
-		<jfd:field id="Country1" horizontalSpan="3" alignment="expand_expand"/>
-		<jfd:field id="District1" horizontalSpan="3" alignment="expand_expand"/>
-		<jfd:field id="Region1" horizontalSpan="3" alignment="expand_expand"/>
-		<jfd:field id="Place1" horizontalSpan="3" alignment="expand_expand"/>	 
-	</jfd:container>	
-	<jfd:container id="placePostFields1" layout="jfd:box"  columns="4" alignment="expand_expand" >
-		<jfd:field id="Street1" alignment="expand_top" horizontalSpan="3" />		
-		<jfd:field id="House1" />			
-		<jfd:field id="Building1" alignment="expand_expand"/>			
-		<jfd:field id="Room1" />	
-		<jfd:button id="RefreshPost1" alignment="expand_top" horizontalSpan="3" text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.Refresh" actionListener="BuildAddressLegal"/> 				
-	</jfd:container>		
-	<jfd:field id="AddressLegal" alignment="expand_expand" readOnly="true"/>		
+<jfd:container xmlns:jfd="http://xmlns.m-g.ru/jet/ui" id="zipLegalFields" alignment="expand_top"
+               layout="jfd:box" columns="1"
+               tabTitle="resource://com.mg.merp.reference.resources.formelements#Partner.Address.Legal.Title">
+  <jfd:container id="zipFields1" layout="jfd:box" columns="4" alignment="expand_expand">
+    <jfd:field id="ZipCode1" alignment="expand_expand"
+               searchHelp="com.mg.merp.reference.support.ui.ZipCodePartnerSearchHelp"/>
+    <!--jfd:button id="FindPost" text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.Find"/>
+    <jfd:button id="NewPost" sameLine="true" text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.New"/-->
+    <jfd:field id="Country1" horizontalSpan="3" alignment="expand_expand"/>
+    <jfd:field id="District1" horizontalSpan="3" alignment="expand_expand"/>
+    <jfd:field id="Region1" horizontalSpan="3" alignment="expand_expand"/>
+    <jfd:field id="Place1" horizontalSpan="3" alignment="expand_expand"/>
+  </jfd:container>
+  <jfd:container id="placePostFields1" layout="jfd:box" columns="4" alignment="expand_expand">
+    <jfd:field id="Street1" alignment="expand_top" horizontalSpan="3"/>
+    <jfd:field id="House1"/>
+    <jfd:field id="Building1" alignment="expand_expand"/>
+    <jfd:field id="Room1"/>
+    <jfd:button id="RefreshPost1" alignment="expand_top" horizontalSpan="3"
+                text="resource://com.mg.merp.reference.resources.dataitemlabels#NatPers.Button.Refresh"
+                actionListener="BuildAddressLegal"/>
+  </jfd:container>
+  <jfd:field id="AddressLegal" alignment="expand_expand" readOnly="true"/>
 </jfd:container>
 

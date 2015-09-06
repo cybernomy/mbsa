@@ -18,195 +18,199 @@ import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Модель бизнес-компонента "Спецификации норм выдачи спецодежды"
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: NormSpec.java,v 1.5 2008/06/30 04:15:16 alikaev Exp $
  */
 public class NormSpec extends com.mg.framework.service.PersistentObjectHibernate implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private int Id;
+  private int Id;
 
-	private com.mg.merp.overall.model.NormHead OvrNormHead;
+  private com.mg.merp.overall.model.NormHead OvrNormHead;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String OvrNormSpecName;
+  private java.lang.String OvrNormSpecName;
 
-	private java.lang.String MeasureUpCode;
+  private java.lang.String MeasureUpCode;
 
-	private CatalogGroupsType CatalogGroupsTypeId;
+  private CatalogGroupsType CatalogGroupsTypeId;
 
-	private java.math.BigDecimal ShelfLife;
+  private java.math.BigDecimal ShelfLife;
 
-	private com.mg.merp.reference.model.TimePeriodKind ShelfLifeMeas;
+  private com.mg.merp.reference.model.TimePeriodKind ShelfLifeMeas;
 
-	private BasicNormKind IsBasic;
+  private BasicNormKind IsBasic;
 
-	private PeriodicNormKind IsPeriodic;
+  private PeriodicNormKind IsPeriodic;
 
-	private boolean IsDinch;
+  private boolean IsDinch;
 
-	private java.lang.String DinchFormula;
+  private java.lang.String DinchFormula;
 
-	private java.lang.String DocName;
+  private java.lang.String DocName;
 
-	private java.math.BigDecimal Quantity;
+  private java.math.BigDecimal Quantity;
 
-	private java.util.Set<NormSpecDocSpecLink> normSpecDocSpecLinks;
+  private java.util.Set<NormSpecDocSpecLink> normSpecDocSpecLinks;
 
-	private java.util.Set<NormSpecLink> normSpecLinks;
+  private java.util.Set<NormSpecLink> normSpecLinks;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public NormSpec() {
-	}
+  /**
+   * default constructor
+   */
+  public NormSpec() {
+  }
 
-	/** constructor with id */
-	public NormSpec(int Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public NormSpec(int Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	
-	@DataItemName("ID")
-	public int getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(int Id) {
-		this.Id = Id;
-	}
+  @DataItemName("ID")
+  public int getId() {
+    return this.Id;
+  }
 
-	public com.mg.merp.overall.model.NormHead getOvrNormHead() {
-		return this.OvrNormHead;
-	}
+  public void setId(int Id) {
+    this.Id = Id;
+  }
 
-	public void setOvrNormHead(com.mg.merp.overall.model.NormHead OvrNormHead) {
-		this.OvrNormHead = OvrNormHead;
-	}
+  public com.mg.merp.overall.model.NormHead getOvrNormHead() {
+    return this.OvrNormHead;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  public void setOvrNormHead(com.mg.merp.overall.model.NormHead OvrNormHead) {
+    this.OvrNormHead = OvrNormHead;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	@DataItemName("Overall.Spec.Name")
-	public java.lang.String getOvrNormSpecName() {
-		return this.OvrNormSpecName;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setOvrNormSpecName(java.lang.String OvrNormSpecName) {
-		this.OvrNormSpecName = OvrNormSpecName;
-	}
+  @DataItemName("Overall.Spec.Name")
+  public java.lang.String getOvrNormSpecName() {
+    return this.OvrNormSpecName;
+  }
 
-	@DataItemName("Overall.Spec.MeasureUpCode")
-	public java.lang.String getMeasureUpCode() {
-		return this.MeasureUpCode;
-	}
+  public void setOvrNormSpecName(java.lang.String OvrNormSpecName) {
+    this.OvrNormSpecName = OvrNormSpecName;
+  }
 
-	public void setMeasureUpCode(java.lang.String MeasureUpcode) {
-		this.MeasureUpCode = MeasureUpcode;
-	}
+  @DataItemName("Overall.Spec.MeasureUpCode")
+  public java.lang.String getMeasureUpCode() {
+    return this.MeasureUpCode;
+  }
 
-	public CatalogGroupsType getCatalogGroupsTypeId() {
-		return this.CatalogGroupsTypeId;
-	}
+  public void setMeasureUpCode(java.lang.String MeasureUpcode) {
+    this.MeasureUpCode = MeasureUpcode;
+  }
 
-	public void setCatalogGroupsTypeId(CatalogGroupsType CatalogGroupsTypeId) {
-		this.CatalogGroupsTypeId = CatalogGroupsTypeId;
-	}
+  public CatalogGroupsType getCatalogGroupsTypeId() {
+    return this.CatalogGroupsTypeId;
+  }
 
-	@DataItemName("Overall.Spec.Shelflife")
-	public java.math.BigDecimal getShelfLife() {
-		return this.ShelfLife;
-	}
+  public void setCatalogGroupsTypeId(CatalogGroupsType CatalogGroupsTypeId) {
+    this.CatalogGroupsTypeId = CatalogGroupsTypeId;
+  }
 
-	public void setShelfLife(java.math.BigDecimal Shelflife) {
-		this.ShelfLife = Shelflife;
-	}
+  @DataItemName("Overall.Spec.Shelflife")
+  public java.math.BigDecimal getShelfLife() {
+    return this.ShelfLife;
+  }
 
-	@DataItemName("Overall.Spec.ShelfLifeMeas")
-	public com.mg.merp.reference.model.TimePeriodKind getShelfLifeMeas() {
-		return this.ShelfLifeMeas;
-	}
+  public void setShelfLife(java.math.BigDecimal Shelflife) {
+    this.ShelfLife = Shelflife;
+  }
 
-	public void setShelfLifeMeas(
-			com.mg.merp.reference.model.TimePeriodKind ShelflifeMeas) {
-		this.ShelfLifeMeas = ShelflifeMeas;
-	}
+  @DataItemName("Overall.Spec.ShelfLifeMeas")
+  public com.mg.merp.reference.model.TimePeriodKind getShelfLifeMeas() {
+    return this.ShelfLifeMeas;
+  }
 
-	public BasicNormKind getIsBasic() {
-		return this.IsBasic;
-	}
+  public void setShelfLifeMeas(
+      com.mg.merp.reference.model.TimePeriodKind ShelflifeMeas) {
+    this.ShelfLifeMeas = ShelflifeMeas;
+  }
 
-	public void setIsBasic(BasicNormKind Isbasic) {
-		this.IsBasic = Isbasic;
-	}
+  public BasicNormKind getIsBasic() {
+    return this.IsBasic;
+  }
 
-	public PeriodicNormKind getIsPeriodic() {
-		return this.IsPeriodic;
-	}
+  public void setIsBasic(BasicNormKind Isbasic) {
+    this.IsBasic = Isbasic;
+  }
 
-	public void setIsPeriodic(PeriodicNormKind Isperiodic) {
-		this.IsPeriodic = Isperiodic;
-	}
+  public PeriodicNormKind getIsPeriodic() {
+    return this.IsPeriodic;
+  }
 
-	@DataItemName("Overall.Spec.IsDinch")
-	public boolean getIsDinch() {
-		return this.IsDinch;
-	}
+  public void setIsPeriodic(PeriodicNormKind Isperiodic) {
+    this.IsPeriodic = Isperiodic;
+  }
 
-	public void setIsDinch(boolean Isdinch) {
-		this.IsDinch = Isdinch;
-	}
+  @DataItemName("Overall.Spec.IsDinch")
+  public boolean getIsDinch() {
+    return this.IsDinch;
+  }
 
-	@DataItemName("Overall.Spec.DinchFormula")
-	public java.lang.String getDinchFormula() {
-		return this.DinchFormula;
-	}
+  public void setIsDinch(boolean Isdinch) {
+    this.IsDinch = Isdinch;
+  }
 
-	public void setDinchFormula(java.lang.String DinchFormula) {
-		this.DinchFormula = DinchFormula;
-	}
+  @DataItemName("Overall.Spec.DinchFormula")
+  public java.lang.String getDinchFormula() {
+    return this.DinchFormula;
+  }
 
-	@DataItemName("Overall.Spec.DocName")
-	public java.lang.String getDocName() {
-		return this.DocName;
-	}
+  public void setDinchFormula(java.lang.String DinchFormula) {
+    this.DinchFormula = DinchFormula;
+  }
 
-	public void setDocName(java.lang.String DocName) {
-		this.DocName = DocName;
-	}
+  @DataItemName("Overall.Spec.DocName")
+  public java.lang.String getDocName() {
+    return this.DocName;
+  }
 
-	@DataItemName("Overall.Spec.Quantity")
-	public java.math.BigDecimal getQuantity() {
-		return this.Quantity;
-	}
+  public void setDocName(java.lang.String DocName) {
+    this.DocName = DocName;
+  }
 
-	public void setQuantity(java.math.BigDecimal Quantity) {
-		this.Quantity = Quantity;
-	}
+  @DataItemName("Overall.Spec.Quantity")
+  public java.math.BigDecimal getQuantity() {
+    return this.Quantity;
+  }
 
-	public java.util.Set<NormSpecDocSpecLink> getNormSpecDocSpecLinks() {
-		return this.normSpecDocSpecLinks;
-	}
+  public void setQuantity(java.math.BigDecimal Quantity) {
+    this.Quantity = Quantity;
+  }
 
-	public void setNormSpecDocSpecLinks(java.util.Set<NormSpecDocSpecLink> normSpecDocSpecLinks) {
-		this.normSpecDocSpecLinks = normSpecDocSpecLinks;
-	}
+  public java.util.Set<NormSpecDocSpecLink> getNormSpecDocSpecLinks() {
+    return this.normSpecDocSpecLinks;
+  }
 
-	public java.util.Set<NormSpecLink> getNormSpecLinks() {
-		return this.normSpecLinks;
-	}
+  public void setNormSpecDocSpecLinks(java.util.Set<NormSpecDocSpecLink> normSpecDocSpecLinks) {
+    this.normSpecDocSpecLinks = normSpecDocSpecLinks;
+  }
 
-	public void setNormSpecLinks(java.util.Set<NormSpecLink> normSpecLinks) {
-		this.normSpecLinks = normSpecLinks;
-	}
+  public java.util.Set<NormSpecLink> getNormSpecLinks() {
+    return this.normSpecLinks;
+  }
+
+  public void setNormSpecLinks(java.util.Set<NormSpecLink> normSpecLinks) {
+    this.normSpecLinks = normSpecLinks;
+  }
 
 }

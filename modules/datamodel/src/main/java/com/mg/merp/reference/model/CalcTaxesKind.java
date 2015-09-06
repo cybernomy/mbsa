@@ -22,91 +22,96 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.CalcTaxesKind")
 public class CalcTaxesKind extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String KName;
+  private java.lang.String KName;
 
-	private java.util.Set<com.mg.merp.reference.model.CalcTaxesLink> taxLinks;
+  private java.util.Set<com.mg.merp.reference.model.CalcTaxesLink> taxLinks;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public CalcTaxesKind() {
-	}
+  /**
+   * default constructor
+   */
+  public CalcTaxesKind() {
+  }
 
-	/** constructor with id */
-	public CalcTaxesKind(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public CalcTaxesKind(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Code")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Code")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Name")
-	public java.lang.String getKName() {
-		return this.KName;
-	}
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	public void setKName(java.lang.String KName) {
-		this.KName = KName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Name")
+  public java.lang.String getKName() {
+    return this.KName;
+  }
 
-	/**
-	 * 
-	 */
+  public void setKName(java.lang.String KName) {
+    this.KName = KName;
+  }
 
-	public java.util.Set<com.mg.merp.reference.model.CalcTaxesLink> getTaxLinks() {
-		return this.taxLinks;
-	}
+  /**
+   *
+   */
 
-	public void setTaxLinks(java.util.Set<com.mg.merp.reference.model.CalcTaxesLink> SetOfCalcTaxesLink) {
-		this.taxLinks = SetOfCalcTaxesLink;
-	}
+  public java.util.Set<com.mg.merp.reference.model.CalcTaxesLink> getTaxLinks() {
+    return this.taxLinks;
+  }
+
+  public void setTaxLinks(java.util.Set<com.mg.merp.reference.model.CalcTaxesLink> SetOfCalcTaxesLink) {
+    this.taxLinks = SetOfCalcTaxesLink;
+  }
 
 }

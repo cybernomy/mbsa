@@ -13,10 +13,16 @@
 
 <!-- $Id: DocTypePermissionsForm.mfd.xml,v 1.1 2007/11/20 14:51:06 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5" controller="com.mg.merp.document.support.ui.DocTypePermissionsForm" title="resource://com.mg.merp.document.resources.formelements#DocTypePermissionsForm.Title">
-	<jfd:shuttle id="permissions" alignment="expand_expand" leadingHeader="resource://com.mg.merp.document.resources.formelements#DocTypePermissionsForm.NotPerm" trailingHeader="resource://com.mg.merp.document.resources.formelements#DocTypePermissionsForm.Perm" />
-	<jfd:container id="buttons" layout="jfd:box" alignment="expand_bottom">
-		<jfd:filler id="buttonsFiller" alignment="expand_top" type="horizontalGlue" />
-		<jfd:button id="OkButton" alignment="right_top" text="resource://com.mg.framework.resources.messages#CloseButton" actionListener="Ok" />
-	</jfd:container>
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="5"
+          controller="com.mg.merp.document.support.ui.DocTypePermissionsForm"
+          title="resource://com.mg.merp.document.resources.formelements#DocTypePermissionsForm.Title">
+  <jfd:shuttle id="permissions" alignment="expand_expand"
+               leadingHeader="resource://com.mg.merp.document.resources.formelements#DocTypePermissionsForm.NotPerm"
+               trailingHeader="resource://com.mg.merp.document.resources.formelements#DocTypePermissionsForm.Perm"/>
+  <jfd:container id="buttons" layout="jfd:box" alignment="expand_bottom">
+    <jfd:filler id="buttonsFiller" alignment="expand_top" type="horizontalGlue"/>
+    <jfd:button id="OkButton" alignment="right_top"
+                text="resource://com.mg.framework.resources.messages#CloseButton"
+                actionListener="Ok"/>
+  </jfd:container>
 </jfd:form>

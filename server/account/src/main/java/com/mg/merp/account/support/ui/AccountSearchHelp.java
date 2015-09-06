@@ -21,10 +21,10 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  * @version $Id: AccountSearchHelp.java,v 1.2 2006/07/10 12:13:16 leonova Exp $
  */
 public class AccountSearchHelp extends DefaultLegacySearchHelp {
-	
-	@Override
-	protected String getServiceName() {		
-		return "merp/account/Account";
-	}
+
+  @Override
+  protected String getServiceName() {
+    return "merp/account/Account";
+  }
 }
 

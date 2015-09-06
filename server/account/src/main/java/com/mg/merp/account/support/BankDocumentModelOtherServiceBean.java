@@ -15,30 +15,29 @@
 
 package com.mg.merp.account.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.merp.account.BankDocumentModelOtherServiceLocal;
 import com.mg.merp.account.BankDocumentOtherServiceLocal;
 import com.mg.merp.account.model.BankDocumentModel;
 import com.mg.merp.document.generic.DocumentModelServiceBean;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Образцы прочих банковских документов" 
- * 
+ * Бизнес-компонент "Образцы прочих банковских документов"
+ *
  * @author leonova
  * @version $Id: BankDocumentModelOtherServiceBean.java,v 1.3 2006/09/12 11:16:43 leonova Exp $
  */
-@Stateless(name="merp/account/BankDocumentModelOtherService")
+@Stateless(name = "merp/account/BankDocumentModelOtherService")
 public class BankDocumentModelOtherServiceBean extends DocumentModelServiceBean<BankDocumentModel, Integer> implements BankDocumentModelOtherServiceLocal {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
-	 */
-	@Override
-	protected short getDocSectionIdentifier() {
-		return BankDocumentOtherServiceLocal.DOCSECTION;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.document.generic.DocumentModelServiceBean#getDocSectionIdentifier()
+   */
+  @Override
+  protected short getDocSectionIdentifier() {
+    return BankDocumentOtherServiceLocal.DOCSECTION;
+  }
 
- 
 
 }

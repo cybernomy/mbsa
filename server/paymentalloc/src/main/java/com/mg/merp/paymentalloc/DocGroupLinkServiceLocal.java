@@ -18,16 +18,16 @@ import com.mg.merp.paymentalloc.model.DocGroupLink;
 
 /**
  * Бизнес-компонент "Типы документов в группах"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: DocGroupLinkServiceLocal.java,v 1.2 2007/11/08 06:49:11 sharapov Exp $
  */
 public interface DocGroupLinkServiceLocal extends com.mg.framework.api.DataBusinessObjectService<DocGroupLink, Integer> {
-	
-	/**
-	 * Имя сервиса
-	 */
-	static final String SERVICE_NAME = "merp/paymentalloc/DocGroupLink"; //$NON-NLS-1$
-	
+
+  /**
+   * Имя сервиса
+   */
+  static final String SERVICE_NAME = "merp/paymentalloc/DocGroupLink"; //$NON-NLS-1$
+
 }

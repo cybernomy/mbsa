@@ -14,9 +14,9 @@
  */
 package com.mg.merp.reference.model;
 
-import java.util.Set;
-
 import com.mg.framework.api.annotations.DataItemName;
+
+import java.util.Set;
 
 /**
  * @author hbm2java
@@ -24,93 +24,98 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("Reference.TaxGroup")
 public class TaxGroup extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String Code;
+  private java.lang.String Code;
 
-	private java.lang.String TgName;
+  private java.lang.String TgName;
 
-	private Set<com.mg.merp.reference.model.TaxLink> taxLinks;
-	
-	// Constructors
+  private Set<com.mg.merp.reference.model.TaxLink> taxLinks;
 
-	/** default constructor */
-	public TaxGroup() {
-	}
+  // Constructors
 
-	/** constructor with id */
-	public TaxGroup(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * default constructor
+   */
+  public TaxGroup() {
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  /**
+   * constructor with id
+   */
+  public TaxGroup(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  // Property accessors
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  /**
+   *
+   */
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Tax.Code")
-	public java.lang.String getCode() {
-		return this.Code;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	public void setCode(java.lang.String Code) {
-		this.Code = Code;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Reference.Tax.Name")
-	public java.lang.String getTgName() {
-		return this.TgName;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Tax.Code")
+  public java.lang.String getCode() {
+    return this.Code;
+  }
 
-	public void setTgName(java.lang.String TgName) {
-		this.TgName = TgName;
-	}
+  public void setCode(java.lang.String Code) {
+    this.Code = Code;
+  }
 
-	/**
-	 * @return Returns the taxLinks.
-	 */
-	public Set<com.mg.merp.reference.model.TaxLink> getTaxLinks() {
-		return taxLinks;
-	}
+  /**
+   *
+   */
+  @DataItemName("Reference.Tax.Name")
+  public java.lang.String getTgName() {
+    return this.TgName;
+  }
 
-	/**
-	 * @param taxLinks The taxLinks to set.
-	 */
-	public void setTaxLinks(Set<com.mg.merp.reference.model.TaxLink> taxLinks) {
-		this.taxLinks = taxLinks;
-	}
+  public void setTgName(java.lang.String TgName) {
+    this.TgName = TgName;
+  }
+
+  /**
+   * @return Returns the taxLinks.
+   */
+  public Set<com.mg.merp.reference.model.TaxLink> getTaxLinks() {
+    return taxLinks;
+  }
+
+  /**
+   * @param taxLinks The taxLinks to set.
+   */
+  public void setTaxLinks(Set<com.mg.merp.reference.model.TaxLink> taxLinks) {
+    this.taxLinks = taxLinks;
+  }
 
 }

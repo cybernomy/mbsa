@@ -1,136 +1,140 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-<!-- 
-        Auto-generated mapping file from
-        the hibernate.org cfg2hbm engine
--->
+  <!--
+          Auto-generated mapping file from
+          the hibernate.org cfg2hbm engine
+  -->
   <class name="com.mg.merp.mfreference.model.WorkCenter" table="MF_WORK_CENTER">
     <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
     <id name="Id" type="java.lang.Integer">
-      <column name="ID" not-null="false" unique="true" sql-type="INTEGER" />
+      <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
         <param name="sequence">MF_WORK_CENTER_ID_GEN</param>
       </generator>
     </id>
     <many-to-one name="ActCostDetail" class="com.mg.merp.mfreference.model.CostDetail">
-      <column name="ACT_COST_DETAIL_ID" not-null="false" />
+      <column name="ACT_COST_DETAIL_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="WeekCal" class="com.mg.merp.mfreference.model.WeekCalendar">
-      <column name="WEEK_CAL_ID" not-null="false" />
+      <column name="WEEK_CAL_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-      <column name="CLIENT_ID" not-null="false" />
+      <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="StdCostDetail" class="com.mg.merp.mfreference.model.CostDetail">
-      <column name="STD_COST_DETAIL_ID" not-null="false" />
+      <column name="STD_COST_DETAIL_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Cell" class="com.mg.merp.mfreference.model.Cell">
-      <column name="CELL_ID" not-null="false" />
+      <column name="CELL_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="Contractor" class="com.mg.merp.reference.model.Contractor">
-      <column name="CONTRACTOR_ID" not-null="false" />
+      <column name="CONTRACTOR_ID" not-null="false"/>
     </many-to-one>
     <many-to-one name="ResourceGroup" class="com.mg.merp.mfreference.model.ResourceGroup">
-      <column name="RESOURCE_GROUP_ID" not-null="false" />
+      <column name="RESOURCE_GROUP_ID" not-null="false"/>
     </many-to-one>
     <property name="WcCode" type="java.lang.String">
-      <column name="WC_CODE" length="20" not-null="true" unique="true" sql-type="CHAR" />
+      <column name="WC_CODE" length="20" not-null="true" unique="true" sql-type="CHAR"/>
     </property>
     <property name="WcName" type="java.lang.String">
-      <column name="WC_NAME" length="80" not-null="false" sql-type="VARCHAR" />
+      <column name="WC_NAME" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
     <property name="Efficiency" type="java.math.BigDecimal">
-      <column name="EFFICIENCY" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="EFFICIENCY" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="Utilization" type="java.math.BigDecimal">
-      <column name="UTILIZATION" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="UTILIZATION" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="CapacityPlan" type="boolean">
-      <column name="CAPACITY_PLAN" not-null="false" sql-type="SMALLINT" />
+      <column name="CAPACITY_PLAN" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="CapacitySchedule" type="boolean">
-      <column name="CAPACITY_SCHEDULE" not-null="false" sql-type="SMALLINT" />
+      <column name="CAPACITY_SCHEDULE" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="MchFlag" type="boolean">
-      <column name="MCH_FLAG" not-null="false" sql-type="SMALLINT" />
+      <column name="MCH_FLAG" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="MchNumber" type="java.lang.Integer">
-      <column name="MCH_NUMBER" not-null="false" sql-type="INTEGER" />
+      <column name="MCH_NUMBER" not-null="false" sql-type="INTEGER"/>
     </property>
     <property name="LbrFlag" type="boolean">
-      <column name="LBR_FLAG" not-null="false" sql-type="SMALLINT" />
+      <column name="LBR_FLAG" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="LbrNumber" type="java.math.BigDecimal">
-      <column name="LBR_NUMBER" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="LBR_NUMBER" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="SchTolerance" type="java.math.BigDecimal">
-      <column name="SCH_TOLERANCE" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="SCH_TOLERANCE" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="QueueTicks" type="java.math.BigDecimal">
-      <column name="QUEUE_TICKS" scale="0" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="QUEUE_TICKS" scale="0" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="MchRunTotalHrs" type="java.math.BigDecimal">
-      <column name="MCH_RUN_TOTAL_HRS" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="MCH_RUN_TOTAL_HRS" scale="6" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="LbrSetupTotalHrs" type="java.math.BigDecimal">
-      <column name="LBR_SETUP_TOTAL_HRS" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="LBR_SETUP_TOTAL_HRS" scale="6" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="LbrRunTotalHrs" type="java.math.BigDecimal">
-      <column name="LBR_RUN_TOTAL_HRS" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="LBR_RUN_TOTAL_HRS" scale="6" precision="18" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="QueueTotalQty" type="java.math.BigDecimal">
-      <column name="QUEUE_TOTAL_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="QUEUE_TOTAL_QTY" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="QueueAvgHrs" type="java.math.BigDecimal">
-      <column name="QUEUE_AVG_HRS" scale="6" precision="18" not-null="false" sql-type="NUMERIC" />
+      <column name="QUEUE_AVG_HRS" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="OutsideFlag" type="boolean">
-      <column name="OUTSIDE_FLAG" not-null="false" sql-type="SMALLINT" />
+      <column name="OUTSIDE_FLAG" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="MchBackflushFlag" type="boolean">
-      <column name="MCH_BACKFLUSH_FLAG" not-null="false" sql-type="SMALLINT" />
+      <column name="MCH_BACKFLUSH_FLAG" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="LbrBackflushFlag" type="boolean">
-      <column name="LBR_BACKFLUSH_FLAG" not-null="false" sql-type="SMALLINT" />
+      <column name="LBR_BACKFLUSH_FLAG" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="MchBaseOhFlag" type="boolean">
-      <column name="MCH_BASE_OH_FLAG" not-null="false" sql-type="SMALLINT" />
+      <column name="MCH_BASE_OH_FLAG" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="LbrBaseOhFlag" type="boolean">
-      <column name="LBR_BASE_OH_FLAG" not-null="false" sql-type="SMALLINT" />
+      <column name="LBR_BASE_OH_FLAG" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="MtlBaseOhFlag" type="boolean">
-      <column name="MTL_BASE_OH_FLAG" not-null="false" sql-type="SMALLINT" />
+      <column name="MTL_BASE_OH_FLAG" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="ControlPointFlag" type="boolean">
-      <column name="CONTROL_POINT_FLAG" not-null="false" sql-type="SMALLINT" />
+      <column name="CONTROL_POINT_FLAG" not-null="false" sql-type="SMALLINT"/>
     </property>
     <property name="WipLbrTotal" type="java.math.BigDecimal">
-      <column name="WIP_LBR_TOTAL" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="WIP_LBR_TOTAL" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="WipMtlTotal" type="java.math.BigDecimal">
-      <column name="WIP_MTL_TOTAL" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="WIP_MTL_TOTAL" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="WipFohTotal" type="java.math.BigDecimal">
-      <column name="WIP_FOH_TOTAL" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="WIP_FOH_TOTAL" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="WipVohTotal" type="java.math.BigDecimal">
-      <column name="WIP_VOH_TOTAL" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="WIP_VOH_TOTAL" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="WipOutTotal" type="java.math.BigDecimal">
-      <column name="WIP_OUT_TOTAL" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="WIP_OUT_TOTAL" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="LbrSetupAvgRate" type="java.math.BigDecimal">
-      <column name="LBR_SETUP_AVG_RATE" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="LBR_SETUP_AVG_RATE" scale="4" precision="15" not-null="false"
+              sql-type="NUMERIC"/>
     </property>
     <property name="LbrRunAvgRate" type="java.math.BigDecimal">
-      <column name="LBR_RUN_AVG_RATE" scale="4" precision="15" not-null="false" sql-type="NUMERIC" />
+      <column name="LBR_RUN_AVG_RATE" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
     <property name="Comment" type="java.lang.String">
-      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR" />
+      <column name="`COMMENT`" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
     <filter name="__mg_tenantFilter"/>
-  </class> 
+  </class>
 </hibernate-mapping>

@@ -22,8 +22,8 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
  */
 public class BomSearchHelp extends DefaultLegacySearchHelp {
 
-	@Override
-	protected String getServiceName() {		
-		return "merp/mfreference/Bom";
-	}
+  @Override
+  protected String getServiceName() {
+    return "merp/mfreference/Bom";
+  }
 }

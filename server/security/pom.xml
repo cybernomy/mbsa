@@ -2,45 +2,45 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+  <modelVersion>4.0.0</modelVersion>
 
-    <parent>
-        <groupId>com.mg</groupId>
-        <artifactId>server</artifactId>
-        <version>4.0.8-SNAPSHOT</version>
-    </parent>
+  <parent>
+    <groupId>com.mg</groupId>
+    <artifactId>server</artifactId>
+    <version>4.0.8-SNAPSHOT</version>
+  </parent>
 
-    <groupId>com.mg.server</groupId>
-    <artifactId>security</artifactId>
+  <groupId>com.mg.server</groupId>
+  <artifactId>security</artifactId>
 
-    <name>MBSA::Server::Security</name>
-    <description/>
+  <name>MBSA::Server::Security</name>
+  <description/>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.mg.modules</groupId>
-            <artifactId>framework</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.mg.modules</groupId>
-            <artifactId>core</artifactId>
-            <scope>provided</scope>
-        </dependency>
+  <dependencies>
+    <dependency>
+      <groupId>com.mg.modules</groupId>
+      <artifactId>framework</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.modules</groupId>
+      <artifactId>core</artifactId>
+      <scope>provided</scope>
+    </dependency>
 
-        <dependency>
-            <groupId>jboss</groupId>
-            <artifactId>jboss-system</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>jboss</groupId>
-            <artifactId>jboss-jmx</artifactId>
-        </dependency>
+    <dependency>
+      <groupId>jboss</groupId>
+      <artifactId>jboss-system</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>jboss</groupId>
+      <artifactId>jboss-jmx</artifactId>
+    </dependency>
 
-        <dependency>
-            <groupId>net.sf</groupId>
-            <artifactId>jguard</artifactId>
-            <scope>provided</scope>
-        </dependency>
-    </dependencies>
+    <dependency>
+      <groupId>net.sf</groupId>
+      <artifactId>jguard</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 </project>

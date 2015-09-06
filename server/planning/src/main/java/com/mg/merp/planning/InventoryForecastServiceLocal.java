@@ -17,12 +17,10 @@ package com.mg.merp.planning;
 import com.mg.merp.planning.model.InventoryForecast;
 
 /**
- * 
  * @author leonova
  * @version $Id: InventoryForecastServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface InventoryForecastServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<InventoryForecast, Integer>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<InventoryForecast, Integer> {
 
 }

@@ -17,12 +17,10 @@ package com.mg.merp.account;
 import com.mg.merp.account.model.Metal;
 
 /**
- * 
  * @author leonova
  * @version $Id: MetalServiceLocal.java,v 1.1 2006/03/14 11:49:47 safonov Exp $
  */
 public interface MetalServiceLocal
-   extends com.mg.framework.api.DataBusinessObjectService<Metal, String>
-{
+    extends com.mg.framework.api.DataBusinessObjectService<Metal, String> {
 
 }

@@ -17,48 +17,49 @@ import com.mg.merp.warehouse.generic.AbstractWarehouseTransactionDocFlowPluginFa
 
 /**
  * Реализация фабрики реализаций этапа ДО "тработка по складу с вычислением цены списания"
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: WarehouseTransactionCalcCostDocFlowPluginFactory.java,v 1.2 2008/04/18 15:22:11 safonov Exp $
+ * @version $Id: WarehouseTransactionCalcCostDocFlowPluginFactory.java,v 1.2 2008/04/18 15:22:11
+ *          safonov Exp $
  */
 public class WarehouseTransactionCalcCostDocFlowPluginFactory extends
-		AbstractWarehouseTransactionDocFlowPluginFactory {
-	public final static int FACTORY_IDENTIFIER = 10002;
+    AbstractWarehouseTransactionDocFlowPluginFactory {
+  public final static int FACTORY_IDENTIFIER = 10002;
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.warehouse.generic.AbstractWarehouseTransactionDocFlowPluginFactory#isCalculateCost()
-	 */
-	@Override
-	protected boolean isCalculateCost() {
-		return true;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.warehouse.generic.AbstractWarehouseTransactionDocFlowPluginFactory#isCalculateCost()
+   */
+  @Override
+  protected boolean isCalculateCost() {
+    return true;
+  }
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.warehouse.generic.AbstractWarehouseTransactionDocFlowPluginFactory#isInteractive()
-	 */
-	@Override
-	protected boolean isInteractive() {
-		return false;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.warehouse.generic.AbstractWarehouseTransactionDocFlowPluginFactory#isInteractive()
+   */
+  @Override
+  protected boolean isInteractive() {
+    return false;
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
-	 */
-	@Override
-	public int getIdentifier() {
-		return FACTORY_IDENTIFIER;
-	}
+  /*
+   * (non-Javadoc)
+   *
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getIdentifier()
+   */
+  @Override
+  public int getIdentifier() {
+    return FACTORY_IDENTIFIER;
+  }
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
-	 */
-	@Override
-	public String getName() {
-		return "Warehouse transaction with cost calculation";
-	}
+  /*
+   * (non-Javadoc)
+   *
+   * @see com.mg.merp.docflow.generic.AbstractDocFlowPluginFactory#getName()
+   */
+  @Override
+  public String getName() {
+    return "Warehouse transaction with cost calculation";
+  }
 
 }

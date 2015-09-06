@@ -18,13 +18,13 @@ import org.jboss.system.ServiceMBean;
 
 /**
  * Сервис регистрации этапов ДО подсистемы "Производство"
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: ManufactureDocFlowPluginServiceMBean.java,v 1.1 2007/08/06 12:44:11 safonov Exp $
  */
 public interface ManufactureDocFlowPluginServiceMBean extends ServiceMBean {
-	/**
-	 * наименование сервиса
-	 */
-	final static String SERVICE_NAME = "merp:manufacture=DocFlowPluginService"; //$NON-NLS-1$
+  /**
+   * наименование сервиса
+   */
+  final static String SERVICE_NAME = "merp:manufacture=DocFlowPluginService"; //$NON-NLS-1$
 }

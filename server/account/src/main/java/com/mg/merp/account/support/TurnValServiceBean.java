@@ -16,30 +16,19 @@
 package com.mg.merp.account.support;
 
 /**
- * @ejb.bean name = "TurnValService"
- *           type = "Stateless"
- *           view-type = "local"
- *           local-jndi-name = "merp/account/TurnValService"
- *           description = "TurnVal"
- *           display-name = "TurnVal"
- *
- * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService"
- *
- * @ejb.home      local-extends = "javax.ejb.EJBLocalHome"
- *
- * @ejb.env-entry name = "DomainClassName"
- *                type = "java.lang.String"
- *                value = "com.mg.merp.account.support.TurnValDomainImpl"
- *
- * @jboss.container-configuration name = "MERP Standard Stateless Service"
- *
  * @author java generator
+ * @ejb.bean name = "TurnValService" type = "Stateless" view-type = "local" local-jndi-name =
+ * "merp/account/TurnValService" description = "TurnVal" display-name = "TurnVal"
+ * @ejb.interface local-extends = "javax.ejb.EJBLocalObject, com.mg.framework.api.DataBusinessObjectService"
+ * @ejb.home local-extends = "javax.ejb.EJBLocalHome"
+ * @ejb.env-entry name = "DomainClassName" type = "java.lang.String" value =
+ * "com.mg.merp.account.support.TurnValDomainImpl"
+ * @jboss.container-configuration name = "MERP Standard Stateless Service"
  * @since 12.10.2004
- *
  */
- public class TurnValServiceBean extends com.mg.framework.generic.AbstractDataBusinessObjectServiceBean {
+public class TurnValServiceBean extends com.mg.framework.generic.AbstractDataBusinessObjectServiceBean {
 
- 	public void ejbCreate() throws javax.ejb.CreateException {
- 	}
+  public void ejbCreate() throws javax.ejb.CreateException {
+  }
 
- }
+}

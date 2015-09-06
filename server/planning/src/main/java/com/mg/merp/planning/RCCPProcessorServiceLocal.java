@@ -15,14 +15,12 @@
 package com.mg.merp.planning;
 
 /**
- * 
  * @author leonova
  * @version $Id: RCCPProcessorServiceLocal.java,v 1.1 2006/03/14 11:49:49 safonov Exp $
  */
 public interface RCCPProcessorServiceLocal
-   extends com.mg.framework.api.BusinessObjectService
-{
+    extends com.mg.framework.api.BusinessObjectService {
 
-   public void generateRccp( int rccpVersionId ) throws com.mg.framework.api.ApplicationException;
+  public void generateRccp(int rccpVersionId) throws com.mg.framework.api.ApplicationException;
 
 }

@@ -13,49 +13,76 @@
 
 <!-- $Id: ProblemMt.mfd.xml,v 1.7 2007/01/26 13:16:04 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.merp.crm.support.ui.ProblemMt" title="resource://com.mg.merp.crm.resources.formelements#Problem.FormMt.Title" helpTopic="crm#problem_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.merp.crm.support.ui.ProblemMt"
+          title="resource://com.mg.merp.crm.resources.formelements#Problem.FormMt.Title"
+          helpTopic="crm#problem_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand" >
- 		<jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top" tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Total" >
-	 		<jfd:field id="Name" />
-	 		<jfd:field id="Keywords" />	
-	 		<jfd:field id="ProblemType" />	
-	 		<jfd:field id="Priority" sameLine="true"/>			 		
-	 		<jfd:field id="Creator" />		 		
-	 		<jfd:field id="ValidFrom" /> 		 		
-	 		<jfd:field id="ValidTo" sameLine="true"/> 
-			<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />	 		 		
-		</jfd:container>
- 		<jfd:container id="explanationFields" layout="jfd:defaultMtGridBag" tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Explanation" >
- 			<jfd:field id="Info" showLabel="false" alignment="expand_expand"/>
-		</jfd:container>	
-		<jfd:maintenanceTable id="original" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Original">
-		</jfd:maintenanceTable>	 		
-	</jfd:container>
-	<jfd:container id="extraFields" layout="jfd:tabbed" alignment="expand_bottom" >
+  <jfd:container id="fields" layout="jfd:tabbed" alignment="expand_expand">
+    <jfd:container id="commonFields" layout="jfd:defaultMtGridBag" alignment="expand_top"
+                   tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Total">
+      <jfd:field id="Name"/>
+      <jfd:field id="Keywords"/>
+      <jfd:field id="ProblemType"/>
+      <jfd:field id="Priority" sameLine="true"/>
+      <jfd:field id="Creator"/>
+      <jfd:field id="ValidFrom"/>
+      <jfd:field id="ValidTo" sameLine="true"/>
+      <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+    </jfd:container>
+    <jfd:container id="explanationFields" layout="jfd:defaultMtGridBag"
+                   tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Explanation">
+      <jfd:field id="Info" showLabel="false" alignment="expand_expand"/>
+    </jfd:container>
+    <jfd:maintenanceTable id="original" scroll="true" autoResize="subsequent_columns"
+                          alignment="expand_expand"
+                          tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Original">
+    </jfd:maintenanceTable>
+  </jfd:container>
+  <jfd:container id="extraFields" layout="jfd:tabbed" alignment="expand_bottom">
 
-	<jfd:table id="symptomTable" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Symptom">
-		<jfd:popupMenu>
-			<jfd:menuItem id="includeSymptom" text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.IncludeSymptom" actionListener="IncludeSymptom" />
-			<jfd:menuItem id="excludeSymptom" text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.ExcludeSymptom" actionListener="ExcludeSymptom" />
-			<jfd:menuItem id="showSymptom" text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.ShowSymptom" actionListener="ShowSymptom" />
-			<jfd:menuItem id="editSymptom" text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.EditSymptom" actionListener="EditSymptom" />
-		</jfd:popupMenu>
-	</jfd:table>		
+    <jfd:table id="symptomTable" scroll="true" autoResize="subsequent_columns"
+               alignment="expand_expand"
+               tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Symptom">
+      <jfd:popupMenu>
+        <jfd:menuItem id="includeSymptom"
+                      text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.IncludeSymptom"
+                      actionListener="IncludeSymptom"/>
+        <jfd:menuItem id="excludeSymptom"
+                      text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.ExcludeSymptom"
+                      actionListener="ExcludeSymptom"/>
+        <jfd:menuItem id="showSymptom"
+                      text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.ShowSymptom"
+                      actionListener="ShowSymptom"/>
+        <jfd:menuItem id="editSymptom"
+                      text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.EditSymptom"
+                      actionListener="EditSymptom"/>
+      </jfd:popupMenu>
+    </jfd:table>
 
-	<jfd:table id="solutionTable" scroll="true" autoResize="subsequent_columns" alignment="expand_expand" tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Solution">
-		<jfd:popupMenu>
-			<jfd:menuItem id="includeSolution" text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.IncludeSolution" actionListener="IncludeSolution" />
-			<jfd:menuItem id="excludeSolution" text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.ExcludeSolution" actionListener="ExcludeSolution" />
-			<jfd:menuItem id="showSolution" text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.ShowSolution" actionListener="ShowSolution" />
-			<jfd:menuItem id="editSolution" text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.EditSolution" actionListener="EditSolution" />
-		</jfd:popupMenu>
-	</jfd:table>		
-	
-	</jfd:container>
+    <jfd:table id="solutionTable" scroll="true" autoResize="subsequent_columns"
+               alignment="expand_expand"
+               tabTitle="resource://com.mg.merp.crm.resources.formelements#Problem.Tab.Solution">
+      <jfd:popupMenu>
+        <jfd:menuItem id="includeSolution"
+                      text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.IncludeSolution"
+                      actionListener="IncludeSolution"/>
+        <jfd:menuItem id="excludeSolution"
+                      text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.ExcludeSolution"
+                      actionListener="ExcludeSolution"/>
+        <jfd:menuItem id="showSolution"
+                      text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.ShowSolution"
+                      actionListener="ShowSolution"/>
+        <jfd:menuItem id="editSolution"
+                      text="resource://com.mg.merp.crm.resources.formelements#Problem.MenuItem.EditSolution"
+                      actionListener="EditSolution"/>
+      </jfd:popupMenu>
+    </jfd:table>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  </jfd:container>
+
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

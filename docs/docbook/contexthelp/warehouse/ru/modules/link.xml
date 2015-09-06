@@ -14,54 +14,54 @@
 <!-- $Id: link.xml,v 1.4 2007/11/15 14:25:28 konyashkina Exp $ -->
 
 <link version="1.0">
-  
-  <linkitem topic="warehouse_links"> 
-    <linkentry target="whadd_html" text="Регистрация и настройка склада" />
-    <linkentry target="whtype_html" text="Типы складов" />
-    <linkentry target="binloctype_html" text="Типы секций хранения" />
-    <linkentry target="whzone_html" text="Зоны хранения" />
-    <linkentry target="ksu_html" text="Карточки складского учёта" />
-    <linkentry target="lots_html" text="Партии КСУ" />
-    <linkentry target="factmov_html" text="Фактическое движение по КСУ" />
-    <linkentry target="planmov_html" text="Планируемое движение по КСУ" />
-    <linkentry target="reserv_html" text="Резервирование по КСУ" />
+
+  <linkitem topic="warehouse_links">
+    <linkentry target="whadd_html" text="Регистрация и настройка склада"/>
+    <linkentry target="whtype_html" text="Типы складов"/>
+    <linkentry target="binloctype_html" text="Типы секций хранения"/>
+    <linkentry target="whzone_html" text="Зоны хранения"/>
+    <linkentry target="ksu_html" text="Карточки складского учёта"/>
+    <linkentry target="lots_html" text="Партии КСУ"/>
+    <linkentry target="factmov_html" text="Фактическое движение по КСУ"/>
+    <linkentry target="planmov_html" text="Планируемое движение по КСУ"/>
+    <linkentry target="reserv_html" text="Резервирование по КСУ"/>
   </linkitem>
-  
-   <linkitem topic="doc_links">  
-     <linkentry target="ordersup_html" text="Заказы поставщикам" />
-     <linkentry target="orderspecsup_html" text="Спецификации заказа поставщикам" />
-     <linkentry target="ordermodelsup_html" text="Образцы заказов поставщикам" />
-     <linkentry target="ordercus_html" text="Заказы покупателей" />
-     <linkentry target="orderspecsuc_html" text="Спецификации заказа покупателей" />
-     <linkentry target="ordermodelcus_html" text="Образцы заказов покупателей" />
-     
-     <linkentry target="billheadin_html" text="Входящие счета" />
-     <linkentry target="billspecin_html" text="Спецификации входящего счёта" />
-     <linkentry target="billmodelin_html" text="Образцы входящих счетов" />
-    <linkentry target="billheadout_html" text="Исходящие счета" />
-    <linkentry target="billspecout_html" text="Спецификации исходящего счёта" />
-     <linkentry target="billmodelout_html" text="Образцы исходящих счетов" />
-     
-    <linkentry target="invoiceheadin_html" text="Входящие накладные" />
-    <linkentry target="invspecin_html" text="Спецификации входящих накладных" />
-    <linkentry target="invmodelin_html" text="Образцы входящих накладных" />
-    <linkentry target="invoiceheadout_html" text="Исходящие накладные" />
-    <linkentry target="invspecout_html" text="Спецификации исходящих накладных" />
-    <linkentry target="invmodelout_html" text="Образцы исходящих накладных" />
-    
-    <linkentry target="waredocbrin_html" text="Приходные ордера" />
-    <linkentry target="warespecin_html" text="Спецификации приходных ордеров" />
-    <linkentry target="waremodelin_html" text="Образцы приходных ордеров" />
-    <linkentry target="waredocbrout_html" text="Расходные ордера" />
-    <linkentry target="warespecout_html" text="Спецификации расходных ордеров" />
-    <linkentry target="waremodelout_html" text="Образцы расходных ордеров" />    
+
+  <linkitem topic="doc_links">
+    <linkentry target="ordersup_html" text="Заказы поставщикам"/>
+    <linkentry target="orderspecsup_html" text="Спецификации заказа поставщикам"/>
+    <linkentry target="ordermodelsup_html" text="Образцы заказов поставщикам"/>
+    <linkentry target="ordercus_html" text="Заказы покупателей"/>
+    <linkentry target="orderspecsuc_html" text="Спецификации заказа покупателей"/>
+    <linkentry target="ordermodelcus_html" text="Образцы заказов покупателей"/>
+
+    <linkentry target="billheadin_html" text="Входящие счета"/>
+    <linkentry target="billspecin_html" text="Спецификации входящего счёта"/>
+    <linkentry target="billmodelin_html" text="Образцы входящих счетов"/>
+    <linkentry target="billheadout_html" text="Исходящие счета"/>
+    <linkentry target="billspecout_html" text="Спецификации исходящего счёта"/>
+    <linkentry target="billmodelout_html" text="Образцы исходящих счетов"/>
+
+    <linkentry target="invoiceheadin_html" text="Входящие накладные"/>
+    <linkentry target="invspecin_html" text="Спецификации входящих накладных"/>
+    <linkentry target="invmodelin_html" text="Образцы входящих накладных"/>
+    <linkentry target="invoiceheadout_html" text="Исходящие накладные"/>
+    <linkentry target="invspecout_html" text="Спецификации исходящих накладных"/>
+    <linkentry target="invmodelout_html" text="Образцы исходящих накладных"/>
+
+    <linkentry target="waredocbrin_html" text="Приходные ордера"/>
+    <linkentry target="warespecin_html" text="Спецификации приходных ордеров"/>
+    <linkentry target="waremodelin_html" text="Образцы приходных ордеров"/>
+    <linkentry target="waredocbrout_html" text="Расходные ордера"/>
+    <linkentry target="warespecout_html" text="Спецификации расходных ордеров"/>
+    <linkentry target="waremodelout_html" text="Образцы расходных ордеров"/>
   </linkitem>
-   
-  <linkitem topic="invacts_links"> 
-     <linkentry target="invacthd_html" text="Акты инвентаризации" />
-     <linkentry target="invactspc_html" text="Спецификации актов" />
-     <linkentry target="invactparam_html" text="Параметры инвентаризации" />
-     <linkentry target="invactcond_html" text="Условия отбора актов " />
+
+  <linkitem topic="invacts_links">
+    <linkentry target="invacthd_html" text="Акты инвентаризации"/>
+    <linkentry target="invactspc_html" text="Спецификации актов"/>
+    <linkentry target="invactparam_html" text="Параметры инвентаризации"/>
+    <linkentry target="invactcond_html" text="Условия отбора актов "/>
   </linkitem>
 
 </link>

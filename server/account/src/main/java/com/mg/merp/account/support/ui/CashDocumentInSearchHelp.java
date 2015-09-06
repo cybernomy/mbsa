@@ -18,18 +18,18 @@ import com.mg.framework.generic.ui.DefaultLegacySearchHelp;
 
 /**
  * Контроллер формы поиска бизнес-компонента "Приходные кассовые документы"
- * 
+ *
  * @author Konstantin S. Alikaev
  * @version $Id: CashDocumentInSearchHelp.java,v 1.1 2008/03/12 11:22:38 alikaev Exp $
  */
 public class CashDocumentInSearchHelp extends DefaultLegacySearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
-	 */
-	@Override
-	protected String getServiceName() {
-		return "merp/account/CashDocumentIn";
-	}
+  /* (non-Javadoc)
+   * @see com.mg.framework.generic.ui.DefaultLegacySearchHelp#getServiceName()
+   */
+  @Override
+  protected String getServiceName() {
+    return "merp/account/CashDocumentIn";
+  }
 
 }

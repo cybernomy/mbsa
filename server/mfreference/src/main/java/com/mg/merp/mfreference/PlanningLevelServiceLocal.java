@@ -18,19 +18,20 @@ import com.mg.merp.mfreference.model.PlanningLevel;
 
 /**
  * Сервис бизнес-компонента "Уровни планирования"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: PlanningLevelServiceLocal.java,v 1.2 2007/02/19 12:55:14 sharapov Exp $
  */
 public interface PlanningLevelServiceLocal extends com.mg.framework.api.DataBusinessObjectService<PlanningLevel, Integer> {
 
-	/**
-	 * Создать периоды уровня планирования
-	 * @param planningLevel - уровень планирования
-	 * @param bucketLength - длина периода в днях
-	 * @param bucketNumber - количество периодов
-	 */
-	void generateBuckets(PlanningLevel planningLevel, Integer bucketLength, Integer bucketNumber);
+  /**
+   * Создать периоды уровня планирования
+   *
+   * @param planningLevel - уровень планирования
+   * @param bucketLength  - длина периода в днях
+   * @param bucketNumber  - количество периодов
+   */
+  void generateBuckets(PlanningLevel planningLevel, Integer bucketLength, Integer bucketNumber);
 
 }

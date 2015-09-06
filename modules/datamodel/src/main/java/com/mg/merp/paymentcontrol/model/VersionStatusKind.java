@@ -19,39 +19,39 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Статус версии планирования платежей
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: VersionStatusKind.java,v 1.1 2007/02/06 09:28:31 safonov Exp $
  */
 @DataItemName("PaymentControl.VersionStatus.Kind")
 public enum VersionStatusKind {
-	/**
-	 * не установлен
-	 */
-	@EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.None")
-	NONE,
-	
-	/**
-	 * в работе
-	 */
-	@EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.InWork")
-	IN_WORK,
-	
-	/**
-	 * готово
-	 */
-	@EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.Ready")
-	READY,
-	
-	/**
-	 * утверждено
-	 */
-	@EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.Execute")
-	EXECUTE,
-	
-	/**
-	 * созданы документы
-	 */
-	@EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.Documents")
-	DOCUMENTS
+  /**
+   * не установлен
+   */
+  @EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.None")
+  NONE,
+
+  /**
+   * в работе
+   */
+  @EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.InWork")
+  IN_WORK,
+
+  /**
+   * готово
+   */
+  @EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.Ready")
+  READY,
+
+  /**
+   * утверждено
+   */
+  @EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.Execute")
+  EXECUTE,
+
+  /**
+   * созданы документы
+   */
+  @EnumConstantText("resource://com.mg.merp.paymentcontrol.resources.dataitemlabels#VersionStatusKind.Documents")
+  DOCUMENTS
 }

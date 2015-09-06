@@ -21,201 +21,206 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: PayRoll.java,v 1.6 2006/06/20 08:23:10 leonova Exp $
  */
 public class PayRoll extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private com.mg.merp.personnelref.model.CalcPeriod CalcPeriod;
+  private com.mg.merp.personnelref.model.CalcPeriod CalcPeriod;
 
-	private com.mg.merp.salary.model.RollKind RollKind;
+  private com.mg.merp.salary.model.RollKind RollKind;
 
-	private java.lang.String Number;
+  private java.lang.String Number;
 
-	private java.lang.String Name;
+  private java.lang.String Name;
 
-	private java.lang.String DocType;
+  private java.lang.String DocType;
 
-	private java.lang.String DocNumber;
+  private java.lang.String DocNumber;
 
-	private java.util.Date DocDate;
+  private java.util.Date DocDate;
 
-	private java.lang.String Comments;
+  private java.lang.String Comments;
 
-	private java.util.Date CalcBeginDate;
+  private java.util.Date CalcBeginDate;
 
-	private java.util.Date CalcEndDate;
+  private java.util.Date CalcEndDate;
 
-	private java.util.Set SetOfSalCalcList;
+  private java.util.Set SetOfSalCalcList;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public PayRoll() {
-	}
+  /**
+   * default constructor
+   */
+  public PayRoll() {
+  }
 
-	/** constructor with id */
-	public PayRoll(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public PayRoll(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.personnelref.model.CalcPeriod getCalcPeriod() {
-		return this.CalcPeriod;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setCalcPeriod(
-			com.mg.merp.personnelref.model.CalcPeriod PrefCalcPeriod) {
-		this.CalcPeriod = PrefCalcPeriod;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.personnelref.model.CalcPeriod getCalcPeriod() {
+    return this.CalcPeriod;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.salary.model.RollKind getRollKind() {
-		return this.RollKind;
-	}
+  public void setCalcPeriod(
+      com.mg.merp.personnelref.model.CalcPeriod PrefCalcPeriod) {
+    this.CalcPeriod = PrefCalcPeriod;
+  }
 
-	public void setRollKind(com.mg.merp.salary.model.RollKind SalRollKind) {
-		this.RollKind = SalRollKind;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.salary.model.RollKind getRollKind() {
+    return this.RollKind;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PayRoll.Number")
-	public java.lang.String getNumber() {
-		return this.Number;
-	}
+  public void setRollKind(com.mg.merp.salary.model.RollKind SalRollKind) {
+    this.RollKind = SalRollKind;
+  }
 
-	public void setNumber(java.lang.String Rnumber) {
-		this.Number = Rnumber;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PayRoll.Number")
+  public java.lang.String getNumber() {
+    return this.Number;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.Name")
-	public java.lang.String getName() {
-		return this.Name;
-	}
+  public void setNumber(java.lang.String Rnumber) {
+    this.Number = Rnumber;
+  }
 
-	public void setName(java.lang.String Rname) {
-		this.Name = Rname;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.Name")
+  public java.lang.String getName() {
+    return this.Name;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PayRoll.DocType")
-	public java.lang.String getDocType() {
-		return this.DocType;
-	}
+  public void setName(java.lang.String Rname) {
+    this.Name = Rname;
+  }
 
-	public void setDocType(java.lang.String Doctype) {
-		this.DocType = Doctype;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PayRoll.DocType")
+  public java.lang.String getDocType() {
+    return this.DocType;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PayRoll.DocNumber")
-	public java.lang.String getDocNumber() {
-		return this.DocNumber;
-	}
+  public void setDocType(java.lang.String Doctype) {
+    this.DocType = Doctype;
+  }
 
-	public void setDocNumber(java.lang.String Docnumber) {
-		this.DocNumber = Docnumber;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PayRoll.DocNumber")
+  public java.lang.String getDocNumber() {
+    return this.DocNumber;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PayRoll.DocDate")
-	public java.util.Date getDocDate() {
-		return this.DocDate;
-	}
+  public void setDocNumber(java.lang.String Docnumber) {
+    this.DocNumber = Docnumber;
+  }
 
-	public void setDocDate(java.util.Date Docdate) {
-		this.DocDate = Docdate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PayRoll.DocDate")
+  public java.util.Date getDocDate() {
+    return this.DocDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PayRoll.Comments")
-	public java.lang.String getComments() {
-		return this.Comments;
-	}
+  public void setDocDate(java.util.Date Docdate) {
+    this.DocDate = Docdate;
+  }
 
-	public void setComments(java.lang.String Comments) {
-		this.Comments = Comments;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PayRoll.Comments")
+  public java.lang.String getComments() {
+    return this.Comments;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PayRoll.CalcBeginDate")
-	public java.util.Date getCalcBeginDate() {
-		return this.CalcBeginDate;
-	}
+  public void setComments(java.lang.String Comments) {
+    this.Comments = Comments;
+  }
 
-	public void setCalcBeginDate(java.util.Date CalcBegindate) {
-		this.CalcBeginDate = CalcBegindate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PayRoll.CalcBeginDate")
+  public java.util.Date getCalcBeginDate() {
+    return this.CalcBeginDate;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("Salary.PayRoll.CalcEndDate")
-	public java.util.Date getCalcEndDate() {
-		return this.CalcEndDate;
-	}
+  public void setCalcBeginDate(java.util.Date CalcBegindate) {
+    this.CalcBeginDate = CalcBegindate;
+  }
 
-	public void setCalcEndDate(java.util.Date CalcEnddate) {
-		this.CalcEndDate = CalcEnddate;
-	}
+  /**
+   *
+   */
+  @DataItemName("Salary.PayRoll.CalcEndDate")
+  public java.util.Date getCalcEndDate() {
+    return this.CalcEndDate;
+  }
 
-	/**
-	 * 
-	 */
+  public void setCalcEndDate(java.util.Date CalcEnddate) {
+    this.CalcEndDate = CalcEnddate;
+  }
 
-	public java.util.Set getSetOfSalCalcList() {
-		return this.SetOfSalCalcList;
-	}
+  /**
+   *
+   */
 
-	public void setSetOfSalCalcList(java.util.Set SetOfSalCalcList) {
-		this.SetOfSalCalcList = SetOfSalCalcList;
-	}
+  public java.util.Set getSetOfSalCalcList() {
+    return this.SetOfSalCalcList;
+  }
+
+  public void setSetOfSalCalcList(java.util.Set SetOfSalCalcList) {
+    this.SetOfSalCalcList = SetOfSalCalcList;
+  }
 
 }

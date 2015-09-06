@@ -16,28 +16,28 @@
 <index version="1.4">
 
   <indexitem text="Пользовательские поля">
-     <indexentry text="Пользовательские поля" target="features_html" />
+    <indexentry text="Пользовательские поля" target="features_html"/>
   </indexitem>
-  
-    <indexitem text="Балансовые единицы">
-     <indexentry text="Балансовые единицы" target="syscompany_html" />
+
+  <indexitem text="Балансовые единицы">
+    <indexentry text="Балансовые единицы" target="syscompany_html"/>
   </indexitem>
-  
-   <indexitem text="Журналы аудита">
-     <indexentry text="Настройка аудита хранилища данных" target="entity_audit_setup_wizard_html" />
-     <indexentry text="Журнал аудита хранилища данных" target="entity_audit_html" />
-     <indexentry text="Журнал аудита безопасности" target="security_audit_html" />
-     <indexentry text="Журнал аудита системы" target="system_audit_html" />
+
+  <indexitem text="Журналы аудита">
+    <indexentry text="Настройка аудита хранилища данных" target="entity_audit_setup_wizard_html"/>
+    <indexentry text="Журнал аудита хранилища данных" target="entity_audit_html"/>
+    <indexentry text="Журнал аудита безопасности" target="security_audit_html"/>
+    <indexentry text="Журнал аудита системы" target="system_audit_html"/>
   </indexitem>
-  
-   <indexitem text="Словарь приложения">
-   	<indexentry text="Уровни приложения" target="applayers_html" />
-	<indexentry text="Список бизнес-компонентов" target="bc_html" />
-	<indexentry text="Реализация бизнес-компонентов" target="sysclassimplementation_html" />
-	<indexentry text="Домены системы" target="sysdomain_html" />
-	<indexentry text="Элементы данных" target="sysdataitem_html" />
-	<indexentry text="Формы системы" target="form_html" />
-	<indexentry text="Окна системы" target="window_html" /> 
-  </indexitem>     
-  
+
+  <indexitem text="Словарь приложения">
+    <indexentry text="Уровни приложения" target="applayers_html"/>
+    <indexentry text="Список бизнес-компонентов" target="bc_html"/>
+    <indexentry text="Реализация бизнес-компонентов" target="sysclassimplementation_html"/>
+    <indexentry text="Домены системы" target="sysdomain_html"/>
+    <indexentry text="Элементы данных" target="sysdataitem_html"/>
+    <indexentry text="Формы системы" target="form_html"/>
+    <indexentry text="Окна системы" target="window_html"/>
+  </indexitem>
+
 </index>

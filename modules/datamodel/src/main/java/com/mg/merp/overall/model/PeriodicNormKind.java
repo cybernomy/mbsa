@@ -19,23 +19,23 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Периодичность выдачи
- * 
+ *
  * @author leonova
  * @version $Id: PeriodicNormKind.java,v 1.2 2008/06/30 04:15:16 alikaev Exp $
  */
-@DataItemName ("Overall.Spec.PeriodicNormKind")
+@DataItemName("Overall.Spec.PeriodicNormKind")
 public enum PeriodicNormKind {
-	
-	/**
-	 * периодическая
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#PeriodicNormKind.Periodic")
-	PERIODIC,
-	
-	/**
-	 * разовая
-	 */
-	@EnumConstantText ("resource://com.mg.merp.overall.resources.dataitemlabels#PeriodicNormKind.Single")
-	SINGLE
-	
+
+  /**
+   * периодическая
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#PeriodicNormKind.Periodic")
+  PERIODIC,
+
+  /**
+   * разовая
+   */
+  @EnumConstantText("resource://com.mg.merp.overall.resources.dataitemlabels#PeriodicNormKind.Single")
+  SINGLE
+
 }

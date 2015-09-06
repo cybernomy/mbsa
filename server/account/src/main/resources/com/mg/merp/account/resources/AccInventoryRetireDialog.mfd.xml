@@ -13,25 +13,31 @@
 
 <!-- $Id: AccInventoryRetireDialog.mfd.xml,v 1.1 2008/04/29 05:30:03 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="10" controller="com.mg.merp.account.support.ui.AccInventoryRetireDialog" title="" width="375" height="400">
-	<jfd:container id="mainBox" layout="jfd:defaultMtLayout" alignment="expand_expand">
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="revalDate" text="resource://com.mg.merp.account.resources.formelements#AccRevaluateDlg.RevalDate"/>
-		<jfd:field id="docType" showLabel="false" fieldGroup="resource://com.mg.merp.account.resources.formelements#DocEcon.Title"/>
-		<jfd:field id="docNumber" showLabel="false" />			
-		<jfd:field id="docDate" showLabel="false" />				
-		<jfd:field id="baseDocType" showLabel="false" fieldGroup="resource://com.mg.merp.account.resources.formelements#BaseDocEcon.Title"/>
-		<jfd:field id="baseDocNumber" showLabel="false" />			
-		<jfd:field id="baseDocDate" showLabel="false" />				
-		<jfd:container id="accFields" layout="jfd:box" columns="1" alignment="expand_top" label="resource://com.mg.merp.account.resources.formelements#AccInventoryRetireDialog.Account">
-		 	<jfd:field id="AccPlan" showLabel="false"/> 
-		 	<jfd:field id="anl1" showLabel="false"/> 
-		 	<jfd:field id="anl2" showLabel="false"/> 
-		 	<jfd:field id="anl3" showLabel="false"/> 
-		 	<jfd:field id="anl4" showLabel="false"/> 
-		 	<jfd:field id="anl5" showLabel="false"/> 		 				 				 				 				 	
-	 	</jfd:container>		
-	</jfd:container>
-	<jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml" />
-	
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" orientation="ver" verticalGap="10"
+          controller="com.mg.merp.account.support.ui.AccInventoryRetireDialog" title="" width="375"
+          height="400">
+  <jfd:container id="mainBox" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="revalDate"
+               text="resource://com.mg.merp.account.resources.formelements#AccRevaluateDlg.RevalDate"/>
+    <jfd:field id="docType" showLabel="false"
+               fieldGroup="resource://com.mg.merp.account.resources.formelements#DocEcon.Title"/>
+    <jfd:field id="docNumber" showLabel="false"/>
+    <jfd:field id="docDate" showLabel="false"/>
+    <jfd:field id="baseDocType" showLabel="false"
+               fieldGroup="resource://com.mg.merp.account.resources.formelements#BaseDocEcon.Title"/>
+    <jfd:field id="baseDocNumber" showLabel="false"/>
+    <jfd:field id="baseDocDate" showLabel="false"/>
+    <jfd:container id="accFields" layout="jfd:box" columns="1" alignment="expand_top"
+                   label="resource://com.mg.merp.account.resources.formelements#AccInventoryRetireDialog.Account">
+      <jfd:field id="AccPlan" showLabel="false"/>
+      <jfd:field id="anl1" showLabel="false"/>
+      <jfd:field id="anl2" showLabel="false"/>
+      <jfd:field id="anl3" showLabel="false"/>
+      <jfd:field id="anl4" showLabel="false"/>
+      <jfd:field id="anl5" showLabel="false"/>
+    </jfd:container>
+  </jfd:container>
+  <jfd:include name="com/mg/framework/resources/DefaultDialogFooterMacros.xml"/>
+
 </jfd:form>

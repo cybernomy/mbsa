@@ -16,18 +16,18 @@ package com.mg.merp.account.support.ui;
 
 /**
  * SearchHelp для аналитики третьего уровня счета по дебету
- * 
+ *
  * @author leonova
  * @version $Id: AnlPlanDbAnlLevel3SearchHelp.java,v 1.1 2006/10/04 06:17:27 leonova Exp $
  */
 public class AnlPlanDbAnlLevel3SearchHelp extends AnlPlanAccDbSearchHelp {
 
-	/* (non-Javadoc)
-	 * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAnalitikaLevel()
-	 */
-	@Override
-	protected short getAnalitikaLevel() {
-		return (short)3;
-	}
+  /* (non-Javadoc)
+   * @see com.mg.merp.account.support.ui.AnlPlanSearchHelp#getAnalitikaLevel()
+   */
+  @Override
+  protected short getAnalitikaLevel() {
+    return (short) 3;
+  }
 
 }

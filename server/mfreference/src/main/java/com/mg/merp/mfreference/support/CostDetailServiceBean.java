@@ -15,21 +15,20 @@
 
 package com.mg.merp.mfreference.support;
 
-import javax.ejb.Stateless;
-
 import com.mg.framework.generic.AbstractPOJODataBusinessObjectServiceBean;
 import com.mg.merp.mfreference.CostDetailServiceLocal;
 import com.mg.merp.mfreference.model.CostDetail;
 
+import javax.ejb.Stateless;
+
 /**
- * Бизнес-компонент "Расшифровка стоимости" 
- * 
+ * Бизнес-компонент "Расшифровка стоимости"
+ *
  * @author leonova
  * @version $Id: CostDetailServiceBean.java,v 1.3 2006/09/07 10:57:04 leonova Exp $
  */
-@Stateless(name="merp/mfreference/CostDetailService")
+@Stateless(name = "merp/mfreference/CostDetailService")
 public class CostDetailServiceBean extends AbstractPOJODataBusinessObjectServiceBean<CostDetail, Integer> implements CostDetailServiceLocal {
-
 
 
 }

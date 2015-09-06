@@ -19,33 +19,33 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Форма налога
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: TaxForm.java,v 1.1 2006/03/29 13:06:23 safonov Exp $
  */
 @DataItemName("Reference.Tax.Form")
 public enum TaxForm {
-	/**
-	 * НДС
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Tax.From.NDS")
-	NDS,
-	
-	/**
-	 * ГСМ
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Tax.From.GSM")
-	GSM,
-	
-	/**
-	 * Акциз
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Tax.From.Excise")
-	EXCISE,
-	
-	/**
-	 * Прочие
-	 */
-	@EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Tax.From.Other")
-	OTHER
+  /**
+   * НДС
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Tax.From.NDS")
+  NDS,
+
+  /**
+   * ГСМ
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Tax.From.GSM")
+  GSM,
+
+  /**
+   * Акциз
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Tax.From.Excise")
+  EXCISE,
+
+  /**
+   * Прочие
+   */
+  @EnumConstantText("resource://com.mg.merp.reference.resources.dataitemlabels#Tax.From.Other")
+  OTHER
 }

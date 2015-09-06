@@ -15,12 +15,10 @@
 package com.mg.merp.salary;
 
 /**
- * 
  * @author leonova
  * @version $Id: SalaryHelperServiceLocal.java,v 1.1 2006/03/14 11:49:52 safonov Exp $
  */
 public interface SalaryHelperServiceLocal
-   extends com.mg.framework.api.BusinessObjectService
-{
+    extends com.mg.framework.api.BusinessObjectService {
 
 }

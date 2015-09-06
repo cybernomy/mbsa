@@ -19,15 +19,15 @@ import com.mg.merp.docflow.support.Messages;
 
 /**
  * Класс ИС отсутствия реализации этапа ДО
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: PluginNotImplementedException.java,v 1.2 2006/08/25 11:44:01 safonov Exp $
  */
 @javax.ejb.ApplicationException
 public class PluginNotImplementedException extends BusinessException {
 
-	public PluginNotImplementedException() {
-		super(Messages.getInstance().getMessage(Messages.PLUGIN_NOT_IMPLEMENTED_MESSAGE));
-	}
+  public PluginNotImplementedException() {
+    super(Messages.getInstance().getMessage(Messages.PLUGIN_NOT_IMPLEMENTED_MESSAGE));
+  }
 
 }

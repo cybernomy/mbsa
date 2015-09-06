@@ -17,10 +17,9 @@ package com.mg.merp.table;
 import com.mg.merp.table.model.TimeKind;
 
 /**
- * 
  * @author leonova
  * @version $Id: TimeKindServiceLocal.java,v 1.2 2008/01/31 09:31:59 safonov Exp $
  */
 public interface TimeKindServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<TimeKind, Integer> {
+    extends com.mg.framework.api.DataBusinessObjectService<TimeKind, Integer> {
 }

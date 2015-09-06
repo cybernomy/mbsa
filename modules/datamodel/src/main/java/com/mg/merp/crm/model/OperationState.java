@@ -19,34 +19,34 @@ import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
  * Состояние действия
- * 
+ *
  * @author leonova
  * @version $Id: OperationState.java,v 1.1 2006/03/30 11:24:41 safonov Exp $
  */
 @DataItemName("CRM.Operation.OperationState")
 public enum OperationState {
-	/**
-	 * <>
-	 */
-	@EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationState.OpStateNone")
-	OPSTATENONO,
-	
-	/**
-	 * Принято
-	 */
-	@EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationState.OpStateAccepted")
-	OPSTATEACCEPTED,
-	
-	/**
-	 * Отклонено
-	 */
-	@EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationState.OpStateDenied")
-	OPSTATEDENIED,
-	
-	/**
-	 * Перенесено
-	 */
-	@EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationState.OpStateMoved")
-	OPSTATEMOVED
+  /**
+   * <>
+   */
+  @EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationState.OpStateNone")
+  OPSTATENONO,
+
+  /**
+   * Принято
+   */
+  @EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationState.OpStateAccepted")
+  OPSTATEACCEPTED,
+
+  /**
+   * Отклонено
+   */
+  @EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationState.OpStateDenied")
+  OPSTATEDENIED,
+
+  /**
+   * Перенесено
+   */
+  @EnumConstantText("resource://com.mg.merp.crm.resources.dataitemlabels#OperationState.OpStateMoved")
+  OPSTATEMOVED
 
 }

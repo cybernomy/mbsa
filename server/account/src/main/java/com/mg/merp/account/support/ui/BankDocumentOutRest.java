@@ -18,16 +18,16 @@ package com.mg.merp.account.support.ui;
 import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
- * Контроллер формы условий отбора "Исходящих банковских документов" 
- * 
+ * Контроллер формы условий отбора "Исходящих банковских документов"
+ *
  * @author leonova
  * @version $Id: BankDocumentOutRest.java,v 1.4 2007/11/12 06:51:28 sharapov Exp $
  */
 public class BankDocumentOutRest extends BankDocumentRest {
-	
-	public BankDocumentOutRest() {
-		contractorFromKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
-		contractorToKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
-	}
+
+  public BankDocumentOutRest() {
+    contractorFromKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+    contractorToKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+  }
 
 }

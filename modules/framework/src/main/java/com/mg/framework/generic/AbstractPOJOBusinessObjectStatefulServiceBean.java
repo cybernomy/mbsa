@@ -14,50 +14,52 @@
  */
 package com.mg.framework.generic;
 
-import javax.annotation.security.PermitAll;
-import javax.interceptor.AroundInvoke;
-import javax.interceptor.InvocationContext;
-
 import com.mg.framework.api.BusinessObjectService;
 import com.mg.framework.api.metadata.BusinessServiceMetadata;
 import com.mg.framework.utils.BusinessObjectUtils;
 
+import javax.annotation.security.PermitAll;
+import javax.interceptor.AroundInvoke;
+import javax.interceptor.InvocationContext;
+
 /**
- * Абстрактная реализация бизнес-компонента основанного на сервисах имеющих состояние во время выполнения (stateful)
- * 
+ * Абстрактная реализация бизнес-компонента основанного на сервисах имеющих состояние во время
+ * выполнения (stateful)
+ *
  * @author Oleg V. Safonov
- * @version $Id: AbstractPOJOBusinessObjectStatefulServiceBean.java,v 1.4 2006/09/28 12:24:12 safonov Exp $
+ * @version $Id: AbstractPOJOBusinessObjectStatefulServiceBean.java,v 1.4 2006/09/28 12:24:12
+ *          safonov Exp $
  */
 public abstract class AbstractPOJOBusinessObjectStatefulServiceBean extends
-		AbstractStatefulSessionBean implements BusinessObjectService {
+    AbstractStatefulSessionBean implements BusinessObjectService {
 
-	/**
-	 * Перехватчик безопасности
-	 * 
-	 * @param ctx	контекст вызова
-	 * @return	результат вызова
-	 * @throws Exception	ИС сгенерированная во время вызова
-	 */
-	@AroundInvoke
-	public Object securityCheckIntercept(InvocationContext ctx) throws Exception {
-		return BusinessObjectUtils.securityCheckInterceptor(ctx, getLogger(), getBusinessServiceMetadata());
-	}
+  /**
+   * Перехватчик безопасности
+   *
+   * @param ctx контекст вызова
+   * @return результат вызова
+   * @throws Exception ИС сгенерированная во время вызова
+   */
+  @AroundInvoke
+  public Object securityCheckIntercept(InvocationContext ctx) throws Exception {
+    return BusinessObjectUtils.securityCheckInterceptor(ctx, getLogger(), getBusinessServiceMetadata());
+  }
 
-	/**
-	 * Реализация загрузки метаданных бизнес-компонента
-	 * 
-	 * @return	метаданные
-	 */
-	protected BusinessServiceMetadata doLoadBusinessServiceMetadata() {
-		return BusinessObjectUtils.loadBusinessServiceMetadata(getSessionContext());
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.mg.framework.api.BusinessObjectService#loadBusinessServiceMetadata()
-	 */
-	@PermitAll
-	public BusinessServiceMetadata getBusinessServiceMetadata() {
-		return doLoadBusinessServiceMetadata();
-	}
+  /**
+   * Реализация загрузки метаданных бизнес-компонента
+   *
+   * @return метаданные
+   */
+  protected BusinessServiceMetadata doLoadBusinessServiceMetadata() {
+    return BusinessObjectUtils.loadBusinessServiceMetadata(getSessionContext());
+  }
+
+  /* (non-Javadoc)
+   * @see com.mg.framework.api.BusinessObjectService#loadBusinessServiceMetadata()
+   */
+  @PermitAll
+  public BusinessServiceMetadata getBusinessServiceMetadata() {
+    return doLoadBusinessServiceMetadata();
+  }
 
 }

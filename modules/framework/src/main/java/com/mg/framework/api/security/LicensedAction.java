@@ -16,17 +16,17 @@ package com.mg.framework.api.security;
 
 /**
  * Лицензированное действие, действие которое будет выполнено если на него существует лицензия
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: LicensedAction.java,v 1.1 2007/04/13 14:14:48 safonov Exp $
  */
 public interface LicensedAction<T> {
-	
-	/**
-	 * выполнение лицензионного действия
-	 * 
-	 * @return	результат действия
-	 */
-	T run();
+
+  /**
+   * выполнение лицензионного действия
+   *
+   * @return результат действия
+   */
+  T run();
 
 }

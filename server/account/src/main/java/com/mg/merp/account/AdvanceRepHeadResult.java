@@ -21,19 +21,19 @@ import java.util.Date;
 
 /**
  * Модель результата при расчете суммы предыдущего аванса
- * 
+ *
  * @author pashistova
  * @author Konstantin S. Alikaev
  * @version $Id: AdvanceRepHeadResult.java,v 1.2 2008/03/12 14:35:37 alikaev Exp $
  */
 public class AdvanceRepHeadResult implements Serializable {
-	
-	public BigDecimal value;
-	public Date receiveDate;
-			
-	public AdvanceRepHeadResult(BigDecimal value, Date receiveDate) {
-		this.value = value;
-		this.receiveDate = receiveDate;
-	}
-	
+
+  public BigDecimal value;
+  public Date receiveDate;
+
+  public AdvanceRepHeadResult(BigDecimal value, Date receiveDate) {
+    this.value = value;
+    this.receiveDate = receiveDate;
+  }
+
 }

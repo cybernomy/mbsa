@@ -15,17 +15,17 @@
 package com.mg.framework.api.ui;
 
 /**
- * Элемент пользовательского интерфейса взаимодействующий с контроллером формы через
- * механизм адаптеров, и не имеющий прямой связи с моделью контроллера
- * 
+ * Элемент пользовательского интерфейса взаимодействующий с контроллером формы через механизм
+ * адаптеров, и не имеющий прямой связи с моделью контроллера
+ *
  * @author Oleg V. Safonov
  * @version $Id: ControllableWidget.java,v 1.2 2006/11/21 15:31:23 safonov Exp $
  */
 public interface ControllableWidget extends Widget {
-	/**
-	 * установка адаптера для управления данным элементом
-	 * 
-	 * @param adapter	адаптер
-	 */
-	public void setAdapter(Object adapter);
+  /**
+   * установка адаптера для управления данным элементом
+   *
+   * @param adapter адаптер
+   */
+  public void setAdapter(Object adapter);
 }

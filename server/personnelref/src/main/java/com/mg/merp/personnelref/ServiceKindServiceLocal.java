@@ -18,11 +18,11 @@ import com.mg.merp.personnelref.model.ServiceKind;
 
 /**
  * Бизнес-компонент "Виды стажа"
- * 
+ *
  * @author leonova
  * @version $Id: ServiceKindServiceLocal.java,v 1.2 2007/08/16 14:09:44 safonov Exp $
  */
 public interface ServiceKindServiceLocal
-		extends com.mg.framework.api.DataBusinessObjectService<ServiceKind, Integer> {
+    extends com.mg.framework.api.DataBusinessObjectService<ServiceKind, Integer> {
 
 }

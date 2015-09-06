@@ -14,32 +14,32 @@
  */
 package com.mg.framework.support.ui.widget;
 
+import com.mg.framework.api.ui.ShuttleChangeEvent;
+
 import java.io.Serializable;
 import java.util.EventListener;
 
-import com.mg.framework.api.ui.ShuttleChangeEvent;
-
 /**
- * Слушатель событий элемента "Shuttle", предназначен для создания обработчиков
- * на события перемещения элементов между списками
- * 
+ * Слушатель событий элемента "Shuttle", предназначен для создания обработчиков на события
+ * перемещения элементов между списками
+ *
  * @author Oleg V. Safonov
  * @version $Id: ShuttleListener.java,v 1.1 2006/08/31 08:36:41 safonov Exp $
  */
 public interface ShuttleListener extends EventListener, Serializable {
 
-	/**
-	 * содержимое перенесено из списка источника в список приемник
-	 * 
-	 * @param event	событие
-	 */
-	void shuttleContentsMoved(ShuttleChangeEvent event);
+  /**
+   * содержимое перенесено из списка источника в список приемник
+   *
+   * @param event событие
+   */
+  void shuttleContentsMoved(ShuttleChangeEvent event);
 
-	/**
-	 * содержимое перенесено из списка источника в список приемника
-	 * 
-	 * @param event	событие
-	 */
-	void shuttleContentsRemoved(ShuttleChangeEvent event);
+  /**
+   * содержимое перенесено из списка источника в список приемника
+   *
+   * @param event событие
+   */
+  void shuttleContentsRemoved(ShuttleChangeEvent event);
 
 }

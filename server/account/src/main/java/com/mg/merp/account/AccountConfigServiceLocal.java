@@ -18,7 +18,7 @@ import com.mg.merp.account.model.AccConfig;
 
 /**
  * Сервис бизнес-компонента "Конфигурация модуля <Бух.учет>"
- * 
+ *
  * @author leonova
  * @author Artem V. Sharapov
  * @version $Id: AccountConfigServiceLocal.java,v 1.2 2007/01/13 13:11:17 sharapov Exp $

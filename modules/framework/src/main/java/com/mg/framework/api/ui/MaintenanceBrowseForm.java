@@ -14,16 +14,16 @@
  */
 package com.mg.framework.api.ui;
 
-import java.io.Serializable;
-
 import com.mg.framework.api.DataBusinessObjectService;
 import com.mg.framework.api.orm.PersistentObject;
+
+import java.io.Serializable;
 
 /**
  * @author Oleg V. Safonov
  * @version $Id: MaintenanceBrowseForm.java,v 1.3 2006/04/24 08:41:33 safonov Exp $
  */
 public interface MaintenanceBrowseForm extends Form {
-	//public void setService(String serviceName) throws NamingException, ApplicationException;
-	public void setService(DataBusinessObjectService<PersistentObject, Serializable> service);
+  //public void setService(String serviceName) throws NamingException, ApplicationException;
+  public void setService(DataBusinessObjectService<PersistentObject, Serializable> service);
 }

@@ -22,25 +22,25 @@ import com.mg.framework.support.Messages;
  */
 @javax.ejb.ApplicationException
 public class ApplicationException extends UnrecoverableException {
-	private static final long serialVersionUID = -4467597673119425945L;
+  private static final long serialVersionUID = -4467597673119425945L;
 
-	public ApplicationException(String s, Throwable cause) {
-		super(s, cause);
-	}
-	
-	public ApplicationException(String s) {
-		super(s);
-	}	
+  public ApplicationException(String s, Throwable cause) {
+    super(s, cause);
+  }
 
-	public ApplicationException() {
-		super();
-	}	
+  public ApplicationException(String s) {
+    super(s);
+  }
 
-    public ApplicationException(ApplicationException cause) {
-        super(cause);
-    }   
-    
-	public ApplicationException(Throwable cause) {
-		super(Messages.getInstance().getMessage(Messages.INTERNAL_SOFTWARE_EXCEPTION, "Internal software exception"), cause); //$NON-NLS-1$
-	}
+  public ApplicationException() {
+    super();
+  }
+
+  public ApplicationException(ApplicationException cause) {
+    super(cause);
+  }
+
+  public ApplicationException(Throwable cause) {
+    super(Messages.getInstance().getMessage(Messages.INTERNAL_SOFTWARE_EXCEPTION, "Internal software exception"), cause); //$NON-NLS-1$
+  }
 }

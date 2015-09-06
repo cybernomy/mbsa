@@ -14,36 +14,37 @@
  */
 package com.mg.merp.planning;
 
-import javax.ejb.ApplicationException;
-
 import com.mg.framework.api.BusinessException;
 import com.mg.merp.planning.support.Messages;
 import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.warehouse.model.Warehouse;
 
+import javax.ejb.ApplicationException;
+
 /**
  * ИС генерируется если не найден склад хранения продукции
- * 
+ *
  * @author Oleg V. Safonov
- * @version $Id: ProductCatalogWarehouseNotFoundException.java,v 1.1 2007/07/30 10:37:51 safonov Exp $
+ * @version $Id: ProductCatalogWarehouseNotFoundException.java,v 1.1 2007/07/30 10:37:51 safonov Exp
+ *          $
  */
 @ApplicationException
 public class ProductCatalogWarehouseNotFoundException extends BusinessException {
-	private String catalog;
-	private String warehouse;
+  private String catalog;
+  private String warehouse;
 
-	public ProductCatalogWarehouseNotFoundException(Catalog catalog, Warehouse warehouse) {
-		super("product catalog warehouse not found");
-		this.catalog = catalog.getCode().trim();
-		this.warehouse = warehouse.getCode().trim();
-	}
+  public ProductCatalogWarehouseNotFoundException(Catalog catalog, Warehouse warehouse) {
+    super("product catalog warehouse not found");
+    this.catalog = catalog.getCode().trim();
+    this.warehouse = warehouse.getCode().trim();
+  }
 
-	/* (non-Javadoc)
-	 * @see java.lang.Throwable#getLocalizedMessage()
-	 */
-	@Override
-	public String getLocalizedMessage() {
-		return Messages.getInstance().getMessage(Messages.PRODUCT_CATALOG_WAREHOUSE_NOT_FOUND, new Object[] {catalog, warehouse});
-	}
+  /* (non-Javadoc)
+   * @see java.lang.Throwable#getLocalizedMessage()
+   */
+  @Override
+  public String getLocalizedMessage() {
+    return Messages.getInstance().getMessage(Messages.PRODUCT_CATALOG_WAREHOUSE_NOT_FOUND, new Object[]{catalog, warehouse});
+  }
 
 }

@@ -13,13 +13,17 @@
 
 <!-- $Id: PriceTypeBr.mfd.xml,v 1.6 2006/11/29 08:06:39 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.reference.support.ui.PriceTypeBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.reference.resources.formelements#PriceType.FormBr.Title" helpTopic="reference#pricetype_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.reference.support.ui.PriceTypeBr" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.reference.resources.formelements#PriceType.FormBr.Title"
+          helpTopic="reference#pricetype_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
-	
-	<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" >
-	</jfd:maintenanceTable>
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true">
+  </jfd:maintenanceTable>
+
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 
 </jfd:form>

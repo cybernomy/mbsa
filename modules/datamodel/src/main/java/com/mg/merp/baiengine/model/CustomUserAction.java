@@ -22,276 +22,281 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("BAi.CustomUserAction")
 public class CustomUserAction extends
-		com.mg.framework.service.PersistentObjectHibernate implements
-		java.io.Serializable {
+    com.mg.framework.service.PersistentObjectHibernate implements
+    java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer id;
+  private java.lang.Integer id;
 
-	private com.mg.merp.baiengine.model.Repository bai;
+  private com.mg.merp.baiengine.model.Repository bai;
 
-	private com.mg.merp.core.model.SysClass sysClass;
+  private com.mg.merp.core.model.SysClass sysClass;
 
-	private com.mg.merp.core.model.SysClient sysClient;
+  private com.mg.merp.core.model.SysClient sysClient;
 
-	private java.lang.String code;
+  private java.lang.String code;
 
-	private java.lang.String description;
+  private java.lang.String description;
 
-	private java.lang.String caption;
+  private java.lang.String caption;
 
-	private java.lang.String hint;
+  private java.lang.String hint;
 
-	private java.lang.String keyStroke;
+  private java.lang.String keyStroke;
 
-	private boolean fromMenu;
+  private boolean fromMenu;
 
-	private boolean fromToolbar;
+  private boolean fromToolbar;
 
-	private boolean forceRefresh;
+  private boolean forceRefresh;
 
-	private boolean separatorBefore;
+  private boolean separatorBefore;
 
-	private boolean separatorAfter;
+  private boolean separatorAfter;
 
-	private java.lang.String icon;
+  private java.lang.String icon;
 
-	private java.lang.Short priority;
+  private java.lang.Short priority;
 
-	private boolean isActive;
-	
-	private java.util.Set<CustomUserActionPermiss> permissions;
+  private boolean isActive;
 
-	// Constructors
+  private java.util.Set<CustomUserActionPermiss> permissions;
 
-	/** default constructor */
-	public CustomUserAction() {
-	}
+  // Constructors
 
-	/** constructor with id */
-	public CustomUserAction(java.lang.Integer Id) {
-		this.id = Id;
-	}
+  /**
+   * default constructor
+   */
+  public CustomUserAction() {
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.id;
-	}
+  /**
+   * constructor with id
+   */
+  public CustomUserAction(java.lang.Integer Id) {
+    this.id = Id;
+  }
 
-	public void setId(java.lang.Integer Id) {
-		this.id = Id;
-	}
+  // Property accessors
 
-	/**
-	 * 
-	 */	
-	public com.mg.merp.baiengine.model.Repository getBAi() {
-		return this.bai;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.id;
+  }
 
-	public void setBAi(
-			com.mg.merp.baiengine.model.Repository bai) {
-		this.bai = bai;
-	}
+  public void setId(java.lang.Integer Id) {
+    this.id = Id;
+  }
 
-	/**
-	 * 
-	 */
-	public com.mg.merp.core.model.SysClass getSysClass() {
-		return this.sysClass;
-	}
+  /**
+   *
+   */
+  public com.mg.merp.baiengine.model.Repository getBAi() {
+    return this.bai;
+  }
 
-	public void setSysClass(com.mg.merp.core.model.SysClass SysClass) {
-		this.sysClass = SysClass;
-	}
+  public void setBAi(
+      com.mg.merp.baiengine.model.Repository bai) {
+    this.bai = bai;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   *
+   */
+  public com.mg.merp.core.model.SysClass getSysClass() {
+    return this.sysClass;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.sysClient;
-	}
+  public void setSysClass(com.mg.merp.core.model.SysClass SysClass) {
+    this.sysClass = SysClass;
+  }
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.sysClient = SysClient;
-	}
+  /**
+   *
+   */
 
-	/**
-	 * 
-	 */
-	@DataItemName("BAi.CustomUserAction.Code")
-	public java.lang.String getCode() {
-		return this.code;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.sysClient;
+  }
 
-	public void setCode(java.lang.String Code) {
-		this.code = Code;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.sysClient = SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("BAi.CustomUserAction.Description")
-	public java.lang.String getDescription() {
-		return this.description;
-	}
+  /**
+   *
+   */
+  @DataItemName("BAi.CustomUserAction.Code")
+  public java.lang.String getCode() {
+    return this.code;
+  }
 
-	public void setDescription(java.lang.String Description) {
-		this.description = Description;
-	}
+  public void setCode(java.lang.String Code) {
+    this.code = Code;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("BAi.CustomUserAction.Caption")
-	public java.lang.String getCaption() {
-		return this.caption;
-	}
+  /**
+   *
+   */
+  @DataItemName("BAi.CustomUserAction.Description")
+  public java.lang.String getDescription() {
+    return this.description;
+  }
 
-	public void setCaption(java.lang.String Caption) {
-		this.caption = Caption;
-	}
+  public void setDescription(java.lang.String Description) {
+    this.description = Description;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("BAi.CustomUserAction.Hint")
-	public java.lang.String getHint() {
-		return this.hint;
-	}
+  /**
+   *
+   */
+  @DataItemName("BAi.CustomUserAction.Caption")
+  public java.lang.String getCaption() {
+    return this.caption;
+  }
 
-	public void setHint(java.lang.String Hint) {
-		this.hint = Hint;
-	}
+  public void setCaption(java.lang.String Caption) {
+    this.caption = Caption;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("BAi.CustomUserAction.KeyStroke")
-	public java.lang.String getKeyStroke() {
-		return this.keyStroke;
-	}
+  /**
+   *
+   */
+  @DataItemName("BAi.CustomUserAction.Hint")
+  public java.lang.String getHint() {
+    return this.hint;
+  }
 
-	public void setKeyStroke(java.lang.String keyStroke) {
-		this.keyStroke = keyStroke;
-	}
+  public void setHint(java.lang.String Hint) {
+    this.hint = Hint;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("BAi.CustomUserAction.FromMenu")
-	public boolean isFromMenu() {
-		return this.fromMenu;
-	}
+  /**
+   *
+   */
+  @DataItemName("BAi.CustomUserAction.KeyStroke")
+  public java.lang.String getKeyStroke() {
+    return this.keyStroke;
+  }
 
-	public void setFromMenu(boolean FromMenu) {
-		this.fromMenu = FromMenu;
-	}
+  public void setKeyStroke(java.lang.String keyStroke) {
+    this.keyStroke = keyStroke;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("BAi.CustomUserAction.FromToolbar")
-	public boolean isFromToolbar() {
-		return this.fromToolbar;
-	}
+  /**
+   *
+   */
+  @DataItemName("BAi.CustomUserAction.FromMenu")
+  public boolean isFromMenu() {
+    return this.fromMenu;
+  }
 
-	public void setFromToolbar(boolean FromToolbar) {
-		this.fromToolbar = FromToolbar;
-	}
+  public void setFromMenu(boolean FromMenu) {
+    this.fromMenu = FromMenu;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("BAi.CustomUserAction.ForceRefresh")
-	public boolean isForceRefresh() {
-		return this.forceRefresh;
-	}
+  /**
+   *
+   */
+  @DataItemName("BAi.CustomUserAction.FromToolbar")
+  public boolean isFromToolbar() {
+    return this.fromToolbar;
+  }
 
-	public void setForceRefresh(boolean ForceRefresh) {
-		this.forceRefresh = ForceRefresh;
-	}
+  public void setFromToolbar(boolean FromToolbar) {
+    this.fromToolbar = FromToolbar;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("BAi.CustomUserAction.SeparatorBefore")
-	public boolean isSeparatorBefore() {
-		return this.separatorBefore;
-	}
+  /**
+   *
+   */
+  @DataItemName("BAi.CustomUserAction.ForceRefresh")
+  public boolean isForceRefresh() {
+    return this.forceRefresh;
+  }
 
-	public void setSeparatorBefore(boolean SeparatorBefore) {
-		this.separatorBefore = SeparatorBefore;
-	}
+  public void setForceRefresh(boolean ForceRefresh) {
+    this.forceRefresh = ForceRefresh;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("BAi.CustomUserAction.SeparatorAfter")
-	public boolean isSeparatorAfter() {
-		return this.separatorAfter;
-	}
+  /**
+   *
+   */
+  @DataItemName("BAi.CustomUserAction.SeparatorBefore")
+  public boolean isSeparatorBefore() {
+    return this.separatorBefore;
+  }
 
-	public void setSeparatorAfter(boolean SeparatorAfter) {
-		this.separatorAfter = SeparatorAfter;
-	}
+  public void setSeparatorBefore(boolean SeparatorBefore) {
+    this.separatorBefore = SeparatorBefore;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("BAi.CustomUserAction.Icon")
-	public java.lang.String getIcon() {
-		return this.icon;
-	}
+  /**
+   *
+   */
+  @DataItemName("BAi.CustomUserAction.SeparatorAfter")
+  public boolean isSeparatorAfter() {
+    return this.separatorAfter;
+  }
 
-	public void setIcon(java.lang.String icon) {
-		this.icon = icon;
-	}
+  public void setSeparatorAfter(boolean SeparatorAfter) {
+    this.separatorAfter = SeparatorAfter;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("BAi.CustomUserAction.Priority")
-	public java.lang.Short getPriority() {
-		return this.priority;
-	}
+  /**
+   *
+   */
+  @DataItemName("BAi.CustomUserAction.Icon")
+  public java.lang.String getIcon() {
+    return this.icon;
+  }
 
-	public void setPriority(java.lang.Short Priority) {
-		this.priority = Priority;
-	}
+  public void setIcon(java.lang.String icon) {
+    this.icon = icon;
+  }
 
-	/**
-	 * @return the isActive
-	 */
-	@DataItemName("BAi.CustomUserAction.Active")
-	public boolean isActive() {
-		return isActive;
-	}
+  /**
+   *
+   */
+  @DataItemName("BAi.CustomUserAction.Priority")
+  public java.lang.Short getPriority() {
+    return this.priority;
+  }
 
-	/**
-	 * @param isActive the isActive to set
-	 */
-	public void setActive(boolean isActive) {
-		this.isActive = isActive;
-	}
+  public void setPriority(java.lang.Short Priority) {
+    this.priority = Priority;
+  }
 
-	/**
-	 * 
-	 */
+  /**
+   * @return the isActive
+   */
+  @DataItemName("BAi.CustomUserAction.Active")
+  public boolean isActive() {
+    return isActive;
+  }
 
-	public java.util.Set<CustomUserActionPermiss> getPermissions() {
-		return this.permissions;
-	}
+  /**
+   * @param isActive the isActive to set
+   */
+  public void setActive(boolean isActive) {
+    this.isActive = isActive;
+  }
 
-	public void setPermissions(
-			java.util.Set<CustomUserActionPermiss> permissions) {
-		this.permissions = permissions;
-	}
+  /**
+   *
+   */
+
+  public java.util.Set<CustomUserActionPermiss> getPermissions() {
+    return this.permissions;
+  }
+
+  public void setPermissions(
+      java.util.Set<CustomUserActionPermiss> permissions) {
+    this.permissions = permissions;
+  }
 
 }

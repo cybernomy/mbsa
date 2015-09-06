@@ -13,32 +13,29 @@
 */
 package com.mg.merp.workbench.service;
 
+import com.mg.merp.security.model.Groups;
+
 import java.util.List;
 
 import javax.swing.tree.TreeModel;
 
-import com.mg.merp.security.model.Groups;
-
 /**
  * Интерфейс взаимодействия студии разработки с сервером приложений
- * 
+ *
  * @author Valentin A. Poroxnenko
- * @version $Id: Workbench.java,v 1.3 2007/04/11 06:52:06 poroxnenko Exp $ 
+ * @version $Id: Workbench.java,v 1.3 2007/04/11 06:52:06 poroxnenko Exp $
  */
 public interface Workbench {
 
-	public void testConnectionOK();
-	
-    /**
-     * @return Возвращает список бизнес компонентов в виде
-     * строки BeanName1:=:Description1;...BeanNameN:=:DescriptionN
-     */
-	TreeModel getSysClasses() throws Exception;
-	
-	/**
-	 * 
-	 * @return список групп пользователей
-	 * @throws Exception
-	 */
-	List<Groups> getSecGroups() throws Exception;
+  public void testConnectionOK();
+
+  /**
+   * @return Возвращает список бизнес компонентов в виде строки BeanName1:=:Description1;...BeanNameN:=:DescriptionN
+   */
+  TreeModel getSysClasses() throws Exception;
+
+  /**
+   * @return список групп пользователей
+   */
+  List<Groups> getSecGroups() throws Exception;
 }

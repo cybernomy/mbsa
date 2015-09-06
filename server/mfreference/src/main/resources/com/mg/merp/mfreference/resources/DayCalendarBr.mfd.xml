@@ -13,17 +13,21 @@
 
 <!-- $Id: DayCalendarBr.mfd.xml,v 1.4 2006/12/03 13:05:36 konyashkina Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.mfreference.support.ui.DayCalendarBr" orientation="ver" verticalGap="5" title="resource://com.mg.merp.mfreference.resources.formelements#DayCalendar.FormBr.Title" helpTopic="mfreference#daycalend_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.mfreference.support.ui.DayCalendarBr" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.mfreference.resources.formelements#DayCalendar.FormBr.Title"
+          helpTopic="mfreference#daycalend_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMDBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMDBrowseHeaderMacros.xml"/>
 
-	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
-		<jfd:maintenanceTable id="master" scroll="true" >
-		</jfd:maintenanceTable>
-		<jfd:maintenanceTable id="detail" scroll="true" autoResize="subsequent_columns">
-		</jfd:maintenanceTable>
-	</jfd:container>
+  <jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+    <jfd:maintenanceTable id="master" scroll="true">
+    </jfd:maintenanceTable>
+    <jfd:maintenanceTable id="detail" scroll="true" autoResize="subsequent_columns">
+    </jfd:maintenanceTable>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMDBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMDBrowseFooterMacros.xml"/>
 
 </jfd:form>

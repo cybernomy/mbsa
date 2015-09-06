@@ -20,26 +20,25 @@ import com.mg.framework.utils.ServerUtils;
 
 /**
  * Локатор сервиса машины бизнес расширений системы
- * 
+ *
  * @author Oleg V. Safonov
  * @version $Id: BusinessAddinEngineLocator.java,v 1.1 2006/06/08 11:39:47 safonov Exp $
  */
 public class BusinessAddinEngineLocator {
-	private static volatile BusinessAddinEngine instance = null;
-	
-	/**
-	 * получить сервис машины бизнес расширений системы
-	 * 
-	 * @return	сервис BAi
-	 */
-	public static BusinessAddinEngine locate() {
-        if (instance == null)
-            try {
-                instance = (BusinessAddinEngine) ServerUtils.createMBeanProxy(BusinessAddinEngine.class, BusinessAddinEngine.SERVICE_NAME);
-            }
-            catch (Exception e) {
-                throw new ApplicationException(e);
-            }
-        return instance;
-	}
+  private static volatile BusinessAddinEngine instance = null;
+
+  /**
+   * получить сервис машины бизнес расширений системы
+   *
+   * @return сервис BAi
+   */
+  public static BusinessAddinEngine locate() {
+    if (instance == null)
+      try {
+        instance = (BusinessAddinEngine) ServerUtils.createMBeanProxy(BusinessAddinEngine.class, BusinessAddinEngine.SERVICE_NAME);
+      } catch (Exception e) {
+        throw new ApplicationException(e);
+      }
+    return instance;
+  }
 }

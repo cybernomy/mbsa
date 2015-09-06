@@ -20,23 +20,24 @@ import com.mg.merp.finance.model.OperationModel;
 
 /**
  * Сервис бизнес-компонента "Финансовые операции"
- * 
+ *
  * @author Artem V. Sharapov
  * @version $ID$
  */
 public interface OperationServiceLocal
-extends com.mg.framework.api.DataBusinessObjectService<FinOperation, Integer>  {
-	/**
-	 * тип папки для финансовых операций
-	 */
-	final static short FOLDER_PART = 40;
+    extends com.mg.framework.api.DataBusinessObjectService<FinOperation, Integer> {
+  /**
+   * тип папки для финансовых операций
+   */
+  final static short FOLDER_PART = 40;
 
-	/**
-	 * Создание финансовой операции по образцу
-	 * @param pattern - образец
-	 * @param folder - папка назначения
-	 * @return финансовая операция
-	 */
-	FinOperation createByPattern(OperationModel pattern, Folder folder);
-	
+  /**
+   * Создание финансовой операции по образцу
+   *
+   * @param pattern - образец
+   * @param folder  - папка назначения
+   * @return финансовая операция
+   */
+  FinOperation createByPattern(OperationModel pattern, Folder folder);
+
 }

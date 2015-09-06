@@ -18,28 +18,28 @@ import com.mg.framework.api.annotations.DataItemName;
 import com.mg.framework.api.annotations.EnumConstantText;
 
 /**
- * Метод измерения расхода материалов
- * (для Материала операции)
+ * Метод измерения расхода материалов (для Материала операции)
+ *
  * @author Julia 'Jetta' Konyashkina
  * @version $Id: QuantityRateFlag.java,v 1.3 2007/07/30 10:25:11 safonov Exp $
  */
 @DataItemName("Manufacture.QuantityRateFlag")
 public enum QuantityRateFlag {
-	/**
-	 * На один час операции
-	 */
-	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#QuanRateFlag.Time")
-	TIME,
-	
-	/**
-	 * На единицу готовой продукции
-	 */
-	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#QuanRateFlag.Unit")
-	UNIT,
-	
-	/**
-	 * Фиксированное количество на партию
-	 */
-	@EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#QuanRateFlag.Fixed")
-	FIXED
+  /**
+   * На один час операции
+   */
+  @EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#QuanRateFlag.Time")
+  TIME,
+
+  /**
+   * На единицу готовой продукции
+   */
+  @EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#QuanRateFlag.Unit")
+  UNIT,
+
+  /**
+   * Фиксированное количество на партию
+   */
+  @EnumConstantText("resource://com.mg.merp.manufacture.resources.dataitemlabels#QuanRateFlag.Fixed")
+  FIXED
 }

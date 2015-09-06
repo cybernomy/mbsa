@@ -19,17 +19,17 @@ import com.mg.merp.reference.support.ui.ContractorSearchForm;
 
 /**
  * Конторллер формы поддержки "Образцов входящих счетов фактур"
- * 
+ *
  * @author leonova
  * @version $Id: FacturaHeadModelInMt.java,v 1.2 2007/05/22 09:04:23 sharapov Exp $
  */
 public class FacturaHeadModelInMt extends DocumentModelMaintenanceForm {
-	
-	protected String[] contractorFromKinds;
-	
-	public FacturaHeadModelInMt() {
-		super();
-		contractorFromKinds = new String[] {ContractorSearchForm.CONTRACTOR_PARTNER};
-	}
-	
+
+  protected String[] contractorFromKinds;
+
+  public FacturaHeadModelInMt() {
+    super();
+    contractorFromKinds = new String[]{ContractorSearchForm.CONTRACTOR_PARTNER};
+  }
+
 }

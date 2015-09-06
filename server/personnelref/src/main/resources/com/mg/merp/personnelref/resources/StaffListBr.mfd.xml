@@ -13,21 +13,27 @@
 
 <!-- $Id: StaffListBr.mfd.xml,v 1.6 2007/07/09 08:11:26 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver" controller="com.mg.merp.personnelref.support.ui.StaffListBr" title="resource://com.mg.merp.personnelref.resources.formelements#StaffList.FormBr.Title" helpTopic="personnelref#stflstvar_html" >
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" orientation="ver"
+          controller="com.mg.merp.personnelref.support.ui.StaffListBr"
+          title="resource://com.mg.merp.personnelref.resources.formelements#StaffList.FormBr.Title"
+          helpTopic="personnelref#stflstvar_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseHeaderMacros.xml"/>
 
-	<jfd:container id="split" layout="jfd:split" alignment="expand_expand">
-		<jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true" >
-		</jfd:maintenanceTree>
-		<jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true" autoResize="subsequent_columns">
-			<jfd:popupMenu>
-				<jfd:separator />
-				<jfd:menuItem id="showStuffListPositions" text="resource://com.mg.merp.personnelref.resources.formelements#StaffListBr.ShowStuffListPositions" actionListener="ShowStuffListPositions" />
-			</jfd:popupMenu>
-		</jfd:maintenanceTable>
-	</jfd:container>
+  <jfd:container id="split" layout="jfd:split" alignment="expand_expand">
+    <jfd:maintenanceTree id="tree" alignment="left_expand" scroll="true">
+    </jfd:maintenanceTree>
+    <jfd:maintenanceTable id="table" alignment="expand_expand" scroll="true"
+                          autoResize="subsequent_columns">
+      <jfd:popupMenu>
+        <jfd:separator/>
+        <jfd:menuItem id="showStuffListPositions"
+                      text="resource://com.mg.merp.personnelref.resources.formelements#StaffListBr.ShowStuffListPositions"
+                      actionListener="ShowStuffListPositions"/>
+      </jfd:popupMenu>
+    </jfd:maintenanceTable>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultHierarchyBrowseFooterMacros.xml"/>
 
 </jfd:form>

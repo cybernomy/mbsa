@@ -22,21 +22,23 @@ import java.io.Serializable;
  */
 @Deprecated
 public class BrowseCond implements Serializable {
-	public final static String BY_FOLDER_ATTRIBUTE = "ByFolder";
-	
-	public Object browseMasterKey;
-	public java.lang.String browseFieldsSet;
-	public AttributeMap browseCond;
-	public boolean searching;
-	public int format;
-	
-	public BrowseCond(){}
-	public BrowseCond(Object browseMasterKey, String browseFieldsSet, AttributeMap browseCond, boolean searching, int format){
-		this.browseMasterKey = browseMasterKey;
-		this.browseFieldsSet = browseFieldsSet;
-		this.browseCond = browseCond;
-		this.searching = searching;
-		this.format = format;
-	}
+  public final static String BY_FOLDER_ATTRIBUTE = "ByFolder";
+
+  public Object browseMasterKey;
+  public java.lang.String browseFieldsSet;
+  public AttributeMap browseCond;
+  public boolean searching;
+  public int format;
+
+  public BrowseCond() {
+  }
+
+  public BrowseCond(Object browseMasterKey, String browseFieldsSet, AttributeMap browseCond, boolean searching, int format) {
+    this.browseMasterKey = browseMasterKey;
+    this.browseFieldsSet = browseFieldsSet;
+    this.browseCond = browseCond;
+    this.searching = searching;
+    this.format = format;
+  }
 
 }

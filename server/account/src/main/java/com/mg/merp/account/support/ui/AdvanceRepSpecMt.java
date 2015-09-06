@@ -18,16 +18,16 @@ import com.mg.merp.document.generic.ui.GoodsDocumentSpecMaintenanceForm;
 
 /**
  * Контроллер формы поддержки спецификации авансовых отчетов
- * 
+ *
  * @author leonova
  * @version $Id: AdvanceRepSpecMt.java,v 1.3 2006/08/22 06:44:55 leonova Exp $
  */
-public class AdvanceRepSpecMt extends GoodsDocumentSpecMaintenanceForm{
+public class AdvanceRepSpecMt extends GoodsDocumentSpecMaintenanceForm {
 
-	public AdvanceRepSpecMt() throws Exception {
-		super();
+  public AdvanceRepSpecMt() throws Exception {
+    super();
 
-	}
-	
+  }
+
 
 }

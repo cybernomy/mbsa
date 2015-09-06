@@ -22,88 +22,93 @@ import com.mg.framework.api.annotations.DataItemName;
  */
 @DataItemName("PersonnelRef.Rise")
 public class Rise extends com.mg.framework.service.PersistentObjectHibernate
-		implements java.io.Serializable {
+    implements java.io.Serializable {
 
-	// Fields
+  // Fields
 
-	private java.lang.Integer Id;
+  private java.lang.Integer Id;
 
-	private com.mg.merp.core.model.SysClient SysClient;
+  private com.mg.merp.core.model.SysClient SysClient;
 
-	private java.lang.String RCode;
+  private java.lang.String RCode;
 
-	private java.lang.String RName;
+  private java.lang.String RName;
 
-	// private java.util.Set SetOfPrefRiseScale;
+  // private java.util.Set SetOfPrefRiseScale;
 
-	// Constructors
+  // Constructors
 
-	/** default constructor */
-	public Rise() {
-	}
+  /**
+   * default constructor
+   */
+  public Rise() {
+  }
 
-	/** constructor with id */
-	public Rise(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   * constructor with id
+   */
+  public Rise(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	// Property accessors
-	/**
-	 * 
-	 */
-	@DataItemName("ID")
-	public java.lang.Integer getId() {
-		return this.Id;
-	}
+  // Property accessors
 
-	public void setId(java.lang.Integer Id) {
-		this.Id = Id;
-	}
+  /**
+   *
+   */
+  @DataItemName("ID")
+  public java.lang.Integer getId() {
+    return this.Id;
+  }
 
-	/**
-	 * 
-	 */
+  public void setId(java.lang.Integer Id) {
+    this.Id = Id;
+  }
 
-	public com.mg.merp.core.model.SysClient getSysClient() {
-		return this.SysClient;
-	}
+  /**
+   *
+   */
 
-	public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+  public com.mg.merp.core.model.SysClient getSysClient() {
+    return this.SysClient;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.Rise.Code")
-	public java.lang.String getRCode() {
-		return this.RCode;
-	}
+  public void setSysClient(com.mg.merp.core.model.SysClient SysClient) {
+    this.SysClient = SysClient;
+  }
 
-	public void setRCode(java.lang.String Rcode) {
-		this.RCode = Rcode;
-	}
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.Rise.Code")
+  public java.lang.String getRCode() {
+    return this.RCode;
+  }
 
-	/**
-	 * 
-	 */
-	@DataItemName("PersonnelRef.Rise.Name")
-	public java.lang.String getRName() {
-		return this.RName;
-	}
+  public void setRCode(java.lang.String Rcode) {
+    this.RCode = Rcode;
+  }
 
-	public void setRName(java.lang.String Rname) {
-		this.RName = Rname;
-	}
-	/**
-	 * 
-	 */
-	//    
-	// public java.util.Set getSetOfPrefRiseScale () {
-	// return this.SetOfPrefRiseScale;
-	// }
-	//    
-	// public void setSetOfPrefRiseScale (java.util.Set SetOfPrefRiseScale) {
-	// this.SetOfPrefRiseScale = SetOfPrefRiseScale;
-	// }
+  /**
+   *
+   */
+  @DataItemName("PersonnelRef.Rise.Name")
+  public java.lang.String getRName() {
+    return this.RName;
+  }
+
+  public void setRName(java.lang.String Rname) {
+    this.RName = Rname;
+  }
+  /**
+   *
+   */
+  //
+  // public java.util.Set getSetOfPrefRiseScale () {
+  // return this.SetOfPrefRiseScale;
+  // }
+  //
+  // public void setSetOfPrefRiseScale (java.util.Set SetOfPrefRiseScale) {
+  // this.SetOfPrefRiseScale = SetOfPrefRiseScale;
+  // }
 }

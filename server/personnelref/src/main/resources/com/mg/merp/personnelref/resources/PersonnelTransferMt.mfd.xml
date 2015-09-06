@@ -13,20 +13,24 @@
 
 <!-- $Id: PersonnelTransferMt.mfd.xml,v 1.5 2007/07/10 07:35:34 sharapov Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver" verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm" title="resource://com.mg.merp.personnelref.resources.formelements#Transfer.FormMt.Title" helpTopic="personnelref#transfer_html">
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="maintenance" orientation="ver"
+          verticalGap="5" controller="com.mg.framework.generic.ui.DefaultMaintenanceForm"
+          title="resource://com.mg.merp.personnelref.resources.formelements#Transfer.FormMt.Title"
+          helpTopic="personnelref#transfer_html">
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceHeaderMacros.xml"/>
 
-	<jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
-		<jfd:border style="bevel" type="raised" />
-		<jfd:field id="TransferDate" />
-		<jfd:field id="StaffListUnit" readOnly="true" />
-		<jfd:field id="StaffListPosition" sameLine="true" searchHelp="com.mg.merp.personnelref.support.ui.StaffListPositionWithStaffListUnitSearchHelp" />		
-		<jfd:field id="Salary" />
-		<jfd:field id="SalaryRaise" sameLine="true" />
-		<jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml" />
-	</jfd:container>
+  <jfd:container id="fields" layout="jfd:defaultMtLayout" alignment="expand_expand">
+    <jfd:border style="bevel" type="raised"/>
+    <jfd:field id="TransferDate"/>
+    <jfd:field id="StaffListUnit" readOnly="true"/>
+    <jfd:field id="StaffListPosition" sameLine="true"
+               searchHelp="com.mg.merp.personnelref.support.ui.StaffListPositionWithStaffListUnitSearchHelp"/>
+    <jfd:field id="Salary"/>
+    <jfd:field id="SalaryRaise" sameLine="true"/>
+    <jfd:include name="com/mg/framework/resources/DefaultMaintenanceAddinFieldMacros.xml"/>
+  </jfd:container>
 
-	<jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml" />
+  <jfd:include name="com/mg/framework/resources/DefaultMaintenanceFooterMacros.xml"/>
 
 </jfd:form>

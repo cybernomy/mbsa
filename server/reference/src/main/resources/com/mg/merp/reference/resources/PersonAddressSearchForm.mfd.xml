@@ -13,11 +13,14 @@
 
 <!-- $Id: PersonAddressSearchForm.mfd.xml,v 1.1 2007/08/28 07:32:34 alikaev Exp $ -->
 
-<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse" controller="com.mg.merp.reference.support.ui.PersonAddressSearchForm" orientation="ver" verticalGap="5" title="resource://com.mg.merp.reference.resources.formelements#PersonAddress.FormMt.Title" >
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml" />
-	
-	<jfd:table id="table" alignment="expand_expand" scroll="true">
-	</jfd:table>
+<jfd:form xmlns:jfd="http://xmlns.m-g.ru/jet/ui" type="browse"
+          controller="com.mg.merp.reference.support.ui.PersonAddressSearchForm" orientation="ver"
+          verticalGap="5"
+          title="resource://com.mg.merp.reference.resources.formelements#PersonAddress.FormMt.Title">
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseHeaderMacros.xml"/>
 
-	<jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml" />
+  <jfd:table id="table" alignment="expand_expand" scroll="true">
+  </jfd:table>
+
+  <jfd:include name="com/mg/framework/resources/DefaultPlainBrowseFooterMacros.xml"/>
 </jfd:form>
