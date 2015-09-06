@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.mg.server</groupId>
+    <artifactId>report</artifactId>
+    <version>4.0.8-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.mg.server.report</groupId>
+  <artifactId>ejb</artifactId>
+
+  <name>MBSA::Server::Report::EJB</name>
+  <description/>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.eclipse.birt.core</groupId>
+      <artifactId>api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.birt.report.engine</groupId>
+      <artifactId>api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.birt.report.model</groupId>
+      <artifactId>api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.datatools.connectivity</groupId>
+      <artifactId>oda</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
+</project>

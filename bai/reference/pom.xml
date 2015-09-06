@@ -6,17 +6,31 @@
 
   <parent>
     <groupId>com.mg</groupId>
-    <artifactId>server</artifactId>
+    <artifactId>bai</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.server</groupId>
+  <groupId>com.mg.bai</groupId>
   <artifactId>reference</artifactId>
+  <packaging>pom</packaging>
 
-  <name>MBSA::Server::Reference</name>
+  <name>MBSA::BAI::Reference</name>
   <description/>
 
+  <modules>
+    <module>ejb</module>
+    <module>ui</module>
+  </modules>
+
   <dependencies>
+    <dependency>
+      <groupId>com.mg.modules.core</groupId>
+      <artifactId>ejb</artifactId>
+      <type>jar</type>
+    </dependency>
+  </dependencies>
+
+ <!-- <dependencies>
     <dependency>
       <groupId>com.mg.modules</groupId>
       <artifactId>framework</artifactId>
@@ -56,5 +70,5 @@
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
     </dependency>
-  </dependencies>
+  </dependencies>-->
 </project>

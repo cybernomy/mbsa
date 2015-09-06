@@ -3,9 +3,6 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <modules>
-    <module>account</module>
-  </modules>
 
   <parent>
     <groupId>com.mg</groupId>
@@ -17,7 +14,41 @@
   <packaging>pom</packaging>
 
   <name>MBSA::BAI</name>
-  <description/>
+  <description>Business AddIns</description>
 
+  <modules>
+    <module>account</module>
+    <module>reference</module>
+  </modules>
 
+  <dependencies>
+    <dependency>
+      <groupId>com.mg.modules</groupId>
+      <artifactId>framework</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.modules</groupId>
+      <artifactId>datamodel</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.modules.baiengine</groupId>
+      <artifactId>ejb</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>jboss</groupId>
+      <artifactId>jboss-system</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>jboss</groupId>
+      <artifactId>jboss-jmx</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>jboss</groupId>
+      <artifactId>jboss-annotations-ejb3</artifactId>
+    </dependency>
+  </dependencies>
 </project>

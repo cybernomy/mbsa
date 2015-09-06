@@ -10,8 +10,9 @@
   <packaging>pom</packaging>
 
   <modules>
-    <!--<module>server</module>-->
     <module>modules</module>
+    <module>server</module>
+    <!--<module>bai</module>-->
     <!--<module>distribution</module>-->
   </modules>
 
@@ -488,8 +489,14 @@
         <type>jar</type>
       </dependency>
       <dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>reference</artifactId>
+        <groupId>com.mg.bai.reference</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.reference</groupId>
+        <artifactId>ui</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
       </dependency>
