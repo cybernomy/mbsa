@@ -17,8 +17,11 @@
   <description/>
 
   <modules>
-    <!--<module>report</module>-->
-    <!--<module>scheduler</module>-->
+    <module>exchange</module>
+    <module>scheduler</module>
+    <module>hr</module>
+    <module>report</module>
+    <!---->
     <!--<module>reference</module>-->
     <!---->
     <!--<module>reportviewer</module>-->
@@ -28,7 +31,7 @@
     <!--<module>discount</module>-->
     <!--<module>warehouse</module>-->
     <!--<module>retail</module>-->
-    <!--<module>exchange</module>-->
+    <!---->
     <!--<module>security</module>-->
     <!--<module>bpm</module>-->
     <!--<module>contract</module>-->
@@ -70,6 +73,12 @@
     <dependency>
       <groupId>jboss</groupId>
       <artifactId>jboss-jmx</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate</artifactId>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 

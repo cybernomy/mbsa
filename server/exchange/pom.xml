@@ -15,17 +15,4 @@
 
   <name>MBSA::Server::Exchange</name>
   <description/>
-
-  <dependencies>
-    <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>framework</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>core</artifactId>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
 </project>
