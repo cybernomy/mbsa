@@ -5,22 +5,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.mg</groupId>
-    <artifactId>server</artifactId>
+    <groupId>com.mg.server</groupId>
+    <artifactId>reference</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.server</groupId>
-  <artifactId>documentcore</artifactId>
+  <groupId>com.mg.server.reference</groupId>
+  <artifactId>ejb</artifactId>
 
-  <name>MBSA::Server::DocumentCore</name>
+  <name>MBSA::Server::Reference::EJB</name>
   <description/>
-
-  <dependencies>
-    <dependency>
-      <groupId>com.mg.server.reference</groupId>
-      <artifactId>ejb</artifactId>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
 </project>

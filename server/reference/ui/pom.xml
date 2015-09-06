@@ -5,28 +5,27 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.mg</groupId>
-    <artifactId>bai</artifactId>
+    <groupId>com.mg.server</groupId>
+    <artifactId>reference</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.bai</groupId>
-  <artifactId>reference</artifactId>
-  <packaging>pom</packaging>
+  <groupId>com.mg.server.reference</groupId>
+  <artifactId>ui</artifactId>
 
-  <name>MBSA::BAI::Reference</name>
+  <name>MBSA::Server::Reference::UI</name>
   <description/>
-
-  <modules>
-    <module>ejb</module>
-    <module>ui</module>
-  </modules>
 
   <dependencies>
     <dependency>
-      <groupId>com.mg.modules.core</groupId>
+      <groupId>com.mg.server.reference</groupId>
       <artifactId>ejb</artifactId>
-      <type>jar</type>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.modules.core</groupId>
+      <artifactId>ui</artifactId>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>

@@ -18,7 +18,6 @@
 
   <modules>
     <module>account</module>
-    <module>reference</module>
   </modules>
 
   <dependencies>

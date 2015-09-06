@@ -18,38 +18,19 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>framework</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>core</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>baiengine</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
       <groupId>com.mg.server</groupId>
       <artifactId>documentcore</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>reference</artifactId>
+      <groupId>com.mg.server.reference</groupId>
+      <artifactId>ejb</artifactId>
       <scope>provided</scope>
     </dependency>
-
     <dependency>
-      <groupId>jboss</groupId>
-      <artifactId>jboss-system</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>jboss</groupId>
-      <artifactId>jboss-jmx</artifactId>
+      <groupId>com.mg.server.reference</groupId>
+      <artifactId>ui</artifactId>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>

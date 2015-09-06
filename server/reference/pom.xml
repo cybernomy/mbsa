@@ -5,14 +5,24 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.mg.bai</groupId>
-    <artifactId>reference</artifactId>
+    <groupId>com.mg</groupId>
+    <artifactId>server</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.bai.reference</groupId>
-  <artifactId>ejb</artifactId>
+  <groupId>com.mg.server</groupId>
+  <artifactId>reference</artifactId>
+  <packaging>pom</packaging>
 
-  <name>MBSA::BAI::Reference::EJB</name>
+  <name>MBSA::Server::Reference</name>
   <description/>
+
+  <modules>
+    <module>ejb</module>
+    <module>ui</module>
+  </modules>
+
+  <dependencies>
+
+  </dependencies>
 </project>

@@ -21,6 +21,10 @@
     <module>scheduler</module>
     <module>hr</module>
     <module>report</module>
+    <module>reference</module>
+    <module>documentcore</module>
+    <module>docflow</module>
+
     <!---->
     <!--<module>reference</module>-->
     <!---->
@@ -67,12 +71,27 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
+      <groupId>com.mg.modules.core</groupId>
+      <artifactId>ejb</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.modules.baiengine</groupId>
+      <artifactId>ejb</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
       <groupId>jboss</groupId>
       <artifactId>jboss-system</artifactId>
     </dependency>
     <dependency>
       <groupId>jboss</groupId>
       <artifactId>jboss-jmx</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>jboss</groupId>
+      <artifactId>jboss-annotations-ejb3</artifactId>
     </dependency>
 
     <dependency>
