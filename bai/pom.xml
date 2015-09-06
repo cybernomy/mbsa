@@ -18,6 +18,7 @@
 
   <modules>
     <module>account</module>
+    <module>discount</module>
   </modules>
 
   <dependencies>
