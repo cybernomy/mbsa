@@ -12,13 +12,50 @@
 
   <groupId>com.mg.bai</groupId>
   <artifactId>account</artifactId>
-  <packaging>pom</packaging>
 
   <name>MBSA::BAI::Account</name>
   <description/>
 
-  <modules>
-    <module>ejb</module>
-    <module>ui</module>
-  </modules>
+  <dependencies>
+    <dependency>
+      <groupId>com.mg.modules.core</groupId>
+      <artifactId>ui</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.server</groupId>
+      <artifactId>report</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.server.reference</groupId>
+      <artifactId>ejb</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.server.reference</groupId>
+      <artifactId>ui</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.server</groupId>
+      <artifactId>documentcore</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.server</groupId>
+      <artifactId>docflow</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.server.document</groupId>
+      <artifactId>ejb</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.server.document</groupId>
+      <artifactId>ui</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 </project>

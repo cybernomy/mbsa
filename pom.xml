@@ -12,7 +12,7 @@
   <modules>
     <module>modules</module>
     <module>server</module>
-    <!--<module>bai</module>-->
+    <module>bai</module>
     <!--<module>distribution</module>-->
   </modules>
 

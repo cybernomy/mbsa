@@ -19,6 +19,7 @@
   <modules>
     <module>exchange</module>
     <module>scheduler</module>
+    <module>security</module>
     <module>hr</module>
     <module>report</module>
     <module>reference</module>
@@ -26,8 +27,6 @@
     <module>docflow</module>
     <module>document</module>
 
-    <!---->
-    <!--<module>reference</module>-->
     <!---->
     <!--<module>reportviewer</module>-->
     <!--<module>documentcore</module>-->

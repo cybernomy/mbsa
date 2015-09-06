@@ -18,26 +18,6 @@
 
   <dependencies>
     <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>framework</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>core</artifactId>
-      <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>jboss</groupId>
-      <artifactId>jboss-system</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>jboss</groupId>
-      <artifactId>jboss-jmx</artifactId>
-    </dependency>
-
-    <dependency>
       <groupId>net.sf</groupId>
       <artifactId>jguard</artifactId>
       <scope>provided</scope>
