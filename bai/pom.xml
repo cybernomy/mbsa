@@ -17,6 +17,7 @@
   <description>Business AddIns</description>
 
   <modules>
+    <module>scheduler</module>
     <module>qc</module>
     <module>account</module>
     <module>discount</module>
@@ -35,6 +36,7 @@
     <module>planning</module>
     <module>table</module>
     <module>salary</module>
+    <module>setlmnt</module>
   </modules>
 
   <dependencies>

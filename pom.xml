@@ -490,12 +490,6 @@
       </dependency>
       <dependency>
         <groupId>com.mg.server</groupId>
-        <artifactId>scheduler</artifactId>
-        <version>${project.version}</version>
-        <type>jar</type>
-      </dependency>
-      <dependency>
-        <groupId>com.mg.server</groupId>
         <artifactId>security</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
@@ -556,6 +550,18 @@
       </dependency>
       <dependency>
         <groupId>com.mg.server.bpm</groupId>
+        <artifactId>ui</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.scheduler</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.scheduler</groupId>
         <artifactId>ui</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
@@ -736,6 +742,18 @@
       </dependency>
       <dependency>
         <groupId>com.mg.bai.salary</groupId>
+        <artifactId>ui</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.setlmnt</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.setlmnt</groupId>
         <artifactId>ui</artifactId>
         <version>${project.version}</version>
         <type>jar</type>

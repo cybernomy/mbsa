@@ -5,21 +5,26 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.mg</groupId>
-    <artifactId>server</artifactId>
+    <groupId>com.mg.bai</groupId>
+    <artifactId>setlmnt</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.server</groupId>
-  <artifactId>scheduler</artifactId>
+  <groupId>com.mg.bai.setlmnt</groupId>
+  <artifactId>ui</artifactId>
 
-  <name>MBSA::Server::Scheduler</name>
+  <name>MBSA::BAI::Settlement::UI</name>
   <description/>
 
   <dependencies>
     <dependency>
-      <groupId>quartz</groupId>
-      <artifactId>quartz</artifactId>
+      <groupId>com.mg.bai.setlmnt</groupId>
+      <artifactId>ejb</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.server.reference</groupId>
+      <artifactId>ui</artifactId>
       <scope>provided</scope>
     </dependency>
   </dependencies>
