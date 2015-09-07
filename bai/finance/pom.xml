@@ -6,35 +6,20 @@
 
   <parent>
     <groupId>com.mg</groupId>
-    <artifactId>server</artifactId>
+    <artifactId>bai</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.server</groupId>
+  <groupId>com.mg.bai</groupId>
   <artifactId>finance</artifactId>
 
-  <name>MBSA::Server::Finance</name>
+  <name>MBSA::BAI::Finance</name>
   <description/>
 
   <dependencies>
     <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>framework</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>core</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>baiengine</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>reference</artifactId>
+      <groupId>com.mg.server.reference</groupId>
+      <artifactId>ejb</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -48,27 +33,14 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>document</artifactId>
+      <groupId>com.mg.server.document</groupId>
+      <artifactId>ejb</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.mg.server</groupId>
+      <groupId>com.mg.bai</groupId>
       <artifactId>contract</artifactId>
       <scope>provided</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>jboss</groupId>
-      <artifactId>jboss-system</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>jboss</groupId>
-      <artifactId>jboss-jmx</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>jboss</groupId>
-      <artifactId>jboss-annotations-ejb3</artifactId>
     </dependency>
 
     <dependency>

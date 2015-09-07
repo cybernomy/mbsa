@@ -31,6 +31,7 @@
     <module>lbschedule</module>
     <module>persref</module>
     <module>overall</module>
+    <module>finance</module>
   </modules>
 
   <dependencies>
