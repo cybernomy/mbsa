@@ -32,6 +32,7 @@
     <module>persref</module>
     <module>overall</module>
     <module>finance</module>
+    <module>planning</module>
   </modules>
 
   <dependencies>

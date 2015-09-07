@@ -6,30 +6,26 @@
 
   <parent>
     <groupId>com.mg</groupId>
-    <artifactId>server</artifactId>
+    <artifactId>bai</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.server</groupId>
+  <groupId>com.mg.bai</groupId>
   <artifactId>planning</artifactId>
+  <packaging>pom</packaging>
 
-  <name>MBSA::Server::Planning</name>
+  <name>MBSA::BAI::Planning</name>
   <description/>
+
+  <modules>
+    <module>ejb</module>
+    <module>ui</module>
+  </modules>
 
   <dependencies>
     <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>framework</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>core</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>reference</artifactId>
+      <groupId>com.mg.server.reference</groupId>
+      <artifactId>ejb</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -43,22 +39,22 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>document</artifactId>
+      <groupId>com.mg.server.document</groupId>
+      <artifactId>ejb</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>mfreference</artifactId>
+      <groupId>com.mg.bai.mfref</groupId>
+      <artifactId>ejb</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>manufacture</artifactId>
+      <groupId>com.mg.bai.manufacture</groupId>
+      <artifactId>ejb</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.mg.server</groupId>
+      <groupId>com.mg.bai</groupId>
       <artifactId>warehouse</artifactId>
       <scope>provided</scope>
     </dependency>

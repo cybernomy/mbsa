@@ -704,6 +704,24 @@
         <version>${project.version}</version>
         <type>jar</type>
       </dependency>
+      <dependency>
+        <groupId>com.mg.bai</groupId>
+        <artifactId>finance</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.planning</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.planning</groupId>
+        <artifactId>ui</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
       <!--<dependency>
         <groupId>com.mg.server</groupId>
         <artifactId>reportviewer</artifactId>
