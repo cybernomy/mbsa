@@ -39,6 +39,7 @@
     <module>setlmnt</module>
     <module>crm</module>
     <module>rptvwr</module>
+    <module>help</module>
   </modules>
 
   <dependencies>

@@ -400,6 +400,41 @@
             <doUpdate>false</doUpdate>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>jboss-packaging-maven-plugin</artifactId>
+          <version>2.2</version>
+          <extensions>true</extensions>
+          <configuration>
+            <archive>
+              <manifest>
+                <addClasspath>true</addClasspath>
+                <addDefaultImplementationEntries>true
+                </addDefaultImplementationEntries>
+              </manifest>
+              <manifestSections>
+                <manifestSection>
+                  <name>SCM</name>
+                  <manifestEntries>
+                    <Url>${repository.url}</Url>
+                    <Branch>${scmBranch}</Branch>
+                    <Build-Version>${project.version}</Build-Version>
+                    <Source-Revision>${buildNumber}</Source-Revision>
+                  </manifestEntries>
+                </manifestSection>
+                <manifestSection>
+                  <name>CI</name>
+                  <manifestEntries>
+                    <System>${project.ciManagement.system}</System>
+                    <Url>${project.ciManagement.url}</Url>
+                    <Build-Time>${timestamp}</Build-Time>
+                  </manifestEntries>
+                </manifestSection>
+              </manifestSections>
+              <addMavenDescriptor>${add.maven.descriptor}</addMavenDescriptor>
+            </archive>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -921,6 +956,11 @@
         <artifactId>commons-lang</artifactId>
         <version>2.1</version>
       </dependency>
+      <dependency>
+        <groupId>commons-el</groupId>
+        <artifactId>commons-el</artifactId>
+        <version>1.0</version>
+      </dependency>
 
       <dependency>
         <groupId>dom4j</groupId>
@@ -981,6 +1021,37 @@
         <groupId>org.eclipse.birt.report</groupId>
         <artifactId>viewservlets</artifactId>
         <version>2.3.1</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.oracle.oc4j</groupId>
+        <artifactId>oracle-help-web</artifactId>
+        <version>11</version>
+      </dependency>
+      <dependency>
+        <groupId>com.oracle.oc4j</groupId>
+        <artifactId>cabo</artifactId>
+        <version>11</version>
+      </dependency>
+      <dependency>
+        <groupId>com.oracle.oc4j</groupId>
+        <artifactId>jsp-el-api</artifactId>
+        <version>11</version>
+      </dependency>
+      <dependency>
+        <groupId>com.oracle.oc4j</groupId>
+        <artifactId>oracle-el</artifactId>
+        <version>11</version>
+      </dependency>
+      <dependency>
+        <groupId>com.oracle.oc4j</groupId>
+        <artifactId>share</artifactId>
+        <version>11</version>
+      </dependency>
+      <dependency>
+        <groupId>com.oracle.oc4j</groupId>
+        <artifactId>xmlparserv2</artifactId>
+        <version>11</version>
       </dependency>
 
       <!-- test -->
