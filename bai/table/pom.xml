@@ -6,30 +6,25 @@
 
   <parent>
     <groupId>com.mg</groupId>
-    <artifactId>server</artifactId>
+    <artifactId>bai</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.server</groupId>
+  <groupId>com.mg.bai</groupId>
   <artifactId>table</artifactId>
 
-  <name>MBSA::Server::Table</name>
+  <name>MBSA::BAI::Table</name>
   <description/>
 
   <dependencies>
     <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>framework</artifactId>
+      <groupId>com.mg.bai.persref</groupId>
+      <artifactId>ejb</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>core</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>personnelref</artifactId>
+      <groupId>com.mg.bai.persref</groupId>
+      <artifactId>ui</artifactId>
       <scope>provided</scope>
     </dependency>
   </dependencies>

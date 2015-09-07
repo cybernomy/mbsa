@@ -33,6 +33,7 @@
     <module>overall</module>
     <module>finance</module>
     <module>planning</module>
+    <module>table</module>
   </modules>
 
   <dependencies>
