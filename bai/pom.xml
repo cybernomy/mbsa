@@ -34,6 +34,7 @@
     <module>finance</module>
     <module>planning</module>
     <module>table</module>
+    <module>salary</module>
   </modules>
 
   <dependencies>
