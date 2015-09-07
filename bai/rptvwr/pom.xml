@@ -14,7 +14,7 @@
   <artifactId>rptvwr</artifactId>
   <packaging>pom</packaging>
 
-  <name>MBSA::Server::ReportViewer</name>
+  <name>MBSA::BAI::ReportViewer</name>
   <description/>
 
   <modules>
