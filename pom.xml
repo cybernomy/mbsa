@@ -100,13 +100,13 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>snapshots</id>
+      <id>mbsa-snapshots</id>
       <name>Nexus snapshots internal repository</name>
       <url>${maven.repo.url}/repositories/snapshots</url>
     </snapshotRepository>
 
     <repository>
-      <id>releases</id>
+      <id>mbsa-releases</id>
       <name>Nexus releases internal repository</name>
       <url>${maven.repo.url}/repositories/releases</url>
     </repository>
@@ -676,6 +676,18 @@
       </dependency>
       <dependency>
         <groupId>com.mg.bai.lbschedule</groupId>
+        <artifactId>ui</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.persref</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.persref</groupId>
         <artifactId>ui</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
