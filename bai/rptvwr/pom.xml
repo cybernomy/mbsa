@@ -6,23 +6,23 @@
 
   <parent>
     <groupId>com.mg</groupId>
-    <artifactId>server</artifactId>
+    <artifactId>bai</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.server</groupId>
-  <artifactId>reportviewer</artifactId>
+  <groupId>com.mg.bai</groupId>
+  <artifactId>rptvwr</artifactId>
+  <packaging>pom</packaging>
 
   <name>MBSA::Server::ReportViewer</name>
   <description/>
 
-  <dependencies>
-    <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>framework</artifactId>
-      <scope>provided</scope>
-    </dependency>
+  <modules>
+    <module>engine</module>
+    <module>app</module>
+  </modules>
 
+  <dependencies>
     <dependency>
       <groupId>org.eclipse.birt.core</groupId>
       <artifactId>api</artifactId>

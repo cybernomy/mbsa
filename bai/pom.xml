@@ -37,6 +37,8 @@
     <module>table</module>
     <module>salary</module>
     <module>setlmnt</module>
+    <module>crm</module>
+    <module>rptvwr</module>
   </modules>
 
   <dependencies>

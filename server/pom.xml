@@ -25,9 +25,7 @@
     <module>documentcore</module>
     <module>docflow</module>
     <module>document</module>
-    <!--<module>reportviewer</module>-->
     <module>bpm</module>
-    <!--<module>crm</module>-->
     <!--<module>workbench</module>-->
   </modules>
 

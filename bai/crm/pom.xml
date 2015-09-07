@@ -6,30 +6,26 @@
 
   <parent>
     <groupId>com.mg</groupId>
-    <artifactId>server</artifactId>
+    <artifactId>bai</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.server</groupId>
+  <groupId>com.mg.bai</groupId>
   <artifactId>crm</artifactId>
+  <packaging>pom</packaging>
 
-  <name>MBSA::Server::CRM</name>
+  <name>MBSA::BAI::CRM</name>
   <description/>
+
+  <modules>
+    <module>ejb</module>
+    <module>ui</module>
+  </modules>
 
   <dependencies>
     <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>framework</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>core</artifactId>
-      <scope>provided</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>reference</artifactId>
+      <groupId>com.mg.server.reference</groupId>
+      <artifactId>ejb</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -43,21 +39,16 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>document</artifactId>
+      <groupId>com.mg.server.document</groupId>
+      <artifactId>ejb</artifactId>
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.mg.server</groupId>
-      <artifactId>settlement</artifactId>
+      <groupId>com.mg.bai.setlmnt</groupId>
+      <artifactId>ejb</artifactId>
       <scope>provided</scope>
     </dependency>
 
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate</artifactId>
-      <scope>provided</scope>
-    </dependency>
     <dependency>
       <groupId>commons-lang</groupId>
       <artifactId>commons-lang</artifactId>

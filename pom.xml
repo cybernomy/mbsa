@@ -758,92 +758,31 @@
         <version>${project.version}</version>
         <type>jar</type>
       </dependency>
-      <!--<dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>reportviewer</artifactId>
-        <version>${project.version}</version>
-        <type>jar</type>
-      </dependency>-->
-
-      <!--<dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>manufacture</artifactId>
+      <dependency>
+        <groupId>com.mg.bai.crm</groupId>
+        <artifactId>ejb</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
       </dependency>
       <dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>paymentalloc</artifactId>
+        <groupId>com.mg.bai.crm</groupId>
+        <artifactId>ui</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
       </dependency>
       <dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>account</artifactId>
+        <groupId>com.mg.bai.rptvwr</groupId>
+        <artifactId>engine</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
       </dependency>
       <dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>factura</artifactId>
+        <groupId>com.mg.bai.rptvwr</groupId>
+        <artifactId>app</artifactId>
         <version>${project.version}</version>
-        <type>jar</type>
+        <type>war</type>
       </dependency>
-      <dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>paymentcontrol</artifactId>
-        <version>${project.version}</version>
-        <type>jar</type>
-      </dependency>
-      <dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>lbschedule</artifactId>
-        <version>${project.version}</version>
-        <type>jar</type>
-      </dependency>
-      <dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>personnelref</artifactId>
-        <version>${project.version}</version>
-        <type>jar</type>
-      </dependency>
-      <dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>overall</artifactId>
-        <version>${project.version}</version>
-        <type>jar</type>
-      </dependency>
-      <dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>finance</artifactId>
-        <version>${project.version}</version>
-        <type>jar</type>
-      </dependency>
-      <dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>planning</artifactId>
-        <version>${project.version}</version>
-        <type>jar</type>
-      </dependency>
-
-      <dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>salary</artifactId>
-        <version>${project.version}</version>
-        <type>jar</type>
-      </dependency>
-      <dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>settlement</artifactId>
-        <version>${project.version}</version>
-        <type>jar</type>
-      </dependency>
-      <dependency>
-        <groupId>com.mg.server</groupId>
-        <artifactId>crm</artifactId>
-        <version>${project.version}</version>
-        <type>jar</type>
-      </dependency>
+      <!--
       <dependency>
         <groupId>com.mg.server</groupId>
         <artifactId>workbench</artifactId>
