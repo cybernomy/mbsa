@@ -14,7 +14,7 @@
   <artifactId>payctl</artifactId>
   <packaging>pom</packaging>
 
-  <name>MBSA::Server::PaymentControl</name>
+  <name>MBSA::BAI::PaymentControl</name>
   <description/>
 
   <modules>

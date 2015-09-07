@@ -30,6 +30,7 @@
     <module>factura</module>
     <module>lbschedule</module>
     <module>persref</module>
+    <module>overall</module>
   </modules>
 
   <dependencies>
