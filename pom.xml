@@ -16,7 +16,9 @@
     <!--<module>distribution</module>-->
   </modules>
 
-  <organization/>
+  <organization>
+    <name>Millennium Business Suite Anywhere</name>
+  </organization>
 
   <name>MBSA</name>
   <description>Millennium Business Suite Anywhere (BSA) is web based ERP/CRM solution with
@@ -537,10 +539,23 @@
         <type>jar</type>
       </dependency>
       <dependency>
-        <groupId>com.mg.server</groupId>
+        <groupId>com.mg.server.security</groupId>
         <artifactId>security</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.server.security</groupId>
+        <artifactId>security</artifactId>
+        <version>${project.version}</version>
+        <classifier>service</classifier>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.server.security</groupId>
+        <artifactId>service</artifactId>
+        <version>${project.version}</version>
+        <type>jboss-sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.server</groupId>
@@ -636,9 +651,22 @@
       </dependency>
       <dependency>
         <groupId>com.mg.bai.scheduler</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <classifier>service</classifier>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.scheduler</groupId>
         <artifactId>ui</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.scheduler</groupId>
+        <artifactId>service</artifactId>
+        <version>${project.version}</version>
+        <type>jboss-sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.bai.qc</groupId>
@@ -856,13 +884,12 @@
         <version>${project.version}</version>
         <type>war</type>
       </dependency>
-      <!--
       <dependency>
-        <groupId>com.mg.server</groupId>
+        <groupId>com.mg.bai</groupId>
         <artifactId>workbench</artifactId>
         <version>${project.version}</version>
-        <type>jar</type>
-      </dependency>-->
+        <type>jboss-sar</type>
+      </dependency>
 
       <dependency>
         <groupId>com.mg</groupId>
@@ -999,6 +1026,17 @@
         <groupId>commons-el</groupId>
         <artifactId>commons-el</artifactId>
         <version>1.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-jexl</artifactId>
+        <version>1.0</version>
+      </dependency>
+
+      <dependency>
+        <groupId>net.sf.ehcache</groupId>
+        <artifactId>ehcache</artifactId>
+        <version>1.2.2</version>
       </dependency>
 
       <dependency>

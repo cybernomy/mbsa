@@ -11,23 +11,20 @@
   </parent>
 
   <groupId>com.mg.bai</groupId>
-  <artifactId>scheduler</artifactId>
-  <packaging>pom</packaging>
+  <artifactId>workbench</artifactId>
+  <packaging>jboss-sar</packaging>
 
-  <name>MBSA::BAI::Scheduler</name>
+  <name>MBSA::BAI::Workbench</name>
   <description/>
 
-  <modules>
-    <module>ejb</module>
-    <module>service</module>
-    <module>ui</module>
-  </modules>
+  <build>
+    <finalName>mworkbench</finalName>
 
-  <dependencies>
-    <dependency>
-      <groupId>quartz</groupId>
-      <artifactId>quartz</artifactId>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jboss-packaging-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 </project>

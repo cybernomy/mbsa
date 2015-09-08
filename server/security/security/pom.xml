@@ -5,15 +5,15 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.mg.bai</groupId>
-    <artifactId>scheduler</artifactId>
+    <groupId>com.mg.server</groupId>
+    <artifactId>security</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.bai.scheduler</groupId>
-  <artifactId>ejb</artifactId>
+  <groupId>com.mg.server.security</groupId>
+  <artifactId>security</artifactId>
 
-  <name>MBSA::BAI::Scheduler::EJB</name>
+  <name>MBSA::Server::Security::Security</name>
   <description/>
 
   <build>
@@ -31,9 +31,11 @@
               <classifier>service</classifier>
               <includes>
                 <include>**/jboss/*.class</include>
-                <include>**/BAiJob.class</include>
-                <include>**/SchedulerManagerServiceImpl.class</include>
-                <include>**/TaskInterceptorImpl*</include>
+                <include>**/support/SecuritySystem*</include>
+                <include>**/JAASAuthenticationHolder.class</include>
+                <include>**/DefaultCallbackHandler.class</include>
+                <include>**/UIProfile*</include>
+                <include>**/Principal.class</include>
               </includes>
             </configuration>
           </execution>
