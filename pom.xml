@@ -102,13 +102,13 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>mbsa-snapshots</id>
+      <id>snapshots</id>
       <name>Nexus snapshots internal repository</name>
       <url>${maven.repo.url}/repositories/snapshots</url>
     </snapshotRepository>
 
     <repository>
-      <id>mbsa-releases</id>
+      <id>releases</id>
       <name>Nexus releases internal repository</name>
       <url>${maven.repo.url}/repositories/releases</url>
     </repository>
