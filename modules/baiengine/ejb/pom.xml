@@ -15,4 +15,40 @@
 
   <name>MBSA::Modules::BAIEngine::EJB</name>
   <description/>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>service-jar</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <classifier>service</classifier>
+              <includes>
+                <include>**/jboss/*.class</include>
+                <include>**/BAiImplementationInstantiationException.class</include>
+                <include>**/BAiNotFoundException.class</include>
+                <include>**/BusinessAddin.class</include>
+                <include>**/BusinessAddinEngine.class</include>
+                <include>**/BusinessAddinEvent.class</include>
+                <include>**/BusinessAddinException.class</include>
+                <include>**/BusinessAddinListener.class</include>
+                <include>**/BusinessAddinWorkbench.class</include>
+                <include>**/UnsupportedBAiEngineException.class</include>
+                <include>**/BusinessAddinEngineImpl*.class</include>
+                <include>**/BusinessAddinWorkbenchImpl*.class</include>
+                <include>**/CustomActionDescriptorImpl*.class</include>
+                <include>**/CustomActionManagerImpl*.class</include>
+              </includes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>

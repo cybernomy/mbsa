@@ -6,14 +6,14 @@
 
   <parent>
     <groupId>com.mg.server</groupId>
-    <artifactId>bpm</artifactId>
+    <artifactId>docflow</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.server.bpm</groupId>
-  <artifactId>ejb</artifactId>
+  <groupId>com.mg.server.docflow</groupId>
+  <artifactId>docflow</artifactId>
 
-  <name>MBSA::Server::BPM::EJB</name>
+  <name>MBSA::Server::DocFlow::DocFlow</name>
   <description/>
 
   <build>
@@ -30,10 +30,7 @@
             <configuration>
               <classifier>service</classifier>
               <includes>
-                <include>**/jboss/*.class</include>
-                <include>**/BPMManagerLocator.class</include>
-                <include>**/BPMManagerServiceImpl.class</include>
-                <include>**/BPMManager.class</include>
+                <include>**/*Plugin*</include>
               </includes>
             </configuration>
           </execution>

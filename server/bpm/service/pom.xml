@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.mg.server</groupId>
+    <artifactId>bpm</artifactId>
+    <version>4.0.8-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.mg.server.bpm</groupId>
+  <artifactId>service</artifactId>
+  <packaging>jboss-sar</packaging>
+
+  <name>MBSA::Server::BPM::Service</name>
+  <description/>
+
+  <build>
+    <finalName>mbpm</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jboss-packaging-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.mg.server.bpm</groupId>
+      <artifactId>ejb</artifactId>
+      <classifier>service</classifier>
+    </dependency>
+    <dependency>
+      <groupId>jboss</groupId>
+      <artifactId>jbpm-jpdl</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+</project>

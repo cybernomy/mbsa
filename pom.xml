@@ -513,9 +513,22 @@
       </dependency>
       <dependency>
         <groupId>com.mg.modules.baiengine</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <classifier>service</classifier>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.modules.baiengine</groupId>
         <artifactId>ui</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.modules.baiengine</groupId>
+        <artifactId>service</artifactId>
+        <version>${project.version}</version>
+        <type>jboss-sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.server</groupId>
@@ -560,12 +573,25 @@
         <type>jar</type>
       </dependency>
       <dependency>
-        <groupId>com.mg.server</groupId>
+        <groupId>com.mg.server.docflow</groupId>
         <artifactId>docflow</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
       </dependency>
       <dependency>
+        <groupId>com.mg.server.docflow</groupId>
+        <artifactId>docflow</artifactId>
+        <version>${project.version}</version>
+        <classifier>service</classifier>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.server.docflow</groupId>
+        <artifactId>service</artifactId>
+        <version>${project.version}</version>
+        <type>jboss-sar</type>
+      </dependency>
+      <dependency>
         <groupId>com.mg.server.document</groupId>
         <artifactId>ejb</artifactId>
         <version>${project.version}</version>
@@ -585,9 +611,22 @@
       </dependency>
       <dependency>
         <groupId>com.mg.server.bpm</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <classifier>service</classifier>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.server.bpm</groupId>
         <artifactId>ui</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.server.bpm</groupId>
+        <artifactId>service</artifactId>
+        <version>${project.version}</version>
+        <type>jboss-sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.bai.scheduler</groupId>
