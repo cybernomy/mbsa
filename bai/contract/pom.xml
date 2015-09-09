@@ -46,7 +46,7 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.mg.server</groupId>
+      <groupId>com.mg.server.docflow</groupId>
       <artifactId>docflow</artifactId>
       <scope>provided</scope>
     </dependency>

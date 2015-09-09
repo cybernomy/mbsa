@@ -5,15 +5,15 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>com.mg.bai</groupId>
-    <artifactId>scheduler</artifactId>
+    <groupId>com.mg.server</groupId>
+    <artifactId>docflow</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <groupId>com.mg.bai.scheduler</groupId>
-  <artifactId>ejb</artifactId>
+  <groupId>com.mg.server.docflow</groupId>
+  <artifactId>docflow</artifactId>
 
-  <name>MBSA::BAI::Scheduler::EJB</name>
+  <name>MBSA::Server::DocFlow::DocFlow</name>
   <description/>
 
   <build>
@@ -30,10 +30,7 @@
             <configuration>
               <classifier>service</classifier>
               <includes>
-                <include>**/jboss/*.class</include>
-                <include>**/BAiJob.class</include>
-                <include>**/SchedulerManagerServiceImpl.class</include>
-                <include>**/TaskInterceptorImpl*</include>
+                <include>**/*Plugin*</include>
               </includes>
             </configuration>
           </execution>
@@ -41,4 +38,12 @@
       </plugin>
     </plugins>
   </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <scope>provided</scope>
+    </dependency>
+  </dependencies>
 </project>

@@ -11,21 +11,33 @@
   </parent>
 
   <groupId>com.mg.server.bpm</groupId>
-  <artifactId>ui</artifactId>
+  <artifactId>service</artifactId>
+  <packaging>jboss-sar</packaging>
 
-  <name>MBSA::Server::BPM::UI</name>
+  <name>MBSA::Server::BPM::Service</name>
   <description/>
+
+  <build>
+    <finalName>mbpm</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jboss-packaging-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 
   <dependencies>
     <dependency>
       <groupId>com.mg.server.bpm</groupId>
       <artifactId>ejb</artifactId>
-      <scope>provided</scope>
+      <classifier>service</classifier>
     </dependency>
     <dependency>
-      <groupId>com.mg.server.security</groupId>
-      <artifactId>security</artifactId>
-      <scope>provided</scope>
+      <groupId>jboss</groupId>
+      <artifactId>jbpm-jpdl</artifactId>
+      <scope>runtime</scope>
     </dependency>
   </dependencies>
 </project>

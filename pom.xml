@@ -16,7 +16,9 @@
     <!--<module>distribution</module>-->
   </modules>
 
-  <organization/>
+  <organization>
+    <name>Millennium Business Suite Anywhere</name>
+  </organization>
 
   <name>MBSA</name>
   <description>Millennium Business Suite Anywhere (BSA) is web based ERP/CRM solution with
@@ -100,13 +102,13 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>mbsa-snapshots</id>
+      <id>snapshots</id>
       <name>Nexus snapshots internal repository</name>
       <url>${maven.repo.url}/repositories/snapshots</url>
     </snapshotRepository>
 
     <repository>
-      <id>mbsa-releases</id>
+      <id>releases</id>
       <name>Nexus releases internal repository</name>
       <url>${maven.repo.url}/repositories/releases</url>
     </repository>
@@ -513,9 +515,22 @@
       </dependency>
       <dependency>
         <groupId>com.mg.modules.baiengine</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <classifier>service</classifier>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.modules.baiengine</groupId>
         <artifactId>ui</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.modules.baiengine</groupId>
+        <artifactId>service</artifactId>
+        <version>${project.version}</version>
+        <type>jboss-sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.server</groupId>
@@ -524,10 +539,23 @@
         <type>jar</type>
       </dependency>
       <dependency>
-        <groupId>com.mg.server</groupId>
+        <groupId>com.mg.server.security</groupId>
         <artifactId>security</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.server.security</groupId>
+        <artifactId>security</artifactId>
+        <version>${project.version}</version>
+        <classifier>service</classifier>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.server.security</groupId>
+        <artifactId>service</artifactId>
+        <version>${project.version}</version>
+        <type>jboss-sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.server</groupId>
@@ -560,12 +588,25 @@
         <type>jar</type>
       </dependency>
       <dependency>
-        <groupId>com.mg.server</groupId>
+        <groupId>com.mg.server.docflow</groupId>
         <artifactId>docflow</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
       </dependency>
       <dependency>
+        <groupId>com.mg.server.docflow</groupId>
+        <artifactId>docflow</artifactId>
+        <version>${project.version}</version>
+        <classifier>service</classifier>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.server.docflow</groupId>
+        <artifactId>service</artifactId>
+        <version>${project.version}</version>
+        <type>jboss-sar</type>
+      </dependency>
+      <dependency>
         <groupId>com.mg.server.document</groupId>
         <artifactId>ejb</artifactId>
         <version>${project.version}</version>
@@ -585,9 +626,22 @@
       </dependency>
       <dependency>
         <groupId>com.mg.server.bpm</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <classifier>service</classifier>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.server.bpm</groupId>
         <artifactId>ui</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.server.bpm</groupId>
+        <artifactId>service</artifactId>
+        <version>${project.version}</version>
+        <type>jboss-sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.bai.scheduler</groupId>
@@ -597,9 +651,22 @@
       </dependency>
       <dependency>
         <groupId>com.mg.bai.scheduler</groupId>
+        <artifactId>ejb</artifactId>
+        <version>${project.version}</version>
+        <classifier>service</classifier>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.scheduler</groupId>
         <artifactId>ui</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.bai.scheduler</groupId>
+        <artifactId>service</artifactId>
+        <version>${project.version}</version>
+        <type>jboss-sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.bai.qc</groupId>
@@ -817,13 +884,12 @@
         <version>${project.version}</version>
         <type>war</type>
       </dependency>
-      <!--
       <dependency>
-        <groupId>com.mg.server</groupId>
+        <groupId>com.mg.bai</groupId>
         <artifactId>workbench</artifactId>
         <version>${project.version}</version>
-        <type>jar</type>
-      </dependency>-->
+        <type>jboss-sar</type>
+      </dependency>
 
       <dependency>
         <groupId>com.mg</groupId>
@@ -960,6 +1026,17 @@
         <groupId>commons-el</groupId>
         <artifactId>commons-el</artifactId>
         <version>1.0</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-jexl</artifactId>
+        <version>1.0</version>
+      </dependency>
+
+      <dependency>
+        <groupId>net.sf.ehcache</groupId>
+        <artifactId>ehcache</artifactId>
+        <version>1.2.2</version>
       </dependency>
 
       <dependency>

@@ -16,6 +16,32 @@
   <name>MBSA::Server::BPM::EJB</name>
   <description/>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>service-jar</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <classifier>service</classifier>
+              <includes>
+                <include>**/jboss/*.class</include>
+                <include>**/BPMManagerLocator.class</include>
+                <include>**/BPMManagerServiceImpl.class</include>
+                <include>**/BPMManager.class</include>
+              </includes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>commons-lang</groupId>

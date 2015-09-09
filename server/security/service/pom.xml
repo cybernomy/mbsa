@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.mg.server</groupId>
+    <artifactId>security</artifactId>
+    <version>4.0.8-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.mg.server.security</groupId>
+  <artifactId>service</artifactId>
+  <packaging>jboss-sar</packaging>
+
+  <name>MBSA::Server::Security::Service</name>
+  <description/>
+
+  <build>
+    <finalName>msecurity</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jboss-packaging-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.mg.server.security</groupId>
+      <artifactId>security</artifactId>
+      <classifier>service</classifier>
+    </dependency>
+    <dependency>
+      <groupId>net.sf.ehcache</groupId>
+      <artifactId>ehcache</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-jexl</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>net.sf</groupId>
+      <artifactId>jguard</artifactId>
+    </dependency>
+  </dependencies>
+</project>

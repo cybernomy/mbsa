@@ -12,9 +12,15 @@
 
   <groupId>com.mg.server</groupId>
   <artifactId>docflow</artifactId>
+  <packaging>pom</packaging>
 
   <name>MBSA::Server::DocFlow</name>
   <description/>
+
+  <modules>
+    <module>docflow</module>
+    <module>service</module>
+  </modules>
 
   <dependencies>
     <dependency>

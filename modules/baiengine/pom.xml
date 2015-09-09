@@ -19,6 +19,7 @@
 
   <modules>
     <module>ejb</module>
+    <module>service</module>
     <module>ui</module>
   </modules>
 
