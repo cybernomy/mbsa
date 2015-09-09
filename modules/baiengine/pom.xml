@@ -30,8 +30,8 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.mg.modules</groupId>
-      <artifactId>datamodel</artifactId>
+      <groupId>com.mg.modules.data</groupId>
+      <artifactId>model</artifactId>
       <scope>provided</scope>
     </dependency>
   </dependencies>

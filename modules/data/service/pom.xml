@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.mg.modules</groupId>
+    <artifactId>data</artifactId>
+    <version>4.0.8-SNAPSHOT</version>
+  </parent>
+
+  <properties>
+    <har.db.type>interbase</har.db.type>
+    <har.db.suffix>ib</har.db.suffix>
+  </properties>
+
+  <groupId>com.mg.modules.data</groupId>
+  <artifactId>service</artifactId>
+  <packaging>jboss-har</packaging>
+
+  <name>MBSA::Modules::Data::Service</name>
+  <description/>
+
+  <build>
+    <finalName>mdatawarehouse-${har.db.suffix}</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jboss-packaging-maven-plugin</artifactId>
+        <configuration>
+          <deploymentDescriptorFile>
+            ../../core/ejb/${res.dir}/META-INF/${har.db.type}/hibernate-service.xml
+          </deploymentDescriptorFile>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.mg.modules.data</groupId>
+      <artifactId>model</artifactId>
+      <classifier>service</classifier>
+    </dependency>
+    <dependency>
+      <groupId>jboss</groupId>
+      <artifactId>jbpm-jpdl</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+
+  <profiles>
+    <profile>
+      <id>oracle-hiber</id>
+      <properties>
+        <har.descriptor.for>oracle</har.descriptor.for>
+        <har.db.suffix>or</har.db.suffix>
+      </properties>
+    </profile>
+  </profiles>
+</project>

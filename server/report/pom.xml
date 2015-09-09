@@ -12,9 +12,15 @@
 
   <groupId>com.mg.server</groupId>
   <artifactId>report</artifactId>
+  <packaging>pom</packaging>
 
   <name>MBSA::Server::Report</name>
   <description/>
+
+  <modules>
+    <module>report</module>
+    <module>service</module>
+  </modules>
 
   <dependencies>
     <dependency>

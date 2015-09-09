@@ -18,7 +18,7 @@
 
   <modules>
     <module>framework</module>
-    <module>datamodel</module>
+    <module>data</module>
     <module>core</module>
     <module>baiengine</module>
   </modules>

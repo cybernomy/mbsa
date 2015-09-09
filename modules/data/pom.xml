@@ -11,12 +11,18 @@
   </parent>
   <!--TODO: create shared resource bundle from core/src/META-INF for core and datamodel-->
   <groupId>com.mg.modules</groupId>
-  <artifactId>datamodel</artifactId>
+  <artifactId>data</artifactId>
+  <packaging>pom</packaging>
 
-  <name>MBSA::Modules::DataModel</name>
+  <name>MBSA::Modules::Data</name>
   <description/>
 
-  <dependencies>
+  <modules>
+    <module>model</module>
+    <module>service</module>
+  </modules>
+
+   <dependencies>
     <dependency>
       <groupId>com.mg.modules</groupId>
       <artifactId>framework</artifactId>

@@ -23,7 +23,7 @@
       <scope>provided</scope>
     </dependency>
     <dependency>
-      <groupId>com.mg.server</groupId>
+      <groupId>com.mg.server.report</groupId>
       <artifactId>report</artifactId>
       <scope>provided</scope>
     </dependency>

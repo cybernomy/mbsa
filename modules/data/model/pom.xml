@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.mg.modules</groupId>
+    <artifactId>data</artifactId>
+    <version>4.0.8-SNAPSHOT</version>
+  </parent>
+  <!--TODO: create shared resource bundle from core/src/META-INF for core and datamodel-->
+  <groupId>com.mg.modules.data</groupId>
+  <artifactId>model</artifactId>
+
+  <name>MBSA::Modules::Data::Model</name>
+  <description/>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>${src.dir}</directory>
+        <includes>
+          <include>**/*.xml</include>
+        </includes>
+        <targetPath>${project.build.outputDirectory}</targetPath>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>service-jar</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <classifier>service</classifier>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

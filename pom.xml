@@ -490,10 +490,23 @@
         <type>jar</type>
       </dependency>
       <dependency>
-        <groupId>com.mg.modules</groupId>
-        <artifactId>datamodel</artifactId>
+        <groupId>com.mg.modules.data</groupId>
+        <artifactId>model</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.modules.data</groupId>
+        <artifactId>model</artifactId>
+        <version>${project.version}</version>
+        <classifier>service</classifier>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.modules.data</groupId>
+        <artifactId>service</artifactId>
+        <version>${project.version}</version>
+        <type>jboss-har</type>
       </dependency>
       <dependency>
         <groupId>com.mg.modules.core</groupId>
@@ -564,10 +577,23 @@
         <type>jar</type>
       </dependency>
       <dependency>
-        <groupId>com.mg.server</groupId>
+        <groupId>com.mg.server.report</groupId>
         <artifactId>report</artifactId>
         <version>${project.version}</version>
         <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.server.report</groupId>
+        <artifactId>report</artifactId>
+        <version>${project.version}</version>
+        <classifier>service</classifier>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.mg.server.report</groupId>
+        <artifactId>service</artifactId>
+        <version>${project.version}</version>
+        <type>jboss-sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.server.reference</groupId>

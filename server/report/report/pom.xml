@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.mg.server</groupId>
+    <artifactId>report</artifactId>
+    <version>4.0.8-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.mg.server.report</groupId>
+  <artifactId>report</artifactId>
+
+  <name>MBSA::Server::Report::Report</name>
+  <description/>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>service-jar</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <classifier>service</classifier>
+              <includes>
+                <include>**/service/</include>
+                <include>**/RptBIRTDeployerImpl*.class</include>
+                <include>**/RptEngineServiceImpl*.class</include>
+                <include>**/RptEngineImpl*.class</include>
+                <include>**/RptPropertiesImpl*.class</include>
+                <include>**/HTMLImageHandler.class</include>
+                <include>**/RptBAiStarter*.class</include>
+                <include>**/RptMainTransfer.class</include>
+                <include>**/OldReportException.class</include>
+                <include>**/ReportException.class</include>
+                <include>**/Messages.class</include>
+                <include>**/ReportBusinessAddin.class</include>
+                <include>**/parameters/</include>
+              </includes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>
