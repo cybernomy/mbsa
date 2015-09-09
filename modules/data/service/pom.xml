@@ -23,7 +23,7 @@
   <description/>
 
   <build>
-    <finalName>mdatawarehouse-${har.db.suffix}</finalName>
+    <finalName>mdatawarehouse</finalName>
 
     <plugins>
       <plugin>

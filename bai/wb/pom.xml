@@ -11,20 +11,14 @@
   </parent>
 
   <groupId>com.mg.bai</groupId>
-  <artifactId>workbench</artifactId>
-  <packaging>jboss-sar</packaging>
+  <artifactId>wb</artifactId>
+  <packaging>pom</packaging>
 
   <name>MBSA::BAI::Workbench</name>
   <description/>
 
-  <build>
-    <finalName>mworkbench</finalName>
-
-    <plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>jboss-packaging-maven-plugin</artifactId>
-      </plugin>
-    </plugins>
-  </build>
+  <modules>
+    <module>service</module>
+    <!--<module>plugins</module>-->
+  </modules>
 </project>

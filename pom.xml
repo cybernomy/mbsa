@@ -13,6 +13,7 @@
     <module>modules</module>
     <module>server</module>
     <module>bai</module>
+    <module>tools</module>
     <!--<module>distribution</module>-->
   </modules>
 
@@ -74,10 +75,6 @@
     <jboss.ejb.version>4.2.1.GA</jboss.ejb.version>
 
     <hibernate.version>3.2.6.ga</hibernate.version>
-    <!--<spring.version>3.0.4.RELEASE</spring.version>
-    <tiles.version>2.2.2</tiles.version>
-    <jasper.version>4.7.0</jasper.version>
-    <oracle.version>11.2.0.4.0</oracle.version>-->
   </properties>
 
   <prerequisites>
@@ -401,6 +398,11 @@
             <doCheck>false</doCheck>
             <doUpdate>false</doUpdate>
           </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>maven-bundle-plugin</artifactId>
+          <version>2.5.4</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -1060,6 +1062,18 @@
       </dependency>
 
       <dependency>
+        <groupId>org.apache.ant</groupId>
+        <artifactId>ant</artifactId>
+        <version>1.7.0</version>
+      </dependency>
+
+      <dependency>
+        <groupId>urbanophile</groupId>
+        <artifactId>java-getopt</artifactId>
+        <version>1.0.9</version>
+      </dependency>
+
+      <dependency>
         <groupId>net.sf.ehcache</groupId>
         <artifactId>ehcache</artifactId>
         <version>1.2.2</version>
@@ -1155,6 +1169,12 @@
         <groupId>com.oracle.oc4j</groupId>
         <artifactId>xmlparserv2</artifactId>
         <version>11</version>
+      </dependency>
+
+      <dependency>
+        <groupId>log4j</groupId>
+        <artifactId>log4j</artifactId>
+        <version>1.2.17</version>
       </dependency>
 
       <!-- test -->

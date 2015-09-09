@@ -22,7 +22,6 @@
       <artifactId>framework-aux</artifactId>
     </dependency>
 
-
     <dependency>
       <groupId>jboss</groupId>
       <artifactId>jboss-common</artifactId>

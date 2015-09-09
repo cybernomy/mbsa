@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.mg.bai</groupId>
+    <artifactId>wb</artifactId>
+    <version>4.0.8-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.mg.bai.wb</groupId>
+  <artifactId>service</artifactId>
+  <packaging>jboss-sar</packaging>
+
+  <name>MBSA::BAI::Workbench::Service</name>
+  <description/>
+
+  <build>
+    <finalName>mworkbench</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jboss-packaging-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>

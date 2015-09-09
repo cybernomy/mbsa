@@ -40,7 +40,7 @@
     <module>crm</module>
     <module>rptvwr</module>
     <module>help</module>
-    <module>workbench</module>
+    <module>wb</module>
   </modules>
 
   <dependencies>
