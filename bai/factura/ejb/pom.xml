@@ -15,4 +15,8 @@
 
   <name>MBSA::BAI::Factura::EJB</name>
   <description/>
+
+  <build>
+    <finalName>100mfactura-ejb</finalName>
+  </build>
 </project>

@@ -17,6 +17,8 @@
   <description/>
 
   <build>
+    <finalName>010mbaiengine-ejb</finalName>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

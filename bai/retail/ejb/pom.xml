@@ -16,6 +16,10 @@
   <name>MBSA::BAI::Retail::EJB</name>
   <description/>
 
+  <build>
+    <finalName>100mretail-ejb</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.bai</groupId>

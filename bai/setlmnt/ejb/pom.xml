@@ -15,4 +15,8 @@
 
   <name>MBSA::BAI::Settlement::EJB</name>
   <description/>
+
+  <build>
+    <finalName>100msettlement-ejb</finalName>
+  </build>
 </project>

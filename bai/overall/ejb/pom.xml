@@ -15,4 +15,8 @@
 
   <name>MBSA::BAI::Overall::EJB</name>
   <description/>
+
+  <build>
+    <finalName>100moverall-ejb</finalName>
+  </build>
 </project>

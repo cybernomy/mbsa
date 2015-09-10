@@ -15,4 +15,8 @@
 
   <name>MBSA::BAI::PaymentControl::EJB</name>
   <description/>
+
+  <build>
+    <finalName>100mpaymentcontrol-ejb</finalName>
+  </build>
 </project>

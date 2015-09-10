@@ -17,6 +17,8 @@
   <description/>
 
   <build>
+    <finalName>050mbpm-ejb</finalName>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

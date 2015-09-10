@@ -16,4 +16,7 @@
   <name>MBSA::BAI::Salary::EJB</name>
   <description/>
 
+  <build>
+    <finalName>100msalary-ejb</finalName>
+  </build>
 </project>

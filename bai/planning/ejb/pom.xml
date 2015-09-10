@@ -15,4 +15,8 @@
 
   <name>MBSA::BAI::Planning::EJB</name>
   <description/>
+
+  <build>
+    <finalName>120mplanning-ejb</finalName>
+  </build>
 </project>

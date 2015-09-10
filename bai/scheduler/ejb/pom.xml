@@ -17,6 +17,8 @@
   <description/>
 
   <build>
+    <finalName>020mscheduler-ejb</finalName>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

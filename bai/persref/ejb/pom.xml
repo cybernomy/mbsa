@@ -15,4 +15,8 @@
 
   <name>MBSA::BAI::PersonnelRef::EJB</name>
   <description/>
+
+  <build>
+    <finalName>100mpersonnelref-ejb</finalName>
+  </build>
 </project>

@@ -15,4 +15,8 @@
 
   <name>MBSA::BAI::MFReference::EJB</name>
   <description/>
+
+  <build>
+    <finalName>100mmfreference-ejb</finalName>
+  </build>
 </project>

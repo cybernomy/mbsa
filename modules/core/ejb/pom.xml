@@ -15,4 +15,8 @@
 
   <name>MBSA::Modules::Core::EJB</name>
   <description/>
+
+  <build>
+    <finalName>005merpcore-ejb</finalName>
+  </build>
 </project>

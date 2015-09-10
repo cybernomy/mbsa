@@ -16,6 +16,10 @@
   <name>MBSA::Server::Document::EJB</name>
   <description/>
 
+  <build>
+    <finalName>020mdocument-ejb</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>net.sf.dozer</groupId>

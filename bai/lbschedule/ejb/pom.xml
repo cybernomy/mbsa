@@ -15,4 +15,8 @@
 
   <name>MBSA::BAI::LBSchedule::EJB</name>
   <description/>
+
+  <build>
+    <finalName>100mlbschedule-ejb</finalName>
+  </build>
 </project>

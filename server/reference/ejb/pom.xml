@@ -15,4 +15,8 @@
 
   <name>MBSA::Server::Reference::EJB</name>
   <description/>
+
+  <build>
+    <finalName>050mreference-ejb</finalName>
+  </build>
 </project>

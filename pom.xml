@@ -14,7 +14,7 @@
     <module>server</module>
     <module>bai</module>
     <module>tools</module>
-    <!--<module>distribution</module>-->
+    <module>distribution</module>
   </modules>
 
   <organization>
@@ -278,62 +278,6 @@
               <addMavenDescriptor>${add.maven.descriptor}</addMavenDescriptor>
             </archive>
           </configuration>
-          <!--<executions>
-            <execution>
-              <id>ejb</id>
-              <phase>package</phase>
-              <goals>
-                <goal>jar</goal>
-              </goals>
-              <configuration>
-                <jarName>${project.artifactId}-${project.version}-ejb</jarName>
-                <excludes>
-                  <exclude>**/ui/**</exclude>
-                  <exclude>**/model/**</exclude>
-                  <exclude>**/*.xml</exclude>
-                  <exclude>**/*.properties</exclude>
-                </excludes>
-              </configuration>
-            </execution>
-            <execution>
-              <id>ui</id>
-              <phase>package</phase>
-              <goals>
-                <goal>jar</goal>
-              </goals>
-              <configuration>
-                <jarName>${project.artifactId}-${project.version}-ui</jarName>
-                <includes>
-                  <include>**/ui/**</include>
-                  <include>**/*.xml</include>
-                  <include>**/*.properties</include>
-                </includes>
-                <excludes>
-                  <exclude>META-INF/*.properties</exclude>
-                </excludes>
-              </configuration>
-            </execution>
-            <execution>
-              <id>wb</id>
-              <phase>package</phase>
-              <goals>
-                <goal>jar</goal>
-              </goals>
-              <configuration>
-                <jarName>${project.artifactId}-${project.version}-wb</jarName>
-                <excludes>
-                  <exclude>**/wb/**</exclude>
-                  <exclude>**/ulc/**/*.class</exclude>
-                  <exclude>**/LicenseServer.class</exclude>
-                  <exclude>**/LicenseControllerImpl*.class</exclude>
-                  <exclude>**/LicenseControllerLocator.class</exclude>
-                  <exclude>**/LicenseControllerService.class</exclude>
-                  <exclude>**/LicenseControllerServiceMBean.class</exclude>
-                  <exclude>**/service/*DatabaseConverter*</exclude>
-                </excludes>
-              </configuration>
-            </execution>
-          </executions>-->
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
