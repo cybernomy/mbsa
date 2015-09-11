@@ -16,6 +16,10 @@
   <name>MBSA::BAI::Scheduler::UI</name>
   <description/>
 
+  <build>
+    <finalName>020mscheduler-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.bai.scheduler</groupId>

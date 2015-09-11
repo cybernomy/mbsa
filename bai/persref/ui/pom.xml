@@ -16,6 +16,10 @@
   <name>MBSA::BAI::PersonnelRef::UI</name>
   <description/>
 
+  <build>
+    <finalName>100mpersonnelref-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.bai.persref</groupId>

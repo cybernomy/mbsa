@@ -16,6 +16,10 @@
   <name>MBSA::Modules::Framework</name>
   <description/>
 
+  <build>
+    <finalName>mgframework</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg</groupId>

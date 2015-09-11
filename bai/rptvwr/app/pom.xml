@@ -17,6 +17,10 @@
   <name>MBSA::BAI::ReportViewer::App</name>
   <description/>
 
+  <build>
+    <finalName>mreportviewer</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.bai.rptvwr</groupId>

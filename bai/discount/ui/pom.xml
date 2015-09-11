@@ -16,6 +16,10 @@
   <name>MBSA::BAI::Discount::UI</name>
   <description/>
 
+  <build>
+    <finalName>100mdiscount-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.bai.discount</groupId>

@@ -18,6 +18,8 @@
   <description/>
 
   <build>
+    <finalName>mhelpsystem</finalName>
+
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>

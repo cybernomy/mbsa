@@ -16,6 +16,10 @@
   <name>MBSA::BAI::Planning::UI</name>
   <description/>
 
+  <build>
+    <finalName>120mplanning-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.bai.planning</groupId>

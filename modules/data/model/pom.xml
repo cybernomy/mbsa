@@ -17,6 +17,7 @@
   <description/>
 
   <build>
+    <finalName>mdatawarehouse</finalName>
     <resources>
       <resource>
         <directory>${src.dir}</directory>
@@ -38,6 +39,18 @@
             </goals>
             <configuration>
               <classifier>service</classifier>
+            </configuration>
+          </execution>
+          <execution>
+            <id>interface-jar</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <classifier>interface</classifier>
+              <excludes>
+                <exclude>**/*.xml</exclude>
+              </excludes>
             </configuration>
           </execution>
         </executions>

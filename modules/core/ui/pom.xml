@@ -16,6 +16,10 @@
   <name>MBSA::Modules::Core::UI</name>
   <description/>
 
+  <build>
+    <finalName>005merpcore-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.modules.core</groupId>

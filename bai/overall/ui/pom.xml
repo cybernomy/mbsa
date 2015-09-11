@@ -16,6 +16,10 @@
   <name>MBSA::BAI::Overall::UI</name>
   <description/>
 
+  <build>
+    <finalName>100moverall-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.bai.overall</groupId>

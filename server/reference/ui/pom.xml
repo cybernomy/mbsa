@@ -16,6 +16,10 @@
   <name>MBSA::Server::Reference::UI</name>
   <description/>
 
+  <build>
+    <finalName>050mreference-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.server.reference</groupId>

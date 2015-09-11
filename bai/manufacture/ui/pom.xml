@@ -16,6 +16,10 @@
   <name>MBSA::BAI::Manufacture::UI</name>
   <description/>
 
+  <build>
+    <finalName>100mmanufacture-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.bai.manufacture</groupId>

@@ -15,4 +15,29 @@
 
   <name>MBSA::Server::Exchange</name>
   <description/>
+
+  <build>
+    <finalName>030mexchange-ejb</finalName>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>ejb-jar</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <classifier>ejb</classifier>
+              <excludes>
+                <exclude>**/ui/**</exclude>
+              </excludes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>

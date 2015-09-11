@@ -16,6 +16,10 @@
   <name>MBSA::Server::Document::UI</name>
   <description/>
 
+  <build>
+    <finalName>020mdocument-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.server.document</groupId>

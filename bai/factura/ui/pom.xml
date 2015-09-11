@@ -16,6 +16,10 @@
   <name>MBSA::BAI::Factura::UI</name>
   <description/>
 
+  <build>
+    <finalName>100mfactura-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.bai.factura</groupId>

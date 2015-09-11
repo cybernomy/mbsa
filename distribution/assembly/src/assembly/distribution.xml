@@ -23,13 +23,75 @@
     <dependencySet>
       <useProjectArtifact>true</useProjectArtifact>
       <outputDirectory>ejb/</outputDirectory>
-      <outputFileNameMapping>${artifact.build.finalName}.${artifact.extension}</outputFileNameMapping>
+      <outputFileNameMapping>
+        ${artifact.build.finalName}.${artifact.extension}
+      </outputFileNameMapping>
       <includes>
-        <include>*:ejb:jar</include>
+        <include>*:ejb:*</include>
       </includes>
       <excludes>
         <exclude>*:service:*</exclude>
       </excludes>
+    </dependencySet>
+    <dependencySet>
+      <useProjectArtifact>true</useProjectArtifact>
+      <outputDirectory>ui/</outputDirectory>
+      <outputFileNameMapping>
+        ${artifact.build.finalName}.${artifact.extension}
+      </outputFileNameMapping>
+      <includes>
+        <include>*:ui:*</include>
+      </includes>
+    </dependencySet>
+    <dependencySet>
+      <useProjectArtifact>true</useProjectArtifact>
+      <outputDirectory>interface/</outputDirectory>
+      <outputFileNameMapping>
+        ${artifact.build.finalName}.${artifact.extension}
+      </outputFileNameMapping>
+      <includes>
+        <include>*:interface:*</include>
+      </includes>
+    </dependencySet>
+    <dependencySet>
+      <useProjectArtifact>true</useProjectArtifact>
+      <outputDirectory>web/</outputDirectory>
+      <outputFileNameMapping>
+        ${artifact.build.finalName}.${artifact.extension}
+      </outputFileNameMapping>
+      <includes>
+        <include>*:war</include>
+      </includes>
+    </dependencySet>
+    <dependencySet>
+      <useProjectArtifact>true</useProjectArtifact>
+      <outputDirectory>service/</outputDirectory>
+      <outputFileNameMapping>
+        ${artifact.build.finalName}.${artifact.extension}
+      </outputFileNameMapping>
+      <includes>
+        <include>*:jboss-sar</include>
+        <include>*:jboss-har</include>
+      </includes>
+    </dependencySet>
+    <dependencySet>
+      <useProjectArtifact>true</useProjectArtifact>
+      <outputDirectory>lib/</outputDirectory>
+      <outputFileNameMapping>
+        ${artifact.build.finalName}.${artifact.extension}
+      </outputFileNameMapping>
+      <includes>
+        <include>*:documentcore:*</include>
+        <include>*:framework:*</include>
+      </includes>
+    </dependencySet>
+    <dependencySet>
+      <useProjectArtifact>true</useProjectArtifact>
+      <outputDirectory>lib/</outputDirectory>
+      <outputFileNameMapping>mgframework-aux.jar</outputFileNameMapping>
+      <includes>
+        <include>com.mg:framework-aux:*</include>
+      </includes>
     </dependencySet>
   </dependencySets>
 </assembly>

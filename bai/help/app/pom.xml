@@ -17,6 +17,10 @@
   <name>MBSA::BAI::Help::WebApp</name>
   <description/>
 
+  <build>
+    <finalName>mbsahelp</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.oracle.oc4j</groupId>

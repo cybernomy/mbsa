@@ -17,6 +17,8 @@
   <description/>
 
   <build>
+    <finalName>010msecurity-ejb</finalName>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -37,6 +39,18 @@
                 <include>**/UIProfile*</include>
                 <include>**/Principal.class</include>
               </includes>
+            </configuration>
+          </execution>
+          <execution>
+            <id>ejb-jar</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <classifier>ejb</classifier>
+              <excludes>
+                <exclude>**/ui/**</exclude>
+              </excludes>
             </configuration>
           </execution>
         </executions>

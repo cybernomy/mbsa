@@ -15,4 +15,8 @@
 
   <name>MBSA::BAI::QualityControl::UI</name>
   <description/>
+
+  <build>
+    <finalName>100mqualitycontrol-ui</finalName>
+  </build>
 </project>

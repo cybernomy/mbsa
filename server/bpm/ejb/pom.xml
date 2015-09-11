@@ -17,7 +17,7 @@
   <description/>
 
   <build>
-    <finalName>050mbpm-ejb</finalName>
+    <finalName>020mbpm-ejb</finalName>
 
     <plugins>
       <plugin>

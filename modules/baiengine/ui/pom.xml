@@ -16,6 +16,10 @@
   <name>MBSA::Modules::BAIEngine::UI</name>
   <description/>
 
+  <build>
+    <finalName>010mbaiengine-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.modules.baiengine</groupId>

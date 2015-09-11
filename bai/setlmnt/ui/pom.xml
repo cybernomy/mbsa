@@ -16,6 +16,10 @@
   <name>MBSA::BAI::Settlement::UI</name>
   <description/>
 
+  <build>
+    <finalName>100msettlement-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.bai.setlmnt</groupId>

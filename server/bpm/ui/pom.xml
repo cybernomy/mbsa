@@ -16,6 +16,10 @@
   <name>MBSA::Server::BPM::UI</name>
   <description/>
 
+  <build>
+    <finalName>020mbpm-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.server.bpm</groupId>

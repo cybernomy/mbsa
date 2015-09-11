@@ -16,6 +16,10 @@
   <name>MBSA::BAI::Salary::UI</name>
   <description/>
 
+  <build>
+    <finalName>100msalary-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.bai.salary</groupId>

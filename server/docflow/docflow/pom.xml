@@ -17,6 +17,8 @@
   <description/>
 
   <build>
+    <finalName>020mdocflow-ejb</finalName>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -32,6 +34,18 @@
               <includes>
                 <include>**/*Plugin*</include>
               </includes>
+            </configuration>
+          </execution>
+          <execution>
+            <id>ejb-jar</id>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <configuration>
+              <classifier>ejb</classifier>
+              <excludes>
+                <exclude>**/ui/**</exclude>
+              </excludes>
             </configuration>
           </execution>
         </executions>

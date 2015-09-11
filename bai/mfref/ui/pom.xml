@@ -16,6 +16,10 @@
   <name>MBSA::BAI::MFReference::UI</name>
   <description/>
 
+  <build>
+    <finalName>100mmfreference-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.bai.mfref</groupId>

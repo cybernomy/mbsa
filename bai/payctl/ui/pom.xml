@@ -16,6 +16,10 @@
   <name>MBSA::BAI::PaymentControl::UI</name>
   <description/>
 
+  <build>
+    <finalName>100mpaymentcontrol-ui</finalName>
+  </build>
+
   <dependencies>
     <dependency>
       <groupId>com.mg.bai.payctl</groupId>
