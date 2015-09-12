@@ -17,7 +17,7 @@
   <description/>
 
   <build>
-    <finalName>100mwarehouse-ejb</finalName>
+    <finalName>100mwarehouse-full</finalName>
 
     <plugins>
       <plugin>
@@ -31,9 +31,6 @@
             </goals>
             <configuration>
               <classifier>ejb</classifier>
-              <excludes>
-                <exclude>**/ui/**</exclude>
-              </excludes>
             </configuration>
           </execution>
         </executions>

@@ -17,7 +17,7 @@
   <description/>
 
   <build>
-    <finalName>100mpaymentalloc-ejb</finalName>
+    <finalName>100mpaymentalloc-full</finalName>
 
     <plugins>
       <plugin>
@@ -31,9 +31,6 @@
             </goals>
             <configuration>
               <classifier>ejb</classifier>
-              <excludes>
-                <exclude>**/ui/**</exclude>
-              </excludes>
             </configuration>
           </execution>
         </executions>
