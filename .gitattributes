@@ -38,6 +38,7 @@
 *.jspf          text
 *.properties    text
 *.tld           text
+*.gradle        text
 
 # templates
 *.ejs           text
