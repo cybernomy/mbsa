@@ -45,3 +45,14 @@ dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
 
+### Ant
+output/
+*.log
+*.MANIFEST.MF
+*.build.number
+
+### Gradle
+build/
+.gradle/
+*.lock
+*.bin
