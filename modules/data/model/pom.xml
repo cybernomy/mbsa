@@ -1,60 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>com.mg.modules</groupId>
-    <artifactId>data</artifactId>
-    <version>4.0.8-SNAPSHOT</version>
-  </parent>
-  <!--TODO: create shared resource bundle from core/src/META-INF for core and datamodel-->
-  <groupId>com.mg.modules.data</groupId>
-  <artifactId>model</artifactId>
+	<parent>
+		<groupId>com.mg.modules</groupId>
+		<artifactId>data</artifactId>
+		<version>4.0.8-SNAPSHOT</version>
+	</parent>
+	<!--TODO: create shared resource bundle from core/src/META-INF for core
+		and datamodel -->
+	<groupId>com.mg.modules.data</groupId>
+	<artifactId>model</artifactId>
 
-  <name>MBSA::Modules::Data::Model</name>
-  <description/>
+	<name>MBSA::Modules::Data::Model</name>
+	<description />
 
-  <build>
-    <finalName>mdatawarehouse</finalName>
-    <resources>
-      <resource>
-        <directory>${src.dir}</directory>
-        <includes>
-          <include>**/*.xml</include>
-        </includes>
-        <targetPath>${project.build.outputDirectory}</targetPath>
-      </resource>
-    </resources>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <executions>
-          <execution>
-            <id>service-jar</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-            <configuration>
-              <classifier>service</classifier>
-            </configuration>
-          </execution>
-          <execution>
-            <id>interface-jar</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-            <configuration>
-              <classifier>interface</classifier>
-              <excludes>
-                <exclude>**/*.xml</exclude>
-              </excludes>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
+	<build>
+		<finalName>mdatawarehouse</finalName>
+		<resources>
+			<resource>
+				<directory>${src.dir}</directory>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+				<targetPath>${project.build.outputDirectory}</targetPath>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<phase>generate-sources</phase>
+						<configuration>
+							<target>
+								<taskdef name="hibernatetool" classname="org.hibernate.tool.ant.HibernateToolTask"
+									classpathref="maven.compile.classpath" />
+								<hibernatetool destdir="src/main/java">
+									<configuration propertyfile="src/main/resources/hibernate.properties">
+										<fileset dir="${src.dir}">
+											<include name="**/*.hbm.xml" />
+										</fileset>
+									</configuration>
+									<hbm2java jdk5="true" ejb3="true" />
+								</hibernatetool>
+
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>service-jar</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<classifier>service</classifier>
+						</configuration>
+					</execution>
+					<execution>
+						<id>interface-jar</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+						<configuration>
+							<classifier>interface</classifier>
+							<excludes>
+								<exclude>**/*.xml</exclude>
+							</excludes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-tools</artifactId>
+			<version>3.6.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>com.mg.modules.data</groupId>
+			<artifactId>premodel</artifactId>
+			<version>4.0.8-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 </project>

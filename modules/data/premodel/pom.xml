@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.mg.modules</groupId>
+		<artifactId>data</artifactId>
+		<version>4.0.8-SNAPSHOT</version>
+	</parent>
+	<groupId>com.mg.modules.data</groupId>
+	<artifactId>premodel</artifactId>
+
+	<name>MBSA::Modules::Data::PREModel</name>
+	<description />
+
+	<dependencies>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+			<version>3.5.6-Final</version>
+		</dependency>
+	</dependencies>
+</project>
