@@ -1,8 +1,7 @@
 package com.mg.merp.planning.model;
-// Generated Sep 28, 2015 11:36:59 PM by Hibernate Tools 3.6.0.Final
+// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,12 +27,12 @@ public class MrpVersionForecast extends com.mg.merp.core.model.AbstractEntity im
      private ForecastVersion ForecastVersion;
      private SysClient SysClient;
      private MrpVersionControl MrpVersionControl;
-     private EnumUserType ForecastType;
+     private ForecastType ForecastType;
 
     public MrpVersionForecast() {
     }
 
-    public MrpVersionForecast(ForecastVersion ForecastVersion, SysClient SysClient, MrpVersionControl MrpVersionControl, EnumUserType ForecastType) {
+    public MrpVersionForecast(ForecastVersion ForecastVersion, SysClient SysClient, MrpVersionControl MrpVersionControl, ForecastType ForecastType) {
        this.ForecastVersion = ForecastVersion;
        this.SysClient = SysClient;
        this.MrpVersionControl = MrpVersionControl;
@@ -84,11 +83,11 @@ public class MrpVersionForecast extends com.mg.merp.core.model.AbstractEntity im
 
     
     @Column(name="FORECAST_TYPE", columnDefinition="SMALLINT")
-    public EnumUserType getForecastType() {
+    public ForecastType getForecastType() {
         return this.ForecastType;
     }
     
-    public void setForecastType(EnumUserType ForecastType) {
+    public void setForecastType(ForecastType ForecastType) {
         this.ForecastType = ForecastType;
     }
 

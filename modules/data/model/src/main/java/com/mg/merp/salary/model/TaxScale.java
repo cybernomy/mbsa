@@ -1,5 +1,5 @@
 package com.mg.merp.salary.model;
-// Generated Sep 28, 2015 11:36:59 PM by Hibernate Tools 3.6.0.Final
+// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
 
 
 import com.mg.framework.support.orm.EnumUserType;

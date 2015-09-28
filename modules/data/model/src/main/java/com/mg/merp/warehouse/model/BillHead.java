@@ -1,5 +1,5 @@
 package com.mg.merp.warehouse.model;
-// Generated Sep 28, 2015 11:36:59 PM by Hibernate Tools 3.6.0.Final
+// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
 
 
 import com.mg.framework.support.orm.OmittedWhitespaceStringType;
@@ -342,7 +342,6 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
         this.ToPayDocDate = ToPayDocDate;
     }
 
-
     @Formula(value="(select p1.okonh from dochead d1 left join contractor c1 on c1.id = d1.from_id left join partner p1 on p1.contractor_id = c1.id where d1.id = DOCHEAD_ID)")
     public String getProviderOKONH() {
         return this.ProviderOKONH;
@@ -351,7 +350,6 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     public void setProviderOKONH(String ProviderOKONH) {
         this.ProviderOKONH = ProviderOKONH;
     }
-
 
     @Formula(value="(select p2.inn from dochead d2 left join contractor c2 on c2.id = d2.from_id left join partner p2 on p2.contractor_id = c2.id where d2.id = DOCHEAD_ID)")
     public String getProviderINN() {
@@ -362,7 +360,6 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
         this.ProviderINN = ProviderINN;
     }
 
-
     @Formula(value="(select p3.okpo from dochead d3 left join contractor c3 on c3.id = d3.from_id left join partner p3 on p3.contractor_id = c3.id where d3.id = DOCHEAD_ID)")
     public String getProviderOKPO() {
         return this.ProviderOKPO;
@@ -371,7 +368,6 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     public void setProviderOKPO(String ProviderOKPO) {
         this.ProviderOKPO = ProviderOKPO;
     }
-
 
     @Formula(value="(select p4.okpo from dochead d4 left join contractor c4 on c4.id = d4.to_id left join partner p4 on p4.contractor_id = c4.id where d4.id = DOCHEAD_ID)")
     public String getCustomerOKPO() {
@@ -382,7 +378,6 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
         this.CustomerOKPO = CustomerOKPO;
     }
 
-
     @Formula(value="(select p5.okonh from dochead d5 left join contractor c5 on c5.id = d5.to_id left join partner p5 on p5.contractor_id = c5.id where d5.id = DOCHEAD_ID)")
     public String getCustomerOKONH() {
         return this.CustomerOKONH;
@@ -392,7 +387,6 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
         this.CustomerOKONH = CustomerOKONH;
     }
 
-
     @Formula(value="(select p6.inn from dochead d6 left join contractor c6 on c6.id = d6.to_id left join partner p6 on p6.contractor_id = c6.id where d6.id = DOCHEAD_ID)")
     public String getCustomerINN() {
         return this.CustomerINN;
@@ -401,9 +395,6 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     public void setCustomerINN(String CustomerINN) {
         this.CustomerINN = CustomerINN;
     }
-
-
-
 
 }
 

@@ -1,5 +1,5 @@
 package com.mg.merp.account.model;
-// Generated Sep 28, 2015 11:36:59 PM by Hibernate Tools 3.6.0.Final
+// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
 
 
 import com.mg.merp.core.model.Folder;
@@ -65,12 +65,12 @@ public class AdvanceRepHeadModel extends com.mg.merp.document.model.DocHeadModel
     public AdvanceRepHeadModel() {
     }
 
-	
+
     public AdvanceRepHeadModel(DocSection DocSection, boolean ManualDocNumber) {
-        super(DocSection, ManualDocNumber);        
+        super(DocSection, ManualDocNumber);
     }
     public AdvanceRepHeadModel(SysCompany SysCompany, Contractor Through, Folder ModelDestFolder, Contractor From, Contractor To, Contractor DstMol, CurrencyRateAuthority CurrencyRateAuthority, Contractor SrcMol, Folder Folder, SysClient SysClient, Contractor DstStock, CurrencyRateType CurrencyRateType, Contractor SrcStock, DocSection DocSection, String ModelName, DocType DocType, String DocNumber, Date DocDate, Currency Currency, BigDecimal CurCource, BigDecimal SumCur, BigDecimal SumNat, DocHead BaseDocument, DocType BaseDocType, String BaseDocNumber, Date BaseDocDate, DocHead Contract, DocType ContractType, String ContractNumber, Date ContractDate, BigDecimal Weight, BigDecimal Volume, PriceListHead PriceList, PriceType PriceType, CalcTaxesKind CalcTaxesKind, Folder DiscountFolder, boolean ManualDocNumber, String Description, AccPlan Acc, Contractor AccountAnt, Contractor Chief, Contractor Company, DocHead RestDoc, Contractor ChiefAccountAnt, String Purpose, BigDecimal PrevAdvanceSum, String Received1Src, Date Received1Date, BigDecimal Received1Sum, String Received2Src, Date Received2Date, BigDecimal Received2Sum, String Received3Src, Date Received3Date, BigDecimal Received3Sum, boolean RestDocKind, String RestDocType, String RestDocNumber, Date RestDocDate, BigDecimal RestSum, Integer AttachedDocs, Integer AttachedDocsSheets, String Comments) {
-        super(SysCompany, Through, ModelDestFolder, From, To, DstMol, CurrencyRateAuthority, SrcMol, Folder, SysClient, DstStock, CurrencyRateType, SrcStock, DocSection, ModelName, DocType, DocNumber, DocDate, Currency, CurCource, SumCur, SumNat, BaseDocument, BaseDocType, BaseDocNumber, BaseDocDate, Contract, ContractType, ContractNumber, ContractDate, Weight, Volume, PriceList, PriceType, CalcTaxesKind, DiscountFolder, ManualDocNumber, Description);        
+        super(SysCompany, Through, ModelDestFolder, From, To, DstMol, CurrencyRateAuthority, SrcMol, Folder, SysClient, DstStock, CurrencyRateType, SrcStock, DocSection, ModelName, DocType, DocNumber, DocDate, Currency, CurCource, SumCur, SumNat, BaseDocument, BaseDocType, BaseDocNumber, BaseDocDate, Contract, ContractType, ContractNumber, ContractDate, Weight, Volume, PriceList, PriceType, CalcTaxesKind, DiscountFolder, ManualDocNumber, Description);
        this.Acc = Acc;
        this.AccountAnt = AccountAnt;
        this.Chief = Chief;
@@ -97,14 +97,14 @@ public class AdvanceRepHeadModel extends com.mg.merp.document.model.DocHeadModel
        this.AttachedDocsSheets = AttachedDocsSheets;
        this.Comments = Comments;
     }
-   
+
 
 @ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="ACC_ID")
     public AccPlan getAcc() {
         return this.Acc;
     }
-    
+
     public void setAcc(AccPlan Acc) {
         this.Acc = Acc;
     }
@@ -114,7 +114,7 @@ public class AdvanceRepHeadModel extends com.mg.merp.document.model.DocHeadModel
     public Contractor getAccountAnt() {
         return this.AccountAnt;
     }
-    
+
     public void setAccountAnt(Contractor AccountAnt) {
         this.AccountAnt = AccountAnt;
     }
@@ -124,7 +124,7 @@ public class AdvanceRepHeadModel extends com.mg.merp.document.model.DocHeadModel
     public Contractor getChief() {
         return this.Chief;
     }
-    
+
     public void setChief(Contractor Chief) {
         this.Chief = Chief;
     }
@@ -134,7 +134,7 @@ public class AdvanceRepHeadModel extends com.mg.merp.document.model.DocHeadModel
     public Contractor getCompany() {
         return this.Company;
     }
-    
+
     public void setCompany(Contractor Company) {
         this.Company = Company;
     }
@@ -144,7 +144,7 @@ public class AdvanceRepHeadModel extends com.mg.merp.document.model.DocHeadModel
     public DocHead getRestDoc() {
         return this.RestDoc;
     }
-    
+
     public void setRestDoc(DocHead RestDoc) {
         this.RestDoc = RestDoc;
     }
@@ -154,229 +154,219 @@ public class AdvanceRepHeadModel extends com.mg.merp.document.model.DocHeadModel
     public Contractor getChiefAccountAnt() {
         return this.ChiefAccountAnt;
     }
-    
+
     public void setChiefAccountAnt(Contractor ChiefAccountAnt) {
         this.ChiefAccountAnt = ChiefAccountAnt;
     }
 
-    
+
     @Column(name="PURPOSE", columnDefinition="VARCHAR", length=256)
     public String getPurpose() {
         return this.Purpose;
     }
-    
+
     public void setPurpose(String Purpose) {
         this.Purpose = Purpose;
     }
 
-    
+
     @Column(name="PREVADVANCESUM", columnDefinition="NUMERIC", precision=15, scale=4)
     public BigDecimal getPrevAdvanceSum() {
         return this.PrevAdvanceSum;
     }
-    
+
     public void setPrevAdvanceSum(BigDecimal PrevAdvanceSum) {
         this.PrevAdvanceSum = PrevAdvanceSum;
     }
 
-    
+
     @Column(name="RECEIVED1SRC", columnDefinition="VARCHAR", length=40)
     public String getReceived1Src() {
         return this.Received1Src;
     }
-    
+
     public void setReceived1Src(String Received1Src) {
         this.Received1Src = Received1Src;
     }
 
-    
+
     @Column(name="RECEIVED1DATE", columnDefinition="TIMESTAMP")
     public Date getReceived1Date() {
         return this.Received1Date;
     }
-    
+
     public void setReceived1Date(Date Received1Date) {
         this.Received1Date = Received1Date;
     }
 
-    
+
     @Column(name="RECEIVED1SUM", columnDefinition="NUMERIC", precision=15, scale=4)
     public BigDecimal getReceived1Sum() {
         return this.Received1Sum;
     }
-    
+
     public void setReceived1Sum(BigDecimal Received1Sum) {
         this.Received1Sum = Received1Sum;
     }
 
-    
+
     @Column(name="RECEIVED2SRC", columnDefinition="VARCHAR", length=40)
     public String getReceived2Src() {
         return this.Received2Src;
     }
-    
+
     public void setReceived2Src(String Received2Src) {
         this.Received2Src = Received2Src;
     }
 
-    
+
     @Column(name="RECEIVED2DATE", columnDefinition="TIMESTAMP")
     public Date getReceived2Date() {
         return this.Received2Date;
     }
-    
+
     public void setReceived2Date(Date Received2Date) {
         this.Received2Date = Received2Date;
     }
 
-    
+
     @Column(name="RECEIVED2SUM", columnDefinition="NUMERIC", precision=15, scale=4)
     public BigDecimal getReceived2Sum() {
         return this.Received2Sum;
     }
-    
+
     public void setReceived2Sum(BigDecimal Received2Sum) {
         this.Received2Sum = Received2Sum;
     }
 
-    
+
     @Column(name="RECEIVED3SRC", columnDefinition="VARCHAR", length=40)
     public String getReceived3Src() {
         return this.Received3Src;
     }
-    
+
     public void setReceived3Src(String Received3Src) {
         this.Received3Src = Received3Src;
     }
 
-    
+
     @Column(name="RECEIVED3DATE", columnDefinition="TIMESTAMP")
     public Date getReceived3Date() {
         return this.Received3Date;
     }
-    
+
     public void setReceived3Date(Date Received3Date) {
         this.Received3Date = Received3Date;
     }
 
-    
+
     @Column(name="RECEIVED3SUM", columnDefinition="NUMERIC", precision=15, scale=4)
     public BigDecimal getReceived3Sum() {
         return this.Received3Sum;
     }
-    
+
     public void setReceived3Sum(BigDecimal Received3Sum) {
         this.Received3Sum = Received3Sum;
     }
 
-    
+
     @Column(name="RESTDOCKIND", columnDefinition="SMALLINT")
     public boolean isRestDocKind() {
         return this.RestDocKind;
     }
-    
+
     public void setRestDocKind(boolean RestDocKind) {
         this.RestDocKind = RestDocKind;
     }
 
-    
+
     @Column(name="RESTDOCTYPE", columnDefinition="CHAR", length=15)
     public String getRestDocType() {
         return this.RestDocType;
     }
-    
+
     public void setRestDocType(String RestDocType) {
         this.RestDocType = RestDocType;
     }
 
-    
+
     @Column(name="RESTDOCNUMBER", columnDefinition="CHAR", length=20)
     public String getRestDocNumber() {
         return this.RestDocNumber;
     }
-    
+
     public void setRestDocNumber(String RestDocNumber) {
         this.RestDocNumber = RestDocNumber;
     }
 
-    
+
     @Column(name="RESTDOCDATE", columnDefinition="TIMESTAMP")
     public Date getRestDocDate() {
         return this.RestDocDate;
     }
-    
+
     public void setRestDocDate(Date RestDocDate) {
         this.RestDocDate = RestDocDate;
     }
 
-    
+
     @Column(name="RESTSUM", columnDefinition="NUMERIC", precision=15, scale=4)
     public BigDecimal getRestSum() {
         return this.RestSum;
     }
-    
+
     public void setRestSum(BigDecimal RestSum) {
         this.RestSum = RestSum;
     }
 
-    
+
     @Column(name="ATTACHEDDOCS", columnDefinition="INTEGER")
     public Integer getAttachedDocs() {
         return this.AttachedDocs;
     }
-    
+
     public void setAttachedDocs(Integer AttachedDocs) {
         this.AttachedDocs = AttachedDocs;
     }
 
-    
+
     @Column(name="ATTACHEDDOCSSHEETS", columnDefinition="INTEGER")
     public Integer getAttachedDocsSheets() {
         return this.AttachedDocsSheets;
     }
-    
+
     public void setAttachedDocsSheets(Integer AttachedDocsSheets) {
         this.AttachedDocsSheets = AttachedDocsSheets;
     }
 
-    
+
     @Column(name="COMMENTS", columnDefinition="VARCHAR", length=256)
     public String getComments() {
         return this.Comments;
     }
-    
+
     public void setComments(String Comments) {
         this.Comments = Comments;
     }
 
-    
-    @Formula(value="(select emp.office from docheadmodel d left join acc_advancerepheadmodel a on
-        a.docheadmodel_id = d.id left join contractor c on c.id = a.company_id left join employees
-        emp on emp.contractor_id = d.from_id where d.id = DOCHEADMODEL_ID)
-      ")
+
+    @Formula(value="(select emp.office from docheadmodel d left join acc_advancerepheadmodel a on a.docheadmodel_id = d.id left join contractor c on c.id = a.company_id left join employees emp on emp.contractor_id = d.from_id where d.id = DOCHEADMODEL_ID)")
     public String getOffice() {
         return this.Office;
     }
-    
+
     public void setOffice(String Office) {
         this.Office = Office;
     }
 
-    
-    @Formula(value="(select emp.tabnum from docheadmodel d left join acc_advancerepheadmodel a on
-        a.docheadmodel_id = d.id left join contractor c on c.id = a.company_id left join employees
-        emp on emp.contractor_id = d.from_id where d.id = DOCHEADMODEL_ID)
-      ")
+    @Formula(value="(select emp.tabnum from docheadmodel d left join acc_advancerepheadmodel a on a.docheadmodel_id = d.id left join contractor c on c.id = a.company_id left join employees emp on emp.contractor_id = d.from_id where d.id = DOCHEADMODEL_ID)")
     public String getTabNum() {
         return this.TabNum;
     }
-    
+
     public void setTabNum(String TabNum) {
         this.TabNum = TabNum;
     }
-
-
-
 
 }
 
