@@ -54,10 +54,10 @@ public class DIScanner {
 				List<TypeDeclaration> types = cu.getTypes();
 				for (TypeDeclaration type : types) {
 					if (type instanceof EnumDeclaration) {
-						Path target = Paths.get("/home/valentin/Dev/Projects/mbsamvn/modules/data/premodel/src/main/java", file.subpath(4, file.getNameCount()).toString());
-						Files.copy(file, target, StandardCopyOption.REPLACE_EXISTING);
+						//Path target = Paths.get("/home/valentin/Dev/Projects/mbsamvn/modules/data/premodel/src/main/java", file.subpath(4, file.getNameCount()).toString());
+						//Files.copy(file, target, StandardCopyOption.REPLACE_EXISTING);
 					} else {
-						/*List<BodyDeclaration> members = type.getMembers();
+						List<BodyDeclaration> members = type.getMembers();
 						for (BodyDeclaration member : members) {
 							if (member instanceof MethodDeclaration) {
 								MethodDeclaration met = (MethodDeclaration) member;
@@ -70,7 +70,7 @@ public class DIScanner {
 									}
 								}
 							}
-						}*/
+						}
 					}
 				}
 				return found;
