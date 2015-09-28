@@ -7,7 +7,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.salary.model.DiscountKind" table="SAL_DISCOUNTKIND">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="int">
       <column name="ID" not-null="true" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -38,6 +38,6 @@
     <property name="IsAccumulating" type="boolean">
       <column name="IS_ACCUMULATING" not-null="false" sql-type="SMALLINT"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

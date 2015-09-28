@@ -11,7 +11,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.planning.model.MrpVersionForecast" table="PP_MRP_VERSION_FORECAST">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -30,6 +30,6 @@
     <property name="ForecastType" type="com.mg.merp.planning.model.ForecastType">
       <column name="FORECAST_TYPE" not-null="false" sql-type="SMALLINT"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

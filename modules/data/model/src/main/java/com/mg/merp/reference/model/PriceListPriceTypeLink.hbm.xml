@@ -7,7 +7,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.reference.model.PriceListPriceTypeLink" table="PRICELIST_PRICETYPE_LINK">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="int">
       <column name="ID" not-null="true" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -32,6 +32,6 @@
     <property name="RelativePercent" type="java.math.BigDecimal">
       <column name="RELATIVE_PERCENT" scale="6" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

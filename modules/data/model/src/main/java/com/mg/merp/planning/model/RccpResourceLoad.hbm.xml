@@ -7,7 +7,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.planning.model.RccpResourceLoad" table="PP_RCCP_RESOURCE_LOAD">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <!-- generator class="sequence">
@@ -62,6 +62,6 @@
         (LB.planning_level_id = mp.planning_level_id) where RH.id = RCCP_HEADER_ID)
       </formula>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

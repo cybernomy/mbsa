@@ -8,7 +8,7 @@
   -->
   <class name="com.mg.merp.baiengine.model.CustomUserActionPermiss"
          table="ALG_CUSTOM_USER_ACTION_PERMISS">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -24,6 +24,6 @@
     <many-to-one name="SecGroup" class="com.mg.merp.security.model.Groups" lazy="false">
       <column name="ROLE_ID" not-null="false"/>
     </many-to-one>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

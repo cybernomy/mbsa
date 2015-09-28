@@ -7,7 +7,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.core.model.Strings" table="STRINGS">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <composite-id name="id" class="com.mg.merp.core.model.StringsId">
       <key-property name="Section" type="java.lang.Integer">
         <column name="SECTION" not-null="false" sql-type="INTEGER"/>

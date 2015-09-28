@@ -7,7 +7,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.reference.model.Nationality" table="REF_NATIONALITY">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="int">
       <column name="ID" not-null="true" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -20,6 +20,6 @@
     <property name="NName" type="java.lang.String">
       <column name="NNAME" length="40" not-null="true" sql-type="VARCHAR"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

@@ -19,6 +19,6 @@
     <property name="Name" type="java.lang.String">
       <column name="NAME" length="80" not-null="true" sql-type="VARCHAR"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

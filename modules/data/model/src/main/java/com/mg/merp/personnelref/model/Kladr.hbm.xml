@@ -7,7 +7,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.personnelref.model.Kladr" table="PREF_KLADR">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -38,6 +38,6 @@
     <property name="SysCod" type="java.lang.String">
       <column name="SYSCOD" length="10" not-null="false" sql-type="CHAR"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

@@ -7,7 +7,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.personnelref.model.Street" table="PREF_STREET">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -35,6 +35,6 @@
     <property name="OcaTd" type="java.lang.String">
       <column name="OCATD" length="11" not-null="false" sql-type="CHAR"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

@@ -23,7 +23,7 @@
   </typedef>
 
   <class name="com.mg.merp.core.model.DatabaseAudit" table="SYS_DB_AUDIT">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Long">
       <column name="ID" not-null="false" unique="true" sql-type="NUMERIC"/>
       <generator class="sequence">

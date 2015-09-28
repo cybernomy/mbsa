@@ -8,7 +8,7 @@
   -->
   <class name="com.mg.merp.warehouse.model.BinTypeCapacityByProduct"
          table="WH_BIN_TYPE_CAP_BY_PROD">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="int">
       <column name="ID" not-null="true" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -30,6 +30,6 @@
     <property name="MaxQuantity" type="java.math.BigDecimal">
       <column name="MAX_QUANTITY" scale="3" precision="18" not-null="false" sql-type="NUMERIC"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

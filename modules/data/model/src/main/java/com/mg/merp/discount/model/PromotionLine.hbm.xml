@@ -3,7 +3,7 @@
     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
   <class name="com.mg.merp.discount.model.PromotionLine" table="DIS_PROMOTION_LINE">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -43,6 +43,6 @@
     <many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
       <column name="CLIENT_ID" not-null="false"/>
     </many-to-one>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

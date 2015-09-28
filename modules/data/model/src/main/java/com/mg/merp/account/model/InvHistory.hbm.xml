@@ -11,7 +11,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.account.model.InvHistory" table="INVHISTORY">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="int">
       <column name="ID" not-null="true" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -70,6 +70,6 @@
     <property name="OldInOperDate" type="java.util.Date">
       <column name="OLD_INOPERDATE" not-null="false" sql-type="TIMESTAMP"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

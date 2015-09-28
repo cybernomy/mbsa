@@ -11,7 +11,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.reference.model.Currency" table="CURRENCY">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -66,6 +66,6 @@
     <property name="ViewPriority" type="java.lang.Integer">
       <column name="VIEWPRIORITY" not-null="false" sql-type="INTEGER"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

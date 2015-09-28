@@ -7,7 +7,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.personnelref.model.TariffScaleClass" table="PREF_TARIFF_SCALE_CLASS">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -29,6 +29,6 @@
     <property name="Rate" type="java.math.BigDecimal">
       <column name="RATE" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

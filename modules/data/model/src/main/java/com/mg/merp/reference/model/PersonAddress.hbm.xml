@@ -12,7 +12,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.reference.model.PersonAddress" table="REF_PERSON_ADDRESS">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="int">
       <column name="ID" not-null="true" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -70,6 +70,6 @@
     <property name="Room" type="java.lang.String">
       <column name="ROOM" length="20" not-null="false" sql-type="VARCHAR"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

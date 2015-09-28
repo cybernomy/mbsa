@@ -7,7 +7,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.account.model.RemnDbKt" table="REMNDBKT">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="int">
       <column name="ID" not-null="true" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -89,7 +89,7 @@
     <property name="TurnCurDb" type="java.math.BigDecimal" insert="false" update="false"/>
     <property name="TurnCurKt" type="java.math.BigDecimal" insert="false" update="false"/>
     <loader query-ref="load-remndbkt"/>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
   <sql-query name="load-remndbkt">
     <return alias="ra" class="com.mg.merp.account.model.RemnDbKt"/>

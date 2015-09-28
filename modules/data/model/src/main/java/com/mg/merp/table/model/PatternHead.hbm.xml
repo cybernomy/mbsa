@@ -12,7 +12,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.table.model.PatternHead" table="TAB_PATTERN_HEAD">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -46,6 +46,6 @@
       </key>
       <one-to-many class="com.mg.merp.table.model.PatternSpec"/>
     </set>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

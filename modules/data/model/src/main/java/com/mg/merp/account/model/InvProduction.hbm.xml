@@ -11,7 +11,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.account.model.InvProduction" table="ACC_INVPRODUCTION">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -32,6 +32,6 @@
     </property>
     <property name="QMonth" type="com.mg.merp.reference.model.MonthOfYear"
               formula="(AMonth - ((AMonth / 12) * 12))"/>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

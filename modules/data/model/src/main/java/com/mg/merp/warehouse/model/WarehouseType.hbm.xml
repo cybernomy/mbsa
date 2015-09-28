@@ -4,7 +4,7 @@
 <hibernate-mapping>
 
   <class name="com.mg.merp.warehouse.model.WarehouseType" table="WH_WAREHOUSE_TYPE">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -20,7 +20,7 @@
     <property name="Name" type="java.lang.String">
       <column name="NAME" length="80" not-null="true" sql-type="VARCHAR"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>
   

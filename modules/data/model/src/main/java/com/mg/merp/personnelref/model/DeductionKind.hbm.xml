@@ -11,7 +11,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.personnelref.model.DeductionKind" table="PREF_DEDUCTION_KIND">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="int">
       <column name="ID" not-null="true" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -42,6 +42,6 @@
     <property name="MaxIncome" type="java.math.BigDecimal">
       <column name="MAX_INCOME" scale="4" precision="15" not-null="false" sql-type="NUMERIC"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

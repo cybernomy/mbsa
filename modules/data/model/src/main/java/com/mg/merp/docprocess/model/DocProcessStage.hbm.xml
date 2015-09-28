@@ -11,7 +11,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.docprocess.model.DocProcessStage" table="DOCPROCESSSTAGE">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -132,6 +132,6 @@
       </key>
       <one-to-many class="com.mg.merp.docprocess.model.LinkStage"/>
     </set>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

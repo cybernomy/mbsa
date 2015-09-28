@@ -7,17 +7,13 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.crm.model.LinkProblemSolution" table="CRM_LINK_PROBLEM_SOLUTION">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
+
+    <!-- manually -->
     <composite-id name="Id" class="com.mg.merp.crm.model.LinkProblemSolutionId">
-      <key-many-to-one name="CrmSolution" class="com.mg.merp.crm.model.Solution">
-        <column name="SOLUTION_ID" not-null="false"/>
-      </key-many-to-one>
-      <key-many-to-one name="CrmProblem" class="com.mg.merp.crm.model.Problem">
-        <column name="PROBLEM_ID" not-null="false"/>
-      </key-many-to-one>
-      <key-many-to-one name="SysClient" class="com.mg.merp.core.model.SysClient">
-        <column name="CLIENT_ID" not-null="false"/>
-      </key-many-to-one>
+      <key-property name="CrmSolution" type="com.mg.merp.crm.model.Solution" column="SOLUTION_ID"/>
+      <key-property name="CrmProblem" type="com.mg.merp.crm.model.Problem" column="PROBLEM_ID"/>
+      <key-property name="SysClient" type="com.mg.merp.core.model.SysClient" column="CLIENT_ID"/>
     </composite-id>
   </class>
 </hibernate-mapping>

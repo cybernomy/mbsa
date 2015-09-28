@@ -7,7 +7,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.salary.model.ReplacedFee" table="SAL_REPLACED_FEE">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -23,6 +23,6 @@
     <many-to-one name="ReplacedFee" class="com.mg.merp.salary.model.FeeRef">
       <column name="REPLACED_FEE_ID" not-null="false"/>
     </many-to-one>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

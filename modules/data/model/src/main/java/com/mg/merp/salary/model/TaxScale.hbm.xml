@@ -11,7 +11,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.salary.model.TaxScale" table="SAL_TAXSCALE">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="int">
       <column name="ID" not-null="true" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -42,6 +42,6 @@
       </key>
       <one-to-many class="com.mg.merp.salary.model.TaxRate"/>
     </set>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

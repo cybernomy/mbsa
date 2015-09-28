@@ -7,7 +7,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.exchange.model.Table" table="EXCH_TABLE">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="ClassId" type="java.lang.Integer">
       <column name="CLASS_ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <!-- generator class="sequence">
@@ -20,6 +20,6 @@
     <property name="TableName" type="java.lang.String">
       <column name="TABLE_NAME" length="31" not-null="false" sql-type="CHAR"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

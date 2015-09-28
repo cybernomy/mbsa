@@ -3,7 +3,7 @@
     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
   <class name="com.mg.merp.settlement.model.StlConfig" table="STL_CONFIG">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="SysClientId" type="int">
       <column name="CLIENT_ID" not-null="false" unique="true" sql-type="INTEGER"/>
     </id>
@@ -25,6 +25,6 @@
     <property name="CurrencyPrec" type="java.lang.Integer">
       <column name="CURRENCY_PREC" not-null="false" sql-type="INTEGER"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

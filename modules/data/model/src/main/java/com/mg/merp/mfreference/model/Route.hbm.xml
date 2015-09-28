@@ -16,7 +16,7 @@
           the hibernate.org cfg2hbm engine
   -->
   <class name="com.mg.merp.mfreference.model.Route" table="MF_ROUTE">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -74,6 +74,6 @@
     <property name="SafetyDays" type="java.lang.Short">
       <column name="SAFETY_DAYS" not-null="false" sql-type="SMALLINT"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

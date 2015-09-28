@@ -3,7 +3,7 @@
     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
   <class name="com.mg.merp.lbschedule.model.ScheduleDocHeadLink" table="LS_SCHEDULE_DOCHEAD">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -19,7 +19,7 @@
     <many-to-one name="DocHead" class="com.mg.merp.document.model.DocHead" cascade="delete">
       <column name="DOCHEAD_ID" not-null="true"/>
     </many-to-one>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>
 

@@ -8,7 +8,7 @@
   -->
   <class name="com.mg.merp.personnelref.model.PersonnelSocialBenefit"
          table="PREF_PERSONNEL_SOCIAL_BENEFIT">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
@@ -30,6 +30,6 @@
     <property name="BenefitReason" type="java.lang.String">
       <column name="BENEFIT_REASON" length="256" not-null="false" sql-type="VARCHAR"/>
     </property>
-    <filter name="__mg_tenantFilter"/>
+    
   </class>
 </hibernate-mapping>

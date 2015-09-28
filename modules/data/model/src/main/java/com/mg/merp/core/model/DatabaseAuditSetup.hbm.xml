@@ -18,7 +18,7 @@
 -->
 <hibernate-mapping>
   <class name="com.mg.merp.core.model.DatabaseAuditSetup" table="SYS_DB_AUDIT_SETUP">
-    <meta attribute="extends">com.mg.framework.service.PersistentObjectHibernate</meta>
+    <meta attribute="extends">com.mg.merp.core.model.AbstractEntity</meta>
     <id name="Id" type="java.lang.Integer">
       <column name="ID" not-null="false" unique="true" sql-type="INTEGER"/>
       <generator class="sequence">
