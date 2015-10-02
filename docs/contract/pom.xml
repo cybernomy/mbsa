@@ -6,20 +6,23 @@
 
   <parent>
     <groupId>com.mg</groupId>
-    <artifactId>mbsa</artifactId>
+    <artifactId>docs</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
 
-  <artifactId>docs</artifactId>
+  <groupId>com.mg.docs</groupId>
+  <artifactId>contract</artifactId>
   <packaging>pom</packaging>
 
-  <name>MBSA::DocBook</name>
+  <name>MBSA::DocBook::Contract</name>
   <description/>
 
-  <modules>
-    <module>accounting</module>
-    <module>baiengine</module>
-    <module>bpm</module>
-    <module>contract</module>
-  </modules>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.agilejava.docbkx</groupId>
+        <artifactId>docbkx-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 </project>
