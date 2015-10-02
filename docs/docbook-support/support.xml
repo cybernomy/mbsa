@@ -134,7 +134,7 @@
         <classpath refid="lib.classpath"/>
         <arg value="-o" />
         <arg value="${build.dir}/${lang}/pdf/docbook_fop.tmp"/>
-        <arg value="${basedir}/${lang}/master.xml"/>
+        <arg value="${basedir}/${lang}/bpm.xml"/>
         <arg value="${styles.dir}/${lang}/${db.style.fopdf}"/>
     </java>-->
 
@@ -205,7 +205,7 @@
     <!-- <java classname="com.icl.saxon.StyleSheet"
           fork="true" dir="${build.dir}/${lang}/html">
         <classpath refid="lib.classpath"/>
-        <arg value="${basedir}/${lang}/master.xml"/>
+        <arg value="${basedir}/${lang}/bpm.xml"/>
         <arg value="${styles.dir}/${lang}/${db.style.html}"/>
         <arg value='!encoding="UTF-8"'/>
     </java> -->

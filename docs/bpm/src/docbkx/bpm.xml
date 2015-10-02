@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
+    "http://www.oasis-open.org/docbook/xml/5.0b5/dtd/docbook.dtd">
+<book version="5.0" xml:lang="ru">
+  <title>
+    Управление бизнес-процессами в системе <?eval ${project.organization.name}?>
+  </title>
+  <subtitle>Руководство пользователя</subtitle>
+  <info>
+    <copyright>
+      <year><?eval ${project.inceptionYear}?></year>
+      <holder><?eval ${project.organization.name}?></holder>
+    </copyright>
+    <releaseinfo><?eval ${project.version}?></releaseinfo>
+  </info>
+  <preface xml:id="preface" revision="1">
+    <title>Целевая аудитория</title>
+    <para>Данное руководство предназначено для пользователей, работающих
+      с модулем &quot;Управление бизнес-процессами&quot;
+      системы <?eval ${project.organization.name}?>.
+    </para>
+  </preface>
+  <chapter xml:id="intro">
+    <title>Введение</title>
+    <para>Процесс создания бизнес-процессов описан в Руководстве администратора и разработчика
+      <?eval ${project.organization.name}?>. В данном руководстве рассматривается непосредственная
+      работа пользователя с модулем
+      Управление бизнес-процессами.
+    </para>
+  </chapter>
+  <chapter xml:id="bpm">
+    <title>Бизнес-процессы</title>
+    <para>Вход в раздел "Бизнес-процессы" осуществляется через
+      главное меню системы:
+      <menuchoice>
+        <guimenu>Центр управления</guimenu>
+        <guisubmenu>Управление бизнес-процессами</guisubmenu>
+        <guimenuitem>Бизнес-процессы</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/bp1.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>Чтобы добавить новый бизнес-процесс в список, установите курсор на строку и нажмите кнопку
+      <guibutton>Развернуть процесс</guibutton>. Система предложит выбрать на локальном
+      диске компьютера пользователя файл, содержащий описание процесса. Укажите этот файл и
+      нажмите<guibutton>Open</guibutton>.
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/spread.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>Новый процесс появится в списке. (Если Вы его не видите, нажмите кнопку
+      <guibutton>Обновить</guibutton>.)
+    </para>
+    <para><guibutton>Наименование</guibutton>. Наименование бизнес-процесса в системе. Автоматически
+      формируется при разворачивании процесса.
+    </para>
+    <para><guibutton>Версия</guibutton>. При первом добавлении процесса версии присваивается номер
+      1.
+      При последующих добавлениях процесса с таким же именем, у уже существующего номер версии
+      будет увеличиваться. Список всех версий можно вызвать через пункт контекстного меню
+      <guibutton>Версии процесса</guibutton>.
+    </para>
+    <para><guibutton>Описание</guibutton>. Описание процесса. Автоматически формируется при
+      разворачивании процесса.
+    </para>
+    <para>Данный бизнес-процесс - это сценарий, который может быть выполнен много раз.
+      Для каждого выполнения процесса необходимо создать его
+      <link linkend="bpmEntities">экземпляр</link>.
+    </para>
+    <para>Через пункт контекстного меню
+      <guibutton>Схема процесса</guibutton>
+      можно увидеть
+      основные пункты процесса в схематическом виде.
+    </para>
+  </chapter>
+  <chapter xml:id="bpmEntities">
+    <title>Экземпляры бизнес-процесса</title>
+    <para>Для каждого выполнения процесса необходимо создать его экземпляр. Нажмите кнопку
+      <guibutton>Создать экземпляр</guibutton>
+      или выберите аналогичный пункт из контекстного
+      меню. Затем нажмите кнопку<guibutton>Экземпляры процесса</guibutton>, чтобы увидеть список
+      экземпляров.
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/picture2.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>Этот экземпляр создан, но ещё не стартован. Установите курсор на строку и нажмите
+      кнопку
+      <guibutton>Запустить экземпляр процесса</guibutton>
+      (или выберите аналогичный пункт
+      контекстного меню).
+    </para>
+    <para>Вы можете удалить экземпляр процесса. При этом автоматически будут удалены
+      <link linkend="bpmTargets">Назначения</link>, созданные этим экземпляром.
+    </para>
+    <para>Используйте кнопку<guibutton>Обновить</guibutton>, чтобы видеть актуальный список
+      экземпляров процесса.
+    </para>
+    <para>
+      <guibutton>Монитор выполнения</guibutton>
+      позволит отслеживать выполнение бизнес-процесса по
+      каждому экземпляру.
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/monitor.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+  </chapter>
+  <chapter xml:id="bpmRes">
+    <title>Ресурсы</title>
+    <para>Для выполнения действий в рамках бизнес-процесса
+      требуется определить ресурсы, которые будут выполнять эти действия.
+    </para>
+    <para>Вход в раздел "Ресурсы" осуществляется через
+      главное меню системы:
+      <menuchoice>
+        <guimenu>Центр управления</guimenu>
+        <guisubmenu>Управление бизнес-процессами</guisubmenu>
+        <guimenuitem>Ресурсы</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/resource.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para><guibutton>Код</guibutton>. Уникальный код ресурса
+      в системе <?eval ${project.organization.name}?>.
+    </para>
+    <para><guibutton>Наименование</guibutton>. Наименование ресурса.
+    </para>
+    <para><guibutton>Пользователь</guibutton>. Пользователь системы, назначенный для выполнений
+      действий от имени данного ресурса. Если значение в этом поле не указано, действие сможет
+      выполнить
+      любой пользователь, принадлежащий у Группам, указанным в следующем поле.
+    </para>
+    <para><guibutton>Группы</guibutton>. Группа или несколько групп пользователей системы,
+      назначенных для выполнений действий от имени данного ресурса. Если в предыдущем поле указан
+      <guibutton>Пользователь</guibutton>, значение поля
+      <guibutton>Группы</guibutton>
+      игнорируется.
+    </para>
+    <para>См. также:
+      <link linkend="bpmTargets">Назначения</link>
+    </para>
+  </chapter>
+  <chapter xml:id="bpmTargets">
+    <title>Назначения</title>
+    <para>Запущенный
+      <link linkend="bpmEntities">экземпляр</link>
+      генерирует назначения
+      согласно<link linkend="bpm">сценарию бизнес-процесса</link>.
+    </para>
+    <para>Вход в раздел "Назначения" осуществляется через
+      главное меню системы:
+      <menuchoice>
+        <guimenu>Центр управления</guimenu>
+        <guisubmenu>Управление бизнес-процессами</guisubmenu>
+        <guimenuitem>Назначения</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/assignment.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>Пользователь системы, явно указанный в каких-либо<link linkend="bpmRes">ресурсах</link>,
+      или
+      принадлежащий к Группам, указанным в ресурсах, в этом списке увидит записи о задачах, в
+      выполнении
+      которых он может принять участие.
+    </para>
+    <para>Для выполнения Назначения нужно установить курсор на строку и нажать кнопку
+      <guibutton>Запустить</guibutton>
+      (или выбрать аналогичный пункт в контекстном меню). Начнётся
+      выполнение процесса.
+    </para>
+    <para>Пункт контекстного меню
+      <guibutton>Завершить</guibutton>
+      позволяет завершить назначение
+      без его выполнения.
+    </para>
+    <para>После выполнения назначение исчезает из списка назначений.</para>
+  </chapter>
+  <chapter xml:id="copyright">
+    <title>Original Copyright</title>
+    <para>Информация, содержащаяся в этом документе, может быть изменена без предварительного
+      уведомления. ООО "Бизнестехнология" не даёт никаких гарантий относительно
+      этого материала, включая документацию, но не ограничиваясь ей, а также относительно
+      назначения и эффективности этих программ и их пригодности для любых специальных целей.
+      ООО "Бизнестехнология" не несёт ответственности за любые ошибки,
+      содержащиеся здесь и за случайные или косвенные убытки, понесённые в связи
+      с оформлением, качеством исполнения и использованием этого материала.
+      Этот документ содержит информацию, которая защищена авторским правом.
+      Никакая часть этого документа не может быть воспроизведена или использована
+      в другой программе без письменного разрешения ООО "Бизнестехнология".
+    </para>
+    <para>1998-2008 ООО "Бизнестехнология"</para>
+  </chapter>
+</book>
