@@ -1,6 +1,4 @@
 package com.mg.merp.reference.model;
-// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
-
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -11,150 +9,142 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class BankRequisId extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
+    private Integer Id;
 
-     private Integer Id;
-     private Integer Partner;
-     private String Bank;
-     private String BankAcc;
-     private String CorrAcc;
-     private String BankAddr;
-     private String BankCity;
-     private String BankIdent;
-     private boolean IsDefault;
-     private String BankBranch;
-     private String Unid;
+    private Integer Partner;
+
+    private String Bank;
+
+    private String BankAcc;
+
+    private String CorrAcc;
+
+    private String BankAddr;
+
+    private String BankCity;
+
+    private String BankIdent;
+
+    private boolean IsDefault;
+
+    private String BankBranch;
+
+    private String Unid;
 
     public BankRequisId() {
     }
 
     public BankRequisId(Integer Id, Integer Partner, String Bank, String BankAcc, String CorrAcc, String BankAddr, String BankCity, String BankIdent, boolean IsDefault, String BankBranch, String Unid) {
-       this.Id = Id;
-       this.Partner = Partner;
-       this.Bank = Bank;
-       this.BankAcc = BankAcc;
-       this.CorrAcc = CorrAcc;
-       this.BankAddr = BankAddr;
-       this.BankCity = BankCity;
-       this.BankIdent = BankIdent;
-       this.IsDefault = IsDefault;
-       this.BankBranch = BankBranch;
-       this.Unid = Unid;
+        this.Id = Id;
+        this.Partner = Partner;
+        this.Bank = Bank;
+        this.BankAcc = BankAcc;
+        this.CorrAcc = CorrAcc;
+        this.BankAddr = BankAddr;
+        this.BankCity = BankCity;
+        this.BankIdent = BankIdent;
+        this.IsDefault = IsDefault;
+        this.BankBranch = BankBranch;
+        this.Unid = Unid;
     }
-   
 
-
-    @Column(name="ID", columnDefinition="INTEGER")
+    @Column(name = "ID", columnDefinition = "INTEGER")
     public Integer getId() {
         return this.Id;
     }
-    
+
     public void setId(Integer Id) {
         this.Id = Id;
     }
 
-
-    @Column(name="PARTNER_ID", columnDefinition="INTEGER")
+    @Column(name = "PARTNER_ID", columnDefinition = "INTEGER")
     public Integer getPartner() {
         return this.Partner;
     }
-    
+
     public void setPartner(Integer Partner) {
         this.Partner = Partner;
     }
 
-
-    @Column(name="BANK", columnDefinition="VARCHAR", length=256)
+    @Column(name = "BANK", columnDefinition = "VARCHAR", length = 256)
     public String getBank() {
         return this.Bank;
     }
-    
+
     public void setBank(String Bank) {
         this.Bank = Bank;
     }
 
-
-    @Column(name="BANK_ACC", columnDefinition="VARCHAR", length=30)
+    @Column(name = "BANK_ACC", columnDefinition = "VARCHAR", length = 30)
     public String getBankAcc() {
         return this.BankAcc;
     }
-    
+
     public void setBankAcc(String BankAcc) {
         this.BankAcc = BankAcc;
     }
 
-
-    @Column(name="CORR_ACC", columnDefinition="VARCHAR", length=30)
+    @Column(name = "CORR_ACC", columnDefinition = "VARCHAR", length = 30)
     public String getCorrAcc() {
         return this.CorrAcc;
     }
-    
+
     public void setCorrAcc(String CorrAcc) {
         this.CorrAcc = CorrAcc;
     }
 
-
-    @Column(name="BANK_ADDR", columnDefinition="VARCHAR", length=256)
+    @Column(name = "BANK_ADDR", columnDefinition = "VARCHAR", length = 256)
     public String getBankAddr() {
         return this.BankAddr;
     }
-    
+
     public void setBankAddr(String BankAddr) {
         this.BankAddr = BankAddr;
     }
 
-
-    @Column(name="BANK_CITY", columnDefinition="VARCHAR", length=256)
+    @Column(name = "BANK_CITY", columnDefinition = "VARCHAR", length = 256)
     public String getBankCity() {
         return this.BankCity;
     }
-    
+
     public void setBankCity(String BankCity) {
         this.BankCity = BankCity;
     }
 
-
-    @Column(name="BANK_IDENT", columnDefinition="VARCHAR", length=30)
+    @Column(name = "BANK_IDENT", columnDefinition = "VARCHAR", length = 30)
     public String getBankIdent() {
         return this.BankIdent;
     }
-    
+
     public void setBankIdent(String BankIdent) {
         this.BankIdent = BankIdent;
     }
 
-
-    @Column(name="IS_DEFAULT", columnDefinition="SMALLINT")
+    @Column(name = "IS_DEFAULT", columnDefinition = "SMALLINT")
     public boolean isIsDefault() {
         return this.IsDefault;
     }
-    
+
     public void setIsDefault(boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 
-
-    @Column(name="BANK_BRANCH", columnDefinition="VARCHAR", length=256)
+    @Column(name = "BANK_BRANCH", columnDefinition = "VARCHAR", length = 256)
     public String getBankBranch() {
         return this.BankBranch;
     }
-    
+
     public void setBankBranch(String BankBranch) {
         this.BankBranch = BankBranch;
     }
 
-
-    @Column(name="UNID", columnDefinition="VARCHAR", length=32)
+    @Column(name = "UNID", columnDefinition = "VARCHAR", length = 32)
     public String getUnid() {
         return this.Unid;
     }
-    
+
     public void setUnid(String Unid) {
         this.Unid = Unid;
     }
-
-
-
-
 }
-
 

@@ -1,6 +1,4 @@
 package com.mg.merp.crm.model;
-// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
-
 
 import com.mg.merp.core.model.SysClient;
 import javax.persistence.Column;
@@ -12,54 +10,46 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class LinkSymptomProblemId extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
+    private Symptom CrmSymptom;
 
-     private Symptom CrmSymptom;
-     private Problem CrmProblem;
-     private SysClient SysClient;
+    private Problem CrmProblem;
+
+    private SysClient SysClient;
 
     public LinkSymptomProblemId() {
     }
 
     public LinkSymptomProblemId(Symptom CrmSymptom, Problem CrmProblem, SysClient SysClient) {
-       this.CrmSymptom = CrmSymptom;
-       this.CrmProblem = CrmProblem;
-       this.SysClient = SysClient;
+        this.CrmSymptom = CrmSymptom;
+        this.CrmProblem = CrmProblem;
+        this.SysClient = SysClient;
     }
-   
 
-
-    @Column(name="SYMPTOM_ID", nullable=false)
+    @Column(name = "SYMPTOM_ID", nullable = false)
     public Symptom getCrmSymptom() {
         return this.CrmSymptom;
     }
-    
+
     public void setCrmSymptom(Symptom CrmSymptom) {
         this.CrmSymptom = CrmSymptom;
     }
 
-
-    @Column(name="PROBLEM_ID", nullable=false)
+    @Column(name = "PROBLEM_ID", nullable = false)
     public Problem getCrmProblem() {
         return this.CrmProblem;
     }
-    
+
     public void setCrmProblem(Problem CrmProblem) {
         this.CrmProblem = CrmProblem;
     }
 
-
-    @Column(name="CLIENT_ID", nullable=false)
+    @Column(name = "CLIENT_ID", nullable = false)
     public SysClient getSysClient() {
         return this.SysClient;
     }
-    
+
     public void setSysClient(SysClient SysClient) {
         this.SysClient = SysClient;
     }
-
-
-
-
 }
-
 

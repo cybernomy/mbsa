@@ -1,6 +1,4 @@
 package com.mg.merp.core.model;
-// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
-
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -11,42 +9,34 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class StringsId extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
+    private Integer Section;
 
-     private Integer Section;
-     private Integer Val;
+    private Integer Val;
 
     public StringsId() {
     }
 
     public StringsId(Integer Section, Integer Val) {
-       this.Section = Section;
-       this.Val = Val;
+        this.Section = Section;
+        this.Val = Val;
     }
-   
 
-
-    @Column(name="SECTION", columnDefinition="INTEGER")
+    @Column(name = "SECTION", columnDefinition = "INTEGER")
     public Integer getSection() {
         return this.Section;
     }
-    
+
     public void setSection(Integer Section) {
         this.Section = Section;
     }
 
-
-    @Column(name="VAL", columnDefinition="INTEGER")
+    @Column(name = "VAL", columnDefinition = "INTEGER")
     public Integer getVal() {
         return this.Val;
     }
-    
+
     public void setVal(Integer Val) {
         this.Val = Val;
     }
-
-
-
-
 }
-
 
