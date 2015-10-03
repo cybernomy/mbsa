@@ -1,8 +1,7 @@
 package com.mg.merp.paymentcontrol.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.security.model.SecUser;
 import java.util.Date;
@@ -33,7 +32,7 @@ public class VersionStatus extends com.mg.merp.core.model.AbstractEntity impleme
      private SysClient SysClient;
      private SecUser Creator;
      private Version Version;
-     private EnumUserType Kind;
+     private VersionStatusKind Kind;
      private Date DateTill;
      private Date DateFrom;
      private Date CreateDate;
@@ -43,7 +42,7 @@ public class VersionStatus extends com.mg.merp.core.model.AbstractEntity impleme
     public VersionStatus() {
     }
 
-    public VersionStatus(SysClient SysClient, SecUser Creator, Version Version, EnumUserType Kind, Date DateTill, Date DateFrom, Date CreateDate, Set<Liability> Liabilities, Set<Execution> Executions) {
+    public VersionStatus(SysClient SysClient, SecUser Creator, Version Version, VersionStatusKind Kind, Date DateTill, Date DateFrom, Date CreateDate, Set<Liability> Liabilities, Set<Execution> Executions) {
        this.SysClient = SysClient;
        this.Creator = Creator;
        this.Version = Version;
@@ -99,11 +98,11 @@ public class VersionStatus extends com.mg.merp.core.model.AbstractEntity impleme
 
     
     @Column(name="KIND", columnDefinition="SMALLINT")
-    public EnumUserType getKind() {
+    public VersionStatusKind getKind() {
         return this.Kind;
     }
     
-    public void setKind(EnumUserType Kind) {
+    public void setKind(VersionStatusKind Kind) {
         this.Kind = Kind;
     }
 

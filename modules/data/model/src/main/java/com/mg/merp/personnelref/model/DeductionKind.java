@@ -1,8 +1,7 @@
 package com.mg.merp.personnelref.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -28,7 +27,7 @@ public class DeductionKind extends com.mg.merp.core.model.AbstractEntity impleme
 
      private int Id;
      private SysClient SysClient;
-     private EnumUserType DeductionClass;
+     private DeductionClass DeductionClass;
      private String DCode;
      private String DName;
      private BigDecimal MinSalaryNumber;
@@ -40,13 +39,13 @@ public class DeductionKind extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
 	
-    public DeductionKind(EnumUserType DeductionClass, String DCode, String DName, Date BeginDate) {
+    public DeductionKind(DeductionClass DeductionClass, String DCode, String DName, Date BeginDate) {
         this.DeductionClass = DeductionClass;
         this.DCode = DCode;
         this.DName = DName;
         this.BeginDate = BeginDate;
     }
-    public DeductionKind(SysClient SysClient, EnumUserType DeductionClass, String DCode, String DName, BigDecimal MinSalaryNumber, BigDecimal FixedSum, Date BeginDate, BigDecimal MaxIncome) {
+    public DeductionKind(SysClient SysClient, DeductionClass DeductionClass, String DCode, String DName, BigDecimal MinSalaryNumber, BigDecimal FixedSum, Date BeginDate, BigDecimal MaxIncome) {
        this.SysClient = SysClient;
        this.DeductionClass = DeductionClass;
        this.DCode = DCode;
@@ -81,11 +80,11 @@ public class DeductionKind extends com.mg.merp.core.model.AbstractEntity impleme
 
     
     @Column(name="DEDUCTIONCLASS", nullable=false, columnDefinition="INTEGER")
-    public EnumUserType getDeductionClass() {
+    public DeductionClass getDeductionClass() {
         return this.DeductionClass;
     }
     
-    public void setDeductionClass(EnumUserType DeductionClass) {
+    public void setDeductionClass(DeductionClass DeductionClass) {
         this.DeductionClass = DeductionClass;
     }
 

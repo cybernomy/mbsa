@@ -1,5 +1,5 @@
 package com.mg.merp.core.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
 import com.mg.framework.api.metadata.ApplicationLayer;
@@ -46,7 +46,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     public SysDataItem() {
     }
 
-
+	
     public SysDataItem(ApplicationLayer ApplicationLayer, String Name, Boolean ReadOnly) {
         this.ApplicationLayer = ApplicationLayer;
         this.Name = Name;
@@ -71,45 +71,45 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
        this.AssignParameterName = AssignParameterName;
        this.ReadOnly = ReadOnly;
     }
-
+   
      @SequenceGenerator(name="generator", sequenceName="SYS_DATAITEM_ID_GEN")@Id @GeneratedValue(strategy=SEQUENCE, generator="generator")
 
-
+    
     @Column(name="ID", unique=true, columnDefinition="INTEGER")
     public Integer getId() {
         return this.Id;
     }
-
+    
     public void setId(Integer Id) {
         this.Id = Id;
     }
 
-
+    
     @Column(name="APP_LAYER", nullable=false, columnDefinition="SMALLINT")
     public ApplicationLayer getApplicationLayer() {
         return this.ApplicationLayer;
     }
-
+    
     public void setApplicationLayer(ApplicationLayer ApplicationLayer) {
         this.ApplicationLayer = ApplicationLayer;
     }
 
-
+    
     @Column(name="NAME", unique=true, nullable=false, columnDefinition="VARCHAR", length=80)
     public String getName() {
         return this.Name;
     }
-
+    
     public void setName(String Name) {
         this.Name = Name;
     }
 
-
+    
     @Column(name="DESCRIPTION", columnDefinition="VARCHAR", length=1024)
     public String getDescription() {
         return this.Description;
     }
-
+    
     public void setDescription(String Description) {
         this.Description = Description;
     }
@@ -119,137 +119,137 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     public SysDomain getSysDomain() {
         return this.SysDomain;
     }
-
+    
     public void setSysDomain(SysDomain SysDomain) {
         this.SysDomain = SysDomain;
     }
 
-
+    
     @Column(name="REFERENCE_DATAITEM_NAME", columnDefinition="VARCHAR", length=80)
     public String getReferenceDataItemName() {
         return this.ReferenceDataItemName;
     }
-
+    
     public void setReferenceDataItemName(String ReferenceDataItemName) {
         this.ReferenceDataItemName = ReferenceDataItemName;
     }
 
-
+    
     @Column(name="DATAITEM_KIND", columnDefinition="SMALLINT")
     public DataItemKind getKind() {
         return this.Kind;
     }
-
+    
     public void setKind(DataItemKind Kind) {
         this.Kind = Kind;
     }
 
-
+    
     @Column(name="DEFAULT_COMPONENT_NAME", columnDefinition="VARCHAR", length=80)
     public String getDefaultComponentName() {
         return this.DefaultComponentName;
     }
-
+    
     public void setDefaultComponentName(String DefaultComponentName) {
         this.DefaultComponentName = DefaultComponentName;
     }
 
-
+    
     @Column(name="SHORT_LABEL", columnDefinition="VARCHAR", length=80)
     public String getShortLabel() {
         return this.ShortLabel;
     }
-
+    
     public void setShortLabel(String ShortLabel) {
         this.ShortLabel = ShortLabel;
     }
 
-
+    
     @Column(name="MEDIUM_LABEL", columnDefinition="VARCHAR", length=80)
     public String getMediumLabel() {
         return this.MediumLabel;
     }
-
+    
     public void setMediumLabel(String MediumLabel) {
         this.MediumLabel = MediumLabel;
     }
 
-
+    
     @Column(name="LONG_LABEL", columnDefinition="VARCHAR", length=80)
     public String getLongLabel() {
         return this.LongLabel;
     }
-
+    
     public void setLongLabel(String LongLabel) {
         this.LongLabel = LongLabel;
     }
 
-
+    
     @Column(name="HEADER", columnDefinition="VARCHAR", length=80)
     public String getHeader() {
         return this.Header;
     }
-
+    
     public void setHeader(String Header) {
         this.Header = Header;
     }
 
-
+    
     @Column(name="REPORT_LABEL", columnDefinition="VARCHAR", length=80)
     public String getReportLabel() {
         return this.ReportLabel;
     }
-
+    
     public void setReportLabel(String ReportLabel) {
         this.ReportLabel = ReportLabel;
     }
 
-
+    
     @Column(name="SEARCH_HELP", columnDefinition="VARCHAR", length=256)
     public String getSearchHelpName() {
         return this.SearchHelpName;
     }
-
+    
     public void setSearchHelpName(String SearchHelpName) {
         this.SearchHelpName = SearchHelpName;
     }
 
-
+    
     @Column(name="ENTITY_PROPERTY_TEXT", columnDefinition="VARCHAR", length=80)
     public String getEntityPropertyText() {
         return this.EntityPropertyText;
     }
-
+    
     public void setEntityPropertyText(String EntityPropertyText) {
         this.EntityPropertyText = EntityPropertyText;
     }
 
-
+    
     @Column(name="ENTITY_TEXT_FORMAT", columnDefinition="VARCHAR", length=80)
     public String getEntityTextFormat() {
         return this.EntityTextFormat;
     }
-
+    
     public void setEntityTextFormat(String EntityTextFormat) {
         this.EntityTextFormat = EntityTextFormat;
     }
 
-
+    
     @Column(name="ASSIGN_PARAMETER_NAME", columnDefinition="VARCHAR", length=80)
     public String getAssignParameterName() {
         return this.AssignParameterName;
     }
-
+    
     public void setAssignParameterName(String AssignParameterName) {
         this.AssignParameterName = AssignParameterName;
     }
 
-
+    
     @Column(name="IS_READ_ONLY", nullable=false, columnDefinition="SMALLINT")
-    public Boolean isReadOnly() {
+    public Boolean getReadOnly() {
         return this.ReadOnly;
     }
-
+    
     public void setReadOnly(Boolean ReadOnly) {
         this.ReadOnly = ReadOnly;
     }

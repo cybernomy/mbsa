@@ -1,5 +1,5 @@
 package com.mg.merp.document.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
 import com.mg.framework.support.orm.OmittedWhitespaceStringType;

@@ -1,8 +1,7 @@
 package com.mg.merp.reference.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import java.util.Date;
 import javax.persistence.Column;
@@ -33,7 +32,7 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
      private Place Place;
      private ZipCode ZipCode;
      private Region Region;
-     private EnumUserType AddressKind;
+     private PersonAddressKind AddressKind;
      private Date BeginDate;
      private String PostIndex;
      private String RegionName;
@@ -47,7 +46,7 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
     public PersonAddress() {
     }
 
-    public PersonAddress(District District, Country Country, NaturalPerson NaturalPerson, SysClient SysClient, Place Place, ZipCode ZipCode, Region Region, EnumUserType AddressKind, Date BeginDate, String PostIndex, String RegionName, String City, String Street, String House, String FullAddress, String Building, String Room) {
+    public PersonAddress(District District, Country Country, NaturalPerson NaturalPerson, SysClient SysClient, Place Place, ZipCode ZipCode, Region Region, PersonAddressKind AddressKind, Date BeginDate, String PostIndex, String RegionName, String City, String Street, String House, String FullAddress, String Building, String Room) {
        this.District = District;
        this.Country = Country;
        this.NaturalPerson = NaturalPerson;
@@ -151,11 +150,11 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
 
     
     @Column(name="ADDRESS_KIND", columnDefinition="INTEGER")
-    public EnumUserType getAddressKind() {
+    public PersonAddressKind getAddressKind() {
         return this.AddressKind;
     }
     
-    public void setAddressKind(EnumUserType AddressKind) {
+    public void setAddressKind(PersonAddressKind AddressKind) {
         this.AddressKind = AddressKind;
     }
 

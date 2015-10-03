@@ -1,8 +1,7 @@
 package com.mg.merp.mfreference.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.reference.model.Catalog;
@@ -42,8 +41,8 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
      private CostDetail StandartCostDetail;
      private Cell Cell;
      private Measure RunTimeUM;
-     private EnumUserType BomType;
-     private EnumUserType BomStatus;
+     private BomType BomType;
+     private BomStatus BomStatus;
      private Warehouse DefSrcStock;
      private Warehouse DefDstStock;
      private Employees DefSrcMol;
@@ -53,7 +52,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
      private Date RollUpDateTime;
      private BigDecimal SetupTicks;
      private BigDecimal RunTicks;
-     private EnumUserType ScheduleDirection;
+     private ScheduleDirection ScheduleDirection;
      private boolean UseMoveTimes;
      private boolean UseQueueTimes;
      private boolean UseFiniteCapacity;
@@ -73,7 +72,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     public Bom() {
     }
 
-    public Bom(Catalog Catalog, Measure SetupTimeUM, Folder Folder, SysClient SysClient, CostDetail StandartCostDetail, Cell Cell, Measure RunTimeUM, EnumUserType BomType, EnumUserType BomStatus, Warehouse DefSrcStock, Warehouse DefDstStock, Employees DefSrcMol, Employees DefDstMol, Integer Revision, Date RevisionDateTime, Date RollUpDateTime, BigDecimal SetupTicks, BigDecimal RunTicks, EnumUserType ScheduleDirection, boolean UseMoveTimes, boolean UseQueueTimes, boolean UseFiniteCapacity, BigDecimal Priority, boolean PriorityFreezeFlag, BigDecimal PcsPerHrCell, boolean ApprovedFlag, boolean BomVersionRequired, boolean CreateJobApproved, String Comment, BigDecimal MinLotQty, BigDecimal MaxLotQty, BigDecimal LotIncrementQty, BigDecimal PlanningLotQty, Set<BomRoute> BomRoutes) {
+    public Bom(Catalog Catalog, Measure SetupTimeUM, Folder Folder, SysClient SysClient, CostDetail StandartCostDetail, Cell Cell, Measure RunTimeUM, BomType BomType, BomStatus BomStatus, Warehouse DefSrcStock, Warehouse DefDstStock, Employees DefSrcMol, Employees DefDstMol, Integer Revision, Date RevisionDateTime, Date RollUpDateTime, BigDecimal SetupTicks, BigDecimal RunTicks, ScheduleDirection ScheduleDirection, boolean UseMoveTimes, boolean UseQueueTimes, boolean UseFiniteCapacity, BigDecimal Priority, boolean PriorityFreezeFlag, BigDecimal PcsPerHrCell, boolean ApprovedFlag, boolean BomVersionRequired, boolean CreateJobApproved, String Comment, BigDecimal MinLotQty, BigDecimal MaxLotQty, BigDecimal LotIncrementQty, BigDecimal PlanningLotQty, Set<BomRoute> BomRoutes) {
        this.Catalog = Catalog;
        this.SetupTimeUM = SetupTimeUM;
        this.Folder = Folder;
@@ -194,21 +193,21 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     
     @Column(name="BOM_TYPE", columnDefinition="SMALLINT")
-    public EnumUserType getBomType() {
+    public BomType getBomType() {
         return this.BomType;
     }
     
-    public void setBomType(EnumUserType BomType) {
+    public void setBomType(BomType BomType) {
         this.BomType = BomType;
     }
 
     
     @Column(name="BOM_STATUS", columnDefinition="SMALLINT")
-    public EnumUserType getBomStatus() {
+    public BomStatus getBomStatus() {
         return this.BomStatus;
     }
     
-    public void setBomStatus(EnumUserType BomStatus) {
+    public void setBomStatus(BomStatus BomStatus) {
         this.BomStatus = BomStatus;
     }
 
@@ -304,11 +303,11 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     
     @Column(name="SCHED_DIRECTION", columnDefinition="SMALLINT")
-    public EnumUserType getScheduleDirection() {
+    public ScheduleDirection getScheduleDirection() {
         return this.ScheduleDirection;
     }
     
-    public void setScheduleDirection(EnumUserType ScheduleDirection) {
+    public void setScheduleDirection(ScheduleDirection ScheduleDirection) {
         this.ScheduleDirection = ScheduleDirection;
     }
 

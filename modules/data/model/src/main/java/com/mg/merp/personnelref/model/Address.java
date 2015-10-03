@@ -1,9 +1,9 @@
 package com.mg.merp.personnelref.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
+import com.mg.merp.reference.model.PersonAddressKind;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,7 +28,7 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
      private int Id;
      private Personnel Personnel;
      private SysClient SysClient;
-     private EnumUserType AddressKind;
+     private PersonAddressKind AddressKind;
      private Date BeginDate;
      private String FullAddress;
      private String PostIndex;
@@ -60,7 +60,7 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
         this.Area = Area;
         this.Street = Street;
     }
-    public Address(Personnel Personnel, SysClient SysClient, EnumUserType AddressKind, Date BeginDate, String FullAddress, String PostIndex, String Country, String Region, String District, String DistrictType, String City, String CityType, String Area, String AreaType, String Street, String StreetType, String House, String Block, String Flat, String RegionType, String KladrCode) {
+    public Address(Personnel Personnel, SysClient SysClient, PersonAddressKind AddressKind, Date BeginDate, String FullAddress, String PostIndex, String Country, String Region, String District, String DistrictType, String City, String CityType, String Area, String AreaType, String Street, String StreetType, String House, String Block, String Flat, String RegionType, String KladrCode) {
        this.Personnel = Personnel;
        this.SysClient = SysClient;
        this.AddressKind = AddressKind;
@@ -118,11 +118,11 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
 
     
     @Column(name="ADDRESS_KIND", columnDefinition="INTEGER")
-    public EnumUserType getAddressKind() {
+    public PersonAddressKind getAddressKind() {
         return this.AddressKind;
     }
     
-    public void setAddressKind(EnumUserType AddressKind) {
+    public void setAddressKind(PersonAddressKind AddressKind) {
         this.AddressKind = AddressKind;
     }
 

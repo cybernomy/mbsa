@@ -1,8 +1,7 @@
 package com.mg.merp.docprocess.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.document.model.DocHead;
 import java.util.HashSet;
@@ -31,15 +30,15 @@ public class DocAction extends com.mg.merp.core.model.AbstractEntity implements 
      private Integer Id;
      private DocHead DocHead;
      private SysClient SysClient;
-     private EnumUserType ActionType;
+     private ActionType ActionType;
      private DocProcessStage Stage;
-     private EnumUserType StageState;
+     private StageState StageState;
      private Set<DocHeadState> DocHeadStates = new HashSet<DocHeadState>(0);
 
     public DocAction() {
     }
 
-    public DocAction(DocHead DocHead, SysClient SysClient, EnumUserType ActionType, DocProcessStage Stage, EnumUserType StageState, Set<DocHeadState> DocHeadStates) {
+    public DocAction(DocHead DocHead, SysClient SysClient, ActionType ActionType, DocProcessStage Stage, StageState StageState, Set<DocHeadState> DocHeadStates) {
        this.DocHead = DocHead;
        this.SysClient = SysClient;
        this.ActionType = ActionType;
@@ -82,11 +81,11 @@ public class DocAction extends com.mg.merp.core.model.AbstractEntity implements 
 
     
     @Column(name="ACTIONTYPE", columnDefinition="SMALLINT")
-    public EnumUserType getActionType() {
+    public ActionType getActionType() {
         return this.ActionType;
     }
     
-    public void setActionType(EnumUserType ActionType) {
+    public void setActionType(ActionType ActionType) {
         this.ActionType = ActionType;
     }
 
@@ -102,11 +101,11 @@ public class DocAction extends com.mg.merp.core.model.AbstractEntity implements 
 
     
     @Column(name="STAGESTATE", columnDefinition="SMALLINT")
-    public EnumUserType getStageState() {
+    public StageState getStageState() {
         return this.StageState;
     }
     
-    public void setStageState(EnumUserType StageState) {
+    public void setStageState(StageState StageState) {
         this.StageState = StageState;
     }
 

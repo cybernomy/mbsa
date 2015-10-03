@@ -1,8 +1,7 @@
 package com.mg.merp.warehouse.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.framework.support.orm.OmittedWhitespaceStringType;
 import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.model.SysClient;
@@ -42,14 +41,14 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
      private BigDecimal AddExpenses;
      private BigDecimal DiscountOnDoc;
      private BigDecimal DiscountOnLine;
-     private EnumUserType DueDateKind;
+     private OrderDueDateKind DueDateKind;
      private BigDecimal DueDateQuan;
      private Date DueDate;
      private Short CreditTerm;
      private BigDecimal Penalty;
      private String Comment;
      private boolean FixedInput;
-     private EnumUserType Status;
+     private OrderStatus Status;
 
     public OrderHead() {
     }
@@ -58,7 +57,7 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
     public OrderHead(SysCompany SysCompany, DocSection DocSection, Short Requester, boolean ManualDocNumber) {
         super(SysCompany, DocSection, Requester, ManualDocNumber);        
     }
-    public OrderHead(SysCompany SysCompany, Contractor Through, Contractor From, CurrencyRateAuthority CurrencyRateAuthority, Contractor SrcMol, PriceType PriceType, Folder DiscountFolder, Folder Folder, DocType DocType, DocHead Contract, Currency Currency, Contractor SrcStock, DocType ContractType, Contractor To, Contractor DstMol, DocHead BaseDocument, SysClient SysClient, Contractor DstStock, CalcTaxesKind CalcTaxesKind, DocType BaseDocType, CurrencyRateType CurrencyRateType, PriceListHead PriceList, DocSection DocSection, OmittedWhitespaceStringType DocNumber, Date DocDate, BigDecimal CurCource, BigDecimal SumCur, BigDecimal SumNat, OmittedWhitespaceStringType BaseDocNumber, Date BaseDocDate, OmittedWhitespaceStringType ContractNumber, Date ContractDate, BigDecimal Weight, BigDecimal Volume, Short Requester, byte[] Original, String UNID, boolean ManualDocNumber, String Description, Contractor Responsible, Contractor Consumer, BigDecimal SummaCurWithDiscount, BigDecimal SummaNatWithDiscount, BigDecimal AddExpenses, BigDecimal DiscountOnDoc, BigDecimal DiscountOnLine, EnumUserType DueDateKind, BigDecimal DueDateQuan, Date DueDate, Short CreditTerm, BigDecimal Penalty, String Comment, boolean FixedInput, EnumUserType Status) {
+    public OrderHead(SysCompany SysCompany, Contractor Through, Contractor From, CurrencyRateAuthority CurrencyRateAuthority, Contractor SrcMol, PriceType PriceType, Folder DiscountFolder, Folder Folder, DocType DocType, DocHead Contract, Currency Currency, Contractor SrcStock, DocType ContractType, Contractor To, Contractor DstMol, DocHead BaseDocument, SysClient SysClient, Contractor DstStock, CalcTaxesKind CalcTaxesKind, DocType BaseDocType, CurrencyRateType CurrencyRateType, PriceListHead PriceList, DocSection DocSection, OmittedWhitespaceStringType DocNumber, Date DocDate, BigDecimal CurCource, BigDecimal SumCur, BigDecimal SumNat, OmittedWhitespaceStringType BaseDocNumber, Date BaseDocDate, OmittedWhitespaceStringType ContractNumber, Date ContractDate, BigDecimal Weight, BigDecimal Volume, Short Requester, byte[] Original, String UNID, boolean ManualDocNumber, String Description, Contractor Responsible, Contractor Consumer, BigDecimal SummaCurWithDiscount, BigDecimal SummaNatWithDiscount, BigDecimal AddExpenses, BigDecimal DiscountOnDoc, BigDecimal DiscountOnLine, OrderDueDateKind DueDateKind, BigDecimal DueDateQuan, Date DueDate, Short CreditTerm, BigDecimal Penalty, String Comment, boolean FixedInput, OrderStatus Status) {
         super(SysCompany, Through, From, CurrencyRateAuthority, SrcMol, PriceType, DiscountFolder, Folder, DocType, Contract, Currency, SrcStock, ContractType, To, DstMol, BaseDocument, SysClient, DstStock, CalcTaxesKind, BaseDocType, CurrencyRateType, PriceList, DocSection, DocNumber, DocDate, CurCource, SumCur, SumNat, BaseDocNumber, BaseDocDate, ContractNumber, ContractDate, Weight, Volume, Requester, Original, UNID, ManualDocNumber, Description);        
        this.Responsible = Responsible;
        this.Consumer = Consumer;
@@ -150,11 +149,11 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
 
     
     @Column(name="DUEDATE_KIND", columnDefinition="SMALLINT")
-    public EnumUserType getDueDateKind() {
+    public OrderDueDateKind getDueDateKind() {
         return this.DueDateKind;
     }
     
-    public void setDueDateKind(EnumUserType DueDateKind) {
+    public void setDueDateKind(OrderDueDateKind DueDateKind) {
         this.DueDateKind = DueDateKind;
     }
 
@@ -220,11 +219,11 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
 
     
     @Column(name="STATUS", columnDefinition="SMALLINT")
-    public EnumUserType getStatus() {
+    public OrderStatus getStatus() {
         return this.Status;
     }
     
-    public void setStatus(EnumUserType Status) {
+    public void setStatus(OrderStatus Status) {
         this.Status = Status;
     }
 

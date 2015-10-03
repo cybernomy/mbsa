@@ -1,8 +1,7 @@
 package com.mg.merp.warehouse.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocSpec;
@@ -33,8 +32,8 @@ public class StockPlanHistory extends com.mg.merp.core.model.AbstractEntity impl
      private DocSpec DocSpec;
      private DocHead DocHead;
      private SysClient SysClient;
-     private EnumUserType Kind;
-     private EnumUserType Direction;
+     private StockPlanHistoryKind Kind;
+     private StockPlanHistoryDirection Direction;
      private Date ProcessDate;
      private Date SysDateTime;
      private BigDecimal Quantity;
@@ -44,11 +43,11 @@ public class StockPlanHistory extends com.mg.merp.core.model.AbstractEntity impl
     }
 
 	
-    public StockPlanHistory(EnumUserType Kind, EnumUserType Direction) {
+    public StockPlanHistory(StockPlanHistoryKind Kind, StockPlanHistoryDirection Direction) {
         this.Kind = Kind;
         this.Direction = Direction;
     }
-    public StockPlanHistory(StockCard StockCard, DocSpec DocSpec, DocHead DocHead, SysClient SysClient, EnumUserType Kind, EnumUserType Direction, Date ProcessDate, Date SysDateTime, BigDecimal Quantity, BigDecimal Quantity2) {
+    public StockPlanHistory(StockCard StockCard, DocSpec DocSpec, DocHead DocHead, SysClient SysClient, StockPlanHistoryKind Kind, StockPlanHistoryDirection Direction, Date ProcessDate, Date SysDateTime, BigDecimal Quantity, BigDecimal Quantity2) {
        this.StockCard = StockCard;
        this.DocSpec = DocSpec;
        this.DocHead = DocHead;
@@ -115,21 +114,21 @@ public class StockPlanHistory extends com.mg.merp.core.model.AbstractEntity impl
 
     
     @Column(name="KIND", nullable=false, columnDefinition="SMALLINT")
-    public EnumUserType getKind() {
+    public StockPlanHistoryKind getKind() {
         return this.Kind;
     }
     
-    public void setKind(EnumUserType Kind) {
+    public void setKind(StockPlanHistoryKind Kind) {
         this.Kind = Kind;
     }
 
     
     @Column(name="DIRECTION", nullable=false, columnDefinition="SMALLINT")
-    public EnumUserType getDirection() {
+    public StockPlanHistoryDirection getDirection() {
         return this.Direction;
     }
     
-    public void setDirection(EnumUserType Direction) {
+    public void setDirection(StockPlanHistoryDirection Direction) {
         this.Direction = Direction;
     }
 

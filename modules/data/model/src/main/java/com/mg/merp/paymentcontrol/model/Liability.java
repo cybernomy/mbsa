@@ -1,8 +1,7 @@
 package com.mg.merp.paymentcontrol.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.document.model.DocHead;
@@ -77,14 +76,14 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
      private Short TransferKind;
      private boolean IsModel;
      private String ModelName;
-     private EnumUserType FromSource;
-     private EnumUserType ToSource;
+     private ContractorSource FromSource;
+     private ContractorSource ToSource;
      private Set<Execution> Executions = new HashSet<Execution>(0);
 
     public Liability() {
     }
 
-    public Liability(Contractor From, BankAccount FromBankAcc, CurrencyRateAuthority CurRateAuthority, DocHead DocHead, Folder PrefResourceFolder, Folder Folder, DocType DocType, DocHead Contract, Folder DestFolder, DocType ContractType, Contractor To, DocHead BaseDoc, VersionStatus VerStatus, BankAccount ToBankAcc, SysClient SysClient, DocType BaseDocType, CurrencyRateType CurRateType, PmcResource PrefResource, Version Version, boolean IsShared, Integer Priority, boolean Receivable, String Num, Date RegDate, Date DateToExecute, BigDecimal SumCur, Currency CurCode, Integer PaymentDelay, String DocNumber, Date DocDate, String BaseDocNumber, Date BaseDocDate, String ContractNumber, Date ContractDate, boolean PrefOnly, String Comments, Short TransferKind, boolean IsModel, String ModelName, EnumUserType FromSource, EnumUserType ToSource, Set<Execution> Executions) {
+    public Liability(Contractor From, BankAccount FromBankAcc, CurrencyRateAuthority CurRateAuthority, DocHead DocHead, Folder PrefResourceFolder, Folder Folder, DocType DocType, DocHead Contract, Folder DestFolder, DocType ContractType, Contractor To, DocHead BaseDoc, VersionStatus VerStatus, BankAccount ToBankAcc, SysClient SysClient, DocType BaseDocType, CurrencyRateType CurRateType, PmcResource PrefResource, Version Version, boolean IsShared, Integer Priority, boolean Receivable, String Num, Date RegDate, Date DateToExecute, BigDecimal SumCur, Currency CurCode, Integer PaymentDelay, String DocNumber, Date DocDate, String BaseDocNumber, Date BaseDocDate, String ContractNumber, Date ContractDate, boolean PrefOnly, String Comments, Short TransferKind, boolean IsModel, String ModelName, ContractorSource FromSource, ContractorSource ToSource, Set<Execution> Executions) {
        this.From = From;
        this.FromBankAcc = FromBankAcc;
        this.CurRateAuthority = CurRateAuthority;
@@ -533,21 +532,21 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
 
     
     @Column(name="FROMSOURCE", columnDefinition="SMALLINT")
-    public EnumUserType getFromSource() {
+    public ContractorSource getFromSource() {
         return this.FromSource;
     }
     
-    public void setFromSource(EnumUserType FromSource) {
+    public void setFromSource(ContractorSource FromSource) {
         this.FromSource = FromSource;
     }
 
     
     @Column(name="TOSOURCE", columnDefinition="SMALLINT")
-    public EnumUserType getToSource() {
+    public ContractorSource getToSource() {
         return this.ToSource;
     }
     
-    public void setToSource(EnumUserType ToSource) {
+    public void setToSource(ContractorSource ToSource) {
         this.ToSource = ToSource;
     }
 

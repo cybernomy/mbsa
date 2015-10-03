@@ -1,11 +1,11 @@
 package com.mg.merp.warehouse.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.baiengine.model.Repository;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.reference.model.Contractor;
+import com.mg.merp.reference.model.OrgUnitType;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,7 +24,7 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
 
 
      private Repository BatchPriceBAi;
-     private EnumUserType StockPolicy;
+     private StockPolicy StockPolicy;
      private WarehouseType WarehouseType;
      private boolean CalcFact;
      private boolean CalcFactSign;
@@ -50,7 +50,7 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     public Warehouse(String Code, String UpCode, String FullName, short Kind) {
         super(Code, UpCode, FullName, Kind);        
     }
-    public Warehouse(SysClient SysClient, String Code, String UpCode, String FullName, Integer FolderId, short Kind, Contractor Partner, EnumUserType OrgUnitKind, Boolean IsOffice, Boolean IsStore, String FolderTag, Repository BatchPriceBAi, EnumUserType StockPolicy, WarehouseType WarehouseType, boolean CalcFact, boolean CalcFactSign, boolean CalcPlanIn, boolean CalcPlanInSign, boolean CalcPlanOut, boolean CalcPlanOutSign, boolean CalcReserve, boolean CalcReserveSign, boolean UseBinLocation, boolean BinSizing, boolean CheckTransactionDay, boolean WarehouseTransactionClosed, Date ClosedDateTill, String UserStockClosed, Date OperationDate, Repository DisposalStrategy) {
+    public Warehouse(SysClient SysClient, String Code, String UpCode, String FullName, Integer FolderId, short Kind, Contractor Partner, OrgUnitType OrgUnitKind, Boolean IsOffice, Boolean IsStore, String FolderTag, Repository BatchPriceBAi, StockPolicy StockPolicy, WarehouseType WarehouseType, boolean CalcFact, boolean CalcFactSign, boolean CalcPlanIn, boolean CalcPlanInSign, boolean CalcPlanOut, boolean CalcPlanOutSign, boolean CalcReserve, boolean CalcReserveSign, boolean UseBinLocation, boolean BinSizing, boolean CheckTransactionDay, boolean WarehouseTransactionClosed, Date ClosedDateTill, String UserStockClosed, Date OperationDate, Repository DisposalStrategy) {
         super(SysClient, Code, UpCode, FullName, FolderId, Kind, Partner, OrgUnitKind, IsOffice, IsStore, FolderTag);        
        this.BatchPriceBAi = BatchPriceBAi;
        this.StockPolicy = StockPolicy;
@@ -86,11 +86,11 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
 
     
     @Column(name="STOCKPOLICY", columnDefinition="SMALLINT")
-    public EnumUserType getStockPolicy() {
+    public StockPolicy getStockPolicy() {
         return this.StockPolicy;
     }
     
-    public void setStockPolicy(EnumUserType StockPolicy) {
+    public void setStockPolicy(StockPolicy StockPolicy) {
         this.StockPolicy = StockPolicy;
     }
 

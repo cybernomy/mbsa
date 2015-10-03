@@ -1,12 +1,13 @@
 package com.mg.merp.manufacture.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.mfreference.model.CostCategories;
 import com.mg.merp.mfreference.model.CostDetail;
+import com.mg.merp.mfreference.model.LaborOverheadAllocationFlag;
 import com.mg.merp.mfreference.model.ResourceGroup;
+import com.mg.merp.mfreference.model.TimeRateFlag;
 import com.mg.merp.reference.model.Currency;
 import com.mg.merp.reference.model.Measure;
 import java.math.BigDecimal;
@@ -32,12 +33,12 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
      private CostCategories LbrCostCategory;
      private CostCategories LbrOhCostCategory;
      private Currency LbrRateCurrency;
-     private EnumUserType TimeRateFlag;
+     private TimeRateFlag TimeRateFlag;
      private long RunTicksLbr;
      private BigDecimal LbrNumber;
      private BigDecimal LbrRate;
      private boolean LbrBackflushFlag;
-     private EnumUserType LbrOhAllocationFlag;
+     private LaborOverheadAllocationFlag LbrOhAllocationFlag;
      private BigDecimal LbrOhRate;
      private BigDecimal LbrOhRatio;
      private boolean LbrOhBackflushFlag;
@@ -45,7 +46,7 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
     public JobLabor() {
     }
 
-    public JobLabor(ResourceGroup ResourceGroup, CostDetail ActCostDetail, SysClient SysClient, CostDetail StdCostDetail, JobRoute Oper, Short ResourceType, Integer TimeSequence, Date EffOnDate, Date EffOffDate, String Comment, Measure RunTimeLbrUm, Currency LbrOhRateCurrency, CostCategories LbrCostCategory, CostCategories LbrOhCostCategory, Currency LbrRateCurrency, EnumUserType TimeRateFlag, long RunTicksLbr, BigDecimal LbrNumber, BigDecimal LbrRate, boolean LbrBackflushFlag, EnumUserType LbrOhAllocationFlag, BigDecimal LbrOhRate, BigDecimal LbrOhRatio, boolean LbrOhBackflushFlag) {
+    public JobLabor(ResourceGroup ResourceGroup, CostDetail ActCostDetail, SysClient SysClient, CostDetail StdCostDetail, JobRoute Oper, Short ResourceType, Integer TimeSequence, Date EffOnDate, Date EffOffDate, String Comment, Measure RunTimeLbrUm, Currency LbrOhRateCurrency, CostCategories LbrCostCategory, CostCategories LbrOhCostCategory, Currency LbrRateCurrency, TimeRateFlag TimeRateFlag, long RunTicksLbr, BigDecimal LbrNumber, BigDecimal LbrRate, boolean LbrBackflushFlag, LaborOverheadAllocationFlag LbrOhAllocationFlag, BigDecimal LbrOhRate, BigDecimal LbrOhRatio, boolean LbrOhBackflushFlag) {
         super(ResourceGroup, ActCostDetail, SysClient, StdCostDetail, Oper, ResourceType, TimeSequence, EffOnDate, EffOffDate, Comment);        
        this.RunTimeLbrUm = RunTimeLbrUm;
        this.LbrOhRateCurrency = LbrOhRateCurrency;
@@ -116,11 +117,11 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
 
     
     @Column(name="TIME_RATE_FLAG", columnDefinition="SMALLINT")
-    public EnumUserType getTimeRateFlag() {
+    public TimeRateFlag getTimeRateFlag() {
         return this.TimeRateFlag;
     }
     
-    public void setTimeRateFlag(EnumUserType TimeRateFlag) {
+    public void setTimeRateFlag(TimeRateFlag TimeRateFlag) {
         this.TimeRateFlag = TimeRateFlag;
     }
 
@@ -166,11 +167,11 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
 
     
     @Column(name="LBR_OH_ALLOCATION_FLAG", columnDefinition="SMALLINT")
-    public EnumUserType getLbrOhAllocationFlag() {
+    public LaborOverheadAllocationFlag getLbrOhAllocationFlag() {
         return this.LbrOhAllocationFlag;
     }
     
-    public void setLbrOhAllocationFlag(EnumUserType LbrOhAllocationFlag) {
+    public void setLbrOhAllocationFlag(LaborOverheadAllocationFlag LbrOhAllocationFlag) {
         this.LbrOhAllocationFlag = LbrOhAllocationFlag;
     }
 

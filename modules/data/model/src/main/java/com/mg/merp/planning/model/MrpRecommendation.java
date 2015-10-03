@@ -1,8 +1,7 @@
 package com.mg.merp.planning.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Contractor;
@@ -46,11 +45,11 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
      private Date OrderDate;
      private boolean MrpArrearsFlag;
      private boolean MrpOrdered;
-     private EnumUserType PurchaseOrTransfer;
+     private RecommendType PurchaseOrTransfer;
      private String PpReference;
      private boolean ManualEntry;
-     private EnumUserType MrpRescheduleFlag;
-     private EnumUserType MrpSource;
+     private RescheduleFlag MrpRescheduleFlag;
+     private MRPSource MrpSource;
      private Date OriginalDate;
      private Date BatchDate;
      private BigDecimal OriginalQuantity;
@@ -58,7 +57,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
     public MrpRecommendation() {
     }
 
-    public MrpRecommendation(Contractor Vendor, Measure Measure, Catalog Catalog, Warehouse Warehouse, SysClient SysClient, MrpVersionControl MrpVersionControl, Warehouse SourceWarehouse, Date RequiredDate, BigDecimal OrderQty, BigDecimal MrpQuantity, Short PurchaseLeadTime, boolean FirmPlanSuggestedOrder, Date OrderDate, boolean MrpArrearsFlag, boolean MrpOrdered, EnumUserType PurchaseOrTransfer, String PpReference, boolean ManualEntry, EnumUserType MrpRescheduleFlag, EnumUserType MrpSource, Date OriginalDate, Date BatchDate, BigDecimal OriginalQuantity) {
+    public MrpRecommendation(Contractor Vendor, Measure Measure, Catalog Catalog, Warehouse Warehouse, SysClient SysClient, MrpVersionControl MrpVersionControl, Warehouse SourceWarehouse, Date RequiredDate, BigDecimal OrderQty, BigDecimal MrpQuantity, Short PurchaseLeadTime, boolean FirmPlanSuggestedOrder, Date OrderDate, boolean MrpArrearsFlag, boolean MrpOrdered, RecommendType PurchaseOrTransfer, String PpReference, boolean ManualEntry, RescheduleFlag MrpRescheduleFlag, MRPSource MrpSource, Date OriginalDate, Date BatchDate, BigDecimal OriginalQuantity) {
        this.Vendor = Vendor;
        this.Measure = Measure;
        this.Catalog = Catalog;
@@ -248,11 +247,11 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
 
     
     @Column(name="PURCHASE_OR_TRANSFER", columnDefinition="SMALLINT")
-    public EnumUserType getPurchaseOrTransfer() {
+    public RecommendType getPurchaseOrTransfer() {
         return this.PurchaseOrTransfer;
     }
     
-    public void setPurchaseOrTransfer(EnumUserType PurchaseOrTransfer) {
+    public void setPurchaseOrTransfer(RecommendType PurchaseOrTransfer) {
         this.PurchaseOrTransfer = PurchaseOrTransfer;
     }
 
@@ -278,21 +277,21 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
 
     
     @Column(name="MRP_RESCHEDULE_FLAG", columnDefinition="SMALLINT")
-    public EnumUserType getMrpRescheduleFlag() {
+    public RescheduleFlag getMrpRescheduleFlag() {
         return this.MrpRescheduleFlag;
     }
     
-    public void setMrpRescheduleFlag(EnumUserType MrpRescheduleFlag) {
+    public void setMrpRescheduleFlag(RescheduleFlag MrpRescheduleFlag) {
         this.MrpRescheduleFlag = MrpRescheduleFlag;
     }
 
     
     @Column(name="MRP_SOURCE", columnDefinition="SMALLINT")
-    public EnumUserType getMrpSource() {
+    public MRPSource getMrpSource() {
         return this.MrpSource;
     }
     
-    public void setMrpSource(EnumUserType MrpSource) {
+    public void setMrpSource(MRPSource MrpSource) {
         this.MrpSource = MrpSource;
     }
 

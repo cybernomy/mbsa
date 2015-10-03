@@ -1,8 +1,7 @@
 package com.mg.merp.lbschedule.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.paymentcontrol.model.PmcResource;
 import com.mg.merp.reference.model.Contractor;
@@ -53,14 +52,14 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
      private Currency CurCode;
      private String Comments;
      private Short Num;
-     private EnumUserType Status;
-     private EnumUserType ToSource;
-     private EnumUserType FromSource;
-     private EnumUserType SpecSource;
+     private ScheduleStatus Status;
+     private ItemContractorSource ToSource;
+     private ItemContractorSource FromSource;
+     private SpecSource SpecSource;
      private boolean HasSpec;
      private Date AbsDate;
      private boolean IsAbsDate;
-     private EnumUserType DateOffSetKind;
+     private DateOffSetKind DateOffSetKind;
      private Integer DateOffSet;
      private BigDecimal AbsSum;
      private boolean IsAbsSum;
@@ -78,7 +77,7 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     public Item() {
     }
 
-    public Item(Contractor From, CurrencyRateAuthority CurRateAuthority, PriceType PriceType, Item DateRelItem, ItemKind ItemKind, Contractor To, PriceListHead PriceListHead, Item SumRelItem, Schedule Schedule, PmcResource ResourceTo, SysClient SysClient, PmcResource ResourceFrom, CurrencyRateType CurRateType, Currency CurCode, String Comments, Short Num, EnumUserType Status, EnumUserType ToSource, EnumUserType FromSource, EnumUserType SpecSource, boolean HasSpec, Date AbsDate, boolean IsAbsDate, EnumUserType DateOffSetKind, Integer DateOffSet, BigDecimal AbsSum, boolean IsAbsSum, Date ResultDate, boolean IsRelFact, BigDecimal FactSum, BigDecimal ResultSum, boolean IsDateRelDoc, boolean IsSumRelDoc, BigDecimal Perc, Date ResultDateEnd, boolean IsDateRelEnd, Set<ItemSpec> LsItemSpecs) {
+    public Item(Contractor From, CurrencyRateAuthority CurRateAuthority, PriceType PriceType, Item DateRelItem, ItemKind ItemKind, Contractor To, PriceListHead PriceListHead, Item SumRelItem, Schedule Schedule, PmcResource ResourceTo, SysClient SysClient, PmcResource ResourceFrom, CurrencyRateType CurRateType, Currency CurCode, String Comments, Short Num, ScheduleStatus Status, ItemContractorSource ToSource, ItemContractorSource FromSource, SpecSource SpecSource, boolean HasSpec, Date AbsDate, boolean IsAbsDate, DateOffSetKind DateOffSetKind, Integer DateOffSet, BigDecimal AbsSum, boolean IsAbsSum, Date ResultDate, boolean IsRelFact, BigDecimal FactSum, BigDecimal ResultSum, boolean IsDateRelDoc, boolean IsSumRelDoc, BigDecimal Perc, Date ResultDateEnd, boolean IsDateRelEnd, Set<ItemSpec> LsItemSpecs) {
        this.From = From;
        this.CurRateAuthority = CurRateAuthority;
        this.PriceType = PriceType;
@@ -292,41 +291,41 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
 
     
     @Column(name="STATUS", columnDefinition="SMALLINT")
-    public EnumUserType getStatus() {
+    public ScheduleStatus getStatus() {
         return this.Status;
     }
     
-    public void setStatus(EnumUserType Status) {
+    public void setStatus(ScheduleStatus Status) {
         this.Status = Status;
     }
 
     
     @Column(name="TOSOURCE", columnDefinition="SMALLINT")
-    public EnumUserType getToSource() {
+    public ItemContractorSource getToSource() {
         return this.ToSource;
     }
     
-    public void setToSource(EnumUserType ToSource) {
+    public void setToSource(ItemContractorSource ToSource) {
         this.ToSource = ToSource;
     }
 
     
     @Column(name="FROMSOURCE", columnDefinition="SMALLINT")
-    public EnumUserType getFromSource() {
+    public ItemContractorSource getFromSource() {
         return this.FromSource;
     }
     
-    public void setFromSource(EnumUserType FromSource) {
+    public void setFromSource(ItemContractorSource FromSource) {
         this.FromSource = FromSource;
     }
 
     
     @Column(name="SPECSOURCE", columnDefinition="SMALLINT")
-    public EnumUserType getSpecSource() {
+    public SpecSource getSpecSource() {
         return this.SpecSource;
     }
     
-    public void setSpecSource(EnumUserType SpecSource) {
+    public void setSpecSource(SpecSource SpecSource) {
         this.SpecSource = SpecSource;
     }
 
@@ -362,11 +361,11 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
 
     
     @Column(name="DATEOFFSETKIND", columnDefinition="SMALLINT")
-    public EnumUserType getDateOffSetKind() {
+    public DateOffSetKind getDateOffSetKind() {
         return this.DateOffSetKind;
     }
     
-    public void setDateOffSetKind(EnumUserType DateOffSetKind) {
+    public void setDateOffSetKind(DateOffSetKind DateOffSetKind) {
         this.DateOffSetKind = DateOffSetKind;
     }
 

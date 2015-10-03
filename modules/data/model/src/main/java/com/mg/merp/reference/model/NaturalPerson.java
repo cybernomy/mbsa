@@ -1,8 +1,7 @@
 package com.mg.merp.reference.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.security.model.SecUser;
@@ -39,7 +38,7 @@ public class NaturalPerson extends com.mg.merp.core.model.AbstractEntity impleme
      private String Name;
      private String Patronymic;
      private Date BornDate;
-     private EnumUserType Sex;
+     private GenderType Sex;
      private String Inn;
      private String AdditionalInfo;
      private String Code;
@@ -59,7 +58,7 @@ public class NaturalPerson extends com.mg.merp.core.model.AbstractEntity impleme
         this.ActDate = ActDate;
         this.Surname = Surname;
     }
-    public NaturalPerson(Folder Folder, SysClient SysClient, SecUser Users, Date ActDate, String Surname, String Name, String Patronymic, Date BornDate, EnumUserType Sex, String Inn, String AdditionalInfo, String Code, Set<IdentDoc> SetOfRefIdentDoc, Set<FamilyStatus> SetOfRefFamilyStatus, Set<FamilyMember> SetOfRefFamilyMember, Set<PersonPhone> SetOfRefPersonPhone, Set<NaturalPersonHist> SetOfRefNaturalPersonHist, Set<PersonAddress> SetOfRefPersonAddress, Set<PersonElectronicAddress> SetOfRefPersonEAddress) {
+    public NaturalPerson(Folder Folder, SysClient SysClient, SecUser Users, Date ActDate, String Surname, String Name, String Patronymic, Date BornDate, GenderType Sex, String Inn, String AdditionalInfo, String Code, Set<IdentDoc> SetOfRefIdentDoc, Set<FamilyStatus> SetOfRefFamilyStatus, Set<FamilyMember> SetOfRefFamilyMember, Set<PersonPhone> SetOfRefPersonPhone, Set<NaturalPersonHist> SetOfRefNaturalPersonHist, Set<PersonAddress> SetOfRefPersonAddress, Set<PersonElectronicAddress> SetOfRefPersonEAddress) {
        this.Folder = Folder;
        this.SysClient = SysClient;
        this.Users = Users;
@@ -175,11 +174,11 @@ public class NaturalPerson extends com.mg.merp.core.model.AbstractEntity impleme
 
     
     @Column(name="SEX", columnDefinition="INTEGER")
-    public EnumUserType getSex() {
+    public GenderType getSex() {
         return this.Sex;
     }
     
-    public void setSex(EnumUserType Sex) {
+    public void setSex(GenderType Sex) {
         this.Sex = Sex;
     }
 

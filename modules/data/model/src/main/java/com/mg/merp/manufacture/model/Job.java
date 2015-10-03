@@ -1,12 +1,12 @@
 package com.mg.merp.manufacture.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.mfreference.model.Cell;
 import com.mg.merp.mfreference.model.CostDetail;
+import com.mg.merp.mfreference.model.ScheduleDirection;
 import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Employees;
 import com.mg.merp.warehouse.model.Warehouse;
@@ -50,7 +50,7 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
      private Warehouse DefSrcStock;
      private String JobNumber;
      private Date JobDate;
-     private EnumUserType JobStatus;
+     private JobStatus JobStatus;
      private BigDecimal QtyReleased;
      private BigDecimal QtyComplete;
      private BigDecimal QtyScrapped;
@@ -61,7 +61,7 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
      private long EndTick;
      private long StartJob;
      private long FinishJob;
-     private EnumUserType SchedDirection;
+     private ScheduleDirection SchedDirection;
      private boolean UseMoveTimes;
      private boolean UseQueueTimes;
      private boolean UseFiniteCapacity;
@@ -75,7 +75,7 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     public Job() {
     }
 
-    public Job(Catalog Catalog, Employees DefSrcMol, Folder Folder, SysClient SysClient, Job ParentJob, CostDetail StdCostDetail, Employees DefDstMol, Cell Cell, Job RootJob, CostDetail ActWipCostDetail, Warehouse DefDstStock, Warehouse DefSrcStock, String JobNumber, Date JobDate, EnumUserType JobStatus, BigDecimal QtyReleased, BigDecimal QtyComplete, BigDecimal QtyScrapped, Date RollUpDateTime, Date StartDate, Date EndDate, long StartTick, long EndTick, long StartJob, long FinishJob, EnumUserType SchedDirection, boolean UseMoveTimes, boolean UseQueueTimes, boolean UseFiniteCapacity, BigDecimal Priority, boolean PriorityFreezeFlag, Date MrpEndDate, boolean ChangeJobApproved, String Comment, Set<JobRoute> JobRoutes) {
+    public Job(Catalog Catalog, Employees DefSrcMol, Folder Folder, SysClient SysClient, Job ParentJob, CostDetail StdCostDetail, Employees DefDstMol, Cell Cell, Job RootJob, CostDetail ActWipCostDetail, Warehouse DefDstStock, Warehouse DefSrcStock, String JobNumber, Date JobDate, JobStatus JobStatus, BigDecimal QtyReleased, BigDecimal QtyComplete, BigDecimal QtyScrapped, Date RollUpDateTime, Date StartDate, Date EndDate, long StartTick, long EndTick, long StartJob, long FinishJob, ScheduleDirection SchedDirection, boolean UseMoveTimes, boolean UseQueueTimes, boolean UseFiniteCapacity, BigDecimal Priority, boolean PriorityFreezeFlag, Date MrpEndDate, boolean ChangeJobApproved, String Comment, Set<JobRoute> JobRoutes) {
        this.Catalog = Catalog;
        this.DefSrcMol = DefSrcMol;
        this.Folder = Folder;
@@ -267,11 +267,11 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     
     @Column(name="JOB_STATUS", columnDefinition="SMALLINT")
-    public EnumUserType getJobStatus() {
+    public JobStatus getJobStatus() {
         return this.JobStatus;
     }
     
-    public void setJobStatus(EnumUserType JobStatus) {
+    public void setJobStatus(JobStatus JobStatus) {
         this.JobStatus = JobStatus;
     }
 
@@ -377,11 +377,11 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     
     @Column(name="SCHED_DIRECTION", columnDefinition="SMALLINT")
-    public EnumUserType getSchedDirection() {
+    public ScheduleDirection getSchedDirection() {
         return this.SchedDirection;
     }
     
-    public void setSchedDirection(EnumUserType SchedDirection) {
+    public void setSchedDirection(ScheduleDirection SchedDirection) {
         this.SchedDirection = SchedDirection;
     }
 

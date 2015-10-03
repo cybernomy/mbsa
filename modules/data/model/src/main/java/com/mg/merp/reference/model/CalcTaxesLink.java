@@ -1,8 +1,7 @@
 package com.mg.merp.reference.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -30,12 +29,12 @@ public class CalcTaxesLink extends com.mg.merp.core.model.AbstractEntity impleme
      private CalcTaxesKind CalcTaxesKind;
      private Short FeeOrder;
      private boolean Included;
-     private EnumUserType Subject;
+     private CalcTaxesSubject Subject;
 
     public CalcTaxesLink() {
     }
 
-    public CalcTaxesLink(Tax Tax, SysClient SysClient, CalcTaxesKind CalcTaxesKind, Short FeeOrder, boolean Included, EnumUserType Subject) {
+    public CalcTaxesLink(Tax Tax, SysClient SysClient, CalcTaxesKind CalcTaxesKind, Short FeeOrder, boolean Included, CalcTaxesSubject Subject) {
        this.Tax = Tax;
        this.SysClient = SysClient;
        this.CalcTaxesKind = CalcTaxesKind;
@@ -108,11 +107,11 @@ public class CalcTaxesLink extends com.mg.merp.core.model.AbstractEntity impleme
 
     
     @Column(name="SUBJECT", columnDefinition="SMALLINT")
-    public EnumUserType getSubject() {
+    public CalcTaxesSubject getSubject() {
         return this.Subject;
     }
     
-    public void setSubject(EnumUserType Subject) {
+    public void setSubject(CalcTaxesSubject Subject) {
         this.Subject = Subject;
     }
 

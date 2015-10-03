@@ -1,8 +1,7 @@
 package com.mg.merp.reference.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import java.math.BigDecimal;
 import javax.persistence.Column;
@@ -32,7 +31,7 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
      private String Iso;
      private String BankCode;
      private String FullName;
-     private EnumUserType Gender;
+     private CurrencyGender Gender;
      private String AltName1;
      private String AltName2;
      private String AltName3;
@@ -47,7 +46,7 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
 	
-    public Currency(String UpCode, String Code, String Iso, String BankCode, EnumUserType Gender, String AltName1, String AltName2, String AltName3, String AltUnitName1, String AltUnitName2, String AltUnitName3, BigDecimal RoundPrice, BigDecimal RoundSum) {
+    public Currency(String UpCode, String Code, String Iso, String BankCode, CurrencyGender Gender, String AltName1, String AltName2, String AltName3, String AltUnitName1, String AltUnitName2, String AltUnitName3, BigDecimal RoundPrice, BigDecimal RoundSum) {
         this.UpCode = UpCode;
         this.Code = Code;
         this.Iso = Iso;
@@ -62,7 +61,7 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
         this.RoundPrice = RoundPrice;
         this.RoundSum = RoundSum;
     }
-    public Currency(String UpCode, SysClient SysClient, String Code, String Iso, String BankCode, String FullName, EnumUserType Gender, String AltName1, String AltName2, String AltName3, String AltUnitName1, String AltUnitName2, String AltUnitName3, BigDecimal RoundPrice, BigDecimal RoundSum, Integer ViewPriority) {
+    public Currency(String UpCode, SysClient SysClient, String Code, String Iso, String BankCode, String FullName, CurrencyGender Gender, String AltName1, String AltName2, String AltName3, String AltUnitName1, String AltUnitName2, String AltUnitName3, BigDecimal RoundPrice, BigDecimal RoundSum, Integer ViewPriority) {
        this.UpCode = UpCode;
        this.SysClient = SysClient;
        this.Code = Code;
@@ -155,11 +154,11 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
 
     
     @Column(name="MEN", nullable=false, columnDefinition="SMALLINT")
-    public EnumUserType getGender() {
+    public CurrencyGender getGender() {
         return this.Gender;
     }
     
-    public void setGender(EnumUserType Gender) {
+    public void setGender(CurrencyGender Gender) {
         this.Gender = Gender;
     }
 

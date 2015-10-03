@@ -1,8 +1,7 @@
 package com.mg.merp.docprocess.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.security.model.Groups;
 import javax.persistence.Column;
@@ -29,12 +28,12 @@ public class DocProcessStageRights extends com.mg.merp.core.model.AbstractEntity
      private Groups SecGroups;
      private SysClient SysClient;
      private DocProcessStage DocProcessStage;
-     private EnumUserType Grants;
+     private ActionUserGrant Grants;
 
     public DocProcessStageRights() {
     }
 
-    public DocProcessStageRights(Groups SecGroups, SysClient SysClient, DocProcessStage DocProcessStage, EnumUserType Grants) {
+    public DocProcessStageRights(Groups SecGroups, SysClient SysClient, DocProcessStage DocProcessStage, ActionUserGrant Grants) {
        this.SecGroups = SecGroups;
        this.SysClient = SysClient;
        this.DocProcessStage = DocProcessStage;
@@ -85,11 +84,11 @@ public class DocProcessStageRights extends com.mg.merp.core.model.AbstractEntity
 
     
     @Column(name="GRANTS", columnDefinition="SMALLINT")
-    public EnumUserType getGrants() {
+    public ActionUserGrant getGrants() {
         return this.Grants;
     }
     
-    public void setGrants(EnumUserType Grants) {
+    public void setGrants(ActionUserGrant Grants) {
         this.Grants = Grants;
     }
 

@@ -1,8 +1,7 @@
 package com.mg.merp.reference.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,14 +27,14 @@ public class PersonElectronicAddress extends com.mg.merp.core.model.AbstractEnti
      private NaturalPerson NaturalPerson;
      private SysClient SysClient;
      private ElectronicAddressKind EaddressKind;
-     private EnumUserType Protocol;
+     private ProtokolKind Protocol;
      private String Address;
      private boolean IsActive;
 
     public PersonElectronicAddress() {
     }
 
-    public PersonElectronicAddress(NaturalPerson NaturalPerson, SysClient SysClient, ElectronicAddressKind EaddressKind, EnumUserType Protocol, String Address, boolean IsActive) {
+    public PersonElectronicAddress(NaturalPerson NaturalPerson, SysClient SysClient, ElectronicAddressKind EaddressKind, ProtokolKind Protocol, String Address, boolean IsActive) {
        this.NaturalPerson = NaturalPerson;
        this.SysClient = SysClient;
        this.EaddressKind = EaddressKind;
@@ -88,11 +87,11 @@ public class PersonElectronicAddress extends com.mg.merp.core.model.AbstractEnti
 
     
     @Column(name="PROTOCOL", columnDefinition="SMALLINT")
-    public EnumUserType getProtocol() {
+    public ProtokolKind getProtocol() {
         return this.Protocol;
     }
     
-    public void setProtocol(EnumUserType Protocol) {
+    public void setProtocol(ProtokolKind Protocol) {
         this.Protocol = Protocol;
     }
 

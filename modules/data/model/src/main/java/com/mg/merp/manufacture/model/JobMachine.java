@@ -1,11 +1,11 @@
 package com.mg.merp.manufacture.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.mfreference.model.CostCategories;
 import com.mg.merp.mfreference.model.CostDetail;
+import com.mg.merp.mfreference.model.MachineOverheadAllocationFlag;
 import com.mg.merp.mfreference.model.ResourceGroup;
 import com.mg.merp.reference.model.Currency;
 import com.mg.merp.reference.model.Measure;
@@ -32,13 +32,13 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
      private CostCategories MchOhCostCategory;
      private Measure RunTimeMchUm;
      private CostCategories MchCostCategory;
-     private EnumUserType TimeRateFlag;
+     private MachineOverheadAllocationFlag TimeRateFlag;
      private long RunTicksMch;
      private BigDecimal MchNumber;
      private Short MchRecoveryFlag;
      private BigDecimal MchRate;
      private boolean MchBackflushFlag;
-     private EnumUserType MchOhAllocationFlag;
+     private MachineOverheadAllocationFlag MchOhAllocationFlag;
      private BigDecimal MchOhRate;
      private BigDecimal MchOhRatio;
      private boolean MchOhBackflushFlag;
@@ -46,7 +46,7 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
     public JobMachine() {
     }
 
-    public JobMachine(ResourceGroup ResourceGroup, CostDetail ActCostDetail, SysClient SysClient, CostDetail StdCostDetail, JobRoute Oper, Short ResourceType, Integer TimeSequence, Date EffOnDate, Date EffOffDate, String Comment, Currency MchOhRateCurrency, Currency MchRateCurrency, CostCategories MchOhCostCategory, Measure RunTimeMchUm, CostCategories MchCostCategory, EnumUserType TimeRateFlag, long RunTicksMch, BigDecimal MchNumber, Short MchRecoveryFlag, BigDecimal MchRate, boolean MchBackflushFlag, EnumUserType MchOhAllocationFlag, BigDecimal MchOhRate, BigDecimal MchOhRatio, boolean MchOhBackflushFlag) {
+    public JobMachine(ResourceGroup ResourceGroup, CostDetail ActCostDetail, SysClient SysClient, CostDetail StdCostDetail, JobRoute Oper, Short ResourceType, Integer TimeSequence, Date EffOnDate, Date EffOffDate, String Comment, Currency MchOhRateCurrency, Currency MchRateCurrency, CostCategories MchOhCostCategory, Measure RunTimeMchUm, CostCategories MchCostCategory, MachineOverheadAllocationFlag TimeRateFlag, long RunTicksMch, BigDecimal MchNumber, Short MchRecoveryFlag, BigDecimal MchRate, boolean MchBackflushFlag, MachineOverheadAllocationFlag MchOhAllocationFlag, BigDecimal MchOhRate, BigDecimal MchOhRatio, boolean MchOhBackflushFlag) {
         super(ResourceGroup, ActCostDetail, SysClient, StdCostDetail, Oper, ResourceType, TimeSequence, EffOnDate, EffOffDate, Comment);        
        this.MchOhRateCurrency = MchOhRateCurrency;
        this.MchRateCurrency = MchRateCurrency;
@@ -118,11 +118,11 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
 
     
     @Column(name="TIME_RATE_FLAG", columnDefinition="SMALLINT")
-    public EnumUserType getTimeRateFlag() {
+    public MachineOverheadAllocationFlag getTimeRateFlag() {
         return this.TimeRateFlag;
     }
     
-    public void setTimeRateFlag(EnumUserType TimeRateFlag) {
+    public void setTimeRateFlag(MachineOverheadAllocationFlag TimeRateFlag) {
         this.TimeRateFlag = TimeRateFlag;
     }
 
@@ -178,11 +178,11 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
 
     
     @Column(name="MCH_OH_ALLOCATION_FLAG", columnDefinition="SMALLINT")
-    public EnumUserType getMchOhAllocationFlag() {
+    public MachineOverheadAllocationFlag getMchOhAllocationFlag() {
         return this.MchOhAllocationFlag;
     }
     
-    public void setMchOhAllocationFlag(EnumUserType MchOhAllocationFlag) {
+    public void setMchOhAllocationFlag(MachineOverheadAllocationFlag MchOhAllocationFlag) {
         this.MchOhAllocationFlag = MchOhAllocationFlag;
     }
 

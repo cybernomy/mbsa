@@ -1,8 +1,7 @@
 package com.mg.merp.overall.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -27,7 +26,7 @@ public class Size extends com.mg.merp.core.model.AbstractEntity implements java.
      private Integer Id;
      private OvrCard OvrCard;
      private SysClient SysClient;
-     private EnumUserType CatalogGroupsTypeId;
+     private CatalogGroupsType CatalogGroupsTypeId;
      private String ClothesSize;
      private String ShoesSize;
      private String HatSize;
@@ -39,7 +38,7 @@ public class Size extends com.mg.merp.core.model.AbstractEntity implements java.
     public Size() {
     }
 
-    public Size(OvrCard OvrCard, SysClient SysClient, EnumUserType CatalogGroupsTypeId, String ClothesSize, String ShoesSize, String HatSize, String GasMaskSize, String RespiratorSize, String MittensSize, String GlovesSize) {
+    public Size(OvrCard OvrCard, SysClient SysClient, CatalogGroupsType CatalogGroupsTypeId, String ClothesSize, String ShoesSize, String HatSize, String GasMaskSize, String RespiratorSize, String MittensSize, String GlovesSize) {
        this.OvrCard = OvrCard;
        this.SysClient = SysClient;
        this.CatalogGroupsTypeId = CatalogGroupsTypeId;
@@ -86,11 +85,11 @@ public class Size extends com.mg.merp.core.model.AbstractEntity implements java.
 
     
     @Column(name="CATALOG_GROUPS_TYPE_ID", columnDefinition="INTEGER")
-    public EnumUserType getCatalogGroupsTypeId() {
+    public CatalogGroupsType getCatalogGroupsTypeId() {
         return this.CatalogGroupsTypeId;
     }
     
-    public void setCatalogGroupsTypeId(EnumUserType CatalogGroupsTypeId) {
+    public void setCatalogGroupsTypeId(CatalogGroupsType CatalogGroupsTypeId) {
         this.CatalogGroupsTypeId = CatalogGroupsTypeId;
     }
 

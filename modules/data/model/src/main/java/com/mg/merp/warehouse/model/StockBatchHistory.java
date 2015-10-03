@@ -1,8 +1,7 @@
 package com.mg.merp.warehouse.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocSpec;
@@ -35,7 +34,7 @@ public class StockBatchHistory extends com.mg.merp.core.model.AbstractEntity imp
      private SysClient SysClient;
      private StockBatch StockBatch;
      private Date DateTime;
-     private EnumUserType Kind;
+     private StockBatchHistoryKind Kind;
      private BigDecimal Quantity;
      private Date ProcessDate;
      private BigDecimal Quantity2;
@@ -44,10 +43,10 @@ public class StockBatchHistory extends com.mg.merp.core.model.AbstractEntity imp
     }
 
 	
-    public StockBatchHistory(EnumUserType Kind) {
+    public StockBatchHistory(StockBatchHistoryKind Kind) {
         this.Kind = Kind;
     }
-    public StockBatchHistory(DocHead DocHead, StockBatchHistory StockBatchHistory, DocSpec DocSpec, SysClient SysClient, StockBatch StockBatch, Date DateTime, EnumUserType Kind, BigDecimal Quantity, Date ProcessDate, BigDecimal Quantity2) {
+    public StockBatchHistory(DocHead DocHead, StockBatchHistory StockBatchHistory, DocSpec DocSpec, SysClient SysClient, StockBatch StockBatch, Date DateTime, StockBatchHistoryKind Kind, BigDecimal Quantity, Date ProcessDate, BigDecimal Quantity2) {
        this.DocHead = DocHead;
        this.StockBatchHistory = StockBatchHistory;
        this.DocSpec = DocSpec;
@@ -134,11 +133,11 @@ public class StockBatchHistory extends com.mg.merp.core.model.AbstractEntity imp
 
     
     @Column(name="KIND", nullable=false, columnDefinition="SMALLINT")
-    public EnumUserType getKind() {
+    public StockBatchHistoryKind getKind() {
         return this.Kind;
     }
     
-    public void setKind(EnumUserType Kind) {
+    public void setKind(StockBatchHistoryKind Kind) {
         this.Kind = Kind;
     }
 

@@ -1,8 +1,7 @@
 package com.mg.merp.planning.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Contractor;
@@ -43,7 +42,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
      private Date OrderDate;
      private boolean FixedInput;
      private boolean RequisitionFlag;
-     private EnumUserType PurchaseOrTransfer;
+     private RecommendType PurchaseOrTransfer;
      private boolean ManualEntry;
 
     public FirmPlannedOrder() {
@@ -56,7 +55,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
         this.Warehouse = Warehouse;
         this.MrpVersionControl = MrpVersionControl;
     }
-    public FirmPlannedOrder(Contractor Vendor, Measure Measure, Catalog Catalog, Contractor Warehouse, SysClient SysClient, MrpVersionControl MrpVersionControl, Contractor SourceWarehouse, MrpRecommendation MrpRecommendation, Date RequiredDate, BigDecimal OrderQty, Date OrderDate, boolean FixedInput, boolean RequisitionFlag, EnumUserType PurchaseOrTransfer, boolean ManualEntry) {
+    public FirmPlannedOrder(Contractor Vendor, Measure Measure, Catalog Catalog, Contractor Warehouse, SysClient SysClient, MrpVersionControl MrpVersionControl, Contractor SourceWarehouse, MrpRecommendation MrpRecommendation, Date RequiredDate, BigDecimal OrderQty, Date OrderDate, boolean FixedInput, boolean RequisitionFlag, RecommendType PurchaseOrTransfer, boolean ManualEntry) {
        this.Vendor = Vendor;
        this.Measure = Measure;
        this.Catalog = Catalog;
@@ -218,11 +217,11 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
 
     
     @Column(name="PURCHASE_OR_TRANSFER", columnDefinition="SMALLINT")
-    public EnumUserType getPurchaseOrTransfer() {
+    public RecommendType getPurchaseOrTransfer() {
         return this.PurchaseOrTransfer;
     }
     
-    public void setPurchaseOrTransfer(EnumUserType PurchaseOrTransfer) {
+    public void setPurchaseOrTransfer(RecommendType PurchaseOrTransfer) {
         this.PurchaseOrTransfer = PurchaseOrTransfer;
     }
 

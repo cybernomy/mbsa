@@ -1,8 +1,7 @@
 package com.mg.merp.personnelref.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,19 +24,19 @@ public class TariffingCategory extends com.mg.merp.core.model.AbstractEntity imp
      private SysClient SysClient;
      private String CCode;
      private String CName;
-     private EnumUserType CType;
+     private TarifCategType CType;
      private Integer Priority;
 
     public TariffingCategory() {
     }
 
 	
-    public TariffingCategory(Integer Id, String CCode, EnumUserType CType) {
+    public TariffingCategory(Integer Id, String CCode, TarifCategType CType) {
         this.Id = Id;
         this.CCode = CCode;
         this.CType = CType;
     }
-    public TariffingCategory(Integer Id, SysClient SysClient, String CCode, String CName, EnumUserType CType, Integer Priority) {
+    public TariffingCategory(Integer Id, SysClient SysClient, String CCode, String CName, TarifCategType CType, Integer Priority) {
        this.Id = Id;
        this.SysClient = SysClient;
        this.CCode = CCode;
@@ -90,11 +89,11 @@ public class TariffingCategory extends com.mg.merp.core.model.AbstractEntity imp
 
     
     @Column(name="CTYPE", nullable=false, columnDefinition="SMALLINT")
-    public EnumUserType getCType() {
+    public TarifCategType getCType() {
         return this.CType;
     }
     
-    public void setCType(EnumUserType CType) {
+    public void setCType(TarifCategType CType) {
         this.CType = CType;
     }
 

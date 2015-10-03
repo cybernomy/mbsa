@@ -1,8 +1,7 @@
 package com.mg.merp.crm.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.reference.model.NaturalPerson;
@@ -41,7 +40,7 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
      private Position ThePosition;
      private boolean IsRetired;
      private String NickName;
-     private EnumUserType AddressSource;
+     private CrmAddressSource AddressSource;
      private String Comments;
      private Set<Operation> Operations = new HashSet<Operation>(0);
      private Set<Offer> Offers = new HashSet<Offer>(0);
@@ -51,7 +50,7 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
     public Contact() {
     }
 
-    public Contact(User Curator, NaturalPerson Person, User Responsible, SysClient SysClient, PersonTitle PersonTitle, Contractor Contractor, Integer Priority, boolean IsDefault, Position ThePosition, boolean IsRetired, String NickName, EnumUserType AddressSource, String Comments, Set<Operation> Operations, Set<Offer> Offers, Set<LinkedDocument> LinkedDocs, Set<ContactLink> ContactLinks) {
+    public Contact(User Curator, NaturalPerson Person, User Responsible, SysClient SysClient, PersonTitle PersonTitle, Contractor Contractor, Integer Priority, boolean IsDefault, Position ThePosition, boolean IsRetired, String NickName, CrmAddressSource AddressSource, String Comments, Set<Operation> Operations, Set<Offer> Offers, Set<LinkedDocument> LinkedDocs, Set<ContactLink> ContactLinks) {
        this.Curator = Curator;
        this.Person = Person;
        this.Responsible = Responsible;
@@ -195,11 +194,11 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
 
     
     @Column(name="ADDRESS_SOURCE", columnDefinition="SMALLINT")
-    public EnumUserType getAddressSource() {
+    public CrmAddressSource getAddressSource() {
         return this.AddressSource;
     }
     
-    public void setAddressSource(EnumUserType AddressSource) {
+    public void setAddressSource(CrmAddressSource AddressSource) {
         this.AddressSource = AddressSource;
     }
 

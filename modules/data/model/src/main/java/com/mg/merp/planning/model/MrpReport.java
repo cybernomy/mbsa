@@ -1,8 +1,7 @@
 package com.mg.merp.planning.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.warehouse.model.Warehouse;
@@ -34,24 +33,24 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
      private Warehouse Warehouse;
      private Catalog Catalog;
      private Date RequiredDate;
-     private EnumUserType MrpOrderType;
+     private MRPOrderType MrpOrderType;
      private String PpReference;
      private BigDecimal QtyAvailable;
      private BigDecimal MrpQuantity;
-     private EnumUserType MrpSource;
-     private EnumUserType MrpInputOutputFlag;
+     private MRPSource MrpSource;
+     private InputOutputFlag MrpInputOutputFlag;
      private boolean FixedInput;
      private Date OrderDate;
      private boolean MrpArrearsFlag;
      private Date OriginalDate;
      private BigDecimal OriginalQuantity;
      private Integer Sequence;
-     private EnumUserType MrpRescheduleFlag;
+     private RescheduleFlag MrpRescheduleFlag;
 
     public MrpReport() {
     }
 
-    public MrpReport(SysClient SysClient, MrpVersionControl MrpVersionControl, Warehouse Warehouse, Catalog Catalog, Date RequiredDate, EnumUserType MrpOrderType, String PpReference, BigDecimal QtyAvailable, BigDecimal MrpQuantity, EnumUserType MrpSource, EnumUserType MrpInputOutputFlag, boolean FixedInput, Date OrderDate, boolean MrpArrearsFlag, Date OriginalDate, BigDecimal OriginalQuantity, Integer Sequence, EnumUserType MrpRescheduleFlag) {
+    public MrpReport(SysClient SysClient, MrpVersionControl MrpVersionControl, Warehouse Warehouse, Catalog Catalog, Date RequiredDate, MRPOrderType MrpOrderType, String PpReference, BigDecimal QtyAvailable, BigDecimal MrpQuantity, MRPSource MrpSource, InputOutputFlag MrpInputOutputFlag, boolean FixedInput, Date OrderDate, boolean MrpArrearsFlag, Date OriginalDate, BigDecimal OriginalQuantity, Integer Sequence, RescheduleFlag MrpRescheduleFlag) {
        this.SysClient = SysClient;
        this.MrpVersionControl = MrpVersionControl;
        this.Warehouse = Warehouse;
@@ -136,11 +135,11 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
 
     
     @Column(name="MRP_ORDER_TYPE", columnDefinition="SMALLINT")
-    public EnumUserType getMrpOrderType() {
+    public MRPOrderType getMrpOrderType() {
         return this.MrpOrderType;
     }
     
-    public void setMrpOrderType(EnumUserType MrpOrderType) {
+    public void setMrpOrderType(MRPOrderType MrpOrderType) {
         this.MrpOrderType = MrpOrderType;
     }
 
@@ -176,21 +175,21 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
 
     
     @Column(name="MRP_SOURCE", columnDefinition="SMALLINT")
-    public EnumUserType getMrpSource() {
+    public MRPSource getMrpSource() {
         return this.MrpSource;
     }
     
-    public void setMrpSource(EnumUserType MrpSource) {
+    public void setMrpSource(MRPSource MrpSource) {
         this.MrpSource = MrpSource;
     }
 
     
     @Column(name="MRP_INPUT_OUTPUT_FLAG", columnDefinition="SMALLINT")
-    public EnumUserType getMrpInputOutputFlag() {
+    public InputOutputFlag getMrpInputOutputFlag() {
         return this.MrpInputOutputFlag;
     }
     
-    public void setMrpInputOutputFlag(EnumUserType MrpInputOutputFlag) {
+    public void setMrpInputOutputFlag(InputOutputFlag MrpInputOutputFlag) {
         this.MrpInputOutputFlag = MrpInputOutputFlag;
     }
 
@@ -256,11 +255,11 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
 
     
     @Column(name="MRP_RESCHEDULE_FLAG", columnDefinition="SMALLINT")
-    public EnumUserType getMrpRescheduleFlag() {
+    public RescheduleFlag getMrpRescheduleFlag() {
         return this.MrpRescheduleFlag;
     }
     
-    public void setMrpRescheduleFlag(EnumUserType MrpRescheduleFlag) {
+    public void setMrpRescheduleFlag(RescheduleFlag MrpRescheduleFlag) {
         this.MrpRescheduleFlag = MrpRescheduleFlag;
     }
 

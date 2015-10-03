@@ -1,8 +1,7 @@
 package com.mg.merp.salary.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,12 +27,12 @@ public class IncludedFee extends com.mg.merp.core.model.AbstractEntity implement
      private FeeRef IncludedFee;
      private FeeRef FeeRef;
      private SysClient SysClient;
-     private EnumUserType SumSign;
+     private DoubleSumSign SumSign;
 
     public IncludedFee() {
     }
 
-    public IncludedFee(FeeRef IncludedFee, FeeRef FeeRef, SysClient SysClient, EnumUserType SumSign) {
+    public IncludedFee(FeeRef IncludedFee, FeeRef FeeRef, SysClient SysClient, DoubleSumSign SumSign) {
        this.IncludedFee = IncludedFee;
        this.FeeRef = FeeRef;
        this.SysClient = SysClient;
@@ -84,11 +83,11 @@ public class IncludedFee extends com.mg.merp.core.model.AbstractEntity implement
 
     
     @Column(name="SUM_SIGN", columnDefinition="SMALLINT")
-    public EnumUserType getSumSign() {
+    public DoubleSumSign getSumSign() {
         return this.SumSign;
     }
     
-    public void setSumSign(EnumUserType SumSign) {
+    public void setSumSign(DoubleSumSign SumSign) {
         this.SumSign = SumSign;
     }
 

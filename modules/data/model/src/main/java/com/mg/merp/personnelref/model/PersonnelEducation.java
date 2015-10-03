@@ -1,8 +1,7 @@
 package com.mg.merp.personnelref.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import java.util.Date;
 import javax.persistence.Column;
@@ -35,7 +34,7 @@ public class PersonnelEducation extends com.mg.merp.core.model.AbstractEntity im
      private String DiplomaNumber;
      private Date DiplomaDate;
      private Integer GraduationYear;
-     private EnumUserType IsAdditional;
+     private PrefIsAdditionalEducation IsAdditional;
 
     public PersonnelEducation() {
     }
@@ -44,7 +43,7 @@ public class PersonnelEducation extends com.mg.merp.core.model.AbstractEntity im
     public PersonnelEducation(String InstitutionName) {
         this.InstitutionName = InstitutionName;
     }
-    public PersonnelEducation(AdditionalEducationKind AdditionalEducationKind, Speciality Speciality, Personnel Personnel, SysClient SysClient, String InstitutionName, String DiplomaQualification, String DiplomaNumber, Date DiplomaDate, Integer GraduationYear, EnumUserType IsAdditional) {
+    public PersonnelEducation(AdditionalEducationKind AdditionalEducationKind, Speciality Speciality, Personnel Personnel, SysClient SysClient, String InstitutionName, String DiplomaQualification, String DiplomaNumber, Date DiplomaDate, Integer GraduationYear, PrefIsAdditionalEducation IsAdditional) {
        this.AdditionalEducationKind = AdditionalEducationKind;
        this.Speciality = Speciality;
        this.Personnel = Personnel;
@@ -161,11 +160,11 @@ public class PersonnelEducation extends com.mg.merp.core.model.AbstractEntity im
 
     
     @Column(name="IS_ADDITIONAL", columnDefinition="SMALLINT")
-    public EnumUserType getIsAdditional() {
+    public PrefIsAdditionalEducation getIsAdditional() {
         return this.IsAdditional;
     }
     
-    public void setIsAdditional(EnumUserType IsAdditional) {
+    public void setIsAdditional(PrefIsAdditionalEducation IsAdditional) {
         this.IsAdditional = IsAdditional;
     }
 

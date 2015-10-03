@@ -1,8 +1,7 @@
 package com.mg.merp.table.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.personnelref.model.WorkSchedule;
 import java.math.BigDecimal;
@@ -34,14 +33,14 @@ public class ScheduleHead extends com.mg.merp.core.model.AbstractEntity implemen
      private PatternHead DefaultPatternHead;
      private TimeKind HolidayWorkTimeKind;
      private WorkSchedule WorkSchedule;
-     private EnumUserType HolidayAccountKind;
+     private HolidayAccountKind HolidayAccountKind;
      private BigDecimal PreHolidayReduction;
      private Set<ScheduleSpec> scheduleSpecs = new HashSet<ScheduleSpec>(0);
 
     public ScheduleHead() {
     }
 
-    public ScheduleHead(SysClient SysClient, PatternHead DefaultPatternHead, TimeKind HolidayWorkTimeKind, WorkSchedule WorkSchedule, EnumUserType HolidayAccountKind, BigDecimal PreHolidayReduction, Set<ScheduleSpec> scheduleSpecs) {
+    public ScheduleHead(SysClient SysClient, PatternHead DefaultPatternHead, TimeKind HolidayWorkTimeKind, WorkSchedule WorkSchedule, HolidayAccountKind HolidayAccountKind, BigDecimal PreHolidayReduction, Set<ScheduleSpec> scheduleSpecs) {
        this.SysClient = SysClient;
        this.DefaultPatternHead = DefaultPatternHead;
        this.HolidayWorkTimeKind = HolidayWorkTimeKind;
@@ -105,11 +104,11 @@ public class ScheduleHead extends com.mg.merp.core.model.AbstractEntity implemen
 
     
     @Column(name="HOLIDAY_ACCOUNT_KIND", columnDefinition="SMALLINT")
-    public EnumUserType getHolidayAccountKind() {
+    public HolidayAccountKind getHolidayAccountKind() {
         return this.HolidayAccountKind;
     }
     
-    public void setHolidayAccountKind(EnumUserType HolidayAccountKind) {
+    public void setHolidayAccountKind(HolidayAccountKind HolidayAccountKind) {
         this.HolidayAccountKind = HolidayAccountKind;
     }
 

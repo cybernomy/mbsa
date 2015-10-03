@@ -1,8 +1,7 @@
 package com.mg.merp.reference.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -35,8 +34,8 @@ public class Tax extends com.mg.merp.core.model.AbstractEntity implements java.i
      private String Code;
      private String TName;
      private Date ActiveDate;
-     private EnumUserType TaxType;
-     private EnumUserType TaxForm;
+     private TaxType TaxType;
+     private TaxForm TaxForm;
      private boolean Included;
      private BigDecimal DirectRate;
      private BigDecimal InverseRate;
@@ -49,7 +48,7 @@ public class Tax extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
 	
-    public Tax(String UpCode, String Code, String TName, EnumUserType TaxType, EnumUserType TaxForm, boolean Included, BigDecimal DirectRate, BigDecimal InverseRate) {
+    public Tax(String UpCode, String Code, String TName, TaxType TaxType, TaxForm TaxForm, boolean Included, BigDecimal DirectRate, BigDecimal InverseRate) {
         this.UpCode = UpCode;
         this.Code = Code;
         this.TName = TName;
@@ -59,7 +58,7 @@ public class Tax extends com.mg.merp.core.model.AbstractEntity implements java.i
         this.DirectRate = DirectRate;
         this.InverseRate = InverseRate;
     }
-    public Tax(SysClient SysClient, String UpCode, String Code, String TName, Date ActiveDate, EnumUserType TaxType, EnumUserType TaxForm, boolean Included, BigDecimal DirectRate, BigDecimal InverseRate, BigDecimal Summ, Date DeactivateDate, Set<TaxLink> GroupLinks, Set<CalcTaxesLink> CalculationLinks) {
+    public Tax(SysClient SysClient, String UpCode, String Code, String TName, Date ActiveDate, TaxType TaxType, TaxForm TaxForm, boolean Included, BigDecimal DirectRate, BigDecimal InverseRate, BigDecimal Summ, Date DeactivateDate, Set<TaxLink> GroupLinks, Set<CalcTaxesLink> CalculationLinks) {
        this.SysClient = SysClient;
        this.UpCode = UpCode;
        this.Code = Code;
@@ -140,21 +139,21 @@ public class Tax extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     
     @Column(name="TAXTYPE", nullable=false, columnDefinition="SMALLINT")
-    public EnumUserType getTaxType() {
+    public TaxType getTaxType() {
         return this.TaxType;
     }
     
-    public void setTaxType(EnumUserType TaxType) {
+    public void setTaxType(TaxType TaxType) {
         this.TaxType = TaxType;
     }
 
     
     @Column(name="TAXFORM", nullable=false, columnDefinition="SMALLINT")
-    public EnumUserType getTaxForm() {
+    public TaxForm getTaxForm() {
         return this.TaxForm;
     }
     
-    public void setTaxForm(EnumUserType TaxForm) {
+    public void setTaxForm(TaxForm TaxForm) {
         this.TaxForm = TaxForm;
     }
 

@@ -1,8 +1,7 @@
 package com.mg.merp.salary.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import java.util.Date;
 import java.util.HashSet;
@@ -33,7 +32,7 @@ public class TaxScale extends com.mg.merp.core.model.AbstractEntity implements j
      private SysClient SysClient;
      private Integer SNumber;
      private Date BeginDate;
-     private EnumUserType TaxPayer;
+     private TaxPayer TaxPayer;
      private String SName;
      private Set<TaxRate> SetOfSalTaxRate = new HashSet<TaxRate>(0);
 
@@ -45,7 +44,7 @@ public class TaxScale extends com.mg.merp.core.model.AbstractEntity implements j
         this.SNumber = SNumber;
         this.BeginDate = BeginDate;
     }
-    public TaxScale(TaxHead TaxHead, SysClient SysClient, Integer SNumber, Date BeginDate, EnumUserType TaxPayer, String SName, Set<TaxRate> SetOfSalTaxRate) {
+    public TaxScale(TaxHead TaxHead, SysClient SysClient, Integer SNumber, Date BeginDate, TaxPayer TaxPayer, String SName, Set<TaxRate> SetOfSalTaxRate) {
        this.TaxHead = TaxHead;
        this.SysClient = SysClient;
        this.SNumber = SNumber;
@@ -109,11 +108,11 @@ public class TaxScale extends com.mg.merp.core.model.AbstractEntity implements j
 
     
     @Column(name="TAXPAYER", columnDefinition="INTEGER")
-    public EnumUserType getTaxPayer() {
+    public TaxPayer getTaxPayer() {
         return this.TaxPayer;
     }
     
-    public void setTaxPayer(EnumUserType TaxPayer) {
+    public void setTaxPayer(TaxPayer TaxPayer) {
         this.TaxPayer = TaxPayer;
     }
 

@@ -1,8 +1,7 @@
 package com.mg.merp.personnelref.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.humanresources.model.Order;
 import com.mg.merp.reference.model.FamilyMember;
@@ -67,7 +66,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
      private String MilCommissariat;
      private String MilRegPartyNumber;
      private String MilRegSpecial;
-     private EnumUserType MilIsTakenOff;
+     private MilitaryRegTakenOff MilIsTakenOff;
      private Set<PersonnelProfession> SetOfPrefPersonnelProfession = new HashSet<PersonnelProfession>(0);
      private Set<PersonnelReward> SetOfPrefPersonnelReward = new HashSet<PersonnelReward>(0);
      private Set<PersonnelAttestation> SetOfPrefPersonnelAttestation = new HashSet<PersonnelAttestation>(0);
@@ -89,7 +88,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
     public Personnel() {
     }
 
-    public Personnel(Order RetireOrder, PersonnelGroup Group, NaturalPerson Person, InsuredClass InsuredClass, EducationDegree EducationDegree, SysClient SysClient, ReserveCategory MilReserveCategory, MilitaryRankKind MilRankKind, MilitaryRank MilRank, MilitaryValidity MilValidity, Date ActDate, String TableNumber, String Name1, String Name2, String Name3, Date BornDate, Integer Sex, BigDecimal Stature, Measure MeasureUpCode, Serializable Photo, String PensionNumber, String Inn, String LabourContractNumber, Date LabourContractDate, String AdditionalInfo, String RetireReason, Date RetireDate, String MilSpeciality, String MilCommissariat, String MilRegPartyNumber, String MilRegSpecial, EnumUserType MilIsTakenOff, Set<PersonnelProfession> SetOfPrefPersonnelProfession, Set<PersonnelReward> SetOfPrefPersonnelReward, Set<PersonnelAttestation> SetOfPrefPersonnelAttestation, Set<FamilyMember> SetOfPrefFamilyMembers, Set<PersonnelLanguage> SetOfPrefPersonnelLanguage, Set<PersonnelRecord> SetOfPrefPersonnelRecord, Set<PersonnelSocialBenefit> SetOfPrefPersonnelSocialBenefit, Set<PersonnelSkillRaising> SetOfPrefPersonnelSkillRaising, Set<PersonnelLabourContract> SetOfPrefPersonnelLabourContract, Set<PersonnelVocationalTraining> SetOfPrefPersVocationalTraining, Set<PersonnelTransfer> SetOfPrefPersonnelTransfer, Set<PersonnelLeave> SetOfPrefPersonnelLeave, Set<PersonnelService> SetOfPrefPersonnelService, Set<IdentDoc> SetOfPrefIdentDoc, Set<Address> SetOfPrefAddress, Set<PersonnelPhone> SetOfPrefPersonnelPhone, Set<PersonnelEducation> SetOfPrefPersonnelEducation) {
+    public Personnel(Order RetireOrder, PersonnelGroup Group, NaturalPerson Person, InsuredClass InsuredClass, EducationDegree EducationDegree, SysClient SysClient, ReserveCategory MilReserveCategory, MilitaryRankKind MilRankKind, MilitaryRank MilRank, MilitaryValidity MilValidity, Date ActDate, String TableNumber, String Name1, String Name2, String Name3, Date BornDate, Integer Sex, BigDecimal Stature, Measure MeasureUpCode, Serializable Photo, String PensionNumber, String Inn, String LabourContractNumber, Date LabourContractDate, String AdditionalInfo, String RetireReason, Date RetireDate, String MilSpeciality, String MilCommissariat, String MilRegPartyNumber, String MilRegSpecial, MilitaryRegTakenOff MilIsTakenOff, Set<PersonnelProfession> SetOfPrefPersonnelProfession, Set<PersonnelReward> SetOfPrefPersonnelReward, Set<PersonnelAttestation> SetOfPrefPersonnelAttestation, Set<FamilyMember> SetOfPrefFamilyMembers, Set<PersonnelLanguage> SetOfPrefPersonnelLanguage, Set<PersonnelRecord> SetOfPrefPersonnelRecord, Set<PersonnelSocialBenefit> SetOfPrefPersonnelSocialBenefit, Set<PersonnelSkillRaising> SetOfPrefPersonnelSkillRaising, Set<PersonnelLabourContract> SetOfPrefPersonnelLabourContract, Set<PersonnelVocationalTraining> SetOfPrefPersVocationalTraining, Set<PersonnelTransfer> SetOfPrefPersonnelTransfer, Set<PersonnelLeave> SetOfPrefPersonnelLeave, Set<PersonnelService> SetOfPrefPersonnelService, Set<IdentDoc> SetOfPrefIdentDoc, Set<Address> SetOfPrefAddress, Set<PersonnelPhone> SetOfPrefPersonnelPhone, Set<PersonnelEducation> SetOfPrefPersonnelEducation) {
        this.RetireOrder = RetireOrder;
        this.Group = Group;
        this.Person = Person;
@@ -465,11 +464,11 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
 
     
     @Column(name="MIL_IS_TAKEN_OFF", columnDefinition="SMALLINT")
-    public EnumUserType getMilIsTakenOff() {
+    public MilitaryRegTakenOff getMilIsTakenOff() {
         return this.MilIsTakenOff;
     }
     
-    public void setMilIsTakenOff(EnumUserType MilIsTakenOff) {
+    public void setMilIsTakenOff(MilitaryRegTakenOff MilIsTakenOff) {
         this.MilIsTakenOff = MilIsTakenOff;
     }
 

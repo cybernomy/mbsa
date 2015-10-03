@@ -1,8 +1,7 @@
 package com.mg.merp.mfreference.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.reference.model.Measure;
 import javax.persistence.Column;
@@ -31,14 +30,14 @@ public class ResourceGroup extends com.mg.merp.core.model.AbstractEntity impleme
      private PlanningLevel PlanningLevel;
      private String ResourceGroupCode;
      private String Description;
-     private EnumUserType ResourceType;
+     private ResourceGroupType ResourceType;
      private boolean LimitedResourceFlag;
      private String Comment;
 
     public ResourceGroup() {
     }
 
-    public ResourceGroup(Measure Measure, SysClient SysClient, PlanningLevel PlanningLevel, String ResourceGroupCode, String Description, EnumUserType ResourceType, boolean LimitedResourceFlag, String Comment) {
+    public ResourceGroup(Measure Measure, SysClient SysClient, PlanningLevel PlanningLevel, String ResourceGroupCode, String Description, ResourceGroupType ResourceType, boolean LimitedResourceFlag, String Comment) {
        this.Measure = Measure;
        this.SysClient = SysClient;
        this.PlanningLevel = PlanningLevel;
@@ -113,11 +112,11 @@ public class ResourceGroup extends com.mg.merp.core.model.AbstractEntity impleme
 
     
     @Column(name="RESOURCE_TYPE", columnDefinition="SMALLINT")
-    public EnumUserType getResourceType() {
+    public ResourceGroupType getResourceType() {
         return this.ResourceType;
     }
     
-    public void setResourceType(EnumUserType ResourceType) {
+    public void setResourceType(ResourceGroupType ResourceType) {
         this.ResourceType = ResourceType;
     }
 

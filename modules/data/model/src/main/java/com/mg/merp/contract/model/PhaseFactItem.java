@@ -1,8 +1,7 @@
 package com.mg.merp.contract.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocType;
@@ -36,7 +35,7 @@ public class PhaseFactItem extends com.mg.merp.core.model.AbstractEntity impleme
      private Date RegDate;
      private BigDecimal FactSum;
      private BigDecimal DistSum;
-     private EnumUserType Kind;
+     private ItemKind Kind;
      private DocType DocType;
      private String DocNumber;
      private Date DocDate;
@@ -45,7 +44,7 @@ public class PhaseFactItem extends com.mg.merp.core.model.AbstractEntity impleme
     public PhaseFactItem() {
     }
 
-    public PhaseFactItem(DocHead DocHead, SysClient SysClient, Contractor Contractor, Date RegDate, BigDecimal FactSum, BigDecimal DistSum, EnumUserType Kind, DocType DocType, String DocNumber, Date DocDate, DocHead Document) {
+    public PhaseFactItem(DocHead DocHead, SysClient SysClient, Contractor Contractor, Date RegDate, BigDecimal FactSum, BigDecimal DistSum, ItemKind Kind, DocType DocType, String DocNumber, Date DocDate, DocHead Document) {
        this.DocHead = DocHead;
        this.SysClient = SysClient;
        this.Contractor = Contractor;
@@ -133,11 +132,11 @@ public class PhaseFactItem extends com.mg.merp.core.model.AbstractEntity impleme
 
     
     @Column(name="KIND", columnDefinition="SMALLINT")
-    public EnumUserType getKind() {
+    public ItemKind getKind() {
         return this.Kind;
     }
     
-    public void setKind(EnumUserType Kind) {
+    public void setKind(ItemKind Kind) {
         this.Kind = Kind;
     }
 

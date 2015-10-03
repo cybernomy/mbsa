@@ -1,8 +1,7 @@
 package com.mg.merp.salary.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.baiengine.model.Repository;
 import com.mg.merp.core.model.SysClient;
 import javax.persistence.Column;
@@ -32,7 +31,7 @@ public class FeeRefParam extends com.mg.merp.core.model.AbstractEntity implement
      private String PCode;
      private String PName;
      private Integer Priority;
-     private EnumUserType ParamType;
+     private FeeParamType ParamType;
      private boolean CalcOnce;
 
     public FeeRefParam() {
@@ -42,7 +41,7 @@ public class FeeRefParam extends com.mg.merp.core.model.AbstractEntity implement
     public FeeRefParam(String PCode) {
         this.PCode = PCode;
     }
-    public FeeRefParam(FeeRef FeeRef, Repository CalcAlg, SysClient SysClient, String PCode, String PName, Integer Priority, EnumUserType ParamType, boolean CalcOnce) {
+    public FeeRefParam(FeeRef FeeRef, Repository CalcAlg, SysClient SysClient, String PCode, String PName, Integer Priority, FeeParamType ParamType, boolean CalcOnce) {
        this.FeeRef = FeeRef;
        this.CalcAlg = CalcAlg;
        this.SysClient = SysClient;
@@ -127,11 +126,11 @@ public class FeeRefParam extends com.mg.merp.core.model.AbstractEntity implement
 
     
     @Column(name="PARAM_TYPE", columnDefinition="SMALLINT")
-    public EnumUserType getParamType() {
+    public FeeParamType getParamType() {
         return this.ParamType;
     }
     
-    public void setParamType(EnumUserType ParamType) {
+    public void setParamType(FeeParamType ParamType) {
         this.ParamType = ParamType;
     }
 

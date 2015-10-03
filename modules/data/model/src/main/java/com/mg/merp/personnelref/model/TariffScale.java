@@ -1,8 +1,7 @@
 package com.mg.merp.personnelref.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.baiengine.model.Repository;
 import com.mg.merp.core.model.SysClient;
 import java.util.Date;
@@ -34,7 +33,7 @@ public class TariffScale extends com.mg.merp.core.model.AbstractEntity implement
      private Repository FirstClassAlg;
      private String SCode;
      private String SName;
-     private EnumUserType SType;
+     private TariffingScaleType SType;
      private Date BeginDate;
      private Set<TariffScaleClass> SetOfPrefTariffScaleClass = new HashSet<TariffScaleClass>(0);
 
@@ -46,7 +45,7 @@ public class TariffScale extends com.mg.merp.core.model.AbstractEntity implement
         this.SCode = SCode;
         this.BeginDate = BeginDate;
     }
-    public TariffScale(SysClient SysClient, Repository FirstClassAlg, String SCode, String SName, EnumUserType SType, Date BeginDate, Set<TariffScaleClass> SetOfPrefTariffScaleClass) {
+    public TariffScale(SysClient SysClient, Repository FirstClassAlg, String SCode, String SName, TariffingScaleType SType, Date BeginDate, Set<TariffScaleClass> SetOfPrefTariffScaleClass) {
        this.SysClient = SysClient;
        this.FirstClassAlg = FirstClassAlg;
        this.SCode = SCode;
@@ -110,11 +109,11 @@ public class TariffScale extends com.mg.merp.core.model.AbstractEntity implement
 
     
     @Column(name="STYPE", columnDefinition="SMALLINT")
-    public EnumUserType getSType() {
+    public TariffingScaleType getSType() {
         return this.SType;
     }
     
-    public void setSType(EnumUserType SType) {
+    public void setSType(TariffingScaleType SType) {
         this.SType = SType;
     }
 

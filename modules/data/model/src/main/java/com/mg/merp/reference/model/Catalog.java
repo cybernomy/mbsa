@@ -1,8 +1,7 @@
 package com.mg.merp.reference.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -46,7 +45,7 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
      private String UpCode;
      private String Code;
      private String FullName;
-     private EnumUserType GoodType;
+     private CatalogType GoodType;
      private String BarCode;
      private String PluCode;
      private boolean IsHasWeight;
@@ -56,10 +55,10 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
      private Short Validity;
      private boolean IsNotInUse;
      private BigDecimal ShelfLife;
-     private EnumUserType ShelfLifeMeas;
-     private EnumUserType ExpDateCalcKind;
+     private TimePeriodKind ShelfLifeMeas;
+     private CatalogExpDate ExpDateCalcKind;
      private String Articul;
-     private EnumUserType MeasureControl;
+     private MeasureControl MeasureControl;
      private boolean Packaged;
      private boolean UseSerialNum;
      private CustomsDeclaration CustomsDeclaration;
@@ -72,14 +71,14 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
 	
-    public Catalog(String UpCode, String Code, String FullName, EnumUserType GoodType, boolean Packaged) {
+    public Catalog(String UpCode, String Code, String FullName, CatalogType GoodType, boolean Packaged) {
         this.UpCode = UpCode;
         this.Code = Code;
         this.FullName = FullName;
         this.GoodType = GoodType;
         this.Packaged = Packaged;
     }
-    public Catalog(TaxGroup TaxGroup, Measure WeightMeasure, Measure Measure2, CatalogFolder Folder, SysClient SysClient, Okp Okp, Measure Measure1, Okdp Okdp, Measure VolumeMeasure, String UpCode, String Code, String FullName, EnumUserType GoodType, String BarCode, String PluCode, boolean IsHasWeight, BigDecimal Weight, BigDecimal Volume, BigDecimal MarketingMargin, Short Validity, boolean IsNotInUse, BigDecimal ShelfLife, EnumUserType ShelfLifeMeas, EnumUserType ExpDateCalcKind, String Articul, EnumUserType MeasureControl, boolean Packaged, boolean UseSerialNum, CustomsDeclaration CustomsDeclaration, Country CountryOfOrigin, Set<CatalogPrice> SetOfCatalogPrice, Set<SetOfGood> SetOfSetOfGood, Set<Packing> SetOfPacking) {
+    public Catalog(TaxGroup TaxGroup, Measure WeightMeasure, Measure Measure2, CatalogFolder Folder, SysClient SysClient, Okp Okp, Measure Measure1, Okdp Okdp, Measure VolumeMeasure, String UpCode, String Code, String FullName, CatalogType GoodType, String BarCode, String PluCode, boolean IsHasWeight, BigDecimal Weight, BigDecimal Volume, BigDecimal MarketingMargin, Short Validity, boolean IsNotInUse, BigDecimal ShelfLife, TimePeriodKind ShelfLifeMeas, CatalogExpDate ExpDateCalcKind, String Articul, MeasureControl MeasureControl, boolean Packaged, boolean UseSerialNum, CustomsDeclaration CustomsDeclaration, Country CountryOfOrigin, Set<CatalogPrice> SetOfCatalogPrice, Set<SetOfGood> SetOfSetOfGood, Set<Packing> SetOfPacking) {
        this.TaxGroup = TaxGroup;
        this.WeightMeasure = WeightMeasure;
        this.Measure2 = Measure2;
@@ -259,11 +258,11 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
 
     
     @Column(name="GOODTYPE", nullable=false, columnDefinition="SMALLINT")
-    public EnumUserType getGoodType() {
+    public CatalogType getGoodType() {
         return this.GoodType;
     }
     
-    public void setGoodType(EnumUserType GoodType) {
+    public void setGoodType(CatalogType GoodType) {
         this.GoodType = GoodType;
     }
 
@@ -359,21 +358,21 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
 
     
     @Column(name="SHELFLIFE_MEAS", columnDefinition="SMALLINT")
-    public EnumUserType getShelfLifeMeas() {
+    public TimePeriodKind getShelfLifeMeas() {
         return this.ShelfLifeMeas;
     }
     
-    public void setShelfLifeMeas(EnumUserType ShelfLifeMeas) {
+    public void setShelfLifeMeas(TimePeriodKind ShelfLifeMeas) {
         this.ShelfLifeMeas = ShelfLifeMeas;
     }
 
     
     @Column(name="EXPDATE_CALC_KIND", columnDefinition="SMALLINT")
-    public EnumUserType getExpDateCalcKind() {
+    public CatalogExpDate getExpDateCalcKind() {
         return this.ExpDateCalcKind;
     }
     
-    public void setExpDateCalcKind(EnumUserType ExpDateCalcKind) {
+    public void setExpDateCalcKind(CatalogExpDate ExpDateCalcKind) {
         this.ExpDateCalcKind = ExpDateCalcKind;
     }
 
@@ -389,11 +388,11 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
 
     
     @Column(name="MEASURE_CONTROL", columnDefinition="SMALLINT")
-    public EnumUserType getMeasureControl() {
+    public MeasureControl getMeasureControl() {
         return this.MeasureControl;
     }
     
-    public void setMeasureControl(EnumUserType MeasureControl) {
+    public void setMeasureControl(MeasureControl MeasureControl) {
         this.MeasureControl = MeasureControl;
     }
 

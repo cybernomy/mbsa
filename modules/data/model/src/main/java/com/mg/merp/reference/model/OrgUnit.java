@@ -1,8 +1,7 @@
 package com.mg.merp.reference.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,7 +20,7 @@ public class OrgUnit extends com.mg.merp.reference.model.Contractor implements j
 
 
      private Contractor Partner;
-     private EnumUserType OrgUnitKind;
+     private OrgUnitType OrgUnitKind;
      private Boolean IsOffice;
      private Boolean IsStore;
      private String FolderTag;
@@ -33,7 +32,7 @@ public class OrgUnit extends com.mg.merp.reference.model.Contractor implements j
     public OrgUnit(String Code, String UpCode, String FullName, short Kind) {
         super(Code, UpCode, FullName, Kind);        
     }
-    public OrgUnit(SysClient SysClient, String Code, String UpCode, String FullName, Integer FolderId, short Kind, Contractor Partner, EnumUserType OrgUnitKind, Boolean IsOffice, Boolean IsStore, String FolderTag) {
+    public OrgUnit(SysClient SysClient, String Code, String UpCode, String FullName, Integer FolderId, short Kind, Contractor Partner, OrgUnitType OrgUnitKind, Boolean IsOffice, Boolean IsStore, String FolderTag) {
         super(SysClient, Code, UpCode, FullName, FolderId, Kind);        
        this.Partner = Partner;
        this.OrgUnitKind = OrgUnitKind;
@@ -55,11 +54,11 @@ public class OrgUnit extends com.mg.merp.reference.model.Contractor implements j
 
     
     @Column(name="KIND", columnDefinition="SMALLINT")
-    public EnumUserType getOrgUnitKind() {
+    public OrgUnitType getOrgUnitKind() {
         return this.OrgUnitKind;
     }
     
-    public void setOrgUnitKind(EnumUserType OrgUnitKind) {
+    public void setOrgUnitKind(OrgUnitType OrgUnitKind) {
         this.OrgUnitKind = OrgUnitKind;
     }
 

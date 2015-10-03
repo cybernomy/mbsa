@@ -1,8 +1,7 @@
 package com.mg.merp.mfreference.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Currency;
@@ -36,11 +35,11 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
      private int ViewSequence;
      private Integer ReportSequence;
      private BigDecimal Probable;
-     private EnumUserType QuantityRateFlag;
+     private QuantityRateFlag QuantityRateFlag;
      private BigDecimal MtlQty;
      private BigDecimal ScrapFactor;
      private boolean MtlBackflushFlag;
-     private EnumUserType MtlOhAllocationFlag;
+     private MaterialOverheadAllocationFlag MtlOhAllocationFlag;
      private BigDecimal MtlOhRate;
      private BigDecimal MtlOhRatio;
      private boolean MtlOhBackflushFlag;
@@ -52,7 +51,7 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
     public BomMaterial(int ViewSequence) {
         this.ViewSequence = ViewSequence;
     }
-    public BomMaterial(ResourceGroup ResourceGroup, SysClient SysClient, CostDetail StandartCostDetail, BomRoute BomRoute, Short ResourceType, Integer TimeSequence, Date EffOnDate, Date EffOffDate, String Comment, CostCategories MtlCostCategory, Measure Measure, Catalog Catalog, WarehouseZone BackflushZone, CostCategories MtlOhCostCategory, Currency Currency, Integer Revision, int ViewSequence, Integer ReportSequence, BigDecimal Probable, EnumUserType QuantityRateFlag, BigDecimal MtlQty, BigDecimal ScrapFactor, boolean MtlBackflushFlag, EnumUserType MtlOhAllocationFlag, BigDecimal MtlOhRate, BigDecimal MtlOhRatio, boolean MtlOhBackflushFlag) {
+    public BomMaterial(ResourceGroup ResourceGroup, SysClient SysClient, CostDetail StandartCostDetail, BomRoute BomRoute, Short ResourceType, Integer TimeSequence, Date EffOnDate, Date EffOffDate, String Comment, CostCategories MtlCostCategory, Measure Measure, Catalog Catalog, WarehouseZone BackflushZone, CostCategories MtlOhCostCategory, Currency Currency, Integer Revision, int ViewSequence, Integer ReportSequence, BigDecimal Probable, QuantityRateFlag QuantityRateFlag, BigDecimal MtlQty, BigDecimal ScrapFactor, boolean MtlBackflushFlag, MaterialOverheadAllocationFlag MtlOhAllocationFlag, BigDecimal MtlOhRate, BigDecimal MtlOhRatio, boolean MtlOhBackflushFlag) {
         super(ResourceGroup, SysClient, StandartCostDetail, BomRoute, ResourceType, TimeSequence, EffOnDate, EffOffDate, Comment);        
        this.MtlCostCategory = MtlCostCategory;
        this.Measure = Measure;
@@ -177,11 +176,11 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
 
     
     @Column(name="QUANTITY_RATE_FLAG", columnDefinition="SMALLINT")
-    public EnumUserType getQuantityRateFlag() {
+    public QuantityRateFlag getQuantityRateFlag() {
         return this.QuantityRateFlag;
     }
     
-    public void setQuantityRateFlag(EnumUserType QuantityRateFlag) {
+    public void setQuantityRateFlag(QuantityRateFlag QuantityRateFlag) {
         this.QuantityRateFlag = QuantityRateFlag;
     }
 
@@ -217,11 +216,11 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
 
     
     @Column(name="MTL_OH_ALLOCATION_FLAG", columnDefinition="SMALLINT")
-    public EnumUserType getMtlOhAllocationFlag() {
+    public MaterialOverheadAllocationFlag getMtlOhAllocationFlag() {
         return this.MtlOhAllocationFlag;
     }
     
-    public void setMtlOhAllocationFlag(EnumUserType MtlOhAllocationFlag) {
+    public void setMtlOhAllocationFlag(MaterialOverheadAllocationFlag MtlOhAllocationFlag) {
         this.MtlOhAllocationFlag = MtlOhAllocationFlag;
     }
 

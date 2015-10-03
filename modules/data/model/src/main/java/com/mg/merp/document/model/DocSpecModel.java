@@ -1,14 +1,14 @@
 package com.mg.merp.document.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.reference.model.Measure;
 import com.mg.merp.reference.model.PriceListSpec;
 import com.mg.merp.reference.model.TaxGroup;
+import com.mg.merp.reference.model.TimePeriodKind;
 import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Column;
@@ -53,7 +53,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
      private TaxGroup TaxGroup;
      private Date ProductionDate;
      private BigDecimal ShelfLife;
-     private EnumUserType ShelfLifeMeas;
+     private TimePeriodKind ShelfLifeMeas;
      private BigDecimal Quantity2;
      private String Comment;
      private Contractor Contractor;
@@ -62,10 +62,10 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
 	
-    public DocSpecModel(EnumUserType ShelfLifeMeas) {
+    public DocSpecModel(TimePeriodKind ShelfLifeMeas) {
         this.ShelfLifeMeas = ShelfLifeMeas;
     }
-    public DocSpecModel(Catalog Catalog, Contractor DstMol, Contractor SrcMol, DocHeadModel DocHeadModel, Measure Measure2, SysClient SysClient, Contractor DstStock, Measure Measure1, Contractor SrcStock, PriceListSpec PriceListSpec, BigDecimal Quantity, BigDecimal Price, BigDecimal Summa, BigDecimal Price1, BigDecimal Summa1, BigDecimal Weight, BigDecimal Volume, Date BestBefore, TaxGroup TaxGroup, Date ProductionDate, BigDecimal ShelfLife, EnumUserType ShelfLifeMeas, BigDecimal Quantity2, String Comment, Contractor Contractor) {
+    public DocSpecModel(Catalog Catalog, Contractor DstMol, Contractor SrcMol, DocHeadModel DocHeadModel, Measure Measure2, SysClient SysClient, Contractor DstStock, Measure Measure1, Contractor SrcStock, PriceListSpec PriceListSpec, BigDecimal Quantity, BigDecimal Price, BigDecimal Summa, BigDecimal Price1, BigDecimal Summa1, BigDecimal Weight, BigDecimal Volume, Date BestBefore, TaxGroup TaxGroup, Date ProductionDate, BigDecimal ShelfLife, TimePeriodKind ShelfLifeMeas, BigDecimal Quantity2, String Comment, Contractor Contractor) {
        this.Catalog = Catalog;
        this.DstMol = DstMol;
        this.SrcMol = SrcMol;
@@ -317,11 +317,11 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     
     @Column(name="SHELFLIFE_MEAS", nullable=false, columnDefinition="SMALLINT")
-    public EnumUserType getShelfLifeMeas() {
+    public TimePeriodKind getShelfLifeMeas() {
         return this.ShelfLifeMeas;
     }
     
-    public void setShelfLifeMeas(EnumUserType ShelfLifeMeas) {
+    public void setShelfLifeMeas(TimePeriodKind ShelfLifeMeas) {
         this.ShelfLifeMeas = ShelfLifeMeas;
     }
 

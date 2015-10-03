@@ -1,8 +1,7 @@
 package com.mg.merp.mfreference.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.reference.model.Currency;
 import com.mg.merp.reference.model.Measure;
@@ -36,16 +35,16 @@ public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements
      private Measure LbrTimeUm;
      private Currency LbrRateCurrency;
      private String Description;
-     private EnumUserType TimeRateFlag;
+     private TimeRateFlag TimeRateFlag;
      private BigDecimal LbrRate;
-     private EnumUserType LbrOhAllocationFlag;
+     private LaborOverheadAllocationFlag LbrOhAllocationFlag;
      private BigDecimal LbrOhRate;
      private BigDecimal LbrOhRatio;
 
     public LaborClass() {
     }
 
-    public LaborClass(Measure LbrOhTimeUm, Currency LbrOhRateCurrency, SysClient SysClient, CostCategories LbrCostCategory, CostCategories LbrOhCostCategory, Measure LbrTimeUm, Currency LbrRateCurrency, String Description, EnumUserType TimeRateFlag, BigDecimal LbrRate, EnumUserType LbrOhAllocationFlag, BigDecimal LbrOhRate, BigDecimal LbrOhRatio) {
+    public LaborClass(Measure LbrOhTimeUm, Currency LbrOhRateCurrency, SysClient SysClient, CostCategories LbrCostCategory, CostCategories LbrOhCostCategory, Measure LbrTimeUm, Currency LbrRateCurrency, String Description, TimeRateFlag TimeRateFlag, BigDecimal LbrRate, LaborOverheadAllocationFlag LbrOhAllocationFlag, BigDecimal LbrOhRate, BigDecimal LbrOhRatio) {
        this.LbrOhTimeUm = LbrOhTimeUm;
        this.LbrOhRateCurrency = LbrOhRateCurrency;
        this.SysClient = SysClient;
@@ -155,11 +154,11 @@ public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements
 
     
     @Column(name="TIME_RATE_FLAG", columnDefinition="SMALLINT")
-    public EnumUserType getTimeRateFlag() {
+    public TimeRateFlag getTimeRateFlag() {
         return this.TimeRateFlag;
     }
     
-    public void setTimeRateFlag(EnumUserType TimeRateFlag) {
+    public void setTimeRateFlag(TimeRateFlag TimeRateFlag) {
         this.TimeRateFlag = TimeRateFlag;
     }
 
@@ -175,11 +174,11 @@ public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements
 
     
     @Column(name="LBR_OH_ALLOCATION_FLAG", columnDefinition="SMALLINT")
-    public EnumUserType getLbrOhAllocationFlag() {
+    public LaborOverheadAllocationFlag getLbrOhAllocationFlag() {
         return this.LbrOhAllocationFlag;
     }
     
-    public void setLbrOhAllocationFlag(EnumUserType LbrOhAllocationFlag) {
+    public void setLbrOhAllocationFlag(LaborOverheadAllocationFlag LbrOhAllocationFlag) {
         this.LbrOhAllocationFlag = LbrOhAllocationFlag;
     }
 

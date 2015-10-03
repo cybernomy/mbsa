@@ -1,9 +1,9 @@
 package com.mg.merp.overall.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
+import com.mg.merp.reference.model.TimePeriodKind;
 import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
@@ -33,11 +33,11 @@ public class NormSpec extends com.mg.merp.core.model.AbstractEntity implements j
      private SysClient SysClient;
      private String OvrNormSpecName;
      private String MeasureUpCode;
-     private EnumUserType CatalogGroupsTypeId;
+     private CatalogGroupsType CatalogGroupsTypeId;
      private BigDecimal ShelfLife;
-     private EnumUserType ShelfLifeMeas;
-     private EnumUserType IsBasic;
-     private EnumUserType IsPeriodic;
+     private TimePeriodKind ShelfLifeMeas;
+     private BasicNormKind IsBasic;
+     private PeriodicNormKind IsPeriodic;
      private boolean IsDinch;
      private String DinchFormula;
      private String DocName;
@@ -52,7 +52,7 @@ public class NormSpec extends com.mg.merp.core.model.AbstractEntity implements j
     public NormSpec(String OvrNormSpecName) {
         this.OvrNormSpecName = OvrNormSpecName;
     }
-    public NormSpec(NormHead OvrNormHead, SysClient SysClient, String OvrNormSpecName, String MeasureUpCode, EnumUserType CatalogGroupsTypeId, BigDecimal ShelfLife, EnumUserType ShelfLifeMeas, EnumUserType IsBasic, EnumUserType IsPeriodic, boolean IsDinch, String DinchFormula, String DocName, BigDecimal Quantity, Set<NormSpecDocSpecLink> NormSpecDocSpecLinks, Set<NormSpecLink> NormSpecLinks) {
+    public NormSpec(NormHead OvrNormHead, SysClient SysClient, String OvrNormSpecName, String MeasureUpCode, CatalogGroupsType CatalogGroupsTypeId, BigDecimal ShelfLife, TimePeriodKind ShelfLifeMeas, BasicNormKind IsBasic, PeriodicNormKind IsPeriodic, boolean IsDinch, String DinchFormula, String DocName, BigDecimal Quantity, Set<NormSpecDocSpecLink> NormSpecDocSpecLinks, Set<NormSpecLink> NormSpecLinks) {
        this.OvrNormHead = OvrNormHead;
        this.SysClient = SysClient;
        this.OvrNormSpecName = OvrNormSpecName;
@@ -124,11 +124,11 @@ public class NormSpec extends com.mg.merp.core.model.AbstractEntity implements j
 
     
     @Column(name="CATALOG_GROUPS_TYPE_ID", columnDefinition="SMALLINT")
-    public EnumUserType getCatalogGroupsTypeId() {
+    public CatalogGroupsType getCatalogGroupsTypeId() {
         return this.CatalogGroupsTypeId;
     }
     
-    public void setCatalogGroupsTypeId(EnumUserType CatalogGroupsTypeId) {
+    public void setCatalogGroupsTypeId(CatalogGroupsType CatalogGroupsTypeId) {
         this.CatalogGroupsTypeId = CatalogGroupsTypeId;
     }
 
@@ -144,31 +144,31 @@ public class NormSpec extends com.mg.merp.core.model.AbstractEntity implements j
 
     
     @Column(name="SHELFLIFE_MEAS", columnDefinition="SMALLINT")
-    public EnumUserType getShelfLifeMeas() {
+    public TimePeriodKind getShelfLifeMeas() {
         return this.ShelfLifeMeas;
     }
     
-    public void setShelfLifeMeas(EnumUserType ShelfLifeMeas) {
+    public void setShelfLifeMeas(TimePeriodKind ShelfLifeMeas) {
         this.ShelfLifeMeas = ShelfLifeMeas;
     }
 
     
     @Column(name="ISBASIC", columnDefinition="INTEGER")
-    public EnumUserType getIsBasic() {
+    public BasicNormKind getIsBasic() {
         return this.IsBasic;
     }
     
-    public void setIsBasic(EnumUserType IsBasic) {
+    public void setIsBasic(BasicNormKind IsBasic) {
         this.IsBasic = IsBasic;
     }
 
     
     @Column(name="ISPERIODIC", columnDefinition="INTEGER")
-    public EnumUserType getIsPeriodic() {
+    public PeriodicNormKind getIsPeriodic() {
         return this.IsPeriodic;
     }
     
-    public void setIsPeriodic(EnumUserType IsPeriodic) {
+    public void setIsPeriodic(PeriodicNormKind IsPeriodic) {
         this.IsPeriodic = IsPeriodic;
     }
 

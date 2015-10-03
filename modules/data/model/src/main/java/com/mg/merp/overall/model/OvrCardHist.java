@@ -1,12 +1,12 @@
 package com.mg.merp.overall.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.document.model.DocType;
 import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Measure;
+import com.mg.merp.reference.model.TimePeriodKind;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.HashSet;
@@ -39,14 +39,14 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
      private Catalog Catalog;
      private NormSpec OvrNormSpec;
      private NormHead OvrNormHead;
-     private EnumUserType CatalogGroupsType;
-     private EnumUserType IsBasic;
-     private EnumUserType IsPeriodic;
+     private CatalogGroupsType CatalogGroupsType;
+     private BasicNormKind IsBasic;
+     private PeriodicNormKind IsPeriodic;
      private boolean Returnable;
      private Date GiveDate;
      private Date ReadOutDate;
      private BigDecimal ShelfLife;
-     private EnumUserType ShelfLifeMeas;
+     private TimePeriodKind ShelfLifeMeas;
      private BigDecimal Quantity;
      private BigDecimal NdeCost;
      private BigDecimal NdeSumma;
@@ -71,7 +71,7 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
      private DocType RemoveDocType;
      private String RemoveDocNumber;
      private Date RemoveDocDate;
-     private EnumUserType RemoveType;
+     private RemoveType RemoveType;
      private Date RemoveDate;
      private Date PlanRemoveDate;
      private Set<OvrCardHistDocSpecLink> CardHistDocSpecLinks = new HashSet<OvrCardHistDocSpecLink>(0);
@@ -80,7 +80,7 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     public OvrCardHist() {
     }
 
-    public OvrCardHist(OvrCard OvrCard, SysClient SysClient, Measure MeasureUpCode, Catalog Catalog, NormSpec OvrNormSpec, NormHead OvrNormHead, EnumUserType CatalogGroupsType, EnumUserType IsBasic, EnumUserType IsPeriodic, boolean Returnable, Date GiveDate, Date ReadOutDate, BigDecimal ShelfLife, EnumUserType ShelfLifeMeas, BigDecimal Quantity, BigDecimal NdeCost, BigDecimal NdeSumma, Integer Deterioration, BigDecimal DepreciableValue, BigDecimal CommonSummaForDinch, BigDecimal DinchedSumma, BigDecimal RestOfDinchSumma, BigDecimal ArrearSumma, Integer GiveDocHeadId, Integer GiveDocSpecId, DocType GiveDocType, String GiveDocNumber, Date GiveDocDate, Integer ExplDocHeadId, Integer ExplDocSpecId, DocType ExplDocType, String ExplDocNumber, Date ExplDocDate, Integer RemoveDocHeadId, Integer RemoveDocSpecId, DocType RemoveDocType, String RemoveDocNumber, Date RemoveDocDate, EnumUserType RemoveType, Date RemoveDate, Date PlanRemoveDate, Set<OvrCardHistDocSpecLink> CardHistDocSpecLinks, Set<HistStatus> HistStatusGroup) {
+    public OvrCardHist(OvrCard OvrCard, SysClient SysClient, Measure MeasureUpCode, Catalog Catalog, NormSpec OvrNormSpec, NormHead OvrNormHead, CatalogGroupsType CatalogGroupsType, BasicNormKind IsBasic, PeriodicNormKind IsPeriodic, boolean Returnable, Date GiveDate, Date ReadOutDate, BigDecimal ShelfLife, TimePeriodKind ShelfLifeMeas, BigDecimal Quantity, BigDecimal NdeCost, BigDecimal NdeSumma, Integer Deterioration, BigDecimal DepreciableValue, BigDecimal CommonSummaForDinch, BigDecimal DinchedSumma, BigDecimal RestOfDinchSumma, BigDecimal ArrearSumma, Integer GiveDocHeadId, Integer GiveDocSpecId, DocType GiveDocType, String GiveDocNumber, Date GiveDocDate, Integer ExplDocHeadId, Integer ExplDocSpecId, DocType ExplDocType, String ExplDocNumber, Date ExplDocDate, Integer RemoveDocHeadId, Integer RemoveDocSpecId, DocType RemoveDocType, String RemoveDocNumber, Date RemoveDocDate, RemoveType RemoveType, Date RemoveDate, Date PlanRemoveDate, Set<OvrCardHistDocSpecLink> CardHistDocSpecLinks, Set<HistStatus> HistStatusGroup) {
        this.OvrCard = OvrCard;
        this.SysClient = SysClient;
        this.MeasureUpCode = MeasureUpCode;
@@ -200,31 +200,31 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
 
     
     @Column(name="CATALOG_GROUPS_TYPE_ID", columnDefinition="SMALLINT")
-    public EnumUserType getCatalogGroupsType() {
+    public CatalogGroupsType getCatalogGroupsType() {
         return this.CatalogGroupsType;
     }
     
-    public void setCatalogGroupsType(EnumUserType CatalogGroupsType) {
+    public void setCatalogGroupsType(CatalogGroupsType CatalogGroupsType) {
         this.CatalogGroupsType = CatalogGroupsType;
     }
 
     
     @Column(name="ISBASIC", columnDefinition="INTEGER")
-    public EnumUserType getIsBasic() {
+    public BasicNormKind getIsBasic() {
         return this.IsBasic;
     }
     
-    public void setIsBasic(EnumUserType IsBasic) {
+    public void setIsBasic(BasicNormKind IsBasic) {
         this.IsBasic = IsBasic;
     }
 
     
     @Column(name="ISPERIODIC", columnDefinition="INTEGER")
-    public EnumUserType getIsPeriodic() {
+    public PeriodicNormKind getIsPeriodic() {
         return this.IsPeriodic;
     }
     
-    public void setIsPeriodic(EnumUserType IsPeriodic) {
+    public void setIsPeriodic(PeriodicNormKind IsPeriodic) {
         this.IsPeriodic = IsPeriodic;
     }
 
@@ -270,11 +270,11 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
 
     
     @Column(name="SHELFLIFE_MEAS", columnDefinition="SMALLINT")
-    public EnumUserType getShelfLifeMeas() {
+    public TimePeriodKind getShelfLifeMeas() {
         return this.ShelfLifeMeas;
     }
     
-    public void setShelfLifeMeas(EnumUserType ShelfLifeMeas) {
+    public void setShelfLifeMeas(TimePeriodKind ShelfLifeMeas) {
         this.ShelfLifeMeas = ShelfLifeMeas;
     }
 
@@ -520,11 +520,11 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
 
     
     @Column(name="REMOVE_TYPE_ID", columnDefinition="SMALLINT")
-    public EnumUserType getRemoveType() {
+    public RemoveType getRemoveType() {
         return this.RemoveType;
     }
     
-    public void setRemoveType(EnumUserType RemoveType) {
+    public void setRemoveType(RemoveType RemoveType) {
         this.RemoveType = RemoveType;
     }
 

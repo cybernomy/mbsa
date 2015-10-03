@@ -1,8 +1,7 @@
 package com.mg.merp.salary.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.document.model.DocHead;
 import com.mg.merp.document.model.DocSpec;
@@ -16,6 +15,7 @@ import com.mg.merp.reference.model.CustomsDeclaration;
 import com.mg.merp.reference.model.Measure;
 import com.mg.merp.reference.model.PriceListSpec;
 import com.mg.merp.reference.model.TaxGroup;
+import com.mg.merp.reference.model.TimePeriodKind;
 import java.math.BigDecimal;
 import java.util.Date;
 import java.util.Set;
@@ -44,10 +44,10 @@ public class FeeSummarySpec extends com.mg.merp.document.model.DocSpec implement
     }
 
 	
-    public FeeSummarySpec(EnumUserType ShelfLifeMeas) {
+    public FeeSummarySpec(TimePeriodKind ShelfLifeMeas) {
         super(ShelfLifeMeas);        
     }
-    public FeeSummarySpec(DocSpec OrderSpec, Catalog Catalog, TaxGroup TaxGroup, Contractor DstMol, Contractor SrcMol, PriceListSpec PriceListSpec, DocHead DocHead, Measure Measure2, SysClient SysClient, Contractor DstStock, Measure Measure1, Contractor SrcStock, BigDecimal Quantity, BigDecimal Price, BigDecimal Summa, BigDecimal Price1, BigDecimal Summa1, BigDecimal Weight, BigDecimal Volume, Date BestBefore, BigDecimal ShelfLife, EnumUserType ShelfLifeMeas, Date ProductionDate, BigDecimal Quantity2, String Comment, Contractor Contractor, String UNID, CustomsDeclaration CustomsDeclaration, Country CountryOfOrigin, Set<DocumentSpecTax> Taxes, Set<DocumentSpecSerialNum> SerialNumbers, CostsAnl CostsAnl1, CostsAnl CostsAnl2, CostsAnl CostsAnl3, CostsAnl CostsAnl4, CostsAnl CostsAnl5) {
+    public FeeSummarySpec(DocSpec OrderSpec, Catalog Catalog, TaxGroup TaxGroup, Contractor DstMol, Contractor SrcMol, PriceListSpec PriceListSpec, DocHead DocHead, Measure Measure2, SysClient SysClient, Contractor DstStock, Measure Measure1, Contractor SrcStock, BigDecimal Quantity, BigDecimal Price, BigDecimal Summa, BigDecimal Price1, BigDecimal Summa1, BigDecimal Weight, BigDecimal Volume, Date BestBefore, BigDecimal ShelfLife, TimePeriodKind ShelfLifeMeas, Date ProductionDate, BigDecimal Quantity2, String Comment, Contractor Contractor, String UNID, CustomsDeclaration CustomsDeclaration, Country CountryOfOrigin, Set<DocumentSpecTax> Taxes, Set<DocumentSpecSerialNum> SerialNumbers, CostsAnl CostsAnl1, CostsAnl CostsAnl2, CostsAnl CostsAnl3, CostsAnl CostsAnl4, CostsAnl CostsAnl5) {
         super(OrderSpec, Catalog, TaxGroup, DstMol, SrcMol, PriceListSpec, DocHead, Measure2, SysClient, DstStock, Measure1, SrcStock, Quantity, Price, Summa, Price1, Summa1, Weight, Volume, BestBefore, ShelfLife, ShelfLifeMeas, ProductionDate, Quantity2, Comment, Contractor, UNID, CustomsDeclaration, CountryOfOrigin, Taxes, SerialNumbers);        
        this.CostsAnl1 = CostsAnl1;
        this.CostsAnl2 = CostsAnl2;

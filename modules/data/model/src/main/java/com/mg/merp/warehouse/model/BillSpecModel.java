@@ -1,8 +1,7 @@
 package com.mg.merp.warehouse.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.document.model.DocHeadModel;
 import com.mg.merp.reference.model.Catalog;
@@ -10,6 +9,7 @@ import com.mg.merp.reference.model.Contractor;
 import com.mg.merp.reference.model.Measure;
 import com.mg.merp.reference.model.PriceListSpec;
 import com.mg.merp.reference.model.TaxGroup;
+import com.mg.merp.reference.model.TimePeriodKind;
 import java.math.BigDecimal;
 import java.util.Date;
 import javax.persistence.Column;
@@ -38,10 +38,10 @@ public class BillSpecModel extends com.mg.merp.document.model.DocSpecModel imple
     }
 
 	
-    public BillSpecModel(EnumUserType ShelfLifeMeas) {
+    public BillSpecModel(TimePeriodKind ShelfLifeMeas) {
         super(ShelfLifeMeas);        
     }
-    public BillSpecModel(Catalog Catalog, Contractor DstMol, Contractor SrcMol, DocHeadModel DocHeadModel, Measure Measure2, SysClient SysClient, Contractor DstStock, Measure Measure1, Contractor SrcStock, PriceListSpec PriceListSpec, BigDecimal Quantity, BigDecimal Price, BigDecimal Summa, BigDecimal Price1, BigDecimal Summa1, BigDecimal Weight, BigDecimal Volume, Date BestBefore, TaxGroup TaxGroup, Date ProductionDate, BigDecimal ShelfLife, EnumUserType ShelfLifeMeas, BigDecimal Quantity2, String Comment, Contractor Contractor, BigDecimal Discount, BigDecimal PriceWithDiscount, BigDecimal SummaWithDiscount, BigDecimal Cost, BigDecimal AcceptanceQuan, BigDecimal AcceptanceSum, BigDecimal AcceptancePackingQuan, BigDecimal DocDiscount) {
+    public BillSpecModel(Catalog Catalog, Contractor DstMol, Contractor SrcMol, DocHeadModel DocHeadModel, Measure Measure2, SysClient SysClient, Contractor DstStock, Measure Measure1, Contractor SrcStock, PriceListSpec PriceListSpec, BigDecimal Quantity, BigDecimal Price, BigDecimal Summa, BigDecimal Price1, BigDecimal Summa1, BigDecimal Weight, BigDecimal Volume, Date BestBefore, TaxGroup TaxGroup, Date ProductionDate, BigDecimal ShelfLife, TimePeriodKind ShelfLifeMeas, BigDecimal Quantity2, String Comment, Contractor Contractor, BigDecimal Discount, BigDecimal PriceWithDiscount, BigDecimal SummaWithDiscount, BigDecimal Cost, BigDecimal AcceptanceQuan, BigDecimal AcceptanceSum, BigDecimal AcceptancePackingQuan, BigDecimal DocDiscount) {
         super(Catalog, DstMol, SrcMol, DocHeadModel, Measure2, SysClient, DstStock, Measure1, SrcStock, PriceListSpec, Quantity, Price, Summa, Price1, Summa1, Weight, Volume, BestBefore, TaxGroup, ProductionDate, ShelfLife, ShelfLifeMeas, Quantity2, Comment, Contractor);        
        this.Discount = Discount;
        this.PriceWithDiscount = PriceWithDiscount;

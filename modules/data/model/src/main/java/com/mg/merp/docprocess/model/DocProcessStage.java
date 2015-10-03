@@ -1,8 +1,7 @@
 package com.mg.merp.docprocess.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.baiengine.model.Repository;
 import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.model.SysClient;
@@ -61,7 +60,7 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
      private String Code;
      private boolean ValueOutOfBound;
      private boolean LinkDocRollback;
-     private EnumUserType LinkDocRollbackInteractive;
+     private DocProcessInteractiveKind LinkDocRollbackInteractive;
      private Set<LinkStage> PrevStages = new HashSet<LinkStage>(0);
      private Set<DocProcessStageRights> UserGrants = new HashSet<DocProcessStageRights>(0);
      private Set<LinkStage> NextStages = new HashSet<LinkStage>(0);
@@ -76,7 +75,7 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
         this.ForkFlow = ForkFlow;
         this.Code = Code;
     }
-    public DocProcessStage(Repository PerformBusinessAddin, Repository PrePerformBusinessAddin, StageAction Stage, SysClient SysClient, DocType DocType, Repository RollbackBusinessAddin, Repository PreRollbackBusinessAddin, boolean Partial, boolean PrevComplete, boolean ShowNewDocument, String Name, String Comment, DocSection LinkDocSection, DocType LinkDocType, Integer LinkDocModel, Folder LinkDocDestFolder, boolean JoinFlow, boolean ForkFlow, Short Priority, Folder LinkDocModelFolder, int CoorX, int CoorY, int SizeX, int SizeY, boolean Dependent, boolean UseCurrentDate, String Code, boolean ValueOutOfBound, boolean LinkDocRollback, EnumUserType LinkDocRollbackInteractive, Set<LinkStage> PrevStages, Set<DocProcessStageRights> UserGrants, Set<LinkStage> NextStages) {
+    public DocProcessStage(Repository PerformBusinessAddin, Repository PrePerformBusinessAddin, StageAction Stage, SysClient SysClient, DocType DocType, Repository RollbackBusinessAddin, Repository PreRollbackBusinessAddin, boolean Partial, boolean PrevComplete, boolean ShowNewDocument, String Name, String Comment, DocSection LinkDocSection, DocType LinkDocType, Integer LinkDocModel, Folder LinkDocDestFolder, boolean JoinFlow, boolean ForkFlow, Short Priority, Folder LinkDocModelFolder, int CoorX, int CoorY, int SizeX, int SizeY, boolean Dependent, boolean UseCurrentDate, String Code, boolean ValueOutOfBound, boolean LinkDocRollback, DocProcessInteractiveKind LinkDocRollbackInteractive, Set<LinkStage> PrevStages, Set<DocProcessStageRights> UserGrants, Set<LinkStage> NextStages) {
        this.PerformBusinessAddin = PerformBusinessAddin;
        this.PrePerformBusinessAddin = PrePerformBusinessAddin;
        this.Stage = Stage;
@@ -416,11 +415,11 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
 
     
     @Column(name="LINKDOC_ROLLBACK_INTERACTIVE", columnDefinition="SMALLINT")
-    public EnumUserType getLinkDocRollbackInteractive() {
+    public DocProcessInteractiveKind getLinkDocRollbackInteractive() {
         return this.LinkDocRollbackInteractive;
     }
     
-    public void setLinkDocRollbackInteractive(EnumUserType LinkDocRollbackInteractive) {
+    public void setLinkDocRollbackInteractive(DocProcessInteractiveKind LinkDocRollbackInteractive) {
         this.LinkDocRollbackInteractive = LinkDocRollbackInteractive;
     }
 

@@ -1,8 +1,7 @@
 package com.mg.merp.table.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import java.util.HashSet;
 import java.util.Set;
@@ -32,7 +31,7 @@ public class PatternHead extends com.mg.merp.core.model.AbstractEntity implement
      private String Code;
      private String Name;
      private Integer Duration;
-     private EnumUserType PatternKind;
+     private PatternKind PatternKind;
      private Set<ScheduleHead> ScheduleHeads = new HashSet<ScheduleHead>(0);
      private Set<PatternSpec> PatternSpecs = new HashSet<PatternSpec>(0);
 
@@ -43,7 +42,7 @@ public class PatternHead extends com.mg.merp.core.model.AbstractEntity implement
     public PatternHead(String Code) {
         this.Code = Code;
     }
-    public PatternHead(SysClient SysClient, String Code, String Name, Integer Duration, EnumUserType PatternKind, Set<ScheduleHead> ScheduleHeads, Set<PatternSpec> PatternSpecs) {
+    public PatternHead(SysClient SysClient, String Code, String Name, Integer Duration, PatternKind PatternKind, Set<ScheduleHead> ScheduleHeads, Set<PatternSpec> PatternSpecs) {
        this.SysClient = SysClient;
        this.Code = Code;
        this.Name = Name;
@@ -107,11 +106,11 @@ public class PatternHead extends com.mg.merp.core.model.AbstractEntity implement
 
     
     @Column(name="PATTERN_KIND", columnDefinition="SMALLINT")
-    public EnumUserType getPatternKind() {
+    public PatternKind getPatternKind() {
         return this.PatternKind;
     }
     
-    public void setPatternKind(EnumUserType PatternKind) {
+    public void setPatternKind(PatternKind PatternKind) {
         this.PatternKind = PatternKind;
     }
 

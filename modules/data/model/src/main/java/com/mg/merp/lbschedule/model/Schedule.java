@@ -1,8 +1,7 @@
 package com.mg.merp.lbschedule.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.model.SysClient;
 import java.util.HashSet;
@@ -33,13 +32,13 @@ public class Schedule extends com.mg.merp.core.model.AbstractEntity implements j
      private SysClient SysClient;
      private String Comments;
      private String Name;
-     private EnumUserType Status;
+     private ScheduleStatus Status;
      private Set<Item> LsItems = new HashSet<Item>(0);
 
     public Schedule() {
     }
 
-    public Schedule(Folder Folder, SysClient SysClient, String Comments, String Name, EnumUserType Status, Set<Item> LsItems) {
+    public Schedule(Folder Folder, SysClient SysClient, String Comments, String Name, ScheduleStatus Status, Set<Item> LsItems) {
        this.Folder = Folder;
        this.SysClient = SysClient;
        this.Comments = Comments;
@@ -102,11 +101,11 @@ public class Schedule extends com.mg.merp.core.model.AbstractEntity implements j
 
     
     @Column(name="STATUS", columnDefinition="SMALLINT")
-    public EnumUserType getStatus() {
+    public ScheduleStatus getStatus() {
         return this.Status;
     }
     
-    public void setStatus(EnumUserType Status) {
+    public void setStatus(ScheduleStatus Status) {
         this.Status = Status;
     }
 

@@ -1,8 +1,7 @@
 package com.mg.merp.document.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,16 +27,16 @@ public class DocTypeDocSectionLink extends com.mg.merp.core.model.AbstractEntity
      private DocSection DocSection;
      private SysClient SysClient;
      private DocType DocType;
-     private EnumUserType Kind;
+     private DocumentKind Kind;
 
     public DocTypeDocSectionLink() {
     }
 
 	
-    public DocTypeDocSectionLink(EnumUserType Kind) {
+    public DocTypeDocSectionLink(DocumentKind Kind) {
         this.Kind = Kind;
     }
-    public DocTypeDocSectionLink(DocSection DocSection, SysClient SysClient, DocType DocType, EnumUserType Kind) {
+    public DocTypeDocSectionLink(DocSection DocSection, SysClient SysClient, DocType DocType, DocumentKind Kind) {
        this.DocSection = DocSection;
        this.SysClient = SysClient;
        this.DocType = DocType;
@@ -88,11 +87,11 @@ public class DocTypeDocSectionLink extends com.mg.merp.core.model.AbstractEntity
 
     
     @Column(name="KIND", nullable=false, columnDefinition="SMALLINT")
-    public EnumUserType getKind() {
+    public DocumentKind getKind() {
         return this.Kind;
     }
     
-    public void setKind(EnumUserType Kind) {
+    public void setKind(DocumentKind Kind) {
         this.Kind = Kind;
     }
 

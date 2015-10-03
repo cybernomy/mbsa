@@ -1,8 +1,7 @@
 package com.mg.merp.baiengine.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.model.SysClient;
 import java.util.HashSet;
@@ -33,13 +32,13 @@ public class Constant extends com.mg.merp.core.model.AbstractEntity implements j
      private SysClient SysClient;
      private String Code;
      private String Description;
-     private EnumUserType DataType;
+     private ConstantDataType DataType;
      private Set<ConstantValue> ConstValues = new HashSet<ConstantValue>(0);
 
     public Constant() {
     }
 
-    public Constant(Folder Folder, SysClient SysClient, String Code, String Description, EnumUserType DataType, Set<ConstantValue> ConstValues) {
+    public Constant(Folder Folder, SysClient SysClient, String Code, String Description, ConstantDataType DataType, Set<ConstantValue> ConstValues) {
        this.Folder = Folder;
        this.SysClient = SysClient;
        this.Code = Code;
@@ -102,11 +101,11 @@ public class Constant extends com.mg.merp.core.model.AbstractEntity implements j
 
     
     @Column(name="DATATYPE", columnDefinition="INTEGER")
-    public EnumUserType getDataType() {
+    public ConstantDataType getDataType() {
         return this.DataType;
     }
     
-    public void setDataType(EnumUserType DataType) {
+    public void setDataType(ConstantDataType DataType) {
         this.DataType = DataType;
     }
 

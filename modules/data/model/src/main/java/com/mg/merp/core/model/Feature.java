@@ -1,8 +1,7 @@
 package com.mg.merp.core.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Column;
@@ -30,7 +29,7 @@ public class Feature extends com.mg.merp.core.model.AbstractEntity implements ja
      private SysClass SysClass;
      private SysClient SysClient;
      private String Name;
-     private EnumUserType DataType;
+     private DataKind DataType;
      private Integer Priority;
      private String NullValue;
      private String Code;
@@ -47,7 +46,7 @@ public class Feature extends com.mg.merp.core.model.AbstractEntity implements ja
         this.Name = Name;
         this.Code = Code;
     }
-    public Feature(SysClass SysClass, SysClient SysClient, String Name, EnumUserType DataType, Integer Priority, String NullValue, String Code, boolean IsArray, Short ArraySize, Set<FeatureLink> FeatureLinks, Set<FeatureVal> FeatureValues) {
+    public Feature(SysClass SysClass, SysClient SysClient, String Name, DataKind DataType, Integer Priority, String NullValue, String Code, boolean IsArray, Short ArraySize, Set<FeatureLink> FeatureLinks, Set<FeatureVal> FeatureValues) {
        this.SysClass = SysClass;
        this.SysClient = SysClient;
        this.Name = Name;
@@ -105,11 +104,11 @@ public class Feature extends com.mg.merp.core.model.AbstractEntity implements ja
 
     
     @Column(name="DATATYPE", columnDefinition="SMALLINT")
-    public EnumUserType getDataType() {
+    public DataKind getDataType() {
         return this.DataType;
     }
     
-    public void setDataType(EnumUserType DataType) {
+    public void setDataType(DataKind DataType) {
         this.DataType = DataType;
     }
 

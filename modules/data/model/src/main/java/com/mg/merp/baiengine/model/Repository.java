@@ -1,8 +1,7 @@
 package com.mg.merp.baiengine.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.model.SysClient;
 import java.util.Date;
@@ -36,7 +35,7 @@ public class Repository extends com.mg.merp.core.model.AbstractEntity implements
      private String Code;
      private String Name;
      private String Algorithm;
-     private EnumUserType Engine;
+     private EngineType Engine;
      private String ImplementationName;
 
     public Repository() {
@@ -46,7 +45,7 @@ public class Repository extends com.mg.merp.core.model.AbstractEntity implements
     public Repository(SysClient SysClient) {
         this.SysClient = SysClient;
     }
-    public Repository(Folder Folder, SysClient SysClient, String Code, String Name, String Algorithm, EnumUserType Engine, String ImplementationName) {
+    public Repository(Folder Folder, SysClient SysClient, String Code, String Name, String Algorithm, EngineType Engine, String ImplementationName) {
        this.Folder = Folder;
        this.SysClient = SysClient;
        this.Code = Code;
@@ -130,11 +129,11 @@ public class Repository extends com.mg.merp.core.model.AbstractEntity implements
 
     
     @Column(name="ENGINE", columnDefinition="SMALLINT")
-    public EnumUserType getEngine() {
+    public EngineType getEngine() {
         return this.Engine;
     }
     
-    public void setEngine(EnumUserType Engine) {
+    public void setEngine(EngineType Engine) {
         this.Engine = Engine;
     }
 

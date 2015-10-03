@@ -1,8 +1,7 @@
 package com.mg.merp.salary.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.baiengine.model.Repository;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.personnelref.model.CostsAnl;
@@ -42,14 +41,14 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
      private CostsAnl CostsAnl5;
      private CalcListSectionRef CalcListSectionRef;
      private RollKind RollKind;
-     private EnumUserType FeeType;
+     private FeeType FeeType;
      private String FCode;
      private String FName;
      private Integer Priority;
-     private EnumUserType SumSign;
+     private TripleSumSign SumSign;
      private Date BeginDate;
      private Date EndDate;
-     private EnumUserType PeriodiCity;
+     private FeePerioicity PeriodiCity;
      private boolean IsZeroIncluded;
      private Set<FeeRefParam> FeeRefParams = new HashSet<FeeRefParam>(0);
      private Set<TariffingInFee> SetOfSalTariffingInFee = new HashSet<TariffingInFee>(0);
@@ -65,7 +64,7 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
     public FeeRef(String FCode) {
         this.FCode = FCode;
     }
-    public FeeRef(GnsCode GnsCode, CostsAnl CostsAnl1, CostsAnl CostsAnl3, CostsAnl CostsAnl2, IncomeKind IncomeKind, CostsAnl CostsAnl4, Repository CalcAlg, SysClient SysClient, CostsAnl CostsAnl5, CalcListSectionRef CalcListSectionRef, RollKind RollKind, EnumUserType FeeType, String FCode, String FName, Integer Priority, EnumUserType SumSign, Date BeginDate, Date EndDate, EnumUserType PeriodiCity, boolean IsZeroIncluded, Set<FeeRefParam> FeeRefParams, Set<TariffingInFee> SetOfSalTariffingInFee, Set<IncludedFee> SetOfSalIncludedFee, Set<ReplacedFee> SetOfSalReplacedFee, Set<ReplacedFee> SetOfSalReplacedFee1, Set<IncludedFee> SetOfSalIncludedFee1) {
+    public FeeRef(GnsCode GnsCode, CostsAnl CostsAnl1, CostsAnl CostsAnl3, CostsAnl CostsAnl2, IncomeKind IncomeKind, CostsAnl CostsAnl4, Repository CalcAlg, SysClient SysClient, CostsAnl CostsAnl5, CalcListSectionRef CalcListSectionRef, RollKind RollKind, FeeType FeeType, String FCode, String FName, Integer Priority, TripleSumSign SumSign, Date BeginDate, Date EndDate, FeePerioicity PeriodiCity, boolean IsZeroIncluded, Set<FeeRefParam> FeeRefParams, Set<TariffingInFee> SetOfSalTariffingInFee, Set<IncludedFee> SetOfSalIncludedFee, Set<ReplacedFee> SetOfSalReplacedFee, Set<ReplacedFee> SetOfSalReplacedFee1, Set<IncludedFee> SetOfSalIncludedFee1) {
        this.GnsCode = GnsCode;
        this.CostsAnl1 = CostsAnl1;
        this.CostsAnl3 = CostsAnl3;
@@ -218,11 +217,11 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
 
     
     @Column(name="FEE_TYPE", columnDefinition="SMALLINT")
-    public EnumUserType getFeeType() {
+    public FeeType getFeeType() {
         return this.FeeType;
     }
     
-    public void setFeeType(EnumUserType FeeType) {
+    public void setFeeType(FeeType FeeType) {
         this.FeeType = FeeType;
     }
 
@@ -258,11 +257,11 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
 
     
     @Column(name="SUM_SIGN", columnDefinition="SMALLINT")
-    public EnumUserType getSumSign() {
+    public TripleSumSign getSumSign() {
         return this.SumSign;
     }
     
-    public void setSumSign(EnumUserType SumSign) {
+    public void setSumSign(TripleSumSign SumSign) {
         this.SumSign = SumSign;
     }
 
@@ -288,11 +287,11 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
 
     
     @Column(name="PERIODICITY", columnDefinition="SMALLINT")
-    public EnumUserType getPeriodiCity() {
+    public FeePerioicity getPeriodiCity() {
         return this.PeriodiCity;
     }
     
-    public void setPeriodiCity(EnumUserType PeriodiCity) {
+    public void setPeriodiCity(FeePerioicity PeriodiCity) {
         this.PeriodiCity = PeriodiCity;
     }
 

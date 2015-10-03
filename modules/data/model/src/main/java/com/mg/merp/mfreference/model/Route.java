@@ -1,8 +1,7 @@
 package com.mg.merp.mfreference.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.reference.model.Catalog;
 import com.mg.merp.reference.model.Contractor;
@@ -35,11 +34,11 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
      private Warehouse SrcWarehouse;
      private SysClient SysClient;
      private Warehouse DestWarehouse;
-     private EnumUserType SrcType;
+     private RouteSrcType SrcType;
      private Integer SrcCycle;
      private Short SrcRank;
      private BigDecimal SupplyPercent;
-     private EnumUserType DestType;
+     private RouteDestType DestType;
      private BigDecimal ReorderMinQty;
      private BigDecimal ReorderLotSize;
      private Integer DestCycle;
@@ -51,11 +50,11 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
 	
-    public Route(EnumUserType SrcType, EnumUserType DestType) {
+    public Route(RouteSrcType SrcType, RouteDestType DestType) {
         this.SrcType = SrcType;
         this.DestType = DestType;
     }
-    public Route(Contractor Vendor, Catalog Catalog, Contractor Customer, Warehouse SrcWarehouse, SysClient SysClient, Warehouse DestWarehouse, EnumUserType SrcType, Integer SrcCycle, Short SrcRank, BigDecimal SupplyPercent, EnumUserType DestType, BigDecimal ReorderMinQty, BigDecimal ReorderLotSize, Integer DestCycle, Short QcReceivingDays, Short LeadTime, Short SafetyDays) {
+    public Route(Contractor Vendor, Catalog Catalog, Contractor Customer, Warehouse SrcWarehouse, SysClient SysClient, Warehouse DestWarehouse, RouteSrcType SrcType, Integer SrcCycle, Short SrcRank, BigDecimal SupplyPercent, RouteDestType DestType, BigDecimal ReorderMinQty, BigDecimal ReorderLotSize, Integer DestCycle, Short QcReceivingDays, Short LeadTime, Short SafetyDays) {
        this.Vendor = Vendor;
        this.Catalog = Catalog;
        this.Customer = Customer;
@@ -149,11 +148,11 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
 
     
     @Column(name="SRC_TYPE", nullable=false, columnDefinition="SMALLINT")
-    public EnumUserType getSrcType() {
+    public RouteSrcType getSrcType() {
         return this.SrcType;
     }
     
-    public void setSrcType(EnumUserType SrcType) {
+    public void setSrcType(RouteSrcType SrcType) {
         this.SrcType = SrcType;
     }
 
@@ -189,11 +188,11 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
 
     
     @Column(name="DEST_TYPE", nullable=false, columnDefinition="SMALLINT")
-    public EnumUserType getDestType() {
+    public RouteDestType getDestType() {
         return this.DestType;
     }
     
-    public void setDestType(EnumUserType DestType) {
+    public void setDestType(RouteDestType DestType) {
         this.DestType = DestType;
     }
 

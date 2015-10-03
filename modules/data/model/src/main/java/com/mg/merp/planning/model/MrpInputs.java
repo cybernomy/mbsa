@@ -1,8 +1,7 @@
 package com.mg.merp.planning.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import java.math.BigDecimal;
 import java.util.Date;
@@ -33,8 +32,8 @@ public class MrpInputs extends com.mg.merp.core.model.AbstractEntity implements 
      private Integer ReferenceId;
      private Date RequiredDate;
      private BigDecimal MrpQuantity;
-     private EnumUserType MrpOrderType;
-     private EnumUserType MrpSource;
+     private MRPOrderType MrpOrderType;
+     private MRPSource MrpSource;
      private boolean FixedInput;
      private Date BatchDate;
      private Integer WarehouseId;
@@ -43,7 +42,7 @@ public class MrpInputs extends com.mg.merp.core.model.AbstractEntity implements 
     public MrpInputs() {
     }
 
-    public MrpInputs(SysClient SysClient, MrpVersionControl MrpVersionControl, String PpReference, Integer ReferenceId, Date RequiredDate, BigDecimal MrpQuantity, EnumUserType MrpOrderType, EnumUserType MrpSource, boolean FixedInput, Date BatchDate, Integer WarehouseId, Integer CatalogId) {
+    public MrpInputs(SysClient SysClient, MrpVersionControl MrpVersionControl, String PpReference, Integer ReferenceId, Date RequiredDate, BigDecimal MrpQuantity, MRPOrderType MrpOrderType, MRPSource MrpSource, boolean FixedInput, Date BatchDate, Integer WarehouseId, Integer CatalogId) {
        this.SysClient = SysClient;
        this.MrpVersionControl = MrpVersionControl;
        this.PpReference = PpReference;
@@ -132,21 +131,21 @@ public class MrpInputs extends com.mg.merp.core.model.AbstractEntity implements 
 
     
     @Column(name="MRP_ORDER_TYPE", columnDefinition="SMALLINT")
-    public EnumUserType getMrpOrderType() {
+    public MRPOrderType getMrpOrderType() {
         return this.MrpOrderType;
     }
     
-    public void setMrpOrderType(EnumUserType MrpOrderType) {
+    public void setMrpOrderType(MRPOrderType MrpOrderType) {
         this.MrpOrderType = MrpOrderType;
     }
 
     
     @Column(name="MRP_SOURCE", columnDefinition="SMALLINT")
-    public EnumUserType getMrpSource() {
+    public MRPSource getMrpSource() {
         return this.MrpSource;
     }
     
-    public void setMrpSource(EnumUserType MrpSource) {
+    public void setMrpSource(MRPSource MrpSource) {
         this.MrpSource = MrpSource;
     }
 

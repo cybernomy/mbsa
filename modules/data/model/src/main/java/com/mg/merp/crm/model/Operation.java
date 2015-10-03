@@ -1,8 +1,7 @@
 package com.mg.merp.crm.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import java.util.Date;
 import java.util.HashSet;
@@ -48,8 +47,8 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
      private String OperationPlan;
      private String OperationResult;
      private String OperationNext;
-     private EnumUserType Status;
-     private EnumUserType State;
+     private OperationStatusKind Status;
+     private OperationState State;
      private boolean Notified;
      private Set<LinkedDocument> LinkedDocs = new HashSet<LinkedDocument>(0);
      private Set<Offer> Offers = new HashSet<Offer>(0);
@@ -58,7 +57,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
     public Operation() {
     }
 
-    public Operation(OperationPriority Priority, Operation Parent, User Curator, User Responsible, SysClient SysClient, Contact Contact, Relation Relation, OperationKind Kind, OperationPurpose Purpose, String Code, boolean IsPlan, Date CreateDate, Date PlanDateFrom, Date PlanDateTill, Date FactDateFrom, Date FactDateTill, String OperationPlan, String OperationResult, String OperationNext, EnumUserType Status, EnumUserType State, boolean Notified, Set<LinkedDocument> LinkedDocs, Set<Offer> Offers, Set<Operation> Operations) {
+    public Operation(OperationPriority Priority, Operation Parent, User Curator, User Responsible, SysClient SysClient, Contact Contact, Relation Relation, OperationKind Kind, OperationPurpose Purpose, String Code, boolean IsPlan, Date CreateDate, Date PlanDateFrom, Date PlanDateTill, Date FactDateFrom, Date FactDateTill, String OperationPlan, String OperationResult, String OperationNext, OperationStatusKind Status, OperationState State, boolean Notified, Set<LinkedDocument> LinkedDocs, Set<Offer> Offers, Set<Operation> Operations) {
        this.Priority = Priority;
        this.Parent = Parent;
        this.Curator = Curator;
@@ -290,21 +289,21 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
 
     
     @Column(name="STATUS", columnDefinition="SMALLINT")
-    public EnumUserType getStatus() {
+    public OperationStatusKind getStatus() {
         return this.Status;
     }
     
-    public void setStatus(EnumUserType Status) {
+    public void setStatus(OperationStatusKind Status) {
         this.Status = Status;
     }
 
     
     @Column(name="STATE", columnDefinition="SMALLINT")
-    public EnumUserType getState() {
+    public OperationState getState() {
         return this.State;
     }
     
-    public void setState(EnumUserType State) {
+    public void setState(OperationState State) {
         this.State = State;
     }
 

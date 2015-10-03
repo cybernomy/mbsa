@@ -1,8 +1,7 @@
 package com.mg.merp.salary.model;
-// Generated Sep 28, 2015 11:47:52 PM by Hibernate Tools 3.6.0.Final
+// Generated Oct 4, 2015 2:18:05 AM by Hibernate Tools 3.6.0.Final
 
 
-import com.mg.framework.support.orm.EnumUserType;
 import com.mg.merp.core.model.SysClient;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -28,12 +27,12 @@ public class CalcListSectionRef extends com.mg.merp.core.model.AbstractEntity im
      private SysClient SysClient;
      private String SName;
      private Integer Priority;
-     private EnumUserType SumSign;
+     private TripleSumSign SumSign;
 
     public CalcListSectionRef() {
     }
 
-    public CalcListSectionRef(SysClient SysClient, String SName, Integer Priority, EnumUserType SumSign) {
+    public CalcListSectionRef(SysClient SysClient, String SName, Integer Priority, TripleSumSign SumSign) {
        this.SysClient = SysClient;
        this.SName = SName;
        this.Priority = Priority;
@@ -84,11 +83,11 @@ public class CalcListSectionRef extends com.mg.merp.core.model.AbstractEntity im
 
     
     @Column(name="SUM_SIGN", columnDefinition="SMALLINT")
-    public EnumUserType getSumSign() {
+    public TripleSumSign getSumSign() {
         return this.SumSign;
     }
     
-    public void setSumSign(EnumUserType SumSign) {
+    public void setSumSign(TripleSumSign SumSign) {
         this.SumSign = SumSign;
     }
 
