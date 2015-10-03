@@ -87,6 +87,11 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
         this.DisposalStrategy = DisposalStrategy;
     }
 
+    @Override
+    public int getId() {
+    	return super.getId();
+    }
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ALGORITHM_ID")
     public Repository getBatchPriceBAi() {
