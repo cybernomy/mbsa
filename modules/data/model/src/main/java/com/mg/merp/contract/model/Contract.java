@@ -563,6 +563,20 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
         this.GoodsCredit = GoodsCredit;
     }
 
+    /**
+     * Получить "Контрагента"
+     */
+    public com.mg.merp.reference.model.Contractor getFrom() {
+      return super.getFrom();
+    }
+
+    /**
+     * Получить "Нашу организацию"
+     */
+    public com.mg.merp.reference.model.Contractor getTo() {
+      return super.getTo();
+    }
+
 }
 
 
