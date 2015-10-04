@@ -64,6 +64,7 @@ public class DIScanner {
 				final ImportDeclaration imp = new ImportDeclaration(new NameExpr("com.mg.framework.api.annotations.DataItemName"), false, false);
 
 				Path java = file.subpath(4, file.getNameCount());
+				Path result = Paths.get("/home/valentin/Dev/Projects/mbsamvn/modules/data/model/src/main/java", java.toString());
 
 				List<TypeDeclaration> types = cu.getTypes();
 				for (TypeDeclaration type : types) {
@@ -71,6 +72,11 @@ public class DIScanner {
 						//Path target = Paths.get("/home/valentin/Dev/Projects/mbsamvn/modules/data/premodel/src/main/java", file.subpath(4, file.getNameCount()).toString());
 						//Files.copy(file, target, StandardCopyOption.REPLACE_EXISTING);
 					} else {
+
+						if(!Files.isReadable(result)){
+							throw new RuntimeException(String.format("missed file %s", result));
+						}
+
 						List<BodyDeclaration> members = type.getMembers();
 						for (BodyDeclaration member : members) {
 							if (member instanceof MethodDeclaration) {
@@ -79,7 +85,6 @@ public class DIScanner {
 								if (anns != null && anns.size() > 0) {
 									found = true;
 
-									Path result = Paths.get("/home/valentin/Dev/Projects/mbsamvn/modules/data/model/src/main/java", java.toString());
 									CompilationUnit target = extractClass(result);
 									for (AnnotationExpr ae : anns){
 
