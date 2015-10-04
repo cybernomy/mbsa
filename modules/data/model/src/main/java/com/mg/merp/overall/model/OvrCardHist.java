@@ -247,20 +247,20 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "ISBASIC", columnDefinition = "INTEGER")
-    public BasicNormKind getIsBasic() {
+    public BasicNormKind isBasic() {
         return this.IsBasic;
     }
 
-    public void setIsBasic(BasicNormKind IsBasic) {
+    public void setBasic(BasicNormKind IsBasic) {
         this.IsBasic = IsBasic;
     }
 
     @Column(name = "ISPERIODIC", columnDefinition = "INTEGER")
-    public PeriodicNormKind getIsPeriodic() {
+    public PeriodicNormKind isPeriodic() {
         return this.IsPeriodic;
     }
 
-    public void setIsPeriodic(PeriodicNormKind IsPeriodic) {
+    public void setPeriodic(PeriodicNormKind IsPeriodic) {
         this.IsPeriodic = IsPeriodic;
     }
 

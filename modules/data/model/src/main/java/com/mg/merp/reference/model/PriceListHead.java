@@ -161,11 +161,11 @@ public class PriceListHead extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "ISCURRENT", columnDefinition = "SMALLINT")
-    public boolean isIsCurrent() {
+    public boolean isCurrent() {
         return this.IsCurrent;
     }
 
-    public void setIsCurrent(boolean IsCurrent) {
+    public void setCurrent(boolean IsCurrent) {
         this.IsCurrent = IsCurrent;
     }
 

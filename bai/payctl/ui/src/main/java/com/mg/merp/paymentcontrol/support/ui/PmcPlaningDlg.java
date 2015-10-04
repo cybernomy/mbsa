@@ -618,7 +618,7 @@ public class PmcPlaningDlg extends AbstractForm {
   private void doOnActionInsertModel(Liability model) {
     Liability liability = liabilityService.createByPattern(model, liabilityService.getRootFolder());
     liability.setVersion((Version) ServerUtils.getPersistentManager().find(Version.class, versionId));
-    liability.setIsShared(false);
+    liability.setShared(false);
 
     MaintenanceHelper.add(liabilityService, liability, null, new MaintenanceFormActionListener() {
 

@@ -244,7 +244,7 @@ public class SettlementProcessorServiceBean extends AbstractPOJOBusinessObjectSt
     cardPlanHistory.setContractorCard(card);
     cardPlanHistory.setDocHead(docHead);
     cardPlanHistory.setKind(kind);
-    cardPlanHistory.setIsSet(isSet);
+    cardPlanHistory.setSet(isSet);
     cardPlanHistory.setProcessDate(processDate);
     cardPlanHistory.setSumCur(sumCur);
     cardPlanHistory.setSumNat(sumNat);

@@ -38,7 +38,7 @@ public class SpecificationModelServiceBean extends AbstractPOJODataBusinessObjec
   protected void onInitialize(SpecificationModel entity) {
     OperationModel om = entity.getFinOper();
     if (om != null)
-      entity.setPlanned(om.getPlanned());
+      entity.setPlanned(om.isPlanned());
   }
 
 }

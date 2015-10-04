@@ -135,11 +135,11 @@ public class BankAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "IS_DEFAULT", columnDefinition = "SMALLINT")
-    public boolean isIsDefault() {
+    public boolean isDefault() {
         return this.IsDefault;
     }
 
-    public void setIsDefault(boolean IsDefault) {
+    public void setDefault(boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 

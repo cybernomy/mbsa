@@ -81,28 +81,28 @@ public class DiscountResult {
   /**
    * @return the isApplied
    */
-  public boolean getIsApplied() {
+  public boolean isApplied() {
     return this.isApplied;
   }
 
   /**
    * @param isApplied the isApplied to set
    */
-  public void setIsApplied(boolean isApplied) {
+  public void setApplied(boolean isApplied) {
     this.isApplied = isApplied;
   }
 
   /**
    * @return the isApplyDiscountOnDoc
    */
-  public boolean getIsApplyDiscountOnDoc() {
+  public boolean isApplyDiscountOnDoc() {
     return this.isApplyDiscountOnDoc;
   }
 
   /**
    * @param isApplyDiscountOnDoc the isApplyDiscountOnDoc to set
    */
-  public void setIsApplyDiscountOnDoc(boolean isApplyDiscountOnDoc) {
+  public void setApplyDiscountOnDoc(boolean isApplyDiscountOnDoc) {
     this.isApplyDiscountOnDoc = isApplyDiscountOnDoc;
   }
 

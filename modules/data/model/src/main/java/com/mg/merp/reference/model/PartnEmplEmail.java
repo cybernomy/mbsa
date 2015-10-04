@@ -82,11 +82,11 @@ public class PartnEmplEmail extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "IS_ACTIVE", columnDefinition = "SMALLINT")
-    public Short getIsActive() {
+    public Short isActive() {
         return this.IsActive;
     }
 
-    public void setIsActive(Short IsActive) {
+    public void setActive(Short IsActive) {
         this.IsActive = IsActive;
     }
 }

@@ -1,6 +1,7 @@
 package com.mg.merp.document.model;
 
 import com.mg.merp.core.model.SysClass;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -74,7 +75,11 @@ public class DocSection extends com.mg.merp.core.model.AbstractEntity implements
         this.DocumentModelSearchHelp = DocumentModelSearchHelp;
     }
 
-    @Id
+    public DocSection(Integer id) {
+    	this.Id = id;
+	}
+
+	@Id
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
     public int getId() {
         return this.Id;

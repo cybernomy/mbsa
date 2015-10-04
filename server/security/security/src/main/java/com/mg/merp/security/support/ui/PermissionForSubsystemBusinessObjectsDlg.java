@@ -63,7 +63,7 @@ public class PermissionForSubsystemBusinessObjectsDlg extends DefaultDialog {
   public List<String> getSelectedMethodsList() {
     List<String> selectedMethods = new ArrayList<String>();
     for (MethodsTableModelItem methodsTableModelItem : methodsTableItemList) {
-      if (methodsTableModelItem.getIsChecked())
+      if (methodsTableModelItem.isChecked())
         selectedMethods.add(methodsTableModelItem.getMethodName());
     }
     return selectedMethods;
@@ -131,7 +131,7 @@ public class PermissionForSubsystemBusinessObjectsDlg extends DefaultDialog {
       MethodsTableModelItem item = methodsTableItemList.get(row);
       switch (column) {
         case 0:
-          return item.getIsChecked();
+          return item.isChecked();
         case 1:
           return item.getMethodName();
         default:
@@ -204,7 +204,7 @@ public class PermissionForSubsystemBusinessObjectsDlg extends DefaultDialog {
     /**
      * @return the isChecked
      */
-    public boolean getIsChecked() {
+    public boolean isChecked() {
       return this.isChecked;
     }
 

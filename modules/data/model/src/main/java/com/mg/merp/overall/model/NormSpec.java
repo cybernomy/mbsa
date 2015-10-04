@@ -159,29 +159,29 @@ public class NormSpec extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ISBASIC", columnDefinition = "INTEGER")
-    public BasicNormKind getIsBasic() {
+    public BasicNormKind isBasic() {
         return this.IsBasic;
     }
 
-    public void setIsBasic(BasicNormKind IsBasic) {
+    public void setBasic(BasicNormKind IsBasic) {
         this.IsBasic = IsBasic;
     }
 
     @Column(name = "ISPERIODIC", columnDefinition = "INTEGER")
-    public PeriodicNormKind getIsPeriodic() {
+    public PeriodicNormKind isPeriodic() {
         return this.IsPeriodic;
     }
 
-    public void setIsPeriodic(PeriodicNormKind IsPeriodic) {
+    public void setPeriodic(PeriodicNormKind IsPeriodic) {
         this.IsPeriodic = IsPeriodic;
     }
 
     @Column(name = "ISDINCH", columnDefinition = "INTEGER")
-    public boolean isIsDinch() {
+    public boolean isDinch() {
         return this.IsDinch;
     }
 
-    public void setIsDinch(boolean IsDinch) {
+    public void setDinch(boolean IsDinch) {
         this.IsDinch = IsDinch;
     }
 

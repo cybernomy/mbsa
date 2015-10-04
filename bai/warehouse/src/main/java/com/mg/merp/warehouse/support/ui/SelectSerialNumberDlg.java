@@ -98,7 +98,7 @@ public class SelectSerialNumberDlg extends DefaultWizardDialog {
   private int getSelectionResult() {
     selectedSerialNumbers.clear();
     for (SerialNumberModelItem item : serialNumberItemList) {
-      if (item.getIsChecked())
+      if (item.isChecked())
         selectedSerialNumbers.add(item.getNumber());
     }
     return selectedSerialNumbers.size();
@@ -230,7 +230,7 @@ public class SelectSerialNumberDlg extends DefaultWizardDialog {
       SerialNumberModelItem item = serialNumberItemList.get(row);
       switch (column) {
         case 0:
-          return item.getIsChecked();
+          return item.isChecked();
         case 1:
           return item.getNumber();
         default:

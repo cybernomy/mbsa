@@ -176,7 +176,7 @@ public class InputQuantityDlg extends DefaultDialog {
   /**
    * @return the isShowQuantity2Fields
    */
-  public boolean getIsShowQuantity2Fields() {
+  public boolean isShowQuantity2Fields() {
     return this.isShowQuantity2Fields;
   }
 
@@ -204,7 +204,7 @@ public class InputQuantityDlg extends DefaultDialog {
   /**
    * @return the isShowPriceFields
    */
-  public boolean getIsShowPriceFields() {
+  public boolean isShowPriceFields() {
     return this.isShowPriceFields;
   }
 

@@ -156,7 +156,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
         paramsName.clear();
         paramsValue.clear();
         paramsName.add("contractor"); //$NON-NLS-1$
-        if (getIsLeagalPerson())
+        if (isLeagalPerson())
           paramsValue.add(getLegalPerson());
         else
           paramsValue.add(null);
@@ -593,7 +593,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
   private void refreshPhoneTable() {
     List<PhoneItem> phoneItems = new ArrayList<PhoneItem>();
     Projection projection = Projections.projectionList(Projections.property("Id"), Projections.property("AreaCode"), Projections.property("Phone"), Projections.property("PhoneKind")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$
-    if (!getIsLeagalPerson()) {
+    if (!isLeagalPerson()) {
       phoneItems = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(PersonPhone.class)
           .setProjection(projection)
           .add(Restrictions.eq("NaturalPerson", getNaturalPerson())) //$NON-NLS-1$
@@ -629,7 +629,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
   private void refreshEAdressTable() {
     List<ElectronicAdressItem> eAdressItems = new ArrayList<ElectronicAdressItem>();
     Projection projection = Projections.projectionList(Projections.property("Id"), Projections.property("EaddressKind"), Projections.property("Protocol"), Projections.property("Address"), Projections.property("IsActive")); //$NON-NLS-1$ //$NON-NLS-2$ //$NON-NLS-3$ //$NON-NLS-4$ //$NON-NLS-5$
-    if (!getIsLeagalPerson()) {
+    if (!isLeagalPerson()) {
       eAdressItems = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(PersonElectronicAddress.class)
           .setProjection(projection)
           .add(Restrictions.eq("NaturalPerson", getNaturalPerson())) //$NON-NLS-1$
@@ -687,7 +687,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
    */
   private void getAdressInformation() {
     resetAdressInformation();
-    if (!getIsLeagalPerson()) {
+    if (!isLeagalPerson()) {
       if (getNaturalPerson() == null)
         return;
       List<PersonAddress> naturalPersonAdreses = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(PersonAddress.class)
@@ -861,7 +861,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
    * @param event - событие
    */
   public void onActionAddPhone(WidgetEvent event) throws ApplicationException {
-    if (getIsLeagalPerson())
+    if (isLeagalPerson())
       AddPhoneToLegalPerson(getLegalPerson());
     else
       AddPhoneToNaturalPerson(getNaturalPerson());
@@ -926,7 +926,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
    */
   public void onActionRemovePhone(WidgetEvent event) throws ApplicationException {
     Integer phoneId = ((PhoneListModel) this.phoneTable.getModel()).getSelectedPhoneId();
-    if (getIsLeagalPerson())
+    if (isLeagalPerson())
       RemovePhoneFromLegalPerson(phoneId);
     else
       RemovePhoneFromNaturalPerson(phoneId);
@@ -960,7 +960,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
    */
   public void onActionShowPhone(WidgetEvent event) throws ApplicationException {
     Integer phoneId = ((PhoneListModel) this.phoneTable.getModel()).getSelectedPhoneId();
-    if (getIsLeagalPerson())
+    if (isLeagalPerson())
       ShowPhoneOfLegalPerson(phoneId);
     else
       ShowPhoneOfNaturalPerson(phoneId);
@@ -993,7 +993,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
    */
   public void onActionEditPhone(WidgetEvent event) throws ApplicationException {
     Integer phoneId = ((PhoneListModel) this.phoneTable.getModel()).getSelectedPhoneId();
-    if (getIsLeagalPerson())
+    if (isLeagalPerson())
       EditPhoneOfLegalPerson(phoneId);
     else
       EditPhoneOfNaturalPerson(phoneId);
@@ -1057,7 +1057,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
    * @param event - событие
    */
   public void onActionAddEAdress(WidgetEvent event) throws ApplicationException {
-    if (getIsLeagalPerson())
+    if (isLeagalPerson())
       AddEAdressToLegalPerson(getLegalPerson());
     else
       AddEAdressToNaturalPerson(getNaturalPerson());
@@ -1126,7 +1126,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
    */
   public void onActionRemoveEAdress(WidgetEvent event) throws ApplicationException {
     Integer eAdressId = ((ElectronicAdressTableModel) this.eAdressTable.getModel()).getSelectedElectronicAdressId();
-    if (getIsLeagalPerson())
+    if (isLeagalPerson())
       removeEAdressFromLegalPerson(eAdressId);
     else
       removeEAdressFromNaturalPerson(eAdressId);
@@ -1160,7 +1160,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
    */
   public void onActionShowEAdress(WidgetEvent event) throws ApplicationException {
     Integer eAdressId = ((ElectronicAdressTableModel) this.eAdressTable.getModel()).getSelectedElectronicAdressId();
-    if (getIsLeagalPerson())
+    if (isLeagalPerson())
       showEAdressOfLegalPerson(eAdressId);
     else
       showEAdressOfNaturalPerson(eAdressId);
@@ -1193,7 +1193,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
    */
   public void onActionEditEAdress(WidgetEvent event) {
     Integer eAdressId = ((ElectronicAdressTableModel) eAdressTable.getModel()).getSelectedElectronicAdressId();
-    if (getIsLeagalPerson())
+    if (isLeagalPerson())
       editEAdressOfLegalPerson(eAdressId);
     else
       editEAdressOfNaturalPerson(eAdressId);
@@ -1565,7 +1565,7 @@ public class RelationMt extends DefaultMaintenanceForm implements MasterModelLis
    *
    * @return true - юр.лицо; false - физ.лицо
    */
-  private boolean getIsLeagalPerson() {
+  private boolean isLeagalPerson() {
     return (Boolean) getEntity().getAttribute("IsLegalPerson"); //$NON-NLS-1$
   }
 

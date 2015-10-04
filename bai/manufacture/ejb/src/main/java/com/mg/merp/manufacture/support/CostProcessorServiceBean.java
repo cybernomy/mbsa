@@ -330,7 +330,7 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
 
     for (JobMaterial jobMaterial : jobMaterials) {
       calculateMaterialCost(operTime, ownerCost, actualityDate, jobMaterial.getCatalog(), jobMaterial.getMeasure(), jobMaterial.getQuantityRateFlag(), targetQuan, jobMaterial.getMtlQty(),
-          jobMaterial.getScrapFactor(), jobMaterial.getStdCostDetail(), jobMaterial.getCurrency(), jobMaterial.getMtlOhBackflushFlag(),
+          jobMaterial.getScrapFactor(), jobMaterial.getStdCostDetail(), jobMaterial.getCurrency(), jobMaterial.isMtlOhBackflushFlag(),
           jobMaterial.getMtlOhAllocationFlag(), jobMaterial.getMtlOhRate(), jobMaterial.getMtlOhRatio(),
           jobMaterial.getMtlCostCategory(), jobMaterial.getMtlOhCostCategory());
     }
@@ -416,7 +416,7 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
     for (JobMachine jobMachine : jobMachines) {
       calculateMachineCost(actualityDate, ownerCost, jobMachine.getMchRecoveryFlag(), jobMachine.getTimeRateFlag(), targetQuan,
           jobMachine.getStdCostDetail(), jobMachine.getRunTicksMch(), jobMachine.getMchOhRate(), jobMachine.getMchCostCategory(),
-          jobMachine.getMchRateCurrency(), jobMachine.getMchOhBackflushFlag(), jobMachine.getMchOhAllocationFlag(),
+          jobMachine.getMchRateCurrency(), jobMachine.isMchOhBackflushFlag(), jobMachine.getMchOhAllocationFlag(),
           jobMachine.getMchOhRate(), jobMachine.getMchOhRatio(), jobMachine.getMchOhCostCategory(), jobMachine.getMchOhRateCurrency());
     }
   }

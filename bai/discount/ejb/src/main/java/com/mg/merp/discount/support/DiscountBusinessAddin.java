@@ -38,8 +38,8 @@ import java.util.Map;
  * 		BigDecimal discount = MathUtils.divide(getSpecification().getPrice1().multiply(new
  * BigDecimal(50).negate()), MathUtils.HUNDRED, new RoundContext(6));
  * 		result.setDiscount(discount);
- * 		result.setIsApplyDiscountOnDoc(true);
- * 		result.setIsApplied(true);
+ * 		result.setApplyDiscountOnDoc(true);
+ * 		result.setApplied(true);
  * 		complete(result);
  * 	}
  * <p>
@@ -79,9 +79,9 @@ import java.util.Map;
  * 		BigDecimal discount = MathUtils.divide(getSpecification().getPrice1().multiply(new
  * BigDecimal(15).negate()), MathUtils.HUNDRED, new RoundContext(6));
  * 		result.setDiscount(discount);
- * 		result.setIsApplied(true);
+ * 		result.setApplied(true);
  * 	else
- * 		result.setIsApplied(false);
+ * 		result.setApplied(false);
  * 	// успешно завершить выполнение BAi и вернуть результат
  * 	complete(result);
  * }

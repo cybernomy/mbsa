@@ -61,20 +61,20 @@ public class OrgUnit extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "IS_OFFICE", columnDefinition = "SMALLINT")
-    public Boolean getIsOffice() {
+    public Boolean isOffice() {
         return this.IsOffice;
     }
 
-    public void setIsOffice(Boolean IsOffice) {
+    public void setOffice(Boolean IsOffice) {
         this.IsOffice = IsOffice;
     }
 
     @Column(name = "IS_STORE", columnDefinition = "SMALLINT")
-    public Boolean getIsStore() {
+    public Boolean isStore() {
         return this.IsStore;
     }
 
-    public void setIsStore(Boolean IsStore) {
+    public void setStore(Boolean IsStore) {
         this.IsStore = IsStore;
     }
 

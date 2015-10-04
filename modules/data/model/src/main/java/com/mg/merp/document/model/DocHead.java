@@ -1,8 +1,10 @@
 package com.mg.merp.document.model;
 
 import static javax.persistence.GenerationType.SEQUENCE;
+
 import java.math.BigDecimal;
 import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -14,10 +16,13 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.persistence.Transient;
 import javax.persistence.Version;
+
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
+
 import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.core.model.SysCompany;
@@ -118,6 +123,9 @@ public class DocHead extends com.mg.merp.core.model.AbstractEntity implements ja
     private boolean ManualDocNumber;
 
     private String Description;
+
+    @Transient
+    private boolean isAdjusted;
 
     public DocHead() {
     }
@@ -569,6 +577,20 @@ public class DocHead extends com.mg.merp.core.model.AbstractEntity implements ja
 
     public void setDescription(String Description) {
         this.Description = Description;
+    }
+
+    /**
+     * признак корректности сущности, если <code>true</code> то система не автоматически
+     * корректировать сущность при внесении в хранилище
+     *
+     * @return the isAdjusted
+     */
+    public boolean isAdjusted() {
+      return isAdjusted;
+    }
+
+    public void setAdjusted(boolean isAdjusted) {
+      this.isAdjusted = isAdjusted;
     }
 }
 

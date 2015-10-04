@@ -70,7 +70,7 @@ public class PaymentServiceBean extends AbstractPOJODataBusinessObjectServiceBea
     Payment payment = initialize();
     attributes.remove("Id"); //$NON-NLS-1$
     payment.setAttributes(attributes);
-    payment.setIsModel(false);
+    payment.setModel(false);
     if (pattern.getDestFolder() != null)
       payment.setFolder(pattern.getDestFolder());
     else

@@ -53,7 +53,7 @@ public class BankAccountServiceBean extends AbstractPOJODataBusinessObjectServic
   protected void onValidate(ValidationContext context, final BankAccount entity) {
     context.addRule(new MandatoryStringAttribute(entity, "Unid")); //$NON-NLS-1$
     context.addRule(new MandatoryAttribute(entity, "BankAccountType")); //$NON-NLS-1$
-    if (entity.getIsDefault()) {
+    if (entity.isDefault()) {
       context.addRule(new EntityBeanRule(com.mg.merp.reference.support.Messages.getInstance().getMessage(com.mg.merp.reference.support.Messages.BANKACCOUNT_ISDEFAULT_UNIQUE), entity, "IsDefault") {  //$NON-NLS-1$
 
         /*

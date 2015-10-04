@@ -312,11 +312,11 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ISHASWEIGHT", columnDefinition = "SMALLINT")
-    public boolean isIsHasWeight() {
+    public boolean isHasWeight() {
         return this.IsHasWeight;
     }
 
-    public void setIsHasWeight(boolean IsHasWeight) {
+    public void setHasWeight(boolean IsHasWeight) {
         this.IsHasWeight = IsHasWeight;
     }
 
@@ -357,11 +357,11 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ISNOTINUSE", columnDefinition = "SMALLINT")
-    public boolean isIsNotInUse() {
+    public boolean isNotInUse() {
         return this.IsNotInUse;
     }
 
-    public void setIsNotInUse(boolean IsNotInUse) {
+    public void setNotInUse(boolean IsNotInUse) {
         this.IsNotInUse = IsNotInUse;
     }
 

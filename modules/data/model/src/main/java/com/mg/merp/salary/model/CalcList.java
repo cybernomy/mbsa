@@ -117,11 +117,11 @@ public class CalcList extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "IS_CALCULATED", columnDefinition = "SMALLINT")
-    public boolean isIsCalculated() {
+    public boolean isCalculated() {
         return this.IsCalculated;
     }
 
-    public void setIsCalculated(boolean IsCalculated) {
+    public void setCalculated(boolean IsCalculated) {
         this.IsCalculated = IsCalculated;
     }
 
@@ -162,11 +162,11 @@ public class CalcList extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "IS_CLOSED", columnDefinition = "SMALLINT")
-    public boolean isIsClosed() {
+    public boolean isClosed() {
         return this.IsClosed;
     }
 
-    public void setIsClosed(boolean IsClosed) {
+    public void setClosed(boolean IsClosed) {
         this.IsClosed = IsClosed;
     }
 

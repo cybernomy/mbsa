@@ -218,11 +218,11 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "IS_PLAN", columnDefinition = "SMALLINT")
-    public boolean isIsPlan() {
+    public boolean isPlan() {
         return this.IsPlan;
     }
 
-    public void setIsPlan(boolean IsPlan) {
+    public void setPlan(boolean IsPlan) {
         this.IsPlan = IsPlan;
     }
 

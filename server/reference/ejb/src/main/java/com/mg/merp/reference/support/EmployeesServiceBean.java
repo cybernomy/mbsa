@@ -84,7 +84,7 @@ public class EmployeesServiceBean extends ContractorServiceBean<Employees> imple
           context.getStatus().error(this);
       }
     });
-    if (entity.getIsDefault()) {
+    if (entity.isDefault()) {
       context.addRule(new EntityBeanRule(com.mg.merp.reference.support.Messages.getInstance().getMessage(com.mg.merp.reference.support.Messages.EMPLOYESS_ISDEFAULT_UNIQUE), entity, "IsDefault") {
         @Override
         protected void doValidate(ValidationContext context) {

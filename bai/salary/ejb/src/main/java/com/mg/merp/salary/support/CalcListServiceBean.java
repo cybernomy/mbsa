@@ -158,7 +158,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
    * @param isClear           - признак "очистки" расчетного листка перед расчетом
    */
   protected void doPrepareCalcList(CalcList calcList, CalculationParams calculationParams, boolean isClear) {
-    if (calcList.getIsClosed())
+    if (calcList.isClosed())
       return;
 
     boolean isNeedCalcListToRecalc = false;
@@ -192,7 +192,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
         continue;
 
       // если указано, что считать только для базовой должности, то и должность из расчетного листа должна быть базовой
-      if (feeModel.getUseBasicPosition() && !positionFill.getIsBasic())
+      if (feeModel.getUseBasicPosition() && !positionFill.isBasic())
         continue;
 
       // добавим в список реально действующих начислений
@@ -216,7 +216,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
     }
 
     if (isNeedCalcListToRecalc) {
-      calcList.setIsCalculated(false);
+      calcList.setCalculated(false);
       store(calcList);
     } else
       doPerformCalculation(calcList, calculationParams);
@@ -254,7 +254,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
           FeeRefParam feeRefParam = calcListFeeParam.getFeeRefParam();
           // если есть алгоритм, то расчитать
           if (feeRefParam.getCalcAlg() != null) {
-            if (!(feeRefParam.getCalcOnce() && calcListFee.getIsCalculated())) {
+            if (!(feeRefParam.getCalcOnce() && calcListFee.isCalculated())) {
               FeeParamBusinessAddinListener feeParamBusinessAddinListener = new FeeParamBusinessAddinListener();
               BusinessAddinEngineLocator.locate().perform(feeRefParam.getCalcAlg(), calcContextParams, feeParamBusinessAddinListener);
               calcListFeeParam.setParamValue(feeParamBusinessAddinListener.result.toString());
@@ -267,7 +267,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
         proccessCalcListFeeAfterCalculation(calcListFee, feeBusinessAddinListener.result, currencyPrecisionRoundContext);
       }
     }
-    calcList.setIsCalculated(true);
+    calcList.setCalculated(true);
     store(calcList);
   }
 
@@ -331,7 +331,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
    */
   protected void proccessCalcListFeeAfterCalculation(CalcListFee calcListFee, final FeeBAiResult calcResult, RoundContext currencyPrecisionRoundContext) {
     updateCalcListFeeByCalculationResult(calcListFee, calcResult, currencyPrecisionRoundContext);
-    if (MathUtils.compareToZero(calcListFee.getSumma()) == 0 && !calcListFee.getFeeModel().getFeeRef().getIsZeroIncluded())
+    if (MathUtils.compareToZero(calcListFee.getSumma()) == 0 && !calcListFee.getFeeModel().getFeeRef().isZeroIncluded())
       getCalcListFeeService().erase(calcListFee);
     else
       getCalcListFeeService().store(calcListFee);
@@ -368,7 +368,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
     if (calcResult.getCostsAnl5() != null)
       calcListFee.setCostsAnl5(calcResult.getCostsAnl5());
 
-    calcListFee.setIsCalculated(true);
+    calcListFee.setCalculated(true);
   }
 
   /**
@@ -441,7 +441,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
     calcListFee.setPeriodBeginDate(periodBeginDate);
     calcListFee.setPeriodEndDate(periodEndDate);
     calcListFee.setNeedParams(false);
-    calcListFee.setIsCalculated(true);
+    calcListFee.setCalculated(true);
     calcListFee.setDontRecalc(false);
     calcListFee.setSumma(feeModel.getSumma());
     return calcListFee;
@@ -452,7 +452,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
     calcListFee.setCalcListSection(calcListSection);
     calcListFee.setFeeModel(feeModel);
     calcListFee.setNeedParams(false);
-    calcListFee.setIsCalculated(false);
+    calcListFee.setCalculated(false);
     calcListFee.setDontRecalc(false);
     return calcListFee;
   }
@@ -840,8 +840,8 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
     calcList.setPositionFill(positionFill);
     calcList.setPayRoll(payRoll);
     calcList.setNeedParams(false);
-    calcList.setIsCalculated(false);
-    calcList.setIsClosed(false);
+    calcList.setCalculated(false);
+    calcList.setClosed(false);
     calcList.setTotalSumma(BigDecimal.ZERO);
     calcList.setPositiveSumma(BigDecimal.ZERO);
     calcList.setNegativeSumma(BigDecimal.ZERO);

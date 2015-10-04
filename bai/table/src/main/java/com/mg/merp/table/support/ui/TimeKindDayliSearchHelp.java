@@ -23,10 +23,10 @@ package com.mg.merp.table.support.ui;
 public class TimeKindDayliSearchHelp extends TimeKindSearchHelp {
 
   /* (non-Javadoc)
-   * @see com.mg.merp.table.support.ui.TimeKindSearchHelp#getIsWholeDay()
+   * @see com.mg.merp.table.support.ui.TimeKindSearchHelp#isWholeDay()
    */
   @Override
-  protected Boolean getIsWholeDay() {
+  protected Boolean isWholeDay() {
     return true;
   }
 

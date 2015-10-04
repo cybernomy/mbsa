@@ -69,8 +69,8 @@ public class PersonalAccountBr extends DefaultPlainBrowseForm {
       whereText = whereText.append(" and pf.PersonalAccount = pa.Id");
       fromList = (", PositionFill pf ").concat(fromList);
     }
-    if (restForm.getIsBasic() != 0) {
-      whereText = whereText.append(DatabaseUtils.formatEJBQLObjectRestriction("pf.IsBasic", BooleanUtils.toBoolean(restForm.getIsBasic(), 1, 2), "isBasic", paramsName, paramsValue, false));
+    if (restForm.isBasic() != 0) {
+      whereText = whereText.append(DatabaseUtils.formatEJBQLObjectRestriction("pf.IsBasic", BooleanUtils.toBoolean(restForm.isBasic(), 1, 2), "isBasic", paramsName, paramsValue, false));
     }
     return String.format(INIT_QUERY_TEXT, fieldsList, fromList, whereText.toString());
   }

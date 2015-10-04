@@ -313,8 +313,8 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
    * @param promotionDiscount - значение скидки/наченки по РМ
    */
   protected void updateSpecByDiscountResult(DocSpec spec, DocHead docHead, GoodsDocumentSpecification<DocSpec, Integer> specService, DiscountResult result, BigDecimal promotionDiscount) {
-    if (result.getIsApplied()) {
-      if (result.getIsApplyDiscountOnDoc()) // если разрешено применять "скидку на документ"
+    if (result.isApplied()) {
+      if (result.isApplyDiscountOnDoc()) // если разрешено применять "скидку на документ"
         spec.setAttribute("DocDiscount", docHead.getAttribute("DiscountOnDoc")); //$NON-NLS-1$ //$NON-NLS-2$
       if (result.getDiscount() != null) // если расчитывалась скидка, то учтем скидку РМ
         spec.setAttribute("ExternalDiscountValue", result.getDiscount().add(promotionDiscount == null ? BigDecimal.ZERO : promotionDiscount)); //$NON-NLS-1$
@@ -367,8 +367,8 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
         if (discountValue != null)
           discountResult.setDiscount(discountResult.getDiscount() == null ? discountValue : discountResult.getDiscount().add(discountValue));
         discountResult.setPriceWithDiscount(event.getResult().getPriceWithDiscount());
-        discountResult.setIsApplyDiscountOnDoc(event.getResult().getIsApplyDiscountOnDoc());
-        discountResult.setIsApplied(event.getResult().getIsApplied());
+        discountResult.setApplyDiscountOnDoc(event.getResult().isApplyDiscountOnDoc());
+        discountResult.setApplied(event.getResult().isApplied());
 
         if (getLogger().isDebugEnabled())
           getLogger().debug(String.format("RecursionDiscountBAiListenerImpl сompleted: [Discount = %1$s]", discountResult.getDiscount())); //$NON-NLS-1$
@@ -408,7 +408,7 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
           promotionDiscountResult.setDiscount(promotionDiscountResult.getDiscount() == null ? discountValue : promotionDiscountResult.getDiscount().add(discountValue));
         promotionDiscountResult.setPriceWithDiscount(event.getResult().getPriceWithDiscount());
         promotionDiscountResult.setAlonePromotion(event.getResult().isAlonePromotion());
-        promotionDiscountResult.setIsApplied(event.getResult().getIsApplied());
+        promotionDiscountResult.setApplied(event.getResult().isApplied());
 
         if (getLogger().isDebugEnabled())
           getLogger().debug(String.format("RecursionPromotionBAiListenerImpl сompleted: [Discount = %1$s]", promotionDiscountResult.getDiscount())); //$NON-NLS-1$
@@ -445,7 +445,7 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
 
         if (getLogger().isDebugEnabled())
           getLogger().debug(String.format("Calculation discount by group completed [specID = %1$s] CalculationResult([IsApplied = %2$s] [Discount = %3$s] [PriceWithDiscount = %4$s])", //$NON-NLS-1$
-              spec.getId(), result.getIsApplied(), result.getDiscount(), result.getPriceWithDiscount()));
+              spec.getId(), result.isApplied(), result.getDiscount(), result.getPriceWithDiscount()));
 
         updateSpecByDiscountResult(spec, docHead, specService, result, null);
 
@@ -483,11 +483,11 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
         final DocSpec spec = specs.get(index);
         if (getLogger().isDebugEnabled())
           getLogger().debug(String.format("Calculation discount by promotion completed [specID = %1$s] [promotionLineID = %2$s] CalculationResult([IsApplied = %3$s] [Discount = %4$s] [PriceWithDiscount = %5$s])", //$NON-NLS-1$
-              spec.getId(), promotionLine.getId(), result.getIsApplied(), result.getDiscount(), result.getPriceWithDiscount()));
+              spec.getId(), promotionLine.getId(), result.isApplied(), result.getDiscount(), result.getPriceWithDiscount()));
 
-        if (result.getIsApplied()) { // если РМ действует
+        if (result.isApplied()) { // если РМ действует
           // если у позиции РМ установлен признак "разрешить применение с/н на документ"
-          if (promotionLine.getIsApplyDiscountOnDoc())
+          if (promotionLine.isApplyDiscountOnDoc())
             spec.setAttribute("DocDiscount", docHead.getAttribute("DiscountOnDoc")); //$NON-NLS-1$ //$NON-NLS-2$
 
           if (result.getDiscount() != null) { // если расчитана скидка
@@ -500,7 +500,7 @@ public class DiscountProcessorServiceBean extends AbstractPOJOBusinessObjectStat
           // если у позиции РМ установлен признак "разрешить применение группы с/н"
           spec.setBulkOperation(true);
           specService.store(spec);
-          if (promotionLine.getIsApplyDiscountGroup())
+          if (promotionLine.isApplyDiscountGroup())
             calculateDiscountValue(docHead.getDiscountFolder(), spec, new CalculateDiscountListenerImpl(specService, docHead, specs, index) {
 
               /* (non-Javadoc)

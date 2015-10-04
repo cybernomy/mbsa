@@ -136,11 +136,11 @@ public class ContractorCardPlan extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "IS_SET", columnDefinition = "SMALLINT")
-    public boolean isIsSet() {
+    public boolean isSet() {
         return this.IsSet;
     }
 
-    public void setIsSet(boolean IsSet) {
+    public void setSet(boolean IsSet) {
         this.IsSet = IsSet;
     }
 

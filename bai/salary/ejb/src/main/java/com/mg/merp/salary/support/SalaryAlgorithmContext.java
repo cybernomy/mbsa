@@ -175,8 +175,8 @@ public class SalaryAlgorithmContext {
    *
    * @return <code>true</code> если все поля аналитики состава затрат = 0
    */
-  final public boolean getIsEmptyCostsAnl() throws ApplicationException {
-    //return nativeGetIsEmptyCostsAnl(handle);
+  final public boolean isEmptyCostsAnl() throws ApplicationException {
+    //return nativeisEmptyCostsAnl(handle);
     //TODO
     return false;
   }

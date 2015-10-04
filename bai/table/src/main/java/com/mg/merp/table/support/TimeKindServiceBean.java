@@ -38,7 +38,7 @@ public class TimeKindServiceBean extends AbstractPOJODataBusinessObjectServiceBe
   @Override
   protected void onValidate(ValidationContext context, TimeKind entity) {
     context.addRule(new MandatoryStringAttribute(entity, "Code"));
-    if (entity.getIsWholeDay()) {
+    if (entity.isWholeDay()) {
       context.addRule(new MandatoryStringAttribute(entity, "MnemoCode"));
     }
   }

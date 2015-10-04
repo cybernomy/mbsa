@@ -50,7 +50,7 @@ public class SerialNumberModelItem {
   /**
    * @return the isChecked
    */
-  public boolean getIsChecked() {
+  public boolean isChecked() {
     return this.isChecked;
   }
 

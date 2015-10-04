@@ -78,15 +78,15 @@ public class ItemServiceBean extends AbstractPOJODataBusinessObjectServiceBean<I
 
     Date resultDate = null;
 
-    if (item.getIsAbsDate()) {
-      if (!isDateConditionsValid(item.getIsDateRelDoc(), item.getIsDateRelEnd()))
+    if (item.isAbsDate()) {
+      if (!isDateConditionsValid(item.isDateRelDoc(), item.isDateRelEnd()))
         throw new BusinessException(Messages.getInstance().getMessage(Messages.INVALID_DATE_CONDITIONS));
 
-      if (item.getIsDateRelDoc())
+      if (item.isDateRelDoc())
         resultDate = computeDate(getDocHead(item).getDocDate(), item.getDateOffSet(), item.getDateOffSetKind());
       else {
         if (item.getDateRelItem() != null)
-          if (item.getIsDateRelEnd())
+          if (item.isDateRelEnd())
             resultDate = computeDate(item.getDateRelItem().getResultDateEnd(), item.getDateOffSet(), item.getDateOffSetKind());
           else
             resultDate = computeDate(item.getDateRelItem().getResultDate(), item.getDateOffSet(), item.getDateOffSetKind());
@@ -179,11 +179,11 @@ public class ItemServiceBean extends AbstractPOJODataBusinessObjectServiceBean<I
 
     BigDecimal resultSum = BigDecimal.ZERO;
 
-    if (item.getIsAbsSum()) {
-      if (!isSumConditionsValid(item.getIsSumRelDoc(), item.getIsRelFact()))
+    if (item.isAbsSum()) {
+      if (!isSumConditionsValid(item.isSumRelDoc(), item.isRelFact()))
         throw new BusinessException(Messages.getInstance().getMessage(Messages.INVALID_SUM_CONDITIONS));
 
-      if (item.getIsSumRelDoc()) {
+      if (item.isSumRelDoc()) {
         DocHead docHead = getDocHead(item);
         resultSum = computeSum(item, docHead.getCurrency(), docHead.getSumCur());
       } else {

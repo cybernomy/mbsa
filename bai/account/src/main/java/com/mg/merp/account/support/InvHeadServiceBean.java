@@ -116,8 +116,8 @@ public class InvHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBea
       inventory.setInOperDate(inOperDate);
       inventory.setOutOperDate(outOperDate);
       inventory.setOutOperDocNum(outOperDocNum);
-      inventory.setIsComplex(complex);
-      inventory.setIsCommon(common);
+      inventory.setComplex(complex);
+      inventory.setCommon(common);
       inventory.setComment(comment);
       inventory.setCatalog(catalog);
       inventory.setContractor(contractor);

@@ -145,11 +145,11 @@ public class PersonnelService extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "IS_GOINGON", columnDefinition = "SMALLINT")
-    public boolean isIsGoingOn() {
+    public boolean isGoingOn() {
         return this.IsGoingOn;
     }
 
-    public void setIsGoingOn(boolean IsGoingOn) {
+    public void setGoingOn(boolean IsGoingOn) {
         this.IsGoingOn = IsGoingOn;
     }
 

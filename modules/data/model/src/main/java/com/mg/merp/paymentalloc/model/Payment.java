@@ -451,11 +451,11 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "IS_MODEL", columnDefinition = "SMALLINT")
-    public boolean isIsModel() {
+    public boolean isModel() {
         return this.IsModel;
     }
 
-    public void setIsModel(boolean IsModel) {
+    public void setModel(boolean IsModel) {
         this.IsModel = IsModel;
     }
 

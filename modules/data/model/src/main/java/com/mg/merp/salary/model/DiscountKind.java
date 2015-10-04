@@ -136,11 +136,11 @@ public class DiscountKind extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "IS_ACCUMULATING", columnDefinition = "SMALLINT")
-    public boolean isIsAccumulating() {
+    public boolean isAccumulating() {
         return this.IsAccumulating;
     }
 
-    public void setIsAccumulating(boolean IsAccumulating) {
+    public void setAccumulating(boolean IsAccumulating) {
         this.IsAccumulating = IsAccumulating;
     }
 }

@@ -106,11 +106,11 @@ public class ContractorElectronicAddress extends com.mg.merp.core.model.Abstract
     }
 
     @Column(name = "IS_ACTIVE", columnDefinition = "SMALLINT")
-    public boolean isIsActive() {
+    public boolean isActive() {
         return this.IsActive;
     }
 
-    public void setIsActive(boolean IsActive) {
+    public void setActive(boolean IsActive) {
         this.IsActive = IsActive;
     }
 }

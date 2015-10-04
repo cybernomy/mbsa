@@ -57,7 +57,7 @@ public class LiabilityModelServiceBean extends AbstractPOJODataBusinessObjectSer
   }
 
   private void adjustEntity(Liability entity) {
-    entity.setIsModel(true);
+    entity.setModel(true);
   }
 
 }

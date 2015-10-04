@@ -258,7 +258,7 @@ public class DocumentRest extends DefaultHierarhyRestrictionForm {
   /**
    * @return the isDpsCompleted
    */
-  public boolean getIsDpsCompleted() {
+  public boolean isDpsCompleted() {
     return this.isDpsCompleted;
   }
 
@@ -272,7 +272,7 @@ public class DocumentRest extends DefaultHierarhyRestrictionForm {
   /**
    * @return the isDpsCompletedPartly
    */
-  public boolean getIsDpsCompletedPartly() {
+  public boolean isDpsCompletedPartly() {
     return this.isDpsCompletedPartly;
   }
 

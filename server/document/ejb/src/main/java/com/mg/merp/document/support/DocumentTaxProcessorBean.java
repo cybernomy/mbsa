@@ -142,7 +142,7 @@ public class DocumentTaxProcessorBean extends
   protected List<CalcTaxItem> selectDocumentSpecTaxes(List<CalcTaxItem> allTaxes, final boolean total, boolean included) {
     List<CalcTaxItem> result = new LinkedList<CalcTaxItem>();
     for (CalcTaxItem item : allTaxes)
-      if (item.calcLink.getIncluded() == included)
+      if (item.calcLink.isIncluded() == included)
         result.add(item);
     //сортировка по feeOrder, если total == true, то обратная сортировка
     Collections.sort(result, new Comparator<CalcTaxItem>() {
@@ -172,7 +172,7 @@ public class DocumentTaxProcessorBean extends
   protected BigDecimal loadLayerRate(List<CalcTaxItem> allTaxes, short feeOrder, boolean included) {
     BigDecimal result = BigDecimal.ZERO;
     for (CalcTaxItem item : allTaxes)
-      if (item.calcLink.getIncluded() == included && item.calcLink.getFeeOrder() == feeOrder)
+      if (item.calcLink.isIncluded() == included && item.calcLink.getFeeOrder() == feeOrder)
         result = result.add(item.tax.getTax().getDirectRate());
     return result;
   }
@@ -367,7 +367,7 @@ public class DocumentTaxProcessorBean extends
     BigDecimal taxesOnPrice = BigDecimal.ZERO, taxesOnSum = BigDecimal.ZERO;
     for (CalcTaxItem taxItem : allTaxes) {
       //расчитываем сумму не включенных налогов для цены и суммы спецификации
-      if (!taxItem.calcLink.getIncluded()) {
+      if (!taxItem.calcLink.isIncluded()) {
         taxesOnPrice = taxesOnPrice.add(taxItem.tax.getPriceElement());
         taxesOnSum = taxesOnSum.add(taxItem.tax.getSumElement());
       }

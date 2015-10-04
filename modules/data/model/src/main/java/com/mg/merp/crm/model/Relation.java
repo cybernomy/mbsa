@@ -313,11 +313,11 @@ public class Relation extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "IS_LEGAL_PERSON", columnDefinition = "SMALLINT")
-    public boolean isIsLegalPerson() {
+    public boolean isLegalPerson() {
         return this.IsLegalPerson;
     }
 
-    public void setIsLegalPerson(boolean IsLegalPerson) {
+    public void setLegalPerson(boolean IsLegalPerson) {
         this.IsLegalPerson = IsLegalPerson;
     }
 

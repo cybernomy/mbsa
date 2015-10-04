@@ -160,11 +160,11 @@ public class PersonnelEducation extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "IS_ADDITIONAL", columnDefinition = "SMALLINT")
-    public PrefIsAdditionalEducation getIsAdditional() {
+    public PrefIsAdditionalEducation isAdditional() {
         return this.IsAdditional;
     }
 
-    public void setIsAdditional(PrefIsAdditionalEducation IsAdditional) {
+    public void setAdditional(PrefIsAdditionalEducation IsAdditional) {
         this.IsAdditional = IsAdditional;
     }
 }

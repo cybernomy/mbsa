@@ -106,11 +106,11 @@ public class PersonElectronicAddress extends com.mg.merp.core.model.AbstractEnti
     }
 
     @Column(name = "IS_ACTIVE", columnDefinition = "SMALLINT")
-    public boolean isIsActive() {
+    public boolean isActive() {
         return this.IsActive;
     }
 
-    public void setIsActive(boolean IsActive) {
+    public void setActive(boolean IsActive) {
         this.IsActive = IsActive;
     }
 }

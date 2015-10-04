@@ -354,7 +354,7 @@ public class PersonalAccountRest extends ItemWithDateIntervalRest {
   /**
    * @return Returns the isBasic.
    */
-  protected int getIsBasic() {
+  protected int isBasic() {
     return isBasic;
   }
 

@@ -67,11 +67,11 @@ public class Employees extends com.mg.merp.reference.model.Contractor implements
     }
 
     @Column(name = "IS_DEFAULT", columnDefinition = "SMALLINT")
-    public boolean isIsDefault() {
+    public boolean isDefault() {
         return this.IsDefault;
     }
 
-    public void setIsDefault(boolean IsDefault) {
+    public void setDefault(boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 }

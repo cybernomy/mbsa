@@ -114,14 +114,14 @@ public class PromotionDiscountResult {
   /**
    * @return the isApplied
    */
-  public boolean getIsApplied() {
+  public boolean isApplied() {
     return this.isApplied;
   }
 
   /**
    * @param isApplied the isApplied to set
    */
-  public void setIsApplied(boolean isApplied) {
+  public void setApplied(boolean isApplied) {
     this.isApplied = isApplied;
   }
 

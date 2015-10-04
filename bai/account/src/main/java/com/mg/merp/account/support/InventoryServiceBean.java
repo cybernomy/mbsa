@@ -146,8 +146,8 @@ public class InventoryServiceBean extends AbstractPOJODataBusinessObjectServiceB
       entity.setInOperDate(invHead.getInOperDate());
       entity.setOutOperDate(invHead.getOutOperDate());
       entity.setOutOperDocNum(invHead.getOutOperDocNum());
-      entity.setIsComplex(invHead.isComplex());
-      entity.setIsCommon(invHead.isCommon());
+      entity.setComplex(invHead.isComplex());
+      entity.setCommon(invHead.isCommon());
       entity.setComment(invHead.getComment());
       entity.setCatalog(invHead.getCatalog());
       entity.setContractor(invHead.getContractor());

@@ -133,11 +133,11 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ISO", unique = true, nullable = false, columnDefinition = "CHAR", length = 5)
-    public String getIso() {
+    public String iso() {
         return this.Iso;
     }
 
-    public void setIso(String Iso) {
+    public void seto(String Iso) {
         this.Iso = Iso;
     }
 

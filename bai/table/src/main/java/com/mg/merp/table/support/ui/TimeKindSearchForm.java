@@ -117,7 +117,7 @@ public class TimeKindSearchForm extends AbstractSearchForm {
    *
    * @param isWholeDay - признак отбора "Учитывать по дням"
    */
-  public void setIsWholeDay(Boolean isWholeDay) {
+  public void setWholeDay(Boolean isWholeDay) {
     this.isWholeDay = isWholeDay;
     if (isWholeDay != null) {
       paramsName.add("IsWholeDay"); //$NON-NLS-1$

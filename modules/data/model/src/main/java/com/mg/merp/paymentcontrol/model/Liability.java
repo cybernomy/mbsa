@@ -369,11 +369,11 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "IS_SHARED", columnDefinition = "SMALLINT")
-    public boolean isIsShared() {
+    public boolean isShared() {
         return this.IsShared;
     }
 
-    public void setIsShared(boolean IsShared) {
+    public void setShared(boolean IsShared) {
         this.IsShared = IsShared;
     }
 
@@ -532,11 +532,11 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "IS_MODEL", columnDefinition = "SMALLINT")
-    public boolean isIsModel() {
+    public boolean isModel() {
         return this.IsModel;
     }
 
-    public void setIsModel(boolean IsModel) {
+    public void setModel(boolean IsModel) {
         this.IsModel = IsModel;
     }
 

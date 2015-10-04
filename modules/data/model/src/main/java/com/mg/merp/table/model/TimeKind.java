@@ -126,11 +126,11 @@ public class TimeKind extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "IS_WHOLE_DAY", columnDefinition = "SMALLINT")
-    public boolean isIsWholeDay() {
+    public boolean isWholeDay() {
         return this.IsWholeDay;
     }
 
-    public void setIsWholeDay(boolean IsWholeDay) {
+    public void setWholeDay(boolean IsWholeDay) {
         this.IsWholeDay = IsWholeDay;
     }
 

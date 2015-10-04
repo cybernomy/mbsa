@@ -115,8 +115,8 @@ public class DocumentBrowseForm extends DefaultHierarchyBrowseForm {
     if (restDocument.getDocProcessStage() != null) {
       paramsName.add("docProcessStage"); //$NON-NLS-1$
       paramsValue.add(restDocument.getDocProcessStage());
-      boolean isDpsCompletedPartly = restDocument.getIsDpsCompletedPartly();
-      if (!restDocument.getIsDpsCompleted() && !isDpsCompletedPartly)
+      boolean isDpsCompletedPartly = restDocument.isDpsCompletedPartly();
+      if (!restDocument.isDpsCompleted() && !isDpsCompletedPartly)
         whereText.append(" and (not exists (select da from com.mg.merp.docprocess.model.DocAction da where (da.DocHead = d) and (da.Stage = :docProcessStage)))"); //$NON-NLS-1$
       else {
         fromList = fromList.concat(", com.mg.merp.docprocess.model.DocAction da "); //$NON-NLS-1$
@@ -124,7 +124,7 @@ public class DocumentBrowseForm extends DefaultHierarchyBrowseForm {
         StringBuilder stageStateWhereClause = new StringBuilder();
         if (isDpsCompletedPartly)
           stageStateWhereClause.append("(da.StageState = com.mg.merp.docprocess.model.StageState.PARTITION)"); //$NON-NLS-1$
-        if (restDocument.getIsDpsCompleted()) {
+        if (restDocument.isDpsCompleted()) {
           if (isDpsCompletedPartly)
             stageStateWhereClause.append(" or "); //$NON-NLS-1$
           stageStateWhereClause.append("(da.StageState = com.mg.merp.docprocess.model.StageState.COMPLETE)"); //$NON-NLS-1$

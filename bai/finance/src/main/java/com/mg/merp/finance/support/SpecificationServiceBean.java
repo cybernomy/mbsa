@@ -59,7 +59,7 @@ public class SpecificationServiceBean extends AbstractPOJODataBusinessObjectServ
   protected void onInitialize(Specification entity) {
     FinOperation fo = entity.getFinOper();
     if (fo != null)
-      entity.setPlanned(fo.getPlanned());
+      entity.setPlanned(fo.isPlanned());
   }
 
   /* (non-Javadoc)

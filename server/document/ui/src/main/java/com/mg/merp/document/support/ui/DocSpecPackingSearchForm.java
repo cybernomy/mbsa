@@ -115,7 +115,7 @@ public class DocSpecPackingSearchForm extends AbstractSearchForm {
    * @param catalog - товар(упакованный), для которого будет осуществлен поиск упаковок
    */
   public void execute(Catalog catalog) {
-    if (catalog != null && catalog.getPackaged()) {
+    if (catalog != null && catalog.isPackaged()) {
       paramsName.add("catalog"); //$NON-NLS-1$
       paramsValue.add(catalog);
       run(UIUtils.isModalMode());

@@ -686,20 +686,20 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "ISCOMPLEX", columnDefinition = "SMALLINT")
-    public boolean isIsComplex() {
+    public boolean isComplex() {
         return this.IsComplex;
     }
 
-    public void setIsComplex(boolean IsComplex) {
+    public void setComplex(boolean IsComplex) {
         this.IsComplex = IsComplex;
     }
 
     @Column(name = "ISCOMMON", columnDefinition = "SMALLINT")
-    public boolean isIsCommon() {
+    public boolean isCommon() {
         return this.IsCommon;
     }
 
-    public void setIsCommon(boolean IsCommon) {
+    public void setCommon(boolean IsCommon) {
         this.IsCommon = IsCommon;
     }
 

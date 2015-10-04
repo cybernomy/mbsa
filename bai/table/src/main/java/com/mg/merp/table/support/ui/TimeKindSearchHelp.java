@@ -37,14 +37,14 @@ public class TimeKindSearchHelp extends AbstractSearchHelp {
   protected void doSearch() throws Exception {
     TimeKindSearchForm searchForm = (TimeKindSearchForm) UIProducer.produceForm(SEARCH_FORM_NAME);
     searchForm.addSearchHelpListener(this);
-    searchForm.setIsWholeDay(getIsWholeDay());
+    searchForm.setWholeDay(isWholeDay());
     searchForm.run(UIUtils.isModalMode());
   }
 
   /**
    * Получить признак "Учитывать по дням"
    */
-  protected Boolean getIsWholeDay() {
+  protected Boolean isWholeDay() {
     return null;
   }
 

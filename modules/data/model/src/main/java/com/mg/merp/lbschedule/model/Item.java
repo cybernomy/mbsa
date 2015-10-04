@@ -357,7 +357,7 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "HAS_SPEC", columnDefinition = "SMALLINT")
-    public boolean isHasSpec() {
+    public boolean hasSpec() {
         return this.HasSpec;
     }
 
@@ -375,11 +375,11 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_ABS_DATE", columnDefinition = "SMALLINT")
-    public boolean isIsAbsDate() {
+    public boolean isAbsDate() {
         return this.IsAbsDate;
     }
 
-    public void setIsAbsDate(boolean IsAbsDate) {
+    public void setAbsDate(boolean IsAbsDate) {
         this.IsAbsDate = IsAbsDate;
     }
 
@@ -411,11 +411,11 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_ABS_SUM", columnDefinition = "SMALLINT")
-    public boolean isIsAbsSum() {
+    public boolean isAbsSum() {
         return this.IsAbsSum;
     }
 
-    public void setIsAbsSum(boolean IsAbsSum) {
+    public void setAbsSum(boolean IsAbsSum) {
         this.IsAbsSum = IsAbsSum;
     }
 
@@ -429,11 +429,11 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_RELFACT", columnDefinition = "SMALLINT")
-    public boolean isIsRelFact() {
+    public boolean isRelFact() {
         return this.IsRelFact;
     }
 
-    public void setIsRelFact(boolean IsRelFact) {
+    public void setRelFact(boolean IsRelFact) {
         this.IsRelFact = IsRelFact;
     }
 
@@ -456,20 +456,20 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_DATERELDOC", columnDefinition = "SMALLINT")
-    public boolean isIsDateRelDoc() {
+    public boolean isDateRelDoc() {
         return this.IsDateRelDoc;
     }
 
-    public void setIsDateRelDoc(boolean IsDateRelDoc) {
+    public void setDateRelDoc(boolean IsDateRelDoc) {
         this.IsDateRelDoc = IsDateRelDoc;
     }
 
     @Column(name = "IS_SUMRELDOC", columnDefinition = "SMALLINT")
-    public boolean isIsSumRelDoc() {
+    public boolean isSumRelDoc() {
         return this.IsSumRelDoc;
     }
 
-    public void setIsSumRelDoc(boolean IsSumRelDoc) {
+    public void setSumRelDoc(boolean IsSumRelDoc) {
         this.IsSumRelDoc = IsSumRelDoc;
     }
 
@@ -492,11 +492,11 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_DATERELEND", columnDefinition = "SMALLINT")
-    public boolean isIsDateRelEnd() {
+    public boolean isDateRelEnd() {
         return this.IsDateRelEnd;
     }
 
-    public void setIsDateRelEnd(boolean IsDateRelEnd) {
+    public void setDateRelEnd(boolean IsDateRelEnd) {
         this.IsDateRelEnd = IsDateRelEnd;
     }
 

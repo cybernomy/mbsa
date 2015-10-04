@@ -95,7 +95,7 @@ public class ItemSpecServiceBean extends com.mg.framework.generic.AbstractPOJODa
     if (item == null)
       return;
 
-    if (item.getHasSpec()) {
+    if (item.hasSpec()) {
       if (item.getSpecSource() == SpecSource.DOCUMENT)
         addSpecByDocSpec(item, itemSpecCreateData);
       if (item.getSpecSource() == SpecSource.CATALOG)

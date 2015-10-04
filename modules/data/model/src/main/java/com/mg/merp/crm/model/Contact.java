@@ -165,11 +165,11 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "IS_DEFAULT", columnDefinition = "SMALLINT")
-    public boolean isIsDefault() {
+    public boolean isDefault() {
         return this.IsDefault;
     }
 
-    public void setIsDefault(boolean IsDefault) {
+    public void setDefault(boolean IsDefault) {
         this.IsDefault = IsDefault;
     }
 
@@ -184,11 +184,11 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "IS_RETIRED", columnDefinition = "SMALLINT")
-    public boolean isIsRetired() {
+    public boolean isRetired() {
         return this.IsRetired;
     }
 
-    public void setIsRetired(boolean IsRetired) {
+    public void setRetired(boolean IsRetired) {
         this.IsRetired = IsRetired;
     }
 

@@ -231,7 +231,7 @@ public class LiabilityBr extends DefaultHierarchyBrowseForm {
   private void doOnActionInsertModel(Liability model) {
     LiabilityServiceLocal service = (LiabilityServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService("merp/paymentcontrol/Liability"); //$NON-NLS-1$
     Liability liability = service.createByPattern(model, (Folder) folderEntity);
-    liability.setIsShared(true);
+    liability.setShared(true);
     MaintenanceHelper.add(service, liability, null, new MaintenanceFormActionListener() {
 
       /* (non-Javadoc)

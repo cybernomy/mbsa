@@ -118,7 +118,7 @@ public class LiabilityServiceBean extends AbstractPOJODataBusinessObjectServiceB
     AttributeMap attributes = pattern.getAllAttributes();
     attributes.remove("Id"); //$NON-NLS-1$
     liability.setAttributes(attributes);
-    liability.setIsModel(false);
+    liability.setModel(false);
     if (pattern.getDestFolder() != null)
       liability.setFolder(pattern.getDestFolder());
     else

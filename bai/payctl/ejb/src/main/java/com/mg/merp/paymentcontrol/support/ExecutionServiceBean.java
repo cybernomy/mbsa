@@ -236,10 +236,10 @@ public class ExecutionServiceBean extends com.mg.framework.generic.AbstractPOJOD
 
     if (version != null) {
       liability.setVersion(version);
-      liability.setIsShared(false);
+      liability.setShared(false);
     } else {
       liability.setVersion(null);
-      liability.setIsShared(true);
+      liability.setShared(true);
     }
     liability.setExecutions(null);
 

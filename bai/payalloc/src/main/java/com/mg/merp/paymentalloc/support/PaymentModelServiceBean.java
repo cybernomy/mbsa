@@ -67,7 +67,7 @@ public class PaymentModelServiceBean extends AbstractPOJODataBusinessObjectServi
   }
 
   private void adjustEntity(Payment entity) {
-    entity.setIsModel(true);
+    entity.setModel(true);
   }
 
 }

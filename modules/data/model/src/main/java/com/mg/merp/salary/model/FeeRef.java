@@ -310,11 +310,11 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "IS_ZERO_INCLUDED", columnDefinition = "SMALLINT")
-    public boolean isIsZeroIncluded() {
+    public boolean isZeroIncluded() {
         return this.IsZeroIncluded;
     }
 
-    public void setIsZeroIncluded(boolean IsZeroIncluded) {
+    public void setZeroIncluded(boolean IsZeroIncluded) {
         this.IsZeroIncluded = IsZeroIncluded;
     }
 

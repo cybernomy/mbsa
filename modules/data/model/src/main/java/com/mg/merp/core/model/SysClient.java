@@ -30,6 +30,10 @@ public class SysClient extends com.mg.framework.service.PersistentObjectHibernat
     public SysClient() {
     }
 
+    public SysClient(java.lang.Integer Id) {
+        this.Id = Id;
+    }
+
     public SysClient(String Code) {
         this.Code = Code;
     }

@@ -159,29 +159,29 @@ public class Promotion extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "IS_ACTIVE", columnDefinition = "SMALLINT")
-    public boolean isIsActive() {
+    public boolean isActive() {
         return this.IsActive;
     }
 
-    public void setIsActive(boolean IsActive) {
+    public void setActive(boolean IsActive) {
         this.IsActive = IsActive;
     }
 
     @Column(name = "IS_APPLY_DISCOUNT_GROUP", columnDefinition = "SMALLINT")
-    public boolean isIsApplyDiscountGroup() {
+    public boolean isApplyDiscountGroup() {
         return this.IsApplyDiscountGroup;
     }
 
-    public void setIsApplyDiscountGroup(boolean IsApplyDiscountGroup) {
+    public void setApplyDiscountGroup(boolean IsApplyDiscountGroup) {
         this.IsApplyDiscountGroup = IsApplyDiscountGroup;
     }
 
     @Column(name = "IS_APPLY_DISCOUNT_ON_DOC", columnDefinition = "SMALLINT")
-    public boolean isIsApplyDiscountOnDoc() {
+    public boolean isApplyDiscountOnDoc() {
         return this.IsApplyDiscountOnDoc;
     }
 
-    public void setIsApplyDiscountOnDoc(boolean IsApplyDiscountOnDoc) {
+    public void setApplyDiscountOnDoc(boolean IsApplyDiscountOnDoc) {
         this.IsApplyDiscountOnDoc = IsApplyDiscountOnDoc;
     }
 

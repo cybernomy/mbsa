@@ -231,11 +231,11 @@ public class CalcListFee extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "IS_CALCULATED", columnDefinition = "SMALLINT")
-    public boolean isIsCalculated() {
+    public boolean isCalculated() {
         return this.IsCalculated;
     }
 
-    public void setIsCalculated(boolean IsCalculated) {
+    public void setCalculated(boolean IsCalculated) {
         this.IsCalculated = IsCalculated;
     }
 

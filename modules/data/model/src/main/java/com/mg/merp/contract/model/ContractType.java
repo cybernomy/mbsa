@@ -17,7 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "CONTRACT_KIND")
-public class ContractType implements java.io.Serializable {
+public class ContractType extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
 

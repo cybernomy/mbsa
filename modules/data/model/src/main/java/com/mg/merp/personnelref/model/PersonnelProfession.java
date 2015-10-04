@@ -86,11 +86,11 @@ public class PersonnelProfession extends com.mg.merp.core.model.AbstractEntity i
     }
 
     @Column(name = "IS_BASIC", columnDefinition = "SMALLINT")
-    public boolean isIsBasic() {
+    public boolean isBasic() {
         return this.IsBasic;
     }
 
-    public void setIsBasic(boolean IsBasic) {
+    public void setBasic(boolean IsBasic) {
         this.IsBasic = IsBasic;
     }
 }

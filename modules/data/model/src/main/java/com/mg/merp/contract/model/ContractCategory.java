@@ -17,7 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "CONTRACT_CATEGORY")
-public class ContractCategory implements java.io.Serializable {
+public class ContractCategory extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
 

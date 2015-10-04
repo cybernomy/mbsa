@@ -94,11 +94,11 @@ public class User extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_ADMIN", columnDefinition = "SMALLINT")
-    public boolean isIsAdmin() {
+    public boolean isAdmin() {
         return this.IsAdmin;
     }
 
-    public void setIsAdmin(boolean IsAdmin) {
+    public void setAdmin(boolean IsAdmin) {
         this.IsAdmin = IsAdmin;
     }
 }

@@ -71,10 +71,10 @@ import java.util.Map;
  * 			BigDecimal discount = MathUtils.divide(getSpecification().getPrice1().multiply(getPromotionLine().getDiscount()),
  * MathUtils.HUNDRED, new RoundContext(6));
  * 			result.setDiscount(discount);
- * 			result.setIsApplied(true);
+ * 			result.setApplied(true);
  * 		}
  * 		else
- * 			result.setIsApplied(false);
+ * 			result.setApplied(false);
  * 		// успешно завершить выполнение BAi и вернуть результат
  * 		complete(result);
  * 	}
