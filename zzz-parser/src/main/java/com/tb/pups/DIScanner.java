@@ -5,7 +5,6 @@ import static java.nio.file.FileVisitResult.CONTINUE;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -79,6 +78,14 @@ public class DIScanner {
 							Files.copy(file, result, StandardCopyOption.REPLACE_EXISTING);
 						}
 
+						boolean addImport = false;
+						CompilationUnit target = extractClass(result);
+						if (type.getAnnotations().size() > 0) {
+							TypeDeclaration tp = getType(target, type.getName());
+							tp.getAnnotations().addAll(type.getAnnotations());
+							addImport = true;
+						}
+
 						List<BodyDeclaration> members = type.getMembers();
 						for (BodyDeclaration member : members) {
 							if (member instanceof MethodDeclaration) {
@@ -86,15 +93,11 @@ public class DIScanner {
 								List<AnnotationExpr> anns = met.getAnnotations();
 								if (anns != null && anns.size() > 0) {
 									found = true;
-
-									CompilationUnit target = extractClass(result);
+									addImport = true;
 									for (AnnotationExpr ae : anns){
-
-										target.getImports().add(imp);
-
 										String clazz = cu.getPackage().getName()+"."+type.getName();
 										if(ae instanceof SingleMemberAnnotationExpr){
-											addAnnotation(target, clazz, met, (SingleMemberAnnotationExpr)ae);
+											addAnnotation(target, type, met, (SingleMemberAnnotationExpr)ae);
 										}else{
 											throw new RuntimeException(String.format(
 													"чё за аннотация??  %s, %s", ae.getName(), clazz));
@@ -107,25 +110,36 @@ public class DIScanner {
 								}
 							}
 						}
+						if(addImport){
+							target.getImports().add(imp);
+						}
 					}
 				}
 				return found;
 			}
 
-			private void addAnnotation(CompilationUnit target,
-					String clazz, MethodDeclaration met,
-					SingleMemberAnnotationExpr ae) {
+			private TypeDeclaration getType(CompilationUnit target, String name) {
 				boolean found = false;
-
 				TypeDeclaration t = null;
-				MethodDeclaration m = null;
 
 				Iterator<TypeDeclaration> it = target.getTypes().iterator();
 				while (!found && it.hasNext()) {
 					t = it.next();
-					found = clazz.equals(target.getPackage().getName()+"."+t.getName());
+					found = name.equals(t.getName());
 				}
 
+				return found?t:null;
+			}
+
+			private void addAnnotation(CompilationUnit target,
+					TypeDeclaration type, MethodDeclaration met,
+					SingleMemberAnnotationExpr ae) {
+				boolean found = false;
+
+				TypeDeclaration t = getType(target, type.getName());
+				MethodDeclaration m = null;
+
+				found = t!=null;
 				if(found){
 					found = false;
 					Iterator<BodyDeclaration> mit = t.getMembers().iterator();
@@ -135,7 +149,7 @@ public class DIScanner {
 							m = (MethodDeclaration) b;
 							if(met.getParameters().size() > 0){
 								throw new RuntimeException(String.format(
-										"откуда в этом методе %s.%s параметры??", clazz, met.getName(),
+										"откуда в этом методе %s.%s параметры??", type, met.getName(),
 										met.getName()));
 							}
 							found = methodsAreEquals(m,met);
@@ -148,7 +162,7 @@ public class DIScanner {
 
 				if(!found){
 					throw new RuntimeException(String.format(
-							"какая-то хуйня, не нашли %s.%s", clazz,
+							"какая-то хуйня, не нашли %s.%s", type,
 							met.getName()));
 				}
 			}
