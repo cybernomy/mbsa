@@ -1,6 +1,7 @@
 package com.tb.pups;
 
 import static java.nio.file.FileVisitResult.CONTINUE;
+import io.github.lukehutch.fastclasspathscanner.FastClasspathScanner;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,6 +15,7 @@ import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ParseException;
@@ -26,6 +28,8 @@ import com.github.javaparser.ast.body.TypeDeclaration;
 import com.github.javaparser.ast.expr.AnnotationExpr;
 import com.github.javaparser.ast.expr.NameExpr;
 import com.github.javaparser.ast.expr.SingleMemberAnnotationExpr;
+import com.github.javaparser.ast.type.ClassOrInterfaceType;
+import com.github.javaparser.ast.type.ReferenceType;
 
 public class DIScanner {
 
@@ -74,7 +78,6 @@ public class DIScanner {
 
 						if(!Files.isReadable(result)){
 							System.out.format("missed file %s, copy it\n", result);
-							//throw new RuntimeException(String.format());
 							Files.copy(file, result, StandardCopyOption.REPLACE_EXISTING);
 						}
 
@@ -90,6 +93,21 @@ public class DIScanner {
 						for (BodyDeclaration member : members) {
 							if (member instanceof MethodDeclaration) {
 								MethodDeclaration met = (MethodDeclaration) member;
+
+								if(met.getName().startsWith("get") && met.getType() instanceof ReferenceType){
+									ReferenceType rt = (ReferenceType) met.getType();
+									ClassOrInterfaceType coi = (ClassOrInterfaceType)rt.getType();
+
+
+									Class c = findClass(coi);
+									if(c == null){
+										throw new RuntimeException(String.format("class %s not found in %s", coi, type.getName()));
+									}
+									if (c.isEnum()){
+										System.out.println(met);
+									}
+								}
+
 								List<AnnotationExpr> anns = met.getAnnotations();
 								if (anns != null && anns.size() > 0) {
 									found = true;
@@ -116,6 +134,39 @@ public class DIScanner {
 					}
 				}
 				return found;
+			}
+
+			private Class findClass(ClassOrInterfaceType coi) {
+				Class result = null;
+				try {
+					result = Class.forName(coi.toString());
+				} catch (ClassNotFoundException e) {
+					Set<String> classNames = new FastClasspathScanner("com.mg.merp").scan().getNamesOfAllClasses();
+			        System.out.println("DIScanner.main()");
+
+					/*Package[] packages = Package.getPackages();
+				    final String className = coi.getName();
+
+				    for (final Package p : packages) {
+				        final String pack = p.getName();
+
+				        if(coi.getName().equals("TariffingScaleType") && pack.startsWith("com.mg.merp")){
+							System.out.println(pack);
+						}
+
+				        final String tentative = pack + "." + className;
+				        if("com.mg.merp.personnelref.model.TariffingScaleType".equals(tentative)){
+				        	System.out.println("found!!!!");
+				        }
+				        try {
+				            result = Class.forName(tentative);
+				        } catch (final ClassNotFoundException e1) {
+				            continue;
+				        }
+				        break;
+				    }*/
+				}
+				return result;
 			}
 
 			private TypeDeclaration getType(CompilationUnit target, String name) {
@@ -162,7 +213,7 @@ public class DIScanner {
 
 				if(!found){
 					throw new RuntimeException(String.format(
-							"какая-то хуйня, не нашли %s.%s", type,
+							"какая-то хуйня, не нашли %s.%s", type.getName(),
 							met.getName()));
 				}
 			}
@@ -181,9 +232,15 @@ public class DIScanner {
 
 				boolean result = m1.getName().equals(m2.getName());
 				if(!result && m1.getModifiers() == m2.getModifiers() && t1.equals(t2)){
-					String ms1 = m1.getName().replaceFirst("^is", "get");
-					String ms2 = m2.getName().replaceFirst("^is", "get");
+					String ms1 = m1.getName().replaceFirst("^is", "getIs");
+					String ms2 = m2.getName().replaceFirst("^is", "getIs");
 					result = ms1.equals(ms2);
+
+					if(!result){
+						ms1 = m1.getName().replaceFirst("^is", "get");
+						ms2 = m2.getName().replaceFirst("^is", "get");
+						result = ms1.equals(ms2);
+					}
 				}
 
 				return result;
