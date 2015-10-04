@@ -22,206 +22,197 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ACCPLAN")
-public class AccPlan extends com.mg.merp.core.model.AbstractEntity implements
-		java.io.Serializable {
+public class AccPlan extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
-	private Integer Id;
+    private Integer Id;
 
-	private Folder Folder;
+    private Folder Folder;
 
-	private SysClient SysClient;
+    private SysClient SysClient;
 
-	private Currency Currency;
+    private Currency Currency;
 
-	private String UpAcc;
+    private String UpAcc;
 
-	private String Acc;
+    private String Acc;
 
-	private String AccName;
+    private String AccName;
 
-	private boolean IsAnl;
+    private boolean IsAnl;
 
-	private boolean IsBal;
+    private boolean IsBal;
 
-	private boolean IsWork;
+    private boolean IsWork;
 
-	private AnlForm AnlForm;
+    private AnlForm AnlForm;
 
-	private AccType AccType;
+    private AccType AccType;
 
-	private Set<AnlPlan> AnlPlans = new HashSet<AnlPlan>(0);
+    private Set<AnlPlan> AnlPlans = new HashSet<AnlPlan>(0);
 
-	private boolean isMaterialAcc;
+    private boolean isMaterialAcc;
 
-	private boolean isRealisationAcc;
+    private boolean isRealisationAcc;
 
-	public AccPlan() {
-	}
+    public AccPlan() {
+    }
 
-	public AccPlan(String UpAcc, String Acc, String AccName, boolean IsAnl,
-			boolean IsBal, boolean IsWork, AnlForm AnlForm, AccType AccType) {
-		this.UpAcc = UpAcc;
-		this.Acc = Acc;
-		this.AccName = AccName;
-		this.IsAnl = IsAnl;
-		this.IsBal = IsBal;
-		this.IsWork = IsWork;
-		this.AnlForm = AnlForm;
-		this.AccType = AccType;
-	}
+    public AccPlan(String UpAcc, String Acc, String AccName, boolean IsAnl, boolean IsBal, boolean IsWork, AnlForm AnlForm, AccType AccType) {
+        this.UpAcc = UpAcc;
+        this.Acc = Acc;
+        this.AccName = AccName;
+        this.IsAnl = IsAnl;
+        this.IsBal = IsBal;
+        this.IsWork = IsWork;
+        this.AnlForm = AnlForm;
+        this.AccType = AccType;
+    }
 
-	public AccPlan(Folder Folder, SysClient SysClient, Currency Currency,
-			String UpAcc, String Acc, String AccName, boolean IsAnl,
-			boolean IsBal, boolean IsWork, AnlForm AnlForm, AccType AccType,
-			Set<AnlPlan> AnlPlans) {
-		this.Folder = Folder;
-		this.SysClient = SysClient;
-		this.Currency = Currency;
-		this.UpAcc = UpAcc;
-		this.Acc = Acc;
-		this.AccName = AccName;
-		this.IsAnl = IsAnl;
-		this.IsBal = IsBal;
-		this.IsWork = IsWork;
-		this.AnlForm = AnlForm;
-		this.AccType = AccType;
-		this.AnlPlans = AnlPlans;
-	}
+    public AccPlan(Folder Folder, SysClient SysClient, Currency Currency, String UpAcc, String Acc, String AccName, boolean IsAnl, boolean IsBal, boolean IsWork, AnlForm AnlForm, AccType AccType, Set<AnlPlan> AnlPlans) {
+        this.Folder = Folder;
+        this.SysClient = SysClient;
+        this.Currency = Currency;
+        this.UpAcc = UpAcc;
+        this.Acc = Acc;
+        this.AccName = AccName;
+        this.IsAnl = IsAnl;
+        this.IsBal = IsBal;
+        this.IsWork = IsWork;
+        this.AnlForm = AnlForm;
+        this.AccType = AccType;
+        this.AnlPlans = AnlPlans;
+    }
 
-	@SequenceGenerator(name = "generator", sequenceName = "ACCPLAN_ID_GEN")
-	@Id
-	@GeneratedValue(strategy = SEQUENCE, generator = "generator")
-	@Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-	public Integer getId() {
-		return this.Id;
-	}
+    @SequenceGenerator(name = "generator", sequenceName = "ACCPLAN_ID_GEN")
+    @Id
+    @GeneratedValue(strategy = SEQUENCE, generator = "generator")
+    @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    public Integer getId() {
+        return this.Id;
+    }
 
-	public void setId(Integer Id) {
-		this.Id = Id;
-	}
+    public void setId(Integer Id) {
+        this.Id = Id;
+    }
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "FOLDER_ID")
-	public Folder getFolder() {
-		return this.Folder;
-	}
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "FOLDER_ID")
+    public Folder getFolder() {
+        return this.Folder;
+    }
 
-	public void setFolder(Folder Folder) {
-		this.Folder = Folder;
-	}
+    public void setFolder(Folder Folder) {
+        this.Folder = Folder;
+    }
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "CLIENT_ID")
-	public SysClient getSysClient() {
-		return this.SysClient;
-	}
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CLIENT_ID")
+    public SysClient getSysClient() {
+        return this.SysClient;
+    }
 
-	public void setSysClient(SysClient SysClient) {
-		this.SysClient = SysClient;
-	}
+    public void setSysClient(SysClient SysClient) {
+        this.SysClient = SysClient;
+    }
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "CURRENCY_CODE")
-	public Currency getCurrency() {
-		return this.Currency;
-	}
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CURRENCY_CODE")
+    public Currency getCurrency() {
+        return this.Currency;
+    }
 
-	public void setCurrency(Currency Currency) {
-		this.Currency = Currency;
-	}
+    public void setCurrency(Currency Currency) {
+        this.Currency = Currency;
+    }
 
-	@Column(name = "UPACC", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
-	public String getUpAcc() {
-		return this.UpAcc;
-	}
+    @Column(name = "UPACC", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
+    public String getUpAcc() {
+        return this.UpAcc;
+    }
 
-	public void setUpAcc(String UpAcc) {
-		this.UpAcc = UpAcc;
-	}
+    public void setUpAcc(String UpAcc) {
+        this.UpAcc = UpAcc;
+    }
 
-	@Column(name = "ACC", nullable = false, columnDefinition = "CHAR", length = 20)
-	public String getAcc() {
-		return this.Acc;
-	}
+    @Column(name = "ACC", nullable = false, columnDefinition = "CHAR", length = 20)
+    public String getAcc() {
+        return this.Acc;
+    }
 
-	public void setAcc(String Acc) {
-		this.Acc = Acc;
-	}
+    public void setAcc(String Acc) {
+        this.Acc = Acc;
+    }
 
-	@Column(name = "ACCNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-	public String getAccName() {
-		return this.AccName;
-	}
+    @Column(name = "ACCNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    public String getAccName() {
+        return this.AccName;
+    }
 
-	public void setAccName(String AccName) {
-		this.AccName = AccName;
-	}
+    public void setAccName(String AccName) {
+        this.AccName = AccName;
+    }
 
-	@Column(name = "ISANL", nullable = false, columnDefinition = "SMALLINT")
-	public boolean isAnl() {
-		return this.IsAnl;
-	}
+    @Column(name = "ISANL", nullable = false, columnDefinition = "SMALLINT")
+    public boolean isAnl() {
+        return this.IsAnl;
+    }
 
-	public void setAnl(boolean IsAnl) {
-		this.IsAnl = IsAnl;
-	}
+    public void setAnl(boolean IsAnl) {
+        this.IsAnl = IsAnl;
+    }
 
-	@Column(name = "ISBAL", nullable = false, columnDefinition = "SMALLINT")
-	public boolean isBal() {
-		return this.IsBal;
-	}
+    @Column(name = "ISBAL", nullable = false, columnDefinition = "SMALLINT")
+    public boolean isBal() {
+        return this.IsBal;
+    }
 
-	public void setBal(boolean IsBal) {
-		this.IsBal = IsBal;
-	}
+    public void setBal(boolean IsBal) {
+        this.IsBal = IsBal;
+    }
 
-	@Column(name = "ISWORK", nullable = false, columnDefinition = "SMALLINT")
-	public boolean isWork() {
-		return this.IsWork;
-	}
+    @Column(name = "ISWORK", nullable = false, columnDefinition = "SMALLINT")
+    public boolean isWork() {
+        return this.IsWork;
+    }
 
-	public void setWork(boolean IsWork) {
-		this.IsWork = IsWork;
-	}
+    public void setWork(boolean IsWork) {
+        this.IsWork = IsWork;
+    }
 
-	@Column(name = "ANLFORM", nullable = false, columnDefinition = "SMALLINT")
-	public AnlForm getAnlForm() {
-		return this.AnlForm;
-	}
+    @Column(name = "ANLFORM", nullable = false, columnDefinition = "SMALLINT")
+    public AnlForm getAnlForm() {
+        return this.AnlForm;
+    }
 
-	public void setAnlForm(AnlForm AnlForm) {
-		this.AnlForm = AnlForm;
-	}
+    public void setAnlForm(AnlForm AnlForm) {
+        this.AnlForm = AnlForm;
+    }
 
-	@Column(name = "ACCTYPE", nullable = false, columnDefinition = "SMALLINT")
-	public AccType getAccType() {
-		return this.AccType;
-	}
+    @Column(name = "ACCTYPE", nullable = false, columnDefinition = "SMALLINT")
+    public AccType getAccType() {
+        return this.AccType;
+    }
 
-	public void setAccType(AccType AccType) {
-		this.AccType = AccType;
-	}
+    public void setAccType(AccType AccType) {
+        this.AccType = AccType;
+    }
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "AccPlan")
-	public Set<AnlPlan> getAnlPlans() {
-		return this.AnlPlans;
-	}
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "AccPlan")
+    public Set<AnlPlan> getAnlPlans() {
+        return this.AnlPlans;
+    }
 
-	public void setAnlPlans(Set<AnlPlan> AnlPlans) {
-		this.AnlPlans = AnlPlans;
-	}
+    public void setAnlPlans(Set<AnlPlan> AnlPlans) {
+        this.AnlPlans = AnlPlans;
+    }
 
-	public boolean isMaterialAcc() {
-		AnlForm anlForm = this.getAnlForm();
-		return anlForm != null
-				&& (anlForm == AnlForm.BASEMEANS || anlForm == AnlForm.CALCCOST
-						|| anlForm == AnlForm.BATCHCALC
-						|| anlForm == AnlForm.AVERAGECOST
-						|| anlForm == AnlForm.FIFO || anlForm == AnlForm.LIFO || anlForm == AnlForm.MBP);
-	}
+    public boolean isMaterialAcc() {
+        AnlForm anlForm = this.getAnlForm();
+        return anlForm != null && (anlForm == AnlForm.BASEMEANS || anlForm == AnlForm.CALCCOST || anlForm == AnlForm.BATCHCALC || anlForm == AnlForm.AVERAGECOST || anlForm == AnlForm.FIFO || anlForm == AnlForm.LIFO || anlForm == AnlForm.MBP);
+    }
 
-	public boolean isRealisationAcc() {
-		return this.getAnlForm() != null
-				&& this.getAnlForm() == AnlForm.REALISARION;
-	}
+    public boolean isRealisationAcc() {
+        return this.getAnlForm() != null && this.getAnlForm() == AnlForm.REALISARION;
+    }
 }
+

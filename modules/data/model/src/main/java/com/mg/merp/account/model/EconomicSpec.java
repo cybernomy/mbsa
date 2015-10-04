@@ -2,16 +2,12 @@ package com.mg.merp.account.model;
 
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.reference.model.Catalog;
-
 import java.math.BigDecimal;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-
 import static javax.persistence.GenerationType.SEQUENCE;
-
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -513,12 +509,12 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
         this.CurCource = CurCource;
     }
 
-	public boolean isBulkOperation() {
-		return isBulkOperation;
-	}
+    public boolean isBulkOperation() {
+        return isBulkOperation;
+    }
 
-	public void setBulkOperation(boolean isBulkOperation) {
-		this.isBulkOperation = isBulkOperation;
-	}
+    public void setBulkOperation(boolean isBulkOperation) {
+        this.isBulkOperation = isBulkOperation;
+    }
 }
 
