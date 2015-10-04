@@ -145,11 +145,11 @@ public class Feature extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "IS_ARRAY", columnDefinition = "SMALLINT")
-    public boolean isIsArray() {
+    public boolean isArray() {
         return this.IsArray;
     }
 
-    public void setIsArray(boolean IsArray) {
+    public void setArray(boolean IsArray) {
         this.IsArray = IsArray;
     }
 

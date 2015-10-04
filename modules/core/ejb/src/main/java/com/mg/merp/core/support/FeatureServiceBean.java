@@ -47,7 +47,7 @@ import javax.ejb.Stateless;
 public class FeatureServiceBean extends AbstractPOJODataBusinessObjectServiceBean<Feature, Integer> implements FeatureServiceLocal {
 
   protected void adjustFeature(Feature entity) {
-    if (!entity.getIsArray())
+    if (!entity.isArray())
       entity.setArraySize(null);
     if (DataKind.ENTITY != entity.getDataType())
       entity.setSysClass(null);
@@ -61,7 +61,7 @@ public class FeatureServiceBean extends AbstractPOJODataBusinessObjectServiceBea
     context.addRule(new MandatoryStringAttribute(entity, "Code")); //$NON-NLS-1$
     context.addRule(new MandatoryAttribute(entity, "Name")); //$NON-NLS-1$
     context.addRule(new MandatoryAttribute(entity, "DataType")); //$NON-NLS-1$
-    if (entity.getIsArray())
+    if (entity.isArray())
       context.addRule(new MandatoryAttribute(entity, "ArraySize")); //$NON-NLS-1$
     if (DataKind.ENTITY == entity.getDataType())
       context.addRule(new MandatoryAttribute(entity, "SysClass")); //$NON-NLS-1$

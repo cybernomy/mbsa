@@ -114,7 +114,7 @@ public class AdvanceRepHeadMt extends GoodsDocumentMaintenanceForm {
     final AdvanceRepHead advanceRepHead = (AdvanceRepHead) getEntity();
     if (advanceRepHead.getRestDoc() != null) {
       DocumentUtils.viewDocument(advanceRepHead.getRestDoc());
-    } else if (advanceRepHead.getBalanceOrOverRun())
+    } else if (advanceRepHead.isBalanceOrOverRun())
       viewSearchHelp("com.mg.merp.account.support.ui.CashDocumentInSearchHelp", advanceRepHead); //$NON-NLS-1$
     else
       viewSearchHelp("com.mg.merp.account.support.ui.CashDocumentOutSearchHelp", advanceRepHead); //$NON-NLS-1$

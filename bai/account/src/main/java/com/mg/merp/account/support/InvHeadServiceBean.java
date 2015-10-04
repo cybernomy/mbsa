@@ -93,8 +93,8 @@ public class InvHeadServiceBean extends AbstractPOJODataBusinessObjectServiceBea
     Date inOperDate = entity.getInOperDate();
     Date outOperDate = entity.getOutOperDate();
     String outOperDocNum = entity.getOutOperDocNum();
-    boolean complex = entity.getIsComplex();
-    boolean common = entity.getIsCommon();
+    boolean complex = entity.isComplex();
+    boolean common = entity.isCommon();
     String comment = entity.getComment();
     Catalog catalog = entity.getCatalog();
     Contractor contractor = entity.getContractor();

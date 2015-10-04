@@ -394,5 +394,9 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     public void setBalanceOrOverRun(boolean BalanceOrOverRun) {
         this.BalanceOrOverRun = BalanceOrOverRun;
     }
+
+    public BigDecimal getBalanceSum() {
+        return this.ReceivedSum != null ? (getSumCur() != null ? this.ReceivedSum.subtract(getSumCur()) : this.ReceivedSum) : getSumCur().negate();
+    }
 }
 

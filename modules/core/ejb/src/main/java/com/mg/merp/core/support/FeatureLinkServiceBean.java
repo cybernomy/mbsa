@@ -185,7 +185,7 @@ public class FeatureLinkServiceBean extends AbstractPOJODataBusinessObjectServic
 
       Object value = fieldsValues.get(fldName);
 
-      if (feature.getIsArray()) { //is array
+      if (feature.isArray()) { //is array
         tmpl.bulkUpdate("delete from FeatureLink where Feature = :feature and SysClass.Id = :sysClassId and RecId = :recId", new String[]{"feature", "sysClassId", "recId"}, new Object[]{feature, classId, entityId});
 
         for (int i = 0; i < Array.getLength(value); i++)

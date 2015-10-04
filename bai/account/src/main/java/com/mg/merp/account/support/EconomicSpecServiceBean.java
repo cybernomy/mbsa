@@ -9,8 +9,8 @@
  * as authorized in a license agreement authorizing and
  * controlling such use and disclosure
  *
- * Millennium Business Suite Anywhere System. 
- * 
+ * Millennium Business Suite Anywhere System.
+ *
  */
 
 package com.mg.merp.account.support;
@@ -118,8 +118,8 @@ public class EconomicSpecServiceBean extends AbstractPOJODataBusinessObjectServi
       });
     }
 
-    boolean isValidateBalancedDb = accPlanKt == null ? true : accPlanKt.getIsBal();
-    boolean isValidateBalancedKt = accPlanDb == null ? true : accPlanDb.getIsBal();
+    boolean isValidateBalancedDb = accPlanKt == null ? true : accPlanKt.isBal();
+    boolean isValidateBalancedKt = accPlanDb == null ? true : accPlanDb.isBal();
     if (isValidateBalancedKt)
       context.addRule(new MandatoryAttribute(entity, "AccKt"));
     if (isValidateBalancedDb)

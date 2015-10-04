@@ -246,7 +246,7 @@ public class AdvanceRepHeadServiceBean extends GoodsDocumentServiceBean<AdvanceR
     //сумма остаток перерасход
     BigDecimal restSum = entity.getBalanceSum();
     if (entity.getPrevAdvanceSum() != null) {
-      restSum = entity.getRestDocKind() ? restSum.add(entity.getPrevAdvanceSum()) :
+      restSum = entity.isRestDocKind() ? restSum.add(entity.getPrevAdvanceSum()) :
           restSum.subtract(entity.getPrevAdvanceSum());
     }
     if (MathUtils.compareToZero(restSum) > -1) {
