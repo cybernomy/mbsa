@@ -1,7 +1,6 @@
 package com.mg.merp.account.model;
 
 import static javax.persistence.GenerationType.SEQUENCE;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -12,9 +11,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Transient;
-
 import org.hibernate.annotations.Formula;
-
 import com.mg.framework.utils.DataUtils;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.reference.model.MonthOfYear;
@@ -110,23 +107,23 @@ public class InvProduction extends com.mg.merp.core.model.AbstractEntity impleme
         this.QMonth = QMonth;
         if (QYear != null) {
             this.AMonth = QYear * 12 + DataUtils.convertEnumToOrdinal(QMonth) + 1;
-          }
+        }
     }
 
     public java.lang.Integer getQYear() {
         if (getAMonth() != null) {
-          int countMonth = getAMonth();
-          return countMonth /= 12;
+            int countMonth = getAMonth();
+            return countMonth /= 12;
         } else {
-          return this.QYear;
+            return this.QYear;
         }
-      }
+    }
 
-      public void setQYear(java.lang.Integer year) {
+    public void setQYear(java.lang.Integer year) {
         this.QYear = year;
         if (QMonth != null) {
-          this.AMonth = year * 12 + DataUtils.convertEnumToOrdinal(QMonth);
+            this.AMonth = year * 12 + DataUtils.convertEnumToOrdinal(QMonth);
         }
-      }
+    }
 }
 

@@ -24,48 +24,47 @@ import java.math.BigDecimal;
  */
 public class ManualDistributionData {
 
-  // Fields
+    // Fields
+    private Integer planItemId;
 
-  private Integer planItemId;
-  private BigDecimal distSum;
+    private BigDecimal distSum;
 
-  /* Default constructor*/
-  public ManualDistributionData() {
-  }
+    /* Default constructor*/
+    public ManualDistributionData() {
+    }
 
-  public ManualDistributionData(Integer planItemId, BigDecimal distSum) {
-    this.planItemId = planItemId;
-    this.distSum = distSum;
-  }
+    public ManualDistributionData(Integer planItemId, BigDecimal distSum) {
+        this.planItemId = planItemId;
+        this.distSum = distSum;
+    }
 
-  // Property accessors
-
-  /**
+    // Property accessors
+    /**
    * @return the distSum
    */
-  public BigDecimal getDistSum() {
-    return distSum;
-  }
+    public BigDecimal getDistSum() {
+        return distSum;
+    }
 
-  /**
+    /**
    * @param distSum the distSum to set
    */
-  public void setDistSum(BigDecimal distSum) {
-    this.distSum = distSum;
-  }
+    public void setDistSum(BigDecimal distSum) {
+        this.distSum = distSum;
+    }
 
-  /**
+    /**
    * @return the planItemId
    */
-  public Integer getPlanItemId() {
-    return planItemId;
-  }
+    public Integer getPlanItemId() {
+        return planItemId;
+    }
 
-  /**
+    /**
    * @param planItemId the planItemId to set
    */
-  public void setPlanItemId(Integer planItemId) {
-    this.planItemId = planItemId;
-  }
-
+    public void setPlanItemId(Integer planItemId) {
+        this.planItemId = planItemId;
+    }
 }
+

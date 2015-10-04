@@ -2,16 +2,13 @@ package com.mg.merp.contract.model;
 
 import java.math.BigDecimal;
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-
 import org.hibernate.annotations.Formula;
-
 import com.mg.framework.support.orm.OmittedWhitespaceStringType;
 import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.model.SysClient;

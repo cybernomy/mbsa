@@ -89,7 +89,7 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
 
     @Override
     public int getId() {
-    	return super.getId();
+        return super.getId();
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
