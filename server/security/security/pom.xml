@@ -17,7 +17,7 @@
   <description/>
 
   <build>
-    <finalName>010msecurity-ejb</finalName>
+    <finalName>010msecurity-full</finalName>
 
     <plugins>
       <plugin>
@@ -48,9 +48,6 @@
             </goals>
             <configuration>
               <classifier>ejb</classifier>
-              <excludes>
-                <exclude>**/ui/**</exclude>
-              </excludes>
             </configuration>
           </execution>
         </executions>

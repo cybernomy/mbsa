@@ -17,7 +17,7 @@
   <description/>
 
   <build>
-    <finalName>020mdocflow-ejb</finalName>
+    <finalName>020mdocflow-full</finalName>
 
     <plugins>
       <plugin>
@@ -43,9 +43,6 @@
             </goals>
             <configuration>
               <classifier>ejb</classifier>
-              <excludes>
-                <exclude>**/ui/**</exclude>
-              </excludes>
             </configuration>
           </execution>
         </executions>

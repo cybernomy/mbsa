@@ -17,7 +17,7 @@
   <description/>
 
   <build>
-    <finalName>100maccount-ejb</finalName>
+    <finalName>100maccount-full</finalName>
 
     <plugins>
       <plugin>
@@ -31,9 +31,6 @@
             </goals>
             <configuration>
               <classifier>ejb</classifier>
-              <excludes>
-                <exclude>**/ui/**</exclude>
-              </excludes>
             </configuration>
           </execution>
         </executions>
