@@ -192,7 +192,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
         continue;
 
       // если указано, что считать только для базовой должности, то и должность из расчетного листа должна быть базовой
-      if (feeModel.getUseBasicPosition() && !positionFill.isBasic())
+      if (feeModel.isUseBasicPosition() && !positionFill.isBasic())
         continue;
 
       // добавим в список реально действующих начислений
@@ -229,7 +229,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
    * @param calculationParams - параметры расчета
    */
   protected void doPerformCalculation(CalcList calcList, CalculationParams calculationParams) {
-    if (calcList.getNeedParams())
+    if (calcList.isNeedParams())
       return;
 
     List<CalcListFee> calcListFees = getFeesFromCalcList(calcList);
@@ -237,7 +237,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
 
     // цикл по начислениям
     for (CalcListFee calcListFee : calcListFees) {
-      if (calcListFee.getDontRecalc())
+      if (calcListFee.isDontRecalc())
         continue;
 
       // если задана сумма н/у в лицевом счете, то подставить ее
@@ -254,7 +254,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
           FeeRefParam feeRefParam = calcListFeeParam.getFeeRefParam();
           // если есть алгоритм, то расчитать
           if (feeRefParam.getCalcAlg() != null) {
-            if (!(feeRefParam.getCalcOnce() && calcListFee.isCalculated())) {
+            if (!(feeRefParam.isCalcOnce() && calcListFee.isCalculated())) {
               FeeParamBusinessAddinListener feeParamBusinessAddinListener = new FeeParamBusinessAddinListener();
               BusinessAddinEngineLocator.locate().perform(feeRefParam.getCalcAlg(), calcContextParams, feeParamBusinessAddinListener);
               calcListFeeParam.setParamValue(feeParamBusinessAddinListener.result.toString());
@@ -951,7 +951,7 @@ public class CalcListServiceBean extends AbstractPOJODataBusinessObjectServiceBe
   protected boolean hasNonCalculatedFees(CalcList calcList) {
     List<CalcListFee> calcListFees = getFeesFromCalcList(calcList);
     for (CalcListFee calcListFee : calcListFees) {
-      if (calcListFee.getNeedParams() != false)
+      if (calcListFee.isNeedParams() != false)
         return true;
     }
     return false;

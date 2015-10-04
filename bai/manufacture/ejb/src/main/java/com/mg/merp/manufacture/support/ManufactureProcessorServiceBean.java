@@ -349,14 +349,14 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
 //			BigDecimal cost = BigDecimal.ZERO;
 //			if (MathUtils.compareToZero(tran.getQuantity()) != 0)
 //				cost = tran.getSumma().divide(tran.getQuantity());
-//			
+//
 //			varianceVT.update(catalog, tran.getCostCategory(), tran.getQuantity(), BigDecimal.ZERO,
 //					cost, BigDecimal.ZERO, true, measure);
 //		}
 //	}
-//	
+//
 //	private void processLaborAndMachineMfTransaction(Job job) {
-//		
+//
 //	}
 
   private List<JobRoute> loadJobRoute(Job job) {
@@ -379,7 +379,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
     int result = tryCheckJobRoute(routes, jobRoute);
     if (result == -1)
       throw new JobRouteNotFoundException();
-    if (!jobRoute.getControlPointFlag())
+    if (!jobRoute.isControlPointFlag())
       throw new JobRouteIsNotControlPointException();
     return result;
   }
@@ -387,7 +387,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
   private int getPrevControlPoint(List<JobRoute> routes, int currentJobOperIndex) {
     int result = -1;
     for (int i = currentJobOperIndex + 1; i < routes.size() - 1; i++)
-      if (routes.get(i).getControlPointFlag()) {
+      if (routes.get(i).isControlPointFlag()) {
         result = i;
         break;
       }
@@ -518,7 +518,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
 
     for (JobMachine machine : machines) {
       BigDecimal machineTime = BigDecimal.ZERO, machineCost = BigDecimal.ZERO;
-      if (machine.getMchBackflushFlag()) {
+      if (machine.isMchBackflushFlag()) {
         switch (machine.getTimeRateFlag()) {
           case TIME:
           case RATE:
@@ -551,7 +551,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
             null));
       }
       //overhead
-      if (machine.getMchOhBackflushFlag()) {
+      if (machine.isMchOhBackflushFlag()) {
         BigDecimal price = null;
         switch (machine.getMchOhAllocationFlag()) {
           case TIME:
@@ -616,7 +616,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
 			  вынуждаем двигаться именно по такой цепочке, но иначе обойти данную
 			  проблему не представляется возможным*/
       BigDecimal materialCost = BigDecimal.ZERO;
-      if (material.getMtlBackflushFlag()) {
+      if (material.isMtlBackflushFlag()) {
         BigDecimal quan = BigDecimal.ZERO;
         switch (material.getQuantityRateFlag()) {
           case TIME:
@@ -642,7 +642,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
             null));
       }
       //overhead
-      if (material.getMtlOhBackflushFlag()) {
+      if (material.isMtlOhBackflushFlag()) {
         BigDecimal price = null;
         switch (material.getMtlOhAllocationFlag()) {
           case UNIT:
@@ -795,7 +795,7 @@ public class ManufactureProcessorServiceBean extends com.mg.framework.generic.Ab
           InputDocumentHead inputDocHead = (InputDocumentHead) docHead;
           InputDocumentSpec inputDocSpec = (InputDocumentSpec) specItem.getDocSpec();
 
-          tran.setBackFlushFlag(inputDocHead.getBackFlushFlag());
+          tran.setBackFlushFlag(inputDocHead.isBackFlushFlag());
           tran.setContractor(inputDocHead.getContractor());
           tran.setWC(inputDocHead.getWC());
           tran.setJob(inputDocHead.getJob());

@@ -554,7 +554,7 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
     CatalogWarehouseServiceLocal catalogWarehouseService = (CatalogWarehouseServiceLocal) ApplicationDictionaryLocator.locate().getBusinessService(CatalogWarehouseServiceLocal.SERVICE_NAME);
     for (SafetyLevel safetyLevel : catalogWarehouseService.getSafetyLevel()) {
       //только для планируемых материалов
-      if (safetyLevel.getGenericItem() == null || !safetyLevel.getGenericItem().getPlanningItemFlag())
+      if (safetyLevel.getGenericItem() == null || !safetyLevel.getGenericItem().isPlanningItemFlag())
         continue;
 
       int lineCount = generatedMPSLines.size();
@@ -902,23 +902,23 @@ public class MPSProcessorServiceBean extends com.mg.framework.generic.AbstractPO
     PlanningRange planningRange = calculateMPSPlanningRange(mps);
 
     //обработаем заказы клиентов
-    if (mps.getSalesLive())
+    if (mps.isSalesLive())
       processOrders(planningRange.startPlanningDate, planningRange.endPlanningDate, OrderHeadCusServiceLocal.DOCSECTION);
 
     //обработаем прогнозы продаж
-    if (mps.getSalesForecasts())
+    if (mps.isSalesForecasts())
       processSalesForecasts(planningRange);
 
     //обработаем заказы поставщиков
-    if (mps.getPurchasesLive())
+    if (mps.isPurchasesLive())
       processOrders(planningRange.startPlanningDate, planningRange.endPlanningDate, OrderHeadSupServiceLocal.DOCSECTION);
 
     //обработаем текущие складские запасы
-    if (mps.getQtyOnHand())
+    if (mps.isQtyOnHand())
       processCurrentQuantityOnHand(planningRange.startPlanningDate, planningRange.startBucket);
 
     //обработаем запущенные в производство ЗНП
-    if (mps.getProduction()) {
+    if (mps.isProduction()) {
       processLiveProductionOutputs(planningRange.startPlanningDate, planningRange.endPlanningDate);
       processLiveProductionInputs(planningRange.startPlanningDate, planningRange.endPlanningDate);
     }

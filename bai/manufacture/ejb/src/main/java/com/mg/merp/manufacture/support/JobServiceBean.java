@@ -161,7 +161,7 @@ public class JobServiceBean extends AbstractPOJODataBusinessObjectServiceBean<Jo
       jobRoute.setQtyComplete(BigDecimal.ZERO);
       jobRoute.setQtyScrapped(BigDecimal.ZERO);
       jobRoute.setQtyMoved(BigDecimal.ZERO);
-      jobRoute.setControlPointFlag(bomRoute.getControlPointFlag());
+      jobRoute.setControlPointFlag(bomRoute.isControlPointFlag());
       jobRoute.setComment(bomRoute.getComment());
 
       jobRouteService.create(jobRoute);

@@ -86,7 +86,7 @@ public class ExecutionServiceBean extends com.mg.framework.generic.AbstractPOJOD
   }
 
   private void doCheckForOperationPossibility(Execution entity) {
-    if (entity.getDocCreated())
+    if (entity.isDocCreated())
       throw new BusinessException(Messages.getInstance().getMessage(Messages.CANT_BE_CHANGED_OR_DELETED));
   }
 
@@ -114,7 +114,7 @@ public class ExecutionServiceBean extends com.mg.framework.generic.AbstractPOJOD
     Version version = ServerUtils.getPersistentManager().find(Version.class, versionId);
     Execution execution = createExecution(liability, null, execDate, sumCur, transferKind, version);
 
-    if (liability.getPrefOnly() && liability.getPrefResource() != null)
+    if (liability.isPrefOnly() && liability.getPrefResource() != null)
       execution.setResource(liability.getPrefResource());
     else {
       if (resourceId != null) {
@@ -144,7 +144,7 @@ public class ExecutionServiceBean extends com.mg.framework.generic.AbstractPOJOD
     execution.setCurCode(liability.getCurCode());
     execution.setCurRateAuthority(liability.getCurRateAuthority());
     execution.setCurRateType(liability.getCurRateType());
-    execution.setReceivable(liability.getReceivable());
+    execution.setReceivable(liability.isReceivable());
     execution.setTransferKind(transferKind);
 
     BigDecimal converdedToModuleCurSum = getCurencyConverter().conversion(
@@ -265,7 +265,7 @@ public class ExecutionServiceBean extends com.mg.framework.generic.AbstractPOJOD
 
     for (Serializable executionId : executionIds) {
       Execution execution = ServerUtils.getPersistentManager().find(Execution.class, executionId);
-      if (execution.getVersion() == null && execution.getDocHead() == null && execution.getApproved()) {
+      if (execution.getVersion() == null && execution.getDocHead() == null && execution.isApproved()) {
         if (execution.getPlanDate().compareTo(date) == 0) {
           DocHead document = createDocumentByExecution(execution, detailReportText);
           if (document != null) {
@@ -294,13 +294,13 @@ public class ExecutionServiceBean extends com.mg.framework.generic.AbstractPOJOD
     PmcResource resource = execution.getResource();
     Liability liability = execution.getLiability();
 
-    if (execution.getReceivable() && execution.getTransferKind() == 0)
+    if (execution.isReceivable() && execution.getTransferKind() == 0)
       docHeadModel = resource.getInDocModel1();
-    if (execution.getReceivable() && execution.getTransferKind() == 1)
+    if (execution.isReceivable() && execution.getTransferKind() == 1)
       docHeadModel = resource.getInDocModel2();
-    if (!execution.getReceivable() && execution.getTransferKind() == 0)
+    if (!execution.isReceivable() && execution.getTransferKind() == 0)
       docHeadModel = resource.getOutDocModel1();
-    if (!execution.getReceivable() && execution.getTransferKind() == 1)
+    if (!execution.isReceivable() && execution.getTransferKind() == 1)
       docHeadModel = resource.getOutDocModel2();
 
     if (docHeadModel == null) {
@@ -450,7 +450,7 @@ public class ExecutionServiceBean extends com.mg.framework.generic.AbstractPOJOD
   private void doDeleteCreatedDocument(Serializable[] executionIds) {
     for (Serializable executionId : executionIds) {
       Execution execution = ServerUtils.getPersistentManager().find(Execution.class, executionId);
-      if (execution.getVersion() == null && execution.getDocHead() != null && execution.getDocProcessed() == false) {
+      if (execution.getVersion() == null && execution.getDocHead() != null && execution.isDocProcessed() == false) {
         ServerUtils.getPersistentManager().remove(execution.getDocHead());
         execution.setDocHead(null);
         execution.setDocCreated(false);

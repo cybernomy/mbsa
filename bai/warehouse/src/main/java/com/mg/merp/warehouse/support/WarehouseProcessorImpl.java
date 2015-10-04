@@ -325,13 +325,13 @@ public class WarehouseProcessorImpl implements WarehouseProcessor {
       Warehouse stock = (Warehouse) ServerUtils.getPersistentManager().find(Warehouse.class, warehouse.getId());
       Date dateTillClosed = stock.getClosedDateTill();
       // если склад закрыт для фактического движения то смотрим по какую дату
-      if (stock.getWarehouseTransactionClosed() && dateTillClosed != null)
+      if (stock.isWarehouseTransactionClosed() && dateTillClosed != null)
         if (processDate.compareTo(dateTillClosed) < 1) {
           throw new BusinessException(StringUtils.format(Messages.getInstance().getMessage(Messages.STOCK_CLOSED_DATE_TILL)
               , stock.getCode().trim(), DateFormat.getDateInstance(DateFormat.SHORT).format(dateTillClosed)));
         }
       // если на складе учитываются операционные дни то проверяем не является данный день закрытым
-      if (stock.getCheckTransactionDay()) {
+      if (stock.isCheckTransactionDay()) {
         List<WarehouseTransactionDay> trDayList = OrmTemplate.getInstance().findByCriteria(OrmTemplate.createCriteria(WarehouseTransactionDay.class)
             .add(Restrictions.eq("Stock", stock)) //$NON-NLS-1$
             .add(Restrictions.eq("ClosedDay", processDate)) //$NON-NLS-1$

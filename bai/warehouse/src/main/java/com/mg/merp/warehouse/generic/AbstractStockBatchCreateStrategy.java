@@ -153,7 +153,7 @@ public abstract class AbstractStockBatchCreateStrategy implements
    */
   private void doExtraProccessing(final WarehouseProcessDocumentLineData docLineData, final StockBatch stockBatch) {
     ExtraProccessingListener extraProccessingListener = new ExtraProccessingListener(docLineData, stockBatch, listener);
-    if (docLineData.getCatalog().getUseSerialNum()) {
+    if (docLineData.getCatalog().isUseSerialNum()) {
       SerialNumberProccessStrategy serialNumberProccessStrategy = new DefaultSerialNumberProccessStrategy();
       serialNumberProccessStrategy.proccessOnReceipt(docLineData, stockBatch, extraProccessingListener);
     } else
@@ -169,7 +169,7 @@ public abstract class AbstractStockBatchCreateStrategy implements
    */
   private void proccessBinLocation(final WarehouseProcessDocumentLineData docLineData, final StockBatch stockBatch, WarehouseProcessListener listener) {
     Warehouse warehouse = docLineData.getDstStock();
-    if (warehouse == null || !warehouse.getUseBinLocation())
+    if (warehouse == null || !warehouse.isUseBinLocation())
       listener.completed();
     else {
       BinLocationProccessStrategy binLocationProccessStrategy = new DefaultBinLocationProccessStrategy();

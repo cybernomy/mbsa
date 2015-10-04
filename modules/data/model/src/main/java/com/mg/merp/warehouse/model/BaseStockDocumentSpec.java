@@ -11,6 +11,10 @@
  */
 package com.mg.merp.warehouse.model;
 
+import java.math.BigDecimal;
+import javax.persistence.Column;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Transient;
 import com.mg.merp.document.model.DocSpec;
 
 /**
@@ -22,17 +26,18 @@ import com.mg.merp.document.model.DocSpec;
 public class BaseStockDocumentSpec extends DocSpec {
 
     // Fields
-    private java.math.BigDecimal Cost;
+    private BigDecimal Cost;
 
-    private java.math.BigDecimal Discount;
+    private BigDecimal Discount;
 
-    private java.math.BigDecimal PriceWithDiscount;
+    private BigDecimal PriceWithDiscount;
 
-    private java.math.BigDecimal SummaWithDiscount;
+    private BigDecimal SummaWithDiscount;
 
-    private java.math.BigDecimal DocDiscount;
+    private BigDecimal DocDiscount;
 
-    private java.math.BigDecimal externalDiscountValue;
+    @Transient
+    private BigDecimal externalDiscountValue;
 
     /**
    * default constructor
@@ -40,51 +45,56 @@ public class BaseStockDocumentSpec extends DocSpec {
     public BaseStockDocumentSpec() {
     }
 
-    public java.math.BigDecimal getCost() {
+    @Column(name = "COST", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    public BigDecimal getCost() {
         return this.Cost;
     }
 
-    public void setCost(java.math.BigDecimal Cost) {
+    public void setCost(BigDecimal Cost) {
         this.Cost = Cost;
     }
 
-    public java.math.BigDecimal getDiscount() {
+    @Column(name = "DISCOUNT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    public BigDecimal getDiscount() {
         return this.Discount;
     }
 
-    public void setDiscount(java.math.BigDecimal Discount) {
+    public void setDiscount(BigDecimal Discount) {
         this.Discount = Discount;
     }
 
-    public java.math.BigDecimal getPriceWithDiscount() {
+    @Column(name = "PRICE_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    public BigDecimal getPriceWithDiscount() {
         return this.PriceWithDiscount;
     }
 
-    public void setPriceWithDiscount(java.math.BigDecimal PriceWithDiscount) {
+    public void setPriceWithDiscount(BigDecimal PriceWithDiscount) {
         this.PriceWithDiscount = PriceWithDiscount;
     }
 
-    public java.math.BigDecimal getSummaWithDiscount() {
+    @Column(name = "SUMMA_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    public BigDecimal getSummaWithDiscount() {
         return this.SummaWithDiscount;
     }
 
-    public void setSummaWithDiscount(java.math.BigDecimal SummaWithDiscount) {
+    public void setSummaWithDiscount(BigDecimal SummaWithDiscount) {
         this.SummaWithDiscount = SummaWithDiscount;
     }
 
-    public java.math.BigDecimal getDocDiscount() {
+    @Column(name = "DOC_DISCOUNT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    public BigDecimal getDocDiscount() {
         return this.DocDiscount;
     }
 
-    public void setDocDiscount(java.math.BigDecimal DocDiscount) {
+    public void setDocDiscount(BigDecimal DocDiscount) {
         this.DocDiscount = DocDiscount;
     }
 
-    public java.math.BigDecimal getExternalDiscountValue() {
+    public BigDecimal getExternalDiscountValue() {
         return externalDiscountValue;
     }
 
-    public void setExternalDiscountValue(java.math.BigDecimal discountValue) {
+    public void setExternalDiscountValue(BigDecimal discountValue) {
         this.externalDiscountValue = discountValue;
     }
 }

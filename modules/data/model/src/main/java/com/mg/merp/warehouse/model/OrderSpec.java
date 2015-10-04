@@ -28,17 +28,9 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ORDERSPEC")
-public class OrderSpec extends com.mg.merp.document.model.DocSpec implements java.io.Serializable {
+public class OrderSpec extends BaseStockDocumentSpec implements java.io.Serializable {
 
     private Contractor Warehouse;
-
-    private BigDecimal Discount;
-
-    private BigDecimal PriceWithDiscount;
-
-    private BigDecimal SummaWithDiscount;
-
-    private BigDecimal Cost;
 
     private Date RequiredDate;
 
@@ -62,34 +54,7 @@ public class OrderSpec extends com.mg.merp.document.model.DocSpec implements jav
 
     private OrderStatus Status;
 
-    private BigDecimal DocDiscount;
-
     public OrderSpec() {
-    }
-
-    public OrderSpec(TimePeriodKind ShelfLifeMeas) {
-        super(ShelfLifeMeas);
-    }
-
-    public OrderSpec(DocSpec OrderSpec, Catalog Catalog, TaxGroup TaxGroup, Contractor DstMol, Contractor SrcMol, PriceListSpec PriceListSpec, DocHead DocHead, Measure Measure2, SysClient SysClient, Contractor DstStock, Measure Measure1, Contractor SrcStock, BigDecimal Quantity, BigDecimal Price, BigDecimal Summa, BigDecimal Price1, BigDecimal Summa1, BigDecimal Weight, BigDecimal Volume, Date BestBefore, BigDecimal ShelfLife, TimePeriodKind ShelfLifeMeas, Date ProductionDate, BigDecimal Quantity2, String Comment, Contractor Contractor, String UNID, CustomsDeclaration CustomsDeclaration, Country CountryOfOrigin, Set<DocumentSpecTax> Taxes, Set<DocumentSpecSerialNum> SerialNumbers, Contractor Warehouse, BigDecimal Discount, BigDecimal PriceWithDiscount, BigDecimal SummaWithDiscount, BigDecimal Cost, Date RequiredDate, Date PromisedDate, String VendorItemCode, BigDecimal QtyAccepted, BigDecimal QtyInvoiced, BigDecimal QtyReturned, BigDecimal QtyShipped, BigDecimal QtyPicked, BigDecimal QtyOutstanding, boolean ClosedForPlanning, OrderStatus Status, BigDecimal DocDiscount) {
-        super(OrderSpec, Catalog, TaxGroup, DstMol, SrcMol, PriceListSpec, DocHead, Measure2, SysClient, DstStock, Measure1, SrcStock, Quantity, Price, Summa, Price1, Summa1, Weight, Volume, BestBefore, ShelfLife, ShelfLifeMeas, ProductionDate, Quantity2, Comment, Contractor, UNID, CustomsDeclaration, CountryOfOrigin, Taxes, SerialNumbers);
-        this.Warehouse = Warehouse;
-        this.Discount = Discount;
-        this.PriceWithDiscount = PriceWithDiscount;
-        this.SummaWithDiscount = SummaWithDiscount;
-        this.Cost = Cost;
-        this.RequiredDate = RequiredDate;
-        this.PromisedDate = PromisedDate;
-        this.VendorItemCode = VendorItemCode;
-        this.QtyAccepted = QtyAccepted;
-        this.QtyInvoiced = QtyInvoiced;
-        this.QtyReturned = QtyReturned;
-        this.QtyShipped = QtyShipped;
-        this.QtyPicked = QtyPicked;
-        this.QtyOutstanding = QtyOutstanding;
-        this.ClosedForPlanning = ClosedForPlanning;
-        this.Status = Status;
-        this.DocDiscount = DocDiscount;
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
@@ -100,42 +65,6 @@ public class OrderSpec extends com.mg.merp.document.model.DocSpec implements jav
 
     public void setWarehouse(Contractor Warehouse) {
         this.Warehouse = Warehouse;
-    }
-
-    @Column(name = "DISCOUNT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    public BigDecimal getDiscount() {
-        return this.Discount;
-    }
-
-    public void setDiscount(BigDecimal Discount) {
-        this.Discount = Discount;
-    }
-
-    @Column(name = "PRICE_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    public BigDecimal getPriceWithDiscount() {
-        return this.PriceWithDiscount;
-    }
-
-    public void setPriceWithDiscount(BigDecimal PriceWithDiscount) {
-        this.PriceWithDiscount = PriceWithDiscount;
-    }
-
-    @Column(name = "SUMMA_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    public BigDecimal getSummaWithDiscount() {
-        return this.SummaWithDiscount;
-    }
-
-    public void setSummaWithDiscount(BigDecimal SummaWithDiscount) {
-        this.SummaWithDiscount = SummaWithDiscount;
-    }
-
-    @Column(name = "COST", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    public BigDecimal getCost() {
-        return this.Cost;
-    }
-
-    public void setCost(BigDecimal Cost) {
-        this.Cost = Cost;
     }
 
     @Column(name = "REQUIRED_DATE", columnDefinition = "TIMESTAMP")
@@ -235,15 +164,6 @@ public class OrderSpec extends com.mg.merp.document.model.DocSpec implements jav
 
     public void setStatus(OrderStatus Status) {
         this.Status = Status;
-    }
-
-    @Column(name = "DOC_DISCOUNT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    public BigDecimal getDocDiscount() {
-        return this.DocDiscount;
-    }
-
-    public void setDocDiscount(BigDecimal DocDiscount) {
-        this.DocDiscount = DocDiscount;
     }
 }
 

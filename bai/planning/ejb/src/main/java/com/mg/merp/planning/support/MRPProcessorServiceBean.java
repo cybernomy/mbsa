@@ -447,7 +447,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
   }
 
   private void genericProductForecast(PlanningForecast forecast, Date requiredDate) {
-    if (forecast.getPlanningItem().getPlanningItemFlag())
+    if (forecast.getPlanningItem().isPlanningItemFlag())
       planningProductForecast(forecast, requiredDate);
     else
       processProductFamilies(forecast, requiredDate);
@@ -599,7 +599,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
     for (FirmPlannedOrder order : orders)
       if (MathUtils.compareToZero(order.getOrderQty()) > 0) {
         createMRPInputs(order.getId(), generateInBoundFirmPlannedWarehouseTransferReference(order), order.getRequiredDate(), order.getOrderQty(), MRPOrderType.FIRM_PLANNED,
-            MRPSource.TRANSFERS, order.getFixedInput(), order.getCatalog(), (Warehouse) order.getWarehouse(), order.getMeasure(), true);
+            MRPSource.TRANSFERS, order.isFixedInput(), order.getCatalog(), (Warehouse) order.getWarehouse(), order.getMeasure(), true);
       }
   }
 
@@ -680,7 +680,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
             inputs.getRequiredDate(),
             inputs.getRequiredDate(),
             orderDate,
-            inputs.getFixedInput(),
+            inputs.isFixedInput(),
             inputs.getBatchDate(),
             false,
             false,
@@ -1340,27 +1340,27 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 
     processMPSVersions();
 
-    if (mrpVersion.getMrpSoFlag())
+    if (mrpVersion.isMrpSoFlag())
       processLiveSalesOrders();
 
-    if (mrpVersion.getMrpSfFlag())
+    if (mrpVersion.isMrpSfFlag())
       processSalesForecasts();
 
-    if (mrpVersion.getMrpPfFlag())
+    if (mrpVersion.isMrpPfFlag())
       processPurchaseForecasts();
 
-    if (mrpVersion.getMrpPoFlag())
+    if (mrpVersion.isMrpPoFlag())
       processLivePurchaseOrders();
 
-    if (mrpVersion.getMrpJobFlag()) {
+    if (mrpVersion.isMrpJobFlag()) {
       processLiveJobOutputs();
       processLiveJobRequirements();
     }
 
-    if (mrpVersion.getMrpFirmPlannedOrdersFlag())
+    if (mrpVersion.isMrpFirmPlannedOrdersFlag())
       processFirmPlannedWarehouseTransfers();
 
-    if (mrpVersion.getMrpQohFlag())
+    if (mrpVersion.isMrpQohFlag())
       processCurrentQtyOnHand();
 
     mrpBuild();

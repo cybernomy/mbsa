@@ -105,7 +105,7 @@ public abstract class AbstractGoodsIssueStrategy implements GoodsIssueStrategy {
    */
   private void doExtraProccessing() {
     ExtraProccessingListener extraProccessingListener = new ExtraProccessingListener(processListener);
-    if (docLineData.getDocumentSpec().getCatalog().getUseSerialNum() && MathUtils.compareToZero(docLineData.getQuantity1()) == 1) { // и НЕ storno!
+    if (docLineData.getDocumentSpec().getCatalog().isUseSerialNum() && MathUtils.compareToZero(docLineData.getQuantity1()) == 1) { // и НЕ storno!
       SerialNumberProccessStrategy serialNumberProccessStrategy = new DefaultSerialNumberProccessStrategy();
       serialNumberProccessStrategy.proccessOnIssue(docLineData, disposedBatches, extraProccessingListener);
     } else if (processListener != null)
@@ -121,7 +121,7 @@ public abstract class AbstractGoodsIssueStrategy implements GoodsIssueStrategy {
    */
   private void proccessBinLocation(final WarehouseProcessDocumentLineData docLineData, List<StockBatch> stockBatches, WarehouseProcessListener listener) {
     Warehouse warehouse = docLineData.getSrcStock();
-    if (warehouse == null || !warehouse.getUseBinLocation())
+    if (warehouse == null || !warehouse.isUseBinLocation())
       listener.completed();
     else {
       BinLocationProccessStrategy binLocationProccessStrategy = new DefaultBinLocationProccessStrategy();

@@ -1,13 +1,11 @@
 package com.mg.merp.report.model;
 
 import static javax.persistence.GenerationType.SEQUENCE;
-
 import java.util.Date;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -22,10 +20,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.persistence.Version;
-
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CascadeType;
-
 import com.mg.framework.api.orm.OrmTemplate;
 import com.mg.framework.api.orm.PersistentManager;
 import com.mg.framework.utils.MiscUtils;
@@ -243,75 +239,58 @@ public class RptMain extends com.mg.merp.core.model.AbstractEntity implements ja
 
     public java.lang.String getClassNames() {
         if (this.ClassNames == null) {
-          java.util.Set<com.mg.merp.report.model.ClassLink> links = getClassLinks();
-          if (links != null) {
-            StringBuffer sb = new StringBuffer();
-            for (com.mg.merp.report.model.ClassLink link : links)
-              sb.append(link.getSysClass().getSysModule().getName())
-                  .append("(")
-                  .append(link.getSysClass().getSysModule().getDescription())
-                  .append(")")
-                  .append("->")
-                  .append(link.getSysClass().getBeanName())
-                  .append("(")
-                  .append(link.getSysClass().getDescription())
-                  .append(");");
-            this.ClassNames = new String(sb);
-          }
+            java.util.Set<com.mg.merp.report.model.ClassLink> links = getClassLinks();
+            if (links != null) {
+                StringBuffer sb = new StringBuffer();
+                for (com.mg.merp.report.model.ClassLink link : links) sb.append(link.getSysClass().getSysModule().getName()).append("(").append(link.getSysClass().getSysModule().getDescription()).append(")").append("->").append(link.getSysClass().getBeanName()).append("(").append(link.getSysClass().getDescription()).append(");");
+                this.ClassNames = new String(sb);
+            }
         }
         return this.ClassNames;
-      }
+    }
 
-      public void setClassNames(java.lang.String ClassNames) {
+    public void setClassNames(java.lang.String ClassNames) {
         this.ClassNames = ClassNames;
         java.util.Set<ClassLink> links = getClassLinks();
         if (ClassNames != null && ClassNames.length() > 0) {
-          List<String> newNames = StringUtils.split(ClassNames, ";");
-          List<String> names = new LinkedList<String>();
-          //получаем список БК, которые необходимо прикрутить
-          for (String nm : newNames) {
-            int pos = nm.indexOf("->");
-            names.add(nm.substring(pos + 2, nm.indexOf("(", pos)));
-          }
-
-          if (links == null) {
-            links = new HashSet<ClassLink>();
-            setClassLinks(links);
-          }
-
-          //БК, которых нет в списке удаляем из classLinks()
-          java.util.Set<ClassLink> removedLink = new HashSet<ClassLink>();
-          for (ClassLink link : links) {
-            String ss = link.getSysClass().getBeanName().toString();
-            if (!names.contains(ss))
-              removedLink.add(link);
-            else
-              names.remove(ss);
-          }
-          links.removeAll(removedLink);
-
-          //если необходимо добавить новые БК
-          if (names.size() > 0) {
-            PersistentManager pm = ServerUtils.getPersistentManager();
-
-            List<SysClass> scL = MiscUtils.convertUncheckedList(SysClass.class,
-                OrmTemplate.getInstance().findByNamedParam("select sc from SysClass sc where sc.BeanName in (:beans)", "beans", names));
-
-            for (SysClass sc : scL) {
-              ClassLink cl = new ClassLink();
-
-              cl.setSysClass(sc);
-              cl.setReport(this);
-              //XXX: поле SysClient автоматически устанавливается только в рабочем контексте.
-              //А для RptBIRTDeployerImpl его нет
-              cl.setSysClient(getSysClient());
-
-              links.add(cl);
-              pm.persist(cl);
+            List<String> newNames = StringUtils.split(ClassNames, ";");
+            List<String> names = new LinkedList<String>();
+            //получаем список БК, которые необходимо прикрутить
+            for (String nm : newNames) {
+                int pos = nm.indexOf("->");
+                names.add(nm.substring(pos + 2, nm.indexOf("(", pos)));
             }
-          }
+            if (links == null) {
+                links = new HashSet<ClassLink>();
+                setClassLinks(links);
+            }
+            //БК, которых нет в списке удаляем из classLinks()
+            java.util.Set<ClassLink> removedLink = new HashSet<ClassLink>();
+            for (ClassLink link : links) {
+                String ss = link.getSysClass().getBeanName().toString();
+                if (!names.contains(ss))
+                    removedLink.add(link);
+                else
+                    names.remove(ss);
+            }
+            links.removeAll(removedLink);
+            //если необходимо добавить новые БК
+            if (names.size() > 0) {
+                PersistentManager pm = ServerUtils.getPersistentManager();
+                List<SysClass> scL = MiscUtils.convertUncheckedList(SysClass.class, OrmTemplate.getInstance().findByNamedParam("select sc from SysClass sc where sc.BeanName in (:beans)", "beans", names));
+                for (SysClass sc : scL) {
+                    ClassLink cl = new ClassLink();
+                    cl.setSysClass(sc);
+                    cl.setReport(this);
+                    //XXX: поле SysClient автоматически устанавливается только в рабочем контексте.
+                    //А для RptBIRTDeployerImpl его нет
+                    cl.setSysClient(getSysClient());
+                    links.add(cl);
+                    pm.persist(cl);
+                }
+            }
         } else if (links != null)
-          links.clear();
-      }
+            links.clear();
+    }
 }
 

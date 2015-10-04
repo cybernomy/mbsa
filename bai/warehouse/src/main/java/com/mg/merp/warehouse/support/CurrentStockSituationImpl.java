@@ -186,7 +186,7 @@ public class CurrentStockSituationImpl implements CurrentStockSituation {
         .getBusinessService(WareCardServiceLocal.LOCAL_SERVICE_NAME);
 		StockCard stockCard = whbServ.findStockCard(warehouse, mol, catalog, true);
 
-		if (stockCard != null) 
+		if (stockCard != null)
 			return calculateAvailable(stockCard);
 		else
 			return null;*/
@@ -230,9 +230,9 @@ public class CurrentStockSituationImpl implements CurrentStockSituation {
     quan.setLocated1(fact);
     quan.setLocated2(fact2);
     //учитываем ли фактическое количество
-    if (warehouse.getCalcFact()) {
+    if (warehouse.isCalcFact()) {
       //с каким знаком учитываем
-      if (warehouse.getCalcFactSign()) {
+      if (warehouse.isCalcFactSign()) {
         available = fact != null ? fact.negate() : available;
         available2 = fact2 != null ? fact2.negate() : available2;
       } else {
@@ -247,9 +247,9 @@ public class CurrentStockSituationImpl implements CurrentStockSituation {
     quan.setPlanningReceipt1(planArrival);
     quan.setPlanningReceipt2(planArrival2);
     //учитываем ли плановый приход
-    if (warehouse.getCalcPlanIn()) {
+    if (warehouse.isCalcPlanIn()) {
       //с каким знаком учитываем
-      if (warehouse.getCalcPlanInSign()) {
+      if (warehouse.isCalcPlanInSign()) {
         planArrival = planArrival != null ? planArrival.negate() : null;
         planArrival2 = planArrival2 != null ? planArrival2.negate() : null;
       }
@@ -265,9 +265,9 @@ public class CurrentStockSituationImpl implements CurrentStockSituation {
     quan.setPlanningIssue1(planDisposal);
     quan.setPlanningIssue2(planDisposal2);
     //учитываем ли плановый расход
-    if (warehouse.getCalcPlanOut()) {
+    if (warehouse.isCalcPlanOut()) {
       //с каким знаком учитываем
-      if (warehouse.getCalcPlanOutSign()) {
+      if (warehouse.isCalcPlanOutSign()) {
         planDisposal = planDisposal != null ? planDisposal.negate() : null;
         planDisposal2 = planDisposal2 != null ? planDisposal2.negate() : null;
       }
@@ -283,9 +283,9 @@ public class CurrentStockSituationImpl implements CurrentStockSituation {
     quan.setReserved1(reserve);
     quan.setReserved2(reserve2);
     //учитываем ли зарезервировано
-    if (warehouse.getCalcReserve()) {
+    if (warehouse.isCalcReserve()) {
       //с каким знаком учитываем
-      if (warehouse.getCalcReserveSign()) {
+      if (warehouse.isCalcReserveSign()) {
         reserve = reserve != null ? reserve.negate() : null;
         reserve2 = reserve2 != null ? reserve2.negate() : null;
       }

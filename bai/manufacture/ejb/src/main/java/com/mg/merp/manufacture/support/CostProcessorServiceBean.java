@@ -414,11 +414,11 @@ public class CostProcessorServiceBean extends com.mg.framework.generic.AbstractP
         .add(Restrictions.ge("EffOffDate", actualityDate)));
 
     for (JobMachine jobMachine : jobMachines) {
-      calculateMachineCost(actualityDate, ownerCost, jobMachine.getMchRecoveryFlag(), jobMachine.getTimeRateFlag(), targetQuan,
-          jobMachine.getStdCostDetail(), jobMachine.getRunTicksMch(), jobMachine.getMchOhRate(), jobMachine.getMchCostCategory(),
-          jobMachine.getMchRateCurrency(), jobMachine.isMchOhBackflushFlag(), jobMachine.getMchOhAllocationFlag(),
-          jobMachine.getMchOhRate(), jobMachine.getMchOhRatio(), jobMachine.getMchOhCostCategory(), jobMachine.getMchOhRateCurrency());
-    }
+    	calculateMachineCost(actualityDate, ownerCost, jobMachine.getMchRecoveryFlag(), jobMachine.getTimeRateFlag(), targetQuan,
+    	          jobMachine.getStdCostDetail(), jobMachine.getRunTicksMch(), jobMachine.getMchOhRate(), jobMachine.getMchCostCategory(),
+    	          jobMachine.getMchRateCurrency(), jobMachine.isMchOhBackflushFlag(), jobMachine.getMchOhAllocationFlag(),
+    	          jobMachine.getMchOhRate(), jobMachine.getMchOhRatio(), jobMachine.getMchOhCostCategory(), jobMachine.getMchOhRateCurrency());
+    	    }
   }
 
   private void calculateRouteCost(Bom bom, BigDecimal targetQuan, Date actualityDate, List<CostDetailLineItem> ownerCost) {

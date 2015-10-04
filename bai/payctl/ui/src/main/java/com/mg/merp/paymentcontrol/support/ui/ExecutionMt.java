@@ -48,7 +48,7 @@ public class ExecutionMt extends DefaultMaintenanceForm implements MasterModelLi
 
     super.doOnRun();
 
-    if (((Execution) getEntity()).getApproved()) {
+    if (((Execution) getEntity()).isApproved()) {
       view.getWidget("SumCur").setReadOnly(true); //$NON-NLS-1$
       view.getWidget("SumNat").setReadOnly(true); //$NON-NLS-1$
     }

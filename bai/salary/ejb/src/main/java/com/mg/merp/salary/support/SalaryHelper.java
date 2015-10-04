@@ -641,7 +641,7 @@ public class SalaryHelper {
       resultTariff = getValueFromTariffScale(tariffing.getTariffScaleCode(), tariffing.getTariffClass(), beginDate, contextParams);
 
     if (TarifCategType.RISE == tariffCategoryType) {
-      if (!tariffing.getUseRiseReference())
+      if (!tariffing.isUseRiseReference())
         resultTariff = tariffing.getRiseValue();
       else
         resultTariff = getRiseValue(tariffing.getRise(), tariffing.getRiseScale());

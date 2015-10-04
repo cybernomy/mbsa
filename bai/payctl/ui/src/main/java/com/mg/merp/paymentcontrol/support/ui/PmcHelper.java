@@ -65,7 +65,7 @@ public class PmcHelper {
     PmcResource resource = ServerUtils.getPersistentManager().find(PmcResource.class, resourceId);
     final Liability liability = ServerUtils.getPersistentManager().find(Liability.class, liabilityId);
     ExecutionParams executionParams = prepareExecutionParams(resource, liability, actDate);
-    if (liability.getPrefOnly() && liability.getPrefResource() != null)
+    if (liability.isPrefOnly() && liability.getPrefResource() != null)
       resource = liability.getPrefResource();
     final PmcResource resourceToExecute = resource;
 
@@ -141,13 +141,13 @@ public class PmcHelper {
       throw new BusinessException(Messages.getInstance().getMessage(Messages.CAN_NOT_BE_EXECUTED));
 
     BigDecimal sumToExecute = BigDecimal.ZERO;
-    if (liability.getReceivable())
+    if (liability.isReceivable())
       sumToExecute = remnSum;
     else
       sumToExecute = remnSum.min(planPaymentItem.getEndSaldo());
 
     String resourceName;
-    if (liability.getPrefOnly() && liability.getPrefResource() != null)
+    if (liability.isPrefOnly() && liability.getPrefResource() != null)
       resourceName = liability.getPrefResource().getName();
     else
       resourceName = planPaymentItem.getResource();
@@ -186,14 +186,14 @@ public class PmcHelper {
       throw new BusinessException(Messages.getInstance().getMessage(Messages.CAN_NOT_BE_EXECUTED));
 
     BigDecimal sumToExecute = BigDecimal.ZERO;
-    if (liability.getReceivable())
+    if (liability.isReceivable())
       sumToExecute = remnSum;
     else {
       BigDecimal balance = getResourceService().getBalance((Integer) resource.getId(), actDate);
       sumToExecute = remnSum.min(balance);
     }
 
-    if (liability.getPrefOnly() && liability.getPrefResource() != null) {
+    if (liability.isPrefOnly() && liability.getPrefResource() != null) {
       resource = liability.getPrefResource();
       //TODO: нужна ли повторная проверка валюты если в качестве средства платежа используется "предпочтительное средство платежа" обязательства?
       //TODO: по какому средству платежа расчитывать Баланс?

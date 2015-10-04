@@ -79,7 +79,7 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
   protected void doProccessOnReceipt(WarehouseProcessDocumentLineData docLineData, final StockBatch stockBatch, final WarehouseProcessListener processListener) {
     final DocSpec docSpec = docLineData.getDocumentSpec();
     // если для товара в позиции спецификации не указано использование серийных номеров, то завершаем обработку
-    if (!docSpec.getCatalog().getUseSerialNum())
+    if (!docSpec.getCatalog().isUseSerialNum())
       processListener.completed();
     else {
       final List<String> avalibleSerialNumberList = getDocSpecSerialNumberList(docSpec);
@@ -181,7 +181,7 @@ public class DefaultSerialNumberProccessStrategy implements SerialNumberProccess
   protected void doProccessOnIssue(WarehouseProcessDocumentLineData docLineData, List<StockBatch> stockBatches, final WarehouseProcessListener processListener) {
     final DocSpec docSpec = docLineData.getDocumentSpec();
     // если для товара в позиции спецификации не указано использование серийных номеров, то завершаем обработку
-    if (!docSpec.getCatalog().getUseSerialNum() || docSpec.getQuantity() == null || MathUtils.compareToZero(docSpec.getQuantity()) == 0)
+    if (!docSpec.getCatalog().isUseSerialNum() || docSpec.getQuantity() == null || MathUtils.compareToZero(docSpec.getQuantity()) == 0)
       processListener.completed();
     else {
       ormTemplate.bulkUpdateByNamedQuery(DELETE_DOC_SPEC_SERIAL_NUMBERS_QUERY_NAME, "docSpec", docSpec); //$NON-NLS-1$

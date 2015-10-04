@@ -1,10 +1,8 @@
 package com.mg.merp.document.model;
 
 import static javax.persistence.GenerationType.SEQUENCE;
-
 import java.math.BigDecimal;
 import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -18,11 +16,9 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.persistence.Version;
-
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
 import org.hibernate.annotations.TypeDefs;
-
 import com.mg.merp.core.model.Folder;
 import com.mg.merp.core.model.SysClient;
 import com.mg.merp.core.model.SysCompany;
@@ -41,6 +37,8 @@ import com.mg.merp.reference.model.PriceType;
 @Entity
 @Table(name = "DOCHEAD")
 public class DocHead extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
+
+    public static final int DOCNUMBER_LENGTH = 20;
 
     private Integer Id;
 
@@ -586,11 +584,11 @@ public class DocHead extends com.mg.merp.core.model.AbstractEntity implements ja
      * @return the isAdjusted
      */
     public boolean isAdjusted() {
-      return isAdjusted;
+        return isAdjusted;
     }
 
     public void setAdjusted(boolean isAdjusted) {
-      this.isAdjusted = isAdjusted;
+        this.isAdjusted = isAdjusted;
     }
 }
 
