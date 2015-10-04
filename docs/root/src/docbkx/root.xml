@@ -1,0 +1,965 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
+    "http://www.oasis-open.org/docbook/xml/5.0b5/dtd/docbook.dtd">
+<book xmlns:xi="http://www.w3.org/2001/XInclude"
+      version="5.0"
+      xml:lang="ru">
+  <title>
+    Управление работой системы <?eval ${project.organization.name}?>
+  </title>
+  <subtitle>Руководство пользователя</subtitle>
+  <info>
+    <copyright>
+      <year><?eval ${project.inceptionYear}?></year>
+      <year><?eval ${now}?></year>
+      <holder><?eval ${project.organization.name}?></holder>
+    </copyright>
+    <releaseinfo><?eval ${project.version}?></releaseinfo>
+  </info>
+  <preface xml:id="preface" revision="1">
+    <title>Целевая аудитория</title>
+    <para>Данное руководство предназначено для пользователей, работающих
+      с системой <?eval ${project.organization.name}?>.
+    </para>
+  </preface>
+  <chapter xml:id="intro">
+    <title>Введение</title>
+    <para>Добро пожаловать в Руководство Пользователя системы <?eval ${project.organization.name}?>
+      !
+    </para>
+    <section xml:id="getting_started">
+      <title>Начало</title>
+      <para>Цель данной главы сориентировать Вас в функциональных возможностях
+        системы <?eval ${project.organization.name}?>.
+        Как Вы увидите, основные положения описанные здесь, функционируют во всём приложении.
+        Мы хотим, чтобы данная информация позволила Вам
+        использовать <?eval ${project.organization.name}?> с максимальной
+        эффективностью.
+      </para>
+      <para>
+        <guibutton>Внимание!</guibutton>
+        Приведенные в Руководстве Пользователя копии экранов
+        могут не соответствовать изображениям, которые Вы видите на своем экране, т.к. они зависят
+        от оборудования, операционной системы и настроек. Однако функционирование системы при этом
+        не изменяется.
+      </para>
+      <para>В следующих разделах описаны шаги, необходимые для подключения к системе и выхода из
+        неё. В некоторых случаях Вам потребуется обратиться к системному администратору для
+        получения подробной информации.
+      </para>
+      <!-- заканчивается section id="getting_started" -->
+    </section>
+    <section xml:id="login">
+      <title>Подключение</title>
+      <para>Для подключения к серверу <?eval ${project.organization.name}?> требуется веб-браузер, в
+        адресной строке которого
+        указывается адрес сервера, порт и вид запуска - Java аплет или Java Web
+        Start. Например, если имя сервера servername, а порт 8080, то строка для подключения
+        через Java Web Start будет выглядеть так:
+      </para>
+      <para>
+        <literal>http://servername:8080/mbsaclient/merpclient.jnlp</literal>
+      </para>
+      <para>После подключения будет открыто отдельное окно.</para>
+      <para>Старт с использованием Java аплета:</para>
+      <para>
+        <literal>http://servername:8080/mbsaclient/merpclient.jsp</literal>
+      </para>
+      <para>В этом случае интерфейс системы вы увидите в том же окне браузера.</para>
+      <para>При подключении система <?eval ${project.organization.name}?> запрашивает имя
+        пользователя и пароль.
+      </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/login.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+    </section>
+    <section xml:id="logout">
+      <title>Выход из системы</title>
+      <para/>
+      <para>Чтобы завершить сеанс работы с системой <?eval ${project.organization.name}?>,
+        используйте пункт главного меню
+        <menuchoice>
+          <guimenu>Файл</guimenu>
+          <guimenuitem>Выход</guimenuitem>
+        </menuchoice>
+        или просто
+        Вы можете закрыть окно браузера нажатием на крестик в правом верхнем углу.
+      </para>
+    </section>
+    <section xml:id="application_fundamentals">
+      <title>Основные положения</title>
+      <para>Операции с объектами в системе <?eval ${project.organization.name}?> могут совершаться с
+        помошью мыши и с
+        помощью клавиатуры.
+      </para>
+      <section xml:id="drag_and_drop">
+        <title>Операция перетаскивания</title>
+        <para>В браузерах с папочной структурой пользователь может перемещать записи из одной папки
+          в другую. Делать это можно с помощью мыши.
+        </para>
+        <para>Установите курсор на объект (папку или строку с записью), который вы хотите
+          переместить, нажмите левую клавишу мыши и, не отпуская клавишу, переместите курсор мыши на
+          рисунок папки, в которую выбранный объект должен быть перемещён. Затем отпустите клавишу
+          мыши.
+        </para>
+        <!-- заканчивается id="drag_and_drop" -->
+      </section>
+      <section xml:id="sort_by">
+        <title>Сортировка по полю</title>
+        <para>В браузере-списке можно упорядочить информацию в одном поле - по возрастанию или
+          убыванию
+          (для чисел и дат), по алфавитному или обратному порядку (для строковых полей).
+        </para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/sort_by.gif"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>Щёлкните мышью один раз на сером заголовке нужного поля. Система отсортирует записи.
+          Чтобы отсортировать записи в обратном порядке, щёлкните на этом же заголовке ещё раз.
+        </para>
+        <!-- заканчивается id="sort_by" -->
+      </section>
+      <!-- заканчивается section id="application_fundamentals" -->
+    </section>
+  </chapter>
+  <chapter xml:id="root_forms">
+    <title>Виды списков и форм</title>
+    <para>В этой главе рассматриваются основные виды списков-браузеров и форм поддержки,
+      существующих в системе <?eval ${project.organization.name}?>.
+      В списке может отображаться в табличном виде информация из многих записей. Окно формы
+      поддержки представляет информацию одной записи.
+    </para>
+    <section xml:id="simple_browser">
+      <title>Простой список</title>
+      <para>Простой список в системе <?eval ${project.organization.name}?> представляется в виде
+        таблицы, которая
+        отражает в себе записи базы данных определённого раздела системы.
+      </para>
+      <para>Главными элементами простого списка являются:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Название списка (заголовок окна)</para>
+        </listitem>
+        <listitem>
+          <para>Поля (группируются по столбцам)</para>
+        </listitem>
+        <listitem>
+          <para>Записи. Каждой записи соответствует одна строка.</para>
+        </listitem>
+        <listitem>
+          <para>Активная запись. Активной считается текущая строка (запись),
+            выделенная курсором.
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>Вы можете менять очерёдность отображения полей (порядок столбцов), перетаскивая
+        их мышью за серые заголовки вправо или влево. Для этого наведите курсор мыши на
+        заголовок того поля, которое Вы хотите переместить и нажмите левую кнопку мыши.
+        Не отпуская кнопку, передвиньте мышь вправо или влево на нужное расстояние.
+        Затем отпустите кнопку мыши.
+      </para>
+      <para>Примером простого списка может служить раздел системы
+        "Периоды бухгалтерского учёта".
+      </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/periods.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Название списка выводится в заголовке окна:</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/head.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Названия всех открытых списков выводятся на панели активных окон.</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/panel_active.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <!-- заканчивается подсекция simple_browser -->
+    </section>
+    <section xml:id="tree_browser">
+      <title>Список папок</title>
+      <para>Папочная структура представляет собой "дерево". Уровень вложенности
+        папок зависит от конкретной настройки системы.
+      </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/tree_browser.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Самая верхняя папка называется "корневая папка".</para>
+      <!-- заканчивается подсекция tree_browser -->
+    </section>
+    <section xml:id="folder_browser">
+      <title>Структурированный список</title>
+      <para>Структурированный список имеет в своей правой части ту же структуру,
+        что и простой список. В левой части структурированного списка отражается
+        папочная структура, имеющая сколь угодно много уровней вложенности. Такая
+        структура позволяет произвольным образом классифицировать записи и
+        работать с ними по классификационным разделам (папкам) или при необходимости
+        общим списком (без учёта папок). Примером структурированного списка может
+        служить раздел системы "Контрагенты, Партнёры":
+      </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/partners.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Главными элементами структурированного списка являются:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Название списка (отображается в заголовке окна)</para>
+        </listitem>
+        <listitem>
+          <para>Папка</para>
+        </listitem>
+        <listitem>
+          <para>Активная папка (выглядит как открытая папка)</para>
+        </listitem>
+        <listitem>
+          <para>Поля (группируются по столбцам)</para>
+        </listitem>
+        <listitem>
+          <para>Записи (каждой записи соответствует одна строка)</para>
+        </listitem>
+        <listitem>
+          <para>Активная запись (текущая строка, на которой стоит курсор)</para>
+        </listitem>
+      </itemizedlist>
+      <para>Самая верхняя папка в левой части окна называется "корневая
+        папка".
+      </para>
+      <!-- заканчивается подсекция folder_browser -->
+    </section>
+    <!-- начинается подсекция mt_form -->
+    <section xml:id="mt_form">
+      <title>Формы поддержки</title>
+      <para>Окно формы поддержки представляет информацию, относящуюся к одной записи,
+        для просмотра или изменения.
+        Формы поддержки бывают простые и сложные: с закладками, вложенными списками
+        и т.д.
+      </para>
+      <para>Главные элементы простой формы:</para>
+      <itemizedlist>
+        <listitem>
+          <para>Наименование формы (заголовок окна)</para>
+        </listitem>
+        <listitem>
+          <para>Поля</para>
+        </listitem>
+        <listitem>
+          <para>Элементы управления</para>
+        </listitem>
+      </itemizedlist>
+      <para>Простую форму поддержки можно рассмотреть на примере
+        раздела "Единицы измерения".
+      </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/measure.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>На приведённом рисунке наименование формы - заголовок окна:
+        "Единицы измерения".
+      </para>
+      <para>Поля - "Код", "Наименование", "Международный
+        код", "Внутренний код" и "Делимая единица".
+        Причём первые четыре из них - поля для ввода текста, а "Делимая
+        единица" - поле с флагом, то есть признак, который либо присущ
+        данной записи, либо нет.
+      </para>
+      <para>Элементы управления в данном окне - кнопки "ОК" и
+        "Закрыть".
+      </para>
+      <para>Для того чтобы изменить размер формы поддержки, наведите курсор
+        мыши на край окна так, чтобы он принял вид двунаправленной стрелки.
+        Нажмите левую кнопку мыши и, не отпуская кнопку, переместите курсор
+        в нужном направлении - размер окна изменится.
+      </para>
+      <section xml:id="mt_composite_form">
+        <title>Сложная форма поддержки</title>
+        <para>Сложная форма поддержки может включать различные закладки
+          и вложенные списки.
+        </para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/add_relation.gif"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <!--    <para>Элементы формы поддержки с закладками:</para>
+            <itemizedlist>
+              <listitem><para>Наименование формы (заголовок окна) </para> </listitem>
+          <listitem><para>Поля (текстовые, поля с флагами, переключатели) </para> </listitem>
+          <listitem><para>Закладки (активная, неактивная)  </para> </listitem>
+          <listitem><para>Элементы управления </para> </listitem>
+            </itemizedlist> -->
+        <para><emphasis>Вложенные списки</emphasis>. Иногда поле, а чаще -
+          закладка, может содержать массив (список) записей-деталей. Обычно такое поле
+          становится доступным для заполнения после того, как добавлен заголовок
+          записи. А в товарных документах даже предусмотрен специальный режим
+          "<link linkend="add_spec">Изменение спецификаций</link>" - для
+          работы с вложенным списком.
+        </para>
+        <!-- заканчивается mt_composite_form -->
+      </section>
+      <!-- заканчивается подсекция mt_form -->
+    </section>
+    <section xml:id="rest">
+      <title>Условия отбора</title>
+      <para>Вызвать окно "Условия отбора" в активном окне-браузере
+        можно клавишей
+        <keycombo>
+          <keycap>F6</keycap>
+        </keycombo>
+        или через пункт
+        контекстного меню.
+      </para>
+    </section>
+    <section xml:id="print_rpt">
+      <title>Окно выбора печатных форм</title>
+      <para>Вызывать окно со списком отчётов, зарегистрированных для данного
+        раздела системы, можно сочетанием клавиш
+        <keycombo>
+          <keycap>Ctrl</keycap>
+          <keycap>P</keycap>
+        </keycombo>
+        или через пункт контекстного меню.
+      </para>
+      <para>Если для какого-то бизнес-компонента (раздела системы) не зарегистрировано
+        ни одного отчёта, данное окно не появится.
+      </para>
+    </section>
+    <section xml:id="docflow">
+      <title>Окна документооборота</title>
+      <para><guibutton>Окно со списком этапов документооборота</guibutton>. Вызывается
+        для текущей строки.
+        Появляется при вызове функции отработки документооборота, либо наоборот - отката.
+        Содержит список этапов доступных конкретному пользователю в конкретный момент
+        времени: этот список зависит от настройки карты документооборота и прав доступа.
+      </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/docstage.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>
+        <guibutton>История документооборота</guibutton>
+        - окно со списком выполненных
+        этапов документооборота. Вызывается для текущей строки нажатием сочетания
+        клавиш
+        <keycombo>
+          <keycap>Ctrl</keycap>
+          <keycap>H</keycap>
+        </keycombo>
+        , либо
+        через контекстное меню.
+      </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/hist_docflow.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Окно
+        <guibutton>История документооборота</guibutton>
+        не предназначено для внесения
+        изменений.
+      </para>
+      <para>В нижней части окна по правой кнопке мыши доступна функция "
+        <guibutton>Показать
+          результат этапа
+        </guibutton>
+        - она выполняется только в том случае, если результатом этапа
+        стало создание документа, либо записи в каком-то регистре (хозяйственная операция,
+        финансовая операция и т.п.)
+      </para>
+    </section>
+    <section xml:id="quan">
+      <title>Количество на складах</title>
+      <para>Данная функция существует не во всех списках, а только в некоторых (справочник
+        "Каталог", окно выбора спецификаций в товарном документе).
+        Окно с информацией о количестве по текущей строке можно вызвать клавишей
+        <keycombo>
+          <keycap>F3</keycap>
+        </keycombo>
+        , либо через контекстное меню.
+      </para>
+    </section>
+    <section xml:id="f7">
+      <title>Окно прав доступа</title>
+      <para>Окно прав доступа. Определение прав на
+        активный объект (папку, тип документа, и т.д.) для групп пользователей.
+        Вызывается для текущей строки нажатием клавиши
+        <keycombo>
+          <keycap>F7</keycap>
+        </keycombo>
+        .
+      </para>
+    </section>
+    <section xml:id="fast_search">
+      <title>Окно быстрого поиска по списку</title>
+      <para>Отсортируйте записи в том поле, где хотите вести поиск,
+        установите курсор на какую-нибудь запись в этом столбце, щёлкнув мышью, и нажмите
+        <keycombo>
+          <keycap>Ctrl</keycap>
+          <keycap>F</keycap>
+        </keycombo>
+        .
+        Обратите внимание, здесь F - буквенная клавиша.
+      </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/fast_search.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Это окно позволяет вести поиск с учётом регистра, по слову целиком,
+        по части слова и т.п.
+      </para>
+      <para>По началам слов можно вести поиск без этого окна, просто отсортировав записи в
+        нужном поле и набрав на клавиатуре искомое сочетание букв.
+        В выделенной колонке будет найдено первое подходящее сочетание с начала слова и таблицы,
+        без учёта регистра.
+      </para>
+    </section>
+  </chapter>
+  <!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY main_menu SYSTEM "modules/root_main_menu.xml">
+<!ENTITY merp "<?eval ${project.organization.name}?>">
+]> -->
+  <chapter xml:id="main_menu">
+    <title>Главное меню</title>
+    <para>Через меню, расположенное вверху, под заголовком окна
+      системы <?eval ${project.organization.name}?>,
+      можно обратиться к любому разделу системы.
+    </para>
+    <para>Клавишей
+      <keycombo>
+        <keycap>F11</keycap>
+      </keycombo>
+      вызывается окно "Центр
+      управления", также содержащее главное меню системы.
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/main_menu.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>Для перемещения по пунктам главного меню в окне "Центр
+      управления" используйте клавиши-стрелки "Вверх" и "Вниз";
+      выбрав нужный пункт, нажмите клавишу "Enter".
+    </para>
+    <para>Для работы с главным меню удобно использовать мышь. Двойным щелчком мыши открывается
+      дерево папок, а также выбранный пользователем раздел
+      системы <?eval ${project.organization.name}?>.
+    </para>
+  </chapter>
+  <chapter xml:id="hotkeys">
+    <title>Общие управляющие клавиши</title>
+    <para>Все операции в системе можно совершать с помощью мыши. Но для некоторых действий
+      зарезервированы особые сочетания клавиш.
+    </para>
+    <section xml:id="hotkeys_br">
+      <title>В списках</title>
+      <section xml:id="actions">
+        <title>Основные действия</title>
+        <para>
+          <keycombo>
+            <keycap>Insert</keycap>
+          </keycombo>
+          Добавить новый объект (папку или запись).
+        </para>
+        <para>
+          <keycombo>
+            <keycap>F2</keycap>
+          </keycombo>
+          Измененить активный объект.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Shift</keycap>
+            <keycap>F2</keycap>
+          </keycombo>
+          Изменить спецификации (в товарных документах).
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Delete</keycap>
+          </keycombo>
+          Удалить активный объект.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Ctrl</keycap>
+            <keycap>F2</keycap>
+          </keycombo>
+          Просмотреть активный объект. Открывается форма поддержки, но пользователь не может
+          изменить в ней данные.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>F4</keycap>
+          </keycombo>
+          Копировать частично (только заголовок, без деталей и спецификаций).
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Shift</keycap>
+            <keycap>F4</keycap>
+          </keycombo>
+          Копировать полностью (со спецификациями и деталями)
+        </para>
+        <para>
+          <keycombo>
+            <keycap>F5</keycap>
+          </keycombo>
+          Обновить список в активном окне-браузере.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>F6</keycap>
+          </keycombo>
+          Вызвать окно &quot;Условия отбора&quot; в активном окне-браузере.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Ctrl</keycap>
+            <keycap>P</keycap>
+          </keycombo>
+          Печать. Вызывается окно со списком отчётов, зарегистрированных для данного
+          раздела системы.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Ctrl</keycap>
+            <keycap>Insert</keycap>
+          </keycombo>
+          Вставка с образцом
+        </para>
+      </section>
+      <section xml:id="doc_actions">
+        <title>Документооборот</title>
+        <para>Следующие три функции взываются только в списках документов.</para>
+        <para>
+          <keycombo>
+            <keycap>Ctrl</keycap>
+            <keycap>R</keycap>
+          </keycombo>
+          Отработать этап документооборота. Для текущей строки вызывается окно со списком
+          доступных к выполнению этапов документооборота.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Ctrl</keycap>
+            <keycap>B</keycap>
+          </keycombo>
+          Откатить этап документооборота. Для текущей строки вызывается окно со списком
+          доступных к откату этапов документооборота.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Ctrl</keycap>
+            <keycap>H</keycap>
+          </keycombo>
+          История документооборота. Для текущей строки вызывается окно со списком выполненных
+          этапов документооборота.
+        </para>
+      </section>
+      <section xml:id="special">
+        <title>Специальные функции</title>
+        <para>
+          <keycombo>
+            <keycap>F3</keycap>
+          </keycombo>
+          Количество на складах. Вызывается окно с информацией о количестве по текущей строке.
+          Данная функция существует не во всех списках, а только в некоторых (справочник
+          &quot;Каталог&quot;, окно выбора спецификаций в товарном документе).
+        </para>
+        <para>
+          <keycombo>
+            <keycap>F7</keycap>
+          </keycombo>
+          Доступ. Определение прав на
+          активный объект (папку, тип документа, и т.д.) для групп пользователей.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Ctrl</keycap>
+            <keycap>F</keycap>
+          </keycombo>
+          Окно быстрого поиска по списку. Отсортируйте записи в том поле, где хотите вести поиск,
+          установите курсор на какую-нибудь запись в этом столбце, щёлкнув мышью, и нажмите
+          <keycombo>
+            <keycap>Ctrl</keycap>
+            <keycap>F</keycap>
+          </keycombo>
+          .
+          Обратите внимание, здесь F - буквенная клавиша.
+        </para>
+        <screenshot>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="images/fast_search.gif"/>
+            </imageobject>
+          </mediaobject>
+        </screenshot>
+        <para>Это окно позволяет вести поиск с учётом регистра, по слову целиком,
+          по части слова и т.п.
+        </para>
+        <para>По началам слов можно вести поиск без этого окна, просто отсортировав записи в
+          нужном поле и набрав на клавиатуре искомое сочетание букв.
+          В выделенной колонке будет найдено первое подходящее сочетание с начала слова и таблицы,
+          без учёта регистра.
+        </para>
+      </section>
+      <section xml:id="select_br">
+        <title>Перемещение по спискам. Выделение записей</title>
+        <para>Клавишей
+          <keycombo>
+            <keycap>Tab</keycap>
+          </keycombo>
+          можно перемещать курсор вперёд-вниз по
+          списку. Сочетанием клавиш
+          <keycombo>
+            <keycap>Shift</keycap>
+            <keycap>Tab</keycap>
+          </keycombo>
+          можно перемещать курсор по списку записей наверх, т.е. в обратном порядке
+        </para>
+        <para>
+          <keycombo>
+            <keycap>PgUp</keycap>
+          </keycombo>
+          - переместить курсор от текущей строки
+          вверх по списку на размер открытого окна.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>PgDn</keycap>
+          </keycombo>
+          - переместить курсор
+          вниз по списку на размер открытого окна.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Ctrl</keycap>
+            <keycap>Home</keycap>
+          </keycombo>
+          - переместить
+          курсор на первую, самую верхнюю строку списка.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Ctrl</keycap>
+            <keycap>End</keycap>
+          </keycombo>
+          - переместить
+          курсор на последнюю, самую нижнюю строку списка.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Ctrl</keycap>
+            <keycap>A</keycap>
+          </keycombo>
+          - выделить все
+          записи в списке.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Shift</keycap>
+            <keycap>Up</keycap>
+          </keycombo>
+          - выделить текущую
+          строку и строку выше. Удерживая клавишу
+          <keycombo>
+            <keycap>Shift</keycap>
+          </keycombo>
+          ,
+          можно выделить нужное количество строк.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Shift</keycap>
+            <keycap>Down</keycap>
+          </keycombo>
+          - выделить текущую
+          строку и строку ниже. Удерживая клавишу
+          <keycombo>
+            <keycap>Shift</keycap>
+          </keycombo>
+          ,
+          можно выделить нужное количество строк.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Shift</keycap>
+            <keycap>PgUp</keycap>
+          </keycombo>
+          - выделить
+          строки, начиная с текущей и вверх на размер экрана.
+        </para>
+        <para>
+          <keycombo>
+            <keycap>Shift</keycap>
+            <keycap>PgDn</keycap>
+          </keycombo>
+          - выделить
+          строки, начиная с текущей и вниз на размер экрана.
+        </para>
+      </section>
+    </section>
+    <section xml:id="hotkeys_mt">
+      <title>В формах</title>
+      <para>Клавишей
+        <keycombo>
+          <keycap>Tab</keycap>
+        </keycombo>
+        можно перемещать курсор
+        вперёд-вниз по полям формы.
+      </para>
+      <para>Клавишей со стрелкой
+        <keycombo>
+          <keycap>Вниз</keycap>
+        </keycombo>
+        можно вызвать
+        выпадающий список значений для перечислимого поля. Стрелками
+        <keycombo>
+          <keycap>Вверх</keycap>
+        </keycombo>
+        и
+        <keycombo>
+          <keycap>Вниз</keycap>
+        </keycombo>
+        выберите нужное значение, затем нажмите
+        <keycombo>
+          <keycap>Enter</keycap>
+        </keycombo>
+        .
+      </para>
+      <figure>
+        <title>Выпадающий список с заданными значениями</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/drop_list.gif"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para>Клавишей
+        <keycombo>
+          <keycap>Пробел</keycap>
+        </keycombo>
+        можно установить или
+        снять флаг, если данное поле активно (название поля выделяется рамочкой).
+      </para>
+      <figure>
+        <title>Поле с флагом</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/checkbox.gif"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para>Также клавишей
+        <keycombo>
+          <keycap>Пробел</keycap>
+        </keycombo>
+        можно установить
+        значение в поле с переключателем. Перемещать курсор по значениям такого поля можно
+        с помощью клавиши
+        <keycombo>
+          <keycap>Tab</keycap>
+        </keycombo>
+        .
+      </para>
+      <figure>
+        <title>Значения поля с переключателем</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/radiobutton.gif"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+      <para>У полей, значение которых выбирается из других справочников и разделов системы,
+        часто можно увидеть справа три управляющих кнопки: просмотреть значение, удалить
+        значение, выбрать значение. Эти элементы управления тоже можно использовать с
+        помощью клавиатуры: клавишей
+        <keycombo>
+          <keycap>Tab</keycap>
+        </keycombo>
+        перемещая
+        курсор слева направо, сочетанием
+        <keycombo>
+          <keycap>Shift</keycap>
+          <keycap>Tab</keycap>
+        </keycombo>
+        справа налево.
+        Клавиша
+        <keycombo>
+          <keycap>Пробел</keycap>
+        </keycombo>
+        активирует выбранную функцию.
+      </para>
+      <figure>
+        <title>Элементы управления поля с выбираемым значением</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/control.gif"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+    </section>
+    <section xml:id="hotkeys_oth">
+      <title>Прочие</title>
+      <para>Клавишей
+        <keycombo>
+          <keycap>F1</keycap>
+        </keycombo>
+        вызывается руководство пользователя
+        по текущему разделу системы. Оно открывается в отдельном окне веб-браузера. Эта
+        функция доступна и в списках, и в формах.
+      </para>
+      <para>Клавишей
+        <keycombo>
+          <keycap>F11</keycap>
+        </keycombo>
+        вызывается окно &quot;Центр
+        управления&quot;, которое содержит главное меню системы. Клавиши со стрелками вверх и вниз
+        помогут перемещать курсор по его пунктам. Чтобы открыть выбранный раздел системы, установите
+        на него курсор и нажмите
+        <keycombo>
+          <keycap>Enter</keycap>
+        </keycombo>
+        . (Однако, использовать
+        мышь в данном окне будет удобней и быстрее.)
+      </para>
+      <para>Клавишей
+        <keycombo>
+          <keycap>F10</keycap>
+        </keycombo>
+        активируется верхнее меню
+        системы. Перемещать курсор по его пунктам помогут клавиши со стрелками вверх, вниз, вправо,
+        влево.
+      </para>
+      <para>Клавишей
+        <keycombo>
+          <keycap>Tab</keycap>
+        </keycombo>
+        или сочетанием клавиш
+        <keycombo>
+          <keycap>Ctrl</keycap>
+          <keycap>Tab</keycap>
+        </keycombo>
+        можно перемещаться слева
+        направо по списку открытых окон.
+        Сочетанием
+        <keycombo>
+          <keycap>Shift</keycap>
+          <keycap>Tab</keycap>
+        </keycombo>
+        можно перемещать
+        курсор по списку открытых окон &quot;назад&quot;, т.е. справа налево.
+      </para>
+      <para>Переместив курсор на нужный заголовок в списке открытых окон, клавишей
+        <keycombo>
+          <keycap>Пробел</keycap>
+        </keycombo>
+        вы можете сделать это окно активным.
+      </para>
+    </section>
+  </chapter>
+  <chapter xml:id="add_spec">
+    <title>Добавление спецификаций в документ</title>
+    <para>Для добавления спецификаций в товарных документах существует специальный режим, когда
+      в заголовок документа изменения внести нельзя (они не сохранятся), а со спецификациями
+      можно совершать различные действия - добавлять, изменять, удалять и копировать. При добавлении
+      нового документа этот режим начинает действовать после нажатия кнопки
+      "<guibutton>Добавить</guibutton>",
+      при редактировании существующего документа необходимо вызвать этот режим сочетанием клавиш
+      <keycombo>
+        <keycap>Shift</keycap>
+        <keycap>F2</keycap>
+      </keycombo>
+      или через контекстное меню
+      <guibutton>Изменение спецификаций</guibutton>.
+    </para>
+    <para>Для добавления новых спецификаций на закладке "<emphasis>Спецификации</emphasis>"
+      нажмите клавишу
+      <keycombo>
+        <keycap>Insert</keycap>
+      </keycombo>
+      или вызовите контекстное меню
+      "<guibutton>Добавить</guibutton>".
+    </para>
+    <para>Появится специальный поисковый браузер "Подбор номенклатуры".
+      Его содержимое зависит от того, был ли указан в заголовке документа прайс-лист и тип цены:
+      если указан, то пользователь увидит позиции указанного прайс-листа и соответствующие цены.
+      Если прайс-лист в заголовке не указан, отображается содержимое справочника
+      "Каталог", цены не указываются.
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/add_spec.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>В поисковом браузере "Подбор номенклатуры" выберите нужную строку и два
+      раза щёлкните левой кнопкой мыши в поле
+      <guibutton>Выбрано в основной ЕИ</guibutton>
+      и с
+      клавиатуры введите цифровое значение. Аналогично можно ввести значение в поле
+      <guibutton>Выбрано в дополнительной ЕИ</guibutton>
+      (если товар имеет две единицы измерения) и
+      в поле<guibutton>Цена</guibutton>.
+    </para>
+    <para>После того, как нужное количество указано, нажмите кнопку
+      "<guibutton>Выбрать</guibutton>" (вверху под заголовком поискового браузера).
+      Можно указать параметры для нескольких строк, а затем нажать эту кнопку.
+    </para>
+    <para>Если будут введены некорректные значения(буквы, символы вместо цифр), система их
+      проигнорирует: эта спецификация добавлена в документ не будет.
+    </para>
+    <para>Чтобы закрыть поисковый браузер "Подбор номенклатуры", нажмите кнопку
+      "<guibutton>Закрыть</guibutton>" (вверху под заголовком поискового браузера)
+      или крестик в правом верхнем углу этого же браузера.
+    </para>
+  </chapter>
+  <xi:include href="../../../shared/copyright.xml">
+    <xi:fallback>
+      <para>The copyright section could not be retrieved.</para>
+    </xi:fallback>
+  </xi:include>
+</book>

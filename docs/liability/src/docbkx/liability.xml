@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
+    "http://www.oasis-open.org/docbook/xml/5.0b5/dtd/docbook.dtd">
+<book xmlns:xi="http://www.w3.org/2001/XInclude"
+      version="5.0"
+      xml:lang="ru">
+  <title>
+    Графики исполнения обязательств в системе <?eval ${project.organization.name}?>
+  </title>
+  <subtitle>Руководство пользователя</subtitle>
+  <info>
+    <copyright>
+      <year><?eval ${project.inceptionYear}?></year>
+      <year><?eval ${now}?></year>
+      <holder><?eval ${project.organization.name}?></holder>
+    </copyright>
+    <releaseinfo><?eval ${project.version}?></releaseinfo>
+  </info>
+  <preface xml:id="preface" revision="1">
+    <title>Целевая аудитория</title>
+    <para>Данное руководство предназначено для пользователей, работающих
+      с модулем &quot;Графики исполнения обязательств&quot;
+      системы <?eval ${project.organization.name}?>
+    </para>
+  </preface>
+  <chapter xml:id="liability">
+    <title>Графики исполнения обязательств</title>
+    <para>График исполнения обязательств - составная часть условий сделки,
+      отражающая порядок исполнения обязательств с указанием дат, сумм и спецификаций.
+    </para>
+    <para>График исполнения обязательств представляет собой отдельный регистр,
+      в котором сведены все данные по сделке - планируемые обязательства по платежам
+      и отгрузки/поставки товарно-материальных ценностей и/или услуг. Данный регистр
+      предназначен для планирования и контроля за исполнением обязательств по сделке.
+      Особенностью данного регистра является то, что в нём используются как относительные
+      значения показателей (даты и суммы), так и абсолютные значения показателей.
+    </para>
+    Графики можно посмотреть:
+    <itemizedlist>
+      <listitem>
+        <para>из документов, по которым они созданы - с помощью кнопки
+          "График"
+        </para>
+      </listitem>
+      <listitem>
+        <para>в разделе "Графики исполнения обязательств"</para>
+      </listitem>
+    </itemizedlist>
+    <para>Вход в раздел "Графики исполнения обязательств" осуществляется через главное меню системы:
+      <menuchoice>
+        <guimenu>Центр управления</guimenu>
+        <guimenuitem>Логистика</guimenuitem>
+        <guimenuitem>Графики исполнения обязательств</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+    <para>
+      <link linkend="config_lia">Конфигурация модуля</link>
+    </para>
+    <para>
+      <link linkend="create">Создание графика</link>
+    </para>
+    <para>
+      <link linkend="edit">Редактирование графика</link>
+    </para>
+    <para>
+      <link linkend="punkt">Пункты графика</link>
+    </para>
+    <para>
+      <link linkend="amount">Сроки и суммы</link>
+    </para>
+    <para>
+      <link linkend="spec">Спецификации пункта</link>
+    </para>
+  </chapter>
+  <chapter xml:id="config_lia">
+    <title>Конфигурация</title>
+    <para>Настройка модуля Графики исполнения обязательств доступна через главное меню
+      <menuchoice>
+        <guimenu>Администрирование</guimenu>
+        <guimenuitem>Конфигурация</guimenuitem>
+        <guimenuitem>Графики исполнения обязательств</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/config.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>В конфигурации указывается папка, в которую по умолчанию помещаются все создаваемые
+      графики,
+      если иное не предусмотрено триггером или алгоритмом.
+    </para>
+  </chapter>
+  <chapter xml:id="create">
+    <title>Создание графика</title>
+    <para>График может быть создан из любого документа или контракта.
+      Для этого нужно в окне редактирования документа внизу нажать кнопку
+      <guibutton>График</guibutton>
+      (справа от кнопки<guibutton>Оригинал</guibutton>)
+      и из выпадающего меню выбрать пункт<guibutton>Создать</guibutton>.
+      С помощью этой кнопки можно также
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para>просмотреть уже созданный для этого документа график (пункт
+          <guibutton>Открыть</guibutton>);
+        </para>
+      </listitem>
+      <listitem>
+        <para>удалить созданный для этого документа график (пункт
+          <guibutton>Удалить</guibutton>).
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>График создаётся в папке по умолчанию, заданной в
+      <link linkend="config_lia">конфигурации модуля</link>, если иное
+      не предусмотрено триггером или алгоритмом (бизнес-расширением).
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/add.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>При создании предлагается ввести наименование графика, его состояние
+      (запланировано, в работе, выполнено, не используется) и главное - пункты графика.
+    </para>
+    <para>Созданные графики доступны для изменения через меню
+      <menuchoice>
+        <guimenu>Логистика</guimenu>
+        <guimenuitem>Графики исполнения обязательств</guimenuitem>
+      </menuchoice>
+      или из экранной формы самого документа через кнопку<guibutton>График</guibutton>.
+    </para>
+  </chapter>
+  <chapter xml:id="edit">
+    <title>Редактирование графика</title>
+    <para>Редактировать графики можно как из документа через кнопку
+      <guibutton>График</guibutton>, так и из раздела "Графики исполнения обязательств".
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/add.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>При редактировании графика можно изменить его название, состояние,
+      комментарии и пункты графика.
+    </para>
+    <para>Созданные графики доступны для изменения через меню
+      <menuchoice>
+        <guimenu>Логистика</guimenu>
+        <guimenuitem>Графики исполнения обязательств</guimenuitem>
+      </menuchoice>
+      (добавить новый график там нельзя).
+      В этом разделе можно добавлять папки и редактировать
+      графики <!-- перемещать графики из папки в папку  -->.
+    </para>
+  </chapter>
+  <chapter xml:id="punkt">
+    <title>Пункты графика</title>
+    <para>Окно редактирования пункта графика может состоять из трёх закладок:
+      <emphasis>Сведения</emphasis>,
+      <link linkend="amount">
+        <emphasis>Сроки и суммы</emphasis>
+      </link>
+      и
+      <link linkend="spec">
+        <emphasis>Спецификация</emphasis>
+      </link>
+      .
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/punkt.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para><guibutton>Номер</guibutton>. Вы можете пронумеровать пункты графика в удобном для Вас
+      порядке.
+    </para>
+    <para>При добавлении пункта графика нужно указать тип пункта графика.</para>
+    <para><guibutton>Состояние</guibutton>. Для каждого пункта, как и для графика
+      в целом, можно указать его текущее состояние:
+      запланировано, в работе, выполнено, не используется.
+    </para>
+    <para><guibutton>Комментарии</guibutton>. В этом поле может быть записан любой
+      текстовый комментарий к пункту графика, например, краткое изложение обязательств
+      по этому пункту.
+    </para>
+    <para>В полях
+      <guibutton>От кого</guibutton>
+      и
+      <guibutton>Кому</guibutton>
+      указываются контрагенты. Значения этих полей могут быть переданы из документа
+      - для этого укажите в поле
+      <guibutton>Источник</guibutton>
+      значение какого
+      именно поля должно быть передано в пункт графика:
+    </para>
+    <para>
+      <itemizedlist>
+        <listitem>
+          <para>От кого</para>
+        </listitem>
+        <listitem>
+          <para>Кому</para>
+        </listitem>
+        <listitem>
+          <para>Через кого</para>
+        </listitem>
+        <listitem>
+          <para>Склад-источник</para>
+        </listitem>
+        <listitem>
+          <para>Склад-приёмник</para>
+        </listitem>
+        <listitem>
+          <para>Мол-источник</para>
+        </listitem>
+        <listitem>
+          <para>Мол-приёмник</para>
+        </listitem>
+      </itemizedlist>
+    </para>
+    <para>Вы можете указать и конкретных контрагентов в полях
+      <guibutton>От кого</guibutton>
+      и<guibutton>Кому</guibutton>,
+      выбрав их из справочника<emphasis>Партнёры</emphasis>,
+      <emphasis>Сотрудники</emphasis>
+      или<emphasis>Подразделения</emphasis>.
+    </para>
+    <para><guibutton>Средство платежа</guibutton>. График исполнения обязательств использует
+      справочник
+      платёжного календаря "<emphasis>Средства платежа</emphasis>".
+      Для каждого пункта графика и для каждого контрагента может быть определено
+      своё средство платежа.
+    </para>
+    <para>
+      <emphasis>Параметры спецификации.</emphasis>
+      Пункт графика может содержать спецификацию, нужно отметить флагом поле
+      <guibutton>Содержит спецификацию</guibutton>
+      внизу на закладке
+      "<emphasis>Сведения</emphasis>" и указать откуда брать спецификацию -
+      из документа, каталога или прайс-листа. В последнем случае указать прайс-лист
+      и тип цены. Появляется закладка
+      "
+      <link linkend="spec">
+        <emphasis>Спецификация</emphasis>
+      </link>
+      ".
+    </para>
+    <para>У пункта графика есть обязательные поля на закладке
+      "
+      <link linkend="amount">
+        <emphasis>Сроки и суммы</emphasis>
+      </link>
+      " -
+      код, тип и источник валюты. Если эти поля не заполнены, то при нажатии кнопки
+      <guibutton>Добавить</guibutton>
+      система переключит окно редактирования на закладку
+      "<emphasis>Сроки и суммы</emphasis>" и предложит заполнить эти поля.
+    </para>
+    <!--   <para><emphasis>Просмотр пунктов из списка графиков.</emphasis>
+      Для того, чтобы увидеть, какие пункты имеет график, можно </para> -->
+    <!--   <itemizedlist>
+      <listitem><para>открыть график на просмотр или редактирование;</para></listitem>
+      <listitem><para>в списке графиков вызвать отображение пунктов внизу экрана:</para></listitem>
+          <itemizedlist>
+               <listitem><para>или вызвать контекстное меню и выбрать <guibutton>Показывать пункты</guibutton>,</para></listitem>
+               <listitem><para> или нажать сочетание клавиш <keycombo>
+         <keycap>Ctrl</keycap><keycap>S</keycap></keycombo>.</para></listitem>
+          </itemizedlist>
+  </itemizedlist> -->
+  </chapter>
+  <chapter xml:id="amount">
+    <title>Сроки и суммы</title>
+    <para>На закладке "<emphasis>Сроки и суммы</emphasis>" устанавливаются сроки и сумма
+      <link linkend="punkt">пункта графика</link>.
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/summ.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para><guibutton>Относительная дата</guibutton>. Это поле нужно отметить флагом, если сроки для
+      данного пункта
+      рассчитываются относительно документа или же относительно начала (конца) другого пункта этого
+      же
+      графика. Нужно ввести количество
+      дней, месяцев или лет и нажать на кнопку<guibutton>Рассчитать</guibutton>.
+      (Отрицательные значения не рассчитываются.)
+      Результат отобразится в поле<guibutton>Дата начала</guibutton>. Дату конца
+      пользователь может задать произвольно.
+    </para>
+    <para>. Если отмечено флагом поле<guibutton>Относительная дата</guibutton>,
+      то необходимо пояснить - относительно чего
+      <guibutton>Относительно пункта</guibutton>
+      (указать соответствующий
+      пункт) или
+      <guibutton>Относительно документа</guibutton>
+      (по которому был создан график).
+      При выборе
+      <guibutton>Относительно пункта</guibutton>
+      необходимо пояснить относительно начала или конца
+      того пункта должны расчитываться сроки исполнения данного пункта.
+    </para>
+    <para><guibutton>Количество дней</guibutton>. Это могут быть рабочие дни, календарные дни,
+      месяцы
+      и даже годы.
+    </para>
+    <para><guibutton>Дата начала</guibutton>. Дата начала исполнения пункта.
+      Если выше были указаны параметры для вычисления относительной даты, то для заполнения данного
+      поля нужно
+      нажать расположенную справа кнопку<guibutton>Рассчитать</guibutton>.
+    </para>
+    <para><guibutton>Дата конца</guibutton>. Предположительная дата окончания действий,
+      предусмотренных данным пунктом.
+    </para>
+    <para><guibutton>Валюта</guibutton>. У пункта графика есть обязательные поля
+      на закладке "<emphasis>Сроки и суммы</emphasis>" - код, тип и источник
+      валюты. Таким образом, для каждого пункта графика может быть определена своя валюта.
+    </para>
+    <para><guibutton>Относительная сумма</guibutton>. Отметьте флагом данное поле, если сумма
+      товаров/услуг
+      должна рассчитываться автоматически. В соответствующих полях задайте параметры расчёта суммы.
+    </para>
+    <para><guibutton>Относительно документа</guibutton>. Поставьте флаг в этом поле, если сумма
+      пункта
+      должна рассчитываться относительно документа, по которому создан график.
+    </para>
+    <para><guibutton>Относительно фактических показателей</guibutton>. Поставьте флаг в этом поле,
+      если сумма пункта
+      должна рассчитываться относительно фактических показателей.
+    </para>
+    <para>Для вычисления
+      <emphasis>относительной суммы</emphasis>
+      введите значение
+      в поле
+      <guibutton>Процент</guibutton>
+      (принимаются целые и дробные положительные
+      числа), укажите относительно чего - документа, пункта или фактических показателей
+      - вычисляется сумма и затем нажмите на кнопку
+      <guibutton>Рассчитать</guibutton>
+      (справа).
+      Результат отобразится в поле<guibutton>Сумма пункта</guibutton>.
+    </para>
+    <para><guibutton>Сумма</guibutton>. В системе предусмотрено три варианта заполнения данного
+      поля.
+      Относительная сумма (способ вычисления описан выше), сумма по спецификациям и произвольная
+      сумма.
+      Произвольная сумма вводится пользователем.
+    </para>
+    <para>Если пункт содержит<link linkend="spec">спецификацию</link>, сумма пункта
+      вычисляется автоматически и не редактируется.
+    </para>
+    <para><guibutton>Фактическая сумма пункта</guibutton>. В текущей версии не используется.
+      Планируется заполнять это поле настраиваемым этапом документооборота.
+    </para>
+  </chapter>
+  <chapter xml:id="spec">
+    <title>Спецификации пункта графика</title>
+    <para>Пункт графика может содержать спецификацию - нужно отметить флагом поле
+      <guibutton>Содержит спецификацию</guibutton>
+      внизу на закладке
+      <emphasis>Сведения</emphasis>
+      и указать источник спецификации - документ, каталог или прайс-лист (в
+      последнем случае указать прайс-лист и тип цены). Появляется закладка
+      <emphasis>Спецификация</emphasis>. На эту закладку добавляются записи
+      из спецификации документа (одна, несколько или все).
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/spec.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>Чтобы добавить спецификацию, нажмите клавишу
+      <keycombo>
+        <keycap>Ins</keycap>
+      </keycombo>
+      или вызовите контекстное меню и выберите пункт<guibutton>Добавить</guibutton>.
+      В соответствии с указанными на закладке
+      <emphasis>Сведения</emphasis>
+      параметрами
+      спецификации, откроется документ, каталог или прайс-лист.
+      Если Вы хотите добавить сразу несколько строк спецификации, выделите их
+      и затем нажмите кнопку<guibutton>Выбрать</guibutton>.
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/equivalent.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>Можно изменить:
+      <itemizedlist>
+        <listitem>
+          <para>количество позиций спецификации,</para>
+        </listitem>
+        <listitem>
+          <para>цену (если спецификация добавлена из каталога или прайс-листа).</para>
+        </listitem>
+      </itemizedlist>
+    </para>
+  </chapter>
+  <xi:include href="../../../shared/copyright.xml">
+    <xi:fallback>
+      <para>The copyright section could not be retrieved.</para>
+    </xi:fallback>
+  </xi:include>
+</book>

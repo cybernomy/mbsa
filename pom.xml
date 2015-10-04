@@ -22,7 +22,7 @@
     <name>Millennium Business Suite Anywhere</name>
   </organization>
 
-  <inceptionYear>2015</inceptionYear>
+  <inceptionYear>1998</inceptionYear>
 
   <name>MBSA</name>
   <description>
@@ -353,25 +353,9 @@
           <groupId>com.agilejava.docbkx</groupId>
           <artifactId>docbkx-maven-plugin</artifactId>
           <version>2.0.16</version>
-          <executions>
-            <execution>
-              <phase>prepare-package</phase>
-              <goals>
-                <goal>generate-webhelp</goal>
-              </goals>
-            </execution>
-          </executions>
           <configuration>
             <sourceDirectory>src/docbkx</sourceDirectory>
-            <targetDirectory>${project.build.directory}/generated-docs</targetDirectory>
-            <preProcess>
-              <copy todir="${project.build.directory}/generated-docs/images">
-                <fileset dir="src/docbkx/images" />
-              </copy>
-            </preProcess>
-            <htmlhelpEncoding>${project.reporting.outputEncoding}</htmlhelpEncoding>
-            <chunkerOutputEncoding>${project.reporting.outputEncoding}</chunkerOutputEncoding>
-            <chunkedOutput>true</chunkedOutput>
+            <xincludeSupported>true</xincludeSupported>
           </configuration>
           <dependencies>
             <dependency>
@@ -380,6 +364,12 @@
               <version>5.0-all</version>
               <classifier>resources</classifier>
               <type>zip</type>
+              <scope>runtime</scope>
+            </dependency>
+            <dependency>
+              <groupId>net.sf.offo</groupId>
+              <artifactId>fop-hyph</artifactId>
+              <version>2.0</version>
               <scope>runtime</scope>
             </dependency>
           </dependencies>

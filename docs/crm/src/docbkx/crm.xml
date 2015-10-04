@@ -1,0 +1,1293 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
+    "http://www.oasis-open.org/docbook/xml/5.0b5/dtd/docbook.dtd">
+<book xmlns:xi="http://www.w3.org/2001/XInclude"
+      version="5.0"
+      xml:lang="ru">
+  <title>
+    Управление взаимоотношениями с клиентами в системе <?eval ${project.organization.name}?>
+  </title>
+  <subtitle>Руководство пользователя</subtitle>
+  <info>
+    <copyright>
+      <year><?eval ${project.inceptionYear}?></year>
+      <year><?eval ${now}?></year>
+      <holder><?eval ${project.organization.name}?></holder>
+    </copyright>
+    <releaseinfo><?eval ${project.version}?></releaseinfo>
+  </info>
+  <preface xml:id="preface" revision="1">
+    <title>Целевая аудитория</title>
+    <para>Данное руководство предназначено для пользователей
+      системы <?eval ${project.organization.name}?>
+    </para>
+  </preface>
+  <chapter xml:id="crmBasics">
+    <title>Общие сведения о модуле CRM</title>
+    <para>CRM (Customer Relationship Management) модуль предназначен для оптимизации и упрощения
+      решения задач, связанных со сбором, обработкой и анализом данных по контрагентам
+      (потенциальным
+      клиентам, клиентам, покупателям, поставщикам и т.д.), ведения истории контактов с
+      контрагентом,
+      комплексной работы с ним, формализации базы данных клиентов.
+    </para>
+    <para>Модуль CRM предоставляет следующие возможности.</para>
+    <para>Пользователь самостоятельно выбирает регистр, в котором ему удобнее работать:
+      обращаться к информации через регистр "Контактные лица", через список плановых и
+      фактических "действий", или через "отношение" с данным контрагентом.
+    </para>
+    <para>Расширенный регистр отношений с контрагентами позволяет регистрировать:</para>
+    <itemizedlist>
+      <listitem>
+        <para>общую контактную информацию о контрагенте (физическом или юридическом лице),
+          действия, связанные с данным контрагентом,
+        </para>
+      </listitem>
+      <listitem>
+        <para>историю отношений,</para>
+      </listitem>
+      <listitem>
+        <para>электронные документы в информационной системе на основании правил создания
+          и отработки документов,
+        </para>
+      </listitem>
+      <listitem>
+        <para>факт прихода или расхода денежных средств в карточке расчётов с партнёрами,</para>
+      </listitem>
+      <listitem>
+        <para>оригиналы документов (контракты, спецификации, фотографии, лицензии и пр.).</para>
+      </listitem>
+    </itemizedlist>
+    <para>Регистр действий позволяет:</para>
+    <itemizedlist>
+      <listitem>
+        <para>регистрировать статус и состояние действия,</para>
+      </listitem>
+      <listitem>
+        <para>интегрировать модуль CRM с внешним почтовым приложением,</para>
+      </listitem>
+      <listitem>
+        <para>пересылать пользователям уведомления по почте о назначенных действиях,</para>
+      </listitem>
+      <listitem>
+        <para>регистрировать длительности действия, его плановые и фактические сроки.</para>
+      </listitem>
+    </itemizedlist>
+    <para>База знаний позволяет оперативно отвечать на запросы клиентов, вести FAQ. Алгоритм
+      Базы знаний построен на принципе поиска решения на основании уточнённой проблемы,
+      выявленной из набора симптомов.
+    </para>
+    <para>Пример работы пользователя с модулем CRM:</para>
+    <orderedlist numeration="arabic">
+      <listitem>
+        <para>Поступает телефонный звонок.</para>
+      </listitem>
+      <listitem>
+        <para>Пользователь №1 поднимает трубку и выясняет, кто звонит.
+          Пользователь №1 ищет в браузере ДО или создает новое вносит новое действие –
+          "Входящий звонок"
+        </para>
+      </listitem>
+      <listitem>
+        <para>В процессе разговора заполняет действие "Входящий звонок".</para>
+      </listitem>
+      <listitem>
+        <para>Договорились, что Клиент встретится завтра с Пользователем №2.</para>
+      </listitem>
+      <listitem>
+        <para>Пользователь №1 создает действие, указывая ответственным Пользователя №2.</para>
+      </listitem>
+      <listitem>
+        <para>Заканчивает разговор.</para>
+      </listitem>
+    </orderedlist>
+  </chapter>
+  <chapter xml:id="crmDict">
+    <title>Справочники CRM</title>
+
+    <section xml:id="crmDict_01">
+      <title>CRM-партнёры</title>
+
+      <section xml:id="crmDict_01_01">
+        <title>Отрасли</title>
+
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>CRM-партнёры</guisubmenu>
+            <guimenuitem>Отрасли</guimenuitem>
+          </menuchoice>
+        </para>
+        <para>В этом справочнике записываются отрасли, по которым
+          можно сортировать контрагентов и действия.
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название отрасли.
+        </para>
+        <para>Записи этого справочника могут быть использованы в разделе
+          <link linkend="crmRelations">"Отношения"</link>.
+        </para>
+      </section>
+      <section xml:id="crmDict_01_02">
+        <title>Сферы деятельности</title>
+
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>CRM-партнёры</guisubmenu>
+            <guimenuitem>Сферы деятельности</guimenuitem>
+          </menuchoice>
+        </para>
+        <para>В этом справочнике записываются сферы деятельности, по которым можно
+          сортировать контрагентов и действия.
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название сферы деятельности.
+        </para>
+        <para>Записи этого справочника могут быть использованы в разделе
+          <link linkend="crmRelations">"Отношения"</link>.
+        </para>
+      </section>
+      <section xml:id="crmDict_01_03">
+        <title>Виды деятельности</title>
+
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>CRM-партнёры</guisubmenu>
+            <guimenuitem>Виды деятельности</guimenuitem>
+          </menuchoice>
+        </para>
+        <para>В этом справочнике записываются виды деятельности, по которым можно сортировать
+          контрагентов и действия.
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название вида действия.
+        </para>
+        <para>Записи этого справочника могут быть использованы в разделе
+          <link linkend="crmRelations">"Отношения"</link>.
+        </para>
+      </section>
+      <section xml:id="crmDict_01_04">
+        <title>Формы собственности</title>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>CRM-партнёры</guisubmenu>
+            <guimenuitem>Формы собственности</guimenuitem>
+          </menuchoice>
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название формы собственности.
+        </para>
+        <para>Записи этого справочника могут быть использованы в разделе
+          <link linkend="crmRelations">"Отношения"</link>.
+        </para>
+      </section>
+    </section>
+    <section xml:id="crmDict_02">
+      <title>Контактные лица</title>
+      <section xml:id="crmDict_02_01">
+        <title>Обращения к человеку</title>
+        <para>При обращении к человеку (в устной или письменной форме) принято использовать
+          различные слова: господин (госпожа), sir (madam), mister (miss, missis), сударь
+          (сударыня), коллега, товарищ и т.д.
+        </para>
+        <para>Для того, чтобы установить, к какому человеку каким именно образом
+          лучше обращаться, в CRM можно установить соответствия между контактными
+          лицами и обращениями.
+        </para>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Контактные лица</guisubmenu>
+            <guimenuitem>Обращения</guimenuitem>
+          </menuchoice>
+        </para>
+        <para>Код. В этом поле запишите краткую форму обращения ("Mr.", "г-н"),
+          если она есть. Если нет, в качестве кода можно использовать полную форму, но не более
+          20 знаков.
+        </para>
+        <para>Наименование. В этом поле запишите полную форму обращения ("Уважаемый
+          господин", "Милостивый государь", "Dear mister", "Ваше
+          высокопреосвященство"), но не более 80 знаков.
+        </para>
+        <para>См. также:
+          <link linkend="crmContacts">Контактные лица</link>
+        </para>
+      </section>
+      <section xml:id="crmDict_02_02">
+        <title>Должности</title>
+        <para>При деловом общении с человеком важно знать его должность, положение,
+          которое он занимает. Поэтому для каждого контактного лица можно указать его
+          должность; а список должностей хранится в справочнике "Должности".
+        </para>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Контактные лица</guisubmenu>
+            <guimenuitem>Должности</guimenuitem>
+          </menuchoice>
+        </para>
+        <para>Наименование. Название должности.</para>
+        <para>При настройке системы важно оптимизировать справочник должностей контактных
+          лиц, с целью устранения дублирования записей. Например, следует избегать такого
+          дублирования: "менеджер по закупкам" и "менеджер по снабжению".
+          Хотя, если это существенно для целей компании, такое различие допустимо.
+        </para>
+        <para>См. также:
+          <link linkend="crmContacts">Контактные лица</link>
+        </para>
+      </section>
+    </section>
+    <section xml:id="crmDict_03">
+      <title>Деловые отношения</title>
+      <section xml:id="crmDict_03_01">
+        <title>Статусы отношений</title>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Деловые отношения</guisubmenu>
+            <guimenuitem>Статусы отношений</guimenuitem>
+          </menuchoice>
+          .
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название статуса.
+        </para>
+        <para>Записи этого справочника могут быть использованы в разделе
+          <link linkend="crmRelations">"Отношения"</link>.
+        </para>
+      </section>
+      <section xml:id="crmDict_03_02">
+        <title>Рынки</title>
+        <para>Рынки - понятие, нужное для отнесения делового отношения к какой-либо
+          группе, имеющей общие сильные и слабые стороны, риски.
+        </para>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Деловые отношения</guisubmenu>
+            <guimenuitem>Рынки</guimenuitem>
+          </menuchoice>
+          .
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название рынка.
+        </para>
+        <para><guibutton>Вес</guibutton>. Вес, доля, значимость данного рынка среди
+          других рынков в справочнике.
+        </para>
+        <para>Записи этого справочника могут быть использованы в разделе
+          <link linkend="crmRelations">"Отношения"</link>.
+        </para>
+      </section>
+      <section xml:id="crmDict_03_03">
+        <title>Виды доставки</title>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Деловые отношения</guisubmenu>
+            <guimenuitem>Виды доставки</guimenuitem>
+          </menuchoice>
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название вида доставки.
+        </para>
+        <para>Записи этого справочника могут быть использованы в разделе
+          <link linkend="crmRelations">"Отношения"</link>.
+        </para>
+      </section>
+      <section xml:id="crmDict_03_04">
+        <title>Ранги делового отношения</title>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Деловые отношения</guisubmenu>
+            <guimenuitem>Ранги делового отношения</guimenuitem>
+          </menuchoice>
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название ранга делового отношения.
+        </para>
+        <para>Записи этого справочника могут быть использованы в разделе
+          <link linkend="crmRelations">"Отношения"</link>.
+        </para>
+      </section>
+      <section xml:id="crmDict_03_05">
+        <title>Типы клиента</title>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Деловые отношения</guisubmenu>
+            <guimenuitem>Типы клиента</guimenuitem>
+          </menuchoice>
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название типа клиента.
+        </para>
+        <para>Записи этого справочника могут быть использованы в разделе
+          <link linkend="crmRelations">"Отношения"</link>.
+        </para>
+      </section>
+      <section xml:id="crmDict_03_06">
+        <title>Условия оплаты</title>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Деловые отношения</guisubmenu>
+            <guimenuitem>Условия оплаты</guimenuitem>
+          </menuchoice>
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название условия оплаты.
+        </para>
+        <para>Записи этого справочника могут быть использованы в разделе
+          <link linkend="crmRelations">"Отношения"</link>.
+        </para>
+      </section>
+    </section>
+    <section xml:id="crmDict_04">
+      <title>Действия</title>
+      <section xml:id="crmDict_04_01">
+        <title>Виды действий</title>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Действия</guisubmenu>
+            <guimenuitem>Виды действий</guimenuitem>
+          </menuchoice>
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название вида действия.
+        </para>
+        <para>Записи этого справочника используются в разделе
+          <link linkend="crmActions">"Действия"</link>.
+        </para>
+      </section>
+      <section xml:id="crmDict_04_02">
+        <title>Приоритеты действий</title>
+        <para>Справочник представляет собой настраиваемый список приоритетов тех действий,
+          которые регистрируются в CRM.
+        </para>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Действия</guisubmenu>
+            <guimenuitem>Приоритеты действий</guimenuitem>
+          </menuchoice>
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название приоритета действия.
+        </para>
+        <para>Записи этого справочника используются в разделе
+          <link linkend="crmActions">"Действия"</link>.
+        </para>
+      </section>
+      <section xml:id="crmDict_04_03">
+        <title>Цели действий</title>
+        <para>Справочник представляет собой настраиваемый список целей действий, регистрируемых
+          в CRM. Важно уточнить, что в момент настройки системы необходимо структурировать
+          список целей действий.
+        </para>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Действия</guisubmenu>
+            <guimenuitem>Цели действий</guimenuitem>
+          </menuchoice>
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название цели действия.
+        </para>
+        <para>Записи этого справочника используются в разделе
+          <link linkend="crmActions">"Действия"</link>.
+        </para>
+      </section>
+    </section>
+    <section xml:id="crmDict_05">
+      <title>Предложения</title>
+      <section xml:id="crmDict_05_01">
+        <title>Статусы предложений</title>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Предложения</guisubmenu>
+            <guimenuitem>Статусы предложений</guimenuitem>
+          </menuchoice>
+          .
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название статуса предложения.
+        </para>
+        <para>Записи этого справочника могут быть использованы в разделе
+          <link linkend="crmRelations">"Отношения"</link>
+          (на закладке "Предложения").
+        </para>
+      </section>
+      <section xml:id="crmDict_05_02">
+        <title>Виды предложений</title>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Предложения</guisubmenu>
+            <guimenuitem>Виды предложений</guimenuitem>
+          </menuchoice>
+          .
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название вида предложения.
+        </para>
+        <para>Записи этого справочника могут быть использованы в разделе
+          <link linkend="crmRelations">"Отношения"</link>
+          (на закладке "Предложения").
+        </para>
+      </section>
+      <section xml:id="crmDict_05_03">
+        <title>Прогнозы предложений</title>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Предложения</guisubmenu>
+            <guimenuitem>Прогнозы предложений</guimenuitem>
+          </menuchoice>
+          .
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название прогноза предложения.
+        </para>
+        <para>Записи этого справочника могут быть использованы в разделе
+          <link linkend="crmRelations">"Отношения"</link>
+          (на закладке "Предложения").
+        </para>
+      </section>
+      <section xml:id="crmDict_05_04">
+        <title>Причины заключения и потери предложений</title>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>Предложения</guisubmenu>
+            <guimenuitem>Причины заключения и потери предложений</guimenuitem>
+          </menuchoice>
+          .
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название причины.
+        </para>
+        <para>Записи этого справочника могут быть использованы в разделе
+          <link linkend="crmRelations">"Отношения"</link>
+          (на закладке "Предложения").
+        </para>
+      </section>
+    </section>
+    <section xml:id="crmDict_06">
+      <title>База знаний</title>
+      <section xml:id="crmDict_06_01">
+        <title>Типы проблем</title>
+        <para>На предприятии, использущем базу знаний, желательно определить классификацию
+          проблем и для каждой проблемы указывать, к какому типу она относится. Такую статистику
+          можно использовать с целью определения слабых мест и профилактики возникновения проблем.
+        </para>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>База знаний</guisubmenu>
+            <guimenuitem>Типы проблем</guimenuitem>
+          </menuchoice>
+          .
+        </para>
+        <para>В этом справочнике записываются типы проблем, которые регистрируются
+          в Базе знаний.
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название или краткое описание
+          типа проблемы.
+        </para>
+        <para>См. также:<link linkend="crmKB">База знаний</link>,
+          <link linkend="crmKB_06">Поиск решения</link>
+        </para>
+      </section>
+      <section xml:id="crmDict_06_02">
+        <title>Типы решений</title>
+        <para>На предприятии, использующем базу знаний, желательно определить
+          классификацию решений, чтобы для каждого решения можно было указать,
+          к какому типу оно относится. Это поможет заранее определить, какие ресурсы могут
+          потребоваться для устранения проблем.
+        </para>
+        <para>Вход в раздел через меню
+          <menuchoice>
+            <guimenu>CRM</guimenu>
+            <guisubmenu>Справочники CRM</guisubmenu>
+            <guisubmenu>База знаний</guisubmenu>
+            <guimenuitem>Типы решений</guimenuitem>
+          </menuchoice>
+          .
+        </para>
+        <para>В этом справочнике записываются типы решений, которые регистрируются в базе знаний.
+        </para>
+        <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+        </para>
+        <para><guibutton>Наименование</guibutton>. Название типа решения.
+        </para>
+        <para>См. также:<link linkend="crmKB">База знаний</link>,
+          <link linkend="crmKB_06">Поиск решения</link>
+        </para>
+      </section>
+    </section>
+  </chapter>
+  <chapter xml:id="crmUsers">
+    <title>Пользователи CRM</title>
+    <para>В этом справочнике должны быть записаны все пользователи
+      системы <?eval ${project.organization.name}?>, которые
+      работают с модулем CRM. Если пользователь системы не зарегистрирован в данном справочнике,
+      ему будут недоступны некоторые разделы и функции модуля CRM.
+    </para>
+    <para>Вход в раздел через меню
+      <menuchoice>
+        <guimenu>CRM</guimenu>
+        <guisubmenu>Справочники CRM</guisubmenu>
+        <guimenuitem>Пользователи CRM</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/add_crm_user.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>Чтобы добавить пользователя CRM, заполните следующие поля:</para>
+    <para><guibutton>Имя</guibutton>. Выберите запись из справочника "Физические лица",
+      где в поле "Пользователь системы" указана запись с именем Пользователя системы.
+    </para>
+    <para><guibutton>Должность</guibutton>. Должность данного пользователя.
+    </para>
+    <para><guibutton>Занят</guibutton>. Атрибут "Занят" означает занятость данного
+      пользователя в настоящий момент времени. Это поле в текущем релизе CRM не используется.
+      Планируется, что данное поле будет использовано при
+      интеграции <?eval ${project.organization.name}?> с Call-Centre.
+    </para>
+    <para><guibutton>Администратор CRM</guibutton>. Поставьте флаг в этом поле, если
+      данный пользователь является администратором для модуля CRM. Администратор CRM имеет
+      возможность пользователя CRM менять условия отбора на разделах действий и отношений.
+      Обычный пользователь - не администратор CRM - чужие записи не видит.
+    </para>
+  </chapter>
+  <chapter xml:id="crmActions">
+    <title>Действия</title>
+    <para>Под
+      <emphasis>действиями</emphasis>
+      понимаются любые контакты, происходившие
+      между компанией пользователя и деловыми партнёрами. Действия бывают планируемые и
+      фактические (уже происходящие).
+    </para>
+    <para>Действие может являться "родителем" или "потомком" для других
+      Действий.
+    </para>
+    <para>Из раздела "Действия" пользователь может работать с действиями, которые
+      ему принадлежат. Пользуясь соответствующими пунктами контекстного меню можно принять,
+      отклонить или перенести действие.
+    </para>
+    <para>Вход в раздел через меню
+      <menuchoice>
+        <guimenu>CRM</guimenu>
+        <guimenuitem>Действия</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/add_action.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para><guibutton>Принять</guibutton>. Изменяет состояние действия на "Принято".
+    </para>
+    <para><guibutton>Отклонить</guibutton>. Изменяет состояние действия на "Отклонено".
+    </para>
+    <para><guibutton>Перенести</guibutton>. Система запрашивает у пользователя на сколько минут,
+      часов, дней, недель или месяцев нужно перенести данное действие.
+      После этого система изменяет значения полей "Срок фактический: Начало" и "Срок
+      фактический: Конец" на указанный пользователем промежуток времени.
+    </para>
+    <para>Состояние и статус действия пользователь может сменить, открыв действие на изменение
+      и непосредственно указав новое значение для полей "<guibutton>Состояние</guibutton>"
+      и "<guibutton>Статус</guibutton>".
+    </para>
+    <para>Послать e-mail. Для выполнения этой функции нужно, чтобы:</para>
+    <orderedlist numeration="arabic">
+      <listitem>
+        <para>в системе <?eval ${project.organization.name}?> была настроена (сконфигурирована)
+          возможность
+          отправки электронной почты.
+          Подробнее об этом читайте в руководстве администратора.
+        </para>
+      </listitem>
+      <listitem>
+        <para>в системе были указаны адреса электронной почты (e-mail) у тех лиц,
+          которые участвуют в исполнении данного действия.
+        </para>
+      </listitem>
+    </orderedlist>
+    <para><guibutton>Послать задачу</guibutton>. Для выполнения этой функции необходима программа,
+      поддерживающая задачи, например, MS Outlook(tm).
+    </para>
+    <section xml:id="crmActions_01">
+      <title>Информация</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/action_info.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>На закладке "Информация" в текстовом виде записываются план действия и -
+        после выполнения - результат. Можно указать дальнейшие действия, которые выполняются после
+        данного действия.
+      </para>
+    </section>
+    <section xml:id="crmActions_02">
+      <title>Связанные документы</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/action_link.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>На закладке "<emphasis>Связанные документы</emphasis>" формируется
+        список документов, связанных с данным действием. Сами документы хранятся в справочнике
+        "Оригиналы документов".
+      </para>
+    </section>
+    <section xml:id="crmActions_03">
+      <title>Отношение</title>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/action_operation.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>На закладке "<emphasis>Отношение</emphasis>" указывается Отношение,
+        с которым связано данное действие; а также Контактное лицо. Для заполнения этих
+        полей используется информация соответствующих разделов системы.
+      </para>
+      <para>См. также:<link linkend="crmContacts">Контактные лица</link>,
+        <link linkend="crmRelations">Отношения</link>
+      </para>
+    </section>
+  </chapter>
+  <chapter xml:id="crmRelations">
+    <title>Отношения</title>
+    <para>Из раздела "Отношения" менеджер способен управлять всеми процессами, связанными с
+      текущим
+      деловым отношением, и получать базовую информацию по данному деловому отношению.
+    </para>
+    <para>Деловое отношение - это суммированный список действий, контактных лиц, предложений,
+      электронных
+      документов, возникших в рамках взаимодействия с юридическим или физическим лицом. В отличие от
+      действия,
+      которое не может включать в себя другие действия, деловое отношение может быть расширено
+      списком
+      действий (фактических или плановых).
+    </para>
+    <para>Отношение может являться "родителем" для других отношений.</para>
+    <para>Вход в раздел через меню
+      <menuchoice>
+        <guimenu>CRM</guimenu>
+        <guimenuitem>Отношения</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/add_relation.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>На закладке "Основные сведения" записывается следующая информация:</para>
+    <para><guibutton>Код</guibutton>. Краткое наименование данной записи в системе.
+    </para>
+    <para><guibutton>Наименование</guibutton>. Название данного делового отношения.
+    </para>
+    <para><guibutton>Контрагент</guibutton>. Установите флаг, указывающий контрагента данного
+      отношения.
+      Если флаг не установлен, система считает контрагентом физическое лицо.
+      Если флаг установлен, система считает контрагентом юридическое лицо.
+    </para>
+    <para>Укажите
+      <guibutton>юридическое</guibutton>
+      или<guibutton>физическое лицо</guibutton>, с которым связан этот
+      деловой контакт. Используйте данные справочников "Партнёры" или "Физические лица"
+      соответственно.
+    </para>
+    <para><guibutton>Обращение</guibutton>. Вариант обращения к указанному контрагенту (актуально,
+      если это
+      физическое лицо). Господин, госпожа, Mr., Mrs., товарищ - и тому подобное.
+    </para>
+    <para><guibutton>Nick</guibutton>. Псевдоним контрагента.
+    </para>
+    <para><guibutton>Ответственный</guibutton>. Пользователь CRM, ответственный за данное отношение.
+    </para>
+    <para><guibutton>Куратор</guibutton>. Пользователь CRM, курирующий данное отношение.
+    </para>
+    <para>Если на вашем предприятии принята некая классификация отношений и клиентов,
+      можно заполнить нижеследующие поля:<guibutton>Статус отношения</guibutton>,
+      <guibutton>Тип клиента</guibutton>
+      и
+      <guibutton>Ранг делового отношения</guibutton>.
+    </para>
+    <para>Во вкладку "Контактные лица" можно добавить, например, сотрудников Контрагента или
+      других лиц,
+      с которыми вы общались в рамках этого Делового Отношения.
+      Подробную информацию о них можно занести в раздел "Контактные лица".
+    </para>
+    <para>Во вкладку "Документы" автоматически попадают все документы зарегистрированные
+      в системе в других разделах, которые относятся к Контрагенту, указанному в этом Отношении (это
+      или физическое, или
+      юридическое лицо). Кроме того, во вкладке "Карточки расчётов" можно увидеть карточку
+      расчётов с указанным
+      контрагентом, если таковая была заведена в системе.
+    </para>
+    <para>Во вкладке "Связанные документы" можно указать записи из справочника "Оригиналы
+      документов".
+    </para>
+    <para>Во вкладке "Действия" заносятся все действия, планируемые или фактические, которые
+      нужно произвести по отношению в этому Контрагенту.
+      Все действия сохраняются в разделе "Действия". Из этого раздела пользователь может
+      работать
+      с действиями, которые ему принадлежат. Пользуясь соответствующими пунктами контекстного меню
+      можно
+      принять, отклонить или перенести действие.
+    </para>
+    <para>Вы можете использовать Условия отбора для поиска Отношений по различным критериям.</para>
+    <para>См. также:<link linkend="crmActions">Действия</link>,
+      <link linkend="crmContacts">Контактные лица</link>.
+    </para>
+  </chapter>
+  <chapter xml:id="crmContacts">
+    <title>Контактные лица</title>
+    <para>Вход в раздел через меню
+      <menuchoice>
+        <guimenu>CRM</guimenu>
+        <guimenuitem>Контактные лица</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+    <para>Здесь записываются все лица, с которыми происходит контакт в рамках CRM. Контактное лицо
+      не привязывается к какому-либо партнёру. Контактное лицо может указываться для каждого
+      действия
+      и отношения.
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/add_contact.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para>О контактном лице можно записать следующие сведения:</para>
+    <para><guibutton>Контактное лицо</guibutton>. В этом поле выбирается запись из справочника
+      "Физические лица".
+    </para>
+    <para><guibutton>Обращение</guibutton>. Обращение, которое следует применять к данному
+      контактному
+      лицу
+      ("господин", "госпожа", "товарищ" и т.д.)
+    </para>
+    <para><guibutton>Компания</guibutton>. Указывается для связи данного Контактного лица с
+      конкретной
+      Компанией. (Прямой зависимости контактного лица и компании не существует, так как одно
+      контактное
+      лицо может представлять интересы нескольких компаний.)
+    </para>
+    <para><guibutton>Должность</guibutton>. Должность, которую занимает данное лицо.
+    </para>
+    <para><guibutton>Уволен</guibutton>. Поставьте флаг в этом поле, если этот человек (Контактное
+      лицо)
+      уволился из указанной Компании.
+    </para>
+    <para><guibutton>Приоритет</guibutton>. Приоритет данного контактного лица в списке контактных
+      лиц.
+    </para>
+    <para><guibutton>По умолчанию</guibutton>. Признак, по которому возможно визуально определить
+      соответствие данного контактного лица указанной компании.
+    </para>
+    <para><guibutton>Nick</guibutton>. Псевдоним или имя, под которым известен этот человек
+      (контактное лицо).
+    </para>
+    <para><guibutton>Ответственный</guibutton>. Пользователь CRM, ответственный за связи с данным
+      контактным лицом.
+    </para>
+    <para><guibutton>Куратор</guibutton>. Под "Куратором" понимается сотрудник Вашей
+      компании (пользователь CRM), который контролирует действия "Ответственного" с данным
+      контактным лицом.
+    </para>
+    <para><guibutton>Примечания</guibutton>. Текстовое поле, где Вы можете записать любые
+      примечания.
+    </para>
+    <para>А также:</para>
+    <para><guibutton>Адрес</guibutton>. В поле "<guibutton>Источник адреса</guibutton>"
+      выбирается из двух вариантов - либо адрес
+      компании (указанной на закладке "<emphasis>Основные сведения</emphasis>"),
+      либо адрес физического лица (указанного там же).
+    </para>
+    <para><guibutton>Контактная информация</guibutton>. Телефоны и электронные адреса на этой
+      закладке,
+      записываются тому физическому лицу, которое указано на закладке "<emphasis>Основные
+        сведения</emphasis>". Вы можете увидеть их, открыв справочник "Физические лица",
+      на закладке "<emphasis>Дополнительно</emphasis>".
+    </para>
+    <para><guibutton>Связанные документы</guibutton>. Здесь отображаются сведения о документах,
+      связанных
+      с этим контактным лицом.
+    </para>
+    <para><guibutton>Действия</guibutton>. Здесь отображаются сведения о действиях, где фигурирует
+      данное контактное лицо.
+    </para>
+    <para>Условия отбора контактных лиц позволяют отфильтровать контактных лиц по полям:</para>
+    <itemizedlist>
+      <listitem>
+        <para>контактное лицо (в этом поле возможен контекстный поиск);</para>
+      </listitem>
+      <listitem>
+        <para>компания, к которой данное контактное лицо относится;</para>
+      </listitem>
+      <listitem>
+        <para>отношение, в рамках которого ведутся взаимодействия с данным контактным лицом.</para>
+      </listitem>
+    </itemizedlist>
+    <section xml:id="crmContacts_01">
+      <title>Разграничение прав</title>
+      <para>Внимание: Если пользователь системы в справочнике "Физические лица" не имеет
+        прав на папку, в которой находится запись о некоем лице, то этот пользователь не сможет
+        указать это физическое лицо в качестве контактного, а также не сможет увидеть в списке
+        контактных лиц записи, где указано данное физическое лицо в качестве контактного.
+      </para>
+    </section>
+  </chapter>
+  <chapter xml:id="crmKB">
+    <title>База знаний</title>
+    <section xml:id="crmKB_01">
+      <title>Подготовка Базы знаний</title>
+      <para>В системе <?eval ${project.organization.name}?> имеется возможность создать базу знаний
+        для принятия решений при
+        появлении какой-либо проблемы.
+      </para>
+      <para>База знаний позволяет оперативно отвечать на запросы клиентов, вести FAQ. Алгоритм Базы
+        знаний построен на
+        принципе поиска решения на основании уточнённой проблемы, выявленной из набора симптомов.
+      </para>
+      <para>Создание базы знаний происходит в три этапа. На первом этапе фиксируются симптомы пока
+        ещё неизвестной проблемы в разделе "Симптомы". Далее они анализируются и связываются
+        с проблемами. Выявленные проблемы заносятся в раздел "Проблемы".
+      </para>
+      <para>Можно использовать и другой путь - если известны и проблемы, и симптомы, им
+        сопутствующие,
+        можно записать отдельно проблемы и симптомы, затем указать их отношения: при какой проблеме
+        какие
+        симптомы могут проявляться; и какие проблемы каким симптомам соответствуют.
+      </para>
+      <example>
+        <para>ПРИМЕР: Симптом - "Телефонные звонки попадают не туда".
+          Пояснение к симптому "Установлена офисная АТС".
+        </para>
+        <para>Проблема: "Офисная АТС неправильно переадресует входящие звонки"</para>
+        <para>Решение: "Перепрограммировать офисную АТС". Инструкцию можно сохранить на
+          закладке
+          "<emphasis>Связанные документы</emphasis>" (фактически она будет сохранена в
+          справочнике
+          "Оригиналы документов".
+        </para>
+      </example>
+      <para>Перед началом использования модуля необходимо иметь чёткий список задач, которые могут
+        быть
+        решены с помощью функций Базы знаний. Этот инструмент представляет собой механизм
+        регистрации
+        и
+        поиска решений и может быть успешно использован в службах поддержки, а также
+        офис-менеджерами
+        и
+        консультантами. Степень использования функций модуля зависит от его настройки под бизнес
+        компании.
+      </para>
+      <para>Необходимо также помнить, что база знаний является постоянно пополняемым регистром, и
+        структурность, упорядоченность вносимой информации являются основным залогом успешного
+        использования Базы знаний.
+      </para>
+    </section>
+    <section xml:id="crmKB_02">
+      <title>Как пользоваться Базой знаний</title>
+      <para>Откройте раздел "Поиск решения" через главное меню
+        <menuchoice>
+          <guimenu>CRM</guimenu>
+          <guisubmenu>База знаний</guisubmenu>
+          <guimenuitem>Поиск решения</guimenuitem>
+        </menuchoice>
+        .
+      </para>
+      <para>Добавьте симптом. Это можно сделать с помощью клавиатуры или мыши:</para>
+      <itemizedlist>
+        <listitem>
+          <para>с помощью клавиатуры: убедитесь, что курсор стоит в поле
+            "<guibutton>Симптомы</guibutton>"
+            и нажмите клавишу
+            <keycombo>
+              <keycap>Ins</keycap>
+            </keycombo>
+            ;
+          </para>
+        </listitem>
+        <listitem>
+          <para>с помощью мыши: наведите указатель мыши в поле
+            "<guibutton>Симптомы</guibutton>" и нажмите
+            правую кнопку мыши. Появится контекстное меню, выберите пункт
+            "Выбрать симптом".
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para>Можно выбрать несколько симптомов.</para>
+      <para>Затем нажмите кнопку "<guibutton>Найти</guibutton>".
+      </para>
+      <para>Система будет искать проблему, связанную с таким симптомом, и отобразит её в поле
+        "<guibutton>Проблемы</guibutton>". Если выбрано несколько симптомов, система покажет
+        сразу все проблемы, связанные со всеми выбранными симптомами.
+      </para>
+      <para>С проблемами связаны решения. Внизу, в поле "<guibutton>Решения</guibutton>"
+        система покажет решения.
+      </para>
+      <para>Одномоментно отображаются все решения, связанные только с одной проблемой (текущей
+        записью в поле "<guibutton>Проблемы</guibutton>", то есть той, на которой стоит
+        курсор). Чтобы посмотреть решения, относящиеся к другой проблеме, просто переместите курсор
+        на нужную проблему.
+      </para>
+      <para>Вы можете из списка проблем убрать ненужные. Это можно сделать с помощью клавиатуры
+        или мыши:
+      </para>
+      <itemizedlist>
+        <listitem>
+          <para>с помощью клавиатуры: установите курсор на запись в поле
+            "<guibutton>Проблемы</guibutton>",
+            которую Вы хотите удалить, и нажмите клавишу
+            <keycombo>
+              <keycap>Del</keycap>
+            </keycombo>
+            ;
+          </para>
+        </listitem>
+        <listitem>
+          <para>с помощью мыши: наведите указатель мыши на запись, которую Вы хотите удалить,
+            и нажмите правую кнопку мыши. Появится контекстное меню, выберите пункт
+            "Убрать проблему".
+          </para>
+        </listitem>
+      </itemizedlist>
+      <para/>
+      <para>Однако, если Вы обновите список проблем (нажатием клавиши
+        <keycombo>
+          <keycap>F5</keycap>
+        </keycombo>
+        или через
+        пункт контекстного меню "Обновить") система снова выдаст
+        весь список проблем, связанных с выбранными
+        симптомами (см. поле "<guibutton>Симптомы</guibutton>").
+      </para>
+    </section>
+    <section xml:id="crmKB_03">
+      <title>Симптомы</title>
+      <para>У каждой проблемы может быть несколько симптомов.</para>
+      <para>Вход в раздел через меню
+        <menuchoice>
+          <guimenu>CRM</guimenu>
+          <guisubmenu>База знаний</guisubmenu>
+          <guimenuitem>Симптомы</guimenuitem>
+        </menuchoice>
+        .
+      </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/symptom_add.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para><guibutton>Наименование</guibutton>. Наименование симптома.
+      </para>
+      <para><guibutton>Пояснения</guibutton>. В этом поле могут быть записаны любые текстовые
+        пояснения к данному симптому.
+      </para>
+      <para><guibutton>Создатель</guibutton>. Пользователь CRM, который считается создателем
+        данной записи. По умолчанию при создании симтома система предлагает того пользователя,
+        который добавляет запись.
+      </para>
+      <para>Закладка "<emphasis>Дополнительные признаки</emphasis>".
+        На этой закладке есть возможность указать или просмотреть список дополнительных
+        признаков, присвоенных этому документу.
+      </para>
+      <para>Если для симптомов CRM в системе не назначено никаких дополнительных признаков, закладка
+        "<emphasis>Дополнительные признаки</emphasis>" не появится.
+      </para>
+      <para>Условия отбора симптомов.
+        В списке симптомов можно использовать условия отбора: по названию и по проблеме,
+        с которой связан симптом.
+      </para>
+    </section>
+    <section xml:id="crmKB_04">
+      <title>Проблемы</title>
+      <para>Вход в раздел через меню
+        <menuchoice>
+          <guimenu>CRM</guimenu>
+          <guisubmenu>База знаний</guisubmenu>
+          <guimenuitem>Проблемы</guimenuitem>
+        </menuchoice>
+        .
+      </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/add_problem.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>На закладке "<emphasis>Сведения</emphasis>" записывается следующая
+        информация о проблеме:
+      </para>
+      <para><guibutton>Наименование</guibutton>. Краткое наименование проблемы в системе.
+      </para>
+      <para><guibutton>Ключевые слова</guibutton>. Слова и словосочетания, относящиеся к
+        данной проблеме. По введённым
+        в это поле словам возможен поиск в списке проблем.
+      </para>
+      <para><guibutton>Тип проблемы</guibutton>. На предприятии, использущем базу знаний,
+        желательно определить
+        классификацию проблем и для каждой проблемы указывать, к какому типу она относится.
+      </para>
+      <para><guibutton>Приоритет</guibutton>. Можно указать приоритет проблемы, обозначающий,
+        например, её важность.
+        Данное поле может принимать значения от 1 до 100 (только целые числа).
+      </para>
+      <para><guibutton>Создатель</guibutton>. Пользователь CRM, который считается создателем
+        данной записи.
+      </para>
+      <para>На закладке "<emphasis>Пояснения</emphasis>" записываются пояснения к проблеме:
+        её подробное описание, условия возникновения и пр.
+      </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/add_problem2.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>На закладке "<emphasis>Связанные документы</emphasis>" формируется список
+        документов, связанных с данной проблемой. Сами электронные оригиналы (или копии) хранятся
+        в справочнике "Оригиналы документов", но и отсюда, с закладки "<emphasis>
+          Связанные
+          документы</emphasis>" можно сохранить
+        в системе новый документ, а также сделать ссылку на уже хранящийся в системе документ.
+      </para>
+      <para>В базе знаний каждая проблема связана с симптомами и решениями.
+        Из записанных в базу знаний симптомов и решений можно выбрать те, которые относятся
+        к данной проблеме.
+      </para>
+      <para>У одной проблемы может быть несколько симптомов, поэтому во вкладке "Симптомы"
+        с помощью пункта контекстного меню "Выбрать симптом" выберите те, которые могут быть
+        порождены этой проблемой.
+        Во вкладке Решения можно сразу добавить решение этой проблемы с помощью пункта контекстного
+        меню "Выбрать решение". У проблемы может быть несколько путей разрешения, поэтому
+        в этом окне Вы можете добавить их несколько. Также решение проблемы можно создать
+        самостоятельно
+        в разделе "Решения" и там добавить решаемые проблемы.
+      </para>
+      <para>Условия отбора проблем</para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/UO_problem.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>В списке проблем можно искать записи, используя следующие поля:</para>
+      <para><guibutton>Текстовый поиск</guibutton>. В это поле введите сочетание букв(символов),
+        которое может встречаться в искомой проблеме.
+      </para>
+      <para><guibutton>Искать в</guibutton>. Отметьте флагами, где именно нужно искать указанное
+        выше сочетание: в наименовании проблем, в ключевых словах, в пояснениях.
+      </para>
+      <para><guibutton>Параметры поиска</guibutton>.
+      </para>
+      <para>Можно отобразить все проблемы, связанные с определённым решением.
+        Возможен отбор по дополнительным признакам (на соответствующей закладке).
+      </para>
+      <para>См. также:<link linkend="crmKB_03">Симптомы</link>,
+        <link linkend="crmKB_05">Решения</link>,
+        <link linkend="crmKB_06">Поиск решения</link>
+      </para>
+    </section>
+    <section xml:id="crmKB_05">
+      <title>Решения</title>
+      <para>Способы устранения проблем назваются решениями. Каждой проблеме может соответствовать
+        несколько решений; и наоборот, одно решение может подходить к нескольким проблемам.
+      </para>
+      <para>Вход в раздел через меню
+        <menuchoice>
+          <guimenu>CRM</guimenu>
+          <guisubmenu>База знаний</guisubmenu>
+          <guimenuitem>Решения</guimenuitem>
+        </menuchoice>
+        .
+      </para>
+      <para>На закладке "<emphasis>Сведения</emphasis>" записывается следующая
+        информация о решении:
+      </para>
+      <para><guibutton>Наименование</guibutton>. Краткое наименование данного решения в системе.
+      </para>
+      <para><guibutton>Тип решения</guibutton>. Желательно определить классификацию решений и
+        для каждого решения указывать, к какому типу оно относится.
+      </para>
+      <para><guibutton>Создатель</guibutton>. Пользователь CRM, который записал данное решение
+        в Базу знаний.
+      </para>
+      <para><guibutton>Действительно до</guibutton>. Некоторые решения могут иметь ограниченный
+        срок действия; то есть способ устранений проблемы возможен только в определённый период.
+        В этом случае укажите даты начала и окончания для данного решения.
+      </para>
+      <para>На закладке "<emphasis>Пояснения</emphasis>" записываются записываются
+        пояснения к решению, подробности исполнения и т.п.
+      </para>
+      <para>На закладке "<emphasis>Связанные документы</emphasis>" формируется список
+        документов, связанных с данным решением. Сами электронные оригиналы (или копии) хранятся
+        в справочнике "Оригиналы документов", но и отсюда, с закладки "<emphasis>
+          Связанные
+          документы</emphasis>" можно сохранить в системе новый документ, а также сделать
+        ссылку на уже хранящийся в системе документ.
+      </para>
+      <para><guibutton>Решаемые проблемы</guibutton>. Все проблемы, которые может устранить данное
+        решение, записываются в этот список.
+      </para>
+      <para>См. также:<link linkend="crmKB_06">Поиск решения</link>,
+        <link linkend="crmKB_04">Проблемы</link>,
+        <link linkend="crmKB_03">Симптомы</link>.
+      </para>
+    </section>
+    <section xml:id="crmKB_06">
+      <title>Поиск решения</title>
+      <para>Вход в раздел через меню
+        <menuchoice>
+          <guimenu>CRM</guimenu>
+          <guisubmenu>База знаний</guisubmenu>
+          <guimenuitem>Поиск решения</guimenuitem>
+        </menuchoice>
+        .
+      </para>
+      <para>Установите курсор в поле "<guibutton>Симптомы</guibutton>", и выберите один
+        или несколько симптомов, подходящих к ситуации. Для формирования списка симптомов
+        используйте
+        контекстное меню или клавиши
+        <keycombo>
+          <keycap>Ins</keycap>
+        </keycombo>
+        для добавления и
+        <keycombo>
+          <keycap>Del</keycap>
+        </keycombo>
+        для удаления записей из списка.
+      </para>
+      <para>После этого запустите функцию "Найти" (нажмите кнопку "<guibutton>
+        Найти</guibutton>"
+        в правом верхнем углу экрана или оставаясь в поле "<guibutton>Симптомы</guibutton>",
+        нажмите клавишу
+        <keycombo>
+          <keycap>Enter</keycap>
+        </keycombo>
+        ).
+      </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/search.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Если в базе знаний есть проблемы, связанные с выбранными симптомами, информация о них
+        отобразится в поле "<guibutton>Проблемы</guibutton>".
+      </para>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/search_result.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
+      <para>Если выбрано несколько симптомов, и все они принадлежат какой-то проблеме, то
+        вероятность
+        у этой проблемы будет 100%.
+        Если выбрано, к примеру, два симптома, и один из них принадлежит проблеме, то вероятность
+        такой
+        проблемы система определит как 50%.
+      </para>
+      <para>Обратите внимание, что в поле "Решения" отображаются решения только
+        для той проблемы, на которой стоит курсор в поле "Проблемы".
+      </para>
+      <para>Чтобы изменить параметры поиска, Вы можете исключить некоторые симптомы, используя
+        в поле "Симптомы" пункт контекстного меню "Убрать симптом" (или клавишу
+        <keycombo>
+          <keycap>Del</keycap>
+        </keycombo>
+        ). После этого повторите поиск.
+      </para>
+      <para>См. также:
+        <link linkend="crmKB_03">Симптомы</link>
+        <link linkend="crmKB_04">Проблемы</link>,
+        <link linkend="crmKB_05">Решения</link>.
+      </para>
+    </section>
+  </chapter>
+  <xi:include href="../../../shared/copyright.xml">
+    <xi:fallback>
+      <para>The copyright section could not be retrieved.</para>
+    </xi:fallback>
+  </xi:include>
+</book>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.mg</groupId>
+    <artifactId>docs</artifactId>
+    <version>4.0.8-SNAPSHOT</version>
+  </parent>
+
+  <groupId>com.mg.docs</groupId>
+  <artifactId>workflow</artifactId>
+  <packaging>pom</packaging>
+
+  <name>MBSA::DocBook::WorkFlow</name>
+  <description/>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>com.agilejava.docbkx</groupId>
+        <artifactId>docbkx-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>

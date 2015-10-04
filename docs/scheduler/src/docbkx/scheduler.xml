@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
+    "http://www.oasis-open.org/docbook/xml/5.0b5/dtd/docbook.dtd">
+<book xmlns:xi="http://www.w3.org/2001/XInclude"
+      version="5.0"
+      xml:lang="ru">
+  <title>
+    Планировщик заданий в системе <?eval ${project.organization.name}?>
+  </title>
+  <subtitle>Руководство пользователя</subtitle>
+  <info>
+    <copyright>
+      <year><?eval ${project.inceptionYear}?></year>
+      <year><?eval ${now}?></year>
+      <holder><?eval ${project.organization.name}?></holder>
+    </copyright>
+    <releaseinfo><?eval ${project.version}?></releaseinfo>
+  </info>
+  <preface xml:id="preface" revision="1">
+    <title>Целевая аудитория</title>
+    <para>Данное руководство предназначено для пользователей, работающих
+      с модулем &quot;Зарплата&quot; системы <?eval ${project.organization.name}?>.
+    </para>
+  </preface>
+  <chapter xml:id="intro">
+    <title>Введение</title>
+    <para>Данная подсистема предназначена для выполнения различных действий по расписанию.
+      Зарегистрированные задачи будут загружены
+      при старте сервера приложения и зарегистрированы в планировщике заданий. В соответсвии с
+      настройкой, каждая задача при выполнении
+      будет выполнять связанное с ней бизнес-расширение (BAi).
+    </para>
+  </chapter>
+  <chapter xml:id="schtask">
+    <title>Задания планировщика</title>
+    <para>Вход в раздел "Задания планировщика" осуществляется через
+      главное меню системы:
+      <menuchoice>
+        <guimenu>Центр управления</guimenu>
+        <guisubmenu>Планировщик заданий</guisubmenu>
+        <guimenuitem>Задания планировщика</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/task_mt.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para><guibutton>Код</guibutton>. Уникальный код задания планировщика
+      в системе <?eval ${project.organization.name}?>.
+    </para>
+    <para><guibutton>Бизнес-расширение</guibutton>. Ссылка на бизнес-расширение которое будет
+      выполнено при срабатывании задания.
+    </para>
+    <para><guibutton>Наименование</guibutton>. Наименование задания.
+    </para>
+    <para><guibutton>Описание</guibutton>. Описание задания.
+    </para>
+    <para><guibutton>Выражение cron</guibutton>. Выражение предназначенное для описания времени и
+      периодов старта заданий. В разделе
+      <link linkend="cron">описание формата</link>
+      находится подробная информация.
+    </para>
+    <para><guibutton>Активное</guibutton>. Признак активности задания, если задание не активно, то
+      планировщик не будет учитывать его при планировании запуска.
+    </para>
+  </chapter>
+  <chapter xml:id="cron">
+    <title>Cron-формат</title>
+    <para>Cron-формат это простой, но мощный и гибкий способ описания времени и периодичности
+      действий.
+      <?eval ${project.organization.name}?> использует cron-формат при указании временных интервалов
+      в заданиях планировщика.
+    </para>
+    <para>Cron-формат состоит из нескольких полей, разделенных пробелами:</para>
+    <programlisting>
+      &lt;Секунды&gt; &lt;Минуты&gt; &lt;Часы&gt; &lt;Дни_месяца&gt; &lt;Месяцы&gt; &lt;Дни_недели&gt;
+      &lt;Годы&gt;</programlisting>
+    <table>
+      <title>Описание полей</title>
+      <tgroup cols="4">
+        <thead>
+          <row>
+            <entry>Имя поля</entry>
+            <entry>Обязательное</entry>
+            <entry>Возможные значения</entry>
+            <entry>Возможные специальные символы</entry>
+          </row>
+        </thead>
+        <tbody>
+          <row>
+            <entry>Секунды</entry>
+            <entry>Да</entry>
+            <entry>0-59</entry>
+            <entry>, - * /</entry>
+          </row>
+          <row>
+            <entry>Минуты</entry>
+            <entry>Да</entry>
+            <entry>0-59</entry>
+            <entry>, - * /</entry>
+          </row>
+          <row>
+            <entry>Часы</entry>
+            <entry>Да</entry>
+            <entry>0-23</entry>
+            <entry>, - * /</entry>
+          </row>
+          <row>
+            <entry>Дни месяца</entry>
+            <entry>Да</entry>
+            <entry>1-31</entry>
+            <entry>, - * ? / L W</entry>
+          </row>
+          <row>
+            <entry>Месяцы</entry>
+            <entry>Да</entry>
+            <entry>1-12 или JAN-DEC</entry>
+            <entry>, - * /</entry>
+          </row>
+          <row>
+            <entry>Дни недели</entry>
+            <entry>Да</entry>
+            <entry>1-7 или SUN-SAT</entry>
+            <entry>, - * ? / L #</entry>
+          </row>
+          <row>
+            <entry>Годы</entry>
+            <entry>Нет</entry>
+            <entry>пусто или 1970-2099</entry>
+            <entry>, - * /</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para><guibutton>*</guibutton>. Это означает полный диапазон возможных значений, например,
+      каждая
+      минута, каждый час и т. д.
+    </para>
+    <para><guibutton>?</guibutton>. Нет специфического значения.
+    </para>
+    <para><guibutton>-</guibutton>. Задает диапазон значений.
+    </para>
+    <para><guibutton>/</guibutton>. Задает шаг изменения значения, например каждые два часа.
+    </para>
+    <para><guibutton>L</guibutton>. Последнее значение, например, последний день месяца.
+    </para>
+    <para><guibutton>W</guibutton>. Ближайший рабочий день недели, например, если указать 15W, а 15е
+      число месяца суббота, то событие
+      произойдет 14го в пятницу.
+    </para>
+    <para><guibutton>#</guibutton>. Очередность дня, например, значение 6#3 указывает на то, что
+      необходимо выполнять каждую 3ю пятницу месяца.
+    </para>
+    <para>Примеры:</para>
+    <programlisting>
+      0 0 12 * * ? В 12 часов каждый день
+      0 15 10 ? * * В 10:15 каждый день
+      0 15 10 * * ? В 10:15 каждый день
+      0 15 10 * * ? * В 10:15 каждый день
+      0 15 10 * * ? 2005 В 10:15 каждый день в течении 2005 года
+      0 * 14 * * ? Каждую минуту стартовав в 14 часов и завершив в 14:59, каждый день
+      0 0/5 14 * * ? Каждые 5 минут стартовав в 14 часов и завершив в 14:55, каждый день
+      0 0/5 14,18 * * ? Каждые 5 минут стартовав в 14 часа и завершив в 14:55, и каждые 5 минут
+      стартовав в 18 часов и завершив в 18:55, каждый день
+      0 0-5 14 * * ? Каждую минуту стартовав в 14 часа и завершив в 14:05, каждый день
+      0 10,44 14 ? 3 WED В 14:10 и 14:44 каждую среду месяца март
+      0 15 10 ? * MON-FRI В 10:15 каждые понедельник, вторник, среду, четверг и пятницу
+      0 15 10 15 * ? В 10:15 15 числа каждого месяца
+      0 15 10 L * ? В 10:15 последнего дня месяца
+      0 15 10 ? * 6L В 10:15 последней пятницы каждого месяца
+      0 15 10 ? * 6L 2002-2005 В 10:15 последней пятницы каждого месяца в 2002, 2003, 2004 и 2005
+      годах
+      0 15 10 ? * 6#3 В 10:15 третьей пятницы каждого месяца
+      0 0 12 1/5 * ? В 12:00 каждый пятый день каждого месяца, стартовав в первый день месяца
+      0 11 11 11 11 ? В 11:11 11 ноября
+    </programlisting>
+  </chapter>
+  <xi:include href="../../../shared/copyright.xml">
+    <xi:fallback>
+      <para>The copyright section could not be retrieved.</para>
+    </xi:fallback>
+  </xi:include>
+</book>

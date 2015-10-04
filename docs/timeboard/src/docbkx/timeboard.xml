@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
+    "http://www.oasis-open.org/docbook/xml/5.0b5/dtd/docbook.dtd">
+<book xmlns:xi="http://www.w3.org/2001/XInclude"
+      version="5.0"
+      xml:lang="ru">
+  <title>
+    Табельный учёт в системе <?eval ${project.organization.name}?>
+  </title>
+  <subtitle>Руководство пользователя</subtitle>
+  <info>
+    <copyright>
+      <year><?eval ${project.inceptionYear}?></year>
+      <year><?eval ${now}?></year>
+      <holder><?eval ${project.organization.name}?></holder>
+    </copyright>
+    <releaseinfo><?eval ${project.version}?></releaseinfo>
+  </info>
+  <preface xml:id="preface" revision="1">
+    <title>Целевая аудитория</title>
+    <para>Данное руководство предназначено для пользователей, работающих
+      с модулем &quot;Табельный учёт&quot; системы <?eval ${project.organization.name}?>.
+    </para>
+  </preface>
+  <chapter xml:id="intro">
+    <title>Введение</title>
+    <para>Модуль &quot;Табельный учёт&quot; системы <?eval ${project.organization.name}?>
+      предназначен для учёта рабочего времени.
+    </para>
+    <para>Данные табеля могут использоваться в алгоритмах расчёта заработной платы.</para>
+  </chapter>
+  <chapter xml:id="tableConfig">
+    <title>Конфигурация модуля</title>
+    <para>Настройка модуля "Табельный учёт" доступна через главное меню
+      <menuchoice>
+        <guimenu>Центр управления</guimenu>
+        <guisubmenu>Администрирование</guisubmenu>
+        <guisubmenu>Конфигурация</guisubmenu>
+        <guimenuitem>Табельный учёт</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+    <figure>
+      <title>Конфигурация модуля</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/config.gif"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para>Для заполнения основных параметров модуля используется
+      справочник "<link linkend="timeTypes">Типы времени</link>".
+    </para>
+    <para><guibutton>Рабочее время</guibutton>. Тип времени, которым учитывается
+      основное рабочее время. Для заполнения этого поля укажите тип времени с учётом по часам.
+    </para>
+    <para>В Табеле рабочее время отображается в строке напротив фамилии
+      сотрудника (вместе с типами времени с учётом по дням).
+    </para>
+    <para><guibutton>Выходные и праздники</guibutton>. Тип времени, которым учитываются
+      выходные и праздничные дни. Укажите тип времени с учётом по дням.
+    </para>
+  </chapter>
+  <chapter xml:id="timeTypes">
+    <title>Типы времени</title>
+    <para>Вход в справочник "Типы времени" через главное меню
+      <menuchoice>
+        <guimenu>Центр управления</guimenu>
+        <guisubmenu>Управление персоналом</guisubmenu>
+        <guisubmenu>Справочники учёта персонала</guisubmenu>
+        <guisubmenu>Табельный учёт</guisubmenu>
+        <guimenuitem>Типы времени</guimenuitem>
+      </menuchoice>
+    </para>
+    <figure>
+      <title>Добавление типа времени</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/timekind_add.gif"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para>
+      <guibutton>Код.</guibutton>
+      Краткое уникальное наименование данного типа времени
+      для использования в системе <?eval ${project.organization.name}?>.
+    </para>
+    <para>
+      <guibutton>Наименование.</guibutton>
+      Наименование данного типа времени.
+    </para>
+    <para>
+      <guibutton>Учитывать по дням.</guibutton>
+      Типы времени бывают с учётом по дням и с
+      учётом по часам. Если тип времени нужно учитывать по дням, отметьте это поле флагом.
+      <!-- ТУТ ДОЛЖЕН БЫТЬ РИСУНОК, ВЛИТЫЙ В ТЕКСТ! -->
+    </para>
+    <!-- <figure>
+     <mediaobject><imageobject><imagedata fileref="images/checkbox.gif"/></imageobject></mediaobject>
+     </figure> -->
+    <para>
+      <guibutton>Мнемокод.</guibutton>
+      Это поле активно только если отмечено
+      флагом поле "<guibutton>Учитывать по дням</guibutton>". Значение этого
+      поля отображается в шаблоне графика, графике, табеле, если выбран данный тип
+      времени.
+    </para>
+    <figure>
+      <title>Тип времени с учётом по дням</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/timekind.gif"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para>
+      <guibutton>Приоритет.</guibutton>
+      Определяет порядок показа типов времени
+      в шаблонах, графиках, табелях.
+    </para>
+    <para>
+      <guibutton>Цвет шрифта.</guibutton>
+      Цвет, которым будет отображаться
+      значение данного типа времени.
+    </para>
+    <para>
+      <guibutton>Цвет фона.</guibutton>
+      Цвет фона, на котором будет отображаться
+      значение данного типа времени.
+    </para>
+    <para>Записи справочника "Типы времени" используются для заполнения
+      <link linkend="tableConfig">основных параметров</link>
+      модуля "Табельный учёт"
+    </para>
+  </chapter>
+  <chapter xml:id="patternHead">
+    <title>Шаблоны графиков</title>
+    <para>Вход в справочник "Шаблоны графиков" через главное меню
+      <menuchoice>
+        <guimenu>Центр управления</guimenu>
+        <guisubmenu>Управление персоналом</guisubmenu>
+        <guimenuitem>Шаблоны графиков</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+    <para>Шаблоны используются для заполнения Графиков работ в табельном учёте.</para>
+    <para>На закладке
+      <emphasis>"Сведения"</emphasis>
+      содержится следующая информация:
+    </para>
+    <figure>
+      <title>Добавление шаблона графика</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/patternhead.gif"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para><guibutton>Код</guibutton>. Краткое уникальное наименование данного шаблона
+      для использования в системе <?eval ${project.organization.name}?>.
+    </para>
+    <para><guibutton>Наименование</guibutton>. Наименование данного шаблона.
+    </para>
+    <para><guibutton>Длительность в днях</guibutton>. Недельный тип по умолчанию
+      подразумевает длительность в 7 дней, а для сменного длительность устанавливается
+      в зависимости от продолжительности сменного цикла.
+    </para>
+    <para><guibutton>Тип шаблона</guibutton>. Предусмотрено два типа шаблонов:
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <emphasis>"Недельный".</emphasis>
+          Недельный шаблон рассчитан на 7 дней.
+          При заполнении графика по недельному шаблону осуществляется автоматическая привязка к
+          началу
+          недели
+          (первый день шаблона привязывается к понедельнику).
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>"Сменный".</emphasis>
+          Длительность сменного шаблона
+          устанавливается пользователем. При заполнении графика можно задать смещение шаблона
+          относительно
+          начала периода.
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>На закладке "Шаблон" появляется сетка, число столбцов в которой равно
+      значению поля
+      <guibutton>"Длительность в днях"</guibutton>
+      (для недельного шаблона - 7);
+      а число строк - количеству типов времени с учётом по часам.
+    </para>
+    <para>
+      <link linkend="grid">Заполнить шаблон можно с помощью клавиатуры или пунктов
+        контекстного меню.
+      </link>
+    </para>
+    <para>Вот пример недельного шаблона:</para>
+    <figure>
+      <title>Недельный шаблон</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/patternspec.gif"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para>Этот шаблон рассчитан на 7 дней, в нём два типа времени -
+      "рабочее" и "сверхурочные". Первые пять дней - рабочие,
+      продолжительностью 8 часов. Шестой и седьмой дни - выходные.
+    </para>
+    <para>Вот пример сменного шаблона с длительностью в 4 дня:</para>
+    <figure>
+      <title>Сменный шаблон</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/shift.gif"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para>В этом шаблоне первый день - рабочий (он длится 24&amp;nbsp;часа),
+      а последующие три дня - выходные.
+    </para>
+    <para>См. также:
+      <link linkend="schedulehead">Графики работ в табельном учёте</link>
+    </para>
+  </chapter>
+  <chapter xml:id="schedulehead">
+    <title>Графики работы в табельном учёте</title>
+    <para>Вход в справочник "Графики работы в табельном учёте" через главное меню
+      <menuchoice>
+        <guimenu>Центр управления</guimenu>
+        <guisubmenu>Управление персоналом</guisubmenu>
+        <guimenuitem>Графики работы в табельном учёте</guimenuitem>
+      </menuchoice>
+      .
+    </para>
+    <figure>
+      <title>График работ</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/schedulehead.gif"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para><guibutton>График работы</guibutton>. Из справочника "Графики работы"
+      выберите нужный график. Каждой записи в справочнике "Графики работы" может
+      соответствовать только один график работы в табельном учёте.
+    </para>
+    <para><guibutton>Шаблон графика по умолчанию</guibutton>. Можно указать шаблон графика
+      для удобства заполнения. Указанный в этом поле
+      <link linkend="patternHead">шаблон</link>
+      предлагается при вызове окна<link linkend="tableTpl">"Заполнить по шаблону"</link>.
+    </para>
+    <para><guibutton>Тип учёта праздничных дней</guibutton>. Дни, которые следует
+      считать праздничными, задаются в справочнике "Праздничные дни". Для их учёта
+      при заполнении графика по шаблону система предусматривает один из трёх вариантов.
+    </para>
+    <itemizedlist>
+      <listitem>
+        <para>
+          <emphasis>Не учитывать.</emphasis>
+          Праздничные дни
+          не влияют на учёт.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>Учитывать как выходной.</emphasis>
+          Праздничные
+          дни учитываются как выходные. Можно задать сокращение рабочего времени
+          в предпраздничный день в соответствующем поле.
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          <emphasis>Учитывать другим типом времени.</emphasis>
+          Рабочее
+          время в праздничные дни учитывается другим типом времени, указанным в поле
+          "Тип времени для учёта праздников".
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para><guibutton>Тип времени для учёта праздников</guibutton>.
+      Если
+      <link linkend="tableConfig">рабочее время</link>
+      в праздничные дни учитывается другим<link linkend="timeTypes">типом времени</link>,
+      укажите этот тип в данном поле.
+    </para>
+    <para><guibutton>Сокращение предпраздничных дней</guibutton>. Если праздничные
+      дни учитываются как выходные, укажите на сколько часов сокращён предпраздничный день.
+    </para>
+    <para><guibutton>Расчётные периоды</guibutton>. В этом окне отображается список
+      расчётных периодов, которые заданы в справочнике "Расчётные периоды".
+      Для каждого периода внизу, в окне "Спецификация", отображается количество дней.
+      Если указан<link linkend="patternHead">шаблон графика</link>, можно заполнить
+      спецификацию по этому шаблону, воспользовавшись пунктом контекстного меню
+      "Заполнить по шаблону".
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/schedulespec.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para><guibutton>Спецификация</guibutton>. В этом окне в строках отображаются
+      <link linkend="timeTypes">типы времени</link>
+      с учётом
+      по часам, а в столбцах - дни, где проставляется количество отработанных часов.
+      Номер в заголовке столбца соответствует порядковому номеру дня в месяце.
+      Обратите внимание: спецификация заполняется отдельно для каждого расчётного периода.
+    </para>
+    <para>
+      <link linkend="grid">Спецификацию можно заполнить или отредактировать вручную.</link>
+    </para>
+    <para>На основании спецификации графика работ в табельном учёте заполняется табель.</para>
+  </chapter>
+  <chapter xml:id="tableTpl">
+    <title>Заполнить по шаблону</title>
+    <para>График работ можно заполнить автоматически, используя шаблон.</para>
+    <para>Для каждого расчётного периода график заполняется отдельно. Для этого
+      установите курсор на строку с нужным Вам расчётным периодом и вызовите
+      контекстное меню, в нём выберите пункт "Заполнить по шаблону".
+    </para>
+    <screenshot>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/fill.gif"/>
+        </imageobject>
+      </mediaobject>
+    </screenshot>
+    <para><guibutton>Шаблон</guibutton>. Шаблон для заполнения графика.
+      Если в графике в поле "Шаблон графика по умолчанию" указан шаблон,
+      то система автоматически предложит его для заполнения.
+    </para>
+    <para><guibutton>Смещение (для сменных шаблонов)</guibutton>. Для сменного шаблона можно задать
+      смещение (в днях) относительно начала периода.
+    </para>
+    <para><guibutton>Начальная дата</guibutton>. Дата начала периода, для которого заполняется
+      график.
+    </para>
+    <para><guibutton>Конечная дата</guibutton>. Дата окончания периода, для которого заполняется
+      график.
+    </para>
+  </chapter>
+  <!-- <?xml version='1.0' encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.3CR3//EN"
+                      "../../../../docbook-support/support/docbook-dtd/docbookx.dtd"
+[
+<!ENTITY merp "Millennium ERP">
+<!ENTITY tbl "Табельный учёт">
+]> -->
+  <chapter xml:id="grid">
+    <title>Заполнение сетки</title>
+    <para>В шаблонах графиков, графиках работ в табельном учёте, табелях спецификации
+      представлены в виде сетки. Заполнять эти сетки можно с помощью клавиатуры или контекстного
+      меню, как описано ниже.
+    </para>
+    <para>
+      <emphasis>Установить количество часов.</emphasis>
+      Установите курсор на нужной клетке и далее
+      действуйте по одному из вариантов (по Вашему выбору):
+    </para>
+    <para>вариант а) нажмите цифровую клавишу.</para>
+    <para>вариант б) нажмите клавишу
+      <keycombo>
+        <keycap>F2</keycap>
+      </keycombo>
+      .
+    </para>
+    <para>вариант в) вызовите контекстное меню и выберите пункт
+      <emphasis>"Установить количество часов"</emphasis>.
+    </para>
+    <para>В появившемся окне введите количество часов по данному типу времени.</para>
+    <figure>
+      <title>Введите количество часов</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/hours.gif"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para>Если ввести количество часов "0", клетка будет пустой.</para>
+    <para>
+      <emphasis>Выбрать тип времени с учётом по дням.</emphasis>
+      Установите курсор на нужной клетке
+      и далее действуйте по одному из вариантов (по Вашему выбору):
+    </para>
+    <para>вариант а) нажмите клавишу
+      <keycombo>
+        <keycap>F3</keycap>
+      </keycombo>
+      .
+    </para>
+    <para>вариант б) вызовите контекстное меню и выберите соответствующий пункт.</para>
+    <para>Из справочника "Типы времени" выберите тип времени с учётом по дням.</para>
+    <section>
+      <title>Настройка внешнего вида сетки</title>
+      <para>Можно настроить ширину и высоту столбцов сетки. Окно настройки вида
+        вызывается из контекстного меню сетки или по нажатию клавиши
+        <keycombo>
+          <keycap>F9</keycap>
+        </keycombo>
+        .
+      </para>
+      <figure>
+        <title>Настройка внешнего вида</title>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/appearance.gif"/>
+          </imageobject>
+        </mediaobject>
+      </figure>
+    </section>
+  </chapter>
+  <chapter xml:id="timeboard">
+    <title>Табели</title>
+    <para>Табели предназначены для учёта рабочего времени. Данные из табеля
+      учитываются в алгоритмах расчёта заработной платы.
+    </para>
+    <para>Вход в раздел "Табели" через главное меню
+      <menuchoice>
+        <guimenu>Центр управления</guimenu>
+        <guisubmenu>Управление персоналом</guisubmenu>
+        <guimenuitem>Табели</guimenuitem>
+      </menuchoice>
+    </para>
+    <figure>
+      <title>Добавление заголовка табеля</title>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/tbl_add.gif"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para>В заголовке табеля указываются:</para>
+    <para><guibutton>Расчётный период</guibutton>. Выбирается из справочника "Расчётные периоды".
+      Табель можно создать только для расчётного периода, у которого указано штатное расписание.
+    </para>
+    <para><guibutton>Номер</guibutton>. Номер табеля.
+    </para>
+    <para><guibutton>Примечание</guibutton>. Краткая текстовая информация.
+    </para>
+    <para>При создании табеля в него автоматически попадают (добавляются) сотрудники,
+      у которых в штатном расписании указан график работ. Табель для этих сотрудников
+      автоматически заполняется с учётом этого графика.
+    </para>
+    <para>Чтобы добавить сотрудников в табельный список или удалить, вызовите
+      контекстное меню и выберите пункт "Открыть список сотрудников".
+    </para>
+    <para>Для заполнения табеля вызовите контекстное меню и выберите пункт
+      "Открыть табель".
+    </para>
+    <figure>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="images/timeboard.gif"/>
+        </imageobject>
+      </mediaobject>
+    </figure>
+    <para>По умолчанию табель заполняется на основании спецификации
+      <link linkend="schedulehead">графика работ в табельном учёте</link>.
+    </para>
+    <para>Напротив фамилии сотрудника проставляются значения
+      <link linkend="timeTypes">типов времени</link>
+      с учётом по дням и
+      <link linkend="tableConfig">рабочее время</link>.
+    </para>
+    <para>
+      <link linkend="grid">Пользователь может вручную заполнить и отредактировать значения
+        времени в табеле с помощью клавиатуры или пунктов контекстного меню.
+      </link>
+    </para>
+  </chapter>
+  <xi:include href="../../../shared/copyright.xml">
+    <xi:fallback>
+      <para>The copyright section could not be retrieved.</para>
+    </xi:fallback>
+  </xi:include>
+</book>

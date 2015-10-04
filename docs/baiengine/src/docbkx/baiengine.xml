@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook V5.0//EN"
     "http://www.oasis-open.org/docbook/xml/5.0b5/dtd/docbook.dtd">
-<book version="5.0" xml:lang="ru">
-  <title>Бизнес-расширения в системе <?eval ${project.organization.name}?></title>
+<book xmlns:xi="http://www.w3.org/2001/XInclude"
+      version="5.0"
+      xml:lang="ru">
+  <title>
+    Бизнес-расширения в системе <?eval ${project.organization.name}?>
+  </title>
   <subtitle>Руководство пользователя</subtitle>
   <info>
     <copyright>
       <year><?eval ${project.inceptionYear}?></year>
+      <year><?eval ${now}?></year>
       <holder><?eval ${project.organization.name}?></holder>
     </copyright>
     <releaseinfo><?eval ${project.version}?></releaseinfo>
   </info>
   <preface xml:id="preface" revision="1">
     <title>Целевая аудитория</title>
-    <para>
-      Данное руководство предназначено для опытных пользователей, работающих
+    <para>Данное руководство предназначено для опытных пользователей, работающих
       с модулем &quot;Бизнес-расширения&quot; системы <?eval ${project.organization.name}?>.
     </para>
   </preface>
   <chapter xml:id="bai">
-    <title>"Бизнес-расширения" системы Millennium Business Suite Anywhere</title>
+    <title>"Бизнес-расширения" системы <?eval ${project.organization.name}?></title>
     <section xml:id="custom_user_action">
       <title>Настраиваемые действия пользователя</title>
-      <para>В системе Millennium Business Suite Anywhere есть возможность создавать настраиваемые
+      <para>В системе <?eval ${project.organization.name}?> есть возможность создавать настраиваемые
         действия пользователя
         (НДП), связанные с произвольным BAi.
       </para>
@@ -62,7 +66,7 @@
         (использовать без префикса "VK_").
       </para>
       <para><guibutton>Пиктограмма</guibutton>. Изображение для кнопки панели инструментов
-        должно входить в пакет ресурсов (jar-файл) на сервере Millennium Business Suite Anywhere.
+        должно входить в пакет ресурсов (jar-файл) на сервере <?eval ${project.organization.name}?>.
       </para>
       <para><guibutton>Приоритет</guibutton>. Наивысший приоритет 0.
       </para>
@@ -100,19 +104,9 @@
       </para>
     </section>
   </chapter>
-  <chapter xml:id="copyright">
-    <title>Original Copyright</title>
-    <para>Информация, содержащаяся в этом документе, может быть изменена без предварительного
-      уведомления. ООО "Бизнестехнология" не даёт никаких гарантий относительно
-      этого материала, включая документацию, но не ограничиваясь ей, а также относительно
-      назначения и эффективности этих программ и их пригодности для любых специальных целей.
-      ООО "Бизнестехнология" не несёт ответственности за любые ошибки,
-      содержащиеся здесь и за случайные или косвенные убытки, понесённые в связи
-      с оформлением, качеством исполнения и использованием этого материала.
-      Этот документ содержит информацию, которая защищена авторским правом.
-      Никакая часть этого документа не может быть воспроизведена или использована
-      в другой программе без письменного разрешения ООО "Бизнестехнология".
-    </para>
-    <para>1998-2008 ООО "Бизнестехнология"</para>
-  </chapter>
+  <xi:include href="../../../shared/copyright.xml">
+    <xi:fallback>
+      <para>The copyright section could not be retrieved.</para>
+    </xi:fallback>
+  </xi:include>
 </book>
