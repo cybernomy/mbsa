@@ -344,5 +344,37 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     public void setRemnEndCurPlan(BigDecimal RemnEndCurPlan) {
         this.RemnEndCurPlan = RemnEndCurPlan;
     }
+
+    public BigDecimal getIncomeCurDiff() {
+        return IncomeCur.subtract(IncomeCurPlan);
+    }
+
+    public BigDecimal getIncomeNatDiff() {
+        return IncomeNat.subtract(IncomeNatPlan);
+    }
+
+    public BigDecimal getOutcomeCurDiff() {
+        return OutcomeCur.subtract(OutcomeCurPlan);
+    }
+
+    public BigDecimal getOutcomeNatDiff() {
+        return OutcomeNat.subtract(OutcomeNatPlan);
+    }
+
+    public BigDecimal getRemnBegCurDiff() {
+        return RemnBegCur.subtract(RemnBegCurPlan);
+    }
+
+    public BigDecimal getRemnBegNatDiff() {
+        return RemnBegNat.subtract(RemnBegNatPlan);
+    }
+
+    public BigDecimal getRemnEndCurDiff() {
+        return RemnEndCur.subtract(RemnEndCurPlan);
+    }
+
+    public BigDecimal getRemnEndNatDiff() {
+        return RemnEndNat.subtract(RemnEndNatPlan);
+    }
 }
 

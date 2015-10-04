@@ -74,7 +74,9 @@ public class DIScanner {
 					} else {
 
 						if(!Files.isReadable(result)){
-							throw new RuntimeException(String.format("missed file %s", result));
+							System.out.format("missed file %s, copy it\n", result);
+							//throw new RuntimeException(String.format());
+							Files.copy(file, result, StandardCopyOption.REPLACE_EXISTING);
 						}
 
 						List<BodyDeclaration> members = type.getMembers();
