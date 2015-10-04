@@ -456,13 +456,13 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
 	 *            Остаток на начало бакета
 	 */
     public BigDecimal calculatePlannedQuantity(BigDecimal availableOnBeginBucket) {
-        BigDecimal // потребность
-        result = // кол-во, которое будет
-        getDemandQty().add(getDependantDemand()).subtract(// производство ЗНП
-        getProductionQty()).subtract(// поступления от поставщиков
-        getPurchaseQty()).subtract(// остаток в наличии
-        getQtyAvailable()).subtract(// остаток на начало бакета
-        availableOnBeginBucket).add(getSafetyLevelQty());
+        // потребность
+        BigDecimal // кол-во, которое будет
+        result = // производство ЗНП
+        getDemandQty().add(getDependantDemand()).subtract(// поступления от поставщиков
+        getProductionQty()).subtract(// остаток в наличии
+        getPurchaseQty()).subtract(// остаток на начало бакета
+        getQtyAvailable()).subtract(availableOnBeginBucket).add(getSafetyLevelQty());
         // страховой запас по товару
         if (MathUtils.compareToZero(result) < 0)
             return BigDecimal.ZERO;
