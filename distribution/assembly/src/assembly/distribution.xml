@@ -93,5 +93,15 @@
         <include>com.mg:framework-aux:*</include>
       </includes>
     </dependencySet>
+    <dependencySet>
+      <useProjectArtifact>true</useProjectArtifact>
+      <outputDirectory>docs/</outputDirectory>
+      <outputFileNameMapping>
+        ${artifact.build.finalName}.${artifact.extension}
+      </outputFileNameMapping>
+      <includes>
+        <include>*docs:*:zip</include>
+      </includes>
+    </dependencySet>
   </dependencySets>
 </assembly>

@@ -1,0 +1,34 @@
+<assembly xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3
+          http://maven.apache.org/xsd/assembly-1.1.3.xsd">
+  <id>helpset</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+  <includeBaseDirectory>false</includeBaseDirectory>
+
+  <fileSets>
+    <fileSet>
+      <outputDirectory>javahelp</outputDirectory>
+      <directory>${project.build.directory}/javahelp</directory>
+      <includes>
+        <include>**/*.*</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <outputDirectory>webhelp</outputDirectory>
+      <directory>${project.build.directory}/webhelp</directory>
+      <includes>
+        <include>**/*.*</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <outputDirectory>pdf</outputDirectory>
+      <directory>${project.build.directory}/pdf</directory>
+      <includes>
+        <include>**/*.pdf</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</assembly>

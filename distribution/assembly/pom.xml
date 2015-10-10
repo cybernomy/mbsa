@@ -110,7 +110,6 @@
     <dependency>
       <groupId>com.mg.server.security</groupId>
       <artifactId>service</artifactId>
-      <version>${project.version}</version>
       <type>jboss-sar</type>
     </dependency>
     <dependency>
@@ -394,20 +393,153 @@
     <dependency>
       <groupId>com.mg.bai.help</groupId>
       <artifactId>app</artifactId>
-      <version>${project.version}</version>
       <type>war</type>
     </dependency>
     <dependency>
       <groupId>com.mg.bai.help</groupId>
       <artifactId>service</artifactId>
-      <version>${project.version}</version>
       <type>jboss-sar</type>
     </dependency>
     <dependency>
       <groupId>com.mg.bai.wb</groupId>
       <artifactId>service</artifactId>
-      <version>${project.version}</version>
       <type>jboss-sar</type>
+    </dependency>
+
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>accounting</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>baiengine</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>bpm</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>contract</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>core</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>crm</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>discount</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>docprocess</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>finance</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>liability</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>manufacture</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>mfref</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>overall</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>payalloc</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>payctl</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>hr</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>planning</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>ref</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>retail</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>main</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>salary</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>scheduler</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>security</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>setlmnt</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>table</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>warehouse</artifactId>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.mg.docs</groupId>
+      <artifactId>workflow</artifactId>
+      <type>zip</type>
     </dependency>
 
     <dependency>
