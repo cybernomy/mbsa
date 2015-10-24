@@ -202,8 +202,7 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
         this.DateRelItem = DateRelItem;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ITEMKIND_ID")
+    @Column(name = "ITEMKIND_ID", columnDefinition="SMALLINT")
     public ItemKind getItemKind() {
         return this.ItemKind;
     }

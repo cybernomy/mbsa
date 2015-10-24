@@ -33,6 +33,7 @@ public class InvProduction extends com.mg.merp.core.model.AbstractEntity impleme
 
     private Double Production;
 
+    @Transient
     private MonthOfYear QMonth;
 
     @Transient

@@ -44,7 +44,7 @@ public class DIScanner {
 					throws FileNotFoundException, IOException {
 				if (file.toString().endsWith(".java")) {
 					try {
-						if(process(file, extractClass(file))){
+						if(process(file, Utils.extractClass(file))){
 							counter ++;
 							System.out.println(counter+"..."+file);
 						}
@@ -53,12 +53,6 @@ public class DIScanner {
 					}
 				}
 				return CONTINUE;
-			}
-
-			private CompilationUnit extractClass(Path file) throws FileNotFoundException, IOException, ParseException{
-				try (FileInputStream in = new FileInputStream(file.toString())) {
-					return JavaParser.parse(in);
-				}
 			}
 
 			private boolean process(Path file, CompilationUnit cu) throws IOException, ParseException {
@@ -82,9 +76,9 @@ public class DIScanner {
 						}
 
 						boolean addImport = false;
-						CompilationUnit target = extractClass(result);
+						CompilationUnit target = Utils.extractClass(result);
 						if (type.getAnnotations().size() > 0) {
-							TypeDeclaration tp = getType(target, type.getName());
+							TypeDeclaration tp = Utils.getType(target, type.getName());
 							tp.getAnnotations().addAll(type.getAnnotations());
 							addImport = true;
 						}
@@ -169,25 +163,12 @@ public class DIScanner {
 				return result;
 			}
 
-			private TypeDeclaration getType(CompilationUnit target, String name) {
-				boolean found = false;
-				TypeDeclaration t = null;
-
-				Iterator<TypeDeclaration> it = target.getTypes().iterator();
-				while (!found && it.hasNext()) {
-					t = it.next();
-					found = name.equals(t.getName());
-				}
-
-				return found?t:null;
-			}
-
 			private void addAnnotation(CompilationUnit target,
 					TypeDeclaration type, MethodDeclaration met,
 					SingleMemberAnnotationExpr ae) {
 				boolean found = false;
 
-				TypeDeclaration t = getType(target, type.getName());
+				TypeDeclaration t = Utils.getType(target, type.getName());
 				MethodDeclaration m = null;
 
 				found = t!=null;
