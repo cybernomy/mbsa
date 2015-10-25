@@ -18,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PREF_CALC_PERIOD")
+@DataItemName("PersonnelRef.CalcPeriod")
 public class CalcPeriod extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -47,6 +48,7 @@ public class CalcPeriod extends com.mg.merp.core.model.AbstractEntity implements
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -67,6 +69,7 @@ public class CalcPeriod extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "STAFFLIST_ID")
+    @DataItemName("PersonnelRef.CalcPeriod.StaffList")
     public StaffList getStaffList() {
         return this.StaffList;
     }
@@ -76,6 +79,7 @@ public class CalcPeriod extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "BEGINDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.CalcPeriod.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -85,6 +89,7 @@ public class CalcPeriod extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "ENDDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.CalcPeriod.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }
@@ -94,6 +99,7 @@ public class CalcPeriod extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "PNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.CalcPeriod.Name")
     public String getPName() {
         return this.PName;
     }

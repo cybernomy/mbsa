@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "WH_WAREHOUSE_TYPE")
+@DataItemName("Warehouse.WarehouseType")
 public class WarehouseType extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -45,6 +46,7 @@ public class WarehouseType extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -64,6 +66,7 @@ public class WarehouseType extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("Warehouse.Code")
     public String getCode() {
         return this.Code;
     }
@@ -73,6 +76,7 @@ public class WarehouseType extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Warehouse.Name")
     public String getName() {
         return this.Name;
     }

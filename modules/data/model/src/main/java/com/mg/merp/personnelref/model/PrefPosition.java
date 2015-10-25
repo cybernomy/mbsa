@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PREF_POSITION")
+@DataItemName("PersonnelRef.PrefPosition")
 public class PrefPosition extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -41,6 +42,7 @@ public class PrefPosition extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -60,6 +62,7 @@ public class PrefPosition extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.PrefPosition.Name")
     public String getName() {
         return this.Name;
     }

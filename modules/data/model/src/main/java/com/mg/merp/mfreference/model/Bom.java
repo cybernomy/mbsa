@@ -145,6 +145,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -165,6 +166,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SETUP_TIME_UM")
+    @DataItemName("MfReference.BOM.SetupTimeUM")
     public Measure getSetupTimeUM() {
         return this.SetupTimeUM;
     }
@@ -205,6 +207,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CELL_ID")
+    @DataItemName("MfReference.BOM.Cell")
     public Cell getCell() {
         return this.Cell;
     }
@@ -215,6 +218,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RUN_TIME_UM")
+    @DataItemName("MfReference.BOM.RunTimeUm")
     public Measure getRunTimeUM() {
         return this.RunTimeUM;
     }
@@ -245,6 +249,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEF_SRC_STOCK_ID")
+    @DataItemName("MfReference.BOM.DefSrcStock")
     public Warehouse getDefSrcStock() {
         return this.DefSrcStock;
     }
@@ -255,6 +260,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEF_DST_STOCK_ID")
+    @DataItemName("MfReference.BOM.DefDstStock")
     public Warehouse getDefDstStock() {
         return this.DefDstStock;
     }
@@ -265,6 +271,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEF_SRC_MOL_ID")
+    @DataItemName("MfReference.BOM.DefSrcMol")
     public Employees getDefSrcMol() {
         return this.DefSrcMol;
     }
@@ -275,6 +282,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEF_DST_MOL_ID")
+    @DataItemName("MfReference.BOM.DefDstMol")
     public Employees getDefDstMol() {
         return this.DefDstMol;
     }
@@ -284,6 +292,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "REVISION", columnDefinition = "INTEGER")
+    @DataItemName("MfReference.BOM.Revision")
     public Integer getRevision() {
         return this.Revision;
     }
@@ -293,6 +302,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "REVISION_DATETIME", columnDefinition = "TIMESTAMP")
+    @DataItemName("MfReference.BOM.RevisionDate")
     public Date getRevisionDateTime() {
         return this.RevisionDateTime;
     }
@@ -302,6 +312,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "ROLLUP_DATETIME", columnDefinition = "TIMESTAMP")
+    @DataItemName("MfReference.BOM.RollUpDateTime")
     public Date getRollUpDateTime() {
         return this.RollUpDateTime;
     }
@@ -311,6 +322,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "SETUP_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("MfReference.BOM.SetupTicks")
     public BigDecimal getSetupTicks() {
         return this.SetupTicks;
     }
@@ -320,6 +332,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "RUN_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("MfReference.BOM.RunTicks")
     public BigDecimal getRunTicks() {
         return this.RunTicks;
     }
@@ -339,6 +352,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "USE_MOVE_TIMES", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.BOM.UseMoveTimes")
     public boolean isUseMoveTimes() {
         return this.UseMoveTimes;
     }
@@ -348,6 +362,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "USE_QUEUE_TIMES", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.BOM.UseQueueTimes")
     public boolean isUseQueueTimes() {
         return this.UseQueueTimes;
     }
@@ -357,6 +372,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "USE_FINITE_CAPACITY", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.BOM.UseFiniteCapacity")
     public boolean isUseFiniteCapacity() {
         return this.UseFiniteCapacity;
     }
@@ -366,6 +382,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "PRIORITY", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.BOM.Priority")
     public BigDecimal getPriority() {
         return this.Priority;
     }
@@ -375,6 +392,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "PRIORITY_FREEZE_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.BOM.PriorityFreezeFlag")
     public boolean isPriorityFreezeFlag() {
         return this.PriorityFreezeFlag;
     }
@@ -384,6 +402,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "PCS_PER_HR_CELL", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("MfReference.BOM.PcsPerHrCell")
     public BigDecimal getPcsPerHrCell() {
         return this.PcsPerHrCell;
     }
@@ -393,6 +412,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "APPROVED_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.BOM.ApprovedFlag")
     public boolean isApprovedFlag() {
         return this.ApprovedFlag;
     }
@@ -402,6 +422,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "BOM_VERSION_REQUIRED", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.BomVersionRequired")
     public boolean isBomVersionRequired() {
         return this.BomVersionRequired;
     }
@@ -411,6 +432,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "CREATE_JOB_APPROVED", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.BOM.CreateJobApproved")
     public boolean isCreateJobApproved() {
         return this.CreateJobApproved;
     }
@@ -420,6 +442,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("MfReference.BOM.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -429,6 +452,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "MIN_LOT_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("MfReference.BOM.MinLotQty")
     public BigDecimal getMinLotQty() {
         return this.MinLotQty;
     }
@@ -438,6 +462,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "MAX_LOT_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("MfReference.BOM.MaxLotQty")
     public BigDecimal getMaxLotQty() {
         return this.MaxLotQty;
     }
@@ -447,6 +472,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "LOT_INCREMENT_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("MfReference.BOM.LotIncrementQty")
     public BigDecimal getLotIncrementQty() {
         return this.LotIncrementQty;
     }
@@ -456,6 +482,7 @@ public class Bom extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "PLANNING_LOT_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("MfReference.BOM.PlanningLotQty")
     public BigDecimal getPlanningLotQty() {
         return this.PlanningLotQty;
     }

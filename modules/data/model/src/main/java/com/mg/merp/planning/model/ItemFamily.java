@@ -61,6 +61,7 @@ public class ItemFamily extends com.mg.merp.core.model.AbstractEntity implements
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -81,6 +82,7 @@ public class ItemFamily extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CHILD_GENERIC_ITEM", nullable = false)
+    @DataItemName("Planning.ItemFamily.ChildGenericItem")
     public GenericItem getChildGenericItem() {
         return this.ChildGenericItem;
     }
@@ -101,6 +103,7 @@ public class ItemFamily extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARENT_GENERIC_ITEM", nullable = false)
+    @DataItemName("Planning.ItemFamily.ParentGenericItem")
     public GenericItem getParentGenericItem() {
         return this.ParentGenericItem;
     }
@@ -110,6 +113,7 @@ public class ItemFamily extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "EFF_ON_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Planning.ItemFamily.EffOnDate")
     public Date getEffOnDate() {
         return this.EffOnDate;
     }
@@ -119,6 +123,7 @@ public class ItemFamily extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "EFF_OFF_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Planning.ItemFamily.EffOffDate")
     public Date getEffOffDate() {
         return this.EffOffDate;
     }
@@ -128,6 +133,7 @@ public class ItemFamily extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "ALLOCATION_PERCENT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Planning.ItemFamily.AllocationPercent")
     public BigDecimal getAllocationPercent() {
         return this.AllocationPercent;
     }

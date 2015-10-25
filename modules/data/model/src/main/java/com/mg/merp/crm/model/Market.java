@@ -20,6 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "CRM_MARKET")
+@DataItemName("CRM.Market")
 public class Market extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -49,6 +50,7 @@ public class Market extends com.mg.merp.core.model.AbstractEntity implements jav
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -68,6 +70,7 @@ public class Market extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
+    @DataItemName("CRM.Code")
     public String getCode() {
         return this.Code;
     }
@@ -77,6 +80,7 @@ public class Market extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("CRM.Name")
     public String getName() {
         return this.Name;
     }
@@ -86,6 +90,7 @@ public class Market extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "WEIGHT", columnDefinition = "INTEGER")
+    @DataItemName("CRM.Market.Weight")
     public Integer getWeight() {
         return this.Weight;
     }

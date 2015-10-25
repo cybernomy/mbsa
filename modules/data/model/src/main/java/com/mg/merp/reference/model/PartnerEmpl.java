@@ -77,6 +77,7 @@ public class PartnerEmpl extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -116,6 +117,7 @@ public class PartnerEmpl extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Reference.Code")
     public String getCode() {
         return this.Code;
     }
@@ -206,6 +208,7 @@ public class PartnerEmpl extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "OFFICE", columnDefinition = "VARCHAR", length = 100)
+    @DataItemName("Reference.Partner.Empl.Office")
     public String getOffice() {
         return this.Office;
     }

@@ -21,6 +21,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PREF_WORK_SCHEDULE")
+@DataItemName("PersonnelRef.WorkSchedule")
 public class WorkSchedule extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -60,6 +61,7 @@ public class WorkSchedule extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -80,6 +82,7 @@ public class WorkSchedule extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LEAVE_SCHEDULE_ID")
+    @DataItemName("PersonnelRef.WorkSchedule.LeaveSchedule")
     public WorkSchedule getLeaveSchedule() {
         return this.LeaveSchedule;
     }
@@ -89,6 +92,7 @@ public class WorkSchedule extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SCODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("PersonnelRef.WorkSchedule.SCode")
     public String getSCode() {
         return this.SCode;
     }
@@ -98,6 +102,7 @@ public class WorkSchedule extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.WorkSchedule.SName")
     public String getSName() {
         return this.SName;
     }
@@ -107,6 +112,7 @@ public class WorkSchedule extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "BEGINDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.WorkSchedule.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -116,6 +122,7 @@ public class WorkSchedule extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "ENDDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.WorkSchedule.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }

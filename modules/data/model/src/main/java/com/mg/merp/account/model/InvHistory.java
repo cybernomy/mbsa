@@ -86,6 +86,7 @@ public class InvHistory extends com.mg.merp.core.model.AbstractEntity implements
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -155,6 +156,7 @@ public class InvHistory extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "DELTA_BALCOST", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.InvHistory.DeltaBalCost")
     public BigDecimal getDeltaBalCost() {
         return this.DeltaBalCost;
     }
@@ -164,6 +166,7 @@ public class InvHistory extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "DELTA_DEPRVAL", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.InvHistory.DeltaDeprVal")
     public BigDecimal getDeltaDeprVal() {
         return this.DeltaDeprVal;
     }
@@ -173,6 +176,7 @@ public class InvHistory extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "REVAL_FACTOR", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Account.InvHistory.RevalFactor")
     public BigDecimal getRevalFactor() {
         return this.RevalFactor;
     }
@@ -182,6 +186,7 @@ public class InvHistory extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "REVAL_SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.InvHistory.RevalSum")
     public BigDecimal getRevalSum() {
         return this.RevalSum;
     }
@@ -191,6 +196,7 @@ public class InvHistory extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "ACT_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Account.InvHistory.ActDate")
     public Date getActDate() {
         return this.ActDate;
     }

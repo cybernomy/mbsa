@@ -63,6 +63,7 @@ public class LanguageKnowledge extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.LangKnowledge.Name")
     public String getName() {
         return this.Name;
     }
@@ -72,6 +73,7 @@ public class LanguageKnowledge extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "OKIN", columnDefinition = "CHAR", length = 5)
+    @DataItemName("PersonnelRef.LangKnowledge.Okin")
     public String getOkin() {
         return this.Okin;
     }

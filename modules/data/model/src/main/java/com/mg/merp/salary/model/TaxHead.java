@@ -51,6 +51,7 @@ public class TaxHead extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -70,6 +71,7 @@ public class TaxHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Salary.Name")
     public String getTName() {
         return this.TName;
     }
@@ -79,6 +81,7 @@ public class TaxHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TCODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("Salary.BigCode")
     public String getTCode() {
         return this.TCode;
     }

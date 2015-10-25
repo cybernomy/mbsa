@@ -151,6 +151,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -191,6 +192,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MOLDEST")
+    @DataItemName("Document.DstMol")
     public Contractor getDstMol() {
         return this.DstMol;
     }
@@ -201,6 +203,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MOLSRC")
+    @DataItemName("Document.SrcMol")
     public Contractor getSrcMol() {
         return this.SrcMol;
     }
@@ -231,6 +234,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE2_ID")
+    @DataItemName("Document.DocSpec.Measure2")
     public Measure getMeasure2() {
         return this.Measure2;
     }
@@ -251,6 +255,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "STOCKDEST")
+    @DataItemName("Document.DstStock")
     public Contractor getDstStock() {
         return this.DstStock;
     }
@@ -261,6 +266,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE1_ID")
+    @DataItemName("Document.DocSpec.Measure1")
     public Measure getMeasure1() {
         return this.Measure1;
     }
@@ -271,6 +277,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "STOCKSRC")
+    @DataItemName("Document.StockSrc")
     public Contractor getSrcStock() {
         return this.SrcStock;
     }
@@ -280,6 +287,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Document.DocSpec.Quantity1")
     public BigDecimal getQuantity() {
         return this.Quantity;
     }
@@ -289,6 +297,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PRICE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Document.DocSpec.Price")
     public BigDecimal getPrice() {
         return this.Price;
     }
@@ -298,6 +307,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Document.DocSpec.Summa")
     public BigDecimal getSumma() {
         return this.Summa;
     }
@@ -307,6 +317,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PRICE1", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Document.DocSpec.Price1")
     public BigDecimal getPrice1() {
         return this.Price1;
     }
@@ -316,6 +327,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SUMMA1", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Document.DocSpec.Summa1")
     public BigDecimal getSumma1() {
         return this.Summa1;
     }
@@ -325,6 +337,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "WEIGHT", columnDefinition = "NUMERIC", precision = 15, scale = 3)
+    @DataItemName("Document.Weight")
     public BigDecimal getWeight() {
         return this.Weight;
     }
@@ -334,6 +347,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "VOLUME", columnDefinition = "NUMERIC", precision = 15, scale = 3)
+    @DataItemName("Document.Volume")
     public BigDecimal getVolume() {
         return this.Volume;
     }
@@ -343,6 +357,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "BESTBEFORE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Document.DocSpec.BestBefore")
     public Date getBestBefore() {
         return this.BestBefore;
     }
@@ -352,6 +367,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SHELFLIFE", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Document.DocSpec.Shelflife")
     public BigDecimal getShelfLife() {
         return this.ShelfLife;
     }
@@ -362,6 +378,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @Column(name = "SHELFLIFE_MEAS", nullable = false)
     @Enumerated(EnumType.ORDINAL)
+    @DataItemName("Document.DocSpec.ShelfLifeMeas")
     public TimePeriodKind getShelfLifeMeas() {
         return this.ShelfLifeMeas;
     }
@@ -371,6 +388,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PRODUCTIONDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Document.DocSpec.ProductionDate")
     public Date getProductionDate() {
         return this.ProductionDate;
     }
@@ -380,6 +398,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "QUANTITY2", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Document.DocSpec.Quantity2")
     public BigDecimal getQuantity2() {
         return this.Quantity2;
     }
@@ -389,6 +408,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Document.DocSpec.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -399,6 +419,7 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_ID")
+    @DataItemName("Document.DocSpec.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -418,6 +439,8 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CUSTOMS_DECLARATION_ID")
+    //$NON-NLS-1$
+    @DataItemName("Reference.CD")
     public CustomsDeclaration getCustomsDeclaration() {
         return this.CustomsDeclaration;
     }
@@ -428,6 +451,8 @@ public class DocSpec extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COUNTRY_OF_ORIGIN_ID")
+    //$NON-NLS-1$
+    @DataItemName("Reference.CountryOfOrigin")
     public Country getCountryOfOrigin() {
         return this.CountryOfOrigin;
     }

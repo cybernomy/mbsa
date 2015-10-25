@@ -84,6 +84,7 @@ public class TariffScale extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FIRST_CLASS_ALG_ID")
+    @DataItemName("PersonnelRef.TariffScale.FirstClassAlg")
     public Repository getFirstClassAlg() {
         return this.FirstClassAlg;
     }
@@ -93,6 +94,7 @@ public class TariffScale extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "SCODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("PersonnelRef.TariffScale.Code")
     public String getSCode() {
         return this.SCode;
     }
@@ -102,6 +104,7 @@ public class TariffScale extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "SNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.TariffScale.Name")
     public String getSName() {
         return this.SName;
     }
@@ -112,6 +115,7 @@ public class TariffScale extends com.mg.merp.core.model.AbstractEntity implement
 
     @Column(name = "STYPE")
     @Enumerated(EnumType.ORDINAL)
+    @DataItemName("Reference.TariffingScale.TariffingScaleType")
     public TariffingScaleType getSType() {
         return this.SType;
     }
@@ -121,6 +125,7 @@ public class TariffScale extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "BEGINDATE", nullable = false, columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.TariffScale.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }

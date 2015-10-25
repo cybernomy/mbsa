@@ -70,6 +70,7 @@ public class PersonnelService extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -109,6 +110,7 @@ public class PersonnelService extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "BEGINDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.Personnel.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -118,6 +120,7 @@ public class PersonnelService extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "ENDDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.Personnel.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }
@@ -127,6 +130,7 @@ public class PersonnelService extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "LENGTHSERVICE", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("PersonnelRef.Personnel.LengthService")
     public BigDecimal getLengthService() {
         return this.LengthService;
     }
@@ -136,6 +140,7 @@ public class PersonnelService extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("PersonnelRef.Personnel.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -145,6 +150,7 @@ public class PersonnelService extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "IS_GOINGON", columnDefinition = "SMALLINT")
+    @DataItemName("PersonnelRef.Personnel.IsGoingOn")
     public boolean isGoingOn() {
         return this.IsGoingOn;
     }
@@ -154,6 +160,7 @@ public class PersonnelService extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "RATIO", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("PersonnelRef.Personnel.Ratio")
     public BigDecimal getRatio() {
         return this.Ratio;
     }

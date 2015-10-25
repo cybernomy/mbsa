@@ -120,6 +120,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -130,6 +131,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CATALOG_ID")
+    @SearchHelpName("com.mg.merp.document.support.ui.CatalogByDocSpecSearchHelp")
     public Catalog getCatalog() {
         return this.Catalog;
     }
@@ -170,6 +172,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE2_ID")
+    @DataItemName("Document.DocSpec.Measure2")
     public Measure getMeasure2() {
         return this.Measure2;
     }
@@ -200,6 +203,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE1_ID")
+    @DataItemName("Document.DocSpec.Measure1")
     public Measure getMeasure1() {
         return this.Measure1;
     }
@@ -229,6 +233,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Document.DocSpec.Quantity1")
     public BigDecimal getQuantity() {
         return this.Quantity;
     }
@@ -238,6 +243,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "PRICE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Document.DocSpec.Price")
     public BigDecimal getPrice() {
         return this.Price;
     }
@@ -247,6 +253,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Document.DocSpec.Summa")
     public BigDecimal getSumma() {
         return this.Summa;
     }
@@ -256,6 +263,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "PRICE1", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Document.DocSpec.Price1")
     public BigDecimal getPrice1() {
         return this.Price1;
     }
@@ -265,6 +273,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUMMA1", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Document.DocSpec.Summa1")
     public BigDecimal getSumma1() {
         return this.Summa1;
     }
@@ -274,6 +283,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "WEIGHT", columnDefinition = "NUMERIC", precision = 15, scale = 3)
+    @DataItemName("Document.Weight")
     public BigDecimal getWeight() {
         return this.Weight;
     }
@@ -283,6 +293,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "VOLUME", columnDefinition = "NUMERIC", precision = 15, scale = 3)
+    @DataItemName("Document.Volume")
     public BigDecimal getVolume() {
         return this.Volume;
     }
@@ -292,6 +303,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "BESTBEFORE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Document.DocSpec.BestBefore")
     public Date getBestBefore() {
         return this.BestBefore;
     }
@@ -311,6 +323,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "PRODUCTIONDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Document.DocSpec.ProductionDate")
     public Date getProductionDate() {
         return this.ProductionDate;
     }
@@ -320,6 +333,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SHELFLIFE", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Document.DocSpec.Shelflife")
     public BigDecimal getShelfLife() {
         return this.ShelfLife;
     }
@@ -330,6 +344,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @Column(name = "SHELFLIFE_MEAS", nullable = false)
     @Enumerated(EnumType.ORDINAL)
+    @DataItemName("Document.DocSpec.ShelfLifeMeas")
     public TimePeriodKind getShelfLifeMeas() {
         return this.ShelfLifeMeas;
     }
@@ -339,6 +354,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "QUANTITY2", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Document.DocSpec.Quantity2")
     public BigDecimal getQuantity2() {
         return this.Quantity2;
     }
@@ -348,6 +364,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Document.DocSpec.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -358,6 +375,7 @@ public class DocSpecModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_ID")
+    @DataItemName("Document.DocSpec.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }

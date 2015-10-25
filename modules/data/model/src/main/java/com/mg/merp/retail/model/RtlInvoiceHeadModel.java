@@ -95,6 +95,7 @@ public class RtlInvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "EXTRADISCOUNT_ID")
+    @DataItemName("Retail.InvHead.ExtraDiscount")
     public ExtraDiscount getExtraDiscount() {
         return this.ExtraDiscount;
     }
@@ -105,6 +106,7 @@ public class RtlInvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONSIGNEE")
+    @DataItemName("Retail.Consignee")
     public Contractor getConsignee() {
         return this.Consignee;
     }
@@ -115,6 +117,7 @@ public class RtlInvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SHIPPER")
+    @DataItemName("Retail.Shipper")
     public Contractor getShipper() {
         return this.Shipper;
     }
@@ -125,6 +128,7 @@ public class RtlInvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DISCOUNTCARD_ID")
+    @DataItemName("Retail.InvHead.DiscountCard")
     public Card getDiscountCard() {
         return this.DiscountCard;
     }
@@ -135,6 +139,7 @@ public class RtlInvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESPONSIBLE")
+    @DataItemName("Retail.Responsible")
     public Contractor getResponsible() {
         return this.Responsible;
     }
@@ -154,6 +159,7 @@ public class RtlInvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel
     }
 
     @Column(name = "SUMCUR_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Retail.InvHead.SumCurDiscount")
     public BigDecimal getSumCurDiscount() {
         return this.SumCurDiscount;
     }
@@ -172,6 +178,7 @@ public class RtlInvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel
     }
 
     @Column(name = "DISCOUNT_ON_DOC", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Retail.InvHead.DiscountOnDoc")
     public BigDecimal getDiscountOnDoc() {
         return this.DiscountOnDoc;
     }
@@ -199,6 +206,7 @@ public class RtlInvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel
     }
 
     @Column(name = "PLANPAYDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Retail.PlanPayDate")
     public Date getPlanPayDate() {
         return this.PlanPayDate;
     }
@@ -208,6 +216,7 @@ public class RtlInvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel
     }
 
     @Column(name = "PAYDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Retail.PayDate")
     public Date getPayDate() {
         return this.PayDate;
     }
@@ -217,6 +226,7 @@ public class RtlInvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel
     }
 
     @Column(name = "PAYSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Retail.PaySum")
     public BigDecimal getPaySum() {
         return this.PaySum;
     }
@@ -226,6 +236,7 @@ public class RtlInvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel
     }
 
     @Column(name = "BASE_DISCOUNT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Retail.InvHead.BaseDiscount")
     public BigDecimal getBaseDiscount() {
         return this.BaseDiscount;
     }
@@ -235,6 +246,7 @@ public class RtlInvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel
     }
 
     @Column(name = "PLANSHIPDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Retail.PlanShipDate")
     public Date getPlanShipDate() {
         return this.PlanShipDate;
     }
@@ -244,6 +256,7 @@ public class RtlInvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel
     }
 
     @Column(name = "APPLY_DIS_KIND", columnDefinition = "INTEGER")
+    @DataItemName("Retail.ApplyDisKind")
     public boolean isApplyDisKind() {
         return this.ApplyDisKind;
     }

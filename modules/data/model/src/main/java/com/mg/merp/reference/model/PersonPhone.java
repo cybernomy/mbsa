@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_PERSON_PHONE")
+@DataItemName("Reference.PersonPhone")
 public class PersonPhone extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -46,6 +47,7 @@ public class PersonPhone extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -85,6 +87,7 @@ public class PersonPhone extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "PHONE", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.Person.Phone.Phone")
     public String getPhone() {
         return this.Phone;
     }
@@ -94,6 +97,7 @@ public class PersonPhone extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "AREA_CODE", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.Person.Phone.AreaCode")
     public String getAreaCode() {
         return this.AreaCode;
     }

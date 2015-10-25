@@ -98,6 +98,7 @@ public class RptMain extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -128,6 +129,7 @@ public class RptMain extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("Reference.BigCode")
     public String getCode() {
         return this.Code;
     }
@@ -137,6 +139,7 @@ public class RptMain extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "RPTNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.Name")
     public String getRptName() {
         return this.RptName;
     }
@@ -164,6 +167,7 @@ public class RptMain extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Report.Comment")
     public String getComment() {
         return this.Comment;
     }

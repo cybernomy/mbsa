@@ -25,6 +25,7 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "REF_NATURAL_PERSON")
+@DataItemName("Reference.NaturalPerson")
 public class NaturalPerson extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -101,6 +102,7 @@ public class NaturalPerson extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -131,6 +133,7 @@ public class NaturalPerson extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER_ID")
+    @DataItemName("Reference.Person.User")
     public SecUser getUsers() {
         return this.Users;
     }
@@ -140,6 +143,7 @@ public class NaturalPerson extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "ACT_DATE", nullable = false, columnDefinition = "TIMESTAMP")
+    @DataItemName("Reference.Person.ActDate")
     public Date getActDate() {
         return this.ActDate;
     }
@@ -149,6 +153,7 @@ public class NaturalPerson extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "SURNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.NaturalPerson.Surname")
     public String getSurname() {
         return this.Surname;
     }
@@ -158,6 +163,7 @@ public class NaturalPerson extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.NaturalPerson.Name")
     public String getName() {
         return this.Name;
     }
@@ -167,6 +173,7 @@ public class NaturalPerson extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "PATRONYMIC", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.NaturalPerson.Patronymic")
     public String getPatronymic() {
         return this.Patronymic;
     }
@@ -176,6 +183,7 @@ public class NaturalPerson extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "BORNDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Reference.NaturalPerson.BornDate")
     public Date getBornDate() {
         return this.BornDate;
     }
@@ -195,6 +203,7 @@ public class NaturalPerson extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "INN", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Reference.Person.INN")
     public String getInn() {
         return this.Inn;
     }
@@ -204,6 +213,7 @@ public class NaturalPerson extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "ADDITIONAL_INFO", columnDefinition = "VARCHAR", length = 2048)
+    @DataItemName("Reference.Person.Info")
     public String getAdditionalInfo() {
         return this.AdditionalInfo;
     }
@@ -213,6 +223,7 @@ public class NaturalPerson extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "CODE", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.Code")
     public String getCode() {
         return this.Code;
     }

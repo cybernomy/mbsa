@@ -84,6 +84,7 @@ public class RemnAcc extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -123,6 +124,7 @@ public class RemnAcc extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "REMNBEGINNATDB", nullable = false, columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.RemnAcc.RemnBeginNatDb")
     public BigDecimal getRemnBeginNatDb() {
         return this.RemnBeginNatDb;
     }
@@ -132,6 +134,7 @@ public class RemnAcc extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "REMNBEGINNATKT", nullable = false, columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.RemnAcc.RemnBeginNatKt")
     public BigDecimal getRemnBeginNatKt() {
         return this.RemnBeginNatKt;
     }
@@ -141,6 +144,7 @@ public class RemnAcc extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "REMNBEGINCURDB", nullable = false, columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.RemnAcc.RemnBeginCurDb")
     public BigDecimal getRemnBeginCurDb() {
         return this.RemnBeginCurDb;
     }
@@ -150,6 +154,7 @@ public class RemnAcc extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "REMNBEGINCURKT", nullable = false, columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.RemnAcc.RemnBeginCurKt")
     public BigDecimal getRemnBeginCurKt() {
         return this.RemnBeginCurKt;
     }
@@ -159,6 +164,7 @@ public class RemnAcc extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "RemnEndNatDb", insertable = false, updatable = false)
+    @DataItemName("Account.RemnAcc.RemnEndNatDb")
     public BigDecimal getRemnEndNatDb() {
         return this.RemnEndNatDb;
     }
@@ -168,6 +174,7 @@ public class RemnAcc extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "RemnEndNatKt", insertable = false, updatable = false)
+    @DataItemName("Account.RemnAcc.RemnEndNatKt")
     public BigDecimal getRemnEndNatKt() {
         return this.RemnEndNatKt;
     }
@@ -177,6 +184,7 @@ public class RemnAcc extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "RemnEndCurKt", insertable = false, updatable = false)
+    @DataItemName("Account.RemnAcc.RemnEndCurKt")
     public BigDecimal getRemnEndCurKt() {
         return this.RemnEndCurKt;
     }
@@ -186,6 +194,7 @@ public class RemnAcc extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "RemnEndCurDb", insertable = false, updatable = false)
+    @DataItemName("Account.RemnAcc.RemnEndCurDb")
     public BigDecimal getRemnEndCurDb() {
         return this.RemnEndCurDb;
     }
@@ -195,6 +204,7 @@ public class RemnAcc extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TurnNatKt", insertable = false, updatable = false)
+    @DataItemName("Account.RemnAcc.TurnNatKt")
     public BigDecimal getTurnNatKt() {
         return this.TurnNatKt;
     }
@@ -204,6 +214,7 @@ public class RemnAcc extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TurnNatDb", insertable = false, updatable = false)
+    @DataItemName("Account.RemnAcc.TurnNatDb")
     public BigDecimal getTurnNatDb() {
         return this.TurnNatDb;
     }
@@ -213,6 +224,7 @@ public class RemnAcc extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TurnCurDb", insertable = false, updatable = false)
+    @DataItemName("Account.RemnAcc.TurnCurDb")
     public BigDecimal getTurnCurDb() {
         return this.TurnCurDb;
     }
@@ -222,6 +234,7 @@ public class RemnAcc extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TurnCurKt", insertable = false, updatable = false)
+    @DataItemName("Account.RemnAcc.TurnCurKt")
     public BigDecimal getTurnCurKt() {
         return this.TurnCurKt;
     }

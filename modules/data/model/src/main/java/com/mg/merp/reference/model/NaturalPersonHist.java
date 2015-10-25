@@ -18,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_NATURAL_PERSON_HIST")
+@DataItemName("Reference.NaturalPersonHist")
 public class NaturalPersonHist extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -53,6 +54,7 @@ public class NaturalPersonHist extends com.mg.merp.core.model.AbstractEntity imp
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -82,6 +84,7 @@ public class NaturalPersonHist extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "ACT_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Reference.PersonHist.ActDate")
     public Date getActDate() {
         return this.ActDate;
     }
@@ -91,6 +94,7 @@ public class NaturalPersonHist extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "SURNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.NaturalPerson.Surname")
     public String getSurname() {
         return this.Surname;
     }
@@ -100,6 +104,7 @@ public class NaturalPersonHist extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.NaturalPerson.Name")
     public String getName() {
         return this.Name;
     }
@@ -109,6 +114,7 @@ public class NaturalPersonHist extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "PATRONYMIC", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.NaturalPerson.Patronymic")
     public String getPatronymic() {
         return this.Patronymic;
     }
@@ -118,6 +124,7 @@ public class NaturalPersonHist extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "INN", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Reference.PersonHist.INN")
     public String getInn() {
         return this.Inn;
     }

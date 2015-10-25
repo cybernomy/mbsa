@@ -65,6 +65,7 @@ public class PersonnelSkillRaising extends com.mg.merp.core.model.AbstractEntity
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -85,6 +86,7 @@ public class PersonnelSkillRaising extends com.mg.merp.core.model.AbstractEntity
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SKILL_RAISING_KIND_ID", nullable = false)
+    @DataItemName("PersonnelRef.Personnel.SkillRaising")
     public SkillRaisingKind getSkillRaisingKind() {
         return this.SkillRaisingKind;
     }
@@ -115,6 +117,7 @@ public class PersonnelSkillRaising extends com.mg.merp.core.model.AbstractEntity
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CERTIFICATE_DOCUMENT_ID")
+    @DataItemName("PersonnelRef.Personnel.OriginalDocument")
     public OriginalDocument getCertificateDocument() {
         return this.CertificateDocument;
     }
@@ -124,6 +127,7 @@ public class PersonnelSkillRaising extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "STUDY_BEGINDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.Personnel.StudyBeginDate")
     public Date getStudyBeginDate() {
         return this.StudyBeginDate;
     }
@@ -133,6 +137,7 @@ public class PersonnelSkillRaising extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "STUDY_ENDDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.Personnel.StudyEndDate")
     public Date getStudyEndDate() {
         return this.StudyEndDate;
     }
@@ -142,6 +147,7 @@ public class PersonnelSkillRaising extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "INSTITUTION_NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.Personnel.SkillRaising.InstitutionName")
     public String getInstitutionName() {
         return this.InstitutionName;
     }
@@ -151,6 +157,7 @@ public class PersonnelSkillRaising extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "INSTITUTION_ADDRESS", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("PersonnelRef.Personnel.InstitutionAddress")
     public String getInstitutionAddress() {
         return this.InstitutionAddress;
     }

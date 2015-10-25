@@ -85,6 +85,7 @@ public class StockCard extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -106,6 +107,7 @@ public class StockCard extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CATALOG_ID")
+    @DataItemName("Warehouse.StockCard.Catalog")
     public Catalog getCatalog() {
         return this.Catalog;
     }
@@ -136,6 +138,7 @@ public class StockCard extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MOL_ID")
+    @DataItemName("Warehouse.StockCard.Mol")
     public Employees getMol() {
         return this.Mol;
     }
@@ -145,6 +148,7 @@ public class StockCard extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "CARDNUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Warehouse.StockCard.CardNumber")
     public String getCardNumber() {
         return this.CardNumber;
     }
@@ -154,6 +158,7 @@ public class StockCard extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "SUPPLYNORM", columnDefinition = "NUMERIC", precision = 15, scale = 3)
+    @DataItemName("Warehouse.StockCard.SupplyNorm")
     public BigDecimal getSupplyNorm() {
         return this.SupplyNorm;
     }
@@ -163,6 +168,7 @@ public class StockCard extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "RESERVE", columnDefinition = "NUMERIC", precision = 15, scale = 3)
+    @DataItemName("Warehouse.StockCard.Reserve")
     public BigDecimal getReserve() {
         return this.Reserve;
     }
@@ -172,6 +178,7 @@ public class StockCard extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Warehouse.StockCard.Quantity")
     public BigDecimal getQuantity() {
         return this.Quantity;
     }
@@ -181,6 +188,7 @@ public class StockCard extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PLAN_IN", columnDefinition = "NUMERIC", precision = 15, scale = 3)
+    @DataItemName("Warehouse.StockCard.PlanIn")
     public BigDecimal getPlanIn() {
         return this.PlanIn;
     }
@@ -190,6 +198,7 @@ public class StockCard extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PLAN_OUT", columnDefinition = "NUMERIC", precision = 15, scale = 3)
+    @DataItemName("Warehouse.StockCard.PlanOut")
     public BigDecimal getPlanOut() {
         return this.PlanOut;
     }
@@ -208,6 +217,7 @@ public class StockCard extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "RESERVE2", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Warehouse.StockCard.Reserve2")
     public BigDecimal getReserve2() {
         return this.Reserve2;
     }
@@ -217,6 +227,7 @@ public class StockCard extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "QUANTITY2", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Warehouse.StockCard.Quantity2")
     public BigDecimal getQuantity2() {
         return this.Quantity2;
     }
@@ -226,6 +237,7 @@ public class StockCard extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PLAN_IN2", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Warehouse.StockCard.PlanIn2")
     public BigDecimal getPlanIn2() {
         return this.PlanIn2;
     }
@@ -235,6 +247,7 @@ public class StockCard extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PLAN_OUT2", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Warehouse.StockCard.PlanOut2")
     public BigDecimal getPlanOut2() {
         return this.PlanOut2;
     }

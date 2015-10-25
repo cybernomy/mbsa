@@ -46,6 +46,7 @@ public class Abbreviation extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -65,6 +66,7 @@ public class Abbreviation extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "ALEVEL", columnDefinition = "INTEGER")
+    @DataItemName("PersonnelRef.Abbreviation.ALevel")
     public Integer getALevel() {
         return this.ALevel;
     }
@@ -74,6 +76,7 @@ public class Abbreviation extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SCNAME", columnDefinition = "CHAR", length = 11)
+    @DataItemName("PersonnelRef.Abbreviation.ScName")
     public String getScName() {
         return this.ScName;
     }
@@ -83,6 +86,7 @@ public class Abbreviation extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SOCRNAME", columnDefinition = "VARCHAR", length = 30)
+    @DataItemName("PersonnelRef.Abbreviation.SocrName")
     public String getSocrName() {
         return this.SocrName;
     }

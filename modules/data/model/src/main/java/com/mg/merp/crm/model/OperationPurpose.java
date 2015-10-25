@@ -20,6 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "CRM_OPERATION_PURPOSE")
+@DataItemName("CRM.OperationPurpose")
 public class OperationPurpose extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -46,6 +47,7 @@ public class OperationPurpose extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -65,6 +67,7 @@ public class OperationPurpose extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
+    @DataItemName("CRM.Code")
     public String getCode() {
         return this.Code;
     }
@@ -74,6 +77,7 @@ public class OperationPurpose extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("CRM.Name")
     public String getName() {
         return this.Name;
     }

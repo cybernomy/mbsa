@@ -22,6 +22,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SAL_PERSONAL_ACCOUNT")
+@DataItemName("Salary.PersonalAccount")
 public class PersonalAccount extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -57,6 +58,7 @@ public class PersonalAccount extends com.mg.merp.core.model.AbstractEntity imple
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -67,6 +69,7 @@ public class PersonalAccount extends com.mg.merp.core.model.AbstractEntity imple
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PERSONNEL_ID")
+    @DataItemName("Salary.PersonAcc.Personnel")
     public Personnel getPersonnel() {
         return this.Personnel;
     }
@@ -86,6 +89,7 @@ public class PersonalAccount extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "ANUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Salary.PersonAcc.ANumber")
     public String getANumber() {
         return this.ANumber;
     }
@@ -95,6 +99,7 @@ public class PersonalAccount extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "BEGINDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Salary.PersonAcc.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -104,6 +109,7 @@ public class PersonalAccount extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "ENDDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Salary.PersonAcc.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }

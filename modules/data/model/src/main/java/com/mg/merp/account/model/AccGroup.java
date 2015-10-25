@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ACC_ACCGROUP")
+@DataItemName("Account.AccGroup")
 public class AccGroup extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -53,6 +54,7 @@ public class AccGroup extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -82,6 +84,7 @@ public class AccGroup extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "GCODE", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Account.AccGroup.GCode")
     public String getGCode() {
         return this.GCode;
     }
@@ -91,6 +94,7 @@ public class AccGroup extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "GNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Account.AccGroup.GName")
     public String getGName() {
         return this.GName;
     }
@@ -100,6 +104,7 @@ public class AccGroup extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "MIN_USAGEPERIOD", columnDefinition = "INTEGER")
+    @DataItemName("Account.AccGroup.MinUsagePeriod")
     public Integer getMinUsagePeriod() {
         return this.MinUsagePeriod;
     }
@@ -109,6 +114,7 @@ public class AccGroup extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "MAX_USAGEPERIOD", columnDefinition = "INTEGER")
+    @DataItemName("Account.AccGroup.MaxUsagePeriod")
     public Integer getMaxUsagePeriod() {
         return this.MaxUsagePeriod;
     }

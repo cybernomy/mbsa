@@ -47,6 +47,7 @@ public class EducationDegree extends com.mg.merp.core.model.AbstractEntity imple
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -66,6 +67,7 @@ public class EducationDegree extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("PersonnelRef.EducationDegree.Code")
     public String getCode() {
         return this.Code;
     }
@@ -75,6 +77,7 @@ public class EducationDegree extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.EducationDegree.Name")
     public String getName() {
         return this.Name;
     }
@@ -84,6 +87,7 @@ public class EducationDegree extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "OKIN", columnDefinition = "CHAR", length = 5)
+    @DataItemName("PersonnelRef.EducationDegree.Okin")
     public String getOkin() {
         return this.Okin;
     }

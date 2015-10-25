@@ -73,6 +73,7 @@ public class DocumentSpecTax extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "SUMM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Document.DocumentSpecTax.Sum")
     public BigDecimal getSumElement() {
         return this.SumElement;
     }
@@ -82,6 +83,7 @@ public class DocumentSpecTax extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "PRICE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Document.DocumentSpecTax.Price")
     public BigDecimal getPriceElement() {
         return this.PriceElement;
     }

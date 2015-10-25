@@ -99,6 +99,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -119,6 +121,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLPLAN4_ID")
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.AnlPlan4")
     public AnlPlan getAnlPlan4() {
         return this.AnlPlan4;
     }
@@ -129,6 +133,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLPLAN1_ID")
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.AnlPlan1")
     public AnlPlan getAnlPlan1() {
         return this.AnlPlan1;
     }
@@ -149,6 +155,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLPLAN2_ID")
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.AnlPlan2")
     public AnlPlan getAnlPlan2() {
         return this.AnlPlan2;
     }
@@ -159,6 +167,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLPLAN3_ID")
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.AnlPlan3")
     public AnlPlan getAnlPlan3() {
         return this.AnlPlan3;
     }
@@ -169,6 +179,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLPLAN5_ID")
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.AnlPlan5")
     public AnlPlan getAnlPlan5() {
         return this.AnlPlan5;
     }
@@ -188,6 +200,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "REMNBEGINNATDB", nullable = false, columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.RemnBeginNatDb")
     public BigDecimal getRemnBeginNatDb() {
         return this.RemnBeginNatDb;
     }
@@ -197,6 +211,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "REMNBEGINNATKT", nullable = false, columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.RemnBeginNatKt")
     public BigDecimal getRemnBeginNatKt() {
         return this.RemnBeginNatKt;
     }
@@ -206,6 +222,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "REMNBEGINCURDB", nullable = false, columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.RemnBeginCurDb")
     public BigDecimal getRemnBeginCurDb() {
         return this.RemnBeginCurDb;
     }
@@ -215,6 +233,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "REMNBEGINCURKT", nullable = false, columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.RemnBeginCurKt")
     public BigDecimal getRemnBeginCurKt() {
         return this.RemnBeginCurKt;
     }
@@ -224,6 +244,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "RemnEndNatDb", insertable = false, updatable = false)
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.RemnEndNatDb")
     public BigDecimal getRemnEndNatDb() {
         return this.RemnEndNatDb;
     }
@@ -233,6 +255,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "RemnEndNatKt", insertable = false, updatable = false)
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.RemnEndNatKt")
     public BigDecimal getRemnEndNatKt() {
         return this.RemnEndNatKt;
     }
@@ -242,6 +266,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "RemnEndCurKt", insertable = false, updatable = false)
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.RemnEndCurKt")
     public BigDecimal getRemnEndCurKt() {
         return this.RemnEndCurKt;
     }
@@ -251,6 +277,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "RemnEndCurDb", insertable = false, updatable = false)
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.RemnEndCurDb")
     public BigDecimal getRemnEndCurDb() {
         return this.RemnEndCurDb;
     }
@@ -260,6 +288,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TurnNatKt", insertable = false, updatable = false)
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.TurnNatKt")
     public BigDecimal getTurnNatKt() {
         return this.TurnNatKt;
     }
@@ -269,6 +299,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TurnNatDb", insertable = false, updatable = false)
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.TurnNatDb")
     public BigDecimal getTurnNatDb() {
         return this.TurnNatDb;
     }
@@ -278,6 +310,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TurnCurDb", insertable = false, updatable = false)
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.TurnCurDb")
     public BigDecimal getTurnCurDb() {
         return this.TurnCurDb;
     }
@@ -287,6 +321,8 @@ public class RemnAnl extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TurnCurKt", insertable = false, updatable = false)
+    //$NON-NLS-1$
+    @DataItemName("Account.RemnAnl.TurnCurKt")
     public BigDecimal getTurnCurKt() {
         return this.TurnCurKt;
     }

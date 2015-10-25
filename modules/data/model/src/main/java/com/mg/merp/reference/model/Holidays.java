@@ -18,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_HOLIDAYS")
+@DataItemName("Reference.Holidays")
 public class Holidays extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -54,6 +55,7 @@ public class Holidays extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -73,6 +75,7 @@ public class Holidays extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "HNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.Name")
     public String getHName() {
         return this.HName;
     }
@@ -82,6 +85,7 @@ public class Holidays extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "HDATE", unique = true, columnDefinition = "TIMESTAMP")
+    @DataItemName("Reference.Holidays.Date")
     public Date getHDate() {
         return this.HDate;
     }
@@ -91,6 +95,7 @@ public class Holidays extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "HDAY", columnDefinition = "INTEGER")
+    @DataItemName("Reference.Holidays.HDay")
     public Integer getHDay() {
         return this.HDay;
     }
@@ -100,6 +105,7 @@ public class Holidays extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "HMONTH", columnDefinition = "INTEGER")
+    @DataItemName("Reference.Holidays.HMonth")
     public Integer getHMonth() {
         return this.HMonth;
     }
@@ -109,6 +115,7 @@ public class Holidays extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "HYEAR", columnDefinition = "INTEGER")
+    @DataItemName("Reference.Holidays.HYear")
     public Integer getHYear() {
         return this.HYear;
     }

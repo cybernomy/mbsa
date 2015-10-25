@@ -22,6 +22,7 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "MF_LABOR_CLASS")
+@DataItemName("MfReference.LaborClass")
 public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -75,6 +76,7 @@ public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -85,6 +87,7 @@ public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LBR_OH_TIME_UM")
+    @DataItemName("MfReference.LbrCl.LbrOhTimeUm")
     public Measure getLbrOhTimeUm() {
         return this.LbrOhTimeUm;
     }
@@ -95,6 +98,7 @@ public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LBR_OH_RATE_CUR_CODE")
+    @DataItemName("MfReference.LbrCl.LbrOhRatCurCod")
     public Currency getLbrOhRateCurrency() {
         return this.LbrOhRateCurrency;
     }
@@ -115,6 +119,7 @@ public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LBR_COST_CATEGORY_ID")
+    @DataItemName("MfReference.LbrCl.LbrCostCategId")
     public CostCategories getLbrCostCategory() {
         return this.LbrCostCategory;
     }
@@ -125,6 +130,7 @@ public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LBR_OH_COST_CATEGORY_ID")
+    @DataItemName("MfReference.LbrCl.LbrOhCostCatId")
     public CostCategories getLbrOhCostCategory() {
         return this.LbrOhCostCategory;
     }
@@ -135,6 +141,7 @@ public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LBR_TIME_UM")
+    @DataItemName("MfReference.LbrCl.LbrTimeUm")
     public Measure getLbrTimeUm() {
         return this.LbrTimeUm;
     }
@@ -145,6 +152,7 @@ public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LBR_RATE_CUR_CODE")
+    @DataItemName("MfReference.LbrCl.LbrRateCurCode")
     public Currency getLbrRateCurrency() {
         return this.LbrRateCurrency;
     }
@@ -154,6 +162,7 @@ public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("MfReference.LbrCl.Descript")
     public String getDescription() {
         return this.Description;
     }
@@ -173,6 +182,7 @@ public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "LBR_RATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.LbrCl.LbrRate")
     public BigDecimal getLbrRate() {
         return this.LbrRate;
     }
@@ -192,6 +202,7 @@ public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "LBR_OH_RATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.LbrCl.LbrOhRate")
     public BigDecimal getLbrOhRate() {
         return this.LbrOhRate;
     }
@@ -201,6 +212,7 @@ public class LaborClass extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "LBR_OH_RATIO", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.LbrCl.LbrOhRatio")
     public BigDecimal getLbrOhRatio() {
         return this.LbrOhRatio;
     }

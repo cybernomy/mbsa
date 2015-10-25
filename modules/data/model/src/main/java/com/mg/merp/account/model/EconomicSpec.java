@@ -145,6 +145,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -155,6 +156,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FEATURE1_ID")
+    @DataItemName("Account.EconSpec.Feature1")
     public EconomicSpecFeature getFeature1() {
         return this.Feature1;
     }
@@ -185,6 +187,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ACCKT_ID")
+    @DataItemName("Account.EconSpec.AccKt")
     public AccPlan getAccKt() {
         return this.AccKt;
     }
@@ -205,6 +208,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT3_ID")
+    @DataItemName("Account.EconSpec.AnlKt3")
     public AnlPlan getAnlKt3() {
         return this.AnlKt3;
     }
@@ -215,6 +219,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FEATURE4_ID")
+    @DataItemName("Account.EconSpec.Feature4")
     public EconomicSpecFeature getFeature4() {
         return this.Feature4;
     }
@@ -235,6 +240,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB5_ID")
+    @DataItemName("Account.EconSpec.AnlDb5")
     public AnlPlan getAnlDb5() {
         return this.AnlDb5;
     }
@@ -255,6 +261,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT1_ID")
+    @DataItemName("Account.EconSpec.AnlKt1")
     public AnlPlan getAnlKt1() {
         return this.AnlKt1;
     }
@@ -295,6 +302,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FEATURE2_ID")
+    @DataItemName("Account.EconSpec.Feature2")
     public EconomicSpecFeature getFeature2() {
         return this.Feature2;
     }
@@ -315,6 +323,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT2_ID")
+    @DataItemName("Account.EconSpec.AnlKt2")
     public AnlPlan getAnlKt2() {
         return this.AnlKt2;
     }
@@ -325,6 +334,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB2_ID")
+    @DataItemName("Account.EconSpec.AnlDb2")
     public AnlPlan getAnlDb2() {
         return this.AnlDb2;
     }
@@ -335,6 +345,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FEATURE3_ID")
+    @DataItemName("Account.EconSpec.Feature3")
     public EconomicSpecFeature getFeature3() {
         return this.Feature3;
     }
@@ -385,6 +396,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB3_ID")
+    @DataItemName("Account.EconSpec.AnlDb3")
     public AnlPlan getAnlDb3() {
         return this.AnlDb3;
     }
@@ -395,6 +407,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT5_ID")
+    @DataItemName("Account.EconSpec.AnlKt5")
     public AnlPlan getAnlKt5() {
         return this.AnlKt5;
     }
@@ -405,6 +418,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB4_ID")
+    @DataItemName("Account.EconSpec.AnlDb4")
     public AnlPlan getAnlDb4() {
         return this.AnlDb4;
     }
@@ -415,6 +429,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB1_ID")
+    @DataItemName("Account.EconSpec.AnlDb1")
     public AnlPlan getAnlDb1() {
         return this.AnlDb1;
     }
@@ -425,6 +440,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ACCDB_ID")
+    @DataItemName("Account.EconSpec.AccDb")
     public AccPlan getAccDb() {
         return this.AccDb;
     }
@@ -435,6 +451,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FEATURE5_ID")
+    @DataItemName("Account.EconSpec.Feature5")
     public EconomicSpecFeature getFeature5() {
         return this.Feature5;
     }
@@ -445,6 +462,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ACCBATCHDB_ID")
+    @DataItemName("Account.EconSpec.AccBatchDb")
     public AccBatch getAccBatchDb() {
         return this.AccBatchDb;
     }
@@ -455,6 +473,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ACCBATCHKT_ID")
+    @DataItemName("Account.EconSpec.AccBatchKt")
     public AccBatch getAccBatchKt() {
         return this.AccBatchKt;
     }
@@ -465,6 +484,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT4_ID")
+    @DataItemName("Account.EconSpec.AnlKt4")
     public AnlPlan getAnlKt4() {
         return this.AnlKt4;
     }
@@ -474,6 +494,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "QUANTITY", columnDefinition = "NUMERIC", precision = 15, scale = 3)
+    @DataItemName("Account.EconSpec.Quantity")
     public BigDecimal getQuantity() {
         return this.Quantity;
     }
@@ -483,6 +504,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUMMANAT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.EconSpec.SummaNat")
     public BigDecimal getSummaNat() {
         return this.SummaNat;
     }
@@ -492,6 +514,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUMMACUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.EconSpec.SummaCur")
     public BigDecimal getSummaCur() {
         return this.SummaCur;
     }
@@ -501,6 +524,7 @@ public class EconomicSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "CURCOURCE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Account.EconSpec.CurCource")
     public BigDecimal getCurCource() {
         return this.CurCource;
     }

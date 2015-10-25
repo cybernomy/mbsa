@@ -52,6 +52,8 @@ public class TransactTax extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -101,6 +103,8 @@ public class TransactTax extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "TOTALSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("PaymentAlloc.TransactTax.TotalSum")
     public BigDecimal getTotalSum() {
         return this.TotalSum;
     }
@@ -110,6 +114,8 @@ public class TransactTax extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "ALLOCSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("PaymentAlloc.TransactTax.AllocSum")
     public BigDecimal getAllocSum() {
         return this.AllocSum;
     }

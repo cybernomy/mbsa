@@ -18,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "CRM_USER")
+@DataItemName("CRM.User")
 public class User extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -47,6 +48,7 @@ public class User extends com.mg.merp.core.model.AbstractEntity implements java.
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -57,6 +59,7 @@ public class User extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PERSON_ID")
+    @DataItemName("CRM.User.Person")
     public NaturalPerson getPerson() {
         return this.Person;
     }
@@ -76,6 +79,7 @@ public class User extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "THE_POSITION", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("CRM.User.ThePosition")
     public String getThePosition() {
         return this.ThePosition;
     }
@@ -85,6 +89,7 @@ public class User extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "BUSY", columnDefinition = "SMALLINT")
+    @DataItemName("CRM.User.Busy")
     public boolean isBusy() {
         return this.Busy;
     }
@@ -94,6 +99,7 @@ public class User extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_ADMIN", columnDefinition = "SMALLINT")
+    @DataItemName("CRM.User.IsAdmin")
     public boolean isAdmin() {
         return this.IsAdmin;
     }

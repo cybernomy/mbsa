@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "WH_WAREHOUSE_TRANSACTION_DAY")
+@DataItemName("Warehouse.WarehouseTransactionDay")
 public class WarehouseTransactionDay extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -47,6 +48,7 @@ public class WarehouseTransactionDay extends com.mg.merp.core.model.AbstractEnti
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -57,6 +59,7 @@ public class WarehouseTransactionDay extends com.mg.merp.core.model.AbstractEnti
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "STOCK", nullable = false)
+    @DataItemName("Warehouse.WarehouseTransactionDay.Stock")
     public Warehouse getStock() {
         return this.Stock;
     }
@@ -66,6 +69,7 @@ public class WarehouseTransactionDay extends com.mg.merp.core.model.AbstractEnti
     }
 
     @Column(name = "CLOSED_DAY", columnDefinition = "TIMESTAMP")
+    @DataItemName("Warehouse.WarehouseTransactionDay.ClosedDay")
     public Date getClosedDay() {
         return this.ClosedDay;
     }
@@ -75,6 +79,7 @@ public class WarehouseTransactionDay extends com.mg.merp.core.model.AbstractEnti
     }
 
     @Column(name = "USER_STOCK_CLOSED", unique = true, columnDefinition = "CHAR", length = 31)
+    @DataItemName("Warehouse.WarehouseTransactionDay.UserStockClosed")
     public String getUserStockClosed() {
         return this.UserStockClosed;
     }
@@ -84,6 +89,7 @@ public class WarehouseTransactionDay extends com.mg.merp.core.model.AbstractEnti
     }
 
     @Column(name = "OPERATION_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Warehouse.WarehouseTransactionDay.OperationDate")
     public Date getOperationDate() {
         return this.OperationDate;
     }

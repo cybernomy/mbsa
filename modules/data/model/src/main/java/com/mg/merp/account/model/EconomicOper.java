@@ -108,6 +108,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -118,6 +119,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FROM_ID")
+    @DataItemName("Account.EconOper.From")
     public Contractor getFrom() {
         return this.From;
     }
@@ -128,6 +130,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TO_ID")
+    @DataItemName("Account.EconOper.To")
     public Contractor getTo() {
         return this.To;
     }
@@ -177,6 +180,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "KEEPDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Account.EconOper.KeepDate")
     public Date getKeepDate() {
         return this.KeepDate;
     }
@@ -186,6 +190,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Account.EconOper.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -196,6 +201,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCBASETYPE")
+    @DataItemName("Account.EconOper.BaseDocType")
     public DocType getBaseDocType() {
         return this.BaseDocType;
     }
@@ -205,6 +211,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DOCBASENUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Account.EconOper.BaseDocNumber")
     public String getBaseDocNumber() {
         return this.BaseDocNumber;
     }
@@ -214,6 +221,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DOCBASEDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Account.EconOper.BaseDocDate")
     public Date getBaseDocDate() {
         return this.BaseDocDate;
     }
@@ -234,6 +242,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCTYPE")
+    @DataItemName("Account.EconOper.DocType")
     public DocType getConfirmDocType() {
         return this.ConfirmDocType;
     }
@@ -243,6 +252,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Account.EconOper.DocNumber")
     public String getConfirmDocNumber() {
         return this.ConfirmDocNumber;
     }
@@ -252,6 +262,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Account.EconOper.DocDate")
     public Date getConfirmDocDate() {
         return this.ConfirmDocDate;
     }
@@ -261,6 +272,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Formula(value = "(select sum(s.summanat) from economicspec s where s.economicoper_id = Id)")
+    @DataItemName("Account.EconOper.Summa")
     public BigDecimal getSumma() {
         return this.Summa;
     }
@@ -280,6 +292,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTTYPE")
+    @DataItemName("Account.EconOper.ContractType")
     public DocType getContractType() {
         return this.ContractType;
     }
@@ -289,6 +302,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "CONTRACTNUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Account.EconOper.ContractNumber")
     public String getContractNumber() {
         return this.ContractNumber;
     }
@@ -298,6 +312,7 @@ public class EconomicOper extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "CONTRACTDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Account.EconOper.ContractDate")
     public Date getContractDate() {
         return this.ContractDate;
     }

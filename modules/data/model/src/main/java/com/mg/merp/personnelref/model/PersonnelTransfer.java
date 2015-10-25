@@ -58,6 +58,7 @@ public class PersonnelTransfer extends com.mg.merp.core.model.AbstractEntity imp
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -78,6 +79,7 @@ public class PersonnelTransfer extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "STAFF_LIST_UNIT_ID")
+    @DataItemName("PersonnelRef.Personnel.StaffListUnit")
     public StaffListUnit getStaffListUnit() {
         return this.StaffListUnit;
     }
@@ -88,6 +90,7 @@ public class PersonnelTransfer extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "STAFF_LIST_POSITION_ID")
+    @DataItemName("PersonnelRef.Personnel.StaffListPosition")
     public StaffListPosition getStaffListPosition() {
         return this.StaffListPosition;
     }
@@ -117,6 +120,7 @@ public class PersonnelTransfer extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "TRANSFER_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.Personnel.TransferDate")
     public Date getTransferDate() {
         return this.TransferDate;
     }
@@ -126,6 +130,7 @@ public class PersonnelTransfer extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "SALARY", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("PersonnelRef.Personnel.Salary")
     public BigDecimal getSalary() {
         return this.Salary;
     }
@@ -135,6 +140,7 @@ public class PersonnelTransfer extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "SALARY_RAISE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("PersonnelRef.Personnel.SalaryRaise")
     public BigDecimal getSalaryRaise() {
         return this.SalaryRaise;
     }

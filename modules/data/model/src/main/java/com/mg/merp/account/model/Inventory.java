@@ -27,6 +27,7 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "INVENTORY")
+@DataItemName("Account.Inventory")
 public class Inventory extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -227,6 +228,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -247,6 +249,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ACCKT_ID")
+    @DataItemName("Account.EconSpec.AccKt")
     public AccPlan getAccKt() {
         return this.AccKt;
     }
@@ -267,6 +270,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL3_ID")
+    @DataItemName("Account.Inventory.Anl3")
     public AnlPlan getAnl3() {
         return this.Anl3;
     }
@@ -277,6 +281,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL1_ID")
+    @DataItemName("Account.Inventory.Anl1")
     public AnlPlan getAnl1() {
         return this.Anl1;
     }
@@ -287,6 +292,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ACC_ID")
+    @DataItemName("Account.Inventory.Acc")
     public AccPlan getAccPlan() {
         return this.AccPlan;
     }
@@ -297,6 +303,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL2_ID")
+    @DataItemName("Account.Inventory.Anl2")
     public AnlPlan getAnl2() {
         return this.Anl2;
     }
@@ -307,6 +314,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT3_ID")
+    @DataItemName("Account.EconSpec.AnlKt3")
     public AnlPlan getAnlKt3() {
         return this.AnlKt3;
     }
@@ -317,6 +325,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB5_ID")
+    @DataItemName("Account.EconSpec.AnlDb5")
     public AnlPlan getAnlDb5() {
         return this.AnlDb5;
     }
@@ -327,6 +336,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT1_ID")
+    @DataItemName("Account.EconSpec.AnlKt1")
     public AnlPlan getAnlKt1() {
         return this.AnlKt1;
     }
@@ -357,6 +367,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL4_ID")
+    @DataItemName("Account.Inventory.Anl4")
     public AnlPlan getAnl4() {
         return this.Anl4;
     }
@@ -377,6 +388,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT2_ID")
+    @DataItemName("Account.EconSpec.AnlKt2")
     public AnlPlan getAnlKt2() {
         return this.AnlKt2;
     }
@@ -387,6 +399,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB2_ID")
+    @DataItemName("Account.EconSpec.AnlDb2")
     public AnlPlan getAnlDb2() {
         return this.AnlDb2;
     }
@@ -407,6 +420,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL5_ID")
+    @DataItemName("Account.Inventory.Anl5")
     public AnlPlan getAnl5() {
         return this.Anl5;
     }
@@ -447,6 +461,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB3_ID")
+    @DataItemName("Account.EconSpec.AnlDb3")
     public AnlPlan getAnlDb3() {
         return this.AnlDb3;
     }
@@ -457,6 +472,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB1_ID")
+    @DataItemName("Account.EconSpec.AnlDb1")
     public AnlPlan getAnlDb1() {
         return this.AnlDb1;
     }
@@ -467,6 +483,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT5_ID")
+    @DataItemName("Account.EconSpec.AnlKt5")
     public AnlPlan getAnlKt5() {
         return this.AnlKt5;
     }
@@ -477,6 +494,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB4_ID")
+    @DataItemName("Account.EconSpec.AnlDb4")
     public AnlPlan getAnlDb4() {
         return this.AnlDb4;
     }
@@ -497,6 +515,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ACCDB_ID")
+    @DataItemName("Account.EconSpec.AccDb")
     public AccPlan getAccDb() {
         return this.AccDb;
     }
@@ -507,6 +526,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT4_ID")
+    @DataItemName("Account.EconSpec.AnlKt4")
     public AnlPlan getAnlKt4() {
         return this.AnlKt4;
     }
@@ -526,6 +546,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "GROUPNUM", columnDefinition = "CHAR", length = 15)
+    @DataItemName("Account.InvHead.GroupNum")
     public String getGroupNum() {
         return this.GroupNum;
     }
@@ -535,6 +556,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "CARDNUM", columnDefinition = "CHAR", length = 15)
+    @DataItemName("Account.InvHead.CardNum")
     public String getCardNum() {
         return this.CardNum;
     }
@@ -544,6 +566,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "OBJNUM", columnDefinition = "CHAR", length = 30)
+    @DataItemName("Account.InvHead.ObjNum")
     public String getObjNum() {
         return this.ObjNum;
     }
@@ -625,6 +648,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "BALANCECOST", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Inventory.BalanceCost")
     public BigDecimal getBalanceCost() {
         return this.BalanceCost;
     }
@@ -634,6 +658,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "BEGINCOST", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Inventory.BeginCost")
     public BigDecimal getBeginCost() {
         return this.BeginCost;
     }
@@ -643,6 +668,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "BEGINLOSS", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Inventory.BeginLoss")
     public BigDecimal getBeginLoss() {
         return this.BeginLoss;
     }
@@ -652,6 +678,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "AMORT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Inventory.Amort")
     public BigDecimal getAmort() {
         return this.Amort;
     }
@@ -661,6 +688,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "ENDCOST", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Inventory.EndCost")
     public BigDecimal getEndCost() {
         return this.EndCost;
     }
@@ -670,6 +698,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "BEGINLOSSDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Account.Inventory.BeginLossDate")
     public Date getBeginLossDate() {
         return this.BeginLossDate;
     }
@@ -679,6 +708,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "AMORTDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Account.Inventory.AmortDate")
     public Date getAmortDate() {
         return this.AmortDate;
     }
@@ -706,6 +736,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "FACTOR", columnDefinition = "FLOAT")
+    @DataItemName("Account.Inventory.Factor")
     public Float getFactor() {
         return this.Factor;
     }
@@ -725,6 +756,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "YEARAMORTRATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Account.Inventory.YearAmortRate")
     public BigDecimal getYearAmortRate() {
         return this.YearAmortRate;
     }
@@ -734,6 +766,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "EXPLPERIOD_Y", columnDefinition = "FLOAT")
+    @DataItemName("Account.Inventory.ExplPeriodY")
     public Float getExplPeriodY() {
         return this.ExplPeriodY;
     }
@@ -743,6 +776,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "EXPLPERIOD_M", columnDefinition = "FLOAT")
+    @DataItemName("Account.Inventory.ExplPeriodM")
     public Float getExplPeriodM() {
         return this.ExplPeriodM;
     }
@@ -770,6 +804,7 @@ public class Inventory extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "INITIALLOSS", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Inventory.Initialloss")
     public BigDecimal getInitialloss() {
         return this.Initialloss;
     }

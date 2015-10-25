@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PREF_POSITION_FILL_KIND")
+@DataItemName("PersonnelRef.PositionFillKind")
 public class PositionFillKind extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -44,6 +45,7 @@ public class PositionFillKind extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -63,6 +65,7 @@ public class PositionFillKind extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "KCODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("PersonnelRef.PosFillKind.KCode")
     public String getKCode() {
         return this.KCode;
     }
@@ -72,6 +75,7 @@ public class PositionFillKind extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "PRIORITY", columnDefinition = "INTEGER")
+    @DataItemName("PersonnelRef.PosFillKind.Prior")
     public Integer getPriority() {
         return this.Priority;
     }

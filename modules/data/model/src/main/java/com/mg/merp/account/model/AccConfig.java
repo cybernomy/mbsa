@@ -77,6 +77,7 @@ public class AccConfig extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SALEBOOK_DELIV_DOCGROUP_ID")
+    @DataItemName("AccountConfig.DocGroup.SaleBookDeliv")
     public DocGroup getSaleBookDelivDocGroup() {
         return this.SaleBookDelivDocGroup;
     }
@@ -87,6 +88,7 @@ public class AccConfig extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SALEBOOK_INVOICE_DOCGROUP_ID")
+    @DataItemName("AccountConfig.DocGroup.SaleBookInvoice")
     public DocGroup getSaleBookInvoiceDocGroup() {
         return this.SaleBookInvoiceDocGroup;
     }
@@ -107,6 +109,7 @@ public class AccConfig extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SALEBOOK_AVANINV_DOCGROUP_ID")
+    @DataItemName("AccountConfig.DocGroup.SaleBookAvaninv")
     public DocGroup getSaleBookAvaninvDocGroup() {
         return this.SaleBookAvaninvDocGroup;
     }
@@ -117,6 +120,7 @@ public class AccConfig extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BUYBOOK_DELIV_DOCGROUP_ID")
+    @DataItemName("AccountConfig.DocGroup.BuyBookDeliv")
     public DocGroup getBuyBookDelivDocGroup() {
         return this.BuyBookDelivDocGroup;
     }
@@ -127,6 +131,7 @@ public class AccConfig extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BUYBOOK_INVOICE_DOCGROUP_ID")
+    @DataItemName("AccountConfig.DocGroup.BuyBookInvoice")
     public DocGroup getBuyBookInvoiceDocGroup() {
         return this.BuyBookInvoiceDocGroup;
     }

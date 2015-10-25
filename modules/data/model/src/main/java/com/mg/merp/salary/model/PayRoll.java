@@ -76,6 +76,7 @@ public class PayRoll extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -115,6 +116,7 @@ public class PayRoll extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "RNUMBER", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("Salary.PayRoll.Number")
     public String getNumber() {
         return this.Number;
     }
@@ -124,6 +126,7 @@ public class PayRoll extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "RNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Salary.Name")
     public String getName() {
         return this.Name;
     }
@@ -133,6 +136,7 @@ public class PayRoll extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "DOCTYPE", columnDefinition = "CHAR", length = 15)
+    @DataItemName("Salary.PayRoll.DocType")
     public String getDocType() {
         return this.DocType;
     }
@@ -142,6 +146,7 @@ public class PayRoll extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Salary.PayRoll.DocNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -151,6 +156,7 @@ public class PayRoll extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Salary.PayRoll.DocDate")
     public Date getDocDate() {
         return this.DocDate;
     }
@@ -160,6 +166,7 @@ public class PayRoll extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Salary.PayRoll.Comments")
     public String getComments() {
         return this.Comments;
     }
@@ -169,6 +176,7 @@ public class PayRoll extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CALC_BEGINDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Salary.PayRoll.CalcBeginDate")
     public Date getCalcBeginDate() {
         return this.CalcBeginDate;
     }
@@ -178,6 +186,7 @@ public class PayRoll extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CALC_ENDDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Salary.PayRoll.CalcEndDate")
     public Date getCalcEndDate() {
         return this.CalcEndDate;
     }

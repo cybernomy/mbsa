@@ -43,6 +43,7 @@ public class FeeModelParam extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -82,6 +83,7 @@ public class FeeModelParam extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "PARAM_VALUE", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Salary.FeeModelParam.ParamValue")
     public String getParamValue() {
         return this.ParamValue;
     }

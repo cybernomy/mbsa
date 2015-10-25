@@ -59,6 +59,7 @@ public class BomRouteResource extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -69,6 +70,7 @@ public class BomRouteResource extends com.mg.merp.core.model.AbstractEntity impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESOURCE_GROUP_ID")
+    @DataItemName("MfReference.BomRouteResource.ResourceGroup")
     public ResourceGroup getResourceGroup() {
         return this.ResourceGroup;
     }
@@ -117,6 +119,7 @@ public class BomRouteResource extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "TIME_SEQUENCE", columnDefinition = "INTEGER")
+    @DataItemName("MfReference.BomRouteResource.TimeSequence")
     public Integer getTimeSequence() {
         return this.TimeSequence;
     }
@@ -126,6 +129,7 @@ public class BomRouteResource extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "EFF_ON_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("MfReference.BomRouteResource.EffOnDate")
     public Date getEffOnDate() {
         return this.EffOnDate;
     }
@@ -135,6 +139,7 @@ public class BomRouteResource extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "EFF_OFF_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("MfReference.BomRouteResource.EffOffDate")
     public Date getEffOffDate() {
         return this.EffOffDate;
     }
@@ -144,6 +149,7 @@ public class BomRouteResource extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("MfReference.BomRouteResource.Comment")
     public String getComment() {
         return this.Comment;
     }

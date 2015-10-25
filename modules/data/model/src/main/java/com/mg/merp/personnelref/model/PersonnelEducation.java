@@ -66,6 +66,8 @@ public class PersonnelEducation extends com.mg.merp.core.model.AbstractEntity im
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -86,6 +88,8 @@ public class PersonnelEducation extends com.mg.merp.core.model.AbstractEntity im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SPECIALITY_ID")
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Personnel.Speciality")
     public Speciality getSpeciality() {
         return this.Speciality;
     }
@@ -115,6 +119,8 @@ public class PersonnelEducation extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "INSTITUTION_NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Personnel.InstitutionName")
     public String getInstitutionName() {
         return this.InstitutionName;
     }
@@ -124,6 +130,8 @@ public class PersonnelEducation extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "DIPLOMA_QUALIFICATION", columnDefinition = "VARCHAR", length = 80)
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Personnel.DiplomaQualification")
     public String getDiplomaQualification() {
         return this.DiplomaQualification;
     }
@@ -133,6 +141,8 @@ public class PersonnelEducation extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "DIPLOMA_NUMBER", columnDefinition = "CHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Personnel.DiplomaNumber")
     public String getDiplomaNumber() {
         return this.DiplomaNumber;
     }
@@ -142,6 +152,8 @@ public class PersonnelEducation extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "DIPLOMA_DATE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Personnel.DiplomaDate")
     public Date getDiplomaDate() {
         return this.DiplomaDate;
     }
@@ -151,6 +163,8 @@ public class PersonnelEducation extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "GRADUATION_YEAR", columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Personnel.GraduationYear")
     public Integer getGraduationYear() {
         return this.GraduationYear;
     }

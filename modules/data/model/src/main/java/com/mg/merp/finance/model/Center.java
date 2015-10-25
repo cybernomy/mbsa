@@ -56,6 +56,7 @@ public class Center extends com.mg.merp.core.model.AbstractEntity implements jav
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -84,6 +85,7 @@ public class Center extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("Finance.Center.Code")
     public String getCode() {
         return this.Code;
     }
@@ -102,6 +104,7 @@ public class Center extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "SNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Finance.Center.Name")
     public String getName() {
         return this.Name;
     }

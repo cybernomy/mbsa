@@ -48,6 +48,7 @@ public class InventoryActSpec extends com.mg.merp.document.model.DocSpec impleme
     }
 
     @Column(name = "REALQUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Warehouse.InventoryActSpec.RealQuantity")
     public BigDecimal getRealQuantity() {
         return this.RealQuantity;
     }
@@ -57,6 +58,7 @@ public class InventoryActSpec extends com.mg.merp.document.model.DocSpec impleme
     }
 
     @Column(name = "REALSUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Warehouse.InventoryActSpec.RealSumma")
     public BigDecimal getRealSumma() {
         return this.RealSumma;
     }
@@ -66,6 +68,7 @@ public class InventoryActSpec extends com.mg.merp.document.model.DocSpec impleme
     }
 
     @Column(name = "REALQUANTITY2", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Warehouse.InventoryActSpec.RealQuantity2")
     public BigDecimal getRealQuantity2() {
         return this.RealQuantity2;
     }

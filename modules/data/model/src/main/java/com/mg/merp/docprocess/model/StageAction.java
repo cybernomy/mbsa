@@ -10,6 +10,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "DP_STAGE_ACTION")
+@DataItemName("DocFlow.StageAction")
 public class StageAction extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -29,6 +30,7 @@ public class StageAction extends com.mg.merp.core.model.AbstractEntity implement
 
     @Id
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -38,6 +40,7 @@ public class StageAction extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("DocFlow.StageAction.Name")
     public String getName() {
         return this.Name;
     }
@@ -47,6 +50,7 @@ public class StageAction extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "CREATEDOC_FLAG", nullable = false, columnDefinition = "SMALLINT")
+    @DataItemName("DocFlow.StageAction.CreateDoc")
     public boolean isCreateDoc() {
         return this.CreateDoc;
     }

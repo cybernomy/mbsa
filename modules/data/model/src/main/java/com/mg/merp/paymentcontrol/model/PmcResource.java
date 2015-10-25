@@ -29,6 +29,8 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PMC_RESOURCE")
+//$NON-NLS-1$
+@DataItemName("PaymentControl.PmcResource")
 public class PmcResource extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -100,6 +102,8 @@ public class PmcResource extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -110,6 +114,8 @@ public class PmcResource extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CATALOG_ID")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.PmcResource.Catalog")
     public Catalog getCatalog() {
         return this.Catalog;
     }
@@ -120,6 +126,8 @@ public class PmcResource extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "OUTDOCMODEL2_ID")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.PmcResource.OutDocModel2")
     public DocHeadModel getOutDocModel2() {
         return this.OutDocModel2;
     }
@@ -140,6 +148,8 @@ public class PmcResource extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "OUTDOCMODEL1_ID")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.PmcResource.OutDocModel1")
     public DocHeadModel getOutDocModel1() {
         return this.OutDocModel1;
     }
@@ -170,6 +180,8 @@ public class PmcResource extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "INDOCMODEL1_ID")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.PmcResource.InDocModel1")
     public DocHeadModel getInDocModel1() {
         return this.InDocModel1;
     }
@@ -190,6 +202,8 @@ public class PmcResource extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "INDOCMODEL2_ID")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.PmcResource.InDocModel2")
     public DocHeadModel getInDocModel2() {
         return this.InDocModel2;
     }
@@ -210,6 +224,8 @@ public class PmcResource extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ORGUNIT_ID")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Resource.OrgUnit")
     public Contractor getOrgUnit() {
         return this.OrgUnit;
     }
@@ -219,6 +235,8 @@ public class PmcResource extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Resource.Name")
     public String getName() {
         return this.Name;
     }
@@ -228,6 +246,8 @@ public class PmcResource extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 256)
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Resource.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -237,6 +257,8 @@ public class PmcResource extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "ACTDATETILL", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Payment.ActDateTill")
     public Date getActDateTill() {
         return this.ActDateTill;
     }
@@ -246,6 +268,8 @@ public class PmcResource extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "ACTDATEFROM", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Payment.ActDateFrom")
     public Date getActDateFrom() {
         return this.ActDateFrom;
     }

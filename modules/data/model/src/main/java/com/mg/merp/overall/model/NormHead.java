@@ -69,6 +69,7 @@ public class NormHead extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -118,6 +119,7 @@ public class NormHead extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "OVR_NORM_NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Overall.Name")
     public String getOvrNormName() {
         return this.OvrNormName;
     }
@@ -136,6 +138,7 @@ public class NormHead extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "OVR_NORM_BEGIN_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Overall.Norm.OvrNormBeginDate")
     public Date getOvrNormBeginDate() {
         return this.OvrNormBeginDate;
     }
@@ -145,6 +148,7 @@ public class NormHead extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "OVR_NORM_END_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Overall.Norm.OvrNormEndDate")
     public Date getOvrNormEndDate() {
         return this.OvrNormEndDate;
     }

@@ -70,6 +70,7 @@ public class PermissibleAccounts extends com.mg.merp.core.model.AbstractEntity i
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -80,6 +81,7 @@ public class PermissibleAccounts extends com.mg.merp.core.model.AbstractEntity i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT2_ID")
+    @DataItemName("Account.Perm.AnlPlanKtLevel2")
     public AnlPlan getAnlKt2() {
         return this.AnlKt2;
     }
@@ -90,6 +92,7 @@ public class PermissibleAccounts extends com.mg.merp.core.model.AbstractEntity i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ACCKT_ID")
+    @DataItemName("Account.EconSpec.AccKt")
     public AccPlan getAccKt() {
         return this.AccKt;
     }
@@ -100,6 +103,7 @@ public class PermissibleAccounts extends com.mg.merp.core.model.AbstractEntity i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB2_ID")
+    @DataItemName("Account.Perm.AnlPlanDbLevel2")
     public AnlPlan getAnlDb2() {
         return this.AnlDb2;
     }
@@ -110,6 +114,7 @@ public class PermissibleAccounts extends com.mg.merp.core.model.AbstractEntity i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT3_ID")
+    @DataItemName("Account.Perm.AnlPlanKtLevel3")
     public AnlPlan getAnlKt3() {
         return this.AnlKt3;
     }
@@ -120,6 +125,7 @@ public class PermissibleAccounts extends com.mg.merp.core.model.AbstractEntity i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB3_ID")
+    @DataItemName("Account.Perm.AnlPlanDbLevel3")
     public AnlPlan getAnlDb3() {
         return this.AnlDb3;
     }
@@ -140,6 +146,7 @@ public class PermissibleAccounts extends com.mg.merp.core.model.AbstractEntity i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB4_ID")
+    @DataItemName("Account.Perm.AnlPlanDbLevel4")
     public AnlPlan getAnlDb4() {
         return this.AnlDb4;
     }
@@ -150,6 +157,7 @@ public class PermissibleAccounts extends com.mg.merp.core.model.AbstractEntity i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB1_ID")
+    @DataItemName("Account.Perm.AnlPlanDbLevel1")
     public AnlPlan getAnlDb1() {
         return this.AnlDb1;
     }
@@ -160,6 +168,7 @@ public class PermissibleAccounts extends com.mg.merp.core.model.AbstractEntity i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT5_ID")
+    @DataItemName("Account.Perm.AnlPlanKtLevel5")
     public AnlPlan getAnlKt5() {
         return this.AnlKt5;
     }
@@ -170,6 +179,7 @@ public class PermissibleAccounts extends com.mg.merp.core.model.AbstractEntity i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ACCDB_ID")
+    @DataItemName("Account.EconSpec.AccDb")
     public AccPlan getAccDb() {
         return this.AccDb;
     }
@@ -180,6 +190,7 @@ public class PermissibleAccounts extends com.mg.merp.core.model.AbstractEntity i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLDB5_ID")
+    @DataItemName("Account.Perm.AnlPlanDbLevel5")
     public AnlPlan getAnlDb5() {
         return this.AnlDb5;
     }
@@ -190,6 +201,7 @@ public class PermissibleAccounts extends com.mg.merp.core.model.AbstractEntity i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT1_ID")
+    @DataItemName("Account.Perm.AnlPlanKtLevel1")
     public AnlPlan getAnlKt1() {
         return this.AnlKt1;
     }
@@ -200,6 +212,7 @@ public class PermissibleAccounts extends com.mg.merp.core.model.AbstractEntity i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLKT4_ID")
+    @DataItemName("Account.Perm.AnlPlanKtLevel4")
     public AnlPlan getAnlKt4() {
         return this.AnlKt4;
     }

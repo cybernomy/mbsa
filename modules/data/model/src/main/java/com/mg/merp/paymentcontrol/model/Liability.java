@@ -32,6 +32,8 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "PMC_LIABILITY")
+//$NON-NLS-1$
+@DataItemName("PaymentControl.Liability")
 public class Liability extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -172,6 +174,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -182,6 +186,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FROM_ID")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.PartnerFrom")
     public Contractor getFrom() {
         return this.From;
     }
@@ -192,6 +198,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FROMBANKACC_ID")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.FromBankAcc")
     public BankAccount getFromBankAcc() {
         return this.FromBankAcc;
     }
@@ -222,6 +230,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PREFRESOURCEFOLDER_ID")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.PrefResFolder")
     public Folder getPrefResourceFolder() {
         return this.PrefResourceFolder;
     }
@@ -242,6 +252,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCTYPE")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.DocType")
     public DocType getDocType() {
         return this.DocType;
     }
@@ -262,6 +274,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DESTFOLDER_ID")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.DestFolder")
     public Folder getDestFolder() {
         return this.DestFolder;
     }
@@ -272,6 +286,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTTYPE")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.DocTypeContract")
     public DocType getContractType() {
         return this.ContractType;
     }
@@ -282,6 +298,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TO_ID")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.PartnerTo")
     public Contractor getTo() {
         return this.To;
     }
@@ -312,6 +330,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TOBANKACC_ID")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.ToBankAcc")
     public BankAccount getToBankAcc() {
         return this.ToBankAcc;
     }
@@ -332,6 +352,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BASEDOCTYPE")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.DocTypeBase")
     public DocType getBaseDocType() {
         return this.BaseDocType;
     }
@@ -352,6 +374,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PREFRESOURCE_ID")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.PrefResource")
     public PmcResource getPrefResource() {
         return this.PrefResource;
     }
@@ -380,6 +404,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PRIORITY", columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.Priority")
     public Integer getPriority() {
         return this.Priority;
     }
@@ -389,6 +415,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "RECEIVABLE", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.Receivable")
     public boolean isReceivable() {
         return this.Receivable;
     }
@@ -398,6 +426,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "NUM", columnDefinition = "VARCHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.Num")
     public String getNum() {
         return this.Num;
     }
@@ -407,6 +437,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "REGDATE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.RegDate")
     public Date getRegDate() {
         return this.RegDate;
     }
@@ -416,6 +448,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DATETOEXECUTE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.DateToExecute")
     public Date getDateToExecute() {
         return this.DateToExecute;
     }
@@ -425,6 +459,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "SUMCUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.SumCur")
     public BigDecimal getSumCur() {
         return this.SumCur;
     }
@@ -444,6 +480,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PAYMENTDELAY", columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.PaymentDelay")
     public Integer getPaymentDelay() {
         return this.PaymentDelay;
     }
@@ -453,6 +491,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.DocNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -462,6 +502,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.DocDate")
     public Date getDocDate() {
         return this.DocDate;
     }
@@ -471,6 +513,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "BASEDOCNUMBER", columnDefinition = "CHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.DocNumberBase")
     public String getBaseDocNumber() {
         return this.BaseDocNumber;
     }
@@ -480,6 +524,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "BASEDOCDATE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.DocDateBase")
     public Date getBaseDocDate() {
         return this.BaseDocDate;
     }
@@ -489,6 +535,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "CONTRACTNUMBER", columnDefinition = "CHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.DocNumberContract")
     public String getContractNumber() {
         return this.ContractNumber;
     }
@@ -498,6 +546,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "CONTRACTDATE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.DocDateContract")
     public Date getContractDate() {
         return this.ContractDate;
     }
@@ -507,6 +557,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PREFONLY", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.PrefOnly")
     public boolean isPrefOnly() {
         return this.PrefOnly;
     }
@@ -516,6 +568,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 256)
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.Comments")
     public String getComments() {
         return this.Comments;
     }
@@ -543,6 +597,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "MODELNAME", columnDefinition = "VARCHAR", length = 80)
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.ModelName")
     public String getModelName() {
         return this.ModelName;
     }
@@ -553,6 +609,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
 
     @Column(name = "FROMSOURCE")
     @Enumerated(EnumType.ORDINAL)
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.FromSource")
     public ContractorSource getFromSource() {
         return this.FromSource;
     }
@@ -563,6 +621,8 @@ public class Liability extends com.mg.merp.core.model.AbstractEntity implements 
 
     @Column(name = "TOSOURCE")
     @Enumerated(EnumType.ORDINAL)
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Liab.ToSource")
     public ContractorSource getToSource() {
         return this.ToSource;
     }

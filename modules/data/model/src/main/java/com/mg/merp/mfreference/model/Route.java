@@ -93,6 +93,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -103,6 +104,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "VENDOR_ID")
+    @DataItemName("MfReference.Route.Vendor")
     public Contractor getVendor() {
         return this.Vendor;
     }
@@ -113,6 +115,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CATALOG_ID")
+    @DataItemName("MfReference.Route.Catalog")
     public Catalog getCatalog() {
         return this.Catalog;
     }
@@ -123,6 +126,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CUSTOMER_ID")
+    @DataItemName("MfReference.Route.Customer")
     public Contractor getCustomer() {
         return this.Customer;
     }
@@ -133,6 +137,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SRC_WAREHOUSE_ID")
+    @DataItemName("MfReference.Route.SrcWarehouse")
     public Warehouse getSrcWarehouse() {
         return this.SrcWarehouse;
     }
@@ -153,6 +158,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEST_WAREHOUSE_ID")
+    @DataItemName("MfReference.Route.DestWarehouse")
     public Warehouse getDestWarehouse() {
         return this.DestWarehouse;
     }
@@ -172,6 +178,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "SRC_CYCLE", columnDefinition = "INTEGER")
+    @DataItemName("MfReference.Route.SrcCycle")
     public Integer getSrcCycle() {
         return this.SrcCycle;
     }
@@ -181,6 +188,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "SRC_RANK", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.Route.SrcRank")
     public Short getSrcRank() {
         return this.SrcRank;
     }
@@ -190,6 +198,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "SUPPLY_PERCENT", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("MfReference.Route.SupplyPercent")
     public BigDecimal getSupplyPercent() {
         return this.SupplyPercent;
     }
@@ -209,6 +218,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "REORDER_MIN_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("MfReference.Route.ReMinQty")
     public BigDecimal getReorderMinQty() {
         return this.ReorderMinQty;
     }
@@ -218,6 +228,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "REORDER_LOT_SIZE", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("MfReference.Route.ReorderLotSize")
     public BigDecimal getReorderLotSize() {
         return this.ReorderLotSize;
     }
@@ -227,6 +238,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "DEST_CYCLE", columnDefinition = "INTEGER")
+    @DataItemName("MfReference.Route.DestCycle")
     public Integer getDestCycle() {
         return this.DestCycle;
     }
@@ -236,6 +248,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "QC_RECEIVING_DAYS", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.Route.QcReceivingDays")
     public Short getQcReceivingDays() {
         return this.QcReceivingDays;
     }
@@ -245,6 +258,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "LEAD_TIME", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.Route.LeadTime")
     public Short getLeadTime() {
         return this.LeadTime;
     }
@@ -254,6 +268,7 @@ public class Route extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "SAFETY_DAYS", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.Route.SafetyDays")
     public Short getSafetyDays() {
         return this.SafetyDays;
     }

@@ -47,6 +47,7 @@ public class TariffScaleClass extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -76,6 +77,7 @@ public class TariffScaleClass extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "CLASS_NUMBER", columnDefinition = "INTEGER")
+    @DataItemName("Reference.TariffingScale.ClassNumber")
     public Integer getClassNumber() {
         return this.ClassNumber;
     }
@@ -85,6 +87,7 @@ public class TariffScaleClass extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "FACTOR", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Reference.TariffingScale.Factor")
     public BigDecimal getFactor() {
         return this.Factor;
     }
@@ -94,6 +97,7 @@ public class TariffScaleClass extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "RATE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Reference.TariffingScale.Rate")
     public BigDecimal getRate() {
         return this.Rate;
     }

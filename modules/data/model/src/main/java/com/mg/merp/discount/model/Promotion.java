@@ -77,6 +77,8 @@ public class Promotion extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -86,6 +88,8 @@ public class Promotion extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
+    //$NON-NLS-1$
+    @DataItemName("Discount.Promotion.Name")
     public String getName() {
         return this.Name;
     }
@@ -95,6 +99,8 @@ public class Promotion extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("Discount.Promotion.Code")
     public String getCode() {
         return this.Code;
     }
@@ -104,6 +110,8 @@ public class Promotion extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DATE_FROM", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("Discount.Promotion.DateFrom")
     public Date getDateFrom() {
         return this.DateFrom;
     }
@@ -113,6 +121,8 @@ public class Promotion extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DATE_TILL", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("Discount.Promotion.DateTill")
     public Date getDateTill() {
         return this.DateTill;
     }
@@ -122,6 +132,8 @@ public class Promotion extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PRIORITY", columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("Discount.Promotion.Priority")
     public Integer getPriority() {
         return this.Priority;
     }
@@ -141,6 +153,8 @@ public class Promotion extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DATE_APPROVE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("Discount.Promotion.DateApprove")
     public Date getDateApprove() {
         return this.DateApprove;
     }
@@ -150,6 +164,8 @@ public class Promotion extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "NUMBER", columnDefinition = "CHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("Discount.Promotion.Number")
     public String getNumber() {
         return this.Number;
     }
@@ -159,6 +175,8 @@ public class Promotion extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "IS_ACTIVE", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Discount.Promotion.IsActive")
     public boolean isActive() {
         return this.IsActive;
     }
@@ -168,6 +186,8 @@ public class Promotion extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "IS_APPLY_DISCOUNT_GROUP", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Discount.Promotion.IsApplyDiscountGroup")
     public boolean isApplyDiscountGroup() {
         return this.IsApplyDiscountGroup;
     }
@@ -177,6 +197,8 @@ public class Promotion extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "IS_APPLY_DISCOUNT_ON_DOC", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Discount.Promotion.IsApplyDiscountOnDoc")
     public boolean isApplyDiscountOnDoc() {
         return this.IsApplyDiscountOnDoc;
     }
@@ -186,6 +208,8 @@ public class Promotion extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
+    //$NON-NLS-1$
+    @DataItemName("Discount.Promotion.Comment")
     public String getComment() {
         return this.Comment;
     }

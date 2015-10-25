@@ -16,6 +16,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "FEATUREVAL")
+@DataItemName("Core.FeatureVal")
 public class FeatureVal extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -39,6 +40,7 @@ public class FeatureVal extends com.mg.merp.core.model.AbstractEntity implements
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -68,6 +70,7 @@ public class FeatureVal extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "VAL", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Core.Feature.Val.Name")
     public String getVal() {
         return this.Val;
     }

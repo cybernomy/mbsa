@@ -43,6 +43,7 @@ public class Speciality extends com.mg.merp.core.model.AbstractEntity implements
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -62,6 +63,7 @@ public class Speciality extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.Speciality.Name")
     public String getName() {
         return this.Name;
     }
@@ -71,6 +73,7 @@ public class Speciality extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "OKSO", columnDefinition = "CHAR", length = 20)
+    @DataItemName("PersonnelRef.Speciality.Okso")
     public String getOkso() {
         return this.Okso;
     }
@@ -80,6 +83,7 @@ public class Speciality extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "MSKO", columnDefinition = "CHAR", length = 5)
+    @DataItemName("PersonnelRef.Speciality.Msko")
     public String getMsko() {
         return this.Msko;
     }

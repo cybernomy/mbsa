@@ -18,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_FAMILY_MEMBER")
+@DataItemName("Reference.FamilyMember")
 public class FamilyMember extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -59,6 +60,7 @@ public class FamilyMember extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -98,6 +100,7 @@ public class FamilyMember extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "FNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.NaturalPerson.Name")
     public String getFName() {
         return this.FName;
     }
@@ -107,6 +110,7 @@ public class FamilyMember extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "PATRONYMIC", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.NaturalPerson.Patronymic")
     public String getPatronymic() {
         return this.Patronymic;
     }
@@ -116,6 +120,7 @@ public class FamilyMember extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SURNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.NaturalPerson.Surname")
     public String getSurname() {
         return this.Surname;
     }
@@ -125,6 +130,7 @@ public class FamilyMember extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "BIRTHDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Reference.NaturalPerson.BornDate")
     public Date getBirthdate() {
         return this.Birthdate;
     }

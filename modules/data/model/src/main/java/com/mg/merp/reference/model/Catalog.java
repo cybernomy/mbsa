@@ -27,6 +27,8 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "CATALOG")
+//$NON-NLS-1$
+@DataItemName("Reference.Catalog")
 public class Catalog extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -150,6 +152,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -171,6 +175,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TAXGROUP_ID")
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.TaxGroup")
     public TaxGroup getTaxGroup() {
         return this.TaxGroup;
     }
@@ -181,6 +187,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WEIGHTMEASURE_ID")
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.WeightMeasure")
     public Measure getWeightMeasure() {
         return this.WeightMeasure;
     }
@@ -191,6 +199,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE2_ID")
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.Measure2")
     public Measure getMeasure2() {
         return this.Measure2;
     }
@@ -231,6 +241,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE1_ID")
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.Measure1")
     public Measure getMeasure1() {
         return this.Measure1;
     }
@@ -251,6 +263,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "VOLUMEMEASURE_ID")
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.VolumeMeasure")
     public Measure getVolumeMeasure() {
         return this.VolumeMeasure;
     }
@@ -269,6 +283,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("Reference.Code")
     public String getCode() {
         return this.Code;
     }
@@ -278,6 +294,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    //$NON-NLS-1$
+    @DataItemName("Reference.Name")
     public String getFullName() {
         return this.FullName;
     }
@@ -297,6 +315,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "BARCODE", columnDefinition = "CHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.BarCode")
     public String getBarCode() {
         return this.BarCode;
     }
@@ -306,6 +326,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PLUCODE", columnDefinition = "CHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.PluCode")
     public String getPluCode() {
         return this.PluCode;
     }
@@ -315,6 +337,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ISHASWEIGHT", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.IsHasWeight")
     public boolean isHasWeight() {
         return this.IsHasWeight;
     }
@@ -324,6 +348,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "WEIGHT", columnDefinition = "NUMERIC", precision = 15, scale = 3)
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.Weight")
     public BigDecimal getWeight() {
         return this.Weight;
     }
@@ -333,6 +359,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "VOLUME", columnDefinition = "NUMERIC", precision = 15, scale = 3)
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.Volume")
     public BigDecimal getVolume() {
         return this.Volume;
     }
@@ -342,6 +370,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "MARKETING_MARGIN", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.MarketMargin")
     public BigDecimal getMarketingMargin() {
         return this.MarketingMargin;
     }
@@ -360,6 +390,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ISNOTINUSE", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.IsNotInUse")
     public boolean isNotInUse() {
         return this.IsNotInUse;
     }
@@ -369,6 +401,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SHELFLIFE", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.ShelfLife")
     public BigDecimal getShelfLife() {
         return this.ShelfLife;
     }
@@ -398,6 +432,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ARTICUL", columnDefinition = "CHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.Articul")
     public String getArticul() {
         return this.Articul;
     }
@@ -417,6 +453,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PACKAGED", nullable = false, columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.Packaged")
     public boolean isPackaged() {
         return this.Packaged;
     }
@@ -426,6 +464,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "USE_SERIAL_NUM", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Reference.Catalog.UseSerialNum")
     public boolean isUseSerialNum() {
         return this.UseSerialNum;
     }
@@ -436,6 +476,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CUSTOMS_DECLARATION_ID")
+    //$NON-NLS-1$
+    @DataItemName("Reference.CD")
     public CustomsDeclaration getCustomsDeclaration() {
         return this.CustomsDeclaration;
     }
@@ -446,6 +488,8 @@ public class Catalog extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COUNTRY_OF_ORIGIN_ID")
+    //$NON-NLS-1$
+    @DataItemName("Reference.CountryOfOrigin")
     public Country getCountryOfOrigin() {
         return this.CountryOfOrigin;
     }

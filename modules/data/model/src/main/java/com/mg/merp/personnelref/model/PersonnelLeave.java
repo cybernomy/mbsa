@@ -65,6 +65,7 @@ public class PersonnelLeave extends com.mg.merp.core.model.AbstractEntity implem
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -114,6 +115,7 @@ public class PersonnelLeave extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "WORK_BEGINDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.Personnel.WorkBeginDate")
     public Date getWorkBeginDate() {
         return this.WorkBeginDate;
     }
@@ -123,6 +125,7 @@ public class PersonnelLeave extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "WORK_ENDDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.Personnel.WorkEndDate")
     public Date getWorkEndDate() {
         return this.WorkEndDate;
     }
@@ -132,6 +135,7 @@ public class PersonnelLeave extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "HOLIDAY_NUMBER", columnDefinition = "INTEGER")
+    @DataItemName("PersonnelRef.Personnel.HolidayNumber")
     public Integer getHolidayNumber() {
         return this.HolidayNumber;
     }
@@ -141,6 +145,7 @@ public class PersonnelLeave extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "BEGINDATE", nullable = false, columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.Personnel.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -150,6 +155,7 @@ public class PersonnelLeave extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "ENDDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.Personnel.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }

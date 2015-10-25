@@ -48,6 +48,8 @@ public class ItemSpecTax extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -87,6 +89,8 @@ public class ItemSpecTax extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.ItemSpecTax.Summa")
     public BigDecimal getSumma() {
         return this.Summa;
     }
@@ -96,6 +100,8 @@ public class ItemSpecTax extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "PRICE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.ItemSpecTax.Price")
     public BigDecimal getPrice() {
         return this.Price;
     }

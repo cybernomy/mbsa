@@ -48,6 +48,7 @@ public class OrderSpecModel extends com.mg.merp.document.model.DocSpecModel impl
     }
 
     @Column(name = "DISCOUNT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Warehouse.OrderSpecModel.Discount")
     public BigDecimal getDiscount() {
         return this.Discount;
     }
@@ -57,6 +58,7 @@ public class OrderSpecModel extends com.mg.merp.document.model.DocSpecModel impl
     }
 
     @Column(name = "PRICE_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Warehouse.OrderSpecModel.PriceWithDiscount")
     public BigDecimal getPriceWithDiscount() {
         return this.PriceWithDiscount;
     }
@@ -66,6 +68,7 @@ public class OrderSpecModel extends com.mg.merp.document.model.DocSpecModel impl
     }
 
     @Column(name = "SUMMA_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Warehouse.OrderSpecModel.SummaWithDiscount")
     public BigDecimal getSummaWithDiscount() {
         return this.SummaWithDiscount;
     }
@@ -75,6 +78,7 @@ public class OrderSpecModel extends com.mg.merp.document.model.DocSpecModel impl
     }
 
     @Column(name = "COST", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Warehouse.OrderSpecModel.Cost")
     public BigDecimal getCost() {
         return this.Cost;
     }
@@ -84,6 +88,7 @@ public class OrderSpecModel extends com.mg.merp.document.model.DocSpecModel impl
     }
 
     @Column(name = "DOC_DISCOUNT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Warehouse.OrderSpecModel.DocDiscount")
     public BigDecimal getDocDiscount() {
         return this.DocDiscount;
     }

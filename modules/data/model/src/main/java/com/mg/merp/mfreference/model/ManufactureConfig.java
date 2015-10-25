@@ -175,6 +175,7 @@ public class ManufactureConfig extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "INPUT_MATERIAL_MODEL_BF", columnDefinition = "INTEGER")
+    @DataItemName("Manufacture.InputDocModel.Material")
     public DocHeadModel getInputMaterialModelBf() {
         return this.InputMaterialModelBf;
     }
@@ -185,6 +186,7 @@ public class ManufactureConfig extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "INPUT_LABOR_MODEL_BF", columnDefinition = "INTEGER")
+    @DataItemName("Manufacture.InputDocModel.Labor")
     public DocHeadModel getInputLaborModelBf() {
         return this.InputLaborModelBf;
     }
@@ -195,6 +197,7 @@ public class ManufactureConfig extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "INPUT_MACHINE_MODEL_BF", columnDefinition = "INTEGER")
+    @DataItemName("Manufacture.InputDocModel.Machine")
     public DocHeadModel getInputMachineModelBf() {
         return this.InputMachineModelBf;
     }
@@ -255,6 +258,7 @@ public class ManufactureConfig extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PURCHASE_ORDER_MODEL_MRP_REC", columnDefinition = "INTEGER")
+    @DataItemName("Manufacture.OrderDocModel.Order")
     public DocHeadModel getPurchaseOrderModelMrpRec() {
         return this.PurchaseOrderModelMrpRec;
     }
@@ -265,6 +269,7 @@ public class ManufactureConfig extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SCRAP_MATERIAL_MODEL", columnDefinition = "INTEGER")
+    @DataItemName("Manufacture.ScrapDocumentModel.Material")
     public DocHeadModel getScrapMaterialModel() {
         return this.ScrapMaterialModel;
     }
@@ -275,6 +280,7 @@ public class ManufactureConfig extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SCRAP_LABOR_MODEL", columnDefinition = "INTEGER")
+    @DataItemName("Manufacture.ScrapDocumentModel.Labor")
     public DocHeadModel getScrapLaborModel() {
         return this.ScrapLaborModel;
     }
@@ -285,6 +291,7 @@ public class ManufactureConfig extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SCRAP_MACHINE_MODEL", columnDefinition = "INTEGER")
+    @DataItemName("Manufacture.ScrapDocumentModel.Machine")
     public DocHeadModel getScrapMachineModel() {
         return this.ScrapMachineModel;
     }
@@ -295,6 +302,7 @@ public class ManufactureConfig extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "VARIANCE_DOCUMENT_MODEL", columnDefinition = "INTEGER")
+    @DataItemName("Manufacture.VarianceDocModel.Variance")
     public DocHeadModel getVarianceDocumentModel() {
         return this.VarianceDocumentModel;
     }

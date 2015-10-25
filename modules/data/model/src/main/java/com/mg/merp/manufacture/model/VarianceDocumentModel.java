@@ -48,6 +48,7 @@ public class VarianceDocumentModel extends com.mg.merp.document.model.DocHeadMod
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WC_ID")
+    @DataItemName("Manufacture.VarDocModel.WC")
     public WorkCenter getWC() {
         return this.WC;
     }
@@ -58,6 +59,7 @@ public class VarianceDocumentModel extends com.mg.merp.document.model.DocHeadMod
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "JOB_ID")
+    @DataItemName("Manufacture.VarDocModel.Job")
     public Job getJob() {
         return this.Job;
     }

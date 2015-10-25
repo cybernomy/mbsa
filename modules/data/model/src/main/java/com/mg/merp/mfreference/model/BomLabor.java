@@ -55,6 +55,7 @@ public class BomLabor extends com.mg.merp.mfreference.model.BomRouteResource imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RUN_TIME_LBR_UM")
+    @DataItemName("MfReference.BomLabor.Measure")
     public Measure getRunTimeLbrUm() {
         return this.RunTimeLbrUm;
     }
@@ -64,6 +65,7 @@ public class BomLabor extends com.mg.merp.mfreference.model.BomRouteResource imp
     }
 
     @Column(name = "RUN_TICKS_LBR", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("MfReference.BomLabor.RunTicksLbr")
     public long getRunTicksLbr() {
         return this.RunTicksLbr;
     }
@@ -73,6 +75,7 @@ public class BomLabor extends com.mg.merp.mfreference.model.BomRouteResource imp
     }
 
     @Column(name = "LBR_NUMBER", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.BomLabor.LbrNumber")
     public BigDecimal getLbrNumber() {
         return this.LbrNumber;
     }
@@ -82,6 +85,7 @@ public class BomLabor extends com.mg.merp.mfreference.model.BomRouteResource imp
     }
 
     @Column(name = "LBR_BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.BomLabor.LbrBackflushFlag")
     public boolean isLbrBackflushFlag() {
         return this.LbrBackflushFlag;
     }
@@ -91,6 +95,7 @@ public class BomLabor extends com.mg.merp.mfreference.model.BomRouteResource imp
     }
 
     @Column(name = "LBR_OH_BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.BomLabor.LbrOhBackflushFlag")
     public boolean isLbrOhBackflushFlag() {
         return this.LbrOhBackflushFlag;
     }

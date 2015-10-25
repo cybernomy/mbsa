@@ -24,6 +24,8 @@ import com.mg.merp.core.model.SysClient;
  */
 @Entity
 @Table(name = "PRICELISTSPEC")
+//$NON-NLS-1$
+@DataItemName("Reference.PriceListSpec")
 public class PriceListSpec extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -82,6 +84,8 @@ public class PriceListSpec extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -121,6 +125,8 @@ public class PriceListSpec extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "PRICE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("Reference.PrListSpec.Price")
     public BigDecimal getPrice() {
         return this.Price;
     }
@@ -130,6 +136,8 @@ public class PriceListSpec extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "LASTCOST", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("Reference.PrListSpec.LastCost")
     public BigDecimal getLastCost() {
         return this.LastCost;
     }
@@ -139,6 +147,8 @@ public class PriceListSpec extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "SNAME", columnDefinition = "VARCHAR", length = 80)
+    //$NON-NLS-1$
+    @DataItemName("Reference.PrListSpec.SName")
     public String getSName() {
         return this.SName;
     }
@@ -148,6 +158,8 @@ public class PriceListSpec extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "CANCELED", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Reference.PrListSpec.Canceled")
     public boolean isCanceled() {
         return this.Canceled;
     }
@@ -175,6 +187,8 @@ public class PriceListSpec extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "ACTDATE", nullable = false, columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("Reference.PrListSpec.ActDate")
     public Date getActDate() {
         return this.ActDate;
     }
@@ -193,6 +207,8 @@ public class PriceListSpec extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "INTERNALCODE", columnDefinition = "VARCHAR", length = 80)
+    //$NON-NLS-1$
+    @DataItemName("Reference.PrListSpec.InternalCode")
     public String getInternalCode() {
         return this.InternalCode;
     }

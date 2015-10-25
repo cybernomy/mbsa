@@ -112,6 +112,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -122,6 +123,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PRIORITY_ID")
+    @DataItemName("CRM.Operation.OpPriority")
     public OperationPriority getPriority() {
         return this.Priority;
     }
@@ -142,6 +144,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURATOR_ID")
+    @DataItemName("CRM.Operation.Curator")
     public User getCurator() {
         return this.Curator;
     }
@@ -152,6 +155,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESPONSIBLE_ID")
+    @DataItemName("CRM.Operation.Responsible")
     public User getResponsible() {
         return this.Responsible;
     }
@@ -192,6 +196,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "KIND_ID")
+    @DataItemName("CRM.Operation.OpKind")
     public OperationKind getKind() {
         return this.Kind;
     }
@@ -202,6 +207,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PURPOSE_ID")
+    @DataItemName("CRM.Operation.OpPurpose")
     public OperationPurpose getPurpose() {
         return this.Purpose;
     }
@@ -211,6 +217,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
+    @DataItemName("CRM.BigCode")
     public String getCode() {
         return this.Code;
     }
@@ -220,6 +227,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "IS_PLAN", columnDefinition = "SMALLINT")
+    @DataItemName("CRM.Operation.IsPlan")
     public boolean isPlan() {
         return this.IsPlan;
     }
@@ -229,6 +237,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "CREATE_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("CRM.Operation.CreateDate")
     public Date getCreateDate() {
         return this.CreateDate;
     }
@@ -238,6 +247,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PLAN_DATE_FROM", columnDefinition = "TIMESTAMP")
+    @DataItemName("CRM.Operation.PlanDateFrom")
     public Date getPlanDateFrom() {
         return this.PlanDateFrom;
     }
@@ -247,6 +257,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PLAN_DATE_TILL", columnDefinition = "TIMESTAMP")
+    @DataItemName("CRM.Operation.PlanDateTill")
     public Date getPlanDateTill() {
         return this.PlanDateTill;
     }
@@ -256,6 +267,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "FACT_DATE_FROM", columnDefinition = "TIMESTAMP")
+    @DataItemName("CRM.Operation.FactDateFrom")
     public Date getFactDateFrom() {
         return this.FactDateFrom;
     }
@@ -265,6 +277,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "FACT_DATE_TILL", columnDefinition = "TIMESTAMP")
+    @DataItemName("CRM.Operation.FactDateTill")
     public Date getFactDateTill() {
         return this.FactDateTill;
     }
@@ -274,6 +287,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "OPERATION_PLAN", columnDefinition = "VARCHAR", length = 2048)
+    @DataItemName("CRM.Operation.OpPlan")
     public String getOperationPlan() {
         return this.OperationPlan;
     }
@@ -283,6 +297,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "OPERATION_RESULT", columnDefinition = "VARCHAR", length = 2048)
+    @DataItemName("CRM.Operation.OpResult")
     public String getOperationResult() {
         return this.OperationResult;
     }
@@ -292,6 +307,7 @@ public class Operation extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "NEXT_OPERATION", columnDefinition = "VARCHAR", length = 2048)
+    @DataItemName("CRM.Operation.OpNext")
     public String getOperationNext() {
         return this.OperationNext;
     }

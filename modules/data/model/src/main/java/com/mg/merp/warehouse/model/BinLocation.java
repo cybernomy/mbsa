@@ -22,6 +22,8 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "WH_BIN_LOCATION")
+//$NON-NLS-1$
+@DataItemName("Warehouse.BinLocation")
 public class BinLocation extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -89,6 +91,8 @@ public class BinLocation extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -168,6 +172,8 @@ public class BinLocation extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "CODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("Warehouse.BinLocation.Code")
     public String getCode() {
         return this.Code;
     }
@@ -177,6 +183,8 @@ public class BinLocation extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 80)
+    //$NON-NLS-1$
+    @DataItemName("Warehouse.BinLocation.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -186,6 +194,8 @@ public class BinLocation extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "INFINITE_VOLUME", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Warehouse.BinLocation.InfiniteVolume")
     public boolean isInfiniteVolume() {
         return this.InfiniteVolume;
     }
@@ -195,6 +205,8 @@ public class BinLocation extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "MAXIMUM_VOLUME", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    //$NON-NLS-1$
+    @DataItemName("Warehouse.BinLocation.MaximumVolume")
     public BigDecimal getMaximumVolume() {
         return this.MaximumVolume;
     }
@@ -204,6 +216,8 @@ public class BinLocation extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "INFINITE_WEIGHT", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Warehouse.BinLocation.InfiniteWeight")
     public boolean isInfiniteWeight() {
         return this.InfiniteWeight;
     }
@@ -213,6 +227,8 @@ public class BinLocation extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "MAXIMUM_WEIGHT", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    //$NON-NLS-1$
+    @DataItemName("Warehouse.BinLocation.MaximumWeight")
     public BigDecimal getMaximumWeight() {
         return this.MaximumWeight;
     }
@@ -222,6 +238,8 @@ public class BinLocation extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "INFINITE_QUAN", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Warehouse.BinLocation.InfiniteQuan")
     public boolean isInfiniteQuan() {
         return this.InfiniteQuan;
     }
@@ -231,6 +249,8 @@ public class BinLocation extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "MAXIMUM_QUAN", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    //$NON-NLS-1$
+    @DataItemName("Warehouse.BinLocation.MaximumQuan")
     public BigDecimal getMaximumQuan() {
         return this.MaximumQuan;
     }

@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_OKP")
+@DataItemName("Reference.OKP")
 public class Okp extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -40,6 +41,7 @@ public class Okp extends com.mg.merp.core.model.AbstractEntity implements java.i
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -59,6 +61,7 @@ public class Okp extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Reference.BigCode")
     public String getCode() {
         return this.Code;
     }
@@ -68,6 +71,7 @@ public class Okp extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.Name")
     public String getName() {
         return this.Name;
     }

@@ -14,6 +14,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "OKDP")
+@DataItemName("Reference.OKDP")
 public class Okdp extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private String UpCode;
@@ -61,6 +62,7 @@ public class Okdp extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("Reference.Code")
     public String getCode() {
         return this.Code;
     }
@@ -70,6 +72,7 @@ public class Okdp extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "ONAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.Name")
     public String getOName() {
         return this.OName;
     }

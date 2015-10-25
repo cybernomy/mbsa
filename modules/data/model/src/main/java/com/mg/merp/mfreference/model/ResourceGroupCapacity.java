@@ -51,6 +51,7 @@ public class ResourceGroupCapacity extends com.mg.merp.core.model.AbstractEntity
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -80,6 +81,7 @@ public class ResourceGroupCapacity extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "PLANNING_CAPACITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("MfReference.RGCapacity.PlanCap")
     public BigDecimal getPlanningCapacity() {
         return this.PlanningCapacity;
     }
@@ -89,6 +91,7 @@ public class ResourceGroupCapacity extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "MAXIMUM_CAPACITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("MfReference.RGCapacity.MaxCap")
     public BigDecimal getMaximumCapacity() {
         return this.MaximumCapacity;
     }
@@ -98,6 +101,7 @@ public class ResourceGroupCapacity extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "EFF_ON_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("MfReference.RGCapacity.EffOnDate")
     public Date getEffOnDate() {
         return this.EffOnDate;
     }
@@ -107,6 +111,7 @@ public class ResourceGroupCapacity extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "EFF_OFF_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("MfReference.RGCapacity.EffOffDate")
     public Date getEffOffDate() {
         return this.EffOffDate;
     }

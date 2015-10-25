@@ -159,6 +159,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -169,6 +171,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONSIGNEE")
+    //$NON-NLS-1$
+    @DataItemName("Contract.Consignee")
     public Contractor getConsignee() {
         return this.Consignee;
     }
@@ -179,6 +183,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SHIPPER")
+    //$NON-NLS-1$
+    @DataItemName("Contract.Shipper")
     public Contractor getShipper() {
         return this.Shipper;
     }
@@ -199,6 +205,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COMPANY")
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.Company")
     public Contractor getCompany() {
         return this.Company;
     }
@@ -219,6 +227,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_ID")
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -229,6 +239,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESPONSIBLE")
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.Responsible")
     public Contractor getResponsible() {
         return this.Responsible;
     }
@@ -239,6 +251,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_RESPONSIBLE")
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.ContrResponsible")
     public PartnerEmpl getContractorResponsible() {
         return this.ContractorResponsible;
     }
@@ -249,6 +263,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BANKREQ_ID")
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.BankReq")
     public BankAccount getBankReq() {
         return this.BankReq;
     }
@@ -259,6 +275,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONSIGNEEBANKREQ_ID")
+    //$NON-NLS-1$
+    @DataItemName("Contract.ConsigneeBankReq")
     public BankAccount getConsigneeBankReq() {
         return this.ConsigneeBankReq;
     }
@@ -269,6 +287,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTORBANKREQ_ID")
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.ContrBankReq")
     public BankAccount getContractorBankReq() {
         return this.ContractorBankReq;
     }
@@ -279,6 +299,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SHIPPERBANKREQ_ID")
+    //$NON-NLS-1$
+    @DataItemName("Contract.ShipperBankReq")
     public BankAccount getShipperBankReq() {
         return this.ShipperBankReq;
     }
@@ -288,6 +310,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "PHASE_NUMBER", columnDefinition = "CHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.Number")
     public String getPhaseNumber() {
         return this.PhaseNumber;
     }
@@ -297,6 +321,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "BEGINACTION_DATE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.BeginActionDate")
     public Date getBeginActionDate() {
         return this.BeginActionDate;
     }
@@ -306,6 +332,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "ENDACTION_DATE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.EndActionDate")
     public Date getEndActionDate() {
         return this.EndActionDate;
     }
@@ -315,6 +343,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 2048)
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -324,6 +354,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 2048)
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.Comments")
     public String getComments() {
         return this.Comments;
     }
@@ -333,6 +365,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "SUMCUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.SumNat")
     public BigDecimal getSumCur() {
         return this.SumCur;
     }
@@ -379,6 +413,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "SHIPPEDPAYMENT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("Contract.ShippedPayment")
     public BigDecimal getShippedPayment() {
         return this.ShippedPayment;
     }
@@ -388,6 +424,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "RECEIVEDPAYMENT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("Contract.ReceivedPayment")
     public BigDecimal getReceivedPayment() {
         return this.ReceivedPayment;
     }
@@ -397,6 +435,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "SHIPPEDGOOD", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("Contract.ShippedGood")
     public BigDecimal getShippedGood() {
         return this.ShippedGood;
     }
@@ -406,6 +446,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "RECEIVEDGOOD", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("Contract.ReceivedGood")
     public BigDecimal getReceivedGood() {
         return this.ReceivedGood;
     }
@@ -415,6 +457,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Formula(value = "(select sum(phaseitemplan.factsum) from phaseitemplan where (phaseitemplan.kind = 0) and (phaseitemplan.phase_id = ID))")
+    //$NON-NLS-1$
+    @DataItemName("Contract.FactShippedPayment")
     public BigDecimal getFactShippedPayment() {
         return this.FactShippedPayment;
     }
@@ -424,6 +468,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Formula(value = "(select sum(phaseitemplan.factsum) from phaseitemplan where (phaseitemplan.kind = 1) and (phaseitemplan.phase_id = ID))")
+    //$NON-NLS-1$
+    @DataItemName("Contract.FactReceivedPayment")
     public BigDecimal getFactReceivedPayment() {
         return this.FactReceivedPayment;
     }
@@ -433,6 +479,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Formula(value = "(select sum(phaseitemplan.factsum) from phaseitemplan where (phaseitemplan.kind = 2) and (phaseitemplan.phase_id = ID))")
+    //$NON-NLS-1$
+    @DataItemName("Contract.FactShippedGood")
     public BigDecimal getFactShippedGood() {
         return this.FactShippedGood;
     }
@@ -442,6 +490,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Formula(value = "(select sum(phaseitemplan.factsum) from phaseitemplan where (phaseitemplan.kind = 3) and (phaseitemplan.phase_id = ID))")
+    //$NON-NLS-1$
+    @DataItemName("Contract.FactReceivedGood")
     public BigDecimal getFactReceivedGood() {
         return this.FactReceivedGood;
     }
@@ -451,6 +501,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Formula(value = "(select sum(phaseitemplan.plansum) from phaseitemplan where (phaseitemplan.kind = 0) and (phaseitemplan.phase_id = ID))")
+    //$NON-NLS-1$
+    @DataItemName("Contract.PhaseShippedPayment")
     public BigDecimal getItemShippedPayment() {
         return this.ItemShippedPayment;
     }
@@ -460,6 +512,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Formula(value = "(select sum(phaseitemplan.plansum) from phaseitemplan where (phaseitemplan.kind = 1) and (phaseitemplan.phase_id = ID))")
+    //$NON-NLS-1$
+    @DataItemName("Contract.PhaseReceivedPayment")
     public BigDecimal getItemReceivedPayment() {
         return this.ItemReceivedPayment;
     }
@@ -469,6 +523,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Formula(value = "(select sum(phaseitemplan.plansum) from phaseitemplan where (phaseitemplan.kind = 2) and (phaseitemplan.phase_id = ID))")
+    //$NON-NLS-1$
+    @DataItemName("Contract.PhaseShippedGood")
     public BigDecimal getItemShippedGood() {
         return this.ItemShippedGood;
     }
@@ -478,6 +534,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Formula(value = "(select sum(phaseitemplan.plansum) from phaseitemplan where (phaseitemplan.kind = 3) and (phaseitemplan.phase_id = ID))")
+    //$NON-NLS-1$
+    @DataItemName("Contract.PhaseReceivedGood")
     public BigDecimal getItemReceivedGood() {
         return this.ItemReceivedGood;
     }
@@ -487,6 +545,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "CONTRACTORBANKDAYS", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.ContractorBankDays")
     public Short getContractorBankDays() {
         return this.ContractorBankDays;
     }
@@ -496,6 +556,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "BANKDAYS", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.BankDays")
     public Short getBankDays() {
         return this.BankDays;
     }
@@ -505,6 +567,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "PENNY_RATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.PennyRate")
     public BigDecimal getPennyRate() {
         return this.PennyRate;
     }
@@ -514,6 +578,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "CONTRACTORPENNY_RATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    //$NON-NLS-1$
+    @DataItemName("Contract.Phase.ContractorPennyRate")
     public BigDecimal getContractorPennyRate() {
         return this.ContractorPennyRate;
     }
@@ -524,6 +590,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCTYPE")
+    //$NON-NLS-1$
+    @DataItemName("Document.DocType")
     public DocType getDocType() {
         return this.DocType;
     }
@@ -533,6 +601,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("Document.DocNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -542,6 +612,8 @@ public class Phase extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("Document.DocDate")
     public Date getDocDate() {
         return this.DocDate;
     }

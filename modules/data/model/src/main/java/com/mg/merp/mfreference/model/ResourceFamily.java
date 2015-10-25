@@ -43,6 +43,7 @@ public class ResourceFamily extends com.mg.merp.core.model.AbstractEntity implem
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -73,6 +74,7 @@ public class ResourceFamily extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CHILD_RESOURCE_GROUP_ID")
+    @DataItemName("MfReference.ResFam.ChildRG")
     public ResourceGroup getChildResourceGroup() {
         return this.ChildResourceGroup;
     }
@@ -83,6 +85,7 @@ public class ResourceFamily extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARENT_RESOURCE_GROUP_ID")
+    @DataItemName("MfReference.ResFam.ParentRG")
     public ResourceGroup getParentResourceGroup() {
         return this.ParentResourceGroup;
     }

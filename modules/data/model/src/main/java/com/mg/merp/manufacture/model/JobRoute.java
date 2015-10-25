@@ -22,6 +22,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "MF_JOB_ROUTE")
+@DataItemName("Manufacture.JobRoute")
 public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -138,6 +139,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -158,6 +160,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SCHED_OFFSET_TIME_UM")
+    @DataItemName("Manufacture.JobRoute.SchedOffSetTimeUm")
     public Measure getSchedOffSetTimeUM() {
         return this.SchedOffSetTimeUM;
     }
@@ -168,6 +171,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SETUP_TIME_UM")
+    @DataItemName("Manufacture.JobRoute.SetupTimeUm")
     public Measure getSetupTimeUM() {
         return this.SetupTimeUM;
     }
@@ -178,6 +182,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MOVE_TIME_UM")
+    @DataItemName("Manufacture.JobRoute.MoveTimeUm")
     public Measure getMoveTimeUM() {
         return this.MoveTimeUM;
     }
@@ -208,6 +213,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SCHED_TIME_UM")
+    @DataItemName("Manufacture.JobRoute.SchedTimeUm")
     public Measure getSchedTimeUM() {
         return this.SchedTimeUM;
     }
@@ -228,6 +234,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RUN_TIME_UM")
+    @DataItemName("Manufacture.JobRoute.RunTimeUm")
     public Measure getRunTimeUM() {
         return this.RunTimeUM;
     }
@@ -248,6 +255,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "QUEUE_TIME_UM")
+    @DataItemName("Manufacture.JobRoute.QueueTimeUm")
     public Measure getQueueTimeUM() {
         return this.QueueTimeUM;
     }
@@ -257,6 +265,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "OPER_NUM", columnDefinition = "INTEGER")
+    @DataItemName("Manufacture.JobRoute.OperNum")
     public Integer getOperNum() {
         return this.OperNum;
     }
@@ -266,6 +275,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Manufacture.JobRoute.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -275,6 +285,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "EFF_ON_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Manufacture.JobRoute.EffOnDate")
     public Date getEffOnDate() {
         return this.EffOnDate;
     }
@@ -284,6 +295,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "EFF_OFF_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Manufacture.JobRoute.EffOffDate")
     public Date getEffOffDate() {
         return this.EffOffDate;
     }
@@ -293,6 +305,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "COMPLETE_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("Manufacture.JobRoute.CompleteFlag")
     public boolean isCompleteFlag() {
         return this.CompleteFlag;
     }
@@ -302,6 +315,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "EFFICIENCY_FACTOR", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Manufacture.JobRoute.EfficiencyFactor")
     public BigDecimal getEfficiencyFactor() {
         return this.EfficiencyFactor;
     }
@@ -311,6 +325,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "START_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Manufacture.JobRoute.StartDate")
     public Date getStartDate() {
         return this.StartDate;
     }
@@ -320,6 +335,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "END_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Manufacture.JobRoute.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }
@@ -329,6 +345,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "START_TICK", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("Manufacture.JobRoute.StartTick")
     public Long getStartTick() {
         return this.StartTick;
     }
@@ -338,6 +355,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "END_TICK", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("Manufacture.JobRoute.EndTick")
     public Long getEndTick() {
         return this.EndTick;
     }
@@ -347,6 +365,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "MOVE_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("Manufacture.JobRoute.MoveTicks")
     public Long getMoveTicks() {
         return this.MoveTicks;
     }
@@ -356,6 +375,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SETUP_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("Manufacture.JobRoute.SetupTicks")
     public Long getSetupTicks() {
         return this.SetupTicks;
     }
@@ -365,6 +385,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "RUN_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("Manufacture.JobRoute.RunTicks")
     public Long getRunTicks() {
         return this.RunTicks;
     }
@@ -374,6 +395,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SCHED_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("Manufacture.JobRoute.SchedTicks")
     public Long getSchedTicks() {
         return this.SchedTicks;
     }
@@ -383,6 +405,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SCHED_OFFSET_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("Manufacture.JobRoute.SchedOffsetTicks")
     public Long getSchedOffsetTicks() {
         return this.SchedOffsetTicks;
     }
@@ -392,6 +415,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "QUEUE_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("Manufacture.JobRoute.QueueTicks")
     public Long getQueueTicks() {
         return this.QueueTicks;
     }
@@ -401,6 +425,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "FREEZE_SCHEDULE_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("Manufacture.JobRoute.FreezeScheduleFlag")
     public boolean isFreezeScheduleFlag() {
         return this.FreezeScheduleFlag;
     }
@@ -410,6 +435,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "QTY_RECEIVED", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Manufacture.JobRoute.QtyReceived")
     public BigDecimal getQtyReceived() {
         return this.QtyReceived;
     }
@@ -419,6 +445,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "QTY_COMPLETE", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Manufacture.JobRoute.QtyComplete")
     public BigDecimal getQtyComplete() {
         return this.QtyComplete;
     }
@@ -428,6 +455,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "QTY_SCRAPPED", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Manufacture.JobRoute.QtyScrapped")
     public BigDecimal getQtyScrapped() {
         return this.QtyScrapped;
     }
@@ -437,6 +465,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "QTY_MOVED", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Manufacture.JobRoute.QtyMoved")
     public BigDecimal getQtyMoved() {
         return this.QtyMoved;
     }
@@ -446,6 +475,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "CONTROL_POINT_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("Manufacture.JobRoute.ControlPointFlag")
     public boolean isControlPointFlag() {
         return this.ControlPointFlag;
     }
@@ -455,6 +485,7 @@ public class JobRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Manufacture.JobRoute.Comment")
     public String getComment() {
         return this.Comment;
     }

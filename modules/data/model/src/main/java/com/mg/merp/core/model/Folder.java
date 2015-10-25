@@ -16,6 +16,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "FOLDER")
+@DataItemName("Reference.Folder")
 public class Folder extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -52,6 +53,7 @@ public class Folder extends com.mg.merp.core.model.AbstractEntity implements jav
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -81,6 +83,7 @@ public class Folder extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "FNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.Folder.Name")
     public String getFName() {
         return this.FName;
     }
@@ -108,6 +111,7 @@ public class Folder extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "FOLDER_TAG", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.FolderTag")
     public String getFolderTag() {
         return this.FolderTag;
     }

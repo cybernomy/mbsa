@@ -20,6 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "CRM_RELATION")
+@DataItemName("CRM.Relation")
 public class Relation extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -106,6 +107,7 @@ public class Relation extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -166,6 +168,7 @@ public class Relation extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARENT_ID")
+    @DataItemName("CRM.Relation.Parent")
     public Relation getParent() {
         return this.Parent;
     }
@@ -186,6 +189,7 @@ public class Relation extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURATOR_ID")
+    @DataItemName("CRM.Relation.Curator")
     public User getCurator() {
         return this.Curator;
     }
@@ -196,6 +200,7 @@ public class Relation extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESPONSIBLE_ID")
+    @DataItemName("CRM.Relation.Responsible")
     public User getResponsible() {
         return this.Responsible;
     }
@@ -246,6 +251,7 @@ public class Relation extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LEGAL_PERSON_ID")
+    @DataItemName("CRM.Relation.LegalPerson")
     public Contractor getLegalPerson() {
         return this.LegalPerson;
     }
@@ -295,6 +301,7 @@ public class Relation extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
+    @DataItemName("CRM.BigCode")
     public String getCode() {
         return this.Code;
     }
@@ -304,6 +311,7 @@ public class Relation extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("CRM.BigName")
     public String getName() {
         return this.Name;
     }
@@ -313,6 +321,7 @@ public class Relation extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "IS_LEGAL_PERSON", columnDefinition = "SMALLINT")
+    @DataItemName("CRM.Relation.IsLegalPerson")
     public boolean isLegalPerson() {
         return this.IsLegalPerson;
     }
@@ -322,6 +331,7 @@ public class Relation extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "INFO", columnDefinition = "VARCHAR", length = 2048)
+    @DataItemName("CRM.Relation.Info")
     public String getInfo() {
         return this.Info;
     }
@@ -331,6 +341,7 @@ public class Relation extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NICKNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("CRM.Relation.NickName")
     public String getNickName() {
         return this.NickName;
     }

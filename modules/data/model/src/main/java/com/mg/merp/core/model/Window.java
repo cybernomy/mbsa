@@ -19,6 +19,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SYS_WINDOW")
+@DataItemName("Core.Window")
 public class Window extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -56,6 +57,7 @@ public class Window extends com.mg.merp.core.model.AbstractEntity implements jav
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -94,6 +96,7 @@ public class Window extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "NAME", unique = true, nullable = false, columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Core.Window.Name")
     public String getName() {
         return this.Name;
     }
@@ -103,6 +106,7 @@ public class Window extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "IMPL_NAME", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Core.Window.Implementation")
     public String getImplementation() {
         return this.Implementation;
     }
@@ -112,6 +116,7 @@ public class Window extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 1024)
+    @DataItemName("Core.Description")
     public String getDescription() {
         return this.Description;
     }

@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PP_INVENTORY_FORECAST")
+@DataItemName("Planning.InventoryForecast")
 public class InventoryForecast extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -40,6 +41,7 @@ public class InventoryForecast extends com.mg.merp.core.model.AbstractEntity imp
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -59,6 +61,7 @@ public class InventoryForecast extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "INVENTORY_FORECAST_CODE", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Planning.Code")
     public String getInventoryForecastCode() {
         return this.InventoryForecastCode;
     }
@@ -68,6 +71,7 @@ public class InventoryForecast extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Planning.Description")
     public String getDescription() {
         return this.Description;
     }

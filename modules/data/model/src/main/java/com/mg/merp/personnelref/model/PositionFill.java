@@ -19,6 +19,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SAL_POSITION_FILL")
+@DataItemName("Salary.PositionFill")
 public class PositionFill extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -73,6 +74,7 @@ public class PositionFill extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -103,6 +105,7 @@ public class PositionFill extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "POSITIONFILLKIND_ID")
+    @DataItemName("Salary.PosFill.PosFillKind")
     public PositionFillKind getPositionFillKind() {
         return this.PositionFillKind;
     }
@@ -132,6 +135,7 @@ public class PositionFill extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "BEGINDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Salary.PosFill.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -141,6 +145,7 @@ public class PositionFill extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "ENDDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Salary.PosFill.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }
@@ -150,6 +155,7 @@ public class PositionFill extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DOCTYPE", columnDefinition = "CHAR", length = 15)
+    @DataItemName("Salary.PosFill.DocType")
     public String getDocType() {
         return this.DocType;
     }
@@ -159,6 +165,7 @@ public class PositionFill extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Salary.PosFill.DateNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -168,6 +175,7 @@ public class PositionFill extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Salary.PosFill.DateDate")
     public Date getDocDate() {
         return this.DocDate;
     }
@@ -177,6 +185,7 @@ public class PositionFill extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "RATE_NUMBER", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Salary.PosFill.RateNumber")
     public BigDecimal getRateNumber() {
         return this.RateNumber;
     }
@@ -186,6 +195,7 @@ public class PositionFill extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "IS_BASIC", columnDefinition = "SMALLINT")
+    @DataItemName("Salary.PosFill.IsBasic")
     public boolean isBasic() {
         return this.IsBasic;
     }

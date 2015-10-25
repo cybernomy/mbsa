@@ -59,6 +59,8 @@ public class ScheduleHead extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -79,6 +81,8 @@ public class ScheduleHead extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEFAULT_PATTERN_HEAD_ID")
+    //$NON-NLS-1$
+    @DataItemName("Table.Schedule.DefaultPatternHead")
     public PatternHead getDefaultPatternHead() {
         return this.DefaultPatternHead;
     }
@@ -89,6 +93,8 @@ public class ScheduleHead extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "HOLIDAY_WORK_TIME_KIND_ID")
+    //$NON-NLS-1$
+    @DataItemName("Table.Schedule.HolidayWorkTime")
     public TimeKind getHolidayWorkTimeKind() {
         return this.HolidayWorkTimeKind;
     }
@@ -99,6 +105,8 @@ public class ScheduleHead extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WORK_SCHEDULE_ID", unique = true)
+    //$NON-NLS-1$
+    @DataItemName("Table.Schedule.WorkSchedule")
     public WorkSchedule getWorkSchedule() {
         return this.WorkSchedule;
     }
@@ -118,6 +126,8 @@ public class ScheduleHead extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "PREHOLIDAY_REDUCTION", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    //$NON-NLS-1$
+    @DataItemName("Table.Schedule.PreHolidayReduction")
     public BigDecimal getPreHolidayReduction() {
         return this.PreHolidayReduction;
     }

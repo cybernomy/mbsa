@@ -48,6 +48,7 @@ public class PersonnelReward extends com.mg.merp.core.model.AbstractEntity imple
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -78,6 +79,7 @@ public class PersonnelReward extends com.mg.merp.core.model.AbstractEntity imple
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ORIGINAL_DOCUMENT_ID")
+    @DataItemName("PersonnelRef.Personnel.OriginalDocument")
     public OriginalDocument getOriginalDocument() {
         return this.OriginalDocument;
     }
@@ -87,6 +89,7 @@ public class PersonnelReward extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "REWARD_NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.Personnel.RewardName")
     public String getRewardName() {
         return this.RewardName;
     }

@@ -128,6 +128,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARTNERTO_BANKREQ")
+    @DataItemName("Warehouse.BillHead.PartnerToBankReq")
     public BankAccount getPartnerToBankReq() {
         return this.PartnerToBankReq;
     }
@@ -138,6 +139,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONSIGNEE")
+    @DataItemName("Warehouse.BillHead.Consignee")
     public Contractor getConsignee() {
         return this.Consignee;
     }
@@ -148,6 +150,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SHIPPER")
+    @DataItemName("Warehouse.BillHead.Shipper")
     public Contractor getShipper() {
         return this.Shipper;
     }
@@ -158,6 +161,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESPONSIBLE")
+    @DataItemName("Warehouse.BillHead.Responsible")
     public Contractor getResponsible() {
         return this.Responsible;
     }
@@ -168,6 +172,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARTNERFROM_BANKREQ")
+    @DataItemName("Warehouse.BillHead.PartnerFromBankReq")
     public BankAccount getPartnerFromBankReq() {
         return this.PartnerFromBankReq;
     }
@@ -178,6 +183,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONSUMER")
+    @DataItemName("Warehouse.BillHead.Consumer")
     public Contractor getConsumer() {
         return this.Consumer;
     }
@@ -187,6 +193,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "SUMMACUR_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Warehouse.BillHead.SummaCurWithDiscount")
     public BigDecimal getSummaCurWithDiscount() {
         return this.SummaCurWithDiscount;
     }
@@ -196,6 +203,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "SUMMANAT_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Warehouse.BillHead.SummaNatWithDiscount")
     public BigDecimal getSummaNatWithDiscount() {
         return this.SummaNatWithDiscount;
     }
@@ -205,6 +213,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "ADD_EXPENSES", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Warehouse.BillHead.AddExpenses")
     public BigDecimal getAddExpenses() {
         return this.AddExpenses;
     }
@@ -214,6 +223,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "DISCOUNT_ON_DOC", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Warehouse.BillHead.DiscountOnDoc")
     public BigDecimal getDiscountOnDoc() {
         return this.DiscountOnDoc;
     }
@@ -223,6 +233,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "DISCOUNT_ON_LINE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Warehouse.BillHead.DiscountOnLine")
     public BigDecimal getDiscountOnLine() {
         return this.DiscountOnLine;
     }
@@ -241,6 +252,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "ACCEPTANCETERM", columnDefinition = "INTEGER")
+    @DataItemName("Warehouse.BillHead.AcceptanceTerm")
     public Integer getAcceptanceTerm() {
         return this.AcceptanceTerm;
     }
@@ -250,6 +262,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "ACCEPTANCEDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Warehouse.BillHead.AcceptanceDate")
     public Date getAcceptanceDate() {
         return this.AcceptanceDate;
     }
@@ -259,6 +272,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "ACCEPTANCESUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Warehouse.BillHead.AcceptanceSum")
     public BigDecimal getAcceptanceSum() {
         return this.AcceptanceSum;
     }
@@ -268,6 +282,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "PAYMENTTERM", columnDefinition = "INTEGER")
+    @DataItemName("Warehouse.BillHead.PaymentTerm")
     public Integer getPaymentTerm() {
         return this.PaymentTerm;
     }
@@ -277,6 +292,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "PLANPAYMENTDATEDOC", columnDefinition = "TIMESTAMP")
+    @DataItemName("Warehouse.BillHead.PlanPaymentDateDoc")
     public Date getPlanPaymentDateDoc() {
         return this.PlanPaymentDateDoc;
     }
@@ -286,6 +302,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "PLANPAYMENTDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Warehouse.BillHead.PlanPaymentDate")
     public Date getPlanPaymentDate() {
         return this.PlanPaymentDate;
     }
@@ -295,6 +312,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "PAYMENTDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Warehouse.BillHead.PaymentDate")
     public Date getPaymentDate() {
         return this.PaymentDate;
     }
@@ -304,6 +322,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "PAYMENTSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Warehouse.BillHead.PaymentSum")
     public BigDecimal getPaymentSum() {
         return this.PaymentSum;
     }
@@ -322,6 +341,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 1024)
+    @DataItemName("Warehouse.BillHead.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -331,6 +351,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "TOPAYDOCNUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Warehouse.BillHead.ToPayDocNumber")
     public String getToPayDocNumber() {
         return this.ToPayDocNumber;
     }
@@ -340,6 +361,7 @@ public class BillHead extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "TOPAYDOCDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Warehouse.BillHead.ToPayDocDate")
     public Date getToPayDocDate() {
         return this.ToPayDocDate;
     }

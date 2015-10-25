@@ -18,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ACC_AMORTIZATION")
+@DataItemName("Account.Amortization")
 public class Amortization extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -99,6 +100,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -128,6 +130,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "N_MONTHS", columnDefinition = "SMALLINT")
+    @DataItemName("Account.Amortization.NMonths")
     public Short getNMonths() {
         return this.NMonths;
     }
@@ -146,6 +149,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "BALANCECOST", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Amortization.BalanceCost")
     public BigDecimal getBalanceCost() {
         return this.BalanceCost;
     }
@@ -155,6 +159,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "AMRATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Account.Amortization.AmRate")
     public BigDecimal getAmRate() {
         return this.AmRate;
     }
@@ -164,6 +169,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUM_RATE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Amortization.SumRate")
     public BigDecimal getSumRate() {
         return this.SumRate;
     }
@@ -173,6 +179,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "EXPLPERIOD_Y", columnDefinition = "FLOAT")
+    @DataItemName("Account.Amortization.ExplPeriodY")
     public Float getExplPeriodY() {
         return this.ExplPeriodY;
     }
@@ -182,6 +189,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "EXPLPERIOD_M", columnDefinition = "FLOAT")
+    @DataItemName("Account.Amortization.ExplPeriodM")
     public Float getExplPeriodM() {
         return this.ExplPeriodM;
     }
@@ -191,6 +199,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUM_PERIOD", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Amortization.SumPeriod")
     public BigDecimal getSumPeriod() {
         return this.SumPeriod;
     }
@@ -200,6 +209,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "PRODUCT_EST", columnDefinition = "FLOAT")
+    @DataItemName("Account.Amortization.ProductEst")
     public Float getProductEst() {
         return this.ProductEst;
     }
@@ -209,6 +219,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "PRODUCT_FACT", columnDefinition = "FLOAT")
+    @DataItemName("Account.Amortization.ProductFact")
     public Float getProductFact() {
         return this.ProductFact;
     }
@@ -218,6 +229,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUM_PRODUCT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Amortization.SumProduct")
     public BigDecimal getSumProduct() {
         return this.SumProduct;
     }
@@ -227,6 +239,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "FACTOR", columnDefinition = "FLOAT")
+    @DataItemName("Account.Amortization.Factor")
     public Float getFactor() {
         return this.Factor;
     }
@@ -236,6 +249,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUM_ADD", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Amortization.SumAdd")
     public BigDecimal getSumAdd() {
         return this.SumAdd;
     }
@@ -245,6 +259,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DEPRVALUE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Amortization.EndCost")
     public BigDecimal getDeprValue() {
         return this.DeprValue;
     }
@@ -254,6 +269,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUM_DEPRVALUE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Amortization.SumDeprValue")
     public BigDecimal getSumDeprValue() {
         return this.SumDeprValue;
     }
@@ -263,6 +279,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUM_TOTAL", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Amortization.SumTotal")
     public BigDecimal getSumTotal() {
         return this.SumTotal;
     }
@@ -272,6 +289,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "IMONTH", nullable = false, columnDefinition = "SMALLINT")
+    @DataItemName("Account.Amortization.IMonth")
     public short getIMonth() {
         return this.IMonth;
     }
@@ -281,6 +299,7 @@ public class Amortization extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "ENDCOST", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.Inventory.EndCost")
     public BigDecimal getEndCost() {
         return this.EndCost;
     }

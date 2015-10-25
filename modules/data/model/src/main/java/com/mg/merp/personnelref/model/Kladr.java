@@ -55,6 +55,8 @@ public class Kladr extends com.mg.merp.core.model.AbstractEntity implements java
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -74,6 +76,8 @@ public class Kladr extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "KNAME", columnDefinition = "VARCHAR", length = 40)
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Kladr.Name")
     public String getKName() {
         return this.KName;
     }
@@ -83,6 +87,8 @@ public class Kladr extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "KTYPE", columnDefinition = "VARCHAR", length = 10)
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Kladr.Type")
     public String getKType() {
         return this.KType;
     }
@@ -92,6 +98,8 @@ public class Kladr extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "KCODE", columnDefinition = "CHAR", length = 11)
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Kladr.Code")
     public String getKCode() {
         return this.KCode;
     }
@@ -101,6 +109,8 @@ public class Kladr extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "POST_INDEX", columnDefinition = "CHAR", length = 6)
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Kladr.PostIndex")
     public String getPostIndex() {
         return this.PostIndex;
     }
@@ -110,6 +120,8 @@ public class Kladr extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "GNINMB", columnDefinition = "CHAR", length = 4)
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Kladr.GnInMb")
     public String getGnInMb() {
         return this.GnInMb;
     }
@@ -119,6 +131,8 @@ public class Kladr extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "OCATD", columnDefinition = "CHAR", length = 11)
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Kladr.Ocatd")
     public String getOcatd() {
         return this.Ocatd;
     }
@@ -128,6 +142,8 @@ public class Kladr extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "SYSCOD", columnDefinition = "CHAR", length = 10)
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Kladr.SysCod")
     public String getSysCod() {
         return this.SysCod;
     }

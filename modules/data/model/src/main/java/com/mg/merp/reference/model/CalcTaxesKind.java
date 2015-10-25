@@ -20,6 +20,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "CALCTAXESKIND")
+@DataItemName("Reference.CalcTaxesKind")
 public class CalcTaxesKind extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -46,6 +47,7 @@ public class CalcTaxesKind extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -65,6 +67,7 @@ public class CalcTaxesKind extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Reference.Code")
     public String getCode() {
         return this.Code;
     }
@@ -74,6 +77,7 @@ public class CalcTaxesKind extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "KNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.Name")
     public String getKName() {
         return this.KName;
     }

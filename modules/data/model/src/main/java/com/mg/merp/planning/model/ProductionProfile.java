@@ -64,6 +64,8 @@ public class ProductionProfile extends com.mg.merp.core.model.AbstractEntity imp
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -74,6 +76,8 @@ public class ProductionProfile extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PLANNING_LEVEL_ID")
+    //$NON-NLS-1$
+    @DataItemName("Planning.Profile.Level")
     public PlanningLevel getPlanningLevel() {
         return this.PlanningLevel;
     }
@@ -94,6 +98,8 @@ public class ProductionProfile extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "GENERIC_ITEM_ID")
+    //$NON-NLS-1$
+    @DataItemName("Planning.Profile.GenericItem")
     public GenericItem getGenericItem() {
         return this.GenericItem;
     }
@@ -103,6 +109,8 @@ public class ProductionProfile extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "START_BUCKET_OFFSET", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Planning.Profile.StartBucketOffset")
     public Short getStartBucketOffset() {
         return this.StartBucketOffset;
     }
@@ -112,6 +120,8 @@ public class ProductionProfile extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "END_BUCKET_OFFSET", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("Planning.Profile.EndBucketOffset")
     public Short getEndBucketOffset() {
         return this.EndBucketOffset;
     }
@@ -121,6 +131,8 @@ public class ProductionProfile extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "PRODUCTION_RATIO", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    //$NON-NLS-1$
+    @DataItemName("Planning.Profile.ProductionRatio")
     public BigDecimal getProductionRatio() {
         return this.ProductionRatio;
     }
@@ -130,6 +142,8 @@ public class ProductionProfile extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "BUCKET_PRODUCTION_RATIO", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    //$NON-NLS-1$
+    @DataItemName("Planning.Profile.BucketProductionRatio")
     public BigDecimal getBucketProductionRatio() {
         return this.BucketProductionRatio;
     }
@@ -139,6 +153,8 @@ public class ProductionProfile extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Formula(value = "(select plb1.start_date from pp_planning_level_bucket plb1 where (plb1.planning_level_id = PLANNING_LEVEL_ID) and (plb1.bucket_offset = START_BUCKET_OFFSET))")
+    //$NON-NLS-1$
+    @DataItemName("Planning.Profile.StartBucketStartDate")
     public Date getStartBucketStartDate() {
         return this.StartBucketStartDate;
     }
@@ -148,6 +164,8 @@ public class ProductionProfile extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Formula(value = "(select plb2.start_date from pp_planning_level_bucket plb2 where (plb2.planning_level_id = PLANNING_LEVEL_ID) and (plb2.bucket_offset = END_BUCKET_OFFSET))")
+    //$NON-NLS-1$
+    @DataItemName("Planning.Profile.EndBucketStartDate")
     public Date getEndBucketStartDate() {
         return this.EndBucketStartDate;
     }
@@ -157,6 +175,8 @@ public class ProductionProfile extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Formula(value = "(select plb1.end_date from pp_planning_level_bucket plb1 where (plb1.planning_level_id = PLANNING_LEVEL_ID) and (plb1.bucket_offset = START_BUCKET_OFFSET))")
+    //$NON-NLS-1$
+    @DataItemName("Planning.Profile.StartBucketEndDate")
     public Date getStartBucketEndDate() {
         return this.StartBucketEndDate;
     }
@@ -166,6 +186,8 @@ public class ProductionProfile extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Formula(value = "(select plb2.end_date from pp_planning_level_bucket plb2 where (plb2.planning_level_id = PLANNING_LEVEL_ID) and (plb2.bucket_offset = END_BUCKET_OFFSET))")
+    //$NON-NLS-1$
+    @DataItemName("Planning.Profile.EndBucketEndDate")
     public Date getEndBucketEndDate() {
         return this.EndBucketEndDate;
     }

@@ -75,6 +75,7 @@ public class BomMachine extends com.mg.merp.mfreference.model.BomRouteResource i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MCH_OH_RATE_CUR_CODE")
+    @DataItemName("MfReference.BomMachine.RateCur")
     public Currency getMchOhRateCurrency() {
         return this.MchOhRateCurrency;
     }
@@ -85,6 +86,7 @@ public class BomMachine extends com.mg.merp.mfreference.model.BomRouteResource i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MCH_RATE_CUR_CODE")
+    @DataItemName("MfReference.BomMachine.Currency")
     public Currency getMchRateCurrency() {
         return this.MchRateCurrency;
     }
@@ -95,6 +97,7 @@ public class BomMachine extends com.mg.merp.mfreference.model.BomRouteResource i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MCH_OH_COST_CATEGORY_ID")
+    @DataItemName("MfReference.BomMachine.OhCostCategories")
     public CostCategories getMchOhCostCategory() {
         return this.MchOhCostCategory;
     }
@@ -105,6 +108,7 @@ public class BomMachine extends com.mg.merp.mfreference.model.BomRouteResource i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RUN_TIME_MCH_UM")
+    @DataItemName("MfReference.BomMachine.Measure")
     public Measure getRunTimeMchUm() {
         return this.RunTimeMchUm;
     }
@@ -115,6 +119,7 @@ public class BomMachine extends com.mg.merp.mfreference.model.BomRouteResource i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MCH_COST_CATEGORY_ID")
+    @DataItemName("MfReference.BomMachine.CostCategories")
     public CostCategories getMchCostCategory() {
         return this.MchCostCategory;
     }
@@ -125,6 +130,7 @@ public class BomMachine extends com.mg.merp.mfreference.model.BomRouteResource i
 
     @Column(name = "TIME_RATE_FLAG")
     @Enumerated(EnumType.ORDINAL)
+    @DataItemName("MfReference.BomMachine.TimeRateFlag")
     public TimeRateFlag getTimeRateFlag() {
         return this.TimeRateFlag;
     }
@@ -134,6 +140,7 @@ public class BomMachine extends com.mg.merp.mfreference.model.BomRouteResource i
     }
 
     @Column(name = "RUN_TICKS_MCH", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("MfReference.BomMachine.RunTicksMch")
     public long getRunTicksMch() {
         return this.RunTicksMch;
     }
@@ -143,6 +150,7 @@ public class BomMachine extends com.mg.merp.mfreference.model.BomRouteResource i
     }
 
     @Column(name = "MCH_NUMBER", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.BomMachine.MchNumber")
     public BigDecimal getMchNumber() {
         return this.MchNumber;
     }
@@ -153,6 +161,7 @@ public class BomMachine extends com.mg.merp.mfreference.model.BomRouteResource i
 
     @Column(name = "MCH_RECOVERY_FLAG")
     @Enumerated(EnumType.ORDINAL)
+    @DataItemName("MfReference.BomMachine.MchRecoveryFlag")
     public MachineRecoveryFlag getMchRecoveryFlag() {
         return this.MchRecoveryFlag;
     }
@@ -162,6 +171,7 @@ public class BomMachine extends com.mg.merp.mfreference.model.BomRouteResource i
     }
 
     @Column(name = "MCH_RATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.BomMachine.MchRate")
     public BigDecimal getMchRate() {
         return this.MchRate;
     }
@@ -171,6 +181,7 @@ public class BomMachine extends com.mg.merp.mfreference.model.BomRouteResource i
     }
 
     @Column(name = "MCH_BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.BomMachine.MchBackflushFlag")
     public boolean isMchBackflushFlag() {
         return this.MchBackflushFlag;
     }
@@ -190,6 +201,7 @@ public class BomMachine extends com.mg.merp.mfreference.model.BomRouteResource i
     }
 
     @Column(name = "MCH_OH_RATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.BomMachine.MchOhRate")
     public BigDecimal getMchOhRate() {
         return this.MchOhRate;
     }
@@ -199,6 +211,7 @@ public class BomMachine extends com.mg.merp.mfreference.model.BomRouteResource i
     }
 
     @Column(name = "MCH_OH_RATIO", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.BomMachine.MchOhRatio")
     public BigDecimal getMchOhRatio() {
         return this.MchOhRatio;
     }
@@ -208,6 +221,7 @@ public class BomMachine extends com.mg.merp.mfreference.model.BomRouteResource i
     }
 
     @Column(name = "MCH_OH_BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.BomMachine.MchOhBackflushFlag")
     public boolean isMchOhBackflushFlag() {
         return this.MchOhBackflushFlag;
     }

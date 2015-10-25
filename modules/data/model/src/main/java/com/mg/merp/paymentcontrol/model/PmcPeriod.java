@@ -85,6 +85,8 @@ public class PmcPeriod extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Payment.Name")
     public String getName() {
         return this.Name;
     }
@@ -94,6 +96,8 @@ public class PmcPeriod extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DATEFROM", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Payment.ActDateFrom")
     public Date getDateFrom() {
         return this.DateFrom;
     }
@@ -103,6 +107,8 @@ public class PmcPeriod extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DATETILL", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("PaymentControl.Payment.ActDateTill")
     public Date getDateTill() {
         return this.DateTill;
     }

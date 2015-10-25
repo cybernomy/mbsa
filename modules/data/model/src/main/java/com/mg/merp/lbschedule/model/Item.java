@@ -156,6 +156,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -166,6 +168,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FROM_ID")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.From")
     public Contractor getFrom() {
         return this.From;
     }
@@ -186,6 +190,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PRICETYPE_ID")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.PriceType")
     public PriceType getPriceType() {
         return this.PriceType;
     }
@@ -196,6 +202,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DATERELITEM_ID")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.DateRelItem")
     public Item getDateRelItem() {
         return this.DateRelItem;
     }
@@ -206,6 +214,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @Column(name = "ITEMKIND_ID")
     @Enumerated(EnumType.ORDINAL)
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.ItemKind")
     public ItemKind getItemKind() {
         return this.ItemKind;
     }
@@ -216,6 +226,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TO_ID")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.To")
     public Contractor getTo() {
         return this.To;
     }
@@ -236,6 +248,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SUMRELITEM_ID")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.SumRelItem")
     public Item getSumRelItem() {
         return this.SumRelItem;
     }
@@ -256,6 +270,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESOURCETO_ID")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.ResourceTo")
     public PmcResource getResourceTo() {
         return this.ResourceTo;
     }
@@ -276,6 +292,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESOURCEFROM_ID")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.ResourceFrom")
     public PmcResource getResourceFrom() {
         return this.ResourceFrom;
     }
@@ -305,6 +323,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 256)
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.Comment")
     public String getComments() {
         return this.Comments;
     }
@@ -314,6 +334,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "NUM", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.Num")
     public Short getNum() {
         return this.Num;
     }
@@ -334,6 +356,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @Column(name = "TOSOURCE")
     @Enumerated(EnumType.ORDINAL)
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.ToSource")
     public ItemContractorSource getToSource() {
         return this.ToSource;
     }
@@ -344,6 +368,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @Column(name = "FROMSOURCE")
     @Enumerated(EnumType.ORDINAL)
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.FromSource")
     public ItemContractorSource getFromSource() {
         return this.FromSource;
     }
@@ -363,6 +389,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "HAS_SPEC", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.HasSpec")
     public boolean hasSpec() {
         return this.HasSpec;
     }
@@ -381,6 +409,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_ABS_DATE", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.IsAbsDate")
     public boolean isAbsDate() {
         return this.IsAbsDate;
     }
@@ -400,6 +430,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "DATEOFFSET", columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.DateOffSet")
     public Integer getDateOffSet() {
         return this.DateOffSet;
     }
@@ -418,6 +450,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_ABS_SUM", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.IsAbsSum")
     public boolean isAbsSum() {
         return this.IsAbsSum;
     }
@@ -427,6 +461,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "RESULTDATE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.ResultDate")
     public Date getResultDate() {
         return this.ResultDate;
     }
@@ -436,6 +472,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_RELFACT", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.IsRelFact")
     public boolean isRelFact() {
         return this.IsRelFact;
     }
@@ -445,6 +483,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "FACTSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.FactSum")
     public BigDecimal getFactSum() {
         return this.FactSum;
     }
@@ -454,6 +494,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "RESULTSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.ResultSum")
     public BigDecimal getResultSum() {
         return this.ResultSum;
     }
@@ -463,6 +505,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_DATERELDOC", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.IsDateRelDoc")
     public boolean isDateRelDoc() {
         return this.IsDateRelDoc;
     }
@@ -472,6 +516,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_SUMRELDOC", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.IsSumRelDoc")
     public boolean isSumRelDoc() {
         return this.IsSumRelDoc;
     }
@@ -481,6 +527,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "PERC", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.Perc")
     public BigDecimal getPerc() {
         return this.Perc;
     }
@@ -490,6 +538,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "RESULTDATEEND", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.ResultDateEnd")
     public Date getResultDateEnd() {
         return this.ResultDateEnd;
     }
@@ -499,6 +549,8 @@ public class Item extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_DATERELEND", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("LbSchedule.Item.IsDateRelEnd")
     public boolean isDateRelEnd() {
         return this.IsDateRelEnd;
     }

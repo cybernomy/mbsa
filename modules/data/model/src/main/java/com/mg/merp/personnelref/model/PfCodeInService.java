@@ -82,6 +82,7 @@ public class PfCodeInService extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("PersonnelRef.CodeInService.Comment")
     public String getComment() {
         return this.Comment;
     }

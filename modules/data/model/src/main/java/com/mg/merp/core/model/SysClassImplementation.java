@@ -18,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SYS_CLASS_IMPL")
+@DataItemName("Core.SysClassImplementation")
 public class SysClassImplementation extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -54,6 +55,7 @@ public class SysClassImplementation extends com.mg.merp.core.model.AbstractEntit
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -101,6 +103,7 @@ public class SysClassImplementation extends com.mg.merp.core.model.AbstractEntit
     }
 
     @Column(name = "NAME", nullable = false, columnDefinition = "VARCHAR", length = 128)
+    @DataItemName("Core.SysClassImplementation.Name")
     public String getName() {
         return this.Name;
     }

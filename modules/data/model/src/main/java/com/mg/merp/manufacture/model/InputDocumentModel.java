@@ -68,6 +68,7 @@ public class InputDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "EMPLOYEE_ID")
+    @DataItemName("Manufacture.InputDocModel.Employee")
     public Contractor getEmployee() {
         return this.Employee;
     }
@@ -88,6 +89,7 @@ public class InputDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WC_ID")
+    @DataItemName("Manufacture.InputDocModel.WC")
     public WorkCenter getWC() {
         return this.WC;
     }
@@ -98,6 +100,7 @@ public class InputDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CREW_ID")
+    @DataItemName("Manufacture.InputDocModel.Crew")
     public Crew getCrew() {
         return this.Crew;
     }
@@ -108,6 +111,7 @@ public class InputDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_ID")
+    @DataItemName("Manufacture.InputDocModel.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -118,6 +122,7 @@ public class InputDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "OPER_ID")
+    @DataItemName("Manufacture.InputDocModel.Oper")
     public JobRoute getOper() {
         return this.Oper;
     }
@@ -128,6 +133,7 @@ public class InputDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "JOB_ID")
+    @DataItemName("Manufacture.InputDocModel.Job")
     public Job getJob() {
         return this.Job;
     }
@@ -137,6 +143,7 @@ public class InputDocumentModel extends com.mg.merp.document.model.DocHeadModel 
     }
 
     @Column(name = "BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("Manufacture.InputDocModel.BackFlushFlag")
     public boolean isBackFlushFlag() {
         return this.BackFlushFlag;
     }

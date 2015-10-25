@@ -18,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SYS_DATAITEM")
+@DataItemName("Core.SysDataItem")
 public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -89,6 +90,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -107,6 +109,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "NAME", unique = true, nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Core.SysDataItem.Name")
     public String getName() {
         return this.Name;
     }
@@ -116,6 +119,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 1024)
+    @DataItemName("Core.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -135,6 +139,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "REFERENCE_DATAITEM_NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Core.SysDataItem.ReferenceDataItemName")
     public String getReferenceDataItemName() {
         return this.ReferenceDataItemName;
     }
@@ -153,6 +158,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "DEFAULT_COMPONENT_NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Core.SysDataItem.DefaultComponentName")
     public String getDefaultComponentName() {
         return this.DefaultComponentName;
     }
@@ -162,6 +168,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "SHORT_LABEL", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Core.SysDataItem.ShortLabel")
     public String getShortLabel() {
         return this.ShortLabel;
     }
@@ -171,6 +178,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "MEDIUM_LABEL", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Core.SysDataItem.MediumLabel")
     public String getMediumLabel() {
         return this.MediumLabel;
     }
@@ -180,6 +188,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "LONG_LABEL", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Core.SysDataItem.LongLabel")
     public String getLongLabel() {
         return this.LongLabel;
     }
@@ -189,6 +198,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "HEADER", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Core.SysDataItem.Header")
     public String getHeader() {
         return this.Header;
     }
@@ -198,6 +208,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "REPORT_LABEL", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Core.SysDataItem.ReportLabel")
     public String getReportLabel() {
         return this.ReportLabel;
     }
@@ -207,6 +218,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "SEARCH_HELP", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Core.SysDataItem.SearchHelpName")
     public String getSearchHelpName() {
         return this.SearchHelpName;
     }
@@ -216,6 +228,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "ENTITY_PROPERTY_TEXT", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Core.SysDataItem.EntityPropertyText")
     public String getEntityPropertyText() {
         return this.EntityPropertyText;
     }
@@ -225,6 +238,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "ENTITY_TEXT_FORMAT", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Core.SysDataItem.EntityTextFormat")
     public String getEntityTextFormat() {
         return this.EntityTextFormat;
     }
@@ -234,6 +248,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "ASSIGN_PARAMETER_NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Core.SysDataItem.AssignParameterName")
     public String getAssignParameterName() {
         return this.AssignParameterName;
     }
@@ -243,6 +258,7 @@ public class SysDataItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "IS_READ_ONLY", nullable = false, columnDefinition = "SMALLINT")
+    @DataItemName("Core.SysDataItem.ReadOnly")
     public Boolean getReadOnly() {
         return this.ReadOnly;
     }

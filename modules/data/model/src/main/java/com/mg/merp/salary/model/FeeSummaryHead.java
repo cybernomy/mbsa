@@ -44,6 +44,7 @@ public class FeeSummaryHead extends com.mg.merp.document.model.DocHead implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PAY_ROLL_ID")
+    @DataItemName("Salary.FeeSummaryHead.PayRoll")
     public PayRoll getPayRoll() {
         return this.PayRoll;
     }

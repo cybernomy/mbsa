@@ -47,6 +47,7 @@ public class MinSalary extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -66,6 +67,7 @@ public class MinSalary extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "BEGINDATE", unique = true, nullable = false, columnDefinition = "TIMESTAMP")
+    @DataItemName("Salary.MinSal.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -75,6 +77,7 @@ public class MinSalary extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "MINSALARY", nullable = false, columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Salary.MinSal.MinSalary")
     public BigDecimal getMinSalary() {
         return this.MinSalary;
     }

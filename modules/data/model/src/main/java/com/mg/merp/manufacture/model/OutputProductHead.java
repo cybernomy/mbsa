@@ -61,6 +61,7 @@ public class OutputProductHead extends com.mg.merp.document.model.DocHead implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "EMPLOYEE_ID")
+    @DataItemName("Manufacture.OutputProductHead.Employee")
     public Contractor getEmployee() {
         return this.Employee;
     }
@@ -91,6 +92,7 @@ public class OutputProductHead extends com.mg.merp.document.model.DocHead implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_ID")
+    @DataItemName("Manufacture.OutputProductHead.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -101,6 +103,7 @@ public class OutputProductHead extends com.mg.merp.document.model.DocHead implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "OPER_ID")
+    @DataItemName("Manufacture.OutputProductHead.Oper")
     public JobRoute getOper() {
         return this.Oper;
     }

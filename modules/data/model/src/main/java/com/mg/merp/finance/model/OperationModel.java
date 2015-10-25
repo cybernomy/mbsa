@@ -138,6 +138,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -148,6 +149,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MODELDESTFOLDER_ID")
+    @DataItemName("Finance.OperM.ModelDestFolder")
     public Folder getModelDestFolder() {
         return this.ModelDestFolder;
     }
@@ -158,6 +160,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FROM_ID")
+    @DataItemName("Finance.Oper.From")
     public Contractor getFrom() {
         return this.From;
     }
@@ -168,6 +171,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TO_ID")
+    @DataItemName("Finance.Oper.To")
     public Contractor getTo() {
         return this.To;
     }
@@ -178,6 +182,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURRATEAUTHORITY_ID")
+    @DataItemName("Finance.Oper.CRateAuthority")
     public CurrencyRateAuthority getCurRateAuthority() {
         return this.CurRateAuthority;
     }
@@ -208,6 +213,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURRATETYPE_ID")
+    @DataItemName("Finance.Oper.CurRateType")
     public CurrencyRateType getCurRateType() {
         return this.CurRateType;
     }
@@ -218,6 +224,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURCODE")
+    @DataItemName("Finance.Oper.Currency")
     public Currency getCurrency() {
         return this.Currency;
     }
@@ -228,6 +235,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESPONSIBLE")
+    @DataItemName("Finance.Oper.Responsible")
     public Contractor getResponsible() {
         return this.Responsible;
     }
@@ -247,6 +255,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "MODELNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Finance.OperM.Name")
     public String getModelName() {
         return this.ModelName;
     }
@@ -256,6 +265,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "KEEPDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Finance.Oper.Keepdate")
     public Date getKeepDate() {
         return this.KeepDate;
     }
@@ -265,6 +275,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Finance.Oper.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -275,6 +286,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCBASETYPE")
+    @DataItemName("Finance.Oper.BaseType")
     public DocType getBaseDocType() {
         return this.BaseDocType;
     }
@@ -284,6 +296,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "DOCBASENUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Finance.Oper.BaseNumber")
     public String getBaseDocNumber() {
         return this.BaseDocNumber;
     }
@@ -293,6 +306,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "DOCBASEDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Finance.Oper.BaseDate")
     public Date getBaseDocDate() {
         return this.BaseDocDate;
     }
@@ -303,6 +317,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCTYPE")
+    @DataItemName("Finance.Oper.Type")
     public DocType getConfirmDocType() {
         return this.ConfirmDocType;
     }
@@ -312,6 +327,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Finance.Oper.Number")
     public String getConfirmDocNumber() {
         return this.ConfirmDocNumber;
     }
@@ -321,6 +337,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Finance.Oper.Date")
     public Date getConfirmDocDate() {
         return this.ConfirmDocDate;
     }
@@ -350,6 +367,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTTYPE")
+    @DataItemName("Finance.Oper.ContractType")
     public DocType getContractType() {
         return this.ContractType;
     }
@@ -359,6 +377,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "CONTRACTNUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Finance.Oper.ContractNumber")
     public String getContractNumber() {
         return this.ContractNumber;
     }
@@ -368,6 +387,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "CONTRACTDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Finance.Oper.ContractDate")
     public Date getContractDate() {
         return this.ContractDate;
     }
@@ -377,6 +397,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "SUMNAT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Finance.Oper.SumNat")
     public BigDecimal getSumNat() {
         return this.SumNat;
     }
@@ -386,6 +407,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "SUMCUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Finance.Oper.SumCur")
     public BigDecimal getSumCur() {
         return this.SumCur;
     }
@@ -395,6 +417,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "CURRATE", columnDefinition = "NUMERIC", precision = 15, scale = 5)
+    @DataItemName("Finance.Oper.Rate")
     public BigDecimal getCurRate() {
         return this.CurRate;
     }
@@ -404,6 +427,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "PLANNED", columnDefinition = "SMALLINT")
+    @DataItemName("Finance.Oper.Planned")
     public boolean isPlanned() {
         return this.Planned;
     }
@@ -414,6 +438,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
 
     @Column(name = "SOURCEFROM")
     @Enumerated(EnumType.ORDINAL)
+    @DataItemName("Finance.OperM.SourContrFrom")
     public SourceFinOperContract getSourceFrom() {
         return this.SourceFrom;
     }
@@ -424,6 +449,7 @@ public class OperationModel extends com.mg.merp.core.model.AbstractEntity implem
 
     @Column(name = "SOURCETO")
     @Enumerated(EnumType.ORDINAL)
+    @DataItemName("Finance.OperM.SourContrTo")
     public SourceFinOperContract getSourceTo() {
         return this.SourceTo;
     }

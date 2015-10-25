@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "OKOF")
+@DataItemName("Account.Okof")
 public class Okof extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -48,6 +49,7 @@ public class Okof extends com.mg.merp.core.model.AbstractEntity implements java.
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -76,6 +78,7 @@ public class Okof extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("Account.Okof.Code")
     public String getCode() {
         return this.Code;
     }
@@ -85,6 +88,7 @@ public class Okof extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "OKOFNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Account.Okof.OkofName")
     public String getOkofName() {
         return this.OkofName;
     }

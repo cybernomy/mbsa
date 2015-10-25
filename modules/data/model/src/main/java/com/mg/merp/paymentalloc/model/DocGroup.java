@@ -21,6 +21,8 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PMA_DOCGROUP")
+//$NON-NLS-1$
+@DataItemName("Paymentalloc.DocGroup")
 public class DocGroup extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -59,6 +61,8 @@ public class DocGroup extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -78,6 +82,8 @@ public class DocGroup extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
+    //$NON-NLS-1$
+    @DataItemName("PaymentAlloc.Payment.Name")
     public String getName() {
         return this.Name;
     }

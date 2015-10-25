@@ -77,6 +77,7 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RUN_TIME_LBR_UM")
+    @DataItemName("Manufacture.JobLabor.RunTimeLbrUm")
     public Measure getRunTimeLbrUm() {
         return this.RunTimeLbrUm;
     }
@@ -87,6 +88,7 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LBR_OH_RATE_CUR_CODE")
+    @DataItemName("Manufacture.JobLabor.LbrOhRateCurCode")
     public Currency getLbrOhRateCurrency() {
         return this.LbrOhRateCurrency;
     }
@@ -97,6 +99,7 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LBR_COST_CATEGORY_ID")
+    @DataItemName("Manufacture.JobLabor.LbrCostCategory")
     public CostCategories getLbrCostCategory() {
         return this.LbrCostCategory;
     }
@@ -107,6 +110,7 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LBR_OH_COST_CATEGORY_ID")
+    @DataItemName("Manufacture.JobLabor.LbrOhCostCategory")
     public CostCategories getLbrOhCostCategory() {
         return this.LbrOhCostCategory;
     }
@@ -117,6 +121,7 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LBR_RATE_CUR_CODE")
+    @DataItemName("Manufacture.JobLabor.LbrRateCurCode")
     public Currency getLbrRateCurrency() {
         return this.LbrRateCurrency;
     }
@@ -136,6 +141,7 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
     }
 
     @Column(name = "RUN_TICKS_LBR", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("Manufacture.JobLabor.RunTicksLbr")
     public long getRunTicksLbr() {
         return this.RunTicksLbr;
     }
@@ -145,6 +151,7 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
     }
 
     @Column(name = "LBR_NUMBER", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Manufacture.JobLabor.LbrNumber")
     public BigDecimal getLbrNumber() {
         return this.LbrNumber;
     }
@@ -154,6 +161,7 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
     }
 
     @Column(name = "LBR_RATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Manufacture.JobLabor.LbrRate")
     public BigDecimal getLbrRate() {
         return this.LbrRate;
     }
@@ -163,6 +171,7 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
     }
 
     @Column(name = "LBR_BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("Manufacture.JobLabor.LbrBackflushFlag")
     public boolean isLbrBackflushFlag() {
         return this.LbrBackflushFlag;
     }
@@ -182,6 +191,7 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
     }
 
     @Column(name = "LBR_OH_RATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Manufacture.JobLabor.LbrOhRate")
     public BigDecimal getLbrOhRate() {
         return this.LbrOhRate;
     }
@@ -191,6 +201,7 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
     }
 
     @Column(name = "LBR_OH_RATIO", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Manufacture.JobLabor.LbrOhRatio")
     public BigDecimal getLbrOhRatio() {
         return this.LbrOhRatio;
     }
@@ -200,6 +211,7 @@ public class JobLabor extends com.mg.merp.manufacture.model.JobRouteResource imp
     }
 
     @Column(name = "LBR_OH_BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("Manufacture.JobLabor.LbrOhBackflushFlag")
     public boolean isLbrOhBackflushFlag() {
         return this.LbrOhBackflushFlag;
     }

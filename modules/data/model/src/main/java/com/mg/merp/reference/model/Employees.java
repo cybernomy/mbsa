@@ -13,6 +13,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "EMPLOYEES")
+@DataItemName("Reference.Employees")
 public class Employees extends com.mg.merp.reference.model.Contractor implements java.io.Serializable {
 
     private NaturalPerson NaturalPerson;
@@ -49,6 +50,7 @@ public class Employees extends com.mg.merp.reference.model.Contractor implements
     }
 
     @Column(name = "OFFICE", columnDefinition = "VARCHAR", length = 40)
+    @DataItemName("Reference.Employee.Office")
     public String getOffice() {
         return this.Office;
     }
@@ -58,6 +60,7 @@ public class Employees extends com.mg.merp.reference.model.Contractor implements
     }
 
     @Column(name = "TABNUM", columnDefinition = "CHAR", length = 10)
+    @DataItemName("Reference.Employee.TabNum")
     public String getTabNum() {
         return this.TabNum;
     }
@@ -67,6 +70,7 @@ public class Employees extends com.mg.merp.reference.model.Contractor implements
     }
 
     @Column(name = "IS_DEFAULT", columnDefinition = "SMALLINT")
+    @DataItemName("Reference.Employee.IsDefault")
     public boolean isDefault() {
         return this.IsDefault;
     }

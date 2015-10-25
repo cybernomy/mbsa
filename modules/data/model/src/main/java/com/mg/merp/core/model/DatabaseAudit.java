@@ -18,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SYS_DB_AUDIT")
+@DataItemName("Core.DatabaseAudit")
 public class DatabaseAudit extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Long Id;
@@ -54,6 +55,7 @@ public class DatabaseAudit extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "NUMERIC")
+    @DataItemName("ID")
     public Long getId() {
         return this.Id;
     }
@@ -73,6 +75,7 @@ public class DatabaseAudit extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "USER_NAME", nullable = false, columnDefinition = "CHAR", length = 31)
+    @DataItemName("Security.User.Name")
     public String getUserName() {
         return this.UserName;
     }
@@ -82,6 +85,7 @@ public class DatabaseAudit extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "EVENT_DATETIME", nullable = false, columnDefinition = "TIMESTAMP")
+    @DataItemName("Core.DatabaseAudit.EventDateTime")
     public Date getEventDateTime() {
         return this.EventDateTime;
     }
@@ -100,6 +104,7 @@ public class DatabaseAudit extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "ENTITY_NAME", nullable = false, columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Core.EntityName")
     public String getAuditedEntityName() {
         return this.AuditedEntityName;
     }

@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SAL_GNS_CODE")
+@DataItemName("Salary.GnsCode")
 public class GnsCode extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -40,6 +41,7 @@ public class GnsCode extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -59,6 +61,7 @@ public class GnsCode extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 10)
+    @DataItemName("Salary.MediumCode")
     public String getCode() {
         return this.Code;
     }
@@ -68,6 +71,7 @@ public class GnsCode extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Salary.Description")
     public String getDescription() {
         return this.Description;
     }

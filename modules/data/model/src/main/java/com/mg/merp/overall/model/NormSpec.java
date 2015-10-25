@@ -87,6 +87,7 @@ public class NormSpec extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -116,6 +117,7 @@ public class NormSpec extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "OVR_NORM_SPEC_NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Overall.Spec.Name")
     public String getOvrNormSpecName() {
         return this.OvrNormSpecName;
     }
@@ -125,6 +127,7 @@ public class NormSpec extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "MEASURE_UPCODE", columnDefinition = "CHAR", length = 5)
+    @DataItemName("Overall.Spec.MeasureUpCode")
     public String getMeasureUpCode() {
         return this.MeasureUpCode;
     }
@@ -144,6 +147,7 @@ public class NormSpec extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SHELFLIFE", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Overall.Spec.Shelflife")
     public BigDecimal getShelfLife() {
         return this.ShelfLife;
     }
@@ -154,6 +158,7 @@ public class NormSpec extends com.mg.merp.core.model.AbstractEntity implements j
 
     @Column(name = "SHELFLIFE_MEAS")
     @Enumerated(EnumType.ORDINAL)
+    @DataItemName("Overall.Spec.ShelfLifeMeas")
     public TimePeriodKind getShelfLifeMeas() {
         return this.ShelfLifeMeas;
     }
@@ -181,6 +186,7 @@ public class NormSpec extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ISDINCH", columnDefinition = "INTEGER")
+    @DataItemName("Overall.Spec.IsDinch")
     public boolean isDinch() {
         return this.IsDinch;
     }
@@ -190,6 +196,7 @@ public class NormSpec extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DINCH_FORMULA", columnDefinition = "VARCHAR", length = 2048)
+    @DataItemName("Overall.Spec.DinchFormula")
     public String getDinchFormula() {
         return this.DinchFormula;
     }
@@ -199,6 +206,7 @@ public class NormSpec extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DOC_NAME", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Overall.Spec.DocName")
     public String getDocName() {
         return this.DocName;
     }
@@ -208,6 +216,7 @@ public class NormSpec extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Overall.Spec.Quantity")
     public BigDecimal getQuantity() {
         return this.Quantity;
     }

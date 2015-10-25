@@ -60,6 +60,7 @@ public class TaxRate extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -89,6 +90,7 @@ public class TaxRate extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "RNUMBER", nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("Salary.TaxRate.RNumber")
     public Integer getRNumber() {
         return this.RNumber;
     }
@@ -98,6 +100,7 @@ public class TaxRate extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "MININCOME", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Salary.TaxRate.MinIncome")
     public BigDecimal getMinIncome() {
         return this.MinIncome;
     }
@@ -107,6 +110,7 @@ public class TaxRate extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "MAXINCOME", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Salary.TaxRate.MaxIncome")
     public BigDecimal getMaxIncome() {
         return this.MaxIncome;
     }
@@ -116,6 +120,7 @@ public class TaxRate extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TAX_PERCENT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Salary.TaxRate.TaxPercent")
     public BigDecimal getTaxPercent() {
         return this.TaxPercent;
     }
@@ -125,6 +130,7 @@ public class TaxRate extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CONSTVALUE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Salary.TaxRate.ConstValue")
     public BigDecimal getConstValue() {
         return this.ConstValue;
     }
@@ -134,6 +140,7 @@ public class TaxRate extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PRIVILEGERATIO", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Salary.TaxRate.Privilegeratio")
     public BigDecimal getPrivilegeratio() {
         return this.Privilegeratio;
     }

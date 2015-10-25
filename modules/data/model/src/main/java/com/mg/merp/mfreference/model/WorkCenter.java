@@ -19,6 +19,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "MF_WORK_CENTER")
+@DataItemName("MfReference.WorkCenter")
 public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -154,6 +155,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -174,6 +176,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WEEK_CAL_ID")
+    @DataItemName("MfReference.WorkCenter.WeekCal")
     public WeekCalendar getWeekCal() {
         return this.WeekCal;
     }
@@ -204,6 +207,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CELL_ID")
+    @DataItemName("MfReference.WorkCenter.Cell")
     public Cell getCell() {
         return this.Cell;
     }
@@ -214,6 +218,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_ID")
+    @DataItemName("MfReference.WorkCenter.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -224,6 +229,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESOURCE_GROUP_ID")
+    @DataItemName("MfReference.WorkCenter.ResourceGroup")
     public ResourceGroup getResourceGroup() {
         return this.ResourceGroup;
     }
@@ -233,6 +239,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "WC_CODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("MfReference.WorkCenter.WcCode")
     public String getWcCode() {
         return this.WcCode;
     }
@@ -242,6 +249,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "WC_NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("MfReference.WorkCenter.WcName")
     public String getWcName() {
         return this.WcName;
     }
@@ -251,6 +259,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "EFFICIENCY", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.WorkCenter.Efficiency")
     public BigDecimal getEfficiency() {
         return this.Efficiency;
     }
@@ -260,6 +269,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "UTILIZATION", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.WorkCenter.Utilization")
     public BigDecimal getUtilization() {
         return this.Utilization;
     }
@@ -269,6 +279,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "CAPACITY_PLAN", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.WorkCenter.CapacityPlan")
     public boolean isCapacityPlan() {
         return this.CapacityPlan;
     }
@@ -278,6 +289,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "CAPACITY_SCHEDULE", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.WorkCenter.CapacitySchedule")
     public boolean isCapacitySchedule() {
         return this.CapacitySchedule;
     }
@@ -287,6 +299,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "MCH_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.WorkCenter.MchFlag")
     public boolean isMchFlag() {
         return this.MchFlag;
     }
@@ -296,6 +309,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "MCH_NUMBER", columnDefinition = "INTEGER")
+    @DataItemName("MfReference.WorkCenter.MchNumber")
     public Integer getMchNumber() {
         return this.MchNumber;
     }
@@ -305,6 +319,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "LBR_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.WorkCenter.LbrFlag")
     public boolean isLbrFlag() {
         return this.LbrFlag;
     }
@@ -314,6 +329,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "LBR_NUMBER", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("MfReference.WorkCenter.LbrNumber")
     public BigDecimal getLbrNumber() {
         return this.LbrNumber;
     }
@@ -323,6 +339,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "SCH_TOLERANCE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.WorkCenter.SchTolerance")
     public BigDecimal getSchTolerance() {
         return this.SchTolerance;
     }
@@ -332,6 +349,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "QUEUE_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
+    @DataItemName("MfReference.WorkCenter.QueueTicks")
     public BigDecimal getQueueTicks() {
         return this.QueueTicks;
     }
@@ -341,6 +359,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "MCH_RUN_TOTAL_HRS", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.WorkCenter.MchRunTotalHrs")
     public BigDecimal getMchRunTotalHrs() {
         return this.MchRunTotalHrs;
     }
@@ -350,6 +369,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "LBR_SETUP_TOTAL_HRS", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.WorkCenter.LbrSetupTotalHrs")
     public BigDecimal getLbrSetupTotalHrs() {
         return this.LbrSetupTotalHrs;
     }
@@ -359,6 +379,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "LBR_RUN_TOTAL_HRS", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.WorkCenter.LbrRunTotalHrs")
     public BigDecimal getLbrRunTotalHrs() {
         return this.LbrRunTotalHrs;
     }
@@ -368,6 +389,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "QUEUE_TOTAL_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("MfReference.WorkCenter.QueueTotalQty")
     public BigDecimal getQueueTotalQty() {
         return this.QueueTotalQty;
     }
@@ -377,6 +399,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "QUEUE_AVG_HRS", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("MfReference.WorkCenter.QueueAvgHrs")
     public BigDecimal getQueueAvgHrs() {
         return this.QueueAvgHrs;
     }
@@ -386,6 +409,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "OUTSIDE_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.WorkCenter.OutsideFlag")
     public boolean isOutsideFlag() {
         return this.OutsideFlag;
     }
@@ -395,6 +419,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "MCH_BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.WorkCenter.MchBackflushFlag")
     public boolean isMchBackflushFlag() {
         return this.MchBackflushFlag;
     }
@@ -404,6 +429,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "LBR_BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.WorkCenter.LbrBackflushFlag")
     public boolean isLbrBackflushFlag() {
         return this.LbrBackflushFlag;
     }
@@ -413,6 +439,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "MCH_BASE_OH_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.WorkCenter.MchBaseOhFlag")
     public boolean isMchBaseOhFlag() {
         return this.MchBaseOhFlag;
     }
@@ -422,6 +449,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "LBR_BASE_OH_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.WorkCenter.LbrBaseOhFlag")
     public boolean isLbrBaseOhFlag() {
         return this.LbrBaseOhFlag;
     }
@@ -431,6 +459,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "MTL_BASE_OH_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.WorkCenter.MtlBaseOhFlag")
     public boolean isMtlBaseOhFlag() {
         return this.MtlBaseOhFlag;
     }
@@ -440,6 +469,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "CONTROL_POINT_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.WorkCenter.ControlPointFlag")
     public boolean isControlPointFlag() {
         return this.ControlPointFlag;
     }
@@ -494,6 +524,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "LBR_SETUP_AVG_RATE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("MfReference.WorkCenter.LbrSetupAvgRate")
     public BigDecimal getLbrSetupAvgRate() {
         return this.LbrSetupAvgRate;
     }
@@ -503,6 +534,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "LBR_RUN_AVG_RATE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("MfReference.WorkCenter.LbrRunAvgRate")
     public BigDecimal getLbrRunAvgRate() {
         return this.LbrRunAvgRate;
     }
@@ -512,6 +544,7 @@ public class WorkCenter extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("MfReference.WorkCenter.Comment")
     public String getComment() {
         return this.Comment;
     }

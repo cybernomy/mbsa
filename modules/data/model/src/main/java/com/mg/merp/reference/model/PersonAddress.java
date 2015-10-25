@@ -20,6 +20,7 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "REF_PERSON_ADDRESS")
+@DataItemName("Reference.PersonAddress")
 public class PersonAddress extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -85,6 +86,7 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -95,6 +97,7 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DISTRICT_ID")
+    @DataItemName("Reference.District")
     public District getDistrict() {
         return this.District;
     }
@@ -105,6 +108,7 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COUNTRY_ID")
+    @DataItemName("Reference.Country")
     public Country getCountry() {
         return this.Country;
     }
@@ -135,6 +139,7 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PLACE_ID")
+    @DataItemName("Reference.Place")
     public Place getPlace() {
         return this.Place;
     }
@@ -155,6 +160,7 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "REGION_ID")
+    @DataItemName("Reference.Region")
     public Region getRegion() {
         return this.Region;
     }
@@ -174,6 +180,7 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "BEGINDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Reference.NPerson.Address.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -201,6 +208,7 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "CITY", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.City")
     public String getCity() {
         return this.City;
     }
@@ -210,6 +218,7 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "STREET", columnDefinition = "VARCHAR", length = 128)
+    @DataItemName("Reference.Street")
     public String getStreet() {
         return this.Street;
     }
@@ -219,6 +228,7 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "HOUSE", columnDefinition = "VARCHAR", length = 20)
+    @DataItemName("Reference.House")
     public String getHouse() {
         return this.House;
     }
@@ -228,6 +238,7 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "FULL_ADDRESS", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("Reference.NaturalPerson.PersonAddress.FullAddress")
     public String getFullAddress() {
         return this.FullAddress;
     }
@@ -237,6 +248,7 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "BUILDING", columnDefinition = "VARCHAR", length = 20)
+    @DataItemName("Reference.Block")
     public String getBuilding() {
         return this.Building;
     }
@@ -246,6 +258,7 @@ public class PersonAddress extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "ROOM", columnDefinition = "VARCHAR", length = 20)
+    @DataItemName("Reference.Flat")
     public String getRoom() {
         return this.Room;
     }

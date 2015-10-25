@@ -48,6 +48,7 @@ public class CostDetailLine extends com.mg.merp.core.model.AbstractEntity implem
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -97,6 +98,7 @@ public class CostDetailLine extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("MfReference.CostDetailLine.Summa")
     public BigDecimal getSumma() {
         return this.Summa;
     }

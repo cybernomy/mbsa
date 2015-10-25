@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PREF_FOREIGN_LANGUAGE")
+@DataItemName("PersonnelRef.ForeignLanguage")
 public class ForeignLanguage extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -44,6 +45,7 @@ public class ForeignLanguage extends com.mg.merp.core.model.AbstractEntity imple
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -63,6 +65,7 @@ public class ForeignLanguage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.ForeignLang.Name")
     public String getName() {
         return this.Name;
     }
@@ -72,6 +75,7 @@ public class ForeignLanguage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "OKIN", columnDefinition = "CHAR", length = 5)
+    @DataItemName("PersonnelRef.ForeignLang.Okin")
     public String getOkin() {
         return this.Okin;
     }

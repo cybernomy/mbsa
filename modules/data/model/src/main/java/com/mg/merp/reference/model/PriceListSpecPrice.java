@@ -38,6 +38,8 @@ public class PriceListSpecPrice extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "PRICE", nullable = false, columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    //$NON-NLS-1$
+    @DataItemName("Reference.PriceListSpec.Price")
     public BigDecimal getPrice() {
         return this.Price;
     }

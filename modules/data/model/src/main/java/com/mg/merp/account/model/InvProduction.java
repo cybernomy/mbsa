@@ -53,6 +53,7 @@ public class InvProduction extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -82,6 +83,7 @@ public class InvProduction extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "AMONTH", columnDefinition = "INTEGER")
+    @DataItemName("Account.InvHead.AMonth")
     public Integer getAMonth() {
         return this.AMonth;
     }
@@ -91,6 +93,7 @@ public class InvProduction extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "PRODUCTION", columnDefinition = "DOUBLE PRECISION")
+    @DataItemName("Account.InvHead.Production")
     public Double getProduction() {
         return this.Production;
     }
@@ -111,6 +114,7 @@ public class InvProduction extends com.mg.merp.core.model.AbstractEntity impleme
         }
     }
 
+    @DataItemName("Account.InvHead.QYear")
     public java.lang.Integer getQYear() {
         if (getAMonth() != null) {
             int countMonth = getAMonth();

@@ -107,6 +107,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -137,6 +138,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLPLAN4_ID")
+    @DataItemName("Account.RemnAnl.AnlPlan4")
     public AnlPlan getAnlPlan4() {
         return this.AnlPlan4;
     }
@@ -147,6 +149,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLPLAN1_ID")
+    @DataItemName("Account.RemnAnl.AnlPlan1")
     public AnlPlan getAnlPlan1() {
         return this.AnlPlan1;
     }
@@ -167,6 +170,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLPLAN2_ID")
+    @DataItemName("Account.RemnAnl.AnlPlan2")
     public AnlPlan getAnlPlan2() {
         return this.AnlPlan2;
     }
@@ -187,6 +191,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLPLAN3_ID")
+    @DataItemName("Account.RemnAnl.AnlPlan3")
     public AnlPlan getAnlPlan3() {
         return this.AnlPlan3;
     }
@@ -197,6 +202,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANLPLAN5_ID")
+    @DataItemName("Account.RemnAnl.AnlPlan5")
     public AnlPlan getAnlPlan5() {
         return this.AnlPlan5;
     }
@@ -216,6 +222,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "BEGINQUAN", nullable = false, columnDefinition = "NUMERIC", precision = 15, scale = 3)
+    @DataItemName("Account.RemnVal.BeginQuan")
     public BigDecimal getBeginQuan() {
         return this.BeginQuan;
     }
@@ -225,6 +232,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "REMNBEGINNAT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.RemnVal.RemnBeginNat")
     public BigDecimal getRemnBeginNat() {
         return this.RemnBeginNat;
     }
@@ -234,6 +242,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "REMNBEGINCUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Account.RemnVal.RemnBeginCur")
     public BigDecimal getRemnBeginCur() {
         return this.RemnBeginCur;
     }
@@ -252,6 +261,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "QuantityDb", insertable = false, updatable = false)
+    @DataItemName("Account.RemnVal.QuantityDb")
     public BigDecimal getQuantityDb() {
         return this.QuantityDb;
     }
@@ -261,6 +271,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "EndQuan", insertable = false, updatable = false)
+    @DataItemName("Account.RemnVal.EndQuan")
     public BigDecimal getEndQuan() {
         return this.EndQuan;
     }
@@ -270,6 +281,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "QuantityKt", insertable = false, updatable = false)
+    @DataItemName("Account.RemnVal.QuantityKt")
     public BigDecimal getQuantityKt() {
         return this.QuantityKt;
     }
@@ -279,6 +291,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "RemnEndNat", insertable = false, updatable = false)
+    @DataItemName("Account.RemnVal.RemnEndNat")
     public BigDecimal getRemnEndNat() {
         return this.RemnEndNat;
     }
@@ -288,6 +301,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "RemnEndCur", insertable = false, updatable = false)
+    @DataItemName("Account.RemnVal.RemnEndCur")
     public BigDecimal getRemnEndCur() {
         return this.RemnEndCur;
     }
@@ -297,6 +311,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TurnNatKt", insertable = false, updatable = false)
+    @DataItemName("Account.RemnVal.TurnNatKt")
     public BigDecimal getTurnNatKt() {
         return this.TurnNatKt;
     }
@@ -306,6 +321,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TurnCurDb", insertable = false, updatable = false)
+    @DataItemName("Account.RemnVal.TurnCurDb")
     public BigDecimal getTurnCurDb() {
         return this.TurnCurDb;
     }
@@ -315,6 +331,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TurnCurKt", insertable = false, updatable = false)
+    @DataItemName("Account.RemnVal.TurnCurKt")
     public BigDecimal getTurnCurKt() {
         return this.TurnCurKt;
     }
@@ -324,6 +341,7 @@ public class RemnVal extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TurnNatDb", insertable = false, updatable = false)
+    @DataItemName("Account.RemnVal.TurnNatDb")
     public BigDecimal getTurnNatDb() {
         return this.TurnNatDb;
     }

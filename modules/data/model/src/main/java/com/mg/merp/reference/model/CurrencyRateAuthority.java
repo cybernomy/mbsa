@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_CURRENCY_RATE_AUTHORITY")
+@DataItemName("Reference.CurrencyRateAuthority")
 public class CurrencyRateAuthority extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -40,6 +41,7 @@ public class CurrencyRateAuthority extends com.mg.merp.core.model.AbstractEntity
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -59,6 +61,7 @@ public class CurrencyRateAuthority extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Reference.Code")
     public String getCode() {
         return this.Code;
     }
@@ -68,6 +71,7 @@ public class CurrencyRateAuthority extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.Name")
     public String getName() {
         return this.Name;
     }

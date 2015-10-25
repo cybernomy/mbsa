@@ -18,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_MEASURE_CONV")
+@DataItemName("Reference.MeasureConversion")
 public class MeasureConversion extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -47,6 +48,7 @@ public class MeasureConversion extends com.mg.merp.core.model.AbstractEntity imp
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -67,6 +69,7 @@ public class MeasureConversion extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE_FROM_ID")
+    @DataItemName("Reference.MConvert.MeasureFrom")
     public Measure getMeasureFrom() {
         return this.MeasureFrom;
     }
@@ -87,6 +90,7 @@ public class MeasureConversion extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE_TO_ID")
+    @DataItemName("Reference.MConvert.MeasureTo")
     public Measure getMeasureTo() {
         return this.MeasureTo;
     }
@@ -97,6 +101,7 @@ public class MeasureConversion extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONV_ALGORITHM_ID")
+    @DataItemName("Reference.MConvert.AlgRepository")
     public Repository getAlgRepository() {
         return this.AlgRepository;
     }

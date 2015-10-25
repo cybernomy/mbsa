@@ -97,6 +97,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -107,6 +109,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL1_ID")
+    //$NON-NLS-1$
+    @DataItemName("Personnelref.CostsAnl1")
     public CostsAnl getCostsAnl1() {
         return this.CostsAnl1;
     }
@@ -117,6 +121,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CATEGORY_ID")
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Tariffing.Category")
     public TariffingCategory getCategory() {
         return this.Category;
     }
@@ -127,6 +133,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL2_ID")
+    //$NON-NLS-1$
+    @DataItemName("Personnelref.CostsAnl2")
     public CostsAnl getCostsAnl2() {
         return this.CostsAnl2;
     }
@@ -137,6 +145,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL3_ID")
+    //$NON-NLS-1$
+    @DataItemName("Personnelref.CostsAnl3")
     public CostsAnl getCostsAnl3() {
         return this.CostsAnl3;
     }
@@ -147,6 +157,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL4_ID")
+    //$NON-NLS-1$
+    @DataItemName("Personnelref.CostsAnl4")
     public CostsAnl getCostsAnl4() {
         return this.CostsAnl4;
     }
@@ -187,6 +199,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL5_ID")
+    //$NON-NLS-1$
+    @DataItemName("Personnelref.CostsAnl5")
     public CostsAnl getCostsAnl5() {
         return this.CostsAnl5;
     }
@@ -207,6 +221,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RISESCALE_ID")
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Tariffing.RiseScale")
     public RiseScale getRiseScale() {
         return this.RiseScale;
     }
@@ -225,6 +241,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "BEGINDATE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Tariffing.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -234,6 +252,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "ENDDATE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Tariffing.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }
@@ -243,6 +263,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "RATE_OF_SALARY", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Tariffing.RateOfSalary")
     public BigDecimal getRateOfSalary() {
         return this.RateOfSalary;
     }
@@ -252,6 +274,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "TARIFFSCALE_CODE", columnDefinition = "CHAR", length = 20)
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Tariffing.TariffScaleCode")
     public String getTariffScaleCode() {
         return this.TariffScaleCode;
     }
@@ -261,6 +285,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "TARIFFCLASS", columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Tariffing.TariffClass")
     public Integer getTariffClass() {
         return this.TariffClass;
     }
@@ -270,6 +296,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "RISE_VALUE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Tariffing.RiseValue")
     public BigDecimal getRiseValue() {
         return this.RiseValue;
     }
@@ -279,6 +307,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "USE_RISE_REFERENCE", columnDefinition = "SMALLINT")
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Tariffing.UseRiseReference")
     public boolean isUseRiseReference() {
         return this.UseRiseReference;
     }
@@ -288,6 +318,8 @@ public class Tariffing extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "MINSALARY_NUMBER", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    //$NON-NLS-1$
+    @DataItemName("PersonnelRef.Tariffing.MinSalaryNumber")
     public BigDecimal getMinSalaryNumber() {
         return this.MinSalaryNumber;
     }

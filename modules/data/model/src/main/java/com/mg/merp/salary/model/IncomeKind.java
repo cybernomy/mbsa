@@ -18,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SAL_INCOMEKIND")
+@DataItemName("Salary.IncomeKind")
 public class IncomeKind extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -50,6 +51,7 @@ public class IncomeKind extends com.mg.merp.core.model.AbstractEntity implements
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -69,6 +71,7 @@ public class IncomeKind extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "ICODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("Salary.BigCode")
     public String getICode() {
         return this.ICode;
     }
@@ -78,6 +81,7 @@ public class IncomeKind extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "INAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Salary.Name")
     public String getIName() {
         return this.IName;
     }
@@ -87,6 +91,7 @@ public class IncomeKind extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "BEGINDATE", nullable = false, columnDefinition = "TIMESTAMP")
+    @DataItemName("Salary.IncomeKind.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }

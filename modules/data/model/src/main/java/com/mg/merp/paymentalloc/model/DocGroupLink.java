@@ -41,6 +41,7 @@ public class DocGroupLink extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -71,6 +72,7 @@ public class DocGroupLink extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCTYPE")
+    @DataItemName("PaymentAlloc.Payment.DocType")
     public DocType getDocType() {
         return this.DocType;
     }

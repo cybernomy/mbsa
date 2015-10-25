@@ -57,6 +57,7 @@ public class CostsAnl extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -67,6 +68,7 @@ public class CostsAnl extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARENT_ID")
+    @DataItemName("PersonnelRef.CostsAnl.Parent")
     public CostsAnl getParent() {
         return this.Parent;
     }
@@ -86,6 +88,7 @@ public class CostsAnl extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ACODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("PersonnelRef.CostsAnl.ACode")
     public String getACode() {
         return this.ACode;
     }
@@ -95,6 +98,7 @@ public class CostsAnl extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ANAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.CostsAnl.AName")
     public String getAName() {
         return this.AName;
     }
@@ -104,6 +108,7 @@ public class CostsAnl extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ANLLEVEL", nullable = false, columnDefinition = "SMALLINT")
+    @DataItemName("PersonnelRef.CostsAnl.AnlLevel")
     public short getAnlLevel() {
         return this.AnlLevel;
     }

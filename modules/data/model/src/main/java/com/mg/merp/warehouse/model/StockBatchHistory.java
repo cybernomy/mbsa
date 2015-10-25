@@ -71,6 +71,8 @@ public class StockBatchHistory extends com.mg.merp.core.model.AbstractEntity imp
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -130,6 +132,8 @@ public class StockBatchHistory extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "DATETIME", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("Warehouse.StockBatchHistory.DateTime")
     public Date getDateTime() {
         return this.DateTime;
     }
@@ -149,6 +153,8 @@ public class StockBatchHistory extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    //$NON-NLS-1$
+    @DataItemName("Warehouse.StockBatchHistory.Quantity1")
     public BigDecimal getQuantity() {
         return this.Quantity;
     }
@@ -158,6 +164,8 @@ public class StockBatchHistory extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "PROCESSDATE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("Warehouse.StockBatchHistory.ProcessDate")
     public Date getProcessDate() {
         return this.ProcessDate;
     }
@@ -167,6 +175,8 @@ public class StockBatchHistory extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "QUANTITY2", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    //$NON-NLS-1$
+    @DataItemName("Warehouse.StockBatchHistory.Quantity2")
     public BigDecimal getQuantity2() {
         return this.Quantity2;
     }

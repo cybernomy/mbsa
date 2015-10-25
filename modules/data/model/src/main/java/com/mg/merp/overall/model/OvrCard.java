@@ -79,6 +79,7 @@ public class OvrCard extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -89,6 +90,7 @@ public class OvrCard extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "STF_POSITION_ID")
+    @DataItemName("Overall.Card.Position")
     public PrefPosition getStfPosition() {
         return this.StfPosition;
     }
@@ -99,6 +101,7 @@ public class OvrCard extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "STF_JOB_ID")
+    @DataItemName("Overall.Card.Job")
     public PrefJob getStfJob() {
         return this.StfJob;
     }
@@ -119,6 +122,7 @@ public class OvrCard extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "REF_PERSONNEL_ID")
+    @DataItemName("PersonnelRef.Personnel")
     public Personnel getRefPersonnel() {
         return this.RefPersonnel;
     }
@@ -129,6 +133,7 @@ public class OvrCard extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ORGUNIT_ID", nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("Overall.Card.OrgUnit")
     public Contractor getOrgUnit() {
         return this.OrgUnit;
     }
@@ -138,6 +143,7 @@ public class OvrCard extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ACTDATE_FROM", columnDefinition = "TIMESTAMP")
+    @DataItemName("Overall.Card.ActDateFrom")
     public Date getActDateFrom() {
         return this.ActDateFrom;
     }
@@ -147,6 +153,7 @@ public class OvrCard extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ACTDATE_TO", columnDefinition = "TIMESTAMP")
+    @DataItemName("Overall.Card.ActDateTo")
     public Date getActDateTo() {
         return this.ActDateTo;
     }
@@ -156,6 +163,7 @@ public class OvrCard extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "OVR_CARD_NUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Overall.Card.OvrCardNumber")
     public String getOvrCardNumber() {
         return this.OvrCardNumber;
     }

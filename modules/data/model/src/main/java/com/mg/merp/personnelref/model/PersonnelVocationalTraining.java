@@ -59,6 +59,7 @@ public class PersonnelVocationalTraining extends com.mg.merp.core.model.Abstract
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -69,6 +70,7 @@ public class PersonnelVocationalTraining extends com.mg.merp.core.model.Abstract
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SPECIALITY_ID", nullable = false)
+    @DataItemName("PersonnelRef.Vocat.Speciality")
     public Speciality getSpeciality() {
         return this.Speciality;
     }
@@ -109,6 +111,7 @@ public class PersonnelVocationalTraining extends com.mg.merp.core.model.Abstract
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CERTIFICATE_DOCUMENT_ID")
+    @DataItemName("PersonnelRef.Personnel.OriginalDocument")
     public OriginalDocument getCertificateDocument() {
         return this.CertificateDocument;
     }
@@ -118,6 +121,7 @@ public class PersonnelVocationalTraining extends com.mg.merp.core.model.Abstract
     }
 
     @Column(name = "TRAINING_BEGINDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.Personnel.TrainingBeginDate")
     public Date getTrainingBeginDate() {
         return this.TrainingBeginDate;
     }
@@ -127,6 +131,7 @@ public class PersonnelVocationalTraining extends com.mg.merp.core.model.Abstract
     }
 
     @Column(name = "TRAINING_ENDDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.Personnel.TrainingEndDate")
     public Date getTrainingEndDate() {
         return this.TrainingEndDate;
     }

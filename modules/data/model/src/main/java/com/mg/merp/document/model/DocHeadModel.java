@@ -28,6 +28,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "DOCHEADMODEL")
+@DataItemName("Document.DocHeadModel")
 public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -161,6 +162,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -181,6 +183,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "THROUGH_ID")
+    @DataItemName("Document.Through")
     public Contractor getThrough() {
         return this.Through;
     }
@@ -191,6 +194,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MODELDESTFOLDER_ID")
+    @DataItemName("Document.DocModel.ModelDestFolder")
     public Folder getModelDestFolder() {
         return this.ModelDestFolder;
     }
@@ -201,6 +205,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FROM_ID")
+    @DataItemName("Document.From")
     public Contractor getFrom() {
         return this.From;
     }
@@ -211,6 +216,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TO_ID")
+    @DataItemName("Document.To")
     public Contractor getTo() {
         return this.To;
     }
@@ -221,6 +227,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MOLDEST")
+    @DataItemName("Document.DstMol")
     public Contractor getDstMol() {
         return this.DstMol;
     }
@@ -231,6 +238,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURRATEAUTHORITY_ID")
+    @DataItemName("Document.CurrencyRateAuthority")
     public CurrencyRateAuthority getCurrencyRateAuthority() {
         return this.CurrencyRateAuthority;
     }
@@ -241,6 +249,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MOLSRC")
+    @DataItemName("Document.SrcMol")
     public Contractor getSrcMol() {
         return this.SrcMol;
     }
@@ -271,6 +280,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "STOCKDEST")
+    @DataItemName("Document.DstStock")
     public Contractor getDstStock() {
         return this.DstStock;
     }
@@ -281,6 +291,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURRATETYPE_ID")
+    @DataItemName("Document.CurrencyRateType")
     public CurrencyRateType getCurrencyRateType() {
         return this.CurrencyRateType;
     }
@@ -291,6 +302,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "STOCKSRC")
+    @DataItemName("Document.StockSrc")
     public Contractor getSrcStock() {
         return this.SrcStock;
     }
@@ -310,6 +322,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "MODELNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Document.DocModel.Name")
     public String getModelName() {
         return this.ModelName;
     }
@@ -320,6 +333,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCTYPE")
+    @DataItemName("Document.DocHeadModel.DocType")
     public DocType getDocType() {
         return this.DocType;
     }
@@ -329,6 +343,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Document.DocNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -338,6 +353,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Document.DocDate")
     public Date getDocDate() {
         return this.DocDate;
     }
@@ -357,6 +373,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "CURCOURCE", columnDefinition = "NUMERIC", precision = 15, scale = 5)
+    @DataItemName("Document.CurCource")
     public BigDecimal getCurCource() {
         return this.CurCource;
     }
@@ -366,6 +383,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUMMACUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Document.SumCur")
     public BigDecimal getSumCur() {
         return this.SumCur;
     }
@@ -375,6 +393,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUMMANAT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Document.SumNat")
     public BigDecimal getSumNat() {
         return this.SumNat;
     }
@@ -395,6 +414,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BASEDOCTYPE")
+    @DataItemName("Document.DocHeadModel.BaseDocType")
     public DocType getBaseDocType() {
         return this.BaseDocType;
     }
@@ -404,6 +424,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "BASEDOCNUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Document.BaseDocNumber")
     public String getBaseDocNumber() {
         return this.BaseDocNumber;
     }
@@ -413,6 +434,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "BASEDOCDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Document.BaseDocDate")
     public Date getBaseDocDate() {
         return this.BaseDocDate;
     }
@@ -433,6 +455,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTTYPE")
+    @DataItemName("Document.DocHeadModel.ContractType")
     public DocType getContractType() {
         return this.ContractType;
     }
@@ -442,6 +465,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "CONTRACTNUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Document.ContractNumber")
     public String getContractNumber() {
         return this.ContractNumber;
     }
@@ -451,6 +475,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "CONTRACTDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Document.ContractDate")
     public Date getContractDate() {
         return this.ContractDate;
     }
@@ -460,6 +485,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "WEIGHT", columnDefinition = "NUMERIC", precision = 15, scale = 3)
+    @DataItemName("Document.Weight")
     public BigDecimal getWeight() {
         return this.Weight;
     }
@@ -469,6 +495,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "VOLUME", columnDefinition = "NUMERIC", precision = 15, scale = 3)
+    @DataItemName("Document.Volume")
     public BigDecimal getVolume() {
         return this.Volume;
     }
@@ -509,6 +536,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DISCOUNT_FOLDER_ID")
+    @DataItemName("Document.DiscountFolder")
     public Folder getDiscountFolder() {
         return this.DiscountFolder;
     }
@@ -527,6 +555,7 @@ public class DocHeadModel extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 1024)
+    @DataItemName("Document.Description")
     public String getDescription() {
         return this.Description;
     }

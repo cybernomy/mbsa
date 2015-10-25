@@ -74,6 +74,7 @@ public class PaySheet extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -84,6 +85,7 @@ public class PaySheet extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CASHIER_ID")
+    @DataItemName("Salary.PaySheet.Cashier")
     public Contractor getCashier() {
         return this.Cashier;
     }
@@ -94,6 +96,7 @@ public class PaySheet extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CHIEF_ID")
+    @DataItemName("Salary.PaySheet.Chief")
     public Contractor getChief() {
         return this.Chief;
     }
@@ -114,6 +117,7 @@ public class PaySheet extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BOOKKEEPER_ID")
+    @DataItemName("Salary.PaySheet.Bookkeeper")
     public Contractor getBookkeeper() {
         return this.Bookkeeper;
     }
@@ -134,6 +138,7 @@ public class PaySheet extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PAY_ROLL_ID")
+    @DataItemName("Salary.PaySheet.PayRoll")
     public PayRoll getPayRoll() {
         return this.PayRoll;
     }
@@ -153,6 +158,7 @@ public class PaySheet extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SNUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Salary.PaySheet.SNumber")
     public String getSNumber() {
         return this.SNumber;
     }
@@ -162,6 +168,7 @@ public class PaySheet extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "BEGINDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Salary.PaySheet.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -171,6 +178,7 @@ public class PaySheet extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ENDDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Salary.PaySheet.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }
@@ -180,6 +188,7 @@ public class PaySheet extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SUMMA_FULL", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Salary.PaySheet.SummaFull")
     public BigDecimal getSummaFull() {
         return this.SummaFull;
     }

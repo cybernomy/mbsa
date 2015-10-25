@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_BANK_ACCOUNT")
+@DataItemName("Reference.BankAccount")
 public class BankAccount extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -58,6 +59,7 @@ public class BankAccount extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -98,6 +100,7 @@ public class BankAccount extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURCODE")
+    @DataItemName("Reference.Partner.Currency")
     public Currency getCurrency() {
         return this.Currency;
     }
@@ -117,6 +120,7 @@ public class BankAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.Name")
     public String getName() {
         return this.Name;
     }
@@ -126,6 +130,7 @@ public class BankAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "ACCOUNT", columnDefinition = "VARCHAR", length = 30)
+    @DataItemName("Reference.Partner.Account")
     public String getAccount() {
         return this.Account;
     }
@@ -135,6 +140,7 @@ public class BankAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "IS_DEFAULT", columnDefinition = "SMALLINT")
+    @DataItemName("Reference.Partner.IsDefault")
     public boolean isDefault() {
         return this.IsDefault;
     }

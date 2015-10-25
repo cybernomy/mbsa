@@ -44,6 +44,8 @@ public class ConstantValue extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -73,6 +75,8 @@ public class ConstantValue extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "VAL", columnDefinition = "VARCHAR", length = 80)
+    //$NON-NLS-1$
+    @DataItemName("BAi.ConstValue.Value")
     public String getVal() {
         return this.Val;
     }
@@ -82,6 +86,8 @@ public class ConstantValue extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "STARTDATE", columnDefinition = "TIMESTAMP")
+    //$NON-NLS-1$
+    @DataItemName("BAi.ConstValue.StartDate")
     public Date getStartDate() {
         return this.StartDate;
     }

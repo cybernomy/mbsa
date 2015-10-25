@@ -53,6 +53,7 @@ public class Symptom extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -83,6 +84,7 @@ public class Symptom extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CREATOR_ID")
+    @DataItemName("CRM.Symptom.Creator")
     public User getCreator() {
         return this.Creator;
     }
@@ -92,6 +94,7 @@ public class Symptom extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("CRM.BigName")
     public String getName() {
         return this.Name;
     }
@@ -101,6 +104,7 @@ public class Symptom extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "INFO", columnDefinition = "VARCHAR", length = 2048)
+    @DataItemName("CRM.Symptom.Info")
     public String getInfo() {
         return this.Info;
     }

@@ -90,6 +90,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -100,6 +101,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "VENDOR_ID")
+    @DataItemName("Planning.FirmPlanOrder.Vendor")
     public Contractor getVendor() {
         return this.Vendor;
     }
@@ -110,6 +112,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE_ID", nullable = false)
+    @DataItemName("Planning.FirmPlanOrder.Measure")
     public Measure getMeasure() {
         return this.Measure;
     }
@@ -120,6 +123,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CATALOG_ID", nullable = false)
+    @DataItemName("Planning.FirmPlanOrder.Catalog")
     public Catalog getCatalog() {
         return this.Catalog;
     }
@@ -130,6 +134,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WAREHOUSE_ID", nullable = false)
+    @DataItemName("Planning.FirmPlanOrder.Warehouse")
     public Contractor getWarehouse() {
         return this.Warehouse;
     }
@@ -150,6 +155,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MRP_VERSION_CONTROL_ID", nullable = false)
+    @DataItemName("Planning.FirmPlanOrder.MrpVersionControl")
     public MrpVersionControl getMrpVersionControl() {
         return this.MrpVersionControl;
     }
@@ -160,6 +166,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SOURCE_WAREHOUSE_ID")
+    @DataItemName("Planning.FirmPlanOrder.SourceWarehouse")
     public Contractor getSourceWarehouse() {
         return this.SourceWarehouse;
     }
@@ -179,6 +186,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "REQUIRED_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Planning.FirmPlanOrder.RequiredDate")
     public Date getRequiredDate() {
         return this.RequiredDate;
     }
@@ -188,6 +196,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "ORDER_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Planning.FirmPlanOrder.OrderQty")
     public BigDecimal getOrderQty() {
         return this.OrderQty;
     }
@@ -197,6 +206,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "ORDER_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Planning.FirmPlanOrder.OrderDate")
     public Date getOrderDate() {
         return this.OrderDate;
     }
@@ -206,6 +216,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "FIXED_INPUT", columnDefinition = "SMALLINT")
+    @DataItemName("Planning.FirmPlanOrder.FixedInput")
     public boolean isFixedInput() {
         return this.FixedInput;
     }
@@ -215,6 +226,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "REQUISITION_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("Planning.FirmPlanOrder.RequisitionFlag")
     public boolean isRequisitionFlag() {
         return this.RequisitionFlag;
     }
@@ -225,6 +237,7 @@ public class FirmPlannedOrder extends com.mg.merp.core.model.AbstractEntity impl
 
     @Column(name = "PURCHASE_OR_TRANSFER")
     @Enumerated(EnumType.ORDINAL)
+    @DataItemName("Planning.FirmPlanOrder.AllocOrderType")
     public RecommendType getPurchaseOrTransfer() {
         return this.PurchaseOrTransfer;
     }

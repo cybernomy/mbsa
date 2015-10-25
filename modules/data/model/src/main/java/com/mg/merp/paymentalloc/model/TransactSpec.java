@@ -60,6 +60,7 @@ public class TransactSpec extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -99,6 +100,7 @@ public class TransactSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "TOTALQTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("PaymentAlloc.TransactSpec.TotalQty")
     public BigDecimal getTotalQty() {
         return this.TotalQty;
     }
@@ -108,6 +110,7 @@ public class TransactSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "TOTALSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("PaymentAlloc.TransactSpec.TotalSum")
     public BigDecimal getTotalSum() {
         return this.TotalSum;
     }
@@ -117,6 +120,7 @@ public class TransactSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "ALLOCQTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("PaymentAlloc.TransactSpec.AllocQty")
     public BigDecimal getAllocQty() {
         return this.AllocQty;
     }
@@ -126,6 +130,7 @@ public class TransactSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "ALLOCSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("PaymentAlloc.TransactSpec.AllocSum")
     public BigDecimal getAllocSum() {
         return this.AllocSum;
     }

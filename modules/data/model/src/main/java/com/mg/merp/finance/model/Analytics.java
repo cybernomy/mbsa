@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "FINANL")
+@DataItemName("Finance.Analytics")
 public class Analytics extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -58,6 +59,7 @@ public class Analytics extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -78,6 +80,7 @@ public class Analytics extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARENT_ID")
+    @DataItemName("Finance.AccAnl.Parent")
     public Analytics getParent() {
         return this.Parent;
     }
@@ -97,6 +100,7 @@ public class Analytics extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("Finance.AccAnl.Code")
     public String getCode() {
         return this.Code;
     }
@@ -115,6 +119,7 @@ public class Analytics extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "ANLNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Finance.AccAnl.AnlName")
     public String getAnlName() {
         return this.AnlName;
     }

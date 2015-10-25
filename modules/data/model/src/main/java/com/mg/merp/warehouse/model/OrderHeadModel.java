@@ -89,6 +89,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESPONSIBLE")
+    @DataItemName("Warehouse.OrderHeadModel.Responsible")
     public Contractor getResponsible() {
         return this.Responsible;
     }
@@ -99,6 +100,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONSUMER")
+    @DataItemName("Warehouse.OrderHeadModel.Consumer")
     public Contractor getConsumer() {
         return this.Consumer;
     }
@@ -108,6 +110,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
     }
 
     @Column(name = "SUMMACUR_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Warehouse.BillHead.SummaCurWithDiscount")
     public BigDecimal getSummaCurWithDiscount() {
         return this.SummaCurWithDiscount;
     }
@@ -117,6 +120,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
     }
 
     @Column(name = "SUMMANAT_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Warehouse.BillHead.SummaNatWithDiscount")
     public BigDecimal getSummaNatWithDiscount() {
         return this.SummaNatWithDiscount;
     }
@@ -126,6 +130,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
     }
 
     @Column(name = "ADD_EXPENSES", columnDefinition = "NUMERIC", precision = 15, scale = 4)
+    @DataItemName("Warehouse.OrderHead.AddExpenses")
     public BigDecimal getAddExpenses() {
         return this.AddExpenses;
     }
@@ -135,6 +140,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
     }
 
     @Column(name = "DISCOUNT_ON_DOC", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Warehouse.OrderHead.DiscountOnDoc")
     public BigDecimal getDiscountOnDoc() {
         return this.DiscountOnDoc;
     }
@@ -144,6 +150,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
     }
 
     @Column(name = "DISCOUNT_ON_LINE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Warehouse.OrderHead.DiscountOnLine")
     public BigDecimal getDiscountOnLine() {
         return this.DiscountOnLine;
     }
@@ -154,6 +161,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
 
     @Column(name = "DUEDATE_KIND")
     @Enumerated(EnumType.ORDINAL)
+    @DataItemName("Warehouse.OrderHeadModel.DueDateKind")
     public OrderDueDateKind getDueDateKind() {
         return this.DueDateKind;
     }
@@ -163,6 +171,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
     }
 
     @Column(name = "DUEDATE_QUAN", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Warehouse.OrderHeadModel.DueDateQuan")
     public BigDecimal getDueDateQuan() {
         return this.DueDateQuan;
     }
@@ -172,6 +181,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
     }
 
     @Column(name = "DUEDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Warehouse.OrderHeadModel.DueDate")
     public Date getDueDate() {
         return this.DueDate;
     }
@@ -181,6 +191,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
     }
 
     @Column(name = "CREDITTERM", columnDefinition = "SMALLINT")
+    @DataItemName("Warehouse.OrderHeadModel.CreditTerm")
     public Short getCreditTerm() {
         return this.CreditTerm;
     }
@@ -190,6 +201,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
     }
 
     @Column(name = "PENALTY", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("Warehouse.OrderHeadModel.Penalty")
     public BigDecimal getPenalty() {
         return this.Penalty;
     }
@@ -199,6 +211,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 1024)
+    @DataItemName("Warehouse.OrderHeadModel.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -208,6 +221,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
     }
 
     @Column(name = "FIXED_INPUT", columnDefinition = "SMALLINT")
+    @DataItemName("Warehouse.OrderHeadModel.FixedInput")
     public boolean isFixedInput() {
         return this.FixedInput;
     }
@@ -218,6 +232,7 @@ public class OrderHeadModel extends com.mg.merp.document.model.DocHeadModel impl
 
     @Column(name = "STATUS")
     @Enumerated(EnumType.ORDINAL)
+    @DataItemName("Warehouse.OrderHeadModel.Status")
     public OrderStatus getStatus() {
         return this.Status;
     }

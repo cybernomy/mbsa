@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PREF_WORK_CONDITION")
+@DataItemName("PersonnelRef.WorkCondition")
 public class WorkCondition extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -44,6 +45,7 @@ public class WorkCondition extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -63,6 +65,7 @@ public class WorkCondition extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "CCODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("PersonnelRef.WorkCondition.Ccode")
     public String getCCode() {
         return this.CCode;
     }
@@ -72,6 +75,7 @@ public class WorkCondition extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "CNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.WorkCondition.Cname")
     public String getCName() {
         return this.CName;
     }

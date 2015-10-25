@@ -79,6 +79,7 @@ public class RisePercent extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "PERCENT_NUMBER", columnDefinition = "INTEGER")
+    @DataItemName("PersonnelRef.RisePercent.PercentNumber")
     public Integer getPercentNumber() {
         return this.PercentNumber;
     }
@@ -88,6 +89,7 @@ public class RisePercent extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "SERVICE_FROM", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("PersonnelRef.RisePercent.ServiceFrom")
     public BigDecimal getServiceFrom() {
         return this.ServiceFrom;
     }
@@ -97,6 +99,7 @@ public class RisePercent extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "SERVICE_TO", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("PersonnelRef.RisePercent.ServiceTo")
     public BigDecimal getServiceTo() {
         return this.ServiceTo;
     }
@@ -106,6 +109,7 @@ public class RisePercent extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "RISE_VALUE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
+    @DataItemName("PersonnelRef.RisePercent.RiseValue")
     public BigDecimal getRiseValue() {
         return this.RiseValue;
     }

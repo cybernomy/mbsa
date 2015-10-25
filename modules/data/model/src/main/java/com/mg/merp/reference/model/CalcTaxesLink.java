@@ -51,6 +51,7 @@ public class CalcTaxesLink extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -90,6 +91,7 @@ public class CalcTaxesLink extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "FEEORDER", columnDefinition = "SMALLINT")
+    @DataItemName("Reference.TaxLink.FeeOrder")
     public Short getFeeOrder() {
         return this.FeeOrder;
     }
@@ -99,6 +101,7 @@ public class CalcTaxesLink extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "INCLUDED", columnDefinition = "SMALLINT")
+    @DataItemName("Reference.CalcTaxLink.Included")
     public boolean isIncluded() {
         return this.Included;
     }

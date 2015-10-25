@@ -24,6 +24,7 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "ALG_REPOSITORY")
+@DataItemName("BAi.Repository")
 public class Repository extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -65,6 +66,7 @@ public class Repository extends com.mg.merp.core.model.AbstractEntity implements
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -105,6 +107,7 @@ public class Repository extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
+    @DataItemName("BAi.Code")
     public String getCode() {
         return this.Code;
     }
@@ -114,6 +117,7 @@ public class Repository extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("BAi.BigName")
     public String getName() {
         return this.Name;
     }
@@ -142,6 +146,7 @@ public class Repository extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "IMPL_NAME", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("BAi.Repository.ImplementationName")
     public String getImplementationName() {
         return this.ImplementationName;
     }

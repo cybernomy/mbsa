@@ -48,6 +48,7 @@ public class PersonnelLanguage extends com.mg.merp.core.model.AbstractEntity imp
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -78,6 +79,7 @@ public class PersonnelLanguage extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LANGUAGE_KNOWLEDGE_ID")
+    @DataItemName("PersonnelRef.Personnel.LanguageKnowledge")
     public LanguageKnowledge getLanguageKnowledge() {
         return this.LanguageKnowledge;
     }

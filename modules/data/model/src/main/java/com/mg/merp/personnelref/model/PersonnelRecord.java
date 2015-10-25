@@ -51,6 +51,7 @@ public class PersonnelRecord extends com.mg.merp.core.model.AbstractEntity imple
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -81,6 +82,7 @@ public class PersonnelRecord extends com.mg.merp.core.model.AbstractEntity imple
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ORIGINAL_DOCUMENT_ID")
+    @DataItemName("PersonnelRef.Personnel.OriginalDocument")
     public OriginalDocument getOriginalDocument() {
         return this.OriginalDocument;
     }
@@ -90,6 +92,7 @@ public class PersonnelRecord extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.Record.Name")
     public String getName() {
         return this.Name;
     }
@@ -99,6 +102,7 @@ public class PersonnelRecord extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 2048)
+    @DataItemName("PersonnelRef.Personnel.Description")
     public String getDescription() {
         return this.Description;
     }

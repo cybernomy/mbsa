@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PREF_STAFF_CATEGORY")
+@DataItemName("PersonnelRef.StaffCategory")
 public class StaffCategory extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -47,6 +48,7 @@ public class StaffCategory extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -66,6 +68,7 @@ public class StaffCategory extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "CCODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("PersonnelRef.StaffCategory.CCode")
     public String getCCode() {
         return this.CCode;
     }
@@ -75,6 +78,7 @@ public class StaffCategory extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "CNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.StaffCategory.CName")
     public String getCName() {
         return this.CName;
     }
@@ -84,6 +88,7 @@ public class StaffCategory extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "PRIORITY", columnDefinition = "INTEGER")
+    @DataItemName("PersonnelRef.StaffCategory.Priority")
     public Integer getPriority() {
         return this.Priority;
     }

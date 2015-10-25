@@ -18,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PP_PLANNING_LEVEL_BUCKET")
+@DataItemName("MfReference.PlanningLevelBucket")
 public class PlanningLevelBucket extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -47,6 +48,7 @@ public class PlanningLevelBucket extends com.mg.merp.core.model.AbstractEntity i
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -76,6 +78,7 @@ public class PlanningLevelBucket extends com.mg.merp.core.model.AbstractEntity i
     }
 
     @Column(name = "START_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("MfReference.PlanLevBuck.StDate")
     public Date getStartDate() {
         return this.StartDate;
     }
@@ -85,6 +88,7 @@ public class PlanningLevelBucket extends com.mg.merp.core.model.AbstractEntity i
     }
 
     @Column(name = "END_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("MfReference.PlanLevBuck.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }
@@ -94,6 +98,7 @@ public class PlanningLevelBucket extends com.mg.merp.core.model.AbstractEntity i
     }
 
     @Column(name = "BUCKET_OFFSET", columnDefinition = "SMALLINT")
+    @DataItemName("MfReference.PlanLevBuck.BucketOffset")
     public Short getBucketOffset() {
         return this.BucketOffset;
     }

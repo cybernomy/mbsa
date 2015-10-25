@@ -108,6 +108,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -118,6 +119,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "VENDOR_ID")
+    @DataItemName("Planning.MRPRecommendation.Vendor")
     public Contractor getVendor() {
         return this.Vendor;
     }
@@ -138,6 +140,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CATALOG_ID")
+    @DataItemName("Planning.Catalog")
     public Catalog getCatalog() {
         return this.Catalog;
     }
@@ -148,6 +151,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WAREHOUSE_ID")
+    @DataItemName("Planning.MRPRecommendation.Warehouse")
     public Warehouse getWarehouse() {
         return this.Warehouse;
     }
@@ -168,6 +172,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MRP_VERSION_CONTROL_ID")
+    @DataItemName("Planning.MRPRecommendation.MRPVersionControl")
     public MrpVersionControl getMrpVersionControl() {
         return this.MrpVersionControl;
     }
@@ -178,6 +183,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SOURCE_WAREHOUSE_ID")
+    @DataItemName("Planning.MRPRecommendation.SourceWarehouse")
     public Warehouse getSourceWarehouse() {
         return this.SourceWarehouse;
     }
@@ -187,6 +193,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "REQUIRED_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Planning.MRPRecommendation.RequiredDate")
     public Date getRequiredDate() {
         return this.RequiredDate;
     }
@@ -196,6 +203,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "ORDER_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Planning.MRPRecommendation.OrderQty")
     public BigDecimal getOrderQty() {
         return this.OrderQty;
     }
@@ -205,6 +213,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MRP_QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Planning.MRPRecommendation.MRPQuantity")
     public BigDecimal getMrpQuantity() {
         return this.MrpQuantity;
     }
@@ -214,6 +223,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "PURCHASE_LEAD_TIME", columnDefinition = "SMALLINT")
+    @DataItemName("Planning.MRPRecommendation.PurchaseLeadTime")
     public Short getPurchaseLeadTime() {
         return this.PurchaseLeadTime;
     }
@@ -223,6 +233,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "FIRM_PLAN_SUGGESTED_ORDER", columnDefinition = "SMALLINT")
+    @DataItemName("Planning.MRPRecommendation.FirmPlanSuggestedOrder")
     public boolean isFirmPlanSuggestedOrder() {
         return this.FirmPlanSuggestedOrder;
     }
@@ -232,6 +243,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "ORDER_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Planning.MRPRecommendation.OrderDate")
     public Date getOrderDate() {
         return this.OrderDate;
     }
@@ -241,6 +253,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MRP_ARREARS_FLAG", columnDefinition = "SMALLINT")
+    @DataItemName("Planning.MRPRecommendation.MRPArrearsFlag")
     public boolean isMrpArrearsFlag() {
         return this.MrpArrearsFlag;
     }
@@ -250,6 +263,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MRP_ORDERED", columnDefinition = "SMALLINT")
+    @DataItemName("Planning.MRPRecommendation.MRPOrdered")
     public boolean isMrpOrdered() {
         return this.MrpOrdered;
     }
@@ -269,6 +283,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "PP_REFERENCE", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Planning.MRPRecommendation.Reference")
     public String getPpReference() {
         return this.PpReference;
     }
@@ -307,6 +322,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "ORIGINAL_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Planning.MRPRecommendation.OriginalDate")
     public Date getOriginalDate() {
         return this.OriginalDate;
     }
@@ -316,6 +332,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "BATCH_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("Planning.MRPRecommendation.BatchDate")
     public Date getBatchDate() {
         return this.BatchDate;
     }
@@ -325,6 +342,7 @@ public class MrpRecommendation extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "ORIGINAL_QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Planning.MRPRecommendation.OriginalQuantity")
     public BigDecimal getOriginalQuantity() {
         return this.OriginalQuantity;
     }

@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "MF_WEEK_CAL")
+@DataItemName("MfReference.WeekCalendar")
 public class WeekCalendar extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -37,6 +38,7 @@ public class WeekCalendar extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -56,6 +58,7 @@ public class WeekCalendar extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
+    @DataItemName("MfReference.WeekCalendar.Code")
     public String getCode() {
         return this.Code;
     }

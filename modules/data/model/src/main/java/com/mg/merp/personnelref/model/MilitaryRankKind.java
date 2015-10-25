@@ -17,6 +17,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PREF_MILITARY_RANK_KIND")
+@DataItemName("PersonnelRef.MilitaryRankKind")
 public class MilitaryRankKind extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -44,6 +45,7 @@ public class MilitaryRankKind extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -63,6 +65,7 @@ public class MilitaryRankKind extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("PersonnelRef.MilitRankKind.Code")
     public String getCode() {
         return this.Code;
     }
@@ -72,6 +75,7 @@ public class MilitaryRankKind extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.MilitRankKind.Name")
     public String getName() {
         return this.Name;
     }

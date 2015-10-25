@@ -21,6 +21,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PREF_SERVICE_KIND")
+@DataItemName("PersonnelRef.ServiceKind")
 public class ServiceKind extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -67,6 +68,7 @@ public class ServiceKind extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -87,6 +89,7 @@ public class ServiceKind extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BEGINSERVICE_ALG_ID")
+    @DataItemName("PersonnelRef.ServiceKind.BeginServiceAlg")
     public Repository getBeginServiceAlg() {
         return this.BeginServiceAlg;
     }
@@ -97,6 +100,7 @@ public class ServiceKind extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ENDSERVICE_ALG_ID")
+    @DataItemName("PersonnelRef.ServiceKind.EndServiceAlg")
     public Repository getEndServiceAlg() {
         return this.EndServiceAlg;
     }
@@ -107,6 +111,7 @@ public class ServiceKind extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "LENGTHSERVICE_ALG_ID")
+    @DataItemName("PersonnelRef.ServiceKind.LengthServiceAlg")
     public Repository getLengthServiceAlg() {
         return this.LengthServiceAlg;
     }
@@ -116,6 +121,7 @@ public class ServiceKind extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "KNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.ServiceKind.KName")
     public String getKName() {
         return this.KName;
     }
@@ -134,6 +140,7 @@ public class ServiceKind extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "KCODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("PersonnelRef.ServiceKind.KCode")
     public String getKCode() {
         return this.KCode;
     }

@@ -55,6 +55,7 @@ public class CatalogWarehouse extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -75,6 +76,7 @@ public class CatalogWarehouse extends com.mg.merp.core.model.AbstractEntity impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WAREHOUSE_ID")
+    @DataItemName("Planning.CatWarehouse.Contractor")
     public Warehouse getWarehouse() {
         return this.Warehouse;
     }
@@ -94,6 +96,7 @@ public class CatalogWarehouse extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "SAFETY_LEVEL", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Planning.CatWarehouse.SafetyLevel")
     public BigDecimal getSafetyLevel() {
         return this.SafetyLevel;
     }
@@ -103,6 +106,7 @@ public class CatalogWarehouse extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "MRP_DAMPING_DAYS", columnDefinition = "SMALLINT")
+    @DataItemName("Planning.CatWarehouse.MrpDampingDays")
     public Short getMrpDampingDays() {
         return this.MrpDampingDays;
     }
@@ -112,6 +116,7 @@ public class CatalogWarehouse extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "DEMAND_FENCE_DAYS", columnDefinition = "SMALLINT")
+    @DataItemName("Planning.CatWarehouse.DemandFenceDays")
     public Short getDemandFenceDays() {
         return this.DemandFenceDays;
     }
@@ -121,6 +126,7 @@ public class CatalogWarehouse extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "ORDER_INTERVAL_DAYS", columnDefinition = "SMALLINT")
+    @DataItemName("Planning.CatWarehouse.OrderIntervalDays")
     public Short getOrderIntervalDays() {
         return this.OrderIntervalDays;
     }

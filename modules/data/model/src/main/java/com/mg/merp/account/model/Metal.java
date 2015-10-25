@@ -14,6 +14,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "METAL")
+@DataItemName("Account.Metal")
 public class Metal extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private String UpCode;
@@ -60,6 +61,7 @@ public class Metal extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("Account.Metal.Code")
     public String getCode() {
         return this.Code;
     }
@@ -69,6 +71,7 @@ public class Metal extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "MNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Account.Metal.Name")
     public String getName() {
         return this.Name;
     }

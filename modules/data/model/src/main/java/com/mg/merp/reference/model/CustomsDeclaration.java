@@ -17,6 +17,8 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_CUSTOMS_DECLARATION")
+//$NON-NLS-1$
+@DataItemName("Reference.CustomsDeclaration")
 public class CustomsDeclaration extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -44,6 +46,8 @@ public class CustomsDeclaration extends com.mg.merp.core.model.AbstractEntity im
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    //$NON-NLS-1$
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -63,6 +67,8 @@ public class CustomsDeclaration extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "CDNUMBER", unique = true, nullable = false, columnDefinition = "VARCHAR", length = 30)
+    //$NON-NLS-1$
+    @DataItemName("Reference.CustomsDeclaration.Number")
     public String getNumber() {
         return this.Number;
     }
@@ -72,6 +78,8 @@ public class CustomsDeclaration extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "NOTE", columnDefinition = "VARCHAR", length = 256)
+    //$NON-NLS-1$
+    @DataItemName("Reference.CustomsDeclaration.Note")
     public String getNote() {
         return this.Note;
     }

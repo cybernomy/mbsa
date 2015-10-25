@@ -56,6 +56,7 @@ public class PersonnelGroup extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "GROUPTYPE_ID")
+    @DataItemName("PersonnelRef.PersonnelGroup.GroupType")
     public PersonnelGroupType getGroupType() {
         return this.GroupType;
     }
@@ -75,6 +76,7 @@ public class PersonnelGroup extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "FLDNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.PersonnelGroup.FldName")
     public String getFldName() {
         return this.FldName;
     }
@@ -93,6 +95,7 @@ public class PersonnelGroup extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "FOLDER_TAG", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Reference.FolderTag")
     public String getFolderTag() {
         return this.FolderTag;
     }

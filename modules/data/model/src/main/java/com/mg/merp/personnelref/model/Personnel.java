@@ -191,6 +191,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -221,6 +222,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PERSON_ID", unique = true)
+    @DataItemName("PersonnelRef.Personnel.Person")
     public NaturalPerson getPerson() {
         return this.Person;
     }
@@ -231,6 +233,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "INSUREDCLASS_ID")
+    @DataItemName("PersonnelRef.Personnel.InsuredClass")
     public InsuredClass getInsuredClass() {
         return this.InsuredClass;
     }
@@ -241,6 +244,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "EDUCATION_DEGREE_ID")
+    @DataItemName("PersonnelRef.Personnel.EducationDegree")
     public EducationDegree getEducationDegree() {
         return this.EducationDegree;
     }
@@ -309,6 +313,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "TABLE_NUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("PersonnelRef.Personnel.TableNumber")
     public String getTableNumber() {
         return this.TableNumber;
     }
@@ -363,6 +368,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "STATURE", columnDefinition = "NUMERIC", precision = 18, scale = 3)
+    @DataItemName("Reference.Personnel.Stature")
     public BigDecimal getStature() {
         return this.Stature;
     }
@@ -373,6 +379,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE_UPCODE")
+    @DataItemName("PersonnelRef.Personnel.Measure")
     public Measure getMeasureUpCode() {
         return this.MeasureUpCode;
     }
@@ -391,6 +398,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PENSION_NUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("Reference.Personnel.PensionNumber")
     public String getPensionNumber() {
         return this.PensionNumber;
     }
@@ -409,6 +417,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "LABOUR_CONTRACT_NUMBER", columnDefinition = "CHAR", length = 20)
+    @DataItemName("PersonnelRef.Personnel.LabourContrNum")
     public String getLabourContractNumber() {
         return this.LabourContractNumber;
     }
@@ -418,6 +427,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "LABOUR_CONTRACT_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.Personnel.LabourContrDate")
     public Date getLabourContractDate() {
         return this.LabourContractDate;
     }
@@ -436,6 +446,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "RETIRE_REASON", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("PersonnelRef.Personnel.RetireReason")
     public String getRetireReason() {
         return this.RetireReason;
     }
@@ -445,6 +456,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "RETIRE_DATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.Personnel.RetireDate")
     public Date getRetireDate() {
         return this.RetireDate;
     }
@@ -454,6 +466,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "MIL_SPECIALITY", columnDefinition = "CHAR", length = 20)
+    @DataItemName("PersonnelRef.Personnel.MilSpeciality")
     public String getMilSpeciality() {
         return this.MilSpeciality;
     }
@@ -463,6 +476,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "MIL_COMMISSARIAT", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.Personnel.MilCommissariat")
     public String getMilCommissariat() {
         return this.MilCommissariat;
     }
@@ -472,6 +486,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "MIL_REG_PARTY_NUMBER", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.Personnel.MilRegPartyNumber")
     public String getMilRegPartyNumber() {
         return this.MilRegPartyNumber;
     }
@@ -481,6 +496,7 @@ public class Personnel extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "MIL_REG_SPECIAL", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.Personnel.MilRegSpecial")
     public String getMilRegSpecial() {
         return this.MilRegSpecial;
     }

@@ -53,6 +53,7 @@ public class RiseScale extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -82,6 +83,7 @@ public class RiseScale extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "SCALE_NUMBER", columnDefinition = "INTEGER")
+    @DataItemName("PersonnelRef.RiseScale.ScaleNumber")
     public Integer getScaleNumber() {
         return this.ScaleNumber;
     }
@@ -91,6 +93,7 @@ public class RiseScale extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "SNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("PersonnelRef.RiseScale.Name")
     public String getSName() {
         return this.SName;
     }
@@ -100,6 +103,7 @@ public class RiseScale extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "BEGINDATE", columnDefinition = "TIMESTAMP")
+    @DataItemName("PersonnelRef.RiseScale.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }

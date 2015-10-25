@@ -69,6 +69,7 @@ public class Solution extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -109,6 +110,7 @@ public class Solution extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CREATOR_ID")
+    @DataItemName("CRM.Solution.Creator")
     public User getCreator() {
         return this.Creator;
     }
@@ -118,6 +120,7 @@ public class Solution extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("CRM.BigName")
     public String getName() {
         return this.Name;
     }
@@ -127,6 +130,7 @@ public class Solution extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "INFO", columnDefinition = "VARCHAR", length = 2048)
+    @DataItemName("CRM.Solution.Info")
     public String getInfo() {
         return this.Info;
     }
@@ -145,6 +149,7 @@ public class Solution extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "VALID_FROM", columnDefinition = "TIMESTAMP")
+    @DataItemName("CRM.Solution.ValidFrom")
     public Date getValidFrom() {
         return this.ValidFrom;
     }
@@ -154,6 +159,7 @@ public class Solution extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "VALID_TO", columnDefinition = "TIMESTAMP")
+    @DataItemName("CRM.Solution.ValidTo")
     public Date getValidTo() {
         return this.ValidTo;
     }

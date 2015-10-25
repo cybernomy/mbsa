@@ -18,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_FAMILY_STATUS")
+@DataItemName("Reference.FamilyStatus")
 public class FamilyStatus extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -49,6 +50,7 @@ public class FamilyStatus extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -88,6 +90,7 @@ public class FamilyStatus extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "BEGINDATE", nullable = false, columnDefinition = "TIMESTAMP")
+    @DataItemName("Reference.NaturalPerson.FStatus.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }

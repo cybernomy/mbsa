@@ -20,6 +20,7 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "SAL_FEE_REF_PARAM")
+@DataItemName("Salary.FeeRefParam")
 public class FeeRefParam extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -62,6 +63,7 @@ public class FeeRefParam extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
+    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -82,6 +84,7 @@ public class FeeRefParam extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CALC_ALG_ID")
+    @DataItemName("Salary.FeeRefParam.CalcAlg")
     public Repository getCalcAlg() {
         return this.CalcAlg;
     }
@@ -101,6 +104,7 @@ public class FeeRefParam extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "PCODE", nullable = false, columnDefinition = "CHAR", length = 20)
+    @DataItemName("Salary.BigCode")
     public String getPCode() {
         return this.PCode;
     }
@@ -110,6 +114,7 @@ public class FeeRefParam extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "PNAME", columnDefinition = "VARCHAR", length = 80)
+    @DataItemName("Salary.Name")
     public String getPName() {
         return this.PName;
     }
@@ -119,6 +124,7 @@ public class FeeRefParam extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "PRIORITY", columnDefinition = "INTEGER")
+    @DataItemName("Salary.FeeRefParam.Priority")
     public Integer getPriority() {
         return this.Priority;
     }
@@ -129,6 +135,7 @@ public class FeeRefParam extends com.mg.merp.core.model.AbstractEntity implement
 
     @Column(name = "PARAM_TYPE")
     @Enumerated(EnumType.ORDINAL)
+    @DataItemName("Salary.FeeRefParam.ParamType")
     public FeeParamType getParamType() {
         return this.ParamType;
     }
@@ -138,6 +145,7 @@ public class FeeRefParam extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "CALC_ONCE", columnDefinition = "SMALLINT")
+    @DataItemName("Salary.FeeRefParam.CalcOnce")
     public boolean isCalcOnce() {
         return this.CalcOnce;
     }

@@ -18,6 +18,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "MF_COST_CATEGORIES")
+@DataItemName("MfReference.CostCategories")
 public class CostCategories extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -60,6 +61,7 @@ public class CostCategories extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FORMULA_ID")
+    @DataItemName("MfReference.CostCateg.AlgRepos")
     public Repository getAlgRepository() {
         return this.AlgRepository;
     }
@@ -79,6 +81,7 @@ public class CostCategories extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
+    @DataItemName("MfReference.CostCateg.Code")
     public String getCode() {
         return this.Code;
     }
@@ -88,6 +91,7 @@ public class CostCategories extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 256)
+    @DataItemName("MfReference.CostCateg.Descr")
     public String getDescription() {
         return this.Description;
     }
@@ -97,6 +101,7 @@ public class CostCategories extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "VIEW_ORDER", columnDefinition = "INTEGER")
+    @DataItemName("MfReference.CostCateg.ViewOrder")
     public Integer getViewOrder() {
         return this.ViewOrder;
     }
@@ -106,6 +111,7 @@ public class CostCategories extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "CALCULATION_SEQUENCE", columnDefinition = "INTEGER")
+    @DataItemName("MfReference.CostCateg.CalcSeq")
     public Integer getCalculationSequence() {
         return this.CalculationSequence;
     }

@@ -58,6 +58,8 @@ public class FeeSummarySpec extends com.mg.merp.document.model.DocSpec implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL1_ID")
+    //$NON-NLS-1$
+    @DataItemName("Salary.FeeModel.CostsAnl1")
     public CostsAnl getCostsAnl1() {
         return this.CostsAnl1;
     }
@@ -68,6 +70,8 @@ public class FeeSummarySpec extends com.mg.merp.document.model.DocSpec implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL2_ID")
+    //$NON-NLS-1$
+    @DataItemName("Salary.FeeModel.CostsAnl2")
     public CostsAnl getCostsAnl2() {
         return this.CostsAnl2;
     }
@@ -78,6 +82,8 @@ public class FeeSummarySpec extends com.mg.merp.document.model.DocSpec implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL3_ID")
+    //$NON-NLS-1$
+    @DataItemName("Salary.FeeModel.CostsAnl3")
     public CostsAnl getCostsAnl3() {
         return this.CostsAnl3;
     }
@@ -88,6 +94,8 @@ public class FeeSummarySpec extends com.mg.merp.document.model.DocSpec implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL4_ID")
+    //$NON-NLS-1$
+    @DataItemName("Salary.FeeModel.CostsAnl4")
     public CostsAnl getCostsAnl4() {
         return this.CostsAnl4;
     }
@@ -98,6 +106,8 @@ public class FeeSummarySpec extends com.mg.merp.document.model.DocSpec implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL5_ID")
+    //$NON-NLS-1$
+    @DataItemName("Salary.FeeModel.CostsAnl5")
     public CostsAnl getCostsAnl5() {
         return this.CostsAnl5;
     }
