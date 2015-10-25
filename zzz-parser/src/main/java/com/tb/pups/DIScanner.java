@@ -3,9 +3,9 @@ package com.tb.pups;
 import static java.nio.file.FileVisitResult.CONTINUE;
 import io.github.lukehutch.fastclasspathscanner.FastClasspathScanner;
 
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -17,7 +17,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import com.github.javaparser.JavaParser;
 import com.github.javaparser.ParseException;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.ImportDeclaration;
@@ -44,7 +43,7 @@ public class DIScanner {
 					throws FileNotFoundException, IOException {
 				if (file.toString().endsWith(".java")) {
 					try {
-						if(process(file, Utils.extractClass(file))){
+						if(process(file)){
 							counter ++;
 							System.out.println(counter+"..."+file);
 						}
@@ -55,8 +54,10 @@ public class DIScanner {
 				return CONTINUE;
 			}
 
-			private boolean process(Path file, CompilationUnit cu) throws IOException, ParseException {
+			private boolean process(Path file) throws IOException, ParseException {
 				boolean found = false;
+
+				CompilationUnit cu = Utils.extractClass(file);
 
 				final ImportDeclaration imp = new ImportDeclaration(new NameExpr("com.mg.framework.api.annotations.DataItemName"), false, false);
 
@@ -65,15 +66,11 @@ public class DIScanner {
 
 				List<TypeDeclaration> types = cu.getTypes();
 				for (TypeDeclaration type : types) {
-					if (type instanceof EnumDeclaration) {
-						//Path target = Paths.get("/home/valentin/Dev/Projects/mbsamvn/modules/data/premodel/src/main/java", file.subpath(4, file.getNameCount()).toString());
-						//Files.copy(file, target, StandardCopyOption.REPLACE_EXISTING);
-					} else {
-
-						if(!Files.isReadable(result)){
+					if (! (type instanceof EnumDeclaration)) {
+						/*if(!Files.isReadable(result)){
 							System.out.format("missed file %s, copy it\n", result);
 							Files.copy(file, result, StandardCopyOption.REPLACE_EXISTING);
-						}
+						}*/
 
 						boolean addImport = false;
 						CompilationUnit target = Utils.extractClass(result);
@@ -88,20 +85,6 @@ public class DIScanner {
 							if (member instanceof MethodDeclaration) {
 								MethodDeclaration met = (MethodDeclaration) member;
 
-								if(met.getName().startsWith("get") && met.getType() instanceof ReferenceType){
-									ReferenceType rt = (ReferenceType) met.getType();
-									ClassOrInterfaceType coi = (ClassOrInterfaceType)rt.getType();
-
-
-									Class c = findClass(coi);
-									if(c == null){
-										throw new RuntimeException(String.format("class %s not found in %s", coi, type.getName()));
-									}
-									if (c.isEnum()){
-										System.out.println(met);
-									}
-								}
-
 								List<AnnotationExpr> anns = met.getAnnotations();
 								if (anns != null && anns.size() > 0) {
 									found = true;
@@ -114,9 +97,9 @@ public class DIScanner {
 											throw new RuntimeException(String.format(
 													"чё за аннотация??  %s, %s", ae.getName(), clazz));
 										}
-										/*try(PrintWriter out = new PrintWriter(result.toString())){
+										try(PrintWriter out = new PrintWriter(result.toString())){
 											out.println(target.toString());
-										}*/
+										}
 									}
 
 								}
@@ -128,39 +111,6 @@ public class DIScanner {
 					}
 				}
 				return found;
-			}
-
-			private Class findClass(ClassOrInterfaceType coi) {
-				Class result = null;
-				try {
-					result = Class.forName(coi.toString());
-				} catch (ClassNotFoundException e) {
-					Set<String> classNames = new FastClasspathScanner("com.mg.merp").scan().getNamesOfAllClasses();
-			        System.out.println("DIScanner.main()");
-
-					/*Package[] packages = Package.getPackages();
-				    final String className = coi.getName();
-
-				    for (final Package p : packages) {
-				        final String pack = p.getName();
-
-				        if(coi.getName().equals("TariffingScaleType") && pack.startsWith("com.mg.merp")){
-							System.out.println(pack);
-						}
-
-				        final String tentative = pack + "." + className;
-				        if("com.mg.merp.personnelref.model.TariffingScaleType".equals(tentative)){
-				        	System.out.println("found!!!!");
-				        }
-				        try {
-				            result = Class.forName(tentative);
-				        } catch (final ClassNotFoundException e1) {
-				            continue;
-				        }
-				        break;
-				    }*/
-				}
-				return result;
 			}
 
 			private void addAnnotation(CompilationUnit target,
@@ -220,6 +170,11 @@ public class DIScanner {
 					if(!result){
 						ms1 = m1.getName().replaceFirst("^is", "get");
 						ms2 = m2.getName().replaceFirst("^is", "get");
+						result = ms1.equals(ms2);
+					}
+					if(!result){
+						ms1 = m1.getName().replaceFirst("^has", "getHas");
+						ms2 = m2.getName().replaceFirst("^has", "getHas");
 						result = ms1.equals(ms2);
 					}
 				}
