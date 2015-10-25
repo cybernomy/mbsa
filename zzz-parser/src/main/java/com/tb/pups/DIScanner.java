@@ -97,9 +97,6 @@ public class DIScanner {
 											throw new RuntimeException(String.format(
 													"чё за аннотация??  %s, %s", ae.getName(), clazz));
 										}
-										try(PrintWriter out = new PrintWriter(result.toString())){
-											out.println(target.toString());
-										}
 									}
 
 								}
@@ -107,6 +104,10 @@ public class DIScanner {
 						}
 						if(addImport){
 							target.getImports().add(imp);
+
+							try(PrintWriter out = new PrintWriter(result.toString())){
+								out.println(target.toString());
+							}
 						}
 					}
 				}
