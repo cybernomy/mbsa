@@ -71,6 +71,7 @@ public class EnumAnnMapper {
 					if (t instanceof ClassOrInterfaceDeclaration) {
 						ClassOrInterfaceDeclaration type = (ClassOrInterfaceDeclaration) t;
 
+						boolean importsAdded = false;
 						List<BodyDeclaration> members = type.getMembers();
 						for (BodyDeclaration member : members) {
 							if (member instanceof MethodDeclaration) {
@@ -98,8 +99,11 @@ public class EnumAnnMapper {
 											.getMethodAnnotation(met,
 													"Enumerated");
 									if (en == null) {
-										cu.getImports().add(impEn);
-										cu.getImports().add(impET);
+										if (!importsAdded) {
+											cu.getImports().add(impEn);
+											cu.getImports().add(impET);
+											importsAdded = true;
+										}
 										en = new SingleMemberAnnotationExpr(
 												new NameExpr("Enumerated"),
 												new NameExpr("EnumType.ORDINAL"));
