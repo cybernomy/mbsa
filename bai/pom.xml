@@ -78,5 +78,10 @@
       <artifactId>hibernate</artifactId>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+	<groupId>org.hibernate</groupId>
+	<artifactId>hibernate-annotations</artifactId>
+	<scope>provided</scope>
+    </dependency>
   </dependencies>
 </project>
