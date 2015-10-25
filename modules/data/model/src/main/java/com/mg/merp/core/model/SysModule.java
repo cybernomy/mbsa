@@ -16,7 +16,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SYS_MODULE")
-@DataItemName("Core.Subsystem")
 public class SysModule extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -56,7 +55,6 @@ public class SysModule extends com.mg.merp.core.model.AbstractEntity implements 
 
     @Id
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -66,7 +64,6 @@ public class SysModule extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "NAME", unique = true, nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Core.Subsystem.Name")
     public String getName() {
         return this.Name;
     }
@@ -76,7 +73,6 @@ public class SysModule extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 100)
-    @DataItemName("Core.Subsystem.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -86,7 +82,6 @@ public class SysModule extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "MAJOR_VERSION", columnDefinition = "SMALLINT")
-    @DataItemName("Core.Subsystem.MajorVersion")
     public Short getMajorVersion() {
         return this.MajorVersion;
     }
@@ -96,7 +91,6 @@ public class SysModule extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "MINOR_VERSION", columnDefinition = "SMALLINT")
-    @DataItemName("Core.Subsystem.MinorVersion")
     public Short getMinorVersion() {
         return this.MinorVersion;
     }
@@ -106,7 +100,6 @@ public class SysModule extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "RELEASE", columnDefinition = "SMALLINT")
-    @DataItemName("Core.Subsystem.Release")
     public Short getRelease() {
         return this.Release;
     }

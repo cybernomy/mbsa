@@ -61,8 +61,6 @@ public class ModifyDocument extends com.mg.merp.core.model.AbstractEntity implem
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -93,8 +91,6 @@ public class ModifyDocument extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCTYPE")
-    //$NON-NLS-1$
-    @DataItemName("Contract.Modif.DocType")
     public DocType getDocType() {
         return this.DocType;
     }
@@ -104,8 +100,6 @@ public class ModifyDocument extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("Contract.Modif.DocNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -115,8 +109,6 @@ public class ModifyDocument extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Contract.Modif.DocDate")
     public Date getDocDate() {
         return this.DocDate;
     }
@@ -126,8 +118,6 @@ public class ModifyDocument extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "MODIFYDESC", columnDefinition = "VARCHAR", length = 2048)
-    //$NON-NLS-1$
-    @DataItemName("Contract.Modif.ModifyDesc")
     public String getModifyDesc() {
         return this.ModifyDesc;
     }
@@ -137,8 +127,6 @@ public class ModifyDocument extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 2048)
-    //$NON-NLS-1$
-    @DataItemName("Contract.Modif.Comment")
     public String getComment() {
         return this.Comment;
     }

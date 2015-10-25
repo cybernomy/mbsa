@@ -55,8 +55,6 @@ public class Schedule extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -86,8 +84,6 @@ public class Schedule extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 256)
-    //$NON-NLS-1$
-    @DataItemName("LbSchedule.Schedule.Comment")
     public String getComments() {
         return this.Comments;
     }
@@ -97,8 +93,6 @@ public class Schedule extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("LbSchedule.Schedule.Name")
     public String getName() {
         return this.Name;
     }

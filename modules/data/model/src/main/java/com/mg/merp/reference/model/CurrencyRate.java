@@ -19,7 +19,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_CURRENCY_RATE")
-@DataItemName("Reference.CurrencyRate")
 public class CurrencyRate extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -60,7 +59,6 @@ public class CurrencyRate extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -120,7 +118,6 @@ public class CurrencyRate extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "RATE", nullable = false, columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Reference.CurRate.Rate")
     public BigDecimal getRate() {
         return this.Rate;
     }
@@ -130,7 +127,6 @@ public class CurrencyRate extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "EFFECTIVE_DATE", nullable = false, columnDefinition = "TIMESTAMP")
-    @DataItemName("Reference.CurRate.EffectiveDate")
     public Date getEffectiveDate() {
         return this.EffectiveDate;
     }

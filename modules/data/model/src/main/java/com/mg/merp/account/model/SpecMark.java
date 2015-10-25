@@ -17,8 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SPECMARK")
-//$NON-NLS-1$
-@DataItemName("Account.SpecMark")
 public class SpecMark extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -51,8 +49,6 @@ public class SpecMark extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -72,8 +68,6 @@ public class SpecMark extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("Account.SpecMark.Code")
     public String getCode() {
         return this.Code;
     }
@@ -83,8 +77,6 @@ public class SpecMark extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SMNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("Account.SpecMark.Name")
     public String getSmName() {
         return this.SmName;
     }

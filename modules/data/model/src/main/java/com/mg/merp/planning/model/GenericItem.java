@@ -19,7 +19,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PP_GENERIC_ITEM")
-@DataItemName("Planning.GenericItem")
 public class GenericItem extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -68,7 +67,6 @@ public class GenericItem extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -99,7 +97,6 @@ public class GenericItem extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE_ID", nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("Planning.GenericItem.Measure")
     public Measure getMeasure() {
         return this.Measure;
     }
@@ -109,7 +106,6 @@ public class GenericItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "GENERIC_ITEM_CODE", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Planning.Code")
     public String getGenericItemCode() {
         return this.GenericItemCode;
     }
@@ -119,7 +115,6 @@ public class GenericItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "GENERIC_ITEM_NAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Planning.Name")
     public String getGenericItemName() {
         return this.GenericItemName;
     }
@@ -129,7 +124,6 @@ public class GenericItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "PLANNING_ITEM_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.GenericItem.PlanningItemFlag")
     public boolean isPlanningItemFlag() {
         return this.PlanningItemFlag;
     }
@@ -139,7 +133,6 @@ public class GenericItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "PLANNING_SHELF_LIFE", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.GenericItem.PlanningShelfLife")
     public short getPlanningShelfLife() {
         return this.PlanningShelfLife;
     }
@@ -149,7 +142,6 @@ public class GenericItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "DEMAND_FENCE_DAYS", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.GenericItem.DemandFenceDays")
     public short getDemandFenceDays() {
         return this.DemandFenceDays;
     }
@@ -159,7 +151,6 @@ public class GenericItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "DAYS_STOCK_COVER", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.GenericItem.DaysStockCover")
     public short getDaysStockCover() {
         return this.DaysStockCover;
     }
@@ -169,7 +160,6 @@ public class GenericItem extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "LOW_LEVEL_CODE", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.GenericItem.LowLevelCode")
     public short getLowLevelCode() {
         return this.LowLevelCode;
     }

@@ -21,7 +21,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "MBPM_RESOURCE")
-@DataItemName("BPM.Resource")
 public class Resource extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -56,7 +55,6 @@ public class Resource extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -76,7 +74,6 @@ public class Resource extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "RESOURCE_NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("BPM.Resource.Name")
     public String getName() {
         return this.Name;
     }
@@ -86,7 +83,6 @@ public class Resource extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "RESOURCE_KEY", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("BPM.Resource.Key")
     public String getKey() {
         return this.Key;
     }

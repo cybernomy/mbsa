@@ -83,8 +83,6 @@ public class PhasePlanItem extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -105,8 +103,6 @@ public class PhasePlanItem extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTORFROM")
-    //$NON-NLS-1$
-    @DataItemName("Contract.ItemPan.From")
     public Contractor getFrom() {
         return this.From;
     }
@@ -117,8 +113,6 @@ public class PhasePlanItem extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTORTO")
-    //$NON-NLS-1$
-    @DataItemName("Contract.ItemPan.To")
     public Contractor getTo() {
         return this.To;
     }
@@ -138,8 +132,6 @@ public class PhasePlanItem extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "ITEM_NUMBER", columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("Contract.ItemnPlan.Number")
     public String getItemNumber() {
         return this.ItemNumber;
     }
@@ -159,8 +151,6 @@ public class PhasePlanItem extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "BEGINACTION_DATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Contract.ItemnPlan.BeginActionDate")
     public Date getBeginActionDate() {
         return this.BeginActionDate;
     }
@@ -170,8 +160,6 @@ public class PhasePlanItem extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "ENDACTION_DATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Contract.ItemnPlan.EndActionDate")
     public Date getEndActionDate() {
         return this.EndActionDate;
     }
@@ -181,8 +169,6 @@ public class PhasePlanItem extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "PLANSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Contract.ItemnPlan.PlanSum")
     public BigDecimal getPlanSum() {
         return this.PlanSum;
     }
@@ -192,8 +178,6 @@ public class PhasePlanItem extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "FACTSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Contract.ItemnPlan.FactSum")
     public BigDecimal getFactSum() {
         return this.FactSum;
     }
@@ -213,8 +197,6 @@ public class PhasePlanItem extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCTYPE")
-    //$NON-NLS-1$
-    @DataItemName("Document.DocType")
     public DocType getDocType() {
         return this.DocType;
     }
@@ -224,8 +206,6 @@ public class PhasePlanItem extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("Document.DocNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -235,8 +215,6 @@ public class PhasePlanItem extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Document.DocDate")
     public Date getDocDate() {
         return this.DocDate;
     }

@@ -51,7 +51,6 @@ public class RccpHeader extends com.mg.merp.core.model.AbstractEntity implements
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -91,7 +90,6 @@ public class RccpHeader extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Planning.RCCP.Name")
     public String getName() {
         return this.Name;
     }
@@ -101,7 +99,6 @@ public class RccpHeader extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "RCCP_VERSION", columnDefinition = "INTEGER")
-    @DataItemName("Planning.RCCP.RccpVersion")
     public Integer getRccpVersion() {
         return this.RccpVersion;
     }
@@ -111,7 +108,6 @@ public class RccpHeader extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "LAST_RUN_DATETIME", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.RCCP.LastRunDateTime")
     public Date getLastRunDateTime() {
         return this.LastRunDateTime;
     }

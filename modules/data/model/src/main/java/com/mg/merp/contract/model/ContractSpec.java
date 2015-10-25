@@ -62,7 +62,6 @@ public class ContractSpec extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -132,7 +131,6 @@ public class ContractSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Contract.Spec.Quantity")
     public BigDecimal getQuantity() {
         return this.Quantity;
     }
@@ -142,7 +140,6 @@ public class ContractSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "PRICE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Contract.Spec.Price")
     public BigDecimal getPrice() {
         return this.Price;
     }
@@ -152,7 +149,6 @@ public class ContractSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Contract.Spec.Summa")
     public BigDecimal getSumma() {
         return this.Summa;
     }

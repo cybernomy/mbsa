@@ -68,7 +68,6 @@ public class InputDocumentHead extends com.mg.merp.document.model.DocHead implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "EMPLOYEE_ID")
-    @DataItemName("Manufacture.InputDocHead.Employee")
     public Contractor getEmployee() {
         return this.Employee;
     }
@@ -79,7 +78,6 @@ public class InputDocumentHead extends com.mg.merp.document.model.DocHead implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "OUTPUT_DOC_HEAD_ID")
-    @DataItemName("Manufacture.InputDocHead.OutputDocHead")
     public DocHead getOutputDocHead() {
         return this.OutputDocHead;
     }
@@ -90,7 +88,6 @@ public class InputDocumentHead extends com.mg.merp.document.model.DocHead implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WC_ID")
-    @DataItemName("Manufacture.InputDocHead.WC")
     public WorkCenter getWC() {
         return this.WC;
     }
@@ -101,7 +98,6 @@ public class InputDocumentHead extends com.mg.merp.document.model.DocHead implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CREW_ID")
-    @DataItemName("Manufacture.InputDocHead.Crew")
     public Crew getCrew() {
         return this.Crew;
     }
@@ -112,7 +108,6 @@ public class InputDocumentHead extends com.mg.merp.document.model.DocHead implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_ID")
-    @DataItemName("Manufacture.InputDocHead.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -123,7 +118,6 @@ public class InputDocumentHead extends com.mg.merp.document.model.DocHead implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "OPER_ID")
-    @DataItemName("Manufacture.InputDocHead.Oper")
     public JobRoute getOper() {
         return this.Oper;
     }
@@ -134,7 +128,6 @@ public class InputDocumentHead extends com.mg.merp.document.model.DocHead implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "JOB_ID")
-    @DataItemName("Manufacture.InputDocHead.Job")
     public Job getJob() {
         return this.Job;
     }
@@ -144,7 +137,6 @@ public class InputDocumentHead extends com.mg.merp.document.model.DocHead implem
     }
 
     @Column(name = "BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Manufacture.InputDocHead.BackFlushFlag")
     public boolean isBackFlushFlag() {
         return this.BackFlushFlag;
     }

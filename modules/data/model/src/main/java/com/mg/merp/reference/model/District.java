@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_DISTRICT")
-@DataItemName("Reference.District")
 public class District extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -44,7 +43,6 @@ public class District extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -74,7 +72,6 @@ public class District extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "PREFIX", columnDefinition = "VARCHAR", length = 20)
-    @DataItemName("Reference.Address.Prefix")
     public String getPrefix() {
         return this.Prefix;
     }
@@ -84,7 +81,6 @@ public class District extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Address.District")
     public String getName() {
         return this.Name;
     }

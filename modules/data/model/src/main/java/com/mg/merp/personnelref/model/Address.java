@@ -107,7 +107,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -147,7 +146,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "BEGINDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("PersonnelRef.Personnel.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -157,7 +155,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "FULL_ADDRESS", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("PersonnelRef.Personnel.FullAddress")
     public String getFullAddress() {
         return this.FullAddress;
     }
@@ -167,7 +164,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "POST_INDEX", columnDefinition = "CHAR", length = 10)
-    @DataItemName("PersonnelRef.Address.Index")
     public String getPostIndex() {
         return this.PostIndex;
     }
@@ -177,7 +173,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "COUNTRY", nullable = false, columnDefinition = "VARCHAR", length = 40)
-    @DataItemName("PersonnelRef.Address.Country")
     public String getCountry() {
         return this.Country;
     }
@@ -187,7 +182,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "REGION", nullable = false, columnDefinition = "VARCHAR", length = 40)
-    @DataItemName("PersonnelRef.Address.Region")
     public String getRegion() {
         return this.Region;
     }
@@ -197,7 +191,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "DISTRICT", nullable = false, columnDefinition = "VARCHAR", length = 40)
-    @DataItemName("PersonnelRef.Address.District")
     public String getDistrict() {
         return this.District;
     }
@@ -207,7 +200,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "DISTRICT_TYPE", columnDefinition = "CHAR", length = 11)
-    @DataItemName("PersonnelRef.Address.Type")
     public String getDistrictType() {
         return this.DistrictType;
     }
@@ -226,7 +218,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CITY_TYPE", columnDefinition = "CHAR", length = 11)
-    @DataItemName("PersonnelRef.Address.Type")
     public String getCityType() {
         return this.CityType;
     }
@@ -236,7 +227,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "AREA", nullable = false, columnDefinition = "VARCHAR", length = 40)
-    @DataItemName("PersonnelRef.Address.Area")
     public String getArea() {
         return this.Area;
     }
@@ -246,7 +236,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "AREA_TYPE", columnDefinition = "CHAR", length = 11)
-    @DataItemName("PersonnelRef.Address.Type")
     public String getAreaType() {
         return this.AreaType;
     }
@@ -256,7 +245,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "STREET", nullable = false, columnDefinition = "VARCHAR", length = 40)
-    @DataItemName("PersonnelRef.Address.Street")
     public String getStreet() {
         return this.Street;
     }
@@ -266,7 +254,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "STREET_TYPE", columnDefinition = "CHAR", length = 11)
-    @DataItemName("PersonnelRef.Address.Type")
     public String getStreetType() {
         return this.StreetType;
     }
@@ -276,7 +263,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "HOUSE", columnDefinition = "CHAR", length = 10)
-    @DataItemName("PersonnelRef.Personnel.House")
     public String getHouse() {
         return this.House;
     }
@@ -286,7 +272,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "BLOCK", columnDefinition = "CHAR", length = 10)
-    @DataItemName("PersonnelRef.Personnel.Block")
     public String getBlock() {
         return this.Block;
     }
@@ -296,7 +281,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "FLAT", columnDefinition = "CHAR", length = 10)
-    @DataItemName("PersonnelRef.Personnel.Flat")
     public String getFlat() {
         return this.Flat;
     }
@@ -306,7 +290,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "REGION_TYPE", columnDefinition = "CHAR", length = 11)
-    @DataItemName("PersonnelRef.Address.Type")
     public String getRegionType() {
         return this.RegionType;
     }
@@ -316,7 +299,6 @@ public class Address extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "KLADR_CODE", columnDefinition = "CHAR", length = 15)
-    @DataItemName("PersonnelRef.Personnel.KladrCode")
     public String getKladrCode() {
         return this.KladrCode;
     }

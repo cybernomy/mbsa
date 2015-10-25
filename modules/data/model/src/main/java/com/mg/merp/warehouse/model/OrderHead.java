@@ -89,7 +89,6 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESPONSIBLE")
-    @DataItemName("Warehouse.OrderHead.Responsible")
     public Contractor getResponsible() {
         return this.Responsible;
     }
@@ -100,7 +99,6 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONSUMER")
-    @DataItemName("Warehouse.OrderHead.Consumer")
     public Contractor getConsumer() {
         return this.Consumer;
     }
@@ -110,7 +108,6 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
     }
 
     @Column(name = "SUMMACUR_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.BillHead.SummaCurWithDiscount")
     public BigDecimal getSummaCurWithDiscount() {
         return this.SummaCurWithDiscount;
     }
@@ -120,7 +117,6 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
     }
 
     @Column(name = "SUMMANAT_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.BillHead.SummaNatWithDiscount")
     public BigDecimal getSummaNatWithDiscount() {
         return this.SummaNatWithDiscount;
     }
@@ -130,7 +126,6 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
     }
 
     @Column(name = "ADD_EXPENSES", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.OrderHead.AddExpenses")
     public BigDecimal getAddExpenses() {
         return this.AddExpenses;
     }
@@ -140,7 +135,6 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
     }
 
     @Column(name = "DISCOUNT_ON_DOC", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.OrderHead.DiscountOnDoc")
     public BigDecimal getDiscountOnDoc() {
         return this.DiscountOnDoc;
     }
@@ -150,7 +144,6 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
     }
 
     @Column(name = "DISCOUNT_ON_LINE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.OrderHead.DiscountOnLine")
     public BigDecimal getDiscountOnLine() {
         return this.DiscountOnLine;
     }
@@ -170,7 +163,6 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
     }
 
     @Column(name = "DUEDATE_QUAN", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Warehouse.OrderHead.DueDateQuan")
     public BigDecimal getDueDateQuan() {
         return this.DueDateQuan;
     }
@@ -180,7 +172,6 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
     }
 
     @Column(name = "DUEDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Warehouse.OrderHead.DueDate")
     public Date getDueDate() {
         return this.DueDate;
     }
@@ -190,7 +181,6 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
     }
 
     @Column(name = "CREDITTERM", columnDefinition = "SMALLINT")
-    @DataItemName("Warehouse.OrderHead.CreditTerm")
     public Short getCreditTerm() {
         return this.CreditTerm;
     }
@@ -200,7 +190,6 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
     }
 
     @Column(name = "PENALTY", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.OrderHead.Penalty")
     public BigDecimal getPenalty() {
         return this.Penalty;
     }
@@ -210,7 +199,6 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 1024)
-    @DataItemName("Warehouse.OrderHead.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -220,7 +208,6 @@ public class OrderHead extends com.mg.merp.document.model.DocHead implements jav
     }
 
     @Column(name = "FIXED_INPUT", columnDefinition = "SMALLINT")
-    @DataItemName("Warehouse.OrderHead.FixedInput")
     public boolean isFixedInput() {
         return this.FixedInput;
     }

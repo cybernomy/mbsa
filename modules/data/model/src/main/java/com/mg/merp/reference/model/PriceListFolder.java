@@ -17,8 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PRICELISTFOLDER")
-//$NON-NLS-1$
-@DataItemName("Reference.PriceListFolder")
 public class PriceListFolder extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -48,8 +46,6 @@ public class PriceListFolder extends com.mg.merp.core.model.AbstractEntity imple
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -89,8 +85,6 @@ public class PriceListFolder extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "FNAME", columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("Reference.PriceListFolder.Name")
     public String getFName() {
         return this.FName;
     }
@@ -100,8 +94,6 @@ public class PriceListFolder extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "FOLDER_TAG", columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("Reference.FolderTag")
     public String getFolderTag() {
         return this.FolderTag;
     }

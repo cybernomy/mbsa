@@ -61,7 +61,6 @@ public class ContractorCardPlan extends com.mg.merp.core.model.AbstractEntity im
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -110,7 +109,6 @@ public class ContractorCardPlan extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "PROCESSDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Settlement.ContrCardHist.ProcessDate")
     public Date getProcessDate() {
         return this.ProcessDate;
     }
@@ -120,7 +118,6 @@ public class ContractorCardPlan extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "SUMCUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Settlement.ContrCardHist.SumCur")
     public BigDecimal getSumCur() {
         return this.SumCur;
     }
@@ -130,7 +127,6 @@ public class ContractorCardPlan extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "SUMNAT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Settlement.ContrCardHist.SumNat")
     public BigDecimal getSumNat() {
         return this.SumNat;
     }

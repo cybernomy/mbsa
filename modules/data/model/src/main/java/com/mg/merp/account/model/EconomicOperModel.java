@@ -117,7 +117,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -128,7 +127,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MODELDESTFOLDER_ID")
-    @DataItemName("Account.EconModel.ModelDestFolder")
     public Folder getModelDestFolder() {
         return this.ModelDestFolder;
     }
@@ -139,7 +137,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FROM_ID")
-    @DataItemName("Account.EconOper.From")
     public Contractor getFrom() {
         return this.From;
     }
@@ -150,7 +147,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TO_ID")
-    @DataItemName("Account.EconOper.To")
     public Contractor getTo() {
         return this.To;
     }
@@ -181,7 +177,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SPECMARK")
-    @DataItemName("Account.EconOper.SpecMark")
     public SpecMark getSpecMark() {
         return this.SpecMark;
     }
@@ -191,7 +186,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MODELNAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Account.EconModel.ModelName")
     public String getModelName() {
         return this.ModelName;
     }
@@ -201,7 +195,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "KEEPDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.EconOper.KeepDate")
     public Date getKeepDate() {
         return this.KeepDate;
     }
@@ -211,7 +204,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Account.EconOper.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -222,7 +214,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCBASETYPE")
-    @DataItemName("Account.EconOper.BaseDocType")
     public DocType getBaseDocType() {
         return this.BaseDocType;
     }
@@ -232,7 +223,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "DOCBASENUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Account.EconOper.BaseDocNumber")
     public String getBaseDocNumber() {
         return this.BaseDocNumber;
     }
@@ -242,7 +232,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "DOCBASEDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.EconOper.BaseDocDate")
     public Date getBaseDocDate() {
         return this.BaseDocDate;
     }
@@ -263,7 +252,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCTYPE")
-    @DataItemName("Account.EconOper.DocType")
     public DocType getConfirmDocType() {
         return this.ConfirmDocType;
     }
@@ -273,7 +261,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Account.EconOper.DocNumber")
     public String getConfirmDocNumber() {
         return this.ConfirmDocNumber;
     }
@@ -283,7 +270,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.EconOper.DocDate")
     public Date getConfirmDocDate() {
         return this.ConfirmDocDate;
     }
@@ -303,7 +289,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.EconOper.Summa")
     public BigDecimal getSumma() {
         return this.Summa;
     }
@@ -314,7 +299,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
 
     @Column(name = "SOURCEFROM")
     @Enumerated(EnumType.ORDINAL)
-    @DataItemName("Account.EconModel.SourceFrom")
     public SourceEconOperContractor getSourceFrom() {
         return this.SourceFrom;
     }
@@ -325,7 +309,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
 
     @Column(name = "SOURCETO")
     @Enumerated(EnumType.ORDINAL)
-    @DataItemName("Account.EconModel.SourceTo")
     public SourceEconOperContractor getSourceTo() {
         return this.SourceTo;
     }
@@ -345,7 +328,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTTYPE")
-    @DataItemName("Account.EconOper.ContractType")
     public DocType getContractType() {
         return this.ContractType;
     }
@@ -355,7 +337,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "CONTRACTNUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Account.EconOper.ContractNumber")
     public String getContractNumber() {
         return this.ContractNumber;
     }
@@ -365,7 +346,6 @@ public class EconomicOperModel extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "CONTRACTDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.EconOper.ContractDate")
     public Date getContractDate() {
         return this.ContractDate;
     }

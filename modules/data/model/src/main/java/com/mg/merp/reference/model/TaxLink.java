@@ -47,7 +47,6 @@ public class TaxLink extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -87,7 +86,6 @@ public class TaxLink extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "FEEORDER", nullable = false, columnDefinition = "SMALLINT")
-    @DataItemName("Reference.TaxLink.FeeOrder")
     public short getFeeOrder() {
         return this.FeeOrder;
     }

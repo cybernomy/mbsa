@@ -79,7 +79,6 @@ public class AdvanceRepSpec extends com.mg.merp.document.model.DocSpec implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL2_ID")
-    @DataItemName("Account.Adv.Anl2")
     public AnlPlan getAnl2() {
         return this.Anl2;
     }
@@ -90,7 +89,6 @@ public class AdvanceRepSpec extends com.mg.merp.document.model.DocSpec implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ACC_ID")
-    @DataItemName("Account.AdvanceRepSpec.AccPlan")
     public AccPlan getAccPlan() {
         return this.AccPlan;
     }
@@ -101,7 +99,6 @@ public class AdvanceRepSpec extends com.mg.merp.document.model.DocSpec implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL4_ID")
-    @DataItemName("Account.Adv.Anl4")
     public AnlPlan getAnl4() {
         return this.Anl4;
     }
@@ -112,7 +109,6 @@ public class AdvanceRepSpec extends com.mg.merp.document.model.DocSpec implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL3_ID")
-    @DataItemName("Account.Adv.Anl3")
     public AnlPlan getAnl3() {
         return this.Anl3;
     }
@@ -123,7 +119,6 @@ public class AdvanceRepSpec extends com.mg.merp.document.model.DocSpec implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL1_ID")
-    @DataItemName("Account.Adv.Anl1")
     public AnlPlan getAnl1() {
         return this.Anl1;
     }
@@ -134,7 +129,6 @@ public class AdvanceRepSpec extends com.mg.merp.document.model.DocSpec implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL5_ID")
-    @DataItemName("Account.Adv.Anl5")
     public AnlPlan getAnl5() {
         return this.Anl5;
     }
@@ -144,7 +138,6 @@ public class AdvanceRepSpec extends com.mg.merp.document.model.DocSpec implement
     }
 
     @Column(name = "NUM", columnDefinition = "INTEGER")
-    @DataItemName("Account.Adv.Num")
     public Integer getNum() {
         return this.Num;
     }
@@ -154,7 +147,6 @@ public class AdvanceRepSpec extends com.mg.merp.document.model.DocSpec implement
     }
 
     @Column(name = "EXPENSEDOCNUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Account.Adv.ExpenseDocNumber")
     public String getExpenseDocNumber() {
         return this.ExpenseDocNumber;
     }
@@ -164,7 +156,6 @@ public class AdvanceRepSpec extends com.mg.merp.document.model.DocSpec implement
     }
 
     @Column(name = "EXPENSEDOCDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.Adv.ExpenseDocDate")
     public Date getExpenseDocDate() {
         return this.ExpenseDocDate;
     }
@@ -174,7 +165,6 @@ public class AdvanceRepSpec extends com.mg.merp.document.model.DocSpec implement
     }
 
     @Column(name = "EXPENSEDOCNAME", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Account.Adv.ExpenseDocName")
     public String getExpenseDocName() {
         return this.ExpenseDocName;
     }
@@ -184,7 +174,6 @@ public class AdvanceRepSpec extends com.mg.merp.document.model.DocSpec implement
     }
 
     @Column(name = "EXPENSESUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.Adv.ExpenseSum")
     public BigDecimal getExpenseSum() {
         return this.ExpenseSum;
     }
@@ -194,7 +183,6 @@ public class AdvanceRepSpec extends com.mg.merp.document.model.DocSpec implement
     }
 
     @Column(name = "CONSIDEREDSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.Adv.ConsideredSum")
     public BigDecimal getConsideredSum() {
         return this.ConsideredSum;
     }

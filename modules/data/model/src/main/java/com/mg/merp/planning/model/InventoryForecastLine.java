@@ -59,7 +59,6 @@ public class InventoryForecastLine extends com.mg.merp.core.model.AbstractEntity
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -100,7 +99,6 @@ public class InventoryForecastLine extends com.mg.merp.core.model.AbstractEntity
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WAREHOUSE_ID")
-    @DataItemName("Planning.InvForecast.Warehouse")
     public Contractor getWarehouse() {
         return this.Warehouse;
     }
@@ -120,7 +118,6 @@ public class InventoryForecastLine extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "EFF_ON_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.InvForecast.EffOnDate")
     public Date getEffOnDate() {
         return this.EffOnDate;
     }
@@ -130,7 +127,6 @@ public class InventoryForecastLine extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "EFF_OFF_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.InvForecast.EffOffDate")
     public Date getEffOffDate() {
         return this.EffOffDate;
     }
@@ -140,7 +136,6 @@ public class InventoryForecastLine extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "QTY_ON_HAND", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.InvForecast.QtyOnHand")
     public BigDecimal getQtyOnHand() {
         return this.QtyOnHand;
     }

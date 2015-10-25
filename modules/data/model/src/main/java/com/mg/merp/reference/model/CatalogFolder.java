@@ -18,7 +18,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "CATALOGFOLDER")
-@DataItemName("Reference.CatalogFolder")
 public class CatalogFolder extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -62,7 +61,6 @@ public class CatalogFolder extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -93,7 +91,6 @@ public class CatalogFolder extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "NUMBERING_ALG_ID")
-    @DataItemName("Reference.CatFolder.AlgRepository")
     public Repository getAlgRepository() {
         return this.AlgRepository;
     }
@@ -103,7 +100,6 @@ public class CatalogFolder extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "FNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.CatFolder.Name")
     public String getFName() {
         return this.FName;
     }
@@ -113,7 +109,6 @@ public class CatalogFolder extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "GROUPCODE", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.CatFolder.Code")
     public String getGroupCode() {
         return this.GroupCode;
     }
@@ -123,7 +118,6 @@ public class CatalogFolder extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "BARCODE", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.CatFolder.BarCode")
     public String getBarCode() {
         return this.BarCode;
     }
@@ -133,7 +127,6 @@ public class CatalogFolder extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "PLUCODE", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.CatFolder.PluCode")
     public String getPluCode() {
         return this.PluCode;
     }
@@ -143,7 +136,6 @@ public class CatalogFolder extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "FOLDER_TAG", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.FolderTag")
     public String getFolderTag() {
         return this.FolderTag;
     }

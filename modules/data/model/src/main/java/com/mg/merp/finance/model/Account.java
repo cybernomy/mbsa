@@ -23,7 +23,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "FINACCOUNT")
-@DataItemName("Finance.Account")
 public class Account extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -98,7 +97,6 @@ public class Account extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -109,7 +107,6 @@ public class Account extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL4_CLASS_ID")
-    @DataItemName("Finance.Acc.SysClass4")
     public SysClass getAnl4Class() {
         return this.Anl4Class;
     }
@@ -140,7 +137,6 @@ public class Account extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL3_CLASS_ID")
-    @DataItemName("Finance.Acc.SysClass3")
     public SysClass getAnl3Class() {
         return this.Anl3Class;
     }
@@ -151,7 +147,6 @@ public class Account extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL5_CLASS_ID")
-    @DataItemName("Finance.Acc.SysClass5")
     public SysClass getAnl5Class() {
         return this.Anl5Class;
     }
@@ -162,7 +157,6 @@ public class Account extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL2_CLASS_ID")
-    @DataItemName("Finance.Acc.SysClass2")
     public SysClass getAnl2Class() {
         return this.Anl2Class;
     }
@@ -173,7 +167,6 @@ public class Account extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ANL1_CLASS_ID")
-    @DataItemName("Finance.Acc.SysClass1")
     public SysClass getAnl1Class() {
         return this.Anl1Class;
     }
@@ -184,7 +177,6 @@ public class Account extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURRENCY_CODE")
-    @DataItemName("Finance.Acc.CurrencyCode")
     public Currency getCurrencyCode() {
         return this.CurrencyCode;
     }
@@ -194,7 +186,6 @@ public class Account extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Finance.Acc.Code")
     public String getCode() {
         return this.Code;
     }
@@ -213,7 +204,6 @@ public class Account extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ACCNAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Finance.Acc.Accname")
     public String getAccName() {
         return this.AccName;
     }
@@ -232,7 +222,6 @@ public class Account extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ANL1_KIND", columnDefinition = "SMALLINT")
-    @DataItemName("Finance.Account.AnlBusinessService")
     public boolean isAnl1Kind() {
         return this.Anl1Kind;
     }
@@ -242,7 +231,6 @@ public class Account extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ANL2_KIND", columnDefinition = "SMALLINT")
-    @DataItemName("Finance.Account.AnlBusinessService")
     public boolean isAnl2Kind() {
         return this.Anl2Kind;
     }
@@ -252,7 +240,6 @@ public class Account extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ANL3_KIND", columnDefinition = "SMALLINT")
-    @DataItemName("Finance.Account.AnlBusinessService")
     public boolean isAnl3Kind() {
         return this.Anl3Kind;
     }
@@ -262,7 +249,6 @@ public class Account extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ANL4_KIND", columnDefinition = "SMALLINT")
-    @DataItemName("Finance.Account.AnlBusinessService")
     public boolean isAnl4Kind() {
         return this.Anl4Kind;
     }
@@ -272,7 +258,6 @@ public class Account extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ANL5_KIND", columnDefinition = "SMALLINT")
-    @DataItemName("Finance.Account.AnlBusinessService")
     public boolean isAnl5Kind() {
         return this.Anl5Kind;
     }

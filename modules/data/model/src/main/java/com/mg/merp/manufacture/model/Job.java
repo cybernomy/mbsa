@@ -31,7 +31,6 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "MF_JOB")
-@DataItemName("Manufacture.Job")
 public class Job extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -151,7 +150,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -172,7 +170,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEF_SRC_MOL_ID")
-    @DataItemName("Manufacture.Job.DefSrcMol")
     public Employees getDefSrcMol() {
         return this.DefSrcMol;
     }
@@ -203,7 +200,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARENT_JOB_ID")
-    @DataItemName("Manufacture.Job.ParentJob")
     public Job getParentJob() {
         return this.ParentJob;
     }
@@ -224,7 +220,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEF_DST_MOL_ID")
-    @DataItemName("Manufacture.Job.DefDstMol")
     public Employees getDefDstMol() {
         return this.DefDstMol;
     }
@@ -245,7 +240,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ROOT_JOB_ID")
-    @DataItemName("Manufacture.Job.RootJob")
     public Job getRootJob() {
         return this.RootJob;
     }
@@ -266,7 +260,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEF_DST_STOCK_ID")
-    @DataItemName("Manufacture.Job.DefDstStock")
     public Warehouse getDefDstStock() {
         return this.DefDstStock;
     }
@@ -277,7 +270,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEF_SRC_STOCK_ID")
-    @DataItemName("Manufacture.Job.DefSrcStock")
     public Warehouse getDefSrcStock() {
         return this.DefSrcStock;
     }
@@ -287,7 +279,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "JOB_NUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Manufacture.Job.JobNumber")
     public String getJobNumber() {
         return this.JobNumber;
     }
@@ -297,7 +288,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "JOB_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Manufacture.Job.JobDate")
     public Date getJobDate() {
         return this.JobDate;
     }
@@ -317,7 +307,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "QTY_RELEASED", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Manufacture.Job.QtyReleased")
     public BigDecimal getQtyReleased() {
         return this.QtyReleased;
     }
@@ -327,7 +316,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "QTY_COMPLETE", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Manufacture.Job.QtyComplete")
     public BigDecimal getQtyComplete() {
         return this.QtyComplete;
     }
@@ -337,7 +325,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "QTY_SCRAPPED", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Manufacture.Job.QtyScrapped")
     public BigDecimal getQtyScrapped() {
         return this.QtyScrapped;
     }
@@ -347,7 +334,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "ROLLUP_DATETIME", columnDefinition = "TIMESTAMP")
-    @DataItemName("Manufacture.Job.RollUpDateTime")
     public Date getRollUpDateTime() {
         return this.RollUpDateTime;
     }
@@ -357,7 +343,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "START_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Manufacture.Job.StartDate")
     public Date getStartDate() {
         return this.StartDate;
     }
@@ -367,7 +352,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "END_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Manufacture.Job.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }
@@ -395,7 +379,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "START_JOB", columnDefinition = "NUMERIC", precision = 18, scale = 0)
-    @DataItemName("Manufacture.Job.StartJob")
     public long getStartJob() {
         return this.StartJob;
     }
@@ -405,7 +388,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "FINISH_JOB", columnDefinition = "NUMERIC", precision = 18, scale = 0)
-    @DataItemName("Manufacture.Job.FinishJob")
     public long getFinishJob() {
         return this.FinishJob;
     }
@@ -416,7 +398,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @Column(name = "SCHED_DIRECTION")
     @Enumerated(EnumType.ORDINAL)
-    @DataItemName("Manufacture.Job.SchedDirection")
     public ScheduleDirection getSchedDirection() {
         return this.SchedDirection;
     }
@@ -426,7 +407,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "USE_MOVE_TIMES", columnDefinition = "SMALLINT")
-    @DataItemName("Manufacture.Job.UseMoveTimes")
     public boolean isUseMoveTimes() {
         return this.UseMoveTimes;
     }
@@ -436,7 +416,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "USE_QUEUE_TIMES", columnDefinition = "SMALLINT")
-    @DataItemName("Manufacture.Job.UseQueueTimes")
     public boolean isUseQueueTimes() {
         return this.UseQueueTimes;
     }
@@ -446,7 +425,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "USE_FINITE_CAPACITY", columnDefinition = "SMALLINT")
-    @DataItemName("Manufacture.Job.UseFiniteCapacity")
     public boolean isUseFiniteCapacity() {
         return this.UseFiniteCapacity;
     }
@@ -456,7 +434,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "PRIORITY", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Manufacture.Job.Priority")
     public BigDecimal getPriority() {
         return this.Priority;
     }
@@ -466,7 +443,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "PRIORITY_FREEZE_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Manufacture.Job.PriorityFreezeFlag")
     public boolean isPriorityFreezeFlag() {
         return this.PriorityFreezeFlag;
     }
@@ -476,7 +452,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "MRP_END_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Manufacture.Job.MrpEndDate")
     public Date getMrpEndDate() {
         return this.MrpEndDate;
     }
@@ -486,7 +461,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "CHANGE_JOB_APPROVED", columnDefinition = "SMALLINT")
-    @DataItemName("Manufacture.Job.ChangeJobApproved")
     public boolean isChangeJobApproved() {
         return this.ChangeJobApproved;
     }
@@ -496,7 +470,6 @@ public class Job extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Manufacture.Job.Comment")
     public String getComment() {
         return this.Comment;
     }

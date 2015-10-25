@@ -77,7 +77,6 @@ public class Site extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @Id
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -97,7 +96,6 @@ public class Site extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 5)
-    @DataItemName("Exchange.Site.Code")
     public String getCode() {
         return this.Code;
     }
@@ -107,7 +105,6 @@ public class Site extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Exchange.Site.Name")
     public String getName() {
         return this.Name;
     }
@@ -117,7 +114,6 @@ public class Site extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "PATH_IN", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Exchange.Site.PathIn")
     public String getPathIn() {
         return this.PathIn;
     }
@@ -127,7 +123,6 @@ public class Site extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "PATH_OUT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Exchange.Site.PathOut")
     public String getPathOut() {
         return this.PathOut;
     }
@@ -137,7 +132,6 @@ public class Site extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "PACKET_IN", columnDefinition = "INTEGER")
-    @DataItemName("Exchange.Site.PacketIn")
     public Integer getPacketIn() {
         return this.PacketIn;
     }
@@ -147,7 +141,6 @@ public class Site extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "PACKET_IN_TIME", columnDefinition = "TIMESTAMP")
-    @DataItemName("Exchange.Site.PacketInTime")
     public Date getPacketInTime() {
         return this.PacketInTime;
     }
@@ -157,7 +150,6 @@ public class Site extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "PACKET_OUT", columnDefinition = "INTEGER")
-    @DataItemName("Exchange.Site.PacketOut")
     public Integer getPacketOut() {
         return this.PacketOut;
     }
@@ -167,7 +159,6 @@ public class Site extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "PACKET_OUT_TIME", columnDefinition = "TIMESTAMP")
-    @DataItemName("Exchange.Site.PacketOutTime")
     public Date getPacketOutTime() {
         return this.PacketOutTime;
     }
@@ -177,7 +168,6 @@ public class Site extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "REQUEST_DONE", columnDefinition = "SMALLINT")
-    @DataItemName("Exchange.Site.RequestDone")
     public boolean isRequestDone() {
         return this.RequestDone;
     }
@@ -187,7 +177,6 @@ public class Site extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "EXPORT_CMD", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Exchange.Site.ExportCmd")
     public String getExportCmd() {
         return this.ExportCmd;
     }
@@ -197,7 +186,6 @@ public class Site extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IMPORT_CMD", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Exchange.Site.ImportCmd")
     public String getImportCmd() {
         return this.ImportCmd;
     }

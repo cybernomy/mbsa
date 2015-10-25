@@ -20,7 +20,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ACC_AMCODE")
-@DataItemName("Account.AmCode")
 public class AmCode extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -51,7 +50,6 @@ public class AmCode extends com.mg.merp.core.model.AbstractEntity implements jav
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -71,7 +69,6 @@ public class AmCode extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Account.AmCode.Code")
     public String getCode() {
         return this.Code;
     }
@@ -81,7 +78,6 @@ public class AmCode extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "CNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Account.AmCode.CName")
     public String getCName() {
         return this.CName;
     }

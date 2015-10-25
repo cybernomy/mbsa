@@ -19,7 +19,6 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "REF_CONTRACTOR_EADDRESS")
-@DataItemName("Reference.ContractorElectronicAddress")
 public class ContractorElectronicAddress extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -52,7 +51,6 @@ public class ContractorElectronicAddress extends com.mg.merp.core.model.Abstract
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -102,7 +100,6 @@ public class ContractorElectronicAddress extends com.mg.merp.core.model.Abstract
     }
 
     @Column(name = "ADDRESS", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Partner.Email.Address")
     public String getAddress() {
         return this.Address;
     }
@@ -112,7 +109,6 @@ public class ContractorElectronicAddress extends com.mg.merp.core.model.Abstract
     }
 
     @Column(name = "IS_ACTIVE", columnDefinition = "SMALLINT")
-    @DataItemName("Reference.Partner.Email.IsActive")
     public boolean isActive() {
         return this.IsActive;
     }

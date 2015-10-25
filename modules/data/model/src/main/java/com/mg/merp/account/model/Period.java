@@ -18,7 +18,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PERIOD")
-@DataItemName("Account.Period")
 public class Period extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -57,7 +56,6 @@ public class Period extends com.mg.merp.core.model.AbstractEntity implements jav
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -77,7 +75,6 @@ public class Period extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "PNAME", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Account.Period.Name")
     public String getName() {
         return this.Name;
     }
@@ -87,7 +84,6 @@ public class Period extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "DATEFROM", nullable = false, columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.Period.DateFrom")
     public Date getDateFrom() {
         return this.DateFrom;
     }
@@ -97,7 +93,6 @@ public class Period extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "DATETO", nullable = false, columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.Period.DateTo")
     public Date getDateTo() {
         return this.DateTo;
     }
@@ -107,7 +102,6 @@ public class Period extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "WHOCLOSED", columnDefinition = "CHAR", length = 31)
-    @DataItemName("Account.Period.WhoClosed")
     public String getWhoClosed() {
         return this.WhoClosed;
     }
@@ -117,7 +111,6 @@ public class Period extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "DATECLOSE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.Period.DateClose")
     public Date getDateClose() {
         return this.DateClose;
     }

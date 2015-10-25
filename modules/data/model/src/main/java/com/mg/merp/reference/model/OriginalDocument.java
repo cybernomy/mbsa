@@ -19,7 +19,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_ORIGINAL_DOCUMENT")
-@DataItemName("Reference.OriginalDocument")
 public class OriginalDocument extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -58,7 +57,6 @@ public class OriginalDocument extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -88,7 +86,6 @@ public class OriginalDocument extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.OrigDoc.DocNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -98,7 +95,6 @@ public class OriginalDocument extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Reference.OrigDoc.DocDate")
     public Date getDocDate() {
         return this.DocDate;
     }
@@ -108,7 +104,6 @@ public class OriginalDocument extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "DOCNAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Name")
     public String getDocName() {
         return this.DocName;
     }
@@ -118,7 +113,6 @@ public class OriginalDocument extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "CREATEDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Reference.OrigDoc.CreateDate")
     public Date getCreateDate() {
         return this.CreateDate;
     }
@@ -128,7 +122,6 @@ public class OriginalDocument extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Reference.OrigDoc.Comment")
     public String getComments() {
         return this.Comments;
     }

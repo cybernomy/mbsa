@@ -21,7 +21,6 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "PREF_DEDUCTION_KIND")
-@DataItemName("PersonnelRef.DeductionKind")
 public class DeductionKind extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -67,7 +66,6 @@ public class DeductionKind extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -88,7 +86,6 @@ public class DeductionKind extends com.mg.merp.core.model.AbstractEntity impleme
 
     @Column(name = "DEDUCTIONCLASS", nullable = false)
     @Enumerated(EnumType.ORDINAL)
-    @DataItemName("PersonnelRef.DeductionKind.Class")
     public DeductionClass getDeductionClass() {
         return this.DeductionClass;
     }
@@ -98,7 +95,6 @@ public class DeductionKind extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DCODE", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("PersonnelRef.DeductionKind.Code")
     public String getDCode() {
         return this.DCode;
     }
@@ -108,7 +104,6 @@ public class DeductionKind extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("PersonnelRef.DeductionKind.Name")
     public String getDName() {
         return this.DName;
     }
@@ -118,7 +113,6 @@ public class DeductionKind extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "MINSALARYNUMBER", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("PersonnelRef.DeductionKind.MinSalaryNumber")
     public BigDecimal getMinSalaryNumber() {
         return this.MinSalaryNumber;
     }
@@ -128,7 +122,6 @@ public class DeductionKind extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "FIXEDSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("PersonnelRef.DeductionKind.FixedSum")
     public BigDecimal getFixedSum() {
         return this.FixedSum;
     }
@@ -138,7 +131,6 @@ public class DeductionKind extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "BEGINDATE", nullable = false, columnDefinition = "TIMESTAMP")
-    @DataItemName("PersonnelRef.DeductionKind.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -148,7 +140,6 @@ public class DeductionKind extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "MAX_INCOME", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("PersonnelRef.DeductionKind.MaxIncome")
     public BigDecimal getMaxIncome() {
         return this.MaxIncome;
     }

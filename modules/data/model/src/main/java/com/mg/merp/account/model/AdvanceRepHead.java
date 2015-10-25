@@ -128,7 +128,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ACC_ID")
-    @DataItemName("Account.Adv.Acc")
     public AccPlan getAcc() {
         return this.Acc;
     }
@@ -159,7 +158,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COMPANY_ID")
-    @DataItemName("Account.Adv.Company")
     public Contractor getCompany() {
         return this.Company;
     }
@@ -189,7 +187,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "PURPOSE", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Account.Adv.Purpose")
     public String getPurpose() {
         return this.Purpose;
     }
@@ -199,7 +196,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "PREVADVANCESUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.Adv.PrevAdvanceSum")
     public BigDecimal getPrevAdvanceSum() {
         return this.PrevAdvanceSum;
     }
@@ -209,7 +205,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "RECEIVED1SRC", columnDefinition = "VARCHAR", length = 40)
-    @DataItemName("Account.Adv.Received1Src")
     public String getReceived1Src() {
         return this.Received1Src;
     }
@@ -219,7 +214,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "RECEIVED1DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.Adv.Received1Date")
     public Date getReceived1Date() {
         return this.Received1Date;
     }
@@ -229,7 +223,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "RECEIVED1SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.Adv.Received1Sum")
     public BigDecimal getReceived1Sum() {
         return this.Received1Sum;
     }
@@ -239,7 +232,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "RECEIVED2SRC", columnDefinition = "VARCHAR", length = 40)
-    @DataItemName("Account.Adv.Received2Src")
     public String getReceived2Src() {
         return this.Received2Src;
     }
@@ -249,7 +241,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "RECEIVED2DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.Adv.Received2Date")
     public Date getReceived2Date() {
         return this.Received2Date;
     }
@@ -259,7 +250,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "RECEIVED2SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.Adv.Received2Sum")
     public BigDecimal getReceived2Sum() {
         return this.Received2Sum;
     }
@@ -269,7 +259,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "RECEIVED3SRC", columnDefinition = "VARCHAR", length = 40)
-    @DataItemName("Account.Adv.Received3Src")
     public String getReceived3Src() {
         return this.Received3Src;
     }
@@ -279,7 +268,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "RECEIVED3DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.Adv.Received3Date")
     public Date getReceived3Date() {
         return this.Received3Date;
     }
@@ -289,7 +277,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "RECEIVED3SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.Adv.Received3Sum")
     public BigDecimal getReceived3Sum() {
         return this.Received3Sum;
     }
@@ -299,7 +286,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "RESTDOCKIND", columnDefinition = "SMALLINT")
-    @DataItemName("Account.Adv.RestDocKind")
     public boolean isRestDocKind() {
         return this.RestDocKind;
     }
@@ -310,7 +296,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESTDOCTYPE")
-    @DataItemName("Account.Adv.Adv.DocType")
     public DocType getRestDocType() {
         return this.RestDocType;
     }
@@ -320,7 +305,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "RESTDOCNUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Account.Adv.RestDocNumber")
     public String getRestDocNumber() {
         return this.RestDocNumber;
     }
@@ -330,7 +314,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "RESTDOCDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.Adv.RestDocDate")
     public Date getRestDocDate() {
         return this.RestDocDate;
     }
@@ -340,7 +323,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "RESTSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.Adv.RestSum")
     public BigDecimal getRestSum() {
         return this.RestSum;
     }
@@ -350,7 +332,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "ATTACHEDDOCS", columnDefinition = "INTEGER")
-    @DataItemName("Account.Adv.AttachedDocs")
     public Integer getAttachedDocs() {
         return this.AttachedDocs;
     }
@@ -360,7 +341,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "ATTACHEDDOCSSHEETS", columnDefinition = "INTEGER")
-    @DataItemName("Account.Adv.AttachedDocsSheets")
     public Integer getAttachedDocsSheets() {
         return this.AttachedDocsSheets;
     }
@@ -370,7 +350,6 @@ public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implement
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Account.Adv.Comment")
     public String getComments() {
         return this.Comments;
     }

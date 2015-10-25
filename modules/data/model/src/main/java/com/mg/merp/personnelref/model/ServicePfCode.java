@@ -18,7 +18,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PREF_SERVICE_PFCODE")
-@DataItemName("PersonnelRef.ServicePfCode")
 public class ServicePfCode extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -49,7 +48,6 @@ public class ServicePfCode extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -79,7 +77,6 @@ public class ServicePfCode extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "CODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("PersonnelRef.ServicePFCode.Code")
     public String getCode() {
         return this.Code;
     }
@@ -89,7 +86,6 @@ public class ServicePfCode extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("PersonnelRef.ServicePFCode.Descr")
     public String getDescription() {
         return this.Description;
     }

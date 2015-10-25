@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "QC_SCRAP_REASON")
-@DataItemName("Quality.ScrapReason")
 public class ScrapReason extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -45,7 +44,6 @@ public class ScrapReason extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -65,7 +63,6 @@ public class ScrapReason extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 10)
-    @DataItemName("Quality.ScrapReason.Code")
     public String getCode() {
         return this.Code;
     }
@@ -75,7 +72,6 @@ public class ScrapReason extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Quality.ScrapReason.Name")
     public String getName() {
         return this.Name;
     }

@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PP_PLANNING_LEVEL")
-@DataItemName("MfReference.PlanningLevel")
 public class PlanningLevel extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -44,7 +43,6 @@ public class PlanningLevel extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -64,7 +62,6 @@ public class PlanningLevel extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "PLANNING_LEVEL_NUM", columnDefinition = "SMALLINT")
-    @DataItemName("MfReference.PlanningLevel.PlanningLevelNum")
     public Short getPlanningLevelNum() {
         return this.PlanningLevelNum;
     }
@@ -74,7 +71,6 @@ public class PlanningLevel extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("MfReference.PlanningLevel.Descr")
     public String getDescription() {
         return this.Description;
     }
@@ -84,7 +80,6 @@ public class PlanningLevel extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "TIME_FENCE", columnDefinition = "SMALLINT")
-    @DataItemName("MfReference.PlanningLevel.TimeFence")
     public Short getTimeFence() {
         return this.TimeFence;
     }

@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "WH_ZONE")
-@DataItemName("Warehouse.WarehouseZone")
 public class WarehouseZone extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -49,7 +48,6 @@ public class WarehouseZone extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -79,7 +77,6 @@ public class WarehouseZone extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Warehouse.WarehouseZone.Code")
     public String getCode() {
         return this.Code;
     }
@@ -89,7 +86,6 @@ public class WarehouseZone extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Warehouse.WarehouseZone.Name")
     public String getName() {
         return this.Name;
     }

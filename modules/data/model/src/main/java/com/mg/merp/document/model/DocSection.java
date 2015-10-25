@@ -14,7 +14,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "DOCSECTION")
-@DataItemName("Document.DocSection")
 public class DocSection extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -130,7 +129,6 @@ public class DocSection extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "DSNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Name")
     public String getDSName() {
         return this.DSName;
     }

@@ -97,7 +97,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -118,7 +117,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CUSTOMER_ID")
-    @DataItemName("Account.SaleBook.Customer")
     public Contractor getCustomer() {
         return this.Customer;
     }
@@ -149,7 +147,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCTYPE")
-    @DataItemName("Account.SaleBook.DocType")
     public DocType getDocType() {
         return this.DocType;
     }
@@ -160,7 +157,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ORGUNIT_ID")
-    @DataItemName("Account.SaleBook.OrgUnit")
     public Contractor getOrgUnit() {
         return this.OrgUnit;
     }
@@ -170,7 +166,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Account.SaleBook.DocNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -180,7 +175,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.SaleBook.DocDate")
     public Date getDocDate() {
         return this.DocDate;
     }
@@ -190,7 +184,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "INSERTDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.SaleBook.InsertDate")
     public Date getInsertDate() {
         return this.InsertDate;
     }
@@ -200,7 +193,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "PAYDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.SaleBook.PayDate")
     public Date getPayDate() {
         return this.PayDate;
     }
@@ -210,7 +202,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "TOTALSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.SaleBook.TotalSum")
     public BigDecimal getTotalSum() {
         return this.TotalSum;
     }
@@ -220,7 +211,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SUM_WITHOUT_NDS1", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.SaleBook.SumWithoutNds1")
     public BigDecimal getSumWithoutNds1() {
         return this.SumWithoutNds1;
     }
@@ -230,7 +220,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SUM_WITHOUT_NDS2", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.SaleBook.SumWithoutNds2")
     public BigDecimal getSumWithoutNds2() {
         return this.SumWithoutNds2;
     }
@@ -240,7 +229,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NDS1_SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.SaleBook.Nds1Sum")
     public BigDecimal getNds1Sum() {
         return this.Nds1Sum;
     }
@@ -250,7 +238,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NDS2_SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.SaleBook.Nds2Sum")
     public BigDecimal getNds2Sum() {
         return this.Nds2Sum;
     }
@@ -260,7 +247,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NOT_TAXABLE_SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.SaleBook.NotTaxableSum")
     public BigDecimal getNotTaxableSum() {
         return this.NotTaxableSum;
     }
@@ -270,7 +256,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NOT_TAXABLE_EXPORT_SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.SaleBook.NotTaxableExportSum")
     public BigDecimal getNotTaxableExportSum() {
         return this.NotTaxableExportSum;
     }
@@ -280,7 +265,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NSP_SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.SaleBook.NspSum")
     public BigDecimal getNspSum() {
         return this.NspSum;
     }
@@ -290,7 +274,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SUM_WITHOUT_NDS3", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.SaleBook.SumWithoutNds3")
     public BigDecimal getSumWithoutNds3() {
         return this.SumWithoutNds3;
     }
@@ -300,7 +283,6 @@ public class SaleBook extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NDS3_SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.SaleBook.Nds3Sum")
     public BigDecimal getNds3Sum() {
         return this.Nds3Sum;
     }

@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_FAMILY_STATUS_KIND")
-@DataItemName("Reference.FamilyStatusKind")
 public class FamilyStatusKind extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -48,7 +47,6 @@ public class FamilyStatusKind extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -68,7 +66,6 @@ public class FamilyStatusKind extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "KCODE", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.Code")
     public String getKCode() {
         return this.KCode;
     }
@@ -78,7 +75,6 @@ public class FamilyStatusKind extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "PRIORITY", columnDefinition = "INTEGER")
-    @DataItemName("Reference.Priority")
     public Integer getPriority() {
         return this.Priority;
     }
@@ -88,7 +84,6 @@ public class FamilyStatusKind extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "OKIN", columnDefinition = "CHAR", length = 5)
-    @DataItemName("Reference.Okin")
     public String getOkin() {
         return this.Okin;
     }

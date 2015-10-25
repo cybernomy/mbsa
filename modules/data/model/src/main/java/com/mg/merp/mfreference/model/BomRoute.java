@@ -109,7 +109,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -130,7 +129,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SCHED_OFFSET_TIME_UM")
-    @DataItemName("MfReference.BomRoute.SchedOffSetTimeUm")
     public Measure getSchedOffSetTimeUM() {
         return this.SchedOffSetTimeUM;
     }
@@ -141,7 +139,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SETUP_TIME_UM")
-    @DataItemName("MfReference.BomRoute.SetupTimeUm")
     public Measure getSetupTimeUM() {
         return this.SetupTimeUM;
     }
@@ -152,7 +149,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MOVE_TIME_UM")
-    @DataItemName("MfReference.BomRoute.MoveTimeUm")
     public Measure getMoveTimeUM() {
         return this.MoveTimeUM;
     }
@@ -183,7 +179,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SCHED_TIME_UM")
-    @DataItemName("MfReference.BomRoute.SchedTimeUm")
     public Measure getSchedTimeUM() {
         return this.SchedTimeUM;
     }
@@ -194,7 +189,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WC_ID")
-    @DataItemName("MfReference.BomRoute.WorkCenter")
     public WorkCenter getWorkCenter() {
         return this.WorkCenter;
     }
@@ -205,7 +199,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RUN_TIME_UM")
-    @DataItemName("MfReference.BomRoute.RunTimeUm")
     public Measure getRunTimeUM() {
         return this.RunTimeUM;
     }
@@ -216,7 +209,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "QUEUE_TIME_UM")
-    @DataItemName("MfReference.BomRoute.QueueTimeUm")
     public Measure getQueueTimeUM() {
         return this.QueueTimeUM;
     }
@@ -226,7 +218,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "OPER_NUM", columnDefinition = "INTEGER")
-    @DataItemName("MfReference.BomRoute.OperNum")
     public Integer getOperNum() {
         return this.OperNum;
     }
@@ -236,7 +227,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("MfReference.BomRoute.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -246,7 +236,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "EFF_ON_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("MfReference.BomRoute.EffOnDate")
     public Date getEffOnDate() {
         return this.EffOnDate;
     }
@@ -256,7 +245,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "EFF_OFF_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("MfReference.BomRoute.EffOffDate")
     public Date getEffOffDate() {
         return this.EffOffDate;
     }
@@ -266,7 +254,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "EFFICIENCY", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("MfReference.BomRoute.Efficiency")
     public BigDecimal getEfficiency() {
         return this.Efficiency;
     }
@@ -276,7 +263,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "MOVE_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
-    @DataItemName("MfReference.BomRoute.MoveTicks")
     public Long getMoveTicks() {
         return this.MoveTicks;
     }
@@ -286,7 +272,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SETUP_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
-    @DataItemName("MfReference.BomRoute.SetupTicks")
     public Long getSetupTicks() {
         return this.SetupTicks;
     }
@@ -296,7 +281,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "RUN_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
-    @DataItemName("MfReference.BomRoute.RunTicks")
     public Long getRunTicks() {
         return this.RunTicks;
     }
@@ -306,7 +290,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SCHED_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
-    @DataItemName("MfReference.BomRoute.SchedTicks")
     public Long getSchedTicks() {
         return this.SchedTicks;
     }
@@ -316,7 +299,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SCHED_OFFSET_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
-    @DataItemName("MfReference.BomRoute.SchedOffsetTicks")
     public Long getSchedOffsetTicks() {
         return this.SchedOffsetTicks;
     }
@@ -326,7 +308,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "QUEUE_TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
-    @DataItemName("MfReference.BomRoute.QueueTicks")
     public Long getQueueTicks() {
         return this.QueueTicks;
     }
@@ -336,7 +317,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "CONTROL_POINT_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("MfReference.BomRoute.ControlPointFlag")
     public boolean isControlPointFlag() {
         return this.ControlPointFlag;
     }
@@ -346,7 +326,6 @@ public class BomRoute extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("MfReference.BomRoute.Comment")
     public String getComment() {
         return this.Comment;
     }

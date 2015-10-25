@@ -19,7 +19,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "DISCOUNT")
-@DataItemName("Discount.Discount")
 public class Discount extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -49,7 +48,6 @@ public class Discount extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -60,7 +58,6 @@ public class Discount extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ALG_ID")
-    @DataItemName("Discount.Disc.Alg")
     public Repository getAlg() {
         return this.Alg;
     }
@@ -90,7 +87,6 @@ public class Discount extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DNAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Discount.Name")
     public String getDName() {
         return this.DName;
     }
@@ -100,7 +96,6 @@ public class Discount extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "FORMULA", columnDefinition = "VARCHAR", length = 2048)
-    @DataItemName("Discount.Disc.Formula")
     public String getFormula() {
         return this.Formula;
     }

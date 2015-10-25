@@ -63,7 +63,6 @@ public class Size extends com.mg.merp.core.model.AbstractEntity implements java.
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -103,7 +102,6 @@ public class Size extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CLOTHES_SIZE", columnDefinition = "VARCHAR", length = 15)
-    @DataItemName("Overall.Card.ClothesSize")
     public String getClothesSize() {
         return this.ClothesSize;
     }
@@ -113,7 +111,6 @@ public class Size extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "SHOES_SIZE", columnDefinition = "VARCHAR", length = 15)
-    @DataItemName("Overall.Card.ShoesSize")
     public String getShoesSize() {
         return this.ShoesSize;
     }
@@ -123,7 +120,6 @@ public class Size extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "HAT_SIZE", columnDefinition = "VARCHAR", length = 15)
-    @DataItemName("Overall.Card.HatSize")
     public String getHatSize() {
         return this.HatSize;
     }
@@ -133,7 +129,6 @@ public class Size extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "GAS_MASK_SIZE", columnDefinition = "VARCHAR", length = 15)
-    @DataItemName("Overall.Card.GasMaskSize")
     public String getGasMaskSize() {
         return this.GasMaskSize;
     }
@@ -143,7 +138,6 @@ public class Size extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "RESPIRATOR_SIZE", columnDefinition = "VARCHAR", length = 15)
-    @DataItemName("Overall.Card.RespiratorSize")
     public String getRespiratorSize() {
         return this.RespiratorSize;
     }
@@ -153,7 +147,6 @@ public class Size extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "MITTENS_SIZE", columnDefinition = "VARCHAR", length = 15)
-    @DataItemName("Overall.Card.MittensSize")
     public String getMittensSize() {
         return this.MittensSize;
     }
@@ -163,7 +156,6 @@ public class Size extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "GLOVES_SIZE", columnDefinition = "VARCHAR", length = 15)
-    @DataItemName("Overall.Card.GlovesSize")
     public String getGlovesSize() {
         return this.GlovesSize;
     }

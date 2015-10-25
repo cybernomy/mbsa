@@ -53,7 +53,6 @@ public class WorkTimeNorm extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -74,7 +73,6 @@ public class WorkTimeNorm extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CALC_PERIOD_ID")
-    @DataItemName("PersonnelRef.WorkTimeNorm.CalcPeriod")
     public CalcPeriod getCalcPeriod() {
         return this.CalcPeriod;
     }
@@ -95,7 +93,6 @@ public class WorkTimeNorm extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WORKDAYS_ALG_ID")
-    @DataItemName("PersonnelRef.WorkTimeNorm.WorkDaysAlg")
     public Repository getWorkDaysAlg() {
         return this.WorkDaysAlg;
     }
@@ -106,7 +103,6 @@ public class WorkTimeNorm extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WORKHOURS_ALG_ID")
-    @DataItemName("PersonnelRef.WorkTimeNorm.WorkHoursAlg")
     public Repository getWorkHoursAlg() {
         return this.WorkHoursAlg;
     }
@@ -116,7 +112,6 @@ public class WorkTimeNorm extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "WORKDAYS_NUMBER", columnDefinition = "INTEGER")
-    @DataItemName("PersonnelRef.WorkTimeNorm.WorkDaysNumber")
     public Integer getWorkDaysNumber() {
         return this.WorkDaysNumber;
     }
@@ -126,7 +121,6 @@ public class WorkTimeNorm extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "WORKHOURS_NUMBER", columnDefinition = "INTEGER")
-    @DataItemName("PersonnelRef.WorkTimeNorm.WorkHoursNumber")
     public Integer getWorkHoursNumber() {
         return this.WorkHoursNumber;
     }

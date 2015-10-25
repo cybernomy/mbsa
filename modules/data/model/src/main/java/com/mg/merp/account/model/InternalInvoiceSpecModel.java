@@ -39,7 +39,6 @@ public class InternalInvoiceSpecModel extends com.mg.merp.document.model.DocSpec
     }
 
     @Column(name = "REQUESTQUAN", columnDefinition = "NUMERIC", precision = 15, scale = 3)
-    @DataItemName("Account.InvInvoice.RequestQuan")
     public BigDecimal getRequestQuan() {
         return this.RequestQuan;
     }
@@ -49,7 +48,6 @@ public class InternalInvoiceSpecModel extends com.mg.merp.document.model.DocSpec
     }
 
     @Column(name = "REQUESTSUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.InvInvoice.RequestSumma")
     public BigDecimal getRequestSumma() {
         return this.RequestSumma;
     }

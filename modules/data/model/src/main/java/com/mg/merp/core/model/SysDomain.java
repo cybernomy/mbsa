@@ -14,7 +14,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SYS_DOMAIN")
-@DataItemName("Core.SysDomain")
 public class SysDomain extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -69,7 +68,6 @@ public class SysDomain extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -79,7 +77,6 @@ public class SysDomain extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "NAME", unique = true, nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Core.SysDomain.Name")
     public String getName() {
         return this.Name;
     }
@@ -89,7 +86,6 @@ public class SysDomain extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 1024)
-    @DataItemName("Core.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -108,7 +104,6 @@ public class SysDomain extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "STRING_LENGTH", columnDefinition = "INTEGER")
-    @DataItemName("Core.SysDomain.Length")
     public int getLength() {
         return this.Length;
     }
@@ -118,7 +113,6 @@ public class SysDomain extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "NUMBER_OF_PLACES", columnDefinition = "INTEGER")
-    @DataItemName("Core.SysDomain.NumberOfPlaces")
     public int getNumberOfPlaces() {
         return this.NumberOfPlaces;
     }
@@ -128,7 +122,6 @@ public class SysDomain extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "NUMBER_OF_DECIMAL_PLACES", columnDefinition = "INTEGER")
-    @DataItemName("Core.SysDomain.NumberOfDecimalPlaces")
     public int getNumberOfDecimalPlaces() {
         return this.NumberOfDecimalPlaces;
     }
@@ -138,7 +131,6 @@ public class SysDomain extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "IS_LOWERCASE", columnDefinition = "SMALLINT")
-    @DataItemName("Core.SysDomain.LowerCase")
     public boolean isLowercase() {
         return this.Lowercase;
     }
@@ -148,7 +140,6 @@ public class SysDomain extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "IS_MANDATORY", columnDefinition = "SMALLINT")
-    @DataItemName("Core.SysDomain.Mandatory")
     public boolean isMandatory() {
         return this.Mandatory;
     }
@@ -158,7 +149,6 @@ public class SysDomain extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "IS_SIGN", columnDefinition = "SMALLINT")
-    @DataItemName("Core.SysDomain.Sign")
     public boolean isSign() {
         return this.Sign;
     }
@@ -168,7 +158,6 @@ public class SysDomain extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "CONVERSION_ROUTINE", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Core.SysDomain.ConversionRoutine")
     public String getConversionRoutine() {
         return this.ConversionRoutine;
     }
@@ -178,7 +167,6 @@ public class SysDomain extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "FIXED_VALUES", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Core.SysDomain.FixedValueImpl")
     public String getFixedValuesImpl() {
         return this.FixedValuesImpl;
     }
@@ -188,7 +176,6 @@ public class SysDomain extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DEFAULT_VALUE", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Core.SysDomain.DefaultValueImpl")
     public String getDefaultValueImpl() {
         return this.DefaultValueImpl;
     }

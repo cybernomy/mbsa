@@ -22,7 +22,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "CRM_PROBLEM")
-@DataItemName("CRM.Problem")
 public class Problem extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -76,7 +75,6 @@ public class Problem extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -117,7 +115,6 @@ public class Problem extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CREATOR_ID")
-    @DataItemName("CRM.Problem.Creator")
     public User getCreator() {
         return this.Creator;
     }
@@ -127,7 +124,6 @@ public class Problem extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("CRM.BigName")
     public String getName() {
         return this.Name;
     }
@@ -137,7 +133,6 @@ public class Problem extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "INFO", columnDefinition = "VARCHAR", length = 2048)
-    @DataItemName("CRM.Problem.Info")
     public String getInfo() {
         return this.Info;
     }
@@ -147,7 +142,6 @@ public class Problem extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "KEYWORDS", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("CRM.Problem.Keywords")
     public String getKeywords() {
         return this.Keywords;
     }
@@ -157,7 +151,6 @@ public class Problem extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PRIORITY", columnDefinition = "INTEGER")
-    @DataItemName("CRM.Problem.Priority")
     public Integer getPriority() {
         return this.Priority;
     }
@@ -167,7 +160,6 @@ public class Problem extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "VALID_FROM", columnDefinition = "TIMESTAMP")
-    @DataItemName("CRM.Solution.ValidFrom")
     public Date getValidFrom() {
         return this.ValidFrom;
     }
@@ -177,7 +169,6 @@ public class Problem extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "VALID_TO", columnDefinition = "TIMESTAMP")
-    @DataItemName("CRM.Solution.ValidTo")
     public Date getValidTo() {
         return this.ValidTo;
     }

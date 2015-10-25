@@ -64,7 +64,6 @@ public class JobRouteResource extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -75,7 +74,6 @@ public class JobRouteResource extends com.mg.merp.core.model.AbstractEntity impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESOURCE_GROUP_ID")
-    @DataItemName("Manufacture.JobRouteResource.ResourceGroup")
     public ResourceGroup getResourceGroup() {
         return this.ResourceGroup;
     }
@@ -134,7 +132,6 @@ public class JobRouteResource extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "TIME_SEQUENCE", columnDefinition = "INTEGER")
-    @DataItemName("Manufacture.JobRouteResource.TimeSequence")
     public Integer getTimeSequence() {
         return this.TimeSequence;
     }
@@ -144,7 +141,6 @@ public class JobRouteResource extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "EFF_ON_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Manufacture.JobRouteResource.EffOnDate")
     public Date getEffOnDate() {
         return this.EffOnDate;
     }
@@ -154,7 +150,6 @@ public class JobRouteResource extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "EFF_OFF_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Manufacture.JobRouteResource.EffOffDate")
     public Date getEffOffDate() {
         return this.EffOffDate;
     }
@@ -164,7 +159,6 @@ public class JobRouteResource extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Manufacture.JobRouteResource.Comment")
     public String getComment() {
         return this.Comment;
     }

@@ -71,8 +71,6 @@ public class PhaseFactItem extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -103,8 +101,6 @@ public class PhaseFactItem extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_ID")
-    //$NON-NLS-1$
-    @DataItemName("Contract.ItemFact.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -114,8 +110,6 @@ public class PhaseFactItem extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "REGDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Contract.ItemFact.RegDate")
     public Date getRegDate() {
         return this.RegDate;
     }
@@ -125,8 +119,6 @@ public class PhaseFactItem extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "FACTSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Contract.ItemFact.FactSum")
     public BigDecimal getFactSum() {
         return this.FactSum;
     }
@@ -136,8 +128,6 @@ public class PhaseFactItem extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DISTSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Contract.ItemFact.Distsum")
     public BigDecimal getDistSum() {
         return this.DistSum;
     }
@@ -158,8 +148,6 @@ public class PhaseFactItem extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCTYPE")
-    //$NON-NLS-1$
-    @DataItemName("Document.DocType")
     public DocType getDocType() {
         return this.DocType;
     }
@@ -169,8 +157,6 @@ public class PhaseFactItem extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("Document.DocNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -180,8 +166,6 @@ public class PhaseFactItem extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Document.DocDate")
     public Date getDocDate() {
         return this.DocDate;
     }

@@ -46,8 +46,6 @@ public class SerialNum extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -77,8 +75,6 @@ public class SerialNum extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "SERIAL_NUM", columnDefinition = "VARCHAR", length = 50)
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.SerialNum.SerialNumber")
     public String getSerialNum() {
         return this.SerialNum;
     }

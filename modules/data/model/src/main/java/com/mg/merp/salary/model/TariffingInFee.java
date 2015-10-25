@@ -41,7 +41,6 @@ public class TariffingInFee extends com.mg.merp.core.model.AbstractEntity implem
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -72,7 +71,6 @@ public class TariffingInFee extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TARIFFING_CATEGORY_ID")
-    @DataItemName("Salary.TariffIn.TariffingCategory")
     public TariffingCategory getTariffingCategory() {
         return this.TariffingCategory;
     }

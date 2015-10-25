@@ -37,7 +37,6 @@ public class BillSpec extends BaseStockDocumentSpec implements java.io.Serializa
     }
 
     @Column(name = "ACCEPTANCEQUAN", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Warehouse.BillSpec.AcceptanceQuan")
     public BigDecimal getAcceptanceQuan() {
         return this.AcceptanceQuan;
     }
@@ -47,7 +46,6 @@ public class BillSpec extends BaseStockDocumentSpec implements java.io.Serializa
     }
 
     @Column(name = "ACCEPTANCESUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.BillSpec.AcceptanceSum")
     public BigDecimal getAcceptanceSum() {
         return this.AcceptanceSum;
     }
@@ -57,7 +55,6 @@ public class BillSpec extends BaseStockDocumentSpec implements java.io.Serializa
     }
 
     @Column(name = "ACCEPTANCEPACKINGQUAN", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Warehouse.BillSpec.AcceptancePackingQuan")
     public BigDecimal getAcceptancePackingQuan() {
         return this.AcceptancePackingQuan;
     }

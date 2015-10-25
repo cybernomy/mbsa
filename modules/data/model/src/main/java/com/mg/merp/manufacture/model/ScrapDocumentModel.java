@@ -87,7 +87,6 @@ public class ScrapDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DETECT_JOB_ID")
-    @DataItemName("Manufacture.ScrapDocumentModel.DetectJob")
     public Job getDetectJob() {
         return this.DetectJob;
     }
@@ -98,7 +97,6 @@ public class ScrapDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CAUSE_CONTRACTOR_ID")
-    @DataItemName("Manufacture.ScrapDocumentModel.CauseContractor")
     public Contractor getCauseContractor() {
         return this.CauseContractor;
     }
@@ -109,7 +107,6 @@ public class ScrapDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SCRAP_TYPE_ID")
-    @DataItemName("Manufacture.ScrapDocumentModel.ScrapType")
     public ScrapType getScrapType() {
         return this.ScrapType;
     }
@@ -120,7 +117,6 @@ public class ScrapDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SCRAP_REASON_ID")
-    @DataItemName("Manufacture.ScrapDocumentModel.ScrapReason")
     public ScrapReason getScrapReason() {
         return this.ScrapReason;
     }
@@ -131,7 +127,6 @@ public class ScrapDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CAUSE_EMPLOYEE_ID")
-    @DataItemName("Manufacture.ScrapDocumentModel.CauseEmployee")
     public Contractor getCauseEmployee() {
         return this.CauseEmployee;
     }
@@ -142,7 +137,6 @@ public class ScrapDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CAUSE_CREW_ID")
-    @DataItemName("Manufacture.ScrapDocumentModel.CauseCrew")
     public Crew getCauseCrew() {
         return this.CauseCrew;
     }
@@ -153,7 +147,6 @@ public class ScrapDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CAUSE_JOB_ID")
-    @DataItemName("Manufacture.ScrapDocumentModel.CauseJob")
     public Job getCauseJob() {
         return this.CauseJob;
     }
@@ -164,7 +157,6 @@ public class ScrapDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DETECT_WC_ID")
-    @DataItemName("Manufacture.ScrapDocumentModel.DetectWC")
     public WorkCenter getDetectWC() {
         return this.DetectWC;
     }
@@ -175,7 +167,6 @@ public class ScrapDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DETECT_CREW_ID")
-    @DataItemName("Manufacture.ScrapDocumentModel.DetectCrew")
     public Crew getDetectCrew() {
         return this.DetectCrew;
     }
@@ -186,7 +177,6 @@ public class ScrapDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DETECT_OPER_ID")
-    @DataItemName("Manufacture.ScrapDocumentModel.DetectOper")
     public JobRoute getDetectOper() {
         return this.DetectOper;
     }
@@ -197,7 +187,6 @@ public class ScrapDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DETECT_EMPLOYEE_ID")
-    @DataItemName("Manufacture.ScrapDocumentModel.DetectEmployee")
     public Contractor getDetectEmployee() {
         return this.DetectEmployee;
     }
@@ -208,7 +197,6 @@ public class ScrapDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CAUSE_OPER_ID")
-    @DataItemName("Manufacture.ScrapDocumentModel.CauseOper")
     public JobRoute getCauseOper() {
         return this.CauseOper;
     }
@@ -219,7 +207,6 @@ public class ScrapDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DETECT_CONTRACTOR_ID")
-    @DataItemName("Manufacture.ScrapDocumentModel.DetectContractor")
     public Contractor getDetectContractor() {
         return this.DetectContractor;
     }
@@ -230,7 +217,6 @@ public class ScrapDocumentModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CAUSE_WC_ID")
-    @DataItemName("Manufacture.ScrapDocumentModel.CauseWC")
     public WorkCenter getCauseWC() {
         return this.CauseWC;
     }

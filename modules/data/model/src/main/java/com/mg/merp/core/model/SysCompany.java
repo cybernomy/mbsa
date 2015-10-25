@@ -16,7 +16,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SYS_COMPANY")
-@DataItemName("Core.SysCompany")
 public class SysCompany extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -50,7 +49,6 @@ public class SysCompany extends com.mg.merp.core.model.AbstractEntity implements
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -70,7 +68,6 @@ public class SysCompany extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "CODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 5)
-    @DataItemName("Reference.BigCode")
     public String getCode() {
         return this.Code;
     }
@@ -80,7 +77,6 @@ public class SysCompany extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Name")
     public String getName() {
         return this.Name;
     }
@@ -90,7 +86,6 @@ public class SysCompany extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 1024)
-    @DataItemName("Core.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -100,7 +95,6 @@ public class SysCompany extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "IS_ACTIVE", columnDefinition = "SMALLINT")
-    @DataItemName("Core.Active")
     public boolean isActive() {
         return this.Active;
     }

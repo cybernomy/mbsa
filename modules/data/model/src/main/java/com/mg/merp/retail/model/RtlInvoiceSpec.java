@@ -55,8 +55,6 @@ public class RtlInvoiceSpec extends com.mg.merp.document.model.DocSpec implement
     }
 
     @Column(name = "DISCOUNT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    //$NON-NLS-1$
-    @DataItemName("Retail.Discount")
     public BigDecimal getDiscount() {
         return this.Discount;
     }
@@ -66,8 +64,6 @@ public class RtlInvoiceSpec extends com.mg.merp.document.model.DocSpec implement
     }
 
     @Column(name = "PRICE_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Retail.PriceDiscount")
     public BigDecimal getPriceWithDiscount() {
         return this.PriceWithDiscount;
     }
@@ -86,8 +82,6 @@ public class RtlInvoiceSpec extends com.mg.merp.document.model.DocSpec implement
     }
 
     @Column(name = "DOC_DISCOUNT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    //$NON-NLS-1$
-    @DataItemName("Retail.DocDiscount")
     public BigDecimal getDocDiscount() {
         return this.DocDiscount;
     }

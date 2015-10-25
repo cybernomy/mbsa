@@ -76,7 +76,6 @@ public class WeekCalendarChange extends com.mg.merp.core.model.AbstractEntity im
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -87,7 +86,6 @@ public class WeekCalendarChange extends com.mg.merp.core.model.AbstractEntity im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DAY_CAL_THU", nullable = false)
-    @DataItemName("MfReference.WeekCalendarChange.DayCalThu")
     public DayCalendar getDayCalThu() {
         return this.DayCalThu;
     }
@@ -98,7 +96,6 @@ public class WeekCalendarChange extends com.mg.merp.core.model.AbstractEntity im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DAY_CAL_SAT", nullable = false)
-    @DataItemName("MfReference.WeekCalendarChange.DayCalSat")
     public DayCalendar getDayCalSat() {
         return this.DayCalSat;
     }
@@ -129,7 +126,6 @@ public class WeekCalendarChange extends com.mg.merp.core.model.AbstractEntity im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DAY_CAL_MON", nullable = false)
-    @DataItemName("MfReference.WeekCalendarChange.DayCalMon")
     public DayCalendar getDayCalMon() {
         return this.DayCalMon;
     }
@@ -140,7 +136,6 @@ public class WeekCalendarChange extends com.mg.merp.core.model.AbstractEntity im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DAY_CAL_WED", nullable = false)
-    @DataItemName("MfReference.WeekCalendarChange.DayCalWed")
     public DayCalendar getDayCalWed() {
         return this.DayCalWed;
     }
@@ -151,7 +146,6 @@ public class WeekCalendarChange extends com.mg.merp.core.model.AbstractEntity im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DAY_CAL_SUN", nullable = false)
-    @DataItemName("MfReference.WeekCalendarChange.DayCalSun")
     public DayCalendar getDayCalSun() {
         return this.DayCalSun;
     }
@@ -162,7 +156,6 @@ public class WeekCalendarChange extends com.mg.merp.core.model.AbstractEntity im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DAY_CAL_TUE", nullable = false)
-    @DataItemName("MfReference.WeekCalendarChange.DayCalTue")
     public DayCalendar getDayCalTue() {
         return this.DayCalTue;
     }
@@ -173,7 +166,6 @@ public class WeekCalendarChange extends com.mg.merp.core.model.AbstractEntity im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DAY_CAL_FRI", nullable = false)
-    @DataItemName("MfReference.WeekCalendarChange.DayCalFri")
     public DayCalendar getDayCalFri() {
         return this.DayCalFri;
     }
@@ -183,7 +175,6 @@ public class WeekCalendarChange extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "EFF_ON_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("MfReference.WeekCalendarChange.EffOnDate")
     public Date getEffOnDate() {
         return this.EffOnDate;
     }
@@ -193,7 +184,6 @@ public class WeekCalendarChange extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "EFF_OFF_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("MfReference.WeekCalendarChange.EffOffDate")
     public Date getEffOffDate() {
         return this.EffOffDate;
     }

@@ -25,7 +25,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "STOCKBATCH")
-@DataItemName("Warehouse.StockBatch")
 public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -115,7 +114,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -156,7 +154,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_ID")
-    @DataItemName("Warehouse.StockBatch.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -167,7 +164,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "OWNER_ID")
-    @DataItemName("Warehouse.StockBatch.Owner")
     public Contractor getOwner() {
         return this.Owner;
     }
@@ -177,7 +173,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "BEGINQUAN", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.StockBatch.BeginQuan")
     public BigDecimal getBeginQuan() {
         return this.BeginQuan;
     }
@@ -187,7 +182,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "ENDQUAN", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.StockBatch.EndQuan")
     public BigDecimal getEndQuan() {
         return this.EndQuan;
     }
@@ -197,7 +191,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "PRICENAT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.StockBatch.PriceNat")
     public BigDecimal getPriceNat() {
         return this.PriceNat;
     }
@@ -207,7 +200,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "PRICECUR", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.StockBatch.PriceCur")
     public BigDecimal getPriceCur() {
         return this.PriceCur;
     }
@@ -217,7 +209,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "CURRENCY_CODE", columnDefinition = "CHAR", length = 5)
-    @DataItemName("Warehouse.StockBatch.CurrencyCode")
     public String getCurrencyCode() {
         return this.CurrencyCode;
     }
@@ -227,7 +218,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "DOCTYPE", columnDefinition = "CHAR", length = 15)
-    @DataItemName("Warehouse.StockBatch.DocType")
     public String getDocType() {
         return this.DocType;
     }
@@ -237,7 +227,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Warehouse.StockBatch.DocNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -247,7 +236,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Warehouse.StockBatch.DocDate")
     public Date getDocDate() {
         return this.DocDate;
     }
@@ -257,7 +245,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "CREATEDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Warehouse.StockBatch.CreateDate")
     public Date getCreateDate() {
         return this.CreateDate;
     }
@@ -267,7 +254,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "BESTBEFORE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Warehouse.StockBatch.BestBefore")
     public Date getBestBefore() {
         return this.BestBefore;
     }
@@ -277,7 +263,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "NUMBER_LOT", columnDefinition = "VARCHAR", length = 50)
-    @DataItemName("Warehouse.StockBatch.NumberLot")
     public String getNumberLot() {
         return this.NumberLot;
     }
@@ -287,7 +272,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "VENDOR_LOT", columnDefinition = "VARCHAR", length = 50)
-    @DataItemName("Warehouse.StockBatch.VendorLot")
     public String getVendorLot() {
         return this.VendorLot;
     }
@@ -297,7 +281,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "CERTIFICATE", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Warehouse.StockBatch.Certificate")
     public String getCertificate() {
         return this.Certificate;
     }
@@ -307,7 +290,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Warehouse.StockBatch.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -317,7 +299,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "BEGINQUAN2", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.StockBatch.BeginQuan2")
     public BigDecimal getBeginQuan2() {
         return this.BeginQuan2;
     }
@@ -327,7 +308,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
     }
 
     @Column(name = "ENDQUAN2", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.StockBatch.EndQuan2")
     public BigDecimal getEndQuan2() {
         return this.EndQuan2;
     }
@@ -338,8 +318,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CUSTOMS_DECLARATION_ID")
-    //$NON-NLS-1$
-    @DataItemName("Reference.CD")
     public CustomsDeclaration getCustomsDeclaration() {
         return this.CustomsDeclaration;
     }
@@ -350,8 +328,6 @@ public class StockBatch extends com.mg.merp.core.model.AbstractEntity implements
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COUNTRY_OF_ORIGIN_ID")
-    //$NON-NLS-1$
-    @DataItemName("Reference.CountryOfOrigin")
     public Country getCountryOfOrigin() {
         return this.CountryOfOrigin;
     }

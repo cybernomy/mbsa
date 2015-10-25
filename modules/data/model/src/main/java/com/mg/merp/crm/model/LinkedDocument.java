@@ -56,7 +56,6 @@ public class LinkedDocument extends com.mg.merp.core.model.AbstractEntity implem
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }

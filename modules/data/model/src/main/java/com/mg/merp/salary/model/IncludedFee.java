@@ -45,7 +45,6 @@ public class IncludedFee extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -66,7 +65,6 @@ public class IncludedFee extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FEE_REF_ID")
-    @DataItemName("Salary.FeeIncluded.FeeRef")
     public FeeRef getFeeRef() {
         return this.FeeRef;
     }
@@ -87,7 +85,6 @@ public class IncludedFee extends com.mg.merp.core.model.AbstractEntity implement
 
     @Column(name = "SUM_SIGN")
     @Enumerated(EnumType.ORDINAL)
-    @DataItemName("Salary.FeeIncluded.SumSign")
     public DoubleSumSign getSumSign() {
         return this.SumSign;
     }

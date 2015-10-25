@@ -134,7 +134,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -185,7 +184,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PLANNING_ITEM_ID")
-    @DataItemName("Planning.MPSLine.GenericItem")
     public GenericItem getPlanningItem() {
         return this.PlanningItem;
     }
@@ -205,7 +203,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ADJUSTMENT_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.AdjustmentQty")
     public BigDecimal getAdjustmentQty() {
         return this.AdjustmentQty;
     }
@@ -215,7 +212,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "BUCKET_OFFSET", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MPSLine.BucketOffset")
     public Short getBucketOffset() {
         return this.BucketOffset;
     }
@@ -225,7 +221,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "BUCKET_OFFSET_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.MPSLine.BucketOffsetDate")
     public Date getBucketOffsetDate() {
         return this.BucketOffsetDate;
     }
@@ -235,7 +230,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "DEMAND_FENCE_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.MPSLine.DemandFenceDate")
     public Date getDemandFenceDate() {
         return this.DemandFenceDate;
     }
@@ -245,7 +239,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "DEMAND_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.DemandQty")
     public BigDecimal getDemandQty() {
         return this.DemandQty;
     }
@@ -255,7 +248,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "MPS_SEQUENCE", columnDefinition = "INTEGER")
-    @DataItemName("Planning.MPSLine.MpsSequence")
     public Integer getMpsSequence() {
         return this.MpsSequence;
     }
@@ -265,7 +257,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "OUTPUT_MPS_SEQUENCE", columnDefinition = "INTEGER")
-    @DataItemName("Planning.MPSLine.OutputMpsSequence")
     public Integer getOutputMpsSequence() {
         return this.OutputMpsSequence;
     }
@@ -275,7 +266,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PLANNED_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.PlannedQty")
     public BigDecimal getPlannedQty() {
         return this.PlannedQty;
     }
@@ -285,7 +275,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PP_DEPENDANT_DEMAND", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.DependantDemand")
     public BigDecimal getDependantDemand() {
         return this.DependantDemand;
     }
@@ -295,7 +284,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PP_LEVEL_CODE", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MPSLine.LevelCode")
     public Short getLevelCode() {
         return this.LevelCode;
     }
@@ -305,7 +293,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PRODUCTION_DEMAND_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.ProductionDemandQty")
     public BigDecimal getProductionDemandQty() {
         return this.ProductionDemandQty;
     }
@@ -315,7 +302,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PRODUCTION_PROFILE_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.ProductionProfileQty")
     public BigDecimal getProductionProfileQty() {
         return this.ProductionProfileQty;
     }
@@ -325,7 +311,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PRODUCTION_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.ProductionQty")
     public BigDecimal getProductionQty() {
         return this.ProductionQty;
     }
@@ -335,7 +320,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PURCHASE_FORECAST_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.PurchaseForecastQty")
     public BigDecimal getPurchaseForecastQty() {
         return this.PurchaseForecastQty;
     }
@@ -345,7 +329,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PURCHASE_ORDER_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.PurchaseOrderQty")
     public BigDecimal getPurchaseOrderQty() {
         return this.PurchaseOrderQty;
     }
@@ -355,7 +338,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PURCHASE_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.PurchaseQty")
     public BigDecimal getPurchaseQty() {
         return this.PurchaseQty;
     }
@@ -365,7 +347,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "QTY_AVAILABLE", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.QtyAvailable")
     public BigDecimal getQtyAvailable() {
         return this.QtyAvailable;
     }
@@ -375,7 +356,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SALES_FORECAST_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.SalesForecastQty")
     public BigDecimal getSalesForecastQty() {
         return this.SalesForecastQty;
     }
@@ -385,7 +365,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SALES_ORDER_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.SalesOrderQty")
     public BigDecimal getSalesOrderQty() {
         return this.SalesOrderQty;
     }
@@ -395,7 +374,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SALES_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.SalesQty")
     public BigDecimal getSalesQty() {
         return this.SalesQty;
     }
@@ -405,7 +383,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TRANSFERS_IN_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.TransfersInQty")
     public BigDecimal getTransfersInQty() {
         return this.TransfersInQty;
     }
@@ -415,7 +392,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TRANSFERS_OUT_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.TransfersOutQty")
     public BigDecimal getTransfersOutQty() {
         return this.TransfersOutQty;
     }
@@ -425,7 +401,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "LIVE_PRODUCTION_DEMAND", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.LiveProductionDemand")
     public BigDecimal getLiveProductionDemand() {
         return this.LiveProductionDemand;
     }
@@ -435,7 +410,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SAFETY_LEVEL_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MPSLine.SafetyLevelQty")
     public BigDecimal getSafetyLevelQty() {
         return this.SafetyLevelQty;
     }
@@ -445,7 +419,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "FIRM_PLAN_SUGGESTED", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MPSLine.FirmPlanSuggested")
     public boolean isFirmPlanSuggested() {
         return this.FirmPlanSuggested;
     }
@@ -455,7 +428,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "MPS_ORDERED", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MPSLine.MpsOrdered")
     public boolean isMpsOrdered() {
         return this.MpsOrdered;
     }
@@ -465,7 +437,6 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Formula(value = "(select b.end_date from pp_mps mps left join pp_planning_level_bucket b on mps.planning_level_id = b.planning_level_id and b.bucket_offset = BUCKET_OFFSET where mps.id = MPS_ID)")
-    @DataItemName("Planning.MPSLine.BucketEndDate")
     public Date getBucketEndDate() {
         return this.BucketEndDate;
     }
@@ -486,12 +457,12 @@ public class MpsLine extends com.mg.merp.core.model.AbstractEntity implements ja
 	 */
     public BigDecimal calculatePlannedQuantity(BigDecimal availableOnBeginBucket) {
         // потребность
-        // кол-во, которое будет
-        BigDecimal // производство ЗНП
-        result = // поступления от поставщиков
-        getDemandQty().add(getDependantDemand()).subtract(// остаток в наличии
-        getProductionQty()).subtract(// остаток на начало бакета
-        getPurchaseQty()).subtract(getQtyAvailable()).subtract(availableOnBeginBucket).add(getSafetyLevelQty());
+        BigDecimal // кол-во, которое будет
+        result = // производство ЗНП
+        getDemandQty().add(getDependantDemand()).subtract(// поступления от поставщиков
+        getProductionQty()).subtract(// остаток в наличии
+        getPurchaseQty()).subtract(// остаток на начало бакета
+        getQtyAvailable()).subtract(availableOnBeginBucket).add(getSafetyLevelQty());
         // страховой запас по товару
         if (MathUtils.compareToZero(result) < 0)
             return BigDecimal.ZERO;

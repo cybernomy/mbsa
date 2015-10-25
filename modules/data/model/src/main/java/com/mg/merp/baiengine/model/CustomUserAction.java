@@ -21,7 +21,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "ALG_CUSTOM_USER_ACTION")
-@DataItemName("BAi.CustomUserAction")
 public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -91,7 +90,6 @@ public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -131,7 +129,6 @@ public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "CODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("BAi.CustomUserAction.Code")
     public String getCode() {
         return this.Code;
     }
@@ -141,7 +138,6 @@ public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("BAi.CustomUserAction.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -151,7 +147,6 @@ public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "CAPTION", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("BAi.CustomUserAction.Caption")
     public String getCaption() {
         return this.Caption;
     }
@@ -161,7 +156,6 @@ public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "HINT", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("BAi.CustomUserAction.Hint")
     public String getHint() {
         return this.Hint;
     }
@@ -171,7 +165,6 @@ public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "KEY_STROKE", columnDefinition = "VARCHAR", length = 40)
-    @DataItemName("BAi.CustomUserAction.KeyStroke")
     public String getKeyStroke() {
         return this.KeyStroke;
     }
@@ -181,7 +174,6 @@ public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "FROM_MENU", columnDefinition = "SMALLINT")
-    @DataItemName("BAi.CustomUserAction.FromMenu")
     public boolean isFromMenu() {
         return this.FromMenu;
     }
@@ -191,7 +183,6 @@ public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "FROM_TOOLBAR", columnDefinition = "SMALLINT")
-    @DataItemName("BAi.CustomUserAction.FromToolbar")
     public boolean isFromToolbar() {
         return this.FromToolbar;
     }
@@ -201,7 +192,6 @@ public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "FORCE_REFRESH", columnDefinition = "SMALLINT")
-    @DataItemName("BAi.CustomUserAction.ForceRefresh")
     public boolean isForceRefresh() {
         return this.ForceRefresh;
     }
@@ -211,7 +201,6 @@ public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "SEPARATOR_BEFORE", columnDefinition = "SMALLINT")
-    @DataItemName("BAi.CustomUserAction.SeparatorBefore")
     public boolean isSeparatorBefore() {
         return this.SeparatorBefore;
     }
@@ -221,7 +210,6 @@ public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "SEPARATOR_AFTER", columnDefinition = "SMALLINT")
-    @DataItemName("BAi.CustomUserAction.SeparatorAfter")
     public boolean isSeparatorAfter() {
         return this.SeparatorAfter;
     }
@@ -231,7 +219,6 @@ public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "ICON", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("BAi.CustomUserAction.Icon")
     public String getIcon() {
         return this.Icon;
     }
@@ -241,7 +228,6 @@ public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "PRIORITY", columnDefinition = "SMALLINT")
-    @DataItemName("BAi.CustomUserAction.Priority")
     public Short getPriority() {
         return this.Priority;
     }
@@ -251,7 +237,6 @@ public class CustomUserAction extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "IS_ACTIVE", columnDefinition = "SMALLINT")
-    @DataItemName("BAi.CustomUserAction.Active")
     public boolean isActive() {
         return this.Active;
     }

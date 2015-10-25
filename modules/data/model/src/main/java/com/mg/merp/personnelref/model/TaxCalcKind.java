@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PREF_TAX_CALC_KIND")
-@DataItemName("PersonnelRef.TaxCalcKind")
 public class TaxCalcKind extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -45,7 +44,6 @@ public class TaxCalcKind extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -65,7 +63,6 @@ public class TaxCalcKind extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "CODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("PersonnelRef.TaxCalcKind.Code")
     public String getCode() {
         return this.Code;
     }
@@ -75,7 +72,6 @@ public class TaxCalcKind extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("PersonnelRef.TaxCalcKind.Name")
     public String getName() {
         return this.Name;
     }

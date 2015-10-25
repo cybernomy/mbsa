@@ -63,7 +63,6 @@ public class WorkCenterRates extends com.mg.merp.core.model.AbstractEntity imple
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -93,7 +92,6 @@ public class WorkCenterRates extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "EFF_ON_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("MfReference.WorkCenterRates.EffOnDate")
     public Date getEffOnDate() {
         return this.EffOnDate;
     }
@@ -103,7 +101,6 @@ public class WorkCenterRates extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "EFF_OFF_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("MfReference.WorkCenterRates.EffOffDate")
     public Date getEffOffDate() {
         return this.EffOffDate;
     }
@@ -113,7 +110,6 @@ public class WorkCenterRates extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "MCH_FOH_RATE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("MfReference.WorkCenterRates.MchFohRate")
     public BigDecimal getMchFohRate() {
         return this.MchFohRate;
     }
@@ -123,7 +119,6 @@ public class WorkCenterRates extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "MCH_VOH_RATE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("MfReference.WorkCenterRates.MchVohRate")
     public BigDecimal getMchVohRate() {
         return this.MchVohRate;
     }
@@ -133,7 +128,6 @@ public class WorkCenterRates extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "LBR_RUN_RATE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("MfReference.WorkCenterRates.LbrRunRate")
     public BigDecimal getLbrRunRate() {
         return this.LbrRunRate;
     }
@@ -143,7 +137,6 @@ public class WorkCenterRates extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "LBR_SETUP_RATE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("MfReference.WorkCenterRates.LbrSetupRate")
     public BigDecimal getLbrSetupRate() {
         return this.LbrSetupRate;
     }
@@ -153,7 +146,6 @@ public class WorkCenterRates extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "LBR_FOH_RATE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("MfReference.WorkCenterRates.LbrFohRate")
     public BigDecimal getLbrFohRate() {
         return this.LbrFohRate;
     }
@@ -163,7 +155,6 @@ public class WorkCenterRates extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "LBR_VOH_RATE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("MfReference.WorkCenterRates.LbrVohRate")
     public BigDecimal getLbrVohRate() {
         return this.LbrVohRate;
     }

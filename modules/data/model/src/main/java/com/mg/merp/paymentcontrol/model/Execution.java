@@ -102,8 +102,6 @@ public class Execution extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -124,8 +122,6 @@ public class Execution extends com.mg.merp.core.model.AbstractEntity implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESOURCEFOLDER_ID")
-    //$NON-NLS-1$
-    @DataItemName("PaymentControl.Execution.ResourceFolder")
     public Folder getResourceFolder() {
         return this.ResourceFolder;
     }
@@ -225,8 +221,6 @@ public class Execution extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "RECEIVABLE", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("PaymentControl.Execution.Receivable")
     public boolean isReceivable() {
         return this.Receivable;
     }
@@ -236,8 +230,6 @@ public class Execution extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PLANDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("PaymentControl.Execution.PlanDate")
     public Date getPlanDate() {
         return this.PlanDate;
     }
@@ -247,8 +239,6 @@ public class Execution extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "FACTDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("PaymentControl.Execution.FactDate")
     public Date getFactDate() {
         return this.FactDate;
     }
@@ -258,8 +248,6 @@ public class Execution extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "SUMCUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("PaymentControl.Execution.SumCur")
     public BigDecimal getSumCur() {
         return this.SumCur;
     }
@@ -269,8 +257,6 @@ public class Execution extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "SUMNAT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("PaymentControl.Execution.SumNat")
     public BigDecimal getSumNat() {
         return this.SumNat;
     }
@@ -298,8 +284,6 @@ public class Execution extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DOCCREATED", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("PaymentControl.Execution.DocCreated")
     public boolean isDocCreated() {
         return this.DocCreated;
     }
@@ -309,8 +293,6 @@ public class Execution extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DOCPROCESSED", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("PaymentControl.Execution.DocProcessed")
     public boolean isDocProcessed() {
         return this.DocProcessed;
     }
@@ -320,8 +302,6 @@ public class Execution extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "APPROVED", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("PaymentControl.Execution.Approved")
     public boolean isApproved() {
         return this.Approved;
     }

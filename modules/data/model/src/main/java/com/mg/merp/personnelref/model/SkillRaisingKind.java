@@ -44,7 +44,6 @@ public class SkillRaisingKind extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -64,7 +63,6 @@ public class SkillRaisingKind extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("PersonnelRef.SkillRaisingKind.Code")
     public String getCode() {
         return this.Code;
     }
@@ -74,7 +72,6 @@ public class SkillRaisingKind extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("PersonnelRef.SkillRaisingKind.Name")
     public String getName() {
         return this.Name;
     }

@@ -47,7 +47,6 @@ public class PersonnelProfession extends com.mg.merp.core.model.AbstractEntity i
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -87,7 +86,6 @@ public class PersonnelProfession extends com.mg.merp.core.model.AbstractEntity i
     }
 
     @Column(name = "IS_BASIC", columnDefinition = "SMALLINT")
-    @DataItemName("PersonnelRef.Personnel.IsBasic")
     public boolean isBasic() {
         return this.IsBasic;
     }

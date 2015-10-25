@@ -78,7 +78,6 @@ public class CashDocumentModel extends com.mg.merp.document.model.DocHeadModel i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BOOKKEEPER")
-    @DataItemName("Account.CashIn.Bookkeeper")
     public Contractor getBookkeeper() {
         return this.Bookkeeper;
     }
@@ -89,7 +88,6 @@ public class CashDocumentModel extends com.mg.merp.document.model.DocHeadModel i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CHIEF")
-    @DataItemName("Account.CashIn.Chief")
     public Contractor getChief() {
         return this.Chief;
     }
@@ -100,7 +98,6 @@ public class CashDocumentModel extends com.mg.merp.document.model.DocHeadModel i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ACC_ID")
-    @DataItemName("Account.CashIn.Acc")
     public AccPlan getAcc() {
         return this.Acc;
     }
@@ -111,7 +108,6 @@ public class CashDocumentModel extends com.mg.merp.document.model.DocHeadModel i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COMPANY")
-    @DataItemName("Account.CashIn.Company")
     public Contractor getCompany() {
         return this.Company;
     }
@@ -122,7 +118,6 @@ public class CashDocumentModel extends com.mg.merp.document.model.DocHeadModel i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CASHIER")
-    @DataItemName("Account.CashIn.Cashier")
     public Contractor getCashier() {
         return this.Cashier;
     }
@@ -132,7 +127,6 @@ public class CashDocumentModel extends com.mg.merp.document.model.DocHeadModel i
     }
 
     @Column(name = "ANLCODE", columnDefinition = "CHAR", length = 15)
-    @DataItemName("Account.CashIn.AnlCode")
     public String getAnlCode() {
         return this.AnlCode;
     }
@@ -142,7 +136,6 @@ public class CashDocumentModel extends com.mg.merp.document.model.DocHeadModel i
     }
 
     @Column(name = "TARGETCODE", columnDefinition = "CHAR", length = 15)
-    @DataItemName("Account.CashIn.TargetCode")
     public String getTargetCode() {
         return this.TargetCode;
     }
@@ -152,7 +145,6 @@ public class CashDocumentModel extends com.mg.merp.document.model.DocHeadModel i
     }
 
     @Column(name = "BASE", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Account.CashIn.Base")
     public String getBase() {
         return this.Base;
     }
@@ -162,7 +154,6 @@ public class CashDocumentModel extends com.mg.merp.document.model.DocHeadModel i
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Account.CashIn.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -172,7 +163,6 @@ public class CashDocumentModel extends com.mg.merp.document.model.DocHeadModel i
     }
 
     @Column(name = "GETDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.CashOut.GetDate")
     public Date getGetDate() {
         return this.GetDate;
     }
@@ -182,7 +172,6 @@ public class CashDocumentModel extends com.mg.merp.document.model.DocHeadModel i
     }
 
     @Column(name = "GETDOCUMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Account.CashOut.GetDocument")
     public String getGetDocument() {
         return this.GetDocument;
     }
@@ -192,7 +181,6 @@ public class CashDocumentModel extends com.mg.merp.document.model.DocHeadModel i
     }
 
     @Column(name = "COMMENT1", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Account.CashIn.Comment1")
     public String getComment1() {
         return this.Comment1;
     }

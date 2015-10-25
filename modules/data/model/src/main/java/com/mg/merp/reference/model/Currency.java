@@ -20,7 +20,6 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "CURRENCY")
-@DataItemName("Reference.Currency")
 public class Currency extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -99,7 +98,6 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -128,7 +126,6 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 5)
-    @DataItemName("Reference.Currency.Code")
     public String getCode() {
         return this.Code;
     }
@@ -138,7 +135,6 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ISO", unique = true, nullable = false, columnDefinition = "CHAR", length = 5)
-    @DataItemName("Reference.Currency.ISO")
     public String iso() {
         return this.Iso;
     }
@@ -148,7 +144,6 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "BANK_CODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 5)
-    @DataItemName("Reference.Currency.BankCode")
     public String getBankCode() {
         return this.BankCode;
     }
@@ -158,7 +153,6 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "CNAME", columnDefinition = "VARCHAR", length = 40)
-    @DataItemName("Reference.Currency.FullName")
     public String getFullName() {
         return this.FullName;
     }
@@ -178,7 +172,6 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ALTNAME1", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.Currency.AltName1")
     public String getAltName1() {
         return this.AltName1;
     }
@@ -188,7 +181,6 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ALTNAME2", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.Currency.AltName2")
     public String getAltName2() {
         return this.AltName2;
     }
@@ -198,7 +190,6 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ALTNAME3", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.Currency.AltName3")
     public String getAltName3() {
         return this.AltName3;
     }
@@ -208,7 +199,6 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ALTUNITNAME1", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.Currency.AltName1")
     public String getAltUnitName1() {
         return this.AltUnitName1;
     }
@@ -218,7 +208,6 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ALTUNITNAME2", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.Currency.AltName2")
     public String getAltUnitName2() {
         return this.AltUnitName2;
     }
@@ -228,7 +217,6 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ALTUNITNAME3", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.Currency.AltName3")
     public String getAltUnitName3() {
         return this.AltUnitName3;
     }
@@ -238,7 +226,6 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ROUNDPRICE", nullable = false, columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Reference.Currency.RoundPrice")
     public BigDecimal getRoundPrice() {
         return this.RoundPrice;
     }
@@ -248,7 +235,6 @@ public class Currency extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ROUNDSUM", nullable = false, columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Reference.Currency.RoundSum")
     public BigDecimal getRoundSum() {
         return this.RoundSum;
     }

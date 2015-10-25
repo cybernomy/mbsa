@@ -74,7 +74,6 @@ public class ConfidentialData extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "DNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Partner.CofidData.DName")
     public String getDName() {
         return this.DName;
     }
@@ -84,7 +83,6 @@ public class ConfidentialData extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "CONFDATA", columnDefinition = "BLOB SUB_TYPE 0")
-    @DataItemName("Reference.Partner.CofidData.ConfData")
     public Serializable getConfData() {
         return this.ConfData;
     }

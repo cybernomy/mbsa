@@ -115,7 +115,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -126,7 +125,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CATALOG_ID")
-    @DataItemName("Account.InvHead.Catalog")
     public Catalog getCatalog() {
         return this.Catalog;
     }
@@ -177,7 +175,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_ID")
-    @DataItemName("Account.InvHead.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -187,7 +184,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "GROUPNUM", columnDefinition = "CHAR", length = 15)
-    @DataItemName("Account.InvHead.GroupNum")
     public String getGroupNum() {
         return this.GroupNum;
     }
@@ -197,7 +193,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CARDNUM", columnDefinition = "CHAR", length = 15)
-    @DataItemName("Account.InvHead.CardNum")
     public String getCardNum() {
         return this.CardNum;
     }
@@ -207,7 +202,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "OBJNUM", columnDefinition = "CHAR", length = 30)
-    @DataItemName("Account.InvHead.ObjNum")
     public String getObjNum() {
         return this.ObjNum;
     }
@@ -217,7 +211,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "MANUFACTURER", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Account.InvHead.Manufacturer")
     public String getManufacturer() {
         return this.Manufacturer;
     }
@@ -227,7 +220,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "MODEL", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Account.InvHead.Model")
     public String getModel() {
         return this.Model;
     }
@@ -237,7 +229,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SERIALNUM", columnDefinition = "CHAR", length = 15)
-    @DataItemName("Account.InvHead.SerialNum")
     public String getSerialNum() {
         return this.SerialNum;
     }
@@ -247,7 +238,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PASSPNUM", columnDefinition = "CHAR", length = 15)
-    @DataItemName("Account.InvHead.PasspNum")
     public String getPasspNum() {
         return this.PasspNum;
     }
@@ -257,7 +247,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "INOPERDOCNUM", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Account.InvHead.InOperDocNum")
     public String getInOperDocNum() {
         return this.InOperDocNum;
     }
@@ -267,7 +256,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "INOPERDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.InvHead.InOperDate")
     public Date getInOperDate() {
         return this.InOperDate;
     }
@@ -277,7 +265,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "OUTOPERDOCNUM", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Account.InvHead.OutOperDocNum")
     public String getOutOperDocNum() {
         return this.OutOperDocNum;
     }
@@ -287,7 +274,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "OUTOPERDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.InvHead.OutOperDate")
     public Date getOutOperDate() {
         return this.OutOperDate;
     }
@@ -315,7 +301,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Account.InvHead.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -325,7 +310,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "INVNAME", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Account.InvHead.InvName")
     public String getInvName() {
         return this.InvName;
     }
@@ -335,7 +319,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "INCOMEDOCNUM", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Account.InvHead.IncomeDocNum")
     public String getIncomeDocNum() {
         return this.IncomeDocNum;
     }
@@ -345,7 +328,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "INCOMEDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.InvHead.IncomeDate")
     public Date getIncomeDate() {
         return this.IncomeDate;
     }
@@ -355,7 +337,6 @@ public class InvHead extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PRODUCTDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.InvHead.ProductDate")
     public Date getProductDate() {
         return this.ProductDate;
     }

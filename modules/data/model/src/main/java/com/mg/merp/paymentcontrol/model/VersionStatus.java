@@ -65,7 +65,6 @@ public class VersionStatus extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -86,7 +85,6 @@ public class VersionStatus extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CREATOR_ID")
-    @DataItemName("PaymentControl.Version.Creator")
     public SecUser getCreator() {
         return this.Creator;
     }
@@ -116,7 +114,6 @@ public class VersionStatus extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DATETILL", columnDefinition = "TIMESTAMP")
-    @DataItemName("PaymentControl.VersionStatus.DateTill")
     public Date getDateTill() {
         return this.DateTill;
     }
@@ -126,7 +123,6 @@ public class VersionStatus extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DATEFROM", columnDefinition = "TIMESTAMP")
-    @DataItemName("PaymentControl.VersionStatus.DateFrom")
     public Date getDateFrom() {
         return this.DateFrom;
     }
@@ -136,7 +132,6 @@ public class VersionStatus extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "CREATEDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("PaymentControl.Version.CreateDate")
     public Date getCreateDate() {
         return this.CreateDate;
     }

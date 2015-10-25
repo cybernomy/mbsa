@@ -43,7 +43,6 @@ public class InvMetal extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -83,7 +82,6 @@ public class InvMetal extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "MASS", columnDefinition = "DOUBLE PRECISION")
-    @DataItemName("Account.InvHead.Mass")
     public Double getMass() {
         return this.Mass;
     }

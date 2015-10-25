@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PREF_LEAVE_KIND")
-@DataItemName("PersonnelRef.LeaveKind")
 public class LeaveKind extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -48,7 +47,6 @@ public class LeaveKind extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -68,7 +66,6 @@ public class LeaveKind extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("PersonnelRef.LeaveKind.Code")
     public String getCode() {
         return this.Code;
     }
@@ -78,7 +75,6 @@ public class LeaveKind extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("PersonnelRef.LeaveKind.Name")
     public String getName() {
         return this.Name;
     }
@@ -88,7 +84,6 @@ public class LeaveKind extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "OKIN", columnDefinition = "CHAR", length = 5)
-    @DataItemName("PersonnelRef.LeaveKind.Okin")
     public String getOkin() {
         return this.Okin;
     }

@@ -90,7 +90,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MTL_COST_CATEGORY_ID")
-    @DataItemName("MfReference.BomMaterial.CostCategories")
     public CostCategories getMtlCostCategory() {
         return this.MtlCostCategory;
     }
@@ -101,7 +100,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE_ID")
-    @DataItemName("MfReference.BomMaterial.Measure")
     public Measure getMeasure() {
         return this.Measure;
     }
@@ -112,7 +110,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CATALOG_ID")
-    @DataItemName("MfReference.BomMaterial.Catalog")
     public Catalog getCatalog() {
         return this.Catalog;
     }
@@ -123,7 +120,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BACKFLUSH_ZONE_ID")
-    @DataItemName("MfReference.BomMaterial.Zone")
     public WarehouseZone getBackflushZone() {
         return this.BackflushZone;
     }
@@ -134,7 +130,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MTL_OH_COST_CATEGORY_ID")
-    @DataItemName("MfReference.BomMaterial.OhCostCategories")
     public CostCategories getMtlOhCostCategory() {
         return this.MtlOhCostCategory;
     }
@@ -145,7 +140,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURRENCY_CODE")
-    @DataItemName("MfReference.BomMaterial.Currency")
     public Currency getCurrency() {
         return this.Currency;
     }
@@ -155,7 +149,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
     }
 
     @Column(name = "REVISION", columnDefinition = "INTEGER")
-    @DataItemName("MfReference.BomMaterial.Revision")
     public Integer getRevision() {
         return this.Revision;
     }
@@ -165,7 +158,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
     }
 
     @Column(name = "VIEW_SEQUENCE", nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("MfReference.BomMaterial.ViewSequence")
     public int getViewSequence() {
         return this.ViewSequence;
     }
@@ -175,7 +167,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
     }
 
     @Column(name = "REPORT_SEQUENCE", columnDefinition = "INTEGER")
-    @DataItemName("MfReference.BomMaterial.ReportSequence")
     public Integer getReportSequence() {
         return this.ReportSequence;
     }
@@ -185,7 +176,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
     }
 
     @Column(name = "PROBABLE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("MfReference.BomMaterial.Probable")
     public BigDecimal getProbable() {
         return this.Probable;
     }
@@ -196,7 +186,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
 
     @Column(name = "QUANTITY_RATE_FLAG")
     @Enumerated(EnumType.ORDINAL)
-    @DataItemName("MfReference.QuantityRateFlag")
     public QuantityRateFlag getQuantityRateFlag() {
         return this.QuantityRateFlag;
     }
@@ -206,7 +195,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
     }
 
     @Column(name = "MTL_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("MfReference.BomMaterial.MtlQty")
     public BigDecimal getMtlQty() {
         return this.MtlQty;
     }
@@ -216,7 +204,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
     }
 
     @Column(name = "SCRAP_FACTOR", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("MfReference.BomMaterial.ScrapFactor")
     public BigDecimal getScrapFactor() {
         return this.ScrapFactor;
     }
@@ -226,7 +213,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
     }
 
     @Column(name = "MTL_BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("MfReference.BomMaterial.MtlBackflushFlag")
     public boolean isMtlBackflushFlag() {
         return this.MtlBackflushFlag;
     }
@@ -246,7 +232,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
     }
 
     @Column(name = "MTL_OH_RATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("MfReference.BomMaterial.MtlOhRate")
     public BigDecimal getMtlOhRate() {
         return this.MtlOhRate;
     }
@@ -256,7 +241,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
     }
 
     @Column(name = "MTL_OH_RATIO", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("MfReference.BomMaterial.MtlOhRatio")
     public BigDecimal getMtlOhRatio() {
         return this.MtlOhRatio;
     }
@@ -266,7 +250,6 @@ public class BomMaterial extends com.mg.merp.mfreference.model.BomRouteResource 
     }
 
     @Column(name = "MTL_OH_BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("MfReference.BomMaterial.MtlOhBackflushFlag")
     public boolean isMtlOhBackflushFlag() {
         return this.MtlOhBackflushFlag;
     }

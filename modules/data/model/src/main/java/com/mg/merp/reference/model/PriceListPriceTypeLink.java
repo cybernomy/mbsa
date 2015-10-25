@@ -19,8 +19,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PRICELIST_PRICETYPE_LINK")
-//$NON-NLS-1$
-@DataItemName("Reference.PriceListPriceTypeLink")
 public class PriceListPriceTypeLink extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -53,8 +51,6 @@ public class PriceListPriceTypeLink extends com.mg.merp.core.model.AbstractEntit
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -65,8 +61,6 @@ public class PriceListPriceTypeLink extends com.mg.merp.core.model.AbstractEntit
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ALG_ID")
-    //$NON-NLS-1$
-    @DataItemName("Reference.PrList.Repository")
     public Repository getAlgRepository() {
         return this.AlgRepository;
     }
@@ -106,8 +100,6 @@ public class PriceListPriceTypeLink extends com.mg.merp.core.model.AbstractEntit
     }
 
     @Column(name = "PRIORITY", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Reference.PrList.Priority")
     public Short getPriority() {
         return this.Priority;
     }

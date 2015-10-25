@@ -19,7 +19,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "CATALOGPRICE")
-@DataItemName("Reference.CatalogPrice")
 public class CatalogPrice extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -58,7 +57,6 @@ public class CatalogPrice extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -109,7 +107,6 @@ public class CatalogPrice extends com.mg.merp.core.model.AbstractEntity implemen
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURRENCY_CODE")
-    @DataItemName("Reference.Catalog.Price.Currency")
     public Currency getCurrency() {
         return this.Currency;
     }
@@ -119,7 +116,6 @@ public class CatalogPrice extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "IN_ACTION", columnDefinition = "TIMESTAMP")
-    @DataItemName("Reference.Catalog.Price.InAction")
     public Date getInAction() {
         return this.InAction;
     }
@@ -129,7 +125,6 @@ public class CatalogPrice extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "PRICE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Reference.Catalog.Price.Price")
     public BigDecimal getPrice() {
         return this.Price;
     }
@@ -139,7 +134,6 @@ public class CatalogPrice extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "EQUIVALENT_PRICE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Reference.Catalog.Price.EqPrice")
     public BigDecimal getEquivalentPrice() {
         return this.EquivalentPrice;
     }

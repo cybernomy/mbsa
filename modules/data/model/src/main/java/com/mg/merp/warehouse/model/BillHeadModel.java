@@ -128,7 +128,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARTNERTO_BANKREQ")
-    @DataItemName("Warehouse.BillHead.PartnerToBankReq")
     public BankAccount getPartnerToBankReq() {
         return this.PartnerToBankReq;
     }
@@ -139,7 +138,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONSIGNEE")
-    @DataItemName("Warehouse.BillHeadModel.Consignee")
     public Contractor getConsignee() {
         return this.Consignee;
     }
@@ -150,7 +148,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SHIPPER")
-    @DataItemName("Warehouse.BillHeadModel.Shipper")
     public Contractor getShipper() {
         return this.Shipper;
     }
@@ -161,7 +158,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESPONSIBLE")
-    @DataItemName("Warehouse.BillHeadModel.Responsible")
     public Contractor getResponsible() {
         return this.Responsible;
     }
@@ -172,7 +168,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARTNERFROM_BANKREQ")
-    @DataItemName("Warehouse.BillHead.PartnerFromBankReq")
     public BankAccount getPartnerFromBankReq() {
         return this.PartnerFromBankReq;
     }
@@ -183,7 +178,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONSUMER")
-    @DataItemName("Warehouse.BillHeadModel.Consumer")
     public Contractor getConsumer() {
         return this.Consumer;
     }
@@ -211,7 +205,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
     }
 
     @Column(name = "ADD_EXPENSES", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.BillHeadModel.AddExpenses")
     public BigDecimal getAddExpenses() {
         return this.AddExpenses;
     }
@@ -221,7 +214,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
     }
 
     @Column(name = "DISCOUNT_ON_DOC", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.BillHeadModel.DiscountOnDoc")
     public BigDecimal getDiscountOnDoc() {
         return this.DiscountOnDoc;
     }
@@ -231,7 +223,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
     }
 
     @Column(name = "DISCOUNT_ON_LINE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.BillHeadModel.DiscountOnLine")
     public BigDecimal getDiscountOnLine() {
         return this.DiscountOnLine;
     }
@@ -250,7 +241,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
     }
 
     @Column(name = "ACCEPTANCETERM", columnDefinition = "INTEGER")
-    @DataItemName("Warehouse.BillHeadModel.AcceptanceTerm")
     public Integer getAcceptanceTerm() {
         return this.AcceptanceTerm;
     }
@@ -260,7 +250,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
     }
 
     @Column(name = "ACCEPTANCEDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Warehouse.BillHeadModel.AcceptanceDate")
     public Date getAcceptanceDate() {
         return this.AcceptanceDate;
     }
@@ -270,7 +259,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
     }
 
     @Column(name = "ACCEPTANCESUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.BillHeadModel.AcceptanceSum")
     public BigDecimal getAcceptanceSum() {
         return this.AcceptanceSum;
     }
@@ -280,7 +268,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
     }
 
     @Column(name = "PAYMENTTERM", columnDefinition = "INTEGER")
-    @DataItemName("Warehouse.BillHeadModel.PaymentTerm")
     public Integer getPaymentTerm() {
         return this.PaymentTerm;
     }
@@ -290,7 +277,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
     }
 
     @Column(name = "PLANPAYMENTDATEDOC", columnDefinition = "TIMESTAMP")
-    @DataItemName("Warehouse.BillHeadModel.PlanPaymentDateDoc")
     public Date getPlanPaymentDateDoc() {
         return this.PlanPaymentDateDoc;
     }
@@ -300,7 +286,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
     }
 
     @Column(name = "PLANPAYMENTDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Warehouse.BillHeadModel.PlanPaymentDate")
     public Date getPlanPaymentDate() {
         return this.PlanPaymentDate;
     }
@@ -310,7 +295,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
     }
 
     @Column(name = "PAYMENTDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Warehouse.BillHeadModel.PaymentDate")
     public Date getPaymentDate() {
         return this.PaymentDate;
     }
@@ -320,7 +304,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
     }
 
     @Column(name = "PAYMENTSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.BillHeadModel.PaymentSum")
     public BigDecimal getPaymentSum() {
         return this.PaymentSum;
     }
@@ -339,7 +322,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 1024)
-    @DataItemName("Warehouse.BillHeadModel.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -349,7 +331,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
     }
 
     @Column(name = "TOPAYDOCNUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Warehouse.BillHeadModel.ToPayDocNumber")
     public String getToPayDocNumber() {
         return this.ToPayDocNumber;
     }
@@ -359,7 +340,6 @@ public class BillHeadModel extends com.mg.merp.document.model.DocHeadModel imple
     }
 
     @Column(name = "TOPAYDOCDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Warehouse.BillHeadModel.ToPayDocDate")
     public Date getToPayDocDate() {
         return this.ToPayDocDate;
     }

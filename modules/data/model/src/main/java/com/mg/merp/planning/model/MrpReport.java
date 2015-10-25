@@ -91,7 +91,6 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -141,7 +140,6 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "REQUIRED_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.MRPRecommendation.RequiredDate")
     public Date getRequiredDate() {
         return this.RequiredDate;
     }
@@ -161,7 +159,6 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PP_REFERENCE", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Planning.MRPRecommendation.Reference")
     public String getPpReference() {
         return this.PpReference;
     }
@@ -171,7 +168,6 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "QTY_AVAILABLE", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MRPReport.QtyAvailable")
     public BigDecimal getQtyAvailable() {
         return this.QtyAvailable;
     }
@@ -181,7 +177,6 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "MRP_QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MRPReport.MrpQuantity")
     public BigDecimal getMrpQuantity() {
         return this.MrpQuantity;
     }
@@ -211,7 +206,6 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "FIXED_INPUT", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MRPReport.FixedInput")
     public boolean isFixedInput() {
         return this.FixedInput;
     }
@@ -221,7 +215,6 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "ORDER_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.MRPRecommendation.OrderDate")
     public Date getOrderDate() {
         return this.OrderDate;
     }
@@ -231,7 +224,6 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "MRP_ARREARS_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MRPRecommendation.MRPArrearsFlag")
     public boolean isMrpArrearsFlag() {
         return this.MrpArrearsFlag;
     }
@@ -241,7 +233,6 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "ORIGINAL_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.MRPRecommendation.OriginalDate")
     public Date getOriginalDate() {
         return this.OriginalDate;
     }
@@ -251,7 +242,6 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "ORIGINAL_QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.MRPRecommendation.OriginalQuantity")
     public BigDecimal getOriginalQuantity() {
         return this.OriginalQuantity;
     }
@@ -261,7 +251,6 @@ public class MrpReport extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "SEQUENCE", columnDefinition = "INTEGER")
-    @DataItemName("Planning.MRPSequence")
     public Integer getSequence() {
         return this.Sequence;
     }

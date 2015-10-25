@@ -50,8 +50,6 @@ public class TimeBoardHead extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -72,8 +70,6 @@ public class TimeBoardHead extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CALC_PERIOD_ID", unique = true)
-    //$NON-NLS-1$
-    @DataItemName("Table.TBHead.CalcPeriod")
     public CalcPeriod getCalcPeriod() {
         return this.CalcPeriod;
     }
@@ -83,8 +79,6 @@ public class TimeBoardHead extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "BNUMBER", columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("Table.TBHead.BNumber")
     public String getBNumber() {
         return this.BNumber;
     }
@@ -94,8 +88,6 @@ public class TimeBoardHead extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 256)
-    //$NON-NLS-1$
-    @DataItemName("Table.TBHead.Comments")
     public String getComments() {
         return this.Comments;
     }

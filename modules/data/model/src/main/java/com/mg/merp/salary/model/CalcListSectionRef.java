@@ -19,7 +19,6 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "SAL_CALC_LIST_SECTION_REF")
-@DataItemName("Salary.CalcListSectionRef")
 public class CalcListSectionRef extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -46,7 +45,6 @@ public class CalcListSectionRef extends com.mg.merp.core.model.AbstractEntity im
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -66,7 +64,6 @@ public class CalcListSectionRef extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "SNAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Salary.Name")
     public String getSName() {
         return this.SName;
     }
@@ -76,7 +73,6 @@ public class CalcListSectionRef extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "PRIORITY", columnDefinition = "INTEGER")
-    @DataItemName("Salary.SectionRef.Priority")
     public Integer getPriority() {
         return this.Priority;
     }
@@ -87,7 +83,6 @@ public class CalcListSectionRef extends com.mg.merp.core.model.AbstractEntity im
 
     @Column(name = "SUM_SIGN")
     @Enumerated(EnumType.ORDINAL)
-    @DataItemName("Salary.SectionRef.SumSign")
     public TripleSumSign getSumSign() {
         return this.SumSign;
     }

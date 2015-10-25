@@ -98,7 +98,6 @@ public class InvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARTNERTO_BANKREQ")
-    @DataItemName("Warehouse.InvoiceHead.PartnerToBankReq")
     public BankAccount getPartnerToBankReq() {
         return this.PartnerToBankReq;
     }
@@ -109,7 +108,6 @@ public class InvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONSIGNEE")
-    @DataItemName("Warehouse.InvoiceHeadModel.Consignee")
     public Contractor getConsignee() {
         return this.Consignee;
     }
@@ -120,7 +118,6 @@ public class InvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SHIPPER")
-    @DataItemName("Warehouse.InvoiceHeadModel.Shipper")
     public Contractor getShipper() {
         return this.Shipper;
     }
@@ -131,7 +128,6 @@ public class InvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESPONSIBLE")
-    @DataItemName("Warehouse.InvoiceHeadModel.Responsible")
     public Contractor getResponsible() {
         return this.Responsible;
     }
@@ -142,7 +138,6 @@ public class InvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARTNERFROM_BANKREQ")
-    @DataItemName("Warehouse.InvoiceHead.PartnerFromBankReq")
     public BankAccount getPartnerFromBankReq() {
         return this.PartnerFromBankReq;
     }
@@ -153,7 +148,6 @@ public class InvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONSUMER")
-    @DataItemName("Warehouse.InvoiceHead.Consumer")
     public Contractor getConsumer() {
         return this.Consumer;
     }
@@ -181,7 +175,6 @@ public class InvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel im
     }
 
     @Column(name = "ADD_EXPENSES", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.InvoiceHeadModel.AddExpenses")
     public BigDecimal getAddExpenses() {
         return this.AddExpenses;
     }
@@ -191,7 +184,6 @@ public class InvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel im
     }
 
     @Column(name = "DISCOUNT_ON_DOC", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.InvoiceHeadModel.DiscountOnDoc")
     public BigDecimal getDiscountOnDoc() {
         return this.DiscountOnDoc;
     }
@@ -201,7 +193,6 @@ public class InvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel im
     }
 
     @Column(name = "DISCOUNT_ON_LINE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.InvoiceHeadModel.DiscountOnLine")
     public BigDecimal getDiscountOnLine() {
         return this.DiscountOnLine;
     }
@@ -211,7 +202,6 @@ public class InvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel im
     }
 
     @Column(name = "TOPAYDOCNUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Warehouse.InvoiceHeadModel.ToPayDocNumber")
     public String getToPayDocNumber() {
         return this.ToPayDocNumber;
     }
@@ -221,7 +211,6 @@ public class InvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel im
     }
 
     @Column(name = "TOPAYDOCDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Warehouse.InvoiceHeadModel.ToPayDocDate")
     public Date getToPayDocDate() {
         return this.ToPayDocDate;
     }
@@ -231,7 +220,6 @@ public class InvoiceHeadModel extends com.mg.merp.document.model.DocHeadModel im
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 1024)
-    @DataItemName("Warehouse.InvoiceHeadModel.Comment")
     public String getComment() {
         return this.Comment;
     }

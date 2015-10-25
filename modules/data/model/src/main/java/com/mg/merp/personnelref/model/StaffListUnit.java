@@ -77,8 +77,6 @@ public class StaffListUnit extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -89,8 +87,6 @@ public class StaffListUnit extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL1_ID")
-    //$NON-NLS-1$
-    @DataItemName("Personnelref.CostsAnl1")
     public CostsAnl getCostsAnl1() {
         return this.CostsAnl1;
     }
@@ -101,8 +97,6 @@ public class StaffListUnit extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL2_ID")
-    //$NON-NLS-1$
-    @DataItemName("Personnelref.CostsAnl2")
     public CostsAnl getCostsAnl2() {
         return this.CostsAnl2;
     }
@@ -113,8 +107,6 @@ public class StaffListUnit extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL3_ID")
-    //$NON-NLS-1$
-    @DataItemName("Personnelref.CostsAnl3")
     public CostsAnl getCostsAnl3() {
         return this.CostsAnl3;
     }
@@ -135,8 +127,6 @@ public class StaffListUnit extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL4_ID")
-    //$NON-NLS-1$
-    @DataItemName("Personnelref.CostsAnl4")
     public CostsAnl getCostsAnl4() {
         return this.CostsAnl4;
     }
@@ -177,8 +167,6 @@ public class StaffListUnit extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL5_ID")
-    //$NON-NLS-1$
-    @DataItemName("Personnelref.CostsAnl5")
     public CostsAnl getCostsAnl5() {
         return this.CostsAnl5;
     }
@@ -198,8 +186,6 @@ public class StaffListUnit extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "UCODE", nullable = false, columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.StaffListUnit.Code")
     public String getUCode() {
         return this.UCode;
     }
@@ -209,8 +195,6 @@ public class StaffListUnit extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "UNAME", columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.StaffListUnit.Name")
     public String getUName() {
         return this.UName;
     }
@@ -220,8 +204,6 @@ public class StaffListUnit extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 256)
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.StaffListUnit.Comments")
     public String getComments() {
         return this.Comments;
     }
@@ -231,8 +213,6 @@ public class StaffListUnit extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "FOLDER_TAG", columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("Reference.FolderTag")
     public String getFolderTag() {
         return this.FolderTag;
     }

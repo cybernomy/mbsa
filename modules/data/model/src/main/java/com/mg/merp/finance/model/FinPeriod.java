@@ -18,8 +18,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "FINPERIOD")
-//$NON-NLS-1$
-@DataItemName("Finance.FinPeriod")
 public class FinPeriod extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -58,8 +56,6 @@ public class FinPeriod extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -79,8 +75,6 @@ public class FinPeriod extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PNAME", nullable = false, columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("Finance.Period.PName")
     public String getPName() {
         return this.PName;
     }
@@ -90,8 +84,6 @@ public class FinPeriod extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DATEFROM", nullable = false, columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Finance.Period.DateFrom")
     public Date getDateFrom() {
         return this.DateFrom;
     }
@@ -101,8 +93,6 @@ public class FinPeriod extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DATETO", nullable = false, columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Finance.Period.DateTo")
     public Date getDateTo() {
         return this.DateTo;
     }
@@ -112,8 +102,6 @@ public class FinPeriod extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "WHOCLOSED", columnDefinition = "CHAR", length = 31)
-    //$NON-NLS-1$
-    @DataItemName("Finance.Period.WhoClosed")
     public String getWhoClosed() {
         return this.WhoClosed;
     }
@@ -123,8 +111,6 @@ public class FinPeriod extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "DATECLOSE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Finance.Period.DateClose")
     public Date getDateClose() {
         return this.DateClose;
     }

@@ -108,7 +108,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -158,7 +157,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "ANL1_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Analytics1")
     public Integer getAnalytics1() {
         return this.Analytics1;
     }
@@ -168,7 +166,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "ANL2_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Analytics2")
     public Integer getAnalytics2() {
         return this.Analytics2;
     }
@@ -178,7 +175,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "ANL3_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Analytics3")
     public Integer getAnalytics3() {
         return this.Analytics3;
     }
@@ -188,7 +184,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "ANL4_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Analytics4")
     public Integer getAnalytics4() {
         return this.Analytics4;
     }
@@ -198,7 +193,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "ANL5_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Analytics5")
     public Integer getAnalytics5() {
         return this.Analytics5;
     }
@@ -208,7 +202,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "REMNBEGCUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Finance.TurnAcc.RemnBegCur")
     public BigDecimal getRemnBegCur() {
         return this.RemnBegCur;
     }
@@ -218,7 +211,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "REMNBEGNAT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Finance.TurnAcc.RemnBegNat")
     public BigDecimal getRemnBegNat() {
         return this.RemnBegNat;
     }
@@ -228,7 +220,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "REMNBEGCURPLAN", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Finance.TurnAcc.RemnBegCurPlan")
     public BigDecimal getRemnBegCurPlan() {
         return this.RemnBegCurPlan;
     }
@@ -238,7 +229,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "REMNBEGNATPLAN", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Finance.TurnAcc.RemnBegNatPlan")
     public BigDecimal getRemnBegNatPlan() {
         return this.RemnBegNatPlan;
     }
@@ -248,7 +238,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "IncomeNat", insertable = false, updatable = false)
-    @DataItemName("Finance.TurnAcc.IncomeNat")
     public BigDecimal getIncomeNat() {
         return this.IncomeNat;
     }
@@ -258,7 +247,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "IncomeCur", insertable = false, updatable = false)
-    @DataItemName("Finance.TurnAcc.IncomeCur")
     public BigDecimal getIncomeCur() {
         return this.IncomeCur;
     }
@@ -268,7 +256,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "OutcomeNat", insertable = false, updatable = false)
-    @DataItemName("Finance.TurnAcc.OutcomeNat")
     public BigDecimal getOutcomeNat() {
         return this.OutcomeNat;
     }
@@ -278,7 +265,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "OutcomeCur", insertable = false, updatable = false)
-    @DataItemName("Finance.TurnAcc.OutcomeCur")
     public BigDecimal getOutcomeCur() {
         return this.OutcomeCur;
     }
@@ -288,7 +274,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "RemnEndNat", insertable = false, updatable = false)
-    @DataItemName("Finance.TurnAcc.RemnEndNat")
     public BigDecimal getRemnEndNat() {
         return this.RemnEndNat;
     }
@@ -298,7 +283,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "RemnEndCur", insertable = false, updatable = false)
-    @DataItemName("Finance.TurnAcc.RemnEndCur")
     public BigDecimal getRemnEndCur() {
         return this.RemnEndCur;
     }
@@ -308,7 +292,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "IncomeNatPlan", insertable = false, updatable = false)
-    @DataItemName("Finance.TurnAcc.IncomeNatPlan")
     public BigDecimal getIncomeNatPlan() {
         return this.IncomeNatPlan;
     }
@@ -318,7 +301,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "IncomeCurPlan", insertable = false, updatable = false)
-    @DataItemName("Finance.TurnAcc.IncomeCurPlan")
     public BigDecimal getIncomeCurPlan() {
         return this.IncomeCurPlan;
     }
@@ -328,7 +310,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "OutcomeNatPlan", insertable = false, updatable = false)
-    @DataItemName("Finance.TurnAcc.OutcomeNatPlan")
     public BigDecimal getOutcomeNatPlan() {
         return this.OutcomeNatPlan;
     }
@@ -338,7 +319,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "OutcomeCurPlan", insertable = false, updatable = false)
-    @DataItemName("Finance.TurnAcc.OutcomeCurPlan")
     public BigDecimal getOutcomeCurPlan() {
         return this.OutcomeCurPlan;
     }
@@ -348,7 +328,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "RemnEndNatPlan", insertable = false, updatable = false)
-    @DataItemName("Finance.TurnAcc.RemnEndNatPlan")
     public BigDecimal getRemnEndNatPlan() {
         return this.RemnEndNatPlan;
     }
@@ -358,7 +337,6 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "RemnEndCurPlan", insertable = false, updatable = false)
-    @DataItemName("Finance.TurnAcc.RemnEndCurPlan")
     public BigDecimal getRemnEndCurPlan() {
         return this.RemnEndCurPlan;
     }
@@ -367,42 +345,34 @@ public class TurnAccount extends com.mg.merp.core.model.AbstractEntity implement
         this.RemnEndCurPlan = RemnEndCurPlan;
     }
 
-    @DataItemName("Finance.TurnAcc.IncomeCurDiff")
     public BigDecimal getIncomeCurDiff() {
         return IncomeCur.subtract(IncomeCurPlan);
     }
 
-    @DataItemName("Finance.TurnAcc.IncomeNatDiff")
     public BigDecimal getIncomeNatDiff() {
         return IncomeNat.subtract(IncomeNatPlan);
     }
 
-    @DataItemName("Finance.TurnAcc.OutcomeCurDiff")
     public BigDecimal getOutcomeCurDiff() {
         return OutcomeCur.subtract(OutcomeCurPlan);
     }
 
-    @DataItemName("Finance.TurnAcc.OutcomeNatDiff")
     public BigDecimal getOutcomeNatDiff() {
         return OutcomeNat.subtract(OutcomeNatPlan);
     }
 
-    @DataItemName("Finance.TurnAcc.RemnBegCurDiff")
     public BigDecimal getRemnBegCurDiff() {
         return RemnBegCur.subtract(RemnBegCurPlan);
     }
 
-    @DataItemName("Finance.TurnAcc.RemnBegNatDiff")
     public BigDecimal getRemnBegNatDiff() {
         return RemnBegNat.subtract(RemnBegNatPlan);
     }
 
-    @DataItemName("Finance.TurnAcc.RemnEndCurDiff")
     public BigDecimal getRemnEndCurDiff() {
         return RemnEndCur.subtract(RemnEndCurPlan);
     }
 
-    @DataItemName("Finance.TurnAcc.RemnEndNatDiff")
     public BigDecimal getRemnEndNatDiff() {
         return RemnEndNat.subtract(RemnEndNatPlan);
     }

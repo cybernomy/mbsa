@@ -80,8 +80,6 @@ public class ItemSpec extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -122,8 +120,6 @@ public class ItemSpec extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE2_ID")
-    //$NON-NLS-1$
-    @DataItemName("LbSchedule.ItemSpec.Measure2.Code")
     public Measure getMeasure2() {
         return this.Measure2;
     }
@@ -144,8 +140,6 @@ public class ItemSpec extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE1_ID")
-    //$NON-NLS-1$
-    @DataItemName("LbSchedule.ItemSpec.Measure1.Code")
     public Measure getMeasure1() {
         return this.Measure1;
     }
@@ -155,8 +149,6 @@ public class ItemSpec extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "PRICE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("LbSchedule.ItemSpec.Price")
     public BigDecimal getPrice() {
         return this.Price;
     }
@@ -166,8 +158,6 @@ public class ItemSpec extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "CLEARPRICE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("LbSchedule.ItemSpec.ClearPrice")
     public BigDecimal getClearPrice() {
         return this.ClearPrice;
     }
@@ -177,8 +167,6 @@ public class ItemSpec extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("LbSchedule.ItemSpec.Summa")
     public BigDecimal getSumma() {
         return this.Summa;
     }
@@ -188,8 +176,6 @@ public class ItemSpec extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "CLEARSUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("LbSchedule.ItemSpec.ClearSumma")
     public BigDecimal getClearSumma() {
         return this.ClearSumma;
     }
@@ -199,8 +185,6 @@ public class ItemSpec extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "QTY1", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    //$NON-NLS-1$
-    @DataItemName("LbSchedule.ItemSpec.Qty1")
     public BigDecimal getQty1() {
         return this.Qty1;
     }
@@ -210,8 +194,6 @@ public class ItemSpec extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "QTY2", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    //$NON-NLS-1$
-    @DataItemName("LbSchedule.ItemSpec.Qty2")
     public BigDecimal getQty2() {
         return this.Qty2;
     }

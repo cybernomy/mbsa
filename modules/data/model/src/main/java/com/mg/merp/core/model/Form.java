@@ -19,7 +19,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SYS_FORM")
-@DataItemName("Core.Form")
 public class Form extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -62,7 +61,6 @@ public class Form extends com.mg.merp.core.model.AbstractEntity implements java.
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -101,7 +99,6 @@ public class Form extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "NAME", unique = true, nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Core.Form.Name")
     public String getName() {
         return this.Name;
     }
@@ -111,7 +108,6 @@ public class Form extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 1024)
-    @DataItemName("Core.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -121,7 +117,6 @@ public class Form extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IMPL_NAME", nullable = false, columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Core.Window.Implementation")
     public String getImplementation() {
         return this.Implementation;
     }

@@ -171,7 +171,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -269,7 +268,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "RETURNABLE", columnDefinition = "INTEGER")
-    @DataItemName("Overall.Card.Returnable")
     public boolean isReturnable() {
         return this.Returnable;
     }
@@ -279,7 +277,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "GIVE_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Overall.OvrCardHist.GiveDate")
     public Date getGiveDate() {
         return this.GiveDate;
     }
@@ -289,7 +286,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "READOUT_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Overall.OvrCardHist.ReadOutDate")
     public Date getReadOutDate() {
         return this.ReadOutDate;
     }
@@ -299,7 +295,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "SHELFLIFE", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Overall.Spec.Shelflife")
     public BigDecimal getShelfLife() {
         return this.ShelfLife;
     }
@@ -310,7 +305,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
 
     @Column(name = "SHELFLIFE_MEAS")
     @Enumerated(EnumType.ORDINAL)
-    @DataItemName("Overall.Spec.ShelfLifeMeas")
     public TimePeriodKind getShelfLifeMeas() {
         return this.ShelfLifeMeas;
     }
@@ -320,7 +314,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Overall.Card.Quantity")
     public BigDecimal getQuantity() {
         return this.Quantity;
     }
@@ -330,7 +323,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "NDE_COST", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Overall.Card.NdeCost")
     public BigDecimal getNdeCost() {
         return this.NdeCost;
     }
@@ -340,7 +332,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "NDE_SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Overall.Card.NdeSumma")
     public BigDecimal getNdeSumma() {
         return this.NdeSumma;
     }
@@ -350,7 +341,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "DETERIORATION", columnDefinition = "INTEGER")
-    @DataItemName("Overall.Card.Deterioration")
     public Integer getDeterioration() {
         return this.Deterioration;
     }
@@ -360,7 +350,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "DEPRECIABLE_VALUE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Overall.Card.DepreciableValue")
     public BigDecimal getDepreciableValue() {
         return this.DepreciableValue;
     }
@@ -370,7 +359,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "COMMON_SUMMA_FOR_DINCH", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Overall.Card.CommonSummaForDinch")
     public BigDecimal getCommonSummaForDinch() {
         return this.CommonSummaForDinch;
     }
@@ -380,7 +368,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "DINCHED_SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Overall.Card.DinchedSumma")
     public BigDecimal getDinchedSumma() {
         return this.DinchedSumma;
     }
@@ -390,7 +377,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "REST_OF_DINCH_SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Overall.Card.RestOfDinchSumma")
     public BigDecimal getRestOfDinchSumma() {
         return this.RestOfDinchSumma;
     }
@@ -400,7 +386,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "ARREAR_SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Overall.Card.ArrearSumma")
     public BigDecimal getArrearSumma() {
         return this.ArrearSumma;
     }
@@ -558,7 +543,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "REMOVE_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Overall.OvrCardHist.RemoveDate")
     public Date getRemoveDate() {
         return this.RemoveDate;
     }
@@ -568,7 +552,6 @@ public class OvrCardHist extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "READOUT_DATE", insertable = false, updatable = false, columnDefinition = "TIMESTAMP")
-    @DataItemName("Overall.OvrCardHist.PlanRemoveDate")
     public Date getPlanRemoveDate() {
         return this.PlanRemoveDate;
     }

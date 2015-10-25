@@ -23,7 +23,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "TYPEDOC")
-@DataItemName("Document.DocTypeModel")
 public class DocType extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -69,7 +68,6 @@ public class DocType extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -80,7 +78,6 @@ public class DocType extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RPT_ID")
-    @DataItemName("Document.DocType.Report")
     public RptMain getReport() {
         return this.Report;
     }
@@ -101,7 +98,6 @@ public class DocType extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "NUMBERING_ALG_ID")
-    @DataItemName("Document.DocType.NumberingAlgorithm")
     public Repository getNumberingAlgorithm() {
         return this.NumberingAlgorithm;
     }
@@ -120,7 +116,6 @@ public class DocType extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 15)
-    @DataItemName("Document.DocType.Code")
     public String getCode() {
         return this.Code;
     }
@@ -130,7 +125,6 @@ public class DocType extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TDNAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Document.DocType.Name")
     public String getName() {
         return this.Name;
     }
@@ -140,7 +134,6 @@ public class DocType extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SOLID_DOC_PROCESS", columnDefinition = "SMALLINT")
-    @DataItemName("Document.DocType.SolidDocProcess")
     public boolean isSolidDocProcess() {
         return this.SolidDocProcess;
     }

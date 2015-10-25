@@ -52,8 +52,6 @@ public class Street extends com.mg.merp.core.model.AbstractEntity implements jav
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -73,8 +71,6 @@ public class Street extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "SNAME", columnDefinition = "VARCHAR", length = 40)
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.Street.Name")
     public String getSName() {
         return this.SName;
     }
@@ -84,8 +80,6 @@ public class Street extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "KTYPE", columnDefinition = "VARCHAR", length = 10)
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.Street.Type")
     public String getKType() {
         return this.KType;
     }
@@ -95,8 +89,6 @@ public class Street extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "KCODE", columnDefinition = "CHAR", length = 15)
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.Street.Code")
     public String getKCode() {
         return this.KCode;
     }
@@ -106,8 +98,6 @@ public class Street extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "POST_INDEX", columnDefinition = "CHAR", length = 6)
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.Street.PostIndex")
     public String getPostIndex() {
         return this.PostIndex;
     }
@@ -117,8 +107,6 @@ public class Street extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "GNINMB", columnDefinition = "CHAR", length = 4)
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.Street.GninMb")
     public String getGninMb() {
         return this.GninMb;
     }
@@ -128,8 +116,6 @@ public class Street extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "OCATD", columnDefinition = "CHAR", length = 11)
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.Street.OcaTd")
     public String getOcaTd() {
         return this.OcaTd;
     }

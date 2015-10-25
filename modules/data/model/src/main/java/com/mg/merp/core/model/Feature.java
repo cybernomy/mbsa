@@ -21,8 +21,6 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "FEATURE")
-//$NON-NLS-1$
-@DataItemName("Core.Feature")
 public class Feature extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -75,8 +73,6 @@ public class Feature extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -87,8 +83,6 @@ public class Feature extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ENTITY_CLASS_ID")
-    //$NON-NLS-1$
-    @DataItemName("Core.Feature.SysClass")
     public SysClass getSysClass() {
         return this.SysClass;
     }
@@ -108,8 +102,6 @@ public class Feature extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "NAME", unique = true, nullable = false, columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("Reference.Name")
     public String getName() {
         return this.Name;
     }
@@ -129,8 +121,6 @@ public class Feature extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PRIORITY", columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("Core.Feature.Priority")
     public Integer getPriority() {
         return this.Priority;
     }
@@ -140,8 +130,6 @@ public class Feature extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "NULL_VALUE", columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("Core.Feature.NullValue")
     public String getNullValue() {
         return this.NullValue;
     }
@@ -151,8 +139,6 @@ public class Feature extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("Reference.BigCode")
     public String getCode() {
         return this.Code;
     }
@@ -162,8 +148,6 @@ public class Feature extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "IS_ARRAY", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Core.Feature.IsArray")
     public boolean isArray() {
         return this.IsArray;
     }
@@ -173,8 +157,6 @@ public class Feature extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ARRAY_SIZE", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Core.Feature.ArraySize")
     public Short getArraySize() {
         return this.ArraySize;
     }

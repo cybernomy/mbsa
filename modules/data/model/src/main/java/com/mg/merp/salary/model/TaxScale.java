@@ -63,7 +63,6 @@ public class TaxScale extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -93,7 +92,6 @@ public class TaxScale extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SNUMBER", nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("Salary.TaxScale.SNumber")
     public Integer getSNumber() {
         return this.SNumber;
     }
@@ -103,7 +101,6 @@ public class TaxScale extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "BEGINDATE", nullable = false, columnDefinition = "TIMESTAMP")
-    @DataItemName("Salary.TaxScale.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -123,7 +120,6 @@ public class TaxScale extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SNAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Salary.Name")
     public String getSName() {
         return this.SName;
     }

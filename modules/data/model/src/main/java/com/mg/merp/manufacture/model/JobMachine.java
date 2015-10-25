@@ -83,7 +83,6 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MCH_OH_RATE_CUR_CODE")
-    @DataItemName("Manufacture.JobMachine.MchOhRateCurCode")
     public Currency getMchOhRateCurrency() {
         return this.MchOhRateCurrency;
     }
@@ -94,7 +93,6 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MCH_RATE_CUR_CODE")
-    @DataItemName("Manufacture.JobMachine.MchRateCurCode")
     public Currency getMchRateCurrency() {
         return this.MchRateCurrency;
     }
@@ -105,7 +103,6 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MCH_OH_COST_CATEGORY_ID")
-    @DataItemName("Manufacture.JobMachine.MchOhCostCategory")
     public CostCategories getMchOhCostCategory() {
         return this.MchOhCostCategory;
     }
@@ -116,7 +113,6 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RUN_TIME_MCH_UM")
-    @DataItemName("Manufacture.JobMachine.RunTimeMchUm")
     public Measure getRunTimeMchUm() {
         return this.RunTimeMchUm;
     }
@@ -127,7 +123,6 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MCH_COST_CATEGORY_ID")
-    @DataItemName("Manufacture.JobMachine.MchCostCategory")
     public CostCategories getMchCostCategory() {
         return this.MchCostCategory;
     }
@@ -147,7 +142,6 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
     }
 
     @Column(name = "RUN_TICKS_MCH", columnDefinition = "NUMERIC", precision = 18, scale = 0)
-    @DataItemName("Manufacture.JobMachine.RunTicksMch")
     public long getRunTicksMch() {
         return this.RunTicksMch;
     }
@@ -157,7 +151,6 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
     }
 
     @Column(name = "MCH_NUMBER", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Manufacture.JobMachine.MchNumber")
     public BigDecimal getMchNumber() {
         return this.MchNumber;
     }
@@ -177,7 +170,6 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
     }
 
     @Column(name = "MCH_RATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Manufacture.JobMachine.MchRate")
     public BigDecimal getMchRate() {
         return this.MchRate;
     }
@@ -187,7 +179,6 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
     }
 
     @Column(name = "MCH_BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Manufacture.JobMachine.MchBackflushFlag")
     public boolean isMchBackflushFlag() {
         return this.MchBackflushFlag;
     }
@@ -207,7 +198,6 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
     }
 
     @Column(name = "MCH_OH_RATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Manufacture.JobMachine.MchOhRate")
     public BigDecimal getMchOhRate() {
         return this.MchOhRate;
     }
@@ -217,7 +207,6 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
     }
 
     @Column(name = "MCH_OH_RATIO", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Manufacture.JobMachine.MchOhRatio")
     public BigDecimal getMchOhRatio() {
         return this.MchOhRatio;
     }
@@ -227,7 +216,6 @@ public class JobMachine extends com.mg.merp.manufacture.model.JobRouteResource i
     }
 
     @Column(name = "MCH_OH_BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Manufacture.JobMachine.MchOhBackflushFlag")
     public boolean isMchOhBackflushFlag() {
         return this.MchOhBackflushFlag;
     }

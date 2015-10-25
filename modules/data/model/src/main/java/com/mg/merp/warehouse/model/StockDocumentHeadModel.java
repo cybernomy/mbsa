@@ -53,7 +53,6 @@ public class StockDocumentHeadModel extends com.mg.merp.document.model.DocHeadMo
     }
 
     @Column(name = "SUMMACUR_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.BillHead.SummaCurWithDiscount")
     public BigDecimal getSummaCurWithDiscount() {
         return this.SummaCurWithDiscount;
     }
@@ -63,7 +62,6 @@ public class StockDocumentHeadModel extends com.mg.merp.document.model.DocHeadMo
     }
 
     @Column(name = "SUMMANAT_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.BillHead.SummaNatWithDiscount")
     public BigDecimal getSummaNatWithDiscount() {
         return this.SummaNatWithDiscount;
     }
@@ -73,7 +71,6 @@ public class StockDocumentHeadModel extends com.mg.merp.document.model.DocHeadMo
     }
 
     @Column(name = "ADD_EXPENSES", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.WareDocModel.AddExpenses")
     public BigDecimal getAddExpenses() {
         return this.AddExpenses;
     }
@@ -83,7 +80,6 @@ public class StockDocumentHeadModel extends com.mg.merp.document.model.DocHeadMo
     }
 
     @Column(name = "DISCOUNT_ON_DOC", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.BillHead.DiscountOnDoc")
     public BigDecimal getDiscountOnDoc() {
         return this.DiscountOnDoc;
     }
@@ -93,7 +89,6 @@ public class StockDocumentHeadModel extends com.mg.merp.document.model.DocHeadMo
     }
 
     @Column(name = "DISCOUNT_ON_LINE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.BillHead.DiscountOnLine")
     public BigDecimal getDiscountOnLine() {
         return this.DiscountOnLine;
     }

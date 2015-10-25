@@ -19,7 +19,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SCH_TASK")
-@DataItemName("Scheduler.Task")
 public class Task extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -66,7 +65,6 @@ public class Task extends com.mg.merp.core.model.AbstractEntity implements java.
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -106,7 +104,6 @@ public class Task extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "VARCHAR", length = 20)
-    @DataItemName("Scheduler.Code")
     public String getCode() {
         return this.Code;
     }
@@ -116,7 +113,6 @@ public class Task extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Scheduler.Name")
     public String getName() {
         return this.Name;
     }
@@ -126,7 +122,6 @@ public class Task extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Scheduler.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -136,7 +131,6 @@ public class Task extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CRON_EXPRESSION", nullable = false, columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Scheduler.Task.CronExpression")
     public String getCronExpression() {
         return this.CronExpression;
     }
@@ -146,7 +140,6 @@ public class Task extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_ACTIVE", columnDefinition = "SMALLINT")
-    @DataItemName("Scheduler.Task.IsActive")
     public boolean isActive() {
         return this.Active;
     }

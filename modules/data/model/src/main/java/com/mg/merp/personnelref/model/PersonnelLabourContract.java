@@ -48,7 +48,6 @@ public class PersonnelLabourContract extends com.mg.merp.core.model.AbstractEnti
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -79,7 +78,6 @@ public class PersonnelLabourContract extends com.mg.merp.core.model.AbstractEnti
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ORIGINAL_DOCUMENT_ID")
-    @DataItemName("PersonnelRef.Personnel.OrigDoc")
     public OriginalDocument getOriginalDocument() {
         return this.OriginalDocument;
     }
@@ -89,7 +87,6 @@ public class PersonnelLabourContract extends com.mg.merp.core.model.AbstractEnti
     }
 
     @Column(name = "NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("PersonnelRef.Personnel.ContrName")
     public String getName() {
         return this.Name;
     }

@@ -40,7 +40,6 @@ public class ReplacedFee extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -51,7 +50,6 @@ public class ReplacedFee extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FEE_REF_ID")
-    @DataItemName("Salary.FeeIncluded.FeeRef")
     public FeeRef getFeeRef() {
         return this.FeeRef;
     }

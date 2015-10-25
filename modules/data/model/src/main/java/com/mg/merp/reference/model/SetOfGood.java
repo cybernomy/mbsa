@@ -18,7 +18,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SETOFGOOD")
-@DataItemName("Reference.SetOfGood")
 public class SetOfGood extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -54,7 +53,6 @@ public class SetOfGood extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -94,7 +92,6 @@ public class SetOfGood extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "QUANTITY", nullable = false, columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Reference.SetOfGood.Quantity")
     public BigDecimal getQuantity() {
         return this.Quantity;
     }
@@ -104,7 +101,6 @@ public class SetOfGood extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "PRICERELATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Reference.SetOfGood.Percent")
     public BigDecimal getPriceRelate() {
         return this.PriceRelate;
     }

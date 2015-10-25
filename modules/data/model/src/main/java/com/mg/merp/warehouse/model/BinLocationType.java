@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "WH_BIN_LOCATION_TYPE")
-@DataItemName("Warehouse.BinLocationType")
 public class BinLocationType extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -46,7 +45,6 @@ public class BinLocationType extends com.mg.merp.core.model.AbstractEntity imple
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -66,7 +64,6 @@ public class BinLocationType extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "CODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Warehouse.BinLocationType.Code")
     public String getCode() {
         return this.Code;
     }
@@ -76,7 +73,6 @@ public class BinLocationType extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Warehouse.BinLocationType.Name")
     public String getName() {
         return this.Name;
     }

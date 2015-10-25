@@ -52,7 +52,6 @@ public class PersonnelAttestation extends com.mg.merp.core.model.AbstractEntity 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -93,7 +92,6 @@ public class PersonnelAttestation extends com.mg.merp.core.model.AbstractEntity 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESOLUTION_DOCUMENT_ID")
-    @DataItemName("PersonnelRef.Personnel.ResolutionDocument")
     public OriginalDocument getResolutionDocument() {
         return this.ResolutionDocument;
     }
@@ -103,7 +101,6 @@ public class PersonnelAttestation extends com.mg.merp.core.model.AbstractEntity 
     }
 
     @Column(name = "ATTESTATION_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("PersonnelRef.Personnel.AttestationDate")
     public Date getAttestationDate() {
         return this.AttestationDate;
     }
@@ -113,7 +110,6 @@ public class PersonnelAttestation extends com.mg.merp.core.model.AbstractEntity 
     }
 
     @Column(name = "RESOLUTION", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("PersonnelRef.Personnel.Resolution")
     public String getResolution() {
         return this.Resolution;
     }

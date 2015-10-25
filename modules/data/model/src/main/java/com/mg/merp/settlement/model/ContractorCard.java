@@ -89,7 +89,6 @@ public class ContractorCard extends com.mg.merp.core.model.AbstractEntity implem
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -110,7 +109,6 @@ public class ContractorCard extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_ID")
-    @DataItemName("Settlement.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -130,7 +128,6 @@ public class ContractorCard extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "TOTALINCOME", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Settlement.TotalIncome")
     public BigDecimal getTotalIncome() {
         return this.TotalIncome;
     }
@@ -140,7 +137,6 @@ public class ContractorCard extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "TOTALEXPENSES", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Settlement.TotalExpenses")
     public BigDecimal getTotalExpenses() {
         return this.TotalExpenses;
     }
@@ -150,7 +146,6 @@ public class ContractorCard extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "DEBITORINDEBLIMIT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Settlement.DebitorInDebLimit")
     public BigDecimal getDebitorInDebLimit() {
         return this.DebitorInDebLimit;
     }
@@ -160,7 +155,6 @@ public class ContractorCard extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "CREDITORINDEBLIMIT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Settlement.CreditorInDebLimit")
     public BigDecimal getCreditorInDebLimit() {
         return this.CreditorInDebLimit;
     }
@@ -170,7 +164,6 @@ public class ContractorCard extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "PLANINCOME", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Settlement.PlanIncome")
     public BigDecimal getPlanIncome() {
         return this.PlanIncome;
     }
@@ -180,7 +173,6 @@ public class ContractorCard extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "PLANEXPENSES", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Settlement.PlanExpenses")
     public BigDecimal getPlanExpenses() {
         return this.PlanExpenses;
     }
@@ -190,7 +182,6 @@ public class ContractorCard extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "DEBITORINDEBSUM", insertable = false, updatable = false, columnDefinition = "NUMERIC", precision = 18, scale = 4)
-    @DataItemName("Settlement.DebitorInDebSum")
     public BigDecimal getDebitorInDebSum() {
         return this.DebitorInDebSum;
     }
@@ -200,7 +191,6 @@ public class ContractorCard extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "CREDITORINDEBSUM", insertable = false, updatable = false, columnDefinition = "NUMERIC", precision = 18, scale = 4)
-    @DataItemName("Settlement.CreditorInDebSum")
     public BigDecimal getCreditorInDebSum() {
         return this.CreditorInDebSum;
     }
@@ -210,7 +200,6 @@ public class ContractorCard extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "PLANDEBITORINDEBSUM", insertable = false, updatable = false, columnDefinition = "NUMERIC", precision = 18, scale = 4)
-    @DataItemName("Settlement.PlanDebitorInDebSum")
     public BigDecimal getPlanDebitorInDebSum() {
         return this.PlanDebitorInDebSum;
     }
@@ -220,7 +209,6 @@ public class ContractorCard extends com.mg.merp.core.model.AbstractEntity implem
     }
 
     @Column(name = "PLANCREDITORINDEBSUM", insertable = false, updatable = false, columnDefinition = "NUMERIC", precision = 18, scale = 4)
-    @DataItemName("Settlement.PlanCreditorInDebSum")
     public BigDecimal getPlanCreditorInDebSum() {
         return this.PlanCreditorInDebSum;
     }

@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_BANK")
-@DataItemName("Reference.Bank")
 public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -98,7 +97,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -109,7 +107,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CORR_ACC_CURRENCY")
-    @DataItemName("Reference.Bank.Currency")
     public Currency getCurrency() {
         return this.Currency;
     }
@@ -120,7 +117,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COUNTRY_ID")
-    @DataItemName("Reference.Bank.Country")
     public Country getCountry() {
         return this.Country;
     }
@@ -140,7 +136,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "BIK", columnDefinition = "VARCHAR", length = 30)
-    @DataItemName("Reference.Bank.BIK.Name")
     public String getBIK() {
         return this.BIK;
     }
@@ -150,7 +145,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "BIK_UNIQUE", columnDefinition = "SMALLINT")
-    @DataItemName("Reference.Bank.BikUnique")
     public boolean isBikUnique() {
         return this.BikUnique;
     }
@@ -160,7 +154,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Reference.Bank.Name")
     public String getName() {
         return this.Name;
     }
@@ -170,7 +163,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "BRANCH", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Reference.Bank.Branch")
     public String getBranch() {
         return this.Branch;
     }
@@ -180,7 +172,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CITY_TYPE", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Bank.CityType")
     public String getCityType() {
         return this.CityType;
     }
@@ -190,7 +181,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CITY", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Reference.Bank.City")
     public String getCity() {
         return this.City;
     }
@@ -200,7 +190,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "ADDRESS", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Reference.Bank.Address")
     public String getAddress() {
         return this.Address;
     }
@@ -210,7 +199,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "ZIP", columnDefinition = "VARCHAR", length = 20)
-    @DataItemName("Reference.Bank.Zip")
     public String getZip() {
         return this.Zip;
     }
@@ -220,7 +208,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CORR_ACC", columnDefinition = "VARCHAR", length = 30)
-    @DataItemName("Reference.Bank.CorrAcc")
     public String getCorrAcc() {
         return this.CorrAcc;
     }
@@ -230,7 +217,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CORR_NAME", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Reference.Bank.CorrName")
     public String getCorrName() {
         return this.CorrName;
     }
@@ -240,7 +226,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CORR_ADDRESS", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Reference.Bank.CorrAddress")
     public String getCorrAddress() {
         return this.CorrAddress;
     }
@@ -250,7 +235,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "SWIFT", columnDefinition = "VARCHAR", length = 30)
-    @DataItemName("Reference.Bank.Swift")
     public String getSwift() {
         return this.Swift;
     }
@@ -260,7 +244,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IBAN", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Reference.Bank.Iban")
     public String getIban() {
         return this.Iban;
     }
@@ -270,7 +253,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "BSC", columnDefinition = "VARCHAR", length = 30)
-    @DataItemName("Reference.Bank.Bsc")
     public String getBsc() {
         return this.Bsc;
     }
@@ -280,7 +262,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "PHONE", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Bank.Phone")
     public String getPhone() {
         return this.Phone;
     }
@@ -290,7 +271,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "FAX", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Bank.Fax")
     public String getFax() {
         return this.Fax;
     }
@@ -300,7 +280,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "EMAIL", columnDefinition = "VARCHAR", length = 50)
-    @DataItemName("Reference.Bank.EMail")
     public String getEmail() {
         return this.Email;
     }
@@ -310,7 +289,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "WWW", columnDefinition = "VARCHAR", length = 50)
-    @DataItemName("Reference.Bank.WWW")
     public String getWww() {
         return this.Www;
     }
@@ -320,7 +298,6 @@ public class Bank extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Reference.Comments")
     public String getComments() {
         return this.Comments;
     }

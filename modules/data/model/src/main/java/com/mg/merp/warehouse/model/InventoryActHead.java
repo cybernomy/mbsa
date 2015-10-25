@@ -67,7 +67,6 @@ public class InventoryActHead extends com.mg.merp.document.model.DocHead impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CHAIRMAN")
-    @DataItemName("Warehouse.InventoryActHead.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -77,7 +76,6 @@ public class InventoryActHead extends com.mg.merp.document.model.DocHead impleme
     }
 
     @Column(name = "REALSUMMANAT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.InventoryActHead.RealSummaNat")
     public BigDecimal getRealSummaNat() {
         return this.RealSummaNat;
     }
@@ -87,7 +85,6 @@ public class InventoryActHead extends com.mg.merp.document.model.DocHead impleme
     }
 
     @Column(name = "REALSUMMACUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.InventoryActHead.RealSummaCur")
     public BigDecimal getRealSummaCur() {
         return this.RealSummaCur;
     }
@@ -97,7 +94,6 @@ public class InventoryActHead extends com.mg.merp.document.model.DocHead impleme
     }
 
     @Column(name = "ENDDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Warehouse.InventoryActHead.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }
@@ -106,7 +102,6 @@ public class InventoryActHead extends com.mg.merp.document.model.DocHead impleme
         this.EndDate = EndDate;
     }
 
-    @DataItemName("Warehouse.InventoryActHead.ExsessSummaCur")
     public java.math.BigDecimal getExsessSummaCur() {
         return exsessSummaCur;
     }
@@ -115,7 +110,6 @@ public class InventoryActHead extends com.mg.merp.document.model.DocHead impleme
         this.exsessSummaCur = exsessSummaCur;
     }
 
-    @DataItemName("Warehouse.InventoryActHead.ExsessSummaNat")
     public java.math.BigDecimal getExsessSummaNat() {
         return exsessSummaNat;
     }
@@ -124,7 +118,6 @@ public class InventoryActHead extends com.mg.merp.document.model.DocHead impleme
         this.exsessSummaNat = exsessSummaNat;
     }
 
-    @DataItemName("Warehouse.InventoryActHead.ShortageSummaCur")
     public java.math.BigDecimal getShortageSummaCur() {
         return shortageSummaCur;
     }
@@ -133,7 +126,6 @@ public class InventoryActHead extends com.mg.merp.document.model.DocHead impleme
         this.shortageSummaCur = shortageSummaCur;
     }
 
-    @DataItemName("Warehouse.InventoryActHead.ShortageSummaNat")
     public java.math.BigDecimal getShortageSummaNat() {
         return shortageSummaNat;
     }

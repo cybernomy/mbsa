@@ -20,7 +20,6 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "MF_RESOURCE_GROUP")
-@DataItemName("MfReference.ResourceGroup")
 public class ResourceGroup extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -59,7 +58,6 @@ public class ResourceGroup extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -70,7 +68,6 @@ public class ResourceGroup extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE_ID")
-    @DataItemName("MfReference.ResourGroup.Measure")
     public Measure getMeasure() {
         return this.Measure;
     }
@@ -100,7 +97,6 @@ public class ResourceGroup extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "RESOURCE_GROUP_CODE", columnDefinition = "CHAR", length = 20)
-    @DataItemName("MfReference.ResourGroup.RGCode")
     public String getResourceGroupCode() {
         return this.ResourceGroupCode;
     }
@@ -110,7 +106,6 @@ public class ResourceGroup extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 40)
-    @DataItemName("MfReference.ResourGroup.Descr")
     public String getDescription() {
         return this.Description;
     }
@@ -130,7 +125,6 @@ public class ResourceGroup extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "LIMITED_RESOURCE_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("MfReference.ResGroup.LimResFlag")
     public boolean isLimitedResourceFlag() {
         return this.LimitedResourceFlag;
     }
@@ -140,7 +134,6 @@ public class ResourceGroup extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("MfReference.ResourGroup.Comment")
     public String getComment() {
         return this.Comment;
     }

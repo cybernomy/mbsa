@@ -98,7 +98,6 @@ public class Specification extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -169,7 +168,6 @@ public class Specification extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DSTACC_ID")
-    @DataItemName("Finance.Oper.DstAcc")
     public Account getDstAcc() {
         return this.DstAcc;
     }
@@ -180,7 +178,6 @@ public class Specification extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SRCACC_ID")
-    @DataItemName("Finance.Oper.SrcAcc")
     public Account getSrcAcc() {
         return this.SrcAcc;
     }
@@ -281,7 +278,6 @@ public class Specification extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DSTANL5_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Oper.DstAnl5")
     public Integer getDstAnl5() {
         return this.DstAnl5;
     }
@@ -291,7 +287,6 @@ public class Specification extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "SUMNAT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Finance.Oper.SumNat")
     public BigDecimal getSumNat() {
         return this.SumNat;
     }
@@ -301,7 +296,6 @@ public class Specification extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "SUMCUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Finance.Oper.SumCur")
     public BigDecimal getSumCur() {
         return this.SumCur;
     }

@@ -51,7 +51,6 @@ public class PersonElectronicAddress extends com.mg.merp.core.model.AbstractEnti
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -101,7 +100,6 @@ public class PersonElectronicAddress extends com.mg.merp.core.model.AbstractEnti
     }
 
     @Column(name = "ADDRESS", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Partner.Email.Address")
     public String getAddress() {
         return this.Address;
     }
@@ -111,7 +109,6 @@ public class PersonElectronicAddress extends com.mg.merp.core.model.AbstractEnti
     }
 
     @Column(name = "IS_ACTIVE", columnDefinition = "SMALLINT")
-    @DataItemName("Reference.Partner.Email.IsActive")
     public boolean isActive() {
         return this.IsActive;
     }

@@ -24,7 +24,6 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "ACCPLAN")
-@DataItemName("Account.AccPlan")
 public class AccPlan extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -90,7 +89,6 @@ public class AccPlan extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -139,7 +137,6 @@ public class AccPlan extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ACC", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Account.BigCode")
     public String getAcc() {
         return this.Acc;
     }
@@ -149,7 +146,6 @@ public class AccPlan extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ACCNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Account.Name")
     public String getAccName() {
         return this.AccName;
     }
@@ -168,7 +164,6 @@ public class AccPlan extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ISBAL", nullable = false, columnDefinition = "SMALLINT")
-    @DataItemName("Account.Plan.IsBal")
     public boolean isBal() {
         return this.IsBal;
     }
@@ -178,7 +173,6 @@ public class AccPlan extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ISWORK", nullable = false, columnDefinition = "SMALLINT")
-    @DataItemName("Account.Plan.IsWork")
     public boolean isWork() {
         return this.IsWork;
     }

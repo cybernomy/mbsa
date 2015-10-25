@@ -92,7 +92,6 @@ public class JobMaterial extends com.mg.merp.manufacture.model.JobRouteResource 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MTL_COST_CATEGORY_ID")
-    @DataItemName("Manufacture.JobMaterial.MtlCostCategory")
     public CostCategories getMtlCostCategory() {
         return this.MtlCostCategory;
     }
@@ -123,7 +122,6 @@ public class JobMaterial extends com.mg.merp.manufacture.model.JobRouteResource 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BACKFLUSH_ZONE_ID")
-    @DataItemName("Manufacture.JobMaterial.BackflushZone")
     public WarehouseZone getBackflushZone() {
         return this.BackflushZone;
     }
@@ -134,7 +132,6 @@ public class JobMaterial extends com.mg.merp.manufacture.model.JobRouteResource 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MTL_OH_COST_CATEGORY_ID")
-    @DataItemName("MfReference.JobMaterial.MtlOhCostCategory")
     public CostCategories getMtlOhCostCategory() {
         return this.MtlOhCostCategory;
     }
@@ -154,7 +151,6 @@ public class JobMaterial extends com.mg.merp.manufacture.model.JobRouteResource 
     }
 
     @Column(name = "REVISION", columnDefinition = "INTEGER")
-    @DataItemName("Manufacture.JobMaterial.Revision")
     public Integer getRevision() {
         return this.Revision;
     }
@@ -164,7 +160,6 @@ public class JobMaterial extends com.mg.merp.manufacture.model.JobRouteResource 
     }
 
     @Column(name = "VIEW_SEQUENCE", nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("Manufacture.JobMaterial.ViewSequence")
     public int getViewSequence() {
         return this.ViewSequence;
     }
@@ -174,7 +169,6 @@ public class JobMaterial extends com.mg.merp.manufacture.model.JobRouteResource 
     }
 
     @Column(name = "REPORT_SEQUENCE", columnDefinition = "INTEGER")
-    @DataItemName("Manufacture.JobMaterial.ReportSequence")
     public Integer getReportSequence() {
         return this.ReportSequence;
     }
@@ -194,7 +188,6 @@ public class JobMaterial extends com.mg.merp.manufacture.model.JobRouteResource 
     }
 
     @Column(name = "MTL_QTY", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Manufacture.JobMaterial.MtlQty")
     public BigDecimal getMtlQty() {
         return this.MtlQty;
     }
@@ -204,7 +197,6 @@ public class JobMaterial extends com.mg.merp.manufacture.model.JobRouteResource 
     }
 
     @Column(name = "SCRAP_FACTOR", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Manufacture.JobMaterial.ScrapFactor")
     public BigDecimal getScrapFactor() {
         return this.ScrapFactor;
     }
@@ -214,7 +206,6 @@ public class JobMaterial extends com.mg.merp.manufacture.model.JobRouteResource 
     }
 
     @Column(name = "MTL_BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Manufacture.JobMaterial.MtlBackflushFlag")
     public boolean isMtlBackflushFlag() {
         return this.MtlBackflushFlag;
     }
@@ -234,7 +225,6 @@ public class JobMaterial extends com.mg.merp.manufacture.model.JobRouteResource 
     }
 
     @Column(name = "MTL_OH_RATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Manufacture.JobMaterial.MtlOhRate")
     public BigDecimal getMtlOhRate() {
         return this.MtlOhRate;
     }
@@ -244,7 +234,6 @@ public class JobMaterial extends com.mg.merp.manufacture.model.JobRouteResource 
     }
 
     @Column(name = "MTL_OH_RATIO", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Manufacture.JobMaterial.MtlOhRatio")
     public BigDecimal getMtlOhRatio() {
         return this.MtlOhRatio;
     }
@@ -254,7 +243,6 @@ public class JobMaterial extends com.mg.merp.manufacture.model.JobRouteResource 
     }
 
     @Column(name = "MTL_OH_BACKFLUSH_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Manufacture.JobMaterial.MtlOhBackflushFlag")
     public boolean isMtlOhBackflushFlag() {
         return this.MtlOhBackflushFlag;
     }

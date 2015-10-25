@@ -18,7 +18,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "MF_CELL")
-@DataItemName("MfReference.Cell")
 public class Cell extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -51,7 +50,6 @@ public class Cell extends com.mg.merp.core.model.AbstractEntity implements java.
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -62,7 +60,6 @@ public class Cell extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WEEK_CAL_ID")
-    @DataItemName("MfReference.Cell.WeekCal")
     public WeekCalendar getWeekCal() {
         return this.WeekCal;
     }
@@ -83,7 +80,6 @@ public class Cell extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BOTTLE_NECK_WC_ID")
-    @DataItemName("MfReference.Cell.WorkCenter")
     public WorkCenter getWorkCenter() {
         return this.WorkCenter;
     }
@@ -93,7 +89,6 @@ public class Cell extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CELL_NAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("MfReference.Cell.CellName")
     public String getCellName() {
         return this.CellName;
     }
@@ -103,7 +98,6 @@ public class Cell extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CAPACITY_FACTOR", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("MfReference.Cell.CapacityFactor")
     public BigDecimal getCapacityFactor() {
         return this.CapacityFactor;
     }
@@ -113,7 +107,6 @@ public class Cell extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("MfReference.Cell.Comment")
     public String getComment() {
         return this.Comment;
     }

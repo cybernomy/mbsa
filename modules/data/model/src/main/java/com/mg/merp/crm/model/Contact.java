@@ -24,7 +24,6 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "CRM_CONTACT")
-@DataItemName("CRM.Contact")
 public class Contact extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -90,7 +89,6 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -101,7 +99,6 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURATOR_ID")
-    @DataItemName("CRM.Contact.Curator")
     public User getCurator() {
         return this.Curator;
     }
@@ -112,7 +109,6 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PERSON_ID")
-    @DataItemName("CRM.Contact.Person")
     public NaturalPerson getPerson() {
         return this.Person;
     }
@@ -123,7 +119,6 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESPONSIBLE_ID")
-    @DataItemName("CRM.Contact.Responsible")
     public User getResponsible() {
         return this.Responsible;
     }
@@ -154,7 +149,6 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_ID")
-    @DataItemName("CRM.Contact.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -164,7 +158,6 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PRIORITY", columnDefinition = "INTEGER")
-    @DataItemName("CRM.Contact.Priority")
     public Integer getPriority() {
         return this.Priority;
     }
@@ -174,7 +167,6 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "IS_DEFAULT", columnDefinition = "SMALLINT")
-    @DataItemName("CRM.Contact.IsDefault")
     public boolean isDefault() {
         return this.IsDefault;
     }
@@ -185,7 +177,6 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "THE_POSITION")
-    @DataItemName("CRM.Contact.ThePosition")
     public Position getThePosition() {
         return this.ThePosition;
     }
@@ -195,7 +186,6 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "IS_RETIRED", columnDefinition = "SMALLINT")
-    @DataItemName("CRM.Contact.IsRetired")
     public boolean isRetired() {
         return this.IsRetired;
     }
@@ -205,7 +195,6 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "NICKNAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("CRM.Contact.NickName")
     public String getNickName() {
         return this.NickName;
     }
@@ -225,7 +214,6 @@ public class Contact extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("CRM.Contact.Comments")
     public String getComments() {
         return this.Comments;
     }

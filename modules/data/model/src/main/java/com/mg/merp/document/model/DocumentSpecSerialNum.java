@@ -47,7 +47,6 @@ public class DocumentSpecSerialNum extends com.mg.merp.core.model.AbstractEntity
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -77,7 +76,6 @@ public class DocumentSpecSerialNum extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "SERIAL_NUM", nullable = false, columnDefinition = "VARCHAR", length = 50)
-    @DataItemName("Document.DocSpec.SerialNum.SerialNum")
     public String getSerialNum() {
         return this.SerialNum;
     }
@@ -87,7 +85,6 @@ public class DocumentSpecSerialNum extends com.mg.merp.core.model.AbstractEntity
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Document.DocSpec.SerialNum.Comment")
     public String getComment() {
         return this.Comment;
     }

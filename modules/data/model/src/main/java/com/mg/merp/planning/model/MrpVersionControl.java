@@ -90,7 +90,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -110,7 +109,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Planning.Code")
     public String getCode() {
         return this.Code;
     }
@@ -120,7 +118,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "DESCRIPTION", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Planning.Name")
     public String getDescription() {
         return this.Description;
     }
@@ -130,7 +127,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MRP_VERSION", columnDefinition = "INTEGER")
-    @DataItemName("Planning.MRP.MrpVersion")
     public Integer getMrpVersion() {
         return this.MrpVersion;
     }
@@ -140,7 +136,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MRP_SO_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MRP.MrpSoFlag")
     public boolean isMrpSoFlag() {
         return this.MrpSoFlag;
     }
@@ -150,7 +145,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MRP_SF_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MRP.MrpSfFlag")
     public boolean isMrpSfFlag() {
         return this.MrpSfFlag;
     }
@@ -160,7 +154,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MRP_PO_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MRP.MrpPoFlag")
     public boolean isMrpPoFlag() {
         return this.MrpPoFlag;
     }
@@ -170,7 +163,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MRP_PF_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MRP.MrpPfFlag")
     public boolean isMrpPfFlag() {
         return this.MrpPfFlag;
     }
@@ -180,7 +172,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MRP_QOH_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MRP.MrpQohFlag")
     public boolean isMrpQohFlag() {
         return this.MrpQohFlag;
     }
@@ -190,7 +181,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MRP_FIRM_PLANNED_ORDERS_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MRP.MrpFirmPlannedOrdersFlag")
     public boolean isMrpFirmPlannedOrdersFlag() {
         return this.MrpFirmPlannedOrdersFlag;
     }
@@ -200,7 +190,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MRP_JOB_FLAG", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MRP.MrpJobFlag")
     public boolean isMrpJobFlag() {
         return this.MrpJobFlag;
     }
@@ -210,7 +199,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "DAMPING_DAYS", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MRP.DampingDays")
     public Short getDampingDays() {
         return this.DampingDays;
     }
@@ -220,7 +208,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "QC_RECEIVING_DAYS", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MRP.QcReceivingDays")
     public Short getQcReceivingDays() {
         return this.QcReceivingDays;
     }
@@ -230,7 +217,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "RUN_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.MRP.RunDate")
     public Date getRunDate() {
         return this.RunDate;
     }
@@ -240,7 +226,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MRP_START_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.MRP.MrpStartDate")
     public Date getMrpStartDate() {
         return this.MrpStartDate;
     }
@@ -250,7 +235,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MRP_END_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.MRP.MrpEndDate")
     public Date getMrpEndDate() {
         return this.MrpEndDate;
     }
@@ -260,7 +244,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "LAST_RUN_DATETIME", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.MRP.LastRunDatetime")
     public Date getLastRunDatetime() {
         return this.LastRunDatetime;
     }
@@ -270,7 +253,6 @@ public class MrpVersionControl extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "MRP_SUGGESTED_ORDERS_FIRMED", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MRP.MrpSuggestedOrdersFirmed")
     public boolean isMrpSuggestedOrdersFirmed() {
         return this.MrpSuggestedOrdersFirmed;
     }

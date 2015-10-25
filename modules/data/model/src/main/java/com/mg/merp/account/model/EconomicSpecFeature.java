@@ -76,7 +76,6 @@ public class EconomicSpecFeature extends com.mg.merp.core.model.AbstractEntity i
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 10)
-    @DataItemName("Account.EconSpecFeat.Code")
     public String getCode() {
         return this.Code;
     }
@@ -86,7 +85,6 @@ public class EconomicSpecFeature extends com.mg.merp.core.model.AbstractEntity i
     }
 
     @Column(name = "FNAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Account.EconSpecFeat.Name")
     public String getName() {
         return this.Name;
     }

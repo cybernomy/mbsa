@@ -56,7 +56,6 @@ public class PersonnelGroupType extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("PersonnelRef.PersGroupType.Name")
     public String getName() {
         return this.Name;
     }

@@ -51,7 +51,6 @@ public class DocumentSpecPackage extends com.mg.merp.core.model.AbstractEntity i
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -91,7 +90,6 @@ public class DocumentSpecPackage extends com.mg.merp.core.model.AbstractEntity i
     }
 
     @Column(name = "QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Reference.DocSpec.Packing.Quantity")
     public BigDecimal getQuantity() {
         return this.Quantity;
     }
@@ -101,7 +99,6 @@ public class DocumentSpecPackage extends com.mg.merp.core.model.AbstractEntity i
     }
 
     @Column(name = "WEIGHT", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Reference.Packing.Weight")
     public BigDecimal getWeight() {
         return this.Weight;
     }
@@ -111,7 +108,6 @@ public class DocumentSpecPackage extends com.mg.merp.core.model.AbstractEntity i
     }
 
     @Column(name = "VOLUME", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Reference.Packing.Volume")
     public BigDecimal getVolume() {
         return this.Volume;
     }

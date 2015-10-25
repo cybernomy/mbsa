@@ -55,8 +55,6 @@ public class Constant extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -86,8 +84,6 @@ public class Constant extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("BAi.Code")
     public String getCode() {
         return this.Code;
     }
@@ -97,8 +93,6 @@ public class Constant extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 256)
-    //$NON-NLS-1$
-    @DataItemName("BAi.BigName")
     public String getDescription() {
         return this.Description;
     }

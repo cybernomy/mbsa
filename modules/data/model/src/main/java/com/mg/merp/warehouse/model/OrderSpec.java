@@ -61,7 +61,6 @@ public class OrderSpec extends BaseStockDocumentSpec implements java.io.Serializ
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WAREHOUSE_ID")
-    @DataItemName("Warehouse.OrderSpec.Warehouse")
     public Contractor getWarehouse() {
         return this.Warehouse;
     }
@@ -71,7 +70,6 @@ public class OrderSpec extends BaseStockDocumentSpec implements java.io.Serializ
     }
 
     @Column(name = "REQUIRED_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Warehouse.OrderSpec.RequiredDate")
     public Date getRequiredDate() {
         return this.RequiredDate;
     }
@@ -81,7 +79,6 @@ public class OrderSpec extends BaseStockDocumentSpec implements java.io.Serializ
     }
 
     @Column(name = "PROMISED_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Warehouse.OrderSpec.PromisedDate")
     public Date getPromisedDate() {
         return this.PromisedDate;
     }
@@ -91,7 +88,6 @@ public class OrderSpec extends BaseStockDocumentSpec implements java.io.Serializ
     }
 
     @Column(name = "VENDOR_ITEM_CODE", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Warehouse.OrderSpec.VendorItemCode")
     public String getVendorItemCode() {
         return this.VendorItemCode;
     }
@@ -119,7 +115,6 @@ public class OrderSpec extends BaseStockDocumentSpec implements java.io.Serializ
     }
 
     @Column(name = "QTY_RETURNED", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Warehouse.OrderSpec.QtyReturned")
     public BigDecimal getQtyReturned() {
         return this.QtyReturned;
     }
@@ -129,7 +124,6 @@ public class OrderSpec extends BaseStockDocumentSpec implements java.io.Serializ
     }
 
     @Column(name = "QTY_SHIPPED", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Warehouse.OrderSpec.QtyShipped")
     public BigDecimal getQtyShipped() {
         return this.QtyShipped;
     }
@@ -139,7 +133,6 @@ public class OrderSpec extends BaseStockDocumentSpec implements java.io.Serializ
     }
 
     @Column(name = "QTY_PICKED", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Warehouse.OrderSpec.QtyPicked")
     public BigDecimal getQtyPicked() {
         return this.QtyPicked;
     }
@@ -149,7 +142,6 @@ public class OrderSpec extends BaseStockDocumentSpec implements java.io.Serializ
     }
 
     @Column(name = "QTY_OUTSTANDING", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Warehouse.OrderSpec.QtyOutstanding")
     public BigDecimal getQtyOutstanding() {
         return this.QtyOutstanding;
     }
@@ -159,7 +151,6 @@ public class OrderSpec extends BaseStockDocumentSpec implements java.io.Serializ
     }
 
     @Column(name = "CLOSED_FOR_PLANNING", columnDefinition = "SMALLINT")
-    @DataItemName("Warehouse.OrderSpec.ClosedForPlanning")
     public boolean isClosedForPlanning() {
         return this.ClosedForPlanning;
     }

@@ -60,7 +60,6 @@ public class Version extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -81,7 +80,6 @@ public class Version extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CREATOR_ID")
-    @DataItemName("PaymentControl.Version.Creator")
     public SecUser getCreator() {
         return this.Creator;
     }
@@ -91,7 +89,6 @@ public class Version extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("PaymentControl.Payment.Name")
     public String getName() {
         return this.Name;
     }
@@ -101,7 +98,6 @@ public class Version extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "AVAILABLE", columnDefinition = "SMALLINT")
-    @DataItemName("PaymentControl.Version.Available")
     public boolean isAvailable() {
         return this.Available;
     }
@@ -111,7 +107,6 @@ public class Version extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CREATEDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("PaymentControl.Version.CreateDate")
     public Date getCreateDate() {
         return this.CreateDate;
     }

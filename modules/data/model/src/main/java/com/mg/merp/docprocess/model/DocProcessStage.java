@@ -110,7 +110,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -121,7 +120,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "ALG_ID")
-    @DataItemName("DocFlow.PerformBusinessAddin")
     public Repository getPerformBusinessAddin() {
         return this.PerformBusinessAddin;
     }
@@ -132,7 +130,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "PRE_PERFORM_BAI_ID", columnDefinition = "INTEGER")
-    @DataItemName("DocFlow.PrePerformBusinessAddin")
     public Repository getPrePerformBusinessAddin() {
         return this.PrePerformBusinessAddin;
     }
@@ -173,7 +170,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "RBALG_ID")
-    @DataItemName("DocFlow.RollbackBusinessAddin")
     public Repository getRollbackBusinessAddin() {
         return this.RollbackBusinessAddin;
     }
@@ -184,7 +180,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "PRE_ROLLBACK_BAI_ID", columnDefinition = "INTEGER")
-    @DataItemName("DocFlow.PreRollbackBusinessAddin")
     public Repository getPreRollbackBusinessAddin() {
         return this.PreRollbackBusinessAddin;
     }
@@ -194,7 +189,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "PARTIAL", columnDefinition = "SMALLINT")
-    @DataItemName("DocFlow.Partial")
     public boolean isPartial() {
         return this.Partial;
     }
@@ -204,7 +198,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "PREVISCOMPLETE", columnDefinition = "SMALLINT")
-    @DataItemName("DocFlow.PrevComplete")
     public boolean isPrevComplete() {
         return this.PrevComplete;
     }
@@ -214,7 +207,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "SHOWNEWDOCUMENT", columnDefinition = "SMALLINT")
-    @DataItemName("DocFlow.ShowNewDocument")
     public boolean isShowNewDocument() {
         return this.ShowNewDocument;
     }
@@ -224,7 +216,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "DPSNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("DocFlow.Name")
     public String getName() {
         return this.Name;
     }
@@ -234,7 +225,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("DocFlow.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -245,7 +235,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "LINKDOCSECTION")
-    @DataItemName("DocFlow.LinkDocSection")
     public DocSection getLinkDocSection() {
         return this.LinkDocSection;
     }
@@ -256,7 +245,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "LINKDOCTYPE", columnDefinition = "CHAR")
-    @DataItemName("DocFlow.LinkDocType")
     public DocType getLinkDocType() {
         return this.LinkDocType;
     }
@@ -276,7 +264,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "LINKDOCDESTFOLDER", columnDefinition = "INTEGER")
-    @DataItemName("DocFlow.LinkDocDestFolder")
     public Folder getLinkDocDestFolder() {
         return this.LinkDocDestFolder;
     }
@@ -286,7 +273,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "JOIN_FLOW", nullable = false, columnDefinition = "SMALLINT")
-    @DataItemName("DocFlow.JoinFlow")
     public boolean isJoinFlow() {
         return this.JoinFlow;
     }
@@ -296,7 +282,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "FORK_FLOW", nullable = false, columnDefinition = "SMALLINT")
-    @DataItemName("DocFlow.ForkFlow")
     public boolean isForkFlow() {
         return this.ForkFlow;
     }
@@ -306,7 +291,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "PRIORITY", columnDefinition = "SMALLINT")
-    @DataItemName("DocFlow.Priority")
     public Short getPriority() {
         return this.Priority;
     }
@@ -317,7 +301,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "LINKDOCMODELFOLDER", columnDefinition = "INTEGER")
-    @DataItemName("DocFlow.LinkDocModelFolder")
     public Folder getLinkDocModelFolder() {
         return this.LinkDocModelFolder;
     }
@@ -363,7 +346,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "DEPENDENT", columnDefinition = "SMALLINT")
-    @DataItemName("DocFlow.Dependent")
     public boolean isDependent() {
         return this.Dependent;
     }
@@ -373,7 +355,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "USE_CURRENT_DATE", columnDefinition = "SMALLINT")
-    @DataItemName("DocFlow.UseCurrentDate")
     public boolean isUseCurrentDate() {
         return this.UseCurrentDate;
     }
@@ -383,7 +364,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("DocFlow.Code")
     public String getCode() {
         return this.Code;
     }
@@ -393,7 +373,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "VALUE_OUT_OF_BOUND", columnDefinition = "SMALLINT")
-    @DataItemName("DocFlow.ValueOutOfBound")
     public boolean isValueOutOfBound() {
         return this.ValueOutOfBound;
     }
@@ -403,7 +382,6 @@ public class DocProcessStage extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "LINKDOC_ROLLBACK", columnDefinition = "SMALLINT")
-    @DataItemName("DocFlow.LinkDocRollback")
     public boolean isLinkDocRollback() {
         return this.LinkDocRollback;
     }

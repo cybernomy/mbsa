@@ -46,7 +46,6 @@ public class BaseStockDocumentSpec extends DocSpec {
     }
 
     @Column(name = "COST", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.WareDocSpec.Cost")
     public BigDecimal getCost() {
         return this.Cost;
     }
@@ -56,7 +55,6 @@ public class BaseStockDocumentSpec extends DocSpec {
     }
 
     @Column(name = "DISCOUNT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.WareDocSpec.Discount")
     public BigDecimal getDiscount() {
         return this.Discount;
     }
@@ -66,7 +64,6 @@ public class BaseStockDocumentSpec extends DocSpec {
     }
 
     @Column(name = "PRICE_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.WareDocSpec.PriceWithDiscount")
     public BigDecimal getPriceWithDiscount() {
         return this.PriceWithDiscount;
     }
@@ -76,7 +73,6 @@ public class BaseStockDocumentSpec extends DocSpec {
     }
 
     @Column(name = "SUMMA_WITH_DISCOUNT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Warehouse.WareDocSpec.SummaWithDiscount")
     public BigDecimal getSummaWithDiscount() {
         return this.SummaWithDiscount;
     }
@@ -86,7 +82,6 @@ public class BaseStockDocumentSpec extends DocSpec {
     }
 
     @Column(name = "DOC_DISCOUNT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Warehouse.WareDocSpec.DocDiscount")
     public BigDecimal getDocDiscount() {
         return this.DocDiscount;
     }

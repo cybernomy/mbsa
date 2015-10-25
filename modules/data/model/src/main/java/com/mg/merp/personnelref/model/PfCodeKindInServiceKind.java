@@ -45,7 +45,6 @@ public class PfCodeKindInServiceKind extends com.mg.merp.core.model.AbstractEnti
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -66,7 +65,6 @@ public class PfCodeKindInServiceKind extends com.mg.merp.core.model.AbstractEnti
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PFCODEKIND_ID")
-    @DataItemName("PersonnelRef.PCKISK.PfCodeKind")
     public Folder getPfCodeKind() {
         return this.PfCodeKind;
     }
@@ -86,7 +84,6 @@ public class PfCodeKindInServiceKind extends com.mg.merp.core.model.AbstractEnti
     }
 
     @Column(name = "RATIO", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("PersonnelRef.PCKISK.Ratio")
     public BigDecimal getRatio() {
         return this.Ratio;
     }

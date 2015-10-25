@@ -18,8 +18,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "DIS_PROMOTION_TYPE")
-//$NON-NLS-1$
-@DataItemName("Discount.PromotionType")
 public class PromotionType extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -49,8 +47,6 @@ public class PromotionType extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -60,8 +56,6 @@ public class PromotionType extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("Discount.PromotionType.Name")
     public String getName() {
         return this.Name;
     }
@@ -71,8 +65,6 @@ public class PromotionType extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("Discount.PromotionType.Code")
     public String getCode() {
         return this.Code;
     }
@@ -82,8 +74,6 @@ public class PromotionType extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "CHAR", length = 1024)
-    //$NON-NLS-1$
-    @DataItemName("Discount.PromotionType.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -94,8 +84,6 @@ public class PromotionType extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BAI_ID")
-    //$NON-NLS-1$
-    @DataItemName("Discount.PromotionType.BAi")
     public Repository getBai() {
         return this.Bai;
     }

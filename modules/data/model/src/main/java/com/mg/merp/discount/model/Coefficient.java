@@ -49,7 +49,6 @@ public class Coefficient extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -60,7 +59,6 @@ public class Coefficient extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CATALOG_ID")
-    @DataItemName("Discount.GlobalCoeff.Catalog")
     public Catalog getCatalog() {
         return this.Catalog;
     }
@@ -71,7 +69,6 @@ public class Coefficient extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CATALOGFOLDER_ID")
-    @DataItemName("Discount.GlobalCoeff.CatalogFolder")
     public CatalogFolder getCatalogFolder() {
         return this.CatalogFolder;
     }
@@ -101,7 +98,6 @@ public class Coefficient extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "COEFFICIENT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Discount.GlobalCoeff.Coefficient")
     public BigDecimal getCoefficient() {
         return this.Coefficient;
     }

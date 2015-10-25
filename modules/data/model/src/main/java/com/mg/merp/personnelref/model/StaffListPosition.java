@@ -19,8 +19,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PREF_STAFF_LIST_POSITION")
-//$NON-NLS-1$
-@DataItemName("PersonnelRef.StaffListPosition")
 public class StaffListPosition extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -90,8 +88,6 @@ public class StaffListPosition extends com.mg.merp.core.model.AbstractEntity imp
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -102,8 +98,6 @@ public class StaffListPosition extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL1_ID")
-    //$NON-NLS-1$
-    @DataItemName("Personnelref.CostsAnl1")
     public CostsAnl getCostsAnl1() {
         return this.CostsAnl1;
     }
@@ -124,8 +118,6 @@ public class StaffListPosition extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL3_ID")
-    //$NON-NLS-1$
-    @DataItemName("Personnelref.CostsAnl3")
     public CostsAnl getCostsAnl3() {
         return this.CostsAnl3;
     }
@@ -136,8 +128,6 @@ public class StaffListPosition extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL2_ID")
-    //$NON-NLS-1$
-    @DataItemName("Personnelref.CostsAnl2")
     public CostsAnl getCostsAnl2() {
         return this.CostsAnl2;
     }
@@ -158,8 +148,6 @@ public class StaffListPosition extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL4_ID")
-    //$NON-NLS-1$
-    @DataItemName("Personnelref.CostsAnl4")
     public CostsAnl getCostsAnl4() {
         return this.CostsAnl4;
     }
@@ -200,8 +188,6 @@ public class StaffListPosition extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL5_ID")
-    //$NON-NLS-1$
-    @DataItemName("Personnelref.CostsAnl5")
     public CostsAnl getCostsAnl5() {
         return this.CostsAnl5;
     }
@@ -231,8 +217,6 @@ public class StaffListPosition extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "SL_POSITION_UNIQUE_ID", nullable = false, columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.Position.SlPositionUniqueId")
     public String getSlPositionUniqueId() {
         return this.SlPositionUniqueId;
     }
@@ -242,8 +226,6 @@ public class StaffListPosition extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "BEGINDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.Position.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -253,8 +235,6 @@ public class StaffListPosition extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "ENDDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.Position.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }
@@ -264,8 +244,6 @@ public class StaffListPosition extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "RATE_NUMBER", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.Position.RateNumber")
     public BigDecimal getRateNumber() {
         return this.RateNumber;
     }
@@ -275,8 +253,6 @@ public class StaffListPosition extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "HOLIDAY_NUMBER", columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.Position.HolidayNumber")
     public Integer getHolidayNumber() {
         return this.HolidayNumber;
     }

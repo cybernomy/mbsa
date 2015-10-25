@@ -61,7 +61,6 @@ public class OutputProductModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "EMPLOYEE_ID")
-    @DataItemName("Manufacture.OutputProductModel.Employee")
     public Contractor getEmployee() {
         return this.Employee;
     }
@@ -72,7 +71,6 @@ public class OutputProductModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WC_ID")
-    @DataItemName("Manufacture.OutputProductModel.WC")
     public WorkCenter getWC() {
         return this.WC;
     }
@@ -83,7 +81,6 @@ public class OutputProductModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CREW_ID")
-    @DataItemName("Manufacture.OutputProductModel.Crew")
     public Crew getCrew() {
         return this.Crew;
     }
@@ -94,7 +91,6 @@ public class OutputProductModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_ID")
-    @DataItemName("Manufacture.OutputProductModel.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -105,7 +101,6 @@ public class OutputProductModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "OPER_ID")
-    @DataItemName("Manufacture.OutputProductModel.Oper")
     public JobRoute getOper() {
         return this.Oper;
     }
@@ -116,7 +111,6 @@ public class OutputProductModel extends com.mg.merp.document.model.DocHeadModel 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "JOB_ID")
-    @DataItemName("Manufacture.OutputProductModel.Job")
     public Job getJob() {
         return this.Job;
     }

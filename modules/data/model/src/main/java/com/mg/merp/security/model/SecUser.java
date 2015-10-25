@@ -20,7 +20,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SEC_USERS")
-@DataItemName("Security.User")
 public class SecUser extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -75,7 +74,6 @@ public class SecUser extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -95,7 +93,6 @@ public class SecUser extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "NAME", unique = true, nullable = false, columnDefinition = "CHAR", length = 31)
-    @DataItemName("Security.User.Name")
     public String getName() {
         return this.Name;
     }
@@ -105,7 +102,6 @@ public class SecUser extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "FULLNAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Security.User.FullName")
     public String getFullName() {
         return this.FullName;
     }
@@ -115,7 +111,6 @@ public class SecUser extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PASSW", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Security.User.Passw")
     public String getPassw() {
         return this.Passw;
     }
@@ -134,7 +129,6 @@ public class SecUser extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SMART_CARD_ONLY", columnDefinition = "SMALLINT")
-    @DataItemName("Security.User.SmartCardOnly")
     public boolean isSmartCardOnly() {
         return this.SmartCardOnly;
     }
@@ -144,7 +138,6 @@ public class SecUser extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "EMAIL", columnDefinition = "VARCHAR", length = 50)
-    @DataItemName("Security.User.Email")
     public String getEmail() {
         return this.Email;
     }
@@ -154,7 +147,6 @@ public class SecUser extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "MOBILE", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Security.User.Mobile")
     public String getMobile() {
         return this.Mobile;
     }
@@ -164,7 +156,6 @@ public class SecUser extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PAGER", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Security.User.Pager")
     public String getPager() {
         return this.Pager;
     }
@@ -174,7 +165,6 @@ public class SecUser extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "USE_REMOTE_PROFILE", columnDefinition = "SMALLINT")
-    @DataItemName("Security.User.UseRemoteProfile")
     public boolean isUseRemoteProfile() {
         return this.UseRemoteProfile;
     }

@@ -76,7 +76,6 @@ public class Card extends com.mg.merp.core.model.AbstractEntity implements java.
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -107,7 +106,6 @@ public class Card extends com.mg.merp.core.model.AbstractEntity implements java.
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "OWNER_ID")
-    @DataItemName("Discount.Car.Owner")
     public Contractor getOwner() {
         return this.Owner;
     }
@@ -117,7 +115,6 @@ public class Card extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CARDNUM", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Discount.Card.CardNum")
     public String getCardNum() {
         return this.CardNum;
     }
@@ -127,7 +124,6 @@ public class Card extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Formula(value = "(select dch.discount from dis_card_hist dch where (dch.time_stamp = (select max(dch2.time_stamp) from dis_card_hist dch2 where dch2.card_id = ID) and dch.card_id = ID))")
-    @DataItemName("Discount.Card.Discount")
     public BigDecimal getDiscount() {
         return this.Discount;
     }
@@ -137,7 +133,6 @@ public class Card extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CREDITLIMIT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Discount.Card.CreditLimit")
     public BigDecimal getCreditLimit() {
         return this.CreditLimit;
     }
@@ -147,7 +142,6 @@ public class Card extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "CREDITDEPTH", columnDefinition = "INTEGER")
-    @DataItemName("Discount.Card.CreditDepth")
     public Integer getCreditDepth() {
         return this.CreditDepth;
     }
@@ -157,7 +151,6 @@ public class Card extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Discount.Card.Comments")
     public String getComments() {
         return this.Comments;
     }
@@ -167,7 +160,6 @@ public class Card extends com.mg.merp.core.model.AbstractEntity implements java.
     }
 
     @Column(name = "IS_ACTIVE", columnDefinition = "SMALLINT")
-    @DataItemName("Discount.Card.IsActive")
     public boolean isActive() {
         return this.IsActive;
     }

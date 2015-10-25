@@ -93,7 +93,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -104,7 +103,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ALG_ID")
-    @DataItemName("Finance.OperM.Alg")
     public Repository getAlg() {
         return this.Alg;
     }
@@ -145,7 +143,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DSTACC_ID")
-    @DataItemName("Finance.Oper.DstAcc")
     public Account getDstAcc() {
         return this.DstAcc;
     }
@@ -156,7 +153,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SRCACC_ID")
-    @DataItemName("Finance.Oper.SrcAcc")
     public Account getSrcAcc() {
         return this.SrcAcc;
     }
@@ -166,7 +162,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "SRCANL1_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Oper.SrcAnl1")
     public Integer getSrcAnl1() {
         return this.SrcAnl1;
     }
@@ -176,7 +171,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "SRCANL2_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Oper.SrcAnl2")
     public Integer getSrcAnl2() {
         return this.SrcAnl2;
     }
@@ -186,7 +180,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "SRCANL3_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Oper.SrcAnl3")
     public Integer getSrcAnl3() {
         return this.SrcAnl3;
     }
@@ -196,7 +189,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "SRCANL4_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Oper.SrcAnl4")
     public Integer getSrcAnl4() {
         return this.SrcAnl4;
     }
@@ -206,7 +198,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "SRCANL5_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Oper.SrcAnl5")
     public Integer getSrcAnl5() {
         return this.SrcAnl5;
     }
@@ -216,7 +207,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "DSTANL1_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Oper.DstAnl1")
     public Integer getDstAnl1() {
         return this.DstAnl1;
     }
@@ -226,7 +216,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "DSTANL2_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Oper.DstAnl2")
     public Integer getDstAnl2() {
         return this.DstAnl2;
     }
@@ -236,7 +225,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "DSTANL3_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Oper.DstAnl3")
     public Integer getDstAnl3() {
         return this.DstAnl3;
     }
@@ -246,7 +234,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "DSTANL4_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Oper.DstAnl4")
     public Integer getDstAnl4() {
         return this.DstAnl4;
     }
@@ -256,7 +243,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "DSTANL5_ID", columnDefinition = "INTEGER")
-    @DataItemName("Finance.Oper.DstAnl5")
     public Integer getDstAnl5() {
         return this.DstAnl5;
     }
@@ -266,7 +252,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "SUMNAT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Finance.Oper.SumNat")
     public BigDecimal getSumNat() {
         return this.SumNat;
     }
@@ -276,7 +261,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "SUMCUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Finance.Oper.SumCur")
     public BigDecimal getSumCur() {
         return this.SumCur;
     }
@@ -286,7 +270,6 @@ public class SpecificationModel extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "FORMULA", columnDefinition = "VARCHAR", length = 2048)
-    @DataItemName("Finance.OperM.Formula")
     public String getFormula() {
         return this.Formula;
     }

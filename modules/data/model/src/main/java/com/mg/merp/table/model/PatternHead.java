@@ -61,8 +61,6 @@ public class PatternHead extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -82,8 +80,6 @@ public class PatternHead extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "PCODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("Table.BigCode")
     public String getCode() {
         return this.Code;
     }
@@ -93,8 +89,6 @@ public class PatternHead extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "PNAME", columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("Table.NameN")
     public String getName() {
         return this.Name;
     }
@@ -104,8 +98,6 @@ public class PatternHead extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "DURATION", columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("Table.PatternHead.Duration")
     public Integer getDuration() {
         return this.Duration;
     }

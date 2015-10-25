@@ -131,7 +131,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PAYERBANKREQ_ID")
-    @DataItemName("Account.BankIn.PayerBankReq")
     public BankAccount getPayerBankReq() {
         return this.PayerBankReq;
     }
@@ -142,7 +141,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RECIPIENTBANKREQ_ID")
-    @DataItemName("Account.BankIn.RecipientBankReq")
     public BankAccount getRecipientBankReq() {
         return this.RecipientBankReq;
     }
@@ -172,7 +170,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "NDS1RATE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BankIn.Nds1Rate")
     public BigDecimal getNds1Rate() {
         return this.Nds1Rate;
     }
@@ -182,7 +179,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "NDS2RATE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BankIn.Nds2Rate")
     public BigDecimal getNds2Rate() {
         return this.Nds2Rate;
     }
@@ -192,7 +188,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "NDS1SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BankIn.Nds1Summa")
     public BigDecimal getNds1Summa() {
         return this.Nds1Summa;
     }
@@ -202,7 +197,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "NDS2SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BankIn.Nds2Summa")
     public BigDecimal getNds2Summa() {
         return this.Nds2Summa;
     }
@@ -212,7 +206,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "CLEARSUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BankIn.ClearSumma")
     public BigDecimal getClearSumma() {
         return this.ClearSumma;
     }
@@ -222,7 +215,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "SUMMAWITHNDS1", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BankIn.SummaWithNds1")
     public BigDecimal getSummaWithNds1() {
         return this.SummaWithNds1;
     }
@@ -232,7 +224,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "SUMMAWITHNDS2", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BankIn.SummaWithNds2")
     public BigDecimal getSummaWithNds2() {
         return this.SummaWithNds2;
     }
@@ -252,7 +243,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Account.BankDocument.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -262,7 +252,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "PAYTIME", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.BankOut.PayTime")
     public Date getPayTime() {
         return this.PayTime;
     }
@@ -272,7 +261,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "PAYTURN", columnDefinition = "SMALLINT")
-    @DataItemName("Account.Adv.PayTurn")
     public Short getPayTurn() {
         return this.PayTurn;
     }
@@ -282,7 +270,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "PAYTARGET", columnDefinition = "CHAR", length = 10)
-    @DataItemName("Account.Adv.PayTarget")
     public String getPayTarget() {
         return this.PayTarget;
     }
@@ -292,7 +279,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "PAYTYPE", columnDefinition = "CHAR", length = 10)
-    @DataItemName("Account.Adv.PayType")
     public String getPayType() {
         return this.PayType;
     }
@@ -302,7 +288,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "PAYCODE", columnDefinition = "CHAR", length = 10)
-    @DataItemName("Account.Adv.PayCode")
     public String getPayCode() {
         return this.PayCode;
     }
@@ -313,7 +298,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "KBK")
-    @DataItemName("Account.BankOut.Kbk")
     public Kbk getKbk() {
         return this.Kbk;
     }
@@ -324,7 +308,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "OKATO")
-    @DataItemName("Account.BankOut.Okato")
     public Okato getOkato() {
         return this.Okato;
     }
@@ -334,7 +317,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "PAYMENTBASEIDX", columnDefinition = "CHAR", length = 2)
-    @DataItemName("Account.BankDocument.PaymentBaseIdx")
     public String getPaymentBaseIdx() {
         return this.PaymentBaseIdx;
     }
@@ -344,7 +326,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "TAXPERIODIDX1", columnDefinition = "CHAR", length = 2)
-    @DataItemName("Account.BankDocument.TaxPeriodIdx1")
     public String getTaxPeriodIdx1() {
         return this.TaxPeriodIdx1;
     }
@@ -354,7 +335,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "TAXPERIODIDX2", columnDefinition = "CHAR", length = 2)
-    @DataItemName("Account.BankDocument.TaxPeriodIdx2")
     public String getTaxPeriodIdx2() {
         return this.TaxPeriodIdx2;
     }
@@ -364,7 +344,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "TAXPERIODIDX3", columnDefinition = "CHAR", length = 4)
-    @DataItemName("Account.BankDocument.TaxPeriodIdx3")
     public String getTaxPeriodIdx3() {
         return this.TaxPeriodIdx3;
     }
@@ -374,7 +353,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "DOCNUMBERIDX", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Account.BankOut.DocNumberIdx")
     public String getDocNumberIdx() {
         return this.DocNumberIdx;
     }
@@ -384,7 +362,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "DOCDATEIDX", columnDefinition = "CHAR", length = 10)
-    @DataItemName("Account.BankOut.DocDateIdx")
     public String getDocDateIdx() {
         return this.DocDateIdx;
     }
@@ -394,7 +371,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "PAYMENTTYPEIDX", columnDefinition = "CHAR", length = 2)
-    @DataItemName("Account.BankDocument.PaymentTypeIdx")
     public String getPaymentTypeIdx() {
         return this.PaymentTypeIdx;
     }
@@ -404,7 +380,6 @@ public class BankDocument extends com.mg.merp.document.model.DocHead implements 
     }
 
     @Column(name = "PAYERSTATUS", columnDefinition = "CHAR", length = 2)
-    @DataItemName("Account.BankDocument.PayerStatus")
     public String getPayerStatus() {
         return this.PayerStatus;
     }

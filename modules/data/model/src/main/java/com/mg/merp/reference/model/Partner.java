@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PARTNER")
-@DataItemName("Reference.Partner")
 public class Partner extends com.mg.merp.reference.model.Contractor implements java.io.Serializable {
 
     private Region Region1;
@@ -247,7 +246,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MAXSUPCREDITCUR")
-    @DataItemName("Reference.Partner.SupCurrency")
     public Currency getMaxSupCreditCur() {
         return this.MaxSupCreditCur;
     }
@@ -268,7 +266,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MAXCUSCREDITCUR")
-    @DataItemName("Reference.Partner.CusCurrency")
     public Currency getMaxCusCreditCur() {
         return this.MaxCusCreditCur;
     }
@@ -308,7 +305,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "INN", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.Partner.Inn")
     public String getINN() {
         return this.INN;
     }
@@ -318,7 +314,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "OKONH", nullable = false, columnDefinition = "VARCHAR", length = 40)
-    @DataItemName("Reference.Partner.OKONH")
     public String getOKONH() {
         return this.OKONH;
     }
@@ -328,7 +323,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "OKPO", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.Partner.OKPO")
     public String getOKPO() {
         return this.OKPO;
     }
@@ -338,7 +332,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "CITY", nullable = false, columnDefinition = "VARCHAR", length = 40)
-    @DataItemName("Reference.City")
     public String getCity() {
         return this.City;
     }
@@ -393,7 +386,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Reference.Partner.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -403,7 +395,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "MAXSUPCREDIT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Reference.Partner.SupKredit")
     public BigDecimal getMaxSupCredit() {
         return this.MaxSupCredit;
     }
@@ -413,7 +404,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "TERMSUPCREDIT", columnDefinition = "SMALLINT")
-    @DataItemName("Reference.Partner.TermSupCredit")
     public Short getTermSupCredit() {
         return this.TermSupCredit;
     }
@@ -423,7 +413,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "PENALTYSUP", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Reference.Partner.PenaltySup")
     public BigDecimal getPenaltySup() {
         return this.PenaltySup;
     }
@@ -433,7 +422,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "MAXCUSCREDIT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Reference.Partner.CusKredit")
     public BigDecimal getMaxCusCredit() {
         return this.MaxCusCredit;
     }
@@ -443,7 +431,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "TERMCUSCREDIT", columnDefinition = "SMALLINT")
-    @DataItemName("Reference.Partner.TermCusCredit")
     public Short getTermCusCredit() {
         return this.TermCusCredit;
     }
@@ -453,7 +440,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "PENALTYCUS", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Reference.Partner.PenaltyCus")
     public BigDecimal getPenaltyCus() {
         return this.PenaltyCus;
     }
@@ -463,7 +449,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "KPP", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.Partner.Kpp")
     public String getKPP() {
         return this.KPP;
     }
@@ -491,7 +476,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "INN_UNIQUE", columnDefinition = "SMALLINT")
-    @DataItemName("Reference.Partner.INNUnique")
     public Boolean getINNUnique() {
         return this.INNUnique;
     }
@@ -501,7 +485,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "OKVED", columnDefinition = "VARCHAR", length = 40)
-    @DataItemName("Reference.Partner.OKVED")
     public String getOKVED() {
         return this.OKVED;
     }
@@ -511,7 +494,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "STREET", columnDefinition = "VARCHAR", length = 128)
-    @DataItemName("Reference.Street")
     public String getStreet() {
         return this.Street;
     }
@@ -521,7 +503,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "HOUSE", columnDefinition = "VARCHAR", length = 20)
-    @DataItemName("Reference.House")
     public String getHouse() {
         return this.House;
     }
@@ -531,7 +512,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "BUILDING", columnDefinition = "VARCHAR", length = 20)
-    @DataItemName("Reference.Block")
     public String getBuilding() {
         return this.Building;
     }
@@ -541,7 +521,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "ROOM", columnDefinition = "VARCHAR", length = 20)
-    @DataItemName("Reference.Flat")
     public String getRoom() {
         return this.Room;
     }
@@ -551,7 +530,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "STREET1", columnDefinition = "VARCHAR", length = 128)
-    @DataItemName("Reference.Street")
     public String getStreet1() {
         return this.Street1;
     }
@@ -561,7 +539,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "HOUSE1", columnDefinition = "VARCHAR", length = 20)
-    @DataItemName("Reference.House")
     public String getHouse1() {
         return this.House1;
     }
@@ -571,7 +548,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "BUILDING1", columnDefinition = "VARCHAR", length = 20)
-    @DataItemName("Reference.Block")
     public String getBuilding1() {
         return this.Building1;
     }
@@ -581,7 +557,6 @@ public class Partner extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "ROOM1", columnDefinition = "VARCHAR", length = 20)
-    @DataItemName("Reference.Flat")
     public String getRoom1() {
         return this.Room1;
     }

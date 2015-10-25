@@ -64,7 +64,6 @@ public class TransactHead extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -104,7 +103,6 @@ public class TransactHead extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "PDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("PaymentAlloc.TransactHead.PDate")
     public Date getPDate() {
         return this.PDate;
     }
@@ -114,7 +112,6 @@ public class TransactHead extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "TOTALSUMCUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("PaymentAlloc.TransactHead.TotalSumCur")
     public BigDecimal getTotalSumCur() {
         return this.TotalSumCur;
     }
@@ -124,7 +121,6 @@ public class TransactHead extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "TOTALSUMNAT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("PaymentAlloc.TransactHead.TotalSumNat")
     public BigDecimal getTotalSumNat() {
         return this.TotalSumNat;
     }
@@ -134,7 +130,6 @@ public class TransactHead extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "ALLOCSUMCUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("PaymentAlloc.TransactHead.AllocSumCur")
     public BigDecimal getAllocSumCur() {
         return this.AllocSumCur;
     }
@@ -144,7 +139,6 @@ public class TransactHead extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "ALLOCSUMNAT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("PaymentAlloc.TransactHead.AllocSumNat")
     public BigDecimal getAllocSumNat() {
         return this.AllocSumNat;
     }

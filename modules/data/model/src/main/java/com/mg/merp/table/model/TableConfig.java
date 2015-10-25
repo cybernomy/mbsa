@@ -46,7 +46,6 @@ public class TableConfig extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "HOLIDAY_TIME_KIND_ID")
-    @DataItemName("TableConfig.TimeKind.HolidayTime")
     public TimeKind getHolidayTimeKind() {
         return this.HolidayTimeKind;
     }
@@ -57,7 +56,6 @@ public class TableConfig extends com.mg.merp.core.model.AbstractEntity implement
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WORK_TIME_KIND_ID")
-    @DataItemName("TableConfig.TimeKind.WorkTime")
     public TimeKind getWorkTimeKind() {
         return this.WorkTimeKind;
     }

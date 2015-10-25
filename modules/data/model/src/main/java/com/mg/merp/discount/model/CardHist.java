@@ -52,7 +52,6 @@ public class CardHist extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -83,7 +82,6 @@ public class CardHist extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER_ID")
-    @DataItemName("Discount.CardHist.User")
     public SecUser getUser() {
         return this.User;
     }
@@ -93,7 +91,6 @@ public class CardHist extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "TIME_STAMP", columnDefinition = "TIMESTAMP")
-    @DataItemName("Discount.CardHist.TimeStamp")
     public Date getTimeStamp() {
         return this.TimeStamp;
     }
@@ -103,7 +100,6 @@ public class CardHist extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DISCOUNT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Discount.CardHist.Discount")
     public BigDecimal getDiscount() {
         return this.Discount;
     }
@@ -113,7 +109,6 @@ public class CardHist extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Discount.CardHist.Comments")
     public String getComments() {
         return this.Comments;
     }

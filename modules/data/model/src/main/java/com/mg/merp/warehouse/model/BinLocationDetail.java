@@ -54,8 +54,6 @@ public class BinLocationDetail extends com.mg.merp.core.model.AbstractEntity imp
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -95,8 +93,6 @@ public class BinLocationDetail extends com.mg.merp.core.model.AbstractEntity imp
     }
 
     @Column(name = "QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.BinLocationDetail.Quantity")
     public BigDecimal getQuantity() {
         return this.Quantity;
     }

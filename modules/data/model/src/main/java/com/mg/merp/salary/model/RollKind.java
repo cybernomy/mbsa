@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SAL_ROLL_KIND")
-@DataItemName("Salary.RollKind")
 public class RollKind extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -38,7 +37,6 @@ public class RollKind extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -58,7 +56,6 @@ public class RollKind extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "KNAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Salary.Name")
     public String getName() {
         return this.Name;
     }

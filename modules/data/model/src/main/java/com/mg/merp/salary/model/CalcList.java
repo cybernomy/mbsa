@@ -69,8 +69,6 @@ public class CalcList extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -101,8 +99,6 @@ public class CalcList extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "POSITION_FILL_ID")
-    //$NON-NLS-1$
-    @DataItemName("Salary.CalcListFee.PositionFill")
     public PositionFill getPositionFill() {
         return this.PositionFill;
     }
@@ -112,8 +108,6 @@ public class CalcList extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NEED_PARAMS", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Salary.CalcListFee.NeedParams")
     public boolean isNeedParams() {
         return this.NeedParams;
     }
@@ -123,8 +117,6 @@ public class CalcList extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "IS_CALCULATED", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Salary.CalcListFee.IsCalculated")
     public boolean isCalculated() {
         return this.IsCalculated;
     }
@@ -134,8 +126,6 @@ public class CalcList extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "TOTAL_SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Salary.CalcListFee.TotalSumma")
     public BigDecimal getTotalSumma() {
         return this.TotalSumma;
     }
@@ -145,8 +135,6 @@ public class CalcList extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "POSITIVE_SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Salary.CalcListFee.PositiveSumma")
     public BigDecimal getPositiveSumma() {
         return this.PositiveSumma;
     }
@@ -156,8 +144,6 @@ public class CalcList extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NEGATIVE_SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Salary.CalcListFee.NegativeSumma")
     public BigDecimal getNegativeSumma() {
         return this.NegativeSumma;
     }
@@ -167,8 +153,6 @@ public class CalcList extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NEUTRAL_SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Salary.CalcListFee.NeutralSumma")
     public BigDecimal getNeutralSumma() {
         return this.NeutralSumma;
     }
@@ -178,8 +162,6 @@ public class CalcList extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "IS_CLOSED", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Salary.CalcListFee.IsClosed")
     public boolean isClosed() {
         return this.IsClosed;
     }

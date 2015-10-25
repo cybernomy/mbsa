@@ -92,7 +92,6 @@ public class Offer extends com.mg.merp.core.model.AbstractEntity implements java
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -113,7 +112,6 @@ public class Offer extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FAIL_REASON_ID")
-    @DataItemName("CRM.Offer.FailReason")
     public OfferReason getFailReason() {
         return this.FailReason;
     }
@@ -124,7 +122,6 @@ public class Offer extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SUCCESS_REASON_ID")
-    @DataItemName("CRM.Offer.SuccessReason")
     public OfferReason getSuccessReason() {
         return this.SuccessReason;
     }
@@ -135,7 +132,6 @@ public class Offer extends com.mg.merp.core.model.AbstractEntity implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESPONSIBLE_ID")
-    @DataItemName("CRM.Offer.Responsible")
     public User getResponsible() {
         return this.Responsible;
     }
@@ -205,7 +201,6 @@ public class Offer extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
-    @DataItemName("CRM.Code")
     public String getCode() {
         return this.Code;
     }
@@ -215,7 +210,6 @@ public class Offer extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("CRM.Name")
     public String getName() {
         return this.Name;
     }
@@ -225,7 +219,6 @@ public class Offer extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "OFFER_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("CRM.Offer.OfferDate")
     public Date getOfferDate() {
         return this.OfferDate;
     }
@@ -235,7 +228,6 @@ public class Offer extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "VALID_UNTIL", columnDefinition = "TIMESTAMP")
-    @DataItemName("CRM.Offer.ValidUntil")
     public Date getValidUntil() {
         return this.ValidUntil;
     }
@@ -245,7 +237,6 @@ public class Offer extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "SWOT_S", columnDefinition = "VARCHAR", length = 1024)
-    @DataItemName("CRM.Offer.SwotS")
     public String getSwotS() {
         return this.SwotS;
     }
@@ -255,7 +246,6 @@ public class Offer extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "SWOT_W", columnDefinition = "VARCHAR", length = 1024)
-    @DataItemName("CRM.Offer.SwotW")
     public String getSwotW() {
         return this.SwotW;
     }
@@ -265,7 +255,6 @@ public class Offer extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "SWOT_O", columnDefinition = "VARCHAR", length = 1024)
-    @DataItemName("CRM.Offer.SwotO")
     public String getSwotO() {
         return this.SwotO;
     }
@@ -275,7 +264,6 @@ public class Offer extends com.mg.merp.core.model.AbstractEntity implements java
     }
 
     @Column(name = "SWOT_T", columnDefinition = "VARCHAR", length = 1024)
-    @DataItemName("CRM.Offer.SwotT")
     public String getSwotT() {
         return this.SwotT;
     }

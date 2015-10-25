@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "MEASURE")
-@DataItemName("Reference.Measure")
 public class Measure extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -59,7 +58,6 @@ public class Measure extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -88,7 +86,6 @@ public class Measure extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 5)
-    @DataItemName("Reference.SmallCode")
     public String getCode() {
         return this.Code;
     }
@@ -98,7 +95,6 @@ public class Measure extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "MNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Name")
     public String getFullName() {
         return this.FullName;
     }
@@ -108,7 +104,6 @@ public class Measure extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "DIVIDE", columnDefinition = "SMALLINT")
-    @DataItemName("Reference.Measure.Dividing")
     public boolean isDividing() {
         return this.Dividing;
     }
@@ -118,7 +113,6 @@ public class Measure extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "UNIVERSAL_CODE", columnDefinition = "CHAR", length = 5)
-    @DataItemName("Reference.Measure.UniversalCode")
     public String getUniversalCode() {
         return this.UniversalCode;
     }
@@ -128,7 +122,6 @@ public class Measure extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "INTERNAL_CODE", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.Measure.InternalCode")
     public String getInternalCode() {
         return this.InternalCode;
     }

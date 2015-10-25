@@ -16,7 +16,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SYS_DB_AUDIT_SETUP")
-@DataItemName("Core.DatabaseAuditSetup")
 public class DatabaseAuditSetup extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -53,7 +52,6 @@ public class DatabaseAuditSetup extends com.mg.merp.core.model.AbstractEntity im
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -73,7 +71,6 @@ public class DatabaseAuditSetup extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "ENTITY_NAME", nullable = false, columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Core.EntityName")
     public String getAuditedEntityName() {
         return this.AuditedEntityName;
     }
@@ -83,7 +80,6 @@ public class DatabaseAuditSetup extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "PROPERTY_NAME", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Core.PropertyName")
     public String getPropertyName() {
         return this.PropertyName;
     }
@@ -93,7 +89,6 @@ public class DatabaseAuditSetup extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "AUDIT_CREATE", columnDefinition = "SMALLINT")
-    @DataItemName("Core.DatabaseAuditSetup.AuditCreate")
     public Boolean getAuditCreate() {
         return this.AuditCreate;
     }
@@ -103,7 +98,6 @@ public class DatabaseAuditSetup extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "AUDIT_MODIFY", columnDefinition = "SMALLINT")
-    @DataItemName("Core.DatabaseAuditSetup.AuditModify")
     public Boolean getAuditModify() {
         return this.AuditModify;
     }
@@ -113,7 +107,6 @@ public class DatabaseAuditSetup extends com.mg.merp.core.model.AbstractEntity im
     }
 
     @Column(name = "AUDIT_REMOVE", columnDefinition = "SMALLINT")
-    @DataItemName("Core.DatabaseAuditSetup.AuditRemove")
     public Boolean getAuditRemove() {
         return this.AuditRemove;
     }

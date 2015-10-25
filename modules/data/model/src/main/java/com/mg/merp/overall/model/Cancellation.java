@@ -61,7 +61,6 @@ public class Cancellation extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -91,7 +90,6 @@ public class Cancellation extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "CANCELLATION_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Overall.Cancellation.CancellationDate")
     public Date getCancellationDate() {
         return this.CancellationDate;
     }
@@ -101,7 +99,6 @@ public class Cancellation extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "CURRENT_CANCELLATION_SUMMA", columnDefinition = "INTEGER")
-    @DataItemName("Overall.Cancellation.CurrentCancellationSumma")
     public BigDecimal getCurrentCancellationSumma() {
         return this.CurrentCancellationSumma;
     }
@@ -130,7 +127,6 @@ public class Cancellation extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Document.DocNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -140,7 +136,6 @@ public class Cancellation extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Document.DocDate")
     public Date getDocDate() {
         return this.DocDate;
     }
@@ -150,7 +145,6 @@ public class Cancellation extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "CANCELLATION_REASON", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Overall.Cancellation.CancellationReason")
     public String getCancellationReason() {
         return this.CancellationReason;
     }

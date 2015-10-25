@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "MF_DAY_CAL")
-@DataItemName("MfReference.DayCalendar")
 public class DayCalendar extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -41,7 +40,6 @@ public class DayCalendar extends com.mg.merp.core.model.AbstractEntity implement
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -61,7 +59,6 @@ public class DayCalendar extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
-    @DataItemName("MfReference.DayCalendar.Code")
     public String getCode() {
         return this.Code;
     }
@@ -71,7 +68,6 @@ public class DayCalendar extends com.mg.merp.core.model.AbstractEntity implement
     }
 
     @Column(name = "DAY_CAL_NAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("MfReference.DayCalendar.DayCalName")
     public String getDayCalName() {
         return this.DayCalName;
     }

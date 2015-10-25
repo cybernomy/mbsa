@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_COUNTRY")
-@DataItemName("Reference.Country")
 public class Country extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -70,7 +69,6 @@ public class Country extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -90,7 +88,6 @@ public class Country extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CCODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 5)
-    @DataItemName("Reference.SmallCode")
     public String getCCode() {
         return this.CCode;
     }
@@ -100,7 +97,6 @@ public class Country extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Name")
     public String getCName() {
         return this.CName;
     }
@@ -110,7 +106,6 @@ public class Country extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "UNIVERSAL_CODE", columnDefinition = "CHAR", length = 2)
-    @DataItemName("Reference.Country.AlfaTwo")
     public String getUniversalCode() {
         return this.UniversalCode;
     }
@@ -120,7 +115,6 @@ public class Country extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "UNIVERSAL_ABBR", columnDefinition = "CHAR", length = 3)
-    @DataItemName("Reference.Country.AlfaThree")
     public String getUniversalAbbr() {
         return this.UniversalAbbr;
     }
@@ -130,7 +124,6 @@ public class Country extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "UNIVERSAL_NUMBER", columnDefinition = "CHAR", length = 3)
-    @DataItemName("Reference.Country.UNumber")
     public String getUniversalNumber() {
         return this.UniversalNumber;
     }
@@ -140,7 +133,6 @@ public class Country extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CAPITAL", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Country.Capital")
     public String getCapital() {
         return this.Capital;
     }
@@ -150,7 +142,6 @@ public class Country extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PHONE_CODE", columnDefinition = "VARCHAR", length = 10)
-    @DataItemName("Reference.Country.PhoneCode")
     public String getPhoneCode() {
         return this.PhoneCode;
     }
@@ -160,7 +151,6 @@ public class Country extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "FULL_NAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Country.FullName")
     public String getFullName() {
         return this.FullName;
     }
@@ -170,7 +160,6 @@ public class Country extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ADDRESS_RULE", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Reference.Country.AddrRule")
     public String getAddressRule() {
         return this.AddressRule;
     }
@@ -180,7 +169,6 @@ public class Country extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ADDRESS_DLM", columnDefinition = "VARCHAR", length = 5)
-    @DataItemName("Reference.Country.AddrDml")
     public String getAddressDlm() {
         return this.AddressDlm;
     }

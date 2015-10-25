@@ -103,7 +103,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -114,7 +113,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PROVIDER_ID")
-    @DataItemName("Account.BuyBook.Provider")
     public Contractor getProvider() {
         return this.Provider;
     }
@@ -155,7 +153,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCTYPE")
-    @DataItemName("Account.BuyBook.DocType")
     public DocType getDocType() {
         return this.DocType;
     }
@@ -166,7 +163,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ORGUNIT_ID")
-    @DataItemName("Account.BuyBook.OrgUnit")
     public Contractor getOrgUnit() {
         return this.OrgUnit;
     }
@@ -176,7 +172,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Account.BuyBook.DocNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -186,7 +181,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.BuyBook.DocDate")
     public Date getDocDate() {
         return this.DocDate;
     }
@@ -196,7 +190,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "INSERTDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.BuyBook.InsertDate")
     public Date getInsertDate() {
         return this.InsertDate;
     }
@@ -206,7 +199,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "INDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.BuyBook.InDate")
     public Date getInDate() {
         return this.InDate;
     }
@@ -216,7 +208,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "STOCKDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.BuyBook.StockDate")
     public Date getStockDate() {
         return this.StockDate;
     }
@@ -226,7 +217,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PAYDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Account.BuyBook.PayDate")
     public Date getPayDate() {
         return this.PayDate;
     }
@@ -236,7 +226,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TOTALSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BuyBook.TotalSum")
     public BigDecimal getTotalSum() {
         return this.TotalSum;
     }
@@ -246,7 +235,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SUM_WITHOUT_NDS1", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BuyBook.SumWithoutNds1")
     public BigDecimal getSumWithoutNds1() {
         return this.SumWithoutNds1;
     }
@@ -256,7 +244,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SUM_WITHOUT_NDS2", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BuyBook.SumWithoutNds2")
     public BigDecimal getSumWithoutNds2() {
         return this.SumWithoutNds2;
     }
@@ -266,7 +253,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "NDS1_SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BuyBook.Nds1Sum")
     public BigDecimal getNds1Sum() {
         return this.Nds1Sum;
     }
@@ -276,7 +262,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "NDS2_SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BuyBook.Nds2Sum")
     public BigDecimal getNds2Sum() {
         return this.Nds2Sum;
     }
@@ -286,7 +271,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "NOT_TAXABLE_SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BuyBook.NotTaxableSum")
     public BigDecimal getNotTaxableSum() {
         return this.NotTaxableSum;
     }
@@ -296,7 +280,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "NSP_SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BuyBook.NspSum")
     public BigDecimal getNspSum() {
         return this.NspSum;
     }
@@ -306,7 +289,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SUM_WITHOUT_NDS3", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BuyBook.SumWithoutNds3")
     public BigDecimal getSumWithoutNds3() {
         return this.SumWithoutNds3;
     }
@@ -316,7 +298,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "NDS3_SUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Account.BuyBook.Nds3Sum")
     public BigDecimal getNds3Sum() {
         return this.Nds3Sum;
     }
@@ -326,7 +307,6 @@ public class BuyBook extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "APPROVED", columnDefinition = "SMALLINT")
-    @DataItemName("Account.BuyBook.Approved")
     public boolean isApproved() {
         return this.Approved;
     }

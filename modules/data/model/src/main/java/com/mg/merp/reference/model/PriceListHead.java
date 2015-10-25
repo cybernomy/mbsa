@@ -21,8 +21,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PRICELISTHEAD")
-//$NON-NLS-1$
-@DataItemName("Reference.PriceListHead")
 public class PriceListHead extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -76,8 +74,6 @@ public class PriceListHead extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -88,8 +84,6 @@ public class PriceListHead extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURRATEAUTHORITY_ID")
-    //$NON-NLS-1$
-    @DataItemName("Reference.PrList.CurRateAuthority")
     public CurrencyRateAuthority getCurrencyRateAuthority() {
         return this.CurrencyRateAuthority;
     }
@@ -100,8 +94,6 @@ public class PriceListHead extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BASEPRICETYPE")
-    //$NON-NLS-1$
-    @DataItemName("Reference.PrList.BasePriceType")
     public PriceType getBasePriceType() {
         return this.BasePriceType;
     }
@@ -122,8 +114,6 @@ public class PriceListHead extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_ID")
-    //$NON-NLS-1$
-    @DataItemName("Reference.PrList.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -134,8 +124,6 @@ public class PriceListHead extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURRATETYPE_ID")
-    //$NON-NLS-1$
-    @DataItemName("Reference.PrList.CurRateType")
     public CurrencyRateType getCurrencyRateType() {
         return this.CurrencyRateType;
     }
@@ -146,8 +134,6 @@ public class PriceListHead extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CURRENCY_CODE")
-    //$NON-NLS-1$
-    @DataItemName("Reference.PrList.Currency")
     public Currency getCurrency() {
         return this.Currency;
     }
@@ -157,8 +143,6 @@ public class PriceListHead extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "PRNAME", columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("Reference.PrList.Name")
     public String getPrName() {
         return this.PrName;
     }
@@ -168,8 +152,6 @@ public class PriceListHead extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "CREATEDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Reference.PrList.CreateDate")
     public Date getCreateDate() {
         return this.CreateDate;
     }
@@ -179,8 +161,6 @@ public class PriceListHead extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "ISCURRENT", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Reference.PrList.IsCurrent")
     public boolean isCurrent() {
         return this.IsCurrent;
     }
@@ -199,8 +179,6 @@ public class PriceListHead extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "PRICE_PRECISION", columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("Reference.PrList.PricePrecision")
     public Integer getPricePrecision() {
         return this.PricePrecision;
     }

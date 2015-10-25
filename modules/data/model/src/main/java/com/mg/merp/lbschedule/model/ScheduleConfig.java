@@ -44,7 +44,6 @@ public class ScheduleConfig extends com.mg.merp.core.model.AbstractEntity implem
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEFAULT_FOLDER_ID")
-    @DataItemName("Lbschedule.FolderModel.Folder")
     public Folder getFolder() {
         return this.Folder;
     }

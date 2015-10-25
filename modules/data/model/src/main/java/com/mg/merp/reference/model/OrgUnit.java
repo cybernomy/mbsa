@@ -15,7 +15,6 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "ORGUNIT")
-@DataItemName("Reference.OrgUnit")
 public class OrgUnit extends com.mg.merp.reference.model.Contractor implements java.io.Serializable {
 
     private Contractor Partner;
@@ -46,7 +45,6 @@ public class OrgUnit extends com.mg.merp.reference.model.Contractor implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARTNER_ID")
-    @DataItemName("Reference.OrgUnit.Partner")
     public Contractor getPartner() {
         return this.Partner;
     }
@@ -66,7 +64,6 @@ public class OrgUnit extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "IS_OFFICE", columnDefinition = "SMALLINT")
-    @DataItemName("Reference.OrgUnit.IsOffice")
     public Boolean isOffice() {
         return this.IsOffice;
     }
@@ -76,7 +73,6 @@ public class OrgUnit extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "IS_STORE", columnDefinition = "SMALLINT")
-    @DataItemName("Reference.OrgUnit.IsStore")
     public Boolean isStore() {
         return this.IsStore;
     }
@@ -86,7 +82,6 @@ public class OrgUnit extends com.mg.merp.reference.model.Contractor implements j
     }
 
     @Column(name = "FOLDER_TAG", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.FolderTag")
     public String getFolderTag() {
         return this.FolderTag;
     }

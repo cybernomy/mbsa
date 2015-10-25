@@ -88,8 +88,6 @@ public class FeeModel extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -100,8 +98,6 @@ public class FeeModel extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL1_ID")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeModel.CostsAnl1")
     public CostsAnl getCostsAnl1() {
         return this.CostsAnl1;
     }
@@ -112,8 +108,6 @@ public class FeeModel extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL3_ID")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeModel.CostsAnl3")
     public CostsAnl getCostsAnl3() {
         return this.CostsAnl3;
     }
@@ -124,8 +118,6 @@ public class FeeModel extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL2_ID")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeModel.CostsAnl2")
     public CostsAnl getCostsAnl2() {
         return this.CostsAnl2;
     }
@@ -136,8 +128,6 @@ public class FeeModel extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL4_ID")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeModel.CostsAnl4")
     public CostsAnl getCostsAnl4() {
         return this.CostsAnl4;
     }
@@ -188,8 +178,6 @@ public class FeeModel extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL5_ID")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeModel.CostsAnl5")
     public CostsAnl getCostsAnl5() {
         return this.CostsAnl5;
     }
@@ -219,8 +207,6 @@ public class FeeModel extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "BEGINDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeModel.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -230,8 +216,6 @@ public class FeeModel extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ENDDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeModel.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }
@@ -241,8 +225,6 @@ public class FeeModel extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeModel.Summa")
     public BigDecimal getSumma() {
         return this.Summa;
     }
@@ -252,8 +234,6 @@ public class FeeModel extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "USE_BASIC_POSITION", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeModel.UseBasicPosition")
     public boolean isUseBasicPosition() {
         return this.UseBasicPosition;
     }

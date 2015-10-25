@@ -18,7 +18,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PREF_INSUREDCLASS")
-@DataItemName("PersonnelRef.InsuredClass")
 public class InsuredClass extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -53,7 +52,6 @@ public class InsuredClass extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -73,7 +71,6 @@ public class InsuredClass extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "CCODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("PersonnelRef.InsuredClass.Code")
     public String getCCode() {
         return this.CCode;
     }
@@ -83,7 +80,6 @@ public class InsuredClass extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "CNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("PersonnelRef.InsuredClass.Name")
     public String getCName() {
         return this.CName;
     }
@@ -93,7 +89,6 @@ public class InsuredClass extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "INSURED_PERCENT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("PersonnelRef.InsuredClass.InsPerc")
     public BigDecimal getInsuredPercent() {
         return this.InsuredPercent;
     }
@@ -103,7 +98,6 @@ public class InsuredClass extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "EMPLOYER_PERCENT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("PersonnelRef.InsuredClass.EmplPerc")
     public BigDecimal getEmployerPercent() {
         return this.EmployerPercent;
     }

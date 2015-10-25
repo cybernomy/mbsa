@@ -171,8 +171,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONSIGNEE")
-    //$NON-NLS-1$
-    @DataItemName("Contract.Consignee")
     public Contractor getConsignee() {
         return this.Consignee;
     }
@@ -183,8 +181,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SHIPPER")
-    //$NON-NLS-1$
-    @DataItemName("Contract.Shipper")
     public Contractor getShipper() {
         return this.Shipper;
     }
@@ -195,8 +191,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTORBANKREQ_ID")
-    //$NON-NLS-1$
-    @DataItemName("Contract.ContractorBankReq")
     public BankAccount getContractorBankReq() {
         return this.ContractorBankReq;
     }
@@ -207,8 +201,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BANKREQ_ID")
-    //$NON-NLS-1$
-    @DataItemName("Contract.BankReq")
     public BankAccount getBankReq() {
         return this.BankReq;
     }
@@ -219,8 +211,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "RESPONSIBLE")
-    //$NON-NLS-1$
-    @DataItemName("Contract.Responsible")
     public Contractor getResponsible() {
         return this.Responsible;
     }
@@ -231,8 +221,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTOR_RESPONSIBLE")
-    //$NON-NLS-1$
-    @DataItemName("Contract.ContrResponsible")
     public PartnerEmpl getContractorResponsible() {
         return this.ContractorResponsible;
     }
@@ -243,8 +231,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SHIPPERBANKREQ_ID")
-    //$NON-NLS-1$
-    @DataItemName("Contract.ShipperBankReq")
     public BankAccount getShipperBankReq() {
         return this.ShipperBankReq;
     }
@@ -255,8 +241,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONSIGNEEBANKREQ_ID")
-    //$NON-NLS-1$
-    @DataItemName("Contract.ConsigneeBankReq")
     public BankAccount getConsigneeBankReq() {
         return this.ConsigneeBankReq;
     }
@@ -266,8 +250,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "INCOMING_NUMBER", columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("Contract.IncomingNumber")
     public String getIncomingNumber() {
         return this.IncomingNumber;
     }
@@ -277,8 +259,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "REGISTRATION_DATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Contract.RegistrationDate")
     public Date getRegistrationDate() {
         return this.RegistrationDate;
     }
@@ -298,8 +278,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "RATIFICATION_DATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Contract.RatificationDate")
     public Date getRatificationDate() {
         return this.RatificationDate;
     }
@@ -309,8 +287,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "COMPLETED_DATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Contract.CompletedDate")
     public Date getCompletedDate() {
         return this.CompletedDate;
     }
@@ -320,8 +296,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "BEGINACTION_DATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Contract.BeginActionDate")
     public Date getBeginActionDate() {
         return this.BeginActionDate;
     }
@@ -331,8 +305,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "ENDACTION_DATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Contract.EndActionDate")
     public Date getEndActionDate() {
         return this.EndActionDate;
     }
@@ -342,8 +314,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "SUBJECT", columnDefinition = "VARCHAR", length = 2048)
-    //$NON-NLS-1$
-    @DataItemName("Contract.Description")
     public String getSubject() {
         return this.Subject;
     }
@@ -353,8 +323,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 2048)
-    //$NON-NLS-1$
-    @DataItemName("Contract.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -374,8 +342,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "SHIPPEDPAYMENT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Contract.ShippedPayment")
     public BigDecimal getShippedPayment() {
         return this.ShippedPayment;
     }
@@ -385,8 +351,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "RECEIVEDPAYMENT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Contract.ReceivedPayment")
     public BigDecimal getReceivedPayment() {
         return this.ReceivedPayment;
     }
@@ -396,8 +360,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "SHIPPEDGOOD", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Contract.ShippedGood")
     public BigDecimal getShippedGood() {
         return this.ShippedGood;
     }
@@ -407,8 +369,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "RECEIVEDGOOD", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Contract.ReceivedGood")
     public BigDecimal getReceivedGood() {
         return this.ReceivedGood;
     }
@@ -418,8 +378,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Formula(value = "(SELECT sum(f.factsum) from phaseitemfact f where (f.dochead_id = DOCHEAD_ID) and (f.kind = 0))")
-    //$NON-NLS-1$
-    @DataItemName("Contract.FactShippedPayment")
     public BigDecimal getFactShippedPayment() {
         return this.FactShippedPayment;
     }
@@ -429,8 +387,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Formula(value = "(SELECT sum(f.factsum) from phaseitemfact f where (f.dochead_id = DOCHEAD_ID) and (f.kind = 1))")
-    //$NON-NLS-1$
-    @DataItemName("Contract.FactReceivedPayment")
     public BigDecimal getFactReceivedPayment() {
         return this.FactReceivedPayment;
     }
@@ -440,8 +396,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Formula(value = "(SELECT sum(f.factsum) from phaseitemfact f where (f.dochead_id = DOCHEAD_ID) and (f.kind = 2))")
-    //$NON-NLS-1$
-    @DataItemName("Contract.FactShippedGood")
     public BigDecimal getFactShippedGood() {
         return this.FactShippedGood;
     }
@@ -451,8 +405,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Formula(value = "(SELECT sum(f.factsum) from phaseitemfact f where (f.dochead_id = DOCHEAD_ID) and (f.kind = 3))")
-    //$NON-NLS-1$
-    @DataItemName("Contract.FactReceivedGood")
     public BigDecimal getFactReceivedGood() {
         return this.FactReceivedGood;
     }
@@ -462,8 +414,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Formula(value = "(SELECT sum(p.plansum) from phaseitemplan p left join contractphase cph on (p.phase_id = cph.id) where (cph.dochead_id = DOCHEAD_ID) and (p.kind = 0))")
-    //$NON-NLS-1$
-    @DataItemName("Contract.PhaseShippedPayment")
     public BigDecimal getPhaseShippedPayment() {
         return this.PhaseShippedPayment;
     }
@@ -473,8 +423,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Formula(value = "(SELECT sum(p.plansum) from phaseitemplan p left join contractphase cph on (p.phase_id = cph.id) where (cph.dochead_id = DOCHEAD_ID) and (p.kind = 1))")
-    //$NON-NLS-1$
-    @DataItemName("Contract.PhaseReceivedPayment")
     public BigDecimal getPhaseReceivedPayment() {
         return this.PhaseReceivedPayment;
     }
@@ -484,8 +432,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Formula(value = "(SELECT sum(p.plansum) from phaseitemplan p left join contractphase cph on (p.phase_id = cph.id) where (cph.dochead_id = DOCHEAD_ID) and (p.kind = 2))")
-    //$NON-NLS-1$
-    @DataItemName("Contract.PhaseShippedGood")
     public BigDecimal getPhaseShippedGood() {
         return this.PhaseShippedGood;
     }
@@ -495,8 +441,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Formula(value = "(SELECT sum(p.plansum) from phaseitemplan p left join contractphase cph on (p.phase_id = cph.id) where (cph.dochead_id = DOCHEAD_ID) and (p.kind = 3))")
-    //$NON-NLS-1$
-    @DataItemName("Contract.PhaseReceivedGood")
     public BigDecimal getPhaseReceivedGood() {
         return this.PhaseReceivedGood;
     }
@@ -506,8 +450,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "CONTRACTORBANKDAYS", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Contract.ContrBankDays")
     public Short getContractorBankDays() {
         return this.ContractorBankDays;
     }
@@ -517,8 +459,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "BANKDAYS", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Contract.BankDays")
     public Short getBankDays() {
         return this.BankDays;
     }
@@ -528,8 +468,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "PENNY_RATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    //$NON-NLS-1$
-    @DataItemName("Contract.PennyRate")
     public BigDecimal getPennyRate() {
         return this.PennyRate;
     }
@@ -539,8 +477,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "CONTRACTORPENNY_RATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    //$NON-NLS-1$
-    @DataItemName("Contract.ContrPennyRate")
     public BigDecimal getContractorPennyRate() {
         return this.ContractorPennyRate;
     }
@@ -570,8 +506,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "CONTRACTOR_IN_NAME_OF", columnDefinition = "VARCHAR", length = 256)
-    //$NON-NLS-1$
-    @DataItemName("Contract.Contract.ContractorInNameOf")
     public String getContractorInNameOf() {
         return this.ContractorInNameOf;
     }
@@ -581,8 +515,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "CONTRACTOR_ACT_ON_BASIS", columnDefinition = "VARCHAR", length = 256)
-    //$NON-NLS-1$
-    @DataItemName("Contract.Contract.ContractorActOnBasis")
     public String getContractorActOnBasis() {
         return this.ContractorActOnBasis;
     }
@@ -592,8 +524,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "CONTRACTOR_CONSIGNMENT_TERM", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Contract.Contract.ContractorConsignmentTerm")
     public Short getContractorConsignmentTerm() {
         return this.ContractorConsignmentTerm;
     }
@@ -603,8 +533,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "CONTRACTOR_GOODS_CREDIT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Contract.Contract.ContractorGoodsCredit")
     public BigDecimal getContractorGoodsCredit() {
         return this.ContractorGoodsCredit;
     }
@@ -614,8 +542,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "IN_NAME_OF", columnDefinition = "VARCHAR", length = 256)
-    //$NON-NLS-1$
-    @DataItemName("Contract.Contract.InNameOf")
     public String getInNameOf() {
         return this.InNameOf;
     }
@@ -625,8 +551,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "ACT_ON_BASIS", columnDefinition = "VARCHAR", length = 256)
-    //$NON-NLS-1$
-    @DataItemName("Contract.Contract.ActOnBasis")
     public String getActOnBasis() {
         return this.ActOnBasis;
     }
@@ -636,8 +560,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "CONSIGNMENT_TERM", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Contract.Contract.ConsignmentTerm")
     public Short getConsignmentTerm() {
         return this.ConsignmentTerm;
     }
@@ -647,8 +569,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     }
 
     @Column(name = "GOODS_CREDIT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Contract.Contract.GoodsCredit")
     public BigDecimal getGoodsCredit() {
         return this.GoodsCredit;
     }
@@ -660,8 +580,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     /**
      * Получить "Контрагента"
      */
-    //$NON-NLS-1$
-    @DataItemName("Contract.Contract.Contractor")
     public Contractor getFrom() {
         return super.getFrom();
     }
@@ -669,8 +587,6 @@ public class Contract extends com.mg.merp.document.model.DocHead implements java
     /**
      * Получить "Нашу организацию"
      */
-    //$NON-NLS-1$
-    @DataItemName("Contract.Contract.Company")
     public Contractor getTo() {
         return super.getTo();
     }

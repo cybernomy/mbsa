@@ -60,7 +60,6 @@ public class AmRate extends com.mg.merp.core.model.AbstractEntity implements jav
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -90,7 +89,6 @@ public class AmRate extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "ACTMONTH", nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("Account.AmRate.ActMonth")
     public int getActMonth() {
         return this.ActMonth;
     }
@@ -100,7 +98,6 @@ public class AmRate extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "AMRATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Account.AmRate.AmRate")
     public BigDecimal getAmRate() {
         return this.AmRate;
     }
@@ -110,7 +107,6 @@ public class AmRate extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "AMRATE1000", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Account.AmRate.AmRate1000")
     public BigDecimal getAmRate1000() {
         return this.AmRate1000;
     }
@@ -120,7 +116,6 @@ public class AmRate extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "PERIODYEAR", columnDefinition = "SMALLINT")
-    @DataItemName("Account.AmRate.PeriodYear")
     public Short getPeriodYear() {
         return this.PeriodYear;
     }
@@ -130,7 +125,6 @@ public class AmRate extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "VOLUMEPROD", columnDefinition = "NUMERIC", precision = 15, scale = 3)
-    @DataItemName("Account.AmRate.VolumeProd")
     public BigDecimal getVolumeProd() {
         return this.VolumeProd;
     }
@@ -140,7 +134,6 @@ public class AmRate extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "PERIODMONTH", columnDefinition = "SMALLINT")
-    @DataItemName("Account.AmRate.PeriodMonth")
     public Short getPeriodMonth() {
         return this.PeriodMonth;
     }

@@ -148,8 +148,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -170,8 +168,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FROM_ID")
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.ContractorFrom")
     public Contractor getContractorFrom() {
         return this.ContractorFrom;
     }
@@ -192,8 +188,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "TO_ID")
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.ContractorTo")
     public Contractor getContractorTo() {
         return this.ContractorTo;
     }
@@ -283,8 +277,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PLANNED", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.Planned")
     public boolean isPlanned() {
         return this.Planned;
     }
@@ -294,8 +286,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.PDate")
     public Date getPDate() {
         return this.PDate;
     }
@@ -305,8 +295,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.Name")
     public String getName() {
         return this.Name;
     }
@@ -316,8 +304,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CURRATE", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.CurRate")
     public BigDecimal getCurRate() {
         return this.CurRate;
     }
@@ -327,8 +313,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SUMCUR", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.SumCur")
     public BigDecimal getSumCur() {
         return this.SumCur;
     }
@@ -338,8 +322,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "SUMNAT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.SumNat")
     public BigDecimal getSumNat() {
         return this.SumNat;
     }
@@ -368,8 +350,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCTYPE")
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.DocType")
     public DocType getDocType() {
         return this.DocType;
     }
@@ -379,8 +359,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.Number")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -390,8 +368,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.DocDate")
     public Date getDocDate() {
         return this.DocDate;
     }
@@ -402,8 +378,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BASEDOCTYPE")
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.BaseDocType")
     public DocType getBaseDocType() {
         return this.BaseDocType;
     }
@@ -413,8 +387,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "BASEDOCNUMBER", columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.BaseDocNumber")
     public String getBaseDocNumber() {
         return this.BaseDocNumber;
     }
@@ -424,8 +396,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "BASEDOCDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.BaseDocDate")
     public Date getBaseDocDate() {
         return this.BaseDocDate;
     }
@@ -436,8 +406,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONTRACTTYPE")
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.ContractType")
     public DocType getContractType() {
         return this.ContractType;
     }
@@ -447,8 +415,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CONTRACTNUMBER", columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.ContractNumber")
     public String getContractNumber() {
         return this.ContractNumber;
     }
@@ -458,8 +424,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CONTRACTDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.ContractDate")
     public Date getContractDate() {
         return this.ContractDate;
     }
@@ -469,8 +433,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 256)
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -480,8 +442,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 256)
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.Payment.Comments")
     public String getComments() {
         return this.Comments;
     }
@@ -501,8 +461,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DESTFOLDER_ID")
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.PaymentModel.DestFolderId")
     public Folder getDestFolder() {
         return this.DestFolder;
     }
@@ -512,8 +470,6 @@ public class Payment extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "MODELNAME", columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("PaymentAlloc.PaymentModel.ModelName")
     public String getModelName() {
         return this.ModelName;
     }

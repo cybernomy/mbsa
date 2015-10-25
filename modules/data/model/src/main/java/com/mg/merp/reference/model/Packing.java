@@ -18,8 +18,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PACKING")
-//$NON-NLS-1$
-@DataItemName("Reference.Packing")
 public class Packing extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -69,8 +67,6 @@ public class Packing extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -81,8 +77,6 @@ public class Packing extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "MEASURE_ID", nullable = false)
-    //$NON-NLS-1$
-    @DataItemName("Reference.Packing.Measure")
     public Measure getMeasure() {
         return this.Measure;
     }
@@ -103,8 +97,6 @@ public class Packing extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WEIGHTMEASURE_ID")
-    //$NON-NLS-1$
-    @DataItemName("Reference.Packing.WeightMeasure")
     public Measure getWeightMeasure() {
         return this.WeightMeasure;
     }
@@ -125,8 +117,6 @@ public class Packing extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "VOLUMEMEASURE_ID")
-    //$NON-NLS-1$
-    @DataItemName("Reference.Packing.VolumeMeasure")
     public Measure getVolumeMeasure() {
         return this.VolumeMeasure;
     }
@@ -136,8 +126,6 @@ public class Packing extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "PRIORITY", nullable = false, columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Reference.Catalog.Packing.Priority")
     public short getPriority() {
         return this.Priority;
     }
@@ -147,8 +135,6 @@ public class Packing extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "WEIGHT", columnDefinition = "NUMERIC", precision = 15, scale = 3)
-    //$NON-NLS-1$
-    @DataItemName("Reference.Packing.Weight")
     public BigDecimal getWeight() {
         return this.Weight;
     }
@@ -158,8 +144,6 @@ public class Packing extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "VOLUME", columnDefinition = "NUMERIC", precision = 15, scale = 3)
-    //$NON-NLS-1$
-    @DataItemName("Reference.Packing.Volume")
     public BigDecimal getVolume() {
         return this.Volume;
     }
@@ -169,8 +153,6 @@ public class Packing extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "QANTITY_MEASURE1", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    //$NON-NLS-1$
-    @DataItemName("Reference.Packing.QuantityMeasure1")
     public BigDecimal getQuantityMeasure1() {
         return this.QuantityMeasure1;
     }
@@ -180,8 +162,6 @@ public class Packing extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "QANTITY_MEASURE2", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    //$NON-NLS-1$
-    @DataItemName("Reference.Packing.QuantityMeasure2")
     public BigDecimal getQuantityMeasure2() {
         return this.QuantityMeasure2;
     }

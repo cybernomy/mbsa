@@ -51,7 +51,6 @@ public class PartnEmplLink extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -82,7 +81,6 @@ public class PartnEmplLink extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "EMPLOYEES_ID", nullable = false)
-    @DataItemName("Reference.Partner.Empl.Employees")
     public Employees getEmployees() {
         return this.Employees;
     }
@@ -92,7 +90,6 @@ public class PartnEmplLink extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DATEBEGIN", columnDefinition = "TIMESTAMP")
-    @DataItemName("Reference.Partner.Empl.DateBegin")
     public Date getDateBegin() {
         return this.DateBegin;
     }
@@ -102,7 +99,6 @@ public class PartnEmplLink extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DATEEND", columnDefinition = "TIMESTAMP")
-    @DataItemName("Reference.Partner.Empl.DateEnd")
     public Date getDateEnd() {
         return this.DateEnd;
     }

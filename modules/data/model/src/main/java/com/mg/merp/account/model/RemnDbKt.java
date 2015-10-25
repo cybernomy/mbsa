@@ -283,7 +283,6 @@ public class RemnDbKt extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Account.RemnDbKt.Comment")
     public String getComment() {
         return this.Comment;
     }
@@ -294,7 +293,6 @@ public class RemnDbKt extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCBASETYPE")
-    @DataItemName("Document.DocTypeModel")
     public DocType getDocBaseType() {
         return this.DocBaseType;
     }
@@ -304,7 +302,6 @@ public class RemnDbKt extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DOCBASENUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Document.BaseDocNumber")
     public String getDocBaseNumber() {
         return this.DocBaseNumber;
     }
@@ -314,7 +311,6 @@ public class RemnDbKt extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DOCBASEDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Document.BaseDocDate")
     public Date getDocBaseDate() {
         return this.DocBaseDate;
     }
@@ -325,7 +321,6 @@ public class RemnDbKt extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DOCTYPE")
-    @DataItemName("Document.DocTypeModel")
     public DocType getDocType() {
         return this.DocType;
     }
@@ -335,7 +330,6 @@ public class RemnDbKt extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Document.ContractNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -345,7 +339,6 @@ public class RemnDbKt extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DOCDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Document.ContractDate")
     public Date getDocDate() {
         return this.DocDate;
     }

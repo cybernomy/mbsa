@@ -63,7 +63,6 @@ public class DiscountKind extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -83,7 +82,6 @@ public class DiscountKind extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DCODE", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Salary.BigCode")
     public String getDCode() {
         return this.DCode;
     }
@@ -93,7 +91,6 @@ public class DiscountKind extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "DNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Salary.Name")
     public String getDName() {
         return this.DName;
     }
@@ -103,7 +100,6 @@ public class DiscountKind extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "MINSALARYNUMBER", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Salary.DiscountKind.MinSalaryNumber")
     public BigDecimal getMinSalaryNumber() {
         return this.MinSalaryNumber;
     }
@@ -113,7 +109,6 @@ public class DiscountKind extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "FIXEDSUM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Salary.DiscountKind.FixedSum")
     public BigDecimal getFixedSum() {
         return this.FixedSum;
     }
@@ -123,7 +118,6 @@ public class DiscountKind extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "BEGINDATE", nullable = false, columnDefinition = "TIMESTAMP")
-    @DataItemName("Salary.DiscountKind.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -133,7 +127,6 @@ public class DiscountKind extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "ACTIONPERIOD", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Salary.DiscountKind.ActionPeriod")
     public BigDecimal getActionPeriod() {
         return this.ActionPeriod;
     }
@@ -143,7 +136,6 @@ public class DiscountKind extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "IS_ACCUMULATING", columnDefinition = "SMALLINT")
-    @DataItemName("Salary.DiscountKind.IsAccumulating")
     public boolean isAccumulating() {
         return this.IsAccumulating;
     }

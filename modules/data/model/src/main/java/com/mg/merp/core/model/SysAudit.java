@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SYS_AUDIT")
-@DataItemName("Core.SystemAudit")
 public class SysAudit extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Long Id;
@@ -56,7 +55,6 @@ public class SysAudit extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "NUMERIC", precision = 18, scale = 0)
-    @DataItemName("ID")
     public Long getId() {
         return this.Id;
     }
@@ -76,7 +74,6 @@ public class SysAudit extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "USER_NAME", nullable = false)
-    @DataItemName("Security.User.Name")
     public String getUserName() {
         return this.UserName;
     }
@@ -86,7 +83,6 @@ public class SysAudit extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "EVENT_DATETIME", nullable = false, columnDefinition = "TIMESTAMP")
-    @DataItemName("Core.DatabaseAudit.EventDateTime")
     public Date getEventDateTime() {
         return this.EventDateTime;
     }
@@ -96,7 +92,6 @@ public class SysAudit extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "AUDIT_BEAN", nullable = false, columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Core.SecurityAudit.AuditBean")
     public String getAuditBean() {
         return this.AuditBean;
     }
@@ -106,7 +101,6 @@ public class SysAudit extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "OPERATION", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Core.SystemAudit.Operation")
     public String getOperation() {
         return this.Operation;
     }
@@ -116,7 +110,6 @@ public class SysAudit extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DETAILS", columnDefinition = "VARCHAR", length = 1024)
-    @DataItemName("Core.Audit.Details")
     public String getDetails() {
         return this.Details;
     }

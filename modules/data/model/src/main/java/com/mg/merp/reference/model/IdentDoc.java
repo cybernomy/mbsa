@@ -18,7 +18,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_IDENT_DOC")
-@DataItemName("Reference.IdentDoc")
 public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -97,7 +96,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -148,7 +146,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ADDRESS_ID")
-    @DataItemName("Reference.NPers.Doc.Address")
     public PersonAddress getPersonAddress() {
         return this.PersonAddress;
     }
@@ -158,7 +155,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "IS_BASIC", columnDefinition = "SMALLINT")
-    @DataItemName("Reference.Person.IdentDoc.IsBasic")
     public boolean isBasic() {
         return this.IsBasic;
     }
@@ -168,7 +164,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SERIES_LEFT", columnDefinition = "CHAR", length = 10)
-    @DataItemName("Reference.Person.IdentDoc.SeriesLeft")
     public String getSeriesLeft() {
         return this.SeriesLeft;
     }
@@ -178,7 +173,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SERIES_DIVIDER", columnDefinition = "CHAR", length = 5)
-    @DataItemName("Reference.Person.IdentDoc.SeriesDivider")
     public String getSeriesDivider() {
         return this.SeriesDivider;
     }
@@ -188,7 +182,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "SERIES_RIGHT", columnDefinition = "CHAR", length = 10)
-    @DataItemName("Reference.Person.IdentDoc.SeriesRight")
     public String getSeriesRight() {
         return this.SeriesRight;
     }
@@ -198,7 +191,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "DOCNUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.Person.IdentDoc.DocNumber")
     public String getDocNumber() {
         return this.DocNumber;
     }
@@ -208,7 +200,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "WHO_ISSUED", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Person.IdentDoc.WhoIssued")
     public String getWhoIssued() {
         return this.WhoIssued;
     }
@@ -218,7 +209,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "WHEN_ISSUED", columnDefinition = "TIMESTAMP")
-    @DataItemName("Reference.Person.IdentDoc.WhenIssued")
     public Date getWhenIssued() {
         return this.WhenIssued;
     }
@@ -228,7 +218,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "ACTIVE_TILL", columnDefinition = "TIMESTAMP")
-    @DataItemName("Reference.Person.IdentDoc.ActiveTill")
     public Date getActiveTill() {
         return this.ActiveTill;
     }
@@ -238,7 +227,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "CITIZENSHIP", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.CitizenShip")
     public String getCitizenShip() {
         return this.CitizenShip;
     }
@@ -248,7 +236,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "BIRTHDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Reference.Birthdate")
     public Date getBirthdate() {
         return this.Birthdate;
     }
@@ -258,7 +245,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "BIRTHPLACE_COUNTRY", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.BirthPlaceCountry")
     public String getBirthPlaceCountry() {
         return this.BirthPlaceCountry;
     }
@@ -268,7 +254,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "BIRTHPLACE_REGION", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.BirthPlaceRegion")
     public String getBirthPlaceRegion() {
         return this.BirthPlaceRegion;
     }
@@ -278,7 +263,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "BIRTHPLACE_DISTRICT", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.BirthPlaceDistrict")
     public String getBirthPlaceDistrict() {
         return this.BirthPlaceDistrict;
     }
@@ -288,7 +272,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "BIRTHPLACE_CITY", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.BirthPlaceCity")
     public String getBirthPlaceCity() {
         return this.BirthPlaceCity;
     }
@@ -298,7 +281,6 @@ public class IdentDoc extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "BIRTHPLACE_OKATO", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.BirthPlaceOkato")
     public String getBirthPlaceOkato() {
         return this.BirthPlaceOkato;
     }

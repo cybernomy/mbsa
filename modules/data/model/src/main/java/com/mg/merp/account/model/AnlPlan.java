@@ -19,7 +19,6 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "ANLPLAN")
-@DataItemName("Account.AnlPlan")
 public class AnlPlan extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -69,7 +68,6 @@ public class AnlPlan extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -80,7 +78,6 @@ public class AnlPlan extends com.mg.merp.core.model.AbstractEntity implements ja
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARENT_ID")
-    @DataItemName("Account.Plan.Parent")
     public AnlPlan getParent() {
         return this.Parent;
     }
@@ -119,7 +116,6 @@ public class AnlPlan extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 10)
-    @DataItemName("Account.BigCode")
     public String getCode() {
         return this.Code;
     }
@@ -129,7 +125,6 @@ public class AnlPlan extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "ANLNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Account.Name")
     public String getAnlName() {
         return this.AnlName;
     }
@@ -148,7 +143,6 @@ public class AnlPlan extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "USESTDFORM", nullable = false, columnDefinition = "SMALLINT")
-    @DataItemName("Account.Plan.UseStdForm")
     public boolean isUseStdForm() {
         return this.UseStdForm;
     }

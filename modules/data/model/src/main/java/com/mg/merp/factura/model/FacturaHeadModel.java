@@ -73,7 +73,6 @@ public class FacturaHeadModel extends com.mg.merp.document.model.DocHeadModel im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARTNERTO_BANKREQ")
-    @DataItemName("Factura.FacturaHeadModel.PartnerToBankReq")
     public BankAccount getPartnerToBankReq() {
         return this.PartnerToBankReq;
     }
@@ -84,7 +83,6 @@ public class FacturaHeadModel extends com.mg.merp.document.model.DocHeadModel im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CONSIGNEE")
-    @DataItemName("Factura.FacturaHeadModel.Consignee")
     public Contractor getConsignee() {
         return this.Consignee;
     }
@@ -95,7 +93,6 @@ public class FacturaHeadModel extends com.mg.merp.document.model.DocHeadModel im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "SHIPPER")
-    @DataItemName("Factura.FacturaHeadModel.Shipper")
     public Contractor getShipper() {
         return this.Shipper;
     }
@@ -106,7 +103,6 @@ public class FacturaHeadModel extends com.mg.merp.document.model.DocHeadModel im
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PARTNERFROM_BANKREQ")
-    @DataItemName("Factura.FacturaHeadModel.PartnerFromBankReq")
     public BankAccount getPartnerFromBankReq() {
         return this.PartnerFromBankReq;
     }
@@ -116,7 +112,6 @@ public class FacturaHeadModel extends com.mg.merp.document.model.DocHeadModel im
     }
 
     @Column(name = "INDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Factura.FacturaHeadModel.InDate")
     public Date getInDate() {
         return this.InDate;
     }
@@ -126,7 +121,6 @@ public class FacturaHeadModel extends com.mg.merp.document.model.DocHeadModel im
     }
 
     @Column(name = "STOCKDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Factura.FacturaHeadModel.StockDate")
     public Date getStockDate() {
         return this.StockDate;
     }
@@ -136,7 +130,6 @@ public class FacturaHeadModel extends com.mg.merp.document.model.DocHeadModel im
     }
 
     @Column(name = "PAYDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Factura.FacturaHeadModel.PayDate")
     public Date getPayDate() {
         return this.PayDate;
     }
@@ -146,7 +139,6 @@ public class FacturaHeadModel extends com.mg.merp.document.model.DocHeadModel im
     }
 
     @Column(name = "TOPAYDOCNUMBER", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Factura.FacturaHeadModel.ToPayDocNumber")
     public String getToPayDocNumber() {
         return this.ToPayDocNumber;
     }
@@ -156,7 +148,6 @@ public class FacturaHeadModel extends com.mg.merp.document.model.DocHeadModel im
     }
 
     @Column(name = "TOPAYDOCDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Factura.FacturaHeadModel.ToPayDocDate")
     public Date getToPayDocDate() {
         return this.ToPayDocDate;
     }
@@ -166,7 +157,6 @@ public class FacturaHeadModel extends com.mg.merp.document.model.DocHeadModel im
     }
 
     @Column(name = "COMMENT", columnDefinition = "VARCHAR", length = 1024)
-    @DataItemName("Factura.FacturaHeadModel.Comment")
     public String getComment() {
         return this.Comment;
     }

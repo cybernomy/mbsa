@@ -20,7 +20,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PP_MPS")
-@DataItemName("Planning.MPS")
 public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -95,7 +94,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -106,7 +104,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "INVENTORY_FORECAST_ID")
-    @DataItemName("Planning.MPS.InventoryForecast")
     public InventoryForecast getInventoryForecast() {
         return this.InventoryForecast;
     }
@@ -117,7 +114,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PLANNING_LEVEL_ID")
-    @DataItemName("Planning.MPS.PlanningLevel")
     public PlanningLevel getPlanningLevel() {
         return this.PlanningLevel;
     }
@@ -128,7 +124,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FORECAST_VERSION_ID")
-    @DataItemName("Planning.MPS.ForecastVersion")
     public ForecastVersion getForecastVersion() {
         return this.ForecastVersion;
     }
@@ -139,7 +134,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WEEK_CAL_ID")
-    @DataItemName("Planning.MPS.WeekCal")
     public WeekCalendar getWeekCal() {
         return this.WeekCal;
     }
@@ -159,7 +153,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Planning.Code")
     public String getCode() {
         return this.Code;
     }
@@ -169,7 +162,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "DEMAND_FENCE_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.MPS.DemandFenceDate")
     public Date getDemandFenceDate() {
         return this.DemandFenceDate;
     }
@@ -179,7 +171,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Planning.Description")
     public String getDescription() {
         return this.Description;
     }
@@ -189,7 +180,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "PLANNING_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.MPS.PlanningDate")
     public Date getPlanningDate() {
         return this.PlanningDate;
     }
@@ -199,7 +189,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "PP_LEVEL_PROCESSED_TO", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MPS.PpLevelProcessedTo")
     public Short getLevelProcessedTo() {
         return this.LevelProcessedTo;
     }
@@ -209,7 +198,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "PRODUCTION", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MPS.Production")
     public boolean isProduction() {
         return this.Production;
     }
@@ -219,7 +207,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "PROFILE_APPLIED", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MPS.ProfileApplied")
     public boolean isProfileApplied() {
         return this.ProfileApplied;
     }
@@ -229,7 +216,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "PURCHASES_FORECASTS", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MPS.PurchasesForecasts")
     public boolean isPurchasesForecasts() {
         return this.PurchasesForecasts;
     }
@@ -239,7 +225,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "PURCHASES_LIVE", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MPS.PurchasesLive")
     public boolean isPurchasesLive() {
         return this.PurchasesLive;
     }
@@ -249,7 +234,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "QTY_ON_HAND", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MPS.QtyOnHand")
     public boolean isQtyOnHand() {
         return this.QtyOnHand;
     }
@@ -259,7 +243,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "SALES_FORECASTS", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MPS.SalesForecasts")
     public boolean isSalesForecasts() {
         return this.SalesForecasts;
     }
@@ -269,7 +252,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "SALES_LIVE", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MPS.SalesLive")
     public boolean isSalesLive() {
         return this.SalesLive;
     }
@@ -279,7 +261,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "WAREHOUSE_TRANSFERS", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.MPS.WarehouseTransfers")
     public boolean isWarehouseTransfers() {
         return this.WarehouseTransfers;
     }
@@ -289,7 +270,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "MPS_VERSION", columnDefinition = "INTEGER")
-    @DataItemName("Planning.MPSVersion")
     public Integer getMpsVersion() {
         return this.MpsVersion;
     }
@@ -299,7 +279,6 @@ public class Mps extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "LAST_RUN_DATETIME", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.MPS.LastRunDateTime")
     public Date getLastRunDateTime() {
         return this.LastRunDateTime;
     }

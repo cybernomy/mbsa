@@ -68,8 +68,6 @@ public class PromotionLine extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -109,8 +107,6 @@ public class PromotionLine extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DISCOUNT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    //$NON-NLS-1$
-    @DataItemName("Discount.PromotionLine.Discount")
     public BigDecimal getDiscount() {
         return this.Discount;
     }
@@ -120,8 +116,6 @@ public class PromotionLine extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "PRICE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Discount.PromotionLine.Price")
     public BigDecimal getPrice() {
         return this.Price;
     }
@@ -141,8 +135,6 @@ public class PromotionLine extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "IS_ACTIVE", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Discount.PromotionLine.IsActive")
     public boolean isActive() {
         return this.IsActive;
     }
@@ -152,8 +144,6 @@ public class PromotionLine extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "IS_APPLY_DISCOUNT_GROUP", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Discount.PromotionLine.IsApplyDiscountGroup")
     public boolean isApplyDiscountGroup() {
         return this.IsApplyDiscountGroup;
     }
@@ -163,8 +153,6 @@ public class PromotionLine extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "IS_APPLY_DISCOUNT_ON_DOC", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Discount.PromotionLine.IsApplyDiscountOnDoc")
     public boolean isApplyDiscountOnDoc() {
         return this.IsApplyDiscountOnDoc;
     }

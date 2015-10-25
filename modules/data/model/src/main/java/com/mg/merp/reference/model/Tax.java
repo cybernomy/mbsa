@@ -24,7 +24,6 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "TAX")
-@DataItemName("Reference.Tax")
 public class Tax extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -92,7 +91,6 @@ public class Tax extends com.mg.merp.core.model.AbstractEntity implements java.i
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -121,7 +119,6 @@ public class Tax extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "CODE", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.Tax.Code")
     public String getCode() {
         return this.Code;
     }
@@ -131,7 +128,6 @@ public class Tax extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "TNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Tax.Name")
     public String getTName() {
         return this.TName;
     }
@@ -141,7 +137,6 @@ public class Tax extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "ACTIVEDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Reference.Tax.ActiveDate")
     public Date getActiveDate() {
         return this.ActiveDate;
     }
@@ -171,7 +166,6 @@ public class Tax extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "INCLUDED", nullable = false, columnDefinition = "SMALLINT")
-    @DataItemName("Reference.Tax.Included")
     public boolean isIncluded() {
         return this.Included;
     }
@@ -181,7 +175,6 @@ public class Tax extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "DIRECTRATE", nullable = false, columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Reference.Tax.DirectRate")
     public BigDecimal getDirectRate() {
         return this.DirectRate;
     }
@@ -191,7 +184,6 @@ public class Tax extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "INVERSERATE", nullable = false, columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    @DataItemName("Reference.Tax.InverseRate")
     public BigDecimal getInverseRate() {
         return this.InverseRate;
     }
@@ -201,7 +193,6 @@ public class Tax extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "SUMM", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Reference.Tax.Sum")
     public BigDecimal getSumm() {
         return this.Summ;
     }
@@ -211,7 +202,6 @@ public class Tax extends com.mg.merp.core.model.AbstractEntity implements java.i
     }
 
     @Column(name = "DEACTIVATEDATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Reference.Tax.DeactivateDate")
     public Date getDeactivateDate() {
         return this.DeactivateDate;
     }

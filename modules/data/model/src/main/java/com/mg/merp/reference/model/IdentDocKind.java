@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "REF_IDENT_DOC_KIND")
-@DataItemName("Reference.IdentDocKind")
 public class IdentDocKind extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -58,7 +57,6 @@ public class IdentDocKind extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -78,7 +76,6 @@ public class IdentDocKind extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "KCODE", nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("Reference.BigCode")
     public String getKCode() {
         return this.KCode;
     }
@@ -88,7 +85,6 @@ public class IdentDocKind extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "KNAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Reference.Name")
     public String getKName() {
         return this.KName;
     }
@@ -98,7 +94,6 @@ public class IdentDocKind extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "LSERIES_LENGTH", columnDefinition = "INTEGER")
-    @DataItemName("Reference.IdentKind.LSeriesLength")
     public Integer getLSeriesLength() {
         return this.LSeriesLength;
     }
@@ -108,7 +103,6 @@ public class IdentDocKind extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "RSERIES_LENGTH", columnDefinition = "INTEGER")
-    @DataItemName("Reference.IdentKind.RSeriesLength")
     public Integer getRSeriesLength() {
         return this.RSeriesLength;
     }
@@ -118,7 +112,6 @@ public class IdentDocKind extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SERIES_DIVIDER", columnDefinition = "CHAR", length = 5)
-    @DataItemName("Reference.IdentKind.SeriesDivider")
     public String getSeriesDivider() {
         return this.SeriesDivider;
     }
@@ -128,7 +121,6 @@ public class IdentDocKind extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "NUMBER_LENGTH", columnDefinition = "INTEGER")
-    @DataItemName("Reference.IdentKind.NumberLength")
     public Integer getNumberLength() {
         return this.NumberLength;
     }

@@ -20,7 +20,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "PP_FORECAST_VERSION")
-@DataItemName("Planning.ForecastVersion")
 public class ForecastVersion extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -47,7 +46,6 @@ public class ForecastVersion extends com.mg.merp.core.model.AbstractEntity imple
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -67,7 +65,6 @@ public class ForecastVersion extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Planning.ForecastVersion.Code")
     public String getCode() {
         return this.Code;
     }
@@ -77,7 +74,6 @@ public class ForecastVersion extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "DESCRIPTION", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Planning.Description")
     public String getDescription() {
         return this.Description;
     }

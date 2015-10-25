@@ -50,8 +50,6 @@ public class CalcListSection extends com.mg.merp.core.model.AbstractEntity imple
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -91,8 +89,6 @@ public class CalcListSection extends com.mg.merp.core.model.AbstractEntity imple
     }
 
     @Column(name = "TOTAL_SUMMA", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Salary.ListSection.TotalSumma")
     public BigDecimal getTotalSumma() {
         return this.TotalSumma;
     }

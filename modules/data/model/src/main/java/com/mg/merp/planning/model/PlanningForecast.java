@@ -80,7 +80,6 @@ public class PlanningForecast extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -111,7 +110,6 @@ public class PlanningForecast extends com.mg.merp.core.model.AbstractEntity impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "WAREHOUSE_ID")
-    @DataItemName("Planning.ForecastLine.Contractor")
     public Contractor getContractor() {
         return this.Contractor;
     }
@@ -142,7 +140,6 @@ public class PlanningForecast extends com.mg.merp.core.model.AbstractEntity impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "PLANNING_ITEM_ID")
-    @DataItemName("Planning.ForecastLine.GenericItem")
     public GenericItem getPlanningItem() {
         return this.PlanningItem;
     }
@@ -153,7 +150,6 @@ public class PlanningForecast extends com.mg.merp.core.model.AbstractEntity impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CATALOG_ID")
-    @DataItemName("Planning.Catalog")
     public Catalog getCatalog() {
         return this.Catalog;
     }
@@ -183,7 +179,6 @@ public class PlanningForecast extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "BUCKET_OFFSET", columnDefinition = "SMALLINT")
-    @DataItemName("Planning.ForecastLine.Bucket")
     public Short getBucketOffset() {
         return this.BucketOffset;
     }
@@ -193,7 +188,6 @@ public class PlanningForecast extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "REQUIRED_DATE", columnDefinition = "TIMESTAMP")
-    @DataItemName("Planning.ForecastLine.RequiredDate")
     public Date getRequiredDate() {
         return this.RequiredDate;
     }
@@ -203,7 +197,6 @@ public class PlanningForecast extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "FORECAST_QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Planning.ForecastLine.Quantity")
     public BigDecimal getForecastQuantity() {
         return this.ForecastQuantity;
     }
@@ -213,7 +206,6 @@ public class PlanningForecast extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Formula(value = "(select plb.start_date from pp_planning_level_bucket plb where (plb.planning_level_id = PLANNING_LEVEL_ID) and (plb.bucket_offset = BUCKET_OFFSET))")
-    @DataItemName("Planning.ForLine.BucketStartDate")
     public Date getBucketStartDate() {
         return this.BucketStartDate;
     }
@@ -223,7 +215,6 @@ public class PlanningForecast extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Formula(value = "(select plb.end_date from pp_planning_level_bucket plb where (plb.planning_level_id = PLANNING_LEVEL_ID) and (plb.bucket_offset = BUCKET_OFFSET))")
-    @DataItemName("Planning.ForLine.BucketEndDate")
     public Date getBucketEndDate() {
         return this.BucketEndDate;
     }

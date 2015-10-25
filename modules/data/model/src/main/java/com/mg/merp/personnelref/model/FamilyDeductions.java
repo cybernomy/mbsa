@@ -52,8 +52,6 @@ public class FamilyDeductions extends com.mg.merp.core.model.AbstractEntity impl
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -74,8 +72,6 @@ public class FamilyDeductions extends com.mg.merp.core.model.AbstractEntity impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "DEDUCTIONKIND_ID")
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.FamilyDed.DeductionKind")
     public DeductionKind getDeductionKind() {
         return this.DeductionKind;
     }
@@ -86,8 +82,6 @@ public class FamilyDeductions extends com.mg.merp.core.model.AbstractEntity impl
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "FAMILY_MEMBER_ID")
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.FamilyDed.FamilyMembers")
     public FamilyMember getFamilyMember() {
         return this.FamilyMember;
     }
@@ -97,8 +91,6 @@ public class FamilyDeductions extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "BEGINDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.FamilyDed.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -108,8 +100,6 @@ public class FamilyDeductions extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "ENDDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.FamilyDed.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }
@@ -119,8 +109,6 @@ public class FamilyDeductions extends com.mg.merp.core.model.AbstractEntity impl
     }
 
     @Column(name = "RATIO", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.FamilyDed.Ratio")
     public BigDecimal getRatio() {
         return this.Ratio;
     }

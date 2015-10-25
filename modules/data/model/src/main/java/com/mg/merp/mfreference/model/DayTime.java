@@ -43,7 +43,6 @@ public class DayTime extends com.mg.merp.core.model.AbstractEntity implements ja
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -73,7 +72,6 @@ public class DayTime extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "START_TICK", columnDefinition = "NUMERIC", precision = 18, scale = 0)
-    @DataItemName("MfReference.DayTime.StartTick")
     public Long getStartTick() {
         return this.StartTick;
     }
@@ -83,7 +81,6 @@ public class DayTime extends com.mg.merp.core.model.AbstractEntity implements ja
     }
 
     @Column(name = "TICKS", columnDefinition = "NUMERIC", precision = 18, scale = 0)
-    @DataItemName("MfReference.DayTime.Ticks")
     public Long getTicks() {
         return this.Ticks;
     }

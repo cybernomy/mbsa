@@ -20,7 +20,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "WH_BIN_TYPE_CAP_BY_PROD")
-@DataItemName("Warehouse.BinTypeCapacityByProduct")
 public class BinTypeCapacityByProduct extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -50,7 +49,6 @@ public class BinTypeCapacityByProduct extends com.mg.merp.core.model.AbstractEnt
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -71,7 +69,6 @@ public class BinTypeCapacityByProduct extends com.mg.merp.core.model.AbstractEnt
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CATALOG_ID")
-    @DataItemName("Warehouse.BinTypeCapacByProd.Catalog")
     public Catalog getCatalog() {
         return this.Catalog;
     }
@@ -101,7 +98,6 @@ public class BinTypeCapacityByProduct extends com.mg.merp.core.model.AbstractEnt
     }
 
     @Column(name = "MAX_QUANTITY", columnDefinition = "NUMERIC", precision = 18, scale = 3)
-    @DataItemName("Warehouse.BinTypeCapacByProd.MaxQuantity")
     public BigDecimal getMaxQuantity() {
         return this.MaxQuantity;
     }

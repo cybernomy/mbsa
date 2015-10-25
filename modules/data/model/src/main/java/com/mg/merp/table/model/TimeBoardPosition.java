@@ -51,8 +51,6 @@ public class TimeBoardPosition extends com.mg.merp.core.model.AbstractEntity imp
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -93,8 +91,6 @@ public class TimeBoardPosition extends com.mg.merp.core.model.AbstractEntity imp
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "POSITION_FILL_ID")
-    //$NON-NLS-1$
-    @DataItemName("Table.TimeBoardPosision.PositionFill")
     public PositionFill getPositionFill() {
         return this.PositionFill;
     }

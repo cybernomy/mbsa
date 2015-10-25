@@ -52,8 +52,6 @@ public class PersonnelSocialBenefit extends com.mg.merp.core.model.AbstractEntit
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -84,8 +82,6 @@ public class PersonnelSocialBenefit extends com.mg.merp.core.model.AbstractEntit
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ORIGINAL_DOCUMENT_ID")
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.Personnel.OriginalDocument")
     public OriginalDocument getOriginalDocument() {
         return this.OriginalDocument;
     }
@@ -95,8 +91,6 @@ public class PersonnelSocialBenefit extends com.mg.merp.core.model.AbstractEntit
     }
 
     @Column(name = "BENEFIT_NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.Personnel.BenefitName")
     public String getBenefitName() {
         return this.BenefitName;
     }
@@ -106,8 +100,6 @@ public class PersonnelSocialBenefit extends com.mg.merp.core.model.AbstractEntit
     }
 
     @Column(name = "BENEFIT_REASON", columnDefinition = "VARCHAR", length = 256)
-    //$NON-NLS-1$
-    @DataItemName("PersonnelRef.Personnel.BenefitReason")
     public String getBenefitReason() {
         return this.BenefitReason;
     }

@@ -54,7 +54,6 @@ public class PaySheetSpec extends com.mg.merp.core.model.AbstractEntity implemen
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -94,7 +93,6 @@ public class PaySheetSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUMMA_FULL", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Salary.PaySheetSpec.SummaFull")
     public BigDecimal getSummaFull() {
         return this.SummaFull;
     }
@@ -104,7 +102,6 @@ public class PaySheetSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUMMA_PAID_OUT", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Salary.PaySheetSpec.SummaPaidOut")
     public BigDecimal getSummaPaidOut() {
         return this.SummaPaidOut;
     }
@@ -114,7 +111,6 @@ public class PaySheetSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUMMA_DEPOSITED", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Salary.PaySheetSpec.SummaDeposited")
     public BigDecimal getSummaDeposited() {
         return this.SummaDeposited;
     }
@@ -124,7 +120,6 @@ public class PaySheetSpec extends com.mg.merp.core.model.AbstractEntity implemen
     }
 
     @Column(name = "SUMMA_REST", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    @DataItemName("Salary.PaySheetSpec.SummaRest")
     public BigDecimal getSummaRest() {
         return this.SummaRest;
     }

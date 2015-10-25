@@ -20,7 +20,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SEC_GROUPS")
-@DataItemName("Security.Group")
 public class Groups extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private int Id;
@@ -51,7 +50,6 @@ public class Groups extends com.mg.merp.core.model.AbstractEntity implements jav
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, nullable = false, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public int getId() {
         return this.Id;
     }
@@ -71,7 +69,6 @@ public class Groups extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "NAME", nullable = false, columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("Security.Group.Name")
     public String getName() {
         return this.Name;
     }

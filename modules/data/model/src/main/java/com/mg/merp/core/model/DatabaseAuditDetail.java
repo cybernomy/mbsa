@@ -16,7 +16,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "SYS_DB_AUDIT_DETAIL")
-@DataItemName("Core.DatabaseAuditDetail")
 public class DatabaseAuditDetail extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Long Id;
@@ -48,7 +47,6 @@ public class DatabaseAuditDetail extends com.mg.merp.core.model.AbstractEntity i
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "NUMERIC")
-    @DataItemName("ID")
     public Long getId() {
         return this.Id;
     }
@@ -68,7 +66,6 @@ public class DatabaseAuditDetail extends com.mg.merp.core.model.AbstractEntity i
     }
 
     @Column(name = "PROPERTY_NAME", nullable = false, columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Core.PropertyName")
     public String getPropertyName() {
         return this.PropertyName;
     }
@@ -78,7 +75,6 @@ public class DatabaseAuditDetail extends com.mg.merp.core.model.AbstractEntity i
     }
 
     @Column(name = "STATE", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Core.DatabaseAuditDetail.State")
     public String getState() {
         return this.State;
     }
@@ -88,7 +84,6 @@ public class DatabaseAuditDetail extends com.mg.merp.core.model.AbstractEntity i
     }
 
     @Column(name = "OLD_STATE", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Core.DatabaseAuditDetail.OldState")
     public String getOldState() {
         return this.OldState;
     }

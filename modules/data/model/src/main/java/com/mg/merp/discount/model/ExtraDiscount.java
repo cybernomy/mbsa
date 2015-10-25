@@ -67,8 +67,6 @@ public class ExtraDiscount extends com.mg.merp.core.model.AbstractEntity impleme
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -98,8 +96,6 @@ public class ExtraDiscount extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("Discount.Name")
     public String getName() {
         return this.Name;
     }
@@ -109,8 +105,6 @@ public class ExtraDiscount extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DISCOUNT", columnDefinition = "NUMERIC", precision = 18, scale = 6)
-    //$NON-NLS-1$
-    @DataItemName("Discount.ExtraDisc.Discount")
     public BigDecimal getDiscount() {
         return this.Discount;
     }
@@ -120,8 +114,6 @@ public class ExtraDiscount extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "PLANSALE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Discount.ExtraDisc.PlanSale")
     public BigDecimal getPlanSale() {
         return this.PlanSale;
     }
@@ -131,8 +123,6 @@ public class ExtraDiscount extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DATE_FROM", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Discount.ExtraDisc.DateFrom")
     public Date getDateFrom() {
         return this.DateFrom;
     }
@@ -142,8 +132,6 @@ public class ExtraDiscount extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "DATE_TILL", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Discount.ExtraDisc.DateTill")
     public Date getDateTill() {
         return this.DateTill;
     }
@@ -153,7 +141,6 @@ public class ExtraDiscount extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "IS_ACTIVE", columnDefinition = "SMALLINT")
-    @DataItemName("Discount.ExtraDiscount.IsActive")
     public boolean isActive() {
         return this.IsActive;
     }
@@ -164,7 +151,6 @@ public class ExtraDiscount extends com.mg.merp.core.model.AbstractEntity impleme
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER_ID")
-    @DataItemName("Discount.CardHist.User")
     public SecUser getUser() {
         return this.User;
     }
@@ -174,8 +160,6 @@ public class ExtraDiscount extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "FACTSALE", columnDefinition = "NUMERIC", precision = 15, scale = 4)
-    //$NON-NLS-1$
-    @DataItemName("Discount.ExtraDisc.Factsale")
     public BigDecimal getFactSale() {
         return this.FactSale;
     }
@@ -185,8 +169,6 @@ public class ExtraDiscount extends com.mg.merp.core.model.AbstractEntity impleme
     }
 
     @Column(name = "COMMENTS", columnDefinition = "VARCHAR", length = 256)
-    //$NON-NLS-1$
-    @DataItemName("Discount.ExtraDisc.Comments")
     public String getComments() {
         return this.Comments;
     }

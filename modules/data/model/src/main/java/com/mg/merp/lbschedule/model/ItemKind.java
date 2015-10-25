@@ -20,7 +20,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "LS_ITEMKIND")
-@DataItemName("LbSchedule.ItemKind")
 public class ItemKind extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -51,7 +50,6 @@ public class ItemKind extends com.mg.merp.core.model.AbstractEntity implements j
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -71,7 +69,6 @@ public class ItemKind extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 80)
-    @DataItemName("LbSchedule.Schedule.Name")
     public String getName() {
         return this.Name;
     }
@@ -81,7 +78,6 @@ public class ItemKind extends com.mg.merp.core.model.AbstractEntity implements j
     }
 
     @Column(name = "CODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
-    @DataItemName("LbSchedule.Code")
     public String getCode() {
         return this.Code;
     }

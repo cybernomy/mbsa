@@ -25,8 +25,6 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "SAL_FEE_REF")
-//$NON-NLS-1$
-@DataItemName("Salary.FeeRef")
 public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -123,8 +121,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -145,8 +141,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL1_ID")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeRef.CostsAnl1")
     public CostsAnl getCostsAnl1() {
         return this.CostsAnl1;
     }
@@ -157,8 +151,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL3_ID")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeRef.CostsAnl3")
     public CostsAnl getCostsAnl3() {
         return this.CostsAnl3;
     }
@@ -169,8 +161,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL2_ID")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeRef.CostsAnl2")
     public CostsAnl getCostsAnl2() {
         return this.CostsAnl2;
     }
@@ -191,8 +181,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL4_ID")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeRef.CostsAnl4")
     public CostsAnl getCostsAnl4() {
         return this.CostsAnl4;
     }
@@ -203,8 +191,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CALC_ALG_ID")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeRef.CalcAlg")
     public Repository getCalcAlg() {
         return this.CalcAlg;
     }
@@ -225,8 +211,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COSTS_ANL5_ID")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeRef.CostsAnl5")
     public CostsAnl getCostsAnl5() {
         return this.CostsAnl5;
     }
@@ -257,8 +241,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
 
     @Column(name = "FEE_TYPE")
     @Enumerated(EnumType.ORDINAL)
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeRef.FeeType")
     public FeeType getFeeType() {
         return this.FeeType;
     }
@@ -268,8 +250,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "FCODE", unique = true, nullable = false, columnDefinition = "CHAR", length = 20)
-    //$NON-NLS-1$
-    @DataItemName("Salary.BigCode")
     public String getFCode() {
         return this.FCode;
     }
@@ -279,8 +259,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "FNAME", columnDefinition = "VARCHAR", length = 80)
-    //$NON-NLS-1$
-    @DataItemName("Salary.Name")
     public String getFName() {
         return this.FName;
     }
@@ -290,8 +268,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "PRIORITY", columnDefinition = "INTEGER")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeRef.Priority")
     public Integer getPriority() {
         return this.Priority;
     }
@@ -302,8 +278,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
 
     @Column(name = "SUM_SIGN")
     @Enumerated(EnumType.ORDINAL)
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeRef.SumSign")
     public TripleSumSign getSumSign() {
         return this.SumSign;
     }
@@ -313,8 +287,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "BEGINDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeRef.BeginDate")
     public Date getBeginDate() {
         return this.BeginDate;
     }
@@ -324,8 +296,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "ENDDATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeRef.EndDate")
     public Date getEndDate() {
         return this.EndDate;
     }
@@ -336,8 +306,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
 
     @Column(name = "PERIODICITY")
     @Enumerated(EnumType.ORDINAL)
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeRef.PeriodiCity")
     public FeePerioicity getPeriodiCity() {
         return this.PeriodiCity;
     }
@@ -347,8 +315,6 @@ public class FeeRef extends com.mg.merp.core.model.AbstractEntity implements jav
     }
 
     @Column(name = "IS_ZERO_INCLUDED", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Salary.FeeRef.IsZeroIncluded")
     public boolean isZeroIncluded() {
         return this.IsZeroIncluded;
     }

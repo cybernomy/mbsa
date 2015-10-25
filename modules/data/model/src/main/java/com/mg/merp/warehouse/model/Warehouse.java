@@ -19,8 +19,6 @@ import javax.persistence.EnumType;
  */
 @Entity
 @Table(name = "WH_WAREHOUSE")
-//$NON-NLS-1$
-@DataItemName("Warehouse.Warehouse")
 public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements java.io.Serializable {
 
     private Repository BatchPriceBAi;
@@ -92,16 +90,12 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Override
-    //$NON-NLS-1$
-    @DataItemName("ID")
     public int getId() {
         return super.getId();
     }
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ALGORITHM_ID")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.Warehouse.AlgRepository")
     public Repository getBatchPriceBAi() {
         return this.BatchPriceBAi;
     }
@@ -131,8 +125,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "CALC_FACT", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.Warehouse.CalcFact")
     public boolean isCalcFact() {
         return this.CalcFact;
     }
@@ -142,8 +134,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "CALC_FACT_SIGN", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.Warehouse.CalcFactSign")
     public boolean isCalcFactSign() {
         return this.CalcFactSign;
     }
@@ -153,8 +143,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "CALC_PLAN_IN", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.Warehouse.CalcPlanIn")
     public boolean isCalcPlanIn() {
         return this.CalcPlanIn;
     }
@@ -164,8 +152,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "CALC_PLAN_IN_SIGN", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.Warehouse.CalcPlanInSign")
     public boolean isCalcPlanInSign() {
         return this.CalcPlanInSign;
     }
@@ -175,8 +161,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "CALC_PLAN_OUT", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.Warehouse.CalcPlanOut")
     public boolean isCalcPlanOut() {
         return this.CalcPlanOut;
     }
@@ -186,8 +170,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "CALC_PLAN_OUT_SIGN", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.Warehouse.CalcPlanOutSign")
     public boolean isCalcPlanOutSign() {
         return this.CalcPlanOutSign;
     }
@@ -197,8 +179,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "CALC_RESERVE", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.Warehouse.CalcReserve")
     public boolean isCalcReserve() {
         return this.CalcReserve;
     }
@@ -208,8 +188,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "CALC_RESERVE_SIGN", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.Warehouse.CalcReserveSign")
     public boolean isCalcReserveSign() {
         return this.CalcReserveSign;
     }
@@ -219,8 +197,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "USE_BIN_LOCATION", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.Warehouse.UseBinLocat")
     public boolean isUseBinLocation() {
         return this.UseBinLocation;
     }
@@ -230,8 +206,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "BIN_SIZING", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.Warehouse.BinSizing")
     public boolean isBinSizing() {
         return this.BinSizing;
     }
@@ -241,8 +215,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "CHECK_TRANSACTION_DAY", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.CheckTransactionDay")
     public boolean isCheckTransactionDay() {
         return this.CheckTransactionDay;
     }
@@ -252,8 +224,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "WAREHOUSE_TRANSACTION_CLOSED", columnDefinition = "SMALLINT")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.WarehouseTransactionClosed")
     public boolean isWarehouseTransactionClosed() {
         return this.WarehouseTransactionClosed;
     }
@@ -263,8 +233,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "CLOSED_DATE_TILL", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.ClosedDateTill")
     public Date getClosedDateTill() {
         return this.ClosedDateTill;
     }
@@ -274,8 +242,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "USER_STOCK_CLOSED", unique = true, columnDefinition = "CHAR", length = 31)
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.UserStockClosed")
     public String getUserStockClosed() {
         return this.UserStockClosed;
     }
@@ -285,8 +251,6 @@ public class Warehouse extends com.mg.merp.reference.model.OrgUnit implements ja
     }
 
     @Column(name = "OPERATION_DATE", columnDefinition = "TIMESTAMP")
-    //$NON-NLS-1$
-    @DataItemName("Warehouse.OperationDate")
     public Date getOperationDate() {
         return this.OperationDate;
     }

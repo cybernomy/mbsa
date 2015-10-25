@@ -17,7 +17,6 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "WH_STOCK_KIND")
-@DataItemName("Warehouse.StockKind")
 public class StockKind extends com.mg.merp.core.model.AbstractEntity implements java.io.Serializable {
 
     private Integer Id;
@@ -41,7 +40,6 @@ public class StockKind extends com.mg.merp.core.model.AbstractEntity implements 
     @Id
     @GeneratedValue(strategy = SEQUENCE, generator = "generator")
     @Column(name = "ID", unique = true, columnDefinition = "INTEGER")
-    @DataItemName("ID")
     public Integer getId() {
         return this.Id;
     }
@@ -61,7 +59,6 @@ public class StockKind extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "CODE", columnDefinition = "CHAR", length = 20)
-    @DataItemName("Warehouse.StockKind.Code")
     public String getCode() {
         return this.Code;
     }
@@ -71,7 +68,6 @@ public class StockKind extends com.mg.merp.core.model.AbstractEntity implements 
     }
 
     @Column(name = "NAME", columnDefinition = "VARCHAR", length = 256)
-    @DataItemName("Warehouse.StockKind.Name")
     public String getName() {
         return this.Name;
     }
