@@ -33,12 +33,6 @@
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.mg.modules.data</groupId>
-			<artifactId>premodel</artifactId>
-			<version>4.0.8-SNAPSHOT</version>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
 			<groupId>com.mg.modules</groupId>
 			<artifactId>framework</artifactId>
 			<version>4.0.8-SNAPSHOT</version>

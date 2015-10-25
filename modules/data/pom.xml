@@ -18,7 +18,6 @@
   <description/>
 
   <modules>
-    <module>premodel</module>
     <module>model</module>
     <module>service</module>
   </modules>

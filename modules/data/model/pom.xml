@@ -56,47 +56,21 @@
 					</execution>
 				</executions>
 			</plugin-->
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>service-jar</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-						<configuration>
-							<classifier>service</classifier>
-						</configuration>
-					</execution>
-					<execution>
-						<id>interface-jar</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-						<configuration>
-							<classifier>interface</classifier>
-							<excludes>
-								<exclude>**/*.xml</exclude>
-							</excludes>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 	</build>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.hibernate</groupId>
-			<artifactId>hibernate-tools</artifactId>
-			<version>3.6.0.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>com.mg.modules.data</groupId>
-			<artifactId>premodel</artifactId>
-			<version>4.0.8-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
+<dependencies>
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate</artifactId>
+		<!-- scope>provided</scope-->
+	</dependency>
+
+	<dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-annotations</artifactId>
+		<!-- scope>provided</scope-->
+	</dependency>
+</dependencies>
+
 </project>

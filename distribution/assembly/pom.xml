@@ -45,16 +45,6 @@
     </dependency>
     <dependency>
       <groupId>com.mg.modules.data</groupId>
-      <artifactId>model</artifactId>
-      <classifier>service</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.modules.data</groupId>
-      <artifactId>model</artifactId>
-      <classifier>interface</classifier>
-    </dependency>
-    <dependency>
-      <groupId>com.mg.modules.data</groupId>
       <artifactId>service</artifactId>
       <type>jboss-har</type>
     </dependency>

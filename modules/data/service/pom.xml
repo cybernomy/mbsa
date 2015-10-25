@@ -42,7 +42,6 @@
     <dependency>
       <groupId>com.mg.modules.data</groupId>
       <artifactId>model</artifactId>
-      <classifier>service</classifier>
     </dependency>
     <dependency>
       <groupId>jboss</groupId>
