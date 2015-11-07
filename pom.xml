@@ -35,10 +35,10 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <maven.min.version>3.1.1</maven.min.version>
-    <compile.jdk.version>1.5</compile.jdk.version>
-    <compile.jdk.home>${java.6.home}</compile.jdk.home>
-    <compile.jdk.signature>java16-sun</compile.jdk.signature>
-    <compile.jdk.signature.version>1.10</compile.jdk.signature.version>
+    <compile.jdk.version>1.8</compile.jdk.version>
+    <compile.jdk.home>${java.8.home}</compile.jdk.home>
+    <compile.jdk.signature>java17</compile.jdk.signature>
+    <compile.jdk.signature.version>1.0</compile.jdk.signature.version>
     <skip.sanity.checks>false</skip.sanity.checks>
     <add.maven.descriptor>true</add.maven.descriptor>
 
@@ -381,7 +381,7 @@
             </dependency>
           </dependencies>
         </plugin>
-        <plugin>
+        <!--plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>animal-sniffer-maven-plugin</artifactId>
           <version>1.14</version>
@@ -394,7 +394,7 @@
             <skip>${skip.sanity.checks}</skip>
             <detail>true</detail>
           </configuration>
-        </plugin>
+        </plugin-->
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
@@ -466,7 +466,7 @@
           </execution>
         </executions>
       </plugin>
-      <plugin>
+      <!--plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>animal-sniffer-maven-plugin</artifactId>
         <executions>
@@ -478,7 +478,7 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
+      </plugin-->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>buildnumber-maven-plugin</artifactId>
@@ -1248,6 +1248,12 @@
         <groupId>jboss</groupId>
         <artifactId>jbpm-jpdl</artifactId>
         <version>3.2.3</version>
+        <scope>provided</scope>
+      </dependency>
+      <dependency>
+        <groupId>jgroups</groupId>
+		<artifactId>jgroups</artifactId>
+		<version>2.4.1</version>
         <scope>provided</scope>
       </dependency>
 

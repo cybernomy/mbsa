@@ -46,6 +46,10 @@
       <groupId>jboss</groupId>
       <artifactId>jboss-cache</artifactId>
     </dependency>
+    <dependency>
+		<groupId>jgroups</groupId>
+		<artifactId>jgroups</artifactId>
+	</dependency>
 
     <dependency>
       <groupId>xerces</groupId>
