@@ -15,9 +15,9 @@ or just http://www.m-g.ru/ and translate with chrome(I know you did it with taob
 
 This project is a try to give a new life for this useful platform.
 
-My/our goals are(plus mean done):
-+ Mavenization or gradlenization (you know, it's from gradle) and electrification of the whole country
-+ JDK upgrade to the newest stable
+My/our goals are:
+- DONE: Mavenization or gradlenization (you know, it's from gradle) and electrification of the whole country
+- DONE: JDK upgrade to the newest stable
 - Check english resources are ok, cos now only russian i18n resources are 100% valid
 - I would plan to make Postgresql as default DB, now it's.... it's firebird aaaaahahahhah (well 10 years ago it was cool enough). But actually I want it to be DB-agnostic.
 - Currently DB versioning works via custom tool, it must be definitely liquibase
