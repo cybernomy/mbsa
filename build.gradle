@@ -1,0 +1,75 @@
+List framework = [
+        "com.mg:framework-aux:1.0"
+]
+
+List jbossLibs = [
+        "jboss:jboss-system:" + jbossVersion,
+        "jboss:jboss-common:" + jbossVersion,
+        "jboss:jboss-jmx:" + jbossVersion,
+        "jboss:jboss-hibernate:" + jbossVersion,
+        "jboss:jboss-j2ee:" + jbossVersion,
+        "jboss:jboss-ejb3:" + jbossVersion,
+        "jboss:jboss-annotations-ejb3:" + jbossVersion
+]
+
+allprojects {
+//    apply plugin: 'java'
+
+    group = 'com.mg'
+    version = '4.0.8-SNAPSHOT'
+
+    repositories {
+        mavenLocal()
+        maven {
+            /*credentials {
+                username 'deployment'
+                password 'deployment'
+            }*/
+            url mavenRepoUrl
+        }
+        mavenCentral()
+    }
+}
+/*jar {
+    manifest {
+        attributes(
+                "Manifest-Version"          : "1.0",
+                "Created-By"                : vendor,
+//                "Specification-Title"       : appName,
+                "Specification-Version"     : version,
+                "Specification-Vendor"      : vendor,
+//                "Implementation-Title"      : appName,
+                "Implementation-Version"    : version,
+                "Implementation-Vendor"     : vendor,
+//                    "Class-Path"                : manifestClasspath
+        )
+    }
+}*/
+/*
+* Manifest-Version: 1.0
+Implementation-Vendor: Millennium Business Suite Anywhere
+Implementation-Title: MBSA::Modules::Framework
+Implementation-Version: 4.0.8-SNAPSHOT
+Implementation-Vendor-Id: com.mg.modules
+Built-By: axmet
+Build-Jdk: 1.6.0_45
+Class-Path: framework-aux-1.0.jar
+Created-By: Apache Maven 3.2.5
+Archiver-Version: Plexus Archiver
+
+Name: CI
+Build-Time: 21.10.2015 08:14:15
+System: Jenkins
+Url: http://quick.linkpc.net:8083/jenkins/job/mbsa/
+
+Name: SCM
+Source-Revision: 7d3e9
+Build-Version: 4.0.8-SNAPSHOT
+Branch: gradle
+Url: https://github.com/vporoxnenko/mbsa.git
+* */
+/*
+project('modules'){
+    group = 'com.mg.modules'
+}
+*/
