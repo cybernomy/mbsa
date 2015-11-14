@@ -37,8 +37,8 @@
     <maven.min.version>3.1.1</maven.min.version>
     <compile.jdk.version>1.8</compile.jdk.version>
     <compile.jdk.home>${java.8.home}</compile.jdk.home>
-    <compile.jdk.signature>java17</compile.jdk.signature>
-    <compile.jdk.signature.version>1.0</compile.jdk.signature.version>
+    <!-- compile.jdk.signature>java17</compile.jdk.signature>
+    <compile.jdk.signature.version>1.0</compile.jdk.signature.version-->
     <skip.sanity.checks>false</skip.sanity.checks>
     <add.maven.descriptor>true</add.maven.descriptor>
 
@@ -512,13 +512,6 @@
         <groupId>com.mg.modules.data</groupId>
         <artifactId>model</artifactId>
         <version>${project.version}</version>
-        <classifier>service</classifier>
-        <type>jar</type>
-      </dependency>
-      <dependency>
-        <groupId>com.mg.modules.data</groupId>
-        <artifactId>model</artifactId>
-        <version>${project.version}</version>
         <classifier>interface</classifier>
         <type>jar</type>
       </dependency>
@@ -526,7 +519,7 @@
         <groupId>com.mg.modules.data</groupId>
         <artifactId>service</artifactId>
         <version>${project.version}</version>
-        <type>jboss-har</type>
+        <type>har</type>
       </dependency>
       <dependency>
         <groupId>com.mg.modules.core</groupId>

@@ -18,29 +18,11 @@
 
   <build>
     <finalName>mdatawarehouse</finalName>
-    <resources>
-      <resource>
-        <directory>${src.dir}</directory>
-        <includes>
-          <include>**/*.xml</include>
-        </includes>
-        <targetPath>${project.build.outputDirectory}</targetPath>
-      </resource>
-    </resources>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
         <executions>
-          <execution>
-            <id>service-jar</id>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-            <configuration>
-              <classifier>service</classifier>
-            </configuration>
-          </execution>
           <execution>
             <id>interface-jar</id>
             <goals>
@@ -49,7 +31,7 @@
             <configuration>
               <classifier>interface</classifier>
               <excludes>
-                <exclude>**/*.xml</exclude>
+                <exclude>**/*.hbm.xml</exclude>
               </excludes>
             </configuration>
           </execution>
