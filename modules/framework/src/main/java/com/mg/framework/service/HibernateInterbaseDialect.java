@@ -15,7 +15,7 @@
 package com.mg.framework.service;
 
 import org.hibernate.dialect.InterbaseDialect;
-import org.hibernate.exception.ViolatedConstraintNameExtracter;
+import org.hibernate.exception.spi.ViolatedConstraintNameExtracter;
 
 /**
  * Диалект СУБД Interbase

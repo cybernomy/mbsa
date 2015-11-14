@@ -21,7 +21,7 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: OrderHead.java,v 1.7 2008/02/29 12:34:16 safonov Exp $
  */
 public class OrderHead extends com.mg.merp.document.model.DocHead implements
-    java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   // Fields
 

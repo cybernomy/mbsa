@@ -16,7 +16,7 @@ package com.mg.framework.service;
 
 import org.hibernate.dialect.FirebirdDialect;
 import org.hibernate.dialect.function.StandardSQLFunction;
-import org.hibernate.exception.ViolatedConstraintNameExtracter;
+import org.hibernate.exception.spi.ViolatedConstraintNameExtracter;
 
 /**
  * Диалект СУБД Firebird

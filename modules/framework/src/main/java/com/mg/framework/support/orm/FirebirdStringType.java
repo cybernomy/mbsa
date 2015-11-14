@@ -12,6 +12,7 @@
 package com.mg.framework.support.orm;
 
 import org.apache.commons.lang.StringUtils;
+import org.hibernate.engine.spi.SessionImplementor;
 import org.hibernate.type.StringType;
 
 import java.sql.ResultSet;
@@ -31,8 +32,8 @@ public class FirebirdStringType extends StringType {
    * @see org.hibernate.type.StringType#get(java.sql.ResultSet, java.lang.String)
    */
   @Override
-  public Object get(ResultSet rs, String name) throws SQLException {
-    String result = (String) super.get(rs, name);
+  public Object get(ResultSet rs, String name, SessionImplementor session) throws SQLException {
+    String result = (String) super.get(rs, name, session);
     return result == null ? null : StringUtils.stripEnd(result, null);
   }
 

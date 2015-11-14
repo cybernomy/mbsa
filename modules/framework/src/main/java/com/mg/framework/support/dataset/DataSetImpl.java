@@ -22,9 +22,8 @@ import com.mg.framework.support.dataset.sohlman.GroupCalc;
 import com.mg.framework.support.dataset.sohlman.RowContainer;
 import com.mg.framework.support.dataset.sohlman.RowInfo;
 
-import org.hibernate.util.FastHashMap;
-
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -114,7 +113,7 @@ public class DataSetImpl implements DataSet {
   @SuppressWarnings("unchecked")
   public void createHashTable(ArrayList<Integer> keyFields) {
     if (keyFields != null && !keyFields.isEmpty()) {
-      this.hashTable = new FastHashMap();
+      this.hashTable = new HashMap<>();
       this.indexFields = keyFields;
       for (int rowCount = 1; rowCount <= getRowCount(); rowCount++) {
         setRowIndex(rowCount, keyFields);
@@ -125,7 +124,7 @@ public class DataSetImpl implements DataSet {
   @SuppressWarnings("unchecked")
   public void setIndexFields(ArrayList<Integer> keyFields) {
     if (keyFields != null && !keyFields.isEmpty()) {
-      this.hashTable = new FastHashMap();
+      this.hashTable = new HashMap<>();
       this.indexFields = keyFields;
     } else
       throw new RuntimeException(ExcStrings.S_INDEX_NOT_EXIST);

@@ -95,6 +95,17 @@
     </dependencySet>
     <dependencySet>
       <useProjectArtifact>true</useProjectArtifact>
+      <outputDirectory>lib/thirdparties</outputDirectory>
+      <outputFileNameMapping>
+        ${artifact.build.finalName}.${artifact.extension}
+      </outputFileNameMapping>
+      <includes>
+        <include>org.hibernate:*:jar</include>
+      </includes>
+
+    </dependencySet>
+    <dependencySet>
+      <useProjectArtifact>true</useProjectArtifact>
       <outputDirectory>docs/</outputDirectory>
       <outputFileNameMapping>
         ${artifact.build.finalName}.${artifact.extension}

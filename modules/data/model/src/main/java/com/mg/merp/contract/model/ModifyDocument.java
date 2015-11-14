@@ -14,9 +14,9 @@
  */
 package com.mg.merp.contract.model;
 
-import com.mg.framework.api.annotations.DataItemName;
+import org.hibernate.bytecode.internal.javassist.FieldHandler;
 
-import org.hibernate.bytecode.javassist.FieldHandler;
+import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Модель бизнес-компонента "Изменения контракта"
@@ -25,7 +25,7 @@ import org.hibernate.bytecode.javassist.FieldHandler;
  * @version $Id: ModifyDocument.java,v 1.11 2008/02/29 12:27:35 safonov Exp $
  */
 public class ModifyDocument extends com.mg.framework.service.PersistentObjectHibernate
-    implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    implements java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   private FieldHandler fieldHandler;
 
@@ -67,14 +67,14 @@ public class ModifyDocument extends com.mg.framework.service.PersistentObjectHib
   }
 
   /* (non-Javadoc)
-   * @see org.hibernate.bytecode.javassist.FieldHandled#getFieldHandler()
+   * @see org.hibernate.bytecode.internal.javassist.FieldHandled#getFieldHandler()
    */
   public FieldHandler getFieldHandler() {
     return fieldHandler;
   }
 
   /* (non-Javadoc)
-   * @see org.hibernate.bytecode.javassist.FieldHandled#setFieldHandler(org.hibernate.bytecode.javassist.FieldHandler)
+   * @see org.hibernate.bytecode.internal.javassist.FieldHandled#setFieldHandler(org.hibernate.bytecode.javassist.FieldHandler)
    */
   public void setFieldHandler(FieldHandler handler) {
     this.fieldHandler = handler;

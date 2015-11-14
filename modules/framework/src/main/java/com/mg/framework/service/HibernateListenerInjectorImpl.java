@@ -14,28 +14,31 @@
  */
 package com.mg.framework.service;
 
-import com.mg.framework.api.AttributeMap;
-import com.mg.framework.api.Logger;
-import com.mg.framework.api.orm.PersistentObject;
-import com.mg.framework.support.LocalDataTransferObject;
-import com.mg.framework.utils.ServerUtils;
+import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.management.ObjectName;
 
 import org.hibernate.cfg.Configuration;
-import org.hibernate.engine.FilterDefinition;
-import org.hibernate.event.PostDeleteEvent;
-import org.hibernate.event.PostDeleteEventListener;
-import org.hibernate.event.PostInsertEvent;
-import org.hibernate.event.PostInsertEventListener;
-import org.hibernate.event.PostLoadEvent;
-import org.hibernate.event.PostLoadEventListener;
-import org.hibernate.event.PostUpdateEvent;
-import org.hibernate.event.PostUpdateEventListener;
-import org.hibernate.event.PreDeleteEvent;
-import org.hibernate.event.PreDeleteEventListener;
-import org.hibernate.event.PreInsertEvent;
-import org.hibernate.event.PreInsertEventListener;
-import org.hibernate.event.PreUpdateEvent;
-import org.hibernate.event.PreUpdateEventListener;
+import org.hibernate.engine.spi.FilterDefinition;
+import org.hibernate.event.service.spi.EventListenerGroup;
+import org.hibernate.event.service.spi.EventListenerRegistry;
+import org.hibernate.event.spi.EventType;
+import org.hibernate.event.spi.PostDeleteEvent;
+import org.hibernate.event.spi.PostDeleteEventListener;
+import org.hibernate.event.spi.PostInsertEvent;
+import org.hibernate.event.spi.PostInsertEventListener;
+import org.hibernate.event.spi.PostLoadEvent;
+import org.hibernate.event.spi.PostLoadEventListener;
+import org.hibernate.event.spi.PostUpdateEvent;
+import org.hibernate.event.spi.PostUpdateEventListener;
+import org.hibernate.event.spi.PreDeleteEvent;
+import org.hibernate.event.spi.PreDeleteEventListener;
+import org.hibernate.event.spi.PreInsertEvent;
+import org.hibernate.event.spi.PreInsertEventListener;
+import org.hibernate.event.spi.PreUpdateEvent;
+import org.hibernate.event.spi.PreUpdateEventListener;
 import org.hibernate.persister.entity.EntityPersister;
 import org.hibernate.type.IntegerType;
 import org.hibernate.type.Type;
@@ -45,11 +48,11 @@ import org.jboss.hibernate.jmx.HibernateMBean;
 import org.jboss.mx.util.MBeanProxyExt;
 import org.jboss.system.server.ServerConfigLocator;
 
-import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.management.ObjectName;
+import com.mg.framework.api.AttributeMap;
+import com.mg.framework.api.Logger;
+import com.mg.framework.api.orm.PersistentObject;
+import com.mg.framework.support.LocalDataTransferObject;
+import com.mg.framework.utils.ServerUtils;
 
 /**
  * Реализация "слушателя" событий Hibernate
@@ -106,132 +109,211 @@ public class HibernateListenerInjectorImpl implements ListenerInjector {
    */
   public void injectListeners(ObjectName objectName, Configuration configuration)
       throws DeploymentException {
-    configuration.setListener("pre-insert", new PreInsertEventListener() {
+	  appendListeners(EventType.PRE_INSERT, new PreInsertEventListener() {
 
-      public boolean onPreInsert(PreInsertEvent event) {
-        Object entity = event.getEntity();
-        if (!(entity instanceof PersistentObject))
-          return false;
+			public boolean onPreInsert(PreInsertEvent event) {
+				Object entity = event.getEntity();
+				if (!(entity instanceof PersistentObject))
+					return false;
 
-        setGlobalAttributes((PersistentObject) entity, event.getState(), event.getPersister().getPropertyNames());
+				setGlobalAttributes((PersistentObject) entity,
+						event.getState(), event.getPersister()
+								.getPropertyNames());
 
-        EntityInterceptorManagerLocator.locate().invokeOnPrePersistInterceptor((PersistentObject) entity);
-        setUpdatedAttributes((PersistentObject) entity, event.getState(), event.getPersister());
-        return false;
-      }
+				EntityInterceptorManagerLocator.locate()
+						.invokeOnPrePersistInterceptor(
+								(PersistentObject) entity);
+				setUpdatedAttributes((PersistentObject) entity,
+						event.getState(), event.getPersister());
+				return false;
+			}
 
-    });
-    configuration.setListener("post-insert", new PostInsertEventListener() {
+		});
+		appendListeners(EventType.POST_INSERT, new PostInsertEventListener() {
 
-      public void onPostInsert(PostInsertEvent event) {
-        Object entity = event.getEntity();
-        if (!(entity instanceof PersistentObject))
-          return;
+			public void onPostInsert(PostInsertEvent event) {
+				Object entity = event.getEntity();
+				if (!(entity instanceof PersistentObject))
+					return;
 
-        EntityInterceptorManagerLocator.locate().invokeOnPostPersistInterceptor((PersistentObject) entity);
-      }
+				EntityInterceptorManagerLocator.locate()
+						.invokeOnPostPersistInterceptor(
+								(PersistentObject) entity);
+			}
 
-    });
-    configuration.setListener("post-commit-insert", new PostInsertEventListener() {
+			@Override
+			public boolean requiresPostCommitHanding(EntityPersister persister) {
+				return true;
+			}
 
-      public void onPostInsert(PostInsertEvent event) {
-        DatabaseAuditServiceLocator.locate().auditCreate(event);
+		});
 
-        Object entity = event.getEntity();
-        if (!(entity instanceof PersistentObject))
-          return;
+		appendListeners(EventType.POST_COMMIT_INSERT,
+				new PostInsertEventListener() {
 
-        EntityInterceptorManagerLocator.locate().invokeOnPostCommitPersistInterceptor((PersistentObject) entity);
-      }
+					public void onPostInsert(PostInsertEvent event) {
+						DatabaseAuditServiceLocator.locate().auditCreate(event);
 
-    });
-    configuration.setListener("pre-delete", new PreDeleteEventListener() {
+						Object entity = event.getEntity();
+						if (!(entity instanceof PersistentObject))
+							return;
 
-      public boolean onPreDelete(PreDeleteEvent event) {
-        Object entity = event.getEntity();
-        if (!(entity instanceof PersistentObject))
-          return false;
+						EntityInterceptorManagerLocator.locate()
+								.invokeOnPostCommitPersistInterceptor(
+										(PersistentObject) entity);
+					}
 
-        EntityInterceptorManagerLocator.locate().invokeOnPreRemoveInterceptor((PersistentObject) entity);
-        return false;
-      }
+					@Override
+					public boolean requiresPostCommitHanding(
+							EntityPersister persister) {
+						return true;
+					}
 
-    });
-    configuration.setListener("post-delete", new PostDeleteEventListener() {
+				});
 
-      public void onPostDelete(PostDeleteEvent event) {
-        Object entity = event.getEntity();
-        if (!(entity instanceof PersistentObject))
-          return;
+		appendListeners(EventType.PRE_DELETE, new PreDeleteEventListener() {
 
-        EntityInterceptorManagerLocator.locate().invokeOnPostRemoveInterceptor((PersistentObject) entity);
-      }
+			public boolean onPreDelete(PreDeleteEvent event) {
+				Object entity = event.getEntity();
+				if (!(entity instanceof PersistentObject))
+					return false;
 
-    });
-    configuration.setListener("post-commit-delete", new PostDeleteEventListener() {
+				EntityInterceptorManagerLocator
+						.locate()
+						.invokeOnPreRemoveInterceptor((PersistentObject) entity);
+				return false;
+			}
 
-      public void onPostDelete(PostDeleteEvent event) {
-        DatabaseAuditServiceLocator.locate().auditRemove(event);
+		});
 
-        Object entity = event.getEntity();
-        if (!(entity instanceof PersistentObject))
-          return;
+		appendListeners(EventType.POST_DELETE, new PostDeleteEventListener() {
 
-        EntityInterceptorManagerLocator.locate().invokeOnPostCommitRemoveInterceptor((PersistentObject) entity);
-      }
+			public void onPostDelete(PostDeleteEvent event) {
+				Object entity = event.getEntity();
+				if (!(entity instanceof PersistentObject))
+					return;
 
-    });
-    configuration.setListener("pre-update", new PreUpdateEventListener() {
+				EntityInterceptorManagerLocator.locate()
+						.invokeOnPostRemoveInterceptor(
+								(PersistentObject) entity);
+			}
 
-      public boolean onPreUpdate(PreUpdateEvent event) {
-        Object entity = event.getEntity();
-        if (!(entity instanceof PersistentObject))
-          return false;
+			@Override
+			public boolean requiresPostCommitHanding(EntityPersister persister) {
+				return true;
+			}
 
-        setGlobalAttributes((PersistentObject) entity, event.getState(), event.getPersister().getPropertyNames());
+		});
 
-        EntityInterceptorManagerLocator.locate().invokeOnPreUpdateInterceptor((PersistentObject) entity, createAttributesMap(event.getPersister().getPropertyNames(), event.getOldState()));
-        setUpdatedAttributes((PersistentObject) entity, event.getState(), event.getPersister());
-        return false;
-      }
+		appendListeners(EventType.POST_COMMIT_DELETE,
+				new PostDeleteEventListener() {
 
-    });
-    configuration.setListener("post-update", new PostUpdateEventListener() {
+					public void onPostDelete(PostDeleteEvent event) {
+						DatabaseAuditServiceLocator.locate().auditRemove(event);
 
-      public void onPostUpdate(PostUpdateEvent event) {
-        Object entity = event.getEntity();
-        if (!(entity instanceof PersistentObject))
-          return;
+						Object entity = event.getEntity();
+						if (!(entity instanceof PersistentObject))
+							return;
 
-        EntityInterceptorManagerLocator.locate().invokeOnPostUpdateInterceptor((PersistentObject) entity, createAttributesMap(event.getPersister().getPropertyNames(), event.getOldState()));
-        setUpdatedAttributes((PersistentObject) entity, event.getState(), event.getPersister());
-      }
+						EntityInterceptorManagerLocator.locate()
+								.invokeOnPostCommitRemoveInterceptor(
+										(PersistentObject) entity);
+					}
 
-    });
-    configuration.setListener("post-commit-update", new PostUpdateEventListener() {
+					@Override
+					public boolean requiresPostCommitHanding(
+							EntityPersister persister) {
+						return true;
+					}
 
-      public void onPostUpdate(PostUpdateEvent event) {
-        DatabaseAuditServiceLocator.locate().auditModify(event);
+				});
 
-        Object entity = event.getEntity();
-        if (!(entity instanceof PersistentObject))
-          return;
+		appendListeners(EventType.PRE_UPDATE, new PreUpdateEventListener() {
 
-        EntityInterceptorManagerLocator.locate().invokeOnPostCommitUpdateInterceptor((PersistentObject) entity, createAttributesMap(event.getPersister().getPropertyNames(), event.getOldState()));
-      }
+			public boolean onPreUpdate(PreUpdateEvent event) {
+				Object entity = event.getEntity();
+				if (!(entity instanceof PersistentObject))
+					return false;
 
-    });
-    configuration.setListener("post-load", new PostLoadEventListener() {
+				setGlobalAttributes((PersistentObject) entity,
+						event.getState(), event.getPersister()
+								.getPropertyNames());
 
-      public void onPostLoad(PostLoadEvent event) {
-        Object entity = event.getEntity();
-        if (!(entity instanceof PersistentObject))
-          return;
+				EntityInterceptorManagerLocator.locate()
+						.invokeOnPreUpdateInterceptor(
+								(PersistentObject) entity,
+								createAttributesMap(event.getPersister()
+										.getPropertyNames(), event
+										.getOldState()));
+				setUpdatedAttributes((PersistentObject) entity,
+						event.getState(), event.getPersister());
+				return false;
+			}
 
-        EntityInterceptorManagerLocator.locate().invokeOnPostLoadInterceptor((PersistentObject) entity);
-      }
+		});
 
-    });
+		appendListeners(EventType.POST_UPDATE, new PostUpdateEventListener() {
+
+			public void onPostUpdate(PostUpdateEvent event) {
+				Object entity = event.getEntity();
+				if (!(entity instanceof PersistentObject))
+					return;
+
+				EntityInterceptorManagerLocator.locate()
+						.invokeOnPostUpdateInterceptor(
+								(PersistentObject) entity,
+								createAttributesMap(event.getPersister()
+										.getPropertyNames(), event
+										.getOldState()));
+				setUpdatedAttributes((PersistentObject) entity,
+						event.getState(), event.getPersister());
+			}
+
+			@Override
+			public boolean requiresPostCommitHanding(EntityPersister persister) {
+				return true;
+			}
+
+		});
+
+		appendListeners(EventType.POST_COMMIT_UPDATE,
+				new PostUpdateEventListener() {
+
+					public void onPostUpdate(PostUpdateEvent event) {
+						DatabaseAuditServiceLocator.locate().auditModify(event);
+
+						Object entity = event.getEntity();
+						if (!(entity instanceof PersistentObject))
+							return;
+
+						EntityInterceptorManagerLocator.locate()
+								.invokeOnPostCommitUpdateInterceptor(
+										(PersistentObject) entity,
+										createAttributesMap(event
+												.getPersister()
+												.getPropertyNames(), event
+												.getOldState()));
+					}
+
+					@Override
+					public boolean requiresPostCommitHanding(
+							EntityPersister persister) {
+						return true;
+					}
+
+				});
+		appendListeners(EventType.POST_LOAD, new PostLoadEventListener() {
+
+			public void onPostLoad(PostLoadEvent event) {
+				Object entity = event.getEntity();
+				if (!(entity instanceof PersistentObject))
+					return;
+
+				EntityInterceptorManagerLocator.locate()
+						.invokeOnPostLoadInterceptor((PersistentObject) entity);
+			}
+
+		});
 
     //load workaround for http://issues.m-g.ru/bugzilla/show_bug.cgi?id=4413
     try {
@@ -257,10 +339,20 @@ public class HibernateListenerInjectorImpl implements ListenerInjector {
       logger.error("Install patch MBSA-4866 failed", e);
     }
 
+    //TODO: implement it
     //setup global tenant filter
-    Map<String, Object> paramTypes = new HashMap<String, Object>();
+    /*Map<String, Type> paramTypes = new HashMap<>();
     paramTypes.put("sysClientId", new IntegerType());
-    configuration.addFilterDefinition(new FilterDefinition("__mg_tenantFilter", "CLIENT_ID = :sysClientId", paramTypes));
+
+    PersistentManagerHibernateImpl.getFactory().
+    configuration.addFilterDefinition(new FilterDefinition("__mg_tenantFilter", "CLIENT_ID = :sysClientId", paramTypes));*/
   }
+
+	@SuppressWarnings("unchecked")
+	protected <T> void appendListeners(EventType<T> eventType, T listener) {
+		PersistentManagerHibernateImpl.getFactory().getServiceRegistry()
+				.getService(EventListenerRegistry.class)
+				.appendListeners(eventType, listener);
+	}
 
 }

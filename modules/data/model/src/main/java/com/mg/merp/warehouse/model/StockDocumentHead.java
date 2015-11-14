@@ -21,7 +21,7 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: StockDocumentHead.java,v 1.6 2008/02/29 12:35:16 safonov Exp $
  */
 public class StockDocumentHead extends com.mg.merp.document.model.DocHead
-    implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    implements java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   // Fields
 

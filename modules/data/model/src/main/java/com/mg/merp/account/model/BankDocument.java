@@ -21,7 +21,7 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: BankDocument.java,v 1.8 2008/02/29 12:31:40 safonov Exp $
  */
 public class BankDocument extends com.mg.merp.document.model.DocHead implements
-    java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   // Fields
 

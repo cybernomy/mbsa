@@ -15,6 +15,7 @@
 package com.mg.framework.support.orm;
 
 import org.hibernate.HibernateException;
+import org.hibernate.engine.spi.SessionImplementor;
 import org.hibernate.usertype.EnhancedUserType;
 import org.hibernate.usertype.ParameterizedType;
 
@@ -66,20 +67,23 @@ public class EnumUserType implements EnhancedUserType, ParameterizedType {
     return false;
   }
 
-  public Object nullSafeGet(ResultSet rs, String[] names, Object owner)
-      throws HibernateException, SQLException {
-    short ordinal = rs.getShort(names[0]);
-    return rs.wasNull() ? null : enumClass.getEnumConstants()[ordinal];
-  }
+	@Override
+	public Object nullSafeGet(ResultSet rs, String[] names,
+			SessionImplementor session, Object owner)
+			throws HibernateException, SQLException {
+		short ordinal = rs.getShort(names[0]);
+		return rs.wasNull() ? null : enumClass.getEnumConstants()[ordinal];
+	}
 
-  public void nullSafeSet(PreparedStatement st, Object value, int index)
-      throws HibernateException, SQLException {
-    if (value == null) {
-      st.setNull(index, Types.SMALLINT);
-    } else {
-      st.setShort(index, (short) ((Enum) value).ordinal());
-    }
-  }
+	@Override
+	public void nullSafeSet(PreparedStatement st, Object value, int index,
+			SessionImplementor session) throws HibernateException, SQLException {
+		if (value == null) {
+			st.setNull(index, Types.SMALLINT);
+		} else {
+			st.setShort(index, (short) ((Enum) value).ordinal());
+		}
+	}
 
   public Object replace(Object original, Object target, Object owner)
       throws HibernateException {

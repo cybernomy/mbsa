@@ -16,7 +16,7 @@ package com.mg.merp.reference.model;
 
 import com.mg.framework.api.annotations.DataItemName;
 
-import org.hibernate.bytecode.javassist.FieldHandler;
+import org.hibernate.bytecode.internal.javassist.FieldHandler;
 
 /**
  * @author hbm2java
@@ -25,7 +25,7 @@ import org.hibernate.bytecode.javassist.FieldHandler;
 @DataItemName("Reference.OriginalDocument")
 public class OriginalDocument extends
     com.mg.framework.service.PersistentObjectHibernate implements
-    java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   private FieldHandler fieldHandler;
 
@@ -65,14 +65,14 @@ public class OriginalDocument extends
   }
 
   /* (non-Javadoc)
-   * @see org.hibernate.bytecode.javassist.FieldHandled#getFieldHandler()
+   * @see org.hibernate.bytecode.internal.javassist.FieldHandled#getFieldHandler()
    */
   public FieldHandler getFieldHandler() {
     return fieldHandler;
   }
 
   /* (non-Javadoc)
-   * @see org.hibernate.bytecode.javassist.FieldHandled#setFieldHandler(org.hibernate.bytecode.javassist.FieldHandler)
+   * @see org.hibernate.bytecode.internal.javassist.FieldHandled#setFieldHandler(org.hibernate.bytecode.javassist.FieldHandler)
    */
   public void setFieldHandler(FieldHandler handler) {
     this.fieldHandler = handler;

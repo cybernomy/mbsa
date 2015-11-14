@@ -21,7 +21,7 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: CashDocument.java,v 1.5 2008/02/29 12:32:24 safonov Exp $
  */
 public class CashDocument extends com.mg.merp.document.model.DocHead implements
-    java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   // Fields
 

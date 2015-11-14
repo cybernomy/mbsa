@@ -11,12 +11,12 @@
  */
 package com.mg.framework.service.jboss;
 
-import com.mg.framework.service.DatabaseAuditServiceImpl;
-
-import org.hibernate.event.PostDeleteEvent;
-import org.hibernate.event.PostInsertEvent;
-import org.hibernate.event.PostUpdateEvent;
+import org.hibernate.event.spi.PostDeleteEvent;
+import org.hibernate.event.spi.PostInsertEvent;
+import org.hibernate.event.spi.PostUpdateEvent;
 import org.jboss.system.ServiceMBeanSupport;
+
+import com.mg.framework.service.DatabaseAuditServiceImpl;
 
 /**
  * Реализация сервиса аудита хранилища данных

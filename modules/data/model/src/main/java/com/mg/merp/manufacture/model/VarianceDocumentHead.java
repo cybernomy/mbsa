@@ -20,7 +20,7 @@ package com.mg.merp.manufacture.model;
  * @version $Id: VarianceDocumentHead.java,v 1.6 2008/02/29 12:35:31 safonov Exp $
  */
 public class VarianceDocumentHead extends com.mg.merp.document.model.DocHead
-    implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    implements java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   // Fields
 

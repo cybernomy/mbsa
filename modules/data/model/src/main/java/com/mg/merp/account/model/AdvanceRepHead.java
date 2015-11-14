@@ -22,7 +22,7 @@ import com.mg.framework.api.annotations.DataItemName;
  * @author hbm2java
  * @version $Id: AdvanceRepHead.java,v 1.7 2008/03/12 11:17:30 alikaev Exp $
  */
-public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+public class AdvanceRepHead extends com.mg.merp.document.model.DocHead implements java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   // Fields
 

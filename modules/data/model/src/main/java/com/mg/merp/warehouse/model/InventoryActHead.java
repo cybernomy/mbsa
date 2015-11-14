@@ -21,7 +21,7 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: InventoryActHead.java,v 1.6 2008/02/29 12:33:44 safonov Exp $
  */
 public class InventoryActHead extends com.mg.merp.document.model.DocHead
-    implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    implements java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   // Fields
 

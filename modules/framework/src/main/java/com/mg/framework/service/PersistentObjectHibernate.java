@@ -14,6 +14,18 @@
  */
 package com.mg.framework.service;
 
+import java.io.Serializable;
+import java.lang.reflect.Method;
+import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.bytecode.instrumentation.spi.LazyPropertyInitializer;
+import org.hibernate.criterion.Restrictions;
+import org.hibernate.engine.spi.SessionImplementor;
+
 import com.mg.framework.api.AttributeMap;
 import com.mg.framework.api.Logger;
 import com.mg.framework.api.metadata.CustomFieldsManager;
@@ -24,18 +36,6 @@ import com.mg.framework.utils.BeanUtils;
 import com.mg.framework.utils.ReflectionUtils;
 import com.mg.framework.utils.ServerUtils;
 import com.mg.framework.utils.StringUtils;
-
-import org.hibernate.EntityMode;
-import org.hibernate.SessionFactory;
-import org.hibernate.criterion.Restrictions;
-import org.hibernate.intercept.LazyPropertyInitializer;
-
-import java.io.Serializable;
-import java.lang.reflect.Method;
-import java.math.BigDecimal;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
 
 /**
  * @author Oleg V. Safonov $Id: PersistentObjectHibernate.java,v 1.19 2009/02/09 14:24:33 safonov
@@ -48,43 +48,6 @@ public class PersistentObjectHibernate implements PersistentObject, EntityCustom
   private static SessionFactory getFactory() {
     return PersistentManagerHibernateImpl.getFactory();
   }
-
-  private static EntityMode getEntityMode() {
-    return EntityMode.POJO;
-  }
-
-//	private static Object getAttr(Class clazz, Object object, String name) throws HibernateException {
-//		org.hibernate.metadata.ClassMetadata meta = getFactory().getClassMetadata(clazz);
-//		if (meta.getIdentifierPropertyName().equals(name))
-//			return meta.getIdentifier(object, getEntityMode());
-//		else
-//			return meta.getPropertyValue(object, name, getEntityMode());
-//	}
-
-//	private static void setAttr(Class clazz, Object object, String name, Object value) throws HibernateException {
-//		org.hibernate.metadata.ClassMetadata meta = getFactory().getClassMetadata(clazz);
-//		if (meta.getIdentifierPropertyName().equals(name)) {
-//			/*Serializable ident;
-//			if (value instanceof Integer)
-//				ident = new Long(((Integer) value).longValue());
-//			else
-//				ident = (Serializable) value;
-//			meta.setIdentifier(object, ident, getEntityMode());*/
-//		}
-//		else
-//			meta.setPropertyValue(object, name, value, getEntityMode());
-//	}
-
-    /*public PersistentObjectHibernate() {
-        try {
-            Field fld = this.getClass().getField("SysClient");
-            fld.setAccessible(true);
-            fld.set(this, 1);
-        } catch (NoSuchFieldException e) {
-        } catch (IllegalArgumentException e) {
-        } catch (IllegalAccessException e) {
-        }
-    }*/
 
   private static Method getGetterMethod(Class<?> clazz, String propertyName) {
     return ReflectionUtils.findGetter(clazz, propertyName);
@@ -101,7 +64,6 @@ public class PersistentObjectHibernate implements PersistentObject, EntityCustom
         || "com.mg.merp.document.model.DocType".equals(className) && "Code".equals(propertyName); //doctype
   }
 
-  @SuppressWarnings("unchecked")
   private static Object castValueType(Class<?> clazz, Object value) {
     if (((short.class.isAssignableFrom(clazz)) || (Short.class.isAssignableFrom(clazz)))
         && !(value instanceof Short)) {
@@ -131,7 +93,8 @@ public class PersistentObjectHibernate implements PersistentObject, EntityCustom
       else
         return null;
     } else if (Enum.class.isAssignableFrom(clazz) && !(value instanceof Enum)) {
-      Class<? extends Enum> enumClass = clazz.asSubclass(Enum.class);
+      @SuppressWarnings("rawtypes")
+	Class<? extends Enum> enumClass = clazz.asSubclass(Enum.class);
       int ordinal = -1;
       if (value instanceof Short)
         ordinal = ((Short) value).intValue();
@@ -351,7 +314,7 @@ public class PersistentObjectHibernate implements PersistentObject, EntityCustom
   public AttributeMap getAllAttributes() {
     org.hibernate.metadata.ClassMetadata meta = getFactory().getClassMetadata(ReflectionUtils.getEntityClass(this));
     String[] props = meta.getPropertyNames();
-    Object[] values = meta.getPropertyValues(this, getEntityMode());
+    Object[] values = meta.getPropertyValues(this);
     AttributeMap result = new com.mg.framework.support.LocalDataTransferObject();
     for (int i = 0; i < props.length; i++) {
       if (values[i] == LazyPropertyInitializer.UNFETCHED_PROPERTY) {
@@ -363,7 +326,7 @@ public class PersistentObjectHibernate implements PersistentObject, EntityCustom
       result.put(props[i], values[i]);
     }
     //put identifier
-    result.put(meta.getIdentifierPropertyName(), meta.getIdentifier(this, getEntityMode()));
+    result.put(meta.getIdentifierPropertyName(), meta.getIdentifier(this, (SessionImplementor)getFactory().getCurrentSession()));
     //put custom fields
     if (customFieldsStorage != null)
       result.putAll(customFieldsStorage.getValues());
@@ -392,13 +355,13 @@ public class PersistentObjectHibernate implements PersistentObject, EntityCustom
       Class<PersistentObjectHibernate> clazz = ReflectionUtils.getEntityClass(this);
       result = clazz.newInstance();
       org.hibernate.metadata.ClassMetadata meta = getFactory().getClassMetadata(clazz);
-      Object[] values = meta.getPropertyValues(this, getEntityMode());
+      Object[] values = meta.getPropertyValues(this);
       //удалим коллекции, Hibernate ругается когда шарится одна коллекция между разными сущностями
       org.hibernate.type.Type[] types = meta.getPropertyTypes();
       for (int i = 0; i < types.length; i++)
         if (types[i].isCollectionType())
           values[i] = null;
-      meta.setPropertyValues(result, values, getEntityMode());
+      meta.setPropertyValues(result, values);
       result.setAttributes(attributes);
     } catch (InstantiationException e) {
       log.error("clone entity failed", e);

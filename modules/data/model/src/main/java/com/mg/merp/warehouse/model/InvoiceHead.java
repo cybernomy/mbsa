@@ -23,7 +23,7 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: InvoiceHead.java,v 1.9 2008/02/29 12:33:59 safonov Exp $
  */
 @DataItemName("Warehouse.InvoiceHead") //$NON-NLS-1$
-public class InvoiceHead extends com.mg.merp.document.model.DocHead implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+public class InvoiceHead extends com.mg.merp.document.model.DocHead implements java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   // Fields
 

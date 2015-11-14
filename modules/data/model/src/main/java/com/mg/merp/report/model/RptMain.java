@@ -22,7 +22,7 @@ import com.mg.framework.utils.ServerUtils;
 import com.mg.framework.utils.StringUtils;
 import com.mg.merp.core.model.SysClass;
 
-import org.hibernate.bytecode.javassist.FieldHandler;
+import org.hibernate.bytecode.internal.javassist.FieldHandler;
 
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -33,7 +33,7 @@ import java.util.List;
  * @version $Id: RptMain.java,v 1.20 2008/03/28 06:26:43 safonov Exp $
  */
 public class RptMain extends com.mg.framework.service.PersistentObjectHibernate
-    implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    implements java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   private FieldHandler fieldHandler;
 
@@ -89,14 +89,14 @@ public class RptMain extends com.mg.framework.service.PersistentObjectHibernate
   }
 
   /* (non-Javadoc)
-   * @see org.hibernate.bytecode.javassist.FieldHandled#getFieldHandler()
+   * @see org.hibernate.bytecode.internal.javassist.FieldHandled#getFieldHandler()
    */
   public FieldHandler getFieldHandler() {
     return fieldHandler;
   }
 
   /* (non-Javadoc)
-   * @see org.hibernate.bytecode.javassist.FieldHandled#setFieldHandler(org.hibernate.bytecode.javassist.FieldHandler)
+   * @see org.hibernate.bytecode.internal.javassist.FieldHandled#setFieldHandler(org.hibernate.bytecode.javassist.FieldHandler)
    */
   public void setFieldHandler(FieldHandler handler) {
     this.fieldHandler = handler;

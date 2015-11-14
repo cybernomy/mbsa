@@ -11,23 +11,6 @@
  */
 package com.mg.framework.service;
 
-import com.mg.framework.api.Logger;
-import com.mg.framework.api.orm.DatabaseAuditType;
-import com.mg.framework.api.orm.EntityAuditEvent;
-import com.mg.framework.api.orm.OrmTemplate;
-import com.mg.framework.api.orm.PersistentObject;
-import com.mg.framework.utils.JmsUtils;
-import com.mg.framework.utils.ServerUtils;
-
-import org.apache.commons.lang.ArrayUtils;
-import org.hibernate.EntityMode;
-import org.hibernate.event.PostDeleteEvent;
-import org.hibernate.event.PostInsertEvent;
-import org.hibernate.event.PostUpdateEvent;
-import org.hibernate.metadata.ClassMetadata;
-import org.hibernate.pretty.MessageHelper;
-import org.hibernate.type.Type;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -38,6 +21,24 @@ import java.util.concurrent.locks.ReadWriteLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 import javax.transaction.Status;
+
+import org.apache.commons.lang.ArrayUtils;
+import org.hibernate.EntityMode;
+import org.hibernate.engine.spi.SessionImplementor;
+import org.hibernate.event.spi.PostDeleteEvent;
+import org.hibernate.event.spi.PostInsertEvent;
+import org.hibernate.event.spi.PostUpdateEvent;
+import org.hibernate.metadata.ClassMetadata;
+import org.hibernate.pretty.MessageHelper;
+import org.hibernate.type.Type;
+
+import com.mg.framework.api.Logger;
+import com.mg.framework.api.orm.DatabaseAuditType;
+import com.mg.framework.api.orm.EntityAuditEvent;
+import com.mg.framework.api.orm.OrmTemplate;
+import com.mg.framework.api.orm.PersistentObject;
+import com.mg.framework.utils.JmsUtils;
+import com.mg.framework.utils.ServerUtils;
 
 /**
  * Реализация сервиса аудита хранилища данных
@@ -116,7 +117,7 @@ public class DatabaseAuditServiceImpl {
 
   private String entityPropertyToString(Object state, ClassMetadata metadata) {
     if (state != null) {
-      Serializable id = metadata.getIdentifier(state, EntityMode.POJO);
+      Serializable id = metadata.getIdentifier(state, (SessionImplementor) PersistentManagerHibernateImpl.getFactory().getCurrentSession());
       return MessageHelper.infoString(metadata.getEntityName(), id);
     } else
       return null;

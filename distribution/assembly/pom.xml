@@ -546,5 +546,29 @@
       <groupId>com.mg</groupId>
       <artifactId>framework-aux</artifactId>
     </dependency>
+
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+      </dependency>
+      <dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-entitymanager</artifactId>
+      </dependency>
+      <dependency>
+		<groupId>org.hibernate</groupId>
+		<artifactId>hibernate-ehcache</artifactId>
+	  </dependency>
+	  <dependency>
+		<groupId>net.sf.ehcache</groupId>
+		<artifactId>ehcache-core</artifactId>
+		<version>2.4.3</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.jboss.logging</groupId>
+	  <artifactId>jboss-logging</artifactId>
+	  <version>3.3.0.Final</version>
+    </dependency>
+
   </dependencies>
 </project>

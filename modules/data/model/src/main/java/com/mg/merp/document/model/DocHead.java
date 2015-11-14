@@ -14,9 +14,9 @@
  */
 package com.mg.merp.document.model;
 
-import com.mg.framework.api.annotations.DataItemName;
+import org.hibernate.bytecode.internal.javassist.FieldHandler;
 
-import org.hibernate.bytecode.javassist.FieldHandler;
+import com.mg.framework.api.annotations.DataItemName;
 
 /**
  * Объектная модель документов
@@ -26,7 +26,7 @@ import org.hibernate.bytecode.javassist.FieldHandler;
  */
 @DataItemName("Document.DocHead")
 public class DocHead extends com.mg.framework.service.PersistentObjectHibernate
-    implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    implements java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   public final static int DOCNUMBER_LENGTH = 20;
 
@@ -136,14 +136,14 @@ public class DocHead extends com.mg.framework.service.PersistentObjectHibernate
   }
 
   /* (non-Javadoc)
-   * @see org.hibernate.bytecode.javassist.FieldHandled#getFieldHandler()
+   * @see org.hibernate.bytecode.internal.javassist.FieldHandled#getFieldHandler()
    */
   public FieldHandler getFieldHandler() {
     return fieldHandler;
   }
 
   /* (non-Javadoc)
-   * @see org.hibernate.bytecode.javassist.FieldHandled#setFieldHandler(org.hibernate.bytecode.javassist.FieldHandler)
+   * @see org.hibernate.bytecode.internal.javassist.FieldHandled#setFieldHandler(org.hibernate.bytecode.javassist.FieldHandler)
    */
   public void setFieldHandler(FieldHandler handler) {
     this.fieldHandler = handler;

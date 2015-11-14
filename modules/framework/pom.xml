@@ -84,5 +84,17 @@
       <artifactId>dom4j</artifactId>
       <scope>provided</scope>
     </dependency>
+
+    <dependency>
+	  <groupId>org.hibernate</groupId>
+	  <artifactId>hibernate-ehcache</artifactId>
+	  <scope>provided</scope>
+	</dependency>
+
+<dependency>
+	<groupId>org.jboss.logging</groupId>
+	<artifactId>jboss-logging</artifactId>
+	<version>3.0.1.GA</version>
+</dependency>
   </dependencies>
 </project>

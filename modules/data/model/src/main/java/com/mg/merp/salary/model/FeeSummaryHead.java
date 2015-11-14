@@ -21,7 +21,7 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: FeeSummaryHead.java,v 1.5 2008/02/29 12:33:10 safonov Exp $
  */
 public class FeeSummaryHead extends com.mg.merp.document.model.DocHead
-    implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    implements java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   // Fields
 

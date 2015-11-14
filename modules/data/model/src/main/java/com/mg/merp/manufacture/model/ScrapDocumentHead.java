@@ -21,7 +21,7 @@ import com.mg.framework.api.annotations.DataItemName;
  * @version $Id: ScrapDocumentHead.java,v 1.6 2008/02/29 12:35:00 safonov Exp $
  */
 public class ScrapDocumentHead extends com.mg.merp.document.model.DocHead
-    implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+    implements java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   // Fields
 

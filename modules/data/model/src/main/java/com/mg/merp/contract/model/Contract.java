@@ -24,7 +24,7 @@ import java.math.BigDecimal;
  * @author Artem V. Sharapov
  * @version $Id: Contract.java,v 1.12 2008/09/22 10:03:59 sharapov Exp $
  */
-public class Contract extends com.mg.merp.document.model.DocHead implements java.io.Serializable, org.hibernate.bytecode.javassist.FieldHandled {
+public class Contract extends com.mg.merp.document.model.DocHead implements java.io.Serializable, org.hibernate.bytecode.internal.javassist.FieldHandled {
 
   // Fields
 

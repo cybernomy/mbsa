@@ -181,7 +181,7 @@
     </attribute>
 
     <attribute name="CacheProviderClass">
-      com.mg.framework.service.HibernateTreeCacheProvider
+      net.sf.ehcache.hibernate.SingletonEhCacheProvider
     </attribute>
 
     <attribute name="QueryCacheEnabled">True</attribute>

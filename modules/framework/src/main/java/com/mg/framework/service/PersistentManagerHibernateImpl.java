@@ -35,6 +35,7 @@ import org.hibernate.PersistentObjectException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.TypeMismatchException;
+import org.hibernate.engine.spi.SessionFactoryImplementor;
 
 import java.io.Serializable;
 
@@ -73,9 +74,9 @@ public class PersistentManagerHibernateImpl implements PersistentManager, Serial
    *
    * @return фабрика сессий
    */
-  public static SessionFactory getFactory() {
+  public static SessionFactoryImplementor getFactory() {
     try {
-      return ContextUtils.lookup(PersistentManagerHibernateImpl.SESSION_FACTORY_NAME, SessionFactory.class);
+      return ContextUtils.lookup(PersistentManagerHibernateImpl.SESSION_FACTORY_NAME, SessionFactoryImplementor.class);
     } catch (NamingException e) {
       throw new RuntimeException("Unable to locate SessionFactory in JNDI under name [" + PersistentManagerHibernateImpl.SESSION_FACTORY_NAME + "]", e);
     }
