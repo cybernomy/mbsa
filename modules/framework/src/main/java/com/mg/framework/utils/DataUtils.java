@@ -190,7 +190,7 @@ public class DataUtils {
    * @param clazz тип результата
    * @return значение
    */
-  @SuppressWarnings("unchecked")
+  @SuppressWarnings({ "unchecked", "rawtypes" })
   public static Object stringToValue(String str, Class<?> clazz) {
     if (str == null || clazz == null || String.class.isAssignableFrom(clazz))
       return str;
@@ -227,7 +227,7 @@ public class DataUtils {
         return str;
       }
     else if (Enum.class.isAssignableFrom(clazz))
-      return Enum.valueOf(clazz.asSubclass(Enum.class), str);
+      return Enum.valueOf((Class<Enum>) clazz, str);
     else if (Byte.class.isAssignableFrom(clazz) || Byte.TYPE.equals(clazz))
       return Byte.valueOf(str);
     else
