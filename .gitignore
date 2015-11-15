@@ -33,6 +33,7 @@ local.properties
 *.war
 *.ear
 hs_err_pid*
+rebel.xml
 
 ### Maven
 target/
