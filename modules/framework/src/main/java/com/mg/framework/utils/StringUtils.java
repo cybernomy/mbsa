@@ -16,6 +16,8 @@ package com.mg.framework.utils;
 
 import org.apache.commons.codec.binary.Base64;
 
+import com.mg.framework.api.InternalException;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
@@ -33,6 +35,7 @@ import java.util.StringTokenizer;
  * Misc String Utility Functions
  *
  * @author Oleg V. Safonov
+ * @author Valentin A. Poroxnenko
  * @version $Id: StringUtils.java,v 1.7 2008/08/12 09:21:39 safonov Exp $
  */
 public class StringUtils {
@@ -517,6 +520,15 @@ public class StringUtils {
       return string;
     }
 
+  }
+
+  public static String iso2utf8(String msg) {
+	try {
+		return new String(msg.getBytes("ISO-8859-1"), "UTF-8");
+	} catch (UnsupportedEncodingException e) {
+		//actually it's impossible
+		throw new InternalException(e);
+	}
   }
 
   private static int convertChar(char c) {
