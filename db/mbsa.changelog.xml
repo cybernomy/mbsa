@@ -2148,7 +2148,7 @@
 			<column name="CONST_ID" remarks="Идентификатор константы"
 				type="INT" />
 			<column name="VAL" remarks="Значение в виде строки" type="VARCHAR(80)" />
-			<column name="STARTDATE" remarks="Дата начала действия" type="TIMESTAMP" />
+			<column name="STARTDATE" remarks="Дата начала действия" type="DATE" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -2231,7 +2231,7 @@
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="SYS_VERSION" type="TIMESTAMP"
+			<column name="SYS_VERSION" type="DATETIME"
 				defaultValueComputed="${now}" />
 		</createTable>
 	</changeSet>
@@ -2736,7 +2736,7 @@
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column defaultValueComputed="${now}" name="SYS_VERSION" type="TIMESTAMP" />
+			<column defaultValueComputed="${now}" name="SYS_VERSION" type="DATETIME" />
 			<column name="CUSTOMS_DECLARATION_ID" remarks="Идентификатор грузовой таможенной декларации"
 				type="INT" />
 			<column name="COUNTRY_OF_ORIGIN_ID" remarks="Идентификатор страны происхождения"
@@ -3018,7 +3018,7 @@
 			<column defaultValueNumeric="0" name="SUMNAT" remarks="Сумма"
 				type="numeric(15, 4)" />
 			<column defaultValueComputed="${now}" name="DATETIME"
-				remarks="Системная дата/время отработки" type="TIMESTAMP" />
+				remarks="Системная дата/время отработки" type="DATETIME" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -3051,7 +3051,7 @@
 				remarks="Признак постановки или снятия плана:&#13;&#10;0 - снятие с плана&#13;&#10;1 - постановка в план"
 				type="SMALLINT" />
 			<column defaultValueComputed="${now}" name="DATETIME"
-				remarks="Системная дата/время отработки" type="TIMESTAMP" />
+				remarks="Системная дата/время отработки" type="DATETIME" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -4145,7 +4145,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column defaultValueNumeric="0" name="MANUAL_DOC_NUMBER" type="SMALLINT" />
-			<column defaultValueComputed="${now}" name="SYS_VERSION" type="TIMESTAMP" />
+			<column defaultValueComputed="${now}" name="SYS_VERSION" type="DATETIME" />
 			<column name="SYS_COMPANY_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -4242,7 +4242,7 @@
 			<column name="DATA1" remarks="Служебное поле" type="INT" />
 			<column name="DATA2" remarks="Служебное поле" type="INT" />
 			<column defaultValueComputed="${now}" name="DATETIME"
-				remarks="Системное время выполнения этапа" type="TIMESTAMP" />
+				remarks="Системное время выполнения этапа" type="DATETIME" />
 			<column name="USER_ID" remarks="Пользователь, выполнивший этап"
 				type="INT" />
 			<column name="STATE_VALUE" type="BLOB" />
@@ -4654,7 +4654,7 @@
 			<column name="FOLDER_ID" remarks="Идентификатор папки" type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column defaultValueComputed="${now}" name="KEEPDATE"
+			<column defaultValueComputed="${today}" name="KEEPDATE"
 				remarks="Дата хозяйственной операции" type="DATE" />
 			<column name="COMMENT" remarks="Содержание хозяйственной операции"
 				type="VARCHAR(256)" />
@@ -5331,7 +5331,7 @@
 			</column>
 			<column name="INSERTSIGN" remarks="Служебное поле" type="SMALLINT" />
 			<column defaultValueComputed="${now}" name="KEEPDATE" remarks="Дата операции"
-				type="TIMESTAMP" />
+				type="DATETIME" />
 			<column name="COMMENT" remarks="Содержание" type="VARCHAR(256)" />
 			<column name="DOCBASETYPE" remarks="Тип документа-основания"
 				type="CHAR(15)" />
@@ -5390,7 +5390,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column defaultValueComputed="${now}" name="KEEPDATE" remarks="Дата операции"
-				type="TIMESTAMP" />
+				type="DATETIME" />
 			<column name="COMMENT" remarks="Содержание" type="VARCHAR(256)" />
 			<column name="DOCBASETYPE" remarks="Тип документа-основания"
 				type="CHAR(15)" />
@@ -7009,7 +7009,7 @@
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-743">
 		<createTable tableName="LOG_V1">
-			<column defaultValueComputed="${now}" name="DATETIME" type="TIMESTAMP">
+			<column defaultValueComputed="${now}" name="DATETIME" type="DATETIME">
 				<constraints nullable="false" />
 			</column>
 			<column defaultValue="USER" name="USERNAME" type="VARCHAR(31)">
@@ -13835,7 +13835,7 @@
 				remarks="Не используется" type="SMALLINT" />
 			<column name="PRIORITY" remarks="Приоритет отчёта" type="INT" />
 			<column defaultValueComputed="${now}" name="SYS_VERSION"
-				remarks="Поле контроля версии записи" type="TIMESTAMP" />
+				remarks="Поле контроля версии записи" type="DATETIME" />
 			<column name="TEMPLATE" remarks="Шаблон отчёта" type="BLOB" />
 			<column name="PARAMS_FORM_NAME" remarks="Путь к форме запроса параметров отчёта"
 				type="VARCHAR(256)" />
@@ -14972,7 +14972,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column defaultValueComputed="${now}" name="DATETIME"
-				remarks="Системная дата/время создания записи истории" type="TIMESTAMP" />
+				remarks="Системная дата/время создания записи истории" type="DATETIME" />
 			<column name="KIND"
 				remarks="Тип движения:&#13;&#10;0 - приход&#13;&#10;1 - расход"
 				type="SMALLINT">
@@ -15037,7 +15037,7 @@
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column defaultValueComputed="${now}" name="SYS_VERSION" type="TIMESTAMP" />
+			<column defaultValueComputed="${now}" name="SYS_VERSION" type="DATETIME" />
 		</createTable>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-1034">
@@ -15138,7 +15138,7 @@
 			</column>
 			<column name="PROCESSDATE" remarks="Дата отработки" type="TIMESTAMP" />
 			<column defaultValueComputed="${now}" name="SYSDATETIME"
-				remarks="Системная дата/время создания записи истории" type="TIMESTAMP" />
+				remarks="Системная дата/время создания записи истории" type="DATETIME" />
 			<column name="QUANTITY" remarks="Количество" type="numeric(15, 3)" />
 			<column name="DOCHEAD_ID"
 				remarks="Документ, по которому сформирована запись истории" type="INT">
