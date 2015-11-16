@@ -131,7 +131,7 @@ public class TurnAccFlatServiceBean extends com.mg.framework.generic.AbstractPOJ
 			}
 		 */
     // update opening balances with zero
-		/*
+    /*
 			List<Integer> taIDs = MiscUtils.convertUncheckedList(Integer.class, OrmTemplate.getInstance().findByNamedParam("select ta.id from TurnAccount ta where (ta.Period.id = :periodID) and (ta.Account.id = :accountID)", new String[] {"periodID", "accountID"}, new Object[] {prevPeriod.getId(), account.getId()}));
 			for (Integer taId : taIDs) {
 				OrmTemplate.getInstance().bulkUpdate("update TurnFeature tf set tf.RemnBegCur = 0, tf.RemnBegNat = 0, tf.RemnBegCurPlan = 0, tf.RemnBegNatPlan = 0 where (tf.TurnAccount.id = :ta_id)", "ta_id", taId);

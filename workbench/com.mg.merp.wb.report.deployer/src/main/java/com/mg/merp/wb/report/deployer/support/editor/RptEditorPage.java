@@ -89,9 +89,9 @@ public class RptEditorPage extends StandartEditorPage<RptMainTransfer> {
   private static final int PRIOR_FIELD_WIDTH = 30;
   private static final int BEANS_COL1_WIDTH = 230;
 
-	/*private static final String BUTT_SAVE_TEXT = "report.butt.save";
+  /*private static final String BUTT_SAVE_TEXT = "report.butt.save";
 
-	private static final String BUTT_CANCEL_TEXT = "report.butt.cancel";*/
+  private static final String BUTT_CANCEL_TEXT = "report.butt.cancel";*/
   private static final int BEANS_COL2_WIDTH = 400;
   private static final String TEMPLATE_NULL = "tmpl.isnull";
   private static GridData commonGridData = new GridData();

@@ -61,7 +61,7 @@ public class HibernateDataSourceWizard extends DataSourceWizardPage {
    * @see org.eclipse.datatools.connectivity.oda.design.ui.wizards.DataSourceWizardPage#collectCustomProperties()
    */
   public Properties collectCustomProperties() {
-		/* 
+    /*
 		 * Optionally assign a custom designer state, for inclusion
 		 * in the ODA design session response, using
 		 * setResponseDesignerState( DesignerState customState ); 

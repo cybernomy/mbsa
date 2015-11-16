@@ -1064,7 +1064,7 @@ public class DocFlowManagerImpl extends AbstractPOJOBusinessObjectStatefulServic
 
       checkDocumentQueue();
       /*DocHead nextDoc = checkDocumentQueue();
-			if (nextDoc != null)
+      if (nextDoc != null)
 				internalExecute(nextDoc.getId(), documentOwner);
 			else
 				fireFlowPerformed();*/

@@ -32,7 +32,7 @@ public abstract class AbstractStatelessSessionBean extends AbstractSessionBean {
 	}*/
 
 	/* (non-Javadoc)
-	 * @see javax.ejb.SessionBean#ejbActivate()
+   * @see javax.ejb.SessionBean#ejbActivate()
 	 */
 	/*public void ejbActivate() throws EJBException, RemoteException {
 		throw new IllegalStateException("ejbActivate must not be invoked on a stateless session bean"); //$NON-NLS-1$

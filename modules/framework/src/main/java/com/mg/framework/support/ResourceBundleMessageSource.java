@@ -14,14 +14,14 @@
  */
 package com.mg.framework.support;
 
+import com.mg.framework.utils.StringUtils;
+
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
-
-import com.mg.framework.utils.StringUtils;
 
 /**
  * @author Oleg V. Safonov

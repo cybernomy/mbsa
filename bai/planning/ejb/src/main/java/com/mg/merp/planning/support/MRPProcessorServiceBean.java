@@ -395,7 +395,7 @@ public class MRPProcessorServiceBean extends com.mg.framework.generic.AbstractPO
 
       BucketRange bucketRange = MfUtils.determineBucketRange(mpsLine.getMps().getPlanningLevel().getId(), mpsLine.getBucketOffset());
       if (bucketRange.getBucketEnd().compareTo(lastDateProcessed) <= 0) {
-				/* This bucket ends before the last bucket processed
+        /* This bucket ends before the last bucket processed
 				   which means that we do not want to include
 				   anything in this bucket */
       } else {

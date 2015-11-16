@@ -13,9 +13,11 @@
     <!ENTITY db_xsl_path "../xsl">
     ]>
 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:fo="http://www.w3.org/1999/XSL/Format"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                xmlns:fo="http://www.w3.org/1999/XSL/Format"
                 version="1.0"
-                xmlns="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" exclude-result-prefixes="#default">
+                xmlns="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"
+                exclude-result-prefixes="#default">
 
 
   <!-- import the main docbook.xsl before we apply our overrides -->

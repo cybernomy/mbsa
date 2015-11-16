@@ -213,7 +213,7 @@ public class HibernateHqlSelectionPage extends DataSetWizardPage {
     queryButton.setEnabled(false);
 
     //check JNDI URL
-		/*if (jndiName != null && jndiName.trim().length() > 0) {
+    /*if (jndiName != null && jndiName.trim().length() > 0) {
 			String ejbqlText = queryText.getText();
 			if (ejbqlText != null && ejbqlText.trim().length() > 0) {
 				setPageComplete(true);

@@ -104,7 +104,7 @@ public class ReportParametersDialogImpl extends AbstractReportParametersDialog {
       text.append(" ").append(Button.ACTION_LISTENER).append("=\"ChangeCascadeParam\"");
 
 		/*text.append("><jfd:items>");
-		for (SelectionChoice choice : selectionList)
+    for (SelectionChoice choice : selectionList)
 			text.append("<jfd:item value=\"").append(choice.getLabel()).append("\" />");
 
 		return text.append("</jfd:items></").append(name).append(">");*/

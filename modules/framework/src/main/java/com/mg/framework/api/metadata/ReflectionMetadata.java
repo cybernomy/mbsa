@@ -55,18 +55,18 @@ public class ReflectionMetadata {
 
   /**
    * Установить имя элемента данных
+   */
+  public void setDataItemName(String dataItemName) {
+    this.dataItemName = dataItemName;
+  }
+
+  /**
+   * Установить имя элемента данных
    *
    * @param dataItemName The dataItemName to set.
    */
   public void setDataItemName(DataItemName dataItem) {
     this.dataItemName = dataItem != null ? dataItem.value() : null;
-  }
-
-  /**
-   * Установить имя элемента данных
-   */
-  public void setDataItemName(String dataItemName) {
-    this.dataItemName = dataItemName;
   }
 
   /**
@@ -99,19 +99,19 @@ public class ReflectionMetadata {
   /**
    * Установить механизм поиска
    *
-   * @param searchHelpName the searchHelpName to set
+   * @param searchHelpName имя механизма поиска
    */
-  public void setSearchHelpName(SearchHelpName searchHelpName) {
-    this.searchHelpName = searchHelpName != null ? searchHelpName.value() : null;
+  public void setSearchHelpName(String searchHelpName) {
+    this.searchHelpName = searchHelpName;
   }
 
   /**
    * Установить механизм поиска
    *
-   * @param searchHelpName имя механизма поиска
+   * @param searchHelpName the searchHelpName to set
    */
-  public void setSearchHelpName(String searchHelpName) {
-    this.searchHelpName = searchHelpName;
+  public void setSearchHelpName(SearchHelpName searchHelpName) {
+    this.searchHelpName = searchHelpName != null ? searchHelpName.value() : null;
   }
 
 }

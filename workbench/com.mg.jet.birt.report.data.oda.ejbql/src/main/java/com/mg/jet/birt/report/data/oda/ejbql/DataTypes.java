@@ -19,8 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * This class hosts the information of data types that are supported by flat
- * file driver
+ * This class hosts the information of data types that are supported by flat file driver
  *
  * @author Oleg V. Safonov
  * @version $Id: DataTypes.java,v 1.2 2007/10/30 11:55:48 safonov Exp $
@@ -60,11 +59,9 @@ public final class DataTypes {
   /**
    * Return the int which stands for the type specified by input argument
    *
-   * @param typeName
-   *            the String value of a Type
+   * @param typeName the String value of a Type
    * @return the int which stands for the type specified by input typeName
-   * @throws OdaException
-   *             Once the input arguement is not a valid type name
+   * @throws OdaException Once the input arguement is not a valid type name
    */
   public static int getType(String typeName) throws OdaException {
     String preparedTypeName = typeName.trim().toUpperCase();
@@ -75,9 +72,6 @@ public final class DataTypes {
 
   /**
    * Evalute whether an input String is a valid type that is supported by driver
-   *
-   * @param typeName
-   * @return
    */
   public static boolean isValidType(String typeName) {
     return typeStringIntPair.containsKey(typeName.trim().toUpperCase());
