@@ -1,71 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns="http://maven.apache.org/POM/4.0.0"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-		<groupId>com.mg.modules</groupId>
-		<artifactId>data</artifactId>
-		<version>4.0.8-SNAPSHOT</version>
-	</parent>
+  <parent>
+    <groupId>com.mg.modules</groupId>
+    <artifactId>data</artifactId>
+    <version>4.0.8-SNAPSHOT</version>
+  </parent>
 
-	<groupId>com.mg.modules.data</groupId>
-	<artifactId>service</artifactId>
-	<packaging>har</packaging>
+  <groupId>com.mg.modules.data</groupId>
+  <artifactId>service</artifactId>
+  <packaging>jboss-har</packaging>
 
-	<name>MBSA::Modules::Data::Service</name>
-	<description />
+  <name>MBSA::Modules::Data::Service</name>
+  <description/>
 
-	<build>
-		<finalName>mdatawarehouse</finalName>
+  <build>
+    <finalName>mdatawarehouse</finalName>
 
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>unpack</id>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>com.mg.modules.data</groupId>
-									<artifactId>model</artifactId>
-									<type>jar</type>
-								</artifactItem>
-								<artifactItem>
-									<groupId>jboss</groupId>
-									<artifactId>jbpm-jpdl</artifactId>
-								</artifactItem>
-							</artifactItems>
-							<outputDirectory>${project.build.directory}/classes</outputDirectory>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>net.sf.maven-har</groupId>
-				<artifactId>maven-har-plugin</artifactId>
-				<version>1.0</version>
-				<extensions>true</extensions>
-			</plugin>
-		</plugins>
-	</build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>unpack</id>
+            <phase>process-resources</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>com.mg.modules.data</groupId>
+                  <artifactId>model</artifactId>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>jboss</groupId>
+                  <artifactId>jbpm-jpdl</artifactId>
+                </artifactItem>
+              </artifactItems>
+              <outputDirectory>${project.build.outputDirectory}</outputDirectory>
+              <excludes>**/*.properties,**/*.xsd,**/*.html,**/*.xslt</excludes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
 
-	<dependencies>
-		<dependency>
-			<groupId>com.mg.modules.data</groupId>
-			<artifactId>model</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>jboss</groupId>
-			<artifactId>jbpm-jpdl</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-	</dependencies>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>jboss-packaging-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
 </project>
