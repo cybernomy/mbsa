@@ -48,11 +48,8 @@ public class ResultSet implements IResultSet {
   /**
    * Construct
    *
-   * @param sData
-   *            a two dimensions array which host the data extracted from a
-   *            table.
-   * @param rSMD
-   *            the metadata of sData
+   * @param sData a two dimensions array which host the data extracted from a table.
+   * @param rSMD  the metadata of sData
    */
   ResultSet(List<Object> rs, IResultSetMetaData rSMD, Type[] qryReturnTypes) {
     //Row Data
@@ -484,8 +481,7 @@ public class ResultSet implements IResultSet {
   /**
    * Test if the cursor has been initialized
    *
-   * @throws OdaException
-   *             Once the cursor is stll not initialized
+   * @throws OdaException Once the cursor is stll not initialized
    */
   private void testFetchStarted() throws OdaException {
     if (this.cursor < 0)

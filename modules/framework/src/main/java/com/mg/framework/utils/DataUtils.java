@@ -190,7 +190,7 @@ public class DataUtils {
    * @param clazz тип результата
    * @return значение
    */
-  @SuppressWarnings({ "unchecked", "rawtypes" })
+  @SuppressWarnings({"unchecked", "rawtypes"})
   public static Object stringToValue(String str, Class<?> clazz) {
     if (str == null || clazz == null || String.class.isAssignableFrom(clazz))
       return str;

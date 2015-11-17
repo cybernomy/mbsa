@@ -42,7 +42,6 @@ final class CommonConstant {
 
   /**
    * Private contructure which ensure the non-instantiatial of the class
-   *
    */
   private CommonConstant() {
   }

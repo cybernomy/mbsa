@@ -14,9 +14,9 @@
  */
 package com.mg.framework.utils;
 
-import org.apache.commons.codec.binary.Base64;
-
 import com.mg.framework.api.InternalException;
+
+import org.apache.commons.codec.binary.Base64;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
@@ -523,12 +523,12 @@ public class StringUtils {
   }
 
   public static String iso2utf8(String msg) {
-	try {
-		return new String(msg.getBytes("ISO-8859-1"), "UTF-8");
-	} catch (UnsupportedEncodingException e) {
-		//actually it's impossible
-		throw new InternalException(e);
-	}
+    try {
+      return new String(msg.getBytes("ISO-8859-1"), "UTF-8");
+    } catch (UnsupportedEncodingException e) {
+      //actually it's impossible
+      throw new InternalException(e);
+    }
   }
 
   private static int convertChar(char c) {

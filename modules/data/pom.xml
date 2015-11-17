@@ -9,7 +9,7 @@
     <artifactId>modules</artifactId>
     <version>4.0.8-SNAPSHOT</version>
   </parent>
-  <!--TODO: create shared resource bundle from core/src/META-INF for core and datamodel-->
+
   <groupId>com.mg.modules</groupId>
   <artifactId>data</artifactId>
   <packaging>pom</packaging>
@@ -22,7 +22,7 @@
     <module>service</module>
   </modules>
 
-   <dependencies>
+  <dependencies>
     <dependency>
       <groupId>com.mg.modules</groupId>
       <artifactId>framework</artifactId>

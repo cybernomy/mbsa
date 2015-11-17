@@ -418,7 +418,7 @@ public class RptEngineImpl {
     if (properties.getOutputFormat() == null || properties.getOutputFormat() == RptProperties.OutputFormat.HTML) {
       StringBuilder sb1 = new StringBuilder(reportFolder).append(File.separatorChar)
           .append("report").append(Math.abs(new Random().nextInt()))
-					/*.append(report.getCode().trim())*/.append(REPORT_SUFFIX);
+          /*.append(report.getCode().trim())*/.append(REPORT_SUFFIX);
       String relativeFileName = sb1.toString();
       try {
         File f = new File(sb1.insert(0, File.separatorChar).insert(0, engine.getConfig().getBIRTHome()).toString());

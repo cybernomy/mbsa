@@ -83,9 +83,32 @@
 
   <profiles>
     <profile>
+      <id>skip-doc-assembly</id>
+      <activation>
+        <property>
+          <name>dev.env</name>
+        </property>
+      </activation>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-assembly-plugin</artifactId>
+              <configuration>
+                <skipAssembly>true</skipAssembly>
+              </configuration>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+    <profile>
       <id>help-web</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
+        <property>
+          <name>!dev.env</name>
+        </property>
       </activation>
 
       <properties>
@@ -109,12 +132,16 @@
                     <targetDirectory>${project.build.directory}/webhelp</targetDirectory>
                     <preProcess>
                       <copy todir="${project.build.directory}/webhelp/images">
-                        <fileset dir="src/docbkx/images" />
+                        <fileset dir="src/docbkx/images"/>
                       </copy>
                     </preProcess>
                     <webhelpIndexerLanguage>ru</webhelpIndexerLanguage>
-                    <htmlhelpEncoding>${project.reporting.outputEncoding}</htmlhelpEncoding>
-                    <chunkerOutputEncoding>${project.reporting.outputEncoding}</chunkerOutputEncoding>
+                    <htmlhelpEncoding>
+                      ${project.reporting.outputEncoding}
+                    </htmlhelpEncoding>
+                    <chunkerOutputEncoding>
+                      ${project.reporting.outputEncoding}
+                    </chunkerOutputEncoding>
                   </configuration>
                 </execution>
               </executions>
@@ -126,7 +153,9 @@
     <profile>
       <id>help-java</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
+        <property>
+          <name>!dev.env</name>
+        </property>
       </activation>
 
       <properties>
@@ -150,11 +179,15 @@
                     <targetDirectory>${project.build.directory}/javahelp</targetDirectory>
                     <preProcess>
                       <copy todir="${project.build.directory}/javahelp/images">
-                        <fileset dir="src/docbkx/images" />
+                        <fileset dir="src/docbkx/images"/>
                       </copy>
                     </preProcess>
-                    <htmlhelpEncoding>${project.reporting.outputEncoding}</htmlhelpEncoding>
-                    <chunkerOutputEncoding>${project.reporting.outputEncoding}</chunkerOutputEncoding>
+                    <htmlhelpEncoding>
+                      ${project.reporting.outputEncoding}
+                    </htmlhelpEncoding>
+                    <chunkerOutputEncoding>
+                      ${project.reporting.outputEncoding}
+                    </chunkerOutputEncoding>
                   </configuration>
                 </execution>
               </executions>

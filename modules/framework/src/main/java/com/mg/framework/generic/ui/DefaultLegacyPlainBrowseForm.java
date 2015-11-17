@@ -108,7 +108,7 @@ public class DefaultLegacyPlainBrowseForm extends AbstractForm implements Mainte
      * @see com.mg.merp.core.support.ui.IMaintenanceBrowseForm#setService(java.lang.String)
 	 */
   /*public void setService(String serviceName) throws NamingException, ApplicationException {
-		setService((DataBusinessObjectService) BusinessObjectFactory.getInstance().getLocalService(serviceName));
+    setService((DataBusinessObjectService) BusinessObjectFactory.getInstance().getLocalService(serviceName));
 	}*/
 
   /* (non-Javadoc)

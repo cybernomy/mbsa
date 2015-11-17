@@ -708,7 +708,7 @@ public class FinanceTotalsGate {
 
         ds.nextRow();
       }
-			/*
+      /*
 			 * FDs.First; while not FDs.Eof do begin rowId :=
 			 * FDs.FieldByName(cRowIdName).AsInteger; corDs :=
 			 * FCorDsList.Data[PoIntegerer(rowId)];

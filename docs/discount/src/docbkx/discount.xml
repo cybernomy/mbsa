@@ -316,13 +316,13 @@
       <para>На закладке "<emphasis>Сведения</emphasis>" содержится основная информация
         о рекламном мероприятии.
       </para>
-        <screenshot>
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="images/promotion_mt.gif"/>
-            </imageobject>
-          </mediaobject>
-        </screenshot>
+      <screenshot>
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="images/promotion_mt.gif"/>
+          </imageobject>
+        </mediaobject>
+      </screenshot>
       <para><guibutton>Тип</guibutton>. Тип расчёта рекламного мероприятия. Выбирается
         из списка<link linkend="promotiontype">Типов рекламных мероприятий</link>. Определяет
         механизм
