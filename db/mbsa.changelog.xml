@@ -3012,7 +3012,7 @@
 			<column defaultValueNumeric="0" name="KIND"
 				remarks="Вид движения:&#13;&#10;0 - приход&#13;&#10;1 - расход"
 				type="SMALLINT" />
-			<column name="PROCESSDATE" remarks="Дата отработки" type="TIMESTAMP" />
+			<column name="PROCESSDATE" remarks="Дата отработки" type="DATE" />
 			<column defaultValueNumeric="0" name="SUMCUR" remarks="Сумма в валюте"
 				type="numeric(15, 4)" />
 			<column defaultValueNumeric="0" name="SUMNAT" remarks="Сумма"
@@ -3042,7 +3042,7 @@
 			<column defaultValueNumeric="0" name="KIND"
 				remarks="Вид движения:&#13;&#10;0 - приход&#13;&#10;1 - расход"
 				type="SMALLINT" />
-			<column name="PROCESSDATE" remarks="Дата отработки" type="TIMESTAMP" />
+			<column name="PROCESSDATE" remarks="Дата отработки" type="DATETIME" />
 			<column defaultValueNumeric="0" name="SUMCUR" remarks="Сумма в валюте"
 				type="numeric(15, 4)" />
 			<column defaultValueNumeric="0" name="SUMNAT" remarks="Сумма"
@@ -3482,7 +3482,7 @@
 				type="INT" />
 			<column defaultValueNumeric="0" name="IS_PLAN"
 				remarks="Признак планового действия" type="SMALLINT" />
-			<column name="CREATE_DATE" remarks="Дата создания" type="TIMESTAMP" />
+			<column name="CREATE_DATE" remarks="Дата создания" type="DATETIME" />
 			<column name="PLAN_DATE_FROM" remarks="Планируемая дата начала"
 				type="DATE" />
 			<column name="PLAN_DATE_TILL" remarks="Планируемая дата окончания"
@@ -3901,7 +3901,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="CARD_ID" remarks="Идентификатор карты" type="INT" />
-			<column name="TIME_STAMP" remarks="Дата/время" type="TIMESTAMP" />
+			<column name="TIME_STAMP" remarks="Дата/время" type="DATETIME" />
 			<column name="USER_ID" remarks="Пользователь, внесший запись"
 				type="INT" />
 			<column name="DISCOUNT" remarks="Новое значение скидки" type="numeric(18, 6)" />
@@ -5022,7 +5022,7 @@
 			<column name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="SYS_VERSION" type="TIMESTAMP" />
+			<column name="SYS_VERSION" type="DATETIME" />
 		</createTable>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-654">
@@ -5054,7 +5054,7 @@
 			<column defaultValueNumeric="0" name="STATUS"
 				remarks="Статус записи:&#13;&#10;0 - подготовлена к экспорту&#13;&#10;1 - помещена в пакет&#13;&#10;2 - импортирована во в нешнюю БД (от нее получен соотв. пакет подтверждения)&#13;&#10;3 - получен запрос на удаление записи из внешней БД&#13;&#10;4 - запрос на удаление записи из внешней БД помещен в пакет"
 				type="SMALLINT" />
-			<column name="PACKET_TIME" remarks="Время создания" type="TIMESTAMP" />
+			<column name="PACKET_TIME" remarks="Время создания" type="DATETIME" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -5077,7 +5077,7 @@
 			<column name="NEW_KEY" remarks="Значение ключа записи в текущей БД"
 				type="numeric(18)" />
 			<column name="PACKET" remarks="Номер пакета" type="INT" />
-			<column name="PACKET_TIME" remarks="Время создания" type="TIMESTAMP" />
+			<column name="PACKET_TIME" remarks="Время создания" type="DATETIME" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -5098,11 +5098,11 @@
 			<column name="PACKET_IN" remarks="Номер входящего пакета"
 				type="INT" />
 			<column name="PACKET_IN_TIME" remarks="Дата/время входящего пакета"
-				type="TIMESTAMP" />
+				type="DATETIME" />
 			<column name="PACKET_OUT" remarks="Номер исходящего пакета"
 				type="INT" />
 			<column name="PACKET_OUT_TIME" remarks="Дата/время исходящего пакета"
-				type="TIMESTAMP" />
+				type="DATETIME" />
 			<column defaultValueNumeric="0" name="REQUEST_DONE"
 				remarks="Служебное поле. В процессе импорта устанавливается в 1 после выдачи пользователю сообщения о запросе на удаление документов."
 				type="SMALLINT" />
@@ -5741,7 +5741,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="FOLDER_ID" remarks="Папка" type="INT" />
-			<column name="DATE_TIME" remarks="Дата/время" type="TIMESTAMP" />
+			<column name="DATE_TIME" remarks="Дата/время" type="DATETIME" />
 			<column name="CONTRACTOR_ID" remarks="Контрагент" type="INT" />
 			<column name="CODE" remarks="Код" type="CHAR(20)" />
 			<column name="DHNAME" remarks="Наименование" type="VARCHAR(80)">
@@ -5761,7 +5761,7 @@
 			<column name="HEAD_ID" remarks="Идентификатор заголовка" type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="DATE_TIME" remarks="Дата/время" type="TIMESTAMP" />
+			<column name="DATE_TIME" remarks="Дата/время" type="DATETIME" />
 			<column name="TANK_ID" remarks="Резервуар, контрагент" type="INT" />
 			<column name="FUEL_ID" remarks="Топливо, позиция каталога"
 				type="INT" />
@@ -7345,7 +7345,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="ROLLUP_DATETIME" remarks="Дата и время последнего замещения стоимости"
-				type="TIMESTAMP" />
+				type="DATETIME" />
 			<column name="SETUP_TICKS" remarks="Постоянное время задержки"
 				type="numeric(18)" />
 			<column name="SETUP_TIME_UM" remarks="Ед.изм. постоянного времени задержки"
@@ -7921,7 +7921,7 @@
 			<column name="ACT_WIP_COST_DETAIL_ID" remarks="Идентификатор расшифровки фактической стоимости"
 				type="INT" />
 			<column name="ROLLUP_DATETIME" remarks="Дата и время последнего замещения стоиости"
-				type="TIMESTAMP" />
+				type="DATETIME" />
 			<column name="START_DATE" remarks="Планируемая дата запуска"
 				type="DATE" />
 			<column name="END_DATE" remarks="Планируемая дата окончания"
@@ -9022,7 +9022,7 @@
 			<column name="DOCTYPE" remarks="Тип документа" type="CHAR(15)" />
 			<column name="DOCNUMBER" remarks="Номер документа" type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="DOCDATE"
-				remarks="Дата документа" type="TIMESTAMP" />
+				remarks="Дата документа" type="DATE" />
 			<column name="CANCELLATION_REASON" remarks="Причина погашения"
 				type="VARCHAR(256)" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -9135,7 +9135,7 @@
 			<column name="GIVE_DOCNUMBER"
 				remarks="Номер документа, по которому производилась выдача" type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="GIVE_DOCDATE"
-				remarks="Дата выдачи" type="TIMESTAMP" />
+				remarks="Дата выдачи" type="DATE" />
 			<column name="EXPL_DOCHEAD_ID"
 				remarks="Идентификатор документа, по которому производился ввод в эксплуатацию"
 				type="INT" />
@@ -9150,7 +9150,7 @@
 				type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="EXPL_DOCDATE"
 				remarks="Дата документа, по которому производился ввод в эксплуатацию"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="REMOVE_DOCHEAD_ID"
 				remarks="Идентификатор документа, по которому производился вывод из эксплуатации"
 				type="INT" />
@@ -9165,7 +9165,7 @@
 				type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="REMOVE_DOCDATE"
 				remarks="Дата документа, по которому производился вывод из эксплуатации"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="REMOVE_TYPE_ID"
 				remarks="Тип выбытия из эксплуатации&#13;&#10;3 - возвращено&#13;&#10;4 - утеряно&#13;&#10;5 - списано"
 				type="INT" />
@@ -9204,7 +9204,7 @@
 			<column name="DOCSPEC_ID" type="INT" />
 			<column name="DOCTYPE" type="CHAR(15)" />
 			<column name="DOCNUMBER" type="CHAR(20)" />
-			<column defaultValueComputed="${today}" name="DOCDATE" type="TIMESTAMP" />
+			<column defaultValueComputed="${today}" name="DOCDATE" type="DATE" />
 			<column name="OVR_HIST_STATUS_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -9579,7 +9579,7 @@
 			<column name="DOCTYPE" remarks="Тип документа" type="CHAR(15)" />
 			<column name="DOCNUMBER" remarks="Номер документа" type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="DOCDATE"
-				remarks="Дата документа" type="TIMESTAMP" />
+				remarks="Дата документа" type="DATE" />
 			<column name="DOC_ID" remarks="Идентификатор документа" type="INT" />
 			<column defaultValueNumeric="0" name="FACTSUM" remarks="Фактическая сумма"
 				type="numeric(15, 4)" />
@@ -9627,7 +9627,7 @@
 			<column name="ITEM_NUMBER" remarks="Номер пункта" type="CHAR(20)" />
 			<column name="DOCTYPE" remarks="Тип документа" type="CHAR(15)" />
 			<column defaultValueComputed="${today}" name="DOCDATE"
-				remarks="Дата документа" type="TIMESTAMP" />
+				remarks="Дата документа" type="DATE" />
 			<column name="DOC_ID" remarks="Идентификатор документа" type="INT" />
 		</createTable>
 	</changeSet>
@@ -9708,7 +9708,7 @@
 			<column name="DOCTYPE" remarks="Тип документа" type="CHAR(15)" />
 			<column name="DOCNUMBER" remarks="Номер документа" type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="DOCDATE"
-				remarks="Дата документа" type="TIMESTAMP" />
+				remarks="Дата документа" type="DATE" />
 			<column name="BASEDOC_ID" remarks="Идентификатор документа-основания"
 				type="INT" />
 			<column name="BASEDOCTYPE" remarks="Тип документа-основания"
@@ -9716,13 +9716,13 @@
 			<column name="BASEDOCNUMBER" remarks="Номер документа-основания"
 				type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="BASEDOCDATE"
-				remarks="Дата документа-основания" type="TIMESTAMP" />
+				remarks="Дата документа-основания" type="DATE" />
 			<column name="CONTRACT_ID" remarks="Идентификатор контракта"
 				type="INT" />
 			<column name="CONTRACTTYPE" remarks="Тип контракта" type="CHAR(15)" />
 			<column name="CONTRACTNUMBER" remarks="Номер контракта" type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="CONTRACTDATE"
-				remarks="Дата контракта" type="TIMESTAMP" />
+				remarks="Дата контракта" type="DATE" />
 			<column name="FROM_ID" remarks="От кого" type="INT" />
 			<column name="TO_ID" remarks="Кому" type="INT" />
 			<column name="FROMUNIT_ID"
@@ -9908,7 +9908,7 @@
 			<column name="DOCTYPE" remarks="Идентификатор типа документа"
 				type="CHAR(15)" />
 			<column defaultValueComputed="${today}" name="DOCDATE"
-				remarks="Дата документа" type="TIMESTAMP" />
+				remarks="Дата документа" type="DATE" />
 			<column name="BASEDOC_ID" remarks="Идентификатор документа-основания"
 				type="INT" />
 			<column name="BASEDOCTYPE" remarks="Идентификатор типа документа-основания"
@@ -9916,14 +9916,14 @@
 			<column name="BASEDOCNUMBER" remarks="Номер документа-основания"
 				type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="BASEDOCDATE"
-				remarks="Дата документа-основания" type="TIMESTAMP" />
+				remarks="Дата документа-основания" type="DATE" />
 			<column name="CONTRACT_ID" remarks="Идентификатор контракта"
 				type="INT" />
 			<column name="CONTRACTTYPE" remarks="Идентификатор типа контракта"
 				type="CHAR(15)" />
 			<column name="CONTRACTNUMBER" remarks="Номер контракта" type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="CONTRACTDATE"
-				remarks="Дата контракта" type="TIMESTAMP" />
+				remarks="Дата контракта" type="DATE" />
 			<column name="PREFRESOURCE_ID" remarks="Идентификатор средства платежа"
 				type="INT" />
 			<column name="PREFRESOURCEFOLDER_ID" remarks="Идентификатор папки средства платежа"
@@ -12569,7 +12569,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column defaultValueComputed="${today}" name="CREATEDATE"
-				remarks="Дата создания" type="TIMESTAMP" />
+				remarks="Дата создания" type="DATE" />
 			<column name="CURRENCY_CODE" remarks="Код валюты в верхнем регистре"
 				type="CHAR(5)">
 				<constraints nullable="false" />
@@ -13409,7 +13409,7 @@
 			</column>
 			<column name="DOCNUMBER" remarks="Номер" type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="DOCDATE"
-				remarks="Дата" type="TIMESTAMP" />
+				remarks="Дата" type="DATE" />
 			<column name="DOCNAME" remarks="Наименование" type="VARCHAR(80)">
 				<constraints nullable="false" />
 			</column>
@@ -13967,7 +13967,7 @@
 			<column name="DOCTYPE" remarks="Тип документа" type="CHAR(15)" />
 			<column name="DOCNUMBER" remarks="Номер документа" type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="DOCDATE"
-				remarks="Дата документа" type="TIMESTAMP" />
+				remarks="Дата документа" type="DATE" />
 			<column name="INSERTDATE" remarks="Дата регистрации в книге продаж"
 				type="TIMESTAMP" />
 			<column name="PAYDATE" remarks="Дата оплаты" type="TIMESTAMP" />
@@ -14438,7 +14438,7 @@
 			<column name="DOCTYPE" remarks="Тип документа" type="CHAR(15)" />
 			<column name="DOCNUMBER" remarks="Номер документа" type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="DOCDATE"
-				remarks="Дата документа" type="TIMESTAMP" />
+				remarks="Дата документа" type="DATE" />
 			<column name="COMMENTS" remarks="Комментарий" type="VARCHAR(256)" />
 			<column name="CALC_BEGINDATE" remarks="Дата начала расчета"
 				type="TIMESTAMP" />
@@ -14552,7 +14552,7 @@
 			<column name="DOCTYPE" remarks="Тип документа" type="CHAR(15)" />
 			<column name="DOCNUMBER" remarks="Номер документа" type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="DOCDATE"
-				remarks="Дата документа" type="TIMESTAMP" />
+				remarks="Дата документа" type="DATE" />
 			<column name="RATE_NUMBER" remarks="Количество занимаемых ставок"
 				type="numeric(18, 6)" />
 			<column defaultValueNumeric="0" name="IS_BASIC"
@@ -14933,9 +14933,9 @@
 			<column name="DOCNUMBER" remarks="Номер приходного документа"
 				type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="DOCDATE"
-				remarks="Дата приходного документа" type="TIMESTAMP" />
+				remarks="Дата приходного документа" type="DATE" />
 			<column defaultValueComputed="${today}" name="CREATEDATE"
-				remarks="Дата создания партии" type="TIMESTAMP" />
+				remarks="Дата создания партии" type="DATE" />
 			<column name="BESTBEFORE" remarks="Годен до, дата" type="TIMESTAMP" />
 			<column name="CONTRACTOR_ID" remarks="Контрагент, от которого получена партия"
 				type="INT" />
@@ -15715,7 +15715,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column defaultValueComputed="${today}" name="ACTIVEDATE"
-				remarks="Дата начала действия" type="TIMESTAMP" />
+				remarks="Дата начала действия" type="DATE" />
 			<column name="TAXTYPE"
 				remarks="Тип налога&#13;&#10;0 - процентный&#13;&#10;1 - суммовой"
 				type="SMALLINT">
