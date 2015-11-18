@@ -7067,7 +7067,7 @@
 				type="INT" />
 			<column name="PRICETYPE_ID" remarks="Идентификатор типа цены"
 				type="INT" />
-			<column name="ABS_DATE" remarks="Абсолютная дата" type="TIMESTAMP" />
+			<column name="ABS_DATE" remarks="Абсолютная дата" type="DATE" />
 			<column defaultValueNumeric="0" name="IS_ABS_DATE"
 				remarks="0 - относительная дата&#13;&#10;1 - абсилютная дата" type="SMALLINT" />
 			<column name="DATEOFFSETKIND"
@@ -7083,7 +7083,7 @@
 			<column defaultValueNumeric="0" name="IS_ABS_SUM"
 				remarks="0 - относительная сумма&#13;&#10;1 - абсолютная сумма"
 				type="SMALLINT" />
-			<column name="RESULTDATE" remarks="Дата начала" type="TIMESTAMP" />
+			<column name="RESULTDATE" remarks="Дата начала" type="DATE" />
 			<column defaultValueNumeric="0" name="IS_RELFACT"
 				remarks="Относительно фактических показаний" type="SMALLINT" />
 			<column name="SUMRELITEM_ID"
@@ -7103,7 +7103,7 @@
 			<column defaultValueNumeric="0" name="IS_SUMRELDOC"
 				remarks="Сумма относительно документа" type="SMALLINT" />
 			<column name="PERC" remarks="Процент" type="numeric(18, 3)" />
-			<column name="RESULTDATEEND" remarks="Дата окончания" type="TIMESTAMP" />
+			<column name="RESULTDATEEND" remarks="Дата окончания" type="DATE" />
 			<column defaultValueNumeric="0" name="IS_DATERELEND"
 				remarks="Относительно даты&#13;&#10;0 - начала пункта&#13;&#10;1 - окончания пункта"
 				type="SMALLINT" />
@@ -7530,9 +7530,9 @@
 			<column name="OPER_NUM" remarks="Номер операции" type="INT" />
 			<column name="DESCRIPTION" remarks="Описание" type="VARCHAR(256)" />
 			<column name="EFF_ON_DATE" remarks="Дата начала действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="EFF_OFF_DATE" remarks="Дата окончания действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="WC_ID" remarks="Идентификатор рабочего центра"
 				type="INT">
 				<constraints nullable="false" />
@@ -7607,9 +7607,9 @@
 			<column name="TIME_SEQUENCE" remarks="Номер временного интервала"
 				type="INT" />
 			<column name="EFF_ON_DATE" remarks="Дата начала действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="EFF_OFF_DATE" remarks="Дата окончания действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="STD_COST_DETAIL_ID"
 				remarks="Идентификатор нормативных значений статей затрат" type="INT">
 				<constraints nullable="false" />
@@ -8112,9 +8112,9 @@
 			<column name="OPER_NUM" remarks="Номер операции" type="INT" />
 			<column name="DESCRIPTION" remarks="Описание" type="VARCHAR(256)" />
 			<column name="EFF_ON_DATE" remarks="Дата начала действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="EFF_OFF_DATE" remarks="Дата окончания действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="WC_ID" remarks="Идентификатор рабочего центра"
 				type="INT">
 				<constraints nullable="false" />
@@ -8124,9 +8124,9 @@
 			<column defaultValueNumeric="100" name="EFFICIENCY_FACTOR"
 				remarks="Процент эффективности" type="numeric(18, 6)" />
 			<column name="START_DATE" remarks="Запланированная дата запуска операции"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="END_DATE" remarks="Запланированная дата окончания операции"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="START_TICK" remarks="Запланированное время начала операции в тиках"
 				type="numeric(18)" />
 			<column name="END_TICK"
@@ -8209,9 +8209,9 @@
 			<column name="TIME_SEQUENCE" remarks="Номер временного интервала"
 				type="INT" />
 			<column name="EFF_ON_DATE" remarks="Дата начала действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="EFF_OFF_DATE" remarks="Дата окончания действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="STD_COST_DETAIL_ID"
 				remarks="Идентификатор нормативных значений статей затрат" type="INT">
 				<constraints nullable="false" />
@@ -8376,9 +8376,9 @@
 			<column name="MAXIMUM_CAPACITY" remarks="Максимальная емкость ресурса"
 				type="numeric(18, 3)" />
 			<column name="EFF_ON_DATE" remarks="Начало действия емкости"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="EFF_OFF_DATE" remarks="Окончание действия емкости"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="RESOURCE_GROUP_ID" remarks="Идентификатор группы ресурсов"
 				type="INT">
 				<constraints nullable="false" />
@@ -8622,9 +8622,9 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="EFF_ON_DATE" remarks="Дата начала действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="EFF_OFF_DATE" remarks="Дата окончания действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column defaultValueNumeric="0" name="MCH_FOH_RATE"
 				remarks="Норма постоянных накладных расходов на оборудование" type="numeric(15, 4)" />
 			<column defaultValueNumeric="0" name="MCH_VOH_RATE"
@@ -8666,9 +8666,9 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="EFF_ON_DATE" remarks="Дата начала действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="EFF_OFF_DATE" remarks="Дата окончания действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="DAY_CAL_MON"
 				remarks="Идентификатор дневного календаря для понедельника" type="INT">
 				<constraints nullable="false" />
@@ -8879,7 +8879,7 @@
 				remarks="Срок выполнения заказа, единица измерения" type="SMALLINT" />
 			<column name="DUEDATE_QUAN" remarks="Срок выполнения заказа, количество единиц"
 				type="numeric(18, 3)" />
-			<column name="DUEDATE" remarks="Дата выполнения" type="TIMESTAMP" />
+			<column name="DUEDATE" remarks="Дата выполнения" type="DATE" />
 			<column name="CREDITTERM" remarks="Количество дней просрочки"
 				type="SMALLINT" />
 			<column name="PENALTY" remarks="% штрафа" type="numeric(18, 6)" />
@@ -8912,7 +8912,7 @@
 				remarks="Срок выполнения заказа, единица измерения" type="SMALLINT" />
 			<column name="DUEDATE_QUAN" remarks="Срок выполнения заказа, количество единиц"
 				type="numeric(18, 3)" />
-			<column name="DUEDATE" remarks="Дата выполнения" type="TIMESTAMP" />
+			<column name="DUEDATE" remarks="Дата выполнения" type="DATE" />
 			<column name="CREDITTERM" remarks="Количество дней просрочки"
 				type="SMALLINT" />
 			<column name="PENALTY" remarks="% штрафа" type="numeric(18, 6)" />
@@ -8941,8 +8941,8 @@
 				remarks="Сумма с включёнными налогами и со скидкой/наценкой" type="numeric(15, 4)" />
 			<column defaultValueNumeric="0" name="COST"
 				remarks="Себестоимость (учитывает дополнительные расходы)" type="numeric(15, 4)" />
-			<column name="REQUIRED_DATE" remarks="Дата требования" type="TIMESTAMP" />
-			<column name="PROMISED_DATE" remarks="Дата поставки" type="TIMESTAMP" />
+			<column name="REQUIRED_DATE" remarks="Дата требования" type="DATE" />
+			<column name="PROMISED_DATE" remarks="Дата поставки" type="DATE" />
 			<column name="VENDOR_ITEM_CODE" remarks="Код товара у покупателя"
 				type="CHAR(20)" />
 			<column name="WAREHOUSE_ID" remarks="Склад" type="INT" />
@@ -9014,7 +9014,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="CANCELLATION_DATE" remarks="Дата погашения"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="CURRENT_CANCELLATION_SUMMA" remarks="Сумма текущего погашения"
 				type="INT" />
 			<column name="DOCHEAD_ID" remarks="Идентификатор документа"
@@ -9043,9 +9043,9 @@
 			<column name="STF_POSITION_ID" remarks="Идентификатор должности"
 				type="INT" />
 			<column name="ACTDATE_FROM" remarks="Дата начала действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="ACTDATE_TO" remarks="Дата окончания действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="ORGUNIT_ID" remarks="Идентификатор папки (подразделения)"
 				type="INT">
 				<constraints nullable="false" />
@@ -9100,9 +9100,9 @@
 				remarks="Периодичность выдачи:&#13;&#10;0 - разовая&#13;&#10;1 - периодическая"
 				type="INT" />
 			<column name="RETURNABLE" remarks="Подлежит возврату" type="INT" />
-			<column name="GIVE_DATE" remarks="Дата выдачи" type="TIMESTAMP" />
+			<column name="GIVE_DATE" remarks="Дата выдачи" type="DATE" />
 			<column name="READOUT_DATE" remarks="Дата ввода в эксплуатацию"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="SHELFLIFE" remarks="Срок годности" type="numeric(18, 3)" />
 			<column defaultValueNumeric="0" name="SHELFLIFE_MEAS"
 				remarks="Единица измерения срока годности:&#13;&#10;1 - час&#13;&#10;2 - день&#13;&#10;3 - месяц&#13;&#10;4 - год"
@@ -9170,7 +9170,7 @@
 				remarks="Тип выбытия из эксплуатации&#13;&#10;3 - возвращено&#13;&#10;4 - утеряно&#13;&#10;5 - списано"
 				type="INT" />
 			<column name="REMOVE_DATE" remarks="Дата выбытия из эксплуатации"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -9231,9 +9231,9 @@
 			<column name="STF_POSITION_ID" remarks="Идентификатор должности"
 				type="INT" />
 			<column name="OVR_NORM_BEGIN_DATE" remarks="Дата начала действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="OVR_NORM_END_DATE" remarks="Дата окончания действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -9385,7 +9385,7 @@
 			<column name="MILITIA" remarks="Паспорт - выдан" type="VARCHAR(256)" />
 			<column name="MILIT_CITY" remarks="Паспорт - Город" type="VARCHAR(20)" />
 			<column name="PASSP_DATE" remarks="Паспорт - дата выдачи"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="PASSP_NUM" remarks="Паспорт - номер" type="CHAR(10)" />
 			<column name="PASSP_SER" remarks="Паспорт - серия" type="CHAR(10)" />
 			<column name="OFFICE" remarks="Должность" type="VARCHAR(100)" />
@@ -9506,10 +9506,10 @@
 				type="CHAR(20)">
 				<constraints nullable="false" />
 			</column>
-			<column name="DATEFROM" remarks="Дата начала" type="TIMESTAMP">
+			<column name="DATEFROM" remarks="Дата начала" type="DATE">
 				<constraints nullable="false" />
 			</column>
-			<column name="DATETO" remarks="Дата окончания" type="TIMESTAMP">
+			<column name="DATETO" remarks="Дата окончания" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column name="WHOCLOSED"
@@ -9575,7 +9575,7 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="REGDATE" remarks="Дата регистрации" type="TIMESTAMP" />
+			<column name="REGDATE" remarks="Дата регистрации" type="DATE" />
 			<column name="DOCTYPE" remarks="Тип документа" type="CHAR(15)" />
 			<column name="DOCNUMBER" remarks="Номер документа" type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="DOCDATE"
@@ -9608,9 +9608,9 @@
 				remarks="Вид этапа:&#13;&#10;0 - сумма платежей контрагенту&#13;&#10;1 - сумма платежей от контрагента&#13;&#10;2 - сумма ТМЦ и услуг контрагенту&#13;&#10;3 - сумма ТМЦ и услуг от контрагента"
 				type="SMALLINT" />
 			<column name="BEGINACTION_DATE" remarks="Дата начала действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="ENDACTION_DATE" remarks="Дата конца действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="CONTRACTORFROM" remarks="Контрагент &quot;от кого&quot;"
 				type="INT" />
 			<column name="CONTRACTORTO" remarks="Контрагент &quot;кому&quot;"
@@ -9689,7 +9689,7 @@
 				type="INT" />
 			<column defaultValueNumeric="0" name="PLANNED"
 				remarks="0 - фактический платеж&#13;&#10;1 - плановый платеж" type="SMALLINT" />
-			<column name="PDATE" remarks="Дата платежа" type="TIMESTAMP" />
+			<column name="PDATE" remarks="Дата платежа" type="DATE" />
 			<column name="NAME" remarks="Наименование" type="VARCHAR(80)" />
 			<column name="CURCODE" remarks="Код валюты" type="CHAR(5)" />
 			<column name="CURRATETYPE_ID" remarks="Тип валюты" type="INT" />
@@ -9753,7 +9753,7 @@
 				type="INT" />
 			<column name="DOCHEAD_ID" remarks="Идентификатор документа"
 				type="INT" />
-			<column name="PDATE" remarks="Дата исполнения" type="TIMESTAMP" />
+			<column name="PDATE" remarks="Дата исполнения" type="DATE" />
 			<column defaultValueNumeric="0" name="TOTALSUMCUR"
 				remarks="Сумма документа в валюте" type="numeric(15, 4)" />
 			<column defaultValueNumeric="0" name="TOTALSUMNAT" remarks="Сумма документа"
@@ -9834,9 +9834,9 @@
 			<column defaultValueNumeric="0" name="RECEIVABLE"
 				remarks="Направление платежа&#13;&#10;0 - к оплате&#13;&#10;1 - к получению"
 				type="SMALLINT" />
-			<column name="PLANDATE" remarks="Дата исполнения" type="TIMESTAMP" />
+			<column name="PLANDATE" remarks="Дата исполнения" type="DATE" />
 			<column name="FACTDATE" remarks="Фактическая дата иполнения"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column defaultValueNumeric="0" name="SUMCUR" remarks="Сумма в валюте"
 				type="numeric(15, 4)" />
 			<column defaultValueNumeric="0" name="SUMNAT" remarks="Сумма"
@@ -9891,8 +9891,8 @@
 				remarks="Направление платежа&#13;&#10;0 - к оплате&#13;&#10;1 - к получению"
 				type="SMALLINT" />
 			<column name="NUM" remarks="Номер обязательства" type="VARCHAR(20)" />
-			<column name="REGDATE" remarks="Дата регистрации" type="TIMESTAMP" />
-			<column name="DATETOEXECUTE" remarks="Дата выполения" type="TIMESTAMP" />
+			<column name="REGDATE" remarks="Дата регистрации" type="DATE" />
+			<column name="DATETOEXECUTE" remarks="Дата выполения" type="DATE" />
 			<column name="FROM_ID" remarks="От кого" type="INT" />
 			<column name="TO_ID" remarks="Кому" type="INT" />
 			<column defaultValueNumeric="0" name="SUMCUR" remarks="Сумма в валюте"
@@ -9961,8 +9961,8 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="NAME" remarks="Наименование" type="VARCHAR(80)" />
-			<column name="DATEFROM" remarks="Дата начала" type="TIMESTAMP" />
-			<column name="DATETILL" remarks="Дата окончания" type="TIMESTAMP" />
+			<column name="DATEFROM" remarks="Дата начала" type="DATE" />
+			<column name="DATETILL" remarks="Дата окончания" type="DATE" />
 			<column name="PARENT_ID" remarks="Идентификатор родительского периода"
 				type="INT" />
 			<column name="KIND"
@@ -9987,9 +9987,9 @@
 			<column name="CATALOG_ID" remarks="Идентификатор позиции каталога"
 				type="INT" />
 			<column name="ACTDATETILL" remarks="Дата начала действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="ACTDATEFROM" remarks="Дата окончания действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="CURCODE" remarks="Код валюты" type="CHAR(5)" />
 			<column name="CURRATEAUTHORITY_ID" remarks="Источник курса"
 				type="INT" />
@@ -10017,7 +10017,7 @@
 			<column name="NAME" remarks="Наименование" type="VARCHAR(80)" />
 			<column defaultValueNumeric="0" name="AVAILABLE" remarks="Признак доступности"
 				type="SMALLINT" />
-			<column name="CREATEDATE" remarks="Дата создания" type="TIMESTAMP" />
+			<column name="CREATEDATE" remarks="Дата создания" type="DATE" />
 			<column name="CREATOR_ID" remarks="Идентификатор создателя"
 				type="INT" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -10035,9 +10035,9 @@
 				remarks="Статус версии&#13;&#10;1 - в работе&#13;&#10;2 - готово&#13;&#10;3 - утверждено"
 				type="SMALLINT" />
 			<column name="VERSION_ID" remarks="Идентификатор версии" type="INT" />
-			<column name="DATETILL" remarks="Дата начала действия" type="TIMESTAMP" />
+			<column name="DATETILL" remarks="Дата начала действия" type="DATE" />
 			<column name="DATEFROM" remarks="Дата окончания действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="CREATOR_ID" remarks="Идентификатор создателя"
 				type="INT" />
 			<column name="CREATEDATE" remarks="Дата создания" type="DATETIME" />
@@ -10094,12 +10094,12 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="REQUIRED_DATE" remarks="Дата потребности" type="TIMESTAMP" />
+			<column name="REQUIRED_DATE" remarks="Дата потребности" type="DATE" />
 			<column name="ORDER_QTY" remarks="Количество к закупке / перемещению"
 				type="numeric(18, 3)" />
 			<column name="VENDOR_ID" remarks="Идентификатор поставщика"
 				type="INT" />
-			<column name="ORDER_DATE" remarks="Дата заказа" type="TIMESTAMP" />
+			<column name="ORDER_DATE" remarks="Дата заказа" type="DATE" />
 			<column defaultValueNumeric="0" name="FIXED_INPUT"
 				remarks="Признак фиксации поступления" type="SMALLINT" />
 			<column defaultValueNumeric="0" name="REQUISITION_FLAG"
@@ -10190,9 +10190,9 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="EFF_ON_DATE" remarks="Дата начала действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="EFF_OFF_DATE" remarks="Дата окончания действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="QTY_ON_HAND" remarks="Прогнозируемое доступное количество"
 				type="numeric(18, 3)" />
 			<column name="WAREHOUSE_ID" remarks="Идентификатор склада"
@@ -10226,9 +10226,9 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="EFF_ON_DATE" remarks="Дата начала действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="EFF_OFF_DATE" remarks="Дата окончания действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="ALLOCATION_PERCENT"
 				remarks="Процент входимости дочернего товара в родительский" type="numeric(18, 6)" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -10252,11 +10252,11 @@
 				type="INT" />
 			<column name="CODE" remarks="Код" type="CHAR(20)" />
 			<column name="DEMAND_FENCE_DATE" remarks="Дата начала отсчета до границы спроса"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="DESCRIPTION" remarks="Описание" type="VARCHAR(80)">
 				<constraints nullable="false" />
 			</column>
-			<column name="PLANNING_DATE" remarks="Дата старта плана" type="TIMESTAMP" />
+			<column name="PLANNING_DATE" remarks="Дата старта плана" type="DATE" />
 			<column name="PP_LEVEL_PROCESSED_TO"
 				remarks="Код нижнего уровня, до которого происходит обработка" type="SMALLINT" />
 			<column defaultValueNumeric="0" name="PRODUCTION"
@@ -10310,9 +10310,9 @@
 				type="numeric(18, 3)" />
 			<column name="BUCKET_OFFSET" remarks="Смещение периода" type="SMALLINT" />
 			<column name="BUCKET_OFFSET_DATE" remarks="Дата начала бакета"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="DEMAND_FENCE_DATE" remarks="Дата начала отсчета до границы спроса"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="DEMAND_QTY" remarks="Потребность в производстве"
 				type="numeric(18, 3)" />
 			<column name="MPS_SEQUENCE" remarks="Порядковый номер строки плана"
@@ -10383,14 +10383,14 @@
 				type="VARCHAR(80)" />
 			<column name="REFERENCE_ID" remarks="Идентификатор строки прогноза"
 				type="INT" />
-			<column name="REQUIRED_DATE" remarks="Дата поступления" type="TIMESTAMP" />
+			<column name="REQUIRED_DATE" remarks="Дата поступления" type="DATE" />
 			<column name="MRP_QUANTITY" remarks="Количество" type="numeric(18, 3)" />
 			<column name="MRP_ORDER_TYPE" remarks="Тип поступления" type="SMALLINT" />
 			<column name="MRP_SOURCE" remarks="Источник поступления" type="SMALLINT" />
 			<column defaultValueNumeric="0" name="FIXED_INPUT"
 				remarks="Признак фиксации поступления" type="SMALLINT" />
 			<column name="BATCH_DATE" remarks="Дата истечения срока годности"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="WAREHOUSE_ID" remarks="Идентификатор склада"
 				type="INT">
 				<constraints nullable="false" />
@@ -10414,7 +10414,7 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="REQUIRED_DATE" remarks="Дата потребности" type="TIMESTAMP" />
+			<column name="REQUIRED_DATE" remarks="Дата потребности" type="DATE" />
 			<column name="PP_REFERENCE" remarks="Ссылка на источник потребности"
 				type="VARCHAR(80)" />
 			<column name="REFERENCE_ID" remarks="Идентификатор строки прогноза"
@@ -10444,7 +10444,7 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="REQUIRED_DATE" remarks="Дата потребности" type="TIMESTAMP" />
+			<column name="REQUIRED_DATE" remarks="Дата потребности" type="DATE" />
 			<column name="ORDER_QTY" remarks="Количество к закупке / перемещению"
 				type="numeric(18, 3)" />
 			<column name="MRP_QUANTITY" remarks="Количество к закупке / перемещению по расчету"
@@ -10453,7 +10453,7 @@
 				type="SMALLINT" />
 			<column defaultValueNumeric="0" name="FIRM_PLAN_SUGGESTED_ORDER"
 				remarks="Признак одобрения рекомендации" type="SMALLINT" />
-			<column name="ORDER_DATE" remarks="Дата заказа" type="TIMESTAMP" />
+			<column name="ORDER_DATE" remarks="Дата заказа" type="DATE" />
 			<column defaultValueNumeric="0" name="MRP_ARREARS_FLAG"
 				remarks="Признак просроченности" type="SMALLINT" />
 			<column defaultValueNumeric="0" name="MRP_ORDERED"
@@ -10483,8 +10483,8 @@
 				type="SMALLINT" />
 			<column name="MRP_SOURCE" remarks="Источник возникновения"
 				type="SMALLINT" />
-			<column name="ORIGINAL_DATE" remarks="Исходная дата" type="TIMESTAMP" />
-			<column name="BATCH_DATE" remarks="Дата истечения срока" type="TIMESTAMP" />
+			<column name="ORIGINAL_DATE" remarks="Исходная дата" type="DATE" />
+			<column name="BATCH_DATE" remarks="Дата истечения срока" type="DATE" />
 			<column name="ORIGINAL_QUANTITY" remarks="Исходное количество"
 				type="numeric(18, 3)" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -10502,7 +10502,7 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="REQUIRED_DATE" remarks="Дата потребности" type="TIMESTAMP" />
+			<column name="REQUIRED_DATE" remarks="Дата потребности" type="DATE" />
 			<column name="MRP_ORDER_TYPE" remarks="Тип заказа MRP" type="SMALLINT" />
 			<column name="PP_REFERENCE" remarks="Ссылка на источник потребности"
 				type="VARCHAR(80)" />
@@ -10516,7 +10516,7 @@
 				type="SMALLINT" />
 			<column defaultValueNumeric="0" name="FIXED_INPUT"
 				remarks="Признак фиксации поступления" type="SMALLINT" />
-			<column name="ORDER_DATE" remarks="Дата заказа" type="TIMESTAMP" />
+			<column name="ORDER_DATE" remarks="Дата заказа" type="DATE" />
 			<column defaultValueNumeric="0" name="MRP_ARREARS_FLAG"
 				remarks="Признак просроченности" type="SMALLINT" />
 			<column name="WAREHOUSE_ID" remarks="Идентификатор склада"
@@ -10526,7 +10526,7 @@
 			<column name="CATALOG_ID" remarks="Идентификатор товара" type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="ORIGINAL_DATE" remarks="Исходная дата" type="TIMESTAMP" />
+			<column name="ORIGINAL_DATE" remarks="Исходная дата" type="DATE" />
 			<column name="ORIGINAL_QUANTITY" remarks="Исходное количество"
 				type="numeric(18, 3)" />
 			<column name="SEQUENCE"
@@ -10549,7 +10549,7 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="REQUIRED_DATE" remarks="Дата потребности" type="TIMESTAMP" />
+			<column name="REQUIRED_DATE" remarks="Дата потребности" type="DATE" />
 			<column name="SHORTAGE_QTY" remarks="Дефицитное количество"
 				type="numeric(18, 3)" />
 			<column name="WAREHOUSE_ID" remarks="Идентификатор склада"
@@ -10575,7 +10575,7 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="REQUIRED_DATE" remarks="Дата" type="TIMESTAMP" />
+			<column name="REQUIRED_DATE" remarks="Дата" type="DATE" />
 			<column name="SALES_ORDER_QTY" remarks="Количество по заказам на продажу"
 				type="numeric(18, 3)" />
 			<column name="SALES_FORECAST_QTY" remarks="Количество по прогнозам на продажу"
@@ -10665,13 +10665,13 @@
 				type="SMALLINT" />
 			<column name="QC_RECEIVING_DAYS" remarks="Количество дней на приемку по качеству"
 				type="SMALLINT" />
-			<column name="RUN_DATE" remarks="Дата запуска MRP" type="TIMESTAMP" />
+			<column name="RUN_DATE" remarks="Дата запуска MRP" type="DATE" />
 			<column name="MRP_START_DATE" remarks="Начало периода, охватываемого расчетом"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="MRP_END_DATE" remarks="Окончание периода, охватываемого расчетом"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="LAST_RUN_DATETIME" remarks="Дата последнего запуска MRP"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column defaultValueNumeric="0" name="MRP_SUGGESTED_ORDERS_FIRMED"
 				remarks="Завершение работы с рекомендациями ППМ" type="SMALLINT" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -10744,7 +10744,7 @@
 				remarks="Метод прогноза&#13;&#10;0 - прогнозируемое количество задается на период&#13;&#10;1 - прогнозируемое количество задается на дату"
 				type="SMALLINT" />
 			<column name="BUCKET_OFFSET" remarks="Смещение периода" type="SMALLINT" />
-			<column name="REQUIRED_DATE" remarks="Дата прогноза" type="TIMESTAMP" />
+			<column name="REQUIRED_DATE" remarks="Дата прогноза" type="DATE" />
 			<column name="FORECAST_QUANTITY" remarks="Прогнозируемое количество"
 				type="numeric(18, 3)" />
 			<column name="MEASURE_ID" remarks="Единица измерения" type="INT">
@@ -10787,8 +10787,8 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="START_DATE" remarks="Начальная дата" type="TIMESTAMP" />
-			<column name="END_DATE" remarks="Конечная дата" type="TIMESTAMP" />
+			<column name="START_DATE" remarks="Начальная дата" type="DATE" />
+			<column name="END_DATE" remarks="Конечная дата" type="DATE" />
 			<column name="BUCKET_OFFSET" remarks="Порядковый номер периода"
 				type="SMALLINT" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -10969,7 +10969,7 @@
 			<column name="ADDRESS_KIND"
 				remarks="Тип адреса&#13;&#10;0 - фактический&#13;&#10;1 - прописка"
 				type="INT" />
-			<column name="BEGINDATE" remarks="Действует с" type="TIMESTAMP" />
+			<column name="BEGINDATE" remarks="Действует с" type="DATE" />
 			<column name="FULL_ADDRESS" remarks="Полный адрес" type="VARCHAR(256)" />
 			<column name="POST_INDEX" remarks="Почтовый индекс" type="CHAR(10)" />
 			<column name="COUNTRY" remarks="Страна" type="VARCHAR(40)">
@@ -11016,10 +11016,10 @@
 			<column name="ID" remarks="Идентификатор записи" type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="BEGINDATE" remarks="Дата начала периода" type="TIMESTAMP">
+			<column name="BEGINDATE" remarks="Дата начала периода" type="DATE">
 				<constraints nullable="false" />
 			</column>
-			<column name="ENDDATE" remarks="Дата окончания периода" type="TIMESTAMP">
+			<column name="ENDDATE" remarks="Дата окончания периода" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column name="STAFFLIST_ID" remarks="Идентификатор штатного расписания"
@@ -11114,7 +11114,7 @@
 				type="numeric(18, 3)" />
 			<column defaultValueNumeric="0" name="FIXEDSUM" remarks="Фиксированная сумма"
 				type="numeric(15, 4)" />
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP">
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column defaultValueNumeric="0" name="MAX_INCOME" remarks="Максимальный доход"
@@ -11151,8 +11151,8 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP" />
-			<column name="ENDDATE" remarks="Дата окончания действия" type="TIMESTAMP" />
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE" />
+			<column name="ENDDATE" remarks="Дата окончания действия" type="DATE" />
 			<column name="RATIO" remarks="Коэффициент вычета" type="numeric(18, 3)" />
 			<column name="FAMILY_MEMBER_ID" remarks="Идентификатор члена семьи"
 				type="INT">
@@ -11185,7 +11185,7 @@
 			</column>
 			<column name="RELATION_ID" remarks="Идентификатор степени родства"
 				type="INT" />
-			<column name="BIRTHDATE" remarks="Дата рождения" type="TIMESTAMP" />
+			<column name="BIRTHDATE" remarks="Дата рождения" type="DATE" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -11222,7 +11222,7 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP">
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -11287,13 +11287,13 @@
 			<column name="WHO_ISSUED" remarks="Кем выдан" type="VARCHAR(80)">
 				<constraints nullable="false" />
 			</column>
-			<column name="WHEN_ISSUED" remarks="Когда выдан" type="TIMESTAMP" />
-			<column name="ACTIVE_TILL" remarks="Действует до" type="TIMESTAMP" />
+			<column name="WHEN_ISSUED" remarks="Когда выдан" type="DATE" />
+			<column name="ACTIVE_TILL" remarks="Действует до" type="DATE" />
 			<column name="CITIZENSHIP" remarks="Гражданство" type="VARCHAR(40)">
 				<constraints nullable="false" />
 			</column>
 			<column name="ADDRESS_ID" remarks="Идентификатор адреса" type="INT" />
-			<column name="BIRTHDATE" remarks="Дата рождения" type="TIMESTAMP" />
+			<column name="BIRTHDATE" remarks="Дата рождения" type="DATE" />
 			<column name="NATIONALITY_ID" remarks="Идентификатор национальности"
 				type="INT" />
 			<column name="BIRTHPLACE_COUNTRY" remarks="Место рождения: страна"
@@ -11505,12 +11505,12 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="ACT_DATE" remarks="Действует с" type="TIMESTAMP" />
+			<column name="ACT_DATE" remarks="Действует с" type="DATE" />
 			<column name="TABLE_NUMBER" remarks="Табельный номер" type="CHAR(20)" />
 			<column name="NAME1" remarks="Фимилия" type="VARCHAR(80)" />
 			<column name="NAME2" remarks="Имя" type="VARCHAR(80)" />
 			<column name="NAME3" remarks="Отчество" type="VARCHAR(80)" />
-			<column name="BORNDATE" remarks="Дата рождения" type="TIMESTAMP" />
+			<column name="BORNDATE" remarks="Дата рождения" type="DATE" />
 			<column name="SEX" remarks="Пол:&#13;&#10;0 - мужской&#13;&#10;1 - женский"
 				type="INT" />
 			<column name="STATURE" remarks="Рост" type="numeric(18, 3)" />
@@ -11533,12 +11533,12 @@
 			<column name="LABOUR_CONTRACT_NUMBER" remarks="Номер трудового договора"
 				type="CHAR(20)" />
 			<column name="LABOUR_CONTRACT_DATE" remarks="Дата трудового договора"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="ADDITIONAL_INFO" remarks="Дополнительное поле"
 				type="VARCHAR(2048)" />
 			<column name="RETIRE_REASON" remarks="Причина увольнения"
 				type="VARCHAR(256)" />
-			<column name="RETIRE_DATE" remarks="Дата увольнения" type="TIMESTAMP" />
+			<column name="RETIRE_DATE" remarks="Дата увольнения" type="DATE" />
 			<column name="RETIRE_ORDER_ID" remarks="Идентификатор приваза на увольнение"
 				type="INT" />
 			<column name="MIL_RESERVE_CATEGORY_ID" remarks="Идентификатор категории запаса"
@@ -11575,7 +11575,7 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="ATTESTATION_DATE" remarks="Дата" type="TIMESTAMP" />
+			<column name="ATTESTATION_DATE" remarks="Дата" type="DATE" />
 			<column name="RESOLUTION" remarks="Резолюция комиссии" type="VARCHAR(80)" />
 			<column name="RESOLUTION_DOCUMENT_ID" remarks="Идентификатор протокола"
 				type="INT" />
@@ -11603,7 +11603,7 @@
 				type="VARCHAR(80)" />
 			<column name="DIPLOMA_NUMBER" remarks="Серия и номер дмплома"
 				type="CHAR(20)" />
-			<column name="DIPLOMA_DATE" remarks="дата выдачи" type="TIMESTAMP" />
+			<column name="DIPLOMA_DATE" remarks="дата выдачи" type="DATE" />
 			<column name="GRADUATION_YEAR" remarks="Год окончания" type="INT" />
 			<column name="SPECIALITY_ID" remarks="Идентификатор специальности"
 				type="INT" />
@@ -11663,7 +11663,7 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="ACT_DATE" remarks="Действует с" type="TIMESTAMP">
+			<column name="ACT_DATE" remarks="Действует с" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column name="TABLE_NUMBER" remarks="Табельный номер" type="CHAR(20)" />
@@ -11676,7 +11676,7 @@
 			<column name="NAME3" remarks="Отчество" type="VARCHAR(80)">
 				<constraints nullable="false" />
 			</column>
-			<column name="BORNDATE" remarks="Дата рождения" type="TIMESTAMP" />
+			<column name="BORNDATE" remarks="Дата рождения" type="DATE" />
 			<column name="SEX" remarks="Пол:&#13;&#10;0 - мужской&#13;&#10;1 - женский"
 				type="INT" />
 			<column name="STATURE" remarks="Рост" type="numeric(18, 3)" />
@@ -11753,15 +11753,15 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="WORK_BEGINDATE" remarks="Дата начала периода"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="WORK_ENDDATE" remarks="Дата окончания периода"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="HOLIDAY_NUMBER" remarks="Количество дней отпуска"
 				type="INT" />
-			<column name="BEGINDATE" remarks="Дата начала" type="TIMESTAMP">
+			<column name="BEGINDATE" remarks="Дата начала" type="DATE">
 				<constraints nullable="false" />
 			</column>
-			<column name="ENDDATE" remarks="Дата окончания" type="TIMESTAMP" />
+			<column name="ENDDATE" remarks="Дата окончания" type="DATE" />
 			<column name="ORDER_ID" remarks="Идентификатор приказа" type="INT" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
@@ -11866,8 +11866,8 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="BEGINDATE" remarks="Дата начала стажа" type="TIMESTAMP" />
-			<column name="ENDDATE" remarks="Дата окончания стажа" type="TIMESTAMP" />
+			<column name="BEGINDATE" remarks="Дата начала стажа" type="DATE" />
+			<column name="ENDDATE" remarks="Дата окончания стажа" type="DATE" />
 			<column name="LENGTHSERVICE" remarks="Длительность стажа"
 				type="numeric(18, 3)" />
 			<column name="COMMENT" remarks="Примечание" type="VARCHAR(256)" />
@@ -11891,9 +11891,9 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="STUDY_BEGINDATE" remarks="Дата начала обучения"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="STUDY_ENDDATE" remarks="Дата окончания обучения"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="SKILL_RAISING_KIND_ID" remarks="Идентификатор вида повышения квалификации"
 				type="INT">
 				<constraints nullable="false" />
@@ -11944,7 +11944,7 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="TRANSFER_DATE" remarks="Дата" type="TIMESTAMP" />
+			<column name="TRANSFER_DATE" remarks="Дата" type="DATE" />
 			<column name="STAFF_LIST_UNIT_ID" remarks="Идентификатор подразделения"
 				type="INT" />
 			<column name="STAFF_LIST_POSITION_ID" remarks="Идентификатор должности"
@@ -11971,9 +11971,9 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="TRAINING_BEGINDATE" remarks="Дата начала переподготовки"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="TRAINING_ENDDATE" remarks="Дата окончания переподготовки"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="SPECIALITY_ID" remarks="Идентификатор специальности"
 				type="INT">
 				<constraints nullable="false" />
@@ -12122,7 +12122,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="SNAME" remarks="Наименование шкалы" type="VARCHAR(80)" />
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP" />
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -12261,8 +12261,8 @@
 			</column>
 			<column name="STAFFCATEGORY_ID" remarks="Идентификатор категории персонала"
 				type="INT" />
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP" />
-			<column name="ENDDATE" remarks="Дата окончания действия" type="TIMESTAMP" />
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE" />
+			<column name="ENDDATE" remarks="Дата окончания действия" type="DATE" />
 			<column name="RATE_NUMBER" remarks="Общее количество ставок по должности"
 				type="numeric(18, 6)" />
 			<column name="HOLIDAY_NUMBER" remarks="Количество дней отпуска"
@@ -12366,8 +12366,8 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP" />
-			<column name="ENDDATE" remarks="Дата окончания действия" type="TIMESTAMP" />
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE" />
+			<column name="ENDDATE" remarks="Дата окончания действия" type="DATE" />
 			<column defaultValueNumeric="0" name="RATE_OF_SALARY" remarks="Размер оклада"
 				type="numeric(15, 4)" />
 			<column name="TARIFFSCALE_CODE" remarks="Код тарифной сетки"
@@ -12431,7 +12431,7 @@
 			<column name="STYPE" remarks="Тип тарифной сетки" type="SMALLINT" />
 			<column name="FIRST_CLASS_ALG_ID" remarks="Алгоритм расчета ставки первого разряда"
 				type="INT" />
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP">
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -12529,8 +12529,8 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="SNAME" remarks="Наименование графика" type="VARCHAR(80)" />
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP" />
-			<column name="ENDDATE" remarks="Дата окончания действия" type="TIMESTAMP" />
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE" />
+			<column name="ENDDATE" remarks="Дата окончания действия" type="DATE" />
 			<column name="LEAVE_SCHEDULE_ID" remarks="Идентификатор графика для расчета отпуска"
 				type="INT" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -12640,11 +12640,11 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="ACTDATE" remarks="Дата начала действия позиции"
-				type="TIMESTAMP">
+				type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column name="ACTDATETILL" remarks="Дата окончания действия позиции"
-				type="TIMESTAMP">
+				type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column name="INTERNALCODE" remarks="Артикул поставщика" type="VARCHAR(80)" />
@@ -12732,7 +12732,7 @@
 			</column>
 			<column name="CONTACTKIND_ID" remarks="Идентификатор вида контакта"
 				type="INT" />
-			<column name="CDATE" remarks="Дата контакта" type="TIMESTAMP" />
+			<column name="CDATE" remarks="Дата контакта" type="DATE" />
 			<column name="CDESCRIPTION" remarks="Описание контакта" type="VARCHAR(2048)" />
 			<column name="PARTNER_ID" remarks="Идентификатор партнера"
 				type="INT" />
@@ -12753,7 +12753,7 @@
 			<column name="RESULT_COMMENT" remarks="Комментарий к результату"
 				type="VARCHAR(2048)" />
 			<column name="NEXTCDATE" remarks="Дата следующего контакта"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="PRIORITY" remarks="Приоритет контакта" type="INT" />
 			<column name="UNID" remarks="Иникальный код" type="VARCHAR(32)" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -12775,7 +12775,7 @@
 				remarks="Двоичный образ приложенного файла (хранится в базе)" type="BLOB" />
 			<column name="FILENAME" remarks="Имя файла" type="VARCHAR(256)" />
 			<column name="FDESCRIPTION" remarks="Описание файла" type="VARCHAR(256)" />
-			<column name="FILEDATE" remarks="Дата" type="TIMESTAMP" />
+			<column name="FILEDATE" remarks="Дата" type="DATE" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -13015,7 +13015,7 @@
 			<column name="RATE_TYPE_ID" remarks="Тип курса" type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="EFFECTIVE_DATE" remarks="Дата курса" type="TIMESTAMP">
+			<column name="EFFECTIVE_DATE" remarks="Дата курса" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -13113,7 +13113,7 @@
 			</column>
 			<column name="RELATION_ID" remarks="Идентификатор степень родства"
 				type="INT" />
-			<column name="BIRTHDATE" remarks="Дата рождения" type="TIMESTAMP" />
+			<column name="BIRTHDATE" remarks="Дата рождения" type="DATE" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -13150,7 +13150,7 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP">
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -13184,7 +13184,7 @@
 			<column name="HNAME" remarks="Наименование" type="VARCHAR(80)">
 				<constraints nullable="false" />
 			</column>
-			<column name="HDATE" remarks="Дата" type="TIMESTAMP">
+			<column name="HDATE" remarks="Дата" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column name="HDAY" remarks="День" type="INT">
@@ -13223,11 +13223,11 @@
 			<column name="SERIES_RIGHT" remarks="Правая часть серии" type="CHAR(10)" />
 			<column name="DOCNUMBER" remarks="Номер документа" type="CHAR(20)" />
 			<column name="WHO_ISSUED" remarks="Кем выдан" type="VARCHAR(80)" />
-			<column name="WHEN_ISSUED" remarks="Когда выдан" type="TIMESTAMP" />
-			<column name="ACTIVE_TILL" remarks="Действует до" type="TIMESTAMP" />
+			<column name="WHEN_ISSUED" remarks="Когда выдан" type="DATE" />
+			<column name="ACTIVE_TILL" remarks="Действует до" type="DATE" />
 			<column name="CITIZENSHIP" remarks="Гражданство" type="VARCHAR(80)" />
 			<column name="ADDRESS_ID" remarks="Идентификатор адреса" type="INT" />
-			<column name="BIRTHDATE" remarks="Дата рождения" type="TIMESTAMP" />
+			<column name="BIRTHDATE" remarks="Дата рождения" type="DATE" />
 			<column name="NATIONALITY_ID" remarks="Идентификатор национальности"
 				type="INT" />
 			<column name="BIRTHPLACE_COUNTRY" remarks="Старан рождения"
@@ -13325,7 +13325,7 @@
 			<column name="FOLDER_ID" remarks="Идентификатор папки" type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="ACT_DATE" remarks="Дата начала дейтсвия" type="TIMESTAMP">
+			<column name="ACT_DATE" remarks="Дата начала дейтсвия" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column name="SURNAME" remarks="Фамилия" type="VARCHAR(80)">
@@ -13333,7 +13333,7 @@
 			</column>
 			<column name="NAME" remarks="Имя" type="VARCHAR(80)" />
 			<column name="PATRONYMIC" remarks="Отчество" type="VARCHAR(80)" />
-			<column name="BORNDATE" remarks="Дата рождения" type="TIMESTAMP" />
+			<column name="BORNDATE" remarks="Дата рождения" type="DATE" />
 			<column name="SEX" remarks="Пол" type="INT" />
 			<column name="PHOTO" remarks="Фотография" type="BLOB" />
 			<column name="INN" remarks="ИНН" type="CHAR(20)" />
@@ -13358,7 +13358,7 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="ACT_DATE" remarks="Дата" type="TIMESTAMP">
+			<column name="ACT_DATE" remarks="Дата" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column name="SURNAME" remarks="Фамилия" type="VARCHAR(80)">
@@ -13413,7 +13413,7 @@
 			<column name="DOCNAME" remarks="Наименование" type="VARCHAR(80)">
 				<constraints nullable="false" />
 			</column>
-			<column name="CREATEDATE" remarks="Дата создания" type="TIMESTAMP" />
+			<column name="CREATEDATE" remarks="Дата создания" type="DATE" />
 			<column name="COMMENTS" remarks="Комментарии" type="VARCHAR(256)" />
 			<column name="ORIGINAL" remarks="Оригинал документа" type="BLOB" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -13456,8 +13456,8 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="DATEBEGIN" remarks="Дата начала действия" type="TIMESTAMP" />
-			<column name="DATEEND" remarks="Дата окончания действия" type="TIMESTAMP" />
+			<column name="DATEBEGIN" remarks="Дата начала действия" type="DATE" />
+			<column name="DATEEND" remarks="Дата окончания действия" type="DATE" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -13500,7 +13500,7 @@
 			<column name="ADDRESS_KIND"
 				remarks="Тип адреса&#13;&#10;0 - фактический&#13;&#10;1 - прописка"
 				type="INT" />
-			<column name="BEGINDATE" remarks="Дата начала дейсткия" type="TIMESTAMP" />
+			<column name="BEGINDATE" remarks="Дата начала дейсткия" type="DATE" />
 			<column name="POST_INDEX" remarks="Индекс" type="CHAR(10)" />
 			<column name="COUNTRY_ID" remarks="Идентификатор страны" type="INT" />
 			<column name="REGION" remarks="Регион" type="VARCHAR(80)" />
@@ -13729,18 +13729,18 @@
 				remarks="Сумма остатка на начало периода по дебету в валюте" type="numeric(15, 4)" />
 			<column defaultValueNumeric="0" name="REMNBEGINCURKT"
 				remarks="Сумма остатка на начало периода по кредиту в валюте" type="numeric(15, 4)" />
-			<column name="RISEDEBTS" remarks="Не используется" type="TIMESTAMP" />
-			<column name="CLEARDEBTS" remarks="Не используется" type="TIMESTAMP" />
+			<column name="RISEDEBTS" remarks="Не используется" type="DATE" />
+			<column name="CLEARDEBTS" remarks="Не используется" type="DATE" />
 			<column name="COMMENT" remarks="Примечание" type="VARCHAR(256)" />
 			<column name="DOCBASETYPE" remarks="Тип документа-основания"
 				type="CHAR(15)" />
 			<column name="DOCBASENUMBER" remarks="Номер документа-основания"
 				type="CHAR(20)" />
 			<column name="DOCBASEDATE" remarks="Дата документа-основания"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="DOCTYPE" remarks="Тип договора" type="CHAR(15)" />
 			<column name="DOCNUMBER" remarks="Номер договора" type="CHAR(20)" />
-			<column name="DOCDATE" remarks="Дата договора" type="TIMESTAMP" />
+			<column name="DOCDATE" remarks="Дата договора" type="DATE" />
 			<column name="CONTRACTOR_ID" remarks="Контрагент" type="INT" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
@@ -13887,13 +13887,13 @@
 			<column name="RESPONSIBLE" remarks="Ответственный" type="INT" />
 			<column name="CONSUMER" remarks="Потребитель" type="INT" />
 			<column name="PLANPAYDATE" remarks="Плановая дата оплаты"
-				type="TIMESTAMP" />
-			<column name="PAYDATE" remarks="Дата оплаты" type="TIMESTAMP" />
+				type="DATE" />
+			<column name="PAYDATE" remarks="Дата оплаты" type="DATE" />
 			<column defaultValueNumeric="0" name="PAYSUM" remarks="Сумма оплаты"
 				type="numeric(15, 4)" />
 			<column name="BASE_DISCOUNT" remarks="Базовая скидка" type="numeric(18, 6)" />
 			<column name="PLANSHIPDATE" remarks="Плановая дата отгрузки"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="APPLY_DIS_KIND"
 				remarks="Признак &quot;Применять скидку/наценку в процессе добавления спецификаций&quot;: 0 - нет, 1 - да"
 				type="INT" />
@@ -13924,13 +13924,13 @@
 			<column name="RESPONSIBLE" remarks="Ответственный" type="INT" />
 			<column name="CONSUMER" remarks="Потребитель" type="INT" />
 			<column name="PLANPAYDATE" remarks="Плановая дата оплаты"
-				type="TIMESTAMP" />
-			<column name="PAYDATE" remarks="Дата оплаты" type="TIMESTAMP" />
+				type="DATE" />
+			<column name="PAYDATE" remarks="Дата оплаты" type="DATE" />
 			<column defaultValueNumeric="0" name="PAYSUM" remarks="Сумма оплаты"
 				type="numeric(15, 4)" />
 			<column name="BASE_DISCOUNT" remarks="Базовая скидка" type="numeric(18, 6)" />
 			<column name="PLANSHIPDATE" remarks="Плановая дата отгрузки"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="APPLY_DIS_KIND"
 				remarks="Признак &quot;Применять скидку/наценку в процессе добавления спецификаций&quot;: 0 - нет, 1 - да"
 				type="INT" />
@@ -13969,8 +13969,8 @@
 			<column defaultValueComputed="${today}" name="DOCDATE"
 				remarks="Дата документа" type="DATE" />
 			<column name="INSERTDATE" remarks="Дата регистрации в книге продаж"
-				type="TIMESTAMP" />
-			<column name="PAYDATE" remarks="Дата оплаты" type="TIMESTAMP" />
+				type="DATE" />
+			<column name="PAYDATE" remarks="Дата оплаты" type="DATE" />
 			<column defaultValueNumeric="0" name="TOTALSUM"
 				remarks="Всего продаж, включая НДС" type="numeric(15, 4)" />
 			<column defaultValueNumeric="0" name="SUM_WITHOUT_NDS1"
@@ -14045,10 +14045,10 @@
 			<column name="FEE_MODEL_ID"
 				remarks="Идентификатор образца начисления/удержания из лицевого счета сотрудника"
 				type="INT" />
-			<column name="BEGINDATE" remarks="Начислено с" type="TIMESTAMP" />
-			<column name="ENDDATE" remarks="Начислено по" type="TIMESTAMP" />
-			<column name="PERIOD_BEGINDATE" remarks="За период с" type="TIMESTAMP" />
-			<column name="PERIOD_ENDDATE" remarks="За период по" type="TIMESTAMP" />
+			<column name="BEGINDATE" remarks="Начислено с" type="DATE" />
+			<column name="ENDDATE" remarks="Начислено по" type="DATE" />
+			<column name="PERIOD_BEGINDATE" remarks="За период с" type="DATE" />
+			<column name="PERIOD_ENDDATE" remarks="За период по" type="DATE" />
 			<column defaultValueNumeric="0" name="SUMMA"
 				remarks="Итоговая сумма начисления/удержания" type="numeric(15, 4)" />
 			<column defaultValueNumeric="0" name="NEED_PARAMS"
@@ -14152,7 +14152,7 @@
 				type="numeric(18, 3)" />
 			<column defaultValueNumeric="0" name="FIXEDSUM" remarks="Фиксированная сумма"
 				type="numeric(15, 4)" />
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP">
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column name="ACTIONPERIOD" remarks="Период действия в месяцах"
@@ -14179,8 +14179,8 @@
 				type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP" />
-			<column name="ENDDATE" remarks="Дата окончания действия" type="TIMESTAMP" />
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE" />
+			<column name="ENDDATE" remarks="Дата окончания действия" type="DATE" />
 			<column defaultValueNumeric="0" name="SUMMA"
 				remarks="Сумма начисления/удержания" type="numeric(15, 4)" />
 			<column name="ROLL_KIND_ID" remarks="Идентификатор вида ведомости"
@@ -14256,8 +14256,8 @@
 			<column name="SUM_SIGN"
 				remarks="Влияние на сумму раздела:&#13;&#10;0 - не влияет&#13;&#10;1 - плюс&#13;&#10;2 - минус"
 				type="SMALLINT" />
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP" />
-			<column name="ENDDATE" remarks="Дата окончания действия" type="TIMESTAMP" />
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE" />
+			<column name="ENDDATE" remarks="Дата окончания действия" type="DATE" />
 			<column name="PERIODICITY"
 				remarks="Периодичность&#13;&#10;0 - постоянное&#13;&#10;1 - ежеквартельное&#13;&#10;2 - ежегодное"
 				type="SMALLINT" />
@@ -14391,7 +14391,7 @@
 			<column name="INAME" remarks="Наименование дохода" type="VARCHAR(80)">
 				<constraints nullable="false" />
 			</column>
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP">
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -14405,7 +14405,7 @@
 			<column name="ID" remarks="Идентификатор записи" type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP">
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column defaultValueNumeric="0" name="MINSALARY"
@@ -14441,9 +14441,9 @@
 				remarks="Дата документа" type="DATE" />
 			<column name="COMMENTS" remarks="Комментарий" type="VARCHAR(256)" />
 			<column name="CALC_BEGINDATE" remarks="Дата начала расчета"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="CALC_ENDDATE" remarks="Дата окончания расчета"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -14459,8 +14459,8 @@
 				remarks="Идентификатор расчетной ведомости, на основе которой сформирована платежная"
 				type="INT" />
 			<column name="SNUMBER" remarks="Номер ведомости" type="CHAR(20)" />
-			<column name="BEGINDATE" remarks="Оплата в срок с" type="TIMESTAMP" />
-			<column name="ENDDATE" remarks="Оплата в срок по" type="TIMESTAMP" />
+			<column name="BEGINDATE" remarks="Оплата в срок с" type="DATE" />
+			<column name="ENDDATE" remarks="Оплата в срок по" type="DATE" />
 			<column name="DOCHEAD_ID" remarks="Идентификатор расходного кассового ордера"
 				type="INT" />
 			<column name="CHIEF_ID" remarks="Идентификатор руководителя"
@@ -14517,9 +14517,9 @@
 			</column>
 			<column name="ANUMBER" remarks="Номер лицевого счета" type="CHAR(20)" />
 			<column name="BEGINDATE" remarks="Период непрерывного стажа работы в компании - с"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="ENDDATE"
-				remarks="Период непрерывного стажа работы в компании - по" type="TIMESTAMP" />
+				remarks="Период непрерывного стажа работы в компании - по" type="DATE" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -14546,9 +14546,9 @@
 			<column name="POSITIONFILLKIND_ID" remarks="Идентификатор вида исполнения должности"
 				type="INT" />
 			<column name="BEGINDATE" remarks="Дата начала исполнения должности"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="ENDDATE" remarks="Дата окончания исполнения должности"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column name="DOCTYPE" remarks="Тип документа" type="CHAR(15)" />
 			<column name="DOCNUMBER" remarks="Номер документа" type="CHAR(20)" />
 			<column defaultValueComputed="${today}" name="DOCDATE"
@@ -14671,7 +14671,7 @@
 			<column name="SNUMBER" remarks="Номер шкалы" type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="BEGINDATE" remarks="Дата начала действия" type="TIMESTAMP">
+			<column name="BEGINDATE" remarks="Дата начала действия" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column name="TAXPAYER"
@@ -14936,7 +14936,7 @@
 				remarks="Дата приходного документа" type="DATE" />
 			<column defaultValueComputed="${today}" name="CREATEDATE"
 				remarks="Дата создания партии" type="DATE" />
-			<column name="BESTBEFORE" remarks="Годен до, дата" type="TIMESTAMP" />
+			<column name="BESTBEFORE" remarks="Годен до, дата" type="DATE" />
 			<column name="CONTRACTOR_ID" remarks="Контрагент, от которого получена партия"
 				type="INT" />
 			<column name="NUMBER_LOT" remarks="Номер партии" type="VARCHAR(50)" />
@@ -14991,7 +14991,7 @@
 				type="numeric(18, 6)" />
 			<column name="PREV_STOCKBATCHHIST_ID" remarks="Идентификатор предыдущей записи истории"
 				type="INT" />
-			<column name="PROCESSDATE" remarks="Дата отработки" type="TIMESTAMP" />
+			<column name="PROCESSDATE" remarks="Дата отработки" type="DATE" />
 			<column defaultValueNumeric="0" name="QUANTITY2"
 				remarks="Количество в дополнительной ЕИ" type="numeric(18, 6)" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -15136,7 +15136,7 @@
 				type="SMALLINT">
 				<constraints nullable="false" />
 			</column>
-			<column name="PROCESSDATE" remarks="Дата отработки" type="TIMESTAMP" />
+			<column name="PROCESSDATE" remarks="Дата отработки" type="DATE" />
 			<column defaultValueComputed="${now}" name="SYSDATETIME"
 				remarks="Системная дата/время создания записи истории" type="DATETIME" />
 			<column name="QUANTITY" remarks="Количество" type="numeric(15, 3)" />
@@ -15607,7 +15607,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="HOURS_QUANTITY" remarks="Количество часов" type="numeric(18, 3)" />
-			<column name="SCHEDULE_DATE" remarks="Дата" type="TIMESTAMP">
+			<column name="SCHEDULE_DATE" remarks="Дата" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -15670,7 +15670,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="HOURS_QUANTITY" remarks="Количество часов" type="numeric(18, 3)" />
-			<column name="TIME_BOARD_DATE" remarks="Дата" type="TIMESTAMP">
+			<column name="TIME_BOARD_DATE" remarks="Дата" type="DATE">
 				<constraints nullable="false" />
 			</column>
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
@@ -15741,7 +15741,7 @@
 			<column defaultValueNumeric="0" name="SUMM" remarks="Сумма налога"
 				type="numeric(15, 4)" />
 			<column name="DEACTIVATEDATE" remarks="Дата окончания действия"
-				type="TIMESTAMP" />
+				type="DATE" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -15844,7 +15844,7 @@
 			<column name="ORGUNIT_ID" type="INT" />
 			<column defaultValueNumeric="0" name="SUMMNAT" type="numeric(15, 4)" />
 			<column defaultValueNumeric="0" name="SUMMCUR" type="numeric(15, 4)" />
-			<column name="OPERDATE" type="TIMESTAMP" />
+			<column name="OPERDATE" type="DATE" />
 			<column name="TOTAL_SIGN" type="SMALLINT" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
@@ -16119,9 +16119,9 @@
 				type="SMALLINT" />
 			<column defaultValueNumeric="0" name="WAREHOUSE_TRANSACTION_CLOSED"
 				type="SMALLINT" />
-			<column name="CLOSED_DATE_TILL" type="TIMESTAMP" />
+			<column name="CLOSED_DATE_TILL" type="DATE" />
 			<column name="USER_STOCK_CLOSED" type="CHAR(31)" />
-			<column name="OPERATION_DATE" type="TIMESTAMP" />
+			<column name="OPERATION_DATE" type="DATE" />
 		</createTable>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-1082">
@@ -16132,10 +16132,10 @@
 			<column name="STOCK" remarks="Склад" type="INT">
 				<constraints nullable="false" />
 			</column>
-			<column name="CLOSED_DAY" remarks="Закрытый день" type="TIMESTAMP" />
+			<column name="CLOSED_DAY" remarks="Закрытый день" type="DATE" />
 			<column name="USER_STOCK_CLOSED" remarks="Сотрудник кто закрыл"
 				type="CHAR(31)" />
-			<column name="OPERATION_DATE" remarks="Дата закрытия" type="TIMESTAMP" />
+			<column name="OPERATION_DATE" remarks="Дата закрытия" type="DATE" />
 		</createTable>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-1083">
