@@ -16,9 +16,6 @@ package com.mg.framework.utils;
 
 import com.mg.framework.api.Logger;
 
-import sun.net.www.MimeEntry;
-import sun.net.www.MimeTable;
-
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.BufferedReader;
@@ -29,6 +26,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
+import java.net.URLConnection;
 
 /**
  * Файловые утилиты
@@ -256,8 +254,8 @@ public class FileUtils {
     if (fileName == null)
       return DEFAULT_MIME_TYPE;
 
-    MimeEntry en = MimeTable.getDefaultTable().findByFileName(fileName);
-    return en != null ? en.getType() : DEFAULT_MIME_TYPE;
+    String en = URLConnection.getFileNameMap().getContentTypeFor(fileName);
+    return en != null ? en : DEFAULT_MIME_TYPE;
   }
 
   /**
@@ -267,11 +265,7 @@ public class FileUtils {
    * @return mime тип
    */
   public static String getMimeTypeByFileExt(String fileExt) {
-    if (fileExt == null)
-      return DEFAULT_MIME_TYPE;
-
-    MimeEntry en = MimeTable.getDefaultTable().findByExt(fileExt);
-    return en != null ? en.getType() : DEFAULT_MIME_TYPE;
+     return getMimeTypeByFileName("file."+fileExt);
   }
 
   /**

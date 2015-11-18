@@ -477,7 +477,7 @@
         <executions>
           <execution>
             <id>enforce-java-api-compatibility</id>
-            <phase>verify</phase>
+            <phase>process-classes</phase>
             <goals>
               <goal>check</goal>
             </goals>
