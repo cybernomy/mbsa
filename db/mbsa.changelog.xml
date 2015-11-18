@@ -9516,7 +9516,7 @@
 				remarks="Имя пользователя в верхнем регистре, закрывшего период"
 				type="CHAR(31)" />
 			<column name="DATECLOSE" remarks="Системная дата закрытия периода"
-				type="TIMESTAMP" />
+				type="DATETIME" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -10040,7 +10040,7 @@
 				type="TIMESTAMP" />
 			<column name="CREATOR_ID" remarks="Идентификатор создателя"
 				type="INT" />
-			<column name="CREATEDATE" remarks="Дата создания" type="TIMESTAMP" />
+			<column name="CREATEDATE" remarks="Дата создания" type="DATETIME" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -10281,7 +10281,7 @@
 			</column>
 			<column name="MPS_VERSION" remarks="Номер версии" type="INT" />
 			<column name="LAST_RUN_DATETIME" remarks="Дата и время последнего расчета"
-				type="TIMESTAMP" />
+				type="DATETIME" />
 			<column defaultValueNumeric="1" name="CLIENT_ID" type="INT">
 				<constraints nullable="false" />
 			</column>
@@ -10877,7 +10877,7 @@
 			</column>
 			<column name="RCCP_VERSION" remarks="Версия" type="INT" />
 			<column name="LAST_RUN_DATETIME" remarks="Дата последнегего запуска"
-				type="TIMESTAMP" />
+				type="DATETIME" />
 			<column name="WEEK_CAL_ID" remarks="Идентификатор недельного календаря"
 				type="INT">
 				<constraints nullable="false" />
@@ -15234,7 +15234,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="EVENT_DATETIME" remarks="Дата/время события"
-				type="TIMESTAMP">
+				type="DATETIME">
 				<constraints nullable="false" />
 			</column>
 			<column name="AUDIT_BEAN" remarks="Источник события" type="VARCHAR(256)">
@@ -15353,7 +15353,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="EVENT_DATETIME" remarks="Дата/время события"
-				type="TIMESTAMP">
+				type="DATETIME">
 				<constraints nullable="false" />
 			</column>
 			<column name="AUDIT_TYPE" remarks="Тип события" type="SMALLINT">
@@ -15485,7 +15485,7 @@
 				<constraints nullable="false" />
 			</column>
 			<column name="EVENT_DATETIME" remarks="Дата/время события"
-				type="TIMESTAMP">
+				type="DATETIME">
 				<constraints nullable="false" />
 			</column>
 			<column name="AUDIT_TYPE" remarks="Тип аудита" type="SMALLINT">
