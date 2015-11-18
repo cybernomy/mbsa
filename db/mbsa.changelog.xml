@@ -2234,6 +2234,7 @@
 			<column name="SYS_VERSION" type="DATETIME"
 				defaultValueComputed="${now}" />
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-560">
 		<createTable remarks="Бухгалтерия: план аналитических счетов."
@@ -2742,6 +2743,7 @@
 			<column name="COUNTRY_OF_ORIGIN_ID" remarks="Идентификатор страны происхождения"
 				type="INT" />
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-573">
 		<createTable remarks="Справочники: папки каталога товаров и услуг."
@@ -3023,6 +3025,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-581">
 		<createTable
@@ -3056,6 +3059,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-582">
 		<createTable remarks="Договоры: этапы договора."
@@ -3513,6 +3517,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-604">
 		<createTable remarks="CRM: виды действий" tableName="CRM_OPERATION_KIND">
@@ -3910,6 +3915,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-625">
 		<createTable remarks="Дисконтные карты: пользователи карты."
@@ -4152,6 +4158,7 @@
 			<column name="DESCRIPTION" remarks="Дополнительная информация (описание)"
 				type="VARCHAR(1024)" />
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-633">
 		<createTable remarks="Документы: образцы заголовки."
@@ -4247,6 +4254,7 @@
 				type="INT" />
 			<column name="STATE_VALUE" type="BLOB" />
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-635">
 		<createTable remarks="Документооборот: этапы конкретного типа документов."
@@ -5024,6 +5032,7 @@
 			</column>
 			<column name="SYS_VERSION" type="DATETIME" />
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-654">
 		<createTable remarks="Обмен данными: конфигурация."
@@ -5059,6 +5068,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-656">
 		<createTable remarks="Обмен данными: импортированные записи."
@@ -5082,6 +5092,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-657">
 		<createTable remarks="Обмен данными: внешние базы данных."
@@ -5112,6 +5123,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-658">
 		<createTable
@@ -5376,6 +5388,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-667">
 		<createTable remarks="Финансы: заголовки образцов операций."
@@ -5442,6 +5455,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-668">
 		<createTable remarks="Финансы: периоды учеты." tableName="FINPERIOD">
@@ -5751,6 +5765,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-679">
 		<createTable remarks="Топливо: спецификации журналов плотностей."
@@ -5773,6 +5788,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-680">
 		<createTable tableName="HR_ORDER">
@@ -7020,6 +7036,7 @@
 			</column>
 			<column name="DETAILS" type="VARCHAR(256)" />
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-744">
 		<createTable remarks="Графики исполнения обязательств: конфигурация"
@@ -7393,6 +7410,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-757">
 		<createTable remarks="Справочники производства: рабочая сила для операции СИ"
@@ -7956,6 +7974,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-774">
 		<createTable remarks="Производство: рабочая силы операция ЗНП"
@@ -9521,6 +9540,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-820">
 		<createTable remarks="Бухгалтерия: допустимая корреспонденция счетов."
@@ -10045,6 +10065,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-837">
 		<createTable remarks="Планирование производства: склады зранения товара"
@@ -10286,6 +10307,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-845">
 		<createTable
@@ -10678,6 +10700,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-853">
 		<createTable remarks="Планирование производства: прогнозы в версиях ППМ"
@@ -10886,6 +10909,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-861">
 		<createTable
@@ -13841,6 +13865,7 @@
 				type="VARCHAR(256)" />
 			<column name="OUTPUT_FORMAT" type="CHAR(10)" />
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-988">
 		<createTable remarks="Генератор отчетов: права доступа к отчету."
@@ -14998,6 +15023,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-1033">
 		<createTable remarks="Склады: карточки складского учета (КСУ)."
@@ -15039,6 +15065,7 @@
 			</column>
 			<column defaultValueComputed="${now}" name="SYS_VERSION" type="DATETIME" />
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-1034">
 		<createTable remarks="Склады: заголовки складских документов."
@@ -15155,6 +15182,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-1039">
 		<createTable
@@ -15243,6 +15271,7 @@
 			<column name="OPERATION" remarks="Операция" type="VARCHAR(256)" />
 			<column name="DETAILS" remarks="Описание события" type="VARCHAR(1024)" />
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-1042">
 		<createTable remarks="Система: классы бизнес-компонентов."
@@ -15363,6 +15392,7 @@
 				<constraints nullable="false" />
 			</column>
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-1048">
 		<createTable remarks="Детализация аудита изменения хранилища данных"
@@ -15496,6 +15526,7 @@
 			</column>
 			<column name="DETAILS" remarks="Описание события" type="VARCHAR(1024)" />
 		</createTable>
+		<modifySql dbms="postgresql"><replace replace="WITHOUT TIME ZONE" with="WITH TIME ZONE"/></modifySql>
 	</changeSet>
 	<changeSet author="valentin.poroxnenko@gmail.com" id="INIT-1055">
 		<createTable tableName="SYS_WINDOW">
