@@ -177,8 +177,10 @@
     </attribute>
 
     <attribute name="Dialect">
-      com.mg.framework.service.HibernateFirebirdDialect
+      org.hibernate.dialect.PostgreSQLDialect
     </attribute>
+
+    <attribute name="JdbcBatchSize">0</attribute>
 
     <attribute name="CacheProviderClass">
       com.mg.framework.service.HibernateTreeCacheProvider
