@@ -123,7 +123,10 @@
   <property name="D_WF_WHY_NOT_RUNNING" value="D_WF_WHY_NOT_RUNNING" dbms="postgresql"/>
   <property name="D_WF_WHY_SUSPENDED" value="D_WF_WHY_SUSPENDED" dbms="postgresql"/>
   <property name="D_WORKFLOW_STATE" value="D_WORKFLOW_STATE" dbms="postgresql"/>
-  <property name="D_ZIPCODE" value="D_ZIPCODE" dbms="postgresql"/>	
+  <property name="D_ZIPCODE" value="D_ZIPCODE" dbms="postgresql"/>
+  <property name="D_SMALLNAME_NULLABLE" value="D_SMALLNAME_NULLABLE" dbms="postgresql"/>
+  <property name="D_FLOAT8" value="D_FLOAT8" dbms="postgresql"/>
+  
   <changeSet author="valentin.poroxnenko@gmail.com" id="init-domains-pg-1" dbms="postgresql">
     <sqlFile encoding="utf8" endDelimiter="\nGO" path="pg_domains.sql"
 	     relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
