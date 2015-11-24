@@ -38,7 +38,6 @@
   <property name="D_CURCOURCE" value="D_CURCOURCE" dbms="postgresql"/>
   <property name="D_CUSTOMALGORITHM" value="D_CUSTOMALGORITHM" dbms="postgresql"/>
   <property name="D_DATE" value="D_DATE" dbms="postgresql"/>
-  <property name="D_DATENOTNULL" value="D_DATENOTNULL" dbms="postgresql"/>
   <property name="D_DATETIME" value="D_DATETIME" dbms="postgresql"/>
   <property name="D_DESCRIPTION" value="D_DESCRIPTION" dbms="postgresql"/>
   <property name="D_DISABLE_EXCEED_QUANT" value="D_DISABLE_EXCEED_QUANT" dbms="postgresql"/>
@@ -83,14 +82,12 @@
   <property name="D_MF_TICK" value="D_MF_TICK" dbms="postgresql"/>
   <property name="D_MONTH" value="D_MONTH" dbms="postgresql"/>
   <property name="D_NAME" value="D_NAME" dbms="postgresql"/>
-  <property name="D_NAME_N" value="D_NAME_N" dbms="postgresql"/>
   <property name="D_ORDER_STATUS" value="D_ORDER_STATUS" dbms="postgresql"/>
   <property name="D_ORIGINAL" value="D_ORIGINAL" dbms="postgresql"/>
   <property name="D_PASSWORD" value="D_PASSWORD" dbms="postgresql"/>
   <property name="D_PHASEITEMKIND" value="D_PHASEITEMKIND" dbms="postgresql"/>
   <property name="D_PHONE" value="D_PHONE" dbms="postgresql"/>
   <property name="D_PHONELIST" value="D_PHONELIST" dbms="postgresql"/>
-  <property name="D_PROCESSMGR_STATE" value="D_PROCESSMGR_STATE" dbms="postgresql"/>
   <property name="D_QUANTITY" value="D_QUANTITY" dbms="postgresql"/>
   <property name="D_QUANTITY_EXT" value="D_QUANTITY_EXT" dbms="postgresql"/>
   <property name="D_QUERY" value="D_QUERY" dbms="postgresql"/>
@@ -106,7 +103,6 @@
   <property name="D_STORED_PROC_NAME" value="D_STORED_PROC_NAME" dbms="postgresql"/>
   <property name="D_SUMMA" value="D_SUMMA" dbms="postgresql"/>
   <property name="D_SUMMA_EXT" value="D_SUMMA_EXT" dbms="postgresql"/>
-  <property name="D_SYSPART_NODE" value="D_SYSPART_NODE" dbms="postgresql"/>
   <property name="D_SYS_DATAITEM_KIND" value="D_SYS_DATAITEM_KIND" dbms="postgresql"/>
   <property name="D_SYS_VERSION" value="D_SYS_VERSION" dbms="postgresql"/>
   <property name="D_TABLE_NAME" value="D_TABLE_NAME" dbms="postgresql"/>
@@ -114,23 +110,10 @@
   <property name="D_USERNAME" value="D_USERNAME" dbms="postgresql"/>
   <property name="D_VOLUME" value="D_VOLUME" dbms="postgresql"/>
   <property name="D_WEIGHT" value="D_WEIGHT" dbms="postgresql"/>
-  <property name="D_WF_EVENT" value="D_WF_EVENT" dbms="postgresql"/>
-  <property name="D_WF_HOW_CLOSED" value="D_WF_HOW_CLOSED" dbms="postgresql"/>
-  <property name="D_WF_PRIORITY" value="D_WF_PRIORITY" dbms="postgresql"/>
-  <property name="D_WF_PROCESS_RESULT" value="D_WF_PROCESS_RESULT" dbms="postgresql"/>
-  <property name="D_WF_REQUESTER_KIND" value="D_WF_REQUESTER_KIND" dbms="postgresql"/>
-  <property name="D_WF_RESOURCE_KIND" value="D_WF_RESOURCE_KIND" dbms="postgresql"/>
-  <property name="D_WF_STATE_STR" value="D_WF_STATE_STR" dbms="postgresql"/>
-  <property name="D_WF_TIME" value="D_WF_TIME" dbms="postgresql"/>
-  <property name="D_WF_WHILE_OPEN" value="D_WF_WHILE_OPEN" dbms="postgresql"/>
-  <property name="D_WF_WHY_NOT_RUNNING" value="D_WF_WHY_NOT_RUNNING" dbms="postgresql"/>
-  <property name="D_WF_WHY_SUSPENDED" value="D_WF_WHY_SUSPENDED" dbms="postgresql"/>
-  <property name="D_WORKFLOW_STATE" value="D_WORKFLOW_STATE" dbms="postgresql"/>
   <property name="D_ZIPCODE" value="D_ZIPCODE" dbms="postgresql"/>
-  <property name="D_SMALLNAME_NULLABLE" value="D_SMALLNAME_NULLABLE" dbms="postgresql"/>
   <property name="D_FLOAT8" value="D_FLOAT8" dbms="postgresql"/>
   <property name="D_SMALLESTCODE" value="D_SMALLESTCODE" dbms="postgresql"/>
   <property name="D_CHAR4" value="D_CHAR4" dbms="postgresql"/>
   <property name="D_CHAR15" value="D_CHAR15" dbms="postgresql"/>
-  <property name="D_POSTAL_CODE" value="D_POSTAL_CODE" dbms="postgresql"/>
+  <property name="D_TEXT" value="D_TEXT" dbms="postgresql"/>
 </databaseChangeLog>

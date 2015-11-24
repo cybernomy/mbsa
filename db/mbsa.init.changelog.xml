@@ -1663,13 +1663,13 @@
             <column name="acc_id" remarks="Идентификатор счета для учета операций" type="${D_INT}"/>
             <column name="purpose" remarks="Назначение аванса" type="${D_COMMENT}"/>
             <column name="prevadvancesum" remarks="Сумма предыдущего аванса" type="${D_SUMMA}"/>
-            <column name="received1src" remarks="Получено - источник 1" type="${D_SMALLNAME_NULLABLE}"/>
+            <column name="received1src" remarks="Получено - источник 1" type="${D_SMALLNAME}"/>
             <column name="received1date" remarks="Получено - дата 1" type="${D_DATE}"/>
             <column name="received1sum" remarks="Получено - сумма 1" type="${D_SUMMA}"/>
-            <column name="received2src" remarks="Получено - источник 2" type="${D_SMALLNAME_NULLABLE}"/>
+            <column name="received2src" remarks="Получено - источник 2" type="${D_SMALLNAME}"/>
             <column name="received2date" remarks="Получено - дата 2" type="${D_DATE}"/>
             <column name="received2sum" remarks="Получено - сумма 2" type="${D_SUMMA}"/>
-            <column name="received3src" remarks="Получено - источник 3" type="${D_SMALLNAME_NULLABLE}"/>
+            <column name="received3src" remarks="Получено - источник 3" type="${D_SMALLNAME}"/>
             <column name="received3date" remarks="Получено - дата 3" type="${D_DATE}"/>
             <column name="received3sum" remarks="Получено - сумма 3" type="${D_SUMMA}"/>
             <column name="restdockind" remarks="0 - перерасход&#10;1 - остаток" type="${D_BOOLEAN}"/>
@@ -1697,13 +1697,13 @@
             <column name="acc_id" remarks="Идентификатор счета для учета операций" type="${D_INT}"/>
             <column name="purpose" remarks="Назначение аванса" type="${D_COMMENT}"/>
             <column name="prevadvancesum" remarks="Сумма предыдущего аванса" type="${D_SUMMA}"/>
-            <column name="received1src" remarks="Получено - источник 1" type="${D_SMALLNAME_NULLABLE}"/>
+            <column name="received1src" remarks="Получено - источник 1" type="${D_SMALLNAME}"/>
             <column name="received1date" remarks="Получено - дата 1" type="${D_DATE}"/>
             <column name="received1sum" remarks="Получено - сумма 1" type="${D_SUMMA}"/>
-            <column name="received2src" remarks="Получено - источник 2" type="${D_SMALLNAME_NULLABLE}"/>
+            <column name="received2src" remarks="Получено - источник 2" type="${D_SMALLNAME}"/>
             <column name="received2date" remarks="Получено - дата 2" type="${D_DATE}"/>
             <column name="received2sum" remarks="Получено - сумма 2" type="${D_SUMMA}"/>
-            <column name="received3src" remarks="Получено - источник 3" type="${D_SMALLNAME_NULLABLE}"/>
+            <column name="received3src" remarks="Получено - источник 3" type="${D_SMALLNAME}"/>
             <column name="received3date" remarks="Получено - дата 3" type="${D_DATE}"/>
             <column name="received3sum" remarks="Получено - сумма 3" type="${D_SUMMA}"/>
             <column name="restdockind" remarks="0 - перерасход&#10;1 - остаток" type="${D_BOOLEAN}"/>
@@ -1836,8 +1836,8 @@
             <column name="groupnum" remarks="Номер группы" type="${D_BIGCODE}"/>
             <column name="cardnum" remarks="Номер карточки" type="${D_BIGCODE}"/>
             <column name="objnum" remarks="Номер объекта" type="${D_LARGECODE}"/>
-            <column name="manufacturer" remarks="Завод-изготовитель" type="${D_NAME_N}"/>
-            <column name="model" remarks="Модель, тип, марка" type="${D_NAME_N}"/>
+            <column name="manufacturer" remarks="Завод-изготовитель" type="${D_NAME}"/>
+            <column name="model" remarks="Модель, тип, марка" type="${D_NAME}"/>
             <column name="serialnum" remarks="Заводской номер" type="${D_BIGCODE}"/>
             <column name="passpnum" remarks="Паспортный номер" type="${D_BIGCODE}"/>
             <column name="inoperdocnum" remarks="Акт ввода в эксплуатацию - номер" type="${D_DOCNUMBER}"/>
@@ -2014,8 +2014,8 @@
             <column name="algorithm_id" remarks="Идентификатор алгоритма" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="caption" remarks="Заголовок пункта" type="${D_NAME_N}"/>
-            <column name="hint" remarks="Подсказка" type="${D_NAME_N}"/>
+            <column name="caption" remarks="Заголовок пункта" type="${D_NAME}"/>
+            <column name="hint" remarks="Подсказка" type="${D_NAME}"/>
             <column name="from_menu" remarks="Доступен из меню" type="${D_BOOLEAN}"/>
             <column name="from_toolbar" remarks="Доступен из панели инструментов" type="${D_BOOLEAN}"/>
             <column name="force_refresh" remarks="Обновлять после выполнения" type="${D_BOOLEAN}"/>
@@ -2025,7 +2025,7 @@
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="key_stroke" remarks="Клавишная комбинация" type="${D_SMALLNAME_NULLABLE}"/>
+            <column name="key_stroke" remarks="Клавишная комбинация" type="${D_SMALLNAME}"/>
             <column name="icon" remarks="Пиктограмма" type="${D_JAVA_CLASS_NAME}"/>
             <column name="is_active" remarks="Признак активности" type="${D_BOOLEAN}"/>
         </createTable>
@@ -2270,7 +2270,7 @@
             <column name="document_id" remarks="Идентификатор документа" type="${D_INT}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="insertdate" remarks="Дата регистрации в книге покупок" type="${D_DATE}"/>
             <column name="indate" remarks="Дата поступления" type="${D_DATE}"/>
             <column name="stockdate" remarks="Дата оприходования" type="${D_DATE}"/>
@@ -2395,7 +2395,7 @@
             <column name="taxgroup_id" remarks="Рег. номер налоговой группы" type="${D_INT}"/>
             <column name="shelflife" remarks="Срок годности" type="${D_QUANTITY}"/>
             <column name="shelflife_meas" remarks="Единицы измерения срока годности&#10;0 - нет&#10;1 - час&#10;2 - день&#10;3 - месяц&#10;4 - год" type="${D_TIME_PERIOD_KIND}"/>
-            <column name="expdate_calc_kind" remarks="Тип расчета даты истечения срока годности&#10;0 - относительно даты изготовления&#10;1 - относительно даты документа&#10;2 - относительно даты прихода на склад" type="${D_EXP_DATE_CALC_KIND}">
+            <column name="expdate_calc_kind" remarks="Тип расчета даты истечения срока годности&#10;0 - относительно даты изготовления&#10;1 - относительно даты документа&#10;2 - относительно даты прихода на склад" type="${D_EXP_DATE_CALC_KIND}" defaultValueComputed="0">
                 <constraints nullable="false"/>
             </column>
             <column name="articul" remarks="Артикул" type="${D_BIGCODE}"/>
@@ -2433,7 +2433,7 @@
             <column name="barcode" remarks="Штрих-код папки" type="${D_BIGCODE}"/>
             <column name="plucode" remarks="Код папки местоположения объекта на складе" type="${D_BIGCODE}"/>
             <column name="numbering_alg_id" remarks="Идентификтатора алгоритма автонумерации" type="${D_INT}"/>
-            <column name="folder_tag" remarks="Тэг" type="${D_NAME_N}"/>
+            <column name="folder_tag" remarks="Тэг" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -2565,7 +2565,7 @@
             </column>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="modifydesc" remarks="Изменения" type="${D_CONTRACT_COMMENT}"/>
             <column name="comment" remarks="Примечания" type="${D_CONTRACT_COMMENT}"/>
             <column name="original" remarks="Оригинал документа" type="${D_ORIGINAL}"/>
@@ -2590,7 +2590,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="folder_id" remarks="Идентификатор папки" type="${D_INT}"/>
-            <column name="kind" remarks="Вид контрагента:&#10;0 - партнер&#10;1 - подразделение&#10;2 - сотрудник" type="${D_CONTRACTOR_KIND}">
+            <column name="kind" remarks="Вид контрагента:&#10;0 - партнер&#10;1 - подразделение&#10;2 - сотрудник" type="${D_CONTRACTOR_KIND}" defaultValueComputed="0">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -2712,7 +2712,7 @@
             </column>
             <column name="phase_number" remarks="Номер этапа" type="${D_DOCNUMBER}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="doc_id" remarks="Идентификатор документа" type="${D_INT}"/>
         </createTable>
     </changeSet>
@@ -2742,7 +2742,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -2754,7 +2754,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наимнование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наимнование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -2766,7 +2766,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -2778,7 +2778,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -2790,7 +2790,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -2806,9 +2806,9 @@
             <column name="responsible_id" remarks="Идентификатор ответственного" type="${D_INT}"/>
             <column name="priority" remarks="Приоритет" type="${D_INT}"/>
             <column name="is_default" remarks="По умолчанию" type="${D_BOOLEAN}"/>
-            <column name="the_position" remarks="Должность" type="${D_NAME_N}"/>
+            <column name="the_position" remarks="Должность" type="${D_NAME}"/>
             <column name="is_retired" remarks="Уволен" type="${D_BOOLEAN}"/>
-            <column name="nickname" remarks="Nick" type="${D_NAME_N}"/>
+            <column name="nickname" remarks="Nick" type="${D_NAME}"/>
             <column name="person_title_id" remarks="Идентификатор обращения" type="${D_INT}"/>
             <column name="curator_id" remarks="Идентификатор куратора" type="${D_INT}"/>
             <column name="address_source" remarks="Адрес&#10;0 - физического лица&#10;1 - компании" type="${D_SHORT}"/>
@@ -2833,7 +2833,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -2888,7 +2888,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="weight" remarks="Вес" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -2928,7 +2928,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -2940,7 +2940,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -2952,7 +2952,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -2964,7 +2964,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -3007,7 +3007,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -3019,7 +3019,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -3031,7 +3031,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -3043,7 +3043,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -3055,7 +3055,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -3067,7 +3067,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -3079,7 +3079,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -3090,7 +3090,7 @@
             <column name="id" remarks="Идентификатор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -3146,7 +3146,7 @@
             <column name="status_id" remarks="Идентификатор статуса" type="${D_INT}"/>
             <column name="parent_id" remarks="Идентификатор родительского отношения" type="${D_INT}"/>
             <column name="natural_person_id" remarks="Идентификатор физического лица" type="${D_INT}"/>
-            <column name="nickname" remarks="Nick" type="${D_NAME_N}"/>
+            <column name="nickname" remarks="Nick" type="${D_NAME}"/>
             <column name="person_title_id" remarks="Идентификатор обращения" type="${D_INT}"/>
             <column name="uin" remarks="Не используется" type="${D_EMAIL}"/>
             <column name="legal_person_id" remarks="Идентификатор контрагента" type="${D_INT}"/>
@@ -3166,7 +3166,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -3222,7 +3222,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="person_id" remarks="Идентификтаор физического лица" type="${D_INT}"/>
-            <column name="the_position" remarks="Должность" type="${D_NAME_N}"/>
+            <column name="the_position" remarks="Должность" type="${D_NAME}"/>
             <column name="busy" remarks="Занятый" type="${D_BOOLEAN}"/>
             <column name="is_admin" remarks="Администратор CRM" type="${D_BOOLEAN}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -3360,7 +3360,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="card_id" remarks="Идентификатор карты" type="${D_INT}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="discount" remarks="Доп. скидка" type="${D_RATIO}"/>
             <column name="plansale" remarks="Планируемая сумма продаж" type="${D_SUMMA}"/>
             <column name="factsale" remarks="Фактическая сумма продаж" type="${D_SUMMA}"/>
@@ -3523,7 +3523,7 @@
             </column>
             <column name="doctype" remarks="Тип" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="currency_code" remarks="Код валюты" type="${D_SMALLCODE}"/>
             <column name="curcource" remarks="Курс валюты" type="${D_CURCOURCE}"/>
             <column name="summacur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
@@ -3531,11 +3531,11 @@
             <column name="basedoc_id" remarks="Идентификатор документа-основания" type="${D_INT}"/>
             <column name="basedoctype" remarks="Тип документа-основания" type="${D_DOCTYPE}"/>
             <column name="basedocnumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
-            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DOCDATE}"/>
+            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="contract_id" remarks="Идентификатор договора" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип договора" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер договора" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}"/>
+            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="weight" remarks="Вес" type="${D_WEIGHT}"/>
             <column name="volume" remarks="Объем" type="${D_VOLUME}"/>
             <column name="pricelist_id" remarks="Прайс-лист" type="${D_INT}"/>
@@ -3582,7 +3582,7 @@
             </column>
             <column name="doctype" remarks="Тип" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="currency_code" remarks="Код валюты" type="${D_SMALLCODE}"/>
             <column name="curcource" remarks="Курс валюты" type="${D_CURCOURCE}"/>
             <column name="summacur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
@@ -3590,11 +3590,11 @@
             <column name="basedoc_id" remarks="Идентификатор документа-основания" type="${D_INT}"/>
             <column name="basedoctype" remarks="Тип документа-основания" type="${D_DOCTYPE}"/>
             <column name="basedocnumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
-            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DOCDATE}"/>
+            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="contract_id" remarks="Идентификатор договора" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип договора" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер договора" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}"/>
+            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="weight" remarks="Вес" type="${D_WEIGHT}"/>
             <column name="volume" remarks="Объем" type="${D_VOLUME}"/>
             <column name="pricelist_id" remarks="Прайс-лист" type="${D_INT}"/>
@@ -3928,7 +3928,7 @@
             <column name="contract_id" remarks="Идентификатор договора" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип договора" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер договора" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}"/>
+            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="from_id" remarks="Контрагент &quot;от кого&quot;" type="${D_INT}"/>
             <column name="to_id" remarks="Контрагент &quot;кому&quot;" type="${D_INT}"/>
             <column name="user_id" remarks="Служебное поле" type="${D_INT}"/>
@@ -3965,7 +3965,7 @@
             <column name="contract_id" remarks="Идентификатор договора" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип договора" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер договора" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}"/>
+            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="from_id" remarks="Контрагент &quot;от кого&quot;" type="${D_INT}"/>
             <column name="to_id" remarks="Контрагент &quot;кому&quot;" type="${D_INT}"/>
             <column name="modeldestfolder_id" remarks="Идентификатор папки-приемника" type="${D_INT}"/>
@@ -4093,7 +4093,7 @@
             <column name="passp_date" remarks="Паспорт - Дата выдачи" type="${D_DATE}"/>
             <column name="passp_num" remarks="Паспорт - Номер" type="${D_MEDIUMCODE}"/>
             <column name="passp_ser" remarks="Паспорт - Серия" type="${D_MEDIUMCODE}"/>
-            <column name="office" remarks="Должность" type="${D_SMALLNAME_NULLABLE}"/>
+            <column name="office" remarks="Должность" type="${D_SMALLNAME}"/>
             <column name="phone" remarks="Телефон" type="${D_PHONE}"/>
             <column name="comment" remarks="Примечание" type="${D_COMMENT}"/>
             <column name="tabnum" remarks="Табельный номер" type="${D_MEDIUMCODE}"/>
@@ -4177,7 +4177,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код внешней БД" type="${D_SMALLCODE}"/>
-            <column name="name" remarks="Наименование внешней БД" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование внешней БД" type="${D_NAME}"/>
             <column name="path_in" remarks="Каталог входящих пакетов" type="${D_FILENAME}"/>
             <column name="path_out" remarks="Каталог исходящих пакетов" type="${D_FILENAME}"/>
             <column name="packet_in" remarks="Номер входящего пакета" type="${D_INT}"/>
@@ -4383,7 +4383,7 @@
             <column name="contract_id" remarks="Идентификатор договора" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип договора" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер договора" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}"/>
+            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="responsible" remarks="Ответственный" type="${D_INT}"/>
             <column name="sumnat" remarks="Сумма" type="${D_SUMMA}"/>
             <column name="sumcur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
@@ -4424,7 +4424,7 @@
             <column name="contract_id" remarks="Идентификатор договора" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип договора" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер договора" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}"/>
+            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="responsible" remarks="Ответственный" type="${D_INT}"/>
             <column name="sumnat" remarks="Сумма" type="${D_SUMMA}"/>
             <column name="sumcur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
@@ -4605,7 +4605,7 @@
             </column>
             <column name="foldertype" remarks="Тип папки" type="${D_SHORT}"/>
             <column name="data" remarks="Не используется" type="${D_SHORT}"/>
-            <column name="folder_tag" remarks="Тэг папки" type="${D_NAME_N}"/>
+            <column name="folder_tag" remarks="Тэг папки" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -4696,7 +4696,7 @@
             <column name="order_number" type="${D_DOCNUMBER}">
                 <constraints nullable="false"/>
             </column>
-            <column name="order_date" type="${D_DOCDATE}">
+            <column name="order_date" type="${D_DOCDATE}" defaultValueComputed="${today}">
                 <constraints nullable="false"/>
             </column>
             <column name="header" type="${D_FEATURE_STR}"/>
@@ -4812,7 +4812,7 @@
             <column name="code" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" type="${D_NAME_N}"/>
+            <column name="name" type="${D_NAME}"/>
             <column name="header" type="${D_FEATURE_STR}"/>
             <column name="footer" type="${D_FEATURE_STR}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -4883,8 +4883,8 @@
             <column name="groupnum" remarks="Номер группы" type="${D_BIGCODE}"/>
             <column name="cardnum" remarks="Номер карточки" type="${D_BIGCODE}"/>
             <column name="objnum" remarks="Номер объекта" type="${D_LARGECODE}"/>
-            <column name="manufacturer" remarks="Завод-изготовитель" type="${D_NAME_N}"/>
-            <column name="model" remarks="Модель, тип, марка" type="${D_NAME_N}"/>
+            <column name="manufacturer" remarks="Завод-изготовитель" type="${D_NAME}"/>
+            <column name="model" remarks="Модель, тип, марка" type="${D_NAME}"/>
             <column name="serialnum" remarks="Заводской номер" type="${D_BIGCODE}"/>
             <column name="passpnum" remarks="Паспортный номер" type="${D_BIGCODE}"/>
             <column name="inoperdocnum" remarks="Акт ввода в эксплуатацию - номер" type="${D_DOCNUMBER}"/>
@@ -5105,20 +5105,20 @@
             <column name="class" type="${D_SMALLESTCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name_" type="${VARCHAR(255)}"/>
+            <column name="name_" type="${D_BIGNAME}"/>
             <column name="ispropagationallowed_" type="${D_SHORT}"/>
-            <column name="actionexpression_" type="${VARCHAR(255)}"/>
+            <column name="actionexpression_" type="${D_BIGNAME}"/>
             <column name="isasync_" type="${D_SHORT}"/>
             <column name="referencedaction_" type="${numeric(18)}"/>
             <column name="actiondelegation_" type="${numeric(18)}"/>
             <column name="event_" type="${numeric(18)}"/>
             <column name="processdefinition_" type="${numeric(18)}"/>
-            <column name="timername_" type="${VARCHAR(255)}"/>
-            <column name="duedate_" type="${VARCHAR(255)}"/>
-            <column name="repeat_" type="${VARCHAR(255)}"/>
-            <column name="transitionname_" type="${VARCHAR(255)}"/>
+            <column name="timername_" type="${D_BIGNAME}"/>
+            <column name="duedate_" type="${D_BIGNAME}"/>
+            <column name="repeat_" type="${D_BIGNAME}"/>
+            <column name="transitionname_" type="${D_BIGNAME}"/>
             <column name="timeraction_" type="${numeric(18)}"/>
-            <column name="expression_" type="${VARCHAR(4000)}"/>
+            <column name="expression_" type="${D_TEXT}"/>
             <column name="eventindex_" type="${D_INT}"/>
             <column name="exceptionhandler_" type="${numeric(18)}"/>
             <column name="exceptionhandlerindex_" type="${D_INT}"/>
@@ -5129,7 +5129,7 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name_" type="${VARCHAR(255)}"/>
+            <column name="name_" type="${D_BIGNAME}"/>
             <column name="filedefinition_" type="${numeric(18)}"/>
         </createTable>
     </changeSet>
@@ -5152,9 +5152,9 @@
             <column name="version_" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="actorid_" type="${VARCHAR(255)}"/>
+            <column name="actorid_" type="${D_BIGNAME}"/>
             <column name="time_" type="${D_DATETIME}"/>
-            <column name="message_" type="${VARCHAR(4000)}"/>
+            <column name="message_" type="${D_TEXT}"/>
             <column name="token_" type="${numeric(18)}"/>
             <column name="taskinstance_" type="${numeric(18)}"/>
             <column name="tokenindex_" type="${D_INT}"/>
@@ -5166,8 +5166,8 @@
             <column name="decision_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="transitionname_" type="${VARCHAR(255)}"/>
-            <column name="expression_" type="${VARCHAR(255)}"/>
+            <column name="transitionname_" type="${D_BIGNAME}"/>
+            <column name="expression_" type="${D_BIGNAME}"/>
             <column name="index_" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
@@ -5178,9 +5178,9 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="classname_" type="${VARCHAR(4000)}"/>
-            <column name="configuration_" type="${VARCHAR(4000)}"/>
-            <column name="configtype_" type="${VARCHAR(255)}"/>
+            <column name="classname_" type="${D_TEXT}"/>
+            <column name="configuration_" type="${D_TEXT}"/>
+            <column name="configtype_" type="${D_BIGNAME}"/>
             <column name="processdefinition_" type="${numeric(18)}"/>
         </createTable>
     </changeSet>
@@ -5189,7 +5189,7 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="eventtype_" type="${VARCHAR(255)}"/>
+            <column name="eventtype_" type="${D_BIGNAME}"/>
             <column name="type_" type="${D_SMALLESTCODE}"/>
             <column name="graphelement_" type="${numeric(18)}"/>
             <column name="node_" type="${numeric(18)}"/>
@@ -5203,7 +5203,7 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="exceptionclassname_" type="${VARCHAR(4000)}"/>
+            <column name="exceptionclassname_" type="${D_TEXT}"/>
             <column name="type_" type="${D_SMALLESTCODE}"/>
             <column name="graphelement_" type="${numeric(18)}"/>
             <column name="node_" type="${numeric(18)}"/>
@@ -5230,15 +5230,15 @@
             <column name="taskinstance_" type="${numeric(18)}"/>
             <column name="issuspended_" type="${D_SHORT}"/>
             <column name="isexclusive_" type="${D_SHORT}"/>
-            <column name="lockowner_" type="${VARCHAR(255)}"/>
+            <column name="lockowner_" type="${D_BIGNAME}"/>
             <column name="locktime_" type="${D_DATETIME}"/>
-            <column name="exception_" type="${VARCHAR(4000)}"/>
+            <column name="exception_" type="${D_TEXT}"/>
             <column name="retries_" type="${D_INT}"/>
-            <column name="name_" type="${VARCHAR(255)}"/>
-            <column name="repeat_" type="${VARCHAR(255)}"/>
-            <column name="transitionname_" type="${VARCHAR(255)}"/>
+            <column name="name_" type="${D_BIGNAME}"/>
+            <column name="repeat_" type="${D_BIGNAME}"/>
+            <column name="transitionname_" type="${D_BIGNAME}"/>
             <column name="action_" type="${numeric(18)}"/>
-            <column name="graphelementtype_" type="${VARCHAR(255)}"/>
+            <column name="graphelementtype_" type="${D_BIGNAME}"/>
             <column name="graphelement_" type="${numeric(18)}"/>
             <column name="node_" type="${numeric(18)}"/>
         </createTable>
@@ -5258,11 +5258,11 @@
             <column name="swimlaneinstance_" type="${numeric(18)}"/>
             <column name="taskinstance_" type="${numeric(18)}"/>
             <column name="transition_" type="${numeric(18)}"/>
-            <column name="taskactorid_" type="${VARCHAR(255)}"/>
-            <column name="message_" type="${VARCHAR(4000)}"/>
+            <column name="taskactorid_" type="${D_BIGNAME}"/>
+            <column name="message_" type="${D_TEXT}"/>
             <column name="sourcenode_" type="${numeric(18)}"/>
             <column name="destinationnode_" type="${numeric(18)}"/>
-            <column name="taskoldactorid_" type="${VARCHAR(255)}"/>
+            <column name="taskoldactorid_" type="${D_BIGNAME}"/>
             <column name="child_" type="${numeric(18)}"/>
             <column name="node_" type="${numeric(18)}"/>
             <column name="enter_" type="${D_DATETIME}"/>
@@ -5270,24 +5270,24 @@
             <column name="duration_" type="${numeric(18)}"/>
             <column name="newlongvalue_" type="${numeric(18)}"/>
             <column name="variableinstance_" type="${numeric(18)}"/>
-            <column name="oldstringidclass_" type="${VARCHAR(255)}"/>
-            <column name="oldstringidvalue_" type="${VARCHAR(255)}"/>
-            <column name="newstringidclass_" type="${VARCHAR(255)}"/>
-            <column name="newstringidvalue_" type="${VARCHAR(255)}"/>
+            <column name="oldstringidclass_" type="${D_BIGNAME}"/>
+            <column name="oldstringidvalue_" type="${D_BIGNAME}"/>
+            <column name="newstringidclass_" type="${D_BIGNAME}"/>
+            <column name="newstringidvalue_" type="${D_BIGNAME}"/>
             <column name="oldbytearray_" type="${numeric(18)}"/>
             <column name="newbytearray_" type="${numeric(18)}"/>
             <column name="olddoublevalue_" type="${D_FLOAT8}"/>
             <column name="newdoublevalue_" type="${D_FLOAT8}"/>
             <column name="oldlongvalue_" type="${numeric(18)}"/>
-            <column name="oldlongidclass_" type="${VARCHAR(255)}"/>
+            <column name="oldlongidclass_" type="${D_BIGNAME}"/>
             <column name="oldlongidvalue_" type="${numeric(18)}"/>
-            <column name="newlongidclass_" type="${VARCHAR(255)}"/>
+            <column name="newlongidclass_" type="${D_BIGNAME}"/>
             <column name="newlongidvalue_" type="${numeric(18)}"/>
             <column name="olddatevalue_" type="${D_DATETIME}"/>
             <column name="newdatevalue_" type="${D_DATETIME}"/>
-            <column name="oldstringvalue_" type="${VARCHAR(4000)}"/>
-            <column name="newstringvalue_" type="${VARCHAR(4000)}"/>
-            <column name="exception_" type="${VARCHAR(4000)}"/>
+            <column name="oldstringvalue_" type="${D_TEXT}"/>
+            <column name="newstringvalue_" type="${D_TEXT}"/>
+            <column name="exception_" type="${D_TEXT}"/>
             <column name="action_" type="${numeric(18)}"/>
         </createTable>
     </changeSet>
@@ -5299,7 +5299,7 @@
             <column name="class_" type="${D_SMALLESTCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name_" type="${VARCHAR(4000)}"/>
+            <column name="name_" type="${D_TEXT}"/>
             <column name="processdefinition_" type="${numeric(18)}"/>
             <column name="starttask_" type="${numeric(18)}"/>
         </createTable>
@@ -5317,7 +5317,7 @@
             </column>
             <column name="processinstance_" type="${numeric(18)}"/>
             <column name="taskmgmtdefinition_" type="${numeric(18)}"/>
-            <column name="name_" type="${VARCHAR(255)}"/>
+            <column name="name_" type="${D_BIGNAME}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-713">
@@ -5328,16 +5328,16 @@
             <column name="class_" type="${D_SMALLESTCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name_" type="${VARCHAR(255)}"/>
-            <column name="description_" type="${VARCHAR(4000)}"/>
+            <column name="name_" type="${D_BIGNAME}"/>
+            <column name="description_" type="${D_TEXT}"/>
             <column name="processdefinition_" type="${numeric(18)}"/>
             <column name="isasync_" type="${D_SHORT}"/>
             <column name="isasyncexcl_" type="${D_SHORT}"/>
             <column name="action_" type="${numeric(18)}"/>
             <column name="superstate_" type="${numeric(18)}"/>
-            <column name="decisionexpression_" type="${VARCHAR(255)}"/>
+            <column name="decisionexpression_" type="${D_BIGNAME}"/>
             <column name="decisiondelegation" type="${numeric(18)}"/>
-            <column name="subprocname_" type="${VARCHAR(255)}"/>
+            <column name="subprocname_" type="${D_BIGNAME}"/>
             <column name="script_" type="${numeric(18)}"/>
             <column name="subprocessdefinition_" type="${numeric(18)}"/>
             <column name="signal_" type="${D_INT}"/>
@@ -5354,7 +5354,7 @@
             <column name="version_" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="actorid_" type="${VARCHAR(255)}"/>
+            <column name="actorid_" type="${D_BIGNAME}"/>
             <column name="swimlaneinstance_" type="${numeric(18)}"/>
         </createTable>
     </changeSet>
@@ -5366,8 +5366,8 @@
             <column name="class_" type="${D_SMALLESTCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name_" type="${VARCHAR(255)}"/>
-            <column name="description_" type="${VARCHAR(4000)}"/>
+            <column name="name_" type="${D_BIGNAME}"/>
+            <column name="description_" type="${D_TEXT}"/>
             <column name="version_" type="${D_INT}"/>
             <column name="isterminationimplicit_" type="${D_SHORT}"/>
             <column name="startstate_" type="${numeric(18)}"/>
@@ -5381,7 +5381,7 @@
             <column name="version_" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="key_" type="${VARCHAR(255)}"/>
+            <column name="key_" type="${D_BIGNAME}"/>
             <column name="start_" type="${D_DATETIME}"/>
             <column name="end_" type="${D_DATETIME}"/>
             <column name="issuspended_" type="${D_SHORT}"/>
@@ -5398,7 +5398,7 @@
             <column name="version_" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="eventtype_" type="${VARCHAR(255)}"/>
+            <column name="eventtype_" type="${D_BIGNAME}"/>
             <column name="type_" type="${D_SMALLESTCODE}"/>
             <column name="graphelement_" type="${numeric(18)}"/>
             <column name="processinstance_" type="${numeric(18)}"/>
@@ -5411,9 +5411,9 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name_" type="${VARCHAR(255)}"/>
-            <column name="actoridexpression_" type="${VARCHAR(255)}"/>
-            <column name="pooledactorsexpression_" type="${VARCHAR(255)}"/>
+            <column name="name_" type="${D_BIGNAME}"/>
+            <column name="actoridexpression_" type="${D_BIGNAME}"/>
+            <column name="pooledactorsexpression_" type="${D_BIGNAME}"/>
             <column name="assignmentdelegation_" type="${numeric(18)}"/>
             <column name="taskmgmtdefinition_" type="${numeric(18)}"/>
         </createTable>
@@ -5426,8 +5426,8 @@
             <column name="version_" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name_" type="${VARCHAR(255)}"/>
-            <column name="actorid_" type="${VARCHAR(255)}"/>
+            <column name="name_" type="${D_BIGNAME}"/>
+            <column name="actorid_" type="${D_BIGNAME}"/>
             <column name="swimlane_" type="${numeric(18)}"/>
             <column name="taskmgmtinstance_" type="${numeric(18)}"/>
         </createTable>
@@ -5437,16 +5437,16 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name_" type="${VARCHAR(255)}"/>
-            <column name="description_" type="${VARCHAR(4000)}"/>
+            <column name="name_" type="${D_BIGNAME}"/>
+            <column name="description_" type="${D_TEXT}"/>
             <column name="processdefinition_" type="${numeric(18)}"/>
             <column name="isblocking_" type="${D_SHORT}"/>
             <column name="issignalling_" type="${D_SHORT}"/>
-            <column name="condition_" type="${VARCHAR(255)}"/>
-            <column name="duedate_" type="${VARCHAR(255)}"/>
+            <column name="condition_" type="${D_BIGNAME}"/>
+            <column name="duedate_" type="${D_BIGNAME}"/>
             <column name="priority_" type="${D_INT}"/>
-            <column name="actoridexpression_" type="${VARCHAR(255)}"/>
-            <column name="pooledactorsexpression_" type="${VARCHAR(255)}"/>
+            <column name="actoridexpression_" type="${D_BIGNAME}"/>
+            <column name="pooledactorsexpression_" type="${D_BIGNAME}"/>
             <column name="taskmgmtdefinition_" type="${numeric(18)}"/>
             <column name="tasknode_" type="${numeric(18)}"/>
             <column name="startstate_" type="${numeric(18)}"/>
@@ -5484,9 +5484,9 @@
             <column name="version_" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name_" type="${VARCHAR(255)}"/>
-            <column name="description_" type="${VARCHAR(4000)}"/>
-            <column name="actorid_" type="${VARCHAR(255)}"/>
+            <column name="name_" type="${D_BIGNAME}"/>
+            <column name="description_" type="${D_TEXT}"/>
+            <column name="actorid_" type="${D_BIGNAME}"/>
             <column name="create_" type="${D_DATETIME}"/>
             <column name="start_" type="${D_DATETIME}"/>
             <column name="end_" type="${D_DATETIME}"/>
@@ -5512,7 +5512,7 @@
             <column name="version_" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name_" type="${VARCHAR(255)}"/>
+            <column name="name_" type="${D_BIGNAME}"/>
             <column name="start_" type="${D_DATETIME}"/>
             <column name="end_" type="${D_DATETIME}"/>
             <column name="nodeenter_" type="${D_DATETIME}"/>
@@ -5520,7 +5520,7 @@
             <column name="isabletoreactivateparent_" type="${D_SHORT}"/>
             <column name="isterminationimplicit_" type="${D_SHORT}"/>
             <column name="issuspended_" type="${D_SHORT}"/>
-            <column name="lock_" type="${VARCHAR(255)}"/>
+            <column name="lock_" type="${D_BIGNAME}"/>
             <column name="node_" type="${numeric(18)}"/>
             <column name="processinstance_" type="${numeric(18)}"/>
             <column name="parent_" type="${numeric(18)}"/>
@@ -5544,12 +5544,12 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name_" type="${VARCHAR(255)}"/>
-            <column name="description_" type="${VARCHAR(4000)}"/>
+            <column name="name_" type="${D_BIGNAME}"/>
+            <column name="description_" type="${D_TEXT}"/>
             <column name="processdefinition_" type="${numeric(18)}"/>
             <column name="from_" type="${numeric(18)}"/>
             <column name="to_" type="${numeric(18)}"/>
-            <column name="condition_" type="${VARCHAR(255)}"/>
+            <column name="condition_" type="${D_BIGNAME}"/>
             <column name="fromindex_" type="${D_INT}"/>
         </createTable>
     </changeSet>
@@ -5558,9 +5558,9 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="variablename_" type="${VARCHAR(255)}"/>
-            <column name="access_" type="${VARCHAR(255)}"/>
-            <column name="mappedname_" type="${VARCHAR(255)}"/>
+            <column name="variablename_" type="${D_BIGNAME}"/>
+            <column name="access_" type="${D_BIGNAME}"/>
+            <column name="mappedname_" type="${D_BIGNAME}"/>
             <column name="processstate_" type="${numeric(18)}"/>
             <column name="taskcontroller_" type="${numeric(18)}"/>
             <column name="index_" type="${D_INT}"/>
@@ -5578,14 +5578,14 @@
             <column name="version_" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name_" type="${VARCHAR(255)}"/>
+            <column name="name_" type="${D_BIGNAME}"/>
             <column name="converter_" type="${D_SMALLESTCODE}"/>
             <column name="token_" type="${numeric(18)}"/>
             <column name="tokenvariablemap_" type="${numeric(18)}"/>
             <column name="processinstance_" type="${numeric(18)}"/>
-            <column name="longidclass_" type="${VARCHAR(255)}"/>
-            <column name="stringidclass_" type="${VARCHAR(255)}"/>
-            <column name="stringvalue_" type="${VARCHAR(255)}"/>
+            <column name="longidclass_" type="${D_BIGNAME}"/>
+            <column name="stringidclass_" type="${D_BIGNAME}"/>
+            <column name="stringvalue_" type="${D_BIGNAME}"/>
             <column name="datevalue_" type="${D_DATETIME}"/>
             <column name="longvalue_" type="${numeric(18)}"/>
             <column name="bytearrayvalue_" type="${numeric(18)}"/>
@@ -5598,7 +5598,7 @@
             <column name="id" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" type="${VARCHAR(255)}">
+            <column name="name" type="${D_BIGNAME}">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -5614,10 +5614,10 @@
             <column name="public_visibility" type="${BOOL}">
                 <constraints nullable="false"/>
             </column>
-            <column name="cred_name" type="${VARCHAR(255)}">
+            <column name="cred_name" type="${D_BIGNAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="cred_value" type="${VARCHAR(255)}">
+            <column name="cred_value" type="${D_BIGNAME}">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -5627,7 +5627,7 @@
             <column name="id" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" type="${VARCHAR(255)}">
+            <column name="name" type="${D_BIGNAME}">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -5637,11 +5637,11 @@
             <column name="id" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class" type="${VARCHAR(255)}"/>
-            <column name="name" type="${VARCHAR(255)}">
+            <column name="class" type="${D_BIGNAME}"/>
+            <column name="name" type="${D_BIGNAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="actions" type="${VARCHAR(255)}"/>
+            <column name="actions" type="${D_BIGNAME}"/>
             <column name="domain_id" type="${D_INT}"/>
         </createTable>
     </changeSet>
@@ -5650,13 +5650,13 @@
             <column name="id" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" type="${VARCHAR(255)}">
+            <column name="name" type="${D_BIGNAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="application_name" type="${VARCHAR(255)}">
+            <column name="application_name" type="${D_BIGNAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_name" type="${VARCHAR(255)}">
+            <column name="class_name" type="${D_BIGNAME}">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -5696,7 +5696,7 @@
             <column name="id" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="cred_name" type="${VARCHAR(255)}">
+            <column name="cred_name" type="${D_BIGNAME}">
                 <constraints nullable="false"/>
             </column>
             <column name="public_visibility" type="${BOOL}">
@@ -5716,13 +5716,13 @@
             <column name="id" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" type="${VARCHAR(255)}">
+            <column name="name" type="${D_BIGNAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="application_name" type="${VARCHAR(255)}">
+            <column name="application_name" type="${D_BIGNAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_name" type="${VARCHAR(255)}">
+            <column name="class_name" type="${D_BIGNAME}">
                 <constraints nullable="false"/>
             </column>
             <column name="st_user_id" type="${D_INT}">
@@ -5735,7 +5735,7 @@
             <column name="id" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" type="${VARCHAR(255)}">
+            <column name="name" type="${D_BIGNAME}">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -5755,7 +5755,7 @@
             <column name="principal_id" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="definition" type="${VARCHAR(255)}"/>
+            <column name="definition" type="${D_BIGNAME}"/>
             <column name="active" type="${BOOL}"/>
         </createTable>
     </changeSet>
@@ -5836,7 +5836,7 @@
             <column name="id" remarks="Идентификатор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="code" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
@@ -5899,7 +5899,7 @@
             </column>
             <column name="folder_id" remarks="Идентификатор папки" type="${D_INT}"/>
             <column name="comments" remarks="Комментарии" type="${D_COMMENT}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="status" remarks="Статус&#10;0 - запланировно&#10;1 - в работе&#10;2 - выполнено&#10;3 - не используется" type="${D_SHORT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -6391,7 +6391,7 @@
             <column name="def_src_mol_id" remarks="Идентификатор МОЛ склада-источника для материалов" type="${D_INT}"/>
             <column name="def_dst_mol_id" remarks="Идентификатор МОЛ склада-приемника для готовой продукции" type="${D_INT}"/>
             <column name="job_number" remarks="Номер ЗНП" type="${D_DOCNUMBER}"/>
-            <column name="job_date" remarks="Дата ЗНП" type="${D_DOCDATE}"/>
+            <column name="job_date" remarks="Дата ЗНП" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="job_status" remarks="Статус ЗНП&#10;0 - новый&#10;1 - запущен&#10;2 - остановлен&#10;3 - завершен" type="${D_MF_JOB_STATUS}"/>
             <column name="folder_id" remarks="Идентификатор папки ЗНП" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -7016,7 +7016,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="olapdb_type" remarks="Тип базы данных:&#10;0 - Interbase&#10;1 - Oracle" type="${D_SHORT}"/>
-            <column name="olapdb_name" remarks="Имя базы данных" type="${VARCHAR(255)}"/>
+            <column name="olapdb_name" remarks="Имя базы данных" type="${D_BIGNAME}"/>
             <column name="olapdb_user" remarks="Пользователь базы данных" type="${D_USERNAME}"/>
             <column name="olapdb_password" remarks="Пароль" type="${D_PASSWORD}"/>
             <column name="create_alg_id" remarks="Ид. алгоритма создания метаданных" type="${D_INT}"/>
@@ -7118,7 +7118,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="resource_group_id" remarks="Идентификатор ресурса" type="${D_INT}"/>
-            <column name="folder_tag" remarks="Тэг папки" type="${D_NAME_N}"/>
+            <column name="folder_tag" remarks="Тэг папки" type="${D_NAME}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-804">
@@ -7134,7 +7134,7 @@
             <column name="dochead_id" remarks="Идентификатор документа" type="${D_INT}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="cancellation_reason" remarks="Причина погашения" type="${D_COMMENT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -7205,17 +7205,17 @@
             <column name="give_docspec_id" remarks="Идентификатор позиции спецификации документа, по которой производилась выдача" type="${D_INT}"/>
             <column name="give_doctype" remarks="Тип документа, по которому производилась выдача" type="${D_DOCTYPE}"/>
             <column name="give_docnumber" remarks="Номер документа, по которому производилась выдача" type="${D_DOCNUMBER}"/>
-            <column name="give_docdate" remarks="Дата выдачи" type="${D_DOCDATE}"/>
+            <column name="give_docdate" remarks="Дата выдачи" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="expl_dochead_id" remarks="Идентификатор документа, по которому производился ввод в эксплуатацию" type="${D_INT}"/>
             <column name="expl_docspec_id" remarks="Идентификатор позиции спецификации документа, по которой производился ввод в эксплуатацию" type="${D_INT}"/>
             <column name="expl_doctype" remarks="Тип документа, по которому производился ввод в эксплуатацию" type="${D_DOCTYPE}"/>
             <column name="expl_docnumber" remarks="Номер документа, по которому производился ввод в эксплуатацию" type="${D_DOCNUMBER}"/>
-            <column name="expl_docdate" remarks="Дата документа, по которому производился ввод в эксплуатацию" type="${D_DOCDATE}"/>
+            <column name="expl_docdate" remarks="Дата документа, по которому производился ввод в эксплуатацию" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="remove_dochead_id" remarks="Идентификатор документа, по которому производился вывод из эксплуатации" type="${D_INT}"/>
             <column name="remove_docspec_id" remarks="Идентификатор позиции спецификации документа, по которой производился вывод из эксплуатации" type="${D_INT}"/>
             <column name="remove_doctype" remarks="Тип документа, по которому производился вывод из эксплуатации" type="${D_DOCTYPE}"/>
             <column name="remove_docnumber" remarks="Номер документа, по которому производился вывод из эксплуатации" type="${D_DOCNUMBER}"/>
-            <column name="remove_docdate" remarks="Дата документа, по которому производился вывод из эксплуатации" type="${D_DOCDATE}"/>
+            <column name="remove_docdate" remarks="Дата документа, по которому производился вывод из эксплуатации" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="remove_type_id" remarks="Тип выбытия из эксплуатации&#10;3 - возвращено&#10;4 - утеряно&#10;5 - списано" type="${D_INT}"/>
             <column name="remove_date" remarks="Дата выбытия из эксплуатации" type="${D_DATE}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -7247,7 +7247,7 @@
             <column name="docspec_id" type="${D_INT}"/>
             <column name="doctype" type="${D_DOCTYPE}"/>
             <column name="docnumber" type="${D_DOCNUMBER}"/>
-            <column name="docdate" type="${D_DOCDATE}"/>
+            <column name="docdate" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="ovr_hist_status_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -7409,7 +7409,7 @@
             <column name="inn" remarks="ИНН" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="okonh" remarks="Код ОКОНХ" type="${D_SMALLNAME_NULLABLE}">
+            <column name="okonh" remarks="Код ОКОНХ" type="${D_SMALLNAME}">
                 <constraints nullable="false"/>
             </column>
             <column name="okpo" remarks="Код ОКПО" type="${D_BIGCODE}">
@@ -7449,7 +7449,7 @@
             <column name="zip" remarks="Почтовый адрес - Индекс" type="${D_ZIPCODE}"/>
             <column name="ziplegal" remarks="Юридический адрес - Индекс" type="${D_ZIPCODE}"/>
             <column name="inn_unique" remarks="Признак уникальности ИНН: 0 - не уникален, 1 - уникален" type="${D_BOOLEAN}"/>
-            <column name="okved" remarks="Код ОКВЭД" type="${D_SMALLNAME_NULLABLE}"/>
+            <column name="okved" remarks="Код ОКВЭД" type="${D_SMALLNAME}"/>
             <column name="person_id" remarks="Идентификатор физического лица" type="${D_INT}"/>
             <column name="zipcode_id" remarks="Идентификатор индекса почтового адреса" type="${D_INT}"/>
             <column name="country_id" remarks="Идентификатор страны почтового адреса" type="${D_INT}"/>
@@ -7542,7 +7542,7 @@
             <column name="regdate" remarks="Дата регистрации" type="${D_DATE}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="doc_id" remarks="Идентификатор документа" type="${D_INT}"/>
             <column name="factsum" remarks="Фактическая сумма" type="${D_SUMMA}"/>
             <column name="distsum" remarks="Распределенная сумма" type="${D_SUMMA}"/>
@@ -7575,7 +7575,7 @@
             </column>
             <column name="item_number" remarks="Номер пункта" type="${D_DOCNUMBER}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="doc_id" remarks="Идентификатор документа" type="${D_INT}"/>
         </createTable>
     </changeSet>
@@ -7584,7 +7584,7 @@
             <column name="id" remarks="Идентификатор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -7610,7 +7610,7 @@
             <column name="folder_id" remarks="Идентификатор папки журнала платежей" type="${D_INT}"/>
             <column name="planned" remarks="0 - фактический платеж&#10;1 - плановый платеж" type="${D_BOOLEAN}"/>
             <column name="pdate" remarks="Дата платежа" type="${D_DATE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="curcode" remarks="Код валюты" type="${D_SMALLCODE}"/>
             <column name="curratetype_id" remarks="Тип валюты" type="${D_INT}"/>
             <column name="currateauthority_id" remarks="Источник валюты" type="${D_INT}"/>
@@ -7622,15 +7622,15 @@
             <column name="doc_id" remarks="Идентификатор документа" type="${D_INT}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="basedoc_id" remarks="Идентификатор документа-основания" type="${D_INT}"/>
             <column name="basedoctype" remarks="Тип документа-основания" type="${D_DOCTYPE}"/>
             <column name="basedocnumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
-            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DOCDATE}"/>
+            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="contract_id" remarks="Идентификатор контракта" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип контракта" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер контракта" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата контракта" type="${D_DOCDATE}"/>
+            <column name="contractdate" remarks="Дата контракта" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="from_id" remarks="От кого" type="${D_INT}"/>
             <column name="to_id" remarks="Кому" type="${D_INT}"/>
             <column name="fromunit_id" remarks="Идентифкатор подразделения, у которого контрагент От кого в качестве юридического лица" type="${D_INT}"/>
@@ -7639,7 +7639,7 @@
             <column name="comments" remarks="Комментарий" type="${D_COMMENT}"/>
             <column name="is_model" remarks="0 - обязательство&#10;1 - образец обязательства" type="${D_BOOLEAN}"/>
             <column name="destfolder_id" remarks="Идентификатор папки-приемника" type="${D_INT}"/>
-            <column name="modelname" remarks="Наименование образца" type="${D_NAME_N}"/>
+            <column name="modelname" remarks="Наименование образца" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -7758,15 +7758,15 @@
             <column name="doc_id" remarks="Идентификатор документа" type="${D_INT}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
             <column name="doctype" remarks="Идентификатор типа документа" type="${D_DOCTYPE}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="basedoc_id" remarks="Идентификатор документа-основания" type="${D_INT}"/>
             <column name="basedoctype" remarks="Идентификатор типа документа-основания" type="${D_DOCTYPE}"/>
             <column name="basedocnumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
-            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DOCDATE}"/>
+            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="contract_id" remarks="Идентификатор контракта" type="${D_INT}"/>
             <column name="contracttype" remarks="Идентификатор типа контракта" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер контракта" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата контракта" type="${D_DOCDATE}"/>
+            <column name="contractdate" remarks="Дата контракта" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="prefresource_id" remarks="Идентификатор средства платежа" type="${D_INT}"/>
             <column name="prefresourcefolder_id" remarks="Идентификатор папки средства платежа" type="${D_INT}"/>
             <column name="prefonly" remarks="Только выбранное средство платежа" type="${D_BOOLEAN}"/>
@@ -7774,7 +7774,7 @@
             <column name="transferkind" remarks="Признак создания внутренним перемещением" type="${D_SHORT}"/>
             <column name="is_model" remarks="0 - обязательство&#10;1 - образец обязательства" type="${D_BOOLEAN}"/>
             <column name="destfolder_id" remarks="Идентификатор папки-приемника" type="${D_INT}"/>
-            <column name="modelname" remarks="Наименование образца обязательства" type="${D_NAME_N}"/>
+            <column name="modelname" remarks="Наименование образца обязательства" type="${D_NAME}"/>
             <column name="fromsource" remarks="Источник От кого&#10;1 - от кого&#10;2 - кому&#10;3 - через кого" type="${D_SHORT}"/>
             <column name="tosource" remarks="Источник Кому&#10;1 - от кого&#10;2 - кому&#10;3 - через кого" type="${D_SHORT}"/>
             <column name="frombankacc_id" remarks="Идентификатор банковского счета От кого" type="${D_INT}"/>
@@ -7789,7 +7789,7 @@
             <column name="id" remarks="Идентификатор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="datefrom" remarks="Дата начала" type="${D_DATE}"/>
             <column name="datetill" remarks="Дата окончания" type="${D_DATE}"/>
             <column name="parent_id" remarks="Идентификатор родительского периода" type="${D_INT}"/>
@@ -7806,7 +7806,7 @@
             </column>
             <column name="folder_id" remarks="Идентификатор папки" type="${D_INT}"/>
             <column name="orgunit_id" remarks="Идентификатор подразделения" type="${D_INT}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="description" remarks="Описание" type="${D_COMMENT}"/>
             <column name="catalog_id" remarks="Идентификатор позиции каталога" type="${D_INT}"/>
             <column name="actdatetill" remarks="Дата начала действия" type="${D_DATE}"/>
@@ -7828,7 +7828,7 @@
             <column name="id" remarks="Идентификатор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="available" remarks="Признак доступности" type="${D_BOOLEAN}"/>
             <column name="createdate" remarks="Дата создания" type="${D_DATE}"/>
             <column name="creator_id" remarks="Идентификатор создателя" type="${D_INT}"/>
@@ -8095,7 +8095,7 @@
             <column name="mrp_version_control_id" remarks="Идентификатор версии расчета MRP" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="pp_reference" remarks="Ссылка на источник поступления" type="${D_NAME_N}"/>
+            <column name="pp_reference" remarks="Ссылка на источник поступления" type="${D_NAME}"/>
             <column name="reference_id" remarks="Идентификатор строки прогноза" type="${D_INT}"/>
             <column name="required_date" remarks="Дата поступления" type="${D_DATE}"/>
             <column name="mrp_quantity" remarks="Количество" type="${D_QUANTITY}"/>
@@ -8123,7 +8123,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="required_date" remarks="Дата потребности" type="${D_DATE}"/>
-            <column name="pp_reference" remarks="Ссылка на источник потребности" type="${D_NAME_N}"/>
+            <column name="pp_reference" remarks="Ссылка на источник потребности" type="${D_NAME}"/>
             <column name="reference_id" remarks="Идентификатор строки прогноза" type="${D_INT}"/>
             <column name="mrp_quantity" remarks="Количество" type="${D_QUANTITY}"/>
             <column name="mrp_order_type" remarks="Тип потребности" type="${D_SHORT}"/>
@@ -8167,7 +8167,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="source_warehouse_id" remarks="Идентификатор исходного склада" type="${D_INT}"/>
-            <column name="pp_reference" remarks="Ссылка" type="${D_NAME_N}"/>
+            <column name="pp_reference" remarks="Ссылка" type="${D_NAME}"/>
             <column name="manual_entry" remarks="Признак ручного создания записи" type="${D_BOOLEAN}"/>
             <column name="mrp_reschedule_flag" remarks="Способ перепланирования" type="${D_SHORT}"/>
             <column name="mrp_source" remarks="Источник возникновения" type="${D_SHORT}"/>
@@ -8189,7 +8189,7 @@
             </column>
             <column name="required_date" remarks="Дата потребности" type="${D_DATE}"/>
             <column name="mrp_order_type" remarks="Тип заказа MRP" type="${D_SHORT}"/>
-            <column name="pp_reference" remarks="Ссылка на источник потребности" type="${D_NAME_N}"/>
+            <column name="pp_reference" remarks="Ссылка на источник потребности" type="${D_NAME}"/>
             <column name="qty_available" remarks="Доступное количество" type="${D_QUANTITY}"/>
             <column name="mrp_quantity" remarks="Доступное количество" type="${D_QUANTITY}"/>
             <column name="mrp_source" remarks="Источник потребности/поступления" type="${D_SHORT}"/>
@@ -8589,7 +8589,7 @@
             <column name="code" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="okin" remarks="Код ОКИН" type="${D_SMALLCODE}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -8645,14 +8645,14 @@
             <column name="id" remarks="Идентификатор записи" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="begindate" remarks="Дата начала периода" type="${D_DATENOTNULL}">
+            <column name="begindate" remarks="Дата начала периода" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="enddate" remarks="Дата окончания периода" type="${D_DATENOTNULL}">
+            <column name="enddate" remarks="Дата окончания периода" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column name="stafflist_id" remarks="Идентификатор штатного расписания" type="${D_INT}"/>
-            <column name="pname" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="pname" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -8682,7 +8682,7 @@
             <column name="acode" remarks="Код аналитики" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="aname" remarks="Наименование аналитики" type="${D_NAME_N}"/>
+            <column name="aname" remarks="Наименование аналитики" type="${D_NAME}"/>
             <column name="anllevel" remarks="Уровень аналитики (1-5)" type="${D_SHORT}">
                 <constraints nullable="false"/>
             </column>
@@ -8724,7 +8724,7 @@
             </column>
             <column name="minsalarynumber" remarks="Число минимальных зарплат" type="${D_QUANTITY}"/>
             <column name="fixedsum" remarks="Фиксированная сумма" type="${D_SUMMA}"/>
-            <column name="begindate" remarks="Дата начала действия" type="${D_DATENOTNULL}">
+            <column name="begindate" remarks="Дата начала действия" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column name="max_income" remarks="Максимальный доход" type="${D_SUMMA}"/>
@@ -8741,7 +8741,7 @@
             <column name="code" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="okin" remarks="Код ОКИН" type="${D_SMALLCODE}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -8817,7 +8817,7 @@
             <column name="statuskind_id" remarks="Идентификатор вида семейного положения" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="begindate" remarks="Дата начала действия" type="${D_DATENOTNULL}">
+            <column name="begindate" remarks="Дата начала действия" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -8956,10 +8956,10 @@
             <column name="id" remarks="Идентификатор записи" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="kname" remarks="Наименование объекта" type="${D_SMALLNAME_NULLABLE}"/>
+            <column name="kname" remarks="Наименование объекта" type="${D_SMALLNAME}"/>
             <column name="ktype" remarks="Сокращенное наименование элемента адреса" type="${VARCHAR(10)}"/>
             <column name="kcode" remarks="Иерархический классификационный код объекта" type="${D_CHAR15}"/>
-            <column name="post_index" remarks="Почтовый индекс" type="${D_POSTAL_CODE}"/>
+            <column name="post_index" remarks="Почтовый индекс" type="${D_ZIPCODE}"/>
             <column name="gninmb" remarks="Код налогового органа" type="${D_CHAR4}"/>
             <column name="ocatd" remarks="Код СОАТО" type="${D_CHAR15}"/>
             <column name="syscod" remarks="Системный код" type="${D_MEDIUMCODE}"/>
@@ -8990,7 +8990,7 @@
             <column name="code" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="okin" remarks="Код ОКИН" type="${D_SMALLCODE}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -9005,7 +9005,7 @@
             <column name="code" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="okin" remarks="Код ОКИН" type="${D_SMALLCODE}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -9020,7 +9020,7 @@
             <column name="code" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9034,7 +9034,7 @@
             <column name="code" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9083,9 +9083,9 @@
             </column>
             <column name="act_date" remarks="Действует с" type="${D_DATE}"/>
             <column name="table_number" remarks="Табельный номер" type="${D_BIGCODE}"/>
-            <column name="name1" remarks="Фимилия" type="${D_NAME_N}"/>
-            <column name="name2" remarks="Имя" type="${D_NAME_N}"/>
-            <column name="name3" remarks="Отчество" type="${D_NAME_N}"/>
+            <column name="name1" remarks="Фимилия" type="${D_NAME}"/>
+            <column name="name2" remarks="Имя" type="${D_NAME}"/>
+            <column name="name3" remarks="Отчество" type="${D_NAME}"/>
             <column name="borndate" remarks="Дата рождения" type="${D_DATE}"/>
             <column name="sex" remarks="Пол:&#10;0 - мужской&#10;1 - женский" type="${D_INT}"/>
             <column name="stature" remarks="Рост" type="${D_QUANTITY}"/>
@@ -9109,9 +9109,9 @@
             <column name="mil_rank_kind_id" remarks="Идентификатор состава воинского звания" type="${D_INT}"/>
             <column name="mil_speciality" remarks="Код военно-учетной специальности" type="${D_BIGCODE}"/>
             <column name="mil_validity_id" remarks="Идентификатор категории должности" type="${D_INT}"/>
-            <column name="mil_commissariat" remarks="Наименование военного коммисариата" type="${D_NAME_N}"/>
-            <column name="mil_reg_party_number" remarks="Состоит на воинском учете" type="${D_NAME_N}"/>
-            <column name="mil_reg_special" remarks="Стоит на специальном воинском учете" type="${D_NAME_N}"/>
+            <column name="mil_commissariat" remarks="Наименование военного коммисариата" type="${D_NAME}"/>
+            <column name="mil_reg_party_number" remarks="Состоит на воинском учете" type="${D_NAME}"/>
+            <column name="mil_reg_special" remarks="Стоит на специальном воинском учете" type="${D_NAME}"/>
             <column name="mil_is_taken_off" remarks="Отметка о снятии с учета&#10;0 - не снят&#10;1 - снят с воинского учета по должности&#10;2 - снят с воинского учета по состоянию здоровья" type="${D_SHORT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -9127,7 +9127,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="attestation_date" remarks="Дата" type="${D_DATE}"/>
-            <column name="resolution" remarks="Резолюция комиссии" type="${D_NAME_N}"/>
+            <column name="resolution" remarks="Резолюция комиссии" type="${D_NAME}"/>
             <column name="resolution_document_id" remarks="Идентификатор протокола" type="${D_INT}"/>
             <column name="order_id" remarks="Идентификатор приказа" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -9146,7 +9146,7 @@
             <column name="institution_name" remarks="Название образовательного учреждения" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="diploma_qualification" remarks="Квалификация по диплому" type="${D_NAME_N}"/>
+            <column name="diploma_qualification" remarks="Квалификация по диплому" type="${D_NAME}"/>
             <column name="diploma_number" remarks="Серия и номер дмплома" type="${D_BIGCODE}"/>
             <column name="diploma_date" remarks="дата выдачи" type="${D_DATE}"/>
             <column name="graduation_year" remarks="Год окончания" type="${D_INT}"/>
@@ -9168,7 +9168,7 @@
             </column>
             <column name="grouptype_id" remarks="Идентификатор типа группы" type="${D_INT}"/>
             <column name="parent_id" remarks="Идентификатор родительской папки" type="${D_INT}"/>
-            <column name="folder_tag" remarks="Тэг папки" type="${D_NAME_N}"/>
+            <column name="folder_tag" remarks="Тэг папки" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9195,7 +9195,7 @@
             <column name="personnel_id" remarks="Идентификатор сотрудника" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="act_date" remarks="Действует с" type="${D_DATENOTNULL}">
+            <column name="act_date" remarks="Действует с" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column name="table_number" remarks="Табельный номер" type="${D_BIGCODE}"/>
@@ -9269,7 +9269,7 @@
             <column name="work_begindate" remarks="Дата начала периода" type="${D_DATE}"/>
             <column name="work_enddate" remarks="Дата окончания периода" type="${D_DATE}"/>
             <column name="holiday_number" remarks="Количество дней отпуска" type="${D_INT}"/>
-            <column name="begindate" remarks="Дата начала" type="${D_DATENOTNULL}">
+            <column name="begindate" remarks="Дата начала" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column name="enddate" remarks="Дата окончания" type="${D_DATE}"/>
@@ -9382,7 +9382,7 @@
             <column name="skill_raising_kind_id" remarks="Идентификатор вида повышения квалификации" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="institution_name" remarks="Наименовнаие образовательного учреждения" type="${D_NAME_N}"/>
+            <column name="institution_name" remarks="Наименовнаие образовательного учреждения" type="${D_NAME}"/>
             <column name="institution_address" remarks="Адрес образовательного учреждения" type="${D_ADDRESS}"/>
             <column name="certificate_document_id" remarks="Идентификатор сертификата" type="${D_INT}"/>
             <column name="order_id" remarks="Идентификатор приказа" type="${D_INT}"/>
@@ -9510,7 +9510,7 @@
             <column name="rcode" remarks="Код надбавки" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="rname" remarks="Наименование надбавки" type="${D_NAME_N}"/>
+            <column name="rname" remarks="Наименование надбавки" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9546,7 +9546,7 @@
             <column name="scale_number" remarks="Номер шкалы" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="sname" remarks="Наименование шкалы" type="${D_NAME_N}"/>
+            <column name="sname" remarks="Наименование шкалы" type="${D_NAME}"/>
             <column name="begindate" remarks="Дата начала действия" type="${D_DATE}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -9568,7 +9568,7 @@
             <column name="beginservice_alg_id" remarks="Идентификатор алгоритма расчета даты начала стажа" type="${D_INT}"/>
             <column name="endservice_alg_id" remarks="Идентификатор алгоритма расчета даты окончания стажа" type="${D_INT}"/>
             <column name="lengthservice_alg_id" remarks="Идентификатор алгоритма расчета продолжительности стажа (в годах)" type="${D_INT}"/>
-            <column name="folder_tag" remarks="Тэг папки" type="${D_NAME_N}"/>
+            <column name="folder_tag" remarks="Тэг папки" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9599,7 +9599,7 @@
             <column name="code" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9628,7 +9628,7 @@
             <column name="ccode" remarks="Код категории" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="cname" remarks="Наименование категории" type="${D_NAME_N}"/>
+            <column name="cname" remarks="Наименование категории" type="${D_NAME}"/>
             <column name="priority" remarks="Приоритет" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -9706,7 +9706,7 @@
             <column name="costs_anl4_id" remarks="Идентификатор аналитики состава затрат 4-го уровня" type="${D_INT}"/>
             <column name="costs_anl5_id" remarks="Идентификатор аналитики состава затрат 5-го уровня" type="${D_INT}"/>
             <column name="tax_calc_kind_id" remarks="Идентификатор схемы расчета налогов" type="${D_INT}"/>
-            <column name="folder_tag" remarks="Тэг папки" type="${D_NAME_N}"/>
+            <column name="folder_tag" remarks="Тэг папки" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9717,10 +9717,10 @@
             <column name="id" remarks="Идентификатор записи" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="sname" remarks="Наименование улицы" type="${D_SMALLNAME_NULLABLE}"/>
+            <column name="sname" remarks="Наименование улицы" type="${D_SMALLNAME}"/>
             <column name="ktype" remarks="Сокращенное наименование элемента адреса" type="${VARCHAR(10)}"/>
             <column name="kcode" remarks="Иерархический классификационный код объекта" type="${D_MEDIUMCODE}"/>
-            <column name="post_index" remarks="Почтовый индекс" type="${D_POSTAL_CODE}"/>
+            <column name="post_index" remarks="Почтовый индекс" type="${D_ZIPCODE}"/>
             <column name="gninmb" remarks="Код налогового органа" type="${D_CHAR4}"/>
             <column name="ocatd" remarks="Код СОАТО" type="${D_CHAR15}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -9736,7 +9736,7 @@
             <column name="scode" remarks="Код сетки" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="sname" remarks="Наименование сетки" type="${D_NAME_N}"/>
+            <column name="sname" remarks="Наименование сетки" type="${D_NAME}"/>
             <column name="stype" remarks="Тип тарифной сетки" type="${D_SHORT}"/>
             <column name="first_class_alg_id" remarks="Алгоритм расчета ставки первого разряда" type="${D_INT}"/>
             <column name="begindate" remarks="Дата начала действия" type="${D_DATE}">
@@ -9806,7 +9806,7 @@
             <column name="ccode" remarks="Код категории" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="cname" remarks="Наименование категории" type="${D_NAME_N}"/>
+            <column name="cname" remarks="Наименование категории" type="${D_NAME}"/>
             <column name="ctype" remarks="Тип категории тарификации:&#10;0 - оклад&#10;1 - ставка по тарифной сетке&#10;2 - процент надбавки&#10;3 - количество минимальных окладов" type="${D_SHORT}">
                 <constraints nullable="false"/>
             </column>
@@ -9824,7 +9824,7 @@
             <column name="code" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9838,7 +9838,7 @@
             <column name="ccode" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="cname" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="cname" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9852,7 +9852,7 @@
             <column name="scode" remarks="Код графика" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="sname" remarks="Наименование графика" type="${D_NAME_N}"/>
+            <column name="sname" remarks="Наименование графика" type="${D_NAME}"/>
             <column name="begindate" remarks="Дата начала действия" type="${D_DATE}"/>
             <column name="enddate" remarks="Дата окончания действия" type="${D_DATE}"/>
             <column name="leave_schedule_id" remarks="Идентификатор графика для расчета отпуска" type="${D_INT}"/>
@@ -9912,7 +9912,7 @@
             <column name="fname" remarks="Наименование папки" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="folder_tag" remarks="Тэг папки" type="${D_NAME_N}"/>
+            <column name="folder_tag" remarks="Тэг папки" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9984,7 +9984,7 @@
             <column name="actdatetill" remarks="Дата окончания действия позиции" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="internalcode" remarks="Артикул поставщика" type="${D_NAME_N}"/>
+            <column name="internalcode" remarks="Артикул поставщика" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -10064,7 +10064,7 @@
             <column name="name" remarks="Наименование" type="${D_BIGNAME}"/>
             <column name="branch" remarks="Отделение" type="${D_BIGNAME}"/>
             <column name="country_id" remarks="Идентификатор страны" type="${D_INT}"/>
-            <column name="city_type" remarks="Тип населенного пункта" type="${D_NAME_N}"/>
+            <column name="city_type" remarks="Тип населенного пункта" type="${D_NAME}"/>
             <column name="city" remarks="Населенный пункт" type="${D_ADDRESS}"/>
             <column name="address" remarks="Адрес" type="${D_ADDRESS}"/>
             <column name="zip" remarks="Индекс" type="${D_ZIPCODE}"/>
@@ -10092,7 +10092,7 @@
             </column>
             <column name="contractor_id" remarks="Идентификатор контрагента" type="${D_INT}"/>
             <column name="bank_id" remarks="Идентификатор банка" type="${D_INT}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="account_type_id" remarks="Тип счета" type="${D_INT}"/>
             <column name="curcode" remarks="Валюта счета" type="${D_SMALLCODE}"/>
             <column name="account" remarks="Номер счета" type="${D_ACCOUNT}"/>
@@ -10109,7 +10109,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -10140,7 +10140,7 @@
             <column name="contractor_id" remarks="Идентификатор контрагента" type="${D_INT}"/>
             <column name="kind_id" remarks="Идентификатор типа эл.адреса" type="${D_INT}"/>
             <column name="protocol" remarks="Протокол" type="${D_SHORT}"/>
-            <column name="address" remarks="Адрес" type="${D_NAME_N}"/>
+            <column name="address" remarks="Адрес" type="${D_NAME}"/>
             <column name="is_active" remarks="Признак действующего флага" type="${D_BOOLEAN}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -10175,9 +10175,9 @@
             <column name="universal_code" remarks="Код Альфа - 2" type="${D_SMALLESTCODE}"/>
             <column name="universal_abbr" remarks="Код Альфа - 3" type="${D_CHAR4}"/>
             <column name="universal_number" remarks="Международный номер" type="${D_CHAR4}"/>
-            <column name="capital" remarks="Столица" type="${D_NAME_N}"/>
+            <column name="capital" remarks="Столица" type="${D_NAME}"/>
             <column name="phone_code" remarks="Телефонный код" type="${VARCHAR(10)}"/>
-            <column name="full_name" remarks="Полное наименование" type="${D_NAME_N}"/>
+            <column name="full_name" remarks="Полное наименование" type="${D_NAME}"/>
             <column name="address_rule" remarks="Правило формирования строки адреса" type="${D_BIGNAME}"/>
             <column name="address_dlm" remarks="Раздельтель строки адреса" type="${VARCHAR(5)}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -10262,7 +10262,7 @@
             </column>
             <column name="region_id" remarks="Идентификатор района" type="${D_INT}"/>
             <column name="prefix" remarks="Префикс" type="${D_ADDR_PREFIX}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -10273,7 +10273,7 @@
             <column name="id" remarks="Идентификатор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -10329,7 +10329,7 @@
             <column name="statuskind_id" remarks="Идентификатор вида семейного положения" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="begindate" remarks="Дата начала действия" type="${D_DATENOTNULL}">
+            <column name="begindate" remarks="Дата начала действия" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -10360,7 +10360,7 @@
             <column name="hname" remarks="Наименование" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="hdate" remarks="Дата" type="${D_DATENOTNULL}">
+            <column name="hdate" remarks="Дата" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column name="hday" remarks="День" type="${D_INT_IDEN}">
@@ -10393,17 +10393,17 @@
             <column name="series_divider" remarks="Разделитель серии" type="${D_SMALLCODE}"/>
             <column name="series_right" remarks="Правая часть серии" type="${D_MEDIUMCODE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_BIGCODE}"/>
-            <column name="who_issued" remarks="Кем выдан" type="${D_NAME_N}"/>
+            <column name="who_issued" remarks="Кем выдан" type="${D_NAME}"/>
             <column name="when_issued" remarks="Когда выдан" type="${D_DATE}"/>
             <column name="active_till" remarks="Действует до" type="${D_DATE}"/>
-            <column name="citizenship" remarks="Гражданство" type="${D_NAME_N}"/>
+            <column name="citizenship" remarks="Гражданство" type="${D_NAME}"/>
             <column name="address_id" remarks="Идентификатор адреса" type="${D_INT}"/>
             <column name="birthdate" remarks="Дата рождения" type="${D_DATE}"/>
             <column name="nationality_id" remarks="Идентификатор национальности" type="${D_INT}"/>
-            <column name="birthplace_country" remarks="Старан рождения" type="${D_NAME_N}"/>
-            <column name="birthplace_region" remarks="Регион рождения" type="${D_NAME_N}"/>
-            <column name="birthplace_district" remarks="Район рождения" type="${D_NAME_N}"/>
-            <column name="birthplace_city" remarks="Город рождения" type="${D_NAME_N}"/>
+            <column name="birthplace_country" remarks="Старан рождения" type="${D_NAME}"/>
+            <column name="birthplace_region" remarks="Регион рождения" type="${D_NAME}"/>
+            <column name="birthplace_district" remarks="Район рождения" type="${D_NAME}"/>
+            <column name="birthplace_city" remarks="Город рождения" type="${D_NAME}"/>
             <column name="birthplace_okato" remarks="Код по ОКАТО местности рождения" type="${D_BIGCODE}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -10438,7 +10438,7 @@
             <column name="code" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -10483,20 +10483,20 @@
             <column name="folder_id" remarks="Идентификатор папки" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="act_date" remarks="Дата начала дейтсвия" type="${D_DATENOTNULL}">
+            <column name="act_date" remarks="Дата начала дейтсвия" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column name="surname" remarks="Фамилия" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Имя" type="${D_NAME_N}"/>
-            <column name="patronymic" remarks="Отчество" type="${D_NAME_N}"/>
+            <column name="name" remarks="Имя" type="${D_NAME}"/>
+            <column name="patronymic" remarks="Отчество" type="${D_NAME}"/>
             <column name="borndate" remarks="Дата рождения" type="${D_DATE}"/>
             <column name="sex" remarks="Пол" type="${D_INT}"/>
             <column name="photo" remarks="Фотография" type="${D_ORIGINAL}"/>
             <column name="inn" remarks="ИНН" type="${D_BIGCODE}"/>
             <column name="additional_info" remarks="Дополнительные сведения" type="${VARCHAR(2048)}"/>
-            <column name="code" remarks="Полное имя" type="${D_NAME_N}"/>
+            <column name="code" remarks="Полное имя" type="${D_NAME}"/>
             <column name="user_id" remarks="Идентификатор пользователя" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -10511,14 +10511,14 @@
             <column name="person_id" remarks="Идентификатор физического лица" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="act_date" remarks="Дата" type="${D_DATENOTNULL}">
+            <column name="act_date" remarks="Дата" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column name="surname" remarks="Фамилия" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Имя" type="${D_NAME_N}"/>
-            <column name="patronymic" remarks="Отчетство" type="${D_NAME_N}"/>
+            <column name="name" remarks="Имя" type="${D_NAME}"/>
+            <column name="patronymic" remarks="Отчетство" type="${D_NAME}"/>
             <column name="inn" remarks="ИНН" type="${D_BIGCODE}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -10533,7 +10533,7 @@
             <column name="code" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -10545,7 +10545,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="code" remarks="Код" type="${D_BIGCODE}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -10560,7 +10560,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="docnumber" remarks="Номер" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="docname" remarks="Наименование" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
@@ -10638,8 +10638,8 @@
             <column name="begindate" remarks="Дата начала дейсткия" type="${D_DATE}"/>
             <column name="post_index" remarks="Индекс" type="${D_MEDIUMCODE}"/>
             <column name="country_id" remarks="Идентификатор страны" type="${D_INT}"/>
-            <column name="region" remarks="Регион" type="${D_NAME_N}"/>
-            <column name="city" remarks="Город" type="${D_NAME_N}"/>
+            <column name="region" remarks="Регион" type="${D_NAME}"/>
+            <column name="city" remarks="Город" type="${D_NAME}"/>
             <column name="street" remarks="Улица" type="${D_ADDR_STREET}"/>
             <column name="house" remarks="Дом" type="${D_ADDR_HOUSE}"/>
             <column name="full_address" remarks="Молный адрес" type="${D_BIGNAME}"/>
@@ -10662,7 +10662,7 @@
             <column name="person_id" remarks="Идентификатор физического лица" type="${D_INT}"/>
             <column name="kind_id" remarks="Идентификатор типа эл.адреса" type="${D_INT}"/>
             <column name="protocol" remarks="Протокол" type="${D_SHORT}"/>
-            <column name="address" remarks="Адрес" type="${D_NAME_N}"/>
+            <column name="address" remarks="Адрес" type="${D_NAME}"/>
             <column name="is_active" remarks="Признак действующего флага" type="${D_BOOLEAN}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -10705,7 +10705,7 @@
             </column>
             <column name="district_id" remarks="Идентификатор района" type="${D_INT}"/>
             <column name="prefix" remarks="Префикс" type="${D_ADDR_PREFIX}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -10718,7 +10718,7 @@
             </column>
             <column name="country_id" remarks="Идентификатор страны" type="${D_INT}"/>
             <column name="prefix" remarks="Префикс" type="${D_ADDR_PREFIX}"/>
-            <column name="name" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -11092,7 +11092,7 @@
             </column>
             <column name="minsalarynumber" remarks="Число минимальных зарплат" type="${D_QUANTITY}"/>
             <column name="fixedsum" remarks="Фиксированная сумма" type="${D_SUMMA}"/>
-            <column name="begindate" remarks="Дата начала действия" type="${D_DATENOTNULL}">
+            <column name="begindate" remarks="Дата начала действия" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column name="actionperiod" remarks="Период действия в месяцах" type="${D_QUANTITY}"/>
@@ -11161,7 +11161,7 @@
             <column name="fcode" remarks="Код начисления/удержания" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="fname" remarks="Наименование начисления/удержания" type="${D_NAME_N}"/>
+            <column name="fname" remarks="Наименование начисления/удержания" type="${D_NAME}"/>
             <column name="priority" remarks="Приоритет / порядок расчета" type="${D_INT}"/>
             <column name="sum_sign" remarks="Влияние на сумму раздела:&#10;0 - не влияет&#10;1 - плюс&#10;2 - минус" type="${D_SHORT}"/>
             <column name="begindate" remarks="Дата начала действия" type="${D_DATE}"/>
@@ -11191,7 +11191,7 @@
             <column name="pcode" remarks="Код параметра" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="pname" remarks="Наименование параметра" type="${D_NAME_N}"/>
+            <column name="pname" remarks="Наименование параметра" type="${D_NAME}"/>
             <column name="calc_alg_id" remarks="Идентификатор алгоритма расчета" type="${D_INT}"/>
             <column name="priority" remarks="Приоритет / порядок расчета" type="${D_INT}"/>
             <column name="param_type" remarks="Тип параметра:&#10;0 - число&#10;1 - дата&#10;2 - строка" type="${D_SHORT}"/>
@@ -11261,7 +11261,7 @@
             <column name="iname" remarks="Наименование дохода" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="begindate" remarks="Дата начала действия" type="${D_DATENOTNULL}">
+            <column name="begindate" remarks="Дата начала действия" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -11274,7 +11274,7 @@
             <column name="id" remarks="Идентификатор записи" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="begindate" remarks="Дата начала действия" type="${D_DATENOTNULL}">
+            <column name="begindate" remarks="Дата начала действия" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column name="minsalary" remarks="Размер минимальной зарплаты" type="${D_SUMMA}">
@@ -11299,10 +11299,10 @@
             <column name="rnumber" remarks="Номер ведомости" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="rname" remarks="Наименование ведомости" type="${D_NAME_N}"/>
+            <column name="rname" remarks="Наименование ведомости" type="${D_NAME}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="comments" remarks="Комментарий" type="${D_COMMENT}"/>
             <column name="calc_begindate" remarks="Дата начала расчета" type="${D_DATE}"/>
             <column name="calc_enddate" remarks="Дата окончания расчета" type="${D_DATE}"/>
@@ -11386,7 +11386,7 @@
             <column name="enddate" remarks="Дата окончания исполнения должности" type="${D_DATE}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="rate_number" remarks="Количество занимаемых ставок" type="${D_RATIO}"/>
             <column name="is_basic" remarks="Признак - базовая исполняемая должность" type="${D_BOOLEAN}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -11487,11 +11487,11 @@
             <column name="snumber" remarks="Номер шкалы" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="begindate" remarks="Дата начала действия" type="${D_DATENOTNULL}">
+            <column name="begindate" remarks="Дата начала действия" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column name="taxpayer" remarks="Объект налогообложения&#10;0 - сотрудник&#10;1 - предприятие" type="${D_INT}"/>
-            <column name="sname" remarks="Наименование шкалы" type="${D_NAME_N}"/>
+            <column name="sname" remarks="Наименование шкалы" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -11508,7 +11508,7 @@
             <column name="document_id" remarks="Идентификатор документа" type="${D_INT}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column name="insertdate" remarks="Дата регистрации в книге продаж" type="${D_DATE}"/>
             <column name="paydate" remarks="Дата оплаты" type="${D_DATE}"/>
             <column name="totalsum" remarks="Всего продаж, включая НДС" type="${D_SUMMA}"/>
@@ -11743,13 +11743,13 @@
             <column name="currency_code" remarks="Код валюты" type="${D_SMALLCODE}"/>
             <column name="doctype" remarks="Тип  приходного документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер приходного документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата приходного документа" type="${D_DOCDATE}"/>
+            <column name="docdate" remarks="Дата приходного документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
             <column defaultValueComputed="'2015-11-22'::date" name="createdate" remarks="Дата создания партии" type="${D_DATE}"/>
             <column name="bestbefore" remarks="Годен до, дата" type="${D_DATETIME}"/>
             <column name="contractor_id" remarks="Контрагент, от которого получена партия" type="${D_INT}"/>
             <column name="number_lot" remarks="Номер партии" type="${VARCHAR(50)}"/>
             <column name="vendor_lot" remarks="Номер партии поставщика" type="${VARCHAR(50)}"/>
-            <column name="certificate" remarks="Сертификат" type="${D_NAME_N}"/>
+            <column name="certificate" remarks="Сертификат" type="${D_NAME}"/>
             <column name="comment" remarks="Комментарии" type="${D_COMMENT}"/>
             <column defaultValueComputed="0" name="beginquan2" remarks="Начальное количество партии в дополнительной ЕИ" type="${D_QUANTITY_EXT}"/>
             <column defaultValueComputed="0" name="endquan2" remarks="Конечное количество партии в дополнительной ЕИ" type="${D_QUANTITY_EXT}"/>
@@ -12004,16 +12004,16 @@
             <column name="dataitem_kind" type="${D_SYS_DATAITEM_KIND}"/>
             <column name="description" type="${D_DESCRIPTION}"/>
             <column name="domain_id" type="${D_INT}"/>
-            <column name="reference_dataitem_name" type="${D_NAME_N}"/>
-            <column name="default_component_name" type="${D_NAME_N}"/>
+            <column name="reference_dataitem_name" type="${D_NAME}"/>
+            <column name="default_component_name" type="${D_NAME}"/>
             <column name="short_label" type="${D_JAVA_CLASS_NAME}"/>
             <column name="medium_label" type="${D_JAVA_CLASS_NAME}"/>
             <column name="long_label" type="${D_JAVA_CLASS_NAME}"/>
             <column name="header" type="${D_JAVA_CLASS_NAME}"/>
             <column name="search_help" type="${D_JAVA_CLASS_NAME}"/>
             <column name="report_label" type="${D_JAVA_CLASS_NAME}"/>
-            <column name="entity_property_text" type="${D_NAME_N}"/>
-            <column name="entity_text_format" type="${D_NAME_N}"/>
+            <column name="entity_property_text" type="${D_NAME}"/>
+            <column name="entity_text_format" type="${D_NAME}"/>
             <column name="is_read_only" type="${D_BOOLEAN}"/>
             <column name="assign_parameter_name" type="${D_BIGNAME}"/>
         </createTable>
@@ -12117,8 +12117,8 @@
                 <constraints nullable="false"/>
             </column>
             <column name="class_id" remarks="Ид. класса бизнес-компонента, к которому принадлежит метод" type="${D_INT}"/>
-            <column name="corba_name" remarks="Имя метода в IDL" type="${D_NAME_N}"/>
-            <column name="description" remarks="Описание метода" type="${D_NAME_N}"/>
+            <column name="corba_name" remarks="Имя метода в IDL" type="${D_NAME}"/>
+            <column name="description" remarks="Описание метода" type="${D_NAME}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-1051">
@@ -12220,7 +12220,7 @@
             <column name="pcode" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="pname" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="pname" remarks="Наименование" type="${D_NAME}"/>
             <column name="duration" remarks="Длительность в днях" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -12279,7 +12279,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="hours_quantity" remarks="Количество часов" type="${D_QUANTITY}"/>
-            <column name="schedule_date" remarks="Дата" type="${D_DATENOTNULL}">
+            <column name="schedule_date" remarks="Дата" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -12333,7 +12333,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="hours_quantity" remarks="Количество часов" type="${D_QUANTITY}"/>
-            <column name="time_board_date" remarks="Дата" type="${D_DATENOTNULL}">
+            <column name="time_board_date" remarks="Дата" type="${D_DATE}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -12349,7 +12349,7 @@
             <column name="kcode" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="kname" remarks="Наименование" type="${D_NAME_N}"/>
+            <column name="kname" remarks="Наименование" type="${D_NAME}"/>
             <column name="priority" remarks="Приоритет" type="${D_INT}"/>
             <column name="is_whole_day" remarks="Учитывать по дням" type="${D_BOOLEAN}"/>
             <column name="mnemocode" remarks="Мнемокод" type="${D_SMALLCODE}"/>
@@ -12521,7 +12521,7 @@
             <column name="code" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="description" remarks="Описание" type="${D_NAME_N}"/>
+            <column name="description" remarks="Описание" type="${D_NAME}"/>
             <column name="type_id" remarks="Тип секции хранения" type="${D_INT}"/>
             <column name="zone_id" remarks="Зона хранения" type="${D_INT}"/>
             <column name="infinite_volume" remarks="Объем не ограничен" type="${D_BOOLEAN}"/>
@@ -12629,7 +12629,7 @@
             </column>
             <column name="disable_spec_price" remarks="Запретить редактирование цен в спецификациях документов&#10;0 - не запрещать&#10;1 - запретить" type="${D_BOOLEAN}"/>
             <column name="disable_discount" remarks="Запретить применение скидок/наценок в документах&#10;0 - не запрещать&#10;1 - запретить" type="${D_BOOLEAN}"/>
-            <column name="disable_exceed_quant" remarks="Количество товара при выборе из каталога или прайс-листа:&#10;0 - любое&#10;1 - не более фактического&#10;2 - не более доступного" type="${D_DISABLE_EXCEED_QUANT}">
+            <column name="disable_exceed_quant" remarks="Количество товара при выборе из каталога или прайс-листа:&#10;0 - любое&#10;1 - не более фактического&#10;2 - не более доступного" type="${D_DISABLE_EXCEED_QUANT}" defaultValueComputed="0">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
