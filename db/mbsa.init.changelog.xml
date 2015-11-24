@@ -2121,14 +2121,14 @@
             <column name="responsible" remarks="Не используется" type="${D_INT}"/>
             <column name="kbk" remarks="Код КБК" type="${D_BIGCODE}"/>
             <column name="okato" remarks="Код ОКАТО" type="${D_BIGCODE}"/>
-            <column name="paymentbaseidx" remarks="Основание платежа" type="${BPCHAR(2)}"/>
-            <column name="taxperiodidx1" remarks="Период платежа - код" type="${BPCHAR(2)}"/>
-            <column name="taxperiodidx2" remarks="Период платежа - месяц" type="${BPCHAR(2)}"/>
-            <column name="taxperiodidx3" remarks="Период платежа - год" type="${BPCHAR(4)}"/>
+            <column name="paymentbaseidx" remarks="Основание платежа" type="${D_SMALLESTCODE}"/>
+            <column name="taxperiodidx1" remarks="Период платежа - код" type="${D_SMALLESTCODE}"/>
+            <column name="taxperiodidx2" remarks="Период платежа - месяц" type="${D_SMALLESTCODE}"/>
+            <column name="taxperiodidx3" remarks="Период платежа - год" type="${D_CHAR4}"/>
             <column name="docnumberidx" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdateidx" remarks="Дата документа" type="${BPCHAR(10)}"/>
-            <column name="paymenttypeidx" remarks="Тип платежа" type="${BPCHAR(2)}"/>
-            <column name="payerstatus" remarks="Статус платежа" type="${BPCHAR(2)}"/>
+            <column name="docdateidx" remarks="Дата документа" type="${D_MEDIUMCODE}"/>
+            <column name="paymenttypeidx" remarks="Тип платежа" type="${D_SMALLESTCODE}"/>
+            <column name="payerstatus" remarks="Статус платежа" type="${D_SMALLESTCODE}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-562">
@@ -2157,14 +2157,14 @@
             <column name="responsible" remarks="Не используется" type="${D_INT}"/>
             <column name="kbk" remarks="Код КБК" type="${D_BIGCODE}"/>
             <column name="okato" remarks="Код ОКАТО" type="${D_BIGCODE}"/>
-            <column name="paymentbaseidx" remarks="Основание палтежа" type="${BPCHAR(2)}"/>
-            <column name="taxperiodidx1" remarks="Период платежа - код" type="${BPCHAR(2)}"/>
-            <column name="taxperiodidx2" remarks="Период платежа - месяц" type="${BPCHAR(2)}"/>
-            <column name="taxperiodidx3" remarks="Период платежа - год" type="${BPCHAR(4)}"/>
+            <column name="paymentbaseidx" remarks="Основание палтежа" type="${D_SMALLESTCODE}"/>
+            <column name="taxperiodidx1" remarks="Период платежа - код" type="${D_SMALLESTCODE}"/>
+            <column name="taxperiodidx2" remarks="Период платежа - месяц" type="${D_SMALLESTCODE}"/>
+            <column name="taxperiodidx3" remarks="Период платежа - год" type="${D_CHAR4}"/>
             <column name="docnumberidx" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdateidx" remarks="Дата документа" type="${BPCHAR(10)}"/>
-            <column name="paymenttypeidx" remarks="Тип платежа" type="${BPCHAR(2)}"/>
-            <column name="payerstatus" remarks="Статус платежа" type="${BPCHAR(2)}"/>
+            <column name="docdateidx" remarks="Дата документа" type="${D_MEDIUMCODE}"/>
+            <column name="paymenttypeidx" remarks="Тип платежа" type="${D_SMALLESTCODE}"/>
+            <column name="payerstatus" remarks="Статус платежа" type="${D_SMALLESTCODE}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-563">
@@ -3390,7 +3390,7 @@
             <column name="priority" remarks="Приоритет" type="${D_INT}"/>
             <column name="type_id" remarks="Идентификатор типа рекламного мероприятия" type="${D_INT}"/>
             <column name="date_approve" remarks="Дата утверждения" type="${D_DATE}"/>
-            <column name="number" remarks="Номер" type="${BPCHAR(20)}"/>
+            <column name="number" remarks="Номер" type="${D_MEDIUMCODE}"/>
             <column name="is_active" remarks="Признак действия: 0 - не действует; 1 - действует" type="${D_BOOLEAN}"/>
             <column name="is_apply_discount_group" remarks="Признак применения группы с/н: 0 - не применять; 1 - применять" type="${D_BOOLEAN}"/>
             <column name="is_apply_discount_on_doc" remarks="Признак применения с/н на документ: 0 - не применять; 1 - применять" type="${D_BOOLEAN}"/>
@@ -3631,7 +3631,7 @@
             <column defaultValueComputed="0" name="readysumma" remarks="Выполненная сумма" type="${D_SUMMA}"/>
             <column name="data1" remarks="Служебное поле" type="${D_INT}"/>
             <column name="data2" remarks="Служебное поле" type="${D_INT}"/>
-            <column defaultValueComputed="'2015-11-22 23:03:08.187967'::timestamp without time zone" name="datetime" remarks="Системное время выполнения этапа" type="${D_DATETIME}"/>
+            <column defaultValueComputed="${now}" name="datetime" remarks="Системное время выполнения этапа" type="${D_DATETIME}"/>
             <column name="user_id" remarks="Пользователь, выполнивший этап" type="${D_INT}"/>
             <column name="state_value" type="${BYTEA}"/>
         </createTable>
@@ -3912,7 +3912,7 @@
             <column name="folder_id" remarks="Идентификатор папки" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column defaultValueComputed="${today}" name="keepdate" remarks="Дата хозяйственной операции" type="${D_DATE}"/>
+            <column defaultValueComputed="${now}" name="keepdate" remarks="Дата хозяйственной операции" type="${D_DATETIME}"/>
             <column name="comment" remarks="Содержание хозяйственной операции" type="${D_COMMENT}"/>
             <column name="specmark" remarks="Код особой отметки в верхнем регистре" type="${D_BIGCODE}"/>
             <column name="docbasetype" remarks="Тип документа-основания" type="${D_DOCTYPE}"/>
@@ -4090,13 +4090,13 @@
             <column name="address" remarks="Адрес" type="${D_ADDRESS}"/>
             <column name="passp_given" remarks="Паспорт - Выдан" type="${D_COMMENT}"/>
             <column name="passp_city" remarks="Паспорт - Город" type="${VARCHAR(20)}"/>
-            <column name="passp_date" remarks="Паспорт - Дата выдачи" type="${D_DATETIME}"/>
-            <column name="passp_num" remarks="Паспорт - Номер" type="${BPCHAR(10)}"/>
-            <column name="passp_ser" remarks="Паспорт - Серия" type="${BPCHAR(10)}"/>
+            <column name="passp_date" remarks="Паспорт - Дата выдачи" type="${D_DATE}"/>
+            <column name="passp_num" remarks="Паспорт - Номер" type="${D_MEDIUMCODE}"/>
+            <column name="passp_ser" remarks="Паспорт - Серия" type="${D_MEDIUMCODE}"/>
             <column name="office" remarks="Должность" type="${D_SMALLNAME_NULLABLE}"/>
             <column name="phone" remarks="Телефон" type="${D_PHONE}"/>
             <column name="comment" remarks="Примечание" type="${D_COMMENT}"/>
-            <column name="tabnum" remarks="Табельный номер" type="${BPCHAR(10)}"/>
+            <column name="tabnum" remarks="Табельный номер" type="${D_MEDIUMCODE}"/>
             <column name="contractor_id" remarks="Идентификатор контрагента" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -4131,7 +4131,7 @@
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-654">
         <createTable remarks="Обмен данными: конфигурация." tableName="exch_config">
-            <column name="site_code" remarks="Код текущей БД" type="${BPCHAR(5)}"/>
+            <column name="site_code" remarks="Код текущей БД" type="${D_SMALLCODE}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -4176,7 +4176,7 @@
             <column name="id" remarks="Идентификатор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="code" remarks="Код внешней БД" type="${BPCHAR(5)}"/>
+            <column name="code" remarks="Код внешней БД" type="${D_SMALLCODE}"/>
             <column name="name" remarks="Наименование внешней БД" type="${D_NAME_N}"/>
             <column name="path_in" remarks="Каталог входящих пакетов" type="${D_FILENAME}"/>
             <column name="path_out" remarks="Каталог исходящих пакетов" type="${D_FILENAME}"/>
@@ -4370,7 +4370,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="insertsign" remarks="Служебное поле" type="${D_SHORT}"/>
-            <column defaultValueComputed="'2015-11-22 23:03:08.187967'::timestamp without time zone" name="keepdate" remarks="Дата операции" type="${D_DATETIME}"/>
+            <column defaultValueComputed="${now}" name="keepdate" remarks="Дата операции" type="${D_DATETIME}"/>
             <column name="comment" remarks="Содержание" type="${D_COMMENT}"/>
             <column name="docbasetype" remarks="Тип документа-основания" type="${D_DOCTYPE}"/>
             <column name="docbasenumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
@@ -4411,7 +4411,7 @@
             <column name="modelname" remarks="Служебное поле" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column defaultValueComputed="'2015-11-22 23:03:08.187967'::timestamp without time zone" name="keepdate" remarks="Дата операции" type="${D_DATETIME}"/>
+            <column defaultValueComputed="${now}" name="keepdate" remarks="Дата операции" type="${D_DATETIME}"/>
             <column name="comment" remarks="Содержание" type="${D_COMMENT}"/>
             <column name="docbasetype" remarks="Тип документа-основания" type="${D_DOCTYPE}"/>
             <column name="docbasenumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
@@ -5102,7 +5102,7 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class" type="${BPCHAR(1)}">
+            <column name="class" type="${D_SMALLESTCODE}">
                 <constraints nullable="false"/>
             </column>
             <column name="name_" type="${VARCHAR(255)}"/>
@@ -5190,7 +5190,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="eventtype_" type="${VARCHAR(255)}"/>
-            <column name="type_" type="${BPCHAR(1)}"/>
+            <column name="type_" type="${D_SMALLESTCODE}"/>
             <column name="graphelement_" type="${numeric(18)}"/>
             <column name="node_" type="${numeric(18)}"/>
             <column name="processdefinition_" type="${numeric(18)}"/>
@@ -5204,7 +5204,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="exceptionclassname_" type="${VARCHAR(4000)}"/>
-            <column name="type_" type="${BPCHAR(1)}"/>
+            <column name="type_" type="${D_SMALLESTCODE}"/>
             <column name="graphelement_" type="${numeric(18)}"/>
             <column name="node_" type="${numeric(18)}"/>
             <column name="graphelementindex_" type="${D_INT}"/>
@@ -5218,7 +5218,7 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${BPCHAR(1)}">
+            <column name="class_" type="${D_SMALLESTCODE}">
                 <constraints nullable="false"/>
             </column>
             <column name="version_" type="${D_INT}">
@@ -5248,7 +5248,7 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${BPCHAR(1)}">
+            <column name="class_" type="${D_SMALLESTCODE}">
                 <constraints nullable="false"/>
             </column>
             <column name="index_" type="${D_INT}"/>
@@ -5296,7 +5296,7 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${BPCHAR(1)}">
+            <column name="class_" type="${D_SMALLESTCODE}">
                 <constraints nullable="false"/>
             </column>
             <column name="name_" type="${VARCHAR(4000)}"/>
@@ -5309,7 +5309,7 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${BPCHAR(1)}">
+            <column name="class_" type="${D_SMALLESTCODE}">
                 <constraints nullable="false"/>
             </column>
             <column name="version_" type="${D_INT}">
@@ -5325,7 +5325,7 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${BPCHAR(1)}">
+            <column name="class_" type="${D_SMALLESTCODE}">
                 <constraints nullable="false"/>
             </column>
             <column name="name_" type="${VARCHAR(255)}"/>
@@ -5363,7 +5363,7 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${BPCHAR(1)}">
+            <column name="class_" type="${D_SMALLESTCODE}">
                 <constraints nullable="false"/>
             </column>
             <column name="name_" type="${VARCHAR(255)}"/>
@@ -5399,7 +5399,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="eventtype_" type="${VARCHAR(255)}"/>
-            <column name="type_" type="${BPCHAR(1)}"/>
+            <column name="type_" type="${D_SMALLESTCODE}"/>
             <column name="graphelement_" type="${numeric(18)}"/>
             <column name="processinstance_" type="${numeric(18)}"/>
             <column name="action_" type="${numeric(18)}"/>
@@ -5478,7 +5478,7 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${BPCHAR(1)}">
+            <column name="class_" type="${D_SMALLESTCODE}">
                 <constraints nullable="false"/>
             </column>
             <column name="version_" type="${D_INT}">
@@ -5572,14 +5572,14 @@
             <column name="id_" type="${numeric(18)}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${BPCHAR(1)}">
+            <column name="class_" type="${D_SMALLESTCODE}">
                 <constraints nullable="false"/>
             </column>
             <column name="version_" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
             <column name="name_" type="${VARCHAR(255)}"/>
-            <column name="converter_" type="${BPCHAR(1)}"/>
+            <column name="converter_" type="${D_SMALLESTCODE}"/>
             <column name="token_" type="${numeric(18)}"/>
             <column name="tokenvariablemap_" type="${numeric(18)}"/>
             <column name="processinstance_" type="${numeric(18)}"/>
@@ -7392,8 +7392,8 @@
             <column name="militia" remarks="Паспорт - выдан" type="${D_ADDRESS}"/>
             <column name="milit_city" remarks="Паспорт - Город" type="${VARCHAR(20)}"/>
             <column name="passp_date" remarks="Паспорт - дата выдачи" type="${D_DATETIME}"/>
-            <column name="passp_num" remarks="Паспорт - номер" type="${BPCHAR(10)}"/>
-            <column name="passp_ser" remarks="Паспорт - серия" type="${BPCHAR(10)}"/>
+            <column name="passp_num" remarks="Паспорт - номер" type="${D_MEDIUMCODE}"/>
+            <column name="passp_ser" remarks="Паспорт - серия" type="${D_MEDIUMCODE}"/>
             <column name="office" remarks="Должность" type="${VARCHAR(100)}"/>
             <column name="comment" remarks="Комментарий" type="${D_COMMENT}"/>
             <column name="person_id" remarks="Идентификатор физического лица" type="${D_INT_IDEN}">
@@ -8575,7 +8575,7 @@
             <column name="alevel" remarks="Уровень адресного объекта" type="${D_INT}"/>
             <column name="scname" remarks="Сокращение" type="${D_ABBREVIATION}"/>
             <column name="socrname" remarks="Наименование" type="${VARCHAR(30)}"/>
-            <column name="kod_t_st" remarks="Служебное поле" type="${BPCHAR(3)}"/>
+            <column name="kod_t_st" remarks="Служебное поле" type="${D_CHAR4}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -8958,11 +8958,11 @@
             </column>
             <column name="kname" remarks="Наименование объекта" type="${D_SMALLNAME_NULLABLE}"/>
             <column name="ktype" remarks="Сокращенное наименование элемента адреса" type="${VARCHAR(10)}"/>
-            <column name="kcode" remarks="Иерархический классификационный код объекта" type="${BPCHAR(13)}"/>
-            <column name="post_index" remarks="Почтовый индекс" type="${BPCHAR(6)}"/>
-            <column name="gninmb" remarks="Код налогового органа" type="${BPCHAR(4)}"/>
-            <column name="ocatd" remarks="Код СОАТО" type="${BPCHAR(11)}"/>
-            <column name="syscod" remarks="Системный код" type="${BPCHAR(10)}"/>
+            <column name="kcode" remarks="Иерархический классификационный код объекта" type="${D_CHAR15}"/>
+            <column name="post_index" remarks="Почтовый индекс" type="${D_POSTAL_CODE}"/>
+            <column name="gninmb" remarks="Код налогового органа" type="${D_CHAR4}"/>
+            <column name="ocatd" remarks="Код СОАТО" type="${D_CHAR15}"/>
+            <column name="syscod" remarks="Системный код" type="${D_MEDIUMCODE}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9719,10 +9719,10 @@
             </column>
             <column name="sname" remarks="Наименование улицы" type="${D_SMALLNAME_NULLABLE}"/>
             <column name="ktype" remarks="Сокращенное наименование элемента адреса" type="${VARCHAR(10)}"/>
-            <column name="kcode" remarks="Иерархический классификационный код объекта" type="${BPCHAR(17)}"/>
-            <column name="post_index" remarks="Почтовый индекс" type="${BPCHAR(6)}"/>
-            <column name="gninmb" remarks="Код налогового органа" type="${BPCHAR(4)}"/>
-            <column name="ocatd" remarks="Код СОАТО" type="${BPCHAR(11)}"/>
+            <column name="kcode" remarks="Иерархический классификационный код объекта" type="${D_MEDIUMCODE}"/>
+            <column name="post_index" remarks="Почтовый индекс" type="${D_POSTAL_CODE}"/>
+            <column name="gninmb" remarks="Код налогового органа" type="${D_CHAR4}"/>
+            <column name="ocatd" remarks="Код СОАТО" type="${D_CHAR15}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9926,7 +9926,7 @@
             <column name="prname" remarks="Наименование прайс-листа" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column defaultValueComputed="'2015-11-22 00:00:00'::timestamp without time zone" name="createdate" remarks="Дата создания" type="${D_DATETIME}"/>
+            <column defaultValueComputed="${today}" name="createdate" remarks="Дата создания" type="${D_DATE}"/>
             <column name="currency_code" remarks="Код валюты в верхнем регистре" type="${D_SMALLCODE}">
                 <constraints nullable="false"/>
             </column>
@@ -10172,9 +10172,9 @@
             <column name="cname" remarks="Наименование" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="universal_code" remarks="Код Альфа - 2" type="${BPCHAR(2)}"/>
-            <column name="universal_abbr" remarks="Код Альфа - 3" type="${BPCHAR(3)}"/>
-            <column name="universal_number" remarks="Международный номер" type="${BPCHAR(3)}"/>
+            <column name="universal_code" remarks="Код Альфа - 2" type="${D_SMALLESTCODE}"/>
+            <column name="universal_abbr" remarks="Код Альфа - 3" type="${D_CHAR4}"/>
+            <column name="universal_number" remarks="Международный номер" type="${D_CHAR4}"/>
             <column name="capital" remarks="Столица" type="${D_NAME_N}"/>
             <column name="phone_code" remarks="Телефонный код" type="${VARCHAR(10)}"/>
             <column name="full_name" remarks="Полное наименование" type="${D_NAME_N}"/>
@@ -10901,7 +10901,7 @@
             <column name="sys_version" remarks="Поле контроля версии записи" type="${D_SYS_VERSION}"/>
             <column name="template" remarks="Шаблон отчёта" type="${BYTEA}"/>
             <column name="params_form_name" remarks="Путь к форме запроса параметров отчёта" type="${D_JAVA_CLASS_NAME}"/>
-            <column name="output_format" type="${BPCHAR(10)}"/>
+            <column name="output_format" type="${D_MEDIUMCODE}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-987">

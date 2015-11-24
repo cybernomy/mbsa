@@ -129,4 +129,8 @@
   <property name="D_ZIPCODE" value="D_ZIPCODE" dbms="postgresql"/>
   <property name="D_SMALLNAME_NULLABLE" value="D_SMALLNAME_NULLABLE" dbms="postgresql"/>
   <property name="D_FLOAT8" value="D_FLOAT8" dbms="postgresql"/>
+  <property name="D_SMALLESTCODE" value="D_SMALLESTCODE" dbms="postgresql"/>
+  <property name="D_CHAR4" value="D_CHAR4" dbms="postgresql"/>
+  <property name="D_CHAR15" value="D_CHAR15" dbms="postgresql"/>
+  <property name="D_POSTAL_CODE" value="D_POSTAL_CODE" dbms="postgresql"/>
 </databaseChangeLog>
