@@ -1833,17 +1833,17 @@
                 <constraints nullable="false"/>
             </column>
             <column name="parent_id" remarks="Не используется" type="${D_INT}"/>
-            <column name="groupnum" remarks="Номер группы" type="${BPCHAR(15)}"/>
-            <column name="cardnum" remarks="Номер карточки" type="${BPCHAR(15)}"/>
-            <column name="objnum" remarks="Номер объекта" type="${BPCHAR(30)}"/>
-            <column name="manufacturer" remarks="Завод-изготовитель" type="${VARCHAR(80)}"/>
-            <column name="model" remarks="Модель, тип, марка" type="${VARCHAR(80)}"/>
-            <column name="serialnum" remarks="Заводской номер" type="${BPCHAR(15)}"/>
-            <column name="passpnum" remarks="Паспортный номер" type="${BPCHAR(15)}"/>
+            <column name="groupnum" remarks="Номер группы" type="${D_BIGCODE}"/>
+            <column name="cardnum" remarks="Номер карточки" type="${D_BIGCODE}"/>
+            <column name="objnum" remarks="Номер объекта" type="${D_LARGECODE}"/>
+            <column name="manufacturer" remarks="Завод-изготовитель" type="${D_NAME_N}"/>
+            <column name="model" remarks="Модель, тип, марка" type="${D_NAME_N}"/>
+            <column name="serialnum" remarks="Заводской номер" type="${D_BIGCODE}"/>
+            <column name="passpnum" remarks="Паспортный номер" type="${D_BIGCODE}"/>
             <column name="inoperdocnum" remarks="Акт ввода в эксплуатацию - номер" type="${D_DOCNUMBER}"/>
-            <column name="inoperdate" remarks="Акт ввода в эксплуатацию - дата" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="inoperdate" remarks="Акт ввода в эксплуатацию - дата" type="${D_DATETIME}"/>
             <column name="outoperdocnum" remarks="Акт выбытия из эксплуатации - номер" type="${D_DOCNUMBER}"/>
-            <column name="outoperdate" remarks="Акт выбытия из эксплуатации - дата" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="outoperdate" remarks="Акт выбытия из эксплуатации - дата" type="${D_DATETIME}"/>
             <column name="iscomplex" remarks="Не используется" type="${D_SHORT}"/>
             <column name="iscommon" remarks="Не используется" type="${D_SHORT}"/>
             <column name="comment" remarks="Примечание" type="${D_COMMENT}"/>
@@ -1880,7 +1880,7 @@
             <column name="id" remarks="Идентификатор записи" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="incomedate" remarks="Дата прихода" type="${TIMESTAMP WITHOUT TIME ZONE}">
+            <column name="incomedate" remarks="Дата прихода" type="${D_DATETIME}">
                 <constraints nullable="false"/>
             </column>
             <column name="incomecostnat" remarks="Приходная цена" type="${D_RATIO}">
@@ -1894,7 +1894,7 @@
             <column name="doc_id" remarks="Идентификатор документа" type="${D_INT}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DATETIME}"/>
             <column name="beginquan" remarks="Начальное количество" type="${D_MASS}">
                 <constraints nullable="false"/>
             </column>
@@ -1919,10 +1919,10 @@
             <column name="accbatch_id" remarks="Идентификатор партии" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="begindate" remarks="Дата начала действия партии" type="${TIMESTAMP WITHOUT TIME ZONE}">
+            <column name="begindate" remarks="Дата начала действия партии" type="${D_DATETIME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="enddate" remarks="Дата конца действия партии" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="enddate" remarks="Дата конца действия партии" type="${D_DATETIME}"/>
             <column defaultValueComputed="0" name="quantity" remarks="Количество" type="${D_MASS}"/>
             <column name="costnat" remarks="Цена" type="${D_RATIO}">
                 <constraints nullable="false"/>
@@ -2014,8 +2014,8 @@
             <column name="algorithm_id" remarks="Идентификатор алгоритма" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="caption" remarks="Заголовок пункта" type="${VARCHAR(80)}"/>
-            <column name="hint" remarks="Подсказка" type="${VARCHAR(80)}"/>
+            <column name="caption" remarks="Заголовок пункта" type="${D_NAME_N}"/>
+            <column name="hint" remarks="Подсказка" type="${D_NAME_N}"/>
             <column name="from_menu" remarks="Доступен из меню" type="${D_BOOLEAN}"/>
             <column name="from_toolbar" remarks="Доступен из панели инструментов" type="${D_BOOLEAN}"/>
             <column name="force_refresh" remarks="Обновлять после выполнения" type="${D_BOOLEAN}"/>
@@ -2104,10 +2104,10 @@
             <column name="clearsumma" remarks="Сумма без НДС" type="${D_SUMMA}"/>
             <column name="summawithnds1" remarks="Сумма с НДС 1" type="${D_SUMMA}"/>
             <column name="summawithnds2" remarks="Сумма с НДС 2" type="${D_SUMMA}"/>
-            <column name="inoutdate" remarks="Не используется" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="inoutdate" remarks="Не используется" type="${D_DATETIME}"/>
             <column name="payway" remarks="Тип платежа&#10;0 - нет&#10;1 - почта&#10;2 - электронно&#10;3 - телеграф&#10;4 - клиринг" type="${D_SHORT}"/>
             <column name="comment" remarks="Назначение платежа" type="${D_COMMENT}"/>
-            <column name="paytime" remarks="Срок платежа" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="paytime" remarks="Срок платежа" type="${D_DATETIME}"/>
             <column name="payturn" remarks="Очередность платежа" type="${D_SHORT}"/>
             <column name="paytarget" remarks="Назначение платежа" type="${D_MEDIUMCODE}"/>
             <column name="paytype" remarks="Вид платежа" type="${D_MEDIUMCODE}"/>
@@ -2121,7 +2121,7 @@
             <column name="responsible" remarks="Не используется" type="${D_INT}"/>
             <column name="kbk" remarks="Код КБК" type="${D_BIGCODE}"/>
             <column name="okato" remarks="Код ОКАТО" type="${D_BIGCODE}"/>
-            <column name="paymentbaseidx" remarks="Основание палтежа" type="${BPCHAR(2)}"/>
+            <column name="paymentbaseidx" remarks="Основание платежа" type="${BPCHAR(2)}"/>
             <column name="taxperiodidx1" remarks="Период платежа - код" type="${BPCHAR(2)}"/>
             <column name="taxperiodidx2" remarks="Период платежа - месяц" type="${BPCHAR(2)}"/>
             <column name="taxperiodidx3" remarks="Период платежа - год" type="${BPCHAR(4)}"/>
@@ -2140,10 +2140,10 @@
             <column name="clearsumma" remarks="Сумма без НДС" type="${D_SUMMA}"/>
             <column name="summawithnds1" remarks="Сумма с НДС 1" type="${D_SUMMA}"/>
             <column name="summawithnds2" remarks="Сумма с НДС 2" type="${D_SUMMA}"/>
-            <column name="inoutdate" remarks="Не используется" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="inoutdate" remarks="Не используется" type="${D_DATETIME}"/>
             <column name="payway" remarks="Тип платежа&#10;0 - нет&#10;1 - почта&#10;2 - электронно&#10;3 - телеграф&#10;4 - клиринг" type="${D_SHORT}"/>
             <column name="comment" remarks="Назначение платежа" type="${D_COMMENT}"/>
-            <column name="paytime" remarks="Срок платежа" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="paytime" remarks="Срок платежа" type="${D_DATETIME}"/>
             <column name="payturn" remarks="Очередность платежа" type="${D_SHORT}"/>
             <column name="paytarget" remarks="Назначение платежа" type="${D_MEDIUMCODE}"/>
             <column name="paytype" remarks="Вид платежа" type="${D_MEDIUMCODE}"/>
@@ -2331,7 +2331,7 @@
             <column name="targetcode" remarks="Шифр целевого назначения" type="${D_ANLCODE}"/>
             <column name="base" remarks="Основание" type="${D_COMMENT}"/>
             <column name="comment" remarks="Приложение" type="${D_COMMENT}"/>
-            <column name="getdate" remarks="Получил, дата" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="getdate" remarks="Получил, дата" type="${D_DATETIME}"/>
             <column name="getdocument" remarks="Получил по, документ" type="${D_COMMENT}"/>
             <column name="dochead_id" remarks="Идентификатор документа" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -2350,7 +2350,7 @@
             <column name="targetcode" remarks="Шифр целевого назначения" type="${D_ANLCODE}"/>
             <column name="base" remarks="Основание" type="${D_COMMENT}"/>
             <column name="comment" remarks="Приложение" type="${D_COMMENT}"/>
-            <column name="getdate" remarks="Получил, дата" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="getdate" remarks="Получил, дата" type="${D_DATETIME}"/>
             <column name="getdocument" remarks="Получил по, документ" type="${D_COMMENT}"/>
             <column name="docheadmodel_id" remarks="Идентификатор образца документа" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -3631,7 +3631,7 @@
             <column defaultValueComputed="0" name="readysumma" remarks="Выполненная сумма" type="${D_SUMMA}"/>
             <column name="data1" remarks="Служебное поле" type="${D_INT}"/>
             <column name="data2" remarks="Служебное поле" type="${D_INT}"/>
-            <column defaultValueComputed="'2015-11-22 23:03:08.187967'::timestamp without time zone" name="datetime" remarks="Системное время выполнения этапа" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column defaultValueComputed="'2015-11-22 23:03:08.187967'::timestamp without time zone" name="datetime" remarks="Системное время выполнения этапа" type="${D_DATETIME}"/>
             <column name="user_id" remarks="Пользователь, выполнивший этап" type="${D_INT}"/>
             <column name="state_value" type="${BYTEA}"/>
         </createTable>
@@ -3912,16 +3912,16 @@
             <column name="folder_id" remarks="Идентификатор папки" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column defaultValueComputed="'2015-11-22 23:03:08.187967'::timestamp without time zone" name="keepdate" remarks="Дата хозяйственной операции" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column defaultValueComputed="${today}" name="keepdate" remarks="Дата хозяйственной операции" type="${D_DATE}"/>
             <column name="comment" remarks="Содержание хозяйственной операции" type="${D_COMMENT}"/>
             <column name="specmark" remarks="Код особой отметки в верхнем регистре" type="${D_BIGCODE}"/>
             <column name="docbasetype" remarks="Тип документа-основания" type="${D_DOCTYPE}"/>
             <column name="docbasenumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
-            <column name="docbasedate" remarks="Дата документа-основания" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="docbasedate" remarks="Дата документа-основания" type="${D_DATETIME}"/>
             <column name="docbase_id" remarks="Идентификатор документа-основания" type="${D_INT}"/>
             <column name="doctype" remarks="Тип документа-подтверждения" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа-подтверждения" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа-подтверждения" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="docdate" remarks="Дата документа-подтверждения" type="${D_DATETIME}"/>
             <column name="doc_id" remarks="Идентификатор документа-подтверждения" type="${D_INT}"/>
             <column name="summa" remarks="Сумма хозяйственной операции" type="${D_SUMMA}"/>
             <column name="insertsign" remarks="Служебное поле" type="${D_SHORT}"/>
@@ -3948,16 +3948,16 @@
             <column name="modelname" remarks="Наименование образца ХО" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="keepdate" remarks="Дата ХО" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="keepdate" remarks="Дата ХО" type="${D_DATETIME}"/>
             <column name="comment" remarks="Содержание ХО" type="${D_COMMENT}"/>
             <column name="specmark" remarks="Код особой отметки в верхнем регистре" type="${D_BIGCODE}"/>
             <column name="docbasetype" remarks="Тип документа-основания" type="${D_DOCTYPE}"/>
             <column name="docbasenumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
-            <column name="docbasedate" remarks="Дата документа-основания" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="docbasedate" remarks="Дата документа-основания" type="${D_DATETIME}"/>
             <column name="docbase_id" remarks="Идентификатор документа-основания" type="${D_INT}"/>
             <column name="doctype" remarks="Тип документа-подтверждения" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа-подтверждения" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа-подтверждения" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="docdate" remarks="Дата документа-подтверждения" type="${D_DATETIME}"/>
             <column name="doc_id" remarks="Идентификатор документа-подтверждения" type="${D_INT}"/>
             <column name="summa" remarks="Сумма" type="${D_SUMMA}"/>
             <column defaultValueNumeric="0" name="sourcefrom" remarks="От кого - тип:&#10;0 - пусто&#10;1 - Поставщик&#10;2 - Покупатель&#10;3 - Грузоотправитель&#10;4 - Грузополучатель&#10;5 - Склад источник&#10;6 - Склад приемник&#10;7 - МОЛ источник&#10;8 - МОЛ приемник&#10;9 - Через кого" type="${D_SHORT}"/>
@@ -4090,7 +4090,7 @@
             <column name="address" remarks="Адрес" type="${D_ADDRESS}"/>
             <column name="passp_given" remarks="Паспорт - Выдан" type="${D_COMMENT}"/>
             <column name="passp_city" remarks="Паспорт - Город" type="${VARCHAR(20)}"/>
-            <column name="passp_date" remarks="Паспорт - Дата выдачи" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="passp_date" remarks="Паспорт - Дата выдачи" type="${D_DATETIME}"/>
             <column name="passp_num" remarks="Паспорт - Номер" type="${BPCHAR(10)}"/>
             <column name="passp_ser" remarks="Паспорт - Серия" type="${BPCHAR(10)}"/>
             <column name="office" remarks="Должность" type="${D_SMALLNAME_NULLABLE}"/>
@@ -4126,7 +4126,7 @@
             <column name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="sys_version" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="sys_version" type="${D_DATETIME}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-654">
@@ -4181,9 +4181,9 @@
             <column name="path_in" remarks="Каталог входящих пакетов" type="${D_FILENAME}"/>
             <column name="path_out" remarks="Каталог исходящих пакетов" type="${D_FILENAME}"/>
             <column name="packet_in" remarks="Номер входящего пакета" type="${D_INT}"/>
-            <column name="packet_in_time" remarks="Дата/время входящего пакета" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="packet_in_time" remarks="Дата/время входящего пакета" type="${D_DATETIME}"/>
             <column name="packet_out" remarks="Номер исходящего пакета" type="${D_INT}"/>
-            <column name="packet_out_time" remarks="Дата/время исходящего пакета" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="packet_out_time" remarks="Дата/время исходящего пакета" type="${D_DATETIME}"/>
             <column name="request_done" remarks="Служебное поле. В процессе импорта устанавливается в 1 после выдачи пользователю сообщения о запросе на удаление документов." type="${D_BOOLEAN}"/>
             <column name="export_cmd" remarks="Команда экспорта" type="${D_BIGNAME}"/>
             <column name="import_cmd" remarks="Команда импорта" type="${D_BIGNAME}"/>
@@ -4205,13 +4205,13 @@
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-659">
         <createTable remarks="Счета-фактуры: заголовки." tableName="facturahead">
-            <column name="indate" remarks="Поступило, дата" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
-            <column name="stockdate" remarks="Склад, дата" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
-            <column name="paydate" remarks="Оплачено, дата" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="indate" remarks="Поступило, дата" type="${D_DATETIME}"/>
+            <column name="stockdate" remarks="Склад, дата" type="${D_DATETIME}"/>
+            <column name="paydate" remarks="Оплачено, дата" type="${D_DATETIME}"/>
             <column name="partnerfrom_bankreq" remarks="Банковские реквизиты &quot;от кого&quot;" type="${D_INT}"/>
             <column name="partnerto_bankreq" remarks="Банковские реквизиты &quot;кому&quot;" type="${D_INT}"/>
             <column name="topaydocnumber" remarks="К пл.-расч. документу, №" type="${D_DOCNUMBER}"/>
-            <column name="topaydocdate" remarks="К пл.-расч. документу, дата" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="topaydocdate" remarks="К пл.-расч. документу, дата" type="${D_DATETIME}"/>
             <column name="comment" remarks="Дополнения" type="${D_DESCRIPTION}"/>
             <column name="dochead_id" remarks="Идентификатор документа" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -4222,13 +4222,13 @@
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-660">
         <createTable remarks="Счета-фактуры: образцы заголовков." tableName="facturaheadmodel">
-            <column name="indate" remarks="Поступило, дата" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
-            <column name="stockdate" remarks="Склад, дата" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
-            <column name="paydate" remarks="Оплачено, дата" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="indate" remarks="Поступило, дата" type="${D_DATETIME}"/>
+            <column name="stockdate" remarks="Склад, дата" type="${D_DATETIME}"/>
+            <column name="paydate" remarks="Оплачено, дата" type="${D_DATETIME}"/>
             <column name="partnerfrom_bankreq" remarks="Банковские реквизиты &quot;от кого&quot;" type="${D_INT}"/>
             <column name="partnerto_bankreq" remarks="Банковские реквизиты &quot;кому&quot;" type="${D_INT}"/>
             <column name="topaydocnumber" remarks="К пл.-расч. документу, №" type="${D_DOCNUMBER}"/>
-            <column name="topaydocdate" remarks="К пл.-расч. документу, дата" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="topaydocdate" remarks="К пл.-расч. документу, дата" type="${D_DATETIME}"/>
             <column name="comment" remarks="Дополнения" type="${D_DESCRIPTION}"/>
             <column name="docheadmodel_id" remarks="Идентификатор образца документа" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -4370,15 +4370,15 @@
                 <constraints nullable="false"/>
             </column>
             <column name="insertsign" remarks="Служебное поле" type="${D_SHORT}"/>
-            <column defaultValueComputed="'2015-11-22 23:03:08.187967'::timestamp without time zone" name="keepdate" remarks="Дата операции" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column defaultValueComputed="'2015-11-22 23:03:08.187967'::timestamp without time zone" name="keepdate" remarks="Дата операции" type="${D_DATETIME}"/>
             <column name="comment" remarks="Содержание" type="${D_COMMENT}"/>
             <column name="docbasetype" remarks="Тип документа-основания" type="${D_DOCTYPE}"/>
             <column name="docbasenumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
-            <column name="docbasedate" remarks="Дата документа-основания" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="docbasedate" remarks="Дата документа-основания" type="${D_DATETIME}"/>
             <column name="docbase_id" remarks="Идентификатор документа-основания" type="${D_INT}"/>
             <column name="doctype" remarks="Тип документа-подтверждения" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа-подтверждения" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа-подтверждения" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="docdate" remarks="Дата документа-подтверждения" type="${D_DATETIME}"/>
             <column name="doc_id" remarks="Идентификатор документа-подтверждения" type="${D_INT}"/>
             <column name="contract_id" remarks="Идентификатор договора" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип договора" type="${D_DOCTYPE}"/>
@@ -4411,15 +4411,15 @@
             <column name="modelname" remarks="Служебное поле" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column defaultValueComputed="'2015-11-22 23:03:08.187967'::timestamp without time zone" name="keepdate" remarks="Дата операции" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column defaultValueComputed="'2015-11-22 23:03:08.187967'::timestamp without time zone" name="keepdate" remarks="Дата операции" type="${D_DATETIME}"/>
             <column name="comment" remarks="Содержание" type="${D_COMMENT}"/>
             <column name="docbasetype" remarks="Тип документа-основания" type="${D_DOCTYPE}"/>
             <column name="docbasenumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
-            <column name="docbasedate" remarks="Дата документа-основания" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="docbasedate" remarks="Дата документа-основания" type="${D_DATETIME}"/>
             <column name="docbase_id" remarks="Идентификатор документа-основания" type="${D_INT}"/>
             <column name="doctype" remarks="Тип документа-подтверждения" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа-подтверждения" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа-подтверждения" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="docdate" remarks="Дата документа-подтверждения" type="${D_DATETIME}"/>
             <column name="doc_id" remarks="Идентификатор документа-подтверждения" type="${D_INT}"/>
             <column name="contract_id" remarks="Идентификатор договора" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип договора" type="${D_DOCTYPE}"/>
@@ -4451,14 +4451,14 @@
             <column name="pname" remarks="Наименование" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="datefrom" remarks="Дата начала периода" type="${TIMESTAMP WITHOUT TIME ZONE}">
+            <column name="datefrom" remarks="Дата начала периода" type="${D_DATETIME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="dateto" remarks="Дата конца периода" type="${TIMESTAMP WITHOUT TIME ZONE}">
+            <column name="dateto" remarks="Дата конца периода" type="${D_DATETIME}">
                 <constraints nullable="false"/>
             </column>
             <column name="whoclosed" remarks="Кто закрыл период" type="${D_USERNAME}"/>
-            <column name="dateclose" remarks="Дата закрытия периода" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="dateclose" remarks="Дата закрытия периода" type="${D_DATETIME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -4880,24 +4880,24 @@
                 <constraints nullable="false"/>
             </column>
             <column name="parent_id" remarks="Не используется" type="${D_INT}"/>
-            <column name="groupnum" remarks="Номер группы" type="${BPCHAR(15)}"/>
-            <column name="cardnum" remarks="Номер карточки" type="${BPCHAR(15)}"/>
-            <column name="objnum" remarks="Номер объекта" type="${BPCHAR(30)}"/>
-            <column name="manufacturer" remarks="Завод-изготовитель" type="${VARCHAR(80)}"/>
-            <column name="model" remarks="Модель, тип, марка" type="${VARCHAR(80)}"/>
-            <column name="serialnum" remarks="Заводской номер" type="${BPCHAR(15)}"/>
-            <column name="passpnum" remarks="Паспортный номер" type="${BPCHAR(15)}"/>
+            <column name="groupnum" remarks="Номер группы" type="${D_BIGCODE}"/>
+            <column name="cardnum" remarks="Номер карточки" type="${D_BIGCODE}"/>
+            <column name="objnum" remarks="Номер объекта" type="${D_LARGECODE}"/>
+            <column name="manufacturer" remarks="Завод-изготовитель" type="${D_NAME_N}"/>
+            <column name="model" remarks="Модель, тип, марка" type="${D_NAME_N}"/>
+            <column name="serialnum" remarks="Заводской номер" type="${D_BIGCODE}"/>
+            <column name="passpnum" remarks="Паспортный номер" type="${D_BIGCODE}"/>
             <column name="inoperdocnum" remarks="Акт ввода в эксплуатацию - номер" type="${D_DOCNUMBER}"/>
-            <column name="inoperdate" remarks="Акт ввода в эксплуатацию - дата" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="inoperdate" remarks="Акт ввода в эксплуатацию - дата" type="${D_DATETIME}"/>
             <column name="outoperdocnum" remarks="Акт выбытия из эксплуатации - номер" type="${D_DOCNUMBER}"/>
-            <column name="outoperdate" remarks="Акт выбытия из эксплуатации - дата" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="outoperdate" remarks="Акт выбытия из эксплуатации - дата" type="${D_DATETIME}"/>
             <column name="balancecost" remarks="Балансовая стоимость" type="${D_SUMMA}"/>
             <column name="begincost" remarks="Начальная стоимость" type="${D_SUMMA}"/>
             <column name="beginloss" remarks="Износ при создании карточки" type="${D_SUMMA}"/>
             <column name="amort" remarks="Начисленная амортизация" type="${D_SUMMA}"/>
             <column name="endcost" remarks="Остаточная стоимость" type="${D_SUMMA}"/>
-            <column name="beginlossdate" remarks="Износ при создании карточки - дата начисления" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
-            <column name="amortdate" remarks="Дата начисления амортизации" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="beginlossdate" remarks="Износ при создании карточки - дата начисления" type="${D_DATETIME}"/>
+            <column name="amortdate" remarks="Дата начисления амортизации" type="${D_DATETIME}"/>
             <column name="iscomplex" remarks="Не используется" type="${D_SHORT}"/>
             <column name="iscommon" remarks="Не используется" type="${D_SHORT}"/>
             <column name="factor" remarks="Поправочный коэффициент" type="${D_FLOAT8}"/>
@@ -4983,13 +4983,13 @@
             <column name="delta_deprval" remarks="Изменение остаточной стоимости, при переоценке - изменение начисленной амортизации" type="${D_SUMMA}"/>
             <column name="reval_factor" remarks="Коэффициент переоценки" type="${D_RATIO}"/>
             <column name="reval_sum" remarks="Сумма переоценки" type="${D_SUMMA}"/>
-            <column name="act_date" remarks="Дата произведенного действия" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="act_date" remarks="Дата произведенного действия" type="${D_DATETIME}"/>
             <column name="delta_beginloss" remarks="При переоценке - изменение начального износа" type="${D_SUMMA}"/>
             <column name="delta_initialloss" remarks="При переоценке - изменение износа при создании карточки" type="${D_SUMMA}"/>
             <column name="old_invlocation" type="${D_BIGCODE}"/>
             <column name="old_invlocation_id" remarks="Прежний ид. местонахождения" type="${D_INT}"/>
             <column name="old_inoperdocnum" type="${D_DOCNUMBER}"/>
-            <column name="old_inoperdate" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="old_inoperdate" type="${D_DATETIME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -5153,7 +5153,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="actorid_" type="${VARCHAR(255)}"/>
-            <column name="time_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="time_" type="${D_DATETIME}"/>
             <column name="message_" type="${VARCHAR(4000)}"/>
             <column name="token_" type="${numeric(18)}"/>
             <column name="taskinstance_" type="${numeric(18)}"/>
@@ -5224,14 +5224,14 @@
             <column name="version_" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="duedate_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="duedate_" type="${D_DATETIME}"/>
             <column name="processinstance_" type="${numeric(18)}"/>
             <column name="token_" type="${numeric(18)}"/>
             <column name="taskinstance_" type="${numeric(18)}"/>
             <column name="issuspended_" type="${D_SHORT}"/>
             <column name="isexclusive_" type="${D_SHORT}"/>
             <column name="lockowner_" type="${VARCHAR(255)}"/>
-            <column name="locktime_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="locktime_" type="${D_DATETIME}"/>
             <column name="exception_" type="${VARCHAR(4000)}"/>
             <column name="retries_" type="${D_INT}"/>
             <column name="name_" type="${VARCHAR(255)}"/>
@@ -5252,7 +5252,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="index_" type="${D_INT}"/>
-            <column name="date_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="date_" type="${D_DATETIME}"/>
             <column name="token_" type="${numeric(18)}"/>
             <column name="parent_" type="${numeric(18)}"/>
             <column name="swimlaneinstance_" type="${numeric(18)}"/>
@@ -5265,8 +5265,8 @@
             <column name="taskoldactorid_" type="${VARCHAR(255)}"/>
             <column name="child_" type="${numeric(18)}"/>
             <column name="node_" type="${numeric(18)}"/>
-            <column name="enter_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
-            <column name="leave_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="enter_" type="${D_DATETIME}"/>
+            <column name="leave_" type="${D_DATETIME}"/>
             <column name="duration_" type="${numeric(18)}"/>
             <column name="newlongvalue_" type="${numeric(18)}"/>
             <column name="variableinstance_" type="${numeric(18)}"/>
@@ -5283,8 +5283,8 @@
             <column name="oldlongidvalue_" type="${numeric(18)}"/>
             <column name="newlongidclass_" type="${VARCHAR(255)}"/>
             <column name="newlongidvalue_" type="${numeric(18)}"/>
-            <column name="olddatevalue_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
-            <column name="newdatevalue_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="olddatevalue_" type="${D_DATETIME}"/>
+            <column name="newdatevalue_" type="${D_DATETIME}"/>
             <column name="oldstringvalue_" type="${VARCHAR(4000)}"/>
             <column name="newstringvalue_" type="${VARCHAR(4000)}"/>
             <column name="exception_" type="${VARCHAR(4000)}"/>
@@ -5382,8 +5382,8 @@
                 <constraints nullable="false"/>
             </column>
             <column name="key_" type="${VARCHAR(255)}"/>
-            <column name="start_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
-            <column name="end_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="start_" type="${D_DATETIME}"/>
+            <column name="end_" type="${D_DATETIME}"/>
             <column name="issuspended_" type="${D_SHORT}"/>
             <column name="processdefinition_" type="${numeric(18)}"/>
             <column name="roottoken_" type="${numeric(18)}"/>
@@ -5487,10 +5487,10 @@
             <column name="name_" type="${VARCHAR(255)}"/>
             <column name="description_" type="${VARCHAR(4000)}"/>
             <column name="actorid_" type="${VARCHAR(255)}"/>
-            <column name="create_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
-            <column name="start_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
-            <column name="end_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
-            <column name="duedate_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="create_" type="${D_DATETIME}"/>
+            <column name="start_" type="${D_DATETIME}"/>
+            <column name="end_" type="${D_DATETIME}"/>
+            <column name="duedate_" type="${D_DATETIME}"/>
             <column name="priority_" type="${D_INT}"/>
             <column name="iscancelled_" type="${D_SHORT}"/>
             <column name="issuspended_" type="${D_SHORT}"/>
@@ -5513,9 +5513,9 @@
                 <constraints nullable="false"/>
             </column>
             <column name="name_" type="${VARCHAR(255)}"/>
-            <column name="start_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
-            <column name="end_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
-            <column name="nodeenter_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="start_" type="${D_DATETIME}"/>
+            <column name="end_" type="${D_DATETIME}"/>
+            <column name="nodeenter_" type="${D_DATETIME}"/>
             <column name="nextlogindex_" type="${D_INT}"/>
             <column name="isabletoreactivateparent_" type="${D_SHORT}"/>
             <column name="isterminationimplicit_" type="${D_SHORT}"/>
@@ -5586,7 +5586,7 @@
             <column name="longidclass_" type="${VARCHAR(255)}"/>
             <column name="stringidclass_" type="${VARCHAR(255)}"/>
             <column name="stringvalue_" type="${VARCHAR(255)}"/>
-            <column name="datevalue_" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="datevalue_" type="${D_DATETIME}"/>
             <column name="longvalue_" type="${numeric(18)}"/>
             <column name="bytearrayvalue_" type="${numeric(18)}"/>
             <column name="doublevalue_" type="${D_FLOAT8}"/>
@@ -7391,7 +7391,7 @@
             <column name="address" remarks="Паспорт - Адрес" type="${D_ADDRESS}"/>
             <column name="militia" remarks="Паспорт - выдан" type="${D_ADDRESS}"/>
             <column name="milit_city" remarks="Паспорт - Город" type="${VARCHAR(20)}"/>
-            <column name="passp_date" remarks="Паспорт - дата выдачи" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="passp_date" remarks="Паспорт - дата выдачи" type="${D_DATETIME}"/>
             <column name="passp_num" remarks="Паспорт - номер" type="${BPCHAR(10)}"/>
             <column name="passp_ser" remarks="Паспорт - серия" type="${BPCHAR(10)}"/>
             <column name="office" remarks="Должность" type="${VARCHAR(100)}"/>
@@ -7479,14 +7479,14 @@
             <column name="pname" remarks="Наименование учетного периода" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="datefrom" remarks="Дата начала" type="${TIMESTAMP WITHOUT TIME ZONE}">
+            <column name="datefrom" remarks="Дата начала" type="${D_DATETIME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="dateto" remarks="Дата окончания" type="${TIMESTAMP WITHOUT TIME ZONE}">
+            <column name="dateto" remarks="Дата окончания" type="${D_DATETIME}">
                 <constraints nullable="false"/>
             </column>
             <column name="whoclosed" remarks="Имя пользователя в верхнем регистре, закрывшего период" type="${D_USERNAME}"/>
-            <column name="dateclose" remarks="Системная дата закрытия периода" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="dateclose" remarks="Системная дата закрытия периода" type="${D_DATETIME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -8634,7 +8634,7 @@
             <column name="BLOCK" remarks="Корпус" type="${D_MEDIUMCODE}"/>
             <column name="flat" remarks="Квартира" type="${D_MEDIUMCODE}"/>
             <column name="region_type" remarks="Сокращенное наименование типа региона" type="${D_ABBREVIATION}"/>
-            <column name="kladr_code" remarks="Код классификатора, соответствующий адресу" type="${BPCHAR(15)}"/>
+            <column name="kladr_code" remarks="Код классификатора, соответствующий адресу" type="${D_BIGCODE}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9926,7 +9926,7 @@
             <column name="prname" remarks="Наименование прайс-листа" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column defaultValueComputed="'2015-11-22 00:00:00'::timestamp without time zone" name="createdate" remarks="Дата создания" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column defaultValueComputed="'2015-11-22 00:00:00'::timestamp without time zone" name="createdate" remarks="Дата создания" type="${D_DATETIME}"/>
             <column name="currency_code" remarks="Код валюты в верхнем регистре" type="${D_SMALLCODE}">
                 <constraints nullable="false"/>
             </column>
@@ -10820,15 +10820,15 @@
             </column>
             <column defaultValueComputed="0" name="remnbegincurdb" remarks="Сумма остатка на начало периода по дебету в валюте" type="${D_SUMMA}"/>
             <column defaultValueComputed="0" name="remnbegincurkt" remarks="Сумма остатка на начало периода по кредиту в валюте" type="${D_SUMMA}"/>
-            <column name="risedebts" remarks="Не используется" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
-            <column name="cleardebts" remarks="Не используется" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="risedebts" remarks="Не используется" type="${D_DATETIME}"/>
+            <column name="cleardebts" remarks="Не используется" type="${D_DATETIME}"/>
             <column name="comment" remarks="Примечание" type="${D_COMMENT}"/>
             <column name="docbasetype" remarks="Тип документа-основания" type="${D_DOCTYPE}"/>
             <column name="docbasenumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
-            <column name="docbasedate" remarks="Дата документа-основания" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="docbasedate" remarks="Дата документа-основания" type="${D_DATETIME}"/>
             <column name="doctype" remarks="Тип договора" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер договора" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата договора" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="docdate" remarks="Дата договора" type="${D_DATETIME}"/>
             <column name="contractor_id" remarks="Контрагент" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -11749,7 +11749,7 @@
             <column name="contractor_id" remarks="Контрагент, от которого получена партия" type="${D_INT}"/>
             <column name="number_lot" remarks="Номер партии" type="${VARCHAR(50)}"/>
             <column name="vendor_lot" remarks="Номер партии поставщика" type="${VARCHAR(50)}"/>
-            <column name="certificate" remarks="Сертификат" type="${VARCHAR(80)}"/>
+            <column name="certificate" remarks="Сертификат" type="${D_NAME_N}"/>
             <column name="comment" remarks="Комментарии" type="${D_COMMENT}"/>
             <column defaultValueComputed="0" name="beginquan2" remarks="Начальное количество партии в дополнительной ЕИ" type="${D_QUANTITY_EXT}"/>
             <column defaultValueComputed="0" name="endquan2" remarks="Конечное количество партии в дополнительной ЕИ" type="${D_QUANTITY_EXT}"/>
@@ -11782,7 +11782,7 @@
             </column>
             <column defaultValueComputed="0" name="quantity" remarks="Количество" type="${D_QUANTITY_EXT}"/>
             <column name="prev_stockbatchhist_id" remarks="Идентификатор предыдущей записи истории" type="${D_INT}"/>
-            <column name="processdate" remarks="Дата отработки" type="${TIMESTAMP WITHOUT TIME ZONE}"/>
+            <column name="processdate" remarks="Дата отработки" type="${D_DATETIME}"/>
             <column defaultValueComputed="0" name="quantity2" remarks="Количество в дополнительной ЕИ" type="${D_QUANTITY_EXT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -12012,8 +12012,8 @@
             <column name="header" type="${D_JAVA_CLASS_NAME}"/>
             <column name="search_help" type="${D_JAVA_CLASS_NAME}"/>
             <column name="report_label" type="${D_JAVA_CLASS_NAME}"/>
-            <column name="entity_property_text" type="${VARCHAR(80)}"/>
-            <column name="entity_text_format" type="${VARCHAR(80)}"/>
+            <column name="entity_property_text" type="${D_NAME_N}"/>
+            <column name="entity_text_format" type="${D_NAME_N}"/>
             <column name="is_read_only" type="${D_BOOLEAN}"/>
             <column name="assign_parameter_name" type="${D_BIGNAME}"/>
         </createTable>
@@ -12521,7 +12521,7 @@
             <column name="code" remarks="Код" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="description" remarks="Описание" type="${VARCHAR(80)}"/>
+            <column name="description" remarks="Описание" type="${D_NAME_N}"/>
             <column name="type_id" remarks="Тип секции хранения" type="${D_INT}"/>
             <column name="zone_id" remarks="Зона хранения" type="${D_INT}"/>
             <column name="infinite_volume" remarks="Объем не ограничен" type="${D_BOOLEAN}"/>
