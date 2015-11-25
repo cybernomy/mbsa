@@ -4,13 +4,9 @@
 		   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-  <preConditions>
-        <dbms type="postgresql" />
-  </preConditions>
-  
   <include file="pg.properties.xml" relativeToChangelogFile="true"/>
   
-  <changeSet author="valentin.poroxnenko@gmail.com" id="init-domains-pg-1">
+  <changeSet author="valentin.poroxnenko@gmail.com" id="init-domains-pg-1" dbms="postgresql">
     <sqlFile encoding="utf8" endDelimiter="\nGO" path="pg_domains.sql"
 	     relativeToChangelogFile="true" splitStatements="true" stripComments="true"/>
   </changeSet>
