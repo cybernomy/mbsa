@@ -1,119 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-  <property name="now" value="now()" dbms="postgresql" />
-  <property name="today" value="current_date" dbms="postgresql" />
+  <property name="now" value="now()"/>
+  <property name="today" value="current_date"/>
 	
-  <property name="D_ABBREVIATION" value="D_ABBREVIATION" dbms="postgresql"/>
-  <property name="D_ACCOUNT" value="D_ACCOUNT" dbms="postgresql"/>
-  <property name="D_ADDRESS" value="D_ADDRESS" dbms="postgresql"/>
-  <property name="D_ADDR_BUILDING" value="D_ADDR_BUILDING" dbms="postgresql"/>
-  <property name="D_ADDR_HOUSE" value="D_ADDR_HOUSE" dbms="postgresql"/>
-  <property name="D_ADDR_PREFIX" value="D_ADDR_PREFIX" dbms="postgresql"/>
-  <property name="D_ADDR_ROOM" value="D_ADDR_ROOM" dbms="postgresql"/>
-  <property name="D_ADDR_STREET" value="D_ADDR_STREET" dbms="postgresql"/>
-  <property name="D_ALGORITHM" value="D_ALGORITHM" dbms="postgresql"/>
-  <property name="D_ANLCODE" value="D_ANLCODE" dbms="postgresql"/>
-  <property name="D_APP_LAYER" value="D_APP_LAYER" dbms="postgresql"/>
-  <property name="D_AUDIT_EVENT" value="D_AUDIT_EVENT" dbms="postgresql"/>
-  <property name="D_BEAN_NAME" value="D_BEAN_NAME" dbms="postgresql"/>
-  <property name="D_BIGCODE" value="D_BIGCODE" dbms="postgresql"/>
-  <property name="D_BIGNAME" value="D_BIGNAME" dbms="postgresql"/>
-  <property name="D_BIG_INT_IDEN" value="D_BIG_INT_IDEN" dbms="postgresql"/>
-  <property name="D_BOOLEAN" value="D_BOOLEAN" dbms="postgresql"/>
-  <property name="D_CALCTAXESSUBJECT" value="D_CALCTAXESSUBJECT" dbms="postgresql"/>
-  <property name="D_CATALOG_GROUPS_TYPE" value="D_CATALOG_GROUPS_TYPE" dbms="postgresql"/>
-  <property name="D_CLASS_IMPL_KIND" value="D_CLASS_IMPL_KIND" dbms="postgresql"/>
-  <property name="D_COMMENT" value="D_COMMENT" dbms="postgresql"/>
-  <property name="D_CONST_VAL" value="D_CONST_VAL" dbms="postgresql"/>
-  <property name="D_CONTARCT_CALC_SUM_KIND" value="D_CONTARCT_CALC_SUM_KIND" dbms="postgresql"/>
-  <property name="D_CONTPHASE_CALC_SUM_KIND" value="D_CONTPHASE_CALC_SUM_KIND" dbms="postgresql"/>
-  <property name="D_CONTRACTORCARD_HIST_KIND" value="D_CONTRACTORCARD_HIST_KIND" dbms="postgresql"/>
-  <property name="D_CONTRACTORCARD_PLAN_KIND" value="D_CONTRACTORCARD_PLAN_KIND" dbms="postgresql"/>
-  <property name="D_CONTRACTOR_KIND" value="D_CONTRACTOR_KIND" dbms="postgresql"/>
-  <property name="D_CONTRACTSTATUS" value="D_CONTRACTSTATUS" dbms="postgresql"/>
-  <property name="D_CONTRACT_COMMENT" value="D_CONTRACT_COMMENT" dbms="postgresql"/>
-  <property name="D_CRM_INFO" value="D_CRM_INFO" dbms="postgresql"/>
-  <property name="D_CRM_SWOT" value="D_CRM_SWOT" dbms="postgresql"/>
-  <property name="D_CURCOURCE" value="D_CURCOURCE" dbms="postgresql"/>
-  <property name="D_CUSTOMALGORITHM" value="D_CUSTOMALGORITHM" dbms="postgresql"/>
-  <property name="D_DATE" value="D_DATE" dbms="postgresql"/>
-  <property name="D_DATETIME" value="D_DATETIME" dbms="postgresql"/>
-  <property name="D_DESCRIPTION" value="D_DESCRIPTION" dbms="postgresql"/>
-  <property name="D_DISABLE_EXCEED_QUANT" value="D_DISABLE_EXCEED_QUANT" dbms="postgresql"/>
-  <property name="D_DOCDATE" value="D_DOCDATE" dbms="postgresql"/>
-  <property name="D_DOCKIND" value="D_DOCKIND" dbms="postgresql"/>
-  <property name="D_DOCNUMBER" value="D_DOCNUMBER" dbms="postgresql"/>
-  <property name="D_DOCSECTION" value="D_DOCSECTION" dbms="postgresql"/>
-  <property name="D_DOCTYPE" value="D_DOCTYPE" dbms="postgresql"/>
-  <property name="D_ECONSPEC_FEATURE_CODE" value="D_ECONSPEC_FEATURE_CODE" dbms="postgresql"/>
-  <property name="D_EMAIL" value="D_EMAIL" dbms="postgresql"/>
-  <property name="D_EXCH_EXPORT_STATUS" value="D_EXCH_EXPORT_STATUS" dbms="postgresql"/>
-  <property name="D_EXP_DATE_CALC_KIND" value="D_EXP_DATE_CALC_KIND" dbms="postgresql"/>
-  <property name="D_FEATURE" value="D_FEATURE" dbms="postgresql"/>
-  <property name="D_FEATURE_INT" value="D_FEATURE_INT" dbms="postgresql"/>
-  <property name="D_FEATURE_STR" value="D_FEATURE_STR" dbms="postgresql"/>
-  <property name="D_FILENAME" value="D_FILENAME" dbms="postgresql"/>
-  <property name="D_FINANL_KIND" value="D_FINANL_KIND" dbms="postgresql"/>
-  <property name="D_FINCENTER_KIND" value="D_FINCENTER_KIND" dbms="postgresql"/>
-  <property name="D_FORMAT" value="D_FORMAT" dbms="postgresql"/>
-  <property name="D_FORMULA" value="D_FORMULA" dbms="postgresql"/>
-  <property name="D_HOUR" value="D_HOUR" dbms="postgresql"/>
-  <property name="D_INT" value="D_INT" dbms="postgresql"/>
-  <property name="D_INT_IDEN" value="D_INT_IDEN" dbms="postgresql"/>
-  <property name="D_JAVA_CLASS_NAME" value="D_JAVA_CLASS_NAME" dbms="postgresql"/>
-  <property name="D_LARGECODE" value="D_LARGECODE" dbms="postgresql"/>
-  <property name="D_MASS" value="D_MASS" dbms="postgresql"/>
-  <property name="D_MEASURE_CONTROL" value="D_MEASURE_CONTROL" dbms="postgresql"/>
-  <property name="D_MEASURE_CONVERSION" value="D_MEASURE_CONVERSION" dbms="postgresql"/>
-  <property name="D_MEDIUMCODE" value="D_MEDIUMCODE" dbms="postgresql"/>
-  <property name="D_MF_BOM_STATUS" value="D_MF_BOM_STATUS" dbms="postgresql"/>
-  <property name="D_MF_BOM_TYPE" value="D_MF_BOM_TYPE" dbms="postgresql"/>
-  <property name="D_MF_CAPACITY" value="D_MF_CAPACITY" dbms="postgresql"/>
-  <property name="D_MF_JOB_STATUS" value="D_MF_JOB_STATUS" dbms="postgresql"/>
-  <property name="D_MF_LBR_OH_ALLOC_FLAG" value="D_MF_LBR_OH_ALLOC_FLAG" dbms="postgresql"/>
-  <property name="D_MF_LBR_TIME_RATE_FLAG" value="D_MF_LBR_TIME_RATE_FLAG" dbms="postgresql"/>
-  <property name="D_MF_MCH_OH_ALLOCATION_FLAG" value="D_MF_MCH_OH_ALLOCATION_FLAG" dbms="postgresql"/>
-  <property name="D_MF_MCH_RECOVERY_FLAG" value="D_MF_MCH_RECOVERY_FLAG" dbms="postgresql"/>
-  <property name="D_MF_MTL_OH_ACCLOC_FLAG" value="D_MF_MTL_OH_ACCLOC_FLAG" dbms="postgresql"/>
-  <property name="D_MF_MTL_QUAN_RATE_FLAG" value="D_MF_MTL_QUAN_RATE_FLAG" dbms="postgresql"/>
-  <property name="D_MF_RESOURCE_TYPE" value="D_MF_RESOURCE_TYPE" dbms="postgresql"/>
-  <property name="D_MF_SCHEDULE_DIR" value="D_MF_SCHEDULE_DIR" dbms="postgresql"/>
-  <property name="D_MF_TICK" value="D_MF_TICK" dbms="postgresql"/>
-  <property name="D_MONTH" value="D_MONTH" dbms="postgresql"/>
-  <property name="D_NAME" value="D_NAME" dbms="postgresql"/>
-  <property name="D_ORDER_STATUS" value="D_ORDER_STATUS" dbms="postgresql"/>
-  <property name="D_ORIGINAL" value="D_ORIGINAL" dbms="postgresql"/>
-  <property name="D_PASSWORD" value="D_PASSWORD" dbms="postgresql"/>
-  <property name="D_PHASEITEMKIND" value="D_PHASEITEMKIND" dbms="postgresql"/>
-  <property name="D_PHONE" value="D_PHONE" dbms="postgresql"/>
-  <property name="D_PHONELIST" value="D_PHONELIST" dbms="postgresql"/>
-  <property name="D_QUANTITY" value="D_QUANTITY" dbms="postgresql"/>
-  <property name="D_QUANTITY_EXT" value="D_QUANTITY_EXT" dbms="postgresql"/>
-  <property name="D_QUERY" value="D_QUERY" dbms="postgresql"/>
-  <property name="D_RATIO" value="D_RATIO" dbms="postgresql"/>
-  <property name="D_RPT_ENUMVALUES" value="D_RPT_ENUMVALUES" dbms="postgresql"/>
-  <property name="D_SERIAL_NUMBER" value="D_SERIAL_NUMBER" dbms="postgresql"/>
-  <property name="D_SHORT" value="D_SHORT" dbms="postgresql"/>
-  <property name="D_SIZE" value="D_SIZE" dbms="postgresql"/>
-  <property name="D_SMALLCODE" value="D_SMALLCODE" dbms="postgresql"/>
-  <property name="D_SMALLNAME" value="D_SMALLNAME" dbms="postgresql"/>
-  <property name="D_STOCKBATCHHISTORY_KIND" value="D_STOCKBATCHHISTORY_KIND" dbms="postgresql"/>
-  <property name="D_STOCKPOLICY" value="D_STOCKPOLICY" dbms="postgresql"/>
-  <property name="D_STORED_PROC_NAME" value="D_STORED_PROC_NAME" dbms="postgresql"/>
-  <property name="D_SUMMA" value="D_SUMMA" dbms="postgresql"/>
-  <property name="D_SUMMA_EXT" value="D_SUMMA_EXT" dbms="postgresql"/>
-  <property name="D_SYS_DATAITEM_KIND" value="D_SYS_DATAITEM_KIND" dbms="postgresql"/>
-  <property name="D_SYS_VERSION" value="D_SYS_VERSION" dbms="postgresql"/>
-  <property name="D_TABLE_NAME" value="D_TABLE_NAME" dbms="postgresql"/>
-  <property name="D_TIME_PERIOD_KIND" value="D_TIME_PERIOD_KIND" dbms="postgresql"/>
-  <property name="D_USERNAME" value="D_USERNAME" dbms="postgresql"/>
-  <property name="D_VOLUME" value="D_VOLUME" dbms="postgresql"/>
-  <property name="D_WEIGHT" value="D_WEIGHT" dbms="postgresql"/>
-  <property name="D_ZIPCODE" value="D_ZIPCODE" dbms="postgresql"/>
-  <property name="D_FLOAT8" value="D_FLOAT8" dbms="postgresql"/>
-  <property name="D_SMALLESTCODE" value="D_SMALLESTCODE" dbms="postgresql"/>
-  <property name="D_CHAR4" value="D_CHAR4" dbms="postgresql"/>
-  <property name="D_CHAR15" value="D_CHAR15" dbms="postgresql"/>
-  <property name="D_TEXT" value="D_TEXT" dbms="postgresql"/>
+  <property name="D_ABBREVIATION" value="D_ABBREVIATION"/>
+  <property name="D_ACCOUNT" value="D_ACCOUNT"/>
+  <property name="D_ADDRESS" value="D_ADDRESS"/>
+  <property name="D_ADDR_BUILDING" value="D_ADDR_BUILDING"/>
+  <property name="D_ADDR_HOUSE" value="D_ADDR_HOUSE"/>
+  <property name="D_ADDR_PREFIX" value="D_ADDR_PREFIX"/>
+  <property name="D_ADDR_ROOM" value="D_ADDR_ROOM"/>
+  <property name="D_ADDR_STREET" value="D_ADDR_STREET"/>
+  <property name="D_ALGORITHM" value="D_ALGORITHM"/>
+  <property name="D_ANLCODE" value="D_ANLCODE"/>
+  <property name="D_APP_LAYER" value="D_APP_LAYER"/>
+  <property name="D_AUDIT_EVENT" value="D_AUDIT_EVENT"/>
+  <property name="D_BEAN_NAME" value="D_BEAN_NAME"/>
+  <property name="D_BIGCODE" value="D_BIGCODE"/>
+  <property name="D_BIGNAME" value="D_BIGNAME"/>
+  <property name="D_BIG_INT_IDEN" value="D_BIG_INT_IDEN"/>
+  <property name="D_BOOLEAN" value="D_BOOLEAN"/>
+  <property name="D_CALCTAXESSUBJECT" value="D_CALCTAXESSUBJECT"/>
+  <property name="D_CATALOG_GROUPS_TYPE" value="D_CATALOG_GROUPS_TYPE"/>
+  <property name="D_CLASS_IMPL_KIND" value="D_CLASS_IMPL_KIND"/>
+  <property name="D_COMMENT" value="D_COMMENT"/>
+  <property name="D_CONST_VAL" value="D_CONST_VAL"/>
+  <property name="D_CONTARCT_CALC_SUM_KIND" value="D_CONTARCT_CALC_SUM_KIND"/>
+  <property name="D_CONTPHASE_CALC_SUM_KIND" value="D_CONTPHASE_CALC_SUM_KIND"/>
+  <property name="D_CONTRACTORCARD_HIST_KIND" value="D_CONTRACTORCARD_HIST_KIND"/>
+  <property name="D_CONTRACTORCARD_PLAN_KIND" value="D_CONTRACTORCARD_PLAN_KIND"/>
+  <property name="D_CONTRACTOR_KIND" value="D_CONTRACTOR_KIND"/>
+  <property name="D_CONTRACTSTATUS" value="D_CONTRACTSTATUS"/>
+  <property name="D_CONTRACT_COMMENT" value="D_CONTRACT_COMMENT"/>
+  <property name="D_CRM_INFO" value="D_CRM_INFO"/>
+  <property name="D_CRM_SWOT" value="D_CRM_SWOT"/>
+  <property name="D_CURCOURCE" value="D_CURCOURCE"/>
+  <property name="D_CUSTOMALGORITHM" value="D_CUSTOMALGORITHM"/>
+  <property name="D_DATE" value="D_DATE"/>
+  <property name="D_DATETIME" value="D_DATETIME"/>
+  <property name="D_DESCRIPTION" value="D_DESCRIPTION"/>
+  <property name="D_DISABLE_EXCEED_QUANT" value="D_DISABLE_EXCEED_QUANT"/>
+  <property name="D_DOCDATE" value="D_DOCDATE"/>
+  <property name="D_DOCKIND" value="D_DOCKIND"/>
+  <property name="D_DOCNUMBER" value="D_DOCNUMBER"/>
+  <property name="D_DOCSECTION" value="D_DOCSECTION"/>
+  <property name="D_DOCTYPE" value="D_DOCTYPE"/>
+  <property name="D_ECONSPEC_FEATURE_CODE" value="D_ECONSPEC_FEATURE_CODE"/>
+  <property name="D_EMAIL" value="D_EMAIL"/>
+  <property name="D_EXCH_EXPORT_STATUS" value="D_EXCH_EXPORT_STATUS"/>
+  <property name="D_EXP_DATE_CALC_KIND" value="D_EXP_DATE_CALC_KIND"/>
+  <property name="D_FEATURE" value="D_FEATURE"/>
+  <property name="D_FEATURE_INT" value="D_FEATURE_INT"/>
+  <property name="D_FEATURE_STR" value="D_FEATURE_STR"/>
+  <property name="D_FILENAME" value="D_FILENAME"/>
+  <property name="D_FINANL_KIND" value="D_FINANL_KIND"/>
+  <property name="D_FINCENTER_KIND" value="D_FINCENTER_KIND"/>
+  <property name="D_FORMAT" value="D_FORMAT"/>
+  <property name="D_FORMULA" value="D_FORMULA"/>
+  <property name="D_HOUR" value="D_HOUR"/>
+  <property name="D_INT" value="D_INT"/>
+  <property name="D_INT_IDEN" value="D_INT_IDEN"/>
+  <property name="D_JAVA_CLASS_NAME" value="D_JAVA_CLASS_NAME"/>
+  <property name="D_LARGECODE" value="D_LARGECODE"/>
+  <property name="D_MASS" value="D_MASS"/>
+  <property name="D_MEASURE_CONTROL" value="D_MEASURE_CONTROL"/>
+  <property name="D_MEASURE_CONVERSION" value="D_MEASURE_CONVERSION"/>
+  <property name="D_MEDIUMCODE" value="D_MEDIUMCODE"/>
+  <property name="D_MF_BOM_STATUS" value="D_MF_BOM_STATUS"/>
+  <property name="D_MF_BOM_TYPE" value="D_MF_BOM_TYPE"/>
+  <property name="D_MF_CAPACITY" value="D_MF_CAPACITY"/>
+  <property name="D_MF_JOB_STATUS" value="D_MF_JOB_STATUS"/>
+  <property name="D_MF_LBR_OH_ALLOC_FLAG" value="D_MF_LBR_OH_ALLOC_FLAG"/>
+  <property name="D_MF_LBR_TIME_RATE_FLAG" value="D_MF_LBR_TIME_RATE_FLAG"/>
+  <property name="D_MF_MCH_OH_ALLOCATION_FLAG" value="D_MF_MCH_OH_ALLOCATION_FLAG"/>
+  <property name="D_MF_MCH_RECOVERY_FLAG" value="D_MF_MCH_RECOVERY_FLAG"/>
+  <property name="D_MF_MTL_OH_ACCLOC_FLAG" value="D_MF_MTL_OH_ACCLOC_FLAG"/>
+  <property name="D_MF_MTL_QUAN_RATE_FLAG" value="D_MF_MTL_QUAN_RATE_FLAG"/>
+  <property name="D_MF_RESOURCE_TYPE" value="D_MF_RESOURCE_TYPE"/>
+  <property name="D_MF_SCHEDULE_DIR" value="D_MF_SCHEDULE_DIR"/>
+  <property name="D_MF_TICK" value="D_MF_TICK"/>
+  <property name="D_MONTH" value="D_MONTH"/>
+  <property name="D_NAME" value="D_NAME"/>
+  <property name="D_ORDER_STATUS" value="D_ORDER_STATUS"/>
+  <property name="D_ORIGINAL" value="D_ORIGINAL"/>
+  <property name="D_PASSWORD" value="D_PASSWORD"/>
+  <property name="D_PHASEITEMKIND" value="D_PHASEITEMKIND"/>
+  <property name="D_PHONE" value="D_PHONE"/>
+  <property name="D_PHONELIST" value="D_PHONELIST"/>
+  <property name="D_QUANTITY" value="D_QUANTITY"/>
+  <property name="D_QUANTITY_EXT" value="D_QUANTITY_EXT"/>
+  <property name="D_QUERY" value="D_QUERY"/>
+  <property name="D_RATIO" value="D_RATIO"/>
+  <property name="D_RPT_ENUMVALUES" value="D_RPT_ENUMVALUES"/>
+  <property name="D_SERIAL_NUMBER" value="D_SERIAL_NUMBER"/>
+  <property name="D_SHORT" value="D_SHORT"/>
+  <property name="D_SIZE" value="D_SIZE"/>
+  <property name="D_SMALLCODE" value="D_SMALLCODE"/>
+  <property name="D_SMALLNAME" value="D_SMALLNAME"/>
+  <property name="D_STOCKBATCHHISTORY_KIND" value="D_STOCKBATCHHISTORY_KIND"/>
+  <property name="D_STOCKPOLICY" value="D_STOCKPOLICY"/>
+  <property name="D_STORED_PROC_NAME" value="D_STORED_PROC_NAME"/>
+  <property name="D_SUMMA" value="D_SUMMA"/>
+  <property name="D_SUMMA_EXT" value="D_SUMMA_EXT"/>
+  <property name="D_SYS_DATAITEM_KIND" value="D_SYS_DATAITEM_KIND"/>
+  <property name="D_TABLE_NAME" value="D_TABLE_NAME"/>
+  <property name="D_TIME_PERIOD_KIND" value="D_TIME_PERIOD_KIND"/>
+  <property name="D_USERNAME" value="D_USERNAME"/>
+  <property name="D_VOLUME" value="D_VOLUME"/>
+  <property name="D_WEIGHT" value="D_WEIGHT"/>
+  <property name="D_ZIPCODE" value="D_ZIPCODE"/>
+  <property name="D_FLOAT8" value="D_FLOAT8"/>
+  <property name="D_SMALLESTCODE" value="D_SMALLESTCODE"/>
+  <property name="D_CHAR4" value="D_CHAR4"/>
+  <property name="D_CHAR15" value="D_CHAR15"/>
+  <property name="D_TEXT" value="D_TEXT"/>
+  <property name="D_UUID" value="D_UUID"/>
+  <property name="D_BINARY" value="D_BINARY"/>
 </databaseChangeLog>
