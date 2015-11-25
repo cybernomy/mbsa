@@ -4,16 +4,11 @@
   <property name="now" value="now()"/>
   <property name="today" value="current_date"/>
 	
-  <property name="D_ABBREVIATION" value="D_ABBREVIATION"/>
-  <property name="D_ACCOUNT" value="D_ACCOUNT"/>
-  <property name="D_ADDRESS" value="D_ADDRESS"/>
   <property name="D_ADDR_BUILDING" value="D_ADDR_BUILDING"/>
   <property name="D_ADDR_HOUSE" value="D_ADDR_HOUSE"/>
   <property name="D_ADDR_PREFIX" value="D_ADDR_PREFIX"/>
   <property name="D_ADDR_ROOM" value="D_ADDR_ROOM"/>
   <property name="D_ADDR_STREET" value="D_ADDR_STREET"/>
-  <property name="D_ALGORITHM" value="D_ALGORITHM"/>
-  <property name="D_ANLCODE" value="D_ANLCODE"/>
   <property name="D_APP_LAYER" value="D_APP_LAYER"/>
   <property name="D_AUDIT_EVENT" value="D_AUDIT_EVENT"/>
   <property name="D_BEAN_NAME" value="D_BEAN_NAME"/>
@@ -33,7 +28,6 @@
   <property name="D_CONTRACTOR_KIND" value="D_CONTRACTOR_KIND"/>
   <property name="D_CONTRACTSTATUS" value="D_CONTRACTSTATUS"/>
   <property name="D_CONTRACT_COMMENT" value="D_CONTRACT_COMMENT"/>
-  <property name="D_CRM_INFO" value="D_CRM_INFO"/>
   <property name="D_CRM_SWOT" value="D_CRM_SWOT"/>
   <property name="D_CURCOURCE" value="D_CURCOURCE"/>
   <property name="D_CUSTOMALGORITHM" value="D_CUSTOMALGORITHM"/>
@@ -61,7 +55,6 @@
   <property name="D_HOUR" value="D_HOUR"/>
   <property name="D_INT" value="D_INT"/>
   <property name="D_INT_IDEN" value="D_INT_IDEN"/>
-  <property name="D_JAVA_CLASS_NAME" value="D_JAVA_CLASS_NAME"/>
   <property name="D_LARGECODE" value="D_LARGECODE"/>
   <property name="D_MASS" value="D_MASS"/>
   <property name="D_MEASURE_CONTROL" value="D_MEASURE_CONTROL"/>
@@ -114,6 +107,7 @@
   <property name="D_SMALLESTCODE" value="D_SMALLESTCODE"/>
   <property name="D_CHAR4" value="D_CHAR4"/>
   <property name="D_CHAR15" value="D_CHAR15"/>
+  <property name="D_CHAR50" value="D_CHAR50"/>
   <property name="D_TEXT" value="D_TEXT"/>
   <property name="D_UUID" value="D_UUID"/>
   <property name="D_BINARY" value="D_BINARY"/>

@@ -2026,7 +2026,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="key_stroke" remarks="Клавишная комбинация" type="${D_SMALLNAME}"/>
-            <column name="icon" remarks="Пиктограмма" type="${D_JAVA_CLASS_NAME}"/>
+            <column name="icon" remarks="Пиктограмма" type="${D_CHAR256}"/>
             <column name="is_active" remarks="Признак активности" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
         </createTable>
     </changeSet>
@@ -2056,9 +2056,9 @@
             </column>
             <column name="code" remarks="Код" type="${D_LARGECODE}"/>
             <column name="name" remarks="Наименование" type="${D_BIGNAME}"/>
-            <column name="algorithm" remarks="Текст алгоритма" type="${D_ALGORITHM}"/>
+            <column name="algorithm" remarks="Текст алгоритма" type="${D_TEXT}"/>
             <column name="engine" type="${D_SHORT}"/>
-            <column name="impl_name" type="${D_JAVA_CLASS_NAME}"/>
+            <column name="impl_name" type="${D_CHAR256}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -2327,8 +2327,8 @@
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-570">
         <createTable remarks="Бухгалтерия: кассовые документы." tableName="cashdocument">
-            <column name="anlcode" remarks="Шифр аналитического учета" type="${D_ANLCODE}"/>
-            <column name="targetcode" remarks="Шифр целевого назначения" type="${D_ANLCODE}"/>
+            <column name="anlcode" remarks="Шифр аналитического учета" type="${D_CHAR15}"/>
+            <column name="targetcode" remarks="Шифр целевого назначения" type="${D_CHAR15}"/>
             <column name="base" remarks="Основание" type="${D_COMMENT}"/>
             <column name="comment" remarks="Приложение" type="${D_COMMENT}"/>
             <column name="getdate" remarks="Получил, дата" type="${D_DATETIME}"/>
@@ -2346,8 +2346,8 @@
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-571">
         <createTable remarks="Бухгалтерия: образцы кассовых документов." tableName="cashdocumentmodel">
-            <column name="anlcode" remarks="Шифр аналитического учета" type="${D_ANLCODE}"/>
-            <column name="targetcode" remarks="Шифр целевого назначения" type="${D_ANLCODE}"/>
+            <column name="anlcode" remarks="Шифр аналитического учета" type="${D_CHAR15}"/>
+            <column name="targetcode" remarks="Шифр целевого назначения" type="${D_CHAR15}"/>
             <column name="base" remarks="Основание" type="${D_COMMENT}"/>
             <column name="comment" remarks="Приложение" type="${D_COMMENT}"/>
             <column name="getdate" remarks="Получил, дата" type="${D_DATETIME}"/>
@@ -2988,14 +2988,14 @@
             <column name="fact_date_till" remarks="Фактическая дата окончания" type="${D_DATETIME}"/>
             <column name="curator_id" remarks="Идентификатор куратора" type="${D_INT}"/>
             <column name="responsible_id" remarks="Идентификатор ответственного" type="${D_INT}"/>
-            <column name="operation_plan" remarks="План дейтствия" type="${D_CRM_INFO}"/>
-            <column name="operation_result" remarks="Результат" type="${D_CRM_INFO}"/>
+            <column name="operation_plan" remarks="План дейтствия" type="${D_TEXT}"/>
+            <column name="operation_result" remarks="Результат" type="${D_TEXT}"/>
             <column name="parent_id" remarks="Не используется" type="${D_INT}"/>
             <column name="contact_id" remarks="Идентификатор контактного лица" type="${D_INT}"/>
             <column name="status" remarks="Статус&#10;0 - новое&#10;1 - в работе&#10;2 - выполнено&#10;3 - отменено" type="${D_SHORT}"/>
             <column name="state" remarks="Состояние&#10;1 - принято&#10;2 - отклонено&#10;3 - перенесено" type="${D_SHORT}"/>
             <column name="notified" remarks="Не используется" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
-            <column name="next_operation" type="${D_CRM_INFO}"/>
+            <column name="next_operation" type="${D_TEXT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -3103,7 +3103,7 @@
             </column>
             <column name="folder_id" remarks="Идентификатор папки" type="${D_INT}"/>
             <column name="name" remarks="Наименование" type="${D_BIGNAME}"/>
-            <column name="info" remarks="Пояснения" type="${D_CRM_INFO}"/>
+            <column name="info" remarks="Пояснения" type="${D_TEXT}"/>
             <column name="keywords" remarks="Ключевые слова" type="${D_BIGNAME}"/>
             <column name="problem_type_id" remarks="Идентификатор типа проблемы" type="${D_INT}"/>
             <column name="priority" remarks="Приоритет" type="${D_INT}"/>
@@ -3138,7 +3138,7 @@
             <column name="is_legal_person" remarks="0 - физическое лицо&#10;1 - контрагент" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="market_id" remarks="Идентификатор рынка" type="${D_INT}"/>
             <column name="delivery_kind_id" remarks="Идентификатор вида доставки" type="${D_INT}"/>
-            <column name="info" remarks="Информация" type="${D_CRM_INFO}"/>
+            <column name="info" remarks="Информация" type="${D_TEXT}"/>
             <column name="responsible_id" remarks="Идентификатор ответственного" type="${D_INT}"/>
             <column name="client_type_id" remarks="Идентификатор типа клиента" type="${D_INT}"/>
             <column name="client_rank_id" remarks="Идентификатор ранга делового отношения" type="${D_INT}"/>
@@ -3179,7 +3179,7 @@
             </column>
             <column name="folder_id" remarks="Идентификатор папки" type="${D_INT}"/>
             <column name="name" remarks="Наименование" type="${D_BIGNAME}"/>
-            <column name="info" remarks="Появления" type="${D_CRM_INFO}"/>
+            <column name="info" remarks="Появления" type="${D_TEXT}"/>
             <column name="solution_type_id" remarks="Идентификатор типа решения" type="${D_INT}"/>
             <column name="priority" type="${D_INT}"/>
             <column name="valid_from" remarks="Действительно с" type="${D_DATE}"/>
@@ -3209,7 +3209,7 @@
             </column>
             <column name="folder_id" remarks="Идентификатор папки" type="${D_INT}"/>
             <column name="name" remarks="Наименование" type="${D_BIGNAME}"/>
-            <column name="info" remarks="Пояснения" type="${D_CRM_INFO}"/>
+            <column name="info" remarks="Пояснения" type="${D_TEXT}"/>
             <column name="creator_id" remarks="Идентификатор создателя" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -3734,8 +3734,8 @@
             <column name="model_class_id" remarks="Класс бизнес-компонента, который реализует образец документа" type="${D_INT}"/>
             <column name="spec_class_id" remarks="Класс бизнес-компонента, который реализует спецификацию документа" type="${D_INT}"/>
             <column name="model_spec_class_id" remarks="Класс бизнес-компонента, который реализует образец спецификации документа" type="${D_INT}"/>
-            <column name="doc_search_help" type="${D_JAVA_CLASS_NAME}"/>
-            <column name="docmodel_search_help" type="${D_JAVA_CLASS_NAME}"/>
+            <column name="doc_search_help" type="${D_CHAR256}"/>
+            <column name="docmodel_search_help" type="${D_CHAR256}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-640">
@@ -4087,7 +4087,7 @@
             <column name="fname" remarks="Имя" type="${D_BIGCODE}"/>
             <column name="patronymic" remarks="Отчество" type="${D_BIGCODE}"/>
             <column name="surname" remarks="Фамилия" type="${D_BIGCODE}"/>
-            <column name="address" remarks="Адрес" type="${D_ADDRESS}"/>
+            <column name="address" remarks="Адрес" type="${D_CHAR256}"/>
             <column name="passp_given" remarks="Паспорт - Выдан" type="${D_COMMENT}"/>
             <column name="passp_city" remarks="Паспорт - Город" type="${D_BIGCODE}"/>
             <column name="passp_date" remarks="Паспорт - Дата выдачи" type="${D_DATE}"/>
@@ -4113,10 +4113,10 @@
                 <constraints nullable="false"/>
             </column>
             <column name="app_layer" remarks="Уровень приложения, на котором действует MAP_ID для мапинга классов" type="${D_APP_LAYER}"/>
-            <column name="class_a" remarks="Имя класса" type="${D_JAVA_CLASS_NAME}">
+            <column name="class_a" remarks="Имя класса" type="${D_CHAR256}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_b" remarks="Имя класса" type="${D_JAVA_CLASS_NAME}">
+            <column name="class_b" remarks="Имя класса" type="${D_CHAR256}">
                 <constraints nullable="false"/>
             </column>
             <column name="map_id" remarks="Ключ, по которому производится маппинг преобразования класса A в класс B" type="${D_BIGCODE}">
@@ -4640,7 +4640,7 @@
             <column name="fname" remarks="Полное наименование" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="storedprocedure" remarks="Наименование хранимой процедуры" type="${D_STORED_PROC_NAME}"/>
+            <column name="storedprocedure" remarks="Наименование хранимой процедуры" type="${D_CHAR50}"/>
             <column name="context" remarks="Контекст:&#10;0 - Нет&#10;1 - Документ&#10;2 - Спецификация" type="${D_SHORT}">
                 <constraints nullable="false"/>
             </column>
@@ -7388,8 +7388,8 @@
             <column name="fname" remarks="Имя сотрудника" type="${D_BIGCODE}"/>
             <column name="patronymic" remarks="Отчество сотрудника" type="${D_BIGCODE}"/>
             <column name="surname" remarks="Фамилия сотрудника" type="${D_BIGCODE}"/>
-            <column name="address" remarks="Паспорт - Адрес" type="${D_ADDRESS}"/>
-            <column name="militia" remarks="Паспорт - выдан" type="${D_ADDRESS}"/>
+            <column name="address" remarks="Паспорт - Адрес" type="${D_CHAR256}"/>
+            <column name="militia" remarks="Паспорт - выдан" type="${D_CHAR256}"/>
             <column name="milit_city" remarks="Паспорт - Город" type="${D_BIGCODE}"/>
             <column name="passp_date" remarks="Паспорт - дата выдачи" type="${D_DATETIME}"/>
             <column name="passp_num" remarks="Паспорт - номер" type="${D_MEDIUMCODE}"/>
@@ -7421,7 +7421,7 @@
             <column name="area" remarks="Почтовый адрес - Область" type="${D_SMALLNAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="address" remarks="Почтовый адрес - Адрес" type="${D_ADDRESS}">
+            <column name="address" remarks="Почтовый адрес - Адрес" type="${D_CHAR256}">
                 <constraints nullable="false"/>
             </column>
             <column name="citylegal" remarks="Юридический адрес - Город" type="${D_SMALLNAME}">
@@ -7430,7 +7430,7 @@
             <column name="arealegal" remarks="Юридический адрес - Область" type="${D_SMALLNAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="addresslegal" remarks="Юридический адрес - Адрес" type="${D_ADDRESS}">
+            <column name="addresslegal" remarks="Юридический адрес - Адрес" type="${D_CHAR256}">
                 <constraints nullable="false"/>
             </column>
             <column name="comment" remarks="Комментарий" type="${D_COMMENT}"/>
@@ -8573,7 +8573,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="alevel" remarks="Уровень адресного объекта" type="${D_INT}"/>
-            <column name="scname" remarks="Сокращение" type="${D_ABBREVIATION}"/>
+            <column name="scname" remarks="Сокращение" type="${D_CHAR15}"/>
             <column name="socrname" remarks="Наименование" type="${D_SMALLNAME}"/>
             <column name="kod_t_st" remarks="Служебное поле" type="${D_CHAR4}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -8617,23 +8617,23 @@
             <column name="district" remarks="Район" type="${D_SMALLNAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="district_type" remarks="Соращенное наименование типа района" type="${D_ABBREVIATION}"/>
+            <column name="district_type" remarks="Соращенное наименование типа района" type="${D_CHAR15}"/>
             <column name="city" remarks="Город" type="${D_SMALLNAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="city_type" remarks="Сокращенное наименование типа города" type="${D_ABBREVIATION}"/>
+            <column name="city_type" remarks="Сокращенное наименование типа города" type="${D_CHAR15}"/>
             <column name="area" remarks="Населенный пункт" type="${D_SMALLNAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="area_type" remarks="Сокращенное наименование типа населенного пункта" type="${D_ABBREVIATION}"/>
+            <column name="area_type" remarks="Сокращенное наименование типа населенного пункта" type="${D_CHAR15}"/>
             <column name="street" remarks="Улица" type="${D_SMALLNAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="street_type" remarks="Сокращенное наименование типа улицы" type="${D_ABBREVIATION}"/>
+            <column name="street_type" remarks="Сокращенное наименование типа улицы" type="${D_CHAR15}"/>
             <column name="house" remarks="Дом" type="${D_MEDIUMCODE}"/>
             <column name="BLOCK" remarks="Корпус" type="${D_MEDIUMCODE}"/>
             <column name="flat" remarks="Квартира" type="${D_MEDIUMCODE}"/>
-            <column name="region_type" remarks="Сокращенное наименование типа региона" type="${D_ABBREVIATION}"/>
+            <column name="region_type" remarks="Сокращенное наименование типа региона" type="${D_CHAR15}"/>
             <column name="kladr_code" remarks="Код классификатора, соответствующий адресу" type="${D_BIGCODE}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -9383,7 +9383,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="institution_name" remarks="Наименовнаие образовательного учреждения" type="${D_NAME}"/>
-            <column name="institution_address" remarks="Адрес образовательного учреждения" type="${D_ADDRESS}"/>
+            <column name="institution_address" remarks="Адрес образовательного учреждения" type="${D_CHAR256}"/>
             <column name="certificate_document_id" remarks="Идентификатор сертификата" type="${D_INT}"/>
             <column name="order_id" remarks="Идентификатор приказа" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -10059,22 +10059,22 @@
             <column name="id" remarks="Идентификатор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="bik" remarks="БИК" type="${D_ACCOUNT}"/>
+            <column name="bik" remarks="БИК" type="${D_CHAR15}"/>
             <column name="bik_unique" remarks="Уникальность БИК" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="name" remarks="Наименование" type="${D_BIGNAME}"/>
             <column name="branch" remarks="Отделение" type="${D_BIGNAME}"/>
             <column name="country_id" remarks="Идентификатор страны" type="${D_INT}"/>
             <column name="city_type" remarks="Тип населенного пункта" type="${D_NAME}"/>
-            <column name="city" remarks="Населенный пункт" type="${D_ADDRESS}"/>
-            <column name="address" remarks="Адрес" type="${D_ADDRESS}"/>
+            <column name="city" remarks="Населенный пункт" type="${D_CHAR256}"/>
+            <column name="address" remarks="Адрес" type="${D_CHAR256}"/>
             <column name="zip" remarks="Индекс" type="${D_ZIPCODE}"/>
-            <column name="corr_acc" remarks="Корреспондирующий счет" type="${D_ACCOUNT}"/>
+            <column name="corr_acc" remarks="Корреспондирующий счет" type="${D_CHAR30}"/>
             <column name="corr_acc_currency" remarks="Код валюты корр.счета" type="${D_SMALLCODE}"/>
             <column name="corr_name" remarks="Наименование корреспондента" type="${D_BIGNAME}"/>
-            <column name="corr_address" remarks="Адрес корреспондента" type="${D_ADDRESS}"/>
-            <column name="swift" remarks="SWIFT" type="${D_ACCOUNT}"/>
-            <column name="iban" remarks="IBAN" type="${D_ADDRESS}"/>
-            <column name="bsc" remarks="BSC" type="${D_ACCOUNT}"/>
+            <column name="corr_address" remarks="Адрес корреспондента" type="${D_CHAR256}"/>
+            <column name="swift" remarks="SWIFT" type="${D_CHAR30}"/>
+            <column name="iban" remarks="IBAN" type="${D_CHAR256}"/>
+            <column name="bsc" remarks="BSC" type="${D_CHAR30}"/>
             <column name="phone" remarks="Телефон" type="${D_PHONE}"/>
             <column name="fax" remarks="Факс" type="${D_PHONE}"/>
             <column name="email" remarks="E-mail" type="${D_EMAIL}"/>
@@ -10095,7 +10095,7 @@
             <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="account_type_id" remarks="Тип счета" type="${D_INT}"/>
             <column name="curcode" remarks="Валюта счета" type="${D_SMALLCODE}"/>
-            <column name="account" remarks="Номер счета" type="${D_ACCOUNT}"/>
+            <column name="account" remarks="Номер счета" type="${D_CHAR30}"/>
             <column name="is_default" remarks="Флаг по умолчанию" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="unid" remarks="Уникальный код" type="${D_UUID}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -10900,7 +10900,7 @@
             <column name="priority" remarks="Приоритет отчёта" type="${D_INT}"/>
             <column name="sys_version" remarks="Поле контроля версии записи" type="${D_DATETIME}" defaultValueComputed="${now}"/>
             <column name="template" remarks="Шаблон отчёта" type="${D_BINARY}"/>
-            <column name="params_form_name" remarks="Путь к форме запроса параметров отчёта" type="${D_JAVA_CLASS_NAME}"/>
+            <column name="params_form_name" remarks="Путь к форме запроса параметров отчёта" type="${D_CHAR256}"/>
             <column name="output_format" type="${D_MEDIUMCODE}"/>
         </createTable>
     </changeSet>
@@ -11643,7 +11643,7 @@
             <column name="profile_id" remarks="Идентификатор профайла" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="code" remarks="Код" type="${D_JAVA_CLASS_NAME}">
+            <column name="code" remarks="Код" type="${D_CHAR256}">
                 <constraints nullable="false"/>
             </column>
             <column name="check_sum" remarks="Контрольная сумма" type="${D_INT}"/>
@@ -11921,7 +11921,7 @@
             <column name="event_datetime" remarks="Дата/время события" type="${D_DATETIME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="audit_bean" remarks="Источник события" type="${D_JAVA_CLASS_NAME}">
+            <column name="audit_bean" remarks="Источник события" type="${D_CHAR256}">
                 <constraints nullable="false"/>
             </column>
             <column name="operation" remarks="Операция" type="${D_BIGNAME}"/>
@@ -12006,12 +12006,12 @@
             <column name="domain_id" type="${D_INT}"/>
             <column name="reference_dataitem_name" type="${D_NAME}"/>
             <column name="default_component_name" type="${D_NAME}"/>
-            <column name="short_label" type="${D_JAVA_CLASS_NAME}"/>
-            <column name="medium_label" type="${D_JAVA_CLASS_NAME}"/>
-            <column name="long_label" type="${D_JAVA_CLASS_NAME}"/>
-            <column name="header" type="${D_JAVA_CLASS_NAME}"/>
-            <column name="search_help" type="${D_JAVA_CLASS_NAME}"/>
-            <column name="report_label" type="${D_JAVA_CLASS_NAME}"/>
+            <column name="short_label" type="${D_CHAR256}"/>
+            <column name="medium_label" type="${D_CHAR256}"/>
+            <column name="long_label" type="${D_CHAR256}"/>
+            <column name="header" type="${D_CHAR256}"/>
+            <column name="search_help" type="${D_CHAR256}"/>
+            <column name="report_label" type="${D_CHAR256}"/>
             <column name="entity_property_text" type="${D_NAME}"/>
             <column name="entity_text_format" type="${D_NAME}"/>
             <column name="is_read_only" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
@@ -12035,7 +12035,7 @@
             <column name="audit_type" remarks="Тип события" type="${D_SHORT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="entity_name" remarks="Имя сущности" type="${D_JAVA_CLASS_NAME}">
+            <column name="entity_name" remarks="Имя сущности" type="${D_CHAR256}">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -12048,7 +12048,7 @@
             <column name="db_audit_id" remarks="событие аудита" type="${D_BIG_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="property_name" remarks="Имя атрибута сущности" type="${D_JAVA_CLASS_NAME}">
+            <column name="property_name" remarks="Имя атрибута сущности" type="${D_CHAR256}">
                 <constraints nullable="false"/>
             </column>
             <column name="state" remarks="Состояние атрибута" type="${D_BIGNAME}"/>
@@ -12063,10 +12063,10 @@
             <column name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="entity_name" remarks="Имя сущности" type="${D_JAVA_CLASS_NAME}">
+            <column name="entity_name" remarks="Имя сущности" type="${D_CHAR256}">
                 <constraints nullable="false"/>
             </column>
-            <column name="property_name" remarks="Имя атрибута сущности" type="${D_JAVA_CLASS_NAME}"/>
+            <column name="property_name" remarks="Имя атрибута сущности" type="${D_CHAR256}"/>
             <column name="audit_create" remarks="Признак аудита создания сущности" type="${D_SHORT}"/>
             <column name="audit_modify" remarks="Признак аудита изменения сущности" type="${D_SHORT}"/>
             <column name="audit_remove" remarks="Признак аудита удаления сущности" type="${D_SHORT}"/>
@@ -12088,9 +12088,9 @@
             <column name="is_lowercase" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="is_mandatory" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="is_sign" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
-            <column name="conversion_routine" type="${D_JAVA_CLASS_NAME}"/>
-            <column name="fixed_values" type="${D_JAVA_CLASS_NAME}"/>
-            <column name="default_value" type="${D_JAVA_CLASS_NAME}"/>
+            <column name="conversion_routine" type="${D_CHAR256}"/>
+            <column name="fixed_values" type="${D_CHAR256}"/>
+            <column name="default_value" type="${D_CHAR256}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-1049">
@@ -12102,7 +12102,7 @@
             <column name="name" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="impl_name" type="${D_JAVA_CLASS_NAME}"/>
+            <column name="impl_name" type="${D_CHAR256}"/>
             <column name="class_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -12152,7 +12152,7 @@
             <column name="audit_type" remarks="Тип аудита" type="${D_SHORT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="audit_bean" remarks="Источник события" type="${D_JAVA_CLASS_NAME}">
+            <column name="audit_bean" remarks="Источник события" type="${D_CHAR256}">
                 <constraints nullable="false"/>
             </column>
             <column name="details" remarks="Описание события" type="${D_DESCRIPTION}"/>
@@ -12166,8 +12166,8 @@
             <column name="app_layer" type="${D_APP_LAYER}"/>
             <column name="role_id" type="${D_INT}"/>
             <column name="user_id" type="${D_INT}"/>
-            <column name="name" type="${D_JAVA_CLASS_NAME}"/>
-            <column name="impl_name" type="${D_JAVA_CLASS_NAME}"/>
+            <column name="name" type="${D_CHAR256}"/>
+            <column name="impl_name" type="${D_CHAR256}"/>
             <column name="description" type="${D_DESCRIPTION}"/>
         </createTable>
     </changeSet>
