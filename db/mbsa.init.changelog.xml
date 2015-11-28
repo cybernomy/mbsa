@@ -2319,7 +2319,7 @@
             </column>
             <column defaultValueNumeric="0" name="feeorder" remarks="Порядок начисления" type="${D_SHORT}"/>
             <column name="included" remarks="Признак - Включен ли налог&#10;0 - не включен&#10;1 - включен" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
-            <column name="subject" remarks="Признак - Начисление налога на:&#10;1 - цену&#10;2 - сумму" type="${D_CALCTAXESSUBJECT}"/>
+            <column name="subject" remarks="Признак - Начисление налога на:&#10;1 - цену&#10;2 - сумму" type="${D_SHORT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -3518,7 +3518,7 @@
             <column name="folder_id" remarks="Идентификатор папки" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="docsection" remarks="Класс документа (ссылка на DOCSECTION)" type="${D_DOCSECTION}">
+            <column name="docsection" remarks="Класс документа (ссылка на DOCSECTION)" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
             <column name="doctype" remarks="Тип" type="${D_DOCTYPE}"/>
@@ -3574,7 +3574,7 @@
             <column name="folder_id" remarks="Идентификатор папки" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="docsection" remarks="Класс документа (ссылка на DOCSECTION)" type="${D_DOCSECTION}">
+            <column name="docsection" remarks="Класс документа (ссылка на DOCSECTION)" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
             <column name="modelname" remarks="Имя образца" type="${D_NAME}">
@@ -3844,7 +3844,7 @@
             <column name="id" remarks="Идентификатор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="kind" remarks="Тип связи:&#10;0 - документ&#10;1 - документ-подтверждение&#10;2 - документ-основание&#10;3 - договор" type="${D_DOCKIND}">
+            <column name="kind" remarks="Тип связи:&#10;0 - документ&#10;1 - документ-подтверждение&#10;2 - документ-основание&#10;3 - договор" type="${D_SHORT}">
                 <constraints nullable="false"/>
             </column>
             <column name="doctype_id" remarks="Тип документа" type="${D_INT_IDEN}">
@@ -12629,7 +12629,7 @@
             </column>
             <column name="disable_spec_price" remarks="Запретить редактирование цен в спецификациях документов&#10;0 - не запрещать&#10;1 - запретить" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="disable_discount" remarks="Запретить применение скидок/наценок в документах&#10;0 - не запрещать&#10;1 - запретить" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
-            <column name="disable_exceed_quant" remarks="Количество товара при выборе из каталога или прайс-листа:&#10;0 - любое&#10;1 - не более фактического&#10;2 - не более доступного" type="${D_DISABLE_EXCEED_QUANT}" defaultValueNumeric="0">
+            <column name="disable_exceed_quant" remarks="Количество товара при выборе из каталога или прайс-листа:&#10;0 - любое&#10;1 - не более фактического&#10;2 - не более доступного" type="${D_SHORT}" defaultValueNumeric="0">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">

@@ -5,15 +5,11 @@
   <property name="today" value="current_date"/>
 
   <property name="D_BOOLEAN" value="BOOLEAN"/>
-  <property name="D_CALCTAXESSUBJECT" value="D_CALCTAXESSUBJECT"/>
   <property name="D_CURCOURCE" value="D_CURCOURCE"/>
   <property name="D_DATE" value="DATE"/>
   <property name="D_DATETIME" value="TIMESTAMP WITH TIME ZONE"/>
   <property name="D_DESCRIPTION" value="D_DESCRIPTION"/>
-  <property name="D_DISABLE_EXCEED_QUANT" value="D_DISABLE_EXCEED_QUANT"/>
-  <property name="D_DOCKIND" value="D_DOCKIND"/>
   <property name="D_DOCNUMBER" value="D_DOCNUMBER"/>
-  <property name="D_DOCSECTION" value="D_DOCSECTION"/>
   <property name="D_DOCTYPE" value="D_DOCTYPE"/>
   <property name="D_ECONSPEC_FEATURE_CODE" value="D_ECONSPEC_FEATURE_CODE"/>
   <property name="D_EMAIL" value="D_EMAIL"/>
@@ -30,7 +26,6 @@
   <property name="D_MEASURE_CONTROL" value="D_MEASURE_CONTROL"/>
   <property name="D_MEASURE_CONVERSION" value="D_MEASURE_CONVERSION"/>
   <property name="D_MEDIUMCODE" value="D_MEDIUMCODE"/>
-  <property name="D_MONTH" value="D_MONTH"/>
   <property name="D_NAME" value="D_NAME"/>
   <property name="D_PASSWORD" value="VARCHAR(50)"/>
   <property name="D_PHONE" value="D_PHONE"/>
