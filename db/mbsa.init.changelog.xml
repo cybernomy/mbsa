@@ -1766,13 +1766,13 @@
             <column name="balancecost" remarks="Балансовая стоимость объекта" type="${D_SUMMA}"/>
             <column name="amrate" remarks="Норма, по которой была начислена амортизация" type="${D_RATIO}"/>
             <column name="sum_rate" remarks="Сумма, начисленная по норме" type="${D_SUMMA}"/>
-            <column name="explperiod_y" remarks="Период эксплуатации, лет" type="${D_FLOAT8}"/>
-            <column name="explperiod_m" remarks="Период эксплуатации, месяцев" type="${D_FLOAT8}"/>
+            <column name="explperiod_y" remarks="Период эксплуатации, лет" type="${D_FLOAT}"/>
+            <column name="explperiod_m" remarks="Период эксплуатации, месяцев" type="${D_FLOAT}"/>
             <column name="sum_period" remarks="Сумма, начисленная по периоду" type="${D_SUMMA}"/>
-            <column name="product_est" remarks="Объем продукции, предполагаемый" type="${D_FLOAT8}"/>
-            <column name="product_fact" remarks="Объем продукции, фактический" type="${D_FLOAT8}"/>
+            <column name="product_est" remarks="Объем продукции, предполагаемый" type="${D_FLOAT}"/>
+            <column name="product_fact" remarks="Объем продукции, фактический" type="${D_FLOAT}"/>
             <column name="sum_product" remarks="Сумма, начисленная по произведенной продукции" type="${D_SUMMA}"/>
-            <column name="factor" remarks="Коэффициент" type="${D_FLOAT8}"/>
+            <column name="factor" remarks="Коэффициент" type="${D_FLOAT}"/>
             <column name="sum_add" remarks="Сумма дополнительного начисления" type="${D_SUMMA}"/>
             <column name="deprvalue" remarks="Остаточная стоимость" type="${D_SUMMA}"/>
             <column name="sum_deprvalue" remarks="Сумма, начисленная по остаточной стоимости" type="${D_SUMMA}"/>
@@ -1869,7 +1869,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="amonth" remarks="Месяц (в абсолютном выражении: год * 12 + месяц)" type="${D_INT}"/>
-            <column name="production" remarks="Количество выпущенной продукции или пробег" type="${D_FLOAT8}"/>
+            <column name="production" remarks="Количество выпущенной продукции или пробег" type="${D_FLOAT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -4112,7 +4112,7 @@
             <column name="id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="app_layer" remarks="Уровень приложения, на котором действует MAP_ID для мапинга классов" type="${D_APP_LAYER}"/>
+            <column name="app_layer" remarks="Уровень приложения, на котором действует MAP_ID для мапинга классов" type="${D_SHORT}"/>
             <column name="class_a" remarks="Имя класса" type="${D_CHAR256}">
                 <constraints nullable="false"/>
             </column>
@@ -4143,8 +4143,8 @@
                 <constraints nullable="false"/>
             </column>
             <column name="site_id" remarks="Идентификатор внешней БД" type="${D_INT}"/>
-            <column name="bean_name" remarks="Имя бизнес-компонента, который экспортируется" type="${D_BEAN_NAME}"/>
-            <column name="origin" remarks="Таблица БД, запись которой экспортируется" type="${D_TABLE_NAME}"/>
+            <column name="bean_name" remarks="Имя бизнес-компонента, который экспортируется" type="${D_CHAR150}"/>
+            <column name="origin" remarks="Таблица БД, запись которой экспортируется" type="${D_CHAR50}"/>
             <column name="rec_id" remarks="Идентификатор экспортируемой записи" type="${D_INT}"/>
             <column name="packet" remarks="Пакет, в который вошла экспортируемая запись. Для подготовленных к экспорту записей со статусом 0 значение поля =null." type="${D_INT}"/>
             <column name="status" remarks="Статус записи:&#10;0 - подготовлена к экспорту&#10;1 - помещена в пакет&#10;2 - импортирована во в нешнюю БД (от нее получен соотв. пакет подтверждения)&#10;3 - получен запрос на удаление записи из внешней БД&#10;4 - запрос на удаление записи из внешней БД помещен в пакет" type="${D_EXCH_EXPORT_STATUS}" defaultValueNumeric="0"/>
@@ -4160,8 +4160,8 @@
                 <constraints nullable="false"/>
             </column>
             <column name="site_id" remarks="Идентификатор внешней БД" type="${D_INT}"/>
-            <column name="bean_name" remarks="Имя импортированного бизнес-компонента" type="${D_BEAN_NAME}"/>
-            <column name="origin" remarks="Таблица, запись которой импортирована" type="${D_TABLE_NAME}"/>
+            <column name="bean_name" remarks="Имя импортированного бизнес-компонента" type="${D_CHAR150}"/>
+            <column name="origin" remarks="Таблица, запись которой импортирована" type="${D_CHAR50}"/>
             <column name="old_key" remarks="Значение ключа записи во внешней БД" type="${D_BIG_INT_IDEN}"/>
             <column name="new_key" remarks="Значение ключа записи в текущей БД" type="${D_BIG_INT_IDEN}"/>
             <column name="packet" remarks="Номер пакета" type="${D_INT}"/>
@@ -4197,7 +4197,7 @@
             <column name="class_id" remarks="Класс бизнес-компонента" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="table_name" remarks="Таблица БД" type="${D_TABLE_NAME}"/>
+            <column name="table_name" remarks="Таблица БД" type="${D_CHAR50}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -4677,8 +4677,8 @@
             <column name="date_time" remarks="Дата/время" type="${D_DATETIME}"/>
             <column name="tank_id" remarks="Резервуар, контрагент" type="${D_INT}"/>
             <column name="fuel_id" remarks="Топливо, позиция каталога" type="${D_INT}"/>
-            <column name="density" remarks="Плотность" type="${D_FLOAT8}"/>
-            <column name="temperature" remarks="Температура" type="${D_FLOAT8}"/>
+            <column name="density" remarks="Плотность" type="${D_FLOAT}"/>
+            <column name="temperature" remarks="Температура" type="${D_FLOAT}"/>
             <column name="operator_id" remarks="Оператор, контрагент" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -4900,12 +4900,12 @@
             <column name="amortdate" remarks="Дата начисления амортизации" type="${D_DATETIME}"/>
             <column name="iscomplex" remarks="Не используется" type="${D_SHORT}"/>
             <column name="iscommon" remarks="Не используется" type="${D_SHORT}"/>
-            <column name="factor" remarks="Поправочный коэффициент" type="${D_FLOAT8}"/>
+            <column name="factor" remarks="Поправочный коэффициент" type="${D_FLOAT}"/>
             <column name="algorithm" remarks="Код алгоритма расчета амортизации" type="${D_SHORT}"/>
             <column name="yearamortrate" remarks="Годовая норма амортизации" type="${D_RATIO}"/>
-            <column name="explperiod_y" remarks="Срок полезного использования, лет" type="${D_FLOAT8}"/>
-            <column name="explperiod_m" remarks="Срок полезного использования, мес" type="${D_FLOAT8}"/>
-            <column name="production" remarks="Предполагаемый объем продукции" type="${D_FLOAT8}"/>
+            <column name="explperiod_y" remarks="Срок полезного использования, лет" type="${D_FLOAT}"/>
+            <column name="explperiod_m" remarks="Срок полезного использования, мес" type="${D_FLOAT}"/>
+            <column name="production" remarks="Предполагаемый объем продукции" type="${D_FLOAT}"/>
             <column name="anl1_id" remarks="Идентификатор аналитического счета 1-го порядка учета ОС" type="${D_INT}"/>
             <column name="anl2_id" remarks="Идентификатор аналитического счета 2-го порядка учета ОС" type="${D_INT}"/>
             <column name="anl3_id" remarks="Идентификатор аналитического счета 3-го порядка учета ОС" type="${D_INT}"/>
@@ -5022,7 +5022,7 @@
             <column name="metal_code" remarks="Металл" type="${D_BIGCODE}">
                 <constraints nullable="false"/>
             </column>
-            <column name="mass" remarks="Масса" type="${D_FLOAT8}"/>
+            <column name="mass" remarks="Масса" type="${D_FLOAT}"/>
             <column name="invhead_id" remarks="Идентификатор инвентарной карточки" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -5276,8 +5276,8 @@
             <column name="newstringidvalue_" type="${D_BIGNAME}"/>
             <column name="oldbytearray_" type="${D_BIG_INT_IDEN}"/>
             <column name="newbytearray_" type="${D_BIG_INT_IDEN}"/>
-            <column name="olddoublevalue_" type="${D_FLOAT8}"/>
-            <column name="newdoublevalue_" type="${D_FLOAT8}"/>
+            <column name="olddoublevalue_" type="${D_FLOAT}"/>
+            <column name="newdoublevalue_" type="${D_FLOAT}"/>
             <column name="oldlongvalue_" type="${D_BIG_INT_IDEN}"/>
             <column name="oldlongidclass_" type="${D_BIGNAME}"/>
             <column name="oldlongidvalue_" type="${D_BIG_INT_IDEN}"/>
@@ -5589,7 +5589,7 @@
             <column name="datevalue_" type="${D_DATETIME}"/>
             <column name="longvalue_" type="${D_BIG_INT_IDEN}"/>
             <column name="bytearrayvalue_" type="${D_BIG_INT_IDEN}"/>
-            <column name="doublevalue_" type="${D_FLOAT8}"/>
+            <column name="doublevalue_" type="${D_FLOAT}"/>
             <column name="taskinstance_" type="${D_BIG_INT_IDEN}"/>
         </createTable>
     </changeSet>
@@ -7184,7 +7184,7 @@
             <column name="catalog_id" remarks="Идентификатор позиции КТУ" type="${D_INT}"/>
             <column name="ovr_norm_spec_id" remarks="Идентификатор позиции спецификации нормы выдачи" type="${D_INT}"/>
             <column name="ovr_norm_head_id" remarks="Идентификатор заголовка нормы выдачи" type="${D_INT}"/>
-            <column name="catalog_groups_type_id" remarks="Тип группы позиций КТУ" type="${D_CATALOG_GROUPS_TYPE}"/>
+            <column name="catalog_groups_type_id" remarks="Тип группы позиций КТУ" type="${D_SHORT}"/>
             <column name="isbasic" remarks="Тип выдачи:&#10;0 - дополнительная&#10;1 - основная" type="${D_INT}"/>
             <column name="isperiodic" remarks="Периодичность выдачи:&#10;0 - разовая&#10;1 - периодическая" type="${D_INT}"/>
             <column name="returnable" remarks="Подлежит возврату" type="${D_INT}"/>
@@ -7286,7 +7286,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="measure_upcode" remarks="Единица измерения" type="${D_SMALLCODE}"/>
-            <column name="catalog_groups_type_id" remarks="Тип группы&#10;0 - специальная одежда&#10;1 - форменная одежда&#10;2 - индивидуальные средства защита&#10;3 - инструменты&#10;4 - оргтехника, мебель&#10;5 - прочие ТМЦ" type="${D_CATALOG_GROUPS_TYPE}"/>
+            <column name="catalog_groups_type_id" remarks="Тип группы&#10;0 - специальная одежда&#10;1 - форменная одежда&#10;2 - индивидуальные средства защита&#10;3 - инструменты&#10;4 - оргтехника, мебель&#10;5 - прочие ТМЦ" type="${D_SHORT}"/>
             <column name="shelflife" remarks="Срок использования" type="${D_QUANTITY}"/>
             <column name="shelflife_meas" remarks="Единица измерения срока использования&#10;1 - час&#10;2 - день&#10;3 - месяц&#10;4 - год" type="${D_TIME_PERIOD_KIND}" defaultValueNumeric="0"/>
             <column name="isbasic" remarks="Тип выдачи&#10;0 - дополнительная&#10;1 - основная" type="${D_INT}"/>
@@ -7456,19 +7456,19 @@
             <column name="region_id" remarks="Идентификатор региона почтового адреса" type="${D_INT}"/>
             <column name="district_id" remarks="Идентификатор района почтового адреса" type="${D_INT}"/>
             <column name="place_id" remarks="Идентификатор населенного пункта почтового адреса" type="${D_INT}"/>
-            <column name="street" remarks="Улица почтового адреса" type="${D_ADDR_STREET}"/>
-            <column name="house" remarks="Дом почтового адреса" type="${D_ADDR_HOUSE}"/>
-            <column name="building" remarks="Строение почтового адреса" type="${D_ADDR_BUILDING}"/>
-            <column name="room" remarks="Помещение почтового адреса" type="${D_ADDR_ROOM}"/>
+            <column name="street" remarks="Улица почтового адреса" type="${D_CHAR100}"/>
+            <column name="house" remarks="Дом почтового адреса" type="${D_CHAR20}"/>
+            <column name="building" remarks="Строение почтового адреса" type="${D_CHAR20}"/>
+            <column name="room" remarks="Помещение почтового адреса" type="${D_CHAR20}"/>
             <column name="zipcode1_id" remarks="Идентификатор индекса юридического адреса" type="${D_INT}"/>
             <column name="country1_id" remarks="Идентификатор страны юридического адреса" type="${D_INT}"/>
             <column name="region1_id" remarks="Идентификатор региона юридического адреса" type="${D_INT}"/>
             <column name="district1_id" remarks="Идентификатор района юридического адреса" type="${D_INT}"/>
             <column name="place1_id" remarks="Идентификатор населенного пункта юридического адреса" type="${D_INT}"/>
-            <column name="street1" remarks="Улица юридического адреса" type="${D_ADDR_STREET}"/>
-            <column name="house1" remarks="Дом юридического адреса" type="${D_ADDR_HOUSE}"/>
-            <column name="building1" remarks="Строение юридического адреса" type="${D_ADDR_BUILDING}"/>
-            <column name="room1" remarks="Помещение юридического адреса" type="${D_ADDR_ROOM}"/>
+            <column name="street1" remarks="Улица юридического адреса" type="${D_CHAR100}"/>
+            <column name="house1" remarks="Дом юридического адреса" type="${D_CHAR20}"/>
+            <column name="building1" remarks="Строение юридического адреса" type="${D_CHAR20}"/>
+            <column name="room1" remarks="Помещение юридического адреса" type="${D_CHAR20}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-818">
@@ -10261,7 +10261,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="region_id" remarks="Идентификатор района" type="${D_INT}"/>
-            <column name="prefix" remarks="Префикс" type="${D_ADDR_PREFIX}"/>
+            <column name="prefix" remarks="Префикс" type="${D_CHAR20}"/>
             <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -10640,14 +10640,14 @@
             <column name="country_id" remarks="Идентификатор страны" type="${D_INT}"/>
             <column name="region" remarks="Регион" type="${D_NAME}"/>
             <column name="city" remarks="Город" type="${D_NAME}"/>
-            <column name="street" remarks="Улица" type="${D_ADDR_STREET}"/>
-            <column name="house" remarks="Дом" type="${D_ADDR_HOUSE}"/>
+            <column name="street" remarks="Улица" type="${D_CHAR100}"/>
+            <column name="house" remarks="Дом" type="${D_CHAR20}"/>
             <column name="full_address" remarks="Молный адрес" type="${D_BIGNAME}"/>
             <column name="region_id" remarks="Идентификатор региона" type="${D_INT}"/>
             <column name="district_id" remarks="Идентификатор района" type="${D_INT}"/>
             <column name="place_id" remarks="Идентификатор населенного пункта" type="${D_INT}"/>
-            <column name="building" remarks="Корпус" type="${D_ADDR_BUILDING}"/>
-            <column name="room" remarks="Квартира" type="${D_ADDR_ROOM}"/>
+            <column name="building" remarks="Корпус" type="${D_CHAR20}"/>
+            <column name="room" remarks="Квартира" type="${D_CHAR20}"/>
             <column name="zipcode_id" remarks="Идентификатор индекса" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -10704,7 +10704,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="district_id" remarks="Идентификатор района" type="${D_INT}"/>
-            <column name="prefix" remarks="Префикс" type="${D_ADDR_PREFIX}"/>
+            <column name="prefix" remarks="Префикс" type="${D_CHAR20}"/>
             <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -10717,7 +10717,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="country_id" remarks="Идентификатор страны" type="${D_INT}"/>
-            <column name="prefix" remarks="Префикс" type="${D_ADDR_PREFIX}"/>
+            <column name="prefix" remarks="Префикс" type="${D_CHAR20}"/>
             <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -11934,7 +11934,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="module_id" remarks="Ид. модуля" type="${D_INT}"/>
-            <column name="bean_name" remarks="Имя бизнес-компонента" type="${D_BEAN_NAME}"/>
+            <column name="bean_name" remarks="Имя бизнес-компонента" type="${D_CHAR150}"/>
             <column name="description" remarks="Описание бизнес-компонента" type="${D_COMMENT}"/>
             <column name="trg_init" remarks="Триггер &quot;на инициализацию&quot;" type="${D_INT}"/>
             <column name="trg_create" remarks="Триггер &quot;на добавление&quot;" type="${D_INT}"/>
@@ -11950,12 +11950,12 @@
             <column name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="app_layer" type="${D_APP_LAYER}"/>
+            <column name="app_layer" type="${D_SHORT}"/>
             <column name="class_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="kind" type="${D_CLASS_IMPL_KIND}"/>
-            <column name="name" type="${D_BEAN_NAME}"/>
+            <column name="kind" type="${D_SHORT}"/>
+            <column name="name" type="${D_CHAR150}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-1042">
@@ -11997,7 +11997,7 @@
             <column name="id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="app_layer" type="${D_APP_LAYER}"/>
+            <column name="app_layer" type="${D_SHORT}"/>
             <column name="name" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
@@ -12098,7 +12098,7 @@
             <column name="id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="app_layer" type="${D_APP_LAYER}"/>
+            <column name="app_layer" type="${D_SHORT}"/>
             <column name="name" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
@@ -12163,7 +12163,7 @@
             <column name="id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="app_layer" type="${D_APP_LAYER}"/>
+            <column name="app_layer" type="${D_SHORT}"/>
             <column name="role_id" type="${D_INT}"/>
             <column name="user_id" type="${D_INT}"/>
             <column name="name" type="${D_CHAR256}"/>

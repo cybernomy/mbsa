@@ -3,22 +3,12 @@
 
   <property name="now" value="now()"/>
   <property name="today" value="current_date"/>
-	
-  <property name="D_ADDR_BUILDING" value="D_ADDR_BUILDING"/>
-  <property name="D_ADDR_HOUSE" value="D_ADDR_HOUSE"/>
-  <property name="D_ADDR_PREFIX" value="D_ADDR_PREFIX"/>
-  <property name="D_ADDR_ROOM" value="D_ADDR_ROOM"/>
-  <property name="D_ADDR_STREET" value="D_ADDR_STREET"/>
-  <property name="D_APP_LAYER" value="D_APP_LAYER"/>
-  <property name="D_AUDIT_EVENT" value="D_AUDIT_EVENT"/>
-  <property name="D_BEAN_NAME" value="D_BEAN_NAME"/>
+
   <property name="D_BIGCODE" value="D_BIGCODE"/>
   <property name="D_BIGNAME" value="D_BIGNAME"/>
   <property name="D_BIG_INT_IDEN" value="D_BIG_INT_IDEN"/>
   <property name="D_BOOLEAN" value="D_BOOLEAN"/>
   <property name="D_CALCTAXESSUBJECT" value="D_CALCTAXESSUBJECT"/>
-  <property name="D_CATALOG_GROUPS_TYPE" value="D_CATALOG_GROUPS_TYPE"/>
-  <property name="D_CLASS_IMPL_KIND" value="D_CLASS_IMPL_KIND"/>
   <property name="D_COMMENT" value="D_COMMENT"/>
   <property name="D_CONST_VAL" value="D_CONST_VAL"/>
   <property name="D_CONTARCT_CALC_SUM_KIND" value="D_CONTARCT_CALC_SUM_KIND"/>
@@ -102,13 +92,18 @@
   <property name="D_USERNAME" value="D_USERNAME"/>
   <property name="D_VOLUME" value="D_VOLUME"/>
   <property name="D_WEIGHT" value="D_WEIGHT"/>
-  <property name="D_ZIPCODE" value="D_ZIPCODE"/>
-  <property name="D_FLOAT8" value="D_FLOAT8"/>
+  <property name="D_ZIPCODE" value="VARCHAR(30)"/>
+  <property name="D_FLOAT" value="FLOAT"/>
   <property name="D_SMALLESTCODE" value="D_SMALLESTCODE"/>
-  <property name="D_CHAR4" value="D_CHAR4"/>
-  <property name="D_CHAR15" value="D_CHAR15"/>
-  <property name="D_CHAR50" value="D_CHAR50"/>
-  <property name="D_TEXT" value="D_TEXT"/>
-  <property name="D_UUID" value="D_UUID"/>
-  <property name="D_BINARY" value="D_BINARY"/>
+  <property name="D_CHAR4" value="VARCHAR(4)"/>
+  <property name="D_CHAR15" value="VARCHAR(15)"/>
+  <property name="D_CHAR20" value="VARCHAR(20)"/>
+  <property name="D_CHAR30" value="VARCHAR(30)"/>
+  <property name="D_CHAR50" value="VARCHAR(50)"/>
+  <property name="D_CHAR100" value="VARCHAR(100)"/>
+  <property name="D_CHAR150" value="VARCHAR(150)"/>
+  <property name="D_CHAR256" value="VARCHAR(256)"/>
+  <property name="D_TEXT" value="TEXT"/>
+  <property name="D_UUID" value="VARCHAR(40)"/>
+  <property name="D_BINARY" value="BYTEA"/>
 </databaseChangeLog>
