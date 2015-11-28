@@ -6,7 +6,7 @@ This project was born in deep Russian forests, so most developers were the bears
 In two words it's open source ERP/CRM platform based on most advanced java technologies.
 It's Java 5, JBoss 4, hibernate 3, BIRT 2, ANT, eclipse of some non-planet version etc. Yea, most advanced technologies for 2009 :D
 
-Client layer is Canoo ULC - so you have not a stupid web interface with it's delays, weird interface, but regular desktop-like client with a small memory footprint, small traffic etc. It's can be executed via JNLP or browser(java plugin required). But I think we can provide some lite interface version via WEB 3.0 and mobiles
+Client layer is Canoo ULC - so you are using not a stupid web interface with it's delays, weird interface, but regular desktop-like client with a small memory footprint, small traffic etc. It's can be executed via JNLP or browser(java plugin required). But I think we can provide some lite interface version via WEB 3.0 and mobiles
 
 Anyway it's still much better by it's functionality, performance, ideology and visual part against lot of existing platforms.
 
@@ -19,10 +19,10 @@ My/our goals are:
 - DONE: Mavenization or gradlenization (you know, it's from gradle) and electrification of the whole country
 - DONE: JDK upgrade to the newest stable
 - Check english resources are ok, cos now only russian i18n resources are 100% valid
-- I would plan to make Postgresql as default DB, now it's.... it's firebird aaaaahahahhah (well 10 years ago it was cool enough). But actually I want it to be DB-agnostic.
-- Currently DB versioning works via custom tool, it must be definitely liquibase
+- DONE: I would plan to make Postgresql as default DB, now it's.... it's firebird aaaaahahahhah (well 10 years ago it was cool enough). But actually I want it to be DB-agnostic.
+- DONE: Currently DB versioning works via custom tool, it must be definitely liquibase
 - Hiberante models still hbm.xml, I want annotations
-- Re-implement some core functionality to allow execute application at any JEE server. Now it's tightly bundled with old great jboss 4
+- Re-implement some core functionality to allow execute application at any JEE server. Now it's tightly bundled with old cool jboss 4
 - Translate the documentation. I plan to support both russian and english versions
 - Probably spring... EJB may be optional service layer implementation, but with spring it may run with any suitable container
 - OSGi. Currently modular system is self-made, so it's not ideal
