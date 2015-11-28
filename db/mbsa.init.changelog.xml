@@ -1663,13 +1663,13 @@
             <column name="acc_id" remarks="Идентификатор счета для учета операций" type="${D_INT}"/>
             <column name="purpose" remarks="Назначение аванса" type="${D_CHAR256}"/>
             <column name="prevadvancesum" remarks="Сумма предыдущего аванса" type="${D_SUMMA}"/>
-            <column name="received1src" remarks="Получено - источник 1" type="${D_SMALLNAME}"/>
+            <column name="received1src" remarks="Получено - источник 1" type="${D_CHAR50}"/>
             <column name="received1date" remarks="Получено - дата 1" type="${D_DATE}"/>
             <column name="received1sum" remarks="Получено - сумма 1" type="${D_SUMMA}"/>
-            <column name="received2src" remarks="Получено - источник 2" type="${D_SMALLNAME}"/>
+            <column name="received2src" remarks="Получено - источник 2" type="${D_CHAR50}"/>
             <column name="received2date" remarks="Получено - дата 2" type="${D_DATE}"/>
             <column name="received2sum" remarks="Получено - сумма 2" type="${D_SUMMA}"/>
-            <column name="received3src" remarks="Получено - источник 3" type="${D_SMALLNAME}"/>
+            <column name="received3src" remarks="Получено - источник 3" type="${D_CHAR50}"/>
             <column name="received3date" remarks="Получено - дата 3" type="${D_DATE}"/>
             <column name="received3sum" remarks="Получено - сумма 3" type="${D_SUMMA}"/>
             <column name="restdockind" remarks="0 - перерасход&#10;1 - остаток" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
@@ -1697,13 +1697,13 @@
             <column name="acc_id" remarks="Идентификатор счета для учета операций" type="${D_INT}"/>
             <column name="purpose" remarks="Назначение аванса" type="${D_CHAR256}"/>
             <column name="prevadvancesum" remarks="Сумма предыдущего аванса" type="${D_SUMMA}"/>
-            <column name="received1src" remarks="Получено - источник 1" type="${D_SMALLNAME}"/>
+            <column name="received1src" remarks="Получено - источник 1" type="${D_CHAR50}"/>
             <column name="received1date" remarks="Получено - дата 1" type="${D_DATE}"/>
             <column name="received1sum" remarks="Получено - сумма 1" type="${D_SUMMA}"/>
-            <column name="received2src" remarks="Получено - источник 2" type="${D_SMALLNAME}"/>
+            <column name="received2src" remarks="Получено - источник 2" type="${D_CHAR50}"/>
             <column name="received2date" remarks="Получено - дата 2" type="${D_DATE}"/>
             <column name="received2sum" remarks="Получено - сумма 2" type="${D_SUMMA}"/>
-            <column name="received3src" remarks="Получено - источник 3" type="${D_SMALLNAME}"/>
+            <column name="received3src" remarks="Получено - источник 3" type="${D_CHAR50}"/>
             <column name="received3date" remarks="Получено - дата 3" type="${D_DATE}"/>
             <column name="received3sum" remarks="Получено - сумма 3" type="${D_SUMMA}"/>
             <column name="restdockind" remarks="0 - перерасход&#10;1 - остаток" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
@@ -1808,8 +1808,8 @@
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-549">
         <createTable remarks="Бухгалтерия: конфигурация модуля." tableName="acc_config">
-            <column name="base_currency" remarks="Код базовой валюты" type="${D_SMALLCODE}"/>
-            <column name="nat_currency" remarks="Код национальной валюты" type="${D_SMALLCODE}"/>
+            <column name="base_currency" remarks="Код базовой валюты" type="${D_CHAR5}"/>
+            <column name="nat_currency" remarks="Код национальной валюты" type="${D_CHAR5}"/>
             <column name="currency_prec" remarks="Точность денежных величин, знаков после запятой" type="${D_INT}"/>
             <column name="cur_rate_type_id" remarks="Тип курса" type="${D_INT}"/>
             <column name="cur_rate_authority_id" remarks="Источник курса" type="${D_INT}"/>
@@ -1951,7 +1951,7 @@
             <column name="accname" remarks="Наименование счета" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="currency_code" remarks="Код курса валюты" type="${D_SMALLCODE}"/>
+            <column name="currency_code" remarks="Код курса валюты" type="${D_CHAR5}"/>
             <column name="isanl" remarks="Признак наличия аналитических счетов&#10;0 - нет аналитических счетов&#10;1 - есть аналитические счета" type="${D_SHORT}">
                 <constraints nullable="false"/>
             </column>
@@ -2025,7 +2025,7 @@
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="key_stroke" remarks="Клавишная комбинация" type="${D_SMALLNAME}"/>
+            <column name="key_stroke" remarks="Клавишная комбинация" type="${D_CHAR50}"/>
             <column name="icon" remarks="Пиктограмма" type="${D_CHAR256}"/>
             <column name="is_active" remarks="Признак активности" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
         </createTable>
@@ -2448,7 +2448,7 @@
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="'2015-11-22'::date" name="in_action" remarks="Действует с..." type="${D_DATE}"/>
-            <column name="currency_code" remarks="Код валюты в верхнем регистре" type="${D_SMALLCODE}">
+            <column name="currency_code" remarks="Код валюты в верхнем регистре" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueNumeric="0" name="price" remarks="Цена в НДЕ" type="${D_SUMMA}"/>
@@ -2568,7 +2568,7 @@
             <column name="docdate" remarks="Дата документа" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="modifydesc" remarks="Изменения" type="${D_TEXT}"/>
             <column name="comment" remarks="Примечания" type="${D_TEXT}"/>
-            <column name="original" remarks="Оригинал документа" type="${D_ORIGINAL}"/>
+            <column name="original" remarks="Оригинал документа" type="${D_BINARY}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -2913,10 +2913,10 @@
             <column name="relation_id" remarks="Идентификатор отношения" type="${D_INT}"/>
             <column name="operation_id" remarks="Идентификатор действия" type="${D_INT}"/>
             <column name="contact_id" remarks="Идентификатор контактного лица" type="${D_INT}"/>
-            <column name="swot_s" remarks="Сильные стороны" type="${D_CRM_SWOT}"/>
-            <column name="swot_w" remarks="Слабые стороны" type="${D_CRM_SWOT}"/>
-            <column name="swot_o" remarks="Возможности" type="${D_CRM_SWOT}"/>
-            <column name="swot_t" remarks="Риски" type="${D_CRM_SWOT}"/>
+            <column name="swot_s" remarks="Сильные стороны" type="${D_TEXT}"/>
+            <column name="swot_w" remarks="Слабые стороны" type="${D_TEXT}"/>
+            <column name="swot_o" remarks="Возможности" type="${D_TEXT}"/>
+            <column name="swot_t" remarks="Риски" type="${D_TEXT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -3232,8 +3232,8 @@
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-620">
         <createTable remarks="Договоры: конфигурация модуля." tableName="ct_config">
-            <column name="base_currency" remarks="Базовая валюта" type="${D_SMALLCODE}"/>
-            <column name="nat_currency" remarks="Национальная валюта" type="${D_SMALLCODE}"/>
+            <column name="base_currency" remarks="Базовая валюта" type="${D_CHAR5}"/>
+            <column name="nat_currency" remarks="Национальная валюта" type="${D_CHAR5}"/>
             <column name="currency_prec" remarks="Точность денежных величин, знаков после запятой" type="${D_INT}"/>
             <column name="cur_rate_authority_id" remarks="Источник курса" type="${D_INT}"/>
             <column name="cur_rate_type_id" remarks="Тип курса" type="${D_INT}"/>
@@ -3244,19 +3244,19 @@
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-621">
         <createTable remarks="Справочники: валюты." tableName="currency">
-            <column name="upcode" remarks="Код валюты в вернем регистре" type="${D_SMALLCODE}">
+            <column name="upcode" remarks="Код валюты в вернем регистре" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
-            <column name="code" remarks="Код валюты" type="${D_SMALLCODE}">
+            <column name="code" remarks="Код валюты" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
-            <column name="iso" remarks="Код ИСО" type="${D_SMALLCODE}">
+            <column name="iso" remarks="Код ИСО" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
-            <column name="bank_code" remarks="Банковский код валюты" type="${D_SMALLCODE}">
+            <column name="bank_code" remarks="Банковский код валюты" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
-            <column name="cname" remarks="Наименование валюты" type="${D_SMALLNAME}">
+            <column name="cname" remarks="Наименование валюты" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column name="men" remarks="Род: 0 - женский, 1 - мужской, 2 - средний" type="${D_SHORT}">
@@ -3412,7 +3412,7 @@
             <column name="catalog_id" remarks="Идентификатор позиции каталога" type="${D_INT}"/>
             <column name="discount" remarks="Процент скидки/наценки" type="${D_RATIO}"/>
             <column name="price" remarks="Цена" type="${D_SUMMA}"/>
-            <column name="currency_code" remarks="Код валюты" type="${D_SMALLCODE}"/>
+            <column name="currency_code" remarks="Код валюты" type="${D_CHAR5}"/>
             <column name="is_active" remarks="Признак действия позиции рекламного мероприятия: 0 - не действует; 1 - действует" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="is_apply_discount_group" remarks="Признак применения группы с/н: 0 - не применять; 1 - применять" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="is_apply_discount_on_doc" remarks="Признак применения с/н на документ: 0 - не применять; 1 - применять" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
@@ -3485,7 +3485,7 @@
             <column name="docspec_id" remarks="Идентификатор спецификации документа" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="serial_num" remarks="Серийный номер" type="${D_SERIAL_NUMBER}">
+            <column name="serial_num" remarks="Серийный номер" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column name="comment" remarks="Комментарии" type="${D_CHAR256}"/>
@@ -3524,7 +3524,7 @@
             <column name="doctype" remarks="Тип" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер" type="${D_DOCNUMBER}"/>
             <column name="docdate" remarks="Дата" type="${D_DATE}" defaultValueComputed="${today}"/>
-            <column name="currency_code" remarks="Код валюты" type="${D_SMALLCODE}"/>
+            <column name="currency_code" remarks="Код валюты" type="${D_CHAR5}"/>
             <column name="curcource" remarks="Курс валюты" type="${D_CURCOURCE}"/>
             <column name="summacur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
             <column name="summanat" remarks="Сумма" type="${D_SUMMA}"/>
@@ -3550,7 +3550,7 @@
             <column name="to_id" remarks="Контрагент &quot;кому&quot;" type="${D_INT}"/>
             <column name="through_id" remarks="Контрагент &quot;через кого&quot;" type="${D_INT}"/>
             <column name="requester" remarks="Служебное поле" type="${D_SHORT}"/>
-            <column name="original" remarks="Оригинал документа" type="${D_ORIGINAL}"/>
+            <column name="original" remarks="Оригинал документа" type="${D_BINARY}"/>
             <column name="curratetype_id" remarks="Тип курса валюты" type="${D_INT}"/>
             <column name="currateauthority_id" remarks="Источник курса валюты" type="${D_INT}"/>
             <column name="unid" remarks="Уникальный идентификатор" type="${D_UUID}"/>
@@ -3583,7 +3583,7 @@
             <column name="doctype" remarks="Тип" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер" type="${D_DOCNUMBER}"/>
             <column name="docdate" remarks="Дата" type="${D_DATE}" defaultValueComputed="${today}"/>
-            <column name="currency_code" remarks="Код валюты" type="${D_SMALLCODE}"/>
+            <column name="currency_code" remarks="Код валюты" type="${D_CHAR5}"/>
             <column name="curcource" remarks="Курс валюты" type="${D_CURCOURCE}"/>
             <column name="summacur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
             <column name="summanat" remarks="Сумма" type="${D_SUMMA}"/>
@@ -4093,7 +4093,7 @@
             <column name="passp_date" remarks="Паспорт - Дата выдачи" type="${D_DATE}"/>
             <column name="passp_num" remarks="Паспорт - Номер" type="${D_MEDIUMCODE}"/>
             <column name="passp_ser" remarks="Паспорт - Серия" type="${D_MEDIUMCODE}"/>
-            <column name="office" remarks="Должность" type="${D_SMALLNAME}"/>
+            <column name="office" remarks="Должность" type="${D_CHAR50}"/>
             <column name="phone" remarks="Телефон" type="${D_PHONE}"/>
             <column name="comment" remarks="Примечание" type="${D_CHAR256}"/>
             <column name="tabnum" remarks="Табельный номер" type="${D_MEDIUMCODE}"/>
@@ -4131,7 +4131,7 @@
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-654">
         <createTable remarks="Обмен данными: конфигурация." tableName="exch_config">
-            <column name="site_code" remarks="Код текущей БД" type="${D_SMALLCODE}"/>
+            <column name="site_code" remarks="Код текущей БД" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -4176,7 +4176,7 @@
             <column name="id" remarks="Идентификатор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="code" remarks="Код внешней БД" type="${D_SMALLCODE}"/>
+            <column name="code" remarks="Код внешней БД" type="${D_CHAR5}"/>
             <column name="name" remarks="Наименование внешней БД" type="${D_NAME}"/>
             <column name="path_in" remarks="Каталог входящих пакетов" type="${D_FILENAME}"/>
             <column name="path_out" remarks="Каталог исходящих пакетов" type="${D_FILENAME}"/>
@@ -4289,8 +4289,8 @@
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-664">
         <createTable remarks="Финансы: конфигурация модуля." tableName="fin_config">
-            <column name="base_currency" remarks="Базовая валюта" type="${D_SMALLCODE}"/>
-            <column name="nat_currency" remarks="Национальная валюта" type="${D_SMALLCODE}"/>
+            <column name="base_currency" remarks="Базовая валюта" type="${D_CHAR5}"/>
+            <column name="nat_currency" remarks="Национальная валюта" type="${D_CHAR5}"/>
             <column name="currency_prec" remarks="Точность денежных величин, знаков после запятой" type="${D_INT}"/>
             <column name="cur_rate_authority_id" remarks="Источник курса" type="${D_INT}"/>
             <column name="cur_rate_type_id" remarks="Тип курса" type="${D_INT}"/>
@@ -4316,7 +4316,7 @@
             <column name="accname" remarks="Наименование" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="currency_code" remarks="Код валюты" type="${D_SMALLCODE}"/>
+            <column name="currency_code" remarks="Код валюты" type="${D_CHAR5}"/>
             <column name="kind" remarks="Признак:&#10;0 - счет&#10;1 - признак" type="${D_SHORT}">
                 <constraints nullable="false"/>
             </column>
@@ -4387,7 +4387,7 @@
             <column name="responsible" remarks="Ответственный" type="${D_INT}"/>
             <column name="sumnat" remarks="Сумма" type="${D_SUMMA}"/>
             <column name="sumcur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
-            <column name="curcode" remarks="Код валюты" type="${D_SMALLCODE}"/>
+            <column name="curcode" remarks="Код валюты" type="${D_CHAR5}"/>
             <column name="currate" remarks="Курс валюты" type="${D_CURCOURCE}"/>
             <column name="user_id" remarks="Служебное поле" type="${D_INT}"/>
             <column name="from_id" remarks="Контрагент &quot;от кого&quot;" type="${D_INT}"/>
@@ -4428,7 +4428,7 @@
             <column name="responsible" remarks="Ответственный" type="${D_INT}"/>
             <column name="sumnat" remarks="Сумма" type="${D_SUMMA}"/>
             <column name="sumcur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
-            <column name="curcode" remarks="Код валюты" type="${D_SMALLCODE}"/>
+            <column name="curcode" remarks="Код валюты" type="${D_CHAR5}"/>
             <column name="currate" remarks="Курс валюты" type="${D_CURCOURCE}"/>
             <column name="from_id" remarks="Контрагент &quot;от кого&quot;" type="${D_INT}"/>
             <column name="to_id" remarks="Контрагент &quot;кому&quot;" type="${D_INT}"/>
@@ -4565,7 +4565,7 @@
             <column name="remnbegnat" remarks="Остаток на начало" type="${D_SUMMA}"/>
             <column name="remnbegcurplan" remarks="Остаток на начало в валюте по плану" type="${D_SUMMA}"/>
             <column name="remnbegnatplan" remarks="Остаток на начало по плану" type="${D_SUMMA}"/>
-            <column name="curcode" remarks="Код валюты" type="${D_SMALLCODE}"/>
+            <column name="curcode" remarks="Код валюты" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -4588,7 +4588,7 @@
             <column name="remnbegnat" remarks="Остаток на начало" type="${D_SUMMA}"/>
             <column name="remnbegcurplan" remarks="Остаток на начало в валюте по плану" type="${D_SUMMA}"/>
             <column name="remnbegnatplan" remarks="Остаток на начало по плану" type="${D_SUMMA}"/>
-            <column name="curcode" remarks="Код валюты" type="${D_SMALLCODE}"/>
+            <column name="curcode" remarks="Код валюты" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -5820,7 +5820,7 @@
             <column name="resultsum" remarks="Сумма пункта" type="${D_SUMMA}"/>
             <column name="currateauthority_id" remarks="Идентификатор источника курса" type="${D_INT}"/>
             <column name="curratetype_id" remarks="Идентификатор типа курса" type="${D_INT}"/>
-            <column name="curcode" remarks="Код валюты" type="${D_SMALLCODE}"/>
+            <column name="curcode" remarks="Код валюты" type="${D_CHAR5}"/>
             <column name="is_datereldoc" remarks="Дата относительно документа" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="is_sumreldoc" remarks="Сумма относительно документа" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="perc" remarks="Процент" type="${D_QUANTITY}"/>
@@ -5957,17 +5957,17 @@
             <column name="id" remarks="Идентификатор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="upcode" remarks="Код единицы измерения в верхнем регистре" type="${D_SMALLCODE}">
+            <column name="upcode" remarks="Код единицы измерения в верхнем регистре" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
-            <column name="code" remarks="Код единицы измерения" type="${D_SMALLCODE}">
+            <column name="code" remarks="Код единицы измерения" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column name="mname" remarks="Наименование единицы измерения" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
             <column name="divide" remarks="Делимая единица измерения:&#10;0 - не делимая&#10;1 - делимая" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
-            <column name="universal_code" remarks="Международный код" type="${D_SMALLCODE}"/>
+            <column name="universal_code" remarks="Международный код" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -6076,14 +6076,14 @@
             <column name="mch_number" remarks="Коэффициент умножения мощности" type="${D_QUANTITY_EXT}"/>
             <column name="mch_recovery_flag" remarks="Метод начисления возмещения стоимости&#10;0 - на один час операции&#10;1 - на единицу ГП&#10;2 - фиксированная стоимость на партию ГП" type="${D_SHORT}"/>
             <column name="mch_rate" remarks="Норма возмещения стоимости" type="${D_SUMMA}"/>
-            <column name="mch_rate_cur_code" remarks="Валяла нормы на возмещение стоимости" type="${D_SMALLCODE}">
+            <column name="mch_rate_cur_code" remarks="Валяла нормы на возмещение стоимости" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column name="mch_cost_category_id" remarks="Идентификатор категории затрат на оборудование" type="${D_INT}"/>
             <column name="mch_backflush_flag" remarks="Флаг обратного списания возмещения стоимости" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="mch_oh_allocation_flag" remarks="Метод начисления НР&#10;0 - на 1 час операции&#10;1 - на единицу готовой продукции&#10;2 - процент от стоимости работы&#10;3 - фиксированная стоимочсть на паритию ГП" type="${D_SHORT}"/>
             <column name="mch_oh_rate" remarks="Норма НР на оборудование" type="${D_SUMMA}"/>
-            <column name="mch_oh_rate_cur_code" remarks="Валюта норма на оборудование" type="${D_SMALLCODE}">
+            <column name="mch_oh_rate_cur_code" remarks="Валюта норма на оборудование" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column name="mch_oh_ratio" remarks="Коэффициент накладных расходов" type="${D_RATIO}"/>
@@ -6116,7 +6116,7 @@
             <column name="backflush_zone_id" remarks="Идентификтор зоны склада обратного списания" type="${D_INT}"/>
             <column name="mtl_oh_allocation_flag" remarks="Метод начисления НР расходов на материал&#10;0 - на единицу материала&#10;1 - Коэффициетн от стоимости ресурса&#10;2 - фиксированная стоимость на партию" type="${D_SHORT}"/>
             <column name="mtl_oh_rate" remarks="Норма накладных расходов на материал" type="${D_SUMMA}"/>
-            <column name="currency_code" remarks="Валюта нормы НР на материал" type="${D_SMALLCODE}">
+            <column name="currency_code" remarks="Валюта нормы НР на материал" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column name="mtl_oh_ratio" remarks="Коэффициент накладных расходов на материал" type="${D_RATIO}"/>
@@ -6223,8 +6223,8 @@
             <column name="main_time_um" remarks="Ед.изм. времени" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="base_currency" remarks="Базовая валюта" type="${D_SMALLCODE}"/>
-            <column name="nat_currency" remarks="Нацоинальная валюта" type="${D_SMALLCODE}"/>
+            <column name="base_currency" remarks="Базовая валюта" type="${D_CHAR5}"/>
+            <column name="nat_currency" remarks="Нацоинальная валюта" type="${D_CHAR5}"/>
             <column name="currency_rate_authority" remarks="Источник курса" type="${D_INT}"/>
             <column name="currency_rate_type" remarks="Тип курса" type="${D_INT}"/>
             <column name="currency_prec" remarks="Точность денежных вычислений" type="${D_SHORT}"/>
@@ -6285,7 +6285,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="summa" remarks="Сумма" type="${D_SUMMA}"/>
-            <column name="currency_code" remarks="Валюта" type="${D_SMALLCODE}">
+            <column name="currency_code" remarks="Валюта" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -6441,13 +6441,13 @@
             <column defaultValueNumeric="0" name="lbr_number" remarks="Коэффициент умножения мощности" type="${D_QUANTITY_EXT}"/>
             <column defaultValueNumeric="0" name="lbr_rate" remarks="Норма на один час работы" type="${D_SUMMA}"/>
             <column name="lbr_cost_category_id" remarks="Категория затрат на рабочую силу" type="${D_INT}"/>
-            <column name="lbr_rate_cur_code" remarks="Код валюты нормы на один час работы" type="${D_SMALLCODE}">
+            <column name="lbr_rate_cur_code" remarks="Код валюты нормы на один час работы" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="false" name="lbr_backflush_flag" remarks="Флаг обратного списания возмещения стоимости" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="lbr_oh_allocation_flag" remarks="Метод начисления НР&#10;0 - на единицу времени&#10;1 - на единицу готовой продукции&#10;2 - процент от стоиомсти работ&#10;3 - фиксированная стоимость" type="${D_SHORT}"/>
             <column defaultValueNumeric="0" name="lbr_oh_rate" remarks="Норма накладных расходов" type="${D_SUMMA}"/>
-            <column name="lbr_oh_rate_cur_code" remarks="Код валюты нормы НР" type="${D_SMALLCODE}">
+            <column name="lbr_oh_rate_cur_code" remarks="Код валюты нормы НР" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueNumeric="0" name="lbr_oh_ratio" remarks="Коэффициент накладных расходов" type="${D_RATIO}"/>
@@ -6468,14 +6468,14 @@
             <column defaultValueNumeric="0" name="mch_number" remarks="Коэффициент умножения мощности" type="${D_QUANTITY_EXT}"/>
             <column name="mch_recovery_flag" remarks="Метод начисления возмещения стоимости&#10;0 - на один час операции&#10;1 - на единицу ГП&#10;2 - фиксированная стоимость на партию ГП" type="${D_SHORT}"/>
             <column defaultValueNumeric="0" name="mch_rate" remarks="Норма возмещения стоимости" type="${D_SUMMA}"/>
-            <column name="mch_rate_cur_code" remarks="Валяла нормы на возмещение стоимости" type="${D_SMALLCODE}">
+            <column name="mch_rate_cur_code" remarks="Валяла нормы на возмещение стоимости" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column name="mch_cost_category_id" remarks="Идентификатор категории затрат на оборудование" type="${D_INT}"/>
             <column defaultValueComputed="false" name="mch_backflush_flag" remarks="Флаг обратного списания возмещения стоимости" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="mch_oh_allocation_flag" remarks="Метод начисления НР&#10;0 - на 1 час операции&#10;1 - на единицу готовой продукции&#10;2 - процент от стоимости работы&#10;3 - фиксированная стоимочсть на паритию ГП" type="${D_SHORT}"/>
             <column defaultValueNumeric="0" name="mch_oh_rate" remarks="Норма НР на оборудование" type="${D_SUMMA}"/>
-            <column name="mch_oh_rate_cur_code" remarks="Валюта норма на оборудование" type="${D_SMALLCODE}">
+            <column name="mch_oh_rate_cur_code" remarks="Валюта норма на оборудование" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueNumeric="0" name="mch_oh_ratio" remarks="Коэффициент накладных расходов" type="${D_RATIO}"/>
@@ -6507,7 +6507,7 @@
             <column name="backflush_zone_id" remarks="Идентификтор зоны склада обратного списания" type="${D_INT}"/>
             <column name="mtl_oh_allocation_flag" remarks="Метод начисления НР расходов на материал&#10;0 - на единицу материала&#10;1 - Коэффициетн от стоимости ресурса&#10;2 - фиксированная стоимость на партию" type="${D_SHORT}"/>
             <column defaultValueNumeric="0" name="mtl_oh_rate" remarks="Норма накладных расходов на материал" type="${D_SUMMA}"/>
-            <column name="currency_code" remarks="Валюта нормы НР на материал" type="${D_SMALLCODE}">
+            <column name="currency_code" remarks="Валюта нормы НР на материал" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueNumeric="0" name="mtl_oh_ratio" remarks="Коэффициент накладных расходов на материал" type="${D_RATIO}"/>
@@ -6610,14 +6610,14 @@
             <column name="lbr_time_um" remarks="Ед.изм. времени для оплаты РС" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="lbr_rate_cur_code" remarks="Код валюты для нормы на единицу измерения времени работы РС" type="${D_SMALLCODE}"/>
+            <column name="lbr_rate_cur_code" remarks="Код валюты для нормы на единицу измерения времени работы РС" type="${D_CHAR5}"/>
             <column name="lbr_cost_category_id" remarks="Категория затрат на рабочую силу" type="${D_INT}"/>
             <column name="lbr_oh_allocation_flag" remarks="Метод начисления НР на РС&#10;0 - на единицу времени&#10;1 - на единицу готовой продукции&#10;2 - процент от стоимости работы&#10;3 - фиксированная стоимость на партию" type="${D_SHORT}"/>
             <column name="lbr_oh_rate" remarks="Норма НР на РС на единицу измерения времения работы РС" type="${D_SUMMA}"/>
             <column name="lbr_oh_time_um" remarks="Ед.изм. времени для ставки НР на РС" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="lbr_oh_rate_cur_code" remarks="Код валюты для нормы на НР на РС" type="${D_SMALLCODE}"/>
+            <column name="lbr_oh_rate_cur_code" remarks="Код валюты для нормы на НР на РС" type="${D_CHAR5}"/>
             <column name="lbr_oh_ratio" remarks="Коэффициент НР на рабочую силу" type="${D_RATIO}"/>
             <column name="lbr_oh_cost_category_id" remarks="Категория затрат НР на рабочую силы" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -6676,7 +6676,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="resource_group_code" remarks="Код" type="${D_CHAR20}"/>
-            <column name="description" remarks="Описание" type="${D_SMALLNAME}">
+            <column name="description" remarks="Описание" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column name="resource_type" remarks="Тип ресурса&#10;0 - материалы&#10;1 - оборудование&#10;2 - рабочая сила&#10;3 - рабочий центр&#10;4 - подразделения" type="${D_SHORT}"/>
@@ -7180,7 +7180,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="ovr_card_id" remarks="Идентификатор ЛКС" type="${D_INT}"/>
-            <column name="measure_upcode" remarks="Код единицы измерения" type="${D_SMALLCODE}"/>
+            <column name="measure_upcode" remarks="Код единицы измерения" type="${D_CHAR5}"/>
             <column name="catalog_id" remarks="Идентификатор позиции КТУ" type="${D_INT}"/>
             <column name="ovr_norm_spec_id" remarks="Идентификатор позиции спецификации нормы выдачи" type="${D_INT}"/>
             <column name="ovr_norm_head_id" remarks="Идентификатор заголовка нормы выдачи" type="${D_INT}"/>
@@ -7285,7 +7285,7 @@
             <column name="ovr_norm_spec_name" remarks="Наименование" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="measure_upcode" remarks="Единица измерения" type="${D_SMALLCODE}"/>
+            <column name="measure_upcode" remarks="Единица измерения" type="${D_CHAR5}"/>
             <column name="catalog_groups_type_id" remarks="Тип группы&#10;0 - специальная одежда&#10;1 - форменная одежда&#10;2 - индивидуальные средства защита&#10;3 - инструменты&#10;4 - оргтехника, мебель&#10;5 - прочие ТМЦ" type="${D_SHORT}"/>
             <column name="shelflife" remarks="Срок использования" type="${D_QUANTITY}"/>
             <column name="shelflife_meas" remarks="Единица измерения срока использования&#10;1 - час&#10;2 - день&#10;3 - месяц&#10;4 - год" type="${D_TIME_PERIOD_KIND}" defaultValueNumeric="0"/>
@@ -7339,13 +7339,13 @@
             <column name="catalog_groups_type_id" remarks="Тип группы&#10;0 - специальная одежда&#10;1 - форменная одежда&#10;2 - индивидуальные средства защиты&#10;3 - инструменты&#10;4 - оргтехника, мебель&#10;5 - прочие ТМЦ" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="clothes_size" remarks="Размер одежды" type="${D_SIZE}"/>
-            <column name="shoes_size" remarks="размер обуви" type="${D_SIZE}"/>
-            <column name="hat_size" remarks="Размер головного убора" type="${D_SIZE}"/>
-            <column name="gas_mask_size" remarks="Размер противогаза" type="${D_SIZE}"/>
-            <column name="respirator_size" remarks="Размер респиратора" type="${D_SIZE}"/>
-            <column name="mittens_size" remarks="Размер рукавиц" type="${D_SIZE}"/>
-            <column name="gloves_size" remarks="Размер перчаток" type="${D_SIZE}"/>
+            <column name="clothes_size" remarks="Размер одежды" type="${D_CHAR15}"/>
+            <column name="shoes_size" remarks="размер обуви" type="${D_CHAR15}"/>
+            <column name="hat_size" remarks="Размер головного убора" type="${D_CHAR15}"/>
+            <column name="gas_mask_size" remarks="Размер противогаза" type="${D_CHAR15}"/>
+            <column name="respirator_size" remarks="Размер респиратора" type="${D_CHAR15}"/>
+            <column name="mittens_size" remarks="Размер рукавиц" type="${D_CHAR15}"/>
+            <column name="gloves_size" remarks="Размер перчаток" type="${D_CHAR15}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -7409,25 +7409,25 @@
             <column name="inn" remarks="ИНН" type="${D_CHAR20}">
                 <constraints nullable="false"/>
             </column>
-            <column name="okonh" remarks="Код ОКОНХ" type="${D_SMALLNAME}">
+            <column name="okonh" remarks="Код ОКОНХ" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column name="okpo" remarks="Код ОКПО" type="${D_CHAR20}">
                 <constraints nullable="false"/>
             </column>
-            <column name="city" remarks="Почтовый адрес - Город" type="${D_SMALLNAME}">
+            <column name="city" remarks="Почтовый адрес - Город" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
-            <column name="area" remarks="Почтовый адрес - Область" type="${D_SMALLNAME}">
+            <column name="area" remarks="Почтовый адрес - Область" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column name="address" remarks="Почтовый адрес - Адрес" type="${D_CHAR256}">
                 <constraints nullable="false"/>
             </column>
-            <column name="citylegal" remarks="Юридический адрес - Город" type="${D_SMALLNAME}">
+            <column name="citylegal" remarks="Юридический адрес - Город" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
-            <column name="arealegal" remarks="Юридический адрес - Область" type="${D_SMALLNAME}">
+            <column name="arealegal" remarks="Юридический адрес - Область" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column name="addresslegal" remarks="Юридический адрес - Адрес" type="${D_CHAR256}">
@@ -7435,11 +7435,11 @@
             </column>
             <column name="comment" remarks="Комментарий" type="${D_CHAR256}"/>
             <column name="maxsupcredit" remarks="Сумма максимального кредита поставщика" type="${D_SUMMA}"/>
-            <column name="maxsupcreditcur" remarks="Код валюты кредита поставщика в верхнем регистре" type="${D_SMALLCODE}"/>
+            <column name="maxsupcreditcur" remarks="Код валюты кредита поставщика в верхнем регистре" type="${D_CHAR5}"/>
             <column name="termsupcredit" remarks="Срок кредитования поставщика в днях" type="${D_SHORT}"/>
             <column name="penaltysup" remarks="Пеня за просрочку поставщика" type="${D_RATIO}"/>
             <column name="maxcuscredit" remarks="Сумма максимального кредита покупателя" type="${D_SUMMA}"/>
-            <column name="maxcuscreditcur" remarks="Код валюты кредита покупателя в верхнем регистре" type="${D_SMALLCODE}"/>
+            <column name="maxcuscreditcur" remarks="Код валюты кредита покупателя в верхнем регистре" type="${D_CHAR5}"/>
             <column name="termcuscredit" remarks="Срок кредитования покупателя в днях" type="${D_SHORT}"/>
             <column name="penaltycus" remarks="Пеня за просрочку покупателя" type="${D_RATIO}"/>
             <column name="kpp" remarks="КПП" type="${D_CHAR20}"/>
@@ -7449,7 +7449,7 @@
             <column name="zip" remarks="Почтовый адрес - Индекс" type="${D_ZIPCODE}"/>
             <column name="ziplegal" remarks="Юридический адрес - Индекс" type="${D_ZIPCODE}"/>
             <column name="inn_unique" remarks="Признак уникальности ИНН: 0 - не уникален, 1 - уникален" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
-            <column name="okved" remarks="Код ОКВЭД" type="${D_SMALLNAME}"/>
+            <column name="okved" remarks="Код ОКВЭД" type="${D_CHAR50}"/>
             <column name="person_id" remarks="Идентификатор физического лица" type="${D_INT}"/>
             <column name="zipcode_id" remarks="Идентификатор индекса почтового адреса" type="${D_INT}"/>
             <column name="country_id" remarks="Идентификатор страны почтового адреса" type="${D_INT}"/>
@@ -7611,7 +7611,7 @@
             <column name="planned" remarks="0 - фактический платеж&#10;1 - плановый платеж" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="pdate" remarks="Дата платежа" type="${D_DATE}"/>
             <column name="name" remarks="Наименование" type="${D_NAME}"/>
-            <column name="curcode" remarks="Код валюты" type="${D_SMALLCODE}"/>
+            <column name="curcode" remarks="Код валюты" type="${D_CHAR5}"/>
             <column name="curratetype_id" remarks="Тип валюты" type="${D_INT}"/>
             <column name="currateauthority_id" remarks="Источник валюты" type="${D_INT}"/>
             <column name="currate" remarks="Курс валюты" type="${D_RATIO}"/>
@@ -7695,7 +7695,7 @@
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-829">
         <createTable remarks="Платежный календарь: конфигурация" tableName="pmc_config">
-            <column name="nat_currency" remarks="Код национальной валюты" type="${D_SMALLCODE}"/>
+            <column name="nat_currency" remarks="Код национальной валюты" type="${D_CHAR5}"/>
             <column name="currency_prec" remarks="Точность денежных велеичин" type="${D_SHORT}"/>
             <column name="cur_rate_type_id" remarks="Тип валюты" type="${D_INT}"/>
             <column name="cur_rate_authority_id" remarks="Источник валюты" type="${D_INT}"/>
@@ -7714,7 +7714,7 @@
             <column name="factdate" remarks="Фактическая дата иполнения" type="${D_DATE}"/>
             <column name="sumcur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
             <column name="sumnat" remarks="Сумма" type="${D_SUMMA}"/>
-            <column name="curcode" remarks="Код валюты" type="${D_SMALLCODE}"/>
+            <column name="curcode" remarks="Код валюты" type="${D_CHAR5}"/>
             <column name="curratetype_id" remarks="Тип валюты" type="${D_INT}"/>
             <column name="currateauthority_id" remarks="Источник валюты" type="${D_INT}"/>
             <column name="transferkind" remarks="Признак создания внутренним перемещением" type="${D_SHORT}"/>
@@ -7751,7 +7751,7 @@
             <column name="from_id" remarks="От кого" type="${D_INT}"/>
             <column name="to_id" remarks="Кому" type="${D_INT}"/>
             <column name="sumcur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
-            <column name="curcode" remarks="Код валюты" type="${D_SMALLCODE}"/>
+            <column name="curcode" remarks="Код валюты" type="${D_CHAR5}"/>
             <column name="curratetype_id" remarks="Тип валюты" type="${D_INT}"/>
             <column name="currateauthority_id" remarks="Источник валюты" type="${D_INT}"/>
             <column name="paymentdelay" remarks="Количество дней банковской просрочки" type="${D_INT}"/>
@@ -7811,7 +7811,7 @@
             <column name="catalog_id" remarks="Идентификатор позиции каталога" type="${D_INT}"/>
             <column name="actdatetill" remarks="Дата начала действия" type="${D_DATE}"/>
             <column name="actdatefrom" remarks="Дата окончания действия" type="${D_DATE}"/>
-            <column name="curcode" remarks="Код валюты" type="${D_SMALLCODE}"/>
+            <column name="curcode" remarks="Код валюты" type="${D_CHAR5}"/>
             <column name="currateauthority_id" remarks="Источник курса" type="${D_INT}"/>
             <column name="curratetype_id" remarks="Тип курса" type="${D_INT}"/>
             <column name="indocmodel1_id" remarks="Идентификатор образца прихода" type="${D_INT}"/>
@@ -8532,7 +8532,7 @@
             <column name="contacthist_id" remarks="Идентификатор контакта" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="filedoc" remarks="Двоичный образ приложенного файла (хранится в базе)" type="${D_ORIGINAL}"/>
+            <column name="filedoc" remarks="Двоичный образ приложенного файла (хранится в базе)" type="${D_BINARY}"/>
             <column name="filename" remarks="Имя файла" type="${D_FILENAME}"/>
             <column name="fdescription" remarks="Описание файла" type="${D_CHAR256}"/>
             <column name="filedate" remarks="Дата" type="${D_DATETIME}"/>
@@ -8574,7 +8574,7 @@
             </column>
             <column name="alevel" remarks="Уровень адресного объекта" type="${D_INT}"/>
             <column name="scname" remarks="Сокращение" type="${D_CHAR15}"/>
-            <column name="socrname" remarks="Наименование" type="${D_SMALLNAME}"/>
+            <column name="socrname" remarks="Наименование" type="${D_CHAR50}"/>
             <column name="kod_t_st" remarks="Служебное поле" type="${D_CHAR4}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -8590,7 +8590,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="name" remarks="Наименование" type="${D_NAME}"/>
-            <column name="okin" remarks="Код ОКИН" type="${D_SMALLCODE}"/>
+            <column name="okin" remarks="Код ОКИН" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -8608,25 +8608,25 @@
             <column name="begindate" remarks="Действует с" type="${D_DATE}"/>
             <column name="full_address" remarks="Полный адрес" type="${D_CHAR256}"/>
             <column name="post_index" remarks="Почтовый индекс" type="${D_MEDIUMCODE}"/>
-            <column name="country" remarks="Страна" type="${D_SMALLNAME}">
+            <column name="country" remarks="Страна" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
-            <column name="region" remarks="Регион" type="${D_SMALLNAME}">
+            <column name="region" remarks="Регион" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
-            <column name="district" remarks="Район" type="${D_SMALLNAME}">
+            <column name="district" remarks="Район" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column name="district_type" remarks="Соращенное наименование типа района" type="${D_CHAR15}"/>
-            <column name="city" remarks="Город" type="${D_SMALLNAME}">
+            <column name="city" remarks="Город" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column name="city_type" remarks="Сокращенное наименование типа города" type="${D_CHAR15}"/>
-            <column name="area" remarks="Населенный пункт" type="${D_SMALLNAME}">
+            <column name="area" remarks="Населенный пункт" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column name="area_type" remarks="Сокращенное наименование типа населенного пункта" type="${D_CHAR15}"/>
-            <column name="street" remarks="Улица" type="${D_SMALLNAME}">
+            <column name="street" remarks="Улица" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column name="street_type" remarks="Сокращенное наименование типа улицы" type="${D_CHAR15}"/>
@@ -8664,8 +8664,8 @@
                 <constraints nullable="false"/>
             </column>
             <column name="costs_anl_id" remarks="Идентификатор позиции каталога, соответствующей аналитике состава затрат" type="${D_INT}"/>
-            <column name="base_currency" remarks="Код базовой валюты" type="${D_SMALLCODE}"/>
-            <column name="nat_currency" remarks="Код национальной валюты" type="${D_SMALLCODE}"/>
+            <column name="base_currency" remarks="Код базовой валюты" type="${D_CHAR5}"/>
+            <column name="nat_currency" remarks="Код национальной валюты" type="${D_CHAR5}"/>
             <column name="currency_prec" remarks="Точность денежных вычислений" type="${D_SHORT}"/>
             <column name="cur_rate_authority_id" remarks="Источник валюты" type="${D_INT}"/>
             <column name="cur_rate_type_id" remarks="Тип валюты" type="${D_INT}"/>
@@ -8697,10 +8697,10 @@
             <column name="id" remarks="Идентификатор записи" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="ccode" remarks="Код страны" type="${D_SMALLCODE}">
+            <column name="ccode" remarks="Код страны" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
-            <column name="cname" remarks="Наименование страны" type="${D_SMALLNAME}">
+            <column name="cname" remarks="Наименование страны" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -8742,7 +8742,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="name" remarks="Наименование" type="${D_NAME}"/>
-            <column name="okin" remarks="Код ОКИН" type="${D_SMALLCODE}"/>
+            <column name="okin" remarks="Код ОКИН" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -8800,7 +8800,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="priority" remarks="Приоритет" type="${D_INT}"/>
-            <column name="okin" remarks="Код ОКИН" type="${D_SMALLCODE}"/>
+            <column name="okin" remarks="Код ОКИН" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -8834,7 +8834,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="priority" remarks="Приоритет" type="${D_INT}"/>
-            <column name="okin" remarks="Код ОКИН" type="${D_SMALLCODE}"/>
+            <column name="okin" remarks="Код ОКИН" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -8848,7 +8848,7 @@
             <column name="name" remarks="Наименование" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="okin" remarks="Код ОКИН" type="${D_SMALLCODE}"/>
+            <column name="okin" remarks="Код ОКИН" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -8866,31 +8866,31 @@
                 <constraints nullable="false"/>
             </column>
             <column name="is_basic" remarks="Признак базового документа" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
-            <column name="series_left" remarks="Левая часть серии" type="${D_SMALLCODE}"/>
-            <column name="series_divider" remarks="Разделитель серии" type="${D_SMALLCODE}"/>
-            <column name="series_right" remarks="Правая часть серии" type="${D_SMALLCODE}"/>
+            <column name="series_left" remarks="Левая часть серии" type="${D_CHAR5}"/>
+            <column name="series_divider" remarks="Разделитель серии" type="${D_CHAR5}"/>
+            <column name="series_right" remarks="Правая часть серии" type="${D_CHAR5}"/>
             <column name="number" remarks="Номер документа" type="${D_CHAR20}"/>
             <column name="who_issued" remarks="Кем выдан" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
             <column name="when_issued" remarks="Когда выдан" type="${D_DATE}"/>
             <column name="active_till" remarks="Действует до" type="${D_DATE}"/>
-            <column name="citizenship" remarks="Гражданство" type="${D_SMALLNAME}">
+            <column name="citizenship" remarks="Гражданство" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column name="address_id" remarks="Идентификатор адреса" type="${D_INT}"/>
             <column name="birthdate" remarks="Дата рождения" type="${D_DATE}"/>
             <column name="nationality_id" remarks="Идентификатор национальности" type="${D_INT}"/>
-            <column name="birthplace_country" remarks="Место рождения: страна" type="${D_SMALLNAME}">
+            <column name="birthplace_country" remarks="Место рождения: страна" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
-            <column name="birthplace_region" remarks="Место рождения: регион" type="${D_SMALLNAME}">
+            <column name="birthplace_region" remarks="Место рождения: регион" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
-            <column name="birthplace_district" remarks="Место рождения: район" type="${D_SMALLNAME}">
+            <column name="birthplace_district" remarks="Место рождения: район" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
-            <column name="birthplace_city" remarks="Место рождения: город" type="${D_SMALLNAME}">
+            <column name="birthplace_city" remarks="Место рождения: город" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column name="birthplace_okato" remarks="Код по ОКАТО" type="${D_CHAR20}"/>
@@ -8912,7 +8912,7 @@
             </column>
             <column name="lseries_length" remarks="Длина левой части серии" type="${D_INT}"/>
             <column name="rseries_length" remarks="Длина правой части серии" type="${D_INT}"/>
-            <column name="series_divider" remarks="Символ-разделитель серии" type="${D_SMALLCODE}"/>
+            <column name="series_divider" remarks="Символ-разделитель серии" type="${D_CHAR5}"/>
             <column name="number_length" remarks="Длина номера" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -8956,7 +8956,7 @@
             <column name="id" remarks="Идентификатор записи" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="kname" remarks="Наименование объекта" type="${D_SMALLNAME}"/>
+            <column name="kname" remarks="Наименование объекта" type="${D_CHAR50}"/>
             <column name="ktype" remarks="Сокращенное наименование элемента адреса" type="${D_MEDIUMCODE}"/>
             <column name="kcode" remarks="Иерархический классификационный код объекта" type="${D_CHAR15}"/>
             <column name="post_index" remarks="Почтовый индекс" type="${D_ZIPCODE}"/>
@@ -8976,7 +8976,7 @@
             <column name="name" remarks="Наименование" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="okin" remarks="Код ОКИН" type="${D_SMALLCODE}"/>
+            <column name="okin" remarks="Код ОКИН" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -8991,7 +8991,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="name" remarks="Наименование" type="${D_NAME}"/>
-            <column name="okin" remarks="Код ОКИН" type="${D_SMALLCODE}"/>
+            <column name="okin" remarks="Код ОКИН" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9006,7 +9006,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="name" remarks="Наименование" type="${D_NAME}"/>
-            <column name="okin" remarks="Код ОКИН" type="${D_SMALLCODE}"/>
+            <column name="okin" remarks="Код ОКИН" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9045,7 +9045,7 @@
             <column name="id" remarks="Идентификатор записи" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="nname" remarks="Наименование национальности" type="${D_SMALLNAME}">
+            <column name="nname" remarks="Наименование национальности" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -9089,8 +9089,8 @@
             <column name="borndate" remarks="Дата рождения" type="${D_DATE}"/>
             <column name="sex" remarks="Пол:&#10;0 - мужской&#10;1 - женский" type="${D_INT}"/>
             <column name="stature" remarks="Рост" type="${D_QUANTITY}"/>
-            <column name="measure_upcode" remarks="Код единицы измерения роста" type="${D_SMALLCODE}"/>
-            <column name="photo" remarks="Фотография сотрудника" type="${D_ORIGINAL}"/>
+            <column name="measure_upcode" remarks="Код единицы измерения роста" type="${D_CHAR5}"/>
+            <column name="photo" remarks="Фотография сотрудника" type="${D_BINARY}"/>
             <column name="pension_number" remarks="Номер карточки пенсионного страхования" type="${D_CHAR20}"/>
             <column name="insuredclass_id" remarks="Идентификатор категории плательщиков страховых взносов" type="${D_INT}"/>
             <column name="inn" remarks="Индивидуальный номер налогоплательщика (ИНН)" type="${D_CHAR20}"/>
@@ -9211,8 +9211,8 @@
             <column name="borndate" remarks="Дата рождения" type="${D_DATE}"/>
             <column name="sex" remarks="Пол:&#10;0 - мужской&#10;1 - женский" type="${D_INT}"/>
             <column name="stature" remarks="Рост" type="${D_QUANTITY}"/>
-            <column name="measure_upcode" remarks="Код единицы измерения роста" type="${D_SMALLCODE}"/>
-            <column name="photo" remarks="Фотография сотрудника" type="${D_ORIGINAL}"/>
+            <column name="measure_upcode" remarks="Код единицы измерения роста" type="${D_CHAR5}"/>
+            <column name="photo" remarks="Фотография сотрудника" type="${D_BINARY}"/>
             <column name="pension_number" remarks="Номер карточки пенсионного страхования" type="${D_CHAR20}"/>
             <column name="insuredclass_id" remarks="Идентификатор категории плательщиков страховых взносов" type="${D_INT}"/>
             <column name="inn" remarks="Индивидуальный номер налогоплательщика (ИНН)" type="${D_CHAR20}"/>
@@ -9614,7 +9614,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="okso" remarks="Код по ОКСО" type="${D_CHAR20}"/>
-            <column name="msko" remarks="Код по МСКО" type="${D_SMALLCODE}"/>
+            <column name="msko" remarks="Код по МСКО" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -9717,7 +9717,7 @@
             <column name="id" remarks="Идентификатор записи" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="sname" remarks="Наименование улицы" type="${D_SMALLNAME}"/>
+            <column name="sname" remarks="Наименование улицы" type="${D_CHAR50}"/>
             <column name="ktype" remarks="Сокращенное наименование элемента адреса" type="${D_MEDIUMCODE}"/>
             <column name="kcode" remarks="Иерархический классификационный код объекта" type="${D_MEDIUMCODE}"/>
             <column name="post_index" remarks="Почтовый индекс" type="${D_ZIPCODE}"/>
@@ -9927,7 +9927,7 @@
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="${today}" name="createdate" remarks="Дата создания" type="${D_DATE}"/>
-            <column name="currency_code" remarks="Код валюты в верхнем регистре" type="${D_SMALLCODE}">
+            <column name="currency_code" remarks="Код валюты в верхнем регистре" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column name="basepricetype" remarks="Идентификатор базового типа цены" type="${D_INT}"/>
@@ -10069,7 +10069,7 @@
             <column name="address" remarks="Адрес" type="${D_CHAR256}"/>
             <column name="zip" remarks="Индекс" type="${D_ZIPCODE}"/>
             <column name="corr_acc" remarks="Корреспондирующий счет" type="${D_CHAR30}"/>
-            <column name="corr_acc_currency" remarks="Код валюты корр.счета" type="${D_SMALLCODE}"/>
+            <column name="corr_acc_currency" remarks="Код валюты корр.счета" type="${D_CHAR5}"/>
             <column name="corr_name" remarks="Наименование корреспондента" type="${D_CHAR256}"/>
             <column name="corr_address" remarks="Адрес корреспондента" type="${D_CHAR256}"/>
             <column name="swift" remarks="SWIFT" type="${D_CHAR30}"/>
@@ -10094,7 +10094,7 @@
             <column name="bank_id" remarks="Идентификатор банка" type="${D_INT}"/>
             <column name="name" remarks="Наименование" type="${D_NAME}"/>
             <column name="account_type_id" remarks="Тип счета" type="${D_INT}"/>
-            <column name="curcode" remarks="Валюта счета" type="${D_SMALLCODE}"/>
+            <column name="curcode" remarks="Валюта счета" type="${D_CHAR5}"/>
             <column name="account" remarks="Номер счета" type="${D_CHAR30}"/>
             <column name="is_default" remarks="Флаг по умолчанию" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="unid" remarks="Уникальный код" type="${D_UUID}"/>
@@ -10166,7 +10166,7 @@
             <column name="id" remarks="Идентификтаор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="ccode" remarks="Код" type="${D_SMALLCODE}">
+            <column name="ccode" remarks="Код" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column name="cname" remarks="Наименование" type="${D_NAME}">
@@ -10179,7 +10179,7 @@
             <column name="phone_code" remarks="Телефонный код" type="${D_MEDIUMCODE}"/>
             <column name="full_name" remarks="Полное наименование" type="${D_NAME}"/>
             <column name="address_rule" remarks="Правило формирования строки адреса" type="${D_CHAR256}"/>
-            <column name="address_dlm" remarks="Раздельтель строки адреса" type="${D_SMALLCODE}"/>
+            <column name="address_dlm" remarks="Раздельтель строки адреса" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -10190,10 +10190,10 @@
             <column name="id" remarks="Идентификатор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="currency_code1" remarks="Код валюты 1" type="${D_SMALLCODE}">
+            <column name="currency_code1" remarks="Код валюты 1" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
-            <column name="currency_code2" remarks="Код валюты 2" type="${D_SMALLCODE}">
+            <column name="currency_code2" remarks="Код валюты 2" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column name="rate" remarks="Курс (= сумма_в_валюте1 / сумма_в_валюте2)" type="${D_RATIO}">
@@ -10250,7 +10250,7 @@
             <column name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="cdnumber" type="${D_SMALLNAME}">
+            <column name="cdnumber" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
         </createTable>
@@ -10312,7 +10312,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="priority" remarks="Приоритет" type="${D_INT}"/>
-            <column name="okin" remarks="Код ОКИН" type="${D_SMALLCODE}"/>
+            <column name="okin" remarks="Код ОКИН" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -10346,7 +10346,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="priority" remarks="Приоритет" type="${D_INT}"/>
-            <column name="okin" remarks="Код ОКИН" type="${D_SMALLCODE}"/>
+            <column name="okin" remarks="Код ОКИН" type="${D_CHAR5}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -10390,7 +10390,7 @@
             </column>
             <column name="is_basic" remarks="Базовый" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="series_left" remarks="Левая часть серии" type="${D_MEDIUMCODE}"/>
-            <column name="series_divider" remarks="Разделитель серии" type="${D_SMALLCODE}"/>
+            <column name="series_divider" remarks="Разделитель серии" type="${D_CHAR5}"/>
             <column name="series_right" remarks="Правая часть серии" type="${D_MEDIUMCODE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_CHAR20}"/>
             <column name="who_issued" remarks="Кем выдан" type="${D_NAME}"/>
@@ -10423,7 +10423,7 @@
             </column>
             <column name="lseries_length" remarks="Длина левой части серии" type="${D_INT}"/>
             <column name="rseries_length" remarks="Длина правой части серии" type="${D_INT}"/>
-            <column name="series_divider" remarks="Разделитель серии" type="${D_SMALLCODE}"/>
+            <column name="series_divider" remarks="Разделитель серии" type="${D_CHAR5}"/>
             <column name="number_length" remarks="Длина номера" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -10467,7 +10467,7 @@
             <column name="id" remarks="Идентификатор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="nname" remarks="Наименование" type="${D_SMALLNAME}">
+            <column name="nname" remarks="Наименование" type="${D_CHAR50}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -10493,7 +10493,7 @@
             <column name="patronymic" remarks="Отчество" type="${D_NAME}"/>
             <column name="borndate" remarks="Дата рождения" type="${D_DATE}"/>
             <column name="sex" remarks="Пол" type="${D_INT}"/>
-            <column name="photo" remarks="Фотография" type="${D_ORIGINAL}"/>
+            <column name="photo" remarks="Фотография" type="${D_BINARY}"/>
             <column name="inn" remarks="ИНН" type="${D_CHAR20}"/>
             <column name="additional_info" remarks="Дополнительные сведения" type="${D_TEXT}"/>
             <column name="code" remarks="Полное имя" type="${D_NAME}"/>
@@ -10566,7 +10566,7 @@
             </column>
             <column name="createdate" remarks="Дата создания" type="${D_DATE}"/>
             <column name="comments" remarks="Комментарии" type="${D_CHAR256}"/>
-            <column name="original" remarks="Оригинал документа" type="${D_ORIGINAL}"/>
+            <column name="original" remarks="Оригинал документа" type="${D_BINARY}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -11718,8 +11718,8 @@
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-1029">
         <createTable remarks="Расчеты с партнерами: конфигурация модуля." tableName="stl_config">
-            <column name="base_currency" remarks="Базовая валюта" type="${D_SMALLCODE}"/>
-            <column name="nat_currency" remarks="Национальная валюта" type="${D_SMALLCODE}"/>
+            <column name="base_currency" remarks="Базовая валюта" type="${D_CHAR5}"/>
+            <column name="nat_currency" remarks="Национальная валюта" type="${D_CHAR5}"/>
             <column name="currency_prec" remarks="Точность округления денежных величин, знаков после запятой" type="${D_INT}"/>
             <column name="cur_rate_type_id" remarks="Тип курса валюты" type="${D_INT}"/>
             <column name="cur_rate_authority_id" remarks="Источник курса валюты" type="${D_INT}"/>
@@ -11740,15 +11740,15 @@
             <column defaultValueNumeric="0" name="endquan" remarks="Конечное количество партии" type="${D_QUANTITY_EXT}"/>
             <column defaultValueNumeric="0" name="pricenat" remarks="Цена" type="${D_SUMMA}"/>
             <column defaultValueNumeric="0" name="pricecur" remarks="Цена в валюте" type="${D_SUMMA}"/>
-            <column name="currency_code" remarks="Код валюты" type="${D_SMALLCODE}"/>
+            <column name="currency_code" remarks="Код валюты" type="${D_CHAR5}"/>
             <column name="doctype" remarks="Тип  приходного документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер приходного документа" type="${D_DOCNUMBER}"/>
             <column name="docdate" remarks="Дата приходного документа" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column defaultValueComputed="'2015-11-22'::date" name="createdate" remarks="Дата создания партии" type="${D_DATE}"/>
             <column name="bestbefore" remarks="Годен до, дата" type="${D_DATETIME}"/>
             <column name="contractor_id" remarks="Контрагент, от которого получена партия" type="${D_INT}"/>
-            <column name="number_lot" remarks="Номер партии" type="${D_SERIAL_NUMBER}"/>
-            <column name="vendor_lot" remarks="Номер партии поставщика" type="${D_SERIAL_NUMBER}"/>
+            <column name="number_lot" remarks="Номер партии" type="${D_CHAR50}"/>
+            <column name="vendor_lot" remarks="Номер партии поставщика" type="${D_CHAR50}"/>
             <column name="certificate" remarks="Сертификат" type="${D_NAME}"/>
             <column name="comment" remarks="Комментарии" type="${D_CHAR256}"/>
             <column defaultValueNumeric="0" name="beginquan2" remarks="Начальное количество партии в дополнительной ЕИ" type="${D_QUANTITY_EXT}"/>
@@ -11963,7 +11963,7 @@
             <column name="id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="code" type="${D_SMALLCODE}">
+            <column name="code" type="${D_CHAR5}">
                 <constraints nullable="false"/>
             </column>
             <column name="name" type="${D_NAME}">
@@ -12182,8 +12182,8 @@
             <column name="RELEASE" remarks="Версия БД: номер релиза" type="${D_SHORT}">
                 <constraints nullable="false"/>
             </column>
-            <column name="base_currency" remarks="Базовая валюта" type="${D_SMALLCODE}"/>
-            <column name="national_currency" remarks="Национальная валюта" type="${D_SMALLCODE}"/>
+            <column name="base_currency" remarks="Базовая валюта" type="${D_CHAR5}"/>
+            <column name="national_currency" remarks="Национальная валюта" type="${D_CHAR5}"/>
             <column name="use_analitic_link" remarks="Не используется" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="recurse_folder" remarks="Признак рекурсивного извлечения папок:&#10;0 - нет&#10;1 - да" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="recurse_catfolder" remarks="Признак рекурсивного извлечения папок каталога:&#10;0 - нет&#10;1 - да" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
@@ -12352,7 +12352,7 @@
             <column name="kname" remarks="Наименование" type="${D_NAME}"/>
             <column name="priority" remarks="Приоритет" type="${D_INT}"/>
             <column name="is_whole_day" remarks="Учитывать по дням" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
-            <column name="mnemocode" remarks="Мнемокод" type="${D_SMALLCODE}"/>
+            <column name="mnemocode" remarks="Мнемокод" type="${D_CHAR5}"/>
             <column name="font_color" remarks="Цвет шрифта" type="${D_INT}"/>
             <column name="background_color" remarks="Цвет фона" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -12597,8 +12597,8 @@
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-1075">
         <createTable remarks="Склады: конфигурация модуля." tableName="wh_config">
-            <column name="base_currency" remarks="Базовая валюта" type="${D_SMALLCODE}"/>
-            <column name="nat_currency" remarks="Национальная валюта" type="${D_SMALLCODE}"/>
+            <column name="base_currency" remarks="Базовая валюта" type="${D_CHAR5}"/>
+            <column name="nat_currency" remarks="Национальная валюта" type="${D_CHAR5}"/>
             <column name="currency_prec" remarks="Точность денежных величин, знаков после запятой" type="${D_INT}"/>
             <column name="cur_rate_type_id" remarks="Тип валюты" type="${D_INT}"/>
             <column name="cur_rate_authority_id" remarks="Источник валюты" type="${D_INT}"/>
@@ -12645,7 +12645,7 @@
             <column name="batch_id" remarks="Партия" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="serial_num" remarks="Серийный номер" type="${D_SERIAL_NUMBER}"/>
+            <column name="serial_num" remarks="Серийный номер" type="${D_CHAR50}"/>
             <column name="income_docspec_id" remarks="Спецификация документа прихода" type="${D_INT}"/>
             <column name="outcome_docspec_id" remarks="Спецификация документа расхода" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">

@@ -11,7 +11,6 @@
   <property name="D_CONTRACTORCARD_PLAN_KIND" value="D_CONTRACTORCARD_PLAN_KIND"/>
   <property name="D_CONTRACTOR_KIND" value="D_CONTRACTOR_KIND"/>
   <property name="D_CONTRACTSTATUS" value="D_CONTRACTSTATUS"/>
-  <property name="D_CRM_SWOT" value="D_CRM_SWOT"/>
   <property name="D_CURCOURCE" value="D_CURCOURCE"/>
   <property name="D_DATE" value="D_DATE"/>
   <property name="D_DATETIME" value="D_DATETIME"/>
@@ -43,8 +42,7 @@
   <property name="D_MONTH" value="D_MONTH"/>
   <property name="D_NAME" value="D_NAME"/>
   <property name="D_ORDER_STATUS" value="D_ORDER_STATUS"/>
-  <property name="D_ORIGINAL" value="D_ORIGINAL"/>
-  <property name="D_PASSWORD" value="D_PASSWORD"/>
+  <property name="D_PASSWORD" value="VARCHAR(50)"/>
   <property name="D_PHASEITEMKIND" value="D_PHASEITEMKIND"/>
   <property name="D_PHONE" value="D_PHONE"/>
   <property name="D_PHONELIST" value="D_PHONELIST"/>
@@ -53,11 +51,7 @@
   <property name="D_QUERY" value="D_QUERY"/>
   <property name="D_RATIO" value="D_RATIO"/>
   <property name="D_RPT_ENUMVALUES" value="D_RPT_ENUMVALUES"/>
-  <property name="D_SERIAL_NUMBER" value="D_SERIAL_NUMBER"/>
-  <property name="D_SHORT" value="D_SHORT"/>
-  <property name="D_SIZE" value="D_SIZE"/>
-  <property name="D_SMALLCODE" value="D_SMALLCODE"/>
-  <property name="D_SMALLNAME" value="D_SMALLNAME"/>
+  <property name="D_SHORT" value="SMALLINT"/>
   <property name="D_STOCKBATCHHISTORY_KIND" value="D_STOCKBATCHHISTORY_KIND"/>
   <property name="D_STOCKPOLICY" value="D_STOCKPOLICY"/>
   <property name="D_STORED_PROC_NAME" value="D_STORED_PROC_NAME"/>
@@ -65,11 +59,13 @@
   <property name="D_SYS_DATAITEM_KIND" value="D_SYS_DATAITEM_KIND"/>
   <property name="D_TABLE_NAME" value="D_TABLE_NAME"/>
   <property name="D_TIME_PERIOD_KIND" value="D_TIME_PERIOD_KIND"/>
-  <property name="D_USERNAME" value="D_USERNAME"/>
+  <property name="D_USERNAME" value="VARCHAR(50)"/>
   <property name="D_ZIPCODE" value="VARCHAR(30)"/>
   <property name="D_FLOAT" value="FLOAT"/>
-  <property name="D_SMALLESTCODE" value="D_SMALLESTCODE"/>
+  <property name="D_SMALLESTCODE" value="VARCHAR(2)"/>
   <property name="D_CHAR4" value="VARCHAR(4)"/>
+  <property name="D_CHAR5" value="VARCHAR(5)"/>
+  <property name="D_CHAR10" value="VARCHAR(10)"/>
   <property name="D_CHAR15" value="VARCHAR(15)"/>
   <property name="D_CHAR20" value="VARCHAR(20)"/>
   <property name="D_CHAR30" value="VARCHAR(30)"/>
