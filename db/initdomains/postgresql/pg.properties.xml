@@ -7,7 +7,6 @@
   <property name="D_BOOLEAN" value="BOOLEAN"/>
   <property name="D_CALCTAXESSUBJECT" value="D_CALCTAXESSUBJECT"/>
   <property name="D_CONTARCT_CALC_SUM_KIND" value="D_CONTARCT_CALC_SUM_KIND"/>
-  <property name="D_CONTPHASE_CALC_SUM_KIND" value="D_CONTPHASE_CALC_SUM_KIND"/>
   <property name="D_CONTRACTORCARD_HIST_KIND" value="D_CONTRACTORCARD_HIST_KIND"/>
   <property name="D_CONTRACTORCARD_PLAN_KIND" value="D_CONTRACTORCARD_PLAN_KIND"/>
   <property name="D_CONTRACTOR_KIND" value="D_CONTRACTOR_KIND"/>
@@ -18,7 +17,6 @@
   <property name="D_DATETIME" value="D_DATETIME"/>
   <property name="D_DESCRIPTION" value="D_DESCRIPTION"/>
   <property name="D_DISABLE_EXCEED_QUANT" value="D_DISABLE_EXCEED_QUANT"/>
-  <property name="D_DOCDATE" value="D_DOCDATE"/>
   <property name="D_DOCKIND" value="D_DOCKIND"/>
   <property name="D_DOCNUMBER" value="D_DOCNUMBER"/>
   <property name="D_DOCSECTION" value="D_DOCSECTION"/>
@@ -42,19 +40,6 @@
   <property name="D_MEASURE_CONTROL" value="D_MEASURE_CONTROL"/>
   <property name="D_MEASURE_CONVERSION" value="D_MEASURE_CONVERSION"/>
   <property name="D_MEDIUMCODE" value="D_MEDIUMCODE"/>
-  <property name="D_MF_BOM_STATUS" value="D_MF_BOM_STATUS"/>
-  <property name="D_MF_BOM_TYPE" value="D_MF_BOM_TYPE"/>
-  <property name="D_MF_CAPACITY" value="D_MF_CAPACITY"/>
-  <property name="D_MF_JOB_STATUS" value="D_MF_JOB_STATUS"/>
-  <property name="D_MF_LBR_OH_ALLOC_FLAG" value="D_MF_LBR_OH_ALLOC_FLAG"/>
-  <property name="D_MF_LBR_TIME_RATE_FLAG" value="D_MF_LBR_TIME_RATE_FLAG"/>
-  <property name="D_MF_MCH_OH_ALLOCATION_FLAG" value="D_MF_MCH_OH_ALLOCATION_FLAG"/>
-  <property name="D_MF_MCH_RECOVERY_FLAG" value="D_MF_MCH_RECOVERY_FLAG"/>
-  <property name="D_MF_MTL_OH_ACCLOC_FLAG" value="D_MF_MTL_OH_ACCLOC_FLAG"/>
-  <property name="D_MF_MTL_QUAN_RATE_FLAG" value="D_MF_MTL_QUAN_RATE_FLAG"/>
-  <property name="D_MF_RESOURCE_TYPE" value="D_MF_RESOURCE_TYPE"/>
-  <property name="D_MF_SCHEDULE_DIR" value="D_MF_SCHEDULE_DIR"/>
-  <property name="D_MF_TICK" value="D_MF_TICK"/>
   <property name="D_MONTH" value="D_MONTH"/>
   <property name="D_NAME" value="D_NAME"/>
   <property name="D_ORDER_STATUS" value="D_ORDER_STATUS"/>
@@ -81,8 +66,6 @@
   <property name="D_TABLE_NAME" value="D_TABLE_NAME"/>
   <property name="D_TIME_PERIOD_KIND" value="D_TIME_PERIOD_KIND"/>
   <property name="D_USERNAME" value="D_USERNAME"/>
-  <property name="D_VOLUME" value="D_VOLUME"/>
-  <property name="D_WEIGHT" value="D_WEIGHT"/>
   <property name="D_ZIPCODE" value="VARCHAR(30)"/>
   <property name="D_FLOAT" value="FLOAT"/>
   <property name="D_SMALLESTCODE" value="D_SMALLESTCODE"/>

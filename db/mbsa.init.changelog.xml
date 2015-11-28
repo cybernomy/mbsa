@@ -2270,7 +2270,7 @@
             <column name="document_id" remarks="Идентификатор документа" type="${D_INT}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="insertdate" remarks="Дата регистрации в книге покупок" type="${D_DATE}"/>
             <column name="indate" remarks="Дата поступления" type="${D_DATE}"/>
             <column name="stockdate" remarks="Дата оприходования" type="${D_DATE}"/>
@@ -2565,7 +2565,7 @@
             </column>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="modifydesc" remarks="Изменения" type="${D_TEXT}"/>
             <column name="comment" remarks="Примечания" type="${D_TEXT}"/>
             <column name="original" remarks="Оригинал документа" type="${D_ORIGINAL}"/>
@@ -2688,7 +2688,7 @@
             <column name="consigneebankreq_id" remarks="Банковские реквизиты грузополучателя" type="${D_INT}"/>
             <column name="sumcur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
             <column name="sumnat" remarks="Сумма" type="${D_SUMMA}"/>
-            <column name="calcsumkind" remarks="Расчет суммы:&#10;0 - не рассчитывается&#10;1 - по этапам" type="${D_CONTPHASE_CALC_SUM_KIND}"/>
+            <column name="calcsumkind" remarks="Расчет суммы:&#10;0 - не рассчитывается&#10;1 - по этапам" type="${D_CONTARCT_CALC_SUM_KIND}"/>
             <column name="margin" remarks="Не используется" type="${D_RATIO}"/>
             <column name="avoid" remarks="Этап аннулирован:&#10;0 - нет&#10;1 - да" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="shippedpayment" remarks="Сумма платежей контрагенту, по этапу" type="${D_SUMMA}"/>
@@ -2712,7 +2712,7 @@
             </column>
             <column name="phase_number" remarks="Номер этапа" type="${D_DOCNUMBER}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="doc_id" remarks="Идентификатор документа" type="${D_INT}"/>
         </createTable>
     </changeSet>
@@ -3523,7 +3523,7 @@
             </column>
             <column name="doctype" remarks="Тип" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="currency_code" remarks="Код валюты" type="${D_SMALLCODE}"/>
             <column name="curcource" remarks="Курс валюты" type="${D_CURCOURCE}"/>
             <column name="summacur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
@@ -3531,11 +3531,11 @@
             <column name="basedoc_id" remarks="Идентификатор документа-основания" type="${D_INT}"/>
             <column name="basedoctype" remarks="Тип документа-основания" type="${D_DOCTYPE}"/>
             <column name="basedocnumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
-            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="contract_id" remarks="Идентификатор договора" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип договора" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер договора" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="contractdate" remarks="Дата договора" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="weight" remarks="Вес" type="${D_NUM15_3}"/>
             <column name="volume" remarks="Объем" type="${D_NUM15_3}"/>
             <column name="pricelist_id" remarks="Прайс-лист" type="${D_INT}"/>
@@ -3582,7 +3582,7 @@
             </column>
             <column name="doctype" remarks="Тип" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="currency_code" remarks="Код валюты" type="${D_SMALLCODE}"/>
             <column name="curcource" remarks="Курс валюты" type="${D_CURCOURCE}"/>
             <column name="summacur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
@@ -3590,11 +3590,11 @@
             <column name="basedoc_id" remarks="Идентификатор документа-основания" type="${D_INT}"/>
             <column name="basedoctype" remarks="Тип документа-основания" type="${D_DOCTYPE}"/>
             <column name="basedocnumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
-            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="contract_id" remarks="Идентификатор договора" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип договора" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер договора" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="contractdate" remarks="Дата договора" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="weight" remarks="Вес" type="${D_NUM15_3}"/>
             <column name="volume" remarks="Объем" type="${D_NUM15_3}"/>
             <column name="pricelist_id" remarks="Прайс-лист" type="${D_INT}"/>
@@ -3928,7 +3928,7 @@
             <column name="contract_id" remarks="Идентификатор договора" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип договора" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер договора" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="contractdate" remarks="Дата договора" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="from_id" remarks="Контрагент &quot;от кого&quot;" type="${D_INT}"/>
             <column name="to_id" remarks="Контрагент &quot;кому&quot;" type="${D_INT}"/>
             <column name="user_id" remarks="Служебное поле" type="${D_INT}"/>
@@ -3965,7 +3965,7 @@
             <column name="contract_id" remarks="Идентификатор договора" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип договора" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер договора" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="contractdate" remarks="Дата договора" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="from_id" remarks="Контрагент &quot;от кого&quot;" type="${D_INT}"/>
             <column name="to_id" remarks="Контрагент &quot;кому&quot;" type="${D_INT}"/>
             <column name="modeldestfolder_id" remarks="Идентификатор папки-приемника" type="${D_INT}"/>
@@ -4383,7 +4383,7 @@
             <column name="contract_id" remarks="Идентификатор договора" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип договора" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер договора" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="contractdate" remarks="Дата договора" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="responsible" remarks="Ответственный" type="${D_INT}"/>
             <column name="sumnat" remarks="Сумма" type="${D_SUMMA}"/>
             <column name="sumcur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
@@ -4424,7 +4424,7 @@
             <column name="contract_id" remarks="Идентификатор договора" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип договора" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер договора" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата договора" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="contractdate" remarks="Дата договора" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="responsible" remarks="Ответственный" type="${D_INT}"/>
             <column name="sumnat" remarks="Сумма" type="${D_SUMMA}"/>
             <column name="sumcur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
@@ -4696,7 +4696,7 @@
             <column name="order_number" type="${D_DOCNUMBER}">
                 <constraints nullable="false"/>
             </column>
-            <column name="order_date" type="${D_DOCDATE}" defaultValueComputed="${today}">
+            <column name="order_date" type="${D_DATE}" defaultValueComputed="${today}">
                 <constraints nullable="false"/>
             </column>
             <column name="header" type="${D_FEATURE_STR}"/>
@@ -5995,8 +5995,8 @@
             <column name="id" remarks="Идентификатор" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="bom_type" remarks="Тип&#10;0 - подготовительный&#10;1 - текущий&#10;2 - стандартный" type="${D_MF_BOM_TYPE}"/>
-            <column name="bom_status" remarks="Статус&#10;0 - создается&#10;1 - создан" type="${D_MF_BOM_STATUS}"/>
+            <column name="bom_type" remarks="Тип&#10;0 - подготовительный&#10;1 - текущий&#10;2 - стандартный" type="${D_SHORT}"/>
+            <column name="bom_status" remarks="Статус&#10;0 - создается&#10;1 - создан" type="${D_SHORT}"/>
             <column name="catalog_id" remarks="Позиция каталога" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -6017,22 +6017,22 @@
                 <constraints nullable="false"/>
             </column>
             <column name="rollup_datetime" remarks="Дата и время последнего замещения стоиости" type="${D_DATETIME}"/>
-            <column name="setup_ticks" remarks="Постоянное время задержки" type="${D_MF_TICK}"/>
+            <column name="setup_ticks" remarks="Постоянное время задержки" type="${D_INT}"/>
             <column name="setup_time_um" remarks="Ед.изм. постоянного времени задержки" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="run_ticks" remarks="Переменное времемя задержки" type="${D_MF_TICK}"/>
+            <column name="run_ticks" remarks="Переменное времемя задержки" type="${D_INT}"/>
             <column name="run_time_um" remarks="Ед.изм. переменного времеми задержки" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="sched_direction" remarks="Направление планирования&#10;0 - вперед&#10;1 - назад" type="${D_MF_SCHEDULE_DIR}"/>
+            <column name="sched_direction" remarks="Направление планирования&#10;0 - вперед&#10;1 - назад" type="${D_SHORT}"/>
             <column name="use_move_times" remarks="Учитывать времена перемещений" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="use_queue_times" remarks="Учитывать время в очереди" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="use_finite_capacity" remarks="Планировать в ограниченных мощностях" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="priority" remarks="Приоритет ЗНП по СИ" type="${D_RATIO}"/>
             <column name="priority_freeze_flag" remarks="Признак фиксации приоритета ЗНП по СИ" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="cell_id" remarks="Идентификатор производственной линии" type="${D_INT}"/>
-            <column name="pcs_per_hr_cell" remarks="Производительность линии" type="${D_MF_CAPACITY}" defaultValueNumeric="0"/>
+            <column name="pcs_per_hr_cell" remarks="Производительность линии" type="${D_INT}" defaultValueNumeric="0"/>
             <column name="approved_flag" remarks="СИ одобрен" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="bom_version_required" remarks="Создавать версии СИ" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="create_job_approved" remarks="Разрешать создание ЗНП" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
@@ -6054,7 +6054,7 @@
             <column name="bom_route_resource_id" remarks="Идентификатор группы ресурсов" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="run_ticks_lbr" remarks="Время работы рабочей силы" type="${D_MF_CAPACITY}" defaultValueNumeric="0"/>
+            <column name="run_ticks_lbr" remarks="Время работы рабочей силы" type="${D_INT}" defaultValueNumeric="0"/>
             <column name="run_time_lbr_um" remarks="Ед.изм. времени работы рабочей силы" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -6068,20 +6068,20 @@
             <column name="bom_route_resource_id" remarks="Идентификатор группы ресурсов" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="time_rate_flag" remarks="Метод измерения расхода времени&#10;0 - на единицу ГП&#10;1 - единиц ГП на время&#10;2 - фиксированное время на партию ГП" type="${D_MF_LBR_TIME_RATE_FLAG}"/>
-            <column name="run_ticks_mch" remarks="Время работы оборудования" type="${D_MF_CAPACITY}" defaultValueNumeric="0"/>
+            <column name="time_rate_flag" remarks="Метод измерения расхода времени&#10;0 - на единицу ГП&#10;1 - единиц ГП на время&#10;2 - фиксированное время на партию ГП" type="${D_SHORT}"/>
+            <column name="run_ticks_mch" remarks="Время работы оборудования" type="${D_INT}" defaultValueNumeric="0"/>
             <column name="run_time_mch_um" remarks="Ед.изм. времени работы оборудования" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
             <column name="mch_number" remarks="Коэффициент умножения мощности" type="${D_QUANTITY_EXT}"/>
-            <column name="mch_recovery_flag" remarks="Метод начисления возмещения стоимости&#10;0 - на один час операции&#10;1 - на единицу ГП&#10;2 - фиксированная стоимость на партию ГП" type="${D_MF_MCH_RECOVERY_FLAG}"/>
+            <column name="mch_recovery_flag" remarks="Метод начисления возмещения стоимости&#10;0 - на один час операции&#10;1 - на единицу ГП&#10;2 - фиксированная стоимость на партию ГП" type="${D_SHORT}"/>
             <column name="mch_rate" remarks="Норма возмещения стоимости" type="${D_SUMMA}"/>
             <column name="mch_rate_cur_code" remarks="Валяла нормы на возмещение стоимости" type="${D_SMALLCODE}">
                 <constraints nullable="false"/>
             </column>
             <column name="mch_cost_category_id" remarks="Идентификатор категории затрат на оборудование" type="${D_INT}"/>
             <column name="mch_backflush_flag" remarks="Флаг обратного списания возмещения стоимости" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
-            <column name="mch_oh_allocation_flag" remarks="Метод начисления НР&#10;0 - на 1 час операции&#10;1 - на единицу готовой продукции&#10;2 - процент от стоимости работы&#10;3 - фиксированная стоимочсть на паритию ГП" type="${D_MF_MCH_OH_ALLOCATION_FLAG}"/>
+            <column name="mch_oh_allocation_flag" remarks="Метод начисления НР&#10;0 - на 1 час операции&#10;1 - на единицу готовой продукции&#10;2 - процент от стоимости работы&#10;3 - фиксированная стоимочсть на паритию ГП" type="${D_SHORT}"/>
             <column name="mch_oh_rate" remarks="Норма НР на оборудование" type="${D_SUMMA}"/>
             <column name="mch_oh_rate_cur_code" remarks="Валюта норма на оборудование" type="${D_SMALLCODE}">
                 <constraints nullable="false"/>
@@ -6105,7 +6105,7 @@
             </column>
             <column name="report_sequence" remarks="Порядковый номер материала для печати" type="${D_INT}"/>
             <column name="probable" remarks="Вероятность включения" type="${D_RATIO}"/>
-            <column name="quantity_rate_flag" remarks="Метод измерения расхода материалов&#10;0 - на один час операции&#10;1 - на единицу готовой продукции&#10;2 - фиксированное количество на партию" type="${D_MF_MTL_QUAN_RATE_FLAG}"/>
+            <column name="quantity_rate_flag" remarks="Метод измерения расхода материалов&#10;0 - на один час операции&#10;1 - на единицу готовой продукции&#10;2 - фиксированное количество на партию" type="${D_SHORT}"/>
             <column name="mtl_qty" remarks="Применяемость материала" type="${D_QUANTITY_EXT}"/>
             <column name="scrap_factor" remarks="Коэффициент брака" type="${D_RATIO}"/>
             <column name="measure_id" remarks="Ед.изм. применяемости материала" type="${D_INT_IDEN}">
@@ -6114,7 +6114,7 @@
             <column name="mtl_cost_category_id" remarks="Идентификатор категории затрат на материал" type="${D_INT}"/>
             <column name="mtl_backflush_flag" remarks="Признак обратного списания материалов" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="backflush_zone_id" remarks="Идентификтор зоны склада обратного списания" type="${D_INT}"/>
-            <column name="mtl_oh_allocation_flag" remarks="Метод начисления НР расходов на материал&#10;0 - на единицу материала&#10;1 - Коэффициетн от стоимости ресурса&#10;2 - фиксированная стоимость на партию" type="${D_MF_MTL_OH_ACCLOC_FLAG}"/>
+            <column name="mtl_oh_allocation_flag" remarks="Метод начисления НР расходов на материал&#10;0 - на единицу материала&#10;1 - Коэффициетн от стоимости ресурса&#10;2 - фиксированная стоимость на партию" type="${D_SHORT}"/>
             <column name="mtl_oh_rate" remarks="Норма накладных расходов на материал" type="${D_SUMMA}"/>
             <column name="currency_code" remarks="Валюта нормы НР на материал" type="${D_SMALLCODE}">
                 <constraints nullable="false"/>
@@ -6140,27 +6140,27 @@
                 <constraints nullable="false"/>
             </column>
             <column name="efficiency" remarks="Коэффициент эффективности" type="${D_RATIO}"/>
-            <column name="move_ticks" remarks="Время перемещения между операциями" type="${D_MF_TICK}"/>
+            <column name="move_ticks" remarks="Время перемещения между операциями" type="${D_INT}"/>
             <column name="move_time_um" remarks="Ед.изм. времеми перемещения между операциями" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="setup_ticks" remarks="Постоянная составляющая времени операции" type="${D_MF_TICK}"/>
+            <column name="setup_ticks" remarks="Постоянная составляющая времени операции" type="${D_INT}"/>
             <column name="setup_time_um" remarks="Ед.изм. постоянной составляющей времени операции" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="run_ticks" remarks="Переменая составляющая времени операции" type="${D_MF_TICK}"/>
+            <column name="run_ticks" remarks="Переменая составляющая времени операции" type="${D_INT}"/>
             <column name="run_time_um" remarks="Ед.изм. переменой составляющей времени операции" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="sched_ticks" remarks="Не зависящее от размера партии время выполнения операции" type="${D_MF_TICK}"/>
+            <column name="sched_ticks" remarks="Не зависящее от размера партии время выполнения операции" type="${D_INT}"/>
             <column name="sched_time_um" remarks="Ед.изм. времени выполнения операции не зависящее от размера партии" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="sched_offset_ticks" remarks="Время смещения между нач.пред.опер. и нач.тек.операции" type="${D_MF_TICK}"/>
+            <column name="sched_offset_ticks" remarks="Время смещения между нач.пред.опер. и нач.тек.операции" type="${D_INT}"/>
             <column name="sched_offset_time_um" remarks="Ед.изм. времи смещения между нач.пред.опер. и нач.тек.операции" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="queue_ticks" remarks="Запранированное время ожидания" type="${D_MF_TICK}"/>
+            <column name="queue_ticks" remarks="Запранированное время ожидания" type="${D_INT}"/>
             <column name="queue_time_um" remarks="Ед.изм.запранированного времи ожидания" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -6183,7 +6183,7 @@
             <column name="bom_oper_id" remarks="Идентификатор операции" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="resource_type" remarks="Тип ресурса" type="${D_MF_RESOURCE_TYPE}"/>
+            <column name="resource_type" remarks="Тип ресурса" type="${D_SHORT}"/>
             <column name="time_sequence" remarks="Номер временного интервала" type="${D_INT}"/>
             <column name="eff_on_date" remarks="Дата начала действия" type="${D_DATE}"/>
             <column name="eff_off_date" remarks="Дата окончания действия" type="${D_DATE}"/>
@@ -6329,8 +6329,8 @@
             <column name="day_cal_id" remarks="Идентификатор дневного календаря" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="start_tick" remarks="Начало времени отчета" type="${D_MF_TICK}"/>
-            <column name="ticks" remarks="Длительность" type="${D_MF_TICK}"/>
+            <column name="start_tick" remarks="Начало времени отчета" type="${D_INT}"/>
+            <column name="ticks" remarks="Длительность" type="${D_INT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -6391,8 +6391,8 @@
             <column name="def_src_mol_id" remarks="Идентификатор МОЛ склада-источника для материалов" type="${D_INT}"/>
             <column name="def_dst_mol_id" remarks="Идентификатор МОЛ склада-приемника для готовой продукции" type="${D_INT}"/>
             <column name="job_number" remarks="Номер ЗНП" type="${D_DOCNUMBER}"/>
-            <column name="job_date" remarks="Дата ЗНП" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
-            <column name="job_status" remarks="Статус ЗНП&#10;0 - новый&#10;1 - запущен&#10;2 - остановлен&#10;3 - завершен" type="${D_MF_JOB_STATUS}"/>
+            <column name="job_date" remarks="Дата ЗНП" type="${D_DATE}" defaultValueComputed="${today}"/>
+            <column name="job_status" remarks="Статус ЗНП&#10;0 - новый&#10;1 - запущен&#10;2 - остановлен&#10;3 - завершен" type="${D_SHORT}"/>
             <column name="folder_id" remarks="Идентификатор папки ЗНП" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -6409,11 +6409,11 @@
             <column name="rollup_datetime" remarks="Дата и время последнего замещения стоиости" type="${D_DATETIME}"/>
             <column name="start_date" remarks="Планируемая дата запуска" type="${D_DATE}"/>
             <column name="end_date" remarks="Планируемая дата окончания" type="${D_DATE}"/>
-            <column name="start_tick" remarks="Не используется" type="${D_MF_TICK}"/>
-            <column name="end_tick" remarks="Не используется" type="${D_MF_TICK}"/>
-            <column defaultValueNumeric="0" name="start_job" remarks="Планируемое время запуска в тиках от начала дня" type="${D_MF_TICK}"/>
-            <column defaultValueNumeric="0" name="finish_job" remarks="Планируемое время окончания в тиках от начала дня" type="${D_MF_TICK}"/>
-            <column name="sched_direction" remarks="Направление планирования&#10;0 - вперед&#10;1 - назад" type="${D_MF_SCHEDULE_DIR}"/>
+            <column name="start_tick" remarks="Не используется" type="${D_INT}"/>
+            <column name="end_tick" remarks="Не используется" type="${D_INT}"/>
+            <column defaultValueNumeric="0" name="start_job" remarks="Планируемое время запуска в тиках от начала дня" type="${D_INT}"/>
+            <column defaultValueNumeric="0" name="finish_job" remarks="Планируемое время окончания в тиках от начала дня" type="${D_INT}"/>
+            <column name="sched_direction" remarks="Направление планирования&#10;0 - вперед&#10;1 - назад" type="${D_SHORT}"/>
             <column defaultValueComputed="false" name="use_move_times" remarks="Учитывать времена перемещений" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column defaultValueComputed="false" name="use_queue_times" remarks="Учитывать время в очереди" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column defaultValueComputed="false" name="use_finite_capacity" remarks="Планировать в ограниченных мощностях" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
@@ -6433,8 +6433,8 @@
             <column name="job_route_resource_id" remarks="Идентификатор группы ресурсов" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="time_rate_flag" remarks="Метод измерени ярасхода&#10;0 - время на единицу готовой продукции&#10;1 - единиц готовой продукции на время&#10;2 - фиксированное время на партию" type="${D_MF_LBR_TIME_RATE_FLAG}"/>
-            <column defaultValueNumeric="0" name="run_ticks_lbr" remarks="Время работы рабочей силы" type="${D_MF_CAPACITY}"/>
+            <column name="time_rate_flag" remarks="Метод измерени ярасхода&#10;0 - время на единицу готовой продукции&#10;1 - единиц готовой продукции на время&#10;2 - фиксированное время на партию" type="${D_SHORT}"/>
+            <column defaultValueNumeric="0" name="run_ticks_lbr" remarks="Время работы рабочей силы" type="${D_INT}"/>
             <column name="run_time_lbr_um" remarks="Ед.изм. времени работы РС" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -6445,7 +6445,7 @@
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="false" name="lbr_backflush_flag" remarks="Флаг обратного списания возмещения стоимости" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
-            <column name="lbr_oh_allocation_flag" remarks="Метод начисления НР&#10;0 - на единицу времени&#10;1 - на единицу готовой продукции&#10;2 - процент от стоиомсти работ&#10;3 - фиксированная стоимость" type="${D_MF_LBR_OH_ALLOC_FLAG}"/>
+            <column name="lbr_oh_allocation_flag" remarks="Метод начисления НР&#10;0 - на единицу времени&#10;1 - на единицу готовой продукции&#10;2 - процент от стоиомсти работ&#10;3 - фиксированная стоимость" type="${D_SHORT}"/>
             <column defaultValueNumeric="0" name="lbr_oh_rate" remarks="Норма накладных расходов" type="${D_SUMMA}"/>
             <column name="lbr_oh_rate_cur_code" remarks="Код валюты нормы НР" type="${D_SMALLCODE}">
                 <constraints nullable="false"/>
@@ -6461,19 +6461,19 @@
                 <constraints nullable="false"/>
             </column>
             <column name="time_rate_flag" remarks="Метод измерения расхода времени&#10;0 - на единицу ГП&#10;1 - единиц ГП на время&#10;2 - фиксированное время на партию ГП" type="${D_SHORT}"/>
-            <column defaultValueNumeric="0" name="run_ticks_mch" remarks="Время работы оборудования" type="${D_MF_CAPACITY}"/>
+            <column defaultValueNumeric="0" name="run_ticks_mch" remarks="Время работы оборудования" type="${D_INT}"/>
             <column name="run_time_mch_um" remarks="Ед.изм. времени работы оборудования" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueNumeric="0" name="mch_number" remarks="Коэффициент умножения мощности" type="${D_QUANTITY_EXT}"/>
-            <column name="mch_recovery_flag" remarks="Метод начисления возмещения стоимости&#10;0 - на один час операции&#10;1 - на единицу ГП&#10;2 - фиксированная стоимость на партию ГП" type="${D_MF_MCH_RECOVERY_FLAG}"/>
+            <column name="mch_recovery_flag" remarks="Метод начисления возмещения стоимости&#10;0 - на один час операции&#10;1 - на единицу ГП&#10;2 - фиксированная стоимость на партию ГП" type="${D_SHORT}"/>
             <column defaultValueNumeric="0" name="mch_rate" remarks="Норма возмещения стоимости" type="${D_SUMMA}"/>
             <column name="mch_rate_cur_code" remarks="Валяла нормы на возмещение стоимости" type="${D_SMALLCODE}">
                 <constraints nullable="false"/>
             </column>
             <column name="mch_cost_category_id" remarks="Идентификатор категории затрат на оборудование" type="${D_INT}"/>
             <column defaultValueComputed="false" name="mch_backflush_flag" remarks="Флаг обратного списания возмещения стоимости" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
-            <column name="mch_oh_allocation_flag" remarks="Метод начисления НР&#10;0 - на 1 час операции&#10;1 - на единицу готовой продукции&#10;2 - процент от стоимости работы&#10;3 - фиксированная стоимочсть на паритию ГП" type="${D_MF_MCH_OH_ALLOCATION_FLAG}"/>
+            <column name="mch_oh_allocation_flag" remarks="Метод начисления НР&#10;0 - на 1 час операции&#10;1 - на единицу готовой продукции&#10;2 - процент от стоимости работы&#10;3 - фиксированная стоимочсть на паритию ГП" type="${D_SHORT}"/>
             <column defaultValueNumeric="0" name="mch_oh_rate" remarks="Норма НР на оборудование" type="${D_SUMMA}"/>
             <column name="mch_oh_rate_cur_code" remarks="Валюта норма на оборудование" type="${D_SMALLCODE}">
                 <constraints nullable="false"/>
@@ -6496,7 +6496,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="report_sequence" remarks="Порядковый номер материала для печати" type="${D_INT}"/>
-            <column name="quantity_rate_flag" remarks="Метод измерения расхода материалов&#10;0 - на один час операции&#10;1 - на единицу готовой продукции&#10;2 - фиксированное количество на партию" type="${D_MF_MTL_QUAN_RATE_FLAG}"/>
+            <column name="quantity_rate_flag" remarks="Метод измерения расхода материалов&#10;0 - на один час операции&#10;1 - на единицу готовой продукции&#10;2 - фиксированное количество на партию" type="${D_SHORT}"/>
             <column defaultValueComputed="1" name="mtl_qty" remarks="Применяемость материала" type="${D_QUANTITY_EXT}"/>
             <column name="scrap_factor" remarks="Коэффициент брака" type="${D_RATIO}"/>
             <column name="measure_id" remarks="Ед.изм. применяемости материала" type="${D_INT_IDEN}">
@@ -6505,7 +6505,7 @@
             <column name="mtl_cost_category_id" remarks="Идентификатор категории затрат на материал" type="${D_INT}"/>
             <column defaultValueComputed="false" name="mtl_backflush_flag" remarks="Признак обратного списания материалов" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="backflush_zone_id" remarks="Идентификтор зоны склада обратного списания" type="${D_INT}"/>
-            <column name="mtl_oh_allocation_flag" remarks="Метод начисления НР расходов на материал&#10;0 - на единицу материала&#10;1 - Коэффициетн от стоимости ресурса&#10;2 - фиксированная стоимость на партию" type="${D_MF_MTL_OH_ACCLOC_FLAG}"/>
+            <column name="mtl_oh_allocation_flag" remarks="Метод начисления НР расходов на материал&#10;0 - на единицу материала&#10;1 - Коэффициетн от стоимости ресурса&#10;2 - фиксированная стоимость на партию" type="${D_SHORT}"/>
             <column defaultValueNumeric="0" name="mtl_oh_rate" remarks="Норма накладных расходов на материал" type="${D_SUMMA}"/>
             <column name="currency_code" remarks="Валюта нормы НР на материал" type="${D_SMALLCODE}">
                 <constraints nullable="false"/>
@@ -6534,29 +6534,29 @@
             <column defaultValueComputed="100" name="efficiency_factor" remarks="Процент эффективности" type="${D_RATIO}"/>
             <column name="start_date" remarks="Запланированная дата запуска операции" type="${D_DATE}"/>
             <column name="end_date" remarks="Запланированная дата окончания операции" type="${D_DATE}"/>
-            <column name="start_tick" remarks="Запланированное время начала операции в тиках" type="${D_MF_TICK}"/>
-            <column name="end_tick" remarks="Запланированное время окончания операции в тиках" type="${D_MF_TICK}"/>
-            <column defaultValueNumeric="0" name="move_ticks" remarks="Время перемещения между операциями" type="${D_MF_TICK}"/>
+            <column name="start_tick" remarks="Запланированное время начала операции в тиках" type="${D_INT}"/>
+            <column name="end_tick" remarks="Запланированное время окончания операции в тиках" type="${D_INT}"/>
+            <column defaultValueNumeric="0" name="move_ticks" remarks="Время перемещения между операциями" type="${D_INT}"/>
             <column name="move_time_um" remarks="Ед.изм. времеми перемещения между операциями" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column defaultValueNumeric="0" name="setup_ticks" remarks="Постоянная составляющая времени операции" type="${D_MF_TICK}"/>
+            <column defaultValueNumeric="0" name="setup_ticks" remarks="Постоянная составляющая времени операции" type="${D_INT}"/>
             <column name="setup_time_um" remarks="Ед.изм. постоянной составляющей времени операции" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column defaultValueNumeric="0" name="run_ticks" remarks="Переменая составляющая времени операции" type="${D_MF_TICK}"/>
+            <column defaultValueNumeric="0" name="run_ticks" remarks="Переменая составляющая времени операции" type="${D_INT}"/>
             <column name="run_time_um" remarks="Ед.изм. переменой составляющей времени операции" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="sched_ticks" remarks="Не зависящее от размера партии время выполнения операции" type="${D_MF_TICK}"/>
+            <column name="sched_ticks" remarks="Не зависящее от размера партии время выполнения операции" type="${D_INT}"/>
             <column name="sched_time_um" remarks="Ед.изм. времени выполнения операции не зависящее от размера партии" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="sched_offset_ticks" remarks="Время смещения между нач.пред.опер. и нач.тек.операции" type="${D_MF_TICK}"/>
+            <column name="sched_offset_ticks" remarks="Время смещения между нач.пред.опер. и нач.тек.операции" type="${D_INT}"/>
             <column name="sched_offset_time_um" remarks="Ед.изм. времи смещения между нач.пред.опер. и нач.тек.операции" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column defaultValueNumeric="0" name="queue_ticks" remarks="Запранированное время ожидания" type="${D_MF_TICK}"/>
+            <column defaultValueNumeric="0" name="queue_ticks" remarks="Запранированное время ожидания" type="${D_INT}"/>
             <column name="queue_time_um" remarks="Ед.изм.запранированного времи ожидания" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -6583,7 +6583,7 @@
             <column name="oper_id" remarks="Идентификатор операции" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="resource_type" remarks="Тип ресурса" type="${D_MF_RESOURCE_TYPE}"/>
+            <column name="resource_type" remarks="Тип ресурса" type="${D_SHORT}"/>
             <column name="time_sequence" remarks="Номер временного интервала" type="${D_INT}"/>
             <column name="eff_on_date" remarks="Дата начала действия" type="${D_DATE}"/>
             <column name="eff_off_date" remarks="Дата окончания действия" type="${D_DATE}"/>
@@ -6605,14 +6605,14 @@
                 <constraints nullable="false"/>
             </column>
             <column name="description" remarks="Описание" type="${D_CHAR256}"/>
-            <column name="time_rate_flag" remarks="Метод измерения расхода&#10;0 - время на единицу готовой продукции&#10;1 - единиц готовой продукции на время&#10;2 - фиксированное количество на партию готовой продукции" type="${D_MF_LBR_TIME_RATE_FLAG}"/>
+            <column name="time_rate_flag" remarks="Метод измерения расхода&#10;0 - время на единицу готовой продукции&#10;1 - единиц готовой продукции на время&#10;2 - фиксированное количество на партию готовой продукции" type="${D_SHORT}"/>
             <column name="lbr_rate" remarks="Норма оплаты работы рабочей силы за ед.изм. времени" type="${D_SUMMA}"/>
             <column name="lbr_time_um" remarks="Ед.изм. времени для оплаты РС" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
             <column name="lbr_rate_cur_code" remarks="Код валюты для нормы на единицу измерения времени работы РС" type="${D_SMALLCODE}"/>
             <column name="lbr_cost_category_id" remarks="Категория затрат на рабочую силу" type="${D_INT}"/>
-            <column name="lbr_oh_allocation_flag" remarks="Метод начисления НР на РС&#10;0 - на единицу времени&#10;1 - на единицу готовой продукции&#10;2 - процент от стоимости работы&#10;3 - фиксированная стоимость на партию" type="${D_MF_LBR_OH_ALLOC_FLAG}"/>
+            <column name="lbr_oh_allocation_flag" remarks="Метод начисления НР на РС&#10;0 - на единицу времени&#10;1 - на единицу готовой продукции&#10;2 - процент от стоимости работы&#10;3 - фиксированная стоимость на партию" type="${D_SHORT}"/>
             <column name="lbr_oh_rate" remarks="Норма НР на РС на единицу измерения времения работы РС" type="${D_SUMMA}"/>
             <column name="lbr_oh_time_um" remarks="Ед.изм. времени для ставки НР на РС" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -6942,7 +6942,7 @@
             <column name="lbr_flag" remarks="Признак планирования по рабочей силе" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="lbr_number" remarks="Коэффициет по рабочей силе" type="${D_QUANTITY}"/>
             <column name="sch_tolerance" remarks="Допустимый процент отклонения по времени" type="${D_RATIO}"/>
-            <column name="queue_ticks" remarks="Время в очереди (ч)" type="${D_MF_TICK}"/>
+            <column name="queue_ticks" remarks="Время в очереди (ч)" type="${D_INT}"/>
             <column name="mch_run_total_hrs" remarks="Всего отработыно оборудованием" type="${D_HOUR}" defaultValueNumeric="0"/>
             <column name="lbr_setup_total_hrs" remarks="Всего отработано рабочей силой на настройке" type="${D_HOUR}" defaultValueNumeric="0"/>
             <column name="lbr_run_total_hrs" remarks="Всего отработано рабочей силой на операциях" type="${D_HOUR}" defaultValueNumeric="0"/>
@@ -7134,7 +7134,7 @@
             <column name="dochead_id" remarks="Идентификатор документа" type="${D_INT}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="cancellation_reason" remarks="Причина погашения" type="${D_CHAR256}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -7205,17 +7205,17 @@
             <column name="give_docspec_id" remarks="Идентификатор позиции спецификации документа, по которой производилась выдача" type="${D_INT}"/>
             <column name="give_doctype" remarks="Тип документа, по которому производилась выдача" type="${D_DOCTYPE}"/>
             <column name="give_docnumber" remarks="Номер документа, по которому производилась выдача" type="${D_DOCNUMBER}"/>
-            <column name="give_docdate" remarks="Дата выдачи" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="give_docdate" remarks="Дата выдачи" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="expl_dochead_id" remarks="Идентификатор документа, по которому производился ввод в эксплуатацию" type="${D_INT}"/>
             <column name="expl_docspec_id" remarks="Идентификатор позиции спецификации документа, по которой производился ввод в эксплуатацию" type="${D_INT}"/>
             <column name="expl_doctype" remarks="Тип документа, по которому производился ввод в эксплуатацию" type="${D_DOCTYPE}"/>
             <column name="expl_docnumber" remarks="Номер документа, по которому производился ввод в эксплуатацию" type="${D_DOCNUMBER}"/>
-            <column name="expl_docdate" remarks="Дата документа, по которому производился ввод в эксплуатацию" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="expl_docdate" remarks="Дата документа, по которому производился ввод в эксплуатацию" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="remove_dochead_id" remarks="Идентификатор документа, по которому производился вывод из эксплуатации" type="${D_INT}"/>
             <column name="remove_docspec_id" remarks="Идентификатор позиции спецификации документа, по которой производился вывод из эксплуатации" type="${D_INT}"/>
             <column name="remove_doctype" remarks="Тип документа, по которому производился вывод из эксплуатации" type="${D_DOCTYPE}"/>
             <column name="remove_docnumber" remarks="Номер документа, по которому производился вывод из эксплуатации" type="${D_DOCNUMBER}"/>
-            <column name="remove_docdate" remarks="Дата документа, по которому производился вывод из эксплуатации" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="remove_docdate" remarks="Дата документа, по которому производился вывод из эксплуатации" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="remove_type_id" remarks="Тип выбытия из эксплуатации&#10;3 - возвращено&#10;4 - утеряно&#10;5 - списано" type="${D_INT}"/>
             <column name="remove_date" remarks="Дата выбытия из эксплуатации" type="${D_DATE}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -7247,7 +7247,7 @@
             <column name="docspec_id" type="${D_INT}"/>
             <column name="doctype" type="${D_DOCTYPE}"/>
             <column name="docnumber" type="${D_DOCNUMBER}"/>
-            <column name="docdate" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="ovr_hist_status_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -7542,7 +7542,7 @@
             <column name="regdate" remarks="Дата регистрации" type="${D_DATE}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="doc_id" remarks="Идентификатор документа" type="${D_INT}"/>
             <column name="factsum" remarks="Фактическая сумма" type="${D_SUMMA}"/>
             <column name="distsum" remarks="Распределенная сумма" type="${D_SUMMA}"/>
@@ -7575,7 +7575,7 @@
             </column>
             <column name="item_number" remarks="Номер пункта" type="${D_DOCNUMBER}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="doc_id" remarks="Идентификатор документа" type="${D_INT}"/>
         </createTable>
     </changeSet>
@@ -7622,15 +7622,15 @@
             <column name="doc_id" remarks="Идентификатор документа" type="${D_INT}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="basedoc_id" remarks="Идентификатор документа-основания" type="${D_INT}"/>
             <column name="basedoctype" remarks="Тип документа-основания" type="${D_DOCTYPE}"/>
             <column name="basedocnumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
-            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="contract_id" remarks="Идентификатор контракта" type="${D_INT}"/>
             <column name="contracttype" remarks="Тип контракта" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер контракта" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата контракта" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="contractdate" remarks="Дата контракта" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="from_id" remarks="От кого" type="${D_INT}"/>
             <column name="to_id" remarks="Кому" type="${D_INT}"/>
             <column name="fromunit_id" remarks="Идентифкатор подразделения, у которого контрагент От кого в качестве юридического лица" type="${D_INT}"/>
@@ -7758,15 +7758,15 @@
             <column name="doc_id" remarks="Идентификатор документа" type="${D_INT}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
             <column name="doctype" remarks="Идентификатор типа документа" type="${D_DOCTYPE}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="basedoc_id" remarks="Идентификатор документа-основания" type="${D_INT}"/>
             <column name="basedoctype" remarks="Идентификатор типа документа-основания" type="${D_DOCTYPE}"/>
             <column name="basedocnumber" remarks="Номер документа-основания" type="${D_DOCNUMBER}"/>
-            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="basedocdate" remarks="Дата документа-основания" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="contract_id" remarks="Идентификатор контракта" type="${D_INT}"/>
             <column name="contracttype" remarks="Идентификатор типа контракта" type="${D_DOCTYPE}"/>
             <column name="contractnumber" remarks="Номер контракта" type="${D_DOCNUMBER}"/>
-            <column name="contractdate" remarks="Дата контракта" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="contractdate" remarks="Дата контракта" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="prefresource_id" remarks="Идентификатор средства платежа" type="${D_INT}"/>
             <column name="prefresourcefolder_id" remarks="Идентификатор папки средства платежа" type="${D_INT}"/>
             <column name="prefonly" remarks="Только выбранное средство платежа" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
@@ -10560,7 +10560,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="docnumber" remarks="Номер" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="docname" remarks="Наименование" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
@@ -11302,7 +11302,7 @@
             <column name="rname" remarks="Наименование ведомости" type="${D_NAME}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="comments" remarks="Комментарий" type="${D_CHAR256}"/>
             <column name="calc_begindate" remarks="Дата начала расчета" type="${D_DATE}"/>
             <column name="calc_enddate" remarks="Дата окончания расчета" type="${D_DATE}"/>
@@ -11386,7 +11386,7 @@
             <column name="enddate" remarks="Дата окончания исполнения должности" type="${D_DATE}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="rate_number" remarks="Количество занимаемых ставок" type="${D_RATIO}"/>
             <column name="is_basic" remarks="Признак - базовая исполняемая должность" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -11508,7 +11508,7 @@
             <column name="document_id" remarks="Идентификатор документа" type="${D_INT}"/>
             <column name="doctype" remarks="Тип документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата документа" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column name="insertdate" remarks="Дата регистрации в книге продаж" type="${D_DATE}"/>
             <column name="paydate" remarks="Дата оплаты" type="${D_DATE}"/>
             <column name="totalsum" remarks="Всего продаж, включая НДС" type="${D_SUMMA}"/>
@@ -11743,7 +11743,7 @@
             <column name="currency_code" remarks="Код валюты" type="${D_SMALLCODE}"/>
             <column name="doctype" remarks="Тип  приходного документа" type="${D_DOCTYPE}"/>
             <column name="docnumber" remarks="Номер приходного документа" type="${D_DOCNUMBER}"/>
-            <column name="docdate" remarks="Дата приходного документа" type="${D_DOCDATE}" defaultValueComputed="${today}"/>
+            <column name="docdate" remarks="Дата приходного документа" type="${D_DATE}" defaultValueComputed="${today}"/>
             <column defaultValueComputed="'2015-11-22'::date" name="createdate" remarks="Дата создания партии" type="${D_DATE}"/>
             <column name="bestbefore" remarks="Годен до, дата" type="${D_DATETIME}"/>
             <column name="contractor_id" remarks="Контрагент, от которого получена партия" type="${D_INT}"/>
