@@ -2121,14 +2121,14 @@
             <column name="responsible" remarks="Не используется" type="${D_INT}"/>
             <column name="kbk" remarks="Код КБК" type="${D_CHAR20}"/>
             <column name="okato" remarks="Код ОКАТО" type="${D_CHAR20}"/>
-            <column name="paymentbaseidx" remarks="Основание платежа" type="${D_SMALLESTCODE}"/>
-            <column name="taxperiodidx1" remarks="Период платежа - код" type="${D_SMALLESTCODE}"/>
-            <column name="taxperiodidx2" remarks="Период платежа - месяц" type="${D_SMALLESTCODE}"/>
+            <column name="paymentbaseidx" remarks="Основание платежа" type="${D_CHAR4}"/>
+            <column name="taxperiodidx1" remarks="Период платежа - код" type="${D_CHAR4}"/>
+            <column name="taxperiodidx2" remarks="Период платежа - месяц" type="${D_CHAR4}"/>
             <column name="taxperiodidx3" remarks="Период платежа - год" type="${D_CHAR4}"/>
             <column name="docnumberidx" remarks="Номер документа" type="${D_DOCNUMBER}"/>
             <column name="docdateidx" remarks="Дата документа" type="${D_MEDIUMCODE}"/>
-            <column name="paymenttypeidx" remarks="Тип платежа" type="${D_SMALLESTCODE}"/>
-            <column name="payerstatus" remarks="Статус платежа" type="${D_SMALLESTCODE}"/>
+            <column name="paymenttypeidx" remarks="Тип платежа" type="${D_CHAR4}"/>
+            <column name="payerstatus" remarks="Статус платежа" type="${D_CHAR4}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-562">
@@ -2157,14 +2157,14 @@
             <column name="responsible" remarks="Не используется" type="${D_INT}"/>
             <column name="kbk" remarks="Код КБК" type="${D_CHAR20}"/>
             <column name="okato" remarks="Код ОКАТО" type="${D_CHAR20}"/>
-            <column name="paymentbaseidx" remarks="Основание палтежа" type="${D_SMALLESTCODE}"/>
-            <column name="taxperiodidx1" remarks="Период платежа - код" type="${D_SMALLESTCODE}"/>
-            <column name="taxperiodidx2" remarks="Период платежа - месяц" type="${D_SMALLESTCODE}"/>
+            <column name="paymentbaseidx" remarks="Основание палтежа" type="${D_CHAR4}"/>
+            <column name="taxperiodidx1" remarks="Период платежа - код" type="${D_CHAR4}"/>
+            <column name="taxperiodidx2" remarks="Период платежа - месяц" type="${D_CHAR4}"/>
             <column name="taxperiodidx3" remarks="Период платежа - год" type="${D_CHAR4}"/>
             <column name="docnumberidx" remarks="Номер документа" type="${D_DOCNUMBER}"/>
             <column name="docdateidx" remarks="Дата документа" type="${D_MEDIUMCODE}"/>
-            <column name="paymenttypeidx" remarks="Тип платежа" type="${D_SMALLESTCODE}"/>
-            <column name="payerstatus" remarks="Статус платежа" type="${D_SMALLESTCODE}"/>
+            <column name="paymenttypeidx" remarks="Тип платежа" type="${D_CHAR4}"/>
+            <column name="payerstatus" remarks="Статус платежа" type="${D_CHAR4}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-563">
@@ -2394,8 +2394,8 @@
             <column name="isnotinuse" remarks="Товар аннулирован:&#10;0 - не аннулирован&#10;1 - аннулирован" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="taxgroup_id" remarks="Рег. номер налоговой группы" type="${D_INT}"/>
             <column name="shelflife" remarks="Срок годности" type="${D_QUANTITY}"/>
-            <column name="shelflife_meas" remarks="Единицы измерения срока годности&#10;0 - нет&#10;1 - час&#10;2 - день&#10;3 - месяц&#10;4 - год" type="${D_TIME_PERIOD_KIND}" defaultValueNumeric="0"/>
-            <column name="expdate_calc_kind" remarks="Тип расчета даты истечения срока годности&#10;0 - относительно даты изготовления&#10;1 - относительно даты документа&#10;2 - относительно даты прихода на склад" type="${D_EXP_DATE_CALC_KIND}" defaultValueNumeric="0">
+            <column name="shelflife_meas" remarks="Единицы измерения срока годности&#10;0 - нет&#10;1 - час&#10;2 - день&#10;3 - месяц&#10;4 - год" type="${D_SHORT}" defaultValueNumeric="0"/>
+            <column name="expdate_calc_kind" remarks="Тип расчета даты истечения срока годности&#10;0 - относительно даты изготовления&#10;1 - относительно даты документа&#10;2 - относительно даты прихода на склад" type="${D_SHORT}" defaultValueNumeric="0">
                 <constraints nullable="false"/>
             </column>
             <column name="articul" remarks="Артикул" type="${D_CHAR20}"/>
@@ -2483,7 +2483,7 @@
             </column>
             <column name="incoming_number" remarks="Входящий номер" type="${D_DOCNUMBER}"/>
             <column name="registration_date" remarks="Дата регистрации" type="${D_DATE}"/>
-            <column name="status" remarks="Статус:&#10;0 - зарегистрирован&#10;1 - в работе&#10;2 - выполнен" type="${D_CONTRACTSTATUS}"/>
+            <column name="status" remarks="Статус:&#10;0 - зарегистрирован&#10;1 - в работе&#10;2 - выполнен" type="${D_SHORT}"/>
             <column name="ratification_date" remarks="Дата утверждения" type="${D_DATE}"/>
             <column name="completed_date" remarks="Дата выполнения" type="${D_DATE}"/>
             <column name="beginaction_date" remarks="Дата начала действия" type="${D_DATE}"/>
@@ -2498,7 +2498,7 @@
             <column name="shipperbankreq_id" remarks="Банковские реквизиты грузоотправителя" type="${D_INT}"/>
             <column name="consignee" remarks="Грузополучатель" type="${D_INT}"/>
             <column name="consigneebankreq_id" remarks="Банковские реквизиты грузополучателя" type="${D_INT}"/>
-            <column name="calcsumkind" remarks="Расчет суммы:&#10;0 - не рассчитывается&#10;1 - по этапам" type="${D_CONTARCT_CALC_SUM_KIND}"/>
+            <column name="calcsumkind" remarks="Расчет суммы:&#10;0 - не рассчитывается&#10;1 - по этапам" type="${D_SHORT}"/>
             <column name="shippedpayment" remarks="Сумма платежей контрагенту, по договору" type="${D_SUMMA}"/>
             <column name="receivedpayment" remarks="Сумма платежей от контрагента, по договору" type="${D_SUMMA}"/>
             <column name="shippedgood" remarks="Сумма ТМЦ и услуг контрагенту, по договору" type="${D_SUMMA}"/>
@@ -2590,7 +2590,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="folder_id" remarks="Идентификатор папки" type="${D_INT}"/>
-            <column name="kind" remarks="Вид контрагента:&#10;0 - партнер&#10;1 - подразделение&#10;2 - сотрудник" type="${D_CONTRACTOR_KIND}" defaultValueNumeric="0">
+            <column name="kind" remarks="Вид контрагента:&#10;0 - партнер&#10;1 - подразделение&#10;2 - сотрудник" type="${D_SHORT}" defaultValueNumeric="0">
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
@@ -2631,7 +2631,7 @@
             <column name="contractorcard_id" remarks="Идентификатор карточки" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="kind" remarks="Вид движения:&#10;0 - приход&#10;1 - расход" type="${D_CONTRACTORCARD_HIST_KIND}" defaultValueNumeric="0"/>
+            <column name="kind" remarks="Вид движения:&#10;0 - приход&#10;1 - расход" type="${D_SHORT}" defaultValueNumeric="0"/>
             <column name="processdate" remarks="Дата отработки" type="${D_DATE}"/>
             <column name="sumcur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
             <column name="sumnat" remarks="Сумма" type="${D_SUMMA}"/>
@@ -2652,7 +2652,7 @@
             <column name="contractorcard_id" remarks="Идентификатор карточки" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="kind" remarks="Вид движения:&#10;0 - приход&#10;1 - расход" type="${D_CONTRACTORCARD_PLAN_KIND}" defaultValueNumeric="0"/>
+            <column name="kind" remarks="Вид движения:&#10;0 - приход&#10;1 - расход" type="${D_SHORT}" defaultValueNumeric="0"/>
             <column name="processdate" remarks="Дата отработки" type="${D_DATE}"/>
             <column name="sumcur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
             <column name="sumnat" remarks="Сумма" type="${D_SUMMA}"/>
@@ -2688,7 +2688,7 @@
             <column name="consigneebankreq_id" remarks="Банковские реквизиты грузополучателя" type="${D_INT}"/>
             <column name="sumcur" remarks="Сумма в валюте" type="${D_SUMMA}"/>
             <column name="sumnat" remarks="Сумма" type="${D_SUMMA}"/>
-            <column name="calcsumkind" remarks="Расчет суммы:&#10;0 - не рассчитывается&#10;1 - по этапам" type="${D_CONTARCT_CALC_SUM_KIND}"/>
+            <column name="calcsumkind" remarks="Расчет суммы:&#10;0 - не рассчитывается&#10;1 - по этапам" type="${D_SHORT}"/>
             <column name="margin" remarks="Не используется" type="${D_RATIO}"/>
             <column name="avoid" remarks="Этап аннулирован:&#10;0 - нет&#10;1 - да" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="shippedpayment" remarks="Сумма платежей контрагенту, по этапу" type="${D_SUMMA}"/>
@@ -3758,7 +3758,7 @@
             <column name="bestbefore" remarks="Дата истечения срока годности" type="${D_DATE}"/>
             <column name="taxgroup_id" remarks="Налоговая группа" type="${D_INT}"/>
             <column name="shelflife" remarks="Срок хранения" type="${D_QUANTITY}"/>
-            <column name="shelflife_meas" remarks="Единица измерения срока хранения" type="${D_TIME_PERIOD_KIND}" defaultValueNumeric="0">
+            <column name="shelflife_meas" remarks="Единица измерения срока хранения" type="${D_SHORT}" defaultValueNumeric="0">
                 <constraints nullable="false"/>
             </column>
             <column name="productiondate" remarks="Дата производства" type="${D_DATE}"/>
@@ -3803,7 +3803,7 @@
             <column name="taxgroup_id" remarks="Налоговая группа" type="${D_INT}"/>
             <column name="productiondate" remarks="Дата производства" type="${D_DATE}"/>
             <column name="shelflife" remarks="Срок хранения" type="${D_QUANTITY}"/>
-            <column name="shelflife_meas" remarks="Единица измерения срока хранения" type="${D_TIME_PERIOD_KIND}" defaultValueNumeric="0">
+            <column name="shelflife_meas" remarks="Единица измерения срока хранения" type="${D_SHORT}" defaultValueNumeric="0">
                 <constraints nullable="false"/>
             </column>
             <column name="measure1_id" remarks="Основная ЕИ" type="${D_INT}"/>
@@ -4147,7 +4147,7 @@
             <column name="origin" remarks="Таблица БД, запись которой экспортируется" type="${D_CHAR50}"/>
             <column name="rec_id" remarks="Идентификатор экспортируемой записи" type="${D_INT}"/>
             <column name="packet" remarks="Пакет, в который вошла экспортируемая запись. Для подготовленных к экспорту записей со статусом 0 значение поля =null." type="${D_INT}"/>
-            <column name="status" remarks="Статус записи:&#10;0 - подготовлена к экспорту&#10;1 - помещена в пакет&#10;2 - импортирована во в нешнюю БД (от нее получен соотв. пакет подтверждения)&#10;3 - получен запрос на удаление записи из внешней БД&#10;4 - запрос на удаление записи из внешней БД помещен в пакет" type="${D_EXCH_EXPORT_STATUS}" defaultValueNumeric="0"/>
+            <column name="status" remarks="Статус записи:&#10;0 - подготовлена к экспорту&#10;1 - помещена в пакет&#10;2 - импортирована во в нешнюю БД (от нее получен соотв. пакет подтверждения)&#10;3 - получен запрос на удаление записи из внешней БД&#10;4 - запрос на удаление записи из внешней БД помещен в пакет" type="${D_SHORT}" defaultValueNumeric="0"/>
             <column name="packet_time" remarks="Время создания" type="${D_DATETIME}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
@@ -4543,7 +4543,7 @@
             <column name="sname" remarks="Наименование" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="kind" remarks="Тип структурной единицы:&#10;0 - центр финансового учета&#10;1 - центр финансовой ответственности&#10;2 - венчур-центр&#10;3 - профит-центр" type="${D_FINCENTER_KIND}"/>
+            <column name="kind" remarks="Тип структурной единицы:&#10;0 - центр финансового учета&#10;1 - центр финансовой ответственности&#10;2 - венчур-центр&#10;3 - профит-центр" type="${D_SHORT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -5102,7 +5102,7 @@
             <column name="id_" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class" type="${D_SMALLESTCODE}">
+            <column name="class" type="${D_CHAR4}">
                 <constraints nullable="false"/>
             </column>
             <column name="name_" type="${D_CHAR256}"/>
@@ -5190,7 +5190,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="eventtype_" type="${D_CHAR256}"/>
-            <column name="type_" type="${D_SMALLESTCODE}"/>
+            <column name="type_" type="${D_CHAR4}"/>
             <column name="graphelement_" type="${D_INT_IDEN}"/>
             <column name="node_" type="${D_INT_IDEN}"/>
             <column name="processdefinition_" type="${D_INT_IDEN}"/>
@@ -5204,7 +5204,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="exceptionclassname_" type="${D_TEXT}"/>
-            <column name="type_" type="${D_SMALLESTCODE}"/>
+            <column name="type_" type="${D_CHAR4}"/>
             <column name="graphelement_" type="${D_INT_IDEN}"/>
             <column name="node_" type="${D_INT_IDEN}"/>
             <column name="graphelementindex_" type="${D_INT}"/>
@@ -5218,7 +5218,7 @@
             <column name="id_" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${D_SMALLESTCODE}">
+            <column name="class_" type="${D_CHAR4}">
                 <constraints nullable="false"/>
             </column>
             <column name="version_" type="${D_INT}">
@@ -5248,7 +5248,7 @@
             <column name="id_" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${D_SMALLESTCODE}">
+            <column name="class_" type="${D_CHAR4}">
                 <constraints nullable="false"/>
             </column>
             <column name="index_" type="${D_INT}"/>
@@ -5296,7 +5296,7 @@
             <column name="id_" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${D_SMALLESTCODE}">
+            <column name="class_" type="${D_CHAR4}">
                 <constraints nullable="false"/>
             </column>
             <column name="name_" type="${D_TEXT}"/>
@@ -5309,7 +5309,7 @@
             <column name="id_" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${D_SMALLESTCODE}">
+            <column name="class_" type="${D_CHAR4}">
                 <constraints nullable="false"/>
             </column>
             <column name="version_" type="${D_INT}">
@@ -5325,7 +5325,7 @@
             <column name="id_" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${D_SMALLESTCODE}">
+            <column name="class_" type="${D_CHAR4}">
                 <constraints nullable="false"/>
             </column>
             <column name="name_" type="${D_CHAR256}"/>
@@ -5363,7 +5363,7 @@
             <column name="id_" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${D_SMALLESTCODE}">
+            <column name="class_" type="${D_CHAR4}">
                 <constraints nullable="false"/>
             </column>
             <column name="name_" type="${D_CHAR256}"/>
@@ -5399,7 +5399,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="eventtype_" type="${D_CHAR256}"/>
-            <column name="type_" type="${D_SMALLESTCODE}"/>
+            <column name="type_" type="${D_CHAR4}"/>
             <column name="graphelement_" type="${D_INT_IDEN}"/>
             <column name="processinstance_" type="${D_INT_IDEN}"/>
             <column name="action_" type="${D_INT_IDEN}"/>
@@ -5478,7 +5478,7 @@
             <column name="id_" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${D_SMALLESTCODE}">
+            <column name="class_" type="${D_CHAR4}">
                 <constraints nullable="false"/>
             </column>
             <column name="version_" type="${D_INT}">
@@ -5572,14 +5572,14 @@
             <column name="id_" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="class_" type="${D_SMALLESTCODE}">
+            <column name="class_" type="${D_CHAR4}">
                 <constraints nullable="false"/>
             </column>
             <column name="version_" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
             <column name="name_" type="${D_CHAR256}"/>
-            <column name="converter_" type="${D_SMALLESTCODE}"/>
+            <column name="converter_" type="${D_CHAR4}"/>
             <column name="token_" type="${D_INT_IDEN}"/>
             <column name="tokenvariablemap_" type="${D_INT_IDEN}"/>
             <column name="processinstance_" type="${D_INT_IDEN}"/>
@@ -7038,7 +7038,7 @@
             <column name="add_expenses" remarks="Сумма дополнительных расходов" type="${D_SUMMA}"/>
             <column name="discount_on_doc" remarks="Скидка/наценка на документ" type="${D_RATIO}"/>
             <column name="discount_on_line" remarks="Скидка/наценка по строкам спецификации" type="${D_RATIO}"/>
-            <column name="duedate_kind" remarks="Срок выполнения заказа, единица измерения" type="${D_TIME_PERIOD_KIND}" defaultValueNumeric="0"/>
+            <column name="duedate_kind" remarks="Срок выполнения заказа, единица измерения" type="${D_SHORT}" defaultValueNumeric="0"/>
             <column name="duedate_quan" remarks="Срок выполнения заказа, количество единиц" type="${D_QUANTITY}"/>
             <column name="duedate" remarks="Дата выполнения" type="${D_DATE}"/>
             <column name="creditterm" remarks="Количество дней просрочки" type="${D_SHORT}"/>
@@ -7047,7 +7047,7 @@
             <column name="responsible" remarks="Ответственный" type="${D_INT}"/>
             <column name="consumer" remarks="Потребитель" type="${D_INT}"/>
             <column name="fixed_input" remarks="Поступления зафиксированы" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
-            <column name="status" remarks="Статус" type="${D_ORDER_STATUS}"/>
+            <column name="status" remarks="Статус" type="${D_SHORT}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-800">
@@ -7060,7 +7060,7 @@
             <column name="add_expenses" remarks="Сумма дополнительных расходов" type="${D_SUMMA}"/>
             <column name="discount_on_doc" remarks="Скидка/наценка на документ" type="${D_RATIO}"/>
             <column name="discount_on_line" remarks="Скидка/наценка по строкам спецификации" type="${D_RATIO}"/>
-            <column name="duedate_kind" remarks="Срок выполнения заказа, единица измерения" type="${D_TIME_PERIOD_KIND}" defaultValueNumeric="0"/>
+            <column name="duedate_kind" remarks="Срок выполнения заказа, единица измерения" type="${D_SHORT}" defaultValueNumeric="0"/>
             <column name="duedate_quan" remarks="Срок выполнения заказа, количество единиц" type="${D_QUANTITY}"/>
             <column name="duedate" remarks="Дата выполнения" type="${D_DATE}"/>
             <column name="creditterm" remarks="Количество дней просрочки" type="${D_SHORT}"/>
@@ -7069,7 +7069,7 @@
             <column name="responsible" remarks="Ответственный" type="${D_INT}"/>
             <column name="consumer" remarks="Потребитель" type="${D_INT}"/>
             <column name="fixed_input" remarks="Поступления зафиксированы" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
-            <column name="status" remarks="Статус&#10;0 - запланировано&#10;1 - заказано&#10;2 - выполнено" type="${D_ORDER_STATUS}"/>
+            <column name="status" remarks="Статус&#10;0 - запланировано&#10;1 - заказано&#10;2 - выполнено" type="${D_SHORT}"/>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-801">
@@ -7092,7 +7092,7 @@
             <column name="qty_picked" remarks="Создана накладная" type="${D_QUANTITY}"/>
             <column name="qty_outstanding" remarks="Планируется отгрузить" type="${D_QUANTITY}"/>
             <column name="closed_for_planning" remarks="Недоступно для планирования" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
-            <column name="status" remarks="Статус" type="${D_ORDER_STATUS}"/>
+            <column name="status" remarks="Статус" type="${D_SHORT}"/>
             <column name="doc_discount" remarks="Скидка/наценка на документ" type="${D_RATIO}"/>
         </createTable>
     </changeSet>
@@ -7191,7 +7191,7 @@
             <column name="give_date" remarks="Дата выдачи" type="${D_DATE}"/>
             <column name="readout_date" remarks="Дата ввода в эксплуатацию" type="${D_DATE}"/>
             <column name="shelflife" remarks="Срок годности" type="${D_QUANTITY}"/>
-            <column name="shelflife_meas" remarks="Единица измерения срока годности:&#10;1 - час&#10;2 - день&#10;3 - месяц&#10;4 - год" type="${D_TIME_PERIOD_KIND}" defaultValueNumeric="0"/>
+            <column name="shelflife_meas" remarks="Единица измерения срока годности:&#10;1 - час&#10;2 - день&#10;3 - месяц&#10;4 - год" type="${D_SHORT}" defaultValueNumeric="0"/>
             <column name="quantity" remarks="Количество выдаваемой спецодежды" type="${D_QUANTITY}"/>
             <column name="nde_cost" remarks="Цена в НДЕ" type="${D_SUMMA}"/>
             <column name="nde_summa" remarks="Сумма в НДЕ" type="${D_SUMMA}"/>
@@ -7288,7 +7288,7 @@
             <column name="measure_upcode" remarks="Единица измерения" type="${D_CHAR5}"/>
             <column name="catalog_groups_type_id" remarks="Тип группы&#10;0 - специальная одежда&#10;1 - форменная одежда&#10;2 - индивидуальные средства защита&#10;3 - инструменты&#10;4 - оргтехника, мебель&#10;5 - прочие ТМЦ" type="${D_SHORT}"/>
             <column name="shelflife" remarks="Срок использования" type="${D_QUANTITY}"/>
-            <column name="shelflife_meas" remarks="Единица измерения срока использования&#10;1 - час&#10;2 - день&#10;3 - месяц&#10;4 - год" type="${D_TIME_PERIOD_KIND}" defaultValueNumeric="0"/>
+            <column name="shelflife_meas" remarks="Единица измерения срока использования&#10;1 - час&#10;2 - день&#10;3 - месяц&#10;4 - год" type="${D_SHORT}" defaultValueNumeric="0"/>
             <column name="isbasic" remarks="Тип выдачи&#10;0 - дополнительная&#10;1 - основная" type="${D_INT}"/>
             <column name="isperiodic" remarks="Периодичность&#10;0 - разовая&#10;1 - периодическая" type="${D_INT}"/>
             <column name="isdinch" remarks="Подлежит погашению" type="${D_INT}"/>
@@ -7547,7 +7547,7 @@
             <column name="factsum" remarks="Фактическая сумма" type="${D_SUMMA}"/>
             <column name="distsum" remarks="Распределенная сумма" type="${D_SUMMA}"/>
             <column name="contractor_id" remarks="Контрагент" type="${D_INT}"/>
-            <column name="kind" remarks="Вид этапа:&#10;0 - сумма платежей контрагенту&#10;1 - сумма платежей от контрагента&#10;2 - сумма ТМЦ и услуг контрагенту&#10;3 - сумма ТМЦ и услуг от контрагента" type="${D_PHASEITEMKIND}"/>
+            <column name="kind" remarks="Вид этапа:&#10;0 - сумма платежей контрагенту&#10;1 - сумма платежей от контрагента&#10;2 - сумма ТМЦ и услуг контрагенту&#10;3 - сумма ТМЦ и услуг от контрагента" type="${D_SHORT}"/>
             <column defaultValueComputed="1" name="client_id" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
@@ -7562,7 +7562,7 @@
                 <constraints nullable="false"/>
             </column>
             <column name="docnumber" remarks="Номер" type="${D_DOCNUMBER}"/>
-            <column name="kind" remarks="Вид этапа:&#10;0 - сумма платежей контрагенту&#10;1 - сумма платежей от контрагента&#10;2 - сумма ТМЦ и услуг контрагенту&#10;3 - сумма ТМЦ и услуг от контрагента" type="${D_PHASEITEMKIND}"/>
+            <column name="kind" remarks="Вид этапа:&#10;0 - сумма платежей контрагенту&#10;1 - сумма платежей от контрагента&#10;2 - сумма ТМЦ и услуг контрагенту&#10;3 - сумма ТМЦ и услуг от контрагента" type="${D_SHORT}"/>
             <column name="beginaction_date" remarks="Дата начала действия" type="${D_DATE}"/>
             <column name="endaction_date" remarks="Дата конца действия" type="${D_DATE}"/>
             <column name="contractorfrom" remarks="Контрагент &quot;от кого&quot;" type="${D_INT}"/>
@@ -10172,7 +10172,7 @@
             <column name="cname" remarks="Наименование" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="universal_code" remarks="Код Альфа - 2" type="${D_SMALLESTCODE}"/>
+            <column name="universal_code" remarks="Код Альфа - 2" type="${D_CHAR4}"/>
             <column name="universal_abbr" remarks="Код Альфа - 3" type="${D_CHAR4}"/>
             <column name="universal_number" remarks="Международный номер" type="${D_CHAR4}"/>
             <column name="capital" remarks="Столица" type="${D_NAME}"/>
@@ -11771,7 +11771,7 @@
                 <constraints nullable="false"/>
             </column>
             <column defaultValueComputed="'2015-11-22'::date" name="datetime" remarks="Системная дата/время создания записи истории" type="${D_DATE}"/>
-            <column name="kind" remarks="Тип движения:&#10;0 - приход&#10;1 - расход" type="${D_STOCKBATCHHISTORY_KIND}">
+            <column name="kind" remarks="Тип движения:&#10;0 - приход&#10;1 - расход" type="${D_SHORT}">
                 <constraints nullable="false"/>
             </column>
             <column name="document_id" remarks="Документ, по которому сформирована запись истории" type="${D_INT_IDEN}">
@@ -12001,7 +12001,7 @@
             <column name="name" type="${D_NAME}">
                 <constraints nullable="false"/>
             </column>
-            <column name="dataitem_kind" type="${D_SYS_DATAITEM_KIND}" defaultValueNumeric="0"/>
+            <column name="dataitem_kind" type="${D_SHORT}" defaultValueNumeric="0"/>
             <column name="description" type="${D_DESCRIPTION}"/>
             <column name="domain_id" type="${D_INT}"/>
             <column name="reference_dataitem_name" type="${D_NAME}"/>
@@ -12673,7 +12673,7 @@
             <column name="contractor_id" remarks="Контрагент" type="${D_INT_IDEN}">
                 <constraints nullable="false"/>
             </column>
-            <column name="stockpolicy" remarks="Политика списания:&#10;0 - FIFO&#10;1 - LIFO&#10;2 - партионный" type="${D_STOCKPOLICY}" defaultValueNumeric="0"/>
+            <column name="stockpolicy" remarks="Политика списания:&#10;0 - FIFO&#10;1 - LIFO&#10;2 - партионный" type="${D_SHORT}" defaultValueNumeric="0"/>
             <column name="calc_fact" remarks="Расчет доступного количества: учитывать фактическое количество&#10;0 - нет&#10;1 - да" type="${D_BOOLEAN}" defaultValue="false"/>
             <column name="calc_fact_sign" remarks="При расчете доступного количества учитывать фактическое количество со знаком:&#10;0 - плюс&#10;1 - минус" type="${D_BOOLEAN}" defaultValueBoolean="false"/>
             <column name="calc_plan_in" remarks="Расчет доступного количества: учитывать планируемый приход&#10;0 - нет&#10;1 - да" type="${D_BOOLEAN}" defaultValueBoolean="false"/>

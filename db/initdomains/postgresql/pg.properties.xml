@@ -6,14 +6,9 @@
 
   <property name="D_BOOLEAN" value="BOOLEAN"/>
   <property name="D_CALCTAXESSUBJECT" value="D_CALCTAXESSUBJECT"/>
-  <property name="D_CONTARCT_CALC_SUM_KIND" value="D_CONTARCT_CALC_SUM_KIND"/>
-  <property name="D_CONTRACTORCARD_HIST_KIND" value="D_CONTRACTORCARD_HIST_KIND"/>
-  <property name="D_CONTRACTORCARD_PLAN_KIND" value="D_CONTRACTORCARD_PLAN_KIND"/>
-  <property name="D_CONTRACTOR_KIND" value="D_CONTRACTOR_KIND"/>
-  <property name="D_CONTRACTSTATUS" value="D_CONTRACTSTATUS"/>
   <property name="D_CURCOURCE" value="D_CURCOURCE"/>
-  <property name="D_DATE" value="D_DATE"/>
-  <property name="D_DATETIME" value="D_DATETIME"/>
+  <property name="D_DATE" value="DATE"/>
+  <property name="D_DATETIME" value="TIMESTAMP WITH TIME ZONE"/>
   <property name="D_DESCRIPTION" value="D_DESCRIPTION"/>
   <property name="D_DISABLE_EXCEED_QUANT" value="D_DISABLE_EXCEED_QUANT"/>
   <property name="D_DOCKIND" value="D_DOCKIND"/>
@@ -22,14 +17,10 @@
   <property name="D_DOCTYPE" value="D_DOCTYPE"/>
   <property name="D_ECONSPEC_FEATURE_CODE" value="D_ECONSPEC_FEATURE_CODE"/>
   <property name="D_EMAIL" value="D_EMAIL"/>
-  <property name="D_EXCH_EXPORT_STATUS" value="D_EXCH_EXPORT_STATUS"/>
-  <property name="D_EXP_DATE_CALC_KIND" value="D_EXP_DATE_CALC_KIND"/>
   <property name="D_FEATURE" value="D_FEATURE"/>
   <property name="D_FEATURE_INT" value="D_FEATURE_INT"/>
   <property name="D_FEATURE_STR" value="D_FEATURE_STR"/>
   <property name="D_FILENAME" value="D_FILENAME"/>
-  <property name="D_FINANL_KIND" value="D_FINANL_KIND"/>
-  <property name="D_FINCENTER_KIND" value="D_FINCENTER_KIND"/>
   <property name="D_FORMAT" value="D_FORMAT"/>
   <property name="D_FORMULA" value="D_FORMULA"/>
   <property name="D_HOUR" value="D_HOUR"/>
@@ -41,9 +32,7 @@
   <property name="D_MEDIUMCODE" value="D_MEDIUMCODE"/>
   <property name="D_MONTH" value="D_MONTH"/>
   <property name="D_NAME" value="D_NAME"/>
-  <property name="D_ORDER_STATUS" value="D_ORDER_STATUS"/>
   <property name="D_PASSWORD" value="VARCHAR(50)"/>
-  <property name="D_PHASEITEMKIND" value="D_PHASEITEMKIND"/>
   <property name="D_PHONE" value="D_PHONE"/>
   <property name="D_PHONELIST" value="D_PHONELIST"/>
   <property name="D_QUANTITY" value="D_QUANTITY"/>
@@ -52,17 +41,12 @@
   <property name="D_RATIO" value="D_RATIO"/>
   <property name="D_RPT_ENUMVALUES" value="D_RPT_ENUMVALUES"/>
   <property name="D_SHORT" value="SMALLINT"/>
-  <property name="D_STOCKBATCHHISTORY_KIND" value="D_STOCKBATCHHISTORY_KIND"/>
-  <property name="D_STOCKPOLICY" value="D_STOCKPOLICY"/>
   <property name="D_STORED_PROC_NAME" value="D_STORED_PROC_NAME"/>
   <property name="D_SUMMA" value="D_SUMMA"/>
-  <property name="D_SYS_DATAITEM_KIND" value="D_SYS_DATAITEM_KIND"/>
   <property name="D_TABLE_NAME" value="D_TABLE_NAME"/>
-  <property name="D_TIME_PERIOD_KIND" value="D_TIME_PERIOD_KIND"/>
   <property name="D_USERNAME" value="VARCHAR(50)"/>
   <property name="D_ZIPCODE" value="VARCHAR(30)"/>
   <property name="D_FLOAT" value="FLOAT"/>
-  <property name="D_SMALLESTCODE" value="VARCHAR(2)"/>
   <property name="D_CHAR4" value="VARCHAR(4)"/>
   <property name="D_CHAR5" value="VARCHAR(5)"/>
   <property name="D_CHAR10" value="VARCHAR(10)"/>
