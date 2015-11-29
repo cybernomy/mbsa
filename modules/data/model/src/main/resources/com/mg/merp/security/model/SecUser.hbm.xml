@@ -38,9 +38,6 @@
     <property name="Mobile" type="java.lang.String">
       <column name="MOBILE" length="80" not-null="false" sql-type="VARCHAR"/>
     </property>
-    <property name="Pager" type="java.lang.String">
-      <column name="PAGER" length="80" not-null="false" sql-type="VARCHAR"/>
-    </property>
     <property name="UseRemoteProfile" type="boolean">
       <column name="USE_REMOTE_PROFILE" not-null="false" sql-type="SMALLINT"/>
     </property>

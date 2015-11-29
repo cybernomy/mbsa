@@ -30,7 +30,7 @@
     <jfd:field id="UseRemoteProfile" /-->
     <jfd:field id="Email"/>
     <jfd:field id="Mobile"/>
-    <jfd:field id="Pager"/>
+
     <jfd:table id="groups" scroll="true" autoResize="subsequent_columns"
                label="resource://com.mg.merp.security.resources.formelements#User.FormMt.Roles">
       <jfd:popupMenu>

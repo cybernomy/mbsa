@@ -68,7 +68,6 @@ public class UserBr extends DefaultPlainBrowseForm {
         //result.add(new TableEJBQLFieldDef(SecUser.class, "SmartCardOnly", "u.SmartCardOnly", false));
         result.add(new TableEJBQLFieldDef(SecUser.class, "Email", "u.Email", false));
         result.add(new TableEJBQLFieldDef(SecUser.class, "Mobile", "u.Mobile", false));
-        result.add(new TableEJBQLFieldDef(SecUser.class, "Pager", "u.Pager", false));
         //result.add(new TableEJBQLFieldDef(SecUser.class, "UseRemoteProfile", "u.UseRemoteProfile", false));
         return DatabaseUtils.embedAddinFieldsDefaultEJBQLFieldDefs(result, service);
 

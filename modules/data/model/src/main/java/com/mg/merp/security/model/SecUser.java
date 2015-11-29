@@ -44,8 +44,6 @@ public class SecUser extends com.mg.framework.service.PersistentObjectHibernate
 
   private java.lang.String Mobile;
 
-  private java.lang.String Pager;
-
   private boolean UseRemoteProfile;
 
   private java.lang.Short UserType;
@@ -177,18 +175,6 @@ public class SecUser extends com.mg.framework.service.PersistentObjectHibernate
 
   public void setMobile(java.lang.String Mobile) {
     this.Mobile = Mobile;
-  }
-
-  /**
-   *
-   */
-  @DataItemName("Security.User.Pager")
-  public java.lang.String getPager() {
-    return this.Pager;
-  }
-
-  public void setPager(java.lang.String Pager) {
-    this.Pager = Pager;
   }
 
   /**
