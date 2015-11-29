@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
   
-  <include file="postgresql/pg.changelog.xml" relativeToChangelogFile="true"/>
-  <!--include file="mysql/mysql.changelog.xml" relativeToChangelogFile="true"/>
-  <include file="oracle/oracle.changelog.xml" relativeToChangelogFile="true"/>
-  <include file="mssql/mssql.changelog.xml" relativeToChangelogFile="true"/>
-  <include file="default.changelog.xml" relativeToChangelogFile="true"/-->
+  <!--include file="default.properties.xml" relativeToChangelogFile="true"/-->
+  <include file="pg.properties.xml" relativeToChangelogFile="true"/>
+  <!--include file="mysql.properties.xml" relativeToChangelogFile="true" dbms="mysql"/>
+  <include file="oracle.properties.xml" relativeToChangelogFile="true" dbms="oracle"/-->
 </databaseChangeLog>

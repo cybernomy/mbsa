@@ -1,37 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
+  <!--preConditions onFail="WARN">
+        <dbms type="postgresql" />
+  </preConditions-->
+    
   <property name="now" value="now()"/>
   <property name="today" value="current_date"/>
+ 
+  <property name="D_USERNAME" value="VARCHAR(50)"/>
+  <property name="D_PASSWORD" value="VARCHAR(50)"/>
+  <property name="D_ZIPCODE" value="VARCHAR(30)"/>
+  <property name="D_UUID" value="VARCHAR(40)"/>
 
   <property name="D_BOOLEAN" value="BOOLEAN"/>
+  
   <property name="D_DATE" value="DATE"/>
   <property name="D_DATETIME" value="TIMESTAMP WITH TIME ZONE"/>
-  <property name="D_DOCNUMBER" value="D_DOCNUMBER"/>
-  <property name="D_DOCTYPE" value="D_DOCTYPE"/>
-  <property name="D_ECONSPEC_FEATURE_CODE" value="D_ECONSPEC_FEATURE_CODE"/>
-  <property name="D_FEATURE" value="D_FEATURE"/>
-  <property name="D_FEATURE_INT" value="D_FEATURE_INT"/>
-  <property name="D_FEATURE_STR" value="D_FEATURE_STR"/>
-  <property name="D_FILENAME" value="D_FILENAME"/>
-  <property name="D_FORMULA" value="D_FORMULA"/>
-  <property name="D_HOUR" value="D_HOUR"/>
+  
+  <property name="D_SHORT" value="SMALLINT"/>
   <property name="D_INT" value="BIGINT"/>
   <property name="D_INT_IDEN" value="BIGINT"/>
-  <property name="D_MEASURE_CONTROL" value="D_MEASURE_CONTROL"/>
-  <property name="D_MEASURE_CONVERSION" value="D_MEASURE_CONVERSION"/>
-  <property name="D_MEDIUMCODE" value="D_MEDIUMCODE"/>
-  <property name="D_NAME" value="D_NAME"/>
-  <property name="D_PASSWORD" value="VARCHAR(50)"/>
-  <property name="D_PHONE" value="D_PHONE"/>
-  <property name="D_PHONELIST" value="D_PHONELIST"/>
-  <property name="D_RPT_ENUMVALUES" value="D_RPT_ENUMVALUES"/>
-  <property name="D_SHORT" value="SMALLINT"/>
-  <property name="D_STORED_PROC_NAME" value="D_STORED_PROC_NAME"/>
-  <property name="D_TABLE_NAME" value="D_TABLE_NAME"/>
-  <property name="D_USERNAME" value="VARCHAR(50)"/>
-  <property name="D_ZIPCODE" value="VARCHAR(30)"/>
+  
   <property name="D_FLOAT" value="FLOAT"/>
+  <property name="D_NUM15_3" value="NUMERIC(15,3)"/>
+  <property name="D_NUM15_5" value="NUMERIC(15,5)"/>
+  <property name="D_RATIO" value="NUMERIC(18,6)"/>
+  
   <property name="D_CHAR4" value="VARCHAR(4)"/>
   <property name="D_CHAR5" value="VARCHAR(5)"/>
   <property name="D_CHAR10" value="VARCHAR(10)"/>
@@ -42,10 +37,7 @@
   <property name="D_CHAR100" value="VARCHAR(100)"/>
   <property name="D_CHAR150" value="VARCHAR(150)"/>
   <property name="D_CHAR256" value="VARCHAR(256)"/>
+  
   <property name="D_TEXT" value="TEXT"/>
-  <property name="D_UUID" value="VARCHAR(40)"/>
   <property name="D_BINARY" value="BYTEA"/>
-  <property name="D_NUM15_3" value="NUMERIC(15,3)"/>
-  <property name="D_NUM15_5" value="NUMERIC(15,5)"/>
-  <property name="D_RATIO" value="NUMERIC(18,6)"/>
 </databaseChangeLog>
