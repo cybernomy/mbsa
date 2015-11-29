@@ -3,4 +3,5 @@
 
   <include file="initdomains/domains.changelog.xml"/>
   <include file="mbsa.init.changelog.xml"/> 
+  <include file="data/mbsa.data.changelog.xml"/> 
 </databaseChangeLog>
