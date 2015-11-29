@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+  <!--property name="now" value="now()" dbms="mysql" />
+  <property name="today" value="current_date" dbms="mysql" />
+ 
+  <property name="D_USERNAME" value="VARCHAR(50)" dbms="mysql" />
+  <property name="D_PASSWORD" value="VARCHAR(50)" dbms="mysql" />
+  <property name="D_ZIPCODE" value="VARCHAR(30)" dbms="mysql" />
+  <property name="D_UUID" value="VARCHAR(40)" dbms="mysql" />
+
+  <property name="D_BOOLEAN" value="BOOLEAN" dbms="mysql" />
+  
+  <property name="D_DATE" value="DATE" dbms="mysql" />
+  <property name="D_DATETIME" value="TIMESTAMP WITH TIME ZONE" dbms="mysql" />
+  
+  <property name="D_SHORT" value="SMALLINT" dbms="mysql" />
+  <property name="D_INT" value="BIGINT" dbms="mysql" />
+  <property name="D_INT_IDEN" value="BIGINT" dbms="mysql" />
+  
+  <property name="D_FLOAT" value="FLOAT" dbms="mysql" />
+  <property name="D_NUM15_3" value="NUMERIC(15,3)" dbms="mysql" />
+  <property name="D_NUM15_5" value="NUMERIC(15,5)" dbms="mysql" />
+  <property name="D_RATIO" value="NUMERIC(18,6)" dbms="mysql" />
+  
+  <property name="D_CHAR4" value="VARCHAR(4)" dbms="mysql" />
+  <property name="D_CHAR5" value="VARCHAR(5)" dbms="mysql" />
+  <property name="D_CHAR10" value="VARCHAR(10)" dbms="mysql" />
+  <property name="D_CHAR15" value="VARCHAR(15)" dbms="mysql" />
+  <property name="D_CHAR20" value="VARCHAR(20)" dbms="mysql" />
+  <property name="D_CHAR30" value="VARCHAR(30)" dbms="mysql" />
+  <property name="D_CHAR50" value="VARCHAR(50)" dbms="mysql" />
+  <property name="D_CHAR100" value="VARCHAR(100)" dbms="mysql" />
+  <property name="D_CHAR150" value="VARCHAR(150)" dbms="mysql" />
+  <property name="D_CHAR256" value="VARCHAR(256)" dbms="mysql" />
+  
+  <property name="D_TEXT" value="TEXT" dbms="mysql" />
+  <property name="D_BINARY" value="BYTEA" dbms="mysql" /-->
+</databaseChangeLog>

@@ -1,43 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
 
-  <!--preConditions onFail="WARN">
-        <dbms type="postgresql" />
-  </preConditions-->
-    
-  <property name="now" value="now()"/>
-  <property name="today" value="current_date"/>
+  <property name="now" value="now()" dbms="postgresql" />
+  <property name="today" value="current_date" dbms="postgresql" />
  
-  <property name="D_USERNAME" value="VARCHAR(50)"/>
-  <property name="D_PASSWORD" value="VARCHAR(50)"/>
-  <property name="D_ZIPCODE" value="VARCHAR(30)"/>
-  <property name="D_UUID" value="VARCHAR(40)"/>
+  <property name="D_USERNAME" value="VARCHAR(50)" dbms="postgresql" />
+  <property name="D_PASSWORD" value="VARCHAR(50)" dbms="postgresql" />
+  <property name="D_ZIPCODE" value="VARCHAR(30)" dbms="postgresql" />
+  <property name="D_UUID" value="VARCHAR(40)" dbms="postgresql" />
 
-  <property name="D_BOOLEAN" value="BOOLEAN"/>
+  <property name="D_BOOLEAN" value="BOOLEAN" dbms="postgresql" />
   
-  <property name="D_DATE" value="DATE"/>
-  <property name="D_DATETIME" value="TIMESTAMP WITH TIME ZONE"/>
+  <property name="D_DATE" value="DATE" dbms="postgresql" />
+  <property name="D_DATETIME" value="TIMESTAMP WITH TIME ZONE" dbms="postgresql" />
   
-  <property name="D_SHORT" value="SMALLINT"/>
-  <property name="D_INT" value="BIGINT"/>
-  <property name="D_INT_IDEN" value="BIGINT"/>
+  <property name="D_SHORT" value="SMALLINT" dbms="postgresql" />
+  <property name="D_INT" value="BIGINT" dbms="postgresql" />
+  <property name="D_INT_IDEN" value="BIGINT" dbms="postgresql" />
   
-  <property name="D_FLOAT" value="FLOAT"/>
-  <property name="D_NUM15_3" value="NUMERIC(15,3)"/>
-  <property name="D_NUM15_5" value="NUMERIC(15,5)"/>
-  <property name="D_RATIO" value="NUMERIC(18,6)"/>
+  <property name="D_FLOAT" value="FLOAT" dbms="postgresql" />
+  <property name="D_NUM15_3" value="NUMERIC(15,3)" dbms="postgresql" />
+  <property name="D_NUM15_5" value="NUMERIC(15,5)" dbms="postgresql" />
+  <property name="D_RATIO" value="NUMERIC(18,6)" dbms="postgresql" />
   
-  <property name="D_CHAR4" value="VARCHAR(4)"/>
-  <property name="D_CHAR5" value="VARCHAR(5)"/>
-  <property name="D_CHAR10" value="VARCHAR(10)"/>
-  <property name="D_CHAR15" value="VARCHAR(15)"/>
-  <property name="D_CHAR20" value="VARCHAR(20)"/>
-  <property name="D_CHAR30" value="VARCHAR(30)"/>
-  <property name="D_CHAR50" value="VARCHAR(50)"/>
-  <property name="D_CHAR100" value="VARCHAR(100)"/>
-  <property name="D_CHAR150" value="VARCHAR(150)"/>
-  <property name="D_CHAR256" value="VARCHAR(256)"/>
+  <property name="D_CHAR4" value="VARCHAR(4)" dbms="postgresql" />
+  <property name="D_CHAR5" value="VARCHAR(5)" dbms="postgresql" />
+  <property name="D_CHAR10" value="VARCHAR(10)" dbms="postgresql" />
+  <property name="D_CHAR15" value="VARCHAR(15)" dbms="postgresql" />
+  <property name="D_CHAR20" value="VARCHAR(20)" dbms="postgresql" />
+  <property name="D_CHAR30" value="VARCHAR(30)" dbms="postgresql" />
+  <property name="D_CHAR50" value="VARCHAR(50)" dbms="postgresql" />
+  <property name="D_CHAR100" value="VARCHAR(100)" dbms="postgresql" />
+  <property name="D_CHAR150" value="VARCHAR(150)" dbms="postgresql" />
+  <property name="D_CHAR256" value="VARCHAR(256)" dbms="postgresql" />
   
-  <property name="D_TEXT" value="TEXT"/>
-  <property name="D_BINARY" value="BYTEA"/>
+  <property name="D_TEXT" value="TEXT" dbms="postgresql" />
+  <property name="D_BINARY" value="BYTEA" dbms="postgresql" />
 </databaseChangeLog>
