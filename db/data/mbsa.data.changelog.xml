@@ -1,0 +1,14 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+ 
+ <include file="sysdata.changelog.xml" relativeToChangelogFile="true"/>
+ <!--include file="sysmodule.changelog.xml" relativeToChangelogFile="true"/>
+ <include file="sysclass.changelog.xml" relativeToChangelogFile="true"/>
+ <include file="sysmethod.changelog.xml" relativeToChangelogFile="true"/>
+ <include file="sysdomain.changelog.xml" relativeToChangelogFile="true"/>
+ <include file="sysdataitem.changelog.xml" relativeToChangelogFile="true"/>
+ <include file="sysform.changelog.xml" relativeToChangelogFile="true"/>
+ <include file="syswindow.changelog.xml" relativeToChangelogFile="true"/>
+ <include file="folder.changelog.xml" relativeToChangelogFile="true"/>
+ <include file="docsection.changelog.xml" relativeToChangelogFile="true"/>
+ <include file="dpaction.changelog.xml" relativeToChangelogFile="true"/-->
+</databaseChangeLog>

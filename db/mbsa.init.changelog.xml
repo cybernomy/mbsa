@@ -5745,6 +5745,9 @@
             <column name="id" type="${D_INT}">
                 <constraints nullable="false"/>
             </column>
+	    <column name="name" type="${D_CHAR256}">
+                <constraints nullable="false"/>
+            </column>
         </createTable>
     </changeSet>
     <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-init-741">

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+  
+  <!-- ===================== use separate files per each db =============== -->
+  <property name="jg_user_seq" value="nextval('jg_user_seq')" dbms="postgresql" />
+  <property name="jg_app_principal_seq" value="nextval('jg_app_principal_seq')" dbms="postgresql" />
+  <property name="jg_credential_seq" value="nextval('jg_credential_seq')" dbms="postgresql" />
+  <property name="jg_domain_seq" value="nextval('jg_domain_seq')" dbms="postgresql" />
+  <property name="jg_permission_seq" value="nextval('jg_permission_seq')" dbms="postgresql" />
+  <property name="jg_principal_seq" value="nextval('jg_principal_seq')" dbms="postgresql" />
+  <property name="sec_groups_id_gen" value="nextval('sec_groups_id_gen')" dbms="postgresql" />
+  <property name="sec_user_id_gen" value="nextval('sec_user_id_gen')" dbms="postgresql" />
+  <property name="sec_link_users_groups_id_gen" value="nextval('sec_link_users_groups_id_gen')" dbms="postgresql" />
+  <property name="jg_st_user_seq" value="nextval('jg_st_user_seq')" dbms="postgresql" />
+  <property name="jg_st_credential_seq" value="nextval('jg_st_credential_seq')" dbms="postgresql" />
+  
+  <property name="measure_id_gen" value="nextval('measure_id_gen')" dbms="postgresql" />
+
+  <!-- ===================== common properties =============== -->
+  <property name="GET_GUEST_USER" value="((select id from jg_user where name = 'guest'))" dbms="postgresql" />
+  <property name="GET_ADMIN_USER" value="((select id from jg_user where name = 'admin'))" dbms="postgresql" />
+  <property name="GET_REGULAR_USER" value="((select id from jg_user where name = 'standartuser'))" dbms="postgresql" />
+  <property name="GET_SYSTEM_USER" value="((select id from jg_user where name = 'systemuser'))" dbms="postgresql" />
+  
+  <property name="GET_GUEST_APP_PR" value="((select id from jg_app_principal where name = 'guest'))"/>
+  <property name="GET_ADMIN_APP_PR" value="((select id from jg_app_principal where name = 'admin'))"/>
+  <property name="GET_REGULAR_APP_PR" value="((select id from jg_app_principal where name = 'standartuser'))"/>
+  <property name="GET_SYSTEM_APP_PR" value="((select id from jg_app_principal where name = 'systemuser'))"/>
+ 
+  <property name="GET_PUBLIC_DOMAIN" value="((select id from jg_domain where name = 'public'))"/>
+  <property name="GET_SUPER_DOMAIN" value="((select id from jg_domain where name = 'superuser'))"/>
+  <property name="GET_REGULAR_DOMAIN" value="((select id from jg_domain where name = 'standartuser'))"/>
+  <property name="GET_SYSTEM_DOMAIN" value="((select id from jg_domain where name = 'systemuser'))"/>
+
+  <property name="GET_GUEST_PRINCIPAL" value="((select id from jg_principal where name = 'guest'))"/>
+  <property name="GET_ADMIN_PRINCIPAL" value="((select id from jg_principal where name = 'admin'))"/>
+  <property name="GET_REGULAR_PRINCIPAL" value="((select id from jg_principal where name = 'standartuser'))"/>
+  <property name="GET_SYSTEM_PRINCIPAL" value="((select id from jg_principal where name = 'systemuser'))"/>
+  
+  <property name="GET_MEASURE_TICK" value="((select id from measure where UPCODE = 'TICK'))"/>
+  
+  
+  <property name="GET_SEC_USR_ADMIN" value="((select id from sec_users where name = 'admin'))"/>
+  <property name="GET_SEC_USR_SCHDLR" value="((select id from sec_users where name = 'scheduler'))"/>
+  <property name="GET_SEC_GRPS_ADMIN" value="((select id from sec_groups where name = 'Administrators'))"/>
+  <property name="GET_SEC_GRPS_SCHDLR" value="((select id from sec_groups where name = 'scheduler'))"/>
+  
+  <property name="GET_DFLT_ST_USR" value="((select id from jg_st_user where name = 'default'))"/>  
+  
+    
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-1">
+    <insert tableName="sys_client">
+      <column name="id" valueNumeric="1"/>
+      <column name="code" value="00001"/>
+      <column name="name" value="00001"/>
+      <column name="is_active" valueBoolean="true"/>
+      <column name="language" value="ru_RU"/>
+    </insert>
+  </changeSet>
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-2">
+    <insert tableName="systemconfig">
+      <column name="major_version" valueNumeric="4"/>
+      <column name="minor_version" valueNumeric="35"/>
+      <column name="RELEASE" valueNumeric="0"/>
+      <column name="base_currency"/>
+      <column name="national_currency"/>
+      <column name="use_analitic_link" valueBoolean="false"/>
+      <column name="recurse_folder" valueBoolean="false"/>
+      <column name="recurse_catfolder" valueBoolean="false"/>
+      <column name="recurse_orgunit" valueBoolean="false"/>
+      <column name="delays_on" valueBoolean="false"/>
+      <column name="currency_prec"/>
+      <column name="defer_remnacc" valueBoolean="false"/>
+      <column name="log_v1_doc_del" valueBoolean="false"/>
+      <column name="log_v1_rollback" valueBoolean="false"/>
+      <column name="log_v1_partner" valueBoolean="false"/>
+      <column name="log_v1_catalog" valueBoolean="false"/>
+    </insert>
+  </changeSet>
+
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-3">
+    <sql>INSERT INTO JG_APP_PRINCIPAL (ID, NAME) VALUES (${jg_app_principal_seq}, 'guest')</sql>
+    <sql>INSERT INTO JG_APP_PRINCIPAL (ID, NAME) VALUES (${jg_app_principal_seq}, 'admin')</sql>
+    <sql>INSERT INTO JG_APP_PRINCIPAL (ID, NAME) VALUES (${jg_app_principal_seq}, 'standartuser')</sql>
+    <sql>INSERT INTO JG_APP_PRINCIPAL (ID, NAME) VALUES (${jg_app_principal_seq}, 'systemuser')</sql>
+  </changeSet>
+  
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-4">
+    <sql>INSERT INTO JG_USER (ID, NAME) VALUES (${jg_user_seq}, 'guest')</sql>
+    <sql>INSERT INTO JG_USER (ID, NAME) VALUES (${jg_user_seq}, 'admin')</sql>
+    <sql>INSERT INTO JG_USER (ID, NAME) VALUES (${jg_user_seq}, 'standartuser')</sql>
+    <sql>INSERT INTO JG_USER (ID, NAME) VALUES (${jg_user_seq}, 'systemuser')</sql>
+  </changeSet>
+  
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-5">
+    <sql>INSERT INTO JG_CREDENTIAL (ID, USER_ID, PUBLIC_VISIBILITY, CRED_NAME, CRED_VALUE) VALUES (${jg_credential_seq}, ${GET_GUEST_USER}, false, 'login', 'guest')</sql>
+    <sql>INSERT INTO JG_CREDENTIAL (ID, USER_ID, PUBLIC_VISIBILITY, CRED_NAME, CRED_VALUE) VALUES (${jg_credential_seq}, ${GET_GUEST_USER}, false, 'password', 'b95400adf3b5fd5610e67a4ecf6de002d6975e3d16429fcfbf8f676bd081eb59')</sql>
+    <sql>INSERT INTO JG_CREDENTIAL (ID, USER_ID, PUBLIC_VISIBILITY, CRED_NAME, CRED_VALUE) VALUES (${jg_credential_seq}, ${GET_ADMIN_USER}, false, 'login', 'admin')</sql>
+    <sql>INSERT INTO JG_CREDENTIAL (ID, USER_ID, PUBLIC_VISIBILITY, CRED_NAME, CRED_VALUE) VALUES (${jg_credential_seq}, ${GET_ADMIN_USER}, false, 'password', '8580d8291d9c3923b45d680efcee30f9ab9ca5a378f06e76c03fe3a5a2512048')</sql>
+    <sql>INSERT INTO JG_CREDENTIAL (ID, USER_ID, PUBLIC_VISIBILITY, CRED_NAME, CRED_VALUE) VALUES (${jg_credential_seq}, ${GET_REGULAR_USER}, false, 'login', 'scheduler')</sql>
+    <sql>INSERT INTO JG_CREDENTIAL (ID, USER_ID, PUBLIC_VISIBILITY, CRED_NAME, CRED_VALUE) VALUES (${jg_credential_seq}, ${GET_REGULAR_USER}, false, 'password', '5d4b51e0217503ff1f9186040ee1de15dbf620b2a0ffc99f5b87e7f7c0e2acfb')</sql>
+  </changeSet>
+  
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-6">
+    <sql>INSERT INTO JG_DOMAIN (ID, NAME) VALUES (${jg_domain_seq}, 'public')</sql>
+    <sql>INSERT INTO JG_DOMAIN (ID, NAME) VALUES (${jg_domain_seq}, 'superuser')</sql>
+    <sql>INSERT INTO JG_DOMAIN (ID, NAME) VALUES (${jg_domain_seq}, 'standartuser')</sql>
+    <sql>INSERT INTO JG_DOMAIN (ID, NAME) VALUES (${jg_domain_seq}, 'systemuser')</sql>
+  </changeSet>
+
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-7">
+    <sql>INSERT INTO JG_PERMISSION (ID, CLASS, NAME, ACTIONS, DOMAIN_ID) VALUES (${jg_permission_seq}, 'com.mg.framework.api.security.StartApplicationPermission', 'guest', NULL, ${GET_PUBLIC_DOMAIN})</sql>
+    <sql>INSERT INTO JG_PERMISSION (ID, CLASS, NAME, ACTIONS, DOMAIN_ID) VALUES (${jg_permission_seq}, 'java.security.AllPermission', 'allAccess', NULL, ${GET_SUPER_DOMAIN})</sql>
+    <sql>INSERT INTO JG_PERMISSION (ID, CLASS, NAME, ACTIONS, DOMAIN_ID) VALUES (${jg_permission_seq}, 'com.mg.framework.api.security.StartApplicationPermission', 'standartuser', NULL, ${GET_REGULAR_DOMAIN})</sql>
+  </changeSet>
+
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-8">
+    <sql>INSERT INTO JG_PRINCIPAL (ID, NAME, APPLICATION_NAME, CLASS_NAME) VALUES (${jg_principal_seq}, 'guest', 'MBSASystem', 'com.mg.merp.security.Principal')</sql>
+    <sql>INSERT INTO JG_PRINCIPAL (ID, NAME, APPLICATION_NAME, CLASS_NAME) VALUES (${jg_principal_seq}, 'admin', 'MBSASystem', 'com.mg.merp.security.Principal')</sql>
+    <sql>INSERT INTO JG_PRINCIPAL (ID, NAME, APPLICATION_NAME, CLASS_NAME) VALUES (${jg_principal_seq}, 'standartuser', 'MBSASystem', 'com.mg.merp.security.Principal')</sql>
+    <sql>INSERT INTO JG_PRINCIPAL (ID, NAME, APPLICATION_NAME, CLASS_NAME) VALUES (${jg_principal_seq}, 'systemuser', 'MBSASystem', 'com.mg.merp.security.Principal')</sql>
+  </changeSet>
+
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-9">
+    <sql>INSERT INTO JG_PRINCIPAL_DOMAIN (DOMAIN_ID, PRINCIPAL_ID) VALUES (${GET_PUBLIC_DOMAIN}, ${GET_GUEST_APP_PR})</sql>
+    <sql>INSERT INTO JG_PRINCIPAL_DOMAIN (DOMAIN_ID, PRINCIPAL_ID) VALUES (${GET_SUPER_DOMAIN}, ${GET_ADMIN_APP_PR})</sql>
+    <sql>INSERT INTO JG_PRINCIPAL_DOMAIN (DOMAIN_ID, PRINCIPAL_ID) VALUES (${GET_REGULAR_DOMAIN}, ${GET_REGULAR_APP_PR})</sql>
+    <sql>INSERT INTO JG_PRINCIPAL_DOMAIN (DOMAIN_ID, PRINCIPAL_ID) VALUES (${GET_SYSTEM_DOMAIN}, ${GET_SYSTEM_APP_PR})</sql>
+  </changeSet>
+
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-10">
+    <sql>INSERT INTO JG_USER_PRINCIPAL (USER_ID, PRINCIPAL_ID, DEFINITION, "active") VALUES (${GET_GUEST_USER}, ${GET_GUEST_PRINCIPAL}, 'guest', true)</sql>
+    <sql>INSERT INTO JG_USER_PRINCIPAL (USER_ID, PRINCIPAL_ID, DEFINITION, "active") VALUES (${GET_ADMIN_USER}, ${GET_ADMIN_PRINCIPAL}, 'admin', true)</sql>
+    <sql>INSERT INTO JG_USER_PRINCIPAL (USER_ID, PRINCIPAL_ID, DEFINITION, "active") VALUES (${GET_REGULAR_USER}, ${GET_REGULAR_PRINCIPAL}, 'standartuser', true)</sql>
+    <sql>INSERT INTO JG_USER_PRINCIPAL (USER_ID, PRINCIPAL_ID, DEFINITION, "active") VALUES (${GET_SYSTEM_USER}, ${GET_SYSTEM_PRINCIPAL}, 'systemuser', true)</sql>
+  </changeSet>
+  
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-11">
+    <sql>INSERT INTO SEC_GROUPS (ID,NAME,CLIENT_ID) VALUES (${sec_groups_id_gen},'Administrators',1)</sql>
+    <sql>INSERT INTO SEC_GROUPS (ID,NAME,CLIENT_ID) VALUES (${sec_groups_id_gen},'scheduler',1)</sql>
+  </changeSet>
+
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-12">
+    <sql>INSERT INTO SEC_USERS (ID,NAME,FULLNAME,CLIENT_ID) VALUES (${sec_user_id_gen},'admin','Sytem administrator',1)</sql>
+    <sql>INSERT INTO SEC_USERS (ID,NAME,FULLNAME,CLIENT_ID) VALUES (${sec_user_id_gen},'scheduler','scheduler',1)</sql>
+  </changeSet>
+
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-13">          
+    <sql>INSERT INTO SEC_LINK_USERS_GROUPS (ID,USER_ID,GROUP_ID,CLIENT_ID) VALUES (${sec_link_users_groups_id_gen}, ${GET_SEC_USR_ADMIN},${GET_SEC_GRPS_ADMIN},1)</sql>
+    <sql>INSERT INTO SEC_LINK_USERS_GROUPS (ID,USER_ID,GROUP_ID,CLIENT_ID) VALUES (${sec_link_users_groups_id_gen}, ${GET_SEC_USR_SCHDLR},${GET_SEC_GRPS_SCHDLR},1)</sql>
+  </changeSet>
+
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-14">
+    <sql>INSERT INTO JG_ST_USER (ID, NAME) VALUES (${jg_st_user_seq}, 'default')</sql>
+  </changeSet>
+
+  <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-15">
+    <sql>INSERT INTO JG_ST_CREDENTIAL (ID, CRED_NAME, PUBLIC_VISIBILITY, REQUIRED, IDTITY, ST_USER_ID) VALUES (${jg_st_credential_seq},'login', false, true, true, ${GET_DFLT_ST_USR})</sql>
+    <sql>INSERT INTO JG_ST_CREDENTIAL (ID, CRED_NAME, PUBLIC_VISIBILITY, REQUIRED, IDTITY, ST_USER_ID) VALUES (${jg_st_credential_seq}, 'password', false, true, false, ${GET_DFLT_ST_USR})</sql>
+  </changeSet>
+
+
+<changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-16">
+        <insert tableName="wh_config">
+            <column name="client_id" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+    <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-17">
+        <insert tableName="stl_config">
+            <column name="client_id" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+    <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-18">
+        <insert tableName="pmc_config">
+            <column name="client_id" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+    <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-19">
+        <insert tableName="measure">
+            <column name="id" valueNumeric="${measure_id_gen}"/>
+            <column name="upcode" value="TICK"/>
+            <column name="code" value="TICK"/>
+            <column name="mname" value="TICK"/>
+            <column name="divide" valueBoolean="false"/>
+            <column name="universal_code"/>
+            <column name="client_id" valueNumeric="1"/>
+            <column name="internal_code"/>
+        </insert>
+    </changeSet>
+    <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-20">
+        <insert tableName="mf_config">
+            <column name="tick_um" valueNumeric="${GET_MEASURE_TICK}"/>
+            <column name="main_time_um" valueNumeric="${GET_MEASURE_TICK}"/>
+            <column name="client_id" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+    
+    <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-21">
+        <insert tableName="fin_config">
+            <column name="client_id" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+    <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-22">
+        <insert tableName="acc_config">
+            <column name="client_id" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+    <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-23">
+        <insert tableName="pref_config">
+            <column name="id" valueNumeric="1"/>
+            <column name="client_id" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+    <changeSet author="valentin.poroxnenko@gmail.com" id="mbsa-data-sysdata-24">
+        <insert tableName="tab_config">
+            <column name="client_id" valueNumeric="1"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

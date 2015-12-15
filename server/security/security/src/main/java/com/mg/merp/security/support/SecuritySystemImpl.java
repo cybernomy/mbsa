@@ -101,7 +101,7 @@ public class SecuritySystemImpl implements SecuritySystem {
 //				AccessController.checkPermission(perm);
 //				return null;
 //			}
-//			
+//
 //		},
 //		AccessControlContextUtils.getSubjectOnlyAccessControlContext(caller));
 //		Policy policy = Policy.getPolicy();
@@ -121,7 +121,7 @@ public class SecuritySystemImpl implements SecuritySystem {
 //			AccessControlException e = new AccessControlException(msg);
 //			throw e;
 //		}
-    //в текущей реализации проверка прав на методы происходит старым методом унаследованным из
+    //TODO: в текущей реализации проверка прав на методы происходит старым методом унаследованным из
     //предыдущих версий системы, в следующих релизах будет переработан с использованием JAAS
     if (perm instanceof BusinessMethodPermission)
       checkBusinessMethodPermission((BusinessMethodPermission) perm);
