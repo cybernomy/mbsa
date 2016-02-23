@@ -70,7 +70,7 @@
         ${artifact.build.finalName}.${artifact.extension}
       </outputFileNameMapping>
       <includes>
-        <include>*:jboss-sar</include>
+        <include>*:sar</include>
         <include>*:har</include>
       </includes>
     </dependencySet>
