@@ -86,6 +86,7 @@
     <jbossEjbVersion>4.2.1.GA</jbossEjbVersion>
     <jbossJbpmVersion>3.2.3</jbossJbpmVersion>
     <jbossCacheVersion>1.4.1.GA</jbossCacheVersion>
+    <jgroupsVersion>2.4.1</jgroupsVersion>
     <javaxEjbApiVersion>3.0</javaxEjbApiVersion>
     <javaxMailVersion>1.4</javaxMailVersion>
     <javaxServletApiVersion>2.4</javaxServletApiVersion>
