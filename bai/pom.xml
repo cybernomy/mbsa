@@ -78,7 +78,6 @@
     <dependency>
       <groupId>com.sun</groupId>
       <artifactId>javaee</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
