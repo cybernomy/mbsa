@@ -38,10 +38,10 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
     <maven.min.version>3.1.1</maven.min.version>
-    <compile.jdk.version>1.5</compile.jdk.version>
-    <compile.jdk.home>${java.6.home}</compile.jdk.home>
-    <compile.jdk.signature>java16-sun</compile.jdk.signature>
-    <compile.jdk.signature.version>1.10</compile.jdk.signature.version>
+    <compile.jdk.version>1.8</compile.jdk.version>
+    <compile.jdk.home>${java.8.home}</compile.jdk.home>
+    <compile.jdk.signature>java18</compile.jdk.signature>
+    <compile.jdk.signature.version>1.0</compile.jdk.signature.version>
     <skip.sanity.checks>false</skip.sanity.checks>
     <add.maven.descriptor>true</add.maven.descriptor>
 
@@ -547,7 +547,7 @@
           <version>1.14</version>
           <configuration>
             <signature>
-              <groupId>org.codehaus.mojo.signature</groupId>
+              <groupId>org.kaazing.mojo.signature</groupId>
               <artifactId>${compile.jdk.signature}</artifactId>
               <version>${compile.jdk.signature.version}</version>
             </signature>
@@ -614,6 +614,11 @@
             <javaScriptBuildnumberCallback>tag + branch</javaScriptBuildnumberCallback>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.zeroturnaround</groupId>
+          <artifactId>jrebel-maven-plugin</artifactId>
+          <version>1.1.5</version>
+        </plugin>
       </plugins>
     </pluginManagement>
 
@@ -636,7 +641,7 @@
         <executions>
           <execution>
             <id>enforce-java-api-compatibility</id>
-            <phase>verify</phase>
+            <phase>process-classes</phase>
             <goals>
               <goal>check</goal>
             </goals>
@@ -671,13 +676,6 @@
         <groupId>com.mg.modules.data</groupId>
         <artifactId>model</artifactId>
         <version>${project.version}</version>
-        <type>jar</type>
-      </dependency>
-      <dependency>
-        <groupId>com.mg.modules.data</groupId>
-        <artifactId>model</artifactId>
-        <version>${project.version}</version>
-        <classifier>service</classifier>
         <type>jar</type>
       </dependency>
       <dependency>
@@ -1415,6 +1413,12 @@
         <version>${jbossJbpmVersion}</version>
         <scope>provided</scope>
       </dependency>
+      <dependency>
+        <groupId>jgroups</groupId>
+        <artifactId>jgroups</artifactId>
+        <version>${jgroupsVersion}</version>
+        <scope>provided</scope>
+      </dependency>
 
       <dependency>
         <groupId>javax.ejb</groupId>
@@ -1649,7 +1653,37 @@
 
   <profiles>
     <profile>
+      <id>jrebel</id>
+      <activation>
+        <property>
+          <name>dev.env</name>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.zeroturnaround</groupId>
+            <artifactId>jrebel-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>generate-rebel-xml</id>
+                <phase>process-resources</phase>
+                <goals>
+                  <goal>generate</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
       <id>disable-sanity-check</id>
+      <activation>
+        <property>
+          <name>dev.env</name>
+        </property>
+      </activation>
       <properties>
         <skip.sanity.checks>true</skip.sanity.checks>
       </properties>

@@ -71,7 +71,7 @@
       </outputFileNameMapping>
       <includes>
         <include>*:jboss-sar</include>
-        <include>*:jboss-har</include>
+        <include>*:har</include>
       </includes>
     </dependencySet>
     <dependencySet>

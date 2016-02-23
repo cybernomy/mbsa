@@ -33,8 +33,8 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 /**
- * This class implements IQuery interface of ODA. It does not support queries
- * returning multiple resultsets
+ * This class implements IQuery interface of ODA. It does not support queries returning multiple
+ * resultsets
  *
  * @author Oleg V. Safonov
  * @version $Id: Statement.java,v 1.5 2007/11/07 13:38:59 safonov Exp $
@@ -59,7 +59,6 @@ public class Statement implements IQuery {
 
   /**
    * Constructor
-   *
    */
   Statement(IConnection conn) throws OdaException {
     this.connection = conn;

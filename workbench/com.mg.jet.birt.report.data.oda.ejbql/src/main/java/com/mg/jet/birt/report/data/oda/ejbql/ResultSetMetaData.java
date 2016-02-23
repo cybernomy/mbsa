@@ -145,10 +145,8 @@ public class ResultSetMetaData implements IResultSetMetaData {
   /**
    * Evaluate whether the value of an index is valid
    *
-   * @param index
-   *            the value of an index
-   * @throws OdaException
-   *             if the value is
+   * @param index the value of an index
+   * @throws OdaException if the value is
    */
   private void assertIndexValid(int index) throws OdaException {
     if (index > getColumnCount() || index < 1)

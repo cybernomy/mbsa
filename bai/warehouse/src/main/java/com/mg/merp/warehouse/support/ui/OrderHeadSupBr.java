@@ -85,7 +85,7 @@ public class OrderHeadSupBr extends OrderBr {
       protected void doLoad() {
         setQuery(createQueryText(), paramsName.toArray(new String[paramsName.size()]), paramsValue.toArray(new Object[paramsValue.size()]));
       }
-			/* (non-Javadoc)
+      /* (non-Javadoc)
 			 * @see com.mg.framework.generic.ui.DefaultMaintenanceEJBQLTableModel#getPrimaryKeyFieldIndex()
 			 */
 

@@ -79,7 +79,7 @@ public abstract class AbstractDataBusinessObjectServiceBean<T extends Persistent
   }
 
 	/*public void create(PersistentObject object) throws javax.ejb.CreateException {
-		ServerUtils.persistentManager().create(persistentName(), object);
+    ServerUtils.persistentManager().create(persistentName(), object);
 	}*/
 
   public Object create(AttributeMap attributes) throws ApplicationException {

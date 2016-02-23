@@ -155,7 +155,7 @@ public class BeanSelectionDialog extends SelectionDialog {
       }
 
       public void widgetSelected(SelectionEvent e) {
-				/*Похоже баг в CheckboxTreeViewer: после обновления treeViewer узлы. выделенные не кликом,
+        /*Похоже баг в CheckboxTreeViewer: после обновления treeViewer узлы. выделенные не кликом,
 				 * а методом setChecked(..) остаётся выделенным только корень.
 				 * Поэтому запоминаем те, что выделены сейчас*/
         Object[] ch = treeViewer.getCheckedElements();

@@ -370,7 +370,7 @@ public class HibernateUtil {
 
     // List all files under "hibclassfiles" directory of this plugin
 /*		Enumeration hiblibs = hibbundle.getEntryPaths(
-				CommonConstant.HIBERNATE_LIBS );
+        CommonConstant.HIBERNATE_LIBS );
 		while ( hiblibs.hasMoreElements() )
 		{
 			String fileName = (String) hiblibs.nextElement();

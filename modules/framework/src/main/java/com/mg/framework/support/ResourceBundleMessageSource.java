@@ -14,6 +14,8 @@
  */
 package com.mg.framework.support;
 
+import com.mg.framework.utils.StringUtils;
+
 import java.text.MessageFormat;
 import java.util.HashMap;
 import java.util.Locale;
@@ -23,6 +25,7 @@ import java.util.ResourceBundle;
 
 /**
  * @author Oleg V. Safonov
+ * @author Valentin A. Poroxnenko
  * @version $Id: ResourceBundleMessageSource.java,v 1.1 2005/07/20 05:55:53 safonov Exp $
  */
 public class ResourceBundleMessageSource extends AbstractMessageSource {
@@ -173,7 +176,7 @@ public class ResourceBundleMessageSource extends AbstractMessageSource {
 
   private String getStringOrNull(ResourceBundle bundle, String key) {
     try {
-      return bundle.getString(key);
+      return StringUtils.iso2utf8(bundle.getString(key));
     } catch (MissingResourceException ex) {
       // assume key not found
       // -> do NOT throw the exception to allow for checking parent message source

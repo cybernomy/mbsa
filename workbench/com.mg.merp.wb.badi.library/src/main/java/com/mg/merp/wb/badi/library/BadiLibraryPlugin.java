@@ -187,7 +187,7 @@ public class BadiLibraryPlugin extends MerpUIPlugin {
 
       Attributes attrs = mf.getMainAttributes();
       /*
-			 * Версия BadiLibrary-ManifestVersion: 1.0
+       * Версия BadiLibrary-ManifestVersion: 1.0
 			 */
       if (attrs.getValue(MAN_VERSION) != null
           && attrs.getValue(MAN_VERSION).equals(MAN_LIB_VERSION_1)) {

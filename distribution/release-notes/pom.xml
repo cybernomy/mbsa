@@ -93,7 +93,7 @@
                   <goal>execute</goal>
                 </goals>
                 <configuration>
-                  <source>${project.build.scriptSourceDirectory}/ConfluencePageEditor.groovy
+                  <source>$ { project.build.scriptSourceDirectory } / ConfluencePageEditor.groovy
                   </source>
                 </configuration>
               </execution>

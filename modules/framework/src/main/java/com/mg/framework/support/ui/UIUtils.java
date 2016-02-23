@@ -35,6 +35,7 @@ import com.mg.framework.service.HelpSystemLocator;
 import com.mg.framework.support.Messages;
 import com.mg.framework.utils.ReflectionUtils;
 import com.mg.framework.utils.ServerUtils;
+import com.mg.framework.utils.StringUtils;
 
 import java.awt.*;
 import java.io.PrintWriter;
@@ -92,7 +93,7 @@ public class UIUtils {
         return name;
       }
 
-      return ResourceBundle.getBundle(name.substring(RESOURCE_PREFIX.length(), delimIdx), locale, Thread.currentThread().getContextClassLoader()).getString(name.substring(delimIdx + 1));
+      return StringUtils.iso2utf8((ResourceBundle.getBundle(name.substring(RESOURCE_PREFIX.length(), delimIdx), locale, Thread.currentThread().getContextClassLoader()).getString(name.substring(delimIdx + 1))));
     } catch (Exception e) {
       logger.warn("Resource load failure", e); //$NON-NLS-1$
       return name;
