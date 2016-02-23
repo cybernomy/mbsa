@@ -24,27 +24,22 @@
     <dependency>
       <groupId>com.mg.bai.salary</groupId>
       <artifactId>ejb</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.modules.core</groupId>
       <artifactId>ui</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.server.reference</groupId>
       <artifactId>ui</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.bai.persref</groupId>
       <artifactId>ui</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.server.document</groupId>
       <artifactId>ui</artifactId>
-      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>

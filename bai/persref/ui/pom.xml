@@ -24,12 +24,10 @@
     <dependency>
       <groupId>com.mg.bai.persref</groupId>
       <artifactId>ejb</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.server.reference</groupId>
       <artifactId>ui</artifactId>
-      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>

@@ -24,7 +24,6 @@
     <dependency>
       <groupId>com.mg.bai</groupId>
       <artifactId>warehouse</artifactId>
-      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>

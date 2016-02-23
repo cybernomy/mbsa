@@ -26,33 +26,27 @@
     <dependency>
       <groupId>com.mg.server.reference</groupId>
       <artifactId>ejb</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.server</groupId>
       <artifactId>documentcore</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.server.docflow</groupId>
       <artifactId>docflow</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.server.document</groupId>
       <artifactId>ejb</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.bai.setlmnt</groupId>
       <artifactId>ejb</artifactId>
-      <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>commons-lang</groupId>
       <artifactId>commons-lang</artifactId>
-      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>

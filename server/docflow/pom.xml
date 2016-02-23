@@ -26,17 +26,14 @@
     <dependency>
       <groupId>com.mg.server</groupId>
       <artifactId>documentcore</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.server.reference</groupId>
       <artifactId>ejb</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.server.reference</groupId>
       <artifactId>ui</artifactId>
-      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>

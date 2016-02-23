@@ -27,7 +27,6 @@
     <dependency>
       <groupId>jboss</groupId>
       <artifactId>jbpm-jpdl</artifactId>
-      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>

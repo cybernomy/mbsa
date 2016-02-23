@@ -14,7 +14,7 @@
   <packaging>pom</packaging>
 
   <name>MBSA::Modules</name>
-  <description/>
+  <description>Core modules</description>
 
   <modules>
     <module>framework</module>
@@ -40,12 +40,20 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>commons-lang</groupId>
       <artifactId>commons-lang</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.sun</groupId>
+      <artifactId>javaee</artifactId>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
     </dependency>
   </dependencies>
 </project>

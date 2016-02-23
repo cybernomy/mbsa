@@ -18,7 +18,7 @@
     </fileSet>
     <fileSet>
       <outputDirectory>webhelp</outputDirectory>
-      <directory>${project.build.directory}/webhelp</directory>
+      <directory>${project.build.directory}/site/webhelp</directory>
       <includes>
         <include>**/*.*</include>
       </includes>

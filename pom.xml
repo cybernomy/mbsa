@@ -29,6 +29,9 @@
     Millennium Business Suite Anywhere (BSA) is web based ERP/CRM solution with
     integrated BPM
   </description>
+  <url>
+    http://${maven.repo.server}${maven.repo.server.port}/${maven.repo.path}/sites/${site.location}/
+  </url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -50,21 +53,22 @@
     <dev.server>quick.linkpc.net</dev.server>
 
     <ci.server>${dev.server}</ci.server>
-    <ci.server.port>8083</ci.server.port>
+    <ci.server.port>:8083</ci.server.port>
 
     <tracker.server>${dev.server}</tracker.server>
-    <tracker.port>8080</tracker.port>
+    <tracker.port>:8080</tracker.port>
     <tracker.project.name>MG</tracker.project.name>
 
     <wiki.server>${tracker.server}</wiki.server>
     <wiki.port/>
     <wiki.space>${tracker.project.name}</wiki.space>
+    <site.location>com.mg.mbsa</site.location>
 
     <maven.repo.server>${dev.server}</maven.repo.server>
-    <maven.repo.server.port>8084</maven.repo.server.port>
+    <maven.repo.server.port>:8084</maven.repo.server.port>
     <maven.repo.path>content</maven.repo.path>
     <maven.repo.url>
-      http://${maven.repo.server}:${maven.repo.server.port}/${maven.repo.path}
+      http://${maven.repo.server}${maven.repo.server.port}/${maven.repo.path}
     </maven.repo.url>
     <timestamp>${maven.build.timestamp}</timestamp>
     <maven.build.timestamp.format>dd.MM.yyyy' 'HH:mm:ss</maven.build.timestamp.format>
@@ -76,10 +80,40 @@
     <test.src.dir>src/test/java</test.src.dir>
     <test.res.dir>src/test/resources</test.res.dir>
 
-    <jboss.version>4.2.2.GA</jboss.version>
-    <jboss.ejb.version>4.2.1.GA</jboss.ejb.version>
+    <mgFrameworkAuxVersion>1.0</mgFrameworkAuxVersion>
+    <javaEEVersion>5.0.8</javaEEVersion>
+    <jbossVersion>4.2.2.GA</jbossVersion>
+    <jbossEjbVersion>4.2.1.GA</jbossEjbVersion>
+    <jbossJbpmVersion>3.2.3</jbossJbpmVersion>
+    <jbossCacheVersion>1.4.1.GA</jbossCacheVersion>
+    <javaxEjbApiVersion>3.0</javaxEjbApiVersion>
+    <javaxMailVersion>1.4</javaxMailVersion>
+    <javaxServletApiVersion>2.4</javaxServletApiVersion>
 
-    <hibernate.version>3.2.6.ga</hibernate.version>
+    <hibernateVersion>3.2.6.ga</hibernateVersion>
+    <ehcacheVersion>1.2.3</ehcacheVersion>
+
+    <commonsCodecVersion>1.3</commonsCodecVersion>
+    <commonsCollectionsVersion>3.1</commonsCollectionsVersion>
+    <commonsLangVersion>2.1</commonsLangVersion>
+    <commonsLoggingVersion>1.0.4</commonsLoggingVersion>
+    <commonsElVersion>1.0</commonsElVersion>
+    <commonsJexlVersion>1.0</commonsJexlVersion>
+    <icu4jVersion>3.6.1</icu4jVersion>
+    <dozerVersion>3.2.1</dozerVersion>
+    <messadminCoreVersion>4.1</messadminCoreVersion>
+    <quartzVersion>1.5.2</quartzVersion>
+    <xercesImplVersion>2.6.2</xercesImplVersion>
+    <antVersion>1.7.0</antVersion>
+    <javaGetoptVersion>1.0.9</javaGetoptVersion>
+    <dom4jVersion>1.6.1</dom4jVersion>
+    <rhinoVersion>1.7R2</rhinoVersion>
+    <jguardVersion>1.0</jguardVersion>
+    <birtVersion>2.3.1</birtVersion>
+    <datatoolsOdaVersion>3.1.0</datatoolsOdaVersion>
+    <oracleOc4jVersion>11</oracleOc4jVersion>
+    <log4jVersion>1.2.17</log4jVersion>
+    <junitVersion>4.11</junitVersion>
   </properties>
 
   <prerequisites>
@@ -94,12 +128,12 @@
 
   <ciManagement>
     <system>Jenkins</system>
-    <url>http://${ci.server}:${ci.server.port}/jenkins/job/mbsa/</url>
+    <url>http://${ci.server}${ci.server.port}/jenkins/job/mbsa/</url>
   </ciManagement>
 
   <issueManagement>
     <system>JIRA</system>
-    <url>http://${tracker.server}:${tracker.port}/projects/${tracker.project.name}</url>
+    <url>http://${tracker.server}${tracker.port}/browse/${tracker.project.name}</url>
   </issueManagement>
 
   <distributionManagement>
@@ -114,15 +148,102 @@
       <name>Nexus releases internal repository</name>
       <url>${maven.repo.url}/repositories/releases</url>
     </repository>
+
+    <site>
+      <id>com.mg.mbsa</id>
+      <url>dav:${project.url}</url>
+    </site>
   </distributionManagement>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>findbugs-maven-plugin</artifactId>
+        <configuration>
+          <effort>Max</effort>
+          <threshold>Low</threshold>
+          <xmlOutput>true</xmlOutput>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jxr-plugin</artifactId>
+        <reportSets>
+          <reportSet>
+            <id>aggregate</id>
+            <inherited>false</inherited>
+            <reports>
+              <report>aggregate</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <reportSets>
+          <reportSet>
+            <id>aggregate</id>
+            <inherited>false</inherited>
+            <reports>
+              <report>aggregate</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-pmd-plugin</artifactId>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-report-plugin</artifactId>
+        <version>2.19.1</version>
+      </plugin>
+    </plugins>
+  </reporting>
 
   <build>
     <pluginManagement>
       <plugins>
         <plugin>
+          <groupId>org.apache.felix</groupId>
+          <artifactId>maven-bundle-plugin</artifactId>
+          <version>3.0.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-antrun-plugin</artifactId>
+          <version>1.8</version>
+          <dependencies>
+            <dependency>
+              <groupId>ant-contrib</groupId>
+              <artifactId>ant-contrib</artifactId>
+              <version>1.0b3</version>
+              <exclusions>
+                <exclusion>
+                  <groupId>ant</groupId>
+                  <artifactId>ant</artifactId>
+                </exclusion>
+              </exclusions>
+            </dependency>
+            <dependency>
+              <groupId>org.apache.ant</groupId>
+              <artifactId>ant</artifactId>
+              <version>1.9.6</version>
+            </dependency>
+            <dependency>
+              <groupId>org.apache.ant</groupId>
+              <artifactId>ant-jsch</artifactId>
+              <version>1.9.6</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+        <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
-          <version>2.5.5</version>
+          <version>2.6</version>
           <executions>
             <execution>
               <phase>package</phase>
@@ -135,7 +256,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
-          <version>3.3</version>
+          <version>3.5.1</version>
           <configuration>
             <encoding>${project.build.sourceEncoding}</encoding>
             <source>${compile.jdk.version}</source>
@@ -147,7 +268,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-clean-plugin</artifactId>
-          <version>2.6.1</version>
+          <version>3.0.0</version>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -162,7 +283,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-enforcer-plugin</artifactId>
-          <version>1.4</version>
+          <version>1.4.1</version>
           <configuration>
             <rules>
               <requireJavaVersion>
@@ -204,6 +325,9 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>2.10.3</version>
+          <configuration>
+            <failOnError>false</failOnError>
+          </configuration>
           <executions>
             <execution>
               <goals>
@@ -216,19 +340,52 @@
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jxr-plugin</artifactId>
+          <version>2.5</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-pmd-plugin</artifactId>
+          <version>3.6</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>2.8.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-site-plugin</artifactId>
           <version>3.4</version>
+          <dependencies>
+            <dependency>
+              <groupId>org.apache.maven.skins</groupId>
+              <artifactId>maven-fluido-skin</artifactId>
+              <version>1.4</version>
+            </dependency>
+            <dependency>
+              <groupId>org.apache.maven.wagon</groupId>
+              <artifactId>wagon-webdav</artifactId>
+              <version>1.0-beta-2</version>
+            </dependency>
+            <dependency>
+              <groupId>org.apache.maven.wagon</groupId>
+              <artifactId>wagon-ssh</artifactId>
+              <version>2.10</version>
+            </dependency>
+          </dependencies>
         </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-source-plugin</artifactId>
-          <version>2.4</version>
+          <version>3.0.0</version>
           <configuration>
             <classifier>sources</classifier>
             <archive>
               <manifest>
                 <addClasspath>true</addClasspath>
-                <addDefaultImplementationEntries>true
+                <addDefaultImplementationEntries>
+                  true
                 </addDefaultImplementationEntries>
               </manifest>
               <manifestSections>
@@ -236,9 +393,9 @@
                   <name>SCM</name>
                   <manifestEntries>
                     <Url>${repository.url}</Url>
-                    <Branch>${scmBranch}</Branch>
+                    <Ref>${git.buildnumber}</Ref>
                     <Build-Version>${project.version}</Build-Version>
-                    <Source-Revision>${buildNumber}</Source-Revision>
+                    <Source-Revision>${git.shortRevision}</Source-Revision>
                   </manifestEntries>
                 </manifestSection>
                 <manifestSection>
@@ -257,7 +414,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-surefire-plugin</artifactId>
-          <version>2.18.1</version>
+          <version>2.19.1</version>
           <configuration>
             <jvm>${compile.jdk.home}/bin/java</jvm>
             <forkMode>once</forkMode>
@@ -266,7 +423,7 @@
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-release-plugin</artifactId>
-          <version>2.5.2</version>
+          <version>2.5.3</version>
           <configuration>
             <preparationGoals>clean verify</preparationGoals>
             <goals>deploy</goals>
@@ -288,7 +445,8 @@
             <archive>
               <manifest>
                 <addClasspath>true</addClasspath>
-                <addDefaultImplementationEntries>true
+                <addDefaultImplementationEntries>
+                  true
                 </addDefaultImplementationEntries>
               </manifest>
               <manifestSections>
@@ -296,9 +454,9 @@
                   <name>SCM</name>
                   <manifestEntries>
                     <Url>${repository.url}</Url>
-                    <Branch>${scmBranch}</Branch>
+                    <Ref>${git.buildnumber}</Ref>
                     <Build-Version>${project.version}</Build-Version>
-                    <Source-Revision>${buildNumber}</Source-Revision>
+                    <Source-Revision>${git.shortRevision}</Source-Revision>
                   </manifestEntries>
                 </manifestSection>
                 <manifestSection>
@@ -322,7 +480,8 @@
             <archive>
               <manifest>
                 <addClasspath>true</addClasspath>
-                <addDefaultImplementationEntries>true
+                <addDefaultImplementationEntries>
+                  true
                 </addDefaultImplementationEntries>
               </manifest>
               <manifestSections>
@@ -330,9 +489,9 @@
                   <name>SCM</name>
                   <manifestEntries>
                     <Url>${repository.url}</Url>
-                    <Branch>${scmBranch}</Branch>
+                    <Ref>${git.buildnumber}</Ref>
                     <Build-Version>${project.version}</Build-Version>
-                    <Source-Revision>${buildNumber}</Source-Revision>
+                    <Source-Revision>${git.shortRevision}</Source-Revision>
                   </manifestEntries>
                 </manifestSection>
                 <manifestSection>
@@ -398,22 +557,17 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>build-helper-maven-plugin</artifactId>
-          <version>1.9.1</version>
+          <version>1.10</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.gmaven</groupId>
+          <artifactId>groovy-maven-plugin</artifactId>
+          <version>2.0</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
-          <artifactId>buildnumber-maven-plugin</artifactId>
-          <version>1.3</version>
-          <configuration>
-            <shortRevisionLength>5</shortRevisionLength>
-            <doCheck>false</doCheck>
-            <doUpdate>false</doUpdate>
-          </configuration>
-        </plugin>
-        <plugin>
-          <groupId>org.apache.felix</groupId>
-          <artifactId>maven-bundle-plugin</artifactId>
-          <version>2.5.4</version>
+          <artifactId>findbugs-maven-plugin</artifactId>
+          <version>3.0.3</version>
         </plugin>
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
@@ -424,7 +578,8 @@
             <archive>
               <manifest>
                 <addClasspath>true</addClasspath>
-                <addDefaultImplementationEntries>true
+                <addDefaultImplementationEntries>
+                  true
                 </addDefaultImplementationEntries>
               </manifest>
               <manifestSections>
@@ -432,9 +587,9 @@
                   <name>SCM</name>
                   <manifestEntries>
                     <Url>${repository.url}</Url>
-                    <Branch>${scmBranch}</Branch>
+                    <Ref>${git.buildnumber}</Ref>
                     <Build-Version>${project.version}</Build-Version>
-                    <Source-Revision>${buildNumber}</Source-Revision>
+                    <Source-Revision>${git.shortRevision}</Source-Revision>
                   </manifestEntries>
                 </manifestSection>
                 <manifestSection>
@@ -448,6 +603,14 @@
               </manifestSections>
               <addMavenDescriptor>${add.maven.descriptor}</addMavenDescriptor>
             </archive>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>ru.concerteza.buildnumber</groupId>
+          <artifactId>maven-jgit-buildnumber-plugin</artifactId>
+          <version>1.2.10</version>
+          <configuration>
+            <javaScriptBuildnumberCallback>tag + branch</javaScriptBuildnumberCallback>
           </configuration>
         </plugin>
       </plugins>
@@ -480,13 +643,14 @@
         </executions>
       </plugin>
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>buildnumber-maven-plugin</artifactId>
+        <groupId>ru.concerteza.buildnumber</groupId>
+        <artifactId>maven-jgit-buildnumber-plugin</artifactId>
+        <inherited>false</inherited>
         <executions>
           <execution>
             <phase>validate</phase>
             <goals>
-              <goal>create</goal>
+              <goal>extract-buildnumber</goal>
             </goals>
           </execution>
         </executions>
@@ -526,7 +690,7 @@
         <groupId>com.mg.modules.data</groupId>
         <artifactId>service</artifactId>
         <version>${project.version}</version>
-        <type>jboss-har</type>
+        <type>har</type>
       </dependency>
       <dependency>
         <groupId>com.mg.modules.core</groupId>
@@ -563,7 +727,7 @@
         <groupId>com.mg.modules.baiengine</groupId>
         <artifactId>service</artifactId>
         <version>${project.version}</version>
-        <type>jboss-sar</type>
+        <type>sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.server</groupId>
@@ -602,7 +766,7 @@
         <groupId>com.mg.server.security</groupId>
         <artifactId>service</artifactId>
         <version>${project.version}</version>
-        <type>jboss-sar</type>
+        <type>sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.server</groupId>
@@ -641,7 +805,7 @@
         <groupId>com.mg.server.report</groupId>
         <artifactId>service</artifactId>
         <version>${project.version}</version>
-        <type>jboss-sar</type>
+        <type>sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.server.reference</groupId>
@@ -685,7 +849,7 @@
         <groupId>com.mg.server.docflow</groupId>
         <artifactId>service</artifactId>
         <version>${project.version}</version>
-        <type>jboss-sar</type>
+        <type>sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.server.document</groupId>
@@ -722,7 +886,7 @@
         <groupId>com.mg.server.bpm</groupId>
         <artifactId>service</artifactId>
         <version>${project.version}</version>
-        <type>jboss-sar</type>
+        <type>sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.bai.scheduler</groupId>
@@ -747,7 +911,7 @@
         <groupId>com.mg.bai.scheduler</groupId>
         <artifactId>service</artifactId>
         <version>${project.version}</version>
-        <type>jboss-sar</type>
+        <type>sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.bai.qc</groupId>
@@ -1017,13 +1181,13 @@
         <groupId>com.mg.bai.help</groupId>
         <artifactId>service</artifactId>
         <version>${project.version}</version>
-        <type>jboss-sar</type>
+        <type>sar</type>
       </dependency>
       <dependency>
         <groupId>com.mg.bai.wb</groupId>
         <artifactId>service</artifactId>
         <version>${project.version}</version>
-        <type>jboss-sar</type>
+        <type>sar</type>
       </dependency>
 
       <dependency>
@@ -1192,278 +1356,295 @@
       <dependency>
         <groupId>com.mg</groupId>
         <artifactId>framework-aux</artifactId>
-        <version>1.0</version>
+        <version>${mgFrameworkAuxVersion}</version>
       </dependency>
 
       <!-- jboss -->
       <dependency>
         <groupId>jboss</groupId>
         <artifactId>jboss-system</artifactId>
-        <version>${jboss.version}</version>
+        <version>${jbossVersion}</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>jboss</groupId>
         <artifactId>jboss-common</artifactId>
-        <version>${jboss.version}</version>
+        <version>${jbossVersion}</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>jboss</groupId>
         <artifactId>jboss-jmx</artifactId>
-        <version>${jboss.version}</version>
+        <version>${jbossVersion}</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>jboss</groupId>
         <artifactId>jboss-hibernate</artifactId>
-        <version>${jboss.version}</version>
+        <version>${jbossVersion}</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>jboss</groupId>
         <artifactId>jboss-j2ee</artifactId>
-        <version>${jboss.version}</version>
+        <version>${jbossVersion}</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>jboss</groupId>
         <artifactId>jboss-ejb3</artifactId>
-        <version>${jboss.version}</version>
+        <version>${jbossVersion}</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>jboss</groupId>
         <artifactId>jboss-annotations-ejb3</artifactId>
-        <version>${jboss.version}</version>
+        <version>${jbossVersion}</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>jboss</groupId>
         <artifactId>jboss-cache</artifactId>
-        <version>1.4.1.GA</version>
+        <version>${jbossCacheVersion}</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>jboss</groupId>
         <artifactId>jbpm-jpdl</artifactId>
-        <version>3.2.3</version>
+        <version>${jbossJbpmVersion}</version>
         <scope>provided</scope>
       </dependency>
 
       <dependency>
         <groupId>javax.ejb</groupId>
         <artifactId>ejb-api</artifactId>
-        <version>3.0</version>
+        <version>${javaxEjbApiVersion}</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>javax.mail</groupId>
         <artifactId>mail</artifactId>
-        <version>1.4</version>
+        <version>${javaxMailVersion}</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>servlet-api</artifactId>
-        <version>2.4</version>
+        <version>${javaxServletApiVersion}</version>
         <scope>provided</scope>
       </dependency>
 
       <dependency>
         <groupId>com.sun</groupId>
         <artifactId>javaee</artifactId>
-        <version>5.0.8</version>
+        <version>${javaEEVersion}</version>
         <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>com.ibm.icu</groupId>
         <artifactId>icu4j</artifactId>
-        <version>3.6.1</version>
+        <version>${icu4jVersion}</version>
       </dependency>
       <dependency>
         <groupId>net.sf.dozer</groupId>
         <artifactId>dozer</artifactId>
-        <version>3.2.1</version>
+        <version>${dozerVersion}</version>
       </dependency>
       <dependency>
         <groupId>net.sf.messadmin</groupId>
         <artifactId>core</artifactId>
-        <version>4.1</version>
+        <version>${messadminCoreVersion}</version>
       </dependency>
 
       <dependency>
         <groupId>quartz</groupId>
         <artifactId>quartz</artifactId>
-        <version>1.5.2</version>
+        <version>${quartzVersion}</version>
       </dependency>
 
       <dependency>
         <groupId>xerces</groupId>
         <artifactId>xercesImpl</artifactId>
-        <version>2.6.2</version>
+        <version>${xercesImplVersion}</version>
       </dependency>
 
       <dependency>
         <groupId>org.hibernate</groupId>
         <artifactId>hibernate</artifactId>
-        <version>${hibernate.version}</version>
+        <version>${hibernateVersion}</version>
       </dependency>
 
       <dependency>
         <groupId>commons-codec</groupId>
         <artifactId>commons-codec</artifactId>
-        <version>1.3</version>
+        <version>${commonsCodecVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-collections</groupId>
+        <artifactId>commons-collections</artifactId>
+        <version>${commonsCollectionsVersion}</version>
       </dependency>
       <dependency>
         <groupId>commons-lang</groupId>
         <artifactId>commons-lang</artifactId>
-        <version>2.1</version>
+        <version>${commonsLangVersion}</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-logging</groupId>
+        <artifactId>commons-logging</artifactId>
+        <version>${commonsLoggingVersion}</version>
       </dependency>
       <dependency>
         <groupId>commons-el</groupId>
         <artifactId>commons-el</artifactId>
-        <version>1.0</version>
+        <version>${commonsElVersion}</version>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>org.apache.commons</groupId>
         <artifactId>commons-jexl</artifactId>
-        <version>1.0</version>
+        <version>${commonsJexlVersion}</version>
       </dependency>
 
       <dependency>
         <groupId>org.apache.ant</groupId>
         <artifactId>ant</artifactId>
-        <version>1.7.0</version>
+        <version>${antVersion}</version>
       </dependency>
 
       <dependency>
         <groupId>urbanophile</groupId>
         <artifactId>java-getopt</artifactId>
-        <version>1.0.9</version>
+        <version>${javaGetoptVersion}</version>
       </dependency>
 
       <dependency>
         <groupId>net.sf.ehcache</groupId>
         <artifactId>ehcache</artifactId>
-        <version>1.2.2</version>
+        <version>${ehcacheVersion}</version>
       </dependency>
 
       <dependency>
         <groupId>dom4j</groupId>
         <artifactId>dom4j</artifactId>
-        <version>1.6.1</version>
+        <version>${dom4jVersion}</version>
       </dependency>
 
       <dependency>
         <groupId>org.mozilla</groupId>
         <artifactId>rhino</artifactId>
-        <version>1.7R2</version>
+        <version>${rhinoVersion}</version>
       </dependency>
 
       <dependency>
         <groupId>net.sf</groupId>
         <artifactId>jguard</artifactId>
-        <version>1.0</version>
+        <version>${jguardVersion}</version>
       </dependency>
 
       <!-- birt -->
       <dependency>
         <groupId>org.eclipse.birt.core</groupId>
         <artifactId>api</artifactId>
-        <version>2.3.1</version>
+        <version>${birtVersion}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>org.eclipse.birt.report.engine</groupId>
         <artifactId>api</artifactId>
-        <version>2.3.1</version>
+        <version>${birtVersion}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>org.eclipse.birt.report.model</groupId>
         <artifactId>api</artifactId>
-        <version>2.3.1</version>
+        <version>${birtVersion}</version>
+        <scope>provided</scope>
       </dependency>
 
       <dependency>
         <groupId>org.eclipse.datatools.connectivity</groupId>
         <artifactId>oda</artifactId>
-        <version>3.1.0</version>
+        <version>${datatoolsOdaVersion}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>org.eclipse.birt</groupId>
         <artifactId>data</artifactId>
-        <version>2.3.1</version>
+        <version>${birtVersion}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>org.eclipse.birt.report.data</groupId>
         <artifactId>adapter</artifactId>
-        <version>2.3.1</version>
+        <version>${birtVersion}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>org.eclipse.birt.report.engine</groupId>
         <artifactId>dataextraction</artifactId>
-        <version>2.3.1</version>
+        <version>${birtVersion}</version>
+        <scope>provided</scope>
       </dependency>
       <dependency>
         <groupId>org.eclipse.birt.report</groupId>
         <artifactId>viewservlets</artifactId>
-        <version>2.3.1</version>
+        <version>${birtVersion}</version>
+        <scope>provided</scope>
       </dependency>
 
       <dependency>
         <groupId>com.oracle.oc4j</groupId>
         <artifactId>oracle-help-web</artifactId>
-        <version>11</version>
+        <version>${oracleOc4jVersion}</version>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.oracle.oc4j</groupId>
         <artifactId>cabo</artifactId>
-        <version>11</version>
+        <version>${oracleOc4jVersion}</version>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.oracle.oc4j</groupId>
         <artifactId>jsp-el-api</artifactId>
-        <version>11</version>
+        <version>${oracleOc4jVersion}</version>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.oracle.oc4j</groupId>
         <artifactId>oracle-el</artifactId>
-        <version>11</version>
+        <version>${oracleOc4jVersion}</version>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.oracle.oc4j</groupId>
         <artifactId>share</artifactId>
-        <version>11</version>
+        <version>${oracleOc4jVersion}</version>
+        <scope>runtime</scope>
       </dependency>
       <dependency>
         <groupId>com.oracle.oc4j</groupId>
         <artifactId>xmlparserv2</artifactId>
-        <version>11</version>
+        <version>${oracleOc4jVersion}</version>
+        <scope>runtime</scope>
       </dependency>
 
       <dependency>
         <groupId>log4j</groupId>
         <artifactId>log4j</artifactId>
-        <version>1.2.17</version>
+        <version>${log4jVersion}</version>
       </dependency>
 
       <!-- test -->
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
-        <version>4.11</version>
+        <version>${junitVersion}</version>
         <scope>test</scope>
       </dependency>
     </dependencies>
   </dependencyManagement>
-
-  <dependencies>
-    <dependency>
-      <groupId>com.sun</groupId>
-      <artifactId>javaee</artifactId>
-      <scope>provided</scope>
-    </dependency>
-  </dependencies>
 
   <profiles>
     <profile>

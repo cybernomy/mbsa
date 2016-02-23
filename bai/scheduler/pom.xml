@@ -27,7 +27,6 @@
     <dependency>
       <groupId>quartz</groupId>
       <artifactId>quartz</artifactId>
-      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>

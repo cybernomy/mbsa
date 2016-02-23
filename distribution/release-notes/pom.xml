@@ -15,7 +15,7 @@
   <packaging>pom</packaging>
 
   <name>MBSA::Distribution::ReleaseNotes</name>
-  <description>Автоматическая генерация карточки версий</description>
+  <description>Release notes generation module</description>
 
   <build>
     <scriptSourceDirectory>${src.scripts.dir}</scriptSourceDirectory>

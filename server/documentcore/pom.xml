@@ -24,7 +24,6 @@
     <dependency>
       <groupId>com.mg.server.reference</groupId>
       <artifactId>ejb</artifactId>
-      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>

@@ -14,7 +14,7 @@
   <packaging>pom</packaging>
 
   <name>MBSA::Distribution</name>
-  <description>Дистрибутивные модули</description>
+  <description>Distribution modules</description>
 
   <modules>
     <module>release-notes</module>

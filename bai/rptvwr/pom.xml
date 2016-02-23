@@ -26,48 +26,39 @@
     <dependency>
       <groupId>org.eclipse.birt.core</groupId>
       <artifactId>api</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.eclipse.birt.report.engine</groupId>
       <artifactId>api</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.eclipse.birt</groupId>
       <artifactId>data</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.eclipse.birt.report.model</groupId>
       <artifactId>api</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.eclipse.birt.report.data</groupId>
       <artifactId>adapter</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.eclipse.birt.report.engine</groupId>
       <artifactId>dataextraction</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.eclipse.birt.report</groupId>
       <artifactId>viewservlets</artifactId>
-      <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>com.ibm.icu</groupId>
       <artifactId>icu4j</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.mozilla</groupId>
       <artifactId>rhino</artifactId>
-      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>

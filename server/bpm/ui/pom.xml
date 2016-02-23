@@ -24,12 +24,10 @@
     <dependency>
       <groupId>com.mg.server.bpm</groupId>
       <artifactId>ejb</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.server.security</groupId>
       <artifactId>security</artifactId>
-      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>

@@ -14,7 +14,7 @@
   <packaging>pom</packaging>
 
   <name>MBSA::DocBook</name>
-  <description/>
+  <description>Documentation for modules</description>
 
   <modules>
     <module>accounting</module>
@@ -106,9 +106,9 @@
                     <goal>generate-webhelp</goal>
                   </goals>
                   <configuration>
-                    <targetDirectory>${project.build.directory}/webhelp</targetDirectory>
+                    <targetDirectory>${project.build.directory}/site/webhelp</targetDirectory>
                     <preProcess>
-                      <copy todir="${project.build.directory}/webhelp/images">
+                      <copy todir="${project.build.directory}/site/webhelp/images">
                         <fileset dir="src/docbkx/images" />
                       </copy>
                     </preProcess>

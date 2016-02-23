@@ -14,7 +14,7 @@
   <packaging>pom</packaging>
 
   <name>MBSA::Server</name>
-  <description/>
+  <description>Server components</description>
 
   <modules>
     <module>exchange</module>
@@ -33,22 +33,18 @@
     <dependency>
       <groupId>com.mg.modules</groupId>
       <artifactId>framework</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.modules.data</groupId>
       <artifactId>model</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.modules.core</groupId>
       <artifactId>ejb</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.modules.baiengine</groupId>
       <artifactId>ejb</artifactId>
-      <scope>provided</scope>
     </dependency>
 
     <dependency>
@@ -67,7 +63,16 @@
     <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>com.sun</groupId>
+      <artifactId>javaee</artifactId>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
     </dependency>
   </dependencies>
 </project>

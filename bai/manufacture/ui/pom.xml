@@ -24,27 +24,22 @@
     <dependency>
       <groupId>com.mg.bai.manufacture</groupId>
       <artifactId>ejb</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.modules.core</groupId>
       <artifactId>ui</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.server.document</groupId>
       <artifactId>ui</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.server.reference</groupId>
       <artifactId>ui</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.mg.bai.mfref</groupId>
       <artifactId>ui</artifactId>
-      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>

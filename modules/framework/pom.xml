@@ -50,35 +50,29 @@
     <dependency>
       <groupId>xerces</groupId>
       <artifactId>xercesImpl</artifactId>
-      <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>com.ibm.icu</groupId>
       <artifactId>icu4j</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>net.sf.dozer</groupId>
       <artifactId>dozer</artifactId>
-      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>net.sf.messadmin</groupId>
       <artifactId>core</artifactId>
-      <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>commons-codec</groupId>
       <artifactId>commons-codec</artifactId>
-      <scope>provided</scope>
     </dependency>
 
     <dependency>
       <groupId>dom4j</groupId>
       <artifactId>dom4j</artifactId>
-      <scope>provided</scope>
     </dependency>
   </dependencies>
 </project>
