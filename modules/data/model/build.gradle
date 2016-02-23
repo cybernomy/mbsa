@@ -1,3 +1,14 @@
 dependencies {
     compile     project(':modules:framework')
 }
+
+task interfaceJar(type: Jar) {
+    from (sourceSets.main.output) {
+        classifier = 'interface'
+        exclude '**/*.xml'
+    }
+}
+
+artifacts {
+    archives interfaceJar
+}
