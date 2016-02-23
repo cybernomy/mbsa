@@ -1,0 +1,10 @@
+<project>
+  <body>
+    <menu ref="parent" />
+    <menu ref="modules" />
+    <menu name="Documentation">
+      <item name="Module documentation" href="webhelp/index.html" />
+    </menu>
+    <menu ref="reports" />
+  </body>
+</project>
