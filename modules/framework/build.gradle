@@ -4,6 +4,7 @@ dependencies {
     provided    dep.jbossJ2ee
     provided    dep.jbossEjb3
     provided    dep.jbossCache
+    provided    dep.jgroups
     compile     dep.xercesImpl
     compile     dep.icu4j
     compile     dep.dozer

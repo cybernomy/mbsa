@@ -14,6 +14,7 @@ ext {
     jbossEjbVersion                 = versions.jbossEjbVersion
     jbossJbpmVersion                = versions.jbossJbpmVersion
     jbossCacheVersion               = versions.jbossCacheVersion
+    jgroupsVersion                  = versions.jgroupsVersion
     /* javax modules versions */
     javaxEjbApiVersion              = versions.javaxEjbApiVersion
     javaxMailVersion                = versions.javaxMailVersion
@@ -74,6 +75,8 @@ ext {
                                         + jbossCacheVersion,
             jbpmJpdl                  : 'jboss:jbpm-jpdl:'
                                         + jbossJbpmVersion,
+            jgroups                   : 'jgroups:jgroups:'
+                                        + jgroupsVersion,
             /* javax modules versions */
             javaxEjbApi               : 'javax.ejb:ejb-api:'
                                         + javaxEjbApiVersion,
