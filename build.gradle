@@ -1,18 +1,53 @@
-List framework = [
-        "com.mg:framework-aux:1.0"
-]
+apply from: './dependencies.gradle'
 
-List jbossLibs = [
-        "jboss:jboss-system:" + jbossVersion,
-        "jboss:jboss-common:" + jbossVersion,
-        "jboss:jboss-jmx:" + jbossVersion,
-        "jboss:jboss-hibernate:" + jbossVersion,
-        "jboss:jboss-j2ee:" + jbossVersion,
-        "jboss:jboss-ejb3:" + jbossVersion,
-        "jboss:jboss-annotations-ejb3:" + jbossVersion
-]
+buildscript {
+    repositories {
+        mavenLocal()
+        maven {
+            url mavenRepoUrl
+        }
+        mavenCentral()
+    }
+
+    configurations {
+        provided
+        compile.extendsFrom provided
+    }
+}
 
 allprojects {
+    apply plugin: 'maven'
+
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                repository(url: mavenRepoUrl + '/repositories/releases') {
+                    authentication(userName: mavenUser, password: mavenPassword);
+                }
+                snapshotRepository(url: mavenRepoUrl + '/repositories/snapshots') {
+                    authentication(userName: mavenUser, password: mavenPassword);
+                }
+            }
+        }
+    }
+
+    group = projectGroup
+    version = projectVersion
+
+    defaultTasks 'build'
+    buildDir = "target"
+
+    repositories {
+        mavenLocal()
+        maven {
+            url mavenRepoUrl
+        }
+        mavenCentral()
+    }
+}
+
+
+/*allprojects {
 //    apply plugin: 'java'
 
     group = 'com.mg'
@@ -21,27 +56,27 @@ allprojects {
     repositories {
         mavenLocal()
         maven {
-            /*credentials {
+            *//*credentials {
                 username 'deployment'
                 password 'deployment'
-            }*/
+            }*//*
             url mavenRepoUrl
         }
         mavenCentral()
     }
-}
+}*/
 /*jar {
     manifest {
         attributes(
                 "Manifest-Version"          : "1.0",
                 "Created-By"                : vendor,
-//                "Specification-Title"       : appName,
+                "Specification-Title"       : appName,
                 "Specification-Version"     : version,
                 "Specification-Vendor"      : vendor,
-//                "Implementation-Title"      : appName,
+                "Implementation-Title"      : appName,
                 "Implementation-Version"    : version,
                 "Implementation-Vendor"     : vendor,
-//                    "Class-Path"                : manifestClasspath
+                    "Class-Path"                : manifestClasspath
         )
     }
 }*/

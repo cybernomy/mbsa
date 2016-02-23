@@ -1,14 +1,3 @@
-List jbossLibs = [
-        "jboss:jboss-system:" + jbossVersion,
-        "jboss:jboss-common:" + jbossVersion,
-        "jboss:jboss-jmx:" + jbossVersion,
-        "jboss:jboss-hibernate:" + jbossVersion,
-        "jboss:jboss-j2ee:" + jbossVersion,
-        "jboss:jboss-ejb3:" + jbossVersion,
-        "jboss:jboss-annotations-ejb3:" + jbossVersion,
-        "org.hibernate:hibernate:" + hibernateVersion
-]
-
 subprojects {
     apply plugin: 'java'
 
@@ -19,23 +8,18 @@ subprojects {
         main { compileClasspath += configurations.provided }
     }
 
-
-
     dependencies {
         /* internal */
-        compile 'com.mg:framework-aux:1.0'
-        /* provided */
-        provided 'com.sun:javaee:'+ jeeVersion
-        provided jbossLibs
-        /* compile */
-        compile 'jboss:jboss-cache:1.4.1.GA'
-        compile 'commons-lang:commons-lang:2.1'
-        compile 'commons-codec:commons-codec:1.3'
-        compile 'xerces:xercesImpl:2.6.2'
-        compile 'com.ibm.icu:icu4j:3.6.1'
-        compile 'net.sf.dozer:dozer:3.2.1'
-        compile 'net.sf.messadmin:core:4.1'
-        compile 'dom4j:dom4j:1.6.1'
-        compile 'jgroups:jgroups:2.4.1'
+        compile         dep.mgFrameworkAux
+
+        provided        dep.javaee
+
+        compile         dep.jbossSystem
+        compile         dep.jbossJmx
+        compile         dep.jbossAnnotationsEjb3
+        compile         dep.hibernate
+        compile         dep.commonsLang
+        /* tests */
+        testCompile     dep.junit
     }
 }

@@ -1,0 +1,13 @@
+dependencies {
+    provided    dep.jbossCommon
+    provided    dep.jbossHibernate
+    provided    dep.jbossJ2ee
+    provided    dep.jbossEjb3
+    provided    dep.jbossCache
+    compile     dep.xercesImpl
+    compile     dep.icu4j
+    compile     dep.dozer
+    compile     dep.messadminCore
+    compile     dep.commonsCodec
+    compile     dep.dom4j
+}
