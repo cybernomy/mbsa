@@ -1,4 +1,0 @@
-//modules
-include 'modules'
-include 'modules:framework'
-include 'modules:data:model'
