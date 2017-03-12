@@ -1,4 +1,4 @@
-[![Build Status](http://quick.linkpc.net:8083/jenkins/job/mbsa/badge/icon)](http://quick.linkpc.net:8083/jenkins/job/mbsa/)
+[![Build Status](https://quick.linkpc.net/ci/job/MBSA.Build/badge/icon)](https://quick.linkpc.net/ci/job/MBSA.Build)
 
 ---
 # Millenium BSA
