@@ -20,7 +20,7 @@ Anyway it's still much better by it's functionality, performance, ideology and v
 Pls visit http://www.m-g.ru/en to get more information
 or just http://www.m-g.ru/ and translate with chrome(I know you did it with taobao), as russian version more informative.
 
-Latest documentation about project and also documentation about modules(but only on russian) you can get on generated site http://quick.linkpc.net:8084/content/sites/com.mg.mbsa/
+Latest documentation about project and also documentation about modules(but only on russian) you can get on generated site https://quick.linkpc.net/m2/content/sites/com.mg.mbsa/
 
 This project is a try to give a new life for this useful platform.
 
